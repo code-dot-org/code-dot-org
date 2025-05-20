@@ -6,19 +6,43 @@ type PuzzleTab = Blockly.blockRendering.PuzzleTab;
 
 export default class CdoConstantsProvider extends Blockly.blockRendering
   .ConstantProvider {
-  private RECT_INPUT_OUTPUT: PuzzleTab | undefined;
-  private TRI_INPUT_OUTPUT: PuzzleTab | undefined;
-  private ROUND_INPUT_OUTPUT: PuzzleTab | undefined;
+  private __shapeMap: {
+    [key: string]: PuzzleTab;
+  };
+
+  constructor(inputs: InputPlugin[]) {
+    super();
+    console.log('hi', inputs);
+    this.__shapeMap = {};
+
+    let shapeIndex = Math.max(...Object.values(this.SHAPES)) + 1;
+    for (const plugin of inputs) {
+      console.log('PLUGIN', plugin, shapeIndex);
+
+      const currentShapeIndex = this.SHAPES[plugin.shape] || shapeIndex;
+      if (!this.SHAPES[plugin.shape]) {
+        this.SHAPES[plugin.shape] = shapeIndex;
+        shapeIndex++;
+      }
+
+      this.__shapeMap[plugin.check] =
+        plugin.makePath.bind(this)(currentShapeIndex);
+    }
+  }
+
+  //private RECT_INPUT_OUTPUT: PuzzleTab | undefined;
+  //private TRI_INPUT_OUTPUT: PuzzleTab | undefined;
+  //private ROUND_INPUT_OUTPUT: PuzzleTab | undefined;
   private isDarkTheme: boolean | undefined;
 
   // Override the shapes constant to include the custom shapes.
-  override SHAPES = {
+  /* override SHAPES = {
     PUZZLE: 1,
     NOTCH: 2,
     RECTANGLE: 3,
     TRIANGLE: 4,
     ROUND: 5,
-  };
+  };*/
 
   setTheme(theme: Blockly.Theme) {
     super.setTheme(theme);
@@ -34,11 +58,6 @@ export default class CdoConstantsProvider extends Blockly.blockRendering
    * @override
    */
   shapeFor(connection: Blockly.Connection) {
-    const blockTypeShapeMap: {
-      [key: string]: PuzzleTab;
-    } = {
-      // TODO: USE THE PROVIDER TO ADD BLOCK TYPES
-    };
     // `connection.check` returns a list of accepted value types for the connection
     // or null if all types are compatible.
     // For connections that are customized (sprite, behavior, location), there is
@@ -46,31 +65,34 @@ export default class CdoConstantsProvider extends Blockly.blockRendering
     // element in the list.
     const connectionCheck = connection.getCheck();
     const connectorType = connectionCheck ? connectionCheck[0] : null;
+    console.log('SHAPEFOR', connectionCheck, connectorType, connection);
     switch (connection.type) {
       case Blockly.ConnectionType.INPUT_VALUE:
       case Blockly.ConnectionType.OUTPUT_VALUE:
         // PUZZLE_TAB is the default shape for the connector if the value type is not
         // included in `blockTypeShapeMap`
         return (
-          (connectorType && blockTypeShapeMap[connectorType]) || this.PUZZLE_TAB
+          (connectorType && this.__shapeMap[connectorType]) ||
+          super.shapeFor(connection)
         );
       case Blockly.ConnectionType.PREVIOUS_STATEMENT:
       case Blockly.ConnectionType.NEXT_STATEMENT:
-        return this.NOTCH;
+        return super.shapeFor(connection);
       default:
         throw Error('Unknown connection type');
     }
   }
 
+  /*
   makeTriangularInputConn() {
     const width = this.TAB_WIDTH;
-    const height = this.TAB_HEIGHT;
+    const height = this.TAB_HEIGHT;*/
 
-    /**
-     * Since input and output connections share the same shape you can
-     * define a function to generate the path for both.
-     */
-    function makeMainPath(up: number) {
+  /**
+   * Since input and output connections share the same shape you can
+   * define a function to generate the path for both.
+   */
+  /*   function makeMainPath(up: number) {
       return Blockly.utils.svgPaths.line([
         Blockly.utils.svgPaths.point(-width, (-1 * up * height) / 2),
         Blockly.utils.svgPaths.point(width, (-1 * up * height) / 2),
@@ -87,17 +109,18 @@ export default class CdoConstantsProvider extends Blockly.blockRendering
       pathDown: pathDown,
       pathUp: pathUp,
     };
-  }
+  }*/
 
+  /*
   makeRectangularInputConn() {
     const width = this.TAB_WIDTH;
-    const height = this.TAB_HEIGHT;
+    const height = this.TAB_HEIGHT;*/
 
-    /**
-     * Since input and output connections share the same shape you can
-     * define a function to generate the path for both.
-     */
-    function makeMainPath(up: number) {
+  /**
+   * Since input and output connections share the same shape you can
+   * define a function to generate the path for both.
+   */
+  /* function makeMainPath(up: number) {
       return Blockly.utils.svgPaths.line([
         Blockly.utils.svgPaths.point(-width, 0),
         Blockly.utils.svgPaths.point(0, -1 * up * height),
@@ -116,7 +139,9 @@ export default class CdoConstantsProvider extends Blockly.blockRendering
       pathUp: pathUp,
     };
   }
+  */
 
+  /*
   makeRoundInputConn() {
     const width = this.TAB_WIDTH;
     const height = this.TAB_HEIGHT;
@@ -141,13 +166,7 @@ export default class CdoConstantsProvider extends Blockly.blockRendering
       pathUp: pathUp,
     };
   }
-
-  init() {
-    super.init();
-    this.RECT_INPUT_OUTPUT = this.makeRectangularInputConn();
-    this.TRI_INPUT_OUTPUT = this.makeTriangularInputConn();
-    this.ROUND_INPUT_OUTPUT = this.makeRoundInputConn();
-  }
+  */
 
   protected generateSecondaryColour_(inputColour: string): string {
     if (this.isDarkTheme) {

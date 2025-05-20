@@ -114,23 +114,53 @@ export interface LevelData {
   blocklyData?: BlocklyData;
   /** Multiple choice question data. */
   multipleChoice?: MultipleChoiceData;
+  /** The shared level template defining a potential 'workspace' */
+  template?: LevelData;
 }
 
+/**
+ * Represents the raw level configuration that is usually encoded as JSON embedded in
+ * level XML data.
+ */
 export interface LevelConfiguration {
+  created_at: string;
+  game_id: number;
+  published: boolean;
   properties?: {
+    /** Markdown encoded level instructions that describe to the student what to do. */
     long_instructions?: string;
+    /** The shortened instructions describing criteria to complete in the level. */
     short_instructions?: string;
+    /** Any other levels that are related to or override data for this level. */
     contained_level_names?: string[];
+    /** The level key for the associated video. */
     video_key?: string;
+    /**
+     * Whether or not instructions should be highlighted before the level can be interacted
+     * with for the first time.
+     */
     instructions_important?: boolean | string;
+    /** Hint data encoded as JSON. */
     authored_hints?: string;
+    /** Maze data encoded as JSON. */
     serialized_maze?: string;
+    /** Whether or not this level's target audience are pre-readers. */
+    is_k1?: boolean;
+    /** The legacy maze data encoded as JSON. */
     maze?: string;
+    /** The skin identifier that associates a level with a set of image assets. */
     skin?: string;
+    /** A set of panels representing a slide show level (PanelsLevel). */
     panels?: PanelData[];
+    /** The project template which defines the workspace shared across a set of levels. */
+    project_template_level_name?: string;
+    /** The starting direction for certain levels. */
     start_direction?: string;
+    /** The starting X position for certain levels. */
     x?: string;
+    /** The starting Y position for certain levels. */
     y?: string;
+    /** A set of images associated with the level. */
     images?: string;
   };
 }
@@ -336,6 +366,196 @@ export const sanitizeJSON: (data: string) => string = data =>
     // Remove whitespace
     .trim();
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function convertBlocklyXmlToJson(xmlString: string): any {
+  const parser = new new JSDOM().window.DOMParser();
+  const xml = parser.parseFromString(xmlString, 'text/xml');
+
+  const blocksArray = Array.from(xml.documentElement.children)
+    .filter(el => el.tagName === 'block')
+    .map(el => parseBlockXml(el));
+
+  return {
+    blocks: {
+      blocks: blocksArray,
+    },
+  };
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function parseBlockXml(blockEl: Element): any {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const block: any = {
+    type: blockEl.getAttribute('type') || undefined,
+    id: blockEl.getAttribute('id') || undefined,
+  };
+  console.log('parse block xml', block);
+
+  // Position (only in top-level blocks)
+  const x = blockEl.getAttribute('x');
+  const y = blockEl.getAttribute('y');
+  if (x && y) {
+    block.x = parseInt(x, 10);
+    block.y = parseInt(y, 10);
+  }
+
+  // Collect user-defined attributes as extraState
+  const knownAttrs = new Set(['type', 'id', 'x', 'y', 'deletable', 'movable']);
+  const extraState: Record<string, string | number | boolean> = {};
+  for (const attr of Array.from(blockEl.attributes)) {
+    if (!knownAttrs.has(attr.name)) {
+      extraState[attr.name] = parseValue(attr.value);
+    }
+  }
+  if (Object.keys(extraState).length > 0) {
+    block.extraState = extraState;
+    block.data = {...extraState};
+  }
+
+  // Fields
+  const fields = Array.from(blockEl.children).filter(
+    el => el.tagName === 'field' || el.tagName === 'title',
+  );
+  if (fields.length > 0) {
+    block.fields = {};
+    for (const fieldEl of fields) {
+      const name = fieldEl.getAttribute('name');
+      if (name) {
+        block.fields[name] = parseValue(fieldEl.textContent ?? '');
+      }
+    }
+  }
+
+  // Recursively parse values, statements, next
+  for (const child of Array.from(blockEl.children)) {
+    switch (child.tagName) {
+      case 'value':
+      case 'statement':
+        {
+          const inputName = child.getAttribute('name');
+          const subBlock = child.querySelector('block');
+          if (inputName && subBlock) {
+            block.inputs ??= {};
+            block.inputs[inputName] = {
+              block: parseBlockXml(subBlock),
+            };
+          }
+        }
+        break;
+
+      case 'next':
+        {
+          const nextBlock = child.querySelector('block');
+          if (nextBlock) {
+            block.next = {
+              block: parseBlockXml(nextBlock),
+            };
+          }
+        }
+        break;
+
+      case 'mutation':
+        // Place attributes into extra state
+        console.log(
+          'MUTATION',
+          child,
+          blockEl.getAttribute('type'),
+          'ok?',
+          child.tagName,
+          Array.from(child.attributes),
+          child.getAttribute('elseif'),
+          child.attributes[0],
+        );
+        for (const attr of Array.from(child.attributes)) {
+          block.extraState ??= {};
+          if (attr.name === 'elseif') {
+            block.extraState['elseIfCount'] = attr.value;
+          } else {
+            block.extraState[attr.name] = attr.value;
+          }
+        }
+        break;
+    }
+  }
+
+  return block;
+}
+
+function parseValue(value: string): string | number | boolean {
+  if (value === 'true') return true;
+  if (value === 'false') return false;
+  if (!isNaN(Number(value))) return Number(value);
+  return value;
+}
+
+/*
+export const convertBlocklyXmlToJson: (xmlString: string) => object = xmlString => {
+  // Parse XML string to DOM
+  const parser = new new JSDOM().window.DOMParser();
+  const xml = parser.parseFromString(xmlString, 'application/xml');
+
+  // Create temporary workspace
+  const tempWorkspace = new Blockly.Workspace();
+
+  // Walk XML <block> elements and stash their user-defined attributes
+  const blockExtraStates = new Map<string, Record<string, boolean | number | string>>();
+
+  const blockNodes = xml.getElementsByTagName('block');
+  for (const blockNode of Array.from(blockNodes)) {
+    const id = blockNode.getAttribute('id');
+    if (!id) continue;
+
+    const knownAttrs = new Set(['type', 'id', 'x', 'y', 'deletable', 'movable', 'editable']);
+    const extraState: Record<string, boolean | number | string> = {};
+
+    for (const attr of Array.from(blockNode.attributes)) {
+      if (!knownAttrs.has(attr.name)) {
+        // Save custom/user-defined attributes
+        const value = attr.value;
+        try {
+          // Try to parse booleans/numbers
+          if (value === 'true') extraState[attr.name] = true;
+          else if (value === 'false') extraState[attr.name] = false;
+          else if (!isNaN(Number(value))) extraState[attr.name] = Number(value);
+          else extraState[attr.name] = value;
+        } catch {
+          extraState[attr.name] = value;
+        }
+      }
+    }
+
+    if (Object.keys(extraState).length > 0) {
+      blockExtraStates.set(id, extraState);
+    }
+  }
+
+  // Inject blocks into workspace
+  Blockly.Xml.domToWorkspace(xml, tempWorkspace);
+
+  // Serialize workspace to JSON
+  const json = Blockly.serialization.workspaces.save(tempWorkspace);
+  console.log("JSON?", json);
+
+  // Inject extraState into corresponding block JSON
+  if (json.blocks?.blocks) {
+    for (const blockJson of json.blocks.blocks) {
+      const extra = blockExtraStates.get(blockJson.id);
+      if (extra) {
+        blockJson.extraState = {
+          ...(blockJson.extraState || {}),
+          ...extra
+        };
+      }
+    }
+  }
+
+  // Dispose of temp workspace
+  tempWorkspace.dispose();
+
+  return json;
+}
+*/
+
 /**
  * Parses a Code.org level file.
  */
@@ -423,6 +643,12 @@ export const parseLevelData: (
     };
   }
 
+  const parseXml = (root: HTMLElement | undefined) =>
+    root?.querySelector('xml > *') ? root?.innerHTML?.trim() : undefined;
+
+  const convert = (xmlString?: string) =>
+    xmlString ? convertBlocklyXmlToJson(xmlString) : undefined;
+
   if (ret.type === 'Artist') {
     isBlockly = true;
     let x = 200;
@@ -451,33 +677,56 @@ export const parseLevelData: (
       initialX: x,
       initialY: y,
       startDirection,
-      predrawBlocks: (
-        xml.querySelector('blocks > predraw_blocks > xml')?.parentNode as
-          | HTMLElement
-          | undefined
-      )?.innerHTML?.trim(),
+      predrawBlocks: convert(
+        parseXml(
+          xml.querySelector('blocks > predraw_blocks > xml')?.parentNode as
+            | HTMLElement
+            | undefined,
+        ),
+      ),
       images: JSON.parse(sanitizeJSON(config.properties?.images || '[]')),
     };
   }
 
+  // Last check for blockly data
+  if (xml.querySelector('blocks')) {
+    isBlockly = true;
+  }
+
   if (isBlockly) {
+    // Gather the XML data for various level data
+    const roots = ['start_blocks', 'toolbox_blocks', 'solution_blocks'].map(
+      tag =>
+        xml.querySelector(`blocks > ${tag} > xml`)?.parentNode as
+          | HTMLElement
+          | undefined,
+    );
+
+    const createFlyoutToolbox = (blocks: Block[]) => ({
+      kind: 'flyoutToolbox',
+      contents: blocks.map(block => ({
+        ...block,
+        kind: 'block',
+      })),
+    });
+
+    // Place that block data into the outgoing blockly data, but ensure where the XML data
+    // is empty (the <xml> tag has no children), that these fields are undefined.
     ret.blocklyData = {
-      startBlocks: (
-        xml.querySelector('blocks > start_blocks > xml')?.parentNode as
-          | HTMLElement
-          | undefined
-      )?.innerHTML?.trim(),
-      toolboxBlocks: (
-        xml.querySelector('blocks > toolbox_blocks > xml')?.parentNode as
-          | HTMLElement
-          | undefined
-      )?.innerHTML?.trim(),
-      solutionBlocks: (
-        xml.querySelector('blocks > solution_blocks > xml')?.parentNode as
-          | HTMLElement
-          | undefined
-      )?.innerHTML?.trim(),
+      startBlocks: convert(parseXml(roots[0])),
+      toolboxBlocks: createFlyoutToolbox(
+        convert(parseXml(roots[1]))?.blocks?.blocks || [],
+      ),
+      solutionBlocks: convert(parseXml(roots[2])),
     };
+
+    console.log(
+      'start blocks',
+      ret.blocklyData.startBlocks,
+      JSON.stringify(
+        convertBlocklyXmlToJson(ret.blocklyData.startBlocks || '<xml/>'),
+      ),
+    );
   }
 
   // Read video data
@@ -493,6 +742,15 @@ export const parseLevelData: (
   // Read panel data
   if (config.properties?.panels) {
     ret.panels = config.properties.panels as PanelData[];
+  }
+
+  // Embed project template (if any)
+  if (config.properties?.project_template_level_name) {
+    // Get that template level
+    const template = await loadLevel(
+      config.properties.project_template_level_name,
+    );
+    ret.template = template;
   }
 
   // Embed associated level data
@@ -530,11 +788,11 @@ export const parseLevelData: (
 };
 
 export const loadLevel: (
-  slug: string,
+  key: string,
   extension?: string,
-) => Promise<LevelData> = async (slug: string, extension?: string) => {
+) => Promise<LevelData> = async (key: string, extension?: string) => {
   // Look for a normalized file already there.
-  const cachePath = path.join(process.cwd(), 'cache', 'levels', `${slug}.json`);
+  const cachePath = path.join(process.cwd(), 'cache', 'levels', `${key}.json`);
 
   try {
     const fileContents = await fs.readFile(cachePath, 'utf8');
@@ -545,10 +803,10 @@ export const loadLevel: (
 
   // Try to load the unit from unit definitions
   const {path: levelPath, data: level} = await loadLevelDefinition(
-    slug,
+    key,
     extension,
   );
-  const ret: LevelData = await parseLevelData(slug, level, levelPath);
+  const ret: LevelData = await parseLevelData(key, level, levelPath);
 
   // Preserve the cached data
   await fs.writeFile(cachePath, JSON.stringify(ret), 'utf8');

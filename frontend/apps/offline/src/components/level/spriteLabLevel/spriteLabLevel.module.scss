@@ -1,0 +1,21 @@
+.visualization {
+  .container {
+    border-bottom: 0.0625rem solid var(--borders-neutral-light);
+    line-height: 0;
+
+    .spinner {
+      align-items: center;
+      aspect-ratio: 1 / 1;
+      background: var(--borders-neutral-light);
+      color: var(--borders-neutral-strong);
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+    }
+
+    canvas {
+      width: 100%;
+    }
+  }
+}

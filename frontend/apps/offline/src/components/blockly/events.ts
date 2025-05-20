@@ -45,6 +45,7 @@ export function disableOrphans(event: Blockly.Events.Abstract) {
     | Blockly.Events.BlockChange
     | Blockly.Events.BlockMove
     | Blockly.Events.BlockCreate;
+
   const isEnabledEvent =
     blockEvent.type === Blockly.Events.BLOCK_CHANGE &&
     (blockEvent as Blockly.Events.BlockChange).element === 'disabled' &&

@@ -19,6 +19,7 @@ export default async function LevelLayout({
   try {
     unit = await loadUnit(slug);
   } catch (_) {
+    console.log(_);
     // If the file doesn't exist or is malformed, return 404
     return notFound();
   }
@@ -33,6 +34,7 @@ export default async function LevelLayout({
   try {
     level = await loadLevel(levelKey);
   } catch (_) {
+    console.log(_);
     // If the file doesn't exist or is malformed, return 404
     return notFound();
   }

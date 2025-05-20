@@ -2,7 +2,10 @@ import type {MarkdownToJSX} from 'markdown-to-jsx';
 import {RuleType} from 'markdown-to-jsx';
 import React from 'react';
 
+import {BodyTwoText} from '@code-dot-org/component-library/typography';
+
 import BlocklyWorkspace from '@/components/blockly/blocklyWorkspace';
+import type {Plugin} from '@/components/blockly/plugins';
 import type {
   Theme,
   Renderer,
@@ -13,6 +16,7 @@ import Markdown, {MarkdownProps} from '@/components/markdown';
 export interface BlocklyMarkdownProps extends MarkdownProps {
   customBlocks?: BlockDefinition[];
   renderer?: Renderer;
+  plugins?: Plugin[];
   theme?: Theme;
 }
 
@@ -62,12 +66,24 @@ const xmlRenderer: (
 const BlocklyMarkdown: React.FunctionComponent<BlocklyMarkdownProps> = ({
   customBlocks,
   renderer,
+  plugins,
   theme,
   ...props
 }) => (
   <Markdown
     {...props}
     options={{
+      overrides: {
+        p: {
+          component: BodyTwoText,
+          props: {
+            style: {
+              display: 'block',
+              margin: 0,
+            },
+          },
+        },
+      },
       renderRule(next, node) {
         if (
           node.type === RuleType.htmlBlock ||
@@ -83,6 +99,7 @@ const BlocklyMarkdown: React.FunctionComponent<BlocklyMarkdownProps> = ({
               <BlocklyWorkspace
                 customBlocks={customBlocks}
                 renderer={renderer}
+                plugins={plugins}
                 theme={theme}
                 key={key}
                 inline

@@ -1,5 +1,6 @@
 import React, {PropsWithChildren, useState} from 'react';
 
+import type {Plugin} from '@/components/blockly/plugins';
 import type {
   BlockDefinition,
   Theme,
@@ -10,12 +11,14 @@ import BlocklyContext from '@/contexts/BlocklyContext';
 export interface BlocklyProviderProps extends PropsWithChildren {
   customBlocks?: BlockDefinition[];
   theme?: Theme;
+  plugins?: Plugin[];
   renderer?: Renderer;
 }
 
 const BlocklyProvider: React.FunctionComponent<BlocklyProviderProps> = ({
   customBlocks,
   theme,
+  plugins,
   renderer,
   children,
 }) => {
@@ -27,6 +30,7 @@ const BlocklyProvider: React.FunctionComponent<BlocklyProviderProps> = ({
       value={{
         theme: currentTheme,
         setTheme,
+        plugins,
         renderer,
         customBlocks: customBlocks || [],
       }}

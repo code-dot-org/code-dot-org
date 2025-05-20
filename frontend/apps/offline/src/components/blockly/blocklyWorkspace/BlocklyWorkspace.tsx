@@ -83,10 +83,12 @@ const BlocklyWorkspace: React.FunctionComponent<BlocklyWorkspaceProps> = ({
   const {
     customBlocks: storedCustomBlocks,
     renderer: storedRenderer,
+    plugins: storedPlugins,
     theme: storedTheme,
   } = useContext(BlocklyContext);
   customBlocks ||= storedCustomBlocks;
   renderer ||= storedRenderer;
+  plugins ||= storedPlugins;
   theme ||= storedTheme || DefaultTheme;
   console.log('BLOCKLY_INIT', customBlocks, startBlocks, renderer, theme);
 
@@ -98,23 +100,27 @@ const BlocklyWorkspace: React.FunctionComponent<BlocklyWorkspaceProps> = ({
           "Renderer needs to have a string for a 'name' field that uniquely identifies the renderer",
         );
       } else {
+        // Add input plugins
+        const inputPlugins = (plugins || []).filter(
+          plugin => plugin.type === PluginType.Input,
+        );
+
+        console.log('REGISTER RENDERER', inputPlugins);
         Blockly.registry.register(
           Blockly.registry.Type.RENDERER,
           renderer.name,
-          renderer.class,
+          renderer.class(inputPlugins),
           true,
         );
       }
     }
-  }, [renderer]);
+  }, [renderer, plugins]);
 
   // Register any new custom blocks
   useEffect(() => {
     Blockly.setLocale(En as unknown as {[key: string]: string});
 
     // Make sure we have the default blocks
-    console.log('BLOCKS', Blockly, Blockly.Blocks);
-
     (customBlocks || []).forEach(blockDefinition => {
       if ((blockDefinition as ComplexBlockDefinition).message0) {
         const complexBlockDefinition =
@@ -204,13 +210,71 @@ const BlocklyWorkspace: React.FunctionComponent<BlocklyWorkspaceProps> = ({
       }
     }
 
-    // Add global plugins
-    for (const plugin of (plugins || []).filter(
-      plugin => plugin.type === PluginType.Global,
-    )) {
-      const globalPlugin = plugin as unknown as GlobalPlugin;
-      globalPlugin.initialize();
+    const mixinPlugins = (plugins || []).filter(
+      plugin => plugin.type === PluginType.Mixin,
+    );
+
+    // Add block mixins
+    for (const plugin of mixinPlugins) {
+      const mixinPlugin = plugin as unknown as MixinPlugin;
+      try {
+        Blockly.Extensions.registerMixin(mixinPlugin.name, mixinPlugin.mixin);
+      } catch (err) {
+        if (err instanceof Error) {
+          if (!err.toString().includes('already registered')) {
+            throw err;
+          }
+        }
+      }
+
+      console.log('MIXIN', Blockly.Blocks);
+      for (const definition of Object.values(Blockly.Blocks)) {
+        for (const [key, prop] of Object.entries(mixinPlugin.mixin)) {
+          definition[key] ||= prop;
+        }
+      }
     }
+
+    const globalPlugins = (plugins || []).filter(
+      plugin => plugin.type === PluginType.Global,
+    );
+
+    // Add global plugins
+    for (const plugin of globalPlugins) {
+      const globalPlugin = plugin as unknown as GlobalPlugin;
+      if (globalPlugin.useWithInline || !inline) {
+        globalPlugin.initialize();
+      }
+    }
+
+    console.log('BLOCKS', Blockly, Blockly.Blocks);
+    const originalAppend = Blockly.serialization.blocks.append;
+    console.log('block serializing switching out', originalAppend);
+    Blockly.serialization.blocks.append = function (json, workspace) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const extra = (json as any).extraState;
+      console.log('ok. block serializing...', json, JSON.stringify(extra));
+      const block = originalAppend.call(this, json, workspace);
+
+      console.log('ok. block serializing', block, json, extra);
+      if (block?.data?.uservisible === false) {
+        block.setVisible?.(false);
+      }
+
+      return block;
+    };
+    const originalSave = Blockly.serialization.blocks.save;
+    Blockly.serialization.blocks.save = function (
+      block,
+      state,
+      doFullSerialization,
+    ) {
+      originalSave(block, state, doFullSerialization);
+      state.extraState = {
+        ...(state.extraState || {}),
+        ...(block.data || {}),
+      };
+    };
 
     // Create the workspace within the container
     workspace.current = Blockly.inject(container, {
@@ -234,14 +298,19 @@ const BlocklyWorkspace: React.FunctionComponent<BlocklyWorkspaceProps> = ({
       plugin => plugin.type === PluginType.Inject,
     )) {
       const injectPlugin = plugin as InjectPlugin;
-      injectPlugin.instantiate(workspace.current, theme);
+      if (injectPlugin.useWithInline || !inline) {
+        injectPlugin.instantiate(workspace.current, theme);
+      }
     }
 
     // Apply the custom styles to our custom elements
     console.log('THEME', theme, Blockly.Theme);
 
     // Massage start blocks to at least a valid empty document
-    if (startBlocks === undefined || startBlocks.trim() === '') {
+    if (
+      startBlocks === undefined ||
+      (typeof startBlocks === 'string' && startBlocks.trim() === '')
+    ) {
       startBlocks = '<xml></xml>';
     }
 
@@ -262,11 +331,22 @@ const BlocklyWorkspace: React.FunctionComponent<BlocklyWorkspaceProps> = ({
         }
 
         Blockly.Xml.clearWorkspaceAndLoadFromXml(xmlDoc, workspace.current);
+        const blockJson = Blockly.serialization.workspaces.save(
+          workspace.current,
+        );
+        Blockly.serialization.workspaces.load(blockJson, workspace.current);
       }
 
       // Reposition blocks if this is a full workspace
       if (!inline) {
         positionBlocksOnWorkspace(workspace.current);
+      }
+    } else if (typeof startBlocks === 'object') {
+      // JSON serialization
+      console.log('serialization', startBlocks);
+      Blockly.serialization.workspaces.load(startBlocks, workspace.current);
+      for (const block of workspace.current.getTopBlocks()) {
+        console.log('JSON SERIAL', block);
       }
     }
 
@@ -281,6 +361,7 @@ const BlocklyWorkspace: React.FunctionComponent<BlocklyWorkspaceProps> = ({
       if (workspace.current) {
         Blockly.svgResize(workspace.current);
       }
+
       const svg = container.querySelector('svg')?.cloneNode(true) as SVGElement;
       if (svg && anchor.current) {
         svg.style.background = 'none';
@@ -291,15 +372,17 @@ const BlocklyWorkspace: React.FunctionComponent<BlocklyWorkspaceProps> = ({
         anchor.current.innerHTML = '';
         anchor.current.appendChild(svg);
 
-        // Fix width and height
-        const size = (svg
-          .querySelector('.blocklyWorkspace')
-          ?.getClientRects() || [])[0] || {
-          width: 30,
-          height: 30,
-        };
-        svg.style.width = size.width + 'px';
-        svg.style.height = size.height + 'px';
+        // Fix width and height (after it renders)
+        window.requestAnimationFrame(() => {
+          const size = (svg
+            .querySelector('.blocklyWorkspace')
+            ?.getClientRects() || [])[0] || {
+            width: 30,
+            height: 30,
+          };
+          svg.style.width = size.width + 'px';
+          svg.style.height = size.height + 'px';
+        });
 
         // Copy classes over
         for (const blocklyClassName of Array.from(
@@ -324,6 +407,28 @@ const BlocklyWorkspace: React.FunctionComponent<BlocklyWorkspaceProps> = ({
 
     // Deconstruct the blockly instance when the component is unmounted
     return () => {
+      // De-construct global plugins
+      for (const plugin of globalPlugins) {
+        const globalPlugin = plugin as unknown as GlobalPlugin;
+        if (globalPlugin.useWithInline || !inline) {
+          globalPlugin.uninitialize?.();
+        }
+      }
+
+      // De-register block mixins
+      for (const plugin of mixinPlugins) {
+        const mixinPlugin = plugin as unknown as MixinPlugin;
+        Blockly.Extensions.unregister(mixinPlugin.name);
+
+        // Remove the extension from any block definitions since it no longer exists
+      }
+
+      // Un-rewire the json serialization append routine
+      if (originalAppend) {
+        Blockly.serialization.blocks.append = originalAppend;
+      }
+
+      // Dispose of the workspace
       workspace.current?.dispose();
     };
   }, [anchor.current, renderer]);

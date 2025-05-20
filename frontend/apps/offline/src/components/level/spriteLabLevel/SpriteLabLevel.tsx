@@ -8,8 +8,13 @@ import React, {
 
 import type {LevelData} from '@/app/models/level';
 import type {BlockDefinition} from '@/components/blockly';
+import type {Plugin} from '@/components/blockly/plugins';
 import BlockLimitsPlugin from '@/components/blockly/plugins/blockLimits';
-import FieldColour from '@/components/blockly/plugins/fields/fieldColour';
+import FieldColourPlugin from '@/components/blockly/plugins/fields/fieldColour';
+import FieldLocationPlugin from '@/components/blockly/plugins/fields/fieldLocation';
+import RoundInputPlugin from '@/components/blockly/plugins/inputs/round';
+import TriangleInputPlugin from '@/components/blockly/plugins/inputs/triangle';
+import UserVisibleMixinPlugin from '@/components/blockly/plugins/mixins/userVisible';
 import ToolboxTrashcanPlugin from '@/components/blockly/plugins/toolboxTrashcan';
 import ThrasosRenderer from '@/components/blockly/renderers/thrasos';
 import DefaultTheme from '@/components/blockly/themes/default';
@@ -21,12 +26,11 @@ import {
 import BlocklyLevel, {BlocklyLevelProps} from '@/components/level/blocklyLevel';
 
 import * as defaultAPI from './api';
-import Artist from './Artist';
 import blocks from './blocks';
-import {skinFor} from './skins';
+import SpriteLab from './SpriteLab';
 import Visualization from './Visualization';
 
-export interface ArtistLevelProps extends BlocklyLevelProps {
+export interface SpriteLabLevelProps extends BlocklyLevelProps {
   levelData: LevelData;
   api?: object;
   customBlocks?: BlockDefinition[];
@@ -34,7 +38,24 @@ export interface ArtistLevelProps extends BlocklyLevelProps {
   visualizationClassName?: string;
 }
 
-const ArtistLevel: React.FunctionComponent<ArtistLevelProps> = ({
+// Our base Blockly plugins for this level type
+const plugins: Plugin[] = [
+  // Use triangular notches for Sprite types
+  TriangleInputPlugin('Sprite'),
+  // Use round notches for Behavior types
+  RoundInputPlugin('Behavior'),
+  // Animate a trashcan in the toolbox area
+  ToolboxTrashcanPlugin,
+  // Allow specifying block limits
+  BlockLimitsPlugin,
+  // Allow the 'field_colour' field for blocks
+  FieldColourPlugin,
+  // Provide the 'field_location' field for locations
+  FieldLocationPlugin,
+  UserVisibleMixinPlugin,
+];
+
+const SpriteLabLevel: React.FunctionComponent<SpriteLabLevelProps> = ({
   levelData,
   customBlocks,
   theme,
@@ -46,10 +67,10 @@ const ArtistLevel: React.FunctionComponent<ArtistLevelProps> = ({
   options,
   ...rest
 }) => {
-  const controller = useRef<Artist | null>(null);
+  const controller = useRef<SpriteLab | null>(null);
   const container = useRef<HTMLDivElement | null>(null);
 
-  const currentAvatar = avatar || '/skins/artist/small_static_avatar.png';
+  const currentAvatar = avatar || '/skins/gamelab/small_static_avatar.png';
 
   const [running, setRunning] = useState<boolean>(false);
   const [stepping, setStepping] = useState<boolean>(false);
@@ -94,16 +115,10 @@ const ArtistLevel: React.FunctionComponent<ArtistLevelProps> = ({
     execute(false);
   }, [controller, stepping]);
 
-  const skin = skinFor(levelData.artistData?.skinId || 'artist');
-
-  //levelData.blocklyData.startBlocks = levelData.artistData.predrawBlocks;
-
   const onInject = useCallback(() => {
     if (container.current) {
       const predrawCode = levelData.artistData?.predrawBlocks
-        ? typeof levelData.artistData?.predrawBlocks === 'string'
-          ? getCodeFromBlockXmlSource(levelData.artistData.predrawBlocks)
-          : getCodeFromBlockJsonSource(levelData.artistData.predrawBlocks)
+        ? getCodeFromBlockXmlSource(levelData.artistData.predrawBlocks)
         : undefined;
 
       const solutionCode = levelData.blocklyData?.solutionBlocks
@@ -119,14 +134,13 @@ const ArtistLevel: React.FunctionComponent<ArtistLevelProps> = ({
         predrawCode,
         solutionCode,
       );
-      controller.current = new Artist({
+      controller.current = new SpriteLab({
         api: {...defaultAPI, ...(api || {})},
         level: levelData.artistData || {
           images: [],
         },
         instant: false,
         isK1: false,
-        skin,
         container: container.current,
         predrawCode,
         solutionCode,
@@ -139,6 +153,29 @@ const ArtistLevel: React.FunctionComponent<ArtistLevelProps> = ({
       console.log('UNINIT THE ARTIST LEVEL');
     };
   }, [controller, levelData]);
+
+  /*
+  const refinedStartBlocks = useMemo(() => {
+    const parser = new DOMParser();
+    const xml = levelData?.template?.blocklyData?.startBlocks ||
+        levelData?.blocklyData?.startBlocks || '<xml/>';
+    const dom = parser.parseFromString(`<root>${xml}</root>`, 'application/xml');
+    const uservisibles = Array.from(dom.querySelectorAll('block[uservisible]'));
+    for (const blockElement of uservisibles) {
+      console.log("DOMTEST", blockElement);
+      const mutationElement =
+        blockElement.querySelector(':scope > mutation') ||
+        blockElement.ownerDocument.createElement('mutation');
+
+      // Place mutator before fields, values, and other nested blocks.
+      blockElement.insertBefore(mutationElement, blockElement.firstChild);
+      blockElement.removeAttribute('uservisible');
+      mutationElement.setAttribute('invisible', blockElement.getAttribute('uservisible') === 'false');
+    }
+    const ret = dom.querySelector('xml')?.parentNode?.innerHTML;
+    console.log("DOMTEST", ret);
+    return ret || xml;
+  }, [levelData?.template?.blocklyData?.startBlocks, levelData?.blocklyData?.startBlocks]);*/
 
   return (
     <BlocklyLevel
@@ -163,17 +200,17 @@ const ArtistLevel: React.FunctionComponent<ArtistLevelProps> = ({
           />
         )
       }
-      customBlocks={[...blocks(skin), ...(customBlocks || [])]}
+      customBlocks={[...blocks, ...(customBlocks || [])]}
       options={{
         forceInsertTopBlock: 'when_run',
-        grayOutUndeletableBlocks: true,
+        grayOutUndeletableBlocks: false,
         ...(options || {}),
       }}
       onInject={onInject}
-      plugins={[ToolboxTrashcanPlugin, BlockLimitsPlugin, FieldColour]}
+      plugins={plugins}
       {...rest}
     />
   );
 };
 
-export default ArtistLevel;
+export default SpriteLabLevel;

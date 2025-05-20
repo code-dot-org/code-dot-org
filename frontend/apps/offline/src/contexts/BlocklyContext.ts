@@ -1,5 +1,6 @@
 import {createContext} from 'react';
 
+import type {Plugin} from '@/components/blockly/plugins';
 import type {
   BlockDefinition,
   Theme,
@@ -10,6 +11,7 @@ export interface BlocklyContent {
   theme?: Theme;
   setTheme: (value: Theme) => void;
   renderer?: Renderer;
+  plugins?: Plugin[];
   customBlocks: BlockDefinition[];
 }
 

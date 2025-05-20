@@ -187,3 +187,20 @@ export function getCodeFromBlockXmlSource(blockXmlString: string): string {
   workspace.dispose();
   return result;
 }
+
+export function getCodeFromBlockJsonSource(json: object): string {
+  const workspace = new Blockly.Workspace();
+  javascriptGenerator.init(workspace);
+
+  for (const jsonBlock of json.blocks.blocks) {
+    console.log('BLOCK', jsonBlock);
+    Blockly.serialization.blocks.append(jsonBlock, workspace);
+  }
+  const blocks = workspace.getTopBlocks(true);
+  console.log('BLOCKS', blocks);
+  const code: (string | [string, number])[] = [];
+  blocks.forEach(block => code.push(javascriptGenerator.blockToCode(block)));
+  const result = javascriptGenerator.finish(code.join('\n'));
+  workspace.dispose();
+  return result;
+}

@@ -12,6 +12,7 @@ import ArtistLevel from './artistLevel';
 import KarelLevel from './karelLevel';
 import MazeLevel from './mazeLevel';
 import PanelsLevel from './panelsLevel';
+import SpriteLabLevel from './spriteLabLevel';
 import StandaloneVideoLevel from './standaloneVideoLevel';
 import StarWarsLevel from './starWarsLevel';
 
@@ -43,6 +44,9 @@ const Level: React.FunctionComponent<LevelProps> = ({levelData}) => (
     {levelData?.type === 'Maze' && <MazeLevel levelData={levelData} />}
     {levelData?.type === 'Karel' && <KarelLevel levelData={levelData} />}
     {levelData?.type === 'Artist' && <ArtistLevel levelData={levelData} />}
+    {levelData?.type === 'GamelabJr' && (
+      <SpriteLabLevel levelData={levelData} />
+    )}
     {levelData?.type === 'StarWarsGrid' && (
       <StarWarsLevel levelData={levelData} />
     )}

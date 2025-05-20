@@ -15,6 +15,7 @@ import BlocklyProvider from '@/providers/BlocklyProvider';
 
 export interface BlocklyLevelProps {
   levelData: LevelData;
+  startBlocks?: string;
   data?: object;
   options?: BlocklyOptions;
   customBlocks?: BlockDefinition[];
@@ -29,6 +30,7 @@ export interface BlocklyLevelProps {
 
 const BlocklyLevel: React.FunctionComponent<BlocklyLevelProps> = ({
   levelData,
+  startBlocks,
   data,
   options,
   visualization,
@@ -43,6 +45,7 @@ const BlocklyLevel: React.FunctionComponent<BlocklyLevelProps> = ({
     <BlocklyProvider
       customBlocks={customBlocks}
       theme={theme}
+      plugins={plugins}
       renderer={renderer}
     >
       <Workspace
@@ -74,7 +77,11 @@ const BlocklyLevel: React.FunctionComponent<BlocklyLevelProps> = ({
             readOnly: levelData.multipleChoice ? true : undefined,
             ...options,
           }}
-          startBlocks={levelData.blocklyData?.startBlocks}
+          startBlocks={
+            startBlocks ||
+            levelData.template?.blocklyData?.startBlocks ||
+            levelData.blocklyData?.startBlocks
+          }
           toolboxBlocks={
             levelData.multipleChoice ? '' : levelData.blocklyData?.toolboxBlocks
           }
