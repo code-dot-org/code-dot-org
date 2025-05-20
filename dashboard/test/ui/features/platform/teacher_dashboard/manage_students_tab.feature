@@ -7,7 +7,7 @@ Feature: Using the manage students tab of the teacher dashboard
     Given I create a teacher-associated under-13 student in Colorado named "Student" after CAP start
     And I sign in as "Teacher_Student" and go home
     And I save the section id from row 0 of the section table
-    And I navigate to manage students for the section I saved
+    And I navigate to roster for the section I saved
 
     # Test the US state Bulk Set modal
     Then I wait until element "#uitest-manage-students-table th:contains(State) i" is visible

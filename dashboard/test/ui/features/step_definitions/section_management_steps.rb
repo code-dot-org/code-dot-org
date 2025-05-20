@@ -314,10 +314,10 @@ Then /^I navigate to teacher dashboard for the section I saved with experiment "
   }
 end
 
-Then /^I navigate to manage students for the section I saved$/ do
+Then /^I navigate to roster for the section I saved$/ do
   expect(@section_id).to be > 0
   steps %{
-    Then I am on "http://studio.code.org/teacher_dashboard/sections/#{@section_id}/manage_students"
+    Then I am on "http://studio.code.org/teacher_dashboard/sections/#{@section_id}/roster"
   }
 end
 
