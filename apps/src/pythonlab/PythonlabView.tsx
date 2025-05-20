@@ -33,6 +33,7 @@ import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import CodebridgeRegistry from '../codebridge/CodebridgeRegistry';
 
+import getAiTutor2FullPromptFromData from './aiTutorHelper';
 import ProjectTypePicker from './components/ProjectTypePicker';
 import {
   DEFAULT_PROJECT,
@@ -176,29 +177,13 @@ const PythonlabView: React.FunctionComponent<
     setAiTutor2HintQuestion(undefined);
   });
 
-  // Given a question for the AITutor2, return the full question to ask, which means
-  // appending all the relevant context.
-  const getAiTutor2FullQuestionFromQuestion = (
-    question: string,
-    questionType: 'hint' | 'user'
-  ) => {
-    const fullQuestion = [
+  const getAiTutor2FullPrompt = (question: string) => {
+    return getAiTutor2FullPromptFromData(
       question,
-      'Here is my code:',
-      source.openFiles
-        ?.map(openFile => source.files[openFile].contents)
-        .join('\n'),
-      'Here is the validation code:',
-      validationFile?.contents,
-      'Here are the validation test names along with their result, in JSON:',
-      JSON.stringify(
-        PythonValidationTracker.getInstance().getValidationResults()
-      ),
-      'And here are the instructions:',
-      levelProperties.longInstructions,
-    ].join('\n\n');
-
-    return fullQuestion;
+      source,
+      validationFile,
+      levelProperties.longInstructions
+    );
   };
 
   const onRun = async (
@@ -259,9 +244,7 @@ const PythonlabView: React.FunctionComponent<
           levelProperties={levelProperties}
           projectPickerSettings={projectPickerSettings}
           aiTutor2HintQuestion={aiTutor2HintQuestion}
-          getAiTutor2FullQuestionFromQuestion={
-            getAiTutor2FullQuestionFromQuestion
-          }
+          getAiTutor2FullPrompt={getAiTutor2FullPrompt}
         />
       )}
       {showProjectPickerModal && (

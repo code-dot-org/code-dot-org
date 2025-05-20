@@ -79,9 +79,8 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     onRun,
     onStop,
     levelProperties,
-    getAiTutor2FullQuestionFromQuestion,
+    getAiTutor2FullPrompt,
     aiTutor2HintQuestion,
-    levelProperties: {aiTutor2Available},
   } = useCodebridgeContext();
   const dialogControl = useDialogControl();
 
@@ -91,6 +90,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     predictSettings,
     submittable: isSubmittable,
     appName: appType,
+    aiTutor2Available,
   } = levelProperties;
 
   const scriptId = useAppSelector(state => state.lab.scriptId);
@@ -391,7 +391,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
               allowChat={false}
               type={'hint'}
               question={aiTutor2HintQuestion}
-              getFullQuestionFromQuestion={getAiTutor2FullQuestionFromQuestion}
+              getFullPrompt={getAiTutor2FullPrompt}
             />
           )}
           {predictSettings?.isPredictLevel && (

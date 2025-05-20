@@ -12,17 +12,14 @@ interface AiTutor2UIProps {
   allowChat?: boolean;
   type: 'user' | 'hint';
   question?: string;
-  getFullQuestionFromQuestion?: (
-    question: string,
-    type: 'user' | 'hint'
-  ) => string;
+  getFullPrompt?: (question: string) => string;
 }
 
 const AiTutor2UI: React.FunctionComponent<AiTutor2UIProps> = ({
   allowChat,
   type,
   question,
-  getFullQuestionFromQuestion,
+  getFullPrompt,
 }) => {
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const scriptId = useAppSelector(state => state.lab.scriptId);
@@ -48,12 +45,10 @@ const AiTutor2UI: React.FunctionComponent<AiTutor2UIProps> = ({
   // Ask the LLM something and get a response.
   const askAiTutor2 = useCallback(
     async (message: string) => {
-      const fullQuestion = getFullQuestionFromQuestion
-        ? getFullQuestionFromQuestion(message, type)
-        : message;
+      const fullQuestion = getFullPrompt ? getFullPrompt(message) : message;
 
       if (message !== lastQuestion.current) {
-        console.log('🤖: starting chat request', question, type);
+        console.log('🤖: starting chat request', question);
         lastQuestion.current = message;
         setResponse(null);
 
@@ -69,7 +64,7 @@ const AiTutor2UI: React.FunctionComponent<AiTutor2UIProps> = ({
         console.log(' 🤖: skipping previously asked question');
       }
     },
-    [getFullQuestionFromQuestion, question, type]
+    [getFullPrompt, question, type]
   );
 
   // If the incoming question changes, then ask it.

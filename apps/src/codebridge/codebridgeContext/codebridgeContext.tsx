@@ -59,10 +59,7 @@ export type CodebridgeContextType = {
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
   aiTutor2HintQuestion?: string;
-  getAiTutor2FullQuestionFromQuestion?: (
-    question: string,
-    questionType: 'user' | 'hint'
-  ) => string;
+  getAiTutor2FullPrompt?: (question: string) => string;
 };
 
 export const CodebridgeContext = createContext<CodebridgeContextType | null>(

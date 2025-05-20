@@ -30,7 +30,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
     state => state.codebridgeWorkspace.widgetViewShowCode
   );
   const {
-    getAiTutor2FullQuestionFromQuestion,
+    getAiTutor2FullPrompt,
     levelProperties: {aiTutor2Available},
   } = useCodebridgeContext();
 
@@ -125,9 +125,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
                 <AiTutor2UI
                   allowChat={true}
                   type="user"
-                  getFullQuestionFromQuestion={
-                    getAiTutor2FullQuestionFromQuestion
-                  }
+                  getFullPrompt={getAiTutor2FullPrompt}
                 />
               </div>
             </PanelContainer>
