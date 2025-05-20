@@ -1,0 +1,20 @@
+{
+  "changeConsoleVisibility": "Change Console Visibility",
+  "codeEditorEditing": "Code Editor: editing",
+  "codeEditorDescription": "Code Editor: Press Enter to edit, Escape to exit.",
+  "console": "Console",
+  "consoleOnly": "Console only",
+  "consoleOnlyDescription": "A project that outputs to the console.",
+  "inputFailed": "We're sorry, input is unavailable at this time. Input may not work in a private or incognito window. If you are in a standard browser window, please try refreshing the page. If the issue persists, contact support@code.org.",
+  "loadFailed": "We're sorry, we hit an issue setting up Python Lab, and you may see errors. Please try refreshing the page. If the issue persists, contact support@code.org.",
+  "noCode": "You have no code to run.",
+  "noFileToRun": "You have no {fileName} to run.",
+  "moduleNotSupported": "ModuleNotFoundError: The module {module} is not supported in Python Lab.",
+  "neighborhood": "Neighborhood",
+  "neighborhoodDescription": "A project that uses the Neighborhood.",
+  "programStopped": "Program stopped.",
+  "projectPickerTitle": "Select an output type",
+  "projectPickerReplaceRestoreInfo": "You can restore your old project using Version History.",
+  "projectPickerReplaceWarning": "This will clear your code and start over with the new output type.",
+  "switchProjectTypeTitle": "Switch your output type"
+}

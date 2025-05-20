@@ -5,12 +5,14 @@ import ProtectedVisualizationDiv, {
   VISUALIZATION_DIV_ID,
 } from '@cdo/apps/templates/ProtectedVisualizationDiv';
 
+import {LOOK_ID, SVG_ID} from './constants';
+
 // In lab2 labs we often want to be able to unmount components, so we
 // include the option to not use ProtectedVisualizationDiv.
 const Visualization = function ({useProtectedDiv = true}) {
   const innerComponent = (
-    <svg version="1.1" id="svgMaze">
-      <g id="look">
+    <svg version="1.1" id={SVG_ID}>
+      <g id={LOOK_ID}>
         <path d="M 0,-15 a 15 15 0 0 1 15 15" />
         <path d="M 0,-35 a 35 35 0 0 1 35 35" />
         <path d="M 0,-55 a 55 55 0 0 1 55 55" />

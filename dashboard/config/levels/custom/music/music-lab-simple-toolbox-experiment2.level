@@ -1,0 +1,543 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-02-05T21:32:44.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "category"
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "x:rfv=Z=-jGpj^sL%9ZF",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "procedures_callnoreturn",
+                        "id": "}sx5.XC|aHEK-.7`zLBq",
+                        "editable": false,
+                        "extraState": {
+                          "name": "Intro"
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "KUAq(nETMXu?9I^t;hp?",
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "procedures_callnoreturn",
+                            "id": "6zFQZ^5MKk^d|xb9f2M7",
+                            "editable": false,
+                            "extraState": {
+                              "name": "Verse"
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": "tDlVe8Bzkef^J-=?2%2-",
+                          "extraState": {
+                            "disableNextConnection": true
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "procedures_callnoreturn",
+                                "id": "6]9|FH_wmk!?_.[euZaJ",
+                                "editable": false,
+                                "extraState": {
+                                  "name": "Chorus"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "|k/6GY^}yz0%dYQ}i,Rd",
+              "x": 230,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "aCkqI+%u^o}XL]cdK_?%",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "Intro"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "1+#@5nf@@OQ81[ikM|6m",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": true
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "o.Fnxl4yp?O5szxqJGW{",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "sabrina_carpenter_espresso/bass_intro"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "Hn0/mjTMFZEajlaHe_~X",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "sabrina_carpenter_espresso/keys_intro"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "lJ1Yv;[R9W|1Qp#:yoax",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": true
+                                  },
+                                  "fields": {
+                                    "sound": "sabrina_carpenter_espresso/guitar_intro"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "zDs@HKW,mnG$R(}NeN;P",
+              "x": 670,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "G(5Ho2-Qd29!ri*+])$~",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "Verse"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "AZ#BSRTUou~P4nW09lG5",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "go]Z}vEp;`/[uE[r7:(8",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "sabrina_carpenter_espresso/vocals_verse_1"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "JnxM#;zyIc-N6op/f}7Q",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "sabrina_carpenter_espresso/bass_main"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": ")s0[wkAkczqi_J|:}h]7",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": true
+                                  },
+                                  "fields": {
+                                    "sound": "sabrina_carpenter_espresso/guitar_1"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sounds_together",
+                        "id": "19Zpr8v-8OajD@GNP~(c",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": true
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "YlM(l#A}i0O9{Z$;+Ivh",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "sabrina_carpenter_espresso/vocals_verse_2"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "^c!Y|aLoS]:*4prLdT4i",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "sabrina_carpenter_espresso/bass_main"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "KhetrzgLp8rJ%o{F{uA,",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": true
+                                      },
+                                      "fields": {
+                                        "sound": "sabrina_carpenter_espresso/guitar_2"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "A-$-}K=jk*$AWYTz1Hd-",
+              "x": 450,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "T#*gp]PKIi+;N*sHwnJJ",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "Chorus"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "U}+LTo^!WKmjsR[/OjdB",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "Yi8Db##|*hByS8GTjVqW",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "sabrina_carpenter_espresso/vocals_chorus_1"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "WJ6X~%|3gPGu},B^beFa",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": true
+                              },
+                              "fields": {
+                                "sound": "sabrina_carpenter_espresso/keys_chorus_1"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sounds_together",
+                        "id": "#`7YFI;yXZY0)Sw3r#Jy",
+                        "deletable": false,
+                        "movable": false,
+                        "extraState": {
+                          "disableNextConnection": true
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "}q02GZ|ak3eCv|@4Lm)n",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "sabrina_carpenter_espresso/vocals_chorus_2"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "N^fr{n/Y]FZ939K,-i^e",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": true
+                                  },
+                                  "fields": {
+                                    "sound": "sabrina_carpenter_espresso/keys_chorus_2"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "procedures": [
+          {
+            "id": "aCkqI+%u^o}XL]cdK_?%",
+            "name": "Intro",
+            "returnTypes": null
+          },
+          {
+            "id": "G(5Ho2-Qd29!ri*+])$~",
+            "name": "Verse",
+            "returnTypes": null
+          },
+          {
+            "id": "T#*gp]PKIi+;N*sHwnJJ",
+            "name": "Chorus",
+            "returnTypes": null
+          }
+        ]
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "sabrina_carpenter_espresso",
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "sabrina_carpenter_espresso/drums_intro"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_sequential",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "repeat_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "times": 1
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      },
+      "sounds": {
+        "sabrina_carpenter_espresso": [
+          "drums_intro",
+          "drums_main_beat",
+          "drums_hats",
+          "drums_fill",
+          "drums_percussion_1",
+          "drums_percussion_2",
+          "bass_intro",
+          "bass_main",
+          "keys_intro",
+          "guitar_intro",
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_verse_2",
+          "vocals_verse_1",
+          "keys_chorus_1",
+          "keys_chorus_2",
+          "guitar_1",
+          "guitar_2"
+        ],
+        "electro": [
+          "drum_beat_cowbell",
+          "drum_beat_club",
+          "drum_beat_edm",
+          "drum_beat_hyper",
+          "drum_beat_fashion",
+          "drum_beat_noise",
+          "drum_beat_pause",
+          "drum_beat_shake",
+          "drum_beat_sharp",
+          "drum_beat_strobe",
+          "drum_beat_swirl",
+          "drum_beat_sync",
+          "drum_beat_tom"
+        ],
+        "pop": [
+          "drum_beat_action",
+          "drum_beat_cosmos",
+          "drum_kit_dizzy",
+          "drum_kit_jumpy",
+          "drum_beat_pump",
+          "drum_beat_relax",
+          "drum_beat_salt",
+          "drum_kit_pop",
+          "shake_beat",
+          "sugar_beat",
+          "drum_kit_surf",
+          "sugar_alternate_beat"
+        ]
+      },
+      "showSoundFilters": false
+    },
+    "long_instructions": "## Adding Drums\r\n\r\nThis song has already been constructed, but the drum track is missing! Let's try to add drums back!\r\n\r\n1) Listen to the song once - how does it sound without drums? What feeling does it have?\r\n2) Strategically add drums to the song. You can use the drums from the original song, or experiment with new beats in the other Code.org packs!\r\n3) Listen to your remix! How does it feel now?",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-02-05T21:32:44.856+00:00\",\"changed\":[\"cloned from \\\"music-lab-simple-toolbox-experiment1\\\"\"],\"cloned_from\":\"music-lab-simple-toolbox-experiment1\"},{\"changed_at\":\"2025-02-05 21:32:49 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-05 21:33:42 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-05 21:39:19 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-05 21:39:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-05 21:39:45 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-05 21:40:02 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-05 21:41:12 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-05 21:44:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-05 21:47:20 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-05 21:48:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-05 21:49:07 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-05 21:53:33 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-05 21:56:56 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-05 22:00:10 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-05 22:03:18 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-12 19:37:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-12 19:38:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

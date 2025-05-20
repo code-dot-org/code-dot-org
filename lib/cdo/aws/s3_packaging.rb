@@ -15,12 +15,14 @@ class S3Packaging
   attr_reader :commit_hash
 
   # @param package_name [String] Friendly name of the package, used as part of our S3 key
-  # @param source_location [String] Path to the location on the filesystem where the build input lives
-  # @param target_location [String] Path to the location on the file system where the unzipped packaged contents should lvie
-  def initialize(package_name, source_location, target_location)
-    throw "Missing argument" if package_name.nil? || source_location.nil? || target_location.nil?
+  # @param application_location [String] Path to the location on the filesystem where the application build input lives
+  # @param source_locations [Array<String>] Path to the locations on the filesystem that should be used to calculate the source commit
+  # @param target_location [String] Path to the location on the file system where the unzipped packaged contents should live
+  def initialize(package_name, application_location, source_locations, target_location)
+    throw "Missing argument" if package_name.nil? || application_location.nil? || source_locations.nil? || target_location.nil?
     @package_name = package_name
-    @source_location = source_location
+    @application_location = application_location
+    @source_locations = source_locations
     @target_location = target_location
     @logger = Logger.new($stdout)
     regenerate_commit_hash
@@ -32,7 +34,7 @@ class S3Packaging
 
   # Recreates our commit hash (for cases where we may have updated our git tree)
   def regenerate_commit_hash
-    @commit_hash = RakeUtils.git_folder_hash @source_location
+    @commit_hash = RakeUtils.git_folder_hash @source_locations
   end
 
   # Tries to get an up to date package without building
@@ -71,7 +73,7 @@ class S3Packaging
   end
 
   # Creates a zipped package of the provided assets folder
-  # @param sub_path [String] Path to built assets, relative to source_location
+  # @param sub_path [String] Path to built assets, relative to application_location
   # @param expected_commit_hash [String] optional, when specified an error will be raised
   #        whenever the current commit hash doesn't match the expected one.
   #        Use this to detect file system changes during the build and fail package creation.
@@ -87,7 +89,7 @@ class S3Packaging
 
     package = Tempfile.new(@commit_hash)
     @logger.info "Creating #{package.path}"
-    Dir.chdir(@source_location + '/' + sub_path) do
+    Dir.chdir(@application_location + '/' + sub_path) do
       # add a commit_hash file whose contents represent the key for this package
       File.write('commit_hash', @commit_hash)
       RakeUtils.system "tar -cz --exclude='*.cache.json' --file #{package.path} *"
@@ -97,7 +99,7 @@ class S3Packaging
   end
 
   def log_bundle_size
-    stats = JSON.parse(File.read(@source_location + '/build/package/js/stats.json'))
+    stats = JSON.parse(File.read(@application_location + '/build/package/js/stats.json'))
     @logger.info(
       stats['assets'].filter_map do |asset|
         next nil unless asset['name'].end_with? '.js'

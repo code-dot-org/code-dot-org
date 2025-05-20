@@ -9,7 +9,7 @@
   SessionStoreGroup:
     Type: AWS::ElastiCache::ReplicationGroup
     Properties:
-      ReplicationGroupDescription: Session Store Replication Group
+      ReplicationGroupDescription: <%="Session Store Replication Group (#{stack_name})" %>
       # 3 nodes of cache.r7g.xlarge will cost ($0.437 * 730 * 3) = ~$960/month
       # and provide just under 80GB of storage.
       CacheNodeType: <%= rack_env?(:production) ? 'cache.r7g.xlarge' : 'cache.t4g.micro' -%>
@@ -70,10 +70,13 @@
   SessionStoreEvictionsAlarm:
     Type: AWS::CloudWatch::Alarm
     Properties:
-      AlarmName: <%="Redis Session Store High Eviction Rate (#{stack_name})" %>
-      AlarmDescription: We're seeing a lot of evictions from the Redis session store.
-        A steady amount of evictions is not a bad thing, but a rapid increase in
-        eviction rate could be a sign of other instability.
+      AlarmName: <%="Redis Session Store Evictions (#{stack_name})" %>
+      AlarmDescription: We're seeing evictions from the Redis session store. We
+        expect to remain under 100% usage in this cluster; evictions are a sign
+        that we have exceeded that. A low number of evictions should not have a
+        user-facing impact, since we intentionally store session data for
+        longer than it is needed, but any amount of evictions represents an
+        early warning sign that we should scale this cluster up.
       ActionsEnabled: true
       AlarmActions:
         - !Ref InfraLowPriority
@@ -86,9 +89,7 @@
       Period: 300
       EvaluationPeriods: 5
       DatapointsToAlarm: 3
-      # TODO infra: update this threshold and upgrade the alarm to Urgent once
-      # we've confirmed that this threshold and implementation are practical.
-      Threshold: 20000
+      Threshold: 0
       ComparisonOperator: GreaterThanThreshold
       TreatMissingData: missing
   SessionStoreNetworkBytesInAlarm:

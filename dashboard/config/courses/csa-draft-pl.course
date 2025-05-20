@@ -1,0 +1,23 @@
+{
+  "name": "csa-draft-pl",
+  "script_names": [
+    "csa-draft-pl"
+  ],
+  "original_script_names": [
+    "csa-draft-pl"
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "csa-draft-pl",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

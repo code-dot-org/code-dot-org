@@ -4,28 +4,32 @@ import {
   SOURCE_REDUCER_ACTIONS,
   useSourceUtilities,
 } from '@codebridge/codebridgeContext';
-import {FileBrowser} from '@codebridge/FileBrowser';
-import {useReducerWithCallback} from '@codebridge/hooks';
-import {InfoPanel} from '@codebridge/InfoPanel';
-import {SideBar} from '@codebridge/SideBar';
+import {useReducerWithCallback, useZoomTracker} from '@codebridge/hooks';
 import {
   ConfigType,
   SetProjectFunction,
   SetConfigFunction,
   OnRunFunction,
+  SendConsoleInputFunction,
+  CodebridgeLevelProperties,
+  ProjectPickerSettings,
 } from '@codebridge/types';
-import React, {useEffect, useReducer, useRef} from 'react';
+import classNames from 'classnames';
+import React, {useEffect, useMemo, useReducer, useRef} from 'react';
 
-import {FilePreview} from '@cdo/apps/codebridge/FilePreview';
-import './styles/small-footer-dark-overrides.scss';
+import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {LabConfig, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import Workspace from './Workspace';
-import Output from './Workspace/Output';
-import WorkspaceAndOutput from './Workspace/WorkspaceAndOutput';
-
-import moduleStyles from './styles/cdoIDE.module.scss';
+import moduleStyles from './styles/codebridgeContainer.module.scss';
 import './styles/codebridge.scss';
+
+const RUN_BUTTON_ID = '#uitest-codebridge-run';
+const EDITOR_ID = '#uitest-codebridge-editor';
+const CONSOLE_CLASS = '.xterm-helper-textarea';
 
 type CodebridgeProps = {
   source: MultiFileSource;
@@ -37,6 +41,9 @@ type CodebridgeProps = {
   onStop?: () => void;
   projectVersion: number;
   labConfig?: LabConfig;
+  sendConsoleInput?: SendConsoleInputFunction;
+  levelProperties: CodebridgeLevelProperties;
+  projectPickerSettings?: ProjectPickerSettings;
 };
 
 export const Codebridge = React.memo(
@@ -50,6 +57,9 @@ export const Codebridge = React.memo(
     onStop,
     projectVersion,
     labConfig,
+    sendConsoleInput,
+    levelProperties,
+    projectPickerSettings,
   }: CodebridgeProps) => {
     const reducerWithCallback = useReducerWithCallback(
       sourceReducer,
@@ -57,10 +67,66 @@ export const Codebridge = React.memo(
       new Set(SOURCE_REDUCER_ACTIONS.REPLACE_SOURCE)
     );
     const [internalSource, dispatch] = useReducer(reducerWithCallback, source);
+    const isShareView = useAppSelector(state => state.lab.isShareView);
+    const isWidgetView = !!levelProperties.widgetView;
+    const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
     const sourceUtilities = useSourceUtilities(dispatch);
 
     const currentProjectVersion = useRef(projectVersion);
+
+    // Adds keyboard shortcuts for Editor (1), Run (2), and Console (3)
+    // which are preceded by Control (Windows/Linux) or Command (macOS).
+    // Runs on mount (see empty dependency list).
+    useEffect(() => {
+      const handleKeyDown = (event: KeyboardEvent) => {
+        // Check if Control (Windows/Linux) or Command (macOS) is pressed
+        const isControlOrCommand = event.ctrlKey || event.metaKey;
+        const editorElement = document.querySelector(EDITOR_ID);
+        const runButton = document.querySelector(RUN_BUTTON_ID);
+        const consoleElement = document.querySelector(CONSOLE_CLASS);
+        if (isControlOrCommand) {
+          switch (event.key) {
+            case '1':
+              if (editorElement) {
+                (editorElement as HTMLElement).focus();
+                // Also simulate 'Enter' to actually enter the editor
+                const enterKeyEvent = new KeyboardEvent('keydown', {
+                  key: 'Enter',
+                  keyCode: 13,
+                  bubbles: true,
+                });
+                editorElement.dispatchEvent(enterKeyEvent);
+              }
+              event.preventDefault();
+              break;
+            case '2':
+              if (runButton) {
+                (runButton as HTMLElement).click();
+              }
+              event.preventDefault();
+              break;
+            case '3':
+              if (consoleElement) {
+                (consoleElement as HTMLElement).focus();
+              }
+              event.preventDefault();
+              break;
+            default:
+              break;
+          }
+        }
+      };
+
+      // Attach the event listener
+      document.addEventListener('keydown', handleKeyDown);
+
+      // Cleanup the event listener on unmount
+      return () => {
+        document.removeEventListener('keydown', handleKeyDown);
+      };
+    }, []);
+
     useEffect(() => {
       if (projectVersion !== currentProjectVersion.current) {
         sourceUtilities.replaceSource(source);
@@ -68,43 +134,35 @@ export const Codebridge = React.memo(
       }
     }, [currentProjectVersion, sourceUtilities, projectVersion, source]);
 
-    const ComponentMap = {
-      'file-browser': FileBrowser,
-      'side-bar': SideBar,
-      'file-preview': FilePreview,
-      'info-panel': config.Instructions || InfoPanel,
-      workspace: Workspace,
-      output: Output,
-      'workspace-and-output': WorkspaceAndOutput,
-    };
+    const InnerLayout = useMemo(() => {
+      if (isShareView && config.layoutComponents.share) {
+        return config.layoutComponents.share;
+      }
+      if (isWidgetView && config.layoutComponents.widget && !isStartMode) {
+        return config.layoutComponents.widget;
+      }
+      let currentLayout = config.activeLayout;
+      if (!currentLayout) {
+        currentLayout = 'horizontal';
+      }
+      return config.layoutComponents[currentLayout];
+    }, [
+      config.activeLayout,
+      config.layoutComponents,
+      isShareView,
+      isStartMode,
+      isWidgetView,
+    ]);
 
-    let gridLayout: string;
-    let gridLayoutRows: string;
-    let gridLayoutColumns: string;
-    if (
-      config.gridLayout &&
-      config.gridLayoutRows &&
-      config.gridLayoutColumns
-    ) {
-      gridLayout = config.gridLayout;
-      gridLayoutRows = config.gridLayoutRows;
-      gridLayoutColumns = config.gridLayoutColumns;
-    } else if (config.labeledGridLayouts && config.activeGridLayout) {
-      const labeledLayout = config.labeledGridLayouts[config.activeGridLayout];
-      gridLayout = labeledLayout.gridLayout;
-      gridLayoutRows = labeledLayout.gridLayoutRows;
-      gridLayoutColumns = labeledLayout.gridLayoutColumns;
-    } else {
-      throw new Error('Cannot render codebridge - no layout provided');
-    }
-    // gridLayout is a css string that defines the components in the grid layout.
-    // In order to find which components are in the grid layout, we remove all quotes
-    // from the string and tokenize it.
-    const gridLayoutKeys = gridLayout
-      .trim()
-      .replaceAll(`"`, '')
-      .split(' ')
-      .map(key => key.trim());
+    const appName = levelProperties.appName;
+
+    const backpackApi = useMemo(
+      () => new BackpackClientApi(appName, null),
+      [appName]
+    );
+
+    // Send analytics when user zooms in/out (will be compared to user updating font size via settings).
+    useZoomTracker(appName);
 
     return (
       <CodebridgeContextProvider
@@ -118,25 +176,19 @@ export const Codebridge = React.memo(
           onStop,
           ...sourceUtilities,
           labConfig,
+          sendConsoleInput,
+          levelProperties,
+          projectPickerSettings,
         }}
       >
-        <div
-          className={moduleStyles['cdoide-container']}
-          style={{
-            gridTemplateAreas: gridLayout,
-            gridTemplateRows: gridLayoutRows,
-            gridTemplateColumns: gridLayoutColumns,
-          }}
-        >
-          {(Object.keys(ComponentMap) as Array<keyof typeof ComponentMap>)
-            .filter(key => gridLayoutKeys.includes(key))
-            .map(key => {
-              const Component = ComponentMap[key];
-              return <Component key={key} />;
-            })}
-
-          {/*<Search />*/}
-        </div>
+        <BackpackAPIContext.Provider value={backpackApi}>
+          <div className={classNames(moduleStyles.codebridgeContainer)}>
+            <InnerLayout
+              isProjectLevel={levelProperties.isProjectLevel}
+              isWidgetView={levelProperties.widgetView}
+            />
+          </div>
+        </BackpackAPIContext.Provider>
       </CodebridgeContextProvider>
     );
   }

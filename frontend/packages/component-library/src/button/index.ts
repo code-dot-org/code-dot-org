@@ -1,3 +1,6 @@
+// Auto-import SASS generated CSS
+import './index.css';
+
 // Types
 export {ButtonType, ButtonColor} from './types';
 

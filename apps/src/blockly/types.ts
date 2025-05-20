@@ -67,6 +67,7 @@ interface AnalyticsData {
 type GoogleBlocklyType = typeof GoogleBlockly;
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
 export interface BlocklyWrapperType extends GoogleBlocklyType {
+  isDarkTheme: boolean | undefined;
   varsInGlobals: boolean;
   disableVariableEditing: boolean;
   ALIGN_CENTRE: GoogleBlockly.inputs.Align.CENTRE;
@@ -85,8 +86,6 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   grayOutUndeletableBlocks: boolean;
   topLevelProcedureAutopopulate: boolean;
   isJigsaw: boolean;
-  getNewCursor: (type: string) => GoogleBlockly.Cursor;
-  LineCursor: typeof GoogleBlockly.BasicCursor;
   version: BlocklyVersion;
   blockly_: typeof GoogleBlockly;
   mainWorkspace: GoogleBlockly.WorkspaceSvg | undefined;
@@ -96,8 +95,6 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
     ObservableParameterModel
   >;
   themes: {[key in Themes]: GoogleBlockly.Theme};
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  navigationController: any; // Navigation Controller is not typed by Blockly
   BlockSpace: {
     EVENTS: typeof WORKSPACE_EVENTS;
     onMainBlockSpaceCreated: (callback: () => void) => void;
@@ -182,6 +179,9 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
     pointerMetadataMap: PointerMetadataMap,
     imageSourceId: string
   ) => string;
+  blockIdOverrides: {
+    [originalBlockId: string]: string;
+  };
 }
 
 export type GoogleBlocklyInstance = typeof GoogleBlockly;
@@ -267,6 +267,7 @@ export interface ExtendedWorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
   setEnableToolbox: () => void;
   traceOn: () => void;
   isReadOnly: () => boolean;
+  cleanUp: (includeImmovableBlocks?: boolean) => void;
 }
 
 export interface EditorWorkspaceSvg extends ExtendedWorkspaceSvg {

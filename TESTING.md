@@ -109,7 +109,14 @@ To run a test file in either directory, `cd` into it before running the tests.
 ```bash
 cd shared
 bundle exec ruby -Itest ./test/path/to/your/test.rb
-``` 
+bundle exec ruby -Itest ./test/test_html_parser.rb
+```
+
+```bash
+cd lib
+bundle exec ruby -Itest ./test/path/to/your/test.rb
+bundle exec ruby -Itest ./test/cdo/aws/test_cloudwatch_logs.rb
+```
 
 ### Pegasus Tests
 `cd pegasus && rake test` will run all of our pegasus Ruby tests. This usually takes ~20 seconds to run.

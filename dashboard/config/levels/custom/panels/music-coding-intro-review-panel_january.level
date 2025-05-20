@@ -1,0 +1,47 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-01-23T23:12:24.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "**Congratulations!** \n\nYou have learned so much about making music with code!",
+        "imageUrl": "https://images.code.org/97857675e0c021b315040ab8f3c4dfa6-Lesson 3 Level 9.png",
+        "key": "music-coding-intro-functions-panel-dd6ade9d-4ac1-4787-89e4-4fa347cf3c12",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "You're **sequencing** & layering sounds like a songwriter!",
+        "imageUrl": "",
+        "key": "music-coding-intro-functions-panel-4e9d978e-62cf-45c0-a123-21e2c48cc3db",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "And you're grouping sounds with **functions** like a music producer!",
+        "imageUrl": "",
+        "key": "music-coding-intro-functions-panel-b11022f2-164f-4e79-b32c-96ed53cf9381",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "You can even trigger sounds with **events** to design a special experience like a sound designer! ",
+        "imageUrl": "",
+        "key": "music-coding-intro-functions-panel-13c54ec6-1d0b-4bdf-89aa-880a117202f8",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "It's time to put it all together in your own project! \n\nWhat will you create? \n",
+        "imageUrl": "",
+        "key": "music-coding-intro-review-panel-95aad54b-e7f2-4182-8db9-d8107b8ffa00",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "name_suffix": "_january"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-23T23:12:24.961+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-review-panel\\\"\"],\"cloned_from\":\"music-coding-intro-review-panel\"}]"
+}]]></config>
+</Panels>

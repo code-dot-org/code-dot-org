@@ -14,7 +14,7 @@ Scenario: Teacher can view student versions
   And I press "versions-header"
   And I wait until element "div:contains(Latest Version)" is visible
   Then I save the text from ".versionRow:nth-child(1) p"
-  
+
   When I close the dialog
   And I set the project version interval to 1 second
   And I wait for 1.5 seconds
@@ -30,7 +30,7 @@ Scenario: Teacher can view student versions
   Then I sign in as "Teacher_Ron"
   And I am on "http://studio.code.org/s/allthethings/lessons/18/levels/1"
   And I wait until element ".student-table" is visible
-  And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
+  And I click selector "#teacher-panel-container tr:eq(1)" to load a new page
   And I wait for the lab page to fully load
   And I dismiss the teacher panel
   And I press "versions-header"

@@ -101,7 +101,8 @@ Scenario: Oceans uncustomized dashboard certificate pages
 
   When I press the first "#certificate-share img" element to load a new page
   And I wait until current URL contains "/print_certificates/"
-  And I see no difference for "oceans print certificate page"
+  # This page doesn't render any icons, so we don't need to wait for Font Awesome to load.
+  And I see no difference for "oceans print certificate page" without waiting for Font Awesome to load
 
   And I close my eyes
 
@@ -149,7 +150,8 @@ Scenario: customized dashboard certificate pages with no course name
   When I press the first "#certificate-share img" element to load a new page
   And I wait until current URL contains "/print_certificates/"
   Then I wait to see an image "/certificate_images/"
-  And I see no difference for "print certificate page"
+  # This page doesn't render any icons, so we don't need to wait for Font Awesome to load.
+  And I see no difference for "print certificate page" without waiting for Font Awesome to load
 
   And I close my eyes
 
@@ -160,6 +162,7 @@ Scenario: congrats certificate pages
   And element "#uitest-certificate" is visible
   And I wait until element ".fa-facebook" is visible
   And I wait until element ".fa-twitter" is visible
+  And the href of selector ".social-print-link" contains "/print_certificates/"
   And I wait for 5 seconds
   And I open my eyes to test "congrats certificate pages"
 
@@ -169,6 +172,7 @@ Scenario: congrats certificate pages
   And element "#uitest-certificate" is visible
   And I wait for image "#uitest-certificate img" to load
   And I wait until element ".fa-twitter" is visible
+  And the href of selector ".social-print-link" contains "/print_certificates/"
   And I wait for 5 seconds
   And I see no difference for "uncustomized flappy certificate"
 
@@ -184,6 +188,7 @@ Scenario: congrats certificate pages
   And element "#uitest-certificate" is visible
   And I wait for image "#uitest-certificate img" to load
   And I wait until element ".fa-twitter" is visible
+  And the href of selector ".social-print-link" contains "/print_certificates/"
   And I wait for 5 seconds
   And I see no difference for "uncustomized oceans certificate"
 
@@ -199,6 +204,7 @@ Scenario: congrats certificate pages
   And element "#uitest-certificate" is visible
   And I wait for image "#uitest-certificate img" to load
   And I wait until element ".fa-twitter" is visible
+  And the href of selector ".social-print-link" contains "/print_certificates/"
   And I wait for 5 seconds
   And I see no difference for "uncustomized 20-hour certificate"
 
@@ -217,6 +223,7 @@ Scenario: congrats certificate pages
   And element "#uitest-certificate" is visible
   And I wait for image "#uitest-certificate img" to load
   And I wait until element ".fa-twitter" is visible
+  And the href of selector ".social-print-link" contains "/print_certificates/"
   And I wait for 5 seconds
   And I see no difference for "uncustomized Course A 2017 certificate"
 
@@ -228,41 +235,3 @@ Scenario: congrats certificate pages
 
   And I close my eyes
 
-Scenario: congrats certificate pages show social media icons
-  Given I am on "http://studio.code.org/congrats"
-  And I wait until element "#uitest-certificate" is visible
-  And element "#uitest-certificate" is visible
-  And I wait until element ".fa-twitter" is visible
-  Then the href of selector ".social-print-link" contains "/print_certificates/"
-
-  When I am on "http://code.org/api/hour/finish/flappy"
-  And I wait until current URL contains "/congrats"
-  And I wait to see element with ID "uitest-certificate"
-  And element "#uitest-certificate" is visible
-  And I wait for image "#uitest-certificate img" to load
-  And I wait until element ".fa-twitter" is visible
-  Then the href of selector ".social-print-link" contains "/print_certificates/"
-
-  When I am on "http://code.org/api/hour/finish/oceans"
-  And I wait until current URL contains "/congrats"
-  And I wait to see element with ID "uitest-certificate"
-  And element "#uitest-certificate" is visible
-  And I wait for image "#uitest-certificate img" to load
-  And I wait until element ".fa-twitter" is visible
-  Then the href of selector ".social-print-link" contains "/print_certificates/"
-
-  When I am on "http://code.org/congrats/accelerated"
-  And I wait until current URL contains "/congrats"
-  And I wait to see element with ID "uitest-certificate"
-  And element "#uitest-certificate" is visible
-  And I wait for image "#uitest-certificate img" to load
-  And I wait until element ".fa-twitter" is visible
-  Then the href of selector ".social-print-link" contains "/print_certificates/"
-
-  When I am on "http://code.org/congrats/coursea-2017"
-  And I wait until current URL contains "/congrats"
-  And I wait to see element with ID "uitest-certificate"
-  And element "#uitest-certificate" is visible
-  And I wait for image "#uitest-certificate img" to load
-  And I wait until element ".fa-twitter" is visible
-  Then the href of selector ".social-print-link" contains "/print_certificates/"

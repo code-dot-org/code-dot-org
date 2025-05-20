@@ -13,7 +13,7 @@ const {createWebpackConfig} = require('./webpack.config');
 const {ALL_APPS, appsEntriesFor} = require('./webpackEntryPoints');
 
 // Review every couple of years to see if an increase improves test performance
-const MEM_PER_KARMA_PROCESS_MB = 4300;
+const MEM_PER_TEST_PROCESS_MB = 4300;
 
 module.exports = function (grunt) {
   var config = {};
@@ -365,6 +365,7 @@ module.exports = function (grunt) {
     generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb',
     generateRegionConfigurations:
       'bundle exec ./script/generateRegionConfigurations.rb',
+    buildFrontendDependencies: './script/build-frontend-dependencies.sh',
   };
 
   grunt.registerTask('karma', ['preconcatForKarma', 'karma start']);
@@ -379,7 +380,7 @@ module.exports = function (grunt) {
       stdio: 'inherit',
       env: {
         ...process.env,
-        NODE_OPTIONS: `--max-old-space-size=${MEM_PER_KARMA_PROCESS_MB}`,
+        NODE_OPTIONS: `--max-old-space-size=${MEM_PER_TEST_PROCESS_MB}`,
       },
     });
   });
@@ -549,6 +550,7 @@ module.exports = function (grunt) {
     'locales',
     'ejs',
     'detect-production-webpack-chunks',
+    'exec:buildFrontendDependencies',
   ]);
 
   grunt.registerTask('check-entry-points', function () {
@@ -621,4 +623,4 @@ module.exports = function (grunt) {
 };
 
 // Exported for matching use in `run-tests-in-parallel.sh`
-module.exports.MEM_PER_KARMA_PROCESS_MB = MEM_PER_KARMA_PROCESS_MB;
+module.exports.MEM_PER_TEST_PROCESS_MB = MEM_PER_TEST_PROCESS_MB;

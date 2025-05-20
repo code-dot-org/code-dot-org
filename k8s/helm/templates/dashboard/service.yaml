@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "cdo.fullname" (merge (dict "component" "dashboard") .) }}
+  labels:
+    {{ include "cdo.labels" (merge (dict "component" "dashboard") .) | nindent 4 }}
+spec:
+  selector:
+    {{ include "cdo.selectorLabels" (merge (dict "component" "dashboard") .) | nindent 4 }}
+  ports:
+    - name: http
+      port: 3000
+    - name: http-hmr
+      port: 9000

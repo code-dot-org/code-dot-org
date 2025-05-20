@@ -18,14 +18,39 @@ export const TEACHER_NAVIGATION_PATHS = {
   lessonMaterials: 'materials',
   calendar: 'calendar',
   courseOverview: 'courses/:courseVersionName?',
+  nestedUnitOverview: 'courses/:courseVersionName/units/:unitPosition',
   unitOverview: 'unit/:unitName?',
   settings: 'settings',
+  home: 'home',
 };
 
 const getAbsolutePath = (name: string) =>
   `${TEACHER_NAVIGATION_SECTIONS_URL}/${SPECIFIC_SECTION_BASE_URL}/${name}`;
 
+/**
+ * Get the path starting from the TeacherNavigation Base URL for the given
+ * Path name.
+ * For example:
+ *   Given: 'courses/:courseVersionName?'
+ *   Returns: '/teacher_dashboard/sections/:section_id/courses/:courseVersionName?'
+ * These paths use the React Router path syntax.
+ * @param {string} name - The TEACHER_NAVIGATION_PATHS path
+ * @returns {string} The full base path in React Router syntax for the given name.
+ */
+export const getBasePath = (name: string): string =>
+  `${TEACHER_NAVIGATION_BASE_URL}/${getAbsolutePath(name)}`;
+
+export const TEACHER_NAVIGATION_PATH_NAMES = Object.fromEntries(
+  Object.keys(TEACHER_NAVIGATION_PATHS).map(key => [key, key])
+);
+
 export const LABELED_TEACHER_NAVIGATION_PATHS = {
+  home: {
+    url: TEACHER_NAVIGATION_PATHS.home,
+    absoluteUrl: TEACHER_NAVIGATION_PATHS.home,
+    label: i18n.teacherHomePage(),
+    icon: null,
+  },
   progress: {
     url: TEACHER_NAVIGATION_PATHS.progress,
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.progress),
@@ -80,8 +105,8 @@ export const LABELED_TEACHER_NAVIGATION_PATHS = {
     url: TEACHER_NAVIGATION_PATHS.aiTutorChatMessages,
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.aiTutorChatMessages),
     // this is not part of the navigation sidebar so it doesn't need a label or icon
-    label: null,
-    icon: null,
+    label: i18n.aiTutor(),
+    icon: 'messages',
   },
   lessonMaterials: {
     url: TEACHER_NAVIGATION_PATHS.lessonMaterials,
@@ -98,6 +123,12 @@ export const LABELED_TEACHER_NAVIGATION_PATHS = {
   courseOverview: {
     url: TEACHER_NAVIGATION_PATHS.courseOverview,
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.courseOverview),
+    label: i18n.course(),
+    icon: 'desktop',
+  },
+  nestedUnitOverview: {
+    url: TEACHER_NAVIGATION_PATHS.nestedUnitOverview,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.nestedUnitOverview),
     label: i18n.course(),
     icon: 'desktop',
   },

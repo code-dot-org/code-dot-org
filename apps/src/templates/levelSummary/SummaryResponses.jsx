@@ -1,15 +1,17 @@
+import Tags from '@code-dot-org/component-library/tags';
+import Toggle from '@code-dot-org/component-library/toggle';
 import PropTypes from 'prop-types';
 import React, {useCallback, useEffect, useState, useMemo} from 'react';
 import {connect} from 'react-redux';
 
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import Toggle from '@cdo/apps/componentLibrary/toggle';
 import {PredictQuestionType} from '@cdo/apps/lab2/levelEditors/types';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
+import FreeResponseAIEvaluation from './FreeResponseAIEvaluation';
 import FreeResponseResponses from './FreeResponseResponses';
 import MultiResponses from './MultiResponses';
 
@@ -39,9 +41,9 @@ const SummaryResponses = ({
   const isMulti =
     scriptData.levels[levelNumber].type === MULTI ||
     predictSettings?.questionType === PredictQuestionType.MultipleChoice;
-
   const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
   const [showStudentNames, setShowStudentNames] = useState(false);
+  const [showAIAnalysis, setShowAIAnalysis] = useState(false);
 
   // To avoid confusion, if a teacher tries to view the summary as a student,
   // send them back to the level in Participant mode instead.
@@ -115,6 +117,34 @@ const SummaryResponses = ({
     setShowStudentNames(prevShowStudentNames => !prevShowStudentNames);
   };
 
+  const levelData = {
+    levelId: scriptData.levels[levelNumber].id,
+    unitId: scriptData.reportingData.unitId,
+  };
+  const toggleAIAnalysis = () => {
+    if (showAIAnalysis) {
+      logEvent(EVENTS.CFU_SHOW_AI_INSIGHTS_TOGGLED_OFF);
+    } else {
+      logEvent(EVENTS.CFU_SHOW_AI_INSIGHTS_TOGGLED_ON);
+    }
+    setShowAIAnalysis(prevShowAIAnalysis => !prevShowAIAnalysis);
+  };
+
+  const freeResponseResponses = isFreeResponse
+    ? scriptData.responses[levelNumber]
+    : null;
+
+  const responsesForAi = freeResponseResponses?.map(response => ({
+    studentId: response.user_id,
+    studentDisplayName: response.student_display_name,
+    studentWork: response.text,
+  }));
+
+  const AiEvaluationMVPUnits = ['csp4-2024', 'csp6-2024', 'allthethings'];
+  const aiAnalysisAvailable = AiEvaluationMVPUnits.includes(
+    scriptData.reportingData.unitName
+  );
+
   return (
     <div className={styles.summaryContainer} id="summary-container">
       {/* Student Responses */}
@@ -130,7 +160,6 @@ const SummaryResponses = ({
             }
           >
             <p>
-              <i className="fa fa-user" />
               <span>
                 {scriptData.responses[levelNumber].length}/{students.length}{' '}
                 {i18n.studentsAnswered()}
@@ -164,21 +193,49 @@ const SummaryResponses = ({
             </div>
           )}
           {isFreeResponse && (
-            <Toggle
-              onChange={toggleNames}
-              checked={showStudentNames}
-              label={i18n.showStudentNames()}
-              position={'right'}
-              size={'s'}
-              name={'showStudentNames'}
-            />
+            <div className={styles.toggleGroup}>
+              <Toggle
+                onChange={toggleNames}
+                checked={showStudentNames}
+                label={i18n.showStudentNames()}
+                position={'right'}
+                size={'s'}
+                name={'showStudentNames'}
+              />
+              {aiAnalysisAvailable && (
+                <div className={styles.aiToggleContainer}>
+                  <Toggle
+                    onChange={toggleAIAnalysis}
+                    checked={showAIAnalysis}
+                    label={i18n.showAiInsights()}
+                    position={'right'}
+                    size={'s'}
+                    name={'showAIAnalysis'}
+                  />
+                  <Tags
+                    className={styles.headerTag}
+                    tagsList={[{label: i18n.experiment()}]}
+                    size="s"
+                  />
+                </div>
+              )}
+            </div>
           )}
         </div>
+
+        {/* AI Analysis */}
+        {isFreeResponse && showAIAnalysis && (
+          <FreeResponseAIEvaluation
+            responses={responsesForAi}
+            levelData={levelData}
+            totalNumberOfStudents={students.length}
+          />
+        )}
 
         {/* Free response visualization */}
         {isFreeResponse && (
           <FreeResponseResponses
-            responses={scriptData.responses[levelNumber]}
+            responses={freeResponseResponses}
             showStudentNames={showStudentNames}
             eventData={eventData}
           />

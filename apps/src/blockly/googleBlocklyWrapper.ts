@@ -3,7 +3,6 @@ import {
   ObservableParameterModel,
 } from '@blockly/block-shareable-procedures';
 import {installAllBlocks as installFieldColourBlocks} from '@blockly/field-colour';
-import {LineCursor, NavigationController} from '@blockly/keyboard-navigation';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
 import {
   ScrollBlockDragger,
@@ -24,6 +23,9 @@ import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
+
+import {START_BLOCKS} from '../constants';
+import {START_SOURCES} from '../lab2/constants';
 
 import CdoAngleHelper from './addons/cdoAngleHelper';
 import CdoBlockSerializer from './addons/cdoBlockSerializer';
@@ -53,6 +55,7 @@ import CdoRendererGeras from './addons/cdoRendererGeras';
 import CdoRendererThrasos from './addons/cdoRendererThrasos';
 import CdoRendererZelos from './addons/cdoRendererZelos';
 import {initializeScrollbarPair} from './addons/cdoScrollbar';
+import {cleanUp} from './addons/cdoSerializationHelpers';
 import {getPointerBlockImageUrl} from './addons/cdoSpritePointer';
 import CdoTrashcan from './addons/cdoTrashcan';
 import * as cdoUtils from './addons/cdoUtils';
@@ -118,6 +121,7 @@ import {
   handleCodeGenerationFailure,
   strip,
   interpolateMsg,
+  isDarkTheme,
 } from './utils';
 
 const options = {
@@ -192,14 +196,6 @@ const BlocklyWrapper = function (
   };
 };
 
-/**
- * Note that this can only be called once per page load, as this initializes
- * the navigation controller, and multiple calls to navigationController.init()
- * will throw an error.
- *
- * If this needs to be called multiple times (for example, in tests), call
- * Blockly.navigationController.dispose() before calling this function again.
- */
 function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   registerIfMutator();
   registerLogicCompareMutator();
@@ -431,11 +427,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   Object.setPrototypeOf(javascriptGenerator.forBlock, javascriptGenerator);
 
   blocklyWrapper.JavaScript = javascriptGenerator;
-  blocklyWrapper.LineCursor = LineCursor;
-  blocklyWrapper.navigationController = new NavigationController();
-  // Initialize plugin.
-  blocklyWrapper.navigationController.init();
-  blocklyWrapper.navigationController.cursorType = cdoUtils.getUserCursorType();
 
   // Wrap SNAP_RADIUS property, and in the setter make sure we keep SNAP_RADIUS and CONNECTING_SNAP_RADIUS in sync.
   // See https://github.com/google/blockly/issues/2217
@@ -845,13 +836,17 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.disableVariableEditing =
       !!optOptionsExtended.disableVariableEditing;
     blocklyWrapper.varsInGlobals = !!optOptionsExtended.varsInGlobals;
-    blocklyWrapper.isStartMode = !!optOptionsExtended.editBlocks;
+    blocklyWrapper.isStartMode =
+      !!optOptionsExtended.editBlocks &&
+      // Lab2 levels such as Music Lab use 'start_sources', while older labs use 'start_blocks'.
+      [START_BLOCKS, START_SOURCES].includes(optOptionsExtended.editBlocks);
     blocklyWrapper.isToolboxMode =
       optOptionsExtended.editBlocks === 'toolbox_blocks';
     blocklyWrapper.analyticsData = optOptionsExtended.analyticsData;
     blocklyWrapper.toolboxBlocks = options.toolbox;
     blocklyWrapper.showUnusedBlocks = options.showUnusedBlocks;
     blocklyWrapper.blockLimitMap = cdoUtils.createBlockLimitMap();
+    blocklyWrapper.isDarkTheme = isDarkTheme(options.theme);
     const workspace = blocklyWrapper.blockly_.inject(
       container,
       options
@@ -873,20 +868,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;
     }
 
-    blocklyWrapper.navigationController.addWorkspace(workspace);
-
-    blocklyWrapper.getNewCursor = function (type) {
-      switch (type) {
-        case 'basic':
-          return new blocklyWrapper.BasicCursor();
-        case 'line':
-          return new blocklyWrapper.LineCursor();
-        case 'default':
-        default:
-          return new blocklyWrapper.Cursor();
-      }
-    };
-
     // Typically, we need to handle disabling blocks that are not connected to an
     // appropriate top block. A few exceptions exist.
     if (
@@ -903,6 +884,26 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       workspace.addChangeListener(updateBlockLimits);
     }
 
+    // In toolbox mode, automatically clean up the workspace as blocks are moved.
+    // This needs to use Google Blockly's built-in cleanUp method, which arranges
+    // all blocks into a single column.
+    if (blocklyWrapper.isToolboxMode) {
+      workspace.addChangeListener(event => {
+        if (event.type === GoogleBlockly.Events.MOVE) {
+          workspace.cleanUp();
+        }
+      });
+    } else {
+      // Outside of toolbox mode, we need use a custom workspace cleanUp method.
+      // Our version prevents blocks from overlapping, moving the blocks as
+      // minimally as possible.
+      // This command is accessible via the workspace context menu.
+      extendedWorkspaceSvg.cleanUp = function (
+        includeImmovableBlocks?: boolean
+      ) {
+        cleanUp(this, includeImmovableBlocks);
+      };
+    }
     // When either the main workspace or the toolbox workspace viewport
     // changes, adjust any callouts so they stay pointing to the appropriate
     // location.
@@ -932,7 +933,11 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     );
 
     const scrollOptionsPlugin = new ScrollOptions(workspace);
-    scrollOptionsPlugin.init();
+    scrollOptionsPlugin.init({
+      // Rather than using the block edge, we always use the mouse cursor (plus a margin)
+      // to activate block-based scrolling.
+      edgeScrollOptions: {oversizeBlockThreshold: 0},
+    });
 
     const trashcan = new CdoTrashcan(workspace);
     trashcan.init();
@@ -985,6 +990,11 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       // initialize the modal function editor.
       blocklyWrapper.functionEditor = new FunctionEditor();
       blocklyWrapper.functionEditor.init(options);
+    }
+
+    const blocklySvgElement = document.querySelector('.blocklySvg');
+    if (blocklySvgElement) {
+      blocklySvgElement.setAttribute('tabindex', '-1');
     }
 
     return workspace;

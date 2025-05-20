@@ -31,19 +31,15 @@ export const sourceReducer = (
       return newSource;
     }
     case SOURCE_REDUCER_ACTIONS.NEW_FILE: {
-      const {fileName, folderId, contents = '', validationFileId} = <
+      const {fileName, folderId, contents = ''} = <
         DefaultFilePayload & {
           fileName: string;
           contents?: string;
           folderId: FolderId;
-          validationFileId?: string;
         }
       >action.payload;
 
-      const fileId = getNextFileId(
-        Object.values(source.files),
-        validationFileId
-      );
+      const fileId = getNextFileId(Object.values(source.files));
 
       const newSource = {...source, files: {...source.files}};
 
@@ -82,7 +78,7 @@ export const sourceReducer = (
         action.payload
       );
 
-      if (source.files[fileId].contents === contents) {
+      if (source.files[fileId]?.contents === contents) {
         return source;
       }
 

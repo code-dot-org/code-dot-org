@@ -12,6 +12,18 @@
     "csa9-2024",
     "csa-postap-se-and-computer-vision-2024"
   ],
+  "original_script_names": [
+    "csa1-2024",
+    "csa2-2024",
+    "csa3-2024",
+    "csa4-2024",
+    "csa5-2024",
+    "csa6-2024",
+    "csa7-2024",
+    "csa8-2024",
+    "csa9-2024",
+    "csa-postap-se-and-computer-vision-2024"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
@@ -19,14 +31,14 @@
   "properties": {
     "announcements": [
       {
-        "key": "07c03698-a4fe-40f5-9a15-0cedbfeb6b02",
-        "notice": "Help us improve coding resources for students!",
-        "details": "We've created a quick survey to better understand how students use different resources (instructions, tests, and TODO comments) when writing code. Please share this survey with your students—it only takes a few minutes to complete, and their input will make a big difference!",
-        "link": "https://usabi.li/do/643e1513cd1/ba68",
-        "type": "bullhorn",
+        "key": "ee52a67a-7424-4e19-9bd9-ad28eecf8a0a",
+        "notice": "AP CS Assessments Focus Group",
+        "details": "Join us in investigating disparities in AP CSP and AP CSA assessments. We are aiming to learn more about performance gaps among students from underrepresented backgrounds and exploring potential solutions to improve equity in CS education. Your insights will contribute to informing these solutions to support all learners.",
+        "link": "https://usabi.li/do/24a50b8956e8/dfad",
+        "type": "feedback",
         "visibility": "Teacher-only",
         "dismissible": true,
-        "buttonText": "Student Survey"
+        "buttonText": "Sign up now!"
       }
     ],
     "family_name": "csa",

@@ -1,0 +1,57 @@
+name 'csaif_pl_nets_project_2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Network Security Risk Assessment Project
+
+## Project Description
+#### This project-based lesson guides students through conducting a Network Security Risk Assessment, identifying vulnerabilities, and proposing AI-driven security solutions. Students analyze real-world cybersecurity risks, categorize them, and assess their societal and ethical implications before refining their recommendations through peer review. By the end of the project, students communicate their findings in a professional risk assessment report.
+
+## Project Calendar
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 15px;">
+
+<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
+	<p style="text-align: center; font-weight: bold; font-size: 18px">
+    	Day 1
+    </p>
+    
+    <p style="font-size: 14px">
+	Students choose a company scenario.
+    </p>
+    
+</div>
+
+<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
+	<p style="text-align: center; font-weight: bold; font-size: 18px">
+    	Day 2
+    </p>
+    
+    <p style="font-size: 14px">
+	Students to begin drafting their Network Security Risk Assessment.
+    </p>
+    
+</div>
+
+<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
+	<p style="text-align: center; font-weight: bold; font-size: 18px">
+    	Day 3
+    </p>
+    
+    <p style="font-size: 14px">
+	Students conduct peer reviews and complete their final drafts.
+    </p>
+
+</div>
+</div>
+
+
+<br>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ If you have time, check out the full <a href='https://studio.code.org/s/aif4-2025/lessons/11' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+
+## Up Next!
+#### You'll explore the companies that students will complete a risk assessment on. As you complete this level reflect on the *vulnerabilities, societal / ethical Impacts, and mitigation strategies* you would consider.
+MARKDOWN

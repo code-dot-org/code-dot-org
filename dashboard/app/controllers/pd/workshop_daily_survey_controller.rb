@@ -337,7 +337,8 @@ module Pd
         num_facilitators: workshop.facilitators.count,
         day: day,
         is_friday_institute: workshop.friday_institute?,
-        workshop_agenda: workshop_agenda
+        workshop_agenda: workshop_agenda,
+        pl_topics: workshop.course_offerings.map {|co| co&.key}
       }
     end
   end

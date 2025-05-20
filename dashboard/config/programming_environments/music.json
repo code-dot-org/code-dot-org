@@ -2,8 +2,9 @@
   "name": "music",
   "published": true,
   "description": "Make music with code! Try mixing and matching beats, bass, and other sounds to make your own songs.",
+  "editor_language": "blockly",
   "image_url": "https://images.code.org/b742b2c96b351bfaaecf365dd1cc4343-Music Lab Callout Graphic (11).png",
-  "project_url": "https://studio.code.org/projects/music",
+  "project_url": "/projects/music",
   "title": "Music Lab",
   "categories": [
     {

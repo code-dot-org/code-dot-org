@@ -1,0 +1,475 @@
+{
+  "script": {
+    "name": "vpl-csp-2025-m4",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "pl_workshop_activities",
+      "curriculum_umbrella": "PD Workshop Activity CSP",
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "version_year": "2025"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-03-31 23:22:14 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "vpl-csp-2025-m4"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m4"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Module 4: Mental Models, Lists, and Datasets",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m4"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "f1571dff-90fc-4b94-8122-d6a57ddfb15c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f1571dff-90fc-4b94-8122-d6a57ddfb15c",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m4"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "d88f4869-8643-4753-80d4-5a0fadad9664",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 4 Overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "d88f4869-8643-4753-80d4-5a0fadad9664",
+        "lesson_activity.key": "f1571dff-90fc-4b94-8122-d6a57ddfb15c"
+      }
+    },
+    {
+      "key": "9a809967-6687-4fae-a38a-d2f8f7da56fe",
+      "position": 2,
+      "properties": {
+        "progression_name": "Understanding the Context for Lists (~30 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "9a809967-6687-4fae-a38a-d2f8f7da56fe",
+        "lesson_activity.key": "f1571dff-90fc-4b94-8122-d6a57ddfb15c"
+      }
+    },
+    {
+      "key": "31f7eab2-e030-46b8-839a-35b43ef885b5",
+      "position": 3,
+      "properties": {
+        "progression_name": "Mental Models in Unit 6 (~30 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "31f7eab2-e030-46b8-839a-35b43ef885b5",
+        "lesson_activity.key": "f1571dff-90fc-4b94-8122-d6a57ddfb15c"
+      }
+    },
+    {
+      "key": "5dd08adb-aa7b-4ef1-9a8b-cdff17f58189",
+      "position": 4,
+      "properties": {
+        "progression_name": "Broadening, Labeling, and Recognizing CS Skills in the Classroom (~15 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "5dd08adb-aa7b-4ef1-9a8b-cdff17f58189",
+        "lesson_activity.key": "f1571dff-90fc-4b94-8122-d6a57ddfb15c"
+      }
+    },
+    {
+      "key": "9ff848ee-1fad-4229-9eb5-cdf2daa41caa",
+      "position": 5,
+      "properties": {
+        "progression_name": "Module 4 Asynchronous Wrap Up (~10 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "9ff848ee-1fad-4229-9eb5-cdf2daa41caa",
+        "lesson_activity.key": "f1571dff-90fc-4b94-8122-d6a57ddfb15c"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 4 Overview (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL AYWA4 Workshop Overview_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m4",
+        "activity_section.key": "d88f4869-8643-4753-80d4-5a0fadad9664"
+      },
+      "level_keys": [
+        "CSP-PL AYWA4 Workshop Overview_2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Understanding the Context for Lists (~30 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Understanding the context for the Model Lesson overview_M4_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m4",
+        "activity_section.key": "9a809967-6687-4fae-a38a-d2f8f7da56fe"
+      },
+      "level_keys": [
+        "CSP - Understanding the context for the Model Lesson overview_M4_2025"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Understanding the Context for Lists (~30 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Reflection 1_M4_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m4",
+        "activity_section.key": "9a809967-6687-4fae-a38a-d2f8f7da56fe"
+      },
+      "level_keys": [
+        "CSP - Reflection 1_M4_2025"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Mental Models in Unit 6 (~30 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP AYW4 - Mental Models in Unit 5_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m4",
+        "activity_section.key": "31f7eab2-e030-46b8-839a-35b43ef885b5"
+      },
+      "level_keys": [
+        "CSP AYW4 - Mental Models in Unit 5_2025"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Broadening, Labeling, and Recognizing CS Skills in the Classroom (~15 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - M4 - Intro to CI_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m4",
+        "activity_section.key": "5dd08adb-aa7b-4ef1-9a8b-cdff17f58189"
+      },
+      "level_keys": [
+        "CSP - M4 - Intro to CI_2025"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Broadening, Labeling, and Recognizing CS Skills in the Classroom (~15 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - M4 - Broadening the def_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m4",
+        "activity_section.key": "5dd08adb-aa7b-4ef1-9a8b-cdff17f58189"
+      },
+      "level_keys": [
+        "CSP - M4 - Broadening the def_2025"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Broadening, Labeling, and Recognizing CS Skills in the Classroom (~15 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - M4 - Feedback in CI_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m4",
+        "activity_section.key": "5dd08adb-aa7b-4ef1-9a8b-cdff17f58189"
+      },
+      "level_keys": [
+        "CSP - M4 - Feedback in CI_2025"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Broadening, Labeling, and Recognizing CS Skills in the Classroom (~15 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - M4 - Practice feedback_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m4",
+        "activity_section.key": "5dd08adb-aa7b-4ef1-9a8b-cdff17f58189"
+      },
+      "level_keys": [
+        "CSP - M4 - Practice feedback_2025"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 4 Asynchronous Wrap Up (~10 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Module 4 Wrap Up_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m4",
+        "activity_section.key": "9ff848ee-1fad-4229-9eb5-cdf2daa41caa"
+      },
+      "level_keys": [
+        "CSP - Module 4 Wrap Up_2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL AYWA4 Workshop Overview_2025",
+        "script_level.level_keys": [
+          "CSP-PL AYWA4 Workshop Overview_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m4",
+        "activity_section.key": "d88f4869-8643-4753-80d4-5a0fadad9664"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Understanding the context for the Model Lesson overview_M4_2025",
+        "script_level.level_keys": [
+          "CSP - Understanding the context for the Model Lesson overview_M4_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m4",
+        "activity_section.key": "9a809967-6687-4fae-a38a-d2f8f7da56fe"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Reflection 1_M4_2025",
+        "script_level.level_keys": [
+          "CSP - Reflection 1_M4_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m4",
+        "activity_section.key": "9a809967-6687-4fae-a38a-d2f8f7da56fe"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP AYW4 - Mental Models in Unit 5_2025",
+        "script_level.level_keys": [
+          "CSP AYW4 - Mental Models in Unit 5_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m4",
+        "activity_section.key": "31f7eab2-e030-46b8-839a-35b43ef885b5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - M4 - Intro to CI_2025",
+        "script_level.level_keys": [
+          "CSP - M4 - Intro to CI_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m4",
+        "activity_section.key": "5dd08adb-aa7b-4ef1-9a8b-cdff17f58189"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - M4 - Broadening the def_2025",
+        "script_level.level_keys": [
+          "CSP - M4 - Broadening the def_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m4",
+        "activity_section.key": "5dd08adb-aa7b-4ef1-9a8b-cdff17f58189"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - M4 - Feedback in CI_2025",
+        "script_level.level_keys": [
+          "CSP - M4 - Feedback in CI_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m4",
+        "activity_section.key": "5dd08adb-aa7b-4ef1-9a8b-cdff17f58189"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - M4 - Practice feedback_2025",
+        "script_level.level_keys": [
+          "CSP - M4 - Practice feedback_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m4",
+        "activity_section.key": "5dd08adb-aa7b-4ef1-9a8b-cdff17f58189"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Module 4 Wrap Up_2025",
+        "script_level.level_keys": [
+          "CSP - Module 4 Wrap Up_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m4",
+        "activity_section.key": "9ff848ee-1fad-4229-9eb5-cdf2daa41caa"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

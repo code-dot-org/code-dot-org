@@ -6,7 +6,7 @@
   "level_num": "custom",
   "user_id": 4,
   "properties": {
-    "background": "music-black",
+    "background": "background-dark",
     "is_project_level": "true",
     "encrypted": "false",
     "level_data": {

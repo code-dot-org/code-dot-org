@@ -47,10 +47,8 @@ module Curriculum
         CSD: 'CSD',
         CSP: 'CSP',
         CSA: 'CSA',
-        CSC: 'CSC',
         HOC: 'HOC',
-        AI: 'AI',
-        foundations_of_cs: 'Foundations of CS and AI',
+        foundations_of_cs: 'AIF',
         foundations_of_programming: 'Foundations of Programming',
         CSC_K_5: 'CSC K-5',
         CSC_6_8: 'CSC 6-8',
@@ -58,7 +56,6 @@ module Curriculum
         special_topics_k_5: 'K-5 Special topics',
         special_topics_6_8: '6-8 Special topics',
         special_topics_9_12: '9-12 Special topics',
-        student_self_paced: 'Student Self Paced Courses',
         pd_for_facilitators: 'PD for Facilitators',
         pd_workshop_activity_csf: 'PD Workshop Activity CSF',
         pd_workshop_activity_csd: 'PD Workshop Activity CSD',
@@ -68,9 +65,8 @@ module Curriculum
         CSP_self_paced_pl: 'Self-paced PL - CSP',
         CSD_self_paced_pl: 'Self-paced PL - CSD',
         CSF_self_paced_pl: 'Self-paced PL - CSF',
-        CSC_self_paced_pl: 'Self-paced PL - CSC',
         CSC_k_5_self_paced_pl: 'Self-paced PL - CSC K-5',
-        foundations_of_cs_selfpaced_pl: 'Self-paced PL - Foundations of CS and AI',
+        foundations_of_cs_selfpaced_pl: 'Self-paced PL - AIF',
         ai_for_teachers_selfpaced_pl: 'Self-paced PL - AI for teachers',
         special_topics_curriculum_selfpaced_pl_k_5: 'Self-paced PL - K-5 special topics',
         special_topics_curriculum_selfpaced_pl_6_8: 'Self-paced PL - 6-8 special topics',
@@ -152,7 +148,8 @@ module Curriculum
         csf: 'CSF',
         csa: 'CSA',
         csp: 'CSP',
-        csd: 'CSD'
+        csd: 'CSD',
+        aif: 'AIF'
       }
     )
 

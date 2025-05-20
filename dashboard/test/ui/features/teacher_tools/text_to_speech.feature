@@ -25,13 +25,13 @@ Scenario: Listen to TTS Audio in CSF
   When I press "runButton"
   And I wait to see ".uitest-topInstructions-inline-feedback"
   And I resize top instructions to "500" pixels tall
-  Then I see 2 of jquery selector .csf-top-instructions .inline-audio
+  Then I wait until I see 2 of jquery selector .csf-top-instructions .inline-audio
   And I listen to the 0th inline audio element
   And I listen to the 1st inline audio element
 
   # requesting a hint should give me another
   When I press "lightbulb"
-  Then I see 3 of jquery selector .csf-top-instructions .inline-audio
+  Then I wait until I see 3 of jquery selector .csf-top-instructions .inline-audio
   And I resize top instructions to "500" pixels tall
   And I listen to the 2nd inline audio element
 
@@ -40,7 +40,7 @@ Scenario: Listen to TTS Audio in CSF
   When I press ".csf-top-instructions button:contains('Yes')" using jQuery
   And I wait to see ".block-space"
   And I resize top instructions to "500" pixels tall
-  Then I see 2 of jquery selector .csf-top-instructions .inline-audio
+  Then I wait until I see 2 of jquery selector .csf-top-instructions .inline-audio
   #Checks that inline audio does not disappear (indication of error)
   And I listen to the 1st inline audio element
 
@@ -52,7 +52,7 @@ Scenario: Listen to TTS Audio in CSF contained level
 
   # note: we expect audio for csf instructions
   Then I wait until element ".inline-audio" is visible
-  Then I see 1 of jquery selector .inline-audio
+  Then I wait until I see 1 of jquery selector .inline-audio
   #Checks that inline audio does not disappear (indication of error)
   And I listen to the 0th inline audio element
 
@@ -64,7 +64,7 @@ Scenario: Listen to TTS Audio in CSD
 
   # note: we expect audio for csd instructions
   Then I wait until element ".inline-audio" is visible
-  Then I see 1 of jquery selector .inline-audio
+  Then I wait until I see 1 of jquery selector .inline-audio
   #Checks that inline audio does not disappear (indication of error)
   And I listen to the 0th inline audio element
 
@@ -76,7 +76,7 @@ Scenario: Listen to TTS Audio in CSP and CSP contained level
 
   # note: we expect audio for csp instructions
   Then I wait until element ".inline-audio" is visible
-  Then I see 1 of jquery selector .inline-audio
+  Then I wait until I see 1 of jquery selector .inline-audio
   #Checks that inline audio does not disappear (indication of error)
   And I listen to the 0th inline audio element
 
@@ -85,6 +85,6 @@ Scenario: Listen to TTS Audio in CSP and CSP contained level
 
   # note: we expect audio for csp instructions
   Then I wait until element ".inline-audio" is visible
-  Then I see 1 of jquery selector .inline-audio
+  Then I wait until I see 1 of jquery selector .inline-audio
   #Checks that inline audio does not disappear (indication of error)
   And I listen to the 0th inline audio element

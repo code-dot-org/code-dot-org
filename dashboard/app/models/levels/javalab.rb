@@ -174,4 +174,8 @@ class Javalab < Level
   def validated?
     properties['encrypted_validation'].present?
   end
+
+  def get_starter_code
+    properties["start_sources"]
+  end
 end

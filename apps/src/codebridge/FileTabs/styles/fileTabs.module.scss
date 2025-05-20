@@ -1,19 +1,24 @@
-@import 'color.scss';
+@import '@code-dot-org/component-library-styles/colors.scss';
 
 .fileTabs {
   display: flex;
   justify-content: flex-start;
   gap: 6px;
   align-items: flex-end;
-  overflow-x: scroll;
+  overflow-x: auto;
   max-width: 100%;
-  background-color: $light_gray_900;
-  scrollbar-width: none;
-  grid-area: file-tabs;
-  min-height: 32px;
+  background-color: var(--background-neutral-tertiary);
+  scrollbar-width: thin;
+  box-sizing: border-box;
   font-size: 14px;
   font-weight: 600;
-  color: $light_gray_200;
+  color: var(--text-neutral-secondary);
+
+  *:focus-visible {
+    outline: var(--borders-brand-teal-primary) solid 2px;
+    outline-offset: 2px;
+    border-radius: 0.375rem;
+  }
 }
 
 .fileTab {
@@ -22,11 +27,11 @@
   white-space: nowrap;
   justify-content: space-between;
   height: 28px;
-  background-color: $light_gray_950;
+  background-color: var(--background-neutral-secondary);
   border-radius: 4px 4px 0 0;
 
   &:hover:not(.active) {
-    background-color: $light_gray_800;
+    background-color: var(--background-neutral-quaternary);
   }
 }
 
@@ -38,15 +43,11 @@
 }
 
 .active {
-  background-color: $light_black;
-  color: $white;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
 }
 
-.inactive {
-  color: $light_gray_200;
-}
-
-.closeButton {
+button.closeButton {
   margin: 4px 0;
   padding-right: 10px;
 }

@@ -1,0 +1,134 @@
+# Defines the dashboard Deployment as a template, included by dashboard/deployment.yaml
+#
+# We've defined it as a template (_dashboard.yaml vs dashboard.yaml) so we can re-use
+# it in dashboard/job.yaml as well.
+{{- define "dashboard" }}
+
+# Lets you do guard blocks to skip elements that aren't valid for Jobs:
+{{- $isDeployment := eq (.kind | default "Deployment") "Deployment" }}
+{{- $isJob := eq (.kind | default "Deployment") "Job" }}
+
+apiVersion: {{ .apiVersion | default "apps/v1" }}
+kind: {{ .kind | default "Deployment" }}
+metadata:
+  name: {{ .name }}
+  labels:
+    {{ .labels | nindent 4 }}
+spec:
+
+  {{- if $isDeployment }}
+  replicas: {{ .Values.autoscaling.replicasWhenAutoscaleDisabled | default 1 }}
+  selector:
+    matchLabels:
+      {{ .selectorLabels | nindent 6 }}
+  {{- end }}
+
+  {{- if $isJob }}
+  backoffLimit: {{ .backoffLimit | default 1 }}
+  ttlSecondsAfterFinished: {{ .ttlSecondsAfterFinished | default 60 }}
+  {{- end }}
+
+  template:
+    metadata:
+      labels:
+        {{ .labels | nindent 8 }}
+    spec:
+      containers:
+      - name: {{ .shortName | default "dashboard" }}
+        image: "{{ .Values.image }}"
+
+        command: {{ (.command | default .Values.command) | toJson }}
+        args: {{ (.args | default .Values.args) | toJson }}
+        tty: true # dashboard stdout logging assumes a tty
+
+        env:
+          - name: RAILS_ENV
+            value: {{ .Values.RAILS_ENV }}
+          - name: RACK_ENV
+            value: {{ .Values.RAILS_ENV }}
+          {{- if .Values.localDev.mounts.mountDotAWS }}
+          - name: AWS_PROFILE
+            value: {{ .Values.localDev.mounts.AWS_PROFILE }}
+          {{- end }}
+
+        securityContext:
+          allowPrivilegeEscalation: {{ if .Values.user.allowSudo }}true{{ else }}false{{ end }}
+
+        {{- if $isDeployment }}
+        ports:
+        - name: http
+          containerPort: 3000
+        - name: http-hmr
+          containerPort: 9000
+        {{- end }}
+
+        {{- if (.healthChecksEnabled | default .Values.healthChecks.enabled) }}
+        startupProbe:
+          failureThreshold: 300
+          periodSeconds: 1
+          timeoutSeconds: 5
+          httpGet:
+            path: /health_check
+            port: http
+        readinessProbe:
+          successThreshold: 2
+          failureThreshold: 2
+          periodSeconds: 10
+          timeoutSeconds: 5
+          httpGet:
+            path: /health_check
+            port: http
+        livenessProbe:
+          failureThreshold: 4
+          periodSeconds: 30
+          timeoutSeconds: 5
+          httpGet:
+            path: /health_check
+            port: http
+        {{- end }}
+
+        volumeMounts:
+        - mountPath: /code-dot-org/locals.yml
+          name: locals-yml
+          subPath: locals.yml
+
+        {{- if .Values.localDev.mounts.mountDotAWS }}
+        - mountPath: {{ .Values.user.home }}/.aws
+          name: dot-aws
+        {{- end }}
+        {{- if .Values.localDev.mounts.mountDotConfigGcloud }}
+        - mountPath: {{ .Values.user.home }}/.config/gcloud
+          name: dot-config-gcloud
+        {{- end }}
+
+      volumes:
+        - name: locals-yml
+          configMap:
+            name: {{ include "cdo.fullname" (merge (dict "component" "locals.yml") .) }}
+
+        {{- if .Values.localDev.mounts.mountDotAWS }}
+        - name: dot-aws
+          persistentVolumeClaim:
+            claimName: {{ include "cdo.fullname" (merge (dict "component" "dot-aws") .) }}
+        {{- end }}
+        {{- if .Values.localDev.mounts.mountDotConfigGcloud }}
+        - name: dot-config-gcloud
+          persistentVolumeClaim:
+            claimName: {{ include "cdo.fullname" (merge (dict "component" "dot-config-gcloud") .) }}
+        {{- end }}
+            
+      securityContext:
+        runAsUser: {{ .Values.user.uid }}
+        runAsGroup: {{ .Values.user.gid }}
+        fsGroup: {{ .Values.user.gid }}
+
+      {{- if $isJob }}
+      restartPolicy: {{ .restartPolicy | default "Never" }}
+      {{- end }}
+
+      # k8s defaults to injecting lots of env vars like CDO_MYSQL_SERVICE_PORT_MYSQL.
+      # This is an archaic k8s feature, we don't use it, and dashboard special cases
+      # the CDO_* namespace for locals.yml type vars. Therefore, we disable it:
+      enableServiceLinks: false
+
+{{- end }}

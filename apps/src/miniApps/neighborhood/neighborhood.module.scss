@@ -1,10 +1,15 @@
+@import '@code-dot-org/component-library-styles/colors.scss';
+
 .neighborhoodPreviewBackground {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
+  background: var(--background-neutral-black-fixed);
+}
+
+.sliderContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2px;
 }
 
 .slider {
-  display: block;
-  margin: 0 auto;
+  width: 200px;
 }

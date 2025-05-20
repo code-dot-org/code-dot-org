@@ -1,0 +1,41 @@
+name 'csaif_pl_nets_course_overview_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Cybersecurity and Global Impacts Unit Overview
+ 
+#### While the Networks and the Internet Unit is part of the **AI Foundations** course, it can also serve as a standalone unit for 9-12 students that can be integrated seamlessly into existing curriculum, including computer science, math, or science, offering teachers the flexibility to introduce it according to their schedule and educational needs.
+
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-family: Arial, sans-serif; font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
+
+  <div>
+    <h4 style="margin-top: 0; font-weight: bold;">Students will:</h4>
+    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
+      	<li>Describe how data is transmitted, routed, and reassembled over the Internet.
+Explain the roles of IP addressing, DNS, and redundancy in ensuring efficient communication.</li>
+		<li>Analyze the role of AI in enhancing network security.</li>
+		<li>Assess the implications of the digital divide and propose strategies to promote equitable Internet access.</li>
+		<li>Evaluate the ethical considerations of AI in network security and propose responsible solutions.</li>
+		<li>Identify and describe roles in networking and cybersecurity, such as Network Engineers and AI Cybersecurity Specialists.</li>
+		<li>Analyze how these careers contribute to addressing societal challenges and improving technology.</li>
+		<li>Use abstraction, decomposition, and pattern recognition to solve problems related to Internet communication and security.</li>
+        <li>Propose and evaluate solutions to complex networking challenges, including security risks and accessibility issues.</li>
+    </ul>
+  </div>
+</div>
+
+
+#### This unit consists of 11 lessons, takes about three weeks to complete, and does not have Python programming.
+
+<div style="clear:both;"></div>
+
+<p align="center">
+<img src="https://images.code.org/4fbe4e2d5ee074d952ce4b31f6692faf-Screenshot 2025-04-16 at 3.04.19 PM.png" alt="calendar of lesson overview" width="700px" style="border-radius:10px; ">
+</p>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Preview the full <a href='https://studio.code.org/courses/networks-and-the-internet-2024' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Unit</a>.
+</p>
+
+MARKDOWN

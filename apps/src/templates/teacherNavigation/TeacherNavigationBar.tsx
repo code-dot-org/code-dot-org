@@ -1,3 +1,6 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import Tags from '@code-dot-org/component-library/tags';
+import Typography from '@code-dot-org/component-library/typography';
 import _ from 'lodash';
 import React, {useState, useEffect} from 'react';
 import {
@@ -8,12 +11,14 @@ import {
   useParams,
 } from 'react-router-dom';
 
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import Typography from '@cdo/apps/componentLibrary/typography';
+import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
+import DCDO from '@cdo/apps/dcdo';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
@@ -21,13 +26,18 @@ import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxS
 import {asyncLoadSelectedSection} from './selectedSectionLoader';
 import {
   LABELED_TEACHER_NAVIGATION_PATHS,
+  TEACHER_NAVIGATION_PATH_NAMES,
   TEACHER_NAVIGATION_PATHS,
 } from './TeacherNavigationPaths';
 
 import styles from './teacher-navigation.module.scss';
 
-const TeacherNavigationBar: React.FunctionComponent = () => {
-  const sections = useAppSelector(state => state.teacherSections.sections);
+const TeacherNavigationBar: React.FC<{
+  showAITutorTab: boolean;
+}> = showAITutorTab => {
+  const {sections, sectionOrder} = useAppSelector(
+    state => state.teacherSections
+  );
 
   const [sectionArray, setSectionArray] = useState<
     {value: string; text: string}[]
@@ -40,15 +50,17 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   );
 
   useEffect(() => {
-    const updatedSectionArray = Object.entries(sections)
-      .filter(([id, section]) => !section.hidden)
-      .map(([id, section]) => ({
-        value: id,
+    const updatedSectionArray = sectionOrder
+      .map(sectionId => sections[sectionId] || null)
+      .filter(section => section !== null)
+      .filter(section => !section.hidden)
+      .map(section => ({
+        value: section.id.toString(),
         text: section.name,
       }));
 
     setSectionArray(updatedSectionArray);
-  }, [sections, selectedSection]);
+  }, [sections, selectedSection, sectionOrder]);
 
   const getSectionHeader = (label: string) => {
     return (
@@ -61,29 +73,6 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
       </Typography>
     );
   };
-
-  const coursecontentSectionTitle = getSectionHeader(i18n.courseContent());
-
-  let courseContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[];
-  if (selectedSection?.unitName) {
-    courseContentKeys = ['unitOverview', 'lessonMaterials', 'calendar'];
-  } else {
-    courseContentKeys = ['courseOverview', 'lessonMaterials', 'calendar'];
-  }
-
-  const performanceSectionTitle = getSectionHeader(i18n.performance());
-  const performanceContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
-    ['progress', 'assessments', 'projects', 'stats', 'textResponses'];
-
-  const classroomContentSectionTitle = getSectionHeader(i18n.classroom());
-  const classroomContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
-    ['roster', 'settings'];
-
-  const teacherNavigationBarContent = [
-    {title: coursecontentSectionTitle, keys: courseContentKeys},
-    {title: performanceSectionTitle, keys: performanceContentKeys},
-    {title: classroomContentSectionTitle, keys: classroomContentKeys},
-  ];
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -103,6 +92,62 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
       asyncLoadSelectedSection(urlSectionId);
     }
   }, [urlSectionId, selectedSection?.id]);
+
+  const coursecontentSectionTitle = getSectionHeader(i18n.courseContent());
+
+  let courseContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[];
+  if (selectedSection?.unitName) {
+    if (currentPathName === TEACHER_NAVIGATION_PATH_NAMES.nestedUnitOverview) {
+      courseContentKeys = ['nestedUnitOverview', 'lessonMaterials', 'calendar'];
+    } else {
+      courseContentKeys = ['unitOverview', 'lessonMaterials', 'calendar'];
+    }
+  } else {
+    courseContentKeys = ['courseOverview', 'lessonMaterials', 'calendar'];
+  }
+
+  const performanceSectionTitle = getSectionHeader(i18n.performance());
+
+  const performanceContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
+    showAITutorTab &&
+    (selectedSection?.courseVersionName?.includes('csa') ||
+      selectedSection?.courseVersionName?.includes(
+        'programming-fundamentals-aitutor-2024'
+      )) &&
+    DCDO.get('ai-tutor-teacher-nav-v2', false)
+      ? [
+          'progress',
+          'assessments',
+          'projects',
+          'stats',
+          'textResponses',
+          'aiTutorChatMessages',
+        ]
+      : ['progress', 'assessments', 'projects', 'stats', 'textResponses'];
+
+  const classroomContentSectionTitle = getSectionHeader(i18n.classroom());
+  const classroomContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
+    ['roster', 'settings'];
+
+  const teacherNavigationBarContent = [
+    {
+      title: coursecontentSectionTitle,
+      keys: courseContentKeys,
+      sectionTag: (
+        <Tags tagsList={[{label: 'New'}]} className={styles.sidebarNewTags} />
+      ),
+    },
+    {
+      title: performanceSectionTitle,
+      keys: performanceContentKeys,
+      sectionTag: null,
+    },
+    {
+      title: classroomContentSectionTitle,
+      keys: classroomContentKeys,
+      sectionTag: null,
+    },
+  ];
 
   const navigateToDifferentSection = (sectionId: number) => {
     if (currentPathObject?.absoluteUrl) {
@@ -128,9 +173,6 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
             unitName: sections[sectionId]?.unitName,
           })
         );
-        if (currentPathObject.url === TEACHER_NAVIGATION_PATHS.settings) {
-          window.location.reload();
-        }
       }
 
       analyticsReporter.sendEvent(EVENTS.NAVIGATE_TO_SECTION, {
@@ -139,6 +181,21 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
       });
     }
   };
+
+  const isOptionSelected = React.useCallback(
+    (key: string) => {
+      return (
+        currentPathName === key ||
+        (currentPathName === TEACHER_NAVIGATION_PATH_NAMES.courseOverview &&
+          key === TEACHER_NAVIGATION_PATH_NAMES.unitOverview) ||
+        (currentPathName === TEACHER_NAVIGATION_PATH_NAMES.unitOverview &&
+          key === TEACHER_NAVIGATION_PATH_NAMES.courseOverview) ||
+        (currentPathName === TEACHER_NAVIGATION_PATH_NAMES.nestedUnitOverview &&
+          key === TEACHER_NAVIGATION_PATH_NAMES.courseOverview)
+      );
+    },
+    [currentPathName]
+  );
 
   const getSidebarOptionsForSection = (
     sidebarKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[]
@@ -149,9 +206,10 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     return sidebarKeys.map(key => (
       <SidebarOption
         key={'ui-test-sidebar-' + key}
-        isSelected={currentPathName === key}
+        isSelected={isOptionSelected(key)}
         sectionId={selectedSection.id}
         courseVersionName={selectedSection.courseVersionName}
+        unitPosition={selectedSection.unitPosition}
         unitName={selectedSection.unitName}
         pathKey={key as keyof typeof LABELED_TEACHER_NAVIGATION_PATHS}
       />
@@ -159,17 +217,28 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   };
 
   const navbarComponents = teacherNavigationBarContent.map(
-    ({title, keys}, index) => {
+    ({title, keys, sectionTag}, index) => {
       const sidebarOptions = getSidebarOptionsForSection(keys);
 
       return (
         <div key={`section-${index}`}>
-          {title}
+          <div className={styles.sidebarSectionHeader}>
+            {title}
+            {sectionTag}
+          </div>
           {sidebarOptions}
         </div>
       );
     }
   );
+
+  const aiContext = () => {
+    if (selectedSection?.courseId && selectedSection?.unitId)
+      return AiDiffContext.COURSE;
+    if (selectedSection?.courseId) return AiDiffContext.COURSE;
+    if (selectedSection?.unitId) return AiDiffContext.UNIT;
+    return AiDiffContext.GENERAL;
+  };
 
   return (
     <nav className={styles.sidebarContainer} id="ui-test-teacher-sidebar">
@@ -197,6 +266,18 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
         />
         {navbarComponents.map(component => component)}
       </div>
+      {experiments.isEnabled('ai-differentiation') && (
+        <AiDiffFloatingActionButton
+          context={aiContext()}
+          scriptId={
+            selectedSection?.courseId
+              ? selectedSection?.courseId
+              : selectedSection?.unitId
+          }
+          scriptName={selectedSection?.courseVersionName}
+          unitDisplayName={selectedSection?.courseDisplayName}
+        />
+      )}
     </nav>
   );
 };

@@ -1,0 +1,38 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-03-12T20:42:44.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "# Retrieval for Accurate Information\nChatbots don't have all the answers and sometimes hallucinate",
+        "imageUrl": "https://images.code.org/4cf363ae1357e6f33f8ef9eee116ed90-Slide36.PNG",
+        "key": "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c"
+      },
+      {
+        "text": "# Retrieval for Accurate Information\nFor situations that require very high accuracy, we can add information with retrieval",
+        "imageUrl": "https://images.code.org/83899d736ad5ccfcc6b0f7175c0848d5-Slide37.PNG",
+        "key": "gen-ai-customizing-retrieval-practice-L5-007134e2-0169-4294-b8d0-b6de250851c6"
+      },
+      {
+        "text": "# Retrieval for Accurate Information\nThis lets the chatbot answer with highly accurate information",
+        "imageUrl": "https://images.code.org/65447820da19b47f7c8d61bab977493c-Slide38.PNG",
+        "key": "gen-ai-customizing-retrieval-practice-L5-e1d170f7-39bc-48d3-9e7e-5168b460494e"
+      },
+      {
+        "text": "# Retrieval for Accurate Information\nThe situation in this example might seem weird, **but it really happened!**\n\n[Read more about it here](https://arstechnica.com/tech-policy/2024/02/air-canada-must-honor-refund-policy-invented-by-airlines-chatbot/)",
+        "imageUrl": "https://images.code.org/38598439e79126a3ef992c6d5f6dedf5-Slide39.PNG",
+        "key": "gen-ai-customizing-retrieval-practice-L5-35adae9d-8147-4ee2-befe-6ff93f337466",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2025",
+    "offer_browser_tts": "true"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-12T20:42:44.710+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L5_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L5_2024\"}]"
+}]]></config>
+</Panels>

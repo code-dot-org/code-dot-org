@@ -10,6 +10,8 @@ import IdleTimer from 'react-idle-timer';
 import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 
 import Spinner from '../../../../sharedComponents/Spinner';
 import VisibilitySensor from '../components/visibility_sensor';
@@ -132,6 +134,13 @@ export class SessionAttendance extends React.Component {
       this.setState({
         attendance: clonedAttendance,
       });
+
+      if (value.attended) {
+        analyticsReporter.sendEvent(EVENTS.WORKSHOP_ATTENDANCE_MARKED_EVENT, {
+          user_logged_own_attendance: false,
+          session_id: this.props.sessionId,
+        });
+      }
     }
     this.props.onSaved(value);
   };

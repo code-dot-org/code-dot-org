@@ -4,8 +4,7 @@ Feature: Complete a bounce level
 Scenario: Complete Level 1
   Given I am on "http://studio.code.org/s/events/lessons/1/levels/1?noautoplay=true"
   And I wait for the lab page to fully load
-  And I drag block "moveLeft" to block "whenLeft"
-  Then block "moveLeft" is child of block "whenLeft"
+  And I've initialized the workspace with level 1 bounce blocks
   And I press "runButton"
   And I hold key "LEFT"
   And I wait to see ".congrats"
@@ -15,8 +14,7 @@ Scenario: Complete Level 1
 Scenario: Complete Level 3
   Given I am on "http://studio.code.org/s/events/lessons/1/levels/3?noautoplay=true"
   And I wait for the lab page to fully load
-  And I drag block "moveUp" to block "whenUp"
-  Then block "moveUp" is child of block "whenUp"
+  And I've initialized the workspace with level 3 bounce blocks
   And I press "runButton"
   And I hold key "UP"
   And I wait to see ".congrats"
@@ -35,8 +33,7 @@ Scenario: Incomplete Level 5
 Scenario: Complete Level 5
   Given I am on "http://studio.code.org/s/events/lessons/1/levels/5?noautoplay=true"
   And I wait for the lab page to fully load
-  And I drag block "bounceBall" to block "whenPaddleCollided"
-  Then block "bounceBall" is child of block "whenPaddleCollided"
+  And I've initialized the workspace with level 5 bounce blocks
   And I press "runButton"
   And I wait to see ".congrats"
   And element ".congrats" is visible

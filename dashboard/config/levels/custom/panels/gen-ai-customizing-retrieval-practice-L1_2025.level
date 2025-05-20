@@ -1,0 +1,34 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-03-12T20:42:44.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "# Retrieval for Current Information\nChatbots only have information up to a certain date.",
+        "imageUrl": "https://images.code.org/5934696c69c7fabfcbdae93566ecd360-Slide28.PNG",
+        "key": "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "# Retrieval for Current Information\nFor more recent information, we can add it with retrieval",
+        "imageUrl": "https://images.code.org/05655e89a4c560735b759e054cb82c72-Slide29.PNG",
+        "key": "gen-ai-customizing-retrieval-practice-L1-9d4077fd-5b23-4b17-97db-134a15801448"
+      },
+      {
+        "text": "# Retrieval for Current Information\nThis lets the chatbot answer questions on more recent events",
+        "imageUrl": "https://images.code.org/c1f1fcc3b19eccbb1e19e71de4d14f93-Slide30.PNG",
+        "key": "gen-ai-customizing-retrieval-practice-L1-8e3e668e-0067-4a5b-9284-ec0791734486",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "name_suffix": "_2025",
+    "offer_browser_tts": "true"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-12T20:42:43.997+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L1_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L1_2024\"}]"
+}]]></config>
+</Panels>

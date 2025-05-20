@@ -1,0 +1,47 @@
+name 'music_lab_PL_career_journeys'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# In the Curriculum: Career Journeys
+
+## What are Career Journeys?
+
+#### To help students see the real-world applications of computer science and music, we've included Career Journeys in the curriculum. Each lesson features a real professional from the music or tech world, helping students see themselves in these creative careers.
+
+## Careers in the Curriculum 
+<!-- This div box wraps around all four images. Change the gap between images and margin around the whole div box here. -->
+<div style="display: flex; justify-content: center; gap: 5%; max-width: 100%; margin: 20px 0px;">
+	<!-- Notice that within the larger div box is four div boxes. Each contains an image and a caption. -->
+    <div style="width: 30%; text-align: center;">
+        <img src="https://images.code.org/1bf1f9c625e1f83821e4fc9fbc7f7f19-image-1739908559016.png" alt="ADD ALT TEXT" style="width: 100%; border-radius:10px;">
+        <p style="font-size: 12pt; margin-top: 5px;">Lesson 1 features Singer/Songwriter Shakira</p>
+    </div>
+    <div style="width: 30%; text-align: center;">
+        <img src="https://images.code.org/5dfa54613ff29b4ea1ec6a66500a8a09-image-1739908567115.png" alt="ADD ALT TEXT" style="width: 100%; border-radius:10px;">
+        <p style="font-size: 12pt; margin-top: 5px;">Lesson 2 features Record Producer Henny tha Bizness </p>
+    </div>
+    <div style="width: 30%; text-align: center;">
+        <img src="https://images.code.org/5a9395b2f8ba9fdd159ef52f376ebad0-image-1739908571781.png" alt="ADD ALT TEXT" style="width: 100%; border-radius:10px;">
+        <p style="font-size: 12pt; margin-top: 5px;">Lesson 3 features Artist, Creator, and Coder Roxanne</p>
+    </div>
+   
+</div>
+
+
+## Why Do Career Journeys Matter?
+#### Highlighting careers: 
+
+
+
+- #### **Builds Awareness:** Helps students explore future career possibilities early on.
+- #### **Makes Learning Personal:** Connects CS to students’ interests like music or games.
+- #### **Promotes Equity:** Highlights diverse role models and fosters a sense of belonging.
+- #### **Shows Real-World Use:** Demonstrates how CS applies across industries and jobs.
+- #### **Encourages Key Skills:** Reinforces creativity, collaboration, and problem-solving.
+- #### **Empowers Teachers:** Positions educators as mentors guiding meaningful learning.
+
+
+
+
+MARKDOWN

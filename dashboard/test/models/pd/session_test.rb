@@ -12,14 +12,21 @@ class Pd::SessionTest < ActiveSupport::TestCase
     session = build :pd_session, start: Time.now, end: Time.now + 1.day
     refute session.valid?
     assert_equal 1, session.errors.messages.count
-    assert_equal 'End must occur on the same day as the start.', session.errors.full_messages[0]
+    assert_equal 'End must occur on the same day as the start', session.errors.full_messages[0]
   end
 
   test 'starts_before_ends validation error' do
     session = build :pd_session, start: Time.now + 4.hours, end: Time.now
     refute session.valid?
     assert_equal 1, session.errors.messages.count
-    assert_equal 'End must occur after the start.', session.errors.full_messages[0]
+    assert_equal 'End must occur after the start', session.errors.full_messages[0]
+  end
+
+  test 'valid_meeting_link_format validation error' do
+    session = build :pd_session, meeting_link: 'bad/url here'
+    refute session.valid?
+    assert_equal 1, session.errors.messages.count
+    assert_equal 'Meeting link is not a valid URL', session.errors.full_messages[0]
   end
 
   test 'formatted_date' do
@@ -28,13 +35,81 @@ class Pd::SessionTest < ActiveSupport::TestCase
   end
 
   test 'formatted_date_with_start_and_end_times' do
+    session = build :pd_session
+    session.workshop.time_zone = 'America/Denver'
+    session.start = Time.current.in_time_zone('America/Denver').change(year: 2016, month: 3, day: 1, hour: 9).utc.iso8601
+    session.end = Time.current.in_time_zone('America/Denver').change(year: 2016, month: 3, day: 1, hour: 17).utc.iso8601
+
+    assert_equal '2016-03-01, 9:00am-5:00pm MST', session.formatted_date_with_start_and_end_times
+  end
+
+  test 'formatted_date_with_start_and_end_times no time_zone' do
     session = create(
       :pd_session,
-      start: DateTime.new(2016, 3, 1, 9).in_time_zone,
-      end: DateTime.new(2016, 3, 1, 17).in_time_zone
+      start: Time.current.in_time_zone('UTC').change(year: 2016, month: 3, day: 1, hour: 9).utc.iso8601,
+      end: Time.current.in_time_zone('UTC').change(year: 2016, month: 3, day: 1, hour: 17).utc.iso8601
     )
 
     assert_equal '2016-03-01, 9:00am-5:00pm', session.formatted_date_with_start_and_end_times
+  end
+
+  test 'formatted_location_details for in_person session with location details' do
+    session = create(
+      :pd_session,
+      session_format: 'in_person',
+      location_name: 'The auditorium',
+      location_address: '123 Main St, Denver CO, 12345'
+    )
+
+    assert_equal 'The auditorium, 123 Main St, Denver CO, 12345', session.formatted_location_details
+  end
+
+  test 'formatted_location_details for in_person session with only location_name' do
+    session = create(
+      :pd_session,
+      session_format: 'in_person',
+      location_name: 'The auditorium',
+    )
+
+    assert_equal 'The auditorium', session.formatted_location_details
+  end
+
+  test 'formatted_location_details for in_person session with only location_address' do
+    session = create(
+      :pd_session,
+      session_format: 'in_person',
+      location_address: '123 Main St, Denver CO, 12345'
+    )
+
+    assert_equal '123 Main St, Denver CO, 12345', session.formatted_location_details
+  end
+
+  test 'formatted_location_details for in_person session with no location details' do
+    session = create(
+      :pd_session,
+      session_format: 'in_person',
+    )
+
+    assert_equal 'N/A', session.formatted_location_details
+  end
+
+  test 'formatted_location_details for virtual session with meeting_link' do
+    session = create(
+      :pd_session,
+      session_format: 'virtual',
+      meeting_link: 'example.com',
+    )
+
+    assert_equal 'Virtual meeting: example.com', session.formatted_location_details
+  end
+
+  test 'formatted_location_details for virtual session without meeting_link' do
+    session = create(
+      :pd_session,
+      session_format: 'virtual',
+    )
+
+    assert_equal 'N/A', session.formatted_location_details
   end
 
   test 'soft delete' do

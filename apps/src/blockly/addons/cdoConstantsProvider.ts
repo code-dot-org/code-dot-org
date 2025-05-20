@@ -149,4 +149,13 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
     this.TRI_INPUT_OUTPUT = this.makeTriangularInputConn();
     this.ROUND_INPUT_OUTPUT = this.makeRoundInputConn();
   }
+
+  protected generateSecondaryColour_(inputColour: string): string {
+    if (Blockly.isDarkTheme) {
+      return (
+        Blockly.utils.colour.blend('#000', inputColour, 0.4) || inputColour
+      );
+    }
+    return super.generateSecondaryColour_(inputColour);
+  }
 }

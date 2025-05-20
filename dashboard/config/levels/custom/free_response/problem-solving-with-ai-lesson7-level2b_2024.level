@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-03-25T13:52:35.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Why do you think AI-generated hallucinations appear convincing?\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "stay_on_level_after_submit": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-25T13:52:35.429+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson7-level4-3\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson7-level4-3\"},{\"changed_at\":\"2025-03-25 13:53:25 +0000\",\"changed\":[\"title\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-25 13:54:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

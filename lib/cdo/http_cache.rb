@@ -62,6 +62,7 @@ class HttpCache
 
   # A list of script levels that should not be cached, even though they are
   # in a cacheable script
+  # TODO TEACH-1634 support the /courses/ path
   UNCACHED_UNIT_LEVEL_PATHS = [
     '/s/dance-2019/lessons/1/levels/10',
     '/s/dance-ai-2023/lessons/1/levels/10',
@@ -165,12 +166,20 @@ class HttpCache
       'statsig_stable_id',
       session_key,
       storage_id,
-      'new_sign_up_user_type',
+      'sign_up_user_type',
     ].concat(default_cookies)
 
     {
       pegasus: {
         behaviors: [
+          # NextJS assets path for the marketing app
+          {
+            path: '/_next/static/*',
+            proxy: 'marketing',
+            headers: [],
+            cookies: default_cookies,
+            include_marketing_router_lambda: true,
+          },
           {
             # Serve Sprockets-bundled assets directly from the S3 bucket synced via `assets:precompile`.
             #
@@ -229,12 +238,13 @@ class HttpCache
             query: false,
             headers: ALLOWLISTED_HEADERS,
             cookies: default_cookies
-          }
+          },
         ],
         # Remaining Pegasus paths are cached, and vary only on language, country, and default cookies.
         default: {
           headers: LANGUAGE_HEADER + COUNTRY_HEADER,
-          cookies: default_cookies
+          cookies: default_cookies,
+          include_marketing_router_lambda: true,
         }
       },
       dashboard: {

@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import Button, {buttonColors} from '@code-dot-org/component-library/button';
+import React, {useEffect, useState} from 'react';
 
-import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -10,14 +10,19 @@ import {FeedbackData} from '../interactionsApi';
 
 import AssistantMessageFeedbackDetails from './AssistantMessageFeedbackDetails';
 
-import style from './chat-workspace.module.scss';
+import style from './ai-tutor.module.scss';
 
 interface AssistantMessageProps {
   messageId: number | undefined;
+  // Callback function from parent component to track when assistant feedback details
+  // are opened or closed. Allows auto-scroll to take into account assistant message
+  // feedback height.
+  onDetailsOpenChange: (isOpen: boolean) => void;
 }
 
 const AssistantMessageFeedback: React.FC<AssistantMessageProps> = ({
   messageId,
+  onDetailsOpenChange,
 }) => {
   const [feedbackState, setFeedbackState] = useState<FeedbackData>({
     thumbsUp: false,
@@ -39,6 +44,10 @@ const AssistantMessageFeedback: React.FC<AssistantMessageProps> = ({
     setFeedbackState({thumbsUp: thumbsUp, thumbsDown: thumbsDown});
     setDetailsOpen(thumbsUp || thumbsDown);
   };
+
+  useEffect(() => {
+    onDetailsOpenChange(detailsOpen);
+  }, [detailsOpen, onDetailsOpenChange]);
 
   return (
     <div className={style.feedbackIcons}>

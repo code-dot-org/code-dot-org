@@ -352,48 +352,29 @@ class LevelsHelperTest < ActionView::TestCase
     refute_equal channel, get_channel_for(level, script.id)
   end
 
-  test 'use_google_blockly is false if not set' do
-    Experiment.stubs(:enabled?).returns(false)
-    @level = build :level
-    refute use_google_blockly
-    Experiment.unstub(:enabled?)
-    reset_view_options
-  end
-
-  test 'use_google_blockly is true if Experiment is enabled for google_blockly' do
-    Experiment.stubs(:enabled?).returns(true)
+  test 'use_google_blockly is true if not set' do
     @level = build :level
     assert use_google_blockly
-    Experiment.unstub(:enabled?)
   end
 
   test 'use_google_blockly is true if blocklyVersion is set to Google in view_options' do
-    Experiment.stubs(:enabled?).returns(false)
     view_options(blocklyVersion: 'google')
     @level = build :level
     assert use_google_blockly
-    Experiment.unstub(:enabled?)
     reset_view_options
   end
 
-  test 'use_google_blockly is false if blocklyVersion is set to Cdo in view_options even if level uses google_blockly' do
-    Experiment.stubs(:enabled?).returns(false)
+  test 'use_google_blockly is false if blocklyVersion is set to Cdo in view_options' do
     view_options(blocklyVersion: 'cdo')
     @level = build :level
-    @level.stubs(:uses_google_blockly?).returns(true)
     refute use_google_blockly
-    Experiment.unstub(:enabled?)
     reset_view_options
   end
 
-  test 'use_google_blockly is true if level uses google_blockly and blocklyVersion is not set to cdo' do
-    Experiment.stubs(:enabled?).returns(false)
+  test 'use_google_blockly is true if blocklyVersion is not set to cdo in view_options' do
     view_options(blocklyVersion: nil)
     @level = build :level
-    @level.stubs(:uses_google_blockly?).returns(true)
     assert use_google_blockly
-    @level.unstub(:uses_google_blockly?)
-    Experiment.unstub(:enabled?)
     reset_view_options
   end
 

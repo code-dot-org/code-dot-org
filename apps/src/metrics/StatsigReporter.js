@@ -1,7 +1,5 @@
 import {StatsigClient} from '@statsig/js-client';
 import {runStatsigAutoCapture} from '@statsig/web-analytics';
-import cookies from 'js-cookie';
-import Statsig from 'statsig-js';
 
 import logToCloud from '@cdo/apps/logToCloud';
 import experiments from '@cdo/apps/util/experiments';
@@ -11,30 +9,39 @@ import {
   getEnvironment,
   isProductionEnvironment,
   isDevelopmentEnvironment,
-  createUuid,
 } from '../utils';
+
+import {
+  getUserID,
+  getUserType,
+  getStableId,
+  formatUserId,
+} from './statsigHelpers';
 
 // A flag that can be toggled to send events regardless of environment
 const ALWAYS_SEND = false;
 const NO_EVENT_NAME = 'NO_VALID_EVENT_NAME_LOG_ERROR';
-const STABLE_ID_KEY = 'statsig_stable_id';
 
 class StatsigReporter {
   constructor() {
+    // stable_id is set as a cookie in application_controller.rb. However in a
+    // the rare case we are running outside of the application layout,
+    // set stable_id as a cookie here if it doesn't exist.
+    this.stable_id = getStableId();
+    this.log(`Statsig Stable ID: ${this.stable_id}`);
     let user = {
       custom: {
         enabledExperiments: experiments.getEnabledExperiments(),
         geRegion: getGlobalEditionRegion(),
       },
+      customIDs: {stableID: this.stable_id},
     };
-    const user_id_element = document.querySelector('script[data-user-id]');
-    const user_id = user_id_element ? user_id_element.dataset.userId : null;
-    const user_type_element = document.querySelector('script[data-user-type');
-    const user_type = user_type_element
-      ? user_type_element.dataset.userType
-      : null;
+
+    const user_id = getUserID();
+    const user_type = getUserType();
+
     if (user_id) {
-      user.userID = this.formatUserId(user_id);
+      user.userID = formatUserId(user_id);
       user.custom.userType = user_type;
     }
     this.user = user;
@@ -55,17 +62,11 @@ class StatsigReporter {
       managed_test_environment ||
       process.env.STATSIG_LOCAL_MODE_OFF
     );
-    // stable_id is set as a cookie in application_controller.rb. However in a
-    // the rare case we are running outside of the application layout,
-    // set stable_id as a cookie here if it doesn't exist.
-    this.stable_id = this.findOrCreateStableId();
     this.options = {
       environment: {tier: getEnvironment()},
       localMode: this.local_mode,
       disableErrorLogging: true,
-      overrideStableID: this.stable_id,
     };
-    this.log(`Statsig Stable ID: ${this.stable_id}`);
 
     this.initialize(this.api_key, this.user, this.options);
   }
@@ -74,28 +75,35 @@ class StatsigReporter {
   // (below) from current user redux
   async initialize(api_key, user, options) {
     if (this.shouldPutRecord(ALWAYS_SEND)) {
-      await Statsig.initialize(api_key, user, options);
+      this.statsigClient = new StatsigClient(api_key, user, options);
+      await this.statsigClient.initializeAsync();
     }
   }
 
   // Utilizes Statsig's function for updating a user once we've recognized a sign in
-  async setUserProperties(
+  async setUserProperties({
     userId,
     userType,
     isVerifiedInstructor,
-    enabledExperiments
-  ) {
-    const formattedUserId = this.formatUserId(userId);
+    enabledExperiments,
+    educatorRole,
+  }) {
+    const formattedUserId = formatUserId(userId);
     const user = {
       userID: formattedUserId,
-      custom: {userType, isVerifiedInstructor, enabledExperiments},
+      custom: {
+        userType,
+        isVerifiedInstructor,
+        enabledExperiments,
+        educatorRole,
+      },
     };
     if (!this.shouldPutRecord(ALWAYS_SEND)) {
       this.log(
         `User properties: userId: ${formattedUserId}, userType: ${userType}, isVerifiedInstructor: ${isVerifiedInstructor}, signInState: ${!!userId}`
       );
     } else {
-      await Statsig.updateUser(user);
+      await this.statsigClient.updateUserAsync(user);
     }
   }
 
@@ -108,13 +116,13 @@ class StatsigReporter {
             payload: payload,
           }
         );
-        Statsig.logEvent(NO_EVENT_NAME, NO_EVENT_NAME, payload);
+        this.statsigClient.logEvent(NO_EVENT_NAME, NO_EVENT_NAME, payload);
       } else {
         // Statsig expects a name, value and data. Because we are unifying this
         // with our Amplitude logging, we are bypassing the 'value' and sending
         // event name twice. If we want to use this field moving forward, we
         // will need to refactor all AnalyticsReporting event calls accordingly.
-        Statsig.logEvent(eventName, eventName, payload);
+        this.statsigClient.logEvent(eventName, eventName, payload);
       }
     } else {
       this.log(
@@ -135,31 +143,9 @@ class StatsigReporter {
     if (this.local_mode) {
       return false;
     }
-    return Statsig.getExperiment(name).get(parameter, defaultValue);
-  }
-
-  formatUserId(userId) {
-    const userIdString = userId.toString() || 'none';
-    if (!userId) {
-      return userIdString;
-    }
-    if (isProductionEnvironment()) {
-      return userIdString.padStart(5, '0');
-    } else {
-      const environment = getEnvironment();
-      return `${environment}-${userIdString}`;
-    }
-  }
-
-  findOrCreateStableId() {
-    let stableId = cookies.get(STABLE_ID_KEY);
-    if (!stableId) {
-      stableId = createUuid();
-      cookies.set(STABLE_ID_KEY, stableId, {
-        path: '/',
-      });
-    }
-    return stableId;
+    return (
+      this.statsigClient.getExperiment(name).value[parameter] ?? defaultValue
+    );
   }
 
   /**

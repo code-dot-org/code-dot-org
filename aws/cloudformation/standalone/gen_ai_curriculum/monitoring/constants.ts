@@ -39,3 +39,6 @@ export const WARNING_COLOR = '#ff7f0e';
 export const DASHBOARD_NAME = 'GenAICurriculum';
 
 export const BROWSERS = ['Chrome', 'Firefox', 'Safari'];
+
+export const SL_HANDBOOK_LINK =
+    'https://docs.google.com/document/d/1T0Vwwg22isdgsf66mYiRtUZVKaSxHo1PW89HAnW_twk/edit?tab=t.0#heading=h.npwykn5tc2b4';

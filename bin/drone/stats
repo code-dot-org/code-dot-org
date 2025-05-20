@@ -1,0 +1,163 @@
+#!/usr/bin/env bundle exec ruby
+
+require "json"
+require "time"
+require "active_support/time"
+require "optparse"
+require "parallel"
+require "csv"
+require 'httparty'
+
+options = {ago: 1.week, json: false, only_successful: true, only_stages: nil, verbose: nil}
+OptionParser.new do |opts|
+  opts.on("--verbose", 'Output more information') {options[:verbose] = true}
+  opts.on("--json", 'Output successful builds in JSON format') do
+    options[:json] = true
+    options[:verbose] = false
+  end
+  opts.on("--ago=DURATION", 'Oldest build of interest, e.g. `--ago="6 days"`') do |ago_str|
+    num, unit = ago_str.split
+    options[:ago] = num.to_i.public_send(unit.downcase)
+  end
+  opts.on("--only-successful=true", 'Filter to only successful drone builds (default: true)') do |only_successful|
+    options[:only_successful] = [nil, "1", "true"].include? only_successful
+  end
+  opts.on("--only-stages=STAGES", 'Only process some drone stages, e.g. `--only-stages="unit,ui"`') do |stages|
+    options[:only_stages] = stages.split(",").map(&:strip)
+  end
+end.parse!
+
+def drone_api_get(path)
+  drone_url = "https://drone.cdn-code.org"
+  url = "#{drone_url}/api/repos/code-dot-org/code-dot-org/#{path}"
+  drone_token = ENV.fetch('DRONE_TOKEN', nil)
+  raise "Env var DRONE_TOKEN must be set to 'Your Personal Token' from #{drone_url}/account" if drone_token.nil?
+
+  res = HTTParty.get(
+    url,
+    headers: {
+      "Authorization" => "Bearer #{ENV.fetch('DRONE_TOKEN', nil)}",
+      "Content-Type" => "application/json",
+    },
+    format: :plain,
+  )
+  raise "#{res.code} #{res.message} - GET request to #{url} failed" unless res.success?
+  JSON.parse res.body, symbolize_names: true
+end
+
+# Terminal control code to clear the current line
+TERMINAL_CLEAR_LINE="\r\e[K"
+
+OPTIONS_NOT_TO_OUTPUT_TO_TABLE = [:json]
+
+OLDEST_BUILD_OF_INTEREST = options[:ago].ago
+oldest_build_seen = Time.now
+MAX_DRONE_PAGE_NUM = 200
+drone_page_num = 1
+build_stages = []
+
+while oldest_build_seen >= OLDEST_BUILD_OF_INTEREST
+  raise "Exceeded hardcoded max drone API page limit (#{MAX_DRONE_PAGE_NUM})" if drone_page_num > MAX_DRONE_PAGE_NUM
+
+  builds = drone_api_get("builds?page=#{drone_page_num}").
+    select {|build| options[:only_successful] ? build[:status] == "success" : true}
+  build_nums = builds.map {|build| build[:number]}
+
+  new_build_stages = Parallel.flat_map(build_nums, in_threads: 32) do |build_num|
+    build_info = drone_api_get("builds/#{build_num}")
+
+    build_info[:stages].map do |stage|
+      next if options[:only_stages] && !options[:only_stages].include?(stage[:name])
+      {
+        **stage, # see: https://docs.drone.io/api/builds/build_info/
+        build_num: build_info[:number],
+        build: build_info,
+        date: Time.at(stage[:stopped]),
+      }
+    end
+  end.compact
+
+  raise "No new build stages found, is --only-stages set correctly?" if new_build_stages.empty?
+
+  oldest_build_seen = new_build_stages.map {|s| s[:date]}.min
+  new_build_stages.select! {|s| s[:date] >= OLDEST_BUILD_OF_INTEREST}
+  print("#{TERMINAL_CLEAR_LINE}Processed builds back to #{oldest_build_seen}") if $stdout.tty?
+
+  build_stages += new_build_stages
+  drone_page_num += 1
+end
+puts(TERMINAL_CLEAR_LINE) if $stdout.tty?
+
+def descriptive_statistics(data, units: nil, round: nil)
+  raise "All values must be numeric" unless data.all?(Numeric)
+  data = data.sort
+  quartile = ->(quartile_num) {data[(data.length * quartile_num / 4.0).floor]}
+  format = round ? ->(v) {v.round(round)} : ->(v) {v}
+  {
+    count: data.size,
+    **(units.nil? ? {} : {units: units}),
+    mean: format.call(data.sum / data.size.to_f),
+    sum: format.call(data.sum),
+    p_0: format.call(data.min),
+    p_25: format.call(quartile.call(1)),
+    p_50: format.call(quartile.call(2)),
+    p_75: format.call(quartile.call(3)),
+    p_100: format.call(data.max),
+  }
+end
+
+def to_justified_tsv_str(hash)
+  col_names = hash.first.keys
+  col_widths = col_names.map {|col| [col.to_s.length, *hash.map {|row| row[col].to_s.length}].max}
+
+  CSV.generate(col_sep: "\t", force_quotes: false) do |csv|
+    csv << col_names.map.with_index {|col, i| col.to_s.ljust(col_widths[i])}
+    hash.each {|row| csv << row.values.map.with_index {|val, i| val.to_s.ljust(col_widths[i])}}
+  end
+end
+
+def write_stats_table(filename, data)
+  tsv = to_justified_tsv_str(data)
+  puts "## #{filename} ##"
+  puts tsv
+  puts
+  File.write(filename, tsv)
+end
+
+def compute_stats_for(all_build_stages, options, units: nil, round: nil, &data_selector)
+  options_filtered = options.reject {|key, value| OPTIONS_NOT_TO_OUTPUT_TO_TABLE.include?(key) || value.nil?}.inspect.tr('"', "'")
+
+  stats_for = lambda do |stage_name, build_stages|
+    data = build_stages.map(&data_selector).compact
+    {
+      stage_name: stage_name,
+      **descriptive_statistics(data, units: units, round: round),
+      options: options_filtered,
+    }
+  end
+
+  duration_stats = all_build_stages.group_by {|stage| stage[:name]}.map do |stage_name, subset_of_stages|
+    stats_for.call(stage_name, subset_of_stages)
+  end
+
+  all_stage_name_label = options[:only_stages] ? options[:only_stages].join("+") : "ALL"
+  duration_stats << stats_for.call(all_stage_name_label, all_build_stages)
+end
+
+def write_duration_stats_table(build_stages, options)
+  duration_mins_stats = compute_stats_for(build_stages, options, units: "minutes", round: 2) do |stage|
+    # We don't want to generate durations for stages that are still ongoing
+    next if stage[:stopped].zero? || stage[:started].zero?
+
+    # Compute duration in minutes from unix timestamps
+    # for valid fields of stage, see: https://docs.drone.io/api/builds/build_info/
+    ((stage[:stopped] - stage[:started]) / 60.0).round(2)
+  end
+  write_stats_table("drone-duration-stats.tsv", duration_mins_stats)
+end
+
+if options[:json]
+  puts JSON.pretty_generate(build_stages)
+else
+  write_duration_stats_table(build_stages, options)
+end

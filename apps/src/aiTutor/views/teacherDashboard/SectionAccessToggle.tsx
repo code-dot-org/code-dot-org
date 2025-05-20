@@ -1,7 +1,7 @@
+import Toggle from '@code-dot-org/component-library/toggle';
 import React, {useState, useEffect} from 'react';
 
 import {handleUpdateSectionAITutorEnabled} from '@cdo/apps/aiTutor/accessControlsApi';
-import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import InfoHelpTip from '@cdo/apps/sharedComponents/InfoHelpTip';

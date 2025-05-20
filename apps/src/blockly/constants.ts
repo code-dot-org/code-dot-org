@@ -119,6 +119,8 @@ export enum BLOCK_TYPES {
   argumentReporter = 'argument_reporter',
   behaviorDefinition = 'behavior_definition',
   behaviorGet = 'gamelab_behavior_get',
+  category = 'category',
+  categoryDynamic = 'custom_category',
   colourRandom = 'colour_random',
   danceWhenSetup = 'Dancelab_whenSetup',
   parametersGet = 'parameters_get',
@@ -139,6 +141,15 @@ export enum BLOCK_TYPES {
 export const PROCEDURE_DEFINITION_TYPES: string[] = [
   BLOCK_TYPES.behaviorDefinition,
   BLOCK_TYPES.procedureDefinition,
+];
+
+// A list of block types that are definitions or calls to procedures,
+// including functions and behaviors.
+export const PROCEDURE_BLOCK_TYPES: string[] = [
+  BLOCK_TYPES.procedureCall,
+  BLOCK_TYPES.procedureDefinition,
+  BLOCK_TYPES.behaviorDefinition,
+  BLOCK_TYPES.behaviorGet,
 ];
 
 // A list of blocks for getting and setting variables.

@@ -1,8 +1,8 @@
 [project]
 name = 'unittest_runner'
-version = '0.1.0'
+version = '0.3.0'
 requires-python = '>=3.12'
-dependencies = []
+dependencies = ['neighborhood']
 
 [dependency-groups]
 dev = [

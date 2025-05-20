@@ -1,0 +1,13 @@
+name 'test-problem-solving-with-ai-lesson13-level3-parent'
+
+submittable 'false'
+anonymous 'false'
+
+page
+text 'test-problem-solving-with-ai-lesson13-level3-text'
+level 'test-problem-solving-with-ai-lesson13-level3-1'
+level 'test-problem-solving-with-ai-lesson13-level3-2'
+text 'test-problem-solving-with-ai-lesson13-level3-text2'
+level 'test-problem-solving-with-ai-lesson13-level3-3'
+level 'test-problem-solving-with-ai-lesson13-level3-4'
+

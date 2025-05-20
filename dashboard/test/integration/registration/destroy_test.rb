@@ -129,14 +129,19 @@ module RegistrationsControllerTests
     end
 
     test "sends email when teacher destroyed" do
+      email = 'an@email.address'
+      password = 'apassword'
+
       default_params = {
         name: 'A name',
-        password: 'apassword',
-        email: 'an@email.address',
+        password: password,
+        email: email,
         gender: 'F',
         age: '21',
         user_type: 'teacher'
       }
+
+      post '/users/begin_sign_up', params: {user: {email: email, password: password, password_confirmation: password}}
       teacher_params = default_params.update(user_type: 'teacher', email_preference_opt_in: 'yes')
       assert_creates(User) do
         post '/users', params: {user: teacher_params}

@@ -60,6 +60,21 @@ describe('SafeMarkdown', () => {
     ).toBe(true);
   });
 
+  it('will render markdown wrapped in an element', () => {
+    const paragraphWrapper = shallow(
+      <p id="test-markdown">
+        <SafeMarkdown
+          unwrapped
+          markdown={'**some** _basic_ [inline](markdown)'}
+        />
+      </p>
+    );
+
+    expect(paragraphWrapper.html()).toBe(
+      '<p id="test-markdown"><strong>some</strong> <em>basic</em> <a href="markdown">inline</a></p>'
+    );
+  });
+
   it('implements expandableImages', () => {
     const regularImage = shallow(
       <SafeMarkdown markdown="![regular](http://example.com/img.jpg)" />

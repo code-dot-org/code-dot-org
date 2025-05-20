@@ -1,0 +1,50 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2025-01-23T22:56:55.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**Scenario:** The hero must collect magical ingredients from multiple areas of the forest, requiring them to move in different directions.\r\n\r\n## Do This: \r\n- Run the Code: Observe what happens when you run the code as is. \r\n- Uncomment the `#` from the function, then run the code again. \r\n- Reflect: Why would you put a while-loop in a function? What purpose do functions serve? ",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "from support import hero, show_ingredient_message\n\nwhile hero.is_on_ingredient():\n    hero.collect_ingredient()\n    show_ingredient_message()\n    hero.move()\n\n# Uncomment to use a function for reusability\n# def collect_ingredients():\n#     while hero.is_on_ingredient():\n#         hero.collect_ingredient()\n#         show_ingredient_message()\n#         hero.move()\n#\n# collect_ingredients()",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "support.py",
+          "language": "py",
+          "contents": "import random\n\n# Simulated Hero class\nclass Hero:\n    def __init__(self):\n        self.ingredients = 0  # Number of ingredients collected\n        self.steps = 0        # Steps taken\n        self.max_steps = 10   # Maximum steps in the forest\n\n    def is_on_ingredient(self):\n        # Simulate a 50% chance of being on an ingredient spot\n        return self.steps < self.max_steps and random.choice([True, False])\n\n    def collect_ingredient(self):\n        self.ingredients += 1\n        print(f\"🍄 Collected an ingredient! Total ingredients: {self.ingredients}\")\n\n    def move(self):\n        self.steps += 1\n        if self.steps < self.max_steps:\n            print(f\"➡️ Moved to step {self.steps}.\")\n        else:\n            print(\"🌲 You've reached the end of the forest!\")\n\n# ASCII art and ingredient messages\ningredients = [\n    \"a shiny red mushroom\",\n    \"a bundle of glowing herbs\",\n    \"a sparkling blue flower\",\n    \"a rare golden berry\",\n    \"a bottle of enchanted dew\",\n]\n\nascii_art = [\n    \"\"\"\n     🌿\n    🌱 🌱\n     🌿\n    \"\"\",\n    \"\"\"\n      🌼\n     🌸 🌸\n      🌼\n    \"\"\",\n    \"\"\"\n      🍄\n     🍄 🍄\n      🍄\n    \"\"\",\n]\n\n# Function to show a random ingredient message with ASCII art\ndef show_ingredient_message():\n    ingredient = random.choice(ingredients)\n    art = random.choice(ascii_art)\n    print(f\"🌟 You found {ingredient}!\")\n    print(art)\n\n# Instantiate the hero object\nhero = Hero()\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "support"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-23 23:07:24 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-23 23:08:20 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-23 23:19:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-23 23:28:25 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -1,0 +1,202 @@
+class Pd::ProfessionalLearningController < ApplicationController
+  PLC_COURSE_ORDERING = ['CSP Support', 'ECS Support', 'CS in Algebra Support', 'CS in Science Support']
+
+  before_action :authenticate_user!, only: [:index, :workshops, :csa, :csd, :csf, :csp, :aif]
+
+  # GET my-professional-learning
+  def index
+    view_options(full_width: true, responsive_content: true, no_padding_container: true)
+
+    enrollments_with_pending_surveys = Pd::Enrollment.filter_for_survey_completion(
+      Pd::Enrollment.for_user(current_user).with_surveys,
+      false
+    )
+    last_enrollment_with_pending_survey = enrollments_with_pending_surveys.max_by {|e| e.workshop.ended_at}
+
+    show_deeper_learning = Plc::UserCourseEnrollment.where(user: current_user).any?
+
+    # Link to the certificate
+    @landing_page_data = {
+      last_workshop_survey_url: last_enrollment_with_pending_survey.try(:exit_survey_url),
+      last_workshop_survey_course: last_enrollment_with_pending_survey.try(:workshop).try(:course),
+      show_deeper_learning: show_deeper_learning,
+      current_year_application_id: Pd::Application::TeacherApplication.find_by(user: current_user, application_year: Pd::SharedApplicationConstants::APPLICATION_CURRENT_YEAR)&.id,
+      has_enrolled_in_workshop: Pd::Enrollment.for_user(current_user).any?,
+      pl_courses_started: current_user.pl_units_started,
+      user_permissions: current_user.permissions.map(&:permission),
+      joined_student_sections: current_user.sections_as_student_participant&.map(&:summarize_without_students),
+      joined_pl_sections: current_user.sections_as_pl_participant&.map(&:summarize_without_students),
+      courses_as_facilitator: Pd::CourseFacilitator.where(facilitator: current_user).map(&:course).uniq,
+    }.compact
+  end
+
+  # GET professional-learning/workshops
+  def workshops
+    view_options(full_width: true, no_padding_container: true)
+    render :regional_workshop_catalog
+  end
+
+  # GET professional-learning/contact-regional-partner
+  def contact_regional_partner
+    render :contact_regional_partner
+  end
+
+  # GET professional-learning/facilitator/computer-science-a
+  def csa
+    @course_name = Pd::Workshop::COURSE_CSA
+    if can_view_facilitator_page(@course_name)
+      render 'pd/professional_learning/facilitator/csa'
+    else
+      render 'pd/professional_learning/facilitator/not_permitted_to_view', :status => :forbidden
+    end
+  end
+
+  # GET professional-learning/facilitator/computer-science-discoveries
+  def csd
+    @course_name = Pd::Workshop::COURSE_CSD
+    if can_view_facilitator_page(@course_name)
+      render 'pd/professional_learning/facilitator/csd'
+    else
+      render 'pd/professional_learning/facilitator/not_permitted_to_view', :status => :forbidden
+    end
+  end
+
+  # GET professional-learning/facilitator/computer-science-fundamentals
+  def csf
+    @course_name = Pd::Workshop::COURSE_CSF
+    if can_view_facilitator_page(@course_name)
+      render 'pd/professional_learning/facilitator/csf'
+    else
+      render 'pd/professional_learning/facilitator/not_permitted_to_view', :status => :forbidden
+    end
+  end
+
+  # GET professional-learning/facilitator/computer-science-principles
+  def csp
+    @course_name = Pd::Workshop::COURSE_CSP
+    if can_view_facilitator_page(@course_name)
+      render 'pd/professional_learning/facilitator/csp'
+    else
+      render 'pd/professional_learning/facilitator/not_permitted_to_view', :status => :forbidden
+    end
+  end
+
+  # GET professional-learning/facilitator/ai-fundamentals
+  def aif
+    @course_name = Pd::Workshop::COURSE_AIF
+    if can_view_facilitator_page(@course_name)
+      render 'pd/professional_learning/facilitator/aif'
+    else
+      render 'pd/professional_learning/facilitator/not_permitted_to_view', :status => :forbidden
+    end
+  end
+
+  # GET professional-learning/regional-partner/playbook
+  def rp_playbook
+    if current_user&.permission?(UserPermission::PROGRAM_MANAGER) || current_user&.permission?(UserPermission::WORKSHOP_ADMIN)
+      render 'pd/professional_learning/regional_partner/regional_partner_playbook'
+    else
+      render 'pd/professional_learning/regional_partner/not_permitted_to_view', :status => :forbidden
+    end
+  end
+
+  # GET professional-learning/application/applications_closed
+  def applications_closed
+    # true when teacher applications are closed site-wide
+    closed = Rails.env.production? && !current_user.try(:workshop_admin?) && Gatekeeper.disallows('pd_teacher_application')
+    render json: closed
+  end
+
+  # GET professional-learning/workshops_as_facilitator_for_pl_page
+  # Returns non-ended workshops the user is facilitating.
+  def workshops_as_facilitator_for_pl_page
+    workshops_as_facilitator =
+      current_user.
+      pd_workshops_facilitated&.
+      order_by_scheduled_start&.
+      reject {|workshop| workshop.state == Pd::Workshop::STATE_ENDED}
+    workshops_as_facilitator_with_surveys_completed = Pd::WorkshopSurveyFoormSubmission.where(user: current_user, pd_workshop: workshops_as_facilitator).pluck(:pd_workshop_id).uniq
+    summarized_workshops_as_facilitator = workshops_as_facilitator.map do |workshop|
+      workshop.summarize_for_my_pl_page.merge({feedback_given: workshops_as_facilitator_with_surveys_completed.include?(workshop.id)})
+    end
+    render json: {status: :ok, workshops_as_facilitator: summarized_workshops_as_facilitator}
+  end
+
+  # GET professional-learning/workshops_as_organizer_for_pl_page
+  # Returns non-ended workshops the user is organizing.
+  def workshops_as_organizer_for_pl_page
+    workshops_as_organizer = current_user.
+      pd_workshops_organized.
+      order_by_scheduled_start.
+      reject {|workshop| workshop.state == Pd::Workshop::STATE_ENDED}.
+      map(&:summarize_for_my_pl_page)
+    render json: {status: :ok, workshops_as_organizer: workshops_as_organizer}
+  end
+
+  # GET professional-learning/workshops_as_program_manager_for_pl_page
+  # Returns non-ended workshops the user is a program manager for.
+  def workshops_as_program_manager_for_pl_page
+    workshops_as_program_manager = Pd::Workshop.where(organizer_id: current_user.id).
+      order_by_scheduled_start.
+      reject {|workshop| workshop.state == Pd::Workshop::STATE_ENDED}.
+      map(&:summarize_for_my_pl_page)
+    render json: {status: :ok, workshops_as_program_manager: workshops_as_program_manager}
+  end
+
+  # GET /dashboardapi/v1/pd/regional_workshop_data/:zip_code
+  # Returns the regional partner of the provided zip and workshops (sorted by start date) that meet
+  # the following criteria:
+  # - Not started yet
+  # - Not hidden
+  # - Considered to be in the regional partner's region (i.e. satisfies one of the following):
+  #    - Has "National" participant group type
+  #    - Has "Regional" participant group type and is associated with the given regional partner
+  #    - Is a CSD, CSP, or CSA workshop and is associated with the given regional partner
+  # - If applications are open, then allow CSD, CSP, and CSA traditional 5-day summer workshops
+  def regional_workshop_data
+    zip_code = params[:zip_code]
+
+    partner, _ = RegionalPartner.find_by_zip(zip_code)
+    rp_workshops = partner&.pd_workshops || []
+    national_workshops = Pd::Workshop.where(participant_group_type: "National").and(Pd::Workshop.where(hidden: false).or(Pd::Workshop.where(hidden: nil))) || []
+    workshops = (rp_workshops + national_workshops).uniq(&:id)
+
+    available_workshops = workshops.select do |ws|
+      ws.state == Pd::Workshop::STATE_NOT_STARTED &&
+        !ws.hidden &&
+        in_region?(ws, partner) &&
+        has_allowed_course_for_regional_ws_page?(ws)
+    end
+
+    sorted_available_workshops = available_workshops.sort_by {|ws| ws.sessions&.first&.start}
+
+    render json: {status: :ok, regional_workshop_data: {
+      regional_partner: {name: partner&.name, additional_info: partner&.additional_program_information},
+      available_workshops: sorted_available_workshops&.map(&:summarize_for_regional_workshop_page)
+    }}
+  end
+
+  # Returns if the current_user can view the facilitator landing page of the given course.
+  private def can_view_facilitator_page(course)
+    current_user&.can_view_all_facilitator_landing_pages? || current_user&.courses_as_facilitator&.exists?(course: course)
+  end
+
+  # Returns if the given workshop is within the provided regional partner's area (including
+  # national workshops).
+  private def in_region?(workshop, regional_partner)
+    return true if workshop.participant_group_type == 'National'
+    workshop.regional_partner_id == regional_partner.id &&
+      (workshop.participant_group_type == 'Regional' ||
+      [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSA].include?(workshop.course))
+  end
+
+  # Returns if the given workshop is on a course that we want to show on the Regional
+  # Workshop Page:
+  # - Show all non-CSD, non-CSP, and non-CSA workshops
+  # - Only show CSD, CSP, and CSA workshops if they're traditional 5-day summer workshops
+  #   and applications are open
+  private def has_allowed_course_for_regional_ws_page?(workshop)
+    return true unless [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSA].include?(workshop.course)
+    workshop.subject == Pd::Workshop::SUBJECT_SUMMER_WORKSHOP && !DCDO.get('pl-teacher-application-off-season', false)
+  end
+end

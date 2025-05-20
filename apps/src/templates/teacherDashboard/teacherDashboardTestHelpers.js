@@ -412,6 +412,60 @@ export const courseOfferings = {
       },
     },
   },
+  10: {
+    id: 10,
+    display_name: 'Single Unit Course',
+    is_featured: false,
+    participant_audience: 'student',
+    course_versions: {
+      13: {
+        id: 13,
+        key: '2025',
+        version_year: '2025',
+        content_root_id: 17,
+        name: 'Single Unit Course 2025',
+        path: '/courses/single-unit-course-2025',
+        type: 'UnitGroup',
+        is_stable: true,
+        is_recommended: false,
+        locale_codes: [],
+        locales: [],
+        units: {
+          17: {
+            id: 17,
+            name: 'Single Unit 2025',
+            path: '/s/single-unit-2025',
+            lesson_extras_available: false,
+            text_to_speech_enabled: false,
+            position: null,
+          },
+        },
+      },
+      14: {
+        id: 14,
+        key: '2026',
+        version_year: '2026',
+        content_root_id: 18,
+        name: 'Single Unit Course 2026',
+        path: '/courses/single-unit-course-2026',
+        type: 'UnitGroup',
+        is_stable: true,
+        is_recommended: false,
+        locale_codes: [],
+        locales: [],
+        units: {
+          17: {
+            id: 17,
+            name: 'Single Unit 2026',
+            path: '/s/single-unit-2026',
+            lesson_extras_available: false,
+            text_to_speech_enabled: false,
+            position: null,
+          },
+        },
+      },
+    },
+  },
 };
 
 export const fakeCoursesWithProgress = [

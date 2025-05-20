@@ -1,7 +1,7 @@
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import React, {useCallback, useMemo} from 'react';
 import {useSelector} from 'react-redux';
 
-import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
 import LibraryTable from '@cdo/apps/templates/projects/LibraryTable';
 import PersonalProjectsTable from '@cdo/apps/templates/projects/PersonalProjectsTable';
 import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';

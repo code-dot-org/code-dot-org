@@ -1,0 +1,6 @@
+{
+  "name": "dashboard-server-mimic",
+  "scripts": {
+    "start": "npx -y http-server --port 3000 --cache=-1 ./static"
+  }
+}

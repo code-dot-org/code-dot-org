@@ -1,7 +1,14 @@
 import classNames from 'classnames';
-import React, {MouseEvent, useCallback, useRef} from 'react';
+import React, {
+  MouseEvent,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
+import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import appConfig from '../appConfig';
@@ -20,40 +27,14 @@ import {useMusicSelector} from './types';
 
 import moduleStyles from './timeline.module.scss';
 
-// The height of the primary timeline area for drawing events.  This is the height of each measure's
-// vertical bar.
-const timelineHeight = 130;
 // The width of one measure.
 const barWidth = 60;
-// Leave some vertical space between each event block.
-const eventVerticalSpace = 2;
 // A little room on the left.
 const paddingOffset = 10;
 // Start scrolling the playhead when it's more than this percentage of the way across the timeline area.
 const playheadScrollThreshold = 0.75;
 // How many extra measures to show at the end.
 const extraMeasures = 8;
-
-const getEventHeight = (
-  numUniqueRows: number,
-  availableHeight = timelineHeight
-) => {
-  // While we might not actually have this many rows to show,
-  // we will limit each row's height to the size that would allow
-  // this many to be shown at once.
-  const minVisible = 5;
-
-  const maxVisible = 26;
-
-  // We might not actually have this many rows to show, but
-  // we will size the bars so that this many rows would show.
-  const numSoundsToShow = Math.max(
-    Math.min(numUniqueRows, maxVisible),
-    minVisible
-  );
-
-  return Math.floor(availableHeight / numSoundsToShow);
-};
 
 /**
  * Renders the music playback timeline.
@@ -95,11 +76,39 @@ const Timeline: React.FunctionComponent = () => {
     : startingPlayheadPosition;
   const playHeadOffsetInPixels = (positionToUse - 1) * barWidth;
 
+  // The height of the primary timeline area for drawing events.  This is the height of each measure's
+  // vertical bar.
+  const [availableHeight, setAvailableHeight] = useState(0);
+
+  // Get the height that each event should occupy.  This is inclusive of empty vertical space at the bottom.
+  const getEventHeight = (numUniqueRows: number) => {
+    // While we might not actually have this many rows to show,
+    // we will limit each row's height to the size that would allow
+    // this many to be shown at once.
+    const minVisible = 5;
+
+    const maxVisible = 45;
+
+    // We might not actually have this many rows to show, but
+    // we will size the bars so that this many rows would show.
+    const numSoundsToShow = Math.max(
+      Math.min(numUniqueRows, maxVisible),
+      minVisible
+    );
+
+    return Math.floor(availableHeight / numSoundsToShow);
+  };
+
+  // How how much of the event height should be left as empty vertical space at the bottom.
+  const getEventVerticalSpace = (eventHeight: number) => {
+    return eventHeight > 8 ? 3 : eventHeight > 6 ? 2 : 1;
+  };
+
   const timelineElementProps = {
     paddingOffset,
     barWidth,
-    eventVerticalSpace,
     getEventHeight,
+    getEventVerticalSpace,
   };
 
   // Generate an array containing measure numbers from 1..measuresToDisplay.
@@ -116,7 +125,6 @@ const Timeline: React.FunctionComponent = () => {
       if (!currentlyAllowChangeStartingPlayheadPosition) {
         return;
       }
-
       const offset =
         event.clientX -
         (event.target as Element).getBoundingClientRect().x -
@@ -134,7 +142,6 @@ const Timeline: React.FunctionComponent = () => {
       if (!currentlyAllowChangeStartingPlayheadPosition) {
         return;
       }
-
       dispatch(setStartingPlayheadPosition(measureNumber));
     },
     [dispatch, currentlyAllowChangeStartingPlayheadPosition]
@@ -148,7 +155,6 @@ const Timeline: React.FunctionComponent = () => {
     if (!timelineRef.current || !playheadRef.current) {
       return;
     }
-
     const playheadOffset =
       playheadRef.current.getBoundingClientRect().left -
       timelineRef.current.getBoundingClientRect().left;
@@ -164,16 +170,38 @@ const Timeline: React.FunctionComponent = () => {
   }, [playheadRef]);
 
   usePlaybackUpdate(scrollPlayheadForward, scrollToPlayhead, scrollToPlayhead);
+  const predictResponseSubmitted = useAppSelector(isPredictResponseSubmitted);
+  const isPredictLevel = useAppSelector(
+    state => state.lab.levelProperties?.predictSettings?.isPredictLevel
+  );
+  const canPopulateTimeline = !isPredictLevel || predictResponseSubmitted;
+
+  const firstBarLineRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!firstBarLineRef.current) {
+      return;
+    }
+    const resizeObserver = new ResizeObserver(() => {
+      setAvailableHeight(firstBarLineRef.current?.offsetHeight || 0);
+    });
+    resizeObserver.observe(firstBarLineRef?.current);
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, []);
 
   return (
     <div
       id="timeline"
+      aria-label="Timeline"
       className={classNames(
         moduleStyles.timeline,
         isPlaying && moduleStyles.timelinePlaying
       )}
       onClick={onTimelineClick}
       ref={timelineRef}
+      tabIndex={0} // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
     >
       <div
         id="timeline-measures-background"
@@ -209,6 +237,8 @@ const Timeline: React.FunctionComponent = () => {
                 {measure}
               </div>
               <div
+                id={index === 0 ? 'timeline-first-barline' : undefined}
+                ref={index === 0 ? firstBarLineRef : undefined}
                 className={classNames(
                   moduleStyles.barLine,
                   measure === Math.floor(currentPlayheadPosition) &&
@@ -221,11 +251,12 @@ const Timeline: React.FunctionComponent = () => {
       </div>
 
       <div id="timeline-soundsarea" className={moduleStyles.soundsArea}>
-        {blockMode === BlockMode.SIMPLE2 ? (
-          <TimelineSimple2Events {...timelineElementProps} />
-        ) : (
-          <TimelineSampleEvents {...timelineElementProps} />
-        )}
+        {canPopulateTimeline &&
+          (blockMode === BlockMode.SIMPLE2 ? (
+            <TimelineSimple2Events {...timelineElementProps} />
+          ) : (
+            <TimelineSampleEvents {...timelineElementProps} />
+          ))}
       </div>
 
       <div id="timeline-playhead" className={moduleStyles.fullWidthOverlay}>

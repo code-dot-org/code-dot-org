@@ -5,7 +5,7 @@ from .square_type import SquareType
 
 class GridSquare:
 
-    def __init__(self, tile_type: int, asset_id: int, value: int | None =0):
+    def __init__(self, tile_type: int, asset_id: int, value: int | None = 0):
         self.set_tile_type(tile_type)
         self.asset_id = asset_id
         self.paint_count = value
@@ -26,13 +26,13 @@ class GridSquare:
         if self.contains_paint():
             self.paint_count -= 1
         else:
-            print("There's no paint to collect here")
+            print("There's no paint to collect here.")
 
     def remove_paint(self):
         if self.color is not None:
             self.color = None
         else:
-            print("There's no paint to remove here")
+            print("There's no paint to remove here.")
 
     def contains_paint(self) -> bool:
         return self.paint_count > 0

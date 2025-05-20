@@ -217,6 +217,7 @@ export const playRestAtCurrentLocationSimple2 = {
     style: 'lab_blocks',
     tooltip: musicI18n.blockly_blockRestTooltip(),
     helpUrl: DOCS_BASE_URL + 'rest',
+    mutator: NEXT_CONNECTION_MUTATOR,
   },
   generator: block =>
     `Sequencer.rest(${block.getFieldValue(FIELD_REST_DURATION_NAME)});`,

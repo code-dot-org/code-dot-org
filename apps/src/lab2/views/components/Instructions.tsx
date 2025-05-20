@@ -1,10 +1,12 @@
+import {Button} from '@code-dot-org/component-library/button';
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import classNames from 'classnames';
-import React, {useContext} from 'react';
+import React, {useEffect, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
+import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {Button} from '@cdo/apps/componentLibrary/button';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {
@@ -14,8 +16,6 @@ import {
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import {ThemeContext} from '../ThemeWrapper';
 
 import PredictQuestion from './PredictQuestion';
 import PredictSummary from './PredictSummary';
@@ -34,6 +34,8 @@ interface InstructionsProps {
   manageNavigation?: boolean;
   /** Optional classname for the container */
   className?: string;
+  /** Optional component to render at the bottom of the main instructions. */
+  bottomComponent?: React.ReactNode;
 }
 
 /**
@@ -49,6 +51,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   handleInstructionsTextClick,
   className,
   manageNavigation = true,
+  bottomComponent,
 }) => {
   const instructionsText = useAppSelector(
     state => state.lab.levelProperties?.longInstructions
@@ -74,12 +77,17 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
 
   const dispatch = useAppDispatch();
 
-  const {theme} = useContext(ThemeContext);
+  const {theme} = useTheme();
 
   // Don't render anything if we don't have any instructions.
   if (instructionsText === undefined) {
     return null;
   }
+
+  const canShowNextButton =
+    manageNavigation &&
+    (!hasConditions || satisfied) &&
+    (!predictSettings?.isPredictLevel || predictAnswerLocked);
 
   return (
     <InstructionsPanel
@@ -95,10 +103,11 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       handleInstructionsTextClick={handleInstructionsTextClick}
       offerBrowserTts={offerBrowserTts}
       className={className}
-      canShowNextButton={manageNavigation && (!hasConditions || satisfied)}
+      canShowNextButton={canShowNextButton}
       hasNextLevel={hasNextLevel}
       useSecondaryFinishButton={useSecondaryFinishButton}
       onContinueOrFinish={() => dispatch(continueOrFinishLesson())}
+      bottomComponent={bottomComponent}
     />
   );
 };
@@ -112,8 +121,8 @@ interface InstructionsPanelProps {
   messageIndex?: number;
   /** If the instructions panel should be rendered vertically or horizontally. Defaults to vertical. */
   layout?: 'vertical' | 'horizontal';
-  /** Display theme. Defaults to dark. */
-  theme?: 'dark' | 'light';
+  /** Display theme. Defaults to Dark. */
+  theme?: 'Dark' | 'Light';
   /**
    * A callback when the user clicks on clickable text.
    */
@@ -129,6 +138,7 @@ interface InstructionsPanelProps {
   hasNextLevel: boolean;
   useSecondaryFinishButton: boolean;
   onContinueOrFinish: () => void;
+  bottomComponent?: React.ReactNode;
 }
 
 /**
@@ -145,7 +155,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   message,
   messageIndex,
   layout = 'vertical',
-  theme = 'dark',
+  theme = 'Dark',
   handleInstructionsTextClick,
   predictSettings,
   predictResponse,
@@ -157,6 +167,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   hasNextLevel,
   useSecondaryFinishButton,
   onContinueOrFinish,
+  bottomComponent,
 }) => {
   const vertical = layout === 'vertical';
 
@@ -172,9 +183,40 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   // the unique index.
   const useMessageIndex = useSecondaryFinishButton ? undefined : messageIndex;
 
+  const feedbackRef = useRef<HTMLDivElement>(null);
+  const runButton = document.querySelector('#run-button');
+
+  useEffect(() => {
+    const checkRunButton = () => {
+      if (feedbackRef.current && runButton?.textContent === 'Run') {
+        feedbackRef.current.focus();
+        return true;
+      }
+      return false;
+    };
+
+    const observer = new MutationObserver(mutations => {
+      if (checkRunButton()) {
+        // Stop observing once the run button is found and has the text 'Run'
+        observer.disconnect();
+      }
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+
+    // Cleanup observer on component unmount
+    return () => {
+      observer.disconnect();
+    };
+  }, [useMessage, canShowNextButton, runButton?.textContent]);
+
   return (
     <div
       id="instructions"
+      data-theme="Light"
       className={classNames(
         moduleStyles['instructions-' + theme],
         vertical && moduleStyles.vertical,
@@ -195,23 +237,49 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
             id="instructions-text"
             className={moduleStyles['text-' + theme]}
           >
-            {offerBrowserTts && <TextToSpeech text={text} />}
+            {offerBrowserTts && (
+              <TextToSpeech text={text} higherPosition={!!bottomComponent} />
+            )}
             <div
               id="instructions-text-content"
               className={moduleStyles.textContent}
             >
-              {predictSettings?.isPredictLevel && <PredictSummary />}
-              <EnhancedSafeMarkdown
-                markdown={text}
-                className={moduleStyles.markdownText}
-                handleInstructionsTextClick={handleInstructionsTextClick}
-              />
-              <PredictQuestion
-                predictSettings={predictSettings}
-                predictResponse={predictResponse}
-                setPredictResponse={setPredictResponse}
-                predictAnswerLocked={predictAnswerLocked}
-              />
+              <div
+                className={
+                  offerBrowserTts
+                    ? moduleStyles.scrollingContentWithTTS
+                    : moduleStyles.scrollingContentWithoutTTS
+                }
+              >
+                <EnhancedSafeMarkdown
+                  markdown={text}
+                  className={moduleStyles.markdownText}
+                  handleInstructionsTextClick={handleInstructionsTextClick}
+                />
+                <PredictQuestion
+                  predictSettings={predictSettings}
+                  predictResponse={predictResponse}
+                  setPredictResponse={setPredictResponse}
+                  predictAnswerLocked={predictAnswerLocked}
+                />
+                {predictSettings?.isPredictLevel && (
+                  <InstructorsOnly>
+                    <div
+                      className={classNames(
+                        moduleStyles['message-' + theme],
+                        moduleStyles.predictSummary
+                      )}
+                    >
+                      <PredictSummary />
+                    </div>
+                  </InstructorsOnly>
+                )}
+              </div>
+              {bottomComponent && (
+                <div className={moduleStyles.bottomComponent}>
+                  {bottomComponent}
+                </div>
+              )}
             </div>
           </div>
         )}
@@ -232,11 +300,13 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                 <TextToSpeech text={useMessage} />
               )}
               {useMessage && (
-                <EnhancedSafeMarkdown
-                  markdown={useMessage}
-                  className={moduleStyles.markdownText}
-                  handleInstructionsTextClick={handleInstructionsTextClick}
-                />
+                <div ref={feedbackRef} tabIndex={-1}>
+                  <EnhancedSafeMarkdown
+                    markdown={useMessage}
+                    className={moduleStyles.markdownText}
+                    handleInstructionsTextClick={handleInstructionsTextClick}
+                  />
+                </div>
               )}
               {canShowNextButton && (
                 <Button

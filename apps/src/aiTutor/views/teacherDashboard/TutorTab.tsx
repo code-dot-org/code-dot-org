@@ -1,6 +1,5 @@
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import React, {useState} from 'react';
-
-import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
 
 import AccessControls from './AccessControls';
 import InteractionsTable from './InteractionsTable';

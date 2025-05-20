@@ -1,0 +1,558 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-18T16:13:47.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2",
+            "triggered_at_simple2"
+          ]
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "repeat_simple2",
+                  "id": "qU8KPUi1mrWVtZ/?^J]H",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "fields": {
+                    "times": 2
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sounds_together",
+                        "id": "%)GhI(hX-|A|-hlFGzQ_",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": true
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "repeat_simple2",
+                              "id": "7bPuf#HC[*]W..9%n3_x",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "times": 2
+                              },
+                              "inputs": {
+                                "code": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "F|XVnc~w.bK/Tj_5SUm/",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": true
+                                    },
+                                    "fields": {
+                                      "sound": "lady_gaga_born_this_way/drums_intro"
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "8nqHB(/d:oq:kwaD$.WQ",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": true
+                                  },
+                                  "fields": {
+                                    "sound": "lady_gaga_born_this_way/synth_saw"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "repeat_simple2",
+                      "id": "S0K0=7GOI9I*{@*:O:K8",
+                      "deletable": false,
+                      "movable": false,
+                      "editable": false,
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "fields": {
+                        "times": 2
+                      },
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "play_sounds_together",
+                            "id": "J^QRCzONX=.go!._?+51",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": true
+                            },
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "repeat_simple2",
+                                  "id": "l$aSdWO;-0{uAj]e@Br:",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "times": 2
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "iK9@.0`vK-?jux}|jTrw",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": true
+                                        },
+                                        "fields": {
+                                          "sound": "lady_gaga_born_this_way/drums_small"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sounds_sequential",
+                                      "id": "PYi8N|;OZ70.KyPVv1R]",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": true
+                                      },
+                                      "inputs": {
+                                        "code": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "r*4YMV?N)7r1k9nZt(L]",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "lady_gaga_born_this_way/synth_delay"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "A.?7dYd}7GG5+qP|L846",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": true
+                                                },
+                                                "fields": {
+                                                  "sound": "lady_gaga_born_this_way/digital_toms"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "repeat_simple2",
+                          "id": "py%b;P.;kXo+$z9am4ti",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": true
+                          },
+                          "fields": {
+                            "times": 4
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_sounds_together",
+                                "id": "K5#SX5.WG5~VQfqbh|~V",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": true
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "6_Wc/`j7=Zdww`FBDjY#",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "lady_gaga_born_this_way/bass_sub"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "SS5mCweSbhjSChS:.c+O",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "lady_gaga_born_this_way/strings_end"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "repeat_simple2",
+                                              "id": "Qp)3sfpx%4$A?lW3ic{6",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": true
+                                              },
+                                              "fields": {
+                                                "times": 2
+                                              },
+                                              "inputs": {
+                                                "code": {
+                                                  "block": {
+                                                    "type": "play_sound_at_current_location_simple2",
+                                                    "id": "omM5E)(tGI?|=g3fV[~-",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
+                                                    "extraState": {
+                                                      "disableNextConnection": true
+                                                    },
+                                                    "fields": {
+                                                      "sound": "lady_gaga_born_this_way/drums_clap_beat"
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "sounds": {
+        "electro": [
+          "drum_beat_cowbell",
+          "drum_beat_club",
+          "drum_beat_edm",
+          "drum_beat_hyper",
+          "drum_beat_fashion",
+          "drum_beat_noise",
+          "drum_beat_pause",
+          "drum_beat_shake",
+          "drum_beat_sharp",
+          "drum_beat_strobe",
+          "drum_beat_swirl",
+          "drum_beat_sync",
+          "drum_beat_tom",
+          "bass_synth_blocks",
+          "bass_synth_candy",
+          "bass_synth_chips",
+          "bass_synth_duct_tape",
+          "bass_synth_foam",
+          "bass_synth_glitter",
+          "bass_synth_hammer",
+          "bass_synth_nails",
+          "bass_synth_pop_rocks",
+          "bass_synth_sand",
+          "bass_synth_soda_pop",
+          "synth_airhorn",
+          "synth_cave",
+          "synth_sleek",
+          "synth_wiggle",
+          "guitar_code",
+          "guitar_melody",
+          "guitar_moment",
+          "guitar_reveal",
+          "guitar_shimmy",
+          "guitar_shine",
+          "alien",
+          "boom_impact",
+          "crackle",
+          "spring_lift",
+          "whua",
+          "wormhole"
+        ],
+        "groove": [
+          "strings",
+          "reverse_blip",
+          "sidechain_crash",
+          "laser",
+          "crash_reverse",
+          "blart"
+        ],
+        "indie": [
+          "swipe",
+          "scratch",
+          "rustle",
+          "hey",
+          "crunch",
+          "crash_build"
+        ],
+        "pop": [
+          "drum_beat_action",
+          "drum_beat_cosmos",
+          "drum_kit_dizzy",
+          "drum_kit_jumpy",
+          "drum_beat_pump",
+          "drum_beat_relax",
+          "drum_beat_salt",
+          "drum_kit_pop",
+          "shake_beat",
+          "sugar_beat",
+          "drum_kit_surf",
+          "sugar_alternate_beat",
+          "bass_eel",
+          "bass_flounder",
+          "bass_glider",
+          "bass_home_steady",
+          "bass_jelly",
+          "bass_lifted_steady_1",
+          "bass_lifted_steady_2",
+          "bass_raised_steady",
+          "bass_runner",
+          "bass_shake",
+          "bass_whale",
+          "sub_bass_wave",
+          "guitar_clean_line",
+          "guitar_drive_line",
+          "guitar_funky_wah",
+          "guitar_plastic_line",
+          "guitar_short_phrase",
+          "guitar_slap_phrase",
+          "guitar_stabs",
+          "piano_announcement",
+          "piano_ascot",
+          "piano_darts",
+          "piano_greeting",
+          "piano_plink",
+          "piano_run",
+          "blip",
+          "clap",
+          "clunk",
+          "phase_elevator",
+          "rainstick",
+          "swoosh"
+        ],
+        "hiphop": [
+          "vibraslap",
+          "kick_impact",
+          "bubble",
+          "dive",
+          "dark_sweep_crash",
+          "brass"
+        ],
+        "rock": [
+          "trashy_crash",
+          "stomp",
+          "pick_scrape",
+          "gong",
+          "feedback",
+          "crash"
+        ],
+        "lady_gaga_born_this_way": [
+          "drums_chorus",
+          "drums_clap_beat",
+          "drums_clap_breakdown",
+          "drums_intro",
+          "drums_prechorus",
+          "drums_small",
+          "drums_glitch_fill",
+          "drums_triplet_fill",
+          "drums_long_fill",
+          "bass_sub",
+          "bass_trashed",
+          "synth_distorted",
+          "synth_main_chorus",
+          "synth_main_intro",
+          "synth_main_small",
+          "synth_saw",
+          "synth_big_chorus",
+          "synth_blocks",
+          "synth_choir",
+          "synth_delay",
+          "synth_plink",
+          "synth_bounce",
+          "organ",
+          "piano",
+          "strings",
+          "strings_low",
+          "strings_end",
+          "crash",
+          "bell",
+          "riser",
+          "sweep",
+          "digital_toms"
+        ]
+      },
+      "packId": "lady_gaga_born_this_way",
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "electro/crackle"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_rest_at_current_location_simple2",
+            "fields": {
+              "rest_duration": "<field name=\"rest_duration\">1</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "triggered_at_simple2",
+            "fields": {
+              "trigger": "<field name=\"trigger\">trigger1</field>",
+              "trigger_start": "<field name=\"trigger_start\">immediately</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_sequential",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "repeat_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "times": 1
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      }
+    },
+    "long_instructions": "### DJ Darkness needs a short loop\r\nDJ Darkness loves this heavy beat and ambient sounds. She is having trouble live coding fast enough for anything new to happen in the first 8 measures. Code a small loop that she can trigger early in the song that she can play while she live codes another part of the song.\r\n\r\nDo This:\r\n- Code an 6-measure loop that fits the beat.\r\n- Set it to trigger `at the next measure`.\r\n- Try triggering your new loop to play at Measure 2.\r\n\r\n",
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "display_name": "DJ Darkness",
+    "thumbnail_url": "https://images.code.org/00985973b61c51f03c80ff7bae8a2fa0-DALL·E 2025-03-18 10.04.26 - A dark, futuristic DJ setup with bold lighting and gothic-inspired elements. The background features a moody gradient of deep purples, blacks, and cri.webp",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-18T16:13:47.291+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-synthesis-practice-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-loops-synthesis-practice-choice-a\"},{\"changed_at\":\"2025-03-18 16:22:19 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 16:37:16 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 16:38:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 16:39:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 17:05:03 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

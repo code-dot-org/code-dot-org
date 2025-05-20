@@ -1,7 +1,8 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
-  "created_at": "2024-10-28T15:21:52.000Z",
+  "created_at": "2024-11-14T17:26:12.000Z",
   "level_num": "custom",
   "user_id": 18914,
   "properties": {
@@ -29,11 +30,8 @@
       "folders": {
       }
     },
-    "reference_links": [
-      "https://kids.niehs.nih.gov/games/riddles/jokes/knock-knock-jokes"
-    ]
+    "enable_micro_bit": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-10-28 15:27:37 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:30:53 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:31:05 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:31:09 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-04 19:00:21 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-04 19:32:25 +0000\",\"changed\":[\"predict_settings\",\"reference_links\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-04 21:09:00 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-15 17:06:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-15 17:06:36 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-15 17:06:39 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-28 15:27:37 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:30:53 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:31:05 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:31:09 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-04 19:00:21 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-04 19:32:25 +0000\",\"changed\":[\"predict_settings\",\"reference_links\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-04 21:09:00 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-15 17:06:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-15 17:06:36 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-15 17:06:39 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-24 21:03:00 +0000\",\"changed\":[\"predict_settings\",\"reference_links\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

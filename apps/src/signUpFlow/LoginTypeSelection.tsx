@@ -1,10 +1,14 @@
+import Button from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import TextField from '@code-dot-org/component-library/textField';
+import {
+  Heading3,
+  BodyThreeText,
+} from '@code-dot-org/component-library/typography';
 import cookies from 'js-cookie';
 import React, {useState, useEffect} from 'react';
 
-import Button from '@cdo/apps/componentLibrary/button';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import TextField from '@cdo/apps/componentLibrary/textField/TextField';
-import {Heading3, BodyThreeText} from '@cdo/apps/componentLibrary/typography';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import OldButton from '@cdo/apps/legacySharedComponents/Button';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -25,7 +29,9 @@ import {
   ACCOUNT_TYPE_SESSION_KEY,
   EMAIL_SESSION_KEY,
   OAUTH_LOGIN_TYPE_SESSION_KEY,
-  NEW_SIGN_UP_USER_TYPE,
+  SIGN_UP_USER_TYPE,
+  USER_RETURN_TO_SESSION_KEY,
+  setUserReturnToUrl,
 } from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
@@ -34,7 +40,19 @@ const CHECK_ICON = 'circle-check';
 const X_ICON = 'circle-xmark';
 const EXCLAMATION_ICON = 'circle-exclamation';
 
-const LoginTypeSelection: React.FunctionComponent = () => {
+const getUserType = () => {
+  const sessionUserType = sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY);
+  return sessionUserType === UserTypes.TEACHER ||
+    sessionUserType === UserTypes.STUDENT
+    ? sessionUserType
+    : '';
+};
+
+const LoginTypeSelection: React.FunctionComponent<{
+  isSignedOut: boolean;
+  passwordMinLength: number;
+}> = ({isSignedOut, passwordMinLength}) => {
+  const [userType, setUserType] = useState(getUserType());
   const [password, setPassword] = useState('');
   const [passwordIcon, setPasswordIcon] = useState(X_ICON);
   const [passwordIconClass, setPasswordIconClass] = useState(style.lightGray);
@@ -47,27 +65,56 @@ const LoginTypeSelection: React.FunctionComponent = () => {
   const [authToken, setAuthToken] = useState('');
   const [createAccountButtonDisabled, setCreateAccountButtonDisabled] =
     useState(true);
-  const isTeacher =
-    sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === 'teacher';
 
+  const isTeacher = userType === UserTypes.TEACHER;
   const finishAccountUrl = isTeacher
-    ? studio('/users/new_sign_up/finish_teacher_account')
-    : studio('/users/new_sign_up/finish_student_account');
-  const userType = isTeacher ? UserTypes.TEACHER : UserTypes.STUDENT;
-  cookies.set(NEW_SIGN_UP_USER_TYPE, userType, {path: '/'});
+    ? studio('/users/sign_up/finish_teacher_account')
+    : studio('/users/sign_up/finish_student_account');
+  cookies.set(SIGN_UP_USER_TYPE, userType, {path: '/'});
 
   useEffect(() => {
-    // If the user hasn't selected a user type, redirect them back to the first step of signup.
-    if (sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === null) {
-      navigateToHref('/users/new_sign_up/account_type');
-    }
-
     async function getToken() {
       setAuthToken(await getAuthenticityToken());
     }
 
-    getToken();
-  }, []);
+    if (isSignedOut) {
+      // Handle if the user type is not currently set in sessionStorage.
+      if (sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === null) {
+        const urlUserType = queryParams('user_type');
+        if (
+          urlUserType &&
+          (urlUserType === UserTypes.TEACHER ||
+            urlUserType === UserTypes.STUDENT)
+        ) {
+          // If the user type is set as a URL parameter (e.g. being redirected from section signup and skipping
+          // the first signup page), then set the user type (and URL to return the user to after signup if
+          // provided) in sessionStorage.
+          setUserReturnToUrl();
+          const sourceParam = sessionStorage
+            .getItem(USER_RETURN_TO_SESSION_KEY)
+            ?.includes('/join')
+            ? {source: 'section code sign up form'}
+            : {};
+          analyticsReporter.sendEvent(
+            EVENTS.SIGN_UP_STARTED_EVENT,
+            sourceParam,
+            PLATFORMS.BOTH
+          );
+          sessionStorage.setItem(
+            ACCOUNT_TYPE_SESSION_KEY,
+            urlUserType as string
+          );
+          setUserType(urlUserType);
+        } else {
+          // If the user hasn't selected a user type and it's not a URL parameter, redirect them back to the
+          // first step of signup to select their user type.
+          navigateToHref('/users/sign_up/account_type');
+        }
+      }
+
+      getToken();
+    }
+  }, [isSignedOut]);
 
   const handleKeyDown = (event: React.KeyboardEvent) => {
     if (event.key === 'Enter' && !createAccountButtonDisabled) {
@@ -90,7 +137,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
 
   const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
-    if (event.target.value.length >= 6) {
+    if (event.target.value.length >= passwordMinLength) {
       setPasswordIcon(CHECK_ICON);
       setPasswordIconClass(style.teal);
     } else {
@@ -124,11 +171,11 @@ const LoginTypeSelection: React.FunctionComponent = () => {
       return;
     }
     const submitLoginTypeParams = {
-      new_sign_up: true,
       user: {
         email: email,
         password: password,
         password_confirmation: password,
+        user_type: userType,
       },
     };
     try {
@@ -323,7 +370,9 @@ const LoginTypeSelection: React.FunctionComponent = () => {
                   className={passwordIconClass}
                   iconName={passwordIcon}
                 />
-                <BodyThreeText>{locale.minimum_six_chars()}</BodyThreeText>
+                <BodyThreeText>
+                  {locale.minimum_num_chars({minChars: passwordMinLength})}
+                </BodyThreeText>
               </div>
             </div>
             <div>

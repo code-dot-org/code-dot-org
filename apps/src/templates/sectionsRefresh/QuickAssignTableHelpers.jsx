@@ -1,7 +1,7 @@
+import {Heading5} from '@code-dot-org/component-library/typography';
 import classnames from 'classnames';
 import React from 'react';
 
-import {Heading5} from '@cdo/apps/componentLibrary/typography';
 import taImage from '@cdo/apps/templates/rubrics/images/ai-teaching-assistant-assign.png';
 
 import moduleStyles from './sections-refresh.module.scss';

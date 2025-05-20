@@ -1,0 +1,54 @@
+name 'PLStyleGuide_L1_Images2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Images and Accessibility
+
+## Alt Text
+
+#### **All images should have corresponding alt text.** The exception to this is purely decorative elements.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 100%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+	<p style="font-size: 14pt; font-weight: bold; margin: 0;">💡 Design Tip</p>
+	<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;"><b>Purpose of Alt Text</b></p>
+	<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;">Alternative text, also known as alt text, is descriptive text that conveys the meaning of an image in digital content. It’s designed to make visual content accessible to people with vision disabilities.</p>
+	<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;">When a person uses assistive technology such as a screen reader, the screen reader will read the onscreen text aloud. When the screen reader reaches an image, it will read the alt text for that image so the user can know what the image is meant to convey. Images can provide illustrative information, or they can act as buttons and similar interactive elements, so the alt text must describe these aspects to the user so they can respond appropriately.</p>
+    
+	<hr>
+    
+    <p style="font-size: 10pt; margin-top: 12px; line-height: 115%;">"Authoring Meaningful Alternative Text." <i>Section508.gov</i>, U.S. General Services Administration, <a href="https://www.section508.gov/create/alternative-text/" target="blank" rel="noopener noreferrer">https://www.section508.gov/create/alternative-text/.</a></p>
+</div>
+
+### **Guidelines**
+
+#### For alt text, use the following guidelines, sourced from the Section 508 government website (cited above).
+
+* #### Alt text should be short and to the point.
+* #### Alt text should communicate the same information as the visual content.
+* #### Alt text should refer to relevant content provided by the image, rather than simply describing how the image looks.
+* #### Alt text should not contain any extra or unnecessary information, and should not repeat information that is already provided in the text.
+
+## Decorative Images
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 100%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+	<p style="font-size: 14pt; font-weight: bold; margin: 0;">💡 Design Tip</p>
+	<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;"><b>What qualifies as a decorative image?</b></p>
+	<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;">How does the WCAG define decorative images? It’s pretty simple: non-text content that’s purely for decoration. In other words, they’re just there to look nice without providing any real information or functionality.</p>
+	<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;">Let’s look at some examples:</p>
+    <ul>
+    <li><p style="font-size: 12pt; margin-top: 12px; line-height: 120%;"><b>Images used to add a bit of flair or break up text:</b> Think stock photos that don’t really relate to your content or those featured images at the top of blog posts that are just there to catch the eye.</p></li>
+    <li><p style="font-size: 12pt; margin-top: 12px; line-height: 120%;"><b>Icons next to clear text labels:</b> If you’ve got a button with an icon and some text explaining what it does, the icon itself doesn’t need describing.</p></li>
+    <li><p style="font-size: 12pt; margin-top: 12px; line-height: 120%;"><b>Images that repeat information already on the page:</b> This could be a graph or chart explained in detail in the text right next to it.</p></li>
+    </ul>
+	<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;">In these cases, the WCAG suggests implementing your non-text content in a way that allows assistive technology to ignore it. This means screen readers can skip over these images, creating a smoother experience for users.</p>
+    
+	<hr>
+    
+    <p style="font-size: 10pt; margin-top: 12px; line-height: 115%;">Qualm, Amber. "How to Identify Decorative Images and Boost Accessibility." <i>The A11Y Collective</i>, 7 Nov. 2024, <a href="https://www.a11y-collective.com/blog/alt-text-for-decorative-images/" target="blank" rel="noopener noreferrer">https://www.a11y-collective.com/blog/alt-text-for-decorative-images/.</a></p>
+</div>
+
+### **Guidelines**
+
+#### Use your best judgment to decide if an image is decorative. To set a text as decorative, use the tag `alt=""` in your image code.
+MARKDOWN

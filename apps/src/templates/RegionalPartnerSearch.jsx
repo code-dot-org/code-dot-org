@@ -1,3 +1,8 @@
+import {
+  BodyThreeText,
+  Heading2,
+  Heading3,
+} from '@code-dot-org/component-library/typography';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
@@ -17,11 +22,6 @@ import Notification from '@cdo/apps/sharedComponents/Notification';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {currentLocation} from '@cdo/apps/utils';
 
-import {
-  BodyThreeText,
-  Heading2,
-  Heading3,
-} from '../componentLibrary/typography';
 import * as color from '../util/color';
 
 const WorkshopCard = props => {
@@ -86,7 +86,7 @@ class RegionalPartnerSearch extends Component {
     // (versus the regional partner's own application close date)
     $.ajax({
       method: 'GET',
-      url: `/dashboardapi/v1/pd/application/applications_closed`,
+      url: 'professional-learning/application/applications_closed',
       dataType: 'json',
     }).done(data => {
       this.setState({
@@ -398,7 +398,11 @@ class RegionalPartnerSearch extends Component {
                                     <div>
                                       {workshop.workshop_date_range_string}
                                     </div>
-                                    <div>{workshop.location_name}</div>
+                                    <div>
+                                      {workshop.location_name === 'Virtual'
+                                        ? workshop.format
+                                        : workshop.location_name}
+                                    </div>
                                     <div>{workshop.location_address}</div>
                                   </div>
                                 )

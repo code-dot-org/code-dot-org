@@ -1,6 +1,6 @@
+import Typography from '@code-dot-org/component-library/typography';
 import React from 'react';
 
-import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 
 import {ConditionType, Validation, Condition} from '../../types';
@@ -17,6 +17,7 @@ interface EditValidationProps {
   deleteValidation: (key: string) => void;
   conditionTypes: ConditionType[];
   moveValidation: (key: string, direction: 'up' | 'down') => void;
+  duplicateValidation: (validation: Validation) => void;
 }
 
 /**
@@ -29,6 +30,7 @@ const EditValidation: React.FunctionComponent<EditValidationProps> = ({
   deleteValidation,
   conditionTypes,
   moveValidation,
+  duplicateValidation,
 }) => {
   const onConditionChange = (condition: Condition, index: number) => {
     validation.conditions[index] = condition;
@@ -63,13 +65,19 @@ const EditValidation: React.FunctionComponent<EditValidationProps> = ({
         >
           <FontAwesome icon="arrow-up" title={undefined} className="icon" />
         </button>
-
         <button
           type="button"
           onClick={() => moveValidation(validation.key, 'down')}
           className={moduleStyles.moveValidationButton}
         >
           <FontAwesome icon="arrow-down" title={undefined} className="icon" />
+        </button>
+        <button
+          type="button"
+          onClick={() => duplicateValidation(validation)}
+          className={moduleStyles.duplicateValidationButton}
+        >
+          <FontAwesome icon="copy" title={undefined} className="icon" />
         </button>
         <button
           type="button"

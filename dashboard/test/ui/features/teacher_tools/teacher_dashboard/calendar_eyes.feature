@@ -5,7 +5,7 @@ Feature: Calendar page - Eyes
   Scenario: Lesson materials page
     When I open my eyes to test "calendar page"
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to unit "interactive-games-animations-2024" with teacher "Teacher_Sally"
+    Given I am assigned to course "interactive-games-animations-2024" and unit "interactive-games-animations-2024" with teacher "Teacher_Sally"
 
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access

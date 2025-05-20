@@ -11,7 +11,7 @@ jquery: defer
 style_min: true
 ---
 :ruby
-  @header["title"] = hoc_s(:hoc2020_header)
+  @header["title"] = hoc_s(:hoc2019_header)
 
   hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
 
@@ -25,6 +25,9 @@ style_min: true
 -# Apply this stylesheet when 'curriculum-launch-2024' is set to 'true'
 - if !!DCDO.get('curriculum-launch-2024', false)
   =inline_css '/generated/banners-curriculum-launch.css'
+-# Apply this stylesheet when 'music-lab-banner' is set to 'true'
+- if !!DCDO.get('music-lab-banner', false)
+  =inline_css '/generated/music-lab-hero-banner.css'
 
 - cookie_key = environment_specific_cookie_name '_user_type'
 - user_type = request.cookies[cookie_key]
@@ -35,7 +38,10 @@ style_min: true
 = view :header
 
 #homepage.supreme-container
-  = view :homepage_hero
+  - if !!DCDO.get('exploring-gen-ai-launch', false)
+    = view :exploring_gen_ai_hero_banner
+  - else
+    = view :homepage_hero
 
   - if request.language == "en"
     = view :curriculum_banner
@@ -43,9 +49,6 @@ style_min: true
     = view :stats_homepage
   - else
     = view :homepage_below_hero_announcement
-
-  -# Show Generative AI Launch banner if 'gen-ai-launch' dcdo is true
-  = view :gen_ai_launch_skinny_banner
 
   = view :homepage_sections
   = view :homepage_gallery

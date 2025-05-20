@@ -1,0 +1,18 @@
+name 'csaif_pl_vocabulary'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Protect the Network!
+
+#### Let's review what you've learned so far by seeing if you can get through the <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Cybersecurity Escape Room</a>.
+
+#### **PL Development Note: This activity is not complete. I'm waiting to get general feedback on this idea before I finalize it!**
+
+<p align="center">
+<img src="https://images.code.org/17de0e6309f48569de5d398de461c5f5-Screenshot 2025-03-13 at 4.02.37 PM.png
+" alt="lesson plan diagram" width="70%" style="border-radius:10px; border: 5px solid black;">
+</p>
+
+
+MARKDOWN

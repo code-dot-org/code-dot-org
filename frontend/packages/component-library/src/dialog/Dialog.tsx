@@ -6,6 +6,7 @@ import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 import {BodyTwoText, Heading2} from '@/typography';
 
 import CustomDialog from './CustomDialog';
+
 import moduleStyles from './dialog.module.scss';
 
 export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
@@ -37,6 +38,8 @@ export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
   icon?: FontAwesomeV6IconProps;
   /** Dialog image url */
   imageUrl?: string;
+  /** z-index for the background overlay. See variables.scss for default. */
+  zIndex?: number;
 }
 
 /**
@@ -65,6 +68,7 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
   closeLabel = 'Close dialog',
   icon,
   imageUrl,
+  zIndex,
   ...HTMLAttributes
 }) => (
   <CustomDialog
@@ -77,6 +81,7 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
     onClose={onClose}
     closeLabel={closeLabel}
     aria-label={title}
+    zIndex={zIndex}
     {...HTMLAttributes}
   >
     <div className={moduleStyles.dialogTextSection}>

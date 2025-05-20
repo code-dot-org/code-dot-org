@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-03-21T21:34:28.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Dataset #4",
+    "long_instructions": "## Dataset 4: Areas Cleaned Each Day Over 1 Year\r\n\r\nThis dataset recorded which area of the room Micah cleaned or straightened up each day over one year.\r\n\r\n**Do This:**\r\n1. Click on the link below to open up the dataset.\r\n2. Follow the instructions in your activity guide.\r\n3. Discuss and answer the questions in your activity guide with your partner.\r\n\r\n[Dataset #4](https://docs.google.com/spreadsheets/d/1PZAxC7sooK_U2769JW-hYhx_GpjNJ7zqVYaDMjs30Y0/edit?usp=drive_link)\r\n",
+    "bubble_choice_description": "What areas did Micah clean each day over one year?",
+    "thumbnail_url": "https://images.code.org/12ecabae29b6e742ec715a5d8ccdec61-7a4bd50577635bf876b4d1417e5219cf-number-4.png",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2025",
+    "stay_on_level_after_submit": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-21T21:34:28.356+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson9-level2f\\\"\"],\"cloned_from\":\"data-science-ch1-lesson9-level2f\"},{\"changed_at\":\"2025-04-16 21:54:55 +0000\",\"changed\":[\"title\",\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-17 19:24:44 +0000\",\"changed\":[\"display_name\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-17 19:28:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

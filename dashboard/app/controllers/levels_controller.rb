@@ -545,8 +545,9 @@ class LevelsController < ApplicationController
         links[@level.name] << {text: '[E]dit', url: edit_level_path(@level), access_key: 'e'}
         if [Javalab, Music, Pythonlab, Weblab2].include?(@level.class)
           links[@level.name] << {text: "[s]tart", url: edit_blocks_level_path(@level, :start_sources), access_key: 's'}
-          if @level.class != Music
-            links[@level.name] << {text: "e[x]emplar", url: edit_exemplar_level_path(@level), access_key: 'x'}
+          links[@level.name] << {text: "e[x]emplar", url: edit_exemplar_level_path(@level), access_key: 'x'}
+          if [Music].include?(@level.class)
+            links[@level.name] << {text: "[t]oolbox", url: edit_blocks_level_path(@level, :toolbox_blocks), access_key: 't'}
           end
         end
       else
@@ -588,10 +589,19 @@ class LevelsController < ApplicationController
         path: script_level_path
       }
     end
+
+    parent_level_path_links = []
+    @level.levels_parent_levels&.each do |levels_parent_level|
+      parent_level_path_links << {
+        level_name: levels_parent_level.parent_level.name,
+        path: level_url(levels_parent_level.parent_level),
+        kind: levels_parent_level.kind,
+        position: levels_parent_level.position
+      }
+    end
     # TODO: Not present here, but present in original extra links. Some of these can be handled on the client side.
     # Anything project-specific should be handled via a separate API, as this controller has no context for projects.
-    # Gamelab show animation json, list contained levels, Blockly start/toolbox/etc, Blockly helpers, list of parent
-    # levels, all project validator links (should be handled elsewhere), abuse handlers (should be handled elsewhere).
+    # Gamelab show animation json, list contained levels, Blockly helpers, are not included yet as they are not needed yet.
 
     render json: {
       links: links,
@@ -599,6 +609,7 @@ class LevelsController < ApplicationController
       can_delete: can?(:delete, @level),
       level_name: @level.name,
       script_level_path_links: script_level_path_links,
+      parent_level_path_links: parent_level_path_links
     }
   end
 
@@ -683,7 +694,7 @@ class LevelsController < ApplicationController
     # Parse a few specific JSON fields used by modern (Lab2) labs so that they are
     # stored in the database as a first-order member of the properties JSON, rather
     # than simply as a string of JSON belonging to a single property.
-    [:level_data, :aichat_settings, :validations, :panels, :predict_settings].each do |key|
+    [:level_data, :aichat_settings, :validations, :panels, :predict_settings, :exemplar_settings].each do |key|
       level_params[key] = JSON.parse(level_params[key]) if level_params[key]
     end
     # Delete validations from level data if present. We'll use the validations in level properties instead.

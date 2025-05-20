@@ -5,5 +5,6 @@
 export const blocks = {
   // Custom generators are already provided by CDO Blockly.
   overrideForLoopGenerator() {},
+  overrideMathChangeGenerator() {},
   overrideProceduresGenerators() {},
 };

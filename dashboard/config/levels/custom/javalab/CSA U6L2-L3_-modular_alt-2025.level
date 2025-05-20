@@ -1,0 +1,29 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2025-03-19T20:19:46.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** In order to determine if the word or sentence is a palindrome, we can reverse the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> object. \r\n\r\nDeclare and initialize the variable <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String backward</code>. \r\n\r\nThen, replace the code in the body of the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">for</code> loop with the code below.\r\n<pre style=\"background-color: #333333; color: white;\">\r\nString currentLetter = notPalindrome.substring(i,i+1);\r\nforward = forward + currentLetter;\r\nbackward = currentLetter + backward;\r\n</pre>\r\n\r\n\r\n✅ **TO DO:** Print out <code style=\"background-color: #ececec; color: black; font-weight: bold;\">backward</code>. \r\n<pre style=\"background-color: #333333; color: white;\">\r\nSystem.out.println(\"backward: \" + backward);\r\n</pre>\r\n",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "project_template_level_name": "CSA U6L2-Substring PBT_-modular_alt-2025",
+    "teacher_markdown": "When we change the parameter for the `aSubstring` to `30`, the value that is printed to the console is `\" the lazy dog.\"` This is because the `substring()` method is returning a `Strin`g composed from the characters from index `30` (inclusive) until the end of the original `String`.",
+    "name_suffix": "_alt-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-19T20:19:46.872+00:00\",\"changed\":[\"cloned from \\\"CSA U6L2-L3_-modular\\\"\"],\"cloned_from\":\"CSA U6L2-L3_-modular\"}]"
+}]]></config>
+</Javalab>

@@ -5,7 +5,12 @@ import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {DEFAULT_CHORD_LENGTH, MIN_BPM, MAX_BPM} from '../constants';
 import {LoadFinishedCallback, UpdateLoadProgressCallback} from '../types';
 import {generateNotesFromChord, ChordNote} from '../utils/Chords';
-import {getPitchName, getTranposedNote, Key} from '../utils/Notes';
+import {
+  getPitchName,
+  convertRelativeToAbsolutePitch,
+  Key,
+} from '../utils/Notes';
+import {isNoteAvailableInScaleMode} from '../utils/Tunes';
 
 import {
   ChordEvent,
@@ -46,6 +51,10 @@ export default class MusicPlayer {
   private readonly audioPlayer: ToneJSPlayer;
   private updateLoadProgress: UpdateLoadProgressCallback | undefined;
 
+  // A set of strings (e.g. "electro/beat-4", which is a hyphen-separated event ID and measure) that are
+  // used to ensure the same sound isn't played more than once at the same time.
+  private uniqueEvents: Set<string>;
+
   private bpm: number = DEFAULT_BPM;
   private key: Key = DEFAULT_KEY;
 
@@ -61,6 +70,7 @@ export default class MusicPlayer {
     this.metricsReporter = metricsReporter;
     this.analyticsReporter = analyticsReporter;
     this.updateConfiguration(bpm, key);
+    this.uniqueEvents = new Set();
   }
 
   updateConfiguration(bpm?: number, key?: Key) {
@@ -92,6 +102,10 @@ export default class MusicPlayer {
 
   getBPM(): number {
     return this.bpm;
+  }
+
+  getKey(): Key {
+    return this.key;
   }
 
   setBpm(bpm: number) {
@@ -270,6 +284,7 @@ export default class MusicPlayer {
   playEvents(events: PlaybackEvent[], replace = false) {
     if (replace) {
       this.audioPlayer.cancelPendingEvents();
+      this.uniqueEvents.clear();
     }
     this.scheduleEvents(events);
   }
@@ -279,6 +294,12 @@ export default class MusicPlayer {
       if (event.skipContext?.skipSound) {
         continue;
       }
+
+      const uniqueEventKey = `${event.id}-${event.when}`;
+      if (this.uniqueEvents.has(uniqueEventKey)) {
+        continue;
+      }
+
       if (isSoundEvent(event)) {
         const reportCallback = (soundId: string) => {
           this.analyticsReporter?.onSoundPlayed(soundId);
@@ -295,6 +316,8 @@ export default class MusicPlayer {
           this.audioPlayer.scheduleSamplerSequence(sequence);
         }
       }
+
+      this.uniqueEvents.add(uniqueEventKey);
     }
   }
 
@@ -303,6 +326,7 @@ export default class MusicPlayer {
    */
   stopSong() {
     this.audioPlayer.stop();
+    this.uniqueEvents.clear();
   }
 
   // Returns the current playhead position, in floating point for an exact position,
@@ -346,6 +370,7 @@ export default class MusicPlayer {
         id: event.id,
         sampleUrl: library.generateSoundUrl(folder, soundData),
         playbackPosition: event.when,
+        pickupLength: soundData.pickupLength,
         triggered: event.triggered,
         effects: event.effects,
         originalBpm: soundData.bpm || DEFAULT_BPM,
@@ -390,8 +415,11 @@ export default class MusicPlayer {
     const samples: SampleEvent[] = [];
 
     events.forEach(event => {
-      const tranposedNote = getTranposedNote(this.key, event.noteOffset);
-      const sampleUrl = this.getSampleForNote(tranposedNote, instrument);
+      const transposedNote = convertRelativeToAbsolutePitch(
+        this.key,
+        event.noteOffset
+      );
+      const sampleUrl = this.getSampleForNote(transposedNote, instrument);
       if (sampleUrl !== null) {
         const eventWhen = eventStart + (event.position - 1) / 16;
         samples.push({
@@ -434,16 +462,26 @@ export default class MusicPlayer {
     instrumentEvent: InstrumentEvent
   ): SamplerSequence | null {
     const {value, effects, when} = instrumentEvent;
-    const {instrument, events} = value;
+    const {instrument, events, relative, scaleMode} = value;
+    const key = this.key;
+
     return {
       instrument,
       effects,
-      events: events.map(event => {
-        return {
-          notes: [getPitchName(event.note)],
-          playbackPosition: when + (event.tick - 1) / 16,
-        };
-      }),
+      events: events
+        .map(event => ({
+          ...event,
+          note: relative
+            ? convertRelativeToAbsolutePitch(key, event.note)
+            : event.note,
+        }))
+        .filter(event => isNoteAvailableInScaleMode(key, event.note, scaleMode))
+        .map(event => {
+          return {
+            notes: [getPitchName(event.note)],
+            playbackPosition: when + (event.tick - 1) / 16,
+          };
+        }),
     };
   }
 

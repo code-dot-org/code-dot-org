@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-03-26T15:42:32.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Make a Plan: Lesson Planning",
+    "long_instructions": "#### Although lesson plans are provided, you, as the teacher, still have an active role to play in customizing the learning experience for your students.\r\n\r\n#### Make a list of the things you will need to do to prepare to teach a Code.org lesson. Consider the following when making your list:\r\n\r\n* #### What do I need to prepare ahead of time? \r\n* #### When a lesson has resources to share with students, will I print these resources or post them to my school's learning management system?\r\n* #### Do I need to modify the lesson timing to fit into my scheduled class time? \r\n* #### Are there other things I might need to consider while planning for a lesson? \r\n\r\n<div style=\"display: flex; align-items: left; margin:20px 0px 30px 0px\">\r\n\r\n<a href=\"https://forum.code.org/t/lesson-planning-reflection/40542\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n<img src=\"https://images.code.org/7dbe63a051fbad4ef262d6ab710e2966-image-1731959037460.png\" style=\"width: auto; height: 100px;\"  alt=\"A browser with two text boxes, both including an avatar and lines of text.\"></a>\r\n\r\n<div style=\"background-color: #007786; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;\">\r\n\r\n<p style=\"color: white; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px\"><b>Post to the Code.org Forum</b></p>\r\n\r\n<p style=\"color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px\">Post your ideas and read other educators' ideas on the forum! Click on the icon to the left to direct to our forum post.\r\n</p>\r\n\r\n\r\n</div>\r\n</div>\r\n\r\n___ \r\n\r\n##### **Note:** Click and drag the bottom-right corner of the text box below to resize it.\r\n\r\n\r\n\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "height": "200",
+    "stay_on_level_after_submit": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-26T15:42:32.252+00:00\",\"changed\":[\"cloned from \\\"1GSself-paced-equity-U1L3-identitycircles\\\"\"],\"cloned_from\":\"1GSself-paced-equity-U1L3-identitycircles\"},{\"changed_at\":\"2025-03-26 15:43:13 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

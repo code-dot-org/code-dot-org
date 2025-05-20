@@ -1,9 +1,9 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {BodyTwoText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React from 'react';
 import {NavLink, generatePath} from 'react-router-dom';
 
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 
@@ -15,6 +15,7 @@ interface SidebarOptionProps {
   isSelected: boolean;
   sectionId?: number;
   courseVersionName?: string;
+  unitPosition?: number;
   unitName: string | null;
   pathKey: keyof typeof LABELED_TEACHER_NAVIGATION_PATHS;
 }
@@ -23,6 +24,7 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
   isSelected,
   sectionId,
   courseVersionName,
+  unitPosition,
   unitName,
   pathKey,
 }) => {
@@ -38,6 +40,7 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
       to={generatePath(LABELED_TEACHER_NAVIGATION_PATHS[pathKey].absoluteUrl, {
         sectionId: sectionId,
         courseVersionName: courseVersionName,
+        unitPosition: unitPosition,
         unitName: unitName,
       })}
       className={classNames(styles.sidebarOption, {

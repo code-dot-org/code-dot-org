@@ -2,7 +2,6 @@ import {Meta, StoryFn} from '@storybook/react';
 import {useState} from 'react';
 
 import {TabModel} from '../_Tab';
-
 import Tabs, {TabsProps} from '../index';
 
 export default {

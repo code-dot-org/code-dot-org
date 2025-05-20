@@ -22,7 +22,7 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
 
      ```sh
      ruby --version     # --> ruby 3.0.5
-     node --version     # --> v18.16.0
+     node --version     # --> v20.18.3
      git-lfs --version  #  >= git-lfs/3.0
      uv --version       #  >= 0.5.8
      ```
@@ -68,10 +68,13 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
         <code>bundle exec rake install</code> must always be called from the local project's root directory, or it won't work.
     </details>
 
-1. fix your database charset and collation to match our servers
+1. fix your database charset, collation, and timezone to match our servers
     - `bin/mysql-client-admin`
     - `ALTER DATABASE dashboard_development CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
     - `ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
+    - `SET GLOBAL time_zone = '+00:00';` Set time zone for all new database connections
+    - `SET PERSIST time_zone = '+00:00';` Save the setting to the mysqld-auto.cnf file which is read on restart
+    - `SELECT @@global.time_zone;` Verify the setting
 
 1. `bundle exec rake build`
     - This may fail for external contributors who don't have permissions to access Code.org AWS Secrets. Assign placeholder values to any configuration settings that are [ordinarily populated in Development environments from AWS Secrets](https://github.com/code-dot-org/code-dot-org/blob/staging/config/development.yml.erb) as indicated in this example: https://github.com/code-dot-org/code-dot-org/blob/5b3baed4a9c2e7226441ca4492a3bca23a4d7226/locals.yml.default#L136-L139
@@ -146,18 +149,18 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
         ```
    3. Start mysql server:
         ```
-        brew services start mysql # Should notify you that MySQL server has been added to Login Items
+        brew services start mysql@8.0 # Should notify you that MySQL server has been added to Login Items
         ```
-   2. Confirm that MySQL has started by running:
+   4. Confirm that MySQL has started by running:
         ```
         brew services    # should show: "started"
         ```
 
       If the status is instead "stopped", you may need initialize your mysql database:
         ```
-        brew services stop mysql
+        brew services stop mysql@8.0
         mysqld --initialize-insecure  # this will leave the root password blank, which is required
-        brew services start mysql
+        brew services start mysql@8.0
         brew services   # should show: "started"
         ```
 
@@ -373,13 +376,6 @@ If you want to make JavaScript changes and have them take effect locally, you'll
 
 This configures dashboard to rebuild apps whenever you run `bundle exec rake build` and to use the version that you built yourself.  See the documentation in that directory for faster ways to build and iterate.
 
-## Enabling internationalization(i18n) / translations
-If you want to enable the ability to switch Code.org to display different languages:
-1. Edit `locals.yml` and enable the following options:
-   ```
-   # code-dot-org/locals.yml
-   load_locales: true
-   ```
 ## Editor configuration
 
 We enforce linting rules for all our code, and we recommend you set up your editor to integrate with that linting.

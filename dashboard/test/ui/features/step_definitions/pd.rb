@@ -34,7 +34,8 @@ Given /^I am a program manager named "([^"]*)" for regional partner "([^"]*)"$/ 
   regional_partner = RegionalPartner.find_or_create_by(name: partner_name, group: 1, is_active: true)
 
   email, password = generate_user(pm_name)
-  FactoryBot.create(:program_manager, name: pm_name, email: email, password: password, regional_partner: regional_partner)
+  program_manager = FactoryBot.create(:program_manager, name: pm_name, email: email, password: password, regional_partner: regional_partner)
+  track_record_for_deletion('User', program_manager.id)
 
   steps "And I sign in as \"#{pm_name}\""
 end
@@ -49,6 +50,13 @@ Given(/^I am a program manager$/) do
     Given I create a teacher named "#{@pm_name}"
     And I get program manager access
   GHERKIN
+end
+
+Given(/^I have a regional partner named "([^"]*)" in the zip code "([^"]*)"$/) do |partner_name, zip_code|
+  require_rails_env
+
+  regional_partner = RegionalPartner.find_or_create_by(name: partner_name, group: 1, is_active: true)
+  regional_partner.mappings.find_or_create_by!(zip_code: zip_code.to_s)
 end
 
 Given(/^I have a regional partner with a teacher application$/) do
@@ -67,6 +75,11 @@ Given(/^I delete the program manager, regional partner, teacher, and application
   )
 end
 
+Given(/^I get the workshop id from the current url$/) do
+  @workshop_id = @browser.current_url.split('/').last
+  track_record_for_deletion('Pd::Workshop', @workshop_id)
+end
+
 Given(/^I delete the workshop$/) do
   browser_request(
     url: '/api/test/delete_workshop',
@@ -80,28 +93,29 @@ Given /^there is a facilitator named "([^"]+)" for course "([^"]+)"$/ do |name, 
 
   email, password = generate_user(name)
 
-  FactoryBot.create(:pd_course_facilitator, course: course, facilitator:
-    FactoryBot.create(:facilitator, name: name, email: email, password: password)
-  )
+  facilitator = FactoryBot.create(:facilitator, name: name, email: email, password: password)
+  course_facilitator = FactoryBot.create(:pd_course_facilitator, course: course, facilitator: facilitator)
+  track_record_for_deletion('User', facilitator.id)
+  track_record_for_deletion('Pd::CourseFacilitator', course_facilitator.id)
 end
 
-Given /^I select the "([^"]*)" facilitator at index (\d+)$/ do |name, index|
-  email = @users[name][:email]
-  facilitator = "#{name} (#{email})"
+Given /^there is a course offering named "([^"]+)"$/ do |name|
+  require_rails_env
 
-  steps <<~GHERKIN
-    And I wait until element "#facilitator#{index}" is visible
-    And I select the "#{facilitator}" option in dropdown "facilitator#{index}"
-  GHERKIN
+  co_key = name.parameterize(separator: '-')
+  course_offering = CourseOffering.find_by(key: co_key)
+  course_offering ||= FactoryBot.create(:course_offering, key: co_key, display_name: name, curriculum_type: 'Professional Learning', header: 'self_paced')
+  track_record_for_deletion('CourseOffering', course_offering.id)
 end
 
 Given /^I open the new workshop form$/ do
   steps <<~GHERKIN
     And I am on "http://studio.code.org/pd/workshop_dashboard"
-    Then I wait until element "button:contains('New Workshop')" is visible
-    Then I press "button:contains('New Workshop')" using jQuery
+    Then I wait until element "h1:contains('Your Workshops')" is visible
+    Then I press "new-workshop-button"
+    Then I press the last link with text "Build Your Own Workshop"
 
-    And I wait until element "h2:contains('New Workshop')" is visible
+    And I wait until element "h1:contains('New Build Your Own Workshop')" is visible
   GHERKIN
 end
 
@@ -266,6 +280,38 @@ And(/^I am viewing a workshop with fake survey results$/) do
   create_fake_daily_survey_results workshop
 
   steps "And I am on \"http://studio.code.org/pd/workshop_dashboard/daily_survey_results/#{workshop.id}\""
+end
+
+Given(/^I am a teacher enrolling in "([^"]*)"$/) do |course|
+  workshop = FactoryBot.create(:workshop, course: course)
+  @workshop_id = workshop.id
+  random_teacher_name = "Test Teacher" + SecureRandom.hex[0..9]
+  steps <<~GHERKIN
+    And I create a teacher named "#{random_teacher_name}"
+    And I am on "http://studio.code.org/pd/workshops/#{@workshop_id}/enroll"
+  GHERKIN
+end
+
+Given 'I start a self-paced PL course' do
+  steps <<~GHERKIN
+    Given I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/1"
+    And I wait until element "a[aria-label='Level 3 Lesson Instructor In Training Levels']" is visible
+    Then I click selector "a[aria-label='Level 3 Lesson Instructor In Training Levels']"
+    When I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/3"
+    Then I wait until element "a:contains(Submit)" is visible
+    When I click selector "a:contains(Submit)"
+    Then I wait until I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/4"
+    And I wait until element "a:contains(Submit)" is visible
+  GHERKIN
+end
+
+And 'I see Farsi version of Professional Learning Lending page' do
+  steps <<~GHERKIN
+    And element "a:contains(Learn about professional learning)" is not visible
+    And element "button.ui-test-join-section" is not visible
+    And element "a:contains(Learn more about workshops)" is not visible
+    And the href of selector "a:contains(Start professional learning courses)" contains "/global/fa/teacher"
+  GHERKIN
 end
 
 def create_fake_survey_questions(workshop)
@@ -533,7 +579,7 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
       course: course,
       organizer_id: organizer.id,
       capacity: number.to_i,
-      location_name: 'Buffalo',
+      session_location: 'Buffalo',
       num_sessions: 1,
       sessions_from: Date.new(2018, 4, 1),
       enrolled_and_attending_users: number_type == 'people' ? number.to_i : 0

@@ -41,11 +41,35 @@
           "fx_long_2",
           "fx_long_3"
         ]
-      }
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2",
+            "play_pattern_at_current_location_simple2",
+            "play_chord_at_current_location_simple2"
+          ],
+          "Control": [
+            "triggered_at_simple2",
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "play_sounds_random",
+            "repeat_simple2"
+          ],
+          "Functions": [
+
+          ]
+        },
+        "type": "flyout",
+        "addFunctionDefinition": true,
+        "addFunctionCalls": true
+      },
+      "packId": "default"
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-08 22:52:23 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-08 22:52:23 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-06 21:45:02 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-06 21:48:30 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-06 21:49:24 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -1,6 +1,8 @@
-import React from 'react';
+import Link from '@code-dot-org/component-library/link';
+import React, {useEffect} from 'react';
 
-import Link from '@cdo/apps/componentLibrary/link';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 import AccountCard from '@cdo/apps/templates/account/AccountCard';
 import i18n from '@cdo/locale';
@@ -10,39 +12,49 @@ import styles from '../link-account.module.scss';
 const WorkshopLinkAccountPage: React.FunctionComponent<{
   newAccountUrl: string;
   existingAccountUrl: string;
-}> = ({newAccountUrl, existingAccountUrl}) => (
-  <main>
-    <div className={styles.contentContainer}>
-      <AccountBanner
-        heading={i18n.accountWelcomeBannerHeaderLabel()}
-        desc={i18n.accountWelcomeBannerContentWorkshopEnroll()}
-        showLogo={true}
-      />
-      <div className={styles.cardContainer}>
-        <AccountCard
-          id={'new-account-card'}
-          icon={'user-plus'}
-          title={i18n.ltiLinkAccountNewAccountCardHeaderLabel()}
-          content={i18n.accountNewAccountCardContentWorkshopEnroll()}
-          buttonText={i18n.createAccount()}
-          buttonType="secondary"
-          href={newAccountUrl}
+}> = ({newAccountUrl, existingAccountUrl}) => {
+  useEffect(() => {
+    analyticsReporter.sendEvent(
+      EVENTS.LINK_ACCOUNT_PAGE_VISITED_EVENT,
+      {source: 'workshop enroll'},
+      PLATFORMS.BOTH
+    );
+  }, []);
+
+  return (
+    <main>
+      <div className={styles.contentContainer}>
+        <AccountBanner
+          heading={i18n.accountWelcomeBannerHeaderLabel()}
+          desc={i18n.accountWelcomeBannerContentWorkshopEnroll()}
+          showLogo={true}
         />
-        <AccountCard
-          id={'existing-account-card'}
-          icon={'user-check'}
-          title={i18n.ltiLinkAccountExistingAccountCardHeaderLabel()}
-          content={i18n.accountExistingAccountCardContentWorkshopEnroll()}
-          buttonText={i18n.ltiLinkAccountExistingAccountCardActionLabel()}
-          buttonType="primary"
-          href={existingAccountUrl}
-        />
+        <div className={styles.cardContainer}>
+          <AccountCard
+            id={'new-account-card'}
+            icon={'user-plus'}
+            title={i18n.ltiLinkAccountNewAccountCardHeaderLabel()}
+            content={i18n.accountNewAccountCardContentWorkshopEnroll()}
+            buttonText={i18n.createAccount()}
+            buttonType="secondary"
+            href={newAccountUrl}
+          />
+          <AccountCard
+            id={'existing-account-card'}
+            icon={'user-check'}
+            title={i18n.ltiLinkAccountExistingAccountCardHeaderLabel()}
+            content={i18n.accountExistingAccountCardContentWorkshopEnroll()}
+            buttonText={i18n.ltiLinkAccountExistingAccountCardActionLabel()}
+            buttonType="primary"
+            href={existingAccountUrl}
+          />
+        </div>
+        <div className={styles.cancelButtonContainer}>
+          <Link text={i18n.cancel()} href={'/users/cancel'} />
+        </div>
       </div>
-      <div className={styles.cancelButtonContainer}>
-        <Link text={i18n.cancel()} href={'/users/cancel'} />
-      </div>
-    </div>
-  </main>
-);
+    </main>
+  );
+};
 
 export default WorkshopLinkAccountPage;

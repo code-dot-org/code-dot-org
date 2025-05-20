@@ -1,13 +1,13 @@
 import {Meta, StoryFn} from '@storybook/react';
 import React, {useState, useCallback} from 'react';
 
-import {dropdownColors} from './../../index';
-
 import CheckboxDropdown, {CheckboxDropdownProps} from '../index';
+
+import {dropdownColors} from './../../index';
 
 export default {
   title: 'DesignSystem/Dropdown/Checkbox Dropdown',
-  component: CheckboxDropdown.type,
+  component: CheckboxDropdown,
 } as Meta;
 
 //

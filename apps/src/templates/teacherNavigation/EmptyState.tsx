@@ -1,6 +1,8 @@
+import {
+  Heading3,
+  BodyTwoText,
+} from '@code-dot-org/component-library/typography';
 import React from 'react';
-
-import {Heading3, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 
 import styles from './teacher-navigation.module.scss';
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
@@ -19,12 +21,12 @@ export const EmptyState: React.FC<EmptyStateProps> = ({
 }) => {
   return (
     <div className={dashboardStyles.emptyClassroomDiv}>
-      <div className={dashboardStyles.emptyClassroomDiv}>
+      <div className={dashboardStyles.emptyClassroomImage}>
         {imageComponent}
-        <Heading3 className={styles.topPadding}>{headline}</Heading3>
-        <BodyTwoText>{descriptionText}</BodyTwoText>
-        {button}
       </div>
+      <Heading3 className={styles.topPadding}>{headline}</Heading3>
+      <BodyTwoText>{descriptionText}</BodyTwoText>
+      {button}
     </div>
   );
 };

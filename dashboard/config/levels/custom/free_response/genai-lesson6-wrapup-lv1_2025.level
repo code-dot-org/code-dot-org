@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-03-12T20:41:16.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "####Think of a phrase where each word means something individually that is different from when the phrase is combined together.#### \r\n####Using what we’ve learned today, **describe how a neural network could be used to represent these different meanings.**####",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "title": "Wrap Up",
+    "name_suffix": "_2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-12T20:41:16.337+00:00\",\"changed\":[\"cloned from \\\"genai-lesson6-wrapup-lv1\\\"\"],\"cloned_from\":\"genai-lesson6-wrapup-lv1\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

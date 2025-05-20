@@ -3,7 +3,7 @@ import React, {useCallback, useEffect, useRef} from 'react';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {submitChatContents} from '../redux/aichatRedux';
+import {selectMultimodalEnabled, submitChatContents} from '../redux';
 
 /**
  * Renders the AI Chat Lab user chat message editor component.
@@ -12,25 +12,40 @@ const UserChatMessageEditor: React.FunctionComponent<{
   editorContainerClassName?: string;
 }> = ({editorContainerClassName}) => {
   const isWaitingForChatResponse = useAppSelector(
-    state => state.aichat.isWaitingForChatResponse
+    state => !!state.aichat.chatMessagePending
   );
 
   const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
+  const multimodalEnabled = useAppSelector(selectMultimodalEnabled);
+  const chatAssets = useAppSelector(state =>
+    state.aichat.stagedFiles.map(file => file.asset)
+  );
+  const uploadsPending = useAppSelector(state =>
+    state.aichat.stagedFiles.some(file => file.status === 'uploading')
+  );
 
   const dispatch = useAppDispatch();
 
-  const inputRef = useRef<HTMLTextAreaElement | null>(null);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
 
   const handleSubmit = useCallback(
     (userMessage: string) => {
       if (!isWaitingForChatResponse) {
-        dispatch(submitChatContents(userMessage));
+        dispatch(
+          submitChatContents({
+            text: userMessage,
+            assets:
+              multimodalEnabled && chatAssets.length > 0
+                ? chatAssets
+                : undefined,
+          })
+        );
       }
     },
-    [isWaitingForChatResponse, dispatch]
+    [isWaitingForChatResponse, multimodalEnabled, chatAssets, dispatch]
   );
 
-  const disabled = isWaitingForChatResponse || saveInProgress;
+  const disabled = isWaitingForChatResponse || saveInProgress || uploadsPending;
 
   useEffect(() => {
     if (!disabled) {

@@ -1,0 +1,23 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-02-24T21:43:06.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Critical Vulnerabilities\r\n\r\n### What are the top vulnerability (or vulnerabilities) you identified (e.g., technical, human, systemic)?\r\n\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2025-02-24T21:43:06.035+00:00\",\"changed\":[\"cloned from \\\"test-networks-and-internet-lesson-11-3-1\\\"\"],\"cloned_from\":\"test-networks-and-internet-lesson-11-3-1\"},{\"changed_at\":\"2025-02-24 21:43:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-24 21:51:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

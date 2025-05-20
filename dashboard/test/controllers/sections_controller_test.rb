@@ -58,7 +58,7 @@ class SectionsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "valid log_in wih picture" do
+  test "valid log_in with picture" do
     assert_difference '@picture_user_1.reload.sign_in_count' do # devise Trackable fields are updated
       post :log_in, params: {
         id: @picture_section.code,
@@ -70,7 +70,7 @@ class SectionsControllerTest < ActionController::TestCase
     assert_redirected_to '/'
   end
 
-  test "invalid log_in wih picture" do
+  test "invalid log_in with picture" do
     assert_no_difference '@picture_user_1.reload.sign_in_count' do # devise Trackable fields are not updated
       post :log_in, params: {
         id: @picture_section.code,
@@ -98,7 +98,7 @@ class SectionsControllerTest < ActionController::TestCase
     assert_redirected_to section_path(id: @picture_section.code)
   end
 
-  test "valid log_in wih word" do
+  test "valid log_in with word" do
     assert_difference '@word_user_1.reload.sign_in_count' do # devise Trackable fields are updated
       post :log_in, params: {
         id: @word_section.code,
@@ -110,7 +110,19 @@ class SectionsControllerTest < ActionController::TestCase
     assert_redirected_to '/'
   end
 
-  test "invalid log_in wih word" do
+  test "valid log_in with word without spaces" do
+    assert_difference '@word_user_1.reload.sign_in_count' do # devise Trackable fields are updated
+      post :log_in, params: {
+        id: @word_section.code,
+        user_id: @word_user_1.id,
+        secret_words: @word_user_1.secret_words.delete(' ')
+      }
+    end
+
+    assert_redirected_to '/'
+  end
+
+  test "invalid log_in with word" do
     assert_no_difference '@word_user_1.reload.sign_in_count' do # devise Trackable fields are not updated
       post :log_in, params: {
         id: @word_section.code,
@@ -239,5 +251,47 @@ class SectionsControllerTest < ActionController::TestCase
     other_teacher_section = create :section
     get :edit, params: {id: other_teacher_section.id}
     assert_response :forbidden
+  end
+
+  test 'archive_all archives sections' do
+    sign_in @teacher
+
+    post :archive_all
+
+    assert_response :success
+    response_json = JSON.parse(@response.body)
+    assert_equal 5, response_json['num_hidden']
+    @teacher.sections_owned.each do |section|
+      assert_equal true, section.hidden
+    end
+  end
+
+  test 'archive_all does archive cotaught section' do
+    sign_in @teacher
+    section_owner = create(:teacher)
+
+    coteacher_section = create(:section, user: section_owner, login_type: 'picture')
+    create :section_instructor, section: coteacher_section, instructor: @teacher, status: :active
+
+    post :archive_all
+
+    assert_response :success
+
+    coteacher_section.reload
+    assert_equal true, coteacher_section.hidden
+
+    response_json = JSON.parse(@response.body)
+    assert_equal 6, response_json['num_hidden']
+    @teacher.sections_owned.each do |section|
+      assert_equal true, section.hidden
+    end
+  end
+
+  test 'retrieve_lessons_for_dropdown returns lessons links for a unit' do
+    sign_in @teacher
+    get :retrieve_lessons_for_dropdown, params: {id: @flappy_section.id}
+    assert_response :success
+    response_json = JSON.parse(@response.body)
+    assert_equal response_json, [{"text"=>"Flappy Code", "value"=>"/s/flappy"}, {"text"=>"Lesson 1: Flappy Code", "value"=>"/s/flappy/lessons/1/levels/1"}]
   end
 end

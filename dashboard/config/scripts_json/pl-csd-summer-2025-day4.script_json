@@ -1,0 +1,2404 @@
+{
+  "script": {
+    "name": "pl-csd-summer-2025-day4",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "pl_workshop_activities",
+      "curriculum_umbrella": "PD Workshop Activity CSD",
+      "has_unnumbered_lessons": true,
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true,
+      "version_year": "2025"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-05-05 21:50:27 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "pl-csd-summer-2025-day4"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Day 4"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Introduction to Day 4",
+      "name": "Introduction to Day 4",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**Purpose:**\nThis session is intended to welcome and orient participants to the day.\n\n\n**Objectives:**\n* Participants are oriented to the day\n\n**Suggested Time:** 15 minutes",
+        "student_overview": "**You will:**\n* Get an orientation to the day"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Day 4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "Bias and Responsibility",
+      "name": "Bias and Responsibility",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**Purpose:**\nThis session expands the reflections around identity to include unconscious biases that exist as a result of identity markers of self and others. Participants will be asked to reflect on how their unconscious biases impact their view of who belongs in CS. They will also be challenged to name the responsibility they will claim in ensuring that all students feel like they belong in CS.\n\n\n**Objectives:**\n* Participants use a shared definition of unconscious bias\n* Participants are able to articulate who they believe should have access to CS and what has shaped those beliefs\n* Participants recognize that all students can and should learn CS\n\n**Suggested Time:** 25 minutes",
+        "student_overview": "**You will:**\n* Use a shared definition of unconscious bias\n* Articulate who you believe should have access to CS and what has shaped those beliefs\n* Recognize that all students can and should learn CS"
+      },
+      "seeding_key": {
+        "lesson.key": "Bias and Responsibility",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "Intro to Unit 5",
+      "name": "Intro to Unit 5",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**Purpose:**\nThe three TLOs on Day 4 are quick introductions to the final three units of CS Discoveries. This session gives participants a brief overview of Unit 5 - Data and Society before they engage with TLO #4.\n\n\n**Objectives:**\n* Participants prepare to engage in Unit 5 - Data and Society through an introduction to the content.\n\n**Suggested Time:** 15 minutes",
+        "student_overview": "**You will:**\n* Prepare to engage in Unit 5 - Data and Society through an introduction to the content."
+      },
+      "seeding_key": {
+        "lesson.key": "Intro to Unit 5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "TLO4 - U5L1 Representation Matters",
+      "name": "TLO4 - U5L1 Representation Matters",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Purpose:**\n* **Essential Practice:** The teacher prompts for and facilitates collaboration for students in small groups and whole-class discussions.\n\n\n**Potential Teaching Group Decisions:**\n  * Encourage students to make their best guess for each meal recommendation possible using the data they have and a consensus among the group.\n  * Call out exemplar moments of collaboration among students.\n  * When facilitating a whole-class discussion, ask students how they came to an answer as a group using collaborative practices.\n  * Highlight that collaborating with others helps us to see the larger picture of a story, rather than just a narrow slice of it, like they encountered in the lesson.\n\n\n**Objectives:**\n* Participants engage in Unit 5 Lesson 1 while playing the role of the student.\n* Participants reflect on their experience as a student engaging in the lesson.\n* Participants discuss the importance of group work in the CS Discoveries curriculum.\n\n**Suggested Time:** 65 minutes\n\n<a href=\"https://studio.code.org/s/csd5-2025/lessons/1\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> ",
+        "preparation": "* Print copies of the Meals Data resource so that each group can get one of the four pages\n* Print one copy of the activity guide for each group\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)",
+        "student_overview": "**Question of the Day:** How does data affect decisions we make every day?\n\nIn this lesson, you will explore what data is and how it is used to solve problems. \n\n<a href=\"https://studio.code.org/s/csd5-2023/lessons/1\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> "
+      },
+      "seeding_key": {
+        "lesson.key": "TLO4 - U5L1 Representation Matters",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "Intro to Unit 6 - Creating Apps for Devices ",
+      "name": "Intro to Unit 6 - Creating Apps for Devices ",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "overview": "**Purpose:**\nThis session serves as a brief introduction to Unit 6 - Creating Apps with Devices before the subsequent TLO.\n\n\n**Objectives:**\n* Participants prepare to engage in Unit 6 - Creating Apps with Devices through an introduction to the content.\n\n**Suggested Time:** 15 minutes",
+        "student_overview": "**You will:**\n* Prepare to engage in Unit 6 - Creating Apps with Devices through an introduction to the content.\n"
+      },
+      "seeding_key": {
+        "lesson.key": "Intro to Unit 6 - Creating Apps for Devices ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "TLO 5 - U6L2 Physical Designs",
+      "name": "TLO 5 - U6L2 Physical Designs",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Purpose:**\n* **Essential Practice:** Discussion is an opportunity to hear multiple voices and bring different perspectives and experiences into the conversation.\n\n\n* **Potential Teaching Group Decisions:**\n  * Make an effort to bring multiple voices into class discussions\n  * Use the Think-Pair-Share strategy to facilitate discussion\n\n\n**Objectives:**\n* Participants engage in Unit 6 Lesson 2 while playing the role of the student.\n* Participants reflect on their experience as a student engaging in the lesson.\n* Participants brainstorm ways to lead an inclusive class discussion.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://studio.code.org/s/csd6-2025/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+        "student_overview": "**Question of the Day:** How can we design apps with devices based on the needs of a user?\n\nIn this lesson, you will explore how we can design apps with devices for different users and purposes\n\n<a href=\"https://studio.code.org/s/csd6-2023/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n"
+      },
+      "seeding_key": {
+        "lesson.key": "TLO 5 - U6L2 Physical Designs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "Introduction to Unit 7 - AI and Machine Learning",
+      "name": "Introduction to Unit 7 - AI and Machine Learning",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+        "overview": "**Purpose:**\nThis session serves as a brief introduction to Unit 7 - AI and Machine Learning before the subsequent TLO.\n\n\n**Objectives:**\n* Participants prepare to engage in Unit 7 - AI and Machine Learning through an introduction to the content\n\n**Suggested Time:** 15 minutes ",
+        "student_overview": "**You will:**\n\n* Prepare to engage in Unit 7 - AI and Machine Learning through an introduction to the content"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Unit 7 - AI and Machine Learning",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "TLO 6 - U7L2 Introduction to Machine Learning",
+      "name": "TLO 6 - U7L2 Introduction to Machine Learning",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+        "announcements": [
+          {
+            "notice": "AI/ML Professional Development",
+            "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+            "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
+            "type": "information",
+            "visibility": "Teacher-only"
+          }
+        ],
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Purpose:**\n* **Essential Practice:** The teacher helps students manage multiple tabs and resources to keep thinking organized while learning new CS content.\n\n\n* **Potential Teaching Group Decisions:**\n  * Remind students often to refer back to and fill out Activity Guides as they are completing lesson activities.\n  * If the Activity Guide is being used virtually, remind students to switch tabs or view in split screen.\n  * If students have a question, prompt them to think of a resource they might use to answer the question before providing them with an answer.\n\n\n**Objectives:**\n* Participants engage in Unit 7 Lesson 2 while playing the role of the student.\n* Participants reflect on their experience as a student engaging in the lesson.\n* Participants share ideas for helping students manage multiple resources and tabs while engaging in a CS Discoveries lesson.\n\n\n**Suggested Time:** 65 minutes\n\n<a href=\"https://studio.code.org/s/csd7-2025/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> ",
+        "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "Learn the basics of machine learning by helping AI Bot recognize fish to clean up the ocean.\n\n**Question of the Day:** How can we use the Problem Solving Process to solve a problem with machine learning?\n\n<a href=\"https://studio.code.org/s/csd7-2023/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> "
+      },
+      "seeding_key": {
+        "lesson.key": "TLO 6 - U7L2 Introduction to Machine Learning",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "Content Wrap Up ",
+      "name": "Content Wrap Up ",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+        "overview": "**Purpose:**\nAt this point in the workshop, participants have learned all of the new computer science concepts. This session provides space for participants to celebrate the progress they’ve made since Monday, as well as space for them to process what they’ve learned so far.\n\n\n**Objectives:**\n* Participants process the computer science learning they’ve done to celebrate their hard work and consider their next steps to prepare for the school year.\n\n**Suggested Time:** 20 minutes",
+        "student_overview": "**You will:**\n* Process the computer science learning you’ve done to celebrate your hard work and consider your next steps to prepare for the school year."
+      },
+      "seeding_key": {
+        "lesson.key": "Content Wrap Up ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "Differentiation",
+      "name": "Differentiation",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+        "overview": "**Purpose:**\nIn this session, participants are given time to share ideas and learn about opportunities for differentiation within the CS Discoveries curriculum. The goal of the session is for participants to commit to one thing they will do in their classrooms to meet the unique learning needs of their students.\n\n\n**Objectives:**\n* Participants collaborate and share differentiation strategies and ideas\n* Participants commit to trying one strategy for differentiation with their students\n\n**Suggested Time:** 30 minutes",
+        "student_overview": "**You will:**\n* Collaborate and share differentiation strategies and ideas\n* Commit to trying one strategy for differentiation with your students"
+      },
+      "seeding_key": {
+        "lesson.key": "Differentiation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "Barriers, Opportunities, and Commitments",
+      "name": "Barriers, Opportunities, and Commitments",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+        "overview": "**Purpose:**\nThe equity-focused discussions throughout the week have all been building up to this session where participants will be asked to make a commitment related to equity in CS education. The goal is for participants to leave this session with a concrete plan for how they will make progress towards the goal they have committed to. This plan will be revisited during the academic year workshops.\n\n\n**Objectives:**\n* Participants identify barriers in their classrooms, school, and teaching practice that limit access, diversity, and inclusion in CS\n* Participants determine which of those barriers they have the power to influence\n* Participants identify concrete and reasonable strategies to address the barriers they have the power to influence\n* Participants describe the commitment they will pursue in support of equity in CS, and the strategies they will use to support that commitment\n* Participants define the support they will need to pursue that commitment.\n* Participants identify the measurement(s) they will use to track progress toward the commitment\n\n**Suggested Time:** 50 minutes",
+        "student_overview": "**You will:**\n* Identify barriers in your classroom, school, and teaching practice that limit access, diversity, and inclusion in CS\n* Determine which of those barriers you have the power to influence\n* Identify concrete and reasonable strategies to address the barriers you have the power to influence\n* Describe the commitment you will pursue in support of equity in CS, and the strategies you will use to support that commitment\n* Define the support you will need to pursue that commitment.\n* Identify the measurement(s) you will use to track progress toward the commitment"
+      },
+      "seeding_key": {
+        "lesson.key": "Barriers, Opportunities, and Commitments",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "Day 4 Wrap Up",
+      "name": "Day 4 Wrap Up",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+        "overview": "**Purpose:**\nThis session is intended to wrap up the theme and logistics of the day.\n\n\n**Objectives:**\n* Participants articulate things they got from the workshop today and things they still need in the future\n* Participants complete the daily survey\n\n**Suggested Time:** 15 minutes\n",
+        "student_overview": "**You will:**\n* Articulate things you got from the workshop today and things you still need in the future\n* Complete the daily survey\n\n<a href=\"https://studio.code.org/pd/workshop_survey/day/4\" target=\"blank\" rel=\"noopener noreferrer\">Link to Day 4 Survey</a> \n"
+      },
+      "seeding_key": {
+        "lesson.key": "Day 4 Wrap Up",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "a1c97b26-5894-4cb1-aa07-dca23247bf1c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a1c97b26-5894-4cb1-aa07-dca23247bf1c",
+        "lesson.key": "Introduction to Day 4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "75da42b4-655a-4714-8be3-6b2e1039db7b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "75da42b4-655a-4714-8be3-6b2e1039db7b",
+        "lesson.key": "Bias and Responsibility",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "e44a38dc-11ec-432b-bfc5-19476e7a4c51",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e44a38dc-11ec-432b-bfc5-19476e7a4c51",
+        "lesson.key": "Intro to Unit 5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "10c3f0dc-84c3-479a-83d3-08fed6fd9099",
+      "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "10c3f0dc-84c3-479a-83d3-08fed6fd9099",
+        "lesson.key": "TLO4 - U5L1 Representation Matters",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "fbdf1e05-ec8d-42cf-ae09-250a636e8cf3",
+      "position": 2,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fbdf1e05-ec8d-42cf-ae09-250a636e8cf3",
+        "lesson.key": "TLO4 - U5L1 Representation Matters",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "d90cb8a7-2f05-46cb-bd97-9b27d9ed504d",
+      "position": 3,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d90cb8a7-2f05-46cb-bd97-9b27d9ed504d",
+        "lesson.key": "TLO4 - U5L1 Representation Matters",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "35adef0e-0cec-4fbc-bbd0-47df1af71aa3",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "35adef0e-0cec-4fbc-bbd0-47df1af71aa3",
+        "lesson.key": "TLO4 - U5L1 Representation Matters",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "9434d763-754f-4cae-8bfc-6ee5b8fda45c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9434d763-754f-4cae-8bfc-6ee5b8fda45c",
+        "lesson.key": "Intro to Unit 6 - Creating Apps for Devices ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "9dac60a2-264f-4cbf-942e-3c378dd41b6c",
+      "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9dac60a2-264f-4cbf-942e-3c378dd41b6c",
+        "lesson.key": "TLO 5 - U6L2 Physical Designs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "a00bf332-e45b-44ee-82d5-8dc5ced61cb8",
+      "position": 2,
+      "properties": {
+        "name": "Warm Up - Option 1"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a00bf332-e45b-44ee-82d5-8dc5ced61cb8",
+        "lesson.key": "TLO 5 - U6L2 Physical Designs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "da15e465-fe3f-4380-970e-0447c0789ff2",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up - Option 2"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "da15e465-fe3f-4380-970e-0447c0789ff2",
+        "lesson.key": "TLO 5 - U6L2 Physical Designs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "73c535b2-6d87-479b-a413-5f7a9d1118bd",
+      "position": 4,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "73c535b2-6d87-479b-a413-5f7a9d1118bd",
+        "lesson.key": "TLO 5 - U6L2 Physical Designs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "0b5c9080-affe-4f33-9a2a-a2e530de8a9c",
+      "position": 5,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0b5c9080-affe-4f33-9a2a-a2e530de8a9c",
+        "lesson.key": "TLO 5 - U6L2 Physical Designs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "e0dbaf2b-9299-4ccf-a0fd-b26918aa3d28",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e0dbaf2b-9299-4ccf-a0fd-b26918aa3d28",
+        "lesson.key": "Introduction to Unit 7 - AI and Machine Learning",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "bef5e9db-d4b0-46d3-9aa9-4c6bcb2db23f",
+      "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bef5e9db-d4b0-46d3-9aa9-4c6bcb2db23f",
+        "lesson.key": "TLO 6 - U7L2 Introduction to Machine Learning",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "f7f9da01-67fe-4783-909c-af9493d9c8f3",
+      "position": 2,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f7f9da01-67fe-4783-909c-af9493d9c8f3",
+        "lesson.key": "TLO 6 - U7L2 Introduction to Machine Learning",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "ff3d59b7-dd83-4539-b4aa-1e02511992ba",
+      "position": 3,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ff3d59b7-dd83-4539-b4aa-1e02511992ba",
+        "lesson.key": "TLO 6 - U7L2 Introduction to Machine Learning",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "30c8036c-26c8-4623-a327-97baab9d3f89",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "30c8036c-26c8-4623-a327-97baab9d3f89",
+        "lesson.key": "TLO 6 - U7L2 Introduction to Machine Learning",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "33a25731-db70-47b9-b262-08d2ed44c6e0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "33a25731-db70-47b9-b262-08d2ed44c6e0",
+        "lesson.key": "Content Wrap Up ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "3f0e1919-0b4c-45e8-b21d-cb7b5d88ddb5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3f0e1919-0b4c-45e8-b21d-cb7b5d88ddb5",
+        "lesson.key": "Differentiation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "e72a557a-8e8c-48b4-a819-61658ee97ff4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e72a557a-8e8c-48b4-a819-61658ee97ff4",
+        "lesson.key": "Barriers, Opportunities, and Commitments",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "key": "9132f280-9c34-48fc-93bc-edc6a4e7148a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9132f280-9c34-48fc-93bc-edc6a4e7148a",
+        "lesson.key": "Day 4 Wrap Up",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "a651ad56-380a-42b6-987d-3a556f722394",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a651ad56-380a-42b6-987d-3a556f722394",
+        "lesson_activity.key": "a1c97b26-5894-4cb1-aa07-dca23247bf1c"
+      }
+    },
+    {
+      "key": "26bd2c89-7b11-4f85-9117-858efffc9df0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "26bd2c89-7b11-4f85-9117-858efffc9df0",
+        "lesson_activity.key": "75da42b4-655a-4714-8be3-6b2e1039db7b"
+      }
+    },
+    {
+      "key": "37b3dfbe-f72e-41bc-948d-927139210d32",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "37b3dfbe-f72e-41bc-948d-927139210d32",
+        "lesson_activity.key": "e44a38dc-11ec-432b-bfc5-19476e7a4c51"
+      }
+    },
+    {
+      "key": "b81e1361-5573-4a33-8947-4f806ea08199",
+      "position": 1,
+      "properties": {
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Technical Requirements:** For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to _ensure specific sites **are allowed** and **are not blocked**_. **[Click here to see a list of sites to unblock](https://code.org/educate/it)**. \n\nYou can also find mobile and tablet support details, hardware recommendation information such as minimum Internet connection speed, smallest screen size supported, and other hardware recommendations, as well as a list of supported browsers and platforms at the same [technical requirements website](https://code.org/educate/it). ",
+        "name": "Preparing for the Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "b81e1361-5573-4a33-8947-4f806ea08199",
+        "lesson_activity.key": "10c3f0dc-84c3-479a-83d3-08fed6fd9099"
+      }
+    },
+    {
+      "key": "762b0c9f-c03e-4e76-8d0c-2291eb6fd165",
+      "position": 1,
+      "properties": {
+        "description": "Today we're going to start talking about data and how it's used in computer science.  Before we start, let's take a few minutes to think about what data is.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "762b0c9f-c03e-4e76-8d0c-2291eb6fd165",
+        "lesson_activity.key": "fbdf1e05-ec8d-42cf-ae09-250a636e8cf3"
+      }
+    },
+    {
+      "key": "d9ae0af3-3045-4fe2-90b9-bc152b2ed2c4",
+      "position": 2,
+      "properties": {
+        "description": "**Prompt:**\n\n* What is data?\n* How do you use data in your life?\n* How can data help you solve problems?",
+        "name": "Journal\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Offer Encouragement:** If students have a hard time getting started, remind them that this is really just a brainstorm, and they will be working on answering these questions for the entire unit.  Data may have different definitions depending on context (mobile phone plan, math class, etc.).  Encourage the students to think of different situations in which they have used data, and remind them that there is no one \"right\" answer.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d9ae0af3-3045-4fe2-90b9-bc152b2ed2c4",
+        "lesson_activity.key": "fbdf1e05-ec8d-42cf-ae09-250a636e8cf3"
+      }
+    },
+    {
+      "key": "c2326e97-4cb0-42b3-983a-f9c7faa6b3ec",
+      "position": 3,
+      "properties": {
+        "description": "**Discuss:** Give students a few minutes to think on their own about what data is, and then allow them to share quietly with a partner.  After all students have had a chance to speak to each other, share as a whole class, writing their ideas down in the front of the classroom.\n\n**Discussion Goal:** Students should understand that data is information that has been collected about the world. They should see that data could be any type of information, not just numbers."
+      },
+      "seeding_key": {
+        "activity_section.key": "c2326e97-4cb0-42b3-983a-f9c7faa6b3ec",
+        "lesson_activity.key": "fbdf1e05-ec8d-42cf-ae09-250a636e8cf3"
+      }
+    },
+    {
+      "key": "f5fe6a4d-6146-4143-81e9-428c0cf4255c",
+      "position": 4,
+      "properties": {
+        "description": "These are all great ideas.  We're going to spend the rest of the unit looking more closely at what data is, where it comes from, and how it can help us in computer science.  For now, we're going to define data as \"Information that’s been collected to help us to answer a question or solve a problem.\"",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f5fe6a4d-6146-4143-81e9-428c0cf4255c",
+        "lesson_activity.key": "fbdf1e05-ec8d-42cf-ae09-250a636e8cf3"
+      }
+    },
+    {
+      "key": "85dd88ae-0e47-4a16-8fff-c0e64c07fd93",
+      "position": 5,
+      "properties": {
+        "description": "**Question of the Day: How does data affect decisions we make everyday?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "85dd88ae-0e47-4a16-8fff-c0e64c07fd93",
+        "lesson_activity.key": "fbdf1e05-ec8d-42cf-ae09-250a636e8cf3"
+      }
+    },
+    {
+      "key": "d18036ef-75ac-4a90-a31a-eb9e58dc8749",
+      "position": 1,
+      "properties": {
+        "description": "**Group:** Put students into groups of 3-5\n\n**Distribute:** Give each group a copy of the activity guide and one of the four versions of the Meals Data resource.  Make sure at least one group has a picture resource, one the menu resource, one group the nutrition resource, and one group the recipe resource.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Answer Keys & Exemplars:** An answer key or exemplar is provided for verified teachers as part of the resources in this lesson plan. If you do not see an answer key or exemplar listed as a resource, [follow these steps](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-) to become a verified teacher."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d18036ef-75ac-4a90-a31a-eb9e58dc8749",
+        "lesson_activity.key": "d90cb8a7-2f05-46cb-bd97-9b27d9ed504d"
+      }
+    },
+    {
+      "key": "59fc1bcb-90f2-4bfa-bc45-2f3661cbc91d",
+      "position": 2,
+      "properties": {
+        "description": "**Display**: Read through the instructions for this activity. Each group of students will make a meal recommendation to four different people, and they must justify their recommendation with only their group’s data.  Because different groups have different data sets, the difficulty of the recommendations will vary from group to group."
+      },
+      "seeding_key": {
+        "activity_section.key": "59fc1bcb-90f2-4bfa-bc45-2f3661cbc91d",
+        "lesson_activity.key": "d90cb8a7-2f05-46cb-bd97-9b27d9ed504d"
+      }
+    },
+    {
+      "key": "0757edf8-63e7-4dbc-9aa6-c0899ea0354d",
+      "position": 3,
+      "properties": {
+        "description": "**Circulate:** Allow students to complete the activity in their groups. Monitor conversations to ensure groups are discussing each others ideas, and making reference to the data they have.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Dealing with Frustration:** Because each group will only have adequate information for one of the four recommendations, students may become frustrated that they cannot find the \"right\" answer.  Reassure them that there's not always a \"right\" recommendation, and that the most important part of the exercise is for them to explain why they made their choice.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0757edf8-63e7-4dbc-9aa6-c0899ea0354d",
+        "lesson_activity.key": "d90cb8a7-2f05-46cb-bd97-9b27d9ed504d"
+      }
+    },
+    {
+      "key": "65607acf-f70a-46d4-90b3-af79ebf58c69",
+      "position": 4,
+      "properties": {
+        "description": "#### Representation Matters"
+      },
+      "seeding_key": {
+        "activity_section.key": "65607acf-f70a-46d4-90b3-af79ebf58c69",
+        "lesson_activity.key": "d90cb8a7-2f05-46cb-bd97-9b27d9ed504d"
+      }
+    },
+    {
+      "key": "3a23e859-d321-4974-aebb-bbd5a5b1f003",
+      "position": 5,
+      "properties": {
+        "description": "**“I am allergic to eggs.”**",
+        "name": "Person 1\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "3a23e859-d321-4974-aebb-bbd5a5b1f003",
+        "lesson_activity.key": "d90cb8a7-2f05-46cb-bd97-9b27d9ed504d"
+      }
+    },
+    {
+      "key": "5d623015-ea50-41a6-b435-e7b9177ac5f8",
+      "position": 6,
+      "properties": {
+        "description": "Although the menu and pictures may help somewhat, the recipe data set is the only one that tells the students the ingredients in each meal.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Questions and Assumptions about the Given Data:** During the discussion, some students may note that chilaquiles often have eggs.  This is a good chance to point out that if the data about the meal was collected in a way that didn't include information about the ingredients, then they didn't have enough information and made the best decision based on the data that they had.  Remind students that although it's reasonable to make certain assumptions, that only with the relevant data can they be confident in their decisions.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5d623015-ea50-41a6-b435-e7b9177ac5f8",
+        "lesson_activity.key": "d90cb8a7-2f05-46cb-bd97-9b27d9ed504d"
+      }
+    },
+    {
+      "key": "514b5350-7c22-41f6-a6e5-5765f3a69c1f",
+      "position": 7,
+      "properties": {
+        "description": "**“My doctor said to eat less sodium.”**\r\n\r\nThose with the nutrition data should see which meal has the lowest sodium content.",
+        "name": "Person 2\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "514b5350-7c22-41f6-a6e5-5765f3a69c1f",
+        "lesson_activity.key": "d90cb8a7-2f05-46cb-bd97-9b27d9ed504d"
+      }
+    },
+    {
+      "key": "09248d30-af42-4c63-9ac3-9fe1979eaa11",
+      "position": 8,
+      "properties": {
+        "description": "**“I’m trying to save money.”**",
+        "name": "Person 3\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "09248d30-af42-4c63-9ac3-9fe1979eaa11",
+        "lesson_activity.key": "d90cb8a7-2f05-46cb-bd97-9b27d9ed504d"
+      }
+    },
+    {
+      "key": "23555417-6860-474e-96a9-63e91cd8cc81",
+      "position": 9,
+      "properties": {
+        "description": "Those with the menu data set should see prices for each meal.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Using the Data You Have:** For any of these questions, students may have reasons to choose a different answer, or complain that it's not fair that they did not have all the information that they needed.  Remind them that the activity is about using the data they have in a reasonable way, not necessarily getting a particular answer.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "23555417-6860-474e-96a9-63e91cd8cc81",
+        "lesson_activity.key": "d90cb8a7-2f05-46cb-bd97-9b27d9ed504d"
+      }
+    },
+    {
+      "key": "b02a6e42-f013-4ac0-9dd9-83e5c1ecfb8b",
+      "position": 10,
+      "properties": {
+        "description": "**“I want to post a nice picture of it online.”**\r\n\r\nWhile the recommendation for this one is more subjective, the group with the picture data set is in the best position to make an informed recommendation.",
+        "name": "Person 4\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "b02a6e42-f013-4ac0-9dd9-83e5c1ecfb8b",
+        "lesson_activity.key": "d90cb8a7-2f05-46cb-bd97-9b27d9ed504d"
+      }
+    },
+    {
+      "key": "dcf87b4f-6757-427a-8075-ca5f7f6efd03",
+      "position": 11,
+      "properties": {
+        "description": "After making the recommendations, groups should choose the recommendation that they thought was the easiest to make, and explain their reasoning.",
+        "name": "Reflection\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "dcf87b4f-6757-427a-8075-ca5f7f6efd03",
+        "lesson_activity.key": "d90cb8a7-2f05-46cb-bd97-9b27d9ed504d"
+      }
+    },
+    {
+      "key": "16774199-e2f9-4866-a882-c9f6f62cad6c",
+      "position": 12,
+      "properties": {
+        "description": "**Share-Out:** When all groups have completed the worksheet, come back together as a class and ask one person from each group to share the answers and reasoning for each recommendation.  As the groups share answers and reasoning, allow them to see each other's data sets.\n\n**Display:** As groups share the datasets they used, use the slides to highlight their data so the entire class can see\n\n\n**Prompt:**  Now that you've seen all of the different ways we represented the four meals, think about what makes a way of representing something good or bad.  Do you think any of the representations were better or worse than others?  What made them better or worse?"
+      },
+      "seeding_key": {
+        "activity_section.key": "16774199-e2f9-4866-a882-c9f6f62cad6c",
+        "lesson_activity.key": "d90cb8a7-2f05-46cb-bd97-9b27d9ed504d"
+      }
+    },
+    {
+      "key": "940090a7-602a-4f79-993d-d698b4ed560f",
+      "position": 13,
+      "properties": {
+        "description": "**Discuss:** Allow students to reflect on their own before discussing with a partner. Ask a few partners to share with the class.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Students should understand that different representations are good for solving different problems. As they explain which representations are better or worse, make sure that they are justifying their choices within the context of particular problems they were asked to solve in the activity.  They should recognize that each representation had advantages and disadvantages for different problems, and identify how the nature of each problem lent itself to a particular representation.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "940090a7-602a-4f79-993d-d698b4ed560f",
+        "lesson_activity.key": "d90cb8a7-2f05-46cb-bd97-9b27d9ed504d"
+      }
+    },
+    {
+      "key": "3cc3ec91-1956-4569-99e9-13003c71dcbf",
+      "position": 14,
+      "properties": {
+        "description": "When we collect information about the world, we have to make choices about what is important for us to include in our representations.  The choices that we make affect what kinds of problems we can solve with our data.  In the next few lessons, we'll talk about how computers represent data and how we use that data to solve problems.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3cc3ec91-1956-4569-99e9-13003c71dcbf",
+        "lesson_activity.key": "d90cb8a7-2f05-46cb-bd97-9b27d9ed504d"
+      }
+    },
+    {
+      "key": "839216c2-3d7e-4184-bf0e-98ac102fd9b2",
+      "position": 1,
+      "properties": {
+        "description": "**Prompt**: Today, you saw four different ways of representing a meal, and how those different representations were useful for solving different problems.\n\n* Why were some representations more useful than others?\n* If you were to create a way of representing a meal, what would be the most important things for you to think about?",
+        "name": "Journal\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "839216c2-3d7e-4184-bf0e-98ac102fd9b2",
+        "lesson_activity.key": "35adef0e-0cec-4fbc-bbd0-47df1af71aa3"
+      }
+    },
+    {
+      "key": "6bcc58aa-8385-436e-b942-9fec7067e52a",
+      "position": 2,
+      "properties": {
+        "description": "**Code Studio:** Have students answer 5 quick survey questions at the beginning of this unit. Once at least 5 students have completed the survey you will be able to view the anonymized results in the Teacher Dashboard. Some of these questions will be asked again at the end of the first project, which can be helpful in seeing student growth and shifts in attitudes throughout the unit.",
+        "name": "Reflection",
+        "progression_name": "Check-In Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "6bcc58aa-8385-436e-b942-9fec7067e52a",
+        "lesson_activity.key": "35adef0e-0cec-4fbc-bbd0-47df1af71aa3"
+      }
+    },
+    {
+      "key": "b5c767d6-b7fb-41d7-be7e-049f0ac3cfe5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b5c767d6-b7fb-41d7-be7e-049f0ac3cfe5",
+        "lesson_activity.key": "9434d763-754f-4cae-8bfc-6ee5b8fda45c"
+      }
+    },
+    {
+      "key": "e54e3138-1f52-41b6-be49-a9df63612551",
+      "position": 1,
+      "properties": {
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Technical Requirements:** For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to _ensure specific sites **are allowed** and **are not blocked**_. **[Click here to see a list of sites to unblock](https://code.org/educate/it)**. \n\nYou can also find mobile and tablet support details, hardware recommendation information such as minimum Internet connection speed, smallest screen size supported, and other hardware recommendations, as well as a list of supported browsers and platforms at the same [technical requirements website](https://code.org/educate/it). ",
+        "name": "Preparing for the Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "e54e3138-1f52-41b6-be49-a9df63612551",
+        "lesson_activity.key": "9dac60a2-264f-4cbf-942e-3c378dd41b6c"
+      }
+    },
+    {
+      "key": "82b269b4-93e5-46a1-87b4-ddbc633050e9",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Two Warm-Up Options**: This lesson has two warm-up options, depending on whether or not students have been previously introduced to the Problem-Solving Process.\n\nOption 1 is for classrooms that have not been introduced to the Problem-Solving Process. The warm-up is longer than normal because it introduces the Problem-Solving Process through a brief activity and a video.\n\nOption 2 is for classrooms that have been introduced to the Problem-Solving Process in a previous unit. The warm-up is shorter and acts as a quick review of the Problem Solving Process.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "82b269b4-93e5-46a1-87b4-ddbc633050e9",
+        "lesson_activity.key": "a00bf332-e45b-44ee-82d5-8dc5ced61cb8"
+      }
+    },
+    {
+      "key": "8d98d136-2cb9-48dc-972a-7aa779e8791d",
+      "position": 2,
+      "properties": {
+        "description": "In this unit, we'll be learning how to create apps that use physical devices. While creating these apps, you might encounter some problems. The word \"problem\" can refer to lots of different situations - I could say I have a problem for homework, a problem with my brother, and a problem with my car, and all three mean very different things.\n",
+        "duration": "10",
+        "name": "Problem Solving Word Search",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8d98d136-2cb9-48dc-972a-7aa779e8791d",
+        "lesson_activity.key": "a00bf332-e45b-44ee-82d5-8dc5ced61cb8"
+      }
+    },
+    {
+      "key": "017f482d-e222-44f5-af90-b96190cf4001",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What's an example of a problem you've had to solve recently?\n\n**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson.\n\nAs students share, distribute a copy of the [r _warm_up_word_search/pl-csd-summer/2025] to each student, face down. Make sure students don't start the word search ahead of time."
+      },
+      "seeding_key": {
+        "activity_section.key": "017f482d-e222-44f5-af90-b96190cf4001",
+        "lesson_activity.key": "a00bf332-e45b-44ee-82d5-8dc5ced61cb8"
+      }
+    },
+    {
+      "key": "1c7e2810-05fb-43a4-bf1a-902773948b3c",
+      "position": 4,
+      "properties": {
+        "description": "Since we will most likely be faced with some problems to solve in this unit, today, we are going to learn about and practice an effective strategy for when we need to solve problems. We'll start with a simple problem: solving a word search.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1c7e2810-05fb-43a4-bf1a-902773948b3c",
+        "lesson_activity.key": "a00bf332-e45b-44ee-82d5-8dc5ced61cb8"
+      }
+    },
+    {
+      "key": "35322437-31a9-452c-b9d0-9fc2af09a1f4",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What is the problem you are trying to solve when you do a word search?\n\n**Discuss:** Allow students to discuss their ideas with a classmate before sharing them with the entire class.\n\n**Discussion Goal:** Guide students to the idea that the problem of a word search is that there are hidden words throughout the grid of letters and thus the goal of a word search is to find all the words in the list.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What are the different strategies that someone could use for finding words? What are the pros and cons of each strategy?\n\n**Discuss:** Allow students to silently record their ideas in writing for a minute. Afterward, invite them to share what they wrote with a neighbor and then finally bring the whole class together to develop a classwide list of strategies.\n\n**Discussion Goal:** This is a quick, low-stakes brainstorm that asks students to bring in their own experiences with word searches and identify strategies they may have used or could use. Student responses may vary but may include the following strategies:\n* Scan each row from left to right followed by scanning each column from top to bottom.\n* Check surrounding letters. Once you found the first letter or a key letter in a word you’re searching for, check the letters around it to see if you should keep going. For example, if you have a word with Q in it, if there’s no U next to it, then you need to keep searching.\n* Look for words that have less-common letters in them such as words with a Q, X, J, or Z\n* Look for words with letter pairs, such as double letters or QU\n* Look for more than one word at a time.\n* Turn the puzzle upside down\n\n**Do This:** Direct students to pick ONE strategy from the list that they want to try and put a “#1” next to it in their journals to indicate it was their first strategy used. Once they pick a strategy, direct students to use that strategy in their word search.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "It is important to let the students know that if at any time the strategy they picked is not working, they should feel free to go back to the list of strategies and pick a different one, making sure to put a number next to the new strategy.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "35322437-31a9-452c-b9d0-9fc2af09a1f4",
+        "lesson_activity.key": "a00bf332-e45b-44ee-82d5-8dc5ced61cb8"
+      }
+    },
+    {
+      "key": "8216fead-65b7-42a3-bf22-81bd3dea5cff",
+      "position": 6,
+      "properties": {
+        "description": "**Circulate:** Give students a few minutes to find as many words as possible. It is okay if they don’t find every word. You may bring everyone back together once everyone has found at least several of the words on the list.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Display and have students reflect on each of the following prompts:\n* Were you successful in solving this word search problem? How do you know?\n* What strategy did you pick and how did it work for you?\n* Did anyone change strategies at any point … why or why not?\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As you lead this discussion, you may choose to do a quick raise of hand poll to find out who was successful, or on track to be successful if they didn’t get a chance to finish. Additionally, you can also instruct students to pick two of the questions to answer.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8216fead-65b7-42a3-bf22-81bd3dea5cff",
+        "lesson_activity.key": "a00bf332-e45b-44ee-82d5-8dc5ced61cb8"
+      }
+    },
+    {
+      "key": "4f94db09-6d23-43bd-be67-7db398357ee2",
+      "position": 7,
+      "properties": {
+        "description": "**Discussion Goal:** This discussion serves as a way to get students to reflect on how they did solving this problem and to give students a moment to recognize if they changed strategies and why or if they would solve a problem like this differently next time.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "4f94db09-6d23-43bd-be67-7db398357ee2",
+        "lesson_activity.key": "a00bf332-e45b-44ee-82d5-8dc5ced61cb8"
+      }
+    },
+    {
+      "key": "6fdd0837-b728-45cf-bd90-962893bcbc08",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r the_problem_solving_process/pl-csd-summer/2025] video in the slides.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?",
+        "duration": "5",
+        "name": "The Problem Solving Process",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6fdd0837-b728-45cf-bd90-962893bcbc08",
+        "lesson_activity.key": "a00bf332-e45b-44ee-82d5-8dc5ced61cb8"
+      }
+    },
+    {
+      "key": "a94d9716-a8dd-495e-a7cd-b5d03ab07683",
+      "position": 9,
+      "properties": {
+        "description": "**Discuss and Display:** Briefly discuss with students what parts of the warm-up activity they felt fell into each step of the problem-solving process before displaying the example answers in the slides:\n* Define: when we put into our own words what the problem of a word search is and what the goal is\n* Prepare: the brainstorming of different strategies that could be used to solve a word search\n* Try: when we picked a strategy and tried to find the words\n* Reflect: when we reflected on how they did at the end\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This is a good point to remind students that the problem-solving process is a cycle and there should be times when they need to repeat steps. For example, if they went back to the list of strategies and picked a different one at any point when solving this problem, they were not only doing the “Reflect” step without realizing it but going back to the “Prepare” and “Try” steps again.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a94d9716-a8dd-495e-a7cd-b5d03ab07683",
+        "lesson_activity.key": "a00bf332-e45b-44ee-82d5-8dc5ced61cb8"
+      }
+    },
+    {
+      "key": "209f957f-9bf1-4ed6-ad9c-867fd32bef49",
+      "position": 10,
+      "properties": {
+        "description": "Now that we're familiar with the problem-solving process, let's explore how we can use it when creating apps with physical devices!\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "209f957f-9bf1-4ed6-ad9c-867fd32bef49",
+        "lesson_activity.key": "a00bf332-e45b-44ee-82d5-8dc5ced61cb8"
+      }
+    },
+    {
+      "key": "ff9d5cbf-6ff4-4b4c-9479-f12c110b895a",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Two Warm-Up Options:** This lesson has two warm-up options, depending on whether or not students have been previously introduced to the Problem-Solving Process.\n\nOption 2 is for classrooms that have been introduced to the Problem-Solving Process in a previous unit. The warm-up is shorter and acts as a quick review of the Problem-Solving Process.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ff9d5cbf-6ff4-4b4c-9479-f12c110b895a",
+        "lesson_activity.key": "da15e465-fe3f-4380-970e-0447c0789ff2"
+      }
+    },
+    {
+      "key": "2f94a731-3f2a-454a-ac49-584b74d706a8",
+      "position": 2,
+      "properties": {
+        "description": "In this unit, we'll be learning how to build apps with physical devices. Today, we are going to remind ourselves about the Problem Solving Process and eventually we will apply it to the apps and designs we create.\n",
+        "duration": "5",
+        "name": "Revisit The Problem Solving Process",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2f94a731-3f2a-454a-ac49-584b74d706a8",
+        "lesson_activity.key": "da15e465-fe3f-4380-970e-0447c0789ff2"
+      }
+    },
+    {
+      "key": "65ad829f-8cfc-456a-a64e-366fefbddc00",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What do you remember about the Problem-Solving Process?\n\n**Discussion Goal:** Based on student responses, the teacher should lead students through a discussion about the four steps of the Problem-Solving Process and what they remember to be involved in each step.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Based on what you know about the Problem-Solving Process, what do you think each step could look like when designing an app with a physical device?\n\n**Discussion Goal:** Even though students haven't designed any apps with devices yet, guide students to imagine the steps involved from having the first inspiration for an app with a device to having it created. Some ideas may include:\n* Define: Deciding the problem you'd like your app and device to solve\n* Prepare: Looking at similar apps or think about similar devices we've used in the real world\n* Try: Creating a sketch of your device and how it interacts with the app\n* Reflect: Showing it to friends to get feedback and improving the physical design\n\nAs students finish discussing, transition to the main activity.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "65ad829f-8cfc-456a-a64e-366fefbddc00",
+        "lesson_activity.key": "da15e465-fe3f-4380-970e-0447c0789ff2"
+      }
+    },
+    {
+      "key": "95d01bad-6f21-48bd-b3ac-651e9bffccc5",
+      "position": 1,
+      "properties": {
+        "description": "In this unit, we are going to learn how to create apps with devices, which starts with thinking about the problems we want to solve with these apps. Sometimes we make apps about our own personal interests, but we should also think about designing them to solve problems. Eventually, we will think about applying the problem-solving process to help us actually program our apps, but today we are going to focus on how to apply the problem-solving process when creating physical designs to meet the needs of our users and ourselves.",
+        "name": "Recommending Physical Designs",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "95d01bad-6f21-48bd-b3ac-651e9bffccc5",
+        "lesson_activity.key": "73c535b2-6d87-479b-a413-5f7a9d1118bd"
+      }
+    },
+    {
+      "key": "2ab62d13-10d7-4b34-b704-c1622fe33d9f",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the [r physical_designs/pl-csd-summer/2025] activity guide to each student. \n\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Answer Keys & Exemplars:** An answer key or exemplar is provided for verified teachers as part of the resources in this lesson plan. If you do not see an answer key or exemplar listed as a resource, [follow these steps](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-) to become a verified teacher.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2ab62d13-10d7-4b34-b704-c1622fe33d9f",
+        "lesson_activity.key": "73c535b2-6d87-479b-a413-5f7a9d1118bd"
+      }
+    },
+    {
+      "key": "51ca705f-4608-4555-858d-04f83b606cf7",
+      "position": 3,
+      "properties": {
+        "description": "**Overview:** Have students read through the directions on the first page of the activity guide. The first part of this activity asks students to match different users to a physical design that suits their needs. Students will need to visit Code Studio to view the templates.\n\n**Code Studio:** Direct students to the \"Physical Design Prototype\" levels on Code Studio.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "51ca705f-4608-4555-858d-04f83b606cf7",
+        "lesson_activity.key": "73c535b2-6d87-479b-a413-5f7a9d1118bd"
+      }
+    },
+    {
+      "key": "63f5affb-07f5-4ebd-869a-9729ad98f16f",
+      "position": 4,
+      "properties": {
+        "progression_name": "Physical Design Prototypes",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While most of these examples are pulled directly from lessons that students will complete later in the unit, a couple of them use commands or techniques that aren't explicitly covered in the course. You can view the source for all of these programs in order to support students who may want to incorporate some of these techniques later on.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "63f5affb-07f5-4ebd-869a-9729ad98f16f",
+        "lesson_activity.key": "73c535b2-6d87-479b-a413-5f7a9d1118bd"
+      }
+    },
+    {
+      "key": "9811dded-d782-4a46-a700-b84f3ae26447",
+      "position": 5,
+      "properties": {
+        "description": "**Circulate:** Have students work through this activity in pairs, encouraging discussion about why exactly they are choosing each prototype. This is a great place to discuss different physical designs and the needs of each user.\n",
+        "progression_name": "Sample Animations and Games",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Value Reasoning over Correctness:** Each user is designed with a particular template in mind, but students are encouraged to use their own reasoning and logic when recommending a template to users. It's okay for students to not make an \"obvious\" choice as long as they're thinking carefully about their reasoning and are able to justify their choices.\n\nThe prototypes are intentionally simple, to help set expectations about the prototypes that students will be creating over the course of the unit.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9811dded-d782-4a46-a700-b84f3ae26447",
+        "lesson_activity.key": "73c535b2-6d87-479b-a413-5f7a9d1118bd"
+      }
+    },
+    {
+      "key": "93806c46-92f7-4777-9d74-9a6342b9c1de",
+      "position": 6,
+      "properties": {
+        "description": "**Share Out:** Have students discuss the following questions in small groups before bringing them to a full class discussion:\n* Which users were the easiest to find matches for?\n* Which users were the hardest to find matches for?\n\nBased on your observations while circulating, you should also identify a few specific users to ask the class to discuss, especially users for whom multiple students chose different prototypes for that user. Encourage students to hear different justifications for their choices, emphasizing that the rationale is more important than the choice itself.\n",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "As students discuss their reasoning for their choices, check to ensure that they are identifying the particular user's needs and characteristics, rather than general reasons to prefer a certain physical design. You may want to challenge students to distinguish their own needs and preferences from those of the described users.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "93806c46-92f7-4777-9d74-9a6342b9c1de",
+        "lesson_activity.key": "73c535b2-6d87-479b-a413-5f7a9d1118bd"
+      }
+    },
+    {
+      "key": "f0663f9e-83f1-482a-872e-da7dafa56729",
+      "position": 7,
+      "properties": {
+        "description": "Now we've been asked to create a physical design for a client. We can create our own design, but it should meet the needs of our users.\n",
+        "name": "Creating a Physical Design",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Note on Timing:** Depending on how long the warm-up took, especially if the class watched the problem-solving video, you may run out of time to fully complete this activity. That's okay! It can be something students come back to as they progress throughout the unit, or you may decide to extend this activity into a new class period and stretch out the design and feedback process. This task can be implemented in a variety of ways to match the constraints of the classroom.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f0663f9e-83f1-482a-872e-da7dafa56729",
+        "lesson_activity.key": "73c535b2-6d87-479b-a413-5f7a9d1118bd"
+      }
+    },
+    {
+      "key": "670623f0-8ba7-43bf-99a0-9d8bbe67b827",
+      "position": 8,
+      "properties": {
+        "description": "**Overview:** Have students flip to the back of their activity guide and read the overview of the next part of the activity. Students will choose a user to create a basic physical design for, following the Problem-Solving Process. Students can sketch their design on pen and paper, or use the provided Google Slides template to create their design. These designs are meant to be sketches - students will not have enough time to \"perfect\" their designs.\n\n**Distribute:** Pass out copies of the [r problem_solving_and_design/pl-csd-summer/2025] resource. Students can use this when preparing their design, and it can be a reference throughout the unit.\n\n**Circulate:** Monitor students as they complete this activity, ensuring that students are creating designs that match the needs of the user they chose. Monitor student conversations as well to make sure both voices are being heard during discussions and decisions. Students will be working in pairs throughout the unit, so it can be good to intervene early to reinforce good collaboration habits.\n\n**(Optional) Share Out:** Depending on how much time is left in class, allow students to trade with other groups and share their designs. Encourage students to share with another group who picked the same user so they can see similarities and differences in their designs.\n\n",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Following the Problem-Solving Process:** You can use student responses on the activity guide to determine how well they followed each step of the problem-solving process. This process will be reinforced throughout the unit, especially on projects.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "670623f0-8ba7-43bf-99a0-9d8bbe67b827",
+        "lesson_activity.key": "73c535b2-6d87-479b-a413-5f7a9d1118bd"
+      }
+    },
+    {
+      "key": "20ede4fa-db4a-4c2f-bc92-39b80b0712d7",
+      "position": 1,
+      "properties": {
+        "description": "**Question of the Day:**  How can we design apps with physical devices based on the needs of a user?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Reflect - What was one thing that you think your design does well to meet the needs of the user? What’s an area that you think can still be improved to meet the needs of your user?\n\n**Circulate:** Students can answer these prompts on their activity guide in the Reflect section of the Problem Solving Process.\n\n**Share Out:** Have students share their responses, highlighting similarities between responses even when the users were different.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "20ede4fa-db4a-4c2f-bc92-39b80b0712d7",
+        "lesson_activity.key": "0b5c9080-affe-4f33-9a2a-a2e530de8a9c"
+      }
+    },
+    {
+      "key": "92820a20-eab8-4b5c-a2d6-1a4924175df6",
+      "position": 2,
+      "properties": {
+        "description": "**Code Studio:** Have students answer 5 quick survey questions at the beginning of this unit. Once at least 5 students have completed the survey you will be able to view the anonymized results in the Teacher Dashboard. Some of these questions will be asked again at the end of the first project, which can be helpful in seeing student growth and shifts in attitudes throughout the unit.",
+        "name": "Reflection",
+        "progression_name": "Check-In Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "92820a20-eab8-4b5c-a2d6-1a4924175df6",
+        "lesson_activity.key": "0b5c9080-affe-4f33-9a2a-a2e530de8a9c"
+      }
+    },
+    {
+      "key": "2bf40e9d-a24d-4eb2-906e-bb6f8adfe478",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2bf40e9d-a24d-4eb2-906e-bb6f8adfe478",
+        "lesson_activity.key": "e0dbaf2b-9299-4ccf-a0fd-b26918aa3d28"
+      }
+    },
+    {
+      "key": "6042b3e1-9d50-4c5f-b83c-164d7815f654",
+      "position": 1,
+      "properties": {
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Technical Requirements:** For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to _ensure specific sites **are allowed** and **are not blocked**_. **[Click here to see a list of sites to unblock](https://code.org/educate/it)**. \n\nYou can also find mobile and tablet support details, hardware recommendation information such as minimum Internet connection speed, smallest screen size supported, and other hardware recommendations, as well as a list of supported browsers and platforms at the same [technical requirements website](https://code.org/educate/it). ",
+        "name": "Preparing for the Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "6042b3e1-9d50-4c5f-b83c-164d7815f654",
+        "lesson_activity.key": "bef5e9db-d4b0-46d3-9aa9-4c6bcb2db23f"
+      }
+    },
+    {
+      "key": "47eabbc5-3668-40f5-a2d9-cddb870599b2",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Today we begin a unit on Artificial Intelligence, or AI. What’s an example of AI either in your personal life or that you’ve seen in a movie or book?_",
+        "name": "Journal",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**What Is AI?** At a basic level, artificial intelligence is when a computer program mimics the intelligence of a human being. This can appear as solving a problem, engaging in conversations, displaying emotions, and many other forms. Shortly after this prompt, students will watch a video that further defines AI and the focus of this unit, Machine Learning.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "47eabbc5-3668-40f5-a2d9-cddb870599b2",
+        "lesson_activity.key": "f7f9da01-67fe-4783-909c-af9493d9c8f3"
+      }
+    },
+    {
+      "key": "0801af51-910b-44e2-af63-c8fe1def84bc",
+      "position": 2,
+      "properties": {
+        "description": "Have students brainstorm silently on their own, then share with their neighbors, and finally share with the whole class."
+      },
+      "seeding_key": {
+        "activity_section.key": "0801af51-910b-44e2-af63-c8fe1def84bc",
+        "lesson_activity.key": "f7f9da01-67fe-4783-909c-af9493d9c8f3"
+      }
+    },
+    {
+      "key": "2b51bbe1-199f-467a-b96c-69d531d661f9",
+      "position": 3,
+      "properties": {
+        "description": " **Discussion Goal:** Try to surface any personal connections students may already have with AI. Students may come up with examples from their personal lives, such as recommendation systems or facial recognition. Or they may think of examples in the media, such as the robots in movies like Wall-E or personal assistants like Siri. Students may also come up with examples that aren’t strictly AI - for now, add them to the list anyway. Keep track of any suggestions that students surface without validating them as right or wrong - let students brainstorm freely first.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "2b51bbe1-199f-467a-b96c-69d531d661f9",
+        "lesson_activity.key": "f7f9da01-67fe-4783-909c-af9493d9c8f3"
+      }
+    },
+    {
+      "key": "d65172a4-9529-4086-bf31-8f9bb039cf93",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the slide with the large venn diagram that includes AI and many applications."
+      },
+      "seeding_key": {
+        "activity_section.key": "d65172a4-9529-4086-bf31-8f9bb039cf93",
+        "lesson_activity.key": "f7f9da01-67fe-4783-909c-af9493d9c8f3"
+      }
+    },
+    {
+      "key": "63d6cc19-3538-4061-9b76-ffccfa8c693c",
+      "position": 5,
+      "properties": {
+        "description": "Artificial Intelligence is used in a lot of different places in our lives - from facial recognition in our phones to personal recommendations when we browse the web, and even in driverless cars. For the next few weeks, we’re going to focus on a specific type of artificial intelligence called machine learning.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "63d6cc19-3538-4061-9b76-ffccfa8c693c",
+        "lesson_activity.key": "f7f9da01-67fe-4783-909c-af9493d9c8f3"
+      }
+    },
+    {
+      "key": "82f1bfed-c02f-4187-ab78-64e7e02fdc32",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r ai_what_is_machine_learning_/pl-csd-summer/2025] video in the slides\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "82f1bfed-c02f-4187-ab78-64e7e02fdc32",
+        "lesson_activity.key": "f7f9da01-67fe-4783-909c-af9493d9c8f3"
+      }
+    },
+    {
+      "key": "06e8f092-d7f9-4e99-b264-81862945037d",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary:** Display the following vocabulary\n\n- **Machine Learning:** How computers recognize patterns and make decisions without being explicitly programmed"
+      },
+      "seeding_key": {
+        "activity_section.key": "06e8f092-d7f9-4e99-b264-81862945037d",
+        "lesson_activity.key": "f7f9da01-67fe-4783-909c-af9493d9c8f3"
+      }
+    },
+    {
+      "key": "e62f8de7-0437-4e42-ac82-1a472d5c2aad",
+      "position": 8,
+      "properties": {
+        "description": "Machine learning helps us solve important problems in society. In the next few weeks, we’ll look at how we can create our own machine learning apps to solve problems. To help accomplish our goals, we will use the Problem Solving Process - Define, Prepare, Try, Reflect, and always Empathize. Let's take a look at how these steps appear for Machine Learning in particular",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e62f8de7-0437-4e42-ac82-1a472d5c2aad",
+        "lesson_activity.key": "f7f9da01-67fe-4783-909c-af9493d9c8f3"
+      }
+    },
+    {
+      "key": "0a173198-ef60-4f0f-a6a8-b0600bc98e05",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the Problem Solving Process. Read through the additional lines that represent how the process connects to Machine Learning.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of The Day:** How can we use the Problem Solving Process to solve a problem with machine learning?"
+      },
+      "seeding_key": {
+        "activity_section.key": "0a173198-ef60-4f0f-a6a8-b0600bc98e05",
+        "lesson_activity.key": "f7f9da01-67fe-4783-909c-af9493d9c8f3"
+      }
+    },
+    {
+      "key": "227a43c7-94ad-4c93-8934-752672a9f988",
+      "position": 1,
+      "properties": {
+        "description": "In today’s activity, we’re going to use machine learning to help a robot clean up the ocean and learn how to identify fish. We’ll give it lots of examples of fish, give it time to learn from those examples, and then see how well it does in cleaning up the ocean.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "227a43c7-94ad-4c93-8934-752672a9f988",
+        "lesson_activity.key": "ff3d59b7-dd83-4539-b4aa-1e02511992ba"
+      }
+    },
+    {
+      "key": "69b3596f-1c75-4d74-98ac-c4f696777c83",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out the Activity Guide for this lesson",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The responses in the activity guide can be used to formatively assess how well students have met the objectives of the lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "69b3596f-1c75-4d74-98ac-c4f696777c83",
+        "lesson_activity.key": "ff3d59b7-dd83-4539-b4aa-1e02511992ba"
+      }
+    },
+    {
+      "key": "9e7e1970-0dfd-4027-a879-a5c7ea83ab69",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** In front of the classroom, navigate to Level 1 in Code Studio - Recognizing Fish.",
+        "name": "Level 1 - Recognizing Fish",
+        "progression_name": "Recognizing Fish"
+      },
+      "seeding_key": {
+        "activity_section.key": "9e7e1970-0dfd-4027-a879-a5c7ea83ab69",
+        "lesson_activity.key": "ff3d59b7-dd83-4539-b4aa-1e02511992ba"
+      }
+    },
+    {
+      "key": "bf14d7ac-8fa7-4a04-84e7-216579575683",
+      "position": 4,
+      "properties": {
+        "description": "**Do This:** As a class, go through this level which guides you through the process of training A.I. Bot to recognize fish. As you do, fill in the first part of the activity guide as a class. Consider the following strategies at different stages of the level:",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**A.I. Bot and Pronouns:** These levels purposefully use A.I. Bot’s full name and avoid gendering A.I. Bot as “he” or “she”. Even though some AI systems take on personified gendered roles - such as Siri or Jarvis - actual machine learning programs don’t have genders because they’re just computer programs. Model this same behavior with students by referring to A.I. Bot by it’s full name or using “it” as its pronoun.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bf14d7ac-8fa7-4a04-84e7-216579575683",
+        "lesson_activity.key": "ff3d59b7-dd83-4539-b4aa-1e02511992ba"
+      }
+    },
+    {
+      "key": "0b3b0bff-6b9e-4f92-92fd-d5ce92b47280",
+      "position": 5,
+      "properties": {
+        "description": "**Training Screen:**\n\n- Informational text will frequently pop up on the screen. Consider asking students to read the prompts aloud to the class, possibly in their best robot voice, for a little fun\n- Ask students to use thumbs up / thumbs down to decide as a class whether something is a fish\n- At 30 images, the level will ask if you would like to continue or keep training. Ask students to help with this decision and follow their lead - either continue training, or go to the next screen.\n- Before continuing, have students record on their activity guide how many images they used to train A.I. Bot.\n\n**Testing Screen:**\n\n- A.I. Bot will probably misidentify a few objects. Make sure students notice this, and ask them to individually consider why they think this might be happening. This ties in to the discussion at the end of this level.\n\n**Evaluation Screen:**\n\n- Have students count the number of fish that it identified correctly. Record this on the activity guide.\n- It’s okay if A.I. Bot misidentifies some trash as fish - this sets the stage for the discussion.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _If we wanted A.I. Bot to become better at recognizing fish, how do you think we could help it do that?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "0b3b0bff-6b9e-4f92-92fd-d5ce92b47280",
+        "lesson_activity.key": "ff3d59b7-dd83-4539-b4aa-1e02511992ba"
+      }
+    },
+    {
+      "key": "d7ffb771-0398-4c5d-a7fd-f26ce7aab17b",
+      "position": 6,
+      "properties": {
+        "description": " **Discussion Goal:** Help students understand that A.I. Bot learns better when it has more examples. The best way we can improve its ability to recognize fish is by giving it more examples to look at. Students may also make the connection that this is how humans learn, especially young children - the more examples we have, the better we learn."
+      },
+      "seeding_key": {
+        "activity_section.key": "d7ffb771-0398-4c5d-a7fd-f26ce7aab17b",
+        "lesson_activity.key": "ff3d59b7-dd83-4539-b4aa-1e02511992ba"
+      }
+    },
+    {
+      "key": "b362f708-f5cc-4eac-9511-f6b551060c41",
+      "position": 7,
+      "properties": {
+        "description": "This is one example of how the Problem Solving Process and Machine Learning can be used to solve a problem. We prepared our data, used it to train A.I. Bot, then reflected on the results and decided what to do next. In this next level, you will follow this process and train A.I. Bot to detect certain kinds of fish - like red fish or blue fish or triangle fish.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b362f708-f5cc-4eac-9511-f6b551060c41",
+        "lesson_activity.key": "ff3d59b7-dd83-4539-b4aa-1e02511992ba"
+      }
+    },
+    {
+      "key": "a29a3b28-7031-4f72-bbaa-ca96d3ad6a0a",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students navigate to Code Studio Level 2 - Recognizing Fish Features. This level lets students train A.I. Bot to recognize a fish by its color or body type. ",
+        "name": "Level 2 - Recognizing Fish Features",
+        "progression_name": "Recognizing Fish Features"
+      },
+      "seeding_key": {
+        "activity_section.key": "a29a3b28-7031-4f72-bbaa-ca96d3ad6a0a",
+        "lesson_activity.key": "ff3d59b7-dd83-4539-b4aa-1e02511992ba"
+      }
+    },
+    {
+      "key": "41e2e3a1-d7d3-4b77-89f7-cdd122e33633",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Have students choose a word that they want to train A.I. Bot to recognize, and record this information on their Activity Guide. Students should progress through the level on their own, recording information on their activity guide.\n\n**Circulate:** Check that students are filling in their activity guide as they complete the stages. After briefly checking in with each student, complete this stage yourself in front of the room and pause at the last screen.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Activity Guides and Code Studio:** Students may struggle initially to keep track of information on their activity guide as they complete levels in Code Studio. One way to help students think about this is similar to being a scientist performing a lab experiment: they are performing an experiment in Code Studio, and keeping track of their results in their Activity Guide. This is a pattern that will continue throughout the unit, so this is a great opportunity to help students manage both the activity guide and Code Studio.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "41e2e3a1-d7d3-4b77-89f7-cdd122e33633",
+        "lesson_activity.key": "ff3d59b7-dd83-4539-b4aa-1e02511992ba"
+      }
+    },
+    {
+      "key": "ebef65e8-f213-4d0a-b494-cb3f55a6d374",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** As students reach the final stage, have them press the white Information icon in the upper-right corner. This displays the features that A.I. Bot is using to help make its decision. In the example here, A.I. Bot has learned that the color matters the most when making a decision and the eyes matter the least.\n\nHave students record the most important and least important features on their activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What features did A.I. Bot think were the most important? Are those the features you were expecting to be most important?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "ebef65e8-f213-4d0a-b494-cb3f55a6d374",
+        "lesson_activity.key": "ff3d59b7-dd83-4539-b4aa-1e02511992ba"
+      }
+    },
+    {
+      "key": "cedbedb6-9479-4e31-bd36-cf25389187a5",
+      "position": 11,
+      "properties": {
+        "description": " **Discussion Goal:** Students may find that A.I. Bot thinks some features are important when they’re actually completely unrelated to their word. For example, thinking that the mouth of a fish is important when trying to determine if the fish is red. Students can verify this by looking for patterns in the fish that A.I. Bot has accepted - maybe all of their example fishes happened to have the same type of mouth and A.I. Bot mistakenly thought this was important."
+      },
+      "seeding_key": {
+        "activity_section.key": "cedbedb6-9479-4e31-bd36-cf25389187a5",
+        "lesson_activity.key": "ff3d59b7-dd83-4539-b4aa-1e02511992ba"
+      }
+    },
+    {
+      "key": "b997b86f-1c7b-4002-9db4-a981052199b8",
+      "position": 12,
+      "properties": {
+        "description": "Some of you noticed that A.I. Bot was learning about parts of the fish that aren’t actually important, like the mouth or eyes or dorsal fin. This happens in real life too - machines can learn patterns we don’t intend even with lots of data, which can cause A.I. Bot to make mistakes. For this situation, it’s pretty easy to tell if A.I. Bot made a mistake - we can quickly see if a fish isn’t actually red or circular. Let’s try a slightly harder challenge - trying to recognize expressions!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b997b86f-1c7b-4002-9db4-a981052199b8",
+        "lesson_activity.key": "ff3d59b7-dd83-4539-b4aa-1e02511992ba"
+      }
+    },
+    {
+      "key": "b98b8da7-a390-464f-b865-5c61919b9679",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students navigate to Code Studio Level 3 - Recognizing Fish Expressions. This level lets students train A.I. Bot to recognize a fish by its expression, such as “silly” or “serious” or “angry”.",
+        "name": "Level 3 - Recognizing Fish Expressions",
+        "progression_name": "Recognizing Expressions"
+      },
+      "seeding_key": {
+        "activity_section.key": "b98b8da7-a390-464f-b865-5c61919b9679",
+        "lesson_activity.key": "ff3d59b7-dd83-4539-b4aa-1e02511992ba"
+      }
+    },
+    {
+      "key": "a2f7a147-895d-4c28-9806-a40a231044c6",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students choose an expression that they want to train A.I. Bot to recognize, and record this information on their Activity Guide. Students should progress through the level on their own, recording information on their activity guide. On the final screen, have students press the information icon and record the features that A.I. Bot learned were most important.\n\n**Circulate:** Check that students are filling in their activity guide as they complete the stages. Ask students what features they’re looking at to determine if a fish meets their criteria. Students will probably say they primarily use eyes and mouth to help determine expression, but when they click the Information icon on the final screen, A.I. Bot may be using additional features such as color and body to make its decision. Prompt students to think about how they feel about this and compare it to their personal experience - For example, if someone thought they were “silly” or “angry” primarily based on their clothing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide of A.I. Bot learning how to identify fish as “Angry”. Have students discuss the prompt on the screen: _Looking at this screen, why do you think color appeared as the second most important feature?_\n\n **Discussion Goal:** Students should notice that even though the eyes and mouth tend to appear “angry” on every fish, there also appears to be a lot of purple fish on the screen. As a result, A.I. Bot may start to think that the color “purple” is another way to tell if a fish is angry or not.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "a2f7a147-895d-4c28-9806-a40a231044c6",
+        "lesson_activity.key": "ff3d59b7-dd83-4539-b4aa-1e02511992ba"
+      }
+    },
+    {
+      "key": "b8364a47-c21e-46b4-9578-c066e7f1c025",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Do you think it’s okay to consider a fish “angry” by its color?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "b8364a47-c21e-46b4-9578-c066e7f1c025",
+        "lesson_activity.key": "ff3d59b7-dd83-4539-b4aa-1e02511992ba"
+      }
+    },
+    {
+      "key": "c57dfa74-2233-413f-a398-2080d35e6731",
+      "position": 16,
+      "properties": {
+        "description": "**Discussion Goal:** For the first part of the question, guide students to notice that there are a lot of purple fish on the screen so A.I. Bot might think that purple fish are more likely to be angry than other fish.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Job Interviews:** If there is time available, consider showing students [Objective or Biased: On the questionable use of Artificial Intelligence for job applications](https://web.br.de/interaktiv/ki-bewerbung/en/). This is a real-life example of a similar situation where unintended factors, such as wearing glasses or a headscarf, are influencing how an AI system rates job applicants. This can be a useful resource to make a connection between this fish activity and the real-world, but this resource is not designed for a middle-school audience and requires some adjustments and decisions for how to best present to your students.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c57dfa74-2233-413f-a398-2080d35e6731",
+        "lesson_activity.key": "ff3d59b7-dd83-4539-b4aa-1e02511992ba"
+      }
+    },
+    {
+      "key": "70bafda1-716c-482e-9a44-70de8bf7738b",
+      "position": 17,
+      "properties": {
+        "description": "The second part of the question is more open-ended. Students should explore their own ideas and feelings about whether this kind of labeling is appropriate based on the color of the fish. In particular, A.I. Bot has learned “purple fish are angry fish”, which students may have strong reactions to. They may describe similar situations outside of the classroom, such as moments where they’ve been judged by their appearance, gender, or race, to help explain their opinions. This question is designed to start a conversation and connect students’ experiences to the potential pitfalls of machine learning, and it’s okay if the discussion doesn’t come to a firm conclusion. You can let students know that they will continue to learn about and discuss these issues in the rest of the unit. Use the remarks below to help wrap up the discussion."
+      },
+      "seeding_key": {
+        "activity_section.key": "70bafda1-716c-482e-9a44-70de8bf7738b",
+        "lesson_activity.key": "ff3d59b7-dd83-4539-b4aa-1e02511992ba"
+      }
+    },
+    {
+      "key": "717bf8e3-6198-4a80-b84b-c6519a318f5b",
+      "position": 18,
+      "properties": {
+        "description": "Even with a small example like this, we see that machine learning can get into trouble and learn something that’s harmful to a particular type of fish. Having more data and making sure it represents all types of fish can help solve this problem. These types of examples happen in real life too and can have serious consequences, such as whether or not you receive medical care or get a job offer. Throughout this unit, as we learn how to use machine learning to solve problems, we need to always be thinking about: What is the impact, and who is being included or excluded?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "717bf8e3-6198-4a80-b84b-c6519a318f5b",
+        "lesson_activity.key": "ff3d59b7-dd83-4539-b4aa-1e02511992ba"
+      }
+    },
+    {
+      "key": "5ce3501a-3e04-4551-b54d-c8642dd0f9c7",
+      "position": 1,
+      "properties": {
+        "description": "**Code Studio:** Have students answer 5 quick survey questions at the beginning of this unit on AI and Machine Learning. Once at least 5 students have completed the survey you will be able to view the anonymized results in the Teacher Dashboard. Some of these questions will be asked again at the end of the first project, which can be helpful in seeing student growth and shifts in attitudes throughout the unit.",
+        "name": "Reflection",
+        "progression_name": "Check-In Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "5ce3501a-3e04-4551-b54d-c8642dd0f9c7",
+        "lesson_activity.key": "30c8036c-26c8-4623-a327-97baab9d3f89"
+      }
+    },
+    {
+      "key": "849c750e-8815-4ddf-8ec6-a604abea8708",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What is something new you learned about machine learning today? What is a new question you have about machine learning?_\n\nEncourage students to choose one of these to share with you on the way out the door, or to write their responses on a post-it note that can be displayed in the classroom. If possible, keep track of these items throughout the unit and refer back to them in later lessons when they are addressed.",
+        "name": "Journal"
+      },
+      "seeding_key": {
+        "activity_section.key": "849c750e-8815-4ddf-8ec6-a604abea8708",
+        "lesson_activity.key": "30c8036c-26c8-4623-a327-97baab9d3f89"
+      }
+    },
+    {
+      "key": "f9a08f0e-f9c9-44d7-8f88-7756029b6286",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f9a08f0e-f9c9-44d7-8f88-7756029b6286",
+        "lesson_activity.key": "33a25731-db70-47b9-b262-08d2ed44c6e0"
+      }
+    },
+    {
+      "key": "b5e30935-af92-4a0f-abfd-e39d6c4d48bd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b5e30935-af92-4a0f-abfd-e39d6c4d48bd",
+        "lesson_activity.key": "3f0e1919-0b4c-45e8-b21d-cb7b5d88ddb5"
+      }
+    },
+    {
+      "key": "4886a812-68f8-48da-9932-7eafca8f67b1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4886a812-68f8-48da-9932-7eafca8f67b1",
+        "lesson_activity.key": "e72a557a-8e8c-48b4-a819-61658ee97ff4"
+      }
+    },
+    {
+      "key": "caf26545-d2c1-4bd3-8e2f-4e5cdb11e85c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "caf26545-d2c1-4bd3-8e2f-4e5cdb11e85c",
+        "lesson_activity.key": "9132f280-9c34-48fc-93bc-edc6a4e7148a"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd5_pl_25"
+        ],
+        "progression": "Check-In Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-pulse-survey_csd5_pl_25"
+        ],
+        "lesson.key": "TLO4 - U5L1 Representation Matters",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4",
+        "activity_section.key": "6bcc58aa-8385-436e-b942-9fec7067e52a"
+      },
+      "level_keys": [
+        "intro-pulse-survey_csd5_pl_25"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 L1 - Design Templates_2023a_pl_25"
+        ],
+        "progression": "Physical Design Prototypes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 L1 - Design Templates_2023a_pl_25"
+        ],
+        "lesson.key": "TLO 5 - U6L2 Physical Designs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4",
+        "activity_section.key": "63f5affb-07f5-4ebd-869a-9729ad98f16f"
+      },
+      "level_keys": [
+        "CSD U3 L1 - Design Templates_2023a_pl_25"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd6_pl_25"
+        ],
+        "progression": "Check-In Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-pulse-survey_csd6_pl_25"
+        ],
+        "lesson.key": "TLO 5 - U6L2 Physical Designs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4",
+        "activity_section.key": "92820a20-eab8-4b5c-a2d6-1a4924175df6"
+      },
+      "level_keys": [
+        "intro-pulse-survey_csd6_pl_25"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash_25"
+        ],
+        "progression": "Recognizing Fish"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_FishVTrash_25"
+        ],
+        "lesson.key": "TLO 6 - U7L2 Introduction to Machine Learning",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4",
+        "activity_section.key": "9e7e1970-0dfd-4027-a879-a5c7ea83ab69"
+      },
+      "level_keys": [
+        "Oceans_FishVTrash_25"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_Short_25"
+        ],
+        "progression": "Recognizing Fish Features"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_Short_25"
+        ],
+        "lesson.key": "TLO 6 - U7L2 Introduction to Machine Learning",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4",
+        "activity_section.key": "a29a3b28-7031-4f72-bbaa-ca96d3ad6a0a"
+      },
+      "level_keys": [
+        "Oceans_Short_25"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_Long_25"
+        ],
+        "progression": "Recognizing Expressions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_Long_25"
+        ],
+        "lesson.key": "TLO 6 - U7L2 Introduction to Machine Learning",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4",
+        "activity_section.key": "b98b8da7-a390-464f-b865-5c61919b9679"
+      },
+      "level_keys": [
+        "Oceans_Long_25"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "aiml-intro-pulse-survey_pl_25"
+        ],
+        "progression": "Check-In Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aiml-intro-pulse-survey_pl_25"
+        ],
+        "lesson.key": "TLO 6 - U7L2 Introduction to Machine Learning",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4",
+        "activity_section.key": "5ce3501a-3e04-4551-b54d-c8642dd0f9c7"
+      },
+      "level_keys": [
+        "aiml-intro-pulse-survey_pl_25"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "intro-pulse-survey_csd5_pl_25",
+        "script_level.level_keys": [
+          "intro-pulse-survey_csd5_pl_25"
+        ],
+        "lesson.key": "TLO4 - U5L1 Representation Matters",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4",
+        "activity_section.key": "6bcc58aa-8385-436e-b942-9fec7067e52a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 L1 - Design Templates_2023a_pl_25",
+        "script_level.level_keys": [
+          "CSD U3 L1 - Design Templates_2023a_pl_25"
+        ],
+        "lesson.key": "TLO 5 - U6L2 Physical Designs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4",
+        "activity_section.key": "63f5affb-07f5-4ebd-869a-9729ad98f16f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "intro-pulse-survey_csd6_pl_25",
+        "script_level.level_keys": [
+          "intro-pulse-survey_csd6_pl_25"
+        ],
+        "lesson.key": "TLO 5 - U6L2 Physical Designs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4",
+        "activity_section.key": "92820a20-eab8-4b5c-a2d6-1a4924175df6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_FishVTrash_25",
+        "script_level.level_keys": [
+          "Oceans_FishVTrash_25"
+        ],
+        "lesson.key": "TLO 6 - U7L2 Introduction to Machine Learning",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4",
+        "activity_section.key": "9e7e1970-0dfd-4027-a879-a5c7ea83ab69"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_Short_25",
+        "script_level.level_keys": [
+          "Oceans_Short_25"
+        ],
+        "lesson.key": "TLO 6 - U7L2 Introduction to Machine Learning",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4",
+        "activity_section.key": "a29a3b28-7031-4f72-bbaa-ca96d3ad6a0a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_Long_25",
+        "script_level.level_keys": [
+          "Oceans_Long_25"
+        ],
+        "lesson.key": "TLO 6 - U7L2 Introduction to Machine Learning",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4",
+        "activity_section.key": "b98b8da7-a390-464f-b865-5c61919b9679"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aiml-intro-pulse-survey_pl_25",
+        "script_level.level_keys": [
+          "aiml-intro-pulse-survey_pl_25"
+        ],
+        "lesson.key": "TLO 6 - U7L2 Introduction to Machine Learning",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2025-day4",
+        "activity_section.key": "5ce3501a-3e04-4551-b54d-c8642dd0f9c7"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "[Exemplar] Physical Designs",
+      "url": "https://docs.google.com/document/d/1COKnyGNlEBpB8giiVDPGl-ubK1OEUU3fxYjNIhzpQT4/edit",
+      "key": "_exemplar_physical_designs",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_physical_designs"
+      }
+    },
+    {
+      "name": "(Warm Up) Word Search",
+      "url": "https://docs.google.com/document/d/14hKTZSrP7tnghpJhTLYJNEPeb1CinUaa0KtzRPADji4/edit",
+      "key": "_warm_up_word_search",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "_warm_up_word_search"
+      }
+    },
+    {
+      "name": "Activity Packet",
+      "url": "https://docs.google.com/document/d/1kTFa5JnbxwFPSL37aMOieRZNtcUtL5ObtDdzXiSIiPY/edit?usp=drive_link",
+      "key": "activity_packet",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "activity_packet"
+      }
+    },
+    {
+      "name": "AI: What is Machine Learning?",
+      "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+      "key": "ai_what_is_machine_learning_",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/01-ai-machinelearning-sm-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "ai_what_is_machine_learning_"
+      }
+    },
+    {
+      "name": "Classifying Fish",
+      "url": "https://docs.google.com/document/d/1ZCRVbRA6XLj1tRCzPed5fSGfqGjJ2I1ImES-BTo3GmY/view",
+      "key": "classifying_fish",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "classifying_fish"
+      }
+    },
+    {
+      "name": "CSD In-Person Summer Workshop Day 4 Agenda",
+      "url": "https://docs.google.com/document/d/1VYGCLJDaPl54gGfYK9PBFrY_egAZgOsVvp1zLkb_X4o/edit?usp=drive_link",
+      "key": "csd_in-person_summer_workshop_day_4_agenda",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_in-person_summer_workshop_day_4_agenda"
+      }
+    },
+    {
+      "name": "CSD In-Person Summer Workshop Day 4 Slides",
+      "url": "https://docs.google.com/presentation/d/1y72hWSaYI9iueQrcAvQpyfdcTJBSt1HDJ0XqdhI02ag/edit?usp=drive_link",
+      "key": "csd_in-person_summer_workshop_day_4_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_in-person_summer_workshop_day_4_slides"
+      }
+    },
+    {
+      "name": "Introduction to Machine Learning",
+      "url": "https://docs.google.com/presentation/d/1ZOSt4G-bEqIiFIWFWQjvY54I2YgHlCURXmtX1FYnpFw/template/preview",
+      "key": "introduction_to_machine_learning",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_machine_learning"
+      }
+    },
+    {
+      "name": "Meals Data",
+      "url": "https://docs.google.com/document/d/1nVUNkvIqz4sQjXnr52eBd17Pmi61Ir2aTH6ulVnco9o/edit",
+      "key": "meals_data",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "meals_data"
+      }
+    },
+    {
+      "name": "Physical Design Template ",
+      "url": "https://docs.google.com/presentation/d/14JoHOAylxs6Wxe8i3v1N8FRWoOxKfQDonWcpiGCgLbw/edit",
+      "key": "physical_design_template",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "physical_design_template"
+      }
+    },
+    {
+      "name": "Physical Designs",
+      "url": "https://docs.google.com/document/d/1eZfDCPovs0MMUeR4B6ZFSyC6fmCa9yRY2CtvKvZgP1k/edit#",
+      "key": "physical_designs",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "physical_designs"
+      }
+    },
+    {
+      "name": "Physical Designs",
+      "url": "https://docs.google.com/presentation/d/1huAoWQOJE4k1S-spsESj3IBmI9Xr_laNE-_ibborMwY/template/preview",
+      "key": "physical_designs_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "physical_designs_1"
+      }
+    },
+    {
+      "name": "Problem Solving and Design",
+      "url": "https://docs.google.com/document/d/1qgiwCyO7948qPSWbTvYmR7DjH0nkh8HpfxP1HxubDis/edit?usp=sharing",
+      "key": "problem_solving_and_design",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_and_design"
+      }
+    },
+    {
+      "name": "Representation Matters",
+      "url": "https://docs.google.com/document/d/17LnkRYXZMiyjC9enTcZRp2akfySN_YYmMe8fJRmkF4E/edit",
+      "key": "representation_matters",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "representation_matters"
+      }
+    },
+    {
+      "name": "Representation Matters",
+      "url": "https://docs.google.com/document/d/1wU8QANCmyz_DiJf2vdg2QPqKHq1YE0XDLGJmEsbKfiU/edit?usp=sharing",
+      "key": "representation_matters_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "representation_matters_1"
+      }
+    },
+    {
+      "name": "Representation Matters",
+      "url": "https://docs.google.com/presentation/d/1N7mpiPKdI3vqkkVUY5tCSzngIucLXlzSYr0oL_ONkDI/template/preview",
+      "key": "representation_matters_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "representation_matters_2"
+      }
+    },
+    {
+      "name": "Resource Packet",
+      "url": "https://docs.google.com/document/d/1fuS3Ry9kjWaAoLsPOPLwSWisDp9owU_OcYo6ptuiPsg/edit?usp=drive_link",
+      "key": "resource_packet_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "resource_packet_1"
+      }
+    },
+    {
+      "name": "The Problem Solving Process ",
+      "url": "https://www.youtube.com/watch?v=z7RaFPT3DTE",
+      "key": "the_problem_solving_process",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/problemsolvingprocess-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_problem_solving_process"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 5 - U6L2 Physical Designs",
+        "resource.key": "_exemplar_physical_designs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 5 - U6L2 Physical Designs",
+        "resource.key": "_warm_up_word_search"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 5 - U6L2 Physical Designs",
+        "resource.key": "physical_design_template"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 5 - U6L2 Physical Designs",
+        "resource.key": "physical_designs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 5 - U6L2 Physical Designs",
+        "resource.key": "physical_designs_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 5 - U6L2 Physical Designs",
+        "resource.key": "problem_solving_and_design"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 5 - U6L2 Physical Designs",
+        "resource.key": "the_problem_solving_process"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 6 - U7L2 Introduction to Machine Learning",
+        "resource.key": "ai_what_is_machine_learning_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 6 - U7L2 Introduction to Machine Learning",
+        "resource.key": "classifying_fish"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 6 - U7L2 Introduction to Machine Learning",
+        "resource.key": "introduction_to_machine_learning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO4 - U5L1 Representation Matters",
+        "resource.key": "meals_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO4 - U5L1 Representation Matters",
+        "resource.key": "representation_matters"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO4 - U5L1 Representation Matters",
+        "resource.key": "representation_matters_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO4 - U5L1 Representation Matters",
+        "resource.key": "representation_matters_2"
+      }
+    }
+  ],
+  "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "csd_in-person_summer_workshop_day_4_agenda",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_in-person_summer_workshop_day_4_slides",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    }
+  ],
+  "scripts_student_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "activity_packet",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "resource_packet_1",
+        "script.name": "pl-csd-summer-2025-day4"
+      }
+    }
+  ],
+  "vocabularies": [
+    {
+      "key": "machine_learning",
+      "word": "Machine Learning",
+      "definition": "How computers recognize patterns and make decisions without being explicitly programmed",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "machine_learning"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 6 - U7L2 Introduction to Machine Learning",
+        "vocabulary.key": "machine_learning"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "0c83e03a-cbad-4aa3-aafd-9cea461d9e15",
+      "properties": {
+        "description": "Provide examples of how representing data in different ways can affect its ability to solve different problems."
+      },
+      "seeding_key": {
+        "lesson.key": "TLO4 - U5L1 Representation Matters",
+        "objective.key": "0c83e03a-cbad-4aa3-aafd-9cea461d9e15"
+      }
+    },
+    {
+      "key": "2fde94f5-a3f7-4fe4-8f5f-09ee0fe3ddda",
+      "properties": {
+        "description": "Create a prototype of a physical design to meet the needs of a user using the problem-solving process"
+      },
+      "seeding_key": {
+        "lesson.key": "TLO 5 - U6L2 Physical Designs",
+        "objective.key": "2fde94f5-a3f7-4fe4-8f5f-09ee0fe3ddda"
+      }
+    },
+    {
+      "key": "300ac513-5ca3-452b-83d1-e85691bebfd3",
+      "properties": {
+        "description": "Apply the Problem Solving Process to train a computer to solve a problem"
+      },
+      "seeding_key": {
+        "lesson.key": "TLO 6 - U7L2 Introduction to Machine Learning",
+        "objective.key": "300ac513-5ca3-452b-83d1-e85691bebfd3"
+      }
+    },
+    {
+      "key": "9a3628df-d21a-402b-930f-fb5b65dda73c",
+      "properties": {
+        "description": "Choose the best way to represent some information based on how it will be used."
+      },
+      "seeding_key": {
+        "lesson.key": "TLO4 - U5L1 Representation Matters",
+        "objective.key": "9a3628df-d21a-402b-930f-fb5b65dda73c"
+      }
+    },
+    {
+      "key": "e1d2ffe1-3b29-4318-8ffb-31c35e6ecc18",
+      "properties": {
+        "description": "Identify features of a physical design that match the needs of users"
+      },
+      "seeding_key": {
+        "lesson.key": "TLO 5 - U6L2 Physical Designs",
+        "objective.key": "e1d2ffe1-3b29-4318-8ffb-31c35e6ecc18"
+      }
+    },
+    {
+      "key": "eff05080-4a00-4dc9-ae6f-514bb7be142a",
+      "properties": {
+        "description": "Understand the steps of the problem-solving process "
+      },
+      "seeding_key": {
+        "lesson.key": "TLO 5 - U6L2 Physical Designs",
+        "objective.key": "eff05080-4a00-4dc9-ae6f-514bb7be142a"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 5 - U6L2 Physical Designs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 6 - U7L2 Introduction to Machine Learning",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-ii.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 6 - U7L2 Introduction to Machine Learning",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iv.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 6 - U7L2 Introduction to Machine Learning",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 6 - U7L2 Introduction to Machine Learning",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO4 - U5L1 Representation Matters",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-07"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

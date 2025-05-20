@@ -1,0 +1,1830 @@
+{
+  "script": {
+    "name": "sandbox-csaif-pl-ai",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-05-19 19:53:13 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "sandbox-csaif-pl-ai"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Teaching Problem Solving with AI",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**In this lesson,  you will:** \n\n- Get an overview of the Problem Solving with AI curriculum and resources.\n\n**Suggested Time:** 10 minutes ",
+        "student_overview": "**In this lesson,  you will:** \n\n- Get an overview of the Problem Solving with AI curriculum and resources.\n\n**Suggested Time:** 10 minutes "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Lesson Exploration",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**In this lesson,  you will:** \n\n- Understand core AI concepts, including the iterative cycle of testing, analyzing, and improving AI-generated outputs.\n- Preview activities in the lessons.\n- Explore best practices for teaching AI.\n\n**Suggested Time:** 50 minutes ",
+        "student_overview": "**In this lesson,  you will:** \n\n- Understand core AI concepts, including the iterative cycle of testing, analyzing, and improving AI-generated outputs.\n- Preview activities in the lessons.\n- Explore best practices for teaching AI.\n\n**Suggested Time:** 50 minutes "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "ced46d73-8cc6-4551-9a27-71cb5f62793f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ced46d73-8cc6-4551-9a27-71cb5f62793f",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai"
+      }
+    },
+    {
+      "key": "7bc7e70e-fcc2-48cd-a444-a07cf1a7ab69",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7bc7e70e-fcc2-48cd-a444-a07cf1a7ab69",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "1172943a-1fd1-479f-8e7c-638664601590",
+      "position": 1,
+      "properties": {
+        "progression_name": "Course Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "1172943a-1fd1-479f-8e7c-638664601590",
+        "lesson_activity.key": "ced46d73-8cc6-4551-9a27-71cb5f62793f"
+      }
+    },
+    {
+      "key": "06927218-c7b9-4389-b51a-e723914bc0d4",
+      "position": 2,
+      "properties": {
+        "progression_name": "Intro to AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "06927218-c7b9-4389-b51a-e723914bc0d4",
+        "lesson_activity.key": "ced46d73-8cc6-4551-9a27-71cb5f62793f"
+      }
+    },
+    {
+      "key": "0f269e1f-d54b-430a-9467-f85027e7202d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Getting Started with AI Chat"
+      },
+      "seeding_key": {
+        "activity_section.key": "0f269e1f-d54b-430a-9467-f85027e7202d",
+        "lesson_activity.key": "7bc7e70e-fcc2-48cd-a444-a07cf1a7ab69"
+      }
+    },
+    {
+      "key": "fabfaefc-0fff-4687-bd4e-cb26d746de98",
+      "position": 2,
+      "properties": {
+        "progression_name": "Prompting in AI Chat"
+      },
+      "seeding_key": {
+        "activity_section.key": "fabfaefc-0fff-4687-bd4e-cb26d746de98",
+        "lesson_activity.key": "7bc7e70e-fcc2-48cd-a444-a07cf1a7ab69"
+      }
+    },
+    {
+      "key": "dc8bab06-475b-4c43-8913-8c80e603c945",
+      "position": 3,
+      "properties": {
+        "progression_name": "Using AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "dc8bab06-475b-4c43-8913-8c80e603c945",
+        "lesson_activity.key": "7bc7e70e-fcc2-48cd-a444-a07cf1a7ab69"
+      }
+    },
+    {
+      "key": "35622890-42ea-4c13-a1c0-bf4208a681a1",
+      "position": 4,
+      "properties": {
+        "progression_name": "Final Project and Wrap-Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "35622890-42ea-4c13-a1c0-bf4208a681a1",
+        "lesson_activity.key": "7bc7e70e-fcc2-48cd-a444-a07cf1a7ab69"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_00"
+        ],
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_01_00"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "1172943a-1fd1-479f-8e7c-638664601590"
+      },
+      "level_keys": [
+        "csaif_pl_ai_01_00"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_01"
+        ],
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_01_01"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "1172943a-1fd1-479f-8e7c-638664601590"
+      },
+      "level_keys": [
+        "csaif_pl_ai_01_01"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_into_03"
+        ],
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_03"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "1172943a-1fd1-479f-8e7c-638664601590"
+      },
+      "level_keys": [
+        "csaif_pl_ai_into_03"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_into_04"
+        ],
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_04"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "1172943a-1fd1-479f-8e7c-638664601590"
+      },
+      "level_keys": [
+        "csaif_pl_ai_into_04"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_into_05"
+        ],
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_05"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "1172943a-1fd1-479f-8e7c-638664601590"
+      },
+      "level_keys": [
+        "csaif_pl_ai_into_05"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_into_06"
+        ],
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_06"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "1172943a-1fd1-479f-8e7c-638664601590"
+      },
+      "level_keys": [
+        "csaif_pl_ai_into_06"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_career_AI"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "1172943a-1fd1-479f-8e7c-638664601590"
+      },
+      "level_keys": [
+        "csaif_pl_nets_career_AI"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_AI_chatbot_overview_ai"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "1172943a-1fd1-479f-8e7c-638664601590"
+      },
+      "level_keys": [
+        "csaif_pl_AI_chatbot_overview_ai"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_into_07"
+        ],
+        "progression": "Intro to AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_07"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "06927218-c7b9-4389-b51a-e723914bc0d4"
+      },
+      "level_keys": [
+        "csaif_pl_ai_into_07"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_into_08b"
+        ],
+        "progression": "Intro to AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_08b"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "06927218-c7b9-4389-b51a-e723914bc0d4"
+      },
+      "level_keys": [
+        "csaif_pl_ai_into_08b"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_into_09"
+        ],
+        "progression": "Intro to AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_09"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "06927218-c7b9-4389-b51a-e723914bc0d4"
+      },
+      "level_keys": [
+        "csaif_pl_ai_into_09"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_into_12"
+        ],
+        "progression": "Intro to AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_12"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "06927218-c7b9-4389-b51a-e723914bc0d4"
+      },
+      "level_keys": [
+        "csaif_pl_ai_into_12"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_00b"
+        ],
+        "progression": "Getting Started with AI Chat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_00b"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "0f269e1f-d54b-430a-9467-f85027e7202d"
+      },
+      "level_keys": [
+        "csaif_pl_ai_00b"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01"
+        ],
+        "progression": "Getting Started with AI Chat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_01"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "0f269e1f-d54b-430a-9467-f85027e7202d"
+      },
+      "level_keys": [
+        "csaif_pl_ai_01"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_02"
+        ],
+        "progression": "Getting Started with AI Chat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_01_02"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "0f269e1f-d54b-430a-9467-f85027e7202d"
+      },
+      "level_keys": [
+        "csaif_pl_ai_01_02"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_03b"
+        ],
+        "progression": "Getting Started with AI Chat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_01_03b"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "0f269e1f-d54b-430a-9467-f85027e7202d"
+      },
+      "level_keys": [
+        "csaif_pl_ai_01_03b"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_04"
+        ],
+        "progression": "Getting Started with AI Chat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_01_04"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "0f269e1f-d54b-430a-9467-f85027e7202d"
+      },
+      "level_keys": [
+        "csaif_pl_ai_01_04"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_05"
+        ],
+        "progression": "Getting Started with AI Chat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_01_05"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "0f269e1f-d54b-430a-9467-f85027e7202d"
+      },
+      "level_keys": [
+        "csaif_pl_ai_01_05"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_07b"
+        ],
+        "progression": "Getting Started with AI Chat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_01_07b"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "0f269e1f-d54b-430a-9467-f85027e7202d"
+      },
+      "level_keys": [
+        "csaif_pl_ai_01_07b"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_08"
+        ],
+        "progression": "Getting Started with AI Chat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_01_08"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "0f269e1f-d54b-430a-9467-f85027e7202d"
+      },
+      "level_keys": [
+        "csaif_pl_ai_01_08"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_09"
+        ],
+        "progression": "Getting Started with AI Chat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_01_09"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "0f269e1f-d54b-430a-9467-f85027e7202d"
+      },
+      "level_keys": [
+        "csaif_pl_ai_01_09"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02_03b"
+        ],
+        "progression": "Getting Started with AI Chat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_02_03b"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "0f269e1f-d54b-430a-9467-f85027e7202d"
+      },
+      "level_keys": [
+        "csaif_pl_ai_02_03b"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02"
+        ],
+        "progression": "Prompting in AI Chat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_02"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "fabfaefc-0fff-4687-bd4e-cb26d746de98"
+      },
+      "level_keys": [
+        "csaif_pl_ai_02"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 12,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02_04b"
+        ],
+        "progression": "Prompting in AI Chat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_02_04b"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "fabfaefc-0fff-4687-bd4e-cb26d746de98"
+      },
+      "level_keys": [
+        "csaif_pl_ai_02_04b"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 13,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02_05"
+        ],
+        "progression": "Prompting in AI Chat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_02_05"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "fabfaefc-0fff-4687-bd4e-cb26d746de98"
+      },
+      "level_keys": [
+        "csaif_pl_ai_02_05"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 14,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02_06b"
+        ],
+        "progression": "Prompting in AI Chat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_02_06b"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "fabfaefc-0fff-4687-bd4e-cb26d746de98"
+      },
+      "level_keys": [
+        "csaif_pl_ai_02_06b"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 15,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02_07"
+        ],
+        "progression": "Prompting in AI Chat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_02_07"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "fabfaefc-0fff-4687-bd4e-cb26d746de98"
+      },
+      "level_keys": [
+        "csaif_pl_ai_02_07"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 16,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02_08"
+        ],
+        "progression": "Prompting in AI Chat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_02_08"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "fabfaefc-0fff-4687-bd4e-cb26d746de98"
+      },
+      "level_keys": [
+        "csaif_pl_ai_02_08"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 17,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03c"
+        ],
+        "progression": "Using AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_03c"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "dc8bab06-475b-4c43-8913-8c80e603c945"
+      },
+      "level_keys": [
+        "csaif_pl_ai_03c"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 18,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_02"
+        ],
+        "progression": "Using AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_02"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "dc8bab06-475b-4c43-8913-8c80e603c945"
+      },
+      "level_keys": [
+        "csaif_pl_ai_03_02"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 19,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_03c"
+        ],
+        "progression": "Using AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_03c"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "dc8bab06-475b-4c43-8913-8c80e603c945"
+      },
+      "level_keys": [
+        "csaif_pl_ai_03_03c"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 20,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_04b"
+        ],
+        "progression": "Using AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_04b"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "dc8bab06-475b-4c43-8913-8c80e603c945"
+      },
+      "level_keys": [
+        "csaif_pl_ai_03_04b"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 21,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_05"
+        ],
+        "progression": "Using AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_05"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "dc8bab06-475b-4c43-8913-8c80e603c945"
+      },
+      "level_keys": [
+        "csaif_pl_ai_03_05"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 22,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_06"
+        ],
+        "progression": "Using AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_06"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "dc8bab06-475b-4c43-8913-8c80e603c945"
+      },
+      "level_keys": [
+        "csaif_pl_ai_03_06"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 23,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_07"
+        ],
+        "progression": "Using AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_07"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "dc8bab06-475b-4c43-8913-8c80e603c945"
+      },
+      "level_keys": [
+        "csaif_pl_ai_03_07"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 24,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_08"
+        ],
+        "progression": "Using AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_08"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "dc8bab06-475b-4c43-8913-8c80e603c945"
+      },
+      "level_keys": [
+        "csaif_pl_ai_03_08"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 25,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_09"
+        ],
+        "progression": "Using AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_09"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "dc8bab06-475b-4c43-8913-8c80e603c945"
+      },
+      "level_keys": [
+        "csaif_pl_ai_03_09"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 26,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_10"
+        ],
+        "progression": "Using AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_10"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "dc8bab06-475b-4c43-8913-8c80e603c945"
+      },
+      "level_keys": [
+        "csaif_pl_ai_03_10"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 27,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_11"
+        ],
+        "progression": "Using AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_11"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "dc8bab06-475b-4c43-8913-8c80e603c945"
+      },
+      "level_keys": [
+        "csaif_pl_ai_03_11"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 28,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_04_01"
+        ],
+        "progression": "Final Project and Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_04_01"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "35622890-42ea-4c13-a1c0-bf4208a681a1"
+      },
+      "level_keys": [
+        "csaif_pl_ai_04_01"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 29,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_04_02"
+        ],
+        "progression": "Final Project and Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_04_02"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "35622890-42ea-4c13-a1c0-bf4208a681a1"
+      },
+      "level_keys": [
+        "csaif_pl_ai_04_02"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 30,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_04_03"
+        ],
+        "progression": "Final Project and Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_04_03"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "35622890-42ea-4c13-a1c0-bf4208a681a1"
+      },
+      "level_keys": [
+        "csaif_pl_ai_04_03"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 31,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_04_04"
+        ],
+        "progression": "Final Project and Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_04_04"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "35622890-42ea-4c13-a1c0-bf4208a681a1"
+      },
+      "level_keys": [
+        "csaif_pl_ai_04_04"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 32,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_04_05"
+        ],
+        "progression": "Final Project and Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_04_05"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "35622890-42ea-4c13-a1c0-bf4208a681a1"
+      },
+      "level_keys": [
+        "csaif_pl_ai_04_05"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_01_00",
+        "script_level.level_keys": [
+          "csaif_pl_ai_01_00"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "1172943a-1fd1-479f-8e7c-638664601590"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_01_01",
+        "script_level.level_keys": [
+          "csaif_pl_ai_01_01"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "1172943a-1fd1-479f-8e7c-638664601590"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_into_03",
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_03"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "1172943a-1fd1-479f-8e7c-638664601590"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_into_04",
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_04"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "1172943a-1fd1-479f-8e7c-638664601590"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_into_05",
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_05"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "1172943a-1fd1-479f-8e7c-638664601590"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_into_06",
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_06"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "1172943a-1fd1-479f-8e7c-638664601590"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_career_AI",
+        "script_level.level_keys": [
+          "csaif_pl_nets_career_AI"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "1172943a-1fd1-479f-8e7c-638664601590"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_AI_chatbot_overview_ai",
+        "script_level.level_keys": [
+          "csaif_pl_AI_chatbot_overview_ai"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "1172943a-1fd1-479f-8e7c-638664601590"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_into_07",
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_07"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "06927218-c7b9-4389-b51a-e723914bc0d4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_into_08b",
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_08b"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "06927218-c7b9-4389-b51a-e723914bc0d4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_into_09",
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_09"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "06927218-c7b9-4389-b51a-e723914bc0d4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_into_12",
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_12"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "06927218-c7b9-4389-b51a-e723914bc0d4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_00b",
+        "script_level.level_keys": [
+          "csaif_pl_ai_00b"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "0f269e1f-d54b-430a-9467-f85027e7202d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_01",
+        "script_level.level_keys": [
+          "csaif_pl_ai_01"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "0f269e1f-d54b-430a-9467-f85027e7202d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_01_02",
+        "script_level.level_keys": [
+          "csaif_pl_ai_01_02"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "0f269e1f-d54b-430a-9467-f85027e7202d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_01_03b",
+        "script_level.level_keys": [
+          "csaif_pl_ai_01_03b"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "0f269e1f-d54b-430a-9467-f85027e7202d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_01_04",
+        "script_level.level_keys": [
+          "csaif_pl_ai_01_04"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "0f269e1f-d54b-430a-9467-f85027e7202d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_01_05",
+        "script_level.level_keys": [
+          "csaif_pl_ai_01_05"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "0f269e1f-d54b-430a-9467-f85027e7202d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_01_07b",
+        "script_level.level_keys": [
+          "csaif_pl_ai_01_07b"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "0f269e1f-d54b-430a-9467-f85027e7202d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_01_08",
+        "script_level.level_keys": [
+          "csaif_pl_ai_01_08"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "0f269e1f-d54b-430a-9467-f85027e7202d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_01_09",
+        "script_level.level_keys": [
+          "csaif_pl_ai_01_09"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "0f269e1f-d54b-430a-9467-f85027e7202d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_02_03b",
+        "script_level.level_keys": [
+          "csaif_pl_ai_02_03b"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "0f269e1f-d54b-430a-9467-f85027e7202d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_02",
+        "script_level.level_keys": [
+          "csaif_pl_ai_02"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "fabfaefc-0fff-4687-bd4e-cb26d746de98"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_02_04b",
+        "script_level.level_keys": [
+          "csaif_pl_ai_02_04b"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "fabfaefc-0fff-4687-bd4e-cb26d746de98"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_02_05",
+        "script_level.level_keys": [
+          "csaif_pl_ai_02_05"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "fabfaefc-0fff-4687-bd4e-cb26d746de98"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_02_06b",
+        "script_level.level_keys": [
+          "csaif_pl_ai_02_06b"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "fabfaefc-0fff-4687-bd4e-cb26d746de98"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_02_07",
+        "script_level.level_keys": [
+          "csaif_pl_ai_02_07"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "fabfaefc-0fff-4687-bd4e-cb26d746de98"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_02_08",
+        "script_level.level_keys": [
+          "csaif_pl_ai_02_08"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "fabfaefc-0fff-4687-bd4e-cb26d746de98"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_03c",
+        "script_level.level_keys": [
+          "csaif_pl_ai_03c"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "dc8bab06-475b-4c43-8913-8c80e603c945"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_03_02",
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_02"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "dc8bab06-475b-4c43-8913-8c80e603c945"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_03_03c",
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_03c"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "dc8bab06-475b-4c43-8913-8c80e603c945"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_03_04b",
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_04b"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "dc8bab06-475b-4c43-8913-8c80e603c945"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_03_05",
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_05"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "dc8bab06-475b-4c43-8913-8c80e603c945"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_03_06",
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_06"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "dc8bab06-475b-4c43-8913-8c80e603c945"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_03_07",
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_07"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "dc8bab06-475b-4c43-8913-8c80e603c945"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_03_08",
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_08"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "dc8bab06-475b-4c43-8913-8c80e603c945"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_03_09",
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_09"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "dc8bab06-475b-4c43-8913-8c80e603c945"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_03_10",
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_10"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "dc8bab06-475b-4c43-8913-8c80e603c945"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_03_11",
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_11"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "dc8bab06-475b-4c43-8913-8c80e603c945"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_04_01",
+        "script_level.level_keys": [
+          "csaif_pl_ai_04_01"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "35622890-42ea-4c13-a1c0-bf4208a681a1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_04_02",
+        "script_level.level_keys": [
+          "csaif_pl_ai_04_02"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "35622890-42ea-4c13-a1c0-bf4208a681a1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_04_03",
+        "script_level.level_keys": [
+          "csaif_pl_ai_04_03"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "35622890-42ea-4c13-a1c0-bf4208a681a1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_04_04",
+        "script_level.level_keys": [
+          "csaif_pl_ai_04_04"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "35622890-42ea-4c13-a1c0-bf4208a681a1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_04_05",
+        "script_level.level_keys": [
+          "csaif_pl_ai_04_05"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "35622890-42ea-4c13-a1c0-bf4208a681a1"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

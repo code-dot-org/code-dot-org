@@ -125,7 +125,7 @@ class Pd::Enrollment < ApplicationRecord
 
   # Any enrollment with attendance, for an ended workshop, has a survey.
   # Except for FiT workshops - no exit surveys for them!
-  # This scope is used in ProfessionalLearningLandingController to direct the teacher
+  # This scope is used in ProfessionalLearningController to direct the teacher
   #   to their latest pending survey.
   scope :with_surveys, (lambda do
     for_ended_workshops.
@@ -213,6 +213,16 @@ class Pd::Enrollment < ApplicationRecord
     return unless (mailer = Pd::WorkshopMailer.exit_survey(self))
 
     mailer.deliver_now
+
+    # Also send to the user's alternate summer email if they entered it in their application and
+    # it's for a summer workshop.
+    if workshop.subject == SUBJECT_SUMMER_WORKSHOP
+      alt_summer_email = user&.alternate_email
+      if alt_summer_email.present?
+        Pd::WorkshopMailer.exit_survey(self, alt_summer_email).deliver_now
+      end
+    end
+
     update!(survey_sent_at: Time.zone.now)
   end
 

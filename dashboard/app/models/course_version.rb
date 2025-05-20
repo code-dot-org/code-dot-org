@@ -28,8 +28,10 @@ class CourseVersion < ApplicationRecord
   has_many :vocabularies
   has_many :reference_guides
 
-  attr_readonly :content_root_type
-  attr_readonly :content_root_id
+  unless ENV.fetch('MIGRATE_STANDALONE_UNITS', nil)
+    attr_readonly :content_root_type
+    attr_readonly :content_root_id
+  end
 
   KEY_CHAR_RE = /[a-z0-9\-]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
@@ -73,6 +75,14 @@ class CourseVersion < ApplicationRecord
   delegate :included_in_units?, to: :content_root, allow_nil: true
   delegate :link, to: :content_root, allow_nil: false
   delegate :localized_assignment_family_title, to: :content_root, allow_nil: false
+
+  before_destroy :ensure_no_resources
+
+  def ensure_no_resources
+    if resources.any? || vocabularies.any? || reference_guides.any?
+      raise ActiveRecord::RecordNotDestroyed, "Cannot delete CourseVersion with resources, vocabularies, or reference guides"
+    end
+  end
 
   # Seeding method for creating / updating / deleting the CourseVersion for the given
   # potential content root, i.e. a Unit or UnitGroup.
@@ -180,7 +190,11 @@ class CourseVersion < ApplicationRecord
   # See fakeCoursesWithProgress in teacherDashboardTestHelpers.js for an example of what
   # the resulting data looks like
   def self.courses_for_unit_selector(unit_ids)
-    CourseOffering.single_unit_course_offerings_containing_units_info(unit_ids).concat(CourseVersion.unit_group_course_versions_with_units_info(unit_ids)).sort_by {|c| c[:display_name]}
+    standalone_units = Unit.joins(:course_version).where(id: unit_ids).map {|u| u.course_version.course_offering&.summarize_for_unit_selector(unit_ids)}.compact.uniq
+
+    unit_groups =  Unit.joins(unit_groups: :course_version).where(id: unit_ids).where(course_version: {content_root_type: 'UnitGroup'}).flat_map {|u| u.unit_groups.map(&:course_version)}.map(&:summarize_for_unit_selector).uniq
+
+    standalone_units.concat(unit_groups).sort_by {|c| c[:display_name]}
   end
 
   def summarize_for_assignment_dropdown(user, locale_code)
@@ -201,14 +215,6 @@ class CourseVersion < ApplicationRecord
         units: units.select {|u| u.course_assignable?(user)}.map(&:summarize_for_assignment_dropdown).to_h
       }
     ]
-  end
-
-  def self.unit_group_course_versions_with_units(unit_ids)
-    CourseVersion.where(content_root_type: 'UnitGroup').all.select {|cv| cv.included_in_units?(unit_ids)}
-  end
-
-  def self.unit_group_course_versions_with_units_info(unit_ids)
-    unit_group_course_versions_with_units(unit_ids).map(&:summarize_for_unit_selector)
   end
 
   def summarize_for_unit_selector

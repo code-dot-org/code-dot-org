@@ -17,6 +17,7 @@ import reducer, {
   setRosterProvider,
   setCourseOfferings,
   setSections,
+  setSectionOrder,
   selectSection,
   beginCreatingSection,
   beginEditingSection,
@@ -47,6 +48,7 @@ import {
   sortedSectionsList,
   sortSectionsList,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {assert, expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
@@ -79,6 +81,7 @@ const sections = [
     course_version_id: 3,
     script: {name: null},
     unitName: null,
+    unitPosition: null,
     unit_id: null,
     isAssignedStandaloneCourse: false,
     createdAt: createdAt,
@@ -86,7 +89,7 @@ const sections = [
     hidden: false,
     restrict_section: false,
     post_milestone_disabled: false,
-    section_instructors: [
+    sectionInstructors: [
       {
         id: 1,
         status: 'accepted',
@@ -94,6 +97,13 @@ const sections = [
         instructor_email: 'teacher@code.org',
       },
     ],
+    primaryInstructor: {
+      name: 'teacher',
+      email: 'teacher@code.org',
+      ltiRosterSyncEnabled: false,
+    },
+    avatar_color: 1,
+    avatar_emoji: 1,
   },
   {
     id: 12,
@@ -119,6 +129,7 @@ const sections = [
       version_id: 2017,
     },
     unitName: 'coursea-2017',
+    unitPosition: 1,
     unit_id: null,
     isAssignedStandaloneCourse: true,
     script: {name: null},
@@ -127,7 +138,7 @@ const sections = [
     hidden: false,
     restrict_section: false,
     post_milestone_disabled: false,
-    section_instructors: [
+    sectionInstructors: [
       {
         id: 2,
         status: 'accepted',
@@ -141,6 +152,63 @@ const sections = [
         instructor_email: 'coteacher@code.org',
       },
     ],
+    primaryInstructor: {
+      name: 'teacher',
+      email: 'teacher@code.org',
+      ltiRosterSyncEnabled: false,
+    },
+    avatar_color: 1,
+    avatar_emoji: 1,
+  },
+  {
+    id: 13,
+    location: '/v2/sections/13',
+    name: 'My Single-Unit Course Section',
+    courseVersionName: 'Single Unit Course 2026',
+    course_display_name: 'Single Unit Course',
+    login_type: 'picture',
+    participant_type: 'student',
+    grades: ['11'],
+    code: 'FPNZLN',
+    lesson_extras: false,
+    tts_autoplay_enabled: false,
+    pairing_allowed: true,
+    sharing_disabled: false,
+    course_offering_id: 10,
+    course_version_id: 14,
+    course: {
+      lesson_extras_available: true,
+      text_to_speech_enabled: false,
+      course_offering_id: 10,
+      unit_id: 18,
+      version_id: 14,
+    },
+    unitName: 'Single Unit 2026',
+    unitPosition: 1,
+    unit_id: 18,
+    isAssignedStandaloneCourse: false,
+    is_assigned_single_unit_course: true,
+    script: {id: 18, name: 'Single Unit 2026'},
+    createdAt: createdAt,
+    studentCount: 1,
+    hidden: false,
+    restrict_section: false,
+    post_milestone_disabled: false,
+    sectionInstructors: [
+      {
+        id: 2,
+        status: 'accepted',
+        instructor_name: 'teacher',
+        instructor_email: 'teacher@code.org',
+      },
+    ],
+    primaryInstructor: {
+      name: 'teacher',
+      email: 'teacher@code.org',
+      ltiRosterSyncEnabled: false,
+    },
+    avatar_color: 1,
+    avatar_emoji: 1,
   },
   {
     id: 307,
@@ -159,6 +227,7 @@ const sections = [
     course_offering_id: 3,
     course_version_id: 5,
     unitName: null,
+    unitPosition: 1,
     unit_id: 7,
     isAssignedStandaloneCourse: false,
     script: {name: null},
@@ -167,7 +236,7 @@ const sections = [
     hidden: false,
     restrict_section: false,
     post_milestone_disabled: false,
-    section_instructors: [
+    sectionInstructors: [
       {
         id: 4,
         status: 'accepted',
@@ -175,8 +244,15 @@ const sections = [
         instructor_email: 'teacher@code.org',
       },
     ],
+    primaryInstructor: {
+      name: 'teacher',
+      email: 'teacher@code.org',
+      ltiRosterSyncEnabled: false,
+    },
     at_risk_age_gated_date: undefined,
     at_risk_age_gated_us_state: undefined,
+    avatar_color: 1,
+    avatar_emoji: 1,
   },
 ];
 
@@ -246,15 +322,21 @@ describe('teacherSectionsRedux', () => {
     it('adds an id for each section', () => {
       const action = setSections(sections);
       const nextState = reducer(startState, action);
-      assert.deepEqual(nextState.sectionIds, [11, 12, 307]);
+      assert.deepEqual(nextState.sectionIds, [11, 12, 13, 307]);
     });
 
     it('groups our sections by id', () => {
       const action = setSections(sections);
       const nextState = reducer(startState, action);
-      assert.deepEqual(Object.keys(nextState.sections), ['11', '12', '307']);
+      assert.deepEqual(Object.keys(nextState.sections), [
+        '11',
+        '12',
+        '13',
+        '307',
+      ]);
       assert.strictEqual(nextState.sections[11].id, 11);
       assert.strictEqual(nextState.sections[12].id, 12);
+      assert.strictEqual(nextState.sections[13].id, 13);
       assert.strictEqual(nextState.sections[307].id, 307);
     });
 
@@ -432,7 +514,6 @@ describe('teacherSectionsRedux', () => {
       });
     });
   });
-
   describe('beginEditingSection', () => {
     it('populates sectionBeingEdited if no section provided', () => {
       assert.isNull(initialState.sectionBeingEdited);
@@ -492,8 +573,10 @@ describe('teacherSectionsRedux', () => {
           textToSpeechEnabled: false,
         },
         unitName: 'coursea-2017',
+        unitPosition: 1,
         unitId: null,
         isAssignedStandaloneCourse: true,
+        isAssignedSingleUnitCourse: undefined,
         courseId: undefined,
         createdAt: createdAt,
         studentCount: 1,
@@ -506,21 +589,28 @@ describe('teacherSectionsRedux', () => {
           {
             id: 2,
             status: 'accepted',
-            instructor_name: 'teacher',
-            instructor_email: 'teacher@code.org',
+            instructorName: 'teacher',
+            instructorEmail: 'teacher@code.org',
           },
           {
             id: 3,
             status: 'invited',
-            instructor_name: 'coteacher',
-            instructor_email: 'coteacher@code.org',
+            instructorName: 'coteacher',
+            instructorEmail: 'coteacher@code.org',
           },
         ],
+        primaryInstructor: {
+          name: 'teacher',
+          email: 'teacher@code.org',
+          ltiRosterSyncEnabled: false,
+        },
         syncEnabled: undefined,
         aiTutorEnabled: undefined,
         anyStudentHasProgress: undefined,
         atRiskAgeGatedDate: null,
         atRiskAgeGatedUsState: undefined,
+        avatar_color: 1,
+        avatar_emoji: 1,
       });
     });
   });
@@ -807,7 +897,19 @@ describe('teacherSectionsRedux', () => {
           login_type: 'picture',
           grades: ['3'],
           participantType: 'student',
-          section_instructors: [],
+          sectionInstructors: [
+            {
+              id: 1,
+              status: 'accepted',
+              instructor_name: 'teacher',
+              instructor_email: 'teacher@code.org',
+            },
+          ],
+          primaryInstructor: {
+            name: 'teacher',
+            email: 'teacher@code.org',
+            ltiRosterSyncEnabled: false,
+          },
         })
       );
 
@@ -836,9 +938,11 @@ describe('teacherSectionsRedux', () => {
           courseVersionId: undefined,
           courseDisplayName: undefined,
           unitName: undefined,
+          unitPosition: undefined,
           unitId: undefined,
           course: null,
           isAssignedStandaloneCourse: undefined,
+          isAssignedSingleUnitCourse: undefined,
           courseId: undefined,
           createdAt: createdAt,
           hidden: false,
@@ -846,12 +950,26 @@ describe('teacherSectionsRedux', () => {
           postMilestoneDisabled: false,
           codeReviewExpiresAt: null,
           isAssignedCSA: undefined,
-          sectionInstructors: [],
+          sectionInstructors: [
+            {
+              id: 1,
+              status: 'accepted',
+              instructorName: 'teacher',
+              instructorEmail: 'teacher@code.org',
+            },
+          ],
+          primaryInstructor: {
+            name: 'teacher',
+            email: 'teacher@code.org',
+            ltiRosterSyncEnabled: false,
+          },
           syncEnabled: undefined,
           aiTutorEnabled: false,
           anyStudentHasProgress: undefined,
           atRiskAgeGatedDate: null,
           atRiskAgeGatedUsState: undefined,
+          avatar_color: undefined,
+          avatar_emoji: undefined,
         },
       });
     });
@@ -1731,6 +1849,10 @@ describe('teacherSectionsRedux', () => {
           name: 'My Third Section',
         },
         {
+          id: 13,
+          name: 'My Single-Unit Course Section',
+        },
+        {
           id: 12,
           name: 'My Other Section',
         },
@@ -1748,7 +1870,7 @@ describe('teacherSectionsRedux', () => {
       const sectionState = reducer(initialState, setSections(sections));
       const state = reducer(sectionState, setCourseOfferings(courseOfferings));
 
-      const data = getSectionRows({teacherSections: state}, [11, 12]);
+      const data = getSectionRows({teacherSections: state}, [11, 12, 13]);
       const expected = [
         {
           id: 11,
@@ -1766,6 +1888,7 @@ describe('teacherSectionsRedux', () => {
           hidden: false,
           assignmentNames: ['CS Discoveries 2017'],
           assignmentPaths: ['/courses/csd-2017'],
+          isAssignedSingleUnitCourse: undefined,
         },
         {
           id: 12,
@@ -1783,6 +1906,25 @@ describe('teacherSectionsRedux', () => {
           hidden: false,
           assignmentNames: ['Course A'],
           assignmentPaths: ['/s/coursea-2017'],
+          isAssignedSingleUnitCourse: undefined,
+        },
+        {
+          id: 13,
+          name: 'My Single-Unit Course Section',
+          courseVersionName: 'Single Unit Course 2026',
+          courseDisplayName: 'Single Unit Course',
+          loginType: 'picture',
+          loginTypeName: undefined,
+          studentCount: 1,
+          code: 'FPNZLN',
+          courseOfferingsAreLoaded: true,
+          grades: ['11'],
+          participantType: 'student',
+          providerManaged: false,
+          hidden: false,
+          assignmentNames: ['Single Unit Course 2026'],
+          assignmentPaths: ['/courses/single-unit-course-2026'],
+          isAssignedSingleUnitCourse: true,
         },
       ];
       assert.deepEqual(data, expected);
@@ -1803,6 +1945,43 @@ describe('teacherSectionsRedux', () => {
     it('sorts an array of sections by descending id', () => {
       const expected = sections.reverse();
       assert.deepEqual(sortSectionsList(sections), expected);
+    });
+  });
+
+  describe('setSectionOrder', () => {
+    let putSpy;
+
+    beforeEach(() => {
+      putSpy = sinon
+        .stub(HttpClient, 'put')
+        .returns(Promise.resolve(new Response()));
+    });
+
+    afterEach(() => {
+      putSpy.restore();
+    });
+
+    it('sets the order of sections', () => {
+      const state = reducer(initialState, setSections(sections));
+      const orderedSections = [11, 12, 13, 307];
+      const newState = reducer(state, setSectionOrder(orderedSections));
+      assert.deepEqual(newState.sectionOrder, orderedSections);
+    });
+
+    it('saves the order of sections to the BE if order is different', () => {
+      const state = reducer(initialState, setSections(sections));
+      const orderedSections = [11, 12, 13];
+      const newState = reducer(state, setSectionOrder(orderedSections, true));
+      assert.deepEqual(newState.sectionOrder, [307, ...orderedSections]);
+      expect(putSpy).to.be.called.once;
+    });
+
+    it('does not save the order of sections to the BE if order is the same', () => {
+      const state = reducer(initialState, setSections(sections));
+      const orderedSections = [11, 12, 13, 307];
+      const newState = reducer(state, setSectionOrder(orderedSections, true));
+      assert.deepEqual(newState.sectionOrder, orderedSections);
+      expect(putSpy).not.to.be.called;
     });
   });
 

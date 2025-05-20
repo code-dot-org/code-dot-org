@@ -1,0 +1,40 @@
+@import '@code-dot-org/component-library-styles/colors.scss';
+
+.sessionRow {
+  align-items: flex-end;
+  margin-bottom: 1rem;
+
+  div.deleteButtonContainer {
+    flex: 0;
+    height: 2rem;
+    min-width: 2rem;
+
+    button.deleteButton {
+      min-width: 100%;
+      // specific margin top needed is to align delete button with inputs.
+      // top align would align it with the input label and bottom align
+      // would align it with the input helper/error messages
+      margin-top: 1.354rem;
+      height: 100%;
+    }
+  }
+
+  .timeDropdown {
+    > div::after {
+      display: none;
+    }
+
+    > div > i {
+      inset-inline-end: 0.5rem;
+      inset-inline-start: unset;
+    }
+
+    > div > select {
+      padding-inline-start: 1rem;
+    }
+  }
+}
+
+.addDateButton {
+  border: 1px dashed var(--borders-neutral-primary);
+}

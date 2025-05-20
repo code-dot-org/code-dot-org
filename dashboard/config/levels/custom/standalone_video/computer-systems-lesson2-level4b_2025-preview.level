@@ -1,0 +1,26 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2025-03-22T02:20:24.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "uses_lab2": true,
+    "background": "music-black",
+    "encrypted": "false",
+    "video_key": "csaif-pilot-music-producer",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "video_full_width": true,
+    "name_suffix": "_2025-preview",
+    "display_name": "Music Producer",
+    "bubble_choice_description": "Learn how this music producer decreased the load on his CPU.",
+    "thumbnail_url": "https://images.code.org/4a09ab805c2409ff94f76c7b3fabc816-Icon Template (6).png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-22T02:20:24.217+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson2-level4b_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson2-level4b_2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

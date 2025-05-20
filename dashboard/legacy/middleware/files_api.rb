@@ -23,6 +23,10 @@ class FilesApi < Sinatra::Base
   # Can set this to an empty array if we do not want aichat checked for profanity.
   LABS_TO_CHECK_FOR_PROFANITY = DCDO.get('labs_to_check_for_profanity', [])
 
+  # These file types are not used in Applab, so they are safe to skip during the
+  # profanity check for libraries in put_file.
+  BACKPACK_PROGRAM_FILE_TYPES = ['.csv', '.java', '.py', '.txt']
+
   DEFAULT_TOXICITY_THRESHOLD_USER_SOURCES = 0.3
 
   def get_bucket_impl(endpoint)
@@ -264,7 +268,6 @@ class FilesApi < Sinatra::Base
     metadata = result[:metadata]
     abuse_score = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
     not_found if abuse_score >= SharedConstants::ABUSE_CONSTANTS.ABUSE_THRESHOLD && !can_view_abusive_assets?(encrypted_channel_id)
-    not_found if profanity_privacy_violation?(filename, result[:body]) && !can_view_profane_or_pii_assets?(encrypted_channel_id)
     not_found if code_projects_domain_root_route && !codeprojects_can_view?(encrypted_channel_id)
 
     if code_projects_domain_root_route && html?(response.headers)
@@ -420,10 +423,10 @@ class FilesApi < Sinatra::Base
     # Block libraries with PII/profanity from being published.
     # Block main.json file from aichat lab flagged with profanity from being saved.
     #
-    # Javalab's "backpack" feature uses libraries to allow students to share code
-    # between their own projects -- skip this check for .java files, since in this use case
+    # The "backpack" feature uses libraries to allow students to share code
+    # between their own projects -- skip this check for .java and .py files, since in this use case
     # the files are only being used by a single user.
-    if (endpoint == 'libraries' && file_type != '.java') || profanity_project_type?(project_type)
+    if (endpoint == 'libraries' && BACKPACK_PROGRAM_FILE_TYPES.exclude?(file_type)) || profanity_project_type?(project_type)
       begin
         if profanity_project_type?(project_type)
           locale_code = request.locale.to_s.split('-').first

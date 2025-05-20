@@ -1,25 +1,27 @@
 import classNames from 'classnames';
-import {ChangeEvent, HTMLAttributes} from 'react';
+import {ChangeEvent, InputHTMLAttributes} from 'react';
 
 import {ComponentSizeXSToL} from '@/common/types';
-import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
+import {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
+import FormFieldWrapper from '@/formFieldWrapper';
 
 import moduleStyles from './textfield.module.scss';
 
-export interface TextFieldProps extends HTMLAttributes<HTMLInputElement> {
+export interface TextFieldProps
+  extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
   /** TextField onChange handler*/
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   /** TextField id */
   id?: string;
   /** Specifies the type of input; see included options below. */
-  inputType?: 'text' | 'email' | 'password' | 'number';
+  inputType?: 'text' | 'email' | 'password' | 'number' | 'date';
   /** The name attribute specifies the name of an input element.
      The name attribute is used to reference elements in a JavaScript,
      or to reference form data after a form is submitted.
      Note: Only form elements with a name attribute will have their values passed when submitting a form. */
   name: string;
   /** The value attribute specifies the value of an input element. */
-  value?: string;
+  value?: string | number;
   /** TextField label */
   label?: string;
   /** TextField helper message */
@@ -44,7 +46,7 @@ export interface TextFieldProps extends HTMLAttributes<HTMLInputElement> {
   maxLength?: number;
   /** min length of TextField */
   minLength?: number;
-  /** min length of TextField */
+  /** handle input autoComplete attribute */
   autoComplete?: string;
 }
 
@@ -80,19 +82,25 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
   autoComplete,
   color = 'black',
   size = 'm',
+  ['aria-describedby']: describedBy,
   ...HTMLAttributes
 }) => {
   return (
-    <label
+    <FormFieldWrapper
+      color={color}
+      size={size}
+      label={label}
+      helperMessage={helperMessage}
+      helperIcon={helperIcon}
+      errorMessage={errorMessage}
       className={classNames(
         moduleStyles.textField,
-        moduleStyles[`textField-${color}`],
-        moduleStyles[`textField-${size}`],
+        moduleStyles[`textField-color-${color}`],
+        moduleStyles[`textField-size-${size}`],
         className,
       )}
-      aria-describedby={HTMLAttributes['aria-describedby']}
+      aria-describedby={describedBy}
     >
-      {label && <span className={moduleStyles.textFieldLabel}>{label}</span>}
       <input
         id={id}
         type={inputType}
@@ -111,24 +119,7 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
         {...HTMLAttributes}
         aria-disabled={disabled || HTMLAttributes['aria-disabled']}
       />
-      {!errorMessage && (helperMessage || helperIcon) && (
-        <div className={moduleStyles.textFieldHelperSection}>
-          {helperIcon && <FontAwesomeV6Icon {...helperIcon} />}
-          {helperMessage && <span>{helperMessage}</span>}
-        </div>
-      )}
-      {errorMessage && (
-        <div
-          className={classNames(
-            moduleStyles.textFieldHelperSection,
-            moduleStyles.textFieldErrorSection,
-          )}
-        >
-          <FontAwesomeV6Icon iconName={'circle-exclamation'} />
-          <span>{errorMessage}</span>
-        </div>
-      )}
-    </label>
+    </FormFieldWrapper>
   );
 };
 

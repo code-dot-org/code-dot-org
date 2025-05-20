@@ -175,7 +175,7 @@ class ManageStudentsLoginInfo extends Component {
             <SafeMarkdown
               markdown={renderStep(
                 i18n.setUpClassEmail1({
-                  createAccountLink: `${studioUrlPrefix}/users/sign_up`,
+                  createAccountLink: `${studioUrlPrefix}/users/sign_up/account_type`,
                 })
               )}
             />

@@ -1,18 +1,28 @@
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import {validateFileName as validateCodebridgeFileName} from '@codebridge/utils';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import {useCallback} from 'react';
 
+import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {
   useFileUploader as useLab2FileUploader,
   analyticsEvents,
+  FileUploaderProps,
 } from '@cdo/apps/lab2/hooks';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-export const useFileUploader: Exclude<
-  typeof useLab2FileUploader,
-  'sendAnalyticsEvent'
-> = args => {
-  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+type UseFileUploaderArgs = Omit<FileUploaderProps, 'sendAnalyticsEvent'> & {
+  validFileTypes?: string[];
+};
+
+export const useFileUploader = (
+  args: UseFileUploaderArgs,
+  folderId: string
+) => {
+  const {source, levelProperties} = useCodebridgeContext();
+  const {appName, validationFile} = levelProperties;
+  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   const sendAnalyticsEvent = useCallback(
     (eventName: string, payload: Record<string, string>) => {
@@ -37,5 +47,24 @@ export const useFileUploader: Exclude<
     [appName]
   );
 
-  return useLab2FileUploader({sendAnalyticsEvent, ...args});
+  const {validFileTypes, ...lab2FileUploaderArgs} = args;
+  const validateFileName = useCallback(
+    (fileName: string) => {
+      return validateCodebridgeFileName({
+        fileName,
+        folderId,
+        projectFiles: source.files,
+        isStartMode,
+        validationFile,
+        validFileTypes,
+      });
+    },
+    [folderId, source.files, isStartMode, validationFile, validFileTypes]
+  );
+
+  return useLab2FileUploader({
+    sendAnalyticsEvent,
+    validateFileName,
+    ...lab2FileUploaderArgs,
+  });
 };

@@ -3,36 +3,35 @@
  * currently active Lab (determined by the current app name). This
  * helps facilitate level-switching between labs without page reloads.
  */
+import {useTheme, Theme} from '@code-dot-org/component-library/common/contexts';
+import React, {Suspense, useEffect} from 'react';
 
-import classNames from 'classnames';
-import React, {Suspense, useContext, useEffect, useState} from 'react';
-
+import {getCurrentLesson} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {capitalizeFirstLetter} from '@cdo/apps/util/capitalizeFirstLetter';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../lab2EntryPoints';
 import {PERMISSIONS} from '../constants';
 import ProgressContainer from '../progress/ProgressContainer';
 import {getAppOptionsViewingExemplar} from '../projects/utils';
-import {AppName, Lab2EntryPoint, OptionsToAvoid} from '../types';
 
 import NoExemplarPage from './components/NoExemplarPage';
 import ExtraLinks from './ExtraLinks';
 import Loading from './Loading';
-import {DEFAULT_THEME, ThemeContext} from './ThemeWrapper';
 
 import moduleStyles from './lab-views-renderer.module.scss';
 
 const hideExtraLinks = queryParams('hide-extra-links') === 'true';
 
 const LabViewsRenderer: React.FunctionComponent = () => {
-  const currentAppName = useAppSelector(
-    state => state.lab.levelProperties?.appName
-  );
-  const levelId = useAppSelector(state => state.lab.levelProperties?.id);
-  const exemplarSources = useAppSelector(
-    state => state.lab.levelProperties?.exemplarSources
-  );
+  const levelProperties = useAppSelector(state => state.lab.levelProperties);
+  const initialSources = useAppSelector(state => state.lab.initialSources);
+
+  const currentAppName = levelProperties?.appName;
+  const exemplarSources = levelProperties?.exemplarSources;
+  const levelId = levelProperties?.id;
+
   const isBlocked = useAppSelector(state => state.lab.isBlocked);
   const isProjectValidator = useAppSelector(state =>
     state.lab.permissions?.includes(PERMISSIONS.PROJECT_VALIDATOR)
@@ -40,102 +39,66 @@ const LabViewsRenderer: React.FunctionComponent = () => {
 
   const isViewingExemplar = getAppOptionsViewingExemplar();
 
-  const [appsToRender, setAppsToRender] = useState<AppName[]>([]);
-
-  // When navigating to a new app type, add it to the list of apps to render.
-  useEffect(() => {
-    if (currentAppName && !appsToRender.includes(currentAppName)) {
-      setAppsToRender([...appsToRender, currentAppName]);
-    }
-  }, [currentAppName, appsToRender]);
+  const capitalizedLessonBackground = useAppSelector(
+    state =>
+      capitalizeFirstLetter(
+        getCurrentLesson(state)?.background || 'light'
+      ) as Theme
+  );
 
   // Set the theme for the current app.
-  const {setTheme} = useContext(ThemeContext);
+  const {setTheme} = useTheme();
   useEffect(() => {
     if (currentAppName) {
-      const theme = lab2EntryPoints[currentAppName]?.theme || DEFAULT_THEME;
-      setTheme(theme);
-    }
-  }, [currentAppName, setTheme]);
+      const supportedThemes = lab2EntryPoints[currentAppName]?.themes;
 
-  const renderApp = (lab2EntryPoint: Lab2EntryPoint): React.ReactNode => {
-    return lab2EntryPoint.view ===
-      OptionsToAvoid.UseHardcodedView_WARNING_Bloats_Lab2_Bundle ? (
-      React.createElement(lab2EntryPoint.hardcodedView!)
-    ) : (
-      <Suspense fallback={<Loading isLoading={true} />}>
-        <lab2EntryPoint.view />
-      </Suspense>
-    );
-  };
+      if (supportedThemes.includes(capitalizedLessonBackground)) {
+        setTheme(capitalizedLessonBackground);
+      } else {
+        setTheme(supportedThemes[0]);
+      }
+    }
+  }, [currentAppName, setTheme, capitalizedLessonBackground]);
 
   // Do not render lab view if project is blocked and user is not a project validator.
-  if (isBlocked && !isProjectValidator) {
+  if (!currentAppName || (isBlocked && !isProjectValidator)) {
     return null;
   }
-  // Iterate through appsToRender and render Lab views for each. If
-  // backgroundMode is true, the Lab view will always be rendered, but
-  // visibility will be toggled based on whether the app is active. If
-  // backgroundMode is false, the Lab view will only be rendered when the
-  // app is active.
+
+  // Show a fallback no exemplar page if we are trying to view
+  // exemplar but there is not exemplar for this level.
+  if (isViewingExemplar && !exemplarSources) {
+    return <NoExemplarPage />;
+  }
+
+  const properties = lab2EntryPoints[currentAppName];
+  if (!properties) {
+    console.warn("Don't know how to render app: " + currentAppName);
+    return null;
+  }
+
+  const extraLinksButtonRightOfFooter =
+    levelProperties?.isProjectLevel &&
+    (currentAppName === 'pythonlab' || currentAppName === 'weblab2');
+
+  const LabView = properties.view;
   return (
-    <>
-      {appsToRender.map(appName => {
-        const properties = lab2EntryPoints[appName];
-        if (!properties) {
-          console.warn("Don't know how to render app: " + appName);
-          return null;
-        }
-        // Show a fallback no exemplar page if we are  trying to view
-        // exemplar but there is not exemplar for this level.
-        if (isViewingExemplar && !exemplarSources) {
-          return <NoExemplarPage />;
-        }
-
-        return (
-          <ProgressContainer key={appName} appType={appName}>
-            {properties.backgroundMode && (
-              <VisibilityContainer
-                appName={appName}
-                visible={currentAppName === appName}
-              >
-                {renderApp(properties)}
-                {!hideExtraLinks && levelId && <ExtraLinks levelId={levelId} />}
-              </VisibilityContainer>
-            )}
-
-            {!properties.backgroundMode && currentAppName === appName && (
-              <VisibilityContainer appName={appName} visible={true}>
-                {renderApp(properties)}
-                {!hideExtraLinks && levelId && <ExtraLinks levelId={levelId} />}
-              </VisibilityContainer>
-            )}
-          </ProgressContainer>
-        );
-      })}
-    </>
-  );
-};
-
-interface VisibilityContainerProps {
-  appName: AppName;
-  visible: boolean;
-  children: React.ReactNode;
-}
-
-const VisibilityContainer: React.FunctionComponent<
-  VisibilityContainerProps
-> = ({appName, visible, children}) => {
-  return (
-    <div
-      id={`lab2-${appName}`}
-      className={classNames(
-        moduleStyles.visibilityContainer,
-        visible && moduleStyles.visible
-      )}
-    >
-      {children}
-    </div>
+    <ProgressContainer key={currentAppName} appType={currentAppName}>
+      <div id={`lab2-${currentAppName}`} className={moduleStyles.labContainer}>
+        <Suspense fallback={<Loading isLoading={true} />}>
+          <LabView
+            levelProperties={levelProperties}
+            initialSources={initialSources}
+          />
+        </Suspense>
+        {!hideExtraLinks && levelId && (
+          <ExtraLinks
+            levelId={levelId}
+            positionRightOfFooter={extraLinksButtonRightOfFooter}
+          />
+        )}
+      </div>
+    </ProgressContainer>
   );
 };
 

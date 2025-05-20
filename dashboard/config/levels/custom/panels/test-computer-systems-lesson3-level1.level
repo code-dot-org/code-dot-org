@@ -10,65 +10,37 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "### Central Processing Unit (CPU)\nThe CPU is like the brain of the computer—it does all the thinking and calculations to make everything work. Just like your brain processes information, the CPU **processes** instructions from software.",
-        "imageUrl": "https://images.code.org/9f9f3b9ad15ebdbaa92c3a973942193c-central-processing-unit-or-computer-chip-3-2023-11-27-05-16-03-utc-min.JPG",
+        "text": "### Random Access Memory (RAM)\n\n**RAM** is a type of temporary memory that stores active applications and data while the computer is running. It allows the computer to access information quickly, making programs and multitasking smoother. However, RAM is **volatile**, meaning everything is erased when the computer shuts down.\n\n**Example**: When you switch between open tabs in a web browser, RAM helps keep them loaded instantly.\n",
+        "imageUrl": "https://images.code.org/d57d7953fd4ba28a62d2cb8efea4f878-photo-1562976540-1502c2145186.jpg",
         "key": "hardware-components-3d887b32-d501-4032-b990-2a51ae5b4de8",
-        "layout": "text-bottom-center",
+        "layout": "text-bottom-right",
         "typing": false,
-        "fadeInOverPrevious": false
+        "fadeInOverPrevious": true
       },
       {
-        "text": "### Motherboard\nThe motherboard is like the computer's main control board that **connects** all the parts—like the CPU, memory, and storage—so they can work together, and it also sends power and data where they’re needed.",
-        "imageUrl": "https://images.code.org/b56de783f0f89415f8950be382fd3577-computerchip-technology-and-electronics-industry-2023-11-27-05-08-36-utc-min.jpg",
+        "text": "### Hard Disk Drive (HDD)\n\nAn **HDD** is a traditional storage device that saves data using spinning disks. It can store **large amounts of information** but is slower than newer storage technologies because it relies on moving parts. HDDs are often used for **long-term storage and backups** where speed isn’t the priority.\n\n**Example**: When you save photos and videos on an external hard drive, it can store thousands of files, but retrieving them takes longer compared to a phone or tablet with faster storage.",
+        "imageUrl": "https://images.code.org/432b490c2ed2f51b517a1c5c2d9825e9-hard-disk-isolated-on-white-background-2024-10-18-05-43-48-utc.jpg",
         "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
         "layout": "text-bottom-right",
         "typing": false,
         "fadeInOverPrevious": true
       },
       {
-        "text": "### Power Supply Unit\nThe Power Supply Unit (PSU) is the part of the computer that takes electricity from a wall outlet and converts it into the right type and amount of **power** to run all the computer's parts, like the CPU, GPU, and hard drive.",
-        "imageUrl": "https://images.code.org/b6c5e9c0cc0ed7042138f5ea58542719-power-supply-isolated-2023-11-27-05-12-35-utc-min.jpg",
+        "text": "### Solid State Drive (SSD)\n\nA **SSD** is a modern storage device that keeps files, applications, and the operating system saved **permanently**. Unlike HDDs, SSDs have no moving parts, making them faster, quieter, and more reliable. They significantly improve a computer’s boot-up time and performance.\n\n**Example**: A laptop with an SSD starts up in seconds, while one with an HDD takes much longer.",
+        "imageUrl": "https://images.code.org/7710f5e391be68b4e66517d5461e8fba-clipboard-image-1740061552.png",
         "key": "hardware-components-ed2b07b1-278f-49d5-ba3b-02994f4bccd8",
         "layout": "text-bottom-right",
         "fadeInOverPrevious": true
       },
       {
-        "text": "### Graphics Processing Unit (GPU)\nThe GPU is a specialized part of the computer that **processes** images, videos, and animations, making them ready to display on the screen, especially for tasks like gaming or video editing.",
-        "imageUrl": "https://images.code.org/ddc5145d3a3e9c415ef6c58a0f6f5202-graphics-card-modern-gaming-gpu-graphics-process-2023-11-27-05-28-10-utc-min.jpg",
+        "text": "### Flash Storage\n\n**Flash storage** is a type of **permanent storage** that has no moving parts, making it faster and more durable than traditional hard drives. It is often used for **small, portable storage devices** and is found in USB drives, memory cards, and even smartphones.\n\n**Example**: A USB flash drive lets you quickly save and transfer files between computers, while an SD card is used in cameras to store photos.",
+        "imageUrl": "https://images.code.org/da69bec3f16a4a3279ffc58d4b18ee52-clipboard-image-1740061662.png",
         "key": "hardware-components-60bbd87e-b298-4721-8344-14ba7f84abc6",
-        "layout": "text-bottom-left",
-        "fadeInOverPrevious": true
-      },
-      {
-        "text": "### Random Access Memory (RAM) \nRAM is the computer's short-term **memory**, temporarily storing information the CPU needs right now so it can quickly access it while working on tasks.",
-        "imageUrl": "https://images.code.org/aa2f624ce284c612cdf40e1e48849354-computer-random-access-memory-ram-sticks-close-u-2023-11-27-04-56-04-utc-min.jpg",
-        "key": "hardware-components-266c1383-bf2b-4307-bd04-1f35b2808edd",
         "layout": "text-bottom-right",
-        "fadeInOverPrevious": true
-      },
-      {
-        "text": "### Hard Drive\nThe hard drive is the computer's long-term **memory**, where all your files, programs, and operating system are stored, even when the computer is turned off.",
-        "imageUrl": "https://images.code.org/f928d4dc5705437983886a4a9bd64e5d-hard-disk-isolated-on-white-background-with-clipp-2023-11-27-04-57-22-utc-min.jpg",
-        "key": "hardware-components-8296a10a-18ea-4c91-933f-b2b6dec55bd2",
-        "layout": "text-bottom-left",
-        "fadeInOverPrevious": true
-      },
-      {
-        "text": "### Peripherals\n\nPeripherals are the external devices you use to interact with the computer—like the monitor for displaying information, the keyboard for typing, and the mouse for pointing and clicking.\nThey can either **input** information, like a keyboard or **output** information, like a monitor. ",
-        "imageUrl": "https://images.code.org/2c4a27b587980eb5c021ad9e3bcea726-periphs2.png",
-        "key": "hardware-components-3fb7f8f9-2e27-4b0a-aa81-96a7528b3571",
-        "layout": "text-bottom-left",
-        "fadeInOverPrevious": true
-      },
-      {
-        "text": "### Case\nThe case is the protective outer shell or **enclosure** of the computer that houses all the internal components, keeps them organized, and helps manage airflow to prevent overheating.",
-        "imageUrl": "https://images.code.org/951cffe353b65b61249042ce4e406819-disassembled-computer-processor-on-desk-2024-02-27-00-32-53-utc-min.jpg",
-        "key": "hardware-components-fde7ae9f-ebcc-47e4-a6d0-24cf8caeb2e8",
-        "layout": "text-bottom-left",
         "fadeInOverPrevious": true
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-07T21:26:25.467+00:00\",\"changed\":[\"cloned from \\\"test-computer-systems-lesson2-level1\\\"\"],\"cloned_from\":\"test-computer-systems-lesson2-level1\"},{\"changed_at\":\"2025-01-07 21:26:32 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-08 04:01:38 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-08 04:04:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-07T21:26:25.467+00:00\",\"changed\":[\"cloned from \\\"test-computer-systems-lesson2-level1\\\"\"],\"cloned_from\":\"test-computer-systems-lesson2-level1\"},{\"changed_at\":\"2025-01-07 21:26:32 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-08 04:01:38 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-08 04:04:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-20 14:11:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-02-20 14:14:17 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-02-20 14:17:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-02-20 14:20:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-02-20 14:22:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-02-20 14:30:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Panels>

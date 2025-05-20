@@ -3,35 +3,52 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Module Roadmap
-#### The purpose of the page is to give a high-level overview of a multi-lesson learning experience over an hour long. This page is **not necessary** for each self-paced learning experience, especially those that are shorter.
-
-
-#### This page should include: 
-* #### List of each lesson titles
-* #### Descriptions of each lesson
-* #### Emojis to add visual effects 
-
-___
-
-## Exemplar:
-
-# Module Overview
+# Professional Learning Module Overview
 
 ## What's included in this module?
 
-<img src="https://images.code.org/eef301d70ecfe4e0d7ac02834c151a2c-image-1698286092779.08.08 PM.png" style="float:right; width:300px; border-radius:30px; margin-left:15px; margin-right: 15px;">
+<div style="display: flex; flex-direction: column; align-items: flex-start; width: 70%; padding-left: 10%; padding-right: 20%;">
+  <!-- Lesson 1 -->
+  <div style="display: flex; align-items: center; background-color: #D3D3D3; border-radius: 10px; padding: 20px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; width: 100%;">
+    <div style="flex: 1;">
+      <p style="font-size: 18pt; font-weight: bold;">🎵 Lesson 1: Welcome to Music Lab</p>
+      <p style="font-size: 18pt;">An overview of the Music Lab environment and curriculum.</p>
+    </div>
+  </div>
 
-#### This professional learning module is made up of five sections - there's a lot to cover!
+  <!-- Lesson 2 -->
+  <div style="display: flex; align-items: center; background-color: #D3D3D3; border-radius: 10px; padding: 20px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; width: 100%;">
+    <div style="flex: 1;">
+      <p style="font-size: 18pt; font-weight: bold;">🎸 Lesson 2: Songwriter's Toolbox</p>
+      <p style="font-size: 18pt;">Layering sounds with sequencing and loops.</p>
+    </div>
+  </div>
 
-### 🎼**Lesson 1: Songwriter’s Tool Box**
-#### Insert info here 
+  <!-- Lesson 3 -->
+  <div style="display: flex; align-items: center; background-color: #D3D3D3; border-radius: 10px; padding: 20px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; width: 100%;">
+    <div style="flex: 1;">
+      <p style="font-size: 18pt; font-weight: bold;">🎛️ Lesson 3: Sound Designer Studio</p>
+      <p style="font-size: 18pt;">Organizing groups of sounds with functions.</p>
+    </div>
+  </div>
 
-### **🎧 Lesson 2: Producer Power**
-#### add info here
+  <!-- Lesson 4 -->
+  <div style="display: flex; align-items: center; background-color: #D3D3D3; border-radius: 10px; padding: 20px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; width: 100%;">
+    <div style="flex: 1;">
+      <p style="font-size: 18pt; font-weight: bold;">🎧 Lesson 4: Producer Power</p>
+      <p style="font-size: 18pt;">Make music interactive with event triggers.</p>
+    </div>
+  </div>
 
-### **🎸Lesson 3: Sound Designer Studio**
-#### Add info here
+  <!-- Lesson 5 -->
+  <div style="display: flex; align-items: center; background-color: #D3D3D3; border-radius: 10px; padding: 20px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); width: 100%;">
+    <div style="flex: 1;">
+      <p style="font-size: 18pt; font-weight: bold;">➡️ Lesson 5: Next Steps</p>
+      <p style="font-size: 18pt;">Discover additional resources and opportunities to continue your teaching and coding journey.</p>
+    </div>
+  </div>
+</div>
+
 
 
 MARKDOWN

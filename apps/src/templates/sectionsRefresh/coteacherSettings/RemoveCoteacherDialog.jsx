@@ -1,7 +1,7 @@
+import {StrongText} from '@code-dot-org/component-library/typography';
 import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
 
-import {StrongText} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';

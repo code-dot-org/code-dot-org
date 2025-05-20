@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-01-24T21:48:17.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check for Understanding",
+    "long_instructions": "What is data science? Why is it important?",
+    "teacher_markdown": "Students should have learned that data science can help organize data so that people can make better decisions in all aspects of life and work, and be able to provide examples from the bingo card.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_beta"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-24T21:48:17.676+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson1-level3\\\"\"],\"cloned_from\":\"data-science-ch1-lesson1-level3\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

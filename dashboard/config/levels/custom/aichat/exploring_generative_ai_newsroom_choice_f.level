@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-04-25T20:28:34.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Make a Quiz",
+    "long_instructions": "## Make a Quiz\r\n\r\n**Task:** Ask AI to create a short Buzzfeed-style quiz.\r\n\r\n**Things to Try:**\r\n- Choose a fun topic (snacks, seasons, hobbies)\r\n- Ask for 3-5 questions with funny results\r\n- Take the quiz yourself. Is it fun to read?",
+    "bubble_choice_description": "Ask AI to create a short Buzzfeed-style quiz.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/d24da7505dbe3b97498ca0fa225dde6a-quiz.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-25T20:28:34.080+00:00\",\"changed\":[\"cloned from \\\"exploring_generative_ai_newsroom_choice_e\\\"\"],\"cloned_from\":\"exploring_generative_ai_newsroom_choice_e\"},{\"changed_at\":\"2025-04-25 20:29:48 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-25 22:09:55 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Aichat>

@@ -1,0 +1,23 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-02-26T19:43:10.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Mitigation Strategy\r\n\r\n### Which traditional **and** AI-driven solution(s) do you propose to address this risk?\r\n\r\n\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2025-02-26T19:43:10.989+00:00\",\"changed\":[\"cloned from \\\"test-networks-and-internet-lesson-11-3-3\\\"\"],\"cloned_from\":\"test-networks-and-internet-lesson-11-3-3\"},{\"changed_at\":\"2025-02-26 19:43:34 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

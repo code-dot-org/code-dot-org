@@ -1,12 +1,12 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-
 import {
   Heading3,
   Heading6,
   StrongText,
   BodyThreeText,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@code-dot-org/component-library/typography';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';

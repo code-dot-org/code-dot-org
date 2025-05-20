@@ -1,0 +1,9 @@
+name 'CSA U4L2-L8_modular_alt-2025'
+display_name 'Practice: Using Static Variables and Methods'
+description 'Create static variables and methods for various scenarios.'
+
+sublevels
+level 'CSA U4L2-L8a_modular_alt-2025'
+level 'CSA U4L2-L8b_modular_alt-2025'
+level 'CSA U4L2-L8c_modular_alt-2025'
+level 'CSA U4L2-L8d_modular_alt-2025'

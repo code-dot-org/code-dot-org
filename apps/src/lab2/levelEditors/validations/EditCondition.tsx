@@ -1,10 +1,18 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 
 import {Condition, ConditionType} from '../../types';
 
 import moduleStyles from './edit-validations.module.scss';
+
+function getConditionPart(
+  value: string | number,
+  index: number
+): string | number {
+  const parts = typeof value === 'string' ? value.split(':') : [value];
+  return parts[index];
+}
 
 interface EditConditionProps {
   condition: Condition;
@@ -27,9 +35,54 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
   const currentConditionType = conditionTypes.find(conditionType => {
     return conditionType.name === condition.name;
   });
+  const valueType = currentConditionType?.valueType;
+  const hasValueType = valueType !== undefined;
+  const valueTypes = React.useMemo(
+    () => valueType?.split(':') || [],
+    [valueType]
+  );
+  const useDropdown = !!currentConditionType?.valueOptions;
+  const dropdownOptions = currentConditionType?.valueOptions || [''];
+  const initialDropdownValue = dropdownOptions[0];
 
-  const isNumeric = currentConditionType?.valueType === 'number';
-  const hasValue = currentConditionType?.valueType !== undefined;
+  const handleValueChange = (
+    newPart: string | number,
+    valueIndex: number,
+    isNumber: boolean = false
+  ) => {
+    const currentValues =
+      typeof condition.value === 'string'
+        ? condition.value.split(':')
+        : [condition.value];
+
+    const newCondition = {...condition};
+
+    currentValues[valueIndex] = newPart;
+    newCondition.value = currentValues.join(':');
+    if (isNumber && !isNaN(Number(newCondition.value))) {
+      newCondition.value = parseInt(newCondition.value);
+    }
+    onConditionChange(newCondition, index);
+  };
+
+  useEffect(() => {
+    if (hasValueType && useDropdown && condition.value === undefined) {
+      const defaultParts = valueTypes.map(type =>
+        type === 'number' ? 1 : initialDropdownValue
+      );
+      const newValue = defaultParts.join(':');
+      onConditionChange({...condition, value: newValue}, index);
+    }
+  }, [
+    hasValueType,
+    valueTypes,
+    condition,
+    initialDropdownValue,
+    index,
+    currentConditionType,
+    onConditionChange,
+    useDropdown,
+  ]);
 
   return (
     <div className={moduleStyles.row}>
@@ -43,7 +96,8 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
         value={condition.name}
         onChange={e => {
           condition.name = e.target.value;
-          if (!hasValue) {
+          condition.value = undefined;
+          if (!hasValueType) {
             condition.value = undefined;
           }
           onConditionChange(condition, index);
@@ -57,23 +111,53 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
           );
         })}
       </select>
-      {hasValue && (
+      {hasValueType && (
         <>
-          <label htmlFor="conditionValue" className={moduleStyles.label}>
-            Value:
-          </label>
-          <input
-            type={isNumeric ? 'number' : 'text'}
-            name="conditionValue"
-            id="conditionValue"
-            value={condition.value}
-            onChange={e => {
-              condition.value = isNumeric
-                ? parseInt(e.target.value)
-                : e.target.value;
-              onConditionChange(condition, index);
-            }}
-          />
+          <label className={moduleStyles.label}>Value:</label>
+          <div className={moduleStyles.valueInputsWrapper}>
+            {valueTypes.map((type, i) => {
+              const currentConditionValue = condition.value!;
+              const currentValue = getConditionPart(currentConditionValue, i);
+
+              const isNumber = type === 'number';
+              const isString = type === 'string';
+              if (isNumber || (isString && !useDropdown)) {
+                return (
+                  <input
+                    key={`${condition.name}-${i}`}
+                    type={isNumber ? 'number' : 'text'}
+                    className={
+                      isNumber
+                        ? moduleStyles.conditionValueInputNumber
+                        : undefined
+                    }
+                    value={currentValue}
+                    onChange={e =>
+                      handleValueChange(e.target.value, i, isNumber)
+                    }
+                  />
+                );
+              }
+
+              if (useDropdown) {
+                return (
+                  <select
+                    key={i}
+                    value={currentValue || dropdownOptions[0]}
+                    onChange={e => handleValueChange(e.target.value, i)}
+                  >
+                    {dropdownOptions.map((option, index) => (
+                      <option key={index} value={option}>
+                        {option}
+                      </option>
+                    ))}
+                  </select>
+                );
+              }
+
+              return null;
+            })}
+          </div>
         </>
       )}
       <button

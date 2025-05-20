@@ -1,5 +1,5 @@
 import {MAX_NAME_LENGTH} from './constants';
-import {AiCustomizations, ToxicityCheckedField} from './types';
+import {AiCustomizations, ChatAsset, ToxicityCheckedField} from './types';
 import {FIELDS_CHECKED_FOR_TOXICITY} from './views/modelCustomization/constants';
 
 export const getShortName = (studentName: string): string => {
@@ -22,3 +22,20 @@ export const extractFieldsToCheckForToxicity = (
     return acc;
   }, {} as {[key in ToxicityCheckedField]: string | string[]});
 };
+
+/**
+ * Generates a URL for the given asset.
+ */
+export function getAssetUrl(
+  asset: ChatAsset,
+  channelId?: string,
+  levelName?: string
+) {
+  if (asset.source === 'project') {
+    return `/v3/assets/${channelId}/${encodeURIComponent(asset.filename)}`;
+  } else {
+    return `/level_starter_assets/${levelName}/${encodeURIComponent(
+      asset.filename
+    )}`;
+  }
+}

@@ -1,8 +1,7 @@
 import {Meta, StoryFn} from '@storybook/react';
 
-import LinkButton, {LinkButtonProps} from '../LinkButton';
-
 import {buttonColors} from '../index';
+import LinkButton, {LinkButtonProps} from '../LinkButton';
 
 export default {
   title: 'DesignSystem/Button/LinkButton',
@@ -267,6 +266,15 @@ GroupOfColorsOfLinkButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'Gray tertiary icon link button',
+      color: buttonColors.gray,
+      type: 'tertiary',
+      isIconOnly: true,
+      size: 'm',
+      href: 'https://www.google.com',
+    },
+    {
+      icon: {iconName: 'smile', iconStyle: 'solid'},
       ariaLabel: 'Destructive tertiary icon link button',
       color: buttonColors.destructive,
       type: 'tertiary',
@@ -299,6 +307,34 @@ GroupOfSizesOfLinkButtons.args = {
       text: 'Button l',
       size: 'l',
       href: 'https://www.google.com',
+    },
+    {
+      isIconOnly: true,
+      size: 'xs',
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      href: 'https://www.google.com',
+      'aria-label': 'Icon only xs',
+    },
+    {
+      isIconOnly: true,
+      size: 's',
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      href: 'https://www.google.com',
+      'aria-label': 'Icon only s',
+    },
+    {
+      isIconOnly: true,
+      size: 'm',
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      href: 'https://www.google.com',
+      'aria-label': 'Icon only m',
+    },
+    {
+      isIconOnly: true,
+      size: 'l',
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      href: 'https://www.google.com',
+      'aria-label': 'Icon only l',
     },
   ],
 };

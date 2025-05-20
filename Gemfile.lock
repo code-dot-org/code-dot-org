@@ -60,6 +60,15 @@ GIT
       tilt
 
 GIT
+  remote: https://github.com/code-dot-org/sprockets.git
+  revision: 35caa45a78b739362b7db087b141f89e27d107c7
+  ref: concurrent_asset_bundle_3.x
+  specs:
+    sprockets (3.7.1)
+      concurrent-ruby (~> 1.1)
+      rack (> 1, < 3)
+
+GIT
   remote: https://github.com/dooly-ai/omniauth-microsoft_v2_auth.git
   revision: db19d64c2ddb017dddb9a0ff2cee1d84d2fad287
   specs:
@@ -79,14 +88,22 @@ GIT
   specs:
     full-name-splitter (0.1.2)
 
+PATH
+  remote: .
+  glob: **/engines/marketing/marketing.gemspec
+  specs:
+    marketing (0.0.0)
+      contentful
+
 GEM
   remote: https://rubygems.org/
   specs:
     Ascii85 (1.1.0)
     abbrev (0.1.2)
-    acme-client (2.0.11)
+    acme-client (2.0.21)
+      base64 (~> 0.2.0)
       faraday (>= 1.0, < 3.0.0)
-      faraday-retry (~> 1.0)
+      faraday-retry (>= 1.0, < 3.0.0)
     acmesmith (2.3.1)
       acme-client (~> 2)
       aws-sdk-acm
@@ -180,26 +197,26 @@ GEM
     auto_strip_attributes (2.1.0)
       activerecord (>= 3.0)
     aws-eventstream (1.3.0)
-    aws-google (0.2.0)
-      aws-sdk-core (~> 3.130)
-      google-apis-core
-      launchy (~> 2)
-    aws-partitions (1.969.0)
-    aws-sdk-acm (1.74.0)
-      aws-sdk-core (~> 3, >= 3.201.0)
+    aws-google (0.2.3)
+      aws-sdk-core (~> 3.211.0)
+      google-apis-core (~> 0.11.3)
+      launchy (~> 3.0.1)
+    aws-partitions (1.1021.0)
+    aws-sdk-acm (1.81.0)
+      aws-sdk-core (~> 3, >= 3.210.0)
       aws-sigv4 (~> 1.5)
-    aws-sdk-applicationautoscaling (1.51.0)
-      aws-sdk-core (~> 3, >= 3.112.0)
-      aws-sigv4 (~> 1.1)
-    aws-sdk-autoscaling (1.63.0)
-      aws-sdk-core (~> 3, >= 3.112.0)
-      aws-sigv4 (~> 1.1)
+    aws-sdk-applicationautoscaling (1.99.0)
+      aws-sdk-core (~> 3, >= 3.210.0)
+      aws-sigv4 (~> 1.5)
+    aws-sdk-autoscaling (1.128.0)
+      aws-sdk-core (~> 3, >= 3.210.0)
+      aws-sigv4 (~> 1.5)
     aws-sdk-bedrockagentruntime (1.10.0)
       aws-sdk-core (~> 3, >= 3.193.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-cloudformation (1.55.0)
-      aws-sdk-core (~> 3, >= 3.119.0)
-      aws-sigv4 (~> 1.1)
+    aws-sdk-cloudformation (1.124.0)
+      aws-sdk-core (~> 3, >= 3.210.0)
+      aws-sigv4 (~> 1.5)
     aws-sdk-cloudfront (1.55.0)
       aws-sdk-core (~> 3, >= 3.119.0)
       aws-sigv4 (~> 1.1)
@@ -212,10 +229,10 @@ GEM
     aws-sdk-comprehend (1.87.0)
       aws-sdk-core (~> 3, >= 3.201.0)
       aws-sigv4 (~> 1.5)
-    aws-sdk-core (3.201.4)
+    aws-sdk-core (3.211.0)
       aws-eventstream (~> 1, >= 1.3.0)
-      aws-partitions (~> 1, >= 1.651.0)
-      aws-sigv4 (~> 1.8)
+      aws-partitions (~> 1, >= 1.992.0)
+      aws-sigv4 (~> 1.9)
       jmespath (~> 1, >= 1.6.1)
     aws-sdk-databasemigrationservice (1.56.0)
       aws-sdk-core (~> 3, >= 3.119.0)
@@ -245,13 +262,13 @@ GEM
       aws-sdk-core (~> 3, >= 3.119.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.1)
-    aws-sdk-sagemakerruntime (1.60.0)
-      aws-sdk-core (~> 3, >= 3.188.0)
-      aws-sigv4 (~> 1.1)
+    aws-sdk-sagemakerruntime (1.76.0)
+      aws-sdk-core (~> 3, >= 3.210.0)
+      aws-sigv4 (~> 1.5)
     aws-sdk-secretsmanager (1.48.0)
       aws-sdk-core (~> 3, >= 3.119.0)
       aws-sigv4 (~> 1.1)
-    aws-sigv4 (1.9.1)
+    aws-sigv4 (1.10.1)
       aws-eventstream (~> 1, >= 1.0.2)
     backports (3.11.3)
     base64 (0.2.0)
@@ -270,14 +287,17 @@ GEM
       sass (~> 3.2)
     brakeman (4.5.0)
     builder (3.2.4)
+    camertron-eprun (1.1.1)
     cancancan (3.5.0)
     case_transform (0.2)
       activesupport
     cgi (0.3.6)
+    childprocess (5.1.0)
+      logger (~> 1.5)
     chronic (0.10.2)
-    chunky_png (1.3.6)
     cld (0.13.0)
       ffi
+    cldr-plurals-runtime-rb (1.1.0)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.8)
@@ -292,13 +312,16 @@ GEM
       fiber-annotation
       fiber-local
       json
+    contentful (2.17.1)
+      http (> 0.8, < 6.0)
+      multi_json (~> 1)
     crack (0.4.5)
       rexml
     crass (1.0.6)
     crowdin-api (1.10.0)
       open-uri (>= 0.1.0, < 0.2.0)
       rest-client (>= 2.0.0, < 2.2.0)
-    css_parser (1.19.0)
+    css_parser (1.21.1)
       addressable
     csv (3.3.0)
     cucumber (3.1.1)
@@ -341,7 +364,7 @@ GEM
     devise_invitable (2.0.6)
       actionmailer (>= 5.0)
       devise (>= 4.6)
-    diff-lcs (1.5.0)
+    diff-lcs (1.6.0)
     docile (1.4.0)
     domain_name (0.6.20240107)
     dotiw (4.0.1)
@@ -353,20 +376,22 @@ GEM
     eventmachine (1.2.7)
     execjs (2.7.0)
     exifr (1.2.5)
-    eyes_core (3.18.4)
-      chunky_png (= 1.3.6)
+    eyes_core (4.6.3)
+      colorize
+      eyes_universal (~> 3.3.3)
       faraday
       faraday-cookie_jar
       faraday_middleware
-      oily_png (~> 1.2)
       oj
-    eyes_selenium (3.18.4)
+      sorted_set
+      websocket
+    eyes_selenium (4.6.3)
       crass
       css_parser
-      eyes_core (= 3.18.4)
-      nokogiri
-      selenium-webdriver
+      eyes_core (= 4.6.3)
+      selenium-webdriver (>= 3)
       state_machine
+    eyes_universal (3.3.3)
     factory_bot (6.2.1)
       activesupport (>= 5.0.0)
     factory_bot_rails (6.2.0)
@@ -377,7 +402,7 @@ GEM
       i18n (>= 1.8.11, < 2)
     fakeredis (0.9.2)
       redis (~> 4.8)
-    faraday (1.10.3)
+    faraday (1.10.4)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
       faraday-excon (~> 1.1)
@@ -396,14 +421,14 @@ GEM
     faraday-em_synchrony (1.0.0)
     faraday-excon (1.1.0)
     faraday-httpclient (1.0.1)
-    faraday-multipart (1.0.4)
-      multipart-post (~> 2)
+    faraday-multipart (1.1.0)
+      multipart-post (~> 2.0)
     faraday-net_http (1.0.2)
     faraday-net_http_persistent (1.2.0)
     faraday-patron (1.0.0)
     faraday-rack (1.0.0)
     faraday-retry (1.0.3)
-    faraday_middleware (1.2.0)
+    faraday_middleware (1.2.1)
       faraday (~> 1.0)
     ffi (1.17.0)
     ffi-compiler (1.0.1)
@@ -418,11 +443,11 @@ GEM
     gherkin (5.1.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
-    google-apis-analytics_v3 (0.12.0)
-      google-apis-core (>= 0.9.1, < 2.a)
+    google-apis-analytics_v3 (0.13.0)
+      google-apis-core (>= 0.11.0, < 2.a)
     google-apis-classroom_v1 (0.21.0)
       google-apis-core (>= 0.9.1, < 2.a)
-    google-apis-core (0.9.2)
+    google-apis-core (0.11.3)
       addressable (~> 2.5, >= 2.5.1)
       googleauth (>= 0.16.2, < 2.a)
       httpclient (>= 2.8.1, < 3.a)
@@ -430,7 +455,6 @@ GEM
       representable (~> 3.0)
       retriable (>= 2.0, < 4.a)
       rexml
-      webrick
     google-apis-drive_v3 (0.32.0)
       google-apis-core (>= 0.9.1, < 2.a)
     google-apis-sheets_v4 (0.20.0)
@@ -514,8 +538,9 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     language_server-protocol (3.17.0.3)
-    launchy (2.5.2)
+    launchy (3.0.1)
       addressable (~> 2.8)
+      childprocess (~> 5.0)
     libv8-node (18.16.0.0)
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -608,8 +633,6 @@ GEM
     octokit (6.0.1)
       faraday (>= 1, < 3)
       sawyer (~> 0.9)
-    oily_png (1.2.0)
-      chunky_png (~> 1.3.1)
     oj (3.16.5)
       bigdecimal (>= 3.0)
       ostruct (>= 0.2)
@@ -765,19 +788,19 @@ GEM
     rinku (2.0.4)
     rmagick (4.2.5)
     rouge (4.1.2)
-    rspec (3.5.0)
-      rspec-core (~> 3.5.0)
-      rspec-expectations (~> 3.5.0)
-      rspec-mocks (~> 3.5.0)
-    rspec-core (3.5.1)
-      rspec-support (~> 3.5.0)
-    rspec-expectations (3.5.0)
+    rspec (3.13.0)
+      rspec-core (~> 3.13.0)
+      rspec-expectations (~> 3.13.0)
+      rspec-mocks (~> 3.13.0)
+    rspec-core (3.13.3)
+      rspec-support (~> 3.13.0)
+    rspec-expectations (3.13.3)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.5.0)
-    rspec-mocks (3.5.0)
+      rspec-support (~> 3.13.0)
+    rspec-mocks (3.13.2)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.5.0)
-    rspec-support (3.5.0)
+      rspec-support (~> 3.13.0)
+    rspec-support (3.13.2)
     rubocop (1.65.1)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
@@ -859,9 +882,6 @@ GEM
     spring (3.1.1)
     spring-commands-testunit (1.0.1)
       spring (>= 0.9.1)
-    sprockets (3.7.1)
-      concurrent-ruby (~> 1.0)
-      rack (> 1, < 3)
     sprockets-rails (3.3.0)
       actionpack (>= 5.2)
       activesupport (>= 5.2)
@@ -877,7 +897,7 @@ GEM
       ip3country (~> 0.2.1)
       user_agent_parser (~> 2.15.0)
     stringex (2.5.2)
-    stringio (3.1.1)
+    stringio (3.1.5)
     strscan (3.1.0)
     sysexits (1.2.0)
     syslog (0.1.2)
@@ -890,7 +910,7 @@ GEM
     thwait (0.2.0)
       e2mmap
     tilt (2.0.11)
-    time (0.3.0)
+    time (0.4.1)
       date
     timecop (0.8.1)
     timeout (0.3.2)
@@ -901,6 +921,10 @@ GEM
       faraday (>= 0.9, < 3.0)
       jwt (>= 1.5, < 3.0)
       nokogiri (>= 1.6, < 2.0)
+    twitter_cldr (6.12.1)
+      camertron-eprun
+      cldr-plurals-runtime-rb (~> 1.1)
+      tzinfo
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     uber (0.1.0)
@@ -909,7 +933,7 @@ GEM
     unf_ext (0.0.7.4)
     unicode-display_width (2.5.0)
     unicode_utils (1.4.0)
-    uri (0.13.0)
+    uri (1.0.3)
     user_agent_parser (2.15.0)
     validate_url (1.0.15)
       activemodel (>= 3.0.0)
@@ -929,7 +953,7 @@ GEM
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
-    webrick (1.7.0)
+    webrick (1.9.1)
     websocket (1.2.11)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
@@ -954,7 +978,7 @@ DEPENDENCIES
   annotate (~> 3.1.1)
   async (~> 1.32)
   auto_strip_attributes (~> 2.1)
-  aws-google (~> 0.2.0)
+  aws-google (~> 0.2.3)
   aws-sdk-acm
   aws-sdk-applicationautoscaling
   aws-sdk-autoscaling
@@ -1000,7 +1024,7 @@ DEPENDENCIES
   dotiw
   drb
   execjs
-  eyes_selenium (= 3.18.4)
+  eyes_selenium (~> 4.0)
   factory_bot_rails (~> 6.2)
   fakefs (~> 2.5.0)
   faker (~> 3.4)
@@ -1035,6 +1059,7 @@ DEPENDENCIES
   loofah (~> 2.19.1)
   mailgun-ruby (~> 1.2.14)
   mailjet (~> 1.7.3)
+  marketing!
   memory_profiler
   mini_magick (>= 4.10.0)
   mini_racer
@@ -1116,6 +1141,7 @@ DEPENDENCIES
   sorted_set
   spring (~> 3.1.1)
   spring-commands-testunit
+  sprockets!
   sshkit
   statsig (~> 1.33)
   stringex (~> 2.5.2)
@@ -1124,6 +1150,7 @@ DEPENDENCIES
   thwait
   timecop
   twilio-ruby (< 6.0)
+  twitter_cldr (~> 6.12.1)
   uglifier (>= 1.3.0)
   unf_ext (= 0.0.7.4)
   user_agent_parser
@@ -1132,6 +1159,7 @@ DEPENDENCIES
   vcr
   web-console (~> 4.2.0)
   webmock (~> 3.8)
+  webrick (~> 1.9)
   xxhash
   youtube-dl.rb
 

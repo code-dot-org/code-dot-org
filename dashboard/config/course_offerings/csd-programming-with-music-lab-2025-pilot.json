@@ -1,0 +1,20 @@
+{
+  "key": "csd-programming-with-music-lab-2025-pilot",
+  "display_name": "[PILOT] Programming with Music Lab",
+  "is_featured": false,
+  "assignable": true,
+  "curriculum_type": "Standalone Unit",
+  "marketing_initiative": null,
+  "grade_levels": "6,7,8,9,10,11,12",
+  "header": "teacher_led",
+  "image": null,
+  "cs_topic": null,
+  "school_subject": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
+  "description": null,
+  "professional_learning_program": null,
+  "video": "https://www.youtube-nocookie.com/embed/GqlP5s7KTl4/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=GqlP5s7KTl4&wmode=transparent",
+  "published_date": "2025-04-07 07:00:00 UTC",
+  "self_paced_pl_course_offering_key": null,
+  "ai_teaching_assistant_available": false
+}

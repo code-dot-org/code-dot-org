@@ -5,6 +5,12 @@ CustomCops/OnlyAllowedCharacters:
   Include:
     - '**/*_mailer.rb'
 
+Gemspec/RequiredRubyVersion:
+  Enabled: true
+  # Engines follow the ruby version for the main app
+  Exclude: 
+    - dashboard/engines/**/*
+
 Layout/DotPosition:
   EnforcedStyle: trailing
 

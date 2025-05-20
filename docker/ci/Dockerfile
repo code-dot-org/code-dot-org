@@ -8,7 +8,7 @@
 
 
 #########################################################
-FROM ubuntu:20.04 as base
+FROM ubuntu:20.04 AS base
 #########################################################
 # multi-stage build for parallel compiling ruby:
 # see: https://docs.docker.com/build/building/multi-stage/
@@ -50,7 +50,7 @@ RUN groupadd --gid 3434 ${USER} && \
     printf "${USER} ALL=NOPASSWD: ALL\n" > /etc/sudoers.d/50-${USER}
 
 #########################################################
-FROM base as rbenv
+FROM base AS rbenv
 #########################################################
 # compile ruby to /home/${USER}/.rbenv
 #########################################################
@@ -67,7 +67,7 @@ RUN mkdir -p "$(rbenv root)"/plugins && \
 
 
 #########################################################
-FROM base as primary-layer
+FROM base AS primary-layer
 #########################################################
 # Main layer of this Dockerfile: add packages etc below
 #########################################################
@@ -166,12 +166,13 @@ RUN curl -sSLOJ https://dl.google.com/linux/direct/google-chrome-stable_current_
         "/opt/google/chrome/google-chrome"
 
 # install chromedriver
-RUN export CHROMEDRIVER_RELEASE=$(curl http://chromedriver.storage.googleapis.com/LATEST_RELEASE) && \
-    curl -sSLOJ "http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_RELEASE/chromedriver_linux64.zip" && \
-    unzip chromedriver_linux64.zip && \
-    rm chromedriver_linux64.zip && \
-    mv chromedriver /usr/local/bin/chromedriver && \
-    chmod +x /usr/local/bin/chromedriver
+RUN export CHROME_STABLE_VERSION=$(curl -s https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions.json | jq -r .channels.Stable.version) && \
+    curl -sSLOJ "https://storage.googleapis.com/chrome-for-testing-public/$CHROME_STABLE_VERSION/linux64/chromedriver-linux64.zip" && \
+    unzip chromedriver-linux64.zip && \
+    mv chromedriver-linux64/chromedriver /usr/local/bin/chromedriver && \
+    chmod +x /usr/local/bin/chromedriver && \
+    rm -r chromedriver-linux64 && \
+    rm chromedriver-linux64.zip
 
 # install pdftk & tidy
 RUN mv /usr/bin/parallel /usr/bin/gnu_parallel && \

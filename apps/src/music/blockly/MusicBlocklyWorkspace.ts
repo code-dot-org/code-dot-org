@@ -2,8 +2,13 @@ import * as GoogleBlockly from 'blockly/core';
 
 import {BLOCK_TYPES, Renderers} from '@cdo/apps/blockly/constants';
 import CdoDarkTheme from '@cdo/apps/blockly/themes/cdoDark';
-import {ProcedureBlock, ExtendedBlock} from '@cdo/apps/blockly/types';
+import {
+  ProcedureBlock,
+  ExtendedBlock,
+  ExtendedWorkspaceSvg,
+} from '@cdo/apps/blockly/types';
 import {disableOrphanBlocks} from '@cdo/apps/blockly/utils';
+import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -12,24 +17,49 @@ import {ValueOf} from '@cdo/apps/types/utils';
 import {nameComparator} from '@cdo/apps/util/sort';
 
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import AppConfig from '../appConfig';
 import {BlockMode, Triggers} from '../constants';
 import musicI18n from '../locale';
+import {FunctionEvents} from '../player/interfaces/FunctionEvents';
+import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
+import AdvancedSequencer from '../player/sequencer/AdvancedSequencer';
+import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 
 import {BlockTypes} from './blockTypes';
+import {validateBlockCategories} from './blockUtils';
 import {
   FIELD_TRIGGER_START_NAME,
   TriggerStart,
   TRIGGER_FIELD,
 } from './constants';
 import {setUpBlocklyForMusicLab} from './setup';
-import {getToolbox} from './toolbox';
-import {ToolboxData} from './toolbox/types';
+import {
+  getToolbox,
+  addToolboxBlocksToWorkspace,
+  toolboxModeCategory,
+  getNewStaticCategory,
+  getNewDynamicCategory,
+  isValidCategory,
+  DEFAULT_CATEGORY_NAME,
+} from './toolbox';
+import {Category, ToolboxData} from './toolbox/types';
 
 const experiments = require('@cdo/apps/util/experiments');
 
 const triggerIdToEvent = (id: string) => `triggeredAtButton-${id}`;
 
 type CompiledEvents = {[key: string]: {code: string; args?: string[]}};
+
+type PlaybackExecutionData = {
+  playbackEvents: PlaybackEvent[];
+  orderedFunctions: FunctionEvents[];
+  lastMeasure: number;
+};
+
+const Sequencers = {
+  [BlockMode.SIMPLE2]: new Simple2Sequencer(),
+  [BlockMode.ADVANCED]: new AdvancedSequencer(),
+};
 
 /**
  * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
@@ -65,6 +95,7 @@ export default class MusicBlocklyWorkspace {
   private headlessMode: boolean;
   private toolbox?: ToolboxData;
   private blockMode?: ValueOf<typeof BlockMode>;
+  private toolboxDefinition?: GoogleBlockly.utils.toolbox.ToolboxInfo;
 
   constructor(
     private readonly metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
@@ -85,27 +116,45 @@ export default class MusicBlocklyWorkspace {
    * @param container HTML element to inject the workspace into
    * @param onBlockSpaceChange callback fired when any block space change events occur
    * @param isReadOnlyWorkspace is the workspace readonly
-   * @param toolbox information about the toolbox
+   * @param isRtl should the workspace use RTL
+   * @param blockMode current block mode (e.g. simple2, advanced)
+   * @param toolboxAllowList information about the toolbox
+   * @param toolboxDefinition Blockly toolbox definition
    *
    */
   init(
     container: HTMLElement,
     onBlockSpaceChange: (e: GoogleBlockly.Events.Abstract) => void,
     isReadOnlyWorkspace: boolean,
-    toolbox: ToolboxData | undefined,
+    toolboxAllowList: ToolboxData | undefined,
     isRtl: boolean,
-    blockMode: ValueOf<typeof BlockMode>
+    blockMode: ValueOf<typeof BlockMode>,
+    toolboxDefinition?: GoogleBlockly.utils.toolbox.ToolboxInfo
   ) {
+    const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
+
     if (this.workspace) {
       this.workspace.dispose();
     }
 
     this.container = container;
 
-    this.toolbox = toolbox;
+    this.toolbox = toolboxAllowList;
+    this.toolboxDefinition = toolboxDefinition;
     this.blockMode = blockMode;
 
-    const toolboxBlocks = getToolbox(blockMode, toolbox);
+    // The default toolbox consists of all blocks supported by the
+    // current block mode.
+    let toolboxBlocks = getToolbox(blockMode);
+
+    if (isToolboxMode) {
+      // Toolbox uses the full toolbox with an additional block for managing categories.
+      toolboxBlocks.contents.unshift(toolboxModeCategory);
+    } else if (toolboxDefinition || toolboxAllowList) {
+      toolboxBlocks =
+        // Use whichever toolbox configuration is available from the level configuration.
+        toolboxDefinition || getToolbox(blockMode, toolboxAllowList);
+    }
 
     // This dialog is used for naming variables, which are only present in advanced mode.
     const customSimpleDialog = function (options: {
@@ -162,6 +211,31 @@ export default class MusicBlocklyWorkspace {
     this.headlessMode = true;
   }
 
+  /**
+   * Set up the Blockly workspace for toolbox mode (levelbuilder).
+   * Adds blocks to the workspace based on the level's toolbox configuration.
+   * Automatically cleans up the workspace as blocks move.
+   */
+  initializeToolboxMode(
+    blockMode: ValueOf<typeof BlockMode>,
+    levelToolbox?: ToolboxData,
+    levelToolboxDefinition?: GoogleBlockly.utils.toolbox.ToolboxInfo
+  ) {
+    const toolbox =
+      levelToolboxDefinition || getToolbox(blockMode, levelToolbox);
+
+    const workspace = this.workspace as GoogleBlockly.WorkspaceSvg;
+    addToolboxBlocksToWorkspace(toolbox.contents, workspace);
+
+    validateBlockCategories(workspace);
+    workspace.cleanUp();
+    workspace.addChangeListener(e => {
+      if (e.type === Blockly.Events.BLOCK_MOVE) {
+        validateBlockCategories(workspace);
+      }
+    });
+  }
+
   resizeBlockly() {
     if (this.headlessMode || !this.workspace || !this.container) {
       return;
@@ -194,10 +268,9 @@ export default class MusicBlocklyWorkspace {
   /**
    * Generates executable JavaScript code for all blocks in the workspace.
    *
-   * @param scope Global scope to provide the execution runtime
    * @param blockMode Current block mode, such as "simple2" or "advanced"
    */
-  compileSong(scope: object, blockMode: ValueOf<typeof BlockMode>) {
+  compileSong(blockMode: ValueOf<typeof BlockMode>) {
     const workspace = this.workspace;
     if (!workspace) {
       this.metricsReporter.logWarning(
@@ -205,6 +278,7 @@ export default class MusicBlocklyWorkspace {
       );
       return;
     }
+    this.blockMode = blockMode;
     Blockly.getGenerator().init(workspace);
 
     this.compiledEvents = {};
@@ -249,21 +323,6 @@ export default class MusicBlocklyWorkspace {
       if (
         (
           [
-            BlockTypes.NEW_TRACK_AT_START,
-            BlockTypes.NEW_TRACK_AT_MEASURE,
-          ] as string[]
-        ).includes(block.type)
-      ) {
-        if (!this.compiledEvents.tracks) {
-          this.compiledEvents.tracks = {code: ''};
-        }
-        this.compiledEvents.tracks.code +=
-          Blockly.JavaScript.blockToCode(block);
-      }
-
-      if (
-        (
-          [
             BlockTypes.TRIGGERED_AT,
             BlockTypes.TRIGGERED_AT_SIMPLE,
             BlockTypes.TRIGGERED_AT_SIMPLE2,
@@ -302,7 +361,7 @@ export default class MusicBlocklyWorkspace {
     this.codeHooks = {};
 
     CustomMarshalingInterpreter.evalWithEvents(
-      scope,
+      {Sequencer: Sequencers[blockMode]},
       this.compiledEvents,
       '',
       undefined
@@ -314,7 +373,6 @@ export default class MusicBlocklyWorkspace {
 
     return true;
   }
-
   /**
    * Using JavaScript previously generated by compileSong, above, this function
    * executes that code for events that are triggered when the play button
@@ -325,32 +383,65 @@ export default class MusicBlocklyWorkspace {
    */
   executeCompiledSong(
     triggerEvents: {id: string; startPosition: number}[] = []
-  ) {
+  ): PlaybackExecutionData {
+    const data = {
+      playbackEvents: [],
+      orderedFunctions: [],
+      lastMeasure: 0,
+    };
+
     if (Object.keys(this.compiledEvents).length === 0) {
       this.metricsReporter.logWarning(
         'executeCompiledSong called before compileSong.'
       );
-      return;
+      return data;
     }
 
     const startTime = Date.now();
     console.log('Executing compiled song.');
 
     if (this.codeHooks.whenRunButton) {
-      this.callUserGeneratedCode(this.codeHooks.whenRunButton, [0]);
+      this.mergePlaybackData(
+        data,
+        this.callUserGeneratedCode(this.codeHooks.whenRunButton, [0])
+      );
     }
 
-    if (this.codeHooks.tracks) {
-      this.callUserGeneratedCode(this.codeHooks.tracks);
+    for (const {id, startPosition} of triggerEvents) {
+      this.mergePlaybackData(data, this.executeTrigger(id, startPosition));
     }
-
-    triggerEvents.forEach(triggerEvent => {
-      this.executeTrigger(triggerEvent.id, triggerEvent.startPosition);
-    });
 
     this.lastExecutedEvents = this.compiledEvents;
 
     console.log('Execution time: ', Date.now() - startTime);
+
+    return data;
+  }
+
+  executeCode(code: string): PlaybackExecutionData {
+    if (!this.blockMode) {
+      throw new Error('Attempted to execute code before block mode set.');
+    }
+    const sequencer = Sequencers[this.blockMode];
+    sequencer.clear();
+    try {
+      CustomMarshalingInterpreter.evalWith(
+        code,
+        {Sequencer: sequencer},
+        {runMaxSteps: 1000}
+      );
+    } catch (e) {
+      console.error(e);
+    }
+
+    return {
+      playbackEvents: sequencer.getPlaybackEvents(),
+      orderedFunctions:
+        sequencer instanceof Simple2Sequencer
+          ? sequencer.getOrderedFunctions()
+          : [],
+      lastMeasure: sequencer.getLastMeasure(),
+    };
   }
 
   /**
@@ -361,25 +452,34 @@ export default class MusicBlocklyWorkspace {
    *
    * @param id ID of the trigger
    */
-  executeTrigger(id: string, startPosition: number) {
+  executeTrigger(id: string, startPosition: number): PlaybackExecutionData {
     const hook = this.codeHooks[triggerIdToEvent(id)];
     if (hook) {
-      this.callUserGeneratedCode(hook, [startPosition]);
+      return this.callUserGeneratedCode(hook, [startPosition]);
     }
+    return {
+      playbackEvents: [],
+      orderedFunctions: [],
+      lastMeasure: 0,
+    };
   }
 
   /**
    * Executes code for all triggers in the workspace. Useful for assembling
    * all events that could be potentially triggered for preloading sounds.
    */
-  executeAllTriggers(startPosition = 0) {
-    Triggers.forEach(({id}) => {
-      this.executeTrigger(id, startPosition);
-    });
+  executeAllTriggers(startPosition = 0): PlaybackEvent[] {
+    return Triggers.map(
+      ({id}) => this.executeTrigger(id, startPosition).playbackEvents
+    ).flat();
   }
 
   hasTrigger(id: string) {
     return !!this.codeHooks[triggerIdToEvent(id)];
+  }
+
+  hasAnyTriggers() {
+    return Triggers.some(({id}) => this.hasTrigger(id));
   }
 
   /**
@@ -414,6 +514,86 @@ export default class MusicBlocklyWorkspace {
     return Blockly.serialization.workspaces.save(this.workspace);
   }
 
+  /**
+   * Serialize the top blocks of the workspace as a toolbox.
+   * @returns a toolbox definition that can be handled directly by Blockly.
+   */
+  workspaceToToolboxDefinition() {
+    if (!this.workspace) {
+      this.metricsReporter.logWarning(
+        'workspaceToToolboxDefinition called before workspace initialized.'
+      );
+      return {};
+    }
+    const topBlocks = this.workspace.getTopBlocks(true);
+
+    // This will be the final toolbox returned by this function, either a
+    // flyout toolbox or a category toolbox.
+    const fullToolbox: GoogleBlockly.utils.toolbox.ToolboxInfo = {
+      contents: [],
+    };
+    // Temporary storage for blocks that will be added to the next category,
+    // if categories exist, or the final flyout toolbox.
+    let flyoutItems: GoogleBlockly.utils.toolbox.FlyoutItemInfo[] = [];
+
+    // Temporary storage for a category, containing a name, type, list of contents.
+    let currentCategory = getNewStaticCategory();
+
+    topBlocks.forEach(block => {
+      if (block.type === BlockTypes.CATEGORY) {
+        fullToolbox.kind = 'categoryToolbox';
+        if (isValidCategory(currentCategory)) {
+          // Add the previous category to toolbox.
+          fullToolbox.contents.push({...currentCategory});
+        }
+
+        // Begin a new category for the blocks that follow.
+        currentCategory = getNewStaticCategory(
+          block.getFieldValue('CATEGORY') as Category
+        );
+        flyoutItems = [];
+      } else if (block.type === BlockTypes.CUSTOM_CATEGORY) {
+        fullToolbox.kind = 'categoryToolbox';
+        if (isValidCategory(currentCategory)) {
+          // Add previous category to toolbox
+          fullToolbox.contents.push({...currentCategory});
+        }
+        // Create and immediately add a new dynamic category to the toolbox,
+        // because dynamic categories cannot include other static blocks.
+        fullToolbox.contents.push(
+          getNewDynamicCategory(block.getFieldValue('CUSTOM'))
+        );
+
+        // Begin a new "DEFAULT" category in case any non-category block follows.
+        currentCategory = getNewStaticCategory();
+        flyoutItems = [];
+      } else {
+        // Add the current block to the flyout and category.
+        flyoutItems.push({
+          kind: 'block',
+          ...Blockly.serialization.blocks.save(block, {saveIds: false}),
+          id: Blockly.blockIdOverrides?.[block.id] || block.id,
+          enabled: true,
+        });
+        currentCategory.contents = flyoutItems;
+      }
+    });
+
+    // Finalize the toolbox.
+    if (
+      !fullToolbox.contents.length &&
+      currentCategory.name === DEFAULT_CATEGORY_NAME
+    ) {
+      // If no categories have been used, create a flyout toolbox.
+      fullToolbox.kind = 'flyoutToolbox';
+      fullToolbox.contents = flyoutItems;
+    } else if (isValidCategory(currentCategory)) {
+      // Add the final category to the toolbox.
+      fullToolbox.contents.push({...currentCategory});
+    }
+    return fullToolbox;
+  }
+
   getAllBlocks() {
     if (!this.workspace) {
       this.metricsReporter.logWarning(
@@ -428,12 +608,16 @@ export default class MusicBlocklyWorkspace {
     if (this.headlessMode) {
       return;
     }
+    if (AppConfig.getValue('js-editor') === 'true') {
+      return;
+    }
     if (!this.workspace) {
       this.metricsReporter.logWarning(
         'updateHighlightedBlocks called before workspace initialized.'
       );
       return;
     }
+
     // Clear all highlights.
     for (const block of this.workspace.getAllBlocks()) {
       (this.workspace as GoogleBlockly.WorkspaceSvg).highlightBlock(
@@ -460,17 +644,11 @@ export default class MusicBlocklyWorkspace {
       return;
     }
 
-    if (blockId) {
-      (this.workspace as GoogleBlockly.WorkspaceSvg)
-        .getBlockById(blockId)
-        ?.select();
-    } else {
-      (this.workspace as GoogleBlockly.WorkspaceSvg)
-        .getAllBlocks()
-        .forEach(block => {
-          block.unselect();
-        });
-    }
+    (this.workspace as GoogleBlockly.WorkspaceSvg)
+      .getAllBlocks()
+      .forEach(block => {
+        block.id === blockId ? block.select() : block.unselect();
+      });
   }
 
   getSelectedTriggerId(blockId: string) {
@@ -516,14 +694,19 @@ export default class MusicBlocklyWorkspace {
   }
 
   // For each function body in the current workspace, add a function call
-  // block to the toolbox. Also add a function defintion block, if required.
+  // block to the toolbox. Also add a function definition block, if required.
   generateFunctionBlocks() {
+    const workspace = this.workspace as ExtendedWorkspaceSvg;
+    if (workspace?.isReadOnly()) {
+      return;
+    }
     const blockList: GoogleBlockly.utils.toolbox.ToolboxItemInfo[] = [];
 
     if (this.toolbox?.addFunctionDefinition) {
       blockList.push({
         kind: 'block',
         type: BLOCK_TYPES.procedureDefinition,
+        id: BLOCK_TYPES.procedureDefinition,
         fields: {
           NAME: musicI18n.blockly_functionNamePlaceholder(),
         },
@@ -571,10 +754,16 @@ export default class MusicBlocklyWorkspace {
     });
 
     if (this.blockMode) {
-      const existingToolbox = getToolbox(this.blockMode, this.toolbox);
-      existingToolbox.contents = existingToolbox.contents.concat(blockList);
+      const existingToolbox =
+        this.toolboxDefinition || getToolbox(this.blockMode, this.toolbox);
+      // Perform a copy of the toolbox contents to avoid modifying the original
+      // this.toolboxDefinition object.
+      const updatedToolbox = {
+        ...existingToolbox,
+        contents: [...existingToolbox.contents, ...blockList],
+      };
       const workspace = this.workspace as GoogleBlockly.WorkspaceSvg;
-      workspace.updateToolbox(existingToolbox);
+      workspace.updateToolbox(updatedToolbox);
 
       if (workspace.RTL) {
         // When the flyout is dynamically populated, the flyout width can increase,
@@ -607,7 +796,13 @@ export default class MusicBlocklyWorkspace {
   private callUserGeneratedCode(
     fn: (...args: unknown[]) => void,
     args: unknown[] = []
-  ) {
+  ): PlaybackExecutionData {
+    if (!this.blockMode) {
+      throw new Error('Attempted to execute code before block mode set.');
+    }
+
+    const sequencer = Sequencers[this.blockMode];
+    sequencer.clear();
     try {
       fn.call(this, ...args);
     } catch (e) {
@@ -616,6 +811,27 @@ export default class MusicBlocklyWorkspace {
         e as Error
       );
     }
+
+    return {
+      playbackEvents: sequencer.getPlaybackEvents(),
+      orderedFunctions:
+        sequencer instanceof Simple2Sequencer
+          ? sequencer.getOrderedFunctions()
+          : [],
+      lastMeasure: sequencer.getLastMeasure(),
+    };
+  }
+
+  private mergePlaybackData(
+    currentData: PlaybackExecutionData,
+    newData: PlaybackExecutionData
+  ) {
+    currentData.playbackEvents.push(...newData.playbackEvents);
+    currentData.orderedFunctions.push(...newData.orderedFunctions);
+    currentData.lastMeasure = Math.max(
+      currentData.lastMeasure,
+      newData.lastMeasure
+    );
   }
 
   undo() {

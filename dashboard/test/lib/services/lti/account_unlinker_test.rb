@@ -12,6 +12,7 @@ class Services::Lti::AccountUnlinkerTest < ActiveSupport::TestCase
       before(:context) do
         student_user.authentication_options.find_by(credential_type: 'email')&.destroy
         student_user.authentication_options << auth_option
+        student_user.reload
       end
 
       it 'does not remove the auth option' do

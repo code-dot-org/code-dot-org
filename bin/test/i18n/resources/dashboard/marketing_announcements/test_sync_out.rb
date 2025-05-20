@@ -8,7 +8,7 @@ describe I18n::Resources::Dashboard::MarketingAnnouncements::SyncOut do
   let(:lang_locale) {'expected_locale'}
   let(:language) {{locale_s: lang_locale}}
 
-  let(:target_i18n_file_path) {CDO.dir('dashboard/config/locales', "marketing_announcements.#{lang_locale}.json")}
+  let(:target_i18n_file_path) {CDO.dir('dashboard/config/locales/marketing_announcements', "#{lang_locale}.json")}
   let(:i18n_file_path) {CDO.dir('i18n/locales', lang_locale, "dashboard/marketing_announcements.json")}
   let(:crowdin_file_path) {CDO.dir('i18n/crowdin', lang_locale, "dashboard/marketing_announcements.json")}
   let(:crowdin_file_data) do

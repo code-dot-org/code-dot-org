@@ -1,0 +1,54 @@
+name 'csaif_pl_nets_project_1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Internet Access Advocacy Campaign Project
+
+## Project Description
+#### This project-based lesson guides students in developing an advocacy campaign addressing digital equity, the digital divide, and net neutrality. Students explore real-world challenges, analyze case studies, and propose actionable solutions using AI-driven technology and policy recommendations. Through research, collaboration, and peer feedback, students refine their message and create a compelling advocacy campaign.
+
+## Project Calendar
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 15px;">
+
+<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
+	<p style="text-align: center; font-weight: bold; font-size: 18px">
+    	Day 1
+    </p>
+    
+    <p style="font-size: 14px">
+	Students analyze the societal and ethical impacts of limited Internet access.
+    </p>
+    
+</div>
+
+<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
+	<p style="text-align: center; font-weight: bold; font-size: 18px">
+    	Day 2
+    </p>
+    
+    <p style="font-size: 14px">
+	Students develop a persuasive pitch that highlights the issue, solutions, and supporting evidence.
+    </p>
+    
+</div>
+
+<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
+	<p style="text-align: center; font-weight: bold; font-size: 18px">
+    	Day 3
+    </p>
+    
+    <p style="font-size: 14px">
+	Students present their advocacy campaign and engage in meaningful discussion.
+    </p>
+    
+</div>
+</div>
+
+<br>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ If you have time, check out the full <a href='https://studio.code.org/s/aif4-2025/lessons/8' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+
+MARKDOWN

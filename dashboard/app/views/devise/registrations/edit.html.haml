@@ -88,6 +88,9 @@
   -# Mount point for React ManageLinkedAccounts component.
   %div#manage-linked-accounts
 
+- if current_user.teacher?
+  %div#turn-off-ai-diff
+
 - if current_user.can_create_personal_login?
   %hr
   %h2= t('user.create_personal_login')
@@ -102,7 +105,7 @@
       = no_email ? t('user.create_personal_login_under_13_info') : t('user.create_personal_login_info')
       = t('user.create_personal_login_link_account') if current_user.migrated?
   .div{style: 'position: relative'}
-    = form_for(current_user, url: '/users/upgrade', html: {id: 'edit_user_create_personal_account', style: (!@personal_account_linking_enabled ? 'opacity: 0.25;' : '')}, namespace: 'create_personal') do |form|
+    = form_for(current_user, as: :user, url: '/users/upgrade', html: {id: 'edit_user_create_personal_account', style: (!@personal_account_linking_enabled ? 'opacity: 0.25;' : '')}, namespace: 'create_personal') do |form|
       = form.hidden_field :hashed_email
       %h3= t('user.enter_new_login_info')
       - if no_email
@@ -163,6 +166,15 @@
     .farSide
       %span#change-user-type-status
       %button.btn#change-user-type-button{disabled: true}= t('signup_form.user_type_button')
+
+- if DCDO.get('enable-expire-other-sessions', false) # TODO: remove flag once feature is stable
+  %div#expire-other-sessions
+    %hr
+    %h2= t('user.expire_other_sessions')
+    %p= t('user.expire_other_sessions_description')
+    = form_for(resource, as: resource_name, url: expire_other_path, html: {method: :delete}) do |expire_other_form|
+      .farSide
+        = expire_other_form.submit t('user.expire_other_sessions_button'), class: 'btn btn-warning'
 
 - if current_user.can_delete_own_account?
   -# Mount point for React DeleteAccount component.

@@ -55,120 +55,9 @@ module FakeDashboard
   ]
 
   #
-  # Fake Data: Courses
-  #
-  COURSES = [
-    COURSE_CSP = {
-      id: 15,
-      name: 'csp-2017',
-      created_at: '2016-01-01 00:01:02',
-      updated_at: '2016-01-01 00:01:02'
-    }
-  ]
-
-  #
-  # Fake Data: Scripts
-  #
-  UNITS = [
-    UNIT_FOO = {
-      id: 1,
-      name: 'Foo',
-      published_state: 'preview'
-    },
-    UNIT_BAR = {
-      id: 3,
-      name: 'Bar',
-      published_state: 'preview'
-    },
-    UNIT_MC = {
-      id: 4,
-      name: 'mc',
-      published_state: 'preview'
-    },
-    UNIT_HOUROFCODE = {
-      id: 5,
-      name: 'hourofcode',
-      published_state: 'preview'
-    },
-    UNIT_MINECRAFT = {
-      id: 6,
-      name: 'minecraft',
-      published_state: 'preview'
-    },
-    UNIT_FLAPPY = {
-      id: 10,
-      name: 'flappy',
-      published_state: 'preview'
-    },
-    UNIT_CSP1 = {
-      id: 31,
-      name: 'csp1-2017',
-      published_state: 'preview'
-    },
-    UNIT_CSP2 = {
-      id: 32,
-      name: 'csp2-2017',
-      published_state: 'preview'
-    },
-    UNIT_CSP3 = {
-      id: 34,
-      name: 'csp3-2017',
-      published_state: 'preview'
-    },
-    # put the unlaunched units at the end and give them higher ids, to make
-    # unit testing slightly easier.
-    UNIT_ALLTHETHINGS = {
-      id: 45,
-      name: 'allthehiddenthings',
-      published_state: 'beta'
-    },
-    UNIT_CSP2_ALT = {
-      id: 53,
-      name: 'csp2-alt',
-      published_state: 'beta'
-    },
-  ]
-
-  COURSE_UNITS = [
-    {
-      course_id: COURSE_CSP[:id],
-      script_id: UNIT_CSP1[:id],
-      position: 1
-    },
-    {
-      course_id: COURSE_CSP[:id],
-      script_id: UNIT_CSP2[:id],
-      position: 2
-    },
-    {
-      course_id: COURSE_CSP[:id],
-      script_id: UNIT_CSP2_ALT[:id],
-      position: 2,
-      experiment_name: 'csp2-alt-experiment',
-      default_script_id: UNIT_CSP2[:id]
-    },
-    {
-      course_id: COURSE_CSP[:id],
-      script_id: UNIT_CSP3[:id],
-      position: 3
-    },
-  ]
-
-  EXPERIMENTS = [
-    CSP2_ALT_EXPERIMENT = {
-      name: 'csp2-alt-experiment',
-      type: 'SingleUserExperiment',
-      min_user_id: 17,
-      created_at: Time.now,
-      updated_at: Time.now
-    }
-  ]
-
-  #
   # Fake Data: Sections
   #
   SECTION_NORMAL = {id: 150001, user_id: TEACHER[:id], name: 'Fake Section A'}
-  SECTION_EMPTY = {id: 150002, user_id: TEACHER[:id], name: 'Fake Section B'}
   SECTION_DELETED = {
     id: 150003, user_id: TEACHER_DELETED_SECTION[:id], name: 'Fake Section C',
     deleted_at: '2015-01-01 12:34:56'
@@ -179,17 +68,11 @@ module FakeDashboard
   SECTION_DELETED_USER = {
     id: 150005, user_id: TEACHER_DELETED_USER[:id], name: 'Fake Section E'
   }
-  # Section assigned to an arbitrary (made-up) course
-  SECTION_COURSE = {
-    id: 150006, user_id: TEACHER[:id], name: 'Fake Section assigned course', course_id: COURSES[0][:id]
-  }
   TEACHER_SECTIONS = [
     SECTION_NORMAL,
-    SECTION_EMPTY,
     SECTION_DELETED,
     SECTION_DELETED_FOLLOWER,
     SECTION_DELETED_USER,
-    SECTION_COURSE
   ]
 
   #
@@ -224,10 +107,6 @@ module FakeDashboard
   FAKE_DB = {
     users: USERS,
     user_permissions: USER_PERMISSIONS,
-    unit_groups: COURSES,
-    scripts: UNITS,
-    course_scripts: COURSE_UNITS,
-    experiments: EXPERIMENTS,
     sections: TEACHER_SECTIONS,
     followers: FOLLOWERS,
     secret_words: SECRET_WORDS,

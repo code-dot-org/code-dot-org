@@ -17,7 +17,7 @@ theme: responsive
 
 ## न्यूनतम समर्थित ब्राउज़र्स और प्लेटफॉर्म्स
 
-जुलाई 2024 से, हम ब्राउज़र और ऑपरेटिंग सिस्टम के लिए आवश्यक न्यूनतम संस्करण अपडेट करेंगे। हालांकि पुराने संस्करण अभी भी काम कर सकते हैं, हम पुराने संस्करणों में बग फिक्स के अनुरोधों का समर्थन करने में असमर्थ होंगे।
+हर साल हम ब्राउज़र और ऑपरेटिंग सिस्टम के लिए आवश्यक न्यूनतम संस्करण अपडेट करेंगे। हालांकि पुराने संस्करण अभी भी काम कर सकते हैं, हम पुराने संस्करणों में बग फिक्स के अनुरोधों का समर्थन करने में असमर्थ होंगे।
 
 <table>
   <tr>
@@ -25,28 +25,6 @@ theme: responsive
       <table>
         <th>
           ब्राउज़र
-        </th>
-        <tr>
-          <td>Chrome 96.x</td>
-        </tr>
-        <tr>
-          <td>Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Mobile Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Edge 94.x</td>
-        </tr>
-        <tr>
-          <td>Firefox 91.x</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
-      <table>
-        <th>
-          ब्राउज़र जुलाई '24
         </th>
         <tr>
           <td>क्रोम 103.x</td>
@@ -71,28 +49,6 @@ theme: responsive
           प्लेटफार्म
         </th>
         <tr>
-          <td>macOS 10.13</td>
-        </tr>
-        <tr>
-          <td>iOS 11.x</td>
-        </tr>
-        <tr>
-          <td>Windows 7</td>
-        </tr>
-        <tr>
-          <td>Android 6</td>
-        </tr>
-        <tr>
-          <td>ChromeOS (Chromebooks)</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
-      <table>
-        <th>
-          प्लेटफ़ॉर्म जुलाई '24
-        </th>
-        <tr>
           <td>मैकओएस 10.15</td>
         </tr>
         <tr>
@@ -103,6 +59,51 @@ theme: responsive
         </tr>
         <tr>
           <td>एंड्राइड 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+    <!-- "coming soon" system requirements, to be updated and made live from March through July. -->
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          ब्राउज़र जुलाई '25
+        </th>
+        <tr>
+          <td>क्रोम 109</td>
+        </tr>
+        <tr>
+          <td>सफारी 16.6</td>
+        </tr>
+        <tr>
+          <td>मोबाइल सफारी 16</td>
+        </tr>
+        <tr>
+          <td>एज 128</td>
+        </tr>
+        <tr>
+          <td>फ़ायरफ़ॉक्स 115</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          प्लेटफ़ॉर्म जुलाई '25
+        </th>
+        <tr>
+          <td>मैकओएस 10.15</td>
+        </tr>
+        <tr>
+          <td>आईओएस 16.x</td>
+        </tr>
+        <tr>
+          <td>विंडोज़ 10</td>
+        </tr>
+        <tr>
+          <td>एंड्राइड 8</td>
         </tr>
         <tr>
           <td>ChromeOS (Chromebooks)</td>
@@ -147,7 +148,6 @@ theme: responsive
 ### क्या आप इस वीडियो को चला सकते हैं?
 
 Code.org के ऑनलाइन पाठ्यक्रमों को शुरू करने से पहले, यह सुनिश्चित करने के लिए नीचे दिए गए वीडियो के प्लेबैक का परीक्षण करें कि आप शुरू करने के लिए तैयार हैं।
-
 
 <!--
 The following HTML is a copy of video_with_fallback.haml. once this file can be converted to

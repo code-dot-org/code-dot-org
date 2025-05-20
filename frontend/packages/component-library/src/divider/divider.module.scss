@@ -1,0 +1,43 @@
+@use '@code-dot-org/component-library-styles/colors.scss';
+
+// Divider common styles
+.divider {
+  border: 0;
+  border-top: 1px solid;
+  width: 100%;
+  margin-inline: auto;
+}
+
+// Divider colors
+.divider-color {
+  &-primary {
+    border-top-color: var(--background-neutral-quaternary);
+  }
+
+  &-strong {
+    border-top-color: var(--background-neutral-senary);
+  }
+}
+
+// Divider margin
+.divider-margin {
+  &-none {
+    margin-block: 0;
+  }
+
+  &-xs {
+    margin-block: 0.5rem;
+  }
+
+  &-s {
+    margin-block: 1rem;
+  }
+
+  &-m {
+    margin-block: 2rem;
+  }
+
+  &-l {
+    margin-block: 4rem;
+  }
+}

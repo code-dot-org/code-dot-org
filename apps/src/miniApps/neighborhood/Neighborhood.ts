@@ -1,18 +1,20 @@
 import {tiles, MazeController} from '@code-dot-org/maze';
 
-import javalabMsg from '@cdo/apps/javalab/locale';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import * as timeoutList from '@cdo/apps/lib/util/timeoutList';
-import Slider from '@cdo/apps/slider';
+import {LOOK_ID, SVG_ID} from '@cdo/apps/maze/constants';
 
-import {NeighborhoodSignalType} from './constants';
-import {NeighborhoodSignal} from './types';
+import {ConsoleSignalType, NeighborhoodSignalType} from './constants';
+import NeighborhoodSpeedTracker from './NeighborhoodSpeedTracker';
+import {ConsoleSignal, NeighborhoodSignal} from './types';
 
 const Direction = tiles.Direction;
 
 const PAUSE_BETWEEN_SIGNALS = 200;
 const ANIMATED_STEP_SPEED = 500;
-const ANIMATED_STEPS = [NeighborhoodSignalType.MOVE];
+const ANIMATED_STEPS: (ConsoleSignalType | NeighborhoodSignalType)[] = [
+  NeighborhoodSignalType.MOVE,
+];
 const SIGNAL_CHECK_TIME = 200;
 
 // We are relying on old maze skins here, which are not typed.
@@ -20,30 +22,30 @@ type SkinType = Record<string, unknown>;
 
 export default class Neighborhood {
   private controller: typeof MazeController | null;
-  private seenFirstSignal: boolean;
   private onOutputMessage: (message: string) => void;
   private onNewlineMessage: () => void;
+  private onPartialOutputMessage: (message: string) => void;
   private setIsRunning: (isRunning: boolean) => void;
-  private statusMessagePrefix: string;
-  private speedSlider: Slider | null;
-  private signals: NeighborhoodSignal[];
+  private signals: (NeighborhoodSignal | ConsoleSignal)[];
   private nextSignalIndex: number;
+  private speedTracker: NeighborhoodSpeedTracker;
+  private isProcessingSignals: boolean;
 
   constructor(
     onOutputMessage: (message: string) => void,
     onNewlineMessage: () => void,
     setIsRunning: (isRunning: boolean) => void,
-    statusMessagePrefix: string
+    onPartialOutputMessage: (message: string) => void
   ) {
     this.controller = null;
-    this.seenFirstSignal = false;
     this.onOutputMessage = onOutputMessage;
     this.onNewlineMessage = onNewlineMessage;
     this.setIsRunning = setIsRunning;
-    this.statusMessagePrefix = statusMessagePrefix;
-    this.speedSlider = null;
     this.signals = [];
     this.nextSignalIndex = -1;
+    this.speedTracker = NeighborhoodSpeedTracker.getInstance();
+    this.onPartialOutputMessage = onPartialOutputMessage;
+    this.isProcessingSignals = false;
   }
 
   afterInject(
@@ -64,6 +66,8 @@ export default class Neighborhood {
     if (!level.serializedMaze) {
       return;
     }
+    this.prepareForNewMaze();
+
     this.controller = new MazeController(level, skin, config, {
       // TODO: Either get rid of these methods or support audio in Neighborhood.
       // https://codedotorg.atlassian.net/browse/CT-942
@@ -74,19 +78,13 @@ export default class Neighborhood {
         getTestResults,
       },
     });
-    // 'svgMaze' is a magic value that we use throughout our code-dot-org and maze code to
-    // reference the maze visualization area. It is initially set up in maze's Visualization.jsx
-    const svg = document.getElementById('svgMaze');
+
+    const svg = document.getElementById(SVG_ID);
     this.controller.subtype.initStartFinish();
     this.controller.subtype.createDrawer(svg);
     this.controller.subtype.initWallMap();
     this.controller.initWithSvg(svg);
 
-    const slider = document.getElementById('slider');
-    if (!slider) {
-      return;
-    }
-    this.speedSlider = new Slider(10, 35, 130, slider);
     this.signals = [];
     this.nextSignalIndex = 0;
 
@@ -96,22 +94,19 @@ export default class Neighborhood {
     const testInterface = (window as any).__TestInterface;
     if (testInterface) {
       testInterface.setSpeedSliderValue = (value: number) => {
-        this.speedSlider!.setValue(value);
+        // The old slider used a range of 0 to 1, while the new slider uses 0 to 100.
+        // Note: this will change the animation speed but won't actually update the UI.
+        this.speedTracker.setSpeed(value * 100);
       };
     }
   }
 
-  handleSignal(signal: NeighborhoodSignal) {
-    // add next signal to our queue of signals
-    this.signals.push(signal);
-    // if this is the first signal, send a starting painter message
-    if (!this.seenFirstSignal) {
-      this.seenFirstSignal = true;
-      this.onOutputMessage(
-        `${this.statusMessagePrefix} ${javalabMsg.startingPainter()}`
-      );
-      this.onNewlineMessage();
+  handleSignal(signal: NeighborhoodSignal | ConsoleSignal | null) {
+    if (!signal) {
+      return;
     }
+    // Add next signal to our queue of signals.
+    this.signals.push(signal);
   }
 
   // Process avaiable signals recursively. We process recursively to ensure
@@ -124,6 +119,7 @@ export default class Neighborhood {
         // we are done processing commands and can stop checking for signals.
         // Set isRunning to false, add a blank line to the console, and return
         this.setIsRunning(false);
+        this.onNewlineMessage();
         return;
       }
       const timeForSignal =
@@ -132,7 +128,13 @@ export default class Neighborhood {
         timeForSignal + PAUSE_BETWEEN_SIGNALS * this.getPegmanSpeedMultiplier();
 
       const beginTime = Date.now();
-      this.mazeCommand(signal, timeForSignal);
+      if (signal.value === ConsoleSignalType.CONSOLE_LOG) {
+        this.onOutputMessage(signal.detail);
+      } else if (signal.value === ConsoleSignalType.PARTIAL_LOG) {
+        this.onPartialOutputMessage(signal.detail);
+      } else {
+        this.mazeCommand(signal as NeighborhoodSignal, timeForSignal);
+      }
       this.nextSignalIndex++;
       const remainingTime = totalSignalTime - (Date.now() - beginTime);
 
@@ -212,12 +214,21 @@ export default class Neighborhood {
     }
   }
 
-  getAnimationTime(signal: NeighborhoodSignal) {
+  getAnimationTime(signal: NeighborhoodSignal | ConsoleSignal) {
     return ANIMATED_STEPS.includes(signal.value) ? ANIMATED_STEP_SPEED : 0;
   }
 
   onCompile() {
+    this.setProcessSignals();
+  }
+
+  onRun() {
+    this.setProcessSignals();
+  }
+
+  setProcessSignals() {
     this.controller.hideDefaultPegman();
+    this.isProcessingSignals = true;
     // start checking for signals after the specified wait time
     timeoutList.setTimeout(() => this.processSignals(), SIGNAL_CHECK_TIME);
   }
@@ -243,13 +254,35 @@ export default class Neighborhood {
   resetSignalQueue() {
     this.signals = [];
     this.nextSignalIndex = 0;
-    this.seenFirstSignal = false;
+    this.isProcessingSignals = false;
+  }
+
+  isRunning() {
+    return this.isProcessingSignals;
   }
 
   // Multiplier on the time per action or step at execution time.
   getPegmanSpeedMultiplier() {
-    // The slider goes from 0 to 1. We scale the speed slider value to be between
+    // The slider goes from 0 to 100. We scale the speed slider value to be between
     // 2 (slowest) and 0 (fastest).
-    return -2 * this.speedSlider!.getValue() + 2;
+    return -2 * (this.speedTracker.getSpeed() / 100) + 2;
+  }
+
+  // Ensure the svg maze is empty except for the 'look' tile.
+  // We will reuse the same svg for a new maze if the user changes their version
+  // and had a different maze in a previous version.
+  // We want to make sure it's empty to avoid confusing rendering bugs due to overlapping tiles.
+  prepareForNewMaze() {
+    const svg = document.getElementById(SVG_ID);
+    // Visualization.jsx includes a 'look' tile that we want to keep inside svgMaze.
+    const idToIgnore = LOOK_ID;
+    if (svg?.children && svg.children.length > 1) {
+      const mazeTiles = Array.from(svg.children);
+      mazeTiles.forEach(tile => {
+        if (tile.id !== idToIgnore) {
+          svg.removeChild(tile);
+        }
+      });
+    }
   }
 }

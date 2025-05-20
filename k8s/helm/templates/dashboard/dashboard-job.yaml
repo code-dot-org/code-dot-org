@@ -1,0 +1,31 @@
+# Starts a dashboard-job-NAME instance. Each time you do a helm deploy,
+# if dashboardJob.enabled is true, it'll create a new Job. Jobs can be
+# long running, and doing a new helm deploy will not stop old job(s).
+#
+# Jobs re-use the same _dashboard.yaml template as the main deployment,
+# so they have access to the same container, variables, etc. Its like
+# running it inside the same container, but you won't interfere with the
+# main web servering process.
+
+{{- if .Values.dashboardJob.enabled -}}
+
+{{- $dashboardJobName := printf "dashboard-job-%s" .Values.dashboardJob.name }}
+
+{{- include "dashboard" 
+  (merge (dict 
+    "apiVersion" "batch/v1"
+    "kind" "Job"
+    "name" (include "cdo.fullname" (merge (dict "component" $dashboardJobName) .))
+    "shortName" .Values.dashboardJob.name
+    "labels" (include "cdo.labels" (merge (dict "component" $dashboardJobName) .))
+    "selectorLabels" (include "cdo.selectorLabels" (merge (dict "component" $dashboardJobName) .))
+    "healthChecksEnabled" false
+    "command" .Values.dashboardJob.command
+    "args" .Values.dashboardJob.args
+    "restartPolicy" .Values.dashboardJob.restartPolicy
+    "backoffLimit" .Values.dashboardJob.backoffLimit
+    "ttlSecondsAfterFinished" .Values.dashboardJob.ttlSecondsAfterFinished
+  ) .)
+}}
+
+{{- end }}

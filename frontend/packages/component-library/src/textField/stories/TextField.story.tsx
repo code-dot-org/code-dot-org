@@ -64,6 +64,14 @@ EmailTextField.args = {
   inputType: 'email',
 };
 
+export const DateTextField = SingleTemplate.bind({});
+DateTextField.args = {
+  ...defaultArgs,
+  name: 'textfield_date',
+  label: 'Date TextField Label',
+  inputType: 'date',
+};
+
 export const WithHelperMessageTextField = SingleTemplate.bind({});
 WithHelperMessageTextField.args = {
   ...defaultArgs,

@@ -17,7 +17,7 @@ theme: responsive
 
 ## Browser dan Platform Minimum yang Didukung
 
-Mulai Juli 2024, kami akan memperbarui versi minimum yang diperlukan untuk browser dan sistem operasi. Meskipun versi lama mungkin masih berfungsi, kami tidak akan dapat mendukung permintaan untuk perbaikan bug di versi yang lebih lama.
+Setiap tahun kami akan memperbarui versi minimum yang diperlukan untuk browser dan sistem operasi. Meskipun versi lama mungkin masih berfungsi, kami tidak akan dapat mendukung permintaan untuk perbaikan bug di versi yang lebih lama.
 
 <table>
   <tr>
@@ -25,28 +25,6 @@ Mulai Juli 2024, kami akan memperbarui versi minimum yang diperlukan untuk brows
       <table>
         <th>
           Browser
-        </th>
-        <tr>
-          <td>Chrome 96.x</td>
-        </tr>
-        <tr>
-          <td>Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Mobile Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Edge 94.x</td>
-        </tr>
-        <tr>
-          <td>Firefox 91.x</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
-      <table>
-        <th>
-          Browser Juli '24
         </th>
         <tr>
           <td>Chrome 103.x</td>
@@ -71,28 +49,6 @@ Mulai Juli 2024, kami akan memperbarui versi minimum yang diperlukan untuk brows
           Platform
         </th>
         <tr>
-          <td>macOS 10.13</td>
-        </tr>
-        <tr>
-          <td>iOS 11.x</td>
-        </tr>
-        <tr>
-          <td>Windows 7</td>
-        </tr>
-        <tr>
-          <td>Android 6</td>
-        </tr>
-        <tr>
-          <td>ChromeOS (Chromebooks)</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
-      <table>
-        <th>
-          Platform Juli '24
-        </th>
-        <tr>
           <td>MacOS 10.15</td>
         </tr>
         <tr>
@@ -103,6 +59,51 @@ Mulai Juli 2024, kami akan memperbarui versi minimum yang diperlukan untuk brows
         </tr>
         <tr>
           <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+    <!-- "coming soon" system requirements, to be updated and made live from March through July. -->
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Browser Juli '25
+        </th>
+        <tr>
+          <td>Krom 109</td>
+        </tr>
+        <tr>
+          <td>Safari 16.6</td>
+        </tr>
+        <tr>
+          <td>Seluler Safari 16</td>
+        </tr>
+        <tr>
+          <td>Tepi 128</td>
+        </tr>
+        <tr>
+          <td>Firefox 115</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platform Juli '25
+        </th>
+        <tr>
+          <td>MacOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 16.x</td>
+        </tr>
+        <tr>
+          <td>Windows 10</td>
+        </tr>
+        <tr>
+          <td>Android 8</td>
         </tr>
         <tr>
           <td>ChromeOS (Chromebooks)</td>
@@ -147,7 +148,6 @@ Kami menggunakan [YouTube](https://www.youtube.com) untuk menyematkan video ke C
 ### Apakah Anda dapat memutar video ini?
 
 Sebelum memulai kursus online Code.org, cobalah memutar video berikut untuk memastikan bahwa Anda sudah siap melakukannya.
-
 
 <!--
 The following HTML is a copy of video_with_fallback.haml. once this file can be converted to

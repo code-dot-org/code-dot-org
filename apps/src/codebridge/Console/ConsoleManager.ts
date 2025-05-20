@@ -6,14 +6,17 @@ export default class ConsoleManager {
   private terminal: Terminal;
   private terminalFitAddon: FitAddon;
   private terminalLines: string[];
-
-  private IMAGE_WIDTH = 400;
-  private IMAGE_HEIGHT = 400;
+  private inputBuffer: string;
+  // If the last line in terminalLines is a partial line or not (i.e. if it was terminated with a newline).
+  private lastLineIsPartial: boolean;
+  private terminalLinesListeners: ((lines: string[]) => void)[] = [];
 
   constructor(terminal: Terminal, terminalFitAddon: FitAddon) {
     this.terminal = terminal;
     this.terminalFitAddon = terminalFitAddon;
     this.terminalLines = [];
+    this.inputBuffer = '';
+    this.lastLineIsPartial = false;
   }
 
   public getTerminal() {
@@ -35,6 +38,8 @@ export default class ConsoleManager {
   public clearTerminalLines() {
     this.terminalLines = [];
     this.terminal.clear();
+    this.lastLineIsPartial = false;
+    this.executeTerminalLinesListeners();
   }
 
   public getTerminalLines() {
@@ -46,36 +51,65 @@ export default class ConsoleManager {
     lines.forEach(l => this.appendTerminalLine(l));
   }
 
-  public writeSystemMessage(message: string, appName?: string) {
-    this.writeConsoleMessage(this.getSystemMessage(message, appName));
+  public writePartialLine(message: string) {
+    this.updateTerminalLines(message);
+    this.lastLineIsPartial = true;
+    this.terminal.write(message);
+    this.terminal.scrollToBottom();
+    this.terminal.focus();
   }
 
-  public writeErrorMessage(message: string) {
-    // This colors the message red in the terminal
-    this.writeConsoleMessage(`\x1b[31m${message}\x1b[0m`);
+  public appendToInputBuffer(data: string) {
+    this.inputBuffer += data;
   }
 
-  public writeSystemError(message: string, appName: string) {
-    this.writeErrorMessage(this.getSystemMessage(message, appName));
+  public backspaceInputBuffer() {
+    this.inputBuffer = this.inputBuffer.slice(0, -1);
   }
 
-  public writeImage(base64Image: string) {
-    const dataSize = atob(base64Image).length;
-    // This is a special sequence that tells the terminal to display an image
-    // See documentation here: https://iterm2.com/documentation-images.html
-    const imageString = `\x1b]1337;File=inline=1;size=${dataSize};width=${this.IMAGE_WIDTH}px;height=${this.IMAGE_HEIGHT}px:${base64Image}\x1b\\`;
-    this.appendTerminalLine(imageString);
+  public getInputBuffer() {
+    return this.inputBuffer;
+  }
+
+  // Store the current input buffer in the terminal and clear the input buffer.
+  // We always store the input buffer as a line with a newlne, because we clear it when
+  // the user presses enter.
+  public saveAndClearInputBuffer() {
+    this.updateTerminalLines(this.inputBuffer);
+    this.lastLineIsPartial = false;
+    this.inputBuffer = '';
+  }
+
+  public addTerminalLinesListener(listener: (lines: string[]) => void) {
+    this.terminalLinesListeners.push(listener);
+  }
+
+  public removeTerminalLinesListener(listener: (lines: string[]) => void) {
+    this.terminalLinesListeners = this.terminalLinesListeners.filter(
+      l => l !== listener
+    );
+  }
+
+  private executeTerminalLinesListeners() {
+    this.terminalLinesListeners.forEach(listener =>
+      listener(this.terminalLines)
+    );
   }
 
   private appendTerminalLine(line: string) {
-    this.terminalLines.push(line);
+    this.updateTerminalLines(line);
+    this.lastLineIsPartial = false;
     this.terminal.writeln(line);
     this.terminal.scrollToBottom();
     this.terminal.focus();
   }
 
-  private getSystemMessage(message: string, appName?: string) {
-    const systemMessagePrefix = appName === 'pythonlab' ? '[PYTHON LAB] ' : '';
-    return `${systemMessagePrefix}${message}`;
+  private updateTerminalLines(message: string) {
+    if (this.lastLineIsPartial && this.terminalLines.length > 0) {
+      this.terminalLines[this.terminalLines.length - 1] += message;
+    } else {
+      this.terminalLines.push(message);
+    }
+    this.executeTerminalLinesListeners();
   }
 }

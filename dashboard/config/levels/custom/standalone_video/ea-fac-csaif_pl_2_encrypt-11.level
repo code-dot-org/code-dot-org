@@ -1,0 +1,21 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2025-03-31T02:51:15.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "csp_concept_encryption",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_24",
+    "encrypted": "false",
+    "long_instructions": "#### A random substitution cipher is very crackable by hand, though it might take some time. However, when aided by computational tools, a random substitution cipher can be cracked by a novice in a matter of minutes. Simple substitution ciphers give insight into encryption algorithms, but as we've seen fall way short when a potential adversary is aided with computational tools.\r\n\r\n#### If we are to create a secure Internet, we will need to develop tool and protocols which can resist the enormous computational power of modern computers.\r\n\r\n#### As you watch the video think about: *What is the difference between symmetric encryption and asymmetric (public key) encryption?*\r\n\r\n<p style=\"font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;\">\r\n    ➡️ This activity is from Lesson 8. You can find more details in the full <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.\r\n</p>\r\n\r\n\r\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-03-31T02:51:14.992+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_2_encrypt\\\"\"],\"cloned_from\":\"csaif_pl_2_encrypt\"}]"
+}]]></config>
+</StandaloneVideo>

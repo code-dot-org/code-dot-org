@@ -44,7 +44,13 @@ module SharedConstants
 
   USER_LEVEL_INTERACTIONS = OpenStruct.new(
     {
+      click_continue: "click_continue",
+      click_finish: "click_finish",
       click_help_and_tips: "click_help_and_tips",
+      click_keep_working: "click_keep_working",
+      click_run: "click_run",
+      click_submit: "click_submit",
+      click_validate: "click_validate",
     }
   ).freeze
 
@@ -726,12 +732,18 @@ module SharedConstants
   # Current song manifest file name for Dance Party. Note that different manifests
   # can be tested using query params (?manifest=...), but once this value is updated
   # the default manifest will change for all users.
-  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2024_v4.json'
+  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2025_v1.json'
 
   # We should always specify a version for the LLM so the results don't unexpectedly change.
   # reference: https://platform.openai.com/docs/models/gpt-3-5
-  AI_TUTOR_CHAT_MODEL_VERISON = 'gpt-4o-2024-05-13'
-  AICHAT_SAFETY_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
+  AI_TUTOR_CHAT_MODEL_VERSION = 'gpt-4o-2024-05-13'
+  AICHAT_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
+  EVALUATE_STUDENT_LEARNING_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
+
+  AI_EVALUATION_TYPES = {
+    SINGLE_STUDENT: 'single_student',
+    SECTION_SUMMARY: 'section_summary',
+  }.freeze
 
   # These reflect the 'status' of an AI Interaction,
   # and are used in both AI Tutor and AI Chat.
@@ -740,6 +752,7 @@ module SharedConstants
     PII_VIOLATION: 'pii_violation',
     PROFANITY_VIOLATION: 'profanity_violation',
     USER_INPUT_TOO_LARGE: 'user_input_too_large',
+    MODEL_TIMEOUT: 'model_timeout',
     OK: 'ok',
     UNKNOWN: 'unknown',
   }.freeze
@@ -751,6 +764,7 @@ module SharedConstants
     VALIDATION: 'validation',
     GENERAL_CHAT: 'general_chat',
     COMPLETION: 'completion',
+    GENERIC_HELP: 'generic_help',
   }.freeze
 
   USER_TYPES = OpenStruct.new(
@@ -784,7 +798,9 @@ module SharedConstants
     # PII detected in the model's output.
     MODEL_PII: 1004,
     # The user input request exceeded the maximum token size allowed.
-    USER_INPUT_TOO_LARGE: 1005
+    USER_INPUT_TOO_LARGE: 1005,
+    # The model took too long to respond.
+    MODEL_TIMEOUT: 1006,
   }
 
   AI_CHAT_MODEL_IDS = {
@@ -792,10 +808,20 @@ module SharedConstants
     BIOMISTRAL: "gen-ai-biomistral-7b",
     MISTRAL: "gen-ai-mistral-7b-inst-v01",
     KAREN: "gen-ai-karen-creative-mistral-7b",
-    PIRATE: "gen-ai-mistral-pirate-7b"
+    PIRATE: "gen-ai-mistral-pirate-7b",
+    CHATGPT: "gpt-4o-mini",
   }
 
   AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze
+
+  AI_CHAT_TEACHER_FEEDBACK = {
+    # The teacher flagged a message that our system did not flag as inappropriate.
+    CLEAN_DISAGREE: 'clean_disagree',
+    # The teacher agreed with our system's flagging of a message as inappropriate.
+    PROFANITY_AGREE: 'profanity_agree',
+    # The teacher disagreed with our system's flagging of a message as inappropriate.
+    PROFANITY_DISAGREE: 'profanity_disagree',
+  }
 
   US_STATES = STATE_ABBR_WITH_DC_HASH.merge(DC: 'Washington, D.C.').sort_by(&:last).to_h.freeze
 
@@ -819,5 +845,27 @@ module SharedConstants
     {value: "district_admin", category: "admin"},
     {value: "parent", category: 'other'},
     {value: "other", category: 'other'}
+  ].freeze
+
+  AI_DIFF_CONTEXT = {
+    LESSON: "lesson",
+    UNIT: "unit",
+    COURSE: "course",
+    GENERAL: "general"
+  }.freeze
+
+  DISALLOWED_ROUTES = [
+    "/admin/",
+    "/api/",
+    "/blockly/",
+    "/dashboardapi/",
+    "/join/",
+    "/milestone/",
+    "/projects/",
+    "/sections/",
+    "/r/",
+    "/c/",
+    "/oauth_sign_out/",
+    "/certificates/"
   ].freeze
 end

@@ -1,7 +1,10 @@
+import Button from '@code-dot-org/component-library/button';
+import {
+  Heading1,
+  BodyThreeText,
+} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
-import Button from '@cdo/apps/componentLibrary/button/Button';
-import {Heading1, BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import locale from '@cdo/apps/signUpFlow/locale';
 

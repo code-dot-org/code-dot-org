@@ -54,7 +54,8 @@ class FoormPreviewController < ApplicationController
       is_virtual: params[:isVirtual] == 'true' || false,
       is_friday_institute: params[:isFridayInstitute] == 'true' || false,
       num_facilitators: 3,
-      workshop_agenda: params[:workshopAgenda] || "module1"
+      workshop_agenda: params[:workshopAgenda] || "module1",
+      pl_topics: params[:plTopics] || ['self-paced-1', 'self-paced-2']
     }
 
     @script_data = {

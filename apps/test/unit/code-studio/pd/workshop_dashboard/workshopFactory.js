@@ -1,6 +1,9 @@
 import {Factory} from 'rosie';
 
-import {States} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {
+  States,
+  PdSessionFormats,
+} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 /**
  * Factory for the workshop object passed around by workshop dashboard components,
@@ -9,7 +12,8 @@ import {States} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
  */
 
 // For testing average middle of the year dates.
-const middleOfYearFakeToday = new Date(2016, 6, 1); // July 1st, 2016
+const middleOfYearFakeToday = new Date(2016, 6, 1, 15); // July 1st, 2016
+const middleOfYearFakeTodayEnd = new Date(2016, 6, 1, 23); // July 1st, 2016
 // For testing cases when wrapping around from December of one year to January of the next.
 const endOfYearFakeToday = new Date(2016, 12, 30); // December 30th, 2016
 
@@ -32,7 +36,8 @@ Factory.define('workshop')
   .attr('funded', true)
   .attr('enrolled_teacher_count', 1)
   .attr('organizer', {name: 'Oscar Organzier', email: 'oscar@code.org'})
-  .attr('virtual', false);
+  .attr('virtual', false)
+  .attr('time_zone', 'America/Denver');
 
 Factory.define('workshop multiple sessions')
   .extend('workshop')
@@ -110,8 +115,9 @@ Factory.define('session')
   .sequence('id')
   .attr('code', 'TEST')
   .attr('start', middleOfYearFakeToday.toISOString())
-  .attr('end', middleOfYearFakeToday.toISOString())
+  .attr('end', middleOfYearFakeTodayEnd.toISOString())
   .attr('attendance_count', 0)
+  .attr('session_format', PdSessionFormats[0].value)
   .attr('show_link?', false);
 
 Factory.define('session starting within month of middleOfYearFakeToday')

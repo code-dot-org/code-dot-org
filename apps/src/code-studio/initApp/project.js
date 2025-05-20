@@ -1,6 +1,7 @@
 import $ from 'jquery';
 
 import firehoseClient from '@cdo/apps/metrics/firehose';
+import {getGlobalEditionRegion} from '@cdo/apps/util/globalEdition';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {AbuseConstants} from '@cdo/generated-scripts/sharedConstants';
 import msg from '@cdo/locale';
@@ -46,7 +47,6 @@ var events = {
   // Fired when run state changes or we enter/exit design mode
   appModeChanged: 'appModeChanged',
   appInitialized: 'appInitialized',
-  workspaceChange: 'workspaceChange',
 };
 
 // Number of consecutive failed attempts to update the channel.
@@ -747,9 +747,6 @@ var projects = (module.exports = {
               });
           }.bind(this)
         );
-        $(window).on(events.workspaceChange, function () {
-          hasProjectChanged = true;
-        });
 
         if (!appOptions.level.skipAutosave) {
           // Autosave every AUTOSAVE_INTERVAL milliseconds
@@ -1506,8 +1503,9 @@ var projects = (module.exports = {
       callCallback();
       return;
     }
+
     // `getLevelSource()` is expensive for Blockly so only call
-    // after `workspaceChange` has fired
+    // if the project workspace has changed.
     if (!appOptions.droplet && !hasProjectChanged) {
       callCallback();
       return;
@@ -1971,20 +1969,6 @@ function fetchShareFailure(resolve) {
   });
 }
 
-function fetchPrivacyProfanityViolations(resolve) {
-  channels.fetch(current.id + '/privacy-profanity', (err, data) => {
-    // data.has_violation is 0 or true, coerce to a boolean
-    currentHasPrivacyProfanityViolation =
-      (data && !!data.has_violation) || currentHasPrivacyProfanityViolation;
-    resolve();
-    if (err) {
-      // Throw an error so that things like New Relic see this. This shouldn't
-      // affect anything else
-      throw err;
-    }
-  });
-}
-
 /**
  * @param project
  * @returns {Promise} A Promise which resolves when all network calls complete.
@@ -1995,9 +1979,7 @@ function fetchAbuseScoreAndPrivacyViolations(project) {
     new Promise(fetchShareFailure),
   ];
 
-  if (project.getStandaloneApp() === 'playlab') {
-    promises.push(new Promise(fetchPrivacyProfanityViolations));
-  } else if (
+  if (
     project.getStandaloneApp() === 'applab' ||
     project.getStandaloneApp() === 'gamelab' ||
     project.isWebLab()
@@ -2097,7 +2079,7 @@ function redirectEditView() {
 
 /**
  * Does a hard redirect if we end up with a hash based projects url. This can
- * happen on IE9, when we save a new project for hte first time.
+ * happen on IE9, when we save a new project for the first time.
  * @returns {boolean} True if we did an actual redirect
  */
 function redirectFromHashUrl() {
@@ -2117,6 +2099,11 @@ function redirectFromHashUrl() {
  */
 function parsePath() {
   var pathname = utils.currentLocation().pathname;
+
+  const geRegion = getGlobalEditionRegion();
+  if (geRegion) {
+    pathname = pathname.replace(`/global/${geRegion}/`, '/');
+  }
 
   // We have a hash based route. Replace the hash with a slash, and append to
   // our existing path

@@ -12,8 +12,8 @@ Feature: Teacher Lesson Plan
     Then I wait until element ".announcement-notification:first" is visible
     And element ".announcement-notification:first" contains text matching "Information for Teachers"
 
-    Then I wait until element ".announcement-notification:nth(1)" is visible
-    And element ".announcement-notification:nth(1)" contains text matching "Information for Students and Teachers"
+    Then I wait until element ".announcement-notification:eq(1)" is visible
+    And element ".announcement-notification:eq(1)" contains text matching "Information for Students and Teachers"
 
     # Check for name of lesson
     And I wait until element "h1:contains(Lesson 1: First Lesson)" is visible
@@ -75,11 +75,11 @@ Feature: Teacher Lesson Plan
     # Navigate between lesson plans
     Then I wait until element ".uitest-lesson-dropdown-nav" is visible
     And I click ".uitest-lesson-dropdown-nav"
-    Then I wait until element "a.no-navigation:nth(1)" is visible
-    And I click selector "a.no-navigation:nth(1)"
+    Then I wait until element "a.no-navigation:eq(1)" is visible
+    And I click selector "a.no-navigation:eq(1)"
     And I wait until element "a.navigate:contains(2 - Second Lesson)" is visible
-    Then I wait until element "a.navigate:nth(0)" is visible
-    And I click selector "a.navigate:nth(0)"
+    Then I wait until element "a.navigate:eq(0)" is visible
+    And I click selector "a.navigate:eq(0)"
     Then I wait until I am on "http://studio.code.org/s/allthemigratedthings/lessons/2"
     And I wait until element "#show-container" is visible
     And I wait until element "h1:contains(Lesson 2: Second Lesson)" is visible
@@ -96,7 +96,7 @@ Feature: Teacher Lesson Plan
     Given I create a teacher named "Prof_Dumbledore"
     And I am on "http://studio.code.org/s/allthemigratedthings/lessons/5"
     And I wait until element "#show-container" is visible
-    And I click selector ".uitest-ProgressPill:nth(0)"
+    And I click selector ".uitest-ProgressPill:eq(0)"
     And I wait until element ".modal" is visible
     And I wait until element ".modal-body button:contains(Dismiss)" is visible
     And I wait until element ".modal-backdrop" is visible
@@ -104,7 +104,7 @@ Feature: Teacher Lesson Plan
     And I click selector ".modal-body button:contains(Dismiss)"
     And I wait until element ".modal-backdrop" is gone
 
-    And I click selector ".uitest-ProgressPill:nth(1)"
+    And I click selector ".uitest-ProgressPill:eq(1)"
     And I wait until element ".modal" is visible
     And I wait until element ".modal-body button:contains(Dismiss)" is visible
     And I wait until element ".modal-backdrop" is visible
@@ -112,7 +112,7 @@ Feature: Teacher Lesson Plan
     And I click selector ".modal-body button:contains(Dismiss)"
     And I wait until element ".modal-backdrop" is gone
 
-    And I click selector ".uitest-ProgressPill:nth(2)"
+    And I click selector ".uitest-ProgressPill:eq(2)"
     And I wait until element ".modal" is visible
     And I wait until element ".modal-body button:contains(Dismiss)" is visible
     And I wait until element ".modal-backdrop" is visible

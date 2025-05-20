@@ -29,12 +29,12 @@
   }
 }
 
-.instructions-dark {
+.instructions-Dark {
   @extend %instructions;
   background-color: $neutral_dark;
 }
 
-.instructions-light {
+.instructions-Light {
   @extend %instructions;
   background-color: $light_white;
 }
@@ -109,20 +109,22 @@
 
 %text {
   position: relative;
-  overflow: hidden;
   white-space: pre-wrap;
   border-radius: 4px;
   margin-bottom: 10px;
   animation: slidein 0.5s;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
 
-.text-dark {
+.text-Dark {
   @extend %text;
   background-color: $neutral_light;
   color: $neutral_dark;
 }
 
-.text-light {
+.text-Light {
   @extend %text;
   background-color: $light_white;
   color: $neutral_dark;
@@ -130,9 +132,26 @@
 
 .textContent {
   height: 100%;
-  overflow-y: auto;
-  padding: 15px 20px 5px 20px;
+  padding: 15px 10px 5px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+%scrolling-content {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 70px;
+}
+
+.scrollingContentWithTTS {
+  @extend %scrolling-content;
+  margin-bottom: 25px;
+}
+
+.scrollingContentWithoutTTS {
+  @extend %scrolling-content;
+  margin-bottom: 10px;
 }
 
 %message {
@@ -142,16 +161,22 @@
   animation: slidein 0.5s;
 }
 
-.message-dark {
+.message-Dark {
   @extend %message;
   background-color: $neutral_light;
   color: $neutral_dark;
 }
 
-.message-light {
+.message-Light {
   @extend %message;
   background-color: $light_gray_50;
   color: $neutral_dark;
+}
+
+.predictSummary {
+  padding: 0;
+  margin-top: 8px;
+  margin-bottom: 6px;
 }
 
 .buttonInstruction {
@@ -162,6 +187,7 @@
 
 .markdownText {
   line-height: 0;
+  overflow-y: auto;
 
   h1,
   h2,
@@ -173,7 +199,8 @@
     line-height: 1.2em;
   }
 
-  ol, ul {
+  ol,
+  ul {
     font-size: 14px;
     line-height: 0;
     margin: 0 0 10px 20px;
@@ -196,5 +223,12 @@
 
   details {
     line-height: 1.2;
+    summary {
+      margin: 4px 0;
+    }
   }
+}
+
+.bottomComponent {
+  overflow: hidden;
 }

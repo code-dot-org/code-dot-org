@@ -70,11 +70,18 @@ namespace :seed do
   SPECIAL_UI_TEST_SCRIPTS = %w(
     ui-test-script-in-course-2017
     ui-test-script-in-course-2019
+    ui-test-script-2-in-course-2017
+    ui-test-script-2-in-course-2019
+    ui-test-shared-unit
     ui-test-versioned-script-2017
     ui-test-versioned-script-2019
     ui-test-csa-family-script
     ui-test-teacher-pl-course
+    ui-test-self-paced-pl
     ui-test-facilitator-pl-course
+    ui-test-single-unit-2025
+    ui-test-single-unit-2026
+    ui-test-unnumbered-lessons
   ).map {|script| "test/ui/config/scripts_json/#{script}.script_json"}.freeze
   UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + %w(
     20-hour
@@ -110,11 +117,10 @@ namespace :seed do
     interactive-games-animations-2024
     focus-on-creativity3-2024
     focus-on-coding3-2024
+    customizing-llms-2024
     csp1-2017
     csp2-2017
     csp3-2017
-    csp3-a
-    csp3-research-mxghyt
     csp4-2017
     csp5-2017
     csp-ap
@@ -145,6 +151,7 @@ namespace :seed do
     step
     oceans
     sports
+    jigsaw
   ).map {|script| "config/scripts_json/#{script}.script_json"}.freeze
 
   # To improve adhoc start time, we only seed the most recent year of our common curriculum
@@ -280,7 +287,19 @@ namespace :seed do
     update_scripts(incremental: true)
   end
 
-  timed_task_with_logging scripts_ui_tests: SCRIPTS_DEPENDENCIES do
+  # Moved course offerings ui test seed after regular course offerings are seeded
+  # because the regular course offerings seed task removes any course_offerings records
+  # left in the database that do not have a corresponding json file in config/course_offerings.
+  # The ui test course offerings must be seeded after so they are not accidentally removed.
+  timed_task_with_logging scripts_ui_tests: SCRIPTS_DEPENDENCIES + [:course_offerings_ui_tests] do
+    update_scripts(script_files: UI_TEST_SCRIPTS)
+  end
+
+  # Seeds only ui test scripts, skipping any dependencies. This is useful for
+  # seeding vocab and resources which may have been skipped when seeding into
+  # an empty DB. For more context, see
+  # https://github.com/code-dot-org/code-dot-org/pull/64792
+  timed_task_with_logging reseed_scripts_ui_tests: :environment do
     update_scripts(script_files: UI_TEST_SCRIPTS)
   end
 
@@ -296,10 +315,66 @@ namespace :seed do
 
   timed_task_with_logging courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
-    %w(allthethingscourse csp-2017 csp-2019).each do |course_name|
+    %w(allthethingscourse
+       csp-2017
+       csp-2019
+       20-hour
+       algebra
+       allthemigratedthings
+       alltheselfpacedplthings
+       allthettsthings
+       artist
+       course1
+       course2
+       course3
+       course4
+       coursea-2017
+       courseb-2017
+       coursec-2017
+       coursed-2017
+       coursee-2017
+       coursef-2017
+       pre-express-2017
+       express-2017
+       coursea-2019
+       coursec-2019
+       coursee-2019
+       coursea-2020
+       csp-ap
+       interactive-games-animations-2023
+       interactive-games-animations-2024
+       customizing-llms-2024
+       dance
+       events
+       flappy
+       frozen
+       hero
+       hourofcode
+       infinity
+       mc
+       minecraft
+       playlab
+       starwars
+       starwarsblocks
+       step
+       oceans
+       jigsaw
+       sports).each do |course_name|
       UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end
-    %w(ui-test-course-2017 ui-test-course-2019).each do |course_name|
+    %w(
+      ui-test-course-2017
+      ui-test-course-2019
+      ui-test-single-unit-course-2025
+      ui-test-single-unit-course-2026
+      ui-test-csa-family-script
+      ui-test-facilitator-pl-course
+      ui-test-teacher-pl-course
+      ui-test-self-paced-pl
+      ui-test-versioned-script-2017
+      ui-test-versioned-script-2019
+      ui-test-unnumbered-lessons
+    ).each do |course_name|
       UnitGroup.load_from_path("test/ui/config/courses/#{course_name}.course")
     end
   end
@@ -409,7 +484,16 @@ namespace :seed do
   end
 
   timed_task_with_logging course_offerings_ui_tests: :environment do
-    %w(ui-test-course ui-test-csa-family-script ui-test-teacher-pl-course ui-test-facilitator-pl-course).each do |course_offering_name|
+    %w(
+      ui-test-course
+      ui-test-csa-family-script
+      ui-test-teacher-pl-course
+      ui-test-self-paced-pl
+      ui-test-facilitator-pl-course
+      ui-test-single-unit-course
+      ui-test-versioned-course
+      ui-test-unnumbered-lessons
+    ).each do |course_offering_name|
       CourseOffering.seed_record("test/ui/config/course_offerings/#{course_offering_name}.json")
     end
   end
@@ -574,7 +658,7 @@ namespace :seed do
   end
 
   FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :foorms, :import_pegasus_data, :datablock_storage].freeze
-  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_ui_tests, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :import_pegasus_data, :datablock_storage].freeze
+  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :reseed_scripts_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :import_pegasus_data, :datablock_storage].freeze
   ADHOC_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :import_pegasus_data, :datablock_storage].freeze
   DEFAULT_SEED_TASKS = if rack_env == :test then UI_TEST_SEED_TASKS elsif rack_env == :adhoc then ADHOC_SEED_TASKS else FULL_SEED_TASKS end
 

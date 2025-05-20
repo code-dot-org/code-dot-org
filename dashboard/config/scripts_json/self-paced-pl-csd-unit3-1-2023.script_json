@@ -6,12 +6,11 @@
     "properties": {
       "content_area": "self_paced_pl_6_8",
       "curriculum_umbrella": "Self-paced PL - CSD",
-      "is_migrated": true,
-      "version_year": "2023"
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-13 21:59:30 UTC",
+    "serialized_at": "2025-01-22 18:59:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

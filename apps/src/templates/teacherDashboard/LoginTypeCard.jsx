@@ -9,7 +9,7 @@ class LoginTypeCard extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string,
-    description: PropTypes.string.isRequired,
+    description: PropTypes.string,
     onClick: PropTypes.func.isRequired,
     className: PropTypes.string,
   };

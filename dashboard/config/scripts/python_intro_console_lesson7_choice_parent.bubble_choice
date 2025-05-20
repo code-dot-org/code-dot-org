@@ -1,0 +1,11 @@
+name 'python-intro-console-lesson7-choice-parent'
+display_name 'Variables Choice Level'
+description 'Pick one of the levels below. Use variables to store data and update their value. Then print out the result.'
+
+sublevels
+level 'python-intro-console-lesson7-choice-gameWorld'
+level 'python-intro-console-lesson7-choice-companion'
+level 'python-intro-console-lesson7-choice-clearObstacle'
+
+
+

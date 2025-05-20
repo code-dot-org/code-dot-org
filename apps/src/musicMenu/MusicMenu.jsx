@@ -92,6 +92,17 @@ const optionsList = [
     ],
   },
   {
+    name: 'play-tune-block-drums',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description: "Don't use shared editor UI for drums (default).",
+      },
+      {value: 'true', description: 'Use shared editor UI for drums.'},
+    ],
+  },
+  {
     name: 'play-pattern-ai-block',
     type: 'radio',
     values: [
@@ -164,6 +175,21 @@ const optionsList = [
     ],
   },
   {
+    name: 'sort-unrestricted-packs-by-type',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description:
+          'Use the default sort for sounds in the sounds panel (default).',
+      },
+      {
+        value: 'true',
+        description: 'Sort all unrestricted packs by type in the sounds panel.',
+      },
+    ],
+  },
+  {
     name: 'allow-change-starting-playhead-position',
     type: 'radio',
     values: [
@@ -212,11 +238,67 @@ const optionsList = [
     ],
   },
   {
-    name: 'timeline-original-layout',
+    name: 'timeline-layout',
     type: 'radio',
     values: [
-      {value: 'false', description: 'New timeline (default).'},
-      {value: 'true', description: 'Original timeline.'},
+      {value: 'default', description: 'New timeline (default).'},
+      {value: 'old', description: 'Original timeline.'},
+      {
+        value: 'blocks',
+        description: 'Sort timeline event based on block order (experimental).',
+      },
+    ],
+  },
+  {
+    name: 'js-editor',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Blockly editor (default).'},
+      {value: 'true', description: 'JavaScript text editor.'},
+    ],
+  },
+  {
+    name: 'blockly-glow-highlight',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description:
+          'Show a yellow outline around highlighted blocks (default).',
+      },
+      {
+        value: 'true',
+        description: 'Add a light filter over highlighted blocks',
+      },
+    ],
+  },
+  {
+    name: 'exemplar-player-bottom',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description:
+          'Exemplar player appears at bottom of main instructions text (default).',
+      },
+      {
+        value: 'true',
+        description: 'Exemplar player appears at bottom of instructions panel.',
+      },
+    ],
+  },
+  {
+    name: 'log-validator-condition-changes',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description: 'Do not log validator condition changes (default).',
+      },
+      {
+        value: 'true',
+        description: 'Log validator condition changes.',
+      },
     ],
   },
 ];

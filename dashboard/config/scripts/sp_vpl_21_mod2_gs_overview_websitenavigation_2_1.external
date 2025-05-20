@@ -1,0 +1,25 @@
+name 'SP-VPL-21-mod2-GS-Overview-WebsiteNavigation_2_1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Navigating Code.org 
+
+<img src="https://images.code.org/6966b5c3adf885b3ec6aac0de767e3c5-image-1742850316825.05.10 PM.png" alt="One students sitting at a laptops looking at the computer screen" style="border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 0;">
+
+#### Welcome! This lesson is designed to orient you to the Code.org website and teaching tools. 
+
+### **You will learn how to:**
+
+* #### Review the basic features of Code.org.
+* #### Make a plan for student logins.
+* #### Explore LMS integrations.
+* #### Create a class section.
+
+
+<br>
+
+#### **Suggested time:** 35 minutes
+
+
+MARKDOWN

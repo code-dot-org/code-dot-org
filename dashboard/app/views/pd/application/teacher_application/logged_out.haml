@@ -19,7 +19,7 @@
     = link_to("Professional Learning Program overview", CDO.code_org_url('/educate/professional-learning/middle-high'), target: "_blank")
     or
     = succeed "." do
-      #regional-partner-mini-contact-popup-link-container{"data-source-page-id" => "teacher-application-logged-out", "data-options" => {notes: "Please tell me more about the professional learning program!"}, "data-link-text" => "contact your local regional partner"}
+      #regional-partner-mini-contact-popup-link-container{"data-source-page-id" => "teacher-application-logged-out", "data-link-text" => "contact your local regional partner"}
 
   .paragraph
     Please sign in or create an account:
@@ -28,7 +28,7 @@
     = link_to "/users/sign_in?user_return_to=#{request.fullpath}", class: "paragraph" do
       %button= I18n.t('nav.user.signin')
 
-    = link_to "/users/sign_up?user[user_type]=teacher&user_return_to=#{request.fullpath}" do
+    = link_to "/users/sign_up/login_type?user_type=teacher&user_return_to=#{request.fullpath}" do
       %button.blue-button= I18n.t('nav.user.signup')
 
 %br/

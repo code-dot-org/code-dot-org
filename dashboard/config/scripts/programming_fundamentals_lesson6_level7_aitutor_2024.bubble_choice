@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson6-level7-aitutor-2024'
+display_name 'Practice with Functions and Parameters'
+description 'Choose one of the options below!'
+
+sublevels
+level 'programming-fundamentals-lesson6-level7a-aitutor-2024'
+level 'programming-fundamentals-lesson6-level7b-aitutor-2024'
+level 'programming-fundamentals-lesson6-level7c-aitutor-2024'
+

@@ -1,6 +1,7 @@
-@import '@/common/styles/font';
-@import '@/common/styles/primitiveColors.css';
-@import '@/typography/typography.module';
+@use '@code-dot-org/component-library-styles/font.scss';
+@use '@code-dot-org/component-library-styles/colors.scss';
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
 
 // Tags common styles
 .tags {
@@ -11,9 +12,9 @@
     display: flex;
     align-items: baseline;
     gap: 2px;
-    color: var(--neutral-base-black);
+    color: var(--text-neutral-primary);
     padding: 2px 12px;
-    background-color: var(--brand-teal-5);
+    background: var(--background-brand-teal-light);
     border-radius: 6.25rem;
     max-width: 15em;
 
@@ -32,7 +33,8 @@
       padding-inline-start: 8px;
     }
 
-    &:has(i:not(:first-child)) {
+    &:has(i:last-child),
+    &:has(button:last-child) {
       padding-inline-end: 8px;
     }
   }
@@ -42,7 +44,7 @@
 .tags-l {
   .tag {
     span {
-      @include overline-one;
+      @include typography.overline-one;
       line-height: 1.5;
       margin-bottom: 0;
       margin-top: 1.5px;
@@ -60,7 +62,7 @@
 .tags-m {
   .tag {
     span {
-      @include overline-two;
+      @include typography.overline-two;
       line-height: 1.54;
       margin-bottom: 0;
       margin-top: 2px;
@@ -78,7 +80,7 @@
 .tags-s {
   .tag {
     span {
-      @include overline-three;
+      @include typography.overline-three;
       line-height: 1.8;
       margin-bottom: 0;
       margin-top: 1px;

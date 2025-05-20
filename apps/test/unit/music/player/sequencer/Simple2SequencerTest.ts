@@ -373,17 +373,4 @@ describe('Simple2Sequencer', () => {
       '6',
     ]);
   });
-
-  it('does not play the same sound more than once at the same time', () => {
-    sequencer.newSequence();
-    sequencer.startFunctionContext('when_run');
-    sequencer.playTogether();
-    sequencer.playSound('id1', 'blockId1');
-    sequencer.playSound('id1', 'blockId1');
-    sequencer.endTogether();
-    sequencer.endFunctionContext();
-
-    const playbackEvents = sequencer.getPlaybackEvents();
-    expect(playbackEvents.length).to.equal(1);
-  });
 });

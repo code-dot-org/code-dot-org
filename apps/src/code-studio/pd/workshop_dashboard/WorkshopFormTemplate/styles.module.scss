@@ -1,0 +1,194 @@
+@import '@code-dot-org/component-library-styles/colors.scss';
+@import '@code-dot-org/component-library-styles/variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  gap: 2.5rem;
+
+  h2 {
+    margin: 0;
+  }
+
+  section {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    align-items: flex-start;
+
+    > * {
+      min-width: unset;
+      display: flex;
+      flex: 1 1 0;
+      width: 100%;
+      > input {
+        height: 2rem;
+      }
+    }
+
+    .col {
+      flex-direction: column;
+      gap: 0.75rem;
+      width: 100%;
+    }
+
+    .plTopicsContainer {
+      gap: 0.5rem;
+    }
+
+    &.formSubmitRow {
+      justify-content: space-between;
+      > button {
+        flex: 0;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .toggleWrapper {
+    position: relative;
+    margin-bottom: 1rem;
+
+    .row {
+      margin-bottom: 0;
+    }
+
+    label {
+      padding: 0.25rem 0;
+    }
+    p {
+      margin-top: 0.25rem;
+      position: absolute;
+      top: 100%;
+    }
+    a {
+      flex: 0;
+      white-space: nowrap;
+    }
+  }
+
+  .card {
+    border-radius: $regular-border-radius;
+    padding: 1rem;
+    background-color: var(--background-neutral-secondary);
+    border: 1px solid var(--borders-neutral-primary);
+    gap: 1rem;
+  }
+
+  .required {
+    > span::after {
+      content: '*';
+    }
+
+    &[id$='-dropdown'] > div:first-of-type > span::after {
+      content: '*';
+    }
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+
+    > div,
+    input,
+    textarea,
+    select,
+    > button {
+      width: 100%;
+      border-color: var(--borders-neutral-strong);
+    }
+
+    &.error,
+    .error {
+      > div > label > div:first-of-type,
+      textarea,
+      select {
+        border-color: var(--text-error-primary);
+      }
+    }
+
+    &.textField {
+      input {
+        height: 2rem;
+      }
+    }
+
+    &.customDropdown {
+      gap: 0.125rem;
+      width: 100%;
+
+      ul + div {
+        span {
+          text-align: center;
+        }
+      }
+
+      div:nth-of-type(2) {
+        top: 100%;
+        padding: 0;
+        margin-top: 4px;
+      }
+
+      > button {
+        span {
+          display: block;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          width: 100%;
+        }
+      }
+    }
+
+    textarea {
+      height: 6rem;
+      margin-bottom: 0;
+      border-radius: $regular-border-radius;
+      box-sizing: border-box;
+      resize: vertical;
+
+      &:focus-visible {
+        outline: 2px solid var(--borders-brand-teal-primary);
+        outline-offset: 2px;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .wrapContainer {
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+    margin-top: 0.375rem;
+
+    > div {
+      // didn't want to add !important here but had to to override the default tag styles
+      padding-inline-end: 0.75rem !important;
+      padding-inline-start: 0.75rem !important;
+      max-width: unset;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    .row {
+      flex-direction: column;
+      gap: 1.5rem;
+      > * {
+        width: 100%;
+        flex: 0 0 auto;
+      }
+    }
+  }
+}

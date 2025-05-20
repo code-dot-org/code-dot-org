@@ -1,9 +1,13 @@
+import {Button, LinkButton} from '@code-dot-org/component-library/button';
+import {
+  TooltipProps,
+  WithTooltip,
+} from '@code-dot-org/component-library/tooltip';
+import SettingsButton from '@codebridge/Settings/SettingsButton';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
-import {TooltipProps, WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import VersionHistoryButton from '@cdo/apps/lab2/views/components/versionHistory/VersionHistoryButton';
@@ -11,21 +15,19 @@ import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {sendPythonCodeToMicroBit} from '@cdo/apps/maker/boards/microBit/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {currentLocation} from '@cdo/apps/utils';
 import commonI18n from '@cdo/locale';
 
 import {useCodebridgeContext} from '../codebridgeContext';
 
 import moduleStyles from './workspace.module.scss';
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 const WorkspaceHeaderButtons: React.FunctionComponent = () => {
-  const {startSources} = useCodebridgeContext();
+  const {startSources, levelProperties, projectPickerSettings} =
+    useCodebridgeContext();
+  const {appName, enableMicroBit, skipUrl} = levelProperties;
+  const isWidgetView = levelProperties.widgetView;
 
-  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
-  const enableMicroBit = useAppSelector(
-    state => state.lab.levelProperties?.enableMicroBit || false
-  );
-  const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
   const dialogControl = useDialogControl();
   const source = useAppSelector(
     state => state.lab2Project.projectSources?.source
@@ -37,12 +39,16 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
     direction: 'onLeft',
     tooltipId: 'feedback-tooltip',
     size: 'xs',
-    className: darkModeStyles.tooltipLeft,
   };
 
-  const openFeedbackForm = () => {
-    window.open('https://forms.gle/Z4FsGMFzE4NrFp369', '_blank');
+  const documentationTooltipProps: TooltipProps = {
+    text: commonI18n.documentation(),
+    direction: 'onLeft',
+    tooltipId: 'documentation-tooltip',
+    size: 'xs',
   };
+
+  const documentationUrl = `${currentLocation().origin}/docs/ide/${appName}`;
 
   const onClickSkip = useCallback(() => {
     if (dialogControl) {
@@ -79,29 +85,56 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.rightHeaderButtons}>
+      {projectPickerSettings && (
+        <Button
+          iconRight={{iconName: 'rotate'}}
+          size={'xs'}
+          text={projectPickerSettings.currentType}
+          onClick={projectPickerSettings.showProjectTypePicker}
+          type={'primary'}
+          aria-label={codebridgeI18n.projectPickerAriaLabel()}
+          color={'black'}
+        />
+      )}
+      <SettingsButton />
       {enableMicroBit && (
         <Button
           iconRight={{iconStyle: 'solid', iconName: 'arrow-right-from-arc'}}
           onClick={onClickFlash}
           size={'xs'}
           type={'tertiary'}
-          color={buttonColors.white}
           text={codebridgeI18n.sendToMicroBit()}
-          className={darkModeStyles.tertiaryButton}
+          color={'black'}
         />
       )}
-      <VersionHistoryButton startSources={startSources} />
+      {!isWidgetView && (
+        <VersionHistoryButton startSources={startSources} appName={appName} />
+      )}
       {appName === 'pythonlab' && (
         <WithTooltip tooltipProps={feedbackTooltipProps}>
-          <Button
+          <LinkButton
             isIconOnly
             icon={{iconStyle: 'solid', iconName: 'commenting'}}
-            color={'white'}
-            onClick={openFeedbackForm}
+            href={'https://forms.gle/Z4FsGMFzE4NrFp369'}
             ariaLabel={commonI18n.feedback()}
             size={'xs'}
             type={'tertiary'}
-            className={darkModeStyles.tertiaryButton}
+            color={'black'}
+            target="_blank"
+          />
+        </WithTooltip>
+      )}
+      {/* For now, only python lab supports documentation */}
+      {appName === 'pythonlab' && (
+        <WithTooltip tooltipProps={documentationTooltipProps}>
+          <LinkButton
+            isIconOnly
+            icon={{iconStyle: 'solid', iconName: 'book'}}
+            href={documentationUrl}
+            size={'xs'}
+            type={'tertiary'}
+            target="_blank"
+            color={'black'}
           />
         </WithTooltip>
       )}
@@ -111,11 +144,11 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           onClick={onClickSkip}
           size={'xs'}
           type={'tertiary'}
-          color={buttonColors.white}
           text={commonI18n.skipToProject()}
-          className={darkModeStyles.tertiaryButton}
+          className={moduleStyles.buttonSkip}
+          color={'black'}
         >
-          {commonI18n.skipToProject()}
+          <span>{commonI18n.skipToProject()}</span>
         </Button>
       )}
     </div>

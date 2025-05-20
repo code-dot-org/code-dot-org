@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2025-01-15T19:49:28.000Z",
   "level_num": "custom",
@@ -10,26 +11,26 @@
     "panels": [
       {
         "text": "Engineer Emily\n\nJob/Hobby: Mechanical engineer working with CAD software\n\nPurpose: 3D modeling, simulations, and rendering.\n\n",
-        "imageUrl": "",
+        "imageUrl": "https://images.code.org/807ec6657d55ff383675c87c7c8b7441-updateSign.png",
         "key": "undefined-031fe85f-4e54-4fe0-b3a7-24c6bde9c151",
         "fadeInOverPrevious": false
       },
       {
         "text": "Budget: $2,500",
-        "imageUrl": "",
+        "imageUrl": "https://images.code.org/807ec6657d55ff383675c87c7c8b7441-updateSign.png",
         "key": "undefined-14706a7d-89bf-4177-9129-aefdc10f29d6"
       },
       {
         "text": "Important Info: Needs compatibility with specialized hardware like 3D printers.\n\nPreferences:\n* High-end workstation GPU for CAD applications.\n* Ample RAM (32 GB or more).\n* Dual monitors with high resolution for detailed designs.",
-        "imageUrl": "",
+        "imageUrl": "https://images.code.org/807ec6657d55ff383675c87c7c8b7441-updateSign.png",
         "key": "undefined-fbda9709-191d-4453-b773-2d163636fe7a",
         "layout": "text-bottom-left"
       }
     ],
     "display_name": "Engineer Emily",
-    "bubble_choice_description": "Mechanical engineer working with CAD software"
+    "bubble_choice_description": "Mechanical engineer working with CAD software",
+    "thumbnail_url": "https://images.code.org/a389766bceab2fc85871e0045aea698c-updateSign.png"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-01-15T19:49:28.980+00:00\",\"changed\":[\"cloned from \\\"test-computing-systems-lesson7-level1-b\\\"\"],\"cloned_from\":\"test-computing-systems-lesson7-level1-b\"},{\"changed_at\":\"2025-01-15 19:50:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-15 19:55:16 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-15 20:01:27 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-15T19:49:28.980+00:00\",\"changed\":[\"cloned from \\\"test-computing-systems-lesson7-level1-b\\\"\"],\"cloned_from\":\"test-computing-systems-lesson7-level1-b\"},{\"changed_at\":\"2025-01-15 19:50:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-15 19:55:16 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-15 20:01:27 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 15:14:09 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 15:16:31 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

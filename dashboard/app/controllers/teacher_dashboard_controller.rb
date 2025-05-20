@@ -1,8 +1,13 @@
 class TeacherDashboardController < ApplicationController
   load_and_authorize_resource :section
+  include LevelsHelper
+
+  ALPHABET = ('a'..'z').to_a
 
   rescue_from CanCan::AccessDenied do
-    if params[:path]&.include? 'courses'
+    if request.fullpath.include? 'home'
+      redirect_to "/users/sign_in"
+    elsif params[:path]&.include? 'courses'
       redirect_to "/#{params[:path]}"
     elsif params[:path]&.include? 'unit'
       params[:path].sub! 'unit', 's'
@@ -13,10 +18,25 @@ class TeacherDashboardController < ApplicationController
   end
 
   def show
-    @section_summary = @section.selected_section_summarize
     @sections = current_user.sections_instructed.map(&:concise_summarize)
+    unless @sections.empty?
+      if @section.nil?
+        @section = Section.find(@sections.first[:id])
+      end
+      @section_summary = @section.selected_section_summarize
+    end
+    @section_order = UserPreference.find_by(user_id: current_user.id)&.section_order
     @locale_code = request.locale
     view_options(full_width: true, no_padding_container: true)
+  end
+
+  def redirect_to_newest_section
+    if current_user.sections_instructed.empty?
+      redirect_to "/home"
+    else
+      section_id = current_user.sections_instructed.order(created_at: :desc).first.id
+      redirect_to "/teacher_dashboard/sections/#{section_id}/#{params[:location]}"
+    end
   end
 
   def redirect_to_newest_section_progress

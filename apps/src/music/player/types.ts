@@ -4,6 +4,9 @@ import {Effects} from './interfaces/Effects';
 export interface SampleEvent {
   // 1-based playback position in measures
   playbackPosition: number;
+  // The length of an optional "pickup" part of the sample, which is effectively how early to start
+  // playing it.  Specified as a fraction of one measure.
+  pickupLength?: number;
   // ID of the sound
   id: string;
   // URL of the sample

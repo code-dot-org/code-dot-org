@@ -44,7 +44,6 @@ const nodeModulesToTranspile = [
   'playground-io',
   'json-parse-better-errors',
   '@blockly/field-grid-dropdown',
-  '@blockly/keyboard-navigation',
   '@blockly/plugin-scroll-options',
   '@blockly/field-angle',
   '@blockly/field-bitmap',
@@ -190,6 +189,10 @@ const APPLICATION_ALIASES = {
   '@cdoide': p('src/weblab2/CDOIDE'),
   '@cdo/generated-scripts': p('generated-scripts'),
   '@codebridge': p('src/codebridge'),
+  // Prevent webpack from including linked npm dependencies' version of React
+  // In other words, only bundle one copy of React (the one specified in this file)
+  // and not the one specified by linked dependencies.
+  react: p('node_modules/react'),
 };
 
 const LOCALE_ALIASES = {
@@ -202,6 +205,7 @@ const LOCALE_ALIASES = {
     localeDoNotImport('@cdo/lab2/locale'),
     localeDoNotImport('@cdo/music/locale'),
     localeDoNotImport('@cdo/netsim/locale'),
+    localeDoNotImport('@cdo/pythonlab/locale'),
     localeDoNotImport('@cdo/regionalPartnerMiniContact/locale'),
     localeDoNotImport('@cdo/regionalPartnerSearch/locale'),
     localeDoNotImport('@cdo/standaloneVideo/locale'),
@@ -332,6 +336,13 @@ const WEBPACK_BASE_CONFIG = {
               test: /(blockly\/.*\.js)$/,
               use: ['source-map-loader'],
               enforce: 'pre',
+            },
+            // Enable source maps for shared frontend packages
+            {
+              test: /\.js$/,
+              enforce: 'pre',
+              include: /frontend\/packages/,
+              use: ['source-map-loader'],
             },
           ]
         : []),

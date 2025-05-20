@@ -1,0 +1,153 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-18T22:17:47.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "alessia_cara_scars_to_your_beautiful",
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "sounds": {
+        "alessia_cara_scars_to_your_beautiful": [
+          "drums_verse",
+          "drums_chorus",
+          "drums_loop_1",
+          "drums_loop_2",
+          "bass_verse",
+          "bass_chorus",
+          "guitar",
+          "organ_pad",
+          "piano_verse",
+          "piano_chorus",
+          "impact",
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_verse_3",
+          "vocals_verse_4",
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_chorus_3",
+          "vocals_chorus_4",
+          "vocals_no_better_you",
+          "vocals_no_better_life",
+          "vocals_no_better_time",
+          "vocals_beautiful"
+        ]
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "repeat_simple2",
+                        "id": "repeat_simple2",
+                        "deletable": false,
+                        "movable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "times": 1
+                        },
+                        "next": {
+                          "block": {
+                            "type": "repeat_simple2",
+                            "id": "Ie~a57s*8vP?MT|gnri(",
+                            "deletable": false,
+                            "movable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "times": 1
+                            },
+                            "next": {
+                              "block": {
+                                "type": "repeat_simple2",
+                                "id": "6Yw@a_IeD/{FI6CVo%LP",
+                                "deletable": false,
+                                "movable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "times": 1
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "play_sounds_sequential",
+                                      "id": "play_sounds_sequential",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "extraState": {
+                                        "disableNextConnection": true
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "long_instructions": "### Add Variation using the Play Sequential block\r\n\r\nUsing the `play sequential` block will cue up a series of sounds to play one after the other. When a play sequential block is in a play together block, you can seamlessly layer each sound over the backtrack. \r\n\r\n**Do this:** \r\n- Add sounds to each loop to create a backtrack that lasts at least 12 measures.\r\n- Add sounds to the `play sequential` and adjust the amount of sounds or the loop so they start and end and the same time. \r\n",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-18T22:17:47.442+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-sythesize-skill-4\\\"\"],\"cloned_from\":\"test-music-lab-loops-sythesize-skill-4\"},{\"changed_at\":\"2025-03-18 22:46:54 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 22:47:56 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 22:48:25 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

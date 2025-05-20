@@ -13,11 +13,13 @@ import ManageLinkedAccountsController from '@cdo/apps/accounts/ManageLinkedAccou
 import MigrateToMultiAuth from '@cdo/apps/accounts/MigrateToMultiAuth';
 import RemoveParentEmailController from '@cdo/apps/accounts/RemoveParentEmailController';
 import {SchoolInformation} from '@cdo/apps/accounts/SchoolInformation';
+import TurnOffAiDiff from '@cdo/apps/accounts/TurnOffAiDiff';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import LockoutLinkedAccounts from '@cdo/apps/templates/policy_compliance/LockoutLinkedAccounts';
 import color from '@cdo/apps/util/color';
+import experiments from '@cdo/apps/util/experiments';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 // Values loaded from scriptData are always initial values, not the latest
@@ -153,6 +155,18 @@ $(document).ready(() => {
         usState={lockoutLinkedAccountsMountPoint.getAttribute('data-us-state')}
       />,
       lockoutLinkedAccountsMountPoint
+    );
+  }
+
+  const turnOffAiDiffMountPoint = document.getElementById('turn-off-ai-diff');
+
+  if (turnOffAiDiffMountPoint && experiments.isEnabled('ai-differentiation')) {
+    const store = getStore();
+    ReactDOM.render(
+      <Provider store={store}>
+        <TurnOffAiDiff />
+      </Provider>,
+      turnOffAiDiffMountPoint
     );
   }
 

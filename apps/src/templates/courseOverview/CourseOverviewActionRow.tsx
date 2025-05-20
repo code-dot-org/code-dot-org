@@ -8,6 +8,7 @@ import i18n from '@cdo/locale';
 import * as utils from '../../utils';
 import MultipleAssignButton from '../MultipleAssignButton';
 import AssignmentVersionSelector from '../teacherDashboard/AssignmentVersionSelector';
+import {showV2TeacherDashboard} from '../teacherNavigation/TeacherNavFlagUtils';
 
 import styles from './course-overview.module.scss';
 
@@ -52,8 +53,13 @@ const CourseOverviewActionRow: React.FC<CourseOverviewActionRowProps> = ({
       const version = versions[versionId];
       if (versionId !== courseVersionId && version) {
         const sectionId = queryParams('section_id');
-        const queryString = sectionId ? `?section_id=${sectionId}` : '';
-        utils.navigateToHref(`${version.path}${queryString}`);
+
+        if (showV2TeacherDashboard()) {
+          utils.navigateToHref(version.path);
+        } else {
+          const queryString = sectionId ? `?section_id=${sectionId}` : '';
+          utils.navigateToHref(`${version.path}${queryString}`);
+        }
       }
     },
     [courseVersionId, versions]

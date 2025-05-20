@@ -21,12 +21,11 @@
       "is_migrated": true,
       "project_sharing": true,
       "student_detail_progress_view": true,
-      "use_legacy_lesson_plans": true,
-      "version_year": "2018"
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": "csp1",
-    "serialized_at": "2024-11-19 01:16:35 UTC",
+    "serialized_at": "2025-01-22 18:59:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

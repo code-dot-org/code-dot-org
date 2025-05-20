@@ -1,6 +1,6 @@
 import {CodebridgeWorkspaceState} from '@codebridge/redux/workspaceRedux';
 
-import {AichatState} from '@cdo/apps/aichat/redux/aichatRedux';
+import {AichatState} from '@cdo/apps/aichat/redux';
 import {AITutorState} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {CalendarState} from '@cdo/apps/code-studio/calendarRedux';
 import {HeaderReduxState} from '@cdo/apps/code-studio/headerRedux';
@@ -12,6 +12,7 @@ import {JavalabState} from '@cdo/apps/javalab/redux/javalabRedux';
 import {JavalabViewState} from '@cdo/apps/javalab/redux/viewRedux';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {Lab2ProjectState} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {Lab2ViewState} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {PredictLevelState} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {Lab2SystemState} from '@cdo/apps/lab2/redux/systemRedux';
 import {MazeState} from '@cdo/apps/maze/redux';
@@ -23,6 +24,7 @@ import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
 import {TeacherRubricState} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import {TeacherSectionState} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
+import {DanceState} from '../dance/danceRedux';
 import {BlocklyState} from '../redux/blockly';
 
 // The type for our global redux store. This is incomplete until we type every slice
@@ -38,6 +40,7 @@ export interface RootState {
   calendar: CalendarState;
   codebridgeWorkspace: CodebridgeWorkspaceState;
   currentUser: CurrentUserState;
+  dance: DanceState;
   header: HeaderReduxState;
   javalab: JavalabState;
   javalabConsole: JavalabConsoleState;
@@ -46,6 +49,7 @@ export interface RootState {
   lab: LabState;
   lab2Project: Lab2ProjectState;
   lab2System: Lab2SystemState;
+  lab2View: Lab2ViewState;
   layout: LayoutState;
   locales: LocaleState;
   mapbox: MapboxState;
@@ -60,7 +64,7 @@ export interface RootState {
 
 // Temporary type definition for the result of
 // manageStudentsRedux.js:convertStudentServerData
-interface Student {
+export interface Student {
   id: number;
   name: string;
   familyName?: string;

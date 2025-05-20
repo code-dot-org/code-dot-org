@@ -1,0 +1,30 @@
+# A limited-use locals.yml setup that enables `rake build` to run as
+# part of the Docker build. Most settings either prevent DB access or
+# prevent AWS access, neither of which we have in this context.
+
+# Potentially, build_apps should be set to false in the case where we
+# are running a live `yarn start` build rather than serving static JS.
+build_apps: true
+
+# Enabling this copies lots of CSS/image assets to the rails public
+# folder and is important for the resulting dashboard to load.
+build_dashboard: true
+build_i18n: false
+build_pegasus: true
+
+# Setting this to true will keep `rake build` from trying to seed the DB
+# which will fail because there's no DB during docker build time.
+skip_seed_all: true
+
+# If this is not set to true, it will attempt to download an apps package build
+# from S3 for the current file checksums, which will probably fail unless all
+# files match staging.
+use_my_apps: true
+
+# If daemon is true (default in dev), then `rake build` will attempt
+# to run DB migrations, but we are running without a DB during docker build.
+daemon: false
+
+# By default this is set as an AWS secret and is called by build
+# logging steps, which thus fail upon trying to contact AWS.
+slack_bot_token: localoverride

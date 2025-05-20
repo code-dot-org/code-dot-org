@@ -14,7 +14,7 @@ Scenario: Game lab level where student has not started
   And I wait until element "#teacher-panel-container" is visible
   And I wait until element ".uitest-sectionselect:contains(Untitled Section)" is visible
   And I wait until element ".student-table" is visible
-  And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
+  And I click selector "#teacher-panel-container tr:eq(1)" to load a new page
   And I wait for the lab page to fully load
 
   And I wait until element ".editor-column" contains text "This student has not started the level."
@@ -31,7 +31,7 @@ Scenario: Maze level where student has not started
   And I wait until element "#teacher-panel-container" is visible
   And I wait until element ".uitest-sectionselect:contains(Untitled Section)" is visible
   And I wait until element ".student-table" is visible
-  And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
+  And I click selector "#teacher-panel-container tr:eq(1)" to load a new page
   And I wait for the lab page to fully load
 
   And I wait until element ".editor-column" contains text "This student has not started the level."
@@ -48,7 +48,7 @@ Scenario: Contained level
   And I wait until element "#teacher-panel-container" is visible
   And I wait until element ".uitest-sectionselect:contains(Untitled Section)" is visible
   And I wait until element ".student-table" is visible
-  And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
+  And I click selector "#teacher-panel-container tr:eq(1)" to load a new page
   And I wait for the lab page to fully load
 
   And I wait until element ".editor-column" does not contain text "This student has not started the level."

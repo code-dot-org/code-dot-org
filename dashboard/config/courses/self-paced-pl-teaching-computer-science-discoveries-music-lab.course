@@ -1,0 +1,23 @@
+{
+  "name": "self-paced-pl-teaching-computer-science-discoveries-music-lab",
+  "script_names": [
+    "self-paced-pl-teaching-computer-science-discoveries-music-lab"
+  ],
+  "original_script_names": [
+    "self-paced-pl-teaching-computer-science-discoveries-music-lab"
+  ],
+  "published_state": "stable",
+  "instruction_type": "self_paced",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "self-paced-pl-teaching-computer-science-discoveries-music-lab",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

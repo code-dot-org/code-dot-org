@@ -11,6 +11,10 @@ class CurriculumCatalogController < ApplicationController
     @is_signed_out = current_user.nil?
     @is_teacher = current_user&.teacher? || false
 
+    @page_title = I18n.t("curriculum_catalog.title")
+    @page_description = I18n.t("curriculum_catalog.description")
+    @canonical_url = CDO.studio_url("/catalog")
+
     if @is_teacher
       @sections_for_teacher = current_user.try {|u| u.sections.all.reject(&:hidden).map(&:summarize)}
     end

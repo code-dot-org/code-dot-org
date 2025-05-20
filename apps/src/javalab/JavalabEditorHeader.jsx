@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import Backpack from '@cdo/apps/javalab/Backpack';
 import PaneHeader, {
   PaneSection,
   PaneButton,
@@ -11,7 +12,6 @@ import msg from '@cdo/locale';
 
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
 
-import Backpack from './Backpack';
 import {DisplayTheme} from './DisplayTheme';
 import {openEditorDialog} from './redux/editorRedux';
 import {JavalabEditorDialog} from './types';

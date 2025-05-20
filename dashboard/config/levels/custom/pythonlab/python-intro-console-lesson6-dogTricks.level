@@ -1,0 +1,61 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2025-01-22T17:23:06.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Dog Tricks \r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results. \r\n\r\n✅ **TO DO #1:** Give your dog a new name. Look at line 5. Change the name <code style=\"background-color: #ececec; color: black; font-weight: bold;\">\"Leftie\"</code> to a different name. \r\n\r\n✅ **TO DO #2:** Add <code style=\"background-color: #ececec; color: black; font-weight: bold;\">dog.bark()</code> in line 8 to make your dog bark. \r\n\r\n✅ **TO DO #3:** Add <code style=\"background-color: #ececec; color: black; font-weight: bold;\">dog.wag()</code> in line 11 to make your dog wag its tail.\r\n\r\n✅ **TO DO #4:** Add <code style=\"background-color: #ececec; color: black; font-weight: bold;\">dog.run()</code> in line 14 to make your dog run. \r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# import the support file\nfrom support import Dog\n\n# This code creates the Dog object. Change the dog's name from \"Leftie\" to something else. \ndog = Dog(\"Leftie\")\n\n# Make the dog bark\n# Your code here\n\n# Make the dog wag its tail\n# Your code here\n\n# Make the dog run\n# Your code here",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "support.py",
+          "language": "py",
+          "contents": "class Dog:\n    def __init__(self, name=\"Leftie\"):\n        self.name = name\n\n    def bark(self):\n        print(f\"{self.name} says 'Woof!'\")\n    \n    def run(self):\n        print(f\"{self.name} is running around the yard!\")\n    \n    def wag(self):\n      print(f\"{self.name} is wagging its tail happily.\")",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "support"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "validation_file": {
+      "id": "2",
+      "name": "test_main.py",
+      "language": "py",
+      "contents": "import unittest\nimport io\nfrom contextlib import redirect_stdout\nfrom support import Dog\n\n\nclass TestMain(unittest.TestCase):\n\n    def test_dog_name_change(self):\n        \"\"\"Check if the dog's name has been changed from 'Leftie'.\"\"\"\n        # Capture the execution of main.py\n        exec_globals = {}\n        exec(open(\"main.py\").read(), exec_globals)\n\n        # Ensure 'dog' is defined\n        self.assertIn(\"dog\", exec_globals, \"The 'dog' object was not created in main.py.\")\n        dog = exec_globals[\"dog\"]\n\n        # Validate that the dog's name is not 'Leftie'\n        self.assertNotEqual(dog.name, \"Leftie\", \"The dog's name should be changed from 'Leftie'.\")\n        self.assertNotEqual(dog.name, \"\", \"The dog's name should not be an empty string.\")\n\n    def test_bark_action(self):\n        \"\"\"Check if dog.bark() is explicitly called in main.py.\"\"\"\n        output = io.StringIO()\n        exec_globals = {}\n        with redirect_stdout(output):\n            exec(open(\"main.py\").read(), exec_globals)\n\n        dog = exec_globals[\"dog\"]\n        bark_output = f\"{dog.name} says 'Woof!'\"\n        self.assertIn(bark_output, output.getvalue(), \"dog.bark() was not called or is missing in main.py.\")\n\n    def test_run_action(self):\n        \"\"\"Check if dog.run() is explicitly called in main.py.\"\"\"\n        output = io.StringIO()\n        exec_globals = {}\n        with redirect_stdout(output):\n            exec(open(\"main.py\").read(), exec_globals)\n\n        dog = exec_globals[\"dog\"]\n        run_output = f\"{dog.name} is running around the yard!\"\n        self.assertIn(run_output, output.getvalue(), \"dog.run() was not called or is missing in main.py.\")\n\n    def test_wag_action(self):\n        \"\"\"Check if dog.wag() is explicitly called in main.py.\"\"\"\n        output = io.StringIO()\n        exec_globals = {}\n        with redirect_stdout(output):\n            exec(open(\"main.py\").read(), exec_globals)\n\n        dog = exec_globals[\"dog\"]\n        wag_output = f\"{dog.name} is wagging its tail happily.\"\n        self.assertIn(wag_output, output.getvalue(), \"dog.wag() was not called or is missing in main.py.\")\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFSi4aaBiEaakp8IBSnq60mXm1w1Rj4e2pq0O0PCF\ng8UNBLB/C7qioiEoHQhKPj2l1P8axn0aNoejw5N6Wb00FQ7yZjWUkPRNE5Ef\neM3uKz7jkSLRv/WKPMZmCfy9K1ut8P7N3T0yWba2tZoHvFjp2kRap/MtKAMc\nz+pQeeEvkTVpnOZ5uXYrVphWXUTJ8ZDteJdZYsMHtVJx3E3Pue1sQVf8iu+W\n+gJGDnxI32izMFHmguyb+BzoabELiK0+SIzAqIj74rd6GauOEy8FAvuWEKbh\nGidfUFpEy6H2XTsaBQn3UK7sA0B8ha0ievROKCdZgMxwNSGChDBnj9bhKRsS\ngItpdXDiAXU6EcoRHVJ/yDNu6MxC0MF+MqAISCQx6b+a26iny+Yt2St0B918\nqJFBVda52HsLeVAL8JnSTf6RHQk8sftsqHBIdxxMxwwDKuRVAdawqfRpAF+1\nHCzoplRhl7OMf+1UhNaZyJ/pcr80C55OuK0N0FxPQ8imwkf2C9Sv/oeypU+F\nuY7KdybtXkPpbKAScC8NKxOL6vhZPYThuMpu9iFJOj6LhbO70XaP/huxmofb\n8NEGypE93NhRE5qqpwV2cjO0yIWxdfLxbeD9V2h+HN3E60CEsoklj0REebUC\nr2LacLHE8TdlLZkGyehcq6pWLecug4+BkbMiXtOsAVwEAS6a4R9P3wGso70S\nWApYKOP+Bk6QkgarWB7xutccxFFWXx3f2PvYyUPplB7Wb+pMlDOrvNr3abRC\nF0Rb2xvd0XCMr8ZWZtrkAWdubrjzMF+vxE3899WHVMI0ThF4bqVarF2tZOzC\nY6Z6FSwl3LWnRFCTQetNdtPvEODnmOVG3oCnT5qG5AfSSlYQZb/U5bPHbYbX\na/LGnwZUZl5Zqsg4qEKcDQVKQ66fgOVfCZbQr+N8Vh1kbQF0fSQXPmq4OfdQ\n7uGeCYLLX7P4FSEox4SgBMdACd3PMutAUYLwU+INdH66eMYQ4hG8DarsaLVL\nd7DuwB5aQONy1l2U1qPIC/V9BtSIMoX1WlCVkx5kgd0oF07vInNIaB3t7tkR\nf9S/O68jco4tE1sKZMxoPwVdkZJcyfacN+H3+I2kdgk7Sed5quCs4GtQuZ6w\n/1hTsF/N1yJn+QOfmcgFEoX34c4BAA5zywlHoPLdX6g5PYkWvlEshtA=\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-22T17:23:06.003+00:00\",\"changed\":[\"cloned from \\\"python-intro-lesson6-greet\\\"\"],\"cloned_from\":\"python-intro-lesson6-greet\"},{\"changed_at\":\"2025-01-22 17:23:15 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Pythonlab>

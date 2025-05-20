@@ -76,7 +76,7 @@ Scenario: Versions warning announcement on script overview page
   And I wait until element "#script-title" is visible
   And element "#uitest-version-selector" is visible
   Then element ".announcement-notification:contains(newer version)" is visible
-  Then element ".announcement-notification:contains(using the dropdown below)" is visible
+  # Then element ".announcement-notification:contains(using the dropdown below)" is visible # not showing this message on script overview pages for single-unit courses
 
   # Close the unit version warning banner
   When I click selector ".announcement-notification:contains(newer version) .fa-times"

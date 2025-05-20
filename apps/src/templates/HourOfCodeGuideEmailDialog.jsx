@@ -1,9 +1,9 @@
+import Button, {buttonColors} from '@code-dot-org/component-library/button';
+import {Heading2, Heading3} from '@code-dot-org/component-library/typography';
 import cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
 
-import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
-import {Heading2, Heading3} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';

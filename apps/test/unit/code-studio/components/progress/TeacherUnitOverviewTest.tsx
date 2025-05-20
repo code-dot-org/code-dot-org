@@ -64,11 +64,13 @@ const UNIT_SUMMARY = {
   title: "Unit 1 - Problem Solving and Computing ('23-'24)",
   description: 'CSD description',
   studentDescription: 'CSD student description',
+  course_name: 'csd-2024',
   course_versions: {},
   courseVersionId: 2,
   lessonGroups: [],
   isPlCourse: false,
   plc: false,
+  unit_position: '1',
 };
 
 const navigate = jest.fn();
@@ -127,6 +129,13 @@ describe('TeacherUnitOverview', () => {
                 path={LABELED_TEACHER_NAVIGATION_PATHS.unitOverview.absoluteUrl}
                 element={<TeacherUnitOverview />}
               />,
+              <Route
+                path={
+                  LABELED_TEACHER_NAVIGATION_PATHS.nestedUnitOverview
+                    .absoluteUrl
+                }
+                element={<TeacherUnitOverview />}
+              />,
             ]),
             {initialEntries: [initialRoute], basename: '/teacher_dashboard'}
           )}
@@ -135,26 +144,50 @@ describe('TeacherUnitOverview', () => {
     );
   }
 
-  it('renders unit overview', async () => {
-    renderDefault();
+  describe('unitSummary route', () => {
+    it('renders unit overview', async () => {
+      renderDefault();
 
-    await screen.findByText("Unit 1 - Problem Solving and Computing ('23-'24)");
-    expect(fetchSpy).toHaveBeenCalled();
-  });
-
-  it('navigates to unit if no unit is specified in URL', async () => {
-    renderDefault('/teacher_dashboard/sections/12/unit');
-
-    expect(navigate).toHaveBeenCalledWith('/sections/12/unit/csd1-2024', {
-      replace: true,
+      await screen.findByText(
+        "Unit 1 - Problem Solving and Computing ('23-'24)"
+      );
+      expect(fetchSpy).toHaveBeenCalled();
     });
-    expect(fetchSpy).not.toHaveBeenCalled();
+
+    it('navigates to unit if no unit is specified in URL', async () => {
+      renderDefault('/teacher_dashboard/sections/12/unit');
+
+      expect(navigate).toHaveBeenCalledWith('/sections/12/unit/csd1-2024', {
+        replace: true,
+      });
+      expect(fetchSpy).not.toHaveBeenCalled();
+    });
+
+    it('shows loading spinner while fetching data', async () => {
+      fetchSpy.mockResolvedValue(new Promise(() => {}));
+      renderDefault();
+
+      await screen.findByTitle('Loading...');
+    });
   });
 
-  it('shows loading spinner while fetching data', async () => {
-    fetchSpy.mockResolvedValue(new Promise(() => {}));
-    renderDefault();
+  describe('nestedUnitSummary route', () => {
+    const route = '/teacher_dashboard/sections/12/courses/csd-2024/units/1';
+    // const route = '/teacher_dashboard/sections/12/unit/csd1-2024';
+    it('renders unit overview', async () => {
+      renderDefault(route);
 
-    await screen.findByTitle('Loading...');
+      await screen.findByText(
+        "Unit 1 - Problem Solving and Computing ('23-'24)"
+      );
+      expect(fetchSpy).toHaveBeenCalled();
+    });
+
+    it('shows loading spinner while fetching data', async () => {
+      fetchSpy.mockResolvedValue(new Promise(() => {}));
+      renderDefault(route);
+
+      await screen.findByTitle('Loading...');
+    });
   });
 });

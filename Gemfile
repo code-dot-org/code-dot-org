@@ -27,6 +27,13 @@ gem 'syslog' # needed for activesupport in Ruby >= 3.4, drop explicit after we u
 gem 'rails', '~> 6.1'
 gem 'rails-controller-testing', '~> 1.0.5'
 
+# Compile Sprockets assets concurrently in `assets:precompile`.
+# TODO: update to Sprockets 4.x mainline, which includes this change but also
+# other breaking changes from 3.x
+# Ref: https://github.com/rails/sprockets/pull/469
+# Ref: https://github.com/rails/sprockets/blob/main/UPGRADING.md#manifestjs
+gem 'sprockets', github: 'code-dot-org/sprockets', ref: 'concurrent_asset_bundle_3.x'
+
 # provide `respond_to` methods
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
 gem 'responders', '~> 3.0'
@@ -65,7 +72,7 @@ gem 'rack-mini-profiler'
 
 group :development do
   gem 'annotate', '~> 3.1.1'
-  gem 'aws-google', '~> 0.2.0'
+  gem 'aws-google', '~> 0.2.3'
   gem 'web-console', '~> 4.2.0'
   # Bootsnap pre-caches Ruby require paths + bytecode and speeds up boot time significantly.
   # We only use it in development atm to get a feel for it, and the benefit is greatest here.
@@ -100,7 +107,7 @@ group :development, :test do
 
   # For UI testing.
   gem 'cucumber'
-  gem 'eyes_selenium', '3.18.4'
+  gem 'eyes_selenium', '~> 4.0'
   gem 'fakefs', '~> 2.5.0', require: false
   gem 'minitest', '~> 5.15'
   gem 'minitest-around'
@@ -212,6 +219,10 @@ gem 'jwt', '~> 2.7.0'
 # we'll need to prepare for:
 # https://github.com/twilio/twilio-ruby/blob/6.0.0/UPGRADE.md#2023-05-03-5xx-to-6xx
 gem 'twilio-ruby', '< 6.0'
+
+# TwitterCldr uses Unicode's Common Locale Data Repository (CLDR)
+# to format certain types of text into their localized equivalents.
+gem 'twitter_cldr', '~> 6.12.1'
 
 gem 'sequel', '~> 5.29'
 gem 'user_agent_parser'
@@ -366,3 +377,10 @@ gem "json-schema", "~> 4.3"
 gem "csv"
 
 gem "async", "~> 1.32"
+
+gem "webrick", "~> 1.9"
+
+# Automatically include all rails engines
+Dir[Bundler.root.join('**/engines/*/*.gemspec')].each do |gemspec_path|
+  gem File.basename(gemspec_path, '.gemspec'), path: Bundler.root, glob: gemspec_path.sub(%r{^.*/engines/}, '**/engines/')
+end

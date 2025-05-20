@@ -22,19 +22,19 @@ const ValidationStatusIcon: React.FunctionComponent<ValidationIconProps> = ({
       : 'fa-regular';
     switch (status) {
       case 'passed':
-        return classNames(names, 'fa-check-circle', moduleStyles.green);
+        return classNames(names, 'fa-circle-check', moduleStyles.green);
       case 'failed':
-        return classNames(names, 'fa-times-circle', moduleStyles.red);
+        return classNames(names, 'fa-circle-xmark', moduleStyles.red);
       case 'pending':
         return classNames(names, 'fa-circle', moduleStyles.green);
       case 'caution':
-        return classNames(names, 'fa-minus-circle', moduleStyles.yellow);
+        return classNames(names, 'fa-circle-minus', moduleStyles.yellow);
       case 'error':
-        return classNames(names, 'fa-exclamation-circle', moduleStyles.red);
+        return classNames(names, 'fa-circle-exclamation', moduleStyles.red);
     }
   }, [status]);
 
-  return <i className={classNames(classes, className)} />;
+  return <i className={classNames(classes, className, moduleStyles.icon)} />;
 };
 
 export default ValidationStatusIcon;

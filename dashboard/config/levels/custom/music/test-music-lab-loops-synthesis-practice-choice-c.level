@@ -1,0 +1,266 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-18T16:40:14.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false
+            },
+            {
+              "type": "repeat_simple2",
+              "id": "repeat_simple2",
+              "x": 190,
+              "y": 30,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 1
+              }
+            },
+            {
+              "type": "play_sounds_together",
+              "id": "{Lr0`=)+/}ojl}V+yCT-",
+              "x": 190,
+              "y": 370,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "inputs": {
+                "code": {
+                  "block": {
+                    "type": "set_effect_at_current_location_simple2",
+                    "id": "cCnr-:x@E%c7Rt^kX4!:",
+                    "disabledReasons": [
+                      "MANUALLY_DISABLED"
+                    ],
+                    "deletable": false,
+                    "fields": {
+                      "effects_name": "<field name=\"effects_name\">delay</field>",
+                      "effects_value": "<field name=\"effects_value\">normal</field>"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "]L5!4!|tB`cQaih-@a4}",
+                        "disabledReasons": [
+                          "MANUALLY_DISABLED"
+                        ],
+                        "deletable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "shakira_maluma_chantaje/drums_chorus"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "Y4:j*p`LmkK!FI!gAXa^",
+                            "disabledReasons": [
+                              "MANUALLY_DISABLED"
+                            ],
+                            "deletable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "shakira_maluma_chantaje/bass_medium_1"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "3!Bboq,(w^igMs]Bb)la",
+                                "disabledReasons": [
+                                  "MANUALLY_DISABLED"
+                                ],
+                                "deletable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "shakira_maluma_chantaje/vocals_chop"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "play_sounds_together",
+              "id": "play_sounds_together",
+              "x": 190,
+              "y": 150,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "inputs": {
+                "code": {
+                  "block": {
+                    "type": "set_effect_at_current_location_simple2",
+                    "id": "tXpvt?y!_(@pM0f.psnQ",
+                    "disabledReasons": [
+                      "MANUALLY_DISABLED"
+                    ],
+                    "deletable": false,
+                    "fields": {
+                      "effects_name": "<field name=\"effects_name\">delay</field>",
+                      "effects_value": "<field name=\"effects_value\">medium</field>"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "play_sound_at_current_location_simple2",
+                        "disabledReasons": [
+                          "MANUALLY_DISABLED"
+                        ],
+                        "deletable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "shakira_maluma_chantaje/drums_chorus"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": ";Oss4/a4IU.83@L=`v~Y",
+                            "disabledReasons": [
+                              "MANUALLY_DISABLED"
+                            ],
+                            "deletable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "shakira_maluma_chantaje/bass_medium_1"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "w-O(-k5_olw]q{PQjW;7",
+                                "disabledReasons": [
+                                  "MANUALLY_DISABLED"
+                                ],
+                                "deletable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "shakira_maluma_chantaje/vocals_sample_1"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "sounds": {
+        "shakira_maluma_chantaje": [
+          "drums_intro",
+          "drums_verse_small",
+          "drums_verse_big",
+          "drums_chorus",
+          "kick_verse_1",
+          "kick_verse_2",
+          "kick_build_1",
+          "kick_build_2",
+          "snap_sample",
+          "snap_sample_full",
+          "percussion",
+          "shaker",
+          "bass_verse_1",
+          "bass_verse_2",
+          "bass_small_1",
+          "bass_small_2",
+          "bass_medium_1",
+          "bass_medium_2",
+          "bass_big_1",
+          "bass_big_2",
+          "ambience",
+          "impact_1",
+          "impact_2",
+          "synth_pulse_1",
+          "synth_pulse_2",
+          "synth_accent_1",
+          "synth_accent_2",
+          "clippy_synth_1",
+          "clippy_synth_2",
+          "pad_1",
+          "pad_2",
+          "guitar_1",
+          "guitar_2",
+          "intro_swell",
+          "vocals_sample_1",
+          "vocals_sample_2",
+          "vocals_chop"
+        ]
+      },
+      "packId": "shakira_maluma_chantaje"
+    },
+    "long_instructions": "### DJ Ritmo loves effects and needs a dynamic beat!\r\nDJ Ritmo loves using effects in her music. Can you help her create a looping drum and bass line that will use different alternating filters?\r\n\r\n**Do this:**\r\n- Code a loop with a high delay for 2 measures, then no delay for 2 measures.\r\n- Make sure the backbeat plays for at least 10 measures.\r\n\r\n\r\n",
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "display_name": "DJ Ritmo",
+    "thumbnail_url": "https://images.code.org/e271eb1edaa91faf4d024047b2e26788-DALL·E 2025-03-18 10.09.14 - A vibrant outdoor DJ setup overlooking the water with a distant cityscape. The scene features a turntable, large speakers, and Latin jazz instruments .webp",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-18T16:40:14.669+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-synthesis-practice-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-loops-synthesis-practice-choice-b\"},{\"changed_at\":\"2025-03-18 16:46:33 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 16:52:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 16:52:30 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 16:53:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 17:10:04 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

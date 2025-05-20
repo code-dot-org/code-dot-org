@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-lesson1-level5_2024'
+display_name 'Prompting AI Chat'
+description 'Pick one of the levels below. Prompt the AI Chat to get the relevant information.'
+
+sublevels
+level 'problem-solving-with-ai-lesson1-level5a_2024'
+level 'problem-solving-with-ai-lesson1-level5b_2024'
+level 'problem-solving-with-ai-lesson1-level5c_2024'
+level 'problem-solving-with-ai-lesson1-level5d_2024'
+
+
+
+
+

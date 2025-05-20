@@ -200,6 +200,22 @@ module AWS
               ]
             }
           end,
+          (if app == :pegasus
+             {
+               Id: 'marketing',
+              CustomOriginConfig: {
+                OriginProtocolPolicy: 'match-viewer',
+                OriginSSLProtocols: %w(TLSv1.2),
+                OriginReadTimeout: 30
+              },
+              DomainName: {Ref: 'InternalMarketingDomainName'},
+              OriginPath: '',
+              OriginShield: {
+                Enabled: true,
+                OriginShieldRegion: {Ref: 'AWS::Region'}
+              },
+             }
+           end),
           {
             Id: 'cdo-assets',
             DomainName: "#{CDO.assets_bucket}.s3.amazonaws.com",
@@ -216,7 +232,7 @@ module AWS
               OriginAccessIdentity: 'origin-access-identity/cloudfront/E17G1PR1YAN7F4'
             },
           },
-        ],
+        ].compact,
         PriceClass: 'PriceClass_All',
         Restrictions: {
           GeoRestriction: {
@@ -262,11 +278,17 @@ module AWS
           Forward: behavior_config[:cookies]
         }
 
-      accept_language_fn =
-        {
+      function_associations = {
+        accept_language: {
           EventType: 'viewer-request',
           FunctionARN: {'Fn::Sub': 'arn:aws:cloudfront::${AWS::AccountId}:function/AcceptLanguage'}
+        },
+        marketing_router: {
+          EventType: 'origin-request',
+          LambdaFunctionARN: {Ref: 'MarketingRouterVersion'}
         }
+      }
+
       normalize_accept_language = headers.include?('Accept-Language')
       # Behaviors including session cookies aren't cacheable anyway, so don't bother
       # running the extra header-normalization function for these.
@@ -284,7 +306,8 @@ module AWS
           Headers: headers,
           QueryString: behavior_config[:query] != false
         },
-        FunctionAssociations: normalize_accept_language ? [accept_language_fn] : [],
+        FunctionAssociations: normalize_accept_language ? [function_associations[:accept_language]] : [],
+        LambdaFunctionAssociations: behavior_config[:include_marketing_router_lambda] ? [function_associations[:marketing_router]] : [],
         MaxTTL: 31_536_000, # =1 year,
         MinTTL: 0,
         SmoothStreaming: false,
@@ -308,11 +331,6 @@ module AWS
       raise 'missing CDO.cloudfront_key_pair_id' unless CDO.cloudfront_key_pair_id
       raise 'missing CDO.cloudfront_private_key' unless CDO.cloudfront_private_key
 
-      signer = Aws::CloudFront::CookieSigner.new(
-        key_pair_id: CDO.cloudfront_key_pair_id,
-        private_key: CDO.cloudfront_private_key
-      )
-
       policy = {
         "Statement" => [
           {
@@ -323,6 +341,18 @@ module AWS
           }
         ]
       }.to_json
+
+      # If we are emulating AWS at all, we just return mock cloudfront policy output
+      if CDO.aws_s3_emulated
+        return {
+          'CloudFront-Policy-Emulated': Base64.encode64(policy).tr('+=/', '-_~')
+        }
+      end
+
+      signer = Aws::CloudFront::CookieSigner.new(
+        key_pair_id: CDO.cloudfront_key_pair_id,
+        private_key: CDO.cloudfront_private_key
+      )
 
       # Generate signed cookies representing a custom policy.
       signer.signed_cookie(

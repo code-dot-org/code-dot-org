@@ -13,7 +13,7 @@
             .header_button.header_user#header_user_signin
               %span= I18n.t(dashboard ? "nav.user.signin" : "user_header_signin")
               .signin_callout_wrapper
-          %a.linktag{href: CDO.studio_url('users/new_sign_up/account_type'), class: 'button-create-account', id: 'create_account_button'}
+          %a.linktag{href: CDO.studio_url('users/sign_up/account_type'), class: 'button-create-account', id: 'create_account_button'}
             .header_button.header_user#header_user_create_account
               %span= I18n.t(dashboard ? "nav.user.create_account_low_cap" : "user_header_create_account_low_cap")
         .divider
@@ -23,8 +23,8 @@
       - elsif entry[:type] == "expander"
         .hamburger-expandable-item.item{id: entry[:id], class: entry[:class], tabindex: "0"}
           .text= entry[:title]
-          %i.arrow-down{class: "fa fa-caret-down"}
-          %i.arrow-up{class: "fa fa-caret-up"}
+          %i.arrow-down{class: "fa fa-plus"}
+          %i.arrow-up{class: "fa fa-minus"}
         .hamburger-expandable-items{id: "#{entry[:id]}-items"}
           - entry[:subentries].each do |subentry|
             .item

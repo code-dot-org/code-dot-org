@@ -1,0 +1,117 @@
+name: Marketing-CI
+
+on:
+  workflow_call:
+
+defaults:
+  run:
+    shell: bash
+    working-directory: ./frontend
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+          sparse-checkout: |
+            frontend
+            .github
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: Build
+        run: yarn build --filter @code-dot-org/marketing
+
+  dryrun-release:
+    runs-on: ubuntu-24.04
+    needs: build
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+          sparse-checkout: |
+            frontend
+            .github
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: Dryrun Release
+        run: yarn release:dryrun --filter @code-dot-org/marketing
+
+  ui-tests:
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-24.04
+    needs: build
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+          sparse-checkout: |
+            frontend
+            .github
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: Build
+        run: yarn build --filter @code-dot-org/marketing
+
+      - name: Build Docker image
+        id: build-docker-image
+        uses: docker/build-push-action@v6.10.0
+        with:
+          context: frontend
+          file: frontend/apps/marketing/Dockerfile
+          tags: marketing:test
+          push: false
+
+      - name: Prepare Test Environment
+        shell: bash
+        run: |
+          echo "CONTENTFUL_SPACE_ID=${{ vars.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_ENV_ID=master
+          CONTENTFUL_API_HOST=cdn.contentful.com
+          CONTENTFUL_DELIVERY_TOKEN=${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}
+          CONTENTFUL_EXPERIENCE_CONTENT_TYPE_ID=experience
+          CONTENTFUL_REVALIDATE_TOKEN=ci-revalidate-test
+          DRAFT_MODE_TOKEN=ci-draft-mode
+          HOSTNAME=0.0.0.0
+          NEXT_PUBLIC_STAGE=development
+          " > .env
+
+      - name: Run Docker Container
+        run: |
+          docker run -d --env-file .env --rm --name marketing \
+            -p 3001:3000 \
+            marketing:test
+          
+          # Tail the docker logs
+          docker logs -f marketing &
+
+      - name: Clean unused docker build artifacts
+        run: |
+          docker system prune --all --force
+
+      - name: UI Tests
+        uses: ./.github/actions/frontend/marketing/ui-tests
+        with:
+          STAGE: pr
+          CONTENTFUL_SPACE_ID: ${{ vars.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_DELIVERY_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_TOKEN}}
+          APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY}}
+          DRAFT_MODE_TOKEN: ci-draft-mode
+
+      - name: Run Google Lighthouse Audits
+        uses: treosh/lighthouse-ci-action@2f8dda6cf4de7d73b29853c3f29e73a01e297bd8
+        with:
+          urls: ${{ inputs.MARKETING_BASE_URL || 'http://localhost:3001' }}/en-US/engineering/all-the-things
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+          configPath: './frontend/apps/marketing/.lighthouserc.js'

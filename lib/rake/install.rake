@@ -46,9 +46,16 @@ namespace :install do
 
         puts CDO.dashboard_db_writer
         if ENV['CI']
-          # Prepare for dashboard unit tests to run. We can't seed UI test data
-          # yet because doing so would break unit tests.
-          RakeUtils.rake 'db:create db:test:prepare'
+          if ENV['CI_JOB'] == 'unit_tests'
+            # Prepare for dashboard unit tests to run.
+            RakeUtils.rake 'db:create db:test:prepare'
+          elsif ENV['CI_JOB'] == 'ui_tests'
+            # Start preparing for ui tests to run by creating database and tables.
+            # Seeding will be performed in a later step.
+            RakeUtils.rake 'db:create db:schema:load'
+          else
+            raise "Unknown CI job: #{ENV['CI_JOB']}"
+          end
         else
           RakeUtils.rake_stream_output 'dashboard:setup_db', ([:adhoc, :development].include?(rack_env) ? '--trace' : nil)
         end

@@ -1,0 +1,13 @@
+name 'csaif-pl-librarydata-L6-CSandDev'
+display_name 'Processing Library Data'
+description 'Below are several library scenarios where data needs to be processed to solve problems and make decisions. Choose a scenario to analyze and create a computer system solution.'
+
+sublevels
+level 'computer-systems-lesson8-level1a-2024'
+level 'computer-systems-lesson8-level1b-2024'
+level 'computer-systems-lesson8-level1c-2024'
+level 'computer-systems-lesson8-level1d-2024'
+level 'computer-systems-lesson8-level1e-2024'
+level 'computer-systems-lesson8-level1f-2024'
+level 'computer-systems-lesson8-level1g-2024'
+level 'computer-systems-lesson8-level1h-2024'

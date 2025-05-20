@@ -17,7 +17,7 @@ class HomeController < ApplicationController
   # The terms_and_privacy page gets loaded in an iframe on the signup page, so skip
   # clearing the sign up tracking variables
   skip_before_action :clear_sign_up_session_vars, only: [:terms_and_privacy]
-  skip_before_action :initialize_statsig_stable_id, only: [:health_check]
+  skip_before_action :statsig_stable_id, only: [:health_check]
 
   def set_locale
     redirect_path = if params[:i18npath]
@@ -77,6 +77,12 @@ class HomeController < ApplicationController
   # Signed out: redirect to sign in
   def home
     authenticate_user!
+
+    if current_user.teacher? && (Experiment.enabled?(user: current_user, experiment_name: 'teacher-homepage-v2') || DCDO.get('teacher-homepage-v2', false))
+      redirect_to '/teacher_dashboard/home'
+      return
+    end
+
     init_homepage
     render 'home/index'
   end
@@ -188,7 +194,6 @@ class HomeController < ApplicationController
       end
 
       @homepage_data[:isTeacher] = true
-      @homepage_data[:hocLaunch] = DCDO.get('hoc_launch', CDO.default_hoc_launch)
       @homepage_data[:joined_student_sections] = current_user&.sections_as_student_participant&.map(&:summarize_without_students)
       @homepage_data[:joined_pl_sections] = current_user&.sections_as_pl_participant&.map(&:summarize_without_students)
       @homepage_data[:announcement] = DCDO.get('announcement_override', nil)

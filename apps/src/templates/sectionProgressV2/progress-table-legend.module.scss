@@ -1,5 +1,5 @@
 @import 'color';
-@import 'font';
+@import '@code-dot-org/component-library-styles/font';
 
 .iconKey {
   margin-bottom: 24px;
@@ -73,12 +73,12 @@
   display: flex;
   align-items: center;
   gap: 8px;
-}
 
-.labelText {
-  height: 22px;
-  line-height: 22px;
-  margin-bottom: 0;
+  .labelText {
+    height: 22px;
+    line-height: 22px;
+    margin-bottom: 0;
+  }
 }
 
 .fontAwesomeIcon {

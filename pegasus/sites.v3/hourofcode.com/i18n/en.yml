@@ -61,7 +61,7 @@
       desc: "Explore how computer science can bring your favorite things to life."
       v2:
         title: "One Hour: Ignite. Inspire. Code."
-        desc: "Bring what your children love to life! Start the fun with an activity."
+        desc: "The Hour of Code is a worldwide movement that aims to introduce millions of students to computer science through one-hour coding activities"
     video_caption:
       visible: "One Hour Can Make The Invisible Visible"
       in_a_world: "Make The Invisible Visible | Official Trailer"
@@ -95,7 +95,7 @@
   hoc2020_ai_header: 'Explore Artificial Intelligence'
   hoc2020_ai_description: 'AI and Machine Learning are impacting our entire world. Join us to explore AI in a new video series, train AI for Oceans in 25+ languages, discuss ethics and AI, and more...'
 
-  hoc2019_header: 'Learn computer science. Change the world.'
+  hoc2019_header: 'Computer science and artificial intelligence curriculum for K-12 Schools'
   hoc2019_header_line1_mobile: 'Learn computer science.'
   hoc2019_header_line2_mobile: 'Change the world.'
   social_hoc2019_every_sudent: 'Every student has the potential to change the world. Help them get started. #CSforGood'
@@ -1078,7 +1078,7 @@
   blockchain_hero_heading: 'How Blockchain Works'
   blockchain_hero_desc: 'Dive into the world of blockchain with "How Blockchain Works," our new video series and accompanying lessons!'
   blockchain_intro_heading: 'See how blockchain works'
-  blockchain_intro_desc: 'The video series, made in partnership with Coinbase, features industry experts and aims to demystify this technology.'
+  blockchain_intro_desc: 'The video series features industry experts and aims to demystify this technology.'
   blockchain_intro_list_heading: 'This series will:'
   blockchain_intro_list_item_01: 'Explain what blockchain is'
   blockchain_intro_list_item_02: "Explore why it's important"
@@ -1389,6 +1389,14 @@
     prerequisites: "Verified teacher account or SSO-login needed to access AI Chat Lab"
     aria_label: "Start the Teaching Exploring Generative AI professional learning course"
 
+  exploring_gen_ai:
+    banner:
+      overline: "Explore our new"
+      title: "Generative AI curriculum"
+      desc: "Designed to inspire and equip the next generation of creators, thinkers, and innovators."
+      in_partnership_with: "In partnership with"
+      button: "Explore course"
+
   ai_integrations:
     heading: "AI Integrations"
     desc: "We are working on some exciting new technologies to empower students and teachers in the classroom."
@@ -1471,6 +1479,7 @@
   how_ai_works_resources_desc: "Interested in learning more about AI? Here are some additional resources that can help extend you and your students' learning."
 
   ai_vid_intro_caption: "Introducing How AI Works"
+  ai_vid_socimp_caption: "Impact on Society"
   ai_vid_chatbots_caption: "How Chatbots and Large Language Models Work"
   ai_vid_creativity_caption: "Does AI Have Creativity and Imagination?"
   ai_vid_mlintro_caption: "What is Machine Learning?"
@@ -2527,6 +2536,10 @@
     banner:
       heading: "Create music with code"
       desc: "Get creative with your favorite artist's music and code new songs and mixes!"
+    banner2:
+      heading: "Make Music. Learn Code."
+      desc: "Get creative with your favorite artist's music by coding new songs and mixes!"
+      overline: "New artists added to Music Lab"
     featuring_songs_by: "Featuring songs by:"
     artist_list: "%{artist_list} and more!"
     artist:
@@ -11082,7 +11095,9 @@
 
   hoc_activities:
     heading: "Explore activities"
+    title: "Free One Hour Coding Tutorials"
     desc: "Teachers: [Host an hour](%{host_url}) or [read the How-To Guide](%{how_to_url})"
+    seo_desc: "Bring an Hour of Code and computer science to your classroom or school. With over 100 free coding tutorials available to begin learning it is easy."
     more:
       heading: "Can't find your favorite activity?"
       button: "Explore more here"
@@ -12062,8 +12077,8 @@
 
   ai_ta_page:
     heading: "AI Teaching Assistant"
-    desc: "Introducing our AI Teaching Assistant: Designed for CS educators, it offers instant, insightful project assessments, enabling teachers to concentrate on inspiring and connecting with their students."
-    button: "Apply to join the pilot"
+    desc: "An AI-powered thought partner designed to support CS educators with time-saving tools and curriculum-aligned guidance—all for free on Code.org."
+    button: "Use AI Teaching Assistant"
     announcement_banner: "We are now enrolling CSD Unit 3 teachers for our pilot! [Apply now](%{apply_url})"
     announcement_banner_csd_page: "We're recruiting CSD teachers for our AI Teaching Assistant pilot! [Learn more](%{learn_url})"
     assessment_power:
@@ -12074,9 +12089,22 @@
       list_03: "**Efficiency Boost:** Reduce administrative workload, freeing up more time for teaching."
     focus:
       heading: "Focus more on what matters"
-      desc: "The AI Teaching Assistant transforms CS education, easing the workload for new and experienced teachers alike. By streamlining assessments, it boosts educator confidence, enabling a focus on enriching student interactions and tailored learning experiences."
+      desc: "The AI Teaching Assistant transforms CS education, easing the workload for new and experienced teachers alike. It boosts educator confidence by offering constant customized support and streamlining assessments, enabling a focus on enriching student interactions and tailored learning experiences."
+    suggestions:
+      header_01: "What will you"
+      header_02: "dream up"
+      header_03: "with AI Teaching Assistant?"
+    summary:
+      header: "AI Teaching Assistant: Empowering teachers with confidence and efficiency"
+      desc: "We’ve designed AI Teaching Assistant to integrate seamlessly into your existing workflow and keep you in control. It’s like having an assistant who knows Code.org inside and out!"
+    customized_support:
+      heading: "Constant, customized support"
+      desc: "Use AI as a thought partner to quickly develop more customized learning experiences for your classroom."
+      list_01: "**Collaborate on Teaching Strategies:** Brainstorm lesson ideas, troubleshoot student misconceptions, and explore new ways to engage learners."
+      list_02: "**Differentiate with Confidence:** Get personalized suggestions to tailor instruction for different skill levels and learning needs."
+      list_03: "**Master the Curriculum:** Instantly access explanations, examples, and best practices aligned with Code.org’s pedagogy."
     get_started:
-      header: "Get started with AI Teaching Assistant"
+      header: "Get started with automated assessment"
       watch_demo: "Watch the demo video"
       assign_csd_3: "Assign Computer Science Discoveries Unit 3"
       become_verified: "Become a verified teacher"
@@ -12354,6 +12382,9 @@
   hoc_beyond_carousel_description: "Want to keep learning after Hour of Code? Check out these activities for learners of all ages and skill levels."
   hoc_beyond_submit_activity_form: "Submit your own activity [here](%{form_url})."
   hoc_beyond_end_section_label: "The Hour of Code is organized by [Code.org](%{home_page})"
+
+  code_org_og_description: "Code.org provides free computer science and AI curriculum, plus professional development to support any teacher—no coding experience needed!"
+  students_og_title: "Fun tutorials to learn computer science and artificial intelligence"
 
   pl_curriculum_launch_skinny_banner_2024:
     title: Introducing new professional learning!

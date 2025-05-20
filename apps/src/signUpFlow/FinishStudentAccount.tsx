@@ -1,23 +1,24 @@
-import classNames from 'classnames';
-import cookies from 'js-cookie';
-import React, {useState, useEffect, useMemo} from 'react';
-
-import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
-import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
-import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import TextField from '@cdo/apps/componentLibrary/textField/TextField';
+import {Button, buttonColors} from '@code-dot-org/component-library/button';
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import CloseButton from '@code-dot-org/component-library/closeButton';
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import TextField from '@code-dot-org/component-library/textField';
 import {
   Heading2,
   BodyTwoText,
   BodyThreeText,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@code-dot-org/component-library/typography';
+import classNames from 'classnames';
+import cookies from 'js-cookie';
+import React, {useState, useEffect, useMemo} from 'react';
+
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {isEmail} from '@cdo/apps/util/formatValidation';
+import trackEvent from '@cdo/apps/util/trackEvent';
 import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {navigateToHref} from '../utils';
@@ -29,7 +30,7 @@ import {
   OAUTH_LOGIN_TYPE_SESSION_KEY,
   USER_RETURN_TO_SESSION_KEY,
   clearSignUpSessionStorage,
-  NEW_SIGN_UP_USER_TYPE,
+  SIGN_UP_USER_TYPE,
   MAX_DISPLAY_NAME_LENGTH,
 } from './signUpFlowConstants';
 
@@ -62,21 +63,25 @@ const FinishStudentAccount: React.FunctionComponent<{
   const [userReturnTo, setUserReturnTo] = useState('/home');
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [errorCreatingAccountMessage, showErrorCreatingAccountMessage] =
-    useState(false);
+  const [errorCreatingAccountMessage, setErrorCreatingAccountMessage] =
+    useState('');
 
   // Remove oauth user_type cookie if it exists
-  cookies.remove(NEW_SIGN_UP_USER_TYPE);
+  cookies.remove(SIGN_UP_USER_TYPE);
 
   useEffect(() => {
     // If the user hasn't selected a user type or login type, redirect them back to the incomplete step of signup.
-    if (sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === null) {
-      navigateToHref('/users/new_sign_up/account_type');
+    if (
+      sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) !== UserTypes.STUDENT
+    ) {
+      navigateToHref('/users/sign_up/account_type');
     } else if (
       sessionStorage.getItem(EMAIL_SESSION_KEY) === null &&
       sessionStorage.getItem(OAUTH_LOGIN_TYPE_SESSION_KEY) === null
     ) {
-      navigateToHref('/users/new_sign_up/login_type');
+      navigateToHref(
+        `/users/sign_up/login_type?user_type=${UserTypes.STUDENT}`
+      );
     }
 
     analyticsReporter.sendEvent(
@@ -191,6 +196,7 @@ const FinishStudentAccount: React.FunctionComponent<{
   };
 
   const sendFinishEvent = (): void => {
+    // Log to Statsig and Amplitude
     analyticsReporter.sendEvent(
       EVENTS.SIGN_UP_FINISHED_EVENT,
       {
@@ -201,6 +207,11 @@ const FinishStudentAccount: React.FunctionComponent<{
       },
       PLATFORMS.BOTH
     );
+
+    // Log to Google Analytics
+    trackEvent('sign_up', 'sign_up_success', {
+      value: 'student',
+    });
   };
 
   const submitStudentAccount = async () => {
@@ -209,10 +220,9 @@ const FinishStudentAccount: React.FunctionComponent<{
     }
     setIsSubmitting(true);
     sendFinishEvent();
-    showErrorCreatingAccountMessage(false);
+    setErrorCreatingAccountMessage('');
 
     const signUpParams = {
-      new_sign_up: true,
       user: {
         user_type: UserTypes.STUDENT,
         email: sessionStorage.getItem(EMAIL_SESSION_KEY),
@@ -239,8 +249,14 @@ const FinishStudentAccount: React.FunctionComponent<{
       clearSignUpSessionStorage(false);
       navigateToHref(userReturnTo);
     } else {
+      if (response.status === 400) {
+        response
+          .json()
+          .then(badRequest => setErrorCreatingAccountMessage(badRequest.error));
+      } else {
+        setErrorCreatingAccountMessage(locale.error_signing_up_message());
+      }
       setIsSubmitting(false);
-      showErrorCreatingAccountMessage(true);
     }
   };
 
@@ -259,11 +275,11 @@ const FinishStudentAccount: React.FunctionComponent<{
                 className={style.xIcon}
               />
               <BodyThreeText className={style.errorMessageText}>
-                <SafeMarkdown markdown={locale.error_signing_up_message()} />
+                <SafeMarkdown markdown={errorCreatingAccountMessage} />
               </BodyThreeText>
             </div>
             <CloseButton
-              onClick={() => showErrorCreatingAccountMessage(false)}
+              onClick={() => setErrorCreatingAccountMessage('')}
               aria-label={locale.error_signing_up_message_aria_label()}
             />
           </div>

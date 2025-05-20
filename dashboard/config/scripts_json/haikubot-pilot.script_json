@@ -7,18 +7,15 @@
       "content_area": "other",
       "curriculum_umbrella": "Other",
       "hideable_lessons": true,
-      "is_course": true,
-      "is_migrated": true,
-      "pilot_experiment": "haikubot-pilot",
-      "version_year": "unversioned"
+      "is_migrated": true
     },
     "new_name": null,
-    "family_name": "haikubot-pilot",
-    "serialized_at": "2024-11-19 01:18:46 UTC",
-    "published_state": "pilot",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-03-28 09:28:48 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "haikubot-pilot"
     }

@@ -105,16 +105,16 @@ $default-spacing: 4px;
   justify-content: center;
   align-items: center;
   border-top: 1px solid $light_gray_200;
-  padding: 10px 7px;
+  padding: 10px 6px;
 }
 
-.selectedModelDropdown {
+label.selectedModelDropdown {
   @extend %full-width;
   padding-bottom: 10px;
   display: inline-block;
 }
 
-.updateButton {
+button.updateButton {
   width: 100%;
   margin-left: 10px;
   margin-right: 10px;
@@ -128,6 +128,7 @@ $default-spacing: 4px;
 .compareModelsButton {
   padding: 5px 16px;
   margin: 10px 0;
+  width: 100%;
 }
 
 .fieldLabelContainer {

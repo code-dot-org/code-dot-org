@@ -1,6 +1,6 @@
 @import 'color.scss';
 @import 'style-constants';
-@import '@cdo/apps/componentLibrary/common/styles/colors.css';
+@import '@code-dot-org/component-library-styles/colors';
 
 @media print {
   .sidebarContainer {
@@ -28,14 +28,41 @@
 .sidebarContainer {
   width: 242px;
   flex: 0 0 242px;
-  background-color: $light_gray_50;
+  background-color: var(--background-neutral-secondary);
   height: auto;
+
+  .sectionHeader {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 16px;
+    padding-top: 20px;
+    color: var(--text-neutral-quaternary);
+  }
 }
 
 .sidebarContent {
   position: sticky;
   top: 0;
   padding-bottom: 16px;
+}
+
+.sidebarSectionHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  margin-bottom: 2px;
+}
+
+.sidebarNewTags {
+  margin-inline-start: 10px;
+}
+
+.sidebarSectionHeader .sidebarNewTags div {
+  background-color: var(--background-brand-teal-primary);
+}
+
+.sidebarSectionHeader .sidebarNewTags div span {
+  color: white;
 }
 
 .sectionDropdown {
@@ -68,15 +95,15 @@
   color: var(--text-neutral-tertiary);
 
   &.selected {
-    border-left: 4px solid $light_primary_500;
-    background-color: $neutral_gray10;
+    border-left: 4px solid var(--borders-brand-teal-primary);
+    background-color: var(--background-neutral-tertiary);
     padding-left: 28px;
     text-decoration: none;
     color: var(--text-neutral-primary);
   }
 
   &:hover {
-    background-color: $neutral_gray10;
+    background-color: var(--background-neutral-tertiary);
     text-decoration: none;
     .optionIcon {
       color: var(--text-neutral-primary);
@@ -88,18 +115,10 @@
   }
 }
 
-.sectionHeader {
-  margin-top: 0;
-  margin-bottom: 2px;
-  padding-left: 16px;
-  padding-top: 20px;
-  color: var(--text-neutral-quaternary);
-}
-
 .navLink {
   display: inline-block;
-  background-color: $purple;
-  color: $white;
+  background-color: var(--background-brand-purple-primary);
+  color: white;
   text-align: center;
   padding: 10px 20px;
   border-radius: 5px;
@@ -109,15 +128,15 @@
   font-weight: 600;
 
   &:hover {
-    background-color: $brand_secondary_dark;
-    color: $white;
+    background-color: var(--background-brand-purple-strong);
+    color: white;
     text-decoration: none;
   }
 
   &:focus {
-    outline: $brand_primary_default solid 2px;
+    outline: var(--borders-brand-teal-primary) solid 2px;
     outline-offset: 2px;
-    color: $white;
+    color: white;
   }
 }
 
@@ -133,36 +152,43 @@
 .header {
   display: flex;
   flex-direction: column;
+
+  .headerSectionName {
+    margin-bottom: 0;
+    margin-top: 0;
+    color: var(--text-brand-teal-primary);
+  }
 }
 
-.headerSectionName {
+h2.skeletonHeaderSectionName {
+  width: fit-content;
+  height: 21px;
   margin-bottom: 0;
   margin-top: 0;
-  color: $light_primary_500;
-  letter-spacing: 0.48px;
-  font-size: 12px;
-}
-
-.skeletonHeaderSectionName {
-  width: fit-content;
+  border-radius: 4px;
 }
 
 .calendarContentContainer {
   width: fit-content;
 }
 
-.minutesPerWeekWrapper {
+.calendarDropdowns {
   display: flex;
+  flex-direction: row;
+  gap: 24px;
   margin-bottom: 10px;
-  align-items: center;
 }
 
-.minutesPerWeekDescription {
-  font-weight: bold;
-  margin-right: 10px;
+.calendarUnitDropdown {
+  max-width: 240px;
 }
 
 .calendarDropdown {
-  width: fit-content;
-  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.calendarDropdownDescription {
+  font-weight: bold;
+  margin-right: 10px;
 }

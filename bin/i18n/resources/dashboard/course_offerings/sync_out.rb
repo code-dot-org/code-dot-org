@@ -27,7 +27,7 @@ module I18n
             crowdin_translations = JSON.load_file(crowdin_file_path)
 
             i18n_data = I18nScriptUtils.to_dashboard_i18n_data(i18n_locale, 'course_offerings', crowdin_translations)
-            target_i18n_file_path = CDO.dir('dashboard/config/locales', "course_offerings.#{i18n_locale}.json")
+            target_i18n_file_path = CDO.dir("dashboard/config/locales/course_offerings/#{i18n_locale}.json")
 
             I18nScriptUtils.sanitize_data_and_write(i18n_data, target_i18n_file_path)
           end

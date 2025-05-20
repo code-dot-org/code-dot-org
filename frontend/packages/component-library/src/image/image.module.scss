@@ -1,0 +1,35 @@
+@use '@code-dot-org/component-library-styles/colors.scss';
+@use '@code-dot-org/component-library-styles/variables.scss' as variables;
+
+.figureContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+// Image common styles
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+
+// Image border styles
+.figure-hasBorder {
+  border: 1px solid var(--borders-neutral-primary);
+}
+
+// Image box shadow styles
+.figure-hasBoxShadow {
+  box-shadow: 0.5rem 0.5rem 0 0 var(--background-brand-teal-light);
+}
+
+// Image rounded corners styles
+.figure-hasRoundedCorners {
+  border-radius: variables.$regular-border-radius;
+}

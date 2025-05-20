@@ -283,6 +283,7 @@ export const getAddParameterButtonWithCallback = (
 ) => {
   const addParameterCallbackKey = 'addParameterCallback';
   workspace.registerButtonCallback(addParameterCallbackKey, () => {
+    workspace.hideChaff();
     CdoFieldParameter.parameterPrompt({
       promptText: commonI18n.newParameterTitle(),
       confirmButtonLabel: commonI18n.create(),

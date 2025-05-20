@@ -5,13 +5,13 @@ import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
 import {setCommitSaveStatus} from '@cdo/apps/javalab/redux/javalabRedux';
+import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import StylizedBaseDialog, {
   FooterButton,
 } from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/javalab/locale';
 
-import {BackpackAPIContext} from './BackpackAPIContext';
 import CommitDialogBody from './CommitDialogBody';
 import {CompileStatus} from './constants';
 

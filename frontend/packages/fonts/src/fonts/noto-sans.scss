@@ -1,0 +1,4 @@
+@use '@fontsource-variable/noto-sans/scss/mixins' as NotoSans;
+@use '@fontsource/noto-sans-math/scss/mixins' as NotoSansMath;
+@include NotoSans.faces($family: 'Noto Sans');
+@include NotoSansMath.faces($family: 'Noto Sans Math');

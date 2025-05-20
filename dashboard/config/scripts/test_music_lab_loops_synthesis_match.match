@@ -1,0 +1,25 @@
+name 'test-music-lab-loops-synthesis-match'
+title '<i class="fa-solid fa-magnifying-glass"></i><i class="fa-sharp fa-solid fa-eyes"></i> Show What You Know!'
+description 'Match the code to the correct timeline.'
+
+height '210'
+width '200'
+
+question 'https://images.code.org/915cbc70db5171f94b16242a758bdc18-image-1741813091490.58.08 PM.png'
+answer '![](https://images.code.org/922908c8483d5d1081b3d614d0ae20a4-image-1741813167271.59.21 PM.png)'
+
+question '![](https://images.code.org/3aa1c5bc0ae5d561afa17140f52b9c08-image-1741813269958.01.04 PM.png)'
+answer 'https://images.code.org/7282e85dbcce56ff08b21c97495c33f4-image-1741813312813.01.48 PM.png'
+
+question '![](https://images.code.org/f974456db21c51f9ccf8804dc62800cf-image-1741813347835.02.24 PM.png)'
+answer '![](https://images.code.org/a54301a37e36fb8e7ecbc6d70eb47546-image-1741813401326.03.18 PM.png)'
+allow_multiple_attempts false
+
+
+
+
+
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

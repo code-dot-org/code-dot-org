@@ -1,5 +1,4 @@
-@import '@/common/styles/primitiveColors.css';
-@import '@/common/styles/mixins';
+@use '@code-dot-org/component-library-styles/primitiveColors.scss';
 
 // Close Button common styles
 .closeButton {

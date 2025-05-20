@@ -1,13 +1,14 @@
-@import 'color', 'style-constants';
+@import '../../../frontend/packages/component-library-styles/colors.scss';
+@import 'style-constants';
 
 body {
-  background-color: $light_gray_50;
+  background-color: var(--background-neutral-secondary);
 }
 
 .cardIcon {
   width: 45px;
   height: 40px;
-  color: #0093A4;
+  color: var(--text-brand-teal-primary);
 }
 
 .cardContainer {
@@ -32,7 +33,7 @@ body {
 
 // Increase specificity to override base button
 .cardSecondaryButton.cardSecondaryButton {
-  border: 1px solid #292F36
+  border: 1px solid var(--borders-neutral-solid)
 }
 
 .contentContainer {
@@ -60,7 +61,7 @@ body {
 }
 
 .exchangeIcon {
-  color: #7F8286;
+  color: var(--text-neutral-quaternary);
 }
 
 .titleContainer {

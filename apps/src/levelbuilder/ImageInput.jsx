@@ -11,6 +11,8 @@ export default function ImageInput({
   initialImageUrl,
   showPreview = false,
   helpTipText,
+  dimensions,
+  fileTypes,
 }) {
   const [uploadImageDialogOpen, setUploadImageDialogOpen] = useState(false);
 
@@ -58,6 +60,8 @@ export default function ImageInput({
         handleClose={() => setUploadImageDialogOpen(false)}
         uploadImage={imgUrl => onImageUrlChange(imgUrl)}
         allowExpandable={false}
+        dimensions={dimensions}
+        fileTypes={fileTypes}
       />
     </div>
   );
@@ -68,6 +72,8 @@ ImageInput.propTypes = {
   initialImageUrl: PropTypes.string,
   showPreview: PropTypes.bool,
   helpTipText: PropTypes.string,
+  dimensions: PropTypes.object,
+  fileTypes: PropTypes.array,
 };
 
 const styles = {

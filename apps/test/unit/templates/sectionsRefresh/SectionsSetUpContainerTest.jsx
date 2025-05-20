@@ -25,7 +25,6 @@ describe('SectionsSetUpContainer', () => {
   it('renders headers and button', () => {
     const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
-    expect(wrapper.find('Heading1').length).to.equal(1);
     expect(wrapper.find('Button').length).to.equal(4);
     expect(wrapper.find('Button').last().props().text).to.equal(
       'Finish creating sections'
@@ -37,7 +36,6 @@ describe('SectionsSetUpContainer', () => {
       <SectionsSetUpContainer {...DEFAULT_PROPS} sectionToBeEdited={{}} />
     );
 
-    expect(wrapper.find('Heading1').length).to.equal(1);
     expect(wrapper.find('Button').length).to.equal(3);
     expect(wrapper.find('Button').last().props().text).to.equal('Save');
   });

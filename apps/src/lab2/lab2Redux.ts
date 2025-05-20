@@ -24,6 +24,7 @@ import {
 } from '@cdo/apps/templates/currentUserRedux';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
+import {setLevel} from '../aiTutor/redux/aiTutorRedux';
 import {getCurrentLevel} from '../code-studio/progressReduxSelectors';
 import {
   setProjectUpdatedAt,
@@ -36,7 +37,6 @@ import {RootState} from '../types/redux';
 import HttpClient, {NetworkError} from '../util/HttpClient';
 import {AppDispatch} from '../util/reduxHooks';
 
-import {START_SOURCES} from './constants';
 import Lab2Registry from './Lab2Registry';
 import {
   getInitialValidationState,
@@ -45,9 +45,9 @@ import {
 import ProjectManager from './projects/ProjectManager';
 import ProjectManagerFactory from './projects/ProjectManagerFactory';
 import {getPredictResponse} from './projects/userLevelsApi';
+import {setProjectTooLarge} from './redux/lab2ProjectRedux';
 import {LevelPropertiesValidator} from './responseValidators';
 import {
-  AppName,
   Channel,
   LevelProperties,
   ProjectManagerStorageType,
@@ -56,6 +56,18 @@ import {
   Validation,
 } from './types';
 import {LifecycleEvent} from './utils/LifecycleNotifier';
+
+const mapLevelPropertiesToAITutorLevel = (
+  levelProperties: LevelProperties
+) => ({
+  id: levelProperties.id,
+  type: levelProperties.type || '',
+  aiTutorAvailable: !!levelProperties.aiTutorAvailable,
+  hasValidation:
+    !!levelProperties.validations && levelProperties.validations.length > 0,
+  isAssessment: !!levelProperties.isAssessment,
+  progressionType: levelProperties.progressionType || '',
+});
 
 interface PageError {
   errorMessage: string;
@@ -81,6 +93,8 @@ export interface LabState {
   validationState: ValidationState;
   // Level properties for the current level.
   levelProperties: LevelProperties | undefined;
+  // Script id for the current level.
+  scriptId: number | undefined;
   // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
   isShareView: boolean | undefined;
   // If this lab is blocked because abuse score >= 15.
@@ -97,6 +111,7 @@ const initialState: LabState = {
   initialSources: undefined,
   validationState: getInitialValidationState(),
   levelProperties: undefined,
+  scriptId: undefined,
   isShareView: undefined,
   isBlocked: undefined,
   overrideValidations: undefined,
@@ -142,6 +157,11 @@ export const setUpWithLevel = createAsyncThunk<
     const levelProperties = await loadLevelProperties(
       payload.levelPropertiesPath
     );
+    thunkAPI.dispatch(setScriptId(payload.scriptId));
+
+    // Massage levelProperties to match aiTutor's format
+    const aiTutorLevel = mapLevelPropertiesToAITutorLevel(levelProperties);
+    thunkAPI.dispatch(setLevel(aiTutorLevel));
 
     Lab2Registry.getInstance()
       .getMetricsReporter()
@@ -176,11 +196,11 @@ export const setUpWithLevel = createAsyncThunk<
       return;
     }
 
-    // If we are in start mode or are editing or viewing exemplars,
+    // If we are in a block edit mode or are editing or viewing exemplars,
     // we don't use a channel id.
     // We can skip creating a project manager and just set the level data.
-    const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-    if (isStartMode || isViewingExemplar || isEditingExemplar) {
+    const isEditMode = !!getAppOptionsEditBlocks();
+    if (isEditMode || isViewingExemplar || isEditingExemplar) {
       setProjectAndLevelData(
         {levelProperties},
         thunkAPI.signal.aborted,
@@ -260,54 +280,6 @@ export const setUpWithLevel = createAsyncThunk<
   }
 });
 
-// Given a channel id and app name as the payload, set up the lab for that channel id.
-// This consists of cleaning up the existing project manager (if applicable), then
-// creating a project manager and loading the project data.
-// This method is used for loading a lab that is not associated with a level.
-// (This was previously used for /projectbeats).
-// If we get an aborted signal, we will exit early.
-export const setUpWithoutLevel = createAsyncThunk(
-  'lab/setUpWithoutLevel',
-  async (payload: {channelId: string; appName: AppName}, thunkAPI) => {
-    try {
-      // Update properties for reporting as early as possible in case of errors.
-      Lab2Registry.getInstance().getMetricsReporter().updateProperties({
-        channelId: payload.channelId,
-        appName: payload.appName,
-      });
-
-      await cleanUpProjectManager();
-
-      Lab2Registry.getInstance().setAppName(payload.appName);
-
-      // Create the new project manager.
-      const projectManager = ProjectManagerFactory.getProjectManager(
-        ProjectManagerStorageType.REMOTE,
-        payload.channelId
-      );
-      Lab2Registry.getInstance().setProjectManager(projectManager);
-
-      // Load channel and source.
-      const {sources, channel} = await setUpAndLoadProject(
-        projectManager,
-        thunkAPI.dispatch
-      );
-      setProjectAndLevelData(
-        {
-          initialSources: sources,
-          channel,
-          levelProperties: {id: 0, appName: payload.appName},
-        },
-        thunkAPI.signal.aborted,
-        thunkAPI.dispatch,
-        thunkAPI.getState as () => RootState
-      );
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error);
-    }
-  }
-);
-
 // Selectors
 
 // If any load is currently in progress.
@@ -316,15 +288,17 @@ export const isLabLoading = (state: {lab: LabState}) =>
 
 // This may depend on more factors, such as share.
 export const isReadOnlyWorkspace = (state: RootState) => {
-  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-  const isEditingExemplarMode = getAppOptionsEditingExemplar();
+  const isEditMode = !!getAppOptionsEditBlocks();
+  const isEditingExemplar = getAppOptionsEditingExemplar();
+  const isViewingExemplar = getAppOptionsViewingExemplar();
+  const isWidgetView = !!state.lab.levelProperties?.widgetView;
 
-  // We are always in edit mode if we are in start or editing exemplar mode.
-  // Both of these modes have no channel.
-  if (isStartMode || isEditingExemplarMode) {
+  // Exemplar and block edit modes do not have a channel.
+  if (isEditMode || isEditingExemplar) {
     return false;
+  } else if (isViewingExemplar) {
+    return true;
   }
-
   // Otherwise, we are in read only mode if we are not the owner of the channel,
   // the level is frozen, the level is a read only predict level, the level has been submitted.
   // or this is a lab that should be read only while running and the code is currently running.
@@ -343,7 +317,8 @@ export const isReadOnlyWorkspace = (state: RootState) => {
     readonlyPredictLevel ||
     hasSubmitted ||
     isRunningAndReadonly ||
-    isViewingOldVersion
+    isViewingOldVersion ||
+    isWidgetView
   );
 };
 
@@ -386,6 +361,9 @@ const labSlice = createSlice({
     },
     setChannel(state, action: PayloadAction<Channel | undefined>) {
       state.channel = action.payload;
+    },
+    setScriptId(state, action: PayloadAction<number | undefined>) {
+      state.scriptId = action.payload;
     },
     setValidationState(state, action: PayloadAction<ValidationState>) {
       state.validationState = {...action.payload};
@@ -438,24 +416,6 @@ const labSlice = createSlice({
       }
     });
     builder.addCase(setUpWithLevel.pending, state => {
-      state.isLoadingProjectOrLevel = true;
-    });
-    builder.addCase(setUpWithoutLevel.fulfilled, state => {
-      state.isLoadingProjectOrLevel = false;
-    });
-    builder.addCase(setUpWithoutLevel.rejected, (state, action) => {
-      // If the set up was aborted, that means another load got started
-      // before we finished. Therefore we only set loading to false
-      // and set the page error if the action was not aborted.
-      if (!action.meta.aborted) {
-        state.isLoadingProjectOrLevel = false;
-        state.pageError = getErrorFromThunkAction(
-          action,
-          'setUpWithoutLevel failed'
-        );
-      }
-    });
-    builder.addCase(setUpWithoutLevel.pending, state => {
       state.isLoadingProjectOrLevel = true;
     });
   },
@@ -514,6 +474,8 @@ async function setUpAndLoadProject(
   projectManager.addSaveSuccessListener(channel => {
     dispatch(setProjectUpdatedAt(channel.updatedAt));
     dispatch(setChannel(channel));
+    // If we had a successful save, we know the project is not too large.
+    dispatch(setProjectTooLarge(false));
   });
   projectManager.addSaveNoopListener(channel => {
     if (channel) {
@@ -523,7 +485,13 @@ async function setUpAndLoadProject(
       dispatch(setProjectUpdatedSaved());
     }
   });
-  projectManager.addSaveFailListener(() => dispatch(setProjectUpdatedError()));
+  projectManager.addSaveFailListener(error => {
+    dispatch(setProjectUpdatedError());
+    if (error.message?.includes('413')) {
+      // The user's project is too large to save. Mark it as too large.
+      dispatch(setProjectTooLarge(true));
+    }
+  });
   // Figure out if we should reset to start sources. This happens if the url parameter
   // ?reset=true is present.
   // This parameter is only used by levelbuilders.
@@ -638,11 +606,10 @@ export const {
   setValidationState,
   setIsShareView,
   setOverrideValidations,
+  setScriptId,
   onLevelChange,
   setPermissions,
+  setChannel,
 } = labSlice.actions;
-
-// These should not be set outside of the lab slice.
-const {setChannel} = labSlice.actions;
 
 export default labSlice.reducer;

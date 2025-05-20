@@ -1,0 +1,84 @@
+name 'ea-fac-csaif-pl_loops_L2-Python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Loops: Automating Repetitive Tasks 
+
+<img src="https://images.code.org/5c6d14afb3172265d27dae69924fd194-image-1741621155625.png" alt="icon of arrows making a circle symbolizing a loop" width="105px" style="border-radius:10px; float:left; margin: 0 20px 0px 0px;">
+
+#### Imagine you need to pass out 30 pencils—one for each student. 
+
+#### Instead of manually keeping track, a loop can ensure each student gets exactly one without counting every single time.
+
+<div style="clear:both;"></div>
+
+
+## While Loops: Repeat Until a Condition is Met 
+
+#### A `while` loop is perfect for this task because it keeps running until all pencils are handed out.
+
+#### This is like saying:
+#### *"Keep passing out pencils until there are none left."*
+
+#### By using a loop, you don’t have to think about counting—you just repeat the action until the job is done!
+
+
+
+
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+        <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
+         A <b>loop</b> is code that continues to repeat while a condition is true.
+    </p>
+</div>
+
+---
+
+## How to Code a While Loop 
+
+   <table border="1" width="100%" cellpadding="10">
+        <tr>
+           <td width="50%" style="font-size:14pt;">
+           1. Read through your code
+            </td>
+            <td width="50%">
+                <img src="https://images.code.org/d8b1b6a662fe6ea85143c15fee229d50-image-1741628060579.png" alt="painter code with repeated lines" width="100%">
+            </td>
+         
+        </tr>
+        <tr>
+         <td width="50%" style="font-size:14pt;">
+                2. Recognize patterns
+            </td>
+            <td width="50%">
+                <img src="https://images.code.org/61bd1148323fce5f09bb71363ff12b10-image-1741628121718.png" alt="repeated code is framed width="100%">
+            </td>
+           
+        </tr>
+        <tr>
+         <td width="50%" style="font-size:14pt;">
+                3. Put repeated code inside a loop
+            </td>
+            <td width="33%">
+                <img src="https://images.code.org/0aeab79e24ded7abfa5de581ad4f7f9f-image-1741628163488.png" alt="while loop" width="100%">
+            </td>
+           
+        </tr>
+                <tr>
+         <td width="50%" style="font-size:14pt;">
+                4. Set a condition
+            </td>
+            <td width="33%">
+                <img src="https://images.code.org/b14dfeddaaee4f3e168edfbc73522783-image-1741628223974.png" alt="while loop with condition" width="100%">
+            </td>
+           
+        </tr>
+    </table>
+
+<br><br>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This concept is covered in Lesson 8. You can find more details in the full <a href='https://studio.code.org/s/pf-aitutor-pilot-content-2024/lessons/8' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
+MARKDOWN

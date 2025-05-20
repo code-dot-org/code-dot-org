@@ -1,0 +1,26 @@
+name 'songwriterstoolbox-pl_1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Songwriter's Toolbox
+
+#### This lesson teaches how to layer sounds with sequencing and loops.
+
+
+
+
+## In this lesson, you will:
+
+* #### Learn about sequencing and loops.
+* #### Practice finding patterns and ordering steps in code.
+* #### Solve problems by breaking apart problems into smaller steps. 
+
+
+### **Suggested time:** 20 minutes
+
+
+## Let's get started!
+
+<div style="clear:both"/>
+MARKDOWN

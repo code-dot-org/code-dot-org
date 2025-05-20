@@ -1,16 +1,12 @@
 PUZZLE_SOLUTIONS = {
   "http://studio.code.org/s/allthethings/lessons/2/levels/1" => %{
-    And I drag block "moveWest" to block "whenRun"
-    And I drag block "moveWest" to block "moveWest"
+    And I've initialized the workspace with k1 maze blocks
   },
   "http://studio.code.org/s/allthethings/lessons/29/levels/1?level_name=2-3 Maze 1" => %{
-    And I drag block "moveForward" to block "whenRun"
-    And I drag block "moveForward" to block "moveForward"
+    And I've initialized the workspace with two move forward blocks
   },
   "http://studio.code.org/s/allthethings/lessons/29/levels/4?level_name=2-3 Artist 1 new" => %{
-    And I drag block "moveForward" to block "topBlock"
-    And I drag block "turnRight" to block "moveForward"
-    And I drag block "moveForward" to block "turnRight"
+    And I've initialized the workspace with winning artist blocks
   },
 }
 
@@ -46,7 +42,7 @@ end
 Then /^I submit the assessment on "([^"]*)"$/ do |puzzle_url|
   steps %{
     And I am on "#{append_noautoplay(puzzle_url)}"
-    And I click selector ".answers:nth(0) .answerbutton[index=1]" once I see it
+    And I click selector ".answers:eq(0) .answerbutton[index=1]" once I see it
     And I wait for 5 seconds
     And I click selector ".submitButton" once I see it
     And I wait until element ".modal" is visible

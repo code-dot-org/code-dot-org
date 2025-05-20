@@ -1,0 +1,42 @@
+<NetSim>
+  <config><![CDATA[{
+  "game_id": 42,
+  "created_at": "2025-02-02T20:08:34.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "skin": "netsim",
+    "instructions_important": "false",
+    "long_instructions": "# Level Title\r\n\r\n## Do This\r\n\r\n- instructions \r\n\r\n*Lot's of settings below to set to get the right iteration of the Net Sim that you need.*\r\n\r\n<img src=\"https://images.code.org/4855eafdd9cd5c3058b2c7273de895be-Screenshot 2025-02-01 161000.png\" style=\"width: 100px; float: right;\">\r\n\r\n*Use the Navigation menu to the left to get to the section you need.* ",
+    "never_autoplay_video": "false",
+    "show_clients_in_lobby": "false",
+    "show_routers_in_lobby": "false",
+    "can_connect_to_clients": "false",
+    "can_connect_to_routers": "false",
+    "show_add_router_button": "false",
+    "show_log_browser_button": "false",
+    "message_granularity": "bits",
+    "automatic_receive": "false",
+    "broadcast_mode": "false",
+    "connected_routers": "false",
+    "show_hostname_in_graph": "false",
+    "show_add_packet_button": "false",
+    "show_packet_size_control": "false",
+    "show_pulse_rate_slider": "false",
+    "show_metronome": "false",
+    "show_bit_rate_control": "false",
+    "lock_bit_rate_control": "false",
+    "show_chunk_size_control": "false",
+    "lock_chunk_size_control": "false",
+    "show_router_bandwidth_control": "false",
+    "show_router_memory_control": "false",
+    "show_dns_mode_control": "false",
+    "default_dns_mode": "none",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-02-02T20:08:34.606+00:00\",\"changed\":[\"cloned from \\\"test-networks-internet-netsim-template1\\\"\"],\"cloned_from\":\"test-networks-internet-netsim-template1\"}]"
+}]]></config>
+  <blocks/>
+</NetSim>

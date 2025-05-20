@@ -158,92 +158,91 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
 
   return (
     <div className={moduleStyles.container}>
-      <div className={moduleStyles.subContainer}>
-        {!allowPackSelection && packFolder && (
+      {!allowPackSelection && packFolder && (
+        <button
+          type="button"
+          className={classNames(
+            moduleStyles.button,
+            moduleStyles.buttonWide,
+            moduleStyles.buttonInteractionDisabled
+          )}
+          disabled={true}
+        >
+          <CurrentPack packFolder={packFolder} noRightPadding={true} />
+        </button>
+      )}
+      {!readOnlyWorkspace && (
+        <>
           <button
+            onClick={onClickStartOver}
+            type="button"
+            id="start-over-button"
+            className={classNames(
+              moduleStyles.button,
+              allowPackSelection && packFolder && moduleStyles.buttonWide
+            )}
+          >
+            {allowPackSelection && packFolder && (
+              <CurrentPack packFolder={packFolder} noRightPadding={false} />
+            )}
+            <FontAwesome
+              title={musicI18n.startOver()}
+              icon="refresh"
+              className={'icon'}
+            />
+          </button>
+          <button
+            onClick={() => onClickUndoRedo('undo')}
             type="button"
             className={classNames(
               moduleStyles.button,
-              moduleStyles.buttonWide,
-              moduleStyles.buttonInteractionDisabled
+              !canUndo && moduleStyles.buttonDisabled
             )}
-            disabled={true}
+            disabled={!canUndo}
           >
-            <CurrentPack packFolder={packFolder} noRightPadding={true} />
+            <FontAwesome
+              title={musicI18n.undo()}
+              icon="undo"
+              className={'icon'}
+            />
           </button>
-        )}
-        {!readOnlyWorkspace && (
-          <>
-            <button
-              onClick={onClickStartOver}
-              type="button"
-              className={classNames(
-                moduleStyles.button,
-                allowPackSelection && packFolder && moduleStyles.buttonWide
-              )}
-            >
-              {allowPackSelection && packFolder && (
-                <CurrentPack packFolder={packFolder} noRightPadding={false} />
-              )}
-              <FontAwesome
-                title={musicI18n.startOver()}
-                icon="refresh"
-                className={'icon'}
-              />
-            </button>
-            <button
-              onClick={() => onClickUndoRedo('undo')}
-              type="button"
-              className={classNames(
-                moduleStyles.button,
-                !canUndo && moduleStyles.buttonDisabled
-              )}
-              disabled={!canUndo}
-            >
-              <FontAwesome
-                title={musicI18n.undo()}
-                icon="undo"
-                className={'icon'}
-              />
-            </button>
-            <button
-              onClick={() => onClickUndoRedo('redo')}
-              type="button"
-              className={classNames(
-                moduleStyles.button,
-                !canRedo && moduleStyles.buttonDisabled
-              )}
-              disabled={!canRedo}
-            >
-              <FontAwesome
-                title={musicI18n.redo()}
-                icon="redo"
-                className={'icon'}
-              />
-            </button>
-            {isSignedIn && (
-              <button
-                onClick={() => window.open(feedbackLink, '_blank')}
-                type="button"
-                className={classNames(moduleStyles.button)}
-              >
-                <FontAwesome
-                  title={musicI18n.feedback()}
-                  icon="commenting"
-                  className={'icon'}
-                />
-              </button>
+          <button
+            onClick={() => onClickUndoRedo('redo')}
+            type="button"
+            className={classNames(
+              moduleStyles.button,
+              !canRedo && moduleStyles.buttonDisabled
             )}
-          </>
-        )}
-      </div>
+            disabled={!canRedo}
+          >
+            <FontAwesome
+              title={musicI18n.redo()}
+              icon="redo"
+              className={'icon'}
+            />
+          </button>
+          {isSignedIn && (
+            <button
+              onClick={() => window.open(feedbackLink, '_blank')}
+              type="button"
+              className={classNames(moduleStyles.button)}
+            >
+              <FontAwesome
+                title={musicI18n.feedback()}
+                icon="commenting"
+                className={'icon'}
+              />
+            </button>
+          )}
+        </>
+      )}
       {skipUrl && (
         <button
           onClick={onClickSkip}
           type="button"
           className={classNames(moduleStyles.button, moduleStyles.buttonSkip)}
         >
-          {commonI18n.skipToProject()}
+          <span>{commonI18n.skipToProject()}</span>
           <FontAwesome
             title={commonI18n.skipToProject()}
             icon="arrow-right"

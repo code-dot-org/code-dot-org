@@ -1,0 +1,26 @@
+name 'MLpl-k5-2-behaviors -intro_2024_K5block'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Producer Power
+
+#### This lesson covers practicing organizing group of sounds with functions.
+
+
+
+
+## In this lesson, you will:
+
+* #### Learn about functions.
+* #### Practice defining and calling functions. 
+* #### Make music using functions.
+
+
+### **Suggested time:** 20 minutes
+
+
+## Let's get started!
+
+<div style="clear:both"/>
+MARKDOWN

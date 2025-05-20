@@ -1,0 +1,6 @@
+@use '@fontsource-variable/noto-sans-bengali/scss/mixins' as NotoSansBengali;
+@include NotoSansBengali.faces($family: 'Noto Sans Bengali');
+
+.className {
+  font-family: 'Noto Sans Bengali', sans-serif;
+}

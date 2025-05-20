@@ -108,6 +108,20 @@ def navigate_to(url)
   install_js_error_recorder
 end
 
+def shadow_element(shadow_host, element_selector)
+  shadow_root = nil
+
+  wait_until do
+    shadow_root = @browser.find_element(:css, shadow_host).shadow_root
+  end
+
+  @browser.execute_script(<<~JS, shadow_root, element_selector)
+    const shadowDOM = arguments[0].querySelector('*');
+    const selector = arguments[1];
+    return $(shadowDOM).find(selector)[0];
+  JS
+end
+
 Given /^I am on "([^"]*)"$/ do |url|
   check_window_for_js_errors('before navigation')
   begin
@@ -383,11 +397,7 @@ end
 
 When /^I rotate to (landscape|portrait)$/ do |orientation|
   if ENV['BS_ROTATABLE'] == "true"
-    $http_client.call(
-      :post,
-      "/wd/hub/session/#{@browser.session_id}/orientation",
-      {orientation: orientation.upcase}
-    )
+    change_orientation(orientation)
   end
 end
 
@@ -405,7 +415,7 @@ end
 Then /^the link reading "([^"]*)"(?: within element "([^"]*)")? goes to "([^"]*)"$/ do |text, parent, url|
   context = @browser.find_element(:css, parent) if parent
   context ||= @browser
-  xpath = ".//a[starts-with(text(), '#{text}')]"
+  xpath = ".//a[starts-with(normalize-space(text()), '#{text}')]"
   link = context.find_element(:xpath, xpath)
   expect(link.attribute("href")).to eq(replace_hostname(url)).or eq(url)
 end
@@ -496,6 +506,11 @@ When /^I select the "([^"]*)" option in dropdown named "([^"]*)"( to load a new 
   select_dropdown(@browser.find_element(:css, "select[name=#{element_name}]"), option_text, load)
 end
 
+When /^I select the "([^"]*)" option in the last dropdown named "([^"]*)"( to load a new page)?$/ do |option_text, element_name, load|
+  dropdowns = @browser.find_elements(:css, "select[name=#{element_name}]")
+  select_dropdown(dropdowns.last, option_text, load)
+end
+
 When /^I select the "([^"]*)" option withing the "([^"]*)" group in dropdown "([^"]*)"( to load a new page)?$/ do |option_text, option_group, selector, load|
   select_element = @browser.find_element(:css, selector)
   expect(select_element).not_to be_nil
@@ -561,10 +576,11 @@ When /^I select the end of "([^"]*)"$/ do |selector|
   @browser.execute_script("document.querySelector(\"#{selector}\").setSelectionRange(9999, 9999);")
 end
 
-When /^I click selector "([^"]*)"(?: to load a new (page|tab))?$/ do |jquery_selector, load|
+When /^I click selector "([^"]*)"(?: within shadow-host "([^"]*)")?(?: to load a new (page|tab))?$/ do |jquery_selector, shadow_host, load|
   # normal a href links can only be clicked this way
   page_load(load) do
-    @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
+    jquery_selector = shadow_element(shadow_host, jquery_selector) if shadow_host
+    @browser.execute_script('$(arguments[0])[0].click();', jquery_selector)
   end
 end
 
@@ -923,6 +939,14 @@ And(/^I see option "([^"]*)" or "([^"]*)" in the dropdown "([^"]*)"/) do |option
   expect((select_options_text.include? option_alpha) || (select_options_text.include? option_beta)).to eq(true)
 end
 
+And(/^I wait until the dropdown named "([^"]*)" has option "([^"]*)"$/) do |element_name, option|
+  dropdown_selector = "select[name='#{element_name}']"
+  wait_short_until do
+    select_options_text = @browser.execute_script("return $(arguments[0]).find('option').text();", dropdown_selector)
+    select_options_text.include? option
+  end
+end
+
 def has_class?(selector, class_name)
   @browser.execute_script("return $(#{selector.dump}).hasClass('#{class_name}')")
 end
@@ -1002,6 +1026,12 @@ end
 
 Then /^I see (\d*) of jquery selector (.*)$/ do |num, selector|
   expect(@browser.execute_script("return $(\"#{selector}\").length;")).to eq(num.to_i)
+end
+
+Then /^I wait until I see (\d*) of jquery selector (.*)$/ do |num, selector|
+  wait_until do
+    @browser.execute_script("return $(\"#{selector}\").length;") == num.to_i
+  end
 end
 
 Then /^I wait until I (don't )?see selector "(.*)"$/ do |negation, selector|
@@ -1133,6 +1163,14 @@ Given(/^I am assigned to course "([^"]*)" and unit "([^"]*)"(?: with teacher "([
   )
 end
 
+Given(/^I am assigned to course "([^"]*)"(?: with teacher "([^"]*)")?(?: in a section named "([^"]*)")?$/) do |course_name, teacher_name, section_name|
+  browser_request(
+    url: '/api/test/assign_course_as_student',
+    method: 'POST',
+    body: {course_name: course_name, section_name: section_name, teacher_email: teacher_name ? (@users[teacher_name][:email]).to_s : nil}
+  )
+end
+
 Then(/^I fake completion of the assessment$/) do
   browser_request(url: '/api/test/fake_completion_assessment', method: 'POST', code: 204)
 end
@@ -1156,8 +1194,8 @@ end
 
 And /^I dismiss the login reminder$/ do
   steps <<~GHERKIN
-    And I click selector ".modal-backdrop" if I see it
-    And I wait until I don't see selector ".uitest-login-callout"
+    And I click selector "[aria-label='Close']" if I see it
+    And I wait until I don't see selector ".uitest-signincallout"
   GHERKIN
 end
 
@@ -1408,7 +1446,7 @@ end
 # Place files in dashboard/test/fixtures
 # Note: Safari webdriver does not support file uploads (https://code.google.com/p/selenium/issues/detail?id=4220)
 Then /^I upload the file named "(.*?)"$/ do |filename|
-  unless ENV['TEST_LOCAL'] == 'true'
+  unless test_local?
     # Needed for remote (Sauce Labs) uploads
     @browser.file_detector = lambda do |args|
       str = args.first.to_s
@@ -1422,7 +1460,7 @@ Then /^I upload the file named "(.*?)"$/ do |filename|
   element.send_keys filename
   @browser.execute_script('$("input[type=file]").hide()')
 
-  unless ENV['TEST_LOCAL'] == 'true'
+  unless test_local?
     @browser.file_detector = nil
   end
 end
@@ -1603,4 +1641,8 @@ end
 And(/^I hover over selector "([^"]*)"$/) do |selector|
   element = @browser.find_element(:css, selector)
   @browser.action.move_to(element).perform
+end
+
+And(/^I clean up my records$/) do
+  clean_up_records
 end

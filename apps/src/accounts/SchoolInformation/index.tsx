@@ -1,8 +1,8 @@
+import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
+import {Button} from '@code-dot-org/component-library/button';
+import {Heading2} from '@code-dot-org/component-library/typography';
 import React, {useEffect, useMemo, useState} from 'react';
 
-import Alert, {alertTypes} from '@cdo/apps/componentLibrary/alert/Alert';
-import {Button} from '@cdo/apps/componentLibrary/button';
-import {Heading2} from '@cdo/apps/componentLibrary/typography';
 import {useSchoolInfo} from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
 import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
 import {updateSchoolInfo} from '@cdo/apps/schoolInfo/utils/updateSchoolInfo';

@@ -1,0 +1,19 @@
+name 'csaif_pl_wrap-up_answer'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+#Check for Understanding: Answer
+
+#### **Personally Identifiable Information:** information about an individual that identifies or describes them.
+
+#### **Phishing:** a technique that attempts to trick a user into providing personal information
+
+#### **Decryption:** a process that takes a secret message and reproduces the original plain text
+
+#### **Rogue Access Point:** a wireless access point that gives unauthorized access to secure networks
+
+#### **Public Key Encryption:** pairs a public key for encryption and a private key for decryption
+
+#### **Malware:** software intended to damage or to take partial control over a computing system
+MARKDOWN

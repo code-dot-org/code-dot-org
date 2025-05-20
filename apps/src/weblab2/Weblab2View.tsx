@@ -3,78 +3,36 @@
 import './styles/Weblab2View.css';
 
 import {Codebridge} from '@codebridge/Codebridge';
-import {ConfigType} from '@codebridge/types';
+import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {css} from '@codemirror/lang-css';
 import {html} from '@codemirror/lang-html';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useState} from 'react';
 
-import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
 import {useSource} from '../codebridge/hooks/useSource';
 
-import {Config} from './Config';
+import HorizontalLayout from './layout/HorizontalLayout';
+import VerticalLayout from './layout/VerticalLayout';
 
 const weblabLangMapping: {[key: string]: LanguageSupport} = {
   html: html(),
   css: css(),
 };
 
-const labeledGridLayouts = {
-  horizontal: {
-    gridLayoutRows: '1fr',
-    gridLayoutColumns: '300px minmax(0, 1fr) 1fr',
-    gridLayout: `
-    "info-panel workspace file-preview"
-    `,
-  },
-  vertical: {
-    gridLayoutRows: '1fr 1fr',
-    gridLayoutColumns: '300px minmax(0, 1fr) 1fr',
-    gridLayout: `
-    "info-panel workspace workspace"
-    "info-panel file-preview file-preview"`,
-  },
-};
-
 const defaultConfig: ConfigType = {
-  activeLeftNav: 'Files',
   languageMapping: weblabLangMapping,
   editableFileTypes: ['html', 'css'],
-  leftNav: [
-    {
-      icon: 'fa-square-check',
-      component: 'Instructions',
-    },
-    {
-      icon: 'fa-file',
-      component: 'Files',
-    },
-    {
-      icon: 'fa-solid fa-magnifying-glass',
-      component: 'Search',
-    },
-  ],
-  sideBar: [
-    {
-      icon: 'fa-circle-question',
-      label: 'Help',
-      action: () => window.alert('Help is not currently implemented'),
-    },
-    {
-      icon: 'fa-folder',
-      label: 'Files',
-      action: () => window.alert('You are already on the file browser'),
-    },
-  ],
-
-  labeledGridLayouts,
-  activeGridLayout: 'horizontal',
+  activeLayout: 'vertical',
+  layoutComponents: {
+    vertical: VerticalLayout,
+    horizontal: HorizontalLayout,
+  },
   showFileBrowser: true,
 };
 
 const defaultSource: MultiFileSource = {
-  // folders: {},
   folders: {
     '1': {id: '1', name: 'foo', parentId: '0'},
     '2': {id: '2', name: 'bar', parentId: '1'},
@@ -150,33 +108,18 @@ const defaultSource: MultiFileSource = {
 
 const defaultProject: ProjectSources = {source: defaultSource};
 
-const Weblab2View = () => {
+const Weblab2View: React.FC<
+  LabProps<CodebridgeLevelProperties, ProjectSources>
+> = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const {source, setProject, startSources, projectVersion} =
-    useSource(defaultProject);
-  const [showConfig, setShowConfig] = useState<
-    'project' | 'config' | 'layout' | ''
-  >('');
-
-  const configKey = {
-    project: source || defaultProject,
-    config: config,
-    layout: config,
-  };
+  const {source, setProject, startSources, projectVersion} = useSource(
+    defaultProject,
+    levelProperties,
+    initialSources
+  );
 
   return (
     <div className="app-wrapper">
-      <div className="app-wrapper-nav">
-        <button type="button" onClick={() => setShowConfig('project')}>
-          Edit project
-        </button>
-        <button type="button" onClick={() => setShowConfig('config')}>
-          Edit config
-        </button>
-        <button type="button" onClick={() => setShowConfig('layout')}>
-          Edit layout
-        </button>
-      </div>
       <div className="app-ide">
         {source && (
           <Codebridge
@@ -186,25 +129,7 @@ const Weblab2View = () => {
             setConfig={setConfig}
             startSources={startSources}
             projectVersion={projectVersion}
-          />
-        )}
-
-        {showConfig && (
-          <Config
-            config={configKey[showConfig]}
-            setConfig={(
-              configName: string,
-              newConfig: MultiFileSource | ConfigType | string
-            ) => {
-              if (configName === 'project') {
-                setProject({source: newConfig as MultiFileSource});
-              } else if (configName === 'config' || configName === 'layout') {
-                setConfig(newConfig as ConfigType);
-              }
-              setShowConfig('');
-            }}
-            cancelConfig={() => setShowConfig('')}
-            configName={showConfig}
+            levelProperties={levelProperties}
           />
         )}
       </div>

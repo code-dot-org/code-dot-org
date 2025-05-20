@@ -546,14 +546,20 @@ StudioApp.prototype.init = function (config) {
       }, this)
     );
 
-    if (Blockly.getHiddenDefinitionWorkspace()) {
-      this.hiddenWorkspaceChangeListener =
-        Blockly.getHiddenDefinitionWorkspace().addChangeListener(
-          _.bind(function () {
-            this.updateBlockCount();
-          }, this)
-        );
-    }
+    this.hiddenWorkspaceChangeListener =
+      Blockly.getHiddenDefinitionWorkspace()?.addChangeListener(
+        _.bind(function () {
+          this.updateBlockCount();
+        }, this)
+      );
+
+    this.mainWorkspaceChangeListener =
+      Blockly.getMainWorkspace()?.addChangeListener(
+        _.bind(function () {
+          project.projectChanged();
+        }, this)
+      );
+
     if (config.level.openFunctionDefinition) {
       this.openFunctionDefinition_(config);
     }
@@ -2169,7 +2175,11 @@ StudioApp.prototype.configureDom = function (config) {
       eventName = EVENTS.LEVEL_ACTIVITY;
     }
     if (!runButtonWasClicked) {
-      analyticsReporter.sendEvent(eventName, {}, PLATFORMS.BOTH);
+      analyticsReporter.sendEvent(
+        eventName,
+        {signedIn: config.isSignedIn, unitName: config.scriptName},
+        PLATFORMS.BOTH
+      );
       runButtonWasClicked = true;
     }
   };
@@ -2799,6 +2809,13 @@ StudioApp.prototype.validateCodeChanged = function () {
   }
 
   return project.isCurrentCodeDifferent(level.startBlocks);
+};
+
+StudioApp.prototype.analyticsData = function () {
+  return {
+    levelId: this.config.serverLevelId,
+    scriptId: this.config.scriptId,
+  };
 };
 
 /**
@@ -3453,6 +3470,9 @@ if (IN_UNIT_TEST) {
     }
     if (instance.hiddenWorkspaceChangeListener) {
       Blockly.removeChangeListener(instance.hiddenWorkspaceChangeListener);
+    }
+    if (instance.mainWorkspaceChangeListener) {
+      Blockly.removeChangeListener(instance.mainWorkspaceChangeListener);
     }
     instance = __oldInstance;
     __oldInstance = null;

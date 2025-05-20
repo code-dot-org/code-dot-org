@@ -1,0 +1,16 @@
+name 'test-intro-to-programming-lesson13-level7'
+display_name 'Flowchart Choice Level'
+description 'Pick one of the levels below. Use conditionals to control the painter.'
+
+sublevels
+level 'test-intro-to-programming-lesson13-level7a'
+level 'test-intro-to-programming-lesson13-level7b'
+level 'test-intro-to-programming-lesson13-level7c'
+
+
+
+
+
+
+
+

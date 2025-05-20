@@ -16,34 +16,44 @@ class CreateHeader
     minecraft_aquatic: {
       image: "logo_minecraft_aquatic_square.jpg"
     },
+    spritelab: {
+      image: "header-sprite-lab-icon.png"
+    },
+    artist: {
+      image: "header-artist-icon.png"
+    },
     applab: {
-      image: "logo_applab_square.png"
+      image: "header-app-lab-icon.png"
     },
     gamelab: {
-      image: "logo_gamelab_square.png"
+      image: "header-game-lab-icon.png"
     },
     playlab_k1: {
       image: "logo_playlab.png"
     },
     artist_k1: {
-      image: "logo_artist.png"
+      image: "header-artist-icon.png"
     },
     poetry_hoc: {
       image: "logo_poetry.png"
     },
     music: {
+      image: "header-music-lab-icon.png",
       url: CDO.code_org_url("/music")
+    },
+    dance: {
+      image: "header-dance-party-icon.png"
     },
   }.freeze
 
   # project info data can be inferred from the key, except when otherwise
   # specified
-  def self.get_project_info(key)
+  def self.get_project_info(key, ge_region: nil)
     info = {
       id: "create_dropdown_#{key}",
       image: "logo_#{key}.png",
       title: key,
-      url: CDO.studio_url("projects/#{key}/new"),
+      url: CDO.studio_url("projects/#{key}/new", ge_region: ge_region),
     }
 
     info.merge(PROJECT_INFO_OVERRIDES[key.to_sym] || {})
@@ -58,13 +68,16 @@ class CreateHeader
       everyone_entries + ["minecraft_designer"] :
       everyone_entries + applab_gamelab
 
-    entries << "dance"
     entries << "music"
+    entries << "dance"
 
     if options[:project_type] && !(entries.include? options[:project_type])
       entries.unshift(options[:project_type])
     end
 
-    entries.map {|entry| get_project_info(entry)}
+    available_entries = Cdo::GlobalEdition.region_project_types(options[:ge_region])
+    entries &= available_entries if available_entries
+
+    entries.map {|entry| get_project_info(entry, ge_region: options[:ge_region])}
   end
 end

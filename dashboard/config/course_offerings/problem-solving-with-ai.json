@@ -1,0 +1,20 @@
+{
+  "key": "problem-solving-with-ai",
+  "display_name": "Problem Solving with AI 2025 Pilot",
+  "is_featured": false,
+  "assignable": true,
+  "curriculum_type": "Standalone Unit",
+  "marketing_initiative": null,
+  "grade_levels": "9,10,11,12",
+  "header": "teacher_led",
+  "image": null,
+  "cs_topic": "artificial_intelligence",
+  "school_subject": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
+  "description": null,
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": null,
+  "self_paced_pl_course_offering_key": null,
+  "ai_teaching_assistant_available": false
+}

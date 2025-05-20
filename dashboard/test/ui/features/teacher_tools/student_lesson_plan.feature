@@ -37,17 +37,17 @@ Feature: Student Lesson Plan
     Then I wait until element ".announcement-notification:first" is visible
     And element ".announcement-notification:first" contains text matching "Information for Students"
 
-    Then I wait until element ".announcement-notification:nth(1)" is visible
-    And element ".announcement-notification:nth(1)" contains text matching "Information for Students and Teachers"
+    Then I wait until element ".announcement-notification:eq(1)" is visible
+    And element ".announcement-notification:eq(1)" contains text matching "Information for Students and Teachers"
 
     # Navigate between student lesson plans
     Then I wait until element ".uitest-lesson-dropdown-nav" is visible
     And I click ".uitest-lesson-dropdown-nav"
-    Then I wait until element "a.no-navigation:nth(1)" is visible
-    And I click selector "a.no-navigation:nth(1)"
+    Then I wait until element "a.no-navigation:eq(1)" is visible
+    And I click selector "a.no-navigation:eq(1)"
     And I wait until element "a.navigate:contains(2 - Second Lesson)" is visible
-    Then I wait until element "a.navigate:nth(0)" is visible
-    And I click selector "a.navigate:nth(0)"
+    Then I wait until element "a.navigate:eq(0)" is visible
+    And I click selector "a.navigate:eq(0)"
     Then I wait until I am on "http://studio.code.org/s/allthemigratedthings/lessons/2/student"
     And I wait until element "#show-container" is visible
     And I wait until element "h1:contains(Lesson 2: Second Lesson)" is visible

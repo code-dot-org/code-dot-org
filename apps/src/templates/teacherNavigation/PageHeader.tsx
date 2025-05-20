@@ -1,10 +1,9 @@
+import Typography, {Heading1} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import _ from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 import {matchPath, useLocation} from 'react-router-dom';
 
-import {Heading1} from '@cdo/apps/componentLibrary/typography';
-import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import {
   convertStudentDataToArray,
   filterAgeGatedStudents,
@@ -21,14 +20,16 @@ import styles from './teacher-navigation.module.scss';
 import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 const skeletonSectionName = (
-  <span
+  <Typography
+    semanticTag={'h2'}
+    visualAppearance={'overline-two'}
     className={classNames(
       skeletonizeContent.skeletonizeContent,
       styles.skeletonHeaderSectionName
     )}
   >
     SKELETON SECTION NAME
-  </span>
+  </Typography>
 );
 
 const PageHeader: React.FC = () => {

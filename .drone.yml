@@ -82,7 +82,7 @@ steps:
   - name: unit-tests
     # see: docker/ci/Dockerfile
     # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:1.14
+    image: codedotorg/code-dot-org:1.15
     pull: always
     volumes:
       - name: rbenv
@@ -215,7 +215,7 @@ steps:
   - name: ui-tests
     # see: docker/ci/Dockerfile
     # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:1.14
+    image: codedotorg/code-dot-org:1.15
     pull: always
     volumes:
       - name: rbenv
@@ -234,6 +234,7 @@ steps:
         from_secret: SAUCE_USERNAME
       SAUCE_ACCESS_KEY:
         from_secret: SAUCE_ACCESS_KEY
+    shm_size: '2gb' # necessary to avoid "invalid session id"/"session deleted because of page crash" errors in Selenium
     commands:
       - sudo chown -R ci:ci .
       # cache is restored to source directory, so we need to copy it into the right place
@@ -316,6 +317,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: 438911a0c59ad180adae90c55e5bf3f15713df10458caf0f44347f7fff00eb4c
+hmac: c32532882fe8b8b8c24853dece9734ee85fc53fbb7fa866056d4eb2a055c9d87
 
 ...

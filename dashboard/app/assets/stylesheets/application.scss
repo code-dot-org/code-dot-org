@@ -21,8 +21,8 @@
  *= require_directory ./lti
  *
  * Shared
- *= require barlow-semi-condensed-font
- *= require fonts/metropolis
+ *= require fonts/barlow-semi-condensed
+ *= require fonts/figtree
  *= require fonts/noto-sans
  *= require user-menu
  *= require buttons
@@ -74,9 +74,23 @@ body.oceans-blue {
   background-color: $oceans_deep_blue;
 }
 
-body.music-black {
+body.music-black, body.background-dark {
   background-color: $dark_black;
-  overscroll-behavior: none;
+  color: $neutral_light;
+}
+
+body.background-dark, body.background-light {
+  .header-wrapper .header {
+    position: fixed;
+    z-index: 1;
+  }
+}
+
+// For modern Lab2 labs, prevent the entire body from scrolling.
+// All content is typically displayed on the page at once, and
+// internal components manage their own scroll behavior.
+body:has(#lab2-container) {
+  overflow: hidden;
 }
 
 h1 {
@@ -222,8 +236,8 @@ img.video_thumbnail {
     }
 
     .header_logo {
-      width: 42px;
-      padding: 4px 16px;
+      width: 38px;
+      padding: 6px 14px;
       margin-top: 0;
     }
   }
@@ -270,7 +284,7 @@ img.video_thumbnail {
     display: flex;
     justify-content: start;
     align-items: center;
-    gap: 2rem;
+    gap: 2.25rem;
 
     .headerlink {
       @include main-font-regular;
@@ -300,30 +314,31 @@ img.video_thumbnail {
       background-color: $teal;
     }
     @include main-font-regular;
-    display: inline-block;
+    display: flex;
+    align-items: center;
     color: $white;
     background-color: transparent;
-    border: 2px solid $white;
-    border-radius: 5px;
-    padding: 7px 12px;
+    border: 1px solid $white;
+    border-radius: 4px;
+    padding: 6.5px 16px;
     font-size: 14px;
     line-height: 20px;
     box-sizing: border-box;
-    float: left;
     cursor: pointer;
     white-space: nowrap;
     margin-inline-start: 8px;
+    height: 35px;
     a:hover {
       text-decoration: none;
       background-color: $orange;
     }
     &:active {
-      border: 2px solid $white !important;
+      border: 1px solid $white !important;
     }
   }
 
   .user_menu, .create_menu, .help_button {
-    margin-top: 6px;
+    margin-top: 7px;
     .create_button, .display_name, .pairing_name {
       html[dir=rtl] & {
         float: right;
@@ -380,7 +395,7 @@ img.video_thumbnail {
   }
 
   #signin_button .header_button {
-    margin-top: 6px;
+    margin-top: 7px;
   }
 
   #sign_in_or_user {
@@ -798,6 +813,98 @@ $small-footer-standard-width: 400px;
   }
 }
 
+body.background-dark, body.music-black {
+  .small-footer-base {
+    background-color: initial;
+    border-top: initial;
+  }
+
+  #page-small-footer {
+    user-select: none;
+
+    .small-footer-base {
+      margin-inline-start: 10px;
+      margin-bottom: 12px;
+      padding-bottom: 0;
+      transition: max-width 0.75s;
+
+      .version-caption {
+        display: none;
+      }
+
+      > p {
+        color: $light_white;
+      }
+    }
+
+    /* Use the underlying background color. */
+    select, .copyright-button {
+      background-color: initial;
+    }
+
+    /* Edge uses the select's background color for the dropdown as well, so we
+     * override it here. */
+    option {
+      background-color: $light_gray_950;
+    }
+
+    .copyright-button {
+      height: 1.625rem;
+      width: 1.625rem;
+      box-sizing: border-box;
+      border: solid 1px $light_white;
+      color: $light_white;
+    }
+  }
+
+  .languageSelect {
+    > div {
+      select {
+        border-color: $light_white;
+        background-color: $light_black;
+        color: $light_white;
+      }
+      &::after {
+        background-color: initial;
+
+        // This will otherwise get overridden by the simpleDropdown DSCO component
+        color: $light_white !important;
+      }
+      &::before {
+        background-color: initial;
+        color: $light_white;
+      }
+
+      &:has(select:hover) {
+        select:not(:disabled) {
+          color: $light_white;
+          background-color: $light_black;
+        }
+        &::before {
+          color: $light_white;
+        }
+        &::after {
+          color: $light_white;
+        }
+      }
+
+      &:has(select:active) {
+        select:not(:disabled) {
+          color: $light_white;
+          background-color: $light_black;
+        }
+
+        &::before {
+          color: $light_white;
+        }
+        &::after {
+          color: $light_white;
+        }
+      }
+    }
+  }
+}
+
 .responsive-content-desktop-footer {
   @media screen and (max-width: 969px) {
     & {
@@ -838,12 +945,6 @@ $small-footer-standard-width: 400px;
   }
 }
 
-.dark {
-  .small-footer-base {
-    font-size: 12px;
-  }
-}
-
 /* All three major components of .small-footer are stacked:
    Need to have this reasonably, high since some of our elements (such as
    applab editor) have higher values
@@ -867,36 +968,6 @@ $small-footer-standard-width: 400px;
 .oceans-blue .small-footer-base, .music-black .small-footer-base {
   background-color: initial;
   border-top: initial;
-}
-
-/* Custom styling for the small-footer-base for Music Lab. */
-.music-black {
-  #page-small-footer {
-    user-select: none;
-
-    .small-footer-base {
-      max-width: 12.5rem;
-      margin-inline-start: 8px;
-      margin-bottom: 8px;
-
-      .version-caption {
-        display: none;
-      }
-
-      > p {
-        color: $light_white;
-      }
-    }
-
-    .copyright-button {
-      height: 1.625rem;
-      width: 1.625rem;
-      box-sizing: border-box;
-      border: solid 1px $light_white;
-      background-color: $light_gray_950;
-      color: $light_white;
-    }
-  }
 }
 
 .header_separator {
@@ -1116,6 +1187,7 @@ $default-modal-width: 640px;
 
 .project_info {
   float: left;
+  margin-top: 1px;
 
   .header_text, .header_button {
     float: left;
@@ -1265,7 +1337,7 @@ input.header_input {
 .header_user {
   text-align: right;
   margin-left: 6px;
-  margin-top: 6px;
+  margin-top: 7px;
   height: 38px;
 }
 
@@ -3063,6 +3135,14 @@ $information-desktop: "only screen and (min-width: 1024px)";
   }
 }
 
+// Summary
+#summary-content {
+  // Ensure the summary can be seen even when the lesson has a dark background.
+  background-color: $white;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
 $modal-image-width: 100px;
 $modal-image-margin-gap: 10px;
 $modal-no-icon-gap: 22px;
@@ -4130,12 +4210,13 @@ a {
   .clickable-text {
     cursor: pointer;
     position: relative;
+    outline-offset: 2px;
 
     &-with-glow {
       animation: clickable-text-glow-keyframes 2s ease-in-out;
 
       &:hover {
-        color: $light_primary_500;
+        color: $light_primary_700;
       }
     }
   }

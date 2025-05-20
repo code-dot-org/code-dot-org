@@ -1,9 +1,8 @@
 {
   "extends": "@code-dot-org/lint-config/typescript/tsconfig.react.json",
   "compilerOptions": {
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["./src/*"]
     }
   }
 }

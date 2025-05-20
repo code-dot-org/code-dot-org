@@ -4,6 +4,7 @@
 @no_mobile
 Feature: Unit overview page
 
+  @properties_encryption_key
   Scenario: Viewing student progress
     Given I create an authorized teacher-associated student named "Sally"
 
@@ -37,6 +38,7 @@ Feature: Unit overview page
     # Make sure we only see student progress, not teacher progress.
     Then I verify progress for lesson 29 level 4 is "not_tried"
 
+  @properties_encryption_key
   Scenario: Unit overview contents
     Given I create a student named "Jean"
     And I am on "http://studio.code.org/s/allthethings"
@@ -98,3 +100,16 @@ Feature: Unit overview page
     And I click selector ".ui-test-lesson-resources" once I see it
     When I switch tabs
     And I wait until current URL contains "s/allthemigratedthings/lessons/1/student"
+
+  Scenario: Unit overview for unit in single-unit course
+    Given I create an authorized teacher-associated student named "Blake"
+    When I sign in as "Teacher_Blake"
+    And I am on "http://studio.code.org/s/ui-test-single-unit-2025"
+    Then I wait to see ".uitest-summary-progress-table"
+    And I wait until I don't see selector ".unit-breadcrumb"
+    And I wait until element "#assignment-version-year" contains text "2025"
+    And I press "assignment-version-year"
+    And I click selector ".assignment-version-title:contains(2026)" once I see it
+    Then I get redirected to "/s/ui-test-single-unit-2026" via "dashboard"
+    And I wait until element "#assignment-version-year" contains text "2026"
+    And I wait until I don't see selector ".unit-breadcrumb"

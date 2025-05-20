@@ -1,7 +1,7 @@
+import {buttonColors} from '@code-dot-org/component-library/button';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -147,11 +147,10 @@ export default class DeleteAccountDialog extends React.Component {
                 ? i18n.deleteAccountDialog_button_studentWarning()
                 : i18n.deleteAccountDialog_button()
             }
-            confirmColor={Button.ButtonColor.red}
+            confirmColor={buttonColors.destructive}
             onConfirm={deleteUser}
             onCancel={onCancel}
             disableConfirm={disableConfirm}
-            tabIndex="1"
           >
             <span
               id="uitest-delete-error"

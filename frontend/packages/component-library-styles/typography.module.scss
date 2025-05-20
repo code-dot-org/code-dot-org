@@ -1,0 +1,300 @@
+@use 'colors.scss';
+@use 'font.scss' as font;
+
+// Please note (!): Mixins and variables form this file are listed in README.MD. Please keep it up to date. (any update)
+// to this files should be reflected in README.MD file.
+
+/* This file is being copied and adopted to shared/css/typography.scss
+   Updating styles in this file will require a manual sync of the that file.
+*/
+
+html {
+  font-size: 100%;
+}
+
+// This stylesheet can be imported to maintain typographic
+// consistency across Dashboard and Pegasus sites.
+
+// Includes heading, paragraph, and caption styles.
+
+// We're using mixins to style semantic tags and also creating
+// identical classes for potential use on other elements if needed.
+
+// ----------------------------------------
+// v 2.0.2
+// ----------------------------------------
+
+// Sizes
+// Most of the typography elements have a set of different sizes (defined by "-one", "-two", "-three", "-four" suffixes).
+// (Not applicable to Headings and elements without those suffixes)
+// Common rule for all of those sizes are following:
+// 1. "-one" is bigger size.
+// 2. "-two" is a DEFAULT size, used in most of cases.
+// 3. "-three" is smaller size.
+// 4. "-four" is the smallest size.
+
+// Values
+// font-size uses rem
+// - works when the root font-size is 100% which uses the
+// browser default font-size of 16px (3rem = 16 x 3 = 48px)
+
+// margin uses em
+// - sets the margin relative to the parent element rather than the root
+// example:
+//  Imagine that we have h1 with font-size: 3rem (48px) and we want to set margin-bottom to it.
+//    - Setting margin-bottom to 0.5rem == 8px (html.font_size * 0.5) >>> rem is relative to root element (html tag) which is 16px
+//    - Setting margin-bottom to 0.5em == 24px (h1.font-size * 0.5) >>> em is relative to element itself or it's parent.
+//      Our h1 element has a font-size of 3rem (48px), so 0.5em will be equal to 48 * 0.5 = 24px margin-bottom.
+
+// Read more about rem vs em:
+// https://www.digitalocean.com/community/tutorials/css-rem-vs-em-units
+
+// line-height uses unitless numbers
+// - this multiplies the line-height by the element's font-size
+// and is the preferred way to set line-height according to Mozilla
+// https://developer.mozilla.org/en-US/docs/Web/CSS/line-height
+
+// ----------------------------------------
+
+// Heading styles
+// Heading mixins are used to maintain accessible heading hierarchy
+// when design calls for a different style (semantic h3, h5 styling).
+
+// Use .heading-[xx] classes on single elements in the markup.
+// This is an h3 heading that will look like an h5.
+// - example: h3.heading-sm
+
+// Use @include [mixin-name] in stylesheets for widespread use.
+
+/* — example: all h3s in a ul need to look like h5s
+    ul.icon-list {
+      h3 { @include heading-sm }
+    }
+*/
+
+:root {
+  --font-size-body-xs: 0.813rem;
+  --font-size-body-sm: 0.875rem;
+  --font-size-body-md: 1rem;
+  --font-size-body-lg: 1.25rem;
+}
+
+@mixin heading-common {
+  color: var(--text-neutral-primary);
+  margin: 0 0 0.5em 0;
+}
+
+@mixin heading-xxl {
+  @include heading-common;
+  font-family: font.$barlowSemiCondensed-semibold;
+  font-weight: font.$semi-bold-font-weight;
+  font-size: 3rem;
+  line-height: 1.16;
+}
+
+@mixin heading-xl {
+  @include heading-common;
+  font-family: font.$barlowSemiCondensed-semibold;
+  font-weight: font.$semi-bold-font-weight;
+  font-size: 2.125rem;
+  line-height: 1.24;
+}
+
+@mixin heading-lg {
+  @include heading-common;
+  font-family: font.$barlowSemiCondensed-semibold;
+  font-weight: font.$semi-bold-font-weight;
+  font-size: 1.75rem;
+  line-height: 1.28;
+}
+
+@mixin heading-md {
+  @include heading-common;
+  font-family: font.$barlowSemiCondensed-semibold;
+  font-weight: font.$semi-bold-font-weight;
+  font-size: 1.5rem;
+  line-height: 1.32;
+}
+
+@mixin heading-sm {
+  @include heading-common;
+  @include font.main-font-semi-bold;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+@mixin heading-xs {
+  @include heading-common;
+  @include font.main-font-semi-bold;
+  font-size: 1rem;
+  line-height: 1.48;
+}
+
+// Paragraph styles
+@mixin paragraph-common {
+  @include font.main-font-regular;
+  color: var(--text-neutral-primary);
+  margin-bottom: 1em;
+}
+
+@mixin body-one {
+  @include paragraph-common;
+  font-size: var(--font-size-body-lg);
+  line-height: 1.4;
+}
+
+@mixin body-two {
+  @include paragraph-common;
+  font-size: var(--font-size-body-md);
+  line-height: 1.48;
+}
+
+@mixin body-three {
+  @include paragraph-common;
+  font-size: var(--font-size-body-sm);
+  line-height: 1.54;
+}
+
+@mixin body-four {
+  @include paragraph-common;
+  font-size: var(--font-size-body-xs);
+  line-height: 1.64;
+}
+
+// Overline styles
+@mixin overline-common {
+  @include paragraph-common;
+  @include font.main-font-semi-bold;
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+}
+
+@mixin overline-one {
+  @include overline-common;
+  font-size: 0.875rem;
+  line-height: 1.54;
+}
+
+@mixin overline-two {
+  @include overline-common;
+  font-size: 0.813rem;
+  line-height: 1.64;
+}
+
+@mixin overline-three {
+  @include overline-common;
+  font-size: 0.688rem;
+  line-height: 1.76;
+}
+
+// Strong and Em styles
+@mixin strong {
+  font-weight: font.$semi-bold-font-weight;
+}
+
+@mixin extra-strong {
+  font-weight: font.$bold-font-weight;
+}
+
+@mixin em {
+  font-style: italic;
+}
+
+// Caption styles
+@mixin figcaption {
+  @include font.main-font-semi-bold;
+  color: var(--text-neutral-primary);
+  font-size: 0.875rem;
+  line-height: 1.54;
+  margin: 0.5em 0 1em;
+}
+
+// ----------------------------------------
+
+// Headings
+.heading-xxl {
+  @include heading-xxl;
+}
+
+.heading-xl {
+  @include heading-xl;
+}
+
+.heading-lg {
+  @include heading-lg;
+}
+
+.heading-md {
+  @include heading-md;
+}
+
+.heading-sm {
+  @include heading-sm;
+}
+
+.heading-xs {
+  @include heading-xs;
+}
+
+// Paragraphs
+// Use on larger paragraphs
+.body-one {
+  @include body-one;
+}
+
+// Use on default paragraphs
+.body-two {
+  @include body-two;
+}
+
+// Use on course block descriptions or anywhere
+// else that needs smaller paragraph text
+.body-three {
+  @include body-three;
+}
+
+// Use on smallest paragraph text
+.body-four {
+  @include body-four;
+}
+
+// Overlines
+// Use on small uppercase labels or descriptions
+// (Bigger size)
+.overline-one {
+  @include overline-one;
+}
+
+// (Default size)
+.overline-two {
+  @include overline-two;
+}
+
+// (Smaller size)
+.overline-three {
+  @include overline-three;
+}
+
+// Use in paragraphs to bold text
+strong,
+.strong {
+  @include strong;
+}
+
+// Use in paragraphs to italicize text
+
+.extra-strong {
+  @include extra-strong;
+}
+
+em,
+.em {
+  @include em;
+}
+
+// Captions
+// Use on figcaption elements that accompany images or videos
+figcaption,
+.figcaption {
+  @include figcaption;
+}

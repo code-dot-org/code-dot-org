@@ -1,0 +1,20 @@
+=inline_css "/generated/exploring-gen-ai-hero-banner.css"
+
+%section.exploring-gen-ai-hero-banner.hero-banner-basic.overlay
+  .wrapper
+    .text-wrapper
+      %p.overline-one
+        =hoc_s("exploring_gen_ai.banner.overline")
+      %h1.white
+        =hoc_s("exploring_gen_ai.banner.title")
+      %p.body-one.white
+        =hoc_s("exploring_gen_ai.banner.desc")
+      .amazon
+        %p.body-two.white
+          =hoc_s("exploring_gen_ai.banner.in_partnership_with")
+        %img{src: "/images/avatars/amazon_white.png", alt: "Amazon"}
+      %a.link-button.white{href: "/curriculum/generative-ai"}
+        =hoc_s(:call_to_action_explore_course)
+    %figure
+      %img{src: "/images/banners/banner-bg-gen-ai-bot-wizard.png", alt: ""}
+.clear

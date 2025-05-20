@@ -1,7 +1,9 @@
+import {
+  TooltipProps,
+  WithTooltip,
+} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React from 'react';
-
-import {TooltipProps, WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 
 interface WithConditionalTooltipProps {
   children: React.ReactNode;

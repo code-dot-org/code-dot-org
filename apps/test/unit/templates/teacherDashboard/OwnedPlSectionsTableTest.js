@@ -28,6 +28,7 @@ const plSectionRowData = [
     hidden: false,
     assignmentNames: [],
     assignmentPaths: [],
+    isAssignedSingleUnitCourse: false,
   },
   {
     id: 2,
@@ -42,6 +43,7 @@ const plSectionRowData = [
     hidden: false,
     assignmentNames: ['Test Course 2'],
     assignmentPaths: ['/test-course-2'],
+    isAssignedSingleUnitCourse: false,
   },
   {
     id: 3,
@@ -57,6 +59,25 @@ const plSectionRowData = [
     hidden: false,
     assignmentNames: ['Test Course 3', 'Unit 1'],
     assignmentPaths: ['/test-course-3', '/course3-unit1'],
+    isAssignedSingleUnitCourse: false,
+  },
+  {
+    id: 4,
+    name: 'single-unit course section',
+    studentCount: 4,
+    code: 'JKL',
+    courseId: 10,
+    scriptId: 17,
+    loginType: SectionLoginType.email,
+    providerManaged: false,
+    hidden: false,
+    courseOfferingsAreLoaded: true,
+    isAssignedSingleUnitCourse: true,
+    assignmentNames: ['Single Unit Course 2025', 'Single Unit 2025'],
+    assignmentPaths: [
+      '/courses/single-unit-course-2025',
+      '/s/single-unit-2025',
+    ],
   },
 ];
 
@@ -75,7 +96,7 @@ describe('OwnedPlSectionsTable', () => {
   });
 
   const DEFAULT_PROPS = {
-    sectionIds: [1, 2, 3],
+    sectionIds: [1, 2, 3, 4],
     sectionRows: plSectionRowData,
     onEdit: () => {},
   };
@@ -101,6 +122,7 @@ describe('OwnedPlSectionsTable', () => {
     const expectedOrder = [
       plSectionRowData[1].name,
       plSectionRowData[0].name,
+      plSectionRowData[3].name,
       plSectionRowData[2].name,
     ];
 
@@ -117,6 +139,7 @@ describe('OwnedPlSectionsTable', () => {
   it('can sort in reverse order by section name when clicked twice', () => {
     const expectedOrder = [
       plSectionRowData[2].name,
+      plSectionRowData[3].name,
       plSectionRowData[0].name,
       plSectionRowData[1].name,
     ];
@@ -213,6 +236,22 @@ describe('OwnedPlSectionsTable', () => {
         plSectionRowData[2].assignmentPaths[1]
       )
     ).toBeTruthy();
+
+    // For sections with a single-unit course, show course name only
+    const singleUnitCourseName = screen
+      .getByText(plSectionRowData[3].assignmentNames[0])
+      .closest('a');
+    const singleUnitCourseCell = singleUnitCourseName.closest('td');
+    expect(
+      singleUnitCourseName.href.includes(plSectionRowData[3].assignmentPaths[0])
+    ).toBeTruthy();
+
+    expect(singleUnitCourseCell).toHaveTextContent(
+      plSectionRowData[3].assignmentNames[0]
+    );
+    expect(singleUnitCourseCell.textContent.trim()).toBe(
+      plSectionRowData[3].assignmentNames[0]
+    );
   });
 
   it('sectionLinkFormatter contains section link', () => {

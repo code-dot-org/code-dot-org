@@ -229,8 +229,6 @@ slack_token:                    !Secret
 slack_bot_token:                !Secret
 slack_log_room:                 <%=env%>
 hip_chat_logging:               false
-# Logging endpoint used by broken link checker.
-slack_endpoint_broken_links:
 
 # Azure keys for speech service
 azure_speech_service_key: !Secret
@@ -263,6 +261,15 @@ google_client_secret:
 
 # Default AWS region for the application.
 aws_region: us-east-1
+
+# Override the endpoint used for S3, typically to point to an emulated local
+# instance of the service; LocalStack, MinIO, etc. Particularly useful for
+# developers without AWS credentials; see `/docker/developers` for more,
+# particularly `docker-compose.minio.yml`
+aws_s3_endpoint:
+aws_s3_access_key_id:
+aws_s3_secret_access_key:
+aws_s3_emulated: false
 
 # Amazon Future Engineer integration
 afe_pardot_form_handler_url:
@@ -378,11 +385,9 @@ optimize_webpack_assets: true
 
 optimize_rails_assets: true
 
-# Allows your local server to render non-English locales, defaults to false in development.
-# If false, choosing a locale other than English will have no effect.
-# Note: You may need to be in an incognito window to see changes
-# due to a difference in the language cookie between production and localhost.
-load_locales:
+# Improves local environment load time by loading only the i18n data for the current locale.
+# Note: Not intended for production use.
+lazy_load_i18n: false
 
 # Whether to skip the slow `rake seed:all` command during `rake build`.
 # Until you manually run `rake seed:all` or disable this flag, you won't
@@ -443,8 +448,6 @@ levelbuilder_mode:
 use_local_header_color:
 
 default_hoc_mode: false  # overridden by 'hoc_mode' DCDO param, except in :test
-default_hoc_launch: ''      # overridden by 'hoc_launch' DCDO param, except in :test
-hoc-2024-nov-launch: true # overridden by 'hoc-2024-nov-launch' DCDO param, except in :test
 
 # teacher_application_mode values: 'open', 'closing-soon', 'closed'
 default_teacher_application_mode: 'closed' # overridden by 'teacher_application_mode' DCDO param, except in :test
@@ -618,20 +621,12 @@ jwks_data:
       use: "sig"
       alg: "RS256"
       kid: "yNt3MOdUenNV_bn6IKboK2d8iJBL2hDJ_RoMhUtO33Q"
-    - kty: "RSA"
-      n: "s8ymkrciPcjA8enrCyg7oO8hGixV9nEAVdLwtuSlJt441OZKFE9vCYsyzxODjtFxTCTj0Q0misMWQbo-Dzvi7DeXRCVOlydeTKgL5UaozAySSe3Qj9WE0idFRZ9kTeuDxwB50AxL-k7yvvdl66a4iBqnmaRIdCMyTu44u9uyydauzPknZ7H3wjgOjv2SvJAIOxUW2QQ6-hTeAXT5N2lPOZYR2UzRaevVOFx91TX9ax8SNDz8UK7wJ7RWVPY22gIpowCUBMkaeZYHQK3E1XRifsrf5etK2PtZYetJk8NoVDnuGTm2ZS-Q4KyqDnSP2QyTM9vHloNhZPgrsvdpyX81rQ"
-      e: "AQAB"
-      use: "sig"
-      alg: "RS256"
-      kid: "Rc2LLhn9Qto98Yx63mDk--ZuS3LnjP5RPHteCorZzgE"
 jwk_private_key_data: !Secret
 
 # Credentials for OpenAI API
-openai_chat_completion_api_key: !Secret
-openai_chat_completion_org_id: !Secret
 openai_evaluate_rubric_api_key: !Secret
-openai_evaluate_rubric_org_id:
-openai_aichat_safety_api_key: !Secret
+openai_student_learning_api_key: !Secret
+openai_measures_of_learning_api_key: !Secret
 
 # AI Proxy for OpenAI API
 ai_proxy_origin: https://aiproxy-test.code.org
@@ -644,6 +639,7 @@ ai_proxy_origin: https://aiproxy-test.code.org
 # local_mode.
 statsig_server_secret_key: 'secret-fake-key'
 statsig_api_client_key: 'client-fake-key'
+statsig_api_client_key_session_replay: 'client-fake-key'
 
 # MailGun/MailJet API keys
 mailjet_api_key:
@@ -662,8 +658,13 @@ active_job_queues:
 active_job_queue_adapter: :delayed_job
 
 # Number of workers to start when running `rake build:start_active_job_workers`:
-active_job_backend_n_workers_to_start: 2
-active_job_backend_rolling_restart_in_n_batches: 1
+active_job_backend_n_workers_to_start: 10
+active_job_backend_rolling_restart_in_n_batches: 2
 
 # aiproxy credentials
 aiproxy_api_key: !Secret
+
+# Contentful
+contentful_space_id: "90t6bu6vlf76"
+contentful_api_key: !Secret
+contentful_hostname: cdn.contentful.com

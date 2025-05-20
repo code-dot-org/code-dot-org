@@ -1,0 +1,48 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-03-27T17:49:49.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##AI in My Community: Helpful or Harmful?\r\n###Write Your Video Script\r\nNow it's your turn to write a script for a short video. Your job is to educate viewers about this use of AI and propose a way to make AI more beneficial for all members of the community.\r\n\r\n\r\n###Do This\r\n1. Use **TaCoFoRT** to craft your prompt to AI Chat. Use it as a collaborator on your video script and remember you can use text, images, and documents to prompt it.\r\n2. Go back and forth with AI chat to make the best script you can.\r\n3. Make sure the final script, which should include your input along with AI Chat's input, gets recorded in Part 2 of your Activity Guide.\r\n\r\n\r\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i>  *Need help refining your prompt?* \r\n\r\nMake sure your video script addresses the following issues:\r\n- How do AI’s impacts differ based on who in the community is being prioritized?\r\n- How can AI be designed to benefit more people equitably?\r\n- What responsibilities do people who implement AI technologies have to address these disparities?\r\n- What are the potential environmental impacts of this AI system and how can they be mitigated?",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-27 17:53:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-27 17:57:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-27 18:02:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-27 18:02:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-28 19:53:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

@@ -1,0 +1,9 @@
+name 'test-intro-to-programming-lesson6-practice1-ai-tutor'
+display_name 'Practice with Moving'
+description 'Choose one of the options below!'
+
+sublevels
+level '4test-intro-to-programming-lesson6-level4-ai-tutor'
+level '4test-intro-to-programming-lesson6-level6-ai-tutor'
+
+

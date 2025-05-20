@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Understanding Bias
 
-<img src="https://images.code.org/f594dacfac54123c40862bd1e687dc7b-image-1736137548868.25.46 PM.png" alt="A row of green school lockers." style="border-radius:20px; float: right; padding-right: 10px; height: 200px; clear: both; margin: 0px 20px 20px 20px;">
+<img src="https://images.code.org/f594dacfac54123c40862bd1e687dc7b-image-1736137548868.25.46 PM.png" alt="A row of green school lockers." style="border-radius:20px; float: right; padding-right: 10px; height: 180px; clear: both; margin: 0px 20px 20px 20px;">
 
 #### Educators engaged in equity work often ask themselves how they can become aware of their bias and interrupt those patterns of thinking. A team at Harvard attempted to answer that question with the Implicit Association Test.
 
@@ -13,7 +13,7 @@ markdown <<MARKDOWN
 
 #### In 1998, three scientists from Harvard created the first version of the **Implicit Association Test (IAT)** - a test that <a href="https://implicit.harvard.edu/implicit/education.html" target="blank" rel="noopener noreferrer">promises the following</a>:
 
-<div style="background-color: #F7F8FA; border-radius: 20px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
+<div style="background-color: #C6E3E7; border-radius: 20px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
 
 #### The **Implicit Association Test (IAT)** measures attitudes and beliefs that people may be unwilling or unable to report. The IAT may be especially interesting if it shows that you have an implicit attitude that you did not know about. 
 
@@ -23,7 +23,7 @@ markdown <<MARKDOWN
 
 #### While the IAT may be useful, <a href="https://www.vox.com/identities/2017/3/7/14637626/implicit-association-test-racism" target="blank" rel="noopener noreferrer">a 2017 article from Vox</a> suggests that its utility may be limited if you take it just once:
 
-<div style="background-color: #F7F8FA; border-radius: 20px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
+<div style="background-color: #C6E3E7; border-radius: 20px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
 
 #### According to a growing body of research and the researchers who created the test and maintain it at the Project Implicit website, the IAT is not good for predicting individual biases based on just one test. <b>It requires a collection — an aggregate — of tests before it can really make any sort of conclusions.</b>
  

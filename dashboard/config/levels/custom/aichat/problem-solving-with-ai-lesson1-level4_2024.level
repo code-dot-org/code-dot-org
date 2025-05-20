@@ -1,0 +1,47 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-03-25T13:11:50.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Gift Recommendations, Part 3\r\n\r\nUse AI Chat to get gift recommendations for your friend.\r\n\r\n### Do This:\r\n\r\n1. **Copy and paste** the following prompt or modify it using your customized prompt from level 3:\r\n\r\n>Give me 3 gift ideas under $30 for a 15-year-old girl who likes watercolor paintings. Her favorite birthday gift last year was a purple Polaroid camera. Justify your answer based on her decorating style in this picture of her room.\r\n\r\n2. Select an image from the pre-loaded images folder that best represents the gift recipient’s room decor.\r\n3. Upload the image alongside your prompt.\r\n4. Press **Send** and read **AI Chat's response**.\r\n5. **Compare the response** to the one you received in Level 3. How did including an image change AI’s recommendations?\r\n\r\n**Try it out!**\r\n\r\n::: details [**How do I upload an image?**]\r\n- Click the tab labeled **Images** on the top left.\r\n- Then browse the existing images.\r\n- When you have an image to upload, click to select it and then click Upload.\r\n- You should see the image get added to the message being sent to AI Chat.\r\n:::\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a gift recommender. When given a prompt, answer with your gift recommendations.\n\nDo not answer any questions that are not related to gifts.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-25T13:11:50.209+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level4\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level4\"},{\"changed_at\":\"2025-03-25 13:14:08 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Aichat>

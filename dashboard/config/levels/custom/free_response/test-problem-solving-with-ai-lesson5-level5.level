@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-03-18T18:44:44.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check Your Understanding",
+    "long_instructions": "When is an AI contradiction harmless, and when could it be harmful? \r\n\r\n(**Hint:** Think back to the industry example you explored earlier.)",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "teacher_markdown": "Here is an example response:\r\n>An AI contradiction might be harmless when the AI is simply providing entertainment or general information, such as recommending movies or books. However, it becomes harmful in contexts like medical advice (e.g., one AI suggests waiting for symptoms to improve, while another advises immediate care), legal guidance (e.g., conflicting interpretations of a law), or financial recommendations (e.g., contradictory advice on investments). In these cases, AI contradictions can mislead users, cause delays, or result in dangerous outcomes."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-18T18:44:44.142+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson5-level4\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson5-level4\"},{\"changed_at\":\"2025-03-18 18:45:58 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-20 02:29:45 +0000\",\"changed\":[\"title\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

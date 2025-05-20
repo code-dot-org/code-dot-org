@@ -71,7 +71,7 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncOut do
     let(:type_i18n_data) {{'uuid' => 'new_i18n_data'}}
     let(:types_i18n_data) {{type => type_i18n_data}}
 
-    let(:target_i18n_file_path) {CDO.dir('dashboard/config/locales', "#{type}.#{i18n_locale}.json")}
+    let(:target_i18n_file_path) {CDO.dir("dashboard/config/locales/#{type}", "#{i18n_locale}.json")}
 
     before do
       described_instance.stubs(:types_i18n_data_of).with(language).returns(types_i18n_data)
@@ -363,9 +363,10 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncOut do
       end
     end
 
-    context 'when the course version is found by the lesson url data' do
+    context 'when the course version is not found by the lesson url data' do
       before do
-        course_version.destroy
+        reference_guide.destroy!
+        course_version.destroy!
       end
 
       it 'returns the types i18n data without unrestored reference guide i18n keys' do

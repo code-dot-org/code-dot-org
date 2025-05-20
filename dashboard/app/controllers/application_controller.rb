@@ -28,7 +28,8 @@ class ApplicationController < ActionController::Base
 
   before_action :clear_sign_up_session_vars
 
-  before_action :initialize_statsig_stable_id
+  helper_method :statsig_stable_id
+  before_action :statsig_stable_id
 
   around_action :with_global_current_user
 
@@ -65,12 +66,17 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  rescue_from CanCan::AccessDenied do
+  rescue_from CanCan::AccessDenied do |exception|
     if !current_user && request.format == :html
       # we don't know who you are, you can try to sign in
       authenticate_user!
     elsif rack_env?(:development, :adhoc)
-      raise
+      # log the error and its full stack trace
+      message = "CanCan::AccessDenied: #{exception.message}"
+      stack = exception.backtrace.join("\n")
+      error_with_stack = "#{message}\n#{stack}"
+      Rails.logger.error(error_with_stack)
+      render plain: error_with_stack, status: :forbidden
     else
       # we know who you are, you shouldn't be here
       head :forbidden
@@ -108,6 +114,14 @@ class ApplicationController < ActionController::Base
     response.headers["Cache-Control"] = "no-store"
     response.headers["Pragma"] = "no-cache"
     response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
+  end
+
+  # Allow cross-origin requests from code.org
+  def allow_cdo_cors
+    response.headers['Access-Control-Allow-Origin']      = CDO.code_org_url '', request.protocol.chomp('//')
+    response.headers['Access-Control-Allow-Methods']     = request.request_method
+    response.headers['Access-Control-Allow-Headers']     = '*'
+    response.headers['Access-Control-Allow-Credentials'] = 'true'
   end
 
   # These are sometimes updated from the registration form
@@ -231,8 +245,6 @@ class ApplicationController < ActionController::Base
       response[:puzzle_ratings_enabled] = script_level && PuzzleRating.can_rate?(script_level.script, level, current_user)
     end
 
-    response[:activity_id] = options[:activity] && options[:activity].id
-
     response
   end
 
@@ -326,10 +338,9 @@ class ApplicationController < ActionController::Base
   end
 
   protected def clear_sign_up_session_vars
-    if session[:sign_up_uid] || session[:sign_up_type] || session[:sign_up_tracking_expiration]
+    if session[:sign_up_uid] || session[:sign_up_type]
       session.delete(:sign_up_uid)
       session.delete(:sign_up_type)
-      session.delete(:sign_up_tracking_expiration)
     end
   end
 
@@ -400,9 +411,8 @@ class ApplicationController < ActionController::Base
   end
 
   # Creates a statsig stable id for use of signed-out user tracking.
-  # This cookie is used by the Statsig SDK for both JS and Ruby.
-  protected def initialize_statsig_stable_id
-    cookies[:statsig_stable_id] ||= {value: SecureRandom.uuid, domain: :all, path: '/'}
+  protected def statsig_stable_id
+    session[:statsig_stable_id] ||= SecureRandom.uuid
   end
 
   private def pairing_still_enabled

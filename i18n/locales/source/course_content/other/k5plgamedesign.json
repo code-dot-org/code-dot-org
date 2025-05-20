@@ -1,0 +1,497 @@
+{
+  "https://studio.code.org/s/k5plgamedesign/lessons/1/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Game Design: Ignite Creativity! \n\n#### Welcome, educators, to an exhilarating journey into the world of game design! 🎮✨ This free, self-paced module is designed to equip you with the skills to inspire budding game designers. Discover the art of crafting captivating games, empowering students to unleash their creativity and technical skills. Through problem-solving, storytelling, and teamwork, students will develop resilience and empathy. Using Sprite Lab, your students will bring their imagination to life. \n\n\n\n\n## In this lesson, you will:\n\n* #### Get an introduction to game design.\n* #### Learn about the big ideas students will be taught in the Code.org Game Design module. \n* #### Practice foundational computer science concepts to modify and create games.\n\n\n### **Suggested time:** 30 minutes\n\n## Take the pre-survey\n\n#### Code.org values and is responsive to feedback. Please fill out <a href=\"https://studio.code.org/form/selfpaced_pd_k5_game_design_pre_survey\" target=\"blank\" rel=\"noopener noreferrer\">this short pre-survey</a> to  tell us about who you are and how we can best support you.\n\n<a class=\"btn btn-large btn-primary\" href=\"https://studio.code.org/form/selfpaced_pd_k5_game_design_pre_survey\" target=\"blank\" rel=\"noopener noreferrer\">Take the pre-survey</a>\n\n## Are you ready to ignite creativity in your classroom? Let's dive in! 🌟\n\n<div style=\"clear:both\"/>\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/1/levels/2": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# What Teachers Are Saying:\n\n<div style=\"background-color: #d9eff7; border-radius: 40px 40px 5px 40px; color: #000000; width: 80%; margin-left: 10%; padding: 0.5px 20px 1px 20px;\">\n\n\n<p style=\"font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5\">&ldquo;</p>\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 30px;\">\n\n#### The most vital aspect was the discussion at the end. Students really embraced the process of verbalizing the 'glows and grows,' enhancing their learning experience through reflective conversation.\n</p>\n<p style=\"font-size: 70px; text-align: right; opacity: 0.5\">&rdquo;</p>\n<p style=\"text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px\">\n\n</p>\n</div>\n\n<br>\n\n<div style=\"clear:both\"/>\n<div style=\"background-color: #d9eff7; border-radius: 40px 40px 5px 40px; color: #000000; width: 80%; margin-left: 10%; padding: 0.5px 20px 1px 20px;\">\n\n\n<p style=\"font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5\">&ldquo;</p>\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 30px;\">\n\n#### It was just pure fun. Everyone loves playing games, but learning how to design them? That's something special. This was how I introduced game design to both 4th and 5th graders, and they were instantly engaged and excited\n</p>\n<p style=\"font-size: 70px; text-align: right; opacity: 0.5\">&rdquo;</p>\n<p style=\"text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px\">\n\n</p>\n</div>\n\n\n<br>\n<div style=\"clear:both\"/>\n\n<div style=\"background-color: #d9eff7; border-radius: 40px 40px 5px 40px; color: #000000; width: 80%; margin-left: 10%; padding: 0.5px 20px 1px 20px;\">\n\n\n<p style=\"font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5\">&ldquo;</p>\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 30px;\">\n\n#### I noted particular enthusiasm from students who previously didn't feel confident with coding, including gifted students who might not typically enjoy it. They became very excited when they managed to grasp new concepts and even more so when they could help a classmate understand a problem.\n</p>\n<p style=\"font-size: 70px; text-align: right; opacity: 0.5\">&rdquo;</p>\n<p style=\"text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px\">\n\n</p>\n</div>\n\n\n<div style=\"clear:both\"/>\n\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/1/levels/3": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Why Game Design?\n\n#### Game design enhances creativity and technical skills by introducing students to basic programming and digital tools. It also improves problem-solving abilities and storytelling skills, as students create narratives and work through game mechanics. Additionally, game design teaches perseverance through iterative testing and improvement, and fosters collaboration through group projects. It helps students understand complex systems and rules, and builds empathy by considering the player's experience.  \n\n\n## Example Student Projects: \n<div style=\"float: left; text-align:center;\"><strong>Cute Food Game </strong><br /><a href=\"https://studio.code.org/projects/game_design/HCreCXs4VSDQW6wkdle7qMsYvs17dE1SuQtnPz3iFR8\" target=\"blank\" rel=\"noopener noreferrer\"><img style=\"border-radius:10px; margin-left:25px; margin-right:25px; margin-bottom:5px;  margin-top:0px;\" src=\"https://images.code.org/691413bcd00013d7f1b01c0f56414c3a-image-1720467761191.42.37 PM.png\" width=\"200px\"; alt=\"cartoon fries and cartoon pizza in a maze\"></a></div>\n\n<div style=\"float: left; text-align:center;\"><strong>Custom Cheetahs</strong><br /><a href=\"https://studio.code.org/projects/game_design/H2_zZSWx781bIZEbiXByTITXCwtIT3ZopMtq2zRYlzg\" target=\"blank\" rel=\"noopener noreferrer\"><img style=\"border-radius:10px; margin-left:25px; margin-right:25px; margin-bottom:5px; margin-top:0px;\" src=\"https://images.code.org/2ed3b323cd83dea9e7aa20aa71195029-image-1720468062249.47.38 PM.png\" width=\"200px\" alt=\"cheetahs and a lion on a platformer game\"></a></div>\n\n<div style=\"float: left; text-align:center;\"><strong>Funny Plants</strong><br /><a href=\"https://studio.code.org/projects/game_design/6IJhNDYPYqow4L4tSOIINTuefj_Qsy5ie1h-hfUdMro\" target=\"blank\" rel=\"noopener noreferrer\"><img style=\"border-radius:10px; margin-left:25px; margin-right:25px; margin-bottom:5px; margin-top:0px;\" src=\"https://images.code.org/5b5d00ee6af599ea890adb00c9505e5b-image-1720468201413.49.58 PM.png\" width=\"200px\" alt=\"handrawn cartoon person on a platformer\"></a></div>\n\n\n<div style=\"clear:both\"/>\n<br>\n \n\n## In this module, your students will use Sprite Lab to design and create games. \n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/1/levels/4": {
+    "display_name": "How to Make a Sprite"
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/1/levels/5": {
+    "short_instructions": "Set the background and add a new sprite for player one.",
+    "long_instructions": "<p style = \"font-size: 18px;\">\n<i><b>Note:</b> The size of the instruction box can be adjusted by dragging the <img src=\"https://images.code.org/ce33cce5f5b67b04dbe8ebbc174fd370-image-1698852127857.png\" alt=\"Three grey circles to show the icon that adjusts the size of the instruction box.\" width=\"30px\" style=\"border-radius:10px margin: 0 10px 5px 0px;\"> symbol on the bottom of the box.</i> </p>\n\n<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \n<b>Background and Players</b> <br> A <b>sprite</b> is a digital character or object that can move and do things in a computer program. In this module, players will control sprites. <br> Using a <b>background</b> is a way to enhance the stage of your program. Backgrounds can be adjusted based on events to enhance your game. \n\n</p>\n</div>\n\n**Game design starts with choosing the background and the players.**\n\n1.  Connect a `set background` block to `when run`\n\n2.  Add a new sprite and choose a costume for player one\n\n3.  Press `Run`",
+    "authored_hints": {
+      "hint1": "Connect a <code style=\"color:black; background-color:#B3B2FB\">set background</code> block under <code style=\"color:black; background-color:#FFBD46\">When run</code>.",
+      "hint2": "Select a background from the dropdown menu\n\n[blockly block][0]",
+      "hint3": "Connect a  <code style=\"color:black; background-color:#F79EA5\">make new sprite</code> block under <code style=\"color:black; background-color:#FFBD46\">When run</code>."
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/1/levels/6": {
+    "short_instructions": "Make a player two sprite with a <code style=\"color:black; background-color:#F79EA5\">make new sprite</code> block. Then set the location using the <code style=\"color:black; background-color:#EBD546\">location pin</code>.",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \n<b>Location Pin</b> <br>While adding your sprite, you may have noticed the X,Y coordinates in the play space. Note that this grid is different from coordinate grids you may have seen in math class. In this grid, the bottom left corner is the starting point, marked as 0,0. As your characters move to the right, the X number gets bigger, and as they go up, the Y number gets bigger.\n\n</p>\n</div>\n\n**Add more sprites and set their location.**\n\n1.  Make another new sprite and choose a costume for player two<img src=\"https://images.code.org/51ad72f6ba72c16b8094566622e310ab-image-1683905416875.gif\" style=\"width: 20%; float: right; padding-top: 20px\">\n\n2.  Click the <code style=\"color:black; background-color:#EBD546\">location pin</code> to move the new sprite \n\n3.  Press `Run`",
+    "authored_hints": {
+      "hint1": "The <code style=\"color:black; background-color:#EBD546\">location</code> block is attached to the <code style=\"color:black; background-color:#F79EA5\">make new sprite</code> block.\n\nTo change a sprite's location, click the pin on the location block, then click where you want it to go.\n\n[][0]",
+      "Hint2": "You can choose the costume from the dropdown menu.\n\n[][0]"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/1/levels/7": {
+    "short_instructions": "Try out some sprite behaviors! Press run to see them in action. Try different behaviors if you like. ",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \n<b>Behavior Blocks</b> are a way to bringing your programs to life with words, movement, or even silly comments. Practice coding behaviors by using movement blocks.\n\n</p>\n</div>\n\n**Try it: Animated sprites using behaviors!** \n\nBehaviors are actions that happen over and over while the program runs.\n\n1.  Look over the code.\n2.  Press `Run` to see the sprites in action!\n\n* * *\n\n**Bonus:** Try choosing a few different behaviors!",
+    "authored_hints": {
+      "hint1": "You can choose a new behavior from the dropdown menu.\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/1/levels/8": {
+    "short_instructions": "Make one sprite chase the other. Add `moving with arrow keys` behavior to a sprite.",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \n<b>Behavior Dropdown</b> <br> Behavior blocks animate sprites. These are special blocks that allow sprites to complete specific actions. The behavior blocks make it easier for beginning coders to use more complex actions.\n\n</p>\n</div>\n\n**Set up a game of chase using behavior blocks.**\n\n1.  Code the dragon sprites to `begin moving with arrow keys`.\n\n2.  Press `Run` and use the arrows to get moving!",
+    "authored_hints": {
+      "hint": "Connect two <code style=\"color:black; background-color:#5ED5DD\">sprite begins</code> behavior block to your program. One for each of the sprites.",
+      "hint2": "Choose the <code style=\"color:black; background-color:#6AF36C\">wandering</code> behavior from the dropdown menu of one behavior and <code style=\"color:black; background-color:#6AF36C\">moving with arrow keys</code> from the other.\n\n[blockly block][0]"
+    },
+    "callouts": {
+      "arrows": "Move the sprite with the arrows!"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/1/levels/9": {
+    "long_instructions": "## What are Events?\n\n<img src=\"https://images.code.org/5b9e6d9e0450554f00956f6347a37f90-image-1704404653488.png\" alt=\"Image of the block code of an event handler\" width=\"350px\" style=\"border-radius:10px; float:right; margin: 0 0 0px 40px;\">\n\n#### <b>Events </b> are actions that cause something to happen.  In code, events allow user interaction, like moving a sprite by clicking the arrow button.\n\n#### An <b>event block</b> is a block that, when triggered, causes a specific chunk of code to run. In Sprite Lab, these blocks are green. You will notice event blocks are _not connected_ to the main section of your code. These blocks can live anywhere in the coding space.\n\n#### <i>This video is part of Code.org's Hello World! Visit <a href=\"https://code.org/helloworld\" target=\"blank\">Hello World! </a>for more information.</i>"
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/1/levels/10": {
+    "panels": {
+      "PLgame_design_panel_events_independent-0dfa2686-22bc-4351-975c-efd1cf8a6b34": "# Teaching Events\n\n#### Students may rush through this level without internalizing the concept of events.\n\n#### <b> Teacher Tip </b>: To ensure students engage with this level, frontload the concept as a whole group.\n\n## Click \"Next\" to learn more about events",
+      "game_design_panel_events-adeb522e-b960-4614-8df7-dfe6a2d2c354": "# Events in Game Design\n\nYou will find informational levels in the curriculum. For example, this page features interactive elements to help students and teachers understand events. \n\n### Using Events\n\nEvents do not snap into your main program.\n\nThey create little programs of their own.\n\n##### <b> Teacher Tip: </b> To ensure students engage with this level, frontload the concept as a whole group.",
+      "game_design_panel_events-820d9730-1582-4839-93d4-7b84cc78ae60": "#### When Sprite Clicked\n\nThe computer waits for the user to click. \n\nWhen there is a click, it executes the code under the event.\n\n[][0]",
+      "game_design_panel_events-b0361be1-a7c8-43c1-a70b-e9a0b2dc4ce5": "#### When sprite touches sprite\n\nThe computer waits for the sprites to be touching. \n\nAs soon as they touch, it executes the code under the event. \n\n[][0]",
+      "game_design_panel_events-068701d9-edca-4086-99eb-27a027450240": "#### Event Toolbox\n\nClick the the <code style=\"color:white; background-color:#4334eb\">+</code> to open the event toolbox.\n\nYou can use the blocks from the toolbox when you have a group of sprite but only want the action to apply to one sprite at a time. "
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/1/levels/11": {
+    "short_instructions": "Make your sprite grow when you click on it.",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \n<b>Teacher Tip:</b> Students sometimes get confused that the event block is not connected to the main code. Remind your students that events are separate segments of code that wait for a certain event to happen to be initiated.\n</p>\n</div>\n\n**Make your sprite grow when you click it.**\n\n<div style=\"float: right;\">\n\n</div>\n\n1.  Connect a `change size` block under the event `when sprite clicked`\n\n2.  Click on the sprite after you press `Run`",
+    "authored_hints": {
+      "hint1": "Connect a sprite <code style=\"color:black; background-color:#5ED5DD\">change size</code> block to the <code style=\"color:black; background-color:#6AF36C\">when sprite touches sprite</code> event.\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/1/levels/12": {
+    "short_instructions": "Write a program to change the size of each sprite when it is clicked.",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \n<b>Teacher Tip:</b> Students may have trouble identifying the block that they need only appears when the “+” is clicked on the event block. Front load this information before students start the lesson. \n</p>\n</div>\n\n**Events with Sprite Groups**\n\n<img src=\"https://images.code.org/d6f63b693844071ec6cd9e32587171e3-image-1715705071588.gif\" style=\"margin-right: 10%; float: right; width: 25%\">\n\n1.  Click the the <code style=\"color:white; background-color:#4334eb\">+</code> to open the event toolbox\n\n2.  Drag the `clicked sprite` block into the `change size` block below\n\n3.  Click on each sprite to change their size after pressing Run. ",
+    "authored_hints": {
+      "expand_click_event": "Click the `+` button on the event block. Use the block inside to finish the program.\n\n[blockly block][0]"
+    },
+    "callouts": {
+      "mini-toolbox-blue-button": "Click the blue button to open or close."
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/1/levels/13": {
+    "short_instructions": "Code your program so that clicking on a sprite removes it. ",
+    "long_instructions": "**Collect one sprite at a time.**\n\n1.  Click the the <code style=\"color:white; background-color:#4334eb\">+</code> to open the event toolbox\n\n2.  Drag down the `clicked sprite` and connect it to `remove`\n\n3.  Tap on each sprite after clicking `Run`.",
+    "authored_hints": {
+      "groups_click_hint": "You will need an event block. Make sure to click your sprites after pressing \"Run!\"\n\n[blockly block][0]",
+      "groups_say_hint": "Add a `clicked` block to a `remove` block. You can find it inside the event block!\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/1/levels/14": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "The event block is attached to the main section of your code.",
+          "correct": false
+        },
+        {
+          "text": "Events make it impossible to have interactive code.",
+          "correct": false
+        },
+        {
+          "text": "You can only put one event block in your code.",
+          "correct": false
+        },
+        {
+          "text": "Events allow code to respond to certain actions, like pressing a button.",
+          "correct": true
+        }
+      ],
+      "questions": [
+        {
+          "text": "Which of the following is true regarding events in sprite lab?"
+        }
+      ],
+      "title": "Check for Understanding: Events"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/1/levels/15": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Classroom Implementation\n<img src=\"https://images.code.org/adea4f7337e258479e8bf30973da6a85-image-1720555479958.04.37 PM.png\" alt=\"icon of a cartoon flame\" width=\"200px\" style=\"border-radius:10px; float:right; margin: 0 40px 40px 40px;\">\n\n#### The lesson plan explains the lesson in detail with suggestions for discussions, remarks, and teacher actions.\n\n## Example lesson plan\n\n#### Preview this lesson plan from the <a href=\"https://studio.code.org/s/elem-game-design-2024/lessons/1\" target=\"blank\">Game Design Lesson</a>.\n\n### **When exploring the lesson plan, locate...**\n* #### Slide decks\n* #### Activity guides\n* #### Answer keys\n<br>\n\n#### Take your time working through all of the lesson features. Think about how you could implement the lesson in your class. \n\n## Let's keep learning! \n\n"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/2/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Variables as Score\n\n#### So far, you have learned about players, background, and behaviors. In this lesson, you will learn how to use variables in game design. \n\n\n<img src=\"https://images.code.org/b201f3b28b7d2c536741773242ca1352-image-1715287595815.png\" alt=\"pixelated cartoon image of a green dinosaur\" style=\"border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;\">\n\n\n## In this lesson, you will:\n\n* #### Learn about how variables can be used in games. \n* #### Practice using variables.\n* #### Create programs using variables.\n\n\n### **Suggested time:** 30 minutes\n\n\n## Let's get started!\n\n<div style=\"clear:both\"/>\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/2/levels/2": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# What are Variables? \n####Variables store information (data). The value stored in a variable can be updated throughout a program.\n\n##Examples of Variables in Games\n####Variables appear in games in a multitude of ways. If you have ever played a game that used player health, score, inventory of items, game time, character position, level status, resources, difficulty settings, or quest progress, you've used variables. \n\n##Check Out This Student-Created Game:\n\n\n<div style=\"float: left; text-align:center;\"><strong>Candy Game</strong><br /><a href=\"https://studio.code.org/projects/game_design/3AEcIRgkRrVBXMURS6637anoDL_92Tg2HZtPURAt3VU\" target=\"blank\" rel=\"noopener noreferrer\"><img style=\"border-radius:10px; margin-left:25px; margin-right:25px; margin-bottom:5px; margin-top:0px;\" src=\"https://images.code.org/d0690e006e1e25925bda79eff9053c4a-image-1720472358597.59.14 PM.png\" width=\"200px\" alt=\"Image of birthday card\"></a></div>\n\n<div style=\"clear:both\"/>\n<br>\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/2/levels/3": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Pedagogical Approach: Use-Modify-Create  \n<p align=\"center\">\n  <img src=\"https://images.code.org/787c345ede31df8f9c792eff29c72f6b-image-1717795118474.png\" alt=\"The three steps in Use/Modify/Create\">\n</p>\n\n## What is Use-Modify-Create?\n\n* #### Three progressive stages to help students develop their programming skills\n* #### First, students use existing software.\n* #### Then, they modify this software to explore how changes affect outcomes.\n* #### Last, they create their own projects from scratch, applying their acquired skills to design and implement original software. \n\n#### This method supports incremental learning, builds confidence, and mirrors real-world programming practices, making it an effective pedagogical strategy for teaching computer science.\n\n##Use-Modify-Create in Game Design Module \n####In the game design module, students begin by <b>using</b> four pre-created games.Then, they will practice coding with variables by <b>modifying</b> and building on existing code.To complete this lesson, students will have an opportunity to use what they learned to practice and free-play to <b>create</b> a game. \n\n##Let's get started!\n\n<div style=\"clear:both\"/>\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/2/levels/4": {
+    "dsls": {
+      "description": "**Teacher Tip:** The peppers indicate the difficulty of each level. These can be used to differentiate. Students may try to complete all levels, but students only need to complete one level.  <br>**Try out one of these simple games!** How does the scoring work? When you are ready to code your own scoreboard click Finish!\n\nThe spicy peppers indicate how difficult the game is to win. \n\n🌶️: Mild and easy \n\n🌶️🌶️: Medium with some spice\n\n🌶️🌶️🌶️: Spicy! Difficult! \n\n🌶️🌶️🌶️🌶️: Extra hot! Can you handle it? ",
+      "display_name": "Play Games with Variables as Score"
+    },
+    "sublevels": {
+      "game_variables_intro_choices_a_prod": {
+        "display_name": "Jewels of the Arctic ",
+        "bubble_choice_description": "**Difficulty:** 🌶️\r\n\r\n**Game Mechanic:** Collect  \r\n\r\n**How to win:** Use the arrows to get 6 arctic jewels. ",
+        "short_instructions": " **Play the game!**",
+        "long_instructions": " **Play the game!**\r\n \r\n - Press `Run` and play the game. \r\n \r\n - What do you notice?\r\n - Press `Finish` to play another game or move on.",
+        "authored_hints": {
+          "Hint1": "Press the `Run` button then use the arrow keys to move the fox to the jewels."
+        }
+      },
+      "game_variables_intro_choices_b_prod": {
+        "display_name": "Star Catcher ",
+        "bubble_choice_description": "**Difficulty:** 🌶️\r\n\r\n**Game Mechanic:** Moving & Collecting \r\n\r\n**How to win:** Use the arrows to catch 10 stars\r\n\r\n",
+        "short_instructions": "Play the game!",
+        "long_instructions": " **Play the game!**\r\n \r\n - Press `Run` and play the game. \r\n \r\n - What do you notice?\r\n - Press `Finish` to play another game or move on."
+      },
+      "game_variables_intro_choices_c_prod": {
+        "display_name": "Sports Ball",
+        "bubble_choice_description": "**Difficulty:** 🌶️🌶️\r\n\r\n**Game Mechanics:** Click & Collect \r\n\r\n**How to win:** Click on 12 of the bouncing balls!",
+        "short_instructions": "Play the game!",
+        "long_instructions": " **Play the game!**\r\n \r\n - Press `Run` and play the game. \r\n \r\n - What do you notice?\r\n - Press `Finish` to play another game or move on.",
+        "authored_hints": {
+          "Hint1": "Press `Run` then try to click on the bouncing balls!"
+        }
+      },
+      "game_variables_intro_choices_d_prod": {
+        "display_name": "Freeze Tag",
+        "bubble_choice_description": "**Difficulty:** 🌶️🌶️🌶️\r\n\r\n**Game Mechanic:** Chase\r\n\r\n**How to win:** Freeze all 5 opponents. When you tag an opponent they freeze. But they can unfreeze each other! ",
+        "short_instructions": "Play the game!",
+        "long_instructions": " **Play the game!**\r\n \r\n - Press `Run` and play the game. \r\n \r\n - What do you notice?\r\n - Press `Finish` to play another game or move on.",
+        "authored_hints": {
+          "Hint1": "It's freeze tag. Use the arrows and chase the wizzards!"
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/2/levels/5": {
+    "display_name": "How to Make a Sprite",
+    "long_instructions": "#### Let's take a look at how variables are used in Sprite Lab."
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/2/levels/6": {
+    "panels": {
+      "games_dev_variables_panel-c730ee2c-1d3b-499e-a393-32e37657bc0f": "## Use variables in a game!\n\nVariables are like boxes with labels that store information.\n\nThe information inside these boxes while the game is being played, helping you keep track of important details throughout the game.",
+      "games_dev_variables_panel-f291fa1b-ba53-4654-87a6-7c35376e6659": "# STEP 1️⃣\n\n## Show the variable\n\nPut the variable name and current value onto the play space. Use the location pin to choose where it goes. \n\n<img src=\"https://images.code.org/6f1c0e732048341363872c838625a146-image-1712095465172.jpg\" style=\"margin-right: 40px; width: 75%\">",
+      "games_dev_variables_panel-a8841bd0-4808-48cc-85ac-2d43ce210226": "# STEP 2️⃣\n\n## Set variable\n\nSet the value of the variable with this block.\n\n<img src=\"https://images.code.org/fe305474ecbaffc5475149eb9977c2f2-image-1712095484307.jpg\" style=\"margin-right: 40px; width: 75%\">\n\nWhat should the starting score be?\n\n**Teacher Tip:** Changing variable blocks are typically attached to event blocks, as the change does not occur until something happens. ",
+      "games_dev_variables_panel-68fde408-b74c-4b53-8a8c-39dd7456bf02": "# STEP 3️⃣\n\n## Change variable\n\nThis block changes the value of the variable. \n\nFor example, you could add points to the score variable or decrease the value of a health variable.\n\n<img src=\"https://images.code.org/a0e8b3cabe987ebe9b165983735ddfc4-image-1712095475591.jpg\" style=\"margin-right: 40px;  width: 75%\">"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/2/levels/7": {
+    "short_instructions": "Set the score to 0 and show the score variable in the playspace.",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \n<b>Teacher Tip: </b> If students struggle with the concept of variables, use real-life games as examples. For example, ask students what games they have played with scores, and how the score works in the games. \n</p>\n</div>  \n\n**Scoreboard Setup**\n\n1.  Add `show variable score` block to the `when run` program\n\n2.  Then connect a `set score to 0` block \n\n3.  Press `Run` \n\nNext, we'll learn how to change the score!",
+    "authored_hints": {
+      "Hint1": "This block will show your variable on the playspace:\n[blockly block][0]",
+      "Hint2": "The starting value of your variable is set using this block: \n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/2/levels/8": {
+    "short_instructions": "Change the score by 1 and check that the scoreboard updated.",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \n<b> Teacher Tip: </b> Point out to students that the name of the variable is “score”. Explain that it is important to choose meaningful labels when naming variables. \n</p>\n</div>\n\n**Click the sprite to change the score.**\n\n1.  Add a `change score by 1` under the event `when sprite clicked`  \n\n2.  Click the coin after pressing `Run`.  Does the scoreboard change?",
+    "authored_hints": {
+      "Hint1": "The score will change by adding this block **under** the event:\n\n[blockly block][0]"
+    },
+    "callouts": {
+      "ai_dance_callout_draft_level_03": "⬆️ Use this block. "
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/2/levels/9": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "![](https://images.code.org/6698ec412ee301462adf0b1981eb201a-image-1711145088166.jpg)"
+        },
+        {
+          "text": "![](https://images.code.org/0a0af041ba7ce8ac8fd713a44699931a-image-1715270187376.jpg)"
+        },
+        {
+          "text": "![](https://images.code.org/f53c8d2daeffc871ce0fdf31cf426a36-image-1717177602287.png)"
+        }
+      ],
+      "markdown": "Look at these coding blocks using variables. Match the correct code to the animation.\n\n\n",
+      "questions": [
+        {
+          "text": "![](https://images.code.org/fc9ce7945e934cbaa95ad46c34988dae-image-1709767957304.gif)"
+        },
+        {
+          "text": "![](https://images.code.org/8dd2cd7fd35c125e7771cea0de8fb5d2-image-1715270087301.gif)"
+        },
+        {
+          "text": "![](https://images.code.org/333af8ec3526d2756a0c405263466952-image-1717177614880.gif)"
+        }
+      ],
+      "title": "Match the code to the animation"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/2/levels/10": {
+    "panels": {
+      "games_dev_variables_panel-5fea9700-21a2-42af-8226-aad824e7b531": "# Use Variables in a Game (continued)\n\nExpand your use of variables by using values. \n\n## Check the value\n\nThis block checks to see if the condition is true. If it is true it will run the code inside.\n\n<img src=\"https://images.code.org/009a6cd754f5e172b4274f888f956ef7-image-1712095627200.jpg\" style=\"margin-right: 40px;  width: 75%\">"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/2/levels/11": {
+    "short_instructions": "Make an effect happen when the player scores 5 points.",
+    "long_instructions": "**How do you win?** Check if the player has a winning score.\n\n1.  Connect the `if score = 3` block at the end of the `when sprite clicked` program\n\n2.  Add a `do starburst effect block` _inside_ the new block\n\n3.  Press `Run` then click on the coin. Can you win?",
+    "authored_hints": {
+      "Hint1": "This conditional block will check to see if the value of the variable equals a certain value.\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/2/levels/12": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "![](https://images.code.org/be7a48af8f98a58601bbc77616896ff9-image-1715379516509.jpg)"
+        },
+        {
+          "text": "![](https://images.code.org/924ce0f736d18092eafbb5ce51e6c0f1-image-1715379529970.jpg)"
+        },
+        {
+          "text": "![](https://images.code.org/cdddd2dd3a55ba22e88da5c9c33a63e1-image-1715379537572.jpg)"
+        }
+      ],
+      "markdown": "Look at these coding blocks using conditionals. Match the correct code to the picture.\n\n\n",
+      "questions": [
+        {
+          "text": "![](https://images.code.org/c2bc23e6741cf4d56429e9afbceb2c06-image-1715379511851.jpg)"
+        },
+        {
+          "text": "![](https://images.code.org/3ab41f167b6994734714071c9ae25b4c-image-1715379524754.jpg)"
+        },
+        {
+          "text": "![](https://images.code.org/d41816d671e9b82d3cf764802e29dc1e-image-1715379533515.jpg)"
+        }
+      ],
+      "title": "Match the code to the animation"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/2/levels/13": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Classroom Implementation\n\n<img src=\"https://images.code.org/710d415d1966301e80612b266698a9a3-image-1720556012290.13.28 PM.png\" alt=\"cartoon panda\" width=\"200px\" style=\"border-radius:10px; float:right; margin: 0 40px 40px 40px;\">\n\n#### The lesson plan explains the lesson in detail with suggestions for discussions, remarks, and teacher actions.\n\n##Lesson Plan\n\n#### Preview this lesson plan from the <a href=\"https://studio.code.org/s/elem-game-design-2024/lessons/2\" target=\"blank\">Variables as Score lesson</a>.\n\n### **When exploring the lesson plan, locate...**\n* #### Slide decks\n* #### Activity guides\n* #### Answer keys\n<br>\n\n#### Take your time working through all of the lesson features. Think about how you could implement the lesson in your class. \n\n## Let's keep learning! \n\n"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/3/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Environment and Players\n\n#### So far, you have used some example games, coded background and players, and used variables. \n\n\n<img src=\"https://images.code.org/a8b084f98d4de41f5759dcbd016260db-image-1718727974560.26.10 AM.png\" alt=\"pixelated cartoon unicorn\" style=\"border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;\">\n\n\n## In this lesson, you will:\n\n* #### Explore game mechanics like player movement, obstacles, scoring systems, and win/lose conditions.\n* #### Modify and build upon existing code to create a game with players and an environment. \n\n\n\n### **Suggested time:** 30 minutes\n\n\n\n## Let's get started!\n\n<div style=\"clear:both\"/>\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/3/levels/2": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Game Mechanics and Use-Modify-Create\n<img src=\"https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmtyOGp0aTRpanNjaHU3dnpjZ2p4Mm0ybWZteDF3ZXVra2c1dzJveSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/MOSebUr4rvZS0/giphy.gif\" alt=\"ALT TEXT\"  style=\"width: 300px; float:center; margin-left: 10px;\"> \n\n##What are game mechanics? \n#### Game Mechanics define how the game works and what determines success or failure in the game.\n\n## Why are game mechanics important?\n#### Mechanics define the core interactions and experiences, making the game enjoyable, challenging, and replayable.\n</p></div>\n</details>\n\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">Game Mechanics Example: Tetris</summary>\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;\">\n    <p>\n\n#### **The <b>game mechanics</b> of Tetris include:** \n* #### **Tetrominoes**: The various shapes that fall and must be arranged.\n* #### **Falling Blocks**: Tetrominoes continuously descend from the top of the playing field.\n* #### **Rotation**: Players can rotate tetrominoes to fit them into gaps.\n* #### **Movement**: Players can move tetrominoes left or right as they fall.\n* #### **Line Clearing**: Completed horizontal lines of blocks are cleared from the playing field.\n* #### **Scoring**: Points are awarded for each line cleared, with bonuses for clearing multiple lines at once.\n* #### **Increasing Difficulty**: The speed at which tetrominoes fall increases as the game progresses.\n* #### **Game Over**: The game ends when the stack of tetrominoes reaches the top of the playing field and no more moves are possible.\n\n<br>\n\n</p></div>\n</details>\n\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">Applying Pedagogy: Use-Modify-Create </summary>\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;\">\n    <p>\n\n\n* #### In this lesson, students begin by <b>using</b> four pre-created games. \n\n* #### Then, they will practice coding with variables by <b>modifying</b> and building on existing code.\n\n* ####  To complete this lesson, students will have an opportunity to use what they learned to practice and free-play to <b>create</b> a game. \n\n\n\n## \n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/3/levels/3": {
+    "dsls": {
+      "description": " **Teacher Tip:** Students will be able to choose between the different levels. They only need to complete one, but can play all three if time allows.  <br> Choose a game to check out how environment type sprites block all of the others!",
+      "display_name": "Sprite Type: Environment"
+    },
+    "sublevels": {
+      "game_mechanics_type_choice1_prod": {
+        "display_name": "Lost in Space",
+        "short_instructions": "Try out this game! Use the arrows to move the astronaut to find their friend.",
+        "long_instructions": "**Try it out!**\r\n- Move the astronaut to find their friend\r\n- The moon sprites block the player so you'll have to go around them\r\n\r\n- Press `Finish` when you are ready to move on"
+      },
+      "game_new3_environment_choice1_prod": {
+        "display_name": "Desert Dog",
+        "short_instructions": "Try out this game! Use the arrows to move the dog to collect the bones.",
+        "long_instructions": "**Try it out!**\r\n\r\n- Move the dog to collect the bones \r\n\r\n- Watch out for the cactus!\r\n- Press `Finish` when you're ready to move on\r\n\r\n"
+      },
+      "game_new3_environment_choice2_prod": {
+        "display_name": "Get the corn!",
+        "short_instructions": "Try out this game! Use the arrows to pig to get the corn.",
+        "long_instructions": "**Try it out!**\r\n\r\n- Move the pig to get the corn\r\n\r\n- The grass sprites block the pig so you will have to stay on the dirt path\r\n\r\n- Press `Finish` when you are ready to move on"
+      }
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/3/levels/4": {
+    "panels": {
+      "game_new_panel-dcd59a3f-edf7-45b3-af02-d61f32eb3e58": "#### Sprite types\n\nSetting a sprite’s type determines how it interacts with other sprites. \n\nWatch this game in action. **What do you notice about the three sprites?**\n\n<img src=\"https://images.code.org/86695b7e9c4d73fa146bad283c3d8da4-image-1715799719293.jpg\" style=\"margin-right: 40px; width: 75%\">",
+      "game_new_panel-e5efed81-986d-4e21-8002-fc66f595b1e0": "#### Environment sprites\n\nWhen sprites are set to environment, they stop all other sprites from moving.\n\n<img src=\"https://images.code.org/53d9d2dc7654fda0de590191b6b69935-image-1712165117321.jpg\" style=\"margin-right: 40px; width: 75%\">"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/3/levels/5": {
+    "short_instructions": "Use the new `set sprite type to environment` block so the wall sprites block the player.",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \n<b>Teacher Tip:</b> If students run into bugs, or errors in the code, have them double check that the sprites in the code are correctly matched. Most bugs, or errors, occur because the wrong sprite is selected. \n</p>\n</div>\n\n**Set the wall sprite type to environment to make this game more challenging.**\n\n1.  Add the `set sprite type to environment` block to `when run`. \n\n2.  Press `Run` and use the arrow keys to move the player. \n    -   Are the wall sprites blocking the player?",
+    "authored_hints": {
+      "Hint1": "With this new block you can set a sprite's type. Environment sprites won't allow other sprites to pass through them.\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/3/levels/6": {
+    "short_instructions": "Use the new `set sprite type to environment` block so the wall sprites block the enemies!",
+    "long_instructions": "**Set the walls sprite type to environment to block the enemies.**\n\n1.  Use the `set sprite type to environment` under `when run`.\n\n2.  Press `Run` and use the arrow keys to move the player. \n    -   Are the wall sprites blocking the enemies?",
+    "authored_hints": {
+      "Hint1": "[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/3/levels/7": {
+    "panels": {
+      "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c": "### **Player sprites**\n\nPlayer sprites gradually fall downwards (as if there was gravity!)\n\n<img src=\"https://images.code.org/a7be7e5af13d565e2126c01bb0331d93-image-1712070173734.jpg\" >",
+      "game_design_spr_types-53c92e2f-0462-48a7-8070-e1224840f013": "### **Player sprites**\n\nWhen sprites are set to player, they cannot move past environment sprites (but can stand on them!)\n\n<img src=\"https://images.code.org/2a6170a9d5488629f326059adddea023-image-1715800170501.jpg\" >",
+      "game_design_spr_types-4936be88-574e-4dd8-a31f-e671e54e482b": "### **Player sprites**\n\nPlayer sprites can be programmed to jump (but cannot automatically do it).\n\n<img src=\"https://images.code.org/924a4a96e3e6242738631660cd3bc31a-image-1715800116663.jpg\" >"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/3/levels/8": {
+    "short_instructions": "Explore what happens when we apply gravity! Click `Finish` when you're ready to continue on.",
+    "long_instructions": "**Set the sprite's type to player.**\n\n1.  Add the `set sprite type to player`.\n\n2.  The player sprite follows the rules of gravity, and it can't move past `environment` type sprites.\n\n3.  Click `Run` and watch the player drop and land on the ground",
+    "authored_hints": {
+      "Hint1": "Practice setting the sprite's type to **player.**\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/3/levels/9": {
+    "short_instructions": " Program the player to `begin moving with arrow keys` and `jump`. Choose the jump size.",
+    "long_instructions": "**Make your player jump!**\n\n1.  Add a `make player do jump` block to the `when up pressed` event and choose the jump size\n\n2.  Press `Run` then tap the arrows to move and jump!",
+    "authored_hints": {
+      "Hint2": "There is a new block that makes any player type sprites jump! Attach it to the <code style=\"color:black; background-color:#6AF36C\">when up pressed</code> event. \n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/3/levels/10": {
+    "short_instructions": "Explore what happens when we apply gravity! Click `Finish` when you're ready to continue on.",
+    "long_instructions": "**Set the sprite types.**\n\n1.  Add a `set alien sprite type to player` block to the end of program\n\n2.  Add a `set stone sprite type to environment` to the end of the program\n\n3.  Click `Run` and watch the player drop and land on the ground",
+    "authored_hints": {
+      "Hint1": "Practice setting the sprite's type to **player.**\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/3/levels/11": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "![](https://images.code.org/a1e5d5a9143348f2c5112eac432b9ff1-image-1715802833266.jpg)"
+        },
+        {
+          "text": "![](https://images.code.org/ca4ccc51afff0f819676b21edd326b7c-image-1715802855383.jpg)"
+        }
+      ],
+      "markdown": "Look at these coding blocks using variables. Match the correct code to the animation.\n\n\n",
+      "questions": [
+        {
+          "text": "![](https://images.code.org/05437fe2286b685f2189d7c257c42e90-image-1715212532562.gif)"
+        },
+        {
+          "text": "![](https://images.code.org/d5319a0c592f8f983f40d52a49ebddcc-image-1715212582221.gif)"
+        }
+      ],
+      "title": "Match the code to the animation"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/3/levels/12": {
+    "dsls": {
+      "description": "**Teacher Tip:** Support students by positively framing debugging challenges. Have them read the code out loud and begin by identifying the bug. Then try one thing at a time until they find the fix. By being patient and not giving up, they will get better at fixing problems and learn a lot along the way! <br> Choose a game to fix.",
+      "display_name": "These games do not work!"
+    },
+    "sublevels": {
+      "game_development_try_it_prod": {
+        "display_name": "Hippity Hoppity",
+        "bubble_choice_description": "**Difficulty:** 🌶️\r\n\r\n**Problem:** The penguin player can not reach the gems!",
+        "short_instructions": "Try out this game! Press up to jump and use the arrows to move. Collect 5 gems to win.",
+        "long_instructions": "##Debugging Practice\r\n**Problem:** The player can't jump high enough to get the gems.\r\n\r\n**Fix:** Change the size of the player's jump."
+      },
+      "game_development_environ_prod": {
+        "display_name": "Air Time",
+        "bubble_choice_description": "**Difficulty:** 🌶️🌶️\r\n\r\n**Problem:** The maze of clouds keeps falling away!",
+        "short_instructions": "Add another `set sprite type to environment` so the monster can land on the green platforms.",
+        "long_instructions": "##Debugging Practice\r\n**Problem:** The maze of clouds falls down!\r\n\r\n**Fix:** Make sure the sprites are all set to the correct type.\r\n",
+        "authored_hints": {
+          "Hint1": "The clouds are falling like player sprites. Set the clouds type to environment instead. \n<xml>\n<block xmlns=\"https://developers.google.com/blockly/xml\" type=\"GameDev_setGroup\" id=\"s0~~e0!}K[fm;ShKs2sG\">\n  <field name=\"GROUP\">\"walls\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" id=\"x,sMj}}CfvGtzA+U2wfm\">\n      <field name=\"ANIMATION\">\"ground_grass\"</field>\n    </block>\n  </value>\n</block>\n</xml>"
+        }
+      },
+      "game_development_player_prod": {
+        "display_name": "Under the Sea",
+        "bubble_choice_description": "**Difficulty:** 🌶️🌶️\r\n\r\n**Problem:** The mermaid isn't jumping.",
+        "short_instructions": "Add another `set sprite type to environment` so the monster can land on the green platforms.",
+        "long_instructions": "##Debugging Practice\r\n**Problem:** The mermaid isn't jumping to get to her friend. \r\n\r\n**Fix:** Make sure the sprites are all set to the correct type. A sprite must be set to the type player to jump.",
+        "authored_hints": {
+          "Hint1": "The clouds are falling like player sprites. Set the clouds type to environment instead. \n<xml>\n<block xmlns=\"https://developers.google.com/blockly/xml\" type=\"GameDev_setGroup\" id=\"s0~~e0!}K[fm;ShKs2sG\">\n  <field name=\"GROUP\">\"walls\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" id=\"x,sMj}}CfvGtzA+U2wfm\">\n      <field name=\"ANIMATION\">\"ground_grass\"</field>\n    </block>\n  </value>\n</block>\n</xml>"
+        }
+      },
+      "game_development_platform_prod": {
+        "display_name": "Platform Monster",
+        "bubble_choice_description": "**Difficulty:** 🌶️🌶️🌶️\r\n\r\n**Problem:** The monster falls through the green platforms!",
+        "short_instructions": "Add another `set sprite type to environment` so the monster can land on the green platforms.",
+        "long_instructions": "##Debugging Practice\r\n**Problem:** The monster falls through the green platforms.\r\n\r\n**Fix:** Add another `set sprite type to environment` for the green platforms.",
+        "authored_hints": {
+          "Hint1": "The gray platforms are set to the correct type, but you need to add this code so the green platforms are also environment types. \n<xml>\n<block xmlns=\"https://developers.google.com/blockly/xml\" type=\"GameDev_setGroup\" id=\"s0~~e0!}K[fm;ShKs2sG\">\n  <field name=\"GROUP\">\"walls\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" id=\"x,sMj}}CfvGtzA+U2wfm\">\n      <field name=\"ANIMATION\">\"ground_grass\"</field>\n    </block>\n  </value>\n</block>\n</xml>"
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/3/levels/13": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Classroom Implementation\n\n<img src=\"https://images.code.org/1342955a45551535071edc758fa44fb1-image-1720559612404.13.30 PM.png\" alt=\"pixelated cartoon cow\" width=\"200px\" style=\"border-radius:10px; float:right; margin: 0 40px 40px 40px;\">\n\n#### The lesson plan explains the lesson in detail with suggestions for discussions, remarks, and teacher actions.\n\n## Example lesson plan\n\n#### Preview this lesson plan from the <a href=\"https://studio.code.org/s/elem-game-design-2024/lessons/3\" target=\"blank\">Environment and Players</a> lesson.\n\n### **When exploring the lesson plan, locate...**\n* #### Slide decks\n* #### Activity guides\n* #### Answer keys\n<br>\n\n#### Take your time working through all of the lesson features. Think about how you could implement the lesson in your class. \n\n## Let's keep learning! \n\n"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/4/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Game Jam!\n\n##### You've made it to the game jam! \n\n\n<img src=\"https://images.code.org/24767ec289c26417833bb9beaa9efc40-image-1718727783434.22.44 AM.png\" alt=\"pixelated cartoon snail\" style=\"border-radius:40px; float: right; padding-right: 20px; height: 275px; clear: both; margin: 0 20px 20px 0;\">\n\n\n## In this module, you will:\n\n* ##### Learn about game jams and why they are used. \n* ##### Use a randomizer to create a theme for a game.\n* ##### Review materials students will use in the game jam process. \n\n\n### **Suggested time:** 10 minutes\n\n\n## Let's get started!\n\n<div style=\"clear:both\"/>\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/4/levels/2": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# What is a Game Jam?\n\n#### A game jam is a creative event where people come together in teams to make video games based on a chosen theme within a limited amount of time. <a href=\"https://www.youtube.com/watch?v=3QYq0HOneIg\" target=\"_blank\">Click here to learn more about game jams!</a>\n\n\n\n\n\n## Why Game Jams?\n#### Game developers participate in game jams to foster creativity and innovation, develop skills rapidly, network and collaborate with peers, build their portfolios, and boost productivity through focused, deadline-driven work. These events also provide a supportive community for feedback and are a fun way for developers to express their passion for game creation in a spirited environment. <a href=\"https://www.youtube.com/watch?v=9U4KurpH57s\" target=\"_blank\">Click here to hear Bulgarian students' game jam experience. </a>\n\n\n\n## You've made it to the game jam! \n\n\n\n<div style=\"clear:both\"/>\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/4/levels/3": {
+    "long_instructions": "## It is highly recommended to pairing students to mimic a real game jam."
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/4/levels/4": {
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \nThe theme generator gives guardrails to student’s creativity in a silly and fun way and keeps them focused on making a simple game. <br>\n\n### <b>Teacher Tip:</b> Allow students to roll multiple times until they are happy with the results.\n\n</p>\n</div>\n\n## Game Jam Theme Generator\n\n### Click on each character to roll the dice that selects your theme!"
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/4/levels/5": {
+    "dsls": {
+      "markdown": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \n<b>Teacher Tip:</b> Access the lesson plan for a printable planning page. Having students think through their game before programming will provide a good framework.\n</p>\n</div>\n\n## Make a quick plan\n\n\n\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53 PM.png\" style= \"width:40%; display: block; margin: auto;\">\n\n<br>\n\n<span style=\"margin:auto; display:table;font-size: 1.3em\"><strong>Answer the following questions in your <a href=\"https://docs.google.com/document/d/1hTmxVocE21LqVcYnLQT5b1xTqdcKZsP9SFV7QvnWeFA/template/preview\n\" target=\"_blank\"> activity guide</a>:</strong></span>\n\n<div style=\"background-color: #ede9f7; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px; width: 60%; display: block; margin: auto;\">\n\n1. **What is the theme of your game?** \n\n   - Adjective: ________\n   - Noun: ________\n   - Game Mechanic: ________\n\n<br>\n\n2. **Decide on sprites.** \n\n   - Main Character costume: ________  \n   - Collectible or Enemy costume:  ________\n   - (Optional) Other: ________\n\n<br>\n\n3. **What is the objective of the game?** ________\n\n4. **Winning Condition**\n   - How does the player win the game? ________\n   - What will you need to keep track of? ________\n\n<br>\n\n5. **[Optional] Losing Condition** \n   - How does the player lose the game? ________\n   - What will you need to keep track of? ________\n   </div>\n"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/4/levels/6": {
+    "short_instructions": "You have reached the end of the module! Create your own GameDev project.",
+    "long_instructions": "**Develop your game!**\n\n1.  Set up the environment\n\n2.  Add the player sprite & code their movement\n\n3.  Add the collectible or enemy sprite(s) & code their movement\n\n4.  Add your variable & code it to change with an event\n\n5.  Add a winning and/or losing condition",
+    "authored_hints": {
+      "Hint1": "You will find all of the blocks organized into categories in the toolbox. "
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/4/levels/7": {
+    "dsls": {
+      "markdown": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> In the previous game jam lesson, students build a game. In this lesson they participate in user testing, give feedback and then analyze the data of the feedback they receive. This lesson is especially important as it meets CSTA standards that are not met elsewhere.  \n<br>\n<br>\n<b>Teacher Tip:</b> If you have additional time after this lesson, give students an opportunity to iterate on their game based on feedback. \n</p>\n</div>\n\n##Time to play some games!\n\n\n<img src=\"https://images.code.org/876b68692526c02f120244c3ea2f1800-image-1711400418402.jpg\" style= \"width:40%; display: block; margin: auto;\">\n\n<br>\n\n<span style=\"margin:auto; display:table;font-size: 1.3em\"><strong>After you try out each game, answer the following questions in your <a href=\"https://docs.google.com/document/d/1xjTLfwzxeMKtqlC2yd8iIvhGXP-JqkfsmhCVHCSHGF4/template/preview\n\" target=\"_blank\"> activity guide</a>:</strong></span>\n\n\n\n<div style=\"background-color: #ede9f7; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px; width: 40%; display: block; margin: auto;\">\n\n1. **How fun was the game?** \n\n2. **How challenging was the game?** \n\n3. **Was it easy to figure out how to play?**\n\n4. **Did the scoreboard work?**\n\n5. **What was the label of the variable(s)?**\n\n6. **Glows - What is great about this game?**\n\n7. **Grows - What should the developers improve?**\n\n</div>\n"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/4/levels/8": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Classroom Implementation\n\n<img src=\"https://images.code.org/b7bd48719ffe99bbb290f3d47865cd4a-image-1720556345046.19.01 PM.png\" alt=\"pixelated cartoon snail\" width=\"200px\" style=\"border-radius:10px; float:right; margin: 0 40px 40px 40px;\">\n\n#### The lesson plan explains the lesson in detail with suggestions for discussions, remarks, and teacher actions.\n\n## Example lesson plan\n\n#### Preview the lesson plans from the <a href=\"https://studio.code.org/s/elem-game-design-2024/lessons/4\" target=\"blank\">Game Jam: Day 1</a> and <a href=\"https://studio.code.org/s/elem-game-design-2024/lessons/5\" target=\"blank\">Game Jam: Day 2</a> lessons.\n\n### **When exploring the lesson plan, locate...**\n* #### Slide decks\n* #### Activity guides\n* #### Answer keys\n<br>\n\n#### Take your time working through all of the lesson features. Think about how you could implement the lesson in your class. \n\n## Let's wrap up! \n\n"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/5/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Teaching Tips\n\n## Differentiating Instruction\n\n#### Here are some suggestions from teachers that have taught this module: \n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">Frontload Directions</summary>\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;\">\n    <p>\n\n#### \"For students who have difficulty reading it is a lot to tackle. Many of my students can struggle with reading directions. Frontloading level directions and reading them aloud as a class is a helpful scaffold.\" \n\n</p></div>\n</details>\n\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">Model Growth Mindset</summary>\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;\">\n    <p>\n\n#### \"I noticed that some prefer to skip a level if they do not succeed on the first try. Modeling and incorporating growth mindset in the lessons is essential.\" \n\n</p></div>\n\n</details>\n\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">Use Pair Programming</summary>\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;\">\n    <p>\n\n#### \"Consider starting with pair programming from the start and establish protocols for reading instructions.\"\n\n</p></div>\n\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5plgamedesign/lessons/5/levels/2": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Next Steps\n\n#### Thank you for completing **Teaching Elementary Game Design.** Access the student curriculum <a href=\"https://studio.code.org/s/elem-game-design-2024\" target=\"_blank\">here</a>. Now that you've learned some basic computer science skills, check out some of our curriculum and professional learning offerings to continue your journey!\n\n## Teach CS in your class\n\n#### Explore some other curriculum options to teach CS in your class.\n\n<a href = \"https://code.org/educate/csc\" target=\"blank\" rel=\"noopener noreferrer\"><img src=\"https://images.code.org/3f623ba6e5151732099b3441225f5a66-image-1706037967333.jpg\" alt=\"thumbnail for the CS Connections curriculum \" width=\"240px\" style=\"border-radius:5px; float:left; margin: 20px 40px 40px 40px;\"></a>\n\n<a href = \"https://code.org/educate/csf\" target=\"blank\" rel=\"noopener noreferrer\"><img src=\"https://images.code.org/1d4bfa99f2282f9972713f289f03ec08-image-1706037638798.jpg\" alt=\"thumbnail for the CS Fundamentals curriculum \" width=\"240px\" style=\"border-radius:5px; float:left; margin: 20px 40px 40px 20px;\"></a>\n\n<a href = \"https://code.org/oceans\" target=\"blank\" rel=\"noopener noreferrer\"><img src=\"https://images.code.org/bc294ba333174bf92e8f9bb60380a5b3-image-1706038353939.png\" alt=\"thumbnail for the CS Connections self-paced professional learniing module \" width=\"240px\" style=\"border-radius:5px; float:left; margin: 20px 50px 40px 20px;\"></a>\n\n## Continue learning \n#### Learn more about teaching CS with these self-paced professional learning modules. \n\n<a href = \"https://studio.code.org/s/self-paced-pl-csc-2023\" target=\"blank\" rel=\"noopener noreferrer\"><img src=\"https://images.code.org/b4ca41cd43376f374fc5408d76241e59-image-1706300331462.png\" alt=\"thumbnail for the CS Connections self-paced professional learniing module \" width=\"240px\" style=\"border-radius:5px; float:left; margin: 20px 40px 40px 40px;\"></a>\n\n<a href = \"https://studio.code.org/s/k5-onlinepd-2023\" target=\"blank\" rel=\"noopener noreferrer\"><img src=\"https://images.code.org/c35579aa157b3605228885e325ddb03d-image-1706299786558.png\" alt=\"thumbnail for the CS Fundamentals self-paced professional learniing module \" width=\"240px\" style=\"border-radius:5px; float:left; margin: 20px 40px 40px 20px;\"></a>\n\n<a href = \"https://images.code.org/eab8b38416b81b495275cd83372e9c9d-image-1706220671094.jpg\" target=\"blank\" rel=\"noopener noreferrer\"><img src=\"https://images.code.org/1bcbd2c06e0956971485522eff921d49-image-1706299155070.png\" alt=\"thumbnail for the CS Basicss self-paced professional learniing module \" width=\"240px\" style=\"border-radius:5px; float:left; margin: 20px 50px 50px 20px;\"></a>\n\n<br>\n\n<p>\n\n## Help us make this module better!\n\n#### Code.org values and is responsive to feedback. Please fill out this <a href=\"https://studio.code.org/form/selfpaced_pd_k5_game_design_post_survey\" target=\"blank\" rel=\"noopener noreferrer\">short survey</a> to provide your feedback on this module.\n\n<a class=\"btn btn-large btn-primary\" href=\"https://studio.code.org/form/selfpaced_pd_k5_game_design_post_survey\" target=\"blank\" rel=\"noopener noreferrer\">Take the survey</a>\n\n\n## Stay connected \n\n* #### Continue participating in the <a href=\"https://forum.code.org/\" target=\"blank\" rel=\"noopener noreferrer\">Code.org teacher forum</a>. \n\n* #### Connect with <a href=\"http://twitter.com/teachcode\" target=\"blank\" rel=\"noopener noreferrer\">@teachcode</a> on Twitter.\n\n* #### Join the <a href=\"https://www.csteachers.org/\" target=\"blank\" rel=\"noopener noreferrer\">Computer Science Teachers Association (CSTA)</a>. \n\n<br>\n</p>\n\n\n"
+    }
+  }
+}

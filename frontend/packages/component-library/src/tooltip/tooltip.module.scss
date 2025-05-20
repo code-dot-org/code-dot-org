@@ -1,5 +1,6 @@
-@import '@/common/styles/colors.css';
-@import '@/typography/typography.module';
+@use '@code-dot-org/component-library-styles/colors.scss';
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
 
 $tooltip-background-color: var(--background-neutral-primary-inverse);
 $tail-offset: 4px;
@@ -54,6 +55,7 @@ $tooltip-span-vertical-top-spacing: 2px;
   z-index: 10;
   display: flex;
   align-items: center;
+  justify-content: center;
   height: fit-content;
   background-color: $tooltip-background-color;
   box-sizing: border-box;
@@ -133,7 +135,7 @@ $tooltip-span-vertical-top-spacing: 2px;
   gap: 0.375rem;
 
   span {
-    @include body-one;
+    @include typography.body-one;
     margin-top: $tooltip-span-vertical-top-spacing;
     margin-bottom: 0;
   }
@@ -152,7 +154,7 @@ $tooltip-span-vertical-top-spacing: 2px;
   gap: 0.25rem;
 
   span {
-    @include body-two;
+    @include typography.body-two;
     margin-top: $tooltip-span-vertical-top-spacing;
     margin-bottom: 0;
   }
@@ -171,7 +173,7 @@ $tooltip-span-vertical-top-spacing: 2px;
   gap: 0.25rem;
 
   span {
-    @include body-three;
+    @include typography.body-three;
     margin-top: $tooltip-span-vertical-top-spacing;
     margin-bottom: 0;
   }
@@ -190,7 +192,7 @@ $tooltip-span-vertical-top-spacing: 2px;
   gap: 0.25rem;
 
   span {
-    @include body-four;
+    @include typography.body-four;
     margin-top: $tooltip-span-vertical-top-spacing;
     margin-bottom: 0;
   }

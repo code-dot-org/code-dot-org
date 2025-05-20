@@ -1,7 +1,7 @@
+import {StrongText} from '@code-dot-org/component-library/typography';
 import PropTypes from 'prop-types';
 import React, {useCallback, useMemo, useState} from 'react';
 
-import {StrongText} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
 import AddCoteacher from './AddCoteacher';
@@ -31,7 +31,7 @@ const getInitialCoteachers = (sectionInstructors, primaryTeacher) => {
   if (!primaryTeacher) {
     return sectionInstructors;
   }
-  return sectionInstructors.filter(
+  return [...sectionInstructors].filter(
     instructor => instructor.instructorEmail !== primaryTeacher.email
   );
 };
@@ -54,7 +54,7 @@ export default function CoteacherSettings({
   const coteachers = useMemo(() => {
     const unsaved = coteachersToAdd.map(email => ({instructorEmail: email}));
 
-    const sortedSaved = savedCoteachers.sort(
+    const sortedSaved = [...savedCoteachers].sort(
       (a, b) => statusSortValue(a) - statusSortValue(b)
     );
     return [...unsaved, ...sortedSaved];

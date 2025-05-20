@@ -1,26 +1,42 @@
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import {
   ADD_A_PERSONAL_LOGIN_HELP_URL,
   RELEASE_OR_DELETE_RECORDS_EXPLANATION,
 } from '@cdo/apps/lib/util/urlHelpers';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
-export const TeacherWarning = () => {
+export const BaseTeacherWarning = ({hideInstructions}) => {
   return (
     <div>
       <SafeMarkdown markdown={i18n.deleteAccount_teacherWarning()} />
 
-      <SafeMarkdown
-        markdown={i18n.deleteAccount_personalLoginInstructions({
-          explanationUrl: ADD_A_PERSONAL_LOGIN_HELP_URL,
-        })}
-      />
+      {!hideInstructions && (
+        <SafeMarkdown
+          markdown={i18n.deleteAccount_personalLoginInstructions({
+            explanationUrl: ADD_A_PERSONAL_LOGIN_HELP_URL,
+          })}
+        />
+      )}
     </div>
   );
 };
+
+BaseTeacherWarning.propTypes = {
+  hideInstructions: PropTypes.bool,
+};
+
+export const TeacherWarning = props => (
+  <GlobalEditionWrapper
+    component={BaseTeacherWarning}
+    componentId="TeacherWarning"
+    props={props}
+  />
+);
 
 export const StudentWarning = () => {
   return <div>{i18n.deleteAccount_studentWarning()}</div>;

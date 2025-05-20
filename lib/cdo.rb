@@ -34,10 +34,16 @@ module Cdo
         "#{root}/config.yml.erb"
       )
 
-      defaults = render("#{root}/config.yml.erb").first
-      to_h.each_key do |key|
-        raise "Unknown property not in defaults: #{key}" unless defaults.key?(key.to_sym)
+      configured_properties = to_h.keys.map(&:to_sym)
+      default_properties = render("#{root}/config.yml.erb").first.keys
+      unknown_properties = configured_properties - default_properties
+      unless unknown_properties.empty?
+        raise <<~ERROR
+          Property or properties "#{unknown_properties.join(', ')}" defined in the environment without a default specified in `config.yml.erb`.
+          Likely this is a former configuration value which has been removed from `config.yml.erb` but still exists in your `locals.yml`.
+        ERROR
       end
+
       raise "'#{rack_env}' is not known environment." unless rack_envs.include?(rack_env)
       freeze_config
     end
@@ -51,7 +57,10 @@ module Cdo
     end
 
     def i18n_backend
-      CDO_I18N_BACKEND
+      @i18n_backend ||=
+        # Because loading i18n files is super-slow, lazy load them in development.
+        # To load all locales for testing, add "lazy_load_i18n: false" to +locals.yml+ config
+        CDO.lazy_load_i18n ? Cdo::I18n::LazyLoadableBackend.new(lazy_load: true) : Cdo::I18n::SimpleBackend.new
     end
 
     def canonical_hostname(domain)
@@ -115,21 +124,36 @@ module Cdo
       site_host('code.org')
     end
 
-    def site_url(domain, path = '', scheme = '')
+    def site_url(domain, path = '', scheme = '', ge_region: nil)
       path = '/' + path unless path.empty? || path[0] == '/'
+
+      if ge_region && Cdo::GlobalEdition.target_host?(canonical_hostname(domain))
+        path = Cdo::GlobalEdition.path(ge_region, path)
+      end
+
       "#{scheme}//#{site_host(domain)}#{path}"
     end
 
-    def studio_url(path = '', scheme = '')
-      site_url('studio.code.org', path, scheme)
+    def studio_url(path = '', scheme = '', ge_region: nil)
+      site_url('studio.code.org', path, scheme, ge_region: ge_region)
     end
 
-    def code_org_url(path = '', scheme = '')
-      site_url('code.org', path, scheme)
+    def code_org_url(path = '', scheme = '', ge_region: nil)
+      site_url('code.org', path, scheme, ge_region: ge_region)
     end
 
-    def hourofcode_url(path = '', scheme = '')
+    def hourofcode_url(path = '', scheme = '', locale: nil)
+      if locale
+        language = Cdo::I18n.available_languages_by_locale[locale.to_s]
+        hoc_locale = language[:unique_language_s] if language && language[:supported_hoc_b] == 'TRUE'
+        path = File.join('/', hoc_locale, path) if hoc_locale
+      end
+
       site_url('hourofcode.com', path, scheme)
+    end
+
+    def video_url(path)
+      File.join('//videos.code.org', path)
     end
 
     def javabuilder_url(path = '', scheme = '')
@@ -247,6 +271,15 @@ module Cdo
     # Statsig API key.
     def safe_statsig_api_client_key
       CDO.statsig_api_client_key
+    rescue ArgumentError
+      # Return an empty string instead of raising
+      ''
+    end
+
+    # Temporary method to allow safe (exception-free) accessing of the
+    # Statsig API key.
+    def safe_statsig_api_client_key_session_replay
+      CDO.statsig_api_client_key_session_replay
     rescue ArgumentError
       # Return an empty string instead of raising
       ''

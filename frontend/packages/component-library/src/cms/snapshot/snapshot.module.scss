@@ -1,0 +1,38 @@
+@use '@code-dot-org/component-library-styles/colors.scss';
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
+@use '@code-dot-org/component-library-styles/variables.scss' as variables;
+
+// SnapshotSection common styles
+.snapshot {
+  @include mixins.border-styles;
+  background: var(--background-neutral-primary);
+  column-count: 2;
+  column-width: 180px;
+  column-gap: 1.5rem;
+  padding: 1.5rem;
+  margin: 0;
+
+  .snapshotItem {
+    display: flex;
+    break-inside: avoid-column;
+    column-gap: 0.5rem;
+
+    &:not(:last-child) {
+      margin-bottom: 1.25rem;
+    }
+
+    .snapshotItemIcon {
+      @include mixins.icon-dimensions(var(--font-size-body-md));
+      color: var(--text-neutral-primary);
+      text-align: center;
+      line-height: 1.48;
+      flex-shrink: 0;
+    }
+
+    .snapshotItemContent {
+      margin: 0;
+    }
+  }
+}

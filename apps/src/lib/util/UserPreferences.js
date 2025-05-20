@@ -1,6 +1,8 @@
 import {Record} from 'immutable';
 import $ from 'jquery';
 
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import HttpClient from '@cdo/apps/util/HttpClient';
 export default class UserPreferences extends Record({userId: 'me'}) {
   /**
    * Save the using_text_mode user preference
@@ -69,6 +71,12 @@ export default class UserPreferences extends Record({userId: 'me'}) {
     });
   }
 
+  setAiDifferentiationEnabled(aiDifferentiationEnabled) {
+    return $.post(`/api/v1/users/ai_differentiation_enabled`, {
+      ai_differentiation_enabled: aiDifferentiationEnabled,
+    });
+  }
+
   /**
    * Save the background music user preference
    * @param {boolean} muteMusic: True if background music muted
@@ -83,5 +91,75 @@ export default class UserPreferences extends Record({userId: 'me'}) {
     return $.getJSON(`/api/v1/users/${this.userId}/mute_music`).then(
       response => response.mute_music
     );
+  }
+
+  /**
+   * Save the user's font size selection for the console or editor.
+   * @param {string} fontSize
+   * @param {string} appName
+   * @param {string} field either 'consoleFontSize' or 'editorFontSize'
+   */
+  setFontSize(fontSize, appName, field) {
+    const body = {
+      [field]: {
+        [appName]: fontSize,
+      },
+    };
+
+    HttpClient.put('/user_preference', JSON.stringify(body), true, {
+      'Content-Type': 'application/json',
+    });
+  }
+
+  /**
+   * Fetch the user's console font size selection.
+   * @param {string} appName
+   */
+  async getConsoleFontSize(appName) {
+    try {
+      const consoleFontSizeResponse = await HttpClient.fetchJson(
+        '/user_preference/font_size/console'
+      );
+      const consoleFontSize =
+        consoleFontSizeResponse.value.console_font_size[appName];
+      return consoleFontSize;
+    } catch (error) {
+      // Don't log error if console font size for 'Not found'.
+      // User did not save preferred console font size yet.
+      if (error.response.status !== 404) {
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Error fetching console font size', undefined, {
+            message: error.response,
+          });
+      }
+      return null;
+    }
+  }
+
+  /**
+   * Fetch the user's editor font size selection.
+   * @param {string} appName
+   */
+  async getEditorFontSize(appName) {
+    try {
+      const editorFontSizeResponse = await HttpClient.fetchJson(
+        '/user_preference/font_size/editor'
+      );
+      const editorFontSize =
+        editorFontSizeResponse.value.editor_font_size[appName];
+      return editorFontSize;
+    } catch (error) {
+      // Don't log error if editor font size for 'Not found'.
+      // User did not save preferred editor font size yet.
+      if (error.response.status !== 404) {
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Error fetching editor font size', undefined, {
+            message: error.response,
+          });
+      }
+      return null;
+    }
   }
 }

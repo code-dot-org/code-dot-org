@@ -4,6 +4,15 @@ require 'time'
 class HomeControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
+  test "teacher in teacher-homepage-v2 experiment redirected to teacher_dashboard/home" do
+    teacher = create :teacher
+    SingleUserExperiment.find_or_create_by!(min_user_id: teacher.id, name: 'teacher-homepage-v2')
+    sign_in teacher
+    get :home
+
+    assert_redirected_to '/teacher_dashboard/home'
+  end
+
   test "teacher without progress or assigned course/script redirected to index" do
     teacher = create :teacher
     sign_in teacher

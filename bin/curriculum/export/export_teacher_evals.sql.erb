@@ -1,0 +1,47 @@
+--
+-- this is an analytics query, to be run against the redshift database.
+--
+UNLOAD ($$
+  WITH
+    teacher_evals AS (
+      SELECT
+        lgte.id learning_goal_teacher_evaluation_id
+        , r.lesson_id
+        , r.level_id
+        , r.id rubric_id
+        , lg.position learning_goal_position
+        , lg.learning_goal learning_goal_text
+        , lg.tips learning_goal_tips
+        , lgte.*
+      FROM dashboard_production.rubrics r
+        JOIN dashboard_production.learning_goals lg ON r.id = lg.rubric_id
+        JOIN dashboard_production_pii.learning_goal_teacher_evaluations lgte ON lg.id = lgte.learning_goal_id
+    )
+  SELECT
+    ul.id user_level_id
+    , cs.level_id
+    , cs.script_id
+    , cs.script_name
+    , cs.relative_position
+    , cs.level_number
+    , teacher_evals.learning_goal_id
+    , teacher_evals.user_id
+    , teacher_evals.project_id
+    , teacher_evals.project_version
+    , teacher_evals.understanding
+    , teacher_evals.feedback teacher_feedback
+    , teacher_evals.submitted_at
+  FROM teacher_evals
+    JOIN analysis.course_structure cs ON cs.level_id = teacher_evals.level_id AND cs.stage_id = teacher_evals.lesson_id
+    JOIN dashboard_production.user_levels ul ON teacher_evals.user_id = ul.user_id AND cs.level_id = ul.level_id AND cs.script_id = ul.script_id
+  WHERE
+    (understanding IS NOT NULL OR teacher_feedback IS NOT NULL)
+    AND cs.script_name = '<%=unit_name%>'
+    <%= level_id && "and cs.level_id = #{level_id}" %>
+$$)
+TO 's3://cdo-data-sharing-internal/unloaded-unit-progress/<%=output_dir%>/evals/<%=unit_name%>_teacher_evals_'
+FORMAT JSON
+EXTENSION 'jsonl'
+IAM_ROLE 'arn:aws:iam::475661607190:role/redshift-s3'
+PARALLEL OFF
+;

@@ -1,3 +1,7 @@
+import CheckboxDropdown, {
+  CheckboxDropdownOption,
+} from '@code-dot-org/component-library/dropdown/checkboxDropdown';
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import moment from 'moment';
 import React, {useEffect, useState} from 'react';
 import * as Table from 'reactabular-table';
@@ -8,10 +12,6 @@ import {
   AITutorInteractionStatus,
   AITutorInteractionStatusValue,
 } from '@cdo/apps/aiTutor/types';
-import CheckboxDropdown, {
-  CheckboxDropdownOption,
-} from '@cdo/apps/componentLibrary/dropdown/checkboxDropdown';
-import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import styleConstants from '@cdo/apps/styleConstants';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -49,6 +49,8 @@ const STATUS_LABELS: StatusLabels = {
   profanity_violation: 'Profanity Violation',
   ok: 'Successful',
   unknown: 'Unknown Status',
+  user_input_too_large: 'User Input Too Large',
+  model_timeout: 'Model Timeout', // Not actually handled in AI Tutor at the moment, added for TypeScript safety
 };
 
 enum TimeFilter {
@@ -183,7 +185,13 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
         props: {style: {...style.headerCell, ...styleOverrides.headerCell}},
       },
       cell: {
-        formatters: [(status: string) => <span>{STATUS_LABELS[status]}</span>],
+        formatters: [
+          (status: string) => (
+            <span>
+              {STATUS_LABELS[status as AITutorInteractionStatusValue]}
+            </span>
+          ),
+        ],
         props: {style: style.cell},
       },
     },
