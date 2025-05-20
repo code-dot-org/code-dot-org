@@ -101,7 +101,7 @@ class FieldPattern extends GoogleBlockly.Field {
     this.renderContent();
 
     this.newDiv_.style.color = color.neutral_light;
-    if (appConfig.getValue('play-tune-block') !== 'true') {
+    if (appConfig.getValue('play-tune-block-drums') !== 'true') {
       this.newDiv_.style.width = '420px';
     }
     this.newDiv_.style.backgroundColor = color.dark_black;
