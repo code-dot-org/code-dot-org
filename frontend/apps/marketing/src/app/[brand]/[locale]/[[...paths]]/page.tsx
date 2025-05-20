@@ -62,6 +62,15 @@ export async function generateMetadata({
 
   return {
     title: getPageHeading(experience),
+    // Temporary favicon location for Pegasus compatability.
+    // Remove when Pegasus is deprecated.
+    // TODO: https://codedotorg.atlassian.net/browse/CMS-731
+    icons: [
+      {
+        url: '/images/favicon.ico',
+        href: '/images/favicon.ico',
+      },
+    ],
     ...getSeoMetadata(experience, brand, pageProps.locale),
   };
 }
