@@ -16,7 +16,6 @@ echo "
 # Shared settings and secrets
 build_apps: true
 build_dashboard: true
-build_i18n: false
 build_pegasus: true
 bundler_use_sudo: false
 cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
@@ -35,6 +34,7 @@ override_dashboard: \"localhost-studio.code.org\"
 override_pegasus: \"localhost.code.org\"
 dashboard_port: 3000
 pegasus_port: 3000
+build_i18n: true
 animations_s3_directory: animations_circle/$CI_BUILD_NUMBER
 assets_s3_directory: assets_circle/$CI_BUILD_NUMBER
 files_s3_directory: files_circle/$CI_BUILD_NUMBER

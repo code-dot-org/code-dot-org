@@ -15,7 +15,6 @@ echo "
 # Shared settings and secrets
 build_apps: true
 build_dashboard: true
-build_i18n: false
 build_pegasus: true
 bundler_use_sudo: false
 cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
@@ -30,6 +29,7 @@ use_my_apps: true
 skip_seed_all: true
 
 # Unit test settings and secrets
+build_i18n: false
 geocoder_redis_url: 'redis://unit-tests-redis:6379/0/geocoder'
 optimize_rails_assets: false
 optimize_webpack_assets: false
