@@ -25,18 +25,28 @@ const AiTutor2UI: React.FunctionComponent<AiTutor2UIProps> = ({
   const scriptId = useAppSelector(state => state.lab.scriptId);
   const channelId = useAppSelector(state => state.lab.channel?.id);
 
+  // Remember the last level ID used to instantiate the AiTutor2Manager.
+  const lastLevelId = useRef<string | null>(null);
+
   // Remember the last question asked to avoid asking it multiple times, especially
   // as UI is re-rendered.
   const lastQuestion = useRef<string | undefined>(undefined);
 
   // This UI component will instantiate and use a AITutorManager.
   const aiTutor2Manager = useRef<AiTutor2Manager | null>(null);
-  if (aiTutor2Manager.current === null) {
+  if (
+    aiTutor2Manager.current === null ||
+    currentLevelId !== lastLevelId.current
+  ) {
+    console.log('🤖: creating AiTutor2Manager', currentLevelId);
+
     aiTutor2Manager.current = new AiTutor2Manager(
       currentLevelId,
       scriptId,
       channelId
     );
+
+    lastLevelId.current = currentLevelId;
   }
 
   // Store the most recent response.  Later we might store a longer history.
