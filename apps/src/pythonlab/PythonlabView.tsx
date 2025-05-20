@@ -32,6 +32,7 @@ import {
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import CodebridgeRegistry from '../codebridge/CodebridgeRegistry';
+import {useAiTutor2} from '../lab2/views/components/aiTutor2/useAiTutor2';
 
 import getAiTutor2FullPromptFromData from './aiTutorHelper';
 import ProjectTypePicker from './components/ProjectTypePicker';
@@ -76,9 +77,6 @@ const PythonlabView: React.FunctionComponent<
   LabProps<CodebridgeLevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const [aiTutor2HintQuestion, setAiTutor2HintQuestion] = useState<
-    string | undefined
-  >(undefined);
   const {
     source,
     setProject,
@@ -174,7 +172,6 @@ const PythonlabView: React.FunctionComponent<
   // Set view code to false if level is switched for any levels in widget view.
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
     dispatch(setWidgetViewShowCode(false));
-    setAiTutor2HintQuestion(undefined);
   });
 
   const getAiTutor2FullPrompt = (question: string) => {
@@ -186,13 +183,16 @@ const PythonlabView: React.FunctionComponent<
     );
   };
 
+  const [askAiTutor2, AiTutor2Response] = useAiTutor2(
+    getAiTutor2FullPrompt,
+    'hint'
+  );
+
   const onRun = async (
     runTests: boolean,
     dispatch: AppDispatch,
     source: MultiFileSource | undefined
   ) => {
-    setAiTutor2HintQuestion(undefined);
-
     // Flush any pending saves if we have a project manager on run. The user will likely
     // run their code before navigating away from the page, so switching pages
     // will be faster if we flush save now.
@@ -222,9 +222,8 @@ const PythonlabView: React.FunctionComponent<
     }
     dispatch(submitPredictResponse({appType: 'pythonlab'}));
 
-    // Set a question for the hint AITutor2 in ValidatedInstructions to ask.
-    // It will be passed down via the CodebridgeContext.
-    setAiTutor2HintQuestion("What's wrong with my code, if anything?");
+    // Ask a question to AITutor2.
+    askAiTutor2("What's wrong with my code, if anything?");
   };
 
   return (
@@ -243,8 +242,8 @@ const PythonlabView: React.FunctionComponent<
           sendConsoleInput={sendInput}
           levelProperties={levelProperties}
           projectPickerSettings={projectPickerSettings}
-          aiTutor2HintQuestion={aiTutor2HintQuestion}
           getAiTutor2FullPrompt={getAiTutor2FullPrompt}
+          AiTutor2ResponseView={AiTutor2Response}
         />
       )}
       {showProjectPickerModal && (

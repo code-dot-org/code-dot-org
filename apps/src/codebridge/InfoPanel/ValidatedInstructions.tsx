@@ -26,7 +26,6 @@ import {
   setIsValidating,
 } from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import AiTutor2Response from '@cdo/apps/lab2/views/components/AiTutor2Response';
 import PredictQuestion from '@cdo/apps/lab2/views/components/PredictQuestion';
 import PredictSummary from '@cdo/apps/lab2/views/components/PredictSummary';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
@@ -75,13 +74,8 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   handleInstructionsTextClick,
   className,
 }) => {
-  const {
-    onRun,
-    onStop,
-    levelProperties,
-    getAiTutor2FullPrompt,
-    aiTutor2HintQuestion,
-  } = useCodebridgeContext();
+  const {onRun, onStop, levelProperties, AiTutor2ResponseView} =
+    useCodebridgeContext();
   const dialogControl = useDialogControl();
 
   const {
@@ -386,13 +380,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
             </>
           )}
 
-          {aiTutor2Available && (
-            <AiTutor2Response
-              type={'hint'}
-              question={aiTutor2HintQuestion}
-              getFullPrompt={getAiTutor2FullPrompt}
-            />
-          )}
+          {aiTutor2Available && AiTutor2ResponseView}
           {predictSettings?.isPredictLevel && (
             <InstructorsOnly>
               <div className={moduleStyles.bubble}>
