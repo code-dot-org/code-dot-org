@@ -9,8 +9,8 @@ markdown <<MARKDOWN
 
 #### Paper prototypes are first introduced in **Lesson 5: User Interfaces** as students learn how a simple paper prototype can be used to quickly test assumptions before programming the app.
 
-<div style="background-color: #F7F8FA; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 15px;">
-<b>Note</b>: You've <i>briefly</i> explored Lesson 5 (and Lessons 1-4) in an <a href="https://studio.code.org/s/self-paced-pl-csd-unit4-2-2024/lessons/1/levels/9" target="blank" rel="noopener noreferrer">earlier level</a> of this module. This section will go more in-depth with the lesson.</p></div>
+<div style="background-color: #F7F8FA; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.2; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 17px;">
+<b>Note</b>: You've <i>briefly</i> explored Lesson 5 (and Lessons 1-4) in an earlier level of this module. This section will go more in-depth with the lesson.</p></div>
 
 <img src="https://images.code.org/1e3d33b5f47fb4cffd138ae2b1266a20-image-1648824596481.49.44 AM.png" alt="Screenshot of a paper prototype of the app Text Ur Grndkdz" style="float: right; height: 280px; clear: both; margin: 0 20px 20px 0;">
 

@@ -21,6 +21,9 @@ import ActionBlock, {
 import FullWidthActionBlock, {
   FullWidthActionBlockContentfulComponentDefinition,
 } from '@/components/contentful/actionBlocks/fullWidthActionBlock';
+import Heading, {
+  HeadingContentfulComponentDefinition,
+} from '@/components/contentful/heading';
 import HeroBanner, {
   HeroBannerContentfulComponentDefinition,
 } from '@/components/contentful/heroBanner';
@@ -39,9 +42,6 @@ import EditorialCard, {
 import FAQAccordion, {
   FAQAccordionContentfulComponentDefinition,
 } from '@/components/faqAccordion';
-import Heading, {
-  HeadingContentfulComponentDefinition,
-} from '@/components/heading';
 import IconHighlight, {
   IconHighlightContentfulComponentDefinition,
 } from '@/components/iconHighlight';

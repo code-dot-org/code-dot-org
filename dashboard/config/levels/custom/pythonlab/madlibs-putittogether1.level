@@ -22,15 +22,18 @@
           "language": "py",
           "contents": "noun1 = input(\"Enter an noun: \")\n\nstory = \"The \" + noun1 + \"ran down the road.\"\n\n#print out the story",
           "folderId": "0",
-          "active": true,
+          "active": false,
           "open": true
         }
       },
       "folders": {
-      }
+      },
+      "openFiles": [
+        "0"
+      ]
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-07 15:20:14 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-07 15:21:07 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-07 15:20:14 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-07 15:21:07 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-16 15:16:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>
