@@ -919,6 +919,7 @@ roles.each do |name, config| %>
                 Condition:
                   StringEquals:
                     'aws:ResourceTag/environment-type': <%=environment_type%>
+              # TODO: Add permission for GitHub Actions to upload files to the static assets bucket.
 
 
   # Enforce least privilege on Roles created/passed/attached by the Role that provisions marketing site Stacks.
@@ -1001,6 +1002,7 @@ roles.each do |name, config| %>
                   - iam:DeleteRolePolicy
                   - iam:DetachRolePolicy
                   - iam:DeletePolicy
+                  - iam:TagRole
                 Resource: '*'
                 Condition:
                   StringEquals:
