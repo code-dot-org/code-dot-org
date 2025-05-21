@@ -34,7 +34,7 @@ override_dashboard: \"localhost-studio.code.org\"
 override_pegasus: \"localhost.code.org\"
 dashboard_port: 3000
 pegasus_port: 3000
-build_i18n: true
+build_i18n: false
 animations_s3_directory: animations_circle/$CI_BUILD_NUMBER
 assets_s3_directory: assets_circle/$CI_BUILD_NUMBER
 files_s3_directory: files_circle/$CI_BUILD_NUMBER

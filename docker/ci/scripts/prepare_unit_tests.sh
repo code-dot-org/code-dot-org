@@ -29,7 +29,7 @@ use_my_apps: true
 skip_seed_all: true
 
 # Unit test settings and secrets
-build_i18n: false
+build_i18n: true
 geocoder_redis_url: 'redis://unit-tests-redis:6379/0/geocoder'
 optimize_rails_assets: false
 optimize_webpack_assets: false
