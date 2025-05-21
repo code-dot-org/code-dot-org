@@ -4,7 +4,7 @@ import Snapshot, {
   SnapshotItem,
 } from '@code-dot-org/component-library/cms/snapshot';
 
-import {sortArrayInAscendingOrder} from '../helpers';
+import {sortInAscendingOrder} from '../helpers';
 
 export interface CurriculumSnapshotProps {
   label: string;
@@ -44,7 +44,7 @@ const CurriculumSnapshot: React.FunctionComponent<CurriculumSnapshotProps> = ({
         });
     };
 
-    addItem('Grades', 'user', grades?.slice().sort(sortArrayInAscendingOrder));
+    addItem('Grades', 'user', grades?.slice().sort(sortInAscendingOrder));
     addItem('Level', 'arrow-up-wide-short', level);
     addItem('Duration', 'clock', duration);
     addItem('Devices', 'desktop', devices);
