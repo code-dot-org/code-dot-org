@@ -1,5 +1,3 @@
-require "clients/lti_cloudwatch_logger"
-
 module Services
   module Lti
     class AuthIdGenerator
@@ -25,13 +23,13 @@ module Services
           # Per LTI spec, the client ID is used to identify an LTI 1.3 app to the LMS.
           # Only ONE client_id identifies an LTI Tool and is sent in the JWK audience claim.
           if id_token[:aud].length > 1
-            event = {
-              message: 'Too many client_ids in the audience claim',
+            log_payload = {
+              event: 'Too many client_ids in the audience claim',
               audience: id_token[:aud],
               aud_count: id_token[:aud].length,
             }
 
-            LtiCloudWatchLogger.put_log_event(event)
+            CDO.log.info log_payload.to_json
             raise ArgumentError, "Invalid Audience Claim: #{id_token[:aud]}, with more than 1 client_id. #{id_token[:aud].length} client_ids given."
           else
             id_token[:aud].first

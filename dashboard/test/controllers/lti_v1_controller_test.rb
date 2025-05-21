@@ -278,7 +278,6 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     LtiV1Controller.any_instance.stubs(:read_cache).with(@state).returns({state: @state, nonce: @nonce})
     LtiV1Controller.any_instance.stubs(:read_cache).with("#{@integration.issuer}/#{@integration.client_id}").returns(@integration)
     Honeybadger.stubs(:notify)
-    LtiCloudWatchLogger.stubs(:put_log_event)
   end
 
   def create_jwt(payload)
