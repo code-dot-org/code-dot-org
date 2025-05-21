@@ -66,6 +66,7 @@ export const HeroBannerContentfulComponentDefinition: ComponentDefinition = {
       displayName: 'Heading',
       type: 'Text',
       group: 'content',
+      defaultValue: 'Hero Banner heading goes here',
       validations: {
         required: true,
         bindingSourceType: ['entry', 'manual'],

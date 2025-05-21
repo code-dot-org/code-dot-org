@@ -103,7 +103,7 @@ Each year we will update the minimum versions required for browsers and operatin
           <td>Windows 10</td>
         </tr>
         <tr>
-          <td>Android 13.x</td>
+          <td>Android 8</td>
         </tr>
         <tr>
           <td>ChromeOS (Chromebooks)</td>

@@ -151,6 +151,8 @@ function getChatMessageDisplayText(
       return commonI18n.aiChatTooPersonalUserMessage();
     case Status.USER_INPUT_TOO_LARGE:
       return commonI18n.aiChatUserInputTooLargeMessage();
+    case Status.MODEL_TIMEOUT:
+      return commonI18n.aiChatTimeout();
     case Status.ERROR:
       return commonI18n.aiChatResponseError();
     default:
@@ -162,7 +164,8 @@ function getMessageStyle(status: ValueOf<typeof Status>, role: Role) {
   if (
     status === Status.PROFANITY_VIOLATION ||
     status === Status.USER_INPUT_TOO_LARGE ||
-    (role === Role.ASSISTANT && status === Status.ERROR)
+    (role === Role.ASSISTANT &&
+      (status === Status.ERROR || status === Status.MODEL_TIMEOUT))
   ) {
     return 'danger';
   }

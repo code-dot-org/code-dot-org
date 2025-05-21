@@ -103,6 +103,7 @@ export default function initPage(unitEditorData) {
         isMissingRequiredDeviceCompatibilities={
           scriptData.missingRequiredDeviceCompatibilities
         }
+        allowMajorCurriculumChanges={scriptData.allowMajorCurriculumChanges}
       />
     </Provider>,
     document.querySelector('.edit_container')

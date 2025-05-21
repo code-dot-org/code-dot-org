@@ -1,5 +1,5 @@
 - @page_title = 'Workshop Catalog'
-- @zip_from_school_info = current_user.school_info&.school&.zip&.to_s&.rjust(5, '0') || current_user.school_info&.zip&.to_s&.rjust(5, '0')
+- @zip_from_school_info = current_user&.school_info&.school&.zip&.to_s&.rjust(5, '0') || current_user&.school_info&.zip&.to_s&.rjust(5, '0')
 #regional-workshop-catalog
 
 %link{href: "/shared/css/2022-rebrand-update.css", rel: "stylesheet"}

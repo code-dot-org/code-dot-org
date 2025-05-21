@@ -1401,7 +1401,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/educate/district/partners',
-        destination: '/district/partners',
+        destination: '/districts/partners',
         permanent: false,
       },
       {

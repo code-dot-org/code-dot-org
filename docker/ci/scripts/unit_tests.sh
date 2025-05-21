@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 # Script for running unit tests within a docker container.
-# In most cases, you will not run this script directly, but instead use
-# docker-compose to run using the unit-tests-compose.yml file in this
-# directory. See instructions in that file.
+# Primarily used by our automated CI tests (ie, Drone; see `.drone.yml`), but
+# you can use docker-compose to run locally using
+# `docker/unit-tests-compose.yml`. See instructions in that file.
 
 source docker/ci/scripts/prepare_unit_tests.sh
 

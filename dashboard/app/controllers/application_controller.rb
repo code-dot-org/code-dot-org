@@ -66,12 +66,17 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  rescue_from CanCan::AccessDenied do
+  rescue_from CanCan::AccessDenied do |exception|
     if !current_user && request.format == :html
       # we don't know who you are, you can try to sign in
       authenticate_user!
     elsif rack_env?(:development, :adhoc)
-      raise
+      # log the error and its full stack trace
+      message = "CanCan::AccessDenied: #{exception.message}"
+      stack = exception.backtrace.join("\n")
+      error_with_stack = "#{message}\n#{stack}"
+      Rails.logger.error(error_with_stack)
+      render plain: error_with_stack, status: :forbidden
     else
       # we know who you are, you shouldn't be here
       head :forbidden
@@ -113,7 +118,15 @@ class ApplicationController < ActionController::Base
 
   # Allow cross-origin requests from code.org
   def allow_cdo_cors
-    response.headers['Access-Control-Allow-Origin']      = CDO.code_org_url '', request.protocol.chomp('//')
+    allowed_origin = CDO.code_org_url('', request.protocol.chomp('//'))
+    request_origin = request.headers['Origin']
+
+    # Allows Contentful preview localhost in development
+    if Rails.env.development? && %w[http://localhost:3001 http://localhost.code.org:3001].include?(request_origin)
+      allowed_origin = request_origin
+    end
+
+    response.headers['Access-Control-Allow-Origin']      = allowed_origin
     response.headers['Access-Control-Allow-Methods']     = request.request_method
     response.headers['Access-Control-Allow-Headers']     = '*'
     response.headers['Access-Control-Allow-Credentials'] = 'true'

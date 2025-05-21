@@ -9,7 +9,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-24 20:19:30 UTC",
+    "serialized_at": "2025-05-19 19:53:13 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -268,6 +269,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_into_05"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -312,6 +316,50 @@
     {
       "chapter": 7,
       "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_career_AI"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "1172943a-1fd1-479f-8e7c-638664601590"
+      },
+      "level_keys": [
+        "csaif_pl_nets_career_AI"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_AI_chatbot_overview_ai"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "1172943a-1fd1-479f-8e7c-638664601590"
+      },
+      "level_keys": [
+        "csaif_pl_AI_chatbot_overview_ai"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -335,8 +383,8 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
+      "chapter": 10,
+      "position": 10,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -360,8 +408,8 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 9,
+      "chapter": 11,
+      "position": 11,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -385,8 +433,8 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 10,
+      "chapter": 12,
+      "position": 12,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -410,7 +458,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -435,7 +483,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -460,7 +508,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 15,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -485,7 +533,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 16,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -510,7 +558,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 17,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -535,7 +583,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 18,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -560,7 +608,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 19,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -585,7 +633,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 20,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -610,7 +658,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 21,
       "position": 9,
       "activity_section_position": 9,
       "assessment": false,
@@ -635,11 +683,14 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 22,
       "position": 10,
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02_03b"
+        ],
         "progression": "Getting Started with AI Chat"
       },
       "bonus": false,
@@ -657,7 +708,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 23,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -682,7 +733,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 24,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -707,7 +758,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 25,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
@@ -732,7 +783,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 26,
       "position": 14,
       "activity_section_position": 4,
       "assessment": false,
@@ -757,7 +808,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 27,
       "position": 15,
       "activity_section_position": 5,
       "assessment": false,
@@ -782,7 +833,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 28,
       "position": 16,
       "activity_section_position": 6,
       "assessment": false,
@@ -807,7 +858,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 29,
       "position": 17,
       "activity_section_position": 1,
       "assessment": false,
@@ -832,7 +883,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 30,
       "position": 18,
       "activity_section_position": 2,
       "assessment": false,
@@ -857,7 +908,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 31,
       "position": 19,
       "activity_section_position": 3,
       "assessment": false,
@@ -882,7 +933,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 32,
       "position": 20,
       "activity_section_position": 4,
       "assessment": false,
@@ -907,7 +958,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 33,
       "position": 21,
       "activity_section_position": 5,
       "assessment": false,
@@ -932,7 +983,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 34,
       "position": 22,
       "activity_section_position": 6,
       "assessment": false,
@@ -957,7 +1008,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 35,
       "position": 23,
       "activity_section_position": 7,
       "assessment": false,
@@ -982,7 +1033,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 36,
       "position": 24,
       "activity_section_position": 8,
       "assessment": false,
@@ -1007,7 +1058,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 37,
       "position": 25,
       "activity_section_position": 9,
       "assessment": false,
@@ -1032,7 +1083,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 38,
       "position": 26,
       "activity_section_position": 10,
       "assessment": false,
@@ -1057,7 +1108,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 39,
       "position": 27,
       "activity_section_position": 11,
       "assessment": false,
@@ -1082,7 +1133,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 40,
       "position": 28,
       "activity_section_position": 1,
       "assessment": false,
@@ -1107,7 +1158,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 29,
       "activity_section_position": 2,
       "assessment": false,
@@ -1132,7 +1183,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 42,
       "position": 30,
       "activity_section_position": 3,
       "assessment": false,
@@ -1157,7 +1208,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 43,
       "position": 31,
       "activity_section_position": 4,
       "assessment": false,
@@ -1182,7 +1233,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
       "position": 32,
       "activity_section_position": 5,
       "assessment": false,
@@ -1273,6 +1324,30 @@
         "level.key": "csaif_pl_ai_into_06",
         "script_level.level_keys": [
           "csaif_pl_ai_into_06"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "1172943a-1fd1-479f-8e7c-638664601590"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_career_AI",
+        "script_level.level_keys": [
+          "csaif_pl_nets_career_AI"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "1172943a-1fd1-479f-8e7c-638664601590"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_AI_chatbot_overview_ai",
+        "script_level.level_keys": [
+          "csaif_pl_AI_chatbot_overview_ai"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

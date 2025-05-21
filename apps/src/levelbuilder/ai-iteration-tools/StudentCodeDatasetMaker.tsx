@@ -1,33 +1,38 @@
 import Button from '@code-dot-org/component-library/button';
-import Checkbox from '@code-dot-org/component-library/checkbox';
 import TextField from '@code-dot-org/component-library/textField';
 import Papa from 'papaparse';
 import React, {useState} from 'react';
 
+import {
+  AIResponse,
+  evaluateStudentWork,
+  StudentAnswer,
+} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
+
 import {fetchStudentCodeSamples} from './StudentWorkSamplesApi';
 
-interface StudentCodeSample {
-  projectId: string;
-  studentCode: string | undefined;
-  codeVersion?: string;
-  userId: number | undefined;
-  evaluation?: string;
-  reasoning?: string;
-  evaluationCriteria?: string;
-}
+type EvaluatedCodeSample = StudentAnswer &
+  AIResponse & {
+    [key in `skill${number}${
+      | 'evaluationCriteria'
+      | 'aiEvaluation'
+      | 'aiReasoning'}`]?: string;
+  };
 
 const StudentCodeDatasetMaker: React.FC = () => {
   const [datasetName, setDatasetName] = useState<string>('');
   const [levelId, setLevelId] = useState<string>('');
   const [unitId, setUnitId] = useState<string>('');
   const [numSamples, setNumSamples] = useState<string>('25');
-  const [includeAiEvaluations, setIncludeAiEvaluations] =
-    useState<boolean>(false);
   const [pending, setPending] = useState<boolean>(false);
-  const [fetchedSamples, setFetchedSamples] = useState<StudentCodeSample[]>([]);
+  const [fetchedSamples, setFetchedSamples] = useState<StudentAnswer[]>([]);
+  const [evaluationPending, setEvaluationPending] = useState<boolean>(false);
+  const [evaluatedSamples, setEvaluatedSamples] = useState<
+    EvaluatedCodeSample[]
+  >([]);
 
   const downloadCSV = () => {
-    const csv = Papa.unparse(fetchedSamples);
+    const csv = Papa.unparse(evaluatedSamples);
     const csvData = new Blob([csv], {type: 'text/csv;charset=utf-8;'});
     const csvURL = window.URL.createObjectURL(csvData);
     const tempLink = document.createElement('a');
@@ -39,7 +44,6 @@ const StudentCodeDatasetMaker: React.FC = () => {
   const getStudentCodeSamples = async () => {
     setPending(true);
     const studentWorkRequest = {
-      includeAiEvaluations: includeAiEvaluations,
       numSamples: Number(numSamples),
       unitId: Number(unitId),
       levelId: Number(levelId),
@@ -48,13 +52,53 @@ const StudentCodeDatasetMaker: React.FC = () => {
     if (!codeSamples) {
       alert('No samples found for the given parameters.');
     } else {
-      const fetchedCodeSamples = codeSamples as unknown as StudentCodeSample[];
+      const fetchedCodeSamples = codeSamples as unknown as StudentAnswer[];
       const filteredCodeSamples = fetchedCodeSamples.filter(
         item => item !== null
       );
       setFetchedSamples(filteredCodeSamples);
     }
     setPending(false);
+  };
+
+  const getAIEvaluations = async () => {
+    setEvaluationPending(true);
+    const responsePromises = fetchedSamples.map(async studentResponse => {
+      const studentWorkToEvaluate = {
+        studentId: studentResponse.studentId,
+        studentDisplayName: studentResponse.studentDisplayName,
+        studentWork: studentResponse.studentWork,
+      };
+      return evaluateStudentResponse(studentWorkToEvaluate as StudentAnswer);
+    });
+    await Promise.allSettled(responsePromises);
+    setEvaluationPending(false);
+  };
+
+  const evaluateStudentResponse = async (studentAnswer: StudentAnswer) => {
+    const aiResponse = await evaluateStudentWork(
+      studentAnswer,
+      parseInt(levelId),
+      parseInt(unitId)
+    );
+    const evaluation: EvaluatedCodeSample = {
+      ...studentAnswer,
+      aiEvaluation: aiResponse.aiEvaluation,
+      aiReasoning: aiResponse.aiReasoning,
+      evaluationCriteria: aiResponse.evaluationCriteria,
+      id: aiResponse.id,
+    };
+    if (aiResponse.skillEvaluations) {
+      // TODO: Use skill id when we have Skills
+      for (let i = 1; i < aiResponse.skillEvaluations.length; i++) {
+        const skillEvaluation = aiResponse.skillEvaluations[i];
+        evaluation[`skill${i}evaluationCriteria`] =
+          skillEvaluation.evaluationCriteria;
+        evaluation[`skill${i}aiEvaluation`] = skillEvaluation.aiEvaluation;
+        evaluation[`skill${i}aiReasoning`] = skillEvaluation.aiReasoning;
+      }
+    }
+    setEvaluatedSamples(prevSamples => [...prevSamples, evaluation]);
   };
 
   return (
@@ -76,12 +120,6 @@ const StudentCodeDatasetMaker: React.FC = () => {
         />
         <br />
         <br />
-        <Checkbox
-          name="include AI evaluations"
-          label="Include AI evaluations"
-          onChange={() => setIncludeAiEvaluations(!includeAiEvaluations)}
-          checked={includeAiEvaluations}
-        />
         <TextField
           name="Number of Samples"
           label="How many samples of student work do you want?"
@@ -112,9 +150,18 @@ const StudentCodeDatasetMaker: React.FC = () => {
         <br />
         <div>
           <Button
+            text="Evaluate Student Code Samples"
+            onClick={getAIEvaluations}
+            disabled={fetchedSamples.length === 0}
+            isPending={evaluationPending}
+          />
+        </div>
+        <br />
+        <div>
+          <Button
             text="Download CSV"
             onClick={downloadCSV}
-            disabled={fetchedSamples.length === 0}
+            disabled={evaluatedSamples.length === 0}
           />
         </div>
       </div>

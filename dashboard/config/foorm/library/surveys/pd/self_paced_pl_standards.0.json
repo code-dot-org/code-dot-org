@@ -95,7 +95,7 @@
         {
           "type": "rating",
           "name": "confidence_use_skills",
-          "title": "After completing this module, do you feel more or less confident than before about using the skills you learned in your school or classroom?",
+          "title": "After completing this module, do you feel more or less confident than before about using the skills you learned in this module?",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Less confident",
@@ -259,7 +259,7 @@
         {
           "type": "rating",
           "name": "know_what_students_learn",
-          "title": "After completing this module, I have a basic understanding of what my students will learn in Code.org’s {module} curriculum.",
+          "title": "After completing this professional learning experience, I understand what my students will learn in Code.org's {module} curriculum.",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Strongly disagree",
@@ -268,7 +268,7 @@
         {
           "type": "rating",
           "name": "know_what_students_learn_module",
-          "title": "After completing this professional learning experience, I understand what my students will learn in Code.org's {module} curriculum.",
+          "title": "After completing this professional learning experience, I understand what my students will learn in Code.org's {module} unit.",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Strongly disagree",
@@ -312,11 +312,11 @@
           "type": "matrix",
           "name": "module_supported_learning",
           "title": "How did each of the following supported your learning?",
-          "description": "Rate each option from least helpful (1) to most helpful (7).",
+          "description": "Rate how helpful was each option from Not helpful (1) to Very helpful (7).",
           "columns": [
             {
               "value": "1",
-              "text": "1 - Least"
+              "text": "1 - Not"
             },
             {
               "value": "2",
@@ -340,7 +340,7 @@
             },
             {
               "value": "7",
-              "text": "7 - Most"
+              "text": "7 - Very"
             }
           ],
           "rows": [
@@ -447,7 +447,7 @@
           "natalia_comment": "NOTE: set the {module} variable in the simple survey configuration to pass-through the value you want to appear in the survey (eg. computer vision)",
           "rateCount": 7,
           "rateMax": 7,
-          "minRateDescription": "Definitely no",
+          "minRateDescription": "Not at all",
           "maxRateDescription": "Yes, definitely"
         },
         {
@@ -456,7 +456,7 @@
           "title": "Are you planning to use what you learned in this module in your role as an educator?",
           "rateCount": 7,
           "rateMax": 7,
-          "minRateDescription": "Definitely no",
+          "minRateDescription": "Not at all",
           "maxRateDescription": "Yes, definitely"
         },
         {

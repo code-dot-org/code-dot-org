@@ -2,6 +2,7 @@ district_s,state_s
 Birmingham City Schools,Alabama
 Dale County Schools,Alabama
 Elmore County Public Schools,Alabama
+Macon County Schools,Alabama
 Montgomery Public School,Alabama
 Montgomery Public Schools,Alabama
 Bering Strait School District,Alaska
@@ -28,6 +29,7 @@ Benton Schools,Arkansas
 Buffalo Island Central School District,Arkansas
 Lake Hamilton School District,Arkansas
 Newport Special School District,Arkansas
+AeroSTEM Academy,California
 Alameda Unified School District,California
 Alliance Jack H. Skirball Middle School,California
 Alta Loma School District,California
@@ -77,6 +79,7 @@ Regional School District 15,Connecticut
 Stamford Public Schools,Connecticut
 Wallingford School District,Connecticut
 Brandywine School District,Delaware
+Broward County Public Schools,Florida
 Divine Savior Academy,Florida
 Duval County Public Schools,Florida
 Madison County School District,Florida
@@ -161,6 +164,7 @@ Iowa City Community School District,Iowa
 Mid-Prairie Community Schools,Iowa
 North Iowa Community Schools,Iowa
 Osage Community School,Iowa
+Perry Community School District,Iowa
 Sioux City Community School District,Iowa
 South Winneshiek CSD,Iowa
 Woodbine Community School District,Iowa
@@ -517,6 +521,7 @@ Salem Christian School,Pennsylvania
 School District of Philadelphia,Pennsylvania
 School District of Springfield Township,Pennsylvania
 Union Area School District,Pennsylvania
+Wyoming Area School District,Pennsylvania
 Smithfield Public Schools,Rhode Island
 Aiken County Public Schools,South Carolina
 Beaufort County Schools,South Carolina
@@ -550,6 +555,7 @@ Oak Ridge City School District,Tennessee
 Overton County,Tennessee
 Sevier County School System,Tennessee
 St. Mary's Episcopal School,Tennessee
+Warren County Schools,Tennessee
 All Saints' Episcopal School of Fort Worth,Texas
 Austin Achieve Pflugerville,Texas
 Benavides Independent School District,Texas

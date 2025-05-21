@@ -1,7 +1,6 @@
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 interface StudentWorkRequest {
-  includeAiEvaluations: boolean;
   numSamples: number;
   unitId: number;
   levelId: number;

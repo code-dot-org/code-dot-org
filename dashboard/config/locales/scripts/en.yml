@@ -1161,6 +1161,8 @@ en:
             csd_survey:
               display_name: Post-Course Survey
           student_description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
+          lessons: {}
+          name: csd3-2017
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -10267,6 +10269,8 @@ en:
               name: Pygame
             lesson-8:
               name: Intro to Programming
+            lesson-9:
+              name: Validation practice
           lesson_groups:
             lessonGroup-2:
               display_name: Cyber
@@ -15284,7 +15288,7 @@ en:
             lesson-6:
               name: Color
             lesson-7:
-              name: Text
+              name: Melissa's Section
             lesson-8:
               name: Content
             lesson-9:
@@ -22110,8 +22114,32 @@ en:
           title: Getting Started with Code.org
           description_audience: ''
           description_short: ''
-          description: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching any of the Code.org curriculum** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\nPick your content: The Getting Started Content is organized in five lessons: \n* Lesson 1: Welcome to Code.org\n* Lesson 2: Navigating the Code.org Learning Platform\n* Lesson 3: The Student Experience\n* Lesson 4: Navigating Lesson Plans, Assessments, and Resources\n* Lesson 5: Navigating Support"
-          student_description: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching any of the Code.org curriculum** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\nPick your content: The Getting Started Content is organized in five lessons: \n* Lesson 1: Welcome to Code.org\n* Lesson 2: Navigating the Code.org Learning Platform\n* Lesson 3: The Student Experience\n* Lesson 4: Navigating Lesson Plans, Assessments, and Resources\n* Lesson 5: Navigating Support"
+          description: |-
+            ## Welcome
+            Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to use the Code.org platform** with your students.
+
+            Find the learning that works for you:
+
+            * **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**
+            * **Pick your content**: The Getting Started Content is organized into five lessons. You may choose to engage with them in any combination or order that you would like.
+               * Lesson 1: Welcome to Code.org
+               * Lesson 2: Navigating the Code.org Learning Platform
+               * Lesson 3: The Student Experience
+               * Lesson 4: Navigating Lesson Plans, Assessments, and Resources
+               * Lesson 5: Navigating Support
+          student_description: |-
+            ## Welcome
+            Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to use the Code.org platform** with your students.
+
+            Find the learning that works for you:
+
+            * **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**
+            * **Pick your content**: The Getting Started Content is organized into five lessons. You may choose to engage with them in any combination or order that you would like.
+               * Lesson 1: Welcome to Code.org
+               * Lesson 2: Navigating the Code.org Learning Platform
+               * Lesson 3: The Student Experience
+               * Lesson 4: Navigating Lesson Plans, Assessments, and Resources
+               * Lesson 5: Navigating Support
         facilitator-access-csaif:
           lessons: {}
           lesson_groups: {}
@@ -23891,7 +23919,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-k5-music-lab-2025
-          title: " \U0001F3B6 PL FOR LAUNCH Teaching Introduction to Programming with Music Lab  \U0001F3B6 "
+          title: " \U0001F3B6 PL FOR LAUNCH Teaching Programming with Music  \U0001F3B6 "
           description_audience: ''
           description_short: ''
           description: ''
@@ -24114,11 +24142,11 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-csd-unit1-2025
-          title: Teaching Problem Solving and Computing
+          title: Preparing to Teach Problem Solving and Computing
           description_audience: ''
           description_short: ''
-          description: "This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Problem Solving and Computing.\n* Learn the key problem solving frameworks utilized in the unit\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 40 minutes"
-          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Problem Solving and Computing.\n* Learn the key problem solving frameworks utilized in the unit\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 40 minutes"
+          description: "##### This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n##### **In this professional learning module, you will:**\n* ##### Get an introduction to Problem Solving and Computing.\n* ##### Learn the key problem solving frameworks utilized in the unit\n* ##### Practice key concepts included in the unit.\n* ##### Explore end-of-chapter projects.\n\n##### **Suggested time:** 40 minutes"
+          student_description: "##### This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n##### **In this professional learning module, you will:**\n* ##### Get an introduction to Problem Solving and Computing.\n* ##### Learn the key problem solving frameworks utilized in the unit\n* ##### Practice key concepts included in the unit.\n* ##### Explore end-of-chapter projects.\n\n##### **Suggested time:** 40 minutes"
         self-paced-pl-teaching-csd-unit0-2025:
           lessons: {}
           lesson_groups:
@@ -24425,3 +24453,18 @@ en:
             * Make a plan for implementing the unit with your students.
 
             **Suggested Time:** 100 minutes
+        coding-with-music:
+          lessons:
+            lesson-1:
+              name: Songwriter's Toolbox
+            lesson-2:
+              name: Producer Power
+            lesson-3:
+              name: Sound Designer's Studio
+          lesson_groups: {}
+          name: coding-with-music
+          title: 'Coding with Music '
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
