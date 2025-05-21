@@ -64,18 +64,18 @@ class HttpCache
   # in a cacheable script
   # TODO TEACH-1634 support the /courses/ path
   UNCACHED_UNIT_LEVEL_PATHS = [
-    '/s/dance-2019/lessons/1/levels/10',
-    '/s/dance-ai-2023/lessons/1/levels/10',
-    '/s/poem-art-2021/lessons/1/levels/9',
-    '/s/poem-art-2021/lessons/1/levels/2', # prediction levels are not cacheable
-    '/s/poem-art-2021/lessons/1/levels/5', # prediction levels are not cacheable
-    '/s/hello-world-food-2021/lessons/1/levels/11',
-    '/s/hello-world-animals-2021/lessons/1/levels/11',
-    '/s/hello-world-retro-2021/lessons/1/levels/11',
-    '/s/hello-world-emoji-2021/lessons/1/levels/11',
-    '/s/hello-world-space-2022/lessons/1/levels/11',
-    '/s/hello-world-soccer-2022/lessons/1/levels/11',
-    '/s/outbreak/lessons/1/levels/10'
+    '/courses/dance-2019/units/1/lessons/1/levels/10',
+    '/courses/dance-ai-2023/units/1/lessons/1/levels/10',
+    '/courses/poem-art-2021/units/1/lessons/1/levels/9',
+    '/courses/poem-art-2021/units/1/lessons/1/levels/2', # prediction levels are not cacheable
+    '/courses/poem-art-2021/units/1/lessons/1/levels/5', # prediction levels are not cacheable
+    '/courses/hello-world-food-2021/units/1/lessons/1/levels/11',
+    '/courses/hello-world-animals-2021/units/1/lessons/1/levels/11',
+    '/courses/hello-world-retro-2021/units/1/lessons/1/levels/11',
+    '/courses/hello-world-emoji-2021/units/1/lessons/1/levels/11',
+    '/courses/hello-world-space-2022/units/1/lessons/1/levels/11',
+    '/courses/hello-world-soccer-2022/units/1/lessons/1/levels/11',
+    '/courses/outbreak/units/1/lessons/1/levels/10'
   ]
 
   # A map from script name to script level URL pattern.
@@ -102,8 +102,9 @@ class HttpCache
     music-jam-2024
     outbreak
   ).map do |script_name|
-    # Most scripts use the default route pattern.
-    [script_name, "/s/#{script_name}/lessons/*"]
+    # Most units use the default route pattern. Assume that all cached units are
+    # part of single unit courses, where the course name equals the unit name.
+    [script_name, "/courses/#{script_name}/units/1/lessons/*"]
   end.to_h.merge(
     # Add the "special case" routes here.
     'hourofcode' => '/hoc/*',
