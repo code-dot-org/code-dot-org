@@ -535,12 +535,14 @@ export function cleanUp(
     let collider = getCollider(block);
 
     const {viewWidth} = workspace.getMetrics();
-    const maximumX = viewWidth - SPACE_BETWEEN_BLOCKS;
+    const maximumX = viewWidth - WORKSPACE_PADDING;
     const blockOutOfBounds = workspace.RTL
       ? collider.x - collider.width < 0
       : collider.x + collider.width > maximumX;
     if (blockOutOfBounds) {
-      x = workspace.RTL ? collider.width : maximumX - collider.width;
+      x = workspace.RTL
+        ? Math.min(collider.width, maximumX)
+        : Math.max(maximumX - collider.width, WORKSPACE_PADDING);
       block.moveTo(new Blockly.utils.Coordinate(x, y));
       collider = getCollider(block);
     }

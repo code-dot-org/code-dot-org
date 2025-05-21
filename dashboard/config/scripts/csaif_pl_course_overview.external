@@ -24,8 +24,18 @@ markdown <<MARKDOWN
   </div>
 </div>
 
+---
 
-#### This unit consists of 11 lessons, takes about three weeks to complete, and does not have Python programming.
+<div style="clear:both;"></div>
+
+## Unit Calendar 
+
+#### Take a quick look at the lessons included in this unit using the calendar tool.
+
+#### This version of the calendar shows the pacing for 45 minute class periods and can be customized using the drop-down menu to accommodate your schedule. 
+
+#### Check out the <a href="https://studio.code.org/s/aif5-2025" target="blank" rel="noopener noreferrer">calendar feature</a> on top of the unit preview. 
+
 
 <div style="clear:both;"></div>
 
@@ -34,7 +44,7 @@ markdown <<MARKDOWN
 </p>
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ Preview the full <a href='https://studio.code.org/s/aif5-2025' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Unit</a>.
+    ➡️ Preview the full <a href='https://studio.code.org/s/aif5-2025' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'> Unit</a>.
 </p>
 
 MARKDOWN

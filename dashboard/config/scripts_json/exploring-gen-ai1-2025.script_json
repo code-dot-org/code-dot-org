@@ -19,7 +19,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-16 18:49:37 UTC",
+    "serialized_at": "2025-05-19 22:52:41 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -406,42 +407,42 @@
       }
     },
     {
-      "key": "324d4fff-7d3e-4399-9fbb-39d93e226269",
+      "key": "f0971740-1316-4a25-8ac4-069aa0c2bc3e",
       "position": 4,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "324d4fff-7d3e-4399-9fbb-39d93e226269",
+        "lesson_activity.key": "f0971740-1316-4a25-8ac4-069aa0c2bc3e",
         "lesson.key": "Introduction to Generative AI",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
       }
     },
     {
-      "key": "05ec083e-936f-4e92-a0b1-a6d9b932d88d",
+      "key": "d0491cae-913e-4ce0-8d87-d24f71e537e7",
       "position": 5,
       "properties": {
-        "duration": 35,
+        "duration": 30,
         "name": "Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "05ec083e-936f-4e92-a0b1-a6d9b932d88d",
+        "lesson_activity.key": "d0491cae-913e-4ce0-8d87-d24f71e537e7",
         "lesson.key": "Introduction to Generative AI",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
       }
     },
     {
-      "key": "11bf121a-ccd0-4229-8cf4-9688e915015d",
+      "key": "03c05851-832e-48fe-a156-b785c9ce350b",
       "position": 6,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "11bf121a-ccd0-4229-8cf4-9688e915015d",
+        "lesson_activity.key": "03c05851-832e-48fe-a156-b785c9ce350b",
         "lesson.key": "Introduction to Generative AI",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
@@ -1378,27 +1379,10 @@
       }
     },
     {
-      "key": "af367dd2-4821-47e3-92b1-54ce62c7b217",
+      "key": "fbda9764-02d8-4289-8f2e-979fe91bb86c",
       "position": 1,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/d3dba7510ab03650989d66a85d87362b-Slide4.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What’s an example of a significant technological innovation from the last century? For example: think of something that didn’t exist when your grandparents were your age, but you use everyday now.\n\t\t<br />\n\t\t<br />Have students discuss in small groups before regrouping as a full group. Ask several students from around the class to share what they said, and let students raise their hands or quietly snap their fingers if they said the same thing or something similar.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This prompt is intentionally open-ended to invite all students into the conversation and offer some kind of technological innovation. Some potential answers might be the internet, social media, driverless cars, smartphones, and (of course) artificial intelligence.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/c6d3bd63e7ce58e2693f0c76b310661f-Slide5.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Many devices we use today were once marvels of modern technology. For example, this picture shows Margaret Hamilton in front of the source code used in the computers for the Apollo 11 space mission. At the time, computers were an exciting innovation set to fundamentally change how we live and work\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Fast forward to today, and the same conversation is happening around artificial intelligence. For example, this picture shows Mira Murati, the chief technology officer of OpenAI, talking about their chatbot ChatGPT, which is a special kind of “generative” artificial intelligence that lets you chat with an artificial intelligence agent. Just like computers many years go, we’re having these same conversations about the impact of artificial intelligence and its potential impact on society and how we live and work.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Teaching Tip: Intentional Foreshadowing** - The comparison on this slide between the computer and artificial intelligence is very intentional, as we will ultimately use the same framing for understanding how a computer works to also understand how generative AI works. Making this kind of association early and often is important to help avoid anthropomorphizing artificial intelligence or making it seem impossible to understand. If we are capable of understanding a computer and seeing it as a machine (and not a human), then we are capable of doing the same with artificial intelligence."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "af367dd2-4821-47e3-92b1-54ce62c7b217",
-        "lesson_activity.key": "324d4fff-7d3e-4399-9fbb-39d93e226269"
-      }
-    },
-    {
-      "key": "eb027004-13e1-4cad-a950-cbd0f4f31ae2",
-      "position": 2,
-      "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/20298fbc67a38154ba9d1fe42b2f568f-Slide6.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today we’ll start to explore the impact generative AI can have on how we live and work, and uncover some of the key themes we’ll see throughout this unit.\n\t\t<br />\n\t\t<br /><strong>Question of the Day:</strong> How can we begin to understand Generative AI’s impact on how we live and work?\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ/export/png?id=1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ&pageid=g359238aade1_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Have you heard the term \"Generative AI\" before? Can you think of any jobs or careers that use Generative AI?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This prompt allows students to share anything that may be on their mind already about generative AI, with a particular edge towards jobs or careers since this will be a theme in today's lesson. There's no explicit learning goal with this discussion - see what your students already know about generative AI and what they may be curious about before transitioning to the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ/export/png?id=1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ&pageid=g2b5b268c506_0_173\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Generative AI is beginning to have an impact on society in so many ways! Let's hear from a few folks who work with AI as part of their everyday lives\n\t\t<br />\n\t\t<br /><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://www.youtube.com/watch?v=21eVegaVMtE\" target=\"_blank\">Exploring Generative AI</a> video, just from 0:00-1:08\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What's one fact or piece of advice that stands out to you from the video?\n\t\t<br />\n\t\t<br />Have students discuss in small groups before regrouping as a full group.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This video is an encouraging introduction to professionals currently working in AI. Some students may gravitate towards the sentiments about \"getting started\" and it being an \"exciting early time\", which may motivate their engagement and participation in this unit. Some students may notice the statements about the extraordinary growth and usage of generative AI, which can be revisited during part of the main activity.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ/export/png?id=1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ&pageid=g2c934a05343_0_2\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today we’ll start to explore the impact generative AI can have on how we live and work, and uncover some of the key themes we’ll see throughout this unit.\n\t\t<br />\n\t\t<br /><strong>Question of the Day:</strong> How can we begin to understand Generative AI’s impact on how we live and work?\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n   ",
         "tips": [
           {
             "type": "teachingTip",
@@ -1407,15 +1391,15 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "eb027004-13e1-4cad-a950-cbd0f4f31ae2",
-        "lesson_activity.key": "324d4fff-7d3e-4399-9fbb-39d93e226269"
+        "activity_section.key": "fbda9764-02d8-4289-8f2e-979fe91bb86c",
+        "lesson_activity.key": "f0971740-1316-4a25-8ac4-069aa0c2bc3e"
       }
     },
     {
-      "key": "bd7e4d9b-6a1f-45a9-a611-07d643559368",
+      "key": "1e98ce11-8aa9-406a-b9f5-93483b9c629d",
       "position": 1,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/784832449b853bc77529cded0bee69ee-Slide8.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Show students an example of a text-based generative AI. There are a few options for how to do this:\n\t\t<br />\n\t\t<br />- Option 1: If you are able to access a large-language model at school, such as ChatGPT or Google Gemini or Claude.ai, then you can demonstrate the model for the class. You should come up with 3-4 prompts you plan to demonstrate and test them ahead of time, then run them in front of the class. You can also take questions from the audience, but consider finding a way to preview the responses before students see them to make sure they are appropriate.\n\t\t<br />- Option 2: Play the video embedded in the slides, which shows 3 prompts being given to ChatGPT. Paused the video if needed to look closely at the types of responses being given.\n\t\t<br />- Option 3: Find another video of a person using ChatGPT in an interesting and fascinating way that you think will resonate with your students. Paused the video if needed to look closely at the types of responses being given.\n\t\t<br />\n\t\t<br />Avoid examples with image-based generative AI (like deepfakes or DALL-E) since these technologies are not covered in this unit.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> In many ways, generative AI seems like magic - they’re able to create results that seem to mimic human intelligence and perform incredible tasks.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ/export/png?id=1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ&pageid=g1f54bd3decc_0_15\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Show students an example of a text-based generative AI. There are a few options for how to do this:\n\t\t<br />\n\t\t<br />- Option 1: If you are able to access a large-language model at school, such as ChatGPT or Google Gemini or Claude.ai, then you can demonstrate the model for the class. You should come up with 3-4 prompts you plan to demonstrate and test them ahead of time, then run them in front of the class. You can also take questions from the audience, but consider finding a way to preview the responses before students see them to make sure they are appropriate.\n\t\t<br />- Option 2: Play the video embedded in the slides, which shows 3 prompts being given to ChatGPT. Paused the video if needed to look closely at the types of responses being given.\n\t\t<br />- Option 3: Find another video of a person using ChatGPT in an interesting and fascinating way that you think will resonate with your students. Paused the video if needed to look closely at the types of responses being given.\n\t\t<br />\n\t\t<br />Avoid examples with image-based generative AI (like deepfakes or DALL-E) since these technologies are not covered in this unit.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> In many ways, generative AI seems like magic - they’re able to create results that seem to mimic human intelligence and perform incredible tasks.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n   ",
         "tips": [
           {
             "type": "teachingTip",
@@ -1424,43 +1408,53 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "bd7e4d9b-6a1f-45a9-a611-07d643559368",
-        "lesson_activity.key": "05ec083e-936f-4e92-a0b1-a6d9b932d88d"
+        "activity_section.key": "1e98ce11-8aa9-406a-b9f5-93483b9c629d",
+        "lesson_activity.key": "d0491cae-913e-4ce0-8d87-d24f71e537e7"
       }
     },
     {
-      "key": "10a4ca1e-c41f-4052-b5da-3ee8d2b3d043",
+      "key": "03dfe77a-defb-4946-a673-4237df6abe93",
       "position": 2,
       "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/5b00c5ac2796d6f4306b09407ffe19a1-Slide9.PNG\"></td>\n    <td style=\"width: 75%\">\n      <img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> As a result of these amazing advancements, there’s been a lot of AI hype. There are new articles every week about how generative AI will revolutionize this thing or that thing, or how it will change a certain industry forever. There’s a lot of hype and excitement and buildup about how AI will forever change the world, just like there was about computers when they were first invented.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/3084ceffb80a60d22be1e8e9a273f7e6-Slide10.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Imagine you met someone where all they know about generative AI is what they’ve read in the headlines - all the hype and excitement. What do you imagine they believe about AI?\n\t\t<br />\n\t\t<br />Have students discuss in a small group, then have a few students share with the class. If students struggle to come up with ideas, ask them to think of their younger cousins or the elders in their family whose beliefs about artificial intelligence may only be coming from headlines like this.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Try to draw out responses that hypothesize that these people believe AI can do just about anything, or potentially don’t have any flaws. Encourage students to consider friends or family members and what they believe, and how much of it is built up by all of the hype around AI. Emphasize that this is a thought experiment where we’re purposefully imagining a person whose only read these kinds of hyped-up headlines, even if we might already know the facts or reality are much different than what is presented in these types of stories. This kind of dissonance - what a person might think from headlines vs what the realities are - will be a key distinction for the rest of the unit.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> It can be exciting to imagine all the ways a new technology can improve our lives, but it’s important to still be critical and cautious to make sure we’re not swept up in the hype. This is part of being a responsible and informed citizen, to make sure we’re not taken advantage and know the true benefits and limits of technology.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/697fda0558473d62b75f465634eb3182-Slide11.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This will be a key theme in this unit - we should understand how generative AI works in order to actively guide its impact on our lives and ensures its responsible use within society.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Throughout this unit, we’re going to return to this fictional “AI Hype” person who might have certain beliefs that may not be fully formed and our job will be to respond and help educate them. And the best way to do that is to make sure we understand this technology ourselves.\n\t\t<br />\n    </td>\n  </tr>\n\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/34d7d205ed8b1f38d906df4be960ba44-Slide12.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Let’s start by discussing Artificial Intelligence, or AI, in general. AI is a technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions. Some examples include\n\t\t<br />- When you call a help line or a store and you talk to a robot for a brief moment before speaking to a human - this kind of AI understands human language\n\t\t<br />- A robot that’s learned to play chess and can beat a human opponent - this robot recognizes patterns from previous games to learn the optimal strategy\n\t\t<br />- A robot that can navigate around your house and avoid your furniture - this robot uses sensors to make decisions\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What are other examples of AI you can think of?\n\t\t<br />\n\t\t<br />Have students discuss with a neighbor before sharing with the class. Consider asking students to share something interesting they heard their partner say, rather than sharing their own idea.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This is a purposefully open-ended discussion - students will share a variety of answers. For example, students may recall examples from movies or television, or they will reference AI technologies on their devices (like image filters), or they may reference recommendation systems. Try to involve as many student voices in the conversation as you can before continuing to the next slide.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ/export/png?id=1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ&pageid=g1f54bd3decc_0_21\"></td>\n    <td style=\"width: 75%\">\n      <img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> As a result of these amazing advancements, there’s been a lot of AI hype. There are new articles every week about how generative AI will revolutionize this thing or that thing, or how it will change a certain industry forever. There’s a lot of hype and excitement and buildup about how AI will forever change the world, just like there was about computers when they were first invented.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ/export/png?id=1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ&pageid=g1f54bd3decc_0_35\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Imagine you met someone where all they know about generative AI is what they’ve read in the headlines - all the hype and excitement. What do you imagine they believe about AI?\n\t\t<br />\n\t\t<br />Have students discuss in a small group, then have a few students share with the class. If students struggle to come up with ideas, ask them to think of their younger cousins or the elders in their family whose beliefs about artificial intelligence may only be coming from headlines like this.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Try to draw out responses that hypothesize that these people believe AI can do just about anything, or potentially don’t have any flaws. Encourage students to consider friends or family members and what they believe, and how much of it is built up by all of the hype around AI. Emphasize that this is a thought experiment where we’re purposefully imagining a person whose only read these kinds of hyped-up headlines, even if we might already know the facts or reality are much different than what is presented in these types of stories. This kind of dissonance - what a person might think from headlines vs what the realities are - will be a key distinction for the rest of the unit.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> It can be exciting to imagine all the ways a new technology can improve our lives, but it’s important to still be critical and cautious to make sure we’re not swept up in the hype. This is part of being a responsible and informed citizen, to make sure we’re not taken advantage and know the true benefits and limits of technology.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ/export/png?id=1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ&pageid=g1f54bd3decc_0_50\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This will be a key theme in this unit - we should understand how generative AI works in order to actively guide its impact on our lives and ensures its responsible use within society.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Throughout this unit, we’re going to return to this fictional “AI Hype” person who might have certain beliefs that may not be fully formed and our job will be to respond and help educate them. And the best way to do that is to make sure we understand this technology ourselves.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ/export/png?id=1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ&pageid=gca418c6afa_0_1141\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Let’s start by discussing Artificial Intelligence, or AI, in general. AI is a technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions. Some examples include\n\t\t<br />- When you call a help line or a store and you talk to a robot for a brief moment before speaking to a human - this kind of AI understands human language\n\t\t<br />- A robot that’s learned to play chess and can beat a human opponent - this robot recognizes patterns from previous games to learn the optimal strategy\n\t\t<br />- A robot that can navigate around your house and avoid your furniture - this robot uses sensors to make decisions\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What are other examples of AI you can think of?\n\t\t<br />\n\t\t<br />Have students discuss with a neighbor before sharing with the class. Consider asking students to share something interesting they heard their partner say, rather than sharing their own idea.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This is a purposefully open-ended discussion - students will share a variety of answers. For example, students may recall examples from movies or television, or they will reference AI technologies on their devices (like image filters), or they may reference recommendation systems. Try to involve as many student voices in the conversation as you can before continuing to the next slide.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n   ",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Teaching Tip: Vocabulary Management** - Artificial Intelligence may seem ubiquitous, but we don’t want to assume everyone in the room has heard this term before so we introduce it here so everyone starts with the same foundation. However, this sometimes introduces tension with vocabulary management - how should students keep track of vocabulary in this unit so they can reference it when needed? \n\nThis unit provides a partial solution - students will get a graphic organizer at the end of this lesson that includes key vocabulary and concepts for the entire unit. However, not all words (like this one) are represented in that organizer. If you have your own system for tracking vocabulary that you've used in previous units, consider applying it here as well so students have a consistent experience.\n\nIf you don't have a system for managing vocabulary, you might consider the following strategies:\n- Create a Word Wall or posters for these vocabulary terms and hang them up in your classroom as they are introduced throughout the unit. \n- Provide a vocabulary handout that is updated after lessons and lives near desks or computers so students can reference as needed."
+            "markdown": "**Teaching Tip: Vocabulary Management** - Artificial Intelligence may seem ubiquitous, but we don’t want to assume everyone in the room has heard this term before so we introduce it here so everyone starts with the same foundation. However, this sometimes introduces tension with vocabulary management - how should students keep track of vocabulary in this unit so they can reference it when needed? This unit provides a partial solution - students will get a graphic organizer at the end of this lesson that includes key vocabulary and concepts for the entire unit. However, not all words (like this one) are represented in that organizer. If you have your own system for tracking vocabulary, feel free to apply it for these terms as well. But it’s also reasonable to avoid this altogether and instead provide other supports for students to reference key vocabulary - for example, you could create a Word Wall or posters for these vocabulary terms and hang them up in your classroom as they are introduced throughout the unit. Or, you could have a vocabulary handout that is updated after lessons and lives near desks or computers so students can reference as needed."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "10a4ca1e-c41f-4052-b5da-3ee8d2b3d043",
-        "lesson_activity.key": "05ec083e-936f-4e92-a0b1-a6d9b932d88d"
+        "activity_section.key": "03dfe77a-defb-4946-a673-4237df6abe93",
+        "lesson_activity.key": "d0491cae-913e-4ce0-8d87-d24f71e537e7"
       }
     },
     {
-      "key": "d4f4b136-b511-4d76-8251-b3959c9203aa",
+      "key": "b07dbbe8-8db5-47c7-8c9d-20b41061bc54",
       "position": 3,
       "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/e1a56c5d13ce3ce26a0490730102c135-Slide13.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> There are different types of artificial intelligences that focus on different things. One important type is called Machine Learning - let’s watch a video to learn a bit more. After the video, we’ll reflect on which of the examples we just named are also machine learning examples.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://www.youtube.com/watch?v=KHbwOetbmbs\" target=\"_blank\">How AI Works: Machine Learning video</a>\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Which examples from before are machine learning?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students won’t have enough context about machine learning to give perfect answers here - instead, help students make connections between things they may have mentioned and examples they saw in the video, such as recommendation algorithms or image recognition / filters. If students ask “is this an example of machine learning?”, it’s okay to say we’re not sure and suggest students do some research if they’re interested. If needed, you can skip to 1:06 in the video where it shows a list of various machine learning tasks. Once a few students have reflected on different machine learning tasks, continue to the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/3f246d5a10df17bfbf48681d880bf48f-Slide14.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This hierarchy of AI types goes even deeper!\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Deep Learning uses complex tools called Neural Networks, which we’ll learn more about in this unit. A few examples of Deep Learning are cancer detection or email classification, where we give the AI system an email and asked \"is this junk?\".\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> But what if we flipped this around? What if we started by saying “write me an email that sounds like junk mail” and asked it to generate the text instead?\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This is the latest evolution in AI technology, called Generative AI. It works similar to these other Deep Learning systems, just in reverse - generating new text or image or video rather than trying to classify it.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/58a38cbe7d14a27d3cef8726d5722a9f-Slide15.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Let’s hear a little bit about some of the advances in generative AI from the people who are actively working on it!\n\t\t<br />\n\t\t<br /><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://youtu.be/6NDEoJ4gWtM\" target=\"_blank\">Introduction to Large Language Models (LLMs)</a> video\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is a Large Language Model?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> The answer to this flies by in the video and is easy to miss, so students aren’t expected to answer it perfectly at this point. Instead, this question sets up for the next slide where we introduce a formal definition. For the discussion, have students share with a neighbor, but don’t have students share as a full group. Instead, continue to the next slide where you can ask how closely their definitions here align with the definition we’ll use as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Let’s see how well your definitions match up with the one we’ll use in this class\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/6e9e77a64d37c04bfb1e93ce2b98ac0c-Slide16.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> First let’s define one of the words in this phrase: model. An AI model is a computer program designed to make a decision, like deciding whether or not to unlock your phone based on your facial ID. Regular machine learning models are designed to solve only one type of problem, and the data they need has to be very specialized for the task it’s designed to complete.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Then we have large-language models, which is a computer program that analyzes large amounts of raw human-created data to the point where it can represent and recreate new data to perform a variety of tasks.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> The two reasons large-language models are such a big technological breakthrough is the capacity to look at the raw human-created data and perform a variety of different tasks with the same model - like passing lawyer exams and science exams with the same model\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/e1e84f76a4d0860778318b6dcbe8b86a-Slide17.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We also have our first clue to help us understand how all the magic of a large-language model works: the fact that it’s a computer program!\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Computers are all around us - in our pockets, in our cars, in schools - even if they look different. What makes something a computer - what do they all have in common?\n\t\t<br />\n\t\t<br />Have students share with their neighbors, but don’t regroup for a full-group share-out. Instead, watch the video on the next slide before debriefing.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/7e068f4c696982b8350a8bfc796db027-Slide18.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://www.youtube.com/watch?v=sLIJNEIE0Rs\" target=\"_blank\">What Makes a Computer a Computer</a> video?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What makes a computer a computer? Is this similar to the answers you discussed?\n\t\t<br />\n\t\t<br />Have students share out as a full class\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should have picked up that a computer is made up of Input <>Storage <> Processing <> Output components. When comparing to the earlier discussion, they may make comparisons to these structures in their answers - for example, all computers have some kind of keyboard or touch screen interface (ie: input), or all computers can perform calculation of some kind (processing).\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/60fc1c59f547eef11a216ad356633a78-Slide19.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This is another key theme in this unit - we can understand large-language models by breaking it into pieces - input, storage, processing, output - and understanding each piece.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> And using this information, we’ll have a better understanding of the opportunities and limitations of generative AI and be better equipped to talk to our imaginary friends who only believe the hype.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/38c720c98f79f0ddf589748d858a61eb-Slide20.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Based on the generative AI demo we saw earlier, what might you predict is the input, storage, processing, and output for a chatbot language model?\n\t\t<br />\n\t\t<br />Have students discuss in groups before sharing as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This is an open-ended foreshadowing question just to help students start making predictions and thinking about what may come in later lessons. Some students might already think the input are words, like the thing you type into the chatbot, and the output is the new paragraph that the chatbot generates. Students aren’t expected to have correct answers here especially around storage and processing - it’s just a prediction that can be returned to in later lessons.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/f5ac995d17fa8e7a379a515d7c338520-Slide21.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out the <a href=\"https://docs.google.com/presentation/d/1iKiiURXTDQktgr9_r_B8-9_XBW-YrCp8ueQGVtqrJIc/edit\" target=\"_blank\">Generative AI Graphic Organizer</a>\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We are going to use this graphic organizer throughout the entire unit to understand how language models work. By the end of the unit, these will be filled in and we’ll have definitive answers for each of these components!\n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ/export/png?id=1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ&pageid=g2c934a05343_0_21\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> There are different types of artificial intelligences that focus on different things. One important type is called Machine Learning - let’s watch a video to learn a bit more. After the video, we’ll reflect on which of the examples we just named are also machine learning examples.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://www.youtube.com/watch?v=KHbwOetbmbs\" target=\"_blank\">How AI Works: Machine Learning video</a>\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Which examples from before are machine learning?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students won’t have enough context about machine learning to give perfect answers here - instead, help students make connections between things they may have mentioned and examples they saw in the video, such as recommendation algorithms or image recognition / filters. If students ask “is this an example of machine learning?”, it’s okay to say we’re not sure and suggest students do some research if they’re interested. If needed, you can skip to 1:06 in the video where it shows a list of various machine learning tasks. Once a few students have reflected on different machine learning tasks, continue to the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ/export/png?id=1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ&pageid=g2c934a05343_0_61\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This hierarchy of AI types goes even deeper!\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Deep Learning uses complex tools called Neural Networks, which we’ll learn more about in this unit. A few examples of Deep Learning are cancer detection or email classification, where we give the AI system an email and asked \"is this junk?\".\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> But what if we flipped this around? What if we started by saying “write me an email that sounds like junk mail” and asked it to generate the text instead?\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This is the latest evolution in AI technology, called Generative AI. It works similar to these other Deep Learning systems, just in reverse - generating new text or image or video rather than trying to classify it.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ/export/png?id=1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ&pageid=g2c934a05343_0_100\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Let’s hear a little bit about some of the advances in generative AI from the people who are actively working on it!\n\t\t<br />\n\t\t<br /><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://youtu.be/6NDEoJ4gWtM\" target=\"_blank\">Introduction to Large Language Models (LLMs)</a> video\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is a Large Language Model?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> The answer to this flies by in the video and is easy to miss, so students aren’t expected to answer it perfectly at this point. Instead, this question sets up for the next slide where we introduce a formal definition. For the discussion, have students share with a neighbor, but don’t have students share as a full group. Instead, continue to the next slide where you can ask how closely their definitions here align with the definition we’ll use as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Let’s see how well your definitions match up with the one we’ll use in this class\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ/export/png?id=1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ&pageid=g2c934a05343_0_135\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> First let’s define one of the words in this phrase: model. An AI model is a computer program designed to make a decision, like deciding whether or not to unlock your phone based on your facial ID. Regular machine learning models are designed to solve only one type of problem, and the data they need has to be very specialized for the task it’s designed to complete.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Then we have large-language models, which is a computer program that analyzes large amounts of raw human-created data to the point where it can represent and recreate new data to perform a variety of tasks.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> The two reasons large-language models are such a big technological breakthrough is the capacity to look at the raw human-created data and perform a variety of different tasks with the same model - like passing lawyer exams and science exams with the same model\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ/export/png?id=1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ&pageid=g359238aade1_0_26\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Now that we know a bit more about generative AI, let's see a few more applications of it\n\t\t<br />\n\t\t<br /><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://www.youtube.com/watch?v=21eVegaVMtE\" target=\"_blank\">Exploring Generative AI</a> video, just from 1:18-2:22\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is one example from the video of how people are using AI in their work?\n\t\t<br />\n\t\t<br />Have students discuss in small groups before regrouping as a full group.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should pull out the examples about transportation or music recommendations involving generative AI\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ/export/png?id=1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ&pageid=g1f54bd3decc_0_59\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Looking back at this definition, we also have our first clue to help us understand how all the magic of a large-language model works: the fact that it’s a computer program!\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Computers are all around us - in our pockets, in our cars, in schools - even if they look different. What makes something a computer - what do they all have in common?\n\t\t<br />\n\t\t<br />Have students share with their neighbors, but don’t regroup for a full-group share-out. Instead, watch the video on the next slide before debriefing.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ/export/png?id=1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ&pageid=g2c934a05343_0_150\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://www.youtube.com/watch?v=sLIJNEIE0Rs\" target=\"_blank\">What Makes a Computer a Computer</a> video?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What makes a computer a computer? Is this similar to the answers you discussed?\n\t\t<br />\n\t\t<br />Have students share out as a full class\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should have picked up that a computer is made up of Input <>Storage <> Processing <> Output components. When comparing to the earlier discussion, they may make comparisons to these structures in their answers - for example, all computers have some kind of keyboard or touch screen interface (ie: input), or all computers can perform calculation of some kind (processing).\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ/export/png?id=1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ&pageid=g1f54bd3decc_0_132\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This is another key theme in this unit - we can understand large-language models by breaking it into pieces - input, storage, processing, output - and understanding each piece.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> And using this information, we’ll have a better understanding of the opportunities and limitations of generative AI and be better equipped to talk to our imaginary friends who only believe the hype.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ/export/png?id=1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ&pageid=g1f54bd3decc_0_144\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Based on the generative AI demo we saw earlier, what might you predict is the input, storage, processing, and output for a chatbot language model?\n\t\t<br />\n\t\t<br />Have students discuss in groups before sharing as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This is an open-ended foreshadowing question just to help students start making predictions and thinking about what may come in later lessons. Some students might already think the input are words, like the thing you type into the chatbot, and the output is the new paragraph that the chatbot generates. Students aren’t expected to have correct answers here especially around storage and processing - it’s just a prediction that can be returned to in later lessons.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ/export/png?id=1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ&pageid=g1413e1213c5_0_216\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out the <a href=\"https://docs.google.com/presentation/d/1iKiiURXTDQktgr9_r_B8-9_XBW-YrCp8ueQGVtqrJIc/edit\" target=\"_blank\">Generative AI Graphic Organizer</a>\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We are going to use this graphic organizer throughout the entire unit to understand how language models work. By the end of the unit, these will be filled in and we’ll have definitive answers for each of these components!\n    </td>\n  </tr>\n\n</table>"
       },
       "seeding_key": {
-        "activity_section.key": "d4f4b136-b511-4d76-8251-b3959c9203aa",
-        "lesson_activity.key": "05ec083e-936f-4e92-a0b1-a6d9b932d88d"
+        "activity_section.key": "b07dbbe8-8db5-47c7-8c9d-20b41061bc54",
+        "lesson_activity.key": "d0491cae-913e-4ce0-8d87-d24f71e537e7"
       }
     },
     {
-      "key": "05977224-3781-49b2-9a0c-9b66cba5fa51",
+      "key": "83cf45f0-2497-441f-9944-cc464a949016",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "83cf45f0-2497-441f-9944-cc464a949016",
+        "lesson_activity.key": "d0491cae-913e-4ce0-8d87-d24f71e537e7"
+      }
+    },
+    {
+      "key": "8a920da8-ebbc-4419-a0af-eea10f4e25fe",
       "position": 1,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/c24a21076b5ee11b567f45cfea08f395-Slide23.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students answer the following questions on their own\n\t\t<br />\n\t\t<br />- What is something new you learned about AI today?\n\t\t<br />- What is a question you still have about AI?\n\t\t<br />\n\t\t<br />Consider collecting these as an exit ticket to review what knowledge and questions students have coming into this unit.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ/export/png?id=1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ&pageid=g2b5b268c506_0_44\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://www.youtube.com/watch?v=21eVegaVMtE\" target=\"_blank\">Exploring Generative AI</a> video, just from 2:25 - 3:20\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What's something important to you that you'd like to try and improve with AI?\n\t\t<br />\n\t\t<br />Have students discuss in small groups before regrouping as a full group.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This prompt starts students thinking about how they can contribute a future with AI and how they can contribute their own skills and perspectives to that future. Emphasize Cristobal's comments at the beginning of the clip, that a future with AI needs diverse perspectives and ideas including those of the students in the room. \n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
         "tips": [
           {
             "type": "teachingTip",
@@ -1469,15 +1463,15 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "05977224-3781-49b2-9a0c-9b66cba5fa51",
-        "lesson_activity.key": "11bf121a-ccd0-4229-8cf4-9688e915015d"
+        "activity_section.key": "8a920da8-ebbc-4419-a0af-eea10f4e25fe",
+        "lesson_activity.key": "03c05851-832e-48fe-a156-b785c9ce350b"
       }
     },
     {
-      "key": "5e96e9a2-c874-4351-a26b-29c26bffa932",
+      "key": "a6207c1d-919f-4224-8f12-1a1de91ae8a4",
       "position": 2,
       "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/cf8876d2537b6a5a60c90b6c2d83d334-Slide24.PNG\"></td>\n    <td style=\"width: 75%\">\n      <strong>Question of the Day:</strong> How can we begin to understand Generative AI’s impact on how we live and work?\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/b29720b6fbb17809d00d572149ed356c-Slide25.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> The key vocabulary from this lesson is provided on this slide and in the lesson plan.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ/export/png?id=1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ&pageid=g1b0012b9552_0_737\"></td>\n    <td style=\"width: 75%\">\n      <strong>Question of the Day:</strong> How can we begin to understand Generative AI’s impact on how we live and work?\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ/export/png?id=1u4hOyW55cYbO0hg_HW-p38vQSyRjCQxape8E7OswiBQ&pageid=g2ca632f60dc_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> The key vocabulary from this lesson is provided on this slide and in the lesson plan.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1486,8 +1480,8 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "5e96e9a2-c874-4351-a26b-29c26bffa932",
-        "lesson_activity.key": "11bf121a-ccd0-4229-8cf4-9688e915015d"
+        "activity_section.key": "a6207c1d-919f-4224-8f12-1a1de91ae8a4",
+        "lesson_activity.key": "03c05851-832e-48fe-a156-b785c9ce350b"
       }
     },
     {
@@ -3751,6 +3745,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson1.2-warmup-lv1_2025"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -3798,6 +3795,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson1.2-wrapup-lv1_2025"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -4145,6 +4145,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson3.2-warmup-lv1_2025"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -4242,6 +4245,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson3.2-wrapup-lv1_2025"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -4564,6 +4570,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson6.2-warmup-lv1_2025"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -4661,6 +4670,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson6.2-wrapup-lv1_2025"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -4958,6 +4970,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson9.2-warmup-lv1_2025"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -4980,6 +4995,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson9.2-wrapup-lv1_2025"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -6226,7 +6244,7 @@
     },
     {
       "name": "Attention is All You Need",
-      "url": "https://docs.google.com/presentation/d/18BIAFw0xGvARwWyqVajbANZhl42rENivI6ccOJYNgDo/template/preview",
+      "url": "https://docs.google.com/presentation/d/1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM/template/preview",
       "key": "attention_is_all_you_need",
       "properties": {
         "audience": "Teacher",
@@ -6282,6 +6300,19 @@
       },
       "seeding_key": {
         "resource.key": "bias_in_the_machine"
+      }
+    },
+    {
+      "name": "Careers in Generative AI",
+      "url": "https://www.youtube.com/watch?v=21eVegaVMtE",
+      "key": "careers_in_generative_ai",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/ai2025exploringcareer_2_compressed-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "careers_in_generative_ai"
       }
     },
     {
@@ -6441,7 +6472,7 @@
     },
     {
       "name": "Hallucinations and Fabrications",
-      "url": "https://docs.google.com/presentation/d/1diul-W2utxUyWHTpeCZUC_s3d0VWJrVBXqSuTGfIJpM/template/preview",
+      "url": "https://docs.google.com/presentation/d/1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc/template/preview",
       "key": "hallucinations_and_fabrications",
       "properties": {
         "audience": "Teacher",
@@ -6685,7 +6716,7 @@
     },
     {
       "name": "Outputs & Probabilities",
-      "url": "https://docs.google.com/presentation/d/1uFSY7kCSosbEiF9Jsey3USzIKdlJrCIHx_6yAY5v4t0/template/preview",
+      "url": "https://docs.google.com/presentation/d/1xqhS90l2_SebtQvkdFUf7je9oEci_rkOXtnBOIXxoQw/template/preview",
       "key": "outputs_probabilities",
       "properties": {
         "audience": "Teacher",
@@ -6697,7 +6728,7 @@
     },
     {
       "name": "Project - Demystifying AI",
-      "url": "https://docs.google.com/presentation/d/1kda6MslZ3rzL_AhIvrI9dZI04GPelBZmlcSIdgtzcsQ/template/preview",
+      "url": "https://docs.google.com/presentation/d/1F-HiE1lEJzMyqPHVW5E7VxaNdMD0gjeHscRY1ReHA3M/template/preview",
       "key": "project_-_demystifying_ai",
       "properties": {
         "audience": "Teacher",
@@ -6785,7 +6816,7 @@
     },
     {
       "name": "Understanding Embeddings",
-      "url": "https://docs.google.com/presentation/d/1qUaEZAld-q-WXw2cCHC4ljKW3PHww0YRPh3si6TR-tM/template/preview",
+      "url": "https://docs.google.com/presentation/d/1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o/template/preview",
       "key": "understanding_embeddings",
       "properties": {
         "audience": "Teacher",
@@ -6797,7 +6828,7 @@
     },
     {
       "name": "Understanding Neural Networks",
-      "url": "https://docs.google.com/presentation/d/1iq5XPne-uosQTfSqSkmTVg-cal70Tkdi0LDh_3fPOSA/template/preview",
+      "url": "https://docs.google.com/presentation/d/17iKI8hzdJJxPtrpV4gNgOJAx8aGmccQvOOhYRWvjhJo/template/preview",
       "key": "understanding_neural_networks",
       "properties": {
         "audience": "Teacher",
@@ -7019,6 +7050,12 @@
       "seeding_key": {
         "lesson.key": "Introduction to Generative AI",
         "resource.key": "_exemplar_foundations_of_generative_ai_graphic_organizer"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Generative AI",
+        "resource.key": "careers_in_generative_ai"
       }
     },
     {

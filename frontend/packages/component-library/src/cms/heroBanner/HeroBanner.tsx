@@ -133,11 +133,11 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
             </span>
           )}
         </div>
-        <div>
-          {buttonProps && (
+        {buttonProps && (
+          <div>
             <LinkButton color="purple" type="primary" {...buttonProps} />
-          )}
-        </div>
+          </div>
+        )}
       </div>
       {(imageProps || videoProps) && (
         <div className={moduleStyles.heroBannerMediaContainer}>

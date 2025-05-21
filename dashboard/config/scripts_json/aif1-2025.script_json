@@ -22,9 +22,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-16 17:53:22 UTC",
-    "published_state": "in_development",
-    "hide_within_course": true,
+    "serialized_at": "2025-05-19 15:30:27 UTC",
+    "hide_within_course": false,
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -5961,6 +5961,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson9-level1a_2025"
+        ],
         "progression": "Collaborate on a Product Launch"
       },
       "bonus": false,
@@ -5983,6 +5986,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson9-level1b_2025"
+        ],
         "progression": "Collaborate on a Product Launch"
       },
       "bonus": false,
@@ -6005,6 +6011,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson9-level1c_2025"
+        ],
         "progression": "Collaborate on a Product Launch"
       },
       "bonus": false,
@@ -6027,6 +6036,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson9-level1d_2025"
+        ],
         "progression": "Collaborate on a Product Launch"
       },
       "bonus": false,
@@ -6224,6 +6236,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson11-level0-launch_2025"
+        ],
         "progression": "Ownership, Ethics, and Creativity"
       },
       "bonus": false,
