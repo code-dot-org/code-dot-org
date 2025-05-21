@@ -7,7 +7,7 @@ export const sortInAscendingOrder = (a: string, b: string) => {
   const isItemBNumeric = !isNaN(itemB);
 
   // If one is a string (not a number), sort that first.
-  // It will likely be a grade range like "K-2".
+  // This accounts for the "K" in the grades array.
   if (!isItemANumeric && isItemBNumeric) return -1;
   if (isItemANumeric && !isItemBNumeric) return 1;
 
