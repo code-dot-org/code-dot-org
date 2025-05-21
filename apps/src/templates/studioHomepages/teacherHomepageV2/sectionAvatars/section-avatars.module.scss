@@ -4,40 +4,31 @@
 @import 'https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap';
 
 // Section Avatars
-.sectionAvatarSmall {
+.sectionAvatar {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
+  font-family: 'Noto Color Emoji', sans-serif;
+  margin-inline-end: 12px;
+}
+
+.sectionAvatar-s {
   width: 56px;
   height: 56px;
-  border-radius: 50%;
-  font-family: 'Noto Color Emoji', sans-serif;
   font-size: 32px;
-  margin-inline-end: 12px;
 }
 
-.sectionAvatarLarge {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.sectionAvatar-m {
   width: 98px;
   height: 98px;
-  border-radius: 50%;
-  font-family: 'Noto Color Emoji', sans-serif;
   font-size: 56px;
-  margin-inline-end: 12px;
 }
 
-.sectionAvatarXL {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.sectionAvatar-l {
   width: 140px;
   height: 140px;
-  border-radius: 50%;
-  font-family: 'Noto Color Emoji', sans-serif;
   font-size: 80px;
-  margin-inline-end: 12px;
 }
 
 // Section avatar editor
@@ -53,7 +44,7 @@
   background-color: var(--white);
 
   h3 {
-    margin-bottom: 0.5em;
+    margin-bottom: 16px;
     text-align: left;
   }
 
