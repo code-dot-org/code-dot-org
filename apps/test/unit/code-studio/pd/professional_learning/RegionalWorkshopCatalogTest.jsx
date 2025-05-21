@@ -34,8 +34,7 @@ const TEST_WORKSHOPS = [
     location_name: 'Seattle Public School',
     fee: null,
     has_prereq: false,
-    requires_application: false,
-    custom_application_link: null,
+    description: 'Test description',
     custom_registration_link: null,
   },
   {
@@ -50,8 +49,7 @@ const TEST_WORKSHOPS = [
     location_name: 'Austin Public School',
     fee: '$400',
     has_prereq: true,
-    requires_application: true,
-    custom_application_link: null,
+    description: 'Test description',
     custom_registration_link: null,
   },
 ];

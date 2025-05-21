@@ -7,6 +7,7 @@
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -19,7 +20,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-10 01:23:42 UTC",
+    "serialized_at": "2025-05-20 17:14:14 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -34,7 +36,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Unit 3: Intro to App Design"
+        "display_name": "Content"
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit3_2020",
@@ -57,7 +59,7 @@
   "lessons": [
     {
       "key": "Introduction to Apps",
-      "name": "Introduction to Apps",
+      "name": "Lesson 1: Introduction to Apps",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -76,7 +78,7 @@
     },
     {
       "key": "Introduction to Design Mode",
-      "name": "Introduction to Design Mode",
+      "name": "Lesson 2: Introduction to Design Mode",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -95,7 +97,7 @@
     },
     {
       "key": "Project - Designing an App Part 1",
-      "name": "Project - Designing an App Part 1",
+      "name": "Lesson 3: Project - Designing an App Part 1",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -116,7 +118,7 @@
     },
     {
       "key": "The Need for Programming Languages",
-      "name": "The Need for Programming Languages",
+      "name": "Lesson 4: The Need for Programming Languages",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -136,7 +138,7 @@
     },
     {
       "key": "Intro to Programming",
-      "name": "Intro to Programming",
+      "name": "Lesson 5: Intro to Programming",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -155,7 +157,7 @@
     },
     {
       "key": "Debugging",
-      "name": "Debugging",
+      "name": "Lesson 6: Debugging",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -174,7 +176,7 @@
     },
     {
       "key": "Project - Designing an App Part 2",
-      "name": "Project - Designing an App Part 2",
+      "name": "Lesson 7: Project - Designing an App Part 2",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -194,7 +196,7 @@
     },
     {
       "key": "Assessment Day",
-      "name": "Assessment Day",
+      "name": "Lesson 8: Assessment Day",
       "absolute_position": 8,
       "lockable": true,
       "has_lesson_plan": true,
@@ -2269,7 +2271,7 @@
       "key": "9957921b-d399-45b1-b7b9-01c34a6c8b70",
       "position": 11,
       "properties": {
-        "progression_name": "End-of-Unit Survey"
+        "progression_name": "End of Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "9957921b-d399-45b1-b7b9-01c34a6c8b70",
@@ -3453,17 +3455,17 @@
       "chapter": 44,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
         "level_keys": [
-          "Student End of Unit Survey_csp3_2025"
+          "student-eou-survey_linked_page-csp3_2025"
         ],
-        "progression": "End-of-Unit Survey"
+        "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csp3_2025"
+          "student-eou-survey_linked_page-csp3_2025"
         ],
         "lesson.key": "Project - Designing an App Part 2",
         "lesson_group.key": "csp_unit3_2020",
@@ -3471,7 +3473,7 @@
         "activity_section.key": "9957921b-d399-45b1-b7b9-01c34a6c8b70"
       },
       "level_keys": [
-        "Student End of Unit Survey_csp3_2025"
+        "student-eou-survey_linked_page-csp3_2025"
       ]
     },
     {
@@ -3505,6 +3507,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_csp3survey-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -4041,9 +4046,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csp3_2025",
+        "level.key": "student-eou-survey_linked_page-csp3_2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csp3_2025"
+          "student-eou-survey_linked_page-csp3_2025"
         ],
         "lesson.key": "Project - Designing an App Part 2",
         "lesson_group.key": "csp_unit3_2020",

@@ -14,6 +14,7 @@
     "new_name": null,
     "family_name": null,
     "serialized_at": "2025-05-12 18:25:46 UTC",
+    "hide_within_course": true,
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,

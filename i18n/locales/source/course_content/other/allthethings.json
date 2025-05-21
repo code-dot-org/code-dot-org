@@ -3053,6 +3053,14 @@
     "long_instructions": "## Neighborhood level",
     "teacher_markdown": "Teachers should see this extra info."
   },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/11": {
+    "long_instructions": "## Python Lab Console Widget View\n\nPress the Run button and see what happens.\nThis is an example of the widget view.",
+    "teacher_markdown": "Teachers should see this extra info."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/12": {
+    "long_instructions": "## Python Lab Neighborhood Widget View\n\nPress the Run button and see what happens.\nThis is an example of the widget view.",
+    "teacher_markdown": "Teachers should see this extra info."
+  },
   "https://studio.code.org/s/allthethings/lessons/51/levels/1": {
     "long_instructions": "Add **html** pages and preview them in the right pane.\n\nAdd **css** pages (and link them to your html).\n\nUse the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)"
   },

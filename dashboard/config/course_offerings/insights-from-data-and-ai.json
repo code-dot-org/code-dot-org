@@ -1,0 +1,20 @@
+{
+  "key": "insights-from-data-and-ai",
+  "display_name": "Insights from Data and AI",
+  "is_featured": true,
+  "assignable": true,
+  "curriculum_type": "Standalone Unit",
+  "marketing_initiative": "AIF",
+  "grade_levels": "9,10,11,12",
+  "header": "teacher_led",
+  "image": "https://images.code.org/d5b695cbb553b211de9591a9ff45fa20-data.jpg",
+  "cs_topic": "artificial_intelligence,data",
+  "school_subject": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
+  "description": "Learn how to clean, analyze, and visualize data to uncover insights, then tell a data-driven story using ethical and effective communication techniques.",
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": "2025-05-29 06:00:00 UTC",
+  "self_paced_pl_course_offering_key": null,
+  "ai_teaching_assistant_available": false
+}

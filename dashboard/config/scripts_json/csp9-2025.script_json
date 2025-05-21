@@ -7,6 +7,7 @@
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -14,11 +15,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-04 21:13:23 UTC",
+    "serialized_at": "2025-05-20 17:19:31 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -33,7 +36,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Unit 9: Create PT"
+        "display_name": "Content"
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit9_2020",
@@ -57,7 +60,7 @@
       "user_facing": true,
       "position": 3,
       "properties": {
-        "display_name": "Post-Course Survey"
+        "display_name": "End of Unit Survey"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -68,7 +71,7 @@
   "lessons": [
     {
       "key": "Create PT Deep Dive",
-      "name": "Create PT Deep Dive",
+      "name": "Lesson 1: Create PT Deep Dive",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -86,7 +89,7 @@
     },
     {
       "key": "Create PT   Make a Plan",
-      "name": "Create PT   Make a Plan",
+      "name": "Lesson 2: Create PT  - Make a Plan",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -105,7 +108,7 @@
     },
     {
       "key": "Create PT - Complete the Task (9 hrs)",
-      "name": "Create PT - Complete the Task (9 hrs)",
+      "name": "Lesson 3: Create PT - Complete the Task (9 hrs)",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -126,7 +129,7 @@
     },
     {
       "key": "Create PT Written Response Mock Exam",
-      "name": "Create PT Written Response Mock Exam",
+      "name": "Lesson 4: Create PT Written Response Mock Exam",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -143,16 +146,16 @@
       }
     },
     {
-      "key": "CS Principles Post-Course Survey",
-      "name": "CS Principles Post-Course Survey",
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
       "absolute_position": 5,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csp9-2025"
       }
@@ -313,13 +316,13 @@
       }
     },
     {
-      "key": "50bb656c-34a2-463b-ac0d-21d459e091f6",
+      "key": "103461b7-297a-49b1-a260-f7786fc3ab53",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "50bb656c-34a2-463b-ac0d-21d459e091f6",
-        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_activity.key": "103461b7-297a-49b1-a260-f7786fc3ab53",
+        "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csp9-2025"
       }
@@ -744,7 +747,7 @@
       "key": "abf79b71-f8c7-409c-b340-dae37427699f",
       "position": 3,
       "properties": {
-        "progression_name": "End-of-Unit Survey"
+        "progression_name": "End of Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "abf79b71-f8c7-409c-b340-dae37427699f",
@@ -1126,20 +1129,25 @@
       }
     },
     {
-      "key": "daea4167-b1e2-41d8-9f4b-0e0b0f08ebe3",
+      "key": "97dd0cf8-3edb-4a03-abaf-29ab96587fdf",
       "position": 1,
       "properties": {
-        "progression_name": "Post-Course Survey Instructions",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "This level appears at the end of every unit. **Please have your students complete this survey at the end of their final unit!** Students only need to take the survey once at the end of the course.\n\n* The results are vital for us (code.org) to sustain our courses and make improvements.\n* There will be a teacher survey as well where you can provide your own input. You will be notified via email about the teacher survey.\n\n**Instructions for Unlocking the Survey for Students:** [[google doc](https://docs.google.com/document/d/1oo-G0h7EKL9kkZvk48PKkSoRMIVCCN1CB57BN5Km-aQ/view)] [[pdf](https://docs.google.com/document/d/1oo-G0h7EKL9kkZvk48PKkSoRMIVCCN1CB57BN5Km-aQ/export?format=pdf)]\n\nIf students click the link and see an error message about the survey being locked, please follow the steps in the instructions above to unlock the survey for students."
-          }
-        ]
+        "progression_name": "End of Unit Survey"
       },
       "seeding_key": {
-        "activity_section.key": "daea4167-b1e2-41d8-9f4b-0e0b0f08ebe3",
-        "lesson_activity.key": "50bb656c-34a2-463b-ac0d-21d459e091f6"
+        "activity_section.key": "97dd0cf8-3edb-4a03-abaf-29ab96587fdf",
+        "lesson_activity.key": "103461b7-297a-49b1-a260-f7786fc3ab53"
+      }
+    },
+    {
+      "key": "e48ea6ab-58bf-4507-b12b-99e6cd1e3fd2",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Unit Survey Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "e48ea6ab-58bf-4507-b12b-99e6cd1e3fd2",
+        "lesson_activity.key": "103461b7-297a-49b1-a260-f7786fc3ab53"
       }
     }
   ],
@@ -1198,17 +1206,17 @@
       "chapter": 3,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
         "level_keys": [
-          "Student End of Unit Survey_csp8_2025"
+          "student-eou-survey_linked_page-csp9_2025"
         ],
-        "progression": "End-of-Unit Survey"
+        "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csp8_2025"
+          "student-eou-survey_linked_page-csp9_2025"
         ],
         "lesson.key": "Create PT - Complete the Task (9 hrs)",
         "lesson_group.key": "csp_unit9_2020",
@@ -1216,32 +1224,32 @@
         "activity_section.key": "abf79b71-f8c7-409c-b340-dae37427699f"
       },
       "level_keys": [
-        "Student End of Unit Survey_csp8_2025"
+        "student-eou-survey_linked_page-csp9_2025"
       ]
     },
     {
       "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
-          "csp-post-survey-2021-markdown-with-link-to-survey_csp9_2025"
+          "student-eou-survey_csp9_2025"
         ],
-        "progression": "Post-Course Survey Instructions"
+        "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csp-post-survey-2021-markdown-with-link-to-survey_csp9_2025"
+          "student-eou-survey_csp9_2025"
         ],
-        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csp9-2025",
-        "activity_section.key": "daea4167-b1e2-41d8-9f4b-0e0b0f08ebe3"
+        "activity_section.key": "97dd0cf8-3edb-4a03-abaf-29ab96587fdf"
       },
       "level_keys": [
-        "csp-post-survey-2021-markdown-with-link-to-survey_csp9_2025"
+        "student-eou-survey_csp9_2025"
       ]
     }
   ],
@@ -1272,9 +1280,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csp8_2025",
+        "level.key": "student-eou-survey_linked_page-csp9_2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csp8_2025"
+          "student-eou-survey_linked_page-csp9_2025"
         ],
         "lesson.key": "Create PT - Complete the Task (9 hrs)",
         "lesson_group.key": "csp_unit9_2020",
@@ -1284,14 +1292,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp-post-survey-2021-markdown-with-link-to-survey_csp9_2025",
+        "level.key": "student-eou-survey_csp9_2025",
         "script_level.level_keys": [
-          "csp-post-survey-2021-markdown-with-link-to-survey_csp9_2025"
+          "student-eou-survey_csp9_2025"
         ],
-        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csp9-2025",
-        "activity_section.key": "daea4167-b1e2-41d8-9f4b-0e0b0f08ebe3"
+        "activity_section.key": "97dd0cf8-3edb-4a03-abaf-29ab96587fdf"
       }
     }
   ],

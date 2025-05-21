@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2025-05-19T14:34:57.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "csa_instance_variables_and_attributes",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28813,
+    "name_suffix": "_2025",
+    "encrypted": "false",
+    "long_instructions": "#### Now that you have explored using multiple Java files, let's dive into how to create a class starting with **instance variables.** \r\n\r\n> #### An **instance variable** is an attribute whose value is unique to each instance of the class. \r\n\r\n### **As you watch the video:**\r\n\r\n- #### Take note of what an instance variable is. How do attributes help create an object?\r\n\r\n\r\n<hr>\r\n\r\n#### **Up next:** We will practice creating instance variables in a class."
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-05-19T14:34:57.013+00:00\",\"changed\":[\"cloned from \\\"pl-java-oop-neighborhood-5\\\"\"],\"cloned_from\":\"pl-java-oop-neighborhood-5\"},{\"changed_at\":\"2025-05-19 15:59:58 +0000\",\"changed\":[\"video_key\",\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-05-19 16:07:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>
