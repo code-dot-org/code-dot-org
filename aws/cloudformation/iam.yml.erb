@@ -1109,8 +1109,12 @@ roles.each do |name, config| %>
                   - cloudfront:TagResource
                   - cloudfront:CreateInvalidation
                   - cloudfront:CreateOriginAccessControl
+                  - cloudfront:GetOriginAccessControl
+                  - cloudfront:UpdateOriginAccessControl
                   - cloudfront:CreateCachePolicy
+                  - cloudfront:GetCachePolicy
                   - cloudfront:CreateFunction
+                  - cloudfront:UpdateCachePolicy
                   - cloudfront:PublishFunction
                   - cloudfront:DescribeFunction
                   - cloudfront:GetFunction
