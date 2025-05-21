@@ -25,6 +25,7 @@ const defaultProps = {
   sectionsForDropdown: [],
   scriptId: 42,
   scriptName: 'test-script',
+  scriptPath: '/s/test-script',
   unitTitle: 'Unit test script title',
   unitAllowsHiddenLessons: true,
   viewAs: ViewType.Participant,

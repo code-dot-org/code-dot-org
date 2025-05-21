@@ -405,9 +405,24 @@ class ApiController < ApplicationController
   end
 
   def script_structure
-    script = Unit.get_from_cache(params[:script])
-    overview_path = CDO.studio_url(script_path(script))
-    summary = script.summarize(true, current_user, true)
+    context = nil
+    if params[:script]
+      context = Queries::Courses.get_course_context(params[:script])
+    else
+      course_name = params[:course_name]
+      unit_position = params[:unit_position]
+      context = Queries::Courses.get_unit_context(course_name, unit_position)
+    end
+    return render json: {error: 'Unit not found'}, status: :bad_request unless context
+    unit = context[:unit]
+    unit_group = context[:unit_group]
+    ugu = context[:unit_group_unit]
+    return render json: {error: 'Unit not found'}, status: :bad_request unless unit
+    overview_path = CDO.studio_url(script_path(unit))
+    if Policies::Courses.modularity_enabled? && ugu
+      overview_path = CDO.studio_url(course_unit_path(unit_group, ugu.position))
+    end
+    summary = unit.summarize(true, current_user, true, unit_group_unit: ugu)
     summary[:path] = overview_path
     render json: summary
   end
@@ -420,8 +435,10 @@ class ApiController < ApplicationController
 
   def lesson_materials
     unit_id = params[:unit_id]
-    script = Unit.get_from_cache(unit_id)
-    render json: script.summarize_for_lesson_materials_view(current_user)
+    context = Queries::Courses.get_course_context(unit_id)
+    unit = context[:unit]
+    return render json: {error: "Can't find Unit id=#{unit_id}"}, status: :bad_request unless unit
+    render json: unit.summarize_for_lesson_materials_view(current_user, unit_group_unit: context[:unit_group_unit])
   end
 
   def course_summary
@@ -452,24 +469,24 @@ class ApiController < ApplicationController
     unless unit_name || (unit_position && course_name)
       return render json: {error: 'Must specify either unit_name or unit_position and course_name'}, status: :bad_request
     end
-    unit = nil
 
     if unit_name
       context = Queries::Courses.get_course_context(unit_name)
-      if context
-        unit = context[:unit]
-        course_name = context[:course].name
-        unit_position = context[:unit_group_unit].position
-      else
-        # Unit hasn't been migrated to have a Course/UnitGroup
-        unit = Unit.get_from_cache(unit_name)
-      end
+      unit = context[:unit]
+      unit_group = context[:unit_group]
+      unit_group_unit = context[:unit_group_unit]
+      course_name = unit_group&.name
+      unit_position = unit_group_unit&.position
     else
       course_name = params[:course_name]
       unit_position = params[:unit_position]&.to_i
       context = Queries::Courses.get_unit_context(course_name, unit_position)
+      return render json: {error: "Can't find Unit params=#{params}"}, status: :bad_request unless context
       unit = context[:unit]
+      unit_group = context[:unit_group]
+      unit_group_unit = context[:unit_group_unit]
     end
+    return render json: {error: "Can't find Unit params=#{params}"}, status: :bad_request unless unit
 
     redirect_unit_url = unit.redirect_to_unit_url(current_user, locale: request.locale)
 
@@ -478,8 +495,8 @@ class ApiController < ApplicationController
       is_verified_instructor: current_user&.verified_instructor?,
       locale: Unit.locale_english_name_map[request.locale],
       locale_code: request.locale,
-      course_link: unit.course_link(params[:section_id]),
-      course_title: unit.course_title || I18n.t('view_all_units'),
+      course_link: unit_group&.link(section_id: params[:section_id]),
+      course_title: unit_group&.localized_title || I18n.t('view_all_units'),
       course_name: course_name,
       redirect_unit_url: redirect_unit_url,
       unit_position: unit_position,
@@ -490,7 +507,7 @@ class ApiController < ApplicationController
     end
 
     render json: {
-      unitData: unit.summarize(true, current_user, false, request.locale).merge(additional_script_data),
+      unitData: unit.summarize(true, current_user, false, request.locale, unit_group_unit: unit_group_unit).merge(additional_script_data),
       plcBreadcrumb: plc_breadcrumb
     }
   end
@@ -585,12 +602,14 @@ class ApiController < ApplicationController
     script_level = Unit.cache_find_script_level params[:script_level_id].to_i
     level = Unit.cache_find_level params[:level_id].to_i
     section_id = params[:section_id].present? ? params[:section_id].to_i : nil
+    # TODO: TEACH-1866 pass in `unit_group_unit`
     render json: script_level.get_example_solutions(level, current_user, section_id)
   end
 
   def section_text_responses
     section = load_section
     script = load_script(section)
+    unit_group_unit = script.unit_group_units.find {|ugu| ugu.unit_group.id == section.course_id}
 
     text_response_levels = script.text_response_levels
 
@@ -607,7 +626,7 @@ class ApiController < ApplicationController
           puzzle: level_hash[:script_level].position,
           question: last_attempt.level.properties['title'],
           response: response,
-          url: build_script_level_url(level_hash[:script_level], section_id: section.id, user_id: student.id)
+          url: build_script_level_url(level_hash[:script_level], section_id: section.id, user_id: student.id, unit_group_unit: unit_group_unit)
         }
       end
     end.flatten

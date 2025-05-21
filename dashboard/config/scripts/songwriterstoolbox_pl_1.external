@@ -12,14 +12,26 @@ markdown <<MARKDOWN
 
 ## In this lesson, you will:
 
-* #### Learn about sequencing and loops.
-* #### Practice finding patterns and ordering steps in code.
-* #### Solve problems by breaking apart problems into smaller steps. 
+* #### Sequence code to make a song. 
+* #### Experience the Use/Modify/Create pedagogical practice
+* #### Create a new song from scratch
+
+
+
+
+## Pedagogical Highlight: Use/Modify/Create in Lesson 1
+#### You'll notice that you and students will try code before modifying and creating code. Not only does this support deeper learning and confidence-building, using the code before modifying and creating: 
+- #### Helps students understand how the code works before changing it  
+- #### Builds confidence by starting with working code  
+- #### Encourages experimentation through observation and comparison  
+- #### Develops computational thinking skills like pattern recognition  
+- #### Provides a strong foundation for meaningful modifications and creativity
+
+#### Set the foundation for learning by incorporating unplugged activities found in the  <a href="https://studio.code.org/s/introduction-to-programming-in-music-lab-for-elementary/lessons/1" target="_blank">lesson plan</a>. 
+
 
 
 ### **Suggested time:** 20 minutes
-
-
 ## Let's get started!
 
 <div style="clear:both"/>

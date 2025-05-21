@@ -8,10 +8,10 @@ class ScriptsController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update, :new, :create]
   before_action :authenticate_user!, except: [:show, :vocab, :resources, :code, :standards]
   check_authorization
-  before_action :set_unit, only: [:show, :vocab, :resources, :code, :standards, :edit, :destroy]
+  before_action :set_unit, only: [:show, :vocab, :resources, :code, :get_rollup_resources, :standards, :edit, :destroy]
   before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
-  before_action :redirect_to_canonical_path, only: [:show]
+  before_action :redirect_to_canonical_path, only: [:show, :vocab, :resources, :code, :standards]
   authorize_resource class: 'Unit', except: [:update]
   load_and_authorize_resource class: 'Unit', only: [:update]
 
@@ -40,17 +40,23 @@ class ScriptsController < ApplicationController
       end
       if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.script_id == @script.id || s.unit_group&.default_units&.any? {|u| u.id == @script.id}}
         most_recent_section = current_user.sections_instructed.select {|s| s.script_id == @script.id || s.unit_group&.default_units&.any? {|u| u.id == @script.id}}.last
-        if !params[:section_id]
-          redirect_to "/teacher_dashboard/sections/#{most_recent_section.id}/unit/#{@script.name}"
-          return
-        elsif params[:section_id]
-          redirect_to "/teacher_dashboard/sections/#{params[:section_id]}/unit/#{@script.name}"
+        section_id = params[:section_id]
+        section_id ||= most_recent_section&.id
+        if section_id
+          teacher_dashboard_section_path = "/teacher_dashboard/sections/#{section_id}/unit/#{@script.name}"
+          if Policies::Courses.modularity_enabled? && @course && @unit_position
+            teacher_dashboard_section_path = "/teacher_dashboard/sections/#{section_id}/courses/#{@course.name}/units/#{@unit_position}"
+          end
+          redirect_to teacher_dashboard_section_path
           return
         end
       end
     end
 
-    canonical_path = @course ? course_unit_path(@course, @unit_position) : script_path(@script)
+    canonical_path = script_path(@script)
+    if Policies::Courses.modularity_enabled? && @course && @unit_position
+      canonical_path = course_unit_path(@course, @unit_position)
+    end
     if request.path != canonical_path
       # return a temporary redirect rather than a permanent one, to avoid ever
       # serving a permanent redirect from a unit's new location to its old
@@ -66,7 +72,7 @@ class ScriptsController < ApplicationController
 
     # Attempt to redirect user if we think they ended up on the wrong unit overview page.
     override_redirect = VersionRedirectOverrider.override_unit_redirect?(session, @script)
-    if !override_redirect && redirect_unit = redirect_unit(@script, request.locale)
+    if !override_redirect && redirect_unit = redirect_unit(@script, request.locale, @course)
       redirect_to script_path(redirect_unit) + "?redirect_warning=true"
       return
     end
@@ -82,8 +88,8 @@ class ScriptsController < ApplicationController
     end
 
     additional_script_data = {
-      course_name: @script.unit_group&.name,
-      course_id: @script.unit_group&.id,
+      course_name: @course&.name,
+      course_id: @course&.id,
       show_redirect_warning: @show_redirect_warning,
       redirect_script_url: @redirect_unit_url,
       section: @section,
@@ -94,18 +100,18 @@ class ScriptsController < ApplicationController
       is_verified_instructor: current_user&.verified_instructor?,
       locale: Unit.locale_english_name_map[request.locale],
       locale_code: request.locale,
-      course_link: @script.course_link(params[:section_id]),
-      course_title: @script.course_title || I18n.t('view_all_units'),
-      is_single_unit_course: @script.unit_group&.single_unit_course?,
+      course_link: @course&.link(section_id: params[:section_id]),
+      course_title: @course&.localized_title || I18n.t('view_all_units'),
+      is_single_unit_course: @course&.single_unit_course?,
       sections: @sections
     }
 
-    @script_data = @script.summarize(true, current_user, false, request.locale).merge(additional_script_data)
+    @script_data = @script.summarize(true, current_user, false, request.locale, unit_group_unit: @unit_group_unit).merge(additional_script_data)
 
     @page_title = "Unit: #{@script.localized_title}"
     @page_description = @script.localized_description.truncate(200, separator: '.', omission: '.')
 
-    link = Unit.latest_stable_version(@script.family_name)&.link
+    link = Unit.latest_stable_version(@script.family_name)&.link(unit_group_unit: @unit_group_unit)
     @canonical_url = CDO.studio_url(link) if @script.unit_group&.single_unit_course? && link
 
     if @script.old_professional_learning_course? && current_user && Plc::UserCourseEnrollment.exists?(user: current_user, plc_course: @script.plc_course_unit.plc_course)
@@ -240,37 +246,52 @@ class ScriptsController < ApplicationController
   end
 
   def vocab
-    @unit_summary = @script.summarize_for_rollup(current_user)
+    @unit_summary = @script.summarize_for_rollup(current_user, unit_group_unit: @unit_group_unit)
   end
 
   def resources
-    @unit_summary = @script.summarize_for_rollup(current_user)
+    @unit_summary = @script.summarize_for_rollup(current_user, unit_group_unit: @unit_group_unit)
   end
 
   def code
-    @unit_summary = @script.summarize_for_rollup(current_user)
+    @unit_summary = @script.summarize_for_rollup(current_user, unit_group_unit: @unit_group_unit)
   end
 
   def standards
-    @unit_summary = @script.summarize_for_rollup(current_user)
+    @unit_summary = @script.summarize_for_rollup(current_user, unit_group_unit: @unit_group_unit)
   end
 
   def get_rollup_resources
-    unit = Unit.get_from_cache(params[:id])
+    unit = @script
     course_version = unit.get_course_version
+    if @unit_group_unit
+      course_version = @unit_group_unit.unit_group.course_version
+    end
     return render status: :bad_request, json: {error: 'Unit does not have course version'} unless course_version
+    code_path = code_script_path(unit)
+    resources_path = resources_script_path(unit)
+    standards_path = standards_script_path(unit)
+    vocab_path = vocab_script_path(unit)
+    if Policies::Courses.modularity_enabled? && @unit_group_unit
+      course = @unit_group_unit.unit_group
+      unit_position = @unit_group_unit.position
+      code_path = code_course_unit_path(course, unit_position)
+      resources_path = resources_course_unit_path(course, unit_position)
+      standards_path = standards_course_unit_path(course, unit_position)
+      vocab_path = vocab_course_unit_path(course, unit_position)
+    end
     rollup_pages = []
     if unit.lessons.any? {|l| !l.programming_expressions.empty?}
-      rollup_pages.append(Resource.find_or_create_by!(name: 'All Code', url: code_script_path(unit), course_version_id: course_version.id))
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Code', url: code_path, course_version_id: course_version.id))
     end
     if unit.lessons.any? {|l| !l.resources.empty?}
-      rollup_pages.append(Resource.find_or_create_by!(name: 'All Resources', url: resources_script_path(unit), course_version_id: course_version.id))
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Resources', url: resources_path, course_version_id: course_version.id))
     end
     if unit.lessons.any? {|l| !l.standards.empty?}
-      rollup_pages.append(Resource.find_or_create_by!(name: 'All Standards', url: standards_script_path(unit), course_version_id: course_version.id))
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Standards', url: standards_path, course_version_id: course_version.id))
     end
     if unit.lessons.any? {|l| !l.vocabularies.empty?}
-      rollup_pages.append(Resource.find_or_create_by!(name: 'All Vocabulary', url: vocab_script_path(unit), course_version_id: course_version.id))
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Vocabulary', url: vocab_path, course_version_id: course_version.id))
     end
     rollup_pages.each do |r|
       r.is_rollup = true
@@ -332,14 +353,20 @@ class ScriptsController < ApplicationController
 
   private def set_unit
     course_name = params[:course_course_name]
-    if course_name
-      @course = UnitGroup.get_from_cache(course_name)
-      raise ActiveRecord::RecordNotFound unless @course
-      @unit_position = params[:position]
-      unit_group_unit = UnitGroupUnit.get_with_position_from_cache(@course.id, @unit_position)
-      @script = Unit.get_from_cache(unit_group_unit.script_id) if unit_group_unit
+    @unit_position = params[:position]
+    if course_name && @unit_position
+      context = Queries::Courses.get_unit_context(course_name, @unit_position)
+      if context
+        @course = context[:unit_group]
+        @unit_group_unit = context[:unit_group_unit]
+        @script = context[:unit]
+      end
     else
       @script = get_unit_by_name
+      raise ActiveRecord::RecordNotFound unless @script
+      @course = @script.original_unit_group
+      @unit_group_unit = @script.unit_group_units.find {|ugu| ugu.unit_group == @course}
+      @unit_position = @unit_group_unit&.position
     end
     raise ActiveRecord::RecordNotFound unless @script
   end
@@ -419,7 +446,7 @@ class ScriptsController < ApplicationController
     end
   end
 
-  private def redirect_unit(unit, locale)
+  private def redirect_unit(unit, locale, course)
     # Return nil if unit is nil or we know the user can view the version requested.
     return nil if !unit || unit.can_view_version?(current_user, locale: locale)
 
@@ -428,9 +455,9 @@ class ScriptsController < ApplicationController
     redirect_unit = Unit.latest_assigned_version(unit.family_name, current_user)
     redirect_unit ||= Unit.latest_stable_version(unit.family_name, locale: locale)
 
-    if unit.unit_group&.single_unit_course?
-      redirect_unit_group = UnitGroup.latest_assigned_version(unit.unit_group.family_name, current_user)
-      redirect_unit_group ||= UnitGroup.latest_stable_version(unit.unit_group.family_name, locale: locale)
+    if course&.single_unit_course?
+      redirect_unit_group = UnitGroup.latest_assigned_version(course.family_name, current_user)
+      redirect_unit_group ||= UnitGroup.latest_stable_version(course.family_name, locale: locale)
       redirect_unit = redirect_unit_group.units_for_user(current_user).first if redirect_unit_group&.single_unit_course?
     end
 
@@ -442,7 +469,8 @@ class ScriptsController < ApplicationController
 
   # Redirect /s/... to /courses/.../units/...
   private def redirect_to_canonical_path
-    canonical_path = Services::Courses.canonical_path(request.fullpath, params, current_user)
+    unit_name_or_id = params[:script_id] || params[:id]
+    canonical_path = Services::Courses.canonical_path(request.fullpath, unit_name_or_id, current_user)
     redirect_to canonical_path unless canonical_path == request.fullpath
   end
 end

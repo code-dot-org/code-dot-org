@@ -4,24 +4,21 @@ class Services::Courses
   # URL because /s/.../ is being deprecated.
   #
   # @param path [String] the original URL path to transform
-  # @param params [Hash] a `params` Hash provided to a Controller.
+  # @param unit_name_or_id [String, Integer] the Unit id or name.
   # @param current_user [User] the currently authenticated user object, used for experiment checks
   # @return [String] the transformed canonical path if applicable, or the original path if no transformation is made
-  def self.canonical_path(path, params, current_user)
+  def self.canonical_path(path, unit_name_or_id, current_user)
     return path unless Policies::Courses.modularity_enabled?(current_user)
+    return path unless unit_name_or_id
 
-    # :script_id is defined only for /s/ URLs
-    script_name = params[:script_id] || params[:id]
-    return path unless script_name
+    # URLs is /s/:unit_id/... so generate a /courses/... URL
+    course_context = Queries::Courses.get_course_context(unit_name_or_id)
+    course_name = course_context[:unit_group]&.name
+    unit_position = course_context[:unit_group_unit]&.position
 
-    # URLs is /s/:script_id/... so generate a /courses/... URL
-    course_context = Queries::Courses.get_course_context(script_name)
-    return path unless course_context
-
-    course_name = course_context[:course].name
-    unit_position = course_context[:unit_group_unit].position
+    return path unless course_name && unit_position
 
     # Replace /s/.../ with /courses/.../units/.../
-    path.sub(/\/s\/#{script_name}/, "/courses/#{course_name}/units/#{unit_position}")
+    path.sub(/\/s\/#{unit_name_or_id}/, "/courses/#{course_name}/units/#{unit_position}")
   end
 end

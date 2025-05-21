@@ -20,7 +20,7 @@ markdown <<MARKDOWN
   <div>
     <img src="https://images.code.org/c1d4fc3061ce15ad22ce124dd8ebf2e6-Screenshot 2025-04-18 at 10.51.37 AM.png" 
          alt="Icon with computer and data symbols" 
-         style="width: 300px; height: auto; border-radius: 10px">
+         style="width: 300px; height: auto; border-radius: 10px;margin: 10px">
   </div>
 </div>
 
