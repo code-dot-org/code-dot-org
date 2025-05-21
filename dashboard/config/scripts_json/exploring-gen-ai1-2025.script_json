@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-19 22:52:41 UTC",
+    "serialized_at": "2025-05-20 21:02:57 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -266,7 +266,7 @@
     },
     {
       "key": "Hallucinations and Fabrications",
-      "name": "Hallucinations and Fabrications",
+      "name": "AI Auditing",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -585,42 +585,42 @@
       }
     },
     {
-      "key": "6640fa12-4cbd-4c9a-8f10-be8b36e66361",
+      "key": "9eac3fa0-9dd6-428c-bc8e-5d4f53a7a9be",
       "position": 3,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "6640fa12-4cbd-4c9a-8f10-be8b36e66361",
+        "lesson_activity.key": "9eac3fa0-9dd6-428c-bc8e-5d4f53a7a9be",
         "lesson.key": "Bias in the Machine",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
       }
     },
     {
-      "key": "aa6b8ff1-a3a8-4c48-85b7-8fa4d479b18c",
+      "key": "721a5a72-eebc-4d51-8f25-a49116820922",
       "position": 4,
       "properties": {
         "duration": 35,
-        "name": "Activity"
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "aa6b8ff1-a3a8-4c48-85b7-8fa4d479b18c",
+        "lesson_activity.key": "721a5a72-eebc-4d51-8f25-a49116820922",
         "lesson.key": "Bias in the Machine",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
       }
     },
     {
-      "key": "b9db636c-313b-481d-8141-0921716c10c5",
+      "key": "28052a55-8a59-4a08-b5dd-9c08f0980bc4",
       "position": 5,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "b9db636c-313b-481d-8141-0921716c10c5",
+        "lesson_activity.key": "28052a55-8a59-4a08-b5dd-9c08f0980bc4",
         "lesson.key": "Bias in the Machine",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
@@ -996,8 +996,21 @@
       }
     },
     {
-      "key": "b8039792-b2f5-4728-8704-0e4194b2a333",
+      "key": "03669179-0056-4066-98b1-9ddfd244ebd3",
       "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "03669179-0056-4066-98b1-9ddfd244ebd3",
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "b8039792-b2f5-4728-8704-0e4194b2a333",
+      "position": 2,
       "properties": {
         "name": "Student Levels"
       },
@@ -1009,42 +1022,42 @@
       }
     },
     {
-      "key": "7a32f31d-7fb6-4244-8858-6e25c0cd361a",
-      "position": 2,
+      "key": "32729159-9621-40ba-b916-07c1ae0d2f0b",
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "7a32f31d-7fb6-4244-8858-6e25c0cd361a",
+        "lesson_activity.key": "32729159-9621-40ba-b916-07c1ae0d2f0b",
         "lesson.key": "Hallucinations and Fabrications",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
       }
     },
     {
-      "key": "6f39d8e3-102a-4053-bdc1-a2404bc940c2",
-      "position": 3,
+      "key": "5ab73326-66be-43bb-af47-5da3cc07b7b7",
+      "position": 4,
       "properties": {
-        "duration": 35,
+        "duration": 5,
         "name": "Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "6f39d8e3-102a-4053-bdc1-a2404bc940c2",
+        "lesson_activity.key": "5ab73326-66be-43bb-af47-5da3cc07b7b7",
         "lesson.key": "Hallucinations and Fabrications",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
       }
     },
     {
-      "key": "2f652c60-5741-4af2-865b-d0b5f1af108a",
-      "position": 4,
+      "key": "bc26be47-c9c2-4f6e-9aa8-44e9601f60e0",
+      "position": 5,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "2f652c60-5741-4af2-865b-d0b5f1af108a",
+        "lesson_activity.key": "bc26be47-c9c2-4f6e-9aa8-44e9601f60e0",
         "lesson.key": "Hallucinations and Fabrications",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
@@ -1756,7 +1769,6 @@
       "key": "eef4b29c-0151-4d29-940d-050d1644558d",
       "position": 2,
       "properties": {
-        "name": "Activity",
         "progression_name": "RecipeBot Data Curation"
       },
       "seeding_key": {
@@ -1798,10 +1810,10 @@
       }
     },
     {
-      "key": "a74d5dda-d8bf-4978-8a8f-ce2daeeff912",
+      "key": "626f06bd-aebb-47e5-897b-f87b4843a5c1",
       "position": 1,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/6ee0b8924e2d7e5cec4abd8b7477716f-Slide4.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Imagine you are going to visit a country where you don’t know the language, but you plan to learn it during your stay. You will be randomly assigned to one of 3 places to stay:\n\t\t<br />\n\t\t<br />- A hotel room with a bakery and restaurant on the ground floor\n\t\t<br />- A barn on a fruit farm with a shop that repairs farm equipment\n\t\t<br />- An apartment across from a florist with several young children\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> As you try to learn the language and listen to conversations around you:\n\t\t<br />\n\t\t<br />- What are some words you think you'll learn no matter where you stay?\n\t\t<br />- What are some specialized words you'll learn because of where you're staying?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should call out how they may learn the same conversational words and phrases in all three places - things like “Hello”, “goodbye”, “where is the bathroom?” - but they should call out how the secondary details in these scenarios may influence the types of words and phrases they learn. For example, in the hotel room, they are more likely to learn words associated with cooking and baking, whereas in the barn they are more likely to learn mechanical and technical terms. Emphasize how these differences are primarily due to circumstance and exposure rather than intent - whether you or not you wanted to learn certain phrases, the proximity to these situations makes it somewhat inevitable.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/f5d918aa118134e48b405b78fe1269fc-Slide5.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> The travel company has changed their policy and now you can choose which place you'd like to live. Of the three choices, which would you choose and why?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This can be a quick discussion and there is no single right answer - let students share their thoughts and justify their responses in whatever ways make sense to them. The important thing is that there is a choice involved - we can decide which type of experience we want to have when learning a language, and that choice will influence the types of words and phrases we learn. This will be an important point to make in the following slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/aeca854530da9e995d3be63110b0c288-Slide6.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This situation explores how the choices we make can affect the way we learn language purely based on the types of experiences we are exposed to. The same thing can happen with language models - during pre-training when it's looking at different sources to learn words and phrases, the types of data it is exposed to makes a difference in how it represents language. And, like in this example, we have choices about the data we use in pre-training, and those choices are important in how they influence language models.\n\t\t<br />\n\t\t<br /><strong>Question of the Day:</strong> How do our choices about input data influence a large language model?\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0/export/png?id=1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0&pageid=g2b5b268c506_0_173\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Imagine you are going to visit a country where you don’t know the language, but you plan to learn it during your stay. You will be randomly assigned to one of 3 places to stay:\n\t\t<br />\n\t\t<br />- A hotel room with a bakery and restaurant on the ground floor\n\t\t<br />- A barn on a fruit farm with a shop that repairs farm equipment\n\t\t<br />- An apartment across from a florist with several young children\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> As you try to learn the language and listen to conversations around you:\n\t\t<br />\n\t\t<br />- What are some words you think you'll learn no matter where you stay?\n\t\t<br />- What are some specialized words you'll learn because of where you're staying?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should call out how they may learn the same conversational words and phrases in all three places - things like “Hello”, “goodbye”, “where is the bathroom?” - but they should call out how the secondary details in these scenarios may influence the types of words and phrases they learn. For example, in the hotel room, they are more likely to learn words associated with cooking and baking, whereas in the barn they are more likely to learn mechanical and technical terms. Emphasize how these differences are primarily due to circumstance and exposure rather than intent - whether you or not you wanted to learn certain phrases, the proximity to these situations makes it somewhat inevitable.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0/export/png?id=1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0&pageid=g24323e7c1c45f30a_10\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> The travel company has changed their policy and now you can choose which place you'd like to live. Of the three choices, which would you choose and why?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This can be a quick discussion and there is no single right answer - let students share their thoughts and justify their responses in whatever ways make sense to them. The important thing is that there is a choice involved - we can decide which type of experience we want to have when learning a language, and that choice will influence the types of words and phrases we learn. This will be an important point to make in the following slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0/export/png?id=1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0&pageid=g2b5b268c506_0_197\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This situation explores how the choices we make can affect the way we learn language purely based on the types of experiences we are exposed to. The same thing can happen with language models - during pre-training when it's looking at different sources to learn words and phrases, the types of data it is exposed to makes a difference in how it represents language. And, like in this example, we have choices about the data we use in pre-training, and those choices are important in how they influence language models.\n\t\t<br />\n\t\t<br /><strong>Question of the Day:</strong> How do our choices about input data influence a large language model?\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
         "tips": [
           {
             "type": "ethicsOpportunity",
@@ -1810,32 +1822,32 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "a74d5dda-d8bf-4978-8a8f-ce2daeeff912",
-        "lesson_activity.key": "6640fa12-4cbd-4c9a-8f10-be8b36e66361"
+        "activity_section.key": "626f06bd-aebb-47e5-897b-f87b4843a5c1",
+        "lesson_activity.key": "9eac3fa0-9dd6-428c-bc8e-5d4f53a7a9be"
       }
     },
     {
-      "key": "9fbf698d-3871-4c08-8d75-40bd16251247",
+      "key": "d16cc3c2-cd2c-49e0-b125-05f846733d6c",
       "position": 1,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/be0812851e307d0894f68dee30c5410c-Slide8.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out the <a href=\"https://docs.google.com/document/d/1HmdwAW236aJgN8xu3ezGHultrkwZSgKKpgySHLX_4ms/edit\" target=\"_blank\">RecipeBot Data Curation</a> activity guide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/df699da6f16583063fd8ef3a931b0879-Slide9.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the overview of this document as a class. This text is also provided on the slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/2973ea93eca15f9838b1447c62ce1c80-Slide10.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Use a search engine to find a website that can be used for this task. Look for websites with specific words and phrases that we want the chatbot to understand.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Give students time to review the articles and respond to the prompts on the activity guide. Encourage students to avoid articles that aggregate information or with clickbait headlines - for example, \"top 10 recipes\" or \"will these foods ruin your teeth?\" - instead, encourage students to find primary sources such as actual recipes or articles on different food cultures. Students do not need to read each article in depth - only enough to get the gist at a high-level. The larger learning outcome is in the next part of the activity where students will compare similarities in the articles they’ve found.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> At this point, everyone has found an article that could be used to train RecipeBot to help provide recipes or food information. And we’ve done this in a similar process that actual language models do: looking at data readily available on the internet.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0/export/png?id=1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0&pageid=g2f230f85ca5_0_22\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read this overview to the class.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0/export/png?id=1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0&pageid=g2c507e1741f_0_14\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Direct students to Lesson 4, Level 2. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Use a search engine to find a website that can be used for this task. Look for websites with specific words and phrases that we want the chatbot to understand.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Give students time to review the articles and respond to the prompts on the level. Encourage students to avoid articles that aggregate information or with clickbait headlines - for example, \"top 10 recipes\" or \"will these foods ruin your teeth?\" - instead, encourage students to find primary sources such as actual recipes or articles on different food cultures. Students do not need to read each article in depth - only enough to get the gist at a high-level. The larger learning outcome is in the next part of the activity where students will compare similarities in the articles they’ve found.\n\t\t<br />\n\t\t<br />Once students answer the first set of questions and hit \"Submit\", they can continue to the next level which asks an additional question. When you notice enough students have moved to the next question, continue to the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0/export/png?id=1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0&pageid=g35ad4258760_0_18\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Direct students to Lesson 4, Level 3. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> At this point, everyone has found an article that could be used to train RecipeBot to help provide recipes or food information. And we’ve done this in a similar process that actual language models do: looking at data readily available on the internet.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students re-read the article closer and identify unique words that appear in the article and could be used by a language model to start developing meaning. For example: \"Naan\", or \"Ounce\", or \"Bake\".\n\t\t<br />\n\t\t<br />Prepare for Discussion: As students complete this, navigate to the level students just completed (Lesson 4 Level 2) and open the \"View Student Responses\" menu. Begin to preview student responses in preparation for the discussion on the next slide. You can see an example of how to view students responses on this level by <a href=\"https://www.loom.com/share/bf1df35996884bc58a49cac5d72df6a7\" target=\"_blank\">watching this video</a> and learn more about facilitating student discussions our <a href=\"https://docs.google.com/document/d/1hbjb6Jc0tW6PcxKLWHzjxTegrUUh7sWOG4wvR_33zvY/edit?tab=t.0\" target=\"_blank\">Teacher Guide to Incorporating Student Responses</a>.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n   ",
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "**Assessment Opportunity: Formative Assessment** - The last question on this worksheet can be used as a formative assessment for the learnings from yesterday's lesson, where students should understand that the training data used by a language model helps it recognize words. As students scan these articles, they should be able to identify different words that a chatbot will start to recognize because it is introduced in these articles. If the class struggles with how to answer this, consider regrouping and revisiting this concept from the previous lesson.**"
+            "markdown": "**Assessment Opportunity: Formative Assessment** - The last question on this worksheet can be used as a formative assessment for the learnings from yesterday's lesson, where students should understand that the training data used by a language model helps it recognize words. As students scan these articles, they should be able to identify different words that a chatbot will start to recognize because it is introduced in these articles. If the class struggles with how to answer this, consider regrouping and revisiting this concept from the previous lesson."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "9fbf698d-3871-4c08-8d75-40bd16251247",
-        "lesson_activity.key": "aa6b8ff1-a3a8-4c48-85b7-8fa4d479b18c"
+        "activity_section.key": "d16cc3c2-cd2c-49e0-b125-05f846733d6c",
+        "lesson_activity.key": "721a5a72-eebc-4d51-8f25-a49116820922"
       }
     },
     {
-      "key": "737715d4-5725-4dc4-96e5-6af444d55d6a",
+      "key": "9fe2f288-83a2-45c5-8109-fa98427cde53",
       "position": 2,
       "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/e95b888d7e09905127af98a34ae6560e-Slide11.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> Share Out: What are some of the articles you've found?\n\t\t<br />\n\t\t<br />Have students volunteer and share out the article they found and the information on their sheet. As they do, quickly record some of the key information in a space where the entire class can see. Specifically, try to list the following for each article:\n\t\t<br />- The first name of the author\n\t\t<br />- The year it was written\n\t\t<br />- The type of food it focuses on (ie: American, Indian, Mexican, etc. Or, focus on: fast-food, home-cooking, fine-dining, etc)\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> At first, students are only sharing out their articles. However, as you listen to student responses, be looking for patterns and potential biases in the data that's been collected. A few patterns that are likely to emerge are:\n\t\t<br />- Most of the articles are by authors of the same gender (mostly male, or mostly female)\n\t\t<br />- Most of the articles are written within the last decade\n\t\t<br />- Most of the articles are about a specific cuisine (ie: mostly American). \n\t\t<br />- If none of these patterns emerge, consider noticing something that's missing. For example, none of the articles seem to address a specific cuisine (ie: there are no articles yet with Korean food).\n\t\t<br />\n\t\t<br />Once you've identified at least one of these patterns, pause and ask the whole class to raise their hand if their articles also followed this pattern. For example: \"I'm noticing most of these articles are written within the last 10 years. Can you raise your hand if your article was also written in the last 10 years?\", or \"I'm noticing none of these articles are about food from the Middle East. Can you raise your hand if your article was about food from this region?\". Once you've called out at least one of these patterns, continue to the next slide.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0/export/png?id=1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0&pageid=g2f230f85ca5_0_40\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> Share Out: What are some of the articles you've found?\n\t\t<br />\n\t\t<br />As you lead this discussion, open the Student Summaries screen from the previous level which allows you to view all student responses on the board. This makes it easy for students to notice the patterns in the discussion goal below.\n\t\t<br />\n\t\t<br />If this isn't possible, have students volunteer and share out the article they found. As they do, quickly record some of the key information in a space where the entire class can see. Specifically, try to list the following for each article:\n\t\t<br />- The first name of the author\n\t\t<br />- The year it was written\n\t\t<br />- The type of food it focuses on (ie: American, Indian, Mexican, etc. Or, focus on: fast-food, home-cooking, fine-dining, etc)\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> At first, students are only sharing out their articles. However, as you listen to student responses, be looking for patterns and potential biases in the data that's been collected. A few patterns that are likely to emerge are:\n\t\t<br />- Most of the articles are by authors of the same gender (mostly male, or mostly female)\n\t\t<br />- Most of the articles are written within the last decade\n\t\t<br />- Most of the articles are about a specific cuisine (ie: mostly American). \n\t\t<br />- If none of these patterns emerge, consider noticing something that's missing. For example, none of the articles seem to address a specific cuisine (ie: there are no articles yet with Korean food).\n\t\t<br />\n\t\t<br />Once you've identified at least one of these patterns, pause and ask the whole class to raise their hand if their articles also followed this pattern. For example: \"I'm noticing most of these articles are written within the last 10 years. Can you raise your hand if your article was also written in the last 10 years?\", or \"I'm noticing none of these articles are about food from the Middle East. Can you raise your hand if your article was about food from this region?\". Once you've called out at least one of these patterns, continue to the next slide.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1844,15 +1856,15 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "737715d4-5725-4dc4-96e5-6af444d55d6a",
-        "lesson_activity.key": "aa6b8ff1-a3a8-4c48-85b7-8fa4d479b18c"
+        "activity_section.key": "9fe2f288-83a2-45c5-8109-fa98427cde53",
+        "lesson_activity.key": "721a5a72-eebc-4d51-8f25-a49116820922"
       }
     },
     {
-      "key": "0d6bc528-ad79-4f7c-adfd-d3be2047bf45",
+      "key": "66d159ad-fa4e-4853-8b78-1795218f0870",
       "position": 3,
       "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/d0a4157e58638cd7e3599296bc2f2e65-Foundations of Generative AI - Lesson 03 - Bias in the Machine.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> These patterns in our data collection are an example of bias, which is when a model favors certain information over others. For example, the front page of most search engines tend to have a recency bias where they favor new or recent articles over older ones. Biased data means that our language model will give biased answers. Let's hear a little more about Bias from Dr Deborah Raji\n\t\t<br />\n\t\t<br /><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://www.youtube.com/watch?v=fzn-6jftYNw\" target=\"_blank\">Algorithmic Bias with Dr Deborah Raji</a> video\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is an example of Bias Dr Raji discusses?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Use this as an opportunity to check-in on how well students understood the video. A key connection is how the curation and selection of data can contribute to bias, which is what has happened so far in this activity. Consider letting students respond more freely and open-endedly to the video as they reflect on the role of bias in machine learning, as well as Dr Raji's personal story about experiencing bias in a project she worked on.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    ",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0/export/png?id=1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0&pageid=g2c507e1741f_0_48\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> These patterns in our data collection are an example of bias, which is when a model favors certain information over others. For example, the front page of most search engines tend to have a recency bias where they favor new or recent articles over older ones. Biased data means that our language model will give biased answers. Let's hear a little more about Bias from Dr Deborah Raji\n\t\t<br />\n\t\t<br /><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://www.youtube.com/watch?v=fzn-6jftYNw\" target=\"_blank\">Algorithmic Bias with Dr Deborah Raji</a> video\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is an example of Bias Dr Raji discusses?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Use this as an opportunity to check-in on how well students understood the video. A key connection is how bias can be introduced (often unintentionally) via \"small decisions throughout the machine learning process\", which is similar to what has happened here - small decisions about which articles to curate may have unintentionally introduced a bias into the curation of data sources. Consider letting students respond more freely and open-endedly to the video as they reflect on the role of bias in machine learning, as well as Dr Raji's personal story about experiencing bias in a project she worked on.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
         "tips": [
           {
             "type": "ethicsOpportunity",
@@ -1861,15 +1873,15 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "0d6bc528-ad79-4f7c-adfd-d3be2047bf45",
-        "lesson_activity.key": "aa6b8ff1-a3a8-4c48-85b7-8fa4d479b18c"
+        "activity_section.key": "66d159ad-fa4e-4853-8b78-1795218f0870",
+        "lesson_activity.key": "721a5a72-eebc-4d51-8f25-a49116820922"
       }
     },
     {
-      "key": "969b1277-bdf7-461f-b9e3-4baf9271b722",
+      "key": "1a7ac1c1-31d2-42d4-beec-9cb03dc8a634",
       "position": 4,
       "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/7a970608b32a6fc0da29523bb9a1706b-Slide13.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the updated overview as a class: The RecipeBot company has asked for collections of resources that could be used as training data. Our new job is to identify potential sources of bias in these collections. It's impossible to avoid bias completely. The best we can do is ensure we have a diverse set of data and identify potential biases ahead of time.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/3fc2e3897f789e3a47c324fbc19f1ec2-Slide14.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the quote from the student: Man vs Food is a TV food and travel show that visits diner restaurants in the US and leaves reviews. I found an archive of their food reviews and some of their recipes. I think we should include this in the RecipeBot training data!\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is a potential bias with this collection of data? Should we include this in RecipeBot's training data?\n\t\t<br />\n\t\t<br />Have students discuss in small groups before sharing as a full-class. Consider having students discuss the first question and then regroup to share out before discussing the second question.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should identify that US-centric restaurants are being prioritized, which could lead to a potential bias. Students may also identify that since the show is also posting reviews, the content of the articles may be overly positive and create a false impression of how \"good\" these recipes really are. Students may decide to include this in RecipeBot's training data, but might suggest balancing this with additional travel TV shows that visited more diverse places or including more customer-provided reviews to get balanced opinions.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/a939071661bec2bd2e7d4a4c0022fa0a-Slide15.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the quote from the student: UNESCO is an organization founded in 1945 focused on different worldwide cultures. I found articles and recipes curated by UNESCO from around the world. This is a very diverse dataset we should add to RecipeBot's pretraining data!\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is a potential bias with this collection of data? Should we include this in RecipeBot's training data?\n\t\t<br />\n\t\t<br />Have students discuss in small groups before sharing as a full-class. Consider having students discuss the first question and then regroup to share out before discussing the second question.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This example is pretty ideal and it may be hard to find potential biases with this data collection without being able to look at it specifically. Students will likely agree that this is a good data source to include for RecipeBot.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/86f5eeaa15981b7928864346d42bb94d-Slide16.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the quote from the student: Ina Garten is a cookbook author who's written tons of recipes from around the world. I found a collection of PDFs of her cookbooks - we can use those in the data for RecipeBot.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is a potential bias with this collection of data? Should we include this in RecipeBot's training data?\n\t\t<br />\n\t\t<br />Have students discuss in small groups before sharing as a full-class. Consider having students discuss the first question and then regroup to share out before discussing the second question.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students may identify the author as a potential source of bias, since all the recipes are coming from one person, and may suggest including multiple sources in the training data. However, when discussing \"should we include this in the training data\", push students to consider the broader ethical question of including an author's direct work in the training data for a language model, especially since we haven't asked their permission to do so. This is an opportunity to discuss issues related to Copyright and language models, since including this information in training data means the chatbot could generate these recipes verbatim without the author's consent. Once this perspective is surfaced, let students consider the implications for the author and include this in the debate on whether or not to include this data while training.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0/export/png?id=1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0&pageid=g2f31538445d_0_65\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the updated overview as a class: The RecipeBot company has asked for collections of resources that could be used as training data. Our new job is to identify potential sources of bias in these collections. It's impossible to avoid bias completely. The best we can do is ensure we have a diverse set of data and identify potential biases ahead of time.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0/export/png?id=1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0&pageid=g35ad4258760_0_32\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Direct students to Lesson 4, Level 4. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students complete levels 4-7. Each level has a different person suggesting a potential data source for RecipeBot. Their job is to identify potential bias and recommend whether or not it should be included in the training data\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Monitor students as they complete each prompt on these levels. After most students have finished, have them refocus to the front of the classroom to discuss their responses. Students can either pull up their responses while discussing the following slides, or they can dim their screen and respond based on the thinking they've already done in the level.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0/export/png?id=1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0&pageid=g2f31538445d_0_43\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the quote from the student: Man vs Food is a TV food and travel show that visits diner restaurants in the US and leaves reviews. I found an archive of their food reviews and some of their recipes. I think we should include this in the RecipeBot training data!\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is a potential bias with this collection of data? Should we include this in RecipeBot's training data?\n\t\t<br />\n\t\t<br />Have students discuss in small groups before sharing as a full-class. Consider having students discuss the first question and then regroup to share out before discussing the second question.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should identify that US-centric restaurants are being prioritized, which could lead to a potential bias. Students may also identify that since the show is also posting reviews, the content of the articles may be overly positive and create a false impression of how \"good\" these recipes really are. Students may decide to include this in RecipeBot's training data, but might suggest balancing this with additional travel TV shows that visited more diverse places or including more customer-provided reviews to get balanced opinions.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0/export/png?id=1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0&pageid=g2f31538445d_0_89\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the quote from the student: UNESCO is an organization founded in 1945 focused on different worldwide cultures. I found articles and recipes curated by UNESCO from around the world. This is a very diverse dataset we should add to RecipeBot's pretraining data!\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is a potential bias with this collection of data? Should we include this in RecipeBot's training data?\n\t\t<br />\n\t\t<br />Have students discuss in small groups before sharing as a full-class. Consider having students discuss the first question and then regroup to share out before discussing the second question.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This example is pretty ideal and it may be hard to find potential biases with this data collection without being able to look at it specifically. Students will likely agree that this is a good data source to include for RecipeBot.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0/export/png?id=1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0&pageid=g2f31538445d_0_100\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the quote from the student: Ina Garten is a cookbook author who's written tons of recipes from around the world. I found a collection of PDFs of her cookbooks - we can use those in the data for RecipeBot.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is a potential bias with this collection of data? Should we include this in RecipeBot's training data?\n\t\t<br />\n\t\t<br />Have students discuss in small groups before sharing as a full-class. Consider having students discuss the first question and then regroup to share out before discussing the second question.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students may identify the author as a potential source of bias, since all the recipes are coming from one person, and may suggest including multiple sources in the training data. However, when discussing \"should we include this in the training data\", push students to consider the broader ethical question of including an author's direct work in the training data for a language model, especially since we haven't asked their permission to do so. This is an opportunity to discuss issues related to Copyright and language models, since including this information in training data means the chatbot could generate these recipes verbatim without the author's consent. Once this perspective is surfaced, let students consider the implications for the author and include this in the debate on whether or not to include this data while training.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
         "tips": [
           {
             "type": "ethicsOpportunity",
@@ -1878,15 +1890,15 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "969b1277-bdf7-461f-b9e3-4baf9271b722",
-        "lesson_activity.key": "aa6b8ff1-a3a8-4c48-85b7-8fa4d479b18c"
+        "activity_section.key": "1a7ac1c1-31d2-42d4-beec-9cb03dc8a634",
+        "lesson_activity.key": "721a5a72-eebc-4d51-8f25-a49116820922"
       }
     },
     {
-      "key": "0ea2c543-5a17-4b47-9a3b-8c41ce5c5a5e",
+      "key": "d820da67-baca-48ab-9403-b6bd233068b0",
       "position": 5,
       "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/13b93959bbcb9638d4c45a75fdd6ef92-Slide17.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the quote from the student: What's the big deal? Let's just include everything we can find on the internet and not leave anything out. That won't be biased then, right?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Even though this is most similar to how large-language models are actually trained, is this person correct that using all the data we can find means it won't be biased?\n\t\t<br />\n\t\t<br />Have students discuss in small groups before sharing as a full-class. Consider having students discuss the first question and then regroup to share out before discussing the second question.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should identify two potential issues with this: (1) the majority voices from the data may outnumber and overwhelm smaller voices, and (2) there's the potential for incorrect or misinformation to be included if we're not careful to curate this data. For example, if it was possible to include all recipe-related data, the majority of that data would likely be English-speaking and focusing on Western culinary traditions, and foods and recipes from minority groups - like Indigenous recipes - might be harder to identify amongst all the other recipes. For (2), it's possible that some data sources will include outdated information that could be harmful - for example, recipes that include ingredients that were later discovered to be unsafe or unhealthy.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0/export/png?id=1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0&pageid=g2f31538445d_0_111\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the quote from the student: What's the big deal? Let's just include everything we can find on the internet and not leave anything out. That won't be biased then, right?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Even though this is most similar to how large-language models are actually trained, is this person correct that using all the data we can find means it won't be biased?\n\t\t<br />\n\t\t<br />Have students discuss in small groups before sharing as a full-class. Consider having students discuss the first question and then regroup to share out before discussing the second question.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should identify two potential issues with this: (1) the majority voices from the data may outnumber and overwhelm smaller voices, and (2) there's the potential for incorrect or misinformation to be included if we're not careful to curate this data. For example, if it was possible to include all recipe-related data, the majority of that data would likely be English-speaking and focusing on Western culinary traditions, and foods and recipes from minority groups - like Indigenous recipes - might be harder to identify amongst all the other recipes. For (2), it's possible that some data sources will include outdated information that could be harmful - for example, recipes that include ingredients that were later discovered to be unsafe or unhealthy.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
         "tips": [
           {
             "type": "teachingTip",
@@ -1895,19 +1907,19 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "0ea2c543-5a17-4b47-9a3b-8c41ce5c5a5e",
-        "lesson_activity.key": "aa6b8ff1-a3a8-4c48-85b7-8fa4d479b18c"
+        "activity_section.key": "d820da67-baca-48ab-9403-b6bd233068b0",
+        "lesson_activity.key": "721a5a72-eebc-4d51-8f25-a49116820922"
       }
     },
     {
-      "key": "1e0b86d5-10e7-4d89-94ab-f7a00000dc5f",
+      "key": "6b4758f7-9feb-453a-b3ae-c370cb3b0648",
       "position": 1,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/411ba56bd960097fa6eca97432a69fd7-Slide19.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Another student not in this class has decided to try and make their own chatbot that can discuss and recommend movies. What is one piece of bias-related advice you would you give them when curating their training data?\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/cd91cca452b29a861c42e880ea207b8f-Slide20.PNG\"></td>\n    <td style=\"width: 75%\">\n      <strong>Question of the Day:</strong> How do our choices about input data influence a large language model?\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/6c56d0fdf1b06e03ac267e38b9c8c630-Slide21.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> The key vocabulary from this lesson is provided on this slide and in the lesson plan.\n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0/export/png?id=1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0&pageid=g2f31538445d_2_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Another student not in this class has decided to try and make their own chatbot that can discuss and recommend movies. What is one piece of bias-related advice you would you give them when curating their training data?\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0/export/png?id=1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0&pageid=g1b0012b9552_0_737\"></td>\n    <td style=\"width: 75%\">\n      <strong>Question of the Day:</strong> How do our choices about input data influence a large language model?\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0/export/png?id=1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0&pageid=g2ca60245d46_0_1\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> The key vocabulary from this lesson is provided on this slide and in the lesson plan.\n    </td>\n  </tr>\n\n</table>"
       },
       "seeding_key": {
-        "activity_section.key": "1e0b86d5-10e7-4d89-94ab-f7a00000dc5f",
-        "lesson_activity.key": "b9db636c-313b-481d-8141-0921716c10c5"
+        "activity_section.key": "6b4758f7-9feb-453a-b3ae-c370cb3b0648",
+        "lesson_activity.key": "28052a55-8a59-4a08-b5dd-9c08f0980bc4"
       }
     },
     {
@@ -2896,6 +2908,27 @@
       }
     },
     {
+      "key": "30847dde-5b8d-4602-a681-4ee769459a43",
+      "position": 1,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc/export/png?id=1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc&pageid=g35b4c9288e5_1_0\"></td>\n    <td style=\"width: 75%\">\n      <strong>Concept Video:</strong> Consider reviewing the <a href=\"https://youtu.be/fmmboPQAQeY\" target=\"_blank\">AI Auditing with Deb Raji</a> video, which the class watches in the middle of the lesson. Dr Raji speaks to what it means to be an AI Auditor, and the activity aligns with the skills and values she mentions in the video. Watching this ahead of time can help anticipate key moments in the lesson that align with the video.\n    </td>\n  </tr>\n\n</table>"
+      },
+      "seeding_key": {
+        "activity_section.key": "30847dde-5b8d-4602-a681-4ee769459a43",
+        "lesson_activity.key": "03669179-0056-4066-98b1-9ddfd244ebd3"
+      }
+    },
+    {
+      "key": "ff2e51b8-2904-4eba-9b95-f3238b57fae7",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ff2e51b8-2904-4eba-9b95-f3238b57fae7",
+        "lesson_activity.key": "03669179-0056-4066-98b1-9ddfd244ebd3"
+      }
+    },
+    {
       "key": "0f7faecc-20cb-481c-a578-373694398b93",
       "position": 1,
       "properties": {
@@ -2952,10 +2985,10 @@
       }
     },
     {
-      "key": "13ec55e1-7a1e-48c8-8cad-480f6f31b5ce",
+      "key": "f3b0fe8e-3a5b-4228-a210-169661532bb9",
       "position": 1,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/6b0984942ea59a52fda5219c9d6c8c42-Slide4.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Fill in the following mad-libs:\n\t\t<br />\n\t\t<br />- Thank ___.\n\t\t<br />- He dipped his french fries in _________.\n\t\t<br />- The smallest planet in our solar system is _________.\n\t\t<br />\n\t\t<br />Have students share with a partner before discussing as a full group.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students will likely use common phrases or personal knowledge to answer these questions. Thank You will likely be a common answer to the first mad-lib. The second answer may vary depending on the region you live in or the cultural background of your students - ketchup is a common US condiment to serve with french fries, but some countries use mayonnaise or vinegar, while others may use hot sauce. If this comes up, emphasize how prior experiences inform our answers here. For the last question, students may say Pluto is the smallest planet, while others may say Pluto is no longer a planet and instead Mercury is the smallest planet. This debate is key to the learning outcome on the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/8e9c55e9c2d64f337563f2f0f3c895a3-Slide5.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> A language model answered these mad-libs with:\n\t\t<br />\n\t\t<br />- Thank you\n\t\t<br />- He dipped his french fries in ketchup\n\t\t<br />- The smallest planet in our solar system is Pluto.\n\t\t<br />\n\t\t<br />Why do you think it gave these answers?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> The key part of this discussion is whether or not Pluto is the \"correct\" way to complete the last sentence, since Pluto is no longer a planet which would make Mercury the smallest planet. To help verify this, considering searching the internet for this question - as of the time this lesson was written, most online articles cite Mercury as the smallest planet instead of Pluto. This leads to a discussion of why the language model would choose Pluto as its answer, when this is no longer true. From last class, students should recall that language models use probability to choose the words they generate. And since Pluto was the smallest planet for hundreds of years, most articles used to train a language model probably included this fact. This means the language model might see \"smallest planet\" and \"Pluto\" as so highly correlated that the language model always picks this word to fill in this blank.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/5774526f2335be70ae099281c023bf22-Slide6.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Language models are capable of incredibly complex behavior, but they can also be wrong. In fact, there are some very simple things that it can be wrong about. In this example, you can see the language model says there are 14 words in the sentence… when there are actually 17 words.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc/export/png?id=1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc&pageid=g2c89eb4dad2_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Fill in the following mad-libs:\n\t\t<br />\n\t\t<br />- Thank ___.\n\t\t<br />- He dipped his french fries in _________.\n\t\t<br />- The smallest planet in our solar system is _________.\n\t\t<br />\n\t\t<br />Have students share with a partner before discussing as a full group.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students will likely use common phrases or personal knowledge to answer these questions. Thank You will likely be a common answer to the first mad-lib. The second answer may vary depending on the region you live in or the cultural background of your students - ketchup is a common US condiment to serve with french fries, but some countries use mayonnaise or vinegar, while others may use hot sauce. If this comes up, emphasize how prior experiences inform our answers here. For the last question, students may say Pluto is the smallest planet, while others may say Pluto is no longer a planet and instead Mercury is the smallest planet. This debate is key to the learning outcome on the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc/export/png?id=1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc&pageid=g2c89eb4dad2_0_17\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> A language model answered these mad-libs with:\n\t\t<br />\n\t\t<br />- Thank you\n\t\t<br />- He dipped his french fries in ketchup\n\t\t<br />- The smallest planet in our solar system is Pluto.\n\t\t<br />\n\t\t<br />Why do you think it gave these answers?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> The key part of this discussion is whether or not Pluto is the \"correct\" way to complete the last sentence, since Pluto is no longer a planet which would make Mercury the smallest planet. To help verify this, considering searching the internet for this question - as of the time this lesson was written, most online articles cite Mercury as the smallest planet instead of Pluto. This leads to a discussion of why the language model would choose Pluto as its answer, when this is no longer true. From last class, students should recall that language models use probability to choose the words they generate. And since Pluto was the smallest planet for hundreds of years, most articles used to train a language model probably included this fact. This means the language model might see \"smallest planet\" and \"Pluto\" as so highly correlated that the language model always picks this word to fill in this blank.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc/export/png?id=1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc&pageid=g2c89eb4dad2_0_25\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Language models are capable of incredibly complex behavior, but they can also be wrong. In fact, there are some very simple things that it can be wrong about. In this example, you can see the language model says there are 14 words in the sentence… when there are actually 17 words.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
         "tips": [
           {
             "type": "teachingTip",
@@ -2964,26 +2997,53 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "13ec55e1-7a1e-48c8-8cad-480f6f31b5ce",
-        "lesson_activity.key": "7a32f31d-7fb6-4244-8858-6e25c0cd361a"
+        "activity_section.key": "f3b0fe8e-3a5b-4228-a210-169661532bb9",
+        "lesson_activity.key": "32729159-9621-40ba-b916-07c1ae0d2f0b"
       }
     },
     {
-      "key": "1991a91c-03ab-4ec9-b826-33c9c363f336",
+      "key": "9df54eff-6647-4d79-b034-8b5edf8065ed",
       "position": 2,
       "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/3c5ab8a04024ff6818fcb63715e4b470-Slide7.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today we’ll examine other ways a language model can be inaccurate and explore how we, as designers and users of these models, can respond.\n\t\t<br />\n\t\t<br /><strong>Question of the Day:</strong> What happens when a language model gives inaccurate information?\n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc/export/png?id=1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc&pageid=g2b5b268c506_0_197\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today we’ll examine other ways a language model can be inaccurate and explore how we, as designers and users of these models, can respond.\n\t\t<br />\n\t\t<br /><strong>Question of the Day:</strong> How can we check the accuracy and performance of a language model?\n    </td>\n  </tr>\n\n</table>"
       },
       "seeding_key": {
-        "activity_section.key": "1991a91c-03ab-4ec9-b826-33c9c363f336",
-        "lesson_activity.key": "7a32f31d-7fb6-4244-8858-6e25c0cd361a"
+        "activity_section.key": "9df54eff-6647-4d79-b034-8b5edf8065ed",
+        "lesson_activity.key": "32729159-9621-40ba-b916-07c1ae0d2f0b"
       }
     },
     {
-      "key": "5671e002-60bc-4db6-87bd-efd5f9a3e93f",
+      "key": "cab5ce83-ca40-4046-a817-efb6f2e57049",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "cab5ce83-ca40-4046-a817-efb6f2e57049",
+        "lesson_activity.key": "32729159-9621-40ba-b916-07c1ae0d2f0b"
+      }
+    },
+    {
+      "key": "6327a089-258d-4f79-9963-f30c1544d2a9",
       "position": 1,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/7ee13f0179474861ea147ba905007232-Slide9.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> When a language model gives inaccurate information, those are called hallucinations. These occur when the most probable response isn’t accurate or factual. The example we saw in the warm-up is a hallucination - Roosevelt isn’t the actual president, even if he happens to be the most probable answer.\n\t\t<br />\u000bimage: Flaticon.com\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/1555bfafe10ef1bfe3bd066757217805-Slide10.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Hallucinations can be an example of how bias manifests in a language model. The reason the model generates these inaccurate responses is because that information may have been overrepresented in the training data, influencing the responses that the model generates.\n\t\t<br />\n\t\t<br />image: Flaticon.com\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/fe9bc2b855b0c8d243669fe045920b11-Slide11.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Issues with bias and hallucinations in chatbots are significant issues that impact real people. For example, \n\t\t<br />\n\t\t<br />- Amazon had to shut down a project to help screen applicants because it showed a bias against women.\n\t\t<br />- An eating disorder helpline needed to stop its chatbot from giving advice when it started giving counterproductive advice\n\t\t<br />- Research into popular language models shows it can provide debunked medical theories that disproportionately impact Black patients.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/6af95bc59f3609c310c54315a9a9fcdf-Slide12.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> All of these cases happened after people started using the language model. Do you think there’s anything we could have done earlier to help prevent this?\n\t\t<br />\n\t\t<br />Have students discuss in small groups before taking 2-3 volunteers as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This is a purposefully open-ended question meant to generate solution-oriented hypotheses and thoughts. There’s no one right answer, but students might suggest:\n\t\t<br />\n\t\t<br />- Adding some kind of filter or guardrail before anything gets sent back to the user to make sure the response is okay\n\t\t<br />- Making sure the data used to train the model didn’t include the kinds of sources that lead to this type of behavior\n\t\t<br />- Adding more data when training the model to make sure enough perspectives are represented so this kind of bias response doesn’t exist\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/8f6aa9796efc7d0e5bb99a19288f0152-Slide13.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today we’re going to put ourselves in the shoes of the people who find these kinds of issues with AI systems - an AI auditor. Our job will be to come up with different recommendations we might make to a company trying to make sure their chatbot doesn’t create headlines like these.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out the <a href=\"https://docs.google.com/document/d/1Gxnivw4GVgPYpaeZYHtEhd8YkjlL8YdAs3nADr5MUv4/edit\" target=\"_blank\">AI Auditor Activity Guide</a>\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/9121715a2b9b4b3d3fe248ffa4b4247f-Slide14.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the overview as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We’ve been hired to help companies be proactive about avoiding bias and hallucinations in their language models.  This process starts with the input, but the results aren’t observable until the output. This means we need to provide guidance on what to consider when sourcing initial training data, and what to test for once the model has been created.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/c54508b830e6874bed3cb2d25efc1191-Slide15.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the first scenario as a class. This is also on the activity guide.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Get Outta Here travel services wants to create a chatbot that can help recommend travel destinations to customers. Users will have a conversation with the chatbot about their interests and ideal travel scenarios, and then the chatbot will recommend different places to visit. The company wants to make sure the chatbot doesn’t suggest any factually inaccurate information, or give responses that prioritize certain destinations while unfairly excluding others.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/cd064c47660e6a6d3eadd72469190ac5-Slide16.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Remember that most chatbots use huge chunks of the internet as their training data. Imagine you could emphasize certain sources and avoid others - which ones might you try to consider? For example, you might want to emphasize the official travel websites from countries all over the world since those are likely to be trusted factual sources, and try to exclude forums or message boards from people who travel just to antagonize the people who live there since those might influence the model to consider travel recommendations that are unacceptable.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Have students discuss the prompts on the board in small groups. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Check in on groups as they discuss, listening in on the types of sources students might want to emphasize or avoid. Listen for the rationale they provide for why to emphasize or avoid certain sources, especially as it relates to potential bias and hallucinations. This can be a very open-ended discussion, but ideally the rationale focuses on centering sources that provide a wide representation of experiences and opportunities, and decenters sources that may provide inaccurate or intentionally biased content.\n\t\t<br />\n\t\t<br />Share Out: Ask 1-2 people to share out with the fill group, then have students fill in this section of their activity guide\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/4e7ebd2aa518a8a45794670336f67e82-Slide17.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We can only really test for bias or hallucinations once the chatbot has been trained. What are some example questions you might ask as a baseline? For example, you might ask “Where are good places to travel in Europe?” and look for responses that include a wide variety of countries and not just larger western European countries. Or you could ask “where are good places to travel in the USSR” and check that the chatbot realizes that the USSR doesn’t exist anymore but recommends other places to travel within the region.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Have students discuss the prompts on the board in small groups. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Check in on groups as they discuss, listening in on the types of questions they may want to ask. Listen for the rationale they provide for how the responses can help detect bias or hallucinations, being strategic about what baseline responses they would expect to help convince them the model has not been compromised. This can be a very open-ended discussion.\n\t\t<br />\n\t\t<br />Share Out: Ask 1-2 people to share out with the fill group, then have students fill in this section of their activity guide\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/ab7864acb450a81287b3f3c43f23ae5d-Slide18.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> As we saw in some of the headlines, technology doesn’t always work the same for everybody. It is also important to make sure the chatbot will work for a wide variety of users and will take into account their unique needs when making travel recommendations. Who are some folks you would want to make sure are able to test the chatbot before it gets published and verify it works for them? Why are they an important group to ensure the chatbot works correctly for them?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Have students discuss the prompts on the board in small groups. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Check in on groups as they discuss, listening in on the users they would want to make sure are included in this vetting process. This can be a very open-ended discussion, but ideally students latch onto how folks are affected by technology in different ways, and inviting those groups to be a part of testing and feedback before release can be a part of the auditing process.\n\t\t<br />\n\t\t<br />Share Out: Ask 1-2 people to share out with the fill group, then have students fill in this section of their activity guide\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc/export/png?id=1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc&pageid=g2c89eb4dad2_0_48\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Recall that bias is when a model favors certain information over others. One reason a model may generate incorrect or inaccurate results is because that information may have been overrepresented in the training data, influencing the responses that the model generates.\n\t\t<br />\n\t\t<br />image: Flaticon.com\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc/export/png?id=1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc&pageid=g2c89eb4dad2_0_61\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Issues with bias in chatbots are significant issues that impact real people. For example, \n\t\t<br />\n\t\t<br />- Amazon had to shut down a project to help screen applicants because it showed a bias against women.\n\t\t<br />- An eating disorder helpline needed to stop its chatbot from giving advice when it started giving counterproductive advice\n\t\t<br />- Research into popular language models shows it can provide debunked medical theories that disproportionately impact Black patients.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc/export/png?id=1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc&pageid=g2c89eb4dad2_0_73\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> All of these cases happened after people started using the language model. Do you think there’s anything we could have done earlier to help prevent this?\n\t\t<br />\n\t\t<br />Have students discuss in small groups before taking 2-3 volunteers as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This is a purposefully open-ended question meant to generate solution-oriented hypotheses and thoughts. There’s no one right answer, but students might suggest:\n\t\t<br />\n\t\t<br />- Adding some kind of filter or guardrail before anything gets sent back to the user to make sure the response is okay\n\t\t<br />- Making sure the data used to train the model didn’t include the kinds of sources that lead to this type of behavior\n\t\t<br />- Adding more data when training the model to make sure enough perspectives are represented so this kind of bias response doesn’t exist\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc/export/png?id=1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc&pageid=gca418c6afa_0_1141\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> As we saw in the headlines, the impact of biased models can be profound and deeply affect users and certain communities. Luckily, there are folks working in the field to help discover these flaws in models and advocate for change to improve them. This is a career known as AI Auditing - let’s look at someone actively working in this field to improve AI technologies. This is Dr Deborah Raji describing some of her work auditing facial recognition systems.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://youtu.be/fmmboPQAQeY\" target=\"_blank\">AI Auditing with Dr Deborah Raji</a> video\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What are some tasks that an AI Auditor does?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should identify strategies such as testing a variety of inputs and identifying key stakeholders who are impacted by the model to ensure it works correctly for them. These are similar to the activity students completed today when analyzing the outputs of models and predicting which kinds of groups they may want to test their chatbots with.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc/export/png?id=1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc&pageid=g2c8a3cbb947_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the overview as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We’ve been hired as AI Auditors to help companies be proactive about avoiding bias and increasing accuracy in their language models.  This process starts with the input, but the results aren’t observable until the output. This means we need to provide guidance on what to consider when collecting initial training data, and what to test for once the model has been created.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc/export/png?id=1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc&pageid=g2c8a3cbb947_0_9\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the first scenario as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Get Outta Here travel services wants to create a chatbot that can help recommend travel destinations to customers. Users will have a conversation with the chatbot about their interests and ideal travel scenarios, and then the chatbot will recommend different places to visit. The company wants to make sure the chatbot doesn’t suggest any factually inaccurate information, or give responses that prioritize certain destinations while unfairly excluding others.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n   ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Exemplars** - An exemplar for these prompts is provided in the lesson plan as an activity guide - <a href=\"https://docs.google.com/document/d/1W-3aTLH56DHgM-mV3EcA0-hIFR2WgShp15f7ctIkO7A/edit\" target=\"_blank\">click here to access the exemplars</a>."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6327a089-258d-4f79-9963-f30c1544d2a9",
+        "lesson_activity.key": "5ab73326-66be-43bb-af47-5da3cc07b7b7"
+      }
+    },
+    {
+      "key": "913867c4-f24f-4b21-830e-64bb8fcdfeed",
+      "position": 2,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc/export/png?id=1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc&pageid=g35b4c9288e5_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Direct students to Lesson 11, Level 2. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students re-read the scenario and the questions, but don't answer them yet.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We're going to do this first scenario together - we're going to discuss these as a class first and then write our own answers.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc/export/png?id=1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc&pageid=g2c8a3cbb947_0_18\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Remember that most chatbots use huge chunks of the internet as their training data. Imagine you could emphasize certain sources and avoid others - which ones might you try to consider? For example, you might want to emphasize the official travel websites from countries all over the world since those are likely to be trusted factual sources, and try to exclude forums or message boards from people who travel just to antagonize the people who live there since those might influence the model to consider travel recommendations that are unacceptable.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Have students discuss the prompts on the board in small groups. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Check in on groups as they discuss, listening in on the types of sources students might want to emphasize or avoid. Listen for the rationale they provide for why to emphasize or avoid certain sources, especially as it relates to potential bias. This can be a very open-ended discussion, but ideally the rationale focuses on centering sources that provide a wide representation of experiences and opportunities, and decenters sources that may provide inaccurate or intentionally biased content.\n\t\t<br />\n\t\t<br />Share Out: Ask 1-2 people to share out with the full group, then have students fill in this section on the level.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc/export/png?id=1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc&pageid=g2c8a3cbb947_0_26\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We can only really test for bias once the chatbot has been trained. What are some example questions you might ask as a baseline? For example, you might ask “Where are good places to travel in Europe?” and look for responses that include a wide variety of countries and not just larger western European countries. Or you could ask “where are good places to travel in the USSR” and check that the chatbot realizes that the USSR doesn’t exist anymore but recommends other places to travel within the region.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Have students discuss the prompts on the board in small groups. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Check in on groups as they discuss, listening in on the types of questions they may want to ask. Listen for the rationale they provide for how the responses can help detect bias, being strategic about what baseline responses they would expect to help convince them the model has not been compromised. This can be a very open-ended discussion.\n\t\t<br />\n\t\t<br />Share Out: Ask 1-2 people to share out with the full group, then have students fill in this section of their activity guide\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc/export/png?id=1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc&pageid=g2c8a3cbb947_0_36\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> As we saw in some of the headlines, technology doesn’t always work the same for everybody. It is also important to make sure the chatbot will work for a wide variety of users and will take into account their unique needs when making travel recommendations. Who are some folks you would want to make sure are able to test the chatbot before it gets published and verify it works for them? Why are they an important group to ensure the chatbot works correctly for them?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Have students discuss the prompts on the board in small groups. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Check in on groups as they discuss, listening in on the users they would want to make sure are included in this vetting process. This can be a very open-ended discussion, but ideally students latch onto how folks are affected by technology in different ways, and inviting those groups to be a part of testing and feedback before release can be a part of the auditing process.\n\t\t<br />\n\t\t<br />Share Out: Ask 1-2 people to share out with the fill group, then have students fill in this section of their activity guide\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n   ",
         "tips": [
           {
             "type": "ethicsOpportunity",
@@ -2992,30 +3052,47 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "5671e002-60bc-4db6-87bd-efd5f9a3e93f",
-        "lesson_activity.key": "6f39d8e3-102a-4053-bdc1-a2404bc940c2"
+        "activity_section.key": "913867c4-f24f-4b21-830e-64bb8fcdfeed",
+        "lesson_activity.key": "5ab73326-66be-43bb-af47-5da3cc07b7b7"
       }
     },
     {
-      "key": "f9e06f74-230a-492f-b0cb-e1b40dd102f1",
-      "position": 2,
+      "key": "759c8513-86a1-4f7e-bbfc-95613ce9ce14",
+      "position": 3,
       "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/c06e381d93da16d5f2d9aecf31461a4e-Slide19.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the first scenario as a class. This is also on the activity guide.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Your school is designing a chatbot to help students sign up for classes each year. Students can chat with the chatbot about their interests and future career plans, and the chatbot will recommend different core classes or electives to take. The school wants to make sure the chatbot provides information that keeps students on-track for graduation, and doesn’t implicitly steer students away from certain courses.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/392fd40c3c767dc6dd52d7a3d58b1d79-Slide20.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students work through Scenario 2 in small groups:\n\t\t<br />\n\t\t<br />1) First write down your thoughts on your own\n\t\t<br />2) Talk as a small group and discuss different responses\n\t\t<br />3) Revise your answers based on the discussion\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Listen in on students as they complete this task. Help facilitate discussion amongst groups as needed so students can discuss this scenario openly with their peers.\n\t\t<br />\n\t\t<br />Formative Assessment\n\t\t<br />While circulating, you can listen in to groups to get a pulse on how the class is thinking about this scenario. If most groups seem stuck in the discussion, consider regrouping as a full class and repeating the same structure as Scenario #1. If groups seem able to discuss in small groups, be sure to collect the activity guide after class to review how well students were able to articulate these AI auditing practices.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/0967f495f133fa06dd5ea9ae1de04bab-Slide21.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> (Optional) Invite groups to share out from their conversations if they wish.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/860d3357830477e5ed852dd2907bfdca-Foundations of Generative AI - Lesson 10 - Hallucinations and Fabrications.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> As we saw in the headlines, the impact of biased models can be profound and deeply affect users and certain communities. Luckily, there are folks working in the field to help discover these flaws in models and advocate for change to improve them. This is a career known as AI Auditing - let’s look at someone actively working in this field to improve AI technologies. This is Dr Deborah Raji describing some of her work auditing facial recognition systems.\n<br />\n\t\t<br /><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://www.youtube.com/watch?v=fmmboPQAQeY\" target=\"_blank\">AI Auditing with Deborah Raji</a> video\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n"
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc/export/png?id=1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc&pageid=g2c8a3cbb947_0_44\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the first scenario as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Your school is designing a chatbot to help students sign up for classes each year. Students can chat with the chatbot about their interests and future career plans, and the chatbot will recommend different core classes or electives to take. The school wants to make sure the chatbot provides information that keeps students on-track for graduation, and doesn’t implicitly steer students away from certain courses.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc/export/png?id=1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc&pageid=g2c8a3cbb947_0_52\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Direct students to Lesson 11, Level 4. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students complete Scenario 2 in their small groups\n\t\t<br />- First write down your thoughts on your own but don't Submit\n\t\t<br />- Talk as a small group and discuss different responses\n\t\t<br />- Revise your answers based on the discussion and then Submit!\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Listen in on students as they complete this task. Help facilitate discussion amongst groups as needed so students can discuss this scenario openly with their peers.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Assessment Opportunity: Formative Assessment** - While circulating, you can listen in to groups to get a pulse on how the class is thinking about this scenario. If most groups seem stuck in the discussion, consider regrouping as a full class and repeating the same structure as Scenario #1. If groups seem able to discuss in small groups, be sure to collect the activity guide after class to review how well students were able to articulate these AI auditing practices."
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "f9e06f74-230a-492f-b0cb-e1b40dd102f1",
-        "lesson_activity.key": "6f39d8e3-102a-4053-bdc1-a2404bc940c2"
+        "activity_section.key": "759c8513-86a1-4f7e-bbfc-95613ce9ce14",
+        "lesson_activity.key": "5ab73326-66be-43bb-af47-5da3cc07b7b7"
       }
     },
     {
-      "key": "c8dea658-841b-468e-a80b-cf182ecd936b",
+      "key": "e8cb5c41-fa94-4df7-a4e1-b4241e2d4770",
+      "position": 4,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc/export/png?id=1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc&pageid=g1b0012b9552_0_502\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> (Optional) Invite groups to share out from their conversations if they wish. You can also view responses via the Student Summaries screen and highlight certain responses.\n    </td>\n  </tr>\n\n</table>"
+      },
+      "seeding_key": {
+        "activity_section.key": "e8cb5c41-fa94-4df7-a4e1-b4241e2d4770",
+        "lesson_activity.key": "5ab73326-66be-43bb-af47-5da3cc07b7b7"
+      }
+    },
+    {
+      "key": "17aa2a9b-93e7-4f8f-913e-06d188da6291",
       "position": 1,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/e3df5cad79a0f9b8dd3295f64ab7eea0-Slide24.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> A friend said “I love using LLMs to help me with my homework. I asked it to help me write my history paper - it came up with all these interesting sources and information I had never heard of before”. What would you say to this person?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should be skeptical that all of these \"interesting sources\" are true and accurate, citing the work from today's lesson as evidence that language models can sometimes hallucinate. Additionally, consider coaching students on how to broach this subject with a friend from an empathic perspective and what they might suggest so their friend uncovers these hallucinations themselves. For example, instead of bluntly telling their friend \"those sources are probably wrong\", they could suggest their friend check their sources via the internet and verify they're correct before continuing with their assignment.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/75b5945e148dc712fe7295db03229d75-Slide25.PNG\"></td>\n    <td style=\"width: 75%\">\n      <strong>Question of the Day:</strong> What happens when a language model gives inaccurate information?\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/8bdec03898d80f73956a9cf9e1363ec5-Slide26.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> The key vocabulary from this lesson is provided on this slide and in the lesson plan.\n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc/export/png?id=1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc&pageid=g1b0012b9552_0_972\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> AI Auditing is a career that focuses on ensuring AI models operate fairly and accurately, especially for the people they will impact. Are there aspects of this career you would like to see in your own future career? Why or why not?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This is a personal reflective prompt for students, which they may not want to share out and instead can just keep in their written responses. This prompt emphasizes that there are careers in AI and machine learning that focus on the \"human\" side of AI, trying to make sure AI systems work fairly and efficiently for everyone. For example, you could share how Dr Raji's work with the Gender Shades project led to changes in facial recognition models that improved the standards and accuracy to benefit those most impacted. Encourage students to see themselves in a career like this involving artificial intelligence.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc/export/png?id=1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc&pageid=g1b0012b9552_0_737\"></td>\n    <td style=\"width: 75%\">\n      <strong>Question of the Day:</strong> How can we check the accuracy and performance of a language model?\n    </td>\n  </tr>\n\n</table>"
       },
       "seeding_key": {
-        "activity_section.key": "c8dea658-841b-468e-a80b-cf182ecd936b",
-        "lesson_activity.key": "2f652c60-5741-4af2-865b-d0b5f1af108a"
+        "activity_section.key": "17aa2a9b-93e7-4f8f-913e-06d188da6291",
+        "lesson_activity.key": "bc26be47-c9c2-4f6e-9aa8-44e9601f60e0"
       }
     },
     {
@@ -5975,7 +6052,7 @@
   ],
   "resources": [
     {
-      "name": "[Exemplar] AI Auditors",
+      "name": "[Exemplar] AI Auditor Levels",
       "url": "https://docs.google.com/document/d/1W-3aTLH56DHgM-mV3EcA0-hIFR2WgShp15f7ctIkO7A/edit",
       "key": "_exemplar_ai_auditors",
       "properties": {
@@ -6157,19 +6234,6 @@
       },
       "seeding_key": {
         "resource.key": "ai_auditing_with_dr_deborah_raji"
-      }
-    },
-    {
-      "name": "AI Auditors",
-      "url": "https://docs.google.com/document/d/1Gxnivw4GVgPYpaeZYHtEhd8YkjlL8YdAs3nADr5MUv4/edit",
-      "key": "ai_auditors",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "ai_auditors"
       }
     },
     {
@@ -6471,7 +6535,7 @@
       }
     },
     {
-      "name": "Hallucinations and Fabrications",
+      "name": "AI Auditing",
       "url": "https://docs.google.com/presentation/d/1VV0uK2-9LSX-vz6yky5uwUpRcgtQV4EzUQ0HNBrwPOc/template/preview",
       "key": "hallucinations_and_fabrications",
       "properties": {
@@ -6777,19 +6841,6 @@
       }
     },
     {
-      "name": "RecipeBot Data Curation",
-      "url": "https://docs.google.com/document/d/1HmdwAW236aJgN8xu3ezGHultrkwZSgKKpgySHLX_4ms/edit",
-      "key": "recipebot_data_curation",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "recipebot_data_curation"
-      }
-    },
-    {
       "name": "Teaching Guide - Incorporating Student Responses via Student Summaries",
       "url": "https://docs.google.com/document/d/1hbjb6Jc0tW6PcxKLWHzjxTegrUUh7sWOG4wvR_33zvY/edit",
       "key": "teaching_guide_-_incorporating_student_responses_via_student_summaries",
@@ -6940,12 +6991,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Bias in the Machine",
-        "resource.key": "recipebot_data_curation"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Embeddings: How They're Created",
         "resource.key": "_exemplar_foundations_of_generative_ai_graphic_organizer"
       }
@@ -7002,12 +7047,6 @@
       "seeding_key": {
         "lesson.key": "Hallucinations and Fabrications",
         "resource.key": "ai_auditing_with_dr_deborah_raji"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Hallucinations and Fabrications",
-        "resource.key": "ai_auditors"
       }
     },
     {

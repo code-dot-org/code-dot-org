@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-19 21:24:57 UTC",
+    "serialized_at": "2025-05-20 19:54:23 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -243,19 +243,8 @@
       }
     },
     {
-      "key": "eeed6b93-a555-4622-9508-152a45da2ead",
-      "position": 3,
-      "properties": {
-        "progression_name": "Music Integration Video"
-      },
-      "seeding_key": {
-        "activity_section.key": "eeed6b93-a555-4622-9508-152a45da2ead",
-        "lesson_activity.key": "60a5a8c6-bc6d-44fd-ace3-6dd008c60052"
-      }
-    },
-    {
       "key": "503e1668-f5fb-4ed4-ad4d-d3ffc14f7cc4",
-      "position": 4,
+      "position": 3,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -266,7 +255,7 @@
     },
     {
       "key": "8d511da7-808c-4596-acab-eb7dcec95cfa",
-      "position": 5,
+      "position": 4,
       "properties": {
         "progression_name": "Career Exploration"
       },
@@ -277,12 +266,23 @@
     },
     {
       "key": "674d9dd9-df68-4c8d-bee0-9508535b95ba",
-      "position": 6,
+      "position": 5,
       "properties": {
         "progression_name": "Inspire & Try"
       },
       "seeding_key": {
         "activity_section.key": "674d9dd9-df68-4c8d-bee0-9508535b95ba",
+        "lesson_activity.key": "60a5a8c6-bc6d-44fd-ace3-6dd008c60052"
+      }
+    },
+    {
+      "key": "eeed6b93-a555-4622-9508-152a45da2ead",
+      "position": 6,
+      "properties": {
+        "progression_name": "Music Integration Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "eeed6b93-a555-4622-9508-152a45da2ead",
         "lesson_activity.key": "60a5a8c6-bc6d-44fd-ace3-6dd008c60052"
       }
     },
@@ -420,6 +420,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Certificate"
+        ],
         "progression": "Welcome to Music Lab! "
       },
       "bonus": false,
@@ -442,28 +445,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Welcome to Music Lab! "
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "PLGuide_L1_OrientingTheLearner1"
-        ],
-        "lesson.key": "✈️ Welcome to Programming with Music Lab! ✈️ ",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-k5-music-lab-2025",
-        "activity_section.key": "21f08680-484e-4e1d-9e40-76f3d04029ef"
-      },
-      "level_keys": [
-        "PLGuide_L1_OrientingTheLearner1"
-      ]
-    },
-    {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
         "level_keys": [
           "MLOPD-K5-PLVid_2023_K5CSConcepts_1_1"
         ],
@@ -484,9 +465,9 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
-      "activity_section_position": 6,
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -509,8 +490,8 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
+      "chapter": 6,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -534,8 +515,8 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
+      "chapter": 7,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -556,6 +537,28 @@
       },
       "level_keys": [
         "music_lab_PL_career_journeys"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "About the Curriculum"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_career_journeys_in_classroom"
+        ],
+        "lesson.key": "✈️ Welcome to Programming with Music Lab! ✈️ ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-k5-music-lab-2025",
+        "activity_section.key": "12172645-5331-4a21-93bb-71deb50c7c8a"
+      },
+      "level_keys": [
+        "musiclab_career_journeys_in_classroom"
       ]
     },
     {
@@ -664,6 +667,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "k5_musiclab_pl_songwriterstoolbox"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -686,6 +692,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ct_in_music_lab"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -758,6 +767,28 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-timing-video_1"
+        ],
+        "lesson.key": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-k5-music-lab-2025",
+        "activity_section.key": "9277dc19-2e80-4d4a-9e7b-2cf5d9c74cfd"
+      },
+      "level_keys": [
+        "music-coding-intro-timing-video_1"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "music-coding-intro-together1_launch_1"
         ],
@@ -778,9 +809,9 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 7,
-      "activity_section_position": 4,
+      "chapter": 19,
+      "position": 8,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -803,9 +834,9 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 8,
-      "activity_section_position": 5,
+      "chapter": 20,
+      "position": 9,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -828,9 +859,9 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 9,
-      "activity_section_position": 6,
+      "chapter": 21,
+      "position": 10,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -850,31 +881,6 @@
       },
       "level_keys": [
         "music-coding-intro-5sounds_launch_1"
-      ]
-    },
-    {
-      "chapter": 21,
-      "position": 10,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "music-coding-intro-timing-video_1"
-        ],
-        "progression": "Music Integration Video"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "music-coding-intro-timing-video_1"
-        ],
-        "lesson.key": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-k5-music-lab-2025",
-        "activity_section.key": "eeed6b93-a555-4622-9508-152a45da2ead"
-      },
-      "level_keys": [
-        "music-coding-intro-timing-video_1"
       ]
     },
     {
@@ -933,15 +939,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-songwriter-videos_1"
-        ],
         "progression": "Career Exploration"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "music-coding-intro-songwriter-videos_1"
+          "pl_career_exploration"
         ],
         "lesson.key": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
         "lesson_group.key": "",
@@ -949,7 +952,7 @@
         "activity_section.key": "8d511da7-808c-4596-acab-eb7dcec95cfa"
       },
       "level_keys": [
-        "music-coding-intro-songwriter-videos_1"
+        "pl_career_exploration"
       ]
     },
     {
@@ -1739,18 +1742,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "PLGuide_L1_OrientingTheLearner1",
-        "script_level.level_keys": [
-          "PLGuide_L1_OrientingTheLearner1"
-        ],
-        "lesson.key": "✈️ Welcome to Programming with Music Lab! ✈️ ",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-k5-music-lab-2025",
-        "activity_section.key": "21f08680-484e-4e1d-9e40-76f3d04029ef"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "MLOPD-K5-PLVid_2023_K5CSConcepts_1_1",
         "script_level.level_keys": [
           "MLOPD-K5-PLVid_2023_K5CSConcepts_1_1"
@@ -1790,6 +1781,18 @@
         "level.key": "music_lab_PL_career_journeys",
         "script_level.level_keys": [
           "music_lab_PL_career_journeys"
+        ],
+        "lesson.key": "✈️ Welcome to Programming with Music Lab! ✈️ ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-k5-music-lab-2025",
+        "activity_section.key": "12172645-5331-4a21-93bb-71deb50c7c8a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_career_journeys_in_classroom",
+        "script_level.level_keys": [
+          "musiclab_career_journeys_in_classroom"
         ],
         "lesson.key": "✈️ Welcome to Programming with Music Lab! ✈️ ",
         "lesson_group.key": "",
@@ -1895,6 +1898,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "music-coding-intro-timing-video_1",
+        "script_level.level_keys": [
+          "music-coding-intro-timing-video_1"
+        ],
+        "lesson.key": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-k5-music-lab-2025",
+        "activity_section.key": "9277dc19-2e80-4d4a-9e7b-2cf5d9c74cfd"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "music-coding-intro-together1_launch_1",
         "script_level.level_keys": [
           "music-coding-intro-together1_launch_1"
@@ -1943,18 +1958,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "music-coding-intro-timing-video_1",
-        "script_level.level_keys": [
-          "music-coding-intro-timing-video_1"
-        ],
-        "lesson.key": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-k5-music-lab-2025",
-        "activity_section.key": "eeed6b93-a555-4622-9508-152a45da2ead"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "music-coding-intro-loop-beat_launch_1",
         "script_level.level_keys": [
           "music-coding-intro-loop-beat_launch_1"
@@ -1979,9 +1982,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "music-coding-intro-songwriter-videos_1",
+        "level.key": "pl_career_exploration",
         "script_level.level_keys": [
-          "music-coding-intro-songwriter-videos_1"
+          "pl_career_exploration"
         ],
         "lesson.key": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
         "lesson_group.key": "",

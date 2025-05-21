@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-19 17:25:07 UTC",
+    "serialized_at": "2025-05-20 20:57:16 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -10781,7 +10781,7 @@
   "resources": [
     {
       "name": "[KEY] Algorithm Decision-Making",
-      "url": "https://docs.google.com/document/d/1z-x3W3b9zAvsILXE_YaEufF6_sjG14NKHFPVOz3ZI5Y/edit?tab=t.0",
+      "url": "https://docs.google.com/document/d/1O-9esj18FlJGKVemFzyB-tj4jjP72VdOVwUAbWzAqq4/edit?usp=drivesdk",
       "key": "_key_algorithm_decision-making",
       "properties": {
         "audience": "Verified Teacher",
@@ -10793,7 +10793,7 @@
     },
     {
       "name": "[KEY] Baking a Cake",
-      "url": "https://drive.google.com/file/d/1J72Glvy5GQRmK_wXVNLDr_uW0kOKuzUX/view?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1oxcszzgf5Mqh54re5X2A-NQdaHtV7H8DiDWGRpqUqco/edit?usp=sharing",
       "key": "_key_baking_a_cake",
       "properties": {
         "audience": "Verified Teacher",
@@ -10805,7 +10805,7 @@
     },
     {
       "name": "[KEY] Decomposing a Pixel Image",
-      "url": "https://docs.google.com/document/d/17m8szFTsM7DneesI50et0mqnmQhyTv0g-dqNRSGgYU0",
+      "url": "https://docs.google.com/document/d/1ky2ckWlroZdR0t6LBlnmNPRum-3xxO6d5ba4uOzqa7w/edit?usp=drivesdk",
       "key": "_key_decomposing_a_pixel_image",
       "properties": {
         "audience": "Verified Teacher",
@@ -10817,7 +10817,7 @@
     },
     {
       "name": "[KEY] Planning a School Event",
-      "url": "https://docs.google.com/document/d/1AeaAiMSzRY60b4x-paMcAgFiAHB8FQsKt6WvjApOYoE/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1tfoRgVsxeZ1Cztu0HUiT7spzntEOwqyWl60VFlsqMEo/edit?usp=drivesdk",
       "key": "_key_planning_a_school_event",
       "properties": {
         "audience": "Verified Teacher",
@@ -10829,7 +10829,7 @@
     },
     {
       "name": "[KEY] Unit Guide - Interests and Skills",
-      "url": "https://docs.google.com/document/d/1sde7UqIu23ZOtcBKuhX4uR6mSLDNjpC2-z9EtBOLW98/view",
+      "url": "https://docs.google.com/document/d/1kKHncTCPJla5z4O_Id1aqS7UVuWv_0bPN7Ga0j90e84/edit?usp=drivesdk",
       "key": "_key_unit_guide_-_interests_and_skills",
       "properties": {
         "audience": "Teacher",
@@ -10841,7 +10841,7 @@
     },
     {
       "name": "[OPTIONAL] UMPIRE Strategy Activity Guide",
-      "url": "https://docs.google.com/document/d/1vpzcvYbxtJ-n1AJdcIgACKOURYySQClKYavxaJliwOo/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1hcBkH9GOtzkU0JFGn0Gnmrhi95NUA0l9SYZGgpoWScg/edit?usp=drivesdk",
       "key": "_optional_umpire_strategy_activity_guide",
       "properties": {
         "audience": "Student",
@@ -10875,7 +10875,7 @@
     },
     {
       "name": "Algorithm Decision-Making",
-      "url": "https://docs.google.com/document/d/1zCe5nxpYzzU7C9rF-D9rqVfpgwgSzOcjShuh2UpeWuw/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1gB6BxtGC6NIR-gimvJXH4xAcoVbYMXy4VojhjWlxNHI/edit?usp=drivesdk",
       "key": "algorithm_decision-making",
       "properties": {
         "audience": "Student",
@@ -10888,7 +10888,7 @@
     },
     {
       "name": "Algorithms IRL",
-      "url": "https://docs.google.com/presentation/d/1sKtkFPS_SVPTZ6M85YngP4-JMRwFnM3TrMM4zCVgnhc/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1ENXKbPTHFGMB_6RqKfaqpxpb-K1I9dI4NN7ALmrd4y8/edit?usp=drivesdk",
       "key": "algorithms_irl",
       "properties": {
         "audience": "Verified Teacher",
@@ -10933,7 +10933,7 @@
     },
     {
       "name": "Baking a Cake",
-      "url": "https://drive.google.com/file/d/1Hz3Jpw65nSHfHpGV4iIw3yYXbC9mIb16/view?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1A40oCejpPTn7KuaQgMPQ6KA_v6kceHA9C7cu418ikok/edit?usp=sharing",
       "key": "baking_a_cake",
       "properties": {
         "audience": "Student",
@@ -10944,20 +10944,8 @@
       }
     },
     {
-      "name": "Baking a Cake (Digital Option)",
-      "url": "https://docs.google.com/presentation/d/1S4Pq1TTn6KrvauIsb0ShVvpBfbxlrzB4aS_2_uAQLUE/edit?usp=drive_link",
-      "key": "baking_a_cake_digital_option_",
-      "properties": {
-        "audience": "Student",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "baking_a_cake_digital_option_"
-      }
-    },
-    {
       "name": "Computational Thinking",
-      "url": "https://docs.google.com/presentation/d/1qJjvG2fmfioHeduwsVIuW53l_bSU_cIzkjoLqyO3bFY/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1L__14H_p9BjdMC0OGyEP1ljc4-LFqo62vJtGKlxonG0/edit?usp=drivesdk",
       "key": "computational_thinking",
       "properties": {
         "audience": "Verified Teacher",
@@ -10969,7 +10957,7 @@
     },
     {
       "name": "Computing Careers",
-      "url": "https://docs.google.com/presentation/d/1B37Ij94cu2d2kIFKTvC0g7FTegqKtsDWIvNUVWGrS-s/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1P6IE0X6zqv3Hy5LrGjSMsgNv5VxQGRuxN309TELGtb8/edit?usp=drivesdk",
       "key": "computing_careers",
       "properties": {
         "audience": "Verified Teacher",
@@ -10981,7 +10969,7 @@
     },
     {
       "name": "Conditionals",
-      "url": "https://docs.google.com/presentation/d/1fG76MEI6Dajym2bSRnVvuvX9s0S7x4AhhFy6SEcZP4Y/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/19FBTMm_W2gjVs3-RjEPe57oZf65B0OCIfKIe1btdkvQ/edit?usp=drivesdk",
       "key": "conditionals",
       "properties": {
         "audience": "Verified Teacher",
@@ -10993,7 +10981,7 @@
     },
     {
       "name": "Decomposing a Pixel Image",
-      "url": "https://docs.google.com/document/d/1D2rxb4VwJ_0bOmViS2MzBlqTDQOSmg7FEFg8pDdPNkA",
+      "url": "https://docs.google.com/document/d/1aO9ADCkCQzvmBhQH5GkZNUNuRgJkMnNLsh0iZe92hxM/edit?usp=drivesdk",
       "key": "decomposing_a_pixel_image",
       "properties": {
         "audience": "Student",
@@ -11006,7 +10994,7 @@
     },
     {
       "name": "Digital Manipulative Support - Decomposing a Pixel Image",
-      "url": "https://docs.google.com/presentation/d/1k2M9ePhNgAXp3ba-fBi9aLI9Cf2SyEQoD9hABlTr-Zo/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1uJEmy8iKPWuVCVBjXphp1KVyr9NWaQ_SBiSTe5K4OzQ/edit?usp=drivesdk",
       "key": "decomposing_a_pixel_image_1",
       "properties": {
         "audience": "Teacher",
@@ -11018,7 +11006,7 @@
     },
     {
       "name": "Decomposition",
-      "url": "https://docs.google.com/presentation/d/1VHClwbKc66EJXAwzOO5E-7-ZS8tz8_lWKsD2Kt1VNbA/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1aFiqu32Ox2oCOK3iqIj1c_JdHHtTsrPakmP0jzreqds/edit?usp=drivesdk",
       "key": "decomposition",
       "properties": {
         "audience": "Verified Teacher",
@@ -11030,7 +11018,7 @@
     },
     {
       "name": "Designing Algorithms",
-      "url": "https://docs.google.com/presentation/d/194J-dUdxm-w7l4y-nbpCkWmV-QuO3lRrabi2f9QUdHw/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/109QcqztPo3NCopeGsAHTS81ivjcBwfi_z9xa6R-zor0/edit?usp=drivesdk",
       "key": "designing_algorithms",
       "properties": {
         "audience": "Verified Teacher",
@@ -11042,7 +11030,7 @@
     },
     {
       "name": "Digital Manipulative Support - Flowchart Template",
-      "url": "https://docs.google.com/presentation/d/1U0gAYGBgLGCSBBDtstQSB8KsPlvDoABZNeYxBVDkmMs/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1AQD8IaXnoLZbRp_ecrwlhUVwYlETnT88-SEoq3NbCCc/edit?usp=drivesdk",
       "key": "digital_manipulative_support_-_flowchart_template",
       "properties": {
         "audience": "Student",
@@ -11054,7 +11042,7 @@
     },
     {
       "name": "Digital Manipulative Support - School Event Planning Template",
-      "url": "https://docs.google.com/presentation/d/1te-PTPh3iqouY7ykW_pBjtH8PCrEMi0zcdbTczPOwwE/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1AlRvfF2J4K3b9SwS-dHOe06JuTP0Rs6Jh5rqd_ZVjdg/edit?usp=drivesdk",
       "key": "digital_manipulative_support_-_school_event_planning_template",
       "properties": {
         "audience": "Student",
@@ -11066,7 +11054,7 @@
     },
     {
       "name": "Function Template",
-      "url": "https://docs.google.com/document/d/1prp1Zm4JrPsyAtXeF98hmy-7nTEWOq-aEHvabhz2T_A/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1qBYkaVcp1OFVbEUwWoO5vvv_WMH5pyZ0rpvaB3Aat9M/edit?usp=drivesdk",
       "key": "function_template",
       "properties": {
         "audience": "Student",
@@ -11078,7 +11066,7 @@
     },
     {
       "name": "Functions and Parameters",
-      "url": "https://docs.google.com/presentation/d/1Bm7LEJYFq3IC3PNNl4S8KA5qZDF7sacIHjWcouwsDx4/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1h3ADli1HkezewKZY77qXhyqCCsjqilf6iUsYghvjics/edit?usp=drivesdk",
       "key": "functions_and_parameters",
       "properties": {
         "audience": "Verified Teacher",
@@ -11090,7 +11078,7 @@
     },
     {
       "name": "Functions with Parameters",
-      "url": "https://docs.google.com/presentation/d/10bbBGEV9_Ns-nORWIQaNQaKeo1sKVAxUMyc0DP8kO4A/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1nHoxhIlJZxkO406VSAIdJddQNhYB7Ps_Ms6juMk04ng/edit?usp=drivesdk",
       "key": "functions_with_parameters",
       "properties": {
         "audience": "Verified Teacher",
@@ -11102,7 +11090,7 @@
     },
     {
       "name": "Instruction Cards",
-      "url": "https://docs.google.com/document/d/109jTdm1H8AtLmjqKoBNkmi_OgL71jwcj57s9VXCeRCM/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/14Bx7Utp4HtV80bcAoRIH-qhHy0fbTXZ3XRslEzG-F0k/edit?usp=drivesdk",
       "key": "instruction_cards",
       "properties": {
         "audience": "Verified Teacher",
@@ -11114,7 +11102,7 @@
     },
     {
       "name": "Introduction to Loops",
-      "url": "https://docs.google.com/presentation/d/1bQZbQip2x3a3cNsxl0JQHmfy9ieByolL5ic3o_QzVUI/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/14_i9srmKnCaXboKMAEGDpavwFpjBzvXbiHdR5pKKZKY/edit?usp=drivesdk",
       "key": "introduction_to_loops",
       "properties": {
         "audience": "Verified Teacher",
@@ -11126,7 +11114,7 @@
     },
     {
       "name": "Pixels of Me Project",
-      "url": "https://docs.google.com/presentation/d/1Fx4_y67UTkJbdKuQgy9VS9-qyvip4TLjQetE0Gxv_Q4/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1KSi0s0u80x-E_BF2jCrkwIXIHFPlcbNe2sFaEFI3syQ/edit?usp=drivesdk",
       "key": "pixels_of_me_project",
       "properties": {
         "audience": "Verified Teacher",
@@ -11138,7 +11126,7 @@
     },
     {
       "name": "Pixels of Me Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1CNal1TCRTr9jHg_aFT53MCiJEJNLBtzGeNYLrCRg8ng",
+      "url": "https://docs.google.com/document/d/16MATjbEN2oaI8P_g5aSXoCPvz54fgUnEBpqANLSmQvI/edit?usp=drivesdk",
       "key": "pixels_of_me_project_planning_guide",
       "properties": {
         "audience": "Student",
@@ -11151,7 +11139,7 @@
     },
     {
       "name": "Planning a School Event",
-      "url": "https://docs.google.com/document/d/18YNd-AKJHnf6zgceEgTE1y3Zl66zob4xR0iem3zfzIY/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/124oJ0WmCJjbm755SWhVCbqmzYN9ccGXJsdl7N3EiZso/edit?usp=drivesdk",
       "key": "planning_a_school_event",
       "properties": {
         "audience": "Student",
@@ -11164,7 +11152,7 @@
     },
     {
       "name": "Foundations of AI Programming Unit Guide",
-      "url": "https://docs.google.com/document/d/1Nj6Ftrl10jVhwmxZxkBO49n8tKXhU791VkGwEWQV1W4/edit?tab=t.0#heading=h.al7bg56kcf1",
+      "url": "https://docs.google.com/document/d/1m6dHtb5PClNJWkmQb-ZWhcfDbCV1ibiJq7ehd2-QkGg/edit?usp=drivesdk",
       "key": "programming_fundamentals_unit_guide",
       "properties": {
         "audience": "Student",
@@ -11186,7 +11174,7 @@
     },
     {
       "name": "Two-Way Selection",
-      "url": "https://docs.google.com/presentation/d/1sQYoSuyu2WXOmOqaPMSrcYueigYXxgTaTgEMgy4NCBs/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1Ah9x3y7B0pEesT9TB2_BllOpYTtKVHw74By_GAnvyJQ/edit?usp=drivesdk",
       "key": "two-way_selection",
       "properties": {
         "audience": "Verified Teacher",
@@ -11194,6 +11182,16 @@
       },
       "seeding_key": {
         "resource.key": "two-way_selection"
+      }
+    },
+    {
+      "name": "UMPIRE Strategy Activity Guide",
+      "url": "https://docs.google.com/document/d/1hcBkH9GOtzkU0JFGn0Gnmrhi95NUA0l9SYZGgpoWScg/edit?usp=drivesdk",
+      "key": "umpire_strategy_activity_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "umpire_strategy_activity_guide"
       }
     },
     {
@@ -11210,7 +11208,7 @@
     },
     {
       "name": "Variables and Data Flow",
-      "url": "https://docs.google.com/presentation/d/16I1iVy8X_Qe_z_AI7O1oYHoedst-4TRAfsP-t_vzywk/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/17SquLCpyBUlMO_tqSbrw9DZRK4p7NQ_hnTAkP9m9X4g/edit?usp=drivesdk",
       "key": "variables_and_data_flow",
       "properties": {
         "audience": "Verified Teacher",
@@ -11234,7 +11232,7 @@
     },
     {
       "name": "Vision Board",
-      "url": "https://docs.google.com/presentation/d/1VWtxphobT9lGbWUxWA2w1j_wvPJemCMuiJjJEhsj-Mw/view",
+      "url": "https://docs.google.com/presentation/d/1Fq10OlmBpyHPg9lqytpovt57AInl9NOvJzbWR6UJ1OM/edit?usp=drivesdk",
       "key": "vision_board",
       "properties": {
         "audience": "Student",
@@ -11258,7 +11256,7 @@
     },
     {
       "name": "Working with Objects",
-      "url": "https://docs.google.com/presentation/d/10Ilx1oNwLQcV5oGiitfazYn-vU8aEqdodE2g_49WC-g/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1EI7C7nI-wIduonCKs7kg-g1THuyiClYlFnreXdMLUwo/edit?usp=drivesdk",
       "key": "working_with_objects",
       "properties": {
         "audience": "Verified Teacher",
@@ -11310,12 +11308,6 @@
       "seeding_key": {
         "lesson.key": "Computational Thinking",
         "resource.key": "baking_a_cake"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Computational Thinking",
-        "resource.key": "baking_a_cake_digital_option_"
       }
     },
     {
@@ -11593,6 +11585,12 @@
     {
       "seeding_key": {
         "resource.key": "python_lab_documentation",
+        "script.name": "aif2-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "umpire_strategy_activity_guide",
         "script.name": "aif2-2025"
       }
     },

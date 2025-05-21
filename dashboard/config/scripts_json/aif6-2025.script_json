@@ -23,7 +23,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-16 16:59:59 UTC",
+    "serialized_at": "2025-05-20 21:22:35 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4057,6 +4058,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson1-level4_2025"
+        ],
         "progression": "Data Scientists"
       },
       "bonus": false,
@@ -6199,7 +6203,7 @@
   "resources": [
     {
       "name": "[EXEMPLAR] Crafting Stories with Data Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1FLI5T-NfXBatMNe5XE-ystfEG0HNM5aEoU_AuAxJzc4/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1T3wQ5pdFj8ou59eEiK4UZXWla6t7Ejc-_mOA8RWeb_E/edit?usp=drivesdk",
       "key": "_exemplar_crafting_stories_with_data_project_planning_guide",
       "properties": {
         "audience": "Verified Teacher",
@@ -6211,7 +6215,7 @@
     },
     {
       "name": "[KEY] Activity Guide - Data Interpretation",
-      "url": "https://docs.google.com/document/d/1xF87sS2PXuUoACQS13EXSe6x_ZDiNePrAa7huHNr788/",
+      "url": "https://docs.google.com/document/d/1gPRJTpPtM7-o4KvKFTgKejShMpyuza37XzO1xsVbl-0/edit?usp=drivesdk",
       "key": "_key_activity_guide_-_data_interpretation",
       "properties": {
         "audience": "Teacher",
@@ -6223,7 +6227,7 @@
     },
     {
       "name": "[KEY] Data Scientist Bingo",
-      "url": "https://docs.google.com/document/d/1arZXqs-PZbSe53kvNvl4wNgMmWDDit131wiblo5ImF0/view",
+      "url": "https://docs.google.com/document/d/1LUl_dJkknPlKygYySyFHu4ofnE5bZ3_-FX6zGg506Yw/edit?usp=drivesdk",
       "key": "_key_data_scientist_bingo",
       "properties": {
         "audience": "Verified Teacher",
@@ -6235,7 +6239,7 @@
     },
     {
       "name": "[KEY] Data Scientist Tents",
-      "url": "https://docs.google.com/document/d/1waRCDPwr37Q7NkcjK4OmtWNsgnFw4qCMRe-YL7a_Dos/view",
+      "url": "https://docs.google.com/document/d/1RhmnbO2-EGjRm9YoB0GhbPOyswlHOylO5rIr1lVZVP8/edit?usp=drivesdk",
       "key": "_key_data_scientist_tents",
       "properties": {
         "audience": "Verified Teacher",
@@ -6247,7 +6251,7 @@
     },
     {
       "name": "[Optional] School Party Dataset",
-      "url": "https://docs.google.com/document/d/1nZypXZhpikdOsNHW7_i0hwvOC76EHd--PSOhV5xF4S0/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1qsQ0QgZyIIs6pWNCUP7N7TAoZXq7xfT6JTMAOunN5ig/edit?usp=drivesdk",
       "key": "_optional_school_party_dataset",
       "properties": {
         "audience": "Student",
@@ -6260,7 +6264,7 @@
     },
     {
       "name": "Activity Guide - Data Interpretation",
-      "url": "https://docs.google.com/document/d/16QeUhLDpKVBrIb4Uo61Ba3yAvKK-6Dn0OXmns2M1-N0/",
+      "url": "https://docs.google.com/document/d/1G31YGtWf2UADulbkbCcl0AONxlPuW0-qnVdlRaOC23w/edit?usp=drivesdk",
       "key": "activity_guide_-_data_interpretation",
       "properties": {
         "audience": "Student",
@@ -6315,7 +6319,7 @@
     },
     {
       "name": "Anchor Charts in Data Science",
-      "url": "https://docs.google.com/document/d/1lHva75FXZmYRlubTIGvVgyT1PE36wgJDyfJGkhf_qo4/",
+      "url": "https://docs.google.com/document/d/1vbXbb8Yd3YQ7nIBgXO5IC9nFmRgeZmtNnLD6RzY2xUI/edit?tab=t.0",
       "key": "anchor_charts_in_data_science",
       "properties": {
         "audience": "Teacher",
@@ -6327,7 +6331,7 @@
     },
     {
       "name": "Answering a Data Question",
-      "url": "https://docs.google.com/document/d/1b8acFM8GLCR1U4LZays88VE6cJNKTVe78xUxIRo_EfM/view",
+      "url": "https://docs.google.com/document/d/1VQdAbsIQbaOy10GuB8Bz0cOIwyDdQxcC36ToJh6ji20/edit?usp=drivesdk",
       "key": "answering_a_data_question",
       "properties": {
         "audience": "Student",
@@ -6340,7 +6344,7 @@
     },
     {
       "name": "Cleaning Data",
-      "url": "https://docs.google.com/presentation/d/1Y_azIGJYuBFerX5UjFjDrjFwsPV7SuAU5-sd5n5TWSM/view",
+      "url": "https://docs.google.com/presentation/d/1It3QM-Ji8Yfz782pcBZAM3lb6fZBmqlSRfxhOxqg7w8/edit?usp=drivesdk",
       "key": "cleaning_data",
       "properties": {
         "audience": "Teacher",
@@ -6352,7 +6356,7 @@
     },
     {
       "name": "Crafting Stories with Data Project",
-      "url": "https://docs.google.com/presentation/d/1k58rMvqRdWNCBLv8YWgtVn8_68ckfGWxRKmLo3XL8iM/view",
+      "url": "https://docs.google.com/presentation/d/1GZLjmW5SsR9TzUAka208QpABs-3zSoK8Z58CqYcDupo/edit?usp=drivesdk",
       "key": "crafting_stories_with_data_project",
       "properties": {
         "audience": "Teacher",
@@ -6364,7 +6368,7 @@
     },
     {
       "name": "Crafting Stories with Data Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1wIqaBJxxyYquYiuWS2-CYN2zpSWA6mqI2j3S4cKHbvE/edit#heading=h.3gr1mqiax0ng",
+      "url": "https://docs.google.com/document/d/1JSShLxB5I7LzttGOn375gzDWGF3MEvRB87jC9eiK0Kw/edit?usp=drivesdk",
       "key": "crafting_stories_with_data_project_planning_guide",
       "properties": {
         "audience": "Student",
@@ -6377,7 +6381,7 @@
     },
     {
       "name": "Data Collection Methods",
-      "url": "https://docs.google.com/document/d/1i7H5FuiJ9wKRgHJVX94b7p0YqJwx5_YPQVJJD_HC75o/view",
+      "url": "https://docs.google.com/document/d/1893CI_1yVODybg1RhjUWWLGbbgTUQdGA4Cc7W7mZMcg/edit?usp=drivesdk",
       "key": "data_collection_methods",
       "properties": {
         "audience": "Student",
@@ -6390,7 +6394,7 @@
     },
     {
       "name": "Data Interpretation",
-      "url": "https://docs.google.com/presentation/d/1miYE3vdccvAFzf_OsVBFkFCsNcFMVLYQ-pJ-r6ugTCY/view",
+      "url": "https://docs.google.com/presentation/d/1RGFvlx8nTFw9b8EM7MD9QlbaZ50dr9UyhqDuyn3iEmo/edit?usp=drivesdk",
       "key": "data_interpretation",
       "properties": {
         "audience": "Teacher",
@@ -6402,7 +6406,7 @@
     },
     {
       "name": "[Optional] Data Question Peer Review",
-      "url": "https://docs.google.com/document/d/1A6tPg-WhJPmjYJMqKjUh3toQexGdsS0wjbQ52Otj430/view",
+      "url": "https://docs.google.com/document/d/18Kz1h-RBNDYveMR_wsx3_kUj2CrSPL8i76qiKzCTCU0/edit?usp=drivesdk",
       "key": "data_question_peer_review",
       "properties": {
         "audience": "Student",
@@ -6415,7 +6419,7 @@
     },
     {
       "name": "Data Rights",
-      "url": "https://docs.google.com/presentation/d/1sTd2QmpRPOZOCrz13wiRG7gMKgq5jLwfxZgIML7MqOY/view",
+      "url": "https://docs.google.com/presentation/d/1CWmz-VZuEvMXkJo8v3lXolSTjZ1UOenSjcOGcFaHJ1Q/edit?usp=drivesdk",
       "key": "data_rights",
       "properties": {
         "audience": "Teacher",
@@ -6427,7 +6431,7 @@
     },
     {
       "name": "Data Rights Exploration",
-      "url": "https://docs.google.com/document/d/1NB6nZdNyCksoK2DBQK42nTcHakn04TW9cQu9BMDYabg/view",
+      "url": "https://docs.google.com/document/d/1GMy2YGcfdAMnwj0Qyan6Cry4gKQJRrrBAfrr91rJ1vo/edit?usp=drivesdk",
       "key": "data_rights_exploration",
       "properties": {
         "audience": "Student",
@@ -6452,7 +6456,7 @@
     },
     {
       "name": "Data Scientist Bingo",
-      "url": "https://docs.google.com/document/d/1AneTWDfmrXLWXQ_LSagemgSD_a8BRjFl5_FC-gx5ovU/view",
+      "url": "https://docs.google.com/document/d/1QdgItIwEbkHRFzsKeH83EpdODPmddEfIXmT3C7d8Krk/edit?usp=drivesdk",
       "key": "data_scientist_bingo",
       "properties": {
         "audience": "Student",
@@ -6465,7 +6469,7 @@
     },
     {
       "name": "Data Scientist Tents",
-      "url": "https://docs.google.com/document/d/14JzmWcfkAawz8KwRMuvRyDHmsNMQYF75n6kync1pTTA/view",
+      "url": "https://docs.google.com/document/d/1sfmdS0Ug9mowKWcDw5kSNNToZF1EHDTK5R9YzfN3xdY/edit?usp=drivesdk",
       "key": "data_scientist_tents",
       "properties": {
         "audience": "Student",
@@ -6477,7 +6481,7 @@
     },
     {
       "name": "Data Storytelling",
-      "url": "https://docs.google.com/presentation/d/1jSESaQ601E2A_aSetNhw8OemoY_tfkB26sZdZTzCCd4/view",
+      "url": "https://docs.google.com/presentation/d/1CWOZ7q12zw_EcwUFnidTU_UFg33mawkFlm7CDmmW41M/edit?usp=drivesdk",
       "key": "data_storytelling",
       "properties": {
         "audience": "Teacher",
@@ -6489,7 +6493,7 @@
     },
     {
       "name": "Data Storytelling",
-      "url": "https://docs.google.com/document/d/1g_HJAmgWJQsveP7fTI37PYebmE4bJl6j3VIZqkMm_cI/view",
+      "url": "https://docs.google.com/document/d/1chLjsS0e5NMnnmSjMcXaa1U87tcit9ruPpgxYXqRzC0/edit?usp=drivesdk",
       "key": "data_storytelling_1",
       "properties": {
         "audience": "Student",
@@ -6538,7 +6542,7 @@
     },
     {
       "name": "Effective Data Questions",
-      "url": "https://docs.google.com/presentation/d/1-5wOHz__mvmw2qo3XjTZVkSsIGVUcqLkCWvz8c29jps/view",
+      "url": "https://docs.google.com/presentation/d/14QcGIQEK2tu4yqurjXU5dSCpdwFdKS7Sfv2s3VMbJqU/edit?usp=drivesdk",
       "key": "effective_data_questions",
       "properties": {
         "audience": "Teacher",
@@ -6550,7 +6554,7 @@
     },
     {
       "name": "Ethical Data Collection",
-      "url": "https://docs.google.com/presentation/d/1FYs-gzPghKZ_tGGNbcMd0PAjIkwmcUB_yboJthp3tnw/view",
+      "url": "https://docs.google.com/presentation/d/1O6KKdwFNCpWrkLYD9UixqvqocZB8gbb7p-gyjYFbEzY/edit?usp=drivesdk",
       "key": "ethical_data_collection",
       "properties": {
         "audience": "Teacher",
@@ -6598,7 +6602,7 @@
     },
     {
       "name": "Guide to Anchor Charts and Word Walls",
-      "url": "https://docs.google.com/document/d/1lHva75FXZmYRlubTIGvVgyT1PE36wgJDyfJGkhf_qo4/view",
+      "url": "https://docs.google.com/document/d/1vbXbb8Yd3YQ7nIBgXO5IC9nFmRgeZmtNnLD6RzY2xUI/edit?tab=t.0",
       "key": "guide_to_anchor_charts_and_word_walls",
       "properties": {
       },
@@ -6608,7 +6612,7 @@
     },
     {
       "name": "Guide to Language Routines",
-      "url": "https://docs.google.com/document/d/1B93Lzlo63VrBNjlc3puiujew8gtMFanxSdXx3lqzIrs/view",
+      "url": "https://docs.google.com/document/d/1NEDGIzE63FPpiE5Z0Nk9Qvf7kxn6POPpMFr_fcp3Z5M/edit?tab=t.0",
       "key": "guide_to_language_routines",
       "properties": {
       },
@@ -6630,7 +6634,7 @@
     },
     {
       "name": "Introduction to Data Science",
-      "url": "https://docs.google.com/presentation/d/1acl9tQ-KbC6hcWE8F-SJjuFbHt1TXasy9vJiqlVCj2o/view",
+      "url": "https://docs.google.com/presentation/d/1IzfzxF4S1cT-t4r5h8MBB1378duO71zzw5UVpcVJSM8/edit?usp=drivesdk",
       "key": "introduction_to_data_science",
       "properties": {
         "audience": "Teacher",
@@ -6642,7 +6646,7 @@
     },
     {
       "name": "Introduction to Data Visualization",
-      "url": "https://docs.google.com/presentation/d/10zr_gSpPmJlC9NLiPCX-UIekd1Jro8F6rQz2rzOveZk/view",
+      "url": "https://docs.google.com/presentation/d/140ALqMiulCvTSe_iiMQrHbVJEFgn3CW25VbQpC4hs0g/edit?usp=drivesdk",
       "key": "introduction_to_data_visualization",
       "properties": {
         "audience": "Teacher",
@@ -6654,7 +6658,7 @@
     },
     {
       "name": "Making Sense of Data",
-      "url": "https://docs.google.com/presentation/d/10zJojXHnkliOvtqmA_4NhcehIphxBL2ztO-hRcMOxfs/view",
+      "url": "https://docs.google.com/presentation/d/1IzfzxF4S1cT-t4r5h8MBB1378duO71zzw5UVpcVJSM8/edit?usp=drivesdk",
       "key": "making_sense_of_data",
       "properties": {
         "audience": "Teacher",
@@ -6750,7 +6754,7 @@
     },
     {
       "name": "More Visualization Techniques",
-      "url": "https://docs.google.com/presentation/d/1r06gRF-64qnEtmfF781Lns3ny9ODkW4jDyp3oUTlPyY/view",
+      "url": "https://docs.google.com/presentation/d/1hiSU7Esnmb-jjKjZZNlQY1vGPDpo9csuEip4q3xHt-A/edit?usp=drivesdk",
       "key": "more_visualization_techniques",
       "properties": {
         "audience": "Teacher",
@@ -6810,7 +6814,7 @@
     },
     {
       "name": "Possible Questions",
-      "url": "https://docs.google.com/document/d/1IW9npsTXMycjHznEfWqY_J16z8ULBru-oyKU7Bd_ftI/view",
+      "url": "https://docs.google.com/document/d/1yC_KFiVfYK8euXZjkZiBXvewU6Ct08UkMHLWIzcYtmI/edit?usp=drivesdk",
       "key": "possible_questions",
       "properties": {
         "audience": "Student",
@@ -6823,7 +6827,7 @@
     },
     {
       "name": "Privacy Policy Statements",
-      "url": "https://docs.google.com/document/d/19LFF3McBNQqDq0u4BNrC9FOwpAdW32zqBivJ3kOTMxI/view",
+      "url": "https://docs.google.com/document/d/1mIjeXf86QkF6YMkutYYxGcOZuAchk2-109Ufz-m8wAA/edit?usp=drivesdk",
       "key": "privacy_policy_statements",
       "properties": {
         "audience": "Student",
@@ -6872,7 +6876,7 @@
     },
     {
       "name": "Insights from Data and AI Unit Guide",
-      "url": "https://docs.google.com/document/d/1XH9U-frBYMWbf_bSHtci02TuIPb-YmVhqXoQJYW7aVE/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1c5tjo_8CpnWJJMgW-5ineLV5BknwnGzecyJSqiYgILw/edit?usp=drivesdk",
       "key": "unit_guide",
       "properties": {
         "audience": "Student",
@@ -6884,7 +6888,7 @@
     },
     {
       "name": "Insights from Data and AI Unit Guide",
-      "url": "https://docs.google.com/document/d/1XH9U-frBYMWbf_bSHtci02TuIPb-YmVhqXoQJYW7aVE/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1c5tjo_8CpnWJJMgW-5ineLV5BknwnGzecyJSqiYgILw/edit?usp=drivesdk",
       "key": "unit_guide_1",
       "properties": {
       },
