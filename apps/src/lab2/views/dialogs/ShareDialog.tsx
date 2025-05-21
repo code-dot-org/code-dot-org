@@ -188,7 +188,7 @@ const ShareDialog: React.FunctionComponent<{
     <Dialog
       title={i18n.sharingDisabledTitle()}
       description={i18n.sharingBlockedByTeacherAdvancedProjects()}
-      mode="dark"
+      mode="light"
       primaryButtonProps={{
         onClick: () => dispatch(hideShareDialog()),
         text: i18n.ok(),

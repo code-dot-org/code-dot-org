@@ -46,6 +46,12 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
   const is13Plus = useSelector(
     (state: {currentUser: {under13: boolean}}) => !state.currentUser.under13
   );
+
+  const userSharingDisabled = useSelector(
+    (state: {currentUser: {userSharingDisabled: boolean}}) =>
+      state.currentUser.userSharingDisabled
+  );
+
   // State to track which dialog is displayed (share or submit).
   const [dialogPanel, setDialogPanel] = useState<'share' | 'submit'>('share');
   const isDialogOpen = useSelector(
@@ -133,6 +139,7 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
         onSubmitClick={onSubmitClick}
         submissionStatus={submissionStatus}
         channelId={channelId}
+        userSharingDisabled={userSharingDisabled}
       />
     ) : (
       <SubmitProjectDialog
