@@ -299,16 +299,17 @@ class HttpCache
           # should not be cached in CloudFront. Use CloudFront Behavior
           # precedence rules to not cache these paths, but all paths in
           # CACHED_UNITS_MAP that don't match this path will be cached.
-          {
-            path: UNCACHED_UNIT_LEVEL_PATHS,
-            headers: ALLOWLISTED_HEADERS,
-            cookies: allowlisted_cookies
-          },
-          {
-            path: CACHED_UNITS_MAP.values,
-            headers: ALLOWLISTED_HEADERS,
-            cookies: default_cookies
-          },
+          # TODO: re-enable these behaviors after moving to /courses/ paths
+          # {
+          #   path: UNCACHED_UNIT_LEVEL_PATHS,
+          #   headers: ALLOWLISTED_HEADERS,
+          #   cookies: allowlisted_cookies
+          # },
+          # {
+          #   path: CACHED_UNITS_MAP.values,
+          #   headers: ALLOWLISTED_HEADERS,
+          #   cookies: default_cookies
+          # },
           {
             path: '/api/v1/projects/gallery/public/*',
             headers: [],
