@@ -8,7 +8,6 @@ import React from 'react';
 
 import i18n from '@cdo/locale';
 
-import {COLORS, EMOJIS} from './avatarConstants';
 import PickerGrid from './PickerGrid';
 import SectionAvatar from './SectionAvatar';
 
@@ -44,10 +43,17 @@ const SectionAvatarEditDialog: React.FC<SectionAvatarEditDialogProps> = ({
 
   return (
     <CustomDialog
+      aria-label="Section avatar edit dialog"
       className={styles.editorDialog}
       title={i18n.editAvatar()}
       onClose={() => closeCallback()}
     >
+      <div
+        className={styles.accessibleDescription}
+        id="dsco-dialog-description"
+      >
+        {i18n.avatarEditDialogDescription()}
+      </div>
       <div className={styles.avatarDialogHeader}>
         <Heading3>{i18n.editAvatar()}</Heading3>
         <hr />
@@ -65,7 +71,6 @@ const SectionAvatarEditDialog: React.FC<SectionAvatarEditDialogProps> = ({
           <label className={styles.avatarDialogLabels}>
             <BodyTwoText>{i18n.chooseEmoji()}</BodyTwoText>
             <PickerGrid
-              itemList={EMOJIS}
               type={'emoji'}
               selectCallback={handleSelectEmoji}
               selected={selectedEmoji}
@@ -74,7 +79,6 @@ const SectionAvatarEditDialog: React.FC<SectionAvatarEditDialogProps> = ({
           <label className={styles.avatarDialogLabels}>
             <BodyTwoText>{i18n.chooseColor()}</BodyTwoText>
             <PickerGrid
-              itemList={COLORS}
               type={'color'}
               selectCallback={handleSelectColor}
               selected={selectedColor}
