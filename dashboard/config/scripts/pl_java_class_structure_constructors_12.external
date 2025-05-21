@@ -5,28 +5,28 @@ description 'description here'
 markdown <<MARKDOWN
 # Constructors
 
-#### The next part of writing a class
+#### The next part of writing a class is creating the **constructor**, because it sets up the object with the information it needs as soon as it's created.
 
-<img src="https://images.code.org/54779c275bd9a1b93b37f7b622dcf9e8-image-1747666707784.png" alt="digram of a class indicating the name of the class, attributes, and behaviors" width="350px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+#### You can think of a constructor like a recipe that tells Java how to make a new object and what ingredients (information) to include when it's created.
 
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Constructor</strong> is a block of code that has the <b>same name as the class</b> and tells the computer how to create a new object.
+</p>
+</div>
 
-
-
->#### A **class** in Java is a user-defined data type that contains **instance variables** (also called attributes) and **methods** (functions that define behavior).
->#### It serves as a blueprint for creating objects, which are **instances of the class**.
 
 ## Class Structure 
 
-#### Take a look at the code for the Book class below. As you work through this lesson, you will go through each of these parts. For now, just notice the components that make up a class.
+#### Take a look at the code for the Book class below. Notice the two types of constructors underneath the instance variables. 
 
 <img 
-  src="https://images.code.org/2d40744860c1eeff73cdd91cff0e47de-image-1747426903005.png" 
+  src="https://images.code.org/dd33516776a34db9b7e39bfa34be9bfc-image-1747764289087.png" 
   alt="a sample of a class in java with instance variables, constructors, and methods" 
   width="650px" 
   style="display: block; margin-left: auto; margin-right: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
 
 
-## Let's get started with Java files! 
+## Let's get started with constructors! 
 
 
 MARKDOWN

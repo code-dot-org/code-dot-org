@@ -440,7 +440,7 @@ class Section < ApplicationRecord
         login_type_name = Policies::Lti.issuer_name(issuer)
       end
 
-      selected_unit = unit_group&.single_unit_course? ? unit_group.default_units.first : script
+      selected_unit = unit_group&.single_unit_course? ? unit_group.first_unit : script
 
       primary_instructor = {
         email: teacher.email,
@@ -514,7 +514,7 @@ class Section < ApplicationRecord
         end
       end
 
-      selected_unit = unit_group&.single_unit_course? ? unit_group.default_units.first : script
+      selected_unit = unit_group&.single_unit_course? ? unit_group.first_unit : script
 
       # Remove ordering from scope when not including full
       # list of students, in order to improve query performance.

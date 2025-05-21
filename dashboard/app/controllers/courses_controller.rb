@@ -42,7 +42,7 @@ class CoursesController < ApplicationController
       if Policies::Courses.modularity_enabled?
         redirect_to course_unit_path(@unit_group, 1)
       else
-        redirect_to script_path(@unit_group.default_units.first)
+        redirect_to script_path(@unit_group.first_unit)
       end
       return
     end
