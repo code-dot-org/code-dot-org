@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class HeaderTest < ActionDispatch::IntegrationTest
-  describe 'for signed-out users' do
+  context 'when signed out' do
     around do |test|
       get '/catalog'
 
@@ -157,7 +157,7 @@ class HeaderTest < ActionDispatch::IntegrationTest
     end
   end
 
-  describe 'for teacher' do
+  context 'when signed in as teacher' do
     let(:teacher) {create(:teacher)}
 
     before do
@@ -213,7 +213,7 @@ class HeaderTest < ActionDispatch::IntegrationTest
         end
       end
 
-      it 'renders New project button' do
+      it 'renders new project button' do
         must_select '#header_create_menu[role="button"]', /New project/
       end
 
@@ -235,7 +235,7 @@ class HeaderTest < ActionDispatch::IntegrationTest
     end
   end
 
-  describe 'for student' do
+  context 'when signed in as student' do
     let(:student) {create(:student)}
 
     before do
@@ -290,7 +290,7 @@ class HeaderTest < ActionDispatch::IntegrationTest
         end
       end
 
-      it 'renders New project button' do
+      it 'renders new project button' do
         must_select '#header_create_menu[role="button"]', /New project/
       end
 
