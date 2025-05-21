@@ -10098,7 +10098,6 @@
         evaluation_criteria: "Does the student's added code increment the values stored in the variables correctly?",
         concept: "Variables"
       },
-
   ],
   "levels_skills": [
     {
@@ -10119,4 +10118,5 @@
         "skill.key": "variables_increment"
       }
     },
+  ]
 }
