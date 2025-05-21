@@ -8,7 +8,7 @@
         {
           "type": "html",
           "name": "variable_testing",
-          "visible": true,
+          "visible": false,
           "html": "<h3>variables</h3>\n<p>Test to make sure variables are working as expected - make invisible when live</p><p><li>userId = {userId}</li>"
         },
         {
@@ -16,8 +16,8 @@
           "name": "survey_variable_name",
           "defaultValueExpression": "{survey_variable}",
           "startWithNewLine": false,
-          "readOnly": false,
-          "visible": true,
+          "readOnly": true,
+          "visible": false,
           "choices": [
             {
               "value": "csd",

@@ -65,26 +65,26 @@ Each year we will update the minimum versions required for browsers and operatin
         </tr>
       </table>
     </td>
-    <!-- "coming soon" system requirements, to be updated and made live from March through July.
+    <!-- "coming soon" system requirements, to be updated and made live from March through July. -->
     <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Browser July '25
         </th>
         <tr>
-          <td>Chrome 103.x</td>
+          <td>Chrome 109</td>
         </tr>
         <tr>
-          <td>Safari 14.x</td>
+          <td>Safari 16.6</td>
         </tr>
         <tr>
-          <td>Mobile Safari 14.x</td>
+          <td>Mobile Safari 16</td>
         </tr>
         <tr>
-          <td>Edge 119.x</td>
+          <td>Edge 128</td>
         </tr>
         <tr>
-          <td>Firefox 98.x</td>
+          <td>Firefox 115</td>
         </tr>
       </table>
     </td>
@@ -97,20 +97,19 @@ Each year we will update the minimum versions required for browsers and operatin
           <td>macOS 10.15</td>
         </tr>
         <tr>
-          <td>iOS 15.x</td>
+          <td>iOS 16.x</td>
         </tr>
         <tr>
-          <td>Windows 8</td>
+          <td>Windows 10</td>
         </tr>
         <tr>
-          <td>Android 8.x</td>
+          <td>Android 8</td>
         </tr>
         <tr>
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
     </td>
-    -->
   </tr>
 </table>
 
@@ -149,7 +148,6 @@ Code.org आणि आमच्या [ ऑनलाइन लर्निंग
 ### आपण हा व्हिडिओ प्ले करू शकता का?
 
 तुम्ही Code.org चे ऑनलाइन कोर्स सुरू करण्यापूर्वी, तुम्ही जाण्यासाठी योग्य आहात याची खात्री करण्यासाठी खालील व्हिडिओसाठी प्लेबॅकची चाचणी घ्या.
-
 
 <!--
 The following HTML is a copy of video_with_fallback.haml. once this file can be converted to

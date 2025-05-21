@@ -40,6 +40,8 @@ style_min: true
 #homepage.supreme-container
   - if !!DCDO.get('exploring-gen-ai-launch', false)
     = view :exploring_gen_ai_hero_banner
+  - if !!DCDO.get('aif-launch', false)
+    = view :ai_foundations_hero_banner
   - else
     = view :homepage_hero
 

@@ -20,7 +20,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-13 16:49:40 UTC",
+    "serialized_at": "2025-05-20 21:07:44 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1881,7 +1882,7 @@
       "key": "e604772c-64f4-4355-bfea-086736a34a1b",
       "position": 10,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students work in pairs on setting the four prices for their candy shop.\n\n\n",
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students work in pairs on setting the four prices for their candy shop. \n\n**Note**: _There is an optional half-page activity guide with this chart that you can provide to students, if desired._\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2853,7 +2854,13 @@
       "key": "48566844-c45e-441d-aec0-259987e43aba",
       "position": 7,
       "properties": {
-        "description": "**Circulate:** Help students understand how this widget works so they can successfully compress text. Make note of students who have found successful strategies so they can be highlighted in the upcoming discussion."
+        "description": "**Circulate:** Help students understand how this widget works so they can successfully compress text. Make note of students who have found successful strategies so they can be highlighted in the upcoming discussion.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "In order to use the widget, students should look for repeated patterns of text in the Compression pane on the left side. Type each repeated pattern on its own line in the Dictionary pane on the right hand side. Each line in the dictionary will have an associated symbol. This symbol will be used to represent the repeated pattern within the original text. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "48566844-c45e-441d-aec0-259987e43aba",
@@ -4916,6 +4923,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page-csp1_2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -5583,6 +5593,18 @@
       },
       "seeding_key": {
         "resource.key": "black_and_white_images"
+      }
+    },
+    {
+      "name": "Candy Store Challenge (Optional)",
+      "url": "https://docs.google.com/document/d/1MNGrjqkyILwFGGPcXf0NOEdoowAnVOJSg8X1eZkIm3U/",
+      "key": "candy_store_challenge_optional_",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "candy_store_challenge_optional_"
       }
     },
     {
@@ -6305,6 +6327,12 @@
       "seeding_key": {
         "lesson.key": "Lossy Compression",
         "resource.key": "lossy_compression"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overflow and Rounding",
+        "resource.key": "candy_store_challenge_optional_"
       }
     },
     {
