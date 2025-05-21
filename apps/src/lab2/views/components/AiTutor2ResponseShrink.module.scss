@@ -21,10 +21,14 @@
   animation: slidein 0.5s;
   background-color: var(--background-neutral-secondary);
   color: var(--text-neutral-primary);
-  white-space: normal;
+  word-break: break-word;
 
   p:not(:last-child) {
     margin-bottom: 10px;
+  }
+
+  code {
+    white-space: initial;
   }
 }
 
