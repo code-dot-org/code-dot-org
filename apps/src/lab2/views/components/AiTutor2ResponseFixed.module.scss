@@ -1,3 +1,14 @@
+@keyframes slidein {
+  from {
+    opacity: 0;
+    margin-top: 20px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
 .message-assistant {
   padding: 12px;
   margin-bottom: 6px;
@@ -5,4 +16,9 @@
   animation: slidein 0.5s;
   background-color: var(--background-neutral-secondary);
   color: var(--text-neutral-primary);
+  white-space: normal;
+
+  p:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
