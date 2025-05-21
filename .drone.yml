@@ -220,8 +220,12 @@ steps:
 
   - name: get-cached-staging-database
     image: plugins/s3-cache
+    user: mysql
+    volumes:
+      - name: mysql
+        path: /drone/src/var/lib/mysql
     settings:
-      filename: cache-staging-dashboard-database.tar.gz
+      filename: cache-staging-dashboard-database-as-volume.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -235,6 +239,8 @@ steps:
     volumes:
       - name: rbenv
         path: /home/ci/.rbenv
+      - name: mysql
+        path: /var/lib/mysql
     environment:
       # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/ui_tests.sh
       CLOUDFRONT_KEY_PAIR_ID:
@@ -249,7 +255,9 @@ steps:
         from_secret: SAUCE_ACCESS_KEY
     shm_size: '2gb' # necessary to avoid "invalid session id"/"session deleted because of page crash" errors in Selenium
     commands:
+      - sleep 100
       - sudo chown -R ci:ci .
+      # - sudo chown -R mysql:mysql /var/lib/mysql
       # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
       - export GIT_COMMIT=$DRONE_COMMIT
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
@@ -262,6 +270,8 @@ steps:
 
 volumes:
   - name: rbenv
+    temp: {}
+  - name: mysql
     temp: {}
 
 trigger:
@@ -314,10 +324,11 @@ steps:
     volumes:
       - name: rbenv
         path: /home/ci/.rbenv
+      - name: mysql
+        path: /var/lib/mysql
     commands:
       - sudo chown -R ci:ci .
       - /entrypoint.sh docker/ci/scripts/prepare_ui_tests.sh
-      - mysqldump -u root -B dashboard_test > dashboard/db/ui_test_data.sql
 
   - name: cache-staging-rbenv
     image: plugins/s3-cache
@@ -335,17 +346,22 @@ steps:
 
   - name: cache-staging-database
     image: plugins/s3-cache
+    volumes:
+      - name: mysql
+        path: /var/lib/mysql
     settings:
-      filename: cache-staging-dashboard-database.tar.gz
+      filename: cache-staging-dashboard-database-as-volume.tar.gz
       endpoint: s3://cdo-drone
       rebuild: true
       debug: true
       pull: true
       mount:
-        - dashboard/db/ui_test_data.sql
+        - /var/lib/mysql
 
 volumes:
   - name: rbenv
+    temp: {}
+  - name: mysql
     temp: {}
 
 trigger:

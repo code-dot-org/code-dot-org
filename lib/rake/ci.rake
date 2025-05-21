@@ -173,8 +173,8 @@ namespace :ci do
     end
 
     # First, load a dump of the database as of the most recent merge to staging.
-    CACHED_DB = 'dashboard/db/ui_test_data.sql'
-    sh("mysql -u root < #{CACHED_DB}") if File.exist?(CACHED_DB)
+    # CACHED_DB = 'dashboard/db/ui_test_data.sql'
+    # sh("mysql -u root < #{CACHED_DB}") if File.exist?(CACHED_DB)
 
     # Then, run an incremental seed to pick up any updates in the current branch.
     Dir.chdir('dashboard') do
