@@ -78,8 +78,7 @@ class HttpCache
     '/s/outbreak/lessons/1/levels/10'
   ]
 
-  # A map from script name to script level URL pattern.
-  CACHED_UNITS_MAP = %w(
+  CACHED_UNITS = %w(
     aquatic
     starwars
     starwarsblocks
@@ -101,7 +100,10 @@ class HttpCache
     hello-world-soccer-2022
     music-jam-2024
     outbreak
-  ).map do |script_name|
+  ).freeze
+
+  # A map from script name to script level URL pattern.
+  CACHED_UNITS_MAP = CACHED_UNITS.map do |script_name|
     # Most scripts use the default route pattern.
     [script_name, "/s/#{script_name}/lessons/*"]
   end.to_h.merge(
