@@ -206,19 +206,10 @@ steps:
 
   # We cache staging's rbenv and a database dump in the
   # `cache-staging-build-artifacts` pipeline.
-  - name: get-cached-staging-rbenv
+  - name: get-cached-staging-misc-build-artifacts
     image: plugins/s3-cache
     settings:
-      filename: cache-staging-rbenv-TEMP.tar.gz
-      endpoint: s3://cdo-drone
-      restore: true
-      debug: true
-      pull: true
-
-  - name: get-cached-staging-database
-    image: plugins/s3-cache
-    settings:
-      filename: cache-staging-dashboard-database.tar.gz
+      filename: cache-staging-misc-build-artifacts.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -305,31 +296,23 @@ steps:
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
     commands:
+      # run build
       - sudo chown -R ci:ci .
       - /entrypoint.sh docker/ci/scripts/prepare_ui_tests.sh
+      # prepare build artifacts to be scooped by next step
       - cp -r /home/ci/.rbenv .
       - mysqldump -u root -B dashboard_test > dashboard/db/ui_test_data.sql
 
-  - name: cache-staging-rbenv
+  - name: cache-staging-misc-build-artifacts
     image: plugins/s3-cache
     settings:
-      filename: cache-staging-rbenv-TEMP.tar.gz
+      filename: cache-staging-misc-build-artifacts.tar.gz
       endpoint: s3://cdo-drone
       rebuild: true
       debug: true
       pull: true
       mount:
         - .rbenv
-
-  - name: cache-staging-database
-    image: plugins/s3-cache
-    settings:
-      filename: cache-staging-dashboard-database.tar.gz
-      endpoint: s3://cdo-drone
-      rebuild: true
-      debug: true
-      pull: true
-      mount:
         - dashboard/db/ui_test_data.sql
 
 # trigger:
