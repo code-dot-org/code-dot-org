@@ -1193,11 +1193,11 @@ en:
             -   You can find the _Syllabus_, _Course Vocab_, and other resources to help you implement this curriculum in the Teacher Resources menu below
           version_title: "'25-'26"
         exploring-gen-ai-2025:
-          title: exploring-gen-ai-2025
+          title: Exploring Generative AI (2025)
           description_short: ''
           description_student: ''
-          description_teacher: ''
-          version_title: ''
+          description_teacher: "Exploring Generative AI is a two-unit curriculum that explores How AI Works and How to Use Generative AI. Students participate in hands-on activities that unpack the black box of generative AI through student-centered activities and class discussions, anchored by a video series that demystifies generative AI for a broad audience. With a firm foundation, students then learn to customize language models using the new AI Chat lab which provides students with the tools to select language models, apply system prompts, and curate retrieval information to customize their chatbot. Students create chatbots to solve a variety of problems, and interrogate the validity of responses and appropriate use of chatbots in society.\n\n## Just Starting this Course?\n\nWe recommend completing the free [**Exploring Generative AI Self-Paced Professional Learning Module**][0]. The module is designed to take 2-3 hours to complete. No previous computer science or AI experience is required.\n\nWe also recommend watching the [5-Part Exploring Generative AI Video Series][1] which introduces key concepts for generative AI. The entire video series takes ~15 minutes to watch."
+          version_title: "'25-'26"
         csd-2025:
           title: Computer Science Discoveries ('25-'26)
           description_short: An introductory computer science course that empowers students to create authentic artifacts
@@ -4890,7 +4890,7 @@ en:
           description_teacher: "AI Foundations introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.\n\n## Prerequisites\n\nAIF is designed for high school students at any level of computer science experience. It is accessible to beginners with no prior programming knowledge, and it also provides opportunities for students with some background in computing to deepen their understanding of key topics.\n\nThis curriculum can serve as an introductory course or as a bridge to more advanced studies, such as AP Computer Science A (CSA).\n\nNo specific prior coursework is required, and all necessary concepts are introduced and reinforced through guided activities, collaborative learning, and hands-on projects.\n\n## Did you know?\n\n-   Professional development is available to help you get started teaching AI Foundations. [**Click here**][0] to learn more about professional learning opportunities in your region or [**click here**][1] for our self-paced online option.\n\n-   This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**][2] for more information.\n\n-   You can find the _Syllabus_ and other resources to help you implement this curriculum in the Teacher Resources menu below."
           version_title: "'25-'26"
         python-madlibs:
-          title: python-madlibs
+          title: Python Adlib
           description_short: 'Madlibs progression in Python Lab '
           description_student: ''
           description_teacher: ''
@@ -4996,6 +4996,24 @@ en:
           description_short: ''
           description_student: ''
           description_teacher: ''
+          version_title: "'25-'26"
+        customizing-llms-2025:
+          title: Customizing Language Models (2025)
+          description_short: This unit focuses on practical skills for tailoring AI models using techniques like prompt engineering and retrieval, while promoting transparency through model cards. Students explore how to customize AI chatbots to fit specific use-cases, then create their own chatbot to address a problem they care about.
+          description_student: ''
+          description_teacher: ''
+          version_title: "'25-'26"
+        coding-with-music-2025:
+          title: coding-with-music-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        foundations-gen-ai-2025:
+          title: Foundations of Gen AI
+          description_short: ''
+          description_student: ''
+          description_teacher: "This unit aims to build a foundational understanding of text-based generative AI models, focusing on core concepts over technical skills. Students will demystify generative AI models by exploring their internal structures through the familiar lens of input, storage, process, and output. They will gain insights into how these models represent language, the impact of training data on model performance, and the potential for bias. Using this knowledge they will be presented with scenarios throughout the unit where they can help educate individuals who feel powerless or lack agency in how AI is impacting their lives, or respond to individuals who have only read the hype headlines and offer feedback or criticism based on their knowledge of how these AI systems work.\n\n## Just Starting this Unit?\n\nWe recommend completing the free [**Exploring Generative AI Self-Paced Professional Learning Module**][0]. The module is designed to take 2-3 hours to complete. No previous computer science or AI experience is required.\n\nWe also recommend watching the [5-Part Exploring Generative AI Video Series][1] which introduces key concepts for generative AI. The entire video series takes ~15 minutes to watch.\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][2] to let the Code.org curriculum team know how the unit went."
           version_title: "'25-'26"
     resources:
       curriculum/csd/2017:

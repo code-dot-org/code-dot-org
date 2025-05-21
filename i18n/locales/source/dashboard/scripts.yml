@@ -9800,6 +9800,8 @@ en:
               name: Pygame
             lesson-8:
               name: Intro to Programming
+            lesson-9:
+              name: Validation practice
           lesson_groups:
             lessonGroup-2:
               display_name: Cyber
@@ -14407,7 +14409,7 @@ en:
             lesson-6:
               name: Color
             lesson-7:
-              name: Text
+              name: Melissa's Section
             lesson-8:
               name: Content
             lesson-9:
@@ -22915,3 +22917,18 @@ en:
             -   Make a plan for implementing the unit with your students.
 
             **Suggested Time:** 100 minutes
+        coding-with-music:
+          lessons:
+            lesson-1:
+              name: Songwriter's Toolbox
+            lesson-2:
+              name: Producer Power
+            lesson-3:
+              name: Sound Designer's Studio
+          lesson_groups: {}
+          name: coding-with-music
+          title: 'Coding with Music '
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

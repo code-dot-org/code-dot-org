@@ -22,7 +22,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-16 17:09:10 UTC",
+    "serialized_at": "2025-05-20 22:06:04 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4314,6 +4315,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "fabric-of-the-internet-and-ai-lesson8-level2_2025"
+        ],
         "progression": "Final Project Reflection"
       },
       "bonus": false,
@@ -4386,6 +4390,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "fabric-of-the-internet-and-ai-lesson9-level3_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -4458,6 +4465,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "fabric-of-the-internet-and-ai-lesson10-level3_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -4552,6 +4562,28 @@
     {
       "chapter": 36,
       "position": 4,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Final Risk Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "fabric-of-the-internet-and-ai-lesson11-level5_2025"
+        ],
+        "lesson.key": "Network Security Risk Assessment Project",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "aif4-2025",
+        "activity_section.key": "9c223595-d04e-4db7-9bb8-3327f5b2c2f2"
+      },
+      "level_keys": [
+        "fabric-of-the-internet-and-ai-lesson11-level5_2025"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4572,28 +4604,6 @@
       },
       "level_keys": [
         "student-eou-survey_linked_page_networks-2025"
-      ]
-    },
-    {
-      "chapter": 37,
-      "position": 5,
-      "activity_section_position": 2,
-      "assessment": true,
-      "properties": {
-        "progression": "End of Unit Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "fabric-of-the-internet-and-ai-lesson11-level5_2025"
-        ],
-        "lesson.key": "Network Security Risk Assessment Project",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "aif4-2025",
-        "activity_section.key": "01bfbb20-4913-4ee8-91d0-bf6fcca02578"
-      },
-      "level_keys": [
-        "fabric-of-the-internet-and-ai-lesson11-level5_2025"
       ]
     },
     {
@@ -5070,21 +5080,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "student-eou-survey_linked_page_networks-2025",
+        "level.key": "fabric-of-the-internet-and-ai-lesson11-level5_2025",
         "script_level.level_keys": [
-          "student-eou-survey_linked_page_networks-2025"
+          "fabric-of-the-internet-and-ai-lesson11-level5_2025"
         ],
         "lesson.key": "Network Security Risk Assessment Project",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "aif4-2025",
-        "activity_section.key": "01bfbb20-4913-4ee8-91d0-bf6fcca02578"
+        "activity_section.key": "9c223595-d04e-4db7-9bb8-3327f5b2c2f2"
       }
     },
     {
       "seeding_key": {
-        "level.key": "fabric-of-the-internet-and-ai-lesson11-level5_2025",
+        "level.key": "student-eou-survey_linked_page_networks-2025",
         "script_level.level_keys": [
-          "fabric-of-the-internet-and-ai-lesson11-level5_2025"
+          "student-eou-survey_linked_page_networks-2025"
         ],
         "lesson.key": "Network Security Risk Assessment Project",
         "lesson_group.key": "lessonGroup-6",
@@ -5120,7 +5130,7 @@
   "resources": [
     {
       "name": "[EXEMPLAR] Gallery Walk Info Tracker",
-      "url": "https://docs.google.com/document/d/1--4w_KUPZRMk8VwiRSLlfeCHrPEbdprTOP6hdHpuzfY/edit?tab=t.0",
+      "url": "https://docs.google.com/document/d/150G3lk1TrgG7rocBL2s8ALxht6CECffaTLRKy7f9RHk/edit?usp=drivesdk",
       "key": "_exemplar_gallery_walk_info_tracker",
       "properties": {
         "audience": "Teacher",
@@ -5132,7 +5142,7 @@
     },
     {
       "name": "[EXEMPLAR] Internet Access Advocacy Campaign Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1hzLrhFPAsDBoWE88SmCVV4Q5xXywveldG2BFg8W828U/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1dvM1DQvfQwVBQu-deyGCKwdW96Ji4lFu-LWEwtn-zFk/edit?usp=drivesdk",
       "key": "_exemplar_internet_access_advocacy_campaign_project_planning_guide",
       "properties": {
         "audience": "Teacher",
@@ -5144,7 +5154,7 @@
     },
     {
       "name": "[KEY] AI Networks Chat",
-      "url": "https://docs.google.com/document/d/17m_80EDQvotN8ywKsOwArdgbBh_Df1z55c6yK0wp3Qw/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1CwK8VoxQvSpvv85X6kcugTNfwSzVEtKTEI9ye9xpmlU/edit?usp=drivesdk",
       "key": "_key_ai_networks_chat",
       "properties": {
         "audience": "Verified Teacher",
@@ -5156,7 +5166,7 @@
     },
     {
       "name": "[KEY] IP Addressing and Visualizing",
-      "url": "https://docs.google.com/document/d/19oWyQXsqUiftKDOd5DQLlcouJkzbmb3j8xtnHDoTed8/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/14kiQhU1JhW-jLUFC6Eo5APQtXT0RjDZzk75aQNZScwg/edit?usp=drivesdk",
       "key": "_key_ip_addressing_and_visualizing",
       "properties": {
         "audience": "Verified Teacher",
@@ -5168,7 +5178,7 @@
     },
     {
       "name": "[KEY] Network Diagram Analysis",
-      "url": "https://docs.google.com/document/d/15Nsh7tO7d7RVvheQSpd-5nBYLwXCfNtlVaUSG2zC8es/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1PIh7pwd26QKoCiyvUWG-lNCdUt3o2cRVjAwy6y2Nuu0/edit?usp=drivesdk",
       "key": "_key_network_diagram_analysis",
       "properties": {
         "audience": "Verified Teacher",
@@ -5180,7 +5190,7 @@
     },
     {
       "name": "[KEY] Packets and Protocols",
-      "url": "https://docs.google.com/document/d/1HkXJBHGsC5mKmd18poO5cWdeKR0mHRmWl0z0YsXQK6k/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/18pZfVLfRjAJyM_wB5OXP_UqMBG8iZCmqjd2AF4pzHC8/edit?usp=drivesdk",
       "key": "_key_packets_and_protocols",
       "properties": {
         "audience": "Verified Teacher",
@@ -5188,6 +5198,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_packets_and_protocols"
+      }
+    },
+    {
+      "name": "[KEY] The Fabric of the Internet and AI Unit Guide",
+      "url": "https://docs.google.com/document/d/1BCVxoMP30cx5KxF5Nn_Tr_TMs5y4XIkXUbZ-atLh1aA/edit?usp=drivesdk",
+      "key": "_key_the_fabric_of_the_internet_and_ai_unit_guide",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_the_fabric_of_the_internet_and_ai_unit_guide"
       }
     },
     {
@@ -5226,7 +5248,7 @@
     },
     {
       "name": "AI Networks Chat",
-      "url": "https://docs.google.com/document/d/1EIf-YBvg0X8jMjJnj812sRHTjPnVkbWArbUqfo_ffms/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/10B6RzIRIZeEK42Ju1SKAO0_7WasnvfdeAaDJgjNDX40/edit?usp=drivesdk",
       "key": "ai_networks_chat",
       "properties": {
         "audience": "Student",
@@ -5272,7 +5294,7 @@
     },
     {
       "name": "Challenge 1 Binary Cards",
-      "url": "https://docs.google.com/document/d/12tegCZRYEi9D3sE-JYBvy3T0Kaa_DLS4KZ1wivFVPlc/edit?tab=t.0",
+      "url": "https://docs.google.com/document/d/17vT3YD1Lih50BRX9CHlCXjAiOa4DyHYZL_WeSGrNBR8/edit?usp=drivesdk",
       "key": "challenge_1_binary_cards",
       "properties": {
         "audience": "Verified Teacher",
@@ -5284,7 +5306,7 @@
     },
     {
       "name": "Challenge 2 Binary Cards",
-      "url": "https://docs.google.com/document/d/1wPqqwDgwfTRlAdtP2o2jQ46UdxPWWksbwzom3TtMKfc/edit?tab=t.0",
+      "url": "https://docs.google.com/document/d/1REDiPxNcdDmjc4YQFAZf-vA-Q-k5BZUOMh5icGc-PeY/edit?usp=drivesdk",
       "key": "challenge_2_binary_cards",
       "properties": {
         "audience": "Verified Teacher",
@@ -5296,7 +5318,7 @@
     },
     {
       "name": "DNS Hierarchy",
-      "url": "https://docs.google.com/document/d/1LST7DpPTAQ--Z6L6k82INXOdoCzP55HfPrUIooayzgI/edit?tab=t.0",
+      "url": "https://docs.google.com/document/d/17WYUDO5yP2idvYLVIvyFVeSpmJ3HMo7XUvRnfLMDTzA/edit?usp=drivesdk",
       "key": "dns_hierarchy",
       "properties": {
         "audience": "Student",
@@ -5309,7 +5331,7 @@
     },
     {
       "name": "Emerging Technologies",
-      "url": "https://docs.google.com/presentation/d/1HwhwDDb-ZPDK2lUmy27fHEgONwuOuBX_LSvLAEhbKeA/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1tAjSX8wPiW05TNlXwSQpnnpqnJwoKeK0_hTvvyam-_w/edit?usp=drivesdk",
       "key": "emerging_technologies",
       "properties": {
         "audience": "Verified Teacher",
@@ -5321,7 +5343,7 @@
     },
     {
       "name": "Gallery Walk Info Tracker",
-      "url": "https://docs.google.com/document/d/1xBwQ_66xC9fRXJrFs9dOKP7l9G8VNOfatcbeZQqeATw/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1V2iIOaQIiqLmw1PvRSZ1X9T24GCtgqP7sfdbuH9lelU/edit?tab=t.0#heading=h.o7zffas5nipv",
       "key": "gallery_walk_info_tracker",
       "properties": {
         "audience": "Student",
@@ -5346,7 +5368,7 @@
     },
     {
       "name": "HTTP and DNS",
-      "url": "https://docs.google.com/presentation/d/18FAONwLy7N1q60lT0ObmMhhPckB889X-ACp3BGFAnag/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1xRfomtoHozKQ3TtWuIJu1PJ0d_1ZJfL_E2HDbEEK6q4/edit?usp=drivesdk",
       "key": "http_and_dns",
       "properties": {
         "audience": "Verified Teacher",
@@ -5358,7 +5380,7 @@
     },
     {
       "name": " HTTP Request Simulator",
-      "url": "https://docs.google.com/presentation/d/167Rqj73r2Pu9-ovxYj2UZxy4PJNxxzCR8RszaBI25xM/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1iNBkhaGLItDrd-Isb4pPc78KUpZg06E80Od5ROol8TA/edit?usp=drivesdk",
       "key": "http_request_simulator",
       "properties": {
         "audience": "Student",
@@ -5369,8 +5391,20 @@
       }
     },
     {
+      "name": "Identify, Defend, Reflect",
+      "url": "https://docs.google.com/presentation/d/1EVhT6Les4IsI59u1FssuiWn6gtuLIvOerjbMVISxQ5Q/preview?rm=minimal",
+      "key": "identify_defend_reflect",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "identify_defend_reflect"
+      }
+    },
+    {
       "name": "Internet Access Advocacy Campaign Project",
-      "url": "https://docs.google.com/presentation/d/1sFJilkpDqhGOswoce844_s--kcr4DsaK-FN8zornsfg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1a4kLkTP_6rBTGSEv4cEXK3_RI9e5VZzuKT_3uU3rs1I/edit?usp=drivesdk",
       "key": "internet_access_advocacy_campaign_project",
       "properties": {
         "audience": "Verified Teacher",
@@ -5382,7 +5416,7 @@
     },
     {
       "name": "Internet Access Advocacy Campaign Project Planning Guide",
-      "url": "https://docs.google.com/document/d/10LJg4_NeHINJ1QKh6n2lGkOfTjwEJwdlns86B-alUJ4/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/16XGiC76N1UT3KqrnP3SA4Koi33cwdL3SjewG64rm1co/edit?usp=drivesdk",
       "key": "internet_access_advocacy_campaign_project_planning_guide",
       "properties": {
         "audience": "Student",
@@ -5395,7 +5429,7 @@
     },
     {
       "name": "Internet Access IRL",
-      "url": "https://docs.google.com/document/d/1CI1AWCzg52fqn8JHihj8_ml6sn1L8t1m8MjJ07WOMzc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1Y-_HOoGYrUf3u9BBJqdTrh71zDYuzd6jDa_mcLIFSy8/edit?usp=drivesdk",
       "key": "internet_access_irl",
       "properties": {
         "audience": "Student",
@@ -5408,7 +5442,7 @@
     },
     {
       "name": "Introduction to the Internet",
-      "url": "https://docs.google.com/presentation/d/1y4HXx4STFnWr7kmzoccIlEc6xT85c4mkxvwGcU4n5v8/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1zDv2AAMuEsM5OKIT7lPaDo_qTIJIP6AWB4Zg7PJChxo/edit?usp=drivesdk",
       "key": "introduction_to_the_internet",
       "properties": {
         "audience": "Verified Teacher",
@@ -5420,7 +5454,7 @@
     },
     {
       "name": "IP Address Collection",
-      "url": "https://docs.google.com/document/d/1z8PiOj38Ks-WkWO11KtcCOA8_pnAJYNDfne-ZLewGsE/edit?tab=t.0#heading=h.99p5pkxp2sz8",
+      "url": "https://docs.google.com/document/d/1NPjZCo3u63JkZwl-Nh2qWa_L-vGbHfsN0DLFX_ox3UI/edit?usp=drivesdk",
       "key": "ip_address_collection",
       "properties": {
         "audience": "Student",
@@ -5433,7 +5467,7 @@
     },
     {
       "name": "IP Addresses",
-      "url": "https://docs.google.com/presentation/d/1EPFMI_UeE4f6FomxqWhoQcSxYgi4M34i5RdehBHmoLE/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1ZVdpgMt7Cqe_iYRqBONbO74Omh1VRqJUkASbOR93D0k/edit?usp=drivesdk",
       "key": "ip_addresses",
       "properties": {
         "audience": "Verified Teacher",
@@ -5445,7 +5479,7 @@
     },
     {
       "name": "IP Addresses",
-      "url": "https://docs.google.com/document/d/1cFj-QFCZJUx2iel3HpDqOE6bo-mZ3-B3AEBdB9XE6tw/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/19VqvVoE3-d2Bp7Gv7tnd-ygUUZ9jXvMo-_RyK5Uka-M/edit?usp=drivesdk",
       "key": "ip_addresses_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -5457,7 +5491,7 @@
     },
     {
       "name": "IP Addressing and Visualizing",
-      "url": "https://docs.google.com/document/d/1GbNHGZK8vISlbu3q0o5efwDRPu4SYUT2lDYlaa6-qjs/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1t3R0Vx4REcZW-4L5OAxqY32QzKtX4aoO8QNpldZj0s8/edit?usp=drivesdk",
       "key": "ip_addressing_and_visualizing",
       "properties": {
         "audience": "Student",
@@ -5469,7 +5503,7 @@
     },
     {
       "name": "Network Diagram Analysis",
-      "url": "https://docs.google.com/document/d/1at4atqY76knT627ag5-o_YZkouYdWotn2Q43rjl6fQA/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1IIJBKXXnV43Zp0zERHyqsnnZoOcFUh7_tQapsy7ptjk/edit?usp=drivesdk",
       "key": "network_diagram_analysis",
       "properties": {
         "audience": "Student",
@@ -5482,7 +5516,7 @@
     },
     {
       "name": "Network Security",
-      "url": "https://docs.google.com/presentation/d/1xsiVpdyk9D9w5lHjLuuvP7V4YsLvQClENkp-lKwmN6c/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1hgs9xdwUqexV11EIJeJglIkcOgB15M79-ssyd0shxh8/edit?usp=drivesdk",
       "key": "network_security",
       "properties": {
         "audience": "Verified Teacher",
@@ -5494,7 +5528,7 @@
     },
     {
       "name": "Network Security Risk Assessment Project",
-      "url": "https://docs.google.com/presentation/d/1puVxPTQEPoUTPQkdS7XDSLn-HoM53Of85G9siddUVc8/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1yg-q1dPEzfgiIeG4PCi2VkskI175MmPVZeGhO4WyTKo/edit?usp=drivesdk",
       "key": "network_security_risk_assessment_project",
       "properties": {
         "audience": "Verified Teacher",
@@ -5506,7 +5540,7 @@
     },
     {
       "name": "Network Security Risk Assessment Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1IO-DrZ7fRuMFXCzr7Xaq7aULq38qHmu4qOmpfAFyEm4/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1M9Co6kaHqh-amr5WVITU-_tn539y4txN5YdiAJvfd5k/edit?usp=drivesdk",
       "key": "network_security_risk_assessment_project_planning_guide",
       "properties": {
         "audience": "Student",
@@ -5519,11 +5553,10 @@
     },
     {
       "name": "The Fabric of the Internet and AI Unit Guide",
-      "url": "https://docs.google.com/document/d/14YiuNXo8xwD2aQcmt2sBY0Oway5hI4RBHUez_CcWI4w/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/17JASBAF04uTECGIupU8WWiRkbodoOKRdiSIlxdPcLjs/edit?usp=drivesdk",
       "key": "networks_and_the_internet_unit_guide",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -5532,7 +5565,7 @@
     },
     {
       "name": "Packets",
-      "url": "https://docs.google.com/presentation/d/1-jVNvpCrxU_p33rrnbLe7XvVIQwsTicio9r-dm38t3w/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1R1rs8kRd-As-F4n0Y4-g9kcoA0jPa-kKwmu2UvuxQiU/edit?usp=drivesdk",
       "key": "packets",
       "properties": {
         "audience": "Verified Teacher",
@@ -5544,7 +5577,7 @@
     },
     {
       "name": "Packets and Protocols",
-      "url": "https://docs.google.com/document/d/12XtxAe5Dm03Ei6ICdALTDYFinY0GA9ma0rE6p1lphOE/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1-SQNlidzptSel2h7OV1WeqnbOv6VYxHan34S3MzLnq0/edit?usp=drivesdk",
       "key": "packets_and_protocols",
       "properties": {
         "audience": "Student",
@@ -5557,7 +5590,7 @@
     },
     {
       "name": "Peer Feedback Cards",
-      "url": "https://docs.google.com/document/d/10gHuaMFve5x1WkZY1H0P08hPAVXO54z2T2JeLQlkRP4/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1zedwObrbRGnbpKX5ifqBdbxTKzfNySeL5jLHlgw3Oiw/edit?usp=drivesdk",
       "key": "peer_feedback_cards",
       "properties": {
         "audience": "Student",
@@ -5570,7 +5603,7 @@
     },
     {
       "name": "Persona Fact Sheet",
-      "url": "https://docs.google.com/document/d/1iFRJ0FFfPQM7t8AFOqBJ_czuksxKspBjFxPst-_jCrY/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1yn_Z-uroLVk7Lo5-wp9BjonpRRjnnliIUmGpoRv_2Ls/edit?usp=drivesdk",
       "key": "persona_fact_sheet",
       "properties": {
         "audience": "Teacher",
@@ -5582,7 +5615,7 @@
     },
     {
       "name": "Persona Summary Sheet",
-      "url": "https://docs.google.com/document/d/1ZkdJWs4XO1cBUAoBIrZ2OOdEsc3hyNRT2XCpP0jiaXo/edit?tab=t.0",
+      "url": "https://docs.google.com/document/d/1kA0ynIbuiBLngtfYkaKHiFgyFHwEAnR32Nb3aGyauSk/edit?usp=drivesdk",
       "key": "persona_summary_sheet",
       "properties": {
         "audience": "Student",
@@ -5594,7 +5627,7 @@
     },
     {
       "name": "Role Cards for Challenge 1 and 2",
-      "url": "https://docs.google.com/document/d/1ntvGt1aXcCQIlhDMPO3zxYJBFQbVANp5dzRDC092DJs/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1PjV1A0-6SC9FcxspSpuETMoYAm6YZAY3ke6j7MST0cU/edit?usp=drivesdk",
       "key": "role_cards_for_challenge_1_and_2",
       "properties": {
         "audience": "Student",
@@ -5606,7 +5639,7 @@
     },
     {
       "name": "Routers and Redundancy",
-      "url": "https://docs.google.com/presentation/d/1GQuN1mbYNeRTsPtELYx6hqDuvp93QmSquUrQmvgw6qk/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1YpKW_1W0sfxui-w51PXZ0Jv0pKoslAlVkoPu4fEmTJs/edit?usp=drivesdk",
       "key": "routers_and_redundancy",
       "properties": {
         "audience": "Verified Teacher",
@@ -5618,7 +5651,7 @@
     },
     {
       "name": "Scavenger Hunt Activity",
-      "url": "https://docs.google.com/presentation/d/17-D9uP8eVYI6uFX4VtQyAo5j4qzv7uuKghpmwX_D33M/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1ki13_JAxL2vcyozYA6v8QMSGaRyMOYbyI1-I9PwWVU4/edit?usp=drivesdk",
       "key": "scavenger_hunt_activity",
       "properties": {
         "audience": "Student",
@@ -5630,7 +5663,7 @@
     },
     {
       "name": "Sending Bits",
-      "url": "https://docs.google.com/presentation/d/1tcj5mMbuhGW7x6rGHDhwqmyjIK8hsG-y6Y_fR8jogvA/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1W3FwWxpHQYlN-cSKb_rkkUODTuQw5B89I5yJvZqRQRE/edit?usp=drivesdk",
       "key": "sending_bits",
       "properties": {
         "audience": "Verified Teacher",
@@ -5642,7 +5675,7 @@
     },
     {
       "name": "Teacher Guide: Packets Unplugged",
-      "url": "https://docs.google.com/document/d/1zg2NuvjecV5-ayCORwy6_Cf1UZ0CJ1rKyMWPbPzDVhE/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/13V6e6Qr-EBp1YX5J6MwUtt5EtvXwS1WVbUrFKjkfB2A/edit?usp=drivesdk",
       "key": "teacher_guide_packets_unplugged",
       "properties": {
         "audience": "Verified Teacher",
@@ -5654,7 +5687,7 @@
     },
     {
       "name": "Teaching Guide: Human Network Bit Transmission Challenge",
-      "url": "https://docs.google.com/document/d/1u-E0Suv0CV69qy70-6NudPs7uPGR1NeiOqgoAiTQm-k/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1wlvPz9rwTQuBmB-fNfSRdluP9L1gbfMdvfrgQimehZE/edit?usp=drivesdk",
       "key": "teaching_guide_human_network_bit_transmission_challenge",
       "properties": {
         "audience": "Verified Teacher",
@@ -5690,7 +5723,7 @@
     },
     {
       "name": "The Internet's Hidden Barriers",
-      "url": "https://docs.google.com/presentation/d/1qG0k-bOzjQKAhB6ReuypH9y5p1dFqXjJYSOYnRwc5YY/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1RkWeQ39dZdi73kjpJSHN_-dRqAP-ehG9wSJ26UKZyRQ/edit?usp=drivesdk",
       "key": "the_internet_s_hidden_barriers",
       "properties": {
         "audience": "Verified Teacher",
@@ -5714,7 +5747,7 @@
     },
     {
       "name": "Threat Detected! Cards",
-      "url": "https://docs.google.com/document/d/1xkXDiVCEattulslAG9ZI4TV3ejU09VNH1J1Xq7oKWSw/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1SLEwwzfYofJQvLxE8QyT7e9X19S_uJPdBHegCxcOu80/edit?usp=drivesdk",
       "key": "threat_detected_cards",
       "properties": {
         "audience": "Verified Teacher",
@@ -5726,7 +5759,7 @@
     },
     {
       "name": "Threat Detection Guided Notes",
-      "url": "https://docs.google.com/document/d/1k846UL_chsUrkPwDgxHZcprycp-YpSoAEr6F1F-7b9A/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1sLDtNkeTec7ianGZmxvg3BNNMMhXOLDdZlynAwy406E/edit?usp=drivesdk",
       "key": "threat_detection_guided_notes",
       "properties": {
         "audience": "Student",
@@ -5904,6 +5937,12 @@
     {
       "seeding_key": {
         "lesson.key": "Introduction to the Internet",
+        "resource.key": "_key_the_fabric_of_the_internet_and_ai_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to the Internet",
         "resource.key": "ai_chat_lab_faq"
       }
     },
@@ -5947,6 +5986,12 @@
       "seeding_key": {
         "lesson.key": "Network Security",
         "resource.key": "how_cyber_attacks_happen_in_real_life"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Network Security",
+        "resource.key": "identify_defend_reflect"
       }
     },
     {

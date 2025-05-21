@@ -3,30 +3,55 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# What is a Class?
+# Creating an Object 
 
-<img src="https://images.code.org/54779c275bd9a1b93b37f7b622dcf9e8-image-1747666707784.png" alt="digram of a class indicating the name of the class, attributes, and behaviors" width="350px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+#### In the main file where we run our code in the main method, we create a **new object** by calling the constructor and using the `new` keyword. 
 
-#### Think of a class like a **blueprint** or **template**. Just like an architect designs a house blueprint that can be used to build many houses, a class in Java is a blueprint for creating objects. 
+<img src="https://images.code.org/977d8166889c5bb73d2fb5d6f1b94ff0-image-1747769578974.png" alt="digram of a class indicating the name of the class, attributes, and behaviors" width="350px" style="border-radius:10px;display: block; margin-left: auto; margin-right: auto;">
 
-#### It defines the **attributes** (characteristics or variables) and **behaviors** (methods) that every object of that type will have.
-
-
->#### A **class** in Java is a user-defined data type that contains **instance variables** (also called attributes) and **methods** (functions that define behavior).
->#### It serves as a blueprint for creating objects, which are **instances of the class**.
-
-## Class Structure 
-
-#### Take a look at the code for the Book class below. As you work through this lesson, you will go through each of these parts. For now, just notice the components that make up a class.
-
-<img 
-  src="https://images.code.org/2d40744860c1eeff73cdd91cff0e47de-image-1747426903005.png" 
-  alt="a sample of a class in java with instance variables, constructors, and methods" 
-  width="650px" 
-  style="display: block; margin-left: auto; margin-right: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+#### A constructor is a block of code that has the same name as the class and tells the computer how to create a new object.
 
 
-## Let's get started with Java files! 
+#### When a constructor is called, Java looks for the constructor in the class and executes the code inside the constructor before moving on to the next statement.
+
+<img src="https://images.code.org/6ffd3bff73c111ed4aed4a0d65cc522b-image-1747770168548.png" alt="digram of a class indicating the name of the class, attributes, and behaviors" width="550px" style="border-radius:10px;display: block; margin-left: auto; margin-right: auto;">
+
+
+
+## Types of Constructors
+
+#### In Java, you can write constructors with or without parameters. Constructors without parameters create a default object with set values. Constructors with parameters allow you to customize the object when setting it up.
+
+<div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+
+  <!-- Box 1 -->
+  <div style="background-color: #f0f0f0; border-radius: 10px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); width: 300px; padding: 15px; text-align: center;">
+    <img src="https://images.code.org/5b103f3f7a24f79c4715dfda8264c785-image-1747772398235.png" alt="Example of a non-argument constructor for the painter class with instant variables xLocation, yLocation, direction, and remainingPaint" style="width: 100%; border-radius: 10px;">
+    <p style="margin-top: 10px; font-size: 14px;">
+    This is a <b>no-argument constructor</b>, which is a constructor with no parameters and has empty parentheses .
+    </p>
+  </div>
+
+  <!-- Box 2 -->
+  <div style="background-color: #f0f0f0; border-radius: 10px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); width: 300px; padding: 15px; text-align: center;">
+    <img src="https://images.code.org/1ded96ac58adaf59c4400871ab21661e-image-1747772439288.png" alt="Example Image 2" style="width: 100%; border-radius: 10px;">
+    <p style="margin-top: 10px; font-size: 14px;">
+      A <b>parameterized constructor</b> is a constructor that has a specific number of arguments to be passed to assign values to an object's instance variables.
+    </p>
+  </div>
+
+</div>
+
+## Calling a Parameterized Constructor 
+
+#### An **actual parameter** is the value to assign to the formal parameter.
+
+#### When you create an object with a **Parameterized constructor** you enter the specific values for the new object. 
+
+<img src="https://images.code.org/ce8c6409c50b29ddae2c37228e7653bd-image-1747772664237.png" alt="digram of a class indicating the name of the class, attributes, and behaviors" width="350px" style="border-radius:10px;display: block; margin-left: auto; margin-right: auto;">
+
+
+## Let's practice parameterized constructors! 
 
 
 MARKDOWN
