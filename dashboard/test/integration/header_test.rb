@@ -311,4 +311,39 @@ class HeaderTest < ActionDispatch::IntegrationTest
       end
     end
   end
+
+  context 'on lab page' do
+    let!(:spritelab) {create(:spritelab, name: ProjectsController::STANDALONE_PROJECTS[:spritelab][:name])}
+
+    around do |test|
+      get '/projects/spritelab/fake-channel-id/edit'
+
+      must_select '.header-wrapper' do
+        test.call
+      end
+    end
+
+    describe 'right part' do
+      around do |test|
+        must_select '.header_right' do
+          test.call
+        end
+      end
+
+      it 'renders lab specific helper links' do
+        must_select '#help-button #help-contents' do
+          must_select 'a[href^="https://support.code.org/hc/en-us/requests/new"]', 'Report a problem'
+
+          {
+            'Sprite Lab Documentation' => '//test-studio.code.org/docs/spritelab',
+            'Sprite Lab Tutorials'     => '//test.code.org/educate/spritelab',
+            'Help and support'         => 'https://support.code.org',
+            'Report abuse'             => '//test-studio.code.org/report_abuse'
+          }.each do |text, href|
+            must_select 'a[href=?]', href, text
+          end
+        end
+      end
+    end
+  end
 end
