@@ -323,7 +323,8 @@ class UnconnectedMusicView extends React.Component {
             toolboxAllowList,
             this.props.isRtl,
             this.props.blockMode,
-            localizedToolboxDefinition
+            localizedToolboxDefinition,
+            this.props.levelProperties?.enableBlocklyKeyboardNavigation
           );
     }
 
@@ -660,7 +661,7 @@ class UnconnectedMusicView extends React.Component {
         !this.props.isPlaying &&
         e.newElementId !== this.props.selectedBlockId
       ) {
-        this.props.selectBlockId(e.newElementId);
+        // this.props.selectBlockId(e.newElementId);
       }
     }
 

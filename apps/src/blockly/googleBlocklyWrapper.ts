@@ -3,6 +3,7 @@ import {
   ObservableParameterModel,
 } from '@blockly/block-shareable-procedures';
 import {installAllBlocks as installFieldColourBlocks} from '@blockly/field-colour';
+import {KeyboardNavigation} from '@blockly/keyboard-experiment';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
 import {
   ScrollBlockDragger,
@@ -883,6 +884,13 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
     if (options.noFunctionBlockFrame) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;
+    }
+
+    if (options.enableKeyboardNavigation) {
+      blocklyWrapper.KeyboardNavigation = new KeyboardNavigation(workspace);
+      // Rerun user theme after Keyboard Experiment bug introduces incorrect theme
+      const theme = cdoUtils.getUserTheme(options.theme as GoogleBlockly.Theme);
+      workspace.setTheme(theme);
     }
 
     // Typically, we need to handle disabling blocks that are not connected to an

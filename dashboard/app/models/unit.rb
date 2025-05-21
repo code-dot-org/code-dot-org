@@ -331,6 +331,7 @@ class Unit < ApplicationRecord
     is_deprecated
     content_area
     topic_tags
+    enable_blockly_keyboard_navigation
   )
 
   def self.twenty_hour_unit
@@ -1612,6 +1613,7 @@ class Unit < ApplicationRecord
         showAiAssessmentsAnnouncement: show_ai_assessments_announcement?(user),
         content_area: content_area,
         topic_tags: topic_tags,
+        enableBlocklyKeyboardNavigation: enable_blockly_keyboard_navigation,
       }
 
       #TODO: lessons should be summarized through lesson groups in the future
@@ -1892,7 +1894,8 @@ class Unit < ApplicationRecord
       :show_calendar,
       :is_migrated,
       :include_student_lesson_plans,
-      :use_legacy_lesson_plans
+      :use_legacy_lesson_plans,
+      :enable_blockly_keyboard_navigation
     ]
 
     result = {}

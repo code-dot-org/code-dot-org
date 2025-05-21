@@ -17,6 +17,7 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 export default function initPage(unitEditorData) {
+  console.log({unitEditorData});
   const scriptData = unitEditorData.script;
   const lessonGroups = mapLessonGroupDataForEditor(scriptData.lesson_groups);
 
@@ -35,6 +36,7 @@ export default function initPage(unitEditorData) {
     initResources('studentResource', scriptData.student_resources || [])
   );
 
+  console.log(scriptData);
   ReactDOM.render(
     <Provider store={store}>
       <UnitEditor
@@ -104,6 +106,9 @@ export default function initPage(unitEditorData) {
           scriptData.missingRequiredDeviceCompatibilities
         }
         allowMajorCurriculumChanges={scriptData.allowMajorCurriculumChanges}
+        initialEnableBlocklyKeyboardNavigation={
+          scriptData.enableBlocklyKeyboardNavigation
+        }
       />
     </Provider>,
     document.querySelector('.edit_container')
