@@ -1006,29 +1006,29 @@ roles.each do |name, config| %>
               - Sid: AllowReadRole
                 Effect: Allow
                 Action:
-                  - CreatePolicy
-                  - DeleteRole
-                  - DeletePolicy
+                  - iam:CreatePolicy
+                  - iam:DeleteRole
+                  - iam:DeletePolicy
                   - iam:GetRole
                   - iam:ListAttachedRolePolicies
                   - iam:GetRolePolicy
                 Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/marketing-sites-<%=environment_type%>-*"
-            
+
               # PASS roles into ECS / Application AutoScaling — only our roles/ECS-tasks, and only to ECS
               - Sid: AllowPassRoleToService
                 Effect: Allow
                 Action: iam:PassRole
                 # which role we allow to be passed
                 Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/marketing-sites-<%=environment_type%>-*"
-                # Which resource we allow that role to be assigned to (ECS task)
-                ArnLike:
-                  iam:AssociatedResourceARN:
-                    - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:task-definition/marketing-sites-<%=environment_type%>-*:*"
                 Condition:
                   StringEquals:
                     iam:PassedToService:
                       - ecs-tasks.amazonaws.com
                       - application-autoscaling.amazonaws.com
+                  ArnLike:
+                    iam:AssociatedResourceARN:
+                      - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:task-definition/marketing-sites-<%=environment_type%>-*:*"
+
               # VPC and networking resources
               - Effect: Allow
                 Action:
