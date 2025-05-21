@@ -55,9 +55,13 @@
       RoleName: CloudFormationService
       <%=service_role 'cloudformation'%> # %>
       Path: /admin/
+      # Attach the DevPermissions policy to this role:
+      #   PassRole *, access to _everything_ except Organizations, IAM (overridden above) and SecretsManager (overriden above)
+      ManagedPolicyArns: [!Ref DevPermissions]
+
       Policies:
-        # Grant permissions for managing specific non-admin AWS::IAM resources.
-        # The name is misleading as this is not a permissions boundary, but a policy granting access
+        # Grant added permissions for managing specific non-admin AWS::IAM resources.
+        #   (The name is misleading as this is not a permissions boundary, but a policy granting access)
         - PolicyName: RolePermissionsBoundary
           PolicyDocument:
             Version: 2012-10-17
@@ -108,6 +112,3 @@
                 Action: secretsmanager:*
                 Resource: '*'
 
-      # Attach the DevPermissions policy to this role:
-      #   PassRole *, access to _everything_ except Organizations, IAM (overridden above) and SecretsManager (overriden above)
-      ManagedPolicyArns: [!Ref DevPermissions]

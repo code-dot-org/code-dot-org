@@ -1,0 +1,25 @@
+  # Deprecated CurriculumBuilderDCDO ManagedPolicy
+  # ----------------------------
+  # Intent:
+  #  - Provide read-only access to the DCDO production table for the 'curriculum' group.
+  # 
+  # Audit (2025-05-16):
+  #  - Last used 888 days ago by user 'curriculum-builder-public-pdfs'.
+  # 
+  # Security Review:
+  #  - Deprecated and safe for removal; no active usage detected.
+  #
+  # Legacy Description Comment: Permissions which grant the CurriculumBuilder project read-only acces to
+  # the DCDO database, so select configuration variables can be shared between
+  # the two projects.
+  CurriculumBuilderDCDO:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: CurriculumBuilderDCDO
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action:
+              - dynamodb:GetItem
+            Resource: !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/dcdo_production"
