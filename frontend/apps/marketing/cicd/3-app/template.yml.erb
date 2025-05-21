@@ -303,6 +303,7 @@ Resources:
   FargateServiceTaskDefTaskRole:
     Type: AWS::IAM::Role
     Properties:
+      RoleName: !Sub "marketing-sites-${EnvironmentType}-${SubdomainName}-task-role"
       AssumeRolePolicyDocument:
         Statement:
           - Action: sts:AssumeRole
@@ -405,6 +406,7 @@ Resources:
   FargateServiceTaskDefExecutionRole:
     Type: AWS::IAM::Role
     Properties:
+      RoleName: !Sub "marketing-sites-${EnvironmentType}-${SubdomainName}-task-exec-role"
       AssumeRolePolicyDocument:
         Statement:
           - Action: sts:AssumeRole
@@ -539,6 +541,7 @@ Resources:
   ECSAutoScalingRole:
     Type: AWS::IAM::Role
     Properties:
+      RoleName: !Sub "marketing-sites-${EnvironmentType}-${SubdomainName}-autoscaling-role"
       AssumeRolePolicyDocument:
         Version: '2012-10-17'
         Statement:
