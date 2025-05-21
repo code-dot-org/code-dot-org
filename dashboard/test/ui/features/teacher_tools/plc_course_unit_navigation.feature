@@ -8,7 +8,7 @@ Background:
   And I am enrolled in a plc course
   Given I am on "http://studio.code.org/courses/All%20The%20PLC%20Things"
   And I wait to see ".course_unit_section"
-#TODO figure out alltheplcthings??
+
 Scenario: Basic navigation and ribbon changing works as expected
   Then I verify progress for the selector ".course_unit_section a:nth-child(1) .ribbon" is "not_started"
   Then I verify progress for the selector ".course_unit_section a:nth-child(2) .ribbon" is "not_started"
