@@ -23,3 +23,9 @@
     border-radius: 0.375rem;
   }
 }
+
+// We need !important because of css specificity- this would be overriden
+// by display: none otherwise.
+button.active {
+  opacity: 1 !important;
+}

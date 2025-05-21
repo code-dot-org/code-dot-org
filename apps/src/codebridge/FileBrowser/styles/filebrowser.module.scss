@@ -14,7 +14,8 @@
 
 .fileBrowserContents {
   overflow-y: auto;
-  scrollbar-color: var(--background-neutral-senary) var(--background-neutral-secondary);
+  scrollbar-color: var(--background-neutral-senary)
+    var(--background-neutral-secondary);
   height: 100%;
 }
 
@@ -72,26 +73,31 @@
 // Using button to increase specificity of this class
 // (this allows it to take precedence over the component library button styles)
 button.button-kebab {
-  display: none;
+  opacity: 0;
+  height: 20px;
+  width: 20px;
+  min-width: 20px !important; // !important to override the default button min-width
+  margin: 2px;
+  transition: none;
 
   // We use important here because the hover, and active styles used by Button
   // are more specific than a single class.
   // We need a different hover color for the kebab button because it is on top of another
   // element with the standard hover color.
-  &:hover, &:active {
+  &:hover,
+  &:active {
+    opacity: 1;
     background-color: var(--background-neutral-quinary) !important;
   }
 }
 
-div.row:hover .button-kebab,
-div.notDraggable:focus-within .button-kebab,
-div.draggable:hover .button-kebab,
-div.draggable:focus-within .button-kebab {
-  display: inherit;
-  height: 20px;
-  width: 20px;
-  min-width: 1.25rem;
-  margin: 2px 2px 2px 0;
+// This allows the ellipsis to display when its button host is hovered on or has focus
+.row:hover > .button-kebab,
+.notDraggable:focus-within > .row > .button-kebab,
+.draggable:hover > .button-kebab,
+.draggable:focus > .row > .button-kebab,
+button.button-kebab:focus {
+  opacity: 1;
 }
 
 .nameContainer {
@@ -143,12 +149,12 @@ div.draggable:focus-within .button-kebab {
 }
 
 .backpackErrorMessage {
-  color: var(--text-error-primary);;
+  color: var(--text-error-primary);
   font-size: 1rem;
 }
 
 .dragging {
-  background-color: var(--background-neutral-quaternary);;
+  background-color: var(--background-neutral-quaternary);
 }
 
 .notDraggable:focus-visible,

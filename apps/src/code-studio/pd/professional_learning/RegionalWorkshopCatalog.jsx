@@ -164,13 +164,13 @@ export default function RegionalWorkshopCatalog({zipFromSchoolInfo}) {
                   name,
                   capacity,
                   num_enrollments,
+                  grade_levels,
                   sessions,
                   format,
                   location_name,
                   fee,
                   has_prereq,
-                  requires_application,
-                  custom_application_link,
+                  description,
                   custom_registration_link,
                 }) => (
                   <RegionalWorkshopCatalogCard
@@ -181,13 +181,13 @@ export default function RegionalWorkshopCatalog({zipFromSchoolInfo}) {
                     name={name}
                     capacity={capacity}
                     numEnrollments={num_enrollments}
+                    supportedGradeLevels={grade_levels}
                     sessions={sessions || []}
                     format={format}
                     locationName={location_name}
                     fee={fee || ''}
                     hasPrereq={has_prereq}
-                    requiresApplication={requires_application}
-                    customApplicationLink={custom_application_link}
+                    description={description}
                     customRegistrationLink={custom_registration_link}
                   />
                 )

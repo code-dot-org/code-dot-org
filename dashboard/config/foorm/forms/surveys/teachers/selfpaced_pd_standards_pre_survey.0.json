@@ -27,7 +27,7 @@
         {
           "type": "html",
           "name": "section1_goals",
-          "html": "\n<p><span style='font-size: 12pt;'>The questions in this section aim to understand your goals for enagaging witn the {module} self-paced professional learning module.</span></p>\n"
+          "html": "\n<p><span style='font-size: 12pt;'>The questions in this section aim to understand your goals for enagaging with the {module} self-paced professional learning module.</span></p>\n"
         },
         {
           "type": "library_item",
@@ -93,5 +93,5 @@
       ]
     }
   ],
-  "published": false
+  "published": true
 }

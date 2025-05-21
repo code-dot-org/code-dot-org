@@ -1,0 +1,14 @@
+name 'gen-ai-student-level-L12'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# ✅ Lesson Recap: 9.2 Can You Trust the Bot?
+
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

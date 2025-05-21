@@ -76,19 +76,20 @@ describe('EditorialCard component', () => {
   it('renders card link', () => {
     renderCard();
 
-    const internalLink = screen.getByRole('link', {
+    const externalLink = screen.getByRole('link', {
       name: linkEntry.fields.ariaLabel,
     });
 
-    expect(internalLink).toBeVisible();
-    expect(internalLink).toHaveTextContent(linkEntry.fields.label);
-    expect(internalLink).toHaveAttribute(
+    expect(externalLink).toBeVisible();
+    expect(externalLink).toHaveTextContent(linkEntry.fields.label);
+    expect(externalLink).toHaveAttribute(
       'href',
       linkEntry.fields.primaryTarget,
     );
-    expect(internalLink).toHaveAttribute('target', '_blank');
+    expect(externalLink).toHaveAttribute('target', '_blank');
+    expect(externalLink).toHaveAttribute('rel', 'noopener noreferrer');
     expect(
-      within(internalLink).queryByRole('img', {name: 'external link'}),
+      within(externalLink).getByTestId('font-awesome-v6-icon'),
     ).toBeInTheDocument();
   });
 

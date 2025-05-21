@@ -68,7 +68,7 @@ export const SessionPart: FC<{
 
   const timeOptions = useMemo(() => {
     const startTime = moment().startOf('day').add(7, 'hours');
-    const endTime = moment().startOf('day').add(19, 'hours');
+    const endTime = moment().startOf('day').add(22, 'hours');
     const timeOptions: {value: string; text: string}[] = [];
 
     while (startTime.isSameOrBefore(endTime)) {
