@@ -1,0 +1,68 @@
+  # DevPermissions ManagedPolicy
+  # ----------------------------
+  # Intent:
+  #  - When used as a permissions policy:
+  #     - A policy for developers to do most of their work without restrictions.
+  #     - Restrict access to AWS organizations and secretsmanager actions.
+  #  - When used as a permissions boundary:
+  #     - Provide an upper-limit on permission for various IAM roles— no more access than a developer
+  #
+  # Intent vs. Reality:
+  #  - Permissions policy:
+  #     - Reality: It does not restrict access, if they use PassRole *, a compute unit (e.g., Lambda) and pass the AdministratorAccess role.
+  #  - Permissions boundary:
+  #     - Reality: Roles using this effectively have no upper-limit on permission, as they can use the same PassRole bypass.
+  #
+  # Security Recommendations:
+  #  - Replace NotAction with explicit allow-lists scoped to required services and actions.
+  #  - Constrain iam:PassRole to specific role ARNs and add StringEquals conditions on service principals.
+  #  - Limit secretsmanager actions to known (non-production) secret ARNs.
+  DevPermissions:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: DevPermissions
+      Path: /admin/
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          # Allow _all_ actions except for IAM, Organizations, and SecretsManager (and the below Deny rule)
+          - Effect: Allow
+            NotAction:
+              - iam:*
+              - organizations:*
+              - secretsmanager:*
+            Resource: '*'
+          # Let Developers read everything about existing IAM resources.
+          - Sid: IAMReadOnlyAccess
+            Effect: Allow
+            Action:
+              - iam:GenerateCredentialReport
+              - iam:GenerateServiceLastAccessedDetails
+              - iam:Get*
+              - iam:List*
+              - iam:SimulateCustomPolicy
+              - iam:SimulatePrincipalPolicy
+            Resource: '*'
+          - Effect: Allow
+            Action: iam:PassRole
+            Resource: '*'
+          # 3 Cases depending on how this policy is included:
+          #    (1) As a permissions policy under CloudFormationService role -- Effect: NONE, below condition excepts it from the Deny
+          #    (2) As a permissions policy not under CloudFormationService role -- Effect: Deny, unless you use serverless transforms
+          #    (3) As a permissions boundary -- Effect: Deny, as per #2, but it would be denied already if the role's perm policy doesn't grant it.
+          - Effect: Deny
+            Action:
+              - cloudformation:CreateStack
+              - cloudformation:UpdateStack
+              - cloudformation:DeleteStack
+              - cloudformation:CreateChangeSet
+            # We DO want to allow if people are using the serverless transforms
+            # ???  Legacy explanation here: tbd
+            NotResource: "arn:aws:cloudformation:*:aws:transform/Serverless-2016-10-31"
+            Condition:
+              StringNotEquals:
+                cloudformation:RoleARN: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
+          # Allow Read-only access to _all_ secrets
+          - Effect: Allow
+            Action: secretsmanager:GetSecretValue
+            Resource: '*'

@@ -1,0 +1,123 @@
+# Console & CLI Roles
+# The term 'FullAccess' means the role has the highest access for it's type, not
+# full access to all resources. It's in comparison to similar 'ReadOnly' roles.
+
+<%
+roles = {
+  EngineeringReadOnlyRole: {
+    RoleName: 'Engineering_ReadOnly',
+    GoogleIdsSSMParameter: 'DeveloperGoogleIDs',
+    ManagedPolicyArns: [
+      'arn:aws:iam::aws:policy/ReadOnlyAccess',
+      '!Ref EngineerSecretsPolicy',
+      '!Ref AthenaCloudwatchLogsQueryPolicy',
+    ]
+  },
+  EngineeringFullAccessRole: {
+    RoleName: 'Engineering_FullAccess',
+    GoogleIdsSSMParameter: 'DeveloperGoogleIDs',
+    ManagedPolicyArns: [
+      'arn:aws:iam::aws:policy/PowerUserAccess',
+      'arn:aws:iam::aws:policy/IAMReadOnlyAccess',
+      '!Ref EngineerSecretsPolicy',
+      '!Ref CloudformationPassRolePolicy',
+    ]
+  },
+  EngineeringContributorRole: {
+    RoleName: 'Engineering_Contributor',
+    GoogleIdsSSMParameter: 'ContributorGoogleIDs',
+    ManagedPolicyArns: [
+      '!Ref ContributorS3Policy',
+      '!Ref ContributorSecretsPolicy',
+      'arn:aws:iam::aws:policy/CloudFrontReadOnlyAccess'
+    ]
+  },
+  TempS3LessEngineerRole: {
+    RoleName: 'Temp_S3less_Engineer',
+    GoogleIdsSSMParameter: 'DeveloperGoogleIDs',
+    ManagedPolicyArns: [
+      'arn:aws:iam::aws:policy/PowerUserAccess',
+      'arn:aws:iam::aws:policy/IAMReadOnlyAccess',
+      '!Ref NoS3ForYouPolicy',
+    ]
+  },
+  EngineeringMusicLabContributorRole: {
+    RoleName: 'Engineering_MusicLabContributor',
+    ManagedPolicyArns: [
+      '!Ref MusicLabS3ReadWritePolicy',
+    ]
+  },
+  DataAnalyticsFullAccessRole: {
+    RoleName: 'DataAnalytics_FullAccess',
+    ManagedPolicyArns: [
+      '!Ref DataAnalystPolicy',
+      '!Ref DataAnalystDmsReadOnlyPolicy',
+      '!Ref DataAnalystRedshiftPolicy',
+      'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor',
+      'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess',
+    ]
+  },
+  MarketingReadOnlyRole: {
+    RoleName: 'Marketing_ReadOnly',
+    ManagedPolicyArns: [
+      'arn:aws:iam::aws:policy/ReadOnlyAccess',
+      '!Ref AthenaCloudwatchLogsQueryPolicy',
+    ]
+  },
+  BillingReadOnlyRole: {
+    RoleName: 'Billing_ReadOnly',
+    GoogleIdsSSMParameter: 'BillingGoogleIDs',
+    ManagedPolicyArns: [
+      'arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess',
+    ]
+  },
+  ProductManagerFullAccessRole: {
+    RoleName: 'ProductManager_FullAccess',
+    GoogleIdsSSMParameter: 'ProductGoogleIDs',
+    ManagedPolicyArns: [
+      'arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess',
+      '!Ref BedrockKnowledgeBaseInvocationPolicy',
+      '!Ref CloudwatchDashboardViewerPolicy',
+    ]
+  }
+}
+roles.each do |name, config| %>
+  <%= name %>:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: <%= config[:RoleName] %>
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal: {Federated: !Sub "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"}
+            Action: sts:AssumeRoleWithSAML
+            Condition:
+              StringEquals:
+                SAML:aud: https://signin.aws.amazon.com/saml
+          <%- if config[:GoogleIdsSSMParameter] -%>
+          - Effect: Allow
+            Principal: {Federated: accounts.google.com}
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
+              ForAnyValue:StringEquals:
+                accounts.google.com:sub: !Ref <%= config[:GoogleIdsSSMParameter] %>
+          <%- end -%>
+      ManagedPolicyArns:
+        <%- config[:ManagedPolicyArns].each do |arn| -%>
+        - <%=arn%>
+        <%- end -%>
+      Policies:
+        - PolicyName: "DenyAdminLogs"
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Deny
+                Action: logs:*
+                Resource: !Sub 'arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/admin/*'
+      Tags:
+        - Key: sqlworkbench-team
+          Value: codedotorg
+<%- end -%>
