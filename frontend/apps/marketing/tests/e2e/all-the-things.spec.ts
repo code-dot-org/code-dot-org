@@ -40,7 +40,8 @@ test.describe('All the things UI e2e test', () => {
       await page.waitForURL('**/en-US/engineering/all-the-things');
     });
 
-    test('should redirect from localeless paths to localized paths using the language cookie', async ({
+    // Re-enable when locales other than English are supported
+    test.skip('should redirect from localeless paths to localized paths using the language cookie', async ({
       page,
       context,
       browserName,
