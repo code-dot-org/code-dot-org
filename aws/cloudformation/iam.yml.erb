@@ -959,8 +959,6 @@ roles.each do |name, config| %>
             Principal:
               Service: cloudformation.amazonaws.com
             Action: sts:AssumeRole
-      # The permissions explicitly granted to this Role may never exceed the permissions granted to Engineers.
-      PermissionsBoundary: !Ref DevPermissions
       ManagedPolicyArns: []
       Policies:
         - PolicyName: CloudFormationMarketingSites<%=environment_type.capitalize%>Policy
