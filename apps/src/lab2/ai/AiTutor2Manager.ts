@@ -4,7 +4,7 @@ import {EMPTY_AI_CUSTOMIZATIONS} from '@cdo/apps/aichat/views/modelCustomization
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {
   FeedbackData,
-  logUserFeedbackOnStudentEvaluation,
+  logAiInteractionFeedback,
 } from '@cdo/apps/aiEvaluation/aiInteractionFeedbackApi';
 import {
   AiChatModelIds,
@@ -77,7 +77,7 @@ export default class AiTutor2Manager {
       },
     };
 
-    logUserFeedbackOnStudentEvaluation(feedbackData).catch(error => {
+    logAiInteractionFeedback(feedbackData).catch(error => {
       console.error('🤖: Error logging feedback:', error);
     });
 
