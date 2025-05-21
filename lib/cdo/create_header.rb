@@ -5,7 +5,7 @@ class CreateHeader
   PROJECT_INFO_OVERRIDES = {
     minecraft_designer: {
       id: "create_dropdown_minecraft",
-      image: "logo_minecraft.png",
+      image: "header-minecraft-icon.png",
     },
     minecraft_adventurer: {
       image: "logo_mc.png",
