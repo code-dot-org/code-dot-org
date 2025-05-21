@@ -4,7 +4,6 @@ require "services/lti"
 require "policies/lti"
 require "concerns/partial_registration"
 require "clients/lti_advantage_client"
-require "clients/lti_cloudwatch_logger"
 require "cdo/honeybadger"
 require 'metrics/events'
 
@@ -82,7 +81,7 @@ class LtiV1Controller < ApplicationController
     extracted_client_id = decoded_jwt_no_auth[:aud].is_a?(Array) ? decoded_jwt_no_auth[:aud].first : decoded_jwt_no_auth[:aud]
     extracted_issuer_id = decoded_jwt_no_auth[:iss]
 
-    return log_unauthorized('Missing "aud" or "iss" from ID token') unless extracted_client_id.present? && extracted_issuer_id.present?
+    return log_unauthorized('Missing aud or iss from ID token') unless extracted_client_id.present? && extracted_issuer_id.present?
     # set cache key
     integration_cache_key = "#{extracted_issuer_id}/#{extracted_client_id}"
     # 'integration' can come back as a hash from the cache or as a class instance returned by ActiveRecord. In the case of the former, we are
@@ -504,13 +503,13 @@ class LtiV1Controller < ApplicationController
     SecureRandom.alphanumeric length
   end
 
-  private def log_metric(message, attributes = {})
-    event = attributes.merge({message: message})
-    LtiCloudWatchLogger.put_log_event(event)
+  private def log_metric(event, attributes = {})
+    log_payload = attributes.merge({event: event})
+    CDO.log.info log_payload.to_json
   end
 
-  private def log_unauthorized(message, attributes = {})
-    log_metric(message, attributes)
+  private def log_unauthorized(event, attributes = {})
+    log_metric(event, attributes)
     unauthorized_status
   end
 
