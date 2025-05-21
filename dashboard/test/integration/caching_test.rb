@@ -18,7 +18,7 @@ class CachingTest < ActionDispatch::IntegrationTest
 
   # TODO: TEACH-1788: This will need to be updated when we change the test fixtures
   test "should get /s/frozen" do
-    assert_cached_queries(1) do
+    assert_cached_queries(0) do
       get '/s/frozen'
     end
     assert_response :success
@@ -83,7 +83,7 @@ class CachingTest < ActionDispatch::IntegrationTest
   # end
 
   test "should get show of course1 level 1 twice" do
-    assert_cached_queries(1) do
+    assert_cached_queries(0) do
       get '/s/course1/lessons/3/levels/1'
     end
     assert_response :success
