@@ -25,6 +25,7 @@ module Services
           if id_token[:aud].length > 1
             log_payload = {
               event: 'Too many client_ids in the audience claim',
+              namespace: 'LTI',
               audience: id_token[:aud],
               aud_count: id_token[:aud].length,
             }

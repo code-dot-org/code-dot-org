@@ -504,7 +504,7 @@ class LtiV1Controller < ApplicationController
   end
 
   private def log_metric(event, attributes = {})
-    log_payload = attributes.merge({event: event})
+    log_payload = {event: event, namespace: 'LTI'}.merge(attributes)
     CDO.log.info log_payload.to_json
   end
 
