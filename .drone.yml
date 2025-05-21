@@ -220,7 +220,6 @@ steps:
 
   - name: get-cached-staging-database
     image: plugins/s3-cache
-    user: mysql
     volumes:
       - name: mysql
         path: /drone/src/var/lib/mysql
@@ -257,7 +256,7 @@ steps:
     commands:
       - sleep 100
       - sudo chown -R ci:ci .
-      # - sudo chown -R mysql:mysql /var/lib/mysql
+      - sudo chown -R mysql:mysql /var/lib/mysql
       # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
       - export GIT_COMMIT=$DRONE_COMMIT
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
