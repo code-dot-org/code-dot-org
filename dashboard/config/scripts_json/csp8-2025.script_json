@@ -20,7 +20,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-13 18:59:32 UTC",
+    "serialized_at": "2025-05-20 20:48:17 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1781,7 +1782,7 @@
       "key": "cda18a0f-e9f5-41e3-bc0c-53666564b59f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Run a quick [Kahoot quiz](https://create.kahoot.it/details/fc7211ac-50fd-407d-b8ff-cc8394e10620) to review Security Risks. \n\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Run a quick [Kahoot quiz](https://create.kahoot.it/share/unit-10-security-risks/f82a1515-b576-43a9-aedf-798238d7ba2b) to review Security Risks. \n\n---"
       },
       "seeding_key": {
         "activity_section.key": "cda18a0f-e9f5-41e3-bc0c-53666564b59f",
@@ -2978,6 +2979,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page-csp8_2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -3025,6 +3029,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_csp8_2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -3503,10 +3510,11 @@
     },
     {
       "name": "Equifax Data Breach: What Went Wrong (Podcast)",
-      "url": "https://www.carbonite.com/podcasts/breach/s02e03-Equifax-data-breach",
+      "url": "https://open.spotify.com/episode/03El29KDDRqg7zH2Q2cg70?si=japjmpLzSBGYXehgggKsWw",
       "key": "equifax_data_breach_what_went_wrong_podcast_",
       "properties": {
         "audience": "Student",
+        "download_url": "https://drive.google.com/file/d/1gTMNZZM6DY8kT6v_Ve4iK6qm6YX4wqwu/view?usp=sharing",
         "type": "Resource"
       },
       "seeding_key": {
@@ -3535,6 +3543,18 @@
       },
       "seeding_key": {
         "resource.key": "is_facial_recognition_invading_your_privacy_"
+      }
+    },
+    {
+      "name": "Kahoot Wrap Up Quiz",
+      "url": "https://create.kahoot.it/share/unit-10-security-risks/f82a1515-b576-43a9-aedf-798238d7ba2b",
+      "key": "kahoot_wrap_up_quiz",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "kahoot_wrap_up_quiz"
       }
     },
     {
@@ -3905,6 +3925,12 @@
       "seeding_key": {
         "lesson.key": "Security Risks Part 2",
         "resource.key": "equifax_data_breach_what_went_wrong_podcast_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 2",
+        "resource.key": "kahoot_wrap_up_quiz"
       }
     },
     {
