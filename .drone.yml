@@ -243,7 +243,6 @@ steps:
         from_secret: SAUCE_ACCESS_KEY
     shm_size: '2gb' # necessary to avoid "invalid session id"/"session deleted because of page crash" errors in Selenium
     commands:
-      - sudo chown -R ci:ci .
       # cache is restored to source directory, so we need to copy it into the right place
       - cp -rn .rbenv /home/ci/
       # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
@@ -305,7 +304,6 @@ steps:
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
     commands:
-      - sudo chown -R ci:ci .
       - /entrypoint.sh docker/ci/scripts/prepare_ui_tests.sh
       - cp -r /home/ci/.rbenv .
       - mysqldump -u root -B dashboard_test > dashboard/db/ui_test_data.sql
