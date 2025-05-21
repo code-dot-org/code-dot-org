@@ -37,6 +37,23 @@
           }
         }
       },
+      "grade": {
+        "en-US": [
+          "K",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12"
+        ]
+      },
       "experienceLevel": {
         "en-US": [
           "Beginner"
@@ -50,6 +67,49 @@
       "devices": {
         "en-US": [
           "Computer"
+        ]
+      },
+      "topics": {
+        "en-US": [
+          "Art and Design",
+          "App Design",
+          "Artificial Intelligence",
+          "Web Design"
+        ]
+      },
+      "professionalLearning": {
+        "en-US": [
+          "Facilitator-led Workshops",
+          "Self-paced Modules"
+        ]
+      },
+      "accessibility": {
+        "en-US": [
+          "Text to Speech",
+          "Closed captioning",
+          "Immersive reader"
+        ]
+      },
+      "languages": {
+        "en-US": [
+          "Arabic",
+          "Bahasa Indonesian",
+          "Chinese Traditional",
+          "English",
+          "Farsi",
+          "French",
+          "German",
+          "Hindi",
+          "Italian",
+          "Japanese",
+          "Korean",
+          "Polish",
+          "Portuguese - Brazil",
+          "Slovak",
+          "Spanish - Latam",
+          "Spanish - Spain",
+          "Thai",
+          "Turkish"
         ]
       }
     }

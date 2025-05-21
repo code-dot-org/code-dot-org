@@ -320,6 +320,30 @@ test.describe('All the things UI e2e test', () => {
       });
     });
 
+    test.describe('editorial card', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator('Editorial Card');
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('renders', async () => {
+        const cardLocator = component.getByRole('complementary');
+        await expect(cardLocator).toHaveCount(10);
+
+        const cards = await cardLocator.all();
+
+        for (const card of cards) {
+          await expect(card).toBeVisible();
+        }
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
     test.describe('heading', () => {
       let component: Locator;
 
