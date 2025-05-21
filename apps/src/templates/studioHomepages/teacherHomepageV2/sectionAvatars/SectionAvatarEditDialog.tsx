@@ -65,7 +65,7 @@ const SectionAvatarEditDialog: React.FC<SectionAvatarEditDialogProps> = ({
           type={'secondary'}
         />
         <Button
-          text={i18n.saveAvatar()}
+          text={i18n.selectAvatar()}
           onClick={() => {}}
           size={'s'}
           type={'primary'}
