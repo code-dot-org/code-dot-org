@@ -16,6 +16,8 @@ const systemPrompts = {
   user: 'You are responding to a query about programming.  Target the reading age of an American 7th grader.  Use plain English in the answer.  Keep the answer relatively short, say one or two paragraphs, with each paragraph two sentences or less.',
 };
 
+export type AiTutor2MessageType = 'hint' | 'user';
+
 export default class AiTutor2Manager {
   private currentLevelId: string | null;
   private scriptId: number | undefined;
@@ -31,7 +33,7 @@ export default class AiTutor2Manager {
     this.channelId = channelId;
   }
 
-  async askAiTutor2(message: string, type: 'hint' | 'user') {
+  async askAiTutor2(message: string, type: AiTutor2MessageType) {
     const newUserMessage: PendingChatMessage = {
       role: Role.USER,
       status: Status.UNKNOWN,

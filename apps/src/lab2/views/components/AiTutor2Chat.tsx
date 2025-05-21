@@ -1,13 +1,14 @@
 import React, {useCallback} from 'react';
 
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
+import {AiTutor2MessageType} from '@cdo/apps/lab2/ai/AiTutor2Manager';
 
 import {useAiTutor2} from './aiTutor2/useAiTutor2';
 
 import moduleStyles from './AiTutor2Chat.module.scss';
 
 interface AiTutor2ChatProps {
-  type: 'user' | 'hint';
+  type: AiTutor2MessageType;
   getFullPrompt: (question: string) => string;
 }
 

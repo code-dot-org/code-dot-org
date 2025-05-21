@@ -3,7 +3,9 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {WaitingAnimation} from '@cdo/apps/aichat/views/ChatEventsList';
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import AiTutor2Manager from '@cdo/apps/lab2/ai/AiTutor2Manager';
+import AiTutor2Manager, {
+  AiTutor2MessageType,
+} from '@cdo/apps/lab2/ai/AiTutor2Manager';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStylesFixed from '../AiTutor2ResponseFixed.module.scss';
@@ -11,7 +13,7 @@ import moduleStylesShrink from '../AiTutor2ResponseShrink.module.scss';
 
 export function useAiTutor2(
   getFullPrompt: (question: string) => string,
-  type: 'user' | 'hint',
+  type: AiTutor2MessageType,
   shrink = false
 ) {
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
