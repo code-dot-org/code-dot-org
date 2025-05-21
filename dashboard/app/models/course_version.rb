@@ -35,9 +35,9 @@ class CourseVersion < ApplicationRecord
 
   KEY_CHAR_RE = /[a-z0-9\-]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
-  validates :key,
-    format: {with: KEY_RE,
-    message: "must contain only digits, letters, or dashes; got \"%{value}\"."}
+  validates_format_of :key,
+    with: KEY_RE,
+    message: "must contain only digits, letters, or dashes; got \"%{value}\"."
 
   # Placeholder key for curriculum that will not be updated but want the
   # features that come with a course version (resources, vocab, etc)
@@ -212,23 +212,16 @@ class CourseVersion < ApplicationRecord
         is_recommended: recommended?(locale_code),
         locales: content_root.supported_locale_names,
         locale_codes: content_root.supported_locale_codes,
-        units: units.select {|u| u.course_assignable?(user)}.map do |u|
-          unit_group_unit = u.unit_group_units.find {|ugu| ugu.unit_group == content_root}
-          u.summarize_for_assignment_dropdown(unit_group_unit: unit_group_unit)
-        end.to_h
+        units: units.select {|u| u.course_assignable?(user)}.map(&:summarize_for_assignment_dropdown).to_h
       }
     ]
   end
 
   def summarize_for_unit_selector
-    unit_summaries = units.map do |u|
-      unit_group_unit = u.unit_group_units.find {|ugu| ugu.unit_group == content_root}
-      u.summarize_for_unit_selector(unit_group_unit: unit_group_unit)
-    end
     {
       id: id,
       display_name: content_root.launched? ? content_root.localized_title : content_root.localized_title + ' *',
-      units: unit_summaries.sort_by {|u| u[:position]},
+      units: units.map(&:summarize_for_unit_selector).sort_by {|u| u[:position]}
     }
   end
 

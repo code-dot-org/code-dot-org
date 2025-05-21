@@ -26,7 +26,6 @@ class CourseScript extends Component {
     title: PropTypes.string,
     name: PropTypes.string,
     id: PropTypes.number.isRequired,
-    path: PropTypes.string.isRequired,
     courseId: PropTypes.number,
     courseOfferingId: PropTypes.number,
     courseVersionId: PropTypes.number,
@@ -79,8 +78,8 @@ class CourseScript extends Component {
   render() {
     const {
       title,
+      name,
       id,
-      path,
       description,
       viewAs,
       selectedSectionId,
@@ -117,9 +116,6 @@ class CourseScript extends Component {
       selectedSection.unitId === id;
     const isAssigned = assignedToStudent || assignedByTeacher;
 
-    let unitPath = location.pathname.includes('/teacher_dashboard')
-      ? `/teacher_dashboard/sections/${selectedSectionId}${path}`
-      : `${path}${location.search}`;
     return (
       <div
         style={{
@@ -138,7 +134,11 @@ class CourseScript extends Component {
             <Button
               __useDeprecatedTag
               text={i18n.goToUnit()}
-              href={unitPath}
+              href={
+                location.pathname.includes('teacher_dashboard')
+                  ? `/teacher_dashboard/sections/${selectedSectionId}/unit/${name}`
+                  : `/s/${name}${location.search}`
+              }
               color={Button.ButtonColor.gray}
               className="uitest-go-to-unit-button"
             />

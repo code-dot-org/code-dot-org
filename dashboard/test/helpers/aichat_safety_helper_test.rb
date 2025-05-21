@@ -67,7 +67,6 @@ class AichatSafetyHelperTest < ActionView::TestCase
     DCDO.stubs(:get).with("aichat_toxicity_threshold_model_output", anything).returns(TEST_THRESHOLD)
     DCDO.stubs(:get).with("aichat_safety_profane_word_blocklist", anything).returns([@blocklist_blocked_word])
     DCDO.stubs(:get).with("aichat_openai_system_prompt", anything).returns('simple')
-    Policies::Courses.stubs(:modularity_enabled?).with(anything).returns(false)
     ShareFiltering.stubs(:find_profanity_failure).returns(ShareFailure.new(ShareFiltering::FailureType::PROFANITY, @webpurify_profanity))
     AichatComprehendHelper.stubs(:get_toxicity).returns(@comprehend_response)
     mock_response = create_stubbed_response(@openai_response_profanity_json)

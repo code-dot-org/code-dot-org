@@ -71,9 +71,6 @@ export default class HeaderPopup extends Component {
   };
 
   render() {
-    const scriptData = this.props.scriptData;
-    const courseName = scriptData?.course_name;
-    const unitPosition = scriptData?.unit_position;
     return (
       <div>
         {!this.state.open && (
@@ -113,11 +110,7 @@ export default class HeaderPopup extends Component {
               >
                 <div className="header_popup_body">
                   <div className="user-stats-block">
-                    <MiniView
-                      minimal={this.props.minimal}
-                      courseName={courseName}
-                      unitPosition={unitPosition}
-                    />
+                    <MiniView minimal={this.props.minimal} />
                   </div>
                 </div>
               </div>

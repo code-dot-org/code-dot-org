@@ -2401,7 +2401,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     let(:modularity_enabled) {false}
 
     before do
-      allow(Policies::Courses).to receive(:modularity_enabled?).and_return(modularity_enabled)
+      allow(Policies::Courses).to receive(:modularity_enabled?).with(user).and_return(modularity_enabled)
     end
 
     context 'modularity is off' do
@@ -2411,10 +2411,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         assert_response :success
       end
 
-      it '/courses/:course_course_name/units/:unit_position/lessons/:lesson_position/levels/:position does redirect' do
+      it '/courses/:course_course_name/units/:unit_position/lessons/:lesson_position/levels/:position does not redirect' do
         sign_in user
         get :show, params: {course_course_name: course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}
-        assert_redirected_to "/s/#{unit.name}/lessons/#{lesson_position}/levels/#{level.position}"
+        assert_response :success
       end
     end
 

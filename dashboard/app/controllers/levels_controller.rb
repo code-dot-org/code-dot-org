@@ -144,7 +144,6 @@ class LevelsController < ApplicationController
   # Get a JSON summary of a level's properties, used in modern labs that don't
   # reload the page between level views.
   def level_properties
-    # TODO: TEACH-1864 pass in unit_group_unit
     render json: @level.summarize_for_lab2_properties(nil, nil, current_user)
   end
 
