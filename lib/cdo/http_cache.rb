@@ -62,8 +62,23 @@ class HttpCache
 
   # A list of script levels that should not be cached, even though they are
   # in a cacheable script
-  # TODO TEACH-1634 support the /courses/ path
   UNCACHED_UNIT_LEVEL_PATHS = [
+    '/courses/dance-2019/units/1/lessons/1/levels/10',
+    '/courses/dance-ai-2023/units/1/lessons/1/levels/10',
+    '/courses/poem-art-2021/units/1/lessons/1/levels/9',
+    '/courses/poem-art-2021/units/1/lessons/1/levels/2', # prediction levels are not cacheable
+    '/courses/poem-art-2021/units/1/lessons/1/levels/5', # prediction levels are not cacheable
+    '/courses/hello-world-food-2021/units/1/lessons/1/levels/11',
+    '/courses/hello-world-animals-2021/units/1/lessons/1/levels/11',
+    '/courses/hello-world-retro-2021/units/1/lessons/1/levels/11',
+    '/courses/hello-world-emoji-2021/units/1/lessons/1/levels/11',
+    '/courses/hello-world-space-2022/units/1/lessons/1/levels/11',
+    '/courses/hello-world-soccer-2022/units/1/lessons/1/levels/11',
+    '/courses/outbreak/units/1/lessons/1/levels/10'
+  ]
+
+  # TODO: remove this once we are confident /courses/ paths are working
+  OLD_UNCACHED_UNIT_LEVEL_PATHS = [
     '/s/dance-2019/lessons/1/levels/10',
     '/s/dance-ai-2023/lessons/1/levels/10',
     '/s/poem-art-2021/lessons/1/levels/9',
@@ -105,12 +120,18 @@ class HttpCache
   # A map from script name to script level URL pattern.
   CACHED_UNITS_MAP = CACHED_UNITS.map do |script_name|
     # Most scripts use the default route pattern.
-    [script_name, "/s/#{script_name}/lessons/*"]
+    [script_name, "/courses/#{script_name}/units/1/lessons/*"]
   end.to_h.merge(
     # Add the "special case" routes here.
     'hourofcode' => '/hoc/*',
     'flappy' => '/flappy/*'
   ).freeze
+
+  # TODO: remove this once we are confident /courses/ paths are working
+  OLD_CACHED_UNITS_MAP = CACHED_UNITS.map do |script_name|
+    # Most scripts use the default route pattern.
+    [script_name, "/s/#{script_name}/lessons/*"]
+  end.to_h.freeze
 
   def self.cached_scripts
     CACHED_UNITS_MAP.keys
@@ -304,8 +325,20 @@ class HttpCache
             headers: ALLOWLISTED_HEADERS,
             cookies: allowlisted_cookies
           },
+          # TODO: Remove this once we are confident /courses/ paths are working
+          {
+            path: OLD_UNCACHED_UNIT_LEVEL_PATHS,
+            headers: ALLOWLISTED_HEADERS,
+            cookies: allowlisted_cookies
+          },
           {
             path: CACHED_UNITS_MAP.values,
+            headers: ALLOWLISTED_HEADERS,
+            cookies: default_cookies
+          },
+          # TODO: Remove this once we are confident /courses/ paths are working
+          {
+            path: OLD_CACHED_UNITS_MAP.values,
             headers: ALLOWLISTED_HEADERS,
             cookies: default_cookies
           },
