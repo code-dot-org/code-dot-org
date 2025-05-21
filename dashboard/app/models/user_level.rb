@@ -20,7 +20,8 @@
 #
 # Indexes
 #
-#  index_user_levels_unique  (user_id,script_id,level_id,deleted_at) UNIQUE
+#  index_user_levels_on_script_and_level  (script_id,level_id)
+#  index_user_levels_unique               (user_id,script_id,level_id,deleted_at) UNIQUE
 #
 
 require 'cdo/activity_constants'
