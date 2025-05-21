@@ -265,7 +265,8 @@ class LessonsController < ApplicationController
   end
 
   private def redirect_to_canonical_path
-    canonical_path = Services::Courses.canonical_path(request.fullpath, params, current_user)
+    unit_name_or_id = params[:script_id]
+    canonical_path = Services::Courses.canonical_path(request.fullpath, unit_name_or_id, current_user)
     redirect_to canonical_path unless canonical_path == request.fullpath
   end
 end
