@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-05-08T14:34:20.000Z",
   "level_num": "custom",
@@ -10,7 +11,7 @@
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
-        "temperature": 0.3,
+        "temperature": 0.7,
         "systemPrompt": "",
         "retrievalContexts": [
 
@@ -42,7 +43,6 @@
     },
     "name_suffix": "_2025"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-08T14:34:20.581+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson4-level2_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson4-level2_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:34:20.581+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson4-level2_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson4-level2_2024\"},{\"changed_at\":\"2025-05-16 17:29:13 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

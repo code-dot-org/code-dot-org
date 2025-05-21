@@ -199,7 +199,8 @@
     line-height: 1.2em;
   }
 
-  ol, ul {
+  ol,
+  ul {
     font-size: 14px;
     line-height: 0;
     margin: 0 0 10px 20px;
@@ -222,6 +223,9 @@
 
   details {
     line-height: 1.2;
+    summary {
+      margin: 4px 0;
+    }
   }
 }
 

@@ -22,7 +22,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-13 20:07:50 UTC",
+    "serialized_at": "2025-05-20 20:48:21 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1691,7 +1692,7 @@
       "key": "862a430e-13b2-4c76-9675-91bf5cb04895",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Run a quick [Kahoot quiz](https://create.kahoot.it/share/unit-10-security-risks/5961fcf0-0dd2-4c76-bd0a-081fc9f1cf8b) to review Security Risks. \r\n\r\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Run a quick [Kahoot quiz](https://create.kahoot.it/share/unit-10-security-risks/f82a1515-b576-43a9-aedf-798238d7ba2b) to review Security Risks. \n\n---"
       },
       "seeding_key": {
         "activity_section.key": "862a430e-13b2-4c76-9675-91bf5cb04895",
@@ -3332,10 +3333,11 @@
     },
     {
       "name": "Equifax Data Breach: What Went Wrong (Podcast)",
-      "url": "https://www.carbonite.com/podcasts/breach/s02e03-Equifax-data-breach",
+      "url": "https://open.spotify.com/episode/03El29KDDRqg7zH2Q2cg70?si=japjmpLzSBGYXehgggKsWw",
       "key": "equifax_data_breach_what_went_wrong_podcast_",
       "properties": {
         "audience": "Student",
+        "download_url": "https://drive.google.com/file/d/1gTMNZZM6DY8kT6v_Ve4iK6qm6YX4wqwu/view?usp=sharing",
         "type": "Resource"
       },
       "seeding_key": {
@@ -3352,6 +3354,18 @@
       },
       "seeding_key": {
         "resource.key": "is_facial_recognition_invading_your_privacy_"
+      }
+    },
+    {
+      "name": "Kahoot Quiz - Security Risks",
+      "url": "https://create.kahoot.it/share/unit-10-security-risks/f82a1515-b576-43a9-aedf-798238d7ba2b",
+      "key": "kahoot_quiz_-_security_risks",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "kahoot_quiz_-_security_risks"
       }
     },
     {
@@ -3542,6 +3556,12 @@
       "seeding_key": {
         "lesson.key": "Security Risks Part 2",
         "resource.key": "equifax_data_breach_what_went_wrong_podcast_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 2",
+        "resource.key": "kahoot_quiz_-_security_risks"
       }
     },
     {

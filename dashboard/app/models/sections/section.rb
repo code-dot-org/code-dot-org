@@ -440,7 +440,7 @@ class Section < ApplicationRecord
         login_type_name = Policies::Lti.issuer_name(issuer)
       end
 
-      selected_unit = unit_group&.single_unit_course? ? unit_group.default_units.first : script
+      selected_unit = unit_group&.single_unit_course? ? unit_group.first_unit : script
 
       primary_instructor = {
         email: teacher.email,
@@ -514,7 +514,7 @@ class Section < ApplicationRecord
         end
       end
 
-      selected_unit = unit_group&.single_unit_course? ? unit_group.default_units.first : script
+      selected_unit = unit_group&.single_unit_course? ? unit_group.first_unit : script
 
       # Remove ordering from scope when not including full
       # list of students, in order to improve query performance.
@@ -673,8 +673,8 @@ class Section < ApplicationRecord
   end
 
   def assigned_ai_chat?
-    # Our generative AI courses have scripts that can be assigned individually,
-    # whereas CS and AI Foundations (CSAIF) does not.
+    # Our older generative AI course had scripts that could be assigned individually.
+    # As of May 2025, this is no longer possible.
     gen_ai_scripts = %w[
       exploring-gen-ai1-2024
       exploring-gen-ai2-2024
@@ -687,7 +687,12 @@ class Section < ApplicationRecord
       pswai-pilot-2024
     ]
 
-    gen_ai_course = 'exploring-gen-ai-2024'
+    gen_ai_courses = %w[
+      exploring-gen-ai-2024
+      exploring-gen-ai-2025
+      foundations-gen-ai-2025
+      customizing-llms-2025
+    ]
 
     csaif_courses = %w[
       computer-systems-and-devices-2024
@@ -695,10 +700,24 @@ class Section < ApplicationRecord
       programming-fundamentals-aitutor-2024
       networks-and-the-internet-2024
       problem-solving-with-ai-2024
+      artificial-intelligence-foundations-2025
+      computing-foundations-for-a-digital-age-2025
+      foundations-of-ai-programming-2025
+      ai-and-the-systems-that-power-it-2025
+      the-fabric-of-the-internet-and-ai-2025
+      cybersecurity-and-global-impacts-2025
+      insights-from-data-and-ai-2025
     ]
 
+    # In order to support an organizational event.
+    other_courses = %w[
+      codechella2025
+    ]
+
+    # Note that as of May 2025, script-specific assignment without course assignment
+    # is not possible, so the first condition here is not necessary.
     (gen_ai_scripts + csaif_scripts).include?(script&.name) ||
-      (csaif_courses + [gen_ai_course]).include?(unit_group&.name)
+      (csaif_courses + gen_ai_courses + other_courses).include?(unit_group&.name)
   end
 
   def reset_code_review_groups(new_groups)
@@ -812,10 +831,6 @@ class Section < ApplicationRecord
   end
 
   private def unit_group_unit
-    if unit_group && script
-      script.unit_group_units.find {|ugu| ugu.unit_group == unit_group}
-    elsif script
-      script.unit_group_units.first
-    end
+    Queries::Courses.unit_group_unit(script, unit_group)
   end
 end
