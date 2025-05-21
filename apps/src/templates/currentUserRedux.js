@@ -130,6 +130,7 @@ const initialState = {
   usStateCode: null,
   inSection: null,
   userCreatedAt: null,
+  userSharingDisabled: false,
 };
 
 export default function currentUser(state = initialState, action) {
@@ -268,6 +269,7 @@ export default function currentUser(state = initialState, action) {
       is_verified_instructor,
       has_completed_ai_differentiation_welcome,
       educator_role,
+      sharing_disabled,
     } = action.serverUser;
     analyticsReport.setUserProperties(
       id,
@@ -312,6 +314,7 @@ export default function currentUser(state = initialState, action) {
       age,
       inSection: in_section,
       userCreatedAt: created_at,
+      userSharingDisabled: sharing_disabled,
     };
   }
 

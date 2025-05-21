@@ -9,16 +9,12 @@ import {Heading2} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {ChangeEvent, FC, memo, useCallback, useMemo} from 'react';
 
+import {WorkshopGradeLevels} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {useFetch} from '@cdo/apps/util/useFetch';
-import {StudentGradeLevels} from '@cdo/generated-scripts/sharedConstants';
 
 import {BasicsProps, CourseOffering} from '../types';
 
 import commonStyles from '../styles.module.scss';
-
-const GRADE_LEVEL_OPTIONS = StudentGradeLevels.filter(
-  grade => grade !== 'Other'
-);
 
 export const Basics: FC<BasicsProps> = ({
   config: {fields},
@@ -162,7 +158,7 @@ export const Basics: FC<BasicsProps> = ({
               styleAsFormField={true}
               hideControls
               checkedOptions={grades}
-              allOptions={GRADE_LEVEL_OPTIONS.map(value => ({
+              allOptions={WorkshopGradeLevels.map((value: string) => ({
                 value,
                 label: value,
               }))}

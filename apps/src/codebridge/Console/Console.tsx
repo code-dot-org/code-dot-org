@@ -1,3 +1,4 @@
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils';
@@ -18,6 +19,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import '@xterm/xterm/css/xterm.css';
 
 import ConsoleManager from './ConsoleManager';
+import {darkTheme, lightTheme} from './consoleThemes';
 import ControlButtons from './ControlButtons';
 import RightButtons from './RightButtons';
 
@@ -38,6 +40,7 @@ const Console: React.FunctionComponent = () => {
   );
   const {signInState} = useAppSelector(state => state.currentUser);
   const dispatch = useAppDispatch();
+  const {theme} = useTheme();
 
   const clearOutput = useCallback(
     (sendAnalytics: boolean) => {
@@ -137,6 +140,7 @@ const Console: React.FunctionComponent = () => {
     window.addEventListener('resize', () => fitAddon.fit());
     terminal.options = {
       fontSize: FontSize[fontSizeKey],
+      theme: theme === 'Dark' ? darkTheme : lightTheme,
     };
 
     // Right now we are tracking lines from the previous console so we can replay them here.
@@ -153,7 +157,7 @@ const Console: React.FunctionComponent = () => {
     terminal.attachCustomKeyEventHandler(ignoreEscapeAndTab);
 
     setDidInit(true);
-  }, [didInit, terminalRef, onData, fontSizeKey]);
+  }, [didInit, terminalRef, onData, fontSizeKey, theme]);
 
   // Apply updated font size to console whenever fontSizeKey changes.
   useEffect(() => {
@@ -163,6 +167,14 @@ const Console: React.FunctionComponent = () => {
       terminal.options.fontSize = FontSize[fontSizeKey];
     }
   }, [fontSizeKey]);
+
+  useEffect(() => {
+    const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
+    const terminal = consoleManager?.getTerminal();
+    if (terminal) {
+      terminal.options.theme = theme === 'Dark' ? darkTheme : lightTheme;
+    }
+  }, [theme]);
 
   // Load the user's preferred console font size from the backend which is saved
   // per app type (currently in pythonlab) for signed-in users.
@@ -178,7 +190,7 @@ const Console: React.FunctionComponent = () => {
   return (
     <PanelContainer
       id="codebridge-console"
-      className={moduleStyles.consoleContainer}
+      className={moduleStyles[`consoleContainer${theme}`]}
       headerContent={codebridgeI18n.consoleHeader()}
       rightHeaderContent={
         <RightButtons

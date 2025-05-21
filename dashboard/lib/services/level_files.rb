@@ -46,7 +46,7 @@ module Services
       if level_md5s_by_name[name] == md5
         nil
       else
-        level = Level.find_by_name(name) || Level.new(name: name)
+        level = Level.eager_load(levels_child_levels: :child_level).find_by_name(name) || Level.new(name: name)
         level.md5 = md5
         level = Services::LevelFiles.load_custom_level_xml(level_data, level)
         level
