@@ -1,5 +1,5 @@
 require 'test_helper'
-class Pd::WorkshopControllerTest < ActionController::TestCase
+class Pd::WorkshopsControllerTest < ActionController::TestCase
   setup do
     @workshop = create :workshop
   end

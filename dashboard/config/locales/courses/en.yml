@@ -1141,7 +1141,7 @@ en:
           description_teacher: ''
           version_title: ''
         csa-2025:
-          title: Computer Science A ('25-'26)
+          title: Computer Science A
           description_short: Learn Java programming and software engineering skills.
           description_student: |-
             ## Overview
@@ -1163,7 +1163,7 @@ en:
 
             This version of the Code.org CSA curriculum follows an **object-first approach** and does not use the unit structure outlined in the AP Computer Science A Course and Exam Description (CED). **All required course content is still covered**, but topics are introduced in an order that prioritizes early engagement with object-oriented programming. You can read more about this approach [**here**](https://docs.google.com/document/d/1t7RbyhrgNM7xXNPiCq1g-lXSJvR2qbEA1fURYxfZ9N8/edit?usp=sharing).
 
-            If you prefer a version of the curriculum organized using the same structure as the CED (including unit titles and themes), check out our **CED-aligned version of the CSA curriculum** (*Coming Soon!*).
+            If you prefer a version of the curriculum organized using the same structure as the CED (including unit titles and themes), check out our **CED-aligned version of the CSA curriculum**
 
             As noted on page 19 of the CED, **the College Board's unit structure is optional** - it is intended to provide teachers "one possible sequence they can adopt or modify rather than having to build from scratch . . . Experienced AP teachers who are satisfied with their current course organization and exam results should feel no pressure to adopt these units, which comprise an optional sequence for this course."
           version_title: "'25-'26"
@@ -1484,7 +1484,7 @@ en:
           description_teacher: ''
           version_title: ''
         csp-2025:
-          title: Computer Science Principles '25-'26
+          title: Computer Science Principles
           description_short: Learn foundational computer science concepts.
           description_student: CSP introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
           description_teacher: |-
@@ -1510,7 +1510,7 @@ en:
             We also recommend watching the [5-Part Exploring Generative AI Video Series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfJLo5nNGPHo0xCd9Xw5lSs) which introduces key concepts for generative AI. The entire video series takes ~15 minutes to watch.
           version_title: "'25-'26"
         csd-2025:
-          title: Computer Science Discoveries ('25-'26)
+          title: 'Computer Science Discoveries '
           description_short: An introductory computer science course that empowers students to create authentic artifacts
           description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers you to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
           description_teacher: |
@@ -5756,3 +5756,21 @@ en:
             ## Finished Teaching This Unit?
             Answer this [**short survey**](https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data%5Bunit_number%5D=unit_1) to let the Code.org curriculum team know how the unit went.
           version_title: "'25-'26"
+        problem-solving-with-ai-2025:
+          title: Problem Solving with AI
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'25-'26"
+        teaching-coding-with-music-2025:
+          title: Teaching Coding with Music
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: 25 - 26
+        career-journeys-for-elementary-2025:
+          title: career-journeys-for-elementary-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: '2025'
