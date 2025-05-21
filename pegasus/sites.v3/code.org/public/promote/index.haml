@@ -18,6 +18,7 @@ theme: responsive
 %script{:src=>"/js/jquery.placeholder.js"}
 
 %link{:href=>"/css/promote.css", :rel=>"stylesheet"}
+%link{:href=>"/css/interactive-map.css", :rel=>"stylesheet"}
 
 #promote-page
   %div{:id=>'us_content'}
@@ -39,6 +40,10 @@ theme: responsive
     %h2 Join the Movement
     #petition-section.section.clear
       = view :petition
+
+    %h2.tablet-feature Choose a State
+    #interactive-map.section.clear
+      = view :interactive_map, use_url: true
 
     %h2 Advocate for Computer Science Locally
     #advocate-locally.section.clear
