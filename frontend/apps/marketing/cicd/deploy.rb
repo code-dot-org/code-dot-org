@@ -80,6 +80,15 @@ opt_parser = OptionParser.new do |opts|
   end
 
   opts.on(
+    '--web_application_server_secrets_arn ARN',
+    String,
+    "AWS Secrets Manager ARN containing web application server secrets",
+    "Format: arn:aws:secretsmanager:<region>:<account-id>:secret:<secret-name>"
+  ) do |arn|
+    options[:web_application_server_secrets_arn] = arn
+  end
+
+  opts.on(
     '--stack_name NAME',
     String,
     "Name of the CloudFormation stack to create or update",
@@ -198,6 +207,7 @@ begin
   missing_params = []
   missing_params << "hosted_zone_id" unless options[:hosted_zone_id]
   missing_params << "container_image_hash" unless options[:container_image_hash]
+  missing_params << "web_application_server_secrets_arn" unless options[:web_application_server_secrets_arn]
   missing_params << "role_arn" unless options[:role_arn]
 
   unless missing_params.empty?
@@ -275,7 +285,8 @@ begin
       "SubdomainName" => options[:subdomain_name],
       "EnvironmentType" => options[:environment_type],
       "ContainerImageHashDigest" => options[:container_image_hash],
-      "CloudFrontTLSCertificateArn" => certificate_arn
+      "CloudFrontTLSCertificateArn" => certificate_arn,
+      "WebApplicationServerSecretsARN" => options[:web_application_server_secrets_arn]
     }
 
     deploy_stack(

@@ -22,6 +22,9 @@ Parameters:
   ContainerImageHashDigest:
     Type: String
     Description: The sha256sum of the marketing sites Next.js container image.
+  WebApplicationServerSecretsARN:
+    Type: String
+    Description: AWS Secret ARN that contains passwords and API Keys used by the Next.js web application server.
 
 Mappings:
   # Cloudfront Mappings
@@ -360,19 +363,19 @@ Resources:
               ReadOnly: false
           Secrets:
             - Name: CONTENTFUL_DELIVERY_TOKEN
-              ValueFrom: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:marketing-sites/${EnvironmentType}/${BaseDomainName}/${SubdomainName}:CONTENTFUL_DELIVERY_TOKEN::"
+              ValueFrom: !Sub "${WebApplicationServerSecretsARN}:CONTENTFUL_DELIVERY_TOKEN::"
             - Name: CONTENTFUL_PREVIEW_TOKEN
-              ValueFrom: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:marketing-sites/${EnvironmentType}/${BaseDomainName}/${SubdomainName}:CONTENTFUL_PREVIEW_TOKEN::"
+              ValueFrom: !Sub "${WebApplicationServerSecretsARN}:CONTENTFUL_PREVIEW_TOKEN::"
             - Name: CONTENTFUL_REVALIDATE_TOKEN
-              ValueFrom: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:marketing-sites/${EnvironmentType}/${BaseDomainName}/${SubdomainName}:CONTENTFUL_REVALIDATE_TOKEN::"
+              ValueFrom: !Sub "${WebApplicationServerSecretsARN}:CONTENTFUL_REVALIDATE_TOKEN::"
             - Name: DRAFT_MODE_TOKEN
-              ValueFrom: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:marketing-sites/${EnvironmentType}/${BaseDomainName}/${SubdomainName}:DRAFT_MODE_TOKEN::"
+              ValueFrom: !Sub "${WebApplicationServerSecretsARN}:DRAFT_MODE_TOKEN::"
             - Name: STATSIG_CLIENT_KEY
-              ValueFrom: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:marketing-sites/${EnvironmentType}/${BaseDomainName}/${SubdomainName}:STATSIG_CLIENT_KEY::"
+              ValueFrom: !Sub "${WebApplicationServerSecretsARN}:STATSIG_CLIENT_KEY::"
             - Name: STATSIG_SERVER_KEY
-              ValueFrom: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:marketing-sites/${EnvironmentType}/${BaseDomainName}/${SubdomainName}:STATSIG_SERVER_KEY::"
+              ValueFrom: !Sub "${WebApplicationServerSecretsARN}:STATSIG_SERVER_KEY::"
             - Name: OTEL_EXPORTER_OTLP_HEADERS
-              ValueFrom: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:marketing-sites/${EnvironmentType}/${BaseDomainName}/${Subdomain}:OTEL_EXPORTER_OTLP_HEADERS::"
+              ValueFrom: !Sub "${WebApplicationServerSecretsARN}::OTEL_EXPORTER_OTLP_HEADERS::"
           LogConfiguration:
             LogDriver: awslogs
             Options:
@@ -711,7 +714,7 @@ Resources:
           if (response.headers['cache-control'] === undefined) {
               // This value should match the constant `revalidate` in `frontend/apps/marketing/src/app/[brand]/[locale]/[slug]/page.tsx`
               response.headers['cache-control'] = {
-              value: `s-maxage=900, stale-while-revalidate=31535400`
+              value: `s-maxage=3600, stale-while-revalidate=31535400`
             }
           }
 
