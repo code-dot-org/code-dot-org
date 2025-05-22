@@ -204,7 +204,7 @@ steps:
       - git config user.email "drone-fake-user@code.org"
       - git merge origin/$DRONE_TARGET_BRANCH
 
-  # We cache staging's rbenv and a database dump in the
+  # We cache staging's rbenv and database in the
   # `cache-staging-build-artifacts` pipeline.
   - name: get-cached-staging-rbenv
     image: plugins/s3-cache
@@ -218,13 +218,13 @@ steps:
       debug: true
       pull: true
 
-  - name: get-cached-staging-database
+  - name: get-cached-staging-mysql
     image: plugins/s3-cache
     volumes:
       - name: mysql
         path: /drone/src/var/lib/mysql
     settings:
-      filename: cache-staging-dashboard-database-as-volume.tar.gz
+      filename: cache-staging-mysql.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -254,7 +254,7 @@ steps:
         from_secret: SAUCE_ACCESS_KEY
     shm_size: '2gb' # necessary to avoid "invalid session id"/"session deleted because of page crash" errors in Selenium
     commands:
-      - sleep 100
+      # Cached data gets restored by the root user, so we need to reassign
       - sudo chown -R ci:ci .
       - sudo chown -R mysql:mysql /var/lib/mysql
       # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
@@ -284,8 +284,8 @@ trigger:
 
 ---
 # On a push to staging, cache several build artifacts to drone's S3 bucket:
-# - The results of a fresh git clone of staging, to reduce git bandwidth
-# - A mysqldump of Dashboard's database, to reduce seed time
+# - A fresh git clone of staging, to reduce git bandwidth
+# - A copy of the MySQL databases, to reduce seed time
 # - A copy of the ~/.rbenv directory, to reduce bundle install time
 kind: pipeline
 type: docker
@@ -344,13 +344,13 @@ steps:
       mount:
         - /home/ci/.rbenv
 
-  - name: cache-staging-database
+  - name: cache-staging-mysql
     image: plugins/s3-cache
     volumes:
       - name: mysql
         path: /var/lib/mysql
     settings:
-      filename: cache-staging-dashboard-database-as-volume.tar.gz
+      filename: cache-staging-mysql.tar.gz
       endpoint: s3://cdo-drone
       rebuild: true
       debug: true
