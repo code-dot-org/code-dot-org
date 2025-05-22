@@ -329,13 +329,16 @@ test.describe('All the things UI e2e test', () => {
       });
 
       test('renders', async () => {
-        const cardLocator = component.getByRole('complementary');
-        await expect(cardLocator).toHaveCount(10);
+        const imageLocator = component.locator('img[alt=""]');
+        await expect(imageLocator).toHaveCount(7);
+        for (const image of await imageLocator.all()) {
+          await expect(image).toBeVisible();
+        }
 
-        const cards = await cardLocator.all();
-
-        for (const card of cards) {
-          await expect(card).toBeVisible();
+        const iconLocator = component.getByTestId('font-awesome-v6-icon');
+        await expect(iconLocator).toHaveCount(3);
+        for (const icon of await iconLocator.all()) {
+          await expect(icon).toBeVisible();
         }
       });
 

@@ -6510,7 +6510,7 @@
                         "cfGap": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
-                            "desktop": "1rem 1rem"
+                            "desktop": "1.5rem 1.5rem"
                           }
                         },
                         "cfColumns": {
@@ -12251,6 +12251,111 @@
       },
       "dataSource": {
         "en-US": {
+          "3UNaYMj": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "JZkN7NP": {
+            "sys": {
+              "id": "29RmoSX0ra5slBXtk5KXzM",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "JqZWSk7": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "JtSxyKC": {
+            "sys": {
+              "id": "6fdNRFZbNXpiXQd6v7fHen",
+              "type": "Link",
+              "linkType": "Asset"
+            }
+          },
+          "LRQ6mHr": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "OfnA27v": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "OlpMQbg": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "TN8XTWJ": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "Uzc6FQP": {
+            "sys": {
+              "id": "1JoMHQi1j1tApZYAZeMXzD",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "VExqHM0": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "WPQHtk0": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "_BG8Ipz": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "b5Lvt-f": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "gJB25Ug": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "yNxDeG0": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "0HkUraow": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -12294,13 +12399,6 @@
             }
           },
           "2YBqvudj": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "linkType": "Entry",
-              "type": "Link"
-            }
-          },
-          "3UNaYMj": {
             "sys": {
               "id": "1M58VbIv8wux84Tq58P78v",
               "type": "Link",
@@ -12352,13 +12450,6 @@
           "9VSvsbCf": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "9g-7kZ472XQBkhnml-mZ-": {
-            "sys": {
-              "id": "20rQYDvS9V3fnwtMyAW0m4",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -12433,27 +12524,6 @@
               "linkType": "Entry"
             }
           },
-          "JZkN7NP": {
-            "sys": {
-              "id": "29RmoSX0ra5slBXtk5KXzM",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "JqZWSk7": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "JtSxyKC": {
-            "sys": {
-              "id": "6fdNRFZbNXpiXQd6v7fHen",
-              "type": "Link",
-              "linkType": "Asset"
-            }
-          },
           "L1oQ0Cfn": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -12466,13 +12536,6 @@
               "id": "7Gumifs6ZTcj2G02BUoqFz",
               "type": "Link",
               "linkType": "Entry"
-            }
-          },
-          "LRQ6mHr": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "linkType": "Entry",
-              "type": "Link"
             }
           },
           "MKnXMzs0": {
@@ -12517,23 +12580,9 @@
               "linkType": "Entry"
             }
           },
-          "OfnA27v": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "OkAdGTNN": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "OlpMQbg": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -12562,8 +12611,8 @@
           "RDnMnl65": {
             "sys": {
               "id": "1M58VbIv8wux84Tq58P78v",
-              "linkType": "Entry",
-              "type": "Link"
+              "type": "Link",
+              "linkType": "Entry"
             }
           },
           "S9wdCChd": {
@@ -12587,18 +12636,11 @@
               "linkType": "Entry"
             }
           },
-          "TN8XTWJ": {
+          "U67Bt9so": {
             "sys": {
               "id": "1M58VbIv8wux84Tq58P78v",
               "type": "Link",
               "linkType": "Entry"
-            }
-          },
-          "U67Bt9so": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "linkType": "Entry",
-              "type": "Link"
             }
           },
           "Ura63qS4": {
@@ -12606,20 +12648,6 @@
               "id": "7Gumifs6ZTcj2G02BUoqFz",
               "type": "Link",
               "linkType": "Entry"
-            }
-          },
-          "Uzc6FQP": {
-            "sys": {
-              "id": "1JoMHQi1j1tApZYAZeMXzD",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "VExqHM0": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "linkType": "Entry",
-              "type": "Link"
             }
           },
           "VHT0F26i": {
@@ -12639,13 +12667,6 @@
           "WIYCSsvX": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "WPQHtk0": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -12674,22 +12695,8 @@
           "ZsffSorr": {
             "sys": {
               "id": "1M58VbIv8wux84Tq58P78v",
-              "linkType": "Entry",
-              "type": "Link"
-            }
-          },
-          "_BG8Ipz": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "linkType": "Entry",
-              "type": "Link"
-            }
-          },
-          "b5Lvt-f": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "linkType": "Entry",
-              "type": "Link"
+              "type": "Link",
+              "linkType": "Entry"
             }
           },
           "baGfsFOR": {
@@ -12748,13 +12755,6 @@
               "linkType": "Entry"
             }
           },
-          "gJB25Ug": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "gxYbZM71": {
             "sys": {
               "id": "6fdNRFZbNXpiXQd6v7fHen",
@@ -12772,8 +12772,8 @@
           "hdNvVeZz": {
             "sys": {
               "id": "1M58VbIv8wux84Tq58P78v",
-              "linkType": "Entry",
-              "type": "Link"
+              "type": "Link",
+              "linkType": "Entry"
             }
           },
           "iKuwF5UL": {
@@ -12940,8 +12940,8 @@
           "wxwxp5qd": {
             "sys": {
               "id": "1M58VbIv8wux84Tq58P78v",
-              "linkType": "Entry",
-              "type": "Link"
+              "type": "Link",
+              "linkType": "Entry"
             }
           },
           "x7pyjFFj": {
@@ -12958,16 +12958,16 @@
               "linkType": "Entry"
             }
           },
-          "yNxDeG0": {
+          "zibXm2hu": {
             "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
+              "id": "7Gumifs6ZTcj2G02BUoqFz",
               "type": "Link",
               "linkType": "Entry"
             }
           },
-          "zibXm2hu": {
+          "9g-7kZ472XQBkhnml-mZ-": {
             "sys": {
-              "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "id": "20rQYDvS9V3fnwtMyAW0m4",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -12976,61 +12976,85 @@
       },
       "unboundValues": {
         "en-US": {
-          "-KqdBQBCJexO6AUlN6Hdk": {
-            "value": "Overline"
+          "0zIBmw_": {
+            "value": ""
           },
-          "-hiP47xkS8H9dfmgslbdh": {},
-          "08mxl1BGFzTbKwyQDG6DD": {},
+          "347Oltn": {},
+          "6znvK3h": {},
+          "ABf-FSO": {},
+          "EKQDsC5": {},
+          "Fe4Bfar": {
+            "value": ""
+          },
+          "HmUDGQ4": {},
+          "ICrX3vs": {
+            "value": ""
+          },
+          "Idr0CiO": {
+            "value": ""
+          },
+          "JFCnn0N": {
+            "value": false
+          },
+          "KBQ3_Cb": {},
+          "KU5oIGN": {
+            "value": ""
+          },
+          "LbAW-Uv": {
+            "value": false
+          },
+          "SO13Vmq": {
+            "value": "Editorial Card 1"
+          },
+          "XonT3vx": {
+            "value": "Horizontal With Image"
+          },
+          "aXCTjNk": {},
+          "acae6EU": {},
+          "bAIeQt5": {
+            "value": false
+          },
+          "baOMaPo": {
+            "value": false
+          },
+          "c6Xllyd": {
+            "value": "Link"
+          },
+          "fupk4k7": {},
+          "io65oYg": {},
+          "mqPCQ9z": {
+            "value": "Editorial Card 2"
+          },
+          "nXf_AKG": {
+            "value": "Editorial Card"
+          },
+          "vwAdtQr": {
+            "value": "Editorial Card 4"
+          },
+          "xWwE9or": {
+            "value": "Editorial Card 3"
+          },
+          "xbPE1--": {},
           "0BYMXHkY": {
             "value": "Full Width Action Block"
           },
           "0ZmNLA6K": {},
-          "0v9inr8Fpqnw8F8ElhUQT": {},
-          "0zIBmw_": {
-            "value": ""
-          },
           "18Loxedj": {
             "value": false
           },
-          "1O9vd7afmvcqJPb-Hst2m": {
-            "value": "Heading"
-          },
           "1VT4PEqW": {},
-          "1eCExq2WLGpJwNbRFYPCg": {
-            "value": "Overline Primary Medium"
-          },
           "1g7RleiK": {
             "value": false
           },
-          "204Ys74QveR6n_DzcowIB": {
-            "value": "This page is for engineering to test the integration between Contentful and Code.org. Please do not modify this page unless part of the engineering group."
-          },
-          "2KEarucS_dKgkRLyuo98m": {},
-          "2PSTJ_DqEZxNVxIpr_H8t": {
-            "value": false
-          },
-          "2T84aGT0sd1wyPrlXpm_v": {
-            "value": false
-          },
-          "347Oltn": {},
           "36YfTgYM": {
             "value": ""
-          },
-          "3BFpKy2b749t3Z0j19D9a": {
-            "value": "Right aligned"
           },
           "3BL7DZFT": {
             "value": "Editorial Card 3"
           },
           "3kOq2u6E": {},
-          "46SVVu7SVI_27igWB64S2": {},
-          "4GGacxRsnhMslE0UcSJ97": {},
-          "4fZ-pGgFlP7R6tach397W": {
-            "value": "Paragraph"
-          },
           "5OJDXQCx": {},
           "5OKBDu4C": {},
-          "5S0WDaNvwkgyaaXOaPShS": {},
           "5dOroYow": {
             "value": ""
           },
@@ -13041,7 +13065,6 @@
             "value": ""
           },
           "5wXRsLJn": {},
-          "6AjZi52JdcRm7jrVI6Sal": {},
           "6dweZgN5": {
             "value": false
           },
@@ -13054,7 +13077,6 @@
           "6pLrv7NC": {
             "value": false
           },
-          "6znvK3h": {},
           "7954gvrQ": {},
           "7Cj0SIqV": {
             "value": "Right Aligned: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
@@ -13065,14 +13087,8 @@
           "7SxgQMWi": {
             "value": false
           },
-          "7W1Qi2iLcCJo1S5FoTklH": {},
           "7WPQbEGK": {
             "value": ""
-          },
-          "7cjXZUvesiyPKoMJZUraJ": {},
-          "7eG4kFaj4GjaK65GAb1XH": {},
-          "7tPoQs29dgRnwZubnGEms": {
-            "value": "Column"
           },
           "8GyXCkMG": {
             "value": "Editorial Card 1"
@@ -13097,7 +13113,6 @@
           },
           "9Xoxh3vz": {},
           "A43eNziB": {},
-          "ABf-FSO": {},
           "AKTPfVrs": {},
           "AYGGhSH9": {},
           "Ah8TeN7u": {
@@ -13107,42 +13122,19 @@
           "B1N7IJY8": {
             "value": "Right Aligned Button"
           },
-          "BHheSJr0-DKiQ2KV6nT9b": {},
           "BS3VZDDS": {
             "value": ""
           },
           "C2eh9B38": {
             "value": "Secondary Black Button"
           },
-          "C820WrIq2MCzdJJuM4oiI": {
-            "value": "Left Aligned Button\n\n"
-          },
           "DEtHVoSd": {
             "value": "Link"
           },
-          "EKQDsC5": {},
           "ERvTdJXH": {
             "value": "Internal Link XS"
           },
-          "EX79hiIuw8_2Ria-2tQkj": {
-            "value": "Internal Link S"
-          },
           "FHSW9Y15": {
-            "value": ""
-          },
-          "FW4Y2V_ECnApbkzqsUbE_": {
-            "value": ""
-          },
-          "FXuaWYztKfKJWXod-xTpd": {
-            "value": ""
-          },
-          "FdwpeSt6bn8LpSSV0pbtv": {
-            "value": ""
-          },
-          "Fe4Bfar": {
-            "value": ""
-          },
-          "G5Iyv0YkdyGi6tu6eXCln": {
             "value": ""
           },
           "GApUZWyE": {
@@ -13151,21 +13143,8 @@
           "GGSUj7T7": {
             "value": ""
           },
-          "GQ_meekKAizcWHfsUxUEe": {
-            "value": ""
-          },
-          "Gs0XOO8d5eKpR2MQKAm8x": {
-            "value": false
-          },
-          "HkS6sKTzMLaB2xX5evo7Z": {
-            "value": "nKIu9yen5nc"
-          },
-          "HmUDGQ4": {},
           "IAwsxK7N": {
             "value": "With all content"
-          },
-          "ICrX3vs": {
-            "value": ""
           },
           "IRGGNCsc": {
             "value": "With all content "
@@ -13173,50 +13152,18 @@
           "Icqsu9JA": {
             "value": "about:blank"
           },
-          "Idr0CiO": {
-            "value": ""
-          },
-          "Is-QBxBKRvrSLF5e6k8WM": {
-            "value": "Default Drop In"
-          },
-          "IsyZ4DkUsAKB5tReDxD1q": {
-            "value": ""
-          },
           "IuXKDn7Q": {},
           "J8z7Qo1L": {
             "value": "Heading 4"
           },
-          "JFCnn0N": {
-            "value": false
-          },
-          "JVQR-tfdKQE3G3iyEGd3d": {
-            "value": false
-          },
           "JjsxkEPq": {
             "value": ""
           },
-          "Jr3_e_AP72m0PxsOOIzg6": {},
           "JwQMnloG": {
             "value": "/ping"
           },
-          "K0KxrTFkzU8KmLwowRzGo": {
-            "value": "Video"
-          },
-          "KBQ3_Cb": {},
-          "KGUo-pbAmZDeE_onnJmeM": {},
-          "KU5oIGN": {
-            "value": ""
-          },
-          "L6HfuP4oVMvQ_xwZqzQc7": {},
-          "L7sMSlH7Y_F-LSZzoglh6": {
-            "value": "/ping"
-          },
-          "LC3Zogrcyn7ko8fQM4Nqs": {},
           "LY3fwrGF": {
             "value": ""
-          },
-          "LbAW-Uv": {
-            "value": false
           },
           "Lu9xfUr8": {
             "value": "Overline Secondary Small"
@@ -13224,14 +13171,7 @@
           "M6UV6klE": {
             "value": "Math Symbols: 1 + 2 − 2 × 5 ≠ 0"
           },
-          "M8tEEkEnbhdKkkzZSTBRd": {
-            "value": "Center"
-          },
-          "MJmfC3N564sY154aazOqg": {
-            "value": false
-          },
           "Mo4S1GHf": {},
-          "NZ_PNrjRqoCQaO6_D-taO": {},
           "NhzwQJMw": {
             "value": "https://code.org"
           },
@@ -13241,7 +13181,6 @@
           "OCSRD9uM": {
             "value": "Editorial Card 2"
           },
-          "OmmiviO_PnQgExsnIQWG2": {},
           "Oor1uCW9": {},
           "Ov2KaMlI": {
             "value": ""
@@ -13249,49 +13188,23 @@
           "P8671GK5": {
             "value": false
           },
-          "PFl39glIFt1TSFfKzC2-Z": {
-            "value": false
-          },
-          "PWEyhxSkmxTGO951MgkM_": {},
           "PeTivMde": {
             "value": "Link"
           },
           "PyeBaTT5": {
             "value": "Image without rounded corners"
           },
-          "Q8S_CqSaOYMVwDMKlR3jr": {},
           "QDaxYIdJ": {
             "value": false
           },
-          "QNG0pC1wH1Njlch34RMkL": {},
-          "QcBjAcsD-IhgBz5nwADMs": {
-            "value": "Left Aligned: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          },
-          "Qkx4iDxSBpSpgdmwqZhqM": {},
-          "R0C45WqvjfIgrCLvhJPSB": {
-            "value": "All the things UI Integration Test"
-          },
-          "REWmmbf2LKIIYFlPSLTFy": {
-            "value": ""
-          },
           "RLcvWIOm": {
             "value": false
-          },
-          "ReHgFwZk-BHm9gAcpYww7": {},
-          "Ry2EmrfLWGKKxHzN2NKK2": {
-            "value": ""
           },
           "SALwyVOh": {
             "value": ""
           },
           "SGrm6TeM": {},
-          "SHqULneHIzJfEOPmKB4fN": {},
-          "SO13Vmq": {
-            "value": "Editorial Card 1"
-          },
-          "SQ455se7uXiseEPWsgHS4": {},
           "TC9267aF": {},
-          "TPp4t_zOnGYYUCQCHczCd": {},
           "TSFzv7B9": {
             "value": "Paragraph Secondary Medium"
           },
@@ -13301,8 +13214,6 @@
           "TnZjwBke": {
             "value": false
           },
-          "TpH8B3Rf71dRzy9-Eij_B": {},
-          "UnsmjdqCrmrO4Trj1nuzn": {},
           "V8YHlFRp": {
             "value": "Container"
           },
@@ -13319,10 +13230,6 @@
           "WTQ4Ru9V": {
             "value": "Editorial Card 1"
           },
-          "WWIhqOfAkCpzLs6ZV3raO": {
-            "value": "https://videos.code.org/social/what-most-schools-dont-teach.mp4"
-          },
-          "WZMLswwT0kYnFPpZo3TTj": {},
           "WasTGlxj": {
             "value": "Centered Button"
           },
@@ -13333,18 +13240,8 @@
             "value": ""
           },
           "X9xn8eNy": {},
-          "XeBIpyktpVkLEy45skA7l": {
-            "value": ""
-          },
-          "XonT3vx": {
-            "value": "Horizontal With Image"
-          },
           "Xsx7dtxc": {
             "value": "With external link buttons"
-          },
-          "Xyg0Z-kNXwLoS7tUWKWe4": {},
-          "YKCODw2Gj_YPupxeh2ON7": {
-            "value": false
           },
           "YZg578lR": {
             "value": false
@@ -13352,39 +13249,18 @@
           "Yf7O7sCY": {
             "value": "Vertical With Icon"
           },
-          "YfZC6-Hmjrj20Loaq6-FT": {},
-          "ZClRveUvVcQjBrlrDvtm6": {
-            "value": false
-          },
           "ZJnqNzR6": {
             "value": "Image"
           },
-          "ZUNHb1QCXiLvRUG9taeN8": {},
           "ZdTFBVAL": {
             "value": false
           },
           "ZpinQk1s": {},
-          "_WdDIbt-5tT6wtW9kafcJ": {},
-          "_byo2Rxu56P0ZbFndME7R": {},
-          "aDgvlZ6op1gK3MYklFgKX": {
-            "value": false
-          },
-          "aL5ooU7rF-Cfhi4sEFovm": {},
           "aPeti3xV": {
             "value": false
           },
-          "aRYsNWTbO_8er8D_crzl2": {},
-          "aTtjH3mTVn7fMVJ-xb2nG": {},
-          "aXCTjNk": {},
-          "acae6EU": {},
           "avmUJimV": {
             "value": "Paragraph Secondary Bold"
-          },
-          "bAIeQt5": {
-            "value": false
-          },
-          "baOMaPo": {
-            "value": false
           },
           "bqv4sKJA": {},
           "bvkdCWAp": {
@@ -13393,15 +13269,10 @@
           "byHQXRz8": {
             "value": false
           },
-          "c6Xllyd": {
-            "value": "Link"
-          },
-          "cKcaNJOJ3vHPn3yBMhHgh": {},
           "d5NKAnwp": {
             "value": "Localization"
           },
           "d7bQZFYP": {},
-          "dDFAtpAu4xTWTM3cwvHX_": {},
           "dJNC5rnb": {},
           "dWrBnOHy": {},
           "dczpwBQS": {
@@ -13415,12 +13286,6 @@
           },
           "eT6yBrVf": {},
           "f0smL8E1": {},
-          "fLRxfb9Ecsh1B9F3VCTCi": {
-            "value": "Center Aligned"
-          },
-          "fP6j0_ZupHdFnUUB_Ia5H": {},
-          "fbxlhQrAD8jhqeEPcb_Zc": {},
-          "fupk4k7": {},
           "fvbdsWsT": {
             "value": "Divider"
           },
@@ -13431,67 +13296,28 @@
           "gyjlsYtE": {
             "value": ""
           },
-          "h1C3gxnYgR9u4L8CDjo3D": {},
           "hAGyY1mh": {
             "value": false
           },
           "hEDkMrEi": {
             "value": false
           },
-          "hRhxjrt3N9VU1NMl2QRh3": {
-            "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi blandit orci nec iaculis ullamcorper. Morbi blandit bibendum nibh, at auctor metus consequat sit amet. Fusce sodales nisi dolor. Nam at lorem mattis, aliquam elit ut, facilisis nunc. Donec mollis sollicitudin dolor, sed blandit diam accumsan id. Proin suscipit lacus et elit molestie dignissim. Aliquam nisi velit, lobortis ut porta volutpat, aliquam at arcu.\n\nDonec nunc sapien, mattis congue pulvinar vel, sollicitudin vel sapien. Morbi quis pulvinar nulla. Cras ac sem ante. Sed eu interdum sapien, id fermentum nunc. Donec vehicula ut erat eget vehicula. Ut euismod sem ut nisl vehicula sagittis. Suspendisse mattis justo elit, eu sagittis lorem mattis id. Sed sit amet scelerisque magna, nec dictum ex. Praesent tincidunt massa sed laoreet posuere. Sed efficitur, justo id pharetra pretium, dui turpis convallis metus, eleifend euismod risus nibh vel enim. Vestibulum molestie justo eget ligula posuere bibendum."
-          },
-          "hXGMAy_S9tLUATPGf5Zry": {
-            "value": "Primary Button"
-          },
-          "i-CBt91tEkCmZHGzb85xW": {
-            "value": "Each Section in this page is composed of a unique CMS component. Add edge case scenarios to this section that you would like tested."
-          },
           "i28p2boi": {
             "value": "Video Carousel"
           },
-          "ilVAO2EaIUZ0lA5ewKtJI": {
-            "value": ""
-          },
-          "io65oYg": {},
-          "is6sJNT7GqG8M-aved8xI": {
-            "value": ""
-          },
-          "jNBarAZvvExnBW0FccdXk": {
-            "value": "Video with Fallback"
-          },
-          "jUIXS8jmgg7N0QAzowItS": {},
-          "jjrfcFBAJ5AspsCCOO2xO": {},
           "joAfMQhO": {},
-          "joR8i87odA3R7JLfvzfCw": {
-            "value": "Paragraph Body XS"
-          },
-          "k2x0YIUxjaXNGJxbL2xFl": {},
           "k7cc4DWU": {
             "value": "Heading 3"
           },
           "kQ4rHG8h": {},
-          "koY0ISJaPzBIDXqlznL0H": {},
           "l2UKloU9": {
             "value": "Center Aligned: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
           },
           "lIsy1GAr": {
             "value": "Internal Link M"
           },
-          "lP2xlEiG4Ur15q_7otUZo": {},
           "lTlx2Ck5": {
             "value": ""
-          },
-          "lgABBbaFeSQbvkWefAwA5": {},
-          "lgGRRfq5zcVueL3yrxoh9": {},
-          "lzUBFGk045vgYma7aXjur": {
-            "value": "Button"
-          },
-          "m4M7qU_VBvy3rP_lT7V-J": {
-            "value": false
-          },
-          "m5B_-isX7sffstDtAWTWi": {
-            "value": "/ping"
           },
           "m93uQB8b": {
             "value": "Image with border"
@@ -13499,44 +13325,23 @@
           "mCXPy8Sk": {
             "value": "Heading 5"
           },
-          "mFzwT6KHtA9j1FYYT0dvh": {},
           "mI3808f6": {
             "value": false
           },
           "mJJmzfsA": {},
           "mp03r8eT": {},
-          "mqPCQ9z": {
-            "value": "Editorial Card 2"
-          },
-          "n0l5OgPZtTMQsbZ3GNKiR": {},
           "nBnzzrrg": {
             "value": "External Link L"
-          },
-          "nM4Jx3EajfRTuaILiaRh1": {
-            "value": ""
           },
           "nOVfFtTI": {
             "value": "Without fallback"
           },
-          "nXf_AKG": {
-            "value": "Editorial Card"
-          },
-          "oJDnQp_KZKNrbozA0NkHt": {},
           "oPc8lo0F": {},
-          "op-Qp-gdr8uf9I9-WXcdr": {
-            "value": "Left"
-          },
           "pLRLaUbo": {
             "value": ""
           },
-          "ppcJTpQrNNmiFzRpoKuk7": {
-            "value": "Heading 2"
-          },
           "q5IUWqtG": {
             "value": ""
-          },
-          "qM57cKR3J1QPDQnHDERkX": {
-            "value": "Section - Pattern Teal"
           },
           "qQFZT2Ct": {
             "value": "Localization - Long Text"
@@ -13544,7 +13349,6 @@
           "qYw68TuV": {
             "value": ""
           },
-          "qg0XcsQhQK20HDFZctW0_": {},
           "qhMtsAXw": {
             "value": false
           },
@@ -13554,9 +13358,6 @@
           "rXgI4Mvr": {
             "value": "With secondary background"
           },
-          "rpWptElOUBNuPNQXKsjMo": {
-            "value": false
-          },
           "rqSvSSLH": {
             "value": ""
           },
@@ -13564,20 +13365,12 @@
             "value": "Curriculum Carousel"
           },
           "sOrYv4IZ": {},
-          "sQZaBqbWsJUIR6cGO4R7w": {},
-          "sfjHI0Y3PWcC6rm8lYfap": {
-            "value": "Right"
-          },
           "sgcocoTx": {},
-          "tPJ7tTdvjSJTFWD-yBJSP": {},
           "tgfqSQxT": {
             "value": "Overline Primary Large"
           },
           "uML982xB": {
             "value": "Short Text"
-          },
-          "uMhUcdTnHh9zPBFXifvKq": {
-            "value": "https://code.org"
           },
           "uNXnh4Ev": {},
           "uTgCIxZc": {
@@ -13586,42 +13379,25 @@
           "uqryIUsQ": {
             "value": "Section - Pattern Dark"
           },
-          "uyEiVj6ofeCIPPsOLAAcg": {
-            "value": "Left Aligned"
-          },
           "v6A0d7WI": {
             "value": "With secondary background"
           },
           "vNAYFsDQ": {
             "value": "nKIu9yen5nc"
           },
-          "vNE31MABBbkMScnKL4BMU": {},
           "vTYAEM28": {
             "value": "Editorial Card 2"
           },
-          "vYKqsBQ5xXnkpbPCxrnKb": {},
           "vl7mGMNk": {
             "value": false
           },
-          "vwAdtQr": {
-            "value": "Editorial Card 4"
-          },
-          "vy3Z4qCBqa2yM79waYyZx": {},
           "wkPxn3cF": {},
-          "wmG6IXrB1B-h8zddto0vr": {},
-          "ws1Q0E4GP0WIGLne79bIY": {
-            "value": "Text Link"
-          },
-          "xWwE9or": {
-            "value": "Editorial Card 3"
-          },
           "xaSe4Rjf": {
             "value": ""
           },
           "xauf2a1R": {
             "value": false
           },
-          "xbPE1--": {},
           "yMDRjVcG": {
             "value": false
           },
@@ -13638,8 +13414,232 @@
           "zQNTpdsD": {
             "value": "/ping"
           },
-          "zcuX6eaiBiUs3mCXjHYq2": {},
           "zkx5V9ed": {},
+          "-KqdBQBCJexO6AUlN6Hdk": {
+            "value": "Overline"
+          },
+          "-hiP47xkS8H9dfmgslbdh": {},
+          "08mxl1BGFzTbKwyQDG6DD": {},
+          "0v9inr8Fpqnw8F8ElhUQT": {},
+          "1O9vd7afmvcqJPb-Hst2m": {
+            "value": "Heading"
+          },
+          "1eCExq2WLGpJwNbRFYPCg": {
+            "value": "Overline Primary Medium"
+          },
+          "204Ys74QveR6n_DzcowIB": {
+            "value": "This page is for engineering to test the integration between Contentful and Code.org. Please do not modify this page unless part of the engineering group."
+          },
+          "2KEarucS_dKgkRLyuo98m": {},
+          "2PSTJ_DqEZxNVxIpr_H8t": {
+            "value": false
+          },
+          "2T84aGT0sd1wyPrlXpm_v": {
+            "value": false
+          },
+          "3BFpKy2b749t3Z0j19D9a": {
+            "value": "Right aligned"
+          },
+          "46SVVu7SVI_27igWB64S2": {},
+          "4GGacxRsnhMslE0UcSJ97": {},
+          "4fZ-pGgFlP7R6tach397W": {
+            "value": "Paragraph"
+          },
+          "5S0WDaNvwkgyaaXOaPShS": {},
+          "6AjZi52JdcRm7jrVI6Sal": {},
+          "7W1Qi2iLcCJo1S5FoTklH": {},
+          "7cjXZUvesiyPKoMJZUraJ": {},
+          "7eG4kFaj4GjaK65GAb1XH": {},
+          "7tPoQs29dgRnwZubnGEms": {
+            "value": "Column"
+          },
+          "BHheSJr0-DKiQ2KV6nT9b": {},
+          "C820WrIq2MCzdJJuM4oiI": {
+            "value": "Left Aligned Button\n\n"
+          },
+          "EX79hiIuw8_2Ria-2tQkj": {
+            "value": "Internal Link S"
+          },
+          "FW4Y2V_ECnApbkzqsUbE_": {
+            "value": ""
+          },
+          "FXuaWYztKfKJWXod-xTpd": {
+            "value": ""
+          },
+          "FdwpeSt6bn8LpSSV0pbtv": {
+            "value": ""
+          },
+          "G5Iyv0YkdyGi6tu6eXCln": {
+            "value": ""
+          },
+          "GQ_meekKAizcWHfsUxUEe": {
+            "value": ""
+          },
+          "Gs0XOO8d5eKpR2MQKAm8x": {
+            "value": false
+          },
+          "HkS6sKTzMLaB2xX5evo7Z": {
+            "value": "nKIu9yen5nc"
+          },
+          "Is-QBxBKRvrSLF5e6k8WM": {
+            "value": "Default Drop In"
+          },
+          "IsyZ4DkUsAKB5tReDxD1q": {
+            "value": ""
+          },
+          "JVQR-tfdKQE3G3iyEGd3d": {
+            "value": false
+          },
+          "Jr3_e_AP72m0PxsOOIzg6": {},
+          "K0KxrTFkzU8KmLwowRzGo": {
+            "value": "Video"
+          },
+          "KGUo-pbAmZDeE_onnJmeM": {},
+          "L6HfuP4oVMvQ_xwZqzQc7": {},
+          "L7sMSlH7Y_F-LSZzoglh6": {
+            "value": "/ping"
+          },
+          "LC3Zogrcyn7ko8fQM4Nqs": {},
+          "M8tEEkEnbhdKkkzZSTBRd": {
+            "value": "Center"
+          },
+          "MJmfC3N564sY154aazOqg": {
+            "value": false
+          },
+          "NZ_PNrjRqoCQaO6_D-taO": {},
+          "OmmiviO_PnQgExsnIQWG2": {},
+          "PFl39glIFt1TSFfKzC2-Z": {
+            "value": false
+          },
+          "PWEyhxSkmxTGO951MgkM_": {},
+          "Q8S_CqSaOYMVwDMKlR3jr": {},
+          "QNG0pC1wH1Njlch34RMkL": {},
+          "QcBjAcsD-IhgBz5nwADMs": {
+            "value": "Left Aligned: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          },
+          "Qkx4iDxSBpSpgdmwqZhqM": {},
+          "R0C45WqvjfIgrCLvhJPSB": {
+            "value": "All the things UI Integration Test"
+          },
+          "REWmmbf2LKIIYFlPSLTFy": {
+            "value": ""
+          },
+          "ReHgFwZk-BHm9gAcpYww7": {},
+          "Ry2EmrfLWGKKxHzN2NKK2": {
+            "value": ""
+          },
+          "SHqULneHIzJfEOPmKB4fN": {},
+          "SQ455se7uXiseEPWsgHS4": {},
+          "TPp4t_zOnGYYUCQCHczCd": {},
+          "TpH8B3Rf71dRzy9-Eij_B": {},
+          "UnsmjdqCrmrO4Trj1nuzn": {},
+          "WWIhqOfAkCpzLs6ZV3raO": {
+            "value": "https://videos.code.org/social/what-most-schools-dont-teach.mp4"
+          },
+          "WZMLswwT0kYnFPpZo3TTj": {},
+          "XeBIpyktpVkLEy45skA7l": {
+            "value": ""
+          },
+          "Xyg0Z-kNXwLoS7tUWKWe4": {},
+          "YKCODw2Gj_YPupxeh2ON7": {
+            "value": false
+          },
+          "YfZC6-Hmjrj20Loaq6-FT": {},
+          "ZClRveUvVcQjBrlrDvtm6": {
+            "value": false
+          },
+          "ZUNHb1QCXiLvRUG9taeN8": {},
+          "_WdDIbt-5tT6wtW9kafcJ": {},
+          "_byo2Rxu56P0ZbFndME7R": {},
+          "aDgvlZ6op1gK3MYklFgKX": {
+            "value": false
+          },
+          "aL5ooU7rF-Cfhi4sEFovm": {},
+          "aRYsNWTbO_8er8D_crzl2": {},
+          "aTtjH3mTVn7fMVJ-xb2nG": {},
+          "cKcaNJOJ3vHPn3yBMhHgh": {},
+          "dDFAtpAu4xTWTM3cwvHX_": {},
+          "fLRxfb9Ecsh1B9F3VCTCi": {
+            "value": "Center Aligned"
+          },
+          "fP6j0_ZupHdFnUUB_Ia5H": {},
+          "fbxlhQrAD8jhqeEPcb_Zc": {},
+          "h1C3gxnYgR9u4L8CDjo3D": {},
+          "hRhxjrt3N9VU1NMl2QRh3": {
+            "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi blandit orci nec iaculis ullamcorper. Morbi blandit bibendum nibh, at auctor metus consequat sit amet. Fusce sodales nisi dolor. Nam at lorem mattis, aliquam elit ut, facilisis nunc. Donec mollis sollicitudin dolor, sed blandit diam accumsan id. Proin suscipit lacus et elit molestie dignissim. Aliquam nisi velit, lobortis ut porta volutpat, aliquam at arcu.\n\nDonec nunc sapien, mattis congue pulvinar vel, sollicitudin vel sapien. Morbi quis pulvinar nulla. Cras ac sem ante. Sed eu interdum sapien, id fermentum nunc. Donec vehicula ut erat eget vehicula. Ut euismod sem ut nisl vehicula sagittis. Suspendisse mattis justo elit, eu sagittis lorem mattis id. Sed sit amet scelerisque magna, nec dictum ex. Praesent tincidunt massa sed laoreet posuere. Sed efficitur, justo id pharetra pretium, dui turpis convallis metus, eleifend euismod risus nibh vel enim. Vestibulum molestie justo eget ligula posuere bibendum."
+          },
+          "hXGMAy_S9tLUATPGf5Zry": {
+            "value": "Primary Button"
+          },
+          "i-CBt91tEkCmZHGzb85xW": {
+            "value": "Each Section in this page is composed of a unique CMS component. Add edge case scenarios to this section that you would like tested."
+          },
+          "ilVAO2EaIUZ0lA5ewKtJI": {
+            "value": ""
+          },
+          "is6sJNT7GqG8M-aved8xI": {
+            "value": ""
+          },
+          "jNBarAZvvExnBW0FccdXk": {
+            "value": "Video with Fallback"
+          },
+          "jUIXS8jmgg7N0QAzowItS": {},
+          "jjrfcFBAJ5AspsCCOO2xO": {},
+          "joR8i87odA3R7JLfvzfCw": {
+            "value": "Paragraph Body XS"
+          },
+          "k2x0YIUxjaXNGJxbL2xFl": {},
+          "koY0ISJaPzBIDXqlznL0H": {},
+          "lP2xlEiG4Ur15q_7otUZo": {},
+          "lgABBbaFeSQbvkWefAwA5": {},
+          "lgGRRfq5zcVueL3yrxoh9": {},
+          "lzUBFGk045vgYma7aXjur": {
+            "value": "Button"
+          },
+          "m4M7qU_VBvy3rP_lT7V-J": {
+            "value": false
+          },
+          "m5B_-isX7sffstDtAWTWi": {
+            "value": "/ping"
+          },
+          "mFzwT6KHtA9j1FYYT0dvh": {},
+          "n0l5OgPZtTMQsbZ3GNKiR": {},
+          "nM4Jx3EajfRTuaILiaRh1": {
+            "value": ""
+          },
+          "oJDnQp_KZKNrbozA0NkHt": {},
+          "op-Qp-gdr8uf9I9-WXcdr": {
+            "value": "Left"
+          },
+          "ppcJTpQrNNmiFzRpoKuk7": {
+            "value": "Heading 2"
+          },
+          "qM57cKR3J1QPDQnHDERkX": {
+            "value": "Section - Pattern Teal"
+          },
+          "qg0XcsQhQK20HDFZctW0_": {},
+          "rpWptElOUBNuPNQXKsjMo": {
+            "value": false
+          },
+          "sQZaBqbWsJUIR6cGO4R7w": {},
+          "sfjHI0Y3PWcC6rm8lYfap": {
+            "value": "Right"
+          },
+          "tPJ7tTdvjSJTFWD-yBJSP": {},
+          "uMhUcdTnHh9zPBFXifvKq": {
+            "value": "https://code.org"
+          },
+          "uyEiVj6ofeCIPPsOLAAcg": {
+            "value": "Left Aligned"
+          },
+          "vNE31MABBbkMScnKL4BMU": {},
+          "vYKqsBQ5xXnkpbPCxrnKb": {},
+          "vy3Z4qCBqa2yM79waYyZx": {},
+          "wmG6IXrB1B-h8zddto0vr": {},
+          "ws1Q0E4GP0WIGLne79bIY": {
+            "value": "Text Link"
+          },
+          "zcuX6eaiBiUs3mCXjHYq2": {},
           "zpea3KaVPS0iJXoZMAHok": {}
         }
       },
