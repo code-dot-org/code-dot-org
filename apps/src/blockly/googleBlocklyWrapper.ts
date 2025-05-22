@@ -893,6 +893,13 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
         experiments.BLOCKLY_KEYBOARD_NAVIGATION
       )
     ) {
+      Blockly.blockly_.ShortcutRegistry.registry.unregister('undo');
+      Blockly.blockly_.ShortcutRegistry.registry.unregister('redo');
+      if (blocklyWrapper.KeyboardNavigation) {
+        Blockly.blockly_.ShortcutRegistry.registry.unregister('undo');
+        Blockly.blockly_.ShortcutRegistry.registry.unregister('redo');
+        blocklyWrapper.KeyboardNavigation.dispose();
+      }
       blocklyWrapper.KeyboardNavigation = new KeyboardNavigation(workspace);
       // Rerun user theme after Keyboard Experiment bug introduces incorrect theme
       const theme = cdoUtils.getUserTheme(options.theme as GoogleBlockly.Theme);
