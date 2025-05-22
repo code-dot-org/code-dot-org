@@ -26,6 +26,7 @@ export interface TooltipProps extends HTMLAttributes<HTMLDivElement> {
   size?: ComponentSizeXSToL;
   /** Tooltip custom styles (used for positioning the tooltip on the go) */
   style?: React.CSSProperties;
+  /** Hides the tooltip's tail (arrow). Defaults to false. */
   hideTail?: boolean;
 }
 
