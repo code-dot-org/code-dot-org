@@ -56,8 +56,10 @@ describe('SectionAvatarEditDialog', () => {
     renderComponent(closeCallbackSpy, saveCallbackSpy, 0, 0);
     const emoji = screen.getByText('🥨');
     fireEvent.click(emoji);
+    const color = screen.getByLabelText('Blue');
+    fireEvent.click(color);
     const saveButton = screen.getByText('Select avatar');
     fireEvent.click(saveButton);
-    expect(saveCallbackSpy).toHaveBeenCalledWith(0, 0);
+    expect(saveCallbackSpy).toHaveBeenCalledWith(5, 15);
   });
 });

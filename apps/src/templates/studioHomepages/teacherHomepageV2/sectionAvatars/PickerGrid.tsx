@@ -20,12 +20,15 @@ const PickerGrid: React.FC<PickerGridProps> = ({
       ? EMOJIS.map((item, index) => (
           <button
             key={index}
+            title={EMOJI_LABELS[index]}
             type="button"
-            aria-label={EMOJI_LABELS[index]}
             className={
               selected === index ? styles.selectedGridItem : styles.gridItem
             }
             onClick={() => selectCallback(index)}
+            onKeyDown={event => {
+              if (event.key === 'Enter') selectCallback(index);
+            }}
           >
             {item}
           </button>
@@ -33,12 +36,15 @@ const PickerGrid: React.FC<PickerGridProps> = ({
       : COLORS.map((item, index) => (
           <button
             key={index}
+            title={COLOR_LABELS[index]}
             type="button"
-            aria-label={COLOR_LABELS[index]}
             className={
               selected === index ? styles.selectedGridItem : styles.gridItem
             }
             onClick={() => selectCallback(index)}
+            onKeyDown={event => {
+              if (event.key === 'Enter') selectCallback(index);
+            }}
           >
             <div className={styles.colorBox} style={{backgroundColor: item}} />
           </button>
