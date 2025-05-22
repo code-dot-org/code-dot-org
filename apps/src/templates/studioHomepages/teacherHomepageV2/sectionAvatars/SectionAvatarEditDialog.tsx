@@ -33,14 +33,6 @@ const SectionAvatarEditDialog: React.FC<SectionAvatarEditDialogProps> = ({
     avatarEmoji || 0
   );
 
-  const handleSelectColor = (index: number) => {
-    setSelectedColor(index);
-  };
-
-  const handleSelectEmoji = (index: number) => {
-    setSelectedEmoji(index);
-  };
-
   return (
     <CustomDialog
       aria-label="Section avatar edit dialog"
@@ -78,7 +70,7 @@ const SectionAvatarEditDialog: React.FC<SectionAvatarEditDialogProps> = ({
             <BodyTwoText>{i18n.chooseEmoji()}</BodyTwoText>
             <PickerGrid
               type={'emoji'}
-              selectCallback={handleSelectEmoji}
+              selectCallback={setSelectedEmoji}
               selected={selectedEmoji}
             />
           </label>
@@ -86,7 +78,7 @@ const SectionAvatarEditDialog: React.FC<SectionAvatarEditDialogProps> = ({
             <BodyTwoText>{i18n.chooseColor()}</BodyTwoText>
             <PickerGrid
               type={'color'}
-              selectCallback={handleSelectColor}
+              selectCallback={setSelectedColor}
               selected={selectedColor}
             />
           </label>
