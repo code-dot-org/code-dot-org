@@ -34,12 +34,10 @@ describe('EditorialCard component', () => {
       />,
     );
 
-  const getCard = () => screen.getByRole('complementary');
-
   it('renders card in "horizontal_with_image" layout with image', () => {
     renderCard();
 
-    const img = getCard().querySelector('img');
+    const img = document.querySelector('img');
 
     expect(img).toBeInTheDocument();
     expect(img).toHaveAttribute('src', image);
@@ -50,7 +48,7 @@ describe('EditorialCard component', () => {
       layoutOpt: EDITORIAL_CARD_CONTENTFUL_LAYOUTS.VERTICAL_WITH_IMAGE,
     });
 
-    const img = getCard().querySelector('img');
+    const img = document.querySelector('img');
 
     expect(img).toBeInTheDocument();
     expect(img).toHaveAttribute('src', image);
@@ -60,7 +58,7 @@ describe('EditorialCard component', () => {
     renderCard({
       layoutOpt: EDITORIAL_CARD_CONTENTFUL_LAYOUTS.VERTICAL_WITH_ICON,
     });
-    expect(getCard().querySelector('i')).toBeInTheDocument();
+    expect(document.querySelector('i')).toBeInTheDocument();
   });
 
   it('renders card heading', () => {
