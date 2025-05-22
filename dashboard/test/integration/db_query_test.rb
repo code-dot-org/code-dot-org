@@ -24,7 +24,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       level: level,
       level_source: create(:level_source, level: level)
 
-    assert_cached_queries(18) do
+    assert_cached_queries(17) do
       get script_lesson_script_level_path(
         script_id: script.name,
         lesson_position: 1,
@@ -116,13 +116,10 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     script = create(
       :script,
       :with_levels,
-      levels_count: 10,
-      is_course: true,
-      family_name: 'hoc-family',
-      version_year: 'unversioned',
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+      levels_count: 10
     )
-    CourseOffering.add_course_offering(script)
+    course = create(:single_unit_course, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: 'unversioned', family_name: 'hoc-family')
+    CourseOffering.add_course_offering(course)
 
     teacher = create :teacher
     section = create :section, user: teacher
@@ -154,13 +151,10 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     unit = create(
       :script,
       :with_levels,
-      levels_count: 10,
-      is_course: true,
-      family_name: 'hoc-family',
-      version_year: 'unversioned',
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+      levels_count: 10
     )
-    CourseOffering.add_course_offering(unit)
+    course = create(:single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: 'unversioned', family_name: 'hoc-family')
+    CourseOffering.add_course_offering(course)
 
     # make sure the new unit is in the cache
     setup_script_cache
@@ -174,7 +168,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student.assign_script(unit)
     sign_in student
 
-    assert_cached_queries(19) do
+    assert_cached_queries(21) do
       get "/s/#{unit.name}/lessons/1/levels/1"
       assert_response :success
     end
