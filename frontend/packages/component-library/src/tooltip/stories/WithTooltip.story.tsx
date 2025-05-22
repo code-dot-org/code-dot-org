@@ -269,3 +269,23 @@ export const ImperativeHideTooltip: StoryFn = () => {
     </div>
   );
 };
+
+export const TailToggleTooltip = MultipleTemplate.bind({});
+TailToggleTooltip.args = {
+  components: [
+    {
+      text: 'Tooltip with tail',
+      tooltipId: 'tooltipWithTail',
+      direction: 'onBottom',
+      size: 'm',
+      hideTail: false,
+    },
+    {
+      text: 'Tooltip without tail',
+      tooltipId: 'tooltipWithoutTail',
+      direction: 'onBottom',
+      size: 'm',
+      hideTail: true,
+    },
+  ],
+};
