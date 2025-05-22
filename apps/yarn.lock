@@ -87,6 +87,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@asamuzakjp/css-color@npm:^3.1.2":
+  version: 3.1.7
+  resolution: "@asamuzakjp/css-color@npm:3.1.7"
+  dependencies:
+    "@csstools/css-calc": "npm:^2.1.3"
+    "@csstools/css-color-parser": "npm:^3.0.9"
+    "@csstools/css-parser-algorithms": "npm:^3.0.4"
+    "@csstools/css-tokenizer": "npm:^3.0.3"
+    lru-cache: "npm:^10.4.3"
+  checksum: 10/107510bc16080917558d46c8ccb17dd932e7086999190ef733630a778dd83e12032805ef5d4b62729a718f0f8b806c3b0fc465693bd3d5b5180a3aa447bc1525
+  languageName: node
+  linkType: hard
+
 "@aw-web-design/x-default-browser@npm:1.4.126":
   version: 1.4.126
   resolution: "@aw-web-design/x-default-browser@npm:1.4.126"
@@ -3646,84 +3659,84 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@blockly/block-shareable-procedures@npm:~5.0.9":
-  version: 5.0.9
-  resolution: "@blockly/block-shareable-procedures@npm:5.0.9"
+"@blockly/block-shareable-procedures@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "@blockly/block-shareable-procedures@npm:6.0.0"
   peerDependencies:
-    blockly: ^11.0.0
-  checksum: 10/6a45d002ea76bd4696a079382e781d2bc285f4fcec80a2ae4666829615e315f6112c160c31a809f0a265ffd4b9891b51786451000fc1a0faac173e75902a1b9c
+    blockly: ^12.0.0
+  checksum: 10/6e68996ed4d0c9cd713caa3a1effbea9dbf35464337986e4d33f3215d41d225a26ceb974fb649bc5087f82e56004f0ca25e5d7e731171506f9205e3e9a3a932b
   languageName: node
   linkType: hard
 
-"@blockly/field-bitmap@npm:^5.0.9":
-  version: 5.0.9
-  resolution: "@blockly/field-bitmap@npm:5.0.9"
+"@blockly/field-bitmap@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "@blockly/field-bitmap@npm:6.0.0"
   peerDependencies:
-    blockly: ^11.0.0
-  checksum: 10/4792b59b3340b40008e01480db93b49888cf0d49ae6fa571e3eadfb02e65cf37f9faa9940dd03e4606548dab863787dafcccd8f9818296d445a1f2fa9ac3c489
+    blockly: ^12.0.0
+  checksum: 10/9f884372b71137faf1334233b555ccbcb2c2e032163981dadc3207dc6d0339647b0044fb1d6e51b52ef4cc0747607a4db93c40daf5807c9ce52255b46fa169cd
   languageName: node
   linkType: hard
 
-"@blockly/field-colour@npm:^5.0.9":
-  version: 5.0.9
-  resolution: "@blockly/field-colour@npm:5.0.9"
+"@blockly/field-colour@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "@blockly/field-colour@npm:6.0.0"
   peerDependencies:
-    blockly: ^11.0.0
-  checksum: 10/32fdf42af460f98340ce21d28eceed6919b48bdeb57e9d12a04cb7c20e3716a86840edd318b4ef217e3391a4aeadfdbcdd6d81e781adfe5116a4686ddf81ce90
+    blockly: ^12.0.0
+  checksum: 10/68c7a35928662d8d22557e2ba78aec94085267d4c4386941cfef8cee153bca67cecad4c400ebbc696315e31ed6ed933b7d2da9bc3492a109f4caa5ba83102f72
   languageName: node
   linkType: hard
 
-"@blockly/field-grid-dropdown@npm:~5.0.9":
-  version: 5.0.9
-  resolution: "@blockly/field-grid-dropdown@npm:5.0.9"
+"@blockly/field-grid-dropdown@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "@blockly/field-grid-dropdown@npm:6.0.0"
   peerDependencies:
-    blockly: ^11.0.0
-  checksum: 10/b559bb731b0d1e8fbf0d5026f7defd1f5dda821cbda368dbce069b0b146ba093c2eef571c309f2e8e5b62e5f231d7aae671f6ec246470aa152526397bf4f5b9b
+    blockly: ^12.0.0
+  checksum: 10/6991831c57df701e40affdea375d9ea45d359af85f3511a14168f248ee3f9e18f28bc6776f2af369f71482e94831128914385d5c74c96885f6ec95a696a0765f
   languageName: node
   linkType: hard
 
-"@blockly/keyboard-experiment@npm:^0.0.1":
-  version: 0.0.1
-  resolution: "@blockly/keyboard-experiment@npm:0.0.1"
+"@blockly/keyboard-experiment@npm:~0.0.8":
+  version: 0.0.8
+  resolution: "@blockly/keyboard-experiment@npm:0.0.8"
   peerDependencies:
-    blockly: ^11.1.0
-  checksum: 10/f293da46256de87998b9104da94d4bf27abdfd4a80958ed94843d4cb2980038a82f0f95f9ff552148f883680a3d02e34f32195583d5f1fe95b8384ea5581f279
+    blockly: ^12.0.0
+  checksum: 10/c0a5f47b9538115143e003512458099fda1618a2fc10e69e281f3bffccbb6e3a03d13bc9cb870f501bf05999a7ff201ef53ba7801f09af38d310fe15294668fc
   languageName: node
   linkType: hard
 
-"@blockly/plugin-cross-tab-copy-paste@npm:~6.0.9":
-  version: 6.0.9
-  resolution: "@blockly/plugin-cross-tab-copy-paste@npm:6.0.9"
+"@blockly/plugin-cross-tab-copy-paste@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "@blockly/plugin-cross-tab-copy-paste@npm:7.0.0"
   peerDependencies:
-    blockly: ^11.0.0
-  checksum: 10/96755b491e0de99ce6bac3f28de375a811a47880ec78a2e2a7012702ee6a488d7902edc6c217bf47a43797a82f9c7e16ecc917d1858d36662393760b94897461
+    blockly: ^12.0.0
+  checksum: 10/ee932fa221c4ea2c32c37c76cc4337e94ae4ef0b498f6164443fe6d7c9c49b278eebac2159dea377e398d27ffbaeaa14c4d40a3d4c0ff2599917809336779545
   languageName: node
   linkType: hard
 
-"@blockly/plugin-scroll-options@npm:~6.0.9":
-  version: 6.0.9
-  resolution: "@blockly/plugin-scroll-options@npm:6.0.9"
+"@blockly/plugin-scroll-options@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "@blockly/plugin-scroll-options@npm:7.0.0"
   peerDependencies:
-    blockly: ^11.0.0
-  checksum: 10/76e8b469f3859c988ad035af8b06dac81c53afb586bae6e9f3be95513f61a85af1aa87a2a9c69da278d55e38edfc273293dc09893fc81318cd0a1e11115379a6
+    blockly: ^12.0.0
+  checksum: 10/8332216f7655df514378f29f3a227e62cdccb5dafef8913b6f070e302edeaf49fda77b7fee6194afea07722d1b7a37e935416e5df531618a947239648ccb1761
   languageName: node
   linkType: hard
 
-"@blockly/theme-dark@npm:7.0.7":
-  version: 7.0.7
-  resolution: "@blockly/theme-dark@npm:7.0.7"
+"@blockly/theme-dark@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "@blockly/theme-dark@npm:8.0.0"
   peerDependencies:
-    blockly: ^11.0.0
-  checksum: 10/711fe8c88411c5b0037b9e0fb0c03031e0b2aaf9ab7e35ae70fe59917032f890723b2614578f958846aea12badc8da863ab03b78d3edf06a170c9a45941d35be
+    blockly: ^12.0.0
+  checksum: 10/ad743b1969074465ca7895d54fd74ea6eae7b890f1648992e8f35f402d97e3e01e6904c078ac1b5340909a5cae8c77223ad0160792c6fe3400a1dd4937fd54a5
   languageName: node
   linkType: hard
 
-"@blockly/theme-highcontrast@npm:6.0.7":
-  version: 6.0.7
-  resolution: "@blockly/theme-highcontrast@npm:6.0.7"
+"@blockly/theme-highcontrast@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "@blockly/theme-highcontrast@npm:7.0.0"
   peerDependencies:
-    blockly: ^11.0.0
-  checksum: 10/a90cef89ecafb8f0d9d8af6382495f9cde4b5e3a249cd97898ba93550cdf0aa52438a740a996fa9d7ea989f04f2f5bac52972d67134fda20910db575c41ce5f5
+    blockly: ^12.0.0
+  checksum: 10/0320b1169e359e07a7797221cae086ae21eab03b0cc00148e0aa2d10b92ae344979f7647e7bdc5eb614eaf8aaea149c4c0f1e453e916be28282a939341cf7e2e
   languageName: node
   linkType: hard
 
@@ -4082,6 +4095,36 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@csstools/color-helpers@npm:^5.0.2":
+  version: 5.0.2
+  resolution: "@csstools/color-helpers@npm:5.0.2"
+  checksum: 10/8763079c54578bd2215c68de0795edb9cfa29bffa29625bff89f3c47d9df420d86296ff3a6fa8c29ca037bbaa64dc10a963461233341de0516a3161a3b549e7b
+  languageName: node
+  linkType: hard
+
+"@csstools/css-calc@npm:^2.1.3":
+  version: 2.1.3
+  resolution: "@csstools/css-calc@npm:2.1.3"
+  peerDependencies:
+    "@csstools/css-parser-algorithms": ^3.0.4
+    "@csstools/css-tokenizer": ^3.0.3
+  checksum: 10/0c20165f13135bb51ef397c4ea8e185c75ff379378212952af57052de96890a1eda056b2c6a2d573ea69e56c9dae79a906a2e4cac9d731dfbf19defaf943fd55
+  languageName: node
+  linkType: hard
+
+"@csstools/css-color-parser@npm:^3.0.9":
+  version: 3.0.9
+  resolution: "@csstools/css-color-parser@npm:3.0.9"
+  dependencies:
+    "@csstools/color-helpers": "npm:^5.0.2"
+    "@csstools/css-calc": "npm:^2.1.3"
+  peerDependencies:
+    "@csstools/css-parser-algorithms": ^3.0.4
+    "@csstools/css-tokenizer": ^3.0.3
+  checksum: 10/634ee3c5424e21bda414015d20e906a620d06186fe38957479a5266ded435ae14675e3085a259cec75cd7138df081357aba58a2626592d61335228a451db3eca
+  languageName: node
+  linkType: hard
+
 "@csstools/css-parser-algorithms@npm:^2.1.1":
   version: 2.1.1
   resolution: "@csstools/css-parser-algorithms@npm:2.1.1"
@@ -4091,10 +4134,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@csstools/css-parser-algorithms@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "@csstools/css-parser-algorithms@npm:3.0.4"
+  peerDependencies:
+    "@csstools/css-tokenizer": ^3.0.3
+  checksum: 10/dfb6926218d9f8ba25d8b43ea46c03863c819481f8c55e4de4925780eaab9e6bcd6bead1d56b4ef82d09fcd9d69a7db2750fa9db08eece9470fd499dc76d0edb
+  languageName: node
+  linkType: hard
+
 "@csstools/css-tokenizer@npm:^2.1.1":
   version: 2.1.1
   resolution: "@csstools/css-tokenizer@npm:2.1.1"
   checksum: 10/79b63aabea43d3d698d5ffbccfb9f5d780ac056a7787df4f2d5e1776667a482d22d190453085b04ff3b3b8b5037b728306ca375ee8fdacbf62cd7874b8f04751
+  languageName: node
+  linkType: hard
+
+"@csstools/css-tokenizer@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "@csstools/css-tokenizer@npm:3.0.3"
+  checksum: 10/6baa3160e426e1f177b8f10d54ec7a4a596090f65a05f16d7e9e4da049962a404eabc5f885f4867093702c259cd4080ac92a438326e22dea015201b3e71f5bbb
   languageName: node
   linkType: hard
 
@@ -10226,15 +10285,15 @@ __metadata:
     "@babel/polyfill": "npm:^7.12.1"
     "@babel/preset-env": "npm:^7.26.0"
     "@babel/preset-react": "npm:^7.25.9"
-    "@blockly/block-shareable-procedures": "npm:~5.0.9"
-    "@blockly/field-bitmap": "npm:^5.0.9"
-    "@blockly/field-colour": "npm:^5.0.9"
-    "@blockly/field-grid-dropdown": "npm:~5.0.9"
-    "@blockly/keyboard-experiment": "npm:^0.0.1"
-    "@blockly/plugin-cross-tab-copy-paste": "npm:~6.0.9"
-    "@blockly/plugin-scroll-options": "npm:~6.0.9"
-    "@blockly/theme-dark": "npm:7.0.7"
-    "@blockly/theme-highcontrast": "npm:6.0.7"
+    "@blockly/block-shareable-procedures": "npm:^6.0.0"
+    "@blockly/field-bitmap": "npm:^6.0.0"
+    "@blockly/field-colour": "npm:^6.0.0"
+    "@blockly/field-grid-dropdown": "npm:^6.0.0"
+    "@blockly/keyboard-experiment": "npm:~0.0.8"
+    "@blockly/plugin-cross-tab-copy-paste": "npm:^7.0.0"
+    "@blockly/plugin-scroll-options": "npm:^7.0.0"
+    "@blockly/theme-dark": "npm:^8.0.0"
+    "@blockly/theme-highcontrast": "npm:^7.0.0"
     "@cdo/interpreted": "link:../dashboard/config/libraries"
     "@code-dot-org/artist": "npm:0.2.1"
     "@code-dot-org/blockly": "npm:4.0.14"
@@ -10324,7 +10383,7 @@ __metadata:
     babel-plugin-add-module-exports: "npm:^1.0.4"
     babel-plugin-dynamic-import-node: "npm:^2.3.3"
     babel-plugin-syntax-async-functions: "npm:^6.13.0"
-    blockly: "npm:11.1.1"
+    blockly: "npm:12.0.0"
     bootstrap-sass: "npm:^3.4.1"
     browser-process-hrtime: "npm:0.1.2"
     buffer: "npm:^6.0.3"
@@ -10542,12 +10601,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"blockly@npm:11.1.1":
-  version: 11.1.1
-  resolution: "blockly@npm:11.1.1"
+"blockly@npm:12.0.0":
+  version: 12.0.0
+  resolution: "blockly@npm:12.0.0"
   dependencies:
-    jsdom: "npm:23.0.0"
-  checksum: 10/630a2cf7e092f975479b1bd8297dcd4df488d9bc069196362228e396a434d5877d83541297a5522d83715d88654dbc84ad9e4dfd6af3f89321a2b3b9ad88b96b
+    jsdom: "npm:26.1.0"
+  checksum: 10/1fb82cfc31ded3cddccdfa6b95aaa15dfb1ebc08a1edb70c440c07557d85b635444d5daea01fc27352ed85b9a5db1f93b09bd9086073d76ce62d03279eb6087e
   languageName: node
   linkType: hard
 
@@ -12318,12 +12377,13 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"cssstyle@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "cssstyle@npm:3.0.0"
+"cssstyle@npm:^4.2.1":
+  version: 4.3.1
+  resolution: "cssstyle@npm:4.3.1"
   dependencies:
-    rrweb-cssom: "npm:^0.6.0"
-  checksum: 10/3774cf5fd0fe5d0fe2d7e2b726eea690e7e35a2f3ecdd83bcf2df12ad664bc6cc30727800b712c16b5df6a67e5129a643fe15c0bfb1fc221d0020c488b1f4ff3
+    "@asamuzakjp/css-color": "npm:^3.1.2"
+    rrweb-cssom: "npm:^0.8.0"
+  checksum: 10/e74b2636067c3fd912a16d8d979a7975e5a5c8b3ce9386298d75a82478bb6c8bc03b261b92575348f471b3eb7534d2594a0c4b47d6fc8c03605b2628dce992ff
   languageName: node
   linkType: hard
 
@@ -12563,10 +12623,17 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"decimal.js@npm:^10.4.2, decimal.js@npm:^10.4.3":
+"decimal.js@npm:^10.4.2":
   version: 10.4.3
   resolution: "decimal.js@npm:10.4.3"
   checksum: 10/de663a7bc4d368e3877db95fcd5c87b965569b58d16cdc4258c063d231ca7118748738df17cd638f7e9dd0be8e34cec08d7234b20f1f2a756a52fc5a38b188d0
+  languageName: node
+  linkType: hard
+
+"decimal.js@npm:^10.5.0":
+  version: 10.5.0
+  resolution: "decimal.js@npm:10.5.0"
+  checksum: 10/714d49cf2f2207b268221795ede330e51452b7c451a0c02a770837d2d4faed47d603a729c2aa1d952eb6c4102d999e91c9b952c1aa016db3c5cba9fc8bf4cda2
   languageName: node
   linkType: hard
 
@@ -13511,6 +13578,13 @@ canvg@gabelerner/canvg:
   version: 4.4.0
   resolution: "entities@npm:4.4.0"
   checksum: 10/b627cb900e901cc7817037b83bf993a1cbf6a64850540f7526af7bcf9c7d09ebc671198e6182cfae4680f733799e2852e6a1c46aa62ff36eb99680057a038df5
+  languageName: node
+  linkType: hard
+
+"entities@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "entities@npm:6.0.0"
+  checksum: 10/cf37a4aad887ba8573532346da1c78349dccd5b510a9bbddf92fe59b36b18a8b26fe619a862de4e7fd3b8addc6d5e0969261198bbeb690da87297011a61b7066
   languageName: node
   linkType: hard
 
@@ -17268,7 +17342,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"http-proxy-agent@npm:^7.0.0":
+"http-proxy-agent@npm:^7.0.2":
   version: 7.0.2
   resolution: "http-proxy-agent@npm:7.0.2"
   dependencies:
@@ -17317,7 +17391,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"https-proxy-agent@npm:^7.0.2":
+"https-proxy-agent@npm:^7.0.6":
   version: 7.0.6
   resolution: "https-proxy-agent@npm:7.0.6"
   dependencies:
@@ -19316,37 +19390,36 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"jsdom@npm:23.0.0":
-  version: 23.0.0
-  resolution: "jsdom@npm:23.0.0"
+"jsdom@npm:26.1.0":
+  version: 26.1.0
+  resolution: "jsdom@npm:26.1.0"
   dependencies:
-    cssstyle: "npm:^3.0.0"
+    cssstyle: "npm:^4.2.1"
     data-urls: "npm:^5.0.0"
-    decimal.js: "npm:^10.4.3"
-    form-data: "npm:^4.0.0"
+    decimal.js: "npm:^10.5.0"
     html-encoding-sniffer: "npm:^4.0.0"
-    http-proxy-agent: "npm:^7.0.0"
-    https-proxy-agent: "npm:^7.0.2"
+    http-proxy-agent: "npm:^7.0.2"
+    https-proxy-agent: "npm:^7.0.6"
     is-potential-custom-element-name: "npm:^1.0.1"
-    nwsapi: "npm:^2.2.7"
-    parse5: "npm:^7.1.2"
-    rrweb-cssom: "npm:^0.6.0"
+    nwsapi: "npm:^2.2.16"
+    parse5: "npm:^7.2.1"
+    rrweb-cssom: "npm:^0.8.0"
     saxes: "npm:^6.0.0"
     symbol-tree: "npm:^3.2.4"
-    tough-cookie: "npm:^4.1.3"
+    tough-cookie: "npm:^5.1.1"
     w3c-xmlserializer: "npm:^5.0.0"
     webidl-conversions: "npm:^7.0.0"
     whatwg-encoding: "npm:^3.1.1"
     whatwg-mimetype: "npm:^4.0.0"
-    whatwg-url: "npm:^14.0.0"
-    ws: "npm:^8.14.2"
+    whatwg-url: "npm:^14.1.1"
+    ws: "npm:^8.18.0"
     xml-name-validator: "npm:^5.0.0"
   peerDependencies:
     canvas: ^3.0.0
   peerDependenciesMeta:
     canvas:
       optional: true
-  checksum: 10/e835fca6c48e9147e8de17828053681c8bac10f269f2e425982d731b6ba9232e385c42ef7736d7b6c162d6e14028ab84ef95cba74f43e7d94e15ce1c7c633286
+  checksum: 10/39d78c4889cac20826393400dce1faed1666e9244fe0c8342a8f08c315375878e6be7fcfe339a33d6ff1a083bfe9e71b16d56ecf4d9a87db2da8c795925ea8c1
   languageName: node
   linkType: hard
 
@@ -20132,7 +20205,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"lru-cache@npm:^10.2.0":
+"lru-cache@npm:^10.2.0, lru-cache@npm:^10.4.3":
   version: 10.4.3
   resolution: "lru-cache@npm:10.4.3"
   checksum: 10/e6e90267360476720fa8e83cc168aa2bf0311f3f2eea20a6ba78b90a885ae72071d9db132f40fda4129c803e7dcec3a6b6a6fbb44ca90b081630b810b5d6a41a
@@ -21640,17 +21713,17 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"nwsapi@npm:^2.2.16":
+  version: 2.2.20
+  resolution: "nwsapi@npm:2.2.20"
+  checksum: 10/3dbfbd64c10dfd1edaf4992a6e859af306ec22846b86da2b31e69a743a8b4d7ac3b6ca767dbf248dabea8652905e402d6986f8ba491852e8568e334ec22e1882
+  languageName: node
+  linkType: hard
+
 "nwsapi@npm:^2.2.2":
   version: 2.2.10
   resolution: "nwsapi@npm:2.2.10"
   checksum: 10/b310e9dd0886da338cbbb1be9fec473a50269e2935d537f95a03d0038f7ea831ce12b4816d97f42e458e5273158aea2a6c86bc4bb60f79911226154aa66740f7
-  languageName: node
-  linkType: hard
-
-"nwsapi@npm:^2.2.7":
-  version: 2.2.16
-  resolution: "nwsapi@npm:2.2.16"
-  checksum: 10/1e5e086cdd4ca4a45f414d37f49bf0ca81d84ed31c6871ac68f531917d2910845db61f77c6d844430dc90fda202d43fce9603024e74038675de95229eb834dba
   languageName: node
   linkType: hard
 
@@ -22420,12 +22493,21 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"parse5@npm:^7.0.0, parse5@npm:^7.1.1, parse5@npm:^7.1.2":
+"parse5@npm:^7.0.0, parse5@npm:^7.1.1":
   version: 7.1.2
   resolution: "parse5@npm:7.1.2"
   dependencies:
     entities: "npm:^4.4.0"
   checksum: 10/3c86806bb0fb1e9a999ff3a4c883b1ca243d99f45a619a0898dbf021a95a0189ed955c31b07fe49d342b54e814f33f2c9d7489198e8630dacd5477d413ec5782
+  languageName: node
+  linkType: hard
+
+"parse5@npm:^7.2.1":
+  version: 7.3.0
+  resolution: "parse5@npm:7.3.0"
+  dependencies:
+    entities: "npm:^6.0.0"
+  checksum: 10/b0e48be20b820c655b138b86fa6fb3a790de6c891aa2aba536524f8027b4dca4fe538f11a0e5cf2f6f847d120dbb9e4822dcaeb933ff1e10850a2ef0154d1d88
   languageName: node
   linkType: hard
 
@@ -25765,10 +25847,10 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"rrweb-cssom@npm:^0.6.0":
-  version: 0.6.0
-  resolution: "rrweb-cssom@npm:0.6.0"
-  checksum: 10/5411836a4a78d6b68480767b8312de291f32d5710a278343954a778e5b420eaf13c90d9d2a942acf4718ddf497baa75ce653a314b332a380b6eaae1dee72257e
+"rrweb-cssom@npm:^0.8.0":
+  version: 0.8.0
+  resolution: "rrweb-cssom@npm:0.8.0"
+  checksum: 10/07521ee36fb6569c17906afad1ac7ff8f099d49ade9249e190693ac36cdf27f88d9acf0cc66978935d5d0a23fca105643d7e9125b9a9d91ed9db9e02d31d7d80
   languageName: node
   linkType: hard
 
@@ -28010,6 +28092,24 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"tldts-core@npm:^6.1.85":
+  version: 6.1.85
+  resolution: "tldts-core@npm:6.1.85"
+  checksum: 10/4068bede7cd6b690387621e2740758ec1205c8b2ee3ce6dc9d0b9d09b7b659f6dfc6129b2e3227c363d4015d62528580d378cbf0c28e94de55f10206f67adadc
+  languageName: node
+  linkType: hard
+
+"tldts@npm:^6.1.32":
+  version: 6.1.85
+  resolution: "tldts@npm:6.1.85"
+  dependencies:
+    tldts-core: "npm:^6.1.85"
+  bin:
+    tldts: bin/cli.js
+  checksum: 10/f3270f24ed57efcbb34364e827dc1cace9b5b95a2668051e69e21ad75df49466cfeaef47e7e9b56541ef633eff1e083a43b006b6306a9d2d24e5c36a038cb400
+  languageName: node
+  linkType: hard
+
 "tmp@npm:^0.2.1":
   version: 0.2.3
   resolution: "tmp@npm:0.2.3"
@@ -28209,15 +28309,12 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"tough-cookie@npm:^4.1.3":
-  version: 4.1.4
-  resolution: "tough-cookie@npm:4.1.4"
+"tough-cookie@npm:^5.1.1":
+  version: 5.1.2
+  resolution: "tough-cookie@npm:5.1.2"
   dependencies:
-    psl: "npm:^1.1.33"
-    punycode: "npm:^2.1.1"
-    universalify: "npm:^0.2.0"
-    url-parse: "npm:^1.5.3"
-  checksum: 10/75663f4e2cd085f16af0b217e4218772adf0617fb3227171102618a54ce0187a164e505d61f773ed7d65988f8ff8a8f935d381f87da981752c1171b076b4afac
+    tldts: "npm:^6.1.32"
+  checksum: 10/de430e6e6d34b794137e05b8ac2aa6b74ebbe6cdceb4126f168cf1e76101162a4b2e0e7587c3b70e728bd8654fc39958b2035be7619ee6f08e7257610ba4cd04
   languageName: node
   linkType: hard
 
@@ -28236,6 +28333,15 @@ canvg@gabelerner/canvg:
   dependencies:
     punycode: "npm:^2.3.1"
   checksum: 10/29155adb167d048d3c95d181f7cb5ac71948b4e8f3070ec455986e1f34634acae50ae02a3c8d448121c3afe35b76951cd46ed4c128fd80264280ca9502237a3e
+  languageName: node
+  linkType: hard
+
+"tr46@npm:^5.1.0":
+  version: 5.1.1
+  resolution: "tr46@npm:5.1.1"
+  dependencies:
+    punycode: "npm:^2.3.1"
+  checksum: 10/833a0e1044574da5790148fd17866d4ddaea89e022de50279967bcd6b28b4ce0d30d59eb3acf9702b60918975b3bad481400337e3a2e6326cffa5c77b874753d
   languageName: node
   linkType: hard
 
@@ -30054,6 +30160,16 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"whatwg-url@npm:^14.1.1":
+  version: 14.2.0
+  resolution: "whatwg-url@npm:14.2.0"
+  dependencies:
+    tr46: "npm:^5.1.0"
+    webidl-conversions: "npm:^7.0.0"
+  checksum: 10/f0a95b0601c64f417c471536a2d828b4c16fe37c13662483a32f02f183ed0f441616609b0663fb791e524e8cd56d9a86dd7366b1fc5356048ccb09b576495e7c
+  languageName: node
+  linkType: hard
+
 "whatwg-url@npm:^5.0.0":
   version: 5.0.0
   resolution: "whatwg-url@npm:5.0.0"
@@ -30348,9 +30464,9 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"ws@npm:^8.14.2":
-  version: 8.18.0
-  resolution: "ws@npm:8.18.0"
+"ws@npm:^8.18.0":
+  version: 8.18.1
+  resolution: "ws@npm:8.18.1"
   peerDependencies:
     bufferutil: ^4.0.1
     utf-8-validate: ">=5.0.2"
@@ -30359,7 +30475,7 @@ canvg@gabelerner/canvg:
       optional: true
     utf-8-validate:
       optional: true
-  checksum: 10/70dfe53f23ff4368d46e4c0b1d4ca734db2c4149c6f68bc62cb16fc21f753c47b35fcc6e582f3bdfba0eaeb1c488cddab3c2255755a5c3eecb251431e42b3ff6
+  checksum: 10/3f38e9594f2af5b6324138e86b74df7d77bbb8e310bf8188679dd80bac0d1f47e51536a1923ac3365f31f3d8b25ea0b03e4ade466aa8292a86cd5defca64b19b
   languageName: node
   linkType: hard
 

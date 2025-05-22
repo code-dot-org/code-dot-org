@@ -3,51 +3,37 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Professional Learning Module Overview
+
+
+# Module Overview
 
 ## What's included in this module?
 
-<div style="display: flex; flex-direction: column; align-items: flex-start; width: 70%; padding-left: 10%; padding-right: 20%;">
-  <!-- Lesson 1 -->
-  <div style="display: flex; align-items: center; background-color: #D3D3D3; border-radius: 10px; padding: 20px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; width: 100%;">
-    <div style="flex: 1;">
-      <p style="font-size: 18pt; font-weight: bold;">🎵 Lesson 1: Welcome to Music Lab</p>
-      <p style="font-size: 18pt;">An overview of the Music Lab environment and curriculum.</p>
-    </div>
-  </div>
+<img src="https://images.code.org/eef301d70ecfe4e0d7ac02834c151a2c-image-1698286092779.08.08 PM.png" style="float:right; width:300px; border-radius:30px; margin-left:15px; margin-right: 15px;">
 
-  <!-- Lesson 2 -->
-  <div style="display: flex; align-items: center; background-color: #D3D3D3; border-radius: 10px; padding: 20px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; width: 100%;">
-    <div style="flex: 1;">
-      <p style="font-size: 18pt; font-weight: bold;">🎸 Lesson 2: Songwriter's Toolbox</p>
-      <p style="font-size: 18pt;">Layering sounds with sequencing and loops.</p>
-    </div>
-  </div>
+#### This professional learning module is made up of five sections.
 
-  <!-- Lesson 3 -->
-  <div style="display: flex; align-items: center; background-color: #D3D3D3; border-radius: 10px; padding: 20px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; width: 100%;">
-    <div style="flex: 1;">
-      <p style="font-size: 18pt; font-weight: bold;">🎛️ Lesson 3: Sound Designer Studio</p>
-      <p style="font-size: 18pt;">Organizing groups of sounds with functions.</p>
-    </div>
-  </div>
+### ⭐️ **Welcome to Teaching Coding with Music!** (You're here!)
+#### This section will give you an overview of Teaching Coding with Music. You'll review the unit's structure, learning tools, and the curriculum's three lessons.
 
-  <!-- Lesson 4 -->
-  <div style="display: flex; align-items: center; background-color: #D3D3D3; border-radius: 10px; padding: 20px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; width: 100%;">
-    <div style="flex: 1;">
-      <p style="font-size: 18pt; font-weight: bold;">🎧 Lesson 4: Producer Power</p>
-      <p style="font-size: 18pt;">Make music interactive with event triggers.</p>
-    </div>
-  </div>
+### **🎼Teacher Training: Songwriter's Toolbox**
+#### Time to start coding! This section will teach you some of the key programming concepts that your students will learn in <a href="https://studio.code.org/s/coding-with-music/lessons/1" target="_blank">Lesson 1 </a>.  
 
-  <!-- Lesson 5 -->
-  <div style="display: flex; align-items: center; background-color: #D3D3D3; border-radius: 10px; padding: 20px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); width: 100%;">
-    <div style="flex: 1;">
-      <p style="font-size: 18pt; font-weight: bold;">➡️ Lesson 5: Next Steps</p>
-      <p style="font-size: 18pt;">Discover additional resources and opportunities to continue your teaching and coding journey.</p>
-    </div>
-  </div>
-</div>
+### **🎤Teacher Training: Producer Power**
+#### In this section, you'll learn how to organize groups of sounds with functions.  The knowledge you gain here will help you teach <a href="https://studio.code.org/s/coding-with-music/lessons/2 " target="_blank">Lesson 2 </a>.
+
+### **🎧 Teacher Training: Sound Designer's Studio**
+#### Add complexity to your music by programming with events and triggers. This section will teach you everything you need to know to teach <a href="https://studio.code.org/s/coding-with-music/lessons/3 " target="_blank">Lesson 3 </a>.
+
+### **🎁 Next Steps**
+#### Get familiar with next steps and additional support resources. You'll be able to teach this unit with confidence after completing all five sections!
+
+___
+
+#### Feel free to complete as much or as little of this module as is useful for you and your students! Stop, start, and revisit content as you see fit. We hope you'll find these activities useful to start teaching this unit. You'll be able to give Code.org your feedback on the last level of this module.
+
+
+
 
 
 

@@ -436,7 +436,7 @@ class UnitGroup < ApplicationRecord
   end
 
   def supported_locale_codes
-    locales = default_unit_group_units.first&.script&.supported_locales || []
+    locales = first_unit&.supported_locales || []
     locales = locales.filter do |locale|
       default_unit_group_units.all? do |unit_group_unit|
         unit_group_unit.script.supported_locales&.include?(locale)
@@ -613,7 +613,11 @@ class UnitGroup < ApplicationRecord
   # rubocop:enable Naming/PredicateName
 
   def single_unit_course?
-    default_units.one?
+    default_unit_group_units.one?
+  end
+
+  def first_unit
+    default_unit_group_units.first&.script
   end
 
   def has_migrated_unit?

@@ -4,6 +4,7 @@ import {expect, Locator} from '@playwright/test';
 import {EXPECTED_LOCALIZATION_STRINGS} from './config/i18n';
 import {test} from './fixtures/base';
 import {AllTheThingsPage} from './pom/all-the-things';
+import {type Section} from './pom/all-the-things';
 import {MarketingPage} from './pom/marketing';
 
 test.describe('All the things UI e2e test', () => {
@@ -12,13 +13,14 @@ test.describe('All the things UI e2e test', () => {
       const allTheThingsPage = new AllTheThingsPage(page, 'en-US');
       await allTheThingsPage.goto();
 
-      const accessibilityScanResults = await new AxeBuilder({page}).analyze(); // 4
+      const accessibilityScanResults = await new AxeBuilder({page}).analyze();
 
       // Do not allow any more accessibility errors. If you fixed one, reduce the number below.
       if (accessibilityScanResults.violations.length > 0) {
         // Log out the violations so we can fix them
         // The current allowed violations are:
         // 1. color contrast on overline
+        // 2. color contrast on overline in action block carousel
         console.warn(
           JSON.stringify(accessibilityScanResults.violations, null, 2),
         );
@@ -38,7 +40,8 @@ test.describe('All the things UI e2e test', () => {
       await page.waitForURL('**/en-US/engineering/all-the-things');
     });
 
-    test('should redirect from localeless paths to localized paths using the language cookie', async ({
+    // Re-enable when locales other than English are supported
+    test.skip('should redirect from localeless paths to localized paths using the language cookie', async ({
       page,
       context,
       browserName,
@@ -121,6 +124,7 @@ test.describe('All the things UI e2e test', () => {
         await allTheThingsPage.goto();
 
         component = allTheThingsPage.getSectionLocator('Localization');
+        await component.scrollIntoViewIfNeeded();
       });
 
       test(`has localized text`, async () => {
@@ -154,8 +158,9 @@ test.describe('All the things UI e2e test', () => {
     test.describe('action block', () => {
       let component: Locator;
 
-      test.beforeEach(() => {
+      test.beforeEach(async () => {
         component = allTheThingsPage.getSectionLocator('Action Block');
+        await component.scrollIntoViewIfNeeded();
       });
 
       test('renders action block', async () => {
@@ -188,10 +193,11 @@ test.describe('All the things UI e2e test', () => {
     test.describe('full width action block', () => {
       let component: Locator;
 
-      test.beforeEach(() => {
+      test.beforeEach(async () => {
         component = allTheThingsPage.getSectionLocator(
           'Full Width Action Block',
         );
+        await component.scrollIntoViewIfNeeded();
       });
 
       test('renders full width action block', async () => {
@@ -224,8 +230,9 @@ test.describe('All the things UI e2e test', () => {
     test.describe('button', () => {
       let component: Locator;
 
-      test.beforeEach(() => {
+      test.beforeEach(async () => {
         component = allTheThingsPage.getSectionLocator('Button');
+        await component.scrollIntoViewIfNeeded();
       });
 
       test('internal primary button should go to website in same tab', async ({
@@ -268,11 +275,32 @@ test.describe('All the things UI e2e test', () => {
       });
     });
 
+    ['Action Block Carousel', 'Image Carousel', 'Video Carousel'].forEach(
+      carousel => {
+        test.describe(carousel.toLowerCase(), () => {
+          let component: Locator;
+
+          test.beforeEach(async () => {
+            component = allTheThingsPage.getSectionLocator(carousel as Section);
+            await component.scrollIntoViewIfNeeded();
+          });
+
+          test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+            await eyes.check(testInfo.title, {
+              region: component,
+              fully: true,
+            });
+          });
+        });
+      },
+    );
+
     test.describe('divider', () => {
       let component: Locator;
 
-      test.beforeEach(() => {
+      test.beforeEach(async () => {
         component = allTheThingsPage.getSectionLocator('Divider');
+        await component.scrollIntoViewIfNeeded();
       });
 
       test('renders', async () => {
@@ -295,8 +323,9 @@ test.describe('All the things UI e2e test', () => {
     test.describe('heading', () => {
       let component: Locator;
 
-      test.beforeEach(() => {
+      test.beforeEach(async () => {
         component = allTheThingsPage.getSectionLocator('Heading');
+        await component.scrollIntoViewIfNeeded();
       });
 
       test('renders', async () => {
@@ -319,8 +348,9 @@ test.describe('All the things UI e2e test', () => {
     test.describe('image', () => {
       let component: Locator;
 
-      test.beforeEach(() => {
+      test.beforeEach(async () => {
         component = allTheThingsPage.getSectionLocator('Image');
+        await component.scrollIntoViewIfNeeded();
       });
 
       test('renders all images with correct alt text', async () => {
@@ -345,8 +375,9 @@ test.describe('All the things UI e2e test', () => {
     test.describe('overline', () => {
       let component: Locator;
 
-      test.beforeEach(() => {
+      test.beforeEach(async () => {
         component = allTheThingsPage.getSectionLocator('Overline');
+        await component.scrollIntoViewIfNeeded();
       });
 
       test('renders', async () => {
@@ -369,8 +400,9 @@ test.describe('All the things UI e2e test', () => {
     test.describe('paragraph', () => {
       let component: Locator;
 
-      test.beforeEach(() => {
+      test.beforeEach(async () => {
         component = allTheThingsPage.getSectionLocator('Paragraph');
+        await component.scrollIntoViewIfNeeded();
       });
 
       test('renders', async () => {
@@ -392,8 +424,9 @@ test.describe('All the things UI e2e test', () => {
     test.describe('text link', () => {
       let component: Locator;
 
-      test.beforeEach(() => {
+      test.beforeEach(async () => {
         component = allTheThingsPage.getSectionLocator('Text Link');
+        await component.scrollIntoViewIfNeeded();
       });
 
       Array.of(
@@ -431,8 +464,9 @@ test.describe('All the things UI e2e test', () => {
       let component: Locator;
       const videoCaptions = [/^$/, 'Video without Fallback'];
 
-      test.beforeEach(() => {
+      test.beforeEach(async () => {
         component = allTheThingsPage.getSectionLocator('Video');
+        await component.scrollIntoViewIfNeeded();
       });
 
       // The default drop in has no caption

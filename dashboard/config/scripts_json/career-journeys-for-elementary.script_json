@@ -1,0 +1,737 @@
+{
+  "script": {
+    "name": "career-journeys-for-elementary",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "content_area": "curriculum_k_5",
+      "curriculum_umbrella": "CSF",
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "project_sharing": true,
+      "show_calendar": true,
+      "version_year": "2025",
+      "weekly_instructional_minutes": 225
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-05-21 21:08:45 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "career-journeys-for-elementary"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Mini-Project: Career Journeys ",
+      "name": "Career Journeys for Elementary",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "This lesson introduces students to the wide range of careers that involve computer science and artificial intelligence. Through interactive videos and guided exploration, students learn about real-world jobs that use CS. They are then guided step by step to build their own coding projects using Sprite Lab to present an interactive scene that relates to a career or subject they may be interested in. The lesson wraps up with students reflecting on what they’ve learned and how it connects to their future goals."
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "fa778bf5-53f8-4934-8b2a-7832c764cc52",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fa778bf5-53f8-4934-8b2a-7832c764cc52",
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary"
+      }
+    },
+    {
+      "key": "d790e748-0a6e-44bd-9c22-ff214ed4ef36",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d790e748-0a6e-44bd-9c22-ff214ed4ef36",
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary"
+      }
+    },
+    {
+      "key": "073958d0-c92b-4488-a365-ee8954515a62",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "073958d0-c92b-4488-a365-ee8954515a62",
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "d6467f38-afd6-4ec5-94df-0173aa1dd2c6",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-video\"></i> **Video:** Show the short video, CS is Everything\n\n<i class=\"fa-solid fa-microphone-stand\"></i> **Say**:  Today, we're going to explore how computer science and AI are part of many different careers.  As you watch this video, think about the different jobs you see and how they might use technology.",
+        "progression_name": "Intro Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "d6467f38-afd6-4ec5-94df-0173aa1dd2c6",
+        "lesson_activity.key": "fa778bf5-53f8-4934-8b2a-7832c764cc52"
+      }
+    },
+    {
+      "key": "f50353c5-ef58-41a8-b149-77ab4f9dff73",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-microphone-stand\"></i> **Say:** Now, let’s discuss! Think silently for a moment, then turn to a partner and answer one of the questions on the slide:\n- What did you like about this video?\n- What jobs use computer science (CS) or artificial intelligence (AI)?\n\n\n<i class=\"fa-solid fa-rotate\"></i> **Circulate:**  Listen to student discussions and encourage deeper thinking.\n\n<i class=\"fa-solid fa-lightbulb\"></i> **Discussion Goal:**  Encourage students to think about how CS and AI are integrated into various careers. Highlight the diversity of careers that utilize CS skills.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "f50353c5-ef58-41a8-b149-77ab4f9dff73",
+        "lesson_activity.key": "fa778bf5-53f8-4934-8b2a-7832c764cc52"
+      }
+    },
+    {
+      "key": "5506e20d-7788-4bcf-a6e4-23f5342b466b",
+      "position": 1,
+      "properties": {
+        "name": "Part 1: Career Exploration (5-20 minutes)",
+        "progression_name": "Career Exploration"
+      },
+      "seeding_key": {
+        "activity_section.key": "5506e20d-7788-4bcf-a6e4-23f5342b466b",
+        "lesson_activity.key": "d790e748-0a6e-44bd-9c22-ff214ed4ef36"
+      }
+    },
+    {
+      "key": "9f0cad86-f012-4d15-8188-d71ab1020736",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-laptop-binary\"></i> **Transition:** Explore careers that use CS and AI.\n\n<i class=\"fa-solid fa-square-check\"></i> **Do This:** Distribute a printed activity guide to each student.\n\n<i class=\"fa-solid fa-microphone-stand\"></i> **Say:**  Now, you'll have some time to explore different careers that use computer science and AI. Use your activity guide to keep track of what you find interesting. Think about what these jobs involve and how they might connect to your own interests.\n\n\n<i class=\"fa-solid fa-rotate\"></i> **Circulate:** Encourage students to consider how their interests align with the careers explored.\n",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Guiding questions to promote deeper thinking and prepare students to code a small project representing a career they’re interested in.**\n- What would be the most fun part of that job for you? What might be hard?\n- Do you think someone like you could do this job? Why or why not?\n- Is there a job or interest you’d like to show in your project?\nWhat could your project include to tell others about this interest or career?\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9f0cad86-f012-4d15-8188-d71ab1020736",
+        "lesson_activity.key": "d790e748-0a6e-44bd-9c22-ff214ed4ef36"
+      }
+    },
+    {
+      "key": "e6d6a495-083d-496e-8438-37ec343e78f9",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-laptop-binary\"></i> **Transition:** Prepare students to code their own projects. \n\n<i class=\"fa-solid fa-microphone-stand\"></i> **Say:** Based on what you've explored, next you will code a simple interactive scene in Sprite Lab. Let's review Sprite Lab and then look at some example projects for inspiration. \n\n<i class=\"fa-solid fa-square-check\"></i> **Do This:** Preview or review Sprite Lab to the extent that supports your students using the resources on slides 13 - 16. \n\n<i class=\"fa-solid fa-microphone-stand\"></i> **Say:** Explore the project examples in level 3 to get some ideas about how you’d like to design your own!\n\n<i class=\"fa-solid fa-square-check\"></i> **Do This:** Set a timer to support students with pacing. \n\n<i class=\"fa-solid fa-laptop-binary\"></i> **Transition:** Have all students move on to level 4 and the Plan your Project section in their Activity Guide",
+        "name": "Part 2: Plan your Project (10-15 minutes)",
+        "progression_name": "Inspiration & Planning",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**To do this lesson in one day:** Explore the projects as a class to keep the pacing tight. Point out the parts required for their small projects (1-2 sprites, a background, one When Clicked event that makes a sprite say something about CS or AI in the career).\n\n**To extend this lesson more than one day:** This may be a good place to break the lesson into two sessions. Allow students more time to explore the example projects if they finish their plan early. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e6d6a495-083d-496e-8438-37ec343e78f9",
+        "lesson_activity.key": "d790e748-0a6e-44bd-9c22-ff214ed4ef36"
+      }
+    },
+    {
+      "key": "d7add8fc-4466-46c3-abf8-82b3965d6112",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-microphone-stand\"></i> **Say:** Now, you're going to start building your project in Sprite Lab. As you move through each level, your code will carry over, and the instructions will guide you step by step. By the end, you'll have an interactive scene that shows how a career you're interested in uses computer science or AI.",
+        "name": "Part 3: Code your Project (15-60 minutes)",
+        "progression_name": "Project Steps"
+      },
+      "seeding_key": {
+        "activity_section.key": "d7add8fc-4466-46c3-abf8-82b3965d6112",
+        "lesson_activity.key": "d790e748-0a6e-44bd-9c22-ff214ed4ef36"
+      }
+    },
+    {
+      "key": "b0b248d5-5610-4d85-ab8d-756b781b1e02",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-rotate\"></i> **Circulate:**Encourage students to follow the plan they wrote in their Activity Guide to complete each level. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**To do this lesson in one day:** Levels 5-7 explain the essential steps to create a quick and simple project. \n\n**To extend this lesson more than one day:** Level 8 has choices for students to expand their Sprite Lab skills. They are great extension ideas for those who are ready for a challenge and more coding! "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b0b248d5-5610-4d85-ab8d-756b781b1e02",
+        "lesson_activity.key": "d790e748-0a6e-44bd-9c22-ff214ed4ef36"
+      }
+    },
+    {
+      "key": "c2005efc-aaf4-4329-b28a-ac3faf7c744a",
+      "position": 1,
+      "properties": {
+        "name": "Part 4: Share your project (5-15 minutes)",
+        "progression_name": "Share out"
+      },
+      "seeding_key": {
+        "activity_section.key": "c2005efc-aaf4-4329-b28a-ac3faf7c744a",
+        "lesson_activity.key": "073958d0-c92b-4488-a365-ee8954515a62"
+      }
+    },
+    {
+      "key": "b145d55d-0cd7-43c1-b2eb-35ada5189709",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-square-check\"></i> **Do This:**  Place students into small groups of 2 to 4 to share and discuss together. Support them in taking turns, and answer the prompts from the slide. \n\n<i class=\"fa-solid fa-microphone-stand\"></i> **Say:** Let's take a few minutes to share your projects. Tell us about the career you chose and how your scene shows the use of computer science or AI. What did you enjoy most about creating your project?"
+      },
+      "seeding_key": {
+        "activity_section.key": "b145d55d-0cd7-43c1-b2eb-35ada5189709",
+        "lesson_activity.key": "073958d0-c92b-4488-a365-ee8954515a62"
+      }
+    },
+    {
+      "key": "0600bbc4-712b-4b5c-b18f-6409b07b7620",
+      "position": 3,
+      "properties": {
+        "progression_name": "Share Out"
+      },
+      "seeding_key": {
+        "activity_section.key": "0600bbc4-712b-4b5c-b18f-6409b07b7620",
+        "lesson_activity.key": "073958d0-c92b-4488-a365-ee8954515a62"
+      }
+    },
+    {
+      "key": "aade35e7-acd2-46a3-8d2c-de1492febc9e",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-square-check\"></i> **Do This:** Wrap up the lesson with a personal reflection of glows, grows and want to knows. Have students write on paper or respond through a content management system you already use. Share with a partner or whole class if time allows."
+      },
+      "seeding_key": {
+        "activity_section.key": "aade35e7-acd2-46a3-8d2c-de1492febc9e",
+        "lesson_activity.key": "073958d0-c92b-4488-a365-ee8954515a62"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Intro Video"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-video_b_csf-e_standalone"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary",
+        "activity_section.key": "d6467f38-afd6-4ec5-94df-0173aa1dd2c6"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-video_b_csf-e_standalone"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Career Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-explore-videos_b_csf-e_standalone"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary",
+        "activity_section.key": "5506e20d-7788-4bcf-a6e4-23f5342b466b"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-explore-videos_b_csf-e_standalone"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Inspiration & Planning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-explore-projects_b_csf-e_standalone"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary",
+        "activity_section.key": "e6d6a495-083d-496e-8438-37ec343e78f9"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-explore-projects_b_csf-e_standalone"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Inspiration & Planning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-plan_b_csf-e_standalone"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary",
+        "activity_section.key": "e6d6a495-083d-496e-8438-37ec343e78f9"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-plan_b_csf-e_standalone"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Steps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-sprite-location_b_csf-e_standalone"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary",
+        "activity_section.key": "d7add8fc-4466-46c3-abf8-82b3965d6112"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-sprite-location_b_csf-e_standalone"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Steps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-backgrounds_b_csf-e_standalone"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary",
+        "activity_section.key": "d7add8fc-4466-46c3-abf8-82b3965d6112"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-backgrounds_b_csf-e_standalone"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Steps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-event-say_b_csf-e_standalone"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary",
+        "activity_section.key": "d7add8fc-4466-46c3-abf8-82b3965d6112"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-event-say_b_csf-e_standalone"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Steps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-extra-skills_b_csf-e_standalone"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary",
+        "activity_section.key": "d7add8fc-4466-46c3-abf8-82b3965d6112"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-extra-skills_b_csf-e_standalone"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Share Out"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-share_b_csf-e_standalone"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary",
+        "activity_section.key": "0600bbc4-712b-4b5c-b18f-6409b07b7620"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-share_b_csf-e_standalone"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-video_b_csf-e_standalone",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-video_b_csf-e_standalone"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary",
+        "activity_section.key": "d6467f38-afd6-4ec5-94df-0173aa1dd2c6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-explore-videos_b_csf-e_standalone",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-explore-videos_b_csf-e_standalone"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary",
+        "activity_section.key": "5506e20d-7788-4bcf-a6e4-23f5342b466b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-explore-projects_b_csf-e_standalone",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-explore-projects_b_csf-e_standalone"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary",
+        "activity_section.key": "e6d6a495-083d-496e-8438-37ec343e78f9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-plan_b_csf-e_standalone",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-plan_b_csf-e_standalone"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary",
+        "activity_section.key": "e6d6a495-083d-496e-8438-37ec343e78f9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-sprite-location_b_csf-e_standalone",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-sprite-location_b_csf-e_standalone"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary",
+        "activity_section.key": "d7add8fc-4466-46c3-abf8-82b3965d6112"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-backgrounds_b_csf-e_standalone",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-backgrounds_b_csf-e_standalone"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary",
+        "activity_section.key": "d7add8fc-4466-46c3-abf8-82b3965d6112"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-event-say_b_csf-e_standalone",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-event-say_b_csf-e_standalone"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary",
+        "activity_section.key": "d7add8fc-4466-46c3-abf8-82b3965d6112"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-extra-skills_b_csf-e_standalone",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-extra-skills_b_csf-e_standalone"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary",
+        "activity_section.key": "d7add8fc-4466-46c3-abf8-82b3965d6112"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-share_b_csf-e_standalone",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-share_b_csf-e_standalone"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary",
+        "activity_section.key": "0600bbc4-712b-4b5c-b18f-6409b07b7620"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "Activity Guide",
+      "url": "https://docs.google.com/document/d/1aJYcWupWohkRQhi2HG4jl1mMK5JprBW3-gc9dyy30xg/template/preview",
+      "key": "activity_guide",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/1aJYcWupWohkRQhi2HG4jl1mMK5JprBW3-gc9dyy30xg/export=download&id=FILE_ID",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "activity_guide"
+      }
+    },
+    {
+      "name": "Helpful Hints in Sprite Lab",
+      "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/edit#slide=id.g1b38224bb2a_0_20",
+      "key": "helpful_hints_in_sprite_lab",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/export/pdf",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "helpful_hints_in_sprite_lab"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "resource.key": "activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "resource.key": "helpful_hints_in_sprite_lab"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "career",
+      "word": "Career",
+      "definition": "A job you work toward by building skills and learning new things.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "career"
+      }
+    },
+    {
+      "key": "computer_science",
+      "word": "Computer Science",
+      "definition": "Using computers to solve problems and create things.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "computer_science"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "sprite",
+      "word": "Sprite",
+      "definition": "A graphic on the screen with a location, size, and appearance.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sprite"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "vocabulary.key": "career"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "vocabulary.key": "computer_science"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "vocabulary.key": "sprite"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "30cc3fd9-49e7-45b8-9a91-8cf8d2d73c6e",
+      "properties": {
+        "description": "Design and build an interactive project"
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "objective.key": "30cc3fd9-49e7-45b8-9a91-8cf8d2d73c6e"
+      }
+    },
+    {
+      "key": "39f33a36-c6b0-42a6-a63e-79da77bcc67d",
+      "properties": {
+        "description": "Present a project and explain the coding skills used"
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "objective.key": "39f33a36-c6b0-42a6-a63e-79da77bcc67d"
+      }
+    },
+    {
+      "key": "4e294581-86dd-46f4-a8a6-ef7d4d666106",
+      "properties": {
+        "description": "Practice basic coding skills"
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "objective.key": "4e294581-86dd-46f4-a8a6-ef7d4d666106"
+      }
+    },
+    {
+      "key": "a69a0d79-57fb-4427-a18a-3bb4fc633d83",
+      "properties": {
+        "description": "Explore and describe careers that use computer science"
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "objective.key": "a69a0d79-57fb-4427-a18a-3bb4fc633d83"
+      }
+    }
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

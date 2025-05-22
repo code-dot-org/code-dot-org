@@ -883,6 +883,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'uncached lesson path helpers' do
+    skip 'enable when we re enable CACHED_UNITS_MAP'
     hoc_unit = create :script, name: 'dance-ai-2023'
     hoc_lesson_group = create :lesson_group, script: hoc_unit
     hoc_lesson = create :lesson, script: hoc_unit, lesson_group: hoc_lesson_group

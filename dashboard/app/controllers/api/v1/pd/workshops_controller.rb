@@ -1,4 +1,8 @@
 class Api::V1::Pd::WorkshopsController < ApplicationController
+  # There are 2 workshops_controllers. The other controller (/controllers/pd/workshops_controller.rb)
+  # handles the workshop marketing page (i.e. navigating to studio.code.org/pd/workshops/:workshop_id),
+  # while this controller handles everything else (creating, updating, destroying, etc.).
+
   include Pd::WorkshopFilters
   include Api::CsvDownload
   include Pd::Application::RegionalPartnerTeacherconMapping
@@ -341,7 +345,6 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
       :hidden,
       :grades,
       :time_zone,
-      :legacyForm2025
     ]
 
     allowed_params.delete :regional_partner_id unless can_update_regional_partner

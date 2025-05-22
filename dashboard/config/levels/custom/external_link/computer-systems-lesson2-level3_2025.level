@@ -9,9 +9,9 @@
     "encrypted": "false",
     "long_instructions": "### **Connecting Components: PC Builder**\r\n\r\n#### **Instructions:**  \r\n\r\n1. **Drag and drop** the Component Descriptions onto the correct component names and images in the PC Builder diagram.  \r\n\r\n2. **Drag and Drop the correct category color dot** for each component:\r\n    - **Input** – Devices that send data into the computer.\r\n    - **Output** – Devices that display or output information.\r\n    - **Processing** – Components that compute and process data.\r\n    - **Storage** – Permanent data storage.\r\n\r\n\r\n",
     "link_title": "Connecting Components: PC Builder",
-    "url": "https://docs.google.com/presentation/d/1MQFtZdAf9Xk4eAmdBYAsP82eiXZSrINXpK8zFkdZaWY/edit?usp=sharing",
+    "url": "https://docs.google.com/presentation/d/16-s9Th3Ui1-AKIz1x6xcjST0THt47TFOOLWrrCYTMVc/edit?slide=id.g35521be72e5_0_0#slide=id.g35521be72e5_0_0",
     "name_suffix": "_2025"
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-22T01:22:51.721+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson2-level3-2023\\\"\"],\"cloned_from\":\"computer-systems-lesson2-level3-2023\"},{\"changed_at\":\"2025-05-05 21:14:09 +0000\",\"changed\":[\"long_instructions\",\"url\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-22T01:22:51.721+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson2-level3-2023\\\"\"],\"cloned_from\":\"computer-systems-lesson2-level3-2023\"},{\"changed_at\":\"2025-05-05 21:14:09 +0000\",\"changed\":[\"long_instructions\",\"url\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-05-21 17:21:05 +0000\",\"changed\":[\"url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </ExternalLink>

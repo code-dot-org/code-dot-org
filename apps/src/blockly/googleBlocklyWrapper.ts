@@ -55,6 +55,7 @@ import CdoRendererGeras from './addons/cdoRendererGeras';
 import CdoRendererThrasos from './addons/cdoRendererThrasos';
 import CdoRendererZelos from './addons/cdoRendererZelos';
 import {initializeScrollbarPair} from './addons/cdoScrollbar';
+import {cleanUp} from './addons/cdoSerializationHelpers';
 import {getPointerBlockImageUrl} from './addons/cdoSpritePointer';
 import CdoTrashcan from './addons/cdoTrashcan';
 import * as cdoUtils from './addons/cdoUtils';
@@ -267,8 +268,12 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   });
 
   // Installs colour_picker, colour_rgb, colour_random, and colour_blend blocks.
-  // These are exclusively provided via the FieldColour plugin as of Blockly v11.
-  installFieldColourBlocks({javascript: javascriptGenerator});
+  // Unit tests may attempt to install multiple times, which is currently unsafe.
+  try {
+    installFieldColourBlocks({javascript: javascriptGenerator});
+  } catch (e) {
+    console.warn(e);
+  }
 
   type registrableFieldType = GoogleBlockly.fieldRegistry.RegistrableField;
   // elements in this list should be structured as follows:
@@ -386,7 +391,20 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   });
   Object.defineProperty(blocklyWrapper, 'selected', {
     get: function () {
-      return this.blockly_.getSelected();
+      // In the event that the block is no longer focused, we can
+      // potentially use the workspace's focused node.
+      // This allows `Blockly.selected` to work from the dev console.
+      const focusedNode = this.FocusableTreeTraverser.findFocusedNode(
+        // common.getMainWorkspace() gets the currently active workspace,
+        // as opposed to the student's "primary" workspace.
+        Blockly.common.getMainWorkspace()
+      );
+      if (focusedNode && Blockly.isSelectable(focusedNode)) {
+        return focusedNode;
+      }
+      // If the focused node is not selectable, fall back to the
+      // getSelected() method.
+      return Blockly.getSelected();
     },
   });
   Object.defineProperty(blocklyWrapper, 'BlockFieldHelper', {
@@ -884,12 +902,24 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     }
 
     // In toolbox mode, automatically clean up the workspace as blocks are moved.
+    // This needs to use Google Blockly's built-in cleanUp method, which arranges
+    // all blocks into a single column.
     if (blocklyWrapper.isToolboxMode) {
       workspace.addChangeListener(event => {
         if (event.type === GoogleBlockly.Events.MOVE) {
           workspace.cleanUp();
         }
       });
+    } else {
+      // Outside of toolbox mode, we need use a custom workspace cleanUp method.
+      // Our version prevents blocks from overlapping, moving the blocks as
+      // minimally as possible.
+      // This command is accessible via the workspace context menu.
+      extendedWorkspaceSvg.cleanUp = function (
+        includeImmovableBlocks?: boolean
+      ) {
+        cleanUp(this, includeImmovableBlocks);
+      };
     }
     // When either the main workspace or the toolbox workspace viewport
     // changes, adjust any callouts so they stay pointing to the appropriate
@@ -978,12 +1008,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       blocklyWrapper.functionEditor = new FunctionEditor();
       blocklyWrapper.functionEditor.init(options);
     }
-
-    const blocklySvgElement = document.querySelector('.blocklySvg');
-    if (blocklySvgElement) {
-      blocklySvgElement.setAttribute('tabindex', '-1');
-    }
-
     return workspace;
   };
 
