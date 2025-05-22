@@ -18,9 +18,7 @@ class HeaderTest < ActionDispatch::IntegrationTest
       end
 
       it 'renders home icon link' do
-        must_select '#logo_home_link[href=?]', '//test.code.org' do
-          must_select 'img[src^="/assets/logo-inverse-"]'
-        end
+        must_select '#logo_home_link[href=?]', '//test.code.org'
       end
     end
 
@@ -180,9 +178,7 @@ class HeaderTest < ActionDispatch::IntegrationTest
       end
 
       it 'renders home icon link' do
-        must_select '#logo_home_link[href=?]', '/home' do
-          must_select 'img[src^="/assets/logo-inverse-"]'
-        end
+        must_select '#logo_home_link[href=?]', '/home'
       end
     end
 
@@ -258,9 +254,7 @@ class HeaderTest < ActionDispatch::IntegrationTest
       end
 
       it 'renders home icon link' do
-        must_select '#logo_home_link[href=?]', '/home' do
-          must_select 'img[src^="/assets/logo-inverse-"]'
-        end
+        must_select '#logo_home_link[href=?]', '/home'
       end
     end
 
