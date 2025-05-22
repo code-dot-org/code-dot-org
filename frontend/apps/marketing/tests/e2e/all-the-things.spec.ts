@@ -335,11 +335,11 @@ test.describe('All the things UI e2e test', () => {
           await expect(image).toBeVisible();
         }
 
-        const iconLocator = component.locator(
-          'i[data-testid="font-awesome-v6-icon"]',
+        const iconsLocator = component.locator(
+          'i.fa-circle-1, i.fa-circle-2, i.fa-circle-3',
         );
-        await expect(iconLocator).toHaveCount(3);
-        for (const icon of await iconLocator.all()) {
+        await expect(iconsLocator).toHaveCount(3);
+        for (const icon of await iconsLocator.all()) {
           await expect(icon).toBeVisible();
         }
       });
