@@ -23,7 +23,7 @@ class AichatRequestsController < ApplicationController
   # aichatModelCustomizations: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
   # aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
   def start_chat_completion
-    return render status: :forbidden, json: {} unless AichatSagemakerHelper.can_request_aichat_chat_completion?
+    return render status: :forbidden, json: {user_type: current_user.user_type} unless can_access_chat_completion?(params[:aichatContext][:currentLevelId])
     unless chat_completion_has_required_params?
       return render status: :bad_request, json: {}
     end
@@ -72,6 +72,8 @@ class AichatRequestsController < ApplicationController
   # GET /aichat_request/chat_request/:id
   # Get the chat completion request status and response for the given ID.
   def chat_request
+    # This api is now exposed to all signed in users, but return data is
+    # still scoped to user that initiated the request.
     begin
       request = AichatRequest.find(params[:id])
     rescue ActiveRecord::RecordNotFound
@@ -86,6 +88,18 @@ class AichatRequestsController < ApplicationController
       response: request.response
     }
     render(status: :ok, json: response_body)
+  end
+
+  private def can_access_chat_completion?(level_id = nil)
+    # Special case for AiTutor2 requests coming through python lab levels
+    if level_id
+      level = Level.find(level_id)
+      if level&.type == 'Pythonlab'
+        return true
+      end
+    end
+
+    return false unless AichatSagemakerHelper.can_request_aichat_chat_completion? && current_user&.has_aichat_access?
   end
 
   private def should_throttle_request_count?
