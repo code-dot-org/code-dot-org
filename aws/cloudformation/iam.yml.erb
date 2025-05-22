@@ -1077,7 +1077,6 @@ roles.each do |name, config| %>
                 Action:
                   - ecs:CreateCluster
                   - ecs:RegisterTaskDefinition
-                  - ecs:DeregisterTaskDefinition
                   - ecs:CreateService
                   - ecs:UpdateService
                   - ecs:DescribeTaskDefinition
@@ -1090,6 +1089,10 @@ roles.each do |name, config| %>
                   - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:cluster/*"
                   - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:task-definition/*<%=environment_type%>*:*"
                   - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:service/*/marketing-sites-<%=environment_type%>-*"
+              - Effect: Allow
+                Action:
+                  - ecs:DeregisterTaskDefinition
+                Resource: '*'
               # ELB resources
               - Effect: Allow
                 Action:
@@ -1106,6 +1109,7 @@ roles.each do |name, config| %>
                   - elasticloadbalancing:DeleteTargetGroup
                   - elasticloadbalancing:DeregisterTargets
                   - elasticloadbalancing:ModifyTargetGroupAttributes
+                  - elasticloadbalancing:ModifyLoadBalancerAttributes
                 Resource: '*'
               # CloudFront resources
               - Effect: Allow
