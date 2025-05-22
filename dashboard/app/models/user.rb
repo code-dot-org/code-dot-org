@@ -94,6 +94,7 @@ class User < ApplicationRecord
   include LevelProgressable
   include LocaleHelper
   include Nameable
+  include Username
   include UserMultiAuthHelper
   include UserPermissionGrantee
   include EmailValidations
