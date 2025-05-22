@@ -74,7 +74,8 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   handleInstructionsTextClick,
   className,
 }) => {
-  const {onRun, onStop, levelProperties} = useCodebridgeContext();
+  const {onRun, onStop, levelProperties, AiTutor2ResponseView} =
+    useCodebridgeContext();
   const dialogControl = useDialogControl();
 
   const {
@@ -83,6 +84,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     predictSettings,
     submittable: isSubmittable,
     appName: appType,
+    aiTutor2Available,
   } = levelProperties;
 
   const scriptId = useAppSelector(state => state.lab.scriptId);
@@ -377,6 +379,8 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
               </div>
             </>
           )}
+
+          {aiTutor2Available && AiTutor2ResponseView}
           {predictSettings?.isPredictLevel && (
             <InstructorsOnly>
               <div className={moduleStyles.bubble}>

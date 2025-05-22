@@ -2,7 +2,11 @@ import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
   output: 'standalone',
-  serverExternalPackages: ['@statsig/statsig-node-core'],
+  serverExternalPackages: [
+    '@statsig/statsig-node-core',
+    '@opentelemetry/auto-instrumentations-node',
+    'pino',
+  ],
   cacheMaxMemorySize: 0, // disable default in-memory caching
   redirects: async function () {
     return [

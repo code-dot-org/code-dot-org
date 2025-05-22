@@ -54,10 +54,12 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
       ...initialValue,
       events: initialValue.events.map(event => ({
         ...event,
-        note: convertRelativeToAbsolutePitch(
-          MusicRegistry.player.getKey(),
-          event.note
-        ),
+        note: initialValue.relative
+          ? convertRelativeToAbsolutePitch(
+              MusicRegistry.player.getKey(),
+              event.note
+            )
+          : event.note,
       })),
     };
     return convertedValue;
@@ -74,7 +76,9 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
       ...currentValue,
       events: currentValue.events.map(event => ({
         ...event,
-        note: convertAbsoluteToRelativePitch(key, event.note),
+        note: currentValue.relative
+          ? convertAbsoluteToRelativePitch(key, event.note)
+          : event.note,
       })),
     };
     onChange(convertedValue);
@@ -320,7 +324,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
                   className={classNames(style, styles.innerCell)}
                   style={{backgroundColor, color}}
                 >
-                  {label.replace('#', '♯')}
+                  {label}
                 </div>
               </button>
 

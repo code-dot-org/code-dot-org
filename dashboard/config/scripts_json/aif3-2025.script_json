@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-20 16:40:22 UTC",
+    "serialized_at": "2025-05-21 18:28:59 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -5925,7 +5925,7 @@
   "resources": [
     {
       "name": "[EXEMPLAR] Sustainable Systems Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1idCnK-UdlFODd6xPUzYv7P0GkQAe7IDCSb6B9mCnBoI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1Dato9dFitzLp4ba51-oy8mAov2HxxqJH9873QlPmUvQ/edit?usp=drivesdk",
       "key": "_exemplar_sustainable_systems_project_planning_guide",
       "properties": {
         "audience": "Verified Teacher",
@@ -5937,7 +5937,7 @@
     },
     {
       "name": "[EXEMPLAR] System Diagram Template",
-      "url": "https://docs.google.com/presentation/d/1oKcSZSiVPgceup6CoQQ1rM3PnInje6alboius9oFtjA/edit#slide=id.g33a015afebb_2_0",
+      "url": "https://docs.google.com/presentation/d/1P9C5kOsQswM9LVnL2UeBKhtWKQJX4QlfOzEnfZr5vBQ/edit?usp=drivesdk",
       "key": "_exemplar_system_diagram_template",
       "properties": {
         "audience": "Verified Teacher",
@@ -5948,8 +5948,20 @@
       }
     },
     {
+      "name": "[KEY] Build a Computer System",
+      "url": "https://docs.google.com/document/d/1XpFitGPWjTMiYedgzcU6QH-xTw0ODGGq9BE0aYLo0bk/edit?usp=drivesdk",
+      "key": "_key_build_a_computer_system",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_build_a_computer_system"
+      }
+    },
+    {
       "name": "[KEY] Computer Innovations and Careers",
-      "url": "https://docs.google.com/document/d/1kjF_QUElEx-F-SXsnVNox295S_pQp1s7yUo6KSB1iyA/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1_yf3mrDkc6unk--0G_YlPCQk1ljB6uMQAbQCqAU7JHc/edit?usp=drivesdk",
       "key": "_key_computer_innovations_and_careers",
       "properties": {
         "audience": "Verified Teacher",
@@ -5961,7 +5973,7 @@
     },
     {
       "name": "[KEY] Hardware",
-      "url": "https://docs.google.com/document/d/1EbLc2x1QUroI3ho1Bj1MwW7P1dJqqYMxeJRw57q6YbU/view",
+      "url": "https://docs.google.com/document/d/1JtAo1SaHvH4H-o4nrbL6OBp5jcr7TzhIagRnI7g0qEw/edit?usp=drivesdk",
       "key": "_key_hardware",
       "properties": {
         "audience": "Verified Teacher",
@@ -5973,7 +5985,7 @@
     },
     {
       "name": "[KEY] How AI Uses Data",
-      "url": "https://docs.google.com/document/d/1UzQIo8HLwajsZS1z1EHmqsllqj8OnnFnxTiT76FtFM4/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1ivbKC2yDLRlwS0u-JHkKuqpEOUXHhrd--bThQWf0kT0/edit?usp=drivesdk",
       "key": "_key_how_ai_uses_data",
       "properties": {
         "audience": "Verified Teacher",
@@ -5984,8 +5996,20 @@
       }
     },
     {
+      "name": "[KEY] Lesson 10 - Unit Guide",
+      "url": "https://docs.google.com/document/d/1XpyPLl4isakHOVH2271ObfGMh--dKEYG3xfcmezzVT8/edit?usp=drivesdk",
+      "key": "_key_lesson_10_-_unit_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_lesson_10_-_unit_guide"
+      }
+    },
+    {
       "name": "[KEY] Optimization",
-      "url": "https://docs.google.com/document/d/1H9XPYEzXhsiGsjBuQ5rq1THzxlEOeLuNu1wcPLnfSVU/view",
+      "url": "https://docs.google.com/document/d/1BmbrbcqsWgu9YSMzdFAF_BfW4eWP5Xs3TTlz-aIyu1E/edit?usp=drivesdk",
       "key": "_key_optimization",
       "properties": {
         "audience": "Verified Teacher",
@@ -5996,8 +6020,20 @@
       }
     },
     {
+      "name": "[KEY] PC Builder Activity",
+      "url": "https://docs.google.com/presentation/d/1-WeP7YX9XekGn-r8c7RPh0Oq85GtVrqx7jnxn7ZcORA/edit?slide=id.g347c06ff755_2_174#slide=id.g347c06ff755_2_174",
+      "key": "_key_pc_builder_activity",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_pc_builder_activity"
+      }
+    },
+    {
       "name": "[KEY] Processing Library Data",
-      "url": "https://docs.google.com/document/d/1tEMbuvWzG8wpZMprMWU7R3yCpnZi94AnQPojEjiTUec/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1F0mjVvrx_P6pghkku5I7zMXyBHZb_erP_4XxSvwFgM0/edit?usp=drivesdk",
       "key": "_key_processing_library_data",
       "properties": {
         "audience": "Verified Teacher",
@@ -6009,7 +6045,7 @@
     },
     {
       "name": "[KEY] Scavenger Hunt",
-      "url": "https://docs.google.com/presentation/d/1PCpkYgxxRR5wpaEFrO_DTCw-MRLDb5m8ML_Xmatp3o8/view",
+      "url": "https://docs.google.com/presentation/d/1RZfk8L4ocefTPwf17cX8gdQYOQdeVfgXIDGwW2rH9hE/edit?usp=drivesdk",
       "key": "_key_scavenger_hunt",
       "properties": {
         "audience": "Verified Teacher",
@@ -6021,7 +6057,7 @@
     },
     {
       "name": "[KEY] The Internet of Things",
-      "url": "https://docs.google.com/document/d/11FSYNswG6MqJzWekFKQgx0J_T6OGXBHu7-Rg3BgCOiM/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1-_eH71hUvgbKi3dVHCENX8qNLYVtIWMupwkMiRRbAsg/edit?usp=drivesdk",
       "key": "_key_the_internet_of_things",
       "properties": {
         "audience": "Verified Teacher",
@@ -6033,7 +6069,7 @@
     },
     {
       "name": "[KEY] User Testing",
-      "url": "https://docs.google.com/document/d/1w5XAC55XcShdJEqr6aNyqdFcxVctCVz0oahF2ffpXDY/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1uKchorQvM--IFoPcoBlNNvLinVydVTm8CdL13M4PK1M/edit?usp=drivesdk",
       "key": "_key_user_testing",
       "properties": {
         "audience": "Verified Teacher",
@@ -6045,7 +6081,7 @@
     },
     {
       "name": "AI and Emerging Technology Slide Template",
-      "url": "https://docs.google.com/presentation/d/1Akl28SCAO4jirah8PNAh_CpiHVemESY5UBbhFLN_KLc/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1MxMLZUpOq8ovgR5G0kdON9CF6LeOQH05WIBs9vHDGaQ/edit?usp=drivesdk",
       "key": "ai_and_emerging_technology_slide_template",
       "properties": {
         "audience": "Student",
@@ -6057,7 +6093,7 @@
     },
     {
       "name": "AI and the Systems That Power It Unit Guide",
-      "url": "https://docs.google.com/document/d/1xgkyggbdaHpxDhD_Cvx1RptJUrzf8sUcGHKfDLs5-CU/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1XO4Z4l7dMaK4Y1r45wDUNibkpwUaAq7joHz5qVW0Au0/edit?usp=drivesdk",
       "key": "ai_and_the_systems_that_power_it_unit_guide",
       "properties": {
       },
@@ -6122,7 +6158,7 @@
     },
     {
       "name": "Build a Computer System",
-      "url": "https://docs.google.com/document/d/18i-SIXawiNb588vIFm4Ob22GwYwUFrNVTiJJJBdAkHM/",
+      "url": "https://docs.google.com/document/d/1cyNOwB-YP0QENv_KIxgvtOSJCP-w9HPYEDkmGFdIxK8/edit?usp=drivesdk",
       "key": "build_a_computer_system",
       "properties": {
         "audience": "Student",
@@ -6135,7 +6171,7 @@
     },
     {
       "name": "Build a Computer System",
-      "url": "https://docs.google.com/presentation/d/1-KPyOZvecZiR2SVR9fx9DFUdYqkh_x7kUn_kvRhManw/view",
+      "url": "https://docs.google.com/presentation/d/1NfrVDQ_IijLKp4sSGaW9JPwfGJyPFGo6_w7-Gn7Vpjg/edit?usp=drivesdk",
       "key": "build_a_computer_system_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -6147,7 +6183,7 @@
     },
     {
       "name": "Computer Innovations and Careers",
-      "url": "https://docs.google.com/document/d/1OV8h6juGv6ddmEvx6ZwjQHcitBhBiF3Bn4AZECbwtKM/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1LjpKMsrQOISNA0WIKOwE59MVWj1vltxV3vAyTL93_CE/edit?usp=drivesdk",
       "key": "computer_innovations_and_careers",
       "properties": {
         "audience": "Student",
@@ -6160,7 +6196,7 @@
     },
     {
       "name": "Computer Simulator",
-      "url": "https://docs.google.com/presentation/d/1LmteWUW0H182J0JAPGkOK3aFGmAPPGSlk4az5gqvDxk/view",
+      "url": "https://docs.google.com/presentation/d/1Br07YKDJfd6fd3KDKH9EtMVVwazmH8UGgjSsZESvRG0/edit?usp=drivesdk",
       "key": "computer_simulator",
       "properties": {
         "audience": "Student",
@@ -6172,7 +6208,7 @@
     },
     {
       "name": "AI and the Systems That Power It Unit Guide",
-      "url": "https://docs.google.com/document/d/1xgkyggbdaHpxDhD_Cvx1RptJUrzf8sUcGHKfDLs5-CU/view",
+      "url": "https://docs.google.com/document/d/1XO4Z4l7dMaK4Y1r45wDUNibkpwUaAq7joHz5qVW0Au0/edit?usp=drivesdk",
       "key": "computer_systems_and_devices_unit_guide",
       "properties": {
         "audience": "Student",
@@ -6196,7 +6232,7 @@
     },
     {
       "name": "Computing Innovation Map (Alternative)",
-      "url": "https://docs.google.com/presentation/d/11_vTxAX7WZTmFqn2jQRvDkErAhHlQriLj2KfWEJM2Zg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1Xf2jIO3BChbp8Xr4qsHYgG1LovjzDzU6uoClzC3clXU/edit?usp=drivesdk",
       "key": "computing_innovation_map_alternative_",
       "properties": {
         "audience": "Student",
@@ -6208,7 +6244,7 @@
     },
     {
       "name": "Data in Computer Systems",
-      "url": "https://docs.google.com/document/d/1Z2aKZH9uA0JdTH3ya4aui0njw5CcOjzaylUkagpJzEI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1Z2aKZH9uA0JdTH3ya4aui0njw5CcOjzaylUkagpJzEI/edit?usp=sharing\t",
       "key": "data_in_computer_systems",
       "properties": {
         "audience": "Student",
@@ -6221,7 +6257,7 @@
     },
     {
       "name": "Data in Computer Systems",
-      "url": "https://docs.google.com/presentation/d/10vG0dTzFw1Y3VJbzpcPka3P0tYb-7WrHDESQbga7wD4/view",
+      "url": "https://docs.google.com/presentation/d/1yZBEBv1l9QUBl1-6SN8IH7QEnls62BurmyQhHkJciqo/edit?usp=drivesdk",
       "key": "data_in_computer_systems_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -6233,7 +6269,7 @@
     },
     {
       "name": "Ethical Guideline",
-      "url": "https://docs.google.com/document/d/1IULMkna5N-bqDlZ6A-E1qflg2QiOMie6So6olIY5HJA/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1XLXq0hnSJlaImTAxhIkJ-jsdNrCivOKAcgZQ0oRkfOM/edit?usp=drivesdk",
       "key": "ethical_guideline",
       "properties": {
         "audience": "Student",
@@ -6245,7 +6281,7 @@
     },
     {
       "name": "Guess Who? Device Edition",
-      "url": "https://docs.google.com/document/d/1WHQ70QDVp4FG2TJEN7GRA3nRfmb2WWuyIW3zRBFFR3k/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1L6OaYMw_i3p5d7fT3zMU4DRfIPj_oTbRcfdY1ND0ziw/edit?tab=t.0",
       "key": "guess_who_device_edition",
       "properties": {
         "audience": "Student",
@@ -6258,7 +6294,7 @@
     },
     {
       "name": "Hardware",
-      "url": "https://docs.google.com/document/d/1IhtigjCqB-sVtAaLFB0j1ed7Msxu0n-SI1G9ADjx66c/view",
+      "url": "https://docs.google.com/document/d/12tg776-hUaREdIz21GeymBx6o4kHy4g9SSQfWDWrcS4/edit?usp=drivesdk",
       "key": "hardware",
       "properties": {
         "audience": "Student",
@@ -6271,7 +6307,7 @@
     },
     {
       "name": "Hardware",
-      "url": "https://docs.google.com/presentation/d/1WsSW6ygqmnMUznpWdctNcj1fPrFtktBhwPRhtUOqsdI/view",
+      "url": "https://docs.google.com/presentation/d/1i-Uj7o2zLYBGs2uPYKyooLfDT3gJi6nXdmwegdA-9Ic/edit?usp=drivesdk",
       "key": "hardware_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -6283,7 +6319,7 @@
     },
     {
       "name": "Hardware Components",
-      "url": "https://docs.google.com/document/d/1Lqtsetwfnt3OnqHNolO8of2SlelI26LHefexVw1UC44/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1Iv0Cjxeaj6jIOBjljmBq0GPNh5ciHURN2abSRh0Vkns/edit?usp=drivesdk",
       "key": "hardware_components",
       "properties": {
         "audience": "Verified Teacher",
@@ -6295,7 +6331,7 @@
     },
     {
       "name": "How AI Uses Data",
-      "url": "https://docs.google.com/document/d/1ZT8_qTrlu1jCPLzlaX-GMfRrfAz3aBc1aVxfkcC-G5w/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1gG4ZFYo_xMdzgIWV5iaUBIhZhhertxdKw_DMzBjdWMA/edit?usp=drivesdk",
       "key": "how_ai_uses_data",
       "properties": {
         "audience": "Student",
@@ -6308,7 +6344,7 @@
     },
     {
       "name": "How AI Uses Data",
-      "url": "https://docs.google.com/presentation/d/1XKNXXHR597Miswte9i57sSd0h0ukLaXuPeNoEXgCpZQ/view",
+      "url": "https://docs.google.com/presentation/d/1X0pcG_LASOP2WM4bjfASA_v2N53FW9e4Zs5kE0bNfH4/edit?usp=drivesdk",
       "key": "how_ai_uses_data_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -6332,7 +6368,7 @@
     },
     {
       "name": "Introduction to Computer Systems",
-      "url": "https://docs.google.com/presentation/d/1i6CSO3A5GbcZGk6Q6vzbF3LXD_oSqCMejJZdBSD0_aQ/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/16uMZ20kHeXii0BAGGWt2qf2tCuIIExYyQugJFM-SJGg/edit?usp=drivesdk",
       "key": "introduction_to_computer_systems",
       "properties": {
         "audience": "Verified Teacher",
@@ -6344,7 +6380,7 @@
     },
     {
       "name": "IoT and Emerging Technologies",
-      "url": "https://docs.google.com/presentation/d/1v5f1DdIv1Y9aOWzKNvz1q71Td4-HMbg5T11ECfeh6xo/view",
+      "url": "https://docs.google.com/presentation/d/18tkvxyqbkgTm3mDZUAdl_lsdGqfEVJ92bXH44ojkM-E/edit?usp=drivesdk",
       "key": "iot_and_emerging_technologies",
       "properties": {
         "audience": "Verified Teacher",
@@ -6356,7 +6392,7 @@
     },
     {
       "name": "Just Because We Can, Should We?",
-      "url": "https://docs.google.com/presentation/d/1Qq0TYhKPcoyR1gbFlgce98Zjuu5upBxoBAQpSQq9DQg/view",
+      "url": "https://docs.google.com/presentation/d/1u-fm1_SFuBgk2nwA2I2-ID5Ev3xNZiNoxueNlVxJtF0/edit?usp=drivesdk",
       "key": "just_because_we_can_should_we_",
       "properties": {
         "audience": "Verified Teacher",
@@ -6368,7 +6404,7 @@
     },
     {
       "name": "Library Books Dataset",
-      "url": "https://docs.google.com/spreadsheets/d/1PTUtOodDTW-5tsD2-rGgKBvY0OWvq9SwBxyJoTjbrhU/edit?usp=sharing",
+      "url": "https://docs.google.com/spreadsheets/d/1HDacvJjCHt-7rycng7DXbmmpvxEi2C50JATI7hP-UEc/edit?usp=sharing",
       "key": "library_books_dataset",
       "properties": {
         "audience": "Student",
@@ -6380,7 +6416,7 @@
     },
     {
       "name": "Optimization",
-      "url": "https://docs.google.com/document/d/19hYR-jQpZqWZTb4qjkKRWMdVOj-YdwPorcNXkVhuIGw/view",
+      "url": "https://docs.google.com/document/d/1BoFQgaB9A-sAGPAUYAcYVO-_ZSe8m7c2dGX2moPeHnE/edit?usp=drivesdk",
       "key": "optimization",
       "properties": {
         "audience": "Student",
@@ -6393,7 +6429,7 @@
     },
     {
       "name": "Processing Data in a System",
-      "url": "https://docs.google.com/presentation/d/1TpPrOyt5NsXhaFUIu6zwB9yIFGsX9SxiyL_fbeW7ZQw/view",
+      "url": "https://docs.google.com/presentation/d/1E2e0-Ul9JrAsYguCmZAJGT-0HeymGarSK91B7ZatLc4/edit?usp=drivesdk",
       "key": "processing_data_in_a_system",
       "properties": {
         "audience": "Verified Teacher",
@@ -6405,7 +6441,7 @@
     },
     {
       "name": "Processing Library Data",
-      "url": "https://docs.google.com/document/d/1XzYTHgCSkDFogdTEkddYqgm6heBQ2s-pYSlcNkJNZYs/edit?tab=t.0",
+      "url": "https://docs.google.com/document/d/1s-vOm6AGMJnQYHt2X6eBQ-V0fAE9F6dwHpIIfWTRst8/edit?usp=drivesdk",
       "key": "processing_library_data",
       "properties": {
         "audience": "Student",
@@ -6418,7 +6454,7 @@
     },
     {
       "name": "Scavenger Hunt",
-      "url": "https://docs.google.com/presentation/d/1KVVa5pvhBAT1TWBjBwcxM2CZOAl-4Kt_1Fyz2AFjM-E/view",
+      "url": "https://docs.google.com/presentation/d/1VC8GDgFfCS9YlQMfpjWfqLqOO6G63GytX5vRKUtFDYw/edit?usp=drivesdk",
       "key": "scavenger_hunt",
       "properties": {
         "audience": "Student",
@@ -6430,7 +6466,7 @@
     },
     {
       "name": "Smart Classroom Template",
-      "url": "https://docs.google.com/presentation/d/1poFCcIbGmOJY-nevkh99yXwAlU11aES1vt8y90uH_Jg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/11XsC2sKi0AYy49yZV3sSWTMAvlFGlMgeHeCn2YQ6I74/edit?usp=drivesdk",
       "key": "smart_classroom_template",
       "properties": {
         "audience": "Student",
@@ -6442,7 +6478,7 @@
     },
     {
       "name": "Software and Operating Systems",
-      "url": "https://docs.google.com/presentation/d/1mmaHrQBprBkcsn-rBkY_twYPjAmou6Bh7ZMjncO3Bbs/view",
+      "url": "https://docs.google.com/presentation/d/1ivljfLk5QEHZTFeDWmWOI8N33SCZYiYDO4QzeeV-R3M/edit?usp=drivesdk",
       "key": "software_and_operating_systems",
       "properties": {
         "audience": "Verified Teacher",
@@ -6454,7 +6490,7 @@
     },
     {
       "name": "Station Activity Cards",
-      "url": "https://docs.google.com/presentation/d/1CVNiv35uMyRT7aWyngyNmFI9TAIts_q2VMy2I6__A_M/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1SCsG2f4UMTzSb4uw2cxF8M1dsC4vtzYphrxbxOEtJXU/edit?usp=drivesdk",
       "key": "station_activity_cards",
       "properties": {
         "audience": "Verified Teacher",
@@ -6466,7 +6502,7 @@
     },
     {
       "name": "Sustainable Systems Project",
-      "url": "https://docs.google.com/presentation/d/1lXaMbXq519PNx-B9kNmSUvtE4IH7PI7zjtTJsGBAC4M/view",
+      "url": "https://docs.google.com/presentation/d/12wyuza4y1dtipfaZ1C7NroXnY4sMzy-kVdiKK8C_GoY/edit?usp=drivesdk",
       "key": "sustainable_systems_project",
       "properties": {
         "audience": "Verified Teacher",
@@ -6478,7 +6514,7 @@
     },
     {
       "name": "Sustainable Systems Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1NH12geFM3xXpVWjY9U_U06nwnRM4t6HcnX0jOYg-Tu0/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1-bJOm3T_O1e4wljgCmbJFhvnDCoEHeZEV4TgLfHVDrw/edit?usp=drivesdk",
       "key": "sustainable_systems_project_planning_guide",
       "properties": {
         "audience": "Student",
@@ -6491,7 +6527,7 @@
     },
     {
       "name": "System Diagram Checklist",
-      "url": "https://docs.google.com/document/d/1suLex6X4Wa6qmI-ErVLly2xPwoHTH_S5JbK7ZutQ9vg/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1S6VZ4m_LGh3jtQzyhwZefxgaQZsB5g6ouSArvc-m5j4/edit?usp=drivesdk",
       "key": "system_diagram_checklist",
       "properties": {
         "audience": "Student",
@@ -6504,7 +6540,7 @@
     },
     {
       "name": "System Diagram Template",
-      "url": "https://docs.google.com/presentation/d/1NXn4u6z4UOKD3FBwoe9_cmkteDOVIyKghETSOOfXOSs/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1--YAf2B_F6JyHNget4slQWEehQSaVPHSl6bbD29Zjjo/edit?usp=drivesdk",
       "key": "system_diagram_template",
       "properties": {
         "audience": "Student",
@@ -6516,7 +6552,7 @@
     },
     {
       "name": "Technology Ethics Discussion Guide",
-      "url": "https://docs.google.com/document/d/1PZ_e2m9wDqctgwZCiTo6CZYu1yPVxAdl1yhJVfry5aI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1IfC_-shBbZUB-5DMYhrC86JsgJI4AC5KnddIaRvGYnM/edit?usp=drivesdk",
       "key": "technology_ethics_roleplaying_discussion_guide",
       "properties": {
         "audience": "Verified Teacher",
@@ -6528,7 +6564,7 @@
     },
     {
       "name": "The Internet of Things",
-      "url": "https://docs.google.com/document/d/1cZJnnd-3-69q9_3oIDWskQhu6vI-7nRJgYhH5wL7DxE/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1W4HpsHeHr2QbA6JEXUrGV76xzJcfNDu_y-aicMhNu1I/edit?usp=drivesdk",
       "key": "the_internet_of_things",
       "properties": {
         "audience": "Student",
@@ -6541,7 +6577,7 @@
     },
     {
       "name": "Troubleshooting and Optimizing Hardware",
-      "url": "https://docs.google.com/presentation/d/1347zxZ4DK2hcXecZNKMasG7MvBBz3Xz1A_L13VfqjQA/view",
+      "url": "https://docs.google.com/presentation/d/1eWq_1tqLXwzR683dbPXWZxuPDp-OuYiiZOVHiLBO_NM/edit?usp=drivesdk",
       "key": "troubleshooting_and_optimizing_hardware",
       "properties": {
         "audience": "Verified Teacher",
@@ -6553,7 +6589,7 @@
     },
     {
       "name": "Troubleshooting and Optimizing Software",
-      "url": "https://docs.google.com/presentation/d/1ehVezwU2FNkrD2GNRVLVcKCzkAV6TViD7de3Cg5JM6I/view",
+      "url": "https://docs.google.com/presentation/d/1mqbKGSob1u05LPmptD4ZlHbHFtHgh29XxZAW9Oj3IjI/edit?usp=drivesdk",
       "key": "troubleshooting_and_optimizing_software",
       "properties": {
         "audience": "Verified Teacher",
@@ -6565,7 +6601,7 @@
     },
     {
       "name": "Troubleshooting Hardware Issues",
-      "url": "https://docs.google.com/document/d/12cuoprpjClVYBoBw0B7FdqrGaKGaOlexuj8VK3-vZds/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1_pBMwBBZPaxkhE5RLXHx6C_nySbxYNqIRkC5T7QjEnw/edit?tab=t.0#heading=h.kvosue8yonwy",
       "key": "troubleshooting_hardware_issues",
       "properties": {
         "audience": "Student",
@@ -6602,7 +6638,7 @@
     },
     {
       "name": "User Testing",
-      "url": "https://docs.google.com/presentation/d/1CFg-WZX3zuwaVRQxrWRGUhZSXPy4laB-k6b5jNHWLc0/",
+      "url": "https://docs.google.com/presentation/d/1UC4dnTYyqo8XhS2QBZoMA_Gaomfv_lzX2CFr7_dB7yE/edit?usp=drivesdk",
       "key": "user_testing",
       "properties": {
         "audience": "Verified Teacher",
@@ -6614,7 +6650,7 @@
     },
     {
       "name": "User Testing",
-      "url": "https://docs.google.com/document/d/1O0rgZHA5Akxq1ANy6nalB1B1y6x6YmGapeQU3gQ8PDM/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1Nqb8_xopj7cL8vE5XUARg4L-3PCY9GcporaBdUKHHXw/edit?usp=drivesdk",
       "key": "user_testing_1",
       "properties": {
         "audience": "Student",
@@ -6627,7 +6663,7 @@
     },
     {
       "name": "Using AI as a Collaborator",
-      "url": "https://docs.google.com/document/d/1LfC1VCc8M8raXw_vjdXdZaNWAglVWDKtnOQMXgXUj1c/view",
+      "url": "https://docs.google.com/document/d/1OdC2q2I1TnrOdJ3LJH8hRlxG-TAF1l0WoBFSOO8gQE0/edit?usp=drivesdk",
       "key": "using_ai_as_a_collaborator",
       "properties": {
         "audience": "Student",
@@ -6663,6 +6699,12 @@
     }
   ],
   "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Computer System",
+        "resource.key": "_key_build_a_computer_system"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Build a Computer System",
@@ -6709,6 +6751,12 @@
       "seeding_key": {
         "lesson.key": "Hardware",
         "resource.key": "_key_hardware"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hardware",
+        "resource.key": "_key_pc_builder_activity"
       }
     },
     {
@@ -6799,6 +6847,12 @@
       "seeding_key": {
         "lesson.key": "Introduction to Computer Systems",
         "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "IoT and Emerging Technologies",
+        "resource.key": "_key_lesson_10_-_unit_guide"
       }
     },
     {

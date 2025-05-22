@@ -50,7 +50,7 @@ const EditorialCard: React.FC<EditorialCardProps> = ({
   layout = EDITORIAL_CARD_LAYOUTS.HORIZONTAL,
   ...HTMLAttributes
 }) => (
-  <aside
+  <div
     {...HTMLAttributes}
     className={classNames(
       moduleStyles.editorialCard,
@@ -105,7 +105,7 @@ const EditorialCard: React.FC<EditorialCardProps> = ({
         </Link>
       )}
     </div>
-  </aside>
+  </div>
 );
 
 export default EditorialCard;
