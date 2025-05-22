@@ -100,7 +100,7 @@ export const HeroBannerContentfulComponentDefinition: ComponentDefinition = {
       type: 'Array',
       group: 'content',
       validations: {
-        bindingSourceType: ['entry', 'asset'],
+        bindingSourceType: ['entry'],
         required: true,
       },
     },
