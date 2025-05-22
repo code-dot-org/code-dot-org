@@ -16,8 +16,6 @@ function MiniView(props) {
     isSummaryView,
     hasGroups,
     scriptName,
-    courseName,
-    unitPosition,
     hasFullProgress,
     selectedSectionId,
     minimal,
@@ -49,8 +47,6 @@ function MiniView(props) {
       {!minimal && (
         <MiniViewTopRow
           scriptName={scriptName}
-          courseName={courseName}
-          unitPosition={unitPosition}
           selectedSectionId={selectedSectionId}
         />
       )}
@@ -66,8 +62,6 @@ MiniView.propTypes = {
   isSummaryView: PropTypes.bool.isRequired,
   hasGroups: PropTypes.bool.isRequired,
   scriptName: PropTypes.string.isRequired,
-  courseName: PropTypes.string,
-  unitPosition: PropTypes.number,
   hasFullProgress: PropTypes.bool.isRequired,
   selectedSectionId: PropTypes.number,
 };

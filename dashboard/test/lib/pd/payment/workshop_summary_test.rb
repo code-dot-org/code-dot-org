@@ -34,7 +34,8 @@ module Pd::Payment
     end
 
     test 'workshop summary reports nil for attendance count for all sessions attendance for admin workshop' do
-      @ended_admin_workshop = create :admin_workshop, :ended
+      @ended_admin_workshop = build :admin_workshop, :ended
+      @ended_admin_workshop.save(validate: false)
       @workshop_summary = WorkshopSummary.new(
         workshop: @ended_admin_workshop,
         pay_period: 'a pay period',

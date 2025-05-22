@@ -22,6 +22,7 @@ export type ActionBlockContentfulProps = ActionBlockProps & {
 };
 
 const ActionBlock: React.FC<ActionBlockContentfulProps> = ({
+  className,
   overline,
   title,
   description,
@@ -32,6 +33,7 @@ const ActionBlock: React.FC<ActionBlockContentfulProps> = ({
   publishedDate,
 }) => (
   <DSCOActionBlock
+    className={className}
     overline={overline}
     title={title}
     description={description}

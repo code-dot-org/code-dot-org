@@ -25,7 +25,6 @@ const defaultProps = {
       title: 'CSP Unit 1',
       name: 'csp1',
       description: 'desc',
-      path: '/s/csp1',
     },
     {
       course_id: 30,
@@ -33,7 +32,6 @@ const defaultProps = {
       title: 'CSP Unit 2',
       name: 'csp2',
       description: 'desc',
-      path: '/s/csp2',
     },
   ],
   isVerifiedInstructor: true,

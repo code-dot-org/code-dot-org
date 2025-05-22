@@ -15,7 +15,7 @@
 
 :javascript
   //<![CDATA[
-  var script_path = "#{@script_level && build_script_level_path(@script_level, unit_group_unit: @unit_group_unit)}";
+  var script_path = "#{@script_level && build_script_level_path(@script_level)}";
   var appOptions = #{app_options.to_json};
   appOptions.locale = '#{js_locale}';
   //]]>

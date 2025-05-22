@@ -20,23 +20,20 @@ class ScriptLevelsController < ApplicationController
 
   # Return true if request is one that can be publicly cached.
   def cachable_request?(request)
-    unit_context = ScriptLevelsController.get_unit_context(request)
-    unit = unit_context[:unit]
-    unit && ScriptConfig.allows_public_caching_for_script(unit.name) &&
+    script = ScriptLevelsController.get_script(request)
+    script && ScriptConfig.allows_public_caching_for_script(script.name) &&
       !ScriptConfig.uncached_script_level_path?(request.path)
   end
 
   def reset
     authorize! :read, ScriptLevel
-    unit_context = ScriptLevelsController.get_unit_context(request)
-    unit_group_unit = unit_context[:unit_group_unit]
-    @script = unit_context[:unit]
+    @script = ScriptLevelsController.get_script(request)
     prevent_caching
 
     # delete the client state and other session state if the user is not signed in
     # and start them at the beginning of the script.
     # If the user is signed in, continue normally.
-    redirect_path = build_script_level_path(@script.starting_level, unit_group_unit: unit_group_unit)
+    redirect_path = build_script_level_path(@script.starting_level)
 
     if current_user
       redirect_to(redirect_path)
@@ -52,9 +49,7 @@ class ScriptLevelsController < ApplicationController
 
   def next
     authorize! :read, ScriptLevel
-    unit_context = ScriptLevelsController.get_unit_context(request)
-    @script = unit_context[:unit]
-    unit_group_unit = unit_context[:unit_group_unit]
+    @script = ScriptLevelsController.get_script(request)
 
     if @script.redirect_to?
       redirect_to "/s/#{@script.redirect_to}/next"
@@ -65,18 +60,16 @@ class ScriptLevelsController < ApplicationController
       redirect_to @script.finish_url
       return
     end
-    path = build_script_level_path(next_script_level, unit_group_unit: unit_group_unit)
+    path = build_script_level_path(next_script_level)
     path += "?section_id=#{params[:section_id]}" if params[:section_id]
-    redirect_to(path)
+    redirect_to(path) && return
   end
 
   use_reader_connection_for_route(:show)
   def show
     @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
     authorize! :read, ScriptLevel
-    unit_context = ScriptLevelsController.get_unit_context(request)
-    @unit_group_unit = unit_context[:unit_group_unit]
-    @script = unit_context[:unit]
+    @script = ScriptLevelsController.get_script(request)
     @script_level = ScriptLevelsController.get_script_level(@script, params)
 
     # Check if the script or current level is deprecated
@@ -102,7 +95,7 @@ class ScriptLevelsController < ApplicationController
 
       # avoid a redirect loop if the string substitution failed
       if new_path == request.fullpath
-        redirect_to build_script_level_path(new_script.starting_level, unit_group_unit: @unit_group_unit)
+        redirect_to build_script_level_path(new_script.starting_level)
         return
       end
 
@@ -159,10 +152,14 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    canonical_path = build_script_level_path(@script_level, unit_group_unit: @unit_group_unit, **@extra_params)
+    course_name = params[:course_course_name]
+    unit_position = params[:unit_position]
+    canonical_path = build_script_level_path(@script_level, @extra_params, course_name: course_name, unit_position: unit_position)
     if request.path != canonical_path && params[:view] != 'summary'
       canonical_path << "?#{request.query_string}" unless request.query_string.empty?
-      redirect_to canonical_path, status: :moved_permanently
+      # TODO: TEACH-1916 Restore :moved_permanently after nested url migration is stable.
+      #redirect_to canonical_path, status: :moved_permanently
+      redirect_to canonical_path
       return
     end
 
@@ -237,15 +234,13 @@ class ScriptLevelsController < ApplicationController
   def level_properties
     authorize! :read, ScriptLevel
 
-    unit_context = ScriptLevelsController.get_unit_context(request)
-    unit_group_unit = unit_context[:unit_group_unit]
-    @script = unit_context[:unit]
+    @script = ScriptLevelsController.get_script(request)
     @script_level = ScriptLevelsController.get_script_level(@script, params)
     raise ActiveRecord::RecordNotFound unless @script_level
 
     @level = select_level
 
-    render json: @level.summarize_for_lab2_properties(@script, @script_level, @current_user, unit_group_unit: unit_group_unit)
+    render json: @level.summarize_for_lab2_properties(@script, @script_level, @current_user)
   end
 
   # Get a list of hidden lessons for the current users section
@@ -286,9 +281,7 @@ class ScriptLevelsController < ApplicationController
   def lesson_extras
     authorize! :read, ScriptLevel
 
-    unit_context = ScriptLevelsController.get_unit_context(request)
-    @script = unit_context[:unit]
-    @unit_group_unit = unit_context[:unit_group_unit]
+    @script = ScriptLevelsController.get_script(request)
     raise ActiveRecord::RecordNotFound unless @script
 
     if @script.can_be_instructor?(current_user)
@@ -325,7 +318,7 @@ class ScriptLevelsController < ApplicationController
       params[:lesson_position].to_i
     )
     @script = @lesson.script
-    script_bonus_levels_by_lesson = @script.get_bonus_script_levels(@lesson, unit_group_unit: @unit_group_unit)
+    script_bonus_levels_by_lesson = @script.get_bonus_script_levels(@lesson)
 
     user = @user || current_user
     unless user.nil?
@@ -360,9 +353,7 @@ class ScriptLevelsController < ApplicationController
     require_levelbuilder_mode
     authorize! :read, ScriptLevel
 
-    unit_context = ScriptLevelsController.get_unit_context(request)
-    unit_group_unit = unit_context[:unit_group_unit]
-    script = unit_context[:unit]
+    script = Unit.get_from_cache(params[:script_id])
 
     lesson =
       if params[:lesson_position]
@@ -371,10 +362,10 @@ class ScriptLevelsController < ApplicationController
         script.lesson_by_relative_position(params[:lockable_lesson_position], unnumbered_lesson: true)
       end
 
-    render json: lesson.summary_for_lesson_plans(unit_group_unit: unit_group_unit)
+    render json: lesson.summary_for_lesson_plans
   end
 
-  def self.get_unit_context(request)
+  def self.get_script(request)
     # /s/.../lessons/.../levels/... path
     params = request.params
     if params[:script_id]
@@ -386,25 +377,19 @@ class ScriptLevelsController < ApplicationController
         # depending on this incorrect behavior, and we are trying to deprecate this
         # codepath anyway, the current plan is to not fix this bug.
         script = Unit.get_unit_family_redirect_for_user(script_id, user: nil, locale: request.locale)
-        if script
-          # get_unit_family_redirect_for_user returns a fake Unit object,
-          # so we don't need to look up context like UnitGroup or UnitGroupUnit.
-          return {
-            unit: script,
-          }
-        end
       end
       raise ActiveRecord::RecordNotFound unless script
-      return Queries::Courses.get_course_context(script.id)
+      return script
     end
 
     # /courses/.../units/.../lessons/.../levels/... path
     course_name = params[:course_course_name]
-    unit_position = params[:unit_position]
     if course_name
-      unit_context = Queries::Courses.get_unit_context(course_name, unit_position)
-      raise ActiveRecord::RecordNotFound unless unit_context
-      return unit_context
+      course = UnitGroup.get_from_cache(course_name)
+      unit_position = params[:unit_position]
+      raise ActiveRecord::RecordNotFound unless course && unit_position
+      unit_group_unit = UnitGroupUnit.get_with_position_from_cache(course.id, unit_position)
+      return Unit.get_from_cache(unit_group_unit.script_id, raise_exceptions: false) if unit_group_unit
     end
     raise ActiveRecord::RecordNotFound
   end
@@ -627,7 +612,7 @@ class ScriptLevelsController < ApplicationController
       failure: milestone_response(script_level: @script_level, level: @level, solved?: false)
     }
 
-    @next_level_link = @script_level.next_level_or_redirect_path_for_user(current_user, unit_group_unit: @unit_group_unit)
+    @next_level_link = @script_level.next_level_or_redirect_path_for_user(current_user)
 
     render 'levels/show', formats: [:html]
   end
@@ -638,8 +623,7 @@ class ScriptLevelsController < ApplicationController
   end
 
   private def set_redirect_override
-    unit_context = ScriptLevelsController.get_unit_context(request)
-    unit = unit_context[:unit]
+    unit = ScriptLevelsController.get_script(request)
     if unit && params[:no_redirect]
       VersionRedirectOverrider.set_unit_redirect_override(session, unit.name)
     end
@@ -679,8 +663,7 @@ class ScriptLevelsController < ApplicationController
   end
 
   private def redirect_to_canonical_path
-    unit_name_or_id = params[:script_id]
-    canonical_path = Services::Courses.canonical_path(request.fullpath, unit_name_or_id)
+    canonical_path = Services::Courses.canonical_path(request.fullpath, params, current_user)
     redirect_to canonical_path unless canonical_path == request.fullpath
   end
 end
