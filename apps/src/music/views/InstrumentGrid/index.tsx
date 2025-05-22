@@ -9,6 +9,7 @@ import React, {
   useState,
 } from 'react';
 
+import musicI18n from '../../locale';
 import MusicRegistry from '../../MusicRegistry';
 import {
   InstrumentEventValue,
@@ -273,12 +274,15 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
           <SegmentedButtons
             className={styles.flexAutoWidth}
             buttons={[
-              {label: 'Best Notes', value: 'simple'},
-              {label: 'All Notes', value: 'chromatic'},
+              {label: musicI18n.tuneKeyNotes(), value: 'simple'},
+              {label: musicI18n.tuneAllNotes(), value: 'chromatic'},
             ]}
-            onChange={value =>
-              setCurrentValue({...currentValue, scaleMode: value as ScaleMode})
-            }
+            onChange={value => {
+              setCurrentValue({...currentValue, scaleMode: value as ScaleMode});
+              MusicRegistry.analyticsReporter.onChangeTuneScaleMode(
+                value as ScaleMode
+              );
+            }}
             selectedButtonValue={scaleMode || 'simple'}
             size="xs"
           />
