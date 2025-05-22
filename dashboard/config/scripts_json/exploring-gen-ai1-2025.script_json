@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-20 21:02:57 UTC",
+    "serialized_at": "2025-05-22 03:30:42 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1106,8 +1106,21 @@
       }
     },
     {
-      "key": "26e96ad2-2816-41cf-8bca-2eacd1b0d05b",
+      "key": "6c77a9a7-39ce-47e2-a0b1-8e037d1a0db1",
       "position": 1,
+      "properties": {
+        "name": "Student Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6c77a9a7-39ce-47e2-a0b1-8e037d1a0db1",
+        "lesson.key": "Project: Demystifying Generative AI",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "26e96ad2-2816-41cf-8bca-2eacd1b0d05b",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1121,7 +1134,7 @@
     },
     {
       "key": "67c90367-fb96-4195-a31e-5d3cc0468545",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 80,
         "name": "Activity"
@@ -1135,7 +1148,7 @@
     },
     {
       "key": "21de5dae-a57e-4d0f-9001-a1d42bd45ea4",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1149,7 +1162,7 @@
     },
     {
       "key": "0f89c1d1-7a02-481a-83b8-ffec7875bf9f",
-      "position": 4,
+      "position": 5,
       "properties": {
         "name": "End of the Unit"
       },
@@ -1348,41 +1361,8 @@
       }
     },
     {
-      "key": "f6daebfe-0041-4f17-abca-c7b880e4506b",
-      "position": 1,
-      "properties": {
-        "description": "These levels contain the same questions as the **Warm Up** and **Wrap Up** from the lesson slide deck, allowing students to answer the questions within the Code.org platform. These can be used as a digital alternative to physical journals, and lets you take advantage of our [Student Summaries features](https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels) for checking and displaying student work. \n\nBy answering these questions in these levels, you can take advantage of discussion and differentiation strategies that elevate student voice to help you guide the discussion. See our [**Teaching Guide for Incorporating Student Responses in Lessons**](https://docs.google.com/document/d/1hbjb6Jc0tW6PcxKLWHzjxTegrUUh7sWOG4wvR_33zvY/edit) for more information on these strategies."
-      },
-      "seeding_key": {
-        "activity_section.key": "f6daebfe-0041-4f17-abca-c7b880e4506b",
-        "lesson_activity.key": "aed7b349-2e3b-4cd8-9b26-6a9a7cff637f"
-      }
-    },
-    {
-      "key": "1d2a8474-6418-4e2a-aaf6-febaaf76ad5d",
-      "position": 2,
-      "properties": {
-        "progression_name": "Warm Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "1d2a8474-6418-4e2a-aaf6-febaaf76ad5d",
-        "lesson_activity.key": "aed7b349-2e3b-4cd8-9b26-6a9a7cff637f"
-      }
-    },
-    {
-      "key": "7cf7df2c-6f73-4ea1-9f4e-615128b54e12",
-      "position": 3,
-      "properties": {
-        "progression_name": "Wrap Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "7cf7df2c-6f73-4ea1-9f4e-615128b54e12",
-        "lesson_activity.key": "aed7b349-2e3b-4cd8-9b26-6a9a7cff637f"
-      }
-    },
-    {
       "key": "735b8c19-bdd5-44b6-b6bc-c6b84614c1af",
-      "position": 4,
+      "position": 1,
       "properties": {
         "progression_name": "Lesson Recap"
       },
@@ -1530,19 +1510,8 @@
       }
     },
     {
-      "key": "be34adf3-108c-4306-86e5-274258797e37",
-      "position": 2,
-      "properties": {
-        "progression_name": "Wrap Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "be34adf3-108c-4306-86e5-274258797e37",
-        "lesson_activity.key": "97e3dc3e-e919-4220-b459-5d311dc2850e"
-      }
-    },
-    {
       "key": "39705368-cf3f-45bf-b6a7-e92a2985cd6c",
-      "position": 3,
+      "position": 2,
       "properties": {
         "progression_name": "Lesson Recap"
       },
@@ -1563,22 +1532,10 @@
       }
     },
     {
-      "key": "4d5ff506-6642-4f52-b081-b7713f6e6c4b",
+      "key": "464c9990-12a4-44c5-919d-0be3c3fab689",
       "position": 1,
       "properties": {
-        "description": "These levels contain the same questions as the **Warm Up** and **Wrap Up** from the lesson slide deck, allowing students to answer the questions within the Code.org platform. These can be used as a digital alternative to physical journals, and lets you take advantage of our [Student Summaries features](https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels) for checking and displaying student work. \n\nBy answering these questions in these levels, you can take advantage of discussion and differentiation strategies that elevate student voice to help you guide the discussion. See our [**Teaching Guide for Incorporating Student Responses in Lessons**](https://docs.google.com/document/d/1hbjb6Jc0tW6PcxKLWHzjxTegrUUh7sWOG4wvR_33zvY/edit) for more information on these strategies.",
-        "progression_name": "Warm Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "4d5ff506-6642-4f52-b081-b7713f6e6c4b",
-        "lesson_activity.key": "c4ba0def-0b95-4a80-94d6-27524470fc4c"
-      }
-    },
-    {
-      "key": "464c9990-12a4-44c5-919d-0be3c3fab689",
-      "position": 2,
-      "properties": {
-        "progression_name": "Wrap Up"
+        "progression_name": "Lesson Launch"
       },
       "seeding_key": {
         "activity_section.key": "464c9990-12a4-44c5-919d-0be3c3fab689",
@@ -1587,7 +1544,7 @@
     },
     {
       "key": "3b93820f-b6e3-4029-90ce-a738e30abfa8",
-      "position": 3,
+      "position": 2,
       "properties": {
         "progression_name": "Lesson Recap"
       },
@@ -1754,20 +1711,8 @@
       }
     },
     {
-      "key": "f498fcb6-0146-49ff-ac96-3eace73cd35f",
-      "position": 1,
-      "properties": {
-        "description": "These levels contain the same questions as the **Warm Up** and **Wrap Up** from the lesson slide deck, allowing students to answer the questions within the Code.org platform. These can be used as a digital alternative to physical journals, and lets you take advantage of our [Student Summaries features](https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels) for checking and displaying student work. \n\nBy answering these questions in these levels, you can take advantage of discussion and differentiation strategies that elevate student voice to help you guide the discussion. See our [**Teaching Guide for Incorporating Student Responses in Lessons**](https://docs.google.com/document/d/1hbjb6Jc0tW6PcxKLWHzjxTegrUUh7sWOG4wvR_33zvY/edit) for more information on these strategies.",
-        "progression_name": "Warm Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "f498fcb6-0146-49ff-ac96-3eace73cd35f",
-        "lesson_activity.key": "f7829a86-379e-46c4-83ef-d14b89f758cb"
-      }
-    },
-    {
       "key": "eef4b29c-0151-4d29-940d-050d1644558d",
-      "position": 2,
+      "position": 1,
       "properties": {
         "progression_name": "RecipeBot Data Curation"
       },
@@ -1778,7 +1723,7 @@
     },
     {
       "key": "70ee76c8-1ddc-4474-8d78-162e3e29e7f7",
-      "position": 3,
+      "position": 2,
       "properties": {
         "progression_name": "Identifying Bias"
       },
@@ -1788,19 +1733,8 @@
       }
     },
     {
-      "key": "117bfdef-5e0d-4767-95b1-883c8d2a7819",
-      "position": 4,
-      "properties": {
-        "progression_name": "Wrap Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "117bfdef-5e0d-4767-95b1-883c8d2a7819",
-        "lesson_activity.key": "f7829a86-379e-46c4-83ef-d14b89f758cb"
-      }
-    },
-    {
       "key": "67a55ec0-555a-4ded-91c6-48a5818cdb66",
-      "position": 5,
+      "position": 3,
       "properties": {
         "progression_name": "Lesson Recap"
       },
@@ -1933,17 +1867,6 @@
       }
     },
     {
-      "key": "44c038ee-19f4-4b46-b8d6-599012178a71",
-      "position": 2,
-      "properties": {
-        "progression_name": "Warm Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "44c038ee-19f4-4b46-b8d6-599012178a71",
-        "lesson_activity.key": "c8fa5880-4693-4667-8331-29178ef3cfaf"
-      }
-    },
-    {
       "key": "7b60682a-c5a1-4c00-a1f2-f14f559d5ec4",
       "position": 1,
       "properties": {
@@ -1987,19 +1910,8 @@
       }
     },
     {
-      "key": "4ee810a5-d3ea-4bb3-84a8-faaa670776e9",
-      "position": 2,
-      "properties": {
-        "progression_name": "Wrap Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "4ee810a5-d3ea-4bb3-84a8-faaa670776e9",
-        "lesson_activity.key": "2d3036a3-09c1-4dad-8499-2287364f9208"
-      }
-    },
-    {
       "key": "6fc8a483-32cb-453e-89ba-a920eccda865",
-      "position": 3,
+      "position": 2,
       "properties": {
         "progression_name": "Lesson Recap"
       },
@@ -2220,19 +2132,8 @@
       }
     },
     {
-      "key": "e977df80-c320-4376-8288-74641b26cb6f",
-      "position": 1,
-      "properties": {
-        "progression_name": "Wrap Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "e977df80-c320-4376-8288-74641b26cb6f",
-        "lesson_activity.key": "6cec371b-59e8-4af3-9cb7-debbe26ed74d"
-      }
-    },
-    {
       "key": "2794c88d-1ef5-4b78-9fc2-7473c3330795",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/d539c847ff42267b3ab8ae7a68ccc6d5-Slide30.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Imagine you have a friend who isn’t taking this class and they say “Chatbots are so magical - they know all these words that I've never seen before. How do they even do it? They must be way smarter than me”. What would you say in response?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This discussion is an opportunity to de-mystify how generative AI works. Students might try to clarify that the reason a chatbot knows so many words is because of all the pre-training it's been through. And the way it \"learns\" these words isn't really magical at all - it's just a bunch of numbers. Also encourage students to lead with empathy and reassure this person that even if they think the chatbot \"must be way smarter than me\", that's not necessarily true and once you understand how it works, it's just another piece of technology.\n\t\t<br />\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/0cea695ca0095d296aa6d12a3c6b0931-Slide31.PNG\"></td>\n    <td style=\"width: 75%\">\n      <strong>Question of the Day:</strong> How do computers represent the meanings of words?\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/8fe77147eecbc423c8e1662e5e896ff6-Slide32.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> The key vocabulary from this lesson is provided on this slide and in the lesson plan.\n    </td>\n  </tr>\n\n</table>    \n    "
       },
@@ -2243,7 +2144,7 @@
     },
     {
       "key": "18014aa7-81b3-49b7-aca4-a0ad02446cf2",
-      "position": 3,
+      "position": 2,
       "properties": {
         "progression_name": "Lesson Recap"
       },
@@ -2276,22 +2177,10 @@
       }
     },
     {
-      "key": "179f8e39-a509-4506-824d-8888c3790a3a",
+      "key": "9291d3be-f82f-4657-818f-062ff81ae592",
       "position": 1,
       "properties": {
-        "description": "These levels contain the same questions as the **Warm Up** and **Wrap Up** from the lesson slide deck, allowing students to answer the questions within the Code.org platform. These can be used as a digital alternative to physical journals, and lets you take advantage of our [Student Summaries features](https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels) for checking and displaying student work. \n\nBy answering these questions in these levels, you can take advantage of discussion and differentiation strategies that elevate student voice to help you guide the discussion. See our [**Teaching Guide for Incorporating Student Responses in Lessons**](https://docs.google.com/document/d/1hbjb6Jc0tW6PcxKLWHzjxTegrUUh7sWOG4wvR_33zvY/edit) for more information on these strategies.",
-        "progression_name": "Warm Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "179f8e39-a509-4506-824d-8888c3790a3a",
-        "lesson_activity.key": "f683139d-1c33-47f3-9c0c-fd75ee5265df"
-      }
-    },
-    {
-      "key": "9291d3be-f82f-4657-818f-062ff81ae592",
-      "position": 2,
-      "properties": {
-        "progression_name": "Wrap Up"
+        "progression_name": "Lesson Launch"
       },
       "seeding_key": {
         "activity_section.key": "9291d3be-f82f-4657-818f-062ff81ae592",
@@ -2300,7 +2189,7 @@
     },
     {
       "key": "84d34b8b-d911-41d6-a292-8041bac84497",
-      "position": 3,
+      "position": 2,
       "properties": {
         "progression_name": "Lesson Recap"
       },
@@ -2484,22 +2373,10 @@
       }
     },
     {
-      "key": "f4621e1e-229c-42ab-a059-037f0ef0574a",
+      "key": "72f4a850-b0c9-42ba-92fe-0e98d7923768",
       "position": 1,
       "properties": {
-        "description": "These levels contain the same questions as the **Warm Up** and **Wrap Up** from the lesson slide deck, allowing students to answer the questions within the Code.org platform. These can be used as a digital alternative to physical journals, and lets you take advantage of our [Student Summaries features](https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels) for checking and displaying student work. \n\nBy answering these questions in these levels, you can take advantage of discussion and differentiation strategies that elevate student voice to help you guide the discussion. See our [**Teaching Guide for Incorporating Student Responses in Lessons**](https://docs.google.com/document/d/1hbjb6Jc0tW6PcxKLWHzjxTegrUUh7sWOG4wvR_33zvY/edit) for more information on these strategies.",
-        "progression_name": "Warm Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "f4621e1e-229c-42ab-a059-037f0ef0574a",
-        "lesson_activity.key": "c6d011d8-2e92-419d-8104-52fc7f2d879d"
-      }
-    },
-    {
-      "key": "72f4a850-b0c9-42ba-92fe-0e98d7923768",
-      "position": 2,
-      "properties": {
-        "progression_name": "Activity"
+        "progression_name": "Attention Widget"
       },
       "seeding_key": {
         "activity_section.key": "72f4a850-b0c9-42ba-92fe-0e98d7923768",
@@ -2507,19 +2384,8 @@
       }
     },
     {
-      "key": "305ef97f-ae88-4d13-b79a-9beedbbdac24",
-      "position": 3,
-      "properties": {
-        "progression_name": "Wrap Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "305ef97f-ae88-4d13-b79a-9beedbbdac24",
-        "lesson_activity.key": "c6d011d8-2e92-419d-8104-52fc7f2d879d"
-      }
-    },
-    {
       "key": "366b2913-ceb8-43ea-9f2b-9038fdc964f6",
-      "position": 4,
+      "position": 2,
       "properties": {
         "progression_name": "Lesson Recap"
       },
@@ -2657,17 +2523,6 @@
       }
     },
     {
-      "key": "9c6b6c22-11cb-4b83-acf3-3029e2afbe52",
-      "position": 2,
-      "properties": {
-        "progression_name": "Warm Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "9c6b6c22-11cb-4b83-acf3-3029e2afbe52",
-        "lesson_activity.key": "53fcdf2a-79f0-4333-8e7f-94df308071d5"
-      }
-    },
-    {
       "key": "fa447aeb-24a4-4bb1-907f-f9536384dd34",
       "position": 1,
       "properties": {
@@ -2701,19 +2556,8 @@
       }
     },
     {
-      "key": "8cd2921e-bee1-42c3-85db-98931de7bc60",
-      "position": 1,
-      "properties": {
-        "progression_name": "Wrap Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "8cd2921e-bee1-42c3-85db-98931de7bc60",
-        "lesson_activity.key": "11e401e4-9adb-41cc-aab3-4f6f4a124275"
-      }
-    },
-    {
       "key": "04b56ae0-c8c6-4f3f-8e47-7ed3234f6742",
-      "position": 2,
+      "position": 1,
       "properties": {
         "progression_name": "Lesson Recap"
       },
@@ -2734,31 +2578,8 @@
       }
     },
     {
-      "key": "3302a9a3-8e59-4b22-a8e7-375c3c69aafd",
-      "position": 1,
-      "properties": {
-        "description": "These levels contain the same questions as the **Warm Up** and **Wrap Up** from the lesson slide deck, allowing students to answer the questions within the Code.org platform. These can be used as a digital alternative to physical journals, and lets you take advantage of our [Student Summaries features](https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels) for checking and displaying student work. \n\nBy answering these questions in these levels, you can take advantage of discussion and differentiation strategies that elevate student voice to help you guide the discussion. See our [**Teaching Guide for Incorporating Student Responses in Lessons**](https://docs.google.com/document/d/1hbjb6Jc0tW6PcxKLWHzjxTegrUUh7sWOG4wvR_33zvY/edit) for more information on these strategies.",
-        "progression_name": "Warm Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "3302a9a3-8e59-4b22-a8e7-375c3c69aafd",
-        "lesson_activity.key": "17ac9589-0600-4f95-9dde-06cec8c36c0a"
-      }
-    },
-    {
-      "key": "771d9e97-7b7d-4d77-b037-20564c324bdf",
-      "position": 2,
-      "properties": {
-        "progression_name": "Wrap Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "771d9e97-7b7d-4d77-b037-20564c324bdf",
-        "lesson_activity.key": "17ac9589-0600-4f95-9dde-06cec8c36c0a"
-      }
-    },
-    {
       "key": "fc5b8d6f-8e71-4e7e-af45-e21fd106db39",
-      "position": 3,
+      "position": 1,
       "properties": {
         "progression_name": "Lesson Recap"
       },
@@ -2929,20 +2750,8 @@
       }
     },
     {
-      "key": "0f7faecc-20cb-481c-a578-373694398b93",
-      "position": 1,
-      "properties": {
-        "description": "These levels contain the same questions as the **Warm Up** and **Wrap Up** from the lesson slide deck, allowing students to answer the questions within the Code.org platform. These can be used as a digital alternative to physical journals, and lets you take advantage of our [Student Summaries features](https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels) for checking and displaying student work. \n\nBy answering these questions in these levels, you can take advantage of discussion and differentiation strategies that elevate student voice to help you guide the discussion. See our [**Teaching Guide for Incorporating Student Responses in Lessons**](https://docs.google.com/document/d/1hbjb6Jc0tW6PcxKLWHzjxTegrUUh7sWOG4wvR_33zvY/edit) for more information on these strategies.",
-        "progression_name": "Warm Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "0f7faecc-20cb-481c-a578-373694398b93",
-        "lesson_activity.key": "b8039792-b2f5-4728-8704-0e4194b2a333"
-      }
-    },
-    {
       "key": "f5057f1b-8eb3-423e-9d1b-3d5bd347fe0d",
-      "position": 2,
+      "position": 1,
       "properties": {
         "progression_name": "Scenario 1"
       },
@@ -2953,7 +2762,7 @@
     },
     {
       "key": "b4cf8127-03e2-446d-853a-16c6dc2e4115",
-      "position": 3,
+      "position": 2,
       "properties": {
         "progression_name": "Scenario 2"
       },
@@ -2963,19 +2772,8 @@
       }
     },
     {
-      "key": "457f2b6f-8dfa-41f4-ba8b-8acb40e5bc1a",
-      "position": 4,
-      "properties": {
-        "progression_name": "Wrap Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "457f2b6f-8dfa-41f4-ba8b-8acb40e5bc1a",
-        "lesson_activity.key": "b8039792-b2f5-4728-8704-0e4194b2a333"
-      }
-    },
-    {
       "key": "4fd44a06-fca4-48e2-abf7-b54db510e67c",
-      "position": 5,
+      "position": 3,
       "properties": {
         "progression_name": "Lesson Recap"
       },
@@ -3106,17 +2904,6 @@
       }
     },
     {
-      "key": "803b3c62-cfa7-47b4-8f27-ad118998c4c9",
-      "position": 2,
-      "properties": {
-        "progression_name": "Warm Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "803b3c62-cfa7-47b4-8f27-ad118998c4c9",
-        "lesson_activity.key": "945e4ebc-57de-49e8-bdee-28b33165730a"
-      }
-    },
-    {
       "key": "bfb79562-c48f-4573-b873-546a9594d3af",
       "position": 1,
       "properties": {
@@ -3127,25 +2914,36 @@
       }
     },
     {
-      "key": "1ba25e19-d093-4a4e-a355-74fb93244766",
-      "position": 1,
-      "properties": {
-        "progression_name": "Wrap Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "1ba25e19-d093-4a4e-a355-74fb93244766",
-        "lesson_activity.key": "aaafe174-a7c2-4bb1-9b54-274ae7f44de0"
-      }
-    },
-    {
       "key": "673edd09-89ba-4f27-b1c1-4342c1612c31",
-      "position": 2,
+      "position": 1,
       "properties": {
         "progression_name": "Lesson Recap"
       },
       "seeding_key": {
         "activity_section.key": "673edd09-89ba-4f27-b1c1-4342c1612c31",
         "lesson_activity.key": "aaafe174-a7c2-4bb1-9b54-274ae7f44de0"
+      }
+    },
+    {
+      "key": "017049c2-822e-41c0-95d8-91acbcace9b7",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Launch"
+      },
+      "seeding_key": {
+        "activity_section.key": "017049c2-822e-41c0-95d8-91acbcace9b7",
+        "lesson_activity.key": "6c77a9a7-39ce-47e2-a0b1-8e037d1a0db1"
+      }
+    },
+    {
+      "key": "cd022f75-03a0-4d03-ae5c-88fb3e402d95",
+      "position": 2,
+      "properties": {
+        "progression_name": "Lesson Recap"
+      },
+      "seeding_key": {
+        "activity_section.key": "cd022f75-03a0-4d03-ae5c-88fb3e402d95",
+        "lesson_activity.key": "6c77a9a7-39ce-47e2-a0b1-8e037d1a0db1"
       }
     },
     {
@@ -3246,17 +3044,6 @@
       },
       "seeding_key": {
         "activity_section.key": "b2fcb647-c84c-449d-872c-951a4aca2fce",
-        "lesson_activity.key": "21de5dae-a57e-4d0f-9001-a1d42bd45ea4"
-      }
-    },
-    {
-      "key": "d439f224-612c-4687-be0d-9afd62e669b0",
-      "position": 2,
-      "properties": {
-        "progression_name": "Lesson Recap"
-      },
-      "seeding_key": {
-        "activity_section.key": "d439f224-612c-4687-be0d-9afd62e669b0",
         "lesson_activity.key": "21de5dae-a57e-4d0f-9001-a1d42bd45ea4"
       }
     },
@@ -3748,56 +3535,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "genai-lesson1-warmup-lv1_2025"
-        ],
-        "progression": "Warm Up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "genai-lesson1-warmup-lv1_2025"
-        ],
-        "lesson.key": "Introduction to Generative AI",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "1d2a8474-6418-4e2a-aaf6-febaaf76ad5d"
-      },
-      "level_keys": [
-        "genai-lesson1-warmup-lv1_2025"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "genai-lesson1-wrapup-lv1_2025"
-        ],
-        "progression": "Wrap Up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "genai-lesson1-wrapup-lv1_2025"
-        ],
-        "lesson.key": "Introduction to Generative AI",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "7cf7df2c-6f73-4ea1-9f4e-615128b54e12"
-      },
-      "level_keys": [
-        "genai-lesson1-wrapup-lv1_2025"
-      ]
-    },
-    {
-      "chapter": 4,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "gen-ai-student-level-L1"
         ],
         "progression": "Lesson Recap"
@@ -3817,33 +3554,8 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 3,
       "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "genai-lesson1.2-warmup-lv1_2025"
-        ],
-        "progression": "Warm Up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "genai-lesson1.2-warmup-lv1_2025"
-        ],
-        "lesson.key": "lesson-10",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "8d79bd76-42a1-454d-aa4c-3d90127db436"
-      },
-      "level_keys": [
-        "genai-lesson1.2-warmup-lv1_2025"
-      ]
-    },
-    {
-      "chapter": 6,
-      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3867,33 +3579,8 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "genai-lesson1.2-wrapup-lv1_2025"
-        ],
-        "progression": "Wrap Up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "genai-lesson1.2-wrapup-lv1_2025"
-        ],
-        "lesson.key": "lesson-10",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "be34adf3-108c-4306-86e5-274258797e37"
-      },
-      "level_keys": [
-        "genai-lesson1.2-wrapup-lv1_2025"
-      ]
-    },
-    {
-      "chapter": 8,
-      "position": 4,
+      "chapter": 4,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3917,45 +3604,17 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "genai-lesson2-warmup-lv1_2025"
-        ],
-        "progression": "Warm Up"
+        "progression": "Lesson Launch"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "genai-lesson2-warmup-lv1_2025"
-        ],
-        "lesson.key": "Input & Training Data",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "4d5ff506-6642-4f52-b081-b7713f6e6c4b"
-      },
-      "level_keys": [
-        "genai-lesson2-warmup-lv1_2025"
-      ]
-    },
-    {
-      "chapter": 10,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "genai-lesson2-wrapup-lv1_2025"
-        ],
-        "progression": "Wrap Up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "genai-lesson2-wrapup-lv1_2025"
+          "gen-ai-input-launch"
         ],
         "lesson.key": "Input & Training Data",
         "lesson_group.key": "lessonGroup-2",
@@ -3963,12 +3622,12 @@
         "activity_section.key": "464c9990-12a4-44c5-919d-0be3c3fab689"
       },
       "level_keys": [
-        "genai-lesson2-wrapup-lv1_2025"
+        "gen-ai-input-launch"
       ]
     },
     {
-      "chapter": 11,
-      "position": 3,
+      "chapter": 6,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3992,33 +3651,8 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 7,
       "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "genai-lesson3-warmup-lv1_2025"
-        ],
-        "progression": "Warm Up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "genai-lesson3-warmup-lv1_2025"
-        ],
-        "lesson.key": "Bias in the Machine",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "f498fcb6-0146-49ff-ac96-3eace73cd35f"
-      },
-      "level_keys": [
-        "genai-lesson3-warmup-lv1_2025"
-      ]
-    },
-    {
-      "chapter": 13,
-      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4042,8 +3676,8 @@
       ]
     },
     {
-      "chapter": 14,
-      "position": 3,
+      "chapter": 8,
+      "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -4067,8 +3701,8 @@
       ]
     },
     {
-      "chapter": 15,
-      "position": 4,
+      "chapter": 9,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4092,8 +3726,8 @@
       ]
     },
     {
-      "chapter": 16,
-      "position": 5,
+      "chapter": 10,
+      "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -4117,8 +3751,8 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 6,
+      "chapter": 11,
+      "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -4142,8 +3776,8 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 7,
+      "chapter": 12,
+      "position": 6,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -4167,33 +3801,8 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "genai-lesson3-wrapup-lv1_2025"
-        ],
-        "progression": "Wrap Up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "genai-lesson3-wrapup-lv1_2025"
-        ],
-        "lesson.key": "Bias in the Machine",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "117bfdef-5e0d-4767-95b1-883c8d2a7819"
-      },
-      "level_keys": [
-        "genai-lesson3-wrapup-lv1_2025"
-      ]
-    },
-    {
-      "chapter": 20,
-      "position": 9,
+      "chapter": 13,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4217,33 +3826,8 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 14,
       "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "genai-lesson3.2-warmup-lv1_2025"
-        ],
-        "progression": "Warm Up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "genai-lesson3.2-warmup-lv1_2025"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "44c038ee-19f4-4b46-b8d6-599012178a71"
-      },
-      "level_keys": [
-        "genai-lesson3.2-warmup-lv1_2025"
-      ]
-    },
-    {
-      "chapter": 22,
-      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4267,8 +3851,8 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 3,
+      "chapter": 15,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4292,8 +3876,8 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 4,
+      "chapter": 16,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4317,33 +3901,8 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "genai-lesson3.2-wrapup-lv1_2025"
-        ],
-        "progression": "Wrap Up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "genai-lesson3.2-wrapup-lv1_2025"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "4ee810a5-d3ea-4bb3-84a8-faaa670776e9"
-      },
-      "level_keys": [
-        "genai-lesson3.2-wrapup-lv1_2025"
-      ]
-    },
-    {
-      "chapter": 26,
-      "position": 6,
+      "chapter": 17,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4367,7 +3926,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4392,7 +3951,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 19,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4417,33 +3976,8 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 20,
       "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "genai-lesson4-wrapup_2025"
-        ],
-        "progression": "Wrap Up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "genai-lesson4-wrapup_2025"
-        ],
-        "lesson.key": "Understanding Embeddings",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "e977df80-c320-4376-8288-74641b26cb6f"
-      },
-      "level_keys": [
-        "genai-lesson4-wrapup_2025"
-      ]
-    },
-    {
-      "chapter": 30,
-      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4467,45 +4001,17 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "genai-lesson6-warmup-lv1_2025"
-        ],
-        "progression": "Warm Up"
+        "progression": "Lesson Launch"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "genai-lesson6-warmup-lv1_2025"
-        ],
-        "lesson.key": "Understanding Neural Networks",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "179f8e39-a509-4506-824d-8888c3790a3a"
-      },
-      "level_keys": [
-        "genai-lesson6-warmup-lv1_2025"
-      ]
-    },
-    {
-      "chapter": 32,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "genai-lesson6-wrapup-lv1_2025"
-        ],
-        "progression": "Wrap Up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "genai-lesson6-wrapup-lv1_2025"
+          "gen-ai-neural-networks-launch"
         ],
         "lesson.key": "Understanding Neural Networks",
         "lesson_group.key": "lessonGroup-2",
@@ -4513,12 +4019,12 @@
         "activity_section.key": "9291d3be-f82f-4657-818f-062ff81ae592"
       },
       "level_keys": [
-        "genai-lesson6-wrapup-lv1_2025"
+        "gen-ai-neural-networks-launch"
       ]
     },
     {
-      "chapter": 33,
-      "position": 3,
+      "chapter": 22,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4542,40 +4048,15 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 23,
       "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "genai-lesson8-warmup-v2_2025"
-        ],
-        "progression": "Warm Up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "genai-lesson8-warmup-v2_2025"
-        ],
-        "lesson.key": "Attention Is All You Need",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "f4621e1e-229c-42ab-a059-037f0ef0574a"
-      },
-      "level_keys": [
-        "genai-lesson8-warmup-v2_2025"
-      ]
-    },
-    {
-      "chapter": 35,
-      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "genai-attention-test-v1"
         ],
-        "progression": "Activity"
+        "progression": "Attention Widget"
       },
       "bonus": false,
       "seeding_key": {
@@ -4592,33 +4073,8 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "genai-lesson8-wrapup-level1_2025"
-        ],
-        "progression": "Wrap Up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "genai-lesson8-wrapup-level1_2025"
-        ],
-        "lesson.key": "Attention Is All You Need",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "305ef97f-ae88-4d13-b79a-9beedbbdac24"
-      },
-      "level_keys": [
-        "genai-lesson8-wrapup-level1_2025"
-      ]
-    },
-    {
-      "chapter": 37,
-      "position": 4,
+      "chapter": 24,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4642,33 +4098,8 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 25,
       "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "genai-lesson6.2-warmup-lv1_2025"
-        ],
-        "progression": "Warm Up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "genai-lesson6.2-warmup-lv1_2025"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "9c6b6c22-11cb-4b83-acf3-3029e2afbe52"
-      },
-      "level_keys": [
-        "genai-lesson6.2-warmup-lv1_2025"
-      ]
-    },
-    {
-      "chapter": 39,
-      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4692,8 +4123,8 @@
       ]
     },
     {
-      "chapter": 40,
-      "position": 3,
+      "chapter": 26,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4717,8 +4148,8 @@
       ]
     },
     {
-      "chapter": 41,
-      "position": 4,
+      "chapter": 27,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4742,33 +4173,8 @@
       ]
     },
     {
-      "chapter": 42,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "genai-lesson6.2-wrapup-lv1_2025"
-        ],
-        "progression": "Wrap Up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "genai-lesson6.2-wrapup-lv1_2025"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "8cd2921e-bee1-42c3-85db-98931de7bc60"
-      },
-      "level_keys": [
-        "genai-lesson6.2-wrapup-lv1_2025"
-      ]
-    },
-    {
-      "chapter": 43,
-      "position": 6,
+      "chapter": 28,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4792,33 +4198,8 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 29,
       "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "genai-lesson9-wrapup_2025"
-        ],
-        "progression": "Wrap Up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "genai-lesson9-wrapup_2025"
-        ],
-        "lesson.key": "Outputs & Probabilities",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "771d9e97-7b7d-4d77-b037-20564c324bdf"
-      },
-      "level_keys": [
-        "genai-lesson9-wrapup_2025"
-      ]
-    },
-    {
-      "chapter": 45,
-      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4842,8 +4223,8 @@
       ]
     },
     {
-      "chapter": 46,
-      "position": 3,
+      "chapter": 30,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4867,33 +4248,8 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 31,
       "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "genai-lesson10-warmup-lv1_2025"
-        ],
-        "progression": "Warm Up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "genai-lesson10-warmup-lv1_2025"
-        ],
-        "lesson.key": "Hallucinations and Fabrications",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "0f7faecc-20cb-481c-a578-373694398b93"
-      },
-      "level_keys": [
-        "genai-lesson10-warmup-lv1_2025"
-      ]
-    },
-    {
-      "chapter": 48,
-      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4917,8 +4273,8 @@
       ]
     },
     {
-      "chapter": 49,
-      "position": 3,
+      "chapter": 32,
+      "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -4942,8 +4298,8 @@
       ]
     },
     {
-      "chapter": 50,
-      "position": 4,
+      "chapter": 33,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4967,8 +4323,8 @@
       ]
     },
     {
-      "chapter": 51,
-      "position": 5,
+      "chapter": 34,
+      "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -4992,33 +4348,8 @@
       ]
     },
     {
-      "chapter": 52,
-      "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "genai-lesson10-wrapup-lv1_2025"
-        ],
-        "progression": "Wrap Up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "genai-lesson10-wrapup-lv1_2025"
-        ],
-        "lesson.key": "Hallucinations and Fabrications",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "457f2b6f-8dfa-41f4-ba8b-8acb40e5bc1a"
-      },
-      "level_keys": [
-        "genai-lesson10-wrapup-lv1_2025"
-      ]
-    },
-    {
-      "chapter": 53,
-      "position": 7,
+      "chapter": 35,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5042,58 +4373,8 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 36,
       "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "genai-lesson9.2-warmup-lv1_2025"
-        ],
-        "progression": "Warm Up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "genai-lesson9.2-warmup-lv1_2025"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "803b3c62-cfa7-47b4-8f27-ad118998c4c9"
-      },
-      "level_keys": [
-        "genai-lesson9.2-warmup-lv1_2025"
-      ]
-    },
-    {
-      "chapter": 55,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "genai-lesson9.2-wrapup-lv1_2025"
-        ],
-        "progression": "Wrap Up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "genai-lesson9.2-wrapup-lv1_2025"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "1ba25e19-d093-4a4e-a355-74fb93244766"
-      },
-      "level_keys": [
-        "genai-lesson9.2-wrapup-lv1_2025"
-      ]
-    },
-    {
-      "chapter": 56,
-      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5117,14 +4398,33 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "gen-ai-student-level-L13"
+        "progression": "Lesson Launch"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-demystifying-launch"
         ],
+        "lesson.key": "Project: Demystifying Generative AI",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "017049c2-822e-41c0-95d8-91acbcace9b7"
+      },
+      "level_keys": [
+        "gen-ai-demystifying-launch"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "Lesson Recap"
       },
       "bonus": false,
@@ -5135,15 +4435,15 @@
         "lesson.key": "Project: Demystifying Generative AI",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "d439f224-612c-4687-be0d-9afd62e669b0"
+        "activity_section.key": "cd022f75-03a0-4d03-ae5c-88fb3e402d95"
       },
       "level_keys": [
         "gen-ai-student-level-L13"
       ]
     },
     {
-      "chapter": 58,
-      "position": 2,
+      "chapter": 39,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -5167,7 +4467,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5192,7 +4492,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5217,7 +4517,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5242,7 +4542,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5267,7 +4567,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 44,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5307,30 +4607,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "genai-lesson1-warmup-lv1_2025",
-        "script_level.level_keys": [
-          "genai-lesson1-warmup-lv1_2025"
-        ],
-        "lesson.key": "Introduction to Generative AI",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "1d2a8474-6418-4e2a-aaf6-febaaf76ad5d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "genai-lesson1-wrapup-lv1_2025",
-        "script_level.level_keys": [
-          "genai-lesson1-wrapup-lv1_2025"
-        ],
-        "lesson.key": "Introduction to Generative AI",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "7cf7df2c-6f73-4ea1-9f4e-615128b54e12"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "gen-ai-student-level-L1",
         "script_level.level_keys": [
           "gen-ai-student-level-L1"
@@ -5339,18 +4615,6 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "735b8c19-bdd5-44b6-b6bc-c6b84614c1af"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "genai-lesson1.2-warmup-lv1_2025",
-        "script_level.level_keys": [
-          "genai-lesson1.2-warmup-lv1_2025"
-        ],
-        "lesson.key": "lesson-10",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "8d79bd76-42a1-454d-aa4c-3d90127db436"
       }
     },
     {
@@ -5367,18 +4631,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "genai-lesson1.2-wrapup-lv1_2025",
-        "script_level.level_keys": [
-          "genai-lesson1.2-wrapup-lv1_2025"
-        ],
-        "lesson.key": "lesson-10",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "be34adf3-108c-4306-86e5-274258797e37"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "gen-ai-student-level-L2",
         "script_level.level_keys": [
           "gen-ai-student-level-L2"
@@ -5391,21 +4643,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "genai-lesson2-warmup-lv1_2025",
+        "level.key": "gen-ai-input-launch",
         "script_level.level_keys": [
-          "genai-lesson2-warmup-lv1_2025"
-        ],
-        "lesson.key": "Input & Training Data",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "4d5ff506-6642-4f52-b081-b7713f6e6c4b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "genai-lesson2-wrapup-lv1_2025",
-        "script_level.level_keys": [
-          "genai-lesson2-wrapup-lv1_2025"
+          "gen-ai-input-launch"
         ],
         "lesson.key": "Input & Training Data",
         "lesson_group.key": "lessonGroup-2",
@@ -5423,18 +4663,6 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "3b93820f-b6e3-4029-90ce-a738e30abfa8"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "genai-lesson3-warmup-lv1_2025",
-        "script_level.level_keys": [
-          "genai-lesson3-warmup-lv1_2025"
-        ],
-        "lesson.key": "Bias in the Machine",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "f498fcb6-0146-49ff-ac96-3eace73cd35f"
       }
     },
     {
@@ -5511,18 +4739,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "genai-lesson3-wrapup-lv1_2025",
-        "script_level.level_keys": [
-          "genai-lesson3-wrapup-lv1_2025"
-        ],
-        "lesson.key": "Bias in the Machine",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "117bfdef-5e0d-4767-95b1-883c8d2a7819"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "gen-ai-student-level-L4",
         "script_level.level_keys": [
           "gen-ai-student-level-L4"
@@ -5531,18 +4747,6 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "67a55ec0-555a-4ded-91c6-48a5818cdb66"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "genai-lesson3.2-warmup-lv1_2025",
-        "script_level.level_keys": [
-          "genai-lesson3.2-warmup-lv1_2025"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "44c038ee-19f4-4b46-b8d6-599012178a71"
       }
     },
     {
@@ -5583,18 +4787,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "genai-lesson3.2-wrapup-lv1_2025",
-        "script_level.level_keys": [
-          "genai-lesson3.2-wrapup-lv1_2025"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "4ee810a5-d3ea-4bb3-84a8-faaa670776e9"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "gen-ai-student-level-L5",
         "script_level.level_keys": [
           "gen-ai-student-level-L5"
@@ -5631,18 +4823,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "genai-lesson4-wrapup_2025",
-        "script_level.level_keys": [
-          "genai-lesson4-wrapup_2025"
-        ],
-        "lesson.key": "Understanding Embeddings",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "e977df80-c320-4376-8288-74641b26cb6f"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "gen-ai-student-level-L6",
         "script_level.level_keys": [
           "gen-ai-student-level-L6"
@@ -5655,21 +4835,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "genai-lesson6-warmup-lv1_2025",
+        "level.key": "gen-ai-neural-networks-launch",
         "script_level.level_keys": [
-          "genai-lesson6-warmup-lv1_2025"
-        ],
-        "lesson.key": "Understanding Neural Networks",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "179f8e39-a509-4506-824d-8888c3790a3a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "genai-lesson6-wrapup-lv1_2025",
-        "script_level.level_keys": [
-          "genai-lesson6-wrapup-lv1_2025"
+          "gen-ai-neural-networks-launch"
         ],
         "lesson.key": "Understanding Neural Networks",
         "lesson_group.key": "lessonGroup-2",
@@ -5691,18 +4859,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "genai-lesson8-warmup-v2_2025",
-        "script_level.level_keys": [
-          "genai-lesson8-warmup-v2_2025"
-        ],
-        "lesson.key": "Attention Is All You Need",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "f4621e1e-229c-42ab-a059-037f0ef0574a"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "genai-attention-test-v1",
         "script_level.level_keys": [
           "genai-attention-test-v1"
@@ -5715,18 +4871,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "genai-lesson8-wrapup-level1_2025",
-        "script_level.level_keys": [
-          "genai-lesson8-wrapup-level1_2025"
-        ],
-        "lesson.key": "Attention Is All You Need",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "305ef97f-ae88-4d13-b79a-9beedbbdac24"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "gen-ai-student-level-L8",
         "script_level.level_keys": [
           "gen-ai-student-level-L8"
@@ -5735,18 +4879,6 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "366b2913-ceb8-43ea-9f2b-9038fdc964f6"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "genai-lesson6.2-warmup-lv1_2025",
-        "script_level.level_keys": [
-          "genai-lesson6.2-warmup-lv1_2025"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "9c6b6c22-11cb-4b83-acf3-3029e2afbe52"
       }
     },
     {
@@ -5787,18 +4919,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "genai-lesson6.2-wrapup-lv1_2025",
-        "script_level.level_keys": [
-          "genai-lesson6.2-wrapup-lv1_2025"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "8cd2921e-bee1-42c3-85db-98931de7bc60"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "gen-ai-student-level-L9",
         "script_level.level_keys": [
           "gen-ai-student-level-L9"
@@ -5807,18 +4927,6 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "04b56ae0-c8c6-4f3f-8e47-7ed3234f6742"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "genai-lesson9-wrapup_2025",
-        "script_level.level_keys": [
-          "genai-lesson9-wrapup_2025"
-        ],
-        "lesson.key": "Outputs & Probabilities",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "771d9e97-7b7d-4d77-b037-20564c324bdf"
       }
     },
     {
@@ -5843,18 +4951,6 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "134b457a-da24-405e-9599-b9383387bce5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "genai-lesson10-warmup-lv1_2025",
-        "script_level.level_keys": [
-          "genai-lesson10-warmup-lv1_2025"
-        ],
-        "lesson.key": "Hallucinations and Fabrications",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "0f7faecc-20cb-481c-a578-373694398b93"
       }
     },
     {
@@ -5907,18 +5003,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "genai-lesson10-wrapup-lv1_2025",
-        "script_level.level_keys": [
-          "genai-lesson10-wrapup-lv1_2025"
-        ],
-        "lesson.key": "Hallucinations and Fabrications",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "457f2b6f-8dfa-41f4-ba8b-8acb40e5bc1a"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "gen-ai-student-level-L11",
         "script_level.level_keys": [
           "gen-ai-student-level-L11"
@@ -5927,30 +5011,6 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "4fd44a06-fca4-48e2-abf7-b54db510e67c"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "genai-lesson9.2-warmup-lv1_2025",
-        "script_level.level_keys": [
-          "genai-lesson9.2-warmup-lv1_2025"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "803b3c62-cfa7-47b4-8f27-ad118998c4c9"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "genai-lesson9.2-wrapup-lv1_2025",
-        "script_level.level_keys": [
-          "genai-lesson9.2-wrapup-lv1_2025"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "1ba25e19-d093-4a4e-a355-74fb93244766"
       }
     },
     {
@@ -5967,6 +5027,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "gen-ai-demystifying-launch",
+        "script_level.level_keys": [
+          "gen-ai-demystifying-launch"
+        ],
+        "lesson.key": "Project: Demystifying Generative AI",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "017049c2-822e-41c0-95d8-91acbcace9b7"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "gen-ai-student-level-L13",
         "script_level.level_keys": [
           "gen-ai-student-level-L13"
@@ -5974,7 +5046,7 @@
         "lesson.key": "Project: Demystifying Generative AI",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "d439f224-612c-4687-be0d-9afd62e669b0"
+        "activity_section.key": "cd022f75-03a0-4d03-ae5c-88fb3e402d95"
       }
     },
     {

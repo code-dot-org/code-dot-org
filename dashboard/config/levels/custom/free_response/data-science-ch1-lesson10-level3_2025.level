@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Shape of Distribution",
-    "long_instructions": "###**Do This:**\r\n####1. Use the word bank below to describe the **shape of distribution** of the data based on the graph.\r\n- ####You do not have to use every single sentence starter from the word bank. Instead, use the one(s) that make sense with your data.\r\n\r\n####2. Record your answer below.\r\n####3. Move on to the next level to answer some more questions about the graph.\r\n\r\n\r\n![](https://images.code.org/937945115f7d22b9396c4ac6093d0999-image-1721764665919.png)\r\n\r\n### **Roller Coaster Dataset:**\r\n- ####[View Roller Coaster Dataset](https://docs.google.com/spreadsheets/d/1lg67vrIpnXaCe7P-XjqLmf6x91UcEvB-Ikw_rpqJDG8/view?gid=1782593835#gid=1782593835)\r\n- ####[View Roller Coaster Histogram](https://docs.google.com/spreadsheets/d/1lg67vrIpnXaCe7P-XjqLmf6x91UcEvB-Ikw_rpqJDG8/view?gid=257571425#gid=257571425)",
+    "long_instructions": "###**Do This:**\r\n####1. Use the word bank below to describe the **shape of distribution** of the data based on the graph.\r\n- ####You do not have to use every single sentence starter from the word bank. Instead, use the one(s) that make sense with your data.\r\n\r\n####2. Record your answer below.\r\n####3. Move on to the next level to answer some more questions about the graph.\r\n\r\n\r\n![](https://images.code.org/937945115f7d22b9396c4ac6093d0999-image-1721764665919.png)\r\n\r\n### **Roller Coaster Dataset:**\r\n- ####[View Roller Coaster Dataset](https://docs.google.com/spreadsheets/d/1hZ9K6TX3CklY56b4NQAABD5UqYEEGBeP64UQQ7-OnvU/edit?gid=1782593835#gid=1782593835)\r\n- ####[View Roller Coaster Histogram](https://docs.google.com/spreadsheets/d/1hZ9K6TX3CklY56b4NQAABD5UqYEEGBeP64UQQ7-OnvU/edit?gid=257571425#gid=257571425)",
     "teacher_markdown": "Guide students to effectively use the sentence starters to describe and discuss the shape of distribution. The goal is to help them learn how to accurately apply these phrases when analyzing and communicating about the shape of distribution, enhancing their ability to articulate data insights clearly and correctly.",
     "allow_user_uploads": "false",
     "submittable": "false",
@@ -20,7 +20,7 @@
     "name_suffix": "_2025",
     "stay_on_level_after_submit": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-21T21:34:42.616+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson10-level3\\\"\"],\"cloned_from\":\"data-science-ch1-lesson10-level3\"},{\"changed_at\":\"2025-04-16 16:04:19 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-03-21T21:34:42.616+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson10-level3\\\"\"],\"cloned_from\":\"data-science-ch1-lesson10-level3\"},{\"changed_at\":\"2025-04-16 16:04:19 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-05-21 18:54:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

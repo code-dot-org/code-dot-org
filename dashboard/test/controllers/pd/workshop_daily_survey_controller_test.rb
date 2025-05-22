@@ -542,12 +542,8 @@ module Pd
 
     private def setup_build_your_own_ended_workshop
       @regional_partner = create :regional_partner
-      @byo_workshop = create :pd_workshop,
+      @byo_workshop = create :byo_workshop,
         :ended,
-        funded: false,
-        course: Pd::Workshop::COURSE_BUILD_YOUR_OWN,
-        subject: nil,
-        course_offerings: [] << (create :course_offering),
         num_facilitators: 1
 
       @byo_enrollment = create :pd_enrollment, :from_user, workshop: @byo_workshop

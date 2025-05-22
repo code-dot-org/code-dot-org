@@ -5,10 +5,9 @@ class Services::Courses
   #
   # @param path [String] the original URL path to transform
   # @param unit_name_or_id [String, Integer] the Unit id or name.
-  # @param current_user [User] the currently authenticated user object, used for experiment checks
   # @return [String] the transformed canonical path if applicable, or the original path if no transformation is made
-  def self.canonical_path(path, unit_name_or_id, current_user)
-    return path unless Policies::Courses.modularity_enabled?(current_user)
+  def self.canonical_path(path, unit_name_or_id)
+    return path unless Policies::Courses.modularity_enabled?
     return path unless unit_name_or_id
 
     # URLs is /s/:unit_id/... so generate a /courses/... URL

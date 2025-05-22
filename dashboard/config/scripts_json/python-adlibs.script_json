@@ -1,6 +1,6 @@
 {
   "script": {
-    "name": "python-madlibs",
+    "name": "python-adlibs",
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
@@ -8,13 +8,14 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-13 20:03:11 UTC",
-    "published_state": "in_development",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "serialized_at": "2025-05-21 13:57:52 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
-      "script.name": "python-madlibs"
+      "script.name": "python-adlibs"
     }
   },
   "lesson_groups": [
@@ -26,14 +27,14 @@
       },
       "seeding_key": {
         "lesson_group.key": "",
-        "script.name": "python-madlibs"
+        "script.name": "python-adlibs"
       }
     }
   ],
   "lessons": [
     {
       "key": "lesson-1",
-      "name": "mad libs",
+      "name": "Create a story! ",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -43,33 +44,34 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "python-madlibs"
+        "script.name": "python-adlibs"
       }
     }
   ],
   "lesson_activities": [
     {
-      "key": "688244f7-b551-43a3-aaac-ece29e482382",
+      "key": "1c5de5cd-00c5-4cd1-873d-5ca533b5c59a",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "688244f7-b551-43a3-aaac-ece29e482382",
+        "lesson_activity.key": "1c5de5cd-00c5-4cd1-873d-5ca533b5c59a",
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "python-madlibs"
+        "script.name": "python-adlibs"
       }
     }
   ],
   "activity_sections": [
     {
-      "key": "e6fa8b9a-76fc-400d-be85-8c2dc3688d22",
+      "key": "bcb1641c-5193-4cce-9ca1-3d9faece56a4",
       "position": 1,
       "properties": {
+        "progression_name": "Learn to create your own story! "
       },
       "seeding_key": {
-        "activity_section.key": "e6fa8b9a-76fc-400d-be85-8c2dc3688d22",
-        "lesson_activity.key": "688244f7-b551-43a3-aaac-ece29e482382"
+        "activity_section.key": "bcb1641c-5193-4cce-9ca1-3d9faece56a4",
+        "lesson_activity.key": "1c5de5cd-00c5-4cd1-873d-5ca533b5c59a"
       }
     }
   ],
@@ -80,9 +82,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "madlibs-print"
-        ]
+        "progression": "Learn to create your own story! "
       },
       "bonus": false,
       "seeding_key": {
@@ -91,8 +91,8 @@
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "python-madlibs",
-        "activity_section.key": "e6fa8b9a-76fc-400d-be85-8c2dc3688d22"
+        "script.name": "python-adlibs",
+        "activity_section.key": "bcb1641c-5193-4cce-9ca1-3d9faece56a4"
       },
       "level_keys": [
         "madlibs-print"
@@ -104,9 +104,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "madlibs-printwvariables"
-        ]
+        "progression": "Learn to create your own story! "
       },
       "bonus": false,
       "seeding_key": {
@@ -115,8 +113,8 @@
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "python-madlibs",
-        "activity_section.key": "e6fa8b9a-76fc-400d-be85-8c2dc3688d22"
+        "script.name": "python-adlibs",
+        "activity_section.key": "bcb1641c-5193-4cce-9ca1-3d9faece56a4"
       },
       "level_keys": [
         "madlibs-printwvariables"
@@ -128,9 +126,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "madlibs-printwnewvariables"
-        ]
+        "progression": "Learn to create your own story! "
       },
       "bonus": false,
       "seeding_key": {
@@ -139,8 +135,8 @@
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "python-madlibs",
-        "activity_section.key": "e6fa8b9a-76fc-400d-be85-8c2dc3688d22"
+        "script.name": "python-adlibs",
+        "activity_section.key": "bcb1641c-5193-4cce-9ca1-3d9faece56a4"
       },
       "level_keys": [
         "madlibs-printwnewvariables"
@@ -152,9 +148,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "madlibs-combinestrings"
-        ]
+        "progression": "Learn to create your own story! "
       },
       "bonus": false,
       "seeding_key": {
@@ -163,8 +157,8 @@
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "python-madlibs",
-        "activity_section.key": "e6fa8b9a-76fc-400d-be85-8c2dc3688d22"
+        "script.name": "python-adlibs",
+        "activity_section.key": "bcb1641c-5193-4cce-9ca1-3d9faece56a4"
       },
       "level_keys": [
         "madlibs-combinestrings"
@@ -176,9 +170,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "madlibs-combinestringsagain"
-        ]
+        "progression": "Learn to create your own story! "
       },
       "bonus": false,
       "seeding_key": {
@@ -187,8 +179,8 @@
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "python-madlibs",
-        "activity_section.key": "e6fa8b9a-76fc-400d-be85-8c2dc3688d22"
+        "script.name": "python-adlibs",
+        "activity_section.key": "bcb1641c-5193-4cce-9ca1-3d9faece56a4"
       },
       "level_keys": [
         "madlibs-combinestringsagain"
@@ -200,9 +192,7 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "madlibs-input"
-        ]
+        "progression": "Learn to create your own story! "
       },
       "bonus": false,
       "seeding_key": {
@@ -211,8 +201,8 @@
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "python-madlibs",
-        "activity_section.key": "e6fa8b9a-76fc-400d-be85-8c2dc3688d22"
+        "script.name": "python-adlibs",
+        "activity_section.key": "bcb1641c-5193-4cce-9ca1-3d9faece56a4"
       },
       "level_keys": [
         "madlibs-input"
@@ -224,9 +214,7 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "madlibs-inputwvariables"
-        ]
+        "progression": "Learn to create your own story! "
       },
       "bonus": false,
       "seeding_key": {
@@ -235,8 +223,8 @@
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "python-madlibs",
-        "activity_section.key": "e6fa8b9a-76fc-400d-be85-8c2dc3688d22"
+        "script.name": "python-adlibs",
+        "activity_section.key": "bcb1641c-5193-4cce-9ca1-3d9faece56a4"
       },
       "level_keys": [
         "madlibs-inputwvariables"
@@ -248,9 +236,7 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "madlibs-putittogether1"
-        ]
+        "progression": "Learn to create your own story! "
       },
       "bonus": false,
       "seeding_key": {
@@ -259,8 +245,8 @@
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "python-madlibs",
-        "activity_section.key": "e6fa8b9a-76fc-400d-be85-8c2dc3688d22"
+        "script.name": "python-adlibs",
+        "activity_section.key": "bcb1641c-5193-4cce-9ca1-3d9faece56a4"
       },
       "level_keys": [
         "madlibs-putittogether1"
@@ -272,9 +258,7 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "madlibs-putittogether2"
-        ]
+        "progression": "Learn to create your own story! "
       },
       "bonus": false,
       "seeding_key": {
@@ -283,8 +267,8 @@
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "python-madlibs",
-        "activity_section.key": "e6fa8b9a-76fc-400d-be85-8c2dc3688d22"
+        "script.name": "python-adlibs",
+        "activity_section.key": "bcb1641c-5193-4cce-9ca1-3d9faece56a4"
       },
       "level_keys": [
         "madlibs-putittogether2"
@@ -296,9 +280,7 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "madlibs-finalproject"
-        ]
+        "progression": "Learn to create your own story! "
       },
       "bonus": false,
       "seeding_key": {
@@ -307,8 +289,8 @@
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "python-madlibs",
-        "activity_section.key": "e6fa8b9a-76fc-400d-be85-8c2dc3688d22"
+        "script.name": "python-adlibs",
+        "activity_section.key": "bcb1641c-5193-4cce-9ca1-3d9faece56a4"
       },
       "level_keys": [
         "madlibs-finalproject"
@@ -324,8 +306,8 @@
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "python-madlibs",
-        "activity_section.key": "e6fa8b9a-76fc-400d-be85-8c2dc3688d22"
+        "script.name": "python-adlibs",
+        "activity_section.key": "bcb1641c-5193-4cce-9ca1-3d9faece56a4"
       }
     },
     {
@@ -336,8 +318,8 @@
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "python-madlibs",
-        "activity_section.key": "e6fa8b9a-76fc-400d-be85-8c2dc3688d22"
+        "script.name": "python-adlibs",
+        "activity_section.key": "bcb1641c-5193-4cce-9ca1-3d9faece56a4"
       }
     },
     {
@@ -348,8 +330,8 @@
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "python-madlibs",
-        "activity_section.key": "e6fa8b9a-76fc-400d-be85-8c2dc3688d22"
+        "script.name": "python-adlibs",
+        "activity_section.key": "bcb1641c-5193-4cce-9ca1-3d9faece56a4"
       }
     },
     {
@@ -360,8 +342,8 @@
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "python-madlibs",
-        "activity_section.key": "e6fa8b9a-76fc-400d-be85-8c2dc3688d22"
+        "script.name": "python-adlibs",
+        "activity_section.key": "bcb1641c-5193-4cce-9ca1-3d9faece56a4"
       }
     },
     {
@@ -372,8 +354,8 @@
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "python-madlibs",
-        "activity_section.key": "e6fa8b9a-76fc-400d-be85-8c2dc3688d22"
+        "script.name": "python-adlibs",
+        "activity_section.key": "bcb1641c-5193-4cce-9ca1-3d9faece56a4"
       }
     },
     {
@@ -384,8 +366,8 @@
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "python-madlibs",
-        "activity_section.key": "e6fa8b9a-76fc-400d-be85-8c2dc3688d22"
+        "script.name": "python-adlibs",
+        "activity_section.key": "bcb1641c-5193-4cce-9ca1-3d9faece56a4"
       }
     },
     {
@@ -396,8 +378,8 @@
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "python-madlibs",
-        "activity_section.key": "e6fa8b9a-76fc-400d-be85-8c2dc3688d22"
+        "script.name": "python-adlibs",
+        "activity_section.key": "bcb1641c-5193-4cce-9ca1-3d9faece56a4"
       }
     },
     {
@@ -408,8 +390,8 @@
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "python-madlibs",
-        "activity_section.key": "e6fa8b9a-76fc-400d-be85-8c2dc3688d22"
+        "script.name": "python-adlibs",
+        "activity_section.key": "bcb1641c-5193-4cce-9ca1-3d9faece56a4"
       }
     },
     {
@@ -420,8 +402,8 @@
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "python-madlibs",
-        "activity_section.key": "e6fa8b9a-76fc-400d-be85-8c2dc3688d22"
+        "script.name": "python-adlibs",
+        "activity_section.key": "bcb1641c-5193-4cce-9ca1-3d9faece56a4"
       }
     },
     {
@@ -432,8 +414,8 @@
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "python-madlibs",
-        "activity_section.key": "e6fa8b9a-76fc-400d-be85-8c2dc3688d22"
+        "script.name": "python-adlibs",
+        "activity_section.key": "bcb1641c-5193-4cce-9ca1-3d9faece56a4"
       }
     }
   ],

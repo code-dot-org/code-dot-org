@@ -1,0 +1,34 @@
+{
+  "name": "teaching-ai-foundations-2025",
+  "script_names": [
+    "self-paced-pl-teaching-aif1-2025",
+    "self-paced-pl-teaching-aif2-2025",
+    "self-paced-pl-teaching-aif3-2025",
+    "self-paced-pl-teaching-aif4-2025",
+    "self-paced-pl-teaching-aif5-2025",
+    "self-paced-pl-teaching-aif6-2025"
+  ],
+  "original_script_names": [
+    "self-paced-pl-teaching-aif2-2025",
+    "self-paced-pl-teaching-aif1-2025",
+    "self-paced-pl-teaching-aif3-2025",
+    "self-paced-pl-teaching-aif4-2025",
+    "self-paced-pl-teaching-aif5-2025",
+    "self-paced-pl-teaching-aif6-2025"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "self_paced",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "teaching-ai-foundations",
+    "has_numbered_units": true,
+    "version_year": "2025"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

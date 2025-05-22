@@ -7,6 +7,8 @@ Feature: Navigating to a level page with login required
 # These tests are meant to track regressions on redirect-after-login.
 # See https://codedotorg.atlassian.net/browse/TEACH-758 for more details.
 
+# TODO: re enable after re enabling CACHED_UNITS_MAP
+@skip
 Scenario: Student navigates to provided cached level link with a login_required parameter
   Given I create a student named "Carah Student"
   And I sign out
@@ -17,6 +19,8 @@ Scenario: Student navigates to provided cached level link with a login_required 
   And I click "#signin-button" to load a new page
   Then I wait until I am on "http://studio.code.org/s/starwars/lessons/1/levels/1"
 
+# TODO: re enable after re enabling CACHED_UNITS_MAP
+@skip
 Scenario: Student already logged in navigates to provided cached level link with a login_required parameter
   Given I create a student who has never signed in named "François Student" and go home
   And I am on "http://studio.code.org/s/starwars/lessons/1/levels/1?login_required=true"
