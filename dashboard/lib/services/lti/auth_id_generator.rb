@@ -26,11 +26,11 @@ module Services
           # Only ONE client_id identifies an LTI Tool and is sent in the JWK audience claim.
           if id_token[:aud].length > 1
             attributes = {
+              error: 'Too many client_ids in the audience claim',
               audience: id_token[:aud],
               aud_count: id_token[:aud].length,
             }
-            LtiLogger.log_event('Too many client_ids in the audience claim', attributes)
-            # CDO.log.info log_payload.to_json
+            LtiLogger.log_event('Generate Authentication ID error', attributes)
             raise ArgumentError, "Invalid Audience Claim: #{id_token[:aud]}, with more than 1 client_id. #{id_token[:aud].length} client_ids given."
           else
             id_token[:aud].first
