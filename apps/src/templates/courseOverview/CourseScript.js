@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -117,8 +118,13 @@ class CourseScript extends Component {
       selectedSection.unitId === id;
     const isAssigned = assignedToStudent || assignedByTeacher;
 
-    let unitPath = location.pathname.includes('/teacher_dashboard')
-      ? `/teacher_dashboard/sections/${selectedSectionId}${path}`
+    const teacherDashboardPath = `/teacher_dashboard/sections/${selectedSectionId}${_.replace(
+      path,
+      's/',
+      'unit/'
+    )}`;
+    const unitPath = location.pathname.includes('/teacher_dashboard')
+      ? teacherDashboardPath
       : `${path}${location.search}`;
     return (
       <div
