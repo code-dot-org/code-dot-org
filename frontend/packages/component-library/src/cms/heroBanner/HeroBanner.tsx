@@ -55,6 +55,8 @@ export interface HeroBannerProps extends HTMLAttributes<HTMLElement> {
   withWideText?: boolean;
   /** HeroBanner partner prop */
   partner?: {title: string; logo: ImageProps};
+  /** Hide image on small screens */
+  hideImageOnSmallScreen?: boolean;
   /** HeroBanner custom className  */
   className?: string;
 }
@@ -87,6 +89,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   backgroundImageUrl,
   removeBackground = false,
   withWideText = false,
+  hideImageOnSmallScreen = false,
   className,
   ...HTMLAttributes
 }) => (
@@ -147,6 +150,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
               className={classNames(
                 imageProps.className,
                 moduleStyles.heroBannerMediaImage,
+                hideImageOnSmallScreen && moduleStyles.hideImageOnSmallScreen,
               )}
             />
           )}
