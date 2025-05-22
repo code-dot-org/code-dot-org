@@ -335,7 +335,9 @@ test.describe('All the things UI e2e test', () => {
           await expect(image).toBeVisible();
         }
 
-        const iconLocator = component.getByTestId('font-awesome-v6-icon');
+        const iconLocator = component.locator(
+          'i[data-testid="font-awesome-v6-icon"]',
+        );
         await expect(iconLocator).toHaveCount(3);
         for (const icon of await iconLocator.all()) {
           await expect(icon).toBeVisible();
