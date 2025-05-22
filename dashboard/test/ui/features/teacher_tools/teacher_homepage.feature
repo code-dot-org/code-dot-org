@@ -55,35 +55,35 @@ Feature: Using the teacher homepage sections feature
     # save the older section id, from the last row of the table
     And I save the section id from row 1 of the section table
     And I wait until element ".uitest-owned-sections" contains text "Computer Science Principles"
-    And the href of selector ".uitest-owned-sections a:contains('Computer Science Principles')" contains the section id
-    And the href of selector ".uitest-owned-sections a:contains('Unit 1')" contains the section id
+    And the teacher_dashboard href of selector ".uitest-owned-sections a:contains('Computer Science Principles')" contains the section id
+    And the teacher_dashboard href of selector ".uitest-owned-sections a:contains('Unit 1')" contains the section id
 
     When I click selector ".uitest-owned-sections a:contains('Computer Science Principles')" to load a new page
     And I wait to see ".uitest-CourseScript"
-    Then the url contains the section id
+    Then the teacher_dashboard url contains the section id
     And I wait until current URL contains "/courses/csp-2017"
 
     When I click selector ".uitest-CourseScript:contains(CSP Unit 2) .uitest-go-to-unit-button" to load a new page
     And I wait to see ".uitest-script-next-banner"
-    Then the url contains the section id
+    Then the teacher_dashboard url contains the section id
 
-    And the href of selector ".uitest-script-next-banner" contains the section id
+    And the teacher_dashboard href of selector ".uitest-script-next-banner" contains the section id
     And I wait for 3 seconds
-    And the href of selector ".progress-bubble-link:first" contains the section id
-    And the href of selector "a:contains(Computer Science Principles)" contains the section id
+    And the teacher_dashboard href of selector ".progress-bubble-link:first" contains the section id
+    And the teacher_dashboard href of selector "a:contains(Computer Science Principles)" contains the section id
 
     # navigate to a script level
     When I click selector ".uitest-script-next-banner" to load a new page
     And I wait to see ".header_popup_link"
-    Then the url contains the section id
+    Then the teacher_dashboard url contains the section id
 
     # open the More menu in the progress bar
     When I wait for jquery to load
     And I click selector ".header_popup_link"
     And I wait until element "a:contains(View Unit Overview)" is visible
-    And the href of selector "a:contains(View Unit Overview)" contains the section id
+    And the teacher_dashboard href of selector "a:contains(View Unit Overview)" contains the section id
     And I wait until element ".header_popup_body .progress-bubble-link:first" is visible
-    And the href of selector ".header_popup_body .progress-bubble-link:first" contains the section id
+    And the teacher_dashboard href of selector ".header_popup_body .progress-bubble-link:first" contains the section id
 
     # Save the newer section id
     Given I am on "http://studio.code.org/home"
@@ -94,15 +94,15 @@ Feature: Using the teacher homepage sections feature
 
     When I am on "http://studio.code.org/courses/csp-2019"
     And I wait until element ".uitest-CourseScript" is visible
-    Then the url contains the section id
+    Then the teacher_dashboard url contains the section id
 
     When I am on "http://studio.code.org/s/csp1-2019"
     And I wait until element "#script-title" is visible
-    Then the url contains the section id
+    Then the teacher_dashboard url contains the section id
 
     When I am on "http://studio.code.org/s/coursea-2019"
     And I wait until element "#script-title" is visible
-    Then the url contains the section id
+    Then the teacher_dashboard url contains the section id
 
     # loading non-existent section succeeds, with no section selected
     When I am on "http://studio.code.org/s/coursea-2019?section_id=99999"
@@ -118,7 +118,7 @@ Feature: Using the teacher homepage sections feature
 
     When I am on "http://studio.code.org/courses/csp-2017"
     And I wait until element ".uitest-CourseScript" is visible
-    Then the url contains the section id
+    Then the teacher_dashboard url contains the section id
 
     # Hide a unit from the section
     When I hide unit "CSP Unit 2 - Digital Information ('17-'18)"
@@ -187,12 +187,12 @@ Feature: Using the teacher homepage sections feature
     # save the older section id, from the last row of the table
     And I save the section id from row 0 of the section table
 
-    And the href of selector ".uitest-owned-sections a:contains('Computer Science Principles')" contains the section id
-    And the href of selector ".uitest-owned-sections a:contains('Unit 1')" contains the section id
+    And the teacher_dashboard href of selector ".uitest-owned-sections a:contains('Computer Science Principles')" contains the section id
+    And the teacher_dashboard href of selector ".uitest-owned-sections a:contains('Unit 1')" contains the section id
 
     When I click selector ".uitest-owned-sections a:contains('Computer Science Principles')" to load a new page
     And I wait to see ".uitest-CourseScript"
-    Then the url contains the section id
+    Then the teacher_dashboard url contains the section id
     And check that the URL contains "/courses/csp-2019"
 
     And element "#uitest-version-selector" is visible
@@ -200,9 +200,9 @@ Feature: Using the teacher homepage sections feature
     And I wait until element ".assignment-version-title" is visible
     When I click selector ".assignment-version-title:contains('17-'18)" to load a new page
     And I wait to see ".uitest-CourseScript"
-    Then the url contains the section id
+    Then the teacher_dashboard url contains the section id
 
-    And the href of selector ".uitest-CourseScript:contains(CSP Unit 2) .uitest-go-to-unit-button" contains the section id
+    And the teacher_dashboard href of selector ".uitest-CourseScript:contains(CSP Unit 2) .uitest-go-to-unit-button" contains the section id
 
   Scenario: Loading the print certificates page for a section
     Given I create a teacher-associated student named "Sally"

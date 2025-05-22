@@ -288,6 +288,11 @@ Then /^the url contains the section id$/ do
   expect(@browser.current_url).to include("?section_id=#{@section_id}")
 end
 
+Then /^the teacher_dashboard url contains the section id$/ do
+  expect(@section_id).to be > 0
+  expect(@browser.current_url).to include("/sections/#{@section_id}")
+end
+
 Then /^the href of selector "([^"]*)" contains the section id$/ do |selector|
   href = nil
   wait_until do
@@ -298,6 +303,18 @@ Then /^the href of selector "([^"]*)" contains the section id$/ do |selector|
 
   # make sure the query params do not come after the # symbol
   expect(href.split('#')[0]).to include("?section_id=#{@section_id}")
+end
+
+Then /^the teacher_dashboard href of selector "([^"]*)" contains the section id$/ do |selector|
+  href = nil
+  wait_until do
+    href = @browser.execute_script("return $(\"#{selector}\").attr('href');")
+    !href.nil?
+  end
+  expect(@section_id).to be > 0
+
+  # make sure the query params do not come after the # symbol
+  expect(href.split('#')[0]).to include("/sections/#{@section_id}")
 end
 
 Then /^I navigate to teacher dashboard for the section I saved$/ do
@@ -383,7 +400,7 @@ end
 Then /^I open the code review groups management dialog$/ do
   steps <<-GHERKIN
     And I navigate to teacher dashboard for the section I saved
-    And I click selector "#uitest-teacher-dashboard-nav a:contains(Manage Students)" once I see it
+    And I click selector "#ui-test-teacher-sidebar a:contains(Roster)" once I see it
     And I click selector "#uitest-code-review-groups-button" once I see it
   GHERKIN
 end
@@ -402,7 +419,7 @@ And /^I navigate to the V2 progress dashboard for "([^"]+)"$/ do |section_name|
     Given I am on "http://studio.code.org"
     When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     When I click selector "a:contains(#{section_name})" once I see it to load a new page
-    And I wait until element "#uitest-teacher-dashboard-nav" is visible
+    And I wait until element "#ui-test-teacher-sidebar" is visible
     And check that the URL contains "/teacher_dashboard/sections/"
     And element "#ui-test-progress-table-v2" is visible
   GHERKIN

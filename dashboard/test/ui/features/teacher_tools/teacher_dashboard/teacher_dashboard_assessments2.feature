@@ -44,6 +44,6 @@ Feature: Using the assessments tab in the teacher dashboard
     And I wait until element "#uitest-course-dropdown" contains text "CSP Student Post-Course Survey ('17-'18)"
 
     # Assessments tab
-    And I click selector "#uitest-teacher-dashboard-nav a:contains(Assessments/Surveys)" once I see it
+    And I click selector "#ui-test-teacher-sidebar a:contains(Assessments)" once I see it
     And I wait until element "#uitest-course-dropdown" is visible
     Then I wait until element "h2:contains(Multiple choice questions overview)" is visible
