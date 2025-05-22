@@ -1196,7 +1196,10 @@ roles.each do |name, config| %>
                   - elasticfilesystem:DescribeMountTargets
                   - elasticfilesystem:DescribeAccessPoints
                   - elasticfilesystem:TagResource
+                  - elasticfilesystem:UntagResource
+                  - elasticfilesystem:ListTagsForResource
                   - elasticfilesystem:PutLifecycleConfiguration
+                  - elasticfilesystem:ModifyMountTargetSecurityGroups
                   - elasticfilesystem:DeleteFileSystem
                   - elasticfilesystem:DeleteMountTarget
                   - elasticfilesystem:DeleteAccessPoint
