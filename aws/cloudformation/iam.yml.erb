@@ -1188,20 +1188,7 @@ roles.each do |name, config| %>
               # EFS resources for NextJS caching
               - Effect: Allow
                 Action:
-                  - elasticfilesystem:CreateFileSystem
-                  - elasticfilesystem:CreateMountTarget
-                  - elasticfilesystem:CreateAccessPoint
-                  - elasticfilesystem:DescribeFileSystems
-                  - elasticfilesystem:DescribeMountTargets
-                  - elasticfilesystem:DescribeAccessPoints
-                  - elasticfilesystem:TagResource
-                  - elasticfilesystem:UntagResource
-                  - elasticfilesystem:ListTagsForResource
-                  - elasticfilesystem:PutLifecycleConfiguration
-                  - elasticfilesystem:ModifyMountTargetSecurityGroups
-                  - elasticfilesystem:DeleteFileSystem
-                  - elasticfilesystem:DeleteMountTarget
-                  - elasticfilesystem:DeleteAccessPoint
+                  - elasticfilesystem:*
                 Resource: '*'
               # Application Autoscaling for ECS services
               - Effect: Allow
