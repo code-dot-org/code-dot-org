@@ -1260,7 +1260,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/student/middle-high',
-        destination: '/middle-and-high-school-students',
+        destination: '/students/middle-and-high-school',
         permanent: false,
       },
       {
