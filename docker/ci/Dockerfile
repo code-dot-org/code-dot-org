@@ -8,7 +8,7 @@
 
 
 #########################################################
-FROM ubuntu:20.04 AS base
+FROM ubuntu:22.04 AS base
 #########################################################
 # multi-stage build for parallel compiling ruby:
 # see: https://docs.docker.com/build/building/multi-stage/
@@ -88,8 +88,8 @@ RUN apt-get install -y --no-install-recommends \
     moreutils \
     openssh-client \
     parallel \
-    python \
-    python-dev \
+    python3 \
+    python3-dev \
     python3-pip \
     software-properties-common \
     sudo \
@@ -119,7 +119,7 @@ RUN service mysql start && \
     echo "GRANT SELECT ON dashboard_test.* TO 'readonly'@'localhost';" | mysql && \
     service mysql stop
 
-# For some reason, MySQL 8 on Ubuntu 20 does not have a home directory by
+# For some reason, MySQL 8 on Ubuntu 20+ does not have a home directory by
 # default, so we explicity specify one to avoid the error:
 #
 #   su: warning: cannot change directory to /nonexistent: No such file or directory
@@ -129,11 +129,11 @@ RUN service mysql start && \
 #  https://stackoverflow.com/a/63040661/1810460
 RUN usermod -d /var/lib/mysql/ mysql
 
-# Also for some reason, MySQL 8 on Ubuntu 20 only grants read permissions to
+# Also for some reason, MySQL 8 on Ubuntu 20+ only grants read permissions to
 # the mysqld directory to the mysql user, but we need to be able to connect as
 # ci, so we explicitly grant permissions to avoid the error:
 #
-#  ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/run/mysqld/mysqld.sock' (13) 
+#  ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/run/mysqld/mysqld.sock' (13)
 RUN sudo chmod -R 755 /run/mysqld
 
 # we need git >= 2.15 to use git rev-parse --is-shallow-clone feature

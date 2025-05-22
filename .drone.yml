@@ -77,12 +77,12 @@ steps:
       debug: true
       pull: true
       restore: true
-      filename: unit-tests-cache-ubuntu-20.tar
+      filename: unit-tests-cache-ubuntu-22.tar
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
     # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:1.15
+    image: codedotorg/code-dot-org:ubuntu-22
     pull: always
     volumes:
       - name: rbenv
@@ -119,7 +119,7 @@ steps:
       debug: true
       pull: true
       rebuild: true
-      filename: unit-tests-cache-ubuntu-20.tar
+      filename: unit-tests-cache-ubuntu-22.tar
       mount:
         - /home/ci/.rbenv
 
@@ -210,12 +210,12 @@ steps:
       debug: true
       pull: true
       restore: true
-      filename: ui-tests-cache-ubuntu-20.tar
+      filename: ui-tests-cache-ubuntu-22.tar
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
     # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:1.15
+    image: codedotorg/code-dot-org:ubuntu-22
     pull: always
     volumes:
       - name: rbenv
@@ -259,7 +259,7 @@ steps:
       debug: true
       pull: true
       rebuild: true
-      filename: ui-tests-cache-ubuntu-20.tar
+      filename: ui-tests-cache-ubuntu-22.tar
       mount:
         - /home/ci/.rbenv
         # Used to avoid re-seeding UI test data unless something changed - see cached_ui_test task in https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/lib/tasks/seed.rake
