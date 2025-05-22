@@ -599,53 +599,6 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal '3000', summaries[3][:versionYear]
   end
 
-  test 'find related lessons within a course offering without unit groups' do
-    course_offering = create :course_offering
-
-    script1 = create :script, name: 'script1', is_course: true
-    create :course_version, course_offering: course_offering, content_root: script1, key: '3000'
-    lesson1 = create :lesson, script: script1, key: 'foo'
-
-    script2 = create :script, name: 'script2', is_course: true
-    create :course_version, course_offering: course_offering, content_root: script2, key: '3001'
-    lesson2 = create :lesson, script: script2, key: 'foo'
-
-    script3 = create :script, name: 'script3', is_course: true
-    create :course_version, course_offering: course_offering, content_root: script3, key: '3002'
-    create :lesson, script: script3, key: 'bar'
-
-    script4 = create :script, name: 'script4', is_course: true
-    create :course_version, course_offering: course_offering, content_root: script4, key: '2999'
-    lesson4 = create :lesson, script: script4, key: 'foo'
-
-    other_course_offering = create :course_offering
-
-    script5 = create :script, name: 'script5', is_course: true
-    create :course_version, course_offering: other_course_offering, content_root: script5, key: '3000'
-    create :lesson, script: script5, key: 'foo'
-
-    # measure the query count of the summarize method before checking the result
-    # of related_lessons, so that the count is not artificially reduced by
-    # anything being cached from the call to related_lessons.
-    summaries = nil
-    assert_queries(8) do
-      summaries = lesson1.summarize_related_lessons
-    end
-
-    assert_equal [lesson4, lesson2], lesson1.related_lessons
-
-    assert_equal 2, summaries.count
-    expected_summary = {
-      unitTitle: "script4",
-      versionYear: "2999",
-      lockable: false,
-      relativePosition: 1,
-      id: lesson4.id,
-      editUrl: "/lessons/#{lesson4.id}/edit"
-    }
-    assert_equal expected_summary, summaries.first
-  end
-
   test 'find related lessons within a course offering with unit groups' do
     course_offering = create :course_offering
 
@@ -859,19 +812,6 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal unit_group, script.get_course_version.content_root
 
     expected_url = "/courses/#{unit_group.name}/standards"
-    assert_equal expected_url, lesson.course_version_standards_url
-  end
-
-  test 'course_version_standards_url in standalone script returns script path' do
-    script = create :script, is_course: true, family_name: 'my-family', version_year: '1999'
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, lesson_group: lesson_group, script: script
-
-    CourseOffering.add_course_offering(script)
-    assert script.get_course_version
-    assert_equal script, script.get_course_version.content_root
-
-    expected_url = "/s/#{script.name}/standards"
     assert_equal expected_url, lesson.course_version_standards_url
   end
 
@@ -1162,15 +1102,16 @@ class LessonTest < ActiveSupport::TestCase
     end
 
     test "can clone lesson without course version to a script with a course version" do
-      original_script = create :script, is_migrated: true, is_course: true
+      original_script = create :script
       original_script.reload
 
       original_script.expects(:write_script_json).never
       original_lesson_group = create :lesson_group, script: original_script
       original_lesson = create :lesson, lesson_group: original_lesson_group, script: original_script, has_lesson_plan: true
 
-      destination_script = create :script, is_migrated: true, is_course: true
-      create :course_version, content_root: destination_script
+      destination_course = create :single_unit_course
+      destination_script = destination_course.default_units.first
+      create :course_version, content_root: destination_course
       create :lesson_group, script: destination_script
 
       destination_script.expects(:write_script_json).once

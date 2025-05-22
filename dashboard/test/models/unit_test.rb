@@ -34,7 +34,9 @@ class UnitTest < ActiveSupport::TestCase
     @csp_unit = create :csp_script, name: 'csp1'
     @csa_unit = create :csa_script, name: 'csa1'
 
-    @hoc_unit = create :hoc_script, name: 'hoc1', is_course: true, family_name: 'hoc-test-unit', version_year: 'unversioned'
+    @hoc_unit = create :script, name: 'hoc1'
+    @hoc_course = create :hoc_course, name: 'hoc1-course', family_name: 'hoc-test-unit', version_year: 'unversioned', unit: @hoc_unit
+    @hoc_unit.reload
 
     @csf_unit_2019 = create :csf_script, name: 'csf-2019'
     @csf_course_2019 = create :unit_group, name: 'csf-2019', version_year: '2019'
@@ -294,73 +296,88 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'get_unit_family_redirect_for_user returns latest stable unit assigned or with progress if student' do
-    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017')
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018')
+    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1')
+    create(:single_unit_course, unit: csp1_2017, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1')
+    create(:single_unit_course, unit: csp1_2018, name: 'csp-2018', family_name: 'csp', version_year: '2018')
 
     # Assign student to csp1_2017.
     section = create :section, script: csp1_2017
     student = create :student
     section.students << student
 
-    redirect_unit = Unit.get_unit_family_redirect_for_user('csp', user: student)
+    redirect_unit = Unit.get_unit_family_redirect_for_user('csp1', user: student)
     assert_equal csp1_2017.name, redirect_unit.redirect_to
 
     # Student makes progress in csp1_2018.
     create :user_level, user: student, script: csp1_2018
     student.reload
 
-    redirect_unit = Unit.get_unit_family_redirect_for_user('csp', user: student)
+    redirect_unit = Unit.get_unit_family_redirect_for_user('csp1', user: student)
     assert_equal csp1_2018.name, redirect_unit.redirect_to
   end
 
   test 'get_unit_family_redirect_for_user returns latest stable unit in family if instructor' do
     facilitator = create :facilitator
-    pl_csp1_2017 = create(:script, name: 'pl-csp1-2017', family_name: 'pl-csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
-    pl_csp1_2018 = create(:script, name: 'pl-csp1-2018', family_name: 'pl-csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
-    create(:script, name: 'pl-csp1-2019', family_name: 'pl-csp', version_year: '2019', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    pl_csp1_2017 = create(:script, name: 'pl-csp1-2017', family_name: 'pl-csp1')
+    create(:single_unit_course, :pl_course, unit: pl_csp1_2017, name: 'pl-csp-2017', family_name: 'pl-csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    pl_csp1_2018 = create(:script, name: 'pl-csp1-2018', family_name: 'pl-csp1')
+    create(:single_unit_course, :pl_course, unit: pl_csp1_2018, name: 'pl-csp-2018', family_name: 'pl-csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    pl_csp1_2019 = create(:script, name: 'pl-csp1-2019', family_name: 'pl-csp1')
+    create(:single_unit_course, :pl_course, unit: pl_csp1_2019, name: 'pl-csp-2019', family_name: 'pl-csp', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
     create :section, user: facilitator, script: pl_csp1_2017
 
-    redirect_unit = Unit.get_unit_family_redirect_for_user('pl-csp', user: facilitator)
+    redirect_unit = Unit.get_unit_family_redirect_for_user('pl-csp1', user: facilitator)
     assert_equal pl_csp1_2018.name, redirect_unit.redirect_to
   end
 
   test 'get_unit_family_redirect_for_user returns latest stable unit in family if teacher' do
     teacher = create :teacher
-    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    create(:script, name: 'csp1-2019', family_name: 'csp', version_year: '2019')
+    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1')
+    create(:single_unit_course, unit: csp1_2017, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1')
+    create(:single_unit_course, unit: csp1_2018, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    csp1_2019 = create(:script, name: 'csp1-2019', family_name: 'csp', version_year: '2019')
+    create(:single_unit_course, unit: csp1_2019, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
     create :section, user: teacher, script: csp1_2017
 
-    redirect_unit = Unit.get_unit_family_redirect_for_user('csp', user: teacher)
+    redirect_unit = Unit.get_unit_family_redirect_for_user('csp1', user: teacher)
     assert_equal csp1_2018.name, redirect_unit.redirect_to
   end
 
   test 'get_unit_family_redirect_for_user returns nil if no units in family are stable' do
-    create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp')
+    create(:single_unit_course, unit: csp1_2018, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
     assert_nil Unit.get_unit_family_redirect_for_user('csp')
   end
 
   test 'get_unit_family_redirect_for_user returns latest version supported in locale if available' do
-    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ['es-MX'])
-    create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1', supported_locales: ['es-MX'])
+    create(:single_unit_course, unit: csp1_2017, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1')
+    create(:single_unit_course, unit: csp1_2018, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
 
-    redirect_unit = Unit.get_unit_family_redirect_for_user('csp', locale: 'es-MX')
+    redirect_unit = Unit.get_unit_family_redirect_for_user('csp1', locale: 'es-MX')
     assert_equal csp1_2017.name, redirect_unit.redirect_to
   end
 
   test 'get_unit_family_redirect_for_user returns latest stable version if no user or locale' do
-    create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1')
+    create(:single_unit_course, unit: csp1_2017, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1')
+    create(:single_unit_course, unit: csp1_2018, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
 
-    redirect_unit = Unit.get_unit_family_redirect_for_user('csp')
+    redirect_unit = Unit.get_unit_family_redirect_for_user('csp1')
     assert_equal csp1_2018.name, redirect_unit.redirect_to
   end
 
   test 'get_unit_family_redirect_for_user returns latest stable version if no versions supported in locale' do
-    create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ['es-MX'])
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1', supported_locales: ['es-MX'])
+    create(:single_unit_course, unit: csp1_2017, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1')
+    create(:single_unit_course, unit: csp1_2018, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
 
-    redirect_unit = Unit.get_unit_family_redirect_for_user('csp', locale: 'it-IT')
+    redirect_unit = Unit.get_unit_family_redirect_for_user('csp1', locale: 'it-IT')
     assert_equal csp1_2018.name, redirect_unit.redirect_to
   end
 
@@ -423,14 +440,14 @@ class UnitTest < ActiveSupport::TestCase
   test 'redirect_to_unit_url returns unit url of latest assigned unit version in family for unit not belonging to course family' do
     Unit.any_instance.stubs(:can_view_version?).returns(true)
     student = create :student
-    courseg_2017 = create(:script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017', is_course: true)
+    courseg_2017 = create(:single_unit_course, name: 'courseg-2017', family_name: 'courseg', version_year: '2017')
     CourseOffering.add_course_offering(courseg_2017)
-    courseg_2018 = create(:script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018', is_course: true)
+    courseg_2018 = create(:single_unit_course, name: 'courseg-2018', family_name: 'courseg', version_year: '2018')
     CourseOffering.add_course_offering(courseg_2018)
-    section = create :section, script: courseg_2018
+    section = create :section, script: courseg_2018.first_unit
     section.students << student
 
-    assert_equal courseg_2018.link, courseg_2017.redirect_to_unit_url(student)
+    assert_equal courseg_2018.first_unit.link, courseg_2017.first_unit.redirect_to_unit_url(student)
   end
 
   class CanViewVersion < ActiveSupport::TestCase
@@ -440,12 +457,17 @@ class UnitTest < ActiveSupport::TestCase
       @facilitator = create :facilitator
       @plc_reviewer = create :plc_reviewer
 
-      @courseq_2017 = create(:script, name: 'courseq-2017', family_name: 'courseq', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-      @courseq_2018 = create(:script, name: 'courseq-2018', family_name: 'courseq', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-      @courseq_2019 = create(:script, name: 'courseq-2019', family_name: 'courseq', version_year: '2019')
+      @courseq_2017_course = create(:single_unit_course, name: 'courseq-2017', family_name: 'courseq', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+      @courseq_2017 = @courseq_2017_course.first_unit
+      @courseq_2018_course = create(:single_unit_course, unit: @courseq_2018, name: 'courseq-2018', family_name: 'courseq', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+      @courseq_2018 = @courseq_2018_course.first_unit
+      @courseq_2019_course = create(:single_unit_course, unit: @courseq_2019, name: 'courseq-2019', family_name: 'courseq', version_year: '2019')
+      @courseq_2019 = @courseq_2019_course.first_unit
 
-      @pl_courseq_2017 = create(:script, name: 'pl-courseq-2017', family_name: 'pl-courseq', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
-      @pl_courseq_2018 = create(:script, name: 'pl-courseq-2018', family_name: 'pl-courseq', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
+      @pl_courseq_2017_course = create(:single_unit_course,  name: 'pl-courseq-2017', family_name: 'pl-courseq', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
+      @pl_courseq_2017 = @pl_courseq_2017_course.first_unit
+      @pl_courseq_2018_course = create(:single_unit_course, unit: @pl_courseq_2018, name: 'pl-courseq-2018', family_name: 'pl-courseq', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
+      @pl_courseq_2018 = @pl_courseq_2018_course.first_unit
 
       @single_unit_course_offering = create :course_offering, key: 'single-unit-course', display_name: 'single-unit-course'
       @single_unit_2023 = create :unit, name: 'single-unit-2023'
@@ -469,8 +491,10 @@ class UnitTest < ActiveSupport::TestCase
     end
 
     test 'can_view_version? is true if unit is latest stable version in student locale or in English' do
-      latest_in_english = create :script, name: 'english-only-script', family_name: 'courseg', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: []
-      latest_in_locale = create :script, name: 'localized-script', family_name: 'courseg', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ['it-it']
+      latest_in_english = create :script, name: 'english-only-script', supported_locales: []
+      create :single_unit_course, unit: latest_in_english, family_name: 'courseg', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+      latest_in_locale = create :script, name: 'localized-script', supported_locales: ['it-it']
+      create :single_unit_course, unit: latest_in_locale, family_name: 'courseg', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
       student = create :student
 
       assert latest_in_english.can_view_version?(student, locale: 'it-it')
@@ -484,7 +508,7 @@ class UnitTest < ActiveSupport::TestCase
     end
 
     test 'can_view_version? is true if student is assigned to unit' do
-      @student.expects(:assigned_script?).returns(true)
+      @student.expects(:section_courses).returns([@courseq_2017_course])
 
       assert @courseq_2017.can_view_version?(@student)
     end
@@ -510,12 +534,10 @@ class UnitTest < ActiveSupport::TestCase
     end
 
     test 'can_view_version? is false if unit in single-unit course has no progress and is not assigned' do
-      @single_unit_2023.reload
       refute @single_unit_2023.can_view_version?(@student)
     end
 
     test 'can_view_version? is true if unit in single-unit course is the latest stable version' do
-      @single_unit_2024.reload
       assert @single_unit_2024.can_view_version?(@student)
     end
 
@@ -679,33 +701,6 @@ class UnitTest < ActiveSupport::TestCase
     csp1_2017 = Unit.get_from_cache(csp1_2017.id)
     assert_queries(0) do
       refute csp1_2017.has_other_versions?
-    end
-  end
-
-  test 'has_other_versions? makes no queries when there is one other unit version' do
-    Unit.stubs(:should_cache?).returns true
-
-    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true)
-    CourseOffering.add_course_offering(foo17)
-    foo18 = create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018', is_course: true)
-    CourseOffering.add_course_offering(foo18)
-
-    foo17 = Unit.get_from_cache(foo17.id)
-    assert_queries(0) do
-      assert foo17.has_other_versions?
-    end
-  end
-
-  # we expect to hit this case when serving uncached hoc unit overview pages.
-  test 'has_other_versions? makes no queries when there are no other unit versions' do
-    Unit.stubs(:should_cache?).returns true
-
-    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true)
-    CourseOffering.add_course_offering(foo17)
-
-    foo17 = Unit.get_from_cache(foo17.id)
-    assert_queries(0) do
-      refute foo17.has_other_versions?
     end
   end
 
@@ -1062,17 +1057,13 @@ class UnitTest < ActiveSupport::TestCase
     refute csp1_2018.summarize(true, user, unit_group_unit: csp1_2018_ugu)[:show_script_version_warning]
   end
 
-  test 'summarize includes versions' do
-    foo17 = create(
-      :script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true,
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
-    )
-    CourseOffering.add_course_offering(foo17)
-    foo18 = create(
-      :script, name: 'foo-2018', family_name: 'foo', version_year: '2018', is_course: true,
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
-    )
-    CourseOffering.add_course_offering(foo18)
+  test 'summarize includes versions for single-unit course' do
+    foo17 = create(:script, name: 'foo-2017')
+    foo17_course = create(:single_unit_course, unit: foo17, name: 'foo-2017', family_name: 'foo', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
+    CourseOffering.add_course_offering(foo17_course)
+    foo18 = create(:script, name: 'foo-2018')
+    foo18_course = create(:single_unit_course, unit: foo18, name: 'foo-2018', family_name: 'foo', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
+    CourseOffering.add_course_offering(foo18_course)
 
     course_versions = foo17.summarize(false, create(:teacher))[:course_versions]
     assert_equal 2, course_versions.keys.length
@@ -1083,26 +1074,18 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'summarize course_versions for teacher' do
-    foo16 = create(
-      :script, name: 'foo-2016', family_name: 'foo', version_year: '2016', is_course: true,
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    )
-    CourseOffering.add_course_offering(foo16)
-    foo17 = create(
-      :script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true,
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    )
-    CourseOffering.add_course_offering(foo17)
-    foo18 = create(
-      :script, name: 'foo-2018', family_name: 'foo', version_year: '2018', is_course: true,
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
-    )
-    CourseOffering.add_course_offering(foo18)
-    foo19 = create(
-      :script, name: 'foo-2019', family_name: 'foo', version_year: '2019', is_course: true,
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
-    )
-    CourseOffering.add_course_offering(foo19)
+    foo16 = create(:script, name: 'foo-2016')
+    foo16_course = create(:single_unit_course, unit: foo16, name: 'foo-2016', family_name: 'foo', version_year: '2016', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    CourseOffering.add_course_offering(foo16_course)
+    foo17 = create(:script, name: 'foo-2017')
+    foo17_course = create(:single_unit_course, unit: foo17, name: 'foo-2017', family_name: 'foo', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    CourseOffering.add_course_offering(foo17_course)
+    foo18 = create(:script, name: 'foo-2018')
+    foo18_course = create(:single_unit_course, unit: foo18, name: 'foo-2018', family_name: 'foo', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
+    CourseOffering.add_course_offering(foo18_course)
+    foo19 = create(:script, name: 'foo-2019')
+    foo19_course = create(:single_unit_course, unit: foo19, name: 'foo-2019', family_name: 'foo', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
+    CourseOffering.add_course_offering(foo19_course)
 
     [foo16, foo17, foo18, foo19].each do |s|
       summary = s.summarize_course_versions(create(:teacher))
@@ -1113,26 +1096,18 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'summarize_course_versions for student' do
-    foo16 = create(
-      :script, name: 'foo-2016', family_name: 'foo', version_year: '2016', is_course: true,
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    )
-    CourseOffering.add_course_offering(foo16)
-    foo17 = create(
-      :script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true,
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    )
-    CourseOffering.add_course_offering(foo17)
-    foo18 = create(
-      :script, name: 'foo-2018', family_name: 'foo', version_year: '2018', is_course: true,
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
-    )
-    CourseOffering.add_course_offering(foo18)
-    foo19 = create(
-      :script, name: 'foo-2019', family_name: 'foo', version_year: '2019', is_course: true,
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
-    )
-    CourseOffering.add_course_offering(foo19)
+    foo16 = create(:script, name: 'foo-2016')
+    foo16_course = create(:single_unit_course, unit: foo16, name: 'foo-2016', family_name: 'foo', version_year: '2016', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    CourseOffering.add_course_offering(foo16_course)
+    foo17 = create(:script, name: 'foo-2017')
+    foo17_course = create(:single_unit_course, unit: foo17, name: 'foo-2017', family_name: 'foo', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    CourseOffering.add_course_offering(foo17_course)
+    foo18 = create(:script, name: 'foo-2018')
+    foo18_course = create(:single_unit_course, unit: foo18, name: 'foo-2018', family_name: 'foo', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
+    CourseOffering.add_course_offering(foo18_course)
+    foo19 = create(:script, name: 'foo-2019')
+    foo19_course = create(:single_unit_course, unit: foo19, name: 'foo-2019', family_name: 'foo', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
+    CourseOffering.add_course_offering(foo19_course)
 
     [foo17, foo18, foo19].each do |s|
       summary = s.summarize_course_versions(create(:student))
@@ -1150,34 +1125,27 @@ class UnitTest < ActiveSupport::TestCase
     versioned_single_unit_course26 = create(:single_unit_course, name: 'versioned-single-unit-course-2026', family_name: 'versioned-single-unit-course', version_year: '2026', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
 
     # Create course versions
-    create(:course_version, :with_unit_group, key: '2025', display_name: '2025', course_offering: versioned_course_offering, content_root: versioned_single_unit_course25)
-    create(:course_version, :with_unit_group, key: '2026', display_name: '2026', course_offering: versioned_course_offering, content_root: versioned_single_unit_course26)
+    create(:course_version, key: '2025', display_name: '2025', course_offering: versioned_course_offering, content_root: versioned_single_unit_course25)
+    create(:course_version, key: '2026', display_name: '2026', course_offering: versioned_course_offering, content_root: versioned_single_unit_course26)
 
     single_unit = versioned_single_unit_course25.default_units.first
 
     UnitGroup.any_instance.expects(:summarize_course_versions).once.returns(versioned_single_unit_course25.course_version&.course_offering&.course_versions)
     course_versions = single_unit.summarize_course_versions(create(:teacher))
-    puts course_versions.inspect
     assert_equal 2, course_versions.count
   end
 
   test 'summarize excludes unlaunched versions' do
     teacher = create(:teacher)
-    foo17 = create(
-      :script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true,
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
-    )
-    CourseOffering.add_course_offering(foo17)
-    foo18 = create(
-      :script, name: 'foo-2018', family_name: 'foo', version_year: '2018', is_course: true,
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
-    )
-    CourseOffering.add_course_offering(foo18)
-    foo19 = create(
-      :script, name: 'foo-2019', family_name: 'foo', version_year: '2019', is_course: true,
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
-    )
-    CourseOffering.add_course_offering(foo19)
+    foo17 = create(:script, name: 'foo-2017')
+    foo17_course = create(:single_unit_course, unit: foo17, name: 'foo-2017', family_name: 'foo', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
+    CourseOffering.add_course_offering(foo17_course)
+    foo18 = create(:script, name: 'foo-2018')
+    foo18_course = create(:single_unit_course, unit: foo18, name: 'foo-2018', family_name: 'foo', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
+    CourseOffering.add_course_offering(foo18_course)
+    foo19 = create(:script, name: 'foo-2019')
+    foo19_course = create(:single_unit_course, unit: foo19, name: 'foo-2019', family_name: 'foo', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
+    CourseOffering.add_course_offering(foo19_course)
 
     course_versions = foo17.summarize[:course_versions]
     assert_equal 0, course_versions.keys.length
@@ -1189,7 +1157,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'summarize includes show assign button' do
-    unit = create(:course_version, :with_unit).content_root
+    unit = create(:course_version, :with_single_unit_course).content_root.first_unit
     unit.update!(name: 'script', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
     teacher = create(:teacher)
 
@@ -1283,10 +1251,10 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'summarize_for_unit_selector determines whether feedback is enabled' do
-    course_version = create :course_version, :with_unit
+    course_version = create :course_version, :with_single_unit_course
     course_offering = course_version.course_offering
     course_offering.update!(marketing_initiative: 'CSD')
-    unit = course_version.content_root
+    unit = course_version.content_root.first_unit
     summary = unit.summarize_for_unit_selector
     assert summary[:is_feedback_enabled]
 
@@ -2173,7 +2141,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'next_unit returns nil if not in a unit group' do
-    unit1 = create :unit, is_course: true
+    unit1 = create :unit
 
     student = create :student
 
@@ -2232,10 +2200,11 @@ class UnitTest < ActiveSupport::TestCase
       Unit.any_instance.stubs(:write_script_json)
       Unit.stubs(:merge_and_write_i18n)
 
-      @standalone_unit = create :script, is_migrated: true, is_course: true, version_year: '2021', family_name: 'csf', name: 'standalone-2021', content_area: 'k-5', topic_tags: ['ai', 'maker']
-      create :course_version, content_root: @standalone_unit
+      @single_unit = create :script, name: 'single-unit-2021'
+      @single_unit_course = create :single_unit_course, version_year: '2021', family_name: 'csf', name: 'single-unit-course-2021', unit: @single_unit
+      create :course_version, content_root: @single_unit_course
 
-      @deeper_learning_unit = create :script, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, professional_learning_course: 'DLP 2021'
+      @deeper_learning_unit = create :script, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, professional_learning_course: 'DLP 2021', instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
 
       @unit_group = create :unit_group
       @ug_course_version = create :course_version, content_root: @unit_group
@@ -2267,18 +2236,6 @@ class UnitTest < ActiveSupport::TestCase
       refute_equal [level1, level2], cloned_unit.levels
     end
 
-    test 'can copy a standalone unit as another standalone unit' do
-      cloned_unit = @standalone_unit.clone_migrated_unit('standalone-2022', version_year: '2022', family_name: 'csf')
-      assert_equal 'standalone-2022', cloned_unit.name
-      assert_equal '2022', cloned_unit.version_year
-      assert_equal cloned_unit.published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
-      assert_equal cloned_unit.instruction_type, @standalone_unit.instruction_type
-      assert_equal cloned_unit.instructor_audience, @standalone_unit.instructor_audience
-      assert_equal cloned_unit.participant_audience, @standalone_unit.participant_audience
-      assert_equal cloned_unit.content_area, 'k-5'
-      assert_equal cloned_unit.topic_tags, ['ai', 'maker']
-    end
-
     test 'can update markdown on clone' do
       old_course_offering = create :course_offering, key: 'familya'
       old_course_version = create :course_version, course_offering: old_course_offering, key: '2000'
@@ -2292,7 +2249,7 @@ class UnitTest < ActiveSupport::TestCase
         'data' => {
           'script' => {
             'name' => {
-              @standalone_unit.name => {
+              @single_unit.name => {
                 'description_short' => "Description short: Resource: [r #{resource.key}/familya/2000]. Vocab: [v #{vocab.key}/familya/2000].",
                 'description_audience' => "Description audience: Resource: [r #{resource.key}/familya/2000]. Vocab: [v #{vocab.key}/familya/2000].",
                 'description' => "Description: Resource: [r #{resource.key}/familya/2000]. Vocab: [v #{vocab.key}/familya/2000].",
@@ -2322,17 +2279,17 @@ class UnitTest < ActiveSupport::TestCase
           }
         }
       }
-      new_i18n = @standalone_unit.summarize_i18n_for_copy('new_name', new_course_version)
+      new_i18n = @single_unit.summarize_i18n_for_copy('new_name', new_course_version)
       assert_equal expected_i18n, new_i18n
     end
 
-    test 'can copy a standalone unit into a unit group' do
+    test 'can copy a unit in a single-unit course into a unit group' do
       Rails.application.config.stubs(:levelbuilder_mode).returns true
       UnitGroup.any_instance.expects(:write_serialization).once
       File.stubs(:write)
-      cloned_unit = @standalone_unit.clone_migrated_unit('coursename2-2021', destination_unit_group_name: @unit_group.name)
+      cloned_unit = @single_unit.clone_migrated_unit('single-unit-2022', destination_unit_group_name: @unit_group.name)
       assert_equal 2, @unit_group.default_units.count
-      assert_equal 'coursename2-2021', @unit_group.default_units[1].name
+      assert_equal 'single-unit-2022', @unit_group.default_units[1].name
       assert_equal cloned_unit.unit_group, @unit_group
       assert_nil cloned_unit.published_state
       assert_nil cloned_unit.instruction_type
@@ -2340,68 +2297,58 @@ class UnitTest < ActiveSupport::TestCase
       assert_nil cloned_unit.participant_audience
     end
 
-    test 'can copy a unit in a unit group to a standalone unit' do
-      cloned_unit = @unit_in_course.clone_migrated_unit('standalone-coursename-2021', version_year: '2021', family_name: 'csf')
-      assert_nil cloned_unit.unit_group
-      assert_equal 'standalone-coursename-2021', cloned_unit.name
-      assert_equal cloned_unit.published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
-      assert_equal cloned_unit.instruction_type, @unit_group.instruction_type
-      assert_equal cloned_unit.instructor_audience, @unit_group.instructor_audience
-      assert_equal cloned_unit.participant_audience, @unit_group.participant_audience
-    end
-
     test 'can copy unit with lessons without copying levels' do
-      lesson_group = create :lesson_group, script: @standalone_unit
-      lesson = create :lesson, lesson_group: lesson_group, script: @standalone_unit
+      lesson_group = create :lesson_group, script: @single_unit
+      lesson = create :lesson, lesson_group: lesson_group, script: @single_unit
       lesson_activity = create :lesson_activity, lesson: lesson
       activity_section = create :activity_section, lesson_activity: lesson_activity
 
       level1 = create :level
       level2 = create :level
-      create :script_level, levels: [level1], script: @standalone_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 1
-      create :script_level, levels: [level2], script: @standalone_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 2
+      create :script_level, levels: [level1], script: @single_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 1
+      create :script_level, levels: [level2], script: @single_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 2
 
-      cloned_unit = @standalone_unit.clone_migrated_unit('standalone-2022', version_year: '2022', family_name: 'csf')
+      cloned_unit = @single_unit.clone_migrated_unit('single-unit-2022', version_year: '2022', family_name: 'csf')
       assert_equal [level1, level2], cloned_unit.levels
     end
 
     test 'can copy unit with lessons and copy levels' do
-      lesson_group = create :lesson_group, script: @standalone_unit
-      lesson = create :lesson, lesson_group: lesson_group, script: @standalone_unit
+      lesson_group = create :lesson_group, script: @single_unit
+      lesson = create :lesson, lesson_group: lesson_group, script: @single_unit
       lesson_activity = create :lesson_activity, lesson: lesson
       activity_section = create :activity_section, lesson_activity: lesson_activity
 
       level1 = create :level, name: 'level1-2021'
       level2 = create :level, name: 'level2-2021'
-      create :script_level, levels: [level1], script: @standalone_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 1
-      create :script_level, levels: [level2], script: @standalone_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 2
+      create :script_level, levels: [level1], script: @single_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 1
+      create :script_level, levels: [level2], script: @single_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 2
 
-      cloned_unit = @standalone_unit.clone_migrated_unit('standalone-2022', new_level_suffix: '2022', version_year: '2022', family_name: 'csf')
+      cloned_unit = @single_unit.clone_migrated_unit('single-unit-2022', new_level_suffix: '2022', version_year: '2022', family_name: 'csf')
       refute_equal [level1, level2], cloned_unit.levels
     end
 
     test 'can copy teacher and student resources' do
-      @standalone_unit.resources = [create(:resource)]
-      @standalone_unit.student_resources = [create(:resource)]
+      @single_unit.resources = [create(:resource)]
+      @single_unit.student_resources = [create(:resource)]
 
-      cloned_unit = @standalone_unit.clone_migrated_unit('standalone-2022', version_year: '2022', family_name: 'csf')
+      cloned_unit = @single_unit.clone_migrated_unit('single-unit-2022', version_year: '2022', family_name: 'csf')
       assert_equal 1, cloned_unit.resources.count
       assert_equal 1, cloned_unit.student_resources.count
-      refute_equal @standalone_unit.resources[0], cloned_unit.resources[0]
-      refute_equal @standalone_unit.student_resources[0], cloned_unit.student_resources[0]
+      refute_equal @single_unit.resources[0], cloned_unit.resources[0]
+      refute_equal @single_unit.student_resources[0], cloned_unit.student_resources[0]
     end
 
     test 'can deduplicate teacher and student resources' do
-      @standalone_unit.resources = [create(:resource, name: 'Teacher Resource', url: 'teacher.resource', course_version_id: @standalone_unit.course_version.id)]
-      @standalone_unit.student_resources = [create(:resource, name: 'Student Resource', url: 'student.resource', course_version_id: @standalone_unit.course_version.id)]
+      @single_unit.resources = [create(:resource, name: 'Teacher Resource', url: 'teacher.resource', course_version_id: @single_unit_course.course_version.id)]
+      @single_unit.student_resources = [create(:resource, name: 'Student Resource', url: 'student.resource', course_version_id: @single_unit_course.course_version.id)]
       @unit_in_course.resources = [create(:resource, name: 'Teacher Resource', url: 'teacher.resource', course_version_id: @unit_in_course.get_course_version.id)]
       @unit_in_course.student_resources = [create(:resource, name: 'Student Resource', url: 'student.resource', course_version_id: @unit_in_course.get_course_version.id)]
 
-      cloned_unit = @standalone_unit.clone_migrated_unit('coursename2-2021', destination_unit_group_name: @unit_group.name)
+      cloned_unit = @single_unit.clone_migrated_unit('coursename2-2021', destination_unit_group_name: @unit_group.name)
       assert_equal 1, cloned_unit.resources.count
       assert_equal 1, cloned_unit.student_resources.count
-      refute_equal @standalone_unit.resources[0], cloned_unit.resources[0]
-      refute_equal @standalone_unit.student_resources[0], cloned_unit.student_resources[0]
+      refute_equal @single_unit.resources[0], cloned_unit.resources[0]
+      refute_equal @single_unit.student_resources[0], cloned_unit.student_resources[0]
       assert_equal @unit_in_course.resources[0], cloned_unit.resources[0]
       assert_equal @unit_in_course.student_resources[0], cloned_unit.student_resources[0]
     end
@@ -2415,26 +2362,8 @@ class UnitTest < ActiveSupport::TestCase
       assert_equal 1, cloned_unit.get_course_version.reference_guides.count
     end
 
-    test 'can copy reference guides when cloning unit from unit group to stand alone' do
-      Rails.application.config.stubs(:levelbuilder_mode).returns true
-      ReferenceGuide.any_instance.expects(:write_serialization).once
-      File.stubs(:write)
-      cloned_unit = @unit_in_course.clone_migrated_unit('refguidetest-ugsa-coursename-2021', version_year: '2021', family_name: 'csf')
-      assert_equal 1, cloned_unit.get_course_version.reference_guides.count
-    end
-
-    test 'can copy reference guides when cloning stand alone' do
-      Rails.application.config.stubs(:levelbuilder_mode).returns true
-      ReferenceGuide.any_instance.expects(:write_serialization).once
-      File.stubs(:write)
-      @standalone_unit.course_version.reference_guides = [create(:reference_guide)]
-
-      cloned_unit = @standalone_unit.clone_migrated_unit('refguidetest-sa-coursename-2022', version_year: '2022', family_name: 'csf')
-      assert_equal 1, cloned_unit.get_course_version.reference_guides.count
-    end
-
     test 'can copy a script without a course version' do
-      source_unit = create :script, is_course: true, is_migrated: true
+      source_unit = create :script
       lesson = create :lesson, script: source_unit
       create :lesson_group, script: source_unit, lessons: [lesson]
 
@@ -2461,7 +2390,7 @@ class UnitTest < ActiveSupport::TestCase
     test 'clone raises exception if script name has already been taken' do
       create :script, name: 'my-name'
       raise = assert_raises do
-        @standalone_unit.clone_migrated_unit('my-name', version_year: '2022')
+        @single_unit.clone_migrated_unit('my-name', version_year: '2022')
       end
       assert_equal 'Unit name has already been taken', raise.message
     end
@@ -2470,68 +2399,20 @@ class UnitTest < ActiveSupport::TestCase
       versionless_unit_group = create :unit_group
       assert_nil versionless_unit_group.course_version
       assert_raises do
-        @standalone_unit.clone_migrated_unit('coursename2-2021', destination_unit_group_name: versionless_unit_group.name)
-      end
-    end
-
-    test 'clone raises exception if cloning as standalone without family name or version year' do
-      assert_raises do
-        @standalone_unit.clone_migrated_unit('standalone-2022', version_year: '2022')
-      end
-      assert_raises do
-        @standalone_unit.clone_migrated_unit('standalone-2022', family_name: 'standalone')
+        @single_unit.clone_migrated_unit('coursename2-2021', destination_unit_group_name: versionless_unit_group.name)
       end
     end
   end
 
   test 'should raise error if deeper learning course is being launched' do
-    unit = create(:standalone_unit, professional_learning_course: 'my-deeper-learning-course')
+    unit = create(:unit, professional_learning_course: 'my-deeper-learning-course')
+
     error = assert_raises do
       unit.published_state = 'stable'
       unit.save!
     end
 
     assert_includes error.message, 'Validation failed: Published state can never be pilot, preview or stable for a deeper learning course.'
-  end
-
-  test 'should raise error if participant audience is nil for standalone unit' do
-    unit = create(:standalone_unit)
-    error = assert_raises do
-      unit.participant_audience = nil
-      unit.save!
-    end
-
-    assert_includes error.message, 'Participant audience must be set on the unit if its a standalone unit.'
-  end
-
-  test 'should raise error if instructor audience is nil for standalone unit' do
-    unit = create(:standalone_unit)
-    error = assert_raises do
-      unit.instructor_audience = nil
-      unit.save!
-    end
-
-    assert_includes error.message, 'Instructor audience must be set on the unit if its a standalone unit.'
-  end
-
-  test 'should raise error if published state is nil for standalone unit' do
-    unit = create(:standalone_unit)
-    error = assert_raises do
-      unit.published_state = nil
-      unit.save!
-    end
-
-    assert_includes error.message, 'Published state must be set on the unit if its a standalone unit.'
-  end
-
-  test 'should raise error if instruction type is nil for standalone unit' do
-    unit = create(:standalone_unit)
-    error = assert_raises do
-      unit.instruction_type = nil
-      unit.save!
-    end
-
-    assert_includes error.message, 'Instruction type must be set on the unit if its a standalone unit.'
   end
 
   test 'finish_url returns unit group finish url if in a unit group' do
@@ -2544,25 +2425,8 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'finish_url returns unit finish url if not in a unit group' do
-    unit = create :script, is_course: true
+    unit = create :script
     assert unit.finish_url.include?(unit.name)
-  end
-
-  test 'deleting standalone unit deletes corresponding dependencies' do
-    standalone_unit = create :script, is_migrated: true, is_course: true, version_year: '2021', family_name: 'csf', name: 'standalone-2021'
-    course_version = create :course_version, content_root: standalone_unit
-    CourseOffering.add_course_offering(standalone_unit)
-    lesson = create :lesson, script: standalone_unit
-    lesson_gp = create :lesson_group, script: standalone_unit, lessons: [lesson]
-
-    # delete standalone unit
-    unit_id = standalone_unit.id
-    standalone_unit.destroy
-
-    assert Unit.find_by(id: unit_id).nil?
-    assert CourseVersion.find_by(id: course_version.id).nil?
-    assert Lesson.find_by(id: lesson.id).nil?
-    assert LessonGroup.find_by(id: lesson_gp.id).nil?
   end
 
   test 'deleting unit in unit group deletes corresponding dependencies' do

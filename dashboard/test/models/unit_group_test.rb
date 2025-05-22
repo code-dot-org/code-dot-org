@@ -404,22 +404,6 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal unit_group1, unit1.original_unit_group
     end
 
-    test "removes course version for new UnitGroupUnits" do
-      unit_group = create :unit_group
-
-      unit1 = create(:script, name: 'unit1', family_name: 'family-unit1', version_year: '1991', is_course: true)
-      CourseOffering.add_course_offering(unit1)
-
-      unit1.reload
-      assert unit1.course_version
-
-      unit_group.update_scripts(['unit1'])
-
-      unit1.reload
-      assert_nil unit1.published_state
-      refute unit1.course_version
-    end
-
     test "set pilot experiment to nil for new UnitGroupUnits" do
       unit_group = create :unit_group
 
@@ -541,9 +525,6 @@ class UnitGroupTest < ActiveSupport::TestCase
         instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
         instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
         participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
-        family_name: 'unit1-family',
-        version_year: '1991',
-        is_course: true
       )
       create(:script, name: 'unit2')
 
@@ -555,9 +536,6 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_nil unit1.instruction_type
       assert_nil unit1.instructor_audience
       assert_nil unit1.participant_audience
-      assert_equal unit1.family_name, 'unit1-family'
-      assert_nil unit1.is_course
-      assert_equal unit1.version_year, '1991'
 
       unit_group.update_scripts(['unit2'])
 
