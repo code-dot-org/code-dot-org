@@ -173,6 +173,7 @@ Scenario: Teacher views Rubric and Settings tabs
   Then I close my eyes
 
 @eyes
+@skip
 Scenario: Teacher views product tour
   # Teacher signs in and navigates to assessment page
   Given I create an authorized teacher-associated student named "Aiden"

@@ -118,13 +118,15 @@ export default class FieldTune extends GoogleBlockly.Field {
       this.backgroundElement
     );
 
-    const {events, scaleMode} = this.getValue();
+    const {events, scaleMode, relative} = this.getValue();
     const key = MusicRegistry.player.getKey();
 
-    const mapFn = (event: InstrumentTickEvent) => ({
-      ...event,
-      note: convertRelativeToAbsolutePitch(key, event.note),
-    });
+    const mapFn = relative
+      ? (event: InstrumentTickEvent) => ({
+          ...event,
+          note: convertRelativeToAbsolutePitch(key, event.note),
+        })
+      : (event: InstrumentTickEvent) => event;
 
     const notes = events
       .map(mapFn)

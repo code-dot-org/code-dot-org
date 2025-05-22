@@ -162,7 +162,9 @@ class ScriptLevelsController < ApplicationController
     canonical_path = build_script_level_path(@script_level, unit_group_unit: @unit_group_unit, **@extra_params)
     if request.path != canonical_path && params[:view] != 'summary'
       canonical_path << "?#{request.query_string}" unless request.query_string.empty?
-      redirect_to canonical_path, status: :moved_permanently
+      # TODO: TEACH-1916 Restore :moved_permanently after nested url migration is stable.
+      #redirect_to canonical_path, status: :moved_permanently
+      redirect_to canonical_path
       return
     end
 
