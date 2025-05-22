@@ -1,3 +1,7 @@
+# Provides name-related validations, sanitization, and helper methods for User models.
+# Ensures presence and length constraints on `name`, strips unwanted characters,
+# prevents `family_name` for certain roles (teachers and PL participants),
+# and adds utility methods like `short_name`, `initial`, and sorting flags.
 module User::Nameable
   extend ActiveSupport::Concern
 

@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class NameableTest < ActiveSupport::TestCase
-  include Minitest::RSpecMocks
-
   describe 'presence validations' do
     it 'allows a user with a name' do
       user = build(:user, name: panda_panda)
