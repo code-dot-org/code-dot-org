@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-20 22:06:04 UTC",
+    "serialized_at": "2025-05-21 15:14:18 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -4565,6 +4565,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "fabric-of-the-internet-and-ai-lesson11-level5_2025"
+        ],
         "progression": "Final Risk Assessment"
       },
       "bonus": false,

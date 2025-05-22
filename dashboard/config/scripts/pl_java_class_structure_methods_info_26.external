@@ -1,0 +1,80 @@
+name 'pl-java-class-structure-methods-info-26'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Accessor and Mutator Methods
+
+#### In Java, classes often **hide their data** (also called encapsulation) to keep it safe and organized. Instead of letting other code access fields (variables) directly, we use methods to control how values are read and changed.
+---
+
+<img src="https://images.code.org/cc6ec92f7bd8e930b3903c51aa44d5d5-image-1747852879738.png" alt="code for an accessor method called getName()" width="350px" style="border-radius:10px; float:right; margin: 40px 0 0px 40px;">
+
+## Accessor Methods (Getters)
+
+#### An **accessor method** lets you get or "access" the value of a private variable.
+
+#### Think of it like asking a question about the object.
+
+
+- #### This method returns the value of `name`.
+
+- #### It usually starts with the word **get**.
+
+#### In this example:
+
+- #### `String` is the return type of the method.
+
+- #### It means the method will return a String value when it’s called.
+
+- #### The method uses the return keyword to send back the value of name.
+
+#### ✅ **Summary**:
+#### **Accessor methods** have a return type because they give you back a value.
+#### *Whatever type of variable you're returning (like int, double, or String), that becomes the return type of the method.*
+
+#### **So:**
+
+- #### If you're returning a number → the return type might be `int` or `double`.
+
+- #### If you're returning text → the return type is `String`.
+
+- #### If you're not returning anything → you use void (like in a setter).
+
+<div style="clear:both;"></div>
+
+---
+
+<img src="https://images.code.org/2450a45a8dca9e42950ca55b306fa075-image-1747853015750.png" alt="code for a mutator method called setName" width="350px" style="border-radius:10px; float:right; margin: 40px 0 0px 40px;">
+
+## Mutator Methods (Setters)
+
+#### A **mutator method** lets you change or "mutate" the value of a private variable.
+
+#### Think of it like giving a new instruction to the object. 
+
+- #### This method updates the value of `name`.
+
+- #### It usually starts with the word **set**.
+
+- #### But it doesn’t return a value — it just does a task (sets the value).
+
+#### That’s why the return type is `void` — it means “this method does not return anything.”
+
+<div style="clear:both;"></div>
+
+---
+
+## Class Example 
+#### Take a look at how these methods fit into a full class. 
+
+
+<img src="https://images.code.org/c9ca7ac174360e5749901e2be8fbdb22-image-1747853334028.png" alt="code for a mutator method called setName" width="550px" style="border-radius:10px;display: block; margin-left: auto; margin-right: auto;">
+
+
+
+
+## Let's practice accessor methods first! 
+
+
+MARKDOWN

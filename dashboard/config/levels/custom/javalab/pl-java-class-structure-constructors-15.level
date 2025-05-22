@@ -37,6 +37,6 @@
 
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-19T17:42:12.365+00:00\",\"changed\":[\"cloned from \\\"CSA U2L2-L2-3_pilot_oo2025\\\"\"],\"cloned_from\":\"CSA U2L2-L2-3_pilot_oo2025\"},{\"changed_at\":\"2025-05-19 17:49:42 +0000\",\"changed\":[\"ai_tutor_available\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-19T17:42:12.365+00:00\",\"changed\":[\"cloned from \\\"CSA U2L2-L2-3_pilot_oo2025\\\"\"],\"cloned_from\":\"CSA U2L2-L2-3_pilot_oo2025\"},{\"changed_at\":\"2025-05-19 17:49:42 +0000\",\"changed\":[\"ai_tutor_available\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-05-21 17:24:26 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Javalab>

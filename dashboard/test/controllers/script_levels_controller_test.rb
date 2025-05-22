@@ -928,7 +928,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: '2'
     }
 
-    assert_response 301 # moved permanently
+    # TODO: TEACH-1916 Return this to 301 after the nested URL change is live and stable.
+    assert_response 302 # moved permanently
     assert_redirected_to '/hoc/2'
   end
 
@@ -949,7 +950,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: '2'
     }
 
-    assert_response 301 # moved permanently
+    # TODO: TEACH-1916 Return this to 301 after the nested URL change is live and stable.
+    assert_response 302 # moved permanently
     assert_redirected_to '/flappy/2'
   end
 
