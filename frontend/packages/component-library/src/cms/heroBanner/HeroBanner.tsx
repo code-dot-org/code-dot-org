@@ -30,6 +30,8 @@ export interface HeroBannerProps extends HTMLAttributes<HTMLElement> {
   description?: string | ReactNode;
   /** HeroBanner image */
   imageProps?: ImageProps;
+  /** Hide image on small screens */
+  hideImageOnSmallScreen?: boolean;
   /** HeroBanner video component. We use this composition here to allow using HeroBanner component for ssr pages.
    * More context can be found in this slack thread: https://codedotorg.slack.com/archives/C07UW4ED66Q/p1744640489709969
    * */
@@ -55,8 +57,6 @@ export interface HeroBannerProps extends HTMLAttributes<HTMLElement> {
   withWideText?: boolean;
   /** HeroBanner partner prop */
   partner?: {title: string; logo: ImageProps};
-  /** Hide image on small screens */
-  hideImageOnSmallScreen?: boolean;
   /** HeroBanner custom className  */
   className?: string;
 }
@@ -81,6 +81,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   description,
   partner,
   imageProps,
+  hideImageOnSmallScreen = false,
   VideoComponent,
   videoProps,
   buttonProps,
@@ -89,7 +90,6 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   backgroundImageUrl,
   removeBackground = false,
   withWideText = false,
-  hideImageOnSmallScreen = false,
   className,
   ...HTMLAttributes
 }) => (
