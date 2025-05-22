@@ -87,7 +87,7 @@ def main(options)
     return 1001
   end
 
-  report_tests_finished start_time, run_results, run_status_page_url
+  report_tests_finished(start_time, run_results, run_status_page_url) if run_results.count > 1
   run_results.count {|feature_succeeded, _, _| !feature_succeeded}
 ensure
   close_log_files
