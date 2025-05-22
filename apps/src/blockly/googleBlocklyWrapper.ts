@@ -786,6 +786,11 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   };
 
   blocklyWrapper.inject = function (container, opt_options) {
+    // Ensure we do not translate content within the blockly workspace
+    if (typeof container !== 'string') {
+      (container as HTMLElement).classList.add('notranslate');
+    }
+
     // Set the default value for hasLoadedBlocks to false.
     blocklyWrapper.hasLoadedBlocks = false;
     if (!opt_options) {
@@ -872,6 +877,16 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       container,
       options
     ) as ExtendedWorkspaceSvg;
+
+    // Mark the blockly container as something we do not want translated
+    // and undo the container being marked as such
+    const div = workspace.getInjectionDiv();
+    if (div) {
+      div.classList.add('notranslate');
+    }
+    if (typeof container !== 'string') {
+      (container as HTMLElement).classList.remove('notranslate');
+    }
 
     workspace.defs = Blockly.createSvgElement(
       'defs',
