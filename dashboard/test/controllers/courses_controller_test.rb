@@ -463,24 +463,23 @@ class CoursesControllerTest < ActionController::TestCase
     assert_includes(response.body, no_access_msg)
   end
 
-  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_teacher},
+  test_user_gets_response_for(:show, response: :redirect, user: -> {@pilot_teacher},
                               params: -> {{course_name: @pilot_unit_group.name, section_id: @pilot_section.id}},
                               name: 'pilot teacher can view pilot course'
   ) do
-    refute_includes(response.body, no_access_msg)
+    assert_redirected_to "http://test.host/teacher_dashboard/sections/#{@pilot_section.id}/courses/#{@pilot_unit_group.name}"
   end
 
   test_user_gets_response_for(:show, response: :redirect, user: -> {@pilot_facilitator},
                               params: -> {{course_name: @pilot_pl_unit_group.name, section_id: @pilot_pl_section.id}},
                               name: 'pilot instructor can view pilot course'
   ) do
-    assert_redirected_to "http://test.host/teacher_dashboard/sections/2/courses/bogus-course-3"
+    assert_redirected_to "http://test.host/teacher_dashboard/sections/#{@pilot_pl_section.id}/courses/#{@pilot_pl_unit_group.name}"
   end
 
-  test_user_gets_response_for(:show, response: :redirect, user: -> {@pilot_student},
+  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},
                               params: -> {{course_name: @pilot_unit_group.name}}, name: 'pilot student can view pilot course'
   ) do
-    assert_redirected_to "http://test.host/teacher_dashboard/sections/1/courses/bogus-course-2"
     refute_includes(response.body, no_access_msg)
   end
 
