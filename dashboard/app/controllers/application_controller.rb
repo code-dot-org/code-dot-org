@@ -66,12 +66,17 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  rescue_from CanCan::AccessDenied do
+  rescue_from CanCan::AccessDenied do |exception|
     if !current_user && request.format == :html
       # we don't know who you are, you can try to sign in
       authenticate_user!
     elsif rack_env?(:development, :adhoc)
-      raise
+      # log the error and its full stack trace
+      message = "CanCan::AccessDenied: #{exception.message}"
+      stack = exception.backtrace.join("\n")
+      error_with_stack = "#{message}\n#{stack}"
+      Rails.logger.error(error_with_stack)
+      render plain: error_with_stack, status: :forbidden
     else
       # we know who you are, you shouldn't be here
       head :forbidden
@@ -113,7 +118,15 @@ class ApplicationController < ActionController::Base
 
   # Allow cross-origin requests from code.org
   def allow_cdo_cors
-    response.headers['Access-Control-Allow-Origin']      = CDO.code_org_url '', request.protocol.chomp('//')
+    allowed_origin = CDO.code_org_url('', request.protocol.chomp('//'))
+    request_origin = request.headers['Origin']
+
+    # Allows Contentful preview localhost in development
+    if Rails.env.development? && %w[http://localhost:3001 http://localhost.code.org:3001].include?(request_origin)
+      allowed_origin = request_origin
+    end
+
+    response.headers['Access-Control-Allow-Origin']      = allowed_origin
     response.headers['Access-Control-Allow-Methods']     = request.request_method
     response.headers['Access-Control-Allow-Headers']     = '*'
     response.headers['Access-Control-Allow-Credentials'] = 'true'
@@ -211,8 +224,11 @@ class ApplicationController < ActionController::Base
       # if they solved it, figure out next level
       if options[:solved?]
         response[:new_level_completed] = options[:new_level_completed]
-        response[:level_path] = build_script_level_path(script_level)
-        script_level_solved_response(response, script_level)
+        # TODO: TEACH-1899 Get current UnitGroup/Course from the params and pass
+        # it to Queries::Courses.unit_group_unit
+        unit_group_unit = Queries::Courses.unit_group_unit(script_level.script)
+        response[:level_path] = build_script_level_path(script_level, unit_group_unit: unit_group_unit)
+        script_level_solved_response(response, script_level, unit_group_unit: unit_group_unit)
       else # not solved
         response[:message] = 'try again'
       end

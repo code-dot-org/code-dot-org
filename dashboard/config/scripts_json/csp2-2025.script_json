@@ -20,7 +20,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-13 16:59:28 UTC",
+    "serialized_at": "2025-05-20 18:22:55 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -900,7 +901,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The first 3 challenges have very direct solutions with most networks in the class looking nearly identical:\n\n![](https://images.code.org/65ef124a58e0bad5dc219a928a8d816d-challenges 1.png)"
+            "markdown": "The first 3 challenges have very direct solutions with most networks in the class looking nearly identical:\n\n![](https://images.code.org/65ef124a58e0bad5dc219a928a8d816d-challenges 1.png)\n\n\nIf groups struggle getting started with Challenge 1, you can provide the hint that they should use all of their strings. "
           }
         ]
       },
@@ -2830,6 +2831,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page-csp2_2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,

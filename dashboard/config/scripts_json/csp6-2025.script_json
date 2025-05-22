@@ -20,7 +20,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-13 19:11:38 UTC",
+    "serialized_at": "2025-05-21 17:18:16 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4786,14 +4787,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "U5 Traversals Practice Part 3_2025"
+          "U5 Traversals Practice Part 1_2025"
         ],
         "progression": "Traversal Practice"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U5 Traversals Practice Part 3_2025"
+          "U5 Traversals Practice Part 1_2025"
         ],
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "lessonGroup-4",
@@ -4801,7 +4802,7 @@
         "activity_section.key": "e9bcb100-e317-4f96-bb77-d3e533301489"
       },
       "level_keys": [
-        "U5 Traversals Practice Part 3_2025"
+        "U5 Traversals Practice Part 1_2025"
       ]
     },
     {
@@ -4836,14 +4837,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "U5 Traversals Practice Part 1_2025"
+          "U5 Traversals Practice Part 3_2025"
         ],
         "progression": "Traversal Practice"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U5 Traversals Practice Part 1_2025"
+          "U5 Traversals Practice Part 3_2025"
         ],
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "lessonGroup-4",
@@ -4851,7 +4852,7 @@
         "activity_section.key": "e9bcb100-e317-4f96-bb77-d3e533301489"
       },
       "level_keys": [
-        "U5 Traversals Practice Part 1_2025"
+        "U5 Traversals Practice Part 3_2025"
       ]
     },
     {
@@ -5085,6 +5086,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page-csp6_2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -5130,6 +5134,31 @@
       "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_csp6_2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_csp6_2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp6-2025",
+        "activity_section.key": "450ae012-51f0-4730-bae4-8e020eb344ee"
+      },
+      "level_keys": [
+        "student-eou-survey_csp6_2025"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -5152,7 +5181,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5177,7 +5206,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5202,7 +5231,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5227,7 +5256,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -5252,7 +5281,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5277,7 +5306,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -5302,7 +5331,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5327,7 +5356,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -5352,7 +5381,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -5377,7 +5406,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -5402,7 +5431,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
@@ -5427,7 +5456,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 75,
       "position": 13,
       "activity_section_position": 2,
       "assessment": true,
@@ -5449,28 +5478,6 @@
       },
       "level_keys": [
         "U5L3 CFU Lists Psuedocode 22022_b_2025"
-      ]
-    },
-    {
-      "chapter": 75,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "End of Unit Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "student-eou-survey_csp6_2025"
-        ],
-        "lesson.key": "End of Unit Survey",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp6-2025",
-        "activity_section.key": "450ae012-51f0-4730-bae4-8e020eb344ee"
-      },
-      "level_keys": [
-        "student-eou-survey_csp6_2025"
       ]
     }
   ],
@@ -6041,9 +6048,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "U5 Traversals Practice Part 3_2025",
+        "level.key": "U5 Traversals Practice Part 1_2025",
         "script_level.level_keys": [
-          "U5 Traversals Practice Part 3_2025"
+          "U5 Traversals Practice Part 1_2025"
         ],
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "lessonGroup-4",
@@ -6065,9 +6072,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "U5 Traversals Practice Part 1_2025",
+        "level.key": "U5 Traversals Practice Part 3_2025",
         "script_level.level_keys": [
-          "U5 Traversals Practice Part 1_2025"
+          "U5 Traversals Practice Part 3_2025"
         ],
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "lessonGroup-4",
@@ -6205,6 +6212,18 @@
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csp6-2025",
         "activity_section.key": "a7ce5111-2013-4883-9741-b776652b7929"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_csp6_2025",
+        "script_level.level_keys": [
+          "student-eou-survey_csp6_2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp6-2025",
+        "activity_section.key": "450ae012-51f0-4730-bae4-8e020eb344ee"
       }
     },
     {
@@ -6361,18 +6380,6 @@
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csp6-2025",
         "activity_section.key": "ac3cd7ce-62c7-4bb5-a0e0-98b0bcc60823"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "student-eou-survey_csp6_2025",
-        "script_level.level_keys": [
-          "student-eou-survey_csp6_2025"
-        ],
-        "lesson.key": "End of Unit Survey",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp6-2025",
-        "activity_section.key": "450ae012-51f0-4730-bae4-8e020eb344ee"
       }
     }
   ],

@@ -66,6 +66,7 @@ export const HeroBannerContentfulComponentDefinition: ComponentDefinition = {
       displayName: 'Heading',
       type: 'Text',
       group: 'content',
+      defaultValue: 'Hero Banner heading goes here',
       validations: {
         required: true,
         bindingSourceType: ['entry', 'manual'],
@@ -172,7 +173,7 @@ export const HeroBannerContentfulComponentDefinition: ComponentDefinition = {
     },
     announcementBannerLink: {
       displayName: 'Announcement Banner Link',
-      type: 'Link',
+      type: 'Array',
       group: 'content',
       description:
         'This is the link that will be used in the announcement banner.',
