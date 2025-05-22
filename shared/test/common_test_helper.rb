@@ -58,6 +58,7 @@ DASHBOARD_TEST_TABLES = %w(
   projects
   user_project_storage_ids
 ).freeze
+puts "Truncating #{DASHBOARD_TEST_TABLES} on database #{CDO.dashboard_db_name}"
 DASHBOARD_TEST_TABLES.each do |table|
   # rubocop:disable CustomCops/DashboardDbUsage
   DASHBOARD_DB[table.to_sym].truncate
