@@ -65,7 +65,7 @@ const SectionAvatarEditDialog: React.FC<SectionAvatarEditDialogProps> = ({
         <hr />
       </div>
       <div className={styles.avatarDialogBody}>
-        <label id={'section-avatar'} className={styles.avatarDialogLabels}>
+        <label className={styles.avatarDialogLabels}>
           <BodyTwoText>{i18n.avatar()}</BodyTwoText>
           <SectionAvatar
             color={selectedColor}
