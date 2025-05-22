@@ -643,12 +643,14 @@ export default class MusicBlocklyWorkspace {
       );
       return;
     }
-
+    // Disable events to prevent recursion.
+    Blockly.Events.disable();
     (this.workspace as GoogleBlockly.WorkspaceSvg)
       .getAllBlocks()
       .forEach(block => {
         block.id === blockId ? block.select() : block.unselect();
       });
+    Blockly.Events.enable();
   }
 
   getSelectedTriggerId(blockId: string) {
