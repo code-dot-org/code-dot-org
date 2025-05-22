@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-19 15:30:27 UTC",
+    "serialized_at": "2025-05-21 21:11:51 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -349,7 +349,7 @@
     },
     {
       "key": "Student End of Unit Survey",
-      "name": "Student End of Unit Survey",
+      "name": "End of Unit Survey",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": false,
@@ -917,6 +917,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "f3d7aba9-051a-4784-8bf6-0f74aa1d2332",
+        "lesson.key": "AI Time Capsule Project",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif1-2025"
+      }
+    },
+    {
+      "key": "cf53a627-5497-4ad4-b603-d2949a877e83",
+      "position": 4,
+      "properties": {
+        "name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cf53a627-5497-4ad4-b603-d2949a877e83",
         "lesson.key": "AI Time Capsule Project",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "aif1-2025"
@@ -2596,10 +2609,27 @@
       }
     },
     {
-      "key": "57fa6a87-769f-4193-a954-c3881add76c2",
+      "key": "370e4d9e-c96c-4b89-94e3-b5e9518c8906",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *AI bias*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Understanding Bias activity guide.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *AI bias*.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you choose to demonstrate doing a Google Image search for “nurse” or “doctor”, consider searching for animations, e.g. \"nurse cartoon image”, to see more obvious bias."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "370e4d9e-c96c-4b89-94e3-b5e9518c8906",
+        "lesson_activity.key": "19b4a45a-2b3c-4dee-95ef-1d6be857fe18"
+      }
+    },
+    {
+      "key": "57fa6a87-769f-4193-a954-c3881add76c2",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Understanding Bias activity guide.\n"
       },
       "seeding_key": {
         "activity_section.key": "57fa6a87-769f-4193-a954-c3881add76c2",
@@ -2608,7 +2638,7 @@
     },
     {
       "key": "8aba2a5b-208b-4d56-9923-89469b2b672a",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "AI generates responses based on patterns in its training data. But what happens when those patterns reflect assumptions about people and professions? Let's investigate by asking AI to describe outfits for two different careers and analyzing its responses.",
         "remarks": true
@@ -2620,10 +2650,16 @@
     },
     {
       "key": "fe589084-ad2d-4f2d-a288-9dee99dcae72",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 1 to explore AI-generated descriptions of clothing worn by different professions – a secretary and a CEO. Students should complete the AI Bias Analysis section of their activity guide as they interact with each task.",
-        "progression_name": "Career Clothing"
+        "progression_name": "Career Clothing",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "It might be hard to see overt bias in AI Chat’s responses. Consider discussing any nuanced biases which exist in society that are being reflected by the chatbot. For example, the chatbot returns style suggestions for both male and female CEOs but the suggestions differ by gender. Female CEOs are encouraged to wear skirts, dresses, heels, and flats but not chinos, button down shirts, or loafers. This reflects bias in our societal norms that the chatbot is parroting back to us."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "fe589084-ad2d-4f2d-a288-9dee99dcae72",
@@ -2632,7 +2668,7 @@
     },
     {
       "key": "b9fa1145-b56d-4f54-9d9c-a1b988009f91",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Did AI assume a default identity in either of the prompts?*\n- *Did the responses differ in the tone, assumptions, or characteristics included?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that AI descriptions reflect patterns in training data, which may reinforce stereotypes or assumptions. They should identify differences in language, gender associations, or implied expertise in AI-generated responses.\n",
         "tips": [
@@ -2649,7 +2685,7 @@
     },
     {
       "key": "667511a2-2898-40f7-9b0f-b49ab1570e91",
-      "position": 7,
+      "position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -2659,7 +2695,7 @@
     },
     {
       "key": "b923c3c7-2ef5-41d9-a5b1-605211f2a922",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "Now that we've seen how AI describes outfits for different professions, let's take it a step further. AI doesn't generate biased responses on purpose—it reflects patterns in the data it has learned from. But we can adjust our inputs to get better, more neutral results. Let's try to refine our prompts and see how AI responds.\n",
         "remarks": true
@@ -2671,7 +2707,7 @@
     },
     {
       "key": "9459b28f-06a8-4f6e-a784-56996e1edea8",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Return students to Lesson 6, Level 1. Refine the original prompts to improve neutrality. Students document their refined prompts and compare AI's new responses in the AI Bias Analysis Chart section of their activity guide."
       },
@@ -2682,7 +2718,7 @@
     },
     {
       "key": "907eb4be-50bd-429c-98f7-be86b4e9c393",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What factors in AI's training data may have led to this bias we uncovered?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to bring up bias in the datasets, connecting back to the warm up activity, other examples they may be familiar with, or their own lived experiences.\n"
       },
@@ -2693,7 +2729,7 @@
     },
     {
       "key": "b6cad6c0-f547-457c-a74b-9a51424b3c46",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "We've explored how AI bias emerges and how we can adjust prompts to reduce it. Now, let's think about what AI developers can do to make AI systems more fair and representative.",
         "remarks": true
@@ -2705,7 +2741,7 @@
     },
     {
       "key": "275ce02f-bc8b-448a-947b-1451b010eb9d",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 6, Level 2 to complete the formative assessment.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** \n- Students answer the multiple-select question: \"How could AI developers make adjustments to reduce bias?\"\n- Use the \"View Student Responses\" feature to analyze the class results.\n- Ask students: \"What do you notice?\" and \"What do you wonder?\" Have them discuss with a partner before selecting a few volunteers to share.\n",
         "progression_name": "Check Your Understanding",
@@ -2727,7 +2763,7 @@
     },
     {
       "key": "d7e8186a-146c-4052-8517-a5180eb7ccff",
-      "position": 13,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:**Students analyze bias in decision-making by comparing their own candidate selection process with AI’s and exploring how training data influences AI’s choices.",
         "duration": "15",
@@ -2740,7 +2776,7 @@
     },
     {
       "key": "cc059a76-790e-4e4b-a7b6-0fbaa0314953",
-      "position": 14,
+      "position": 15,
       "properties": {
         "description": "AI is increasingly being used to make important decisions—hiring employees, admitting students, and even determining which patients receive medical care first. But how do we know if AI is making fair and unbiased choices? Today, you'll take on a decision-making role and compare your choices to AI's.",
         "remarks": true
@@ -2752,7 +2788,7 @@
     },
     {
       "key": "557e45d0-fcf4-4cef-8d8e-977ca07ba66f",
-      "position": 15,
+      "position": 16,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Lesson 6, Level 3. Students choose one decision-making role:\n- **Hiring Manager:** Selects top candidates for job interviews.\n- **College Admissions Officer:** Picks students for acceptance.\n- **Hospital Triage Nurse:** Prioritizes patients for urgent care.\n\nThen students review the candidate pool and select two candidates based on their qualifications. They record and justify selections in the activity guide.\n",
         "progression_name": "Decision-Making Roles"
@@ -2764,7 +2800,7 @@
     },
     {
       "key": "56fdbdd9-13f2-4c87-a068-885027380cd4",
-      "position": 16,
+      "position": 17,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Listen for students discussing why certain candidates stood out over others. If students struggle, ask:\n- *\"What specific qualifications made you choose these candidates?\"*\n- *\"Did you consider factors beyond qualifications, like personal background?\"*\n"
       },
@@ -2775,7 +2811,7 @@
     },
     {
       "key": "4f31738a-6c45-45a1-a413-d01157ef7aa6",
-      "position": 17,
+      "position": 18,
       "properties": {
         "description": "Now, let's see how AI makes the same decision. AI doesn't have opinions or instincts—it relies on patterns in data. You'll ask AI to select candidates for your decision-making role, analyze its reasoning, and compare it to your own. Finally, you'll refine your prompt to see if AI's choices can better match your priorities.",
         "remarks": true
@@ -2787,7 +2823,7 @@
     },
     {
       "key": "d02d2a28-8160-4100-9f25-ffcb02bc1e75",
-      "position": 18,
+      "position": 19,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 6, Level 4, where they will ask AI Chat to select candidates for the same decision-making role they previously chose. Students will then compare AI's selections to their own. After reviewing AI's choices, students will refine their prompt to better align with their group's priorities, specifying which qualities AI should prioritize while abstracting away irrelevant details.\n\n",
         "progression_name": "AI Audit Challenge"
@@ -2799,7 +2835,7 @@
     },
     {
       "key": "2f4651d2-aea8-4394-b2fe-39d176ef943a",
-      "position": 19,
+      "position": 20,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Form student groups of three, ensuring each student has a different role, to share their findings.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *alignment* and share two mitigation strategies for reducing AI bias.\n"
       },
@@ -4807,6 +4843,18 @@
       }
     },
     {
+      "key": "d3f2e19e-e968-41c6-a20c-4d758f54c005",
+      "position": 1,
+      "properties": {
+        "description": "After completing this project, students should complete the End of Unit Survey linked in the final level. Their responses help us understand their experiences and improve future versions of this unit.",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "d3f2e19e-e968-41c6-a20c-4d758f54c005",
+        "lesson_activity.key": "cf53a627-5497-4ad4-b603-d2949a877e83"
+      }
+    },
+    {
       "key": "b7fad7f0-db25-4805-8a25-6df4ce7676f3",
       "position": 1,
       "properties": {
@@ -6184,7 +6232,7 @@
       "chapter": 55,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "problem-solving-with-ai-lesson10-level4_2024-pilot_2025"
@@ -6432,6 +6480,31 @@
     },
     {
       "chapter": 65,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page_problem_solving-2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_problem_solving-2025"
+        ],
+        "lesson.key": "AI Time Capsule Project",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif1-2025",
+        "activity_section.key": "d3f2e19e-e968-41c6-a20c-4d758f54c005"
+      },
+      "level_keys": [
+        "student-eou-survey_linked_page_problem_solving-2025"
+      ]
+    },
+    {
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6456,7 +6529,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7252,6 +7325,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "student-eou-survey_linked_page_problem_solving-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_problem_solving-2025"
+        ],
+        "lesson.key": "AI Time Capsule Project",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif1-2025",
+        "activity_section.key": "d3f2e19e-e968-41c6-a20c-4d758f54c005"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "problem-solving-with-ai-postassessment-pilot_2025",
         "script_level.level_keys": [
           "problem-solving-with-ai-postassessment-pilot_2025"
@@ -7287,20 +7372,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] Unit Guide",
-      "url": "https://docs.google.com/document/d/1TATwQ6ToVOpQlF6YqTOHxfYZSL2X9Kqg5eMfjcbq_2Q/edit?usp=sharing",
-      "key": "_exemplar_unit_guide_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_unit_guide_1"
-      }
-    },
-    {
       "name": "[KEY] AI Audit",
-      "url": "https://docs.google.com/document/d/1eecS6jHweY-B0MpiLOvsZSbD_UiwhqAMXNy_DhOCPwY/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1KWiPmB-kVpuTPXPSq2xXnhdQfoMkgSYgaJRKFPeI_NA/edit?usp=drivesdk",
       "key": "_key_ai_audit",
       "properties": {
         "audience": "Verified Teacher",
@@ -7312,7 +7385,7 @@
     },
     {
       "name": "[KEY] AI in the Community",
-      "url": "https://docs.google.com/document/d/1GedXYa9BH8wEEzaui9d6b6chpLDV1bOQ8vhLFbZ8Slg/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1otRrV4we_4C2ld5Krnu6nHQI53GVghfJdeCbIIERHb8/edit?usp=drivesdk",
       "key": "_key_ai_in_the_community",
       "properties": {
         "audience": "Verified Teacher",
@@ -7324,7 +7397,7 @@
     },
     {
       "name": "[KEY] AI Remix Challenge",
-      "url": "https://docs.google.com/document/d/1dsIyJe3Oxbjylsz5tkFAh2Hmlb8xufW7rQNP0S6OgqU/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/180EZ4dZE1EaSQbHU1XFJlHpO_2qAOIjfW1E4LVmldEA/edit?usp=drivesdk",
       "key": "_key_ai_remix_challenge",
       "properties": {
         "audience": "Verified Teacher",
@@ -7336,7 +7409,7 @@
     },
     {
       "name": "[KEY] Collaborate on a Product Launch",
-      "url": "https://docs.google.com/document/d/11a78DDVNKno8LzbzGgA1KkOw1-MMtnEhN82we3R-tnw/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1w8AjUDBWmtzol9YpTG-fOMew3RZBXe8h7KF8hchSzno/edit?usp=drivesdk",
       "key": "_key_collaborate_on_a_product_launch",
       "properties": {
         "audience": "Verified Teacher",
@@ -7348,7 +7421,7 @@
     },
     {
       "name": "[KEY] Examining AI Contradictions",
-      "url": "https://docs.google.com/document/d/1v_lzxtPnahh0Vd-ksqf0M8C2vDsRN-5xmQrFcKYKwJ4/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1Xv6Wd1D7OjiW3mhw4jo97pG6NIhJFrrAHYpIMszpicI/edit?usp=drivesdk",
       "key": "_key_examining_ai_contradictions",
       "properties": {
         "audience": "Verified Teacher",
@@ -7360,7 +7433,7 @@
     },
     {
       "name": "[KEY] Hallucination Case Studies",
-      "url": "https://docs.google.com/document/d/1irbJnFW9dn0HFv735AMHkEntI8QKwTM3V27ZQJ5A8lw/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1P7WjuDzEZsNGJdqIZ8yYqzbW4sEZMD1pSuvFWva8R-w/edit?usp=drivesdk",
       "key": "_key_hallucination_case_studies",
       "properties": {
         "audience": "Verified Teacher",
@@ -7371,8 +7444,20 @@
       }
     },
     {
+      "name": "[KEY] Problem Solving with AI Unit Guide Exemplar",
+      "url": "https://docs.google.com/document/d/1OxuvJnC9V7752RI-HQ72vcF5UFuk_iCb1n0H0p1qlgQ/edit?usp=drivesdk",
+      "key": "_key_problem_solving_with_ai_unit_guide_exemplar",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_problem_solving_with_ai_unit_guide_exemplar"
+      }
+    },
+    {
       "name": "AI as a Co-Creator",
-      "url": "https://docs.google.com/presentation/d/1hE6Ea3bYFOKIT2LhX50nADUwlPEUJaQJ_w_6RZ8uTps/view",
+      "url": "https://docs.google.com/presentation/d/10agRiA6i7RcSop4R4VmbYDng7vjTq65uvCin7Z6WJ6g/edit?usp=drivesdk",
       "key": "ai_as_a_co-creator",
       "properties": {
         "audience": "Verified Teacher",
@@ -7384,7 +7469,7 @@
     },
     {
       "name": "AI Audit",
-      "url": "https://docs.google.com/document/d/1SLbdeRX5HgurDFB2PGw9J-Q5Zslmcm5yBPQq7xBc4D4/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1AWjOcaVEHH6Ac4AvFvkzW7q2YRMmgviebXg5H8zi5WM/edit?usp=drivesdk",
       "key": "ai_audit",
       "properties": {
         "audience": "Student",
@@ -7396,8 +7481,18 @@
       }
     },
     {
+      "name": "AI Chat FAQ",
+      "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
+      "key": "ai_chat_faq",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "ai_chat_faq"
+      }
+    },
+    {
       "name": "AI in the Community",
-      "url": "https://docs.google.com/document/d/1I8pOsKbbWCJDIQi2E7WdChm5g3hSh-CYgzg6ZBc6lVQ/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1swk3Ytu52zPLdffHXsKMbNDrTTI87NIX9nZzSHQtBag/edit?usp=drivesdk",
       "key": "ai_in_the_community",
       "properties": {
         "audience": "Student",
@@ -7410,7 +7505,7 @@
     },
     {
       "name": "AI Remix Challenge",
-      "url": "https://docs.google.com/document/d/1Q8CsLHYIopOOnQCCwHEJSB7LD4h2x81MLy90ydL4Tp8/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1tm3V4fSes25EiVYMKfYIGgFVe8ZZykhVanhopJeHeVs/edit?usp=drivesdk",
       "key": "ai_remix_challenge",
       "properties": {
         "audience": "Student",
@@ -7435,7 +7530,7 @@
     },
     {
       "name": "AI's Role in Society",
-      "url": "https://docs.google.com/presentation/d/1lzeUbf88j4pC5rhySaSFaU1Rl4D0pUafCpNonkgsIts/view",
+      "url": "https://docs.google.com/presentation/d/1PqMz7P4nIgD_znshzS-gzsY07Fp8QPTfxzWXEDg73R8/edit?usp=drivesdk",
       "key": "ai_s_role_in_society",
       "properties": {
         "audience": "Verified Teacher",
@@ -7447,7 +7542,7 @@
     },
     {
       "name": "AI's Wild Imagination",
-      "url": "https://docs.google.com/presentation/d/1w0ZqZnJrWaCZrbxruLlRTYydxHDqxRLkbDwzIFzDRHU/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1NjVZ0PEzHAhEe0ax0KfmpdpuLjyGr6TskogX4kSOoJE/edit?usp=drivesdk",
       "key": "ai_s_wild_imagination",
       "properties": {
         "audience": "Verified Teacher",
@@ -7459,7 +7554,7 @@
     },
     {
       "name": "AI Time Capsule Project",
-      "url": "https://docs.google.com/presentation/d/1PWGEBPaJiD8aMCy0TwQQccdaFnCJHr4l_KaMQ_LTDDA/view",
+      "url": "https://docs.google.com/presentation/d/17qYfwaGmjDBM6KVgpiqFA2-NjKrGlxnjYRpM9iRt7Bk/edit?usp=drivesdk",
       "key": "ai_time_capsule_project",
       "properties": {
         "audience": "Verified Teacher",
@@ -7471,7 +7566,7 @@
     },
     {
       "name": "AI Time Capsule Project Planning Guide",
-      "url": "https://docs.google.com/document/d/12VXXPQ0xTHpdgdLEj09K2nOwTRoiprEszM5QESP2SXk/edit?tab=t.0#heading=h.o5k6kdpc3hjp",
+      "url": "https://docs.google.com/document/d/12ERoL_ehwCFg2KE9PhQpNr59XCZIT_CtnLKkTfNyAkQ/edit?usp=drivesdk",
       "key": "ai_time_capsule_project_planning_guide",
       "properties": {
         "audience": "Student",
@@ -7483,8 +7578,41 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/aif1-2025/resources",
+      "key": "all_resources_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_6"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/aif1-2025/standards",
+      "key": "all_standards_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_6"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/aif1-2025/vocab",
+      "key": "all_vocabulary_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_6"
+      }
+    },
+    {
       "name": "Beyond Words",
-      "url": "https://docs.google.com/presentation/d/1_JDy2fAMiIi6ro8MjyQ-AncWXEdC4c9H7XwQ4E7ch10/view",
+      "url": "https://docs.google.com/presentation/d/1940eqXqTCaIKFBLeQiDlLdygyFOGZLHsh2lD_vxeYx0/edit?usp=drivesdk",
       "key": "beyond_words",
       "properties": {
         "audience": "Verified Teacher",
@@ -7496,7 +7624,7 @@
     },
     {
       "name": "Collaborate on a Product Launch",
-      "url": "https://docs.google.com/document/d/11L-Ml3X06zW04w-Xc4V4LyCI4RN3u_WGLe2vYSHXzYA/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/16HZ12NM5c0hh8Q5Gm5xSMud4n7QTezq_06iM624q1Io/edit?usp=drivesdk",
       "key": "collaborate_on_a_product_launch",
       "properties": {
         "audience": "Student",
@@ -7509,7 +7637,7 @@
     },
     {
       "name": "Ownership and AI Stations",
-      "url": "https://docs.google.com/document/d/1kceelWKEiKMcvw0tOjvsghjT92SBdNp9maQ7RmHv5yE/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1BBvvbW5e3rCXOLsvZ58fHR2SNNzHU27uSnBsXxUDUsY/edit?usp=drivesdk",
       "key": "create_a_copyright_policy",
       "properties": {
         "audience": "Student",
@@ -7534,7 +7662,7 @@
     },
     {
       "name": "Debugging and Refining Outputs",
-      "url": "https://docs.google.com/presentation/d/1XuxpucU1GDBYl0ihkJwhS7DJiO7InNh5i79PuQdHIgU/view",
+      "url": "https://docs.google.com/presentation/d/1_GITEwQ6Ek6PXwnL5bzDtZaqZ8yFNFJWpJ_z0r6IxEc/edit?usp=drivesdk",
       "key": "debugging_and_refining_outputs",
       "properties": {
         "audience": "Verified Teacher",
@@ -7546,7 +7674,7 @@
     },
     {
       "name": "Examining AI Contradictions",
-      "url": "https://docs.google.com/document/d/1gvm1AIqweRL9EVsazF3dKQD9PanRU1qCkysepO96i-g/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1h9wgXbJZFF6FMUopFYq-SqhExAi7Yn4E2QBAuv9_oV0/edit?usp=drivesdk",
       "key": "examining_ai_contradictions",
       "properties": {
         "audience": "Student",
@@ -7559,7 +7687,7 @@
     },
     {
       "name": "Exemplar Description",
-      "url": "https://docs.google.com/document/d/1C0sQDyrgocK_I1BhlVw1cVCHZhEkri4ukFKPRvgAdSc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1mSADhUQEAXc9V1mO6FUkaX7Hnap85tgYI3KNRDytukg/edit?usp=drivesdk",
       "key": "exemplar_description",
       "properties": {
         "audience": "Verified Teacher",
@@ -7583,7 +7711,7 @@
     },
     {
       "name": "Hallucination Case Studies",
-      "url": "https://docs.google.com/document/d/1l252sY3OMQ5kK435xBmb79VM3xDQv1ZJyrDAHh1F1LI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1sULqyWw0YVmt_n3XNSwuTJqGhUqB2HQtDVnr2Ufrf3o/edit?usp=drivesdk",
       "key": "hallucination_case_studies",
       "properties": {
         "audience": "Student",
@@ -7608,7 +7736,7 @@
     },
     {
       "name": "Jigsaw Articles",
-      "url": "https://docs.google.com/document/d/1u1GyYMxCRtc0pWY0Lr2R5PFoKQTzE_kDi1jGIFntpps/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1Ts7OnRbtooAKrlj92wMV76XE_PANXwENCMIFz7gFUPM/edit?usp=drivesdk",
       "key": "jigsaw_articles",
       "properties": {
         "audience": "Student",
@@ -7621,7 +7749,7 @@
     },
     {
       "name": "Ownership and AI Stations",
-      "url": "https://docs.google.com/document/d/1-PWipeUM-LWIp7peClR7MZmgiFl_HisgP9xrhidrJ6k/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1Eh2TASGZ7z0Wncry96Yg1ZZgiPQOOpUqizRQY8RnxO0/edit?usp=drivesdk",
       "key": "ownership_and_ai_stations",
       "properties": {
         "audience": "Teacher",
@@ -7633,7 +7761,7 @@
     },
     {
       "name": "Ownership, Ethics, and Creativity",
-      "url": "https://docs.google.com/presentation/d/1GW9SfHuMo_wqsOXNRcJFksxFcWZ6U-3aIlSvlE6pIQU/view",
+      "url": "https://docs.google.com/presentation/d/1hfLB28TgJrTpmcq8pl58Gv5-xqhoSe9ijoYT1JIZy08/edit?usp=drivesdk",
       "key": "ownership_ethics_and_creativity",
       "properties": {
         "audience": "Verified Teacher",
@@ -7669,8 +7797,20 @@
       }
     },
     {
+      "name": "Problem Solving with AI Unit Guide",
+      "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk",
+      "key": "problem_solving_with_ai_unit_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_with_ai_unit_guide"
+      }
+    },
+    {
       "name": "Remixing, Creativity, and Originality",
-      "url": "https://docs.google.com/presentation/d/1M15Gq8VaZXJaf_R4otrXZkVgzDMlHFzhEwQFMwHAdFo/view",
+      "url": "https://docs.google.com/presentation/d/1MMdn2ei6iupAF8z0Tz9vHqpMPywMp0VMsvWSnW-HqQ8/edit?usp=drivesdk",
       "key": "remixing_creativity_and_originality",
       "properties": {
         "audience": "Verified Teacher",
@@ -7682,7 +7822,7 @@
     },
     {
       "name": "Smart or Just Predictable?",
-      "url": "https://docs.google.com/presentation/d/1DlhcHNz3VnpgR0jc38cHV-ComlzlAtPVQdz0jlzW_rU/view",
+      "url": "https://docs.google.com/presentation/d/1jBJaed7pHhh3Q5jlh0twHxXj6bMPf4v5PB3HnvAYM2w/edit?usp=drivesdk",
       "key": "smart_or_just_predictable_",
       "properties": {
         "audience": "Verified Teacher",
@@ -7694,7 +7834,7 @@
     },
     {
       "name": "Talking to Machines",
-      "url": "https://docs.google.com/presentation/d/1RoCgepgv3zjLc_LVF19Lmwly3EQyFlq99_gPR3cJ_v0/view",
+      "url": "https://docs.google.com/presentation/d/1g31o1jws2MNSrNvh-hC4O9t_RNmo0CKO3-pUqVathsY/edit?usp=drivesdk",
       "key": "talking_to_machines",
       "properties": {
         "audience": "Verified Teacher",
@@ -7706,7 +7846,7 @@
     },
     {
       "name": "The AI's Brain",
-      "url": "https://docs.google.com/presentation/d/1_axEEN6bdcN80O-Cp-N2U3sQL9XW0CxogdXbgjhdSEE/view",
+      "url": "https://docs.google.com/presentation/d/17_DT0lpyXVay-tZvSz1qwo7y6t5KoDO9SPyWr0rFL7U/edit?usp=drivesdk",
       "key": "the_ai_s_brain",
       "properties": {
         "audience": "Verified Teacher",
@@ -7718,7 +7858,7 @@
     },
     {
       "name": "Uncovering Contradictions",
-      "url": "https://docs.google.com/presentation/d/1siOEZ5IuknbwEncBekn2wwOLoowXxbC-FbvxCB7nZs4/view",
+      "url": "https://docs.google.com/presentation/d/1aB64LHdkG6gd2iXMQOFhWyzDEiFR2FU8RD2Ixbbs6f0/edit?usp=drivesdk",
       "key": "uncovering_contradictions",
       "properties": {
         "audience": "Verified Teacher",
@@ -7730,7 +7870,7 @@
     },
     {
       "name": "Understanding Bias",
-      "url": "https://docs.google.com/presentation/d/1MywPoHHluPyQTHWFLNMBO0FJSlP-Ag-x5ALw5WT3Ujk/view",
+      "url": "https://docs.google.com/presentation/d/1dM1X0mmM2wDAKklFmGTYZrdaeHVfdcqQCLnfzdvFZoc/edit?usp=drivesdk",
       "key": "understanding_bias",
       "properties": {
         "audience": "Verified Teacher",
@@ -7766,7 +7906,7 @@
     },
     {
       "name": "Unplugged Neural Networks",
-      "url": "https://docs.google.com/document/d/1NCOfp5pB7WzladvDreK2QVBvhihBtn-7J6eXREVB5Wk/edit?tab=t.0",
+      "url": "https://docs.google.com/document/d/168FsA22aT-Tup4H9OHIvffToo6N2PDSL8u07AgdJgec/edit?usp=drivesdk",
       "key": "unplugged_neural_networks",
       "properties": {
         "audience": "Student",
@@ -7775,6 +7915,18 @@
       },
       "seeding_key": {
         "resource.key": "unplugged_neural_networks"
+      }
+    },
+    {
+      "name": "Viewing Student AI Chat History as a Teacher",
+      "url": "https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher",
+      "key": "viewing_student_ai_chat_history_as_a_teacher",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
       }
     }
   ],
@@ -7806,13 +7958,13 @@
     {
       "seeding_key": {
         "lesson.key": "AI as a Co-Creator",
-        "resource.key": "_exemplar_unit_guide_1"
+        "resource.key": "_key_collaborate_on_a_product_launch"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "AI as a Co-Creator",
-        "resource.key": "_key_collaborate_on_a_product_launch"
+        "resource.key": "_key_problem_solving_with_ai_unit_guide_exemplar"
       }
     },
     {
@@ -7830,19 +7982,19 @@
     {
       "seeding_key": {
         "lesson.key": "AI as a Co-Creator",
-        "resource.key": "unit_guide_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "AI's Role in Society",
-        "resource.key": "_exemplar_unit_guide_1"
+        "resource.key": "problem_solving_with_ai_unit_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "AI's Role in Society",
         "resource.key": "_key_ai_in_the_community"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "AI's Role in Society",
+        "resource.key": "_key_problem_solving_with_ai_unit_guide_exemplar"
       }
     },
     {
@@ -7860,25 +8012,25 @@
     {
       "seeding_key": {
         "lesson.key": "AI's Role in Society",
-        "resource.key": "unicef_youth_advocate_ayshka_on_mental_health"
+        "resource.key": "problem_solving_with_ai_unit_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "AI's Role in Society",
-        "resource.key": "unit_guide_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "AI's Wild Imagination",
-        "resource.key": "_exemplar_unit_guide_1"
+        "resource.key": "unicef_youth_advocate_ayshka_on_mental_health"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "AI's Wild Imagination",
         "resource.key": "_key_hallucination_case_studies"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "AI's Wild Imagination",
+        "resource.key": "_key_problem_solving_with_ai_unit_guide_exemplar"
       }
     },
     {
@@ -7902,13 +8054,13 @@
     {
       "seeding_key": {
         "lesson.key": "AI's Wild Imagination",
-        "resource.key": "unit_guide_2"
+        "resource.key": "problem_solving_with_ai_unit_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Beyond Words",
-        "resource.key": "_exemplar_unit_guide_1"
+        "resource.key": "_key_problem_solving_with_ai_unit_guide_exemplar"
       }
     },
     {
@@ -7920,13 +8072,13 @@
     {
       "seeding_key": {
         "lesson.key": "Beyond Words",
-        "resource.key": "unit_guide_2"
+        "resource.key": "problem_solving_with_ai_unit_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Debugging and Refining Outputs",
-        "resource.key": "_exemplar_unit_guide_1"
+        "resource.key": "_key_problem_solving_with_ai_unit_guide_exemplar"
       }
     },
     {
@@ -7944,13 +8096,13 @@
     {
       "seeding_key": {
         "lesson.key": "Debugging and Refining Outputs",
-        "resource.key": "unit_guide_2"
+        "resource.key": "problem_solving_with_ai_unit_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Ownership, Ethics, and Creativity",
-        "resource.key": "_exemplar_unit_guide_1"
+        "resource.key": "_key_problem_solving_with_ai_unit_guide_exemplar"
       }
     },
     {
@@ -7974,19 +8126,19 @@
     {
       "seeding_key": {
         "lesson.key": "Ownership, Ethics, and Creativity",
-        "resource.key": "unit_guide_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Remixing, Creativity, and Originality",
-        "resource.key": "_exemplar_unit_guide_1"
+        "resource.key": "problem_solving_with_ai_unit_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Remixing, Creativity, and Originality",
         "resource.key": "_key_ai_remix_challenge"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Remixing, Creativity, and Originality",
+        "resource.key": "_key_problem_solving_with_ai_unit_guide_exemplar"
       }
     },
     {
@@ -8004,19 +8156,25 @@
     {
       "seeding_key": {
         "lesson.key": "Remixing, Creativity, and Originality",
-        "resource.key": "remixing_creativity_and_originality"
+        "resource.key": "problem_solving_with_ai_unit_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Remixing, Creativity, and Originality",
-        "resource.key": "unit_guide_2"
+        "resource.key": "remixing_creativity_and_originality"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Smart or Just Predictable?",
-        "resource.key": "_exemplar_unit_guide_1"
+        "resource.key": "_key_problem_solving_with_ai_unit_guide_exemplar"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Smart or Just Predictable?",
+        "resource.key": "problem_solving_with_ai_unit_guide"
       }
     },
     {
@@ -8027,14 +8185,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Smart or Just Predictable?",
-        "resource.key": "unit_guide_2"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Talking to Machines",
-        "resource.key": "_exemplar_unit_guide_1"
+        "resource.key": "_key_problem_solving_with_ai_unit_guide_exemplar"
       }
     },
     {
@@ -8052,19 +8204,19 @@
     {
       "seeding_key": {
         "lesson.key": "Talking to Machines",
-        "resource.key": "talking_to_machines"
+        "resource.key": "problem_solving_with_ai_unit_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Talking to Machines",
-        "resource.key": "unit_guide_2"
+        "resource.key": "talking_to_machines"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "The AI's Brain",
-        "resource.key": "_exemplar_unit_guide_1"
+        "resource.key": "_key_problem_solving_with_ai_unit_guide_exemplar"
       }
     },
     {
@@ -8076,13 +8228,13 @@
     {
       "seeding_key": {
         "lesson.key": "The AI's Brain",
-        "resource.key": "the_ai_s_brain"
+        "resource.key": "problem_solving_with_ai_unit_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "The AI's Brain",
-        "resource.key": "unit_guide_2"
+        "resource.key": "the_ai_s_brain"
       }
     },
     {
@@ -8094,13 +8246,13 @@
     {
       "seeding_key": {
         "lesson.key": "Uncovering Contradictions",
-        "resource.key": "_exemplar_unit_guide_1"
+        "resource.key": "_key_examining_ai_contradictions"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Uncovering Contradictions",
-        "resource.key": "_key_examining_ai_contradictions"
+        "resource.key": "_key_problem_solving_with_ai_unit_guide_exemplar"
       }
     },
     {
@@ -8112,19 +8264,13 @@
     {
       "seeding_key": {
         "lesson.key": "Uncovering Contradictions",
-        "resource.key": "uncovering_contradictions"
+        "resource.key": "problem_solving_with_ai_unit_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Uncovering Contradictions",
-        "resource.key": "unit_guide_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Understanding Bias",
-        "resource.key": "_exemplar_unit_guide_1"
+        "resource.key": "uncovering_contradictions"
       }
     },
     {
@@ -8136,19 +8282,25 @@
     {
       "seeding_key": {
         "lesson.key": "Understanding Bias",
+        "resource.key": "_key_problem_solving_with_ai_unit_guide_exemplar"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Bias",
         "resource.key": "ai_audit"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Understanding Bias",
-        "resource.key": "understanding_bias"
+        "resource.key": "problem_solving_with_ai_unit_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Understanding Bias",
-        "resource.key": "unit_guide_2"
+        "resource.key": "understanding_bias"
       }
     }
   ],
@@ -8161,7 +8313,37 @@
     },
     {
       "seeding_key": {
+        "resource.key": "ai_chat_faq",
+        "script.name": "aif1-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_6",
+        "script.name": "aif1-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_6",
+        "script.name": "aif1-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_6",
+        "script.name": "aif1-2025"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "unit_guide_2",
+        "script.name": "aif1-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher",
         "script.name": "aif1-2025"
       }
     }
@@ -8899,7 +9081,118 @@
     }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "AI as a Co-Creator",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "AI's Role in Society",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "AI's Wild Imagination",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Beyond Words",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Beyond Words",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Beyond Words",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Beyond Words",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-29"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging and Refining Outputs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ownership, Ethics, and Creativity",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-28"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Remixing, Creativity, and Originality",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Smart or Just Predictable?",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Talking to Machines",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Talking to Machines",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The AI's Brain",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Uncovering Contradictions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Bias",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-25"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

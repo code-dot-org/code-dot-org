@@ -71,6 +71,7 @@ describe('TeacherNavigationBar', () => {
       hidden: false,
       courseVersionName: 'csd-2022',
       unitName: 'csd3-2022',
+      unitPosition: 1,
       participantType: 'student',
     },
     {
@@ -79,6 +80,7 @@ describe('TeacherNavigationBar', () => {
       hidden: false,
       courseVersionName: 'csd-2022',
       unitName: 'csd6-2022',
+      unitPosition: 6,
       participantType: 'student',
     },
     {
@@ -95,6 +97,7 @@ describe('TeacherNavigationBar', () => {
       hidden: false,
       courseVersionName: 'csa-2022',
       unitName: 'csa1-2022',
+      unitPosition: 1,
       participantType: 'student',
     },
   ];

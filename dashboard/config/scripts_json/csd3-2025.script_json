@@ -19,7 +19,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-13 15:30:09 UTC",
+    "serialized_at": "2025-05-21 18:15:40 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -13416,6 +13417,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page-csd3_2025"
+        ],
         "progression": "End Of Unit Survey"
       },
       "bonus": false,
@@ -16695,7 +16699,7 @@
     },
     {
       "name": "Extra Code in Challenge Levels",
-      "url": "https://docs.google.com/document/d/1Zx8e-b_GJFNxsuXx10tIdh3EPSGoqPwpxGh2Hz70B2w/view",
+      "url": "https://docs.google.com/document/d/18ExVv8sNgHTQ3SZmk3fYazqXJgy-q59NxgjjP4ZsITo/edit?usp=sharing",
       "key": "extra_code_in_challenge_levels",
       "properties": {
         "audience": "Teacher",

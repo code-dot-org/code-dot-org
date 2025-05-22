@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class CoursesControllerTest < ActionController::TestCase
+  include Minitest::RSpecMocks
   self.use_transactional_test_case = true
 
   setup_all do
@@ -88,14 +89,14 @@ class CoursesControllerTest < ActionController::TestCase
 
     test 'student views course overview with caching enabled' do
       sign_in create(:student)
-      assert_cached_queries(8) do
+      assert_cached_queries(7) do
         get :show, params: {course_name: @unit_group.name}
       end
     end
 
     test 'teacher views course overview with caching enabled' do
       sign_in create(:teacher)
-      assert_cached_queries(13) do
+      assert_cached_queries(12) do
         get :show, params: {course_name: @unit_group.name}
       end
     end
@@ -405,7 +406,7 @@ class CoursesControllerTest < ActionController::TestCase
 
     sign_in create(:teacher)
     get :show, params: {course_name: single_unit_course.name}
-    assert_redirected_to script_path(single_unit_course.default_units.first)
+    assert_redirected_to script_path(single_unit_course.first_unit)
   end
 
   test "show: teacher in teacher-local-nav-v2 experiment is redirected to teacher dashboard if course is in a section" do
@@ -869,4 +870,51 @@ class CoursesControllerTest < ActionController::TestCase
   test_user_gets_response_for :all, user: :teacher, response: :forbidden
   test_user_gets_response_for :all, user: :admin, response: :forbidden
   test_user_gets_response_for :all, user: :levelbuilder, response: :success
+
+  describe '#show' do
+    let(:modularity_enabled) {false}
+    let(:course) {nil}
+    let(:user) {create :teacher}
+    let(:params) do
+      {}
+    end
+
+    before do
+      allow(Policies::Courses).to receive(:modularity_enabled?).and_return(modularity_enabled)
+      sign_in user
+      get :show, params: params
+    end
+
+    context 'modularity is off' do
+      context 'course has one Unit' do
+        let(:course) {create :single_unit_course}
+        let(:params) do
+          {
+            course_name: course.name
+          }
+        end
+
+        it 'redirects to the Unit page' do
+          assert_redirected_to "/s/#{course.default_units.first.name}"
+        end
+      end
+    end
+
+    context 'modularity is on' do
+      let(:modularity_enabled) {true}
+
+      context 'course has one Unit' do
+        let(:course) {create :single_unit_course}
+        let(:params) do
+          {
+            course_name: course.name
+          }
+        end
+
+        it 'redirects to the nested Course Unit page' do
+          assert_redirected_to "/courses/#{course.name}/units/1"
+        end
+      end
+    end
+  end
 end

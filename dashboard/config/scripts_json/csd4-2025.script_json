@@ -19,7 +19,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-13 15:29:43 UTC",
+    "serialized_at": "2025-05-20 17:31:21 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6628,6 +6629,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page-csd4_2025"
+        ],
         "progression": "End Of Unit Survey"
       },
       "bonus": false,

@@ -148,14 +148,22 @@ class HomeController < ApplicationController
     script = Queries::ScriptActivity.primary_student_unit(current_user)
     if script
       script_level = current_user.next_unpassed_progression_level(script)
+      unit_group = script.unit_group
+      unit_group_unit = script.unit_group_units.find {|ugu| ugu.unit_group == unit_group} if unit_group
     end
     @homepage_data[:topCourse] = nil
     if script && script_level
+      link_to_overview = script_path(script)
+      link_to_lesson = script_next_path(script)
+      if Policies::Courses.modularity_enabled? && unit_group_unit
+        link_to_overview = course_unit_path(unit_group_unit.unit_group, unit_group_unit.position)
+        link_to_lesson = course_unit_next_path(unit_group_unit.unit_group, unit_group_unit.position)
+      end
       @homepage_data[:topCourse] = {
         assignableName: data_t_suffix('script.name', script[:name], 'title'),
         lessonName: script_level.lesson.localized_title,
-        linkToOverview: script_path(script),
-        linkToLesson: script_next_path(script, 'next')
+        linkToOverview: link_to_overview,
+        linkToLesson: link_to_lesson,
       }
     end
 
@@ -169,14 +177,22 @@ class HomeController < ApplicationController
       pl_unit = Queries::ScriptActivity.primary_pl_unit(current_user)
       if pl_unit
         pl_script_level = current_user.next_unpassed_progression_level(pl_unit)
+        pl_unit_group = pl_unit.unit_group
+        pl_unit_group_unit = pl_unit.unit_group_units.find {|ugu| ugu.unit_group == pl_unit_group} if pl_unit_group
       end
       @homepage_data[:topPlCourse] = nil
       if pl_unit && pl_script_level
+        link_to_overview = script_path(pl_unit)
+        link_to_lesson = script_next_path(pl_unit)
+        if Policies::Courses.modularity_enabled? && pl_unit_group_unit
+          link_to_overview = course_unit_path(pl_unit_group_unit.unit_group, pl_unit_group_unit.position)
+          link_to_lesson = course_unit_next_path(pl_unit_group_unit.unit_group, pl_unit_group_unit.position)
+        end
         @homepage_data[:topPlCourse] = {
           assignableName: data_t_suffix('script.name', pl_unit[:name], 'title'),
           lessonName: pl_script_level.lesson.localized_title,
-          linkToOverview: script_path(pl_unit),
-          linkToLesson: script_next_path(pl_unit, 'next')
+          linkToOverview: link_to_overview,
+          linkToLesson: link_to_lesson,
         }
       end
 
