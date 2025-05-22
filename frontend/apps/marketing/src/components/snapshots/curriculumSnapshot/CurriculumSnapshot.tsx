@@ -49,7 +49,7 @@ const CurriculumSnapshot: React.FunctionComponent<CurriculumSnapshotProps> = ({
     addItem('Duration', 'clock', duration);
     addItem('Devices', 'desktop', devices);
     addItem('Topics', 'book', topics);
-    addItem('Programming Tools', 'screwdriver-wrench', devTools);
+    addItem('Tools', 'screwdriver-wrench', devTools);
     addItem('Professional Learning', 'chalkboard-user', proLearning);
     addItem('Accessibility', 'universal-access', accessibility);
     addItem('Languages supported', 'language', languages);
