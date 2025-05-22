@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-20 03:03:53 UTC",
+    "serialized_at": "2025-05-21 19:36:16 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -436,12 +436,30 @@
       }
     },
     {
-      "key": "The Math Class",
-      "name": "Lesson 20: The Math Class",
+      "key": "Lesson 1: The Theater",
+      "name": "Lesson 20: The Theater",
       "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 20,
+      "properties": {
+        "overview": "**What can I make with The Theater?**\n\nIn this unit, students explore data visualizations and consider how they can create their own visuals to tell a story about a dataset. Students start by exploring The Theater through an existing program and reading documentation to identify the available classes and methods they can use to create drawings, show images, and play sounds. They then practice using these methods to create simple drawings and visuals and consider how they can use The Theater to create animations and visualizations of the dataset they used for their Data for Social Good Project.",
+        "preparation": "* **(Optional)** Print copies of the The Theater Guided Notes (one for each student)\n* Preview the *Welcome to The Theater* video\n* Print copies of the Unit 4 Guide (one for each student)\n* Print copies of the Investigating The Theater handout (one for each pair of students)",
+        "student_overview": "**What can I make with The Theater?**\n\nIn this unit, you explore data visualizations and consider how you can create your own visuals to tell a story about a dataset. You start by exploring The Theater through an existing program and reading documentation to identify the available classes and methods you can use to create drawings, show images, and play sounds. You then practice using these methods to create simple drawings and visuals and consider how you can use The Theater to create animations and visualizations of the dataset you used for your Data for Social Good Project."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 1: The Theater",
+        "lesson_group.key": "lessonGroup-18",
+        "script.name": "csa1-alt-2025"
+      }
+    },
+    {
+      "key": "The Math Class",
+      "name": "Lesson 21: The Math Class",
+      "absolute_position": 21,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 21,
       "properties": {
         "overview": "**What can I do with the `Math` class?**\n\nStudents have used classes like `Scanner` and `Object` from the Java API as well as classes from The Neighborhood and The Theater. In this lesson, students learn about the `Math` class and how the `static` keyword can be used with the `final` keyword to create constants. They explore the documentation for the `Math` class to identify its methods and learn about their functionalities. Students then practice creating and using constants and calling methods in the `Math` class.",
         "preparation": "* **(Optional)** Print copies of the The Math Class Guided Notes (one for each student)\n* Preview the *Constants* video\n* Print copies of The Math Class handout (one for each student)\n* Print copies of the Math Class Graphic Organizer handout (one for each student)",
@@ -455,11 +473,11 @@
     },
     {
       "key": "Random",
-      "name": "Lesson 21: Random",
-      "absolute_position": 21,
+      "name": "Lesson 22: Random",
+      "absolute_position": 22,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 21,
+      "relative_position": 22,
       "properties": {
         "overview": "**How can I generate and use random numbers?**\n\nStudents learned about the `Math` class in the previous lesson and explored using some of its methods to perform calculations. In this lesson, students learn about the functionality of `Math.random()` and discover its benefits and limitations. Students consider how they can use `Math.random()` with casting operators to generate random numbers within a specific range and consider how random is used in programs they use every day. They then practice generating and using random numbers within specified ranges and retrieving random elements from a 1D array.",
         "preparation": "* **(Optional)** Print copies of the Random Guided Notes (one for each student)\n* Preview the *Random Numbers* video\n* Gather the Dataset Summaries handouts collected in Lesson 4",
@@ -473,11 +491,11 @@
     },
     {
       "key": "Substrings",
-      "name": "Lesson 22: Substrings",
-      "absolute_position": 22,
+      "name": "Lesson 23: Substrings",
+      "absolute_position": 23,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 22,
+      "relative_position": 23,
       "properties": {
         "overview": "**How can I analyze parts of a `String` object?**\n\nIn this lesson, students revisit the `String` class and learn how to use the `substring()` method. They discover that `String` objects are immutable and are not modified when calling methods in the `String` class. Students also explore how the `substring()` method can be combined with other methods in the `String` class to find the location of a specific character or substring within a `String` and compare substrings for equality. They then practice using the `substring()` method to retrieve a substring of a `String` object and to find and replace specific characters.",
         "preparation": "* **(Optional)** Print copies of the Substrings Guided Notes (one for each student)",
@@ -491,11 +509,11 @@
     },
     {
       "key": "Comparing Strings",
-      "name": "Lesson 23: Comparing Strings",
-      "absolute_position": 23,
+      "name": "Lesson 24: Comparing Strings",
+      "absolute_position": 24,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 23,
+      "relative_position": 24,
       "properties": {
         "overview": "**How can I determine if a list of `String` objects are in alphabetical order?**\n\nStudents have previously learned how to use several of the methods in the String class. In this lesson, students explore the `compareTo()` method and discover how this method can be used to check if a list of `String` objects is in alphabetical order. They then practice using the `compareTo()` method to evaluate `String` objects and using the methods in the `String` class to implement algorithms.",
         "preparation": "* **(Optional)** Print copies of the Comparing Strings Guided Notes (one for each student)\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up OR use [**this web-based version**](https://csabingo.up.railway.app/) to show the terms and definitions",
@@ -509,11 +527,11 @@
     },
     {
       "key": "Overloaded Methods",
-      "name": "Lesson 24: Overloaded Methods",
-      "absolute_position": 24,
+      "name": "Lesson 25: Overloaded Methods",
+      "absolute_position": 25,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 24,
+      "relative_position": 25,
       "properties": {
         "overview": "**How can overloading a method be useful in my programs?**\n\nStudents previously learned about overloading when writing multiple constructors in a class. In this lesson, students revisit overloaded constructors and learn how overloading can be applied to methods. They explore how overloaded methods work and consider scenarios where overloaded methods would be useful. Students then practice writing and calling overloaded methods and revisit their Need to Knows to determine what they have learned that will be useful for their project and what they still need to learn.",
         "preparation": "* **(Optional)** Print copies of the Overloaded Methods Guided Notes (one for each student)",
@@ -528,10 +546,10 @@
     {
       "key": "Asphalt Art Project",
       "name": "Project 1a: Asphalt Art Project",
-      "absolute_position": 25,
+      "absolute_position": 26,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 25,
+      "relative_position": 26,
       "properties": {
         "assessment": true,
         "overview": "​​**What do I want to represent using programming and art?**\n\nFor this project, students use the skills they have developed to create asphalt art in The Neighborhood. Students choose a theme or concept for their asphalt art that represents something they are interested in or meaningful to them. After brainstorming and planning, students develop their programs to create their designs.",
@@ -547,10 +565,10 @@
     {
       "key": "Asphalt Art Project [1-Day Version]",
       "name": "Project 1b: Asphalt Art Project [1-Day Version]",
-      "absolute_position": 26,
+      "absolute_position": 27,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 26,
+      "relative_position": 27,
       "properties": {
         "assessment": true,
         "overview": "​​**What do I want to represent using programming and art?**\n\nFor this project, students use the skills they have developed to create asphalt art in The Neighborhood. Students choose a theme or concept for their asphalt art that represents something they are interested in or meaningful to them. After brainstorming and planning, students develop their programs to create their designs.",
@@ -565,10 +583,10 @@
     {
       "key": "SpiralPainter FRQ",
       "name": "FRQ 1: SpiralPainter FRQ",
-      "absolute_position": 27,
+      "absolute_position": 28,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 27,
+      "relative_position": 28,
       "properties": {
         "overview": "**How will I use what I know about classes, objects, and methods to answer a Free Response Question?**\n\nStudents are introduced to AP CSA Free Response Questions (FRQs) and practice decomposition and problem-solving skills to develop solutions to a mock FRQ. Students use annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
         "preparation": "* Print the SpiralPainter FRQ Stations resource\n* Cut out the manipulatives in the SpiralPainter FRQ Stations resource *or* have students make a copy of the SpiralPainter FRQ Digital Manipulatives\n* Create stations around the classroom as indicated on the SpiralPainter FRQ Stations resource\n* (Optional) Gather a blue, orange, and pink colored pencil or marker for each student",
@@ -583,10 +601,10 @@
     {
       "key": "End of Unit Survey",
       "name": "End of Unit Survey",
-      "absolute_position": 28,
+      "absolute_position": 29,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 28,
+      "relative_position": 29,
       "properties": {
       },
       "seeding_key": {
@@ -598,10 +616,10 @@
     {
       "key": "Sandbox: The Neighborhood",
       "name": "Sandbox: The Neighborhood",
-      "absolute_position": 29,
+      "absolute_position": 30,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 29,
+      "relative_position": 30,
       "properties": {
       },
       "seeding_key": {
@@ -613,10 +631,10 @@
     {
       "key": "Sandbox: Console",
       "name": "Sandbox: Console",
-      "absolute_position": 30,
+      "absolute_position": 31,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 30,
+      "relative_position": 31,
       "properties": {
       },
       "seeding_key": {
@@ -628,10 +646,10 @@
     {
       "key": "Sandbox: The Theater",
       "name": "Sandbox: The Theater",
-      "absolute_position": 31,
+      "absolute_position": 32,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 31,
+      "relative_position": 32,
       "properties": {
       },
       "seeding_key": {
@@ -1436,6 +1454,48 @@
       "seeding_key": {
         "lesson_activity.key": "78b73655-b0e0-4b70-b8be-325122d4df16",
         "lesson.key": "Printing Objects",
+        "lesson_group.key": "lessonGroup-18",
+        "script.name": "csa1-alt-2025"
+      }
+    },
+    {
+      "key": "4e6feedf-8fda-4c01-9723-b32096008e7b",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4e6feedf-8fda-4c01-9723-b32096008e7b",
+        "lesson.key": "Lesson 1: The Theater",
+        "lesson_group.key": "lessonGroup-18",
+        "script.name": "csa1-alt-2025"
+      }
+    },
+    {
+      "key": "e139db1b-4cea-4320-8ec9-f8cf20f36526",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e139db1b-4cea-4320-8ec9-f8cf20f36526",
+        "lesson.key": "Lesson 1: The Theater",
+        "lesson_group.key": "lessonGroup-18",
+        "script.name": "csa1-alt-2025"
+      }
+    },
+    {
+      "key": "9fd6cd8c-818c-4f4d-80ca-0e2eb36cc1c0",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9fd6cd8c-818c-4f4d-80ca-0e2eb36cc1c0",
+        "lesson.key": "Lesson 1: The Theater",
         "lesson_group.key": "lessonGroup-18",
         "script.name": "csa1-alt-2025"
       }
@@ -7149,6 +7209,296 @@
       }
     },
     {
+      "key": "1c446195-8a5b-461f-a92d-b2b01e612a62",
+      "position": 1,
+      "properties": {
+        "description": "For the unit project, you will use The Theater to create visualizations of data. Data visualizations help us make sense of data and communicate its story. These visuals are a powerful way to discover and understand these stories and present them to others. Let's take a look at an example.",
+        "name": "Data Visualizations",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1c446195-8a5b-461f-a92d-b2b01e612a62",
+        "lesson_activity.key": "4e6feedf-8fda-4c01-9723-b32096008e7b"
+      }
+    },
+    {
+      "key": "7ba2bc4e-9d9a-4612-92ed-976c8e38a0da",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What story do you think this data visualization is trying to tell? Why do you think the creator chose to visualize the data in this way?*\n\n**Discussion Goal:** Students share opinions and ideas about what they think the data visualization is trying to convey and why the creator chose this visual.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ask students what other visuals the creator could have used to convey the same story. Have students consider how alternative visuals would have impacted the effectiveness of the message."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7ba2bc4e-9d9a-4612-92ed-976c8e38a0da",
+        "lesson_activity.key": "4e6feedf-8fda-4c01-9723-b32096008e7b"
+      }
+    },
+    {
+      "key": "4a74afe5-7b59-432f-948f-c2767204902d",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "duration": "5",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "4a74afe5-7b59-432f-948f-c2767204902d",
+        "lesson_activity.key": "e139db1b-4cea-4320-8ec9-f8cf20f36526"
+      }
+    },
+    {
+      "key": "cad45564-e486-4e06-b705-57330db69b14",
+      "position": 2,
+      "properties": {
+        "description": "We have used packages like The Neighborhood and from the Java API to work with user input and files in our programs. In this unit, we will work with a package that contains classes that make up The Theater.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cad45564-e486-4e06-b705-57330db69b14",
+        "lesson_activity.key": "e139db1b-4cea-4320-8ec9-f8cf20f36526"
+      }
+    },
+    {
+      "key": "74f60e52-fafe-48af-9cff-9d06c8d9a7e5",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "progression_name": "Predict and Run: The Theater"
+      },
+      "seeding_key": {
+        "activity_section.key": "74f60e52-fafe-48af-9cff-9d06c8d9a7e5",
+        "lesson_activity.key": "e139db1b-4cea-4320-8ec9-f8cf20f36526"
+      }
+    },
+    {
+      "key": "e1346f7f-35ec-4e70-8f73-b6759546e753",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the program creates a `Scene` object and calls methods to draw shapes and images and play sounds. Students may wonder if they can extend the `Scene` class like they extended the `Painter` class or what types of programs they could create using The Theater."
+      },
+      "seeding_key": {
+        "activity_section.key": "e1346f7f-35ec-4e70-8f73-b6759546e753",
+        "lesson_activity.key": "e139db1b-4cea-4320-8ec9-f8cf20f36526"
+      }
+    },
+    {
+      "key": "a9b295d0-a3e2-4b6a-98dd-11b7a7f665bb",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – Welcome to The Theater.",
+        "duration": "15",
+        "name": "Investigating The Theater",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a9b295d0-a3e2-4b6a-98dd-11b7a7f665bb",
+        "lesson_activity.key": "e139db1b-4cea-4320-8ec9-f8cf20f36526"
+      }
+    },
+    {
+      "key": "2fca14c2-4566-45d6-ac64-1d698c97c5e2",
+      "position": 6,
+      "properties": {
+        "description": "Like The Neighborhood, The Theater consists of several classes that allow us to showcase our ideas and creativity. The main classes we'll be working with are the `Theater` and `Scene` classes.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2fca14c2-4566-45d6-ac64-1d698c97c5e2",
+        "lesson_activity.key": "e139db1b-4cea-4320-8ec9-f8cf20f36526"
+      }
+    },
+    {
+      "key": "5d58cb10-070d-4071-bde2-e5e87434f03b",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the Theater class.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You don't need to go into too much detail about the `final` or `static` keywords for now. These are covered in more detail in an upcoming lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5d58cb10-070d-4071-bde2-e5e87434f03b",
+        "lesson_activity.key": "e139db1b-4cea-4320-8ec9-f8cf20f36526"
+      }
+    },
+    {
+      "key": "00fbaa54-3ff6-464c-a55a-d72f8d439e32",
+      "position": 8,
+      "properties": {
+        "description": "**Do This:** Introduce the `Scene` class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Default values for text, color, stroke, and instrument\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Instance variables for the font and colors\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Methods to get the width and height of The Theater, play sounds and notes, draw images and shapes, and change the font and colors\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Investigating The Theater handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to access the documentation for The Theater and complete the Investigating The Theater handout.",
+        "progression_name": "Investigate and Modify: The Theater"
+      },
+      "seeding_key": {
+        "activity_section.key": "00fbaa54-3ff6-464c-a55a-d72f8d439e32",
+        "lesson_activity.key": "e139db1b-4cea-4320-8ec9-f8cf20f36526"
+      }
+    },
+    {
+      "key": "20fd1e9f-e338-4f1c-8b00-3b36883dd907",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code and their responses on the Investigating The Theater handout.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ask students what they noticed about the classes in the program, and have them share how this is similar and different to how they worked with the `Painter` class in The Neighborhood. You might also have students brainstorm how they might create additional `Scene` objects in a program and how they could work with them in a 1D array of `Scene` objects. For example:\n* *What are some other types of `Scene` objects you might create for a program?*\n* *If you created a 1D array of `Scene` objects, what are some things that you would then be able to do?*"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "20fd1e9f-e338-4f1c-8b00-3b36883dd907",
+        "lesson_activity.key": "e139db1b-4cea-4320-8ec9-f8cf20f36526"
+      }
+    },
+    {
+      "key": "2f04ceeb-181f-431e-a785-14e02aa3831c",
+      "position": 10,
+      "properties": {
+        "description": "**Do This:** Click through the animated slides to introduce the methods in The Theater:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `drawImage()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The methods to draw shapes\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `playSound()` and `playNote()` methods\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `pause()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `Theater.playScenes()` method"
+      },
+      "seeding_key": {
+        "activity_section.key": "2f04ceeb-181f-431e-a785-14e02aa3831c",
+        "lesson_activity.key": "e139db1b-4cea-4320-8ec9-f8cf20f36526"
+      }
+    },
+    {
+      "key": "4bcd3aee-ed44-4ae2-9b4f-200c5c41ab42",
+      "position": 11,
+      "properties": {
+        "description": "The Theater allows you to create many types of visuals and animations, as well as play and manipulate sounds. Let's see what we can make in The Theater!",
+        "duration": "15",
+        "name": "Creating Drawings and Animations",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4bcd3aee-ed44-4ae2-9b4f-200c5c41ab42",
+        "lesson_activity.key": "e139db1b-4cea-4320-8ec9-f8cf20f36526"
+      }
+    },
+    {
+      "key": "610ff789-c404-4266-a844-5d27b91aff36",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3 through 6. Students complete a Check for Understanding on Level 3, then continue to complete choice levels to draw images, draw shapes, and play sounds.",
+        "progression_name": "Practice: Creating Drawings and Animations",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Check for Understanding is an AP-style multiple choice question that can be used as a formative assessment to gauge understanding of 1D array algorithms.\n\nThe practice levels can be used as a formative assessment to gauge understanding of using API documentation and calling methods from existing classes."
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "Since these levels are focused on providing students opportunities for creative exploration with The Theater, they do not have validation."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "610ff789-c404-4266-a844-5d27b91aff36",
+        "lesson_activity.key": "e139db1b-4cea-4320-8ec9-f8cf20f36526"
+      }
+    },
+    {
+      "key": "34729337-ce96-4ae9-a80a-c650d383047a",
+      "position": 1,
+      "properties": {
+        "description": "There is a lot you can do with The Theater, and there are more capabilities that we have not yet explored. We'll start with the capabilities you explored today in this unit to create interesting visuals and animations.",
+        "name": "Using The Theater",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "34729337-ce96-4ae9-a80a-c650d383047a",
+        "lesson_activity.key": "9fd6cd8c-818c-4f4d-80ca-0e2eb36cc1c0"
+      }
+    },
+    {
+      "key": "c904b2b2-033f-4b2a-825f-e8e595db7b52",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are things you could make using The Theater?*\n\n**Discussion Goal:** Students share ideas about visuals and animations they want to make using The Theater, such as creating a drawing of a favorite hobby or an animation to tell a personal story.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c904b2b2-033f-4b2a-825f-e8e595db7b52",
+        "lesson_activity.key": "9fd6cd8c-818c-4f4d-80ca-0e2eb36cc1c0"
+      }
+    },
+    {
+      "key": "9888f522-899a-479a-a661-1c72040c5a04",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How could you use The Theater to create visuals of the data you worked with in the previous unit?*\n\n**Discussion Goal:** Students suggest ways to visualize the data they worked with in the previous unit, such as creating drawings and images or animating the data to demonstrate patterns and information.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ask students where they have seen data visuals before, such as charts and graphs or infographics. Have students consider why someone would choose to convey information visually compared to the projects they created in the previous unit."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9888f522-899a-479a-a661-1c72040c5a04",
+        "lesson_activity.key": "9fd6cd8c-818c-4f4d-80ca-0e2eb36cc1c0"
+      }
+    },
+    {
+      "key": "a3e1241a-2e5b-4315-bb8c-c462c66cba07",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Unit 4 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a3e1241a-2e5b-4315-bb8c-c462c66cba07",
+        "lesson_activity.key": "9fd6cd8c-818c-4f4d-80ca-0e2eb36cc1c0"
+      }
+    },
+    {
+      "key": "05eb904d-b3df-4f8d-b64d-77ec50ebba69",
+      "position": 5,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "05eb904d-b3df-4f8d-b64d-77ec50ebba69",
+        "lesson_activity.key": "9fd6cd8c-818c-4f4d-80ca-0e2eb36cc1c0"
+      }
+    },
+    {
+      "key": "95e46f34-20fc-4c72-8feb-87a9c01f63d8",
+      "position": 6,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "95e46f34-20fc-4c72-8feb-87a9c01f63d8",
+        "lesson_activity.key": "9fd6cd8c-818c-4f4d-80ca-0e2eb36cc1c0"
+      }
+    },
+    {
       "key": "2899cb02-a1a7-4968-a942-e983fe43c6cd",
       "position": 1,
       "properties": {
@@ -10425,6 +10775,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L1_pilot_alt_-csa-alt-unit1_2025"
+        ],
         "progression": "Predict and Run: No-Argument Constructors"
       },
       "bonus": false,
@@ -10447,6 +10800,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L2_pilot_alt_-csa-alt-unit1_2025"
+        ],
         "progression": "Investigate and Modify: Constructors"
       },
       "bonus": false,
@@ -10469,6 +10825,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L2-2_pilot_alt_-csa-alt-unit1_2025"
+        ],
         "progression": "Investigate and Modify: Constructors"
       },
       "bonus": false,
@@ -10491,6 +10850,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L2-3_pilot_alt_-csa-alt-unit1_2025"
+        ],
         "progression": "Investigate and Modify: Constructors"
       },
       "bonus": false,
@@ -10513,6 +10875,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L3_pilot_alt_-csa-alt-unit1_2025"
+        ],
         "progression": "Skill Building: Writing a Constructor"
       },
       "bonus": false,
@@ -10535,6 +10900,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L4_pilot_alt_-csa-alt-unit1_2025"
+        ],
         "progression": "Practice: Writing a Class"
       },
       "bonus": false,
@@ -10557,6 +10925,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L5_pilot_alt_-csa-alt-unit1_2025"
+        ],
         "progression": "Practice: Writing a Class"
       },
       "bonus": false,
@@ -10579,6 +10950,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L6_pilot_alt_-csa-alt-unit1_2025"
+        ],
         "progression": "Practice: The Food Truck"
       },
       "bonus": false,
@@ -10601,6 +10975,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L7_pilot_alt_-csa-alt-unit1_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -11673,6 +12050,160 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Predict and Run: The Theater"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L1-L1_pilot_oo2025_-csa-alt_2025"
+        ],
+        "lesson.key": "Lesson 1: The Theater",
+        "lesson_group.key": "lessonGroup-18",
+        "script.name": "csa1-alt-2025",
+        "activity_section.key": "74f60e52-fafe-48af-9cff-9d06c8d9a7e5"
+      },
+      "level_keys": [
+        "CSA U4L1-L1_pilot_oo2025_-csa-alt_2025"
+      ]
+    },
+    {
+      "chapter": 100,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: The Theater"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L1-L2_pilot_oo2025_-csa-alt_2025"
+        ],
+        "lesson.key": "Lesson 1: The Theater",
+        "lesson_group.key": "lessonGroup-18",
+        "script.name": "csa1-alt-2025",
+        "activity_section.key": "00fbaa54-3ff6-464c-a55a-d72f8d439e32"
+      },
+      "level_keys": [
+        "CSA U4L1-L2_pilot_oo2025_-csa-alt_2025"
+      ]
+    },
+    {
+      "chapter": 101,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Practice: Creating Drawings and Animations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L1-L3_pilot_oo2025_-csa-alt_2025"
+        ],
+        "lesson.key": "Lesson 1: The Theater",
+        "lesson_group.key": "lessonGroup-18",
+        "script.name": "csa1-alt-2025",
+        "activity_section.key": "610ff789-c404-4266-a844-5d27b91aff36"
+      },
+      "level_keys": [
+        "CSA U4L1-L3_pilot_oo2025_-csa-alt_2025"
+      ]
+    },
+    {
+      "chapter": 102,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: Creating Drawings and Animations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L1-L4_pilot_oo2025_-csa-alt_2025"
+        ],
+        "lesson.key": "Lesson 1: The Theater",
+        "lesson_group.key": "lessonGroup-18",
+        "script.name": "csa1-alt-2025",
+        "activity_section.key": "610ff789-c404-4266-a844-5d27b91aff36"
+      },
+      "level_keys": [
+        "CSA U4L1-L4_pilot_oo2025_-csa-alt_2025"
+      ]
+    },
+    {
+      "chapter": 103,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: Creating Drawings and Animations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L1-L5_pilot_oo2025_-csa-alt_2025"
+        ],
+        "lesson.key": "Lesson 1: The Theater",
+        "lesson_group.key": "lessonGroup-18",
+        "script.name": "csa1-alt-2025",
+        "activity_section.key": "610ff789-c404-4266-a844-5d27b91aff36"
+      },
+      "level_keys": [
+        "CSA U4L1-L5_pilot_oo2025_-csa-alt_2025"
+      ]
+    },
+    {
+      "chapter": 104,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: Creating Drawings and Animations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L1-L6_pilot_oo2025_-csa-alt_2025"
+        ],
+        "lesson.key": "Lesson 1: The Theater",
+        "lesson_group.key": "lessonGroup-18",
+        "script.name": "csa1-alt-2025",
+        "activity_section.key": "610ff789-c404-4266-a844-5d27b91aff36"
+      },
+      "level_keys": [
+        "CSA U4L1-L6_pilot_oo2025_-csa-alt_2025"
+      ]
+    },
+    {
+      "chapter": 105,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L1-L7_pilot_oo2025_-csa-alt_2025"
+        ],
+        "lesson.key": "Lesson 1: The Theater",
+        "lesson_group.key": "lessonGroup-18",
+        "script.name": "csa1-alt-2025",
+        "activity_section.key": "95e46f34-20fc-4c72-8feb-87a9c01f63d8"
+      },
+      "level_keys": [
+        "CSA U4L1-L7_pilot_oo2025_-csa-alt_2025"
+      ]
+    },
+    {
+      "chapter": 106,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "CSA U4L3-L1_alt-2025"
         ],
@@ -11693,7 +12224,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 107,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11718,7 +12249,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 108,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -11743,7 +12274,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 109,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -11768,7 +12299,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 110,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -11793,7 +12324,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 111,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -11818,7 +12349,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 112,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -11843,7 +12374,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 113,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -11868,7 +12399,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 114,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11893,7 +12424,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 115,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11918,7 +12449,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 116,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -11943,7 +12474,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 117,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -11968,7 +12499,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 118,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -11993,7 +12524,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 119,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -12018,7 +12549,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 120,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -12043,7 +12574,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 121,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12068,7 +12599,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 122,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12093,7 +12624,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 123,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -12118,7 +12649,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 124,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -12143,7 +12674,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 125,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -12168,7 +12699,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 126,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -12193,7 +12724,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 127,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -12218,7 +12749,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 128,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -12243,7 +12774,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 129,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -12268,7 +12799,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 130,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12293,7 +12824,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 131,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12318,7 +12849,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 132,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -12343,7 +12874,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 133,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -12368,7 +12899,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 134,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -12393,7 +12924,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 135,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -12418,7 +12949,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 136,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -12443,7 +12974,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 137,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -12468,7 +12999,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 138,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -12493,7 +13024,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 139,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12518,7 +13049,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 140,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -12543,7 +13074,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 141,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -12568,7 +13099,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 142,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -12593,7 +13124,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 143,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -12618,7 +13149,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 144,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -12643,7 +13174,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 145,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -12668,7 +13199,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 146,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -12693,7 +13224,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 147,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -12718,7 +13249,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 148,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -12743,7 +13274,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 149,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -12768,7 +13299,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 150,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12793,7 +13324,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 151,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12818,7 +13349,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 152,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12842,7 +13373,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 153,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -14045,6 +14576,90 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U4L1-L1_pilot_oo2025_-csa-alt_2025",
+        "script_level.level_keys": [
+          "CSA U4L1-L1_pilot_oo2025_-csa-alt_2025"
+        ],
+        "lesson.key": "Lesson 1: The Theater",
+        "lesson_group.key": "lessonGroup-18",
+        "script.name": "csa1-alt-2025",
+        "activity_section.key": "74f60e52-fafe-48af-9cff-9d06c8d9a7e5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L1-L2_pilot_oo2025_-csa-alt_2025",
+        "script_level.level_keys": [
+          "CSA U4L1-L2_pilot_oo2025_-csa-alt_2025"
+        ],
+        "lesson.key": "Lesson 1: The Theater",
+        "lesson_group.key": "lessonGroup-18",
+        "script.name": "csa1-alt-2025",
+        "activity_section.key": "00fbaa54-3ff6-464c-a55a-d72f8d439e32"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L1-L3_pilot_oo2025_-csa-alt_2025",
+        "script_level.level_keys": [
+          "CSA U4L1-L3_pilot_oo2025_-csa-alt_2025"
+        ],
+        "lesson.key": "Lesson 1: The Theater",
+        "lesson_group.key": "lessonGroup-18",
+        "script.name": "csa1-alt-2025",
+        "activity_section.key": "610ff789-c404-4266-a844-5d27b91aff36"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L1-L4_pilot_oo2025_-csa-alt_2025",
+        "script_level.level_keys": [
+          "CSA U4L1-L4_pilot_oo2025_-csa-alt_2025"
+        ],
+        "lesson.key": "Lesson 1: The Theater",
+        "lesson_group.key": "lessonGroup-18",
+        "script.name": "csa1-alt-2025",
+        "activity_section.key": "610ff789-c404-4266-a844-5d27b91aff36"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L1-L5_pilot_oo2025_-csa-alt_2025",
+        "script_level.level_keys": [
+          "CSA U4L1-L5_pilot_oo2025_-csa-alt_2025"
+        ],
+        "lesson.key": "Lesson 1: The Theater",
+        "lesson_group.key": "lessonGroup-18",
+        "script.name": "csa1-alt-2025",
+        "activity_section.key": "610ff789-c404-4266-a844-5d27b91aff36"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L1-L6_pilot_oo2025_-csa-alt_2025",
+        "script_level.level_keys": [
+          "CSA U4L1-L6_pilot_oo2025_-csa-alt_2025"
+        ],
+        "lesson.key": "Lesson 1: The Theater",
+        "lesson_group.key": "lessonGroup-18",
+        "script.name": "csa1-alt-2025",
+        "activity_section.key": "610ff789-c404-4266-a844-5d27b91aff36"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L1-L7_pilot_oo2025_-csa-alt_2025",
+        "script_level.level_keys": [
+          "CSA U4L1-L7_pilot_oo2025_-csa-alt_2025"
+        ],
+        "lesson.key": "Lesson 1: The Theater",
+        "lesson_group.key": "lessonGroup-18",
+        "script.name": "csa1-alt-2025",
+        "activity_section.key": "95e46f34-20fc-4c72-8feb-87a9c01f63d8"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U4L3-L1_alt-2025",
         "script_level.level_keys": [
           "CSA U4L3-L1_alt-2025"
@@ -14682,6 +15297,18 @@
       }
     },
     {
+      "name": "[EXEMPLAR] The Theater Guided Notes",
+      "url": "https://docs.google.com/document/d/18_omWkP2ok-RPUH-McRA3sUrZRNNjQ9fR_GI3LpUUME/edit?usp=drive_link",
+      "key": "_exemplar_the_theater_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_the_theater_guided_notes"
+      }
+    },
+    {
       "name": "[EXEMPLAR] Debugging Strategies Guided Notes",
       "url": "https://docs.google.com/document/d/1YONQV_7wpfox2zc_lCJlT91MYnqVnyQr_E3DTWpRD90/edit?usp=sharing",
       "key": "_exemplar_u1l12_guided_notes",
@@ -14946,6 +15573,18 @@
       }
     },
     {
+      "name": "[KEY] Investigating The Theater",
+      "url": "https://docs.google.com/document/d/1J6Lc-kDFgmXJltY8Z0QBwqj9iPrW2nVnEB9QppbbcUY/edit?usp=drive_link",
+      "key": "_key_investigating_the_theater",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_investigating_the_theater"
+      }
+    },
+    {
       "name": "[KEY] Math Class Graphic Organizer",
       "url": "https://docs.google.com/document/d/1mXdCd-3L--X0aQRPH6qPNAhdZhRdJBIH39yjslqBu7g/edit?usp=sharing",
       "key": "_key_math_class_graphic_organizer",
@@ -15015,6 +15654,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_the_painter"
+      }
+    },
+    {
+      "name": "[KEY] The Theater Extra Practice",
+      "url": "https://docs.google.com/document/d/1bQL3D0cn9LwmGD80MkktarvCnnGfwN_pfC8V26HiKrY/edit?usp=drive_link",
+      "key": "_key_the_theater_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_the_theater_extra_practice"
       }
     },
     {
@@ -15655,6 +16306,19 @@
       }
     },
     {
+      "name": "Investigating The Theater",
+      "url": "https://docs.google.com/document/d/1v2A2eE1riFHsSahKNLt4b0Nw_HMHXImf-C8mxjg_HfU/edit?usp=drive_link",
+      "key": "investigating_the_theater",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "investigating_the_theater"
+      }
+    },
+    {
       "name": "Java Lab",
       "url": "https://docs.google.com/presentation/d/1rqVi409wXMduDaoArrG5wd1-bnWNr88kqs3uiUGpwsk/edit?usp=drive_link",
       "key": "java_lab",
@@ -16047,6 +16711,44 @@
       },
       "seeding_key": {
         "resource.key": "the_painter"
+      }
+    },
+    {
+      "name": "The Theater",
+      "url": "https://docs.google.com/presentation/d/1olg9F4LUwL3inoOS7zdjZdSqIAtqRGrbtu2laQ-0p98/edit?usp=drive_link",
+      "key": "the_theater",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "the_theater"
+      }
+    },
+    {
+      "name": "The Theater Extra Practice",
+      "url": "https://docs.google.com/document/d/1Bv27RKZpxeSgFFMFs-GhuhNh4kz1CFCe0cgq9T6QW-c/edit?usp=drive_link",
+      "key": "the_theater_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "the_theater_extra_practice"
+      }
+    },
+    {
+      "name": "The Theater Guided Notes",
+      "url": "https://docs.google.com/document/d/1APVuz8af_mEyvZzswYHEiHkzR1nsRa51df5vRTH5Y4Y/edit?usp=drive_link",
+      "key": "the_theater_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "the_theater_guided_notes"
       }
     },
     {
@@ -16578,6 +17280,18 @@
       }
     },
     {
+      "name": "Welcome to The Theater",
+      "url": "https://youtu.be/Qa5NtHzPmos",
+      "key": "welcome_to_the_theater",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "welcome_to_the_theater"
+      }
+    },
+    {
       "name": "Writing a Method",
       "url": "https://youtu.be/pdNf1O9BTYM",
       "key": "writing_a_method",
@@ -16973,6 +17687,60 @@
       "seeding_key": {
         "lesson.key": "Java Lab",
         "resource.key": "u1l2_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: The Theater",
+        "resource.key": "_exemplar_the_theater_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: The Theater",
+        "resource.key": "_key_investigating_the_theater"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: The Theater",
+        "resource.key": "_key_the_theater_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: The Theater",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: The Theater",
+        "resource.key": "investigating_the_theater"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: The Theater",
+        "resource.key": "the_theater"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: The Theater",
+        "resource.key": "the_theater_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: The Theater",
+        "resource.key": "the_theater_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: The Theater",
+        "resource.key": "welcome_to_the_theater"
       }
     },
     {
@@ -19116,6 +19884,16 @@
       }
     },
     {
+      "key": "9565af20-189a-40f5-9f40-ba85f3a4cd4a",
+      "properties": {
+        "description": "Call methods from existing classes"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 1: The Theater",
+        "objective.key": "9565af20-189a-40f5-9f40-ba85f3a4cd4a"
+      }
+    },
+    {
       "key": "9939f2b3-573e-4a82-acd8-2bd9a77068ea",
       "properties": {
         "description": "Conduct a code review to give and receive feedback."
@@ -19133,6 +19911,16 @@
       "seeding_key": {
         "lesson.key": "Substrings",
         "objective.key": "99c0d959-710a-4909-a638-414e93b683ca"
+      }
+    },
+    {
+      "key": "9e815a16-cfcf-4965-9516-0c130ef70546",
+      "properties": {
+        "description": "Read API documentation to identify available classes and methods and their functionalities"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 1: The Theater",
+        "objective.key": "9e815a16-cfcf-4965-9516-0c130ef70546"
       }
     },
     {
@@ -19642,6 +20430,20 @@
     {
       "seeding_key": {
         "lesson.key": "Java Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: The Theater",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: The Theater",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-22"
       }

@@ -1141,7 +1141,7 @@ en:
           description_teacher: ''
           version_title: ''
         csa-2025:
-          title: Computer Science A ('25-'26)
+          title: Computer Science A
           description_short: Learn Java programming and software engineering skills.
           description_student: |-
             ## Overview
@@ -1163,7 +1163,7 @@ en:
 
             This version of the Code.org CSA curriculum follows an **object-first approach** and does not use the unit structure outlined in the AP Computer Science A Course and Exam Description (CED). **All required course content is still covered**, but topics are introduced in an order that prioritizes early engagement with object-oriented programming. You can read more about this approach [**here**](https://docs.google.com/document/d/1t7RbyhrgNM7xXNPiCq1g-lXSJvR2qbEA1fURYxfZ9N8/edit?usp=sharing).
 
-            If you prefer a version of the curriculum organized using the same structure as the CED (including unit titles and themes), check out our **CED-aligned version of the CSA curriculum** (*Coming Soon!*).
+            If you prefer a version of the curriculum organized using the same structure as the CED (including unit titles and themes), check out our **CED-aligned version of the CSA curriculum**
 
             As noted on page 19 of the CED, **the College Board's unit structure is optional** - it is intended to provide teachers "one possible sequence they can adopt or modify rather than having to build from scratch . . . Experienced AP teachers who are satisfied with their current course organization and exam results should feel no pressure to adopt these units, which comprise an optional sequence for this course."
           version_title: "'25-'26"
@@ -1484,7 +1484,7 @@ en:
           description_teacher: ''
           version_title: ''
         csp-2025:
-          title: Computer Science Principles '25-'26
+          title: Computer Science Principles
           description_short: Learn foundational computer science concepts.
           description_student: CSP introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
           description_teacher: |-
@@ -1510,7 +1510,7 @@ en:
             We also recommend watching the [5-Part Exploring Generative AI Video Series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfJLo5nNGPHo0xCd9Xw5lSs) which introduces key concepts for generative AI. The entire video series takes ~15 minutes to watch.
           version_title: "'25-'26"
         csd-2025:
-          title: Computer Science Discoveries ('25-'26)
+          title: 'Computer Science Discoveries '
           description_short: An introductory computer science course that empowers students to create authentic artifacts
           description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers you to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
           description_teacher: |
@@ -5735,11 +5735,11 @@ en:
           description_teacher: ''
           version_title: "'25-'26"
         coding-with-music-2025:
-          title: coding-with-music-2025
+          title: Coding with Music
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
+          version_title: '2025'
         foundations-gen-ai-2025:
           title: Foundations of Gen AI
           description_short: ''
@@ -5756,3 +5756,111 @@ en:
             ## Finished Teaching This Unit?
             Answer this [**short survey**](https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data%5Bunit_number%5D=unit_1) to let the Code.org curriculum team know how the unit went.
           version_title: "'25-'26"
+        problem-solving-with-ai-2025:
+          title: Problem Solving with AI
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'25-'26"
+        teaching-coding-with-music-2025:
+          title: Teaching Coding with Music
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: 25 - 26
+        career-journeys-for-elementary-2025:
+          title: Career Journeys for Elementary
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: '2025'
+        python-adlibs:
+          title: python-adlibs
+          description_short: Students make their own story in Python
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        teaching-exp-gen-ai-2025:
+          title: Teaching Exploring Generative AI
+          description_short: "## Welcome! \n##### This professional learning module is designed to help you prepare to teach Code.org’s Exploring Generative AI course.\n\n##### Exploring Generative AI is designed as standalone coursework for grade 8-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. \n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to the Exploring Generative AI Unit. "
+          description_student: "## Welcome! \n##### This professional learning module is designed to help you prepare to teach Code.org’s Exploring Generative AI course.\n\n##### Exploring Generative AI is designed as standalone coursework for grade 8-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. \n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to the Exploring Generative AI Unit. "
+          description_teacher: "## Welcome! \n##### This professional learning module is designed to help you prepare to teach Code.org’s Exploring Generative AI course.\n\n##### Exploring Generative AI is designed as standalone coursework for grade 8-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. \n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to the Exploring Generative AI Unit. "
+          version_title: 25 - 26
+        teaching-ai-foundations-2025:
+          title: Teaching AI Foundations
+          description_short: ''
+          description_student: |-
+            AI Foundations introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.
+
+            ## Prerequisites
+            * This professional learning experience is designed for high school educators with any level of computer science experience. It is accessible to those with no prior coding knowledge, and it also provides opportunities for educators with some background in computing to deepen their understanding of key pedagogical strategies for teaching computational thinking and coding.
+
+            * No specific prior coursework in computer science is required for educators; all necessary pedagogical approaches and curriculum-specific knowledge are introduced and reinforced through guided activities, collaborative learning, and practical implementation strategies.
+
+            ## Did you know?
+            * This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
+          description_teacher: |-
+            AI Foundations introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.
+
+            ## Prerequisites
+            * This professional learning experience is designed for high school educators with any level of computer science experience. It is accessible to those with no prior coding knowledge, and it also provides opportunities for educators with some background in computing to deepen their understanding of key pedagogical strategies for teaching computational thinking and coding.
+
+            * No specific prior coursework in computer science is required for educators; all necessary pedagogical approaches and curriculum-specific knowledge are introduced and reinforced through guided activities, collaborative learning, and practical implementation strategies.
+
+            ## Did you know?
+            * This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
+          version_title: 25 - 26
+        teaching-foundations-ai-programming-2025:
+          title: Teaching Foundations of AI Programming
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        idaho-digital-literacy-2025:
+          title: Idaho Digital Literacy
+          description_short: Learn how to code, think critically about AI, and use technology to solve real-world problems.
+          description_student: In Idaho Digital Literacy, you explore how computers and artificial intelligence help people solve problems, make decisions, and create new things. You write your own programs in Python, figure out how devices and the Internet actually work, and dive into data to find patterns and tell stories. Along the way, you use AI tools, think through tough questions about privacy and fairness, and build the skills you need to create technology—not just use it.
+          description_teacher: |-
+            Idaho Digital Literacy introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.
+
+            ## Prerequisites
+
+            Idaho Digital Literacy is designed for high school students at any level of computer science experience. It is accessible to beginners with no prior programming knowledge, and it also provides opportunities for students with some background in computing to deepen their understanding of key topics.
+
+            This curriculum can serve as an introductory course or as a bridge to more advanced studies, such as AP Computer Science A (CSA).
+
+            No specific prior coursework is required, and all necessary concepts are introduced and reinforced through guided activities, collaborative learning, and hands-on projects.
+
+            ## Did you know?
+
+            * Professional development is available to help you get started teaching Idaho Digital Literacy. [**Click here**](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [**click here**](http://studio.code.org/courses/self-paced-pl-ai-foundations-2025) for our self-paced online option.
+
+            * This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**Idaho Digital Literacy Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
+
+            * You can find the *Syllabus* and other resources to help you implement this curriculum in the Teacher Resources menu below.
+          version_title: "'25-'26"
+        focus-on-coding-2025:
+          title: Focus on Coding '25-'26 (CS Discoveries)
+          description_short: A collection of Computer Science Discovery units that focuses on coding and programming skills
+          description_student: |-
+            Focus on Coding is a collection of Computer Science Discoveries (CS Discoveries) course units that empowers students to build their coding skills in web development, games and animation, and creating apps for devices. Students create authentic artifacts and engage with computer science as a medium for creativity, communication, problem-solving, and fun.
+
+            **Interested in Teaching CS Discoveries?** Professional development is available to help you get started teaching CS Discoveries. [Click here](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [click here](https://code.org/educate/professional-development-online) to learn more about a self-paced online option.
+          description_teacher: |-
+            Focus on Coding is a collection of Computer Science Discoveries (CS Discoveries) course units that empowers students to build their coding skills in web development, games and animation, and creating apps for devices. Students create authentic artifacts and engage with computer science as a medium for creativity, communication, problem-solving, and fun.
+
+            **Did You Know?**
+
+            - Professional development is available to help you get started teaching CS Discoveries. [Click here](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [click here](https://code.org/educate/professional-development-online) to learn more about a self-paced online option.
+
+            - You can access the [Getting Started Guide](https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview) to learn more about getting started.
+          version_title: "'25-'26"
+        aiml-2025:
+          title: AI and Machine Learning ('25-'26)
+          description_short: Learn to about Artificial Intelligence and Machine Learning.
+          description_student: |-
+            This unit is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
+
+            **Looking to teach this unit?** [Click here to view the lesson plans for these lessons](/s/aiml-2023?viewAs=Instructor)
+          description_teacher: "This unit is a hands-on introduction to developing a machine learning model with tabular data. Students explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.\n\n::: details [**Chapter 1 Overview**]\n**Description:** Students learn the basics of machine learning and use a tool called AI Lab to create machine learning models that can be used in App Lab. The unit starts with an overview of machine learning and how computers can use patterns in data to make decisions and predictions. Then, students learn how to use AI Lab to train models from tabular data while exploring issues of bias. Lessons follow a repeating \"unplugged - AI Lab - App Lab\" pattern so students are continually exposed to the concepts and tools of machine learning. The chapter culminates in a project where students select from a set of real-world datasets to train a machine learning model and create an app.\n\n\n**Goals:**\n* Create a machine learning model in AI Lab to solve a problem, and use App Lab to create an app that uses their model. \n* Understand how machine learning models make decisions from data\n\n\n**Big Questions:**\n- How does machine learning find patterns in data to make decisions?\n- How can we avoid bias when training a machine learning model?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** This chapter prepares students to be machine learning scientists to create an app that addresses an issue in their community. Students follow along with a fictional group of students as they define an issue, develop a survey to collect data, analyze their data in AI Lab, create a model card, and create an app to solve their problem. Then, in the final project, students repeat these same steps with an issue they care about in their community.\n\n**Goals:**\n* Create machine learning models in AI Lab  from their own data and use App Lab to create an app that uses their model to solve problems in their community. \n\n\n**Big Questions:**\n- How can machine learning be used to solve problems in our community?\n\n:::\n\n\n::: details [**Implementation Guidance for the AI and Machine Learning Unit**]\n\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n- You can view the full [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [AI/ML Self-Paced Professional Development Module](https://studio.code.org/courses/self-paced-pl-aiml-2024). The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7) to let the Code.org curriculum team know how the unit went."
+          version_title: "'25-26"

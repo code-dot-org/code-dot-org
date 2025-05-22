@@ -48,7 +48,7 @@ type HeroBannerProps = {
   /** HeroBanner announcement banner text */
   announcementBannerText?: string;
   /** HeroBanner announcement banner link  entry*/
-  announcementBannerLink?: LinkEntry;
+  announcementBannerLink?: LinkEntry[];
 };
 
 const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
@@ -76,6 +76,7 @@ const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
 }) => {
   const firstSectionImage = sectionImages?.[0];
   const firstButtonLink = buttonLinks?.[0];
+  const firstAnnouncementBannerLink = announcementBannerLink?.[0];
 
   return (
     <DSCOHeroBanner
@@ -92,13 +93,13 @@ const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
                 ? {iconName: announcementBannerIconName}
                 : undefined,
               text: announcementBannerText,
-              link: announcementBannerLink
+              link: firstAnnouncementBannerLink
                 ? {
-                    text: announcementBannerLink.fields.label,
-                    'aria-label': announcementBannerLink.fields.ariaLabel,
-                    href: announcementBannerLink.fields.primaryTarget,
+                    text: firstAnnouncementBannerLink.fields.label,
+                    'aria-label': firstAnnouncementBannerLink.fields.ariaLabel,
+                    href: firstAnnouncementBannerLink.fields.primaryTarget,
                     external:
-                      announcementBannerLink.fields.isThisAnExternalLink,
+                      firstAnnouncementBannerLink.fields.isThisAnExternalLink,
                   }
                 : undefined,
             }

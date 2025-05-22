@@ -20,7 +20,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-13 18:42:01 UTC",
+    "serialized_at": "2025-05-20 17:16:54 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2870,6 +2871,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page-csp5_2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -2917,6 +2921,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_2025-csp5"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,

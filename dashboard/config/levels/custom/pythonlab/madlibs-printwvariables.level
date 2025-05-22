@@ -8,9 +8,9 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Strings vs. Variables \r\n\r\nWhat do you think will happen when you **Run** the program? ",
-    "ai_tutor_available": "true",
+    "ai_tutor2_available": "true",
     "submittable": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "enable_micro_bit": "false",
     "predict_settings": {
       "isPredictLevel": true,
