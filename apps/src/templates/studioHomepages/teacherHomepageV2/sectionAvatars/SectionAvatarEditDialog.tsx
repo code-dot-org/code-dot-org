@@ -48,9 +48,15 @@ const SectionAvatarEditDialog: React.FC<SectionAvatarEditDialogProps> = ({
       title={i18n.editAvatar()}
       onClose={() => closeCallback()}
     >
+      {/* This div is interactive to prevent autofocus in the 
+      PickerGrid component and to allow screen readers to replay 
+      the dialog description. It is not visible. */}
       <div
         className={styles.accessibleDescription}
         id="dsco-dialog-description"
+        role="button"
+        tabIndex={0}
+        onClick={() => {}}
       >
         {i18n.avatarEditDialogDescription()}
       </div>
@@ -59,7 +65,7 @@ const SectionAvatarEditDialog: React.FC<SectionAvatarEditDialogProps> = ({
         <hr />
       </div>
       <div className={styles.avatarDialogBody}>
-        <label className={styles.avatarDialogLabels}>
+        <label id={'section-avatar'} className={styles.avatarDialogLabels}>
           <BodyTwoText>{i18n.avatar()}</BodyTwoText>
           <SectionAvatar
             color={selectedColor}

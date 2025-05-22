@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React from 'react';
 
 import {COLORS, COLOR_LABELS, EMOJIS, EMOJI_LABELS} from './avatarConstants';
@@ -26,7 +27,9 @@ const PickerGrid: React.FC<PickerGridProps> = ({
             aria-label={EMOJI_LABELS[index]}
             aria-pressed={selected === index}
             className={
-              selected === index ? styles.selectedGridItem : styles.gridItem
+              selected === index
+                ? classNames(styles.gridItem, styles.selectedGridItem)
+                : styles.gridItem
             }
             onClick={() => selectCallback(index)}
             onKeyDown={event => {
@@ -45,7 +48,9 @@ const PickerGrid: React.FC<PickerGridProps> = ({
             aria-label={COLOR_LABELS[index]}
             aria-pressed={selected === index}
             className={
-              selected === index ? styles.selectedGridItem : styles.gridItem
+              selected === index
+                ? classNames(styles.gridItem, styles.selectedGridItem)
+                : styles.gridItem
             }
             onClick={() => selectCallback(index)}
             onKeyDown={event => {
