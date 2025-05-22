@@ -4,8 +4,7 @@ class Services::CoursesTest < ActiveSupport::TestCase
   include Minitest::RSpecMocks
 
   describe '.canonical_path' do
-    let(:subject) {described_class.canonical_path(path, unit_name, current_user)}
-    let(:current_user) {instance_double(User)}
+    let(:subject) {described_class.canonical_path(path, unit_name)}
     let(:path) {"/s/#{unit_name}/some-path"}
     let(:modularity_enabled) {false}
     let(:unit_name) {'script-1'}
@@ -22,7 +21,6 @@ class Services::CoursesTest < ActiveSupport::TestCase
 
     before do
       allow(Policies::Courses).to receive(:modularity_enabled?).with(any_args).and_return(modularity_enabled)
-      # allow(Queries::Courses).to receive(:get_course_context).and_return(course_context)
     end
 
     context 'the modularity experiment is not enabled' do

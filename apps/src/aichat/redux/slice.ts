@@ -231,15 +231,14 @@ const aichatSlice = createSlice({
       };
       state.currentAiCustomizations = updatedAiCustomizations;
     },
-    setModelCardProperty: (
-      state,
+    setModelCardProperty: <T extends keyof ModelCardInfo>(
+      state: AichatState,
       action: PayloadAction<{
-        property: keyof ModelCardInfo;
-        value: ModelCardInfo[typeof property];
+        property: T;
+        value: ModelCardInfo[T];
       }>
     ) => {
       const {property, value} = action.payload;
-
       const updatedModelCardInfo: ModelCardInfo = {
         ...state.currentAiCustomizations.modelCardInfo,
         [property]: value,
