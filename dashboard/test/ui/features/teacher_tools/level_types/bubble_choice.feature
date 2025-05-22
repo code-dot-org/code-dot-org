@@ -26,7 +26,6 @@ Feature: BubbleChoice
     When I sign in as "Teacher_Alice"
 
     # View progress from script overview page
-    Given I use a cookie to mock the DCDO key "teacher-local-nav-v2" as "true"
     Given I am on "http://studio.code.org/s/allthethings"
     And I wait until element "#uitest-view-as-student-selector" is visible
     Then I select the "Alice" option in dropdown "uitest-view-as-student-selector"
@@ -78,8 +77,8 @@ Feature: BubbleChoice
 
     # View progress from script overview page
     Given I am on "http://studio.code.org/s/allthethings"
-    And I wait until element ".teacher-panel" is visible
-    When I click selector ".teacher-panel table td:contains(Alice)" once I see it
+    And I wait until element "#uitest-view-as-student-selector" is visible
+    Then I select the "Alice" option in dropdown "uitest-view-as-student-selector"
     And I wait until current URL contains "user_id="
     And I wait until element "td:contains(Lesson Name)" is visible
     And I wait until element "td:contains(Lab2 Showcase)" is visible

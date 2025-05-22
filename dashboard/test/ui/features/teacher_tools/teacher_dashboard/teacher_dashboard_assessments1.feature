@@ -21,9 +21,6 @@ Feature: Using the assessments tab in the teacher dashboard
     And I press the first "#uitest-save-section-changes" element to load a new page
 
     # Progress tab
-    And I wait until element "a:contains('Untitled Section')" is visible
-    And I save the section id from row 0 of the section table
-    Then I navigate to teacher dashboard for the section I saved
     And I wait until element "#uitest-course-dropdown" is visible
 
     # Assessments tab

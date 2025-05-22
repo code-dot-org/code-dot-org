@@ -23,9 +23,9 @@ Feature: Unit overview page
     When I sign in as "Teacher_Sally"
     And I complete the level on "http://studio.code.org/s/allthethings/lessons/29/levels/4?level_name=2-3 Artist 1 new"
     And I am on "http://studio.code.org/s/allthethings"
-    And I wait until element ".teacher-panel" is visible
+    And I wait until element "#uitest-view-as-student-selector" is visible
     Then I verify progress for lesson 29 level 4 in detail view is "perfect"
-    When I click selector ".teacher-panel table td:contains(Sally)" once I see it
+    Then I select the "Alice" option in dropdown "uitest-view-as-student-selector"
     And I wait until element "td:contains(Maze)" is visible
     # verify name format in summary view
     And element "td:contains(2. Maze)" is visible
