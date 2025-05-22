@@ -5,8 +5,9 @@ class UserLevelInteractionsControllerTest < ActionController::TestCase
   setup do
     @student = create :student
     sign_in @student
-    @csp_2024_script = create(:csp_script, :with_levels, version_year: '2024', family_name: 'csp', is_course: true)
-    CourseOffering.add_course_offering(@csp_2024_script)
+    @csp_2024_script = create(:csp_script, :with_levels)
+    @csp_2024_course = create(:single_unit_course, unit: @csp_2024_script, name: 'csp-2024', family_name: 'csp', version_year: '2024')
+    CourseOffering.add_course_offering(@csp_2024_course)
     @csp_2024_level = @csp_2024_script.levels.first
   end
 
@@ -59,8 +60,9 @@ class UserLevelInteractionsControllerTest < ActionController::TestCase
   end
 
   test "do not create User Level Interaction for units before 2024" do
-    @csp_2017_script = create(:csp_script, :with_levels, version_year: '2017', family_name: 'csp', is_course: true)
-    CourseOffering.add_course_offering(@csp_2017_script)
+    @csp_2017_script = create(:csp_script, :with_levels)
+    @csp_2017_course = create(:single_unit_course, unit: @csp_2017_script, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+    CourseOffering.add_course_offering(@csp_2017_course)
     @csp_2017_level = @csp_2017_script.levels.first
     refute_creates_uli(@csp_2017_script, @csp_2017_level)
   end

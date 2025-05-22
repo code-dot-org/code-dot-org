@@ -9,18 +9,27 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   setup do
-    @coursez_2017 = create :script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    @coursez_2018 = create :script, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    @coursez_2019 = create :script, name: 'coursez-2019', family_name: 'coursez', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
-    @partner_unit = create :script, editor_experiment: 'platformization-partners', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+    @coursez_2017 = create :script, name: 'coursez-2017'
+    create :single_unit_course, unit: @coursez_2017, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    @coursez_2018 = create :script, name: 'coursez-2018'
+    create :single_unit_course, unit: @coursez_2018, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    @coursez_2019 = create :script, name: 'coursez-2019'
+    create :single_unit_course, unit: @coursez_2019, name: 'coursez-2019', family_name: 'coursez', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
 
-    @pl_coursez_2017 = create :script, name: 'pl-coursez-2017', family_name: 'pl-coursez', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
-    @pl_coursez_2018 = create :script, name: 'pl-coursez-2018', family_name: 'pl-coursez', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
-    @pl_coursez_2019 = create :script, name: 'pl-coursez-2019', family_name: 'pl-coursez', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    @partner_unit = create :script, editor_experiment: 'platformization-partners'
+    create :single_unit_course, unit: @partner_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
 
-    @migrated_unit = create :script
-    @migrated_pl_unit = create :script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    @pl_coursez_2017 = create :script, name: 'pl-coursez-2017'
+    create :single_unit_course, :pl_course, unit: @pl_coursez_2017, name: 'pl-coursez-2017', family_name: 'pl-coursez', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    @pl_coursez_2018 = create :script, name: 'pl-coursez-2018'
+    create :single_unit_course, :pl_course, unit: @pl_coursez_2018, name: 'pl-coursez-2018', family_name: 'pl-coursez', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    @pl_coursez_2019 = create :script, name: 'pl-coursez-2019'
+    create :single_unit_course, :pl_course, unit: @pl_coursez_2019, name: 'pl-coursez-2019', family_name: 'pl-coursez', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+
+    @migrated_unit = create(:single_unit_course).first_unit
+    @migrated_pl_unit = create(:single_unit_course, :pl_course).first_unit
     @unmigrated_unit = create :script, is_migrated: false
+    create :single_unit_course, unit: @unmigrated_unit
 
     @single_unit_course_offering = create :course_offering, key: 'single-unit-course', display_name: 'single-unit-course'
     @single_unit_2023 = create :unit, name: 'single-unit-2023'
@@ -48,8 +57,8 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should redirect when unit has a redirect_to property" do
-    unit = create :script
-    new_unit = create :script
+    unit = (create :single_unit_course).first_unit
+    new_unit = (create :single_unit_course).first_unit
     unit.update(redirect_to: new_unit.name)
 
     get :show, params: {id: unit.name}
@@ -84,6 +93,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'canonical url is added if it is a single unit course' do
+    #TODO Fix this
     course = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     unit = create :script, published_state: nil, family_name: 'my-script'
     create :unit_group_unit, unit_group: course, script: unit, position: 1
@@ -184,6 +194,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "should use unit name as param where unit name is words but looks like a number" do
     unit = create(:script, name: '15-16')
+    create(:single_unit_course, unit: unit)
     get :show, params: {id: "15-16"}
 
     assert_response :success
@@ -192,6 +203,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "should use unit name as param where unit name is words" do
     unit = create(:script, name: 'Heure de Code', skip_name_format_validation: true)
+    create(:single_unit_course, unit: unit)
     get :show, params: {id: "Heure de Code"}
 
     assert_response :success
@@ -199,8 +211,9 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "show get show if family name matches script name" do
-    unit = create(:script, name: 'hoc-script', family_name: 'hoc-script', version_year: 'unversioned', is_course: true)
-    CourseOffering.add_course_offering(unit)
+    unit = create(:script, name: 'hoc-script')
+    unit_group = create(:hoc_course, unit: unit, name: 'hoc-course', family_name: 'hoc-course', version_year: 'unversioned')
+    CourseOffering.add_course_offering(unit_group)
     get :show, params: {id: 'hoc-script'}
 
     assert_response :success
@@ -1473,14 +1486,14 @@ class ScriptsControllerTest < ActionController::TestCase
     setup do
       @pilot_section_owner = create :teacher, pilot_experiment: 'my-experiment'
       @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-      @pilot_unit = create :script, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
+      @pilot_unit = create(:single_unit_course, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot).first_unit
       @pilot_section = create :section, user: @pilot_section_owner, script: @pilot_unit
       create :section_instructor, instructor: @pilot_teacher, section: @pilot_section, status: :active
       @pilot_student = create(:follower, section: @pilot_section).student_user
 
       @pilot_pl_section_owner = create :teacher, pilot_experiment: 'my-pl-experiment'
       @pilot_instructor = create :facilitator, pilot_experiment: 'my-pl-experiment'
-      @pilot_pl_unit = create :script, pilot_experiment: 'my-pl-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      @pilot_pl_unit = create(:single_unit_course, :pl_course, pilot_experiment: 'my-pl-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot).first_unit
       @pilot_pl_section = create :section, user: @pilot_pl_section_owner, script: @pilot_pl_unit
       create :section_instructor, instructor: @pilot_instructor, section: @pilot_pl_section, status: :active
       @pilot_pl_participant = create :facilitator
@@ -1590,24 +1603,27 @@ class ScriptsControllerTest < ActionController::TestCase
   test 'should redirect to latest stable version in unit family for student without progress or assignment' do
     sign_in create(:student)
 
-    dogs1 = create :script, name: 'dogs1', family_name: 'dogs', version_year: '1901', is_course: true
-    CourseOffering.add_course_offering(dogs1)
+    dogs1 = create :script, name: 'dogs1'
+    dogs1_course = create :single_unit_course, unit: dogs1, family_name: 'dogs', version_year: '1901'
+    CourseOffering.add_course_offering(dogs1_course)
 
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {id: 'dogs'}
     end
 
-    dogs1.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    dogs1_course.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     get :show, params: {id: 'dogs'}
     assert_redirected_to "/s/dogs1"
 
-    dogs2 = create :script, name: 'dogs2', family_name: 'dogs', version_year: '1902', is_course: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    CourseOffering.add_course_offering(dogs2)
+    dogs2 = create :script, name: 'dogs2'
+    dogs2_course = create :single_unit_course, unit: dogs2, family_name: 'dogs', version_year: '1902', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(dogs2_course)
     get :show, params: {id: 'dogs'}
     assert_redirected_to "/s/dogs2"
 
-    dogs3 = create :script, name: 'dogs3', family_name: 'dogs', version_year: '1899', is_course: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    CourseOffering.add_course_offering(dogs3)
+    dogs3 = create :script, name: 'dogs3'
+    dogs3_course = create :single_unit_course, unit: dogs3, family_name: 'dogs', version_year: '1899', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(dogs3_course)
     get :show, params: {id: 'dogs'}
     assert_redirected_to "/s/dogs2"
   end
@@ -1615,22 +1631,25 @@ class ScriptsControllerTest < ActionController::TestCase
   test 'should redirect to latest stable version in unit family for participant without progress or assignment' do
     sign_in create(:teacher)
 
-    pl_dogs1 = create :script, name: 'pl-dogs1', family_name: 'ui-test-versioned-pl-script', version_year: '1901', is_course: true, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
-    CourseOffering.add_course_offering(pl_dogs1)
+    pl_dogs1 = create :script, name: 'pl-dogs1'
+    pl_dogs1_course = create :single_unit_course, :pl_course, unit: pl_dogs1, family_name: 'ui-test-versioned-pl-script', version_year: '1901'
+    CourseOffering.add_course_offering(pl_dogs1_course)
 
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {id: 'ui-test-versioned-pl-script'}
     end
 
-    pl_dogs1.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    pl_dogs1_course.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     get :show, params: {id: 'ui-test-versioned-pl-script'}
     assert_redirected_to "/s/pl-dogs1"
 
-    create :script, name: 'pl-dogs2', family_name: 'ui-test-versioned-pl-script', version_year: '1902', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    pl_dogs2 = create :script, name: 'pl-dogs2'
+    create :single_unit_course, :pl_course, unit: pl_dogs2, family_name: 'ui-test-versioned-pl-script', version_year: '1902', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     get :show, params: {id: 'ui-test-versioned-pl-script'}
     assert_redirected_to "/s/pl-dogs2"
 
-    create :script, name: 'pl-dogs3', family_name: 'ui-test-versioned-pl-script', version_year: '1899', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    pl_dogs3 = create :script, name: 'pl-dogs3'
+    create :single_unit_course, :pl_course, unit: pl_dogs3, family_name: 'ui-test-versioned-pl-script', version_year: '1899', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     get :show, params: {id: 'ui-test-versioned-pl-script'}
     assert_redirected_to "/s/pl-dogs2"
   end
@@ -1693,7 +1712,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in(create(:levelbuilder))
 
-    course_version = create :course_version, content_root: @migrated_unit
+    course_version = create :course_version, content_root: @migrated_unit.original_unit_group
     lesson_group = create :lesson_group, script: @migrated_unit
     lesson = create :lesson, lesson_group: lesson_group
     lesson.programming_expressions = [create(:programming_expression)]
@@ -1712,7 +1731,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in(create(:levelbuilder))
 
-    course_version = create :course_version, content_root: @migrated_unit
+    course_version = create :course_version, content_root: @migrated_unit.original_unit_group
     lesson_group = create :lesson_group, script: @migrated_unit
     lesson = create :lesson, lesson_group: lesson_group
     # Only add resources and standards, not programming expressions and vocab

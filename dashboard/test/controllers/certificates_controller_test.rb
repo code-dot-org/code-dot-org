@@ -79,8 +79,9 @@ class CertificatesControllerTest < ActionController::TestCase
   end
 
   test 'batch page loads custom image for oceans course' do
-    oceans = create :script, name: 'oceans', is_course: true
-    create :course_version, content_root: oceans
+    oceans = create :script, name: 'oceans'
+    oceans_course = create :single_unit_course, unit: oceans, name: 'oceans'
+    create :course_version, content_root: oceans_course
 
     sign_in @teacher
     encoded_course_name = Base64.urlsafe_encode64('oceans')
