@@ -93,11 +93,8 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'canonical url is added if it is a single unit course' do
-    #TODO Fix this
-    course = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    unit = create :script, published_state: nil, family_name: 'my-script'
-    create :unit_group_unit, unit_group: course, script: unit, position: 1
-
+    unit = create :script, family_name: 'my-script'
+    create(:single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     get :show, params: {
       id: unit.name,
     }
