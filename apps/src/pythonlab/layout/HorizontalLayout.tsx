@@ -1,3 +1,4 @@
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
 import {LayoutProps} from '@codebridge/types';
 import Workspace from '@codebridge/Workspace/Workspace';
@@ -5,7 +6,9 @@ import React from 'react';
 
 import HorizontalOutput from '@cdo/apps/codebridge/Workspace/HorizontalOutput';
 import {useHorizontalLayout} from '@cdo/apps/lab2/hooks/useHorizontalLayout';
+import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
+import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
@@ -27,6 +30,11 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
     state => state.codebridgeWorkspace.widgetViewShowCode
   );
   const {
+    getAiTutor2FullPrompt,
+    levelProperties: {aiTutor2Available},
+  } = useCodebridgeContext();
+
+  const {
     leftPanelWidth,
     rightPanelWidth,
     rightTopPanelHeight,
@@ -36,6 +44,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
     rightBottomPanelSeparatorProps,
     rightBottomPanelDragging,
     setRightBottomPanelSize,
+    rightmostPanelWidth,
   } = useHorizontalLayout({
     leftPanel: {
       initialWidth: isProjectLevel ? 0 : INITIAL_INFO_PANEL_WIDTH,
@@ -57,6 +66,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
     minRightPanelWidth: MIN_RIGHT_PANEL_WIDTH,
     appName: 'pythonlab',
     heightOffset: isProjectLevel ? PROJECT_FOOTER_HEIGHT : 0,
+    showingRightmostPanel: aiTutor2Available,
   });
 
   return (
@@ -104,6 +114,22 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
             setOutputHeight={setRightBottomPanelSize}
           />
         </div>
+        {aiTutor2Available && getAiTutor2FullPrompt && (
+          <div style={{width: rightmostPanelWidth}}>
+            <PanelContainer
+              id="aitutor2"
+              headerContent="AI Tutor"
+              className={moduleStyles.rightmostColumn}
+            >
+              <div className={moduleStyles.inside}>
+                <AiTutor2Chat
+                  type="user"
+                  getFullPrompt={getAiTutor2FullPrompt}
+                />
+              </div>
+            </PanelContainer>
+          </div>
+        )}
       </div>
       {isProjectLevel && <div className={moduleStyles.footerArea} />}
     </div>

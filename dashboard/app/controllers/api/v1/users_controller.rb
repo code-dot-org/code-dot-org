@@ -1,7 +1,7 @@
 require 'cdo/firehose'
 
 class Api::V1::UsersController < Api::V1::JSONApiController
-  before_action :allow_cdo_cors, only: %i[signed_in]
+  before_action :allow_cdo_cors, only: %i[signed_in get_donor_teacher_banner_details]
   before_action :prevent_caching, only: %i[signed_in]
   before_action :load_user, only: %i[
     get_school_name
@@ -161,6 +161,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         teacher_second_name: current_user.second_name,
         teacher_email: current_user.email,
         nces_school_id: teachers_school&.id,
+        school_name: teachers_school&.name&.titleize,
         school_address_1: teachers_school&.address_line1,
         school_address_2: teachers_school&.address_line2,
         school_address_3: teachers_school&.address_line3,

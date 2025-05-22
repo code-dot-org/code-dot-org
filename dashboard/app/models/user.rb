@@ -1342,13 +1342,16 @@ class User < ApplicationRecord
     end
 
     pl_scripts.map do |script|
+      # TODO: TEACH-1555 Get the UnitGroupUnit from the user's activity.
+      unit_group_unit = Queries::Courses.unit_group_unit(script)
       percent_completed = percent_completed_by_script[script.id] || 0
       {
         name: script.name,
         title: script.title_for_display,
         percent_completed: percent_completed,
         finish_url: percent_completed == 100 ? script.finish_url : nil,
-        current_lesson_name: next_unpassed_progression_level(script)&.lesson&.localized_name
+        current_lesson_name: next_unpassed_progression_level(script)&.lesson&.localized_name,
+        path: script.link(unit_group_unit: unit_group_unit),
       }
     end
   end

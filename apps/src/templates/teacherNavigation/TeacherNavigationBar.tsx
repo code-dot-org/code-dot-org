@@ -97,7 +97,7 @@ const TeacherNavigationBar: React.FC<{
 
   let courseContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[];
   if (selectedSection?.unitName) {
-    if (currentPathName === TEACHER_NAVIGATION_PATH_NAMES.nestedUnitOverview) {
+    if (experiments.isEnabled(experiments.MODULARITY)) {
       courseContentKeys = ['nestedUnitOverview', 'lessonMaterials', 'calendar'];
     } else {
       courseContentKeys = ['unitOverview', 'lessonMaterials', 'calendar'];
