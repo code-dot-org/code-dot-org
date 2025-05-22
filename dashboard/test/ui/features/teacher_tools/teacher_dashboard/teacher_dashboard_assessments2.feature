@@ -36,7 +36,6 @@ Feature: Using the assessments tab in the teacher dashboard
     And I click selector ".assignment-version-title:contains('17-'18)" once I see it
     And I select the "CSP Student Post-Course Survey ('17-'18)" option in dropdown "uitest-secondary-assignment"
     And I press the first "#uitest-save-section-changes" element to load a new page
-    And I wait until element "#classroom-sections" is visible
 
     # Progress tab
     And I wait until element "a:contains('Untitled Section')" is visible
