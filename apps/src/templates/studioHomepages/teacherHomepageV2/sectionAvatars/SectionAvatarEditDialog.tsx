@@ -64,7 +64,7 @@ const SectionAvatarEditDialog: React.FC<SectionAvatarEditDialogProps> = ({
           <SectionAvatar
             color={selectedColor}
             emoji={selectedEmoji}
-            size={'xl'}
+            size={'l'}
           />
         </label>
         <div className={styles.avatarDialogBodyRight}>
