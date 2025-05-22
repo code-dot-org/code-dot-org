@@ -4,6 +4,7 @@ require "services/lti"
 require "policies/lti"
 require "concerns/partial_registration"
 require "clients/lti_advantage_client"
+require "clients/lti_logger"
 require "cdo/honeybadger"
 require 'metrics/events'
 
@@ -504,8 +505,7 @@ class LtiV1Controller < ApplicationController
   end
 
   private def log_metric(event, attributes = {})
-    log_payload = {event: event, namespace: 'LTI'}.merge(attributes)
-    CDO.log.info log_payload.to_json
+    LtiLogger.log_event(event, attributes)
   end
 
   private def log_unauthorized(event, attributes = {})
