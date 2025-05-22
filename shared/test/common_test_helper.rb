@@ -53,6 +53,7 @@ DASHBOARD_TEST_TABLES = %w(
   channel_tokens
   code_review_comments
   code_reviews
+  experiments
   project_commits
   projects
   user_project_storage_ids
