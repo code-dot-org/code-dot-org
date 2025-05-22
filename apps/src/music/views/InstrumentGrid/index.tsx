@@ -320,7 +320,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
                   className={classNames(style, styles.innerCell)}
                   style={{backgroundColor, color}}
                 >
-                  {label.replace('#', '♯')}
+                  {label}
                 </div>
               </button>
 
