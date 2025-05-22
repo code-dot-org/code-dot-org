@@ -18,10 +18,13 @@ const PickerGrid: React.FC<PickerGridProps> = ({
   const gridItems =
     type === 'emoji'
       ? EMOJIS.map((item, index) => (
-          <button
+          <div
             key={index}
             title={EMOJI_LABELS[index]}
-            type="button"
+            role="button"
+            tabIndex={0}
+            aria-label={EMOJI_LABELS[index]}
+            aria-pressed={selected === index}
             className={
               selected === index ? styles.selectedGridItem : styles.gridItem
             }
@@ -31,13 +34,16 @@ const PickerGrid: React.FC<PickerGridProps> = ({
             }}
           >
             {item}
-          </button>
+          </div>
         ))
       : COLORS.map((item, index) => (
-          <button
+          <div
             key={index}
             title={COLOR_LABELS[index]}
-            type="button"
+            role="button"
+            tabIndex={0}
+            aria-label={COLOR_LABELS[index]}
+            aria-pressed={selected === index}
             className={
               selected === index ? styles.selectedGridItem : styles.gridItem
             }
@@ -47,7 +53,7 @@ const PickerGrid: React.FC<PickerGridProps> = ({
             }}
           >
             <div className={styles.colorBox} style={{backgroundColor: item}} />
-          </button>
+          </div>
         ));
 
   return <div className={styles.pickerGrid}>{gridItems}</div>;

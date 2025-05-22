@@ -22,7 +22,7 @@ const SectionAvatar: React.FC<SectonAvatarProps> = ({color, emoji, size}) => {
       }
       style={{backgroundColor: COLORS[color]}}
       aria-label={`${COLOR_LABELS[color]}, ${EMOJI_LABELS[emoji]}`}
-      title={`${COLOR_LABELS[color]}, ${EMOJI_LABELS[emoji]}`}
+      title={`${COLOR_LABELS[color]} ${EMOJI_LABELS[emoji]}`}
       role="img"
     >
       {EMOJIS[emoji]}

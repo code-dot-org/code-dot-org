@@ -86,6 +86,7 @@ export default function SingleSectionSetUp({
             <Button
               className={styles.avatarButton}
               text={i18n.editAvatar()}
+              aria-label={i18n.editAvatar()}
               type={'secondary'}
               color={'gray'}
               size={'s'}
