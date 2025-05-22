@@ -5,7 +5,7 @@
 # Code.org marketing app.                                                         #
 ###################################################################################
 
-FROM ubuntu:20.04 AS base
+FROM ubuntu:22.04 AS base
 
 # install operating system dependencies
 RUN apt-get update && \

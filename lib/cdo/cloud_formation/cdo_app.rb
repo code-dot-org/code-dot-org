@@ -27,8 +27,16 @@ module Cdo::CloudFormation
     # Hard-coded constants and default values.
     CHEF_BIN = '/usr/local/bin/chef-cdo-app'
     CHEF_KEY = rack_env?(:adhoc) ? 'adhoc/chef' : 'chef'
-    # Use AMI for Ubuntu 20 (ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-20230517)
-    IMAGE_ID = ENV['IMAGE_ID'] || 'ami-0261755bbcb8c4a84'
+    # Continue to use Ubuntu 20 AMI
+    # (ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-20230517) for
+    # persistent servers which have been manually updated to Ubuntu 22; use
+    # Ubuntu 22 AMI
+    # (ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-20240720) for
+    # newly-created servers.
+    #
+    # TODO infra: plan for the Ubuntu 24 upgrade to be a replacement upgrade,
+    # so this drift should only be temporary.
+    IMAGE_ID = ENV['IMAGE_ID'] || rack_env?(:adhoc) ? 'ami-013b3de8a8fa9b39f' : 'ami-0261755bbcb8c4a84'
     ORIGIN = "https://github.com/code-dot-org/code-dot-org.git"
     CHEF_VERSION = '17.6.18'
     DOMAIN = 'cdn-code.org'
