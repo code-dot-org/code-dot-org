@@ -25,7 +25,7 @@ module Api::V1::Pd
         [@program_manager, @partner_organizer, @non_partner_organizer].map do |organizer|
           [csd_options, csp_options].map do |course_options|
             create :workshop, organizer: organizer, num_sessions: 5, sessions_from: first_session_time,
-              location_address: 'Code.org, Seattle, WA', **course_options
+              session_location_address: 'Code.org, Seattle, WA', **course_options
           end
         end.flatten
 

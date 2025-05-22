@@ -2,7 +2,11 @@ import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
   output: 'standalone',
-  serverExternalPackages: ['@statsig/statsig-node-core'],
+  serverExternalPackages: [
+    '@statsig/statsig-node-core',
+    '@opentelemetry/auto-instrumentations-node',
+    'pino',
+  ],
   cacheMaxMemorySize: 0, // disable default in-memory caching
   redirects: async function () {
     return [
@@ -1256,7 +1260,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/student/middle-high',
-        destination: '/middle-and-high-school-students',
+        destination: '/students/middle-and-high-school',
         permanent: false,
       },
       {
@@ -1401,7 +1405,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/educate/district/partners',
-        destination: '/district/partners',
+        destination: '/districts/partners',
         permanent: false,
       },
       {

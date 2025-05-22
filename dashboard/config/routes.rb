@@ -899,6 +899,8 @@ Dashboard::Application.routes.draw do
       get 'workshop_dashboard/*path', to: 'workshop_dashboard#index'
       get 'workshop_dashboard', to: 'workshop_dashboard#index'
 
+      get 'workshops/:workshop_id', to: 'workshops#index'
+
       get 'misc_survey/thanks', to: 'misc_survey#thanks'
       get 'misc_survey/:form_tag', to: 'misc_survey#new'
       post 'misc_survey/submit', to: 'misc_survey#submit'

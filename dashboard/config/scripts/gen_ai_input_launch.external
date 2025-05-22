@@ -1,0 +1,16 @@
+name 'gen-ai-input-launch'
+title 'Ownership Ethics and Creativity'
+
+
+markdown <<MARKDOWN
+## Input & Training Data
+
+
+**Make a copy of the [activity guide](https://docs.google.com/document/d/1uvwIQtXpXQ3v8S_MYLzlMH8KlSY8aZ6VI20dUbu-kyY/copy) to get started:**
+
+> * Read the overview of the activity guide
+> * Complete each tables with different pieces of text you would find in these locations.
+> * Include at most 5 words as examples of what a language model would learn from these sources.
+
+<img src="https://drive.google.com/thumbnail?sz=w640&id=1uvwIQtXpXQ3v8S_MYLzlMH8KlSY8aZ6VI20dUbu-kyY" alt="Document thumbnail" style="width: 200px; height: auto; margin-right: 15px; border-radius: 5px; border: solid 1px black">
+MARKDOWN

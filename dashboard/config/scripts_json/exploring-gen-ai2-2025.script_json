@@ -18,7 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-12 20:43:55 UTC",
+    "serialized_at": "2025-05-19 19:56:53 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3841,6 +3842,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-studentsurvey-premodule_2025"
+        ],
         "progression": "Student Pre-Survey"
       },
       "bonus": false,
@@ -3863,6 +3867,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L1_2025"
+        ],
         "progression": "Explore a Chatbot"
       },
       "bonus": false,
@@ -3885,6 +3892,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L2_2025"
+        ],
         "progression": "Explore a Chatbot"
       },
       "bonus": false,
@@ -3907,6 +3917,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L3_2025"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -3929,6 +3942,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L4_2025"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -3951,6 +3967,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L5_2025"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -3973,6 +3992,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L6_2025"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -3995,6 +4017,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L7_2025"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -4017,6 +4042,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L8V2_2025"
+        ],
         "progression": "Investigating Hallucinations"
       },
       "bonus": false,
@@ -4039,6 +4067,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L8_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4061,6 +4092,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L1V2_2025"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -4083,6 +4117,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L2V2_2025"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -4105,6 +4142,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L3_2025"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -4127,6 +4167,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L4_2025"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -4149,6 +4192,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L5_2025"
+        ],
         "progression": "Modify"
       },
       "bonus": false,
@@ -4171,6 +4217,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L6_2025"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -4193,6 +4242,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L7_2025"
+        ],
         "progression": "Make"
       },
       "bonus": false,
@@ -4215,6 +4267,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L1_2025"
+        ],
         "progression": "Using a System Prompt"
       },
       "bonus": false,
@@ -4237,6 +4292,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L2_2025"
+        ],
         "progression": "Using a System Prompt"
       },
       "bonus": false,
@@ -4259,6 +4317,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L3_2025"
+        ],
         "progression": "Using a System Prompt"
       },
       "bonus": false,
@@ -4281,6 +4342,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L4_2025"
+        ],
         "progression": "Role & Tone"
       },
       "bonus": false,
@@ -4303,6 +4367,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L5_2025"
+        ],
         "progression": "Role & Tone"
       },
       "bonus": false,
@@ -4325,6 +4392,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L6_2025"
+        ],
         "progression": "Role & Tone"
       },
       "bonus": false,
@@ -4347,6 +4417,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L7_2025"
+        ],
         "progression": "Audience & Delivery"
       },
       "bonus": false,
@@ -4369,6 +4442,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L8_2025"
+        ],
         "progression": "Audience & Delivery"
       },
       "bonus": false,
@@ -4391,6 +4467,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L9_2025"
+        ],
         "progression": "Audience & Delivery"
       },
       "bonus": false,
@@ -4413,6 +4492,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L10_2025"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -4435,6 +4517,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L11_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4457,6 +4542,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L12_2025"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -4479,6 +4567,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L13_2025"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -4501,6 +4592,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L1_2025"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -4523,6 +4617,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L2_2025"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -4545,6 +4642,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L3_2025"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -4567,6 +4667,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L4_2025"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -4589,6 +4692,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L5_2025"
+        ],
         "progression": "Giving Examples"
       },
       "bonus": false,
@@ -4611,6 +4717,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L6_2025"
+        ],
         "progression": "Giving Examples"
       },
       "bonus": false,
@@ -4633,6 +4742,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L7_2025"
+        ],
         "progression": "Giving Examples"
       },
       "bonus": false,
@@ -4655,6 +4767,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L9_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4677,6 +4792,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L8_2025"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -4699,6 +4817,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-10V2_2025"
+        ],
         "progression": "Show What You Know"
       },
       "bonus": false,
@@ -4721,6 +4842,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L1_2025"
+        ],
         "progression": "Explore"
       },
       "bonus": false,
@@ -4743,6 +4867,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L2V2_2025"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -4765,6 +4892,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L3V2_2025"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -4787,6 +4917,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L4_2025"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -4809,6 +4942,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L5_2025"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -4831,6 +4967,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L6_2025"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -4853,6 +4992,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L7A_2025"
+        ],
         "progression": "Modify"
       },
       "bonus": false,
@@ -4875,6 +5017,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L8_2025"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -4897,6 +5042,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L9_2025"
+        ],
         "progression": "Make"
       },
       "bonus": false,
@@ -4919,6 +5067,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L1_2025"
+        ],
         "progression": "Current Information"
       },
       "bonus": false,
@@ -4941,6 +5092,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L2_2025"
+        ],
         "progression": "Current Information"
       },
       "bonus": false,
@@ -4963,6 +5117,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L3_2025"
+        ],
         "progression": "Specialized Information"
       },
       "bonus": false,
@@ -4985,6 +5142,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L4_2025"
+        ],
         "progression": "Specialized Information"
       },
       "bonus": false,
@@ -5007,6 +5167,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L5_2025"
+        ],
         "progression": "Accurate Information"
       },
       "bonus": false,
@@ -5029,6 +5192,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L6_2025"
+        ],
         "progression": "Accurate Information"
       },
       "bonus": false,
@@ -5051,6 +5217,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L7_2025"
+        ],
         "progression": "Accurate Information"
       },
       "bonus": false,
@@ -5073,6 +5242,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L8_2025"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -5095,6 +5267,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L9_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5117,6 +5292,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L10_2025"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -5139,6 +5317,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L11_2025"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -5161,6 +5342,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L1_2025"
+        ],
         "progression": "User Story #1: Sarah Thompson"
       },
       "bonus": false,
@@ -5183,6 +5367,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L1.1_2025"
+        ],
         "progression": "User Story #1: Sarah Thompson"
       },
       "bonus": false,
@@ -5205,6 +5392,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L2_2025"
+        ],
         "progression": "User Story #1: Sarah Thompson"
       },
       "bonus": false,
@@ -5227,6 +5417,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L4_2025"
+        ],
         "progression": "User Story #2: Janet Lee"
       },
       "bonus": false,
@@ -5249,6 +5442,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L4.1_2025"
+        ],
         "progression": "User Story #2: Janet Lee"
       },
       "bonus": false,
@@ -5271,6 +5467,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L5_2025"
+        ],
         "progression": "User Story #2: Janet Lee"
       },
       "bonus": false,
@@ -5293,6 +5492,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L10_2025"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -5315,6 +5517,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L11_2025"
+        ],
         "progression": "Show What You Know"
       },
       "bonus": false,
@@ -5337,6 +5542,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L7_2025"
+        ],
         "progression": "(Optional) User Story #3: Alex Martinez"
       },
       "bonus": false,
@@ -5359,6 +5567,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L7.1_2025"
+        ],
         "progression": "(Optional) User Story #3: Alex Martinez"
       },
       "bonus": false,
@@ -5381,6 +5592,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L8_2025"
+        ],
         "progression": "(Optional) User Story #3: Alex Martinez"
       },
       "bonus": false,
@@ -5403,6 +5617,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-modelcards-practice-L1_2025"
+        ],
         "progression": "Initial Scenario"
       },
       "bonus": false,
@@ -5425,6 +5642,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-modelcards-practice-L2_2025"
+        ],
         "progression": "You Decide!"
       },
       "bonus": false,
@@ -5447,6 +5667,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project-L0_2025"
+        ],
         "progression": "Example Projects"
       },
       "bonus": false,
@@ -5469,6 +5692,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project-L1_2025"
+        ],
         "progression": "Model, Temperature, and Prompt"
       },
       "bonus": false,
@@ -5491,6 +5717,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project-L2_2025"
+        ],
         "progression": "Retrieval"
       },
       "bonus": false,
@@ -5513,6 +5742,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project-L3_2025"
+        ],
         "progression": "Model Card"
       },
       "bonus": false,
@@ -5535,6 +5767,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-L1_2025"
+        ],
         "progression": "User Testing"
       },
       "bonus": false,
@@ -5557,6 +5792,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L2_2025"
+        ],
         "progression": "Making Decisions"
       },
       "bonus": false,
@@ -5579,6 +5817,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L3_2025"
+        ],
         "progression": "Making Decisions"
       },
       "bonus": false,
@@ -5601,6 +5842,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L4_2025"
+        ],
         "progression": "Making Decisions"
       },
       "bonus": false,
@@ -5623,6 +5867,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L5_2025"
+        ],
         "progression": "Making Decisions"
       },
       "bonus": false,
@@ -5645,6 +5892,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L1_2025"
+        ],
         "progression": "Explore"
       },
       "bonus": false,
@@ -5667,6 +5917,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L2V2_2025"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -5689,6 +5942,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L3V2_2025"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -5711,6 +5967,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L4_2025"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -5733,6 +5992,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-panels-finetune-overview_2025"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -5755,6 +6017,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-choice_2025"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -5777,6 +6042,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L6_2025"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -5799,6 +6067,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L5_2025"
+        ],
         "progression": "Make"
       },
       "bonus": false,
@@ -5821,6 +6092,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project2-L0_2025"
+        ],
         "progression": "Example Projects"
       },
       "bonus": false,
@@ -5843,6 +6117,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project2-L1_2025"
+        ],
         "progression": "Step 4: Create your Chatbot"
       },
       "bonus": false,
@@ -5865,6 +6142,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project2-L2_2025"
+        ],
         "progression": "Step 5: Make a Model Card"
       },
       "bonus": false,
@@ -5887,6 +6167,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-studentsurvey-postmodule_2025"
+        ],
         "progression": "Student Post-Survey"
       },
       "bonus": false,

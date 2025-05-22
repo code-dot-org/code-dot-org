@@ -2,6 +2,7 @@ district_s,state_s
 Birmingham City Schools,Alabama
 Dale County Schools,Alabama
 Elmore County Public Schools,Alabama
+Macon County Schools,Alabama
 Montgomery Public School,Alabama
 Montgomery Public Schools,Alabama
 Bering Strait School District,Alaska
@@ -108,6 +109,7 @@ Hawaii State Department of Education,Hawaii
 American Falls School District,Idaho
 Blaine County School District,Idaho
 Caldwell School District,Idaho
+Kamiah Joint School District #304,Idaho
 Lewiston Independent School District #1,Idaho
 Pocatello Chubbuck School District #25,Idaho
 Ball-Chatham 5,Illinois
@@ -120,6 +122,7 @@ Elementary School District 159,Illinois
 Evanston Skokie CCSD 65,Illinois
 Grayslake CCSD 46,Illinois
 Herscher Community Unit School District #2,Illinois
+Kankakee SD 111,Illinois
 Ottawa Elementary School District 141,Illinois
 Pembroke Community Consolidated School District 259,Illinois
 Riverton Community Unit School District 14,Illinois
@@ -163,6 +166,7 @@ Iowa City Community School District,Iowa
 Mid-Prairie Community Schools,Iowa
 North Iowa Community Schools,Iowa
 Osage Community School,Iowa
+Perry Community School District,Iowa
 Sioux City Community School District,Iowa
 South Winneshiek CSD,Iowa
 Woodbine Community School District,Iowa
@@ -358,6 +362,7 @@ South Brunswick Township School District,New Jersey
 Springfield Public Schools,New Jersey
 St Joseph High School,New Jersey
 The Lower Alloways Creek School District,New Jersey
+Trenton Public Schools,New Jersey
 Upper Township School District,New Jersey
 Vernon Township School District,New Jersey
 Warren Glen Academy,New Jersey
@@ -519,6 +524,7 @@ Salem Christian School,Pennsylvania
 School District of Philadelphia,Pennsylvania
 School District of Springfield Township,Pennsylvania
 Union Area School District,Pennsylvania
+Wyoming Area School District,Pennsylvania
 Smithfield Public Schools,Rhode Island
 Aiken County Public Schools,South Carolina
 Beaufort County Schools,South Carolina
@@ -530,6 +536,7 @@ Lexington County School District One,South Carolina
 Lexington School District 2,South Carolina
 Wessington Springs,South Dakota
 Anderson County School District,Tennessee
+Bedford County Schools,Tennessee
 Bradley County Schools,Tennessee
 Bristol Tennessee City School District,Tennessee
 Cocke County School District,Tennessee
@@ -628,6 +635,3 @@ Venture Academy,Wisconsin
 Converse County School District #2,Wyoming
 Sheridan County School District #2,Wyoming
 Sweetwater County School District #1,Wyoming
-Wyoming Area School District,PA
-Macon County Schools,AL
-Perry Community School District,IA
