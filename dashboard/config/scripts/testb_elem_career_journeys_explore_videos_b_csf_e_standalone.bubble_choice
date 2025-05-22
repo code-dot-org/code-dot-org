@@ -1,0 +1,14 @@
+name 'testB-elem-career-journeys-explore-videos_b_csf-e_standalone'
+display_name 'Learn more about careers in CS and AI'
+description '###1. Choose a career journey to explore. <br> 2. Write reflections in your activity guide. <br> 3. Choose a different career journey. <br> 4. Write reflections in your activity guide. <br> 5. Press finish (or explore more if you have extra time).'
+
+sublevels
+level 'test-elem-career-journeys-video-choice4_b_csf-e_standalone'
+level 'test-elem-career-journeys-video-choice1_b_csf-e_standalone'
+level 'test-elem-career-journeys-video-choice2_b_csf-e_standalone'
+level 'test-elem-career-journeys-video-choice3_b_csf-e_standalone'
+
+markdown <<MARKDOWN
+
+
+MARKDOWN

@@ -134,10 +134,15 @@
         }
       }
 
+      div:first-of-type,
+      div:last-of-type {
+        margin: 0;
+      }
+
       div:nth-of-type(2) {
-        top: 100%;
+        top: 70%;
         padding: 0;
-        margin-top: 4px;
+        box-sizing: border-box;
       }
 
       > button {

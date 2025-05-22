@@ -13,10 +13,10 @@
     "parent_level_id": 28494,
     "name_suffix": "_1",
     "encrypted": "false",
-    "long_instructions": "\r\n## What is Coding with Music? \r\n\r\n\r\n#### Programming with Music Lab is a short, accessible curriculum for grades 3-5 that teaches programming through music creation. Students learn to code melodies, loops, and interactive compositions in a fun, engaging way while meeting accessibility standards.\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
+    "long_instructions": "\r\n## What is Coding with Music? \r\n\r\n\r\n#### Coding with Music is a short, accessible curriculum for grades 3-5 that teaches programming through music creation. Students learn to code melodies, loops, and interactive compositions in a fun, engaging way while meeting accessibility standards.\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-04-28T18:20:30.106+00:00\",\"changed\":[\"cloned from \\\"MLOPD-K5-PLVid_2023_K5CSConcepts_1\\\"\"],\"cloned_from\":\"MLOPD-K5-PLVid_2023_K5CSConcepts_1\"},{\"changed_at\":\"2025-05-16 17:46:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-04-28T18:20:30.106+00:00\",\"changed\":[\"cloned from \\\"MLOPD-K5-PLVid_2023_K5CSConcepts_1\\\"\"],\"cloned_from\":\"MLOPD-K5-PLVid_2023_K5CSConcepts_1\"},{\"changed_at\":\"2025-05-16 17:46:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-05-21 21:51:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":21015,\"changed_by_email\":\"lori.goldade+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

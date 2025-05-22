@@ -28,7 +28,10 @@ describe('ContentEditorTools', () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
-    (useParams as jest.Mock).mockReturnValue({slug: 'test-slug', locale: 'en'});
+    (useParams as jest.Mock).mockReturnValue({
+      paths: ['engineering', 'test-slug'],
+      locale: 'en',
+    });
   });
 
   it('renders the preview label', () => {
@@ -63,7 +66,7 @@ describe('ContentEditorTools', () => {
 
     await waitFor(async () => {
       expect(navigator.clipboard.writeText).toHaveBeenCalledWith(
-        `http://localhost/api/draft?token=null&slug=test-slug&locale=en`,
+        `http://localhost/api/draft?token=null&slug=engineering/test-slug&locale=en`,
       );
 
       expect(await screen.findByText('Copied!')).toBeInTheDocument();

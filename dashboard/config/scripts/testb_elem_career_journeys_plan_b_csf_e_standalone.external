@@ -1,0 +1,27 @@
+name 'testB-elem-career-journeys-plan_b_csf-e_standalone'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+##Plan Your Career Journey Project!
+
+<div>
+<img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png" />
+
+<div style="float: left; width: 70%; padding-left:20px">
+<h4>
+<strong>It's time to make your plan!</strong>
+Write your plan on your activity guide
+</h4>
+
+>Include:
+> - A sprite to represent you in the future
+>
+> - Another sprite to represent something a person in this job would need to do their work
+> - What whill your sprite say? 
+>	- Explain how CS or AI will be used in this career. 
+
+**Here is a plan template you can copy to use yourself:**  <a href="https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview" target="_blank"> Book Cover Planning Guide</a>.
+
+</div>
+MARKDOWN
