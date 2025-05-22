@@ -19,7 +19,7 @@
     - lesson.script_levels.each do |script_level|
       - level = script_level.level
       .script_level
-        = link_to "Level #{script_level.position}: #{script_level.level.name}", build_script_level_path(script_level, unit_group_unit: @unit_group_unit)
+        = link_to "Level #{script_level.position}: #{script_level.level.name}", build_script_level_path(script_level)
         %div= "type: #{script_level.level.class}"
         - levels = level.is_a?(LevelGroup) ? level.levels : [level]
         - levels.each do |level|

@@ -28,7 +28,6 @@ const hiddenState = unhiddenState.setIn(
 const defaultProps = {
   title: 'CSP Unit 1 - The Internet',
   name: 'csp1',
-  path: '/courses/csp/units/1',
   id: courseId,
   description:
     'This unit explores the technical challenges and questions that ' +

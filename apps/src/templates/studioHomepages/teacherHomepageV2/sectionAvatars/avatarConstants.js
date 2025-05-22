@@ -1,8 +1,4 @@
-import React from 'react';
-
-import styles from './teacherHomepage.module.scss';
-
-const EMOJIS = [
+export const EMOJIS = [
   '🔥',
   '🐧',
   '👾',
@@ -26,7 +22,7 @@ const EMOJIS = [
   '🦄',
 ];
 
-const COLORS = [
+export const COLORS = [
   '#EB1460',
   '#F62CAF',
   '#9C1AB1',
@@ -48,21 +44,3 @@ const COLORS = [
   '#5E7C8B',
   '#000000',
 ];
-
-interface SectonAvatarProps {
-  color: number;
-  emoji: number;
-}
-
-const SectionAvatar: React.FC<SectonAvatarProps> = ({color, emoji}) => {
-  return (
-    <div
-      className={styles.sectionAvatar}
-      style={{backgroundColor: COLORS[color]}}
-    >
-      {EMOJIS[emoji]}
-    </div>
-  );
-};
-
-export default SectionAvatar;

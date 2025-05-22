@@ -43,9 +43,9 @@ class CourseOffering < ApplicationRecord
 
   KEY_CHAR_RE = /[a-z0-9\-]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
-  validates :key,
-    format: {with: KEY_RE,
-    message: "must contain only lowercase alphabetic characters, numbers, and dashes; got \"%{value}\"."}
+  validates_format_of :key,
+    with: KEY_RE,
+    message: "must contain only lowercase alphabetic characters, numbers, and dashes; got \"%{value}\"."
 
   ELEMENTARY_SCHOOL_GRADES = %w[K 1 2 3 4 5].freeze
   MIDDLE_SCHOOL_GRADES = %w[6 7 8].freeze
@@ -472,9 +472,8 @@ class CourseOffering < ApplicationRecord
 
   def get_available_resources(locale_code = 'en-us')
     latest_version = latest_published_version(locale_code)
-    unit = latest_version&.units&.first
-    unit_group_unit = unit&.unit_group_units&.first
-    lessons = unit&.lessons
+    units = latest_version&.units
+    lessons = units&.first&.lessons
 
     return nil unless lessons
     expanded_card_resources = {}
@@ -482,7 +481,7 @@ class CourseOffering < ApplicationRecord
     lessons.each do |lesson|
       break if expanded_card_resources.size >= 5
       if lesson.has_lesson_plan
-        expanded_card_resources["Lesson Plan"] ||= lesson.lesson_plan_html_url(unit_group_unit: unit_group_unit)
+        expanded_card_resources["Lesson Plan"] ||= lesson.lesson_plan_html_url
       end
       lesson.resources&.each do |resource|
         properties = resource.properties

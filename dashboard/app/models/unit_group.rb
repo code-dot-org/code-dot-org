@@ -65,7 +65,7 @@ class UnitGroup < ApplicationRecord
     self.class.get_from_cache(id)
   end
 
-  validates :link, presence: true
+  validates_presence_of :link
   validates :published_state, acceptance: {accept: Curriculum::SharedCourseConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
 
   def skip_name_format_validation
@@ -302,8 +302,7 @@ class UnitGroup < ApplicationRecord
         version_title: I18n.t("data.course.name.#{name}.version_title", default: ''),
         scripts: units_for_user(user).map do |unit|
           include_lessons = false
-          unit_group_unit = unit.unit_group_units.find {|ugu| ugu.unit_group == self}
-          unit.summarize(include_lessons, user, unit_group_unit: unit_group_unit).merge!(unit.summarize_i18n_for_display)
+          unit.summarize(include_lessons, user).merge!(unit.summarize_i18n_for_display)
         end,
         teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
         student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
@@ -327,21 +326,14 @@ class UnitGroup < ApplicationRecord
       link: link,
       version_title: I18n.t("data.course.name.#{name}.version_title", default: ''),
       units: units_for_user(user).map do |unit|
-        unit_group_unit = unit.unit_group_units.find {|ugu| ugu.unit_group == self}
-        unit.summarize_for_rollup(user, unit_group_unit: unit_group_unit)
+        unit.summarize_for_rollup(user)
       end,
       has_numbered_units: has_numbered_units?
     }
   end
 
-  # Generates a URL pointing to the course, optionally including a section ID as a query parameter.
-  #
-  # @param section_id [Integer, String, nil] The ID of the section to include in the query parameter. Defaults to nil.
-  # @return [String] The URL for the course, which may include a section ID query parameter.
-  def link(section_id: nil)
-    path = course_path(self)
-    path += "?section_id=#{section_id}" if section_id
-    path
+  def link
+    Rails.application.routes.url_helpers.course_path(self)
   end
 
   def summarize_short
