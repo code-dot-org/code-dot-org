@@ -1,6 +1,6 @@
 module User::Age
   extend ActiveSupport::Concern
-  include ProviderFlags
+  include User::ProviderFlags
 
   included do
     AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
