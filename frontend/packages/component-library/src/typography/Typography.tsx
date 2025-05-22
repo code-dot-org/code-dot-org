@@ -1,5 +1,12 @@
 import classnames from 'classnames';
-import {memo, ReactNode, CSSProperties} from 'react';
+import {
+  memo,
+  ReactNode,
+  CSSProperties,
+  forwardRef,
+  createElement,
+  HTMLAttributes,
+} from 'react';
 
 import {SemanticTag, VisualAppearance} from './types';
 
@@ -20,27 +27,25 @@ export interface TypographyProps {
   id?: string;
 }
 
-const Typography: React.FunctionComponent<TypographyProps> = ({
-  semanticTag,
-  visualAppearance,
-  children,
-  className,
-  style,
-  id,
-  ...props
-}) => {
-  const Tag = semanticTag;
-
-  return (
-    <Tag
-      id={id}
-      className={classnames(moduleStyles[visualAppearance], className)}
-      style={style}
-      {...props}
-    >
-      {children}
-    </Tag>
-  );
-};
+const Typography = forwardRef<
+  HTMLElement,
+  TypographyProps & HTMLAttributes<HTMLElement>
+>(
+  (
+    {semanticTag, visualAppearance, children, className, style, id, ...props},
+    ref,
+  ) =>
+    createElement(
+      semanticTag,
+      {
+        ref,
+        id,
+        className: classnames(moduleStyles[visualAppearance], className),
+        style,
+        ...props,
+      },
+      children,
+    ),
+);
 
 export default memo(Typography);

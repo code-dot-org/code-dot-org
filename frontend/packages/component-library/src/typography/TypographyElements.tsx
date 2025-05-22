@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {forwardRef} from 'react';
 
 import {SemanticTag, VisualAppearance, TypographyElementProps} from './types';
 import Typography from './Typography';
@@ -100,23 +100,26 @@ const generateComponents = (
     const {displayName, semanticTag, defaultVisualAppearance} =
       componentTemplateData;
 
-    const TypographyElement: React.FunctionComponent<
-      TypographyElementProps
-    > = componentProps => {
-      const {visualAppearance, children, className, style, id} = componentProps;
+    const TypographyElement = forwardRef<HTMLElement, TypographyElementProps>(
+      (componentProps, ref) => {
+        const {visualAppearance, children, className, style, id, ...props} =
+          componentProps;
 
-      return (
-        <Typography
-          semanticTag={semanticTag}
-          visualAppearance={visualAppearance || defaultVisualAppearance}
-          className={className}
-          style={style}
-          id={id}
-        >
-          {children}
-        </Typography>
-      );
-    };
+        return (
+          <Typography
+            ref={ref}
+            semanticTag={semanticTag}
+            visualAppearance={visualAppearance || defaultVisualAppearance}
+            className={className}
+            style={style}
+            id={id}
+            {...props}
+          >
+            {children}
+          </Typography>
+        );
+      },
+    );
     TypographyElement.displayName = displayName;
     return {...acc, [displayName]: TypographyElement};
   }, {});
