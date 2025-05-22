@@ -283,8 +283,9 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
             ]}
             onChange={value => {
               setCurrentValue({...currentValue, scaleMode: value as ScaleMode});
-              MusicRegistry.analyticsReporter.onChangeTuneScaleMode(
-                value as ScaleMode
+              MusicRegistry.analyticsReporter.onButtonClicked(
+                'change-tune-scale-mode',
+                {scaleMode: value}
               );
             }}
             selectedButtonValue={scaleMode || 'simple'}

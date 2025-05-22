@@ -20,7 +20,6 @@ import {
 
 import {BlockTypes} from '../blockly/blockTypes';
 import {FIELD_SOUNDS_NAME} from '../blockly/constants';
-import {ScaleMode} from '../player/interfaces/InstrumentEvent';
 
 const API_KEY_ENDPOINT = '/musiclab/analytics_key';
 
@@ -235,10 +234,6 @@ export default class AnalyticsReporter {
 
   onGenerateAiPatternStart(temperature: number) {
     this.trackUIEvent('Generate AI pattern start', {temperature});
-  }
-
-  onChangeTuneScaleMode(scaleMode: ScaleMode) {
-    this.trackUIEvent('Change tune scale mode', {scaleMode});
   }
 
   onGenerateAiPatternEnd(
