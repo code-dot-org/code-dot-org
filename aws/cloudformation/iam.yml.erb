@@ -1071,6 +1071,7 @@ roles.each do |name, config| %>
                 Action:
                   - ecs:CreateCluster
                   - ecs:RegisterTaskDefinition
+                  - ecs:DeregisterTaskDefinition
                   - ecs:CreateService
                   - ecs:UpdateService
                   - ecs:DeregisterTaskDefinition
@@ -1099,6 +1100,7 @@ roles.each do |name, config| %>
                   - elasticloadbalancing:DeleteListener
                   - elasticloadbalancing:DeleteTargetGroup
                   - elasticloadbalancing:DeregisterTargets
+                  - elasticloadbalancing:ModifyTargetGroupAttributes
                 Resource: '*'
               # CloudFront resources
               - Effect: Allow
