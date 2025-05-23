@@ -206,25 +206,17 @@ steps:
 
   # We cache staging's rbenv and database in the
   # `cache-staging-build-artifacts` pipeline.
-  - name: get-cached-staging-rbenv
+  - name: get-cached-staging-misc-build-artifacts
     image: plugins/s3-cache
     volumes:
+      # Even files cached with absolute paths will be restored into the
+      # workdir; so for this step, we mount the relevant volumes there, too.
       - name: rbenv
         path: /drone/src/home/ci/.rbenv
-    settings:
-      filename: cache-staging-rbenv.tar.gz
-      endpoint: s3://cdo-drone
-      restore: true
-      debug: true
-      pull: true
-
-  - name: get-cached-staging-mysql
-    image: plugins/s3-cache
-    volumes:
       - name: mysql
         path: /drone/src/var/lib/mysql
     settings:
-      filename: cache-staging-mysql.tar.gz
+      filename: cache-staging-misc-build-artifacts.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -329,32 +321,21 @@ steps:
       - sudo chown -R ci:ci .
       - /entrypoint.sh docker/ci/scripts/prepare_ui_tests.sh
 
-  - name: cache-staging-rbenv
+  - name: cache-staging-misc-build-artifacts
     image: plugins/s3-cache
     volumes:
       - name: rbenv
         path: /home/ci/.rbenv
+      - name: mysql
+        path: /var/lib/mysql
     settings:
-      filename: cache-staging-rbenv.tar.gz
+      filename: cache-staging-misc-build-artifacts.tar.gz
       endpoint: s3://cdo-drone
       rebuild: true
       debug: true
       pull: true
       mount:
         - /home/ci/.rbenv
-
-  - name: cache-staging-mysql
-    image: plugins/s3-cache
-    volumes:
-      - name: mysql
-        path: /var/lib/mysql
-    settings:
-      filename: cache-staging-mysql.tar.gz
-      endpoint: s3://cdo-drone
-      rebuild: true
-      debug: true
-      pull: true
-      mount:
         - /var/lib/mysql
 
 volumes:
