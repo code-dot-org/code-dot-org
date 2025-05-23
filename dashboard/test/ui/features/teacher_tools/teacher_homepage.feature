@@ -64,16 +64,15 @@ Feature: Using the teacher homepage sections feature
     And I wait until current URL contains "/courses/csp-2017"
 
     When I click selector ".uitest-CourseScript:contains(CSP Unit 2) .uitest-go-to-unit-button" to load a new page
-    And I wait to see ".uitest-script-next-banner"
+    And I wait to see "h1:contains(CSP Unit 2 - Digital Information ('17-'18))"
     Then the teacher_dashboard url contains the section id
 
-    And the teacher_dashboard href of selector ".uitest-script-next-banner" contains the section id
     And I wait for 3 seconds
     And the teacher_dashboard href of selector ".progress-bubble-link:first" contains the section id
     And the teacher_dashboard href of selector "a:contains(Computer Science Principles)" contains the section id
 
     # navigate to a script level
-    When I click selector ".uitest-script-next-banner" to load a new page
+    Given I am on "http://studio.code.org/s/csp2-2017/lessons/1/levels/1"
     And I wait to see ".header_popup_link"
     Then the teacher_dashboard url contains the section id
 

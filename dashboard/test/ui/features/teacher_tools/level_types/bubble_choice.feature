@@ -83,11 +83,12 @@ Feature: BubbleChoice
     And I wait until current URL contains "user_id="
     And I wait until element "td:contains(Lesson Name)" is visible
     And I wait until element "td:contains(Lab2 Showcase)" is visible
-    Then I verify progress for lesson 55 level 8 is "perfect"
+    Then I verify progress for lesson 52 level 8 is "perfect"
 
     # View progress from BubbleChoice activity page
     Given I am on "http://studio.code.org/s/allthethings/lessons/52/levels/8"
     And I wait until element ".teacher-panel" is visible
+    And I select the "New Section" option in dropdown with class "uitest-sectionselect"
     # Teacher has not completed level, so make sure it is not shown as complete
     Then I verify progress for the sublevel with selector ".uitest-bubble-choice:eq(0) .progress-bubble:first" is "not_tried"
     When I click selector ".teacher-panel table td:contains(Alice)" once I see it
