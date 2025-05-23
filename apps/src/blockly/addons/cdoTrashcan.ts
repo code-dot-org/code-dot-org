@@ -57,9 +57,10 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     this.workspace.getComponentManager().addComponent({
       component: this,
       // Weight determines the order of drag targets. The toolbox is also a drag
-      // target (weight 1). onDragEnter/Exit/Over are only called for the first
+      // target (weight 0). onDragEnter/Exit/Over are only called for the first
       // drag target, so the trashcan needs to have a smaller weight than the toolbox.
-      weight: 0,
+      // See Blockly.ComponentManager.ComponentWeight for other weights from core.
+      weight: -1,
       capabilities: [
         Blockly.ComponentManager.Capability.DELETE_AREA,
         Blockly.ComponentManager.Capability.DRAG_TARGET,
