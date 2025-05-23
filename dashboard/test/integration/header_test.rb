@@ -307,7 +307,10 @@ class HeaderTest < ActionDispatch::IntegrationTest
   end
 
   context 'on lab page' do
-    let!(:spritelab) {create(:spritelab, name: ProjectsController::STANDALONE_PROJECTS[:spritelab][:name])}
+    let!(:spritelab) do
+      spritelab_name = ProjectsController::STANDALONE_PROJECTS[:spritelab][:name]
+      Level.find_by_name(spritelab_name) || create(:spritelab, name: spritelab_name)
+    end
 
     around do |test|
       get '/projects/spritelab/fake-channel-id/edit'

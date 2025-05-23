@@ -4,6 +4,7 @@ import '@/contentful/register-custom-components';
 import {detachExperienceStyles} from '@contentful/experiences-sdk-react';
 import {Metadata} from 'next';
 import {draftMode} from 'next/headers';
+import {notFound} from 'next/navigation';
 
 import Bootstrap from '@/bootstrap';
 import ContentEditorHelper from '@/components/contentEditorHelper';
@@ -99,6 +100,9 @@ export default async function ExperiencePage({
   const {experience, error} = pageProps.experienceResult;
 
   if (error) {
+    if (error.message.startsWith('No experience entry with slug')) {
+      return notFound();
+    }
     return <div>{error.message}</div>;
   }
 
