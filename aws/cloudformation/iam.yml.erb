@@ -1220,7 +1220,6 @@ roles.each do |name, config| %>
                 Action:
                   - application-autoscaling:RegisterScalableTarget
                   - application-autoscaling:PutScalingPolicy
-                  - application-autoscaling:DescribeScalableTargets
                   - application-autoscaling:DescribeScalingPolicies
                   - application-autoscaling:DeregisterScalableTarget
                   - application-autoscaling:DeleteScalingPolicy
@@ -1228,6 +1227,10 @@ roles.each do |name, config| %>
                 Condition:
                   StringLike:
                     application-autoscaling:ResourceId: "service/*/marketing-sites-<%=environment_type%>-*"
+              - Effect: Allow
+                Action:
+                  - application-autoscaling:DescribeScalableTargets
+                Resource: '*'
 <% end %>
 
 Outputs:
