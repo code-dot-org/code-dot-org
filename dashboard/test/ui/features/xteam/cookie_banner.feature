@@ -18,5 +18,5 @@ Scenario Outline: Show cookie banner, dismiss it and confirm it's dismissed
   Then I close my eyes
 
 Examples:
-  | url                                                               | test_name                  |                                           | code.org about             |
+  | url                                                               | test_name                  |
   | http://studio.code.org/courses/frozen/units/1/frozen/lessons/1/levels/1                  | studio.code.org puzzle     |
