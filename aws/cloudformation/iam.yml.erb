@@ -1088,7 +1088,7 @@ roles.each do |name, config| %>
                 Resource:
                   - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:cluster/*"
                   - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:task-definition/*<%=environment_type%>*:*"
-                  - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:service/*/marketing-sites-<%=environment_type%>-*"
+                  - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:service/*/*-<%=environment_type%>-*"
               - Effect: Allow
                 Action:
                   - ecs:DeregisterTaskDefinition
