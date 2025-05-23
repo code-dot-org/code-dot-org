@@ -74,11 +74,7 @@ const useSections = section => {
   const batchUpdateSection = (sectionIdx, updateList) => {
     const newSections = sections.map((section, idx) => {
       if (idx === sectionIdx) {
-        let newSection = section;
-        for (const [key, value] of Object.entries(updateList)) {
-          newSection = {...newSection, [key]: value};
-        }
-        return newSection;
+        return {...section, ...updateList};
       }
     });
 
