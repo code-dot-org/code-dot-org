@@ -16,50 +16,38 @@ const PickerGrid: React.FC<PickerGridProps> = ({
   selectCallback,
   selected,
 }) => {
+  const gridItem = (label: string, item: string, index: number) => {
+    return (
+      <div
+        key={index}
+        title={label}
+        role="button"
+        tabIndex={0}
+        aria-label={label}
+        aria-pressed={selected === index}
+        className={
+          selected === index
+            ? classNames(styles.gridItem, styles.selectedGridItem)
+            : styles.gridItem
+        }
+        onClick={() => selectCallback(index)}
+        onKeyDown={event => {
+          if (event.key === 'Enter') selectCallback(index);
+        }}
+      >
+        {item.length === 1 ? (
+          item
+        ) : (
+          <div className={styles.colorBox} style={{backgroundColor: item}} />
+        )}
+      </div>
+    );
+  };
+
   const gridItems =
     type === 'emoji'
-      ? EMOJIS.map((item, index) => (
-          <div
-            key={index}
-            title={EMOJI_LABELS[index]}
-            role="button"
-            tabIndex={0}
-            aria-label={EMOJI_LABELS[index]}
-            aria-pressed={selected === index}
-            className={
-              selected === index
-                ? classNames(styles.gridItem, styles.selectedGridItem)
-                : styles.gridItem
-            }
-            onClick={() => selectCallback(index)}
-            onKeyDown={event => {
-              if (event.key === 'Enter') selectCallback(index);
-            }}
-          >
-            {item}
-          </div>
-        ))
-      : COLORS.map((item, index) => (
-          <div
-            key={index}
-            title={COLOR_LABELS[index]}
-            role="button"
-            tabIndex={0}
-            aria-label={COLOR_LABELS[index]}
-            aria-pressed={selected === index}
-            className={
-              selected === index
-                ? classNames(styles.gridItem, styles.selectedGridItem)
-                : styles.gridItem
-            }
-            onClick={() => selectCallback(index)}
-            onKeyDown={event => {
-              if (event.key === 'Enter') selectCallback(index);
-            }}
-          >
-            <div className={styles.colorBox} style={{backgroundColor: item}} />
-          </div>
-        ));
+      ? EMOJIS.map((item, index) => gridItem(EMOJI_LABELS[index], item, index))
+      : COLORS.map((item, index) => gridItem(COLOR_LABELS[index], item, index));
 
   return <div className={styles.pickerGrid}>{gridItems}</div>;
 };
