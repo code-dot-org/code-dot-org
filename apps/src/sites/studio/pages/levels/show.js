@@ -91,8 +91,15 @@ function initPage() {
     }
   }
 
-  // AI Differentiation FAB to be shown only if rubric FAB is not.
+  // AI Differentiation FAB to be shown only if rubric and tutor FABs are not.
   const maybeRenderAiDiffButton = () => {
+    const aiTutorFabMountPoint = document.getElementById(
+      'ai-tutor-fab-mount-point'
+    );
+    if (aiTutorFabMountPoint) {
+      return;
+    }
+
     const aiDiffFabMountPoint = document.getElementById(
       'ai-differentiation-fab-mount-point'
     );
