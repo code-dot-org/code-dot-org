@@ -19,7 +19,6 @@ class ProgressBubbleSet extends React.Component {
     levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
     disabled: PropTypes.bool.isRequired,
     style: PropTypes.object,
-    selectedSectionId: PropTypes.number,
     selectedStudentId: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number,
@@ -31,6 +30,7 @@ class ProgressBubbleSet extends React.Component {
     lessonName: PropTypes.string,
     // Redux
     isRtl: PropTypes.bool,
+    selectedSectionId: PropTypes.number,
   };
 
   renderBubble = (level, index, isSublevel) => {
@@ -162,4 +162,5 @@ export const UnconnectedProgressBubbleSet = ProgressBubbleSet;
 
 export default connect(state => ({
   isRtl: state.isRtl,
+  selectedSectionId: state.teacherSections.selectedSectionId,
 }))(Radium(ProgressBubbleSet));

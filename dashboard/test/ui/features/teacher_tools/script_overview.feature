@@ -26,7 +26,7 @@ Feature: Unit overview page
     And I am on "http://studio.code.org/s/allthethings"
     And I wait until element "#uitest-view-as-student-selector" is visible
     Then I verify progress for lesson 29 level 4 in detail view is "perfect"
-    Then I select the "Alice" option in dropdown "uitest-view-as-student-selector"
+    Then I select the "Sally" option in dropdown "uitest-view-as-student-selector"
     And I wait until element "td:contains(Maze)" is visible
     # verify name format in summary view
     And element "td:contains(2. Maze)" is visible
