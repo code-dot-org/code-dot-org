@@ -114,7 +114,7 @@ export default function SingleSectionSetUp({
       )}
       {showAvatarDialog && (
         <SectionAvatarEditDialog
-          closeCallback={setShowAvatarDialog(false)}
+          closeCallback={() => setShowAvatarDialog(false)}
           saveCallback={handleAvatarUpdate}
           avatarColor={section.avatar_color}
           avatarEmoji={section.avatar_emoji}

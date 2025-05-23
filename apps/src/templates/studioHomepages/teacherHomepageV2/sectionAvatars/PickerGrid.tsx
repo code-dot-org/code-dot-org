@@ -35,10 +35,10 @@ const PickerGrid: React.FC<PickerGridProps> = ({
           if (event.key === 'Enter') selectCallback(index);
         }}
       >
-        {item.length === 1 ? (
-          item
-        ) : (
+        {item.includes('#') ? (
           <div className={styles.colorBox} style={{backgroundColor: item}} />
+        ) : (
+          item
         )}
       </div>
     );
