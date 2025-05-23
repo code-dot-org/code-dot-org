@@ -23,10 +23,10 @@ class AichatRequestsController < ApplicationController
   # aichatModelCustomizations: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
   # aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
   def start_chat_completion
-    return render status: :forbidden, json: {user_type: current_user.user_type} unless can_access_chat_completion?(params[:aichatContext][:currentLevelId])
     unless chat_completion_has_required_params?
       return render status: :bad_request, json: {}
     end
+    return render status: :forbidden, json: {user_type: current_user.user_type} unless can_access_chat_completion?(params[:aichatContext][:currentLevelId])
 
     return head :too_many_requests if should_throttle_request_count?
 
@@ -99,7 +99,7 @@ class AichatRequestsController < ApplicationController
       end
     end
 
-    return false unless AichatSagemakerHelper.can_request_aichat_chat_completion? && current_user&.has_aichat_access?
+    return AichatSagemakerHelper.can_request_aichat_chat_completion? && current_user.has_aichat_access?
   end
 
   private def should_throttle_request_count?
