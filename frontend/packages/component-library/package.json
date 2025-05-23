@@ -197,6 +197,14 @@
       "import": "./dist/esm/cms/tabGroup/index.mjs",
       "require": "./dist/cjs/cms/tabGroup/index.js"
     },
+    "./cms/testimonial": {
+      "types": {
+        "import": "./dist/esm/cms/testimonial/index.d.ts",
+        "require": "./dist/cjs/cms/testimonial/index.d.ts"
+      },
+      "import": "./dist/esm/cms/testimonial/index.mjs",
+      "require": "./dist/cjs/cms/testimonial/index.js"
+    },
     "./common/constants": {
       "types": {
         "import": "./dist/esm/common/constants/index.d.ts",
