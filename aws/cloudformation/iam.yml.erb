@@ -1221,15 +1221,15 @@ roles.each do |name, config| %>
                   - application-autoscaling:RegisterScalableTarget
                   - application-autoscaling:PutScalingPolicy
                   - application-autoscaling:DescribeScalingPolicies
-                  - application-autoscaling:DeregisterScalableTarget
                   - application-autoscaling:DeleteScalingPolicy
                 Resource: '*'
                 Condition:
                   StringLike:
-                    application-autoscaling:ResourceId: "service/*/marketing-sites-<%=environment_type%>-*"
+                    application-autoscaling:ResourceId: "service/*/*-<%=environment_type%>-*"
               - Effect: Allow
                 Action:
                   - application-autoscaling:DescribeScalableTargets
+                  - application-autoscaling:DeregisterScalableTarget
                 Resource: '*'
 <% end %>
 
