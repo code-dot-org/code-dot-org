@@ -63,6 +63,14 @@ jobs:
       - name: Build
         run: yarn build --filter @code-dot-org/marketing
 
+      - name: Clean up build artifacts
+        run: |
+          # Node modules not needed for docker build (docker will install them)
+          df -h
+          rm -rf node_modules
+          du -sh *
+          df -h
+
       - name: Build Docker image
         id: build-docker-image
         uses: docker/build-push-action@v6.10.0
