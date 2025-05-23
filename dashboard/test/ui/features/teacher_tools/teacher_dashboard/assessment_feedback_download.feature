@@ -47,8 +47,6 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
     And I press the first "#uitest-save-section-changes" element
 
     # Assessments tab
-    And I save the section id from row 0 of the section table
-    Then I navigate to teacher dashboard for the section I saved
     And I wait until element "#ui-test-teacher-sidebar a:contains(Assessments)" is visible
     And I click selector "#ui-test-teacher-sidebar a:contains(Assessments)" once I see it
     Then I wait until element "div:contains(It looks like there are no multi-question assessments or surveys in this course)" is visible
