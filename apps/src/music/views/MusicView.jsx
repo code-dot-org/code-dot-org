@@ -661,7 +661,7 @@ class UnconnectedMusicView extends React.Component {
         !this.props.isPlaying &&
         e.newElementId !== this.props.selectedBlockId
       ) {
-        // this.props.selectBlockId(e.newElementId);
+        this.props.selectBlockId(e.newElementId);
       }
     }
 

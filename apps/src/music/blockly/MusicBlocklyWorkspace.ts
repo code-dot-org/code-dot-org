@@ -649,7 +649,7 @@ export default class MusicBlocklyWorkspace {
     (this.workspace as GoogleBlockly.WorkspaceSvg)
       .getAllBlocks()
       .forEach(block => {
-        block.id === blockId ? block.select() : block.unselect();
+        block.id === blockId ? block.addSelect() : block.removeSelect();
       });
   }
 
