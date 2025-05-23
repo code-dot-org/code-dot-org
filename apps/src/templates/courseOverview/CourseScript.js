@@ -15,6 +15,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import color from '@cdo/apps/util/color';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import MultipleAssignButton from '../MultipleAssignButton';
@@ -79,6 +80,7 @@ class CourseScript extends Component {
   render() {
     const {
       title,
+      name,
       id,
       path,
       description,
@@ -117,9 +119,14 @@ class CourseScript extends Component {
       selectedSection.unitId === id;
     const isAssigned = assignedToStudent || assignedByTeacher;
 
-    let unitPath = location.pathname.includes('/teacher_dashboard')
-      ? `/teacher_dashboard/sections/${selectedSectionId}${path}`
-      : `${path}${location.search}`;
+    let unitPath = `${path}${location.search}`;
+    if (location.pathname.includes('/teacher_dashboard')) {
+      if (experiments.isEnabled(experiments.MODULARITY)) {
+        unitPath = `/teacher_dashboard/sections/${selectedSectionId}${path}`;
+      } else {
+        unitPath = `/teacher_dashboard/sections/${selectedSectionId}/unit/${name}`;
+      }
+    }
     return (
       <div
         style={{

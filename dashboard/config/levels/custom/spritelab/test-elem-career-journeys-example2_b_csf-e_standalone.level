@@ -62,14 +62,14 @@
     "skip_autosave": true,
     "standalone_app_name": "spritelab",
     "enable_big_playspace": "false",
-    "display_name": "AI in Agriculture",
-    "bubble_choice_description": "<i class=\"fa-solid fa-laptop-code\"></i> **A project that explores:**\r\n- AI in Agriculture",
+    "display_name": "AI in Farming",
+    "bubble_choice_description": "<i class=\"fa-solid fa-seedling\"></i> **Base Level Project**\n- Two sprites\n- One background\n- `When Clicked` events trigger `Sprite Says`\n- Background text",
     "thumbnail_url": "https://images.code.org/1b5d3f8d9a94e65e5467015d04c2f717-agricultre.jpg",
     "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-05-21T13:29:43.217+00:00\",\"changed\":[\"cloned from \\\"test-elem-career-journeys-example2_b_csf-e\\\"\"],\"cloned_from\":\"test-elem-career-journeys-example2_b_csf-e\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-05-21T13:29:43.217+00:00\",\"changed\":[\"cloned from \\\"test-elem-career-journeys-example2_b_csf-e\\\"\"],\"cloned_from\":\"test-elem-career-journeys-example2_b_csf-e\"},{\"changed_at\":\"2025-05-22 15:28:51 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-22 15:36:17 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-22 15:39:54 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

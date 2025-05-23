@@ -45,11 +45,10 @@ div.heroBannerAnnouncementBanner {
   margin: 0 auto;
   align-items: center;
   gap: 4.375rem;
-  padding: 4rem 0;
+  padding: 4rem 2rem;
 
   @media (max-width: $mobileBreakpoint) {
     flex-direction: column;
-    padding-inline: 1.5rem;
     gap: 2rem;
 
     .heroBannerMediaContainer figure {
@@ -98,5 +97,11 @@ div.heroBannerAnnouncementBanner {
 
   .heroBannerMediaImage img {
     object-fit: contain;
+  }
+
+  @media (max-width: $mobileBreakpoint) {
+    .hideImageOnSmallScreen {
+      display: none;
+    }
   }
 }

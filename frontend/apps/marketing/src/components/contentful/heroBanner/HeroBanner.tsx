@@ -49,6 +49,8 @@ type HeroBannerProps = {
   announcementBannerText?: string;
   /** HeroBanner announcement banner link  entry*/
   announcementBannerLink?: LinkEntry[];
+  /** Hide image on small screens */
+  hideImageOnSmallScreen?: boolean;
 };
 
 const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
@@ -56,6 +58,7 @@ const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
   contentMode,
   imageSize,
   announcementBannerIconName,
+  hideImageOnSmallScreen,
   // Content Props
   heading,
   subHeading,
@@ -113,6 +116,7 @@ const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
             }
           : undefined
       }
+      hideImageOnSmallScreen={hideImageOnSmallScreen}
       buttonProps={
         firstButtonLink
           ? {

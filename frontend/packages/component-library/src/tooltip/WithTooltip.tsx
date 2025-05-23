@@ -13,6 +13,7 @@ import {
 import {createPortal} from 'react-dom';
 
 import {updatePositionedElementStyles} from '@/common/helpers';
+import {ComponentPlacementDirection} from '@/common/types';
 
 import Tooltip, {TooltipOverlay, TooltipProps} from './_Tooltip';
 
@@ -39,9 +40,14 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
   ({children, tooltipOverlayClassName, tooltipProps}, ref) => {
     const [nodePosition, setNodePosition] = useState<HTMLElement | null>(null);
     const [showTooltip, setShowTooltip] = useState<boolean>(false);
+    const [actualDirection, setActualDirection] =
+      useState<ComponentPlacementDirection>(tooltipProps.direction || 'onTop');
     const [tooltipStyles, setTooltipStyles] = useState<React.CSSProperties>({});
     const tooltipRef = useRef<HTMLDivElement | null>(null);
     const hideTimeoutRef = useRef<number | null>(null);
+    const prevDirectionRef = useRef<ComponentPlacementDirection | undefined>(
+      tooltipProps.direction,
+    );
     const suppressNextFocusRef = useRef(false);
 
     const clearHideTimeout = () => {
@@ -93,12 +99,13 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
         updatePositionedElementStyles({
           nodePosition,
           positionedElementRef: tooltipRef,
-          direction: tooltipProps.direction,
+          direction: actualDirection,
           setPositionedElementStyles: setTooltipStyles,
+          setPositionedElementDirection: setActualDirection,
           tailOffset,
           tailLength,
         }),
-      [nodePosition, tailLength, tooltipProps.direction],
+      [nodePosition, tailLength, actualDirection],
     );
 
     // Effect to update tooltip styles when the tooltip is shown
@@ -115,13 +122,19 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
       return () => {
         window.removeEventListener('resize', updateTooltipPositionIfShown);
       };
-    }, [
-      showTooltip,
-      nodePosition,
-      tooltipProps.direction,
-      tailLength,
-      updateTooltipStyles,
-    ]);
+    }, [showTooltip, nodePosition, actualDirection, updateTooltipStyles]);
+
+    // Detect external updates to tooltipProps.direction and handle them
+    useEffect(() => {
+      if (
+        tooltipProps.direction &&
+        tooltipProps.direction !== prevDirectionRef.current
+      ) {
+        prevDirectionRef.current = tooltipProps.direction;
+        setActualDirection(tooltipProps.direction);
+        updateTooltipStyles(); // also reposition with new base direction
+      }
+    }, [tooltipProps.direction]);
 
     // Effect to handle the Escape key to close the tooltip
     useEffect(() => {
@@ -141,6 +154,7 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
     const tooltipStyleProps: React.CSSProperties = {
       visibility: showTooltip ? 'visible' : 'hidden',
       ...tooltipStyles,
+      ...tooltipProps.style,
     };
 
     // Check if children prop is a valid React element and clone it with ariaDescribedBy attribute
@@ -174,6 +188,7 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
           createPortal(
             <Tooltip
               {...tooltipProps}
+              direction={actualDirection}
               ref={tooltipRef}
               style={tooltipStyleProps}
               onMouseEnter={event => handleShowTooltip(true, event, true)}

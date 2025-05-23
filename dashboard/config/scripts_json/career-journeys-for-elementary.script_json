@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-21 21:08:45 UTC",
+    "serialized_at": "2025-05-22 15:45:12 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -47,7 +47,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "This lesson introduces students to the wide range of careers that involve computer science and artificial intelligence. Through interactive videos and guided exploration, students learn about real-world jobs that use CS. They are then guided step by step to build their own coding projects using Sprite Lab to present an interactive scene that relates to a career or subject they may be interested in. The lesson wraps up with students reflecting on what they’ve learned and how it connects to their future goals."
+        "overview": "In this lesson, students explore careers that use computer science and AI, then create a meaningful, interest-driven project in Sprite Lab that shows how technology is used in a job they care about. The content is designed to support all students, whether they’re new to coding or have prior experience by offering flexible pacing. New coders may benefit from spreading the lesson across multiple sessions, while students familiar with Sprite Lab can complete it in a single class period."
       },
       "seeding_key": {
         "lesson.key": "Mini-Project: Career Journeys ",
@@ -102,8 +102,25 @@
   ],
   "activity_sections": [
     {
-      "key": "d6467f38-afd6-4ec5-94df-0173aa1dd2c6",
+      "key": "9c79a1d9-a2ad-4fa9-8689-a4e0ec7dca35",
       "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-square-check\"></i> **Do This:** Introduce the objectives of this lesson. \n\n<i class=\"fa-solid fa-square-check\"></i> **Do This:** Introduce each term as a preview of what students will learn in this lesson.",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "It might be helpful to expand on this definition of career to capture the idea that:\n- A career is not just any job—it’s something you grow into.\n- It involves learning, trying, and practicing over time.\n- It connects well with school and their current experiences (e.g., “You’re already building skills now!”).\n- \"Like learning how to code now could help you become a game designer later!\"\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9c79a1d9-a2ad-4fa9-8689-a4e0ec7dca35",
+        "lesson_activity.key": "fa778bf5-53f8-4934-8b2a-7832c764cc52"
+      }
+    },
+    {
+      "key": "d6467f38-afd6-4ec5-94df-0173aa1dd2c6",
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa-solid fa-video\"></i> **Video:** Show the short video, CS is Everything\n\n<i class=\"fa-solid fa-microphone-stand\"></i> **Say**:  Today, we're going to explore how computer science and AI are part of many different careers.  As you watch this video, think about the different jobs you see and how they might use technology.",
         "progression_name": "Intro Video"
@@ -115,9 +132,9 @@
     },
     {
       "key": "f50353c5-ef58-41a8-b149-77ab4f9dff73",
-      "position": 2,
+      "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-microphone-stand\"></i> **Say:** Now, let’s discuss! Think silently for a moment, then turn to a partner and answer one of the questions on the slide:\n- What did you like about this video?\n- What jobs use computer science (CS) or artificial intelligence (AI)?\n\n\n<i class=\"fa-solid fa-rotate\"></i> **Circulate:**  Listen to student discussions and encourage deeper thinking.\n\n<i class=\"fa-solid fa-lightbulb\"></i> **Discussion Goal:**  Encourage students to think about how CS and AI are integrated into various careers. Highlight the diversity of careers that utilize CS skills.\n"
+        "description": "<i class=\"fa-solid fa-microphone-stand\"></i> **Say:** Now, let’s discuss! Think silently for a moment, then turn to a partner and answer one of the questions on the slide:\n- What did you like about this video?\n- What jobs use computer science (CS) or artificial intelligence (AI)?\n\n<i class=\"fa-solid fa-rotate\"></i> **Circulate:**  Listen to student discussions and encourage deeper thinking.\n\n<i class=\"fa-solid fa-lightbulb\"></i> **Discussion Goal:**  Encourage students to think about how CS and AI are integrated into various careers. Highlight the diversity of careers that utilize CS skills.\n"
       },
       "seeding_key": {
         "activity_section.key": "f50353c5-ef58-41a8-b149-77ab4f9dff73",
@@ -129,7 +146,13 @@
       "position": 1,
       "properties": {
         "name": "Part 1: Career Exploration (5-20 minutes)",
-        "progression_name": "Career Exploration"
+        "progression_name": "Career Exploration",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**To do this lesson in one day:** Have students choose 1-2 careers to explore and reflect on in their Activity Guide. Provide a 5 minute timer to keep pacing tight. \n\n**To extend this lesson more than one day:** Provide more time to explore the images and videos. Encourage curiosity and peer discussion. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5506e20d-7788-4bcf-a6e4-23f5342b466b",
@@ -137,8 +160,18 @@
       }
     },
     {
-      "key": "9f0cad86-f012-4d15-8188-d71ab1020736",
+      "key": "689adc7e-54f3-4cbe-aaf3-22810e2115de",
       "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "689adc7e-54f3-4cbe-aaf3-22810e2115de",
+        "lesson_activity.key": "d790e748-0a6e-44bd-9c22-ff214ed4ef36"
+      }
+    },
+    {
+      "key": "9f0cad86-f012-4d15-8188-d71ab1020736",
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa-solid fa-laptop-binary\"></i> **Transition:** Explore careers that use CS and AI.\n\n<i class=\"fa-solid fa-square-check\"></i> **Do This:** Distribute a printed activity guide to each student.\n\n<i class=\"fa-solid fa-microphone-stand\"></i> **Say:**  Now, you'll have some time to explore different careers that use computer science and AI. Use your activity guide to keep track of what you find interesting. Think about what these jobs involve and how they might connect to your own interests.\n\n\n<i class=\"fa-solid fa-rotate\"></i> **Circulate:** Encourage students to consider how their interests align with the careers explored.\n",
         "tips": [
@@ -155,7 +188,7 @@
     },
     {
       "key": "e6d6a495-083d-496e-8438-37ec343e78f9",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa-solid fa-laptop-binary\"></i> **Transition:** Prepare students to code their own projects. \n\n<i class=\"fa-solid fa-microphone-stand\"></i> **Say:** Based on what you've explored, next you will code a simple interactive scene in Sprite Lab. Let's review Sprite Lab and then look at some example projects for inspiration. \n\n<i class=\"fa-solid fa-square-check\"></i> **Do This:** Preview or review Sprite Lab to the extent that supports your students using the resources on slides 13 - 16. \n\n<i class=\"fa-solid fa-microphone-stand\"></i> **Say:** Explore the project examples in level 3 to get some ideas about how you’d like to design your own!\n\n<i class=\"fa-solid fa-square-check\"></i> **Do This:** Set a timer to support students with pacing. \n\n<i class=\"fa-solid fa-laptop-binary\"></i> **Transition:** Have all students move on to level 4 and the Plan your Project section in their Activity Guide",
         "name": "Part 2: Plan your Project (10-15 minutes)",
@@ -163,7 +196,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**To do this lesson in one day:** Explore the projects as a class to keep the pacing tight. Point out the parts required for their small projects (1-2 sprites, a background, one When Clicked event that makes a sprite say something about CS or AI in the career).\n\n**To extend this lesson more than one day:** This may be a good place to break the lesson into two sessions. Allow students more time to explore the example projects if they finish their plan early. "
+            "markdown": "**To do this lesson in one day:** Explore the projects as a class to keep the pacing tight. Point out the parts required for their small projects: One or two sprites, a background, one When Clicked event that makes a sprite say something simple about CS or AI in the career.\n\n**To extend this lesson more than one day:** The end of Part 2: Planning may be a good place to break the lesson into two sessions. Allow students more time to explore the example projects if they finish their plan early. "
           }
         ]
       },
@@ -174,7 +207,7 @@
     },
     {
       "key": "d7add8fc-4466-46c3-abf8-82b3965d6112",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa-solid fa-microphone-stand\"></i> **Say:** Now, you're going to start building your project in Sprite Lab. As you move through each level, your code will carry over, and the instructions will guide you step by step. By the end, you'll have an interactive scene that shows how a career you're interested in uses computer science or AI.",
         "name": "Part 3: Code your Project (15-60 minutes)",
@@ -187,13 +220,13 @@
     },
     {
       "key": "b0b248d5-5610-4d85-ab8d-756b781b1e02",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa-solid fa-rotate\"></i> **Circulate:**Encourage students to follow the plan they wrote in their Activity Guide to complete each level. ",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**To do this lesson in one day:** Levels 5-7 explain the essential steps to create a quick and simple project. \n\n**To extend this lesson more than one day:** Level 8 has choices for students to expand their Sprite Lab skills. They are great extension ideas for those who are ready for a challenge and more coding! "
+            "markdown": "**Differentiation:** Students can choose how simple or complex to make their project. A strong base level project includes one background, at least two sprites, and one event where a sprite explains how CS or AI is used in the career. Those ready for more can expand their work with multiple scenes, custom sprites, additional events, and interactive dialogue to more fully explore the career they’re interested in.\n\n**To do this lesson in one day:** Levels 5-7 explain the essential steps to create a quick and simple project. You may choose to end the project at level 7 or allow early finishers to explore level 8.\n\n**To extend this lesson more than one day:** Level 8 has choices for students to expand their Sprite Lab skills. They are great extension ideas for those who are ready for a challenge and more coding! "
           }
         ]
       },
@@ -255,6 +288,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-video_b_csf-e_standalone"
+        ],
         "progression": "Intro Video"
       },
       "bonus": false,
@@ -277,7 +313,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Career Exploration"
       },
       "bonus": false,
       "seeding_key": {
@@ -287,7 +322,7 @@
         "lesson.key": "Mini-Project: Career Journeys ",
         "lesson_group.key": "",
         "script.name": "career-journeys-for-elementary",
-        "activity_section.key": "5506e20d-7788-4bcf-a6e4-23f5342b466b"
+        "activity_section.key": "689adc7e-54f3-4cbe-aaf3-22810e2115de"
       },
       "level_keys": [
         "testB-elem-career-journeys-explore-videos_b_csf-e_standalone"
@@ -299,6 +334,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-explore-projects_b_csf-e_standalone"
+        ],
         "progression": "Inspiration & Planning"
       },
       "bonus": false,
@@ -321,6 +359,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-plan_b_csf-e_standalone"
+        ],
         "progression": "Inspiration & Planning"
       },
       "bonus": false,
@@ -343,6 +384,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-sprite-location_b_csf-e_standalone"
+        ],
         "progression": "Project Steps"
       },
       "bonus": false,
@@ -365,6 +409,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-backgrounds_b_csf-e_standalone"
+        ],
         "progression": "Project Steps"
       },
       "bonus": false,
@@ -387,6 +434,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-event-say_b_csf-e_standalone"
+        ],
         "progression": "Project Steps"
       },
       "bonus": false,
@@ -409,6 +459,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-extra-skills_b_csf-e_standalone"
+        ],
         "progression": "Project Steps"
       },
       "bonus": false,
@@ -431,6 +484,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-share_b_csf-e_standalone"
+        ],
         "progression": "Share Out"
       },
       "bonus": false,
@@ -445,6 +501,69 @@
       },
       "level_keys": [
         "testB-elem-career-journeys-share_b_csf-e_standalone"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-elem-career-journeys-example4_b_csf-e_standalone"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary",
+        "activity_section.key": "aade35e7-acd2-46a3-8d2c-de1492febc9e"
+      },
+      "level_keys": [
+        "test-elem-career-journeys-example4_b_csf-e_standalone"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-elem-career-journeys-example5_b_csf-e_standalone"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary",
+        "activity_section.key": "aade35e7-acd2-46a3-8d2c-de1492febc9e"
+      },
+      "level_keys": [
+        "test-elem-career-journeys-example5_b_csf-e_standalone"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-elem-career-journeys-example6_b_csf-e_standalone"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary",
+        "activity_section.key": "aade35e7-acd2-46a3-8d2c-de1492febc9e"
+      },
+      "level_keys": [
+        "test-elem-career-journeys-example6_b_csf-e_standalone"
       ]
     }
   ],
@@ -470,7 +589,7 @@
         "lesson.key": "Mini-Project: Career Journeys ",
         "lesson_group.key": "",
         "script.name": "career-journeys-for-elementary",
-        "activity_section.key": "5506e20d-7788-4bcf-a6e4-23f5342b466b"
+        "activity_section.key": "689adc7e-54f3-4cbe-aaf3-22810e2115de"
       }
     },
     {
@@ -555,6 +674,42 @@
         "lesson_group.key": "",
         "script.name": "career-journeys-for-elementary",
         "activity_section.key": "0600bbc4-712b-4b5c-b18f-6409b07b7620"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-elem-career-journeys-example4_b_csf-e_standalone",
+        "script_level.level_keys": [
+          "test-elem-career-journeys-example4_b_csf-e_standalone"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary",
+        "activity_section.key": "aade35e7-acd2-46a3-8d2c-de1492febc9e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-elem-career-journeys-example5_b_csf-e_standalone",
+        "script_level.level_keys": [
+          "test-elem-career-journeys-example5_b_csf-e_standalone"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary",
+        "activity_section.key": "aade35e7-acd2-46a3-8d2c-de1492febc9e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-elem-career-journeys-example6_b_csf-e_standalone",
+        "script_level.level_keys": [
+          "test-elem-career-journeys-example6_b_csf-e_standalone"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "",
+        "script.name": "career-journeys-for-elementary",
+        "activity_section.key": "aade35e7-acd2-46a3-8d2c-de1492febc9e"
       }
     }
   ],
