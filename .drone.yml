@@ -208,9 +208,6 @@ steps:
   # `cache-staging-build-artifacts` pipeline.
   - name: get-cached-staging-rbenv
     image: plugins/s3-cache
-    volumes:
-      - name: rbenv
-        path: /drone/src/home/ci/.rbenv
     settings:
       filename: cache-staging-rbenv.tar.gz
       endpoint: s3://cdo-drone
@@ -232,9 +229,6 @@ steps:
     # TODO: switch to codedotorg/cdo-ci
     image: codedotorg/code-dot-org:1.15
     pull: always
-    volumes:
-      - name: rbenv
-        path: /home/ci/.rbenv
     environment:
       # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/ui_tests.sh
       CLOUDFRONT_KEY_PAIR_ID:
@@ -250,6 +244,8 @@ steps:
     shm_size: '2gb' # necessary to avoid "invalid session id"/"session deleted because of page crash" errors in Selenium
     commands:
       - sudo chown -R ci:ci .
+      # cache is restored to source directory, so we need to copy it into the right place
+      - cp -rn "$(pwd)/home/ci/.rbenv" /home/ci || true
       # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
       - export GIT_COMMIT=$DRONE_COMMIT
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
@@ -259,10 +255,6 @@ steps:
       - /entrypoint.sh docker/ci/scripts/ui_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
       - exit $EXIT_CODE
-
-volumes:
-  - name: rbenv
-    temp: {}
 
 trigger:
   branch:
