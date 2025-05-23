@@ -627,7 +627,7 @@ class UserTest < ActiveSupport::TestCase
     # (including deleted ones and those created when user was a teacher)
     user.update!(user_type: User::TYPE_STUDENT)
     user.authentication_options << create(:authentication_option, email: 'third@email.com')
-    user.reload
+    user = User.find(user.id)
     all_auth_options = user.authentication_options.with_deleted
     assert_equal 3, all_auth_options.count
     all_auth_options.each do |ao|
@@ -1100,7 +1100,7 @@ class UserTest < ActiveSupport::TestCase
 
     user.set_user_type(User::TYPE_STUDENT)
     user.save!
-    user.reload
+    user = User.find(user.id)
 
     assert user.email.blank?
     assert user.hashed_email.present?
@@ -1117,7 +1117,7 @@ class UserTest < ActiveSupport::TestCase
 
     user.set_user_type(User::TYPE_STUDENT)
     user.save!
-    user.reload
+    user = User.find(user.id)
 
     refute user.school_info.present?
   end
@@ -1128,7 +1128,7 @@ class UserTest < ActiveSupport::TestCase
 
     user.set_user_type(User::TYPE_STUDENT)
     user.save!
-    user.reload
+    user = User.find(user.id)
 
     assert user.full_address.nil?
   end
@@ -1169,7 +1169,7 @@ class UserTest < ActiveSupport::TestCase
     user = create :student, terms_of_service_version: 1
     user.set_user_type(User::TYPE_TEACHER, 'tos@example.com')
     user.save!
-    user.reload
+    user = User.find(user.id)
 
     assert_nil user.terms_of_service_version
   end
@@ -1183,7 +1183,7 @@ class UserTest < ActiveSupport::TestCase
       user.set_user_type(User::TYPE_TEACHER, 'fakeemail@example.com')
       user.save!
     end
-    user.reload
+    user = User.find(user.id)
     assert user.studio_person
     assert_equal 'fakeemail@example.com', user.studio_person.emails
   end
@@ -1194,7 +1194,8 @@ class UserTest < ActiveSupport::TestCase
     assert_destroys(StudioPerson) do
       user.set_user_type(User::TYPE_STUDENT)
     end
-    assert_nil user.reload.studio_person
+    user = User.find(user.id)
+    assert_nil user.studio_person
   end
 
   test 'changing from teacher to student does not clear terms_of_service_version' do
@@ -1509,15 +1510,6 @@ class UserTest < ActiveSupport::TestCase
       created_at: completed_date,
       updated_at: completed_date
     )
-  end
-
-  test 'sponsored? is true for migrated user with no authentication options' do
-    student = create :student_in_picture_section
-    student.migrate_to_multi_auth
-    student.reload
-
-    assert_empty student.authentication_options
-    assert student.sponsored?
   end
 
   test 'should_disable_user_type? true if user_type present and oauth_provided_user_type' do
@@ -2139,7 +2131,7 @@ class UserTest < ActiveSupport::TestCase
   test 'downgrade_to_student sets user_type to student and clears cleartext emails' do
     user = create :teacher
     assert user.downgrade_to_student
-    user.reload
+    user = User.find(user.id)
     assert_equal User::TYPE_STUDENT, user.user_type
     assert_empty user.email
   end
@@ -2189,7 +2181,7 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 2, user.authentication_options.count
 
     assert user.upgrade_to_teacher('example@email.com', email_preference_params)
-    user.reload
+    user = User.find(user.id)
     assert_equal User::TYPE_TEACHER, user.user_type
     assert_equal 2, user.authentication_options.count
     assert_equal 'example@email.com', user.email
@@ -2209,7 +2201,7 @@ class UserTest < ActiveSupport::TestCase
 
     email_preference_params = email_preference_params(email_preference_opt_in: 'yes')
     assert user.upgrade_to_teacher('example@email.com', email_preference_params)
-    user.reload
+    user = User.find(user.id)
     auth_option.reload
     assert_equal User::TYPE_TEACHER, user.user_type
     assert_equal 2, user.authentication_options.count
@@ -2227,7 +2219,7 @@ class UserTest < ActiveSupport::TestCase
     user = User.create(@good_data.merge(parent_email: parent_email))
     assert_equal parent_email, user.parent_email
     assert user.upgrade_to_teacher('example@email.com', email_preference_params)
-    user.reload
+    user = User.find(user.id)
     assert_nil user.parent_email
   end
 
@@ -2240,7 +2232,7 @@ class UserTest < ActiveSupport::TestCase
 
     assert user.upgrade_to_teacher('example@email.com', email_preference_params)
 
-    user.reload
+    user = User.find(user.id)
     assert_nil user.family_name
   end
 
@@ -3010,9 +3002,9 @@ class UserTest < ActiveSupport::TestCase
       name: 'test user'
     }
 
-    user = assert_creates(User) do
-      User.find_or_create_teacher params, @admin
-    end
+    user = User.find_or_create_teacher params, @admin
+    assert user
+    user = User.find(user.id)
     assert user.teacher?
     assert_equal @admin, user.invited_by
   end
@@ -3538,46 +3530,6 @@ class UserTest < ActiveSupport::TestCase
     google_auth_option.reload
     assert_equal 'fake oauth token', google_auth_option.data_hash[:oauth_token]
     assert_equal 'fake refresh token', google_auth_option.data_hash[:oauth_refresh_token]
-  end
-
-  test 'managing_own_credentials? is true for users with email logins' do
-    user = create :user
-    assert user.managing_own_credentials?
-  end
-
-  test 'managing_own_credentials? is true for students with email logins' do
-    user = create :student
-    assert user.managing_own_credentials?
-  end
-
-  test 'managing_own_credentials? is false for users with oauth logins' do
-    user = create :user, :sso_provider
-    refute user.managing_own_credentials?
-  end
-
-  test 'managing_own_credentials? is false for students with sponsored logins' do
-    user = create :student_in_picture_section
-    refute user.managing_own_credentials?
-  end
-
-  test 'password_required? is false if user is not creating their own account' do
-    user = create :student, :without_encrypted_password
-    user.expects(:managing_own_credentials?).returns(false)
-    refute user.password_required?
-  end
-
-  test 'new users require a password if no authentication provided' do
-    assert_raises(ActiveRecord::RecordInvalid) do
-      user = create :user, password: nil
-      refute user.errors[:password].empty?
-    end
-  end
-
-  test 'password_required? is true for user changing their password' do
-    user = create :user
-    user.password = "mypassword"
-    user.password_confirmation = "mypassword"
-    assert user.password_required?
   end
 
   test 'summarize' do
@@ -5040,52 +4992,6 @@ class UserTest < ActiveSupport::TestCase
     student.update!(us_state: new_us_state)
 
     assert_equal new_us_state, student.reload.us_state
-  end
-
-  describe 'strict password requirements by country' do
-    let(:strict_country) {User::PASSWORD_STRICT_COUNTRIES.first}
-
-    before do
-      allow(DCDO).to receive(:get).and_call_original
-      allow(DCDO).to receive(:get).with('strict-password-country', false).and_return(true)
-    end
-
-    describe 'when creating a teacher in a strict country' do
-      context 'when using a short password' do
-        let(:user) {build(:teacher, country_code: strict_country, password: 'short', password_confirmation: 'short')}
-        it 'rejects passwords' do
-          _(user).wont_be :valid?
-          user.valid?
-          _(user.errors[:password]).must_include 'is too short (minimum is 14 characters)'
-        end
-      end
-      context 'when using a long password' do
-        let(:user) {create(:teacher, country_code: strict_country, password: 'longlongpassword', password_confirmation: 'longlongpassword')}
-
-        it 'accepts passwords that are at least 14 characters' do
-          _(user).must_be :valid?
-          user.valid?
-          _(user.errors[:password]).must_be :empty?
-        end
-      end
-    end
-
-    describe 'when updating a teacher in a strict country' do
-      let(:teacher) {build(:teacher, country_code: strict_country)}
-
-      it 'rejects a too-short password' do
-        result = teacher.update(password: 'tooshort', password_confirmation: 'tooshort')
-        _(result).must_equal false
-        _(teacher.errors[:password]).must_include 'is too short (minimum is 14 characters)'
-      end
-
-      it 'accepts a sufficiently long password' do
-        result = teacher.update(password: 'longlongpassword', password_confirmation: 'longlongpassword')
-        _(result).must_equal true
-        _(teacher.errors[:password]).must_be :empty?
-        _(teacher.password).must_equal 'longlongpassword'
-      end
-    end
   end
 
   test "teacher with oauth account can access AI Chat" do

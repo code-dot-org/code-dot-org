@@ -58,4 +58,31 @@ describe('LabSnapshot component', () => {
     expect(labSnapshot).toBeVisible();
     expect(labSnapshot).toHaveTextContent('Ages: 1');
   });
+
+  it('renders ages in ascending order', () => {
+    renderSnapshot({
+      ages: [
+        '15',
+        '16',
+        '17',
+        '18',
+        '5',
+        '6',
+        '7',
+        '8',
+        '9',
+        '10',
+        '11',
+        '12',
+        '13',
+        '14',
+      ],
+    });
+
+    const curriculumSnapshot = getSnapshot();
+
+    expect(curriculumSnapshot).toHaveTextContent(
+      'Ages: 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18',
+    );
+  });
 });

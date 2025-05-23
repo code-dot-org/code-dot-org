@@ -1,5 +1,5 @@
 {
-  "title": "{module}: POST-module survey",
+  "title": "{module}: Post-module survey",
   "pages": [
     {
       "name": "page1",
@@ -22,21 +22,153 @@
         {
           "type": "html",
           "name": "intro",
-          "html": "<h1>{module} Self-paced Online Professional Learning</h1><h3><strong>Pre-Module Survey</strong></h3>\n\n<p>Code.org relies on surveys as a crucial tool to stay connected to teachers, gather feedback about our curriculum and your teaching experience, and to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>{module} - Pre-Module Survey</h2>"
+          "html": "<h1>{module} Self-paced Online Professional Learning</h1><h3><strong>Post-Module Survey</strong></h3>\n\n<p>Code.org relies on surveys as a crucial tool to stay connected to teachers, gather feedback about our curriculum and your teaching experience, and to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>{module} - Post-Module Survey</h2>"
         },
         {
           "type": "html",
           "name": "section1_goals",
-          "html": "\n<p><span style='font-size: 12pt;'>The questions in this section aim to understand your goals for enagaging witn the {module} self-paced professional learning module.</span></p>\n"
+          "html": "\n<p><span style='font-size: 12pt;'>The questions in this section aim to understand your experience with the {module} self-paced professional learning module.</span></p>\n"
         },
         {
           "type": "library_item",
           "library_name": "surveys/pd/self_paced_pl_standards",
           "library_version": 0,
-          "name": "first_self_paced_pl"
+          "name": "better_understanding_concepts"
+        },
+        {
+          "type": "rating",
+          "name": "module_comfort_supporting_students_learn",
+          "title": "After completing this module, I am more comfortable in my ability to support students [INSERT LEARNING OBJECTIVES]",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Less confident",
+          "maxRateDescription": "Much more confident",
+          "natalia_comment": "EDIT TEXT TO INCLUDE THE LEARNING OBJECTIVE(S) OF THE CURRICULUM. E.g. I am more comfortable in my ability to support students in understanding computer vision concepts"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "know_what_students_learn",
+          "natalia_comment": "INCLUDE ONLY if module is about one CURRICULUM (instead of one unit, if so use know_what_students_learn_module instead)"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "know_what_students_learn_module",
+          "natalia_comment": "INCLUDE ONLY if module is about one UNIT (instead of one complete curriculum, if so use know_what_students_learn instead)"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "comfort_ability_to_teach"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "plan_ongoing_assessment",
+          "natalia_comment": "INCLUDE ONLY if applicable per curriculum content"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "familiar_student_programming_environments"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "confidence_use_skills"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "plan_to_teach",
+          "natalia_comment": "INCLUDE ONLY IF MODULE IS ABOUT CS CURRICULUM"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "plan_use_skills_learned",
+          "natalia_comment": "INCLUDE ONLY IF MODULE IS ABOUT TEACHING SKILLS"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "barriers_implementation_ai",
+          "natalia_comment": "INCLUDE ONLY IF MODULE IS ABOUT AI"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "barriers_implementation_teaching_cs",
+          "natalia_comment": "INCLUDE ONLY IF MODULE IS ABOUT CS CURRICULUM"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "module_supported_learning"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "module_navigation"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "how_long_to_complete_module"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "skills_content_relevant_role",
+          "natalia_comment": "INCLUDE ONLY IF MODULE IS ABOUT TEACHING SKILLS"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "nps_self_paced_pd"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "pl_to_support_growth_teacher_cs"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "self_paced_pl_other_feedback"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "permission_to_quote"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "focus_group_panel"
         }
       ]
     }
   ],
-  "published": false
+  "published": true
 }

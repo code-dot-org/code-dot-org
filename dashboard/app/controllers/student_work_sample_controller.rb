@@ -81,67 +81,22 @@ class StudentWorkSampleController < ApplicationController
       return render status: :not_found, json: "Unit with id #{unit_id}"
     end
 
-    if student_work_params[:include_ai_evaluations]
-      fetch_student_code_samples_with_evaluations(level, unit_id, num_samples)
-    else
-      fetch_student_code_samples_without_evaluations(level, unit_id, num_samples)
-    end
-  end
-
-  def fetch_student_code_samples_without_evaluations(level, unit_id, num_samples)
-    # We want to pull samples from students who have been assigned to work on the level.
-    sections = Section.where(script_id: unit_id)
-    student_ids = Follower.where(section: sections).pluck(:student_user_id)
+    # Find users who have worked on this level.
+    student_ids = UserLevel.where(level_id: level.id, script_id: unit_id).pluck(:user_id)
     code_samples = []
     have_enough_samples = false
     student_ids.shuffle.each do |student_id|
       unless have_enough_samples
         student_code = get_student_code(student_id, level, unit_id)
         if student_code[:student_code]
-          code_samples << {level_id: level.id, unit_id: unit_id, user_id: student_id, project_id: student_code[:project_id], student_code: student_code[:student_code]}
-        end
-        have_enough_samples = code_samples.length >= num_samples
-      end
-    end
-    render json: code_samples
-  end
-
-  def fetch_student_code_samples_with_evaluations(level, unit_id, num_samples)
-    user_level_evaluations = UserLevelEvaluation.where(level_id: level.id, unit_id: unit_id)
-    if user_level_evaluations.empty?
-      return render status: :not_found, json: "There are no evaluations for the level with id #{level.id} in unit with id #{unit_id}"
-    end
-    code_samples = []
-    have_enough_samples = false
-    user_level_evaluations.shuffle.each do |ule|
-      unless have_enough_samples || ule.code_version.nil?
-        student_code = get_student_code(ule.user_id, level, unit_id, ule.code_version)
-        if student_code && student_code[:student_code]
-          code_sample = {
+          code_samples << {
             level_id: level.id,
             unit_id: unit_id,
-            student_id: ule.student_id,
+            student_id: student_id,
             project_id: student_code[:project_id],
-            code_version: student_code[:code_version],
-            student_code: student_code[:student_code],
-            evaluation: ule.evaluation,
-            reasoning: ule.reasoning,
-            evaluation_criteria: ule.evaluation_criteria,
-          }
-          user_level_skill_evaluation_ids = StudentWorkEvaluationSummary.where(student_work_evaluation_summary_id: ule.id).pluck(:student_work_evaluation_id)
-          if user_level_skill_evaluation_ids.any?
-            user_level_skill_evaluations = UserLevelSkillEvaluation.where(id: user_level_skill_evaluation_ids)
-            # TODO: Use skill id instead of counter when we have Skills
-            counter = 1
-            user_level_skill_evaluations.each do |ulse|
-              code_sample["skill_evaluation_#{counter}"] = ulse.evaluation
-              code_sample["skill_evaluation_criteria_#{counter}"] = ulse.evaluation_criteria
-              code_sample["skill_evaluation_reasoning_#{counter}"] = ulse.reasoning
-              counter += 1
-            end
-          end
+            student_work: student_code[:student_code]
+          }.transform_keys {|key| key.to_s.camelize(:lower)}
         end
-        code_samples << code_sample
         have_enough_samples = code_samples.length >= num_samples
       end
     end
@@ -157,8 +112,7 @@ class StudentWorkSampleController < ApplicationController
     # For project-template-backed levels, we need to use the channel_token for the associated project template level.
     level_id_for_channel_token = level.project_template_level ? level.project_template_level.id : level.id
     channel_token = ChannelToken.where(storage_id: storage_id, level_id: level_id_for_channel_token, script_id: unit_id).last
-    user_level = UserLevel.where(user_id: user_id, level_id: level.id, script_id: unit_id).last
-    if user_level && channel_token
+    if channel_token
       storage_app_id = channel_token.storage_app_id
       channel_id = storage_encrypt_channel_id(storage_id, storage_app_id)
       s3_filename = "#{base_dir}/#{storage_id}/#{storage_app_id}/main.json"
@@ -184,7 +138,6 @@ class StudentWorkSampleController < ApplicationController
       :level_id,
       :unit_id,
       :num_samples,
-      :include_ai_evaluations,
     )
   end
 end

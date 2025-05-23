@@ -1,6 +1,7 @@
 name 'csaif_pl_wrap-up'
 title 'Check for Understanding'
-description 'Match the vocabulary term with the definition'
+description 'Match the vocabulary term with the definition. It is okay if you are not sure about some of the answers! Do your best and review any incorrect answers on the next level.'
+height'125'
 question 'Personally Identifiable Information'
 question 'Phishing'
 question 'Decryption'

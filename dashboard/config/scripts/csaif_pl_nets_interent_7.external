@@ -18,7 +18,11 @@ markdown <<MARKDOWN
 <br>
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>TCP/IP</strong> a protocol that ensures that all parts of a message are received and ordered correctly.</p>
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Transmission Control Protocol (TCP)</strong> a protocol that ensures that all parts of a message are received and ordered correctly.</p>
+</div>
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>User Datagram Protocol (UDP)</strong> is a protocol that focuses on speed and does not guarantee all packets arrive.</p>
 </div>
 
 <br>

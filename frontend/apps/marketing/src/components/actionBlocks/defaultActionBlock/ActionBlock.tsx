@@ -8,6 +8,8 @@ import {externalLinkIconProps} from '@/components/common/constants';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
+import {showNewTag} from '../helpers';
+
 export type ActionBlockContentfulProps = ActionBlockProps & {
   overline: EntryFields.Text;
   title: EntryFields.Text;
@@ -16,9 +18,11 @@ export type ActionBlockContentfulProps = ActionBlockProps & {
   primaryButton: LinkEntry;
   secondaryButton: LinkEntry;
   background: EntryFields.Text;
+  publishedDate?: EntryFields.Date;
 };
 
 const ActionBlock: React.FC<ActionBlockContentfulProps> = ({
+  className,
   overline,
   title,
   description,
@@ -26,8 +30,10 @@ const ActionBlock: React.FC<ActionBlockContentfulProps> = ({
   primaryButton,
   secondaryButton,
   background,
+  publishedDate,
 }) => (
   <DSCOActionBlock
+    className={className}
     overline={overline}
     title={title}
     description={description}
@@ -57,6 +63,7 @@ const ActionBlock: React.FC<ActionBlockContentfulProps> = ({
         : undefined
     }
     background={background}
+    tag={publishedDate && showNewTag(publishedDate) ? 'New' : undefined}
   />
 );
 

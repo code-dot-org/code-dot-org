@@ -1,0 +1,2336 @@
+{
+  "script": {
+    "name": "self-paced-pl-teaching-physical-computing-1-2025",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "self_paced_pl_6_8",
+      "curriculum_umbrella": "Self-paced PL - CSD",
+      "has_unnumbered_lessons": true,
+      "is_migrated": true,
+      "tts": true,
+      "version_year": "2025"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-05-16 20:29:10 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-teaching-physical-computing-1-2025"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Introduction to Creating Apps with Devices ",
+      "name": "Introduction to Creating Apps with Devices ",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**You will:**\n\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground.\n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground.\n\n**Suggested time:** 20 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025"
+      }
+    },
+    {
+      "key": "Experiment with Inputs and Outputs",
+      "name": "Experiment with Inputs and Outputs",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**You will:**\n\n* Use board inputs such as buttons and toggle switches to control app events and board outputs. \n* Program apps to control board outputs such as the buzzer and LED lights. \n\n**Suggested time:** 35 minutes",
+        "student_overview": "**You will:**\n\n* Use board inputs such as buttons and toggle switches to control app events and board outputs. \n* Program apps to control board outputs such as the buzzer and LED lights. \n\n**Suggested time:** 35 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025"
+      }
+    },
+    {
+      "key": "Engage with Prototypes",
+      "name": "Engage with Prototypes",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**You will:**\n\n* Explore sample apps and prototypes. \n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Explore sample apps and prototypes. \n\n**Suggested time:** 20 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025"
+      }
+    },
+    {
+      "key": "Teaching Creating Apps with Devices ",
+      "name": "Teaching Creating Apps with Devices ",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+        "overview": "**You will:**\n\n* Consider the role of the teacher in a computer science classroom.\n* Learn about authentic CS practices that students will develop throughout the Creating Apps for Devices unit.\n* Reflect on how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.\n\n**Suggested Time:** 25 minutes",
+        "student_overview": "**You will:**\n\n* Consider the role of the teacher in a computer science classroom.\n* Learn about authentic CS practices that students will develop throughout the Creating Apps for Devices unit.\n* Reflect on how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.\n\n**Suggested Time:** 25 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "eef28f65-7005-445c-af22-450267587f47",
+      "position": 1,
+      "properties": {
+        "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eef28f65-7005-445c-af22-450267587f47",
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025"
+      }
+    },
+    {
+      "key": "170026e0-0dbf-4e57-b436-32b2069e63d2",
+      "position": 1,
+      "properties": {
+        "duration": 35
+      },
+      "seeding_key": {
+        "lesson_activity.key": "170026e0-0dbf-4e57-b436-32b2069e63d2",
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025"
+      }
+    },
+    {
+      "key": "b6f05598-d263-4f01-b263-e62a9d32ed78",
+      "position": 1,
+      "properties": {
+        "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b6f05598-d263-4f01-b263-e62a9d32ed78",
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025"
+      }
+    },
+    {
+      "key": "86242157-848e-4133-b721-31b0ce17ef7d",
+      "position": 1,
+      "properties": {
+        "duration": 25
+      },
+      "seeding_key": {
+        "lesson_activity.key": "86242157-848e-4133-b721-31b0ce17ef7d",
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "55b3b840-1418-4e69-bb21-296862e6d6ce",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to Professional Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "55b3b840-1418-4e69-bb21-296862e6d6ce",
+        "lesson_activity.key": "eef28f65-7005-445c-af22-450267587f47"
+      }
+    },
+    {
+      "key": "7ae30acf-7430-4613-ae70-8c1528105ba7",
+      "position": 2,
+      "properties": {
+        "progression_name": "Unit Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ae30acf-7430-4613-ae70-8c1528105ba7",
+        "lesson_activity.key": "eef28f65-7005-445c-af22-450267587f47"
+      }
+    },
+    {
+      "key": "874af229-76f4-4888-9736-b6389a11291c",
+      "position": 3,
+      "properties": {
+        "progression_name": "Connect your Circuit Playground"
+      },
+      "seeding_key": {
+        "activity_section.key": "874af229-76f4-4888-9736-b6389a11291c",
+        "lesson_activity.key": "eef28f65-7005-445c-af22-450267587f47"
+      }
+    },
+    {
+      "key": "0bfb99f1-ab99-4b15-a927-9a314155090e",
+      "position": 4,
+      "properties": {
+        "progression_name": "Introduction to the Problem Solving Process"
+      },
+      "seeding_key": {
+        "activity_section.key": "0bfb99f1-ab99-4b15-a927-9a314155090e",
+        "lesson_activity.key": "eef28f65-7005-445c-af22-450267587f47"
+      }
+    },
+    {
+      "key": "c3014536-621c-4501-91e9-8da84ac9bf1c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "c3014536-621c-4501-91e9-8da84ac9bf1c",
+        "lesson_activity.key": "170026e0-0dbf-4e57-b436-32b2069e63d2"
+      }
+    },
+    {
+      "key": "a97055ac-7691-4642-9cf0-9d9eedcad800",
+      "position": 2,
+      "properties": {
+        "progression_name": "Introduction to Inputs and Outputs"
+      },
+      "seeding_key": {
+        "activity_section.key": "a97055ac-7691-4642-9cf0-9d9eedcad800",
+        "lesson_activity.key": "170026e0-0dbf-4e57-b436-32b2069e63d2"
+      }
+    },
+    {
+      "key": "2dfc44bf-f230-4c7a-96a7-343c1fc8386a",
+      "position": 3,
+      "properties": {
+        "progression_name": "Add Complexity to Your App"
+      },
+      "seeding_key": {
+        "activity_section.key": "2dfc44bf-f230-4c7a-96a7-343c1fc8386a",
+        "lesson_activity.key": "170026e0-0dbf-4e57-b436-32b2069e63d2"
+      }
+    },
+    {
+      "key": "18f911f0-9e42-4e89-b5df-0d1b7b06abb5",
+      "position": 4,
+      "properties": {
+        "progression_name": "Practice Using the Problem Solving Process"
+      },
+      "seeding_key": {
+        "activity_section.key": "18f911f0-9e42-4e89-b5df-0d1b7b06abb5",
+        "lesson_activity.key": "170026e0-0dbf-4e57-b436-32b2069e63d2"
+      }
+    },
+    {
+      "key": "6db88441-ede1-4a44-9198-c66b637b6542",
+      "position": 5,
+      "properties": {
+        "progression_name": "Explore Additional Board Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "6db88441-ede1-4a44-9198-c66b637b6542",
+        "lesson_activity.key": "170026e0-0dbf-4e57-b436-32b2069e63d2"
+      }
+    },
+    {
+      "key": "8e371195-61c7-4803-a1b5-4d784ed98aed",
+      "position": 6,
+      "properties": {
+        "progression_name": "Preview the End-of-Chapter Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "8e371195-61c7-4803-a1b5-4d784ed98aed",
+        "lesson_activity.key": "170026e0-0dbf-4e57-b436-32b2069e63d2"
+      }
+    },
+    {
+      "key": "491fff66-f87a-4dd4-9adc-05217adabd0c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "491fff66-f87a-4dd4-9adc-05217adabd0c",
+        "lesson_activity.key": "b6f05598-d263-4f01-b263-e62a9d32ed78"
+      }
+    },
+    {
+      "key": "c0ce666d-552e-483c-8bae-e4c761a43d92",
+      "position": 2,
+      "properties": {
+        "progression_name": "Use Sensors "
+      },
+      "seeding_key": {
+        "activity_section.key": "c0ce666d-552e-483c-8bae-e4c761a43d92",
+        "lesson_activity.key": "b6f05598-d263-4f01-b263-e62a9d32ed78"
+      }
+    },
+    {
+      "key": "0bd10fa6-b0b8-4811-96e4-17ea7aa0532d",
+      "position": 3,
+      "properties": {
+        "progression_name": "Interact with Apps and Prototypes "
+      },
+      "seeding_key": {
+        "activity_section.key": "0bd10fa6-b0b8-4811-96e4-17ea7aa0532d",
+        "lesson_activity.key": "b6f05598-d263-4f01-b263-e62a9d32ed78"
+      }
+    },
+    {
+      "key": "132d5cc4-f2d0-4e9f-bb13-bf2e47d1ec80",
+      "position": 4,
+      "properties": {
+        "progression_name": "Preview the End-of-Chapter Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "132d5cc4-f2d0-4e9f-bb13-bf2e47d1ec80",
+        "lesson_activity.key": "b6f05598-d263-4f01-b263-e62a9d32ed78"
+      }
+    },
+    {
+      "key": "40e7d543-c542-49da-8efd-7f27aff67301",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "40e7d543-c542-49da-8efd-7f27aff67301",
+        "lesson_activity.key": "86242157-848e-4133-b721-31b0ce17ef7d"
+      }
+    },
+    {
+      "key": "464fc695-0c27-485e-a220-b298b4f5389c",
+      "position": 2,
+      "properties": {
+        "progression_name": "The Role of the Teacher"
+      },
+      "seeding_key": {
+        "activity_section.key": "464fc695-0c27-485e-a220-b298b4f5389c",
+        "lesson_activity.key": "86242157-848e-4133-b721-31b0ce17ef7d"
+      }
+    },
+    {
+      "key": "5d976dbc-f43f-49a3-8c8d-274d3f092a4c",
+      "position": 3,
+      "properties": {
+        "progression_name": "Teaching and Learning Strategies"
+      },
+      "seeding_key": {
+        "activity_section.key": "5d976dbc-f43f-49a3-8c8d-274d3f092a4c",
+        "lesson_activity.key": "86242157-848e-4133-b721-31b0ce17ef7d"
+      }
+    },
+    {
+      "key": "f72c9d2a-de8f-43dd-ab93-827ff9e79177",
+      "position": 4,
+      "properties": {
+        "progression_name": "Meeting Student Needs"
+      },
+      "seeding_key": {
+        "activity_section.key": "f72c9d2a-de8f-43dd-ab93-827ff9e79177",
+        "lesson_activity.key": "86242157-848e-4133-b721-31b0ce17ef7d"
+      }
+    },
+    {
+      "key": "bad22701-c467-4e0d-ba8b-4bde79970052",
+      "position": 5,
+      "properties": {
+        "progression_name": "Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "bad22701-c467-4e0d-ba8b-4bde79970052",
+        "lesson_activity.key": "86242157-848e-4133-b721-31b0ce17ef7d"
+      }
+    },
+    {
+      "key": "cd9a6081-9f65-45cf-9ec7-11e49115538c",
+      "position": 6,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "cd9a6081-9f65-45cf-9ec7-11e49115538c",
+        "lesson_activity.key": "86242157-848e-4133-b721-31b0ce17ef7d"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U6_physical-computing_25_2025"
+        ],
+        "progression": "Introduction to Professional Learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U6_physical-computing_25_2025"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "55b3b840-1418-4e69-bb21-296862e6d6ce"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-ModuleOverview-U6_physical-computing_25_2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Professional Learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-Devices-22-pre-survey_25_2025"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "55b3b840-1418-4e69-bb21-296862e6d6ce"
+      },
+      "level_keys": [
+        "VPL-Devices-22-pre-survey_25_2025"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Professional Learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit6a_CSD-PL-24_may2025"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "55b3b840-1418-4e69-bb21-296862e6d6ce"
+      },
+      "level_keys": [
+        "VPL-CSD-PL Overview-self-paced-unit6a_CSD-PL-24_may2025"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Professional Learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD-U6aSelfPaced-Lesson1Cert_CSD-PL-24_may2025"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "55b3b840-1418-4e69-bb21-296862e6d6ce"
+      },
+      "level_keys": [
+        "CSD-U6aSelfPaced-Lesson1Cert_CSD-PL-24_may2025"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Professional Learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "55b3b840-1418-4e69-bb21-296862e6d6ce"
+      },
+      "level_keys": [
+        "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_25_2025"
+        ],
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_25_2025"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "7ae30acf-7430-4613-ae70-8c1528105ba7"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_25_2025"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U6L2_physical-computing_25_2025"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "7ae30acf-7430-4613-ae70-8c1528105ba7"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_Overview_U6L2_physical-computing_25_2025"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-LessonTypes_25_2025"
+        ],
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-LessonTypes_25_2025"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "7ae30acf-7430-4613-ae70-8c1528105ba7"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-LessonTypes_25_2025"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-Summer-CI-Unit_PSP-U6L3_25_2025"
+        ],
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-Unit_PSP-U6L3_25_2025"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "7ae30acf-7430-4613-ae70-8c1528105ba7"
+      },
+      "level_keys": [
+        "VPL-CSD-Summer-CI-Unit_PSP-U6L3_25_2025"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-PSP-vid_25_2025"
+        ],
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-PSP-vid_25_2025"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "7ae30acf-7430-4613-ae70-8c1528105ba7"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-PSP-vid_25_2025"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_setup_25_2025"
+        ],
+        "progression": "Connect your Circuit Playground"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_setup_25_2025"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "874af229-76f4-4888-9736-b6389a11291c"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_setup_25_2025"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-MakerApp-appLab_physical-computing_25_2025"
+        ],
+        "progression": "Connect your Circuit Playground"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-MakerApp-appLab_physical-computing_25_2025"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "874af229-76f4-4888-9736-b6389a11291c"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-22-CI-mod6-MakerApp-appLab_physical-computing_25_2025"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB3_25_2025"
+        ],
+        "progression": "Connect your Circuit Playground"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB3_25_2025"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "874af229-76f4-4888-9736-b6389a11291c"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB3_25_2025"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Overview-U6L3_physical-computing_25_2025"
+        ],
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Overview-U6L3_physical-computing_25_2025"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "c3014536-621c-4501-91e9-8da84ac9bf1c"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Overview-U6L3_physical-computing_25_2025"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI6-CSD circuit video_25_2025"
+        ],
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI6-CSD circuit video_25_2025"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "c3014536-621c-4501-91e9-8da84ac9bf1c"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI6-CSD circuit video_25_2025"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod 6- lesson3-inputOutput-Ove_physical-comp_2025"
+        ],
+        "progression": "Introduction to Inputs and Outputs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod 6- lesson3-inputOutput-Ove_physical-comp_2025"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "a97055ac-7691-4642-9cf0-9d9eedcad800"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod 6- lesson3-inputOutput-Ove_physical-comp_2025"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB1_25_2025"
+        ],
+        "progression": "Introduction to Inputs and Outputs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB1_25_2025"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "a97055ac-7691-4642-9cf0-9d9eedcad800"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB1_25_2025"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-PILOT-CSD U6 - Board Inputs - SB1_25_2025"
+        ],
+        "progression": "Introduction to Inputs and Outputs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-PILOT-CSD U6 - Board Inputs - SB1_25_2025"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "a97055ac-7691-4642-9cf0-9d9eedcad800"
+      },
+      "level_keys": [
+        "VPL-PILOT-CSD U6 - Board Inputs - SB1_25_2025"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB2_25_2025"
+        ],
+        "progression": "Add Complexity to Your App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB2_25_2025"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "2dfc44bf-f230-4c7a-96a7-343c1fc8386a"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB2_25_2025"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB4_25_2025"
+        ],
+        "progression": "Add Complexity to Your App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB4_25_2025"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "2dfc44bf-f230-4c7a-96a7-343c1fc8386a"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB4_25_2025"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB7_25_2025"
+        ],
+        "progression": "Add Complexity to Your App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB7_25_2025"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "2dfc44bf-f230-4c7a-96a7-343c1fc8386a"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB7_25_2025"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB1_25_2025"
+        ],
+        "progression": "Explore Additional Board Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB1_25_2025"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "6db88441-ede1-4a44-9198-c66b637b6542"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB1_25_2025"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB2_25_2025"
+        ],
+        "progression": "Explore Additional Board Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB2_25_2025"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "6db88441-ede1-4a44-9198-c66b637b6542"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB2_25_2025"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 11,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Combine Inputs - SB3_25_2025"
+        ],
+        "progression": "Explore Additional Board Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Combine Inputs - SB3_25_2025"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "6db88441-ede1-4a44-9198-c66b637b6542"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Combine Inputs - SB3_25_2025"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C_physical-comp_2025"
+        ],
+        "progression": "Preview the End-of-Chapter Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C_physical-comp_2025"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "8e371195-61c7-4803-a1b5-4d784ed98aed"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C_physical-comp_2025"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Overview-U6L4_physical-computing_25_2025"
+        ],
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Overview-U6L4_physical-computing_25_2025"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "491fff66-f87a-4dd4-9adc-05217adabd0c"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Overview-U6L4_physical-computing_25_2025"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Sensors - A_25_2025"
+        ],
+        "progression": "Use Sensors "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Sensors - A_25_2025"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "c0ce666d-552e-483c-8bae-e4c761a43d92"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Sensors - A_25_2025"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Accelerometer - P_25_2025"
+        ],
+        "progression": "Use Sensors "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Accelerometer - P_25_2025"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "c0ce666d-552e-483c-8bae-e4c761a43d92"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Accelerometer - P_25_2025"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Music - Piano_25_2025"
+        ],
+        "progression": "Interact with Apps and Prototypes "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Music - Piano_25_2025"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "0bd10fa6-b0b8-4811-96e4-17ea7aa0532d"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Music - Piano_25_2025"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Functions - SB5_25_2025"
+        ],
+        "progression": "Interact with Apps and Prototypes "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Functions - SB5_25_2025"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "0bd10fa6-b0b8-4811-96e4-17ea7aa0532d"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Functions - SB5_25_2025"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Interactive Art - Rev_25_2025"
+        ],
+        "progression": "Interact with Apps and Prototypes "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Interactive Art - Rev_25_2025"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "0bd10fa6-b0b8-4811-96e4-17ea7aa0532d"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U6 - Interactive Art - Rev_25_2025"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-Sensor Overview_physical-computing_25_2025"
+        ],
+        "progression": "Interact with Apps and Prototypes "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-Sensor Overview_physical-computing_25_2025"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "0bd10fa6-b0b8-4811-96e4-17ea7aa0532d"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-22-CI-mod6-Sensor Overview_physical-computing_25_2025"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U6L5C_physical-comp_2025"
+        ],
+        "progression": "Preview the End-of-Chapter Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U6L5C_physical-comp_2025"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "132d5cc4-f2d0-4e9f-bb13-bf2e47d1ec80"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U6L5C_physical-comp_2025"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-physical-computing-22-Overview-TeachingLearning_25_2025"
+        ],
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-physical-computing-22-Overview-TeachingLearning_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "40e7d543-c542-49da-8efd-7f27aff67301"
+      },
+      "level_keys": [
+        "SP-VPL-physical-computing-22-Overview-TeachingLearning_25_2025"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-LeadLearner_25_2025"
+        ],
+        "progression": "The Role of the Teacher"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-LeadLearner_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "464fc695-0c27-485e-a220-b298b4f5389c"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-LeadLearner_25_2025"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-LeadLearner-vid_25_2025"
+        ],
+        "progression": "The Role of the Teacher"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-LeadLearner-vid_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "464fc695-0c27-485e-a220-b298b4f5389c"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-LeadLearner-vid_25_2025"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-ClassroomCulture_25_2025"
+        ],
+        "progression": "The Role of the Teacher"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-ClassroomCulture_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "464fc695-0c27-485e-a220-b298b4f5389c"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-ClassroomCulture_25_2025"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-PairProgramming_25_2025"
+        ],
+        "progression": "Teaching and Learning Strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-PairProgramming_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "5d976dbc-f43f-49a3-8c8d-274d3f092a4c"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-PairProgramming_25_2025"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-PairProgramming-TipVid_25_2025"
+        ],
+        "progression": "Teaching and Learning Strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-PairProgramming-TipVid_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "5d976dbc-f43f-49a3-8c8d-274d3f092a4c"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-PairProgramming-TipVid_25_2025"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-Resources_25_2025"
+        ],
+        "progression": "Teaching and Learning Strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Resources_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "5d976dbc-f43f-49a3-8c8d-274d3f092a4c"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-Resources_25_2025"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-Debugging_25_2025"
+        ],
+        "progression": "Teaching and Learning Strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Debugging_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "5d976dbc-f43f-49a3-8c8d-274d3f092a4c"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-Debugging_25_2025"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 9,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-Debugging-TipVid_25_2025"
+        ],
+        "progression": "Teaching and Learning Strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Debugging-TipVid_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "5d976dbc-f43f-49a3-8c8d-274d3f092a4c"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-Debugging-TipVid_25_2025"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 10,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-CP-22-teamworkOverview_25_2025"
+        ],
+        "progression": "Teaching and Learning Strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CP-22-teamworkOverview_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "5d976dbc-f43f-49a3-8c8d-274d3f092a4c"
+      },
+      "level_keys": [
+        "SP-VPL-CP-22-teamworkOverview_25_2025"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 11,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-Strategies-StudentVideos_25_2025"
+        ],
+        "progression": "Teaching and Learning Strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Strategies-StudentVideos_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "5d976dbc-f43f-49a3-8c8d-274d3f092a4c"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-Strategies-StudentVideos_25_2025"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 12,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-CP-22-ProgrammingLevelsOverview_25_2025"
+        ],
+        "progression": "Teaching and Learning Strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CP-22-ProgrammingLevelsOverview_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "5d976dbc-f43f-49a3-8c8d-274d3f092a4c"
+      },
+      "level_keys": [
+        "SP-VPL-CP-22-ProgrammingLevelsOverview_25_2025"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-CP-22-Inclusion_25_2025"
+        ],
+        "progression": "Meeting Student Needs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CP-22-Inclusion_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "f72c9d2a-de8f-43dd-ab93-827ff9e79177"
+      },
+      "level_keys": [
+        "SP-VPL-CP-22-Inclusion_25_2025"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 14,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-Differentiation_25_2025"
+        ],
+        "progression": "Meeting Student Needs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Differentiation_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "f72c9d2a-de8f-43dd-ab93-827ff9e79177"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-Differentiation_25_2025"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 15,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-DifferentiationContinued_25_2025"
+        ],
+        "progression": "Meeting Student Needs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-DifferentiationContinued_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "f72c9d2a-de8f-43dd-ab93-827ff9e79177"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-DifferentiationContinued_25_2025"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 16,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-Assessment_25_2025"
+        ],
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Assessment_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "bad22701-c467-4e0d-ba8b-4bde79970052"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-Assessment_25_2025"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 17,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-AssessmentPlan_25_2025"
+        ],
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-AssessmentPlan_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "bad22701-c467-4e0d-ba8b-4bde79970052"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-AssessmentPlan_25_2025"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 18,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-Devices-22-post-survey_25_2025"
+        ],
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-Devices-22-post-survey_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "cd9a6081-9f65-45cf-9ec7-11e49115538c"
+      },
+      "level_keys": [
+        "VPL-Devices-22-post-survey_25_2025"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 19,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-mod2-WrapUp_25_2025"
+        ],
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-mod2-WrapUp_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "cd9a6081-9f65-45cf-9ec7-11e49115538c"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-mod2-WrapUp_25_2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-ModuleOverview-U6_physical-computing_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U6_physical-computing_25_2025"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "55b3b840-1418-4e69-bb21-296862e6d6ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-Devices-22-pre-survey_25_2025",
+        "script_level.level_keys": [
+          "VPL-Devices-22-pre-survey_25_2025"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "55b3b840-1418-4e69-bb21-296862e6d6ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PL Overview-self-paced-unit6a_CSD-PL-24_may2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit6a_CSD-PL-24_may2025"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "55b3b840-1418-4e69-bb21-296862e6d6ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD-U6aSelfPaced-Lesson1Cert_CSD-PL-24_may2025",
+        "script_level.level_keys": [
+          "CSD-U6aSelfPaced-Lesson1Cert_CSD-PL-24_may2025"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "55b3b840-1418-4e69-bb21-296862e6d6ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted",
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "55b3b840-1418-4e69-bb21-296862e6d6ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_25_2025"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "7ae30acf-7430-4613-ae70-8c1528105ba7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_Overview_U6L2_physical-computing_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U6L2_physical-computing_25_2025"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "7ae30acf-7430-4613-ae70-8c1528105ba7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-LessonTypes_25_2025",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-LessonTypes_25_2025"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "7ae30acf-7430-4613-ae70-8c1528105ba7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-Summer-CI-Unit_PSP-U6L3_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-Unit_PSP-U6L3_25_2025"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "7ae30acf-7430-4613-ae70-8c1528105ba7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-PSP-vid_25_2025",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-PSP-vid_25_2025"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "7ae30acf-7430-4613-ae70-8c1528105ba7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_setup_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_setup_25_2025"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "874af229-76f4-4888-9736-b6389a11291c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-22-CI-mod6-MakerApp-appLab_physical-computing_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-MakerApp-appLab_physical-computing_25_2025"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "874af229-76f4-4888-9736-b6389a11291c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB3_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB3_25_2025"
+        ],
+        "lesson.key": "Introduction to Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "874af229-76f4-4888-9736-b6389a11291c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Overview-U6L3_physical-computing_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Overview-U6L3_physical-computing_25_2025"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "c3014536-621c-4501-91e9-8da84ac9bf1c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI6-CSD circuit video_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI6-CSD circuit video_25_2025"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "c3014536-621c-4501-91e9-8da84ac9bf1c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod 6- lesson3-inputOutput-Ove_physical-comp_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod 6- lesson3-inputOutput-Ove_physical-comp_2025"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "a97055ac-7691-4642-9cf0-9d9eedcad800"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB1_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB1_25_2025"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "a97055ac-7691-4642-9cf0-9d9eedcad800"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-PILOT-CSD U6 - Board Inputs - SB1_25_2025",
+        "script_level.level_keys": [
+          "VPL-PILOT-CSD U6 - Board Inputs - SB1_25_2025"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "a97055ac-7691-4642-9cf0-9d9eedcad800"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB2_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB2_25_2025"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "2dfc44bf-f230-4c7a-96a7-343c1fc8386a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB4_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB4_25_2025"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "2dfc44bf-f230-4c7a-96a7-343c1fc8386a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB7_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB7_25_2025"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "2dfc44bf-f230-4c7a-96a7-343c1fc8386a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB1_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB1_25_2025"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "6db88441-ede1-4a44-9198-c66b637b6542"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB2_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB2_25_2025"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "6db88441-ede1-4a44-9198-c66b637b6542"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Combine Inputs - SB3_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Combine Inputs - SB3_25_2025"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "6db88441-ede1-4a44-9198-c66b637b6542"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C_physical-comp_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C_physical-comp_2025"
+        ],
+        "lesson.key": "Experiment with Inputs and Outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "8e371195-61c7-4803-a1b5-4d784ed98aed"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Overview-U6L4_physical-computing_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Overview-U6L4_physical-computing_25_2025"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "491fff66-f87a-4dd4-9adc-05217adabd0c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Sensors - A_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Sensors - A_25_2025"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "c0ce666d-552e-483c-8bae-e4c761a43d92"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Accelerometer - P_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Accelerometer - P_25_2025"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "c0ce666d-552e-483c-8bae-e4c761a43d92"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Music - Piano_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Music - Piano_25_2025"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "0bd10fa6-b0b8-4811-96e4-17ea7aa0532d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Functions - SB5_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Functions - SB5_25_2025"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "0bd10fa6-b0b8-4811-96e4-17ea7aa0532d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U6 - Interactive Art - Rev_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Interactive Art - Rev_25_2025"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "0bd10fa6-b0b8-4811-96e4-17ea7aa0532d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-22-CI-mod6-Sensor Overview_physical-computing_25_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-Sensor Overview_physical-computing_25_2025"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "0bd10fa6-b0b8-4811-96e4-17ea7aa0532d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U6L5C_physical-comp_2025",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U6L5C_physical-comp_2025"
+        ],
+        "lesson.key": "Engage with Prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "132d5cc4-f2d0-4e9f-bb13-bf2e47d1ec80"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-physical-computing-22-Overview-TeachingLearning_25_2025",
+        "script_level.level_keys": [
+          "SP-VPL-physical-computing-22-Overview-TeachingLearning_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "40e7d543-c542-49da-8efd-7f27aff67301"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-LeadLearner_25_2025",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-LeadLearner_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "464fc695-0c27-485e-a220-b298b4f5389c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-LeadLearner-vid_25_2025",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-LeadLearner-vid_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "464fc695-0c27-485e-a220-b298b4f5389c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-ClassroomCulture_25_2025",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-ClassroomCulture_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "464fc695-0c27-485e-a220-b298b4f5389c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-PairProgramming_25_2025",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-PairProgramming_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "5d976dbc-f43f-49a3-8c8d-274d3f092a4c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-PairProgramming-TipVid_25_2025",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-PairProgramming-TipVid_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "5d976dbc-f43f-49a3-8c8d-274d3f092a4c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-Resources_25_2025",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Resources_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "5d976dbc-f43f-49a3-8c8d-274d3f092a4c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-Debugging_25_2025",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Debugging_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "5d976dbc-f43f-49a3-8c8d-274d3f092a4c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-Debugging-TipVid_25_2025",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Debugging-TipVid_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "5d976dbc-f43f-49a3-8c8d-274d3f092a4c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CP-22-teamworkOverview_25_2025",
+        "script_level.level_keys": [
+          "SP-VPL-CP-22-teamworkOverview_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "5d976dbc-f43f-49a3-8c8d-274d3f092a4c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-Strategies-StudentVideos_25_2025",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Strategies-StudentVideos_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "5d976dbc-f43f-49a3-8c8d-274d3f092a4c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CP-22-ProgrammingLevelsOverview_25_2025",
+        "script_level.level_keys": [
+          "SP-VPL-CP-22-ProgrammingLevelsOverview_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "5d976dbc-f43f-49a3-8c8d-274d3f092a4c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CP-22-Inclusion_25_2025",
+        "script_level.level_keys": [
+          "SP-VPL-CP-22-Inclusion_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "f72c9d2a-de8f-43dd-ab93-827ff9e79177"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-Differentiation_25_2025",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Differentiation_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "f72c9d2a-de8f-43dd-ab93-827ff9e79177"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-DifferentiationContinued_25_2025",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-DifferentiationContinued_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "f72c9d2a-de8f-43dd-ab93-827ff9e79177"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-Assessment_25_2025",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Assessment_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "bad22701-c467-4e0d-ba8b-4bde79970052"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-AssessmentPlan_25_2025",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-AssessmentPlan_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "bad22701-c467-4e0d-ba8b-4bde79970052"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-Devices-22-post-survey_25_2025",
+        "script_level.level_keys": [
+          "VPL-Devices-22-post-survey_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "cd9a6081-9f65-45cf-9ec7-11e49115538c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-mod2-WrapUp_25_2025",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-mod2-WrapUp_25_2025"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-physical-computing-1-2025",
+        "activity_section.key": "cd9a6081-9f65-45cf-9ec7-11e49115538c"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

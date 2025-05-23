@@ -78,7 +78,7 @@ export const sourceReducer = (
         action.payload
       );
 
-      if (source.files[fileId].contents === contents) {
+      if (source.files[fileId]?.contents === contents) {
         return source;
       }
 

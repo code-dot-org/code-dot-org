@@ -30,10 +30,16 @@ class CoursesController < ApplicationController
     @course_families_course_types = @course_families_course_types.to_h
   end
 
+  def all
+    authorize! :manage, UnitGroup
+    # Show all the units groups
+    @courses = UnitGroup.all
+  end
+
   def show
     # If this is a single-unit course, redirect to the unit overview
     if @unit_group.single_unit_course?
-      redirect_to script_path(@unit_group.default_units.first)
+      redirect_to script_path(@unit_group.first_unit)
       return
     end
 

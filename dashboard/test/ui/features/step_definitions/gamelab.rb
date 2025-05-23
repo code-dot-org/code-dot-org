@@ -31,7 +31,10 @@ When /^I (?:reset the game|press reset)$/ do
 end
 
 When /^I switch to(?: the)? animation (?:mode|tab)$/ do
-  steps 'When I press "animationMode"'
+  steps <<-STEPS
+    When I press "animationMode"
+    And I wait to see "#newListItem"
+  STEPS
 end
 
 When /^I switch to(?: the)? code (?:mode|tab) in Game Lab$/ do

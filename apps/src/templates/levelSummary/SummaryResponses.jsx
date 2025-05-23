@@ -9,7 +9,6 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {PredictQuestionType} from '@cdo/apps/lab2/levelEditors/types';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import FreeResponseAIEvaluation from './FreeResponseAIEvaluation';
@@ -141,10 +140,10 @@ const SummaryResponses = ({
     studentWork: response.text,
   }));
 
-  const AiEvaluationMVPUnits = ['csp4-2024', 'csp6-2024'];
-  const aiAnalysisAvailable =
-    experiments.isEnabled(experiments.FREE_RESPONSE_AI_ANALYSIS) &&
-    AiEvaluationMVPUnits.includes(scriptData.reportingData.unitName);
+  const AiEvaluationMVPUnits = ['csp4-2024', 'csp6-2024', 'allthethings'];
+  const aiAnalysisAvailable = AiEvaluationMVPUnits.includes(
+    scriptData.reportingData.unitName
+  );
 
   return (
     <div className={styles.summaryContainer} id="summary-container">

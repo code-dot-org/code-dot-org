@@ -1,5 +1,4 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
@@ -75,7 +74,8 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   handleInstructionsTextClick,
   className,
 }) => {
-  const {onRun, onStop, levelProperties} = useCodebridgeContext();
+  const {onRun, onStop, levelProperties, AiTutor2ResponseView} =
+    useCodebridgeContext();
   const dialogControl = useDialogControl();
 
   const {
@@ -84,6 +84,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     predictSettings,
     submittable: isSubmittable,
     appName: appType,
+    aiTutor2Available,
   } = levelProperties;
 
   const scriptId = useAppSelector(state => state.lab.scriptId);
@@ -124,8 +125,6 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     currentLevel && passedStatuses.includes(currentLevel.status);
 
   const dispatch = useAppDispatch();
-
-  const {theme} = useTheme();
 
   const vertical = layout === 'vertical';
 
@@ -334,7 +333,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     <div
       id="instructions"
       className={classNames(
-        moduleStyles['instructions-' + theme],
+        moduleStyles.instructions,
         vertical && moduleStyles.vertical,
         'instructions',
         className
@@ -352,7 +351,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
             <div
               key={instructionsText}
               id="instructions-text"
-              className={classNames(moduleStyles['bubble-' + theme])}
+              className={moduleStyles.bubble}
             >
               <MainInstructionsContent
                 instructionsText={instructionsText}
@@ -375,14 +374,16 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
           {validationResults && (
             <>
               <div ref={validationScrollRef} />
-              <div className={classNames(moduleStyles['bubble-' + theme])}>
+              <div className={moduleStyles.bubble}>
                 <ValidationResults />
               </div>
             </>
           )}
+
+          {aiTutor2Available && AiTutor2ResponseView}
           {predictSettings?.isPredictLevel && (
             <InstructorsOnly>
-              <div className={moduleStyles['bubble-' + theme]}>
+              <div className={moduleStyles.bubble}>
                 <PredictSummary />
               </div>
             </InstructorsOnly>
@@ -391,10 +392,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
         {showNavigation && (
           <div
             id="instructions-navigation"
-            className={classNames(
-              moduleStyles['bubble-' + theme],
-              moduleStyles.button
-            )}
+            className={classNames(moduleStyles.bubble, moduleStyles.button)}
           >
             <Button
               text={navigationText}

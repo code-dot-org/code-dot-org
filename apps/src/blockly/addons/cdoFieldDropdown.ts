@@ -210,16 +210,10 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    */
   protected getDisplayText_(): string {
     let text = this.getText();
-    if (!text) {
-      // Prevent the field from disappearing if empty.
-      return GoogleBlockly.Field.NBSP;
-    }
     if (text.length > this.maxDisplayLength) {
       // Truncate displayed string and add an ellipsis ('...').
       text = text.substring(0, this.maxDisplayLength - 2) + '…';
     }
-    // Replace whitespace with non-breaking spaces so the text doesn't collapse.
-    text = text.replace(/\s/g, GoogleBlockly.Field.NBSP);
     if (this.sourceBlock_ && this.sourceBlock_.RTL) {
       // Begin CDO Customization:
       // Add RTL override '\u202E' and then a pop directional formatting '\u202C'.

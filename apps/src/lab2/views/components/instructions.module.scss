@@ -109,11 +109,13 @@
 
 %text {
   position: relative;
-  overflow: hidden;
   white-space: pre-wrap;
   border-radius: 4px;
   margin-bottom: 10px;
   animation: slidein 0.5s;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
 
 .text-Dark {
@@ -130,10 +132,26 @@
 
 .textContent {
   height: 100%;
-  padding: 15px 20px 5px 20px;
+  padding: 15px 10px 5px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+}
+
+%scrolling-content {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 70px;
+}
+
+.scrollingContentWithTTS {
+  @extend %scrolling-content;
+  margin-bottom: 25px;
+}
+
+.scrollingContentWithoutTTS {
+  @extend %scrolling-content;
+  margin-bottom: 10px;
 }
 
 %message {
@@ -157,6 +175,7 @@
 
 .predictSummary {
   padding: 0;
+  margin-top: 8px;
   margin-bottom: 6px;
 }
 
@@ -180,7 +199,8 @@
     line-height: 1.2em;
   }
 
-  ol, ul {
+  ol,
+  ul {
     font-size: 14px;
     line-height: 0;
     margin: 0 0 10px 20px;
@@ -203,5 +223,12 @@
 
   details {
     line-height: 1.2;
+    summary {
+      margin: 4px 0;
+    }
   }
+}
+
+.bottomComponent {
+  overflow: hidden;
 }

@@ -1,7 +1,7 @@
 class Pd::ProfessionalLearningController < ApplicationController
   PLC_COURSE_ORDERING = ['CSP Support', 'ECS Support', 'CS in Algebra Support', 'CS in Science Support']
 
-  before_action :authenticate_user!, only: [:index, :workshops, :csa, :csd, :csf, :csp, :aif]
+  before_action :authenticate_user!, only: [:index, :csa, :csd, :csf, :csp, :aif]
 
   # GET my-professional-learning
   def index
@@ -93,7 +93,7 @@ class Pd::ProfessionalLearningController < ApplicationController
 
   # GET professional-learning/regional-partner/playbook
   def rp_playbook
-    if current_user.permission?(UserPermission::PROGRAM_MANAGER) || current_user.permission?(UserPermission::WORKSHOP_ADMIN)
+    if current_user&.permission?(UserPermission::PROGRAM_MANAGER) || current_user&.permission?(UserPermission::WORKSHOP_ADMIN)
       render 'pd/professional_learning/regional_partner/regional_partner_playbook'
     else
       render 'pd/professional_learning/regional_partner/not_permitted_to_view', :status => :forbidden
@@ -172,7 +172,7 @@ class Pd::ProfessionalLearningController < ApplicationController
 
     render json: {status: :ok, regional_workshop_data: {
       regional_partner: {name: partner&.name, additional_info: partner&.additional_program_information},
-      available_workshops: sorted_available_workshops
+      available_workshops: sorted_available_workshops&.map(&:summarize_for_regional_workshop_page)
     }}
   end
 

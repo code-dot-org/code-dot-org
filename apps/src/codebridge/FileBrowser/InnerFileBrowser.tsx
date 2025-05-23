@@ -1,3 +1,4 @@
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {FolderId} from '@codebridge/types';
 import {shouldShowFile} from '@codebridge/utils';
 import classNames from 'classnames';
@@ -38,6 +39,7 @@ const InnerFileBrowser = React.memo(
       f => f.type === ProjectFileType.VALIDATION
     );
     const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+    const {openFile} = useCodebridgeContext();
 
     return (
       <>
@@ -102,6 +104,11 @@ const InnerFileBrowser = React.memo(
                 data={{id: f.id, type: DragType.FILE, parentId: f.folderId}}
                 key={f.id}
                 Component="div"
+                onKeyDown={event => {
+                  if (event.key === 'Enter' || event.key === ' ') {
+                    openFile(f.id);
+                  }
+                }}
               >
                 <FileRow {...fileRowProps} />
               </MaybeDraggable>
