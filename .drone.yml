@@ -291,18 +291,19 @@ steps:
     image: bitnami/git
     commands:
       - git lfs install
-      - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL . 
+      - git clone --branch $DRONE_SOURCE_BRANCH $DRONE_GIT_HTTP_URL . 
+      # - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL . 
 
-  - name: cache-staging-clone
-    image: plugins/s3-cache
-    settings:
-      filename: cache-staging-clone.tar.gz
-      endpoint: s3://cdo-drone
-      rebuild: true
-      debug: true
-      pull: true
-      mount:
-        - .
+  # - name: cache-staging-clone
+  #   image: plugins/s3-cache
+  #   settings:
+  #     filename: cache-staging-clone.tar.gz
+  #     endpoint: s3://cdo-drone
+  #     rebuild: true
+  #     debug: true
+  #     pull: true
+  #     mount:
+  #       - .
 
   # Do all the work necessary to run UI tests so we can capture a complete
   # snapshot of rbenv and the database, but don't actually run the tests.
@@ -344,12 +345,21 @@ volumes:
   - name: mysql
     temp: {}
 
+# trigger:
+#   branch:
+#     - "staging"
+#     - "staging-next"
+#   event:
+#     - push
+
 trigger:
   branch:
-    - "staging"
-    - "staging-next"
+    exclude:
+      - "production"
+      - "test"
+      - "levelbuilder"
   event:
-    - push
+    - pull_request
 ---
 kind: signature
 hmac: 562ff20a0943a613b8525c499fb60b921bdac4dc2bac56f4d4aafa5de8a9284a
