@@ -1675,7 +1675,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/about/hear-from-us',
-        destination: '/about/hear-from-code',
+        destination: '/about#hear-from-us',
         permanent: false,
       },
       {

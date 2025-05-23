@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-21 19:05:09 UTC",
+    "serialized_at": "2025-05-22 16:45:29 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -277,6 +277,17 @@
       },
       "seeding_key": {
         "activity_section.key": "b7c8c47b-7aa0-4aa3-925a-2175bc4892b7",
+        "lesson_activity.key": "00bdc6f6-15e0-4093-ba9e-40a33e654f84"
+      }
+    },
+    {
+      "key": "570ec51c-3efb-4965-88ad-b0243518d4fa",
+      "position": 7,
+      "properties": {
+        "progression_name": "Printing Objects"
+      },
+      "seeding_key": {
+        "activity_section.key": "570ec51c-3efb-4965-88ad-b0243518d4fa",
         "lesson_activity.key": "00bdc6f6-15e0-4093-ba9e-40a33e654f84"
       }
     }
@@ -1338,6 +1349,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-scanner-video-19-2"
+        ],
         "progression": "User Input"
       },
       "bonus": false,
@@ -1360,6 +1374,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-scanner-practice-21"
+        ],
         "progression": "User Input"
       },
       "bonus": false,
@@ -1382,6 +1399,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-structure-this-keyword-22"
+        ],
         "progression": "The This Keyword"
       },
       "bonus": false,
@@ -1404,6 +1424,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-this-modify-23"
+        ],
         "progression": "The This Keyword"
       },
       "bonus": false,
@@ -1426,6 +1449,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-this-modify-24"
+        ],
         "progression": "The This Keyword"
       },
       "bonus": false,
@@ -1448,6 +1474,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-this-choice-26"
+        ],
         "progression": "The This Keyword"
       },
       "bonus": false,
@@ -1470,6 +1499,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-structure-methods-info-26"
+        ],
         "progression": "Accessor and Mutator Methods"
       },
       "bonus": false,
@@ -1492,6 +1524,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-accessor-method-modify-26"
+        ],
         "progression": "Accessor and Mutator Methods"
       },
       "bonus": false,
@@ -1514,6 +1549,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-accessor-method-modify-27"
+        ],
         "progression": "Accessor and Mutator Methods"
       },
       "bonus": false,
@@ -1536,6 +1574,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-accessor-method-modify-28"
+        ],
         "progression": "Accessor and Mutator Methods"
       },
       "bonus": false,
@@ -1563,6 +1604,31 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "pl-java-class-structure-mutator-methods-info-29-2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "b7c8c47b-7aa0-4aa3-925a-2175bc4892b7"
+      },
+      "level_keys": [
+        "pl-java-class-structure-mutator-methods-info-29-2"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 31,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-java-class-design-accessor-method-modify-29"
+        ],
+        "progression": "Accessor and Mutator Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "pl-java-class-design-accessor-method-modify-29"
         ],
         "lesson.key": "lesson-3",
@@ -1575,11 +1641,14 @@
       ]
     },
     {
-      "chapter": 54,
-      "position": 31,
-      "activity_section_position": 6,
+      "chapter": 55,
+      "position": 32,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-accessor-method-modify-30"
+        ],
         "progression": "Accessor and Mutator Methods"
       },
       "bonus": false,
@@ -1597,11 +1666,14 @@
       ]
     },
     {
-      "chapter": 55,
-      "position": 32,
-      "activity_section_position": 7,
+      "chapter": 56,
+      "position": 33,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-accessor-method-modify-31"
+        ],
         "progression": "Accessor and Mutator Methods"
       },
       "bonus": false,
@@ -1619,11 +1691,14 @@
       ]
     },
     {
-      "chapter": 56,
-      "position": 33,
-      "activity_section_position": 8,
+      "chapter": 57,
+      "position": 34,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-accessor-mutator-check-31"
+        ],
         "progression": "Accessor and Mutator Methods"
       },
       "bonus": false,
@@ -1638,6 +1713,94 @@
       },
       "level_keys": [
         "pl-java-class-design-accessor-mutator-check-31"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 35,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Printing Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-structure-toPrint-info-35"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "570ec51c-3efb-4965-88ad-b0243518d4fa"
+      },
+      "level_keys": [
+        "pl-java-class-structure-toPrint-info-35"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 36,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Printing Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-toPrint-modify-36"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "570ec51c-3efb-4965-88ad-b0243518d4fa"
+      },
+      "level_keys": [
+        "pl-java-class-design-toPrint-modify-36"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 37,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Printing Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-toPrint-modify-37"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "570ec51c-3efb-4965-88ad-b0243518d4fa"
+      },
+      "level_keys": [
+        "pl-java-class-design-toPrint-modify-37"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 38,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Printing Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-toPrint-practice-37"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "570ec51c-3efb-4965-88ad-b0243518d4fa"
+      },
+      "level_keys": [
+        "pl-java-class-design-toPrint-practice-37"
       ]
     }
   ],
@@ -2268,6 +2431,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "pl-java-class-structure-mutator-methods-info-29-2",
+        "script_level.level_keys": [
+          "pl-java-class-structure-mutator-methods-info-29-2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "b7c8c47b-7aa0-4aa3-925a-2175bc4892b7"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "pl-java-class-design-accessor-method-modify-29",
         "script_level.level_keys": [
           "pl-java-class-design-accessor-method-modify-29"
@@ -2312,6 +2487,54 @@
         "lesson_group.key": "",
         "script.name": "sandbox-java-oop-pl",
         "activity_section.key": "b7c8c47b-7aa0-4aa3-925a-2175bc4892b7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-structure-toPrint-info-35",
+        "script_level.level_keys": [
+          "pl-java-class-structure-toPrint-info-35"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "570ec51c-3efb-4965-88ad-b0243518d4fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-toPrint-modify-36",
+        "script_level.level_keys": [
+          "pl-java-class-design-toPrint-modify-36"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "570ec51c-3efb-4965-88ad-b0243518d4fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-toPrint-modify-37",
+        "script_level.level_keys": [
+          "pl-java-class-design-toPrint-modify-37"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "570ec51c-3efb-4965-88ad-b0243518d4fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-toPrint-practice-37",
+        "script_level.level_keys": [
+          "pl-java-class-design-toPrint-practice-37"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "570ec51c-3efb-4965-88ad-b0243518d4fa"
       }
     }
   ],

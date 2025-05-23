@@ -97,7 +97,7 @@ const TeacherNavigationBar: React.FC<{
 
   let courseContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[];
   if (selectedSection?.unitName) {
-    if (currentPathName === TEACHER_NAVIGATION_PATH_NAMES.nestedUnitOverview) {
+    if (experiments.isEnabled(experiments.MODULARITY)) {
       courseContentKeys = ['nestedUnitOverview', 'lessonMaterials', 'calendar'];
     } else {
       courseContentKeys = ['unitOverview', 'lessonMaterials', 'calendar'];
@@ -153,16 +153,26 @@ const TeacherNavigationBar: React.FC<{
     if (currentPathObject?.absoluteUrl) {
       if (
         currentPathObject.url === TEACHER_NAVIGATION_PATHS.courseOverview ||
-        currentPathObject.url === TEACHER_NAVIGATION_PATHS.unitOverview
+        currentPathObject.url === TEACHER_NAVIGATION_PATHS.unitOverview ||
+        currentPathObject.url === TEACHER_NAVIGATION_PATHS.nestedUnitOverview
       ) {
-        const overviewUrl = sections[sectionId]?.unitName
-          ? LABELED_TEACHER_NAVIGATION_PATHS.unitOverview.absoluteUrl
-          : LABELED_TEACHER_NAVIGATION_PATHS.courseOverview.absoluteUrl;
+        let overviewUrl =
+          LABELED_TEACHER_NAVIGATION_PATHS.courseOverview.absoluteUrl;
+        if (sections[sectionId]?.unitName) {
+          if (experiments.isEnabled(experiments.MODULARITY)) {
+            overviewUrl =
+              LABELED_TEACHER_NAVIGATION_PATHS.nestedUnitOverview.absoluteUrl;
+          } else {
+            overviewUrl =
+              LABELED_TEACHER_NAVIGATION_PATHS.unitOverview.absoluteUrl;
+          }
+        }
         navigate(
           generatePath(overviewUrl, {
             sectionId: sectionId,
             courseVersionName: sections[sectionId]?.courseVersionName,
             unitName: sections[sectionId]?.unitName,
+            unitPosition: sections[sectionId]?.unitPosition,
           })
         );
       } else {
@@ -171,6 +181,7 @@ const TeacherNavigationBar: React.FC<{
             sectionId: sectionId,
             courseVersionName: sections[sectionId]?.courseVersionName,
             unitName: sections[sectionId]?.unitName,
+            unitPosition: sections[sectionId]?.unitPosition,
           })
         );
       }

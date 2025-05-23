@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-22 03:30:42 UTC",
+    "serialized_at": "2025-05-22 20:37:47 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -291,6 +291,9 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
+        "overview": "In this lesson, students explore whether they can trust what AI says. They ask factual questions, check the AI’s answers against reliable sources, and look for hallucinations or misleading information. Through this process, students learn how AI sometimes produces false responses and develop strategies for spotting and verifying information in everyday situations like homework, research, or online conversations.",
+        "preparation": "* Print copies of the Can You Trust the Bot? activity guide (one for each student)",
+        "student_overview": "In this lesson, you'll ask AI some real questions and check if its answers are actually true. You'll compare what it says to reliable sources and see if it makes mistakes or says anything confusing. By the end, you'll learn how to spot when AI might be wrong and what you can do to double-check the facts in schoolwork, research, or everyday chats."
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -669,10 +672,23 @@
       }
     },
     {
-      "key": "f9dcc4ad-80f5-493a-9485-a4da3a86a87d",
+      "key": "85887221-d6e2-4390-8507-8c3e9f297815",
       "position": 1,
       "properties": {
         "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "85887221-d6e2-4390-8507-8c3e9f297815",
+        "lesson.key": "Understanding Embeddings",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "f9dcc4ad-80f5-493a-9485-a4da3a86a87d",
+      "position": 2,
+      "properties": {
+        "name": "Student Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "f9dcc4ad-80f5-493a-9485-a4da3a86a87d",
@@ -682,42 +698,42 @@
       }
     },
     {
-      "key": "4737c50f-d694-4ea9-9e96-edcfdbff8d20",
-      "position": 2,
+      "key": "3342a5f0-4217-49c8-9d48-fd78ee762629",
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "4737c50f-d694-4ea9-9e96-edcfdbff8d20",
+        "lesson_activity.key": "3342a5f0-4217-49c8-9d48-fd78ee762629",
         "lesson.key": "Understanding Embeddings",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
       }
     },
     {
-      "key": "dac8dbd3-1b7b-45d4-8e81-256554e0c3d0",
-      "position": 3,
+      "key": "cb4757a6-db53-4903-9b57-8b91c2f1fcc0",
+      "position": 4,
       "properties": {
         "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "dac8dbd3-1b7b-45d4-8e81-256554e0c3d0",
+        "lesson_activity.key": "cb4757a6-db53-4903-9b57-8b91c2f1fcc0",
         "lesson.key": "Understanding Embeddings",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
       }
     },
     {
-      "key": "6cec371b-59e8-4af3-9cb7-debbe26ed74d",
-      "position": 4,
+      "key": "3ff9353e-8ff6-48b6-b429-dbacb04508a8",
+      "position": 5,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "6cec371b-59e8-4af3-9cb7-debbe26ed74d",
+        "lesson_activity.key": "3ff9353e-8ff6-48b6-b429-dbacb04508a8",
         "lesson.key": "Understanding Embeddings",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
@@ -725,7 +741,7 @@
     },
     {
       "key": "1a7c70aa-8c4f-42d7-a24b-520ac50418ef",
-      "position": 5,
+      "position": 6,
       "properties": {
         "name": "After the Lesson"
       },
@@ -1067,7 +1083,7 @@
       "key": "945e4ebc-57de-49e8-bdee-28b33165730a",
       "position": 1,
       "properties": {
-        "duration": 5,
+        "duration": 8,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -1081,7 +1097,7 @@
       "key": "3d044815-143d-4cdc-af53-cfd101fc3b8e",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 30,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1095,7 +1111,7 @@
       "key": "aaafe174-a7c2-4bb1-9b54-274ae7f44de0",
       "position": 3,
       "properties": {
-        "duration": 5,
+        "duration": 7,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -1921,10 +1937,31 @@
       }
     },
     {
+      "key": "6aab465d-657c-47c8-8dab-4c1600a4532d",
+      "position": 1,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o/export/png?id=1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o&pageid=g32533412556_0_0\"></td>\n    <td style=\"width: 75%\">\n      Before the Lesson: This activity uses a pedagogy rooted in discovery learning, where students first complete an activity and reflect on their process, which illuminates the underlying AI concepts. A video is provided at the end of the lesson that explains and summarizes the key learning from the lesson.\n\t\t<br />\n\t\t<br /><strong>Concept Video:</strong> Consider reviewing the <a href=\"https://www.youtube.com/watch?v=s1fhxAVpYx8\" target=\"_blank\">Storage & Embeddings concept video</a>, which the class watches at the end of the lesson after the student activity. The activity aligns with the concepts introduced in the video, and watching it ahead of time can help anticipate key moments in the lesson that align with the video.\n    </td>\n  </tr>\n\n</table>"
+      },
+      "seeding_key": {
+        "activity_section.key": "6aab465d-657c-47c8-8dab-4c1600a4532d",
+        "lesson_activity.key": "85887221-d6e2-4390-8507-8c3e9f297815"
+      }
+    },
+    {
+      "key": "f88bf4e1-d945-4e51-84a6-7d5f09affeb6",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f88bf4e1-d945-4e51-84a6-7d5f09affeb6",
+        "lesson_activity.key": "85887221-d6e2-4390-8507-8c3e9f297815"
+      }
+    },
+    {
       "key": "5983d91f-0ec3-4cf1-b5db-7362bedd96da",
       "position": 1,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/2346fc6b24af2fbe54417a3bc2b8d358-Foundations of Generative AI - Lesson 04 - Understanding Embeddings.png\"></td>\n    <td style=\"width: 75%\">\n      <strong>Before the Lesson:</strong> This activity uses a pedagogy rooted in discovery learning, where students first complete an activity and reflect on their process, which illuminates the underlying AI concepts. A video is provided at the end of the lesson that explains and summarizes the key learning from the lesson.\n<br />\n<br />\n<strong>Activity Overview:</strong> Consider reviewing the <a href= \"https://www.youtube.com/watch?v=QjtYSpgiKXY\" target=_\"blank\">Activity Overview video</a> ahead of the lesson, which gives a teacher-facing overview of the student activity in today's lesson.\n\t\t<br />\n\t\t<br /><strong>Concept Video:</strong> Consider reviewing the <a href=\"https://www.youtube.com/watch?v=s1fhxAVpYx8\" target=\"_blank\">Storage & Embeddings concept video</a>, which the class watches at the end of the lesson after the student activity. The activity aligns with the concepts introduced in the video, and watching it ahead of time can help anticipate key moments in the lesson that align with the video.\n    </td>\n  </tr>\n\n</table>    "
+        "progression_name": "Warm Up (Option 2)"
       },
       "seeding_key": {
         "activity_section.key": "5983d91f-0ec3-4cf1-b5db-7362bedd96da",
@@ -1932,22 +1969,33 @@
       }
     },
     {
-      "key": "ec08a730-2d53-4487-ae62-e4dd379a2cc7",
-      "position": 1,
+      "key": "7adb01a4-c013-4f6b-8e5f-a28d5f8e2c27",
+      "position": 2,
       "properties": {
-        "description": "There are two options for warm-ups in this lesson. This first option is unplugged and involves students playing a game, requiring movement and lots of talking. The second activity involves playing a game from a website, with the option to have students play the game as well. Consider factors such as your classroom layout, access to devices, and whether or not you can access the website in the second warm-up when deciding which warm-up to choose.\n\nIf you choose this warm-up, skip or delete the slides associated with Warm Up 2",
-        "name": "Warm Up Option 1"
+        "progression_name": "Character Quiz"
       },
       "seeding_key": {
-        "activity_section.key": "ec08a730-2d53-4487-ae62-e4dd379a2cc7",
-        "lesson_activity.key": "4737c50f-d694-4ea9-9e96-edcfdbff8d20"
+        "activity_section.key": "7adb01a4-c013-4f6b-8e5f-a28d5f8e2c27",
+        "lesson_activity.key": "f9dcc4ad-80f5-493a-9485-a4da3a86a87d"
       }
     },
     {
-      "key": "bd8272fc-ca28-4512-8aba-1a385a6ed237",
-      "position": 2,
+      "key": "85dd5500-cee3-41e3-b0fb-3e7c304f6f9a",
+      "position": 3,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/cbecaa3bbfea842ab21a0e8974e8654e-Slide4.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have the class read the rules of this game. The next slide includes these same instructions as a visual - consider asking a student volunteer to help demonstrate the game before allowing students to play.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "progression_name": "Lesson Recap"
+      },
+      "seeding_key": {
+        "activity_section.key": "85dd5500-cee3-41e3-b0fb-3e7c304f6f9a",
+        "lesson_activity.key": "f9dcc4ad-80f5-493a-9485-a4da3a86a87d"
+      }
+    },
+    {
+      "key": "9f2fa056-6e2c-4a22-bf4e-d967ae3c4807",
+      "position": 1,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o/export/png?id=1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o&pageid=g2b5b268c506_0_135\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have the class read the rules of this game. The next slide includes these same instructions as a visual - consider asking a student volunteer to help demonstrate the game before allowing students to play.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n   ",
+        "name": "Warm Up Option 1",
         "tips": [
           {
             "type": "teachingTip",
@@ -1956,15 +2004,15 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "bd8272fc-ca28-4512-8aba-1a385a6ed237",
-        "lesson_activity.key": "4737c50f-d694-4ea9-9e96-edcfdbff8d20"
+        "activity_section.key": "9f2fa056-6e2c-4a22-bf4e-d967ae3c4807",
+        "lesson_activity.key": "3342a5f0-4217-49c8-9d48-fd78ee762629"
       }
     },
     {
-      "key": "36626b02-4cfc-4e40-abe3-d463bb18135a",
-      "position": 3,
+      "key": "1dd132ec-c4e0-401f-9464-5d434a0d44c7",
+      "position": 2,
       "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/08de51d67fdc0bc449f738901f14b471-Slide5.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> These are the same instructions from the last slide, but in visual form. Consider modeling this process with students. Be sure to say explicitly that it’s very unlikely students will say the same word the first time, but that’s part of the point - from this starting position, they can start to plan their next words until they “converge” on a single word. After demonstrating, have students pair up and play the game and change partners a few times.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Encourage to play this game a few times. The classroom will likely look slightly chaotic, with a lot of talking and (hopefully) a lot of laughing. After a few minutes, regroup the class.\n\t\t<br />\n\t\t<br />(Optional) Share Out: Consider asking students to share out some of the word-sequences they went through with their partner (ie: which words they said first, then next and next and next until saying the same word). However, only do this if you have an extended class period - otherwise, continue with the lesson so students have time to complete the activity.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/ce334eb3cddb40496f392ae053feadb5-Slide6.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This exercise introduces this idea of “closeness” or “similarity” between words. At its core, it’s based on the idea that when you have an input of a single word…\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> you’re able to access additional information about that word in your head…\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> which then lets you think of similar words related to the one you started with…\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/2fe5dfc5d3aa658f6f9c63b56e9f7c71-Slide7.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> It turns out this is our next step in understanding how language models work. We learned in the last few lessons how language models use training data to recognize individual words. \n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> And the next step is to learn how models can group these words in a logical way.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o/export/png?id=1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o&pageid=g2c75fc3d83f_0_69\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> These are the same instructions from the last slide, but in visual form. Consider modeling this process with students. Be sure to say explicitly that it’s very unlikely students will say the same word the first time, but that’s part of the point - from this starting position, they can start to plan their next words until they “converge” on a single word. After demonstrating, have students pair up and play the game and change partners a few times.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Encourage to play this game a few times. The classroom will likely look slightly chaotic, with a lot of talking and (hopefully) a lot of laughing. After a few minutes, regroup the class.\n\t\t<br />\n\t\t<br />(Optional) Share Out: Consider asking students to share out some of the word-sequences they went through with their partner (ie: which words they said first, then next and next and next until saying the same word). However, only do this if you have an extended class period - otherwise, continue with the lesson so students have time to complete the activity.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o/export/png?id=1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o&pageid=g2c75fc3d83f_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This exercise introduces this idea of “closeness” or “similarity” between words. At its core, it’s based on the idea that when you have an input of a single word…\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> you’re able to access additional information about that word in your head…\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> which then lets you think of similar words related to the one you started with…\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o/export/png?id=1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o&pageid=g2c75fc3d83f_0_37\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> It turns out this is our next step in understanding how language models work. We learned in the last few lessons how language models use training data to recognize individual words. \n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> And the next step is to learn how models can group these words in a logical way.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1973,73 +2021,39 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "36626b02-4cfc-4e40-abe3-d463bb18135a",
-        "lesson_activity.key": "4737c50f-d694-4ea9-9e96-edcfdbff8d20"
+        "activity_section.key": "1dd132ec-c4e0-401f-9464-5d434a0d44c7",
+        "lesson_activity.key": "3342a5f0-4217-49c8-9d48-fd78ee762629"
       }
     },
     {
-      "key": "460b45f1-82c6-41cb-9866-bec1858bc0bd",
-      "position": 4,
+      "key": "2d6f1f2a-1d7a-45a1-9e6b-9d871885e566",
+      "position": 3,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/bbc2ac344f5e49095d11f8e200bfcc0a-Slide8.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today, we’ll learn about the special representation it uses for these words. This is what allows models to approximate the meaning of words and determine how “close” or similar words are to each other, just like we did in this warm-up.\n\t\t<br />\n\t\t<br /><strong>Question of the Day:</strong> How do computers represent the meanings of words?\n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o/export/png?id=1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o&pageid=g2b5b268c506_0_197\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today, we’ll learn about the special representation it uses for these words. This is what allows models to approximate the meaning of words and determine how “close” or similar words are to each other, just like we did in this warm-up.\n\t\t<br />\n\t\t<br /><strong>Question of the Day:</strong> How do computers represent the meanings of words?\n    </td>\n  </tr>\n\n</table>"
       },
       "seeding_key": {
-        "activity_section.key": "460b45f1-82c6-41cb-9866-bec1858bc0bd",
-        "lesson_activity.key": "4737c50f-d694-4ea9-9e96-edcfdbff8d20"
+        "activity_section.key": "2d6f1f2a-1d7a-45a1-9e6b-9d871885e566",
+        "lesson_activity.key": "3342a5f0-4217-49c8-9d48-fd78ee762629"
       }
     },
     {
-      "key": "ae121c8d-5e24-4c58-9a19-87e74f5b792b",
-      "position": 5,
+      "key": "701f7b0b-e9d6-4e99-9ea8-4aa5abc74927",
+      "position": 4,
       "properties": {
-        "description": "There are two options for warm-ups in this lesson. This first option is unplugged and involves students playing a game, requiring movement and lots of talking. The second activity involves playing a game from a website, with the option to have students play the game as well. Consider factors such as your classroom layout, access to devices, and whether or not you can access the website in the second warm-up when deciding which warm-up to choose.\n\nIf you choose this warm-up, skip or delete the previous slides associated with Warm Up 1",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o/export/png?id=1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o&pageid=g2c75fc3d83f_0_120\"></td>\n    <td style=\"width: 75%\">\n      <br />\n\t\t<br />There are two options for warm-ups in this lesson. This first option is unplugged and involves students playing a game, requiring movement and lots of talking. The second activity involves playing a game from a website, with the option to have students play the game as well. Consider factors such as your classroom layout, access to devices, and whether or not you can access the website in the second warm-up when deciding which warm-up to choose.\n\t\t<br />\n\t\t<br />If you choose this warm-up, skip or delete the previous slides associated with Warm Up 1\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o/export/png?id=1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o&pageid=g2c75fc3d83f_0_123\"></td>\n    <td style=\"width: 75%\">\n      Before Class: Have the <a href=\"https://research.google.com/semantris/\" target=\"_blank\">Semantris game</a> loaded on your computer. Consider having it displayed as students walk in instead of this slide.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Play the Semantris Arcade game as a class, with you driving the game while students shout out words to type in. After a few rounds, continue on with the lesson. A timer is supplied on the slide to help with time management.\n\t\t<br />\n\t\t<br />(Optional): If your class has easy access to devices, have students play this game on their own before continuing.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o/export/png?id=1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o&pageid=g2c75fc3d83f_0_168\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This exercise introduces this idea of “closeness” or “similarity” between words. At its core, it’s based on the idea that when you have an input of a single word…\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> you’re able to access additional information about that word in your head…\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> which then lets you think of similar words related to the one you started with…\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o/export/png?id=1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o&pageid=g2c75fc3d83f_0_202\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> It turns out this is our next step in understanding how language models work. We learned in the last few lessons how language models use training data to recognize individual words. \n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today, we’ll learn about the special representation it uses for these words. This is what allows models to approximate the meaning of words and determine how “close” or similar words are to each other, just like we did in this warm-up.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o/export/png?id=1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o&pageid=g2c75fc3d83f_0_225\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today, we’ll learn about the special representation it uses for these words. This is what allows models to approximate the meaning of words and determine how “close” or similar words are to each other, just like we did in this warm-up.\n\t\t<br />\n\t\t<br /><strong>Question of the Day:</strong> How do computers represent the meanings of words?\n    </td>\n  </tr>\n\n</table>",
+        "duration": "0",
         "name": "Warm Up Option 2"
       },
       "seeding_key": {
-        "activity_section.key": "ae121c8d-5e24-4c58-9a19-87e74f5b792b",
-        "lesson_activity.key": "4737c50f-d694-4ea9-9e96-edcfdbff8d20"
+        "activity_section.key": "701f7b0b-e9d6-4e99-9ea8-4aa5abc74927",
+        "lesson_activity.key": "3342a5f0-4217-49c8-9d48-fd78ee762629"
       }
     },
     {
-      "key": "fe4b8381-e60d-4655-9bd3-dc9b864fb455",
-      "position": 6,
-      "properties": {
-        "progression_name": "Warm Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "fe4b8381-e60d-4655-9bd3-dc9b864fb455",
-        "lesson_activity.key": "4737c50f-d694-4ea9-9e96-edcfdbff8d20"
-      }
-    },
-    {
-      "key": "b2acb471-0908-4a22-a49b-9c63c982a870",
-      "position": 7,
-      "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/4d024858c7d6168a452162932434e8cd-Slide10.PNG\"></td>\n    <td style=\"width: 75%\">\n      Before Class: Have the <a href=\"https://research.google.com/semantris/\">Semantris game</a> loaded on your computer. Consider having it displayed as students walk in instead of this slide.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Play the Semantris Arcade game as a class, with you driving the game while students shout out words to type in. After a few rounds, continue on with the lesson. A timer is supplied on the slide to help with time management.\n\t\t<br />\n\t\t<br />(Optional): If your class has easy access to devices, have students play this game on their own before continuing.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/675e30553af6384c9d1d49ad0b6341aa-Slide11.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This exercise introduces this idea of “closeness” or “similarity” between words. At its core, it’s based on the idea that when you have an input of a single word…\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> you’re able to access additional information about that word in your head…\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> which then lets you think of similar words related to the one you started with…\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/f1e22b8b589d337faf4aa7ad39728b9f-Slide12.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> It turns out this is our next step in understanding how language models work. We learned in the last few lessons how language models use training data to recognize individual words. \n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today, we’ll learn about the special representation it uses for these words. This is what allows models to approximate the meaning of words and determine how “close” or similar words are to each other, just like we did in this warm-up.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/91d0022db65c22fa49b23dd4d61cb9b0-Slide13.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today, we’ll learn about the special representation it uses for these words. This is what allows models to approximate the meaning of words and determine how “close” or similar words are to each other, just like we did in this warm-up.\n\t\t<br />\n\t\t<br /><strong>Question of the Day:</strong> How do computers represent the meanings of words?\n    </td>\n  </tr>\n\n</table>    \n    "
-      },
-      "seeding_key": {
-        "activity_section.key": "b2acb471-0908-4a22-a49b-9c63c982a870",
-        "lesson_activity.key": "4737c50f-d694-4ea9-9e96-edcfdbff8d20"
-      }
-    },
-    {
-      "key": "eede9d51-27e6-4d99-bd4b-b12cf97a56d8",
+      "key": "801008df-0ca6-4b50-adb6-5b49a1f9fa91",
       "position": 1,
       "properties": {
-        "name": "Student Levels",
-        "progression_name": "Embeddings Activity"
-      },
-      "seeding_key": {
-        "activity_section.key": "eede9d51-27e6-4d99-bd4b-b12cf97a56d8",
-        "lesson_activity.key": "dac8dbd3-1b7b-45d4-8e81-256554e0c3d0"
-      }
-    },
-    {
-      "key": "6ae647e9-1a02-4ba5-99c1-13d073aaff70",
-      "position": 2,
-      "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/db4c80f29ebd1d8053abb9cf4b2adb1f-Slide15.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> To help understand how words can be similar, we’re going to investigate a similar idea but with characters from stories or movies. We’ll be completing a “personality quiz” as different characters, and then comparing them to see which characters are the most similar or most different.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong>  Pass out a copy of the <a href=\"https://docs.google.com/document/d/1Ewl1eYGCYx8pHLPBJ2NK7DOH5aRuYN6QhsZvC9QBB8Y/edit\" target=\"_blank\">Character Quiz Activity Guide</a> to each student. Also give each student a marker or crayon - ideally, each student has a different color. They will use these tools to draw dots on the appropriate part of the scale from 0-10 on their activity guides. If you use colored pencils, make sure students make large, dark marks - this will be important for later in the activity.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/7bfb1e11ef1176fe826ce2d0e3beb7c2-Slide16.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Provide directions for students:\n\t\t<br />- Choose a character you are familiar with to fill out this form. Write this person’s name at the top of the activity guide.\n\t\t<br />- Use the colored pencil to place a mark on the scale to represent how your character aligns with each trait. \n\t\t<br />- Come up with two additional traits and add them to the bottom of the table.\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Students can also choose characters from television cartoons, or historical figures. If you know a book they are reading in ELA, you may suggest those characters. If students are having a hard time picking a character, encourage them to just fill out the character questionnaire for themselves. \n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
-        "name": "Teacher Guide",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o/export/png?id=1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o&pageid=gca418c6afa_0_1529\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> To help understand how words can be similar, we’re going to investigate a similar idea but with characters from stories or movies. We’ll be completing a “personality quiz” as different characters, and then comparing them to see which characters are the most similar or most different.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Direct students to Lesson 6, Level 2.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Follow the instructions for Part 1:\n\t\t<br />- Choose a character you are familiar with to fill out this form. Write this person's name at the top of the widget.\n\t\t<br />- Click the number for each trait to place a mark on the scale to represent how your character aligns with each trait.\n\t\t<br />- Come up with two additional traits and add them to the bottom of the list. For example: \"Light\" vs \"Dark\".\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Students can also choose characters from television cartoons, or historical figures. If you know a book they are reading in ELA, you may suggest those characters. If students are having a hard time picking a character, encourage them to just fill out the character questionnaire for themselves. \n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2048,49 +2062,49 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "6ae647e9-1a02-4ba5-99c1-13d073aaff70",
-        "lesson_activity.key": "dac8dbd3-1b7b-45d4-8e81-256554e0c3d0"
+        "activity_section.key": "801008df-0ca6-4b50-adb6-5b49a1f9fa91",
+        "lesson_activity.key": "cb4757a6-db53-4903-9b57-8b91c2f1fcc0"
       }
     },
     {
-      "key": "6098fce8-1bd8-4b07-b9c3-e670c5bfcbe1",
-      "position": 3,
+      "key": "148f10b0-900b-4189-b397-186fe5232954",
+      "position": 2,
       "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/b44045e26ae926218edd4495f05e9273-Slide17.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> So far, we’ve created a representation of our character based on their different traits. Now it’s time to compare our characters to others in the class. We’ll talk to at least 3 people to see how their characters compare with ours, numerically.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through the instructions. Students will:\n\t\t<br />- Walk around the room to find a classmate to share with\n\t\t<br />- Trade activity guides\n\t\t<br />- Fill out the other person’s questionnaire as your character\n\t\t<br />- Fill in the additional questions under the table to help with tracking\n\t\t<br />- Trade activity guides back\n\t\t<br />\n\t\t<br />The next slide has these same instructions as a visual.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o/export/png?id=1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o&pageid=g2c73112377f_0_15\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> So far, we’ve created a representation of our character based on their different traits. Now it’s time to compare our characters to others in the class. We’ll talk to at least 3 people to see how their characters compare with ours, numerically.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through the instructions. Students will:\n\t\t<br />- Walk around the room and find someone else's quiz to complete\n\t\t<br />- Complete their quiz as your character\n\t\t<br />- When you're done, press the \"Done! Next Character!\" button\n\t\t<br />- Continue filling out quizzes as your character\n\t\t<br />- When you return to your seat, press the \"Ready for Part 3\" button\n\t\t<br />\n\t\t<br />If possible, demonstrate this process with a volunteer from the class. Otherwise, reiterate this process for students. Once students understand, they can begin finding partners.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Make sure students are finding people to match up with. Students should try to find at least 3 different partners to compare with before regrouping. This stage of the activity may feel very straightforward, as students are essentially gathering data for the next part of the activity. Students may naturally start commenting on which characters are similar or different based on the data - if you hear this, ask students who they know and listen for explanations that use the “closeness” or “farness” of dots for each trait to justify their answers.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Teaching Tip: Printing Handouts** - This <a href=\"https://docs.google.com/document/d/1v-qtgULouDaxMlqOU3MLOwTziavWAd9fFw2wsLGCsw0/edit\" target=\"_blank\">Instructions Student Resource</a> includes the same instructions on this slide so students can reference them during the activity and to help with keeping track of their steps in the activity. If students aren’t participating in the first warm-up activity, consider just printing the instructions for this activity and cutting the sheets into fourths."
+            "markdown": "**Teaching Tip: Printing Handouts** - This <a href=\"https://docs.google.com/document/d/1xHW9NeIPYc2ttSUxbyfyb9EJ4ToKrsPnRv1irMSctOI/edit\" target=\"_blank\">Instructions Student Resource</a> includes the same instructions on this slide so students can reference them during the activity and to help with keeping track of their steps in the activity. If students aren’t participating in the first warm-up activity, consider just printing the instructions for this activity and cutting the sheets into fourths."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "6098fce8-1bd8-4b07-b9c3-e670c5bfcbe1",
-        "lesson_activity.key": "dac8dbd3-1b7b-45d4-8e81-256554e0c3d0"
+        "activity_section.key": "148f10b0-900b-4189-b397-186fe5232954",
+        "lesson_activity.key": "cb4757a6-db53-4903-9b57-8b91c2f1fcc0"
       }
     },
     {
-      "key": "2a8dba64-12e2-412a-a8f9-5bb908665a59",
-      "position": 4,
+      "key": "da613a22-4a92-427c-a803-ddbfc0d0dc97",
+      "position": 3,
       "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/97a775a9ff85c09c25e8c2dd9dbe57a3-Slide18.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> If possible, demonstrate this process with a volunteer from the class. Otherwise, reiterate this process for students. Once students understand, they can begin finding partners.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Make sure students are finding people to match up with. Students should try to find at least 3 different partners to compare with before regrouping. This stage of the activity may feel very straightforward, as students are essentially gathering data for the next part of the activity. Students may naturally start commenting on which characters are similar or different based on the data - if you hear this, ask students who they know and listen for explanations that use the “closeness” or “farness” of dots for each trait to justify their answers.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/bed5925cbfe2b9a80368293aa21cf84b-Slide19.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Kim and Hawa’s characters are represented on the slide. How similar are their characters? How do you know?\n\t\t<br />\n\t\t<br />Have students discuss in small groups before having a full-class discussion\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should be comparing the two characters row-by-row, noticing when dots are close together or far apart. Even though this isn’t explicit in the question, be sure to emphasize the specific traits that are close or far - for example, these two characters are on opposite ends of the good/bad spectrum, but are close in several other areas. Emphasize responses that are explicitly counting spaces between dots and comparing distances.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/6f25459796dd0ca711d19aa5fc61310c-Slide20.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students flip to the back of the activity guide. They will do a similar activity they was just completed as a class: decide how similar their character was to their classmates’ character based on the marks on the activity guide, and write their answers down.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Make sure students are on-task. If they need help deciding how similar characters are, you can encourage them to just count the distance between their marks and their classmates marks\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/8e5e1377acc689f550424253391643eb-Slide21.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> I’m changing up the format of the quiz - instead of using dots on a spectrum, now we just have raw numbers.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong>  Are these two characters similar?\n\t\t<br />\n\t\t<br />Have students respond with thumbs up/ thumbs down. It may take a while for students t\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Scan the class for student answers. Ask one student with their thumb up why they think these characters are similar. Students will probably think these numbers are all similar, even though none of them are the same. This means the characters are similar.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o/export/png?id=1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o&pageid=g2c2122e4e0a_0_59\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students review the data they've collected and answer the following questions either on a piece of paper or with a neighbor:\n\t\t<br />- For each character: which traits are close together? Which traits are far apart?\n\t\t<br />- Which character overall do you think you are \"most similar\" to?\n\t\t<br />- Which character overall do you think you are \"most different\" from?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Make sure students are on-task. There are no absolute \"right or wrong\" answers here - instead, this is a moment to process how these dots-and-scale representations can provide information about similarities or differences. If they need help deciding how similar characters are, you can encourage them to just count the distance between their marks and their classmates marks. Instead of regrouping for a class shareout, continue to the next slide to discuss a specific example instead.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o/export/png?id=1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o&pageid=g2c75fc3d83f_0_383\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Kim and Hawa’s characters are represented on the slide. How similar are their characters? How do you know?\n\t\t<br />\n\t\t<br />Have students discuss in small groups before having a full-class discussion\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should be comparing the two characters row-by-row, noticing when dots are close together or far apart. Even though this isn’t explicit in the question, be sure to emphasize the specific traits that are close or far - for example, these two characters are on opposite ends of the good/bad spectrum, but are close in several other areas. Emphasize responses that are explicitly counting spaces between dots and comparing distances.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o/export/png?id=1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o&pageid=g26b2e4bad44_1_89\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> I’m changing up the format of the quiz - instead of using dots on a spectrum, now we just have raw numbers.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong>  Are these two characters similar?\n\t\t<br />\n\t\t<br />Have students respond with thumbs up/ thumbs down. It may take a while for students to compare the numbers across each row.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Scan the class for student answers. Ask one student with their thumb up why they think these characters are similar. Students will probably think these numbers are all similar, even though none of them are the same. This means the characters are similar.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "**Assessment Opportunity:** This slide is meant to be a quick check for understanding for the entire class – hopefully after the activity students will recognize these characters as similar because they have similar numbers associated with individual traits, which would lead to most of the class having their thumbs up. If you see a mix of thumbs up/down, check that students are comparing across the same set of traits, and ensure students that “similar” doesn’t mean “identical” - it’s okay for numbers to be close but not exact.**"
+            "markdown": "**Assessment Opportunity:** This slide is meant to be a quick check for understanding for the entire class – hopefully after the activity students will recognize these characters as similar because they have similar numbers associated with individual traits, which would lead to most of the class having their thumbs up. If you see a mix of thumbs up/down, check that students are comparing across the same set of traits, and ensure students that “similar” doesn’t mean “identical” - it’s okay for numbers to be close but not exact."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "2a8dba64-12e2-412a-a8f9-5bb908665a59",
-        "lesson_activity.key": "dac8dbd3-1b7b-45d4-8e81-256554e0c3d0"
+        "activity_section.key": "da613a22-4a92-427c-a803-ddbfc0d0dc97",
+        "lesson_activity.key": "cb4757a6-db53-4903-9b57-8b91c2f1fcc0"
       }
     },
     {
-      "key": "fed3424c-5bdf-47f4-bcb3-671c64437074",
-      "position": 5,
+      "key": "2e00a21f-7b7c-4edb-a974-e07fede93f18",
+      "position": 4,
       "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/3d83c1f988e645b8de16c95ee6709055-Slide22.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> That last slide looked a little complicated trying to represent each trait. On this slide, we’ve condensed that to just a list of numbers, where each number represents a different trait from your character questionnaire. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Are these characters similar? How can you tell?\n\t\t<br />\n\t\t<br />Have students chat with a neighbor first, then repeat the thumbs up/down. Call on someone with their thumbs down to share their response.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should leave this discussion understanding that they can compare numbers in each position to determine how similar or different characters are. This can be done by comparing each number from left-to-right. Students may also get caught up on the lack of labels, asking “what does each position represent?”. This can lead to a powerful insight: it doesn’t matter what each position represents, only how close or far the numbers are in that same position. This is a key concept that helps us generalize the idea of “character traits” to other uses, which we’ll see in a few slides.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/50ac7b901a05baa59f702538f7a68615-Slide23.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Are these characters similar? How can you tell?\n\t\t<br />\n\t\t<br />Scan the room to see that students still have their thumbs up. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should still put their thumbs up for these characters being similar – we’ve gotten rid of the human-readable words, but left the computer-readable numbers. Humans can still look at these numbers and realize that they’re similar.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o/export/png?id=1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o&pageid=g2c2dc65d269_1_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> That last slide looked a little complicated trying to represent each trait. On this slide, we’ve condensed that to just a list of numbers, where each number represents a different trait from your character questionnaire. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Are these characters similar? How can you tell?\n\t\t<br />\n\t\t<br />Have students chat with a neighbor first, then repeat the thumbs up/down. Call on someone with their thumbs down to share their response.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should leave this discussion understanding that they can compare numbers in each position to determine how similar or different characters are. This can be done by comparing each number from left-to-right. Students may also get caught up on the lack of labels, asking “what does each position represent?”. This can lead to a powerful insight: it doesn’t matter what each position represents, only how close or far the numbers are in that same position. This is a key concept that helps us generalize the idea of “character traits” to other uses, which we’ll see in a few slides.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o/export/png?id=1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o&pageid=g2c2dc65d269_0_117\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Are these characters similar? How can you tell?\n\t\t<br />\n\t\t<br />Scan the room to see that students still have their thumbs up. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should still put their thumbs up for these characters being similar – we’ve gotten rid of the human-readable words, but left the computer-readable numbers. Humans can still look at these numbers and realize that they’re similar.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2099,15 +2113,15 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "fed3424c-5bdf-47f4-bcb3-671c64437074",
-        "lesson_activity.key": "dac8dbd3-1b7b-45d4-8e81-256554e0c3d0"
+        "activity_section.key": "2e00a21f-7b7c-4edb-a974-e07fede93f18",
+        "lesson_activity.key": "cb4757a6-db53-4903-9b57-8b91c2f1fcc0"
       }
     },
     {
-      "key": "e32c7d3f-c563-42dd-8c4c-c937eb653cb9",
-      "position": 6,
+      "key": "8117b5d5-4cf0-40c0-9452-308f2757b447",
+      "position": 5,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/07f30c419482319f144a82967d2ab0da-Slide24.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Are these characters similar? How can you tell?\n\t\t<br />\n\t\t<br />Scan the room for who has thumbs up or down; some may have their thumb halfway between; allow that.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Unlike the previous several questions, this question does not necessarily have one easy answer – while the first 3 numbers are far from each other the last two are exact. Call on a student with their thumb down, who will probably note that the first three numbers are very far apart, and validate that answer. Then call on someone with their thumb up, who will probably note that the last two are exact. Validate that answer as well. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Characters can be similar in different ways, that may be more or less important in a given situation – it’s context dependent. For example, if two characters have the same sense of humor, they may behave similarly in a comedy scene. But if those same characters happen to be the hero and the villain, those differences will appear in other ways in different types of situations.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/bb5a282720176b1d9727c10d1e2b3707-Slide25.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> There were only 5 traits we looked at for these characters. This means it’s possible that even though two personality quizzes have very similar traits, they’re actually different quizzes. They could even be very different from each other, but just happen to be similar with these specific traits.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> How many traits do you think you’d need to:\n\t\t<br />- Make sure your character is uniquely guess-able just by the numbers?\n\t\t<br />- Ensure that similar characters are truly similar in their stories and not just in this questionnaire?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Give some thought time, then take hands. There isn’t a specific number of traits these questions looking for, merely that the more traits you are keeping track of the more accurately you can describe the character – this should answer both questions. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This is why it’s important when describing concepts as numbers, to use a lot of numbers. Fewer numbers are less accurate.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/3ba96e16095cef2f270ed00c750dbe75-Slide26.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We’ve been talking about personality traits for different characters and using a list of numbers to represent those characters. It turns out we can do the same thing with words - using a list of numbers to represent the meaning of words! We're going to learn more about that in this video\n\t\t<br />\n\t\t<br /><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://www.youtube.com/watch?v=s1fhxAVpYx8\" target=\"_blank\">Generative AI: Storage + Embeddings</a>\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What are embeddings and what are they used for?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should recall what they heard in the video, but it's okay if their answers aren't 100% accurate since this will be reinforced in the next slide. Once a few students have shared, transition to the next slide to present the definition.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/170a15084c6c3ae34f619c8d0ff22954-Slide27.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Embeddings are the set of numbers used to represent a word in a large-language model. These numbers, when taken altogether and compared with other words, can be used to represent the meaning of words.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o/export/png?id=1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o&pageid=g2c2122e4e0a_0_24\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Are these characters similar? How can you tell?\n\t\t<br />\n\t\t<br />Scan the room for who has thumbs up or down; some may have their thumb halfway between; allow that.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Unlike the previous several questions, this question does not necessarily have one easy answer – while the first 3 numbers are far from each other the last two are exact. Call on a student with their thumb down, who will probably note that the first three numbers are very far apart, and validate that answer. Then call on someone with their thumb up, who will probably note that the last two are exact. Validate that answer as well. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Characters can be similar in different ways, that may be more or less important in a given situation – it’s context dependent. For example, if two characters have the same sense of humor, they may behave similarly in a comedy scene. But if those same characters happen to be the hero and the villain, those differences will appear in other ways in different types of situations.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o/export/png?id=1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o&pageid=g2c75fc3d83f_0_432\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> There were only 5 traits we looked at for these characters. This means it’s possible that even though two personality quizzes have very similar traits, they’re actually different quizzes. They could even be very different from each other, but just happen to be similar with these specific traits.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> How many traits do you think you’d need to:\n\t\t<br />- Make sure your character is uniquely guess-able just by the numbers?\n\t\t<br />- Ensure that similar characters are truly similar in their stories and not just in this questionnaire?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Give some thought time, then take hands. There isn’t a specific number of traits these questions looking for, merely that the more traits you are keeping track of the more accurately you can describe the character – this should answer both questions. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This is why it’s important when describing concepts as numbers, to use a lot of numbers. Fewer numbers are less accurate.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o/export/png?id=1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o&pageid=g2c73112377f_0_57\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We’ve been talking about personality traits for different characters and using a list of numbers to represent those characters. It turns out we can do the same thing with words - using a list of numbers to represent the meaning of words! We're going to learn more about that in this video\n\t\t<br />\n\t\t<br /><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://www.youtube.com/watch?v=s1fhxAVpYx8\" target=\"_blank\">Generative AI: Storage + Embeddings</a>\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What are embeddings and what are they used for?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should recall what they heard in the video, but it's okay if their answers aren't 100% accurate since this will be reinforced in the next slide. Once a few students have shared, transition to the next slide to present the definition.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o/export/png?id=1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o&pageid=g2c2122e4e0a_0_34\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Embeddings are the set of numbers used to represent a word in a large-language model. These numbers, when taken altogether and compared with other words, can be used to represent the meaning of words.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2116,41 +2130,30 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "e32c7d3f-c563-42dd-8c4c-c937eb653cb9",
-        "lesson_activity.key": "dac8dbd3-1b7b-45d4-8e81-256554e0c3d0"
+        "activity_section.key": "8117b5d5-4cf0-40c0-9452-308f2757b447",
+        "lesson_activity.key": "cb4757a6-db53-4903-9b57-8b91c2f1fcc0"
       }
     },
     {
-      "key": "d8826539-92e5-4736-8f12-b0fc6415fe8e",
-      "position": 7,
+      "key": "3a7319b5-88b9-4ea5-9343-b0bd53732c68",
+      "position": 6,
       "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/cc7151dd776c1c8464747939041a49ec-Slide28.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Take out your graphic organizer. Update the Storage section with an explanation of how a model represents words. Update the Embeddings section on the back as well\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Check in with students as they complete their graphic organizer and summarize their thoughts. It may be helpful to return to the previous slide so students can see the definition of Embeddings. There is no \"one right answer\" that should go in these boxes - instead, help students synthesize what they've learned in the lesson and seen in the video into their own words. Similarly, cue students to draw an illustration or a diagram representing this process. It's okay for it to be abstract, as long as the student understand what it means to them.\n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o/export/png?id=1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o&pageid=g2f4f30db91b_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Take out your graphic organizer. Update the Storage section with an explanation of how a model represents words. Update the Embeddings section on the back as well\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Check in with students as they complete their graphic organizer and summarize their thoughts. It may be helpful to return to the previous slide so students can see the definition of Embeddings. There is no \"one right answer\" that should go in these boxes - instead, help students synthesize what they've learned in the lesson and seen in the video into their own words. Similarly, cue students to draw an illustration or a diagram representing this process. It's okay for it to be abstract, as long as the student understand what it means to them.\n    </td>\n  </tr>\n\n</table>"
       },
       "seeding_key": {
-        "activity_section.key": "d8826539-92e5-4736-8f12-b0fc6415fe8e",
-        "lesson_activity.key": "dac8dbd3-1b7b-45d4-8e81-256554e0c3d0"
+        "activity_section.key": "3a7319b5-88b9-4ea5-9343-b0bd53732c68",
+        "lesson_activity.key": "cb4757a6-db53-4903-9b57-8b91c2f1fcc0"
       }
     },
     {
-      "key": "2794c88d-1ef5-4b78-9fc2-7473c3330795",
+      "key": "e3642bbb-90f4-4634-a4d9-7c524c5a176b",
       "position": 1,
       "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/d539c847ff42267b3ab8ae7a68ccc6d5-Slide30.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Imagine you have a friend who isn’t taking this class and they say “Chatbots are so magical - they know all these words that I've never seen before. How do they even do it? They must be way smarter than me”. What would you say in response?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This discussion is an opportunity to de-mystify how generative AI works. Students might try to clarify that the reason a chatbot knows so many words is because of all the pre-training it's been through. And the way it \"learns\" these words isn't really magical at all - it's just a bunch of numbers. Also encourage students to lead with empathy and reassure this person that even if they think the chatbot \"must be way smarter than me\", that's not necessarily true and once you understand how it works, it's just another piece of technology.\n\t\t<br />\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/0cea695ca0095d296aa6d12a3c6b0931-Slide31.PNG\"></td>\n    <td style=\"width: 75%\">\n      <strong>Question of the Day:</strong> How do computers represent the meanings of words?\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/8fe77147eecbc423c8e1662e5e896ff6-Slide32.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> The key vocabulary from this lesson is provided on this slide and in the lesson plan.\n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o/export/png?id=1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o&pageid=g2c73112377f_0_76\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Imagine you have a friend who isn’t taking this class and they say “Chatbots are so magical - they know all these words that I've never seen before. How do they even do it? They must be way smarter than me”. What would you say in response?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This discussion is an opportunity to de-mystify how generative AI works. Students might try to clarify that the reason a chatbot knows so many words is because of all the pre-training it's been through. And the way it \"learns\" these words isn't really magical at all - it's just a bunch of numbers. Also encourage students to lead with empathy and reassure this person that even if they think the chatbot \"must be way smarter than me\", that's not necessarily true and once you understand how it works, it's just another piece of technology.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o/export/png?id=1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o&pageid=g1b0012b9552_0_737\"></td>\n    <td style=\"width: 75%\">\n      <strong>Question of the Day:</strong> How do computers represent the meanings of words?\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o/export/png?id=1fFxWTlEYRiytSFSqyN54J57o7_zTyXluWlaI9sfCg6o&pageid=g2c2122e4e0a_0_48\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> The key vocabulary from this lesson is provided on this slide and in the lesson plan.\n    </td>\n  </tr>\n\n</table>"
       },
       "seeding_key": {
-        "activity_section.key": "2794c88d-1ef5-4b78-9fc2-7473c3330795",
-        "lesson_activity.key": "6cec371b-59e8-4af3-9cb7-debbe26ed74d"
-      }
-    },
-    {
-      "key": "18014aa7-81b3-49b7-aca4-a0ad02446cf2",
-      "position": 2,
-      "properties": {
-        "progression_name": "Lesson Recap"
-      },
-      "seeding_key": {
-        "activity_section.key": "18014aa7-81b3-49b7-aca4-a0ad02446cf2",
-        "lesson_activity.key": "6cec371b-59e8-4af3-9cb7-debbe26ed74d"
+        "activity_section.key": "e3642bbb-90f4-4634-a4d9-7c524c5a176b",
+        "lesson_activity.key": "3ff9353e-8ff6-48b6-b429-dbacb04508a8"
       }
     },
     {
@@ -3609,6 +3612,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-input-launch"
+        ],
         "progression": "Lesson Launch"
       },
       "bonus": false,
@@ -3931,10 +3937,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "genai-lesson4-warmup-level1_2025"
-        ],
-        "progression": "Warm Up"
+        "progression": "Warm Up (Option 2)"
       },
       "bonus": false,
       "seeding_key": {
@@ -3944,7 +3947,7 @@
         "lesson.key": "Understanding Embeddings",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "fe4b8381-e60d-4655-9bd3-dc9b864fb455"
+        "activity_section.key": "5983d91f-0ec3-4cf1-b5db-7362bedd96da"
       },
       "level_keys": [
         "genai-lesson4-warmup-level1_2025"
@@ -3956,10 +3959,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "genai-embeddings-widget_2025"
-        ],
-        "progression": "Embeddings Activity"
+        "progression": "Character Quiz"
       },
       "bonus": false,
       "seeding_key": {
@@ -3969,7 +3969,7 @@
         "lesson.key": "Understanding Embeddings",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "eede9d51-27e6-4d99-bd4b-b12cf97a56d8"
+        "activity_section.key": "7adb01a4-c013-4f6b-8e5f-a28d5f8e2c27"
       },
       "level_keys": [
         "genai-embeddings-widget_2025"
@@ -3981,9 +3981,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "gen-ai-student-level-L6"
-        ],
         "progression": "Lesson Recap"
       },
       "bonus": false,
@@ -3994,7 +3991,7 @@
         "lesson.key": "Understanding Embeddings",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "18014aa7-81b3-49b7-aca4-a0ad02446cf2"
+        "activity_section.key": "85dd5500-cee3-41e3-b0fb-3e7c304f6f9a"
       },
       "level_keys": [
         "gen-ai-student-level-L6"
@@ -4006,6 +4003,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-neural-networks-launch"
+        ],
         "progression": "Lesson Launch"
       },
       "bonus": false,
@@ -4403,6 +4403,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-demystifying-launch"
+        ],
         "progression": "Lesson Launch"
       },
       "bonus": false,
@@ -4425,6 +4428,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-student-level-L13"
+        ],
         "progression": "Lesson Recap"
       },
       "bonus": false,
@@ -4806,7 +4812,7 @@
         "lesson.key": "Understanding Embeddings",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "fe4b8381-e60d-4655-9bd3-dc9b864fb455"
+        "activity_section.key": "5983d91f-0ec3-4cf1-b5db-7362bedd96da"
       }
     },
     {
@@ -4818,7 +4824,7 @@
         "lesson.key": "Understanding Embeddings",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "eede9d51-27e6-4d99-bd4b-b12cf97a56d8"
+        "activity_section.key": "7adb01a4-c013-4f6b-8e5f-a28d5f8e2c27"
       }
     },
     {
@@ -4830,7 +4836,7 @@
         "lesson.key": "Understanding Embeddings",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "18014aa7-81b3-49b7-aca4-a0ad02446cf2"
+        "activity_section.key": "85dd5500-cee3-41e3-b0fb-3e7c304f6f9a"
       }
     },
     {
@@ -5223,19 +5229,6 @@
       }
     },
     {
-      "name": "[For Teachers] Activity Overview - Understanding Embeddings",
-      "url": "https://youtu.be/QjtYSpgiKXY",
-      "key": "_for_teachers_activity_overview_-_understanding_embeddings",
-      "properties": {
-        "audience": "Verified Teacher",
-        "download_url": "https://videos.code.org/levelbuilder/lesson_4_understanding_embeddings_v2-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "_for_teachers_activity_overview_-_understanding_embeddings"
-      }
-    },
-    {
       "name": "[For Teachers] Behind the Activity",
       "url": "https://docs.google.com/document/d/1r3bQUafEdjoN2flf-htXkO0iYCIBrW5-_NtQCQMoedU/edit",
       "key": "_for_teachers_behind_the_activity",
@@ -5449,19 +5442,6 @@
       },
       "seeding_key": {
         "resource.key": "careers_in_generative_ai"
-      }
-    },
-    {
-      "name": "Character Quiz",
-      "url": "https://docs.google.com/document/d/1Ewl1eYGCYx8pHLPBJ2NK7DOH5aRuYN6QhsZvC9QBB8Y/edit",
-      "key": "character_quiz",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "character_quiz"
       }
     },
     {
@@ -5779,7 +5759,7 @@
     },
     {
       "name": "Lesson Instructions",
-      "url": "https://docs.google.com/document/d/1v-qtgULouDaxMlqOU3MLOwTziavWAd9fFw2wsLGCsw0/edit",
+      "url": "https://docs.google.com/document/d/1xHW9NeIPYc2ttSUxbyfyb9EJ4ToKrsPnRv1irMSctOI/edit",
       "key": "lesson_instructions",
       "properties": {
         "audience": "Teacher",
@@ -6346,18 +6326,6 @@
     {
       "seeding_key": {
         "lesson.key": "Understanding Embeddings",
-        "resource.key": "_for_teachers_activity_overview_-_understanding_embeddings"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Understanding Embeddings",
-        "resource.key": "character_quiz"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Understanding Embeddings",
         "resource.key": "generative_ai_storage_embeddings"
       }
     },
@@ -6709,6 +6677,16 @@
       "seeding_key": {
         "lesson.key": "Introduction to Generative AI",
         "objective.key": "431679ee-ffca-40bf-bf76-efc086c71792"
+      }
+    },
+    {
+      "key": "4484b322-522d-472e-842d-58e41ae7b321",
+      "properties": {
+        "description": "Evaluate the accuracy of AI-generated responses by identifying hallucinations or misleading content."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "4484b322-522d-472e-842d-58e41ae7b321"
       }
     },
     {

@@ -8,7 +8,7 @@ markdown <<MARKDOWN
 
 <table style="width: 100%; margin: auto;">
 <tr style="border-bottom: 1px solid black;">
-    <td style="width: 80px; padding: 10px;"><img src="https://images.code.org/03707b4dbece73d7970dfefd10fc43cd-image-1736454374683.png" alt="Three people bunched together under a heart" style="width: 80px; height: 80px;"></td>
+    <td style="width: 80px; padding: 10px;"><img src="https://images.code.org/c90c4f8fc869c87d113a9060be327edf-image-1747949634762.png" alt="Icon of a gear with a checkmark in the center, surrounded by connected nodes, representing settings, system configuration, or process automation." style="width: 80px; height: 80px;"></td>
     <td style="font-size: 18px; font-weight: bold; padding: 20px 0;">What is a Function?</td>
     <td style="font-size: 18px; padding: 20px 0;">A function is like a chorus in a song—a set of steps you can use again and again. You write it once, and "call" it whenever needed.
 
@@ -62,5 +62,5 @@ markdown <<MARKDOWN
   
 #### 🧑‍🏫 Teacher Tip: Remind students that functions are defined once, but can be called many times.
 
-
+![]()
 MARKDOWN
