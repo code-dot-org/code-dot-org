@@ -44,6 +44,11 @@ RUN du -sh *
 # See: https://turbo.build/repo/docs/reference/prune
 RUN yarn dlx turbo prune @code-dot-org/marketing --docker
 
+# Clean up unused artifacts
+RUN df -h
+RUN rm -rf node_modules
+RUN df -h
+
 ##############################################################################
 # Builder Layer                                                              #
 #                                                                            #
