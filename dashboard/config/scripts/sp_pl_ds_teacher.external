@@ -16,7 +16,7 @@ markdown <<MARKDOWN
 <div style="display: flex; align-items: center; gap: 5px; width: 80%; margin: 20px auto;">
   <!-- Image -->
   <div style="flex: 1; text-align: center;">
-    <img src="https://images.code.org/7224577644d121fc104a54358f35fbc7-image-1734635672027.png" alt="Headshot of female teacher" style="height: 130px; border-radius: 10px;">
+   
   </div>
   <!-- Text Box -->
   <div style="flex: 3; background-color: #b2dee3; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
@@ -32,7 +32,7 @@ markdown <<MARKDOWN
 <div style="display: flex; align-items: center; gap: 5px; flex-direction: row-reverse; width: 80%; margin: 20px auto;">
   <!-- Image -->
   <div style="flex: 1; text-align: center;">
-    <img src="https://images.code.org/816ff87b33db0c70b73d663effdf9d35-image-1734635774943.png" alt="Teacher smiling at camera" style="height: 130px; border-radius: 10px;">
+   
   </div>
   <!-- Text Box -->
   <div style="flex: 3; background-color: #ffd199; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
@@ -48,7 +48,7 @@ markdown <<MARKDOWN
 <div style="display: flex; align-items: center; gap: 5px; width: 80%; margin: 20px auto;">
   <!-- Image -->
   <div style="flex: 1; text-align: center;">
-    <img src="https://images.code.org/975f5c4d0697ea6ac583777803008a86-image-1724092021325.png" alt="female teacher smiling at camera" style="height: 150px; border-radius: 10px;">
+
   </div>
   <!-- Text Box -->
   <div style="flex: 3; background-color: #f6a6a6; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">

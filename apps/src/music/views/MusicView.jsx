@@ -623,21 +623,33 @@ class UnconnectedMusicView extends React.Component {
       }
     }
 
-    // Remove any procedures that do not have definitions.
-    // This prevents extra call blocks from showing in the toolbox.
     if (e.type === Blockly.Events.FINISHED_LOADING) {
+      // Remove any procedures that do not have definitions.
+      // This prevents extra call blocks from showing in the toolbox.
       const workspace = this.musicBlocklyWorkspace.workspace;
       const procedureMap = workspace.getProcedureMap();
       procedureMap
         .getProcedures()
         .filter(p => !Blockly.Procedures.getDefinition(p.getName(), workspace))
         .forEach(p => procedureMap.delete(p.id));
+      // Adjust the position of any overlapping blocks, including immovable top blocks.
+      workspace.cleanUp(true);
     }
     // Update undo status when blocks change.
     this.props.setUndoStatus({
       canUndo: this.musicBlocklyWorkspace.canUndo(),
       canRedo: this.musicBlocklyWorkspace.canRedo(),
     });
+
+    if (e.type === Blockly.Events.SELECTED) {
+      if (
+        !this.props.isPlaying &&
+        e.newElementId !== this.props.selectedBlockId
+      ) {
+        this.props.selectBlockId(e.newElementId);
+      }
+      return;
+    }
 
     const codeChanged = this.compileSong();
     if (codeChanged) {
@@ -651,15 +663,6 @@ class UnconnectedMusicView extends React.Component {
       this.analyticsReporter.onBlocksUpdated(
         this.musicBlocklyWorkspace.getAllBlocks()
       );
-    }
-
-    if (e.type === Blockly.Events.SELECTED) {
-      if (
-        !this.props.isPlaying &&
-        e.newElementId !== this.props.selectedBlockId
-      ) {
-        this.props.selectBlockId(e.newElementId);
-      }
     }
 
     // This may no-op due to throttling.

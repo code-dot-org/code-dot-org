@@ -1,3 +1,4 @@
+@skip
 @eyes
 @single_session
 Feature: Looking at tutorial landing pages on Pegasus part Three

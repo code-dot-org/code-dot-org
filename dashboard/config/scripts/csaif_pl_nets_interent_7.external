@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Packets
 
-<img src="https://images.code.org/190860a0ca4dc068707fca0169af0296-0e6a8e59-b5d0-49bf-ab87-08ad9d5ba4d8.png" alt="Remember to chat responsibily pop-up" width="250px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
+<img src="https://images.code.org/190860a0ca4dc068707fca0169af0296-0e6a8e59-b5d0-49bf-ab87-08ad9d5ba4d8.png" alt="trucks on roads driving between computers" width="250px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
 
 #### When data is transmitted across the internet it is divided into **packets**. A packet travels from one place to another much like you might travel in a car - if there’s too much traffic or construction on one route you may take another one.
 
@@ -18,7 +18,11 @@ markdown <<MARKDOWN
 <br>
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>TCP/IP</strong> a protocol that ensures that all parts of a message are received and ordered correctly.</p>
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Transmission Control Protocol (TCP)</strong> a protocol that ensures that all parts of a message are received and ordered correctly.</p>
+</div>
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>User Datagram Protocol (UDP)</strong> is a protocol that focuses on speed and does not guarantee all packets arrive.</p>
 </div>
 
 <br>

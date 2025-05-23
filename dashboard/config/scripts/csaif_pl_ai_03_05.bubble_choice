@@ -1,6 +1,6 @@
 name 'csaif_pl_ai_03_05'
 display_name 'Reviewing Profiles'
-description 'Pick one of the levels below. Review the six profiles and select two people.'
+description 'Pick one of the levels below. Review the six profiles and select two people. In the next level you will compare your selections to ones made by AI Chat Lab to explore **bias**.'
 
 sublevels
 level 'problem-solving-with-ai-lesson6-level3a_2024'

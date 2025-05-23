@@ -4,6 +4,8 @@ import Snapshot, {
   SnapshotItem,
 } from '@code-dot-org/component-library/cms/snapshot';
 
+import {sortInAscendingOrder} from '../helpers';
+
 export interface CurriculumSnapshotProps {
   label: string;
   grades?: string[];
@@ -42,12 +44,12 @@ const CurriculumSnapshot: React.FunctionComponent<CurriculumSnapshotProps> = ({
         });
     };
 
-    addItem('Grades', 'user', grades);
+    addItem('Grades', 'user', grades?.slice().sort(sortInAscendingOrder));
     addItem('Level', 'arrow-up-wide-short', level);
     addItem('Duration', 'clock', duration);
     addItem('Devices', 'desktop', devices);
     addItem('Topics', 'book', topics);
-    addItem('Programming Tools', 'screwdriver-wrench', devTools);
+    addItem('Tools', 'screwdriver-wrench', devTools);
     addItem('Professional Learning', 'chalkboard-user', proLearning);
     addItem('Accessibility', 'universal-access', accessibility);
     addItem('Languages supported', 'language', languages);

@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Top Speed Graph",
-    "long_instructions": "###**Do This:**\r\n1. Analyze the provided histogram for the Roller Coaster dataset.\r\n2. Record your initial observations below.\r\n3. Move on to the next level to answer some more questions about your graph.\r\n\r\n\r\n**Roller Coaster Dataset**\r\n- [Roller Coaster Dataset](https://docs.google.com/spreadsheets/d/1lg67vrIpnXaCe7P-XjqLmf6x91UcEvB-Ikw_rpqJDG8/view?gid=1782593835#gid=1782593835)\r\n- [Roller Coaster Histogram](https://docs.google.com/spreadsheets/d/1lg67vrIpnXaCe7P-XjqLmf6x91UcEvB-Ikw_rpqJDG8/view?gid=257571425#gid=257571425)\r\n",
+    "long_instructions": "###**Do This:**\r\n1. Analyze the provided histogram for the Roller Coaster dataset.\r\n2. Record your initial observations below.\r\n3. Move on to the next level to answer some more questions about your graph.\r\n\r\n\r\n**Roller Coaster Dataset**\r\n- [Roller Coaster Dataset](https://docs.google.com/spreadsheets/d/1hZ9K6TX3CklY56b4NQAABD5UqYEEGBeP64UQQ7-OnvU/edit?gid=1782593835#gid=1782593835)\r\n- [Roller Coaster Histogram](https://docs.google.com/spreadsheets/d/1hZ9K6TX3CklY56b4NQAABD5UqYEEGBeP64UQQ7-OnvU/edit?gid=257571425#gid=257571425)\r\n",
     "teacher_markdown": "Analyze the provided histogram for the Roller Coaster dataset.\r\n",
     "allow_user_uploads": "false",
     "submittable": "false",
@@ -20,7 +20,7 @@
     "name_suffix": "_2025",
     "stay_on_level_after_submit": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-21T21:34:42.293+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson10-level1-v2\\\"\"],\"cloned_from\":\"data-science-ch1-lesson10-level1-v2\"},{\"changed_at\":\"2025-04-15 18:24:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-16 16:02:14 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-05-01 21:05:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-03-21T21:34:42.293+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson10-level1-v2\\\"\"],\"cloned_from\":\"data-science-ch1-lesson10-level1-v2\"},{\"changed_at\":\"2025-04-15 18:24:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-16 16:02:14 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-05-01 21:05:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-21 18:53:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

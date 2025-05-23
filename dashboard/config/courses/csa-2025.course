@@ -36,6 +36,16 @@
   },
   "resources": [
     {
+      "name": "25-26 Change Log",
+      "url": "https://docs.google.com/document/d/1kTf-T6FxM_zCPBQhFG0AdGme4VLfZQK1N7yX2YiXzas/edit?usp=sharing",
+      "key": "25-26_change_log",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "25-26_change_log"
+      }
+    },
+    {
       "name": "All Resources",
       "url": "/courses/csa-2025/resources",
       "key": "all_resources_17",

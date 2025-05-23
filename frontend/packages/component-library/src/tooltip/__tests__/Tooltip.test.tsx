@@ -37,42 +37,68 @@ describe('Design System - Tooltip', () => {
     // Tooltip should now be present
     expect(screen.getByText('tooltipText')).toBeInTheDocument();
   });
-});
 
-it('can hide the tooltip imperatively using the hideTooltip method', async () => {
-  const user = userEvent.setup();
+  it('can hide the tooltip imperatively using the hideTooltip method', async () => {
+    const user = userEvent.setup();
 
-  const TestComponent = () => {
-    const tooltipRef = useRef<WithTooltipHandle>(null);
+    const TestComponent = () => {
+      const tooltipRef = useRef<WithTooltipHandle>(null);
 
-    return (
-      <WithTooltip
-        ref={tooltipRef}
-        tooltipProps={{
-          tooltipId: 'tooltip1',
-          text: 'tooltipText',
-          direction: 'onTop',
-          size: 'm',
-        }}
-      >
-        <button type="button" onClick={() => tooltipRef.current?.hideTooltip()}>
-          hover me then click me
-        </button>
-      </WithTooltip>
-    );
-  };
+      return (
+        <WithTooltip
+          ref={tooltipRef}
+          tooltipProps={{
+            tooltipId: 'tooltip1',
+            text: 'tooltipText',
+            direction: 'onTop',
+            size: 'm',
+          }}
+        >
+          <button
+            type="button"
+            onClick={() => tooltipRef.current?.hideTooltip()}
+          >
+            hover me then click me
+          </button>
+        </WithTooltip>
+      );
+    };
 
-  render(<TestComponent />);
+    render(<TestComponent />);
 
-  const tooltipTrigger = screen.getByText('hover me then click me');
+    const tooltipTrigger = screen.getByText('hover me then click me');
 
-  // Hover to show the tooltip
-  await user.hover(tooltipTrigger);
-  expect(await screen.findByText('tooltipText')).toBeInTheDocument();
+    // Hover to show the tooltip
+    await user.hover(tooltipTrigger);
+    expect(await screen.findByText('tooltipText')).toBeInTheDocument();
 
-  // Click to hide tooltip via imperative ref.
-  await user.click(tooltipTrigger);
+    // Click to hide tooltip via imperative ref.
+    await user.click(tooltipTrigger);
 
-  // Tooltip should be removed
-  expect(screen.queryByText('tooltipText')).not.toBeInTheDocument();
+    // Tooltip should be removed
+    expect(screen.queryByText('tooltipText')).not.toBeInTheDocument();
+  });
+
+  it('applies the "noTail" class if hideTail prop is set to true', async () => {
+    const user = userEvent.setup();
+
+    // Tooltip without tail
+    renderWithTooltip({tooltipId: 'tooltipWithoutTail', hideTail: true});
+    const triggerWithoutTail = screen.getByText('hover me');
+    await user.hover(triggerWithoutTail);
+    const tooltipWithoutTail = await screen.findByRole('tooltip');
+    expect(tooltipWithoutTail.className).toMatch(/noTail/);
+  });
+
+  it('omits the "noTail" class if hideTail prop is not included', async () => {
+    const user = userEvent.setup();
+
+    // Tooltip with default tail (hideTail undefined)
+    renderWithTooltip({tooltipId: 'tooltipWithTail'});
+    const triggerWithTail = screen.getByText('hover me');
+    await user.hover(triggerWithTail);
+    const tooltipWithTail = await screen.findByRole('tooltip');
+
+    expect(tooltipWithTail.className).not.toMatch(/noTail/);
+  });
 });

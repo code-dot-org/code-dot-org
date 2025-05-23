@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "983ad7e9-fdbb-43cf-8b8a-2bd2853b812e",
+          "notice": "Insights from Data and AI Professional Development",
+          "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+          "link": "https://studio.code.org/s/self-paced-pl-teaching-aif6-2025/",
+          "type": "information",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Let’s Go!"
+        }
+      ],
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "AIF",
       "has_unnumbered_lessons": true,
@@ -23,7 +35,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-13 16:21:00 UTC",
+    "serialized_at": "2025-05-22 21:23:57 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -108,7 +121,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "**What is data science, and how can it be used?**\n\nThis is a survey lesson introducing students to all sorts of things data science can do. Students start with a pre-assessment asking them to find data in an image of a class pizza party, to introduce the concept of data and data science. Students then learn about a specific data scientist, who they will represent in conversations with their classmates. As they discuss with their classmates, they will learn about the other data scientists.",
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**What is data science, and how can it be used?**\n\nThis is a survey lesson introducing students to all sorts of things data science can do. Students start with a pre-assessment asking them to find data in an image of a class pizza party, to introduce the concept of data and data science. Students then learn about a specific data scientist, who they will represent in conversations with their classmates. As they discuss with their classmates, they will learn about the other data scientists.",
         "preparation": "* Provide copies of the Unit 1 Guided Notes for each student\n* Print copies of the Data Scientist Bingo Card (one for each student)\n* Print copies of the Data Scientists Tents (one for each student)\n* Gather several sticky notes (2-3 for each student)",
         "student_overview": "**What is data science, and how can it be used?**\n\nBecome an expert in a data scientist, what they do and their path to getting there. Then, represent that data scientist for the rest of the class, and learn about other data scientists."
       },
@@ -4053,6 +4066,31 @@
     },
     {
       "chapter": 4,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson1-level4_2025"
+        ],
+        "progression": "Data Scientists"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson1-level4_2025"
+        ],
+        "lesson.key": "Introduction to Data Science",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif6-2025",
+        "activity_section.key": "21b2dea4-a1f3-49a1-bdb3-504ecf3eb2c6"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson1-level4_2025"
+      ]
+    },
+    {
+      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4077,7 +4115,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4102,7 +4140,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4127,7 +4165,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4152,7 +4190,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4177,7 +4215,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4202,7 +4240,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4227,7 +4265,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4252,7 +4290,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4277,7 +4315,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4302,7 +4340,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4327,7 +4365,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4352,7 +4390,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4377,7 +4415,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4402,7 +4440,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4427,7 +4465,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4452,7 +4490,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4477,7 +4515,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4502,7 +4540,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4527,7 +4565,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4552,7 +4590,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4577,7 +4615,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4602,7 +4640,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4627,7 +4665,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4652,7 +4690,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4677,7 +4715,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4702,7 +4740,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4727,7 +4765,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4752,7 +4790,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4777,7 +4815,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4802,7 +4840,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4827,7 +4865,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4852,7 +4890,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4877,7 +4915,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4902,7 +4940,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4927,7 +4965,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4952,7 +4990,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4977,7 +5015,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5002,7 +5040,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5027,7 +5065,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5052,7 +5090,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5077,7 +5115,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5102,7 +5140,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5127,7 +5165,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5152,7 +5190,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -5177,7 +5215,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5202,7 +5240,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -5227,7 +5265,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -5252,7 +5290,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5277,7 +5315,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5302,7 +5340,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5327,7 +5365,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5352,7 +5390,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5377,7 +5415,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5402,7 +5440,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5427,7 +5465,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5482,6 +5520,18 @@
         "level.key": "data-science-ch1-lesson1-level2_2025",
         "script_level.level_keys": [
           "data-science-ch1-lesson1-level2_2025"
+        ],
+        "lesson.key": "Introduction to Data Science",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif6-2025",
+        "activity_section.key": "21b2dea4-a1f3-49a1-bdb3-504ecf3eb2c6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson1-level4_2025",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson1-level4_2025"
         ],
         "lesson.key": "Introduction to Data Science",
         "lesson_group.key": "lessonGroup-3",
@@ -6165,7 +6215,7 @@
   "resources": [
     {
       "name": "[EXEMPLAR] Crafting Stories with Data Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1FLI5T-NfXBatMNe5XE-ystfEG0HNM5aEoU_AuAxJzc4/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1T3wQ5pdFj8ou59eEiK4UZXWla6t7Ejc-_mOA8RWeb_E/edit?usp=drivesdk",
       "key": "_exemplar_crafting_stories_with_data_project_planning_guide",
       "properties": {
         "audience": "Verified Teacher",
@@ -6177,7 +6227,7 @@
     },
     {
       "name": "[KEY] Activity Guide - Data Interpretation",
-      "url": "https://docs.google.com/document/d/1xF87sS2PXuUoACQS13EXSe6x_ZDiNePrAa7huHNr788/",
+      "url": "https://docs.google.com/document/d/1gPRJTpPtM7-o4KvKFTgKejShMpyuza37XzO1xsVbl-0/edit?usp=drivesdk",
       "key": "_key_activity_guide_-_data_interpretation",
       "properties": {
         "audience": "Teacher",
@@ -6189,7 +6239,7 @@
     },
     {
       "name": "[KEY] Data Scientist Bingo",
-      "url": "https://docs.google.com/document/d/1arZXqs-PZbSe53kvNvl4wNgMmWDDit131wiblo5ImF0/view",
+      "url": "https://docs.google.com/document/d/1LUl_dJkknPlKygYySyFHu4ofnE5bZ3_-FX6zGg506Yw/edit?usp=drivesdk",
       "key": "_key_data_scientist_bingo",
       "properties": {
         "audience": "Verified Teacher",
@@ -6201,7 +6251,7 @@
     },
     {
       "name": "[KEY] Data Scientist Tents",
-      "url": "https://docs.google.com/document/d/1waRCDPwr37Q7NkcjK4OmtWNsgnFw4qCMRe-YL7a_Dos/view",
+      "url": "https://docs.google.com/document/d/1RhmnbO2-EGjRm9YoB0GhbPOyswlHOylO5rIr1lVZVP8/edit?usp=drivesdk",
       "key": "_key_data_scientist_tents",
       "properties": {
         "audience": "Verified Teacher",
@@ -6212,8 +6262,56 @@
       }
     },
     {
+      "name": "[KEY] Domestic House Cats Dataset",
+      "url": "https://docs.google.com/spreadsheets/d/17hS-xb-QQ34KU1uB_LZqS10bSU-7PG99jabZ5X4WzLw/edit?gid=0#gid=0",
+      "key": "_key_domestic_house_cats_dataset",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_domestic_house_cats_dataset"
+      }
+    },
+    {
+      "name": "[KEY] Granola Bars Dataset",
+      "url": "https://docs.google.com/spreadsheets/d/1e3C6tbpmSA2kfUHL4w03ocN15kcw9tQNaUk4SGb-2fw/edit?gid=500578523#gid=500578523",
+      "key": "_key_granola_bars_dataset",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_granola_bars_dataset"
+      }
+    },
+    {
+      "name": "[KEY] Mammal Lifespans Dataset",
+      "url": "https://docs.google.com/spreadsheets/d/1asOtDFNYOyQuGGV_HASwMQsmTUx0lUAvPl-cQ5Outh0/edit?gid=1808401824#gid=1808401824",
+      "key": "_key_mammal_lifespans_dataset",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_mammal_lifespans_dataset"
+      }
+    },
+    {
+      "name": "[KEY] Roller Coasters Dataset",
+      "url": "https://docs.google.com/spreadsheets/d/1-xPihHMHLv5FlFvSN5ZBdLVvh8Ue82vUqhvBJA92Kdg/edit?usp=sharing",
+      "key": "_key_roller_coaster_dataset",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_roller_coaster_dataset"
+      }
+    },
+    {
       "name": "[Optional] School Party Dataset",
-      "url": "https://docs.google.com/document/d/1nZypXZhpikdOsNHW7_i0hwvOC76EHd--PSOhV5xF4S0/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1qsQ0QgZyIIs6pWNCUP7N7TAoZXq7xfT6JTMAOunN5ig/edit?usp=drivesdk",
       "key": "_optional_school_party_dataset",
       "properties": {
         "audience": "Student",
@@ -6226,10 +6324,11 @@
     },
     {
       "name": "Activity Guide - Data Interpretation",
-      "url": "https://docs.google.com/document/d/16QeUhLDpKVBrIb4Uo61Ba3yAvKK-6Dn0OXmns2M1-N0/",
+      "url": "https://docs.google.com/document/d/1G31YGtWf2UADulbkbCcl0AONxlPuW0-qnVdlRaOC23w/edit?usp=drivesdk",
       "key": "activity_guide_-_data_interpretation",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -6248,40 +6347,40 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csaif6-2025/resources",
-      "key": "all_resources_1",
+      "url": "/s/aif6-2025/resources",
+      "key": "all_resources_7",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_1"
+        "resource.key": "all_resources_7"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/csaif6-2025/standards",
-      "key": "all_standards_1",
+      "url": "/s/aif6-2025/standards",
+      "key": "all_standards_7",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_1"
+        "resource.key": "all_standards_7"
       }
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/csaif6-2025/vocab",
-      "key": "all_vocabulary_1",
+      "url": "/s/aif6-2025/vocab",
+      "key": "all_vocabulary_7",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_vocabulary_1"
+        "resource.key": "all_vocabulary_7"
       }
     },
     {
       "name": "Anchor Charts in Data Science",
-      "url": "https://docs.google.com/document/d/1lHva75FXZmYRlubTIGvVgyT1PE36wgJDyfJGkhf_qo4/",
+      "url": "https://docs.google.com/document/d/1vbXbb8Yd3YQ7nIBgXO5IC9nFmRgeZmtNnLD6RzY2xUI/edit?tab=t.0",
       "key": "anchor_charts_in_data_science",
       "properties": {
         "audience": "Teacher",
@@ -6293,7 +6392,7 @@
     },
     {
       "name": "Answering a Data Question",
-      "url": "https://docs.google.com/document/d/1b8acFM8GLCR1U4LZays88VE6cJNKTVe78xUxIRo_EfM/view",
+      "url": "https://docs.google.com/document/d/1VQdAbsIQbaOy10GuB8Bz0cOIwyDdQxcC36ToJh6ji20/edit?usp=drivesdk",
       "key": "answering_a_data_question",
       "properties": {
         "audience": "Student",
@@ -6306,7 +6405,7 @@
     },
     {
       "name": "Cleaning Data",
-      "url": "https://docs.google.com/presentation/d/1Y_azIGJYuBFerX5UjFjDrjFwsPV7SuAU5-sd5n5TWSM/view",
+      "url": "https://docs.google.com/presentation/d/1It3QM-Ji8Yfz782pcBZAM3lb6fZBmqlSRfxhOxqg7w8/edit?usp=drivesdk",
       "key": "cleaning_data",
       "properties": {
         "audience": "Teacher",
@@ -6318,7 +6417,7 @@
     },
     {
       "name": "Crafting Stories with Data Project",
-      "url": "https://docs.google.com/presentation/d/1k58rMvqRdWNCBLv8YWgtVn8_68ckfGWxRKmLo3XL8iM/view",
+      "url": "https://docs.google.com/presentation/d/1GZLjmW5SsR9TzUAka208QpABs-3zSoK8Z58CqYcDupo/edit?usp=drivesdk",
       "key": "crafting_stories_with_data_project",
       "properties": {
         "audience": "Teacher",
@@ -6330,7 +6429,7 @@
     },
     {
       "name": "Crafting Stories with Data Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1wIqaBJxxyYquYiuWS2-CYN2zpSWA6mqI2j3S4cKHbvE/edit#heading=h.3gr1mqiax0ng",
+      "url": "https://docs.google.com/document/d/1JSShLxB5I7LzttGOn375gzDWGF3MEvRB87jC9eiK0Kw/edit?usp=drivesdk",
       "key": "crafting_stories_with_data_project_planning_guide",
       "properties": {
         "audience": "Student",
@@ -6343,7 +6442,7 @@
     },
     {
       "name": "Data Collection Methods",
-      "url": "https://docs.google.com/document/d/1i7H5FuiJ9wKRgHJVX94b7p0YqJwx5_YPQVJJD_HC75o/view",
+      "url": "https://docs.google.com/document/d/1893CI_1yVODybg1RhjUWWLGbbgTUQdGA4Cc7W7mZMcg/edit?usp=drivesdk",
       "key": "data_collection_methods",
       "properties": {
         "audience": "Student",
@@ -6356,7 +6455,7 @@
     },
     {
       "name": "Data Interpretation",
-      "url": "https://docs.google.com/presentation/d/1miYE3vdccvAFzf_OsVBFkFCsNcFMVLYQ-pJ-r6ugTCY/view",
+      "url": "https://docs.google.com/presentation/d/1RGFvlx8nTFw9b8EM7MD9QlbaZ50dr9UyhqDuyn3iEmo/edit?usp=drivesdk",
       "key": "data_interpretation",
       "properties": {
         "audience": "Teacher",
@@ -6368,7 +6467,7 @@
     },
     {
       "name": "[Optional] Data Question Peer Review",
-      "url": "https://docs.google.com/document/d/1A6tPg-WhJPmjYJMqKjUh3toQexGdsS0wjbQ52Otj430/view",
+      "url": "https://docs.google.com/document/d/18Kz1h-RBNDYveMR_wsx3_kUj2CrSPL8i76qiKzCTCU0/edit?usp=drivesdk",
       "key": "data_question_peer_review",
       "properties": {
         "audience": "Student",
@@ -6381,7 +6480,7 @@
     },
     {
       "name": "Data Rights",
-      "url": "https://docs.google.com/presentation/d/1sTd2QmpRPOZOCrz13wiRG7gMKgq5jLwfxZgIML7MqOY/view",
+      "url": "https://docs.google.com/presentation/d/1CWmz-VZuEvMXkJo8v3lXolSTjZ1UOenSjcOGcFaHJ1Q/edit?usp=drivesdk",
       "key": "data_rights",
       "properties": {
         "audience": "Teacher",
@@ -6393,7 +6492,7 @@
     },
     {
       "name": "Data Rights Exploration",
-      "url": "https://docs.google.com/document/d/1NB6nZdNyCksoK2DBQK42nTcHakn04TW9cQu9BMDYabg/view",
+      "url": "https://docs.google.com/document/d/1GMy2YGcfdAMnwj0Qyan6Cry4gKQJRrrBAfrr91rJ1vo/edit?usp=drivesdk",
       "key": "data_rights_exploration",
       "properties": {
         "audience": "Student",
@@ -6406,7 +6505,7 @@
     },
     {
       "name": "[Dataset] Data Science Salaries",
-      "url": "https://docs.google.com/spreadsheets/d/1VOIgI_fhXSwYI_pWyIXbEKaXlfFL3EaLdT-gfPhY-DY/edit?usp=drive_link",
+      "url": "https://docs.google.com/spreadsheets/d/19EuxGfPonPTrRxU35kiikW3rvyFmbucNUMp1wh48QXI/edit?usp=drivesdk",
       "key": "data_science_salaries",
       "properties": {
         "audience": "Student",
@@ -6418,7 +6517,7 @@
     },
     {
       "name": "Data Scientist Bingo",
-      "url": "https://docs.google.com/document/d/1AneTWDfmrXLWXQ_LSagemgSD_a8BRjFl5_FC-gx5ovU/view",
+      "url": "https://docs.google.com/document/d/1QdgItIwEbkHRFzsKeH83EpdODPmddEfIXmT3C7d8Krk/edit?usp=drivesdk",
       "key": "data_scientist_bingo",
       "properties": {
         "audience": "Student",
@@ -6431,7 +6530,7 @@
     },
     {
       "name": "Data Scientist Tents",
-      "url": "https://docs.google.com/document/d/14JzmWcfkAawz8KwRMuvRyDHmsNMQYF75n6kync1pTTA/view",
+      "url": "https://docs.google.com/document/d/1sfmdS0Ug9mowKWcDw5kSNNToZF1EHDTK5R9YzfN3xdY/edit?usp=drivesdk",
       "key": "data_scientist_tents",
       "properties": {
         "audience": "Student",
@@ -6443,7 +6542,7 @@
     },
     {
       "name": "Data Storytelling",
-      "url": "https://docs.google.com/presentation/d/1jSESaQ601E2A_aSetNhw8OemoY_tfkB26sZdZTzCCd4/view",
+      "url": "https://docs.google.com/presentation/d/1CWOZ7q12zw_EcwUFnidTU_UFg33mawkFlm7CDmmW41M/edit?usp=drivesdk",
       "key": "data_storytelling",
       "properties": {
         "audience": "Teacher",
@@ -6455,7 +6554,7 @@
     },
     {
       "name": "Data Storytelling",
-      "url": "https://docs.google.com/document/d/1g_HJAmgWJQsveP7fTI37PYebmE4bJl6j3VIZqkMm_cI/view",
+      "url": "https://docs.google.com/document/d/1chLjsS0e5NMnnmSjMcXaa1U87tcit9ruPpgxYXqRzC0/edit?usp=drivesdk",
       "key": "data_storytelling_1",
       "properties": {
         "audience": "Student",
@@ -6468,7 +6567,7 @@
     },
     {
       "name": "[EXEMPLAR] Data Visualizations",
-      "url": "https://docs.google.com/spreadsheets/d/1VgO-xv8i5cutT6ucZ8gLSTxsR-v8avZ0bhoiD4yrV_4/edit?usp=sharing",
+      "url": "https://docs.google.com/spreadsheets/d/12QRyg52oIdQHUuywa4xp-oVUDqzLGCkVOyGGYiUbm9w/edit?usp=drivesdk",
       "key": "data_visualizations",
       "properties": {
         "audience": "Teacher",
@@ -6480,7 +6579,7 @@
     },
     {
       "name": "[Dataset] Domestic House Cats",
-      "url": "https://docs.google.com/spreadsheets/d/1psomJCWm4YG1O-YAX31aD9nvY5h7ousCgTHQfLK1Z4A/edit?usp=drive_link",
+      "url": "https://docs.google.com/spreadsheets/d/1ANuZhH77nTzvx6DI5Pq5OnmVAno2dqef4OsihHwHD38/edit?usp=drivesdk",
       "key": "domestic_house_cats_dataset",
       "properties": {
         "audience": "Student",
@@ -6492,7 +6591,7 @@
     },
     {
       "name": "[Dataset] Earthquakes",
-      "url": "https://docs.google.com/spreadsheets/d/1uP7X-D1wKEzuSiB8SSimNVs88ivmm9fydr8yyPT6ioA/edit?usp=drive_link",
+      "url": "https://docs.google.com/spreadsheets/d/1R8mvoEGtJYkF9Xy4qyJ4goHwvuL7i20vqLVoZAPtTCE/edit?usp=drivesdk",
       "key": "earthquakes",
       "properties": {
         "audience": "Student",
@@ -6504,7 +6603,7 @@
     },
     {
       "name": "Effective Data Questions",
-      "url": "https://docs.google.com/presentation/d/1-5wOHz__mvmw2qo3XjTZVkSsIGVUcqLkCWvz8c29jps/view",
+      "url": "https://docs.google.com/presentation/d/14QcGIQEK2tu4yqurjXU5dSCpdwFdKS7Sfv2s3VMbJqU/edit?usp=drivesdk",
       "key": "effective_data_questions",
       "properties": {
         "audience": "Teacher",
@@ -6516,7 +6615,7 @@
     },
     {
       "name": "Ethical Data Collection",
-      "url": "https://docs.google.com/presentation/d/1FYs-gzPghKZ_tGGNbcMd0PAjIkwmcUB_yboJthp3tnw/view",
+      "url": "https://docs.google.com/presentation/d/1O6KKdwFNCpWrkLYD9UixqvqocZB8gbb7p-gyjYFbEzY/edit?usp=drivesdk",
       "key": "ethical_data_collection",
       "properties": {
         "audience": "Teacher",
@@ -6540,7 +6639,7 @@
     },
     {
       "name": "[Dataset] Four Elephant Seals",
-      "url": "https://docs.google.com/spreadsheets/d/12k4NhORPptNdieJahOTr3EYzR-ZZ2FVcEWWyZiTKhVw/edit?usp=drive_link",
+      "url": "https://docs.google.com/spreadsheets/d/1Mbba0hrRMipDTOHpYCwPwVhmvgnu6BcshhhO61E_lBw/edit?usp=drivesdk",
       "key": "four_elephant_seals",
       "properties": {
         "audience": "Student",
@@ -6552,7 +6651,7 @@
     },
     {
       "name": "[Dataset] Granola Bars",
-      "url": "https://docs.google.com/spreadsheets/d/12YiWs0DNGc40lMtNyiJIq6Zt7Uhf8D-9F9QK930mUEI/edit?usp=drive_link",
+      "url": "https://docs.google.com/spreadsheets/d/1kMoulARTE-QQrUeIb-hWKe8XmjqcuYP1OjNt91WJwtk/edit?usp=drivesdk",
       "key": "granola_bars_dataset",
       "properties": {
         "audience": "Student",
@@ -6564,7 +6663,7 @@
     },
     {
       "name": "Guide to Anchor Charts and Word Walls",
-      "url": "https://docs.google.com/document/d/1lHva75FXZmYRlubTIGvVgyT1PE36wgJDyfJGkhf_qo4/view",
+      "url": "https://docs.google.com/document/d/1vbXbb8Yd3YQ7nIBgXO5IC9nFmRgeZmtNnLD6RzY2xUI/edit?tab=t.0",
       "key": "guide_to_anchor_charts_and_word_walls",
       "properties": {
       },
@@ -6574,7 +6673,7 @@
     },
     {
       "name": "Guide to Language Routines",
-      "url": "https://docs.google.com/document/d/1B93Lzlo63VrBNjlc3puiujew8gtMFanxSdXx3lqzIrs/view",
+      "url": "https://docs.google.com/document/d/1NEDGIzE63FPpiE5Z0Nk9Qvf7kxn6POPpMFr_fcp3Z5M/edit?tab=t.0",
       "key": "guide_to_language_routines",
       "properties": {
       },
@@ -6596,7 +6695,7 @@
     },
     {
       "name": "Introduction to Data Science",
-      "url": "https://docs.google.com/presentation/d/1acl9tQ-KbC6hcWE8F-SJjuFbHt1TXasy9vJiqlVCj2o/view",
+      "url": "https://docs.google.com/presentation/d/1IzfzxF4S1cT-t4r5h8MBB1378duO71zzw5UVpcVJSM8/edit?usp=drivesdk",
       "key": "introduction_to_data_science",
       "properties": {
         "audience": "Teacher",
@@ -6608,7 +6707,7 @@
     },
     {
       "name": "Introduction to Data Visualization",
-      "url": "https://docs.google.com/presentation/d/10zr_gSpPmJlC9NLiPCX-UIekd1Jro8F6rQz2rzOveZk/view",
+      "url": "https://docs.google.com/presentation/d/140ALqMiulCvTSe_iiMQrHbVJEFgn3CW25VbQpC4hs0g/edit?usp=drivesdk",
       "key": "introduction_to_data_visualization",
       "properties": {
         "audience": "Teacher",
@@ -6620,7 +6719,7 @@
     },
     {
       "name": "Making Sense of Data",
-      "url": "https://docs.google.com/presentation/d/10zJojXHnkliOvtqmA_4NhcehIphxBL2ztO-hRcMOxfs/view",
+      "url": "https://docs.google.com/presentation/d/1IzfzxF4S1cT-t4r5h8MBB1378duO71zzw5UVpcVJSM8/edit?usp=drivesdk",
       "key": "making_sense_of_data",
       "properties": {
         "audience": "Teacher",
@@ -6632,7 +6731,7 @@
     },
     {
       "name": "Making Sense of Data - Pizza Dataset",
-      "url": "https://docs.google.com/spreadsheets/d/19C1INdm23V2PBKQROV66hHMIQTs_CTvMpbKaO2DtqfI/edit?usp=sharing",
+      "url": "https://docs.google.com/spreadsheets/d/1uoWX9N6D4q3nAGHUVoHY2ejHJH2WUVA9fFFtfdHUxJU/edit?usp=drivesdk",
       "key": "making_sense_of_data_-_pizza_dataset",
       "properties": {
         "audience": "Student",
@@ -6644,7 +6743,7 @@
     },
     {
       "name": "[Dataset] Mammal Lifespan",
-      "url": "https://docs.google.com/spreadsheets/d/1LJL1ELRLPyAsA-iG7grsWuBAiK5JemqqWqETLR3CYTc/edit?usp=drive_link",
+      "url": "https://docs.google.com/spreadsheets/d/1MyohTLHlAWzo-xEX9VkFuGlc1KaPa6wwxJBTDx88YUM/edit?usp=drivesdk",
       "key": "mammal_lifespans_dataset",
       "properties": {
         "audience": "Student",
@@ -6656,7 +6755,7 @@
     },
     {
       "name": "[Dataset] Mammals",
-      "url": "https://docs.google.com/spreadsheets/d/1aY2l5-Vab7DXpJzmj3LCwnLVu7BrxppHwY2FEvz3hdQ/edit?usp=drive_link",
+      "url": "https://docs.google.com/spreadsheets/d/1mHvH79skBmACsHKlfNidoDL6afpRgCSuuwumCZgC51U/edit?usp=drivesdk",
       "key": "mammals",
       "properties": {
         "audience": "Student",
@@ -6668,7 +6767,7 @@
     },
     {
       "name": "[Dataset] Micah's Room Dataset 1",
-      "url": "https://docs.google.com/spreadsheets/d/1Xu7BcsK5mff6Q-dgr3WeGLFPdLG5w6NXK5wxuO0wmoI/edit?usp=drive_link",
+      "url": "https://docs.google.com/spreadsheets/d/1oZySM0f07WWBQcFV6XL9Z6EDXd6NS2crRn0BiHeBPTo/edit?usp=drivesdk",
       "key": "micah_s_room_dataset_1",
       "properties": {
         "audience": "Student",
@@ -6680,7 +6779,7 @@
     },
     {
       "name": "[Dataset] Micah's Room Dataset 2",
-      "url": "https://docs.google.com/spreadsheets/d/1NMANXj87by_FNgs1OqzS_y-bEtfg-8ui83BFhIZ-Zfw/edit?usp=drive_link",
+      "url": "https://docs.google.com/spreadsheets/d/1sG_Z3RrmmEWOlsxN2IMNM1sP58smYqesecguBtblRNQ/edit?usp=drivesdk",
       "key": "micah_s_room_dataset_2",
       "properties": {
         "audience": "Student",
@@ -6692,7 +6791,7 @@
     },
     {
       "name": "[Dataset] Micah's Room Dataset 3",
-      "url": "https://docs.google.com/spreadsheets/d/1iYoCXOwAOMfvW2KRB90eS4gFm1B3aKhfcCUEsLkhdHQ/edit?usp=drive_link",
+      "url": "https://docs.google.com/spreadsheets/d/1tYJGjNbrAPuDEFnLxw4JdAiZSOr6vj46-D-kGFwVPHY/edit?usp=drivesdk",
       "key": "micah_s_room_dataset_3",
       "properties": {
         "audience": "Student",
@@ -6704,7 +6803,7 @@
     },
     {
       "name": "[Dataset] Micah's Room Dataset 4",
-      "url": "https://docs.google.com/spreadsheets/d/1PZAxC7sooK_U2769JW-hYhx_GpjNJ7zqVYaDMjs30Y0/edit?usp=drive_link",
+      "url": "https://docs.google.com/spreadsheets/d/13PTrN6QvdRMy4bGRudxJsD_NykH5tPHmgs2sMvP3O2I/edit?usp=drivesdk",
       "key": "micha_s_room_dataset_4",
       "properties": {
         "audience": "Student",
@@ -6716,7 +6815,7 @@
     },
     {
       "name": "More Visualization Techniques",
-      "url": "https://docs.google.com/presentation/d/1r06gRF-64qnEtmfF781Lns3ny9ODkW4jDyp3oUTlPyY/view",
+      "url": "https://docs.google.com/presentation/d/1hiSU7Esnmb-jjKjZZNlQY1vGPDpo9csuEip4q3xHt-A/edit?usp=drivesdk",
       "key": "more_visualization_techniques",
       "properties": {
         "audience": "Teacher",
@@ -6728,7 +6827,7 @@
     },
     {
       "name": "[Dataset] Movie Characters",
-      "url": "https://docs.google.com/spreadsheets/d/1Xt_ZQkvIAr8Bqx4ME-aqmKPEz9WW7saz84a6b4CatO4/edit?usp=drive_link",
+      "url": "https://docs.google.com/spreadsheets/d/1n5yyx0hbIKZuKMgF7UcTvRulhyAhRmJF41DJ415BK04/edit?usp=drivesdk",
       "key": "movie_characters",
       "properties": {
         "audience": "Student",
@@ -6740,7 +6839,7 @@
     },
     {
       "name": "[Dataset] PISA",
-      "url": "https://docs.google.com/spreadsheets/d/1ykscSyKjzQI3WtYdMwVyJWG1jtN_JGDN84bII7IzX7c/edit?usp=drive_link",
+      "url": "https://docs.google.com/spreadsheets/d/1WVXj1SYdGSjEuxhetVNOoBZqTh6NQjSeMWJA4MA5Kt8/edit?usp=drivesdk",
       "key": "pisa",
       "properties": {
         "audience": "Student",
@@ -6752,7 +6851,7 @@
     },
     {
       "name": "Pizza Party Survey Dataset",
-      "url": "https://docs.google.com/spreadsheets/d/1AlVNpxzypX82fNlPDxDEa5ww72J_G2kyfZ2sFJedBJA/view",
+      "url": "https://docs.google.com/spreadsheets/d/1-M2CvqfAqO3XB6LY4CaYuRFAx58MASvw25tIRoawSWk/edit?usp=drivesdk",
       "key": "pizza_party_survey_dataset",
       "properties": {
         "audience": "Student",
@@ -6764,7 +6863,7 @@
     },
     {
       "name": "[Dataset] Pizza Topping Survey",
-      "url": "https://docs.google.com/spreadsheets/d/1MMsZwVwDaGNSol6RMsQk9NklsYBtgQyiEIxuSwmykIA/edit?usp=drive_link",
+      "url": "https://docs.google.com/spreadsheets/d/1L8eYtlivLjxu3VY6oA1_e9LsI9hHDv3Lh9TT4tyOXUs/edit?usp=drivesdk",
       "key": "pizza_topping_survey_dataset",
       "properties": {
         "audience": "Student",
@@ -6776,7 +6875,7 @@
     },
     {
       "name": "Possible Questions",
-      "url": "https://docs.google.com/document/d/1IW9npsTXMycjHznEfWqY_J16z8ULBru-oyKU7Bd_ftI/view",
+      "url": "https://docs.google.com/document/d/1yC_KFiVfYK8euXZjkZiBXvewU6Ct08UkMHLWIzcYtmI/edit?usp=drivesdk",
       "key": "possible_questions",
       "properties": {
         "audience": "Student",
@@ -6789,7 +6888,7 @@
     },
     {
       "name": "Privacy Policy Statements",
-      "url": "https://docs.google.com/document/d/19LFF3McBNQqDq0u4BNrC9FOwpAdW32zqBivJ3kOTMxI/view",
+      "url": "https://docs.google.com/document/d/1mIjeXf86QkF6YMkutYYxGcOZuAchk2-109Ufz-m8wAA/edit?usp=drivesdk",
       "key": "privacy_policy_statements",
       "properties": {
         "audience": "Student",
@@ -6802,7 +6901,7 @@
     },
     {
       "name": "[Dataset] Roller Coasters",
-      "url": "https://docs.google.com/spreadsheets/d/1lg67vrIpnXaCe7P-XjqLmf6x91UcEvB-Ikw_rpqJDG8/edit?usp=drive_link",
+      "url": "https://docs.google.com/spreadsheets/d/1hZ9K6TX3CklY56b4NQAABD5UqYEEGBeP64UQQ7-OnvU/edit?usp=drivesdk",
       "key": "roller_coaster_dataset",
       "properties": {
         "audience": "Student",
@@ -6826,7 +6925,7 @@
     },
     {
       "name": "[Dataset] States' Education",
-      "url": "https://docs.google.com/spreadsheets/d/1ykscSyKjzQI3WtYdMwVyJWG1jtN_JGDN84bII7IzX7c/edit?usp=drive_link",
+      "url": "https://docs.google.com/spreadsheets/d/1D3jlwnWnFVdKX_59d2nRMNdxuTx5qqDV7z4XidvR9uY/edit?usp=drivesdk",
       "key": "states_education",
       "properties": {
         "audience": "Student",
@@ -6838,7 +6937,7 @@
     },
     {
       "name": "Insights from Data and AI Unit Guide",
-      "url": "https://docs.google.com/document/d/1XH9U-frBYMWbf_bSHtci02TuIPb-YmVhqXoQJYW7aVE/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1c5tjo_8CpnWJJMgW-5ineLV5BknwnGzecyJSqiYgILw/edit?usp=drivesdk",
       "key": "unit_guide",
       "properties": {
         "audience": "Student",
@@ -6850,7 +6949,7 @@
     },
     {
       "name": "Insights from Data and AI Unit Guide",
-      "url": "https://docs.google.com/document/d/1XH9U-frBYMWbf_bSHtci02TuIPb-YmVhqXoQJYW7aVE/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1c5tjo_8CpnWJJMgW-5ineLV5BknwnGzecyJSqiYgILw/edit?usp=drivesdk",
       "key": "unit_guide_1",
       "properties": {
       },
@@ -7217,6 +7316,30 @@
     {
       "seeding_key": {
         "lesson.key": "More Visualization Techniques",
+        "resource.key": "_key_domestic_house_cats_dataset"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "More Visualization Techniques",
+        "resource.key": "_key_granola_bars_dataset"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "More Visualization Techniques",
+        "resource.key": "_key_mammal_lifespans_dataset"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "More Visualization Techniques",
+        "resource.key": "_key_roller_coaster_dataset"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "More Visualization Techniques",
         "resource.key": "domestic_house_cats_dataset"
       }
     },
@@ -7266,19 +7389,19 @@
     },
     {
       "seeding_key": {
-        "resource.key": "all_resources_1",
+        "resource.key": "all_resources_7",
         "script.name": "aif6-2025"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards_1",
+        "resource.key": "all_standards_7",
         "script.name": "aif6-2025"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_vocabulary_1",
+        "resource.key": "all_vocabulary_7",
         "script.name": "aif6-2025"
       }
     },

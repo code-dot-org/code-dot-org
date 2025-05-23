@@ -22,7 +22,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-13 15:53:30 UTC",
+    "serialized_at": "2025-05-22 17:31:39 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7924,6 +7925,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page-csd6b_2025"
+        ],
         "progression": "End Of Unit Survey"
       },
       "bonus": false,
@@ -10006,6 +10010,7 @@
       "key": "functions_with_parameters",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/functionswithparameters-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -10042,6 +10047,7 @@
       "key": "if_statements_1",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/csd-u6-if-statements-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -10054,6 +10060,7 @@
       "key": "input_output_devices",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/computer_iosp_video-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -10497,6 +10504,7 @@
       "key": "the_counter_pattern_2",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/variables_shortened-mp4-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -10615,6 +10623,7 @@
       "key": "variables_1",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/csd-u6-variables-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {

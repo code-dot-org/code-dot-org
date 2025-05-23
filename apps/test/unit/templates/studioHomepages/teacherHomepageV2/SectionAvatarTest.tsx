@@ -2,11 +2,11 @@ import '@testing-library/jest-dom';
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 
-import SectionAvatar from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionAvatar';
+import SectionAvatar from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/sectionAvatars/SectionAvatar';
 
 describe('SectionAvatar', () => {
   const renderComponent = (color: number, emoji: number) => {
-    render(<SectionAvatar color={color} emoji={emoji} />);
+    render(<SectionAvatar color={color} emoji={emoji} size={'s'} />);
   };
 
   it('selects an avatar based on the seed number', () => {

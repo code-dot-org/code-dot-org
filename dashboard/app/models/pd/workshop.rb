@@ -74,11 +74,7 @@ class Pd::Workshop < ApplicationRecord
     # If true, our system will not send enrollees reminders related to this workshop.
     # If the subject is not in the MUST_SUPPRESS_EMAIL_SUBJECTS constant, this attribute
     # can be set to be true or false from the UI
-    'suppress_email',
-    # TODO: ACQ-3081
-    # temporary flag that skips some of the config based workshop validation if the
-    # flag indicating workshop is created or updated via the legacy form
-    'legacyForm2025'
+    'suppress_email'
   ]
 
   before_validation :sanitize_time_zone
@@ -86,24 +82,13 @@ class Pd::Workshop < ApplicationRecord
   validates_inclusion_of :course, in: COURSES
   validates :capacity, numericality: {only_integer: true, greater_than: 0, less_than: 10000}
   validates_length_of :notes, maximum: 65535
-  validates_length_of :location_name, :location_address, maximum: 255
   validate :sessions_must_start_on_separate_days
   validate :subject_must_be_valid_for_course
-  # TODO: ACQ-3081 remove on_map & funded validation when we are ready to remove the legacy form
-  validates_inclusion_of :on_map, in: [true, false], if: :legacyForm2025?
-  validates_inclusion_of :funded, in: [true, false], if: :legacyForm2025?
-  validates_inclusion_of :third_party_provider, in: %w(friday_institute), allow_nil: true
-  validate :not_funded_subjects_must_not_be_funded
   validate :valid_registration_link_format, if: :registration_link
+  validate :valid_grades
+  validate :config_validation
 
-  validate :config_validation, unless: :legacyForm2025?
-
-  validates :funding_type,
-    inclusion: {in: FUNDING_TYPES, if: :funded_csf?},
-    absence: {unless: :funded_csf?}
-
-  before_save :process_location, if: -> {location_address_changed?}
-  auto_strip_attributes :location_name, :location_address
+  before_create :set_registration_link
 
   before_save :assign_regional_partner, if: -> {organizer_id_changed? && !regional_partner_id?}
   def assign_regional_partner
@@ -123,14 +108,8 @@ class Pd::Workshop < ApplicationRecord
     end
   end
 
-  def not_funded_subjects_must_not_be_funded
-    if NOT_FUNDED_SUBJECTS.include?(subject) && funded?
-      errors.add :properties, 'Admin/Counselor - Welcome workshop must not be funded'
-    end
-  end
-
   def config_validation
-    config = Pd::SharedWorkshopConstants::WORKSHOP_COURSE_CONFIGS.find do |c|
+    config = WORKSHOP_COURSE_CONFIGS.find do |c|
       c[:label] == course
     end
 
@@ -162,6 +141,14 @@ class Pd::Workshop < ApplicationRecord
     end
   end
 
+  def valid_grades
+    return if grades.blank?
+    invalid_grades = Array(grades) - WORKSHOP_GRADE_LEVELS
+    if invalid_grades.any?
+      errors.add(:base, "Grade levels contains invalid grades: #{invalid_grades.join(', ')}")
+    end
+  end
+
   def valid_registration_link_format
     unless self.class.valid_url?(registration_link, true)
       errors.add(:registration_link, "is not a valid URL")
@@ -175,14 +162,20 @@ class Pd::Workshop < ApplicationRecord
   def format
     has_in_person_session = sessions.any? {|session| session.session_format == "in_person"}
     if virtual?
-      has_in_person_session ? Pd::SharedWorkshopConstants::WORKSHOP_FORMATS[:hybrid] : Pd::SharedWorkshopConstants::WORKSHOP_FORMATS[:virtual]
+      has_in_person_session ? WORKSHOP_FORMATS[:hybrid] : WORKSHOP_FORMATS[:virtual]
     else
-      Pd::SharedWorkshopConstants::WORKSHOP_FORMATS[:in_person]
+      WORKSHOP_FORMATS[:in_person]
     end
   end
 
   def sanitize_time_zone
     self.time_zone = time_zone.present? && ActiveSupport::TimeZone[time_zone].present? ? time_zone : nil
+  end
+
+  def set_registration_link
+    if [COURSE_CSD, COURSE_CSP, COURSE_CSA].include?(course) && local_summer?
+      self.registration_link = "/pd/application/teacher"
+    end
   end
 
   # Whether enrollment in this workshop requires an application
@@ -394,12 +387,16 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def friendly_name
-    start_time = sessions.empty? ? '' : sessions.first.start.strftime('%m/%d/%y')
+    first_session = sessions.first
+    start_time = first_session&.start&.strftime('%m/%d/%y')
+    session_location_name = first_session&.location_name
     course_title = name.presence || (subject ? "#{course} #{subject}" : course)
     course_title += ' workshop' unless course_title.downcase.end_with?('workshop')
 
     # Limit the friendly name to 255 chars
-    name = "#{course_title} on #{start_time} at #{location_name}"
+    name = course_title.to_s
+    name += " on #{start_time}" if start_time.present?
+    name += " at #{session_location_name}" if session_location_name.present?
     name += " in #{friendly_location}" if friendly_location.present?
     name[0...255]
   end
@@ -428,10 +425,10 @@ class Pd::Workshop < ApplicationRecord
   # 3. known variant of TBA or no location address at all: 'Location TBA'
   # 4. unprocessable location that is not TBA: use user-entered string
   def friendly_location
-    return 'Virtual Workshop' if location_address_virtual? || virtual?
-    return "#{location_city} #{location_state}" if processed_location
-    return 'Location TBA' if location_address_tba? || !location_address.presence
-    return location_address
+    return 'Virtual Workshop' if virtual?
+    first_session = sessions.first
+    return 'Location TBA' unless first_session&.location_address.presence
+    return first_session.location_address
   end
 
   # Returns date and location (only date if no location specified)
@@ -669,68 +666,6 @@ class Pd::Workshop < ApplicationRecord
     end
   end
 
-  def location_address_tba?
-    %w(tba tbd n/a).include?(location_address.try(:downcase))
-  end
-
-  def location_address_virtual?
-    ['virtual', 'virtual workshop'].include? location_address.try(:downcase)
-  end
-
-  def process_location
-    result = nil
-
-    unless location_address.blank? || location_address_tba? || location_address_virtual?
-      begin
-        Geocoder.with_errors do
-          # Geocoder can raise a number of errors including SocketError, with a common base of StandardError
-          # See https://github.com/alexreisner/geocoder#error-handling
-          Retryable.retryable(on: StandardError) do
-            result = Geocoder.search(location_address).try(:first)
-          end
-        end
-      rescue StandardError => exception
-        # Log geocoding errors to honeybadger but don't fail
-        Honeybadger.notify(exception,
-          error_message: 'Error geocoding workshop location_address',
-          context: {
-            pd_workshop_id: id,
-            location_address: location_address
-          }
-        )
-      end
-    end
-
-    unless result
-      self.processed_location = nil
-      return
-    end
-
-    self.processed_location = {
-      latitude: result.latitude,
-      longitude: result.longitude,
-      city: result.city,
-      state: result.state,
-      formatted_address: result.formatted_address
-    }.to_json
-  end
-
-  # Retrieve a single location value (like city or state) from the processed
-  # location hash. Attribute can be passed as a string or symbol
-  def get_processed_location_value(key)
-    return unless processed_location
-    location_hash = JSON.parse processed_location
-    location_hash[key.to_s]
-  end
-
-  def location_city
-    get_processed_location_value('city')
-  end
-
-  def location_state
-    get_processed_location_value('state')
-  end
-
   # Min number of days a teacher must attend for it to count.
   # @return [Integer]
   def min_attendance_days
@@ -776,10 +711,6 @@ class Pd::Workshop < ApplicationRecord
   # Note the latter part of the path is handled by React-Router on the client, and is not known by rails url helpers
   def workshop_dashboard_url
     Rails.application.routes.url_helpers.pd_workshop_dashboard_url + "/workshops/#{id}"
-  end
-
-  def associated_online_course
-    ::UnitGroup.find_by(name: WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]).try(:plc_course) if WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]
   end
 
   # Get all the teachers that have actually attended this workshop via the attendence.
@@ -858,10 +789,6 @@ class Pd::Workshop < ApplicationRecord
     course == COURSE_CSF && subject == SUBJECT_CSF_201
   end
 
-  def funded_csf?
-    course == COURSE_CSF && funded
-  end
-
   def future_or_current_teachercon_or_fit?
     [
       Pd::Workshop::SUBJECT_TEACHER_CON,
@@ -870,7 +797,11 @@ class Pd::Workshop < ApplicationRecord
       state != Pd::Workshop::STATE_ENDED
   end
 
+  # deprecated
   def funding_summary
+    # funded is no longer a required field
+    # new workshops will not have a funding_summary
+    return '' if funded.nil?
     (funded ? 'Yes' : 'No') + (funding_type.present? ? ": #{funding_type}" : '')
   end
 
@@ -1034,10 +965,42 @@ class Pd::Workshop < ApplicationRecord
       location_name: location_name,
       fee: fee,
       has_prereq: prereq.present?,
-      requires_application: require_application? || (regional_partner.present? && regional_partner.link_to_partner_application.present?),
-      custom_application_link: regional_partner&.link_to_partner_application,
+      description: description,
       custom_registration_link: registration_link,
       regional_partner_name: regional_partner&.name,
+    }
+  end
+
+  def summarize_for_marketing_page
+    facilitators_info = facilitators.map do |facilitator|
+      bio_file = pegasus_dir("sites.v3/code.org/views/workshop_affiliates/#{facilitator.id}_bio.md")
+      {
+        name: facilitator.name,
+        email: facilitator.email,
+        bio: File.exist?(bio_file) ? File.read(bio_file) : nil
+      }
+    end
+
+    {
+      id: id,
+      course: course_name,
+      subject: subject,
+      course_offerings: course_offerings&.map(&:display_name),
+      name: name,
+      capacity: capacity,
+      num_enrollments: enrollments ? enrollments.count : 0,
+      grade_levels: grades,
+      sessions: sessions&.map(&:session_info_for_calendar),
+      format: format,
+      location_name: location_name,
+      fee: fee,
+      prereq: prereq,
+      description: description,
+      notes: notes,
+      custom_registration_link: registration_link,
+      regional_partner_name: regional_partner&.name,
+      organizer: organizer&.slice(:name, :email),
+      facilitators: facilitators_info
     }
   end
 end

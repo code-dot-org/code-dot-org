@@ -899,6 +899,8 @@ Dashboard::Application.routes.draw do
       get 'workshop_dashboard/*path', to: 'workshop_dashboard#index'
       get 'workshop_dashboard', to: 'workshop_dashboard#index'
 
+      get 'workshops/:workshop_id', to: 'workshops#index'
+
       get 'misc_survey/thanks', to: 'misc_survey#thanks'
       get 'misc_survey/:form_tag', to: 'misc_survey#new'
       post 'misc_survey/submit', to: 'misc_survey#submit'
@@ -1007,6 +1009,8 @@ Dashboard::Application.routes.draw do
     get '/api/lock_status', to: 'api#lockable_state'
     get '/dashboardapi/script_structure/:script', to: 'api#script_structure'
     get '/api/script_structure/:script', to: 'api#script_structure'
+    get '/dashboardapi/script_structure/courses/:course_name/units/:unit_position', to: 'api#script_structure'
+    get '/api/script_structure/courses/:course_name/units/:unit_position', to: 'api#script_structure'
     get '/dashboardapi/script_standards/:script', to: 'api#script_standards'
     get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
     get '/api/teacher_panel_progress/:section_id', to: 'api#teacher_panel_progress'

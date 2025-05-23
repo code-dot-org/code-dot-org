@@ -163,7 +163,7 @@
         {
           "type": "radiogroup",
           "name": "first_self_paced_pl",
-          "title": "Is this your first self-paced professional learning experience for teaching Code.org's AI and Computer Science curriculum?",
+          "title": "Is this your first time taking a Code.org self-paced professional learning experience?",
           "choices": [
             {
               "value": "yes",

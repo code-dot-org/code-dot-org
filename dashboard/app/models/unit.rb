@@ -701,8 +701,12 @@ class Unit < ApplicationRecord
     latest_assigned_version.link
   end
 
-  def link
-    Rails.application.routes.url_helpers.script_path(self)
+  def link(unit_group_unit: nil)
+    unit_path = script_path(self)
+    if Policies::Courses.modularity_enabled? && unit_group_unit
+      unit_path = course_unit_path(unit_group_unit.unit_group, unit_group_unit.position)
+    end
+    unit_path
   end
 
   # @param user [User]
@@ -988,7 +992,7 @@ class Unit < ApplicationRecord
     script_levels[chapter - 1] # order is by chapter
   end
 
-  def get_bonus_script_levels(current_lesson)
+  def get_bonus_script_levels(current_lesson, unit_group_unit: nil)
     unless @all_bonus_script_levels
       @all_bonus_script_levels = lessons.map do |lesson|
         {
@@ -1007,7 +1011,7 @@ class Unit < ApplicationRecord
     summarized_lesson_levels = lesson_levels.map do |lesson|
       {
         lessonNumber: lesson[:lessonNumber],
-        levels: lesson[:levels].map(&:summarize_as_bonus)
+        levels: lesson[:levels].map {|l| l.summarize_as_bonus(unit_group_unit: unit_group_unit)}
       }
     end
     summarized_lesson_levels
@@ -1487,10 +1491,13 @@ class Unit < ApplicationRecord
     end
   end
 
-  def finish_url
+  def finish_url(unit_group_unit: nil)
     return hoc_finish_url if hoc?
     return csf_finish_url if csf?
-    return CDO.code_org_url "/congrats/#{unit_group.name}" if unit_group
+    course = unit_group_unit&.unit_group || unit_group
+    if course
+      return CDO.code_org_url "/congrats/#{course.name}"
+    end
     CDO.code_org_url "/congrats/#{name}"
   end
 
@@ -1512,7 +1519,7 @@ class Unit < ApplicationRecord
     get_published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
-  def summarize(include_lessons = true, user = nil, include_bonus_levels = false, locale_code = 'en-us')
+  def summarize(include_lessons = true, user = nil, include_bonus_levels = false, locale_code = 'en-us', unit_group_unit: nil)
     ActiveRecord::Base.connected_to(role: :reading) do
       # TODO: Set up peer reviews to be more consistent with the rest of the system
       # so that they don't need a bunch of one off cases (example peer reviews
@@ -1539,7 +1546,7 @@ class Unit < ApplicationRecord
         }
       end
 
-      has_older_course_progress = unit_group.try(:has_older_version_progress?, user)
+      has_older_course_progress = unit_group_unit&.cached_unit_group.try(:has_older_version_progress?, user)
       has_older_unit_progress = has_older_version_progress?(user)
       user_unit = user && user_scripts.find_by(user: user)
 
@@ -1547,13 +1554,18 @@ class Unit < ApplicationRecord
       # that assigned it.
       assigned_section_id = user&.assigned_script?(self) ? user.section_for_script(self)&.id : nil
 
+      unit_path = script_path(self)
+      if Policies::Courses.modularity_enabled? && unit_group_unit
+        unit_path = course_unit_path(unit_group_unit.cached_unit_group, unit_group_unit.position)
+      end
+
       summary = {
         id: id,
         name: name,
         title: title_for_display,
         description: Services::MarkdownPreprocessor.process(localized_description),
         studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
-        course_id: unit_group.try(:id),
+        course_id: unit_group_unit&.cached_unit_group&.id,
         hide_within_course: hide_within_course,
         publishedState: get_published_state,
         instructionType: get_instruction_type,
@@ -1580,7 +1592,7 @@ class Unit < ApplicationRecord
         curriculum_path: curriculum_path,
         announcements: localized_announcements,
         age_13_required: logged_out_age_13_required?,
-        show_course_unit_version_warning: !unit_group&.has_dismissed_version_warning?(user) && has_older_course_progress,
+        show_course_unit_version_warning: !unit_group_unit&.cached_unit_group&.has_dismissed_version_warning?(user) && has_older_course_progress,
         show_script_version_warning: !user_unit&.version_warning_dismissed && !has_older_course_progress && has_older_unit_progress,
         course_versions: summarize_course_versions(user, locale_code),
         supported_locales: supported_locales,
@@ -1591,14 +1603,14 @@ class Unit < ApplicationRecord
         project_sharing: project_sharing,
         curriculum_umbrella: curriculum_umbrella,
         family_name: family_name,
-        version_year: unit_group&.version_year || version_year,
+        version_year: unit_group_unit&.cached_unit_group&.version_year || version_year,
         assigned_section_id: assigned_section_id,
         hasStandards: has_standards_associations?,
         tts: tts?,
         deprecated: deprecated?,
         is_course: is_course?,
         is_migrated: is_migrated?,
-        scriptPath: script_path(self),
+        scriptPath: unit_path,
         showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated units for now
         weeklyInstructionalMinutes: weekly_instructional_minutes,
         includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
@@ -1616,10 +1628,10 @@ class Unit < ApplicationRecord
 
       #TODO: lessons should be summarized through lesson groups in the future
       summary[:lessonGroups] = lesson_groups.map(&:summarize)
-      summary[:lessons] = lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
+      summary[:lessons] = lessons.map {|lesson| lesson.summarize(include_bonus_levels, unit_group_unit: unit_group_unit)} if include_lessons
       summary[:deeperLearningCourse] = professional_learning_course if old_professional_learning_course?
       summary[:wrapupVideo] = wrapup_video.key if wrapup_video
-      summary[:calendarLessons] = lessons.map(&:summarize_for_calendar)
+      summary[:calendarLessons] = lessons.map {|lesson| lesson.summarize_for_calendar(unit_group_unit: unit_group_unit)}
 
       summary
     end
@@ -1629,36 +1641,48 @@ class Unit < ApplicationRecord
     lessons.none?(&:has_lesson_plan)
   end
 
-  def summarize_for_lesson_materials_view(user)
+  def summarize_for_lesson_materials_view(user, unit_group_unit: nil)
+    unit_position = unit_number
+    has_numbered_units = unit_group&.has_numbered_units?
+    course_version_year = unit_group&.version_year || version_year
+    if unit_group_unit
+      unit_position = unit_group_unit.position
+      has_numbered_units = unit_group_unit.unit_group.has_numbered_units?
+      course_version_year = unit_group_unit.unit_group.version_year || version_year
+    end
     summary = {
       unitId: id,
       title: title_for_display,
       name: name,
-      unitNumber: unit_number,
+      unitNumber: unit_position,
       unitName: title_for_display,
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
       scriptResourcesPdfUrl: get_unit_resources_pdf_url,
       teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
-      hasNumberedUnits: unit_group&.has_numbered_units?,
+      hasNumberedUnits: has_numbered_units,
       hasUnnumberedLessons: has_unnumbered_lessons?,
-      versionYear: unit_group&.version_year || version_year,
+      versionYear: course_version_year,
     }
     # Only get lessons with lesson plans
-    summary[:lessons] = lessons.map {|lesson| lesson.summarize_for_lesson_materials(user)}
+    summary[:lessons] = lessons.map {|lesson| lesson.summarize_for_lesson_materials(user, unit_group_unit: unit_group_unit)}
 
     summary
   end
 
-  def summarize_for_rollup(user = nil)
+  def summarize_for_rollup(user = nil, unit_group_unit: nil)
+    link_path = script_path(self)
+    if Policies::Courses.modularity_enabled? && unit_group_unit
+      link_path = course_unit_path(unit_group_unit.unit_group, unit_group_unit.position)
+    end
     summary = {
       title: title_for_display,
       name: name,
-      link: script_path(self)
+      link: link_path
     }
     # Only get lessons with lesson plans
     filtered_lessons = lessons.select(&:has_lesson_plan)
-    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize_for_rollup(user)}
+    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize_for_rollup(user, unit_group_unit: unit_group_unit)}
 
     summary
   end
@@ -1706,7 +1730,7 @@ class Unit < ApplicationRecord
 
   # Similar to summarize, but returns an even more narrow set of fields, restricted
   # to those needed in header.html.haml
-  def summarize_header
+  def summarize_header(unit_group_unit: nil)
     {
       name: name,
       displayName: title_for_display,
@@ -1715,14 +1739,16 @@ class Unit < ApplicationRecord
       age_13_required: logged_out_age_13_required?,
       show_sign_in_callout: csf? || csc?,
       hasUnnumberedLessons: has_unnumbered_lessons?,
+      course_name: unit_group_unit&.unit_group&.name,
+      unit_position: unit_group_unit&.position,
     }
   end
 
-  def summarize_for_lesson_show(is_student = false)
+  def summarize_for_lesson_show(is_student = false, unit_group_unit: nil)
     {
       displayName: title_for_display,
-      link: link,
-      lessonGroups: lesson_groups.select {|lg| lg.lessons.any?(&:has_lesson_plan)}.map {|lg| lg.summarize_for_lesson_dropdown(is_student)},
+      link: link(unit_group_unit: unit_group_unit),
+      lessonGroups: lesson_groups.select {|lg| lg.lessons.any?(&:has_lesson_plan)}.map {|lg| lg.summarize_for_lesson_dropdown(is_student, unit_group_unit: unit_group_unit)},
       publishedState: get_published_state,
       hasUnnumberedLessons: has_unnumbered_lessons?,
     }
@@ -1905,6 +1931,8 @@ class Unit < ApplicationRecord
 
   # A unit is considered to have a matching course if there is at least one
   # unit_group for this unit
+  # @deprecated - This method should no longer be used. This from a time when
+  # Units could only be in max 1 UnitGroup.
   def unit_group
     # rubocop:disable Style/ZeroLengthPredicate
     return nil if unit_group_units.length < 1
@@ -1950,19 +1978,6 @@ class Unit < ApplicationRecord
     pilot_experiment || unit_group&.pilot_experiment
   end
 
-  # @return {String|nil} path to the course overview page for this unit if there
-  #   is one.
-  def course_link(section_id = nil)
-    return nil unless unit_group
-    path = course_path(unit_group)
-    path += "?section_id=#{section_id}" if section_id
-    path
-  end
-
-  def course_title
-    unit_group.try(:localized_title)
-  end
-
   def unversioned?
     version_year.blank? || version_year == CourseVersion::UNVERSIONED
   end
@@ -1971,25 +1986,26 @@ class Unit < ApplicationRecord
     unit_ids.include? id
   end
 
-  def summarize_for_unit_selector
+  def summarize_for_unit_selector(unit_group_unit: nil)
+    unit_group_unit ||= unit_group_units&.first
     {
       id: id,
       key: name,
       version_year: version_year,
       name: launched? ? localized_title : localized_title + " *",
-      position: unit_group_units&.first&.position,
+      position: unit_group_unit&.position,
       description: localized_description ? Services::MarkdownPreprocessor.process(localized_description) : nil,
       is_feedback_enabled: teacher_feedback_enabled?
     }
   end
 
-  def summarize_for_assignment_dropdown
+  def summarize_for_assignment_dropdown(unit_group_unit: nil)
     [
       id,
       {
         id: id,
         name: launched? ? localized_title : localized_title + " *",
-        path: link,
+        path: link(unit_group_unit: unit_group_unit),
         lesson_extras_available: lesson_extras_available?,
         text_to_speech_enabled: text_to_speech_enabled?,
         position: unit_group_units&.first&.position,

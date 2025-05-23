@@ -1,0 +1,548 @@
+{
+  "script": {
+    "name": "self-paced-pl-teaching-aif1-2025",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "self_paced_pl_9_12",
+      "curriculum_umbrella": "Self-paced PL - AIF",
+      "is_migrated": true,
+      "topic_tags": [
+        "ai"
+      ],
+      "version_year": "2025"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-05-23 01:54:52 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-teaching-aif1-2025"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif1-2025"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Teaching Problem Solving with AI",
+      "name": "Teaching Problem Solving with AI",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**In this lesson,  you will:** \n\n- Get an overview of the Problem Solving with AI curriculum and resources.\n\n**Suggested Time:** 10 minutes ",
+        "student_overview": "**In this lesson,  you will:** \n\n- Get an overview of the Problem Solving with AI curriculum and resources.\n\n**Suggested Time:** 10 minutes "
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif1-2025"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "1ec85c0e-df14-45d5-877b-b9c38b3104ec",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1ec85c0e-df14-45d5-877b-b9c38b3104ec",
+        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif1-2025"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "91e138d4-96a6-4bdb-80f8-0012a7ee4247",
+      "position": 1,
+      "properties": {
+        "progression_name": "Course Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "91e138d4-96a6-4bdb-80f8-0012a7ee4247",
+        "lesson_activity.key": "1ec85c0e-df14-45d5-877b-b9c38b3104ec"
+      }
+    },
+    {
+      "key": "50d61bc8-29d8-4eb5-81e8-dcffddc100b4",
+      "position": 2,
+      "properties": {
+        "progression_name": "Intro to AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "50d61bc8-29d8-4eb5-81e8-dcffddc100b4",
+        "lesson_activity.key": "1ec85c0e-df14-45d5-877b-b9c38b3104ec"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_01_00_2025"
+        ],
+        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif1-2025",
+        "activity_section.key": "91e138d4-96a6-4bdb-80f8-0012a7ee4247"
+      },
+      "level_keys": [
+        "csaif_pl_ai_01_00_2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_01_01_2025"
+        ],
+        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif1-2025",
+        "activity_section.key": "91e138d4-96a6-4bdb-80f8-0012a7ee4247"
+      },
+      "level_keys": [
+        "csaif_pl_ai_01_01_2025"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_03_2025"
+        ],
+        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif1-2025",
+        "activity_section.key": "91e138d4-96a6-4bdb-80f8-0012a7ee4247"
+      },
+      "level_keys": [
+        "csaif_pl_ai_into_03_2025"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_04_2025"
+        ],
+        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif1-2025",
+        "activity_section.key": "91e138d4-96a6-4bdb-80f8-0012a7ee4247"
+      },
+      "level_keys": [
+        "csaif_pl_ai_into_04_2025"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_05_2025"
+        ],
+        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif1-2025",
+        "activity_section.key": "91e138d4-96a6-4bdb-80f8-0012a7ee4247"
+      },
+      "level_keys": [
+        "csaif_pl_ai_into_05_2025"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_06_2025"
+        ],
+        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif1-2025",
+        "activity_section.key": "91e138d4-96a6-4bdb-80f8-0012a7ee4247"
+      },
+      "level_keys": [
+        "csaif_pl_ai_into_06_2025"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_career_AI_2025"
+        ],
+        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif1-2025",
+        "activity_section.key": "91e138d4-96a6-4bdb-80f8-0012a7ee4247"
+      },
+      "level_keys": [
+        "csaif_pl_nets_career_AI_2025"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_AI_chatbot_overview_ai_2025"
+        ],
+        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif1-2025",
+        "activity_section.key": "91e138d4-96a6-4bdb-80f8-0012a7ee4247"
+      },
+      "level_keys": [
+        "csaif_pl_AI_chatbot_overview_ai_2025"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Intro to AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_02_03b_2025"
+        ],
+        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif1-2025",
+        "activity_section.key": "50d61bc8-29d8-4eb5-81e8-dcffddc100b4"
+      },
+      "level_keys": [
+        "csaif_pl_ai_02_03b_2025"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Intro to AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_09_2025"
+        ],
+        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif1-2025",
+        "activity_section.key": "50d61bc8-29d8-4eb5-81e8-dcffddc100b4"
+      },
+      "level_keys": [
+        "csaif_pl_ai_into_09_2025"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Intro to AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_08b_2025"
+        ],
+        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif1-2025",
+        "activity_section.key": "50d61bc8-29d8-4eb5-81e8-dcffddc100b4"
+      },
+      "level_keys": [
+        "csaif_pl_ai_into_08b_2025"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Intro to AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_12_2025"
+        ],
+        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif1-2025",
+        "activity_section.key": "50d61bc8-29d8-4eb5-81e8-dcffddc100b4"
+      },
+      "level_keys": [
+        "csaif_pl_ai_into_12_2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_01_00_2025",
+        "script_level.level_keys": [
+          "csaif_pl_ai_01_00_2025"
+        ],
+        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif1-2025",
+        "activity_section.key": "91e138d4-96a6-4bdb-80f8-0012a7ee4247"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_01_01_2025",
+        "script_level.level_keys": [
+          "csaif_pl_ai_01_01_2025"
+        ],
+        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif1-2025",
+        "activity_section.key": "91e138d4-96a6-4bdb-80f8-0012a7ee4247"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_into_03_2025",
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_03_2025"
+        ],
+        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif1-2025",
+        "activity_section.key": "91e138d4-96a6-4bdb-80f8-0012a7ee4247"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_into_04_2025",
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_04_2025"
+        ],
+        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif1-2025",
+        "activity_section.key": "91e138d4-96a6-4bdb-80f8-0012a7ee4247"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_into_05_2025",
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_05_2025"
+        ],
+        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif1-2025",
+        "activity_section.key": "91e138d4-96a6-4bdb-80f8-0012a7ee4247"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_into_06_2025",
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_06_2025"
+        ],
+        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif1-2025",
+        "activity_section.key": "91e138d4-96a6-4bdb-80f8-0012a7ee4247"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_career_AI_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_career_AI_2025"
+        ],
+        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif1-2025",
+        "activity_section.key": "91e138d4-96a6-4bdb-80f8-0012a7ee4247"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_AI_chatbot_overview_ai_2025",
+        "script_level.level_keys": [
+          "csaif_pl_AI_chatbot_overview_ai_2025"
+        ],
+        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif1-2025",
+        "activity_section.key": "91e138d4-96a6-4bdb-80f8-0012a7ee4247"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_02_03b_2025",
+        "script_level.level_keys": [
+          "csaif_pl_ai_02_03b_2025"
+        ],
+        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif1-2025",
+        "activity_section.key": "50d61bc8-29d8-4eb5-81e8-dcffddc100b4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_into_09_2025",
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_09_2025"
+        ],
+        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif1-2025",
+        "activity_section.key": "50d61bc8-29d8-4eb5-81e8-dcffddc100b4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_into_08b_2025",
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_08b_2025"
+        ],
+        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif1-2025",
+        "activity_section.key": "50d61bc8-29d8-4eb5-81e8-dcffddc100b4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_into_12_2025",
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_12_2025"
+        ],
+        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif1-2025",
+        "activity_section.key": "50d61bc8-29d8-4eb5-81e8-dcffddc100b4"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}
