@@ -8,6 +8,7 @@ class RubricsTest < ActionDispatch::IntegrationTest
     sign_in @teacher
 
     @unit = create :script, :with_levels, lessons_count: 4, name: 'test-unit'
+    create(:single_unit_course, unit: @unit)
     @first_script_level = @unit.script_levels.first
     @rubric = create :rubric, :with_learning_goals, lesson: @first_script_level.lesson, level: @first_script_level.levels.first
     @last_script_level = @unit.script_levels.last
@@ -76,6 +77,7 @@ class RubricsTest < ActionDispatch::IntegrationTest
 
     # cannot show alert for lessons in other unit
     unit = create :script, :with_levels, name: 'test-unit-2'
+    create(:single_unit_course, unit: unit)
     script_level = unit.script_levels.first
     create :rubric, lesson: script_level.lesson, level: script_level.levels.first
     get build_script_level_path(script_level)

@@ -16,6 +16,7 @@ class ApiControllerTest < ActionController::TestCase
     create(:section_instructor, instructor: @teacher, section: @section, status: :active)
 
     @script = create(:script, :with_levels, levels_count: 1)
+    create(:single_unit_course, unit: @script)
     @script_level = @script.script_levels[0]
     @level = @script_level.level
 
@@ -29,11 +30,13 @@ class ApiControllerTest < ActionController::TestCase
     @student_1, @student_2, @student_3, @student_4, @student_5, @student_6, @student_7 = @students
 
     @flappy = create(:text_match, :with_script).script_levels.first.script
+    create(:single_unit_course, unit: @flappy)
     @flappy_section = create(:section, user: @teacher, script_id: @flappy.id)
     @student_flappy_1 = create(:follower, section: @flappy_section).student_user
     @student_flappy_1.reload
 
     @allthings = create(:text_match, :with_script).script_levels.first.script
+    create(:single_unit_course, unit: @allthings)
     @allthings_section = create(:section, user: @teacher, script_id: @allthings.id)
     @student_allthings = create(:student, name: 'student_allthings')
     create(:follower, section: @allthings_section, student_user: @student_allthings)
@@ -54,7 +57,8 @@ class ApiControllerTest < ActionController::TestCase
 
     section = create :section
     level = create :dance, :with_example_solutions
-    script_level = create :script_level, levels: [level]
+    script = create(:single_unit_course).first_unit
+    script_level = create :script_level, script: script, levels: [level]
 
     get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: section.id}
 
@@ -70,7 +74,8 @@ class ApiControllerTest < ActionController::TestCase
     sign_in teacher
 
     level = create(:level, :blockly, :with_ideal_level_source)
-    script_level = create :script_level, levels: [level]
+    script = create(:single_unit_course).first_unit
+    script_level = create :script_level, script: script, levels: [level]
 
     get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: ""}
 
@@ -87,7 +92,8 @@ class ApiControllerTest < ActionController::TestCase
 
     section = create :section
     level = create(:level, :blockly, :with_ideal_level_source)
-    script_level = create :script_level, levels: [level]
+    script = create(:single_unit_course).first_unit
+    script_level = create :script_level, script: script, levels: [level]
 
     get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: section.id}
 

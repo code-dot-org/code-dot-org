@@ -35,11 +35,11 @@ FactoryBot.define do
       assignable {true}
       grade_levels {"9,10,11,12"}
 
-      # trait :with_units do
-      #   after(:create) do |csp_course_offering|
-      #     create(:course_version, :with_csp_unit, course_offering: csp_course_offering)
-      #   end
-      # end
+      trait :with_unit_group do
+        after(:create) do |csp_course_offering|
+          create(:course_version, :with_csp_unit_group, course_offering: csp_course_offering)
+        end
+      end
     end
   end
 
@@ -61,9 +61,9 @@ FactoryBot.define do
     #   association(:content_root, factory: :script, is_course: true)
     # end
 
-    # trait :with_csp_unit do
-    #   association(:content_root, factory: :csp_script, is_course: true)
-    # end
+    trait :with_csp_unit_group do
+      association(:content_root, factory: :csp_course)
+    end
   end
 
   factory :unit_group_unit do
@@ -98,13 +98,23 @@ FactoryBot.define do
         unit.reload
       end
 
+      factory :csp_course do
+        after(:create) do |csp_course|
+          unit = csp_course.first_unit
+          if unit
+            unit.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSP
+            unit.save!
+          end
+        end
+      end
+
       factory :hoc_course do
         sequence(:name) {|n| "bogus-hoc-name-#{n}"}
         sequence(:version_year) {|n| "bogus-hoc-version-year-#{n}"}
         sequence(:family_name) {|n| "bogus-hoc-family-name-#{n}"}
 
         after(:create) do |hoc_course|
-          unit = hoc_course.default_units.first
+          unit = hoc_course.first_unit
           if unit
             unit.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC
             unit.save!

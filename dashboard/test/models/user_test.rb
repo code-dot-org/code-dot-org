@@ -989,7 +989,7 @@ class UserTest < ActiveSupport::TestCase
   test 'track_level_progress does not record quiz or survey responses for partner when pairing' do
     user = create :user
     partner = create :user
-    script = create :script
+    script = create(:single_unit_course).first_unit
     sub_level_name = 'sublevel1'
 
     sub_level1 = create :text_match, name: sub_level_name
@@ -3290,17 +3290,17 @@ class UserTest < ActiveSupport::TestCase
       create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'csd1'), position: 1
       create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'csd2'), position: 2
 
-      other_script = create :script, name: 'other'
+      other_script = create(:single_unit_course, unit: create(:script, name: 'other')).first_unit
       @student.assign_script(other_script)
 
       section = create :section, user_id: @teacher.id, unit_group: unit_group
       Follower.create!(section_id: section.id, student_user_id: @student.id, user: @teacher)
 
-      pl_unit_group = create :unit_group, name: 'pl-csd', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      pl_unit_group = create :unit_group, :pl_course, name: 'pl-csd'
       create :unit_group_unit, unit_group: pl_unit_group, script: (create :script, name: 'pl-csd1', instructor_audience: nil, participant_audience: nil), position: 1
       create :unit_group_unit, unit_group: pl_unit_group, script: (create :script, name: 'pl-csd2', instructor_audience: nil, participant_audience: nil), position: 2
 
-      other_pl_script = create :script, name: 'pl-other', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      other_pl_script = create(:single_unit_course, :pl_course, unit: create(:script, name: 'pl-other')).first_unit
       @teacher.assign_script(other_pl_script)
 
       pl_section = create :section, :teacher_participants, user_id: facilitator.id, unit_group: pl_unit_group
@@ -3422,7 +3422,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "section_scripts returns assigned scripts and default scripts in assigned courses" do
     student = create :student
-    single_script = create :script
+    single_script = create(:single_unit_course).first_unit
     (create :section, script: single_script).students << student
     unit_group_unit = create :script
     course_with_script = create :unit_group
@@ -3634,7 +3634,9 @@ class UserTest < ActiveSupport::TestCase
 
   test 'lesson_extras_enabled?' do
     script = create :script, lesson_extras_available: true
+    create(:single_unit_course, unit: script)
     other_script = create :script, lesson_extras_available: true
+    create(:single_unit_course, unit: other_script)
     teacher = create :teacher
     student = create :student
 
@@ -4063,7 +4065,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'generate_progress_from_storage_id' do
     # construct our fake applab-intro script
-    script = create :script
+    script = create(:single_unit_course).first_unit
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
     regular_level = create :level
@@ -4191,7 +4193,7 @@ class UserTest < ActiveSupport::TestCase
   test 'index_user_levels_by_level_id returns most recently updated user levels' do
     user = create :user
     level = create :level
-    script = create :script
+    script = create(:single_unit_course).first_unit
     user_level_1 = create :user_level, user: user, level: level, script: script, updated_at: 2.days.ago
     user_level_2 = create :user_level, user: user, level: level, script: script, updated_at: 2.days.ago
     user_level_3 = create :user_level, user: user, level: level, script: script, updated_at: 1.day.ago
@@ -4204,7 +4206,7 @@ class UserTest < ActiveSupport::TestCase
   test 'index_user_levels_by_level_id returns first created user level if updated_at is identical' do
     user = create :user
     level = create :level
-    script = create :script
+    script = create(:single_unit_course).first_unit
 
     # Freeze time to ensure all the user levels have the same updated_at timestamp
     Timecop.freeze do
@@ -4833,7 +4835,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'pl_units_started only counts parent BubbleChoice level' do
-    pl_unit = create :pl_unit
+    pl_unit = create(:single_unit_course, :pl_course).first_unit
     create :course_version, content_root: pl_unit
 
     sublevels = []
@@ -4857,7 +4859,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "pl_units_started counts predict level" do
-    pl_unit = create :pl_unit
+    pl_unit = create(:single_unit_course, :pl_course).first_unit
     create :course_version, content_root: pl_unit
 
     free_response_level = create :free_response, name: 'free response level'
@@ -5267,7 +5269,7 @@ class UserTest < ActiveSupport::TestCase
   describe '#pl_units_started' do
     let(:subject) {user.pl_units_started}
     let(:user) {create :teacher}
-    let(:unit) {create :pl_unit, :with_levels}
+    let(:unit) {create :unit, :with_levels}
     let(:unit_group) {create :unit_group, participant_audience: 'teacher', instructor_audience: 'facilitator'}
     let!(:unit_group_unit) {create :unit_group_unit, course_id: unit_group.id, script_id: unit.id, position: 1}
     let!(:user_script) {create :user_script, user: user, script: unit}

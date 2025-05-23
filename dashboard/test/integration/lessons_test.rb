@@ -8,6 +8,7 @@ class LessonsTest < ActionDispatch::IntegrationTest
     File.stubs(:write)
 
     @script = create :script, name: 'unit-1', is_migrated: true
+    create(:single_unit_course, unit: @script)
     lesson_group = create :lesson_group, script: @script
     @lesson = create(
       :lesson,
