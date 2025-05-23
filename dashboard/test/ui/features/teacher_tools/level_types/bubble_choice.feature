@@ -83,7 +83,7 @@ Feature: BubbleChoice
     And I wait until current URL contains "user_id="
     And I wait until element "td:contains(Lesson Name)" is visible
     And I wait until element "td:contains(Lab2 Showcase)" is visible
-    Then I verify progress for lesson 52 level 8 is "perfect"
+    Then I verify progress for lesson 55 level 8 is "perfect"
 
     # View progress from BubbleChoice activity page
     Given I am on "http://studio.code.org/s/allthethings/lessons/52/levels/8"
