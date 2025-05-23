@@ -1218,7 +1218,6 @@ roles.each do |name, config| %>
               # Application Autoscaling for ECS services
               - Effect: Allow
                 Action:
-                  - application-autoscaling:RegisterScalableTarget
                   - application-autoscaling:PutScalingPolicy
                   - application-autoscaling:DescribeScalingPolicies
                   - application-autoscaling:DeleteScalingPolicy
@@ -1228,6 +1227,7 @@ roles.each do |name, config| %>
                     application-autoscaling:ResourceId: "service/*/*-<%=environment_type%>-*"
               - Effect: Allow
                 Action:
+                  - application-autoscaling:RegisterScalableTarget
                   - application-autoscaling:DescribeScalableTargets
                   - application-autoscaling:DeregisterScalableTarget
                 Resource: '*'
