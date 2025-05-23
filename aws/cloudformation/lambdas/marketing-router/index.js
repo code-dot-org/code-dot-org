@@ -255,14 +255,6 @@ const marketingPaths = {
   "/en-US/privacy/data-privacy-addendum-new-york": true,
   "/en-US/privacy/dpa": true,
   "/en-US/privacy/data-privacy-addendum": true,
-  // Farsi Redirects
-  "/global/fa": true,
-  "/global/fa/csf": true,
-  "/global/fa/hourofcode": true,
-  "/global/fa/videos": true,
-  "/global/fa/about": true,
-  "/global/fa/teacher": true,
-  "/farsi": true,
 }
 
 const nextJsAssetsPath = '/_next/static/';
