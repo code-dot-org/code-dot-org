@@ -8,12 +8,16 @@ import SingleSectionSetUp from '@cdo/apps/templates/sectionsRefresh/SingleSectio
 import experiments from '@cdo/apps/util/experiments';
 
 describe('SingleSectionSetUp', () => {
-  const renderComponent = (updateSection = () => {}) => {
+  const renderComponent = (
+    updateSection = () => {},
+    batchUpdateSection = () => {}
+  ) => {
     return render(
       <SingleSectionSetUp
         sectionNum={1}
         section={{}}
         updateSection={updateSection}
+        batchUpdateSection={batchUpdateSection}
         isNewSection={false}
         isLoading={false}
       />
@@ -21,9 +25,11 @@ describe('SingleSectionSetUp', () => {
   };
 
   let updateSectionSpy;
+  let batchUpdateSectionSpy;
 
   beforeEach(() => {
     updateSectionSpy = jest.fn();
+    batchUpdateSectionSpy = jest.fn();
   });
 
   afterEach(() => {
@@ -113,13 +119,13 @@ describe('SingleSectionSetUp', () => {
     screen.getByText('Choose a background color');
   });
 
-  it('calls updateSection when avatar is updated', () => {
+  it('calls batchUpdateSection when avatar is updated', () => {
     experiments.setEnabled('teacher-homepage-v2', true);
-    renderComponent(updateSectionSpy);
+    renderComponent(updateSectionSpy, batchUpdateSectionSpy);
     const dialogButton = screen.getByText('Edit avatar');
     fireEvent.click(dialogButton);
     const avatarSelectButton = screen.getByText('Select avatar');
     fireEvent.click(avatarSelectButton);
-    expect(updateSectionSpy).toHaveBeenCalled();
+    expect(batchUpdateSectionSpy).toHaveBeenCalled();
   });
 });
