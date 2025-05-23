@@ -54,7 +54,6 @@ Feature: Using Modular Courses
     Then I wait until element "#course_overview" is visible
     And check that I am on "http://studio.code.org/courses/ui-test-course-2019"
 
-
   @eyes
   Scenario: Progress is saved across modular courses
     When I open my eyes to test "modular courses - progress"
