@@ -26,7 +26,7 @@ const marketingPaths = {
   "/beyond/mentors-and-community": true,
   "/beyond/extracurricular": true,
   "/privacy/archive": true,
-  "/about/news": false, // hamburger.feature
+  "/about/news": true,
   "/about/values": true,
   "/beyond/scholarships": true,
   "/beyond/internships": true,
@@ -234,6 +234,12 @@ const marketingPaths = {
   "/privacy/data-privacy-addendum-illinois": true,
   "/about/it-requirements": true,
   "/terms-of-service": true,
+  "/privacy/dpa/mt": true,
+  "/privacy/data-privacy-addendum-montana": true,
+  "/privacy/dpa/ny": true,
+  "/privacy/data-privacy-addendum-new-york": true,
+  "/privacy/dpa": true,
+  "/privacy/data-privacy-addendum": true,
   "/en-US/privacy/dpa/il": true,
   "/en-US/donate/policy": true,
   "/en-US/educate/it": true,
@@ -242,7 +248,13 @@ const marketingPaths = {
   "/en-US/privacy": true,
   "/en-US/privacy/data-privacy-addendum-illinois": true,
   "/en-US/about/it-requirements": true,
-  "/en-US/terms-of-service": true
+  "/en-US/terms-of-service": true,
+  "/en-US/privacy/dpa/mt": true,
+  "/en-US/privacy/data-privacy-addendum-montana": true,
+  "/en-US/privacy/dpa/ny": true,
+  "/en-US/privacy/data-privacy-addendum-new-york": true,
+  "/en-US/privacy/dpa": true,
+  "/en-US/privacy/data-privacy-addendum": true,
 }
 
 const nextJsAssetsPath = '/_next/static/';
