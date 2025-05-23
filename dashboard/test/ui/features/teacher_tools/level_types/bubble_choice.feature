@@ -98,11 +98,13 @@ Feature: BubbleChoice
     Given I am on "http://studio.code.org/s/allthethings/lessons/52/levels/8/sublevel/1"
 
     # Dismiss the dialog
-    And I click selector "#ui-close-dialog" once I see it
+    And I wait until element "h1:contains(AI Chat 2)" is visible
+    And I click selector "#ui-close-dialog" if it is visible
     And I wait until element "#ui-close-dialog" is not visible
 
     # Teacher has not completed level, so make sure it is not shown as complete
     Then I verify progress for the sublevel with selector ".teacher-panel .progress-bubble:first" is "not_tried"
+    And I select the "New Section" option in dropdown with class "uitest-sectionselect"
     When I click selector ".teacher-panel table td:contains(Alice)" once I see it
     And I wait until element "#lab2-aichat" is visible
     Then I verify progress for the sublevel with selector ".teacher-panel .progress-bubble:first" is "perfect"
