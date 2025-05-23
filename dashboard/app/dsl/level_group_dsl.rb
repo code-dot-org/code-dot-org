@@ -95,6 +95,10 @@ class LevelGroupDSL < LevelDSL
     @hash[:activity_guide_level] = text
   end
 
+  def stay_on_level_after_submit(text)
+    @hash[:stay_on_level_after_submit] = text
+  end
+
   def self.serialize(level)
     properties = level.properties
     new_dsl = "name '#{level.name}'"
