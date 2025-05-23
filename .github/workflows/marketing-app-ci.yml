@@ -60,9 +60,6 @@ jobs:
       - name: Setup Frontend
         uses: ./.github/actions/frontend/setup
 
-      - name: Build
-        run: yarn build --filter @code-dot-org/marketing
-
       - name: Build Docker image
         id: build-docker-image
         uses: docker/build-push-action@v6.10.0
@@ -98,6 +95,9 @@ jobs:
       - name: Clean unused docker build artifacts
         run: |
           docker system prune --all --force
+
+      - name: Build
+        run: yarn build --filter @code-dot-org/marketing
 
       - name: UI Tests
         uses: ./.github/actions/frontend/marketing/ui-tests
