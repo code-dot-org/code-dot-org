@@ -66,7 +66,7 @@ const availableCallouts: AvailableCallouts = {
     selector: `.blocklyWorkspace g[data-id="${BlockTypes.TRIGGERED_AT_SIMPLE2}"]`,
   },
   'repeat-block-field-workspace': {
-    selector: `.blocklyWorkspace g[data-id="${BlockTypes.REPEAT_SIMPLE2}"] > .blocklyEditableText`,
+    selector: `.blocklyWorkspace g[data-id="${BlockTypes.REPEAT_SIMPLE2}"] > .blocklyEditableField`,
   },
   'when-run-block': {
     selector: `g[data-id="${BlockTypes.WHEN_RUN_SIMPLE2}"] > path`,

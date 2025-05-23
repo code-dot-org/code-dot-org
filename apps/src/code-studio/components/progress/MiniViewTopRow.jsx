@@ -6,21 +6,17 @@ import Button from '@cdo/apps/legacySharedComponents/Button';
 import {getStore} from '@cdo/apps/redux';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import color from '@cdo/apps/util/color';
-import experiments from '@cdo/apps/util/experiments';
 import {stringifyQueryParams} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 export default class MiniViewTopRow extends React.Component {
   static propTypes = {
     scriptName: PropTypes.string.isRequired,
-    courseName: PropTypes.string,
-    unitPosition: PropTypes.number,
     selectedSectionId: PropTypes.number,
   };
 
   render() {
-    const {scriptName, courseName, unitPosition, selectedSectionId} =
-      this.props;
+    const {scriptName, selectedSectionId} = this.props;
     const isRtl = getStore().getState().isRtl;
 
     const sectionId = queryParams('section_id');
@@ -35,21 +31,13 @@ export default class MiniViewTopRow extends React.Component {
         updateQueryParam('section_id', undefined);
     }
     const params = stringifyQueryParams(queryParams());
-    let overviewPath = `/s/${scriptName}${params}`;
-    if (
-      experiments.isEnabled(experiments.MODULARITY) &&
-      courseName &&
-      unitPosition
-    ) {
-      overviewPath = `/courses/${courseName}/units/${unitPosition}${params}`;
-    }
 
     return (
       <div style={styles.main}>
         <Button
           __useDeprecatedTag
           text={i18n.viewUnitOverview()}
-          href={overviewPath}
+          href={`/s/${scriptName}${params}`}
           color={Button.ButtonColor.gray}
           style={isRtl ? styles.buttonRtl : styles.button}
         />

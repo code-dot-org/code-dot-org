@@ -203,7 +203,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
         });
       // query selector for categorized toolbox contents
       document
-        .querySelectorAll<SVGElement>('.blocklyToolboxContents')
+        .querySelectorAll<SVGElement>('.blocklyToolboxCategoryGroup')
         .forEach(x => {
           x.style.visibility = toolboxVisibility;
         });

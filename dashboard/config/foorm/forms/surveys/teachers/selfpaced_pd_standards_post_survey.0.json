@@ -166,6 +166,12 @@
           "library_name": "surveys/pd/self_paced_pl_standards",
           "library_version": 0,
           "name": "focus_group_panel"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "thank_you_heading"
         }
       ]
     }

@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-20 16:42:22 UTC",
+    "serialized_at": "2025-05-23 02:02:18 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -106,7 +106,6 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/4/topic/2) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**Why would I use static variables and methods?**\n\nStudents have written instance variables and methods that require an object to be created. In this lesson, students learn about the `static` keyword and how it can be used to define values and methods that are shared by all instances of a class or to represent helper methods. Students explore the functionality of static variables and methods, then practice using these to solve problems.",
         "preparation": "* **(Optional)** Print copies of the Static Variables and Methods Guided Notes (one for each student)\n* Preview the *Static Variables* and *Static Methods* videos",
         "student_overview": "**Why would I use static variables and methods?**\n\nYou have written instance variables and methods that require an object to be created. In this lesson, you learn about the `static` keyword and how it can be used to define values and methods that are shared by all instances of a class or to represent helper methods. You explore the functionality of static variables and methods, then practice using these to solve problems."
@@ -125,7 +124,6 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/4/topic/3) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**What can I do with the `Math` class?**\n\nStudents have used classes like `Scanner` and `Object` from the Java API as well as classes from The Neighborhood and The Theater. In this lesson, students learn about the `Math` class and how the `static` keyword can be used with the `final` keyword to create constants. They explore the documentation for the `Math` class to identify its methods and learn about their functionalities. Students then practice creating and using constants and calling methods in the `Math` class.",
         "preparation": "* **(Optional)** Print copies of the The Math Class Guided Notes (one for each student)\n* Preview the *Constants* video\n* Print copies of The Math Class handout (one for each student)\n* Print copies of the Math Class Graphic Organizer handout (one for each student)",
         "student_overview": "**What can I do with the `Math` class?**\n\nYou have used classes like `Scanner` and `Object` from the Java API as well as classes from The Neighborhood and The Theater. In this lesson, you learn about the `Math` class and how the `static` keyword can be used with the `final` keyword to create constants. You explore the documentation for the `Math` class to identify its methods and learn about their functionalities. You then practice creating and using constants and calling methods in the `Math` class."
@@ -144,7 +142,6 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.5\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/4/topic/4) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**What is casting useful for in a program?**\n\nStudents have previously learned that dividing two `int` values results in an `int` value and that Java treats a value based on the declared data type. In this lesson, students learn about casting operators and how they can be used to temporarily convert a value to a different type. They explore the effect of using the `(int)` and `(double)` casting operators on a value and expression and experiment with using these operators to return a value of a desired data type. Students also learn how to use casting operators to round a `double` value to the nearest integer.",
         "preparation": "* **(Optional)** Print copies of the Casting and Rounding Guided Notes (one for each student)\n* Preview the *Casting* video\n* Print copies of the Investigating Casting handout (one for each student)\n* Print copies of the Dataset Summaries handout (one for each student)",
         "student_overview": "**What is casting useful for in a program?**\n\nYou have previously learned that dividing two `int` values results in an `int` value and that Java treats a value based on the declared data type. In this lesson, you learn about casting operators and how they can be used to temporarily convert a value to a different type. You explore the effect of using the `(int)` and `(double)` casting operators on a value and expression and experiment with using these operators to return a value of a desired data type. You also learn how to use casting operators to round a `double` value to the nearest integer."
@@ -163,7 +160,6 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.9\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/4/topic/5) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I generate and use random numbers?**\n\nStudents learned about the `Math` class in the previous lesson and explored using some of its methods to perform calculations. In this lesson, students learn about the functionality of `Math.random()` and discover its benefits and limitations. Students consider how they can use `Math.random()` with casting operators to generate random numbers within a specific range and consider how random is used in programs they use every day. They then practice generating and using random numbers within specified ranges and retrieving random elements from a 1D array.",
         "preparation": "* **(Optional)** Print copies of the Random Guided Notes (one for each student)\n* Preview the *Random Numbers* video\n* Gather the Dataset Summaries handouts collected in Lesson 4",
         "student_overview": "**How can I generate and use random numbers?**\n\nYou learned about the `Math` class in the previous lesson and explored using some of its methods to perform calculations. In this lesson, you learn about the functionality of `Math.random()` and discover its benefits and limitations. You consider how you can use `Math.random()` with casting operators to generate random numbers within a specific range and consider how random is used in programs you use every day. You then practice generating and using random numbers within specified ranges and retrieving random elements from a 1D array."
@@ -182,7 +178,6 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/4/topic/6) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I check if two objects are equal?**\n\nIn this lesson, students discover the difference between comparing primitive values and object references. Students learn that two object references are considered aliases when they both reference the same object and how to identify aliases or `null` values using the `==` and `!=` operators. They revisit the `Object` class and learn how to override the `equals()` method to determine whether two instances of a class are equivalent. Students then practice overriding the `equals()` method in a class and comparing objects for equality.",
         "preparation": "* **(Optional)** Print copies of the Object Aliases and Equality Guided Notes (one for each student)\n* Preview the *Aliasing* and *The equals() Method* videos",
         "student_overview": "**How can I check if two objects are equal?**\n\nIn this lesson, you discover the difference between comparing primitive values and object references. You learn that two object references are considered aliases when they both reference the same object and how to identify aliases or `null` values using the `==` and `!=` operators. You revisit the `Object` class and learn how to override the `equals()` method to determine whether two instances of a class are equivalent. You then practice overriding the `equals()` method in a class and comparing objects for equality."
@@ -201,7 +196,6 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/4/topic/7) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I test a combination of conditions before executing a specific action?**\n\nStudents have used `if` and `if-else` statements to execute blocks of code based on a condition. In this lesson, students explore the functionality of nested `if` statements and learn to use these to test a combination of conditions. They also learn how to use the `length()` method in the `String` class to find the length of a `String` object. Students consider scenarios where they would need to test multiple conditions and practice evaluating nested `if` statements to determine the output of a code segment. They then plan and implement an algorithm using nested `if` statements to test a combination of conditions.",
         "preparation": "* **(Optional)** Print copies of the Nested If Statements Guided Notes (one for each student)\n* Print copies of the Writing Algorithms handout (one for each student)",
         "student_overview": "**How can I test a combination of conditions before executing a specific action?**\n\nYou have used `if` and `if-else` statements to execute blocks of code based on a condition. In this lesson, you explore the functionality of nested `if` statements and learn how to use these to test a combination of conditions. You also learn how to use the `length()` method in the `String` class to find the length of a `String` object. You consider scenarios where you would need to test multiple conditions and practice evaluating nested `if` statements to determine the output of a code segment. You then plan and implement an algorithm using nested `if` statements to test a combination of conditions."
@@ -220,7 +214,6 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.5\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/4/topic/8) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can logical operators be used to evaluate multiple conditions?**\n\nStudents have previously learned to use the NOT ( `!` ) operator to reverse the outcome of a Boolean expression. In this lesson, they explore the use of the AND ( `&&` ) and OR ( `||` ) operators and how these can be used instead of nested `if` statements to test multiple conditions. Students learn about short-circuit evaluation and practice using truth tables to evaluate a Boolean expression involving logical operators.",
         "preparation": "* **(Optional)** Print copies of the Logical Operators Guided Notes (one for each student)\n* Print copies of the Truth Tables handout (one for each student)\n* Gather the Dataset Summaries handouts collected in Lesson 5\n* Print copies of the Finding Patterns handout (one for each student)\n* Ensure students are able to access the Datasets in Level 5. If students do not have access, you may choose to download the datasets from the Lesson Resources and make them available to students through other means. ",
         "student_overview": "**How can logical operators be used to evaluate multiple conditions?**\n\nYou have previously learned to use the NOT ( `!` ) operator to reverse the outcome of a Boolean expression. In this lesson, you explore the use of the AND ( `&&` ) and OR ( `||` ) operators and how these can be used instead of nested `if` statements to test multiple conditions. You learn about short-circuited evaluation and practice using truth tables to evaluate a Boolean expression involving logical operators."
@@ -239,7 +232,6 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**What are De Morgan's Laws?**\n\nIn this lesson, students learn about De Morgan's Laws and how they are applied to Boolean expressions. They explore how equivalent Boolean expressions evaluate to the same value in all cases. Students then use truth tables to evaluate compound Boolean expressions and prove De Morgan's Laws.",
         "preparation": "* **(Optional)** Print copies of the De Morgan's Laws Guided Notes (one for each student)\n* Print copies of the De Morgan's Laws handout (one for each student)\n* Print the De Morgan's Laws Stations resource\n* Create stations around the classroom as indicated on the De Morgan's Laws Stations resource",
         "student_overview": "**What are De Morgan's Laws?**\n\nYou have learned to use logical operators to create compound Boolean expressions. In this lesson, you learn about De Morgan's Laws and how they are applied to Boolean expressions. You explore how equivalent Boolean expressions evaluate to the same value in all cases. You then use truth tables to evaluate compound Boolean expressions and prove De Morgan's Laws."
@@ -258,7 +250,6 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/4/topic/10) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I specify different outcomes for different conditions?**\n\nIn this lesson, students expand their knowledge of selection statements to evaluate and implement multi-selection statements. They explore the functionality of multi-selection statements and learn to use these to test a combination of conditions. Students then practice writing algorithms using multi-selection statements to solve problems.",
         "preparation": "* **(Optional)** Print copies of the Multi-Selection Statements Guided Notes (one for each student)\n* Preview the *Multi-Selection Statements* video\n* Print copies of the Unit 4 Study Guide (one for each student)",
         "student_overview": "**How can I specify different outcomes for different conditions?**\n\nIn this lesson, you expand your knowledge of selection statements to evaluate and implement multi-selection statements. You explore the functionality of multi-selection statements and learn to use these to test a combination of conditions. You then practice writing algorithms using multi-selection statements to solve problems."
@@ -931,6 +922,18 @@
       },
       "seeding_key": {
         "lesson_activity.key": "231a20b7-24c1-4832-9276-eaad171215c8",
+        "lesson.key": "Abstract Data Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa4-2025"
+      }
+    },
+    {
+      "key": "c8ca0536-83e4-4288-96aa-db5c28d5fc4d",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c8ca0536-83e4-4288-96aa-db5c28d5fc4d",
         "lesson.key": "Abstract Data Art Project [1-Day Version]",
         "lesson_group.key": "lessonGroup-8",
         "script.name": "csa4-2025"
@@ -4500,6 +4503,19 @@
       }
     },
     {
+      "key": "cb405f4c-a069-4ae4-aa21-275162c21474",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.\n",
+        "name": "End of Unit Survey",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "cb405f4c-a069-4ae4-aa21-275162c21474",
+        "lesson_activity.key": "c8ca0536-83e4-4288-96aa-db5c28d5fc4d"
+      }
+    },
+    {
       "key": "c07d3700-01a9-48aa-81b0-b7f23efaf89b",
       "position": 1,
       "properties": {
@@ -6472,6 +6488,28 @@
     },
     {
       "chapter": 69,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page-csa4-1b_2025"
+        ],
+        "lesson.key": "Abstract Data Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa4-2025",
+        "activity_section.key": "cb405f4c-a069-4ae4-aa21-275162c21474"
+      },
+      "level_keys": [
+        "student-eou-survey_linked_page-csa4-1b_2025"
+      ]
+    },
+    {
+      "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6496,7 +6534,32 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_2025-csa4"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_2025-csa4"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-2025",
+        "activity_section.key": "b072cdee-0263-4b68-abf4-a4a90d54a127"
+      },
+      "level_keys": [
+        "student-eou-survey_2025-csa4"
+      ]
+    },
+    {
+      "chapter": 72,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6520,7 +6583,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 73,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6545,7 +6608,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 74,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6570,7 +6633,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 75,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6591,31 +6654,6 @@
       },
       "level_keys": [
         "CSA 2023 Theater Sandbox_2025"
-      ]
-    },
-    {
-      "chapter": 74,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "student-eou-survey_2025-csa4"
-        ],
-        "progression": "End of Unit Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "student-eou-survey_2025-csa4"
-        ],
-        "lesson.key": "End of Unit Survey",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa4-2025",
-        "activity_section.key": "b072cdee-0263-4b68-abf4-a4a90d54a127"
-      },
-      "level_keys": [
-        "student-eou-survey_2025-csa4"
       ]
     }
   ],
@@ -7438,6 +7476,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "student-eou-survey_linked_page-csa4-1b_2025",
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page-csa4-1b_2025"
+        ],
+        "lesson.key": "Abstract Data Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa4-2025",
+        "activity_section.key": "cb405f4c-a069-4ae4-aa21-275162c21474"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA Unit 4 Assessment_pilot_oo2025",
         "script_level.level_keys": [
           "CSA Unit 4 Assessment_pilot_oo2025"
@@ -7446,6 +7496,18 @@
         "lesson_group.key": "lessonGroup-8",
         "script.name": "csa4-2025",
         "activity_section.key": "acf04902-5d1b-4199-88a5-febe90e22a97"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_2025-csa4",
+        "script_level.level_keys": [
+          "student-eou-survey_2025-csa4"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-2025",
+        "activity_section.key": "b072cdee-0263-4b68-abf4-a4a90d54a127"
       }
     },
     {
@@ -7494,18 +7556,6 @@
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa4-2025",
         "activity_section.key": "a7c51331-a554-409d-b11b-b67aabbb507f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "student-eou-survey_2025-csa4",
-        "script_level.level_keys": [
-          "student-eou-survey_2025-csa4"
-        ],
-        "lesson.key": "End of Unit Survey",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa4-2025",
-        "activity_section.key": "b072cdee-0263-4b68-abf4-a4a90d54a127"
       }
     }
   ],

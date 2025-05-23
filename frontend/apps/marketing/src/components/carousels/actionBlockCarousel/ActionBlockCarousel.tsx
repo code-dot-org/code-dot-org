@@ -8,8 +8,8 @@ import ActionBlock, {
 } from '@code-dot-org/component-library/actionBlock';
 import DSCOCarousel from '@code-dot-org/component-library/carousel';
 
-import {showNewTag} from '@/components/actionBlocks/helpers';
 import {externalLinkIconProps} from '@/components/common/constants';
+import {showNewTag} from '@/components/contentful/actionBlocks/helpers';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {Entry} from '@/types/contentful/Entry';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';

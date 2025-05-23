@@ -88,10 +88,10 @@ class Lesson < ApplicationRecord
   # absolute_position of 3 but a relative_position of 1
   acts_as_list scope: :script, column: :absolute_position
 
-  validates(
-    :key, uniqueness: {scope: :script_id, case_sensitive: true, message: lambda do |object, _data|
+  validates_uniqueness_of(
+    :key, scope: :script_id, case_sensitive: true, message: lambda do |object, _data|
       "lesson with key #{object.key.inspect} is already taken within unit #{object.script&.name.inspect}"
-    end}
+    end
   )
 
   include CodespanOnlyMarkdownHelper
@@ -189,19 +189,13 @@ class Lesson < ApplicationRecord
   # If there is a script_level, build_script_level_path will provide the correct url,
   # even if it's a lockable lesson. Otherwise, we give the url to the student resources
   # page, and the lesson plan pdf as a backup.
-  def start_url(unit_group_unit: nil)
+  def start_url
     if script_levels.first
-      url_from_path(build_script_level_path(script_levels.first, unit_group_unit: unit_group_unit), CDO.default_scheme)
+      return url_from_path(build_script_level_path(script_levels.first), CDO.default_scheme)
     elsif script.include_student_lesson_plans && script.is_migrated
-      student_path = script_lesson_student_path(script, self)
-      if Policies::Courses.modularity_enabled? && unit_group_unit
-        course = unit_group_unit.unit_group
-        unit_position = unit_group_unit.position
-        student_path = course_unit_lesson_student_path(course, unit_position, self)
-      end
-      url_from_path(student_path, CDO.default_scheme)
+      return url_from_path(script_lesson_student_path(script, self), CDO.default_scheme)
     elsif student_lesson_plan_pdf_url
-      student_lesson_plan_pdf_url
+      return student_lesson_plan_pdf_url
     end
   end
 
@@ -229,12 +223,8 @@ class Lesson < ApplicationRecord
     get_localized_property(:name) || ''
   end
 
-  def localized_lesson_plan(unit_group_unit: nil)
-    path = script_lesson_path(script, self)
-    if Policies::Courses.modularity_enabled? && unit_group_unit
-      path = course_unit_lesson_path(unit_group_unit.unit_group, unit_group_unit.position, self)
-    end
-    return path if script.is_migrated? && !script.use_legacy_lesson_plans?
+  def localized_lesson_plan
+    return script_lesson_path(script, self) if script.is_migrated? && !script.use_legacy_lesson_plans?
 
     if script.curriculum_path?
       path = script.curriculum_path.gsub('{LESSON}', relative_position.to_s)
@@ -247,8 +237,8 @@ class Lesson < ApplicationRecord
     end
   end
 
-  def lesson_plan_html_url(unit_group_unit: nil)
-    localized_lesson_plan(unit_group_unit: unit_group_unit) || "#{lesson_plan_base_url}/Teacher"
+  def lesson_plan_html_url
+    localized_lesson_plan || "#{lesson_plan_base_url}/Teacher"
   end
 
   def lesson_feedback_url
@@ -283,8 +273,8 @@ class Lesson < ApplicationRecord
     script.get_course_version&.all_standards_url
   end
 
-  def summarize(include_bonus_levels = false, for_edit: false, unit_group_unit: nil)
-    lesson_summary = Rails.cache.fetch("#{cache_key}/lesson_summary/#{I18n.locale}/#{include_bonus_levels}/#{unit_group_unit&.unit_group&.name}") do
+  def summarize(include_bonus_levels = false, for_edit: false)
+    lesson_summary = Rails.cache.fetch("#{cache_key}/lesson_summary/#{I18n.locale}/#{include_bonus_levels}") do
       cached_levels = include_bonus_levels ? cached_script_levels : cached_script_levels.reject(&:bonus)
 
       description_student = get_localized_property('student_overview') || ''
@@ -307,12 +297,12 @@ class Lesson < ApplicationRecord
         lockable: !!lockable,
         hasLessonPlan: has_lesson_plan,
         numberedLesson: numbered_lesson?,
-        levels: cached_levels.map {|sl| sl.summarize(false, for_edit: for_edit, unit_group_unit: unit_group_unit)},
+        levels: cached_levels.map {|sl| sl.summarize(false, for_edit: for_edit)},
         description_student: description_student,
         description_teacher: description_teacher,
         unplugged: unplugged,
         lessonEditPath: get_uncached_edit_path,
-        lessonStartUrl: start_url(unit_group_unit: unit_group_unit),
+        lessonStartUrl: start_url,
         duration: total_lesson_duration,
         background: background,
       }
@@ -335,16 +325,10 @@ class Lesson < ApplicationRecord
       if has_lesson_plan
         # only collect lesson feedback on the most recent stable english version of the course
         lesson_data[:lesson_feedback_url] = lesson_feedback_url if script.get_course_version&.recommended?
-        lesson_data[:lesson_plan_html_url] = lesson_plan_html_url(unit_group_unit: unit_group_unit)
+        lesson_data[:lesson_plan_html_url] = lesson_plan_html_url
         lesson_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url
         if script.include_student_lesson_plans && script.is_migrated
-          student_lesson_plan_path = script_lesson_student_path(script, self)
-          if Policies::Courses.modularity_enabled? && unit_group_unit
-            course = unit_group_unit.unit_group
-            unit_position = unit_group_unit.position
-            student_lesson_plan_path = course_unit_lesson_student_path(course, unit_position, self)
-          end
-          lesson_data[:student_lesson_plan_html_url] = student_lesson_plan_path
+          lesson_data[:student_lesson_plan_html_url] = script_lesson_student_path(script, self)
         end
       end
 
@@ -354,11 +338,6 @@ class Lesson < ApplicationRecord
       end
 
       lesson_data[:lesson_extras_level_url] = script_lesson_extras_url(script.name, lesson_position: relative_position) unless unplugged_lesson?
-      if Policies::Courses.modularity_enabled? && unit_group_unit && !unplugged_lesson?
-        course = unit_group_unit.unit_group
-        unit_position = unit_group_unit.position
-        lesson_data[:lesson_extras_level_url] = course_unit_lesson_extras_url(course, unit_position, relative_position)
-      end
 
       lesson_data
     end
@@ -390,13 +369,7 @@ class Lesson < ApplicationRecord
     lesson_activities.map(&:summarize).sum {|activity| activity[:duration] || 0}
   end
 
-  def summarize_for_calendar(unit_group_unit: nil)
-    url = script_lesson_path(script, self)
-    if Policies::Courses.modularity_enabled? && unit_group_unit
-      course = unit_group_unit.unit_group
-      unit_position = unit_group_unit.position
-      url = course_unit_lesson_path(course, unit_position, self)
-    end
+  def summarize_for_calendar
     {
       id: id,
       lessonNumber: relative_position,
@@ -404,7 +377,7 @@ class Lesson < ApplicationRecord
       duration: total_lesson_duration,
       assessment: !!assessment,
       unplugged: unplugged,
-      url: url,
+      url: script_lesson_path(script, self)
     }
   end
 
@@ -470,10 +443,10 @@ class Lesson < ApplicationRecord
     }
   end
 
-  def summarize_for_lesson_show(user, can_view_teacher_markdown, unit_group_unit: nil)
+  def summarize_for_lesson_show(user, can_view_teacher_markdown)
     {
       id: id,
-      unit: script.summarize_for_lesson_show(unit_group_unit: unit_group_unit),
+      unit: script.summarize_for_lesson_show,
       position: relative_position,
       lockable: lockable,
       key: key,
@@ -483,7 +456,7 @@ class Lesson < ApplicationRecord
       announcements: announcements,
       purpose: render_property(:purpose),
       preparation: render_property(:preparation),
-      activities: lesson_activities.map {|la| la.summarize_for_lesson_show(can_view_teacher_markdown, user, unit_group_unit: unit_group_unit)},
+      activities: lesson_activities.map {|la| la.summarize_for_lesson_show(can_view_teacher_markdown, user)},
       resources: resources_for_lesson_plan(user&.verified_instructor?),
       vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
       programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
@@ -501,11 +474,7 @@ class Lesson < ApplicationRecord
     }
   end
 
-  def summarize_for_rollup(user, unit_group_unit: nil)
-    link_path = script_lesson_path(script, self)
-    if Policies::Courses.modularity_enabled? && unit_group_unit
-      link_path = course_unit_lesson_path(unit_group_unit.unit_group, unit_group_unit.position, self)
-    end
+  def summarize_for_rollup(user)
     {
       key: key,
       position: relative_position,
@@ -516,42 +485,34 @@ class Lesson < ApplicationRecord
       programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
       objectives: objectives.sort_by(&:description).map(&:summarize_for_lesson_show),
       standards: standards.map(&:summarize_for_lesson_show),
-      link: link_path,
+      link: script_lesson_path(script, self),
       title: localized_title,
     }
   end
 
-  def summarize_for_lesson_materials(user, unit_group_unit: nil)
-    standards_url = standards_script_path(script)
-    vocabulary_url = vocab_script_path(script)
-    if Policies::Courses.modularity_enabled? && unit_group_unit
-      course = unit_group_unit.unit_group
-      unit_position = unit_group_unit.position
-      standards_url = standards_course_unit_path(course, unit_position)
-      vocabulary_url = vocab_course_unit_path(course, unit_position)
-    end
+  def summarize_for_lesson_materials(user)
     {
       id: id,
-      unit: script.summarize_for_lesson_show(unit_group_unit: unit_group_unit),
+      unit: script.summarize_for_lesson_show,
       position: relative_position,
       key: key,
       name: localized_name,
       resources: resources_for_lesson_plan(user&.verified_instructor?),
       lessonPlanPdfUrl: lesson_plan_pdf_url,
-      lessonPlanHtmlUrl: lesson_plan_html_url(unit_group_unit: unit_group_unit),
+      lessonPlanHtmlUrl: lesson_plan_html_url,
       scriptResourcesPdfUrl: script.get_unit_resources_pdf_url,
-      standardsUrl: standards_url,
-      vocabularyUrl: vocabulary_url,
+      standardsUrl: standards_script_path(script),
+      vocabularyUrl: vocab_script_path(script),
       hasLessonPlan: has_lesson_plan,
       isLockable: lockable?,
     }
   end
 
-  def summarize_for_student_lesson_plan(unit_group_unit: nil)
+  def summarize_for_student_lesson_plan
     all_resources = resources_for_lesson_plan(false)
     {
       id: id,
-      unit: script.summarize_for_lesson_show(true, unit_group_unit: unit_group_unit),
+      unit: script.summarize_for_lesson_show(true),
       position: relative_position,
       key: key,
       displayName: localized_name,
@@ -565,22 +526,12 @@ class Lesson < ApplicationRecord
     }
   end
 
-  def summarize_for_lesson_dropdown(is_student = false, unit_group_unit: nil)
-    link_path = is_student ? script_lesson_student_path(script, self) : script_lesson_path(script, self)
-    if Policies::Courses.modularity_enabled? && unit_group_unit
-      course = unit_group_unit.unit_group
-      unit_position = unit_group_unit.position
-      link_path = if is_student
-                    course_unit_lesson_student_path(course, unit_position, self)
-                  else
-                    course_unit_lesson_path(course, unit_position, self)
-                  end
-    end
+  def summarize_for_lesson_dropdown(is_student = false)
     {
       id: id,
       key: key,
       displayName: localized_name,
-      link: link_path,
+      link: is_student ? script_lesson_student_path(script, self) : script_lesson_path(script, self),
       position: relative_position
     }
   end
@@ -597,7 +548,7 @@ class Lesson < ApplicationRecord
 
   # Provides a JSON summary of a particular lesson, that is consumed by tools used to
   # build lesson plans (Curriculum Builder)
-  def summary_for_lesson_plans(unit_group_unit: nil)
+  def summary_for_lesson_plans
     {
       # TODO: should be renamed after we combine CurriculumBuilder into LevelBuilder, if we still need this.
       stageName: localized_name,
@@ -611,10 +562,10 @@ class Lesson < ApplicationRecord
           bonus_level: !!script_level.bonus,
           assessment: script_level.assessment,
           progression: script_level.progression,
-          path: script_level.path(unit_group_unit: unit_group_unit),
+          path: script_level.path,
         }
 
-        level_json.merge!(level.summary_for_lesson_plans(unit_group_unit: unit_group_unit))
+        level_json.merge!(level.summary_for_lesson_plans)
 
         level_json
       end
@@ -676,20 +627,13 @@ class Lesson < ApplicationRecord
     level_to_follow
   end
 
-  def next_level_path_for_lesson_extras(user, unit_group_unit: nil)
+  def next_level_path_for_lesson_extras(user)
     if script.show_unit_overview_between_lessons?
-      unit_overview_path = script_path(script)
-      if Policies::Courses.modularity_enabled? && unit_group_unit
-        unit_overview_path = course_unit_path(unit_group_unit.unit_group, unit_group_unit.position)
-      end
-      return unit_overview_path
+      return script_path(script)
     end
     next_level = next_level_for_lesson_extras(user)
-    if next_level
-      build_script_level_path(next_level, unit_group_unit: unit_group_unit)
-    else
-      script_completion_redirect(user, script, unit_group_unit: unit_group_unit)
-    end
+    next_level ?
+      build_script_level_path(next_level) : script_completion_redirect(user, script)
   end
 
   def next_level_number_for_lesson_extras(user)

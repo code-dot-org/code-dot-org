@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": "csa-software-engineering",
-    "serialized_at": "2025-05-20 16:42:35 UTC",
+    "serialized_at": "2025-05-22 18:00:50 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -3373,6 +3373,16 @@
       }
     },
     {
+      "name": "CSA Unit 10 Slides",
+      "url": "https://docs.google.com/presentation/d/1EVZQ7qUOcqS9Jdl6w_LuqZaIQWcV1vgBS-ukrU7VGFw/",
+      "key": "csa_unit_10_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csa_unit_10_slides"
+      }
+    },
+    {
       "name": "Datasheets for Datasets",
       "url": "https://vimeo.com/639588440",
       "key": "datasheets_for_datasets",
@@ -4243,6 +4253,12 @@
     {
       "seeding_key": {
         "resource.key": "alternatives_to_vs_code_and_github_copilot",
+        "script.name": "csa-postap-se-and-computer-vision-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csa_unit_10_slides",
         "script.name": "csa-postap-se-and-computer-vision-2025"
       }
     },

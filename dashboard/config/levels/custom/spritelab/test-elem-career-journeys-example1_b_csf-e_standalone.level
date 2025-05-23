@@ -63,13 +63,13 @@
     "standalone_app_name": "spritelab",
     "enable_big_playspace": "true",
     "display_name": "Space Explorer Programmer",
-    "bubble_choice_description": "<i class=\"fa-solid fa-laptop-code\"></i> **A project that explores:**\r\n\r\n- Space explorer ",
+    "bubble_choice_description": "<i class=\"fa-solid fa-seedling\"></i> **Base Level Project**\n- Two sprites\n- One background\n- `When Clicked` event triggers `Sprite Says`\n- Simple sprite movement",
     "thumbnail_url": "https://images.code.org/4e347923deeb7e93ba0b41b6d8b0439c-space project ex.jpg",
     "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-05-21T13:29:42.795+00:00\",\"changed\":[\"cloned from \\\"test-elem-career-journeys-example1_b_csf-e\\\"\"],\"cloned_from\":\"test-elem-career-journeys-example1_b_csf-e\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-05-21T13:29:42.795+00:00\",\"changed\":[\"cloned from \\\"test-elem-career-journeys-example1_b_csf-e\\\"\"],\"cloned_from\":\"test-elem-career-journeys-example1_b_csf-e\"},{\"changed_at\":\"2025-05-22 14:26:16 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-22 14:27:21 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-22 14:27:38 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-22 14:27:45 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-22 14:30:34 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

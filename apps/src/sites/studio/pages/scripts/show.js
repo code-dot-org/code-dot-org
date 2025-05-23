@@ -148,7 +148,6 @@ function initPage() {
         unitHasLevels={unitHasLevels}
         isMigrated={scriptData.is_migrated}
         scriptOverviewPdfUrl={scriptData.scriptOverviewPdfUrl}
-        scriptPath={scriptData.scriptPath}
         scriptResourcesPdfUrl={scriptData.scriptResourcesPdfUrl}
         isCsdOrCsp={scriptData.isCsd || scriptData.isCsp}
         completedLessonNumber={completedLessonNumber}

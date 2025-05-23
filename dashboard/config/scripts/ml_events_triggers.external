@@ -1,34 +1,34 @@
 name 'ml_events_triggers'
 skip_dialog true
 markdown <<MARKDOWN
-# Storytelling with Event Triggers
+# Storytelling with the When Triggered Event Block
 
-####  In this lesson, students will use triggers to code music based on mood and feeling.
+####  In this lesson, students will use when triggered event blocks to code music based on mood and feeling.
 
 
 <table style="width: 100%; margin: auto;">
 <tr style="border-bottom: 1px solid black;">
     <td style="width: 80px; padding: 10px;"><img src="https://images.code.org/03707b4dbece73d7970dfefd10fc43cd-image-1736454374683.png" alt="Three people bunched together under a heart" style="width: 80px; height: 80px;"></td>
-    <td style="font-size: 18px; font-weight: bold; padding: 20px 0;"> What is an Event Trigger?</td>
-    <td style="font-size: 18px; padding: 20px 0;">An event trigger is a specific signal that starts an action in your code. It's like pressing play on a song, or a click, key press, or scene change in a game. These 'triggers' tell your program when to do something.
+    <td style="font-size: 18px; font-weight: bold; padding: 20px 0;"> What is an Event?</td>
+    <td style="font-size: 18px; padding: 20px 0;">An event is a specific signal that starts an action in your code. It's like pressing play on a song, or a click, key press, or scene change in a game. These 'triggers' tell your program when to do something.
 
   </tr>
   <tr style="border-bottom: 1px solid black;">
     <td style="width: 80px; padding: 10px;"><img src="https://images.code.org/03707b4dbece73d7970dfefd10fc43cd-image-1736454374683.png" alt="Three people bunched together under a heart" style="width: 80px; height: 80px;"></td>
-    <td style="font-size: 18px; font-weight: bold; padding: 20px 0;">Setting an Event Trigger</td>
-    <td style="font-size: 18px; padding: 20px 0;">Just like music cues in movies or games, you use triggers to tell your program when to play a sound, change the mood, or advance the story. You connect a specific event (like 'player enters the room') to a desired action (like 'play suspenseful music').</td>
+    <td style="font-size: 18px; font-weight: bold; padding: 20px 0;">Setting an Event </td>
+    <td style="font-size: 18px; padding: 20px 0;">Just like music cues in movies or games, you use events to tell your program when to play a sound, change the mood, or advance the story. You connect a specific event (like 'player enters the room') to a desired action (like 'play suspenseful music').</td>
   </tr>
   <tr style="border-bottom: 1px solid black;">
     <td style="width: 80px; padding: 10px;"><img src="https://images.code.org/985e8511f3ff59863698c4eca63e7e29-image-1736454372720.png" alt="Four puzzle pieces fitting together" style="width: 80px; height: 80px;"></td>
     <td style="font-size: 18px; font-weight: bold; padding: 20px 0;"> What Happens When an Event is Triggered?</td>
-    <td style="font-size: 18px; padding: 20px 0;">When a trigger's event occurs, your program instantly reacts. It might play music, display a message, or change the scene -- just like music swells when a hero appears or fading out when a level ends.</td>
+    <td style="font-size: 18px; padding: 20px 0;">When a event occurs, your program instantly reacts. It might play music, display a message, or change the scene -- just like music swells when a hero appears or fading out when a level ends.</td>
   </tr>
 
 </table>
 
 
 
-## Why Use Event Triggers?
+## Why Use Events?
 
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 0 auto; max-width: 1200px;">
@@ -38,7 +38,7 @@ markdown <<MARKDOWN
       <img src="https://images.code.org/03707b4dbece73d7970dfefd10fc43cd-image-1736454374683.png" alt="Three people bunched together under a heart" style="width: 40px; height: 40px; margin-bottom: 10px;">
       <p style="font-size: 16pt; font-weight: bold;">Storytelling </p>
       <ul style="text-align: left; font-size: 14pt;">
-  Music guided by triggers helps tell stories, just like in movies and games.
+  Music guided by events helps tell stories, just like in movies and games.
        
       </ul>
     </div>
@@ -48,14 +48,14 @@ markdown <<MARKDOWN
 
 </p>
       <ul style="text-align: left; font-size: 14pt;">
-   Triggers make things happen at just the right moment—matching the action.
+   Events make things happen at just the right moment—matching the action.
       </ul>
     </div>
     <div style="text-align: center; background-color: #F7F8FA; border-radius: 10px; padding: 20px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1);">
       <img src="https://images.code.org/56ec5f8bdeccf4e9a0ffb986ce283449-image-1736454514965.png" alt="An illuminated light bulb with a yellow brain in place of the glass." style="width: 40px; height: 40px; margin-bottom: 10px;">
       <p style="font-size: 16pt; font-weight: bold;">Interaction </p>
       <ul style="text-align: left; font-size: 14pt;">
-Empowers users to control the experience by directly influencing what happens in your song or code.
+Events empower users to control the experience by directly influencing what happens in your song or code.
       </ul>
     </div>
   </div>

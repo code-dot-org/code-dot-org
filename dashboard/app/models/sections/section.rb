@@ -831,6 +831,10 @@ class Section < ApplicationRecord
   end
 
   private def unit_group_unit
-    Queries::Courses.unit_group_unit(script, unit_group)
+    if unit_group && script
+      script.unit_group_units.find {|ugu| ugu.unit_group == unit_group}
+    elsif script
+      script.unit_group_units.first
+    end
   end
 end
