@@ -27,6 +27,9 @@ export const Default: Story = {
       'Join millions of students learning computer science around the world.',
     VideoComponent: Video,
   },
+  parameters: {
+    layout: 'fullscreen',
+  },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
     await expect(canvas.getByRole('banner')).toBeInTheDocument();
@@ -46,6 +49,9 @@ export const WithImage: Story = {
     },
     VideoComponent: Video,
   },
+  parameters: {
+    layout: 'fullscreen',
+  },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
     await expect(
@@ -64,6 +70,9 @@ export const WithVideo: Story = {
       videoTitle: 'Watch our intro video',
     },
     VideoComponent: Video,
+  },
+  parameters: {
+    layout: 'fullscreen',
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -91,6 +100,9 @@ export const WithPartnerAndCTA: Story = {
     },
     VideoComponent: Video,
   },
+  parameters: {
+    layout: 'fullscreen',
+  },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
     await expect(canvas.getByText('In partnership with')).toBeInTheDocument();
@@ -106,6 +118,9 @@ export const TextOnly: Story = {
     heading: 'Minimalist Hero',
     subHeading: 'Simple and elegant',
     VideoComponent: Video,
+  },
+  parameters: {
+    layout: 'fullscreen',
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -124,6 +139,9 @@ export const LongContent: Story = {
       'The description here is intentionally long to ensure text flows properly across viewports and doesn’t break layout.',
 
     VideoComponent: Video,
+  },
+  parameters: {
+    layout: 'fullscreen',
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -146,6 +164,9 @@ export const WithBackgroundColor: Story = {
     },
     VideoComponent: Video,
   },
+  parameters: {
+    layout: 'fullscreen',
+  },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
     const banner = canvas.getByRole('banner');
@@ -163,6 +184,9 @@ export const WithBackgroundImage: Story = {
     backgroundImageUrl: customBackgroundImage,
     'data-theme': 'Dark',
     VideoComponent: Video,
+  },
+  parameters: {
+    layout: 'fullscreen',
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -182,6 +206,9 @@ export const WithoutBackground: Story = {
       'The content should be clearly visible without any background distractions.',
     removeBackground: true,
     VideoComponent: Video,
+  },
+  parameters: {
+    layout: 'fullscreen',
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -204,6 +231,9 @@ export const WithWideText: Story = {
     },
     withWideText: true,
     VideoComponent: Video,
+  },
+  parameters: {
+    layout: 'fullscreen',
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -232,6 +262,9 @@ export const WithAnnouncementBanner: Story = {
       },
     },
   },
+  parameters: {
+    layout: 'fullscreen',
+  },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
 
@@ -259,6 +292,9 @@ export const WithCustomStyles: Story = {
       'We apply a dashed border and fixed height using a custom class injected in the Storybook play function.',
     className: 'customHeroBannerClass',
     VideoComponent: Video,
+  },
+  parameters: {
+    layout: 'fullscreen',
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
