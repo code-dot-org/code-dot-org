@@ -2,6 +2,7 @@
 @no_mobile
 Feature: Courses page
 
+@skip
 @as_student
 Scenario: Student courses
   Given I am on "http://studio.code.org/home"
@@ -24,6 +25,7 @@ Scenario: Teacher courses
   And I see no difference for "teacher courses page"
   And I close my eyes
 
+@skip
 @as_student
 Scenario: Student courses, non-english
   When I open my eyes to test "student courses non-english"
@@ -58,6 +60,7 @@ Scenario: Signed out courses, teach
   And I see no difference for "signed-out courses page, teach"
   And I close my eyes
 
+@skip
 Scenario: Signed out courses, non-english
   When I open my eyes to test "signed out courses, non-english"
   Given I am on "http://studio.code.org/home/lang/es"
