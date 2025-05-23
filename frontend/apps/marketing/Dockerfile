@@ -34,8 +34,12 @@ RUN corepack enable
 
 WORKDIR /app
 
+RUN df -h
 COPY . .
- 
+RUN df -h
+RUN ls -l
+RUN du -sh *
+
 # Generate a partial monorepo with a pruned lockfile for a target workspace.
 # See: https://turbo.build/repo/docs/reference/prune
 RUN yarn dlx turbo prune @code-dot-org/marketing --docker
