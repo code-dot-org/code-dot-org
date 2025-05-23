@@ -26,8 +26,8 @@ $peek-height: 5px;
 .container {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 16px;
+  gap: 10px;
+  padding: 10px;
   user-select: none;
   color-scheme: dark;
   background-color: $neutral_dark;
@@ -54,7 +54,6 @@ $peek-height: 5px;
   flex-direction: column;
   overflow-y: auto;
   padding-right: 16px;
-  padding-left: 4px;
 }
 
 .sequence-editor-drums {

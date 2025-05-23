@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "a2cd1503-0fdb-4bef-a9c3-10333c8e26e6",
+          "notice": "AI and the Systems That Power It Professional Development",
+          "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+          "link": "https://studio.code.org/s/self-paced-pl-teaching-aif3-2025/",
+          "type": "information",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Let’s Go!"
+        }
+      ],
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "AIF",
       "has_unnumbered_lessons": true,
@@ -22,7 +34,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-21 18:28:59 UTC",
+    "serialized_at": "2025-05-22 21:19:44 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6273,6 +6285,7 @@
       "key": "ethical_guideline",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {

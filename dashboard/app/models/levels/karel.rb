@@ -68,7 +68,7 @@ class Karel < Maze
     {'serialized_maze' => maze_json}
   end
 
-  def summarize_as_bonus
+  def summarize_as_bonus(unit_group_unit: nil)
     summary = super
     summary[:flower_type] = flower_type if flower_type
     summary

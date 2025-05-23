@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "b90d1503-ed61-4d70-855e-a05da75a87f0",
+          "notice": "Foundations of AI Programming Professional Development",
+          "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+          "link": "https://studio.code.org/s/self-paced-pl-teaching-aif2-2025/",
+          "type": "information",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Let's Go!"
+        }
+      ],
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "AIF",
       "has_unnumbered_lessons": true,
@@ -22,7 +34,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-21 15:14:17 UTC",
+    "serialized_at": "2025-05-22 21:17:26 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -11058,6 +11070,7 @@
       "key": "function_template",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {

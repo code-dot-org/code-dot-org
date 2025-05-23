@@ -46,7 +46,8 @@
           "type": "library_item",
           "library_name": "surveys/pd/self_paced_pl_standards",
           "library_version": 0,
-          "name": "plan_to_teach"
+          "name": "plan_to_teach",
+          "natalia_comment": "INCLUDE ONLY IF MODULE IS ABOUT CS CURRICULUM"
         },
         {
           "type": "library_item",
