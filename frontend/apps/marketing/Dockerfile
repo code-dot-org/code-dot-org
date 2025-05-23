@@ -57,13 +57,19 @@ RUN corepack enable
 WORKDIR /app
 
 # First install the dependencies (as they change less often)
+RUN df -h
 COPY --link --from=source-code /app/out/json/ .
 RUN yarn install
+RUN df -h
 
 # Build the project
+RUN df -h
 COPY --link --from=source-code /app/.turbo .turbo
+RUN df -h
 COPY --link --from=source-code /app/out/full/ .
+RUN df -h
 RUN yarn turbo run build
+RUN df -h
 
 ##############################################################################
 # Runnner Layer                                                              #
