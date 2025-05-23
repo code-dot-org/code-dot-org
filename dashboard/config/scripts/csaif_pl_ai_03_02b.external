@@ -1,0 +1,39 @@
+name 'csaif_pl_ai_03_02b'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Contradictions
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Contradiction</strong> when an AI generates conflicting or opposing responses based on a similar input, making it impossible for both responses to be correct at the same time.</p>
+</div>
+
+## 📝 To Do
+
+#### Read through the two versions of the AI chat below. As you review, try to identify
+* #### Contradiction found
+* #### Why this might have happened
+* #### Potential real-world consequences of contradictions
+
+<p align="center">
+<img src="https://images.code.org/9f1ddd6c70ad0f77379007d318c03294-Screenshot 2025-05-22 at 1.45.58 PM.png" alt="lesson plan diagram" width="85%" style="border-radius:10px; border: 5px solid black;">
+</p>
+
+#### AI models do not have deep expertise like medical professionals. AI relies on broad datasets that may contain conflicting or outdated information, which leads to contradictions.
+
+#### Medical professionals have deep knowledge on specific subjects with information on current methods and research.
+
+#### Fact-checking ensures accuracy by verifying AI-generated information against trusted sources. Refining prompts by doing things like specifying a reliable source or adding context helps AI produce clearer and more relevant responses.
+
+#### *Optional:* Fact-check claims made by the AI by doing a Google search or using one of the following sources.
+* #### <a href='https://my.clevelandclinic.org/health/symptoms/21209-chest-pain' target='_blank' rel='noopener noreferrer'>Cleveland Clinc</a>
+* #### <a href='https://www.mayoclinic.org/diseases-conditions/chest-pain/symptoms-causes/syc-20370838' target='_blank' rel='noopener noreferrer'>Mayo Clinic</a>
+* #### <a href='https://medlineplus.gov/ency/article/003079.htm' target='_blank' rel='noopener noreferrer'>Medline Plus</a>
+
+<br>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 5. You can find more details in the full <a href='https://studio.code.org/s/aif1-2025/lessons/5' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+MARKDOWN

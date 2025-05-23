@@ -1,0 +1,19 @@
+{
+  "entryContent": {
+    "fields": {
+      "linkName": {
+        "en-US": "Editorial Card Link"
+      },
+      "label": {
+        "en-US": "Editorial Card Link"
+      },
+      "primaryTarget": {
+        "en-US": "/editorial-card-test"
+      },
+      "isThisAnExternalLink": {
+        "en-US": true
+      }
+    }
+  },
+  "contentType": "link"
+}

@@ -85,6 +85,9 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
       fill-opacity: 0.5;
       stroke-opacity: 0.5;
     }
+    .blocklyPath:focus {
+      outline: none;
+    }
     `
   );
 }

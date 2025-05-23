@@ -1615,7 +1615,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/curriculum/cs-ai-foundations',
-        destination: '/curriculum/artifical-intelligence-foundations',
+        destination: '/curriculum/artificial-intelligence-foundations',
         permanent: false,
       },
       {
@@ -1645,17 +1645,17 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/aivideos',
-        destination: '/artifical-intelligencei',
+        destination: '/artificial-intelligencei',
         permanent: false,
       },
       {
         source: '/ethical-ai-panel',
-        destination: '/artifical-intelligence',
+        destination: '/artificial-intelligence',
         permanent: false,
       },
       {
         source: '/ai',
-        destination: '/artifical-intelligence',
+        destination: '/artificial-intelligence',
         permanent: false,
       },
       {
@@ -1675,7 +1675,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/about/hear-from-us',
-        destination: '/about/hear-from-code',
+        destination: '/about#hear-from-us',
         permanent: false,
       },
       {

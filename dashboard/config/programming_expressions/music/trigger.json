@@ -4,7 +4,7 @@
   "category": "Control",
   "category_key": "control",
   "block_name": "triggered_at_simple2",
-  "content": "\nCode connected to this block will play at the next measure when the associated button is pressed on the beat pad. This lets you play parts live as the track is playing. You can also press the \"1\" through \"6\" keys on your keyboard to trigger these buttons.",
+  "content": "<table>\n\n  <tr>\n    <td style=\"width: 40%\"><img src=\"https://images.code.org/229a5ebf2b63431d178dc2be090821cc-trigger-1.png\"></td>\n    <td style=\"width: 60%; padding: 10px;\">\n      Triggers allow you to play sounds as your song plays.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 40%\"><img src=\"https://images.code.org/24c4e7f2c95f8426b31ae79bebefc386-trigger-2.png\"></td>\n    <td style=\"width: 60%; padding: 10px;\">\n      You can activate triggers using buttons under the Run button. You can also press the key on your keyboard.\n    </td>\n  </tr>\n  \n  <tr>\n    <td style=\"width: 40%\"><img src=\"https://images.code.org/08d808fe3d529672ee81b5c58ea8e715-trigger-3.png\"></td>\n    <td style=\"width: 60%; padding: 10px;\">\n      When you press a trigger, your tracks will play \"live\" as the rest of your song plays\n    </td>\n  </tr>\n  \n  <tr>\n    <td style=\"width: 40%\"><img src=\"https://images.code.org/2ab38d9a15a3f59687ee0592360d8956-trigger-5.png\"></td>\n    <td style=\"width: 60%; padding: 10px;\">\n      You can adjust when the sound plays to change how your song plays\n    </td>\n  </tr>\n  \n  <tr>\n    <td style=\"width: 40%\"><img src=\"https://images.code.org/aa473f1fec259dcbfa96e7b2492eef88-trigger-6.png\"></td>\n    <td style=\"width: 60%; padding: 10px;\">\n      Key takeaway: triggers add tracks to your song \"live\" when you press a button\n    </td>\n  </tr>\n\n\n</table>    ",
   "palette_params": [
     {
       "name": "trigger",
@@ -18,5 +18,6 @@
       "description": "When to start the triggered code"
     }
   ],
-  "short_description": "Play sounds when a button on the beat pad is pressed."
+  "short_description": "Play sounds when a button on the beat pad is pressed.",
+  "video_key": "music-lab-roxanne-triggers"
 }

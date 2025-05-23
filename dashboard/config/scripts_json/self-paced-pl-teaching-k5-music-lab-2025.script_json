@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-21 23:21:42 UTC",
+    "serialized_at": "2025-05-22 20:28:05 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -55,7 +55,7 @@
     },
     {
       "key": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
-      "name": "Teacher Training: Songwriter's Toolbox",
+      "name": "Explore the Songwriter's Toolbox",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": false,
@@ -71,7 +71,7 @@
     },
     {
       "key": "✨FOR LAUNCH!!!!✨Producer Power",
-      "name": "Teacher Training: Producer Power",
+      "name": "Discover Producer Power",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": false,
@@ -87,7 +87,7 @@
     },
     {
       "key": "✨FOR LAUNCH!!!!✨ Sound Designer's Studio",
-      "name": "Teacher Training: Sound Designer's Studio",
+      "name": "Create with Sound Designer's Studio",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": false,
@@ -846,31 +846,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "ML-Loops_1"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ML-Loops_1"
-        ],
-        "lesson.key": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-k5-music-lab-2025",
-        "activity_section.key": "9277dc19-2e80-4d4a-9e7b-2cf5d9c74cfd"
-      },
-      "level_keys": [
-        "ML-Loops_1"
-      ]
-    },
-    {
-      "chapter": 21,
-      "position": 10,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "music-coding-intro-5sounds_launch_1"
         ],
         "progression": "Skill Building"
@@ -890,8 +865,8 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 11,
+      "chapter": 21,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -915,8 +890,8 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 12,
+      "chapter": 22,
+      "position": 11,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -940,8 +915,8 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 13,
+      "chapter": 23,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -965,8 +940,8 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 14,
+      "chapter": 24,
+      "position": 13,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -990,8 +965,8 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 15,
+      "chapter": 25,
+      "position": 14,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1015,8 +990,8 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 16,
+      "chapter": 26,
+      "position": 15,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1040,7 +1015,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1065,7 +1040,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1090,11 +1065,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MusicLab-functions-info_1"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -1112,7 +1090,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1137,7 +1115,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -1162,7 +1140,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -1187,7 +1165,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -1212,7 +1190,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -1237,7 +1215,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 9,
       "activity_section_position": 6,
       "assessment": false,
@@ -1262,7 +1240,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 10,
       "activity_section_position": 7,
       "assessment": false,
@@ -1287,7 +1265,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 11,
       "activity_section_position": 8,
       "assessment": false,
@@ -1312,7 +1290,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 12,
       "activity_section_position": 9,
       "assessment": false,
@@ -1337,7 +1315,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -1362,7 +1340,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -1387,7 +1365,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 15,
       "activity_section_position": 3,
       "assessment": false,
@@ -1412,7 +1390,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1437,7 +1415,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1462,11 +1440,14 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml_events_triggers"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -1484,7 +1465,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1509,7 +1490,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -1534,7 +1515,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 47,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -1559,7 +1540,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 48,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -1584,7 +1565,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 49,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -1609,7 +1590,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 50,
       "position": 9,
       "activity_section_position": 6,
       "assessment": false,
@@ -1634,7 +1615,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 51,
       "position": 10,
       "activity_section_position": 7,
       "assessment": false,
@@ -1659,7 +1640,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 52,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -1684,7 +1665,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1708,11 +1689,14 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml_nextsteps"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1951,18 +1935,6 @@
         "level.key": "music-coding-ingro-loop1_launch_1",
         "script_level.level_keys": [
           "music-coding-ingro-loop1_launch_1"
-        ],
-        "lesson.key": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-k5-music-lab-2025",
-        "activity_section.key": "9277dc19-2e80-4d4a-9e7b-2cf5d9c74cfd"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ML-Loops_1",
-        "script_level.level_keys": [
-          "ML-Loops_1"
         ],
         "lesson.key": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
         "lesson_group.key": "",

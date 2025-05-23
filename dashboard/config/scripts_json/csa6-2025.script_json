@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-20 16:42:26 UTC",
+    "serialized_at": "2025-05-23 02:07:42 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -88,7 +88,6 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How can I identify the requirements and things I need to know to complete a project?**\n\nStudents are introduced to the Natural Language Processing Project and evaluate requirements and examples to identify questions and key features. Before beginning work on the project, students expand their understanding of program structure and comments by identifying best practices and exploring the use of Javadocs to generate program documentation.",
         "preparation": "* **(Optional)** Print copies of the Project Planning Guided Notes (one for each student)\n* Preview the *Software Engineering: Natural Language Processing* video\n* Print copies of the Project Characteristics handout (one for each pair of students)\n* Print copies of the Unit 6 Guide",
         "student_overview": "**How can I identify the requirements and things I need to know to complete a project?**\n\nNatural language processing is used in many programs and apps that we use every day. In this unit, we will explore some of the techniques and algorithms used in our apps and smart devices to develop our own program that uses natural language processing. You explore strategies for writing and structuring code so other software engineers can easily understand and use a Java tool to create program documentation."
@@ -107,7 +106,6 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can I analyze parts of a `String` object?**\n\nIn this lesson, students revisit the `String` class and learn how to use the `substring()` method. They discover that `String` objects are immutable and are not modified when calling methods in the `String` class. Students also explore how the `substring()` method can be combined with other methods in the `String` class to find the location of a specific character or substring within a `String` and compare substrings for equality. They then practice using the `substring()` method to retrieve a substring of a `String` object and to find and replace specific characters.",
         "preparation": "* **(Optional)** Print copies of the Substrings Guided Notes (one for each student)",
         "student_overview": "**How can I analyze parts of a `String` object?**\n\nIn this lesson, you revisit the `String` class and learn how to use the `substring()` method. You discover that `String` objects are immutable and are not modified when calling methods in the `String` class. You also explore how the `substring()` method can be combined with other methods in the `String` class to find the location of a specific character or substring within a `String` and compare substrings for equality. You then practice using the `substring()` method to retrieve a substring of a `String` object and to find and replace specific characters."
@@ -126,7 +124,6 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.8\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**Why would I want to represent primitive values as objects?**\n\nIn this lesson, students explore the `Integer` and `Double` classes and learn how these are used to represent `int` and `double` values as objects. They realize that using these classes allows them to use methods to work with `int` and `double` values, such as to convert a `String` to an `int` or `double` value. Students also discover the minimum and maximum values for integers and how exceeding these limits causes overflow or underflow errors then practice using methods in the `Integer` and `Double` classes.",
         "preparation": "* **(Optional)** Print copies of the Integer and Double Objects Guided Notes (one for each student)\n* Preview the *Wrapper Classes - Part 1* and *Wrapper Classes - Part 2* videos",
         "student_overview": "**Why would I want to represent primitive values as objects?**\n\nIn this lesson, you explore the `Integer` and `Double` classes and learn how these are used to represent `int` and `double` values as objects. You realize that using these classes allows you to use methods to work with `int` and `double` values, such as to convert a `String` to an `int` or `double` value. You also discover the minimum and maximum values for integers and how exceeding these limits causes overflow or underflow errors then practice using methods in the `Integer` and `Double` classes."
@@ -145,7 +142,6 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 7.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**Why would I use an `ArrayList` instead of an array?**\n\nStudents have learned to use one-dimensional (1D) and two-dimensional (2D) arrays to store multiple values of the same type. In this lesson, students explore the `ArrayList` class and learn how to declare and initialize an `ArrayList` and add elements. Students identify scenarios where an `ArrayList` is more suitable and differentiate between a dynamic data structure and a static data structure. Students then practice creating an `ArrayList` and adding values to the list.",
         "preparation": "* **(Optional)** Print copies of the ArrayLists Guided Notes (one for each student)\n* Preview *The ArrayList Class* video",
         "student_overview": "**Why would I use an `ArrayList` instead of an array?**\n\nWhen working with arrays and lists, we sometimes encounter problems where the number of elements is unknown or the size of the list constantly changes. In this lesson, you explore the `ArrayList` class and learn how to declare and initialize an `ArrayList` and add elements. You identify scenarios where an `ArrayList` is more suitable and differentiate between a dynamic data structure and a static data structure. You then practice creating an `ArrayList` and adding values to the list."
@@ -164,7 +160,6 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 7.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How am I able to work with the data stored in an `ArrayList`?**\n\nStudents continue to explore the `ArrayList` class and learn to work with the `get()` and `set()` methods to retrieve and modify elements. They discover that they can traverse an `ArrayList` similarly to traversing a 1D array and can apply the same standard algorithms to an `ArrayList`. Students then practice using methods in the `ArrayList` class to retrieve and modify elements and traversing an `ArrayList` to find and manipulate elements.",
         "preparation": "* **(Optional)** Print copies of the Manipulating Elements Guided Notes (one for each student)\n* Preview the *Working with ArrayList Data* video",
         "student_overview": "**How am I able to work with the data stored in an `ArrayList`?**\n\nIn this lesson, you continue to explore the `ArrayList` class and learn to work with the `get()` and `set()` methods to retrieve and modify elements. You discover that you can traverse an `ArrayList` similarly to traversing a 1D array and can apply the same standard algorithms to an `ArrayList`. You then practice using methods in the `ArrayList` class to retrieve and modify elements and traversing an `ArrayList` to find and manipulate elements."
@@ -183,7 +178,6 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How can I determine if a list of `String` objects are in alphabetical order?**\n\nStudents have previously learned how to use several of the methods in the String class. In this lesson, students explore the `compareTo()` method and discover how this method can be used to check if a list of `String` objects is in alphabetical order. They then practice using the `compareTo()` method to evaluate `String` objects and using the methods in the `String` class to implement algorithms.",
         "preparation": "* **(Optional)** Print copies of the Comparing Strings Guided Notes (one for each student)\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up OR use [**this web-based version**](https://csabingo.up.railway.app/) to show the terms and definitions",
         "student_overview": "**How can I determine if a list of `String` objects are in alphabetical order?**\n\nYou have previously learned how to use several of the methods in the `String` class. In this lesson, you explore the `compareTo()` method and discover how this method can be used to check if a list of `String` objects is in alphabetical order. You then practice using the `compareTo()` method to evaluate `String` objects and using the methods in the `String` class to implement algorithms."
@@ -202,7 +196,6 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 7.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**Why would I use generic types?**\n\nStudents have previously learned that an `ArrayList` can only store objects, such as `Integer` or `String`. In this lesson, they learn about generic types. Students realize that using the angle brackets when creating an `ArrayList` ensures that an `ArrayList` stores a specific type of object, while leaving out the angle brackets may result in multiple types of objects getting stored in the `ArrayList`. They then practice creating and using an `ArrayList` of objects and implementing algorithms to find information and perform calculations.",
         "preparation": "* **(Optional)** Print copies of the Lists of Objects Guided Notes (one for each student)",
         "student_overview": "**Why would I use generic types?**\n\nYou have previously learned that an `ArrayList` can only store objects, such as `Integer` or `String`. In this lesson, you learn about generic types. You realize that using the angle brackets when creating an `ArrayList` ensures that an `ArrayList` stores a specific type of object, while leaving out the angle brackets may result in multiple types of objects getting stored in the `ArrayList`. You then practice creating and using an `ArrayList` of objects and implementing algorithms to find information and perform calculations."
@@ -221,7 +214,6 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.3\n* Topic Questions 7.2\n* Topic Questions 7.3\n* Topic Questions 7.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How is removing data from an `ArrayList` different from removing data from an array?**\n\nStudents have learned how to add, retrieve, and modify elements in an `ArrayList`. In this lesson, students explore the functionality of the `remove()` method in the `ArrayList` class and identify potential errors when attempting to remove items while traversing the list. Then they practice debugging programs that result in a `ConcurrentModificationException` and using the `remove()` method to remove elements from an `ArrayList`.",
         "preparation": "* **(Optional)** Print copies of the Removing Elements Guided Notes (one for each student)\n* Preview the *Removing Data from an ArrayList* video",
         "student_overview": "**How is removing data from an `ArrayList` different from removing data from an array?**\n\nYou have learned how to add, retrieve, and modify elements in an `ArrayList`. In this `ArrayList`, you explore the functionality of the `remove()` method in the `ArrayList` class and identify potential errors when attempting to remove items while traversing the list. You then practice debugging programs that result in a `ConcurrentModificationException` and using the `remove()` method to remove elements from an `ArrayList`."
@@ -240,7 +232,6 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How can I use what I know about object-oriented programming and `ArrayList`s to plan and implement algorithms?**\n\nStudents use the knowledge and skills they have developed in this unit to implement algorithms to search or modify elements in an `ArrayList`. They explore basic natural language processing techniques, then work with a partner to plan and implement algorithms to work with `String` and `ArrayList` objects. Students participate in a code review to obtain feedback and iterate on the development of their programs.",
         "preparation": "* **(Optional)** Print copies of the ArrayList and String Algorithms Guided Notes (one for each student)\n* Print copies of the Writing Algorithms with ArrayLists handout (one for each pair of students)",
         "student_overview": "**How can I use what I know about object-oriented programming and `ArrayList`s to plan and implement algorithms?**\n\nYou use the knowledge and skills you have developed in this unit to implement algorithms to search or modify elements in an `ArrayList`. You explore basic natural language processing techniques, then work with a partner to plan and implement algorithms to work with `String` and `ArrayList` objects. You participate in a code review to obtain feedback and iterate on the development of your programs."
@@ -871,6 +862,18 @@
       },
       "seeding_key": {
         "lesson_activity.key": "f1ce30da-7719-4804-9c07-d086899447b2",
+        "lesson.key": "Natural Language Processing Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa6-2025"
+      }
+    },
+    {
+      "key": "6463b4ec-34b0-41e0-9a6e-d269b70df3d1",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6463b4ec-34b0-41e0-9a6e-d269b70df3d1",
         "lesson.key": "Natural Language Processing Project [1-Day Version]",
         "lesson_group.key": "lessonGroup-8",
         "script.name": "csa6-2025"
@@ -3998,6 +4001,19 @@
       }
     },
     {
+      "key": "310c3201-ffa7-49c8-a1cb-98db729e9e7c",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.\n",
+        "name": "End of Unit Survey",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "310c3201-ffa7-49c8-a1cb-98db729e9e7c",
+        "lesson_activity.key": "6463b4ec-34b0-41e0-9a6e-d269b70df3d1"
+      }
+    },
+    {
       "key": "b79c5c7e-653e-4073-a6f3-ce06cf996f93",
       "position": 1,
       "properties": {
@@ -5964,7 +5980,7 @@
       "chapter": 69,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "student-eou-survey_linked_page-csa6_2025"
@@ -6012,6 +6028,28 @@
     },
     {
       "chapter": 71,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page-csa6-1b_2025"
+        ],
+        "lesson.key": "Natural Language Processing Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa6-2025",
+        "activity_section.key": "310c3201-ffa7-49c8-a1cb-98db729e9e7c"
+      },
+      "level_keys": [
+        "student-eou-survey_linked_page-csa6-1b_2025"
+      ]
+    },
+    {
+      "chapter": 72,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6036,7 +6074,32 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_2025-csa6"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_2025-csa6"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa6-2025",
+        "activity_section.key": "00ef76fe-ced3-484d-83e5-f3fb22e0cb06"
+      },
+      "level_keys": [
+        "student-eou-survey_2025-csa6"
+      ]
+    },
+    {
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6060,7 +6123,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 75,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6085,7 +6148,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 76,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6110,7 +6173,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 77,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6131,31 +6194,6 @@
       },
       "level_keys": [
         "CSA 2023 Theater Sandbox_2025"
-      ]
-    },
-    {
-      "chapter": 76,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "student-eou-survey_2025-csa6"
-        ],
-        "progression": "End of Unit Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "student-eou-survey_2025-csa6"
-        ],
-        "lesson.key": "End of Unit Survey",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa6-2025",
-        "activity_section.key": "00ef76fe-ced3-484d-83e5-f3fb22e0cb06"
-      },
-      "level_keys": [
-        "student-eou-survey_2025-csa6"
       ]
     }
   ],
@@ -7002,6 +7040,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "student-eou-survey_linked_page-csa6-1b_2025",
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page-csa6-1b_2025"
+        ],
+        "lesson.key": "Natural Language Processing Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa6-2025",
+        "activity_section.key": "310c3201-ffa7-49c8-a1cb-98db729e9e7c"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA Unit 6 Assessment_pilot_oo2025",
         "script_level.level_keys": [
           "CSA Unit 6 Assessment_pilot_oo2025"
@@ -7010,6 +7060,18 @@
         "lesson_group.key": "lessonGroup-8",
         "script.name": "csa6-2025",
         "activity_section.key": "97179d20-996e-4b5e-a513-afeaeca14f05"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_2025-csa6",
+        "script_level.level_keys": [
+          "student-eou-survey_2025-csa6"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa6-2025",
+        "activity_section.key": "00ef76fe-ced3-484d-83e5-f3fb22e0cb06"
       }
     },
     {
@@ -7058,18 +7120,6 @@
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa6-2025",
         "activity_section.key": "8adde027-fd42-4ae4-af31-42c4cd0c0e0c"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "student-eou-survey_2025-csa6",
-        "script_level.level_keys": [
-          "student-eou-survey_2025-csa6"
-        ],
-        "lesson.key": "End of Unit Survey",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa6-2025",
-        "activity_section.key": "00ef76fe-ced3-484d-83e5-f3fb22e0cb06"
       }
     }
   ],
