@@ -44,7 +44,7 @@ describe('CurriculumSnapshot component', () => {
     expect(curriculumSnapshot).toBeVisible();
     expect(curriculumSnapshot).toHaveTextContent(
       'Grades: 1, 1st; Level: 2, 2nd; Duration: 3, 3rd; Devices: 4, 4th; Topics: 5, 5th; ' +
-        'Programming Tools: 6, 6th; Professional Learning: 7, 7th; Accessibility: 8, 8th; Languages supported: 9, 9th',
+        'Tools: 6, 6th; Professional Learning: 7, 7th; Accessibility: 8, 8th; Languages supported: 9, 9th',
     );
   });
 
