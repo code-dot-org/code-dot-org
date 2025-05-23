@@ -168,7 +168,7 @@ And(/^I attempt to join the section$/) do
 end
 
 And /^I click the "([^"]*)" checkbox in the dialog$/ do |section_name|
-  @browser.execute_script("return $(\"span:contains(#{section_name})\").siblings()[0].click();")
+  @browser.execute_script("return $(\"span:contains(#{section_name})\").click();")
 end
 
 And /^I see that "([^"]*)" is assigned to "([^"]*)" in the section table$/ do |section_name, course_name|
