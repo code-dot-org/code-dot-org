@@ -86,9 +86,9 @@ USER nextjs
 # Automatically leverage output traces to reduce image size
 # https://nextjs.org/docs/advanced-features/output-file-tracing
 RUN df -h
-COPY --from=builder --chown=nextjs:nodejs /app/apps/marketing/.next/standalone ./
+COPY --link --from=builder --chown=nextjs:nodejs /app/apps/marketing/.next/standalone ./
 RUN df -h
-COPY --from=builder --chown=nextjs:nodejs /app/apps/marketing/.next/static ./apps/marketing/.next/static
+COPY --link --from=builder --chown=nextjs:nodejs /app/apps/marketing/.next/static ./apps/marketing/.next/static
 RUN df -h
 
 CMD ["node", "apps/marketing/server.js"]
