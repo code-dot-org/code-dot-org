@@ -89,7 +89,7 @@ module Services
       #   2 queries, one to remove LessonsOpportunityStandards from each Lesson.
       #   1 query to get all the programming environments
       #   1 query to get all the standards frameworks
-      #   1 query to check for a CourseOffering. (Would be a few more if is_course was true)
+      #   1 query to check for a CourseOffering.
       #   1 query to check if units in family have the same course type settings
       # LevelsScriptLevels has queries which scale linearly with the number of rows.
       # As far as I know, to get rid of those queries per row, we'd need to load all Levels into memory. I think

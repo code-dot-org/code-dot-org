@@ -389,9 +389,16 @@ class ScriptLevelsController < ApplicationController
           # depending on this incorrect behavior, and we are trying to deprecate this
           # codepath anyway, the current plan is to not fix this bug.
           script = Unit.get_unit_family_redirect_for_user(script_id, user: nil, locale: request.locale)
+          if script
+            # get_unit_family_redirect_for_user returns a fake Unit object,
+            # so we don't need to look up context like UnitGroup or UnitGroupUnit.
+            return {
+              unit: script,
+            }
+          end
         elsif UnitGroup.family_names.include?(script_id)
-          unit_group = UnitGroup.latest_stable_version(script_id, locale: request.locale) ||
-            UnitGroup.latest_stable_version(script_id)
+          (unit_group = UnitGroup.latest_stable_version(script_id, locale: request.locale) ||
+            UnitGroup.latest_stable_version(script_id))
           if unit_group&.can_be_participant?(current_user)
             unit_group = UnitGroup.latest_assigned_version(script_id, current_user) || unit_group
           end

@@ -11,14 +11,14 @@ FactoryBot.define do
     sequence(:display_name, 'a') {|c| "bogus-course-offering-#{c}"}
     assignable {true}
 
-    trait :with_units do
-      after(:create) do |course_offering|
-        create(:course_version, :with_unit, course_offering: course_offering)
-        create(:course_version, :with_unit, course_offering: course_offering)
-        create(:course_version, :with_unit, course_offering: course_offering)
-        create(:course_version, :with_unit, course_offering: course_offering)
-      end
-    end
+    # trait :with_units do
+    #   after(:create) do |course_offering|
+    #     create(:course_version, :with_unit, course_offering: course_offering)
+    #     create(:course_version, :with_unit, course_offering: course_offering)
+    #     create(:course_version, :with_unit, course_offering: course_offering)
+    #     create(:course_version, :with_unit, course_offering: course_offering)
+    #   end
+    # end
 
     trait :with_unit_groups do
       after(:create) do |course_offering|
@@ -35,11 +35,11 @@ FactoryBot.define do
       assignable {true}
       grade_levels {"9,10,11,12"}
 
-      trait :with_units do
-        after(:create) do |csp_course_offering|
-          create(:course_version, :with_csp_unit, course_offering: csp_course_offering)
-        end
-      end
+      # trait :with_units do
+      #   after(:create) do |csp_course_offering|
+      #     create(:course_version, :with_csp_unit, course_offering: csp_course_offering)
+      #   end
+      # end
     end
   end
 
@@ -53,13 +53,17 @@ FactoryBot.define do
       association(:content_root, factory: :unit_group)
     end
 
-    trait :with_unit do
-      association(:content_root, factory: :script, is_course: true)
+    trait :with_single_unit_course do
+      association(:content_root, factory: :single_unit_course)
     end
 
-    trait :with_csp_unit do
-      association(:content_root, factory: :csp_script, is_course: true)
-    end
+    # trait :with_unit do
+    #   association(:content_root, factory: :script, is_course: true)
+    # end
+
+    # trait :with_csp_unit do
+    #   association(:content_root, factory: :csp_script, is_course: true)
+    # end
   end
 
   factory :unit_group_unit do
@@ -77,12 +81,53 @@ FactoryBot.define do
     participant_audience {"student"}
     instructor_audience {"teacher"}
 
+    trait :pl_course do
+      participant_audience {"teacher"}
+      instructor_audience {"facilitator"}
+    end
+
     factory :single_unit_course do
+      sequence(:name) {|n| "bogus-single-unit-course-#{n}"}
+      sequence(:family_name) {|n| "bogus-single-unit-course-#{n}"}
+      transient do
+        unit {nil}
+      end
+      after(:create) do |unit_group, evaluator|
+        unit = evaluator.unit || create(:unit, original_unit_group: unit_group)
+        create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
+        unit.reload
+      end
+
+      factory :hoc_course do
+        sequence(:name) {|n| "bogus-hoc-name-#{n}"}
+        sequence(:version_year) {|n| "bogus-hoc-version-year-#{n}"}
+        sequence(:family_name) {|n| "bogus-hoc-family-name-#{n}"}
+
+        after(:create) do |hoc_course|
+          unit = hoc_course.default_units.first
+          if unit
+            unit.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC
+            unit.save!
+          end
+
+          course_offering = CourseOffering.add_course_offering(hoc_course)
+          course_offering.update!(marketing_initiative: 'HOC')
+        end
+      end
+    end
+
+    trait :with_unit do
       transient do
         unit {nil}
       end
       after(:create) do |unit_group, evaluator|
         create :unit_group_unit, unit_group: unit_group, script: (evaluator.unit || create(:unit, original_unit_group: unit_group)), position: 1
+      end
+    end
+
+    trait :with_course_offering do
+      after(:create) do |unit_group|
+        CourseOffering.add_course_offering(unit_group)
       end
     end
   end
@@ -749,6 +794,12 @@ FactoryBot.define do
 
     initialize_with {Section.new(attributes)}
 
+    after(:create) do |section|
+      if section.script_id && section.course_id.nil?
+        section.update!(course_id: section.script.original_unit_group_id)
+      end
+    end
+
     trait :teacher_participants do
       participant_type {'teacher'}
       login_type {'email'}
@@ -1060,17 +1111,19 @@ FactoryBot.define do
 
   factory :unit, aliases: [:script] do
     sequence(:name) {|n| "bogus-script-#{n}"}
-    published_state {"beta"}
+    #TODO Do we need this?
+    published_state {nil}
     is_migrated {true}
-    instruction_type {"teacher_led"}
-    participant_audience {"student"}
-    instructor_audience {"teacher"}
+    # instruction_type {"teacher_led"}
+    # participant_audience {"student"}
+    # instructor_audience {"teacher"}
 
-    trait :is_course do
-      sequence(:version_year) {|n| "bogus-version-year-#{n}"}
-      sequence(:family_name) {|n| "bogus-family-name-#{n}"}
-      is_course {true}
-    end
+    # TODO DELETE THIS
+    # trait :is_course do
+    #   sequence(:version_year) {|n| "bogus-version-year-#{n}"}
+    #   sequence(:family_name) {|n| "bogus-family-name-#{n}"}
+    #   is_course {true}
+    # end
 
     trait :with_lessons do
       transient do
@@ -1130,30 +1183,31 @@ FactoryBot.define do
         csa_script.save!
       end
     end
+    #TODO DELETE THIS
+    # factory :hoc_script do
+    #   is_course {true}
+    #   sequence(:version_year) {|n| "bogus-hoc-version-year-#{n}"}
+    #   sequence(:family_name) {|n| "bogus-hoc-family-name-#{n}"}
+    #   after(:create) do |hoc_script|
+    #     hoc_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC
+    #     hoc_script.save!
+    #     course_offering = CourseOffering.add_course_offering(hoc_script)
+    #     course_offering.update!(marketing_initiative: 'HOC')
+    #   end
+    # end
+    #TODO DELETE THIS
+    # factory :standalone_unit do
+    #   after(:create) do |standalone_unit|
+    #     standalone_unit.is_course = true
+    #     standalone_unit.save!
+    #   end
+    # end
 
-    factory :hoc_script do
-      is_course {true}
-      sequence(:version_year) {|n| "bogus-hoc-version-year-#{n}"}
-      sequence(:family_name) {|n| "bogus-hoc-family-name-#{n}"}
-      after(:create) do |hoc_script|
-        hoc_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC
-        hoc_script.save!
-        course_offering = CourseOffering.add_course_offering(hoc_script)
-        course_offering.update!(marketing_initiative: 'HOC')
-      end
-    end
-
-    factory :standalone_unit do
-      after(:create) do |standalone_unit|
-        standalone_unit.is_course = true
-        standalone_unit.save!
-      end
-    end
-
-    factory :pl_unit do
-      participant_audience {"teacher"}
-      instructor_audience {"facilitator"}
-    end
+    # TODO Don't think we should have this either?
+    # factory :pl_unit do
+    #   participant_audience {"teacher"}
+    #   instructor_audience {"facilitator"}
+    # end
 
     factory :foundations_of_cs_script do
       after(:create) do |foundations_of_cs_script|
