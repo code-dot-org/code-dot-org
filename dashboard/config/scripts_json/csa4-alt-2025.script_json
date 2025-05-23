@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-21 22:00:21 UTC",
+    "serialized_at": "2025-05-23 02:34:17 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -281,7 +281,7 @@
       "relative_position": 11,
       "properties": {
         "overview": "**What if the data I need to store is best represented as a table?**\n\nIn this lesson, students are introduced to two-dimensional (2D) arrays and explore how these can be used to store tables of data. Students discover that 2D arrays are arrays of arrays and identify similarities and differences between the structure and functionality of 1D and 2D arrays. They learn how to declare and initialize 2D arrays using the `new` keyword and initializer lists and practice creating 2D arrays to store data.",
-        "preparation": "* **(Optional)** Print copies of the U5L1 Guided Notes (one for each student)\n* Preview the *Two-Dimensional (2D) Arrays* video",
+        "preparation": "* **(Optional)** Print copies of the Two-Dimensional (2D) Arrays Guided Notes (one for each student)\n* Preview the *Two-Dimensional (2D) Arrays* video",
         "student_overview": "**What if the data I need to store is best represented as a table?**\n\nIn this lesson, you are introduced to two-dimensional (2D) arrays and explore how these can be used to store tables of data. You discover that 2D arrays are arrays of arrays and identify similarities and differences between the structure and functionality of 1D and 2D arrays. You learn how to declare and initialize 2D arrays using the `new` keyword and initializer lists and practice creating 2D arrays to store data."
       },
       "seeding_key": {
@@ -2312,6 +2312,18 @@
       }
     },
     {
+      "key": "e78c9fb8-ecd3-4666-8215-d4395694e34c",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e78c9fb8-ecd3-4666-8215-d4395694e34c",
+        "lesson.key": "Data for Social Good Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025"
+      }
+    },
+    {
       "key": "048baa11-2432-4789-8b8b-23b3b3c50bc2",
       "position": 1,
       "properties": {
@@ -2403,6 +2415,18 @@
       },
       "seeding_key": {
         "lesson_activity.key": "94b46371-4c7f-4b5f-8e58-a47929c65c21",
+        "lesson.key": "Abstract Data Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025"
+      }
+    },
+    {
+      "key": "b7aa2643-f80a-4f4b-a969-47281cb48699",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b7aa2643-f80a-4f4b-a969-47281cb48699",
         "lesson.key": "Abstract Data Art Project [1-Day Version]",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa4-alt-2025"
@@ -2506,6 +2530,18 @@
       }
     },
     {
+      "key": "0e0302a1-28a4-43a5-8e29-73d149f95d20",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0e0302a1-28a4-43a5-8e29-73d149f95d20",
+        "lesson.key": "Personal Narrative Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025"
+      }
+    },
+    {
       "key": "f8ec16ba-5f20-446a-b3c4-b6ab142f02f7",
       "position": 1,
       "properties": {
@@ -2597,6 +2633,18 @@
       },
       "seeding_key": {
         "lesson_activity.key": "3696d0db-23b1-47b5-ae94-fdae783fa8fe",
+        "lesson.key": "Natural Language Processing Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025"
+      }
+    },
+    {
+      "key": "1760aa5a-08f3-4f53-bb17-6718549cbf3a",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1760aa5a-08f3-4f53-bb17-6718549cbf3a",
         "lesson.key": "Natural Language Processing Project [1-Day Version]",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa4-alt-2025"
@@ -3024,13 +3072,7 @@
       "key": "4e58cee3-20c9-4dfd-b380-10b30052100d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 3 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "4e58cee3-20c9-4dfd-b380-10b30052100d",
@@ -3038,19 +3080,8 @@
       }
     },
     {
-      "key": "721118c9-5031-435d-8a5d-9338134b71eb",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "721118c9-5031-435d-8a5d-9338134b71eb",
-        "lesson_activity.key": "fb64ae78-e282-4d0c-8a29-516a7b2ef912"
-      }
-    },
-    {
       "key": "36f9231c-0ce2-481d-961b-b6e9a2a0b9ca",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "---"
       },
@@ -3061,7 +3092,7 @@
     },
     {
       "key": "b2ca9490-2ba3-44e5-b24f-6b0456a4f47e",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -3334,13 +3365,7 @@
       "key": "69a9eda6-42d3-4528-8783-4ca61b720ccf",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 3 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "69a9eda6-42d3-4528-8783-4ca61b720ccf",
@@ -3348,19 +3373,8 @@
       }
     },
     {
-      "key": "82753ba0-d3be-489a-97c7-c7ca931786f7",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "82753ba0-d3be-489a-97c7-c7ca931786f7",
-        "lesson_activity.key": "84f06621-5a00-43e2-a107-d730a97167d0"
-      }
-    },
-    {
       "key": "3c6829e8-ef85-4112-b22d-610a56ba62fb",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "---"
       },
@@ -3371,7 +3385,7 @@
     },
     {
       "key": "e21b5333-b9e3-4c91-8d94-42e96dc63ea5",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -3633,13 +3647,7 @@
       "key": "f7290a79-8080-4aba-b69f-1da73df6c0f8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Based on what we now know about 1D arrays, how can we store these values in a program?*\n\n**Discussion Goal:** Students suggest declaring and initializing a 1D array and assigning each value to the appropriate position in the array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate a solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 3 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Based on what we now know about 1D arrays, how can we store these values in a program?*\n\n**Discussion Goal:** Students suggest declaring and initializing a 1D array and assigning each value to the appropriate position in the array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate a solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "f7290a79-8080-4aba-b69f-1da73df6c0f8",
@@ -3647,19 +3655,8 @@
       }
     },
     {
-      "key": "eb5ce7fa-44da-4068-a5de-01af18ab1acb",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "eb5ce7fa-44da-4068-a5de-01af18ab1acb",
-        "lesson_activity.key": "44dfdf77-9a8d-45b1-b140-f6ae7052fe0e"
-      }
-    },
-    {
       "key": "0d23c379-cde4-48c9-b83b-7ce755dd442e",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "---"
       },
@@ -3670,7 +3667,7 @@
     },
     {
       "key": "0dad3172-dbc1-4891-82c3-6a24d3ff4133",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -3921,13 +3918,7 @@
       "key": "1dd001e2-2191-4ca9-a43c-b0b470a4daea",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to trace the code segment and identify the error.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 3 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to trace the code segment and identify the error.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "1dd001e2-2191-4ca9-a43c-b0b470a4daea",
@@ -3935,19 +3926,8 @@
       }
     },
     {
-      "key": "85a3ef68-0864-4b5c-9d73-ed6bbb85e0a9",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "85a3ef68-0864-4b5c-9d73-ed6bbb85e0a9",
-        "lesson_activity.key": "a8e0839c-90cb-4c6e-bca1-907fe2dc2aa4"
-      }
-    },
-    {
       "key": "3515528d-db56-435b-921b-f61c3a265166",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "---"
       },
@@ -3958,7 +3938,7 @@
     },
     {
       "key": "9c28a18a-5092-4ef6-9fcb-fe44c7cf3011",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -4600,13 +4580,7 @@
       "key": "f5643624-649c-4d01-88c0-b2ac43dec033",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 3 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "f5643624-649c-4d01-88c0-b2ac43dec033",
@@ -4614,19 +4588,8 @@
       }
     },
     {
-      "key": "ab8e203c-7d6b-41e6-8e57-4762c9e6ae8e",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "ab8e203c-7d6b-41e6-8e57-4762c9e6ae8e",
-        "lesson_activity.key": "8a695995-2889-4587-ae39-ba8917e13026"
-      }
-    },
-    {
       "key": "04421ad9-9157-4750-9aea-04381cb9ebc2",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "---"
       },
@@ -4637,7 +4600,7 @@
     },
     {
       "key": "e72d2026-b96b-4368-a961-cdc9b6ee11cb",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -4862,13 +4825,7 @@
       "key": "01a017c5-aa4f-4968-bdea-8c71e4abb58c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain use cases and limitations for using enhanced `for` loops.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 3 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain use cases and limitations for using enhanced `for` loops.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "01a017c5-aa4f-4968-bdea-8c71e4abb58c",
@@ -5179,13 +5136,7 @@
       "key": "0e76ddb3-28ab-4da3-b779-f9b9530e6487",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 3 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "0e76ddb3-28ab-4da3-b779-f9b9530e6487",
@@ -5407,13 +5358,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "name": "Show What You Know Week",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 3 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "name": "Show What You Know Week"
       },
       "seeding_key": {
         "activity_section.key": "0aa2ea1e-0001-4ec9-9891-e416651ede16",
@@ -5677,13 +5622,7 @@
       "key": "62db194e-46c9-4c39-86c2-be6a4759d5df",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How would a 2D array make it easier to store this data?*\n\n**Discussion Goal:** Students suggest that a 2D array makes it easier to store the example data because each row represents values for a specific category, and elements can be accessed as a table.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 5 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How would a 2D array make it easier to store this data?*\n\n**Discussion Goal:** Students suggest that a 2D array makes it easier to store the example data because each row represents values for a specific category, and elements can be accessed as a table.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "62db194e-46c9-4c39-86c2-be6a4759d5df",
@@ -5691,19 +5630,8 @@
       }
     },
     {
-      "key": "4b7a64c5-c1af-4f71-9198-ff9159dc15c6",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "4b7a64c5-c1af-4f71-9198-ff9159dc15c6",
-        "lesson_activity.key": "9b47b293-9074-49f9-a8c3-5c5d7c620391"
-      }
-    },
-    {
       "key": "9b6ae8a3-a224-46ab-ad2c-1de45eff1248",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "---"
       },
@@ -5714,7 +5642,7 @@
     },
     {
       "key": "34fca85d-2c66-4300-93eb-222b3b17e9fc",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -5910,13 +5838,7 @@
       "key": "0684204e-6240-494a-bdf9-8c76813c86a7",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 5 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "0684204e-6240-494a-bdf9-8c76813c86a7",
@@ -6151,13 +6073,7 @@
       "key": "891456e9-10b9-40b3-9c21-1f7ee4042a72",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How did you use your skills as a software engineer to implement your algorithms?*\n\n**Discussion Goal:** Students share examples of how they used software engineering skills and characteristics to implement their algorithms.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 5 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How did you use your skills as a software engineer to implement your algorithms?*\n\n**Discussion Goal:** Students share examples of how they used software engineering skills and characteristics to implement their algorithms.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "891456e9-10b9-40b3-9c21-1f7ee4042a72",
@@ -6165,19 +6081,8 @@
       }
     },
     {
-      "key": "50b80fb5-d9d2-44fc-a329-5c9c98a887a2",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "50b80fb5-d9d2-44fc-a329-5c9c98a887a2",
-        "lesson_activity.key": "1e9420d3-c1f2-475d-b42f-f0374d50caa3"
-      }
-    },
-    {
       "key": "36748566-3c14-4b21-b191-bc2c54b0a26e",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "---"
       },
@@ -6188,7 +6093,7 @@
     },
     {
       "key": "a0a94c2a-15bc-4c2c-bb93-16b056757880",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -6374,13 +6279,7 @@
       "key": "51c994e7-b13f-4b8b-83b9-7bbadc1b90c5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the differences between the row-major and column-major order traversal algorithms?*\n\n**Discussion Goal:** Students note that the `for` loop headers are swapped. In row-major order, the loop variable in the outer `for` loop is used as a row index, and the loop variable from the inner `for` loop is used as a column index. Conversely, in column-major order, the loop variable in the outer `for` loop is used as a column index, and the loop variable from the inner `for` loop is used as a row index.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain use cases for each traversal approach.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 5 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the differences between the row-major and column-major order traversal algorithms?*\n\n**Discussion Goal:** Students note that the `for` loop headers are swapped. In row-major order, the loop variable in the outer `for` loop is used as a row index, and the loop variable from the inner `for` loop is used as a column index. Conversely, in column-major order, the loop variable in the outer `for` loop is used as a column index, and the loop variable from the inner `for` loop is used as a row index.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain use cases for each traversal approach.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "51c994e7-b13f-4b8b-83b9-7bbadc1b90c5",
@@ -6388,19 +6287,8 @@
       }
     },
     {
-      "key": "710ad882-8299-4e10-bb44-ceefc7a8e260",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "710ad882-8299-4e10-bb44-ceefc7a8e260",
-        "lesson_activity.key": "c4ce2647-ba86-42f5-a3d3-9157ad3760c3"
-      }
-    },
-    {
       "key": "917ec928-de2e-4317-834a-d368dd98181f",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "---"
       },
@@ -6411,7 +6299,7 @@
     },
     {
       "key": "3dc76f6d-ec87-4ea6-927a-87d771f615e5",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -6648,13 +6536,7 @@
       "key": "2ac95bf4-2030-4400-9903-2ec7615b6c5c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 5 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "2ac95bf4-2030-4400-9903-2ec7615b6c5c",
@@ -6869,13 +6751,7 @@
       "key": "c0cc91f5-00cd-4146-891d-59bcd30d5e10",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What kind of image filters would you want to create?*\n\n**Discussion Goal:** Students share examples of image filters they want to create, such as replicating or modifying existing ones that they like or creating a new one that they wish existing apps and programs had.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 5 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What kind of image filters would you want to create?*\n\n**Discussion Goal:** Students share examples of image filters they want to create, such as replicating or modifying existing ones that they like or creating a new one that they wish existing apps and programs had.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "c0cc91f5-00cd-4146-891d-59bcd30d5e10",
@@ -6883,19 +6759,8 @@
       }
     },
     {
-      "key": "3692c11a-dafd-49a7-a919-b263cfc8531a",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "3692c11a-dafd-49a7-a919-b263cfc8531a",
-        "lesson_activity.key": "e037e484-2b1f-402b-8a29-803a50eed279"
-      }
-    },
-    {
       "key": "4ebac753-7138-4e5d-9f25-6ebf6e97cd80",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "---"
       },
@@ -6906,7 +6771,7 @@
     },
     {
       "key": "c967a65b-54a4-4d1f-9d63-169445995c2d",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -7175,13 +7040,7 @@
       "key": "7ee58a81-0838-4cdb-859f-a9a0ffaa2008",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 5 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "7ee58a81-0838-4cdb-859f-a9a0ffaa2008",
@@ -7362,13 +7221,7 @@
       "key": "fcbfde1c-8270-4ab8-b107-a44cff3eacea",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How has your perception of software engineering changed in this unit?*\n* *How have your software engineering skills improved in this unit?*\n\n**Discussion Goal:** Students share how their perception of software engineering has changed, including how computer science influences different industries and decisions. Students identify the software engineering skills and characteristics they feel they improved in this unit.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 5 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How has your perception of software engineering changed in this unit?*\n* *How have your software engineering skills improved in this unit?*\n\n**Discussion Goal:** Students share how their perception of software engineering has changed, including how computer science influences different industries and decisions. Students identify the software engineering skills and characteristics they feel they improved in this unit.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "fcbfde1c-8270-4ab8-b107-a44cff3eacea",
@@ -7684,13 +7537,7 @@
       "key": "d26ba871-1536-4484-9c42-b634ba9d20de",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 6 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "d26ba871-1536-4484-9c42-b634ba9d20de",
@@ -7698,19 +7545,8 @@
       }
     },
     {
-      "key": "ef15f1d1-e275-4e0c-8277-accd91615592",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "ef15f1d1-e275-4e0c-8277-accd91615592",
-        "lesson_activity.key": "0c5e4471-3923-476e-97ba-5ebfa9146d3a"
-      }
-    },
-    {
       "key": "3e96b9c9-a58f-428e-97d5-01019f3137ee",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "---"
       },
@@ -7721,7 +7557,7 @@
     },
     {
       "key": "a63588c9-c702-43c9-b8e1-2532a8737031",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -7978,13 +7814,7 @@
       "key": "f44c5905-9c61-4f7b-8388-fce283ca2907",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How could we use an `ArrayList` to solve this problem?*\n\n**Discussion Goal:** Students suggest using an `ArrayList` to store the user input and using the `add()` method to add each input to the end of the list. Students may also suggest asking the user for a specific location to add the input to the list at a given index.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 6 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How could we use an `ArrayList` to solve this problem?*\n\n**Discussion Goal:** Students suggest using an `ArrayList` to store the user input and using the `add()` method to add each input to the end of the list. Students may also suggest asking the user for a specific location to add the input to the list at a given index.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "f44c5905-9c61-4f7b-8388-fce283ca2907",
@@ -7992,19 +7822,8 @@
       }
     },
     {
-      "key": "4a37a7ea-0181-43f4-841e-0c09a6b2b779",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "4a37a7ea-0181-43f4-841e-0c09a6b2b779",
-        "lesson_activity.key": "f3d34622-4250-4b41-81db-64a5358a7b50"
-      }
-    },
-    {
       "key": "2a0870eb-1207-4dbe-8277-623eebea1079",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "---"
       },
@@ -8015,7 +7834,7 @@
     },
     {
       "key": "f8548f28-bf05-416a-a0e3-3f9e517453e2",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -8266,13 +8085,7 @@
       "key": "cb645255-01f3-44be-a610-6eef22276765",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 6 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "cb645255-01f3-44be-a610-6eef22276765",
@@ -8484,13 +8297,7 @@
       "key": "999ce0e1-9fef-4964-b52b-ddedacdc5a54",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *When is it best to use an `ArrayList` instead of a 1D array?*\n* *How is applying standard algorithms to an `ArrayList` similar to a 1D array How is it different?*\n* *What were you confident about in this lesson? What would you like to practice?*\n\n**Discussion Goal:** Students share scenarios where an `ArrayList` is best, such as when the size of the list is unknown and may change. Students identify similarities and differences between applying standard algorithms to an `ArrayList` and a 1D array, such as using the same steps but different syntax. Students share concepts they are confident about and that they need more practice.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 6 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *When is it best to use an `ArrayList` instead of a 1D array?*\n* *How is applying standard algorithms to an `ArrayList` similar to a 1D array How is it different?*\n* *What were you confident about in this lesson? What would you like to practice?*\n\n**Discussion Goal:** Students share scenarios where an `ArrayList` is best, such as when the size of the list is unknown and may change. Students identify similarities and differences between applying standard algorithms to an `ArrayList` and a 1D array, such as using the same steps but different syntax. Students share concepts they are confident about and that they need more practice.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "999ce0e1-9fef-4964-b52b-ddedacdc5a54",
@@ -8498,19 +8305,8 @@
       }
     },
     {
-      "key": "e5533e87-d10f-439d-8ede-ee9052799c7c",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "e5533e87-d10f-439d-8ede-ee9052799c7c",
-        "lesson_activity.key": "706e103c-fb29-4d7c-9e99-dce65d46fed5"
-      }
-    },
-    {
       "key": "addd2f4b-4f88-4e27-9512-391b8774fe90",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "---"
       },
@@ -8521,7 +8317,7 @@
     },
     {
       "key": "57807d9a-d6ac-489f-aa1d-16562b867e91",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -8723,13 +8519,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How would we solve our Social Media Dilemma using an `ArrayList` instead of an array? Is this problem easier to solve with an array or an `ArrayList`? Why?*\n\n**Discussion Goal:** Students describe using a loop to traverse an `ArrayList` of friends and removing friends to be unfollowed. Students note that this problem is much easier with an `ArrayList` because the `remove()` method takes out the element and shifts the items in the list in one step.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "name": "Revisiting the Social Media Dilemma",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 6 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "name": "Revisiting the Social Media Dilemma"
       },
       "seeding_key": {
         "activity_section.key": "6f4787d8-6d03-4f19-a5e2-1dcb655d3c28",
@@ -9006,13 +8796,7 @@
       "key": "4e149a74-c016-46ef-8778-504c06a2362b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was awesome about writing your code?*\n* *What is one action you can take to improve your code?*\n* *What questions do you have about today?*\n\n**Discussion Goal:** Students share aspects of their program they enjoyed or strengths of writing algorithms and identify areas of improvement to strengthen their programming skills. Students also share any questions or misconceptions they may have.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 6 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was awesome about writing your code?*\n* *What is one action you can take to improve your code?*\n* *What questions do you have about today?*\n\n**Discussion Goal:** Students share aspects of their program they enjoyed or strengths of writing algorithms and identify areas of improvement to strengthen their programming skills. Students also share any questions or misconceptions they may have.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "4e149a74-c016-46ef-8778-504c06a2362b",
@@ -9214,13 +8998,7 @@
       "key": "89848130-87d0-4dcb-9889-2786c3142480",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 7 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "89848130-87d0-4dcb-9889-2786c3142480",
@@ -9228,19 +9006,8 @@
       }
     },
     {
-      "key": "673ac1ed-8634-4f4a-8d7d-7e214cfca492",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "673ac1ed-8634-4f4a-8d7d-7e214cfca492",
-        "lesson_activity.key": "7f9808bb-771f-4da2-a3e4-664deec33a56"
-      }
-    },
-    {
       "key": "04ae234d-9104-4983-913d-671d3cd330ad",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "---"
       },
@@ -9251,7 +9018,7 @@
     },
     {
       "key": "e1ef6fbb-11b1-43de-960c-0ee824476d66",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -9393,13 +9160,7 @@
       "key": "9dd5b361-eb9e-49ec-85da-7079c872669d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review user stories.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write user stories for their project on page five of their Creative Coding with the Console Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 8 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review user stories.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write user stories for their project on page five of their Creative Coding with the Console Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "9dd5b361-eb9e-49ec-85da-7079c872669d",
@@ -9407,19 +9168,8 @@
       }
     },
     {
-      "key": "a28addfd-25b6-48a8-9efc-5fe174f31f99",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "a28addfd-25b6-48a8-9efc-5fe174f31f99",
-        "lesson_activity.key": "753b85af-a39a-46d3-8de9-f5d41a4f061d"
-      }
-    },
-    {
       "key": "7ca97952-7ea7-4bb0-af6d-f35d8aa7c605",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "---"
       },
@@ -9430,7 +9180,7 @@
     },
     {
       "key": "ef4d240a-0935-43a7-be8e-e2ac5b85bd59",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -9683,13 +9433,7 @@
       "key": "1e8bae16-3885-4ce0-97fb-30cbc44f30ca",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 8 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "1e8bae16-3885-4ce0-97fb-30cbc44f30ca",
@@ -9697,19 +9441,8 @@
       }
     },
     {
-      "key": "e47e382d-b13d-4eda-8e99-7e15b5f37dae",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "e47e382d-b13d-4eda-8e99-7e15b5f37dae",
-        "lesson_activity.key": "fd638ac2-e914-4a01-b40c-0347420ec3d0"
-      }
-    },
-    {
       "key": "dc5ead88-3fad-49d3-9100-611775179b2f",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "---"
       },
@@ -9720,7 +9453,7 @@
     },
     {
       "key": "ab0bca16-17c6-4912-879d-1840747a779a",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -9924,13 +9657,7 @@
       "key": "18c6fac2-ef99-4066-9fc3-48e6754e6494",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 8 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "18c6fac2-ef99-4066-9fc3-48e6754e6494",
@@ -9938,19 +9665,8 @@
       }
     },
     {
-      "key": "8c0b18a6-1ed0-4223-a856-26ce76146f6f",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "8c0b18a6-1ed0-4223-a856-26ce76146f6f",
-        "lesson_activity.key": "e57c714d-fccd-476e-a764-c758e3d5cbd8"
-      }
-    },
-    {
       "key": "1fb40b84-e69f-4f5a-9ca1-c7b553645926",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "---"
       },
@@ -9961,7 +9677,7 @@
     },
     {
       "key": "851c147c-62d1-42d4-b028-394164b0a0b6",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -10155,13 +9871,7 @@
       "key": "82682b40-4434-4743-860e-df6105f206ae",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Project Planning Feedback handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the feedback process.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students identify a question to frame the feedback session.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students ask their framing questions and share feedback. Students should take notes on their Project Planning Feedback handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually respond to the prompts on their Project Planning Feedback, identify the user stories that will make up their second benchmark, and post tasks they want to complete for the second benchmark in the \"To Do\" column of their Project Planning Board.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 8 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Project Planning Feedback handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the feedback process.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students identify a question to frame the feedback session.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students ask their framing questions and share feedback. Students should take notes on their Project Planning Feedback handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually respond to the prompts on their Project Planning Feedback, identify the user stories that will make up their second benchmark, and post tasks they want to complete for the second benchmark in the \"To Do\" column of their Project Planning Board.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "82682b40-4434-4743-860e-df6105f206ae",
@@ -10169,19 +9879,8 @@
       }
     },
     {
-      "key": "1646524f-4661-4cc4-8a7e-59fcdab2ebbd",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "1646524f-4661-4cc4-8a7e-59fcdab2ebbd",
-        "lesson_activity.key": "05e6be66-018b-4b32-b6e0-5f8260100f8f"
-      }
-    },
-    {
       "key": "4123db0c-6e72-4360-a72f-a3f8422b7559",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "---"
       },
@@ -10192,7 +9891,7 @@
     },
     {
       "key": "8b0624e4-e610-4a87-bd02-13f604ce5c4c",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -10385,13 +10084,7 @@
       "key": "a406e5ec-dc11-4236-b3f5-02041fb39453",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 8 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "a406e5ec-dc11-4236-b3f5-02041fb39453",
@@ -10399,19 +10092,8 @@
       }
     },
     {
-      "key": "1bc7defa-a6d5-4c99-97c3-5b07f510614d",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "1bc7defa-a6d5-4c99-97c3-5b07f510614d",
-        "lesson_activity.key": "47c24ae6-0b24-46f1-aacc-1e3579c80e2a"
-      }
-    },
-    {
       "key": "2935af1e-5ec4-4fa7-8019-488272739b85",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "---"
       },
@@ -10422,7 +10104,7 @@
     },
     {
       "key": "b17ba009-11ca-4446-b686-d3e64a197722",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -11159,6 +10841,19 @@
       }
     },
     {
+      "key": "e0f19af9-d5e2-4e1d-9571-fa4ee5e70417",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.\n",
+        "name": "End of Unit Survey",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "e0f19af9-d5e2-4e1d-9571-fa4ee5e70417",
+        "lesson_activity.key": "e78c9fb8-ecd3-4666-8215-d4395694e34c"
+      }
+    },
+    {
       "key": "818b880f-1a82-4bc4-86af-5818722804a7",
       "position": 1,
       "properties": {
@@ -11814,6 +11509,19 @@
       "seeding_key": {
         "activity_section.key": "750de740-1f20-478a-8117-a0474fabd228",
         "lesson_activity.key": "94b46371-4c7f-4b5f-8e58-a47929c65c21"
+      }
+    },
+    {
+      "key": "58c1a0ab-0c5d-47b8-8146-dc20c3c0b8a7",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.\n",
+        "name": "End of Unit Survey",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "58c1a0ab-0c5d-47b8-8146-dc20c3c0b8a7",
+        "lesson_activity.key": "b7aa2643-f80a-4f4b-a969-47281cb48699"
       }
     },
     {
@@ -12475,6 +12183,19 @@
       }
     },
     {
+      "key": "f5ec2c92-5010-468c-b0b2-084b9a339d46",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.\n",
+        "name": "End of Unit Survey",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "f5ec2c92-5010-468c-b0b2-084b9a339d46",
+        "lesson_activity.key": "0e0302a1-28a4-43a5-8e29-73d149f95d20"
+      }
+    },
+    {
       "key": "eeb06f43-27bc-44b4-ab7a-2887c782da93",
       "position": 1,
       "properties": {
@@ -13130,6 +12851,19 @@
       "seeding_key": {
         "activity_section.key": "5c6c649b-455d-4ed1-95be-a55dbf6b5a23",
         "lesson_activity.key": "3696d0db-23b1-47b5-ae94-fdae783fa8fe"
+      }
+    },
+    {
+      "key": "0ef3fc2b-8ac9-486f-8a5c-e700d5d36f80",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.\n",
+        "name": "End of Unit Survey",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "0ef3fc2b-8ac9-486f-8a5c-e700d5d36f80",
+        "lesson_activity.key": "1760aa5a-08f3-4f53-bb17-6718549cbf3a"
       }
     },
     {
@@ -18853,7 +18587,7 @@
       "chapter": 187,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "student-eou-survey_linked_page_csa4-project1-2025"
@@ -18901,6 +18635,28 @@
     },
     {
       "chapter": 189,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_csa4-project1b-2025"
+        ],
+        "lesson.key": "Data for Social Good Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025",
+        "activity_section.key": "e0f19af9-d5e2-4e1d-9571-fa4ee5e70417"
+      },
+      "level_keys": [
+        "student-eou-survey_linked_page_csa4-project1b-2025"
+      ]
+    },
+    {
+      "chapter": 190,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -18925,10 +18681,10 @@
       ]
     },
     {
-      "chapter": 190,
+      "chapter": 191,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "student-eou-survey_linked_page_csa4-project2-2025"
@@ -18950,7 +18706,7 @@
       ]
     },
     {
-      "chapter": 191,
+      "chapter": 192,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -18975,7 +18731,29 @@
       ]
     },
     {
-      "chapter": 192,
+      "chapter": 193,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_csa4-project2b-2025"
+        ],
+        "lesson.key": "Abstract Data Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025",
+        "activity_section.key": "58c1a0ab-0c5d-47b8-8146-dc20c3c0b8a7"
+      },
+      "level_keys": [
+        "student-eou-survey_linked_page_csa4-project2b-2025"
+      ]
+    },
+    {
+      "chapter": 194,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -19000,10 +18778,10 @@
       ]
     },
     {
-      "chapter": 193,
+      "chapter": 195,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "student-eou-survey_linked_page_csa4-project3-2025"
@@ -19025,7 +18803,7 @@
       ]
     },
     {
-      "chapter": 194,
+      "chapter": 196,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -19050,7 +18828,29 @@
       ]
     },
     {
-      "chapter": 195,
+      "chapter": 197,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_csa4-project3b-2025"
+        ],
+        "lesson.key": "Personal Narrative Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025",
+        "activity_section.key": "f5ec2c92-5010-468c-b0b2-084b9a339d46"
+      },
+      "level_keys": [
+        "student-eou-survey_linked_page_csa4-project3b-2025"
+      ]
+    },
+    {
+      "chapter": 198,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -19075,10 +18875,10 @@
       ]
     },
     {
-      "chapter": 196,
+      "chapter": 199,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "student-eou-survey_linked_page_csa4-project4-2025"
@@ -19100,7 +18900,7 @@
       ]
     },
     {
-      "chapter": 197,
+      "chapter": 200,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -19125,7 +18925,29 @@
       ]
     },
     {
-      "chapter": 198,
+      "chapter": 201,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_csa4-project4b-2025"
+        ],
+        "lesson.key": "Natural Language Processing Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025",
+        "activity_section.key": "0ef3fc2b-8ac9-486f-8a5c-e700d5d36f80"
+      },
+      "level_keys": [
+        "student-eou-survey_linked_page_csa4-project4b-2025"
+      ]
+    },
+    {
+      "chapter": 202,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -19150,7 +18972,7 @@
       ]
     },
     {
-      "chapter": 199,
+      "chapter": 203,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -19175,7 +18997,7 @@
       ]
     },
     {
-      "chapter": 200,
+      "chapter": 204,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -19200,7 +19022,7 @@
       ]
     },
     {
-      "chapter": 201,
+      "chapter": 205,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -19224,7 +19046,7 @@
       ]
     },
     {
-      "chapter": 202,
+      "chapter": 206,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -21507,6 +21329,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "student-eou-survey_linked_page_csa4-project1b-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_csa4-project1b-2025"
+        ],
+        "lesson.key": "Data for Social Good Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025",
+        "activity_section.key": "e0f19af9-d5e2-4e1d-9571-fa4ee5e70417"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U4 Abstract Data Art Project_pilot_oo2025_2025-cb-alt",
         "script_level.level_keys": [
           "CSA U4 Abstract Data Art Project_pilot_oo2025_2025-cb-alt"
@@ -21539,6 +21373,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa4-alt-2025",
         "activity_section.key": "f04d2716-afe1-4ba8-bed6-a4a2e37ca839"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_linked_page_csa4-project2b-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_csa4-project2b-2025"
+        ],
+        "lesson.key": "Abstract Data Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025",
+        "activity_section.key": "58c1a0ab-0c5d-47b8-8146-dc20c3c0b8a7"
       }
     },
     {
@@ -21579,6 +21425,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "student-eou-survey_linked_page_csa4-project3b-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_csa4-project3b-2025"
+        ],
+        "lesson.key": "Personal Narrative Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025",
+        "activity_section.key": "f5ec2c92-5010-468c-b0b2-084b9a339d46"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U6 Natural Language Processing Project_pilot_oo2025_2025-cb-alt",
         "script_level.level_keys": [
           "CSA U6 Natural Language Processing Project_pilot_oo2025_2025-cb-alt"
@@ -21611,6 +21469,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa4-alt-2025",
         "activity_section.key": "e85ba2eb-8473-475e-bc0f-8e21706f257c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_linked_page_csa4-project4b-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_csa4-project4b-2025"
+        ],
+        "lesson.key": "Natural Language Processing Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025",
+        "activity_section.key": "0ef3fc2b-8ac9-486f-8a5c-e700d5d36f80"
       }
     },
     {

@@ -4,7 +4,7 @@
   "category": "Sounds",
   "category_key": "play",
   "block_name": "play_pattern_at_current_location_simple2",
-  "content": "This block lets you make custom beats using collections of sounds. Each row of bubbles in the grid represents a specific sound, and each column represents a moment within a measure to play that sound. To play a sound on a beat, toggle the bubble in the lighter colored columns. To play more complex rhythms, try toggling the other bubbles!",
+  "content": "\n<div style=\"display: flex; flex-direction: column; gap: 10px; width: 100%; margin-top: 10px\">\n    <!-- Section 1 -->\n    <div style=\"display: flex; width: 100%;\">\n        <img src=\"https://images.code.org/c3abb296896bc97893751c38b83c2b45-beat block (1).gif\" \n             alt=\"Interface for Play Drums block\" \n             style=\"width: 30%; border-radius: 10px; margin: 0px 20px 20px 0px;\">\n        <div>\n            <p style=\"font-size: 10pt; line-height: 1.2; margin: 5px 0;\">\n                This block lets you make custom beats using collections of sounds. Each row of bubbles in the grid represents a specific sound, and each column represents a moment within a measure to play that sound. To play a sound on a beat, toggle the bubble in the lighter colored columns. To play more complex rhythms, try toggling the other bubbles!\n            </p>\n        </div>\n    </div>\n</div>",
   "image_url": "https://images.code.org/7f30dd665a1eb97f4782aa8a4d8addf9-drums.png",
   "palette_params": [
     {

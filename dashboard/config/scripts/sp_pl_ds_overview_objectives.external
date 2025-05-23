@@ -69,9 +69,5 @@ markdown <<MARKDOWN
     </a>
 </div>
 
-<!-- Footer Section -->
-<div style="margin-top: 20px; text-align: left; font-size: 14pt;">
-    <h2>Let's Get Started!</h2>
-</div>
 
 MARKDOWN

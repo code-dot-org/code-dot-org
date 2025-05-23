@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-20 17:15:58 UTC",
+    "serialized_at": "2025-05-22 16:35:20 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -2127,7 +2127,7 @@
       "key": "eeb1551f-1502-40fa-b00d-b5c0e3998653",
       "position": 3,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Terminology Matching: Boolean Expression, Logical Operator, &&, ||, and !\n\n**Question:** Can a computer evaluate an expression to something between true and false? Can you write an expression to deal with a \"maybe\" answer?",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Terminology Matching: Boolean Expression, Logical Operator, &&, ||, and !\n\n**Question:** A student writes the following condition:\n*if (!isHungry || hasFood)*\nThey say this will check whether someone should eat lunch. Do you agree or disagree with this statement?",
         "progression_name": "Assessment: Check For Understanding\r"
       },
       "seeding_key": {

@@ -25,7 +25,8 @@ import {getPageHeading} from '@/selectors/contentful/getExperienceEntryFields';
  *
  * With the current value being 15 minutes, it can therefore take [900] * [2 + 1] = 45 minutes for a page to be updated.
  */
-export const revalidate = 900; // Fresh for 15 minutes
+// NOTE: IF UPDATING THIS VALUE, PLEASE ALSO UPDATE THE VALUE IN THE `ViewerResponseCloudFrontFunction` in marketing.yml.erb
+export const revalidate = 900; // Fresh for 15 minutes, SEE ABOVE NOTE
 
 type ExperiencePageProps = {
   params: Promise<{locale?: string; paths?: string; brand?: Brand}>;
