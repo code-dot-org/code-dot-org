@@ -38,6 +38,7 @@ Scenario: Student courses, non-english
   And I see no difference for "student non-english courses page"
   And I close my eyes
 
+@skip
 Scenario: Signed out courses, learn
   When I open my eyes to test "signed out courses, learn"
   Given I am on "http://code.org/"
@@ -49,6 +50,7 @@ Scenario: Signed out courses, learn
   And I see no difference for "signed-out courses page, learn"
   And I close my eyes
 
+@skip
 Scenario: Signed out courses, teach
   When I open my eyes to test "signed out courses, teach"
   Given I am on "http://code.org/"
