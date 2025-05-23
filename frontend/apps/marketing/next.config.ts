@@ -1615,7 +1615,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/curriculum/cs-ai-foundations',
-        destination: '/curriculum/artifical-intelligence-foundations',
+        destination: '/curriculum/artificial-intelligence-foundations',
         permanent: false,
       },
       {
@@ -1655,7 +1655,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/ai',
-        destination: '/artifical-intelligence',
+        destination: '/artificial-intelligence',
         permanent: false,
       },
       {
