@@ -28,6 +28,7 @@ class ScriptsController < ApplicationController
       return
     end
 
+    pp 'lfm', TeacherDashboardUtils.can_redirect_to_teacher_dashboard?(current_user),  current_user&.user_type == "teacher", current_user.sections_instructed
     if TeacherDashboardUtils.can_redirect_to_teacher_dashboard?(current_user)
       if request.query_parameters.include? "user_id"
         redirect_query_string = request.query_string.sub("user_id=#{request.query_parameters[:user_id]}", "").sub("&&", "&")

@@ -52,6 +52,7 @@ Feature: BubbleChoice
   @properties_encryption_key
   Scenario: Lab2 BubbleChoice progress
     Given I create a teacher-associated student named "Alice"
+    Given I am assigned to course "allthethingscourse" and unit "allthethings" with teacher "Teacher_Alice"
 
     # Go to Lab2 BubbleChoice sublevel
     Given I am on "http://studio.code.org/s/allthethings/lessons/52/levels/8/sublevel/1"
