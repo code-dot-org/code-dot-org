@@ -95,13 +95,8 @@ export default function SectionsSetUpContainer({
 }) {
   const [sections, updateSection, batchUpdateSection] =
     useSections(sectionToBeEdited);
-  const updateSectionAndSetEditInProgress = (
-    sectionIdx,
-    keyToUpdate,
-    val,
-    updateList = null
-  ) => {
-    updateSection(sectionIdx, keyToUpdate, val, updateList);
+  const updateSectionAndSetEditInProgress = (sectionIdx, keyToUpdate, val) => {
+    updateSection(sectionIdx, keyToUpdate, val);
 
     setIsEditInProgress(true);
   };
