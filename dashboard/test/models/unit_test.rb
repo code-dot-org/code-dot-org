@@ -63,7 +63,7 @@ class UnitTest < ActiveSupport::TestCase
     Unit.script_cache
     Unit.unit_family_cache
 
-    # Also populate course_cache, as it's used by course_link
+    # Also populate course_cache, as we call .link on them
     UnitGroup.stubs(:should_cache?).returns true
     @@course_cached ||= UnitGroup.course_cache_to_cache
     UnitGroup.course_cache
@@ -965,6 +965,8 @@ class UnitTest < ActiveSupport::TestCase
       age_13_required: false,
       show_sign_in_callout: false,
       hasUnnumberedLessons: false,
+      course_name: nil,
+      unit_position: nil,
     }
     assert_equal expected, unit.summarize_header
   end
@@ -1016,55 +1018,29 @@ class UnitTest < ActiveSupport::TestCase
   test 'summarize includes show_course_unit_version_warning' do
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017')
-    create(:unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1)
+    csp1_2017_ugu = create(:unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1)
     csp_2017.reload
     csp1_2017.reload
 
     csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
     csp1_2018 = create(:script, name: 'csp1-2018')
-    create(:unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1)
+    csp1_2018_ugu = create(:unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1)
     csp_2018.reload
     csp1_2018.reload
 
-    refute csp1_2017.summarize[:show_course_unit_version_warning]
+    refute csp1_2017.summarize(unit_group_unit: csp1_2017_ugu)[:show_course_unit_version_warning]
 
     user = create(:student)
-    refute csp1_2017.summarize(true, user)[:show_course_unit_version_warning]
-    refute csp1_2018.summarize(true, user)[:show_course_unit_version_warning]
+    refute csp1_2017.summarize(true, user, unit_group_unit: csp1_2017_ugu)[:show_course_unit_version_warning]
+    refute csp1_2018.summarize(true, user, unit_group_unit: csp1_2018_ugu)[:show_course_unit_version_warning]
 
     create(:user_script, user: user, script: csp1_2017)
-    refute csp1_2017.summarize(true, user)[:show_course_unit_version_warning]
-    assert csp1_2018.summarize(true, user)[:show_course_unit_version_warning]
+    refute csp1_2017.summarize(true, user, unit_group_unit: csp1_2017_ugu)[:show_course_unit_version_warning]
+    assert csp1_2018.summarize(true, user, unit_group_unit: csp1_2018_ugu)[:show_course_unit_version_warning]
 
     create(:user_script, user: user, script: csp1_2018)
-    refute csp1_2017.summarize(true, user)[:show_course_unit_version_warning]
-    assert csp1_2018.summarize(true, user)[:show_course_unit_version_warning]
-  end
-
-  test 'summarize includes show_script_version_warning' do
-    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true)
-    CourseOffering.add_course_offering(foo17)
-    foo18 = create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018', is_course: true)
-    CourseOffering.add_course_offering(foo18)
-    user = create(:student)
-
-    refute foo17.summarize[:show_script_version_warning]
-
-    refute foo17.summarize(true, user)[:show_script_version_warning]
-    refute foo18.summarize(true, user)[:show_script_version_warning]
-
-    create(:user_script, user: user, script: foo17)
-    refute foo17.summarize(true, user)[:show_script_version_warning]
-    assert foo18.summarize(true, user)[:show_script_version_warning]
-
-    user_unit_18 = create(:user_script, user: user, script: foo18)
-    refute foo17.summarize(true, user)[:show_script_version_warning]
-    assert foo18.summarize(true, user)[:show_script_version_warning]
-
-    # version warning can be dismissed
-    user_unit_18.version_warning_dismissed = true
-    user_unit_18.save!
-    refute foo18.summarize(true, user)[:show_script_version_warning]
+    refute csp1_2017.summarize(true, user, unit_group_unit: csp1_2017_ugu)[:show_course_unit_version_warning]
+    assert csp1_2018.summarize(true, user, unit_group_unit: csp1_2018_ugu)[:show_course_unit_version_warning]
   end
 
   test 'summarize only shows one version warning' do
@@ -1076,14 +1052,14 @@ class UnitTest < ActiveSupport::TestCase
 
     csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1', version_year: '2018')
-    create(:unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1)
+    csp1_2018_ugu = create(:unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1)
     csp_2018.reload
     csp1_2018.reload
 
     user = create(:student)
     create(:user_script, user: user, script: csp1_2017)
-    assert csp1_2018.summarize(true, user)[:show_course_unit_version_warning]
-    refute csp1_2018.summarize(true, user)[:show_script_version_warning]
+    assert csp1_2018.summarize(true, user, unit_group_unit: csp1_2018_ugu)[:show_course_unit_version_warning]
+    refute csp1_2018.summarize(true, user, unit_group_unit: csp1_2018_ugu)[:show_script_version_warning]
   end
 
   test 'summarize includes versions' do
@@ -1631,43 +1607,7 @@ class UnitTest < ActiveSupport::TestCase
     assert_empty unit.text_response_levels
   end
 
-  test "course_link retuns nil if unit is in no courses" do
-    unit = create :script
-    create :unit_group, name: 'csp'
-
-    assert_nil unit.course_link
-  end
-
-  test "course_link returns first unit_group course link if unit is in two courses" do
-    unit = create :script
-    unit_group = create :unit_group, name: 'csp'
-    other_unit_group = create :unit_group, name: 'othercsp'
-    create :unit_group_unit, position: 1, unit_group: unit_group, script: unit
-    create :unit_group_unit, position: 1, unit_group: other_unit_group, script: unit
-
-    unit.reload
-    assert_equal '/courses/csp', unit.course_link
-  end
-
-  test "course_link returns course_path if unit is in one course" do
-    unit = create :script
-    unit_group = create :unit_group, name: 'csp'
-    create :unit_group_unit, position: 1, unit_group: unit_group, script: unit
-    unit.reload
-    unit_group.reload
-
-    assert_equal '/courses/csp', unit.course_link
-  end
-
-  test 'course_link uses cache' do
-    populate_cache_and_disconnect_db
-    Unit.stubs(:should_cache?).returns true
-    UnitGroup.stubs(:should_cache?).returns true
-    unit = Unit.get_from_cache(@unit_in_unit_group.name)
-    assert_equal "/courses/#{@unit_group.name}", unit.course_link
-  end
-
-  test "logged_out_age_13_required?" do
+  test 'logged_out_age_13_required?' do
     unit = create :script, login_required: false
     lesson_group = create :lesson_group, script: unit
     level = create :applab
