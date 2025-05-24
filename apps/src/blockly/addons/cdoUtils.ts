@@ -728,9 +728,7 @@ export function appendSharedFunctions(
 ) {
   let startBlocks;
   if (stringIsXml(startBlocksSource)) {
-    // TODO: define a type for blockUtils
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    startBlocks = (blockUtils as any).appendNewFunctions(
+    startBlocks = blockUtils.appendNewFunctions(
       startBlocksSource,
       functionsXml
     );

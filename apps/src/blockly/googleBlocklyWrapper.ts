@@ -1089,6 +1089,13 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     Blockly.Events.enable();
   };
 
+  blocklyWrapper.SourceMsg = {};
+  blocklyWrapper.SourceVariables = {};
+  blocklyWrapper.SourceCustomBlocks = {
+    blockDefinitionsByName: {},
+    blockTexts: {},
+  };
+  blocklyWrapper.SourceCustomInputTypes = {};
   blocklyWrapper.customBlocks = customBlocks;
 
   initializeBlocklyXml(blocklyWrapper);

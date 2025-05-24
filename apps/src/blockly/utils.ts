@@ -3,13 +3,16 @@ import _ from 'lodash';
 
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 import DCDO from '@cdo/apps/dcdo';
+import localization from '@cdo/apps/localization';
 import {MetricEvent} from '@cdo/apps/metrics/events';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 
+import * as BlockUtils from '../block_utils';
+
 import {DARK_THEME_SUFFIX, Themes, BLOCK_TYPES} from './constants';
-import {ExtendedBlock} from './types';
+import {ExtendedBlock, ExtendedWorkspaceSvg} from './types';
 
 type xmlAttribute = string | null;
 type InputTuple = [string, string, number];
@@ -363,4 +366,166 @@ export function updateBlockEnabled(block: GoogleBlockly.Block) {
   } finally {
     Blockly.Events.setRecordUndo(initialUndoFlag);
   }
+}
+
+/**
+ * Redraws a workspace.
+ */
+export function refreshWorkspace(workspace: ExtendedWorkspaceSvg) {
+  const state = Blockly.serialization.workspaces.save(workspace);
+  // Do not allow the variables to be redefined as they will conflict when the
+  // block data is reloaded.
+  const variables = workspace.globalVariables;
+  if (variables) {
+    workspace.globalVariables = [];
+  }
+  Blockly.serialization.workspaces.load(state, workspace);
+  if (variables) {
+    workspace.globalVariables = variables;
+  }
+
+  // Handle the toolbox
+  const toolbox = workspace.getToolbox();
+  if (toolbox) {
+    // Close the toolbox when it exists
+    toolbox.clearSelection();
+  }
+
+  // Handle the flyout as well
+  const flyout = workspace.getFlyout(true);
+  if (flyout) {
+    // Redraw the flyout
+    if (workspace.options.languageTree) {
+      flyout.show(workspace.options.languageTree);
+    }
+
+    // Scroll the flyout to the start
+    if (typeof flyout.scrollToStart === 'function') {
+      flyout.scrollToStart();
+    }
+  }
+}
+
+/**
+ * Reverts localized variables in a workspace to their source (English) forms.
+ */
+export function unlocalizeVariables(workspace: ExtendedWorkspaceSvg) {
+  // Go through the original variables and return them to their source language.
+  for (const variable of workspace.getAllVariables()) {
+    if (Blockly.SourceVariables[variable.getId()]) {
+      workspace.renameVariableById(
+        variable.getId(),
+        Blockly.SourceVariables[variable.getId()]
+      );
+    }
+  }
+}
+
+/**
+ * Goes through workspace variables and localizes them.
+ */
+export function localizeVariables(workspace: ExtendedWorkspaceSvg) {
+  // Go through the original variables and translate them.
+  if (workspace.globalVariables) {
+    workspace.sourceGlobalVariables ||= workspace.globalVariables.slice();
+  }
+
+  for (const variable of workspace.getAllVariables()) {
+    Blockly.SourceVariables[variable.getId()] ||= variable.name;
+    const oldName = Blockly.SourceVariables[variable.getId()];
+    if (workspace.sourceGlobalVariables?.includes(oldName)) {
+      const globalVariableIndex =
+        workspace.sourceGlobalVariables.indexOf(oldName);
+      let newName: string = localization.translate(`[variable] ${oldName}`, [
+        'blockly-variable',
+        'blockly-block',
+      ]);
+      if (newName.startsWith('[variable] ')) {
+        newName = newName.substring(11);
+      } else {
+        console.error(
+          'Global variable translation does not have the [variable] tag',
+          oldName,
+          newName
+        );
+      }
+      workspace.renameVariableById(variable.getId(), newName);
+      workspace.globalVariables[globalVariableIndex] = newName;
+    }
+  }
+}
+
+/**
+ * Updates the locale and localization strings for all workspaces.
+ */
+export function updateLocale(rtl: boolean) {
+  // Call into our localization engine to get the new blocks and refresh all active
+  // workspaces.
+
+  // Copy over new localization keys for the normal blocks in 'Msg'
+  for (const [key, value] of Object.entries(Blockly.Msg || {})) {
+    Blockly.SourceMsg[key] ||= value;
+    Blockly.Msg[key] = localization.translate(Blockly.SourceMsg[key], [
+      'blockly-block',
+    ]);
+  }
+
+  // Go through custom and shared blocks to translate the blockText there
+  // This means recreating the block init() functions with updated block
+  // configurations.
+  for (const blockName of Object.keys(
+    Blockly.SourceCustomBlocks.blockDefinitionsByName
+  )) {
+    const blockDefinition =
+      Blockly.SourceCustomBlocks.blockDefinitionsByName[blockName];
+    Blockly.SourceCustomBlocks.blockTexts[blockName] ||=
+      blockDefinition.config.blockText;
+    const oldBlockText = Blockly.SourceCustomBlocks.blockTexts[blockName];
+    let newBlockText: string = oldBlockText;
+    if (blockDefinition.config.returnType === 'Behavior') {
+      newBlockText = localization.translate(`[behavior] ${oldBlockText}`, [
+        'blockly-block',
+        'blockly-behavior',
+      ]);
+      if (newBlockText.startsWith('[behavior] ')) {
+        newBlockText = newBlockText.substring(11);
+      } else {
+        console.error(
+          'Behavior translation does not have the [behavior] tag',
+          oldBlockText,
+          newBlockText
+        );
+      }
+    } else {
+      newBlockText = localization.translate(oldBlockText, ['blockly-block']);
+    }
+    blockDefinition.config.blockText = newBlockText;
+  }
+  const blockDefinitions = Object.values(
+    Blockly.SourceCustomBlocks.blockDefinitionsByName
+  );
+  BlockUtils.installCustomBlocks({
+    blockly: Blockly,
+    blockDefinitions,
+    customInputTypes: Blockly.SourceCustomInputTypes,
+  });
+
+  const mainWorkspace = Blockly.getMainWorkspace();
+  if (mainWorkspace) {
+    mainWorkspace.RTL = rtl;
+    refreshWorkspace(mainWorkspace as ExtendedWorkspaceSvg);
+    localizeVariables(mainWorkspace as ExtendedWorkspaceSvg);
+  }
+
+  // Refresh embedded workspaces (blocks in instructions, documentation, etc)
+  Blockly.embeddedWorkspaces.forEach(workspace_id => {
+    const workspace = Blockly.Workspace.getById(
+      workspace_id
+    ) as ExtendedWorkspaceSvg;
+    if (workspace) {
+      workspace.RTL = rtl;
+      refreshWorkspace(workspace);
+      localizeVariables(mainWorkspace as ExtendedWorkspaceSvg);
+    }
+  });
 }

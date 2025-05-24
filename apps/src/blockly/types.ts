@@ -30,20 +30,21 @@ import {
   WORKSPACE_EVENTS,
 } from './constants';
 
-export interface BlockDefinition {
-  category: string;
-  config: BlockConfig;
-  helperCode: string;
-  name: string;
-  pool: string;
-}
-
 export interface BlockConfig {
   args: arg[];
   blockText: string;
   color: [number, number, number];
   func: string;
   style: string;
+  returnType?: string;
+}
+
+export interface BlockDefinition {
+  category: string;
+  config: BlockConfig;
+  helperCode: string;
+  name: string;
+  pool: string;
 }
 
 export interface arg {
@@ -55,6 +56,29 @@ export interface SerializedFields {
   [key: string]: {
     id?: string;
     name?: string;
+  };
+}
+
+export interface InputConfig {
+  label: string;
+  mode: string;
+  name: string;
+  strict: boolean;
+}
+
+export interface CustomInputTypes {
+  [key: string]: {
+    addInput?: (
+      blockly: GoogleBlocklyType,
+      block: GoogleBlockly.Block,
+      inputConfig: InputConfig,
+      currentInputRow: GoogleBlockly.Input
+    ) => void;
+    generateCode?: (
+      block: GoogleBlockly.Block,
+      inputConfig: InputConfig
+    ) => string;
+    openEditor?: (event: UIEvent) => void;
   };
 }
 
@@ -186,6 +210,16 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   KeyboardNavigation?: typeof KeyboardNavigation;
   shortcutBackups: {
     [name: string]: GoogleBlockly.ShortcutRegistry.KeyboardShortcut | undefined;
+  SourceMsg: {[key: string]: string};
+  SourceVariables: {[key: string]: string};
+  SourceCustomInputTypes: CustomInputTypes;
+  SourceCustomBlocks: {
+    blockDefinitionsByName: {
+      [key: string]: BlockDefinition;
+    };
+    blockTexts: {
+      [key: string]: string;
+    };
   };
 }
 
@@ -260,6 +294,7 @@ export interface ExtendedWorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
   previousViewWidth: number;
   flyoutParentBlock: GoogleBlockly.Block | null;
   globalVariables: string[];
+  sourceGlobalVariables: string[];
   noFunctionBlockFrame: boolean;
   events: {
     dispatchEvent: () => void;
