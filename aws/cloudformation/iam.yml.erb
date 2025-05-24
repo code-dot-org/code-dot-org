@@ -1024,10 +1024,11 @@ roles.each do |name, config| %>
                     iam:PassedToService:
                       - ecs-tasks.amazonaws.com
                       - application-autoscaling.amazonaws.com
-                  ArnLike:
-                    iam:AssociatedResourceARN:
-                      - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:task-definition/*-<%=environment_type%>-*:*"
-                      - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:service/*-<%=environment_type%>-*/*"
+#                  TODO: Get this extra restriction working.
+#                  ArnLike:
+#                    iam:AssociatedResourceARN:
+#                      - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:task-definition/*-<%#=environment_type%>-*:*"
+#                      - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:service/*-<%#=environment_type%>-*/*"
 
               # VPC and networking resources
               - Effect: Allow
