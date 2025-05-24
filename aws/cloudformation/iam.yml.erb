@@ -921,7 +921,6 @@ roles.each do |name, config| %>
                     'aws:ResourceTag/environment-type': <%=environment_type%>
               # TODO: Add permission for GitHub Actions to upload files to the static assets bucket.
 
-
   # Enforce least privilege on Roles created/passed/attached by the Role that provisions marketing site Stacks.
   MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>Policy:
     Type: AWS::IAM::ManagedPolicy
@@ -941,6 +940,16 @@ roles.each do |name, config| %>
             Effect: Allow
             Action:
               - cloudfront:CreateInvalidation
+            Resource: '*'
+            Condition:
+              StringEquals:
+                aws:ResourceTag/environment-type: <%=environment_type%>
+          - Sid: AllowECSAutoScalingPermissions
+            Effect: Allow
+            Action:
+              - ecs:UpdateService
+              - ecs:DescribeServices
+              - cloudwatch:DescribeAlarms
             Resource: '*'
             Condition:
               StringEquals:
