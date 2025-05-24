@@ -1027,6 +1027,7 @@ roles.each do |name, config| %>
                   ArnLike:
                     iam:AssociatedResourceARN:
                       - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:task-definition/*-<%=environment_type%>-*:*"
+                      - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:service/*-<%=environment_type%>-*/*"
 
               # VPC and networking resources
               - Effect: Allow
