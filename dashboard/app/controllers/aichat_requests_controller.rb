@@ -72,8 +72,6 @@ class AichatRequestsController < ApplicationController
   # GET /aichat_request/chat_request/:id
   # Get the chat completion request status and response for the given ID.
   def chat_request
-    # This api is now exposed to all signed in users, but return data is
-    # still scoped to user that initiated the request.
     begin
       request = AichatRequest.find(params[:id])
     rescue ActiveRecord::RecordNotFound
