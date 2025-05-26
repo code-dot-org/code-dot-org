@@ -8,6 +8,8 @@ class AichatRequestsControllerTest < ActionController::TestCase
     unit_group = create :unit_group, name: 'exploring-gen-ai-2024'
     section = create :section, user: @authorized_teacher1, unit_group: unit_group
     @authorized_student1 = create(:follower, section: section).student_user
+    @unauthorized_student = create(:student)
+    @unauthorized_teacher = create(:teacher)
 
     @level = create(:level)
     @script = create(:script)
@@ -35,22 +37,32 @@ class AichatRequestsControllerTest < ActionController::TestCase
     @controller.stubs(:storage_decrypt_channel_id).returns([123, @project_id])
   end
 
-  users = [:student, :teacher]
-  [
-    :start_chat_completion,
-    [:chat_request, :get, {id: 1}]
-  ].each do |action, method = :post, params = {}|
-    users.each do |user|
-      test_user_gets_response_for action,
-        name: "#{user}_no_access_#{action}_test",
-        user: user,
-        method: method,
-        params: params,
-        response: :forbidden
-    end
+  # start_chat_completion tests
+  test 'start_chat_completion returns forbidden if user is not signed in' do
+    post :start_chat_completion, params: @valid_params_chat_completion, as: :json
+    assert_response :forbidden
   end
 
-  # start_chat_completion tests
+  test 'teachers without access to chat completion get forbidden response' do
+    sign_in(@unauthorized_teacher)
+    post :start_chat_completion, params: @valid_params_chat_completion, as: :json
+    assert_response :forbidden
+  end
+
+  test 'students without access to chat completion get forbidden response' do
+    sign_in(@unauthorized_student)
+    post :start_chat_completion, params: @valid_params_chat_completion, as: :json
+    assert_response :forbidden
+  end
+
+  test 'unauthorized users can access start_chat_completion from python lab levels' do
+    sign_in(@unauthorized_student)
+    @level.stubs(:type).returns('Pythonlab')
+    Level.stubs(:find).with(@level.id).returns(@level)
+    post :start_chat_completion, params: @valid_params_chat_completion, as: :json
+    assert_response :success
+  end
+
   test 'authorized teacher has access to start_chat_completion test' do
     sign_in(@authorized_teacher1)
     post :start_chat_completion, params: @valid_params_chat_completion, as: :json
@@ -139,6 +151,12 @@ class AichatRequestsControllerTest < ActionController::TestCase
   test 'GET chat_request returns forbidden if user is not the requester' do
     sign_in(@authorized_teacher1)
     request = create(:aichat_request, user: @authorized_student1)
+    get :chat_request, params: {id: request.id}, as: :json
+    assert_response :forbidden
+  end
+
+  test 'GET chat_request returns forbidden if user is not signed in' do
+    request = create(:aichat_request, user: @authorized_teacher1)
     get :chat_request, params: {id: request.id}, as: :json
     assert_response :forbidden
   end
