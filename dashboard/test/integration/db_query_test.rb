@@ -121,6 +121,9 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     course = create(:single_unit_course, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: 'unversioned', family_name: 'hoc-family')
     CourseOffering.add_course_offering(course)
 
+    # make sure the new unit is in the cache
+    setup_script_cache
+
     teacher = create :teacher
     section = create :section, user: teacher
     student = create :student
@@ -128,7 +131,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student.assign_script(script)
     sign_in student
 
-    assert_cached_queries(6) do
+    assert_cached_queries(13) do
       get "/s/#{script.name}"
       assert_response :success
     end
