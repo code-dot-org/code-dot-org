@@ -1,7 +1,7 @@
 Feature: Dance Party
 
   Scenario: Dance AI Modal
-    Given I am on "http://studio.code.org/s/allthethings/lessons/37/levels/3"
+    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/37/levels/3"
     And I wait for the lab page to fully load
     And I select age 10 in the age dialog
     And I drag block "dance_ai" to block "setup"

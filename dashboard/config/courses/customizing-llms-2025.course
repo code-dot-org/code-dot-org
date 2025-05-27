@@ -6,7 +6,7 @@
   "original_script_names": [
 
   ],
-  "published_state": "in_development",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
@@ -16,7 +16,28 @@
     "version_year": "2025"
   },
   "resources": [
-
+    {
+      "name": "All Resources",
+      "url": "/courses/customizing-llms-2025/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/customizing-llms-2025/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    }
   ],
   "student_resources": [
 

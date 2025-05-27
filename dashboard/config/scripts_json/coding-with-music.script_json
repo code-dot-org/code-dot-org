@@ -10,6 +10,7 @@
       "is_migrated": true,
       "project_sharing": true,
       "show_calendar": true,
+      "student_detail_progress_view": true,
       "topic_tags": [
         "music_lab"
       ],
@@ -19,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-21 19:03:47 UTC",
+    "serialized_at": "2025-05-23 19:16:47 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1902,6 +1903,18 @@
       "seeding_key": {
         "resource.key": "lesson_slides"
       }
+    },
+    {
+      "name": "Quick Reference Teacher's Guide",
+      "url": "https://drive.google.com/drive/folders/12GBFA753Lsu5qDa13DvwlSvXDcM6daBW",
+      "key": "quick_reference_teacher_s_guide",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "quick_reference_teacher_s_guide"
+      }
     }
   ],
   "lessons_resources": [
@@ -1913,14 +1926,32 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Producer Power",
+        "resource.key": "quick_reference_teacher_s_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Sound Designer's Studio",
         "resource.key": "lesson_slides"
       }
     },
     {
       "seeding_key": {
+        "lesson.key": "Sound Designer's Studio",
+        "resource.key": "quick_reference_teacher_s_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "coding_with_music_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "quick_reference_teacher_s_guide"
       }
     }
   ],

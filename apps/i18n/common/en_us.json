@@ -361,6 +361,7 @@
   "availableLessons": " Available in {numLessons, plural, one {1 Lesson} other {# Lessons}}:",
   "availableResources": "Available Resources",
   "avatar": "Avatar",
+  "avatarEditDialogDescription": "This dialog allows you to set your section avatar from a selection of emojis and background colors.",
   "azureTtsTooManyRequests": "The app has made too many requests to convert text to speech. Please wait before trying again.",
   "azureTtsDefaultError": "There's been an error converting text to speech. If this issue persists, please refresh the page and try again.",
   "back": "Back",

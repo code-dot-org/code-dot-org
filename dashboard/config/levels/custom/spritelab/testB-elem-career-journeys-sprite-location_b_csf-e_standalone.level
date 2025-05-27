@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2025-05-21T13:29:44.000Z",
   "level_num": "custom",
@@ -12,7 +13,7 @@
     "submittable": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "disable_procedure_autopopulate": "false",
@@ -78,11 +79,11 @@
     "enable_big_playspace": "true",
     "thumbnail_url": "https://images.code.org/fb0cd74370f0ea3172459544935fa026-Sprite location.jpg",
     "project_template_level_name": "testB-elem-career-journeys-template_b_csf-e_standalone",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "video_key": "hello_world_intro"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-05-21T13:29:44.829+00:00\",\"changed\":[\"cloned from \\\"testB-elem-career-journeys-sprite-location_b_csf-e\\\"\"],\"cloned_from\":\"testB-elem-career-journeys-sprite-location_b_csf-e\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-05-21T13:29:44.829+00:00\",\"changed\":[\"cloned from \\\"testB-elem-career-journeys-sprite-location_b_csf-e\\\"\"],\"cloned_from\":\"testB-elem-career-journeys-sprite-location_b_csf-e\"},{\"changed_at\":\"2025-05-23 15:16:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-23 15:19:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

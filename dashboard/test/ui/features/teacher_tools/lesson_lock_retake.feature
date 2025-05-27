@@ -7,17 +7,17 @@ Scenario: Lock settings for retake not submit scenario
 
   # initially locked for student in summary view
 
-  When I am on "http://studio.code.org/s/allthethings"
+  When I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   Then I verify the lesson named "Anonymous student survey 2" is locked
 
-  When I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/1"
+  When I am on "http://studio.code.org/courses/allthethingscourse/units/1/lockable/1/levels/1/page/1"
   And I wait until element "#level-body" is visible
   Then element "#locked-lesson:contains(lesson is currently locked)" is visible
 
   # teacher unlocks
 
   And I sign in as "Teacher_babby"
-  And I am on "http://studio.code.org/s/allthethings"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the lesson lock dialog
@@ -27,7 +27,7 @@ Scenario: Lock settings for retake not submit scenario
   # now unlocked/not tried for student
 
   When I sign in as "babby"
-  And I am on "http://studio.code.org/s/allthethings"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   Then I verify the lesson named "Anonymous student survey 2" is unlocked
   Then I verify progress for lesson 31 level 1 is "not_tried"
   Then I verify progress for lesson 31 level 2 is "not_tried"
@@ -37,7 +37,7 @@ Scenario: Lock settings for retake not submit scenario
   # student does not submit assessment before teacher switches to locked 
 
   And I sign in as "Teacher_babby"
-  And I am on "http://studio.code.org/s/allthethings"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the lesson lock dialog
@@ -47,13 +47,13 @@ Scenario: Lock settings for retake not submit scenario
   # now locked/not submitted for student
 
   When I sign in as "babby"
-  And I am on "http://studio.code.org/s/allthethings"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   Then I verify the lesson named "Anonymous student survey 2" is locked
 
   # now teacher allows for retake
 
   And I sign in as "Teacher_babby"
-  And I am on "http://studio.code.org/s/allthethings"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the lesson lock dialog
@@ -63,17 +63,17 @@ Scenario: Lock settings for retake not submit scenario
   # now editable, and student can submit
 
   When I sign in as "babby"
-  And I am on "http://studio.code.org/s/allthethings"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   Then I verify the lesson named "Anonymous student survey 2" is unlocked
-  When I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/4"
+  When I am on "http://studio.code.org/courses/allthethingscourse/units/1/lockable/1/levels/1/page/4"
   And I click selector ".submitButton" once I see it
   And I wait to see a dialog titled "Submit your survey"
   And I press "ok-button"
-  And I wait until current URL contains "/s/allthethings/lessons/31/levels/1"
+  And I wait until current URL contains "/courses/allthethingscourse/units/1/lessons/31/levels/1"
 
   # now locked for student
 
-  When I am on "http://studio.code.org/s/allthethings"
+  When I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   Then I verify the lesson named "Anonymous student survey 2" is locked
 
 @no_mobile
@@ -83,18 +83,18 @@ Scenario: Lock settings for retake after submit scenario
 
   # initially locked for student in summary view
 
-  When I am on "http://studio.code.org/s/allthethings"
+  When I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   And I wait until element ".uitest-summary-progress-row:contains(1. Jigsaw)" is visible
   Then I verify the lesson named "Anonymous student survey 2" is locked
 
-  When I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/1"
+  When I am on "http://studio.code.org/courses/allthethingscourse/units/1/lockable/1/levels/1/page/1"
   And I wait until element "#level-body" is visible
   Then element "#locked-lesson:contains(lesson is currently locked)" is visible
 
   # teacher unlocks
 
   And I sign in as "Teacher_frank"
-  And I am on "http://studio.code.org/s/allthethings"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the lesson lock dialog
@@ -104,29 +104,29 @@ Scenario: Lock settings for retake after submit scenario
   # student submits
 
   When I sign in as "frank"
-  And I am on "http://studio.code.org/s/allthethings"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   And I wait until element ".uitest-summary-progress-row:contains(1. Jigsaw)" is visible
   Then I verify the lesson named "Anonymous student survey 2" is unlocked
   Then I verify progress for lesson 31 level 1 is "not_tried"
   Then I verify progress for lesson 31 level 2 is "not_tried"
   Then I verify progress for lesson 31 level 3 is "not_tried"
   Then I verify progress for lesson 31 level 4 is "not_tried"
-  When I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/4"
+  When I am on "http://studio.code.org/courses/allthethingscourse/units/1/lockable/1/levels/1/page/4"
   And I click selector ".submitButton" once I see it
   And I wait to see a dialog titled "Submit your survey"
   And I press "ok-button"
-  And I wait until current URL contains "/s/allthethings/lessons/31/levels/1"
+  And I wait until current URL contains "/courses/allthethingscourse/units/1/lessons/31/levels/1"
 
   # now locked for student
 
-  When I am on "http://studio.code.org/s/allthethings"
+  When I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   And I wait until element ".uitest-summary-progress-row:contains(1. Jigsaw)" is visible
   Then I verify the lesson named "Anonymous student survey 2" is locked
 
   # now teacher allows for retake
 
   And I sign in as "Teacher_frank"
-  And I am on "http://studio.code.org/s/allthethings"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the lesson lock dialog
@@ -136,8 +136,8 @@ Scenario: Lock settings for retake after submit scenario
   # now editable, and student can see unsubmit button
 
   When I sign in as "frank"
-  And I am on "http://studio.code.org/s/allthethings"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   And I wait until element ".uitest-summary-progress-row:contains(1. Jigsaw)" is visible
   Then I verify the lesson named "Anonymous student survey 2" is unlocked
-  When I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/4"
+  When I am on "http://studio.code.org/courses/allthethingscourse/units/1/lockable/1/levels/1/page/4"
   Then element ".unsubmitButton" is visible

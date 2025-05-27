@@ -1,5 +1,6 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2025-05-22T16:43:16.000Z",
   "level_num": "custom",
@@ -21,9 +22,11 @@
     "project_template_level_name": "CSA U2L10-toString PBT_pilot-2025",
     "teacher_markdown": "Students should notice that the `super.toString()` calls the superclass version of the `toString()` method and concatenates this with `\"Length: \"` and the running time of the `Movie` object. Students should also notice that the running time is printed on a new line and conclude that the `\\n` prints a new line.",
     "name_suffix": "_pilot-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "true",
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-22T16:43:16.083+00:00\",\"changed\":[\"cloned from \\\"CSA U2L10-L3_pilot-2025\\\"\"],\"cloned_from\":\"CSA U2L10-L3_pilot-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-22T16:43:16.083+00:00\",\"changed\":[\"cloned from \\\"CSA U2L10-L3_pilot-2025\\\"\"],\"cloned_from\":\"CSA U2L10-L3_pilot-2025\"},{\"changed_at\":\"2025-05-23 15:57:09 +0000\",\"changed\":[\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Javalab>

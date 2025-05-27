@@ -511,13 +511,13 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
     assert_response :success
     response_data = JSON.parse(reg_ws_data_response.body)['regional_workshop_data']
     response_rp = response_data['regional_partner']
-    response_workshops = response_data['available_workshops']
+    response_workshops = response_data['available_regional_workshops']
 
     assert_nil response_rp['name']
     assert_equal [], response_workshops
   end
 
-  test 'regional_workshop_data only returns regional workshops under their regional partner and national workshops' do
+  test 'regional_workshop_data only returns regional workshops under their regional partner' do
     nearby_rp = create :regional_partner, name: "RP_in_users_region"
     nearby_rp.mappings.find_or_create_by!(zip_code: "11111")
     distant_rp = create :regional_partner, name: "RP_outside_of_users_region"
@@ -526,70 +526,98 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
     nearby_rp_pm_2 = create :program_manager, regional_partner: nearby_rp
     distant_rp_pm = create :program_manager, regional_partner: distant_rp
 
-    test_course_offerings = [] << (create :course_offering)
-    nearby_regional_ws_1 = create :byo_workshop, organizer: nearby_rp_pm_1
-    nearby_regional_ws_2 = create :byo_workshop, course_offerings: test_course_offerings, organizer: nearby_rp_pm_2
-    nearby_national_ws = create :byo_workshop, course_offerings: test_course_offerings, participant_group_type: 'National', organizer: nearby_rp_pm_2
-    create :byo_workshop, course_offerings: test_course_offerings, organizer: distant_rp_pm
-    distant_national_ws = create :byo_workshop, course_offerings: test_course_offerings, participant_group_type: 'National', organizer: distant_rp_pm
+    nearby_regional_ws_1 = create :byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'Regional', organizer: nearby_rp_pm_1
+    nearby_regional_ws_2 = create :byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'Regional', organizer: nearby_rp_pm_2
+    create :byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'National', organizer: nearby_rp_pm_2
+    create :byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'Regional', organizer: distant_rp_pm
 
     reg_ws_data_response = get :regional_workshop_data, params: {zip_code: "11111"}
     assert_response :success
     response_data = JSON.parse(reg_ws_data_response.body)['regional_workshop_data']
     response_rp = response_data['regional_partner']
-    response_workshop_ids = response_data['available_workshops'].map {|ws| ws['id']}
+    response_workshop_ids = response_data['available_regional_workshops'].map {|ws| ws['id']}
 
     assert_equal nearby_rp.name, response_rp['name']
-    assert_equal [nearby_regional_ws_1.id, nearby_regional_ws_2.id, nearby_national_ws.id, distant_national_ws.id], response_workshop_ids
+    assert_equal [nearby_regional_ws_1.id, nearby_regional_ws_2.id], response_workshop_ids
   end
 
   test 'regional_workshop_data only returns workshops that have not been started' do
     rp = create :regional_partner
     rp.mappings.find_or_create_by!(zip_code: "11111")
     pm = create :program_manager, regional_partner: rp
-    test_course_offerings = [] << (create :course_offering)
-    not_started_ws = create :byo_workshop, course_offerings: test_course_offerings, organizer: pm
-    create :byo_workshop, :in_progress, course_offerings: test_course_offerings, organizer: pm
-    create :byo_workshop, :ended, course_offerings: test_course_offerings, organizer: pm
+    not_started_ws = create :byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'Regional', organizer: pm
+    create :byo_workshop, :in_progress, sessions: [session_on_day(1)], participant_group_type: 'Regional', organizer: pm
+    create :byo_workshop, :ended, sessions: [session_on_day(1)], participant_group_type: 'Regional', organizer: pm
 
     reg_ws_data_response = get :regional_workshop_data, params: {zip_code: "11111"}
     assert_response :success
     response_data = JSON.parse(reg_ws_data_response.body)['regional_workshop_data']
     response_rp = response_data['regional_partner']
-    response_workshop_ids = response_data['available_workshops'].map {|ws| ws['id']}
+    response_workshop_ids = response_data['available_regional_workshops'].map {|ws| ws['id']}
 
     assert_equal rp.name, response_rp['name']
     assert_equal [not_started_ws.id], response_workshop_ids
+  end
+
+  test 'regional_workshop_data only returns workshops that have start times in the future' do
+    rp = create :regional_partner
+    rp.mappings.find_or_create_by!(zip_code: "11111")
+    pm = create :program_manager, regional_partner: rp
+    future_workshop = create :byo_workshop, participant_group_type: 'Regional', organizer: pm, sessions: [create(:pd_session, start: DateTime.now.beginning_of_day + 1.month, end: DateTime.now.beginning_of_day + 1.month + 1.hour)]
+    create :byo_workshop, participant_group_type: 'Regional', organizer: pm, sessions: [create(:pd_session, start: DateTime.now.beginning_of_day - 1.month, end: DateTime.now.beginning_of_day - 1.month + 1.hour)]
+
+    reg_ws_data_response = get :regional_workshop_data, params: {zip_code: "11111"}
+    assert_response :success
+    response_data = JSON.parse(reg_ws_data_response.body)['regional_workshop_data']
+    response_rp = response_data['regional_partner']
+    response_workshop_ids = response_data['available_regional_workshops'].map {|ws| ws['id']}
+
+    assert_equal rp.name, response_rp['name']
+    assert_equal [future_workshop.id], response_workshop_ids
   end
 
   test 'regional_workshop_data only returns workshops that are not hidden' do
     rp = create :regional_partner
     rp.mappings.find_or_create_by!(zip_code: "11111")
     pm = create :program_manager, regional_partner: rp
-    test_course_offerings = [] << (create :course_offering)
-    hidden_nil_ws = create :byo_workshop, course_offerings: test_course_offerings, organizer: pm
-    hidden_false_ws = create :byo_workshop, course_offerings: test_course_offerings, organizer: pm, hidden: false
-    create :byo_workshop, course_offerings: test_course_offerings, organizer: pm, hidden: true
+    hidden_nil_ws = create :byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'Regional', organizer: pm
+    hidden_false_ws = create :byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'Regional', organizer: pm, hidden: false
+    create :byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'Regional', organizer: pm, hidden: true
 
     reg_ws_data_response = get :regional_workshop_data, params: {zip_code: "11111"}
     assert_response :success
     response_data = JSON.parse(reg_ws_data_response.body)['regional_workshop_data']
     response_rp = response_data['regional_partner']
-    response_workshop_ids = response_data['available_workshops'].map {|ws| ws['id']}
+    response_workshop_ids = response_data['available_regional_workshops'].map {|ws| ws['id']}
 
     assert_equal rp.name, response_rp['name']
     assert_equal [hidden_nil_ws.id, hidden_false_ws.id], response_workshop_ids
+  end
+
+  test 'regional_workshop_data returns CSF workshops' do
+    rp = create :regional_partner
+    rp.mappings.find_or_create_by!(zip_code: "11111")
+    pm = create :program_manager, regional_partner: rp
+    csf_workshop = create :workshop, course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_101, sessions: [session_on_day(1)], organizer: pm
+
+    reg_ws_data_response = get :regional_workshop_data, params: {zip_code: "11111"}
+    assert_response :success
+    response_data = JSON.parse(reg_ws_data_response.body)['regional_workshop_data']
+    response_rp = response_data['regional_partner']
+    response_workshop_ids = response_data['available_regional_workshops'].map {|ws| ws['id']}
+
+    assert_equal rp.name, response_rp['name']
+    assert_equal [csf_workshop.id], response_workshop_ids
   end
 
   test 'regional_workshop_data does not return CSD, CSP, or CSA workshops when applications are closed' do
     rp = create :regional_partner
     rp.mappings.find_or_create_by!(zip_code: "11111")
     pm = create :program_manager, regional_partner: rp
-    test_course_offerings = [] << (create :course_offering)
-    create :workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, organizer: pm
-    create :workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, organizer: pm
-    create :workshop, course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, organizer: pm
-    byow = create :byo_workshop, course_offerings: test_course_offerings, organizer: pm
+    create :workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, sessions: [session_on_day(1)], organizer: pm
+    create :workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, sessions: [session_on_day(1)], organizer: pm
+    create :workshop, course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, sessions: [session_on_day(1)], organizer: pm
+    byow = create :byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'Regional', organizer: pm
 
     DCDO.stubs(:get).with('pl-teacher-application-off-season', false).returns(true)
 
@@ -597,7 +625,7 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
     assert_response :success
     response_data = JSON.parse(reg_ws_data_response.body)['regional_workshop_data']
     response_rp = response_data['regional_partner']
-    response_workshop_ids = response_data['available_workshops'].map {|ws| ws['id']}
+    response_workshop_ids = response_data['available_regional_workshops'].map {|ws| ws['id']}
 
     assert_equal rp.name, response_rp['name']
     assert_equal [byow.id], response_workshop_ids
@@ -612,25 +640,24 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
     distant_rp = create :regional_partner
     distant_rp.mappings.find_or_create_by!(zip_code: "99999")
     distant_pm = create :program_manager, regional_partner: distant_rp
-    test_course_offerings = [] << (create :course_offering)
 
     # Summer CSD, CSP, CSA workshops under the user's regional partner
-    summer_csd = create :workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, organizer: pm
-    summer_csp = create :workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, organizer: pm
-    summer_csa = create :workshop, course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, organizer: pm
+    summer_csd = create :workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, sessions: [session_on_day(1)], organizer: pm
+    summer_csp = create :workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, sessions: [session_on_day(1)], organizer: pm
+    summer_csa = create :workshop, course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, sessions: [session_on_day(1)], organizer: pm
 
     # Summer CSD, CSP, CSA workshops under a different regional partner
-    create :workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, organizer: distant_pm
-    create :workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, organizer: distant_pm
-    create :workshop, course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, organizer: distant_pm
+    create :workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, sessions: [session_on_day(1)], organizer: distant_pm
+    create :workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, sessions: [session_on_day(1)], organizer: distant_pm
+    create :workshop, course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, sessions: [session_on_day(1)], organizer: distant_pm
 
     # AYW workshops
-    create :workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_WORKSHOP_1, organizer: pm
-    create :workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_WORKSHOP_1, organizer: pm
-    create :workshop, course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_WORKSHOP_1, organizer: pm
+    create :workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_WORKSHOP_1, sessions: [session_on_day(1)], organizer: pm
+    create :workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_WORKSHOP_1, sessions: [session_on_day(1)], organizer: pm
+    create :workshop, course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_WORKSHOP_1, sessions: [session_on_day(1)], organizer: pm
 
     # Non-[CSD, CSP, CSA] workshop
-    byow = create :byo_workshop, course_offerings: test_course_offerings, organizer: pm
+    byow = create :byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'Regional', organizer: pm
 
     DCDO.stubs(:get).with('pl-teacher-application-off-season', false).returns(false)
 
@@ -638,7 +665,7 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
     assert_response :success
     response_data = JSON.parse(reg_ws_data_response.body)['regional_workshop_data']
     response_rp = response_data['regional_partner']
-    response_workshop_ids = response_data['available_workshops'].map {|ws| ws['id']}
+    response_workshop_ids = response_data['available_regional_workshops'].map {|ws| ws['id']}
 
     assert_equal rp.name, response_rp['name']
     assert_equal [summer_csd.id, summer_csp.id, summer_csa.id, byow.id], response_workshop_ids
@@ -647,22 +674,51 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
   end
 
   test 'regional_workshop_data returns available workshops sorted by start date of first session' do
-    first_session_start = DateTime.parse('2025-01-01T12:00:00')
     rp = create :regional_partner
     rp.mappings.find_or_create_by!(zip_code: "11111")
     pm = create :program_manager, regional_partner: rp
-    third_ws = create :workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, organizer: pm, sessions: [create(:pd_session, start: first_session_start + 10.days)]
-    second_ws = create :workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, organizer: pm, sessions: [create(:pd_session, start: first_session_start + 5.days)]
-    first_ws = create :workshop, course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, organizer: pm, sessions: [create(:pd_session, start: first_session_start)]
+    third_ws = create :workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, organizer: pm, sessions: [session_on_day(10)]
+    second_ws = create :workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, organizer: pm, sessions: [session_on_day(5)]
+    first_ws = create :workshop, course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, organizer: pm, sessions: [session_on_day(1)]
 
     reg_ws_data_response = get :regional_workshop_data, params: {zip_code: "11111"}
     assert_response :success
     response_data = JSON.parse(reg_ws_data_response.body)['regional_workshop_data']
     response_rp = response_data['regional_partner']
-    response_workshop_ids = response_data['available_workshops'].map {|ws| ws['id']}
+    response_workshop_ids = response_data['available_regional_workshops'].map {|ws| ws['id']}
 
     assert_equal rp.name, response_rp['name']
     assert_equal [first_ws.id, second_ws.id, third_ws.id], response_workshop_ids
+  end
+
+  test 'national_workshop_data returns empty array if no results' do
+    assert_equal [], Pd::ProfessionalLearningController.national_workshop_data
+  end
+
+  test 'national_workshop_data only returns national Build Your Own workshops' do
+    national_byo_workshop = create :byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'National'
+    create :byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'Regional'
+    create :workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, sessions: [session_on_day(1)]
+    create :workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, sessions: [session_on_day(1)]
+    create :workshop, course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, sessions: [session_on_day(1)]
+
+    assert_equal [national_byo_workshop.id], Pd::ProfessionalLearningController.national_workshop_data.pluck(:id)
+  end
+
+  test 'national_workshop_data only returns workshops that are not started and start in the future' do
+    starts_in_future = create :byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'National'
+    create :byo_workshop, :in_progress, sessions: [session_on_day(1)], participant_group_type: 'National'
+    create :byo_workshop, :ended, sessions: [session_on_day(1)], participant_group_type: 'National'
+    create :byo_workshop, sessions: [(create :pd_session, start: Time.zone.today - 5.days + 9.hours, end: Time.zone.today - 5.days + 17.hours)], participant_group_type: 'National'
+
+    assert_equal [starts_in_future.id], Pd::ProfessionalLearningController.national_workshop_data.pluck(:id)
+  end
+
+  test 'national_workshop_data does not return hidden workshops' do
+    non_hidden_workshop = create :byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'National'
+    create :byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'National', hidden: true
+
+    assert_equal [non_hidden_workshop.id], Pd::ProfessionalLearningController.national_workshop_data.pluck(:id)
   end
 
   private def go_to_workshop(workshop, teacher)

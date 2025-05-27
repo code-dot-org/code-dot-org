@@ -112,7 +112,7 @@ describe('RegionalWorkshopCatalog', () => {
     screen.getByText('04/22/25 (1:00PM-9:00PM) + 1 More');
   });
 
-  it('card renders Learn More button that opens dialog with description', async () => {
+  it('card renders Learn More button that opens dialog with provided description', async () => {
     renderDefault();
 
     expect(screen.queryByText(DEFAULT_PROPS.description)).toBe(null);
@@ -124,6 +124,17 @@ describe('RegionalWorkshopCatalog', () => {
 
     await waitFor(() => {
       screen.getByText(DEFAULT_PROPS.description);
+      screen.getByRole('button', {name: 'closeLearnMoreDialog'});
+    });
+  });
+
+  it('card renders Learn More button that opens dialog with default description if none provided', async () => {
+    renderDefault({description: ''});
+
+    fireEvent.click(screen.getByRole('button', {name: 'learnMore'}));
+
+    await waitFor(() => {
+      screen.getByText('No description available.');
       screen.getByRole('button', {name: 'closeLearnMoreDialog'});
     });
   });
