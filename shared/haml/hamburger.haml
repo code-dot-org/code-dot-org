@@ -23,8 +23,8 @@
       - elsif entry[:type] == "expander"
         .hamburger-expandable-item.item{id: entry[:id], class: entry[:class], tabindex: "0"}
           .text= entry[:title]
-          %i.arrow-down{class: "fa fa-plus"}
-          %i.arrow-up{class: "fa fa-minus"}
+          %i.arrow-down{class: "fa fa-chevron-down"}
+          %i.arrow-up{class: "fa fa-chevron-up"}
         .hamburger-expandable-items{id: "#{entry[:id]}-items"}
           - entry[:subentries].each do |subentry|
             .item

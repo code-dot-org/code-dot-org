@@ -24,8 +24,10 @@ jest.mock('@react-pdf/renderer', () => {
 const defaultProps = {
   closeTutor: () => {},
   open: true,
-  scriptId: 2,
-  context: AiDiffContext.LESSON,
+  context: {
+    type: AiDiffContext.LESSON,
+    lessonId: 2,
+  },
   scriptName: 'test_lesson',
   unitDisplayName: 'test unit name',
 };
@@ -74,7 +76,10 @@ describe('AiDiffChat', () => {
   });
 
   it('initial message and suggested prompts are rendered for general context', () => {
-    const overrideProps = {...defaultProps, context: AiDiffContext.GENERAL};
+    const overrideProps = {
+      ...defaultProps,
+      context: {type: AiDiffContext.GENERAL},
+    };
     render(<AiDiffChat {...overrideProps} />);
     const message = screen.getByLabelText(i18n.aiChatMessageBot());
     expect(message).toHaveTextContent(
@@ -97,8 +102,10 @@ describe('AiDiffChat', () => {
     fireEvent.click(prompt);
 
     const responseEventData = {
-      chatContext: AiDiffContext.LESSON,
-      scriptId: 2,
+      chatContext: {
+        type: AiDiffContext.LESSON,
+        lessonId: 2,
+      },
       scriptName: 'test_lesson',
       unitName: 'test unit name',
       role: Role.USER,
@@ -108,8 +115,10 @@ describe('AiDiffChat', () => {
       url: window.location.href,
     };
     const responseEventData2 = {
-      chatContext: AiDiffContext.LESSON,
-      scriptId: 2,
+      chatContext: {
+        type: AiDiffContext.LESSON,
+        lessonId: 2,
+      },
       scriptName: 'test_lesson',
       unitName: 'test unit name',
       role: Role.ASSISTANT,
@@ -124,9 +133,11 @@ describe('AiDiffChat', () => {
       expect(fetchStub).toHaveBeenCalledWith(
         '/ai_diff/chat_completion',
         JSON.stringify({
-          context: AiDiffContext.LESSON,
+          context: {
+            type: AiDiffContext.LESSON,
+            lessonId: 2,
+          },
           inputText: responseEventData.text,
-          contextId: responseEventData.scriptId,
           lessonId: responseEventData.lessonId,
           unitDisplayName: responseEventData.unitName,
           sessionId: null,
@@ -169,8 +180,10 @@ describe('AiDiffChat', () => {
     fireEvent.click(prompt);
 
     const responseEventData = {
-      chatContext: AiDiffContext.LESSON,
-      scriptId: 2,
+      chatContext: {
+        type: AiDiffContext.LESSON,
+        lessonId: 2,
+      },
       scriptName: 'test_lesson',
       unitName: 'test unit name',
       role: Role.USER,
@@ -180,8 +193,10 @@ describe('AiDiffChat', () => {
       url: window.location.href,
     };
     const responseEventData2 = {
-      chatContext: AiDiffContext.LESSON,
-      scriptId: 2,
+      chatContext: {
+        type: AiDiffContext.LESSON,
+        lessonId: 2,
+      },
       scriptName: 'test_lesson',
       unitName: 'test unit name',
       role: Role.ASSISTANT,
@@ -191,8 +206,10 @@ describe('AiDiffChat', () => {
       url: window.location.href,
     };
     const feedbackEventData = {
-      chatContext: AiDiffContext.LESSON,
-      scriptId: 2,
+      chatContext: {
+        type: AiDiffContext.LESSON,
+        lessonId: 2,
+      },
       scriptName: 'test_lesson',
       unitName: 'test unit name',
       thumbsUp: true,
@@ -207,9 +224,11 @@ describe('AiDiffChat', () => {
       expect(fetchStub).toHaveBeenCalledWith(
         '/ai_diff/chat_completion',
         JSON.stringify({
-          context: AiDiffContext.LESSON,
+          context: {
+            type: AiDiffContext.LESSON,
+            lessonId: 2,
+          },
           inputText: responseEventData.text,
-          contextId: responseEventData.scriptId,
           lessonId: responseEventData.lessonId,
           unitDisplayName: responseEventData.unitName,
           sessionId: null,
@@ -281,8 +300,10 @@ describe('AiDiffChat', () => {
     expect(textbox).not.toBeEnabled();
 
     const responseEventData = {
-      chatContext: AiDiffContext.LESSON,
-      scriptId: 2,
+      chatContext: {
+        type: AiDiffContext.LESSON,
+        lessonId: 2,
+      },
       scriptName: 'test_lesson',
       unitName: 'test unit name',
       role: Role.USER,
@@ -292,8 +313,10 @@ describe('AiDiffChat', () => {
       url: window.location.href,
     };
     const responseEventData2 = {
-      chatContext: AiDiffContext.LESSON,
-      scriptId: 2,
+      chatContext: {
+        type: AiDiffContext.LESSON,
+        lessonId: 2,
+      },
       scriptName: 'test_lesson',
       unitName: 'test unit name',
       role: Role.ASSISTANT,
@@ -308,9 +331,11 @@ describe('AiDiffChat', () => {
       expect(fetchStub).toHaveBeenCalledWith(
         '/ai_diff/chat_completion',
         JSON.stringify({
-          context: AiDiffContext.LESSON,
+          context: {
+            type: AiDiffContext.LESSON,
+            lessonId: 2,
+          },
           inputText: responseEventData.text,
-          contextId: responseEventData.scriptId,
           lessonId: responseEventData.lessonId,
           unitDisplayName: responseEventData.unitName,
           sessionId: null,
@@ -357,8 +382,10 @@ describe('AiDiffChat', () => {
     fireEvent.click(submit_btn);
 
     const responseEventData = {
-      chatContext: AiDiffContext.LESSON,
-      scriptId: 2,
+      chatContext: {
+        type: AiDiffContext.LESSON,
+        lessonId: 2,
+      },
       scriptName: 'test_lesson',
       unitName: 'test unit name',
       role: Role.USER,
@@ -368,8 +395,10 @@ describe('AiDiffChat', () => {
       url: window.location.href,
     };
     const responseEventData2 = {
-      chatContext: AiDiffContext.LESSON,
-      scriptId: 2,
+      chatContext: {
+        type: AiDiffContext.LESSON,
+        lessonId: 2,
+      },
       scriptName: 'test_lesson',
       unitName: 'test unit name',
       role: Role.ASSISTANT,
@@ -382,9 +411,11 @@ describe('AiDiffChat', () => {
       expect(fetchStub).toHaveBeenCalledWith(
         '/ai_diff/chat_completion',
         JSON.stringify({
-          context: AiDiffContext.LESSON,
+          context: {
+            type: AiDiffContext.LESSON,
+            lessonId: 2,
+          },
           inputText: responseEventData.text,
-          contextId: responseEventData.scriptId,
           lessonId: responseEventData.lessonId,
           unitDisplayName: responseEventData.unitName,
           sessionId: null,

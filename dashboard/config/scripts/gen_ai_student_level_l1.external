@@ -22,6 +22,15 @@ markdown <<MARKDOWN
 ### **Videos**
 <!-- Unified container for the grid of cards -->
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 90%; margin: 20px auto;">
+<!-- Video for https://www.youtube.com/watch?v=21eVegaVMtE -->
+<!-- Youtube code 21eVegaVMtE --->
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+  <img src="https://i.ytimg.com/vi/21eVegaVMtE/1.jpg" alt="Thumbnail image for youtube video Careers in Generative AI" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <p style="font-size: 14pt; line-height: 1.25;">
+  <b><a href="https://www.youtube.com/watch?v=21eVegaVMtE" target="_blank">Careers in Generative AI</a></b>
+  </p>
+</div>
+
 <!-- Video for https://youtu.be/6NDEoJ4gWtM -->
 <!-- Youtube code 6NDEoJ4gWtM --->
 <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">

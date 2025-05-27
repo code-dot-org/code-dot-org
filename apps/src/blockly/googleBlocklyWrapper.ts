@@ -268,8 +268,12 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   });
 
   // Installs colour_picker, colour_rgb, colour_random, and colour_blend blocks.
-  // These are exclusively provided via the FieldColour plugin as of Blockly v11.
-  installFieldColourBlocks({javascript: javascriptGenerator});
+  // Unit tests may attempt to install multiple times, which is currently unsafe.
+  try {
+    installFieldColourBlocks({javascript: javascriptGenerator});
+  } catch (e) {
+    console.warn(e);
+  }
 
   type registrableFieldType = GoogleBlockly.fieldRegistry.RegistrableField;
   // elements in this list should be structured as follows:
@@ -387,7 +391,20 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   });
   Object.defineProperty(blocklyWrapper, 'selected', {
     get: function () {
-      return this.blockly_.getSelected();
+      // In the event that the block is no longer focused, we can
+      // potentially use the workspace's focused node.
+      // This allows `Blockly.selected` to work from the dev console.
+      const focusedNode = this.FocusableTreeTraverser.findFocusedNode(
+        // common.getMainWorkspace() gets the currently active workspace,
+        // as opposed to the student's "primary" workspace.
+        Blockly.common.getMainWorkspace()
+      );
+      if (focusedNode && Blockly.isSelectable(focusedNode)) {
+        return focusedNode;
+      }
+      // If the focused node is not selectable, fall back to the
+      // getSelected() method.
+      return Blockly.getSelected();
     },
   });
   Object.defineProperty(blocklyWrapper, 'BlockFieldHelper', {
@@ -847,6 +864,12 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.showUnusedBlocks = options.showUnusedBlocks;
     blocklyWrapper.blockLimitMap = cdoUtils.createBlockLimitMap();
     blocklyWrapper.isDarkTheme = isDarkTheme(options.theme);
+
+    // Only allow toggling disabled blocks in start mode.
+    // This is also important for ensuring that Blockly does not
+    // mistakenly keep orphaned blocks disabled when they are connected.
+    options.disable = blocklyWrapper.isStartMode;
+
     const workspace = blocklyWrapper.blockly_.inject(
       container,
       options
@@ -991,12 +1014,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       blocklyWrapper.functionEditor = new FunctionEditor();
       blocklyWrapper.functionEditor.init(options);
     }
-
-    const blocklySvgElement = document.querySelector('.blocklySvg');
-    if (blocklySvgElement) {
-      blocklySvgElement.setAttribute('tabindex', '-1');
-    }
-
     return workspace;
   };
 

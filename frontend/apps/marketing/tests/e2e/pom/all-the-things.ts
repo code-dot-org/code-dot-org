@@ -8,6 +8,7 @@ export type Section =
   | 'Full Width Action Block'
   | 'Button'
   | 'Divider'
+  | 'Editorial Card'
   | 'Heading'
   | 'Image'
   | 'Image Carousel'

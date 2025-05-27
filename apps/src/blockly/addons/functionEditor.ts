@@ -320,6 +320,8 @@ export default class FunctionEditor {
 
     // Make the function editor workspace the active/focused workspace.
     Blockly.common.setMainWorkspace(this.editorWorkspace);
+    // Focus the procedure block.
+    Blockly.FocusManager.getFocusManager().focusNode(this.block!);
   }
 
   /**
@@ -620,8 +622,8 @@ export default class FunctionEditor {
 
       variables.forEach(variable => {
         functionEditorVariableMap.createVariable(
-          variable.name,
-          variable.type,
+          variable.getName(),
+          variable.getType(),
           variable.getId()
         );
       });

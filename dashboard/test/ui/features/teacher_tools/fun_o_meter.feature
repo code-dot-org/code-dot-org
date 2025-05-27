@@ -2,7 +2,7 @@
 Feature: Fun-O-Meter
 
 Scenario: Rate a Puzzle
-  Given I am on "http://studio.code.org/s/allthethings/lessons/4/levels/4?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/4/levels/4?noautoplay=true"
   And I wait for the lab page to fully load
 
   When I've initialized the workspace with bee conditional blocks
@@ -21,10 +21,10 @@ Scenario: Rate a Puzzle
   When I press "like"
   And I press "continue-button"
 
-  Then I wait until I am on "http://studio.code.org/s/allthethings/lessons/4/levels/5"
+  Then I wait until I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/4/levels/5"
   And I wait until "puzzleRatings" in localStorage equals "[]"
 
-  Given I am on "http://studio.code.org/s/allthethings/lessons/4/levels/4?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/4/levels/4?noautoplay=true"
   And I wait for the lab page to fully load
 
   When I press "runButton"

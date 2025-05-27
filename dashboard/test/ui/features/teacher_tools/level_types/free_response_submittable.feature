@@ -3,7 +3,7 @@
 Feature: Submittable free response
 
 Background:
-  Given I am on "http://studio.code.org/s/allthethings/lessons/27/levels/1"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/1"
   Then I wait to see ".submitButton"
   And element ".submitButton" is visible
 
@@ -16,7 +16,7 @@ Scenario: Submit anything, unsubmit, be able to resubmit.
   And I press ".submitButton" using jQuery to load a new page
 
   # Reload the page to see that unsubmit is the option.
-  And I am on "http://studio.code.org/s/allthethings/lessons/27/levels/1"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/1"
   And I wait to see ".unsubmitButton"
   And element ".free-response > textarea" contains text "sample response"
   And element ".unsubmitButton" is visible
@@ -32,12 +32,12 @@ Scenario: Submit anything, unsubmit, be able to resubmit.
 
 Scenario: Level without multiple attempts allowed is locked after submit
   # First, submit something.
-  Given I am on "http://studio.code.org/s/allthethings/lessons/27/levels/4"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/4"
   And I type "sample response" into ".free-response > textarea"
   And I press ".submitButton" using jQuery to load a new page
 
   # Reload the page to see that unsubmit is the option.
-  Then I am on "http://studio.code.org/s/allthethings/lessons/27/levels/4"
+  Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/4"
   And I wait to see ".nextLevelButton"
   And element ".free-response > textarea" contains text "sample response"
   And element ".free-response > textarea" is readonly

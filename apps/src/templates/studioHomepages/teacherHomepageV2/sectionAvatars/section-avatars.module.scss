@@ -1,0 +1,160 @@
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
+@import 'color';
+@import 'https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap';
+
+// Section Avatars
+.sectionAvatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-family: 'Noto Color Emoji', sans-serif;
+  margin-inline-end: 12px;
+}
+
+.sectionAvatar-s {
+  width: 56px;
+  height: 56px;
+  font-size: 32px;
+}
+
+.sectionAvatar-m {
+  width: 98px;
+  height: 98px;
+  font-size: 56px;
+}
+
+.sectionAvatar-l {
+  width: 140px;
+  height: 140px;
+  font-size: 80px;
+}
+
+// Section avatar editor
+.editorDialog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 600px;
+  max-width: 800px;
+  padding: 24px 32px;
+  border-radius: 4px;
+  gap: 16px;
+  background-color: var(--white);
+
+  h3 {
+    margin-bottom: 16px;
+    text-align: left;
+  }
+
+  hr {
+    width: 100%;
+    border: 1px solid var(--neutral-gray-20);
+    margin: 0;
+  }
+}
+
+.accessibleDescription {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.avatarDialogHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.avatarDialogBody {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.avatarDialogBodyRight {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.avatarDialogFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  width: 100%;
+  gap: 8px;
+}
+
+.pickerGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 50px);
+  width: 378px;
+  justify-content: center;
+  grid-gap: 4px;
+  padding: 8px;
+  border: 1px solid var(--neutral-gray-20);
+  border-radius: 4px;
+  font-family: 'Noto Color Emoji', sans-serif;
+}
+
+.gridItem {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  border-radius: 4px;
+  border: 2px solid white;
+
+  &:hover {
+    border: 2px solid var(--brand-teal-50);
+  }
+
+  &:focus {
+    border: 2px solid var(--brand-teal-50);
+    outline: none;
+  }
+
+  &:active {
+    border: 2px solid var(--brand-teal-50);
+  }
+}
+
+.selectedGridItem {
+  border: 2px solid var(--brand-teal-50);
+}
+
+.colorBox {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  border-radius: 4px;
+}
+
+.avatarDialogLabels {
+  p {
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-size: 16px;
+  }
+}
+
+// Section Setup
+.avatarContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.avatarButton {
+  height: 32px;
+}

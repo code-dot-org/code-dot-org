@@ -1046,7 +1046,7 @@ class SectionTest < ActiveSupport::TestCase
         assignedTitle: 'somecourse',
         linkToAssigned: '/courses/somecourse',
         currentUnitTitle: 'Jigsaw',
-        linkToCurrentUnit: '/s/jigsaw',
+        linkToCurrentUnit: '/courses/somecourse/units/1',
         courseVersionName: 'somecourse',
         numberOfStudents: 0,
         linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",

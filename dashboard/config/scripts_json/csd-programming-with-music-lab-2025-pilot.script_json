@@ -20,7 +20,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-24 22:25:28 UTC",
+    "serialized_at": "2025-05-23 13:37:34 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5800,6 +5801,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-gif-5"
+        ],
         "progression": "Musical Cat GIFs"
       },
       "bonus": false,
@@ -8863,7 +8867,69 @@
 
   ],
   "lessons_programming_expressions": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Functions - Explore",
+        "programming_environment.name": "music",
+        "programming_expression.key": "create_function"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops - Explore",
+        "programming_environment.name": "music",
+        "programming_expression.key": "repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "programming_environment.name": "music",
+        "programming_expression.key": "play_random"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "programming_environment.name": "music",
+        "programming_expression.key": "trigger"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Explore",
+        "programming_environment.name": "music",
+        "programming_expression.key": "play_sample"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Explore",
+        "programming_environment.name": "music",
+        "programming_expression.key": "play_together"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Practice",
+        "programming_environment.name": "music",
+        "programming_expression.key": "play_sequential"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Practice",
+        "programming_environment.name": "music",
+        "programming_expression.key": "rest"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Synthesize",
+        "programming_environment.name": "music",
+        "programming_expression.key": "set_effect"
+      }
+    }
   ],
   "objectives": [
     {

@@ -17,7 +17,7 @@ Feature: Looking at a few things with Applitools Eyes - Part 3
     Examples:
       | url                                                               | test_name                  |
       | http://code.org/                                                  | code.org homepage          |
-      | https://studio.code.org/s/allthethings/lessons/13/levels/1?noautoplay=true | embedded blocks     |
+      | https://studio.code.org/courses/allthethingscourse/units/1/lessons/13/levels/1?noautoplay=true | embedded blocks     |
 
   @properties_encryption_key
   Scenario Outline: Logged out simple page view without instructions dialog
@@ -31,7 +31,7 @@ Feature: Looking at a few things with Applitools Eyes - Part 3
     Examples:
       | url                                               | test_name                  |
       | http://studio.code.org/                           | logged out studio homepage |
-      | http://studio.code.org/s/allthethings             | logged out script progress |
+      | http://studio.code.org/courses/allthethingscourse/units/1             | logged out script progress |
 
   @no_ci
   Scenario Outline: Temporarily eyes disabled simple page view without instructions dialog

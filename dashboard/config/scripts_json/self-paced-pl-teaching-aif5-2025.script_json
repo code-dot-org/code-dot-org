@@ -1,0 +1,1132 @@
+{
+  "script": {
+    "name": "self-paced-pl-teaching-aif5-2025",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "self_paced_pl_9_12",
+      "curriculum_umbrella": "Self-paced PL - AIF",
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "topic_tags": [
+        "ai"
+      ],
+      "version_year": "2025"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-05-23 01:40:49 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-teaching-aif5-2025"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Teaching Cybersecurity and Global Impact",
+      "name": "Teaching Cybersecurity and Global Impact",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**In this lesson,  you will:** \n\n- Get an overview of the Cybersecurity and Global Impact curriculum and resources.\n\n**Suggested Time:** 10 minutes ",
+        "student_overview": "**In this lesson,  you will:** \n\n- Get an overview of the Cybersecurity and Global Impact curriculum and resources.\n\n**Suggested Time:** 10 minutes "
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching Cybersecurity and Global Impact",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025"
+      }
+    },
+    {
+      "key": "Lesson Exploration",
+      "name": "Lesson Exploration",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**In this lesson,  you will:** \n\n- Understand core cybersecurity concepts, including data privacy, secuirty risks, and encryption.\n- Preview activities in the lessons.\n- Explore best practices for teaching cybersecruity.\n\n**Suggested Time:** 50 minutes ",
+        "student_overview": "**In this lesson,  you will:** \n\n- Understand core cybersecurity concepts, including data privacy, secuirty risks, and encryption.\n- Preview activities in the lessons.\n- Explore best practices for teaching cybersecruity.\n\n**Suggested Time:** 50 minutes "
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "1d278ea1-b901-4822-887d-237bc7c2b2ab",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1d278ea1-b901-4822-887d-237bc7c2b2ab",
+        "lesson.key": "Teaching Cybersecurity and Global Impact",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025"
+      }
+    },
+    {
+      "key": "80dab089-5b20-4d20-935e-f13e117b47aa",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "80dab089-5b20-4d20-935e-f13e117b47aa",
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "3f938ef0-0bec-485d-a802-50551dbd8fbb",
+      "position": 1,
+      "properties": {
+        "progression_name": "Course Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "3f938ef0-0bec-485d-a802-50551dbd8fbb",
+        "lesson_activity.key": "1d278ea1-b901-4822-887d-237bc7c2b2ab"
+      }
+    },
+    {
+      "key": "1b4e8428-526e-4b77-a2ce-6cb9722ed676",
+      "position": 2,
+      "properties": {
+        "progression_name": "Cybersecurity Overivew"
+      },
+      "seeding_key": {
+        "activity_section.key": "1b4e8428-526e-4b77-a2ce-6cb9722ed676",
+        "lesson_activity.key": "1d278ea1-b901-4822-887d-237bc7c2b2ab"
+      }
+    },
+    {
+      "key": "48778a23-12be-461f-92cc-5d42576684fa",
+      "position": 1,
+      "properties": {
+        "progression_name": "Data and Privacy"
+      },
+      "seeding_key": {
+        "activity_section.key": "48778a23-12be-461f-92cc-5d42576684fa",
+        "lesson_activity.key": "80dab089-5b20-4d20-935e-f13e117b47aa"
+      }
+    },
+    {
+      "key": "ddeabc3b-6d18-42f2-93c2-7c8c3af4ab3d",
+      "position": 2,
+      "properties": {
+        "progression_name": "Security Risks"
+      },
+      "seeding_key": {
+        "activity_section.key": "ddeabc3b-6d18-42f2-93c2-7c8c3af4ab3d",
+        "lesson_activity.key": "80dab089-5b20-4d20-935e-f13e117b47aa"
+      }
+    },
+    {
+      "key": "0aadd47a-fd32-41cf-99b6-798136c6d8fe",
+      "position": 3,
+      "properties": {
+        "progression_name": "Protecting Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "0aadd47a-fd32-41cf-99b6-798136c6d8fe",
+        "lesson_activity.key": "80dab089-5b20-4d20-935e-f13e117b47aa"
+      }
+    },
+    {
+      "key": "a2f3a33b-9757-4660-8898-142038aaee57",
+      "position": 4,
+      "properties": {
+        "progression_name": "Final Project and Wrap-Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "a2f3a33b-9757-4660-8898-142038aaee57",
+        "lesson_activity.key": "80dab089-5b20-4d20-935e-f13e117b47aa"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_overview_objectives_2025"
+        ],
+        "lesson.key": "Teaching Cybersecurity and Global Impact",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "3f938ef0-0bec-485d-a802-50551dbd8fbb"
+      },
+      "level_keys": [
+        "csaif_pl_overview_objectives_2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_cert_2025"
+        ],
+        "lesson.key": "Teaching Cybersecurity and Global Impact",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "3f938ef0-0bec-485d-a802-50551dbd8fbb"
+      },
+      "level_keys": [
+        "csaif_pl_cert_2025"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_module_overview_2025"
+        ],
+        "lesson.key": "Teaching Cybersecurity and Global Impact",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "3f938ef0-0bec-485d-a802-50551dbd8fbb"
+      },
+      "level_keys": [
+        "csaif_pl_module_overview_2025"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_course_overview_2025"
+        ],
+        "lesson.key": "Teaching Cybersecurity and Global Impact",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "3f938ef0-0bec-485d-a802-50551dbd8fbb"
+      },
+      "level_keys": [
+        "csaif_pl_course_overview_2025"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_course_structure_2025"
+        ],
+        "lesson.key": "Teaching Cybersecurity and Global Impact",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "3f938ef0-0bec-485d-a802-50551dbd8fbb"
+      },
+      "level_keys": [
+        "csaif_pl_course_structure_2025"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_lesson_resources_2025"
+        ],
+        "lesson.key": "Teaching Cybersecurity and Global Impact",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "3f938ef0-0bec-485d-a802-50551dbd8fbb"
+      },
+      "level_keys": [
+        "csaif_pl_lesson_resources_2025"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Cybersecurity Overivew"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_cyber_overview_2025"
+        ],
+        "lesson.key": "Teaching Cybersecurity and Global Impact",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "1b4e8428-526e-4b77-a2ce-6cb9722ed676"
+      },
+      "level_keys": [
+        "csaif_pl_cyber_overview_2025"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Cybersecurity Overivew"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_cyber_impact_2025"
+        ],
+        "lesson.key": "Teaching Cybersecurity and Global Impact",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "1b4e8428-526e-4b77-a2ce-6cb9722ed676"
+      },
+      "level_keys": [
+        "csaif_pl_cyber_impact_2025"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Cybersecurity Overivew"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_check_for_understanding_2025"
+        ],
+        "lesson.key": "Teaching Cybersecurity and Global Impact",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "1b4e8428-526e-4b77-a2ce-6cb9722ed676"
+      },
+      "level_keys": [
+        "csaif_pl_check_for_understanding_2025"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Cybersecurity Overivew"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_check_answer_2025"
+        ],
+        "lesson.key": "Teaching Cybersecurity and Global Impact",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "1b4e8428-526e-4b77-a2ce-6cb9722ed676"
+      },
+      "level_keys": [
+        "csaif_pl_check_answer_2025"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Cybersecurity Overivew"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_navigating_module_2025"
+        ],
+        "lesson.key": "Teaching Cybersecurity and Global Impact",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "1b4e8428-526e-4b77-a2ce-6cb9722ed676"
+      },
+      "level_keys": [
+        "csaif_pl_navigating_module_2025"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Data and Privacy"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_overview_objectives_02_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "48778a23-12be-461f-92cc-5d42576684fa"
+      },
+      "level_keys": [
+        "csaif_pl_overview_objectives_02_2025"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Data and Privacy"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_2_data_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "48778a23-12be-461f-92cc-5d42576684fa"
+      },
+      "level_keys": [
+        "csaif_pl_2_data_2025"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Data and Privacy"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_2_data_02_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "48778a23-12be-461f-92cc-5d42576684fa"
+      },
+      "level_keys": [
+        "csaif_pl_2_data_02_2025"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Data and Privacy"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_2_privacy_b_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "48778a23-12be-461f-92cc-5d42576684fa"
+      },
+      "level_keys": [
+        "csaif_pl_2_privacy_b_2025"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Data and Privacy"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_2_privacy_02_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "48778a23-12be-461f-92cc-5d42576684fa"
+      },
+      "level_keys": [
+        "csaif_pl_2_privacy_02_2025"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Security Risks"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_security_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "ddeabc3b-6d18-42f2-93c2-7c8c3af4ab3d"
+      },
+      "level_keys": [
+        "csaif_pl_security_2025"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Protecting Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_2_encryption_03_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "0aadd47a-fd32-41cf-99b6-798136c6d8fe"
+      },
+      "level_keys": [
+        "csaif_pl_2_encryption_03_2025"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Protecting Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_2_encryption_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "0aadd47a-fd32-41cf-99b6-798136c6d8fe"
+      },
+      "level_keys": [
+        "csaif_pl_2_encryption_2025"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Protecting Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_2_encryption_04_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "0aadd47a-fd32-41cf-99b6-798136c6d8fe"
+      },
+      "level_keys": [
+        "csaif_pl_2_encryption_04_2025"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 10,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Protecting Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_2_encryption_02_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "0aadd47a-fd32-41cf-99b6-798136c6d8fe"
+      },
+      "level_keys": [
+        "csaif_pl_2_encryption_02_2025"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 11,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Protecting Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_2_encrypt_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "0aadd47a-fd32-41cf-99b6-798136c6d8fe"
+      },
+      "level_keys": [
+        "csaif_pl_2_encrypt_2025"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Project and Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_2_project_1_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "a2f3a33b-9757-4660-8898-142038aaee57"
+      },
+      "level_keys": [
+        "csaif_pl_2_project_1_2025"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Project and Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_2_project_02_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "a2f3a33b-9757-4660-8898-142038aaee57"
+      },
+      "level_keys": [
+        "csaif_pl_2_project_02_2025"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 14,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Project and Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_wrap-up_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "a2f3a33b-9757-4660-8898-142038aaee57"
+      },
+      "level_keys": [
+        "csaif_pl_wrap-up_2025"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 15,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Project and Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_wrap-up_answer_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "a2f3a33b-9757-4660-8898-142038aaee57"
+      },
+      "level_keys": [
+        "csaif_pl_wrap-up_answer_2025"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 16,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Project and Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-nextsteps-cyber_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "a2f3a33b-9757-4660-8898-142038aaee57"
+      },
+      "level_keys": [
+        "csaif-pl-nextsteps-cyber_2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_overview_objectives_2025",
+        "script_level.level_keys": [
+          "csaif_pl_overview_objectives_2025"
+        ],
+        "lesson.key": "Teaching Cybersecurity and Global Impact",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "3f938ef0-0bec-485d-a802-50551dbd8fbb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_cert_2025",
+        "script_level.level_keys": [
+          "csaif_pl_cert_2025"
+        ],
+        "lesson.key": "Teaching Cybersecurity and Global Impact",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "3f938ef0-0bec-485d-a802-50551dbd8fbb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_module_overview_2025",
+        "script_level.level_keys": [
+          "csaif_pl_module_overview_2025"
+        ],
+        "lesson.key": "Teaching Cybersecurity and Global Impact",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "3f938ef0-0bec-485d-a802-50551dbd8fbb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_course_overview_2025",
+        "script_level.level_keys": [
+          "csaif_pl_course_overview_2025"
+        ],
+        "lesson.key": "Teaching Cybersecurity and Global Impact",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "3f938ef0-0bec-485d-a802-50551dbd8fbb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_course_structure_2025",
+        "script_level.level_keys": [
+          "csaif_pl_course_structure_2025"
+        ],
+        "lesson.key": "Teaching Cybersecurity and Global Impact",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "3f938ef0-0bec-485d-a802-50551dbd8fbb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_lesson_resources_2025",
+        "script_level.level_keys": [
+          "csaif_pl_lesson_resources_2025"
+        ],
+        "lesson.key": "Teaching Cybersecurity and Global Impact",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "3f938ef0-0bec-485d-a802-50551dbd8fbb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_cyber_overview_2025",
+        "script_level.level_keys": [
+          "csaif_pl_cyber_overview_2025"
+        ],
+        "lesson.key": "Teaching Cybersecurity and Global Impact",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "1b4e8428-526e-4b77-a2ce-6cb9722ed676"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_cyber_impact_2025",
+        "script_level.level_keys": [
+          "csaif_pl_cyber_impact_2025"
+        ],
+        "lesson.key": "Teaching Cybersecurity and Global Impact",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "1b4e8428-526e-4b77-a2ce-6cb9722ed676"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_check_for_understanding_2025",
+        "script_level.level_keys": [
+          "csaif_pl_check_for_understanding_2025"
+        ],
+        "lesson.key": "Teaching Cybersecurity and Global Impact",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "1b4e8428-526e-4b77-a2ce-6cb9722ed676"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_check_answer_2025",
+        "script_level.level_keys": [
+          "csaif_pl_check_answer_2025"
+        ],
+        "lesson.key": "Teaching Cybersecurity and Global Impact",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "1b4e8428-526e-4b77-a2ce-6cb9722ed676"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_navigating_module_2025",
+        "script_level.level_keys": [
+          "csaif_pl_navigating_module_2025"
+        ],
+        "lesson.key": "Teaching Cybersecurity and Global Impact",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "1b4e8428-526e-4b77-a2ce-6cb9722ed676"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_overview_objectives_02_2025",
+        "script_level.level_keys": [
+          "csaif_pl_overview_objectives_02_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "48778a23-12be-461f-92cc-5d42576684fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_2_data_2025",
+        "script_level.level_keys": [
+          "csaif_pl_2_data_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "48778a23-12be-461f-92cc-5d42576684fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_2_data_02_2025",
+        "script_level.level_keys": [
+          "csaif_pl_2_data_02_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "48778a23-12be-461f-92cc-5d42576684fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_2_privacy_b_2025",
+        "script_level.level_keys": [
+          "csaif_pl_2_privacy_b_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "48778a23-12be-461f-92cc-5d42576684fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_2_privacy_02_2025",
+        "script_level.level_keys": [
+          "csaif_pl_2_privacy_02_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "48778a23-12be-461f-92cc-5d42576684fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_security_2025",
+        "script_level.level_keys": [
+          "csaif_pl_security_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "ddeabc3b-6d18-42f2-93c2-7c8c3af4ab3d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_2_encryption_03_2025",
+        "script_level.level_keys": [
+          "csaif_pl_2_encryption_03_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "0aadd47a-fd32-41cf-99b6-798136c6d8fe"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_2_encryption_2025",
+        "script_level.level_keys": [
+          "csaif_pl_2_encryption_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "0aadd47a-fd32-41cf-99b6-798136c6d8fe"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_2_encryption_04_2025",
+        "script_level.level_keys": [
+          "csaif_pl_2_encryption_04_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "0aadd47a-fd32-41cf-99b6-798136c6d8fe"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_2_encryption_02_2025",
+        "script_level.level_keys": [
+          "csaif_pl_2_encryption_02_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "0aadd47a-fd32-41cf-99b6-798136c6d8fe"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_2_encrypt_2025",
+        "script_level.level_keys": [
+          "csaif_pl_2_encrypt_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "0aadd47a-fd32-41cf-99b6-798136c6d8fe"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_2_project_1_2025",
+        "script_level.level_keys": [
+          "csaif_pl_2_project_1_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "a2f3a33b-9757-4660-8898-142038aaee57"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_2_project_02_2025",
+        "script_level.level_keys": [
+          "csaif_pl_2_project_02_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "a2f3a33b-9757-4660-8898-142038aaee57"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_wrap-up_2025",
+        "script_level.level_keys": [
+          "csaif_pl_wrap-up_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "a2f3a33b-9757-4660-8898-142038aaee57"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_wrap-up_answer_2025",
+        "script_level.level_keys": [
+          "csaif_pl_wrap-up_answer_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "a2f3a33b-9757-4660-8898-142038aaee57"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-nextsteps-cyber_2025",
+        "script_level.level_keys": [
+          "csaif-pl-nextsteps-cyber_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif5-2025",
+        "activity_section.key": "a2f3a33b-9757-4660-8898-142038aaee57"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

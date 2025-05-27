@@ -1546,9 +1546,9 @@ class Unit < ApplicationRecord
         }
       end
 
-      has_older_course_progress = unit_group_unit&.unit_group.try(:has_older_version_progress?, user)
+      has_older_course_progress = unit_group_unit&.cached_unit_group.try(:has_older_version_progress?, user)
       has_older_unit_progress = has_older_version_progress?(user)
-      user_unit = user && user_scripts.find {|us| us.user ==  user}
+      user_unit = user && user_scripts.find_by(user: user)
 
       # If the current user is assigned to this unit, get the section
       # that assigned it.
@@ -1556,7 +1556,7 @@ class Unit < ApplicationRecord
 
       unit_path = script_path(self)
       if Policies::Courses.modularity_enabled? && unit_group_unit
-        unit_path = course_unit_path(unit_group_unit.unit_group, unit_group_unit.position)
+        unit_path = course_unit_path(unit_group_unit.cached_unit_group, unit_group_unit.position)
       end
 
       summary = {
@@ -1565,7 +1565,7 @@ class Unit < ApplicationRecord
         title: title_for_display,
         description: Services::MarkdownPreprocessor.process(localized_description),
         studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
-        course_id: unit_group_unit&.unit_group.try(:id),
+        course_id: unit_group_unit&.cached_unit_group&.id,
         hide_within_course: hide_within_course,
         publishedState: get_published_state,
         instructionType: get_instruction_type,
@@ -1592,7 +1592,7 @@ class Unit < ApplicationRecord
         curriculum_path: curriculum_path,
         announcements: localized_announcements,
         age_13_required: logged_out_age_13_required?,
-        show_course_unit_version_warning: !unit_group_unit&.unit_group&.has_dismissed_version_warning?(user) && has_older_course_progress,
+        show_course_unit_version_warning: !unit_group_unit&.cached_unit_group&.has_dismissed_version_warning?(user) && has_older_course_progress,
         show_script_version_warning: !user_unit&.version_warning_dismissed && !has_older_course_progress && has_older_unit_progress,
         course_versions: summarize_course_versions(user, locale_code),
         supported_locales: supported_locales,
@@ -1603,7 +1603,7 @@ class Unit < ApplicationRecord
         project_sharing: project_sharing,
         curriculum_umbrella: curriculum_umbrella,
         family_name: family_name,
-        version_year: unit_group_unit&.unit_group&.version_year || version_year,
+        version_year: unit_group_unit&.cached_unit_group&.version_year || version_year,
         assigned_section_id: assigned_section_id,
         hasStandards: has_standards_associations?,
         tts: tts?,
@@ -1786,9 +1786,9 @@ class Unit < ApplicationRecord
     data
   end
 
-  def summarize_i18n_for_display
+  def summarize_i18n_for_display(unit_group_unit: nil)
     data = summarize_i18n_for_edit
-    data[:title] = title_for_display
+    data[:title] = title_for_display(unit_group_unit: unit_group_unit)
     data
   end
 
@@ -1833,12 +1833,14 @@ class Unit < ApplicationRecord
     unit_group_units&.first&.position
   end
 
-  def title_for_display
+  def title_for_display(unit_group_unit: nil)
+    unit_group_unit ||= Queries::Courses.unit_group_unit(self)
+    unit_group = unit_group_unit&.cached_unit_group
     title = localized_title
     has_prefix = unit_group&.has_numbered_units
     return title unless has_prefix
 
-    position = unit_group_units&.first&.position
+    position = unit_group_unit&.position
     prefix = I18n.t "unit_prefix", n: position
     "#{prefix} - #{title}"
   end

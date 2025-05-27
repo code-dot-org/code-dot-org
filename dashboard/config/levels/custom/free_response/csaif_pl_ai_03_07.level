@@ -6,7 +6,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "# Bias in AI\r\n\r\n## 📝 To Do\r\n#### Reflect on what you learned in the last two levels and provide\r\n* #### 3 examples where you saw AI bias in this lesson\r\n* #### 2 things we can do to help mitigate it\r\n* #### 1 reason it can emerge from\r\n\r\n\r\n",
+    "long_instructions": "# Bias in AI\r\n\r\n## Reflection\r\n#### Reflect on what you learned in the last two levels and provide\r\n* #### 3 examples where you saw AI bias in this lesson\r\n* #### 2 things we can do to help mitigate it\r\n* #### 1 reason it can emerge from\r\n\r\n<p style=\"font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;\">\r\n    ➡️ This activity is from Lesson 6. You can find more details in the full <a href='https://studio.code.org/s/aif1-2025/lessons/6' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.\r\n</p>",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19619,
@@ -21,7 +21,7 @@
     "stay_on_level_after_submit": "false"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-04-07T18:30:54.500+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_ai_03c\\\"\"],\"cloned_from\":\"csaif_pl_ai_03c\"},{\"changed_at\":\"2025-04-07 18:31:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-04-09 15:24:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-04-24 17:02:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-04-07T18:30:54.500+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_ai_03c\\\"\"],\"cloned_from\":\"csaif_pl_ai_03c\"},{\"changed_at\":\"2025-04-07 18:31:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-04-09 15:24:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-04-24 17:02:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-05-22 19:28:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

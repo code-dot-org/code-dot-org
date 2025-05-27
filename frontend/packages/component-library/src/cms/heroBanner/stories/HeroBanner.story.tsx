@@ -1,6 +1,7 @@
 import codeOrgLogo from '@public/images/code-org-logo.png';
 import customBackgroundImage from '@public/images/hero-banner-custom-bg-example.png';
 import imageFile from '@public/images/image-component.png';
+import {MINIMAL_VIEWPORTS} from '@storybook/addon-viewport';
 import {Meta, StoryObj} from '@storybook/react';
 import {within, expect} from '@storybook/test';
 
@@ -278,5 +279,103 @@ export const WithCustomStyles: Story = {
     const styles = window.getComputedStyle(banner);
     await expect(styles.outline).toBe('rgb(255, 165, 0) dashed 3px');
     await expect(styles.backgroundColor).toBe('rgb(254, 251, 233)');
+  },
+};
+
+export const Tablet: Story = {
+  args: {
+    heading: 'Tablet Example',
+    subHeading: 'This banner uses an image',
+    description: 'This is how the hero looks on a tablet device.',
+    imageProps: {
+      src: imageFile,
+      altText: 'Decorative image for hero section',
+      className: 'custom-image-class',
+    },
+    VideoComponent: Video,
+  },
+  parameters: {
+    layout: 'fullscreen',
+    viewport: {
+      viewports: MINIMAL_VIEWPORTS,
+      defaultViewport: 'tablet',
+    },
+    eyes: {
+      browser: {width: 834, height: 1112, name: 'chrome'},
+    },
+  },
+};
+
+export const TabletWithHiddenImage: Story = {
+  args: {
+    heading: 'Tablet w/ Hidden Image',
+    subHeading: 'This banner uses an image that is hidden on small screens',
+    description: 'This is how the hero looks on a tablet device.',
+    imageProps: {
+      src: imageFile,
+      altText: 'This should not show on small screens',
+      className: 'custom-image-class',
+    },
+    VideoComponent: Video,
+    hideImageOnSmallScreen: true,
+  },
+  parameters: {
+    layout: 'fullscreen',
+    viewport: {
+      viewports: MINIMAL_VIEWPORTS,
+      defaultViewport: 'tablet',
+    },
+    eyes: {
+      browser: {width: 834, height: 1112, name: 'chrome'},
+    },
+  },
+};
+
+export const Mobile: Story = {
+  args: {
+    heading: 'Mobile Example',
+    subHeading: 'This banner uses an image',
+    description: 'This is how the hero looks on a mobile device.',
+    imageProps: {
+      src: imageFile,
+      altText: 'Decorative image for hero section',
+      className: 'custom-image-class',
+    },
+    VideoComponent: Video,
+  },
+  parameters: {
+    layout: 'fullscreen',
+    viewport: {
+      viewports: MINIMAL_VIEWPORTS,
+      defaultViewport: 'mobile2',
+    },
+    eyes: {
+      browser: {width: 414, height: 896, name: 'chrome'},
+    },
+  },
+};
+
+export const MobileWithHiddenImage: Story = {
+  args: {
+    heading: 'Mobile w/ Hidden Image',
+    subHeading: 'This banner uses an image that is hidden on small screens',
+    description: 'This is how the hero looks on a mobile device.',
+    imageProps: {
+      src: imageFile,
+      altText: 'This should not show on small screens',
+      className: 'custom-image-class',
+    },
+    VideoComponent: Video,
+    hideImageOnSmallScreen: true,
+  },
+  parameters: {
+    layout: 'fullscreen',
+    viewport: {
+      viewports: MINIMAL_VIEWPORTS,
+      defaultViewport: 'mobile2',
+    },
+    eyes: {
+      browser: {width: 414, height: 896, name: 'chrome'},
+    },
   },
 };

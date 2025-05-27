@@ -470,7 +470,7 @@ class ScriptsController < ApplicationController
   # Redirect /s/... to /courses/.../units/...
   private def redirect_to_canonical_path
     unit_name_or_id = params[:script_id] || params[:id]
-    canonical_path = Services::Courses.canonical_path(request.fullpath, unit_name_or_id, current_user)
+    canonical_path = Services::Courses.canonical_path(request.fullpath, unit_name_or_id)
     redirect_to canonical_path unless canonical_path == request.fullpath
   end
 end

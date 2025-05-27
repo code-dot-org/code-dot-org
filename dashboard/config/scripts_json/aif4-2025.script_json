@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "2e08e85f-8771-4214-b544-f0054a16c346",
+          "notice": "The Fabric of the Internet and AI Professional Development",
+          "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+          "link": "https://studio.code.org/s/self-paced-pl-teaching-aif4-2025/",
+          "type": "information",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Let’s Go!"
+        }
+      ],
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "AIF",
       "has_unnumbered_lessons": true,
@@ -22,7 +34,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-20 22:06:04 UTC",
+    "serialized_at": "2025-05-22 21:20:23 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -4565,6 +4577,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "fabric-of-the-internet-and-ai-lesson11-level5_2025"
+        ],
         "progression": "Final Risk Assessment"
       },
       "bonus": false,
@@ -5495,6 +5510,7 @@
       "key": "ip_addressing_and_visualizing",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {

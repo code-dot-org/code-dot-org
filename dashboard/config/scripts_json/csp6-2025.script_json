@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-20 18:01:00 UTC",
+    "serialized_at": "2025-05-22 16:26:26 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -2432,13 +2432,13 @@
       "key": "45acadac-07f7-49cb-b411-7a4e422bab49",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Group students into groups of four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 1:** Students read the entire code, and then students focuses their attention on a single function. Student should re-read the code for their function.\n\n* Student A - `average()` (lines 32-38)\n* Student B - `slow()` (lines 40-48)\n* Student C - `fast()` (lines 50-58)\n* Student D - `numberedListDisplay()` (lines 60-66)\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How does the app work?*\n\nStudents discuss in their groups how each of their functions work, specifically referencing the list it uses and how it is traversed using a for loop. Then as a class address any confusion over how the app works. \n\n* **The goal:** The goal of this investigation is to give students the opportunity to see lists traversed for different reasons and with different outcomes.   Students should look at the code for their assigned function and make sense of what the function does overall and how it does it.  \n* **What to look for:** It may be helpful to re-watch the [video](https://youtu.be/RQ6GJt9f2vg) in the U5L10 - Traversals Explore lesson starting at 3:07 to hear how the speaker describes a section of code that processes a list for a specific purpose.  Listening to that explanation will help give you an idea of what student explanations of their functions should sound like.  \n    \n    For example, when explaining the average function in this investigation, students should describe what the function does.  In this case, the function calculates the average of the values stored in the `mileTimes` list and stores that value in the `avg` variable. In addition to describing what the function does, students should describe how the function works.  This will involve more detail.  \n  * Students should be able to describe that the function contains a local variable of `total` which is initialized at 0.  \n  * Then the function uses a for loop to traverse through the `mileTimes` list.  In the loop, each value inside `mileTimes` list is accessed and added to the current value stored inside the total variable.  \n  * When the loop reaches the end of the list, the loop ends and the total variable contains the sum of all the `mileTimes`.  In the last line of the function, the value stored in `avg` is updated by dividing the value stored in `total` by the total number of elements in the `mileTimes` list.  \n\n    \n \nWhen you bring the class together to talk about how the app works, you should talk both about what the functions do as well as how they work.  There likely is not time to go over all four functions, but discussing one or two of them will ensure the full class has an opportunity to hear how their peers describe code.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Group students into groups of four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 1:** Students read the entire code, and then students focuses their attention on a single function. Student should re-read the code for their function.\n\n* Student A - `average()` (lines 32-38)\n* Student B - `slow()` (lines 40-48)\n* Student C - `fast()` (lines 50-58)\n* Student D - `numberedListDisplay()` (lines 60-66)\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How does the app work?*\n\nStudents discuss in their groups how each of their functions work, specifically referencing the list it uses and how it is traversed using a for loop. Then as a class address any confusion over how the app works. \n\n* **The goal:** The goal of this investigation is to give students the opportunity to see lists traversed for different reasons and with different outcomes.   Students should look at the code for their assigned function and make sense of what the function does overall and how it does it.  \n* **What to look for:** It may be helpful to re-watch the [video](https://youtu.be/RQ6GJt9f2vg) in the U5L10 - Traversals Explore lesson starting at 3:07 to hear how the speaker describes a section of code that processes a list for a specific purpose.  Listening to that explanation will help give you an idea of what student explanations of their functions should sound like.  \n    \n    For example, when explaining the average function in this investigation, students should describe what the function does.  In this case, the function calculates the average of the values stored in the `mileTimes` list and stores that value in the `avg` variable. In addition to describing what the function does, students should describe how the function works.  This will involve more detail.  \n  * Students should be able to describe that the function contains a local variable of `total` which is initialized at 0.  \n  * Then the function uses a for loop to traverse through the `mileTimes` list.  In the loop, each value inside `mileTimes` list is accessed and added to the current value stored inside the total variable.  \n  * When the loop reaches the end of the list, the loop ends and the total variable contains the sum of all the `mileTimes`.  In the last line of the function, the value stored in `avg` is updated by dividing the value stored in `total` by the total number of elements in the `mileTimes` list.  \n\n   \nWhen you bring the class together to talk about how the app works, you should talk both about what the functions do as well as how they work.  There likely is not time to go over all four functions, but discussing one or two of them will ensure the full class has an opportunity to hear how their peers describe code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 2:** Students will make a modification to the app, adding functionality and new insights by traversing lists.\n\n* Student A and B - Create a function that adds together the total time of every element in the list.\n* Student C and D - Create a function that counts how many mile times that are faster than 8 minutes",
         "name": "Mile Tracker Investigation",
-        "progression_name": "Mile Tracker Investigation",
+        "progression_name": "Mile Tracker Investigate and Modify",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Prepping for Investigate Lessons:** The best way to prepare for this lesson is to go through the experience yourself. Check out the three apps in Code Studio to get a sense for how they work. Then move on to the Code Investigation and actually try to answer all the questions for each app.  These questions are intended to help students read and make sense of the code.  It is not about getting the “right answer” as much as it is about building skills in your students to read, test, and make sense of code that they haven’t seen before.  Finally, you will notice that for the levels where the directions ask students to “Modify” the code, you will find “Example Solutions” in the “Teacher Panel” of that level. \n\n**A Note About Datasets:** In general, we believe individual teachers have the best knowledge of their students and the content that will engage them. From that perspective, we also think it's appropriate to make choices about our content & curriculum that best suits your classroom. With that said, the Spotify dataset updates automatically every day according to the latest trends - we hope it provides a real-world social connection for students to engage with datasets, but also understand that we can't control the songs that make it to the top 200 and don't have the bandwidth to filter it on our end. If the songs for a particular day are not appropriate for your students, it may be a good idea to skip that dataset.\n"
+            "markdown": "**Prepping for Investigate Lessons:** The best way to prepare for this lesson is to go through the experience yourself. Check out the three apps in Code Studio to get a sense for how they work. Then move on to the Code Investigation and actually try to answer all the questions for each app.  These questions are intended to help students read and make sense of the code.  It is not about getting the “right answer” as much as it is about building skills in your students to read, test, and make sense of code that they haven’t seen before.  Finally, you will notice that for the levels where the directions ask students to “Modify” the code, you will find “Example Solutions” in the “Teacher Panel” of that level. \n"
           }
         ]
       },
@@ -4664,7 +4664,7 @@
         "level_keys": [
           "U5 Traversals Investigate Mile Tracker Modify_2025"
         ],
-        "progression": "Mile Tracker Investigation"
+        "progression": "Mile Tracker Investigate and Modify"
       },
       "bonus": false,
       "seeding_key": {
@@ -4683,6 +4683,28 @@
     {
       "chapter": 44,
       "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Mile Tracker Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Traversals Investigate Mile Tracker Modify_2_2025"
+        ],
+        "lesson.key": "Traversals Investigate",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csp6-2025",
+        "activity_section.key": "45acadac-07f7-49cb-b411-7a4e422bab49"
+      },
+      "level_keys": [
+        "U5 Traversals Investigate Mile Tracker Modify_2_2025"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4706,8 +4728,8 @@
       ]
     },
     {
-      "chapter": 45,
-      "position": 3,
+      "chapter": 46,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4731,8 +4753,8 @@
       ]
     },
     {
-      "chapter": 46,
-      "position": 4,
+      "chapter": 47,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -4756,8 +4778,8 @@
       ]
     },
     {
-      "chapter": 47,
-      "position": 5,
+      "chapter": 48,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4781,20 +4803,20 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "U5 Traversals Practice Part 3_2025"
+          "U5 Traversals Practice Part 1_2025"
         ],
         "progression": "Traversal Practice"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U5 Traversals Practice Part 3_2025"
+          "U5 Traversals Practice Part 1_2025"
         ],
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "lessonGroup-4",
@@ -4802,11 +4824,11 @@
         "activity_section.key": "e9bcb100-e317-4f96-bb77-d3e533301489"
       },
       "level_keys": [
-        "U5 Traversals Practice Part 3_2025"
+        "U5 Traversals Practice Part 1_2025"
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4831,20 +4853,20 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "U5 Traversals Practice Part 1_2025"
+          "U5 Traversals Practice Part 3_2025"
         ],
         "progression": "Traversal Practice"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U5 Traversals Practice Part 1_2025"
+          "U5 Traversals Practice Part 3_2025"
         ],
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "lessonGroup-4",
@@ -4852,11 +4874,11 @@
         "activity_section.key": "e9bcb100-e317-4f96-bb77-d3e533301489"
       },
       "level_keys": [
-        "U5 Traversals Practice Part 1_2025"
+        "U5 Traversals Practice Part 3_2025"
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4881,7 +4903,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4906,7 +4928,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -4931,7 +4953,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4956,7 +4978,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -4981,7 +5003,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5006,7 +5028,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5031,7 +5053,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5056,7 +5078,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5081,7 +5103,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5106,7 +5128,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5131,7 +5153,32 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_csp6_2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_csp6_2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp6-2025",
+        "activity_section.key": "450ae012-51f0-4730-bae4-8e020eb344ee"
+      },
+      "level_keys": [
+        "student-eou-survey_csp6_2025"
+      ]
+    },
+    {
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5156,7 +5203,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 65,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5181,7 +5228,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 66,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5206,7 +5253,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 67,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5231,7 +5278,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 68,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -5256,7 +5303,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 69,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5281,7 +5328,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 70,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -5306,7 +5353,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 71,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5331,7 +5378,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 72,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -5356,7 +5403,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 73,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -5381,7 +5428,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 74,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -5406,7 +5453,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 75,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
@@ -5431,7 +5478,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 76,
       "position": 13,
       "activity_section_position": 2,
       "assessment": true,
@@ -5453,31 +5500,6 @@
       },
       "level_keys": [
         "U5L3 CFU Lists Psuedocode 22022_b_2025"
-      ]
-    },
-    {
-      "chapter": 75,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "student-eou-survey_csp6_2025"
-        ],
-        "progression": "End of Unit Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "student-eou-survey_csp6_2025"
-        ],
-        "lesson.key": "End of Unit Survey",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp6-2025",
-        "activity_section.key": "450ae012-51f0-4730-bae4-8e020eb344ee"
-      },
-      "level_keys": [
-        "student-eou-survey_csp6_2025"
       ]
     }
   ],
@@ -6000,6 +6022,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "U5 Traversals Investigate Mile Tracker Modify_2_2025",
+        "script_level.level_keys": [
+          "U5 Traversals Investigate Mile Tracker Modify_2_2025"
+        ],
+        "lesson.key": "Traversals Investigate",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csp6-2025",
+        "activity_section.key": "45acadac-07f7-49cb-b411-7a4e422bab49"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "U5 Traversals Investigate Dog Finder Modify_2025",
         "script_level.level_keys": [
           "U5 Traversals Investigate Dog Finder Modify_2025"
@@ -6048,9 +6082,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "U5 Traversals Practice Part 3_2025",
+        "level.key": "U5 Traversals Practice Part 1_2025",
         "script_level.level_keys": [
-          "U5 Traversals Practice Part 3_2025"
+          "U5 Traversals Practice Part 1_2025"
         ],
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "lessonGroup-4",
@@ -6072,9 +6106,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "U5 Traversals Practice Part 1_2025",
+        "level.key": "U5 Traversals Practice Part 3_2025",
         "script_level.level_keys": [
-          "U5 Traversals Practice Part 1_2025"
+          "U5 Traversals Practice Part 3_2025"
         ],
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "lessonGroup-4",
@@ -6212,6 +6246,18 @@
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csp6-2025",
         "activity_section.key": "a7ce5111-2013-4883-9741-b776652b7929"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_csp6_2025",
+        "script_level.level_keys": [
+          "student-eou-survey_csp6_2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp6-2025",
+        "activity_section.key": "450ae012-51f0-4730-bae4-8e020eb344ee"
       }
     },
     {
@@ -6368,18 +6414,6 @@
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csp6-2025",
         "activity_section.key": "ac3cd7ce-62c7-4bb5-a0e0-98b0bcc60823"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "student-eou-survey_csp6_2025",
-        "script_level.level_keys": [
-          "student-eou-survey_csp6_2025"
-        ],
-        "lesson.key": "End of Unit Survey",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp6-2025",
-        "activity_section.key": "450ae012-51f0-4730-bae4-8e020eb344ee"
       }
     }
   ],

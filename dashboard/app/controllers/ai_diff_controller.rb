@@ -4,8 +4,12 @@ class AiDiffController < ApplicationController
 
   # params are
   # context:
+  # => type:
+  # => levelId:
+  # => lessonId:
+  # => unitId:
+  # => courseId:
   # inputText:
-  # contextId:
   # unitDisplayName:
   # sessionId:
   # isPreset:
@@ -125,18 +129,32 @@ class AiDiffController < ApplicationController
     end
 
     # get lesson info for prompt generation
+    context = params[:context]
 
-    case params[:context]
-    when SharedConstants::AI_DIFF_CONTEXT[:LESSON]
-      @lesson = Lesson.find_by(id: params[:contextId])
-      @unit = Unit.find_by(id: @lesson&.script_id)
+    if context[:levelId]
+      @level = Level.find(context[:levelId])
+    end
+
+    if context[:lessonId]
+      @lesson = Lesson.find(context[:lessonId])
+    elsif @level
+      script_level = @level.script_levels&.first
+      @lesson = script_level&.lesson
+    end
+
+    if context[:unitId]
+      @unit = Unit.find(context[:unitId])
+    elsif @lesson
+      @unit = Unit.find(@lesson.script_id)
+    end
+
+    if context[:courseId]
+      @unit_group = UnitGroup.find(context[:courseId])
+    elsif @unit
       @unit_group = @unit&.unit_groups&.first
-    when SharedConstants::AI_DIFF_CONTEXT[:UNIT]
-      @unit = Unit.find_by(id: params[:contextId])
-      @unit_group = @unit&.unit_groups&.first
-    when SharedConstants::AI_DIFF_CONTEXT[:COURSE]
-      @unit_group = UnitGroup.find_by(id: params[:contextId]) #should this be a course offering instead?
-    when SharedConstants::AI_DIFF_CONTEXT[:GENERAL]
+    end
+
+    if context[:type] == SharedConstants::AI_DIFF_CONTEXT[:GENERAL]
       @section_contexts = get_active_sections
     end
 
@@ -148,7 +166,15 @@ class AiDiffController < ApplicationController
     course_names = @unit_group.present? ? [@unit_group.name, @unit_group.family_name] : ([@unit&.name] if @unit.present?)
 
     course_display_name = CourseOffering.find_by(id: @unit_group&.course_version&.course_offering_id)&.display_name
-    prompt = AiDiffBedrockHelper.get_prompt_for_context(params[:context], course_display_name, params[:unitDisplayName], lesson_name, params[:isPreset], @section_contexts)
+    prompt = AiDiffBedrockHelper.get_prompt_for_context(
+      context[:type],
+      course_display_name,
+      params[:unitDisplayName],
+      lesson_name,
+      params[:isPreset],
+      @section_contexts,
+      @level&.long_instructions
+    )
 
     bedrock_rag_response = AiDiffBedrockHelper.request_bedrock_rag_chat(params[:inputText], prompt, lesson_num, unit_num, course_names, session_id, @section_contexts)
     #TODO: check for profanity/PII in model response
@@ -165,10 +191,23 @@ class AiDiffController < ApplicationController
     return false if params[:context].nil?
 
     begin
-      if params[:context] == SharedConstants::AI_DIFF_CONTEXT[:GENERAL]
-        params.require([:inputText, :isPreset])
-      elsif params[:context] == SharedConstants::AI_DIFF_CONTEXT[:LESSON] || params[:context] == SharedConstants::AI_DIFF_CONTEXT[:UNIT] || params[:context] == SharedConstants::AI_DIFF_CONTEXT[:COURSE]
-        params.require([:inputText, :contextId, :unitDisplayName, :isPreset])
+      params.require([:inputText, :isPreset, :context])
+
+      context = params[:context]
+      context.require(:type)
+
+      case context[:type]
+      when SharedConstants::AI_DIFF_CONTEXT[:LESSON]
+        params.require(:unitDisplayName)
+        context.require(:lessonId)
+      when SharedConstants::AI_DIFF_CONTEXT[:LEVEL]
+        params.require(:unitDisplayName)
+        context.require(:levelId)
+      when SharedConstants::AI_DIFF_CONTEXT[:UNIT]
+        params.require(:unitDisplayName)
+        context.require(:unitId)
+      when SharedConstants::AI_DIFF_CONTEXT[:COURSE]
+        context.require(:courseId)
       end
     rescue ActionController::ParameterMissing
       return false

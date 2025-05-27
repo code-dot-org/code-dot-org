@@ -2,7 +2,7 @@ Feature: Challenge level shows different dialogs
 
 Background:
   Given I am on "http://studio.code.org/reset_session"
-  Given I am on "http://studio.code.org/s/allthethings/lessons/2/levels/6?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/6?noautoplay=true"
   And I wait for the lab page to fully load
 
 Scenario: Submit passing and perfect solutions
@@ -24,4 +24,4 @@ Scenario: Submit passing and perfect solutions
 Scenario: Press the skip button
   Given I press "challengePrimaryButton"
   When I press "skipButton"
-  Then I wait until I am on "http://studio.code.org/s/allthethings/lessons/2/levels/7"
+  Then I wait until I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/7"

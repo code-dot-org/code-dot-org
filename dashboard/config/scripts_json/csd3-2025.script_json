@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-20 17:51:38 UTC",
+    "serialized_at": "2025-05-22 17:26:36 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -17598,6 +17598,7 @@
       "key": "variables_1",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/csd-u6-variables-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {

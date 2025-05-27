@@ -3,7 +3,11 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# ✅ Lesson Recap: 6.2 Who's Making the Choices?
+# ✅ Lesson Recap: Who's Making the Choices?
+
+#### After this lesson, you can 
+
+* #### Analyze how language affects the choices an AI system makes when generating output
 
 ## Resources
 
