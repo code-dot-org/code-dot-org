@@ -26,7 +26,7 @@ class AichatRequestsController < ApplicationController
     unless chat_completion_has_required_params?
       return render status: :bad_request, json: {}
     end
-    return render status: :forbidden, json: {user_type: current_user.user_type} unless can_access aichat? || can_access_aitutor(params[:aichatContext][:currentLevelId])
+    return render status: :forbidden, json: {user_type: current_user.user_type} unless can_access_aichat? || can_access_aitutor?(params[:aichatContext][:currentLevelId])
 
     return head :too_many_requests if should_throttle_request_count?
 
