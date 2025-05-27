@@ -3695,12 +3695,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@blockly/keyboard-experiment@npm:~0.0.8":
-  version: 0.0.8
-  resolution: "@blockly/keyboard-experiment@npm:0.0.8"
+"@blockly/keyboard-experiment@npm:~0.0.9":
+  version: 0.0.9
+  resolution: "@blockly/keyboard-experiment@npm:0.0.9"
   peerDependencies:
-    blockly: ^12.0.0
-  checksum: 10/c0a5f47b9538115143e003512458099fda1618a2fc10e69e281f3bffccbb6e3a03d13bc9cb870f501bf05999a7ff201ef53ba7801f09af38d310fe15294668fc
+    blockly: ^12.0.1-beta.1
+  checksum: 10/e4395b5e9d85ef6146c056522cd16dc4df79f42bc6368b2089e37ad84699ccc0364fed806f2052b2867b454fdc6d65610fd1544cd6a99859f87d2705930bffe9
   languageName: node
   linkType: hard
 
@@ -10289,7 +10289,7 @@ __metadata:
     "@blockly/field-bitmap": "npm:^6.0.0"
     "@blockly/field-colour": "npm:^6.0.0"
     "@blockly/field-grid-dropdown": "npm:^6.0.0"
-    "@blockly/keyboard-experiment": "npm:~0.0.8"
+    "@blockly/keyboard-experiment": "npm:~0.0.9"
     "@blockly/plugin-cross-tab-copy-paste": "npm:^7.0.0"
     "@blockly/plugin-scroll-options": "npm:^7.0.0"
     "@blockly/theme-dark": "npm:^8.0.0"
@@ -10383,7 +10383,7 @@ __metadata:
     babel-plugin-add-module-exports: "npm:^1.0.4"
     babel-plugin-dynamic-import-node: "npm:^2.3.3"
     babel-plugin-syntax-async-functions: "npm:^6.13.0"
-    blockly: "npm:12.0.0"
+    blockly: "npm:12.0.1-beta.1"
     bootstrap-sass: "npm:^3.4.1"
     browser-process-hrtime: "npm:0.1.2"
     buffer: "npm:^6.0.3"
@@ -10601,12 +10601,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"blockly@npm:12.0.0":
-  version: 12.0.0
-  resolution: "blockly@npm:12.0.0"
+"blockly@npm:12.0.1-beta.1":
+  version: 12.0.1-beta.1
+  resolution: "blockly@npm:12.0.1-beta.1"
   dependencies:
     jsdom: "npm:26.1.0"
-  checksum: 10/1fb82cfc31ded3cddccdfa6b95aaa15dfb1ebc08a1edb70c440c07557d85b635444d5daea01fc27352ed85b9a5db1f93b09bd9086073d76ce62d03279eb6087e
+  checksum: 10/e51601cd39805177a84580ac27b7276a0123899b8cc227427b9f4713ea58604366941030786f14d3367b7e32cb90a3878373b1a3260eeee9b30cbcc309da0402
   languageName: node
   linkType: hard
 
