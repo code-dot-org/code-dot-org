@@ -118,6 +118,13 @@ blocklyTags.forEach(tag => {
     return <BlocklyElement is={tag} {...props} />;
   };
 });
+
+const localizationComponentWrappers = {
+  p: function (props) {
+    return <p {...props} data-isolate />;
+  },
+};
+
 const markdownToReact = unified()
   .use(Processor.getParser())
   // include custom plugins
@@ -142,7 +149,10 @@ const markdownToReact = unified()
     createElement: React.createElement,
     // Use React component wrappers for Blockly XML elements to prevent
     // React from warning us about invalid components.
-    components: blocklyComponentWrappers,
+    components: {
+      ...blocklyComponentWrappers,
+      ...localizationComponentWrappers,
+    },
   });
 
 const markdownToReactExternalLinks = markdownToReact().use(externalLinks, {
