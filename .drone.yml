@@ -86,7 +86,7 @@ steps:
   - name: prepare-ci-tests
     image: codedotorg/code-dot-org:1.15
     depends_on:
-      - restore_cache
+      - restore-cache
     volumes:
       - name: rbenv
         path: /home/ci/.rbenv
