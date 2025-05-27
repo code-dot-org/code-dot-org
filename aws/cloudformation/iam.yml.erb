@@ -944,19 +944,23 @@ roles.each do |name, config| %>
             Condition:
               StringEquals:
                 aws:ResourceTag/environment-type: <%=environment_type%>
-          - Sid: AllowECSAutoScalingPermissions
+          - Sid: AllowECSOperationsOnTaggedResources
             Effect: Allow
             Action:
               - ecs:UpdateService
               - ecs:DescribeServices
+            Resource: '*'
+            Condition:
+              StringEquals:
+                aws:ResourceTag/environment-type: <%=environment_type%>
+          - Sid: AllowCloudWatchForAutoScaling
+            Effect: Allow
+            Action:
               - cloudwatch:DescribeAlarms
               - cloudwatch:GetMetricStatistics
               - cloudwatch:PutMetricAlarm
               - cloudwatch:DeleteAlarms
             Resource: '*'
-            Condition:
-              StringEquals:
-                aws:ResourceTag/environment-type: <%=environment_type%>
           # Add more statements here as we need the Roles provisioned within a marketing sites Stack to have more permissions.
 
   CloudFormationServiceMarketingSites<%=environment_type.capitalize%>Role:
