@@ -4,7 +4,7 @@ import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 export const IconHighlightContentfulComponentDefinition: ComponentDefinition = {
   id: 'iconHighlight',
   name: 'Icon Highlight',
-  category: '03: Basic',
+  category: '04: Layout Building Blocks',
   thumbnailUrl:
     'https://contentful-images.code.org/90t6bu6vlf76/1Hmduomo4RMBD7E3N3kWKc/5ced16462aa02176586777ccdd04f869/component_icon_highlight_thumbnail.png',
   tooltip: {

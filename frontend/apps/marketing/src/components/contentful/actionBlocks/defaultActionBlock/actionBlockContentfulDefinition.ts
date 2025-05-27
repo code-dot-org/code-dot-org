@@ -6,7 +6,7 @@ import {videoRelatedDefinitions} from '@/components/common/definitions';
 export const ActionBlockContentfulComponentDefinition: ComponentDefinition = {
   id: 'verticalActionBlock',
   name: 'Vertical Action Block',
-  category: '03: Basic',
+  category: '04: Layout Building Blocks',
   thumbnailUrl:
     'https://contentful-images.code.org/90t6bu6vlf76/AHRiLWYa6NruVlsM61hbn/8dc5d6ba056e81df347445738fb8cd5c/component_actionblock_thumbnail.png',
   tooltip: {
