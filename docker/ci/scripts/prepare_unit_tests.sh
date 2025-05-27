@@ -30,10 +30,10 @@ skip_seed_all: true
 
 # Unit test settings and secrets
 build_i18n: true
-geocoder_redis_url: 'redis://unit-tests-redis:6379/0/geocoder'
+geocoder_redis_url: 'redis://ci-tests-redis:6379/0/geocoder'
 optimize_rails_assets: false
 optimize_webpack_assets: false
-session_store_server: 'redis://unit-tests-redis:6379/0/session'
+session_store_server: 'redis://ci-tests-redis:6379/0/session'
 aiproxy_api_key: 'notarealkey'
 " >> locals.yml
 echo "Wrote settings and secrets from env vars into locals.yml."

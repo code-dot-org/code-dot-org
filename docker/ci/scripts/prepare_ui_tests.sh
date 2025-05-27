@@ -40,10 +40,10 @@ assets_s3_directory: assets_circle/$CI_BUILD_NUMBER
 files_s3_directory: files_circle/$CI_BUILD_NUMBER
 libraries_s3_directory: libraries_circle/$CI_BUILD_NUMBER
 sources_s3_directory: sources_circle/$CI_BUILD_NUMBER
-session_store_server: 'redis://ui-tests-redis:6379/0/session'
+session_store_server: 'redis://ci-tests-redis:6379/0/session'
 no_https_store: true
 netsim_redis_groups:
-- master: redis://ui-tests-redis:6379
+- master: redis://ci-tests-redis:6379
 saucelabs_authkey: $SAUCE_ACCESS_KEY
 saucelabs_username: $SAUCE_USERNAME
 saucelabs_tunnel_name: cdo-tunnel-$CI_BUILD_NUMBER

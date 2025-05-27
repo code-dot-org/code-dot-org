@@ -8,13 +8,13 @@
 
 kind: pipeline
 type: docker
-name: unit
+name: ci-tests
 
 clone:
   disable: true
 
 services:
-  - name: unit-tests-redis
+  - name: ci-tests-redis
     image: redis
     ports:
       - 6379
@@ -32,7 +32,7 @@ steps:
 
         Running on hostname: $hostname
         
-        To "ssh" into this drone instance, wait until the 'unit-tests' step starts and run:
+        To "ssh" into this drone instance, wait until the 'unit-tests' or 'ui-tests' step starts and run:
         bin/drone/shell $hostname
 
         You can also open a VSCode tunnel into drone to edit live:
@@ -53,6 +53,8 @@ steps:
 
   - name: checkout
     image: bitnami/git
+    depends_on:
+      - get-cached-staging
     commands:
       - git lfs install --skip-repo
       # We should be in a cached git repo, but clone if the cache failed
@@ -72,23 +74,38 @@ steps:
 
   - name: restore-cache
     image: plugins/s3-cache
+    depends_on:
+      - checkout
     settings:
       endpoint: s3://cdo-drone
       debug: true
       pull: true
       restore: true
-      filename: unit-tests-cache-ubuntu-20.tar.gz
+      filename: ci-tests-cache.tar.gz
+
+  - name: prepare-ci-tests
+    image: codedotorg/code-dot-org:1.15
+    depends_on:
+      - restore_cache
+    volumes:
+      - name: rbenv
+        path: /home/ci/.rbenv
+    commands:
+      - sudo chown -R ci:ci .
+      # cache is restored to source directory, so we need to copy it into the right place
+      - cp -rn "$(pwd)/home/ci/.rbenv" /home/ci || true
+      - rm -rf "$(pwd)/home/ci/.rbenv"
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
     # TODO: switch to codedotorg/cdo-ci
     image: codedotorg/code-dot-org:1.15
+    depends_on:
+      - prepare-ci-tests
     pull: always
     volumes:
       - name: rbenv
         path: /home/ci/.rbenv
-      - name: mysql
-        path: /var/lib/mysql
     environment:
       # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/unit_tests.sh
       CLOUDFRONT_KEY_PAIR_ID:
@@ -96,10 +113,6 @@ steps:
       CLOUDFRONT_PRIVATE_KEY:
         from_secret: CLOUDFRONT_PRIVATE_KEY
     commands:
-      - sudo chown -R ci:ci .
-      # cache is restored to source directory, so we need to copy it into the right place
-      - cp -rn "$(pwd)/home/ci/.rbenv" /home/ci || true
-      - rm -rf "$(pwd)/home/ci/.rbenv"
       # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
       - export GIT_COMMIT=$DRONE_COMMIT
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
@@ -109,119 +122,16 @@ steps:
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
       - exit $EXIT_CODE
 
-  - name: update-cache
-    image: plugins/s3-cache
-    volumes:
-      - name: rbenv
-        path: /home/ci/.rbenv
-    settings:
-      endpoint: s3://cdo-drone
-      debug: true
-      pull: true
-      rebuild: true
-      filename: unit-tests-cache-ubuntu-20.tar.gz
-      mount:
-        - /home/ci/.rbenv
-
-volumes:
-  - name: rbenv
-    temp: {}
-  - name: mysql
-    temp: {}
-
-trigger:
-  branch:
-    exclude:
-      - "production"
-      - "test"
-      - "levelbuilder"
-  event:
-    - pull_request
-
----
-kind: pipeline
-type: docker
-name: ui
-
-clone:
-  disable: true
-
-services:
-  - name: ui-tests-redis
-    image: redis
-    ports:
-      - 6379
-
-steps:
-  - name: bin/drone/shell
-    image: curlimages/curl
-    commands:
-      - set +x
-      # If running on EC2, get hostname from ec2 metadata
-      - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
-      - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
-      - |
-        cat <<EOF
-
-        Running on hostname: $hostname
-        
-        To "ssh" into this drone instance, wait until the 'ui-tests' step starts and run:
-        bin/drone/shell $hostname
-
-        You can also open a VSCode tunnel into drone to edit live:
-        bin/drone/vscode $hostname
-        EOF
-
-  # We cache a clone of staging in the `cache-staging-clone` pipeline
-  - name: get-cached-staging
-    image: plugins/s3-cache
-    settings:
-      filename: cache-staging-clone.tar.gz
-      endpoint: s3://cdo-drone
-      restore: true
-      debug: true
-      pull: true
-      mount:
-        - .
-
-  - name: checkout
-    image: bitnami/git
-    commands:
-      - git lfs install --skip-repo
-      # We should be in a cached git repo, but clone if the cache failed
-      - "[ -d .git ] || (echo 'get-cached-staging failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .)"
-      # Checkout our target branch (the PR's branch).
-      - git fetch origin $DRONE_SOURCE_BRANCH
-      - git checkout $DRONE_SOURCE_BRANCH
-      - git pull
-      - git reset --hard $DRONE_COMMIT
-      # Also fetch the target branch (which is staging or staging-next for pull requests.) We need this for determining which tests to run based on changed files.
-      - git remote set-branches --add origin $DRONE_TARGET_BRANCH
-      - git fetch --depth 100 origin $DRONE_TARGET_BRANCH
-      # Merge so we're up-to-date with the target before running tests.
-      - git config user.name "Drone"
-      - git config user.email "drone-fake-user@code.org"
-      - git merge origin/$DRONE_TARGET_BRANCH
-
-  - name: restore-cache
-    image: plugins/s3-cache
-    settings:
-      endpoint: s3://cdo-drone
-      debug: true
-      pull: true
-      restore: true
-      filename: ui-tests-cache-ubuntu-20.tar.gz
-
   - name: ui-tests
     # see: docker/ci/Dockerfile
     # TODO: switch to codedotorg/cdo-ci
     image: codedotorg/code-dot-org:1.15
+    depends_on:
+      - prepare-ci-tests
     pull: always
     volumes:
       - name: rbenv
         path: /home/ci/.rbenv
-      - name: mysql
-        path: /var/lib/mysql
     environment:
       # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/ui_tests.sh
       CLOUDFRONT_KEY_PAIR_ID:
@@ -236,9 +146,6 @@ steps:
         from_secret: SAUCE_ACCESS_KEY
     shm_size: '2gb' # necessary to avoid "invalid session id"/"session deleted because of page crash" errors in Selenium
     commands:
-      - sudo chown -R ci:ci .
-      # cache is restored to source directory, so we need to copy it into the right place
-      - cp -rn "$(pwd)/home/ci/.rbenv" /home/ci || true
       # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
       - export GIT_COMMIT=$DRONE_COMMIT
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
@@ -251,6 +158,9 @@ steps:
 
   - name: update-cache
     image: plugins/s3-cache
+    depends_on:
+      - unit-tests
+      - ui-tests
     volumes:
       - name: rbenv
         path: /home/ci/.rbenv
@@ -259,7 +169,7 @@ steps:
       debug: true
       pull: true
       rebuild: true
-      filename: ui-tests-cache-ubuntu-20.tar.gz
+      filename: ci-tests-cache.tar.gz
       mount:
         - /home/ci/.rbenv
         # Used to avoid re-seeding UI test data unless something changed - see cached_ui_test task in https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/lib/tasks/seed.rake
@@ -268,8 +178,6 @@ steps:
 
 volumes:
   - name: rbenv
-    temp: {}
-  - name: mysql
     temp: {}
 
 trigger:
