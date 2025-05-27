@@ -40,7 +40,7 @@ steps:
         EOF
 
   # We cache a clone of staging in the `cache-staging-clone` pipeline
-  - name: get-cached-staging
+  - name: get-cached-staging-clone
     image: plugins/s3-cache
     settings:
       filename: cache-staging-clone.tar.gz
@@ -70,14 +70,21 @@ steps:
       - git config user.email "drone-fake-user@code.org"
       - git merge origin/$DRONE_TARGET_BRANCH
 
-  - name: restore-cache
+  # We cache staging's rbenv and database in the
+  # `cache-staging-build-artifacts` pipeline.
+  - name: get-cached-staging-misc-build-artifacts
     image: plugins/s3-cache
+    volumes:
+      # Even files cached with absolute paths will be restored into the
+      # workdir; so for this step, we mount the relevant volume there, too.
+      - name: rbenv
+        path: /drone/src/home/ci/.rbenv
     settings:
+      filename: cache-staging-misc-build-artifacts.tar.gz
       endpoint: s3://cdo-drone
+      restore: true
       debug: true
       pull: true
-      restore: true
-      filename: unit-tests-cache-ubuntu-20.tar.gz
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
@@ -87,8 +94,6 @@ steps:
     volumes:
       - name: rbenv
         path: /home/ci/.rbenv
-      - name: mysql
-        path: /var/lib/mysql
     environment:
       # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/unit_tests.sh
       CLOUDFRONT_KEY_PAIR_ID:
@@ -96,10 +101,8 @@ steps:
       CLOUDFRONT_PRIVATE_KEY:
         from_secret: CLOUDFRONT_PRIVATE_KEY
     commands:
+      # Cached data gets restored by the root user, so we need to reassign
       - sudo chown -R ci:ci .
-      # cache is restored to source directory, so we need to copy it into the right place
-      - cp -rn "$(pwd)/home/ci/.rbenv" /home/ci || true
-      - rm -rf "$(pwd)/home/ci/.rbenv"
       # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
       - export GIT_COMMIT=$DRONE_COMMIT
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
@@ -109,24 +112,8 @@ steps:
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
       - exit $EXIT_CODE
 
-  - name: update-cache
-    image: plugins/s3-cache
-    volumes:
-      - name: rbenv
-        path: /home/ci/.rbenv
-    settings:
-      endpoint: s3://cdo-drone
-      debug: true
-      pull: true
-      rebuild: true
-      filename: unit-tests-cache-ubuntu-20.tar.gz
-      mount:
-        - /home/ci/.rbenv
-
 volumes:
   - name: rbenv
-    temp: {}
-  - name: mysql
     temp: {}
 
 trigger:
