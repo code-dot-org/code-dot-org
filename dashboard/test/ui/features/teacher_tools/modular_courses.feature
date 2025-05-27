@@ -63,7 +63,7 @@ Feature: Using Modular Courses
     And I am assigned to course "ui-test-course-2019" with teacher "Teacher_Sally" in a section named "Course 2019"
 
     Given I sign in as "Sally" and go home
-    When I am on "http://studio.code.org/courses/ui-test-course-2017/units/1/lessons/1/levels/1"
+    When I am on "http://studio.code.org/courses/ui-test-course-2017/units/3/lessons/1/levels/1"
     And I click "button[type='submit']" to load a new page
 
     When I sign out

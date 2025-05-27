@@ -8,7 +8,7 @@ import {componentSizeXSToLDefinition} from '@/components/common/definitions';
 export const SimpleListContentfulComponentDefinition: ComponentDefinition = {
   id: 'simpleList',
   name: 'Simple List',
-  category: '03: Basic',
+  category: '03: Content Building Blocks',
   thumbnailUrl:
     'https://contentful-images.code.org/90t6bu6vlf76/bkW5Mm9owpcZWnexKTRCq/0554f4990e4165ff8907f425bb501eee/component_list_thumbnail.png',
   tooltip: {

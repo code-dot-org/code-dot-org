@@ -112,11 +112,19 @@ export default function Error(props: ErrorProps) {
         ERROR {props.statusCode}
       </Overline>
 
-      <Typography visualAppearance={'heading-xxl'} semanticTag={'h1'}>
+      <Typography
+        visualAppearance={'heading-xxl'}
+        semanticTag={'h1'}
+        className={errorStyles.errorHeading}
+      >
         {getHeadingText()}
       </Typography>
 
-      <Typography visualAppearance={'body-two'} semanticTag={'p'}>
+      <Typography
+        visualAppearance={'body-two'}
+        semanticTag={'p'}
+        className={errorStyles.errorBody}
+      >
         {getDescriptionText()}
       </Typography>
 

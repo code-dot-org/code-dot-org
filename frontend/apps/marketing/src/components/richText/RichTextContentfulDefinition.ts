@@ -4,7 +4,7 @@ import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 export const RichTextContentfulComponentDefinition: ComponentDefinition = {
   id: 'richText',
   name: 'Rich Text',
-  category: '02: Typography',
+  category: '03: Content Building Blocks',
   thumbnailUrl:
     'https://contentful-images.code.org/90t6bu6vlf76/2GEuq3yVKIXryX2p3cLjQC/0db314e4e19acd7a90cbdded8b348848/component_rich_text_thumbnail.png',
   tooltip: {

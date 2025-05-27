@@ -4,7 +4,7 @@ import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 export const LabSnapshotContentfulComponentDefinition: ComponentDefinition = {
   id: 'labSnapshot',
   name: 'Lab Snapshot',
-  category: '04: Advanced',
+  category: '07: Curriculum',
   thumbnailUrl:
     'https://contentful-images.code.org/90t6bu6vlf76/19yZ1MYtW4OTGM8Stz3XIz/01ca4f9c1be7ce150bf42275b07182bd/component_lab_snapshot_thumbnail.png',
   tooltip: {

@@ -4,7 +4,7 @@ import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 export const ImageContentfulComponentDefinition: ComponentDefinition = {
   id: 'image',
   name: 'Image',
-  category: '03: Basic',
+  category: '03: Content Building Blocks',
   builtInStyles: ['cfWidth', 'cfHeight'],
   thumbnailUrl:
     'https://contentful-images.code.org/90t6bu6vlf76/2erlhdZVjByJbpMw9UKcWE/ee11e8a21370bbcd3b1b0b702b00d0e5/component_image_thumbnail.png',

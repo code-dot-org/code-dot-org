@@ -4,7 +4,7 @@ import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 export const FAQAccordionContentfulComponentDefinition: ComponentDefinition = {
   id: 'faqAccordion',
   name: 'FAQ Accordion',
-  category: '04: Advanced',
+  category: '06: Dynamic Displays',
   thumbnailUrl:
     'https://contentful-images.code.org/90t6bu6vlf76/2T9oZuMVAKZ0HHTJB80ftF/e81cf4131a6580d1edd86c98e0539bfe/component_faq_thumbnail.png',
   tooltip: {

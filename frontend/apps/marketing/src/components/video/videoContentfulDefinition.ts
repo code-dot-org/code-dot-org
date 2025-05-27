@@ -4,7 +4,7 @@ import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 export const VideoContentfulComponentDefinition: ComponentDefinition = {
   id: 'video',
   name: 'Video',
-  category: '03: Basic',
+  category: '03: Content Building Blocks',
   thumbnailUrl:
     'https://contentful-images.code.org/90t6bu6vlf76/34JWsHE14EP6EoqJyoa3vI/516d08ada4c866195d86bc668fcaf458/component_video_thumbnail.png',
   tooltip: {
