@@ -6,7 +6,7 @@ import {removeMarginBottomDefinition} from '@/components/common/definitions';
 export const LinkContentfulComponentDefinition: ComponentDefinition = {
   id: 'link',
   name: 'Text Link',
-  category: '02: Typography',
+  category: '03: Content Building Blocks',
   thumbnailUrl:
     'https://contentful-images.code.org/90t6bu6vlf76/2CPKrKCB3KxD1n6wG9JTn9/aab22373a39e9cc5305b21c08bba588d/component_link_thumbnail.png',
   tooltip: {
