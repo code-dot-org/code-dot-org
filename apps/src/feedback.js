@@ -73,7 +73,7 @@ module.exports = FeedbackUtils;
  */
 
 /**
- * @typedef {{err, lineNumber: number}} ExecutionError
+ * @typedef {{ err, lineNumber: number}} ExecutionError
  */
 
 /**

@@ -90,7 +90,7 @@ After setup, [configure your editor](#editor-configuration), read about our [cod
 ### For Code.org Staff
 
 Staff should see instructions for requesting AWS account access in our "AWS Account Access" doc linked from "Getting started as a Developer", and follow the setup steps in the "API access (for local development)" section.
-Some functionality will not work on your local site without this, for example, some project-backed level types such as <https://studio.code.org/projects/gamelab>. 
+Some functionality will not work on your local site without this, for example, some project-backed level types such as <https://studio.code.org/projects/gamelab>.
 ### For external contributors
 
 External contributors can supply alternate placeholder values for secrets normally retrieved from AWS Secrets Manager by creating a file named "locals.yml", copying contents from ["locals.yml.default"](locals.yml.default) and uncommenting following configurations to use placeholder values
@@ -98,7 +98,6 @@ External contributors can supply alternate placeholder values for secrets normal
 ```
 slack_bot_token: localoverride
 pardot_private_key: localoverride
-openai_student_learning_api_key: localoverride
 properties_encryption_key: ''
 ```
 
@@ -106,7 +105,7 @@ properties_encryption_key: ''
 
 ### macOS
 
-These steps are for Apple devices running **macOS 14.x**, including those running on [Apple Silicon (M1|M2|M3) ARM architecture CPUs](https://en.wikipedia.org/wiki/Apple_silicon#M_series). 
+These steps are for Apple devices running **macOS 14.x**, including those running on [Apple Silicon (M1|M2|M3) ARM architecture CPUs](https://en.wikipedia.org/wiki/Apple_silicon#M_series).
 
 1. Open a Terminal.
 
@@ -115,7 +114,7 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
     xcode-select --install
     ```
 
-1. Install **[brew](https://brew.sh/)**: 
+1. Install **[brew](https://brew.sh/)**:
    ```
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    ```
@@ -138,7 +137,7 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
        ```
        ==> Successfully started `redis` (label: homebrew.mxcl.redis)
        ```
-   3. macOS will notify you that `redis` has been configured to start automatically upon user login. Confirm this in System Settings --> General --> Login Items --> `redis-server` 
+   3. macOS will notify you that `redis` has been configured to start automatically upon user login. Confirm this in System Settings --> General --> Login Items --> `redis-server`
 1. Setup your local **MySQL database server**
    1. Link MySQL 8
         ```
@@ -166,7 +165,7 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
         ```
 
 1.  Install **Ruby**
-    1. Configure zsh to load rbenv ([other shells](https://github.com/rbenv/rbenv#basic-git-checkoutshells)): 
+    1. Configure zsh to load rbenv ([other shells](https://github.com/rbenv/rbenv#basic-git-checkoutshells)):
         ```
         echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc && source ~/.zshrc
         ```
@@ -213,7 +212,7 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
 1. `sudo apt-get update`
 1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-11-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript build-essential redis-server rbenv chromium-browser parallel python3-pip`
     * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
-    <details> 
+    <details>
       <summary>Troubleshoot: <code>E: Package 'pdftk' has no installation candidate</code>.</summary>
       - If you run into this error, remove `pdftk` from the previous command and run it again. Then try installing `pdftk` another way:
           - Ubuntu 18.04: `sudo snap install pdftk`.
@@ -226,10 +225,10 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
         ```
         if [ -f ~/.bashrc ]; then
           source ~/.bashrc
-        fi     
+        fi
         ```
 1. Install git-lfs >= 3.0
-    1. The default version of git-lfs in Ubuntu 20.04 is 2.9. This does not have support for Git SSH operations. Therefore, you'll want to add packagecloud.io apt repositories to your system to get a newer version of Git LFS (this step is not required if using Ubuntu >= 22.04): 
+    1. The default version of git-lfs in Ubuntu 20.04 is 2.9. This does not have support for Git SSH operations. Therefore, you'll want to add packagecloud.io apt repositories to your system to get a newer version of Git LFS (this step is not required if using Ubuntu >= 22.04):
         `curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash`
     1. `apt-get install git-lfs`
     1. Ensure `git-lfs --version` is >= 3.0. Git LFS < 3.0 only supports HTTPS, not SSH.
@@ -278,7 +277,7 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
     1. `wsl --set-default-version 2`
         1. You may need to [update the WSL 2 Linux kernel](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel)
 1. Make sure virtualization is turned on your BIOS settings.
-1. Install [Ubuntu 20.04](https://www.microsoft.com/store/productId/9NBLGGH4MSV6) or [Ubuntu 22.04.3 LTS](https://apps.microsoft.com/detail/9PN20MSR04DW) 
+1. Install [Ubuntu 20.04](https://www.microsoft.com/store/productId/9NBLGGH4MSV6) or [Ubuntu 22.04.3 LTS](https://apps.microsoft.com/detail/9PN20MSR04DW)
     * If you want to follow the Ubuntu setup exactly, Ubuntu 18.04 is available from the [Microsoft docs](https://docs.microsoft.com/en-us/windows/wsl/install-manual).
 1. From the command line, run `wsl`, or from the Start menu, find and launch 'Ubuntu'. When this runs for the first time, WSL will complete installation in the resulting terminal window.
 1. Optionally configure your **zsh** experience. [instructions](https://itsfoss.com/zsh-ubuntu/)
@@ -293,7 +292,7 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
             1. `wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb`
             1. `sudo apt install ./google-chrome-stable_current_amd64.deb`
             1. Add `export CHROME_BIN=$(which google-chrome)` to your `~/.bashrc` or desired shell configuration file.
-        
+
 1. Follow the [Ubuntu instructions](#ubuntu-2004) to install required tools on the Ubuntu instance, _with the following modifications_:
     * There is an ongoing clock skew issue going on with wsl. This can cause issues with `apt update`, ssl certs, among other things. You can force your clock to sync with `sudo hwclock -s` to fix these issues temporarily. See the [megathread](https://github.com/microsoft/WSL/issues/10006) for more details.
     * Skip exporting `CHROME_BIN` since you already did so above.
@@ -318,7 +317,7 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
   1. From the [EC2 Homepage](https://console.aws.amazon.com/ec2), click on "Launch Instance" and follow the wizard:
      * **Step 1: Choose AMI**: Select Ubuntu Server 20.04
      * **Step 2: Choose instance type**: Choose at least 16 GiB memory (e.g. `t2.xlarge`)
-     * **Step 3: Configure Instance**: 
+     * **Step 3: Configure Instance**:
        * Set IAM Instance Profile to `DeveloperEC2`
        * Set VPC to `vpc-a48462c3`
      * **Step 4: Storage**: Increase storage to 100GiB
@@ -326,7 +325,7 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
   1. Connect to the instance by selecting the instance in the AWS EC2 dashboard and clicking "Connect". Follow the provided instructions in order to connect via ssh or PuTTY. Upon completing this step, you should be able to connect to your instance via a command like `ssh -i <keyname>.pem <public-dns-name>`.
   1. Optionally, update your ssh config so that you can connect using a shorter command:
      * move your private key to `~/.ssh/<keyname>.pem`
-     * add the following lines to ~/.ssh/config:     
+     * add the following lines to ~/.ssh/config:
        ```
        Host yourname-ec2
          Hostname <public-dns-name>
@@ -342,7 +341,7 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
 
 ## Piskel
 ### Local Development Between code-dot-org and forked piskel repo
-If you want the Code.org repo to point to the local version of the Piskel you are working on, your apps package must be linked to a local development copy of the Piskel repository with a complete dev build. 
+If you want the Code.org repo to point to the local version of the Piskel you are working on, your apps package must be linked to a local development copy of the Piskel repository with a complete dev build.
 
 **[You can also find the steps below in apps/Gruntfile.js of the code-dot-org repo](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/Gruntfile.js)**
 
@@ -412,7 +411,7 @@ Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md) fo
 
 **Note:** Most developers won't need to peronsonalize certificates locally, but some will.  Here are notes on getting this working on macOS.
 
-Certificates have been greatly improved with the ability to apply text in many languages.  
+Certificates have been greatly improved with the ability to apply text in many languages.
 
 This is done by using “pango”.  It seems on Linux machines, ImageMagick already contains Pango, but on macOS it doesn’t... at least as installed using brew.
 
