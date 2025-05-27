@@ -421,18 +421,109 @@ export function unlocalizeVariables(workspace: ExtendedWorkspaceSvg) {
   }
 }
 
+export function initializeVariableLocalization(
+  workspace: ExtendedWorkspaceSvg
+) {
+  // Clear known variables
+  Blockly.SourceVariables = {};
+  workspace.sourceGlobalVariables = [];
+
+  const flyout = workspace.getFlyout(true);
+  if (flyout) {
+    // For the flyout, we have to find all of the variables in the input list
+    // for each block in the flyout. Blockly does not give us a convenient way
+    // to do this, but this is modelled after the block methods to pull out
+    // all of the variable ids in the block (Block.getVars())
+    const flyoutWorkspace = flyout.getWorkspace();
+    if (flyoutWorkspace) {
+      for (const block of flyoutWorkspace.getTopBlocks()) {
+        for (const input of block?.inputList || []) {
+          for (const field of input?.fieldRow || []) {
+            if (field?.referencesVariables()) {
+              const varField = field as GoogleBlockly.FieldVariable;
+              const variable = varField?.getVariable();
+              if (variable) {
+                const id = variable.getId();
+                const oldName = variable.name;
+                Blockly.SourceVariables[id] = oldName;
+
+                // And we note them as 'global' variables
+                if (!workspace.sourceGlobalVariables.includes(oldName)) {
+                  workspace.sourceGlobalVariables.push(oldName);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // We keep track of all variables in the workspace
+  for (const variable of workspace.getAllVariables()) {
+    const id = variable.getId();
+    const oldName = variable.name;
+    Blockly.SourceVariables[id] = oldName;
+
+    // And we note them as 'global' variables
+    if (!workspace.sourceGlobalVariables.includes(oldName)) {
+      workspace.sourceGlobalVariables.push(oldName);
+    }
+  }
+
+  // Keep track of the installed global variables, too
+  if (workspace.globalVariables) {
+    workspace.sourceGlobalVariables = workspace.sourceGlobalVariables.concat(
+      workspace.globalVariables
+    );
+  }
+}
+
 /**
  * Goes through workspace variables and localizes them.
  */
 export function localizeVariables(workspace: ExtendedWorkspaceSvg) {
-  // Go through the original variables and translate them.
-  if (workspace.globalVariables) {
-    workspace.sourceGlobalVariables ||= workspace.globalVariables.slice();
+  // Localize the flyout, if there is one
+  const languageTree = workspace.options.languageTree;
+  if (languageTree) {
+    // Update the language tree that is used to represent the flyout blocks
+    for (const [id, oldName] of Object.entries(Blockly.SourceVariables)) {
+      let newName: string = localization.translate(`[variable] ${oldName}`, [
+        'blockly-variable',
+        'blockly-block',
+      ]);
+      if (newName.startsWith('[variable] ')) {
+        newName = newName.substring(11);
+      } else {
+        console.error(
+          'Global variable translation does not have the [variable] tag',
+          oldName,
+          newName
+        );
+        newName = oldName;
+      }
+
+      for (const node of languageTree?.contents || []) {
+        const blockNode = node as GoogleBlockly.utils.toolbox.BlockInfo;
+        const xml = blockNode.blockxml;
+        if (xml !== undefined && typeof xml !== 'string') {
+          const node = xml as HTMLElement;
+          for (const el of Array.from(
+            node.querySelectorAll(`field[id="${id}"]`) || []
+          )) {
+            const fieldElement = el as HTMLElement;
+            fieldElement.textContent = newName;
+          }
+        }
+      }
+    }
   }
 
   for (const variable of workspace.getAllVariables()) {
     Blockly.SourceVariables[variable.getId()] ||= variable.name;
     const oldName = Blockly.SourceVariables[variable.getId()];
+
+    // Make sure we've seen the old name before
     if (workspace.sourceGlobalVariables?.includes(oldName)) {
       const globalVariableIndex =
         workspace.sourceGlobalVariables.indexOf(oldName);
@@ -448,9 +539,13 @@ export function localizeVariables(workspace: ExtendedWorkspaceSvg) {
           oldName,
           newName
         );
+        newName = oldName;
       }
+
       workspace.renameVariableById(variable.getId(), newName);
-      workspace.globalVariables[globalVariableIndex] = newName;
+      if (workspace.globalVariables?.[globalVariableIndex]) {
+        workspace.globalVariables[globalVariableIndex] = newName;
+      }
     }
   }
 }
@@ -501,9 +596,11 @@ export function updateLocale(rtl: boolean) {
     }
     blockDefinition.config.blockText = newBlockText;
   }
+
   const blockDefinitions = Object.values(
     Blockly.SourceCustomBlocks.blockDefinitionsByName
   );
+
   BlockUtils.installCustomBlocks({
     blockly: Blockly,
     blockDefinitions,
@@ -513,8 +610,8 @@ export function updateLocale(rtl: boolean) {
   const mainWorkspace = Blockly.getMainWorkspace();
   if (mainWorkspace) {
     mainWorkspace.RTL = rtl;
-    refreshWorkspace(mainWorkspace as ExtendedWorkspaceSvg);
     localizeVariables(mainWorkspace as ExtendedWorkspaceSvg);
+    refreshWorkspace(mainWorkspace as ExtendedWorkspaceSvg);
   }
 
   // Refresh embedded workspaces (blocks in instructions, documentation, etc)
@@ -524,8 +621,8 @@ export function updateLocale(rtl: boolean) {
     ) as ExtendedWorkspaceSvg;
     if (workspace) {
       workspace.RTL = rtl;
+      localizeVariables(workspace as ExtendedWorkspaceSvg);
       refreshWorkspace(workspace);
-      localizeVariables(mainWorkspace as ExtendedWorkspaceSvg);
     }
   });
 }

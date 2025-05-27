@@ -7,6 +7,7 @@ import {
   processIndividualBlock,
   removeIdsFromBlocks,
 } from '@cdo/apps/blockly/addons/cdoXml';
+import localization from '@cdo/apps/localization';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 import experiments from '@cdo/apps/util/experiments';
 
@@ -641,12 +642,15 @@ export function createBlockLimitMap() {
 export function getSimplifiedStateForFlyout(
   serialization: WorkspaceSerialization
 ) {
+  console.log('getSimplifiedStateForFlyout');
+
   const blocksList = [] as object[];
 
   const {variables, blocks} = serialization;
 
   // Create a map of variable ids and names from the serialization.
   const serializedVariableMap: Map<string, string> = new Map();
+  console.log('BLOCKLY LOCALIZE', variables, serializedVariableMap);
   variables?.forEach(variable => {
     serializedVariableMap.set(variable.id, variable.name);
   });
@@ -833,7 +837,8 @@ export function getCodeFromBlockXmlSource(blockXmlString: string) {
 // This is used in order to merge XML toolbox blocks with the dynamically created
 // blocks in auto-populated categories, such as Behaviors, Functions, and Variables.
 export function getCategoryBlocksJson(category: string) {
-  const levelToolboxBlocks = Blockly.cdoUtils.getLevelToolboxBlocks(category);
+  console.log('BLOCKLY LOCALIZE getCategoryBlocksJson', category);
+  const levelToolboxBlocks = getLevelToolboxBlocks(category);
   if (!levelToolboxBlocks?.querySelector('xml')?.hasChildNodes()) {
     return [];
   }
@@ -843,6 +848,32 @@ export function getCategoryBlocksJson(category: string) {
   const blocksConvertedJson = convertXmlToJson(
     levelToolboxBlocks.documentElement
   );
+
+  // Localize the flyout variables
+  // These are sourced from the XML and are always in the source language
+  console.log('BLOCKLY LOCALIZE blocks converted', blocksConvertedJson);
+  (blocksConvertedJson.variables || []).forEach(variable => {
+    Blockly.SourceVariables[variable.id] ||= variable.name;
+    const oldName = Blockly.SourceVariables[variable.id];
+    let newName: string = localization.translate(`[variable] ${oldName}`, [
+      'blockly-variable',
+      'blockly-block',
+    ]);
+    if (newName.startsWith('[variable] ')) {
+      newName = newName.substring(11);
+    } else {
+      console.log(
+        'Global variable translation does not have the [variable] tag (category block variable)',
+        oldName,
+        newName
+      );
+
+      // Reject the translation
+      newName = oldName;
+    }
+    variable.name = newName;
+  });
+
   const flyoutJson = getSimplifiedStateForFlyout(blocksConvertedJson);
 
   return flyoutJson;

@@ -124,6 +124,7 @@ import {
   strip,
   interpolateMsg,
   isDarkTheme,
+  initializeVariableLocalization,
 } from './utils';
 
 const options = {
@@ -1034,6 +1035,15 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       blocklyWrapper.functionEditor = new FunctionEditor();
       blocklyWrapper.functionEditor.init(options);
     }
+
+    const blocklySvgElement = document.querySelector('.blocklySvg');
+    if (blocklySvgElement) {
+      blocklySvgElement.setAttribute('tabindex', '-1');
+    }
+
+    // Set up variable localization
+    initializeVariableLocalization(workspace);
+
     return workspace;
   };
 
