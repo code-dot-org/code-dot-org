@@ -59,36 +59,25 @@ module Services
       # See: https://github.com/zdennis/activerecord-import/blob/v1.0.8/lib/activerecord-import/adapters/mysql_adapter.rb#L55-L64
       ApplicationRecord.connection.max_allowed_packet if ApplicationRecord.connection.respond_to?(:max_allowed_packet)
 
-      script = create_script_tree
+      script = create_script_tree(without_unit_group: true)
       script.freeze
       json = ScriptSeed.serialize_seeding_json(script)
       counts_before = get_counts
 
       # remove the script from the database, leaving the frozen script object intact.
       script_to_destroy = Unit.find(script.id)
-      script_to_destroy.get_course_version.resources.destroy_all
-      script_to_destroy.get_course_version.vocabularies.destroy_all
-      script_to_destroy.get_course_version.destroy!
       script_to_destroy.destroy!
 
       # This is currently:
       #   3 misc queries - starting and stopping transaction, getting max_allowed_packet
-      #   34 queries - two for each model, + one extra query each for Lessons,
-      #     LessonActivities, ActivitySections, ScriptLevels, LevelsScriptLevels,
-      #     Resources, Vocabulary, Rubric, LearningGoal, and LearningGoalEvidenceLevel.
+      #   31 queries - two for each model, + one extra query each for Lessons,
+      #     LessonActivities, ActivitySections, ScriptLevels, LevelsScriptLevels
       #     These 2-3 queries per model are to (1) delete old entries, (2) import
       #     new/updated entries, and then (3) fetch the result for use by the next
       #     layer down in the hierarchy.
       #   12 queries - ScriptLevel validations related to having an activity_section.
       #     These would be good candidates to eliminate in future optimization.
       #   16 queries, one for each LevelsScriptLevel.
-      #   4 queries, one to remove LessonsResources from each Lesson.
-      #   2 queries, one to remove LessonsVocabularies from each Lesson.
-      #   2 queries, one to remove LessonsProgrammingExpression from each Lesson.
-      #   2 queries, one to remove LessonsStandards from each Lesson.
-      #   2 queries, one to remove LessonsOpportunityStandards from each Lesson.
-      #   1 query to get all the programming environments
-      #   1 query to get all the standards frameworks
       #   1 query to check for a CourseOffering.
       #   1 query to check if units in family have the same course type settings
       # LevelsScriptLevels has queries which scale linearly with the number of rows.
@@ -97,7 +86,7 @@ module Services
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
       # (Dani) This will go back up by one when we turn the validation of families sharing course type back on
-      assert_queries(81) do
+      assert_queries(64) do
         ScriptSeed.seed_from_json(json)
       end
 
@@ -131,8 +120,8 @@ module Services
       # its lessons and everything else they contain. Leave the script and its
       # unit group intact, so that resources can be imported.
       script_to_destroy = Unit.find(script.id)
-      script_to_destroy.unit_group.course_version.resources.destroy_all
-      script_to_destroy.unit_group.course_version.vocabularies.destroy_all
+      script_to_destroy.original_unit_group.course_version.resources.destroy_all
+      script_to_destroy.original_unit_group.course_version.vocabularies.destroy_all
       script_to_destroy.lesson_groups.destroy_all
 
       ScriptSeed.seed_from_json(json)
@@ -1402,6 +1391,7 @@ module Services
 
     def create_script_tree(
       name_prefix: nil,
+      without_unit_group: false,
       # only use one lesson group by default, to make tests run faster.
       num_lesson_groups: 1,
       num_lessons_per_group: 2,
@@ -1431,17 +1421,19 @@ module Services
         is_migrated: true
       )
 
-      # Make sure that family name and version year each conform to the
-      # expected formats.
-      family_name = "#{name_prefix.gsub(/[^a-z\-]/i, '')}-family"
-      version_year = "1999"
+      unless without_unit_group
+        # Make sure that family name and version year each conform to the
+        # expected formats.
+        family_name = "#{name_prefix.gsub(/[^a-z\-]/i, '')}-family"
+        version_year = "1999"
 
-      unit_group = create :single_unit_course, unit: script, family_name: family_name, version_year: version_year
-      CourseOffering.add_course_offering(unit_group)
+        unit_group = create :single_unit_course, unit: script, family_name: family_name, version_year: version_year
+        CourseOffering.add_course_offering(unit_group)
 
-      script.reload
-      course_version = script.get_course_version
-      assert course_version
+        script.reload
+        course_version = script.get_course_version
+        assert course_version
+      end
 
       num_lesson_groups.times do |i|
         create :lesson_group, script: script, key: "#{name_prefix}-lesson-group-#{i + 1}", description: "description #{i + 1}"
