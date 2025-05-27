@@ -26,7 +26,7 @@ class AichatRequestsController < ApplicationController
     unless chat_completion_has_required_params?
       return render status: :bad_request, json: {}
     end
-    return render status: :forbidden, json: {user_type: current_user.user_type} unless can_access_chat_completion?(params[:aichatContext][:currentLevelId])
+    return render status: :forbidden, json: {user_type: current_user.user_type} unless can_access aichat? || can_access_aitutor(params[:aichatContext][:currentLevelId])
 
     return head :too_many_requests if should_throttle_request_count?
 
@@ -88,16 +88,14 @@ class AichatRequestsController < ApplicationController
     render(status: :ok, json: response_body)
   end
 
-  private def can_access_chat_completion?(level_id = nil)
-    # Special case for AiTutor2 requests coming through python lab levels
-    if level_id
-      level = Level.find(level_id)
-      if level&.type == 'Pythonlab'
-        return true
-      end
-    end
+  private def can_access_aitutor?(level_id)
+    # AI Tutor requests only come from python lab levels.
+    return false unless level_id
+    Level.find(level_id).is_a? Pythonlab
+  end
 
-    return AichatSagemakerHelper.can_request_aichat_chat_completion? && current_user.has_aichat_access?
+  private def can_access_aichat?
+    AichatSagemakerHelper.can_request_aichat_chat_completion? && current_user.has_aichat_access?
   end
 
   private def should_throttle_request_count?

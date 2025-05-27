@@ -57,9 +57,9 @@ class AichatRequestsControllerTest < ActionController::TestCase
 
   test 'unauthorized users can access start_chat_completion from python lab levels' do
     sign_in(@unauthorized_student)
-    @level.stubs(:type).returns('Pythonlab')
-    Level.stubs(:find).with(@level.id).returns(@level)
-    post :start_chat_completion, params: @valid_params_chat_completion, as: :json
+    python_lab_level = create :pythonlab
+    params_with_python_level = @valid_params_chat_completion.merge(aichatContext: @default_aichat_context.merge(currentLevelId: python_lab_level.id))
+    post :start_chat_completion, params: params_with_python_level, as: :json
     assert_response :success
   end
 
