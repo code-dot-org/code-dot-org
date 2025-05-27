@@ -3,7 +3,7 @@
 Feature: Global Edition - Farsi MVP - Professional Learning landing page
 
   Background:
-    Given I am on "http://code.org"
+    Given I am on "http://studio.code.org"
     And I use a cookie to mock the DCDO key "global_edition_enabled" as "true"
 
   @eyes
