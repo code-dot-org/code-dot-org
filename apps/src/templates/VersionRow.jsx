@@ -88,9 +88,9 @@ export default class VersionRow extends React.Component {
     } else {
       buttons.push(
         <LinkButton
-          key="disabled-view-button"
+          key={this.props.isSelectedVersion ? "disabled-view-button" : "not-selected-version-button"}
           color="purple"
-          disabled={true}
+          disabled={this.props.isSelectedVersion}
           href={
             location.origin + location.pathname + '?' + this.getQueryParams()
           }
