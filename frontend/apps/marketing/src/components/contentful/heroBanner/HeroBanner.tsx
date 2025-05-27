@@ -4,8 +4,9 @@ import DSCOHeroBanner from '@code-dot-org/component-library/cms/heroBanner';
 import {Theme} from '@code-dot-org/component-library/common/contexts';
 
 import {externalLinkIconProps} from '@/components/common/constants';
-import Video from '@/components/video';
+import Video from '@/components/contentful/video';
 import {LinkEntry} from '@/types/contentful/entries/Link';
+import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
 type HeroBannerProps = {
   /** HeroBanner content mode (theme) value */
@@ -22,8 +23,9 @@ type HeroBannerProps = {
   subHeading?: string;
   /** HeroBanner description */
   description?: string;
-  /** Section Image URL */
-  sectionImage?: string;
+  /** Section Images, Array of Experience entries.
+   * We always render the first image from the array */
+  sectionImages?: ExperienceAsset[];
   /** Section Video URL */
   sectionVideoTitle?: string;
   /** Section Video Youtube ID */
@@ -32,8 +34,9 @@ type HeroBannerProps = {
   sectionVideoFallback?: string;
   /** Whether to show the section video captions */
   sectionVideoShowCaption?: boolean;
-  /** Hero Banner Button Link Entry **/
-  buttonLink?: LinkEntry;
+  /** HeroBanner Button Links, Array of Link Entries.
+   *  We always render the first link from the array. **/
+  buttonLinks?: LinkEntry[];
   /** HeroBanner partner image URL */
   partnerLogo?: string;
   /** HeroBanner partner callout (title) */
@@ -45,7 +48,9 @@ type HeroBannerProps = {
   /** HeroBanner announcement banner text */
   announcementBannerText?: string;
   /** HeroBanner announcement banner link  entry*/
-  announcementBannerLink?: LinkEntry;
+  announcementBannerLink?: LinkEntry[];
+  /** Hide image on small screens */
+  hideImageOnSmallScreen?: boolean;
 };
 
 const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
@@ -53,24 +58,29 @@ const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
   contentMode,
   imageSize,
   announcementBannerIconName,
+  hideImageOnSmallScreen,
   // Content Props
   heading,
   subHeading,
   description,
   announcementBannerText = '',
   announcementBannerLink,
-  sectionImage,
+  sectionImages,
   sectionVideoTitle,
   sectionVideoYouTubeId,
   sectionVideoFallback,
   sectionVideoShowCaption,
-  buttonLink,
+  buttonLinks,
   partnerLogo,
   partnerCallout,
   backgroundImage,
   removeBackground = false,
   className,
 }) => {
+  const firstSectionImage = sectionImages?.[0];
+  const firstButtonLink = buttonLinks?.[0];
+  const firstAnnouncementBannerLink = announcementBannerLink?.[0];
+
   return (
     <DSCOHeroBanner
       data-theme={contentMode}
@@ -86,34 +96,45 @@ const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
                 ? {iconName: announcementBannerIconName}
                 : undefined,
               text: announcementBannerText,
-              link: announcementBannerLink
+              link: firstAnnouncementBannerLink
                 ? {
-                    text: announcementBannerLink.fields.label,
-                    'aria-label': announcementBannerLink.fields.ariaLabel,
-                    href: announcementBannerLink.fields.primaryTarget,
+                    text: firstAnnouncementBannerLink.fields.label,
+                    'aria-label': firstAnnouncementBannerLink.fields.ariaLabel,
+                    href: firstAnnouncementBannerLink.fields.primaryTarget,
                     external:
-                      announcementBannerLink.fields.isThisAnExternalLink,
+                      firstAnnouncementBannerLink.fields.isThisAnExternalLink,
                   }
                 : undefined,
             }
           : undefined
       }
-      imageProps={sectionImage ? {src: sectionImage} : undefined}
-      buttonProps={
-        buttonLink
+      imageProps={
+        firstSectionImage?.fields?.file?.url
           ? {
-              text: buttonLink.fields.label,
-              href: buttonLink.fields.primaryTarget,
-              ariaLabel: buttonLink.fields.ariaLabel,
-              iconRight: buttonLink.fields.isThisAnExternalLink
+              src: firstSectionImage.fields.file.url,
+              altText: firstSectionImage.fields.description || '',
+            }
+          : undefined
+      }
+      hideImageOnSmallScreen={hideImageOnSmallScreen}
+      buttonProps={
+        firstButtonLink
+          ? {
+              text: firstButtonLink.fields.label,
+              href: firstButtonLink.fields.primaryTarget,
+              ariaLabel: firstButtonLink.fields.ariaLabel,
+              iconRight: firstButtonLink.fields.isThisAnExternalLink
                 ? externalLinkIconProps
                 : undefined,
             }
           : undefined
       }
       partner={
-        partnerLogo && partnerCallout
-          ? {title: partnerCallout, logo: {src: partnerLogo}}
+        partnerLogo
+          ? {
+              title: partnerCallout || 'In partnership with:',
+              logo: {src: partnerLogo},
+            }
           : undefined
       }
       backgroundImageUrl={backgroundImage}

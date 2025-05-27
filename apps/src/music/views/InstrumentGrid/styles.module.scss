@@ -1,9 +1,9 @@
 @import '../../../mixins.scss';
 @import 'color.scss';
 
-$colors-simple: #2980b9, #16a085, #2ecc71, #f1c40f, #f39c12, #d35400, #e74c3c;
-$colors-drums: #6c5ce7, #0984e3, #00cec9, #00b894, #a29bfe, #74b9ff, #81ecec,
-  #55efc4;
+$colors-simple: #ee0916, #ff7b00, #ff0, #0f0, #0ff, #1a9cff, #c88eee;
+$colors-simple-darker: #bb0710, #bd5b00, #7a7a00, #008a00, #008080, #0076d1, #9930df;
+$colors-drums: #6c5ce7, #0984e3, #00cec9, #00b894, #a29bfe, #74b9ff, #81ecec, #55efc4;
 $cell-width: 25px;
 $cell-height: 18px;
 $row-gap: 4px;
@@ -16,13 +16,18 @@ $peek-height: 5px;
   rowGap: $row-gap;
   displayRows: $display-rows;
   peekHeight: $peek-height;
+  colorsSimple: $colors-simple;
+  colorsSimpleDarker: $colors-simple-darker;
+  black: $black;
+  white: $white;
+  selectedColor: var(--brand-aqua-50);
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 16px;
+  gap: 10px;
+  padding: 10px;
   user-select: none;
   color-scheme: dark;
   background-color: $neutral_dark;
@@ -49,7 +54,6 @@ $peek-height: 5px;
   flex-direction: column;
   overflow-y: auto;
   padding-right: 16px;
-  padding-left: 4px;
 }
 
 .sequence-editor-drums {
@@ -67,16 +71,17 @@ $peek-height: 5px;
   display: flex;
   gap: 4px;
   align-items: stretch;
+  transition: opacity 0.8s ease, min-height 0.8s ease;
+  overflow: hidden;
 
-  @for $i from 1 through 22 {
-    &:nth-child(#{$i}) {
-      .cell-outer-simple > .innerCell.selected,
-      .cell-outer-simple:hover > .innerCell.selected,
-      .label,
-      .cell-outer:hover > .label {
-        background-color: nth($colors-simple, (22 - $i) % 7 + 1);
-      }
-    }
+  &Showing {
+    opacity: 1;
+    min-height: ($cell-height + $row-gap);
+  }
+
+  &Hidden {
+    opacity: 0;
+    min-height: 0;
   }
 
   @for $i from 1 through 8 {
@@ -137,7 +142,7 @@ $peek-height: 5px;
   .label,
   %label {
     font-size: 12px;
-    width: 30px;
+    width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -164,6 +169,7 @@ $peek-height: 5px;
     background-color: $neutral_light;
     color: $neutral_dark;
     border-radius: 0 2px 2px 0;
+    transition: color 0.8s ease, background-color 0.8s ease, transform 0.2s ease;
 
     &.blackKey {
       background-color: black;

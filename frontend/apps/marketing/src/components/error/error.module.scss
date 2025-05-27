@@ -1,0 +1,31 @@
+.errorContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 6.25rem 2rem;
+  text-align: center;
+}
+
+.sadBeeContainer {
+  display: inline-block;
+  width: 7.125rem;
+  height: auto;
+}
+
+.errorHeading {
+  margin-bottom: 1.5rem;
+}
+
+.errorBody {
+  margin-block: 0 2rem;
+}
+
+.callToActionContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.debugContainer {
+  padding-top: 10px;
+}

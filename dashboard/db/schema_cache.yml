@@ -6332,6 +6332,14 @@ columns:
     default_function: 
     collation: 
     comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: hide_within_course
+    sql_type_metadata: *13
+    'null': true
+    default: '0'
+    default_function: 
+    collation: 
+    comment: 
   scripts_resources:
   - *17
   - &129 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -6671,6 +6679,7 @@ columns:
     comment: 
   - *14
   - *15
+  - *23
   stages:
   - *5
   - *54
@@ -13514,7 +13523,20 @@ indexes:
     type: 
     using: :btree
     comment: 
-  skills: []
+  skills:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: skills
+    name: index_skills_on_key
+    unique: true
+    columns:
+    - key
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
   stages:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: stages
@@ -14427,7 +14449,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20250505164605
+version: 20250512180227
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

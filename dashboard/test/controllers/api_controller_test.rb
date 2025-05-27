@@ -135,7 +135,7 @@ class ApiControllerTest < ActionController::TestCase
     response = JSON.parse(@response.body)
 
     # make sure our response has lesson from allthethings
-    assert /\/s\/#{@allthings.name}\// =~ response[0]['url']
+    assert /\/courses\/#{unit_group.name}\/units\// =~ response[0]['url']
   end
 
   test "should get text_responses for section with specific script" do

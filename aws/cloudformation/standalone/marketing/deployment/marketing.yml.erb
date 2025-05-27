@@ -282,6 +282,10 @@ Resources:
     Properties:
       Port: 80
       Protocol: HTTP
+      HealthCheckPath: /api/health_check
+      # Only HTTP Status 200 is considered healthy
+      Matcher:
+        HttpCode: 200
       TargetGroupAttributes:
         - Key: stickiness.enabled
           Value: "false"
@@ -315,6 +319,20 @@ Resources:
               Value: experience
             - Name: NEXT_PUBLIC_STAGE
               Value: test
+            - Name: NEXT_PUBLIC_INSTRUMENTATION_ENABLED
+              Value: "true"
+            - Name: OTEL_SERVICE_NAME
+              Value: marketing-sites
+            - Name: OTEL_ATTRIBUTE_VALUE_LENGTH_LIMIT
+              Value: "4095"
+            - Name: OTEL_EXPORTER_OTLP_COMPRESSION
+              Value: gzip
+            - Name: OTEL_EXPORTER_OTLP_PROTOCOL
+              Value: http/protobuf
+            - Name: OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE
+              Value: delta
+            - Name: OTEL_EXPORTER_OTLP_ENDPOINT
+              Value: https://otlp.nr-data.net
           Essential: true
           Image:
             Fn::Join:
@@ -343,6 +361,15 @@ Resources:
               ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:STATSIG_CLIENT_KEY::'
             - Name: STATSIG_SERVER_KEY
               ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:STATSIG_SERVER_KEY::'
+            - Name: OTEL_EXPORTER_OTLP_HEADERS
+              ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:OTEL_EXPORTER_OTLP_HEADERS::'
+          LogConfiguration:
+            LogDriver: awslogs
+            Options:
+              awslogs-group: !Sub "/ecs/${AWS::StackName}-FargateServiceTaskDef"
+              awslogs-create-group: true
+              awslogs-region: !Ref 'AWS::Region'
+              awslogs-stream-prefix: marketing-ecs
       Cpu: "1024"
       Memory: "2048"
       ExecutionRoleArn:
@@ -377,6 +404,23 @@ Resources:
             Principal:
               Service: ecs-tasks.amazonaws.com
         Version: "2012-10-17"
+      Policies:
+      - PolicyName: Logging
+        PolicyDocument:
+          Version: "2012-10-17"
+          Statement:
+          - Effect: Allow
+            Action:
+              - logs:CreateLogStream
+              - logs:PutLogEvents
+            Resource:
+              - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/ecs/${AWS::StackName}-FargateServiceTaskDef:log-stream:marketing-ecs/*"
+          - Effect: Allow
+            Action:
+              - logs:CreateLogGroup
+            Resource:
+              - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/ecs/${AWS::StackName}-FargateServiceTaskDef"
+              - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/ecs/${AWS::StackName}-FargateServiceTaskDef:log-stream:*"
 
   FargateServiceTaskDefExecutionRoleDefaultPolicy:
     Type: AWS::IAM::Policy
@@ -402,7 +446,6 @@ Resources:
         MaximumPercent: 200
         MinimumHealthyPercent: 50
       EnableECSManagedTags: false
-      HealthCheckGracePeriodSeconds: 60
       LaunchType: FARGATE
       DesiredCount: 3
       AvailabilityZoneRebalancing: ENABLED
@@ -613,7 +656,7 @@ Resources:
     Type: AWS::CloudFront::CachePolicy
     Properties:
       CachePolicyConfig:
-        Name: MarketingAppCachePolicy
+        Name: !Sub '${AWS::StackName}-MarketingAppCachePolicy'
         DefaultTTL: 86400
         MaxTTL: 31536000
         MinTTL: 1
@@ -641,7 +684,7 @@ Resources:
   ViewerResponseCloudFrontFunction:
     Type: AWS::CloudFront::Function
     Properties:
-      Name: MarketingAppViewerResponseFunction
+      Name: !Sub '${AWS::StackName}-ViewerResponse'
       AutoPublish: true
       FunctionCode: |
         function handler(event) {
@@ -653,7 +696,7 @@ Resources:
           if (response.headers['cache-control'] === undefined) {
               // This value should match the constant `revalidate` in `frontend/apps/marketing/src/app/[brand]/[locale]/[slug]/page.tsx`
               response.headers['cache-control'] = {
-              value: `s-maxage=3600, stale-while-revalidate=31535400`
+              value: `s-maxage=900, stale-while-revalidate=31535400`
             }
           }
 
@@ -794,3 +837,9 @@ Outputs:
       Fn::GetAtt:
         - FargateServiceLB
         - DNSName
+  CloudFrontDistributionId:
+    Value:
+      Ref: CloudFrontDistribution
+    Export:
+      Name:
+        'Fn::Sub': '${AWS::StackName}-CloudFrontDistributionId'

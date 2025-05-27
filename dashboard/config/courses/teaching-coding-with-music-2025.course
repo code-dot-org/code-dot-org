@@ -1,0 +1,47 @@
+{
+  "name": "teaching-coding-with-music-2025",
+  "script_names": [
+    "self-paced-pl-coding-with-music"
+  ],
+  "original_script_names": [
+    "self-paced-pl-coding-with-music"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "self_paced",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "teaching-coding-with-music",
+    "has_numbered_units": true,
+    "version_year": "2025"
+  },
+  "resources": [
+    {
+      "name": "Coding with Music Quick Reference Guides",
+      "url": "https://drive.google.com/file/d/1M_jampRMM1ix6RdH6AWMXVrSa5pbCKdO/view?usp=sharing",
+      "key": "coding_with_music_quick_reference_guides",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "coding_with_music_quick_reference_guides"
+      }
+    },
+    {
+      "name": "Rubber Duck Debugging",
+      "url": "https://drive.google.com/file/d/1DXDs9KIHtOdunuQS9gY1AyP4RXOJznOn/view?usp=sharing",
+      "key": "rubber_duck_debugging",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "rubber_duck_debugging"
+      }
+    }
+  ],
+  "student_resources": [
+
+  ]
+}

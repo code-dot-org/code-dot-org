@@ -6,6 +6,7 @@
 // boundary; a fade-in between levels; a loading spinner when a level takes a
 // while to load; and a sad bee when things go wrong.
 
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import classNames from 'classnames';
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
@@ -60,6 +61,13 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
 
   // Store some server-provided data in redux.
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+  const {theme} = useTheme();
+
+  // We duplicate the theme to Lab2Registry, because modals opened via the header (such as the share modal)
+  // do not have access to the theme context.
+  useEffect(() => {
+    Lab2Registry.getInstance().setTheme(theme);
+  }, [theme]);
 
   // Store the level ID provided by App Options in redux if necessary.
   // This is needed on pages without a header, such as the share view.

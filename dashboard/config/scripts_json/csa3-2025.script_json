@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSA",
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -18,7 +19,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-21 23:55:23 UTC",
+    "serialized_at": "2025-05-23 01:59:55 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -53,15 +55,14 @@
       }
     },
     {
-      "key": "lessonGroup-5",
+      "key": "lessonGroup-4",
       "user_facing": true,
       "position": 3,
       "properties": {
-        "display_name": "Alternate Lessons",
-        "description": "This section contains the one-day version of the Data for Social Good Project."
+        "display_name": "End of Unit Survey"
       },
       "seeding_key": {
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa3-2025"
       }
     },
@@ -81,7 +82,7 @@
   "lessons": [
     {
       "key": "Data Sets",
-      "name": "Data Sets",
+      "name": "Lesson 1: Data Sets",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -99,13 +100,12 @@
     },
     {
       "key": "One-Dimensional (1D) Arrays",
-      "name": "One-Dimensional (1D) Arrays",
+      "name": "Lesson 2: One-Dimensional (1D) Arrays",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/1) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I store multiple related values without creating multiple variables?**\n\nStudents have used variables to store literal values and references to objects. In this lesson, students discover the need for one-dimensional (1D) arrays to store multiple related values. Students explore the syntax and functionality of 1D arrays and learn how to declare and initialize a 1D array using the `new` keyword. They learn how to determine the length of a 1D array, then practice creating 1D arrays using the `new` keyword and accessing and returning their length.",
         "preparation": "* **(Optional)** Print copies of the One-Dimensional (1D) Arrays Guided Notes (one for each student)\n* Print copies of the Unit 3 Guide (one for each student)\n* Preview the *One-Dimensional (1D) Arrays* video",
         "student_overview": "**How can I store multiple related values without creating multiple variables?**\n\nYou have used variables to store literal values and references to objects. In this lesson, you discover the need for one-dimensional (1D) arrays to store multiple related values. You explore the syntax and functionality of 1D arrays and learn how to declare and initialize a 1D array using the `new` keyword. You learn how to determine the length of a 1D array then practice creating 1D arrays using the `new` keyword and assigning and accessing values at specific positions."
@@ -118,13 +118,12 @@
     },
     {
       "key": "Modifying Elements",
-      "name": "Modifying Elements",
+      "name": "Lesson 3: Modifying Elements",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/2) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I easily assign multiple elements to a one-dimensional (1D) array?**\n\nIn this lesson, students explore using initializer lists to create one-dimensional (1D) arrays and learn how to access and modify elements. They discover that the size of a 1D array cannot be changed after it is created and identify similarities and differences between assigning values to a 1D array and to a variable. Students then practice creating a 1D array using initializer lists and modifying the values stored in a 1D array.",
         "preparation": "* **(Optional)** Print copies of the Modifying Elements Guided Notes (one for each student)\n* Preview the *Modifying Values in a 1D Array* video",
         "student_overview": "**How can I easily assign multiple elements to a one-dimensional (1D) array?**\n\nIn this lesson, you explore using initializer lists to create one-dimensional (1D) arrays and learn how to access and modify elements. You discover that the size of a 1D array cannot be changed after it is created and identify similarities and differences between assigning values to a 1D array and to a variable. You then practice creating a 1D array using initializer lists and modifying the values stored in a 1D array."
@@ -137,13 +136,12 @@
     },
     {
       "key": "Traversing 1D Arrays",
-      "name": "Traversing 1D Arrays",
+      "name": "Lesson 4: Traversing 1D Arrays",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.2\n* Topic Questions 6.1\n* Topic Questions 6.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/3) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I easily access all elements in a one-dimensional (1D) array?**\n\nStudents have learned how to declare and initialize one-dimensional (1D) arrays and access and modify elements one at a time. In this lesson, students discover the need for loops to repeatedly access multiple elements and revisit `while` loops. Students learn how to traverse 1D arrays using a `while` loop and discover the cause of the `ArrayIndexOutOfBoundsException` and strategies for debugging this error. Students then practice using `while` loops to traverse one and multiple 1D arrays.",
         "preparation": "* **(Optional)** Print copies of the Traversing 1D Arrays Guided Notes (one for each student)",
         "student_overview": "**How can I easily access all elements in a one-dimensional (1D) array?**\n\nYou have learned how to declare and initialize one-dimensional (1D) arrays and access and modify elements one at a time. In this lesson, you discover the need for loops to repeatedly access multiple elements and revisit `while` loops. You learn how to traverse 1D arrays using a `while` loop and discover the cause of the `ArrayIndexOutOfBoundsException` and strategies for debugging this error. You then practice using `while` loops to traverse one and multiple 1D arrays."
@@ -156,13 +154,12 @@
     },
     {
       "key": "For Loops",
-      "name": "For Loops",
+      "name": "Lesson 5: For Loops",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.4\n* Topic Questions 6.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/4) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I write more efficient code to traverse a 1D array?**\n\nStudents learn about the structure and functionality of a `for` loop and explore how it can be used to traverse a one-dimensional (1D) array. They identify similarities and differences between `while` loops and `for` loops and practice tracing code segments involving a `for` loop to determine the output. Students then practice converting `while` loops to `for` loops and using `for` loops to traverse 1D arrays to access and modify elements and identify ideal scenarios for using each type of loop.",
         "preparation": "* **(Optional)** Print copies of the For Loops Guided Notes (one for each student)\n* Preview the *For Loops* video",
         "student_overview": "**How can I write more efficient code to traverse a 1D array?**\n\nYou learn about the structure and functionality of a `for` loop and explore how it can be used to traverse a one-dimensional (1D) array. You identify similarities and differences between `while` loops and `for` loops and practice tracing code segments involving a `for` loop to determine the output. You then practice converting `while` loops to `for` loops and using `for` loops to traverse 1D arrays to access and modify elements and identify ideal scenarios for using each type of loop."
@@ -175,7 +172,7 @@
     },
     {
       "key": "Text Files",
-      "name": "Text Files",
+      "name": "Lesson 6: Text Files",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -193,13 +190,12 @@
     },
     {
       "key": "Preconditions and Postconditions",
-      "name": "Preconditions and Postconditions",
+      "name": "Lesson 7: Preconditions and Postconditions",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/5) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I perform calculations on the values stored in a 1D array?**\n\nStudents have learned how to create one-dimensional (1D) arrays using the `new` keyword and initializer lists and access and modify one or multiple elements. In this lesson, students read and store values from text files into 1D arrays and consider the preconditions and postconditions an algorithm should satisfy. Students then apply their knowledge of 1D arrays, loops, and returning values from methods to plan and implement algorithms to calculate the sum and average of the values in a 1D array.",
         "preparation": "* **(Optional)** Print copies of the Preconditions and Postconditions Guided Notes (one for each student)\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up OR use [**this web-based version**](https://csabingo.up.railway.app/) to show the terms and definitions\n* Print copies of the Writing Algorithms with Arrays (one for each student)",
         "student_overview": "**How can I perform calculations on the values stored in a 1D array?**\n\nYou have learned how to create one-dimensional (1D) arrays using the `new` keyword and initializer lists, how to access and modify one or multiple elements, and how to read and store values from text files. In this lesson, you practice reading and storing values from text files and consider the preconditions and postconditions an algorithm should satisfy. You then apply your knowledge of 1D arrays, loops, and returning values from methods to plan and implement algorithms to calculate the sum and average of the values in a 1D array."
@@ -212,7 +208,7 @@
     },
     {
       "key": "Ethics in Data",
-      "name": "Ethics in Data",
+      "name": "Lesson 8: Ethics in Data",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -230,13 +226,12 @@
     },
     {
       "key": "(Optional) Polymorphism",
-      "name": "Polymorphism",
+      "name": "Lesson 9: Polymorphism",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 6.1\n* Topic Questions 9.5\n* Topic Questions 9.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/6) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can polymorphism improve the efficiency and flexibility of my program code?**\n\nIn this lesson, students expand on what they know about inheritance to explore how they can create arrays of objects. They learn about polymorphism and discover how it can be implemented to make program code more efficient and flexible. Students recall overriding the `toString()` method and how this approach can be applied to override a superclass method in a subclass. Students then practice using superclass references to create and work with 1D arrays.",
         "preparation": "* **(Optional)** Print copies of the Polymorphism Guided Notes (one for each student)\n* Preview the *Polymorphism* video",
         "student_overview": "**How can polymorphism improve the efficiency and flexibility of my program code?**\n\nIn this lesson, you expand on what you know about inheritance to explore how you can create arrays of objects. You learn about polymorphism and discover how it can be implemented to make program code more efficient and flexible. You recall overriding the `toString()` method and how this approach can be applied to override a superclass method in a subclass. You then practice using superclass references to create and work with 1D arrays."
@@ -249,13 +244,12 @@
     },
     {
       "key": "Enhanced For Loops",
-      "name": "Enhanced For Loops",
+      "name": "Lesson 10: Enhanced For Loops",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 6.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/7) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**When would I want to traverse an array with an enhanced `for` loop?**\n\nStudents have learned to use `while` and `for` loops to traverse a 1D array. In this lesson, students explore the syntax and functionality of an enhanced `for` loop and identify scenarios where this type of loop would be useful. Students practice converting `while` and `for` loops to enhanced `for` loops and implementing algorithms to find the sum and average of the values in a 1D array using an enhanced `for` loop.",
         "preparation": "* **(Optional)** Print copies of the Enhanced for Loops Guided Notes (one for each student)\n* Preview the *Careers in Tech: My Name is Polina* and *Enhanced For Loops* videos",
         "student_overview": "**When would I want to traverse an array with an enhanced `for` loop?**\n\nYou have learned to use `while` and `for` loops to traverse a 1D array. In this lesson, you explore the syntax and functionality of an enhanced `for` loop and identify scenarios where this type of loop would be useful. You practice converting `while` and `for` loops to enhanced `for` loops and implementing algorithms to find the sum and average of the values in a 1D array using an enhanced `for` loop."
@@ -268,13 +262,12 @@
     },
     {
       "key": "Array Algorithms",
-      "name": "Array Algorithms",
+      "name": "Lesson 11: Array Algorithms",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/8) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I use what I know about object-oriented programming and 1D arrays to plan and implement algorithms?**\n\nIn this lesson, students apply what they have learned so far to plan and implement standard algorithms to search or modify a one-dimensional (1D) array. Students discover the need for the `equals()` method when comparing `String` objects for equality and explore the difference between executing a return statement inside of a loop and at the end of a method. Students then work with a partner and use manipulatives to plan and implement an algorithm to determine the minimum or maximum value in a 1D array, determine if at least one element in a 1D array has a particular property, determine if all elements in a 1D array have a particular property, or determine the number of elements in a 1D array meet specific criteria. After implementing their algorithm, students conduct a code review to refine and improve their code.",
         "preparation": "* **(Optional)** Print copies of the Array Algorithms Guided Notes (one for each student)\n* Print copies of the Writing Algorithms with Arrays handout (one for each pair of students)\n* Print copies of the Planning Algorithms Manipulatives (one set for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies",
         "student_overview": "**How can I use what I know about object-oriented programming and 1D arrays to plan and implement algorithms?**\n\nIn this lesson, you apply what you have learned so far to plan and implement standard algorithms to search or modify a one-dimensional (1D) array. You discover the need for the `equals()` method when comparing `String` objects for equality and explore the difference between executing a return statement inside of a loop and at the end of a method. You then work with a partner and use manipulatives to plan and implement an algorithm to determine the minimum or maximum value in a 1D array, determine if at least one element in a 1D array has a particular property, determine if all elements in a 1D array have a particular property, or determine the number of elements in a 1D array meet specific criteria. After implementing your algorithm, you conduct a code review to refine and improve your code."
@@ -287,13 +280,12 @@
     },
     {
       "key": "Finding Duplicates",
-      "name": "Finding Duplicates",
+      "name": "Lesson 12: Finding Duplicates",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.4\n* Topic Questions 6.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/9) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I check if a 1D array contains duplicate elements?**\n\nStudents have learned how to traverse one-dimensional (1D) arrays and implement algorithms to search and modify elements. They expand on their knowledge of loops to explore using nested loops with 1D arrays and practice tracing these to determine the output of code segments using nested loops. Students then work with a partner and use manipulatives to plan and implement an algorithm to find duplicate values in a 1D array.",
         "preparation": "* **(Optional)** Print copies of the Finding Duplicates Guided Notes (one for each student)\n* Print copies of the Finding Duplicates handout (one for each pair of students)\n* Print copies of the Planning Algorithms Manipulatives (one set for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n* Preview the *Nested Loops* video\n* Print copies of the Unit 3 Study Guide (one for each student)",
         "student_overview": "**How can I check if a 1D array contains duplicate elements?**\n\nYou have learned how to traverse one-dimensional (1D) arrays and implement algorithms to search and modify elements. You expand on your knowledge of loops to explore using nested loops with 1D arrays and practice tracing these to determine the output of code segments using nested loops. You then work with a partner and use manipulatives to plan and implement an algorithm to find duplicate values in a 1D array."
@@ -306,7 +298,7 @@
     },
     {
       "key": "Data for Social Good Project",
-      "name": "Data for Social Good Project",
+      "name": "Lesson 13a: Data for Social Good Project",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
@@ -324,12 +316,31 @@
       }
     },
     {
-      "key": "TicketTracker FRQ",
-      "name": "TicketTracker FRQ",
+      "key": "Data for Social Good Project [1-Day Version]",
+      "name": "Lesson 13b: Data for Social Good Project [1-Day Version]",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 14,
+      "properties": {
+        "assessment": true,
+        "overview": "**What questions do I want to answer using data?**\n\nFor this project, students use the skills they have developed throughout this unit to store and analyze data from text file for a topic that they are interested in or that is meaningful to them. Students choose a user scenario and data they want to analyze to identify a solution to address a user's needs. After brainstorming and planning, students develop their programs.",
+        "preparation": "* Review project requirements and rubric\n* Print copies of the Data for Social Good Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-10-data-for-social-good-project/37894) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**What questions do I want to answer using data?**\n\nFor this project, you use the skills you have developed throughout this unit to store and analyze data from text files for a topic that you are interested in or that is meaningful to you. You choose a user scenario and data you want to analyze to identify a solution to address a user's needs. After brainstorming and planning, you develop your program."
+      },
+      "seeding_key": {
+        "lesson.key": "Data for Social Good Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2025"
+      }
+    },
+    {
+      "key": "TicketTracker FRQ",
+      "name": "Lesson 14: TicketTracker FRQ",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
       "properties": {
         "overview": "**How will I use what I know about 1D arrays to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
         "preparation": "* Print copies of the TicketTracker FRQ Graphic Organizer (one for each student)\n* Print copies of the TicketTracker FRQ handout (one for each student)\n* Print copies of the TicketTracker FRQ Scoring Guidelines (one for each student)\n* (Optional) Gather blue, orange, and pink colored pencils or markers for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-11-tickettracker-frq/37895) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
@@ -343,11 +354,11 @@
     },
     {
       "key": "Unit 3 Assessment",
-      "name": "Unit 3 Assessment",
-      "absolute_position": 15,
+      "name": "Lesson 15: Unit 3 Assessment",
+      "absolute_position": 16,
       "lockable": true,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 16,
       "properties": {
         "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
@@ -361,31 +372,27 @@
       }
     },
     {
-      "key": "Data for Social Good Project [1-Day Version]",
-      "name": "Data for Social Good Project [1-Day Version]",
-      "absolute_position": 16,
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 17,
       "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 16,
+      "has_lesson_plan": false,
+      "relative_position": 17,
       "properties": {
-        "assessment": true,
-        "overview": "**What questions do I want to answer using data?**\n\nFor this project, students use the skills they have developed throughout this unit to store and analyze data from text file for a topic that they are interested in or that is meaningful to them. Students choose a user scenario and data they want to analyze to identify a solution to address a user's needs. After brainstorming and planning, students develop their programs.",
-        "preparation": "* Review project requirements and rubric\n* Print copies of the Data for Social Good Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-10-data-for-social-good-project/37894) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**What questions do I want to answer using data?**\n\nFor this project, you use the skills you have developed throughout this unit to store and analyze data from text files for a topic that you are interested in or that is meaningful to you. You choose a user scenario and data you want to analyze to identify a solution to address a user's needs. After brainstorming and planning, you develop your program."
       },
       "seeding_key": {
-        "lesson.key": "Data for Social Good Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa3-2025"
       }
     },
     {
       "key": "Sandbox: Console",
       "name": "Sandbox: Console",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -397,10 +404,10 @@
     {
       "key": "Sandbox: The Neighborhood",
       "name": "Sandbox: The Neighborhood",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -412,21 +419,6 @@
     {
       "key": "Sandbox: The Theater",
       "name": "Sandbox: The Theater",
-      "absolute_position": 19,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 19,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "Sandbox: The Theater",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa3-2025"
-      }
-    },
-    {
-      "key": "Student End of Unit Survey",
-      "name": "Student End of Unit Survey",
       "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": false,
@@ -434,7 +426,7 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Student End of Unit Survey",
+        "lesson.key": "Sandbox: The Theater",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa3-2025"
       }
@@ -1001,6 +993,73 @@
       }
     },
     {
+      "key": "e7ee953f-8d8e-4f38-aaab-3ed4bf66eeef",
+      "position": 5,
+      "properties": {
+        "name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e7ee953f-8d8e-4f38-aaab-3ed4bf66eeef",
+        "lesson.key": "Data for Social Good Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2025"
+      }
+    },
+    {
+      "key": "a59da2a2-1dbb-403c-9131-c6dfb2f2b166",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a59da2a2-1dbb-403c-9131-c6dfb2f2b166",
+        "lesson.key": "Data for Social Good Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2025"
+      }
+    },
+    {
+      "key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1",
+        "lesson.key": "Data for Social Good Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2025"
+      }
+    },
+    {
+      "key": "714b6fd4-a72d-46c2-b5ce-73bb5c2979af",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "714b6fd4-a72d-46c2-b5ce-73bb5c2979af",
+        "lesson.key": "Data for Social Good Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2025"
+      }
+    },
+    {
+      "key": "a02c5ac1-ffbd-45a4-b67b-7013a1e0512a",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a02c5ac1-ffbd-45a4-b67b-7013a1e0512a",
+        "lesson.key": "Data for Social Good Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2025"
+      }
+    },
+    {
       "key": "5285436b-07b1-46a7-bf0d-50fa52b73822",
       "position": 1,
       "properties": {
@@ -1070,44 +1129,14 @@
       }
     },
     {
-      "key": "a59da2a2-1dbb-403c-9131-c6dfb2f2b166",
+      "key": "d7e3a43b-e82b-443e-8a3d-cc9bb4edbc9a",
       "position": 1,
       "properties": {
-        "duration": 10,
-        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "a59da2a2-1dbb-403c-9131-c6dfb2f2b166",
-        "lesson.key": "Data for Social Good Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa3-2025"
-      }
-    },
-    {
-      "key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1",
-      "position": 2,
-      "properties": {
-        "duration": 30,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1",
-        "lesson.key": "Data for Social Good Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa3-2025"
-      }
-    },
-    {
-      "key": "714b6fd4-a72d-46c2-b5ce-73bb5c2979af",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "714b6fd4-a72d-46c2-b5ce-73bb5c2979af",
-        "lesson.key": "Data for Social Good Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_activity.key": "d7e3a43b-e82b-443e-8a3d-cc9bb4edbc9a",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa3-2025"
       }
     },
@@ -1143,18 +1172,6 @@
       "seeding_key": {
         "lesson_activity.key": "d64301e9-795f-425d-b8a6-0f2bf23f71ba",
         "lesson.key": "Sandbox: The Theater",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa3-2025"
-      }
-    },
-    {
-      "key": "541b7a34-1b5d-48a9-a8a5-b1a5f5ed63f3",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "541b7a34-1b5d-48a9-a8a5-b1a5f5ed63f3",
-        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa3-2025"
       }
@@ -4855,27 +4872,8 @@
       }
     },
     {
-      "key": "fa87469f-b583-4bf9-8a21-ef3c8a4333b1",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
-        "name": "End of Unit Survey",
-        "progression_name": "End of Unit Survey",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "We also have a teacher end-of-unit survey to learn more about how the unit went for you and your students. While students take their survey, please complete [**this end of unit survey for teachers**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=3) as well. Your feedback is valued and appreciated!"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "fa87469f-b583-4bf9-8a21-ef3c8a4333b1",
-        "lesson_activity.key": "9b2706b0-eb40-4279-9e02-1b6a07b6a930"
-      }
-    },
-    {
       "key": "462ae7df-9059-43f9-8a39-b7505d71d76e",
-      "position": 12,
+      "position": 11,
       "properties": {
         "description": "---"
       },
@@ -4886,7 +4884,7 @@
     },
     {
       "key": "e4978f26-6261-4a01-82a8-686e0dc5e66c",
-      "position": 13,
+      "position": 12,
       "properties": {
         "description": "**Data for Social Good Project:** Use the rubric in the Data for Social Good Project Planning Guide to assess the projects.",
         "name": "Assessment: Grading the Project"
@@ -4894,6 +4892,192 @@
       "seeding_key": {
         "activity_section.key": "e4978f26-6261-4a01-82a8-686e0dc5e66c",
         "lesson_activity.key": "9b2706b0-eb40-4279-9e02-1b6a07b6a930"
+      }
+    },
+    {
+      "key": "ddb81df1-93ef-42a5-8525-82f0f9f171f0",
+      "position": 1,
+      "properties": {
+        "description": "After completing this project, students should complete the End of Unit Survey linked in the final level. Their responses help us understand their experiences and improve future versions of this unit.",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "ddb81df1-93ef-42a5-8525-82f0f9f171f0",
+        "lesson_activity.key": "e7ee953f-8d8e-4f38-aaab-3ed4bf66eeef"
+      }
+    },
+    {
+      "key": "2642f319-71d4-4887-933e-cb838add0b0a",
+      "position": 1,
+      "properties": {
+        "description": "Many industries rely on data to identify solutions to problems and make decisions. Each user has different needs based on the information they need and the questions they need to answer.",
+        "name": "Users and Data",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2642f319-71d4-4887-933e-cb838add0b0a",
+        "lesson_activity.key": "a59da2a2-1dbb-403c-9131-c6dfb2f2b166"
+      }
+    },
+    {
+      "key": "98ce4513-cb8d-42e0-9d8c-eee610e73301",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the examples of different types of users and their data needs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a data analysis program for a user?*\n\n**Discussion Goal:** Students talk about obtaining data related to a user's needs and reading the data into a program. Students present ideas of questions the user might have and algorithms that can find the answers to these questions and how users would interact with the program to choose the information they need."
+      },
+      "seeding_key": {
+        "activity_section.key": "98ce4513-cb8d-42e0-9d8c-eee610e73301",
+        "lesson_activity.key": "a59da2a2-1dbb-403c-9131-c6dfb2f2b166"
+      }
+    },
+    {
+      "key": "cb3c4111-9435-496b-91ae-bb7b0268158f",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Data for Social Good Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cb3c4111-9435-496b-91ae-bb7b0268158f",
+        "lesson_activity.key": "a59da2a2-1dbb-403c-9131-c6dfb2f2b166"
+      }
+    },
+    {
+      "key": "22c98abd-6dab-4966-a579-dd63b7af0c38",
+      "position": 1,
+      "properties": {
+        "description": "**Do This:** Introduce the user scenarios for the project:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Streaming music customer, avian veterinary student, technology non-profit manager\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Community activist, advertising specialist, choose your own",
+        "duration": "10",
+        "name": "Brainstorming and Planning",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students can also create their own rather than using one of the provided scenarios."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "22c98abd-6dab-4966-a579-dd63b7af0c38",
+        "lesson_activity.key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1"
+      }
+    },
+    {
+      "key": "600c7075-6901-40b9-849c-4d76da1d36e0",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to identify their topic of interest, create UML diagrams for their classes, and identify the questions they want to answer on the Data for Social Good Project Planning Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The classes for each user scenario are created on the corresponding choice level. Have students look at the data sets and files for their selected user stories as they plan their program."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "600c7075-6901-40b9-849c-4d76da1d36e0",
+        "lesson_activity.key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1"
+      }
+    },
+    {
+      "key": "3126c745-8ca9-425e-8c95-2e31da1683dc",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Data for Social Good Project.",
+        "duration": "20",
+        "name": "Development",
+        "progression_name": "Data for Social Good Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "3126c745-8ca9-425e-8c95-2e31da1683dc",
+        "lesson_activity.key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1"
+      }
+    },
+    {
+      "key": "26246201-646e-4ed6-b59a-8a7c5a63e9ba",
+      "position": 4,
+      "properties": {
+        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "26246201-646e-4ed6-b59a-8a7c5a63e9ba",
+        "lesson_activity.key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1"
+      }
+    },
+    {
+      "key": "be974241-de45-4bfd-8010-01d10e9acf6a",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "be974241-de45-4bfd-8010-01d10e9acf6a",
+        "lesson_activity.key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1"
+      }
+    },
+    {
+      "key": "252bee43-ec91-423f-be85-56a7bdfb64fe",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Data for Social Good Project Planning Guide.",
+        "name": "End of Project Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "252bee43-ec91-423f-be85-56a7bdfb64fe",
+        "lesson_activity.key": "714b6fd4-a72d-46c2-b5ce-73bb5c2979af"
+      }
+    },
+    {
+      "key": "0d00c29a-199b-4f0e-840f-9049d03e53ff",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "0d00c29a-199b-4f0e-840f-9049d03e53ff",
+        "lesson_activity.key": "714b6fd4-a72d-46c2-b5ce-73bb5c2979af"
+      }
+    },
+    {
+      "key": "d3bea19d-4297-4752-9d0b-846fdec1e482",
+      "position": 3,
+      "properties": {
+        "description": "**Data for Social Good Project:** Use the rubric in the Data for Social Good Project Planning Guide to assess the projects.",
+        "name": "Assessment: Grading the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "d3bea19d-4297-4752-9d0b-846fdec1e482",
+        "lesson_activity.key": "714b6fd4-a72d-46c2-b5ce-73bb5c2979af"
+      }
+    },
+    {
+      "key": "06ebebda-e4b7-4dac-86c1-6ab45b3f4b68",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.\n",
+        "name": "End of Unit Survey",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "06ebebda-e4b7-4dac-86c1-6ab45b3f4b68",
+        "lesson_activity.key": "a02c5ac1-ffbd-45a4-b67b-7013a1e0512a"
       }
     },
     {
@@ -5067,164 +5251,25 @@
       }
     },
     {
-      "key": "2642f319-71d4-4887-933e-cb838add0b0a",
+      "key": "9bc3c6f4-c3a4-4f49-8741-0f0e68f18299",
       "position": 1,
       "properties": {
-        "description": "Many industries rely on data to identify solutions to problems and make decisions. Each user has different needs based on the information they need and the questions they need to answer.",
-        "name": "Users and Data",
-        "remarks": true
+        "progression_name": "End of Unit Survey"
       },
       "seeding_key": {
-        "activity_section.key": "2642f319-71d4-4887-933e-cb838add0b0a",
-        "lesson_activity.key": "a59da2a2-1dbb-403c-9131-c6dfb2f2b166"
+        "activity_section.key": "9bc3c6f4-c3a4-4f49-8741-0f0e68f18299",
+        "lesson_activity.key": "d7e3a43b-e82b-443e-8a3d-cc9bb4edbc9a"
       }
     },
     {
-      "key": "98ce4513-cb8d-42e0-9d8c-eee610e73301",
+      "key": "5ceec379-6691-4f1f-bbc3-535262d49e4f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the examples of different types of users and their data needs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a data analysis program for a user?*\n\n**Discussion Goal:** Students talk about obtaining data related to a user's needs and reading the data into a program. Students present ideas of questions the user might have and algorithms that can find the answers to these questions and how users would interact with the program to choose the information they need."
+        "progression_name": "End of Unit Survey Page"
       },
       "seeding_key": {
-        "activity_section.key": "98ce4513-cb8d-42e0-9d8c-eee610e73301",
-        "lesson_activity.key": "a59da2a2-1dbb-403c-9131-c6dfb2f2b166"
-      }
-    },
-    {
-      "key": "cb3c4111-9435-496b-91ae-bb7b0268158f",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Data for Social Good Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "cb3c4111-9435-496b-91ae-bb7b0268158f",
-        "lesson_activity.key": "a59da2a2-1dbb-403c-9131-c6dfb2f2b166"
-      }
-    },
-    {
-      "key": "22c98abd-6dab-4966-a579-dd63b7af0c38",
-      "position": 1,
-      "properties": {
-        "description": "**Do This:** Introduce the user scenarios for the project:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Streaming music customer, avian veterinary student, technology non-profit manager\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Community activist, advertising specialist, choose your own",
-        "duration": "10",
-        "name": "Brainstorming and Planning",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Students can also create their own rather than using one of the provided scenarios."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "22c98abd-6dab-4966-a579-dd63b7af0c38",
-        "lesson_activity.key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1"
-      }
-    },
-    {
-      "key": "600c7075-6901-40b9-849c-4d76da1d36e0",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to identify their topic of interest, create UML diagrams for their classes, and identify the questions they want to answer on the Data for Social Good Project Planning Guide.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The classes for each user scenario are created on the corresponding choice level. Have students look at the data sets and files for their selected user stories as they plan their program."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "600c7075-6901-40b9-849c-4d76da1d36e0",
-        "lesson_activity.key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1"
-      }
-    },
-    {
-      "key": "3126c745-8ca9-425e-8c95-2e31da1683dc",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Data for Social Good Project.",
-        "duration": "20",
-        "name": "Development",
-        "progression_name": "Data for Social Good Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "3126c745-8ca9-425e-8c95-2e31da1683dc",
-        "lesson_activity.key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1"
-      }
-    },
-    {
-      "key": "26246201-646e-4ed6-b59a-8a7c5a63e9ba",
-      "position": 4,
-      "properties": {
-        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "26246201-646e-4ed6-b59a-8a7c5a63e9ba",
-        "lesson_activity.key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1"
-      }
-    },
-    {
-      "key": "be974241-de45-4bfd-8010-01d10e9acf6a",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "be974241-de45-4bfd-8010-01d10e9acf6a",
-        "lesson_activity.key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1"
-      }
-    },
-    {
-      "key": "252bee43-ec91-423f-be85-56a7bdfb64fe",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Data for Social Good Project Planning Guide.",
-        "name": "End of Project Reflection",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "252bee43-ec91-423f-be85-56a7bdfb64fe",
-        "lesson_activity.key": "714b6fd4-a72d-46c2-b5ce-73bb5c2979af"
-      }
-    },
-    {
-      "key": "0d00c29a-199b-4f0e-840f-9049d03e53ff",
-      "position": 2,
-      "properties": {
-        "description": "---"
-      },
-      "seeding_key": {
-        "activity_section.key": "0d00c29a-199b-4f0e-840f-9049d03e53ff",
-        "lesson_activity.key": "714b6fd4-a72d-46c2-b5ce-73bb5c2979af"
-      }
-    },
-    {
-      "key": "d3bea19d-4297-4752-9d0b-846fdec1e482",
-      "position": 3,
-      "properties": {
-        "description": "**Data for Social Good Project:** Use the rubric in the Data for Social Good Project Planning Guide to assess the projects.",
-        "name": "Assessment: Grading the Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "d3bea19d-4297-4752-9d0b-846fdec1e482",
-        "lesson_activity.key": "714b6fd4-a72d-46c2-b5ce-73bb5c2979af"
+        "activity_section.key": "5ceec379-6691-4f1f-bbc3-535262d49e4f",
+        "lesson_activity.key": "d7e3a43b-e82b-443e-8a3d-cc9bb4edbc9a"
       }
     },
     {
@@ -5267,17 +5312,6 @@
       "seeding_key": {
         "activity_section.key": "0ef4f8a4-5ba2-4950-9c4a-258c02906cfa",
         "lesson_activity.key": "d64301e9-795f-425d-b8a6-0f2bf23f71ba"
-      }
-    },
-    {
-      "key": "d544b5cc-9abd-4410-8344-de83c4cd11e0",
-      "position": 1,
-      "properties": {
-        "progression_name": "End of Unit Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "d544b5cc-9abd-4410-8344-de83c4cd11e0",
-        "lesson_activity.key": "541b7a34-1b5d-48a9-a8a5-b1a5f5ed63f3"
       }
     }
   ],
@@ -7186,29 +7220,76 @@
       "chapter": 77,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
         "level_keys": [
-          "Student End of Unit Survey_csa3_pilot_oo2025"
+          "student-eou-survey_linked_page-csa3_2025"
         ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa3_pilot_oo2025"
+          "student-eou-survey_linked_page-csa3_2025"
         ],
         "lesson.key": "Data for Social Good Project",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa3-2025",
-        "activity_section.key": "fa87469f-b583-4bf9-8a21-ef3c8a4333b1"
+        "activity_section.key": "ddb81df1-93ef-42a5-8525-82f0f9f171f0"
       },
       "level_keys": [
-        "Student End of Unit Survey_csa3_pilot_oo2025"
+        "student-eou-survey_linked_page-csa3_2025"
       ]
     },
     {
       "chapter": 78,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025"
+        ],
+        "progression": "Data for Social Good Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025"
+        ],
+        "lesson.key": "Data for Social Good Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2025",
+        "activity_section.key": "3126c745-8ca9-425e-8c95-2e31da1683dc"
+      },
+      "level_keys": [
+        "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page-csa3-1b_2025"
+        ],
+        "lesson.key": "Data for Social Good Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2025",
+        "activity_section.key": "06ebebda-e4b7-4dac-86c1-6ab45b3f4b68"
+      },
+      "level_keys": [
+        "student-eou-survey_linked_page-csa3-1b_2025"
+      ]
+    },
+    {
+      "chapter": 80,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7233,32 +7314,32 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 81,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
-          "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025"
+          "student-eou-survey_2025-csa3"
         ],
-        "progression": "Data for Social Good Project"
+        "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025"
+          "student-eou-survey_2025-csa3"
         ],
-        "lesson.key": "Data for Social Good Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa3-2025",
-        "activity_section.key": "3126c745-8ca9-425e-8c95-2e31da1683dc"
+        "activity_section.key": "9bc3c6f4-c3a4-4f49-8741-0f0e68f18299"
       },
       "level_keys": [
-        "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025"
+        "student-eou-survey_2025-csa3"
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 82,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7282,7 +7363,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 83,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7307,7 +7388,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 84,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7332,7 +7413,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 85,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7353,28 +7434,6 @@
       },
       "level_keys": [
         "CSA 2023 Theater Sandbox_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 84,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "End of Unit Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "student-eou-survey_-csa_2025"
-        ],
-        "lesson.key": "Student End of Unit Survey",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa3-2025",
-        "activity_section.key": "d544b5cc-9abd-4410-8344-de83c4cd11e0"
-      },
-      "level_keys": [
-        "student-eou-survey_-csa_2025"
       ]
     }
   ],
@@ -8293,14 +8352,38 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csa3_pilot_oo2025",
+        "level.key": "student-eou-survey_linked_page-csa3_2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa3_pilot_oo2025"
+          "student-eou-survey_linked_page-csa3_2025"
         ],
         "lesson.key": "Data for Social Good Project",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa3-2025",
-        "activity_section.key": "fa87469f-b583-4bf9-8a21-ef3c8a4333b1"
+        "activity_section.key": "ddb81df1-93ef-42a5-8525-82f0f9f171f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025",
+        "script_level.level_keys": [
+          "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025"
+        ],
+        "lesson.key": "Data for Social Good Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2025",
+        "activity_section.key": "3126c745-8ca9-425e-8c95-2e31da1683dc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_linked_page-csa3-1b_2025",
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page-csa3-1b_2025"
+        ],
+        "lesson.key": "Data for Social Good Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2025",
+        "activity_section.key": "06ebebda-e4b7-4dac-86c1-6ab45b3f4b68"
       }
     },
     {
@@ -8317,14 +8400,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025",
+        "level.key": "student-eou-survey_2025-csa3",
         "script_level.level_keys": [
-          "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025"
+          "student-eou-survey_2025-csa3"
         ],
-        "lesson.key": "Data for Social Good Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa3-2025",
-        "activity_section.key": "3126c745-8ca9-425e-8c95-2e31da1683dc"
+        "activity_section.key": "9bc3c6f4-c3a4-4f49-8741-0f0e68f18299"
       }
     },
     {
@@ -8373,18 +8456,6 @@
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa3-2025",
         "activity_section.key": "0ef4f8a4-5ba2-4950-9c4a-258c02906cfa"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "student-eou-survey_-csa_2025",
-        "script_level.level_keys": [
-          "student-eou-survey_-csa_2025"
-        ],
-        "lesson.key": "Student End of Unit Survey",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa3-2025",
-        "activity_section.key": "d544b5cc-9abd-4410-8344-de83c4cd11e0"
       }
     }
   ],

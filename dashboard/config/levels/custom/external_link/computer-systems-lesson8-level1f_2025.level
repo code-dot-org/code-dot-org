@@ -1,12 +1,13 @@
 <ExternalLink>
   <config><![CDATA[{
+  "published": true,
   "game_id": 55,
   "created_at": "2025-03-22T01:24:23.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Scenario F\r\n\r\nThe library wants to compare which genres get the most reader engagement.\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n* Use the library books dataset linked below.\r\n* Complete the flowchart and Madlib template in your Processing Library Data activity guide.",
+    "long_instructions": "## Scenario F\r\n\r\nThe library wants to compare which genres get the most reader engagement.\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n* Use the library books dataset linked below.\r\n* Work with the data to help achieve the goal.\r\n* Complete template in your Processing Library Data activity guide.",
     "link_title": "Library Books Dataset",
     "url": "https://docs.google.com/spreadsheets/d/1ArYkmUcYwbXz-hQkyIon2t87WZbLEOFfUaOFj5jZdE4",
     "display_name": "Scenario F",
@@ -14,7 +15,6 @@
     "thumbnail_url": "https://images.code.org/4c086e6bd44b01a5b9fa59cc6e577817-Pasted Graphic 52.png",
     "name_suffix": "_2025"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-22T01:24:23.689+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson8-level1f-2024\\\"\"],\"cloned_from\":\"computer-systems-lesson8-level1f-2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-22T01:24:23.689+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson8-level1f-2024\\\"\"],\"cloned_from\":\"computer-systems-lesson8-level1f-2024\"},{\"changed_at\":\"2025-05-07 17:54:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </ExternalLink>

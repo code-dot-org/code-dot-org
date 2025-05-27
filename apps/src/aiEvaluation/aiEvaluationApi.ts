@@ -10,6 +10,7 @@ export interface StudentAnswer {
   studentDisplayName: string;
   studentWork: string;
   codeVersion?: string;
+  projectId?: string;
 }
 
 export interface AIResponse {

@@ -7,6 +7,7 @@ import {useParams} from 'react-router-dom';
 import DCDO from '@cdo/apps/dcdo';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
@@ -131,8 +132,9 @@ function SectionProgressV2({
           {i18n.lessonsIn()}
 
           <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
-          {DCDO.get('show-download-progress-csv', false) && (
-            <DownloadProgressCsv />
+          {(DCDO.get('show-download-progress-csv', false) ||
+            experiments.isEnabled(experiments.DOWNLOAD_PROGRESS_CSV)) && (
+            <DownloadProgressCsv isLoading={isLoading} />
           )}
           <MoreOptionsDropdown />
         </Heading6>

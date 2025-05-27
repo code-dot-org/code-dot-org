@@ -27,7 +27,7 @@
         {
           "type": "html",
           "name": "section1_goals",
-          "html": "\n<p><span style='font-size: 12pt;'>The questions in this section aim to understand your goals for enagaging witn the {module} self-paced professional learning module.</span></p>\n"
+          "html": "\n<p><span style='font-size: 12pt;'>The questions in this section aim to understand your goals for enagaging with the {module} self-paced professional learning module.</span></p>\n"
         },
         {
           "type": "library_item",
@@ -46,7 +46,8 @@
           "type": "library_item",
           "library_name": "surveys/pd/self_paced_pl_standards",
           "library_version": 0,
-          "name": "plan_to_teach"
+          "name": "plan_to_teach",
+          "natalia_comment": "INCLUDE ONLY IF MODULE IS ABOUT CS CURRICULUM"
         },
         {
           "type": "library_item",
@@ -93,5 +94,5 @@
       ]
     }
   ],
-  "published": false
+  "published": true
 }

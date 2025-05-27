@@ -11,6 +11,7 @@ import {
 } from 'react';
 
 import {updatePositionedElementStyles} from '@/common/helpers';
+import {ComponentPlacementDirection} from '@/common/types';
 
 import Popover, {PopoverProps} from './Popover';
 
@@ -32,6 +33,8 @@ const WithPopover: React.FunctionComponent<WithPopoverProps> = ({
   popoverProps,
 }) => {
   const [nodePosition, setNodePosition] = useState<HTMLElement | null>(null);
+  const [actualDirection, setActualDirection] =
+    useState<ComponentPlacementDirection>(popoverProps.direction || 'onTop');
   const [popoverStyles, setPopoverStyles] = useState<React.CSSProperties>({});
   const popoverRef = useRef<HTMLDivElement | null>(null);
 
@@ -42,8 +45,9 @@ const WithPopover: React.FunctionComponent<WithPopoverProps> = ({
       updatePositionedElementStyles({
         nodePosition,
         positionedElementRef: popoverRef,
-        direction: popoverProps.direction,
+        direction: actualDirection,
         setPositionedElementStyles: setPopoverStyles,
+        setPositionedElementDirection: setActualDirection,
         tailOffset,
         tailLength,
         isPositionFixed: true,
@@ -138,7 +142,12 @@ const WithPopover: React.FunctionComponent<WithPopoverProps> = ({
     <>
       {clonedChildren}
       {showPopover && (
-        <Popover {...popoverProps} ref={popoverRef} style={popoverStyles} />
+        <Popover
+          {...popoverProps}
+          ref={popoverRef}
+          style={popoverStyles}
+          direction={actualDirection}
+        />
       )}
     </>
   );

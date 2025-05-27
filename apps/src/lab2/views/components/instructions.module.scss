@@ -109,13 +109,12 @@
 
 %text {
   position: relative;
-  white-space: pre-wrap;
+  white-space: normal;
   border-radius: 4px;
   margin-bottom: 10px;
   animation: slidein 0.5s;
   display: flex;
   flex-direction: column;
-  flex: 1;
   min-height: 0;
 }
 
@@ -133,15 +132,25 @@
 
 .textContent {
   height: 100%;
-  padding: 15px 20px 5px 20px;
+  padding: 15px 10px 5px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
 }
 
-.scrollArea {
+%scrolling-content {
   flex: 1;
   overflow-y: auto;
+  min-height: 70px;
+}
+
+.scrollingContentWithTTS {
+  @extend %scrolling-content;
+  margin-bottom: 25px;
+}
+
+.scrollingContentWithoutTTS {
+  @extend %scrolling-content;
   margin-bottom: 10px;
 }
 
@@ -190,7 +199,8 @@
     line-height: 1.2em;
   }
 
-  ol, ul {
+  ol,
+  ul {
     font-size: 14px;
     line-height: 0;
     margin: 0 0 10px 20px;
@@ -213,5 +223,12 @@
 
   details {
     line-height: 1.2;
+    summary {
+      margin: 4px 0;
+    }
   }
+}
+
+.bottomComponent {
+  overflow: hidden;
 }

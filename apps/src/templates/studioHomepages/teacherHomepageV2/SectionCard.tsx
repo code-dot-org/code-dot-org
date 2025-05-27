@@ -8,7 +8,7 @@ import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSection
 import i18n from '@cdo/locale';
 
 import JoinLinkCopyButton from './JoinLink/JoinLinkCopyButton';
-import SectionAvatar from './SectionAvatar';
+import SectionAvatar from './sectionAvatars/SectionAvatar';
 import SectionCardBody from './SectionCardBody';
 import SectionOptionsDropdown from './SectionOptionsDropdown';
 
@@ -56,12 +56,12 @@ export const SectionCard: React.FC<SectionCardProps> = ({
               size="s"
               aria-label={i18n.dragSection()}
               type="tertiary"
-              className={styles.sectionCardDragButton}
             />
           )}
           <SectionAvatar
             color={section.avatar_color || 0}
             emoji={section.avatar_emoji || 0}
+            size={'s'}
           />
           <div className={styles.sectionCardHeaderText}>
             <Heading5 id={`section-card-title-${section.id}`}>

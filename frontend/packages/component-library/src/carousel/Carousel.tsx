@@ -28,7 +28,7 @@ export interface CarouselProps extends HTMLAttributes<HTMLElement> {
   /** Show navigation arrows */
   showNavArrows?: boolean;
   /** Carousel content */
-  slides: {id: string; slide: ReactNode}[];
+  slides: {id?: string; slide?: ReactNode}[];
   /** Carousel custom class name */
   className?: string;
 }
@@ -52,7 +52,7 @@ const Carousel: React.FC<CarouselProps> = ({
   showNavArrows = true,
   slidesPerView = 2,
   slidesPerGroup = 2,
-  allowTouchMove = false,
+  allowTouchMove = true,
   autoHeight = false,
   slides,
   className,
