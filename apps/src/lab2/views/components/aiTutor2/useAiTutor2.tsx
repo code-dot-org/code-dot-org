@@ -64,8 +64,8 @@ export function useAiTutor2(
       );
       if (response) {
         setResponse(response[1].chatMessageText);
-        setLoading(false);
       }
+      setLoading(false);
     },
     [isEnabled, getFullPrompt, type]
   );
