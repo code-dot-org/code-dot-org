@@ -1465,12 +1465,22 @@ class LessonsControllerTest < ActionController::TestCase
       let(:script_id) {unit.id}
 
       context 'valid inputs' do
+        let(:modularity_enabled) {true}
         before do
+          allow(Policies::Courses).to receive(:modularity_enabled?).and_return(modularity_enabled)
           get :show, params: {script_id: script_id, position: lesson_position}
         end
 
-        it 'responds 200' do
-          assert_response :success
+        it 'responds 302' do
+          assert_response :redirect
+        end
+
+        context 'modularity off' do
+          let(:modularity_enabled) {false}
+
+          it 'responds 200' do
+            assert_response :success
+          end
         end
       end
 
