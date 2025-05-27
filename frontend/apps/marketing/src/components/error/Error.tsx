@@ -7,7 +7,7 @@ import Button, {LinkButton} from '@code-dot-org/component-library/button';
 import Image from '@code-dot-org/component-library/image';
 import Typography from '@code-dot-org/component-library/typography';
 
-import Overline from '@/components/overline';
+import Overline from '@/components/contentful/overline';
 import {handleError} from '@/otel/errorHandler';
 import sadBee404 from '@public/images/error/404.png';
 import sadBee500 from '@public/images/error/500.png';

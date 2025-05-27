@@ -5,75 +5,87 @@
  */
 import {defineComponents} from '@contentful/experiences-sdk-react';
 
-import AFEEligibility, {
-  AFEEligibilityContentfulComponentDefinition,
-} from '@/components/afeEligibility';
-import Button, {ButtonContentfulComponentDefinition} from '@/components/button';
-import ActionBlockCarousel, {
-  ActionBlockCarouselContentfulComponentDefinition,
-} from '@/components/carousels/actionBlockCarousel';
-import ImageCarousel, {
-  ImageCarouselContentfulComponentDefinition,
-} from '@/components/carousels/imageCarousel';
-import VideoCarousel, {
-  VideoCarouselContentfulComponentDefinition,
-} from '@/components/carousels/videoCarousel';
 import ActionBlock, {
   ActionBlockContentfulComponentDefinition,
 } from '@/components/contentful/actionBlocks/defaultActionBlock';
 import FullWidthActionBlock, {
   FullWidthActionBlockContentfulComponentDefinition,
 } from '@/components/contentful/actionBlocks/fullWidthActionBlock';
+import AFEEligibility, {
+  AFEEligibilityContentfulComponentDefinition,
+} from '@/components/contentful/afeEligibility';
+import Button, {
+  ButtonContentfulComponentDefinition,
+} from '@/components/contentful/button';
+import ActionBlockCarousel, {
+  ActionBlockCarouselContentfulComponentDefinition,
+} from '@/components/contentful/carousels/actionBlockCarousel';
+import ImageCarousel, {
+  ImageCarouselContentfulComponentDefinition,
+} from '@/components/contentful/carousels/imageCarousel';
+import VideoCarousel, {
+  VideoCarouselContentfulComponentDefinition,
+} from '@/components/contentful/carousels/videoCarousel';
+import Divider, {
+  DividerContentfulComponentDefinition,
+} from '@/components/contentful/divider';
+import EditorialCard, {
+  EditorialCardContentfulComponentDefinition,
+} from '@/components/contentful/editorialCard';
+import FAQAccordion, {
+  FAQAccordionContentfulComponentDefinition,
+} from '@/components/contentful/faqAccordion';
 import Heading, {
   HeadingContentfulComponentDefinition,
 } from '@/components/contentful/heading';
 import HeroBanner, {
   HeroBannerContentfulComponentDefinition,
 } from '@/components/contentful/heroBanner';
+import IconHighlight, {
+  IconHighlightContentfulComponentDefinition,
+} from '@/components/contentful/iconHighlight';
+import Iframe, {
+  IframeContentfulComponentDefinition,
+} from '@/components/contentful/iframe';
+import Image, {
+  ImageContentfulComponentDefinition,
+} from '@/components/contentful/image';
+import Link, {
+  LinkContentfulComponentDefinition,
+} from '@/components/contentful/link';
+import Overline, {
+  OverlineContentfulComponentDefinition,
+} from '@/components/contentful/overline';
+import Paragraph, {
+  ParagraphContentfulComponentDefinition,
+} from '@/components/contentful/paragraph';
+import RichText, {
+  RichTextContentfulComponentDefinition,
+} from '@/components/contentful/richText';
+import Section, {
+  SectionContentfulComponentDefinition,
+} from '@/components/contentful/section';
+import SimpleList, {
+  SimpleListContentfulComponentDefinition,
+} from '@/components/contentful/simpleList';
 import SkinnyBanner, {
   SkinnyBannerContentfulComponentDefinition,
 } from '@/components/contentful/skinnyBanner';
+import CurriculumSnapshot, {
+  CurriculumSnapshotContentfulComponentDefinition,
+} from '@/components/contentful/snapshots/curriculumSnapshot';
+import LabSnapshot, {
+  LabSnapshotContentfulComponentDefinition,
+} from '@/components/contentful/snapshots/labSnapshot';
+import Spacer, {
+  SpacerContentfulComponentDefinition,
+} from '@/components/contentful/spacer';
 import TabGroup, {
   TabGroupContentfulComponentDefinition,
 } from '@/components/contentful/tabGroup';
-import Divider, {
-  DividerContentfulComponentDefinition,
-} from '@/components/divider';
-import EditorialCard, {
-  EditorialCardContentfulComponentDefinition,
-} from '@/components/editorialCard';
-import FAQAccordion, {
-  FAQAccordionContentfulComponentDefinition,
-} from '@/components/faqAccordion';
-import IconHighlight, {
-  IconHighlightContentfulComponentDefinition,
-} from '@/components/iconHighlight';
-import Iframe, {IframeContentfulComponentDefinition} from '@/components/iframe';
-import Image, {ImageContentfulComponentDefinition} from '@/components/image';
-import Link, {LinkContentfulComponentDefinition} from '@/components/link';
-import Overline, {
-  OverlineContentfulComponentDefinition,
-} from '@/components/overline';
-import Paragraph, {
-  ParagraphContentfulComponentDefinition,
-} from '@/components/paragraph';
-import RichText, {
-  RichTextContentfulComponentDefinition,
-} from '@/components/richText';
-import Section, {
-  SectionContentfulComponentDefinition,
-} from '@/components/section';
-import SimpleList, {
-  SimpleListContentfulComponentDefinition,
-} from '@/components/simpleList';
-import CurriculumSnapshot, {
-  CurriculumSnapshotContentfulComponentDefinition,
-} from '@/components/snapshots/curriculumSnapshot';
-import LabSnapshot, {
-  LabSnapshotContentfulComponentDefinition,
-} from '@/components/snapshots/labSnapshot';
-import Spacer, {SpacerContentfulComponentDefinition} from '@/components/spacer';
-import Video, {VideoContentfulComponentDefinition} from '@/components/video';
+import Video, {
+  VideoContentfulComponentDefinition,
+} from '@/components/contentful/video';
 
 defineComponents(
   [

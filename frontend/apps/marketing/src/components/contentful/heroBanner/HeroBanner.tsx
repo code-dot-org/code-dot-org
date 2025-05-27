@@ -4,7 +4,7 @@ import DSCOHeroBanner from '@code-dot-org/component-library/cms/heroBanner';
 import {Theme} from '@code-dot-org/component-library/common/contexts';
 
 import {externalLinkIconProps} from '@/components/common/constants';
-import Video from '@/components/video';
+import Video from '@/components/contentful/video';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
