@@ -288,3 +288,44 @@ ShowHideTailTooltip.args = {
     },
   ],
 };
+
+export const InlineTooltip: StoryFn = () => {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1rem',
+        alignItems: 'flex-start',
+      }}
+    >
+      <p>
+        Here's some text that's not wrapped in a tooltip...{' '}
+        <WithTooltip
+          tooltipProps={{
+            text: 'This tooltip can wrap inline elements',
+            direction: 'onRight',
+            tooltipId: 'inline-tooltip-1',
+            size: 'xs',
+          }}
+        >
+          <span>but this text is wrapped in a tooltip</span>
+        </WithTooltip>
+      </p>
+      <p>
+        Here's some text that precedes a link that has a tooltip{' '}
+        <WithTooltip
+          tooltipProps={{
+            text: 'This tooltip can wrap inline elements',
+            direction: 'onBottom',
+            tooltipId: 'inline-tooltip-2',
+            size: 'xs',
+          }}
+        >
+          <a href="/">link with tooltip</a>
+        </WithTooltip>{' '}
+        and some text after the link
+      </p>
+    </div>
+  );
+};
