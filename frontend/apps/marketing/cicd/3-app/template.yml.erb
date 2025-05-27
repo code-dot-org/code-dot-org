@@ -522,6 +522,9 @@ Resources:
       RoleARN: !GetAtt ECSAutoScalingRole.Arn
       ScalableDimension: ecs:service:DesiredCount
       ServiceNamespace: ecs
+    DependsOn:
+      - ECSAutoScalingRole
+      - FargateService
 
   ECSServiceScalingPolicy:
     Type: AWS::ApplicationAutoScaling::ScalingPolicy
@@ -562,6 +565,9 @@ Resources:
               - Effect: Allow
                 Action:
                   - cloudwatch:DescribeAlarms
+                  - cloudwatch:GetMetricStatistics
+                  - cloudwatch:PutMetricAlarm
+                  - cloudwatch:DeleteAlarms
                   - ecs:DescribeServices
                 Resource: '*'
       PermissionsBoundary:
