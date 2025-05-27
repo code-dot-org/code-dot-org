@@ -109,19 +109,19 @@ steps:
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
       - exit $EXIT_CODE
 
-  - name: update-cache
-    image: plugins/s3-cache
-    volumes:
-      - name: rbenv
-        path: /home/ci/.rbenv
-    settings:
-      endpoint: s3://cdo-drone
-      debug: true
-      pull: true
-      rebuild: true
-      filename: unit-tests-cache-ubuntu-20.tar.gz
-      mount:
-        - /home/ci/.rbenv
+  # - name: update-cache
+  #   image: plugins/s3-cache
+  #   volumes:
+  #     - name: rbenv
+  #       path: /home/ci/.rbenv
+  #   settings:
+  #     endpoint: s3://cdo-drone
+  #     debug: true
+  #     pull: true
+  #     rebuild: true
+  #     filename: unit-tests-cache-ubuntu-20.tar.gz
+  #     mount:
+  #       - /home/ci/.rbenv
 
 volumes:
   - name: rbenv
