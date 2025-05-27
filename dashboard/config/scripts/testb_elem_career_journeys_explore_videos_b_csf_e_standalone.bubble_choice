@@ -7,6 +7,9 @@ level 'test-elem-career-journeys-video-choice4_b_csf-e_standalone'
 level 'test-elem-career-journeys-video-choice1_b_csf-e_standalone'
 level 'test-elem-career-journeys-video-choice2_b_csf-e_standalone'
 level 'test-elem-career-journeys-video-choice3_b_csf-e_standalone'
+level 'test-elem-career-journeys-explore-panels_b'
+level 'test-elem-career-journeys-explore-panels3_b'
+level 'test-elem-career-journeys-explore-panels4_b'
 
 markdown <<MARKDOWN
 

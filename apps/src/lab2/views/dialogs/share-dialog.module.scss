@@ -1,9 +1,8 @@
-@import 'color.scss';
 @import '../common.scss';
 
 %dialog {
-  background-color: $light_gray_950;
-  color: $neutral_light;
+  background-color: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
   border-radius: 5px;
   padding: 20px 32px;
   width: 600px;
@@ -22,7 +21,7 @@
     font-size: 14px;
 
     .heading {
-      color: $neutral_light;
+      color: var(--text-neutral-primary);
       margin-bottom: 0;
     }
 
@@ -41,22 +40,11 @@
       }
     }
 
-    .share {
-      background-color: $white;
-      padding: 20px;
-      border-radius: 10px;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
-
     .block {
-      background-color: $neutral_dark90;
+      background-color: var(--background-neutral-tertiary);
       padding: 20px;
       border-radius: 10px;
-      color: white;
+      color: var(--text-neutral-primary);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -66,9 +54,14 @@
 
       &Afe {
         background-color: #2E4486;
+        color: var(--text-neutral-white-fixed);
 
         img {
           border-radius: 4px;
+        }
+
+        .heading {
+          color: var(--text-neutral-white-fixed);
         }
       }
     }
@@ -82,7 +75,7 @@
       width: 125px;
 
       .QRCodeBorder {
-        background-color: #fff;
+        background-color: var(--background-neutral-white-fixed);
         border-radius: 4px;
         box-sizing: border-box;
         height: 100%;
@@ -98,7 +91,7 @@
       position: absolute;
       top: 0;
       right: 0;
-      color: $neutral_dark30;
+      color: var(--text-neutral-quaternary);
 
       &Icon {
         font-size: 24px;
@@ -112,7 +105,7 @@
 
     .feedbackLink {
       display: flex;
-      color: $neutral_light;
+      color: var(--text-neutral-primary);
       text-decoration: underline;
     }
 

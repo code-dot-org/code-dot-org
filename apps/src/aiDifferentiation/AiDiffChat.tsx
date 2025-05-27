@@ -31,7 +31,7 @@ import {
   ADDITIONAL_HELP_PROMPT,
 } from './AiDiffPredefinedPrompts';
 import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
-import {ChatItem, ChatPrompt} from './types';
+import {ChatItem, ChatPrompt, Context} from './types';
 
 import style from './ai-differentiation.module.scss';
 
@@ -65,8 +65,7 @@ const GENERAL_SUGGESTED_PROMPTS = [
 const AI_DIFF_CHAT_MESSAGE_ENDPOINT = '/ai_diff/chat_completion';
 
 interface AiDiffChatProps {
-  context: string;
-  scriptId?: number;
+  context: Context;
   scriptName?: string;
   unitDisplayName?: string;
   chatResponseCallback?: () => void;
@@ -77,12 +76,11 @@ interface AiDiffChatProps {
 
 const AiDiffChat: React.FC<AiDiffChatProps> = ({
   context,
-  scriptId,
   scriptName,
   unitDisplayName,
   chatResponseCallback = () => {},
   initialChatMessage = INITIAL_CHAT_MESSAGE,
-  suggestedPrompts = context === AiDiffContext.GENERAL
+  suggestedPrompts = context.type === AiDiffContext.GENERAL
     ? GENERAL_SUGGESTED_PROMPTS
     : SUGGESTED_PROMPTS[0],
   disableEndButtons = false,
@@ -90,11 +88,10 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   const reportingData = React.useMemo(() => {
     return {
       chatContext: context,
-      scriptId: scriptId,
-      scriptName: scriptName,
+      scriptName,
       unitName: unitDisplayName,
     };
-  }, [context, scriptId, scriptName, unitDisplayName]);
+  }, [context, scriptName, unitDisplayName]);
 
   const [sessionId, setSessionId] = useState(null);
 
@@ -131,7 +128,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     setSuggestionPage(nextPage);
     setMessageHistory(prevMessages => [
       ...prevMessages,
-      context === AiDiffContext.GENERAL
+      context.type === AiDiffContext.GENERAL
         ? GENERAL_SUGGESTED_PROMPTS
         : SUGGESTED_PROMPTS[nextPage],
     ]);
@@ -165,12 +162,11 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
       }
 
       const body = JSON.stringify({
-        context: context,
+        context,
         inputText: prompt,
-        contextId: scriptId,
-        unitDisplayName: unitDisplayName,
-        sessionId: sessionId,
-        isPreset: isPreset,
+        unitDisplayName,
+        sessionId,
+        isPreset,
       });
       HttpClient.post(`${AI_DIFF_CHAT_MESSAGE_ENDPOINT}`, body, true, {
         'Content-Type': 'application/json',
@@ -205,14 +201,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
           chatResponseCallback();
         });
     },
-    [
-      context,
-      scriptId,
-      unitDisplayName,
-      sessionId,
-      chatResponseCallback,
-      sendChatEvent,
-    ]
+    [context, unitDisplayName, sessionId, chatResponseCallback, sendChatEvent]
   );
 
   // Scroll to bottom of content when a new message comes in

@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import {setLevel, setScriptId} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import AITutorFloatingActionButton from '@cdo/apps/aiTutor/views/AITutorFloatingActionButton';
 import ScriptLevelRedirectDialog from '@cdo/apps/code-studio/components/ScriptLevelRedirectDialog';
@@ -16,7 +17,9 @@ import instructions, {
   setTaRubric,
 } from '@cdo/apps/redux/instructions';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
+import experiments from '@cdo/apps/util/experiments';
 import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 $(document).ready(initPage);
 
@@ -49,6 +52,10 @@ function initPage() {
     );
   }
 
+  const differentiationContext = {
+    type: AiDiffContext.LEVEL,
+  };
+
   if (hasScriptData('script[data-aitutordata]')) {
     const aiTutorData = getScriptData('aitutordata');
     const {
@@ -67,6 +74,8 @@ function initPage() {
       isAssessment,
       progressionType,
     };
+    differentiationContext.levelId = levelId;
+    differentiationContext.unitId = aiTutorData.scriptId;
     getStore().dispatch(setLevel(level));
     getStore().dispatch(setScriptId(aiTutorData.scriptId));
     const aiTutorFabMountPoint = document.getElementById(
@@ -81,6 +90,39 @@ function initPage() {
       );
     }
   }
+
+  // AI Differentiation FAB to be shown only if rubric and tutor FABs are not.
+  const maybeRenderAiDiffButton = () => {
+    const aiTutorFabMountPoint = document.getElementById(
+      'ai-tutor-fab-mount-point'
+    );
+    if (aiTutorFabMountPoint) {
+      return;
+    }
+
+    const aiDiffFabMountPoint = document.getElementById(
+      'ai-differentiation-fab-mount-point'
+    );
+    const reportingData = {
+      unitName: config.script_name,
+      courseName: config.course_name,
+      levelName: config.level_name,
+    };
+
+    if (aiDiffFabMountPoint && experiments.isEnabled('ai-diff-levels')) {
+      ReactDOM.render(
+        <Provider store={getStore()}>
+          <AiDiffFloatingActionButton
+            context={differentiationContext}
+            scriptId={reportingData.unitName}
+            scriptName={reportingData.unitName}
+            unitDisplayName={reportingData.unitName}
+          />
+        </Provider>,
+        aiDiffFabMountPoint
+      );
+    }
+  };
 
   if (hasScriptData('script[data-rubricdata]')) {
     const rubricData = getScriptData('rubricdata');
@@ -124,6 +166,10 @@ function initPage() {
         </Provider>,
         rubricFabMountPoint
       );
+    } else {
+      maybeRenderAiDiffButton();
     }
+  } else {
+    maybeRenderAiDiffButton();
   }
 }

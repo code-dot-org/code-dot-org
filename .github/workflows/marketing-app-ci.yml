@@ -71,6 +71,12 @@ jobs:
           file: frontend/apps/marketing/Dockerfile
           tags: marketing:test
           push: false
+          network: host # This is required for the `turbo` command to work properly in the Dockerfile.
+          # Note TURBO_TOKEN is not a secret because we use a local turbo instance, it is stubbed out for future use only.
+          build-args: |
+            TURBO_TEAM=${{ vars.TURBO_REPO_TEAM }}
+            TURBO_TOKEN=${{ secrets.TURBO_REPO_TOKEN }}
+            TURBO_API=${{ vars.TURBO_REPO_API }}
 
       - name: Prepare Test Environment
         shell: bash

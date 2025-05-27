@@ -1039,7 +1039,7 @@ en:
           description_teacher: ''
           version_title: ''
         self-paced-pl-coding-with-ai:
-          title: self-paced-pl-coding-with-ai
+          title: Teaching Coding with AI
           description_short: ''
           description_student: ''
           description_teacher: ''
@@ -1174,7 +1174,7 @@ en:
           description_teacher: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
           version_title: "'24-'25"
         exploring-gen-ai-2024:
-          title: Exploring Generative AI
+          title: Exploring Generative AI (2024)
           description_short: 'Learn the basics of generative AI: how AI works and how to use generative AI. '
           description_student: Learn How AI Works and How the Use Generative AI
           description_teacher: |-
@@ -1498,14 +1498,14 @@ en:
           version_title: "'25-'26"
         exploring-gen-ai-2025:
           title: Exploring Generative AI (2025)
-          description_short: ''
-          description_student: ''
+          description_short: 'Learn the basics of generative AI: how AI works and how to use generative AI. '
+          description_student: Learn How AI Works and How the Use Generative AI
           description_teacher: |-
             Exploring Generative AI is a two-unit curriculum that explores How AI Works and How to Use Generative AI. Students participate in hands-on activities that unpack the black box of generative AI through student-centered activities and class discussions, anchored by a video series that demystifies generative AI for a broad audience. With a firm foundation, students then learn to customize language models using the new AI Chat lab which provides students with the tools to select language models, apply system prompts, and curate retrieval information to customize their chatbot. Students create chatbots to solve a variety of problems, and interrogate the validity of responses and appropriate use of chatbots in society.
 
             ##Just Starting this Course?
 
-            We recommend completing the free [**Exploring Generative AI Self-Paced Professional Learning Module**](https://studio.code.org/courses/self-paced-exploring-gen-ai-2024). The module is designed to take 2-3 hours to complete. No previous computer science or AI experience is required.
+            We recommend completing the free [**Exploring Generative AI Self-Paced Professional Learning Module**](https://studio.code.org/courses/self-paced-exploring-gen-ai). The module is designed to take 2-3 hours to complete. No previous computer science or AI experience is required.
 
             We also recommend watching the [5-Part Exploring Generative AI Video Series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfJLo5nNGPHo0xCd9Xw5lSs) which introduces key concepts for generative AI. The entire video series takes ~15 minutes to watch.
           version_title: "'25-'26"
@@ -4111,7 +4111,7 @@ en:
 
             ## Finished Teaching This Unit?
             Answer this [**short survey**](https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data%5Bunit_number%5D=unit_1) to let the Code.org curriculum team know how the unit went.
-          version_title: '2024'
+          version_title: "'24-'25"
         design-process-2024:
           title: The Design Process ('24-'25)
           description_short: Learn how to design a program that meets the needs of your users.
@@ -4155,7 +4155,7 @@ en:
           description_teacher: Create images with bits and bytes.
           version_title: unversioned
         customizing-llms-2024:
-          title: Customizing Language Models
+          title: Customizing Language Models (2024)
           description_short: Learn to customize chatbots using AI Chat Lab
           description_student: Learn to customize chatbots using AI Chat Lab
           description_teacher: |-
@@ -4169,7 +4169,7 @@ en:
 
             ## Finished Teaching This Unit?
             Answer this [**short survey**](https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data%5Bunit_number%5D=unit_2) to let the Code.org curriculum team know how the unit went.
-          version_title: '2024'
+          version_title: "'24-'25"
         playlab:
           title: Play Lab
           description_short: Create a story or make a game with Play Lab!
@@ -5683,8 +5683,30 @@ en:
         sandbox-java-pl:
           title: sandbox-java-pl
           description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_student: |-
+            ##Welcome!
+            #### This professional learning module is designed to help you get acquainted with the Java programming language. Whether you're completely new to coding or just new to Java, this module will walk you through the essential building blocks of the language in a clear, approachable way.
+
+            #### You’ll learn not just how to write Java code, but how to think like a programmer—breaking down problems, recognizing patterns, and building logical solutions. Along the way, we’ll include teaching tips, classroom examples, and hands-on practice to help you feel confident bringing coding into your own classroom.
+
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Cybersecurity and Global Impacts unit. However, you can engage with the content in the order that best meets your needs.
+          description_teacher: |-
+            ##Welcome!
+            #### This professional learning module is designed to help you get acquainted with the Java programming language. Whether you're completely new to coding or just new to Java, this module will walk you through the essential building blocks of the language in a clear, approachable way.
+
+            #### You’ll learn not just how to write Java code, but how to think like a programmer—breaking down problems, recognizing patterns, and building logical solutions. Along the way, we’ll include teaching tips, classroom examples, and hands-on practice to help you feel confident bringing coding into your own classroom.
+
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Cybersecurity and Global Impacts unit. However, you can engage with the content in the order that best meets your needs.
           version_title: ''
         teaching-csd-microbit-2025:
           title: Preparing to Teach Creating Apps for Devices (micro:bit)
@@ -5731,25 +5753,35 @@ en:
         customizing-llms-2025:
           title: Customizing Language Models (2025)
           description_short: This unit focuses on practical skills for tailoring AI models using techniques like prompt engineering and retrieval, while promoting transparency through model cards. Students explore how to customize AI chatbots to fit specific use-cases, then create their own chatbot to address a problem they care about.
-          description_student: ''
-          description_teacher: ''
+          description_student: Learn to customize chatbots using AI Chat Lab
+          description_teacher: |-
+            This unit focuses on practical skills for tailoring AI models using techniques like prompt engineering and retrieval, while promoting transparency through model cards. Students explore how to customize AI chatbots to fit specific use-cases, then create their own chatbot to address a problem they care about.
+
+            ##Just Starting this Unit?
+
+            We recommend completing the free [**Exploring Generative AI Self-Paced Professional Learning Module**](https://studio.code.org/courses/self-paced-exploring-gen-ai). The module is designed to take 2-3 hours to complete. No previous computer science or AI experience is required.
+
+            We also recommend watching the [5-Part Exploring Generative AI Video Series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfJLo5nNGPHo0xCd9Xw5lSs) which introduces key concepts for generative AI. The entire video series takes ~15 minutes to watch.
+
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data%5Bunit_number%5D=unit_2) to let the Code.org curriculum team know how the unit went.
           version_title: "'25-'26"
         coding-with-music-2025:
           title: Coding with Music
-          description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_short: This engaging module for grades 3–5 uses music to introduce core computer science concepts—sequencing, functions, and events—through creative lessons featuring real-world professionals from the music and tech industries.
+          description_student: Get ready to explore computer science through the power of music! In this module, you'll learn how coding is a lot like making music—arranging blocks like lyrics, repeating patterns like beats, and making sounds respond to actions. You'll also meet real music and tech pros who use these skills in their jobs every day!
+          description_teacher: A creative, engaging way to introduce core computer science concepts using music as the hook. Each lesson features a real professional from the music or tech world, helping students see themselves in these creative careers. In the first lesson, students learn sequencing by putting code blocks in order—just like a songwriter arranges lyrics and notes. In the second lessons, students explore functions by reusing patterns in their code, like a music producer building beats. And in Lesson 3, students dive into event-driven code, creating sounds that respond to actions—like a sound designer for a game.
           version_title: '2025'
         foundations-gen-ai-2025:
-          title: Foundations of Gen AI
-          description_short: ''
-          description_student: ''
+          title: Foundations of Generative AI
+          description_short: Builds a foundational understanding of text-based generative AI models
+          description_student: Learn how chatbots and large-language models work behind the scenes!
           description_teacher: |-
             This unit aims to build a foundational understanding of text-based generative AI models, focusing on core concepts over technical skills. Students will demystify generative AI models by exploring their internal structures through the familiar lens of input, storage, process, and output. They will gain insights into how these models represent language, the impact of training data on model performance, and the potential for bias. Using this knowledge they will be presented with scenarios throughout the unit where they can help educate individuals who feel powerless or lack agency in how AI is impacting their lives, or respond to individuals who have only read the hype headlines and offer feedback or criticism based on their knowledge of how these AI systems work.
 
             ##Just Starting this Unit?
 
-            We recommend completing the free [**Exploring Generative AI Self-Paced Professional Learning Module**](https://studio.code.org/courses/self-paced-exploring-gen-ai-2024). The module is designed to take 2-3 hours to complete. No previous computer science or AI experience is required.
+            We recommend completing the free [**Exploring Generative AI Self-Paced Professional Learning Module**](https://studio.code.org/courses/self-paced-exploring-gen-ai). The module is designed to take 2-3 hours to complete. No previous computer science or AI experience is required.
 
             We also recommend watching the [5-Part Exploring Generative AI Video Series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfJLo5nNGPHo0xCd9Xw5lSs) which introduces key concepts for generative AI. The entire video series takes ~15 minutes to watch.
 
@@ -5770,9 +5802,9 @@ en:
           version_title: 25 - 26
         career-journeys-for-elementary-2025:
           title: Career Journeys for Elementary
-          description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_short: In this lesson, students explore CS and AI careers and create a personalized project in Sprite Lab that shows how technology is used in a job they care about.
+          description_student: In this lesson, students explore CS and AI careers and create a personalized project in Sprite Lab that shows how technology is used in a job they care about.
+          description_teacher: In this lesson, students explore CS and AI careers and create a personalized project in Sprite Lab that shows how technology is used in a job they care about.
           version_title: '2025'
         python-adlibs:
           title: python-adlibs
@@ -5813,8 +5845,26 @@ en:
         teaching-foundations-ai-programming-2025:
           title: Teaching Foundations of AI Programming
           description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_student: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Foundations of AI Programming unit.
+
+            #### The Foundations of AI Programming unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Foundations of AI Programming unit. However, you can engage with the content in the order that best meets your needs.
+          description_teacher: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Foundations of AI Programming unit.
+
+            #### The Foundations of AI Programming unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Foundations of AI Programming unit. However, you can engage with the content in the order that best meets your needs.
           version_title: ''
         idaho-digital-literacy-2025:
           title: Idaho Digital Literacy
@@ -5870,3 +5920,105 @@ en:
           description_student: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_teacher: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           version_title: 25 - 26
+        teaching-fabric-of-internet-2025:
+          title: Teaching Fabric of the Internet
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: 25 - 26
+        teaching-ai-systems-that-power-it-2025:
+          title: Teaching AI and the Systems that Power It
+          description_short: ''
+          description_student: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s AI and the Systems that Power It unit.
+
+            #### The AI and the Systems that Power It unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the AI and the Systems that Power It unit. However, you can engage with the content in the order that best meets your needs.
+          description_teacher: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s AI and the Systems that Power It unit.
+
+            #### The AI and the Systems that Power It unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the AI and the Systems that Power It unit. However, you can engage with the content in the order that best meets your needs.
+          version_title: ''
+        teaching-cyber-and-global-impacts-2025:
+          title: Teaching Cybersecurity and Global Impacts
+          description_short: ''
+          description_student: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Cybersecurity and Global Impacts unit.
+
+            #### The Cybersecurity and Global Impacts unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Cybersecurity and Global Impacts unit. However, you can engage with the content in the order that best meets your needs.
+          description_teacher: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Cybersecurity and Global Impacts unit.
+
+            #### The Cybersecurity and Global Impacts unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Cybersecurity and Global Impacts unit. However, you can engage with the content in the order that best meets your needs.
+          version_title: ''
+        teaching-insights-from-data-and-ai-2025:
+          title: Teaching Insights from Data and AI
+          description_short: ''
+          description_student: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Insights from Data and AI Unit.
+
+            #### The Insights from Data and AI unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Insights from Data and AI unit. However, you can engage with the content in the order that best meets your needs.
+          description_teacher: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Insights from Data and AI Unit.
+
+            #### The Insights from Data and AI unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Insights from Data and AI unit. However, you can engage with the content in the order that best meets your needs.
+          version_title: ''
+        teaching-problem-solving-with-ai-2025:
+          title: Teaching Problem-Solving with AI
+          description_short: ''
+          description_student: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Insights from the Teaching Problem-Solving with AI Unit.
+
+            #### The Problem-Solving with AI unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Teaching Problem-Solving with AI unit. However, you can engage with the content in the order that best meets your needs.
+          description_teacher: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Insights from the Teaching Problem-Solving with AI Unit.
+
+            #### The Problem-Solving with AI unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Teaching Problem-Solving with AI unit. However, you can engage with the content in the order that best meets your needs.
+          version_title: ''

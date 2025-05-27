@@ -1,4 +1,5 @@
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 export type ChatTextMessage = {
   role: Role;
@@ -13,3 +14,11 @@ export type ChatPrompt = {
 };
 
 export type ChatItem = ChatTextMessage | ChatPrompt[];
+
+export type Context = {
+  type: (typeof AiDiffContext)[keyof typeof AiDiffContext];
+  levelId?: number;
+  lessonId?: number;
+  unitId?: number;
+  courseId?: number;
+};
