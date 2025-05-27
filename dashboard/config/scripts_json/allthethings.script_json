@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-10 23:46:17 UTC",
+    "serialized_at": "2025-05-13 19:29:54 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6844,6 +6844,48 @@
     },
     {
       "chapter": 193,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Python Lab 11"
+        ],
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "465bc905-13b5-487c-8fd6-8043676ee607"
+      },
+      "level_keys": [
+        "Allthethings Python Lab 11"
+      ]
+    },
+    {
+      "chapter": 194,
+      "position": 12,
+      "activity_section_position": 12,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Python Lab 12"
+        ],
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "465bc905-13b5-487c-8fd6-8043676ee607"
+      },
+      "level_keys": [
+        "Allthethings Python Lab 12"
+      ]
+    },
+    {
+      "chapter": 195,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6867,7 +6909,7 @@
       ]
     },
     {
-      "chapter": 194,
+      "chapter": 196,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6891,7 +6933,7 @@
       ]
     },
     {
-      "chapter": 195,
+      "chapter": 197,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6915,7 +6957,7 @@
       ]
     },
     {
-      "chapter": 196,
+      "chapter": 198,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6939,7 +6981,7 @@
       ]
     },
     {
-      "chapter": 197,
+      "chapter": 199,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6963,7 +7005,7 @@
       ]
     },
     {
-      "chapter": 198,
+      "chapter": 200,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6987,7 +7029,7 @@
       ]
     },
     {
-      "chapter": 199,
+      "chapter": 201,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -7011,7 +7053,7 @@
       ]
     },
     {
-      "chapter": 200,
+      "chapter": 202,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -7035,7 +7077,7 @@
       ]
     },
     {
-      "chapter": 201,
+      "chapter": 203,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -7059,7 +7101,7 @@
       ]
     },
     {
-      "chapter": 202,
+      "chapter": 204,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -7083,7 +7125,7 @@
       ]
     },
     {
-      "chapter": 203,
+      "chapter": 205,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7107,11 +7149,14 @@
       ]
     },
     {
-      "chapter": 204,
+      "chapter": 206,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "test-levelgroup-activityguide-2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -8421,19 +8466,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist 1 new",
-        "script_level.level_keys": [
-          "2-3 Artist 1 new",
-          "ramp_video_artistIntro"
-        ],
-        "lesson.key": "Swapped Levels",
-        "lesson_group.key": "",
-        "script.name": "allthethings",
-        "activity_section.key": "40e74dbd-d44a-468e-9e17-a710d06bc3d3"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "ramp_video_artistIntro",
         "script_level.level_keys": [
           "2-3 Artist 1 new",
@@ -8447,7 +8479,20 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist Loops 2",
+        "level.key": "2-3 Artist 1 new",
+        "script_level.level_keys": [
+          "2-3 Artist 1 new",
+          "ramp_video_artistIntro"
+        ],
+        "lesson.key": "Swapped Levels",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "40e74dbd-d44a-468e-9e17-a710d06bc3d3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_video_loopsArtist",
         "script_level.level_keys": [
           "2-3 Artist Loops 2",
           "ramp_video_loopsArtist"
@@ -8460,7 +8505,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "ramp_video_loopsArtist",
+        "level.key": "2-3 Artist Loops 2",
         "script_level.level_keys": [
           "2-3 Artist Loops 2",
           "ramp_video_loopsArtist"
@@ -9552,6 +9597,30 @@
         "level.key": "Allthethings Python Lab 10",
         "script_level.level_keys": [
           "Allthethings Python Lab 10"
+        ],
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "465bc905-13b5-487c-8fd6-8043676ee607"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Python Lab 11",
+        "script_level.level_keys": [
+          "Allthethings Python Lab 11"
+        ],
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "465bc905-13b5-487c-8fd6-8043676ee607"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Python Lab 12",
+        "script_level.level_keys": [
+          "Allthethings Python Lab 12"
         ],
         "lesson.key": "lesson-53",
         "lesson_group.key": "",

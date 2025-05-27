@@ -5,22 +5,37 @@
  */
 import {defineComponents} from '@contentful/experiences-sdk-react';
 
-import ActionBlock, {
-  ActionBlockContentfulComponentDefinition,
-} from '@/components/actionBlocks/defaultActionBlock';
-import FullWidthActionBlock, {
-  FullWidthActionBlockContentfulComponentDefinition,
-} from '@/components/actionBlocks/fullWidthActionBlock';
+import AFEEligibility, {
+  AFEEligibilityContentfulComponentDefinition,
+} from '@/components/afeEligibility';
 import Button, {ButtonContentfulComponentDefinition} from '@/components/button';
 import ActionBlockCarousel, {
   ActionBlockCarouselContentfulComponentDefinition,
 } from '@/components/carousels/actionBlockCarousel';
+import ImageCarousel, {
+  ImageCarouselContentfulComponentDefinition,
+} from '@/components/carousels/imageCarousel';
 import VideoCarousel, {
   VideoCarouselContentfulComponentDefinition,
 } from '@/components/carousels/videoCarousel';
+import ActionBlock, {
+  ActionBlockContentfulComponentDefinition,
+} from '@/components/contentful/actionBlocks/defaultActionBlock';
+import FullWidthActionBlock, {
+  FullWidthActionBlockContentfulComponentDefinition,
+} from '@/components/contentful/actionBlocks/fullWidthActionBlock';
+import Heading, {
+  HeadingContentfulComponentDefinition,
+} from '@/components/contentful/heading';
 import HeroBanner, {
   HeroBannerContentfulComponentDefinition,
 } from '@/components/contentful/heroBanner';
+import SkinnyBanner, {
+  SkinnyBannerContentfulComponentDefinition,
+} from '@/components/contentful/skinnyBanner';
+import TabGroup, {
+  TabGroupContentfulComponentDefinition,
+} from '@/components/contentful/tabGroup';
 import Divider, {
   DividerContentfulComponentDefinition,
 } from '@/components/divider';
@@ -30,9 +45,6 @@ import EditorialCard, {
 import FAQAccordion, {
   FAQAccordionContentfulComponentDefinition,
 } from '@/components/faqAccordion';
-import Heading, {
-  HeadingContentfulComponentDefinition,
-} from '@/components/heading';
 import IconHighlight, {
   IconHighlightContentfulComponentDefinition,
 } from '@/components/iconHighlight';
@@ -61,9 +73,6 @@ import LabSnapshot, {
   LabSnapshotContentfulComponentDefinition,
 } from '@/components/snapshots/labSnapshot';
 import Spacer, {SpacerContentfulComponentDefinition} from '@/components/spacer';
-import TabGroup, {
-  TabGroupContentfulComponentDefinition,
-} from '@/components/tabGroup';
 import Video, {VideoContentfulComponentDefinition} from '@/components/video';
 
 defineComponents(
@@ -78,6 +87,10 @@ defineComponents(
     {
       component: ActionBlockCarousel,
       definition: ActionBlockCarouselContentfulComponentDefinition,
+    },
+    {
+      component: AFEEligibility,
+      definition: AFEEligibilityContentfulComponentDefinition,
     },
     {component: Button, definition: ButtonContentfulComponentDefinition},
     {
@@ -133,6 +146,10 @@ defineComponents(
       definition: ImageContentfulComponentDefinition,
     },
     {
+      component: ImageCarousel,
+      definition: ImageCarouselContentfulComponentDefinition,
+    },
+    {
       component: LabSnapshot,
       definition: LabSnapshotContentfulComponentDefinition,
     },
@@ -159,6 +176,13 @@ defineComponents(
     {
       component: SimpleList,
       definition: SimpleListContentfulComponentDefinition,
+    },
+    {
+      component: SkinnyBanner,
+      definition: SkinnyBannerContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
     },
     {
       component: Spacer,

@@ -7,7 +7,6 @@
   height: 100%;
   overflow: hidden;
   margin: 0;
-  border-radius: variables.$regular-border-radius;
 }
 
 // Image common styles
@@ -28,4 +27,9 @@
 // Image box shadow styles
 .figure-hasBoxShadow {
   box-shadow: 0.5rem 0.5rem 0 0 var(--background-brand-teal-light);
+}
+
+// Image rounded corners styles
+.figure-hasRoundedCorners {
+  border-radius: variables.$regular-border-radius;
 }

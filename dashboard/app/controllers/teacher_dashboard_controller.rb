@@ -1,5 +1,8 @@
 class TeacherDashboardController < ApplicationController
   load_and_authorize_resource :section
+  include LevelsHelper
+
+  ALPHABET = ('a'..'z').to_a
 
   rescue_from CanCan::AccessDenied do
     if request.fullpath.include? 'home'

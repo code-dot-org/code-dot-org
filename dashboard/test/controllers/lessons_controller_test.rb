@@ -1463,7 +1463,7 @@ class LessonsControllerTest < ActionController::TestCase
     let(:modularity_enabled) {false}
 
     before do
-      allow(Policies::Courses).to receive(:modularity_enabled?).with(user).and_return(modularity_enabled)
+      allow(Policies::Courses).to receive(:modularity_enabled?).and_return(modularity_enabled)
     end
 
     context 'modularity is off' do

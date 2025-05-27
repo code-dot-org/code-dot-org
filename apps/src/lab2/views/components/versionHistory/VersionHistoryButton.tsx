@@ -2,6 +2,7 @@ import {Button} from '@code-dot-org/component-library/button';
 import {
   WithTooltip,
   TooltipProps,
+  WithTooltipHandle,
 } from '@code-dot-org/component-library/tooltip';
 import React, {useCallback, useRef, useState} from 'react';
 
@@ -12,8 +13,6 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import VersionHistoryDropdown from './VersionHistoryDropdown';
-
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 interface VersionHistoryProps {
   startSources: ProjectSources;
@@ -40,6 +39,7 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
   );
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const buttonContainerRef = useRef<HTMLDivElement>(null);
+  const tooltipRef = useRef<WithTooltipHandle>(null);
 
   // The version history button is generally disabled in read only mode with two exceptions:
   // if the user is viewing an old version of the project, or if this is a teacher viewing
@@ -82,19 +82,20 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
     setIsVersionListLoaded(false);
     setLoadError(false);
     setLoading(false);
+    tooltipRef.current?.hideTooltip(); // Hide tooltip when dropdown closes.
   }, []);
 
   const tooltipProps: TooltipProps = {
     text: commonI18n.versionHistory_header(),
-    direction: 'onLeft',
+    direction: 'onBottom',
     tooltipId: 'version-history-tooltip',
     size: 'xs',
-    className: darkModeStyles.tooltipLeft,
+    hideTail: true,
   };
 
   return (
     <div ref={buttonContainerRef}>
-      <WithTooltip tooltipProps={tooltipProps}>
+      <WithTooltip tooltipProps={tooltipProps} ref={tooltipRef}>
         <Button
           isIconOnly
           icon={{iconStyle: 'solid', iconName: 'history'}}
@@ -103,7 +104,7 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
           size={'xs'}
           disabled={buttonDisabled}
           type={'tertiary'}
-          className={darkModeStyles.tertiaryButton}
+          color={'black'}
         />
       </WithTooltip>
       {(isVersionListLoaded || loadError || loading) && (

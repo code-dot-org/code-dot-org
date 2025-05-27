@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-27 21:10:02 UTC",
+    "serialized_at": "2025-05-09 16:27:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -46,12 +46,27 @@
   ],
   "lessons": [
     {
-      "key": "lesson-2",
-      "name": "Talking to Machines",
+      "key": "lesson-15",
+      "name": "Chatbots",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Talking to Machines",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
       "properties": {
       },
       "seeding_key": {
@@ -63,10 +78,10 @@
     {
       "key": "lesson-3",
       "name": "Beyond Words",
-      "absolute_position": 2,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 2,
+      "relative_position": 3,
       "properties": {
       },
       "seeding_key": {
@@ -78,10 +93,10 @@
     {
       "key": "lesson-4",
       "name": "The AI's Brain",
-      "absolute_position": 3,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 3,
+      "relative_position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -93,10 +108,10 @@
     {
       "key": "lesson-5",
       "name": "Smart or Just Predictable?",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 4,
+      "relative_position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -108,10 +123,10 @@
     {
       "key": "lesson-6",
       "name": "Uncovering Contradictions",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -123,10 +138,10 @@
     {
       "key": "lesson-7",
       "name": "Understanding Bias",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 7,
       "properties": {
       },
       "seeding_key": {
@@ -138,10 +153,10 @@
     {
       "key": "lesson-8",
       "name": "AI's Wild Imagination",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -153,10 +168,10 @@
     {
       "key": "lesson-9",
       "name": "Debugging and Refining Outputs",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 9,
       "properties": {
       },
       "seeding_key": {
@@ -168,10 +183,10 @@
     {
       "key": "lesson-10",
       "name": "AI as a Co-Creator",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 10,
       "properties": {
       },
       "seeding_key": {
@@ -183,10 +198,10 @@
     {
       "key": "lesson-11",
       "name": "Remixing, Creativity, and Originality",
-      "absolute_position": 10,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 11,
       "properties": {
       },
       "seeding_key": {
@@ -198,10 +213,10 @@
     {
       "key": "lesson-12",
       "name": "Ownership, Ethics, and Creativity",
-      "absolute_position": 11,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 12,
       "properties": {
       },
       "seeding_key": {
@@ -213,10 +228,10 @@
     {
       "key": "lesson-13",
       "name": "AI's Role in Society",
-      "absolute_position": 12,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 13,
       "properties": {
       },
       "seeding_key": {
@@ -228,10 +243,10 @@
     {
       "key": "lesson-14",
       "name": "AI Time Capsule Project",
-      "absolute_position": 13,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -242,6 +257,18 @@
     }
   ],
   "lesson_activities": [
+    {
+      "key": "3dee521c-dfed-4db8-ab4b-0d1685773e0f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3dee521c-dfed-4db8-ab4b-0d1685773e0f",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai"
+      }
+    },
     {
       "key": "eb47d34e-de5a-4f69-95fd-9d3b6804627a",
       "position": 1,
@@ -451,6 +478,61 @@
     }
   ],
   "activity_sections": [
+    {
+      "key": "44ae264d-cb37-4d82-ab09-83c984599c53",
+      "position": 1,
+      "properties": {
+        "progression_name": "Chatbot 1 - AngelinaBot"
+      },
+      "seeding_key": {
+        "activity_section.key": "44ae264d-cb37-4d82-ab09-83c984599c53",
+        "lesson_activity.key": "3dee521c-dfed-4db8-ab4b-0d1685773e0f"
+      }
+    },
+    {
+      "key": "384f9f00-b579-419a-b775-881630f74b96",
+      "position": 2,
+      "properties": {
+        "progression_name": "Chatbot 2 - ErikBot"
+      },
+      "seeding_key": {
+        "activity_section.key": "384f9f00-b579-419a-b775-881630f74b96",
+        "lesson_activity.key": "3dee521c-dfed-4db8-ab4b-0d1685773e0f"
+      }
+    },
+    {
+      "key": "be4ba20c-2baf-426b-baeb-5f928b981bbf",
+      "position": 3,
+      "properties": {
+        "progression_name": "Chatbot 3 - KenBot"
+      },
+      "seeding_key": {
+        "activity_section.key": "be4ba20c-2baf-426b-baeb-5f928b981bbf",
+        "lesson_activity.key": "3dee521c-dfed-4db8-ab4b-0d1685773e0f"
+      }
+    },
+    {
+      "key": "1466a95d-4836-455b-8a13-452f2a978258",
+      "position": 4,
+      "properties": {
+        "progression_name": "Chatbot 4 - EmmaBot"
+      },
+      "seeding_key": {
+        "activity_section.key": "1466a95d-4836-455b-8a13-452f2a978258",
+        "lesson_activity.key": "3dee521c-dfed-4db8-ab4b-0d1685773e0f"
+      }
+    },
+    {
+      "key": "821bd162-9871-4798-95fe-9d1df1f24103",
+      "position": 5,
+      "properties": {
+        "progression_name": "Chatbot 5 - JoiBot"
+      },
+      "seeding_key": {
+        "activity_section.key": "821bd162-9871-4798-95fe-9d1df1f24103",
+        "lesson_activity.key": "3dee521c-dfed-4db8-ab4b-0d1685773e0f"
+      }
+    },
     {
       "key": "2acb1cc3-9385-44f3-93fd-ea431d50d26c",
       "position": 1,
@@ -935,6 +1017,116 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Chatbot 1 - AngelinaBot"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-open-prompt-chatbot-1"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "44ae264d-cb37-4d82-ab09-83c984599c53"
+      },
+      "level_keys": [
+        "test-problem-solving-with-ai-open-prompt-chatbot-1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Chatbot 2 - ErikBot"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-open-prompt-chatbot-2"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "384f9f00-b579-419a-b775-881630f74b96"
+      },
+      "level_keys": [
+        "test-problem-solving-with-ai-open-prompt-chatbot-2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Chatbot 3 - KenBot"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-open-prompt-chatbot-3"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "be4ba20c-2baf-426b-baeb-5f928b981bbf"
+      },
+      "level_keys": [
+        "test-problem-solving-with-ai-open-prompt-chatbot-3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Chatbot 4 - EmmaBot"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-open-prompt-chatbot-4"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "1466a95d-4836-455b-8a13-452f2a978258"
+      },
+      "level_keys": [
+        "test-problem-solving-with-ai-open-prompt-chatbot-4"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Chatbot 5 - JoiBot"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-open-prompt-chatbot-5"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "821bd162-9871-4798-95fe-9d1df1f24103"
+      },
+      "level_keys": [
+        "test-problem-solving-with-ai-open-prompt-chatbot-5"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "test-problem-solving-with-ai-lesson1-level1"
         ],
@@ -955,7 +1147,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 7,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -980,7 +1172,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 8,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1005,7 +1197,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 9,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -1030,7 +1222,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 10,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -1055,7 +1247,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 11,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -1080,7 +1272,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1105,7 +1297,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1130,7 +1322,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1155,7 +1347,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 15,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -1180,7 +1372,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 16,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -1205,7 +1397,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1230,7 +1422,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1255,7 +1447,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 19,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1280,7 +1472,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1305,7 +1497,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1330,7 +1522,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1355,7 +1547,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1380,7 +1572,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1405,7 +1597,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1430,7 +1622,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1455,7 +1647,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -1480,7 +1672,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 28,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -1505,7 +1697,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 29,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -1530,7 +1722,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 30,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -1555,7 +1747,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 31,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -1580,7 +1772,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 32,
       "position": 9,
       "activity_section_position": 2,
       "assessment": true,
@@ -1605,7 +1797,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1630,7 +1822,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1655,7 +1847,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1680,7 +1872,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 36,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1705,7 +1897,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1730,7 +1922,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1755,7 +1947,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1780,7 +1972,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1805,7 +1997,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1830,7 +2022,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 42,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -1855,7 +2047,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 43,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -1880,7 +2072,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 44,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -1905,7 +2097,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 45,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -1930,7 +2122,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 46,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -1955,7 +2147,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1980,7 +2172,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2005,7 +2197,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2030,7 +2222,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 50,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2055,7 +2247,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 51,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -2080,7 +2272,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 52,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -2105,7 +2297,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2130,7 +2322,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2155,11 +2347,14 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 55,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-problem-solving-with-ai-lesson12-level1-bubblechoice"
+        ],
         "progression": "AI in the Community"
       },
       "bonus": false,
@@ -2177,7 +2372,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 56,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2202,11 +2397,14 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 57,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-problem-solving-with-ai-lesson12-level4"
+        ],
         "progression": "Write a Video Script"
       },
       "bonus": false,
@@ -2224,7 +2422,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2249,7 +2447,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 59,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2275,6 +2473,66 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "test-problem-solving-with-ai-open-prompt-chatbot-1",
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-open-prompt-chatbot-1"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "44ae264d-cb37-4d82-ab09-83c984599c53"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-problem-solving-with-ai-open-prompt-chatbot-2",
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-open-prompt-chatbot-2"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "384f9f00-b579-419a-b775-881630f74b96"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-problem-solving-with-ai-open-prompt-chatbot-3",
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-open-prompt-chatbot-3"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "be4ba20c-2baf-426b-baeb-5f928b981bbf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-problem-solving-with-ai-open-prompt-chatbot-4",
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-open-prompt-chatbot-4"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "1466a95d-4836-455b-8a13-452f2a978258"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-problem-solving-with-ai-open-prompt-chatbot-5",
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-open-prompt-chatbot-5"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "821bd162-9871-4798-95fe-9d1df1f24103"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "test-problem-solving-with-ai-lesson1-level1",

@@ -4,15 +4,19 @@ import {
   WithTooltip,
 } from '@code-dot-org/component-library/tooltip';
 import SwapLayoutDropdown from '@codebridge/components/SwapLayoutDropdown';
+import {setWidgetViewShowCode} from '@codebridge/redux/workspaceRedux';
+import SettingsButton from '@codebridge/Settings/SettingsButton';
 import React, {useEffect, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import commonI18n from '@cdo/locale';
+
+import {useCodebridgeContext} from '../codebridgeContext';
 
 import ConsoleManager from './ConsoleManager';
 
 import moduleStyles from './right-buttons.module.scss';
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 interface RightButtonsProps {
   clearOutput: () => void;
@@ -24,17 +28,23 @@ const tooltipProps: TooltipProps = {
   size: 'xs',
   direction: 'onLeft',
   tooltipId: 'clear-console-tooltip',
-  className: darkModeStyles.tooltipLeft,
 };
 
 const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
   clearOutput,
   consoleManager,
 }) => {
+  const {levelProperties} = useCodebridgeContext();
   const isShareView = useAppSelector(state => state.lab.isShareView);
+  const isWidgetView = levelProperties.widgetView;
+  const widgetViewAllowShowCode = levelProperties.widgetViewAllowShowCode;
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
   const [hasConsoleOutput, setHasConsoleOutput] = useState(false);
   const isClearButtonDisabled = isRunning || !hasConsoleOutput;
+  const dispatch = useAppDispatch();
+  const widgetViewShowCode = useAppSelector(
+    state => state.codebridgeWorkspace.widgetViewShowCode
+  );
 
   useEffect(() => {
     if (!consoleManager) {
@@ -54,8 +64,24 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
     };
   }, [consoleManager]);
 
+  const onViewCodeToggle = () => {
+    dispatch(setWidgetViewShowCode(!widgetViewShowCode));
+  };
+
   return (
     <div className={moduleStyles.buttonContainer}>
+      {isWidgetView && widgetViewAllowShowCode && (
+        <Button
+          text={
+            widgetViewShowCode ? commonI18n.hideCode() : commonI18n.viewCode()
+          }
+          type="tertiary"
+          color="black"
+          size="xs"
+          iconLeft={{iconStyle: 'solid', iconName: 'code'}}
+          onClick={onViewCodeToggle}
+        />
+      )}
       <WithTooltip tooltipProps={tooltipProps}>
         <Button
           isIconOnly
@@ -64,11 +90,12 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
           onClick={clearOutput}
           size={'xs'}
           type={'tertiary'}
-          className={darkModeStyles.tertiaryButton}
           disabled={isClearButtonDisabled}
+          color={'black'}
         />
       </WithTooltip>
-      {!isShareView && <SwapLayoutDropdown />}
+      {!isShareView && !isWidgetView && <SwapLayoutDropdown />}
+      {isWidgetView && <SettingsButton />}
     </div>
   );
 };

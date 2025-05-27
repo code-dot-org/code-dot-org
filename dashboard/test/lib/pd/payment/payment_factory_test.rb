@@ -3,11 +3,13 @@ require 'test_helper'
 module Pd::Payment
   class PaymentFactoryTest < ActiveSupport::TestCase
     test 'district calculator' do
-      workshop_cs_in_a = create :workshop, :ended, on_map: false, funded: false,
+      workshop_cs_in_a = build :workshop, :ended, on_map: false, funded: false,
         course: Pd::Workshop::COURSE_CS_IN_A, subject: Pd::Workshop::SUBJECT_CS_IN_A_PHASE_2
+      workshop_cs_in_a.save(validate: false)
 
-      workshop_cs_in_s = create :workshop, :ended, on_map: false, funded: false,
+      workshop_cs_in_s = build :workshop, :ended, on_map: false, funded: false,
         course: Pd::Workshop::COURSE_CS_IN_S, subject: Pd::Workshop::SUBJECT_CS_IN_S_PHASE_2
+      workshop_cs_in_s.save(validate: false)
 
       assert_equal PaymentCalculatorDistrict, PaymentFactory.get_calculator_class(workshop_cs_in_a)
       assert_equal PaymentCalculatorDistrict, PaymentFactory.get_calculator_class(workshop_cs_in_s)
@@ -23,16 +25,19 @@ module Pd::Payment
 
     test 'standard calculator' do
       # Mix of public and private types
-      workshop_ecs = create :workshop, :ended, on_map: false, funded: true,
+      workshop_ecs = build :workshop, :ended, on_map: false, funded: true,
         course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
+      workshop_ecs.save(validate: false)
 
       workshop_csp = create :csp_academic_year_workshop, :ended, on_map: true, funded: true
 
-      workshop_cs_in_a = create :workshop, :ended, on_map: false, funded: true,
+      workshop_cs_in_a = build :workshop, :ended, on_map: false, funded: true,
         course: Pd::Workshop::COURSE_CS_IN_A, subject: Pd::Workshop::SUBJECT_CS_IN_A_PHASE_2
+      workshop_cs_in_a.save(validate: false)
 
-      workshop_cs_in_s = create :workshop, :ended, on_map: true, funded: true,
+      workshop_cs_in_s = build :workshop, :ended, on_map: true, funded: true,
         course: Pd::Workshop::COURSE_CS_IN_S, subject: Pd::Workshop::SUBJECT_CS_IN_S_PHASE_2
+      workshop_cs_in_s.save(validate: false)
 
       assert_equal PaymentCalculatorStandard, PaymentFactory.get_calculator_class(workshop_ecs)
       assert_equal PaymentCalculatorStandard, PaymentFactory.get_calculator_class(workshop_csp)

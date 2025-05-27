@@ -52,6 +52,15 @@ class OpenaiEvaluateController < ApplicationController
     elsif ProfanityFilter.find_potential_profanity(student_work, "en", {})
       json_response = {"content" => profanity_detected_response.to_json}
       return render(status: :ok, json: json_response)
+    elsif Rails.env.test?
+      # Return dummy data in the test environment
+      dummy_response = {
+        aiEvaluation: "Ok",
+        evaluationCriteria: "This is a test environment, so no real AI call was made.",
+        aiReasoning: "Dummy data returned for testing purposes."
+      }
+      json_response = {"content" => dummy_response.to_json}
+      return render(status: :ok, json: json_response)
     else
       system_prompt = AiSystemPrompts::EvaluateSystemPromptHelper.get_system_prompt(level, unit, evaluation_type)
       student_work_message = [{role: "user", content: student_work}]

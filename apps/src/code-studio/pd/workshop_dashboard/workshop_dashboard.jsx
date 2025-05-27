@@ -14,7 +14,6 @@ import {
 } from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 import {WorkshopCourseConfigs} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
-import experiments from '@cdo/apps/util/experiments';
 
 import Header from '../components/header';
 import {
@@ -29,7 +28,6 @@ import regionalPartnerReducers, {
 
 import WorkshopAttendance from './attendance/workshop_attendance';
 import LegacySurveySummaries from './legacy_survey_summaries.jsx';
-import NewWorkshop from './new_workshop';
 import {WorkshopAdmin} from './permission';
 import workshopDashboardReducers, {
   setFacilitatorCourses,
@@ -54,10 +52,6 @@ const store = createStore(
   })
 );
 
-const newWorkshopFormEnabled = experiments.isEnabled(
-  experiments.NEW_WORKSHOP_FORM
-);
-
 const routeConfigs = [
   {
     path: 'reports',
@@ -74,11 +68,6 @@ const routeConfigs = [
     breadcrumbs: 'Workshops,Filter',
     component: WorkshopFilter,
   },
-  {
-    path: 'workshops/new',
-    breadcrumbs: 'Workshops,New Workshop',
-    component: NewWorkshop,
-  },
   ...WorkshopCourseConfigs.map(config => ({
     path: `workshops/new/${config.slug}`,
     breadcrumbs: `Workshops,${workshopLabel(`New ${config.label}`)}`,
@@ -90,14 +79,12 @@ const routeConfigs = [
     path: 'workshops/:workshopId',
     breadcrumbs: 'Workshops,View Workshop',
     component: Workshop,
-    props: {view: 'show'},
   },
   {
     path: 'workshops/:workshopId/edit',
     breadcrumbs: 'Workshops,Edit Workshop',
-    component: newWorkshopFormEnabled ? WorkshopFormTemplate : Workshop,
-    noRouter: newWorkshopFormEnabled,
-    props: {view: newWorkshopFormEnabled ? undefined : 'edit'},
+    component: WorkshopFormTemplate,
+    noRouter: true,
   },
   {
     path: 'workshops/:workshopId/attendance',

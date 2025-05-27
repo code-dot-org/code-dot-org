@@ -2,6 +2,7 @@ import {Button} from '@code-dot-org/component-library/button';
 import {
   WithTooltip,
   TooltipProps,
+  WithTooltipHandle,
 } from '@code-dot-org/component-library/tooltip';
 import React, {useCallback, useRef, useState} from 'react';
 
@@ -9,35 +10,35 @@ import commonI18n from '@cdo/locale';
 
 import SettingsDropdown from './SettingsDropdown';
 
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
-
 const SettingsButton: React.FunctionComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
   const buttonContainerRef = useRef<HTMLDivElement>(null);
+  const tooltipRef = useRef<WithTooltipHandle>(null);
 
   const closeSettings = useCallback(() => {
     setIsOpen(false);
+    tooltipRef.current?.hideTooltip(); // Hide tooltip when dropdown closes.
   }, []);
 
   const settingsTooltipProps: TooltipProps = {
     text: commonI18n.settings(),
-    direction: 'onLeft',
+    direction: 'onBottom',
     tooltipId: 'settings-tooltip',
     size: 'xs',
-    className: darkModeStyles.tooltipLeft,
+    hideTail: true,
   };
 
   return (
     <div ref={buttonContainerRef}>
-      <WithTooltip tooltipProps={settingsTooltipProps}>
+      <WithTooltip tooltipProps={settingsTooltipProps} ref={tooltipRef}>
         <Button
           isIconOnly
           icon={{iconStyle: 'solid', iconName: 'gear'}}
           size="xs"
           onClick={() => setIsOpen(true)}
           type="tertiary"
-          className={darkModeStyles.tertiaryButton}
           ariaLabel={commonI18n.settings()}
+          color={'black'}
         />
       </WithTooltip>
       {isOpen && (

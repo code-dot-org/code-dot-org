@@ -1,6 +1,6 @@
 import {getStage} from './stage';
 
-export function getStudioUrl() {
+export function getStudioBaseUrl() {
   switch (getStage()) {
     case 'development':
     case 'pr':
@@ -11,4 +11,9 @@ export function getStudioUrl() {
     default:
       return 'https://studio.code.org';
   }
+}
+
+export function getStudioUrl(path = '') {
+  const studioBaseUrl = getStudioBaseUrl();
+  return path ? new URL(path, studioBaseUrl).toString() : studioBaseUrl;
 }

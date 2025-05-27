@@ -44,7 +44,7 @@ describe('CurriculumSnapshot component', () => {
     expect(curriculumSnapshot).toBeVisible();
     expect(curriculumSnapshot).toHaveTextContent(
       'Grades: 1, 1st; Level: 2, 2nd; Duration: 3, 3rd; Devices: 4, 4th; Topics: 5, 5th; ' +
-        'Programming Tools: 6, 6th; Professional Learning: 7, 7th; Accessibility: 8, 8th; Languages supported: 9, 9th',
+        'Tools: 6, 6th; Professional Learning: 7, 7th; Accessibility: 8, 8th; Languages supported: 9, 9th',
     );
   });
 
@@ -58,5 +58,31 @@ describe('CurriculumSnapshot component', () => {
 
     expect(curriculumSnapshot).toBeVisible();
     expect(curriculumSnapshot).toHaveTextContent('Grades: 1');
+  });
+
+  it('renders grades in ascending order', () => {
+    renderSnapshot({
+      grades: [
+        'K',
+        '3',
+        '1',
+        '2',
+        '5',
+        '4',
+        '6',
+        '7',
+        '8',
+        '9',
+        '12',
+        '10',
+        '11',
+      ],
+    });
+
+    const curriculumSnapshot = getSnapshot();
+
+    expect(curriculumSnapshot).toHaveTextContent(
+      'Grades: K, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12',
+    );
   });
 });

@@ -192,57 +192,6 @@ CarouselWithoutNavArrows.play = async ({
   }
 };
 
-export const CarouselWithTouchMove = SingleTemplate.bind({});
-CarouselWithTouchMove.args = {
-  allowTouchMove: true,
-  slides: Array.from({length: 6}, (_, index) => ({
-    id: `default-slide-${index + 1}`,
-    slide: createBasicSlide(index + 1),
-  })),
-};
-CarouselWithTouchMove.parameters = {
-  docs: {
-    description: {
-      story:
-        'This carousel allows slides to be moved by dragging/touching using the `allowTouchMove` prop. This is disabled by default and should not be used with Video carousels since it impedes the video player controls.',
-    },
-  },
-};
-CarouselWithTouchMove.play = async ({
-  canvasElement,
-}: {
-  canvasElement: HTMLElement;
-}) => {
-  const canvas = within(canvasElement);
-  const navArrowPrev = canvas.queryByLabelText('Previous slide');
-  const navArrowNext = canvas.queryByLabelText('Next slide');
-  const paginationDots = ['Go to slide 1', 'Go to slide 2', 'Go to slide 3'];
-  const slides = [
-    'This is slide 1',
-    'This is slide 2',
-    'This is slide 3',
-    'This is slide 4',
-    'This is slide 5',
-    'This is slide 6',
-  ];
-
-  // check that the navigation arrows are showing
-  await expect(navArrowPrev).toBeInTheDocument();
-  await expect(navArrowNext).toBeInTheDocument();
-
-  // check that the pagination dots are showing
-  for (const dotLabel of paginationDots) {
-    const dot = await canvas.findByLabelText(dotLabel);
-    await expect(dot).toBeInTheDocument();
-  }
-
-  // check that slides are in the carousel
-  for (const slideText of slides) {
-    const heading = await canvas.findByText(slideText);
-    await expect(heading).toBeInTheDocument();
-  }
-};
-
 export const CarouselWithCustomSlidesPerView = SingleTemplate.bind({});
 CarouselWithCustomSlidesPerView.args = {
   slidesPerView: 3,

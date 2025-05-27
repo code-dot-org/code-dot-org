@@ -1,7 +1,7 @@
 Feature: After completing the Hour of Code, the player is directed to a congratulations page
 
 Scenario: Completing Minecraft HoC should go to certificate page and generate a certificate
-  Given I am on "http://studio.code.org/s/mc/reset"
+  Given I am on "http://studio.code.org/courses/mc/units/1/reset"
   Given I load the last Minecraft HoC level
   Then I wait until the Minecraft game is loaded
   And I press "runButton"
@@ -49,7 +49,7 @@ Scenario: Flappy customized dashboard certificate pages
 Scenario: Pegasus share page preserves certificate when redirecting
   # Reset lesson data (otherwise it will pull a cached certificate from
   # other tests)
-  Given I am on "http://studio.code.org/s/mc/reset"
+  Given I am on "http://studio.code.org/courses/mc/units/1/reset"
   And I wait for the lab page to fully load
   Then I wait until the Minecraft game is loaded
 
@@ -101,7 +101,8 @@ Scenario: Oceans uncustomized dashboard certificate pages
 
   When I press the first "#certificate-share img" element to load a new page
   And I wait until current URL contains "/print_certificates/"
-  And I see no difference for "oceans print certificate page"
+  # This page doesn't render any icons, so we don't need to wait for Font Awesome to load.
+  And I see no difference for "oceans print certificate page" without waiting for Font Awesome to load
 
   And I close my eyes
 
@@ -149,7 +150,8 @@ Scenario: customized dashboard certificate pages with no course name
   When I press the first "#certificate-share img" element to load a new page
   And I wait until current URL contains "/print_certificates/"
   Then I wait to see an image "/certificate_images/"
-  And I see no difference for "print certificate page"
+  # This page doesn't render any icons, so we don't need to wait for Font Awesome to load.
+  And I see no difference for "print certificate page" without waiting for Font Awesome to load
 
   And I close my eyes
 

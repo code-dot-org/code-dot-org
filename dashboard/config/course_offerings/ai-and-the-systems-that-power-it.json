@@ -1,0 +1,20 @@
+{
+  "key": "ai-and-the-systems-that-power-it",
+  "display_name": "AI and the Systems that Power It",
+  "is_featured": true,
+  "assignable": true,
+  "curriculum_type": "Standalone Unit",
+  "marketing_initiative": "AIF",
+  "grade_levels": "9,10,11,12",
+  "header": "teacher_led",
+  "image": "https://images.code.org/334911d7fb405589505fdeee15c276b0-systems.jpg",
+  "cs_topic": "artificial_intelligence",
+  "school_subject": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
+  "description": "Explore how AI connects with computing systems, IoT, and robotics while designing and troubleshooting real-world solutions with a focus on ethics, equity, and impact.",
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": "2025-05-29 06:00:00 UTC",
+  "self_paced_pl_course_offering_key": null,
+  "ai_teaching_assistant_available": false
+}

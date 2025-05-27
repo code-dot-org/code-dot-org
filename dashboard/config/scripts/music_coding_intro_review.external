@@ -1,5 +1,5 @@
 name 'music-coding-intro-review'
-title 'title'
+title 'Review'
 description 'description here'
 
 markdown <<MARKDOWN
@@ -31,7 +31,7 @@ markdown <<MARKDOWN
     <details style="margin-top: 10px;">
       <summary style="cursor: pointer; font-weight: bold; text-align: center; background: #e0f7fa; padding: 8px; border-radius: 5px;">Review more</summary>
       <div style="margin-top: 10px; font-size: 14px; text-align: left; background: #e0f7fa; padding: 10px; border-radius: 5px;">
-        A function is like a shortcut. You group blocks together and give them a name, like "Chorus." Then, every time you want that part of the music, you just use the name instead of rebuilding it. It saves time and keeps your code neat!
+        A function is like an efficient shortcut.  You just use the function instead of rewriting the code. It saves time and keeps your code neat!
       </div>
     </details>
   </div>
@@ -44,7 +44,7 @@ markdown <<MARKDOWN
     <details style="margin-top: 10px;">
       <summary style="cursor: pointer; font-weight: bold; text-align: center; background: #e0f7fa; padding: 8px; border-radius: 5px;">Review more</summary>
       <div style="margin-top: 10px; font-size: 14px; text-align: left; background: #e0f7fa; padding: 10px; border-radius: 5px;">
-        Events are actions your program listens for—like clicking a sprite, pressing a key, or tapping a button. When that action happens, your code responds. It’s how you make your music interactive!
+        Events are actions your program listens for—like clicking a sprite, pressing a key, or tapping a button. When that action happens, your program runs the blocks you added. It’s how you make your music interactive!
       </div>
     </details>
   </div>

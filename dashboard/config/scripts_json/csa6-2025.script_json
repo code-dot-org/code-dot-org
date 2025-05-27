@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSA",
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -18,7 +19,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-21 17:11:25 UTC",
+    "serialized_at": "2025-05-23 02:07:42 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -53,15 +55,14 @@
       }
     },
     {
-      "key": "lessonGroup-4",
+      "key": "lessonGroup-5",
       "user_facing": true,
       "position": 3,
       "properties": {
-        "display_name": "Alternate Lessons",
-        "description": "This section contains the one-day version of the Natural Language Processing Project."
+        "display_name": "End of Unit Survey"
       },
       "seeding_key": {
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa6-2025"
       }
     },
@@ -81,13 +82,12 @@
   "lessons": [
     {
       "key": "Project Planning",
-      "name": "Project Planning",
+      "name": "Lesson 1: Project Planning",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How can I identify the requirements and things I need to know to complete a project?**\n\nStudents are introduced to the Natural Language Processing Project and evaluate requirements and examples to identify questions and key features. Before beginning work on the project, students expand their understanding of program structure and comments by identifying best practices and exploring the use of Javadocs to generate program documentation.",
         "preparation": "* **(Optional)** Print copies of the Project Planning Guided Notes (one for each student)\n* Preview the *Software Engineering: Natural Language Processing* video\n* Print copies of the Project Characteristics handout (one for each pair of students)\n* Print copies of the Unit 6 Guide",
         "student_overview": "**How can I identify the requirements and things I need to know to complete a project?**\n\nNatural language processing is used in many programs and apps that we use every day. In this unit, we will explore some of the techniques and algorithms used in our apps and smart devices to develop our own program that uses natural language processing. You explore strategies for writing and structuring code so other software engineers can easily understand and use a Java tool to create program documentation."
@@ -100,13 +100,12 @@
     },
     {
       "key": "Substrings",
-      "name": "Substrings",
+      "name": "Lesson 2: Substrings",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can I analyze parts of a `String` object?**\n\nIn this lesson, students revisit the `String` class and learn how to use the `substring()` method. They discover that `String` objects are immutable and are not modified when calling methods in the `String` class. Students also explore how the `substring()` method can be combined with other methods in the `String` class to find the location of a specific character or substring within a `String` and compare substrings for equality. They then practice using the `substring()` method to retrieve a substring of a `String` object and to find and replace specific characters.",
         "preparation": "* **(Optional)** Print copies of the Substrings Guided Notes (one for each student)",
         "student_overview": "**How can I analyze parts of a `String` object?**\n\nIn this lesson, you revisit the `String` class and learn how to use the `substring()` method. You discover that `String` objects are immutable and are not modified when calling methods in the `String` class. You also explore how the `substring()` method can be combined with other methods in the `String` class to find the location of a specific character or substring within a `String` and compare substrings for equality. You then practice using the `substring()` method to retrieve a substring of a `String` object and to find and replace specific characters."
@@ -119,13 +118,12 @@
     },
     {
       "key": "Integer and Double Objects",
-      "name": "Integer and Double Objects",
+      "name": "Lesson 3: Integer and Double Objects",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.8\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**Why would I want to represent primitive values as objects?**\n\nIn this lesson, students explore the `Integer` and `Double` classes and learn how these are used to represent `int` and `double` values as objects. They realize that using these classes allows them to use methods to work with `int` and `double` values, such as to convert a `String` to an `int` or `double` value. Students also discover the minimum and maximum values for integers and how exceeding these limits causes overflow or underflow errors then practice using methods in the `Integer` and `Double` classes.",
         "preparation": "* **(Optional)** Print copies of the Integer and Double Objects Guided Notes (one for each student)\n* Preview the *Wrapper Classes - Part 1* and *Wrapper Classes - Part 2* videos",
         "student_overview": "**Why would I want to represent primitive values as objects?**\n\nIn this lesson, you explore the `Integer` and `Double` classes and learn how these are used to represent `int` and `double` values as objects. You realize that using these classes allows you to use methods to work with `int` and `double` values, such as to convert a `String` to an `int` or `double` value. You also discover the minimum and maximum values for integers and how exceeding these limits causes overflow or underflow errors then practice using methods in the `Integer` and `Double` classes."
@@ -138,13 +136,12 @@
     },
     {
       "key": "ArrayLists",
-      "name": "ArrayLists",
+      "name": "Lesson 4: ArrayLists",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 7.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**Why would I use an `ArrayList` instead of an array?**\n\nStudents have learned to use one-dimensional (1D) and two-dimensional (2D) arrays to store multiple values of the same type. In this lesson, students explore the `ArrayList` class and learn how to declare and initialize an `ArrayList` and add elements. Students identify scenarios where an `ArrayList` is more suitable and differentiate between a dynamic data structure and a static data structure. Students then practice creating an `ArrayList` and adding values to the list.",
         "preparation": "* **(Optional)** Print copies of the ArrayLists Guided Notes (one for each student)\n* Preview *The ArrayList Class* video",
         "student_overview": "**Why would I use an `ArrayList` instead of an array?**\n\nWhen working with arrays and lists, we sometimes encounter problems where the number of elements is unknown or the size of the list constantly changes. In this lesson, you explore the `ArrayList` class and learn how to declare and initialize an `ArrayList` and add elements. You identify scenarios where an `ArrayList` is more suitable and differentiate between a dynamic data structure and a static data structure. You then practice creating an `ArrayList` and adding values to the list."
@@ -157,13 +154,12 @@
     },
     {
       "key": "Manipulating Elements",
-      "name": "Manipulating Elements",
+      "name": "Lesson 5: Manipulating Elements",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 7.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How am I able to work with the data stored in an `ArrayList`?**\n\nStudents continue to explore the `ArrayList` class and learn to work with the `get()` and `set()` methods to retrieve and modify elements. They discover that they can traverse an `ArrayList` similarly to traversing a 1D array and can apply the same standard algorithms to an `ArrayList`. Students then practice using methods in the `ArrayList` class to retrieve and modify elements and traversing an `ArrayList` to find and manipulate elements.",
         "preparation": "* **(Optional)** Print copies of the Manipulating Elements Guided Notes (one for each student)\n* Preview the *Working with ArrayList Data* video",
         "student_overview": "**How am I able to work with the data stored in an `ArrayList`?**\n\nIn this lesson, you continue to explore the `ArrayList` class and learn to work with the `get()` and `set()` methods to retrieve and modify elements. You discover that you can traverse an `ArrayList` similarly to traversing a 1D array and can apply the same standard algorithms to an `ArrayList`. You then practice using methods in the `ArrayList` class to retrieve and modify elements and traversing an `ArrayList` to find and manipulate elements."
@@ -176,13 +172,12 @@
     },
     {
       "key": "Comparing Strings",
-      "name": "Comparing Strings",
+      "name": "Lesson 6: Comparing Strings",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How can I determine if a list of `String` objects are in alphabetical order?**\n\nStudents have previously learned how to use several of the methods in the String class. In this lesson, students explore the `compareTo()` method and discover how this method can be used to check if a list of `String` objects is in alphabetical order. They then practice using the `compareTo()` method to evaluate `String` objects and using the methods in the `String` class to implement algorithms.",
         "preparation": "* **(Optional)** Print copies of the Comparing Strings Guided Notes (one for each student)\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up OR use [**this web-based version**](https://csabingo.up.railway.app/) to show the terms and definitions",
         "student_overview": "**How can I determine if a list of `String` objects are in alphabetical order?**\n\nYou have previously learned how to use several of the methods in the `String` class. In this lesson, you explore the `compareTo()` method and discover how this method can be used to check if a list of `String` objects is in alphabetical order. You then practice using the `compareTo()` method to evaluate `String` objects and using the methods in the `String` class to implement algorithms."
@@ -195,13 +190,12 @@
     },
     {
       "key": "Lists of Objects",
-      "name": "Lists of Objects",
+      "name": "Lesson 7: Lists of Objects",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 7.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**Why would I use generic types?**\n\nStudents have previously learned that an `ArrayList` can only store objects, such as `Integer` or `String`. In this lesson, they learn about generic types. Students realize that using the angle brackets when creating an `ArrayList` ensures that an `ArrayList` stores a specific type of object, while leaving out the angle brackets may result in multiple types of objects getting stored in the `ArrayList`. They then practice creating and using an `ArrayList` of objects and implementing algorithms to find information and perform calculations.",
         "preparation": "* **(Optional)** Print copies of the Lists of Objects Guided Notes (one for each student)",
         "student_overview": "**Why would I use generic types?**\n\nYou have previously learned that an `ArrayList` can only store objects, such as `Integer` or `String`. In this lesson, you learn about generic types. You realize that using the angle brackets when creating an `ArrayList` ensures that an `ArrayList` stores a specific type of object, while leaving out the angle brackets may result in multiple types of objects getting stored in the `ArrayList`. You then practice creating and using an `ArrayList` of objects and implementing algorithms to find information and perform calculations."
@@ -214,13 +208,12 @@
     },
     {
       "key": "Removing Elements",
-      "name": "Removing Elements",
+      "name": "Lesson 8: Removing Elements",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.3\n* Topic Questions 7.2\n* Topic Questions 7.3\n* Topic Questions 7.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How is removing data from an `ArrayList` different from removing data from an array?**\n\nStudents have learned how to add, retrieve, and modify elements in an `ArrayList`. In this lesson, students explore the functionality of the `remove()` method in the `ArrayList` class and identify potential errors when attempting to remove items while traversing the list. Then they practice debugging programs that result in a `ConcurrentModificationException` and using the `remove()` method to remove elements from an `ArrayList`.",
         "preparation": "* **(Optional)** Print copies of the Removing Elements Guided Notes (one for each student)\n* Preview the *Removing Data from an ArrayList* video",
         "student_overview": "**How is removing data from an `ArrayList` different from removing data from an array?**\n\nYou have learned how to add, retrieve, and modify elements in an `ArrayList`. In this `ArrayList`, you explore the functionality of the `remove()` method in the `ArrayList` class and identify potential errors when attempting to remove items while traversing the list. You then practice debugging programs that result in a `ConcurrentModificationException` and using the `remove()` method to remove elements from an `ArrayList`."
@@ -233,13 +226,12 @@
     },
     {
       "key": "ArrayList and String Algorithms",
-      "name": "ArrayList and String Algorithms",
+      "name": "Lesson 9: ArrayList and String Algorithms",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How can I use what I know about object-oriented programming and `ArrayList`s to plan and implement algorithms?**\n\nStudents use the knowledge and skills they have developed in this unit to implement algorithms to search or modify elements in an `ArrayList`. They explore basic natural language processing techniques, then work with a partner to plan and implement algorithms to work with `String` and `ArrayList` objects. Students participate in a code review to obtain feedback and iterate on the development of their programs.",
         "preparation": "* **(Optional)** Print copies of the ArrayList and String Algorithms Guided Notes (one for each student)\n* Print copies of the Writing Algorithms with ArrayLists handout (one for each pair of students)",
         "student_overview": "**How can I use what I know about object-oriented programming and `ArrayList`s to plan and implement algorithms?**\n\nYou use the knowledge and skills you have developed in this unit to implement algorithms to search or modify elements in an `ArrayList`. You explore basic natural language processing techniques, then work with a partner to plan and implement algorithms to work with `String` and `ArrayList` objects. You participate in a code review to obtain feedback and iterate on the development of your programs."
@@ -252,7 +244,7 @@
     },
     {
       "key": "Natural Language Processing Project",
-      "name": "Natural Language Processing Project",
+      "name": "Lesson 10a: Natural Language Processing Project",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -270,12 +262,31 @@
       }
     },
     {
-      "key": "TemperatureAction FRQ",
-      "name": "TemperatureAction FRQ",
+      "key": "Natural Language Processing Project [1-Day Version]",
+      "name": "Lesson 10b: Natural Language Processing Project [1-Day Version]",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 11,
+      "properties": {
+        "assessment": true,
+        "overview": "**How will I use natural language processing techniques to analyze, manipulate, or generate text in a program?**\n\nFor this project, students use the skills they have developed throughout this unit to create a program that uses natural language processing techniques to analyze, manipulate, and/or generate text. Students choose how they will implement basic natural language processing techniques to understand text and respond accordingly. After brainstorming and planning, students develop their programs.",
+        "preparation": "* Print copies of the Natural Language Processing Project Planning Guide (one for each student)",
+        "student_overview": "**How will I use natural language processing techniques to analyze, manipulate, or generate text in a program?**\n\nFor this project, you use the skills you have developed throughout this unit to create a program that uses natural language processing techniques to analyze, manipulate, and/or generate text. You choose how you will implement basic natural language processing techniques to understand text and respond accordingly. After brainstorming and planning, you develop your program."
+      },
+      "seeding_key": {
+        "lesson.key": "Natural Language Processing Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa6-2025"
+      }
+    },
+    {
+      "key": "TemperatureAction FRQ",
+      "name": "Lesson 11: TemperatureAction FRQ",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
       "properties": {
         "overview": "**How will I use what I know about `ArrayList`s and standard algorithms to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
         "preparation": "* Print copies of the TemperatureAction FRQ handout (one for each student)\n* Print copies of the Java Quick Reference resource (one for each student)\n* Print copies of the TemperatureAction FRQ Scoring Guidelines (one for each student)",
@@ -289,11 +300,11 @@
     },
     {
       "key": "Unit 6 Assessment",
-      "name": "Unit 6 Assessment",
-      "absolute_position": 12,
+      "name": "Lesson 12: Unit 6 Assessment",
+      "absolute_position": 13,
       "lockable": true,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 13,
       "properties": {
         "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
@@ -307,31 +318,27 @@
       }
     },
     {
-      "key": "Natural Language Processing Project [1-Day Version]",
-      "name": "Natural Language Processing Project [1-Day Version]",
-      "absolute_position": 13,
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 14,
       "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 13,
+      "has_lesson_plan": false,
+      "relative_position": 14,
       "properties": {
-        "assessment": true,
-        "overview": "**How will I use natural language processing techniques to analyze, manipulate, or generate text in a program?**\n\nFor this project, students use the skills they have developed throughout this unit to create a program that uses natural language processing techniques to analyze, manipulate, and/or generate text. Students choose how they will implement basic natural language processing techniques to understand text and respond accordingly. After brainstorming and planning, students develop their programs.",
-        "preparation": "* Print copies of the Natural Language Processing Project Planning Guide (one for each student)",
-        "student_overview": "**How will I use natural language processing techniques to analyze, manipulate, or generate text in a program?**\n\nFor this project, you use the skills you have developed throughout this unit to create a program that uses natural language processing techniques to analyze, manipulate, and/or generate text. You choose how you will implement basic natural language processing techniques to understand text and respond accordingly. After brainstorming and planning, you develop your program."
       },
       "seeding_key": {
-        "lesson.key": "Natural Language Processing Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa6-2025"
       }
     },
     {
       "key": "Sandbox: Console",
       "name": "Sandbox: Console",
-      "absolute_position": 14,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 14,
+      "relative_position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -343,10 +350,10 @@
     {
       "key": "Sandbox: The Neighborhood",
       "name": "Sandbox: The Neighborhood",
-      "absolute_position": 15,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 15,
+      "relative_position": 16,
       "properties": {
       },
       "seeding_key": {
@@ -358,21 +365,6 @@
     {
       "key": "Sandbox: The Theater",
       "name": "Sandbox: The Theater",
-      "absolute_position": 16,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 16,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "Sandbox: The Theater",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa6-2025"
-      }
-    },
-    {
-      "key": "Student End of Unit Survey",
-      "name": "Student End of Unit Survey",
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": false,
@@ -380,7 +372,7 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Student End of Unit Survey",
+        "lesson.key": "Sandbox: The Theater",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa6-2025"
       }
@@ -821,6 +813,73 @@
       }
     },
     {
+      "key": "5f9c89a3-b1b6-4330-a452-42bde3e38e07",
+      "position": 5,
+      "properties": {
+        "name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5f9c89a3-b1b6-4330-a452-42bde3e38e07",
+        "lesson.key": "Natural Language Processing Project",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa6-2025"
+      }
+    },
+    {
+      "key": "b2048519-342e-4d5c-8f49-2448c0898723",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b2048519-342e-4d5c-8f49-2448c0898723",
+        "lesson.key": "Natural Language Processing Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa6-2025"
+      }
+    },
+    {
+      "key": "a8c20d13-2269-47ee-a661-31ca4912c8d8",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a8c20d13-2269-47ee-a661-31ca4912c8d8",
+        "lesson.key": "Natural Language Processing Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa6-2025"
+      }
+    },
+    {
+      "key": "f1ce30da-7719-4804-9c07-d086899447b2",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f1ce30da-7719-4804-9c07-d086899447b2",
+        "lesson.key": "Natural Language Processing Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa6-2025"
+      }
+    },
+    {
+      "key": "6463b4ec-34b0-41e0-9a6e-d269b70df3d1",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6463b4ec-34b0-41e0-9a6e-d269b70df3d1",
+        "lesson.key": "Natural Language Processing Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa6-2025"
+      }
+    },
+    {
       "key": "459abeb6-6a6e-4c22-8015-a11862bc6e77",
       "position": 1,
       "properties": {
@@ -890,44 +949,14 @@
       }
     },
     {
-      "key": "b2048519-342e-4d5c-8f49-2448c0898723",
+      "key": "4a1e2948-5071-437f-8498-d027bd9ae4c8",
       "position": 1,
       "properties": {
-        "duration": 10,
-        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "b2048519-342e-4d5c-8f49-2448c0898723",
-        "lesson.key": "Natural Language Processing Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa6-2025"
-      }
-    },
-    {
-      "key": "a8c20d13-2269-47ee-a661-31ca4912c8d8",
-      "position": 2,
-      "properties": {
-        "duration": 30,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a8c20d13-2269-47ee-a661-31ca4912c8d8",
-        "lesson.key": "Natural Language Processing Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa6-2025"
-      }
-    },
-    {
-      "key": "f1ce30da-7719-4804-9c07-d086899447b2",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "f1ce30da-7719-4804-9c07-d086899447b2",
-        "lesson.key": "Natural Language Processing Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_activity.key": "4a1e2948-5071-437f-8498-d027bd9ae4c8",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa6-2025"
       }
     },
@@ -963,18 +992,6 @@
       "seeding_key": {
         "lesson_activity.key": "150aebf0-bc33-4eb9-b6b1-63e587e53b43",
         "lesson.key": "Sandbox: The Theater",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa6-2025"
-      }
-    },
-    {
-      "key": "1c711c49-070b-42e7-9300-9177c8c36b59",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "1c711c49-070b-42e7-9300-9177c8c36b59",
-        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa6-2025"
       }
@@ -3822,27 +3839,8 @@
       }
     },
     {
-      "key": "187cfc37-c70a-4cf8-87fd-4d24297cf8d5",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
-        "name": "End of Unit Survey",
-        "progression_name": "End of Unit Survey",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "We also have a teacher end-of-unit survey to learn more about how the unit went for you and your students. While students take their survey, please complete [**this end of unit survey for teachers**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=6) as well. Your feedback is valued and appreciated!"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "187cfc37-c70a-4cf8-87fd-4d24297cf8d5",
-        "lesson_activity.key": "95352afb-de13-497f-a80e-11f764300bd6"
-      }
-    },
-    {
       "key": "23bb1a02-2695-4183-bfac-4f04f3dbd56c",
-      "position": 12,
+      "position": 11,
       "properties": {
         "description": "---"
       },
@@ -3853,7 +3851,7 @@
     },
     {
       "key": "fc81df3c-3d8c-40b1-b807-59a9eb26f596",
-      "position": 13,
+      "position": 12,
       "properties": {
         "description": "**Natural Language Processing Project Planning Guide:** Use the rubric in the Natural Language Processing Project Planning Guide to assess the projects.",
         "name": "Assessment: Grading the Project"
@@ -3861,6 +3859,158 @@
       "seeding_key": {
         "activity_section.key": "fc81df3c-3d8c-40b1-b807-59a9eb26f596",
         "lesson_activity.key": "95352afb-de13-497f-a80e-11f764300bd6"
+      }
+    },
+    {
+      "key": "0543cc02-bf36-4362-8abb-e2cfd347da78",
+      "position": 1,
+      "properties": {
+        "description": "After completing this project, students should complete the End of Unit Survey linked in the final level. Their responses help us understand their experiences and improve future versions of this unit.",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "0543cc02-bf36-4362-8abb-e2cfd347da78",
+        "lesson_activity.key": "5f9c89a3-b1b6-4330-a452-42bde3e38e07"
+      }
+    },
+    {
+      "key": "3e694dd3-ee4c-4a56-a216-2693544f71c4",
+      "position": 1,
+      "properties": {
+        "description": "We have seen some examples of programs that use natural language processing techniques throughout the unit. Programs and devices often use natural language processing to interact with a user to answer questions, find information, or execute commands.",
+        "name": "Natural Language Processing",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3e694dd3-ee4c-4a56-a216-2693544f71c4",
+        "lesson_activity.key": "b2048519-342e-4d5c-8f49-2448c0898723"
+      }
+    },
+    {
+      "key": "f2b01f7c-570f-4c8a-b15f-f092d1d27958",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of programs and devices that use natural language processing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a program that uses natural language processing to analyze, manipulate, or generate text?*\n\n**Discussion Goal:** Students share ideas about programs they might make using natural language processing, such as chatbots, story generators, or social media analyzers.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Natural Language Processing Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f2b01f7c-570f-4c8a-b15f-f092d1d27958",
+        "lesson_activity.key": "b2048519-342e-4d5c-8f49-2448c0898723"
+      }
+    },
+    {
+      "key": "d0173a0b-07e8-4bf5-99be-888b2a5f6d4c",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to plan their visuals, create UML diagrams for their classes, and identify the algorithms they need to develop on the Natural Language Processing Project Planning Guide.",
+        "duration": "10",
+        "name": "Brainstorming and Planning"
+      },
+      "seeding_key": {
+        "activity_section.key": "d0173a0b-07e8-4bf5-99be-888b2a5f6d4c",
+        "lesson_activity.key": "a8c20d13-2269-47ee-a661-31ca4912c8d8"
+      }
+    },
+    {
+      "key": "22046679-a811-43d2-9586-d4b342c157cc",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Natural Language Processing Good Project.",
+        "duration": "20",
+        "name": "Development",
+        "progression_name": "Natural Language Processing Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "22046679-a811-43d2-9586-d4b342c157cc",
+        "lesson_activity.key": "a8c20d13-2269-47ee-a661-31ca4912c8d8"
+      }
+    },
+    {
+      "key": "289439b5-be59-4147-80c0-d09600ca6863",
+      "position": 3,
+      "properties": {
+        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "289439b5-be59-4147-80c0-d09600ca6863",
+        "lesson_activity.key": "a8c20d13-2269-47ee-a661-31ca4912c8d8"
+      }
+    },
+    {
+      "key": "972229d1-b92e-455e-bef4-d6c00eaccca3",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "972229d1-b92e-455e-bef4-d6c00eaccca3",
+        "lesson_activity.key": "a8c20d13-2269-47ee-a661-31ca4912c8d8"
+      }
+    },
+    {
+      "key": "48158452-f39b-48d3-a046-670fc1eb0955",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt on the Natural Language Processing Project Planning Guide.",
+        "name": "End of Project Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "48158452-f39b-48d3-a046-670fc1eb0955",
+        "lesson_activity.key": "f1ce30da-7719-4804-9c07-d086899447b2"
+      }
+    },
+    {
+      "key": "4a8be6cc-0d43-4a8c-805b-2349ceeda420",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "4a8be6cc-0d43-4a8c-805b-2349ceeda420",
+        "lesson_activity.key": "f1ce30da-7719-4804-9c07-d086899447b2"
+      }
+    },
+    {
+      "key": "aac4485b-d1f4-43b5-8923-80cba30c7f63",
+      "position": 3,
+      "properties": {
+        "description": "**Natural Language Processing Project Planning Guide:** Use the rubric in the Natural Language Processing Project Planning Guide to assess the projects.",
+        "name": "Assessment: Grading the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "aac4485b-d1f4-43b5-8923-80cba30c7f63",
+        "lesson_activity.key": "f1ce30da-7719-4804-9c07-d086899447b2"
+      }
+    },
+    {
+      "key": "310c3201-ffa7-49c8-a1cb-98db729e9e7c",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.\n",
+        "name": "End of Unit Survey",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "310c3201-ffa7-49c8-a1cb-98db729e9e7c",
+        "lesson_activity.key": "6463b4ec-34b0-41e0-9a6e-d269b70df3d1"
       }
     },
     {
@@ -4061,130 +4211,25 @@
       }
     },
     {
-      "key": "3e694dd3-ee4c-4a56-a216-2693544f71c4",
+      "key": "00ef76fe-ced3-484d-83e5-f3fb22e0cb06",
       "position": 1,
       "properties": {
-        "description": "We have seen some examples of programs that use natural language processing techniques throughout the unit. Programs and devices often use natural language processing to interact with a user to answer questions, find information, or execute commands.",
-        "name": "Natural Language Processing",
-        "remarks": true
+        "progression_name": "End of Unit Survey"
       },
       "seeding_key": {
-        "activity_section.key": "3e694dd3-ee4c-4a56-a216-2693544f71c4",
-        "lesson_activity.key": "b2048519-342e-4d5c-8f49-2448c0898723"
+        "activity_section.key": "00ef76fe-ced3-484d-83e5-f3fb22e0cb06",
+        "lesson_activity.key": "4a1e2948-5071-437f-8498-d027bd9ae4c8"
       }
     },
     {
-      "key": "f2b01f7c-570f-4c8a-b15f-f092d1d27958",
+      "key": "cef11c21-0c10-462b-a7cc-6965d5c4b427",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of programs and devices that use natural language processing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a program that uses natural language processing to analyze, manipulate, or generate text?*\n\n**Discussion Goal:** Students share ideas about programs they might make using natural language processing, such as chatbots, story generators, or social media analyzers.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Natural Language Processing Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
-          }
-        ]
+        "progression_name": "End of Unit Survey Page"
       },
       "seeding_key": {
-        "activity_section.key": "f2b01f7c-570f-4c8a-b15f-f092d1d27958",
-        "lesson_activity.key": "b2048519-342e-4d5c-8f49-2448c0898723"
-      }
-    },
-    {
-      "key": "d0173a0b-07e8-4bf5-99be-888b2a5f6d4c",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to plan their visuals, create UML diagrams for their classes, and identify the algorithms they need to develop on the Natural Language Processing Project Planning Guide.",
-        "duration": "10",
-        "name": "Brainstorming and Planning"
-      },
-      "seeding_key": {
-        "activity_section.key": "d0173a0b-07e8-4bf5-99be-888b2a5f6d4c",
-        "lesson_activity.key": "a8c20d13-2269-47ee-a661-31ca4912c8d8"
-      }
-    },
-    {
-      "key": "22046679-a811-43d2-9586-d4b342c157cc",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Natural Language Processing Good Project.",
-        "duration": "20",
-        "name": "Development",
-        "progression_name": "Natural Language Processing Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "22046679-a811-43d2-9586-d4b342c157cc",
-        "lesson_activity.key": "a8c20d13-2269-47ee-a661-31ca4912c8d8"
-      }
-    },
-    {
-      "key": "289439b5-be59-4147-80c0-d09600ca6863",
-      "position": 3,
-      "properties": {
-        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "289439b5-be59-4147-80c0-d09600ca6863",
-        "lesson_activity.key": "a8c20d13-2269-47ee-a661-31ca4912c8d8"
-      }
-    },
-    {
-      "key": "972229d1-b92e-455e-bef4-d6c00eaccca3",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "972229d1-b92e-455e-bef4-d6c00eaccca3",
-        "lesson_activity.key": "a8c20d13-2269-47ee-a661-31ca4912c8d8"
-      }
-    },
-    {
-      "key": "48158452-f39b-48d3-a046-670fc1eb0955",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt on the Natural Language Processing Project Planning Guide.",
-        "name": "End of Project Reflection",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "48158452-f39b-48d3-a046-670fc1eb0955",
-        "lesson_activity.key": "f1ce30da-7719-4804-9c07-d086899447b2"
-      }
-    },
-    {
-      "key": "4a8be6cc-0d43-4a8c-805b-2349ceeda420",
-      "position": 2,
-      "properties": {
-        "description": "---"
-      },
-      "seeding_key": {
-        "activity_section.key": "4a8be6cc-0d43-4a8c-805b-2349ceeda420",
-        "lesson_activity.key": "f1ce30da-7719-4804-9c07-d086899447b2"
-      }
-    },
-    {
-      "key": "aac4485b-d1f4-43b5-8923-80cba30c7f63",
-      "position": 3,
-      "properties": {
-        "description": "**Natural Language Processing Project Planning Guide:** Use the rubric in the Natural Language Processing Project Planning Guide to assess the projects.",
-        "name": "Assessment: Grading the Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "aac4485b-d1f4-43b5-8923-80cba30c7f63",
-        "lesson_activity.key": "f1ce30da-7719-4804-9c07-d086899447b2"
+        "activity_section.key": "cef11c21-0c10-462b-a7cc-6965d5c4b427",
+        "lesson_activity.key": "4a1e2948-5071-437f-8498-d027bd9ae4c8"
       }
     },
     {
@@ -4227,17 +4272,6 @@
       "seeding_key": {
         "activity_section.key": "8adde027-fd42-4ae4-af31-42c4cd0c0e0c",
         "lesson_activity.key": "150aebf0-bc33-4eb9-b6b1-63e587e53b43"
-      }
-    },
-    {
-      "key": "a6de5160-d644-4c3c-bcd4-9699eab16ca5",
-      "position": 1,
-      "properties": {
-        "progression_name": "End of Unit Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "a6de5160-d644-4c3c-bcd4-9699eab16ca5",
-        "lesson_activity.key": "1c711c49-070b-42e7-9300-9177c8c36b59"
       }
     }
   ],
@@ -5946,29 +5980,76 @@
       "chapter": 69,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
         "level_keys": [
-          "Student End of Unit Survey_csa6_2025"
+          "student-eou-survey_linked_page-csa6_2025"
         ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa6_2025"
+          "student-eou-survey_linked_page-csa6_2025"
         ],
         "lesson.key": "Natural Language Processing Project",
         "lesson_group.key": "lessonGroup-8",
         "script.name": "csa6-2025",
-        "activity_section.key": "187cfc37-c70a-4cf8-87fd-4d24297cf8d5"
+        "activity_section.key": "0543cc02-bf36-4362-8abb-e2cfd347da78"
       },
       "level_keys": [
-        "Student End of Unit Survey_csa6_2025"
+        "student-eou-survey_linked_page-csa6_2025"
       ]
     },
     {
       "chapter": 70,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U6 Natural Language Processing Project 1-Day_pilot_oo2025"
+        ],
+        "progression": "Natural Language Processing Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6 Natural Language Processing Project 1-Day_pilot_oo2025"
+        ],
+        "lesson.key": "Natural Language Processing Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa6-2025",
+        "activity_section.key": "22046679-a811-43d2-9586-d4b342c157cc"
+      },
+      "level_keys": [
+        "CSA U6 Natural Language Processing Project 1-Day_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page-csa6-1b_2025"
+        ],
+        "lesson.key": "Natural Language Processing Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa6-2025",
+        "activity_section.key": "310c3201-ffa7-49c8-a1cb-98db729e9e7c"
+      },
+      "level_keys": [
+        "student-eou-survey_linked_page-csa6-1b_2025"
+      ]
+    },
+    {
+      "chapter": 72,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5993,32 +6074,32 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 73,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
-          "CSA U6 Natural Language Processing Project 1-Day_pilot_oo2025"
+          "student-eou-survey_2025-csa6"
         ],
-        "progression": "Natural Language Processing Project"
+        "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U6 Natural Language Processing Project 1-Day_pilot_oo2025"
+          "student-eou-survey_2025-csa6"
         ],
-        "lesson.key": "Natural Language Processing Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa6-2025",
-        "activity_section.key": "22046679-a811-43d2-9586-d4b342c157cc"
+        "activity_section.key": "00ef76fe-ced3-484d-83e5-f3fb22e0cb06"
       },
       "level_keys": [
-        "CSA U6 Natural Language Processing Project 1-Day_pilot_oo2025"
+        "student-eou-survey_2025-csa6"
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6042,7 +6123,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 75,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6067,7 +6148,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 76,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6092,7 +6173,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 77,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6113,28 +6194,6 @@
       },
       "level_keys": [
         "CSA 2023 Theater Sandbox_2025"
-      ]
-    },
-    {
-      "chapter": 76,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "End of Unit Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "student-eou-survey_-csa_2025"
-        ],
-        "lesson.key": "Student End of Unit Survey",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa6-2025",
-        "activity_section.key": "a6de5160-d644-4c3c-bcd4-9699eab16ca5"
-      },
-      "level_keys": [
-        "student-eou-survey_-csa_2025"
       ]
     }
   ],
@@ -6957,14 +7016,38 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csa6_2025",
+        "level.key": "student-eou-survey_linked_page-csa6_2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa6_2025"
+          "student-eou-survey_linked_page-csa6_2025"
         ],
         "lesson.key": "Natural Language Processing Project",
         "lesson_group.key": "lessonGroup-8",
         "script.name": "csa6-2025",
-        "activity_section.key": "187cfc37-c70a-4cf8-87fd-4d24297cf8d5"
+        "activity_section.key": "0543cc02-bf36-4362-8abb-e2cfd347da78"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6 Natural Language Processing Project 1-Day_pilot_oo2025",
+        "script_level.level_keys": [
+          "CSA U6 Natural Language Processing Project 1-Day_pilot_oo2025"
+        ],
+        "lesson.key": "Natural Language Processing Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa6-2025",
+        "activity_section.key": "22046679-a811-43d2-9586-d4b342c157cc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_linked_page-csa6-1b_2025",
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page-csa6-1b_2025"
+        ],
+        "lesson.key": "Natural Language Processing Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa6-2025",
+        "activity_section.key": "310c3201-ffa7-49c8-a1cb-98db729e9e7c"
       }
     },
     {
@@ -6981,14 +7064,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U6 Natural Language Processing Project 1-Day_pilot_oo2025",
+        "level.key": "student-eou-survey_2025-csa6",
         "script_level.level_keys": [
-          "CSA U6 Natural Language Processing Project 1-Day_pilot_oo2025"
+          "student-eou-survey_2025-csa6"
         ],
-        "lesson.key": "Natural Language Processing Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa6-2025",
-        "activity_section.key": "22046679-a811-43d2-9586-d4b342c157cc"
+        "activity_section.key": "00ef76fe-ced3-484d-83e5-f3fb22e0cb06"
       }
     },
     {
@@ -7037,18 +7120,6 @@
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa6-2025",
         "activity_section.key": "8adde027-fd42-4ae4-af31-42c4cd0c0e0c"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "student-eou-survey_-csa_2025",
-        "script_level.level_keys": [
-          "student-eou-survey_-csa_2025"
-        ],
-        "lesson.key": "Student End of Unit Survey",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa6-2025",
-        "activity_section.key": "a6de5160-d644-4c3c-bcd4-9699eab16ca5"
       }
     }
   ],
@@ -7127,7 +7198,7 @@
     },
     {
       "name": "[EXEMPLAR] Natural Language Processing Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1CcujljxlnBSwryQIENx5p5LNQzxvk4_5I6rAutUWcXY/edit?usp=share_link",
+      "url": "https://docs.google.com/document/d/1206ZjvMZkvz236jV3lGaZhoby-CXmBY2XdKb4F272vQ/edit?usp=sharing",
       "key": "_exemplar_natural_language_processing_project_planning_guide",
       "properties": {
         "audience": "Verified Teacher",

@@ -143,6 +143,15 @@ export const PROCEDURE_DEFINITION_TYPES: string[] = [
   BLOCK_TYPES.procedureDefinition,
 ];
 
+// A list of block types that are definitions or calls to procedures,
+// including functions and behaviors.
+export const PROCEDURE_BLOCK_TYPES: string[] = [
+  BLOCK_TYPES.procedureCall,
+  BLOCK_TYPES.procedureDefinition,
+  BLOCK_TYPES.behaviorDefinition,
+  BLOCK_TYPES.behaviorGet,
+];
+
 // A list of blocks for getting and setting variables.
 export const VARIABLE_BLOCK_TYPES: string[] = [
   BLOCK_TYPES.variableGet,
@@ -193,14 +202,17 @@ export const READ_ONLY_PROPERTIES = [
   'FieldTextInput',
   'fish_locale',
   'Flyout',
+  'FocusableTreeTraverser',
   'FunctionalBlockUtils',
   'FunctionalTypeColors',
   'FunctionEditor',
+  'FocusManager',
   'gamelab_locale',
   'Generator',
   'geras',
   'Gesture',
   'getRelativeXY',
+  'getSelected',
   'googlecode',
   'hasCategories',
   'html',
@@ -208,6 +220,7 @@ export const READ_ONLY_PROPERTIES = [
   'inputs',
   'INPUT_VALUE',
   'isDraggable',
+  'isSelectable',
   'js',
   'MenuItem',
   'MetricsManager',

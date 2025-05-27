@@ -17,12 +17,8 @@ module AWS
       500 => '/assets/error-pages/500.html'
     }.freeze
     ERROR_CACHE_TTL = 60
-    # Configure CloudFront to forward these headers for S3 origins.
-    S3_FORWARD_HEADERS = %w(
-      Access-Control-Request-Headers
-      Access-Control-Request-Method
-      Origin
-    ).freeze
+    # Default headers to be sent to the origin for most behaviors.
+    DEFAULT_HEADERS = %w(Host CloudFront-Forwarded-Proto)
     # Use the same HTTP Cache configuration as cdo-varnish
     HTTP_CACHE = HttpCache.config(rack_env)
     CACHE_INVALIDATION_MAX_RETRIES = 10
@@ -200,6 +196,22 @@ module AWS
               ]
             }
           end,
+          (if app == :pegasus
+             {
+               Id: 'marketing',
+              CustomOriginConfig: {
+                OriginProtocolPolicy: 'match-viewer',
+                OriginSSLProtocols: %w(TLSv1.2),
+                OriginReadTimeout: 30
+              },
+              DomainName: {Ref: 'InternalMarketingDomainName'},
+              OriginPath: '',
+              OriginShield: {
+                Enabled: true,
+                OriginShieldRegion: {Ref: 'AWS::Region'}
+              },
+             }
+           end),
           {
             Id: 'cdo-assets',
             DomainName: "#{CDO.assets_bucket}.s3.amazonaws.com",
@@ -216,7 +228,7 @@ module AWS
               OriginAccessIdentity: 'origin-access-identity/cloudfront/E17G1PR1YAN7F4'
             },
           },
-        ],
+        ].compact,
         PriceClass: 'PriceClass_All',
         Restrictions: {
           GeoRestriction: {
@@ -248,11 +260,9 @@ module AWS
 
     # Returns a CloudFront CacheBehavior Hash compatible with AWS CloudFormation.
     def self.cache_behavior(behavior_config, path = nil)
-      s3 = ['cdo-assets', 'cdo-restricted'].include? behavior_config[:proxy]
-      # Include Host header in CloudFront's cache key to match Varnish for custom origins.
-      # Include S3 forward headers for s3 origins.
-      headers = behavior_config[:headers] +
-        (s3 ? S3_FORWARD_HEADERS : %w(Host CloudFront-Forwarded-Proto))
+      headers = behavior_config[:headers]
+      headers += DEFAULT_HEADERS unless exclude_default_headers?(behavior_config[:proxy])
+
       cookie_config = behavior_config[:cookies].is_a?(Array) ?
         {
           Forward: 'whitelist',
@@ -262,11 +272,17 @@ module AWS
           Forward: behavior_config[:cookies]
         }
 
-      accept_language_fn =
-        {
+      function_associations = {
+        accept_language: {
           EventType: 'viewer-request',
           FunctionARN: {'Fn::Sub': 'arn:aws:cloudfront::${AWS::AccountId}:function/AcceptLanguage'}
+        },
+        marketing_router: {
+          EventType: 'origin-request',
+          LambdaFunctionARN: {Ref: 'MarketingRouterVersion'}
         }
+      }
+
       normalize_accept_language = headers.include?('Accept-Language')
       # Behaviors including session cookies aren't cacheable anyway, so don't bother
       # running the extra header-normalization function for these.
@@ -284,7 +300,8 @@ module AWS
           Headers: headers,
           QueryString: behavior_config[:query] != false
         },
-        FunctionAssociations: normalize_accept_language ? [accept_language_fn] : [],
+        FunctionAssociations: normalize_accept_language ? [function_associations[:accept_language]] : [],
+        LambdaFunctionAssociations: behavior_config[:include_marketing_router_lambda] ? [function_associations[:marketing_router]] : [],
         MaxTTL: 31_536_000, # =1 year,
         MinTTL: 0,
         SmoothStreaming: false,
@@ -336,6 +353,13 @@ module AWS
         resource,
         policy: policy
       )
+    end
+
+    # Don't include the Host and CloudFront-Forwarded-Proto headers in the cache key for
+    # S3 origins or the NextJS-based marketing origin. For the marketing site switchover, we
+    # manually override the Host header in the marketing-router lambda function.
+    private_class_method def self.exclude_default_headers?(origin_proxy_name)
+      ['cdo-assets', 'cdo-restricted', 'marketing'].include?(origin_proxy_name)
     end
   end
 end

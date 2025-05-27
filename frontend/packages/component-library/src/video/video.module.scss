@@ -74,6 +74,10 @@
   align-items: start;
   gap: 1rem;
 
+  figcaption {
+    margin-bottom: 0;
+  }
+
   .download {
     margin-top: 0.25rem;
   }

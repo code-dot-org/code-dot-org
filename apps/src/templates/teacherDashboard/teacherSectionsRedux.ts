@@ -237,6 +237,7 @@ const sectionSlice = createSlice({
           sections: ServerSection[];
           autoSelectOnlySection: boolean;
           sectionOrder: number[] | null;
+          destructive: boolean | null;
         }>
       ) {
         const sections = action.payload.sections.map(sectionFromServerSection);
@@ -259,7 +260,8 @@ const sectionSlice = createSlice({
             Object.keys(section).forEach(key => {
               if (
                 section[key as keyof Section] === undefined &&
-                prevSection[key as keyof Section] !== undefined
+                prevSection[key as keyof Section] !== undefined &&
+                !action.payload.destructive
               ) {
                 throw new Error(
                   'SET_SECTIONS called multiple times in a way that would remove data'
@@ -299,12 +301,18 @@ const sectionSlice = createSlice({
           ..._.keyBy(sections, 'id'),
         };
       },
-      prepare(sections, autoSelectOnlySection = true, sectionOrder = null) {
+      prepare(
+        sections,
+        autoSelectOnlySection = true,
+        sectionOrder = null,
+        destructive = null
+      ) {
         return {
           payload: {
             sections,
             autoSelectOnlySection,
             sectionOrder,
+            destructive,
           },
         };
       },
@@ -684,6 +692,16 @@ const sectionSlice = createSlice({
         state.sections[id].hidden = true;
       });
     },
+    // This is used to set the asyncLoadComplete state in unit tests
+    // and is not used in production code.
+    setAsyncLoad: {
+      reducer(state, action: PayloadAction<boolean>) {
+        state.asyncLoadComplete = action.payload;
+      },
+      prepare(asyncLoadComplete: boolean) {
+        return {payload: asyncLoadComplete};
+      },
+    },
     setSectionOrder: {
       reducer(
         state,
@@ -873,13 +891,15 @@ export const asyncLoadTeacherHomepageSectionData =
   };
 
 export const asyncLoadSectionData =
-  (id: number | void): SectionThunkAction =>
+  (id: number | void, destructive: boolean | void): SectionThunkAction =>
   dispatch => {
     dispatch(beginAsyncLoad());
 
     const promises: Promise<object>[] = [
       fetchJSON('/dashboardapi/sections').then(sections =>
-        dispatch(setSections(sections as ServerSection[]))
+        dispatch(
+          setSections(sections as ServerSection[], false, null, destructive)
+        )
       ),
       fetchJSON('/dashboardapi/sections/valid_course_offerings').then(
         offerings =>
@@ -1225,6 +1245,7 @@ export const {
   sectionDoesNotHaveNewData,
   archiveAllSections,
   setSectionOrder,
+  setAsyncLoad,
 } = sectionSlice.actions;
 
 export default sectionSlice.reducer;

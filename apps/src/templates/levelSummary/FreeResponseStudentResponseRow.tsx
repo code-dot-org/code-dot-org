@@ -5,7 +5,7 @@ import React, {useState} from 'react';
 import {StudentWorkEvaluation} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import {
   FeedbackData,
-  logUserFeedbackOnStudentEvaluation,
+  logAiInteractionFeedback as logUserFeedbackOnStudentEvaluation,
 } from '@cdo/apps/aiEvaluation/aiInteractionFeedbackApi';
 
 import AiEvaluationFeedbackModal from './AiEvaluationFeedbackModal';
@@ -52,9 +52,9 @@ const FreeResponseStudentResponseRow: React.FC<
         <Tags
           tagsList={[
             {
-              label: FEEDBACK_TYPE.NEEDS_REVIEW.label,
+              label: FEEDBACK_TYPE.NOT_PROFICIENT.label,
               icon: {
-                iconName: FEEDBACK_TYPE.NEEDS_REVIEW.icon,
+                iconName: FEEDBACK_TYPE.NOT_PROFICIENT.icon,
                 iconStyle: 'solid',
                 title: 'exclamation point',
                 placement: 'left',

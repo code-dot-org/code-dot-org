@@ -1,0 +1,19 @@
+name 'gen-ai-student-level-L12'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# ✅ Lesson Recap: Can You Trust the Bot?
+
+#### After this lesson, you can 
+
+* #### Evaluate the accuracy of AI-generated responses by identifying hallucinations or misleading content.
+
+## **Key Terms**
+
+* #### **Hallucinations** - Inaccuracies in a language model's response. These occur when the most probable response isn't accurate or factual
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

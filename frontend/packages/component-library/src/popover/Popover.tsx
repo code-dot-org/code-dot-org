@@ -12,7 +12,7 @@ export interface PopoverProps extends HTMLAttributes<HTMLDivElement> {
   /** Popover title */
   title: string;
   /** Popover direction/position relative to connected element */
-  direction?: ComponentPlacementDirection | 'none';
+  direction?: ComponentPlacementDirection;
   /** Popover icon */
   icon?: FontAwesomeV6IconProps;
   /** Popover image */
@@ -22,6 +22,7 @@ export interface PopoverProps extends HTMLAttributes<HTMLDivElement> {
   };
   /** Popover content text*/
   content: string;
+  children?: ReactNode;
   /** Popover function to close the popover */
   onClose: () => void;
   /** Custom className */
@@ -59,6 +60,7 @@ const Popover = forwardRef<HTMLDivElement, PopoverProps>(
       className,
       size = 'm',
       style = {},
+      children,
       ...HTMLAttributes
     },
     ref,
@@ -98,6 +100,7 @@ const Popover = forwardRef<HTMLDivElement, PopoverProps>(
             <div className={moduleStyles.textSection}>
               <Heading5>{title}</Heading5>
               <BodyTwoText>{content}</BodyTwoText>
+              {children}
             </div>
             {buttons && (
               <div className={moduleStyles.buttonsSection}>{buttons}</div>

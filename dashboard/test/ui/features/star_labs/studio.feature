@@ -1,7 +1,7 @@
 Feature: Visiting a studio page
 
 Scenario: Resizing Sprites
-  Given I am on "http://studio.code.org/s/allthethings/lessons/22/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/22/levels/1?noautoplay=true"
   And I wait for the lab page to fully load
 
   Then the 0th sprite image has height "100"

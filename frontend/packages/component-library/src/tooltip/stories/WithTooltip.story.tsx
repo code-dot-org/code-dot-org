@@ -1,8 +1,9 @@
 import {Meta, StoryFn} from '@storybook/react';
+import {useRef} from 'react';
 
 import {Button} from '@/button';
 
-import Tooltip, {TooltipProps, WithTooltip} from '../index';
+import Tooltip, {TooltipProps, WithTooltip, WithTooltipHandle} from '../index';
 
 export default {
   title: 'DesignSystem/Tooltip',
@@ -62,6 +63,18 @@ IconsTooltipGroup.args = {
       iconRight: {iconStyle: 'solid', iconName: 'smile'},
     },
   ],
+};
+
+export const NoneDirectionTooltip = SingleTemplate.bind({});
+NoneDirectionTooltip.args = {
+  text: 'Tooltip with direction: none and custom position',
+  tooltipId: 'tooltipNone',
+  direction: 'none',
+  style: {
+    position: 'absolute',
+    left: '50px',
+    top: '100px',
+  },
 };
 
 export const DirectionOfTooltipGroup = MultipleTemplate.bind({});
@@ -222,6 +235,56 @@ TooltipsFullGroup.args = {
       tooltipId: 'tooltipOnLeftXS',
       direction: 'onLeft',
       size: 'xs',
+    },
+  ],
+};
+
+export const ImperativeHideTooltip: StoryFn = () => {
+  const tooltipRef = useRef<WithTooltipHandle>(null);
+
+  const tooltipProps: TooltipProps = {
+    text: 'This tooltip can be hidden imperatively',
+    direction: 'onRight',
+    tooltipId: 'imperative-hide-tooltip',
+    size: 'xs',
+  };
+
+  return (
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1rem',
+        alignItems: 'flex-start',
+      }}
+    >
+      <WithTooltip tooltipProps={tooltipProps} ref={tooltipRef}>
+        <Button
+          text="Hover then click me"
+          onClick={() => {
+            tooltipRef.current?.hideTooltip();
+          }}
+        />
+      </WithTooltip>
+    </div>
+  );
+};
+
+export const ShowHideTailTooltip = MultipleTemplate.bind({});
+ShowHideTailTooltip.args = {
+  components: [
+    {
+      text: 'Tooltip with tail',
+      tooltipId: 'tooltipWithTail',
+      direction: 'onBottom',
+      size: 'm',
+    },
+    {
+      text: 'Tooltip without tail',
+      tooltipId: 'tooltipWithoutTail',
+      direction: 'onBottom',
+      size: 'm',
+      hideTail: true,
     },
   ],
 };

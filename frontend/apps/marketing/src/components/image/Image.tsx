@@ -9,9 +9,16 @@ type ImageProps = {
   altText?: string;
   /** Image decoration */
   decoration?: 'none' | 'border' | 'shadow';
+  /** Image has rounded corners */
+  hasRoundedCorners?: boolean;
 };
 
-const Image: React.FC<ImageProps> = ({src, altText, decoration}) => {
+const Image: React.FC<ImageProps> = ({
+  src,
+  altText,
+  decoration,
+  hasRoundedCorners,
+}) => {
   // Show placeholder text until a content entry is added
   if (src == null) {
     return (
@@ -24,7 +31,14 @@ const Image: React.FC<ImageProps> = ({src, altText, decoration}) => {
     );
   }
 
-  return <DSCOImage src={src} altText={altText} decoration={decoration} />;
+  return (
+    <DSCOImage
+      src={src}
+      altText={altText}
+      decoration={decoration}
+      hasRoundedCorners={hasRoundedCorners}
+    />
+  );
 };
 
 export default Image;

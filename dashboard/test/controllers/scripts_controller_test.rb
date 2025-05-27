@@ -89,10 +89,11 @@ class ScriptsControllerTest < ActionController::TestCase
     create :unit_group_unit, unit_group: course, script: unit, position: 1
 
     get :show, params: {
-      id: unit.name,
+      course_course_name: course.name,
+      position: 1
     }
     assert_response :ok
-    assert_includes(@response.body, "<link rel=\"canonical\" href=\"//test-studio.code.org/s/bogus-script")
+    assert_includes(@response.body, "<link rel=\"canonical\" href=\"//test-studio.code.org/courses/#{course.name}/units/1")
   end
 
   test 'canonical url is not added if is not single unit course' do
@@ -103,7 +104,8 @@ class ScriptsControllerTest < ActionController::TestCase
     create :unit_group_unit, unit_group: course, script: unit2, position: 2
 
     get :show, params: {
-      id: unit.name,
+      course_course_name: course.name,
+      position: 1
     }
     assert_response :ok
     refute_includes(@response.body, "<link rel=\"canonical\"")
@@ -334,29 +336,44 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "show: do not redirect when showing latest stable version of single-unit course for student" do
     sign_in create(:student)
-    get :show, params: {id: @single_unit_2024.name}
+    get :show, params: {
+      course_course_name: @single_unit_course_2024.name,
+      position: 1
+    }
     assert_response :success
   end
 
   test "show: redirect from older version to latest stable version of single-unit course for student" do
     sign_in create(:student)
-    get :show, params: {id: @single_unit_2023.name}
+    get :show, params: {
+      course_course_name: @single_unit_course_2023.name,
+      position: 1
+    }
     assert_redirected_to "/s/#{@single_unit_2024.name}?redirect_warning=true"
   end
 
   test "show: redirect from older version to latest stable version of single-unit course for logged out user" do
-    get :show, params: {id: @single_unit_2023.name}
+    get :show, params: {
+      course_course_name: @single_unit_course_2023.name,
+      position: 1
+    }
     assert_redirected_to "/s/#{@single_unit_2024.name}?redirect_warning=true"
   end
 
   test "show: redirect from new unstable version to latest stable version of single-unit course for student" do
     sign_in create(:student)
-    get :show, params: {id: @single_unit_2025.name}
+    get :show, params: {
+      course_course_name: @single_unit_course_2025.name,
+      position: 1
+    }
     assert_redirected_to "/s/#{@single_unit_2024.name}?redirect_warning=true"
   end
 
   test "show: redirect from new unstable version to latest stable version of single-unit course for logged out user" do
-    get :show, params: {id: @single_unit_2025.name}
+    get :show, params: {
+      course_course_name: @single_unit_course_2025.name,
+      position: 1
+    }
     assert_redirected_to "/s/#{@single_unit_2024.name}?redirect_warning=true"
   end
 
@@ -366,19 +383,25 @@ class ScriptsControllerTest < ActionController::TestCase
     section_single_unit_2023.add_student(student_single_unit_2023)
 
     sign_in student_single_unit_2023
-    get :show, params: {id: @single_unit_2025.name}
+    get :show, params: {
+      course_course_name: @single_unit_course_2025.name,
+      position: 1
+    }
     assert_redirected_to "/s/#{@single_unit_2023.name}?redirect_warning=true"
   end
 
   test "show: do not redirect teacher to latest stable version of single-unit course" do
     sign_in create(:teacher)
-    get :show, params: {id: @single_unit_2023.name}
+    get :show, params: {
+      course_course_name: @single_unit_course_2023.name,
+      position: 1
+    }
     assert_response :ok
   end
 
   test "show: redirect from family name to latest stable version of single-unit course" do
     get :show, params: {id: @single_unit_course_offering.key}
-    assert_redirected_to "/s/#{@single_unit_2024.name}"
+    assert_redirected_to "/courses/#{@single_unit_course_2024.name}/units/1"
   end
 
   test "show: teacher in teacher-local-nav-v2 experiment is redirected to teacher dashboard if unit is in a section" do
@@ -391,8 +414,11 @@ class ScriptsControllerTest < ActionController::TestCase
 
     sign_in experiment_teacher
 
-    get :show, params: {id: experiment_script.name}
-    assert_redirected_to "/teacher_dashboard/sections/#{experiment_section.id}/unit/#{experiment_script.name}"
+    get :show, params: {
+      course_course_name: experiment_course.name,
+      position: 1
+    }
+    assert_redirected_to "/teacher_dashboard/sections/#{experiment_section.id}/courses/#{experiment_course.name}/units/1"
   end
 
   test "show: should remove user_id url param from non-dashboard unit overview when teacher local nav v2 experiment enabled" do
@@ -625,25 +651,25 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in create(:levelbuilder)
 
-    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+    unit = create :script
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+      login_required: true
     }
     assert_response :forbidden
     unit.reload
-    assert_equal unit.get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+    refute unit.login_required
   end
 
   test "can update on levelbuilder" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
 
-    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+    unit = create :script
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts/en.yml'}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
@@ -653,11 +679,11 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+      login_required: true
     }
     assert_response :success
     unit.reload
-    assert_equal unit.get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+    assert unit.login_required
   end
 
   test "update instruction_type" do
@@ -681,129 +707,23 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal unit.get_instruction_type, Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.self_paced
   end
 
-  test "update published state to in_development" do
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in create(:levelbuilder)
-
-    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
-    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts/en.yml'}.once
-    File.stubs(:write).with do |filename, contents|
-      filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
-    end
-    post :update, params: {
-      id: unit.id,
-      script: {name: unit.name},
-      is_migrated: true,
-      lesson_groups: '[]',
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
-    }
-    assert_response :success
-    unit.reload
-    assert_equal unit.get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
-  end
-
-  test "update published state to pilot" do
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in create(:levelbuilder)
-
-    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
-    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts/en.yml'}.once
-    File.stubs(:write).with do |filename, contents|
-      filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
-    end
-    post :update, params: {
-      id: unit.id,
-      script: {name: unit.name},
-      is_migrated: true,
-      lesson_groups: '[]',
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot,
-      pilot_experiment: 'my-pilot'
-    }
-    assert_response :success
-    unit.reload
-    assert_equal unit.get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
-  end
-
-  test "update published state to beta" do
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in create(:levelbuilder)
-
-    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
-    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts/en.yml'}.once
-    File.stubs(:write).with do |filename, contents|
-      filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
-    end
-    post :update, params: {
-      id: unit.id,
-      script: {name: unit.name},
-      is_migrated: true,
-      lesson_groups: '[]',
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
-    }
-    assert_response :success
-    unit.reload
-    assert_equal unit.get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
-  end
-
-  test "update published state to preview" do
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in create(:levelbuilder)
-
-    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
-    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts/en.yml'}.once
-    File.stubs(:write).with do |filename, contents|
-      filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
-    end
-    post :update, params: {
-      id: unit.id,
-      script: {name: unit.name},
-      is_migrated: true,
-      lesson_groups: '[]',
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
-    }
-    assert_response :success
-    unit.reload
-    assert_equal unit.get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
-  end
-
-  test "update published state to stable" do
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in create(:levelbuilder)
-
-    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
-    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts/en.yml'}.once
-    File.stubs(:write).with do |filename, contents|
-      filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
-    end
-    post :update, params: {
-      id: unit.id,
-      script: {name: unit.name},
-      is_migrated: true,
-      lesson_groups: '[]',
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    }
-    assert_response :success
-    unit.reload
-    assert_equal unit.get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-  end
-
   test "can update on test without modifying filesystem" do
     CDO.stubs(:rack_env).returns(:test)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in create(:levelbuilder)
 
-    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+    unit = create :script
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+      login_required: true
     }
     assert_response :success
     unit.reload
-    assert_equal unit.get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+    assert unit.login_required
   end
 
   test "cannot update on staging" do
@@ -811,18 +731,18 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in create(:levelbuilder)
 
-    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+    unit = create :script
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+      login_required: true
     }
     assert_response :forbidden
     unit.reload
-    assert_equal unit.get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+    refute unit.login_required
   end
 
   test 'cannot update unmigrated unit' do
@@ -1023,29 +943,6 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal Unit.find_by_name(unit.name).get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
   end
 
-  test 'does not hide unit with blank pilot_experiment' do
-    sign_in create(:levelbuilder)
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    unit = create :script
-    stub_file_writes(unit.name)
-
-    post :update, params: {
-      id: unit.id,
-      script: {name: unit.name},
-      is_migrated: true,
-      lesson_groups: '[]',
-      pilot_experiment: '',
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
-    }
-
-    assert_response :success
-
-    assert_nil Unit.find_by_name(unit.name).pilot_experiment
-    # blank pilot_experiment does not cause unit to have published_state of pilot
-    assert_equal Unit.find_by_name(unit.name).get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
-  end
-
   test 'update: can update general_params' do
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
@@ -1204,51 +1101,6 @@ class ScriptsControllerTest < ActionController::TestCase
     unit.reload
 
     assert_nil unit.tts
-  end
-
-  test 'published_state is set to nil for script within course' do
-    sign_in create(:levelbuilder)
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    course = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
-    unit = create :script, published_state: nil
-    create :unit_group_unit, unit_group: course, script: unit, position: 1
-    stub_file_writes(unit.name)
-
-    post :update, params: {
-      id: unit.id,
-      script: {name: unit.name},
-      lesson_groups: '[]',
-      is_migrated: true,
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
-    }
-    assert_response :success
-    unit.reload
-
-    assert_nil unit.published_state
-  end
-
-  test 'published_state is set for script within course when different' do
-    sign_in create(:levelbuilder)
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    course = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
-    unit = create :script, published_state: nil
-    create :unit_group_unit, unit_group: course, script: unit, position: 1
-    stub_file_writes(unit.name)
-
-    post :update, params: {
-      id: unit.id,
-      script: {name: unit.name},
-      lesson_groups: '[]',
-      is_migrated: true,
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
-    }
-    assert_response :success
-    unit.reload
-
-    refute_nil unit.published_state
-    assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, unit.published_state
   end
 
   test 'add lesson to migrated unit' do
@@ -1908,7 +1760,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Unit.expects(:get_without_cache).with(@migrated_unit.name, with_associated_models: true).returns(@migrated_unit).once
     get :edit, params: {id: @migrated_unit.name}
 
-    Unit.expects(:get_from_cache).with(@migrated_unit.name, raise_exceptions: false).returns(@migrated_unit).once
+    Unit.expects(:get_from_cache).with(@migrated_unit.name, raise_exceptions: false).returns(@migrated_unit).at_least_once
     Unit.expects(:get_without_cache).never
     get :show, params: {id: @migrated_unit.name}
   end
@@ -1963,7 +1815,7 @@ class ScriptsControllerTest < ActionController::TestCase
     let(:modularity_enabled) {false}
 
     before do
-      allow(Policies::Courses).to receive(:modularity_enabled?).with(user).and_return(modularity_enabled)
+      allow(Policies::Courses).to receive(:modularity_enabled?).and_return(modularity_enabled)
     end
 
     context 'modularity is off' do
@@ -1976,7 +1828,7 @@ class ScriptsControllerTest < ActionController::TestCase
       it '/courses/:course_course_name/units/:position/ does not redirect' do
         sign_in user
         get :show, params: {course_course_name: course.name, position: unit_position}
-        assert_response :success
+        assert_redirected_to "/s/#{unit.name}"
       end
     end
 

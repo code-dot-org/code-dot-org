@@ -32,7 +32,7 @@ export class MarketingPage {
       case 'pr':
         return 'localhost';
       case 'test':
-        return 'dev.marketing.dev-code.org';
+        return 'code.marketing-sites.dev-code.org';
       case 'production':
         return 'code.org';
     }
