@@ -14,6 +14,7 @@ import FieldColourPlugin from '@/components/blockly/plugins/fields/fieldColour';
 import FieldLocationPlugin from '@/components/blockly/plugins/fields/fieldLocation';
 import RoundInputPlugin from '@/components/blockly/plugins/inputs/round';
 import TriangleInputPlugin from '@/components/blockly/plugins/inputs/triangle';
+import SharableProceduresPlugin from '@/components/blockly/plugins/sharableProcedures';
 import ToolboxTrashcanPlugin from '@/components/blockly/plugins/toolboxTrashcan';
 import ThrasosRenderer from '@/components/blockly/renderers/thrasos';
 import DefaultTheme from '@/components/blockly/themes/default';
@@ -51,6 +52,7 @@ const plugins: Plugin[] = [
   FieldColourPlugin,
   // Provide the 'field_location' field for locations
   FieldLocationPlugin,
+  SharableProceduresPlugin,
 ];
 
 const SpriteLabLevel: React.FunctionComponent<SpriteLabLevelProps> = ({

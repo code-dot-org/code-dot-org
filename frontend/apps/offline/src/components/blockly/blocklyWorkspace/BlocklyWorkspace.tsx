@@ -127,8 +127,42 @@ const BlocklyWorkspace: React.FunctionComponent<BlocklyWorkspaceProps> = ({
     // Make sure we have the default blocks
     (customBlocks || []).forEach(blockDefinition => {
       if ((blockDefinition as ComplexBlockDefinition).message0) {
-        const complexBlockDefinition =
-          blockDefinition as ComplexBlockDefinition;
+        const complexBlockDefinition = {
+          ...blockDefinition,
+        } as ComplexBlockDefinition;
+
+        // Register mutator if we have never seen it before and it exists
+        if (complexBlockDefinition.mutator) {
+          const name = blockDefinition.mutator.name;
+          if (!Blockly.Extensions.isRegistered(name)) {
+            Blockly.Extensions.registerMutator(name, blockDefinition.mutator);
+          }
+          complexBlockDefinition.mutator = name;
+        }
+
+        // Register extensions if we have never seen it before and it exists
+        complexBlockDefinition.extensions = [
+          ...(complexBlockDefinition.extensions || []),
+        ].map(extension => {
+          if (extension?.name && extension?.extension) {
+            const name = extension.name;
+            if (!Blockly.Extensions.isRegistered(name)) {
+              Blockly.Extensions.register(name, extension.extension);
+            }
+            return name;
+          }
+
+          if (extension?.name && extension?.mixin) {
+            const name = extension.name;
+            if (!Blockly.Extensions.isRegistered(name)) {
+              Blockly.Extensions.registerMixin(name, extension.mixin);
+            }
+            return name;
+          }
+
+          return extension;
+        });
+
         Blockly.common.defineBlocksWithJsonArray([complexBlockDefinition]);
 
         javascriptGenerator.forBlock[complexBlockDefinition.type] = function (

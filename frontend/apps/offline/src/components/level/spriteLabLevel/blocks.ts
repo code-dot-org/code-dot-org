@@ -1,5 +1,12 @@
 import type {BlockDefinition} from '@/components/blockly/types';
 
+import {
+  behaviorCallerGetDefMixin,
+  behaviorCallerGetDefBlockMixin,
+  behaviorCreateDefMixin,
+} from './mixins';
+import {behaviorGetMutator} from './mutators';
+
 const spriteList = [
   [
     {
@@ -98,10 +105,32 @@ const blocks: BlockDefinition[] = [
     type: 'gamelab_behavior_get',
     style: 'behavior_blocks',
     tooltip: '',
-    helpUrl: '',
+    helpUrl: '/docs/spritelab/spritelab_adding-and-removing-behaviors',
     output: 'Behavior',
-    message0: 'behavior',
-    args0: [],
+    message0: '%1 %2',
+    args0: [
+      {
+        type: 'field_label',
+        name: 'NAME',
+        check: '%{BKY_UNNAMED_KEY}',
+      },
+      {
+        type: 'input_dummy',
+        name: 'TOPROW',
+      },
+    ],
+    extensions: [
+      //'procedures_edit_button',
+      'procedure_caller_get_def_mixin',
+      behaviorCallerGetDefMixin,
+      'procedure_caller_var_mixin',
+      'procedure_caller_update_shape_mixin',
+      'procedure_caller_context_menu_mixin',
+      'procedure_caller_onchange_mixin',
+      behaviorCallerGetDefBlockMixin,
+      behaviorCreateDefMixin,
+    ],
+    mutator: behaviorGetMutator,
   },
   {
     type: 'behavior_definition',

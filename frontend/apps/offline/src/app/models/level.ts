@@ -474,6 +474,18 @@ function parseBlockXml(blockEl: Element): any {
             block.extraState[attr.name] = attr.value;
           }
         }
+
+        // Some specific legacy mutators also pull in attributes from the next sibling
+        for (const attr of Array.from(
+          child.nextElementSibling?.attributes || [],
+        )) {
+          block.extraState ??= {};
+          if (attr.name === 'elseif') {
+            block.extraState['elseIfCount'] = attr.value;
+          } else {
+            block.extraState[attr.name] = attr.value;
+          }
+        }
         break;
     }
   }
