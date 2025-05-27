@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-23 03:41:24 UTC",
+    "serialized_at": "2025-05-25 03:43:46 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -137,7 +137,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "**What are some of the primary components of a Java program?**\n\nStudents are introduced to the Java Lab programming environment and its features. Students encounter their first Java program and explore the structure of a Java source code file. While investigating a simple program, students discover key components of a Java source code file, including the class header, the `main` method, syntax, and comments. Students then use their new knowledge of Java syntax to find and fix syntax errors.",
-        "preparation": "* **(Optional)** Print copies of the Java Lab Guided Notes (one for each student)\n* Print copies of the Investigate: Working with Java Files handout (one for each pair of students)",
+        "preparation": "* Print copies of the Investigate: Working with Java Files handout (one for each pair of students)",
         "student_overview": "**What are some of the primary components of a Java program?**\n\nIn this lesson, you are introduced to the Java Lab programming environment and its features. You encounter your first Java program and explore the structure of a Java source code file. While investigating a simple program, you discover key components of a Java source code file, including the class header, the `main` method, syntax, and comments. You then use your new knowledge of Java syntax to find and fix syntax errors."
       },
       "seeding_key": {
@@ -155,7 +155,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**What is object-oriented programming?**\n\nStudents are introduced to The Neighborhood and learn about the organization of the grid, potential obstacles, and some of the classes that make up The Neighborhood. Students begin to develop an understanding of classes and objects in Java and identify the components and relationship between these concepts. Students then explore the `Painter` class to identify the attributes and behavior that a `Painter` object has and can do and consider how they might use a `Painter` object in The Neighborhood.",
-        "preparation": "* **(Optional)** Print copies of the Classes and Objects Guided Notes (one for each student)\n* Preview the *Object-Oriented Programming* video\n* Print copies of The Painter handout (one for each student)",
+        "preparation": "* Preview the *Object-Oriented Programming* video\n* Print copies of The Painter handout (one for each student)",
         "student_overview": "**What is object-oriented programming?**\n\nIn this lesson, you are introduced to The Neighborhood and learn about the organization of the grid, potential obstacles, and some of the classes that make up The Neighborhood. You begin to develop an understanding of classes and objects in Java and identify the components and relationship between these concepts. You then explore the `Painter` class to identify the attributes and behavior that a `Painter` object has and can do and consider how they might use a `Painter` object in The Neighborhood."
       },
       "seeding_key": {
@@ -173,7 +173,7 @@
       "relative_position": 5,
       "properties": {
         "overview": "**How do I create objects from a class?**\n\nStudents explored the fundamentals of object-oriented programming and the `Painter` class and identified its attributes and behaviors. In this lesson, students learn how to create objects from a class using the `new` keyword and by calling a constructor. Students discover that they can create multiple objects from a class and practice creating `Painter` objects to complete small programs in The Neighborhood.",
-        "preparation": "* **(Optional)** Print copies of the Instantiating Objects Guided Notes (one for each student)\n* Preview the *Creating Objects* video",
+        "preparation": "* Preview the *Creating Objects* video",
         "student_overview": "**How do I create objects from a class?**\n\nYou explored the fundamentals of object-oriented programming and the `Painter` class and identified its attributes and behaviors. In this lesson, you learn how to create objects from a class using the `new` keyword and by calling a constructor. You discover that you can create multiple objects from a class and practice creating `Painter` objects to complete small programs in The Neighborhood."
       },
       "seeding_key": {
@@ -191,7 +191,7 @@
       "relative_position": 6,
       "properties": {
         "overview": "**How do I give instructions to an object in Java?**\n\nStudents have seen examples of programs where a `Painter` object is moving and painting in The Neighborhood. In this lesson, students explore the `move()` and `turnLeft()` methods in the `Painter` class and learn the syntax for calling methods in Java. Students then practice calling methods to navigate in The Neighborhood.",
-        "preparation": "* **(Optional)** Print copies of the Methods Guided Notes (one for each student)\n* Preview the *Calling Methods* video",
+        "preparation": "* Preview the *Calling Methods* video",
         "student_overview": "**How do I give instructions to an object in Java?**\n\nYou have seen examples of programs where a `Painter` object is moving and painting in The Neighborhood. In this lesson, you explore the `move()` and `turnLeft()` methods in the `Painter` class and learn the syntax for calling methods in Java. You then practice calling methods to navigate in The Neighborhood."
       },
       "seeding_key": {
@@ -209,7 +209,6 @@
       "relative_position": 7,
       "properties": {
         "overview": "**How can I give a specific value for a method to use?**\n\nIn this lesson, students expand on what they have learned about methods to explore how method parameters and arguments are used to provide additional information for methods to perform their intended task, such as the `paint()` method in the `Painter` class. While learning about arguments, students are introduced to string literals and how to use these to specify paint colors. Students then practice calling methods with and without arguments to navigate and paint in The Neighborhood.",
-        "preparation": "* **(Optional)** Print copies of the Methods with Parameters Guided Notes (one for each student)",
         "student_overview": "**How can I give a specific value for a method to use?**\n\nIn this lesson, you expand on what you have learned about methods to explore how method parameters and arguments are used to provide additional information for methods to perform their intended task, such as the `paint()` method in the `Painter` class. While learning about arguments, you are introduced to string literals and how to use these to specify paint colors. You then practice calling methods with and without arguments to navigate and paint in The Neighborhood."
       },
       "seeding_key": {
@@ -227,7 +226,7 @@
       "relative_position": 8,
       "properties": {
         "overview": "**Why would I use inheritance?**\n\nStudents have used the `Painter` class to navigate and paint in The Neighborhood and likely have noticed that the `Painter` class does not have a method to turn right. In this lesson, students learn about inheritance and the need to create superclasses and subclasses to represent similar objects that have shared attributes and behaviors. Students explore different use cases for inheritance and create a `PainterPlus` class as a subclass of the `Painter` class. Students realize that while the `PainterPlus` class has access to the methods in the `Painter` class, they can add new methods to expand its capabilities.",
-        "preparation": "* **(Optional)** Print copies of the Inheritance Guided Notes (one for each student)\n* Preview the *Inheritance* video",
+        "preparation": "* Preview the *Inheritance* video",
         "student_overview": "**Why would I use inheritance?**\n\nThe `Painter` class has several methods for navigating and painting The Neighborhood, but it also has limitations. In this lesson, you learn about inheritance and the need to create superclasses and subclasses to represent similar objects that have shared attributes and behaviors. You explore different use cases for inheritance and create a `PainterPlus` class as a subclass of the `Painter` class. With your `PainterPlus` class, you have access to the methods in the `Painter` class and can add new methods to expand its capabilities."
       },
       "seeding_key": {
@@ -245,7 +244,7 @@
       "relative_position": 9,
       "properties": {
         "overview": "**How do I write methods for the behaviors I want an object to have?**\n\nStudents have used the methods in the `Painter` class to navigate and paint in The Neighborhood and identified the limitations of the methods available in the `Painter` class. In this lesson, students learn to write and use methods in the `PainterPlus` class to expand its functionality. Students learn that a method with a `void` return type does not return a value and identify methods in the `Painter` class that have a `void` return type. The functionality of inheritance is emphasized when students discover that methods written in the `PainterPlus` class cannot be used by a `Painter` object. Students explore how to write methods with and without parameters then practice writing methods in their `PainterPlus` class.",
-        "preparation": "* **(Optional)** Print copies of the Writing Methods Guided Notes (one for each student)\n* Preview the *Writing a Method* video",
+        "preparation": "* Preview the *Writing a Method* video",
         "student_overview": "**How do I write methods for the behaviors I want an object to have?**\n\nYou have used the methods in the `Painter` class to navigate and paint in The Neighborhood and identified the limitations of the methods available in the `Painter` class. In this lesson, you learn how to write and use methods in the `PainterPlus` class to expand its functionality. You learn that a method with a `void` return type does not return a value and identify methods in the `Painter` class that have a `void` return type. You strengthen your understanding of how inheritance works when you discover that methods written in the `PainterPlus` class cannot be used by a `Painter` object. You explore how to write methods with and without parameters then practice writing methods in your `PainterPlus` class."
       },
       "seeding_key": {
@@ -281,7 +280,7 @@
       "relative_position": 11,
       "properties": {
         "overview": "**How can I use the problem solving process to debug a program?**\n\nIn an introductory computer science course such as Computer Science Discoveries (CSD) or Computer Science Principles (CSP), students learned about bugs and debugging strategies. Students recall what they remember about debugging and consider how they have used the problem solving process to develop solutions to learn how to debug Java programs. Students explore variables, printing, and methods in the `Painter` class to obtain information about a `Painter` object and learn how to apply the problem solving process to find errors in a program and develop and test potential solutions. Students then practice using these strategies and the problem solving process to debug a program in The Neighborhood.",
-        "preparation": "* **(Optional)** Print copies of the Debugging Strategies Guided Notes (one for each student)\n* Print copies of the Investigate: Debugging in The Neighborhood handout (one for each pair of students)\n* Preview the *Printing in Java* video",
+        "preparation": "* Print copies of the Investigate: Debugging in The Neighborhood handout (one for each pair of students)\n* Preview the *Printing in Java* video",
         "student_overview": "**How can I use the problem solving process to debug a program?**\n\nYou have likely learned about bugs and debugging strategies in a previous computer science course. In this lesson, you recall what you remember about debugging and consider how you have used the problem solving process to develop solutions to learn how to debug Java programs. You explore variables, printing, and methods in the `Painter` class to obtain information about a `Painter` object and learn how to apply the problem solving process to find errors in a program and develop and test potential solutions. You then practice using these strategies and the problem solving process to debug a program in The Neighborhood."
       },
       "seeding_key": {
@@ -298,9 +297,8 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.1\n* Topic Questions 5.8\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/2) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How does a constructor assign values to instance variables?**\n\nStudents have used constructors to create a variety of objects, including `Painter` objects. Students build on their knowledge of instance variables to explore how to assign values to the instance variables when an object is created. Students recall that the constructor they have used in the `Painter` class instantiates a `Painter` object with the same values every time, and they consider the decisions a software engineer needs to make to decide what default values should be assigned to instance variables. Students practice writing no-argument constructors and continue developing the `Dessert` class for the Joyful Pastries food truck.",
-        "preparation": "* **(Optional)** Print copies of the No-Argument Constructors Guided Notes (one for each student)\n* Preview the *Constructors* video",
+        "preparation": "* Preview the *Constructors* video",
         "student_overview": "**How does a constructor assign values to instance variables?**\n\nYou have used constructors to create a variety of objects, including `Painter` objects. In this lesson, you build on your knowledge of instance variables to explore how to assign values to the instance variables when an object is created. You recall that the constructor you have used in the `Painter` class instantiates a `Painter` object with the same values every time, and you consider the decisions a software engineer needs to make to decide what default values should be assigned to instance variables. You practice writing no-argument constructors and continue developing the `Dessert` class for the Joyful Pastries food truck."
       },
       "seeding_key": {
@@ -318,7 +316,7 @@
       "relative_position": 13,
       "properties": {
         "overview": "**How can I create objects with specific values for its instance variables?**\n\nStudents have learned how to write no-argument constructors to assign default values to instance variables and use these to instantiate objects. In this lesson, students consider the limitations of no-argument constructors and learn about using parameterized constructors to assign specific values to the instance variables. Students explore the components of a parameterized constructor and its functionality, then practice writing parameterized constructors in a class.",
-        "preparation": "* **(Optional)** Print copies of the Parameterized Constructors Guided Notes (one for each student)\n* Preview the *Overloaded Constructors* video",
+        "preparation": "* Preview the *Overloaded Constructors* video",
         "student_overview": "**How can I create objects with specific values for its instance variables?**\n\nYou have learned how to write no-argument constructors to assign default values to instance variables and use these to instantiate objects. In this lesson, you consider the limitations of no-argument constructors and learn about using parameterized constructors to assign specific values to the instance variables. You explore the components of a parameterized constructor and its functionality, then practice writing parameterized constructors in a class."
       },
       "seeding_key": {
@@ -336,7 +334,7 @@
       "relative_position": 14,
       "properties": {
         "overview": "**How do I get input from the user?**\n\nIn this lesson, students learn how to collect input from users using the `Scanner` class. The lesson focuses on building programs that interact with users by asking for and processing input. Through guided notes, videos, and hands-on coding activities, students explore how to create and use `Scanner` objects and how to access documentation to learn more about available methods.",
-        "preparation": "- (Optional) Print copies of the User Input Guided Notes (one for each student)\n- Preview the *Creating Scanner Objects* and *Scanner Class Methods* videos",
+        "preparation": "- Preview the *Creating Scanner Objects* and *Scanner Class Methods* videos",
         "student_overview": "**How do I get input from the user?**\n\nToday you learn how to make your programs interactive by asking the user for input. You use a tool in Java called the `Scanner` class to read information typed by the user. You practice writing code that takes this input and uses it in a program. You also learn how to look up more information about what the `Scanner` class can do and how to fix common mistakes in your code."
       },
       "seeding_key": {
@@ -354,7 +352,6 @@
       "relative_position": 15,
       "properties": {
         "overview": "**How can I assign values to the instance variables declared in a superclass from a subclass constructor?**\n\nStudents have learned how to write no-argument and parameterized constructors and used the `this` keyword to refer to the current object. In this lesson, students revisit inheritance and explore how to assign values to the instance variables declared in a superclass from a subclass constructor. Students learn how to use the `super` keyword to call the superclass constructor from a subclass and are introduced to the `Object` class. Students then practice writing no-argument and parameterized constructors in a subclass before applying these concepts to the `Dessert` subclasses they previously created.",
-        "preparation": "* **(Optional)** Print copies of the Constructors and Inheritance Guided Notes (one for each student)",
         "student_overview": "**How can I assign values to the instance variables declared in a superclass from a subclass constructor?**\n\nYou have learned how to write no-argument and parameterized constructors and use the `this` keyword to refer to the current object. In this lesson, you revisit inheritance and explore how to assign values to the instance variables declared in a superclass from a subclass constructor. You learn how to use the `super` keyword to call the superclass constructor from a subclass and are introduced to the `Object` class. You then practice writing no-argument and parameterized constructors in a subclass before applying these concepts to the `Dessert` subclass you previously created."
       },
       "seeding_key": {
@@ -372,7 +369,7 @@
       "relative_position": 16,
       "properties": {
         "overview": "**How are the types of variables in Java similar and different?**\n\nIn this lesson, students revisit variables and data types and learn the difference between primitive and reference types. Students investigate variables of type `int`, `double`, `boolean`, and `String` and explore using the assignment operator to initialize or change the value stored in a variable. Students then practice tracing code segments to identify the current values stored in variables.",
-        "preparation": "* **(Optional)** Print copies of the Variables Guided Notes (one for each student)\n* Preview the *Creating Variables* video\n* Print copies of the Investigate: Variables handout (one for each student)",
+        "preparation": "* Preview the *Creating Variables* video\n* Print copies of the Investigate: Variables handout (one for each student)",
         "student_overview": "**How are the types of variables in Java similar and different?**\n\nIn this lesson, you revisit variables and data types and learn the difference between primitive and reference types. You investigate variables of type `int`, `double`, `boolean`, and `String` and explore using the assignment operator to initialize or change the value stored in a variable. You then practice tracing code segments to identify the current values stored in variables."
       },
       "seeding_key": {
@@ -390,7 +387,6 @@
       "relative_position": 17,
       "properties": {
         "overview": "**How can I use variables and operators to perform calculations?**\n\nStudents have learned how to use variables to store primitive values and object references. In this lesson, students explore writing and evaluating expressions using arithmetic operators and compound assignment operators. Students discover how the data type impacts the way an expression is evaluated and the result of dividing an `int` or a `double` value by zero. They also learn about using compound assignment operators and explore the mod ( `%` ) operator.",
-        "preparation": "* **(Optional)** Print copies of the Operators and Expressions Guided Notes (one for each student)",
         "student_overview": "**How can I use variables and operators to perform calculations?**\n\nYou have learned how to use variables to store primitive values and object references. In this lesson, you explore writing and evaluating expressions using arithmetic operators and compound assignment operators. You discover how the data type impacts the way an expression is evaluated and the result of dividing an `int` or a `double` value by zero. You also learn about using compound assignment operators and explore the mod ( `%` ) operator."
       },
       "seeding_key": {
@@ -408,7 +404,6 @@
       "relative_position": 18,
       "properties": {
         "overview": "**What happens if a value in your program falls beyond the maximum or minimum range of values?**\n\nIn this lesson, students explore what it means for computers to have a specified amount of memory for data storage, and how different data types have storage allotted. They discover the minimum and maximum values for integers and how exceeding these limits causes overflow or underflow errors. They investigate strategies for avoiding overflow errors, and adapt those strategies to avoid roundoff errors. Students then practice writing methods to check for and avoid overflow errors. \n",
-        "preparation": "* **(Optional)** Print copies of the Casting and Range of Variables Guided Notes (one for each student)",
         "student_overview": "**What happens if a value in your program falls beyond the maximum or minimum range of values?**\n\nIn this lesson, you will dive into how computers store data and the limits each data type has. You'll uncover the boundaries for integers and what happens if you go beyond them, leading to overflow or underflow errors. We'll explore ways to prevent these errors and also learn about roundoff errors. Finally, you'll get hands-on experience writing methods to detect and steer clear of overflow errors."
       },
       "seeding_key": {
@@ -426,7 +421,7 @@
       "relative_position": 19,
       "properties": {
         "overview": "**How can I easily display information about an object?**\n\nStudents have learned to use accessor methods to obtain information about the state of an object. In this lesson, students explore how to print an object reference and the `toString()` method to easily obtain information about an object. Students revisit the `Object` class and learn how to override its `toString()` method and practice writing a `toString()` method in a class using escape sequences to format output. Students then write a `toString()` method in the `Dessert` class and subclass.",
-        "preparation": "* **(Optional)** Print copies of the Printing Objects Guided Notes (one for each student)\n* Preview *The toString() Method* video",
+        "preparation": "* Preview *The toString() Method* video",
         "student_overview": "**How can I easily display information about an object?**\n\nYou have learned to use accessor methods to obtain information about the state of an object. In this lesson, you explore how to print an object reference and the `toString()` method to easily obtain information about an object. You revisit the `Object` class and learn how to override its `toString()` method and practice writing a `toString()` method in a class using escape sequences to format output. You then write a `toString()` method in the `Dessert` class and subclass."
       },
       "seeding_key": {
@@ -444,7 +439,7 @@
       "relative_position": 20,
       "properties": {
         "overview": "**What can I make with The Theater?**\n\nIn this unit, students explore data visualizations and consider how they can create their own visuals to tell a story about a dataset. Students start by exploring The Theater through an existing program and reading documentation to identify the available classes and methods they can use to create drawings, show images, and play sounds. They then practice using these methods to create simple drawings and visuals and consider how they can use The Theater to create animations and visualizations of the dataset they used for their Data for Social Good Project.",
-        "preparation": "* **(Optional)** Print copies of the The Theater Guided Notes (one for each student)\n* Preview the *Welcome to The Theater* video\n* Print copies of the Unit 4 Guide (one for each student)\n* Print copies of the Investigating The Theater handout (one for each pair of students)",
+        "preparation": "* Preview the *Welcome to The Theater* video\n* Print copies of the Investigating The Theater handout (one for each pair of students)",
         "student_overview": "**What can I make with The Theater?**\n\nIn this unit, you explore data visualizations and consider how you can create your own visuals to tell a story about a dataset. You start by exploring The Theater through an existing program and reading documentation to identify the available classes and methods you can use to create drawings, show images, and play sounds. You then practice using these methods to create simple drawings and visuals and consider how you can use The Theater to create animations and visualizations of the dataset you used for your Data for Social Good Project."
       },
       "seeding_key": {
@@ -462,7 +457,7 @@
       "relative_position": 21,
       "properties": {
         "overview": "**What can I do with the `Math` class?**\n\nStudents have used classes like `Scanner` and `Object` from the Java API as well as classes from The Neighborhood and The Theater. In this lesson, students learn about the `Math` class and how the `static` keyword can be used with the `final` keyword to create constants. They explore the documentation for the `Math` class to identify its methods and learn about their functionalities. Students then practice creating and using constants and calling methods in the `Math` class.",
-        "preparation": "* **(Optional)** Print copies of the The Math Class Guided Notes (one for each student)\n* Preview the *Constants* video\n* Print copies of The Math Class handout (one for each student)\n* Print copies of the Math Class Graphic Organizer handout (one for each student)",
+        "preparation": "* Preview the *Constants* video\n* Print copies of The Math Class handout (one for each student)\n* Print copies of the Math Class Graphic Organizer handout (one for each student)",
         "student_overview": "**What can I do with the `Math` class?**\n\nYou have used classes like `Scanner` and `Object` from the Java API as well as classes from The Neighborhood and The Theater. In this lesson, you learn about the `Math` class and how the `static` keyword can be used with the `final` keyword to create constants. You explore the documentation for the `Math` class to identify its methods and learn about their functionalities. You then practice creating and using constants and calling methods in the `Math` class."
       },
       "seeding_key": {
@@ -480,7 +475,7 @@
       "relative_position": 22,
       "properties": {
         "overview": "**How can I generate and use random numbers?**\n\nStudents learned about the `Math` class in the previous lesson and explored using some of its methods to perform calculations. In this lesson, students learn about the functionality of `Math.random()` and discover its benefits and limitations. Students consider how they can use `Math.random()` with casting operators to generate random numbers within a specific range and consider how random is used in programs they use every day. They then practice generating and using random numbers within specified ranges and retrieving random elements from a 1D array.",
-        "preparation": "* **(Optional)** Print copies of the Random Guided Notes (one for each student)\n* Preview the *Random Numbers* video\n* Gather the Dataset Summaries handouts collected in Lesson 4",
+        "preparation": "* Preview the *Random Numbers* video",
         "student_overview": "**How can I generate and use random numbers?**\n\nYou learned about the `Math` class in the previous lesson and explored using some of its methods to perform calculations. In this lesson, you learn about the functionality of `Math.random()` and discover its benefits and limitations. You consider how you can use `Math.random()` with casting operators to generate random numbers within a specific range and consider how random is used in programs you use every day. You then practice generating and using random numbers within specified ranges and retrieving random elements from a 1D array."
       },
       "seeding_key": {
@@ -498,7 +493,6 @@
       "relative_position": 23,
       "properties": {
         "overview": "**How can I analyze parts of a `String` object?**\n\nIn this lesson, students revisit the `String` class and learn how to use the `substring()` method. They discover that `String` objects are immutable and are not modified when calling methods in the `String` class. Students also explore how the `substring()` method can be combined with other methods in the `String` class to find the location of a specific character or substring within a `String` and compare substrings for equality. They then practice using the `substring()` method to retrieve a substring of a `String` object and to find and replace specific characters.",
-        "preparation": "* **(Optional)** Print copies of the Substrings Guided Notes (one for each student)",
         "student_overview": "**How can I analyze parts of a `String` object?**\n\nIn this lesson, you revisit the `String` class and learn how to use the `substring()` method. You discover that `String` objects are immutable and are not modified when calling methods in the `String` class. You also explore how the `substring()` method can be combined with other methods in the `String` class to find the location of a specific character or substring within a `String` and compare substrings for equality. You then practice using the `substring()` method to retrieve a substring of a `String` object and to find and replace specific characters."
       },
       "seeding_key": {
@@ -516,7 +510,6 @@
       "relative_position": 24,
       "properties": {
         "overview": "**How can I determine if a list of `String` objects are in alphabetical order?**\n\nStudents have previously learned how to use several of the methods in the String class. In this lesson, students explore the `compareTo()` method and discover how this method can be used to check if a list of `String` objects is in alphabetical order. They then practice using the `compareTo()` method to evaluate `String` objects and using the methods in the `String` class to implement algorithms.",
-        "preparation": "* **(Optional)** Print copies of the Comparing Strings Guided Notes (one for each student)\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up OR use [**this web-based version**](https://csabingo.up.railway.app/) to show the terms and definitions",
         "student_overview": "**How can I determine if a list of `String` objects are in alphabetical order?**\n\nYou have previously learned how to use several of the methods in the `String` class. In this lesson, you explore the `compareTo()` method and discover how this method can be used to check if a list of `String` objects is in alphabetical order. You then practice using the `compareTo()` method to evaluate `String` objects and using the methods in the `String` class to implement algorithms."
       },
       "seeding_key": {
@@ -534,7 +527,6 @@
       "relative_position": 25,
       "properties": {
         "overview": "**How can overloading a method be useful in my programs?**\n\nStudents previously learned about overloading when writing multiple constructors in a class. In this lesson, students revisit overloaded constructors and learn how overloading can be applied to methods. They explore how overloaded methods work and consider scenarios where overloaded methods would be useful. Students then practice writing and calling overloaded methods and revisit their Need to Knows to determine what they have learned that will be useful for their project and what they still need to learn.",
-        "preparation": "* **(Optional)** Print copies of the Overloaded Methods Guided Notes (one for each student)",
         "student_overview": "**How can overloading a method be useful in my programs?**\n\nYou previously learned about overloading when writing multiple constructors in a class. In this lesson, you revisit overloaded constructors and learn how overloading can be applied to methods. You explore how overloaded methods work and consider scenarios where overloaded methods would be useful. You then practice writing and calling overloaded methods and revisit your Need to Knows to determine what you have learned that will be useful for your project and what you still need to learn."
       },
       "seeding_key": {
@@ -6863,7 +6855,7 @@
       "key": "90db396d-23cf-4712-b426-1867146d6291",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
         "name": "Show What You Know Week"
       },
       "seeding_key": {
@@ -6872,31 +6864,8 @@
       }
     },
     {
-      "key": "8d73cd6b-e8b5-4a5a-b769-36656f19267e",
-      "position": 2,
-      "properties": {
-        "description": "The next five lessons are an opportunity to Show What You Know! We begin with the unit project, then spend a day practicing answering AP-style free-response questions and wrapping up the unit with a multiple-choice assessment. You've learned so much in this unit, and now you're ready to show what you know!",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "8d73cd6b-e8b5-4a5a-b769-36656f19267e",
-        "lesson_activity.key": "78b73655-b0e0-4b70-b8be-325122d4df16"
-      }
-    },
-    {
-      "key": "f6f273b2-785c-4f51-9bb6-bdce60d64381",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 2 Study Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know Week.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Store Management Project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "f6f273b2-785c-4f51-9bb6-bdce60d64381",
-        "lesson_activity.key": "78b73655-b0e0-4b70-b8be-325122d4df16"
-      }
-    },
-    {
       "key": "24b0ed85-56d9-4376-93d6-4dc43069d0a5",
-      "position": 4,
+      "position": 2,
       "properties": {
         "description": "---"
       },
@@ -6907,7 +6876,7 @@
     },
     {
       "key": "800694a6-78ea-4d57-8663-55126e13e0d6",
-      "position": 5,
+      "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -6919,27 +6888,14 @@
       }
     },
     {
-      "key": "1c446195-8a5b-461f-a92d-b2b01e612a62",
+      "key": "7ba2bc4e-9d9a-4612-92ed-976c8e38a0da",
       "position": 1,
       "properties": {
-        "description": "For the unit project, you will use The Theater to create visualizations of data. Data visualizations help us make sense of data and communicate its story. These visuals are a powerful way to discover and understand these stories and present them to others. Let's take a look at an example.",
-        "name": "Data Visualizations",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "1c446195-8a5b-461f-a92d-b2b01e612a62",
-        "lesson_activity.key": "4e6feedf-8fda-4c01-9723-b32096008e7b"
-      }
-    },
-    {
-      "key": "7ba2bc4e-9d9a-4612-92ed-976c8e38a0da",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What story do you think this data visualization is trying to tell? Why do you think the creator chose to visualize the data in this way?*\n\n**Discussion Goal:** Students share opinions and ideas about what they think the data visualization is trying to convey and why the creator chose this visual.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Imagine you’re designing the opening scene of a short animated story. It can be based on a favorite book, a memory, or something completely made up. What is one thing you would want your audience to notice or feel from this scene?\"*\n* *What kinds of visual or sound elements could help communicate that?*\n\n**Discussion Goal:** Students explore how code can be used for creative expression. Encourage them to think like designers, identifying which visual and auditory elements might convey emotion, setting, or tone. This primes them to see The Theater as a flexible tool for storytelling, not just data display.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Ask students what other visuals the creator could have used to convey the same story. Have students consider how alternative visuals would have impacted the effectiveness of the message."
+            "markdown": "Have students share with a partner or write down a few ideas before sharing out. This sets the stage for thinking creatively about how to use the classes and methods in The Theater without tying the lesson to the data visualization project."
           }
         ]
       },
@@ -7102,7 +7058,7 @@
       "key": "610ff789-c404-4266-a844-5d27b91aff36",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3 through 6. Students complete a Check for Understanding on Level 3, then continue to complete choice levels to draw images, draw shapes, and play sounds.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3 through 5. Students complete choice levels to draw images, draw shapes, and play sounds.",
         "progression_name": "Practice: Creating Drawings and Animations",
         "tips": [
           {
@@ -7151,25 +7107,8 @@
       }
     },
     {
-      "key": "9888f522-899a-479a-a661-1c72040c5a04",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How could you use The Theater to create visuals of the data you worked with in the previous unit?*\n\n**Discussion Goal:** Students suggest ways to visualize the data they worked with in the previous unit, such as creating drawings and images or animating the data to demonstrate patterns and information.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Ask students where they have seen data visuals before, such as charts and graphs or infographics. Have students consider why someone would choose to convey information visually compared to the projects they created in the previous unit."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "9888f522-899a-479a-a661-1c72040c5a04",
-        "lesson_activity.key": "9fd6cd8c-818c-4f4d-80ca-0e2eb36cc1c0"
-      }
-    },
-    {
       "key": "a3e1241a-2e5b-4315-bb8c-c462c66cba07",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
       },
@@ -7180,7 +7119,7 @@
     },
     {
       "key": "05eb904d-b3df-4f8d-b64d-77ec50ebba69",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "---"
       },
@@ -7191,7 +7130,7 @@
     },
     {
       "key": "95e46f34-20fc-4c72-8feb-87a9c01f63d8",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -7940,7 +7879,7 @@
       "key": "73bad4de-4424-4594-ac6e-7ad9a130ddfc",
       "position": 1,
       "properties": {
-        "description": "Natural language processing often uses similar methods and techniques to identify the important parts of a phrase and decide how to respond. For our Natural Language Processing Project, we might use these methods to analyze text to determine what to do next or how we should respond to the user.",
+        "description": "Today, you explored how to use the `substring()` method to extract specific parts of a `String`, and how it can be combined with other methods like `indexOf()` to analyze or manipulate text. These tools are powerful when working with any kind of user input, files, or program output.",
         "name": "Using String Methods",
         "remarks": true
       },
@@ -7953,13 +7892,7 @@
       "key": "21027401-36ee-43a1-83bb-a5e8401198f8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How might we use methods in the `String` class to analyze text and data in our upcoming project?*\n\n**Discussion Goal:** Students will likely have several different ideas for using these methods, such as using the `indexOf()` and `substring()` methods to break a sentence up into words or using the `indexOf()` method to check if a sentence or phrase contains specific characters and provide a response based on the result.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class.\n\nHave students consider how smart assistants like Siri or Google Assistant might use similar methods and techniques. For example:\n* *When you ask Siri about the meaning of a word, how does it know how to respond? What about when you ask it to set a timer for a certain number of minutes?*"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think it's important that `String` objects are immutable? How might that affect how we use `substring()` or other methods in our programs?*\n\n**Discussion Goal:** Students deepen their understanding of immutability and begin to appreciate how using methods like `substring()` can help solve problems like parsing, cleaning, or reformatting text, whether it's in a chatbot, form validator, or text game.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "21027401-36ee-43a1-83bb-a5e8401198f8",
@@ -7967,19 +7900,8 @@
       }
     },
     {
-      "key": "20d9663e-6434-4b45-aaf9-d69cbdfecb26",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
-      },
-      "seeding_key": {
-        "activity_section.key": "20d9663e-6434-4b45-aaf9-d69cbdfecb26",
-        "lesson_activity.key": "e8bcc86a-ddac-4ae3-9f8b-6ce95f7228be"
-      }
-    },
-    {
       "key": "1559bf8b-8fb3-4255-ae46-458b4c362b58",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "---"
       },
@@ -7990,7 +7912,7 @@
     },
     {
       "key": "40fe8da9-a356-4163-85ec-c5c7e9bdec70",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -8002,29 +7924,10 @@
       }
     },
     {
-      "key": "717a80a0-48c4-4549-9e1b-1bce8b1b7efa",
+      "key": "2fd1a3b5-d278-4b3e-8803-43c2b290e58b",
       "position": 1,
       "properties": {
-        "description": "We have learned a lot of new terms so far! Let's review some of these terms through a game of CS Bingo.",
-        "name": "CS Bingo",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "717a80a0-48c4-4549-9e1b-1bce8b1b7efa",
-        "lesson_activity.key": "1062292c-f8b7-46f7-8ccd-f3353e911d5f"
-      }
-    },
-    {
-      "key": "2fd1a3b5-d278-4b3e-8803-43c2b290e58b",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a unique CS Bingo Card.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for playing CS Bingo.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the CS Bingo activity. Choose a random definition and read it aloud to the class. Give students a moment to check their bingo card for the correct term, then state the correct term. Repeat until a student yells \"Java.\"",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "To allow for multiple students to \"win\" the game, continue pulling definitions until a couple more students win as well."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *If you were writing a program to alphabetize these words, what order would you expect them to appear in? What makes it tricky?*\n\n**Discussion Goal:** Students recognize that computers use character codes (e.g., ASCII or Unicode), so capital letters come before lowercase. This sets up why `compareTo()` might return unexpected results if case isn't handled."
       },
       "seeding_key": {
         "activity_section.key": "2fd1a3b5-d278-4b3e-8803-43c2b290e58b",
@@ -8308,7 +8211,7 @@
       "key": "9e593f16-0426-402d-ad55-38fecf517739",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that methods are said to be overloaded when there are multiple methods with the same name but a different signature.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding on Level 5, then continue to complete choice levels on Levels 6 and 7 to practice writing overloaded methods.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that methods are said to be overloaded when there are multiple methods with the same name but a different signature.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 and 6. Students complete a Check for Understanding on Level 5, then continue to complete choice levels on Level 6 to practice writing overloaded methods.",
         "duration": "15",
         "name": "Overloaded Methods",
         "progression_name": "Practice: Overloaded Methods"
@@ -8319,32 +8222,25 @@
       }
     },
     {
-      "key": "a93cd5a4-beb7-49c9-a5ce-37167aeba241",
+      "key": "bd3f4e30-949a-4a43-a16a-7efc1af3e40a",
       "position": 1,
       "properties": {
-        "description": "We just learned a lot of new information today, which may have even answered some of the Need to Know questions you wrote down about the Creative Coding Project. As we progress through the unit, it is helpful to stop and note what we have learned that is related to or useful for the project.",
-        "name": "Revisiting the Need to Knows",
+        "description": "Today, you learned that Java allows multiple methods to have the same name as long as they have different parameter lists. This is called method overloading, and it helps make code more readable and flexible.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "a93cd5a4-beb7-49c9-a5ce-37167aeba241",
+        "activity_section.key": "bd3f4e30-949a-4a43-a16a-7efc1af3e40a",
         "lesson_activity.key": "8eb78d79-270f-474e-bb1c-c2270a30264f"
       }
     },
     {
-      "key": "b6e2fbfc-186b-434e-aff3-5eed35bb82d9",
+      "key": "fe9c47ea-206d-4660-bb13-728840622817",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Creative Coding with The Theater Project Planning Guide. Students add new questions to this column, check off any answered questions, and write the answers to any questions in the \"Learned\" column.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time permits, you can also have students share as a class."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think it’s helpful for different methods that do similar things to share the same name?*\n\n**Discussion Goal:** Students articulate the advantages of method overloading, such as clearer naming, code reusability, and being able to offer multiple ways to perform the same task depending on the inputs."
       },
       "seeding_key": {
-        "activity_section.key": "b6e2fbfc-186b-434e-aff3-5eed35bb82d9",
+        "activity_section.key": "fe9c47ea-206d-4660-bb13-728840622817",
         "lesson_activity.key": "8eb78d79-270f-474e-bb1c-c2270a30264f"
       }
     },
@@ -11477,31 +11373,6 @@
       "assessment": true,
       "properties": {
         "level_keys": [
-          "csa-u2-castingandrangeofvariables-level5_alt-2025"
-        ],
-        "progression": "Practice: Handling Overflow"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csa-u2-castingandrangeofvariables-level5_alt-2025"
-        ],
-        "lesson.key": "lesson-26",
-        "lesson_group.key": "lessonGroup-18",
-        "script.name": "csa1-alt-2025",
-        "activity_section.key": "86837745-54ad-4742-b319-b7bc69ab3708"
-      },
-      "level_keys": [
-        "csa-u2-castingandrangeofvariables-level5_alt-2025"
-      ]
-    },
-    {
-      "chapter": 90,
-      "position": 5,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "csa-u2-castingandrangeofvariables-level4_alt-2025"
         ],
         "progression": "Practice: Handling Overflow"
@@ -11518,6 +11389,31 @@
       },
       "level_keys": [
         "csa-u2-castingandrangeofvariables-level4_alt-2025"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csa-u2-castingandrangeofvariables-level5_alt-2025"
+        ],
+        "progression": "Practice: Handling Overflow"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-u2-castingandrangeofvariables-level5_alt-2025"
+        ],
+        "lesson.key": "lesson-26",
+        "lesson_group.key": "lessonGroup-18",
+        "script.name": "csa1-alt-2025",
+        "activity_section.key": "86837745-54ad-4742-b319-b7bc69ab3708"
+      },
+      "level_keys": [
+        "csa-u2-castingandrangeofvariables-level5_alt-2025"
       ]
     },
     {
@@ -11774,31 +11670,6 @@
       "chapter": 101,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA U4L1-L3_pilot_oo2025_-csa-alt_2025"
-        ],
-        "progression": "Practice: Creating Drawings and Animations"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U4L1-L3_pilot_oo2025_-csa-alt_2025"
-        ],
-        "lesson.key": "Lesson 1: The Theater",
-        "lesson_group.key": "lessonGroup-18",
-        "script.name": "csa1-alt-2025",
-        "activity_section.key": "610ff789-c404-4266-a844-5d27b91aff36"
-      },
-      "level_keys": [
-        "CSA U4L1-L3_pilot_oo2025_-csa-alt_2025"
-      ]
-    },
-    {
-      "chapter": 102,
-      "position": 4,
-      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -11821,9 +11692,9 @@
       ]
     },
     {
-      "chapter": 103,
-      "position": 5,
-      "activity_section_position": 3,
+      "chapter": 102,
+      "position": 4,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -11846,9 +11717,9 @@
       ]
     },
     {
-      "chapter": 104,
-      "position": 6,
-      "activity_section_position": 4,
+      "chapter": 103,
+      "position": 5,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -11871,8 +11742,8 @@
       ]
     },
     {
-      "chapter": 105,
-      "position": 7,
+      "chapter": 104,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -11896,7 +11767,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 105,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11921,7 +11792,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 106,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11946,7 +11817,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 107,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -11971,7 +11842,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 108,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -11996,7 +11867,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 109,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -12021,7 +11892,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 110,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -12046,7 +11917,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 111,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -12071,7 +11942,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 112,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -12096,7 +11967,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 113,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12121,7 +11992,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 114,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12146,7 +12017,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 115,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -12171,7 +12042,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 116,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -12196,7 +12067,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 117,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -12221,7 +12092,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 118,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -12246,7 +12117,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 119,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -12271,7 +12142,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 120,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12296,7 +12167,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 121,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12321,7 +12192,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 122,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -12346,7 +12217,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 123,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -12371,7 +12242,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 124,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -12396,7 +12267,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 125,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -12421,7 +12292,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 126,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -12446,7 +12317,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 127,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -12471,7 +12342,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 128,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -12496,7 +12367,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 129,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12521,7 +12392,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 130,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12546,7 +12417,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 131,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -12571,7 +12442,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 132,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -12596,7 +12467,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 133,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -12621,7 +12492,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 134,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -12646,7 +12517,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 135,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -12671,7 +12542,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 136,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -12696,7 +12567,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 137,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -12721,7 +12592,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 138,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12746,7 +12617,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 139,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -12771,7 +12642,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 140,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -12796,7 +12667,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 141,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -12821,7 +12692,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 142,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -12846,33 +12717,8 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 143,
       "position": 7,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U7L3-L7_alt-2025"
-        ],
-        "progression": "Practice: Overloaded Methods"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U7L3-L7_alt-2025"
-        ],
-        "lesson.key": "Overloaded Methods",
-        "lesson_group.key": "lessonGroup-18",
-        "script.name": "csa1-alt-2025",
-        "activity_section.key": "9e593f16-0426-402d-ad55-38fecf517739"
-      },
-      "level_keys": [
-        "CSA U7L3-L7_alt-2025"
-      ]
-    },
-    {
-      "chapter": 145,
-      "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -12896,7 +12742,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 144,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -12921,7 +12767,7 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 145,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12946,7 +12792,7 @@
       ]
     },
     {
-      "chapter": 148,
+      "chapter": 146,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -12971,11 +12817,14 @@
       ]
     },
     {
-      "chapter": 149,
+      "chapter": 147,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page_csa1-project1b-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -12993,7 +12842,7 @@
       ]
     },
     {
-      "chapter": 150,
+      "chapter": 148,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -13018,7 +12867,7 @@
       ]
     },
     {
-      "chapter": 151,
+      "chapter": 149,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -13043,7 +12892,7 @@
       ]
     },
     {
-      "chapter": 152,
+      "chapter": 150,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -13068,7 +12917,7 @@
       ]
     },
     {
-      "chapter": 153,
+      "chapter": 151,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -13092,7 +12941,7 @@
       ]
     },
     {
-      "chapter": 154,
+      "chapter": 152,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -14175,9 +14024,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csa-u2-castingandrangeofvariables-level5_alt-2025",
+        "level.key": "csa-u2-castingandrangeofvariables-level4_alt-2025",
         "script_level.level_keys": [
-          "csa-u2-castingandrangeofvariables-level5_alt-2025"
+          "csa-u2-castingandrangeofvariables-level4_alt-2025"
         ],
         "lesson.key": "lesson-26",
         "lesson_group.key": "lessonGroup-18",
@@ -14187,9 +14036,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csa-u2-castingandrangeofvariables-level4_alt-2025",
+        "level.key": "csa-u2-castingandrangeofvariables-level5_alt-2025",
         "script_level.level_keys": [
-          "csa-u2-castingandrangeofvariables-level4_alt-2025"
+          "csa-u2-castingandrangeofvariables-level5_alt-2025"
         ],
         "lesson.key": "lesson-26",
         "lesson_group.key": "lessonGroup-18",
@@ -14315,18 +14164,6 @@
         "lesson_group.key": "lessonGroup-18",
         "script.name": "csa1-alt-2025",
         "activity_section.key": "00fbaa54-3ff6-464c-a55a-d72f8d439e32"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U4L1-L3_pilot_oo2025_-csa-alt_2025",
-        "script_level.level_keys": [
-          "CSA U4L1-L3_pilot_oo2025_-csa-alt_2025"
-        ],
-        "lesson.key": "Lesson 1: The Theater",
-        "lesson_group.key": "lessonGroup-18",
-        "script.name": "csa1-alt-2025",
-        "activity_section.key": "610ff789-c404-4266-a844-5d27b91aff36"
       }
     },
     {
@@ -14835,18 +14672,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U7L3-L7_alt-2025",
-        "script_level.level_keys": [
-          "CSA U7L3-L7_alt-2025"
-        ],
-        "lesson.key": "Overloaded Methods",
-        "lesson_group.key": "lessonGroup-18",
-        "script.name": "csa1-alt-2025",
-        "activity_section.key": "9e593f16-0426-402d-ad55-38fecf517739"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "CSA U7L3-L8_alt-2025",
         "script_level.level_keys": [
           "CSA U7L3-L8_alt-2025"
@@ -14992,282 +14817,6 @@
       }
     },
     {
-      "name": "[EXEMPLAR] Casting and Range of Variables Guided Notes",
-      "url": "https://docs.google.com/document/d/1EWPtEdKfAYIQLbxblFu-1PJWnk3wA-2ZdLHoBx83n_I/edit?usp=drive_link",
-      "key": "_exemplar_casting_and_range_of_variables_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_casting_and_range_of_variables_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] No-Argument Constructors Guided Notes",
-      "url": "https://docs.google.com/document/d/1M-FTxIut0sp1Mkq7HZPQWp1VXl-h4BafYhZR2UROlcI/edit?usp=drive_link",
-      "key": "_exemplar_no-argument_constructors_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_no-argument_constructors_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Parameterized Constructors Guided Notes",
-      "url": "https://docs.google.com/document/d/18-UR0nbpgcC-vtwRAZv2RYrg1Q_h69ud-RIvRhLBrsk/edit?usp=drive_link",
-      "key": "_exemplar_parameterized_constructors_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_parameterized_constructors_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] The Theater Guided Notes",
-      "url": "https://docs.google.com/document/d/18_omWkP2ok-RPUH-McRA3sUrZRNNjQ9fR_GI3LpUUME/edit?usp=drive_link",
-      "key": "_exemplar_the_theater_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_the_theater_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Debugging Strategies Guided Notes",
-      "url": "https://docs.google.com/document/d/1YONQV_7wpfox2zc_lCJlT91MYnqVnyQr_E3DTWpRD90/edit?usp=sharing",
-      "key": "_exemplar_u1l12_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u1l12_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Java Lab Guided Notes",
-      "url": "https://docs.google.com/document/d/1LBMSsk6NqS3jMvhX-DTo64bbrBxLty6jJ_rs6PbbSNU/edit?usp=sharing",
-      "key": "_exemplar_u1l2_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u1l2_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Classes and Objects Guided Notes",
-      "url": "https://docs.google.com/document/d/1MMvH2oKNz6PjokGp8quLlWx_aEAGOL10ddEEmEZc63w/edit?usp=sharing",
-      "key": "_exemplar_u1l3_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u1l3_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Instantiating Objects Guided Notes",
-      "url": "https://docs.google.com/document/d/1m6oB5Qr01gJsUvdBSIRfqnEMlCJZFqDcjivudo4M2cY/edit?usp=sharing",
-      "key": "_exemplar_u1l4_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u1l4_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Methods Guided Notes",
-      "url": "https://docs.google.com/document/d/10D3uJZL_OVZzIN55yH4W0BRO7qaAaKaChQU4dUao2t4/edit?usp=sharing",
-      "key": "_exemplar_u1l5_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u1l5_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Methods with Parameters Guided Notes",
-      "url": "https://docs.google.com/document/d/1qSS45Us1hCR_JbaClL8WTmoVkQylSxkKGxCDCSzup6M/edit?usp=sharing",
-      "key": "_exemplar_u1l6_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u1l6_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Inheritance Guided Notes",
-      "url": "https://docs.google.com/document/d/1w9U_KXwjGWFHLNwhdbvNM2R2vU0Yd_dmLMoqSOs4dOI/edit?usp=sharing",
-      "key": "_exemplar_u1l8_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u1l8_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Writing Methods Guided Notes",
-      "url": "https://docs.google.com/document/d/1GP71VXJ0uXWfbMYOE7s2ORI5nscWXWcgvrgJhhs6Oxs/edit?usp=sharing",
-      "key": "_exemplar_u1l9_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u1l9_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Printing Objects Guided Notes",
-      "url": "https://docs.google.com/document/d/1rtCEQUhsyPKxUYnHRgENoOtCAopQoPjABdrDEJS_ZMw/edit?usp=sharing",
-      "key": "_exemplar_u2l10_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u2l10_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Constructors and Inheritance Guided Notes",
-      "url": "https://docs.google.com/document/d/10fBNOIwHiiLO51Fitr4uKtHwGLSW6Sq2Qhdb7KiKsH4/edit?usp=sharing",
-      "key": "_exemplar_u2l5_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u2l5_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Variables Guided Notes",
-      "url": "https://docs.google.com/document/d/15Y7g3AI8HPJ8LVt8ttT9HSzXXGH5nWHqYJYkZve06IA/edit?usp=sharing",
-      "key": "_exemplar_u2l7_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u2l7_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Operators and Expressions Guided Notes",
-      "url": "https://docs.google.com/document/d/19gBhx5DIm0YnaUIgaqk3vZ0tdlUnGHGHI_xMnQWslVY/edit?usp=sharing",
-      "key": "_exemplar_u2l8_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u2l8_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] The Math Class Guided Notes",
-      "url": "https://docs.google.com/document/d/1cN6wLSG5mfEgc6b1oSer-G2N8plEmAdYDFF3vKvkxYM/edit?usp=sharing",
-      "key": "_exemplar_u4l3_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u4l3_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Random Guided Notes",
-      "url": "https://docs.google.com/document/d/1bVkcOV1NldlHKasM8qQq5TssX4cyGduHWxjqBxzAdUg/edit?usp=sharing",
-      "key": "_exemplar_u4l5_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u4l5_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Substrings Guided Notes",
-      "url": "https://docs.google.com/document/d/1xVs_eiJcMO5qV60HmZ2_36wrFJ8C7ZpOMxsJDszkOEo/edit?usp=sharing",
-      "key": "_exemplar_u6l2_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u6l2_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Comparing Strings Guided Notes",
-      "url": "https://docs.google.com/document/d/1ChfIrhRV-8PS_vJfGpoprvNODBLo5cd6ntIO626cqaM/edit?usp=sharing",
-      "key": "_exemplar_u6l6_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u6l6_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Overloaded Methods Guided Notes",
-      "url": "https://docs.google.com/document/d/1YtlpkMlTPXioa0RwQGnvChyCqUd4J9TsZNNtnWaPT3s/edit?usp=sharing",
-      "key": "_exemplar_u7l3_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u7l3_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] User Input Guided Notes",
-      "url": "https://docs.google.com/document/d/1hlex6RPOG8rPfuSJwZEjMANPZzmWp7Dpn4O4qvXcOM0/edit?usp=drive_link",
-      "key": "_exemplar_user_input_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_user_input_guided_notes"
-      }
-    },
-    {
-      "name": "[KEY] Casting and Range of Variables Extra Practice",
-      "url": "https://docs.google.com/document/d/1aSYW76WE82e2bNi-rlYadED-7N8NX3rlQ-QerpWH428/edit?usp=sharing",
-      "key": "_key_casting_and_range_of_variables_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_casting_and_range_of_variables_extra_practice"
-      }
-    },
-    {
       "name": "[KEY] Investigate: Debugging in The Neighborhood",
       "url": "https://docs.google.com/document/d/1RajIRaxYUzi8EQbK1lZS2EgNrkYUT61dX-3p-8mz3Y0/edit?usp=sharing",
       "key": "_key_investigate_debugging_in_the_neighborhood",
@@ -15328,30 +14877,6 @@
       }
     },
     {
-      "name": "[KEY] No-Argument Constructors Extra Practice",
-      "url": "https://docs.google.com/document/d/1p38v4gNRGC59tpf9NIFkhWsd_LXSe_YRR3iZSG86978/edit?usp=drive_link",
-      "key": "_key_no-argument_constructors_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_no-argument_constructors_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Parameterized Constructors Extra Practice",
-      "url": "https://docs.google.com/document/d/1RqBDxQ-pL2hP_loVVAyaJ9dRT5j7woKiPAy1UXQJXyc/edit?usp=drive_link",
-      "key": "_key_parameterized_constructors_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_parameterized_constructors_extra_practice"
-      }
-    },
-    {
       "name": "[KEY] SpiralPainter FRQ",
       "url": "https://docs.google.com/document/d/16qO8yvo_1F5srvDVHL3_EFzzEHW-8ggSiRDjI3jQ_2E/edit?usp=sharing",
       "key": "_key_spiralpainter_frq",
@@ -15385,234 +14910,6 @@
       },
       "seeding_key": {
         "resource.key": "_key_the_painter"
-      }
-    },
-    {
-      "name": "[KEY] The Theater Extra Practice",
-      "url": "https://docs.google.com/document/d/1bQL3D0cn9LwmGD80MkktarvCnnGfwN_pfC8V26HiKrY/edit?usp=drive_link",
-      "key": "_key_the_theater_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_the_theater_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Debugging Strategies Extra Practice",
-      "url": "https://docs.google.com/document/d/1EnN-3Ay0627h5hN3_aL6boSz4GFvnQEQLOZeQ2VO64E/edit?usp=sharing",
-      "key": "_key_u1l12_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u1l12_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Java Lab Extra Practice",
-      "url": "https://docs.google.com/document/d/1eBoNfN-t4UcA1JjfbFcCZEwxG5_HXwfU7FiNH1a1sgc/edit?usp=sharing",
-      "key": "_key_u1l2_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u1l2_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Classes and Objects Extra Practice",
-      "url": "https://docs.google.com/document/d/1qtjD0vTRqT9WX05FzW6MNey6EanhTzuHrucDz4mdNGM/edit?usp=sharing",
-      "key": "_key_u1l3_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u1l3_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Instantiating Objects Extra Practice",
-      "url": "https://docs.google.com/document/d/1-8GH6gg3197_X7c2s1WOdMkmwn56e-dxoOVmOWIV_x4/edit?usp=sharing",
-      "key": "_key_u1l4_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u1l4_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Methods Extra Practice",
-      "url": "https://docs.google.com/document/d/1wXoSTa7fRo_TcLj5kAELLdVUjOwfTkXXtPz9p4AHa-0/edit?usp=sharing",
-      "key": "_key_u1l5_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u1l5_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Methods with Parameters Extra Practice",
-      "url": "https://docs.google.com/document/d/12mQXp5PRm6HEhMHOwfgadYLFP8etCjdRQbMRrlwrlBc/edit?usp=sharing",
-      "key": "_key_u1l6_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u1l6_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Inheritance Extra Practice",
-      "url": "https://docs.google.com/document/d/1NYEl-2oUZxPRF-UPuYC0QrdXu4-sBW2tn97jNCCz2Uk/edit?usp=sharing",
-      "key": "_key_u1l8_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u1l8_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Writing Methods Extra Practice",
-      "url": "https://docs.google.com/document/d/15DJQlF49yeTqA1U6KIwiypIU5dKm6RdsPqT9g1RO4pk/edit?usp=sharing",
-      "key": "_key_u1l9_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u1l9_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Printing Objects Extra Practice",
-      "url": "https://docs.google.com/document/d/1NhgGv_Pq_Y7groTBw6X357NJW811S8NzuzkV3OIcL-8/edit?usp=sharing",
-      "key": "_key_u2l10_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u2l10_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Constructors and Inheritance Extra Practice",
-      "url": "https://docs.google.com/document/d/16fHuByG_xZsEchb8fI3mklU4fm4-EDIZp0enUOABDq0/edit?usp=sharing",
-      "key": "_key_u2l5_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u2l5_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Variables Extra Practice",
-      "url": "https://docs.google.com/document/d/1bNvGuAmqOEBm3FkBwTXL5WBi19HUmXEHlATr_ZzRsNU/edit?usp=sharing",
-      "key": "_key_u2l6_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u2l6_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Operators and Expressions Extra Practice",
-      "url": "https://docs.google.com/document/d/1Np8qxhAVcLEbkHQOKDs8LfufOgl6742l0JWdUW0FR00/edit?usp=sharing",
-      "key": "_key_u2l8_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u2l8_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] The Math Class Extra Practice",
-      "url": "https://docs.google.com/document/d/1T7YgQ1spLQyzuM7jzGRabedK6BqquGQeU-b1Bnnh4kA/edit?usp=sharing",
-      "key": "_key_u4l3_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u4l3_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Random Extra Practice",
-      "url": "https://docs.google.com/document/d/1v2dIKQxjoh8TnYq3X_G9HlMSoHFYfarPZnL4MddCOtM/edit?usp=sharing",
-      "key": "_key_u4l5_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u4l5_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Substrings Extra Practice",
-      "url": "https://docs.google.com/document/d/1IFS1PvC5jeLrIASoDm2--K6lxiHwrCrKk5SzwmeKrY8/edit?usp=share_link",
-      "key": "_key_u6l2_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u6l2_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Comparing Strings Extra Practice",
-      "url": "https://docs.google.com/document/d/16TEt8rK1A2pNjhU-e8lBv_tu1woAa1CJZREUcOvZR1U/edit?usp=share_link",
-      "key": "_key_u6l6_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u6l6_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Overloaded Methods Extra Practice",
-      "url": "https://docs.google.com/document/d/1Ie1PHBHQRt3VZhlbRCbPgBKZhuJn6WTj38L6zgavews/edit?usp=share_link",
-      "key": "_key_u7l3_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u7l3_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] User Input Extra Practice",
-      "url": "https://docs.google.com/document/d/1kqeurBWZWpih_amwCGTcWf_TO7MBu2a_iV0cy90zzJ8/edit?usp=drive_link",
-      "key": "_key_user_input_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_user_input_extra_practice"
       }
     },
     {
@@ -15723,32 +15020,6 @@
       }
     },
     {
-      "name": "Casting and Range of Variables Extra Practice",
-      "url": "https://docs.google.com/document/d/1IUs2z8VnyCE7wNwFopqg11MOFKPgrfW16SxNbjMnKPE/edit?usp=sharing",
-      "key": "casting_and_range_of_variables_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "casting_and_range_of_variables_extra_practice"
-      }
-    },
-    {
-      "name": "Casting and Range of Variables Guided Notes",
-      "url": "https://docs.google.com/document/d/1vjMmIwHGFTmcZ-DUSCQqJcLH2SgZRNNzbS5dcOcK5TI/edit?usp=drive_link",
-      "key": "casting_and_range_of_variables_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "casting_and_range_of_variables_guided_notes"
-      }
-    },
-    {
       "name": "Change the Face of Computer Science",
       "url": "https://youtu.be/uhcA6K8rWp0",
       "key": "change_the_face_of_computer_science",
@@ -15852,31 +15123,6 @@
       },
       "seeding_key": {
         "resource.key": "creating_variables"
-      }
-    },
-    {
-      "name": "CS Bingo Cards",
-      "url": "https://docs.google.com/document/d/1Javg06CWvt3XZKhfiJTi5K4_AqVWdbzeck_Fg6TKtSs/edit?usp=sharing",
-      "key": "cs_bingo_cards",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "cs_bingo_cards"
-      }
-    },
-    {
-      "name": "CS Bingo Definitions",
-      "url": "https://docs.google.com/document/d/12dF9sOopJwRxwI6dEMFSFwZUvB22lpTpjRdTKLSN7KA/edit?usp=sharing",
-      "key": "cs_bingo_definitions",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "cs_bingo_definitions"
       }
     },
     {
@@ -16111,32 +15357,6 @@
       }
     },
     {
-      "name": "No-Argument Constructors Extra Practice",
-      "url": "https://docs.google.com/document/d/1BtlTqQj-tTlPEbwBbSDzy8COBg5hxAd3ZBuiQRf88Do/edit?usp=sharing",
-      "key": "no-argument_constructors_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "no-argument_constructors_extra_practice"
-      }
-    },
-    {
-      "name": "No-Argument Constructors Guided Notes",
-      "url": "https://docs.google.com/document/d/1wEN6-WgxtTgR9T5dTL3o7nZ5utAnVF3BgEZE4X_70Bk/edit?usp=drive_link",
-      "key": "no-argument_constructors_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "no-argument_constructors_guided_notes"
-      }
-    },
-    {
       "name": "Object-Oriented Programming",
       "url": "https://youtu.be/Wok4Xw_5cyY",
       "key": "object-oriented_programming",
@@ -16197,32 +15417,6 @@
       }
     },
     {
-      "name": "Parameterized Constructors Extra Practice",
-      "url": "https://docs.google.com/document/d/1r2aVVfshCnwtTHTWUgV9Kr0rqdy3YgCs4vnWPHZYsNw/edit?usp=drive_link",
-      "key": "parameterized_constructors_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "parameterized_constructors_extra_practice"
-      }
-    },
-    {
-      "name": "Parameterized Constructors Guided Notes",
-      "url": "https://docs.google.com/document/d/1N-oYh30dn6-FU51O2vqGkYKd2j2tTRYDSklm0MtJx-M/edit?usp=drive_link",
-      "key": "parameterized_constructors_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "parameterized_constructors_guided_notes"
-      }
-    },
-    {
       "name": "Printing in Java",
       "url": "https://youtu.be/XjswJsUj2wQ",
       "key": "printing_in_java",
@@ -16256,32 +15450,6 @@
       },
       "seeding_key": {
         "resource.key": "programming_style_and_feedback_1"
-      }
-    },
-    {
-      "name": "Programming Style and Feedback Extra Practice",
-      "url": "https://docs.google.com/document/d/1eOD6Eol8RLFHCEfv9Zgm8GroKh7o1BCPKeeOY5RXBlI/edit?usp=sharing",
-      "key": "programming_style_and_feedback_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "programming_style_and_feedback_extra_practice"
-      }
-    },
-    {
-      "name": "Programming Style and Feedback Guided Notes",
-      "url": "https://docs.google.com/document/d/1s3fesOW6-qJijOVYjk-TV2smnqT3YisKrS_FcJ0awYw/edit?usp=sharing",
-      "key": "programming_style_and_feedback_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "programming_style_and_feedback_guided_notes"
       }
     },
     {
@@ -16446,7 +15614,7 @@
     },
     {
       "name": "The Theater",
-      "url": "https://docs.google.com/presentation/d/1olg9F4LUwL3inoOS7zdjZdSqIAtqRGrbtu2laQ-0p98/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1W5JNsnanNN5bseooq0EQpfdNfymFe7kKh-xkEiNAR1A/edit?usp=drive_link",
       "key": "the_theater",
       "properties": {
         "audience": "Verified Teacher",
@@ -16454,32 +15622,6 @@
       },
       "seeding_key": {
         "resource.key": "the_theater"
-      }
-    },
-    {
-      "name": "The Theater Extra Practice",
-      "url": "https://docs.google.com/document/d/1Bv27RKZpxeSgFFMFs-GhuhNh4kz1CFCe0cgq9T6QW-c/edit?usp=drive_link",
-      "key": "the_theater_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "the_theater_extra_practice"
-      }
-    },
-    {
-      "name": "The Theater Guided Notes",
-      "url": "https://docs.google.com/document/d/1APVuz8af_mEyvZzswYHEiHkzR1nsRa51df5vRTH5Y4Y/edit?usp=drive_link",
-      "key": "the_theater_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "the_theater_guided_notes"
       }
     },
     {
@@ -16492,448 +15634,6 @@
       },
       "seeding_key": {
         "resource.key": "the_tostring_method"
-      }
-    },
-    {
-      "name": "Debugging Strategies Extra Practice",
-      "url": "https://docs.google.com/document/d/1nY2D9IekbYVEmqK_2apXHBV9e68vCvRbpbxttt3ExcY/edit?usp=sharing",
-      "key": "u1l12_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l12_extra_practice"
-      }
-    },
-    {
-      "name": "Debugging Strategies Guided Notes",
-      "url": "https://docs.google.com/document/d/1hpr2UK3EPt8grxpxAZOElH40ZdweecgoHeUZxF7FVtY/edit?usp=sharing",
-      "key": "u1l12_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l12_guided_notes"
-      }
-    },
-    {
-      "name": "Java Lab Extra Practice",
-      "url": "https://docs.google.com/document/d/1HpxVlUVskjmYwknNRCaNcOt5GQQ0C0fiHi-MRgkKHrw/edit?usp=sharing",
-      "key": "u1l2_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l2_extra_practice"
-      }
-    },
-    {
-      "name": "Java Lab Guided Notes",
-      "url": "https://docs.google.com/document/d/1kQpCoRqC7jjz8nXa1TRxBYa8UKIv4V5mcVbIni5RMdg/edit?usp=sharing",
-      "key": "u1l2_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l2_guided_notes"
-      }
-    },
-    {
-      "name": "Classes and Objects Extra Practice",
-      "url": "https://docs.google.com/document/d/11R3_wEceG-gYq-_XCbFidqdqpi6rufjZNGjh5WJz9M0/edit?usp=sharing",
-      "key": "u1l3_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l3_extra_practice"
-      }
-    },
-    {
-      "name": "Classes and Objects Guided Notes",
-      "url": "https://docs.google.com/document/d/1o1U4Q9MLyMuMJUHxrLEPYPs0hfPIDTSwgVwiuXJiTc0/edit?usp=sharing",
-      "key": "u1l3_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l3_guided_notes"
-      }
-    },
-    {
-      "name": "Instantiating Objects Extra Practice",
-      "url": "https://docs.google.com/document/d/1O0FAc9cAm26fTw9GOt9hrn407bGBLOX7m9lOunHsvu4/edit?usp=sharing",
-      "key": "u1l4_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l4_extra_practice"
-      }
-    },
-    {
-      "name": "Instantiating Objects Guided Notes",
-      "url": "https://docs.google.com/document/d/1rWfwkbD7J7cOCz-e2s8qxpMfuMhP3DjNFx1TQ6VTx0k/edit?usp=sharing",
-      "key": "u1l4_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l4_guided_notes"
-      }
-    },
-    {
-      "name": "Methods Extra Practice",
-      "url": "https://docs.google.com/document/d/1BdJQ8UcUY9cLr8de6A9TezNRRWd9c2E-gzUKjpZXK4Y/edit?usp=sharing",
-      "key": "u1l5_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l5_extra_practice"
-      }
-    },
-    {
-      "name": "Methods Guided Notes",
-      "url": "https://docs.google.com/document/d/1KqUKvCc3izIGMN53-cqkV1e0UNG7Uv-v1mNeAaRtwMQ/edit?usp=sharing",
-      "key": "u1l5_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l5_guided_notes"
-      }
-    },
-    {
-      "name": "Methods with Parameters Extra Practice",
-      "url": "https://docs.google.com/document/d/1M5AP9LTGywSsUEPKZkarPkXEjmpjNV3IYqr28YbqRJQ/edit?usp=sharing",
-      "key": "u1l6_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l6_extra_practice"
-      }
-    },
-    {
-      "name": "Methods with Parameters Guided Notes",
-      "url": "https://docs.google.com/document/d/1q9O965oXLNRSwv9WfL-GQktt8BBxZlsSID-SdTWL1ws/edit?usp=sharing",
-      "key": "u1l6_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l6_guided_notes"
-      }
-    },
-    {
-      "name": "Inheritance Extra Practice",
-      "url": "https://docs.google.com/document/d/1WxIVsRnNa3wQWjfWeWEOsnfomePwNOiZiD1khPaGQ-U/edit?usp=sharing",
-      "key": "u1l8_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l8_extra_practice"
-      }
-    },
-    {
-      "name": "Inheritance Guided Notes",
-      "url": "https://docs.google.com/document/d/1XIY1Lnq8GZNzDNotKCeXevsIUcOJMzuJ1X6HSvqvmgk/edit?usp=sharing",
-      "key": "u1l8_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l8_guided_notes"
-      }
-    },
-    {
-      "name": "Writing Methods Extra Practice",
-      "url": "https://docs.google.com/document/d/1C0p12m4jebGIJcgy6NEw8l7oRKSOUKTF-THk-oLWv84/edit?usp=sharing",
-      "key": "u1l9_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l9_extra_practice"
-      }
-    },
-    {
-      "name": "Writing Methods Guided Notes",
-      "url": "https://docs.google.com/document/d/1HuyHBN_MqxzWFdXJgtojRsJwJwGbnzJx7mCB9DFLnj0/edit?usp=sharing",
-      "key": "u1l9_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l9_guided_notes"
-      }
-    },
-    {
-      "name": "Printing Objects Extra Practice",
-      "url": "https://docs.google.com/document/d/1AsasCiiM_mgtnc3iO3lpRxrM7kGtLgjP4fYZvs4d9C0/edit?usp=sharing",
-      "key": "u2l10_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u2l10_extra_practice"
-      }
-    },
-    {
-      "name": "Printing Objects Guided Notes",
-      "url": "https://docs.google.com/document/d/1LzWhhO-px2RyQFZ0sD_55cPl5N42wyOFj20duKdmZPs/edit?usp=sharing",
-      "key": "u2l10_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u2l10_guided_notes"
-      }
-    },
-    {
-      "name": "Constructors and Inheritance Extra Practice",
-      "url": "https://docs.google.com/document/d/10U-0aKiKWWWncQy19YbQgtfTNSGoTNNWitIJ3cHyPIo/edit?usp=sharing",
-      "key": "u2l5_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u2l5_extra_practice"
-      }
-    },
-    {
-      "name": "Constructors and Inheritance Guided Notes",
-      "url": "https://docs.google.com/document/d/1u9o-UW2K2v44y5EXR3MjLghOrsQHlL1qgYQ9iQD_rAw/edit?usp=sharing",
-      "key": "u2l5_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u2l5_guided_notes"
-      }
-    },
-    {
-      "name": "Variables Extra Practice",
-      "url": "https://docs.google.com/document/d/1tYy7S2iSLLQr9XXPqhxoBxIpYvXzUXExFVE6m6Qi_6E/edit?usp=sharing",
-      "key": "u2l6_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u2l6_extra_practice"
-      }
-    },
-    {
-      "name": "Variables Guided Notes",
-      "url": "https://docs.google.com/document/d/1g0ajb0DVUAdjsUr-uKRnWnTnI17mvSIo-jA0ZtXnvAE/edit?usp=sharing",
-      "key": "u2l6_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u2l6_guided_notes"
-      }
-    },
-    {
-      "name": "Operators and Expressions Extra Practice",
-      "url": "https://docs.google.com/document/d/1Fmy0ZOIM19by7q_e-YzTwex9_8jfAeVFYv7sej5F1v8/edit?usp=sharing",
-      "key": "u2l8_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u2l8_extra_practice"
-      }
-    },
-    {
-      "name": "Operators and Expressions Guided Notes",
-      "url": "https://docs.google.com/document/d/1lKEGGyW2SOVwM8lPlJhU5HCgT03fHrVH8H5Bu_O9kGI/edit?usp=sharing",
-      "key": "u2l8_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u2l8_guided_notes"
-      }
-    },
-    {
-      "name": "The Math Class Extra Practice",
-      "url": "https://docs.google.com/document/d/1Q9IGPHERYPnK3XOE0-48dYWXH5FinU-Nruza24-mpFE/edit?usp=sharing",
-      "key": "u4l3_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u4l3_extra_practice"
-      }
-    },
-    {
-      "name": "The Math Class Guided Notes",
-      "url": "https://docs.google.com/document/d/1DXD-1q10_8ISiNVnEcBXDuuUJYTbn_-bw94vZ2fM8qM/edit?usp=sharing",
-      "key": "u4l3_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u4l3_guided_notes"
-      }
-    },
-    {
-      "name": "Random Extra Practice",
-      "url": "https://docs.google.com/document/d/1hwJo04wuX7tVvd7_1tVms645gvuUY88xP3661k4E95w/edit?usp=sharing",
-      "key": "u4l5_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u4l5_extra_practice"
-      }
-    },
-    {
-      "name": "Random Guided Notes",
-      "url": "https://docs.google.com/document/d/1V86gycODJBKkzEptwa0IgDSQBeluP00NKFPRXa36AtY/edit?usp=sharing",
-      "key": "u4l5_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u4l5_guided_notes"
-      }
-    },
-    {
-      "name": "Substrings Extra Practice",
-      "url": "https://docs.google.com/document/d/1S8npMPq0suee4tC4pFBKBplmDv3j_yhL5qalzTIEu4U/edit?usp=share_link",
-      "key": "u6l2_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u6l2_extra_practice"
-      }
-    },
-    {
-      "name": "Substrings Guided Notes",
-      "url": "https://docs.google.com/document/d/1PWIxX6EeYsAPyd4mIKYxJWDvct5xFdJy7vCnJ0eTWpg/edit?usp=sharing",
-      "key": "u6l2_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u6l2_guided_notes"
-      }
-    },
-    {
-      "name": "Comparing Strings Extra Practice",
-      "url": "https://docs.google.com/document/d/1FbI2uw-wB5gxMoxuIKQtOW6dNvuu3rhGoUY50NVQ6rc/edit?usp=share_link",
-      "key": "u6l6_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u6l6_extra_practice"
-      }
-    },
-    {
-      "name": "Comparing Strings Guided Notes",
-      "url": "https://docs.google.com/document/d/1sp-fLi99sWcjw86DzS3QaJmPzDEpb4zFsmaQOsMA4AY/edit?usp=sharing",
-      "key": "u6l6_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u6l6_guided_notes"
-      }
-    },
-    {
-      "name": "Overloaded Methods Extra Practice",
-      "url": "https://docs.google.com/document/d/1sip1MuPw6KfA59_wRLyATXXnITkyflGU-rPXp_yfVIg/edit?usp=share_link",
-      "key": "u7l3_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u7l3_extra_practice"
-      }
-    },
-    {
-      "name": "Overloaded Methods Guided Notes",
-      "url": "https://docs.google.com/document/d/1XJT1mBsfC-iWrRdBy88VdWaBpNGPw0w5mzZit4UiGyw/edit?usp=sharing",
-      "key": "u7l3_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u7l3_guided_notes"
       }
     },
     {
@@ -16958,32 +15658,6 @@
       },
       "seeding_key": {
         "resource.key": "user_input"
-      }
-    },
-    {
-      "name": "User Input Extra Practice",
-      "url": "https://docs.google.com/document/d/17ogRzAgaSnZaZL_1TieE2Fv-1zjKwQHde6MViIR41Y4/edit?usp=drive_link",
-      "key": "user_input_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "user_input_extra_practice"
-      }
-    },
-    {
-      "name": "User Input Guided Notes",
-      "url": "https://docs.google.com/document/d/1LBckqVp9G-FA096WPfv7glYB-kcXyyFYbSQIkXpnN_k/edit?usp=sharing",
-      "key": "user_input_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "user_input_guided_notes"
       }
     },
     {
@@ -17099,19 +15773,7 @@
     {
       "seeding_key": {
         "lesson.key": "Classes and Objects",
-        "resource.key": "_exemplar_u1l3_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Classes and Objects",
         "resource.key": "_key_the_painter"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Classes and Objects",
-        "resource.key": "_key_u1l3_extra_practice"
       }
     },
     {
@@ -17140,30 +15802,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Classes and Objects",
-        "resource.key": "u1l3_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Classes and Objects",
-        "resource.key": "u1l3_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Comparing Strings",
-        "resource.key": "_exemplar_u6l6_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Comparing Strings",
-        "resource.key": "_key_u6l6_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Comparing Strings",
         "resource.key": "comparing_strings"
       }
@@ -17171,43 +15809,7 @@
     {
       "seeding_key": {
         "lesson.key": "Comparing Strings",
-        "resource.key": "cs_bingo_cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Comparing Strings",
-        "resource.key": "cs_bingo_definitions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Comparing Strings",
         "resource.key": "guide_to_programming_levels_in_csa"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Comparing Strings",
-        "resource.key": "u6l6_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Comparing Strings",
-        "resource.key": "u6l6_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors and Inheritance",
-        "resource.key": "_exemplar_u2l5_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors and Inheritance",
-        "resource.key": "_key_u2l5_extra_practice"
       }
     },
     {
@@ -17224,32 +15826,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Constructors and Inheritance",
-        "resource.key": "u2l5_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors and Inheritance",
-        "resource.key": "u2l5_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging Strategies",
-        "resource.key": "_exemplar_u1l12_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Debugging Strategies",
         "resource.key": "_key_investigate_debugging_in_the_neighborhood"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging Strategies",
-        "resource.key": "_key_u1l12_extra_practice"
       }
     },
     {
@@ -17278,30 +15856,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Debugging Strategies",
-        "resource.key": "u1l12_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging Strategies",
-        "resource.key": "u1l12_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Inheritance",
-        "resource.key": "_exemplar_u1l8_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Inheritance",
-        "resource.key": "_key_u1l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Inheritance",
         "resource.key": "guide_to_programming_levels_in_csa"
       }
@@ -17316,30 +15870,6 @@
       "seeding_key": {
         "lesson.key": "Inheritance",
         "resource.key": "inheritance_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Inheritance",
-        "resource.key": "u1l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Inheritance",
-        "resource.key": "u1l8_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Instantiating Objects",
-        "resource.key": "_exemplar_u1l4_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Instantiating Objects",
-        "resource.key": "_key_u1l4_extra_practice"
       }
     },
     {
@@ -17362,32 +15892,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Instantiating Objects",
-        "resource.key": "u1l4_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Instantiating Objects",
-        "resource.key": "u1l4_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Java Lab",
-        "resource.key": "_exemplar_u1l2_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Java Lab",
         "resource.key": "_key_investigate_working_with_java_files"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Java Lab",
-        "resource.key": "_key_u1l2_extra_practice"
       }
     },
     {
@@ -17410,32 +15916,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Java Lab",
-        "resource.key": "u1l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Java Lab",
-        "resource.key": "u1l2_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 1: The Theater",
-        "resource.key": "_exemplar_the_theater_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Lesson 1: The Theater",
         "resource.key": "_key_investigating_the_theater"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 1: The Theater",
-        "resource.key": "_key_the_theater_extra_practice"
       }
     },
     {
@@ -17459,31 +15941,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 1: The Theater",
-        "resource.key": "the_theater_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 1: The Theater",
-        "resource.key": "the_theater_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 1: The Theater",
         "resource.key": "welcome_to_the_theater"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 8: No-Argument Constructors",
-        "resource.key": "_exemplar_no-argument_constructors_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 8: No-Argument Constructors",
-        "resource.key": "_key_no-argument_constructors_extra_practice"
       }
     },
     {
@@ -17506,30 +15964,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson 8: No-Argument Constructors",
-        "resource.key": "no-argument_constructors_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 8: No-Argument Constructors",
-        "resource.key": "no-argument_constructors_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Methods with Parameters",
-        "resource.key": "_exemplar_u1l6_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Methods with Parameters",
-        "resource.key": "_key_u1l6_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Methods with Parameters",
         "resource.key": "guide_to_programming_levels_in_csa"
       }
@@ -17538,30 +15972,6 @@
       "seeding_key": {
         "lesson.key": "Methods with Parameters",
         "resource.key": "methods_with_parameters"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Methods with Parameters",
-        "resource.key": "u1l6_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Methods with Parameters",
-        "resource.key": "u1l6_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Methods",
-        "resource.key": "_exemplar_u1l5_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Methods",
-        "resource.key": "_key_u1l5_extra_practice"
       }
     },
     {
@@ -17584,30 +15994,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Methods",
-        "resource.key": "u1l5_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Methods",
-        "resource.key": "u1l5_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Operators and Expressions",
-        "resource.key": "_exemplar_u2l8_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Operators and Expressions",
-        "resource.key": "_key_u2l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Operators and Expressions",
         "resource.key": "guide_to_programming_levels_in_csa"
       }
@@ -17620,30 +16006,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Operators and Expressions",
-        "resource.key": "u2l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Operators and Expressions",
-        "resource.key": "u2l8_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Overloaded Methods",
-        "resource.key": "_exemplar_u7l3_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Overloaded Methods",
-        "resource.key": "_key_u7l3_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Overloaded Methods",
         "resource.key": "guide_to_programming_levels_in_csa"
       }
@@ -17652,30 +16014,6 @@
       "seeding_key": {
         "lesson.key": "Overloaded Methods",
         "resource.key": "overloaded_methods"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Overloaded Methods",
-        "resource.key": "u7l3_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Overloaded Methods",
-        "resource.key": "u7l3_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parameterized Constructors",
-        "resource.key": "_exemplar_parameterized_constructors_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parameterized Constructors",
-        "resource.key": "_key_parameterized_constructors_extra_practice"
       }
     },
     {
@@ -17698,30 +16036,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Parameterized Constructors",
-        "resource.key": "parameterized_constructors_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parameterized Constructors",
-        "resource.key": "parameterized_constructors_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Printing Objects",
-        "resource.key": "_exemplar_u2l10_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Printing Objects",
-        "resource.key": "_key_u2l10_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Printing Objects",
         "resource.key": "guide_to_programming_levels_in_csa"
       }
@@ -17740,30 +16054,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Printing Objects",
-        "resource.key": "u2l10_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Printing Objects",
-        "resource.key": "u2l10_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Random",
-        "resource.key": "_exemplar_u4l5_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Random",
-        "resource.key": "_key_u4l5_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Random",
         "resource.key": "guide_to_programming_levels_in_csa"
       }
@@ -17778,18 +16068,6 @@
       "seeding_key": {
         "lesson.key": "Random",
         "resource.key": "random_numbers"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Random",
-        "resource.key": "u4l5_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Random",
-        "resource.key": "u4l5_guided_notes"
       }
     },
     {
@@ -17825,18 +16103,6 @@
     {
       "seeding_key": {
         "lesson.key": "Substrings",
-        "resource.key": "_exemplar_u6l2_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Substrings",
-        "resource.key": "_key_u6l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Substrings",
         "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
@@ -17844,24 +16110,6 @@
       "seeding_key": {
         "lesson.key": "Substrings",
         "resource.key": "substrings"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Substrings",
-        "resource.key": "u6l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Substrings",
-        "resource.key": "u6l2_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Math Class",
-        "resource.key": "_exemplar_u4l3_guided_notes"
       }
     },
     {
@@ -17874,12 +16122,6 @@
       "seeding_key": {
         "lesson.key": "The Math Class",
         "resource.key": "_key_the_math_class"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Math Class",
-        "resource.key": "_key_u4l3_extra_practice"
       }
     },
     {
@@ -17914,30 +16156,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "The Math Class",
-        "resource.key": "u4l3_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Math Class",
-        "resource.key": "u4l3_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Input",
-        "resource.key": "_exemplar_user_input_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Input",
-        "resource.key": "_key_user_input_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "User Input",
         "resource.key": "guide_to_programming_levels_in_csa"
       }
@@ -17950,32 +16168,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "User Input",
-        "resource.key": "user_input_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Input",
-        "resource.key": "user_input_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "_exemplar_u2l7_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Variables",
         "resource.key": "_key_investigate_variables"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "_key_u2l6_extra_practice"
       }
     },
     {
@@ -17994,18 +16188,6 @@
       "seeding_key": {
         "lesson.key": "Variables",
         "resource.key": "investigate_variables"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "u2l6_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "u2l6_guided_notes"
       }
     },
     {
@@ -18041,31 +16223,7 @@
     {
       "seeding_key": {
         "lesson.key": "Writing Methods",
-        "resource.key": "_exemplar_u1l9_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Methods",
-        "resource.key": "_key_u1l9_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Methods",
         "resource.key": "guide_to_programming_levels_in_csa"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Methods",
-        "resource.key": "u1l9_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Methods",
-        "resource.key": "u1l9_guided_notes"
       }
     },
     {
@@ -18095,31 +16253,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-26",
-        "resource.key": "_exemplar_casting_and_range_of_variables_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-26",
-        "resource.key": "_key_casting_and_range_of_variables_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-26",
         "resource.key": "casting_and_range_of_variables"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-26",
-        "resource.key": "casting_and_range_of_variables_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-26",
-        "resource.key": "casting_and_range_of_variables_guided_notes"
       }
     },
     {
@@ -18144,18 +16278,6 @@
       "seeding_key": {
         "lesson.key": "lesson-27",
         "resource.key": "programming_style_and_feedback_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-27",
-        "resource.key": "programming_style_and_feedback_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-27",
-        "resource.key": "programming_style_and_feedback_guided_notes"
       }
     },
     {

@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-23 02:34:17 UTC",
+    "serialized_at": "2025-05-26 00:10:52 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -101,7 +101,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**How can analyzing data sets help us answer questions and solve problems?**\n\nIn this lesson, students learn how to analyze data sets and use that analysis to write algorithms that solve real-world problems. They explore data through charts and tables, asking key questions to uncover insights, then work collaboratively to design and refine algorithms.",
-        "preparation": "* **(Optional)** Print copies of the Data Sets Guided Notes (one for each student)\n* Print copies of the Writing Algorithms with Data Sets activity guide (one for each student)",
+        "preparation": "* Print copies of the Writing Algorithms with Data Sets activity guide (one for each student)",
         "student_overview": "**How can analyzing data sets help us answer questions and solve problems?**\n\nIn this lesson, you learn how to analyze data sets and use that analysis to write algorithms that solve real-world problems. You explore data through charts and tables, asking key questions to uncover insights, then work collaboratively to design and refine algorithms."
       },
       "seeding_key": {
@@ -119,7 +119,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "**How can I store multiple related values without creating multiple variables?**\n\nStudents have used variables to store literal values and references to objects. In this lesson, students discover the need for one-dimensional (1D) arrays to store multiple related values. Students explore the syntax and functionality of 1D arrays and learn how to declare and initialize a 1D array using the `new` keyword. They learn how to determine the length of a 1D array, then practice creating 1D arrays using the `new` keyword and accessing and returning their length.",
-        "preparation": "* **(Optional)** Print copies of the One-Dimensional (1D) Arrays Guided Notes (one for each student)\n* Preview the *One-Dimensional (1D) Arrays* video",
+        "preparation": "* Preview the *One-Dimensional (1D) Arrays* video",
         "student_overview": "**How can I store multiple related values without creating multiple variables?**\n\nYou have used variables to store literal values and references to objects. In this lesson, you discover the need for one-dimensional (1D) arrays to store multiple related values. You explore the syntax and functionality of 1D arrays and learn how to declare and initialize a 1D array using the `new` keyword. You learn how to determine the length of a 1D array then practice creating 1D arrays using the `new` keyword and assigning and accessing values at specific positions."
       },
       "seeding_key": {
@@ -137,7 +137,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "**How can I easily assign multiple elements to a one-dimensional (1D) array?**\n\nIn this lesson, students explore using initializer lists to create one-dimensional (1D) arrays and learn how to access and modify elements. They discover that the size of a 1D array cannot be changed after it is created and identify similarities and differences between assigning values to a 1D array and to a variable. Students then practice creating a 1D array using initializer lists and modifying the values stored in a 1D array.",
-        "preparation": "* **(Optional)** Print copies of the Modifying Elements Guided Notes (one for each student)\n* Preview the *Modifying Values in a 1D Array* video",
+        "preparation": "* Preview the *Modifying Values in a 1D Array* video",
         "student_overview": "**How can I easily assign multiple elements to a one-dimensional (1D) array?**\n\nIn this lesson, you explore using initializer lists to create one-dimensional (1D) arrays and learn how to access and modify elements. You discover that the size of a 1D array cannot be changed after it is created and identify similarities and differences between assigning values to a 1D array and to a variable. You then practice creating a 1D array using initializer lists and modifying the values stored in a 1D array."
       },
       "seeding_key": {
@@ -155,7 +155,6 @@
       "relative_position": 4,
       "properties": {
         "overview": "**How can I easily access all elements in a one-dimensional (1D) array?**\n\nStudents have learned how to declare and initialize one-dimensional (1D) arrays and access and modify elements one at a time. In this lesson, students discover the need for loops to repeatedly access multiple elements and revisit `while` loops. Students learn how to traverse 1D arrays using a `while` loop and discover the cause of the `ArrayIndexOutOfBoundsException` and strategies for debugging this error. Students then practice using `while` loops to traverse one and multiple 1D arrays.",
-        "preparation": "* **(Optional)** Print copies of the Traversing 1D Arrays Guided Notes (one for each student)",
         "student_overview": "**How can I easily access all elements in a one-dimensional (1D) array?**\n\nYou have learned how to declare and initialize one-dimensional (1D) arrays and access and modify elements one at a time. In this lesson, you discover the need for loops to repeatedly access multiple elements and revisit `while` loops. You learn how to traverse 1D arrays using a `while` loop and discover the cause of the `ArrayIndexOutOfBoundsException` and strategies for debugging this error. You then practice using `while` loops to traverse one and multiple 1D arrays."
       },
       "seeding_key": {
@@ -173,7 +172,6 @@
       "relative_position": 5,
       "properties": {
         "overview": "**How can I efficiently read and process data from a file in Java?**\n\nStudents learn to use the `File` class to read data from files and handle file-related exceptions with `throws IOException`. They employ `Scanner` methods to read various data types from a file and use loops to efficiently read and process all file elements. By mastering these techniques, students enhance their ability to manage external data sources and improve their debugging and problem-solving skills in real-world programming scenarios.",
-        "preparation": "* **(Optional)** Print copies of the Text Files Guided Notes (one for each student)",
         "student_overview": "**How can I efficiently read and process data from a file in Java?**\n\nYou can use the `Scanner` class to read data from a file. In this lesson, you learn to use the `File` class to read data from files and handle file-related exceptions with `throws IOException`. You employ `Scanner` methods to read various data types from a file and use `while` loops to efficiently read and process all file elements. By mastering these techniques, you enhance your ability to manage external data sources and improve your debugging and problem-solving skills in real-world programming scenarios."
       },
       "seeding_key": {
@@ -191,7 +189,7 @@
       "relative_position": 6,
       "properties": {
         "overview": "**How can biased data impact the fairness and accuracy of a program's outcomes?**\n\nIn this lesson, students consider the ethical and social issues around algorithmic bias and data collection. They learn about algorithmic bias and training data, and the ways algorithmic bias can lead to unfair outcomes. Students analyze data sets in order to identify bias and understand the impact bias has on the conclusions that can be drawn from the data. Finally, students choose a scenario and consider ways in which data can be collected in order to minimize bias.",
-        "preparation": "* **(Optional)** Print copies of the Ethics in Data Guided Notes (one for each student)\n* Print copies of the Analyzing Data Sets handout (one for each student)",
+        "preparation": "* Print copies of the Analyzing Data Sets handout (one for each student)",
         "student_overview": "**How can biased data impact the fairness and accuracy of a program's outcomes?**\n\nIn this lesson, you will consider the ethical and social issues around algorithmic bias and data collection. You will learn about algorithmic bias and training data, and the ways algorithmic bias can lead to unfair outcomes. You will then analyze data sets in order to identify bias and understand the impact bias has on the conclusions that can be drawn from the data. Finally, you will choose a scenario and consider ways in which data can be collected in order to minimize bias."
       },
       "seeding_key": {
@@ -209,7 +207,7 @@
       "relative_position": 7,
       "properties": {
         "overview": "**How can polymorphism improve the efficiency and flexibility of my program code?**\n\nIn this lesson, students expand on what they know about inheritance to explore how they can create arrays of objects. They learn about polymorphism and discover how it can be implemented to make program code more efficient and flexible. Students recall overriding the `toString()` method and how this approach can be applied to override a superclass method in a subclass. Students then practice using superclass references to create and work with 1D arrays.",
-        "preparation": "* **(Optional)** Print copies of the Polymorphism Guided Notes (one for each student)\n* Preview the *Polymorphism* video",
+        "preparation": "* Preview the *Polymorphism* video",
         "student_overview": "**How can polymorphism improve the efficiency and flexibility of my program code?**\n\nIn this lesson, you expand on what you know about inheritance to explore how you can create arrays of objects. You learn about polymorphism and discover how it can be implemented to make program code more efficient and flexible. You recall overriding the `toString()` method and how this approach can be applied to override a superclass method in a subclass. You then practice using superclass references to create and work with 1D arrays."
       },
       "seeding_key": {
@@ -227,7 +225,7 @@
       "relative_position": 8,
       "properties": {
         "overview": "**When would I want to traverse an array with an enhanced `for` loop?**\n\nStudents have learned to use `while` and `for` loops to traverse a 1D array. In this lesson, students explore the syntax and functionality of an enhanced `for` loop and identify scenarios where this type of loop would be useful. Students practice converting `while` and `for` loops to enhanced `for` loops and implementing algorithms to find the sum and average of the values in a 1D array using an enhanced `for` loop.",
-        "preparation": "* **(Optional)** Print copies of the Enhanced For Loops (1D Arrays) Guided Notes (one for each student)\n* Preview the *Careers in Tech: My Name is Polina* and *Enhanced For Loops* videos",
+        "preparation": "* Preview the *Careers in Tech: My Name is Polina* and *Enhanced For Loops* videos",
         "student_overview": "**When would I want to traverse an array with an enhanced `for` loop?**\n\nYou have learned to use `while` and `for` loops to traverse a 1D array. In this lesson, you explore the syntax and functionality of an enhanced `for` loop and identify scenarios where this type of loop would be useful. You practice converting `while` and `for` loops to enhanced `for` loops and implementing algorithms to find the sum and average of the values in a 1D array using an enhanced `for` loop."
       },
       "seeding_key": {
@@ -245,7 +243,7 @@
       "relative_position": 9,
       "properties": {
         "overview": "**How can I use what I know about object-oriented programming and 1D arrays to plan and implement algorithms?**\n\nIn this lesson, students apply what they have learned so far to plan and implement standard algorithms to search or modify a one-dimensional (1D) array. Students discover the need for the `equals()` method when comparing `String` objects for equality and explore the difference between executing a return statement inside of a loop and at the end of a method. Students then work with a partner and use manipulatives to plan and implement an algorithm to determine the minimum or maximum value in a 1D array, determine if at least one element in a 1D array has a particular property, determine if all elements in a 1D array have a particular property, or determine the number of elements in a 1D array meet specific criteria. After implementing their algorithm, students conduct a code review to refine and improve their code.",
-        "preparation": "* **(Optional)** Print copies of the Array Algorithms Guided Notes (one for each student)\n* Print copies of the Writing Algorithms with Arrays handout (one for each pair of students)\n* Print copies of the Planning Algorithms Manipulatives (one set for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies",
+        "preparation": "* Print copies of the Writing Algorithms with Arrays handout (one for each pair of students)\n* Print copies of the Planning Algorithms Manipulatives (one set for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies",
         "student_overview": "**How can I use what I know about object-oriented programming and 1D arrays to plan and implement algorithms?**\n\nIn this lesson, you apply what you have learned so far to plan and implement standard algorithms to search or modify a one-dimensional (1D) array. You discover the need for the `equals()` method when comparing `String` objects for equality and explore the difference between executing a return statement inside of a loop and at the end of a method. You then work with a partner and use manipulatives to plan and implement an algorithm to determine the minimum or maximum value in a 1D array, determine if at least one element in a 1D array has a particular property, determine if all elements in a 1D array have a particular property, or determine the number of elements in a 1D array meet specific criteria. After implementing your algorithm, you conduct a code review to refine and improve your code."
       },
       "seeding_key": {
@@ -263,7 +261,7 @@
       "relative_position": 10,
       "properties": {
         "overview": "**How can I check if a 1D array contains duplicate elements?**\n\nStudents have learned how to traverse one-dimensional (1D) arrays and implement algorithms to search and modify elements. They expand on their knowledge of loops to explore using nested loops with 1D arrays and practice tracing these to determine the output of code segments using nested loops. Students then work with a partner and use manipulatives to plan and implement an algorithm to find duplicate values in a 1D array.",
-        "preparation": "* **(Optional)** Print copies of the Finding Duplicates Guided Notes (one for each student)\n* Print copies of the Finding Duplicates handout (one for each pair of students)\n* Print copies of the Planning Algorithms Manipulatives (one set for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n* Preview the *Nested Loops* video",
+        "preparation": "* Print copies of the Finding Duplicates handout (one for each pair of students)\n* Print copies of the Planning Algorithms Manipulatives (one set for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n* Preview the *Nested Loops* video",
         "student_overview": "**How can I check if a 1D array contains duplicate elements?**\n\nYou have learned how to traverse one-dimensional (1D) arrays and implement algorithms to search and modify elements. You expand on your knowledge of loops to explore using nested loops with 1D arrays and practice tracing these to determine the output of code segments using nested loops. You then work with a partner and use manipulatives to plan and implement an algorithm to find duplicate values in a 1D array."
       },
       "seeding_key": {
@@ -281,7 +279,7 @@
       "relative_position": 11,
       "properties": {
         "overview": "**What if the data I need to store is best represented as a table?**\n\nIn this lesson, students are introduced to two-dimensional (2D) arrays and explore how these can be used to store tables of data. Students discover that 2D arrays are arrays of arrays and identify similarities and differences between the structure and functionality of 1D and 2D arrays. They learn how to declare and initialize 2D arrays using the `new` keyword and initializer lists and practice creating 2D arrays to store data.",
-        "preparation": "* **(Optional)** Print copies of the Two-Dimensional (2D) Arrays Guided Notes (one for each student)\n* Preview the *Two-Dimensional (2D) Arrays* video",
+        "preparation": "* Preview the *Two-Dimensional (2D) Arrays* video",
         "student_overview": "**What if the data I need to store is best represented as a table?**\n\nIn this lesson, you are introduced to two-dimensional (2D) arrays and explore how these can be used to store tables of data. You discover that 2D arrays are arrays of arrays and identify similarities and differences between the structure and functionality of 1D and 2D arrays. You learn how to declare and initialize 2D arrays using the `new` keyword and initializer lists and practice creating 2D arrays to store data."
       },
       "seeding_key": {
@@ -299,7 +297,7 @@
       "relative_position": 12,
       "properties": {
         "overview": "**How can I access and modify rows and elements in a 2D array?**\n\nStudents now know how to declare and initialize a two-dimensional (2D) array using the `new` keyword and an initializer list. In this lesson, students explore how to access and modify individual rows and elements in a 2D array and identify similarities and differences between accessing elements in a 2D array and a 1D array. They then practice accessing and modifying rows and elements in a 2D array.",
-        "preparation": "* **(Optional)** Print copies of the 2D Array Elements Guided Notes (one for each student)\n* Preview the *Working with 2D Array Elements* video",
+        "preparation": "* Preview the *Working with 2D Array Elements* video",
         "student_overview": "**How can I access and modify rows and elements in a 2D array?**\n\nYou now know how to declare and initialize a two-dimensional (2D) array using the `new` keyword and an initializer list. In this lesson, you explore how to access and modify individual rows and elements in a 2D array and identify similarities and differences between accessing elements in a 2D array and a 1D array. You then practice accessing and modifying rows and elements in a 2D array."
       },
       "seeding_key": {
@@ -317,7 +315,7 @@
       "relative_position": 13,
       "properties": {
         "overview": "**How can I traverse a 2D array?**\n\nStudents have previously learned how to traverse a 1D array and use nested loops. In this lesson, students build on this knowledge to learn how to traverse a two-dimensional (2D) array in row-major order. Students explore how elements can be accessed in a 2D array using nested loops and consider the types of questions they could ask or problems they could solve with this approach. They trace code segments that traverse a 2D array in row-major order, then practice writing nested loops to traverse a 2D array and access its elements.",
-        "preparation": "* **(Optional)** Print copies of the Row-Major Traversal Guided Notes (one for each student)\n* Preview the *Row-Major Traversal* video\n* Print copies of the Tracing 2D Array Traversals handout (one for each student)\n* Print copies of the Writing Algorithms with 2D Arrays handout (one for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n",
+        "preparation": "* Preview the *Row-Major Traversal* video\n* Print copies of the Tracing 2D Array Traversals handout (one for each student)\n* Print copies of the Writing Algorithms with 2D Arrays handout (one for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n",
         "student_overview": "**How can I traverse a 2D array?**\n\nYou have previously learned how to traverse a 1D array and use nested loops. In this lesson, you build on this knowledge to learn how to traverse a two-dimensional (2D) array in row-major order. You explore how elements can be accessed in a 2D array using nested loops and consider the types of questions you could ask or problems you could solve with this approach. You trace code segments that traverse a 2D array in row-major order, then practice writing nested loops to traverse a 2D array and access its elements."
       },
       "seeding_key": {
@@ -335,7 +333,7 @@
       "relative_position": 14,
       "properties": {
         "overview": "**How do I access elements in a 2D array by column?**\n\nStudents learn to use nested loops to traverse a 2D array in column-major order and differentiate between column-major and row-major traversals. Students identify scenarios that are best for traversing in row-major and column-major order and develop an algorithm to traverse a 2D array in column-major order to find the sum of all values in each column of the array. Students then practice applying standard 1D array algorithms to 2D arrays to find information and perform calculations.",
-        "preparation": "* **(Optional)** Print copies of the Column-Major Traversal Guided Notes (one for each student)\n* Preview the *Column-Major Traversal* video\n* Print copies of the Tracing Column-Major Traversals handout (one for each student)\n",
+        "preparation": "* Preview the *Column-Major Traversal* video\n* Print copies of the Tracing Column-Major Traversals handout (one for each student)\n",
         "student_overview": "**How do I access elements in a 2D array by column?**\n\nYou learned to use nested loops to traverse a 2D array in row-major order and discovered that standard 1D array algorithms can be applied to 2D arrays. In this lesson, you learn to use nested loops to traverse a 2D array in column-major order and differentiate between column-major and row-major traversals. You identify scenarios that are best for traversing in row-major and column-major order and develop an algorithm to traverse a 2D array in column-major order to find the sum of all values in each column of the array. You then practice applying standard 1D array algorithms to 2D arrays to find information and perform calculations."
       },
       "seeding_key": {
@@ -353,7 +351,7 @@
       "relative_position": 15,
       "properties": {
         "overview": "**How can I use enhanced `for` loops to traverse a 2D array?**\n\nStudents revisit enhanced `for` loops to explore how these are used with 2D arrays. In the process, students discover that objects can be modified using an enhanced `for` loop because the loop variable is an alias of the object reference in the array. Students explore how enhanced `for` loops can be used with 2D arrays and identify similarities and differences between using enhanced `for` loops with 1D arrays and 2D arrays. Students then practice using enhanced `for` loops with 2D arrays.",
-        "preparation": "* **(Optional)** Print copies of the Enhanced For Loops Guided Notes (one for each student)\n* Preview the *Enhanced For Loops and 2D Arrays* video\n* Print copies of the Enhanced For Loops Anticipation Guide (one for each student)",
+        "preparation": "* Preview the *Enhanced For Loops and 2D Arrays* video\n* Print copies of the Enhanced For Loops Anticipation Guide (one for each student)",
         "student_overview": "**How can I use enhanced `for` loops to traverse a 2D array?**\n\nYou used enhanced `for` loops with 1D arrays to access each element from first to last. In this lesson, you revisit enhanced `for` loops to explore how these are used with 2D arrays. In the process, you discover that objects can be modified using an enhanced `for` loop because the loop variable is an alias of the object reference in the array. You explore how enhanced `for` loops can be used with 2D arrays and identify similarities and differences between using enhanced `for` loops with 1D arrays and 2D arrays. You then practice using enhanced `for` loops with 2D arrays."
       },
       "seeding_key": {
@@ -371,7 +369,7 @@
       "relative_position": 16,
       "properties": {
         "overview": "**How can I create image filters using The Theater?**\n\nStudents apply their knowledge of 2D arrays and object-oriented programming to create image filters using The Theater. Students learn how images are made up of pixels and that pixels consist of red, green, and blue color values and explore the `Image` and `Pixel` classes. Students write pseudocode to create an image filter that sets a specific color value to zero and then implement their algorithm in Java.",
-        "preparation": "* **(Optional)** Print copies of the Images in The Theater Guided Notes (one for each student)\n* Preview the *Images and Pixels* video\n* Print copies of the Creating Image Filters handout (one for each student)\n* (Optional) Cut out the manipulatives from the Creating Image Filters handout\n",
+        "preparation": "* Preview the *Images and Pixels* video\n* Print copies of the Creating Image Filters handout (one for each student)\n* (Optional) Cut out the manipulatives from the Creating Image Filters handout\n",
         "student_overview": "**How can I create image filters using The Theater?**\n\nYou may have used or seen image filters in various social media apps or photo editing programs. In this lesson, you apply your knowledge of 2D arrays and object-oriented programming to create image filters using The Theater. You learn how images are made up of pixels and that pixels consist of red, green, and blue color values and explore the `Image` and `Pixel` classes. You write pseudocode to create an image filter that sets a specific color value to zero and then implement your algorithm in Java."
       },
       "seeding_key": {
@@ -389,7 +387,7 @@
       "relative_position": 17,
       "properties": {
         "overview": "**How can I use what I know about object-oriented programming and 2D arrays to plan and implement algorithms?**\n\nIn this lesson, students apply what they have learned so far to plan and implement standard algorithms to search or modify a two-dimensional (2D) array. They learn about the `indexOf()` method in the `String` class and how it can be used to check if a specific character or `String` appears in a `String` object and explore algorithms using the `indexOf()` method. Students then work with a partner and use manipulatives to plan and implement an algorithm to search or modify elements in a 2D array.",
-        "preparation": "* **(Optional)** Print copies of the 2D Array Algorithms Guided Notes (one for each student)\n* Print copies of the Writing Algorithms with 2D Arrays handout (one for each student)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n",
+        "preparation": "* Print copies of the Writing Algorithms with 2D Arrays handout (one for each student)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n",
         "student_overview": "**How can I use what I know about object-oriented programming and 2D arrays to plan and implement algorithms?**\n\nIn this lesson, you apply what you have learned so far to plan and implement standard algorithms to search or modify a two-dimensional (2D) array. You learn about the `indexOf()` method in the `String` class and how it can be used to check if a specific character or `String` appears in a `String` object and explore algorithms using the `indexOf()` method. You then work with a partner and use manipulatives to plan and implement an algorithm to search or modify elements in a 2D array."
       },
       "seeding_key": {
@@ -407,7 +405,7 @@
       "relative_position": 18,
       "properties": {
         "overview": "**How can I modify standard algorithms to create image filters?**\n\nStudents practice working with two-dimensional (2D) arrays and modifying standard algorithms to create new image filters using The Theater. Students explore an example of a new image filter and then write pseudocode to create a new image filter. Students implement their algorithm in Java and create additional image filters by modifying `Pixel` objects stored in a 2D array.",
-        "preparation": "* **(Optional)** Print copies of the Modifying Images Guided Notes (one for each student)\n* Print copies of the Modifying Colors handout (one for each student)\n",
+        "preparation": "* Print copies of the Modifying Colors handout (one for each student)\n",
         "student_overview": "**How can I modify standard algorithms to create image filters?**\n\nIn this lesson, you practice working with two-dimensional (2D) arrays and modifying standard algorithms to create new image filters using The Theater. You explore an example of a new image filter and then write pseudocode to create a new image filter. You implement your algorithm in Java and create additional image filters by modifying `Pixel` objects stored in a 2D array."
       },
       "seeding_key": {
@@ -425,7 +423,7 @@
       "relative_position": 19,
       "properties": {
         "overview": "**Why would I want to represent primitive values as objects?**\n\nIn this lesson, students explore the `Integer` and `Double` classes and learn how these are used to represent `int` and `double` values as objects. They realize that using these classes allows them to use methods to work with `int` and `double` values, such as to convert a `String` to an `int` or `double` value. Students also discover the minimum and maximum values for integers and how exceeding these limits causes overflow or underflow errors then practice using methods in the `Integer` and `Double` classes.",
-        "preparation": "* **(Optional)** Print copies of the Integer and Double Objects Guided Notes (one for each student)\n* Preview the *Wrapper Classes - Part 1* and *Wrapper Classes - Part 2* videos\n",
+        "preparation": "* Preview the *Wrapper Classes - Part 1* and *Wrapper Classes - Part 2* videos\n",
         "student_overview": "**Why would I want to represent primitive values as objects?**\n\nIn this lesson, you explore the `Integer` and `Double` classes and learn how these are used to represent `int` and `double` values as objects. You realize that using these classes allows you to use methods to work with `int` and `double` values, such as to convert a `String` to an `int` or `double` value. You also discover the minimum and maximum values for integers and how exceeding these limits causes overflow or underflow errors then practice using methods in the `Integer` and `Double` classes."
       },
       "seeding_key": {
@@ -443,7 +441,7 @@
       "relative_position": 20,
       "properties": {
         "overview": "**Why would I use an `ArrayList` instead of an array?**\n\nStudents have learned to use one-dimensional (1D) and two-dimensional (2D) arrays to store multiple values of the same type. In this lesson, students explore the `ArrayList` class and learn how to declare and initialize an `ArrayList` and add elements. Students identify scenarios where an `ArrayList` is more suitable and differentiate between a dynamic data structure and a static data structure. Students then practice creating an `ArrayList` and adding values to the list.",
-        "preparation": "* **(Optional)** Print copies of the ArrayLists Guided Notes (one for each student)\n* Preview *The ArrayList Class* video\n",
+        "preparation": "* Preview *The ArrayList Class* video\n",
         "student_overview": "**Why would I use an `ArrayList` instead of an array?**\n\nWhen working with arrays and lists, we sometimes encounter problems where the number of elements is unknown or the size of the list constantly changes. In this lesson, you explore the `ArrayList` class and learn how to declare and initialize an `ArrayList` and add elements. You identify scenarios where an `ArrayList` is more suitable and differentiate between a dynamic data structure and a static data structure. You then practice creating an `ArrayList` and adding values to the list."
       },
       "seeding_key": {
@@ -461,7 +459,7 @@
       "relative_position": 21,
       "properties": {
         "overview": "**How am I able to work with the data stored in an `ArrayList`?**\n\nStudents continue to explore the `ArrayList` class and learn to work with the `get()` and `set()` methods to retrieve and modify elements. They discover that they can traverse an `ArrayList` similarly to traversing a 1D array and can apply the same standard algorithms to an `ArrayList`. Students then practice using methods in the `ArrayList` class to retrieve and modify elements and traversing an `ArrayList` to find and manipulate elements.",
-        "preparation": "* **(Optional)** Print copies of the Manipulating Elements Guided Notes (one for each student)\n* Preview the *Working with ArrayList Data* video\n",
+        "preparation": "* Preview the *Working with ArrayList Data* video\n",
         "student_overview": "**How am I able to work with the data stored in an `ArrayList`?**\n\nIn this lesson, you continue to explore the `ArrayList` class and learn to work with the `get()` and `set()` methods to retrieve and modify elements. You discover that you can traverse an `ArrayList` similarly to traversing a 1D array and can apply the same standard algorithms to an `ArrayList`. You then practice using methods in the `ArrayList` class to retrieve and modify elements and traversing an `ArrayList` to find and manipulate elements."
       },
       "seeding_key": {
@@ -479,7 +477,6 @@
       "relative_position": 22,
       "properties": {
         "overview": "**Why would I use generic types?**\n\nStudents have previously learned that an `ArrayList` can only store objects, such as `Integer` or `String`. In this lesson, they learn about generic types. Students realize that using the angle brackets when creating an `ArrayList` ensures that an `ArrayList` stores a specific type of object, while leaving out the angle brackets may result in multiple types of objects getting stored in the `ArrayList`. They then practice creating and using an `ArrayList` of objects and implementing algorithms to find information and perform calculations.",
-        "preparation": "* **(Optional)** Print copies of the Lists of Objects Guided Notes (one for each student)\n",
         "student_overview": "**Why would I use generic types?**\n\nYou have previously learned that an `ArrayList` can only store objects, such as `Integer` or `String`. In this lesson, you learn about generic types. You realize that using the angle brackets when creating an `ArrayList` ensures that an `ArrayList` stores a specific type of object, while leaving out the angle brackets may result in multiple types of objects getting stored in the `ArrayList`. You then practice creating and using an `ArrayList` of objects and implementing algorithms to find information and perform calculations."
       },
       "seeding_key": {
@@ -497,7 +494,7 @@
       "relative_position": 23,
       "properties": {
         "overview": "**How is removing data from an `ArrayList` different from removing data from an array?**\n\nStudents have learned how to add, retrieve, and modify elements in an `ArrayList`. In this lesson, students explore the functionality of the `remove()` method in the `ArrayList` class and identify potential errors when attempting to remove items while traversing the list. Then they practice debugging programs that result in a `ConcurrentModificationException` and using the `remove()` method to remove elements from an `ArrayList`.",
-        "preparation": "* **(Optional)** Print copies of the Removing Elements Guided Notes (one for each student)\n* Preview the *Removing Data from an ArrayList* video\n",
+        "preparation": "* Preview the *Removing Data from an ArrayList* video\n",
         "student_overview": "**How is removing data from an `ArrayList` different from removing data from an array?**\n\nYou have learned how to add, retrieve, and modify elements in an `ArrayList`. In this `ArrayList`, you explore the functionality of the `remove()` method in the `ArrayList` class and identify potential errors when attempting to remove items while traversing the list. You then practice debugging programs that result in a `ConcurrentModificationException` and using the `remove()` method to remove elements from an `ArrayList`."
       },
       "seeding_key": {
@@ -515,7 +512,7 @@
       "relative_position": 24,
       "properties": {
         "overview": "**How can I use what I know about object-oriented programming and `ArrayList`s to plan and implement algorithms?**\n\nStudents use the knowledge and skills they have developed in this unit to implement algorithms to search or modify elements in an `ArrayList`. They explore basic natural language processing techniques, then work with a partner to plan and implement algorithms to work with `String` and `ArrayList` objects. Students participate in a code review to obtain feedback and iterate on the development of their programs.",
-        "preparation": "* **(Optional)** Print copies of the ArrayList and String Algorithms Guided Notes (one for each student)\n* Print copies of the Writing Algorithms with ArrayLists handout (one for each pair of students)",
+        "preparation": "* Print copies of the Writing Algorithms with ArrayLists handout (one for each pair of students)",
         "student_overview": "**How can I use what I know about object-oriented programming and `ArrayList`s to plan and implement algorithms?**\n\nYou use the knowledge and skills you have developed in this unit to implement algorithms to search or modify elements in an `ArrayList`. You explore basic natural language processing techniques, then work with a partner to plan and implement algorithms to work with `String` and `ArrayList` objects. You participate in a code review to obtain feedback and iterate on the development of your programs."
       },
       "seeding_key": {
@@ -551,7 +548,7 @@
       "relative_position": 26,
       "properties": {
         "overview": "**How can I determine the efficiency of an algorithm?**\n\nStudents have learned and practiced implementing standard algorithms to find a target element in a list throughout the year. In this lesson, they realize that they have been using the linear search algorithm to find elements and review how this algorithm is applied to different data structures. Students learn how to use execution counts to determine the best, average, and worst cases and practice evaluating the linear search algorithm to determine its efficiency. Students then write user stories for their Creative Coding with the Console Project to identify required program features.",
-        "preparation": "* **(Optional)** Print copies of the Searching Guided Notes (one for each student)\n* Gather or prepare enough cards so that each pair of students can have six cards (actual playing cards, printed cards, or index cards that are numbered)\n* Print copies of the Counting Executions with Code handout (one for each student)\n",
+        "preparation": "* Gather or prepare enough cards so that each pair of students can have six cards (actual playing cards, printed cards, or index cards that are numbered)\n* Print copies of the Counting Executions with Code handout (one for each student)\n",
         "student_overview": "**How can I determine the efficiency of an algorithm?**\n\nYou have learned and practiced implementing standard algorithms to find a target element in a list throughout the year. In this lesson, you realize that you have been using the linear search algorithm to find elements and review how this algorithm is applied to different data structures. You learn how to use execution counts to determine the best, average, and worst cases and practice evaluating the linear search algorithm to determine its efficiency. You then write user stories for your Creative Coding with the Console Project to identify required program features."
       },
       "seeding_key": {
@@ -569,7 +566,7 @@
       "relative_position": 27,
       "properties": {
         "overview": "**How is a binary search more efficient than a linear search?**\n\nStudents previously learned how to evaluate the linear search algorithm to determine its efficiency using execution counts and identified limitations of this approach to searching. In this lesson, they discover a better searching algorithm that can perform more efficiently if the list is already sorted. Students explore the binary search algorithm to evaluate its efficiency and compare it to the linear search. Students also revisit recursion and explore how the binary search algorithm can be implemented recursively.",
-        "preparation": "* **(Optional)** Print copies of the Binary Search Guided Notes (one for each student)\n* Print copies of the Binary Search handout (one for each pair of students)\n* Gather or prepare enough cards so that each pair of students can have five cards (actual playing cards, printed cards, or index cards that are numbered)",
+        "preparation": "* Print copies of the Binary Search handout (one for each pair of students)\n* Gather or prepare enough cards so that each pair of students can have five cards (actual playing cards, printed cards, or index cards that are numbered)",
         "student_overview": "**How is a binary search more efficient than a linear search?**\n\nYou previously learned how to evaluate the linear search algorithm to determine its efficiency using execution counts and identified limitations of this approach to searching. In this lesson, you discover a better searching algorithm that can perform more efficiently if the list is already sorted. You explore the binary search algorithm to evaluate its efficiency and compare it to the linear search. You also revisit recursion and explore how the binary search algorithm can be implemented recursively."
       },
       "seeding_key": {
@@ -587,7 +584,7 @@
       "relative_position": 28,
       "properties": {
         "overview": "**How can I sort elements in a data structure?**\n\nIn this lesson, students learn about the selection sort algorithm. After investigating a program using the selection sort algorithm to sort a list of values, they explore its functionality using manipulatives and evaluate its efficiency using execution counts. Students then identify the benefits and limitations of the selection sort algorithm and scenarios where a selection sort would be useful to sort a list of values.",
-        "preparation": "* **(Optional)** Print copies of the Selection Sort Guided Notes (one for each student)\n* Review the Selection Sort Activity Setup resource\n* Gather five cups and prepare sticky note manipulatives for each group of students\n* Print copies of the Selection Sort handout (one for each group of students)\n",
+        "preparation": "* Review the Selection Sort Activity Setup resource\n* Gather five cups and prepare sticky note manipulatives for each group of students\n* Print copies of the Selection Sort handout (one for each group of students)\n",
         "student_overview": "**How can I sort elements in a data structure?**\n\nIn this lesson, you learn about the selection sort algorithm. After investigating a program using the selection sort algorithm to sort a list of values, you explore its functionality using manipulatives and evaluate its efficiency using execution counts. You then identify the benefits and limitations of the selection sort algorithm and scenarios where a selection sort would be useful to sort a list of values."
       },
       "seeding_key": {
@@ -605,7 +602,7 @@
       "relative_position": 29,
       "properties": {
         "overview": "**How does the insertion sort algorithm compare in efficiency with the selection sort algorithm?**\n\nStudents previously learned about the selection sort algorithm and evaluated its functionality and limitations. In this lesson, they explore the insertion sort algorithm and compare its functionality and efficiency with the selection sort algorithm. Students analyze the efficiency of each algorithm using execution counts and identify the benefits and limitations of both the selection and insertion sort algorithms.",
-        "preparation": "* **(Optional)** Print copies of the Insertion Sort Guided Notes (one for each student)\n* Print copies of the Sorting Comparison handout (one for each pair of students)\n* Print copies of the Project Planning Feedback handout (one for each student)\n",
+        "preparation": "* Print copies of the Sorting Comparison handout (one for each pair of students)\n* Print copies of the Project Planning Feedback handout (one for each student)\n",
         "student_overview": "**How does the insertion sort algorithm compare in efficiency with the selection sort algorithm?**\n\nYou previously learned about the selection sort algorithm and evaluated its functionality and limitations. In this lesson, you explore the insertion sort algorithm and compare its functionality and efficiency with the selection sort algorithm. You analyze the efficiency of each algorithm using execution counts and identify the benefits and limitations of both the selection and insertion sort algorithms."
       },
       "seeding_key": {
@@ -623,7 +620,7 @@
       "relative_position": 30,
       "properties": {
         "overview": "**How does the merge sort algorithm compare in efficiency with the selection and insertion sort algorithms?**\n\nStudents explore the merge sort algorithm to organize elements in a list using a divide-and-conquer approach and identify the components of the algorithm. They learn how the algorithm uses helper functions to implement the divide-and-conquer approach and practice tracing the algorithm to understand its functionality. Students determine its efficiency using execution counts and compare it with the insertion and selection sort algorithms.",
-        "preparation": "* **(Optional)** Print copies of the Merge Sort Guided Notes (one for each student)\n* Print copies of the Merge Sort handout (one for each student)",
+        "preparation": "* Print copies of the Merge Sort handout (one for each student)",
         "student_overview": "**How does the merge sort algorithm compare in efficiency with the selection and insertion sort algorithms?**\n\nYou explore the merge sort algorithm to organize elements in a list using a divide-and-conquer approach and identify the components of the algorithm. You learn how the algorithm uses helper functions to implement the divide-and-conquer approach and practice tracing the algorithm to understand its functionality. You determine its efficiency using execution counts and compare it with the insertion and selection sort algorithms."
       },
       "seeding_key": {
@@ -5357,7 +5354,7 @@
       "key": "0aa2ea1e-0001-4ec9-9891-e416651ede16",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
         "name": "Show What You Know Week"
       },
       "seeding_key": {
@@ -5366,31 +5363,8 @@
       }
     },
     {
-      "key": "fc251c2b-1326-4fa4-bd06-561ff2521338",
-      "position": 2,
-      "properties": {
-        "description": "The next five lessons are an opportunity to Show What You Know! We begin with the unit project, then spend a day practicing answering AP-style free-response questions and wrapping up the unit with a multiple-choice assessment. You've learned so much in this unit, and now you're ready to show what you know!",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "fc251c2b-1326-4fa4-bd06-561ff2521338",
-        "lesson_activity.key": "ccbabb2b-d790-4e6e-a132-2f7cf0eddd68"
-      }
-    },
-    {
-      "key": "285c55e0-4e42-4a97-b482-9ac2d528305f",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 3 Study Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know Week.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Data for Social Good Project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "285c55e0-4e42-4a97-b482-9ac2d528305f",
-        "lesson_activity.key": "ccbabb2b-d790-4e6e-a132-2f7cf0eddd68"
-      }
-    },
-    {
       "key": "1ed1606b-b6cf-4790-a3f9-bd5362a32f11",
-      "position": 4,
+      "position": 2,
       "properties": {
         "description": "---"
       },
@@ -5401,7 +5375,7 @@
     },
     {
       "key": "fa19e7c4-8566-4da8-9747-b8e87b94b939",
-      "position": 5,
+      "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -8796,7 +8770,7 @@
       "key": "4e149a74-c016-46ef-8778-504c06a2362b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was awesome about writing your code?*\n* *What is one action you can take to improve your code?*\n* *What questions do you have about today?*\n\n**Discussion Goal:** Students share aspects of their program they enjoyed or strengths of writing algorithms and identify areas of improvement to strengthen their programming skills. Students also share any questions or misconceptions they may have.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was awesome about writing your code?*\n* *What is one action you can take to improve your code?*\n* *What questions do you have about today?*\n\n**Discussion Goal:** Students share aspects of their program they enjoyed or strengths of writing algorithms and identify areas of improvement to strengthen their programming skills. Students also share any questions or misconceptions they may have.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "4e149a74-c016-46ef-8778-504c06a2362b",
@@ -8804,31 +8778,8 @@
       }
     },
     {
-      "key": "6d3bb623-6b6a-4236-84fb-2cb48e22dc1f",
-      "position": 3,
-      "properties": {
-        "description": "The next five lessons are an opportunity to Show What You Know! We begin with the unit project, then spend a day practicing answering AP-style free-response questions and wrapping up the unit with a multiple-choice assessment. You've learned so much in this unit, and now you're ready to show what you know!",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "6d3bb623-6b6a-4236-84fb-2cb48e22dc1f",
-        "lesson_activity.key": "78e9ea7d-38ad-4005-b030-2c410bbf7467"
-      }
-    },
-    {
-      "key": "0443ed3a-0369-48ba-b321-3c93d1612dda",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 6 Study Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know Week.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Natural Language Processing Project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "0443ed3a-0369-48ba-b321-3c93d1612dda",
-        "lesson_activity.key": "78e9ea7d-38ad-4005-b030-2c410bbf7467"
-      }
-    },
-    {
       "key": "face52f9-9dc2-4b9b-a396-6600cea80fc3",
-      "position": 5,
+      "position": 3,
       "properties": {
         "description": "---"
       },
@@ -8839,7 +8790,7 @@
     },
     {
       "key": "a2dac5c7-d480-4894-bee1-f3bedbca7539",
-      "position": 6,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -9144,26 +9095,25 @@
       }
     },
     {
-      "key": "677ae6b5-2317-460a-8369-52875a018767",
+      "key": "9dd5b361-eb9e-49ec-85da-7079c872669d",
       "position": 1,
       "properties": {
-        "description": "As software engineers, one of our primary goals is to develop software that provides usefulness and value to users. Our goal for the Creative Coding with the Console Project is to create a program using the console that portrays a personal interest or solves a problem. When we develop programs to convey a personal interest, we typically have an audience in mind that we want to show our work to. When we develop programs to solve a problem, we typically have a specific type of user that we want to benefit from the program.",
-        "name": "User Stories",
+        "description": "Today you explored how the linear search algorithm works and how we can measure its efficiency using execution counts. Understanding how algorithms perform in different situations helps programmers make better decisions when solving problems.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "677ae6b5-2317-460a-8369-52875a018767",
+        "activity_section.key": "9dd5b361-eb9e-49ec-85da-7079c872669d",
         "lesson_activity.key": "753b85af-a39a-46d3-8de9-f5d41a4f061d"
       }
     },
     {
-      "key": "9dd5b361-eb9e-49ec-85da-7079c872669d",
+      "key": "705da6f4-2a0e-4c3a-ba2d-7e22f9704352",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review user stories.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write user stories for their project on page five of their Creative Coding with the Console Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *If you had a list of 1,000 names and needed to find just one, what factors would affect how fast your search is?*\n\n**Discussion Goal:** Students reinforce the idea of best, average, and worst-case scenarios based on the position of the target in the list. Encourage them to explain these cases in their own words and relate them to real-world searches (e.g., scrolling through contacts on a phone)."
       },
       "seeding_key": {
-        "activity_section.key": "9dd5b361-eb9e-49ec-85da-7079c872669d",
+        "activity_section.key": "705da6f4-2a0e-4c3a-ba2d-7e22f9704352",
         "lesson_activity.key": "753b85af-a39a-46d3-8de9-f5d41a4f061d"
       }
     },
@@ -9400,49 +9350,31 @@
       }
     },
     {
-      "key": "476e5f74-e00a-4663-be0f-36e8a003865e",
+      "key": "2409ea3b-5047-4834-8425-da233e92bee5",
       "position": 1,
       "properties": {
-        "description": "We just learned a lot of new information today, which may have even answered some of the Need to Know questions you wrote down about the Creative Coding Project. As we progress through the unit, it is helpful to stop and note what we have learned that is related to or useful for the project.",
-        "name": "Revisiting the Need to Knows",
+        "description": "Today you learned how binary search can dramatically reduce the number of steps it takes to find an item if the data is sorted. You also saw how binary search can be implemented both iteratively and recursively.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "476e5f74-e00a-4663-be0f-36e8a003865e",
+        "activity_section.key": "2409ea3b-5047-4834-8425-da233e92bee5",
         "lesson_activity.key": "fd638ac2-e914-4a01-b40c-0347420ec3d0"
       }
     },
     {
-      "key": "0e5ace49-6c13-447f-b371-f22217bfd01e",
+      "key": "ecba1c3b-5489-4472-92e9-b9a45c069d94",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Creative Coding with the Console Project Planning Guide. Students add new questions to this column, check off any answered questions, and write answers to any questions in the \"Learned\" column.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time permits, you can also have students share as a class."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why is binary search more efficient than linear search? What's the trade-off?*\n\n**Discussion Goal:** Students articulate that binary search halves the search space each time, making it faster than checking one item at a time. But it only works if the list is already sorted, so there's an added requirement or preprocessing step. They may also note that recursive implementations require careful base case handling.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
-        "activity_section.key": "0e5ace49-6c13-447f-b371-f22217bfd01e",
-        "lesson_activity.key": "fd638ac2-e914-4a01-b40c-0347420ec3d0"
-      }
-    },
-    {
-      "key": "1e8bae16-3885-4ce0-97fb-30cbc44f30ca",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "1e8bae16-3885-4ce0-97fb-30cbc44f30ca",
+        "activity_section.key": "ecba1c3b-5489-4472-92e9-b9a45c069d94",
         "lesson_activity.key": "fd638ac2-e914-4a01-b40c-0347420ec3d0"
       }
     },
     {
       "key": "dc5ead88-3fad-49d3-9100-611775179b2f",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "---"
       },
@@ -9453,7 +9385,7 @@
     },
     {
       "key": "ab0bca16-17c6-4912-879d-1840747a779a",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -9624,40 +9556,22 @@
       }
     },
     {
-      "key": "b55b9217-c698-4c26-975f-9370dbec214f",
+      "key": "219c8139-2f2f-4eee-9f87-254119a2e08e",
       "position": 1,
       "properties": {
-        "description": "We just learned a lot of new information today, which may have even answered some of the Need to Know questions you wrote down about the Creative Coding Project. As we progress through the unit, it is helpful to stop and note what we have learned that is related to or useful for the project.",
-        "name": "Revisiting the Need to Knows",
+        "description": "Today you explored how the selection sort algorithm works by finding the smallest value and swapping it into place repeatedly. You also measured its efficiency using execution counts and compared it to other sorting approaches you’ve seen.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "b55b9217-c698-4c26-975f-9370dbec214f",
-        "lesson_activity.key": "e57c714d-fccd-476e-a764-c758e3d5cbd8"
-      }
-    },
-    {
-      "key": "dd072ee8-46aa-4068-a3bd-8a2bb7163ecf",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Creative Coding with the Console Project Planning Guide. Students add new questions to this column, check off any answered questions, and write answers to any questions in the \"Learned\" column.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time permits, you can also have students share as a class."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "dd072ee8-46aa-4068-a3bd-8a2bb7163ecf",
+        "activity_section.key": "219c8139-2f2f-4eee-9f87-254119a2e08e",
         "lesson_activity.key": "e57c714d-fccd-476e-a764-c758e3d5cbd8"
       }
     },
     {
       "key": "18c6fac2-ef99-4066-9fc3-48e6754e6494",
-      "position": 3,
+      "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When might you choose selection sort over another sorting method? When might it not be the best choice?*\n\n**Discussion Goal:** Students recognize that selection sort is simple and works well for small lists or teaching purposes, but becomes inefficient for larger datasets. Encourage them to connect to real-world use cases like sorting options in a menu or ranking small groups.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "18c6fac2-ef99-4066-9fc3-48e6754e6494",
@@ -9666,7 +9580,7 @@
     },
     {
       "key": "1fb40b84-e69f-4f5a-9ca1-c7b553645926",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "---"
       },
@@ -9677,7 +9591,7 @@
     },
     {
       "key": "851c147c-62d1-42d4-b028-394164b0a0b6",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -9689,43 +9603,25 @@
       }
     },
     {
-      "key": "b5410811-8141-4359-9247-a87eca69ccc0",
+      "key": "2e0ce97f-67fb-4f0a-9387-db64fd70d84d",
       "position": 1,
       "properties": {
-        "description": "You did some brainstorming for your Creative Coding Project in a previous lesson. Let's now take some time to create an initial plan to guide your development processes in upcoming lessons. Your planning might include outlines, rough drafts, flowcharts, UML diagrams, or pseudocode for key algorithms in your program. Take a look at your Project Planning Board to decide what task you need to tackle first.",
-        "name": "Planning Program Structure",
+        "description": "Before we dive into today's algorithm, let's think about how we sort things in real life like a hand of cards or a list of names.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "b5410811-8141-4359-9247-a87eca69ccc0",
+        "activity_section.key": "2e0ce97f-67fb-4f0a-9387-db64fd70d84d",
         "lesson_activity.key": "bacfec9c-e37c-4018-9fbd-cb0f6b137435"
       }
     },
     {
-      "key": "4739cbd5-61dd-4b99-a8e5-b9202483bb0d",
+      "key": "364b6d36-2192-42e3-afe2-0e861a57fd5b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the first benchmark.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work on their Creative Coding with the Console Project.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Students might be unsure what task they should complete next. Encourage students to focus on brainstorming and planning tasks to identify the personal interest or problem they want to portray or address in their program and identify the major components that they need to develop. Refer students to pages six through eleven for planning space and templates."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Imagine you're handed a pile of playing cards, one at a time. You want to keep them in order. What's your strategy?*\n\n**Discussion Goal:** Students begin to uncover the logic of insertion sort through analogy: inserting each new item into the correct place in an already sorted section."
       },
       "seeding_key": {
-        "activity_section.key": "4739cbd5-61dd-4b99-a8e5-b9202483bb0d",
-        "lesson_activity.key": "bacfec9c-e37c-4018-9fbd-cb0f6b137435"
-      }
-    },
-    {
-      "key": "4d9f471d-e43f-460c-8204-4fd7e4cfc8ab",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
-      },
-      "seeding_key": {
-        "activity_section.key": "4d9f471d-e43f-460c-8204-4fd7e4cfc8ab",
+        "activity_section.key": "364b6d36-2192-42e3-afe2-0e861a57fd5b",
         "lesson_activity.key": "bacfec9c-e37c-4018-9fbd-cb0f6b137435"
       }
     },
@@ -9855,15 +9751,14 @@
       }
     },
     {
-      "key": "2bb72dfa-b4b7-4a93-8155-1542d1bc2e23",
+      "key": "dd9340a4-eaf9-41f2-bbbf-39ca689e4af7",
       "position": 1,
       "properties": {
-        "description": "Before working towards the next benchmark, it is helpful to assess your achievement of this benchmark and to get feedback on your ideas and planning.",
-        "name": "Peer Review and Feedback",
+        "description": "Today you learned how the insertion sort algorithm works and how it compares to selection sort. You used execution counts to evaluate their efficiency and considered which situations might favor one over the other.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "2bb72dfa-b4b7-4a93-8155-1542d1bc2e23",
+        "activity_section.key": "dd9340a4-eaf9-41f2-bbbf-39ca689e4af7",
         "lesson_activity.key": "05e6be66-018b-4b32-b6e0-5f8260100f8f"
       }
     },
@@ -9871,7 +9766,7 @@
       "key": "82682b40-4434-4743-860e-df6105f206ae",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Project Planning Feedback handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the feedback process.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students identify a question to frame the feedback session.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students ask their framing questions and share feedback. Students should take notes on their Project Planning Feedback handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually respond to the prompts on their Project Planning Feedback, identify the user stories that will make up their second benchmark, and post tasks they want to complete for the second benchmark in the \"To Do\" column of their Project Planning Board.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *If you had to choose one sorting algorithm for a small, mostly sorted list, which would you choose and why?*\n\n**Discussion Goal:** Students recognize that insertion sort is more efficient on nearly sorted lists due to fewer shifts, while selection sort performs a consistent number of swaps regardless of order. This helps them begin to develop algorithm-selection reasoning.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "82682b40-4434-4743-860e-df6105f206ae",
@@ -10051,40 +9946,22 @@
       }
     },
     {
-      "key": "840164f7-b9d7-4ab6-ad32-479beeb0bb4c",
+      "key": "19fc11a1-e2fd-4106-a103-a8860c6fc5d4",
       "position": 1,
       "properties": {
-        "description": "We just learned a lot of new information today, which may have even answered some of the Need to Know questions you wrote down about the Creative Coding Project. As we progress through the unit, it is helpful to stop and note what we have learned that is related to or useful for the project.",
-        "name": "Revisiting the Need to Knows",
+        "description": "Today, you explored merge sort, a powerful sorting algorithm that uses a divide-and-conquer approach. You saw how it breaks a list into smaller pieces, sorts each piece, and merges them back together, often more efficiently than selection or insertion sort for large lists.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "840164f7-b9d7-4ab6-ad32-479beeb0bb4c",
-        "lesson_activity.key": "47c24ae6-0b24-46f1-aacc-1e3579c80e2a"
-      }
-    },
-    {
-      "key": "204dc9e7-9ee0-46d1-b755-d43599930551",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Creative Coding with the Console Project Planning Guide. Students add new questions to this column, check off any answered questions, and write answers to any questions in the \"Learned\" column.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time permits, you can also have students share as a class."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "204dc9e7-9ee0-46d1-b755-d43599930551",
+        "activity_section.key": "19fc11a1-e2fd-4106-a103-a8860c6fc5d4",
         "lesson_activity.key": "47c24ae6-0b24-46f1-aacc-1e3579c80e2a"
       }
     },
     {
       "key": "a406e5ec-dc11-4236-b3f5-02041fb39453",
-      "position": 3,
+      "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What makes merge sort different from the other sorts we've learned? When would you choose to use it?*\n\n**Discussion Goal:** Students articulate that merge sort is recursive; works by dividing the problem, not scanning and swapping directly; has better efficiency for large, unsorted datasets; and is less intuitive but more powerful in complex cases.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "a406e5ec-dc11-4236-b3f5-02041fb39453",
@@ -10093,7 +9970,7 @@
     },
     {
       "key": "2935af1e-5ec4-4fa7-8019-488272739b85",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "---"
       },
@@ -10104,7 +9981,7 @@
     },
     {
       "key": "b17ba009-11ca-4446-b686-d3e64a197722",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -18639,6 +18516,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page_csa4-project1b-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -18736,6 +18616,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page_csa4-project2b-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -18833,6 +18716,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page_csa4-project3b-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -18930,6 +18816,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page_csa4-project4b-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -21582,18 +21471,6 @@
       }
     },
     {
-      "name": "[EXEMPLAR] ArrayList and String Algorithms Guided Notes",
-      "url": "https://docs.google.com/document/d/1KdjCf64Uw_WzCgOrKsNn_s4V8Mgnw08ZZgdkbPYxZbE/edit?usp=drive_link",
-      "key": "_exemplar_arraylist_and_string_algorithms_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_arraylist_and_string_algorithms_guided_notes"
-      }
-    },
-    {
       "name": "[EXEMPLAR] Asphalt Art Project Planning Guide",
       "url": "https://docs.google.com/document/d/1yW95mavytpnrl__YxD471TU_12WyLVZ0PUfYERRI93M/edit?usp=sharing",
       "key": "_exemplar_asphalt_art_project_planning_guide_2",
@@ -21627,42 +21504,6 @@
       },
       "seeding_key": {
         "resource.key": "_exemplar_data_for_social_good_project_planning_guide_1"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Data Sets Guided Notes",
-      "url": "https://docs.google.com/document/d/1Uv8SGUl5dJJ2h-WHLrXXzgL7uF5b3MbNe7Iw7FE6rYs/edit?usp=drive_link",
-      "key": "_exemplar_data_sets_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_data_sets_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Enhanced For Loops Guided Notes",
-      "url": "https://docs.google.com/document/d/15dcm584gIOSiw0vqmOTfGv3D2Js05J_lSUmR89c4H9s/edit?usp=drive_link",
-      "key": "_exemplar_enhanced_for_loops_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_enhanced_for_loops_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Ethics in Data Guided Notes",
-      "url": "https://docs.google.com/document/d/1rVZ5xG9R2KBwtpTHXe8P1TLxGfocOHKX69DNiH871bQ/edit?usp=drive_link",
-      "key": "_exemplar_ethical_and_social_issues_around_data_collection_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_ethical_and_social_issues_around_data_collection_guided_notes"
       }
     },
     {
@@ -21714,318 +21555,6 @@
       }
     },
     {
-      "name": "[EXEMPLAR] Polymorphism Guided Notes",
-      "url": "https://docs.google.com/document/d/1mZzlpwalQD3ERUuW6rPEp81ZbSFKCGhwZ_OMYaWIXkA/edit?usp=drive_link",
-      "key": "_exemplar_polymorphism_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_polymorphism_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Text Files Guided Notes",
-      "url": "https://docs.google.com/document/d/1i24lmTyZ_ZuXeXi4eJioBnparMps-FfbeYqpMkzUROQ/edit?usp=drive_link",
-      "key": "_exemplar_text_files_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_text_files_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] One-Dimensional (1D) Arrays Guided Notes",
-      "url": "https://docs.google.com/document/d/1EOWOaumzU1ZjlEsEuD6lMHCgGcJwuMQS4l3wcNLr9XY/edit?usp=sharing",
-      "key": "_exemplar_u3l1_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u3l1_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Modifying Elements Guided Notes",
-      "url": "https://docs.google.com/document/d/1UFVyEN0mK9Cpvsy_xiySYu2FWERP8sr_97haQgcRVQI/edit?usp=sharing",
-      "key": "_exemplar_u3l2_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u3l2_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Traversing 1D Arrays Guided Notes",
-      "url": "https://docs.google.com/document/d/1HT1VJz1be9euEAXzV2aMb3eCjfsy9K7Nx-B_yJ9-r2A/edit?usp=sharing",
-      "key": "_exemplar_u3l3_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u3l3_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Enhanced For Loops (1D Arrays) Guided Notes",
-      "url": "https://docs.google.com/document/d/1n-Bf3j2614tFcpXj9W-dASu_MLYJsn5q3YNmx6nvLkg/edit?usp=sharing",
-      "key": "_exemplar_u3l7_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u3l7_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] U3L8 Guided Notes",
-      "url": "https://docs.google.com/document/d/14XtcOdzftiYFcInQ4Pl2lST9F1lEJzLhglDAdxWCXXI/edit?usp=sharing",
-      "key": "_exemplar_u3l8_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u3l8_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Finding Duplicates Guided Notes",
-      "url": "https://docs.google.com/document/d/1TzPam0fdPRGe2M7Ep2QKAO5LXYxhXF0lxMf0B_v2nF0/edit?usp=sharing",
-      "key": "_exemplar_u3l9_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u3l9_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Two-Dimensional (2D) Arrays Guided Notes",
-      "url": "https://docs.google.com/document/d/1-jOb7WOg_TG3LLvtJE2AawWeRRYErO708UF64VodNrU/edit?usp=sharing",
-      "key": "_exemplar_u5l1_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u5l1_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] 2D Array Elements Guided Notes",
-      "url": "https://docs.google.com/document/d/1TX3IDgk08OYgoJ-K9Wfd11j3fCQWBDT49WV6NOJDrlI/edit?usp=sharing",
-      "key": "_exemplar_u5l2_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u5l2_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Row-Major Traversal Guided Notes",
-      "url": "https://docs.google.com/document/d/1VQjT9FPHMXtZ_MRmpMluyO1xND5v5J3bV4ZDAhEaIgI/edit?usp=sharing",
-      "key": "_exemplar_u5l3_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u5l3_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Column-Major Traversal Guided Notes",
-      "url": "https://docs.google.com/document/d/109yMcQpj3I6A86ByqUOlEnZn9UmH4CimNsfWTljyFbI/edit?usp=sharing",
-      "key": "_exemplar_u5l4_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u5l4_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Images in The Theater Guided Notes",
-      "url": "https://docs.google.com/document/d/1TVq2ccMwSCaQyOdc1HHrOjkyxUoT5IVe5G2clgmWo5M/edit?usp=sharing",
-      "key": "_exemplar_u5l6_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u5l6_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] 2D Array Algorithms Guided Notes",
-      "url": "https://docs.google.com/document/d/1ooaHZLUXkUPwQrJRNCEIrHdO31WIy8xdYcdhKEwRyYI/edit?usp=sharing",
-      "key": "_exemplar_u5l7_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u5l7_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Modifying Images Guided Notes",
-      "url": "https://docs.google.com/document/d/1Ighe4NWSyYaex0Tf_fuy-2P6m01laUmu-J1Qq9FpKZM/edit?usp=sharing",
-      "key": "_exemplar_u5l8_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u5l8_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Integer and Double Objects Guided Notes",
-      "url": "https://docs.google.com/document/d/13HkZ0_Vv7NmXa6R2IUFLThPJIN69mvB7UW2oi1DD3EE/edit?usp=sharing",
-      "key": "_exemplar_u6l3_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u6l3_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] ArrayLists Guided Notes",
-      "url": "https://docs.google.com/document/d/1enR-3ORm0mvqRnqUrnv8buTWlWsiTo_lY402agpzN4M/edit?usp=sharing",
-      "key": "_exemplar_u6l4_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u6l4_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Manipulating Elements Guided Notes",
-      "url": "https://docs.google.com/document/d/1dXVYvmJ6A_ZmSt7RmqWLb9z5assd4gL-VQuWEOHtCs8/edit?usp=sharing",
-      "key": "_exemplar_u6l5_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u6l5_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Lists of Objects Guided Notes",
-      "url": "https://docs.google.com/document/d/1RoGNFJoo5fvT7askEY0Cpc08AzddMSZDZoVgs0qfM8I/edit?usp=sharing",
-      "key": "_exemplar_u6l7_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u6l7_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Removing Elements Guided Notes",
-      "url": "https://docs.google.com/document/d/1VCvqKgzsIS_xOVYR86hVpnT4O2QwaG32sppmvZZdU5o/edit?usp=sharing",
-      "key": "_exemplar_u6l8_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u6l8_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Searching Guided Notes",
-      "url": "https://docs.google.com/document/d/1TNhrfOD0naGpBwX_efXdEwT1iSRb_ziiM1bfyYHi3fw/edit?usp=sharing",
-      "key": "_exemplar_u8l2_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u8l2_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Binary Search Guided Notes",
-      "url": "https://docs.google.com/document/d/1H_TolW858JLM1VBlT2BvdUiKtFvd4SX6dsgcTQHn0-A/edit?usp=sharing",
-      "key": "_exemplar_u8l3_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u8l3_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Selection Sort Guided Notes",
-      "url": "https://docs.google.com/document/d/1rcnGyaXwnu6SRWPAwjzZOZHt_lhLAabWhZDu785LMfc/edit?usp=sharing",
-      "key": "_exemplar_u8l4_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u8l4_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Insertion Sort Guided Notes",
-      "url": "https://docs.google.com/document/d/1urB517Yg3_UOccmTTiR3DRF32xIAe4G4G98m5SPgq14/edit?usp=sharing",
-      "key": "_exemplar_u8l5_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u8l5_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Merge Sort Guided Notes",
-      "url": "https://docs.google.com/document/d/1g202wb3fjAAmB7PFugqGC6BvzcHh7GYNV4lDCRl6OPk/edit?usp=sharing",
-      "key": "_exemplar_u8l6_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u8l6_guided_notes"
-      }
-    },
-    {
-      "name": "[KEY] ArrayList and String Algorithms Extra Practice",
-      "url": "https://docs.google.com/document/d/1y0d9b1TjPa-LdYMEjhcAIDJIM98x2HIeTCsI1sDbJ0s/edit?usp=drive_link",
-      "key": "_key_arraylist_and_string_algorithms_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_arraylist_and_string_algorithms_extra_practice"
-      }
-    },
-    {
       "name": "[KEY] Binary Search",
       "url": "https://docs.google.com/document/d/1csaUTmk69b-TpdBwdMIE16kLp9vFTPzmTi2hgDAvNn4/edit?usp=sharing",
       "key": "_key_binary_search",
@@ -22074,18 +21603,6 @@
       }
     },
     {
-      "name": "[KEY] Data Sets Extra Practice",
-      "url": "https://docs.google.com/document/d/1YsoBsXW2EGe0_FzcAoQs5nyu_w9KHvQbyRw15DrDl4M/edit?usp=drive_link",
-      "key": "_key_data_sets_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_data_sets_extra_practice"
-      }
-    },
-    {
       "name": "[KEY] Enhanced For Loops Anticipation Guide",
       "url": "https://docs.google.com/document/d/1e5aO0FdjXjSoHX3CxBFcVKH_ChJsJFW3d7Od1vpvc2g/edit?usp=drive_link",
       "key": "_key_enhanced_for_loops_anticipation_guide",
@@ -22095,30 +21612,6 @@
       },
       "seeding_key": {
         "resource.key": "_key_enhanced_for_loops_anticipation_guide"
-      }
-    },
-    {
-      "name": "[KEY] Enhanced For Loops Extra Practice",
-      "url": "https://docs.google.com/document/d/1pwEOvEyLrQYYfuewVctq4TIM623CnnWUHeoLBtifDHg/edit?usp=drive_link",
-      "key": "_key_enhanced_for_loops_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_enhanced_for_loops_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Ethics in Data Extra Practice",
-      "url": "https://docs.google.com/document/d/1m_cyc5_1ayyVMrgg2Jus8AMRKcQqMjLeDzuqQoSj9FQ/edit?usp=drive_link",
-      "key": "_key_ethical_and_social_issues_around_data_collection_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_ethical_and_social_issues_around_data_collection_extra_practice"
       }
     },
     {
@@ -22182,18 +21675,6 @@
       }
     },
     {
-      "name": "[KEY] Polymorphism Extra Practice",
-      "url": "https://docs.google.com/document/d/1vQN70GHAq4sxrFxofsJRszqcAs3fHdNgizyQuBn76Vo/edit?usp=drive_link",
-      "key": "_key_polymorphism_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_polymorphism_extra_practice"
-      }
-    },
-    {
       "name": "[KEY] Recursion Unplugged",
       "url": "https://docs.google.com/document/d/1OwrXVykoeHqDyAPVC8Xzct500VDaBbYe6QQjMZqwRto/edit?usp=sharing",
       "key": "_key_recursion_unplugged",
@@ -22254,18 +21735,6 @@
       }
     },
     {
-      "name": "[KEY] Text Files Extra Practice",
-      "url": "https://docs.google.com/document/d/13ELZ4UimCScduuEoDvctyPpr7Q-NJsVQqF66Xn_MKfk/edit?usp=drive_link",
-      "key": "_key_text_files_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_text_files_extra_practice"
-      }
-    },
-    {
       "name": "[KEY] TicketTracker FRQ",
       "url": "https://docs.google.com/document/d/1IblpGVIhJXcCvx2iIYz3je6YfuVL6haMeyShivCFpdc/edit?usp=sharing",
       "key": "_key_tickettracker_frq",
@@ -22311,294 +21780,6 @@
       },
       "seeding_key": {
         "resource.key": "_key_tracing_column-major_traversals"
-      }
-    },
-    {
-      "name": "[KEY] One-Dimensional (1D) Arrays Extra Practice",
-      "url": "https://docs.google.com/document/d/1xz52naX5m67u5X-huvkElaTKKwz06uPw_Q2Qp1En5AA/edit?usp=sharing",
-      "key": "_key_u3l1_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u3l1_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Modifying Elements Extra Practice",
-      "url": "https://docs.google.com/document/d/1Xy9dqVtdcmaN2sMt5zpuXKiAG6nWsCDutGOtBzkRKnE/edit?usp=sharing",
-      "key": "_key_u3l2_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u3l2_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Traversing 1D Arrays Extra Practice",
-      "url": "https://docs.google.com/document/d/1ZuBq9nH0822Y9odQrZuo9QtlfSlna3aMNBQv1FfvDyw/edit?usp=sharing",
-      "key": "_key_u3l3_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u3l3_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Enhanced For Loops (1D Arrays) Extra Practice",
-      "url": "https://docs.google.com/document/d/1au9Gf8AThnoCecTVeGfAaXWqV6nVADtxo6FDdVoa6mg/edit?usp=sharing",
-      "key": "_key_u3l7_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u3l7_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Array Algorithms Extra Practice",
-      "url": "https://docs.google.com/document/d/1iWjLOLgVMrpJZC_7QSRzfs6NPSR0BEsNvxCDC1LMO0Q/edit?usp=sharing",
-      "key": "_key_u3l8_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u3l8_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Finding Duplicates Extra Practice",
-      "url": "https://docs.google.com/document/d/1XroKC2gFI8HEYLPKpGtlZlp5Mf4q8JHu1dAVM8Dx0qk/edit?usp=sharing",
-      "key": "_key_u3l9_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u3l9_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Two-Dimensional (2D) Arrays Extra Practice",
-      "url": "https://docs.google.com/document/d/1F5XBr-NmQlHq0VJwrz4wwWpXEdzjOScIipduAJM61PU/edit?usp=sharing",
-      "key": "_key_u5l1_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u5l1_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] 2D Array Elements Extra Practice",
-      "url": "https://docs.google.com/document/d/1PSQNXXhLtuf7DAUgqR8OGzM7CPdaXWWJckXwQhHUHC8/edit?usp=sharing",
-      "key": "_key_u5l2_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u5l2_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Row-Major Traversal Extra Practice",
-      "url": "https://docs.google.com/document/d/1Om8xt4tpkHLh8HRxJdIvRgvSbG2DVOpxZwEoAi1ayBg/edit?usp=sharing",
-      "key": "_key_u5l3_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u5l3_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Column-Major Traversal Extra Practice",
-      "url": "https://docs.google.com/document/d/1HbXv72gYCF3nn8ZtTX7O_dnEZbrZZjBI2msrmABVTAY/edit?usp=sharing",
-      "key": "_key_u5l4_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u5l4_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Images in The Theater Extra Practice",
-      "url": "https://docs.google.com/document/d/1fi_w-54kO5Kvh81EhcErDNl6K8vYMExrkd0VHWYu7DY/edit?usp=sharing",
-      "key": "_key_u5l6_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u5l6_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] 2D Array Algorithms Extra Practice",
-      "url": "https://docs.google.com/document/d/1l67_2hxt3-lsaEQhBOSs3iT_OMM1ASy02A17_OIRuks/edit?usp=sharing",
-      "key": "_key_u5l7_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u5l7_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Modifying Images Extra Practice",
-      "url": "https://docs.google.com/document/d/1dpgglp3Gyw_9PK8P5EZFpKHwEpiZ7jNdBVZt99Oj0MY/edit?usp=sharing",
-      "key": "_key_u5l8_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u5l8_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Integer and Double Objects Extra Practice",
-      "url": "https://docs.google.com/document/d/15KLk89kqHo35DnqeljtRcVYN2JGTK2g7rqH5N-Fubug/edit?usp=share_link",
-      "key": "_key_u6l3_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u6l3_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] ArrayLists Extra Practice",
-      "url": "https://docs.google.com/document/d/1pT0r_Ef0-aa9wRzVISaodRf-UQ05ER0zapp6Bs6hb0A/edit?usp=share_link",
-      "key": "_key_u6l4_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u6l4_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Manipulating Elements Extra Practice",
-      "url": "https://docs.google.com/document/d/1Zr1F2dz-icxbgB1FK5KCuRguUSEltJm3VxgPN95Uyo8/edit?usp=share_link",
-      "key": "_key_u6l5_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u6l5_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Lists of Objects Extra Practice",
-      "url": "https://docs.google.com/document/d/1EEBsmukIRoCre8J_X6_RfaerYFdK3ODcZ_7KH8NVwK0/edit?usp=share_link",
-      "key": "_key_u6l7_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u6l7_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Removing Elements Extra Practice",
-      "url": "https://docs.google.com/document/d/1atN3NPHqJgXya3fDrKcHGaHd7eYjecURERvtKSK6HAo/edit?usp=share_link",
-      "key": "_key_u6l8_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u6l8_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Recursion Extra Practice",
-      "url": "https://docs.google.com/document/d/1MGd3XGmjZOzsGjMuUaPKMAVNbhmn3IAD3GKqCnCR_wo/edit?usp=share_link",
-      "key": "_key_u7l7_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u7l7_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Searching Extra Practice",
-      "url": "https://docs.google.com/document/d/1aWbCCyduXoeKUML43oQXnThjUzwN8qImans2_gXkuyY/edit?usp=sharing",
-      "key": "_key_u8l2_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u8l2_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Binary Search Extra Practice",
-      "url": "https://docs.google.com/document/d/1Ad7kp1OyFe9-Gar7XFMli3rC4Hw7XRn8axvwhDidQNg/edit?usp=sharing",
-      "key": "_key_u8l3_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u8l3_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Selection Sort Extra Practice",
-      "url": "https://docs.google.com/document/d/1VeW6iz1nmqNOWz3RgbcfukrEbYK4Z6u_i3BETn_ItuM/edit?usp=sharing",
-      "key": "_key_u8l4_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u8l4_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Insertion Sort Extra Practice",
-      "url": "https://docs.google.com/document/d/1wPQJ9sti7CwDRKerwcQXEGD1J6npDEBxWXVIysJEBv4/edit?usp=sharing",
-      "key": "_key_u8l5_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u8l5_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Merge Sort Extra Practice",
-      "url": "https://docs.google.com/document/d/1WEg_Vou7_go36_WghzM66cVPGgPTJLO8FnSYTe3r8zk/edit?usp=sharing",
-      "key": "_key_u8l6_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u8l6_extra_practice"
       }
     },
     {
@@ -22766,32 +21947,6 @@
       },
       "seeding_key": {
         "resource.key": "arraylist_and_string_algorithms"
-      }
-    },
-    {
-      "name": "ArrayList and String Algorithms Extra Practice",
-      "url": "https://docs.google.com/document/d/1H8K8R8bi63OUKLtNcSGDilrfVHJG_xoONCIMFRjSA1w/edit?usp=drive_link",
-      "key": "arraylist_and_string_algorithms_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "arraylist_and_string_algorithms_extra_practice"
-      }
-    },
-    {
-      "name": "ArrayList and String Algorithms Guided Notes",
-      "url": "https://docs.google.com/document/d/1IhT_BMMXEQBcsr-VonWsuR9DJIwTYi9-xRfA7LF8rzo/edit?usp=drive_link",
-      "key": "arraylist_and_string_algorithms_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "arraylist_and_string_algorithms_guided_notes"
       }
     },
     {
@@ -23019,32 +22174,6 @@
       }
     },
     {
-      "name": "Data Sets Extra Practice",
-      "url": "https://docs.google.com/document/d/1m7M5VN9nnKu9oc6KwXAdy316Ao82KQTv6Vul98sX10w/edit?usp=drive_link",
-      "key": "data_sets_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "data_sets_extra_practice"
-      }
-    },
-    {
-      "name": "Data Sets Guided Notes",
-      "url": "https://docs.google.com/document/d/1Ttr7Z57BdUKKGG-7qD3NRLkq-8j1bQ9r4rsoI0oSD54/edit?usp=drive_link",
-      "key": "data_sets_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "data_sets_guided_notes"
-      }
-    },
-    {
       "name": "Enhanced For Loops (1D Arrays)",
       "url": "https://docs.google.com/presentation/d/1V_Wohm1PT_tOAF0WEXS0Z4JJOU9xeMFt1avxdv-X2O0/edit?usp=drive_link",
       "key": "enhanced_for_loops",
@@ -23106,32 +22235,6 @@
       }
     },
     {
-      "name": "Enhanced For Loops Extra Practice",
-      "url": "https://docs.google.com/document/d/1lHQxfL17BdLLnNpMC1IW6amu58vaN98l3fBBY1hJOHw/edit?usp=drive_link",
-      "key": "enhanced_for_loops_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "enhanced_for_loops_extra_practice"
-      }
-    },
-    {
-      "name": "Enhanced For Loops Guided Notes",
-      "url": "https://docs.google.com/document/d/1G-caUELy53w7LeXpkZr-XuW_A-s7t5TUqsgsW2hDoYg/edit?usp=drive_link",
-      "key": "enhanced_for_loops_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "enhanced_for_loops_guided_notes"
-      }
-    },
-    {
       "name": "Ethics in Data",
       "url": "https://docs.google.com/presentation/d/1vTVJECEiztWIgBDulNcHK_SLkrIQYqWU18gzMEypkE0/edit?usp=drive_link",
       "key": "ethical_and_social_issues_around_data_collection",
@@ -23141,32 +22244,6 @@
       },
       "seeding_key": {
         "resource.key": "ethical_and_social_issues_around_data_collection"
-      }
-    },
-    {
-      "name": "Ethics in Data Extra Practice",
-      "url": "https://docs.google.com/document/d/1OG0g_2sGodll1FFgzhCbnawVOpiqKKjsRQipsxa1ywA/edit?usp=drive_link",
-      "key": "ethical_and_social_issues_around_data_collection_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "ethical_and_social_issues_around_data_collection_extra_practice"
-      }
-    },
-    {
-      "name": "Ethics in Data Guided Notes",
-      "url": "https://docs.google.com/document/d/1v2vcwFEYhFtQ1wht8sT-7cZAusThtwsHtBZ2tXPWurU/edit?usp=drive_link",
-      "key": "ethical_and_social_issues_around_data_collection_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "ethical_and_social_issues_around_data_collection_guided_notes"
       }
     },
     {
@@ -23699,45 +22776,6 @@
       }
     },
     {
-      "name": "Polymorphism Extra Practice",
-      "url": "https://docs.google.com/document/d/11QuxryOnpt4Mcw4a71bxNx3Vi-SFdWNCBU-kzYZDBtQ/edit?usp=drive_link",
-      "key": "polymorphism_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "polymorphism_extra_practice"
-      }
-    },
-    {
-      "name": "Polymorphism Guided Notes",
-      "url": "https://docs.google.com/document/d/12kchi0lxZeMz-Rs5LK4pyYvpcpp3Y9SxeQHUwUC7wVI/edit?usp=drive_link",
-      "key": "polymorphism_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "polymorphism_guided_notes"
-      }
-    },
-    {
-      "name": "Project Planning Feedback",
-      "url": "https://docs.google.com/document/d/1zGgaEt_neN9veF6WjM_FU4ECpk4c5fryhnQz25zQ6eU/edit?usp=sharing",
-      "key": "project_planning_feedback_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "project_planning_feedback_1"
-      }
-    },
-    {
       "name": "Recursion",
       "url": "https://docs.google.com/presentation/d/1m_4rVDdW6CffsjbLbKkxhbQai9cEoo7kEY5C4kN6Aw4/edit?usp=drive_link",
       "key": "recursion",
@@ -23973,32 +23011,6 @@
       }
     },
     {
-      "name": "Text Files Extra Practice",
-      "url": "https://docs.google.com/document/d/16Q4Nu63m4c97vrVDKUN2a68jrWyxJFdxleRLtJrKQlc/edit?usp=drive_link",
-      "key": "text_files_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "text_files_extra_practice"
-      }
-    },
-    {
-      "name": "Text Files Guided Notes",
-      "url": "https://docs.google.com/document/d/15ibPFlDacjf4VQCFHoTCoxx8QXFXok_4nd3IHQbxqAM/edit?usp=drive_link",
-      "key": "text_files_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "text_files_guided_notes"
-      }
-    },
-    {
       "name": "The ArrayList Class",
       "url": "https://youtu.be/Wqk9PrPIkXs",
       "key": "the_arraylist_class",
@@ -24124,617 +23136,6 @@
       }
     },
     {
-      "name": "One-Dimensional (1D) Arrays Extra Practice",
-      "url": "https://docs.google.com/document/d/1mHGQY_wjNcEM3RF72WJcBxm7x7zxp1fweTycE27miVU/edit?usp=sharing",
-      "key": "u3l1_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u3l1_extra_practice"
-      }
-    },
-    {
-      "name": "One-Dimensional (1D) Arrays Guided Notes",
-      "url": "https://docs.google.com/document/d/1fJSW9V_UohWVEA-v7qgbA1veUXli1rrOiZu2LoVpOQo/edit?usp=sharing",
-      "key": "u3l1_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u3l1_guided_notes"
-      }
-    },
-    {
-      "name": "Modifying Elements Extra Practice",
-      "url": "https://docs.google.com/document/d/13M7L-uaed6l1O6d7461POhmp0HfnaBpmmgrh-rlD7XE/edit?usp=sharing",
-      "key": "u3l2_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u3l2_extra_practice"
-      }
-    },
-    {
-      "name": "Modifying Elements Guided Notes",
-      "url": "https://docs.google.com/document/d/1KEAhcOwSHY7dmJ403gYKLUGmid1Ydgrbl6TL6eVDIlc/edit?usp=sharing",
-      "key": "u3l2_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u3l2_guided_notes"
-      }
-    },
-    {
-      "name": "Traversing 1D Arrays Extra Practice",
-      "url": "https://docs.google.com/document/d/1TnYW18F4xv0nbD1_pgYeqMY3WsDTnboXs3fNpEgnXLE/edit?usp=sharing",
-      "key": "u3l3_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u3l3_extra_practice"
-      }
-    },
-    {
-      "name": "Traversing 1D Arrays Guided Notes",
-      "url": "https://docs.google.com/document/d/1zjKgQIjVyPVeh14KBhqDqi9uB_ldglG3Htz-i7jDuTI/edit?usp=sharing",
-      "key": "u3l3_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u3l3_guided_notes"
-      }
-    },
-    {
-      "name": "Enhanced For Loops (1D Arrays) Extra Practice",
-      "url": "https://docs.google.com/document/d/1Q3PNy582iV67yAS4FAOf8lUn-yJGk8TFVeCJ_ifEbqw/edit?usp=sharing",
-      "key": "u3l7_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u3l7_extra_practice"
-      }
-    },
-    {
-      "name": "Enhanced For Loops (1D Arrays) Guided Notes",
-      "url": "https://docs.google.com/document/d/1IXRg1XdvQJ_TUQ0tmdN866CxHxvzIw5Q-Gpzq68UgLQ/edit?usp=sharing",
-      "key": "u3l7_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u3l7_guided_notes"
-      }
-    },
-    {
-      "name": "Array Algorithms Extra Practice",
-      "url": "https://docs.google.com/document/d/1oBySNR7eETbzZML00nmI-KexneZc86RC9Jhxo0Hn3Nw/edit?usp=sharing",
-      "key": "u3l8_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u3l8_extra_practice"
-      }
-    },
-    {
-      "name": "Array Algorithms Guided Notes",
-      "url": "https://docs.google.com/document/d/1yUMYx6iYUcedxfPIIxXwR0ll2-bxqALE9sUdBFLY1Dc/edit?usp=sharing",
-      "key": "u3l8_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u3l8_guided_notes"
-      }
-    },
-    {
-      "name": "Finding Duplicates Extra Practice",
-      "url": "https://docs.google.com/document/d/13kU6VOCKvNy7cVvkeA5ZuhOo7jDa41rt9cxjGoP3mfs/edit?usp=sharing",
-      "key": "u3l9_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u3l9_extra_practice"
-      }
-    },
-    {
-      "name": "Finding Duplicates Guided Notes",
-      "url": "https://docs.google.com/document/d/1kcuU6WUqb5vVNdcqN-Zfmi1o1bV5ZWRfMSXdBouUYMI/edit?usp=sharing",
-      "key": "u3l9_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u3l9_guided_notes"
-      }
-    },
-    {
-      "name": "Two-Dimensional (2D) Arrays Extra Practice",
-      "url": "https://docs.google.com/document/d/1DWzap3RV0j4UXda-br6hSVlhjXUSD2zvufEJHw1nusQ/edit?usp=sharing",
-      "key": "u5l1_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u5l1_extra_practice"
-      }
-    },
-    {
-      "name": "Two-Dimensional (2D) Arrays Guided Notes",
-      "url": "https://docs.google.com/document/d/1DSF2DnpHU-ZKf5PfAJ63iorO4wJKPNVNE7YaET0MdKg/edit?usp=sharing",
-      "key": "u5l1_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u5l1_guided_notes"
-      }
-    },
-    {
-      "name": "2D Array Elements Extra Practice",
-      "url": "https://docs.google.com/document/d/1Kpa5cvPJtx6cOitpWf_h7Uyji5VhDWICYsUTlp5E8F4/edit?usp=sharing",
-      "key": "u5l2_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u5l2_extra_practice"
-      }
-    },
-    {
-      "name": "2D Array Elements Guided Notes",
-      "url": "https://docs.google.com/document/d/1ekdkpZT0GdmtbawHaxbVaS-DLI3ub8M8EDonWM6UK0I/edit?usp=sharing",
-      "key": "u5l2_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u5l2_guided_notes"
-      }
-    },
-    {
-      "name": "Row-Major Traversal Extra Practice",
-      "url": "https://docs.google.com/document/d/1Sx5EKAJjZPFI084EITLiqla6bZf8Z9FOp7hx8nrVB-s/edit?usp=sharing",
-      "key": "u5l3_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u5l3_extra_practice"
-      }
-    },
-    {
-      "name": "Row-Major Traversal Guided Notes",
-      "url": "https://docs.google.com/document/d/1P4VZ7-vYFyXaMwjLdpdkdTJqJiTIM-m0P1bsJuAebpU/edit?usp=sharing",
-      "key": "u5l3_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u5l3_guided_notes"
-      }
-    },
-    {
-      "name": "Column-Major Traversal Extra Practice",
-      "url": "https://docs.google.com/document/d/1NY5EGKkib6-sSEu3nitEqvG7qSq2tnqW3gF2YxMzUKE/edit?usp=sharing",
-      "key": "u5l4_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u5l4_extra_practice"
-      }
-    },
-    {
-      "name": "Column-Major Traversal Guided Notes",
-      "url": "https://docs.google.com/document/d/1jcYlFcx8LqQeHLIsnPt7GNty-IlE60YDsl_BJD_l53I/edit?usp=sharing",
-      "key": "u5l4_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u5l4_guided_notes"
-      }
-    },
-    {
-      "name": "Images in The Theater Extra Practice",
-      "url": "https://docs.google.com/document/d/1zqe5-lqtgoyqGSFyIc810q2v-m1daVG9LEXdyqcJPNs/edit?usp=sharing",
-      "key": "u5l6_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u5l6_extra_practice"
-      }
-    },
-    {
-      "name": "Images in The Theater Guided Notes",
-      "url": "https://docs.google.com/document/d/1DeXptsGP99ru8BFNgaEH5AVj8Q01OSbAW3UsD-4BVT0/edit?usp=sharing",
-      "key": "u5l6_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u5l6_guided_notes"
-      }
-    },
-    {
-      "name": "2D Array Algorithms Extra Practice",
-      "url": "https://docs.google.com/document/d/1SY5giLnFNu54aZOgmIlDCdTyYJ_areNIAWTh7Hwx4AU/edit?usp=sharing",
-      "key": "u5l7_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u5l7_extra_practice"
-      }
-    },
-    {
-      "name": "2D Array Algorithms Guided Notes",
-      "url": "https://docs.google.com/document/d/1wJybbyQ34Dlf4EipGRbtR8IXJSWIUO7eS2JFCBikfBU/edit?usp=sharing",
-      "key": "u5l7_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u5l7_guided_notes"
-      }
-    },
-    {
-      "name": "Modifying Images Extra Practice",
-      "url": "https://docs.google.com/document/d/12wfCs84uN30reaB2uqILtslCl6kU6_sWYqlRYqHoo1E/edit?usp=sharing",
-      "key": "u5l8_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u5l8_extra_practice"
-      }
-    },
-    {
-      "name": "Modifying Images Guided Notes",
-      "url": "https://docs.google.com/document/d/1lnMmdXIvmMAxPH_paNg7Ess-gnS3AZLRhwtsbJqjyDI/edit?usp=sharing",
-      "key": "u5l8_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u5l8_guided_notes"
-      }
-    },
-    {
-      "name": "Integer and Double Objects Extra Practice",
-      "url": "https://docs.google.com/document/d/1rzx0ZnW_HTeeRW4-zN66IdZSgG7a8OrmcJjK-Peu-28/edit?usp=share_link",
-      "key": "u6l3_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u6l3_extra_practice"
-      }
-    },
-    {
-      "name": "Integer and Double Objects Guided Notes",
-      "url": "https://docs.google.com/document/d/19-Ze0oWw1ym1NBabCtMYJdl9MKZd7N2hYF671vxGeRI/edit?usp=sharing",
-      "key": "u6l3_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u6l3_guided_notes"
-      }
-    },
-    {
-      "name": "ArrayLists Extra Practice",
-      "url": "https://docs.google.com/document/d/1szK9LMlV9xmG2xGjCfUOyUcq7Ieb0VUIHEu3uLmImHA/edit?usp=share_link",
-      "key": "u6l4_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u6l4_extra_practice"
-      }
-    },
-    {
-      "name": "ArrayLists Guided Notes",
-      "url": "https://docs.google.com/document/d/1XfO4kzE-LlJN8RIY5DnNq8qeZ3QMYHJITST_iwaQf8E/edit?usp=sharing",
-      "key": "u6l4_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u6l4_guided_notes"
-      }
-    },
-    {
-      "name": "Manipulating Elements Extra Practice",
-      "url": "https://docs.google.com/document/d/1hhJb7WEKHjITjgrQ324BiQITMGtWwgBJ1QgE87HGVNQ/edit?usp=share_link",
-      "key": "u6l5_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u6l5_extra_practice"
-      }
-    },
-    {
-      "name": "Manipulating Elements Guided Notes",
-      "url": "https://docs.google.com/document/d/1UdsMDE6cpPghBiqT1s6Au9BP-PLi5tD13ETA8Q-w4jM/edit?usp=sharing",
-      "key": "u6l5_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u6l5_guided_notes"
-      }
-    },
-    {
-      "name": "Lists of Objects Extra Practice",
-      "url": "https://docs.google.com/document/d/1LHoYpweHAiIIPcC8HkrNrl0dV1MHbWuoyWNE1nHyZrs/edit?usp=share_link",
-      "key": "u6l7_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u6l7_extra_practice"
-      }
-    },
-    {
-      "name": "Lists of Objects Guided Notes",
-      "url": "https://docs.google.com/document/d/1N46P78Hf34GakYv3jHH4zoomt_HQZC_xg9g0SNLak1c/edit?usp=sharing",
-      "key": "u6l7_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u6l7_guided_notes"
-      }
-    },
-    {
-      "name": "Removing Elements Extra Practice",
-      "url": "https://docs.google.com/document/d/1J-GWNJXNb9ekqLnptevZT9yaUHGcaWJ989TFD1cavd4/edit?usp=share_link",
-      "key": "u6l8_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u6l8_extra_practice"
-      }
-    },
-    {
-      "name": "Removing Elements Guided Notes",
-      "url": "https://docs.google.com/document/d/1AfmqGAWv62DxqWvftCUv9w4PGlJb2S3_soL9iFvsCSU/edit?usp=sharing",
-      "key": "u6l8_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u6l8_guided_notes"
-      }
-    },
-    {
-      "name": "Recursion Extra Practice",
-      "url": "https://docs.google.com/document/d/1j9E__64mUwYP8z-mN5dXcGklXw2mruK_SOKV6gIHAhU/edit?usp=share_link",
-      "key": "u7l7_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u7l7_extra_practice"
-      }
-    },
-    {
-      "name": "Searching Extra Practice",
-      "url": "https://docs.google.com/document/d/1ir0n846IY_VQhM25N-Ii5pAWvOCkSg_64zZBiNGM1I8/edit?usp=sharing",
-      "key": "u8l2_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u8l2_extra_practice"
-      }
-    },
-    {
-      "name": "Searching Guided Notes",
-      "url": "https://docs.google.com/document/d/1AzoUYqo_ocobQqwUJurDhDYOmZv5IHadYWvxD4bZ3_g/edit?usp=sharing",
-      "key": "u8l2_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u8l2_guided_notes"
-      }
-    },
-    {
-      "name": "Binary Search Extra Practice",
-      "url": "https://docs.google.com/document/d/1ReDsKmkOiDivqAZEeOHX7qQKsgQdiURESCRRiXfUnT4/edit?usp=sharing",
-      "key": "u8l3_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u8l3_extra_practice"
-      }
-    },
-    {
-      "name": "Binary Search Guided Notes",
-      "url": "https://docs.google.com/document/d/18rbBjHHdwoZRf1peDJlBVUp4rJVheuUfGOcC9IQVtXI/edit?usp=sharing",
-      "key": "u8l3_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u8l3_guided_notes"
-      }
-    },
-    {
-      "name": "Selection Sort Extra Practice",
-      "url": "https://docs.google.com/document/d/1FIMMdXH_vrFKfBa1_6vWYUVa3U8CyIFXx8IDQBe9XKA/edit?usp=sharing",
-      "key": "u8l4_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u8l4_extra_practice"
-      }
-    },
-    {
-      "name": "Selection Sort Guided Notes",
-      "url": "https://docs.google.com/document/d/1FlzF2ZG4UHqW7koPChBc5hJckyt8NtmG4VYUo7K8iMs/edit?usp=sharing",
-      "key": "u8l4_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u8l4_guided_notes"
-      }
-    },
-    {
-      "name": "Insertion Sort Extra Practice",
-      "url": "https://docs.google.com/document/d/1YT27_O1sJoT70wsLKoReu7SG1kq32v5wldUEehIeuTk/edit?usp=sharing",
-      "key": "u8l5_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u8l5_extra_practice"
-      }
-    },
-    {
-      "name": "Insertion Sort Guided Notes",
-      "url": "https://docs.google.com/document/d/1QyTpbBGk8BbwXYjWtlaPMd-BKqWsVOMG8_UibsC52wE/edit?usp=sharing",
-      "key": "u8l5_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u8l5_guided_notes"
-      }
-    },
-    {
-      "name": "Merge Sort Extra Practice",
-      "url": "https://docs.google.com/document/d/1b71Jd5z-NeIHJwytua8e2FuqyiyNaVUYYQbn2cNSRlM/edit?usp=sharing",
-      "key": "u8l6_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u8l6_extra_practice"
-      }
-    },
-    {
-      "name": "Merge Sort Guided Notes",
-      "url": "https://docs.google.com/document/d/1BDE8xo-e9bPZjYWD0jZOJwT8mxrgccF9CEO-YeYthec/edit?usp=sharing",
-      "key": "u8l6_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u8l6_guided_notes"
-      }
-    },
-    {
       "name": "Working with 2D Array Elements",
       "url": "https://youtu.be/t0ZyG6uWSLE",
       "key": "working_with_2d_array_elements",
@@ -24857,18 +23258,6 @@
     {
       "seeding_key": {
         "lesson.key": "2D Array Algorithms",
-        "resource.key": "_exemplar_u5l7_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "2D Array Algorithms",
-        "resource.key": "_key_u5l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "2D Array Algorithms",
         "resource.key": "_key_writing_algorithms_with_2d_arrays_1"
       }
     },
@@ -24887,18 +23276,6 @@
     {
       "seeding_key": {
         "lesson.key": "2D Array Algorithms",
-        "resource.key": "u5l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "2D Array Algorithms",
-        "resource.key": "u5l7_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "2D Array Algorithms",
         "resource.key": "writing_algorithms_with_2d_arrays_1"
       }
     },
@@ -24911,31 +23288,7 @@
     {
       "seeding_key": {
         "lesson.key": "2D Array Elements",
-        "resource.key": "_exemplar_u5l2_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "2D Array Elements",
-        "resource.key": "_key_u5l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "2D Array Elements",
         "resource.key": "guide_to_programming_levels_in_csa"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "2D Array Elements",
-        "resource.key": "u5l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "2D Array Elements",
-        "resource.key": "u5l2_guided_notes"
       }
     },
     {
@@ -24983,18 +23336,6 @@
     {
       "seeding_key": {
         "lesson.key": "Array Algorithms",
-        "resource.key": "_exemplar_u3l8_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Array Algorithms",
-        "resource.key": "_key_u3l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Array Algorithms",
         "resource.key": "_key_writing_algorithms_with_arrays"
       }
     },
@@ -25019,31 +23360,7 @@
     {
       "seeding_key": {
         "lesson.key": "Array Algorithms",
-        "resource.key": "u3l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Array Algorithms",
-        "resource.key": "u3l8_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Array Algorithms",
         "resource.key": "writing_algorithms_with_arrays"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "ArrayList and String Algorithms",
-        "resource.key": "_exemplar_arraylist_and_string_algorithms_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "ArrayList and String Algorithms",
-        "resource.key": "_key_arraylist_and_string_algorithms_extra_practice"
       }
     },
     {
@@ -25061,18 +23378,6 @@
     {
       "seeding_key": {
         "lesson.key": "ArrayList and String Algorithms",
-        "resource.key": "arraylist_and_string_algorithms_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "ArrayList and String Algorithms",
-        "resource.key": "arraylist_and_string_algorithms_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "ArrayList and String Algorithms",
         "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
@@ -25080,18 +23385,6 @@
       "seeding_key": {
         "lesson.key": "ArrayList and String Algorithms",
         "resource.key": "writing_algorithms_with_arraylists"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "ArrayLists",
-        "resource.key": "_exemplar_u6l4_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "ArrayLists",
-        "resource.key": "_key_u6l4_extra_practice"
       }
     },
     {
@@ -25114,32 +23407,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "ArrayLists",
-        "resource.key": "u6l4_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "ArrayLists",
-        "resource.key": "u6l4_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Binary Search",
-        "resource.key": "_exemplar_u8l3_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Binary Search",
         "resource.key": "_key_binary_search"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Binary Search",
-        "resource.key": "_key_u8l3_extra_practice"
       }
     },
     {
@@ -25158,18 +23427,6 @@
       "seeding_key": {
         "lesson.key": "Binary Search",
         "resource.key": "guide_to_programming_levels_in_csa"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Binary Search",
-        "resource.key": "u8l3_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Binary Search",
-        "resource.key": "u8l3_guided_notes"
       }
     },
     {
@@ -25199,19 +23456,7 @@
     {
       "seeding_key": {
         "lesson.key": "Column-Major Traversal",
-        "resource.key": "_exemplar_u5l4_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Column-Major Traversal",
         "resource.key": "_key_tracing_column-major_traversals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Column-Major Traversal",
-        "resource.key": "_key_u5l4_extra_practice"
       }
     },
     {
@@ -25240,30 +23485,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Column-Major Traversal",
-        "resource.key": "u5l4_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Column-Major Traversal",
-        "resource.key": "u5l4_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Data Sets",
-        "resource.key": "_exemplar_data_sets_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Data Sets",
-        "resource.key": "_key_data_sets_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Data Sets",
         "resource.key": "_key_writing_algorithms_with_data_sets"
       }
@@ -25272,18 +23493,6 @@
       "seeding_key": {
         "lesson.key": "Data Sets",
         "resource.key": "data_sets"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Data Sets",
-        "resource.key": "data_sets_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Data Sets",
-        "resource.key": "data_sets_guided_notes"
       }
     },
     {
@@ -25331,19 +23540,7 @@
     {
       "seeding_key": {
         "lesson.key": "Enhanced For Loops (2D Arrays)",
-        "resource.key": "_exemplar_enhanced_for_loops_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Enhanced For Loops (2D Arrays)",
         "resource.key": "_key_enhanced_for_loops_anticipation_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Enhanced For Loops (2D Arrays)",
-        "resource.key": "_key_enhanced_for_loops_extra_practice"
       }
     },
     {
@@ -25367,31 +23564,7 @@
     {
       "seeding_key": {
         "lesson.key": "Enhanced For Loops (2D Arrays)",
-        "resource.key": "enhanced_for_loops_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Enhanced For Loops (2D Arrays)",
-        "resource.key": "enhanced_for_loops_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Enhanced For Loops (2D Arrays)",
         "resource.key": "guide_to_programming_levels_in_csa"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Enhanced For Loops",
-        "resource.key": "_exemplar_u3l7_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Enhanced For Loops",
-        "resource.key": "_key_u3l7_extra_practice"
       }
     },
     {
@@ -25420,30 +23593,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Enhanced For Loops",
-        "resource.key": "u3l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Enhanced For Loops",
-        "resource.key": "u3l7_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ethics in Data",
-        "resource.key": "_exemplar_ethical_and_social_issues_around_data_collection_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ethics in Data",
-        "resource.key": "_key_ethical_and_social_issues_around_data_collection_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Ethics in Data",
         "resource.key": "analyzing_data_sets"
       }
@@ -25456,32 +23605,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Ethics in Data",
-        "resource.key": "ethical_and_social_issues_around_data_collection_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ethics in Data",
-        "resource.key": "ethical_and_social_issues_around_data_collection_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Finding Duplicates",
-        "resource.key": "_exemplar_u3l9_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Finding Duplicates",
         "resource.key": "_key_finding_duplicates"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Finding Duplicates",
-        "resource.key": "_key_u3l9_extra_practice"
       }
     },
     {
@@ -25512,18 +23637,6 @@
       "seeding_key": {
         "lesson.key": "Finding Duplicates",
         "resource.key": "planning_algorithms_manipulatives"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Finding Duplicates",
-        "resource.key": "u3l9_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Finding Duplicates",
-        "resource.key": "u3l9_guided_notes"
       }
     },
     {
@@ -25559,19 +23672,7 @@
     {
       "seeding_key": {
         "lesson.key": "Images in The Theater",
-        "resource.key": "_exemplar_u5l6_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Images in The Theater",
         "resource.key": "_key_creating_image_filters"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Images in The Theater",
-        "resource.key": "_key_u5l6_extra_practice"
       }
     },
     {
@@ -25600,32 +23701,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Images in The Theater",
-        "resource.key": "u5l6_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Images in The Theater",
-        "resource.key": "u5l6_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Insertion Sort",
-        "resource.key": "_exemplar_u8l5_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Insertion Sort",
         "resource.key": "_key_sorting_comparison"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Insertion Sort",
-        "resource.key": "_key_u8l5_extra_practice"
       }
     },
     {
@@ -25643,37 +23720,7 @@
     {
       "seeding_key": {
         "lesson.key": "Insertion Sort",
-        "resource.key": "project_planning_feedback_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Insertion Sort",
         "resource.key": "sorting_comparison"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Insertion Sort",
-        "resource.key": "u8l5_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Insertion Sort",
-        "resource.key": "u8l5_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Integer and Double Objects",
-        "resource.key": "_exemplar_u6l3_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Integer and Double Objects",
-        "resource.key": "_key_u6l3_extra_practice"
       }
     },
     {
@@ -25691,18 +23738,6 @@
     {
       "seeding_key": {
         "lesson.key": "Integer and Double Objects",
-        "resource.key": "u6l3_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Integer and Double Objects",
-        "resource.key": "u6l3_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Integer and Double Objects",
         "resource.key": "wrapper_classes_-_part_1"
       }
     },
@@ -25715,18 +23750,6 @@
     {
       "seeding_key": {
         "lesson.key": "Lists of Objects",
-        "resource.key": "_exemplar_u6l7_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lists of Objects",
-        "resource.key": "_key_u6l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lists of Objects",
         "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
@@ -25734,30 +23757,6 @@
       "seeding_key": {
         "lesson.key": "Lists of Objects",
         "resource.key": "lists_of_objects"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lists of Objects",
-        "resource.key": "u6l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lists of Objects",
-        "resource.key": "u6l7_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Manipulating Elements",
-        "resource.key": "_exemplar_u6l5_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Manipulating Elements",
-        "resource.key": "_key_u6l5_extra_practice"
       }
     },
     {
@@ -25775,37 +23774,13 @@
     {
       "seeding_key": {
         "lesson.key": "Manipulating Elements",
-        "resource.key": "u6l5_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Manipulating Elements",
-        "resource.key": "u6l5_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Manipulating Elements",
         "resource.key": "working_with_arraylist_data"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Merge Sort",
-        "resource.key": "_exemplar_u8l6_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Merge Sort",
         "resource.key": "_key_merge_sort"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Merge Sort",
-        "resource.key": "_key_u8l6_extra_practice"
       }
     },
     {
@@ -25828,30 +23803,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Merge Sort",
-        "resource.key": "u8l6_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Merge Sort",
-        "resource.key": "u8l6_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Modifying Elements",
-        "resource.key": "_exemplar_u3l2_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Modifying Elements",
-        "resource.key": "_key_u3l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Modifying Elements",
         "resource.key": "guide_to_programming_levels_in_csa"
       }
@@ -25870,32 +23821,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Modifying Elements",
-        "resource.key": "u3l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Modifying Elements",
-        "resource.key": "u3l2_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Modifying Images",
-        "resource.key": "_exemplar_u5l8_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Modifying Images",
         "resource.key": "_key_modifying_colors"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Modifying Images",
-        "resource.key": "_key_u5l8_extra_practice"
       }
     },
     {
@@ -25914,18 +23841,6 @@
       "seeding_key": {
         "lesson.key": "Modifying Images",
         "resource.key": "modifying_images"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Modifying Images",
-        "resource.key": "u5l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Modifying Images",
-        "resource.key": "u5l8_guided_notes"
       }
     },
     {
@@ -25997,18 +23912,6 @@
     {
       "seeding_key": {
         "lesson.key": "One-Dimensional (1D) Arrays",
-        "resource.key": "_exemplar_u3l1_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Dimensional (1D) Arrays",
-        "resource.key": "_key_u3l1_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Dimensional (1D) Arrays",
         "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
@@ -26022,18 +23925,6 @@
       "seeding_key": {
         "lesson.key": "One-Dimensional (1D) Arrays",
         "resource.key": "one-dimensional_1d_arrays_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Dimensional (1D) Arrays",
-        "resource.key": "u3l1_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "One-Dimensional (1D) Arrays",
-        "resource.key": "u3l1_guided_notes"
       }
     },
     {
@@ -26075,18 +23966,6 @@
     {
       "seeding_key": {
         "lesson.key": "Polymorphism",
-        "resource.key": "_exemplar_polymorphism_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Polymorphism",
-        "resource.key": "_key_polymorphism_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Polymorphism",
         "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
@@ -26104,26 +23983,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Polymorphism",
-        "resource.key": "polymorphism_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Polymorphism",
-        "resource.key": "polymorphism_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Recursion",
         "resource.key": "_key_recursion_unplugged"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Recursion",
-        "resource.key": "_key_u7l7_extra_practice"
       }
     },
     {
@@ -26158,24 +24019,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Recursion",
-        "resource.key": "u7l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Removing Elements",
-        "resource.key": "_exemplar_u6l8_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Removing Elements",
-        "resource.key": "_key_u6l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Removing Elements",
         "resource.key": "guide_to_programming_levels_in_csa"
       }
@@ -26194,32 +24037,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Removing Elements",
-        "resource.key": "u6l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Removing Elements",
-        "resource.key": "u6l8_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Row-Major Traversal",
-        "resource.key": "_exemplar_u5l3_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Row-Major Traversal",
         "resource.key": "_key_tracing_2d_array_traversals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Row-Major Traversal",
-        "resource.key": "_key_u5l3_extra_practice"
       }
     },
     {
@@ -26261,37 +24080,13 @@
     {
       "seeding_key": {
         "lesson.key": "Row-Major Traversal",
-        "resource.key": "u5l3_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Row-Major Traversal",
-        "resource.key": "u5l3_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Row-Major Traversal",
         "resource.key": "writing_algorithms_with_2d_arrays"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Searching",
-        "resource.key": "_exemplar_u8l2_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Searching",
         "resource.key": "_key_counting_executions_with_code"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Searching",
-        "resource.key": "_key_u8l2_extra_practice"
       }
     },
     {
@@ -26310,18 +24105,6 @@
       "seeding_key": {
         "lesson.key": "Searching",
         "resource.key": "searching"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Searching",
-        "resource.key": "u8l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Searching",
-        "resource.key": "u8l2_guided_notes"
       }
     },
     {
@@ -26357,19 +24140,7 @@
     {
       "seeding_key": {
         "lesson.key": "Selection Sort",
-        "resource.key": "_exemplar_u8l4_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Selection Sort",
         "resource.key": "_key_selection_sort"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Selection Sort",
-        "resource.key": "_key_u8l4_extra_practice"
       }
     },
     {
@@ -26394,18 +24165,6 @@
       "seeding_key": {
         "lesson.key": "Selection Sort",
         "resource.key": "selection_sort_activity_setup"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Selection Sort",
-        "resource.key": "u8l4_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Selection Sort",
-        "resource.key": "u8l4_guided_notes"
       }
     },
     {
@@ -26441,31 +24200,7 @@
     {
       "seeding_key": {
         "lesson.key": "Text Files",
-        "resource.key": "_exemplar_text_files_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Text Files",
-        "resource.key": "_key_text_files_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Text Files",
         "resource.key": "text_files"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Text Files",
-        "resource.key": "text_files_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Text Files",
-        "resource.key": "text_files_guided_notes"
       }
     },
     {
@@ -26507,18 +24242,6 @@
     {
       "seeding_key": {
         "lesson.key": "Traversing 1D Arrays",
-        "resource.key": "_exemplar_u3l3_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversing 1D Arrays",
-        "resource.key": "_key_u3l3_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversing 1D Arrays",
         "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
@@ -26526,30 +24249,6 @@
       "seeding_key": {
         "lesson.key": "Traversing 1D Arrays",
         "resource.key": "traversing_1d_arrays"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversing 1D Arrays",
-        "resource.key": "u3l3_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversing 1D Arrays",
-        "resource.key": "u3l3_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Two-Dimensional (2D) Arrays",
-        "resource.key": "_exemplar_u5l1_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Two-Dimensional (2D) Arrays",
-        "resource.key": "_key_u5l1_extra_practice"
       }
     },
     {
@@ -26568,18 +24267,6 @@
       "seeding_key": {
         "lesson.key": "Two-Dimensional (2D) Arrays",
         "resource.key": "two-dimensional_2d_arrays_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Two-Dimensional (2D) Arrays",
-        "resource.key": "u5l1_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Two-Dimensional (2D) Arrays",
-        "resource.key": "u5l1_guided_notes"
       }
     }
   ],

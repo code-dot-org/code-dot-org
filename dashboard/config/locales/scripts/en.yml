@@ -18452,7 +18452,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-coding-with-ai
-          title: self-paced-pl-coding-with-ai
+          title: Coding with AI
           description_audience: ''
           description_short: ''
           description: ''
@@ -21378,7 +21378,7 @@ en:
 
             ##Just Starting this Unit?
 
-            We recommend completing the free [**Exploring Generative AI Self-Paced Professional Learning Module**](https://studio.code.org/courses/self-paced-exploring-gen-ai-2024). The module is designed to take 2-3 hours to complete. No previous computer science or AI experience is required.
+            We recommend completing the free [**Exploring Generative AI Self-Paced Professional Learning Module**](https://studio.code.org/courses/self-paced-exploring-gen-ai). The module is designed to take 2-3 hours to complete. No previous computer science or AI experience is required.
 
             We also recommend watching the [5-Part Exploring Generative AI Video Series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfJLo5nNGPHo0xCd9Xw5lSs) which introduces key concepts for generative AI. The entire video series takes ~15 minutes to watch.
 
@@ -21422,7 +21422,7 @@ en:
 
             ##Just Starting this Unit?
 
-            We recommend completing the free [**Exploring Generative AI Self-Paced Professional Learning Module**](https://studio.code.org/courses/self-paced-exploring-gen-ai-2024). The module is designed to take 2-3 hours to complete. No previous computer science or AI experience is required.
+            We recommend completing the free [**Exploring Generative AI Self-Paced Professional Learning Module**](https://studio.code.org/courses/self-paced-exploring-gen-ai). The module is designed to take 2-3 hours to complete. No previous computer science or AI experience is required.
 
             We also recommend watching the [5-Part Exploring Generative AI Video Series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfJLo5nNGPHo0xCd9Xw5lSs) which introduces key concepts for generative AI. The entire video series takes ~15 minutes to watch.
 
@@ -21431,6 +21431,8 @@ en:
           student_description: Learn to customize chatbots using AI Chat Lab
           description_short: Learn to customize chatbots using AI Chat Lab
           description_audience: ''
+          lessons: {}
+          name: exploring-gen-ai2-2025
         csd1-2025:
           lesson_groups:
             lessonGroup-5:
@@ -21616,7 +21618,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: introduction-to-programming-in-music-lab-for-elementary
-          title: Coding with Music
+          title: Introduction to Programming in Music Lab
           description_audience: Elementary Students
           description_short: ''
           description: In this three-lesson unit, students in grades 3–6 will explore how coding and music go hand in hand. Each lesson connects a computer science concept—like sequencing, functions, and events—to a real-world music role such as songwriter, producer, or soundtrack designer. Using Code.org’s Music Lab, students will build their own musical creations by organizing sounds, reusing patterns, and adding interactive effects. By the end of the unit, students will understand how musicians and coders both use creativity, structure, and technology to bring music to life.
@@ -24375,8 +24377,22 @@ en:
           title: 'Java Basics '
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            #### **In this unit, you will:**
+            - #### Learn Java programming basics in Code.org's Java Lab.
+            - #### Understand Variables in Java.
+            - #### Practice making conditional statements in Java.
+            - #### Read, write, and debug for loops in Java.
+
+            #### **Estimated time:** 90 minutes
+          student_description: |-
+            ####**In this unit, you will:**
+            - #### Learn Java programming basics in Code.org's Java Lab.
+            - #### Understand Variables in Java.
+            - #### Practice making conditional statements in Java.
+            - #### Read, write, and debug for loops in Java.
+
+            #### **Estimated time:** 90 minutes
         sandbox-java-oop-pl:
           lessons:
             lesson-1:
@@ -24465,9 +24481,11 @@ en:
           name: coding-with-music
           title: 'Coding with Music '
           description_audience: ''
-          description_short: ''
-          description: ''
-          student_description: ''
+          description_short: This engaging module for grades 3–5 uses music to introduce core computer science concepts sequencing, functions, and events through creative lessons featuring real-world professionals from the music and tech industries.
+          description: 'A creative, engaging way to introduce core computer science concepts using music as the hook. Each lesson features a real professional from the music or tech world, helping students see themselves in these creative careers. In the first lesson, students learn sequencing by putting code blocks in order—just like a songwriter arranges lyrics and notes. In the second lessons, students explore functions by reusing patterns in their code, like a music producer building beats. And in Lesson 3, students dive into event-driven code, creating sounds that respond to actions—like a sound designer for a game.
+
+            '
+          student_description: Get ready to explore computer science through the power of music! In this module, you'll learn how coding is a lot like making music—arranging blocks like lyrics, repeating patterns like beats, and making sounds respond to actions. You'll also meet real music and tech pros who use these skills in their jobs every day!
         self-paced-pl-teaching-aif2-2025:
           lessons: {}
           lesson_groups: {}
@@ -24502,7 +24520,7 @@ en:
           title: Teaching Coding with Music
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get familiar with Coding with Music! After completing this professional learning experience, **you'll be comfortable with basic coding and music concepts for elementary school students**.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** "
           student_description: ''
         career-journeys-for-elementary:
           lessons: {}
@@ -24510,9 +24528,9 @@ en:
           name: career-journeys-for-elementary
           title: Career Journeys for Elementary
           description_audience: ''
-          description_short: ''
-          description: ''
-          student_description: ''
+          description_short: In this lesson, students explore CS and AI careers and create a personalized project in Sprite Lab that shows how technology is used in a job they care about.
+          description: In this lesson, students explore CS and AI careers and create a personalized project in Sprite Lab that shows how technology is used in a job they care about.
+          student_description: In this lesson, you’ll learn about cool jobs that use computer science and AI, then create your own project in Sprite Lab to show how tech is used in a career that interests you!
         self-paced-pl-exploring-gen-ai-2025:
           lessons: {}
           lesson_groups: {}
@@ -24558,8 +24576,26 @@ en:
           title: Teaching Problem Solving with AI
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Insights from the Teaching Problem-Solving with AI Unit.
+
+            #### The Problem-Solving with AI unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Teaching Problem-Solving with AI unit. However, you can engage with the content in the order that best meets your needs.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Insights from the Teaching Problem-Solving with AI Unit.
+
+            #### The Problem-Solving with AI unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Teaching Problem-Solving with AI unit. However, you can engage with the content in the order that best meets your needs.
         self-paced-pl-teaching-aif3-2025:
           lessons: {}
           lesson_groups: {}
@@ -24645,7 +24681,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-aif6-2025
-          title: Insights from Data and AI
+          title: Teaching Insights from Data and AI
           description_audience: ''
           description_short: ''
           description: |-
@@ -24694,3 +24730,165 @@ en:
 
             Most of these lessons were originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
           student_description: ''
+        self-paced-pl-teaching-foundations-ai-programming:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-foundations-ai-programming
+          title: Teaching Foundations of AI Programming
+          description_audience: ''
+          description_short: ''
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Foundations of AI Programming unit.
+
+            #### The Foundations of AI Programming unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Foundations of AI Programming unit. However, you can engage with the content in the order that best meets your needs.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Foundations of AI Programming unit.
+
+            #### The Foundations of AI Programming unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Foundations of AI Programming unit. However, you can engage with the content in the order that best meets your needs.
+        self-paced-pl-teaching-fabric-of-internet:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-fabric-of-internet
+          title: Teaching the Fabric of the Internet
+          description_audience: ''
+          description_short: ''
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s The Fabric of the Internet and AI unit.
+
+            #### The Fabric of the Internet and AI unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the The Fabric of the Internet and AI unit. However, you can engage with the content in the order that best meets your needs.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s The Fabric of the Internet and AI unit.
+
+            #### The Fabric of the Internet and AI unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the The Fabric of the Internet and AI unit. However, you can engage with the content in the order that best meets your needs.
+        self-paced-pl-teaching-ai-systems-power-it:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-ai-systems-power-it
+          title: Teaching AI and the Systems that Power It
+          description_audience: ''
+          description_short: ''
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s AI and the Systems that Power It unit.
+
+            #### The AI and the Systems that Power It unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the AI and the Systems that Power It unit. However, you can engage with the content in the order that best meets your needs.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s AI and the Systems that Power It unit.
+
+            #### The AI and the Systems that Power It unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the AI and the Systems that Power It unit. However, you can engage with the content in the order that best meets your needs.
+        self-paced-pl-teaching-cyber-and-global-impacts:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-cyber-and-global-impacts
+          title: Teaching Cybersecurity and Global Impacts
+          description_audience: ''
+          description_short: ''
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Cybersecurity and Global Impacts unit.
+
+            #### The Cybersecurity and Global Impacts unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Cybersecurity and Global Impacts unit. However, you can engage with the content in the order that best meets your needs.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Cybersecurity and Global Impacts unit.
+
+            #### The Cybersecurity and Global Impacts unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Cybersecurity and Global Impacts unit. However, you can engage with the content in the order that best meets your needs.
+        self-paced-pl-teaching-insights-from-data-and-ai-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-insights-from-data-and-ai-2025
+          title: Teaching Insights from Data and AI
+          description_audience: ''
+          description_short: ''
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Insights from Data and AI Unit.
+
+            #### The Insights from Data and AI unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Insights from Data and AI unit. However, you can engage with the content in the order that best meets your needs.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Insights from Data and AI Unit.
+
+            #### The Insights from Data and AI unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Insights from Data and AI unit. However, you can engage with the content in the order that best meets your needs.
+        self-paced-pl-teaching-problem-solving-with-ai-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-problem-solving-with-ai-2025
+          title: Teaching Problem-Solving with AI
+          description_audience: ''
+          description_short: ''
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Insights from the Teaching Problem-Solving with AI Unit.
+
+            #### The Problem-Solving with AI unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Teaching Problem-Solving with AI unit. However, you can engage with the content in the order that best meets your needs.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Insights from the Teaching Problem-Solving with AI Unit.
+
+            #### The Problem-Solving with AI unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Teaching Problem-Solving with AI unit. However, you can engage with the content in the order that best meets your needs.
