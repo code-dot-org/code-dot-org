@@ -5,10 +5,10 @@ import {
   useRef,
   useState,
   useCallback,
-  ReactNode,
   HTMLAttributes,
   forwardRef,
   useImperativeHandle,
+  ReactElement,
 } from 'react';
 import {createPortal} from 'react-dom';
 
@@ -31,7 +31,8 @@ export interface WithTooltipHandle {
 }
 
 export interface WithTooltipProps {
-  children: ReactNode;
+  children: ReactElement<HTMLAttributes<HTMLElement>>;
+  /** DEPRECATED */
   tooltipOverlayClassName?: string;
   tooltipProps: TooltipProps;
 }
@@ -159,8 +160,15 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
 
     // Check if children prop is a valid React element and clone it with ariaDescribedBy attribute
     // and additional event handlers to make sure the tooltip is displayed correctly
+    const isValid = isValidElement<HTMLAttributes<HTMLElement>>(children);
+    if (!isValid) {
+      console.warn(
+        'Child of WithTooltip is not a valid element. returning child without tooltip',
+      );
+      return children;
+    }
     const componentToWrap =
-      isValidElement<HTMLAttributes<HTMLElement>>(children) &&
+      isValid &&
       cloneElement(children, {
         'aria-describedby': tooltipProps.tooltipId,
         onFocus: (event: React.FocusEvent<HTMLElement>) => {
@@ -181,8 +189,8 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
         },
       });
 
-    return (
-      <TooltipOverlay className={tooltipOverlayClassName}>
+    const component = (
+      <>
         {componentToWrap}
         {showTooltip &&
           createPortal(
@@ -196,7 +204,15 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
             />,
             document.body,
           )}
+      </>
+    );
+
+    return tooltipOverlayClassName ? (
+      <TooltipOverlay className={tooltipOverlayClassName}>
+        {component}
       </TooltipOverlay>
+    ) : (
+      component
     );
   },
 );

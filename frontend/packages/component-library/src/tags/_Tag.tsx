@@ -2,7 +2,7 @@ import React, {HTMLAttributes, memo, useCallback} from 'react';
 
 import CloseButton from '@/closeButton/CloseButton';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
-import {WithTooltip} from '@/tooltip';
+import {WithTooltip, WithTooltipProps} from '@/tooltip';
 
 import moduleStyles from './tags.module.scss';
 
@@ -64,7 +64,7 @@ const Tag: React.FunctionComponent<TagProps> = props => {
     type = 'default',
   } = props;
   const tooltipWrapper = useCallback(
-    (children: React.ReactNode) =>
+    (children: WithTooltipProps['children']) =>
       tooltipContent && tooltipId ? (
         <WithTooltip
           tooltipProps={{

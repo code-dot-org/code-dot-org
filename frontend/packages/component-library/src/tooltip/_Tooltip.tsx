@@ -37,8 +37,11 @@ export interface TooltipOverlayProps {
   className?: string;
 }
 
-/** TooltipOverlay component
+/** DEPRECATED TooltipOverlay component
  * Used to wrap the element that needs a Tooltip + Tooltip itself to make sure the Tooltip is displayed correctly
+ *
+ * TooltipOverlay is no longer necessary, but keeping for backwards compatibility
+ * since some implementations still use the tooltipOverlayClassName prop
  * */
 export const TooltipOverlay: React.FunctionComponent<TooltipOverlayProps> = ({
   children,
