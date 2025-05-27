@@ -34,4 +34,4 @@ Feature: CourseOverview
 
   Scenario: Viewing course overview for a single-unit course
     Given I am on "http://studio.code.org/courses/ui-test-single-unit-course-2026"
-    And I get redirected to "/s/ui-test-single-unit-2026" via "dashboard"
+    And I get redirected to "/courses/ui-test-single-unit-course-2026/units/1" via "dashboard"

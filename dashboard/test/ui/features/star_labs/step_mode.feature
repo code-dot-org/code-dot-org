@@ -2,7 +2,7 @@
 Feature: Step Mode
 
 Scenario: Step Only - Failure
-  Given I am on "http://studio.code.org/s/step/lessons/1/levels/1"
+  Given I am on "http://studio.code.org/courses/step/units/1/lessons/1/levels/1"
     And I wait for the lab page to fully load
   Then element "#runButton" is hidden
     And element "#resetButton" is hidden
@@ -35,7 +35,7 @@ Scenario: Step Only - Failure
     And element "#stepButton" is not disabled
 
 Scenario: Step Only - Success
-  Given I am on "http://studio.code.org/s/step/lessons/1/levels/1"
+  Given I am on "http://studio.code.org/courses/step/units/1/lessons/1/levels/1"
     And I wait for the lab page to fully load
   Then element "#runButton" is hidden
     And element "#resetButton" is hidden
@@ -54,7 +54,7 @@ Scenario: Step Only - Success
   Then element ".congrats" has text "Congratulations! You completed Puzzle 1."
 
 Scenario: Step Only - Reset while stepping
-  Given I am on "http://studio.code.org/s/step/lessons/1/levels/1"
+  Given I am on "http://studio.code.org/courses/step/units/1/lessons/1/levels/1"
     And I wait for the lab page to fully load
   Then element "#runButton" is hidden
     And element "#resetButton" is hidden
@@ -77,7 +77,7 @@ Scenario: Step Only - Reset while stepping
     And element "#stepButton" is not disabled
 
 Scenario: Step and Run - Stepping
-  Given I am on "http://studio.code.org/s/step/lessons/1/levels/2"
+  Given I am on "http://studio.code.org/courses/step/units/1/lessons/1/levels/2"
     And I wait for the lab page to fully load
   Then element "#runButton" is visible
     And element "#resetButton" is hidden
@@ -102,7 +102,7 @@ Scenario: Step and Run - Stepping
     And element "#stepButton" is not disabled
 
 Scenario: Step and Run - Running
-  Given I am on "http://studio.code.org/s/step/lessons/1/levels/2"
+  Given I am on "http://studio.code.org/courses/step/units/1/lessons/1/levels/2"
     And I wait for the lab page to fully load
   Then element "#runButton" is visible
     And element "#resetButton" is hidden

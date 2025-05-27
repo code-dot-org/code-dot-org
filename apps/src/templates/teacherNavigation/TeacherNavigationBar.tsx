@@ -245,10 +245,24 @@ const TeacherNavigationBar: React.FC<{
 
   const aiContext = () => {
     if (selectedSection?.courseId && selectedSection?.unitId)
-      return AiDiffContext.COURSE;
-    if (selectedSection?.courseId) return AiDiffContext.COURSE;
-    if (selectedSection?.unitId) return AiDiffContext.UNIT;
-    return AiDiffContext.GENERAL;
+      return {
+        type: AiDiffContext.COURSE,
+        courseId: selectedSection.courseId,
+        unitId: selectedSection.unitId,
+      };
+    if (selectedSection?.courseId)
+      return {
+        type: AiDiffContext.COURSE,
+        courseId: selectedSection.courseId,
+      };
+    if (selectedSection?.unitId)
+      return {
+        type: AiDiffContext.UNIT,
+        unitId: selectedSection.unitId,
+      };
+    return {
+      type: AiDiffContext.GENERAL,
+    };
   };
 
   return (
@@ -280,11 +294,6 @@ const TeacherNavigationBar: React.FC<{
       {experiments.isEnabled('ai-differentiation') && (
         <AiDiffFloatingActionButton
           context={aiContext()}
-          scriptId={
-            selectedSection?.courseId
-              ? selectedSection?.courseId
-              : selectedSection?.unitId
-          }
           scriptName={selectedSection?.courseVersionName}
           unitDisplayName={selectedSection?.courseDisplayName}
         />

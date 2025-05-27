@@ -5,8 +5,6 @@ description 'description here'
 markdown <<MARKDOWN
 # Accessor Methods
 
-#### In Java, classes often **hide their data** (also called encapsulation) to keep it safe and organized. Instead of letting other code access fields (variables) directly, we use methods to control how values are read and changed.
----
 
 <img src="https://images.code.org/cc6ec92f7bd8e930b3903c51aa44d5d5-image-1747852879738.png" alt="code for an accessor method called getName()" width="350px" style="border-radius:10px; float:right; margin: 40px 0 0px 40px;">
 

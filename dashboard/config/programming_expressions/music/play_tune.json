@@ -1,0 +1,16 @@
+{
+  "key": "play_tune",
+  "name": "Play Tune",
+  "category": "Sounds",
+  "category_key": "play",
+  "content": "Create a melody of notes for different instruments",
+  "palette_params": [
+    {
+      "name": "Pattern",
+      "type": "Pattern Panel",
+      "required": true,
+      "description": "The pattern to play. Select elements to play sounds at specific times. Multiple sounds can be played at any time. "
+    }
+  ],
+  "short_description": "Plays a set of notes"
+}

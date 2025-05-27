@@ -3,6 +3,7 @@ require 'cdo/shared_constants'
 
 class UnitTest < ActiveSupport::TestCase
   include SharedConstants
+  include Minitest::RSpecMocks
 
   self.use_transactional_test_case = true
 
@@ -2671,6 +2672,92 @@ class UnitTest < ActiveSupport::TestCase
     unit_with_ai_tutor = create :unit, :with_levels
     unit_with_ai_tutor.levels[0].update!(ai_tutor_available: true)
     assert unit_with_ai_tutor.has_ai_tutor_level?
+  end
+
+  describe '#title_for_display' do
+    let(:has_numbered_units) {false}
+    let(:unit_group) {create :unit_group, has_numbered_units: has_numbered_units}
+    let(:unit_title) {'my_unit_title'}
+    let(:unit) {create :unit, original_unit_group: unit_group}
+    let(:position) {2}
+    let!(:unit_group_unit) {create :unit_group_unit, script_id: unit.id, course_id: unit_group.id, position: position}
+    let(:unit_group_other) {create :unit_group, has_numbered_units: has_numbered_units}
+    let(:position_other) {1}
+    let!(:unit_group_unit_other) {create :unit_group_unit, script_id: unit.id, course_id: unit_group_other.id, position: position_other}
+
+    before do
+      # Add the unit to another unit_group
+      unit.reload
+      allow(unit).to receive(:localized_title).and_return(unit_title)
+    end
+
+    context 'default unit_group_unit' do
+      let(:subject) {unit.title_for_display}
+
+      context 'has_numbered_units is false' do
+        let(:has_numbered_units) {false}
+
+        it 'returns the unit title' do
+          _(subject).must_equal 'my_unit_title'
+        end
+      end
+
+      context 'has_numbered_units is true' do
+        let(:has_numbered_units) {true}
+
+        it 'returns the unit title with prefix' do
+          _(subject).must_equal 'Unit 2 - my_unit_title'
+        end
+      end
+    end
+
+    context 'unit_group_unit is the original' do
+      let(:subject) {unit.title_for_display(unit_group_unit: unit_group_unit)}
+
+      context 'has_numbered_units is false' do
+        let(:has_numbered_units) {false}
+
+        it 'returns the unit title' do
+          _(subject).must_equal 'my_unit_title'
+        end
+      end
+
+      context 'has_numbered_units is true' do
+        let(:has_numbered_units) {true}
+
+        it 'returns the unit title with prefix' do
+          _(subject).must_equal 'Unit 2 - my_unit_title'
+        end
+      end
+
+      context 'unit_group_unit is the other' do
+        let(:subject) {unit.title_for_display(unit_group_unit: unit_group_unit_other)}
+
+        context 'has_numbered_units is false' do
+          let(:has_numbered_units) {false}
+
+          it 'returns the unit title' do
+            _(subject).must_equal 'my_unit_title'
+          end
+        end
+
+        context 'has_numbered_units is true' do
+          let(:has_numbered_units) {true}
+
+          it 'returns the unit title with prefix' do
+            _(subject).must_equal 'Unit 1 - my_unit_title'
+          end
+
+          context 'position_other is 3' do
+            let(:position_other) {3}
+
+            it 'returns the unit title with prefix' do
+              _(subject).must_equal 'Unit 3 - my_unit_title'
+            end
+          end
+        end
+      end
+    end
   end
 
   private def has_unlaunched_unit?(units)

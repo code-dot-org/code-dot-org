@@ -12,8 +12,8 @@ Scenario: Hidden Scripts
   Then I sign in as "bobby"
   And I am on "http://studio.code.org/courses/allthethingscourse"
   And I see no difference for "student course overview with hidden script"
-  Then I am on "http://studio.code.org/s/allthethings"
+  Then I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   And I see no difference for "student script overview on hidden script"
-  Then I am on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
+  Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
   And I see no difference for "student lesson on hidden script"
   And I close my eyes

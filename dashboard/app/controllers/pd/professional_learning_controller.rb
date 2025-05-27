@@ -32,6 +32,9 @@ class Pd::ProfessionalLearningController < ApplicationController
 
   # GET professional-learning/workshops
   def workshops
+    @available_national_workshops = Pd::ProfessionalLearningController.national_workshop_data
+    @zip_from_school_info = current_user&.school_info&.school&.zip&.to_s&.rjust(5, '0') || current_user&.school_info&.zip&.to_s&.rjust(5, '0')
+
     view_options(full_width: true, no_padding_container: true)
     render :regional_workshop_catalog
   end
@@ -150,7 +153,6 @@ class Pd::ProfessionalLearningController < ApplicationController
   # - Not in the past
   # - Not hidden
   # - Considered to be in the regional partner's region (i.e. satisfies one of the following):
-  #    - Has "National" participant group type
   #    - Has "Regional" participant group type and is associated with the given regional partner
   #    - Is a CSD, CSP, or CSA workshop and is associated with the given regional partner
   #    - Is CSF
@@ -160,10 +162,7 @@ class Pd::ProfessionalLearningController < ApplicationController
 
     partner, _ = RegionalPartner.find_by_zip(zip_code)
     rp_workshops = partner&.pd_workshops || []
-    national_workshops = Pd::Workshop.where(participant_group_type: "National").and(Pd::Workshop.where(hidden: false).or(Pd::Workshop.where(hidden: nil))) || []
-    workshops = (rp_workshops + national_workshops).uniq(&:id)
-
-    available_workshops = workshops.select do |ws|
+    available_regional_workshops = rp_workshops.select do |ws|
       start_of_ws = ws.sessions.first.try(:start)
       start_date = ws.time_zone ? start_of_ws.in_time_zone(ws.time_zone).to_date : start_of_ws.to_date
 
@@ -174,12 +173,28 @@ class Pd::ProfessionalLearningController < ApplicationController
         has_allowed_course_for_regional_ws_page?(ws)
     end
 
-    sorted_available_workshops = available_workshops.sort_by {|ws| ws.sessions&.first&.start}
+    sorted_available_regional_workshops = available_regional_workshops.sort_by {|ws| ws.sessions&.first&.start}
 
     render json: {status: :ok, regional_workshop_data: {
       regional_partner: {name: partner&.name, additional_info: partner&.additional_program_information},
-      available_workshops: sorted_available_workshops&.map(&:summarize_for_regional_workshop_page)
+      available_regional_workshops: sorted_available_regional_workshops&.map(&:summarize_for_regional_workshop_page)
     }}
+  end
+
+  def self.national_workshop_data
+    national_workshops = Pd::Workshop.
+      where(course: Pd::Workshop::COURSE_BUILD_YOUR_OWN).
+      where(participant_group_type: "National").
+      where(started_at: nil).
+      and(Pd::Workshop.where(hidden: false).or(Pd::Workshop.where(hidden: nil))) || []
+
+    national_workshops_in_future = national_workshops.select do |ws|
+      start_of_ws = ws.sessions.first.try(:start)
+      start_date = ws.time_zone ? start_of_ws.in_time_zone(ws.time_zone).to_date : start_of_ws.to_date
+      start_date > Time.now.in_time_zone(ws.time_zone || 'America/Chicago').to_date
+    end
+
+    national_workshops_in_future.sort_by {|ws| ws.sessions&.first&.start}&.map(&:summarize_for_regional_workshop_page)
   end
 
   # Returns if the current_user can view the facilitator landing page of the given course.
@@ -187,10 +202,8 @@ class Pd::ProfessionalLearningController < ApplicationController
     current_user&.can_view_all_facilitator_landing_pages? || current_user&.courses_as_facilitator&.exists?(course: course)
   end
 
-  # Returns if the given workshop is within the provided regional partner's area (including
-  # national workshops).
+  # Returns if the given workshop is within the provided regional partner's area.
   private def in_region?(workshop, regional_partner)
-    return true if workshop.participant_group_type == 'National'
     workshop.regional_partner_id == regional_partner.id &&
       (workshop.participant_group_type == 'Regional' ||
       [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSA, Pd::Workshop::COURSE_CSF].include?(workshop.course))

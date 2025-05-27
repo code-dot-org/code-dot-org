@@ -14,7 +14,7 @@ markdown <<MARKDOWN
 ---
 ##File names
 
-<img src="https://images.code.org/6db56848de494c93a965b3845b2c9aee-image-1747667743965.png" alt="Sample Java code with a class header and file name" width="325px" style="border-radius:10px; float:left; margin: 0 30px 10px 10px;">
+<img src="https://images.code.org/6db56848de494c93a965b3845b2c9aee-image-1747667743965.png" alt="Sample Java code with a class header and file name" width="400px" style="border-radius:10px; float:left; margin: 0 30px 10px 10px;">
 
 <br><br>
 
@@ -27,7 +27,7 @@ markdown <<MARKDOWN
 ---
 ## Class headers
 
-<img src="https://images.code.org/55234feeac009a7bd6345fecdf102441-image-1747668058775.png" alt="Sample Java code with a class header and file name" width="325px" style="border-radius:10px; float:left; margin: 0 30px 10px 10px;">
+<img src="https://images.code.org/55234feeac009a7bd6345fecdf102441-image-1747668058775.png" alt="Sample Java code with a class header and file name" width="400px" style="border-radius:10px; float:left; margin: 0 30px 10px 10px;">
 
 #### The **class header** consists of the class keyword and the name of the class.
 

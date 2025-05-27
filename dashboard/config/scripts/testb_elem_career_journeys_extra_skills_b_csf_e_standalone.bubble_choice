@@ -1,6 +1,6 @@
 name 'testB-elem-career-journeys-extra-skills_b_csf-e_standalone'
-display_name 'More Skills!'
-description 'Level up your Sprite Lab skills. Choose one to practice.'
+display_name 'Extra Skills!'
+description 'If you are ready to add more advanced code to your project level up your Sprite Lab skills. Choose one to practice.'
 
 sublevels
 level 'testB-elem-career-journeys-sizes_b_csf-e_standalone'
