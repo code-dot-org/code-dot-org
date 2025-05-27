@@ -12,13 +12,11 @@ export default class CdoConstantsProvider extends Blockly.blockRendering
 
   constructor(inputs: InputPlugin[]) {
     super();
-    console.log('hi', inputs);
     this.__shapeMap = {};
 
+    // Go through input plugins for different notch shapes
     let shapeIndex = Math.max(...Object.values(this.SHAPES)) + 1;
     for (const plugin of inputs) {
-      console.log('PLUGIN', plugin, shapeIndex);
-
       const currentShapeIndex = this.SHAPES[plugin.shape] || shapeIndex;
       if (!this.SHAPES[plugin.shape]) {
         this.SHAPES[plugin.shape] = shapeIndex;
@@ -65,7 +63,6 @@ export default class CdoConstantsProvider extends Blockly.blockRendering
     // element in the list.
     const connectionCheck = connection.getCheck();
     const connectorType = connectionCheck ? connectionCheck[0] : null;
-    console.log('SHAPEFOR', connectionCheck, connectorType, connection);
     switch (connection.type) {
       case Blockly.ConnectionType.INPUT_VALUE:
       case Blockly.ConnectionType.OUTPUT_VALUE:

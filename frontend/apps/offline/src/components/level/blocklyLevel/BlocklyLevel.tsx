@@ -13,9 +13,12 @@ import Instructions from '@/components/workspace/information/instructions';
 import MultipleChoice from '@/components/workspace/information/multipleChoice';
 import BlocklyProvider from '@/providers/BlocklyProvider';
 
+import moduleStyles from './blocklyLevel.module.scss';
+
 export interface BlocklyLevelProps {
   levelData: LevelData;
   startBlocks?: string;
+  hiddenBlocks?: string;
   data?: object;
   options?: BlocklyOptions;
   customBlocks?: BlockDefinition[];
@@ -31,6 +34,7 @@ export interface BlocklyLevelProps {
 const BlocklyLevel: React.FunctionComponent<BlocklyLevelProps> = ({
   levelData,
   startBlocks,
+  hiddenBlocks,
   data,
   options,
   visualization,
@@ -71,23 +75,39 @@ const BlocklyLevel: React.FunctionComponent<BlocklyLevelProps> = ({
           },
         ]}
       >
-        <BlocklyWorkspace
-          data={data}
-          options={{
-            readOnly: levelData.multipleChoice ? true : undefined,
-            ...options,
-          }}
-          startBlocks={
-            startBlocks ||
-            levelData.template?.blocklyData?.startBlocks ||
-            levelData.blocklyData?.startBlocks
-          }
-          toolboxBlocks={
-            levelData.multipleChoice ? '' : levelData.blocklyData?.toolboxBlocks
-          }
-          onInject={onInject}
-          plugins={plugins}
-        />
+        <div className={moduleStyles.blocklyLevel}>
+          {hiddenBlocks && (
+            <BlocklyWorkspace
+              hidden
+              options={{
+                readOnly: true,
+              }}
+              startBlocks={hiddenBlocks}
+              plugins={plugins}
+            />
+          )}
+          <BlocklyWorkspace
+            data={data}
+            options={{
+              readOnly: levelData.multipleChoice ? true : undefined,
+              ...options,
+            }}
+            startBlocks={
+              startBlocks ||
+              levelData.template?.blocklyData?.startBlocks ||
+              levelData.blocklyData?.startBlocks
+            }
+            toolboxBlocks={
+              levelData.multipleChoice
+                ? undefined
+                : levelData.blocklyData?.toolboxBlocks?.contents?.length === 0
+                  ? undefined
+                  : levelData.blocklyData?.toolboxBlocks
+            }
+            onInject={onInject}
+            plugins={plugins}
+          />
+        </div>
       </Workspace>
     </BlocklyProvider>
   );

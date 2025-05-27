@@ -106,7 +106,6 @@ export function isBlockAtEdge(block: Blockly.Block) {
     block.workspace as Blockly.WorkspaceSvg,
   );
   const {x = 0, y = 0} = block.getRelativeToSurfaceXY();
-  console.log(block, x, y, defaultX, defaultY);
   return x === defaultX || y === defaultY;
 }
 
@@ -156,7 +155,6 @@ function adjustBlockPositions(
   const orderedColliders: Collider[] = [];
   const blocksToPlace: Blockly.BlockSvg[] = [];
   blocks.forEach(block => {
-    console.log('block', block);
     if (isBlockAtEdge(block)) {
       blocksToPlace.push(block);
     } else {
@@ -226,8 +224,8 @@ export function getDefaultLocation(workspaceOverride?: Blockly.WorkspaceSvg) {
   const isRTL = workspace.RTL;
 
   const {viewWidth = 0} = workspace.getMetricsManager().getMetrics();
-  const defaultX = isRTL ? viewWidth : 10;
-  const defaultY = 10;
+  const defaultX = isRTL ? viewWidth : 0;
+  const defaultY = 0;
 
   return {defaultX, defaultY};
 }

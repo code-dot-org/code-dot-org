@@ -3,6 +3,7 @@ import * as libraryBlocks from 'blockly/blocks';
 import * as Blockly from 'blockly/core';
 import {javascriptGenerator, JavascriptGenerator} from 'blockly/javascript';
 import * as En from 'blockly/msg/en';
+import classnames from 'classnames';
 import React, {createElement, useEffect, useRef, useContext} from 'react';
 
 import BlocklyContext from '@/contexts/BlocklyContext';
@@ -50,6 +51,8 @@ export interface BlocklyWorkspaceProps {
   theme?: Theme;
   /** Whether or not to render this workspace as inline, useful for documentation */
   inline?: boolean;
+  /** Whether or not this is a hidden workspace. */
+  hidden?: boolean;
   /** A callback when the Blockly environment is loaded into the container */
   onInject?: () => void;
   /** A set of plugins to install to this workspace */
@@ -72,6 +75,7 @@ const BlocklyWorkspace: React.FunctionComponent<BlocklyWorkspaceProps> = ({
   renderer,
   theme,
   inline,
+  hidden,
   onInject,
   plugins,
 }) => {
@@ -250,6 +254,7 @@ const BlocklyWorkspace: React.FunctionComponent<BlocklyWorkspaceProps> = ({
     console.log('BLOCKS', Blockly, Blockly.Blocks);
     const originalAppend = Blockly.serialization.blocks.append;
     console.log('block serializing switching out', originalAppend);
+    /*
     Blockly.serialization.blocks.append = function (json, workspace) {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const extra = (json as any).extraState;
@@ -275,6 +280,7 @@ const BlocklyWorkspace: React.FunctionComponent<BlocklyWorkspaceProps> = ({
         ...(block.data || {}),
       };
     };
+    */
 
     // Create the workspace within the container
     workspace.current = Blockly.inject(container, {
@@ -284,7 +290,7 @@ const BlocklyWorkspace: React.FunctionComponent<BlocklyWorkspaceProps> = ({
       trashcan: false,
       media: '/blockly/media/',
       ...options,
-      ...(inline
+      ...(inline || hidden
         ? {
             readOnly: true,
             scrollbars: false,
@@ -336,11 +342,6 @@ const BlocklyWorkspace: React.FunctionComponent<BlocklyWorkspaceProps> = ({
         );
         Blockly.serialization.workspaces.load(blockJson, workspace.current);
       }
-
-      // Reposition blocks if this is a full workspace
-      if (!inline) {
-        positionBlocksOnWorkspace(workspace.current);
-      }
     } else if (typeof startBlocks === 'object') {
       // JSON serialization
       console.log('serialization', startBlocks);
@@ -348,6 +349,11 @@ const BlocklyWorkspace: React.FunctionComponent<BlocklyWorkspaceProps> = ({
       for (const block of workspace.current.getTopBlocks()) {
         console.log('JSON SERIAL', block);
       }
+    }
+
+    // Reposition blocks if this is a full workspace
+    if (!inline) {
+      positionBlocksOnWorkspace(workspace.current);
     }
 
     if (inline) {
@@ -444,7 +450,10 @@ const BlocklyWorkspace: React.FunctionComponent<BlocklyWorkspaceProps> = ({
 
   return createElement(inline ? 'span' : 'div', {
     ref: anchor,
-    className: moduleStyles.blocklyWorkspace,
+    className: classnames([
+      moduleStyles.blocklyWorkspace,
+      ...(hidden ? [moduleStyles.hiddenWorkspace] : []),
+    ]),
   });
 };
 

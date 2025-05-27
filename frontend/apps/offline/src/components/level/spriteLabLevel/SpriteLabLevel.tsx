@@ -14,7 +14,6 @@ import FieldColourPlugin from '@/components/blockly/plugins/fields/fieldColour';
 import FieldLocationPlugin from '@/components/blockly/plugins/fields/fieldLocation';
 import RoundInputPlugin from '@/components/blockly/plugins/inputs/round';
 import TriangleInputPlugin from '@/components/blockly/plugins/inputs/triangle';
-import UserVisibleMixinPlugin from '@/components/blockly/plugins/mixins/userVisible';
 import ToolboxTrashcanPlugin from '@/components/blockly/plugins/toolboxTrashcan';
 import ThrasosRenderer from '@/components/blockly/renderers/thrasos';
 import DefaultTheme from '@/components/blockly/themes/default';
@@ -52,7 +51,6 @@ const plugins: Plugin[] = [
   FieldColourPlugin,
   // Provide the 'field_location' field for locations
   FieldLocationPlugin,
-  UserVisibleMixinPlugin,
 ];
 
 const SpriteLabLevel: React.FunctionComponent<SpriteLabLevelProps> = ({
@@ -117,23 +115,13 @@ const SpriteLabLevel: React.FunctionComponent<SpriteLabLevelProps> = ({
 
   const onInject = useCallback(() => {
     if (container.current) {
-      const predrawCode = levelData.artistData?.predrawBlocks
-        ? getCodeFromBlockXmlSource(levelData.artistData.predrawBlocks)
-        : undefined;
-
       const solutionCode = levelData.blocklyData?.solutionBlocks
         ? typeof levelData.blocklyData?.solutionBlocks === 'string'
           ? getCodeFromBlockXmlSource(levelData.blocklyData.solutionBlocks)
           : getCodeFromBlockJsonSource(levelData.blocklyData.solutionBlocks)
         : undefined;
 
-      console.log(
-        'LEVEL',
-        levelData,
-        levelData.artistData?.predrawBlocks,
-        predrawCode,
-        solutionCode,
-      );
+      console.log('LEVEL', levelData, solutionCode);
       controller.current = new SpriteLab({
         api: {...defaultAPI, ...(api || {})},
         level: levelData.artistData || {
@@ -142,7 +130,6 @@ const SpriteLabLevel: React.FunctionComponent<SpriteLabLevelProps> = ({
         instant: false,
         isK1: false,
         container: container.current,
-        predrawCode,
         solutionCode,
       });
     }
@@ -150,36 +137,33 @@ const SpriteLabLevel: React.FunctionComponent<SpriteLabLevelProps> = ({
 
   useEffect(() => {
     return () => {
-      console.log('UNINIT THE ARTIST LEVEL');
+      console.log('UNINIT THE SPRITE LEVEL');
     };
   }, [controller, levelData]);
 
-  /*
-  const refinedStartBlocks = useMemo(() => {
-    const parser = new DOMParser();
-    const xml = levelData?.template?.blocklyData?.startBlocks ||
-        levelData?.blocklyData?.startBlocks || '<xml/>';
-    const dom = parser.parseFromString(`<root>${xml}</root>`, 'application/xml');
-    const uservisibles = Array.from(dom.querySelectorAll('block[uservisible]'));
-    for (const blockElement of uservisibles) {
-      console.log("DOMTEST", blockElement);
-      const mutationElement =
-        blockElement.querySelector(':scope > mutation') ||
-        blockElement.ownerDocument.createElement('mutation');
+  const startBlocks =
+    levelData?.template?.blocklyData?.startBlocks?.blocks?.blocks ||
+    levelData?.blocklyData?.startBlocks?.blocks?.blocks ||
+    [];
+  const filteredStartBlocks = {
+    blocks: {
+      blocks: startBlocks.filter(block => block?.data?.uservisible !== false),
+    },
+  };
 
-      // Place mutator before fields, values, and other nested blocks.
-      blockElement.insertBefore(mutationElement, blockElement.firstChild);
-      blockElement.removeAttribute('uservisible');
-      mutationElement.setAttribute('invisible', blockElement.getAttribute('uservisible') === 'false');
-    }
-    const ret = dom.querySelector('xml')?.parentNode?.innerHTML;
-    console.log("DOMTEST", ret);
-    return ret || xml;
-  }, [levelData?.template?.blocklyData?.startBlocks, levelData?.blocklyData?.startBlocks]);*/
+  // Filter out blocks that are marked invisible to the user and place them in
+  // a hidden workspace.
+  const hiddenBlocks = {
+    blocks: {
+      blocks: startBlocks.filter(block => block?.data?.uservisible === false),
+    },
+  };
 
   return (
     <BlocklyLevel
       levelData={levelData}
+      startBlocks={filteredStartBlocks}
+      hiddenBlocks={hiddenBlocks}
       data={{}}
       theme={theme || DefaultTheme}
       renderer={renderer || ThrasosRenderer}
