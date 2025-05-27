@@ -46,8 +46,8 @@ export default class SetupGuide extends React.Component {
         <Alert
           text={applabI18n.chrome133PlusBugCallout()}
           link={{
-            href: 'https://status.code.org/cmb0s8jbr002zpulbal0ei011',
-            text: 'Learn more',
+            href: 'https://status.code.org',
+            text: i18n.learnMore(),
           }}
           type={'warning'}
         />
