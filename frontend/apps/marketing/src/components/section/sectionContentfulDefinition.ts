@@ -3,8 +3,8 @@ import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 
 export const SectionContentfulComponentDefinition: ComponentDefinition = {
   id: 'section',
-  name: 'Section (Use me!)',
-  category: '01: Page Structure',
+  name: 'Section (Use Me!)',
+  category: '01: Page Sections',
   thumbnailUrl:
     'https://contentful-images.code.org/90t6bu6vlf76/1DVXtxBlLLunOb1PrjRTqz/6bfd2cae987a5cf2dd0c211e677b5023/component_section_thumbnail.png',
   tooltip: {
