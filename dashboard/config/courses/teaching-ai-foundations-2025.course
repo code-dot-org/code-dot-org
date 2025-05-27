@@ -16,13 +16,13 @@
     "self-paced-pl-teaching-aif5-2025",
     "self-paced-pl-teaching-aif6-2025"
   ],
-  "published_state": "in_development",
+  "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",
   "properties": {
     "family_name": "teaching-ai-foundations",
-    "has_numbered_units": true,
+    "has_verified_resources": true,
     "version_year": "2025"
   },
   "resources": [

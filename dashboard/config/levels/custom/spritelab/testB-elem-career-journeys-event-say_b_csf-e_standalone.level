@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2025-05-21T13:29:45.000Z",
   "level_num": "custom",
@@ -12,7 +13,7 @@
     "submittable": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "true",
+    "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "disable_procedure_autopopulate": "false",
@@ -77,11 +78,11 @@
     "bubble_choice_description": "Learn how to add text to your project.",
     "thumbnail_url": "https://images.code.org/103feda0c46231be0d9ce1e4b9fed878-text.jpg",
     "project_template_level_name": "testB-elem-career-journeys-template_b_csf-e_standalone",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "video_key": "hello_world_events"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-05-21T13:29:45.806+00:00\",\"changed\":[\"cloned from \\\"testB-elem-career-journeys-event-say_b_csf-e\\\"\"],\"cloned_from\":\"testB-elem-career-journeys-event-say_b_csf-e\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-05-21T13:29:45.806+00:00\",\"changed\":[\"cloned from \\\"testB-elem-career-journeys-event-say_b_csf-e\\\"\"],\"cloned_from\":\"testB-elem-career-journeys-event-say_b_csf-e\"},{\"changed_at\":\"2025-05-23 15:16:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -303,7 +303,7 @@ class UnitGroup < ApplicationRecord
         scripts: units_for_user(user).map do |unit|
           include_lessons = false
           unit_group_unit = unit.unit_group_units.find {|ugu| ugu.unit_group == self}
-          unit.summarize(include_lessons, user, unit_group_unit: unit_group_unit).merge!(unit.summarize_i18n_for_display)
+          unit.summarize(include_lessons, user, unit_group_unit: unit_group_unit).merge!(unit.summarize_i18n_for_display(unit_group_unit: unit_group_unit))
         end,
         teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
         student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),

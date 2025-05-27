@@ -17,17 +17,25 @@ import {schoolInfoInvalid} from './utils/schoolInfoInvalid';
 import {updateSchoolInfo} from './utils/updateSchoolInfo';
 
 export default function SchoolInfoInterstitial({
-  scriptData: {existingSchoolInfo, usIp},
+  scriptData: {
+    existingSchoolInfo,
+    usIp,
+    // TODO: ACQ-3300 remove when school info has been updated for affected users
+    affectedByMissingSchoolData,
+  },
   onClose,
 }) {
-  const schoolInfo = useSchoolInfo({
-    usIp,
-    country: existingSchoolInfo.country,
-    schoolName: existingSchoolInfo.school_name,
-    schoolId: existingSchoolInfo.school_id,
-    schoolZip: existingSchoolInfo.school_zip,
-    schoolType: existingSchoolInfo.school_type,
-  });
+  const schoolInfo = useSchoolInfo(
+    {
+      usIp,
+      country: existingSchoolInfo.country,
+      schoolName: existingSchoolInfo.school_name,
+      schoolId: existingSchoolInfo.school_id,
+      schoolZip: existingSchoolInfo.school_zip,
+      schoolType: existingSchoolInfo.school_type,
+    },
+    affectedByMissingSchoolData
+  );
 
   const [showSchoolInfoUnknownError, setShowSchoolInfoUnknownError] =
     useState(false);
@@ -175,6 +183,7 @@ SchoolInfoInterstitial.propTypes = {
       school_zip: PropTypes.string,
       school_type: PropTypes.string,
     }),
+    affectedByMissingSchoolData: PropTypes.bool,
   }).isRequired,
   onClose: PropTypes.func.isRequired,
 };

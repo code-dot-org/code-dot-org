@@ -36,16 +36,18 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
 
   const feedbackTooltipProps: TooltipProps = {
     text: commonI18n.feedback(),
-    direction: 'onLeft',
+    direction: 'onBottom',
     tooltipId: 'feedback-tooltip',
     size: 'xs',
+    hideTail: true,
   };
 
   const documentationTooltipProps: TooltipProps = {
     text: commonI18n.documentation(),
-    direction: 'onLeft',
+    direction: 'onBottom',
     tooltipId: 'documentation-tooltip',
     size: 'xs',
+    hideTail: true,
   };
 
   const documentationUrl = `${currentLocation().origin}/docs/ide/${appName}`;

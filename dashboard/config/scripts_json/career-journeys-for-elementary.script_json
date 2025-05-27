@@ -10,12 +10,14 @@
       "is_migrated": true,
       "project_sharing": true,
       "show_calendar": true,
+      "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-22 15:45:12 UTC",
+    "serialized_at": "2025-05-23 19:06:41 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -47,7 +49,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "In this lesson, students explore careers that use computer science and AI, then create a meaningful, interest-driven project in Sprite Lab that shows how technology is used in a job they care about. The content is designed to support all students, whether they’re new to coding or have prior experience by offering flexible pacing. New coders may benefit from spreading the lesson across multiple sessions, while students familiar with Sprite Lab can complete it in a single class period."
+        "overview": "In this lesson, students explore careers that use computer science and AI, then create a meaningful, interest-driven project in Sprite Lab that shows how technology is used in a job they care about. The content is designed to support all students, whether they’re new to coding or have prior experience, by offering flexible pacing. If your students are new to coding, consider spreading the lesson across several sessions. If they’ve used Sprite Lab before, one class period is enough."
       },
       "seeding_key": {
         "lesson.key": "Mini-Project: Career Journeys ",
@@ -108,7 +110,7 @@
         "description": "<i class=\"fa-solid fa-square-check\"></i> **Do This:** Introduce the objectives of this lesson. \n\n<i class=\"fa-solid fa-square-check\"></i> **Do This:** Introduce each term as a preview of what students will learn in this lesson.",
         "tips": [
           {
-            "type": "contentCorner",
+            "type": "teachingTip",
             "markdown": "It might be helpful to expand on this definition of career to capture the idea that:\n- A career is not just any job—it’s something you grow into.\n- It involves learning, trying, and practicing over time.\n- It connects well with school and their current experiences (e.g., “You’re already building skills now!”).\n- \"Like learning how to code now could help you become a game designer later!\"\n"
           }
         ]
@@ -163,6 +165,7 @@
       "key": "689adc7e-54f3-4cbe-aaf3-22810e2115de",
       "position": 2,
       "properties": {
+        "progression_name": "Career Exploration"
       },
       "seeding_key": {
         "activity_section.key": "689adc7e-54f3-4cbe-aaf3-22810e2115de",
@@ -176,7 +179,7 @@
         "description": "<i class=\"fa-solid fa-laptop-binary\"></i> **Transition:** Explore careers that use CS and AI.\n\n<i class=\"fa-solid fa-square-check\"></i> **Do This:** Distribute a printed activity guide to each student.\n\n<i class=\"fa-solid fa-microphone-stand\"></i> **Say:**  Now, you'll have some time to explore different careers that use computer science and AI. Use your activity guide to keep track of what you find interesting. Think about what these jobs involve and how they might connect to your own interests.\n\n\n<i class=\"fa-solid fa-rotate\"></i> **Circulate:** Encourage students to consider how their interests align with the careers explored.\n",
         "tips": [
           {
-            "type": "contentCorner",
+            "type": "teachingTip",
             "markdown": "**Guiding questions to promote deeper thinking and prepare students to code a small project representing a career they’re interested in.**\n- What would be the most fun part of that job for you? What might be hard?\n- Do you think someone like you could do this job? Why or why not?\n- Is there a job or interest you’d like to show in your project?\nWhat could your project include to tell others about this interest or career?\n"
           }
         ]
@@ -190,7 +193,7 @@
       "key": "e6d6a495-083d-496e-8438-37ec343e78f9",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-laptop-binary\"></i> **Transition:** Prepare students to code their own projects. \n\n<i class=\"fa-solid fa-microphone-stand\"></i> **Say:** Based on what you've explored, next you will code a simple interactive scene in Sprite Lab. Let's review Sprite Lab and then look at some example projects for inspiration. \n\n<i class=\"fa-solid fa-square-check\"></i> **Do This:** Preview or review Sprite Lab to the extent that supports your students using the resources on slides 13 - 16. \n\n<i class=\"fa-solid fa-microphone-stand\"></i> **Say:** Explore the project examples in level 3 to get some ideas about how you’d like to design your own!\n\n<i class=\"fa-solid fa-square-check\"></i> **Do This:** Set a timer to support students with pacing. \n\n<i class=\"fa-solid fa-laptop-binary\"></i> **Transition:** Have all students move on to level 4 and the Plan your Project section in their Activity Guide",
+        "description": "<i class=\"fa-solid fa-laptop-binary\"></i> **Transition:** Prepare students to code their own projects. \n\n<i class=\"fa-solid fa-microphone-stand\"></i> **Say:** Based on what you've explored, next you will code a simple interactive scene in Sprite Lab. Let's review Sprite Lab and then look at some example projects for inspiration. \n\n<i class=\"fa-solid fa-square-check\"></i> **Do This:** Preview or review Sprite Lab to the extent that supports your students using the resources on slides 13 - 16. \n\n**If students are just getting started in Sprite Lab:**\n- Preview vocabulary (sprites, events)\n- Watch the videos and check out the lab tips on the slides\n- Explore example projects\n\n**If students already have some Sprite Lab experience:** \n- Review vocabulary (sprites, events)\n- Explore example projects\n- Try out the extended skills and challenges!\n\n\n<i class=\"fa-solid fa-microphone-stand\"></i> **Say:** Explore the project examples in level 3 to get some ideas about how you’d like to design your own!\n\n<i class=\"fa-solid fa-rotate\"></i> **Circulate:** Use the following guiding questions to promote deeper thinking and prepare students to code a small project representing a career they’re interested in. \n- What would you change about this project? \n- What do you like about this project? \n- How does the code work on this project? \n- Which part of the code looks easy?\n- Which part of the code will you need to learn more about? \n\n\n<i class=\"fa-solid fa-square-check\"></i> **Do This:** Set a timer to support students with pacing. \n\n<i class=\"fa-solid fa-laptop-binary\"></i> **Transition:** Have all students move on to level 4 and the Plan your Project section in their Activity Guide",
         "name": "Part 2: Plan your Project (10-15 minutes)",
         "progression_name": "Inspiration & Planning",
         "tips": [
@@ -222,7 +225,7 @@
       "key": "b0b248d5-5610-4d85-ab8d-756b781b1e02",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rotate\"></i> **Circulate:**Encourage students to follow the plan they wrote in their Activity Guide to complete each level. ",
+        "description": "<i class=\"fa-solid fa-rotate\"></i> **Circulate:** Encourage students to follow the plan they wrote in their Activity Guide to complete each level. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -251,7 +254,7 @@
       "key": "b145d55d-0cd7-43c1-b2eb-35ada5189709",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-square-check\"></i> **Do This:**  Place students into small groups of 2 to 4 to share and discuss together. Support them in taking turns, and answer the prompts from the slide. \n\n<i class=\"fa-solid fa-microphone-stand\"></i> **Say:** Let's take a few minutes to share your projects. Tell us about the career you chose and how your scene shows the use of computer science or AI. What did you enjoy most about creating your project?"
+        "description": "<i class=\"fa-solid fa-square-check\"></i> **Do This:**  Place students into small groups of 2 to 4 to share and discuss together. Support them in taking turns and answering the prompts from the slide.\n\n<i class=\"fa-solid fa-microphone-stand\"></i> **Say:** Let's take a few minutes to share your projects. Tell us about the career you chose and how your scene shows the use of computer science or AI. What did you enjoy most about creating your project?"
       },
       "seeding_key": {
         "activity_section.key": "b145d55d-0cd7-43c1-b2eb-35ada5189709",
@@ -313,6 +316,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Career Exploration"
       },
       "bonus": false,
       "seeding_key": {
@@ -502,69 +506,6 @@
       "level_keys": [
         "testB-elem-career-journeys-share_b_csf-e_standalone"
       ]
-    },
-    {
-      "chapter": 10,
-      "position": 10,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "test-elem-career-journeys-example4_b_csf-e_standalone"
-        ],
-        "lesson.key": "Mini-Project: Career Journeys ",
-        "lesson_group.key": "",
-        "script.name": "career-journeys-for-elementary",
-        "activity_section.key": "aade35e7-acd2-46a3-8d2c-de1492febc9e"
-      },
-      "level_keys": [
-        "test-elem-career-journeys-example4_b_csf-e_standalone"
-      ]
-    },
-    {
-      "chapter": 11,
-      "position": 11,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "test-elem-career-journeys-example5_b_csf-e_standalone"
-        ],
-        "lesson.key": "Mini-Project: Career Journeys ",
-        "lesson_group.key": "",
-        "script.name": "career-journeys-for-elementary",
-        "activity_section.key": "aade35e7-acd2-46a3-8d2c-de1492febc9e"
-      },
-      "level_keys": [
-        "test-elem-career-journeys-example5_b_csf-e_standalone"
-      ]
-    },
-    {
-      "chapter": 12,
-      "position": 12,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "test-elem-career-journeys-example6_b_csf-e_standalone"
-        ],
-        "lesson.key": "Mini-Project: Career Journeys ",
-        "lesson_group.key": "",
-        "script.name": "career-journeys-for-elementary",
-        "activity_section.key": "aade35e7-acd2-46a3-8d2c-de1492febc9e"
-      },
-      "level_keys": [
-        "test-elem-career-journeys-example6_b_csf-e_standalone"
-      ]
     }
   ],
   "levels_script_levels": [
@@ -675,42 +616,6 @@
         "script.name": "career-journeys-for-elementary",
         "activity_section.key": "0600bbc4-712b-4b5c-b18f-6409b07b7620"
       }
-    },
-    {
-      "seeding_key": {
-        "level.key": "test-elem-career-journeys-example4_b_csf-e_standalone",
-        "script_level.level_keys": [
-          "test-elem-career-journeys-example4_b_csf-e_standalone"
-        ],
-        "lesson.key": "Mini-Project: Career Journeys ",
-        "lesson_group.key": "",
-        "script.name": "career-journeys-for-elementary",
-        "activity_section.key": "aade35e7-acd2-46a3-8d2c-de1492febc9e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "test-elem-career-journeys-example5_b_csf-e_standalone",
-        "script_level.level_keys": [
-          "test-elem-career-journeys-example5_b_csf-e_standalone"
-        ],
-        "lesson.key": "Mini-Project: Career Journeys ",
-        "lesson_group.key": "",
-        "script.name": "career-journeys-for-elementary",
-        "activity_section.key": "aade35e7-acd2-46a3-8d2c-de1492febc9e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "test-elem-career-journeys-example6_b_csf-e_standalone",
-        "script_level.level_keys": [
-          "test-elem-career-journeys-example6_b_csf-e_standalone"
-        ],
-        "lesson.key": "Mini-Project: Career Journeys ",
-        "lesson_group.key": "",
-        "script.name": "career-journeys-for-elementary",
-        "activity_section.key": "aade35e7-acd2-46a3-8d2c-de1492febc9e"
-      }
     }
   ],
   "resources": [
@@ -739,6 +644,30 @@
       "seeding_key": {
         "resource.key": "helpful_hints_in_sprite_lab"
       }
+    },
+    {
+      "name": "Intro to Sprite Lab",
+      "url": "https://www.youtube.com/watch?v=blePeROA7fA",
+      "key": "intro_to_sprite_lab",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "intro_to_sprite_lab"
+      }
+    },
+    {
+      "name": "Programming with Events",
+      "url": "https://www.youtube.com/watch?v=--o_UfUnS84",
+      "key": "programming_with_events",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "programming_with_events"
+      }
     }
   ],
   "lessons_resources": [
@@ -753,6 +682,18 @@
         "lesson.key": "Mini-Project: Career Journeys ",
         "resource.key": "helpful_hints_in_sprite_lab"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "resource.key": "intro_to_sprite_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "resource.key": "programming_with_events"
+      }
     }
   ],
   "scripts_resources": [
@@ -762,6 +703,16 @@
 
   ],
   "vocabularies": [
+    {
+      "key": "artificial_intelligence",
+      "word": "Artificial Intelligence",
+      "definition": "A technology that acts like human intelligence and helps computers understand words, find patterns, and make decisions.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "artificial_intelligence"
+      }
+    },
     {
       "key": "career",
       "word": "Career",
@@ -807,6 +758,12 @@
     {
       "seeding_key": {
         "lesson.key": "Mini-Project: Career Journeys ",
+        "vocabulary.key": "artificial_intelligence"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
         "vocabulary.key": "career"
       }
     },
@@ -846,7 +803,7 @@
     {
       "key": "39f33a36-c6b0-42a6-a63e-79da77bcc67d",
       "properties": {
-        "description": "Present a project and explain the coding skills used"
+        "description": "Present a project and explain the coding skills used to make it"
       },
       "seeding_key": {
         "lesson.key": "Mini-Project: Career Journeys ",

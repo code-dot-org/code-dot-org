@@ -1,0 +1,11 @@
+name 'csaif_pl_ai_02b_2025'
+display_name 'Multimodal Input'
+description 'Pick one of the levels below. Practice prompting the AI for suggestions using images and text. 
+
+Different levels explore different types of multimodal inputs. Students will only explore one level and share what they learn with the class. You may choose to do more than one level to try the different AI Chat Lab experiences.'
+
+sublevels
+level 'test-problem-solving-with-ai-lesson2-level4-choice1_2025'
+level 'test-problem-solving-with-ai-lesson2-level4-choice2_2025'
+level 'test-problem-solving-with-ai-lesson2-level4-choice3_2025'
+level 'test-problem-solving-with-ai-lesson2-level4-choice4_2025'
