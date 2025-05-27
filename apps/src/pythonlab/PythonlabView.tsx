@@ -9,6 +9,7 @@ import React, {useContext, useEffect, useMemo, useState} from 'react';
 
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {TestResults} from '@cdo/apps/constants';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
@@ -222,8 +223,13 @@ const PythonlabView: React.FunctionComponent<
     }
     dispatch(submitPredictResponse({appType: 'pythonlab'}));
 
-    // Ask a question to AITutor2.
-    askAiTutor2("What's wrong with my code, if anything?");
+    if (
+      levelProperties.aiTutor2Available ||
+      queryParams('show-ai-tutor2') === 'true'
+    ) {
+      // Ask a question to AITutor2.
+      askAiTutor2("What's wrong with my code, if anything?");
+    }
   };
 
   return (

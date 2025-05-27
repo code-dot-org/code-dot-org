@@ -864,6 +864,12 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.showUnusedBlocks = options.showUnusedBlocks;
     blocklyWrapper.blockLimitMap = cdoUtils.createBlockLimitMap();
     blocklyWrapper.isDarkTheme = isDarkTheme(options.theme);
+
+    // Only allow toggling disabled blocks in start mode.
+    // This is also important for ensuring that Blockly does not
+    // mistakenly keep orphaned blocks disabled when they are connected.
+    options.disable = blocklyWrapper.isStartMode;
+
     const workspace = blocklyWrapper.blockly_.inject(
       container,
       options

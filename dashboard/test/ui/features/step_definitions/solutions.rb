@@ -1,11 +1,11 @@
 PUZZLE_SOLUTIONS = {
-  "http://studio.code.org/s/allthethings/lessons/2/levels/1" => %{
+  "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1" => %{
     And I've initialized the workspace with k1 maze blocks
   },
-  "http://studio.code.org/s/allthethings/lessons/29/levels/1?level_name=2-3 Maze 1" => %{
+  "http://studio.code.org/courses/allthethingscourse/units/1/lessons/29/levels/1?level_name=2-3 Maze 1" => %{
     And I've initialized the workspace with two move forward blocks
   },
-  "http://studio.code.org/s/allthethings/lessons/29/levels/4?level_name=2-3 Artist 1 new" => %{
+  "http://studio.code.org/courses/allthethingscourse/units/1/lessons/29/levels/4?level_name=2-3 Artist 1 new" => %{
     And I've initialized the workspace with winning artist blocks
   },
 }

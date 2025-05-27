@@ -22,9 +22,10 @@ const SettingsButton: React.FunctionComponent = () => {
 
   const settingsTooltipProps: TooltipProps = {
     text: commonI18n.settings(),
-    direction: 'onLeft',
+    direction: 'onBottom',
     tooltipId: 'settings-tooltip',
     size: 'xs',
+    hideTail: true,
   };
 
   return (

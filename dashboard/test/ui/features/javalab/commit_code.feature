@@ -3,7 +3,7 @@ Feature: Commit Code
 
 Background:
   Given I create a teacher-associated student named "Lillian"
-  And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/1?noautoplay=true"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/44/levels/1?noautoplay=true"
   And I wait to see "#javalab-editor-save"
 
 Scenario: Open the commit code dialog, enter commit notes, commit, and see commit in version history.

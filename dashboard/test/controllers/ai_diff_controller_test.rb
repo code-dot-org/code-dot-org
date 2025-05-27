@@ -74,9 +74,11 @@ class AiDiffControllerTest < ActionController::TestCase
       sign_in @teacher
 
       post :chat_completion, params: {
-        context: "lesson",
+        context: {
+          type: "lesson",
+          lessonId: @lesson.id
+        },
         inputText: "Hello!",
-        contextId: @lesson.id,
         sessionId: @session_id,
         isPreset: false
       }
@@ -88,7 +90,9 @@ class AiDiffControllerTest < ActionController::TestCase
       sign_in @teacher
 
       post :chat_completion, params: {
-        context: "general",
+        context: {
+          type: "general"
+        },
         sessionId: @session_id,
         isPreset: false,
       }
@@ -111,9 +115,11 @@ class AiDiffControllerTest < ActionController::TestCase
       sign_in @teacher_sans_experiment
 
       post :chat_completion, params: {
-        context: "lesson",
+        context: {
+          type: "lesson",
+          lessonId: @lesson.id,
+        },
         inputText: "Hello!",
-        contextId: @lesson.id,
         unitDisplayName: @unit_display_name,
         sessionId: @session_id,
         isPreset: false
@@ -129,9 +135,11 @@ class AiDiffControllerTest < ActionController::TestCase
       sign_in student
 
       post :chat_completion, params: {
-        context: "lesson",
+        context: {
+          type: "lesson",
+          lessonId: @lesson.id
+        },
         inputText: "Hello!",
-        contextId: @lesson.id,
         unitDisplayName: @unit_display_name,
         sessionId: @session_id,
         isPreset: false
@@ -146,9 +154,11 @@ class AiDiffControllerTest < ActionController::TestCase
       assert_equal 0, AidiffThread.where(user_id: @teacher.id, external_id: @session_id).count
 
       post :chat_completion, params: {
-        context: "lesson",
+        context: {
+          type: "lesson",
+          lessonId: @lesson.id
+        },
         inputText: "Hello!",
-        contextId: @lesson.id,
         unitDisplayName: @unit_display_name,
         isPreset: false
       }
@@ -173,9 +183,11 @@ class AiDiffControllerTest < ActionController::TestCase
       assert_equal 0, AidiffThread.where(user_id: @teacher.id, external_id: @session_id).count
 
       post :chat_completion, params: {
-        context: "lesson",
+        context: {
+          type: "lesson",
+          lessonId: @lesson.id
+        },
         inputText: "Hello!",
-        contextId: @lesson.id,
         unitDisplayName: @unit_display_name,
         session_id: nil,
         isPreset: false
@@ -200,9 +212,11 @@ class AiDiffControllerTest < ActionController::TestCase
       @thread = create(:aidiff_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, unit_id: @unit_in_course.id, level_id: @lesson.id)
 
       post :chat_completion, params: {
-        context: "lesson",
+        context: {
+          type: "lesson",
+          lessonId: @lesson.id
+        },
         inputText: "Hello!",
-        contextId: @lesson.id,
         unitDisplayName: @unit_display_name,
         sessionId: @session_id,
         isPreset: false
@@ -228,9 +242,11 @@ class AiDiffControllerTest < ActionController::TestCase
       @thread = create(:aidiff_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, unit_id: @unit_in_course.id, level_id: nil)
 
       post :chat_completion, params: {
-        context: "unit",
+        context: {
+          type: "unit",
+          unitId: @unit_in_course.id
+        },
         inputText: "Hello!",
-        contextId: @unit_in_course.id,
         unitDisplayName: @unit_display_name,
         sessionId: @session_id,
         isPreset: false
@@ -256,9 +272,11 @@ class AiDiffControllerTest < ActionController::TestCase
       @thread = create(:aidiff_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, unit_id: nil, level_id: nil)
 
       post :chat_completion, params: {
-        context: "course",
+        context: {
+          type: "course",
+          courseId: @unit_group.id
+        },
         inputText: "Hello!",
-        contextId: @unit_group.id,
         unitDisplayName: @unit_display_name,
         sessionId: @session_id,
         isPreset: false
@@ -290,9 +308,11 @@ class AiDiffControllerTest < ActionController::TestCase
       @thread = create(:aidiff_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, unit_id: nil, level_id: nil)
 
       post :chat_completion, params: {
-        context: "course",
+        context: {
+          type: "course",
+          courseId: @unit_group.id
+        },
         inputText: "Hello!",
-        contextId: @unit_group.id,
         unitDisplayName: @unit_display_name,
         sessionId: @session_id,
         isPreset: false

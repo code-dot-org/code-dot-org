@@ -24,6 +24,7 @@ export default function SingleSectionSetUp({
   sectionNum,
   section,
   updateSection,
+  batchUpdateSection,
   isNewSection,
   isLoading = false,
 }) {
@@ -33,7 +34,11 @@ export default function SingleSectionSetUp({
     ? queryParams('participantType')
     : section.participantType;
 
-  const closeCallback = () => {
+  const handleAvatarUpdate = (color, emoji) => {
+    batchUpdateSection({
+      avatar_color: color,
+      avatar_emoji: emoji,
+    });
     setShowAvatarDialog(false);
   };
 
@@ -82,6 +87,7 @@ export default function SingleSectionSetUp({
                 <Button
                   className={styles.avatarButton}
                   text={i18n.editAvatar()}
+                  aria-label={i18n.editAvatar()}
                   type={'secondary'}
                   color={'gray'}
                   size={'s'}
@@ -107,7 +113,12 @@ export default function SingleSectionSetUp({
         </div>
       )}
       {showAvatarDialog && (
-        <SectionAvatarEditDialog closeCallback={closeCallback} />
+        <SectionAvatarEditDialog
+          closeCallback={() => setShowAvatarDialog(false)}
+          saveCallback={handleAvatarUpdate}
+          avatarColor={section.avatar_color}
+          avatarEmoji={section.avatar_emoji}
+        />
       )}
     </div>
   );
@@ -117,6 +128,7 @@ SingleSectionSetUp.propTypes = {
   sectionNum: PropTypes.number.isRequired,
   section: PropTypes.object.isRequired,
   updateSection: PropTypes.func.isRequired,
+  batchUpdateSection: PropTypes.func.isRequired,
   isNewSection: PropTypes.bool.isRequired,
   isLoading: PropTypes.bool,
 };

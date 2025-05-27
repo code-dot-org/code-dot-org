@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-15 15:37:03 UTC",
+    "serialized_at": "2025-05-23 17:23:04 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -839,6 +839,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-variables-datatypes-3-1"
+        ],
         "progression": "Introduction to Variables"
       },
       "bonus": false,
@@ -861,6 +864,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-variables-datatypes-3-2"
+        ],
         "progression": "Introduction to Variables"
       },
       "bonus": false,
