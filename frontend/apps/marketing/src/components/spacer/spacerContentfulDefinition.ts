@@ -6,7 +6,7 @@ import {componentSizeXSToLDefinition} from '@/components/common/definitions';
 export const SpacerContentfulComponentDefinition: ComponentDefinition = {
   id: 'spacer',
   name: 'Spacer',
-  category: '01: Page Structure',
+  category: '02: Page Structure',
   thumbnailUrl:
     'https://contentful-images.code.org/90t6bu6vlf76/2z5ZAhyRRPCnryQTvCaRek/3862a4b87deb0b8256f8b4a418c64393/component_spacer_thumbnail.png',
   tooltip: {
