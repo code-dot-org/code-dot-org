@@ -64,7 +64,7 @@ Feature: Using the teacher homepage sections feature
     And I wait until current URL contains "/courses/csp-2017"
 
     When I click selector ".uitest-CourseScript:contains(CSP Unit 2) .uitest-go-to-unit-button" to load a new page
-    And I wait to see "h1:contains(CSP Unit 2 - Digital Information ('17-'18))"
+    And I wait until element "h1:contains(CSP Unit 2 - Digital Information ('17-'18))" is visible
     Then the teacher_dashboard url contains the section id
 
     And I wait for 3 seconds

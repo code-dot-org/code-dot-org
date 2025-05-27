@@ -99,7 +99,7 @@ Feature: BubbleChoice
 
     # Dismiss the dialog
     And I wait until element "h1:contains(AI Chat 2)" is visible
-    And I click selector "#ui-close-dialog" if it is visible
+    And I click selector "#ui-close-dialog" if it exists
     And I wait until element "#ui-close-dialog" is not visible
 
     # Teacher has not completed level, so make sure it is not shown as complete
