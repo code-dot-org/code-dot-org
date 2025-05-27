@@ -1240,9 +1240,10 @@ roles.each do |name, config| %>
                   - application-autoscaling:DescribeScalingPolicies
                   - application-autoscaling:DeleteScalingPolicy
                 Resource: '*'
-                Condition:
-                  StringLike:
-                    application-autoscaling:ResourceId: "service/*/*-<%=environment_type%>-*"
+# TODO: Re-enable if we can get this to work for scalable target resources as well.
+#                Condition:
+#                  StringLike:
+#                    application-autoscaling:ResourceId: "service/*/*-<%#=environment_type%>-*"
               - Effect: Allow
                 Action:
                   - application-autoscaling:RegisterScalableTarget
