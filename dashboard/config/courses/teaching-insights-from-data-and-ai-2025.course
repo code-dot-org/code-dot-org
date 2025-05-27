@@ -1,0 +1,25 @@
+{
+  "name": "teaching-insights-from-data-and-ai-2025",
+  "script_names": [
+    "self-paced-pl-teaching-insights-from-data-and-ai-2025"
+  ],
+  "original_script_names": [
+    "self-paced-pl-teaching-insights-from-data-and-ai-2025"
+  ],
+  "published_state": "stable",
+  "instruction_type": "self_paced",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "teaching-insights-from-data-and-ai",
+    "has_numbered_units": true,
+    "has_verified_resources": true,
+    "version_year": "2025"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

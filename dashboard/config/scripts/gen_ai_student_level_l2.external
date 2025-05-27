@@ -3,11 +3,10 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# ✅ Lesson Recap: 1.2 How Smart Is It, Really?
+# ✅ Lesson Recap: How Smart Is It, Really?
 
 #### After this lesson, you can 
 
-* #### Interact with a chatbot to evaluate how it responds to different types of prompts.
 * #### Reflect on how AI can impact a real-world industry.
 * #### Identify strengths and limitations in how the chatbot generates responses.
 
@@ -25,6 +24,7 @@ markdown <<MARKDOWN
 </div>
 
 </div>
+
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

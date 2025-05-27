@@ -8,6 +8,7 @@
         {
           "type": "html",
           "name": "variable_test",
+          "visible": false,
           "html": "<h2 style='background-color: yellow'>Panel for variable testing (hide before shipping)</p><strong>PL topics: {pl_topics}</strong></p>"
         },
         {

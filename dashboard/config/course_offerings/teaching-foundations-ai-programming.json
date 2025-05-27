@@ -1,9 +1,9 @@
 {
   "key": "teaching-foundations-ai-programming",
-  "display_name": "teaching-foundations-ai-programming",
+  "display_name": "Teaching Foundations of AI Programming",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": null,
+  "curriculum_type": "Professional Learning",
   "marketing_initiative": null,
   "grade_levels": null,
   "header": null,

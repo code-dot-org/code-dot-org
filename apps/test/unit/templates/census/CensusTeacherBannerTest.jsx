@@ -4,7 +4,9 @@ import React from 'react';
 
 import CensusTeacherBanner from '@cdo/apps/templates/census/CensusTeacherBanner';
 
-jest.mock('@cdo/apps/schoolInfo/utils/fetchSchools');
+jest.mock('@cdo/apps/schoolInfo/utils/fetchSchools', () => ({
+  fetchSchools: jest.fn().mockResolvedValue([]),
+}));
 
 describe('CensusTeacherBannerTest', () => {
   const defaultExistingSchoolInfo = {

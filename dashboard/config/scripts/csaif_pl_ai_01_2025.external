@@ -3,29 +3,25 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# AI Chat
+# AI Chat Lab
 
-#### While there are many types of AI, in this unit we'll focus on generative AI, or AI that generates content such as text or images. 
+#### The AI you and your students will use throughout this Unit and the Foundations of AI course is a chatbot called **AI Chat Lab**. Like with all chatbots, you interact with AI Chat Lab using prompts.
 
-#### The AI you and your students will use is a chatbot called **AI Chat Lab**. Like with all chatbots, you interact with AI Chat Lab using prompts.
+<br>
+
+<img src="https://images.code.org/4fdd0f05f507d43b70c1665874ac2d18-Screenshot 2024-10-17 at 10.27.22 AM.png" alt="chatbot lab level" width="70%" style="border: 2px solid black; border-radius: 8px; display: block; margin: auto; width: 70%;">
+
+<br>
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Prompt</strong> is a question, instruction, scenario, or statement provided by the user to guide the AI's response.</p>
 </div>
 
-#### AI selects words for its response based on probability. It tends to choose the most likely next word, which often mirrors our own prediction of the most-likely next word.
+#### AI selects words for its response based on probability. While there is much more going on, in general, generative AI tends to choose the most likely next word, which often mirrors our own prediction of the most-likely next word.
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Probability</strong> is the likelihood that a specific outcome might occur.</p>
 </div>
 
-
-## 📝 To Do
-
-#### Try out AI chat in the next level. While you're using it, think about *how is it similar and different from other AI chatbots you've used in the past.*
-
-<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ The following level is from Lesson 1. You can find more details in the full <a href='https://studio.code.org/s/aif1-2025/lessons/1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
-</p>
 
 MARKDOWN

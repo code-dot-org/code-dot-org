@@ -1786,9 +1786,9 @@ class Unit < ApplicationRecord
     data
   end
 
-  def summarize_i18n_for_display
+  def summarize_i18n_for_display(unit_group_unit: nil)
     data = summarize_i18n_for_edit
-    data[:title] = title_for_display
+    data[:title] = title_for_display(unit_group_unit: unit_group_unit)
     data
   end
 
@@ -1833,12 +1833,14 @@ class Unit < ApplicationRecord
     unit_group_units&.first&.position
   end
 
-  def title_for_display
+  def title_for_display(unit_group_unit: nil)
+    unit_group_unit ||= Queries::Courses.unit_group_unit(self)
+    unit_group = unit_group_unit&.cached_unit_group
     title = localized_title
     has_prefix = unit_group&.has_numbered_units
     return title unless has_prefix
 
-    position = unit_group_units&.first&.position
+    position = unit_group_unit&.position
     prefix = I18n.t "unit_prefix", n: position
     "#{prefix} - #{title}"
   end

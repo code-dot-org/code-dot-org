@@ -66,7 +66,7 @@ const RegionalWorkshopCatalogCard = ({
       {showLearnMoreDialog && (
         <Modal
           title={name ? name : `${course}: ${subject}`}
-          description={description}
+          description={description ? description : 'No description available.'}
           primaryButtonProps={{
             ariaLabel: 'enrollNow',
             text: 'Enroll now',
