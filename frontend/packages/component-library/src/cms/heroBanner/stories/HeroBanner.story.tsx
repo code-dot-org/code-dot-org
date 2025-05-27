@@ -168,9 +168,8 @@ export const WithBackgroundColor: Story = {
     layout: 'fullscreen',
   },
   play: async ({canvasElement}) => {
-    const canvas = within(canvasElement);
-    const banner = canvas.getByRole('banner');
-    const styles = window.getComputedStyle(banner);
+    const banner = canvasElement.querySelector('section > div');
+    const styles = window.getComputedStyle(banner as Element);
     await expect(styles.backgroundColor).toBe('rgb(227, 242, 253)');
   },
 };
@@ -189,9 +188,8 @@ export const WithBackgroundImage: Story = {
     layout: 'fullscreen',
   },
   play: async ({canvasElement}) => {
-    const canvas = within(canvasElement);
-    const banner = canvas.getByRole('banner');
-    const styles = window.getComputedStyle(banner);
+    const banner = canvasElement.querySelector('section > div');
+    const styles = window.getComputedStyle(banner as Element);
     await expect(styles.backgroundImage).toMatch(
       /hero-banner-custom-bg-example.*\.png/,
     );
@@ -297,24 +295,22 @@ export const WithCustomStyles: Story = {
     layout: 'fullscreen',
   },
   play: async ({canvasElement}) => {
-    const canvas = within(canvasElement);
-
     const style = document.createElement('style');
     style.innerHTML = `
-      section.customHeroBannerClass {
-        outline: 3px dashed rgb(255, 165, 0);
-        background-color: #fefbe9;
-        padding: 0;
+      section.customHeroBannerClass > div {
+        background: #fefbe9;
+        border: 3px dashed rgb(255, 165, 0);
       }
     `;
     canvasElement.appendChild(style);
 
-    const banner = await canvas.findByRole('banner');
-    await expect(banner).toHaveClass('customHeroBannerClass');
+    const bannerSection = canvasElement.querySelector('section');
+    await expect(bannerSection).toHaveClass('customHeroBannerClass');
 
-    const styles = window.getComputedStyle(banner);
-    await expect(styles.outline).toBe('rgb(255, 165, 0) dashed 3px');
+    const banner = canvasElement.querySelector('section > div');
+    const styles = window.getComputedStyle(banner as Element);
     await expect(styles.backgroundColor).toBe('rgb(254, 251, 233)');
+    await expect(styles.border).toBe('3px dashed rgb(255, 165, 0)');
   },
 };
 
