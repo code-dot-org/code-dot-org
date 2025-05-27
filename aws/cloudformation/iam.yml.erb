@@ -950,6 +950,9 @@ roles.each do |name, config| %>
               - ecs:UpdateService
               - ecs:DescribeServices
               - cloudwatch:DescribeAlarms
+              - cloudwatch:GetMetricStatistics
+              - cloudwatch:PutMetricAlarm
+              - cloudwatch:DeleteAlarms
             Resource: '*'
             Condition:
               StringEquals:
