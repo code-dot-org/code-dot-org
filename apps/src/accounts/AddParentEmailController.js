@@ -13,6 +13,8 @@ import AddParentEmailModal from './AddParentEmailModal';
  * The controller subscribes to events emitted by the Rails helper JavaScript
  * to detect success or errors.
  *
+ * no-op change just for testing
+ *
  * Read more:
  * http://guides.rubyonrails.org/working_with_javascript_in_rails.html#rails-ujs-event-handlers
  * https://github.com/rails/jquery-ujs
