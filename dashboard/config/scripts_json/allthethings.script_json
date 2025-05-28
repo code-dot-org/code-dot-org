@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-28 17:37:23 UTC",
+    "serialized_at": "2025-05-28 20:07:25 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -4471,11 +4471,12 @@
       "chapter": 97,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "Sample Free Response"
-        ]
+        ],
+        "show_ai_analysis": true
       },
       "bonus": false,
       "seeding_key": {
