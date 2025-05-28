@@ -6,7 +6,15 @@ This is a work in progress, and this implementation does not represent the final
 
 # Prerequisites
 
-The deploy script requires first provisioning a CloudFormationMarketingSites deployer Role and other IAM resources.
+- The deploy script requires first provisioning a CloudFormationMarketingSites deployer Role and other IAM resources.
+- Create an AWS Secrets Manager Secret in the same Account and Region where the marketing site Stack will be provisioned and with the naming convention `marketing-sites/[environment type]/[base domain name of the marketing site]/[subdomain of the site]` and populate it with the following keys
+  - CONTENTFUL_DELIVERY_TOKEN
+  - CONTENTFUL_PREVIEW_TOKEN
+  - CONTENTFUL_REVALIDATE_TOKEN
+  - DRAFT_MODE_TOKEN
+  - STATSIG_CLIENT_KEY
+  - STATSIG_SERVER_KEY
+  - OTEL_EXPORTER_OTLP_HEADERS
 
 # Full usage with all parameters
 
