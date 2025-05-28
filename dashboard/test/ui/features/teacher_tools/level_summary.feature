@@ -126,6 +126,13 @@ Scenario: Check free response AI
 
   And I wait until element "p:contains('Ok. Dummy data returned for testing purposes.')" is visible
 
+  # Check that a non-assessment level doesn't show AI analysis
+  Given I am on "http://studio.code.org/s/allthethings/lessons/27/levels/2/summary"
+  And I wait until element "#summary-container" is visible
+  And I dismiss the teacher panel
+
+  And element "label:contains('Show AI Insights')" does not exist
+
 @eyes
 Scenario: Check for Understanding summaries eyes
   Given I am on "http://studio.code.org"
