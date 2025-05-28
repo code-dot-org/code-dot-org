@@ -68,7 +68,7 @@ Given(/^I create a new student section assigned to "([^"]*)"( and save the secti
   end
 end
 
-And /^I create a new "([^"]*)" student section with course "([^"]*)", version "([^"]*)"(?: and unit "([^"]*)")?$/ do |marketing_audience, assignment_family, version_year, secondary|
+And /^I create a new "([^"]*)" student section with course "([^"]*)", version "([^"]*)"(?: and unit "([^"]*)")(?: and name "([^"]*)")?$/ do |marketing_audience, assignment_family, version_year, secondary, name|
   individual_steps <<~GHERKIN
     When I see the section set up box
     When I press the new section button
@@ -77,13 +77,22 @@ And /^I create a new "([^"]*)" student section with course "([^"]*)", version "(
     When I select email login
 
     And I wait until element "button:contains(#{marketing_audience})" is visible
-    And I press keys "Untitled Section" for element "#uitest-section-name-setup"
     And I press the first "input[name='grades[]']" element
     And I click selector "button:contains(#{marketing_audience})"
     And I press the first "input[name='#{assignment_family}']" element
     And I click selector "#assignment-version-year" once I see it
     And I click selector ".assignment-version-title:contains(#{version_year})" once I see it
   GHERKIN
+
+  if name
+    individual_steps <<~GHERKIN
+      And I press keys "#{name}" for element "#uitest-section-name-setup"
+    GHERKIN
+  else
+    individual_steps <<~GHERKIN
+      And I press keys "Untitled Section" for element "#uitest-section-name-setup"
+    GHERKIN
+  end
 
   if secondary
     individual_steps <<~GHERKIN

@@ -54,7 +54,7 @@ Feature: Using the teacher homepage sections feature
 
     Given I am on "http://studio.code.org/home"
     When I see the section set up box
-    And I create a new "High School" student section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 1 - The Internet ('17-'18)"
+    And I create a new "High School" student section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 1 - The Internet ('17-'18)" and name "CSP Section"
     And I create a new student section and go home
     Then the student section table should have 2 rows
 
@@ -80,6 +80,8 @@ Feature: Using the teacher homepage sections feature
     # navigate to a script level
     Given I am on "http://studio.code.org/s/csp2-2017/lessons/1/levels/1"
     And I wait to see ".header_popup_link"
+    And I wait until element ".teacher-panel" is visible
+    And I select the "CSP Section" option in dropdown with class "uitest-sectionselect"
     Then the url contains the section id
 
     # open the More menu in the progress bar
