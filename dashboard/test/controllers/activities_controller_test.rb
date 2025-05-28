@@ -111,9 +111,9 @@ class ActivitiesControllerTest < ActionController::TestCase
       '</title><title name="TEXT">type text here</title></block></next></block>'
   end
 
-  def build_expected_response(options = {})
+  def build_expected_response(options = {}, unit_group: nil)
     {
-      redirect: build_script_level_path(@script_level_next, unit_group_unit: Queries::Courses.unit_group_unit(@script)),
+      redirect: build_script_level_path(@script_level_next, unit_group_unit: Queries::Courses.unit_group_unit(@script, unit_group)),
     }.merge options
   end
 
@@ -159,6 +159,21 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     post :milestone, params: params
     assert_response :success
+  end
+
+  test "successful milestone with modular course" do
+    secondary_course = create(:single_unit_course, unit: @script)
+
+    params = @milestone_params
+    params[:course_id] = secondary_course.id
+    params[:result] = 'true'
+
+    post :milestone, params: params
+    assert_response :success
+
+    puts JSON.parse(@response.body)
+    expected_response = build_expected_response({level_source: "http://test.host/c/#{assigns(:level_source).id}"}, unit_group: secondary_course)
+    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
   test "unsuccessful milestone does not require script_level_id" do
