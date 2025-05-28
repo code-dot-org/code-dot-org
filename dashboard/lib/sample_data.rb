@@ -32,43 +32,43 @@ class SampleData
 
     create_section(
       teacher: teacher, name: 'CSF 1',
-      login_type: Section::LOGIN_TYPE_PICTURE, grade: 2, age_min: 7,
-      age_max_inclusive: 9, script_name: 'coursea-2018', num_students: 30,
+      login_type: Section::LOGIN_TYPE_PICTURE, grade: [2], age_min: 7,
+      age_max_inclusive: 9, script_name: 'coursea-2024', unit_group_name: 'coursea-2024', num_students: 30,
       use_imperfect_results: true
     )
 
     create_section(
       teacher: teacher, name: 'CSF 2 (Large)',
-      login_type: Section::LOGIN_TYPE_PICTURE, grade: 2, age_min: 7,
-      age_max_inclusive: 9, script_name: 'coursea-2018', num_students: 150,
+      login_type: Section::LOGIN_TYPE_PICTURE, grade: [2], age_min: 7,
+      age_max_inclusive: 9, script_name: 'coursea-2024', unit_group_name: 'coursea-2024', num_students: 150,
       use_imperfect_results: true
     )
 
     create_section(
       teacher: teacher, name: 'CSD 1',
-      login_type: Section::LOGIN_TYPE_EMAIL, grade: 7, age_min: 13,
-      age_max_inclusive: 14, script_name: 'csd1-2018', num_students: 30,
+      login_type: Section::LOGIN_TYPE_EMAIL, grade: [7], age_min: 13,
+      age_max_inclusive: 14, script_name: 'csd1-2024', unit_group_name: 'csd-2024', num_students: 30,
       use_imperfect_results: false
     )
 
     create_section(
       teacher: teacher, name: 'CSD 2 (Large)',
-      login_type: Section::LOGIN_TYPE_EMAIL, grade: 7, age_min: 13,
-      age_max_inclusive: 14, script_name: 'csd1-2018', num_students: 150,
+      login_type: Section::LOGIN_TYPE_EMAIL, grade: [7], age_min: 13,
+      age_max_inclusive: 14, script_name: 'csd1-2024', unit_group_name: 'csd-2024', num_students: 150,
       use_imperfect_results: false
     )
 
     create_section(
       teacher: teacher, name: 'CSP 1',
-      login_type: Section::LOGIN_TYPE_EMAIL, grade: 10, age_min: 14,
-      age_max_inclusive: 16, script_name: 'csp1-2018', num_students: 30,
+      login_type: Section::LOGIN_TYPE_EMAIL, grade: [10], age_min: 14,
+      age_max_inclusive: 16, script_name: 'csp1-2024', unit_group_name: 'csp-2024', num_students: 30,
       use_imperfect_results: false
     )
 
     create_section(
       teacher: teacher, name: 'CSP 2 (Large)',
-      login_type: Section::LOGIN_TYPE_EMAIL, grade: 10, age_min: 14,
-      age_max_inclusive: 16, script_name: 'csp1-2018', num_students: 150,
+      login_type: Section::LOGIN_TYPE_EMAIL, grade: [10], age_min: 14,
+      age_max_inclusive: 16, script_name: 'csp1-2024', unit_group_name: 'csp-2024', num_students: 150,
       use_imperfect_results: false
     )
   end
@@ -139,10 +139,11 @@ class SampleData
   #    results. (CSF allows imperfect results, CSD and CSP do not.)
   def self.create_section(options)
     script = Unit.get_from_cache(options[:script_name])
+    unit_group = UnitGroup.get_from_cache(options[:unit_group_name])
     level_count = script.script_levels.count
 
     # Create the section
-    section = create :section, script: script,
+    section = create :section, script: script, unit_group: unit_group,
       **options.slice(:teacher, :name, :login_type, :grade)
 
     current_student = 0
