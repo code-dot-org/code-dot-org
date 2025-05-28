@@ -216,7 +216,7 @@ steps:
       - name: mysql
         path: /drone/src/var/lib/mysql
     settings:
-      filename: cache-staging-misc-build-artifacts.tar.gz
+      filename: cache-staging-misc-build-artifacts.with-apps.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -329,7 +329,7 @@ steps:
       - name: mysql
         path: /var/lib/mysql
     settings:
-      filename: cache-staging-misc-build-artifacts.tar.gz
+      filename: cache-staging-misc-build-artifacts.with-apps.tar.gz
       endpoint: s3://cdo-drone
       rebuild: true
       debug: true
@@ -353,6 +353,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: 6646bfda5cd973eb102725e17d3dade6b986b372da0ebb87c687d40e29655dfc
+hmac: ee4f15564ccf494831d0a3fdd44d4916b2f5b9314a6f03dd49c546d2e078a25b
 
 ...
