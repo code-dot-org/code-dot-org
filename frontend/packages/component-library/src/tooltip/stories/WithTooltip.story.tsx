@@ -26,7 +26,15 @@ const MultipleTemplate: StoryFn<{components: TooltipProps[]}> = args => (
       only added to improve the storybook view *
     </p>
     <p>Multiple Tooltips:</p>
-    <div style={{display: 'flex', gap: '20px', flexWrap: 'wrap'}}>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '210px',
+        flexWrap: 'wrap',
+        marginLeft: '100px',
+      }}
+    >
       {args.components?.map(componentArg => (
         <WithTooltip key={componentArg.tooltipId} tooltipProps={componentArg}>
           <Button onClick={() => null} text="Hover me" />
@@ -83,25 +91,25 @@ DirectionOfTooltipGroup.args = {
     {
       text: 'Tooltip - onTop',
       tooltipId: 'tooltipOnTop',
-      direction: 'onTop',
+      // direction: 'onTop',
       size: 'm',
     },
     {
       text: 'Tooltip - onRight',
       tooltipId: 'tooltipOnRight',
-      direction: 'onRight',
+      // direction: 'onRight',
       size: 'm',
     },
     {
       text: 'Tooltip - onBottom',
       tooltipId: 'tooltipOnBottom',
-      direction: 'onBottom',
+      // direction: 'onBottom',
       size: 'm',
     },
     {
       text: 'Tooltip - onLeft',
       tooltipId: 'tooltipOnLeft',
-      direction: 'onLeft',
+      // direction: 'onLeft',
       size: 'm',
     },
   ],
