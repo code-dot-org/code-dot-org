@@ -52,6 +52,8 @@ export const ActionBlockContentfulComponentDefinition: ComponentDefinition = {
       type: 'Media',
       group: 'content',
       description: 'The image to display in the action block.',
+      defaultValue:
+        'contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png',
       validations: {
         bindingSourceType: ['entry', 'asset'],
       },
@@ -62,6 +64,12 @@ export const ActionBlockContentfulComponentDefinition: ComponentDefinition = {
       type: 'Link',
       group: 'content',
       description: 'The primary button of the action block.',
+      defaultValue: {
+        fields: {
+          label: 'Primary button',
+          url: '#',
+        },
+      },
       validations: {
         bindingSourceType: ['entry'],
       },
