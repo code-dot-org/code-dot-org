@@ -135,7 +135,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
     assert_response :success
 
-    expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
+    expected_response = build_expected_response({level_source: "http://test.host/c/#{assigns(:level_source).id}"})
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
     # created a user script
@@ -392,7 +392,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -428,7 +428,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal level_source, assigns(:level_source)
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -458,7 +458,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal level_source, assigns(:level_source)
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -490,7 +490,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal level_source, assigns(:level_source)
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -522,7 +522,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal level_source, assigns(:level_source)
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -555,7 +555,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
+    expected_response = build_expected_response({level_source: "http://test.host/c/#{assigns(:level_source).id}"})
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -626,7 +626,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -649,7 +649,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -701,7 +701,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
