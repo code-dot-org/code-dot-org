@@ -37,7 +37,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     @admin = create(:admin)
 
-    @script = create(:script)
+    @script = create(:single_unit_course).first_unit
     @script_level_prev = create(:script_level, script: @script)
     @script_level = create(:script_level, script: @script)
     @script_level_next = create(:script_level, script: @script)
@@ -57,6 +57,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @milestone_params = {
       user_id: @user,
       script_level_id: @script_level.id,
+      course_id: @script.original_unit_group_id,
       attempt: '1',
       result: 'true',
       testResult: '100',
@@ -112,7 +113,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   def build_expected_response(options = {})
     {
-      redirect: build_script_level_path(@script_level_next),
+      redirect: build_script_level_path(@script_level_next, unit_group_unit: Queries::Courses.unit_group_unit(@script)),
     }.merge options
   end
 
@@ -717,10 +718,13 @@ class ActivitiesControllerTest < ActionController::TestCase
   test 'sharing program with swear word returns error' do
     ProfanityFilter.stubs(:find_potential_profanity).returns 'shit'
 
+    script = create(:single_unit_course).first_unit
+
     assert_does_not_create(LevelSource) do
       post :milestone, params: {
         user_id: @user.id,
-        script_level_id: create(:script_level, :playlab).id,
+        script_level_id: create(:script_level, :playlab, script: script).id,
+        course_id: script.original_unit_group_id,
         program: studio_program_with_text('shit')
       }
     end

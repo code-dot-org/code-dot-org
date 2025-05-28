@@ -571,7 +571,7 @@ class ScriptLevelsController < ApplicationController
 
     @callback = milestone_script_level_url(
       user_id: current_user.try(:id) || 0,
-      course_id: unit_group.id,
+      course_id: unit_group&.id,
       script_level_id: @script_level.id,
       level_id: @level.id
     )
@@ -582,7 +582,7 @@ class ScriptLevelsController < ApplicationController
     if @level.game&.level_group? || @level.try(:contained_levels).present?
       @sublevel_callback = milestone_script_level_url(
         user_id: current_user.try(:id) || 0,
-        course_id: unit_group.id,
+        course_id: unit_group&.id,
         script_level_id: @script_level.id,
         level_id: ''
       )
