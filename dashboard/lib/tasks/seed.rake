@@ -548,6 +548,10 @@ namespace :seed do
     MegaSection.seed
   end
 
+  timed_task_with_logging seed_test_section: :environment do
+    SeedTestSection.seed
+  end
+
   # Seeds shared tables in datablock storage
   timed_task_with_logging datablock_storage: :environment do
     DatablockStorageLibraryManifest.seed_all
