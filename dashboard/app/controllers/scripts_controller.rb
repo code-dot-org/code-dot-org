@@ -416,6 +416,7 @@ class ScriptsController < ApplicationController
       :use_legacy_lesson_plans,
       :lesson_groups,
       :content_area,
+      :enable_blockly_keyboard_navigation,
       resourceIds: [],
       studentResourceIds: [],
       project_widget_types: [],

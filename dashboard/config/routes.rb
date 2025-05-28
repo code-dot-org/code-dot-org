@@ -622,7 +622,7 @@ Dashboard::Application.routes.draw do
         post :replace_mappings
       end
     end
-    get 'regional-partner-search', to: 'regional_partners#regional_partner_search'
+    get 'regional-partner-search', to: redirect('/professional-learning/workshops')
 
     scope path: '/admin' do
       # internal report dashboards

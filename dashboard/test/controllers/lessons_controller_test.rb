@@ -1452,6 +1452,82 @@ class LessonsControllerTest < ActionController::TestCase
     assert_includes(@response.body, 'editScriptUrl')
   end
 
+  describe '#show' do
+    let!(:user) {create :teacher}
+    let(:unit_group) {create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+    let(:unit) {create :unit, :with_lessons, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+    let(:unit_position) {1}
+    let!(:unit_group_unit) {create :unit_group_unit, unit_group: unit_group, script: unit, position: unit_position}
+    let(:lesson) {unit.lessons.first}
+    let(:lesson_position) {lesson.relative_position}
+
+    context '/s/ URL' do
+      let(:script_id) {unit.id}
+
+      context 'valid inputs' do
+        let(:modularity_enabled) {true}
+        before do
+          allow(Policies::Courses).to receive(:modularity_enabled?).and_return(modularity_enabled)
+          get :show, params: {script_id: script_id, position: lesson_position}
+        end
+
+        it 'responds 302' do
+          assert_response :redirect
+        end
+
+        context 'modularity off' do
+          let(:modularity_enabled) {false}
+
+          it 'responds 200' do
+            assert_response :success
+          end
+        end
+      end
+
+      context 'script_id is unknown' do
+        let(:script_id) {'unknown_unit'}
+
+        it 'raises ActiveRecord::RecordNotFound' do
+          assert_raises(ActiveRecord::RecordNotFound) do
+            get :show, params: {script_id: script_id, position: lesson_position}
+          end
+        end
+      end
+    end
+
+    context '/courses/.../units/... URL' do
+      let(:course_course_name) {unit_group.name}
+
+      context 'valid inputs' do
+        before do
+          get :show, params: {course_course_name: course_course_name, unit_position: unit_position, position: lesson_position}
+        end
+
+        it 'responds 200' do
+          assert_response :success
+        end
+      end
+
+      context 'course_course_name is unknown' do
+        let(:course_course_name) {'unknown_unit_group'}
+
+        it 'raises ActiveRecord::RecordNotFound' do
+          assert_raises(ActiveRecord::RecordNotFound) do
+            get :show, params: {course_course_name: course_course_name, unit_position: unit_position, position: lesson_position}
+          end
+        end
+      end
+
+      context 'unit_position is unknown' do
+        it 'raises ActiveRecord::RecordNotFound' do
+          assert_raises(ActiveRecord::RecordNotFound) do
+            get :show, params: {course_course_name: course_course_name, unit_position: 999, position: lesson_position}
+          end
+        end
+      end
+    end
+  end
+
   describe '#redirect_to_canonical_path' do
     let!(:user) {create :teacher}
     let(:course) {create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}

@@ -23,10 +23,10 @@ class AichatRequestsController < ApplicationController
   # aichatModelCustomizations: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
   # aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
   def start_chat_completion
-    return render status: :forbidden, json: {} unless AichatSagemakerHelper.can_request_aichat_chat_completion?
     unless chat_completion_has_required_params?
       return render status: :bad_request, json: {}
     end
+    return render status: :forbidden, json: {user_type: current_user.user_type} unless can_access_aichat? || can_access_aitutor?(params[:aichatContext][:currentLevelId])
 
     return head :too_many_requests if should_throttle_request_count?
 
@@ -86,6 +86,16 @@ class AichatRequestsController < ApplicationController
       response: request.response
     }
     render(status: :ok, json: response_body)
+  end
+
+  private def can_access_aitutor?(level_id)
+    # AI Tutor requests only come from python lab levels.
+    return false unless level_id
+    Level.find(level_id).is_a? Pythonlab
+  end
+
+  private def can_access_aichat?
+    AichatSagemakerHelper.can_request_aichat_chat_completion? && current_user.has_aichat_access?
   end
 
   private def should_throttle_request_count?

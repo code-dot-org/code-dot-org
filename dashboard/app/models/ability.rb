@@ -170,6 +170,10 @@ class Ability
 
       can :evaluate, :openai_evaluate
 
+      # all signed in users can access the aichat_request endpoint
+      # additional permission logic lives in the controller itself
+      can [:start_chat_completion, :chat_request], :aichat_request
+
       if user.teacher?
         can :manage, Section do |s|
           s.instructors.include?(user)
@@ -505,10 +509,6 @@ class Ability
 
       can :chat_completion, :openai_chat do
         user.has_ai_tutor_access?
-      end
-
-      can [:start_chat_completion, :chat_request], :aichat_request do
-        user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
       end
 
       can :find_toxicity, :aichat do

@@ -237,10 +237,7 @@ class EvaluateRubricJob < ApplicationJob
     channel_id = get_channel_id(user, script_level)
     code, project_version = read_user_code(channel_id)
 
-    # Check for PII / sharing failures
-    # Get the 2-character language code from the user's preferred locale
-    locale = (user.locale || 'en')[0...2]
-    ShareFiltering.find_failure(code, locale, exceptions: true)
+    ShareFiltering.find_pii_failure(code, exceptions: true)
 
     openai_params = AiRubricConfig.get_openai_params(lesson_s3_name, code)
     response = get_openai_evaluations(openai_params)

@@ -24410,8 +24410,8 @@ en:
           title: Object-Oriented Programming with Java
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "**In this unit, you will:** \n- Describe what a “class” and “object” are in Java\n- Call and write methods in Java\n- Use The Neighborhood, Code.org's interactive IDE,  to introduce classes and objects\n- Learn to create a class\n\n**Estimated Time:** 2 hours"
+          student_description: "**In this unit, you will:** \n- Describe what a “class” and “object” are in Java\n- Call and write methods in Java\n- Use The Neighborhood, Code.org's interactive IDE,  to introduce classes and objects\n- Learn to create a class\n\n**Estimated Time:** 2 hours"
         self-paced-pl-teaching-microbit-1-2025:
           lessons: {}
           lesson_groups: {}
