@@ -7,8 +7,8 @@ import {BodyOneText, BodyThreeText, StrongText} from '@/typography';
 import styles from './testimonial.module.scss';
 
 export enum TESTIMONIAL_BACKGROUNDS {
-  PATTERN_DARK = 'patternDark',
-  PATTERN_PRIMARY = 'patternPrimary',
+  DARK = 'dark',
+  PRIMARY = 'primary',
 }
 
 export interface TestimonialProps extends HTMLAttributes<HTMLElement> {
@@ -41,7 +41,7 @@ const Testimonial: React.FC<TestimonialProps> = ({
   quote,
   source,
   context,
-  background = TESTIMONIAL_BACKGROUNDS.PATTERN_DARK,
+  background = TESTIMONIAL_BACKGROUNDS.DARK,
   className,
   ...HTMLAttributes
 }) => (

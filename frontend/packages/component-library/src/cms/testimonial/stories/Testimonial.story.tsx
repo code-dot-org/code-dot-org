@@ -28,16 +28,16 @@ export const Playground: Story = {
   },
 };
 
-export const WithDarkPatternBackground: Story = {
+export const WithDarkBackground: Story = {
   args: {
     ...defaultProps,
-    background: TESTIMONIAL_BACKGROUNDS.PATTERN_DARK,
+    background: TESTIMONIAL_BACKGROUNDS.DARK,
   },
 };
 
-export const WithPrimaryPatterBackground: Story = {
+export const WithPrimaryBackground: Story = {
   args: {
     ...defaultProps,
-    background: TESTIMONIAL_BACKGROUNDS.PATTERN_PRIMARY,
+    background: TESTIMONIAL_BACKGROUNDS.PRIMARY,
   },
 };

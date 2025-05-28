@@ -25,8 +25,8 @@ describe('CMS Testimonial', () => {
   beforeEach(() => {
     const style = document.createElement('style');
     style.innerHTML = `
-      .testimonial-background-${TESTIMONIAL_BACKGROUNDS.PATTERN_DARK} { background: ${TESTIMONIAL_BACKGROUNDS.PATTERN_DARK}; }
-      .testimonial-background-${TESTIMONIAL_BACKGROUNDS.PATTERN_PRIMARY} { background: ${TESTIMONIAL_BACKGROUNDS.PATTERN_PRIMARY}; }
+      .testimonial-background-${TESTIMONIAL_BACKGROUNDS.DARK} { background: ${TESTIMONIAL_BACKGROUNDS.DARK}; }
+      .testimonial-background-${TESTIMONIAL_BACKGROUNDS.PRIMARY} { background: ${TESTIMONIAL_BACKGROUNDS.PRIMARY}; }
     `;
     document.head.appendChild(style);
   });
@@ -40,15 +40,15 @@ describe('CMS Testimonial', () => {
     expect(component).toHaveTextContent(source + context);
   });
 
-  it('renders with patternDark background by default', () => {
+  it('renders with dark background by default', () => {
     renderComponent();
     expect(getComponent()).toHaveStyle(
-      `background: ${TESTIMONIAL_BACKGROUNDS.PATTERN_DARK}]`,
+      `background: ${TESTIMONIAL_BACKGROUNDS.DARK}]`,
     );
   });
 
   it('renders with provided background', () => {
-    const background = TESTIMONIAL_BACKGROUNDS.PATTERN_PRIMARY;
+    const background = TESTIMONIAL_BACKGROUNDS.PRIMARY;
     renderComponent({background});
     expect(getComponent()).toHaveStyle(`background: ${background}]`);
   });

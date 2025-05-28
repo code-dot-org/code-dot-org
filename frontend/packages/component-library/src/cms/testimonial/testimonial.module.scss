@@ -1,5 +1,4 @@
 @use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
-@use '@code-dot-org/component-library-styles/cms/cmsMixins.scss' as cmsMixins;
 
 // Testimonial common color
 .testimonial {
@@ -39,12 +38,7 @@
 
 // Testimonial background styles
 .testimonial-background {
-  &-patternDark,
-  &-patternPrimary {
-    @include cmsMixins.background-pattern-lines;
-  }
-
-  &-patternDark {
+  &-dark {
     background-color: var(--background-neutral-black-fixed);
 
     .testimonialQuoteIcon {
@@ -52,7 +46,7 @@
     }
   }
 
-  &-patternPrimary {
+  &-primary {
     background-color: var(--brand-teal-50);
   }
 }
