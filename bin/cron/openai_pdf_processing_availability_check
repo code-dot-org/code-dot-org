@@ -53,9 +53,19 @@ def main
   if classification == 'YES'
     return
   elsif classification == 'NO'
-    ChatClient.message(
-      'student-learning',
-      '🚨 OpenAI PDF processing appears to not be working, which is used in AI Chat. We may need to replace the API key. 🚨'
+    Cdo::Metrics.push(
+      SharedConstants::AICHAT_METRICS_NAMESPACE,
+      [
+        {
+          metric_name: "openaiPdfProcessingAvailabilityFailure",
+          value: 1,
+          unit: 'Count',
+          timestamp: Time.now,
+          dimensions: [
+            {name: 'Environment', value: CDO.rack_env}
+          ],
+        }
+      ]
     )
   else
     raise "Unexpected response from OpenAI during PDF processing availability check: #{classification}"
