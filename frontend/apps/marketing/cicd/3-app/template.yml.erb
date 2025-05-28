@@ -375,14 +375,14 @@ Resources:
             - Name: STATSIG_SERVER_KEY
               ValueFrom: !Sub "${WebApplicationServerSecretsARN}:STATSIG_SERVER_KEY::"
             - Name: OTEL_EXPORTER_OTLP_HEADERS
-              ValueFrom: !Sub "${WebApplicationServerSecretsARN}::OTEL_EXPORTER_OTLP_HEADERS::"
+              ValueFrom: !Sub "${WebApplicationServerSecretsARN}:OTEL_EXPORTER_OTLP_HEADERS::"
           LogConfiguration:
             LogDriver: awslogs
             Options:
-              awslogs-group: !Sub "/ecs/${AWS::StackName}-FargateServiceTaskDef"
+              awslogs-group: !Sub "/aws/ecs/${AWS::StackName}"
               awslogs-create-group: true
               awslogs-region: !Ref 'AWS::Region'
-              awslogs-stream-prefix: marketing-ecs
+              awslogs-stream-prefix: next-js
       Cpu: "1024"
       Memory: "2048"
       ExecutionRoleArn:
@@ -422,30 +422,25 @@ Resources:
         PolicyDocument:
           Version: "2012-10-17"
           Statement:
-          - Effect: Allow
-            Action:
+          - Action:
+              - secretsmanager:DescribeSecret
+              - secretsmanager:GetSecretValue
+            Effect: Allow
+            Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:marketing-sites/${EnvironmentType}/*"
+          - Action:
               - logs:CreateLogStream
               - logs:PutLogEvents
+            Effect: Allow
             Resource:
               - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/ecs/${AWS::StackName}:log-stream:next-js/*"
-          - Effect: Allow
-            Action:
+          - Action:
               - logs:CreateLogGroup
+            Effect: Allow
             Resource:
               - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/ecs/${AWS::StackName}"
               - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/ecs/${AWS::StackName}:log-stream:*"
       PermissionsBoundary:
         Fn::ImportValue: !FindInMap [ImportedPoliciesMap, !Ref 'EnvironmentType', policy]
-      Policies:
-        - PolicyName: SecretsManagerAccess
-          PolicyDocument:
-            Statement:
-              - Action:
-                  - secretsmanager:DescribeSecret
-                  - secretsmanager:GetSecretValue
-                Effect: Allow
-                Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:marketing-sites/${EnvironmentType}/*"
-            Version: "2012-10-17"
   FargateService:
     Type: AWS::ECS::Service
     Properties:
