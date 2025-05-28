@@ -35,6 +35,12 @@ class AichatRequestsControllerTest < ActionController::TestCase
 
   setup do
     @controller.stubs(:storage_decrypt_channel_id).returns([123, @project_id])
+    DCDO.stubs(:get).with('aitutor2_chat_completion', anything).returns(true)
+    DCDO.stubs(:get).with('aichat_chat_completion', anything).returns(true)
+    DCDO.stubs(:get).with('aichat_request_limit_per_min', anything).returns(AichatRequestsController::DEFAULT_REQUEST_LIMIT_PER_MIN)
+    DCDO.stubs(:get).with('aichat_polling_interval_ms', anything).returns(AichatRequestsController::DEFAULT_POLLING_INTERVAL_MS)
+    DCDO.stubs(:get).with('aichat_polling_backoff_rate', anything).returns(AichatRequestsController::DEFAULT_POLLING_BACKOFF_RATE)
+    DCDO.stubs(:get).with('throttle_time_default', anything).returns(60)
   end
 
   # start_chat_completion tests
@@ -61,6 +67,15 @@ class AichatRequestsControllerTest < ActionController::TestCase
     params_with_python_level = @valid_params_chat_completion.merge(aichatContext: @default_aichat_context.merge(currentLevelId: python_lab_level.id))
     post :start_chat_completion, params: params_with_python_level, as: :json
     assert_response :success
+  end
+
+  test 'DCDO flag blocks access to start_chat_completion from python lab levels' do
+    sign_in(@unauthorized_student)
+    DCDO.stubs(:get).with('aitutor2_chat_completion', true).returns(false)
+    python_lab_level = create :pythonlab
+    params_with_python_level = @valid_params_chat_completion.merge(aichatContext: @default_aichat_context.merge(currentLevelId: python_lab_level.id))
+    post :start_chat_completion, params: params_with_python_level, as: :json
+    assert_response :forbidden
   end
 
   test 'authorized teacher has access to start_chat_completion test' do
