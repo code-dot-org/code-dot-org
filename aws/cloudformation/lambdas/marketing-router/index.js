@@ -148,7 +148,7 @@ const marketingPaths = {
   "/student/middle-high": true,
   "/student/elementary": true,
   "/about/hear-from-us": true,
-  "/students": false,
+  "/students": true,
   "/curriculum/elementary-school": true,
   "/about": true,
   "/educate/gamelab": true,
