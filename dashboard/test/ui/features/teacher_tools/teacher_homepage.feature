@@ -61,34 +61,34 @@ Feature: Using the teacher homepage sections feature
     # save the older section id, from the last row of the table
     And I save the section id from row 1 of the section table
     And I wait until element ".uitest-owned-sections" contains text "Computer Science Principles"
-    And the teacher_dashboard href of selector ".uitest-owned-sections a:contains('Computer Science Principles')" contains the section id
-    And the teacher_dashboard href of selector ".uitest-owned-sections a:contains('Unit 1')" contains the section id
+    And the href of selector ".uitest-owned-sections a:contains('Computer Science Principles')" contains the section id
+    And the href of selector ".uitest-owned-sections a:contains('Unit 1')" contains the section id
 
     When I click selector ".uitest-owned-sections a:contains('Computer Science Principles')" to load a new page
     And I wait to see ".uitest-CourseScript"
-    Then the teacher_dashboard url contains the section id
+    Then the url contains the section id
     And I wait until current URL contains "/courses/csp-2017"
 
     When I click selector ".uitest-CourseScript:contains(CSP Unit 2) .uitest-go-to-unit-button" to load a new page
     And I wait until element "h1:contains(CSP Unit 2 - Digital Information ('17-'18))" is visible
-    Then the teacher_dashboard url contains the section id
+    Then the url contains the section id
 
     And I wait for 3 seconds
-    And the teacher_dashboard href of selector ".progress-bubble-link:first" contains the section id
-    And the teacher_dashboard href of selector "a:contains(Computer Science Principles)" contains the section id
+    And the href of selector ".progress-bubble-link:first" contains the section id
+    And the href of selector "a:contains(Computer Science Principles)" contains the section id
 
     # navigate to a script level
     Given I am on "http://studio.code.org/s/csp2-2017/lessons/1/levels/1"
     And I wait to see ".header_popup_link"
-    Then the teacher_dashboard url contains the section id
+    Then the url contains the section id
 
     # open the More menu in the progress bar
     When I wait for jquery to load
     And I click selector ".header_popup_link"
     And I wait until element "a:contains(View Unit Overview)" is visible
-    And the teacher_dashboard href of selector "a:contains(View Unit Overview)" contains the section id
+    And the href of selector "a:contains(View Unit Overview)" contains the section id
     And I wait until element ".header_popup_body .progress-bubble-link:first" is visible
-    And the teacher_dashboard href of selector ".header_popup_body .progress-bubble-link:first" contains the section id
+    And the href of selector ".header_popup_body .progress-bubble-link:first" contains the section id
 
     # Save the newer section id
     Given I am on "http://studio.code.org/home"
@@ -99,15 +99,15 @@ Feature: Using the teacher homepage sections feature
 
     When I am on "http://studio.code.org/courses/csp-2019"
     And I wait until element ".uitest-CourseScript" is visible
-    Then the teacher_dashboard url contains the section id
+    Then the url contains the section id
 
     When I am on "http://studio.code.org/courses/csp-2019/units/1"
     And I wait until element "#script-title" is visible
-    Then the teacher_dashboard url contains the section id
+    Then the url contains the section id
 
     When I am on "http://studio.code.org/courses/coursea-2019/units/1"
     And I wait until element "#script-title" is visible
-    Then the teacher_dashboard url contains the section id
+    Then the url contains the section id
 
     # loading non-existent section succeeds, with no section selected
     When I am on "http://studio.code.org/courses/coursea-2019/units/1?section_id=99999"
@@ -169,7 +169,6 @@ Feature: Using the teacher homepage sections feature
     When I see the section set up box
     And I create a new "Elementary School" student section with course "CS Fundamentals: Course A", version "2017"
     Then the student section table should have 1 rows
-    And I wait until element "h1:contains(Progress)" is visible 
 
     Given I am on "http://studio.code.org/home"
     And I wait until element "#classroom-sections" is visible
@@ -182,6 +181,8 @@ Feature: Using the teacher homepage sections feature
     And I press "assignment-version-year"
     And I click selector ".assignment-version-title:contains(2019)" once I see it
     And I press the first "#uitest-save-section-changes" element to load a new page
+    And I wait until element "h1:contains(Progress)" is visible 
+    Given I am on "http://studio.code.org/home"
     And I wait until element "#classroom-sections" is visible
     And I wait until element ".uitest-owned-sections" is visible
     And the section table row at index 0 has primary assignment path "/courses/coursea-2019"
@@ -230,4 +231,4 @@ Feature: Using the teacher homepage sections feature
     And element ".uitest-owned-sections" does not contain text "Current unit:"
 
     When I click selector ".uitest-owned-sections a:contains('Single Unit Course 2025')" to load a new page
-    Then check that the URL contains "/courses/ui-test-single-unit-course-2025/units/1"
+    Then check that the URL contains "/unit/ui-test-single-unit-course-2025"
