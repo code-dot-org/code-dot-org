@@ -27,6 +27,8 @@ class ActivitiesController < ApplicationController
     solved = (params[:result] == 'true')
     script_name = ''
 
+    @unit_group = UnitGroup.get_from_cache(params[:course_id]) if params[:course_id]
+
     if params[:script_level_id]
       @script_level = ScriptLevel.cache_find(params[:script_level_id].to_i)
       @level = params[:level_id] ? Unit.cache_find_level(params[:level_id].to_i) : @script_level.oldest_active_level
@@ -144,6 +146,7 @@ class ActivitiesController < ApplicationController
       script_level: @script_level,
       level: @level,
       solved?: solved,
+      unit_group: @unit_group,
       level_source: @level_source.try(:hidden) ? nil : @level_source,
       level_source_image: @level_source_image,
       new_level_completed: @new_level_completed,

@@ -224,9 +224,7 @@ class ApplicationController < ActionController::Base
       # if they solved it, figure out next level
       if options[:solved?]
         response[:new_level_completed] = options[:new_level_completed]
-        # TODO: TEACH-1899 Get current UnitGroup/Course from the params and pass
-        # it to Queries::Courses.unit_group_unit
-        unit_group_unit = Queries::Courses.unit_group_unit(script_level.script)
+        unit_group_unit = Queries::Courses.unit_group_unit(script_level.script, options[:unit_group])
         response[:level_path] = build_script_level_path(script_level, unit_group_unit: unit_group_unit)
         script_level_solved_response(response, script_level, unit_group_unit: unit_group_unit)
       else # not solved
