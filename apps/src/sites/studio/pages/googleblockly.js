@@ -19,4 +19,9 @@ const messages =
   blocklyLocaleMap['en-us'];
 GoogleBlockly.setLocale(messages);
 
+// Add the keyboard shortcuts div. This is here to ensure it happens prior to the workspace loading
+const shortcutDialog = document.createElement('div');
+shortcutDialog.id = 'shortcuts';
+document.body.appendChild(shortcutDialog);
+
 window.Blockly = initializeGoogleBlocklyWrapper(GoogleBlockly);
