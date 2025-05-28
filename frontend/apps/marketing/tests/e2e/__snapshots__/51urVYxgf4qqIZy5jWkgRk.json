@@ -1,0 +1,84 @@
+{
+  "entryContent": {
+    "fields": {
+      "internalName": {
+        "en-US": "FAQ text"
+      },
+      "question": {
+        "en-US": "FAQ text"
+      },
+      "answer": {
+        "en-US": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "Normal text",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "Bold text",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "Italic text",
+                  "marks": [
+                    {
+                      "type": "italic"
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "Bold Italic text",
+                  "marks": [
+                    {
+                      "type": "italic"
+                    },
+                    {
+                      "type": "bold"
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "contentType": "faq"
+}

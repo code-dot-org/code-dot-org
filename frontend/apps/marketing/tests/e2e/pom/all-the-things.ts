@@ -9,6 +9,7 @@ export type Section =
   | 'Button'
   | 'Divider'
   | 'Editorial Card'
+  | 'FAQ Accordion'
   | 'Heading'
   | 'Image'
   | 'Image Carousel'
