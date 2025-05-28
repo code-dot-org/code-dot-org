@@ -961,6 +961,21 @@ roles.each do |name, config| %>
               - cloudwatch:PutMetricAlarm
               - cloudwatch:DeleteAlarms
             Resource: '*'
+          - Sid: AllowECSTaskExecutionLogging
+            Action:
+              - logs:CreateLogStream
+              - logs:PutLogEvents
+            Effect: Allow
+            Resource:
+              - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/ecs/*<%=environment_type%>*:log-stream:*/*"
+          - Sid: AllowECSTaskExecutionCreateLogGroup
+            Action:
+              - logs:CreateLogGroup
+            Effect: Allow
+            Resource:
+              - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/ecs/*<%=environment_type%>*"
+              - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/ecs/*<%=environment_type%>*:log-stream:*"
+          
           # Add more statements here as we need the Roles provisioned within a marketing sites Stack to have more permissions.
 
   CloudFormationServiceMarketingSites<%=environment_type.capitalize%>Role:
