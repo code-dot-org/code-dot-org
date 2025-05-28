@@ -48,6 +48,7 @@ export const WithImage: Story = {
       className: 'custom-image-class',
     },
     VideoComponent: Video,
+    backgroundColor: '#e4e6e9',
   },
   parameters: {
     layout: 'fullscreen',
@@ -70,6 +71,7 @@ export const WithVideo: Story = {
       videoTitle: 'Watch our intro video',
     },
     VideoComponent: Video,
+    backgroundColor: '#e4e6e9',
   },
   parameters: {
     layout: 'fullscreen',
@@ -99,6 +101,7 @@ export const WithPartnerAndCTA: Story = {
       href: '#',
     },
     VideoComponent: Video,
+    backgroundColor: '#e4e6e9',
   },
   parameters: {
     layout: 'fullscreen',
@@ -118,6 +121,7 @@ export const TextOnly: Story = {
     heading: 'Minimalist Hero',
     subHeading: 'Simple and elegant',
     VideoComponent: Video,
+    backgroundColor: '#e4e6e9',
   },
   parameters: {
     layout: 'fullscreen',
@@ -139,6 +143,7 @@ export const LongContent: Story = {
       'The description here is intentionally long to ensure text flows properly across viewports and doesn’t break layout.',
 
     VideoComponent: Video,
+    backgroundColor: '#e4e6e9',
   },
   parameters: {
     layout: 'fullscreen',
@@ -183,6 +188,7 @@ export const WithBackgroundImage: Story = {
     backgroundImageUrl: customBackgroundImage,
     'data-theme': 'Dark',
     VideoComponent: Video,
+    backgroundColor: '#e4e6e9',
   },
   parameters: {
     layout: 'fullscreen',
@@ -229,6 +235,7 @@ export const WithWideText: Story = {
     },
     withWideText: true,
     VideoComponent: Video,
+    backgroundColor: '#e4e6e9',
   },
   parameters: {
     layout: 'fullscreen',
@@ -259,6 +266,7 @@ export const WithAnnouncementBanner: Story = {
         href: '#',
       },
     },
+    backgroundColor: '#e4e6e9',
   },
   parameters: {
     layout: 'fullscreen',
@@ -325,6 +333,7 @@ export const Tablet: Story = {
       className: 'custom-image-class',
     },
     VideoComponent: Video,
+    backgroundColor: '#e4e6e9',
   },
   parameters: {
     layout: 'fullscreen',
@@ -350,6 +359,7 @@ export const TabletWithHiddenImage: Story = {
     },
     VideoComponent: Video,
     hideImageOnSmallScreen: true,
+    backgroundColor: '#e4e6e9',
   },
   parameters: {
     layout: 'fullscreen',
@@ -374,6 +384,7 @@ export const Mobile: Story = {
       className: 'custom-image-class',
     },
     VideoComponent: Video,
+    backgroundColor: '#e4e6e9',
   },
   parameters: {
     layout: 'fullscreen',
@@ -399,6 +410,7 @@ export const MobileWithHiddenImage: Story = {
     },
     VideoComponent: Video,
     hideImageOnSmallScreen: true,
+    backgroundColor: '#e4e6e9',
   },
   parameters: {
     layout: 'fullscreen',
