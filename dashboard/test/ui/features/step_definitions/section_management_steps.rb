@@ -68,7 +68,7 @@ Given(/^I create a new student section assigned to "([^"]*)"( and save the secti
   end
 end
 
-And /^I create a new "([^"]*)" student section with course "([^"]*)", version "([^"]*)"(?: and unit "([^"]*)")(?: and name "([^"]*)")?$/ do |marketing_audience, assignment_family, version_year, secondary, name|
+And(/^I create a new "([^"]*)" student section with course "([^"]*)", version "([^"]*)"(?: and unit "([^"]*)")?(?: and name "([^"]*)")?$/) do |marketing_audience, assignment_family, version_year, secondary, name|
   individual_steps <<~GHERKIN
     When I see the section set up box
     When I press the new section button
