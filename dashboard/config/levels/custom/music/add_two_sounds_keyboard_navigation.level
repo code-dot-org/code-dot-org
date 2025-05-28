@@ -8,38 +8,93 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "##Play two sounds! \r\n\r\nOnce keyboard navigation is turned on using **Shift+Control+K**.\r\n\r\nUse **WASD** to add two songs to the Workspace. \r\n\r\nThen run using **Space bar** and **Continue** using **Shift+Tab**.\r\n\r\n::: details [**How to add a block?**]\r\nUse **WASD** to navigate to the place in the Workspace where you want to add the block. \r\n\r\nOnce you get there, click **Enter** to set a destination. \r\n\r\nNavigate to the toolbox using **T**, and use **Enter** to bring the block into the workspace\r\n\r\n\r\n:::\r\n",
+    "long_instructions": "####Moving blocks\r\n- `Tab` into the workspace\r\n- Use the `↑` `↓` arrow keys to move between blocks.\r\n- On any block besides [when run](#clickable=id:when-run-block), press `m` for Move, then re-position it using the `←` `↑` `↓` `→` arrow keys. Press `Enter` to accept the new position.\r\n- Run your program using `Space Bar`\r\n- `Shift+Tab` to the Continue button",
     "offer_browser_tts": "false",
     "hide_share_and_remix": "false",
     "level_data": {
       "library": "launch2024",
-      "packId": "will_i_am_i_like_to_move_it",
       "sounds": {
-        "will_i_am_i_like_to_move_it": [
-          "vocals_chorus_1",
-          "vocals_chorus_2",
-          "vocals_verse_1",
-          "vocals_verse_2",
-          "vocals_verse_3",
-          "vocals_verse_4",
-          "vocals_move_it"
+        "electro": [
+          "drum_beat_cowbell",
+          "bass_synth_blocks",
+          "synth_airhorn",
+          "synth_cave",
+          "bass_synth_candy",
+          "drum_beat_club"
         ]
       },
       "toolbox": {
         "blocks": {
           "Play": [
             "play_sound_at_current_location_simple2"
-          ],
-          "Effects": [
-            "set_volume_effect_at_current_location_simple2"
           ]
         },
         "type": "flyout"
+      },
+      "packId": "default",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "play_sound_at_current_location_simple2",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "fields": {
+                    "sound": "electro/drum_beat_cowbell"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sound_at_current_location_simple2",
+                      "id": "{7bNkz-1@_|9eHK/s#IS",
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "fields": {
+                        "sound": "electro/bass_synth_blocks"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "dpWYMWZ,y+JLC27cw`)[",
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "electro/synth_cave"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       }
+    },
+    "use_secondary_finish_button": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-23 17:49:41 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 20:18:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-23 17:49:41 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 20:18:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-27 22:03:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-27 22:11:43 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-27 22:12:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-27 22:13:36 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-27 22:13:49 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-27 22:14:47 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-27 22:16:46 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-27 22:18:18 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-27 22:20:05 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-27 22:22:27 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-28 04:46:09 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-28 04:48:06 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-28 04:48:42 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-28 06:10:40 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-28 06:11:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-28 06:12:12 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-28 06:13:09 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-28 06:14:17 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-28 06:21:04 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-28 14:20:30 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-28 14:24:41 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

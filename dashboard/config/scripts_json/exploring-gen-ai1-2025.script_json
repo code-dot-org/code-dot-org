@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-27 03:03:20 UTC",
+    "serialized_at": "2025-05-27 22:59:09 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -280,9 +280,9 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "overview": "In this lesson, students explore whether they can trust what AI says. They ask factual questions, check the AI’s answers against reliable sources, and look for hallucinations or misleading information. Through this process, students learn how AI sometimes produces false responses and develop strategies for spotting and verifying information in everyday situations like homework, research, or online conversations.",
+        "overview": "In this lesson, students explore how to recognize and respond to false or misleading information from AI. They investigate how question wording affects chatbot answers, and practice spotting hallucinations and verifying facts using reliable sources. By the end, students will have tools they can use to ask better questions and decide when to trust what AI tells them.",
         "preparation": "* Print copies of the Can You Trust the Bot? activity guide (one for each student)",
-        "student_overview": "In this lesson, you'll ask AI some real questions and check if its answers are actually true. You'll compare what it says to reliable sources and see if it makes mistakes or says anything confusing. By the end, you'll learn how to spot when AI might be wrong and what you can do to double-check the facts in schoolwork, research, or everyday chats."
+        "student_overview": "In this lesson, you’ll figure out what to do when you’re not sure if a chatbot is right. You’ll try asking questions in different ways, see how the answers change, and check if they’re actually true. By the end, you’ll know how to spot when AI might be wrong and how to decide whether you can trust what it says."
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -1122,28 +1122,42 @@
       }
     },
     {
-      "key": "3d044815-143d-4cdc-af53-cfd101fc3b8e",
+      "key": "aaafe174-a7c2-4bb1-9b54-274ae7f44de0",
       "position": 2,
       "properties": {
-        "duration": 30,
-        "name": "Activity"
+        "duration": 0,
+        "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "3d044815-143d-4cdc-af53-cfd101fc3b8e",
+        "lesson_activity.key": "aaafe174-a7c2-4bb1-9b54-274ae7f44de0",
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
       }
     },
     {
-      "key": "aaafe174-a7c2-4bb1-9b54-274ae7f44de0",
+      "key": "4c1cbecd-af2b-42fe-be23-28d76c5473eb",
       "position": 3,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4c1cbecd-af2b-42fe-be23-28d76c5473eb",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "ba73f604-c867-4a73-9e28-0b8a18e97de8",
+      "position": 4,
       "properties": {
         "duration": 7,
         "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "aaafe174-a7c2-4bb1-9b54-274ae7f44de0",
+        "lesson_activity.key": "ba73f604-c867-4a73-9e28-0b8a18e97de8",
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
@@ -3239,16 +3253,6 @@
       }
     },
     {
-      "key": "bfb79562-c48f-4573-b873-546a9594d3af",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "bfb79562-c48f-4573-b873-546a9594d3af",
-        "lesson_activity.key": "3d044815-143d-4cdc-af53-cfd101fc3b8e"
-      }
-    },
-    {
       "key": "673edd09-89ba-4f27-b1c1-4342c1612c31",
       "position": 1,
       "properties": {
@@ -3257,6 +3261,28 @@
       "seeding_key": {
         "activity_section.key": "673edd09-89ba-4f27-b1c1-4342c1612c31",
         "lesson_activity.key": "aaafe174-a7c2-4bb1-9b54-274ae7f44de0"
+      }
+    },
+    {
+      "key": "e4d6c223-031e-47a4-bdbf-c458ca43cc82",
+      "position": 1,
+      "properties": {
+        "progression_name": "Can You Trust the Bot?"
+      },
+      "seeding_key": {
+        "activity_section.key": "e4d6c223-031e-47a4-bdbf-c458ca43cc82",
+        "lesson_activity.key": "4c1cbecd-af2b-42fe-be23-28d76c5473eb"
+      }
+    },
+    {
+      "key": "64ace98f-6781-4902-af32-91ecb1f14571",
+      "position": 1,
+      "properties": {
+        "progression_name": "Ethical Checkpoint"
+      },
+      "seeding_key": {
+        "activity_section.key": "64ace98f-6781-4902-af32-91ecb1f14571",
+        "lesson_activity.key": "ba73f604-c867-4a73-9e28-0b8a18e97de8"
       }
     },
     {
@@ -4719,6 +4745,50 @@
     },
     {
       "chapter": 37,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Can You Trust the Bot?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "exploring_generative_ai_9_2_chat"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "e4d6c223-031e-47a4-bdbf-c458ca43cc82"
+      },
+      "level_keys": [
+        "exploring_generative_ai_9_2_chat"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Ethical Checkpoint"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "exploring_generative_ai_l92_checkpoint"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "64ace98f-6781-4902-af32-91ecb1f14571"
+      },
+      "level_keys": [
+        "exploring_generative_ai_l92_checkpoint"
+      ]
+    },
+    {
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4743,7 +4813,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4768,7 +4838,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -4793,7 +4863,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4818,7 +4888,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4843,7 +4913,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4868,7 +4938,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4893,7 +4963,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 46,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5353,6 +5423,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "exploring_generative_ai_9_2_chat",
+        "script_level.level_keys": [
+          "exploring_generative_ai_9_2_chat"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "e4d6c223-031e-47a4-bdbf-c458ca43cc82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "exploring_generative_ai_l92_checkpoint",
+        "script_level.level_keys": [
+          "exploring_generative_ai_l92_checkpoint"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "64ace98f-6781-4902-af32-91ecb1f14571"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "gen-ai-demystifying-launch",
         "script_level.level_keys": [
           "gen-ai-demystifying-launch"
@@ -5736,6 +5830,42 @@
       },
       "seeding_key": {
         "resource.key": "bias_in_the_machine"
+      }
+    },
+    {
+      "name": "Can You Trust the Bot?",
+      "url": "https://docs.google.com/presentation/d/18vgq-7T-MZPf-mid7OQP5v-_gtn_xmxTgpvvuKr1J20",
+      "key": "can_you_trust_the_bot_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "can_you_trust_the_bot_"
+      }
+    },
+    {
+      "name": "Can You Trust the Bot?",
+      "url": "https://docs.google.com/document/d/12Pf9jYPW5vHKQtKZ0ZurDmvYIsSamjpnhW9Tc0LVx9g",
+      "key": "can_you_trust_the_bot__1",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "can_you_trust_the_bot__1"
+      }
+    },
+    {
+      "name": "Can You Trust the Bot?",
+      "url": "https://docs.google.com/document/d/1V4HHHXFBr0qZDSPjfok41fQjrv9izLS9LhUs-BPf7sM",
+      "key": "can_you_trust_the_bot__2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "can_you_trust_the_bot__2"
       }
     },
     {
@@ -6694,6 +6824,24 @@
         "lesson.key": "lesson-3",
         "resource.key": "who_s_making_the_choices_"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "can_you_trust_the_bot_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "can_you_trust_the_bot__1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "can_you_trust_the_bot__2"
+      }
     }
   ],
   "scripts_resources": [
@@ -6964,7 +7112,7 @@
     {
       "key": "4484b322-522d-472e-842d-58e41ae7b321",
       "properties": {
-        "description": "Evaluate the accuracy of AI-generated responses by identifying hallucinations or misleading content."
+        "description": "Revise chatbot prompts to get more useful and accurate responses."
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -7099,6 +7247,16 @@
       "seeding_key": {
         "lesson.key": "Introduction to Generative AI",
         "objective.key": "baff7b65-74b5-4065-89b0-944875c4bc52"
+      }
+    },
+    {
+      "key": "bcb32e52-f304-4409-948b-4418d41150d9",
+      "properties": {
+        "description": "Evaluate the trustworthiness of AI-generated information using fact-checking strategies and reliable sources."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "bcb32e52-f304-4409-948b-4418d41150d9"
       }
     },
     {

@@ -14,12 +14,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-23 02:11:11 UTC",
+    "serialized_at": "2025-05-27 16:17:32 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -4474,6 +4475,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page-csa7-1b_2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,

@@ -15,12 +15,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-22 16:26:26 UTC",
+    "serialized_at": "2025-05-27 16:22:09 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -4686,6 +4687,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Investigate Mile Tracker Modify_2_2025"
+        ],
         "progression": "Mile Tracker Investigate and Modify"
       },
       "bonus": false,

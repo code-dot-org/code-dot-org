@@ -14,12 +14,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-26 03:05:24 UTC",
+    "serialized_at": "2025-05-27 18:56:34 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -3268,7 +3269,7 @@
       "key": "d18ff060-77b9-4a9d-9607-4c4c86e14660",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding, then continue to Level 6 to complete a choice level to convert a `while` loop to a `for` loop. On Level 7, students complete a choice level to traverse a 1D array using a `for` loop in the console or The Neighborhood.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 and 6. Students complete a Check for Understanding, then continue to Level 6 to complete a choice level to traverse a 1D array using a `for` loop in the console or The Neighborhood.",
         "progression_name": "Practice: Using for Loops",
         "tips": [
           {
@@ -6395,31 +6396,6 @@
     {
       "chapter": 52,
       "position": 7,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U3L4-L7_alt-2025"
-        ],
-        "progression": "Practice: Using for Loops"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L4-L7_alt-2025"
-        ],
-        "lesson.key": "For Loops",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csa2-alt-2025",
-        "activity_section.key": "d18ff060-77b9-4a9d-9607-4c4c86e14660"
-      },
-      "level_keys": [
-        "CSA U3L4-L7_alt-2025"
-      ]
-    },
-    {
-      "chapter": 53,
-      "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -6443,7 +6419,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6468,7 +6444,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6493,7 +6469,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6518,7 +6494,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 56,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6543,7 +6519,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 57,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6568,7 +6544,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6593,7 +6569,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 59,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6618,7 +6594,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 60,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6643,7 +6619,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 61,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -6668,7 +6644,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 62,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -6693,7 +6669,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 63,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6718,7 +6694,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6743,7 +6719,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6768,7 +6744,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 66,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6793,7 +6769,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6818,7 +6794,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 68,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6843,7 +6819,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6868,7 +6844,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 70,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6893,7 +6869,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6918,7 +6894,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 72,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6943,7 +6919,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 73,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6968,7 +6944,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6993,7 +6969,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 75,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7018,7 +6994,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 76,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7042,7 +7018,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 77,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7672,18 +7648,6 @@
         "level.key": "CSA U3L4-L6_alt-2025",
         "script_level.level_keys": [
           "CSA U3L4-L6_alt-2025"
-        ],
-        "lesson.key": "For Loops",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csa2-alt-2025",
-        "activity_section.key": "d18ff060-77b9-4a9d-9607-4c4c86e14660"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U3L4-L7_alt-2025",
-        "script_level.level_keys": [
-          "CSA U3L4-L7_alt-2025"
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "lessonGroup-3",

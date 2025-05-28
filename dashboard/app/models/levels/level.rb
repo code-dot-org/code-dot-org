@@ -905,6 +905,7 @@ class Level < ApplicationRecord
     properties_camelized[:baseAssetUrl] = Blockly.base_url
     properties_camelized[:isAssessment] = script_level&.assessment
     properties_camelized[:progressionType] = script_level&.primm_progression_type
+    properties_camelized[:enableBlocklyKeyboardNavigation] = script&.enable_blockly_keyboard_navigation
 
     if try(:project_template_level).try(:start_sources)
       properties_camelized['templateSources'] = try(:project_template_level).try(:start_sources)

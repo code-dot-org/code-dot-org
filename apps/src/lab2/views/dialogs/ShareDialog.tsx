@@ -1,5 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Button, LinkButton} from '@code-dot-org/component-library/button';
+import Dialog from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Typography from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
@@ -148,6 +149,7 @@ const ShareDialog: React.FunctionComponent<{
   onSubmitClick: () => void;
   submissionStatus: SubmissionStatusType | undefined;
   channelId: string;
+  userSharingDisabled: boolean | undefined;
 }> = ({
   dialogId,
   shareUrl,
@@ -156,8 +158,11 @@ const ShareDialog: React.FunctionComponent<{
   onSubmitClick,
   submissionStatus,
   channelId,
+  userSharingDisabled,
 }) => {
   const dispatch = useAppDispatch();
+  const sharingDisabled = () =>
+    userSharingDisabled && ['pythonlab', 'weblab2'].includes(projectType);
 
   const handleClose = useCallback(() => {
     dispatch(hideShareDialog());
@@ -184,7 +189,17 @@ const ShareDialog: React.FunctionComponent<{
   // in Lab2Wrapper.
   const theme = Lab2Registry.getInstance().getTheme();
 
-  return (
+  return sharingDisabled() ? (
+    <Dialog
+      title={i18n.sharingDisabledTitle()}
+      description={i18n.sharingBlockedByTeacherAdvancedProjects()}
+      mode={theme === 'Light' ? 'light' : 'dark'}
+      primaryButtonProps={{
+        onClick: () => dispatch(hideShareDialog()),
+        text: i18n.ok(),
+      }}
+    />
+  ) : (
     <FocusLock>
       <div className={moduleStyles.dialogContainer} data-theme={theme}>
         <div id="share-dialog" className={moduleStyles.shareDialog}>

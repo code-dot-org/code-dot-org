@@ -70,7 +70,7 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"pin\",\r\n  \"callout_text\": \"pin\",\r\n  \"element_id\": \"pin\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom right\",\r\n    \"adjust\": {\r\n     \"x\": -20,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "hide_pause_button": "true",
     "hint_prompt_attempts_threshold": "1",
-    "short_instructions": "Give each sprite a different location.",
+    "short_instructions": "Make a new sprite & set the location.",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"To change a sprite's location, click the pin on the location block, then click where you want it to go.\\n\\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)\",\"hint_id\":\"location_pin_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1ed0088f4d385255f8d59e42ae9133ed/helloworld_emoji_location.mp3\"}]",
     "instructions_icon": "rikki",
     "skip_autosave": true,
@@ -79,11 +79,11 @@
     "enable_big_playspace": "true",
     "thumbnail_url": "https://images.code.org/fb0cd74370f0ea3172459544935fa026-Sprite location.jpg",
     "project_template_level_name": "testB-elem-career-journeys-template_b_csf-e_standalone",
-    "preload_asset_list": null,
-    "video_key": "hello_world_intro"
+    "video_key": "hello_world_intro",
+    "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-05-21T13:29:44.829+00:00\",\"changed\":[\"cloned from \\\"testB-elem-career-journeys-sprite-location_b_csf-e\\\"\"],\"cloned_from\":\"testB-elem-career-journeys-sprite-location_b_csf-e\"},{\"changed_at\":\"2025-05-23 15:16:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-23 15:19:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-05-21T13:29:44.829+00:00\",\"changed\":[\"cloned from \\\"testB-elem-career-journeys-sprite-location_b_csf-e\\\"\"],\"cloned_from\":\"testB-elem-career-journeys-sprite-location_b_csf-e\"},{\"changed_at\":\"2025-05-23 15:16:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-23 15:19:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-27 22:11:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "##Play together twice \r\n\r\nOnce keyboard navigation is turned on using **Shift+Control+K.**\r\n\r\nUse **WASD** to add two sounds into the first **Play Together** block. \r\n\r\nAdd two sounds to the second **Play Together** block\r\n\r\nThen run using **Space bar** and **Continue** using **Shift+Tab**.",
+    "long_instructions": "#### Play together again\r\n- `Tab` to the workspace.\r\n- Use `↑` `↓` arrow keys to focus on the first [play together](#clickable=id:play_sounds_together) block.\r\n- Insert [play](#clickable=play-sound-block) blocks using `i`. (_Don't forget to change the sounds!_)\r\n- Insert [play](#clickable=play-sound-block) blocks into the second [play together](#clickable=id:qlzcv~M[R0Y[m|7CE.gp) block\r\n- Run your program using `Space Bar`\r\n- `Shift+Tab` to the Continue button\r\n\r\n::: details [**Want to add a _third_ play together?**]\r\n1. Press `i` to Insert\r\n1. Use the `🡅` `🠫` arrow keys to move around the toolbox\r\n1. Press `Enter` to select the [play-together](#clickable=play-sounds-together-block) block\r\n1. Use `↑` `↓` arrow keys to move it around the workspace, then `Enter` to accept the position.\r\n:::\r\n\r\n::: details [**💡 How do you change a sound?**]\r\nWith a play block in focus, use the `→` arrow key to highlight the sound name, then `Enter` to open the list. `Tab` through options and press `Enter` to choose a new sound.\r\n:::\r\n",
     "offer_browser_tts": "false",
     "hide_share_and_remix": "true",
     "level_data": {
@@ -19,7 +19,6 @@
           "kick_verse_1",
           "kick_verse_2",
           "kick_build_1",
-          "kick_build_2",
           "snap_sample",
           "snap_sample_full",
           "percussion",
@@ -31,8 +30,6 @@
           "bass_big_1",
           "bass_big_2",
           "ambience",
-          "impact_1",
-          "impact_2",
           "synth_pulse_1",
           "synth_pulse_2",
           "synth_accent_1",
@@ -43,7 +40,6 @@
           "pad_2",
           "guitar_1",
           "guitar_2",
-          "intro_swell",
           "vocals_sample_1",
           "vocals_sample_2",
           "vocals_chop",
@@ -97,11 +93,45 @@
             }
           ]
         }
+      },
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "id": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "shakira_maluma_chantaje/kick_verse_1"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "id": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
       }
+    },
+    "use_secondary_finish_button": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-23 18:04:18 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-23 18:04:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 20:25:18 +0000\",\"changed\":[\"long_instructions\",\"hide_share_and_remix\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-23 18:04:18 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-23 18:04:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 20:25:18 +0000\",\"changed\":[\"long_instructions\",\"hide_share_and_remix\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-28 05:23:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-28 05:24:02 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-28 05:31:18 +0000\",\"changed\":[\"long_instructions\",\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-28 05:32:05 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-28 05:35:00 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-28 05:36:24 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-28 05:37:30 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-28 05:38:01 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-28 05:38:39 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-28 05:41:51 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-28 05:43:57 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-28 06:16:41 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-28 06:18:07 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-28 06:19:23 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-28 14:25:47 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-05-28 14:28:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
