@@ -4,6 +4,7 @@ require 'cdo/rake_utils'
 require 'cdo/ci_utils'
 require 'cdo/git_utils'
 require 'cdo/sauce_connect'
+require 'parallel'
 require 'open-uri'
 require 'json'
 require 'net/http'
@@ -111,7 +112,8 @@ namespace :ci do
       # Use --local to configure the UI tests to run against localhost and
       # use --config to override the local webdriver so SauceLabs is used
       # instead.
-      RakeUtils.system_stream_output "bundle exec ./runner.rb " \
+      arglists = []
+      arglists.append "bundle exec ./runner.rb " \
           "--feature #{container_features.join(',')} " \
           "--local " \
           "--ci " \
@@ -124,7 +126,7 @@ namespace :ci do
           "--with-status-page " \
           "--html"
       if test_eyes?
-        RakeUtils.system_stream_output "bundle exec ./runner.rb " \
+        arglists.append  "bundle exec ./runner.rb " \
             "--eyes " \
             "--feature #{container_eyes_features.join(',')} " \
             "--config Chrome,iPhone " \
@@ -135,6 +137,9 @@ namespace :ci do
             "--first_run_local " \
             "--with-status-page " \
             "--html"
+      end
+      Parallel.each(arglists, in_threads: 2) do |arglist|
+        RakeUtils.system_stream_output(arglist)
       end
     end
     close_sauce_connect if use_saucelabs || test_eyes?
