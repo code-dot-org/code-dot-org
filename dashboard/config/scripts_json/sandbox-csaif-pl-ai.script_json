@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-22 19:51:45 UTC",
+    "serialized_at": "2025-05-23 14:34:29 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -616,15 +616,12 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csaif_pl_ai_01_08"
-        ],
         "progression": "Getting Started with AI Chat"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif_pl_ai_01_08"
+          "csaif_pl_ai_01_08b"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -632,7 +629,7 @@
         "activity_section.key": "0f269e1f-d54b-430a-9467-f85027e7202d"
       },
       "level_keys": [
-        "csaif_pl_ai_01_08"
+        "csaif_pl_ai_01_08b"
       ]
     },
     {
@@ -716,15 +713,12 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csaif_pl_ai_02_05"
-        ],
         "progression": "Prompting in AI Chat"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif_pl_ai_02_05"
+          "csaif_pl_ai_02_05b"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -732,7 +726,7 @@
         "activity_section.key": "fabfaefc-0fff-4687-bd4e-cb26d746de98"
       },
       "level_keys": [
-        "csaif_pl_ai_02_05"
+        "csaif_pl_ai_02_05b"
       ]
     },
     {
@@ -1399,9 +1393,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_ai_01_08",
+        "level.key": "csaif_pl_ai_01_08b",
         "script_level.level_keys": [
-          "csaif_pl_ai_01_08"
+          "csaif_pl_ai_01_08b"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -1447,9 +1441,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_ai_02_05",
+        "level.key": "csaif_pl_ai_02_05b",
         "script_level.level_keys": [
-          "csaif_pl_ai_02_05"
+          "csaif_pl_ai_02_05b"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",

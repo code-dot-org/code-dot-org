@@ -319,7 +319,7 @@ Resources:
               Value: experience
             - Name: NEXT_PUBLIC_STAGE
               Value: test
-            - Name: NEXT_PUBLIC_OTEL_ENABLED
+            - Name: NEXT_PUBLIC_INSTRUMENTATION_ENABLED
               Value: "true"
             - Name: OTEL_SERVICE_NAME
               Value: marketing-sites
@@ -696,7 +696,7 @@ Resources:
           if (response.headers['cache-control'] === undefined) {
               // This value should match the constant `revalidate` in `frontend/apps/marketing/src/app/[brand]/[locale]/[slug]/page.tsx`
               response.headers['cache-control'] = {
-              value: `s-maxage=3600, stale-while-revalidate=31535400`
+              value: `s-maxage=900, stale-while-revalidate=31535400`
             }
           }
 

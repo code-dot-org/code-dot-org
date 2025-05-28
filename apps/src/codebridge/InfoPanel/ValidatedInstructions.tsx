@@ -15,6 +15,7 @@ import {
   getCurrentLevel,
   nextLevelId,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {
@@ -86,6 +87,9 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     appName: appType,
     aiTutor2Available,
   } = levelProperties;
+
+  const showAiTutor2 =
+    aiTutor2Available || queryParams('show-ai-tutor2') === 'true';
 
   const scriptId = useAppSelector(state => state.lab.scriptId);
   const hasNextLevel = useSelector(state => nextLevelId(state) !== undefined);
@@ -301,7 +305,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
           moduleStyles.buttonInstruction,
           moduleStyles.validationButton
         )}
-        color={'white'}
+        color={'black'}
         size={'s'}
         id={'uitest-validate-button'}
       />
@@ -380,7 +384,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
             </>
           )}
 
-          {aiTutor2Available && AiTutor2ResponseView}
+          {showAiTutor2 && AiTutor2ResponseView}
           {predictSettings?.isPredictLevel && (
             <InstructorsOnly>
               <div className={moduleStyles.bubble}>

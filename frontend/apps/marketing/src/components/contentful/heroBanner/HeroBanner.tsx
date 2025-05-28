@@ -4,7 +4,7 @@ import DSCOHeroBanner from '@code-dot-org/component-library/cms/heroBanner';
 import {Theme} from '@code-dot-org/component-library/common/contexts';
 
 import {externalLinkIconProps} from '@/components/common/constants';
-import Video from '@/components/video';
+import Video from '@/components/contentful/video';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
@@ -49,6 +49,8 @@ type HeroBannerProps = {
   announcementBannerText?: string;
   /** HeroBanner announcement banner link  entry*/
   announcementBannerLink?: LinkEntry[];
+  /** Hide image on small screens */
+  hideImageOnSmallScreen?: boolean;
 };
 
 const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
@@ -56,6 +58,7 @@ const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
   contentMode,
   imageSize,
   announcementBannerIconName,
+  hideImageOnSmallScreen,
   // Content Props
   heading,
   subHeading,
@@ -113,6 +116,7 @@ const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
             }
           : undefined
       }
+      hideImageOnSmallScreen={hideImageOnSmallScreen}
       buttonProps={
         firstButtonLink
           ? {

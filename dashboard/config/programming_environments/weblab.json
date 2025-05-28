@@ -3,7 +3,6 @@
   "published": true,
   "description": "Web based HTML/CSS editor.",
   "editor_language": "html/css",
-  "editor_type": "text",
   "image_url": "https://images.code.org/3be43f3f6bae39e44bc74e8be0dab985-weblab-cover.jpg",
   "project_url": "/p/weblab",
   "title": "Web Lab",

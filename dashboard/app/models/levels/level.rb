@@ -45,7 +45,7 @@ class Level < ApplicationRecord
   before_validation :strip_name
   before_destroy :remove_empty_script_levels
 
-  validates_length_of :name, within: 1..70
+  validates :name, length: {within: 1..70}
   validate :reject_illegal_chars
 
   # Together, these validations prevent collisions between level keys, including
@@ -53,8 +53,8 @@ class Level < ApplicationRecord
   # custom levels, DSLDefined levels, and deprecated blockly levels. For more
   # context on these categories and level keys, see:
   # https://docs.google.com/document/d/1rS1ekCEVU1Q49ckh2S9lfq0tQo-m-G5KJLiEalAzPts/edit
-  validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where(level_num: ['custom', nil])}
-  validates_uniqueness_of :level_num, case_sensitive: true, scope: :game, conditions: -> {where.not(level_num: ['custom', nil])}
+  validates :name, uniqueness: {case_sensitive: false, conditions: -> {where(level_num: ['custom', nil])}}
+  validates :level_num, uniqueness: {case_sensitive: true, scope: :game, conditions: -> {where.not(level_num: ['custom', nil])}}
 
   validate :validate_game, on: [:create, :update]
 
@@ -300,7 +300,7 @@ class Level < ApplicationRecord
 
   # Overriden in subclasses, provides a summary for rendering thumbnails on the
   # lesson extras page
-  def summarize_as_bonus
+  def summarize_as_bonus(unit_group_unit: nil)
     {}
   end
 
@@ -558,7 +558,7 @@ class Level < ApplicationRecord
     }
   end
 
-  def summary_for_lesson_plans
+  def summary_for_lesson_plans(unit_group_unit: nil)
     summary = summarize
 
     %w(title questions answers short_instructions long_instructions markdown teacher_markdown pages reference
@@ -572,7 +572,7 @@ class Level < ApplicationRecord
     end
 
     unless contained_levels.empty?
-      summary[:contained_levels] = contained_levels.map(&:summary_for_lesson_plans)
+      summary[:contained_levels] = contained_levels.map {|l| l.summary_for_lesson_plans(unit_group_unit: unit_group_unit)}
     end
 
     summary
@@ -890,7 +890,7 @@ class Level < ApplicationRecord
   # These properties are usually just the serialized properties for
   # the level, which usually include levelData.  If this level is a
   # StandaloneVideo then we put its properties into levelData.
-  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil)
+  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
     video = specified_autoplay_video&.summarize(false)&.camelize_keys
     properties_camelized = properties.camelize_keys
     properties_camelized[:name] = name
@@ -901,10 +901,11 @@ class Level < ApplicationRecord
     properties_camelized[:appName] = game&.app
     properties_camelized[:useRestrictedSongs] = game.use_restricted_songs?
     properties_camelized[:usesProjects] = try(:is_project_level) || channel_backed?
-    properties_camelized[:finishUrl] = script_level.next_level_or_redirect_path_for_user(current_user) if script_level
+    properties_camelized[:finishUrl] = script_level.next_level_or_redirect_path_for_user(current_user, unit_group_unit: unit_group_unit) if script_level
     properties_camelized[:baseAssetUrl] = Blockly.base_url
     properties_camelized[:isAssessment] = script_level&.assessment
     properties_camelized[:progressionType] = script_level&.primm_progression_type
+    properties_camelized[:enableBlocklyKeyboardNavigation] = script&.enable_blockly_keyboard_navigation
 
     if try(:project_template_level).try(:start_sources)
       properties_camelized['templateSources'] = try(:project_template_level).try(:start_sources)
@@ -919,7 +920,7 @@ class Level < ApplicationRecord
     properties_camelized["panels"] = localized_panels if properties_camelized["panels"]
     properties_camelized["longInstructions"] = (get_localized_property("long_instructions") || long_instructions) if properties_camelized["longInstructions"]
     if script_level
-      properties_camelized[:exampleSolutions] = script_level.get_example_solutions(self, current_user, nil)
+      properties_camelized[:exampleSolutions] = script_level.get_example_solutions(self, current_user, nil, unit_group_unit: unit_group_unit)
     end
     is_verified_instructor = current_user&.verified_instructor? || current_user&.permission?(UserPermission::LEVELBUILDER)
     if is_verified_instructor || try(:exemplar_settings)

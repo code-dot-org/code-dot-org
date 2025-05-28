@@ -3,7 +3,6 @@
   "published": true,
   "description": "Game Lab is a programming environment where you can make exciting games and animations. Draw your characters, code with blocks or JavaScript to make it work, then share your game in seconds.",
   "editor_language": "droplet",
-  "editor_type": "droplet",
   "image_url": "https://images.code.org/ae454e14688d769b8bfc9bef62905194-gamelab-cover.jpg",
   "project_url": "/p/gamelab",
   "title": "Game Lab",

@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-22 20:37:47 UTC",
+    "serialized_at": "2025-05-27 03:03:20 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -53,18 +53,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "exploring-gen-ai1-2025"
       }
-    },
-    {
-      "key": "lessonGroup-4",
-      "user_facing": true,
-      "position": 3,
-      "properties": {
-        "display_name": "[Temp] New AI Chat Lessons"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "exploring-gen-ai1-2025"
-      }
     }
   ],
   "lessons": [
@@ -81,7 +69,7 @@
             "key": "7980dfff-3651-44ff-8cbd-c7757cec4793",
             "notice": "Generative AI Professional Development!",
             "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
-            "link": "https://studio.code.org/courses/self-paced-exploring-gen-ai-2024",
+            "link": "https://studio.code.org/courses/self-paced-exploring-gen-ai",
             "type": "information",
             "visibility": "Teacher-only",
             "dismissible": true,
@@ -127,7 +115,7 @@
       "properties": {
         "background": "light",
         "overview": "In this lesson, students explore the process of recognizing and categorizing words, comparing it to how AI systems achieve similar tasks. Through discussion and activities, they consider the data sources an AI system requires to build a task-specific vocabulary, leading to the understanding that language models necessitate vast data amounts, like the entire internet. The lesson concludes with students updating a graphic organizer to reflect the Input step of generative AI.",
-        "preparation": "- Print copies of the activity guide for each student\n- Run through the slide deck and videos ahead of time\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
+        "preparation": "- Print copies of the activity guide for each student _or_ have students make their own copies in the Lesson Launch level\n- Run through the slide deck and videos ahead of time\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
         "student_overview": "Learn how a computer learns to recognize the words used in language"
       },
       "seeding_key": {
@@ -146,7 +134,7 @@
       "properties": {
         "background": "light",
         "overview": "This lesson formally introduces the concept of bias, where certain information is favored over others. Students experience how bias can implicitly and unintentionally creep into large-language models by participating in an activity where they are asked to source articles and information for a RecipeBot. Once they've used search engine results to generate their training data, they analyze patterns in the data that the class found as a collection, noticing unintended biases such as certain cuisines being unintentionally excluded or all the articles falling within a certain narrow date range. After acknowledging how bias can appear, students analyze several scenarios and discuss how bias could appear in the training data of each one.",
-        "preparation": "- Print copies of the activity guide for each student\n- Run through the slide deck and videos ahead of time\n- (Optional) Prepare vocabulary posters for class word wall\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
+        "preparation": "- Run through the slide deck and videos ahead of time\n- (Optional) Prepare vocabulary posters for class word wall\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
         "student_overview": "Learn how our choices during pre-training can influence a large-language model"
       },
       "seeding_key": {
@@ -183,7 +171,7 @@
       "properties": {
         "background": "light",
         "overview": "In this lesson, students explore how language models understand and represent word meanings. Beginning with a game, they investigate the concept of words being \"close\" in meaning. This leads to an activity where students assume the roles of fictional characters, using a sequence of numbers to represent their \"character traits\" and comparing these numerical representations to others. The lesson demonstrates that language models use a similar method, known as embeddings, to represent words as sequences of numbers, with similar words being numerically close to each other. The lesson concludes with students updating the storage section of their graphic organizer to encapsulate the idea of word embeddings.",
-        "preparation": "- Have markers, crayons, or colored pencils prepared for students\n- Print copies of the activity guide for each student\n- Print copies of the activity instructions and cut them into quarter-sheets\n- Run through the slide deck and videos ahead of time\n- (Optional) Prepare vocabulary posters for class word wall\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
+        "preparation": "- Run through the slide deck and videos ahead of time\n- (Optional) Prepare vocabulary posters for class word wall\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
         "student_overview": "Learn how computers represent the meaning of words"
       },
       "seeding_key": {
@@ -202,7 +190,7 @@
       "properties": {
         "background": "light",
         "overview": "This lesson introduces neural networks through a hands-on activity where students create a lunch recommender for a school cafeteria. It starts with an exercise involving two mad-libs that use the same words in different orders, highlighting how word relations and grammar influence word choice. Students then work together to build a neural network model for the cafeteria's lunch choices, learning about key concepts like hidden layers and weights. The lesson concludes by tying these ideas back to language, prompting students to think about how words can change meaning in different contexts or phrases.",
-        "preparation": "- Print copies of the activity guide for each student\n- Run through the slide deck and videos ahead of time\n- (Optional) Prepare vocabulary posters for class word wall\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
+        "preparation": "- Print copies of the activity guide for each student _or_ have students make their own copies in the Lesson Launch level\n- Run through the slide deck and videos ahead of time\n- (Optional) Prepare vocabulary posters for class word wall\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
         "student_overview": "Learn how neural networks make decisions"
       },
       "seeding_key": {
@@ -221,7 +209,7 @@
       "properties": {
         "background": "light",
         "overview": "This lesson delves into the ambiguity of language and the necessity of context for meaning. Students first discuss examples of ambiguous language, followed by an activity where they brainstorm words with multiple meanings and craft sentences to clarify their intended meanings through context. After trading papers with a partner, students guess the intended meanings, identifying which words provided the most context. Reflecting on this, the lesson connects the activity to how language models use embeddings for word meanings and neural networks for relational meaning, introducing the concept of Attention as the process of updating word meanings based on context.",
-        "preparation": "- Print copies of the activity guide for each student\n- Run through the slide deck and videos ahead of time\n- (Optional) Prepare vocabulary posters for class word wall\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
+        "preparation": "- Run through the slide deck and videos ahead of time\n- (Optional) Prepare vocabulary posters for class word wall\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
         "student_overview": "Learn how language models determine the meaning of words within a sentence"
       },
       "seeding_key": {
@@ -238,6 +226,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "overview": "This lesson gives students the chance to investigate how their wording shapes what a chatbot says. By comparing how the bot responds to similar prompts, students begin to unpack how language models weigh and process input. They connect these patterns to the concept of neural networks and consider how AI “decides” what to say next."
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -274,7 +263,7 @@
       "properties": {
         "background": "light",
         "overview": "In this lesson, students investigate why language models may produce inaccurate outputs, known as hallucinations. They start by understanding the probabilistic nature of generative AI and how bias in training data can lead to such errors. Following discussions on examples of AI systems recalled for bias and hallucinations, students assume the role of AI Auditors to explore proactive measures for mitigating harm caused by deployed language models. After their exploration, they watch a video of a professional AI Auditor, reflecting on the parallels between the professional's work and their class activity.",
-        "preparation": "- Print copies of the activity guide for each student\n- Run through the slide deck and videos ahead of time\n- (Optional) Prepare vocabulary posters for class word wall\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
+        "preparation": "- Run through the slide deck and videos ahead of time\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
         "student_overview": "Learn what happens when a language model gives inaccurate information"
       },
       "seeding_key": {
@@ -323,7 +312,7 @@
         ],
         "background": "light",
         "overview": "In this lesson, students create their project for the unit. In the project, students read several generative AI opinion articles that contain misrepresentations or exaggerations of what generative AI is capable of and how it works. Using their newfound knowledge from this unit, students draft a rebuttal and create an artifact to help visualize or conceptualize an aspect of their argument. This project acts as a summative assessment for the content of this unit.",
-        "preparation": "- Print copies of the project guide for each student\n- Print multiple copies of the four Generative AI Opinion Articles for students to review\n- Decide how students will submit their work for the project\n- Decide which options for student artifacts you would like to emphasize for students\n- Decide how to break up the multi-day lesson with your class schedule\n- Run through the slide deck and videos ahead of time",
+        "preparation": "- Print copies of the project guide for each student _or_ have students make their own copies in the Lesson Launch level\n- Print multiple copies of the four Generative AI Opinion Articles for students to review _or_ have students make their own copies in the Lesson Launch level\n- Decide how students will submit their work for the project\n- Decide which options for student artifacts you would like to emphasize for students\n- Decide how to break up the multi-day lesson with your class schedule\n- Run through the slide deck and videos ahead of time",
         "student_overview": "Learn how to apply knowledge about generative AI to help educate and inform people who may have misconceptions"
       },
       "seeding_key": {
@@ -427,7 +416,7 @@
       "key": "d0491cae-913e-4ce0-8d87-d24f71e537e7",
       "position": 5,
       "properties": {
-        "duration": 30,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -455,8 +444,7 @@
       "key": "1f95cfae-6c59-4feb-baf3-d0d0127c35e6",
       "position": 1,
       "properties": {
-        "duration": 5,
-        "name": "Warm Up"
+        "name": "Student Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "1f95cfae-6c59-4feb-baf3-d0d0127c35e6",
@@ -466,28 +454,42 @@
       }
     },
     {
-      "key": "c7568b69-e52e-4a80-ab7a-2e29d9b54377",
+      "key": "aad2cd75-bfc4-4e86-ba11-fac7ba83c073",
       "position": 2,
       "properties": {
-        "duration": 30,
-        "name": "Activity"
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "c7568b69-e52e-4a80-ab7a-2e29d9b54377",
+        "lesson_activity.key": "aad2cd75-bfc4-4e86-ba11-fac7ba83c073",
         "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
       }
     },
     {
-      "key": "97e3dc3e-e919-4220-b459-5d311dc2850e",
+      "key": "99d2dc3e-d710-4257-a7f4-29adddc02536",
       "position": 3,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "99d2dc3e-d710-4257-a7f4-29adddc02536",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "c4119563-a62e-4524-9e62-a6fcafcdb6a0",
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "97e3dc3e-e919-4220-b459-5d311dc2850e",
+        "lesson_activity.key": "c4119563-a62e-4524-9e62-a6fcafcdb6a0",
         "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
@@ -633,8 +635,7 @@
       "key": "c8fa5880-4693-4667-8331-29178ef3cfaf",
       "position": 1,
       "properties": {
-        "duration": 5,
-        "name": "Warm Up"
+        "name": "Student Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "c8fa5880-4693-4667-8331-29178ef3cfaf",
@@ -644,28 +645,42 @@
       }
     },
     {
-      "key": "367cfc90-877b-4d09-8bd9-5996e5df7f00",
+      "key": "ce88e4cf-e4f4-48f6-a9a2-426d5c717de6",
       "position": 2,
       "properties": {
-        "duration": 35,
-        "name": "Activity"
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "367cfc90-877b-4d09-8bd9-5996e5df7f00",
+        "lesson_activity.key": "ce88e4cf-e4f4-48f6-a9a2-426d5c717de6",
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
       }
     },
     {
-      "key": "2d3036a3-09c1-4dad-8499-2287364f9208",
+      "key": "7a662228-e7f7-4906-9eca-1e392a5a0fa7",
       "position": 3,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7a662228-e7f7-4906-9eca-1e392a5a0fa7",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "f23b0626-efe9-4d3c-ae65-8764fe4af59e",
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "2d3036a3-09c1-4dad-8499-2287364f9208",
+        "lesson_activity.key": "f23b0626-efe9-4d3c-ae65-8764fe4af59e",
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
@@ -834,13 +849,13 @@
       }
     },
     {
-      "key": "1b9f6e64-8380-4750-a521-a895a7d7b334",
+      "key": "16321896-907f-4aa9-93af-795f7de7d0b8",
       "position": 1,
       "properties": {
         "name": "Before the Lesson"
       },
       "seeding_key": {
-        "lesson_activity.key": "1b9f6e64-8380-4750-a521-a895a7d7b334",
+        "lesson_activity.key": "16321896-907f-4aa9-93af-795f7de7d0b8",
         "lesson.key": "Attention Is All You Need",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
@@ -860,67 +875,52 @@
       }
     },
     {
-      "key": "63cd9bf7-d1a0-415c-97fc-070844b46d6d",
+      "key": "010d4da7-41c9-4784-ac2a-3de486be669a",
       "position": 3,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "63cd9bf7-d1a0-415c-97fc-070844b46d6d",
+        "lesson_activity.key": "010d4da7-41c9-4784-ac2a-3de486be669a",
         "lesson.key": "Attention Is All You Need",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
       }
     },
     {
-      "key": "d9255877-cc56-4b61-8542-00e18b83b28b",
+      "key": "f40ce49a-0213-4a6e-8571-f21841c37d2a",
       "position": 4,
       "properties": {
         "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "d9255877-cc56-4b61-8542-00e18b83b28b",
+        "lesson_activity.key": "f40ce49a-0213-4a6e-8571-f21841c37d2a",
         "lesson.key": "Attention Is All You Need",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
       }
     },
     {
-      "key": "3a11c3ce-e63e-4b61-a38c-0b0c1f0dc3ed",
+      "key": "696fdbef-f65c-4a8d-85f0-ea703a95ad2f",
       "position": 5,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "3a11c3ce-e63e-4b61-a38c-0b0c1f0dc3ed",
+        "lesson_activity.key": "696fdbef-f65c-4a8d-85f0-ea703a95ad2f",
         "lesson.key": "Attention Is All You Need",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
       }
     },
     {
-      "key": "53fcdf2a-79f0-4333-8e7f-94df308071d5",
+      "key": "781a7a9f-145d-4669-a6be-c11922c8845c",
       "position": 1,
       "properties": {
-        "duration": 5,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "53fcdf2a-79f0-4333-8e7f-94df308071d5",
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025"
-      }
-    },
-    {
-      "key": "781a7a9f-145d-4669-a6be-c11922c8845c",
-      "position": 2,
-      "properties": {
-        "duration": 35,
-        "name": "Activity"
+        "name": "Student Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "781a7a9f-145d-4669-a6be-c11922c8845c",
@@ -930,14 +930,42 @@
       }
     },
     {
-      "key": "11e401e4-9adb-41cc-aab3-4f6f4a124275",
+      "key": "f5587e1a-5226-43f1-9aca-de685daab181",
+      "position": 2,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f5587e1a-5226-43f1-9aca-de685daab181",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "e3eb2ad4-b04b-4a81-867f-c0f7271f10e7",
       "position": 3,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e3eb2ad4-b04b-4a81-867f-c0f7271f10e7",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "ab41913e-9dee-47b6-a096-643052f8b754",
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "11e401e4-9adb-41cc-aab3-4f6f4a124275",
+        "lesson_activity.key": "ab41913e-9dee-47b6-a096-643052f8b754",
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
@@ -1331,7 +1359,7 @@
       "key": "ab7c084f-479d-4955-ae05-472c42fc3638",
       "position": 1,
       "properties": {
-        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNd_dCseOMzvPpnRJsUYD4fv) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.\n\n**Professional Development:** We recommend completing the free [**Exploring Generative AI Self-Paced Professional Learning Module**](https://studio.code.org/courses/self-paced-exploring-gen-ai-2024) before starting the unit. The module is designed to take 2-3 hours to complete. No previous computer science or AI experience is required.",
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNd_dCseOMzvPpnRJsUYD4fv) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.\n\n**Professional Development:** We recommend completing the free [**Exploring Generative AI Self-Paced Professional Learning Module**](https://studio.code.org/courses/self-paced-exploring-gen-ai) before starting the unit. The module is designed to take 2-3 hours to complete. No previous computer science or AI experience is required.",
         "name": "Preparing for the Unit"
       },
       "seeding_key": {
@@ -1494,46 +1522,128 @@
       }
     },
     {
-      "key": "8d79bd76-42a1-454d-aa4c-3d90127db436",
-      "position": 1,
-      "properties": {
-        "progression_name": "Warm Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "8d79bd76-42a1-454d-aa4c-3d90127db436",
-        "lesson_activity.key": "1f95cfae-6c59-4feb-baf3-d0d0127c35e6"
-      }
-    },
-    {
-      "key": "d60e1ddd-b13b-42ea-8740-abb5d6d02fcc",
+      "key": "640750be-296a-46e2-98b4-442a11bd4c81",
       "position": 1,
       "properties": {
         "progression_name": "AI Newsroom Playground"
       },
       "seeding_key": {
-        "activity_section.key": "d60e1ddd-b13b-42ea-8740-abb5d6d02fcc",
-        "lesson_activity.key": "c7568b69-e52e-4a80-ab7a-2e29d9b54377"
+        "activity_section.key": "640750be-296a-46e2-98b4-442a11bd4c81",
+        "lesson_activity.key": "1f95cfae-6c59-4feb-baf3-d0d0127c35e6"
       }
     },
     {
-      "key": "1a05e13d-d315-4b7e-9a08-58c7bbd96101",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "1a05e13d-d315-4b7e-9a08-58c7bbd96101",
-        "lesson_activity.key": "97e3dc3e-e919-4220-b459-5d311dc2850e"
-      }
-    },
-    {
-      "key": "39705368-cf3f-45bf-b6a7-e92a2985cd6c",
+      "key": "bca0785b-53a1-410f-86d6-95fd69f78057",
       "position": 2,
       "properties": {
         "progression_name": "Lesson Recap"
       },
       "seeding_key": {
-        "activity_section.key": "39705368-cf3f-45bf-b6a7-e92a2985cd6c",
-        "lesson_activity.key": "97e3dc3e-e919-4220-b459-5d311dc2850e"
+        "activity_section.key": "bca0785b-53a1-410f-86d6-95fd69f78057",
+        "lesson_activity.key": "1f95cfae-6c59-4feb-baf3-d0d0127c35e6"
+      }
+    },
+    {
+      "key": "83887e54-713d-497e-9800-580fba787867",
+      "position": 1,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1GQ6C1FXlocrS3rFuESLQNA1MtdNhi2nlpwJzdKTTICw/export/png?id=1GQ6C1FXlocrS3rFuESLQNA1MtdNhi2nlpwJzdKTTICw&pageid=g34feef8a4c7_0_0\"></td>\n    <td style=\"width: 75%\">\n      <br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the scenario: Students are on the school newspaper team, deciding whether to use AI to help write their next issue. Read the opinion for the AI Hype Person and the AI Skeptic aloud to the class.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    ",
+        "duration": "10",
+        "name": "Scenario: Student Newspaper Debate",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip:** - Let students know they will see the AI Hype Person and AI Skeptic show up in different lessons. These personas will help them explore different sides of important questions about how AI is used in real life."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "83887e54-713d-497e-9800-580fba787867",
+        "lesson_activity.key": "aad2cd75-bfc4-4e86-ba11-fac7ba83c073"
+      }
+    },
+    {
+      "key": "4c77dd67-8ee8-440b-859f-c491ecd6a290",
+      "position": 2,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1GQ6C1FXlocrS3rFuESLQNA1MtdNhi2nlpwJzdKTTICw/export/png?id=1GQ6C1FXlocrS3rFuESLQNA1MtdNhi2nlpwJzdKTTICw&pageid=g34feef8a4c7_0_117\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What does the AI Hype Person seem excited about?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should notice that the AI Hype Person is focused on saving time, making writing faster or easier, and using AI to get drafts started.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What does the AI Skeptic seem unsure about?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should notice that the AI Skeptic Persona is concerned about accuracy, reliability of information, and whether the AI-generated writing will sound natural and well-organized.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1GQ6C1FXlocrS3rFuESLQNA1MtdNhi2nlpwJzdKTTICw/export/png?id=1GQ6C1FXlocrS3rFuESLQNA1MtdNhi2nlpwJzdKTTICw&pageid=g356ab3fb0b2_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the lesson objectives.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1GQ6C1FXlocrS3rFuESLQNA1MtdNhi2nlpwJzdKTTICw/export/png?id=1GQ6C1FXlocrS3rFuESLQNA1MtdNhi2nlpwJzdKTTICw&pageid=g356ab3fb0b2_0_4\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the Question of the Day.\n    </td>\n  </tr>\n\n</table>"
+      },
+      "seeding_key": {
+        "activity_section.key": "4c77dd67-8ee8-440b-859f-c491ecd6a290",
+        "lesson_activity.key": "aad2cd75-bfc4-4e86-ba11-fac7ba83c073"
+      }
+    },
+    {
+      "key": "a974ce28-8c5b-41cb-b330-efaa07436f12",
+      "position": 1,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1GQ6C1FXlocrS3rFuESLQNA1MtdNhi2nlpwJzdKTTICw/export/png?id=1GQ6C1FXlocrS3rFuESLQNA1MtdNhi2nlpwJzdKTTICw&pageid=g34feef8a4c7_0_28\"></td>\n    <td style=\"width: 75%\">\n      <br />\n\t\t<br /><i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Give each student a copy of the “How Smart Is It, Really?” Activity Guide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1GQ6C1FXlocrS3rFuESLQNA1MtdNhi2nlpwJzdKTTICw/export/png?id=1GQ6C1FXlocrS3rFuESLQNA1MtdNhi2nlpwJzdKTTICw&pageid=g34feef8a4c7_0_120\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Direct students to Lesson 2, Level 1. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Students browse the newsroom task choices. Student pick 3-5 tasks that they’re interested in testing and list them in the Task column of the KWL chart in the activity guide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1GQ6C1FXlocrS3rFuESLQNA1MtdNhi2nlpwJzdKTTICw/export/png?id=1GQ6C1FXlocrS3rFuESLQNA1MtdNhi2nlpwJzdKTTICw&pageid=g34feef8a4c7_0_93\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong>Before students start using AI, have them fill in the K and W columns of their KWL chart:\n\t\t<br />K = What they already know or think they know about the task\n\t\t<br />W = What they want to find out or test when trying the task\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "duration": "25",
+        "name": "Scenario: AI Newsroom Playground",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip:** - Model one quick example if needed. For example:\n- Task: Write a School Event Ad\n- K: I think AI can list basic event details\n- W:  Will the ad actually sound exciting and fun?"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a974ce28-8c5b-41cb-b330-efaa07436f12",
+        "lesson_activity.key": "99d2dc3e-d710-4257-a7f4-29adddc02536"
+      }
+    },
+    {
+      "key": "18602aa7-2b6f-483a-a81c-4db077a8e995",
+      "position": 2,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1GQ6C1FXlocrS3rFuESLQNA1MtdNhi2nlpwJzdKTTICw/export/png?id=1GQ6C1FXlocrS3rFuESLQNA1MtdNhi2nlpwJzdKTTICw&pageid=g34feef8a4c7_0_52\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Direct students back to Lesson 2, Level 1. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Students complete their chosen tasks using AI Chat. After each task, they write in the L column:\n\t\t<br />What they learned about how the AI responded in\n\t\t<br />What worked\n\t\t<br />What felt off\n    </td>\n  </tr>\n\n</table>"
+      },
+      "seeding_key": {
+        "activity_section.key": "18602aa7-2b6f-483a-a81c-4db077a8e995",
+        "lesson_activity.key": "99d2dc3e-d710-4257-a7f4-29adddc02536"
+      }
+    },
+    {
+      "key": "cf19bf4c-7747-4aa7-9447-1a15286a2b8b",
+      "position": 3,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1GQ6C1FXlocrS3rFuESLQNA1MtdNhi2nlpwJzdKTTICw/export/png?id=1GQ6C1FXlocrS3rFuESLQNA1MtdNhi2nlpwJzdKTTICw&pageid=g34feef8a4c7_0_57\"></td>\n    <td style=\"width: 75%\">\n      <br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students turn to the Ethical Checkpoint section of their activity guide. They list two tasks where AI Chat did well and two tasks AI Chat got it wrong or felt off. After, students complete the sentence frame to reflect on their experience.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i><strong>Circulate:</strong> While students work on the Ethical Checkpoint, circulate and listen for the types of examples they are choosing. If you notice that students are only listing mistakes or only listing successes, prompt them to think about both sides. Encourage students to back up their answers with specific evidence from their KWL charts, not just opinions.\n    </td>\n  </tr>\n\n</table>",
+        "duration": "5",
+        "name": "Ethical Checkpoint"
+      },
+      "seeding_key": {
+        "activity_section.key": "cf19bf4c-7747-4aa7-9447-1a15286a2b8b",
+        "lesson_activity.key": "99d2dc3e-d710-4257-a7f4-29adddc02536"
+      }
+    },
+    {
+      "key": "57c43622-6ab7-4141-ab4a-c8273224139f",
+      "position": 1,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1GQ6C1FXlocrS3rFuESLQNA1MtdNhi2nlpwJzdKTTICw/export/png?id=1GQ6C1FXlocrS3rFuESLQNA1MtdNhi2nlpwJzdKTTICw&pageid=g34feef8a4c7_0_12\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the lesson objectives.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1GQ6C1FXlocrS3rFuESLQNA1MtdNhi2nlpwJzdKTTICw/export/png?id=1GQ6C1FXlocrS3rFuESLQNA1MtdNhi2nlpwJzdKTTICw&pageid=g34feef8a4c7_0_16\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the Question of the Day.\n    </td>\n  </tr>\n\n</table>"
+      },
+      "seeding_key": {
+        "activity_section.key": "57c43622-6ab7-4141-ab4a-c8273224139f",
+        "lesson_activity.key": "c4119563-a62e-4524-9e62-a6fcafcdb6a0"
+      }
+    },
+    {
+      "key": "4662d22c-3b42-456e-8e4c-a3e406688356",
+      "position": 2,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1GQ6C1FXlocrS3rFuESLQNA1MtdNhi2nlpwJzdKTTICw/export/png?id=1GQ6C1FXlocrS3rFuESLQNA1MtdNhi2nlpwJzdKTTICw&pageid=g34feef8a4c7_0_36\"></td>\n    <td style=\"width: 75%\">\n      <br />\n\t\t<br /><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Show the “How AI Can Help Journalists” video.\n\t\t<br />\n\t\t<br />Questions to consider with the video:\n\t\t<br />What’s one benefit and one risk of using AI in journalism?\n\t\t<br />Would you want to use AI in a student newspaper or journalism class?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Answers will vary. Students should recognize that AI can help with speed, organization, and idea generation, but also creates risks around accuracy, missing important context, or losing a personal voice.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
+        "duration": "5",
+        "name": "Real-World Scenario: How AI Can Help Journalists",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip:** - Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and career paths. While interacting with the video, turn on closed captioning so students can also read along as they watch. To encourage active engagement and reflection, use one or more of the strategies discussed in the <a href=\"https://docs.google.com/document/d/1Y-kGl_pc2afuSBKhKkdulu53X50mc7T-RQZA4vGLpY4/edit?usp=sharing\" target=\"_blank\">Guide to Curriculum Videos</a>."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4662d22c-3b42-456e-8e4c-a3e406688356",
+        "lesson_activity.key": "c4119563-a62e-4524-9e62-a6fcafcdb6a0"
       }
     },
     {
@@ -1873,67 +1983,189 @@
       }
     },
     {
-      "key": "38ab3236-0128-46da-ab1a-7c03c47834cb",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "38ab3236-0128-46da-ab1a-7c03c47834cb",
-        "lesson_activity.key": "c8fa5880-4693-4667-8331-29178ef3cfaf"
-      }
-    },
-    {
-      "key": "7b60682a-c5a1-4c00-a1f2-f14f559d5ec4",
+      "key": "709cef9a-a3de-498a-90b3-175a1a0c5e83",
       "position": 1,
       "properties": {
         "progression_name": "Exploring AI Recommendations"
       },
       "seeding_key": {
-        "activity_section.key": "7b60682a-c5a1-4c00-a1f2-f14f559d5ec4",
-        "lesson_activity.key": "367cfc90-877b-4d09-8bd9-5996e5df7f00"
+        "activity_section.key": "709cef9a-a3de-498a-90b3-175a1a0c5e83",
+        "lesson_activity.key": "c8fa5880-4693-4667-8331-29178ef3cfaf"
       }
     },
     {
-      "key": "f9bed184-f887-4727-9a74-095d6d5ae02b",
+      "key": "2fc55224-5907-4de1-9b70-5c13d5b33613",
       "position": 2,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "f9bed184-f887-4727-9a74-095d6d5ae02b",
-        "lesson_activity.key": "367cfc90-877b-4d09-8bd9-5996e5df7f00"
+        "activity_section.key": "2fc55224-5907-4de1-9b70-5c13d5b33613",
+        "lesson_activity.key": "c8fa5880-4693-4667-8331-29178ef3cfaf"
       }
     },
     {
-      "key": "d4e5a2a3-a8c2-4233-a854-42505bf266ff",
+      "key": "657008e4-52bc-46ac-badc-4000623f2f6d",
       "position": 3,
       "properties": {
         "progression_name": "Refine Prompts to Mitigate Bias"
       },
       "seeding_key": {
-        "activity_section.key": "d4e5a2a3-a8c2-4233-a854-42505bf266ff",
-        "lesson_activity.key": "367cfc90-877b-4d09-8bd9-5996e5df7f00"
+        "activity_section.key": "657008e4-52bc-46ac-badc-4000623f2f6d",
+        "lesson_activity.key": "c8fa5880-4693-4667-8331-29178ef3cfaf"
       }
     },
     {
-      "key": "2b85ad2b-b0fe-41e9-9f89-cde1ffcfc2ba",
-      "position": 1,
+      "key": "4aad45b3-15b2-448c-860b-203667c5b1a4",
+      "position": 4,
       "properties": {
         "progression_name": "Ethical Checkpoint"
       },
       "seeding_key": {
-        "activity_section.key": "2b85ad2b-b0fe-41e9-9f89-cde1ffcfc2ba",
-        "lesson_activity.key": "2d3036a3-09c1-4dad-8499-2287364f9208"
+        "activity_section.key": "4aad45b3-15b2-448c-860b-203667c5b1a4",
+        "lesson_activity.key": "c8fa5880-4693-4667-8331-29178ef3cfaf"
       }
     },
     {
-      "key": "6fc8a483-32cb-453e-89ba-a920eccda865",
-      "position": 2,
+      "key": "163813c6-1115-4048-bdca-a19eeb0ae957",
+      "position": 5,
       "properties": {
         "progression_name": "Lesson Recap"
       },
       "seeding_key": {
-        "activity_section.key": "6fc8a483-32cb-453e-89ba-a920eccda865",
-        "lesson_activity.key": "2d3036a3-09c1-4dad-8499-2287364f9208"
+        "activity_section.key": "163813c6-1115-4048-bdca-a19eeb0ae957",
+        "lesson_activity.key": "c8fa5880-4693-4667-8331-29178ef3cfaf"
+      }
+    },
+    {
+      "key": "6e3da413-c46a-41f4-bc04-50e5d2af9a04",
+      "position": 1,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g34feef8a4c7_0_0\"></td>\n    <td style=\"width: 75%\"><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the scenario: Students are helping build an AI-powered recommendation tool for a community organization. Read the quotes aloud from the AI Hype Person and AI Skeptic to frame the discussion.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g34feef8a4c7_0_117\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is the AI Hype Person trying to improve?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should notice that the Hype Persona values things like efficiency, speed, consistency, and making tools that are easy to use and helpful across the board.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is the AI Skeptic trying to protect?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should notice that the Skeptic Persona is concerned with representation, inclusion, and making sure AI doesn’t reinforce patterns that leave people out or repeat stereotypes.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g356ab3fb0b2_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the lesson objectives.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g356ab3fb0b2_0_4\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the Question of the Day.\n    </td>\n  </tr>\n\n</table>",
+        "duration": "5",
+        "name": "Scenario: AI Recommendation Tool"
+      },
+      "seeding_key": {
+        "activity_section.key": "6e3da413-c46a-41f4-bc04-50e5d2af9a04",
+        "lesson_activity.key": "ce88e4cf-e4f4-48f6-a9a2-426d5c717de6"
+      }
+    },
+    {
+      "key": "7ad36013-9f48-4907-b822-1154892cef32",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7ad36013-9f48-4907-b822-1154892cef32",
+        "lesson_activity.key": "ce88e4cf-e4f4-48f6-a9a2-426d5c717de6"
+      }
+    },
+    {
+      "key": "46ef59ca-2f68-4ffa-a240-3eea9ca76c22",
+      "position": 1,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g34feef8a4c7_0_28\"></td>\n    <td style=\"width: 75%\">\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Give each student a copy of the “Is It Biased?” Activity Guide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g34feef8a4c7_0_120\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Direct students to Lesson 5, Level 1. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students choose 2-3 general “Recommend 5…” prompts from the list (books, foods, hairstyles, etc.). They should run each prompt through AI Chat, then save one response that felt balanced or helpful and one that felt limited or repetitive. After that, they annotate each example:\n\t\t<br />What’s showing up?\n\t\t<br />What’s missing or assumed?\n\t\t<br />Would this recommendation work for you?\n    </td>\n  </tr>\n\n</table>",
+        "duration": "15",
+        "name": "Exploring AI Recommendations"
+      },
+      "seeding_key": {
+        "activity_section.key": "46ef59ca-2f68-4ffa-a240-3eea9ca76c22",
+        "lesson_activity.key": "7a662228-e7f7-4906-9eca-1e392a5a0fa7"
+      }
+    },
+    {
+      "key": "49f2679f-390b-43c5-81e0-f903f62b356a",
+      "position": 2,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g356fe8380ff_0_32\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the definition of bias. Walk students through the bullet points:\n\t\t<br />Bias isn’t always easy to spot\n\t\t<br />It can show up in what’s included or left out\n\t\t<br />AI works based on patterns, not understanding\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    ",
+        "duration": "5",
+        "name": "Teacher Talk: What is Bias?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip:** - Remind students that bias will always show up in some way. No AI system is completely neutral. The goal isn’t to remove all bias, but to learn how to recognize different kinds of bias and notice what might be missing, so we can make better choices about how we use AI and how we respond to its outputs."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "49f2679f-390b-43c5-81e0-f903f62b356a",
+        "lesson_activity.key": "7a662228-e7f7-4906-9eca-1e392a5a0fa7"
+      }
+    },
+    {
+      "key": "52621942-e103-41b2-b850-ee79dcc7c93e",
+      "position": 3,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g356fe8380ff_0_59\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review each item on the “Things to Watch For” tip sheet.\n    </td>\n  </tr>\n\n</table>"
+      },
+      "seeding_key": {
+        "activity_section.key": "52621942-e103-41b2-b850-ee79dcc7c93e",
+        "lesson_activity.key": "7a662228-e7f7-4906-9eca-1e392a5a0fa7"
+      }
+    },
+    {
+      "key": "33d59bed-7f5c-4667-9677-f03b354e6540",
+      "position": 4,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g356fe8380ff_0_38\"></td>\n    <td style=\"width: 75%\">\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Direct students to Lesson 5, Level 2. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students take at least one of their earlier prompts and rewrite it to include a specific context, identity, or perspective. Then, they should compare how the AI responds to the original vs. the revised prompt in their activity guide.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
+        "duration": "15",
+        "name": "Refining Prompts to Mitigate Bias",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip:** - Encourage students to be curious. The goal isn’t to “catch” the AI, but to explore how input shapes output."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "33d59bed-7f5c-4667-9677-f03b354e6540",
+        "lesson_activity.key": "7a662228-e7f7-4906-9eca-1e392a5a0fa7"
+      }
+    },
+    {
+      "key": "b89513e2-f7a7-4882-b2bf-abe99e45811b",
+      "position": 5,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g356fe8380ff_1_10\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Show the “Ethics and AI: Equal Access & Algorithmic Bias” video.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i><strong>Discuss:</strong> How does bias in real-world data influence the decisions made by AI systems?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Answers will vary. Students should recognize that bias in AI often comes from the real-world data it's trained on, and that this can affect how AI systems make decisions or provide recommendations.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i><strong>Discuss:</strong> Why is the inclusion of diverse data critical in creating fairer AI systems?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Answers will vary. Students should understand that including diverse data helps reduce bias and leads to more inclusive, accurate, and trustworthy AI systems.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip:** - Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and career paths. While interacting with the video, turn on closed captioning so students can also read along as they watch. To encourage active engagement and reflection, use one or more of the strategies discussed in the <a href=\"https://docs.google.com/document/d/1Y-kGl_pc2afuSBKhKkdulu53X50mc7T-RQZA4vGLpY4/edit?usp=sharing\" target=\"_blank\">Guide to Curriculum Videos</a>."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b89513e2-f7a7-4882-b2bf-abe99e45811b",
+        "lesson_activity.key": "7a662228-e7f7-4906-9eca-1e392a5a0fa7"
+      }
+    },
+    {
+      "key": "c59c2f30-9f11-4eca-9bf5-01f121e2cde4",
+      "position": 1,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g34feef8a4c7_0_12\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the lesson objectives.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g34feef8a4c7_0_16\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the Question of the Day.\n    </td>\n  </tr>\n\n</table>"
+      },
+      "seeding_key": {
+        "activity_section.key": "c59c2f30-9f11-4eca-9bf5-01f121e2cde4",
+        "lesson_activity.key": "f23b0626-efe9-4d3c-ae65-8764fe4af59e"
+      }
+    },
+    {
+      "key": "2030bee8-196b-4bce-bff0-46c32cdc29ad",
+      "position": 2,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g356fe8380ff_0_10\"></td>\n    <td style=\"width: 75%\">\n      <br />\n\t\t<br /><i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Direct students to Lesson 5, Level 3. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have them review the prompt and chatbot response. They’ll complete a sentence frame to share their opinion and reasoning.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "duration": "5",
+        "name": "Refining Prompts to Mitigate Bias",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip:** - Remind students that there’s no single correct answer here. Some might see bias, some might not. The goal is to support their thinking with clear observations and begin to practice identifying patterns that may reflect bias in AI-generated content."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2030bee8-196b-4bce-bff0-46c32cdc29ad",
+        "lesson_activity.key": "f23b0626-efe9-4d3c-ae65-8764fe4af59e"
       }
     },
     {
@@ -2365,14 +2597,14 @@
       }
     },
     {
-      "key": "82aa656a-9d4b-4c94-8d92-255f3b787be9",
+      "key": "b05b6be4-c645-4162-81a4-ae3d0949ca84",
       "position": 1,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/280b2f268ed55bd6ad64cabde768a708-Foundations of Generative AI - Lesson 08 - Attention is All You Need.png\"></td>\n    <td style=\"width: 75%\">\n      <strong>Before the Lesson:</strong> This activity uses a pedagogy rooted in discovery learning, where students first complete an activity and reflect on their process, which illuminates the underlying AI concepts. A video is provided at the end of the lesson that explains and summarizes the key learning from the lesson.\n<br />\n<br />\n<strong>Activity Overview:</strong> Consider reviewing the <a href= \"https://www.youtube.com/watch?v=6A2GHAE3iHg\" target=_\"blank\">Activity Overview video</a> ahead of the lesson, which gives a teacher-facing overview of the student activity in today's lesson.\n\t\t<br />\n\t\t<br /><strong>Concept Video:</strong> Consider reviewing the <a href=\"https://www.youtube.com/watch?v=2RdK6k45koY\" target=\"_blank\">Attention concept video</a>, which the class watches at the end of the lesson after the student activity. The activity aligns with the concepts introduced in the video, and watching it ahead of time can help anticipate key moments in the lesson that align with the video.\n    </td>\n  </tr>\n\n</table>    "
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM/export/png?id=1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM&pageid=g32537dbb7b2_0_0\"></td>\n    <td style=\"width: 75%\">\n      <strong>Before the Lesson:</strong> This activity uses a pedagogy rooted in discovery learning, where students first complete an activity and reflect on their process, which illuminates the underlying AI concepts. A video is provided at the end of the lesson that explains and summarizes the key learning from the lesson.\n\t\t<br />\n\t\t<br /><strong>Concept Video:</strong> Consider reviewing the <a href=\"https://www.youtube.com/watch?v=2RdK6k45koY\" target=\"_blank\">Attention concept video</a>, which the class watches at the end of the lesson after the student activity. The activity aligns with the concepts introduced in the video, and watching it ahead of time can help anticipate key moments in the lesson that align with the video.\n    </td>\n  </tr>\n\n</table>"
       },
       "seeding_key": {
-        "activity_section.key": "82aa656a-9d4b-4c94-8d92-255f3b787be9",
-        "lesson_activity.key": "1b9f6e64-8380-4750-a521-a895a7d7b334"
+        "activity_section.key": "b05b6be4-c645-4162-81a4-ae3d0949ca84",
+        "lesson_activity.key": "16321896-907f-4aa9-93af-795f7de7d0b8"
       }
     },
     {
@@ -2398,21 +2630,31 @@
       }
     },
     {
-      "key": "96dd57b1-da43-43c9-91c2-eaf6b93142e8",
+      "key": "4b8d11d7-fdac-45b0-9e29-9503bbbd0995",
       "position": 1,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/667e551c67843d5b0f3fd75de5644818-Slide4.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What animal do you see in the picture below?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This image is an optical illusion - some students may see a duck, while others will see a rabbit. Students who see the duck will think the animal is facing to the left, with the two long appendages acting as the beak. Students who see the rabbit will think the animal is facing to the right, with the two long appendages acting as the ears. Once students know how to view the image, they may find themselves switching back and forth in how they view the image. In the class discussion, both views are correct and let students surface that there are two different ways to view the image before pointing it out explicitly.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/f076b05b51bc93d8dbca432fa119c8ab-Slide5.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Suppose I wanted you to see this animal as a duck. What could I have done to make that clearer?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> There are many possible answers to this, such as adding color or drawing more items in the scene to indicate a setting (like water for a duck or a hole in the ground for a rabbit) or drawing more of the body. Emphasize answers that focus on how having additional information in the image helps add context that your brain can use to make sense of the image. Avoid answers that suggest re-drawing the image or clarifying details - the focus should be on how, even with this same ambiguous drawing, the surrounding details (like color or setting) can still give clues as to what this image is supposed to be.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/f1c7abb0815c3362007be4ac4c9528c7-Slide6.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> A key detail in viewing this illusion is context - the surrounding details that help us decide the meaning of what we’re looking at. In this version of the illusion, it’s the same object but its orientation is the context we need to know what we’re supposed to be looking at - a duck on the left, and a rabbit on the right.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/fa84b0f476753b5c8459d62bf737f6f9-Slide7.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> The same thing can happen with language, where words or sentences can sometimes have ambiguous meanings. For example, is this sentence saying “I saw the man…” [pause] “...with the telescope”\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Or is it saying “I saw…” [pause] “... the man with the telescope”\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br />Image credit: ChatGPT Generated image Prompt: png white background, a woman looking through a telescope, in the style of animated illustrations, standing in a window frame, full body, text-based --style raw\n\t\t<br />\n\t\t<br />ChaptGPT Generated Image Prompt: png white background, a man standing next to a telescope, in the style of animated illustrations, standing in classroom, full body, text-based --style raw\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/2384e608dcf7b0e80361d533e2e4c214-Slide8.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This can be a problem for language models when they try to generate responses - how do they know the intended meaning of sentences as they get more complex? This is what we’re going to investigate today.\n\t\t<br />\n\t\t<br /><strong>Question of the Day:</strong> How does a language model determine the meaning of words within a sentence?\n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM/export/png?id=1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM&pageid=g26c9b55256e_0_8\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What animal do you see in the picture below?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This image is an optical illusion - some students may see a duck, while others will see a rabbit. Students who see the duck will think the animal is facing to the left, with the two long appenges acting as the beak. Students who see the rabbit will think the animal is facing to the right, with the two long appendages acting as the ears. Once students know how to view the image, they may find themselves switching back and forth in how they view the image. In the class discussion, both views are correct and let students surface that there are two different ways to view the image before pointing it out explicitly.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM/export/png?id=1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM&pageid=g26c9b55256e_0_43\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Suppose I wanted you to see this animal as a duck. What could I have done to make that clearer?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> There are many possible answers to this, such as adding color or drawing more items in the scene to indicate a setting (like water for a duck or a hole in the ground for a rabbit) or drawing more of the body. Emphasize answers that focus on how having additional information in the image helps add context that your brain can use to make sense of the image. Avoid answers that suggest re-drawing the image or clarifying details - the focus should be on how, even with this same ambiguous drawing, the surrounding details (like color or setting) can still give clues as to what this image is supposed to be.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM/export/png?id=1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM&pageid=g26c9b55256e_0_52\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> A key detail in viewing this illusion is context - the surrounding details that help us decide the meaning of what we’re looking at. In this version of the illusion, it’s the same object but its orientation is the context we need to know what we’re supposed to be looking at - a duck on the left, and a rabbit on the right.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM/export/png?id=1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM&pageid=g26c9b55256e_0_389\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> The same thing can happen with language, where words or sentences can sometimes have ambiguous meanings. For example, is this sentence saying “I saw the man…” [pause] “...with the telescope”\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Or is it saying “I saw…” [pause] “... the man with the telescope”\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br />Image credit: ChatGPT Generated image. Prompt: png white background, a woman looking through a telescope, in the style of animated illustrations, standing in a window frame, full body, text-based --style raw\n\t\t<br />\n\t\t<br />ChaptGPT Generated Image. Prompt: png white background, a man standing next to a telescope, in the style of animated illustrations, standing in classroom, full body, text-based --style raw\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM/export/png?id=1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM&pageid=g2b5b268c506_0_197\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This can be a problem for language models when they try to generate responses - how do they know the intended meaning of sentences as they get more complex? This is what we’re going to investigate today.\n\t\t<br />\n\t\t<br /><strong>Question of the Day:</strong> How does a language model determine the meaning of words within a sentence?\n    </td>\n  </tr>\n\n</table>"
       },
       "seeding_key": {
-        "activity_section.key": "96dd57b1-da43-43c9-91c2-eaf6b93142e8",
-        "lesson_activity.key": "63cd9bf7-d1a0-415c-97fc-070844b46d6d"
+        "activity_section.key": "4b8d11d7-fdac-45b0-9e29-9503bbbd0995",
+        "lesson_activity.key": "010d4da7-41c9-4784-ac2a-3de486be669a"
       }
     },
     {
-      "key": "8413406b-f883-4e5b-8265-18ad224a904a",
+      "key": "9100b1f7-1a55-42a6-af5c-4b7a49855017",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9100b1f7-1a55-42a6-af5c-4b7a49855017",
+        "lesson_activity.key": "010d4da7-41c9-4784-ac2a-3de486be669a"
+      }
+    },
+    {
+      "key": "8535056d-cb8c-4aa0-ad2b-3c3bfdaf57d5",
       "position": 1,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/ec946a024318be8ed01527b9cd46e620-Slide10.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We are exploring how words can have multiple meanings, but we can usually determine the intended meaning based on context clues in the sentence. This could be from looking at other words in the sentence or the grammar of the sentence.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/c379b162ffaae9e3dfc974b814d12a2a-Slide11.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What are the different meanings of the word “bat” used in each passage?\n\t\t<br />\n\t\t<br />Have students share with a partner before regrouping as a full class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> These passages were used in an earlier lesson, so students should quickly recall these differences: one passage uses “bat” in the context of a team sport, while another uses “bat” in the context of the flying animal.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/d0e627b6ee0b4cd89d464342b0d7e1d9-Slide12.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What are other possible meanings of the word bat?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students may come up with a variety of meanings, or link the word as parts of phrases. For example, “didn’t bat an eyelash” is a phrase meaning “not surprised”. Or combining, “bat-man” describes a certain superhero. There may be other new slang meanings that didn’t exist at the time this lesson was written that you can rely on. However, if no one suggests it, make sure to explicitly call out “bat” as a verb meaning a swatting motion like when a cat plays with toys. This will be important for the next activity.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/7d46b918c1cf396cb645ef33c43b5155-Slide13.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Which meaning is being used in this sentence: the tiny animal was overwhelmed with confetti and it attempted to bat away the glitter with its little paws.\n\t\t<br />\n\t\t<br />Have students discuss in small groups before quickly voting as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should vote for choice (C). Wait to ask students to justify their choice until the next slide.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM/export/png?id=1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM&pageid=g26c9b55256e_0_87\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We are exploring how words can have multiple meanings, but we can usually determine the intended meaning based on context clues in the sentence. This could be from looking at other words in the sentence or the grammar of the sentence.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM/export/png?id=1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM&pageid=g1b0012b9552_0_502\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What are the different meanings of the word “bat” used in each passage?\n\t\t<br />\n\t\t<br />Have students share with a partner before regrouping as a full class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> These passages were used in an earlier lesson, so students should quickly recall these differences: one passage uses “bat” in the context of a team sport, while another uses “bat” in the context of the flying animal.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM/export/png?id=1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM&pageid=g26c9b55256e_0_106\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What are other possible meanings of the word bat?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students may come up with a variety of meanings, or link the word as parts of phrases. For example, “didn’t bat an eyelash” is a phrase meaning “not surprised”. Or combining, “bat-man” describes a certain superhero. There may be other new slang meanings that didn’t exist at the time this lesson was written that you can rely on. However, if no one suggests it, make sure to explicitly call out “bat” as a verb meaning a swatting motion like when a cat plays with toys. This will be important for the next activity.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM/export/png?id=1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM&pageid=g26c9b55256e_0_118\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Which meaning is being used in this sentence: the tiny animal was overwhelmed with confetti and it attempted to bat away the glitter with its little paws.\n\t\t<br />\n\t\t<br />Have students discuss in small groups before quickly voting as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should vote for choice (C). Wait to ask students to justify their choice until the next slide.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2421,15 +2663,15 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "8413406b-f883-4e5b-8265-18ad224a904a",
-        "lesson_activity.key": "d9255877-cc56-4b61-8542-00e18b83b28b"
+        "activity_section.key": "8535056d-cb8c-4aa0-ad2b-3c3bfdaf57d5",
+        "lesson_activity.key": "f40ce49a-0213-4a6e-8571-f21841c37d2a"
       }
     },
     {
-      "key": "8c1461ec-3788-42e5-b0a0-b83ec0926d91",
+      "key": "89a8f91d-b9f6-4ee4-ac98-54e39c9f32d3",
       "position": 2,
       "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/681f4f7b02f9689459901b46cd54f19d-Slide14.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> How did the other words in the sentence help you determine the meaning? Draw arrows from the other words in the sentence that helped you figure out the intended meaning\n\t\t<br />\n\t\t<br />If you are able to draw on the screen or write the sentence on a whiteboard or another surface, it’s best to ask students to respond and draw arrows in real-time based on their answers. Prompt students to explain why these particular words helped with an understanding of the word “bat”. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> There are many possible answers as long as students can justify their reasoning. However, make sure to emphasize the following words as contributing to this word’s meaning:\n\t\t<br />\n\t\t<br />- “Animal” - because bats could be animals or they could be a motion used by animals, this word provides a strong signal\n\t\t<br />- “To” and “Away” - these together give clues that the word may be a verb rather than a noun\n\t\t<br />- “Paws” - because “batting” is something that happens with animal paws\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Here’s one way a language model could have used other words in the sentence to help understand which meaning of “bat” should be used. Notice that some words help in different ways - for example, “to” and “away” give clues to the grammar of the sentence and indicate “bat” is likely a verb, but “animal” and “paws” give clues to the meaning of the word itself. Now that we’ve done one example, it’s your turn to come up with words like this!\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/61270cca0a607b840772cc5668768221-Slide15.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out the <a href=\"https://docs.google.com/document/d/1YXLtaVWarfWdKeNzW0k_mERvtI4fPQwW1dPs9xe_IUE/edit\" target=\"_blank\">Meaning from Context Activity Guide</a>\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/3e2960c7f921fb68ab7211ee1a8966f5-Slide16.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Point out to students that the first page of the activity guide is the same example just completed as a class, then have them flip to the back side\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/fada0df72d94e930857b399b8f45170a-Slide17.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> 1) Come up with a word that has at least 3 different meanings\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> 2) Write a sentence that could help a language model determine one of these intended meanings\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Repeat this for all 3 words. Do not fill in the last box of each table\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Give students time work through each example and generate their own words. If students are struggling, encourage them to think of phrases that mean something different at home or with friends than they do at school. If a student is really stuck, consider suggesting any of the following words to get them started:\n\t\t<br />- Date\n\t\t<br />- Spring\n\t\t<br />- Bark\n\t\t<br />- Ring\n\t\t<br />- Bow\n\t\t<br />- Match\n\t\t<br />- Light\n\t\t<br />- Bank\n\t\t<br />- Rock\n\t\t<br />- Fly\n\t\t<br />\n\t\t<br />Notice any words and sentences that stand out and could be shared as a full class. Once students have progressed far enough, continue to have them trade papers with a partner.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM/export/png?id=1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM&pageid=g26c9b55256e_0_138\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> How did the other words in the sentence help you determine the meaning? Draw arrows from the other words in the sentence that helped you figure out the intended meaning\n\t\t<br />\n\t\t<br />If you are able to draw on the screen or write the sentence on a whiteboard or another surface, it’s best to ask students to respond and draw arrows in real-time based on their answers. Prompt students to explain why these particular words helped with an understanding of the word “bat”. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> There are many possible answers as long as students can justify their reasoning. However, make sure to emphasize the following words as contributing to this word’s meaning:\n\t\t<br />\n\t\t<br />- “Animal” - because bats could be animals or they could be a motion used by animals, this word provides a strong signal\n\t\t<br />- “To” and “Away” - these together give clues that the word may be a verb rather than a noun\n\t\t<br />- “Paws” - because “batting” is something that happens with animal paws\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Here’s one way a language model could have used other words in the sentence to help understand which meaning of “bat” should be used. Notice that some words help in different ways - for example, “to” and “away” give clues to the grammar of the sentence and indicate “bat” is likely a verb, but “animal” and “paws” give clues to the meaning of the word itself. Now that we’ve done one example, it’s your turn to come up with words like this!\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM/export/png?id=1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM&pageid=g26c9b55256e_0_155\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Direct students to Lesson 8, Level 1.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Follow the instructions for Part 1:\n\t\t<br />- Choose a word that can have multiple meanings\n\t\t<br />- Write three possible meanings for your word\n\t\t<br />- Write a sentence where someone could guess the meaning of the word just from the sentence itself\n\t\t<br />- Press Continue and repeat this two more times. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Give students time work through each example and generate their own words. If students are struggling, encourage them to think of phrases that mean something different at home or with friends than they do at school. If a student is really stuck, consider suggesting any of the following words to get them started:\n\t\t<br />- Date\n\t\t<br />- Spring\n\t\t<br />- Bark\n\t\t<br />- Ring\n\t\t<br />- Bow\n\t\t<br />- Match\n\t\t<br />- Light\n\t\t<br />- Bank\n\t\t<br />- Rock\n\t\t<br />- Fly\n\t\t<br />\n\t\t<br />Notice any words and sentences that stand out and could be shared as a full class. Once students have progressed far enough, they will reach a \"pause\" screen telling them to trade stations with a classmate.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2438,15 +2680,32 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "8c1461ec-3788-42e5-b0a0-b83ec0926d91",
-        "lesson_activity.key": "d9255877-cc56-4b61-8542-00e18b83b28b"
+        "activity_section.key": "89a8f91d-b9f6-4ee4-ac98-54e39c9f32d3",
+        "lesson_activity.key": "f40ce49a-0213-4a6e-8571-f21841c37d2a"
       }
     },
     {
-      "key": "6e0a3c4f-e086-4e9b-80a6-8f41a2e4aed6",
+      "key": "5166ccf8-b5f5-44bc-9dc6-cd090652ce44",
       "position": 3,
       "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/06f334b824e70152100373443144b38d-Slide18.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Trade activity guides with a partner! If students worked together or \"overheard\" what a neighbor was putting on their activity guide: make sure they trade with someone far away to avoid spoiling the activity.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/dc4993991be838fd66721a3ed99ae14d-Slide19.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students read the meaning of each word, then read the provided sentence. In the last box, write down which meaning is being used in the sentence. Draw arrows to show how the other words in the sentence helped you understand the intended meaning of the word\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Monitor students as they guess the meaning the other person included. Make sure they are also drawing arrows from the words that helped inform the meaning. The number of arrows will vary from sentence to sentence, but look for at least 2 arrows with each sentence as a minimum. Consider also asking students if they’d be willing to share with the class in the next part of the lesson so they have a heads-up before being called on and can choose to opt-out if they don’t feel comfortable sharing.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM/export/png?id=1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM&pageid=g26c9b55256e_0_227\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students trade with someone else, either by physically getting up and sitting at someone's computer or by passing the computers between students.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Accidental Resets** - If a student accidentally \"resets\" the app or refreshes the page, the quiz is lost and would need to be re-entered. If this happens, a student can either shadow another student as they complete this activity or students can pair up and complete this \"unplugged\" with pen and paper"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5166ccf8-b5f5-44bc-9dc6-cd090652ce44",
+        "lesson_activity.key": "f40ce49a-0213-4a6e-8571-f21841c37d2a"
+      }
+    },
+    {
+      "key": "afae91f6-8f34-464d-b0ba-9f94d839293a",
+      "position": 4,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM/export/png?id=1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM&pageid=g26c9b55256e_0_238\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students follow the instructions for Part 2:\n\t\t<br />- Read the sentence, paying attention to the word in the yellow box\n\t\t<br />- Click-and-drag your mouse over the sentence to draw on the screen. Draw a circle around the word, then draw arrows from other words that help you determine its definition\n\t\t<br />- Choose which definition matches the word in this sentence.\n\t\t<br />- Repeat this for each word!\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Monitor students as they guess the meaning the other person included. Make sure they are also drawing arrows from the words that helped inform the meaning. The number of arrows will vary from sentence to sentence, but look for at least 2 arrows with each sentence as a minimum. Consider also asking students if they’d be willing to share with the class in the next part of the lesson so they have a heads-up before being called on and can choose to opt-out if they don’t feel comfortable sharing.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2455,15 +2714,15 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "6e0a3c4f-e086-4e9b-80a6-8f41a2e4aed6",
-        "lesson_activity.key": "d9255877-cc56-4b61-8542-00e18b83b28b"
+        "activity_section.key": "afae91f6-8f34-464d-b0ba-9f94d839293a",
+        "lesson_activity.key": "f40ce49a-0213-4a6e-8571-f21841c37d2a"
       }
     },
     {
-      "key": "4b2fd0c8-b932-4f08-95fe-24008ea7a330",
-      "position": 4,
+      "key": "a0c7ca31-7aab-4a68-a177-503896373fac",
+      "position": 5,
       "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/4cd30a719edca4748318678be61b4653-Slide20.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Give students an opportunity to share out examples, or call out any examples you noticed while circulating. Use this as an opportunity to highlight student creativity in choosing words and designing sentences that help us understand an intended meaning.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We’ve now examined how we, as humans, determine the meanings of words from context clues. Now let’s examine how a language model does something similar\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/cd16a6a7e4e11f1f527ffdeff29ae952-Slide21.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> In this exercise, we wrote down the potential meanings and uses of a word. How does a language model represent this same thing?\n\t\t<br />\n\t\t<br />Have students discuss with a neighbor before regrouping. You can also encourage students to use their graphic organizer to help with this question.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This question has a single intended answer: Embeddings. Try to get to this answer quickly rather than having students continually guess and try to “read your mind”. If students don’t answer correctly after two or three guesses, it’s okay to tell them explicitly.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM/export/png?id=1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM&pageid=g26c9b55256e_0_314\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Give students an opportunity to share out examples, or call out any examples you noticed while circulating. Use this as an opportunity to highlight student creativity in choosing words and designing sentences that help us understand an intended meaning.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We’ve now examined how we, as humans, determine the meanings of words from context clues. Now let’s examine how a language model does something similar\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM/export/png?id=1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM&pageid=g26c9b55256e_0_332\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> In this exercise, we wrote down the potential meanings and uses of a word. How does a language model represent this same thing?\n\t\t<br />\n\t\t<br />Have students discuss with a neighbor before regrouping. You can also encourage students to use their graphic organizer to help with this question.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This question has a single intended answer: Embeddings. Try to get to this answer quickly rather than having students continually guess and try to “read your mind”. If students don’t answer correctly after two or three guesses, it’s okay to tell them explicitly.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2472,15 +2731,15 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "4b2fd0c8-b932-4f08-95fe-24008ea7a330",
-        "lesson_activity.key": "d9255877-cc56-4b61-8542-00e18b83b28b"
+        "activity_section.key": "a0c7ca31-7aab-4a68-a177-503896373fac",
+        "lesson_activity.key": "f40ce49a-0213-4a6e-8571-f21841c37d2a"
       }
     },
     {
-      "key": "9baa8d0d-016d-4b34-9758-23576a69e566",
-      "position": 5,
+      "key": "f63be120-61e1-4e1e-8c90-e8e9f5ef7de9",
+      "position": 6,
       "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/98cba3446fb822c3f47bf7b9b3560bc8-Slide22.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Embeddings are how language models represent words using numbers. These embeddings are created in such a way that they approximate the meaning of words, based on how they’ve been used in the training data.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/06d8a1606a8e6df8f7a537ba5cea199a-Slide23.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> In this exercise, we drew arrows to represent relationships between words within a sentence. How does a language model represent this same thing?\n\t\t<br />\n\t\t<br />Have students discuss with a neighbor before regrouping. You can also encourage students to use their graphic organizer to help with this question.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This question has a single intended answer: Neural Networks. Try to get to this answer quickly rather than having students continually guess and try to “read your mind”. If students don’t answer correctly after two or three guesses, it’s okay to tell them explicitly.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/a4c90d68e2a2a7eb4fe677760340fde8-Slide24.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Neural Networks are how language models represent relationships between words in a sentence. These networks are created in such a way that they approximate common sentence structures like subject/noun or verb/object grammatical relationships, based on how the training data is structured.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM/export/png?id=1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM&pageid=g26c9b55256e_0_352\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Embeddings are how language models represent words using numbers. These embeddings are created in such a way that they approximate the meaning of words, based on how they’ve been used in the training data.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM/export/png?id=1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM&pageid=g26c9b55256e_0_342\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> In this exercise, we drew arrows to represent relationships between words within a sentence. How does a language model represent this same thing?\n\t\t<br />\n\t\t<br />Have students discuss with a neighbor before regrouping. You can also encourage students to use their graphic organizer to help with this question.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This question has a single intended answer: Neural Networks. Try to get to this answer quickly rather than having students continually guess and try to “read your mind”. If students don’t answer correctly after two or three guesses, it’s okay to tell them explicitly.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM/export/png?id=1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM&pageid=g26c9b55256e_0_360\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Neural Networks are how language models represent relationships between words in a sentence. These networks are created in such a way that they approximate common sentence structures like subject/noun or verb/object grammatical relationships, based on how the training data is structured.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2489,40 +2748,30 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "9baa8d0d-016d-4b34-9758-23576a69e566",
-        "lesson_activity.key": "d9255877-cc56-4b61-8542-00e18b83b28b"
+        "activity_section.key": "f63be120-61e1-4e1e-8c90-e8e9f5ef7de9",
+        "lesson_activity.key": "f40ce49a-0213-4a6e-8571-f21841c37d2a"
       }
     },
     {
-      "key": "5809dfe0-2d39-40ec-9861-1cdbe6502eff",
-      "position": 6,
+      "key": "e77baf27-5155-4f22-a0d2-e5cf4811fa31",
+      "position": 7,
       "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/805954d6146a91ba56b0637880a7a127-Slide25.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Embeddings and Neural Networks have existed for a long time, even before language models exploded in popularity. Let's learn more about how language models combine these two elements to reach the next level in language models that we use today.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://www.youtube.com/watch?v=2RdK6k45koY\" target=\"_blank\">Generative AI: Attention</a>\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is attention in a language model?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should recall what they heard in the video, but it's okay if their answers aren't 100% accurate since this will be reinforced in the next slide. Once a few students have shared, transition to the next slide to present the definition.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/274eef68b095aa5253d0863c5e411309-Slide26.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Attention is a process that updates the meaning of each word by using the context from other words in the input. Neural networks are used to detect relationships between each word in the sentence, and then the embedding of each word is updated to reflect the meaning of the word in the sentence.\n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM/export/png?id=1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM&pageid=g26c9b55256e_0_368\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Embeddings and Neural Networks have existed for a long time, even before language models exploded in popularity. Let's learn more about how language models combine these two elements to reach the next level in language models that we use today.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://www.youtube.com/watch?v=2RdK6k45koY\" target=\"_blank\">Generative AI: Attention</a>\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is attention in a language model?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should recall what they heard in the video, but it's okay if their answers aren't 100% accurate since this will be reinforced in the next slide. Once a few students have shared, transition to the next slide to present the definition.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM/export/png?id=1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM&pageid=g26c9b55256e_0_376\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Attention is a process that updates the meaning of each word by using the context from other words in the input. Neural networks are used to detect relationships between each word in the sentence, and then the embedding of each word is updated to reflect the meaning of the word in the sentence.\n    </td>\n  </tr>\n\n</table>"
       },
       "seeding_key": {
-        "activity_section.key": "5809dfe0-2d39-40ec-9861-1cdbe6502eff",
-        "lesson_activity.key": "d9255877-cc56-4b61-8542-00e18b83b28b"
+        "activity_section.key": "e77baf27-5155-4f22-a0d2-e5cf4811fa31",
+        "lesson_activity.key": "f40ce49a-0213-4a6e-8571-f21841c37d2a"
       }
     },
     {
-      "key": "af42d55e-7b62-4d72-9dd6-9144c3a57921",
+      "key": "915ee33b-79aa-46d1-88d1-8d54c3a156f6",
       "position": 1,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/b0360f6de1a5d5ae4f843c5a149d0f1e-Slide28.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> In your graphic organizer, update the Storage and Processing sections based on your understanding of today’s lesson. Try to incorporate the Attention process in your explanation.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/0aa60e1bbbd907aa15cb9053d3c7fcd5-Slide29.PNG\"></td>\n    <td style=\"width: 75%\">\n      <strong>Question of the Day:</strong> How does a language model determine the meaning of words within a sentence?\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/d42f141647823ec967845edf94706034-Slide30.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> The key vocabulary from this lesson is provided on this slide and in the lesson plan.\n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM/export/png?id=1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM&pageid=g1b0012b9552_0_972\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> In your graphic organizer, update the Storage and Processing sections based on your understanding of today’s lesson. Try to incorporate the Attention process in your explanation.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM/export/png?id=1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM&pageid=g1b0012b9552_0_737\"></td>\n    <td style=\"width: 75%\">\n      <strong>Question of the Day:</strong> How does a language model determine the meaning of words within a sentence?\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM/export/png?id=1LxbTUqAyE-aX-Dgb7EbjrXwJSLga0vk9Iohv9MLcKUM&pageid=g28f2efe51a3_0_14\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> The key vocabulary from this lesson is provided on this slide and in the lesson plan.\n    </td>\n  </tr>\n\n</table>"
       },
       "seeding_key": {
-        "activity_section.key": "af42d55e-7b62-4d72-9dd6-9144c3a57921",
-        "lesson_activity.key": "3a11c3ce-e63e-4b61-a38c-0b0c1f0dc3ed"
-      }
-    },
-    {
-      "key": "56b4bda8-89e6-415d-b41e-8cc8f6142c1d",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "56b4bda8-89e6-415d-b41e-8cc8f6142c1d",
-        "lesson_activity.key": "53fcdf2a-79f0-4333-8e7f-94df308071d5"
+        "activity_section.key": "915ee33b-79aa-46d1-88d1-8d54c3a156f6",
+        "lesson_activity.key": "696fdbef-f65c-4a8d-85f0-ea703a95ad2f"
       }
     },
     {
@@ -2559,14 +2808,97 @@
       }
     },
     {
-      "key": "04b56ae0-c8c6-4f3f-8e47-7ed3234f6742",
-      "position": 1,
+      "key": "8ac6bf02-ca85-4e51-bbf4-35185881b541",
+      "position": 4,
       "properties": {
         "progression_name": "Lesson Recap"
       },
       "seeding_key": {
-        "activity_section.key": "04b56ae0-c8c6-4f3f-8e47-7ed3234f6742",
-        "lesson_activity.key": "11e401e4-9adb-41cc-aab3-4f6f4a124275"
+        "activity_section.key": "8ac6bf02-ca85-4e51-bbf4-35185881b541",
+        "lesson_activity.key": "781a7a9f-145d-4669-a6be-c11922c8845c"
+      }
+    },
+    {
+      "key": "840fc554-9d06-4652-8c02-e668476d683d",
+      "position": 1,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54/export/png?id=1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54&pageid=g34feef8a4c7_0_0\"></td>\n    <td style=\"width: 75%\">\n      <br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the scenario: Two students are working on a school safety project. They both prompted a chatbot to generate ideas, but got completely different responses.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54/export/png?id=1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54&pageid=g3543d81e146_0_1\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What changed in the response between the two prompts? What words likely influenced how the bot responded?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should notice that one prompt frames the question around feeling safe, while the other frames the question around feeling unsafe. Both questions are also structured to emphasize this word as a central part of the question. This word choice and sentence structure cues the language model to emphasize those perspectives in its response. Students will use a similar set of questions in today's activity, so be sure to emphasize the connection between word usage and sentence structure in how it affects a chatbots response.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54/export/png?id=1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54&pageid=g3543d81e146_0_6\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Say:</strong> In the last lesson, we learned about attention and how language models use it to update the meaning of words. Attention is also what chatbots use to understand how to focus their responses - certain words become weighted more than others. The words we use can influence how a chatbot responds and what it decides to emphasize.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54/export/png?id=1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54&pageid=g34feef8a4c7_0_117\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the perspectives of the AI Hype Person and the AI Skeptic aloud to the class:\n\t\t<br />- “This shows how responsive AI can be - it listens to how we ask!” - AI Hype Person\n\t\t<br />- “It's just saying what it thinks we want to hear. That's not insight; that's just guessing” - AI Skeptic\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What might each person be right about?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students may have a variety of opinions here and it's good to surface the spectrum of opinions here. Students might think the AI Hype makes a good point about being responsive to our inputs, although they may not agree that it's \"listening\". Students might also think the AI Skeptic makes a good point that leaning into the prompt we provide isn't very insightful, and the answer could lean too much into our own preferences. There is likely a balance somewhere between these two perspectives.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54/export/png?id=1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54&pageid=g356ab3fb0b2_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the lesson objectives.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54/export/png?id=1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54&pageid=g356ab3fb0b2_0_4\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the Question of the Day.\n    </td>\n  </tr>\n\n</table>",
+        "duration": "10",
+        "name": "Scenario: School Safety Prompts"
+      },
+      "seeding_key": {
+        "activity_section.key": "840fc554-9d06-4652-8c02-e668476d683d",
+        "lesson_activity.key": "f5587e1a-5226-43f1-9aca-de685daab181"
+      }
+    },
+    {
+      "key": "066d0202-771f-4dbc-a2bb-03a349cfc8a4",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "066d0202-771f-4dbc-a2bb-03a349cfc8a4",
+        "lesson_activity.key": "f5587e1a-5226-43f1-9aca-de685daab181"
+      }
+    },
+    {
+      "key": "4bbe7924-d620-4057-bc66-08fe6c403e1c",
+      "position": 1,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54/export/png?id=1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54&pageid=g34feef8a4c7_0_28\"></td>\n    <td style=\"width: 75%\">\n\t\t<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Direct students back to Lesson 9, Level 1. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students complete the following steps:\n\t\t<br />- Go to Lesson 9, Level 1.\n\t\t<br />- Choose one of the topics in the table\n\t\t<br />- Send the base prompt to the chatbot, then send the framed prompt to the chatbot. \n\t\t<br />  - Take notes on how the response changes based on content, tone, or focus.\n\t\t<br />-Clear the chat and repeat with at least 3 different sets of prompts.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54/export/png?id=1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54&pageid=g35682dcad78_0_63\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Pick one of the examples that you tried.  How did the chatbot response change with the framed prompt? Why do you think that is?\n\t\t<br />\n\t\t<br />Have students share with partners, then ask for volunteers to share with the class. Solicit a few volunteers before continuing.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should apply their knowledge of attention from the warm-up and identify that certain words are \"cueing\" the chatbot to respond in certain ways. In many cases, the chatbot will implicitly agree with the framing of the prompt and rarely challenge it.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "duration": "10",
+        "name": "Prompt Comparison",
+        "tips": [
+          {
+            "type": "ethicsOpportunity",
+            "markdown": "**Ethical Opportunity: Real World Connection** - real-world chatbots are also influenced by the way users interact with them, sometimes to the point of being overly agreeable or amenable. In April 2025, OpenAI had to roll back an update to ChatGPT which caused it to be overly sycophantic - aka: overly praiseworthy and agreeable in an unearned way. Consider having students review this Ars Technica article on the situation: <a href=\"https://arstechnica.com/ai/2025/04/openai-rolls-back-update-that-made-chatgpt-a-sycophantic-mess/\" target=\"_blank\">OpenAI rolls back update that made ChatGPT a sycophantic mess</a>, emphasizing how the overly-agreeable nature caused some potentially harmful comments back to users. It's also important to share OpenAI's response to the incident, including an <a href=\"https://openai.com/index/sycophancy-in-gpt-4o/\" target=\"_blank\">explanation of what happened</a> and details on what they <a href=\"https://openai.com/index/expanding-on-sycophancy/\" target=\"_blank\">learned to avoid a similar situation in the future.</a>"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4bbe7924-d620-4057-bc66-08fe6c403e1c",
+        "lesson_activity.key": "e3eb2ad4-b04b-4a81-867f-c0f7271f10e7"
+      }
+    },
+    {
+      "key": "ebce8353-4d76-4de2-9cde-14876fe544da",
+      "position": 2,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54/export/png?id=1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54&pageid=g34feef8a4c7_0_52\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Give each student a copy of the “Prompt Comparisons” Activity Guide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54/export/png?id=1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54&pageid=g35682dcad78_0_78\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Direct students back to Lesson 9, Level 2. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Say:</strong> Now it's your turn! In this activity, you get to choose prompts that might influence how a chatbot responds. This activity is all about experimentation and investigation, trying to figure out how small changes in prompts create big differences in responses.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students choose 1 prompt to create variations of to see how it impacts the chatbot's responses. Students also fill out their activity guides.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i><strong>Circulate:</strong> Monitor students as they complete this task. Students will go back and forth from the chatbot, writing down the prompts they create and then identifying how it impacts the response. Students may take on detective or scientific mindsets, making hypotheses about how small changes in language can impact the chatbots response (ie: \"I think if I use this word, the chatbot will respond this way\"). Ensure students get through at least the front half of their activity guide before continuing.\n    </td>\n  </tr>\n\n</table>"
+      },
+      "seeding_key": {
+        "activity_section.key": "ebce8353-4d76-4de2-9cde-14876fe544da",
+        "lesson_activity.key": "e3eb2ad4-b04b-4a81-867f-c0f7271f10e7"
+      }
+    },
+    {
+      "key": "8fa42d29-1a15-4161-b5d2-e9a65d637092",
+      "position": 3,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54/export/png?id=1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54&pageid=g34feef8a4c7_0_57\"></td>\n    <td style=\"width: 75%\">\n      <br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students share out some of the examples they wrote down while the teacher demonstrates in front of the class and types in the prompts. Ask students to explain how this influenced the prompt and what words they think led to this reaction. Going over a few examples as a class helps ensure students are prepared to answer the check for understanding in the next level.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54/export/png?id=1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54&pageid=g35682dcad78_0_106\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Direct students back to Lesson 9, Level 3. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students complete the Check for Understanding and Ethical Checkpoint questions.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should be able to complete the check for understanding question just from the activity, but the ethical checkpoint is more reflective. Students might think of \"high stakes\" situations, such as the medical profession or law enforcement or legal professions where using AI in careless of thoughtless ways could have significant consequences. Make sure students consider the second half of the prompt as well, imagining ways that humans can help check AI results in these high-stakes situations.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
+        "duration": "10",
+        "name": "Share & Check",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Assessment Opportunity - Formative Assessment:** As students complete the level, you can use the student summary screen to view responses and use this level to act as a formative assessment. If most students are able to complete the sentence stems accurately: move onto the wrap up. If not, consider highlighting a few exemplary responses in the student summary screen and discussing it as a class. If you're not able to view the student summary screen easily during class, then the activity guide can be collected at the end of class as an assessment of this lesson as a whole."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8fa42d29-1a15-4161-b5d2-e9a65d637092",
+        "lesson_activity.key": "e3eb2ad4-b04b-4a81-867f-c0f7271f10e7"
+      }
+    },
+    {
+      "key": "51bc7acc-7a5e-4292-b1fe-976817702deb",
+      "position": 1,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54/export/png?id=1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54&pageid=g34feef8a4c7_0_12\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the lesson objectives.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54/export/png?id=1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54&pageid=g34feef8a4c7_0_16\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the Question of the Day.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54/export/png?id=1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54&pageid=g34feef8a4c7_0_36\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> After today's lesson, what would you say to the AI Hype and the AI Skeptic about how chatbots respond to prompts? Why?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Invite students to make their own phrases as a response to the two quotes in the slides and explain why. Some students may be more aligned to the AI Hype person, emphasizing how AI can detect how to focus its responses as a good thing. Others may be more aligned to the AI Skeptic and wonder about the consequences of chatbots being too influenced by prompting strategies. Encourage students to come up with their own opinions that's not exactly the same as either of these two extremes.\n    </td>\n  </tr>\n\n</table>"
+      },
+      "seeding_key": {
+        "activity_section.key": "51bc7acc-7a5e-4292-b1fe-976817702deb",
+        "lesson_activity.key": "ab41913e-9dee-47b6-a096-643052f8b754"
       }
     },
     {
@@ -3562,9 +3894,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "exploring_generative_ai_lesson1_2_level1"
-        ],
         "progression": "AI Newsroom Playground"
       },
       "bonus": false,
@@ -3575,7 +3904,7 @@
         "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "d60e1ddd-b13b-42ea-8740-abb5d6d02fcc"
+        "activity_section.key": "640750be-296a-46e2-98b4-442a11bd4c81"
       },
       "level_keys": [
         "exploring_generative_ai_lesson1_2_level1"
@@ -3587,9 +3916,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "gen-ai-student-level-L2"
-        ],
         "progression": "Lesson Recap"
       },
       "bonus": false,
@@ -3600,7 +3926,7 @@
         "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "39705368-cf3f-45bf-b6a7-e92a2985cd6c"
+        "activity_section.key": "bca0785b-53a1-410f-86d6-95fd69f78057"
       },
       "level_keys": [
         "gen-ai-student-level-L2"
@@ -3837,9 +4163,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "exploring_generative_ai_l32_l1"
-        ],
         "progression": "Exploring AI Recommendations"
       },
       "bonus": false,
@@ -3850,7 +4173,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "7b60682a-c5a1-4c00-a1f2-f14f559d5ec4"
+        "activity_section.key": "709cef9a-a3de-498a-90b3-175a1a0c5e83"
       },
       "level_keys": [
         "exploring_generative_ai_l32_l1"
@@ -3862,9 +4185,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "exploring_generative_ai_l32_l2"
-        ],
         "progression": "Refine Prompts to Mitigate Bias"
       },
       "bonus": false,
@@ -3875,7 +4195,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "d4e5a2a3-a8c2-4233-a854-42505bf266ff"
+        "activity_section.key": "657008e4-52bc-46ac-badc-4000623f2f6d"
       },
       "level_keys": [
         "exploring_generative_ai_l32_l2"
@@ -3887,9 +4207,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "exploring_generative_ai_l32_wrap_up"
-        ],
         "progression": "Ethical Checkpoint"
       },
       "bonus": false,
@@ -3900,7 +4217,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "2b85ad2b-b0fe-41e9-9f89-cde1ffcfc2ba"
+        "activity_section.key": "4aad45b3-15b2-448c-860b-203667c5b1a4"
       },
       "level_keys": [
         "exploring_generative_ai_l32_wrap_up"
@@ -3912,9 +4229,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "gen-ai-student-level-L5"
-        ],
         "progression": "Lesson Recap"
       },
       "bonus": false,
@@ -3925,7 +4239,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "6fc8a483-32cb-453e-89ba-a920eccda865"
+        "activity_section.key": "163813c6-1115-4048-bdca-a19eeb0ae957"
       },
       "level_keys": [
         "gen-ai-student-level-L5"
@@ -3937,6 +4251,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson4-warmup-level1_2025"
+        ],
         "progression": "Warm Up (Option 2)"
       },
       "bonus": false,
@@ -3959,6 +4276,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-embeddings-widget_2025"
+        ],
         "progression": "Character Quiz"
       },
       "bonus": false,
@@ -3981,6 +4301,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-student-level-L6"
+        ],
         "progression": "Lesson Recap"
       },
       "bonus": false,
@@ -4154,14 +4477,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "genai-choices-cfu"
+          "genai-choices-cfugroup_2025"
         ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "genai-choices-cfu"
+          "genai-choices-cfugroup_2025"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
@@ -4169,7 +4492,7 @@
         "activity_section.key": "722592d3-fb7f-49a1-84de-1cc17c4bf6c7"
       },
       "level_keys": [
-        "genai-choices-cfu"
+        "genai-choices-cfugroup_2025"
       ]
     },
     {
@@ -4178,9 +4501,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "gen-ai-student-level-L9"
-        ],
         "progression": "Lesson Recap"
       },
       "bonus": false,
@@ -4191,7 +4511,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "04b56ae0-c8c6-4f3f-8e47-7ed3234f6742"
+        "activity_section.key": "8ac6bf02-ca85-4e51-bbf4-35185881b541"
       },
       "level_keys": [
         "gen-ai-student-level-L9"
@@ -4632,7 +4952,7 @@
         "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "d60e1ddd-b13b-42ea-8740-abb5d6d02fcc"
+        "activity_section.key": "640750be-296a-46e2-98b4-442a11bd4c81"
       }
     },
     {
@@ -4644,7 +4964,7 @@
         "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "39705368-cf3f-45bf-b6a7-e92a2985cd6c"
+        "activity_section.key": "bca0785b-53a1-410f-86d6-95fd69f78057"
       }
     },
     {
@@ -4764,7 +5084,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "7b60682a-c5a1-4c00-a1f2-f14f559d5ec4"
+        "activity_section.key": "709cef9a-a3de-498a-90b3-175a1a0c5e83"
       }
     },
     {
@@ -4776,7 +5096,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "d4e5a2a3-a8c2-4233-a854-42505bf266ff"
+        "activity_section.key": "657008e4-52bc-46ac-badc-4000623f2f6d"
       }
     },
     {
@@ -4788,7 +5108,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "2b85ad2b-b0fe-41e9-9f89-cde1ffcfc2ba"
+        "activity_section.key": "4aad45b3-15b2-448c-860b-203667c5b1a4"
       }
     },
     {
@@ -4800,7 +5120,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "6fc8a483-32cb-453e-89ba-a920eccda865"
+        "activity_section.key": "163813c6-1115-4048-bdca-a19eeb0ae957"
       }
     },
     {
@@ -4913,9 +5233,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "genai-choices-cfu",
+        "level.key": "genai-choices-cfugroup_2025",
         "script_level.level_keys": [
-          "genai-choices-cfu"
+          "genai-choices-cfugroup_2025"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
@@ -4932,7 +5252,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "04b56ae0-c8c6-4f3f-8e47-7ed3234f6742"
+        "activity_section.key": "8ac6bf02-ca85-4e51-bbf4-35185881b541"
       }
     },
     {
@@ -5166,7 +5486,7 @@
       }
     },
     {
-      "name": "[Exemplar] Meanings from Context",
+      "name": "[Exemplar] Attention Activity",
       "url": "https://docs.google.com/document/d/1OFqzLA4VMZV0ibii-gGT2BLI3HnJ0RLH8c6KTGP2d2g/edit",
       "key": "_exemplar_meanings_from_context",
       "properties": {
@@ -5187,19 +5507,6 @@
       },
       "seeding_key": {
         "resource.key": "_exemplar_training_data"
-      }
-    },
-    {
-      "name": "[For Teachers] Activity Overview - Attention is All You Need",
-      "url": "https://youtu.be/6A2GHAE3iHg",
-      "key": "_for_teachers_activity_overview_-_attention_is_all_you_need",
-      "properties": {
-        "audience": "Verified Teacher",
-        "download_url": "https://videos.code.org/levelbuilder/lesson_8_attention_v2-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "_for_teachers_activity_overview_-_attention_is_all_you_need"
       }
     },
     {
@@ -5396,11 +5703,11 @@
       }
     },
     {
-      "name": "Bias in AI Outputs",
+      "name": "[Exemplar] Bias in AI Outputs",
       "url": "https://docs.google.com/document/d/1FwCqYk3YzQa0kvBL3XqEPM3zx-dt2iPJCgs9UWKM42A/",
       "key": "bias_in_ai_outputs",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
         "type": "Answer Key"
       },
       "seeding_key": {
@@ -5794,19 +6101,6 @@
       }
     },
     {
-      "name": "Meaning from Context",
-      "url": "https://docs.google.com/document/d/1YXLtaVWarfWdKeNzW0k_mERvtI4fPQwW1dPs9xe_IUE/edit",
-      "key": "meaning_from_context",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "meaning_from_context"
-      }
-    },
-    {
       "name": "Neural Networks",
       "url": "https://docs.google.com/document/d/1Ta-zCBCP_qus_WPlyhtmqb0tg0OCG5caIPI-WvtTEqs/edit",
       "key": "neural_networks",
@@ -6008,12 +6302,6 @@
     {
       "seeding_key": {
         "lesson.key": "Attention Is All You Need",
-        "resource.key": "_for_teachers_activity_overview_-_attention_is_all_you_need"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Attention Is All You Need",
         "resource.key": "attention_is_all_you_need"
       }
     },
@@ -6021,12 +6309,6 @@
       "seeding_key": {
         "lesson.key": "Attention Is All You Need",
         "resource.key": "generative_ai_attention"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Attention Is All You Need",
-        "resource.key": "meaning_from_context"
       }
     },
     {
@@ -6574,12 +6856,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Hallucinations and Fabrications",
-        "vocabulary.key": "hallucinations"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Introduction to Generative AI",
         "vocabulary.key": "artificial_intelligence"
       }
@@ -6613,6 +6889,12 @@
         "lesson.key": "Understanding Neural Networks",
         "vocabulary.key": "neural_network"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "hallucinations"
+      }
     }
   ],
   "lessons_programming_expressions": [
@@ -6642,7 +6924,7 @@
     {
       "key": "09b83e64-dd75-422a-9db5-cd7632159b66",
       "properties": {
-        "description": "Explain how a language model uses probabilities to generate words as ouput"
+        "description": "Explain how a language model uses probabilities to generate words as output"
       },
       "seeding_key": {
         "lesson.key": "Outputs & Probabilities",
@@ -6737,6 +7019,16 @@
       "seeding_key": {
         "lesson.key": "Input & Training Data",
         "objective.key": "65faaae8-324f-430c-be9f-1f6b6d35a2a2"
+      }
+    },
+    {
+      "key": "68a5e208-8d0d-4c10-a81d-43ebfe4e6c0a",
+      "properties": {
+        "description": "Analyze how language affects the choices an AI system makes when generating output."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "68a5e208-8d0d-4c10-a81d-43ebfe4e6c0a"
       }
     },
     {

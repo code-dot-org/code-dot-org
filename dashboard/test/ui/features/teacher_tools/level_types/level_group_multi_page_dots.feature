@@ -3,7 +3,7 @@
 Feature: Level Group
 
 Background:
-  Given I am on "http://studio.code.org/s/allthethings/lessons/23/levels/2/page/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/23/levels/2/page/1?noautoplay=true"
   Then I wait to see ".nextPageButton"
   And element ".nextPageButton" is visible
 
@@ -37,7 +37,7 @@ Scenario: Submit three pages as... 1. all, 2. none, 3. some questions answered.
   And I wait until jQuery Ajax requests are finished
 
   # Go back to the first page to see that correct options are selected.
-  Then I am on "http://studio.code.org/s/allthethings/lessons/23/levels/2/page/1?noautoplay=true"
+  Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/23/levels/2/page/1?noautoplay=true"
   And element ".level-group-content:eq(0) #checked_2" is visible
   And element ".level-group-content:eq(1) #checked_1" is visible
   And element ".level-group-content:eq(2) #checked_2" is visible
@@ -58,17 +58,17 @@ Scenario: Submit three pages as... 1. all, 2. none, 3. some questions answered.
   And I verify progress in the drop down of the current page is "attempted_assessment" for lesson 23 level 4
 
   # Go to the course page and verify the same three dots.
-  Then I navigate to the course page for "allthethings"
+  Then I navigate to the unit page for unit number "1" in course "allthethingscourse"
   And I verify progress for lesson 23 level 2 is "perfect_assessment"
   And I verify progress for lesson 23 level 3 is "not_tried"
   And I verify progress for lesson 23 level 4 is "attempted_assessment"
 
   # Submit the assessment.
-  When I am on "http://studio.code.org/s/allthethings/lessons/23/levels/2/page/3?noautoplay=true"
+  When I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/23/levels/2/page/3?noautoplay=true"
   And I press ".submitButton" using jQuery
   And I wait to see a dialog titled "Submit your assessment"
   And I press "#ok-button" using jQuery to load a new page
-  And I am on "http://studio.code.org/s/allthethings/lessons/23/levels/1?noautoplay=true"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/23/levels/1?noautoplay=true"
   And I wait to see ".react_stage"
 
   # Verify the three dots in the header all reflect the submission.
@@ -83,7 +83,7 @@ Scenario: Submit three pages as... 1. all, 2. none, 3. some questions answered.
   And I verify progress in the drop down of the current page is "attempted_assessment" for lesson 23 level 4
 
   # Go to the course page and verify the same three dots.
-  Then I navigate to the course page for "allthethings"
+  Then I navigate to the unit page for unit number "1" in course "allthethingscourse"
   And I verify progress for lesson 23 level 2 is "perfect_assessment"
   And I verify progress for lesson 23 level 3 is "not_tried"
   And I verify progress for lesson 23 level 4 is "attempted_assessment"

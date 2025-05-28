@@ -1675,7 +1675,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/about/hear-from-us',
-        destination: '/about/hear-from-code',
+        destination: '/about#hear-from-us',
         permanent: false,
       },
       {
@@ -1871,6 +1871,43 @@ const nextConfig: NextConfig = {
       {
         source: '/about/2014',
         destination: '/about/annual-report',
+        permanent: false,
+      },
+      {
+        source: '/global/fa/csf',
+        destination:
+          'https://studio.code.org/global/fa/catalog?marketingInitiative=csf',
+        permanent: false,
+      },
+      {
+        source: '/global/fa/hourofcode',
+        destination:
+          'https://studio.code.org/global/fa/catalog?marketingInitiative=hoc',
+        permanent: false,
+      },
+      {
+        source: '/global/fa',
+        destination: 'https://global.code.org/farsi',
+        permanent: false,
+      },
+      {
+        source: '/global/fa/videos',
+        destination: 'https://global.code.org/farsi',
+        permanent: false,
+      },
+      {
+        source: '/global/fa/about',
+        destination: 'https://global.code.org/farsi',
+        permanent: false,
+      },
+      {
+        source: '/global/fa/teacher',
+        destination: 'https://global.code.org/farsi',
+        permanent: false,
+      },
+      {
+        source: '/farsi',
+        destination: 'https://global.code.org/farsi',
         permanent: false,
       },
     ];

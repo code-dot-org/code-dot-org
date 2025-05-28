@@ -7,7 +7,7 @@ export const FullWidthActionBlockContentfulComponentDefinition: ComponentDefinit
   {
     id: 'fullWidthActionBlock',
     name: 'Full-Width Action Block',
-    category: '03: Basic',
+    category: '04: Layout Building Blocks',
     thumbnailUrl:
       'https://contentful-images.code.org/90t6bu6vlf76/7IOZn0XSZFGgzMsJqrGsjz/4e589f5a1190796cc5ab7cd366db3a68/component_fullwidthactionblock_thumbnail.png',
     tooltip: {

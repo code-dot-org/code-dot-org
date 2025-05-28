@@ -4,14 +4,17 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "enable_blockly_keyboard_navigation": true,
       "is_migrated": true,
       "topic_tags": [
         "music_lab"
-      ]
+      ],
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-28 09:29:30 UTC",
+    "serialized_at": "2025-05-21 17:49:05 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

@@ -4,6 +4,7 @@ import {LayoutProps} from '@codebridge/types';
 import Workspace from '@codebridge/Workspace/Workspace';
 import React from 'react';
 
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import HorizontalOutput from '@cdo/apps/codebridge/Workspace/HorizontalOutput';
 import {useHorizontalLayout} from '@cdo/apps/lab2/hooks/useHorizontalLayout';
 import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
@@ -33,6 +34,9 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
     getAiTutor2FullPrompt,
     levelProperties: {aiTutor2Available},
   } = useCodebridgeContext();
+
+  const showAiTutor2 =
+    aiTutor2Available || queryParams('show-ai-tutor2') === 'true';
 
   const {
     leftPanelWidth,
@@ -66,7 +70,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
     minRightPanelWidth: MIN_RIGHT_PANEL_WIDTH,
     appName: 'pythonlab',
     heightOffset: isProjectLevel ? PROJECT_FOOTER_HEIGHT : 0,
-    showingRightmostPanel: aiTutor2Available,
+    showingRightmostPanel: showAiTutor2,
   });
 
   return (
@@ -114,7 +118,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
             setOutputHeight={setRightBottomPanelSize}
           />
         </div>
-        {aiTutor2Available && getAiTutor2FullPrompt && (
+        {showAiTutor2 && getAiTutor2FullPrompt && (
           <div style={{width: rightmostPanelWidth}}>
             <PanelContainer
               id="aitutor2"
