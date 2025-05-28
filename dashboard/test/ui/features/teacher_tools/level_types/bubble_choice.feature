@@ -98,8 +98,7 @@ Feature: BubbleChoice
     Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/52/levels/8/sublevel/1"
 
     # Dismiss the dialog
-    And I wait until element "h1:contains(AI Chat 2)" is visible
-    And I click selector "#ui-close-dialog" if it exists
+    And I click selector "#ui-close-dialog" once I see it
     And I wait until element "#ui-close-dialog" is not visible
 
     # Teacher has not completed level, so make sure it is not shown as complete

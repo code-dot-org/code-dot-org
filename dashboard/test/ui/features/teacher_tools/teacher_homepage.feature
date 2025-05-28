@@ -233,4 +233,4 @@ Feature: Using the teacher homepage sections feature
     And element ".uitest-owned-sections" does not contain text "Current unit:"
 
     When I click selector ".uitest-owned-sections a:contains('Single Unit Course 2025')" to load a new page
-    Then check that the URL contains "/unit/ui-test-single-unit-course-2025"
+    Then check that the URL contains "/unit/ui-test-single-unit-2025"
