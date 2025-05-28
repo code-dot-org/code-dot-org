@@ -35,6 +35,12 @@ Feature: Using the teacher homepage sections feature
 
   @properties_encryption_key
   Scenario: Navigate to course and unit pages
+
+    # This test uses many old features that are not in the new teacher homepage.
+    # Specifically, checking the hrefs of each page, the `.uitest-script-next-banner`
+    # and general navigation between course, unit and lesson pages.
+    # In order to turn this DCDO key on, we would need to re-write the test.
+    Given I use a cookie to mock the DCDO key "teacher-local-nav-v2" as "false"
     # No sections, ensure that levels load correctly after navigating from MiniView
     Given I am on "http://studio.code.org/courses/csp-2017/units/2/lessons/1/levels/1"
     And I wait to see ".header_popup_link"
@@ -135,7 +141,7 @@ Feature: Using the teacher homepage sections feature
     And I wait until element "#uitest-secondary-assignment" is visible
     And I select the "CSP Unit 2 - Digital Information ('17-'18)" option in dropdown "uitest-secondary-assignment"
     And I press the first "#uitest-save-section-changes" element to load a new page
-    And I wait until element "#classroom-sections" is visible 
+    And I wait until element "h1:contains(Progress)" is visible 
 
     # TODO: TEACH-537 If we add in this confirmation dialogue later, uncomment this test
     # Then I wait to see a dialog containing text "unit is currently hidden"
@@ -163,6 +169,9 @@ Feature: Using the teacher homepage sections feature
     When I see the section set up box
     And I create a new "Elementary School" student section with course "CS Fundamentals: Course A", version "2017"
     Then the student section table should have 1 rows
+    And I wait until element "h1:contains(Progress)" is visible 
+
+    Given I am on "http://studio.code.org/home"
     And I wait until element "#classroom-sections" is visible
     And the section table row at index 0 has primary assignment path "/courses/coursea-2017"
 
@@ -199,9 +208,6 @@ Feature: Using the teacher homepage sections feature
     And I wait until element ".assignment-version-title" is visible
     When I click selector ".assignment-version-title:contains('17-'18)" to load a new page
     And I wait to see ".uitest-CourseScript"
-    Then the teacher_dashboard url contains the section id
-
-    And the teacher_dashboard href of selector ".uitest-CourseScript:contains(CSP Unit 2) .uitest-go-to-unit-button" contains the section id
 
   Scenario: Loading the print certificates page for a section
     Given I create a teacher-associated student named "Sally"

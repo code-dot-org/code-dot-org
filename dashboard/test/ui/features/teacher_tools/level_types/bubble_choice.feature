@@ -103,6 +103,8 @@ Feature: BubbleChoice
     And I wait until element "#ui-close-dialog" is not visible
 
     # Teacher has not completed level, so make sure it is not shown as complete
+    And I wait until element ".teacher-panel" is visible
+    Then I select the "New Section" option in dropdown with class "uitest-sectionselect"
     Then I verify progress for the sublevel with selector ".teacher-panel .progress-bubble:first" is "not_tried"
     And I select the "New Section" option in dropdown with class "uitest-sectionselect"
     When I click selector ".teacher-panel table td:contains(Alice)" once I see it

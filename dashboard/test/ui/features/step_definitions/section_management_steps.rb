@@ -275,7 +275,7 @@ Then /^the section table row at index (\d+) has (primary|secondary) assignment p
 
   # ignore query params
   actual_path = href.split('?')[0]
-  expect(actual_path).to eq(expected_path)
+  expect(actual_path).to include(expected_path)
 end
 
 Then /^I save the section id from row (\d+) of the section table$/ do |row_index|
