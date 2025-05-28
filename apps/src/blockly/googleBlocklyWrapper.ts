@@ -906,6 +906,12 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
         Blockly.blockly_.ShortcutRegistry.registry.unregister('redo');
         blocklyWrapper.KeyboardNavigation.dispose();
       }
+      // Add the keyboard shortcuts div. This is here to ensure it happens
+      // prior to keyboard nav installation
+      const shortcutDialog = document.createElement('div');
+      shortcutDialog.id = 'shortcuts';
+      document.body.appendChild(shortcutDialog);
+
       blocklyWrapper.KeyboardNavigation = new KeyboardNavigation(workspace);
       // Rerun user theme after Keyboard Experiment bug introduces incorrect theme
       const theme = cdoUtils.getUserTheme(options.theme as GoogleBlockly.Theme);
