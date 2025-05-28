@@ -1128,6 +1128,7 @@ roles.each do |name, config| %>
                   - elasticloadbalancing:DeregisterTargets
                   - elasticloadbalancing:ModifyTargetGroupAttributes
                   - elasticloadbalancing:ModifyLoadBalancerAttributes
+                  - elasticloadbalancing:ModifyTargetGroup
                 Resource: '*'
               # CloudFront resources
               - Effect: Allow
