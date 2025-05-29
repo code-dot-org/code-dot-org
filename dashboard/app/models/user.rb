@@ -1173,6 +1173,16 @@ class User < ApplicationRecord
       first
   end
 
+  # Get the UnitGroupUnit for the most recently assigned UserScript.
+  def most_recently_assigned_unit_group_unit
+    unit = most_recently_assigned_user_script&.script
+    return unless unit
+    # UserScript doesn't record the UnitGroup the user was in, so we will assume
+    # it is the most recently created section.
+    section = sections_as_student.select {|s| !s.hidden && s.script_id == unit.id}.last
+    Queries::Courses.unit_group_unit(unit, section&.unit_group)
+  end
+
   # Get script object of the user_script the user was most recently
   # assigned.
   def most_recently_assigned_script
