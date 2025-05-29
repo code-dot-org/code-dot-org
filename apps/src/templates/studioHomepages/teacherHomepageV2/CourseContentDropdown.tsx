@@ -1,13 +1,16 @@
-import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React, {useEffect, useState, useMemo} from 'react';
+import {useNavigate} from 'react-router-dom';
 
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
-import LinkOption from './LinkOption';
+import {TEACHER_NAVIGATION_SECTIONS_URL} from '../../teacherNavigation/TeacherNavigationPaths';
+
 import {TaskButton} from './TaskButton';
 
 import styles from './teacherHomepage.module.scss';
@@ -30,6 +33,7 @@ interface UnitLessonOptions {
 export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
   section,
 }) => {
+  const navigate = useNavigate();
   const [lessonList, setLessonList] = useState<UnitLessonOptions[]>([]);
 
   // Retrieve units and lessons for the section
@@ -44,24 +48,31 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
   }, [section.id, section.unitId]);
 
   const dropdownOptions = useMemo(
-    () =>
-      lessonList.map(lesson => (
-        <LinkOption
-          key={lesson.value}
-          value={lesson.value}
-          label={lesson.text}
-          labelStyle={lesson.value.includes('/lessons/') ? 'i' : 'b'}
-          url={lesson.value}
-          eventName={
-            lesson.value.includes('/lessons/')
-              ? EVENTS.SECTION_CARD_JUMP_TO_LESSON_CLICKED
-              : EVENTS.SECTION_CARD_JUMP_TO_UNIT_OVERVIEW_CLICKED
-          }
-          eventOptions={{lesson: lesson.value}}
-        />
-      )),
+    () => [{value: i18n.jumpTo(), text: i18n.jumpTo()}, ...lessonList],
     [lessonList]
   );
+
+  const onDropdownChange = (args: React.ChangeEvent<HTMLSelectElement>) => {
+    const jumpToEvent = args.target.value.includes('/lessons/')
+      ? EVENTS.SECTION_CARD_JUMP_TO_LESSON_CLICKED
+      : EVENTS.SECTION_CARD_JUMP_TO_UNIT_OVERVIEW_CLICKED;
+    analyticsReporter.sendEvent(
+      jumpToEvent,
+      {
+        lesson: args.target.value,
+      },
+      PLATFORMS.BOTH
+    );
+    if (args.target.value !== 'Go to') {
+      if (!section.unitId) {
+        const unit = args.target.value.replace('/s/', '');
+        navigate(
+          `../${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/unit/${unit}`
+        );
+      }
+      window.location.href = `..${args.target.value}`;
+    }
+  };
 
   return (
     <div className={styles.courseContentDropdownContainer}>
@@ -70,15 +81,18 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
         {section.courseDisplayName}
       </BodyThreeText>
       {section.unitId ? (
-        <CustomDropdown
+        <SimpleDropdown
+          className={styles.courseContentDropdown}
           name="go-to-lesson-dropdown"
           labelText={i18n.jumpTo()}
-          labelType="thin"
+          isLabelVisible={false}
+          items={dropdownOptions}
+          selectedValue={i18n.jumpTo()}
           size="m"
+          dropdownTextThickness="thin"
+          onChange={args => onDropdownChange(args)}
           disabled={lessonList.length === 0}
-        >
-          <ul>{dropdownOptions}</ul>
-        </CustomDropdown>
+        />
       ) : (
         <TaskButton
           buttonText={i18n.goToCourse()}

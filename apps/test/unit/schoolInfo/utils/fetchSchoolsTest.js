@@ -4,6 +4,7 @@ import {SCHOOL_ZIP_SEARCH_URL} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 window.fetch = jest.fn();
 
 describe('fetchSchools', () => {
+  const mockCallback = jest.fn();
   const zip = '12345';
   const searchUrl = `${SCHOOL_ZIP_SEARCH_URL}${zip}`;
 
@@ -11,7 +12,7 @@ describe('fetchSchools', () => {
     jest.clearAllMocks();
   });
 
-  it('should fetch schools and return data', async () => {
+  it('should fetch schools and invoke the callback with data', async () => {
     const mockData = [
       {nces_id: 1, name: 'Test School 1'},
       {nces_id: 2, name: 'Test School 2'},
@@ -22,20 +23,24 @@ describe('fetchSchools', () => {
       json: jest.fn().mockResolvedValueOnce(mockData),
     });
 
-    const result = await fetchSchools(zip);
+    await fetchSchools(zip, mockCallback);
 
     expect(fetch).toHaveBeenCalledWith(searchUrl, {
       headers: {'X-Requested-With': 'XMLHttpRequest'},
     });
-    expect(result).toEqual(mockData);
+    expect(mockCallback).toHaveBeenCalledWith(mockData);
   });
 
   it('should throw an error when the fetch response is not OK', async () => {
     fetch.mockResolvedValueOnce({ok: false});
 
-    const result = await expect(fetchSchools(zip)).rejects.toThrow(
+    await expect(fetchSchools(zip, mockCallback)).rejects.toThrow(
       'Zip code search for schools failed'
     );
-    expect(result).toBeUndefined();
+
+    expect(fetch).toHaveBeenCalledWith(searchUrl, {
+      headers: {'X-Requested-With': 'XMLHttpRequest'},
+    });
+    expect(mockCallback).not.toHaveBeenCalled();
   });
 });

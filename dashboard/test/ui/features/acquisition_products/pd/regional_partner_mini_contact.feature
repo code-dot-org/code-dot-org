@@ -4,15 +4,11 @@ Feature: Regional partner mini-contact
 
 
 Scenario: Teacher submits inline mini-contact form after adding zip
-  Given I have a regional partner named "Reggie Partner" in the zip code "90210"
-  And I create a teacher named "Severus"
+  Given I create a teacher named "Severus"
 
   # By using a teacher account, the email field will be prepopulated.
   And I am on "http://studio.code.org/professional-learning/contact-regional-partner"
   And I wait until element "#regional-partner-mini-contact-form-contact-regional-partner" is visible
-
-  Given I scroll the "#notes" element into view
-  And I press keys "Sample message for regional partner." for element "#notes"
   And I press "#submit" using jQuery
 
   # Wait until we see an error for no ZIP.
@@ -25,25 +21,9 @@ Scenario: Teacher submits inline mini-contact form after adding zip
   And I wait until element "#regional-partner-mini-contact-thanks-contact-regional-partner" is visible
   And I sign out
 
-Scenario: Teacher tries to submit inline mini-contact form after adding zip with no regional partner match
+
+Scenario: Teacher submits inline mini-contact form after adding zip and email
   Given I create a teacher named "Severus"
-  And I am on "http://studio.code.org/professional-learning/contact-regional-partner"
-  And I wait until element "#regional-partner-mini-contact-form-contact-regional-partner" is visible
-  And I dismiss the language selector
-
-  Given I scroll the "#notes" element into view
-  And I press keys "Sample message for regional partner." for element "#notes"
-
-  # Enter invalid zip.
-  Given I scroll the "#zip" element into view
-  And I press keys "11" for element "#zip"
-  And I press "#submit" using jQuery
-  And I wait until element "#regional-partner-mini-contact-no-rp-in-zip-contact-regional-partner" is visible
-  And I sign out
-
-Scenario: Teacher submits inline mini-contact form after adding zip with a regional partner match, email, and notes
-  Given I have a regional partner named "Reggie Partner" in the zip code "90210"
-  And I create a teacher named "Severus"
   And I am on "http://studio.code.org/professional-learning/contact-regional-partner"
   And I wait until element "#regional-partner-mini-contact-form-contact-regional-partner" is visible
   And I dismiss the language selector
@@ -53,26 +33,20 @@ Scenario: Teacher submits inline mini-contact form after adding zip with a regio
   And I press backspace to clear element "#email"
   And I press "#submit" using jQuery
 
-  # Wait until we see errors for no ZIP and no email and no notes.
+  # Wait until we see errors for no ZIP and no email.
   And I wait until element "#regional-partner-mini-contact-error-zip" is visible
   And element "#regional-partner-mini-contact-error-email" is visible
-  And element "#regional-partner-mini-contact-error-notes" is visible
 
-  # Submit again with a ZIP, an email, and notes.
+  # Submit again with a ZIP and an email.
   Given I scroll the "#zip" element into view
   And I press keys "90210" for element "#zip"
   And I press keys "test-email@code.org" for element "#email"
-
-  Given I scroll the "#notes" element into view
-  And I press keys "Sample message for regional partner." for element "#notes"
   And I press "#submit" using jQuery
   And I wait until element "#regional-partner-mini-contact-thanks-contact-regional-partner" is visible
   And I sign out
 
 
-Scenario: Signed-out user submits pop-up mini-contact form after entering fields
-  Given I have a regional partner named "Reggie Partner" in the zip code "90210"
-
+Scenario: Signed-out user submits pop-up mini-contact form after adding zip and email
   # First pop up the mini-contact form for signed-out user, and submit it.
   And I am on "http://studio.code.org/pd/application/teacher"
   And I wait until element "#regional-partner-mini-contact-popup-link-container span span" is visible
@@ -80,17 +54,13 @@ Scenario: Signed-out user submits pop-up mini-contact form after entering fields
   And I wait until element "#regional-partner-mini-contact-form-teacher-application-logged-out" is visible
   And I press "#submit" using jQuery
 
-  # Wait until we see errors for no ZIP, no email, and no notes.
+  # Wait until we see errors for no ZIP and no email.
   And I wait until element "#regional-partner-mini-contact-error-zip" is visible
   And element "#regional-partner-mini-contact-error-email" is visible
-  And element "#regional-partner-mini-contact-error-notes" is visible
 
   # Submit again with a ZIP and an email.
   Given I scroll the "#zip" element into view
   And I press keys "90210" for element "#zip"
   And I press keys "test-email@code.org" for element "#email"
-
-  Given I scroll the "#notes" element into view
-  And I press keys "Sample message for regional partner." for element "#notes"
   And I press "#submit" using jQuery
   And I wait until element "#regional-partner-mini-contact-thanks-teacher-application-logged-out" is visible

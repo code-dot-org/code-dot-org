@@ -14,7 +14,6 @@ import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
 import analyticsReporter from '../metrics/AnalyticsReporter';
 
 import AiDiffContainer from './AiDiffContainer';
-import {Context} from './types';
 
 import style from './ai-differentiation.module.scss';
 
@@ -24,13 +23,15 @@ import style from './ai-differentiation.module.scss';
  */
 
 interface AiDiffFloatingActionButtonProps {
-  context: Context;
+  context: string;
+  scriptId?: number;
   scriptName?: string;
   unitDisplayName?: string;
 }
 
 const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   context,
+  scriptId,
   scriptName,
   unitDisplayName,
 }) => {
@@ -63,7 +64,8 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   const handleClick = () => {
     const eventData = {
       aiDiffChatContext: context,
-      scriptName,
+      scriptId: scriptId,
+      scriptName: scriptName,
       unitName: unitDisplayName,
     };
     const eventName = isOpen
@@ -99,6 +101,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         open={isOpen || isFirstSession}
         context={context}
         closeTutor={handleClick}
+        scriptId={scriptId}
         scriptName={scriptName}
         unitDisplayName={unitDisplayName}
       />

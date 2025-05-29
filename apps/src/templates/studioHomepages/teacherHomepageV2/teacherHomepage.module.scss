@@ -36,6 +36,14 @@
   margin-bottom: 20px;
 }
 
+.sectionCardDragButton {
+  cursor: grab;
+}
+
+.sectionCardDragButton:active {
+  cursor: grabbing;
+}
+
 .headerButtonRowRight {
   display: flex;
   gap: 6px;
@@ -80,15 +88,10 @@
 
   button {
     margin-inline-end: 6px;
-    cursor: grab;
 
     i {
       font-size: 16px;
     }
-  }
-
-  button:active {
-    cursor: grabbing;
   }
 }
 
@@ -263,6 +266,17 @@
   }
 }
 
+.courseContentDropdown {
+  div {
+    height: 40px;
+    width: 100%;
+
+    select {
+      border-color: var(--neutral-gray-40);
+    }
+  }
+}
+
 // Empty state button
 .emptyStateButton {
   display: flex;
@@ -308,7 +322,6 @@
 
   &.promotion-gray {
     background-color: var(--background-neutral-secondary);
-    border: 1px solid var(--borders-neutral-primary);
   }
 
   &.promotion-purple {
@@ -409,4 +422,17 @@
   min-height: 50px;
   height: fit-content;
   margin-inline-start: 8px;
+}
+
+// Section Avatars
+.sectionAvatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  font-family: 'Noto Color Emoji', sans-serif;
+  font-size: 32px;
+  margin-inline-end: 12px;
 }

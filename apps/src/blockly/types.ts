@@ -267,7 +267,6 @@ export interface ExtendedWorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
   setEnableToolbox: () => void;
   traceOn: () => void;
   isReadOnly: () => boolean;
-  cleanUp: (includeImmovableBlocks?: boolean) => void;
 }
 
 export interface EditorWorkspaceSvg extends ExtendedWorkspaceSvg {

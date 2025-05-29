@@ -291,7 +291,6 @@ export const isReadOnlyWorkspace = (state: RootState) => {
   const isEditMode = !!getAppOptionsEditBlocks();
   const isEditingExemplar = getAppOptionsEditingExemplar();
   const isViewingExemplar = getAppOptionsViewingExemplar();
-  const isWidgetView = !!state.lab.levelProperties?.widgetView;
 
   // Exemplar and block edit modes do not have a channel.
   if (isEditMode || isEditingExemplar) {
@@ -317,8 +316,7 @@ export const isReadOnlyWorkspace = (state: RootState) => {
     readonlyPredictLevel ||
     hasSubmitted ||
     isRunningAndReadonly ||
-    isViewingOldVersion ||
-    isWidgetView
+    isViewingOldVersion
   );
 };
 

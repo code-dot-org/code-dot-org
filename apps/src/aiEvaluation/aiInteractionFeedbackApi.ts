@@ -9,7 +9,9 @@ export interface FeedbackData {
   metadata?: Record<string, string | boolean>;
 }
 
-export async function logAiInteractionFeedback(feedbackData: FeedbackData) {
+export async function logUserFeedbackOnStudentEvaluation(
+  feedbackData: FeedbackData
+) {
   try {
     const response = await fetch('/ai_interaction_feedback', {
       method: 'POST',

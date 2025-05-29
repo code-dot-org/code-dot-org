@@ -1,4 +1,3 @@
-@skip
 @eyes
 @single_session
 Feature: Looking at tutorial landing pages on Pegasus part Four
@@ -14,5 +13,6 @@ Scenario Outline: Simple page view
 Examples:
   | url                                                               | test_name                  |
   | http://code.org/student/middle-high                               | middle high student page   |
+  | http://hourofcode.com/us/learn                                    | learn landing page         |
   | http://code.org/ai                                                | ai landing page            |
   | http://code.org/teach                                             | teach landing page         |

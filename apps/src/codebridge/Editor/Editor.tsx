@@ -58,6 +58,7 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
       {file ? (
         <CodeEditor
           key={`${file.id}/${1}`}
+          darkMode={true}
           onCodeChange={onChange}
           startCode={file.contents}
           appName={levelProperties.appName}

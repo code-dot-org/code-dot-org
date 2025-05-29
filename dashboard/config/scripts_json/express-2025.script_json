@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-09 15:32:31 UTC",
+    "serialized_at": "2025-05-02 00:09:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2707,10 +2707,34 @@
       }
     },
     {
-      "key": "49cbead3-6949-4fb4-aa15-05c9ca465612",
+      "key": "2539b5bf-3ebb-4458-ab61-a33e77c5a2a1",
       "position": 1,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g351fe46eccc_1_1\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Reveal one vocabulary term & definition at a time. Briefly introduce each term as a preview of what students will learn in this lesson.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g31437c77914_0_90\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Reveal one vocabulary term & definition at a time. Briefly introduce each term as a preview of what students will learn in this lesson.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_23\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Why do you think it’s important to give computers instructions in the right order? What do you think would happen if we gave instructions out of order?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This question encourages students to think about how computers can’t think for themselves—they only follow each step exactly as written. It helps them realize that, unlike humans, computers can't guess or adjust if instructions are mixed up.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_19\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the objectives of this lesson. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today, we’re going to make music using code! Just like a song needs the right notes in the right order to sound great, a computer needs to be able to read a program with the right steps in the right order to work. You’ll be choosing the steps and creating a sequence that makes your music play just how you want.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_14\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce students to the activity, The Sequence Shuffle, and remind them of the definition of sequence – the order of steps in a program or task.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> In this activity you will start with an example of a task that can be done in three distinct steps. The task is only successful if the steps are done in a specific order.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Click to reveal each step and then the picture of a successfully prepared bowl of cereal.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g315a9df97f0_0_20\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Now, have the class consider what would happen if those same steps were done in a different order such as pouring the milk before getting the bowl and spoon. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is the difference when the order of these steps changes? \n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students will start to understand the importance of carefully sequencing steps for a task and will later apply that to sequencing their code.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g315a9df97f0_0_31\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students get into small groups of 2-3.  \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Now it’s your turn to write the steps for one of these tasks! Look at the three pictures here and choose which task you will write steps for. Then, work together to write the steps someone would need to do to be successful. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Support students in writing simple steps. The priority of this activity is in reflecting on the order of the steps more than writing the steps at this time. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Great! You have three simple steps that if done in order, will complete the task. But what if you did the same steps in a different order? Draw a picture (or discuss) what the outcome would look like if the steps were done out of sequence. \n\t\t<br />\n\t\t<br />Teacher Tip: Have students discuss in groups, and then share out. Assign one person in each group to be the secretary (responsible for taking notes) and another to be the spokesperson (responsible for sharing the group's ideas with the class). Provide a printed copy of the slide for them to write on during the discussion.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g31fbcde91da_0_3\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Do any of your instructions happen more than once? How could we explain that some steps need to be repeated a certain amount of times?\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g315a9df97f0_0_40\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Finish the warm up activity with an explanation of how computers follow instructions in order. They will be practicing sequencing code in the next activity in Music Lab.\n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "**<i class=\"fa-solid fa-square-check\"></i> Do This:** Preview the vocabulary, objectives and Question of the Day for this lesson.",
+        "name": "Lesson Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "2539b5bf-3ebb-4458-ab61-a33e77c5a2a1",
+        "lesson_activity.key": "30f2185a-3598-442d-bb5a-c1f3c67b7a1f"
+      }
+    },
+    {
+      "key": "00e5befc-846c-4bbe-974a-c508bd7ffe55",
+      "position": 2,
+      "properties": {
+        "description": "**<i class=\"fa-solid fa-microphone\"></i> Say:** Today, we’re going to make music using code! Just like a song needs the right notes in the right order to sound great, a computer needs to be able to read a program with the right steps in the right order to work. You’ll be choosing the steps and creating a sequence that makes your music play just how you want."
+      },
+      "seeding_key": {
+        "activity_section.key": "00e5befc-846c-4bbe-974a-c508bd7ffe55",
+        "lesson_activity.key": "30f2185a-3598-442d-bb5a-c1f3c67b7a1f"
+      }
+    },
+    {
+      "key": "49cbead3-6949-4fb4-aa15-05c9ca465612",
+      "position": 3,
+      "properties": {
+        "description": "**<i class=\"fa-solid fa-square-check\"></i> Do This:** Introduce students to the activity, The Sequence Shuffle, and remind them of the definition of sequence – the order of steps in a program or task.\n\n**<i class=\"fa-solid fa-microphone\"></i> Say:** In this activity you will start with an example of a task that can be done in three distinct steps. The task is only successful if the steps are done in a specific order.\n\n**<i class=\"fa-duotone fa-solid fa-lightbulb\"></i> Discussion Goal:** Students will start to understand the importance of carefully sequencing steps for a task and will later apply that to sequencing their code. \n\n**<i class=\"fa-solid fa-square-check\"></i> Do This:** Have students get into small groups of 2-3.  \n\n**<i class=\"fa-solid fa-microphone\"></i> Say:** Now it’s your turn to write the steps for one of these tasks! Look at the three pictures here and choose which task you will write steps for. Then, work together to write three steps someone would need to do to be successful. \n\n**<i class=\"fa-solid fa-arrows-retweet\"></i> Circulate:** Support students in writing simple steps. The priority of this activity is in reflecting on the order of the steps more than writing the steps at this time. \n\n**<i class=\"fa-solid fa-microphone\"></i> Say:** Great! You have three simple steps that if done in order, will complete the task. But what if you did the same steps in a different order? Draw a picture (or discuss) what the outcome would look like if the steps were done out of sequence. \n\n**<i class=\"fa-solid fa-square-check\"></i> Do This:** Finish the warm up activity with an explanation of how computers follow instructions in order. They will be practicing sequencing code in the next activity in Music Lab. ",
+        "name": "Warm Up Activity"
       },
       "seeding_key": {
         "activity_section.key": "49cbead3-6949-4fb4-aa15-05c9ca465612",
@@ -2721,6 +2745,7 @@
       "key": "331a1cf6-20d1-444f-bf7d-6b1e78f78213",
       "position": 1,
       "properties": {
+        "name": "Programming Levels:",
         "progression_name": "Intro Video"
       },
       "seeding_key": {
@@ -2729,8 +2754,19 @@
       }
     },
     {
-      "key": "4de08b86-f96b-4947-8e69-eae2e5b5772b",
+      "key": "fd404045-ec0d-4674-a48d-4eea2440219f",
       "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-square-check\"></i> Do This: Watch the video on the slides together as a class. \n\n<i class=\"fa-solid fa-comments\"></i> Discuss: How songwriters might use code to help them make music\n\n<i class=\"fa-duotone fa-solid fa-lightbulb\"></i> Discussion Goal: Students will begin to see a connection between songwriters and coding and how order or sequencing is important in both. "
+      },
+      "seeding_key": {
+        "activity_section.key": "fd404045-ec0d-4674-a48d-4eea2440219f",
+        "lesson_activity.key": "5d3ceb72-9fe5-48eb-a666-976ede87270a"
+      }
+    },
+    {
+      "key": "4de08b86-f96b-4947-8e69-eae2e5b5772b",
+      "position": 3,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -2740,8 +2776,19 @@
       }
     },
     {
+      "key": "dd23bf34-1484-49f6-8a5b-953f751ff4c7",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-square-check\"></i> Do This: Give students an introduction to the lab on this level with a demonstration that includes: \n- Where/how to read the instructions \n- Activate Speech to text by clicking on the speaker in the bottom right corner \n- Where the Run button is to start the program.\n- Point out the timeline and how it changes as you add coding blocks\n- Show students how to click on the blocks to change sounds \n- Show how to move blocks around, change the order and delete as needed\n- Be sure they know to click on the lightbulb for a hint\n- Demonstrate reading the feedback message if the code isn’t passing the level yet\n\n<i class=\"fa-solid fa-desktop\"></i> Transition: Have students transition to continuing the lesson on their own devices. They will work on levels 2-6 independently. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "dd23bf34-1484-49f6-8a5b-953f751ff4c7",
+        "lesson_activity.key": "5d3ceb72-9fe5-48eb-a666-976ede87270a"
+      }
+    },
+    {
       "key": "9ee9cb9b-aa40-4f0f-9626-9f4e870018f8",
-      "position": 3,
+      "position": 5,
       "properties": {
         "progression_name": "Music Integration Video"
       },
@@ -2751,8 +2798,25 @@
       }
     },
     {
+      "key": "ab85a6b7-9b01-4467-b19e-f16d4a71d8f1",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-square-check\"></i> Do This: Watch the video together as a class. Use the next slide to pause and review/reinforce any musical concepts your students may need further clarification on. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "A common misunderstanding in Music Lab is the difference between `play sequential` and `play together`.  Take some time to demonstrate the differences using the timeline to support the explanation.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ab85a6b7-9b01-4467-b19e-f16d4a71d8f1",
+        "lesson_activity.key": "5d3ceb72-9fe5-48eb-a666-976ede87270a"
+      }
+    },
+    {
       "key": "f2fa3962-0393-4317-9525-7baed17ee739",
-      "position": 4,
+      "position": 7,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -2762,8 +2826,19 @@
       }
     },
     {
+      "key": "3b78c649-1888-41f2-8bde-557b2d7fef5f",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-square-check\"></i> Do This: Level 10 is an opportunity to check for understanding in the class. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "3b78c649-1888-41f2-8bde-557b2d7fef5f",
+        "lesson_activity.key": "5d3ceb72-9fe5-48eb-a666-976ede87270a"
+      }
+    },
+    {
       "key": "de4081b1-973b-420d-a09b-505ca3f5b299",
-      "position": 5,
+      "position": 9,
       "properties": {
         "progression_name": "Career Exploration"
       },
@@ -2773,8 +2848,19 @@
       }
     },
     {
+      "key": "c1e1a0fc-6590-44af-983e-2e4e8983b1e4",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-square-check\"></i> Do This: This level has choices of three short videos to connect computer science to a songwriter career. Limit or expand the time spent on this level as needed for your class. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "c1e1a0fc-6590-44af-983e-2e4e8983b1e4",
+        "lesson_activity.key": "5d3ceb72-9fe5-48eb-a666-976ede87270a"
+      }
+    },
+    {
       "key": "80564432-819b-4ad4-ac0a-51d6b96234b1",
-      "position": 6,
+      "position": 11,
       "properties": {
         "progression_name": "Inspire & Try"
       },
@@ -2785,9 +2871,9 @@
     },
     {
       "key": "1f024430-220a-4745-9350-58cec3bd53dd",
-      "position": 7,
+      "position": 12,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_27\"></td>\n    <td style=\"width: 75%\">\n      Activity\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_30\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Watch the video on the slides together as a class. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> How might songwriters use code to help them make music\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students will begin to see a connection between songwriters and coding and how order or sequencing is important in both.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_127\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Give students an introduction to the lab on this level with a demonstration that includes: \n\t\t<br />Where/how to read the instructions \n\t\t<br />Activate Speech to text by clicking on the speaker in the bottom right corner \n\t\t<br />Where the Run button is to start the program.\n\t\t<br />Point out the timeline and how it changes as you add coding blocks\n\t\t<br />Show students how to click on the blocks to change sounds \n\t\t<br />Show how to move blocks around, change the order and delete as needed\n\t\t<br />Show how to click on the light bulb for a hint\n\t\t<br />Demonstrate reading the feedback message if the code isn’t quite correct yet\n\t\t<br />\n\t\t<br /><strong>Transition:</strong> Have students transition to continuing the lesson on their own devices. They will work on levels 2-6 independently. \n\t\t<br />\n\t\t<br />Teacher Tip: Allow students ample time to explore all the available sounds so they become familiar with their options.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_163\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Watch the video together as a class. Use the next slide to pause and review/reinforce any musical concepts your students may need further clarification on.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g328a057cd68_0_50\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is a measure? What’s the difference between the `play together` and the `play sequential` blocks? What is a rest?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Review and reinforce the main points from the video. This gives your class a chance to make a strong connection to how songwriters would use a tool like Music Lab in their careers and also introduce them to musical terms used in the lab in the following levels. \n\t\t<br />\n\t\t<br />Teaching Tip\n\t\t<br />A common misunderstanding in Music Lab is the difference between `play sequential` and `play together`. \n\t\t<br />`play sequential` plays each sound one after the other, in the exact order you list them—like steps in a song.\n\t\t<br />`play together` plays all the sounds at the same time, creating a layered or harmonized effect—like a band playing multiple instruments in unison.\n\t\t<br />Understanding the difference helps students control the timing and feel of their music more effectively.\u000bA measure is a small chunk of music that helps keep the beat organized.\n\t\t<br />A rest is a silent space in music where no sound is played.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g328a057cd68_0_17\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Level 10 is an opportunity to check for understanding in the class.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g328a057cd68_0_34\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> This level has choices of three short videos to connect computer science to a songwriter career. Limit or expand the time spent on this level as needed for your class.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g350eaf66457_0_49\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> This level has two choices of songs with the code ready to explore. Use this level as review, exposure, and/or inspiration and expand or limit the time spent on this level as needed for your class.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g328a057cd68_0_68\"></td>\n    <td style=\"width: 75%\">\n      <strong>Transition:</strong> Have students spend the remainder of the class time using what they’ve learned to create their own music. The instructions include some suggestions for what their project should include.\n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "<i class=\"fa-solid fa-square-check\"></i> Do This: This level has two choices of songs with the code for the beat drop. Use this level as review, exposure, and/or inspiration and expand or limit the time spent on this level as needed for your class. \n\n<i class=\"fa-solid fa-desktop\"></i> Transition: Have students spend the remainder of the class time using what they’ve learned to create their own music. The instructions include some suggestions for what their project should include.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "1f024430-220a-4745-9350-58cec3bd53dd",
@@ -2798,7 +2884,8 @@
       "key": "8a58fb71-6ddd-4908-bf5b-5fb1f4925450",
       "position": 1,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_38\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the objectives of the lesson. Have students show a thumbs up/down/sideways to reflect on whether they reached each objective.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_46\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the Mystery Melody activity. First, press the speaker icon on the slide to play the melody out of sequence.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What did you notice when the notes were out of order?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This helps students articulate why sequencing matters and reinforces how things feel “off” without the right order.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Thent, press the second speaker icon on the slide to reveal the melody with the notes in the correct order.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g31437c77914_0_71\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students set up for a quick Turn & Talk to reexamine the Question of the Day. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Take turns listening and answering the Question of the Day. Give me a thumbs up after you both have shared your answers.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g350eaf66457_0_236\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> This is an optional activity to encourage your students to share the creative music they’ve built with code. Consider adding an opportunity for students to share ‘glows and grows’ after they share their projects with each other.\n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "<i class=\"fa-solid fa-square-check\"></i> Do This: Introduce the Mystery Melody activity where students will listen to a melody and guess what it is. \n\n<i class=\"fa-solid fa-comments\"></i> Discuss: What did you notice when the notes were out of order?\n\n<i class=\"fa-duotone fa-solid fa-lightbulb\"></i> Discussion Goal: This helps students articulate why sequencing matters and reinforces how things feel “off” without the right order.\n",
+        "name": "Wrap Up Activity"
       },
       "seeding_key": {
         "activity_section.key": "8a58fb71-6ddd-4908-bf5b-5fb1f4925450",
@@ -7265,9 +7352,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-video_express"
-        ],
         "progression": "Intro Video"
       },
       "bonus": false,
@@ -7290,9 +7374,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-play-sound_launch_express"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7315,9 +7396,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-play-two_launch_express"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7340,9 +7418,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-together1_launch_express"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7365,9 +7440,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-ingro-loop1_launch_express"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7390,9 +7462,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-5sounds_launch_express"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7415,9 +7484,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-timing-video_express"
-        ],
         "progression": "Music Integration Video"
       },
       "bonus": false,
@@ -7440,9 +7506,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-loop-beat_launch_express"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7465,9 +7528,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-layer_launch_express"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7490,9 +7550,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-seq-match_launch_express"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7515,9 +7572,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-songwriter-videos_express"
-        ],
         "progression": "Career Exploration"
       },
       "bonus": false,
@@ -7540,9 +7594,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-inspiration_express"
-        ],
         "progression": "Inspire & Try"
       },
       "bonus": false,
@@ -7565,9 +7616,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-make_launch_express"
-        ],
         "progression": "Inspire & Try"
       },
       "bonus": false,
@@ -8667,231 +8715,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "testB-elem-career-journeys-video_b_csf-e_csf-f_express"
-        ],
-        "progression": "Intro Video"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "testB-elem-career-journeys-video_b_csf-e_csf-f_express"
-        ],
-        "lesson.key": "Mini-Project: Career Journeys ",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "express-2025",
-        "activity_section.key": "31e1b76f-19c3-4a23-b02b-baf697bcefc2"
-      },
-      "level_keys": [
-        "testB-elem-career-journeys-video_b_csf-e_csf-f_express"
-      ]
-    },
-    {
-      "chapter": 83,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "testB-elem-career-journeys-explore-videos_b_csf-e_csf-f_express"
-        ],
-        "progression": "Career Exploration"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "testB-elem-career-journeys-explore-videos_b_csf-e_csf-f_express"
-        ],
-        "lesson.key": "Mini-Project: Career Journeys ",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "express-2025",
-        "activity_section.key": "58c86996-1d20-411c-a6c4-e862e7780b28"
-      },
-      "level_keys": [
-        "testB-elem-career-journeys-explore-videos_b_csf-e_csf-f_express"
-      ]
-    },
-    {
-      "chapter": 84,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "testB-elem-career-journeys-explore-projects_b_csf-e_csf-f_express"
-        ],
-        "progression": "Build Your Project"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "testB-elem-career-journeys-explore-projects_b_csf-e_csf-f_express"
-        ],
-        "lesson.key": "Mini-Project: Career Journeys ",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "express-2025",
-        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
-      },
-      "level_keys": [
-        "testB-elem-career-journeys-explore-projects_b_csf-e_csf-f_express"
-      ]
-    },
-    {
-      "chapter": 85,
-      "position": 4,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "testB-elem-career-journeys-plan_b_csf-e_csf-f_express"
-        ],
-        "progression": "Build Your Project"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "testB-elem-career-journeys-plan_b_csf-e_csf-f_express"
-        ],
-        "lesson.key": "Mini-Project: Career Journeys ",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "express-2025",
-        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
-      },
-      "level_keys": [
-        "testB-elem-career-journeys-plan_b_csf-e_csf-f_express"
-      ]
-    },
-    {
-      "chapter": 86,
-      "position": 5,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "testB-elem-career-journeys-sprite-location_b_csf-e_csf-f_express"
-        ],
-        "progression": "Build Your Project"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "testB-elem-career-journeys-sprite-location_b_csf-e_csf-f_express"
-        ],
-        "lesson.key": "Mini-Project: Career Journeys ",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "express-2025",
-        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
-      },
-      "level_keys": [
-        "testB-elem-career-journeys-sprite-location_b_csf-e_csf-f_express"
-      ]
-    },
-    {
-      "chapter": 87,
-      "position": 6,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "testB-elem-career-journeys-backgrounds_b_csf-e_csf-f_express"
-        ],
-        "progression": "Build Your Project"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "testB-elem-career-journeys-backgrounds_b_csf-e_csf-f_express"
-        ],
-        "lesson.key": "Mini-Project: Career Journeys ",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "express-2025",
-        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
-      },
-      "level_keys": [
-        "testB-elem-career-journeys-backgrounds_b_csf-e_csf-f_express"
-      ]
-    },
-    {
-      "chapter": 88,
-      "position": 7,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "testB-elem-career-journeys-event-say_b_csf-e_csf-f_express"
-        ],
-        "progression": "Build Your Project"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "testB-elem-career-journeys-event-say_b_csf-e_csf-f_express"
-        ],
-        "lesson.key": "Mini-Project: Career Journeys ",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "express-2025",
-        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
-      },
-      "level_keys": [
-        "testB-elem-career-journeys-event-say_b_csf-e_csf-f_express"
-      ]
-    },
-    {
-      "chapter": 89,
-      "position": 8,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "testB-elem-career-journeys-extra-skills_b_csf-e_csf-f_express"
-        ],
-        "progression": "Build Your Project"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "testB-elem-career-journeys-extra-skills_b_csf-e_csf-f_express"
-        ],
-        "lesson.key": "Mini-Project: Career Journeys ",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "express-2025",
-        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
-      },
-      "level_keys": [
-        "testB-elem-career-journeys-extra-skills_b_csf-e_csf-f_express"
-      ]
-    },
-    {
-      "chapter": 90,
-      "position": 9,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "testB-elem-career-journeys-share_b_csf-e_csf-f_express"
-        ],
-        "progression": "Share Out"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "testB-elem-career-journeys-share_b_csf-e_csf-f_express"
-        ],
-        "lesson.key": "Mini-Project: Career Journeys ",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "express-2025",
-        "activity_section.key": "229e944a-f543-4620-b602-d01276dd30b8"
-      },
-      "level_keys": [
-        "testB-elem-career-journeys-share_b_csf-e_csf-f_express"
-      ]
-    },
-    {
-      "chapter": 91,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "courseF_events_predict_2025"
         ],
         "progression": "Prediction"
@@ -8911,7 +8734,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 83,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8936,7 +8759,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 84,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8961,7 +8784,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 85,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -8986,7 +8809,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 86,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -9011,7 +8834,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 87,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -9036,7 +8859,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 88,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -9061,7 +8884,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 89,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -9086,7 +8909,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 90,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -9111,7 +8934,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 91,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9136,7 +8959,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 92,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9161,7 +8984,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 93,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -9186,7 +9009,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 94,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -9211,7 +9034,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 95,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -9236,7 +9059,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 96,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -9261,7 +9084,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 97,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -9286,7 +9109,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 98,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9311,7 +9134,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 99,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9336,7 +9159,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 100,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9361,7 +9184,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 101,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9386,7 +9209,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 102,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -9411,7 +9234,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 103,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9436,7 +9259,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 104,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -9461,7 +9284,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 105,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -9486,7 +9309,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 106,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -9511,7 +9334,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 107,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -9536,7 +9359,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 108,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -9561,7 +9384,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 109,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -9586,7 +9409,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 110,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
@@ -9611,7 +9434,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 111,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -9636,7 +9459,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 112,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -9661,7 +9484,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 113,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -9686,7 +9509,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 114,
       "position": 17,
       "activity_section_position": 2,
       "assessment": false,
@@ -9711,14 +9534,11 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 115,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-events-video_express"
-        ],
         "progression": "Intro Video"
       },
       "bonus": false,
@@ -9736,14 +9556,11 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 116,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-event-try_launch_express"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -9760,14 +9577,11 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 117,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-event-sound_launch_express"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9785,14 +9599,11 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 118,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-2events-sound_launch_express"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9810,14 +9621,11 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 119,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-functions-video-hold3_launch_express"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9835,14 +9643,11 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 120,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-event-functions_launch_express"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9860,14 +9665,11 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 121,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-event-function_launch_express"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9885,14 +9687,11 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 122,
       "position": 8,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-events-cfu_express"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9910,14 +9709,11 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 123,
       "position": 9,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-effects-panel_launch_express"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9935,14 +9731,11 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 124,
       "position": 10,
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-effects_launch_express"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9960,14 +9753,11 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 125,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-review_express"
-        ],
         "progression": "Freeplay"
       },
       "bonus": false,
@@ -9985,14 +9775,11 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 126,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-freeplay3_launch_express"
-        ],
         "progression": "Freeplay"
       },
       "bonus": false,
@@ -10010,7 +9797,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 127,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10035,7 +9822,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 128,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10060,7 +9847,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 129,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -10085,7 +9872,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 130,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -10110,7 +9897,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 131,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -10135,7 +9922,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 132,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -10160,7 +9947,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 133,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -10185,7 +9972,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 134,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -10210,7 +9997,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 135,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
@@ -10235,7 +10022,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 136,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -10261,7 +10048,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 137,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -10286,7 +10073,7 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 138,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -10311,7 +10098,7 @@
       ]
     },
     {
-      "chapter": 148,
+      "chapter": 139,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -10336,7 +10123,7 @@
       ]
     },
     {
-      "chapter": 149,
+      "chapter": 140,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -10361,7 +10148,7 @@
       ]
     },
     {
-      "chapter": 150,
+      "chapter": 141,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -10386,7 +10173,7 @@
       ]
     },
     {
-      "chapter": 151,
+      "chapter": 142,
       "position": 16,
       "activity_section_position": 2,
       "assessment": false,
@@ -10411,7 +10198,7 @@
       ]
     },
     {
-      "chapter": 152,
+      "chapter": 143,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10436,7 +10223,7 @@
       ]
     },
     {
-      "chapter": 153,
+      "chapter": 144,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -10461,7 +10248,7 @@
       ]
     },
     {
-      "chapter": 154,
+      "chapter": 145,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -10486,7 +10273,7 @@
       ]
     },
     {
-      "chapter": 155,
+      "chapter": 146,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -10511,7 +10298,7 @@
       ]
     },
     {
-      "chapter": 156,
+      "chapter": 147,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -10536,7 +10323,7 @@
       ]
     },
     {
-      "chapter": 157,
+      "chapter": 148,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -10561,7 +10348,7 @@
       ]
     },
     {
-      "chapter": 158,
+      "chapter": 149,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -10586,7 +10373,7 @@
       ]
     },
     {
-      "chapter": 159,
+      "chapter": 150,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -10611,7 +10398,7 @@
       ]
     },
     {
-      "chapter": 160,
+      "chapter": 151,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -10636,7 +10423,7 @@
       ]
     },
     {
-      "chapter": 161,
+      "chapter": 152,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10661,7 +10448,7 @@
       ]
     },
     {
-      "chapter": 162,
+      "chapter": 153,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -10686,7 +10473,7 @@
       ]
     },
     {
-      "chapter": 163,
+      "chapter": 154,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -10711,7 +10498,7 @@
       ]
     },
     {
-      "chapter": 164,
+      "chapter": 155,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -10736,7 +10523,7 @@
       ]
     },
     {
-      "chapter": 165,
+      "chapter": 156,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -10761,7 +10548,7 @@
       ]
     },
     {
-      "chapter": 166,
+      "chapter": 157,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -10786,7 +10573,7 @@
       ]
     },
     {
-      "chapter": 167,
+      "chapter": 158,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -10811,7 +10598,7 @@
       ]
     },
     {
-      "chapter": 168,
+      "chapter": 159,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -10836,7 +10623,7 @@
       ]
     },
     {
-      "chapter": 169,
+      "chapter": 160,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
@@ -10861,7 +10648,7 @@
       ]
     },
     {
-      "chapter": 170,
+      "chapter": 161,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -10887,7 +10674,7 @@
       ]
     },
     {
-      "chapter": 171,
+      "chapter": 162,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -10912,7 +10699,7 @@
       ]
     },
     {
-      "chapter": 172,
+      "chapter": 163,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -10937,7 +10724,7 @@
       ]
     },
     {
-      "chapter": 173,
+      "chapter": 164,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -10962,7 +10749,7 @@
       ]
     },
     {
-      "chapter": 174,
+      "chapter": 165,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -10987,7 +10774,7 @@
       ]
     },
     {
-      "chapter": 175,
+      "chapter": 166,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
@@ -11012,7 +10799,7 @@
       ]
     },
     {
-      "chapter": 176,
+      "chapter": 167,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11037,7 +10824,7 @@
       ]
     },
     {
-      "chapter": 177,
+      "chapter": 168,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -11062,7 +10849,7 @@
       ]
     },
     {
-      "chapter": 178,
+      "chapter": 169,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -11087,7 +10874,7 @@
       ]
     },
     {
-      "chapter": 179,
+      "chapter": 170,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -11112,7 +10899,7 @@
       ]
     },
     {
-      "chapter": 180,
+      "chapter": 171,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -11137,7 +10924,7 @@
       ]
     },
     {
-      "chapter": 181,
+      "chapter": 172,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -11162,7 +10949,7 @@
       ]
     },
     {
-      "chapter": 182,
+      "chapter": 173,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11187,7 +10974,7 @@
       ]
     },
     {
-      "chapter": 183,
+      "chapter": 174,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -11212,7 +10999,7 @@
       ]
     },
     {
-      "chapter": 184,
+      "chapter": 175,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -11237,7 +11024,7 @@
       ]
     },
     {
-      "chapter": 185,
+      "chapter": 176,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -11262,7 +11049,7 @@
       ]
     },
     {
-      "chapter": 186,
+      "chapter": 177,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -11287,7 +11074,7 @@
       ]
     },
     {
-      "chapter": 187,
+      "chapter": 178,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -11312,7 +11099,7 @@
       ]
     },
     {
-      "chapter": 188,
+      "chapter": 179,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -11337,7 +11124,7 @@
       ]
     },
     {
-      "chapter": 189,
+      "chapter": 180,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -11362,7 +11149,7 @@
       ]
     },
     {
-      "chapter": 190,
+      "chapter": 181,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
@@ -11387,7 +11174,7 @@
       ]
     },
     {
-      "chapter": 191,
+      "chapter": 182,
       "position": 10,
       "activity_section_position": 6,
       "assessment": false,
@@ -11412,7 +11199,7 @@
       ]
     },
     {
-      "chapter": 192,
+      "chapter": 183,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -11438,7 +11225,7 @@
       ]
     },
     {
-      "chapter": 193,
+      "chapter": 184,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -11464,7 +11251,7 @@
       ]
     },
     {
-      "chapter": 194,
+      "chapter": 185,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
@@ -11489,7 +11276,7 @@
       ]
     },
     {
-      "chapter": 195,
+      "chapter": 186,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -11514,7 +11301,7 @@
       ]
     },
     {
-      "chapter": 196,
+      "chapter": 187,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -11539,7 +11326,7 @@
       ]
     },
     {
-      "chapter": 197,
+      "chapter": 188,
       "position": 16,
       "activity_section_position": 2,
       "assessment": false,
@@ -11564,7 +11351,7 @@
       ]
     },
     {
-      "chapter": 198,
+      "chapter": 189,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11589,7 +11376,7 @@
       ]
     },
     {
-      "chapter": 199,
+      "chapter": 190,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11614,7 +11401,7 @@
       ]
     },
     {
-      "chapter": 200,
+      "chapter": 191,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -11639,7 +11426,7 @@
       ]
     },
     {
-      "chapter": 201,
+      "chapter": 192,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -11664,7 +11451,7 @@
       ]
     },
     {
-      "chapter": 202,
+      "chapter": 193,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -11689,7 +11476,7 @@
       ]
     },
     {
-      "chapter": 203,
+      "chapter": 194,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -11714,7 +11501,7 @@
       ]
     },
     {
-      "chapter": 204,
+      "chapter": 195,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -11739,7 +11526,7 @@
       ]
     },
     {
-      "chapter": 205,
+      "chapter": 196,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11764,7 +11551,7 @@
       ]
     },
     {
-      "chapter": 206,
+      "chapter": 197,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -11789,7 +11576,7 @@
       ]
     },
     {
-      "chapter": 207,
+      "chapter": 198,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -11814,7 +11601,7 @@
       ]
     },
     {
-      "chapter": 208,
+      "chapter": 199,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -11840,7 +11627,7 @@
       ]
     },
     {
-      "chapter": 209,
+      "chapter": 200,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -11865,7 +11652,7 @@
       ]
     },
     {
-      "chapter": 210,
+      "chapter": 201,
       "position": 13,
       "activity_section_position": 2,
       "assessment": false,
@@ -11890,7 +11677,7 @@
       ]
     },
     {
-      "chapter": 211,
+      "chapter": 202,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -11915,7 +11702,7 @@
       ]
     },
     {
-      "chapter": 212,
+      "chapter": 203,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
@@ -11940,7 +11727,7 @@
       ]
     },
     {
-      "chapter": 213,
+      "chapter": 204,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -11965,7 +11752,7 @@
       ]
     },
     {
-      "chapter": 214,
+      "chapter": 205,
       "position": 17,
       "activity_section_position": 2,
       "assessment": false,
@@ -11990,7 +11777,7 @@
       ]
     },
     {
-      "chapter": 215,
+      "chapter": 206,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12015,7 +11802,7 @@
       ]
     },
     {
-      "chapter": 216,
+      "chapter": 207,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -12040,7 +11827,7 @@
       ]
     },
     {
-      "chapter": 217,
+      "chapter": 208,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -12065,7 +11852,7 @@
       ]
     },
     {
-      "chapter": 218,
+      "chapter": 209,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -12090,7 +11877,7 @@
       ]
     },
     {
-      "chapter": 219,
+      "chapter": 210,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -12115,7 +11902,7 @@
       ]
     },
     {
-      "chapter": 220,
+      "chapter": 211,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -12140,7 +11927,7 @@
       ]
     },
     {
-      "chapter": 221,
+      "chapter": 212,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -12165,7 +11952,7 @@
       ]
     },
     {
-      "chapter": 222,
+      "chapter": 213,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -12190,7 +11977,7 @@
       ]
     },
     {
-      "chapter": 223,
+      "chapter": 214,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -12215,7 +12002,7 @@
       ]
     },
     {
-      "chapter": 224,
+      "chapter": 215,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -12241,7 +12028,7 @@
       ]
     },
     {
-      "chapter": 225,
+      "chapter": 216,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -12266,7 +12053,7 @@
       ]
     },
     {
-      "chapter": 226,
+      "chapter": 217,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -12291,7 +12078,7 @@
       ]
     },
     {
-      "chapter": 227,
+      "chapter": 218,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -12316,7 +12103,7 @@
       ]
     },
     {
-      "chapter": 228,
+      "chapter": 219,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -12341,7 +12128,7 @@
       ]
     },
     {
-      "chapter": 229,
+      "chapter": 220,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -12366,7 +12153,7 @@
       ]
     },
     {
-      "chapter": 230,
+      "chapter": 221,
       "position": 16,
       "activity_section_position": 2,
       "assessment": false,
@@ -12391,7 +12178,7 @@
       ]
     },
     {
-      "chapter": 231,
+      "chapter": 222,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12416,7 +12203,7 @@
       ]
     },
     {
-      "chapter": 232,
+      "chapter": 223,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12441,7 +12228,7 @@
       ]
     },
     {
-      "chapter": 233,
+      "chapter": 224,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -12466,7 +12253,7 @@
       ]
     },
     {
-      "chapter": 234,
+      "chapter": 225,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -12491,7 +12278,7 @@
       ]
     },
     {
-      "chapter": 235,
+      "chapter": 226,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -12516,7 +12303,7 @@
       ]
     },
     {
-      "chapter": 236,
+      "chapter": 227,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -12541,7 +12328,7 @@
       ]
     },
     {
-      "chapter": 237,
+      "chapter": 228,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -12566,7 +12353,7 @@
       ]
     },
     {
-      "chapter": 238,
+      "chapter": 229,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -12591,7 +12378,7 @@
       ]
     },
     {
-      "chapter": 239,
+      "chapter": 230,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -12616,7 +12403,7 @@
       ]
     },
     {
-      "chapter": 240,
+      "chapter": 231,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -12641,7 +12428,7 @@
       ]
     },
     {
-      "chapter": 241,
+      "chapter": 232,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -12666,7 +12453,7 @@
       ]
     },
     {
-      "chapter": 242,
+      "chapter": 233,
       "position": 12,
       "activity_section_position": 3,
       "assessment": false,
@@ -12691,7 +12478,7 @@
       ]
     },
     {
-      "chapter": 243,
+      "chapter": 234,
       "position": 13,
       "activity_section_position": 4,
       "assessment": false,
@@ -12716,7 +12503,7 @@
       ]
     },
     {
-      "chapter": 244,
+      "chapter": 235,
       "position": 14,
       "activity_section_position": 5,
       "assessment": false,
@@ -12741,7 +12528,7 @@
       ]
     },
     {
-      "chapter": 245,
+      "chapter": 236,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -12766,7 +12553,7 @@
       ]
     },
     {
-      "chapter": 246,
+      "chapter": 237,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -12791,7 +12578,7 @@
       ]
     },
     {
-      "chapter": 247,
+      "chapter": 238,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12816,7 +12603,7 @@
       ]
     },
     {
-      "chapter": 248,
+      "chapter": 239,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12841,7 +12628,7 @@
       ]
     },
     {
-      "chapter": 249,
+      "chapter": 240,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -12866,7 +12653,7 @@
       ]
     },
     {
-      "chapter": 250,
+      "chapter": 241,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -12891,7 +12678,7 @@
       ]
     },
     {
-      "chapter": 251,
+      "chapter": 242,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -12916,7 +12703,7 @@
       ]
     },
     {
-      "chapter": 252,
+      "chapter": 243,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -12941,7 +12728,7 @@
       ]
     },
     {
-      "chapter": 253,
+      "chapter": 244,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -12966,7 +12753,7 @@
       ]
     },
     {
-      "chapter": 254,
+      "chapter": 245,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -12991,7 +12778,7 @@
       ]
     },
     {
-      "chapter": 255,
+      "chapter": 246,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -13017,7 +12804,7 @@
       ]
     },
     {
-      "chapter": 256,
+      "chapter": 247,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -13042,7 +12829,7 @@
       ]
     },
     {
-      "chapter": 257,
+      "chapter": 248,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -13067,7 +12854,7 @@
       ]
     },
     {
-      "chapter": 258,
+      "chapter": 249,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -13092,7 +12879,7 @@
       ]
     },
     {
-      "chapter": 259,
+      "chapter": 250,
       "position": 13,
       "activity_section_position": 2,
       "assessment": false,
@@ -13117,7 +12904,7 @@
       ]
     },
     {
-      "chapter": 260,
+      "chapter": 251,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -13142,7 +12929,7 @@
       ]
     },
     {
-      "chapter": 261,
+      "chapter": 252,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -13167,7 +12954,7 @@
       ]
     },
     {
-      "chapter": 262,
+      "chapter": 253,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -13192,7 +12979,7 @@
       ]
     },
     {
-      "chapter": 263,
+      "chapter": 254,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -13217,7 +13004,7 @@
       ]
     },
     {
-      "chapter": 264,
+      "chapter": 255,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -13242,7 +13029,7 @@
       ]
     },
     {
-      "chapter": 265,
+      "chapter": 256,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -13267,7 +13054,7 @@
       ]
     },
     {
-      "chapter": 266,
+      "chapter": 257,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -13292,7 +13079,7 @@
       ]
     },
     {
-      "chapter": 267,
+      "chapter": 258,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -13318,7 +13105,7 @@
       ]
     },
     {
-      "chapter": 268,
+      "chapter": 259,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -13343,7 +13130,7 @@
       ]
     },
     {
-      "chapter": 269,
+      "chapter": 260,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -13368,7 +13155,7 @@
       ]
     },
     {
-      "chapter": 270,
+      "chapter": 261,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -13393,7 +13180,7 @@
       ]
     },
     {
-      "chapter": 271,
+      "chapter": 262,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -13418,7 +13205,7 @@
       ]
     },
     {
-      "chapter": 272,
+      "chapter": 263,
       "position": 13,
       "activity_section_position": 2,
       "assessment": false,
@@ -13443,7 +13230,7 @@
       ]
     },
     {
-      "chapter": 273,
+      "chapter": 264,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -13468,7 +13255,7 @@
       ]
     },
     {
-      "chapter": 274,
+      "chapter": 265,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -13493,7 +13280,7 @@
       ]
     },
     {
-      "chapter": 275,
+      "chapter": 266,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -13518,7 +13305,7 @@
       ]
     },
     {
-      "chapter": 276,
+      "chapter": 267,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -13543,7 +13330,7 @@
       ]
     },
     {
-      "chapter": 277,
+      "chapter": 268,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -13568,7 +13355,7 @@
       ]
     },
     {
-      "chapter": 278,
+      "chapter": 269,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -13593,7 +13380,7 @@
       ]
     },
     {
-      "chapter": 279,
+      "chapter": 270,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -13618,7 +13405,7 @@
       ]
     },
     {
-      "chapter": 280,
+      "chapter": 271,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -13643,7 +13430,7 @@
       ]
     },
     {
-      "chapter": 281,
+      "chapter": 272,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
@@ -13668,7 +13455,7 @@
       ]
     },
     {
-      "chapter": 282,
+      "chapter": 273,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -13693,7 +13480,7 @@
       ]
     },
     {
-      "chapter": 283,
+      "chapter": 274,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -13718,7 +13505,7 @@
       ]
     },
     {
-      "chapter": 284,
+      "chapter": 275,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -13743,7 +13530,7 @@
       ]
     },
     {
-      "chapter": 285,
+      "chapter": 276,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
@@ -13768,7 +13555,7 @@
       ]
     },
     {
-      "chapter": 286,
+      "chapter": 277,
       "position": 14,
       "activity_section_position": 4,
       "assessment": false,
@@ -13793,7 +13580,7 @@
       ]
     },
     {
-      "chapter": 287,
+      "chapter": 278,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -13818,7 +13605,7 @@
       ]
     },
     {
-      "chapter": 288,
+      "chapter": 279,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -13843,14 +13630,11 @@
       ]
     },
     {
-      "chapter": 289,
+      "chapter": 280,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-functions-video-hold_launch_express"
-        ],
         "progression": "Video Intro"
       },
       "bonus": false,
@@ -13868,14 +13652,11 @@
       ]
     },
     {
-      "chapter": 290,
+      "chapter": 281,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-functions-need_launch_express"
-        ],
         "progression": "Notice & Predict"
       },
       "bonus": false,
@@ -13893,14 +13674,11 @@
       ]
     },
     {
-      "chapter": 291,
+      "chapter": 282,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-functions-need2_launch_express"
-        ],
         "progression": "Notice & Predict"
       },
       "bonus": false,
@@ -13918,14 +13696,11 @@
       ]
     },
     {
-      "chapter": 292,
+      "chapter": 283,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-functions-panel_launch_express"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -13943,14 +13718,11 @@
       ]
     },
     {
-      "chapter": 293,
+      "chapter": 284,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-functions-define_launch_express"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -13968,14 +13740,11 @@
       ]
     },
     {
-      "chapter": 294,
+      "chapter": 285,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-functions-chorus_launch_express"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -13993,14 +13762,11 @@
       ]
     },
     {
-      "chapter": 295,
+      "chapter": 286,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-functions-call_launch_express"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -14018,14 +13784,11 @@
       ]
     },
     {
-      "chapter": 296,
+      "chapter": 287,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-functions-use_launch_express"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -14043,14 +13806,11 @@
       ]
     },
     {
-      "chapter": 297,
+      "chapter": 288,
       "position": 9,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-functions-chorus2_launch_express"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -14068,14 +13828,11 @@
       ]
     },
     {
-      "chapter": 298,
+      "chapter": 289,
       "position": 10,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-functions-cfu_express"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -14093,14 +13850,11 @@
       ]
     },
     {
-      "chapter": 299,
+      "chapter": 290,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-functions-panel2_launch_express"
-        ],
         "progression": "Freeplay"
       },
       "bonus": false,
@@ -14118,14 +13872,11 @@
       ]
     },
     {
-      "chapter": 300,
+      "chapter": 291,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-functions-beat_launch_express"
-        ],
         "progression": "Freeplay"
       },
       "bonus": false,
@@ -14143,7 +13894,7 @@
       ]
     },
     {
-      "chapter": 301,
+      "chapter": 292,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -14168,7 +13919,7 @@
       ]
     },
     {
-      "chapter": 302,
+      "chapter": 293,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -14193,7 +13944,7 @@
       ]
     },
     {
-      "chapter": 303,
+      "chapter": 294,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -14218,7 +13969,7 @@
       ]
     },
     {
-      "chapter": 304,
+      "chapter": 295,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -14243,7 +13994,7 @@
       ]
     },
     {
-      "chapter": 305,
+      "chapter": 296,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -14268,7 +14019,7 @@
       ]
     },
     {
-      "chapter": 306,
+      "chapter": 297,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -14293,7 +14044,7 @@
       ]
     },
     {
-      "chapter": 307,
+      "chapter": 298,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -14318,7 +14069,7 @@
       ]
     },
     {
-      "chapter": 308,
+      "chapter": 299,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
@@ -14343,7 +14094,7 @@
       ]
     },
     {
-      "chapter": 309,
+      "chapter": 300,
       "position": 9,
       "activity_section_position": 8,
       "assessment": false,
@@ -14368,7 +14119,7 @@
       ]
     },
     {
-      "chapter": 310,
+      "chapter": 301,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -14394,7 +14145,7 @@
       ]
     },
     {
-      "chapter": 311,
+      "chapter": 302,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -14419,7 +14170,7 @@
       ]
     },
     {
-      "chapter": 312,
+      "chapter": 303,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -14444,7 +14195,7 @@
       ]
     },
     {
-      "chapter": 313,
+      "chapter": 304,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -14469,7 +14220,7 @@
       ]
     },
     {
-      "chapter": 314,
+      "chapter": 305,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -14494,7 +14245,7 @@
       ]
     },
     {
-      "chapter": 315,
+      "chapter": 306,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
@@ -14519,7 +14270,7 @@
       ]
     },
     {
-      "chapter": 316,
+      "chapter": 307,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -14544,7 +14295,7 @@
       ]
     },
     {
-      "chapter": 317,
+      "chapter": 308,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -14569,7 +14320,7 @@
       ]
     },
     {
-      "chapter": 318,
+      "chapter": 309,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -14594,7 +14345,7 @@
       ]
     },
     {
-      "chapter": 319,
+      "chapter": 310,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -14619,7 +14370,7 @@
       ]
     },
     {
-      "chapter": 320,
+      "chapter": 311,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -14644,7 +14395,7 @@
       ]
     },
     {
-      "chapter": 321,
+      "chapter": 312,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -14669,7 +14420,7 @@
       ]
     },
     {
-      "chapter": 322,
+      "chapter": 313,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -14694,7 +14445,7 @@
       ]
     },
     {
-      "chapter": 323,
+      "chapter": 314,
       "position": 8,
       "activity_section_position": 6,
       "assessment": false,
@@ -14719,7 +14470,7 @@
       ]
     },
     {
-      "chapter": 324,
+      "chapter": 315,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -14744,7 +14495,7 @@
       ]
     },
     {
-      "chapter": 325,
+      "chapter": 316,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -14769,7 +14520,7 @@
       ]
     },
     {
-      "chapter": 326,
+      "chapter": 317,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -14794,7 +14545,7 @@
       ]
     },
     {
-      "chapter": 327,
+      "chapter": 318,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -14819,7 +14570,7 @@
       ]
     },
     {
-      "chapter": 328,
+      "chapter": 319,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -14844,7 +14595,7 @@
       ]
     },
     {
-      "chapter": 329,
+      "chapter": 320,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -14869,7 +14620,7 @@
       ]
     },
     {
-      "chapter": 330,
+      "chapter": 321,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -14894,7 +14645,7 @@
       ]
     },
     {
-      "chapter": 331,
+      "chapter": 322,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -14919,7 +14670,7 @@
       ]
     },
     {
-      "chapter": 332,
+      "chapter": 323,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -14944,7 +14695,7 @@
       ]
     },
     {
-      "chapter": 333,
+      "chapter": 324,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -14969,7 +14720,7 @@
       ]
     },
     {
-      "chapter": 334,
+      "chapter": 325,
       "position": 10,
       "activity_section_position": 4,
       "assessment": false,
@@ -14994,7 +14745,7 @@
       ]
     },
     {
-      "chapter": 335,
+      "chapter": 326,
       "position": 11,
       "activity_section_position": 5,
       "assessment": false,
@@ -15019,7 +14770,7 @@
       ]
     },
     {
-      "chapter": 336,
+      "chapter": 327,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -15044,7 +14795,7 @@
       ]
     },
     {
-      "chapter": 337,
+      "chapter": 328,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -15069,7 +14820,7 @@
       ]
     },
     {
-      "chapter": 338,
+      "chapter": 329,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -15094,7 +14845,7 @@
       ]
     },
     {
-      "chapter": 339,
+      "chapter": 330,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -15119,7 +14870,7 @@
       ]
     },
     {
-      "chapter": 340,
+      "chapter": 331,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -15144,7 +14895,7 @@
       ]
     },
     {
-      "chapter": 341,
+      "chapter": 332,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -15169,7 +14920,7 @@
       ]
     },
     {
-      "chapter": 342,
+      "chapter": 333,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -15194,7 +14945,7 @@
       ]
     },
     {
-      "chapter": 343,
+      "chapter": 334,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -15219,7 +14970,7 @@
       ]
     },
     {
-      "chapter": 344,
+      "chapter": 335,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -15244,7 +14995,7 @@
       ]
     },
     {
-      "chapter": 345,
+      "chapter": 336,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -15269,7 +15020,7 @@
       ]
     },
     {
-      "chapter": 346,
+      "chapter": 337,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -15294,7 +15045,7 @@
       ]
     },
     {
-      "chapter": 347,
+      "chapter": 338,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -15319,7 +15070,7 @@
       ]
     },
     {
-      "chapter": 348,
+      "chapter": 339,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -15344,7 +15095,7 @@
       ]
     },
     {
-      "chapter": 349,
+      "chapter": 340,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -15369,7 +15120,7 @@
       ]
     },
     {
-      "chapter": 350,
+      "chapter": 341,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -15394,7 +15145,7 @@
       ]
     },
     {
-      "chapter": 351,
+      "chapter": 342,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -15419,7 +15170,7 @@
       ]
     },
     {
-      "chapter": 352,
+      "chapter": 343,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -15444,7 +15195,7 @@
       ]
     },
     {
-      "chapter": 353,
+      "chapter": 344,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -15469,7 +15220,7 @@
       ]
     },
     {
-      "chapter": 354,
+      "chapter": 345,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -15494,7 +15245,7 @@
       ]
     },
     {
-      "chapter": 355,
+      "chapter": 346,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -15519,7 +15270,7 @@
       ]
     },
     {
-      "chapter": 356,
+      "chapter": 347,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -15544,7 +15295,7 @@
       ]
     },
     {
-      "chapter": 357,
+      "chapter": 348,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -15569,7 +15320,7 @@
       ]
     },
     {
-      "chapter": 358,
+      "chapter": 349,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -15594,7 +15345,7 @@
       ]
     },
     {
-      "chapter": 359,
+      "chapter": 350,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -15619,7 +15370,7 @@
       ]
     },
     {
-      "chapter": 360,
+      "chapter": 351,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -15644,7 +15395,7 @@
       ]
     },
     {
-      "chapter": 361,
+      "chapter": 352,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -15669,7 +15420,7 @@
       ]
     },
     {
-      "chapter": 362,
+      "chapter": 353,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -15694,7 +15445,7 @@
       ]
     },
     {
-      "chapter": 363,
+      "chapter": 354,
       "position": 11,
       "activity_section_position": 3,
       "assessment": false,
@@ -15719,7 +15470,7 @@
       ]
     },
     {
-      "chapter": 364,
+      "chapter": 355,
       "position": 12,
       "activity_section_position": 4,
       "assessment": false,
@@ -15744,7 +15495,7 @@
       ]
     },
     {
-      "chapter": 365,
+      "chapter": 356,
       "position": 13,
       "activity_section_position": 5,
       "assessment": false,
@@ -15769,7 +15520,7 @@
       ]
     },
     {
-      "chapter": 366,
+      "chapter": 357,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -15794,7 +15545,7 @@
       ]
     },
     {
-      "chapter": 367,
+      "chapter": 358,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
@@ -15819,7 +15570,7 @@
       ]
     },
     {
-      "chapter": 368,
+      "chapter": 359,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -15844,7 +15595,7 @@
       ]
     },
     {
-      "chapter": 369,
+      "chapter": 360,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -15869,7 +15620,7 @@
       ]
     },
     {
-      "chapter": 370,
+      "chapter": 361,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -15894,7 +15645,7 @@
       ]
     },
     {
-      "chapter": 371,
+      "chapter": 362,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -15919,7 +15670,7 @@
       ]
     },
     {
-      "chapter": 372,
+      "chapter": 363,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -15944,7 +15695,7 @@
       ]
     },
     {
-      "chapter": 373,
+      "chapter": 364,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -15969,7 +15720,7 @@
       ]
     },
     {
-      "chapter": 374,
+      "chapter": 365,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -15994,7 +15745,7 @@
       ]
     },
     {
-      "chapter": 375,
+      "chapter": 366,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -16019,7 +15770,7 @@
       ]
     },
     {
-      "chapter": 376,
+      "chapter": 367,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -16044,7 +15795,7 @@
       ]
     },
     {
-      "chapter": 377,
+      "chapter": 368,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -16069,7 +15820,7 @@
       ]
     },
     {
-      "chapter": 378,
+      "chapter": 369,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -16094,7 +15845,7 @@
       ]
     },
     {
-      "chapter": 379,
+      "chapter": 370,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -16116,6 +15867,204 @@
       },
       "level_keys": [
         "express_EOC2022_2025"
+      ]
+    },
+    {
+      "chapter": 371,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Intro Video"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-video_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "31e1b76f-19c3-4a23-b02b-baf697bcefc2"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-video_b_csf-e_csf-f_express"
+      ]
+    },
+    {
+      "chapter": 372,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Career Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-explore-videos_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "58c86996-1d20-411c-a6c4-e862e7780b28"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-explore-videos_b_csf-e_csf-f_express"
+      ]
+    },
+    {
+      "chapter": 373,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Build Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-explore-projects_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-explore-projects_b_csf-e_csf-f_express"
+      ]
+    },
+    {
+      "chapter": 374,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Build Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-plan_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-plan_b_csf-e_csf-f_express"
+      ]
+    },
+    {
+      "chapter": 375,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Build Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-sprite-location_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-sprite-location_b_csf-e_csf-f_express"
+      ]
+    },
+    {
+      "chapter": 376,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Build Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-backgrounds_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-backgrounds_b_csf-e_csf-f_express"
+      ]
+    },
+    {
+      "chapter": 377,
+      "position": 7,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Build Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-event-say_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-event-say_b_csf-e_csf-f_express"
+      ]
+    },
+    {
+      "chapter": 378,
+      "position": 8,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Build Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-extra-skills_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-extra-skills_b_csf-e_csf-f_express"
+      ]
+    },
+    {
+      "chapter": 379,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Share Out"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-share_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "229e944a-f543-4620-b602-d01276dd30b8"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-share_b_csf-e_csf-f_express"
       ]
     }
   ],
@@ -17090,114 +17039,6 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "express-2025",
         "activity_section.key": "4f6ec247-c4c1-41e6-8ed9-d85b5a27a675"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "testB-elem-career-journeys-video_b_csf-e_csf-f_express",
-        "script_level.level_keys": [
-          "testB-elem-career-journeys-video_b_csf-e_csf-f_express"
-        ],
-        "lesson.key": "Mini-Project: Career Journeys ",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "express-2025",
-        "activity_section.key": "31e1b76f-19c3-4a23-b02b-baf697bcefc2"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "testB-elem-career-journeys-explore-videos_b_csf-e_csf-f_express",
-        "script_level.level_keys": [
-          "testB-elem-career-journeys-explore-videos_b_csf-e_csf-f_express"
-        ],
-        "lesson.key": "Mini-Project: Career Journeys ",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "express-2025",
-        "activity_section.key": "58c86996-1d20-411c-a6c4-e862e7780b28"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "testB-elem-career-journeys-explore-projects_b_csf-e_csf-f_express",
-        "script_level.level_keys": [
-          "testB-elem-career-journeys-explore-projects_b_csf-e_csf-f_express"
-        ],
-        "lesson.key": "Mini-Project: Career Journeys ",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "express-2025",
-        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "testB-elem-career-journeys-plan_b_csf-e_csf-f_express",
-        "script_level.level_keys": [
-          "testB-elem-career-journeys-plan_b_csf-e_csf-f_express"
-        ],
-        "lesson.key": "Mini-Project: Career Journeys ",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "express-2025",
-        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "testB-elem-career-journeys-sprite-location_b_csf-e_csf-f_express",
-        "script_level.level_keys": [
-          "testB-elem-career-journeys-sprite-location_b_csf-e_csf-f_express"
-        ],
-        "lesson.key": "Mini-Project: Career Journeys ",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "express-2025",
-        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "testB-elem-career-journeys-backgrounds_b_csf-e_csf-f_express",
-        "script_level.level_keys": [
-          "testB-elem-career-journeys-backgrounds_b_csf-e_csf-f_express"
-        ],
-        "lesson.key": "Mini-Project: Career Journeys ",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "express-2025",
-        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "testB-elem-career-journeys-event-say_b_csf-e_csf-f_express",
-        "script_level.level_keys": [
-          "testB-elem-career-journeys-event-say_b_csf-e_csf-f_express"
-        ],
-        "lesson.key": "Mini-Project: Career Journeys ",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "express-2025",
-        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "testB-elem-career-journeys-extra-skills_b_csf-e_csf-f_express",
-        "script_level.level_keys": [
-          "testB-elem-career-journeys-extra-skills_b_csf-e_csf-f_express"
-        ],
-        "lesson.key": "Mini-Project: Career Journeys ",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "express-2025",
-        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "testB-elem-career-journeys-share_b_csf-e_csf-f_express",
-        "script_level.level_keys": [
-          "testB-elem-career-journeys-share_b_csf-e_csf-f_express"
-        ],
-        "lesson.key": "Mini-Project: Career Journeys ",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "express-2025",
-        "activity_section.key": "229e944a-f543-4620-b602-d01276dd30b8"
       }
     },
     {
@@ -20667,6 +20508,114 @@
         "script.name": "express-2025",
         "activity_section.key": "22bc0f76-e05b-49cd-bfb0-825293784300"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-video_b_csf-e_csf-f_express",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-video_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "31e1b76f-19c3-4a23-b02b-baf697bcefc2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-explore-videos_b_csf-e_csf-f_express",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-explore-videos_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "58c86996-1d20-411c-a6c4-e862e7780b28"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-explore-projects_b_csf-e_csf-f_express",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-explore-projects_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-plan_b_csf-e_csf-f_express",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-plan_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-sprite-location_b_csf-e_csf-f_express",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-sprite-location_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-backgrounds_b_csf-e_csf-f_express",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-backgrounds_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-event-say_b_csf-e_csf-f_express",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-event-say_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-extra-skills_b_csf-e_csf-f_express",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-extra-skills_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-share_b_csf-e_csf-f_express",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-share_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "229e944a-f543-4620-b602-d01276dd30b8"
+      }
     }
   ],
   "resources": [
@@ -21609,16 +21558,6 @@
       }
     },
     {
-      "key": "measure",
-      "word": "Measure",
-      "definition": "Used to divide and organize music.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "measure"
-      }
-    },
-    {
       "key": "modify",
       "word": "Modify",
       "definition": "make partial or minor changes to something, typically so as to improve it ",
@@ -21686,16 +21625,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "rest",
-      "word": "Rest",
-      "definition": "A silent space in music where no sound is played.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "rest"
       }
     },
     {
@@ -22193,19 +22122,7 @@
     {
       "seeding_key": {
         "lesson.key": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
-        "vocabulary.key": "measure"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
         "vocabulary.key": "program"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
-        "vocabulary.key": "rest"
       }
     },
     {
@@ -22280,7 +22197,7 @@
     {
       "key": "1516fe9b-a438-4c7c-8a06-ddafee606e0d",
       "properties": {
-        "description": "Use loops to repeat parts of code"
+        "description": "**Find patterns**- Use loops to repeat parts of your code."
       },
       "seeding_key": {
         "lesson.key": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
@@ -22880,7 +22797,7 @@
     {
       "key": "dd14e98c-ab0b-4834-8469-1d312eb7d056",
       "properties": {
-        "description": "Write a sequence of steps in a program in the correct order"
+        "description": "**Order matters** - Write steps in a clear order to make your program do what you want."
       },
       "seeding_key": {
         "lesson.key": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
@@ -22890,7 +22807,7 @@
     {
       "key": "dde04507-f834-4519-8f94-366bc2061f5b",
       "properties": {
-        "description": "Decompose problems by breaking them down into smaller steps"
+        "description": "**Break it down** - Learn how to solve big problems by breaking them into smaller, easier steps."
       },
       "seeding_key": {
         "lesson.key": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",

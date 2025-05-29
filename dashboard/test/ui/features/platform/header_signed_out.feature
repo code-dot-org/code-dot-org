@@ -58,7 +58,6 @@ Feature: Header navigation bar - Signed out
     And I see "#header-about"
     And element "#header-about" has "es" text from key "nav.header.about"
 
-  @skip
   @chrome
   Scenario: Signed out user can click on the header links
     Given I am on "http://code.org"

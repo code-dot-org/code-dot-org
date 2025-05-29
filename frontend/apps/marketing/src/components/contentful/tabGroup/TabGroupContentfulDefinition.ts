@@ -4,7 +4,7 @@ import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 export const TabGroupContentfulComponentDefinition: ComponentDefinition = {
   id: 'tabGroup',
   name: 'Tab Group',
-  category: '06: Dynamic Displays',
+  category: '04: Advanced',
   thumbnailUrl:
     'https://contentful-images.code.org/90t6bu6vlf76/1HJ7nWwydFt54zhjpJVn3D/67f46ccf2fab57678fd0b7e4de11386c/3eac18fce1deaddc61c5fbe1c795fbd5.png',
   tooltip: {

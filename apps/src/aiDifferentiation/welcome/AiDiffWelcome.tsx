@@ -40,7 +40,7 @@ import {
   CREATE_SECTION_PROMPT,
   ADDITIONAL_HELP_PROMPT,
 } from '../AiDiffPredefinedPrompts';
-import {ChatPrompt, Context} from '../types';
+import {ChatPrompt} from '../types';
 
 import style from './ai-diff-welcome.module.scss';
 
@@ -58,7 +58,8 @@ const WelcomeStates: {[key in WelcomeState]: WelcomeState} = {
 
 interface AiDiffWelcomeProps {
   setShowWelcomeExperience: (show: boolean) => void;
-  context: Context;
+  context: string;
+  scriptId?: number;
   scriptName?: string;
   unitDisplayName?: string;
   firstState?: WelcomeState;
@@ -182,6 +183,7 @@ const progressBarHeader = (percentage: number, onBack: () => void) => {
 const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   setShowWelcomeExperience,
   context,
+  scriptId,
   scriptName,
   unitDisplayName,
   // This should only be used for testing purposes
@@ -202,12 +204,13 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   const reportingContext = React.useMemo(() => {
     return {
       aiDiffChatContext: context,
+      scriptId,
       scriptName,
       selectedOption,
       unitName: unitDisplayName,
       url: window.location.href,
     };
-  }, [context, scriptName, unitDisplayName, selectedOption]);
+  }, [context, scriptId, scriptName, unitDisplayName, selectedOption]);
 
   const updateShowWelcomeExperience = React.useCallback(
     (statsigKey: string) => {
@@ -284,7 +287,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             <Heading6 className={style.selectOptionSubtitle}>
               Using AI in multiple ways increases productivity.
             </Heading6>
-            {context.type === AiDiffContext.GENERAL &&
+            {context === AiDiffContext.GENERAL &&
               optionButton(
                 selectedOption === 'support',
                 () => setSelectedOption('support'),
@@ -402,6 +405,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
         <div className={style.practiceContent}>
           <AiDiffChat
             context={context}
+            scriptId={scriptId}
             scriptName={scriptName}
             chatResponseCallback={() => setChatContinueButtonDisabled(false)}
             unitDisplayName={unitDisplayName}
@@ -419,6 +423,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   }, [
     selectedOption,
     context,
+    scriptId,
     scriptName,
     unitDisplayName,
     continueAndSkipButtons,

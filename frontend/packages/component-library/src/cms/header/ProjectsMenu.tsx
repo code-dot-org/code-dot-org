@@ -61,7 +61,7 @@ const ProjectsMenu: React.FC<ProjectsMenuProps> = ({
         size="s"
         color="white"
         iconRight={{
-          iconName: 'plus',
+          iconName: isOpen ? 'minus' : 'plus',
           iconStyle: 'solid',
         }}
         onClick={() => {

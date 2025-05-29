@@ -4,18 +4,6 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "announcements": [
-        {
-          "key": "788752a5-117a-487b-a810-eb72567bc7ce",
-          "notice": "Cybersecurity and Global Impacts Professional Development",
-          "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
-          "link": "https://studio.code.org/s/self-paced-pl-teaching-aif5-2025/",
-          "type": "information",
-          "visibility": "Teacher-only",
-          "dismissible": true,
-          "buttonText": "Let’s Go!"
-        }
-      ],
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "AIF",
       "has_unnumbered_lessons": true,
@@ -34,8 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-22 21:23:05 UTC",
-    "hide_within_course": false,
+    "serialized_at": "2025-05-02 01:11:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1704,7 +1691,7 @@
       "key": "862a430e-13b2-4c76-9675-91bf5cb04895",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Run a quick [Kahoot quiz](https://create.kahoot.it/share/unit-10-security-risks/f82a1515-b576-43a9-aedf-798238d7ba2b) to review Security Risks. \n\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Run a quick [Kahoot quiz](https://create.kahoot.it/share/unit-10-security-risks/5961fcf0-0dd2-4c76-bd0a-081fc9f1cf8b) to review Security Risks. \r\n\r\n---"
       },
       "seeding_key": {
         "activity_section.key": "862a430e-13b2-4c76-9675-91bf5cb04895",
@@ -2812,9 +2799,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "student-eou-survey_linked_page_cybersecurity-2025"
-        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -3151,7 +3135,7 @@
       "url": "https://docs.google.com/document/d/1wbiRiTX2k3ULNmCKIl5kQec7eFhZCWoFeVNrAA1RQXs/edit?usp=sharing",
       "key": "csp_innovation_simulation_character_bios",
       "properties": {
-        "audience": "Student",
+        "audience": "Teacher",
         "include_in_pdf": true,
         "type": "Handout"
       },
@@ -3164,7 +3148,7 @@
       "url": "https://drive.google.com/file/d/1R7IaTD4Cg8TJxAclAsdBMk_TPrVQ8GrV/view?usp=sharing",
       "key": "csp_innovation_simulation_nameplates",
       "properties": {
-        "audience": "Student",
+        "audience": "Teacher",
         "type": "Handout"
       },
       "seeding_key": {
@@ -3173,10 +3157,11 @@
     },
     {
       "name": "Innovation Simulation Project Guide",
-      "url": "https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1v3wdKIyI7Ro1iBGDokVPApA5NsMfil8SYP22Pa4pBIA/edit?usp=sharing",
       "key": "csp_innovation_simulation_project_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -3344,28 +3329,14 @@
     },
     {
       "name": "Equifax Data Breach: What Went Wrong (Podcast)",
-      "url": "https://open.spotify.com/episode/03El29KDDRqg7zH2Q2cg70?si=japjmpLzSBGYXehgggKsWw",
+      "url": "https://www.carbonite.com/podcasts/breach/s02e03-Equifax-data-breach",
       "key": "equifax_data_breach_what_went_wrong_podcast_",
       "properties": {
         "audience": "Student",
-        "download_url": "https://drive.google.com/file/d/1gTMNZZM6DY8kT6v_Ve4iK6qm6YX4wqwu/view?usp=sharing",
         "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "equifax_data_breach_what_went_wrong_podcast_"
-      }
-    },
-    {
-      "name": "Innovation Simulation Project Guide",
-      "url": "https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/edit?usp=sharing",
-      "key": "innovation_simulation_project_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "innovation_simulation_project_guide"
       }
     },
     {
@@ -3378,18 +3349,6 @@
       },
       "seeding_key": {
         "resource.key": "is_facial_recognition_invading_your_privacy_"
-      }
-    },
-    {
-      "name": "Kahoot Quiz - Security Risks",
-      "url": "https://create.kahoot.it/share/unit-10-security-risks/f82a1515-b576-43a9-aedf-798238d7ba2b",
-      "key": "kahoot_quiz_-_security_risks",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "kahoot_quiz_-_security_risks"
       }
     },
     {
@@ -3471,6 +3430,12 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 1",
+        "resource.key": "csp_innovation_simulation_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 1",
         "resource.key": "csp_innovation_simulation_project_overview"
       }
     },
@@ -3478,12 +3443,6 @@
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 1",
         "resource.key": "csp_unit_8_-_lesson_1_-_project_innovation_simulation_part_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 1",
-        "resource.key": "innovation_simulation_project_guide"
       }
     },
     {
@@ -3580,12 +3539,6 @@
       "seeding_key": {
         "lesson.key": "Security Risks Part 2",
         "resource.key": "equifax_data_breach_what_went_wrong_podcast_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Security Risks Part 2",
-        "resource.key": "kahoot_quiz_-_security_risks"
       }
     },
     {

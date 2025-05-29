@@ -1,7 +1,6 @@
-@import '@code-dot-org/component-library-styles/colors.scss';
-
+@import 'color.scss';
 .previewContainer {
-  background-color: var(--background-neutral-primary);
+  background-color: $light_black;
 }
 
 .previewHeader {

@@ -140,7 +140,7 @@ const SummaryResponses = ({
     studentWork: response.text,
   }));
 
-  const AiEvaluationMVPUnits = ['csp4-2024', 'csp6-2024', 'allthethings'];
+  const AiEvaluationMVPUnits = ['csp4-2024', 'csp6-2024'];
   const aiAnalysisAvailable = AiEvaluationMVPUnits.includes(
     scriptData.reportingData.unitName
   );

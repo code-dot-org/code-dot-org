@@ -148,7 +148,6 @@ function initPage() {
         unitHasLevels={unitHasLevels}
         isMigrated={scriptData.is_migrated}
         scriptOverviewPdfUrl={scriptData.scriptOverviewPdfUrl}
-        scriptPath={scriptData.scriptPath}
         scriptResourcesPdfUrl={scriptData.scriptResourcesPdfUrl}
         isCsdOrCsp={scriptData.isCsd || scriptData.isCsp}
         completedLessonNumber={completedLessonNumber}
@@ -202,10 +201,8 @@ function displayDifferentiationChat(scriptData) {
     ReactDOM.render(
       <Provider store={getStore()}>
         <AiDiffFloatingActionButton
-          context={{
-            type: AiDiffContext.UNIT,
-            unitId: scriptData.id,
-          }}
+          context={AiDiffContext.UNIT}
+          scriptId={scriptData.id}
           scriptName={scriptData.name}
           unitDisplayName={scriptData.title}
         />

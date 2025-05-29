@@ -1,6 +1,5 @@
 <Studio>
   <config><![CDATA[{
-  "published": true,
   "game_id": 33,
   "created_at": "2024-04-03T21:25:07.000Z",
   "level_num": "custom",
@@ -40,8 +39,8 @@
     "soft_buttons": [
       "leftButton",
       "rightButton",
-      "upButton",
-      "downButton"
+      "downButton",
+      "upButton"
     ],
     "project_template_level_name": "grade2_playlab_project_template_2024",
     "instructions_important": "false",
@@ -59,15 +58,11 @@
     "default_num_example_blocks": "false",
     "show_type_hints": "false",
     "remove_items_when_actor_collides": "false",
-    "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
-    "hint_prompt_attempts_threshold": "1",
     "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-03T21:25:07.650+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_events6_2023\\\"\"],\"cloned_from\":\"courseC_PlayLab_events6_2023\"},{\"changed_at\":\"2025-05-07 15:32:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"soft_buttons\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-04-03T21:25:07.650+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_events6_2023\\\"\"],\"cloned_from\":\"courseC_PlayLab_events6_2023\"}]",
   "level_concept_difficulty": {
     "sequencing": 4
   }
@@ -75,11 +70,10 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false" x="16" y="16"/>
-        <block type="studio_whenUp" deletable="false" x="16" y="120"/>
-        <block type="studio_whenLeft" deletable="false" x="240" y="120"/>
-        <block type="studio_whenDown" deletable="false" x="16" y="200"/>
-        <block type="studio_whenRight" deletable="false" x="240" y="200"/>
+        <block type="studio_whenUp" deletable="false"/>
+        <block type="studio_whenDown" deletable="false"/>
+        <block type="studio_whenLeft" deletable="false"/>
+        <block type="studio_whenRight" deletable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>

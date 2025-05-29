@@ -44,19 +44,9 @@ class AichatSafetyHelperTest < ActionView::TestCase
         }
       ]
     }
-    openai_response_structured_hash = {
-      choices: [
-        {
-          message: {
-            content: {classification: "OK"}.to_json
-          }
-        }
-      ]
-    }
     @openai_response_profanity_json = openai_response_profanity_hash.to_json
     @openai_response_safe_json = openai_response_safe_hash.to_json
     @openai_response_invalid_json = openai_response_invalid_hash.to_json
-    @openai_response_structured_json = openai_response_structured_hash.to_json
     @profane_message = "profanity hello #{@blocklist_blocked_word}"
     @openai_response = {
       evaluation: "INAPPROPRIATE"
@@ -67,7 +57,6 @@ class AichatSafetyHelperTest < ActionView::TestCase
     DCDO.stubs(:get).with("aichat_toxicity_threshold_model_output", anything).returns(TEST_THRESHOLD)
     DCDO.stubs(:get).with("aichat_safety_profane_word_blocklist", anything).returns([@blocklist_blocked_word])
     DCDO.stubs(:get).with("aichat_openai_system_prompt", anything).returns('simple')
-    Policies::Courses.stubs(:modularity_enabled?).with(anything).returns(false)
     ShareFiltering.stubs(:find_profanity_failure).returns(ShareFailure.new(ShareFiltering::FailureType::PROFANITY, @webpurify_profanity))
     AichatComprehendHelper.stubs(:get_toxicity).returns(@comprehend_response)
     mock_response = create_stubbed_response(@openai_response_profanity_json)
@@ -117,13 +106,14 @@ class AichatSafetyHelperTest < ActionView::TestCase
     AichatSafetyHelper.find_toxicity('user', 'clean message', 'en', nil)
   end
 
-  test "retries with structured response if request_safety_check fails first check" do
+  test "retries if request_safety_check returns a response.body other than INAPPROPRIATE or OK" do
     stub_safety_services('openai', 'user')
     mock_response_invalid = create_stubbed_response(@openai_response_invalid_json)
-    mock_structured_response = create_stubbed_response(@openai_response_structured_json)
+    mock_response_safe = create_stubbed_response(@openai_response_safe_json)
     OpenaiChatHelper::Client.any_instance.stubs(:request_chat_completion).
       returns(mock_response_invalid).
-      returns(mock_structured_response)
+      returns(mock_response_safe).
+      twice
 
     AichatSafetyHelper.find_toxicity('user', 'clean message', 'en', nil)
   end

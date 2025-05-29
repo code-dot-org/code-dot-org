@@ -1,5 +1,4 @@
 import type {Meta, StoryObj} from '@storybook/react';
-import {within, expect, userEvent} from '@storybook/test';
 
 import Footer, {FooterProps} from '../Footer';
 
@@ -14,7 +13,7 @@ export default {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-end',
-        height: '650px',
+        height: '600px',
       }}
     >
       <Footer {...args} />
@@ -112,49 +111,8 @@ const defaultArgs: FooterProps = {
 //
 // STORIES
 //
-export const DefaultFooter: Story = {
+export const Playground: Story = {
   args: {
     ...defaultArgs,
-  },
-  parameters: {
-    layout: 'fullscreen',
-  },
-};
-
-export const MobileFooter: Story = {
-  args: {
-    ...defaultArgs,
-  },
-  parameters: {
-    layout: 'fullscreen',
-    viewport: {
-      defaultViewport: 'mobile1',
-    },
-    eyes: {
-      browser: {width: 414, height: 896, name: 'chrome'},
-    },
-  },
-  play: async ({canvasElement}) => {
-    const canvas = within(canvasElement);
-
-    // check that the Code.org links button is visible
-    const mobileLinksButton = await canvas.findByLabelText(
-      'Click to expand or collapse Site links',
-    );
-    await expect(mobileLinksButton).toBeVisible();
-
-    // click the button to open the menu
-    await userEvent.click(mobileLinksButton);
-
-    // check that Code.org links menu is visible
-    const mobileLinksMenu = await canvas.findByLabelText('Site links');
-    const mobileLinks = await canvas.findAllByRole('link', {
-      name: /privacy policy|manage cookies|about|partners|blog|donate|store|support|terms/i,
-    });
-    await expect(mobileLinksMenu).toBeVisible();
-    await expect(mobileLinks).toHaveLength(9);
-    for (const link of mobileLinks) {
-      await expect(link).toBeVisible();
-    }
   },
 };

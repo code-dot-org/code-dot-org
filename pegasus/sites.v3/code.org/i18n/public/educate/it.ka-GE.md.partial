@@ -65,51 +65,52 @@ theme: responsive
         </tr>
       </table>
     </td>
-    <!-- "coming soon" system requirements, to be updated and made live from March through July. -->
+    <!-- "coming soon" system requirements, to be updated and made live from March through July.
     <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          ბრაუზერი ივლისი '25
+          Browser July '25
         </th>
         <tr>
-          <td>ქრომი 109</td>
+          <td>Chrome 103.x</td>
         </tr>
         <tr>
-          <td>საფარი 16.6</td>
+          <td>Safari 14.x</td>
         </tr>
         <tr>
-          <td>მობილური საფარი 16</td>
+          <td>Mobile Safari 14.x</td>
         </tr>
         <tr>
-          <td>ეჯი 128</td>
+          <td>Edge 119.x</td>
         </tr>
         <tr>
-          <td>ფიერფოქსი 115</td>
+          <td>Firefox 98.x</td>
         </tr>
       </table>
     </td>
     <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
       <table>
         <th>
-          პლატფორმა ივლისი '25
+          Platform July '25
         </th>
         <tr>
-          <td>მაკოსი 10.15</td>
+          <td>macOS 10.15</td>
         </tr>
         <tr>
-          <td>iOS 16.x</td>
+          <td>iOS 15.x</td>
         </tr>
         <tr>
-          <td>ვინდოუზი 10</td>
+          <td>Windows 8</td>
         </tr>
         <tr>
-          <td>ანდროიდი 8</td>
+          <td>Android 8.x</td>
         </tr>
         <tr>
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
     </td>
+    -->
   </tr>
 </table>
 
@@ -148,6 +149,7 @@ Code.org— ის ყველა შინაარსთან დაკა�
 ### Can you play this video?
 
 სანამ დაიწყებთ Code.org ონლაინ კურსებს, შეამოწმეთ ქვემოთ მოცემული ვიდეოს დაკვრა, რათა დარწმუნდეთ, რომ კარგად ხართ
+
 
 <!--
 The following HTML is a copy of video_with_fallback.haml. once this file can be converted to

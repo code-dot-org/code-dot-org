@@ -12,7 +12,7 @@ export interface PopoverProps extends HTMLAttributes<HTMLDivElement> {
   /** Popover title */
   title: string;
   /** Popover direction/position relative to connected element */
-  direction?: ComponentPlacementDirection;
+  direction?: ComponentPlacementDirection | 'none';
   /** Popover icon */
   icon?: FontAwesomeV6IconProps;
   /** Popover image */

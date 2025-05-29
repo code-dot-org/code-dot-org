@@ -5,7 +5,7 @@ import React, {useState, useRef} from 'react';
 
 import {
   FeedbackData,
-  logAiInteractionFeedback as logUserFeedbackOnStudentEvaluation,
+  logUserFeedbackOnStudentEvaluation,
 } from '@cdo/apps/aiEvaluation/aiInteractionFeedbackApi';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import i18n from '@cdo/locale';

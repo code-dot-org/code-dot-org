@@ -79,6 +79,13 @@ body.music-black, body.background-dark {
   color: $neutral_light;
 }
 
+body.background-dark, body.background-light {
+  .header-wrapper .header {
+    position: fixed;
+    z-index: 1;
+  }
+}
+
 // For modern Lab2 labs, prevent the entire body from scrolling.
 // All content is typically displayed on the page at once, and
 // internal components manage their own scroll behavior.
@@ -229,8 +236,8 @@ img.video_thumbnail {
     }
 
     .header_logo {
-      width: 38px;
-      padding: 6px 14px;
+      width: 42px;
+      padding: 4px 16px;
       margin-top: 0;
     }
   }
@@ -277,7 +284,7 @@ img.video_thumbnail {
     display: flex;
     justify-content: start;
     align-items: center;
-    gap: 2.25rem;
+    gap: 2rem;
 
     .headerlink {
       @include main-font-regular;
@@ -307,31 +314,30 @@ img.video_thumbnail {
       background-color: $teal;
     }
     @include main-font-regular;
-    display: flex;
-    align-items: center;
+    display: inline-block;
     color: $white;
     background-color: transparent;
-    border: 1px solid $white;
-    border-radius: 4px;
-    padding: 6.5px 16px;
+    border: 2px solid $white;
+    border-radius: 5px;
+    padding: 7px 12px;
     font-size: 14px;
     line-height: 20px;
     box-sizing: border-box;
+    float: left;
     cursor: pointer;
     white-space: nowrap;
     margin-inline-start: 8px;
-    height: 35px;
     a:hover {
       text-decoration: none;
       background-color: $orange;
     }
     &:active {
-      border: 1px solid $white !important;
+      border: 2px solid $white !important;
     }
   }
 
   .user_menu, .create_menu, .help_button {
-    margin-top: 7px;
+    margin-top: 6px;
     .create_button, .display_name, .pairing_name {
       html[dir=rtl] & {
         float: right;
@@ -388,7 +394,7 @@ img.video_thumbnail {
   }
 
   #signin_button .header_button {
-    margin-top: 7px;
+    margin-top: 6px;
   }
 
   #sign_in_or_user {
@@ -1180,7 +1186,6 @@ $default-modal-width: 640px;
 
 .project_info {
   float: left;
-  margin-top: 1px;
 
   .header_text, .header_button {
     float: left;
@@ -1330,7 +1335,7 @@ input.header_input {
 .header_user {
   text-align: right;
   margin-left: 6px;
-  margin-top: 7px;
+  margin-top: 6px;
   height: 38px;
 }
 

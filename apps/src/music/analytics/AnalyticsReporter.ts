@@ -32,7 +32,6 @@ const blockFeatureList = [
   'functions',
   BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
   BlockTypes.PLAY_PATTERN_AI_AT_CURRENT_LOCATION_SIMPLE2,
-  BlockTypes.PLAY_TUNE_AT_CURRENT_LOCATION_SIMPLE2,
 ];
 
 const triggerBlocks: string[] = [

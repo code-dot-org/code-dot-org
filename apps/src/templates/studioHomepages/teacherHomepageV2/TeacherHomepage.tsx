@@ -12,6 +12,7 @@ import {
   asyncLoadTeacherHomepageSectionData,
   asyncLoadCoteacherInvite,
 } from '../../teacherDashboard/teacherSectionsRedux';
+import CoteacherInviteNotification from '../CoteacherInviteNotification';
 
 import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
@@ -112,7 +113,7 @@ export const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
               selectedArchiveToggle={selectedArchiveToggle}
               setSelectedArchiveToggle={onArchiveToggleChange}
             />
-
+            <CoteacherInviteNotification isForPl={false} />
             {numSections === 0 ? (
               <EmptyHomepage showHiddenOnly={showHiddenOnly} />
             ) : (

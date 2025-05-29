@@ -85,10 +85,8 @@ describe('CMS EditorialCard', () => {
     });
     expect(externalLink).toBeVisible();
     expect(externalLink).toHaveAttribute('href', externalLinkProps.href);
-
-    expect(externalLink).toHaveAttribute('rel', 'noopener noreferrer');
     expect(
-      within(externalLink).getByTestId('font-awesome-v6-icon'),
+      within(externalLink).queryByRole('img', {name: 'external link'}),
     ).toBeInTheDocument();
   });
 

@@ -133,7 +133,6 @@ export class FindProgrammingExpressionDialog extends Component {
   handleSearch = e => {
     this.setState({
       searchQuery: e.target.value,
-      currentPage: 1,
     });
   };
   handleFilter = e => {
@@ -151,6 +150,10 @@ export class FindProgrammingExpressionDialog extends Component {
   };
 
   doSearch() {
+    if (!this.state.searchQuery) {
+      return;
+    }
+
     const params = {
       page: this.state.currentPage,
       query: this.state.searchQuery,

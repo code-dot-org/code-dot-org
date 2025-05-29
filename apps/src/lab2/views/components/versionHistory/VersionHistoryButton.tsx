@@ -2,7 +2,6 @@ import {Button} from '@code-dot-org/component-library/button';
 import {
   WithTooltip,
   TooltipProps,
-  WithTooltipHandle,
 } from '@code-dot-org/component-library/tooltip';
 import React, {useCallback, useRef, useState} from 'react';
 
@@ -39,7 +38,6 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
   );
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const buttonContainerRef = useRef<HTMLDivElement>(null);
-  const tooltipRef = useRef<WithTooltipHandle>(null);
 
   // The version history button is generally disabled in read only mode with two exceptions:
   // if the user is viewing an old version of the project, or if this is a teacher viewing
@@ -82,20 +80,18 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
     setIsVersionListLoaded(false);
     setLoadError(false);
     setLoading(false);
-    tooltipRef.current?.hideTooltip(); // Hide tooltip when dropdown closes.
   }, []);
 
   const tooltipProps: TooltipProps = {
     text: commonI18n.versionHistory_header(),
-    direction: 'onBottom',
+    direction: 'onLeft',
     tooltipId: 'version-history-tooltip',
     size: 'xs',
-    hideTail: true,
   };
 
   return (
     <div ref={buttonContainerRef}>
-      <WithTooltip tooltipProps={tooltipProps} ref={tooltipRef}>
+      <WithTooltip tooltipProps={tooltipProps}>
         <Button
           isIconOnly
           icon={{iconStyle: 'solid', iconName: 'history'}}

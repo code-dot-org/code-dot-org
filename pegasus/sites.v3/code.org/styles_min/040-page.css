@@ -522,14 +522,13 @@ td {
 nav.main {
   background-color: var(--brand_primary_default);
   margin: 0;
-  padding: 0.375rem 0.875rem;
+  padding: 0.25rem 1rem;
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 3rem;
-  box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
 }
 
 nav .left,
@@ -540,7 +539,7 @@ nav .right {
 }
 
 nav .left {
-  gap: 1.875rem;
+  gap: 2rem;
 }
 
 nav .right {
@@ -553,7 +552,7 @@ nav.main ul {
   padding: 0;
   display: flex;
   justify-content: start;
-  gap: 2.25rem;
+  gap: 2rem;
 }
 
 nav.main ul li {
@@ -580,7 +579,7 @@ nav.main ul li a:hover {
 }
 
 nav.main img.logo {
-  width: 38px;
+  width: 42px;
 }
 
 nav.main i.fa-fw {
@@ -591,16 +590,14 @@ nav.main .create_menu,
 nav.main .user_menu,
 nav.main .button-signin,
 nav.main .button-create-account {
-  border: 1px solid var(--neutral_white);
+  border: 2px solid var(--neutral_white);
   border-radius: 4px;
   color: var(--neutral_white);
   font-size: 0.875rem;
   font-weight: var(--regular-font-weight);
   text-decoration: none;
-  padding: 6.5px 16px;
+  padding: 7px 12px;
   margin: 0;
-  display: flex;
-  align-items: center;
 }
 
 nav.main .button-create-account {
@@ -611,20 +608,33 @@ nav.main .button-create-account {
 
 nav.main .create_menu,
 nav.main .user_menu {
+  border: 2px solid;
   margin: 0;
+  display: flex;
+  gap: 2px;
   cursor: pointer;
-  height: 35px;
 }
 
 nav.main .create_menu i,
 nav.main .user_menu i {
+  font-size: 1.5rem;
   width: auto;
+}
+
+nav.main .create_menu i.create_menu_arrow_down,
+nav.main .user_menu i.user_menu_arrow_down {
+  margin-top: -4px;
+}
+
+nav.main .create_menu i.create_menu_arrow_up,
+nav.main .user_menu i.user_menu_arrow_up {
+  margin-top: -1px;
 }
 
 nav.main .help_button {
   padding: 0;
   height: unset;
-  margin-inline-end: -4px;
+  margin-inline-end: -6px;
 }
 
 nav.main .help_button .help_icon {
@@ -633,7 +643,7 @@ nav.main .help_button .help_icon {
 }
 
 nav.main .help_button .help_contents {
-  top: 40px;
+  top: 44px;
 }
 
 nav.main #hamburger #hamburger-icon {
@@ -642,7 +652,7 @@ nav.main #hamburger #hamburger-icon {
 }
 
 nav.main #hamburger #hamburger-contents {
-  top: 42px;
+  top: 51px;
   right: -3px;
 }
 
@@ -671,7 +681,7 @@ html[dir="rtl"] nav.main #hamburger #hamburger-contents {
 
   /* But show the hamburger link */
   nav.main #hamburger-contents > div.show-small-desktop {
-    display: flex !important;
+    display: block !important;
   }
 
   /* But not the mobile ones */
@@ -688,7 +698,7 @@ html[dir="rtl"] nav.main #hamburger #hamburger-contents {
 
   /* But show the hamburger links */
   nav.main #hamburger-contents > div.show-mobile {
-    display: flex !important;
+    display: block !important;
   }
 }
 

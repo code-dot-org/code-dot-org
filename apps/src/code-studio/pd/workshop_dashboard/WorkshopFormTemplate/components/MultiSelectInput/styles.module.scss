@@ -80,13 +80,6 @@
     overflow-y: auto;
     background-color: var(--background-neutral-primary);
     padding: 0.25rem 0;
-    margin: 0;
-
-    &:not(.keyboardNav) {
-      .option:hover {
-        background-color: var(--background-neutral-tertiary);
-      }
-    }
 
     .option {
       cursor: pointer;
@@ -96,11 +89,9 @@
       align-items: center;
       position: relative;
 
-      &:focus-visible,
-      &.focused {
+      &:focus-visible {
         @include focus-styles;
         outline-offset: -2px;
-        background-color: var(--background-neutral-tertiary);
       }
 
       .optionLabelText {
@@ -114,6 +105,11 @@
             color: var(--text-neutral-secondary);
           }
         }
+      }
+
+      &:hover,
+      &.hover {
+        background-color: var(--background-neutral-tertiary);
       }
     }
 

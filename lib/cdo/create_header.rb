@@ -16,33 +16,23 @@ class CreateHeader
     minecraft_aquatic: {
       image: "logo_minecraft_aquatic_square.jpg"
     },
-    spritelab: {
-      image: "header-sprite-lab-icon.png"
-    },
-    artist: {
-      image: "header-artist-icon.png"
-    },
     applab: {
-      image: "header-app-lab-icon.png"
+      image: "logo_applab_square.png"
     },
     gamelab: {
-      image: "header-game-lab-icon.png"
+      image: "logo_gamelab_square.png"
     },
     playlab_k1: {
       image: "logo_playlab.png"
     },
     artist_k1: {
-      image: "header-artist-icon.png"
+      image: "logo_artist.png"
     },
     poetry_hoc: {
       image: "logo_poetry.png"
     },
     music: {
-      image: "header-music-lab-icon.png",
       url: CDO.code_org_url("/music")
-    },
-    dance: {
-      image: "header-dance-party-icon.png"
     },
   }.freeze
 
@@ -68,8 +58,8 @@ class CreateHeader
       everyone_entries + ["minecraft_designer"] :
       everyone_entries + applab_gamelab
 
-    entries << "music"
     entries << "dance"
+    entries << "music"
 
     if options[:project_type] && !(entries.include? options[:project_type])
       entries.unshift(options[:project_type])

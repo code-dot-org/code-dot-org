@@ -16,8 +16,6 @@ import i18n from '@cdo/locale';
 
 import {getSessionDate, getSessionTimes} from '../sessionDateUtils';
 
-import {sessionCalendarShape} from './workshop_enroll';
-
 import style from '@cdo/apps/code-studio/pd/professional_learning/landingPage.module.scss';
 
 const CelebrationImage = require('@cdo/static/pd/EnrollmentCelebration.png');
@@ -53,38 +51,11 @@ export const getStartAndEndUTCStrings = ({session, format}) => {
   return {startTime, endTime};
 };
 
-export const getLocationAndDescriptionFromSession = session => {
-  let description = '';
-  let location = '';
-  if (session.session_format === 'in_person') {
-    location = [session.location_name, session.location_address]
-      .filter(Boolean)
-      .join(', ');
-  }
-  if (session.session_format === 'virtual' && session.meeting_link) {
-    location = `Virtual meeting: ${session.meeting_link}`;
-    description = session.meeting_link;
-  }
-  const newline = '\n';
-  const doubleNewline = '\n\n';
-  if (session.notes) {
-    description += doubleNewline;
-    description += 'Attendee notes:';
-    description += newline;
-    description += session.notes;
-  }
-  if (session.description) {
-    description += doubleNewline;
-    description += 'Description:';
-    description += newline;
-    description += session.description;
-  }
-  description = description.trim();
-  location = location.trim();
-  return {location, description};
-};
-
-export const buildAppleCalendarLink = (workshopSessions, workshopTitle) => {
+export const buildAppleCalendarLink = (
+  workshopSessions,
+  workshopTitle,
+  workshopLocation
+) => {
   const format = 'YYYYMMDDTHHmmss';
   const [firstSession] = workshopSessions;
   const {startTime: firstSessionStart} = getStartAndEndUTCStrings({
@@ -104,9 +75,6 @@ export const buildAppleCalendarLink = (workshopSessions, workshopTitle) => {
       format,
     });
 
-    const {location, description} =
-      getLocationAndDescriptionFromSession(session);
-
     icsFileContent.push(
       'BEGIN:VEVENT',
       `DTSTAMP:${startTime}`,
@@ -114,8 +82,7 @@ export const buildAppleCalendarLink = (workshopSessions, workshopTitle) => {
       `DTSTART:${startTime}`,
       `DTEND:${endTime}`,
       `SUMMARY:${workshopTitle}`,
-      `LOCATION:${location}`,
-      `DESCRIPTION:${description}`,
+      `LOCATION:${workshopLocation}`,
       'END:VEVENT'
     );
   });
@@ -129,27 +96,31 @@ export const buildAppleCalendarLink = (workshopSessions, workshopTitle) => {
   return URL.createObjectURL(blob);
 };
 
-export const buildGoogleCalendarLink = (session, workshopTitle) => {
+export const buildGoogleCalendarLink = (
+  session,
+  workshopTitle,
+  workshopLocation
+) => {
   const baseUrl = 'https://www.google.com/calendar/render?action=TEMPLATE';
   const format = 'YYYYMMDDTHHmmss';
   const {startTime, endTime} = getStartAndEndUTCStrings({
     session,
     format,
   });
-
-  const {location, description} = getLocationAndDescriptionFromSession(session);
-
   const params = new URLSearchParams({
     text: workshopTitle,
     dates: `${startTime}/${endTime}`,
-    location,
-    details: description,
+    location: workshopLocation,
   });
 
   return `${baseUrl}&${params.toString()}`;
 };
 
-export const buildOutlookCalendarLink = (session, workshopTitle) => {
+export const buildOutlookCalendarLink = (
+  session,
+  workshopTitle,
+  workshopLocation
+) => {
   const baseUrl =
     'https://outlook.live.com/calendar/action/compose?rru=addevent';
   const format = 'YYYY-MM-DDTHH:mm:ss';
@@ -157,13 +128,9 @@ export const buildOutlookCalendarLink = (session, workshopTitle) => {
     session,
     format,
   });
-
-  const {location, description} = getLocationAndDescriptionFromSession(session);
-
   const params = new URLSearchParams({
     subject: workshopTitle,
-    location,
-    body: description.replace(/\n/g, '<br>'),
+    location: workshopLocation,
     startdt: startTime,
     enddt: endTime,
   });
@@ -173,6 +140,7 @@ export const buildOutlookCalendarLink = (session, workshopTitle) => {
 
 export default function WorkshopEnrollmentCelebrationDialog({
   workshopTitle,
+  workshopLocation,
   workshopSessionInfo,
   onClose,
 }) {
@@ -196,11 +164,11 @@ export default function WorkshopEnrollmentCelebrationDialog({
 
   const getCalendarLink = (session, calendarType) => {
     if (calendarType === 'Google') {
-      return buildGoogleCalendarLink(session, workshopTitle);
+      return buildGoogleCalendarLink(session, workshopTitle, workshopLocation);
     } else if (calendarType === 'Outlook') {
-      return buildOutlookCalendarLink(session, workshopTitle);
+      return buildOutlookCalendarLink(session, workshopTitle, workshopLocation);
     } else if (calendarType === 'Apple') {
-      return buildAppleCalendarLink(session, workshopTitle);
+      return buildAppleCalendarLink(session, workshopTitle, workshopLocation);
     }
   };
 
@@ -413,6 +381,13 @@ export default function WorkshopEnrollmentCelebrationDialog({
 
 WorkshopEnrollmentCelebrationDialog.propTypes = {
   workshopTitle: PropTypes.string,
-  workshopSessionInfo: PropTypes.arrayOf(sessionCalendarShape),
+  workshopLocation: PropTypes.string,
+  workshopSessionInfo: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      start: PropTypes.string.isRequired,
+      end: PropTypes.string.isRequired,
+    })
+  ),
   onClose: PropTypes.func,
 };

@@ -3,7 +3,7 @@ import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 export const SkinnyBannerContentfulComponentDefinition: ComponentDefinition = {
   id: 'skinnyBanner',
   name: 'Skinny Banner',
-  category: '01: Page Sections',
+  category: '04: Advanced',
   thumbnailUrl:
     'https://images.ctfassets.net/90t6bu6vlf76/6haDMlmkFkctoCi0z33L1D/33facc2c4dedef85e2a3a24368e6e043/c75b6c340ecf8b29cb58b71615c35e0a7289bb16.png',
   tooltip: {
@@ -32,7 +32,6 @@ export const SkinnyBannerContentfulComponentDefinition: ComponentDefinition = {
       displayName: 'Heading',
       type: 'Text',
       group: 'content',
-      defaultValue: 'Skinny Banner heading goes here',
       validations: {
         required: true,
         bindingSourceType: ['entry', 'manual'],
@@ -42,31 +41,22 @@ export const SkinnyBannerContentfulComponentDefinition: ComponentDefinition = {
       displayName: 'Description',
       type: 'Text',
       group: 'content',
-      defaultValue: 'Skinny Banner description goes here.',
       validations: {
         bindingSourceType: ['entry', 'manual'],
       },
     },
-    sectionImages: {
+    sectionImage: {
       displayName: 'Section Image',
-      type: 'Array',
-      group: 'content',
-      validations: {
-        bindingSourceType: ['entry'],
-        required: true,
-      },
-    },
-    backgroundImage: {
-      displayName: 'Section Background Image',
       type: 'Media',
       group: 'content',
       validations: {
-        bindingSourceType: ['asset'],
+        bindingSourceType: ['entry', 'asset'],
+        required: true,
       },
     },
-    buttonLinks: {
-      displayName: 'Primary Button',
-      type: 'Array',
+    buttonLink: {
+      displayName: 'Button Link',
+      type: 'Link',
       group: 'content',
       description:
         'This is the link that will be used in the button. This should be a link entry.',
@@ -74,16 +64,24 @@ export const SkinnyBannerContentfulComponentDefinition: ComponentDefinition = {
         bindingSourceType: ['entry'],
       },
     },
+    partnerLogo: {
+      displayName: 'Partner Logo',
+      type: 'Media',
+      group: 'content',
+      validations: {
+        bindingSourceType: ['asset'],
+      },
+    },
     partnerCallout: {
-      displayName: 'Partner Callout Text',
+      displayName: 'Partner Callout',
       type: 'Text',
       group: 'content',
       validations: {
         bindingSourceType: ['entry', 'manual'],
       },
     },
-    partnerLogo: {
-      displayName: 'Partner Logo',
+    backgroundImage: {
+      displayName: 'Background Image',
       type: 'Media',
       group: 'content',
       validations: {

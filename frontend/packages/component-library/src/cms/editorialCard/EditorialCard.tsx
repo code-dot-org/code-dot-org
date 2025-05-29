@@ -50,7 +50,7 @@ const EditorialCard: React.FC<EditorialCardProps> = ({
   layout = EDITORIAL_CARD_LAYOUTS.HORIZONTAL,
   ...HTMLAttributes
 }) => (
-  <div
+  <aside
     {...HTMLAttributes}
     className={classNames(
       moduleStyles.editorialCard,
@@ -102,10 +102,18 @@ const EditorialCard: React.FC<EditorialCardProps> = ({
           size="s"
         >
           {link.text}
+          {link.external && (
+            <FontAwesomeV6Icon
+              iconName="up-right-from-square"
+              iconStyle="solid"
+              role="img"
+              aria-label="external link"
+            />
+          )}
         </Link>
       )}
     </div>
-  </div>
+  </aside>
 );
 
 export default EditorialCard;

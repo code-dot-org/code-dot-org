@@ -242,7 +242,6 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
   'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
   'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',
 
-  'pd/workshops/index': './src/sites/studio/pages/pd/workshops/index.js',
   'pd/workshop_dashboard/index': './src/sites/studio/pages/pd/workshop_dashboard/index.js',
   'pd/pre_workshop_survey/new': './src/sites/studio/pages/pd/pre_workshop_survey/new.js',
   'pd/teachercon_survey/new': './src/sites/studio/pages/pd/teachercon_survey/new.js',

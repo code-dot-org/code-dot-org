@@ -98,7 +98,6 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 100%;
 
     > div,
     input,
@@ -118,12 +117,6 @@
       }
     }
 
-    &.textField {
-      input {
-        height: 2rem;
-      }
-    }
-
     &.customDropdown {
       gap: 0.125rem;
       width: 100%;
@@ -134,15 +127,10 @@
         }
       }
 
-      div:first-of-type,
-      div:last-of-type {
-        margin: 0;
-      }
-
       div:nth-of-type(2) {
-        top: 70%;
+        top: 100%;
         padding: 0;
-        box-sizing: border-box;
+        margin-top: 4px;
       }
 
       > button {

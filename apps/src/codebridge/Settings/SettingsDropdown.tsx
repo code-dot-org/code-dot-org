@@ -1,5 +1,4 @@
 import CloseButton from '@code-dot-org/component-library/closeButton';
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import SimpleDropdown, {
   SimpleDropdownProps,
 } from '@code-dot-org/component-library/dropdown/simpleDropdown';
@@ -72,10 +71,6 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
   const {levelProperties} = useCodebridgeContext();
   const appName = levelProperties.appName;
 
-  // We need to set the theme here becausse the dropdown is rendered in a portal, outside of the
-  // main lab container.
-  const {theme} = useTheme();
-
   const dispatch = useAppDispatch();
   const [selectedEditorFontSizeValue, setSelectedEditorFontSizeValue] =
     useState(currentEditorFontSizeKey);
@@ -147,7 +142,7 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
         style={dropdownStyles}
         aria-modal="true"
         aria-label={commonI18n.settings()}
-        data-theme={theme}
+        data-theme="Dark"
       >
         <div className={moduleStyles.header}>
           <Heading6 className={moduleStyles.heading}>

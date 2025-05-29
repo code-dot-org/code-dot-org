@@ -1,4 +1,5 @@
 import {GoogleAnalytics} from '@next/third-parties/google';
+import {PublicEnvScript} from 'next-runtime-env';
 
 import Footer from '@/components/footer';
 import Header from '@/components/header';
@@ -6,8 +7,6 @@ import {Brand} from '@/config/brand';
 import {getGoogleAnalyticsMeasurementId} from '@/config/ga4';
 import OrganizationJsonLd from '@/config/jsonLd/OrganizationJsonLd';
 import {getStage} from '@/config/stage';
-import EnvironmentLoader from '@/providers/environment';
-import NewRelicLoader from '@/providers/newrelic/NewRelicLoader';
 import OneTrustLoader from '@/providers/onetrust/OneTrustLoader';
 import OneTrustProvider from '@/providers/onetrust/OneTrustProvider';
 import {generateBootstrapValues} from '@/providers/statsig/statsig-backend';
@@ -34,8 +33,7 @@ export default async function Layout({
 
   return (
     <>
-      <EnvironmentLoader />
-      <NewRelicLoader />
+      <PublicEnvScript disableNextScript={true} />
       <OneTrustLoader brand={brand} />
 
       <OneTrustProvider>

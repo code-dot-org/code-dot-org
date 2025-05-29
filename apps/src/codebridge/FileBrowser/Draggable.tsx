@@ -19,7 +19,6 @@ type DraggableProps = {
   data: DragDataType;
   Component?: keyof JSX.IntrinsicElements;
   className?: string;
-  onKeyDown?: (event: React.KeyboardEvent) => void;
 };
 
 /**
@@ -38,7 +37,6 @@ export const Draggable: React.FunctionComponent<DraggableProps> = ({
   data,
   Component = 'div',
   className,
-  onKeyDown,
 }: DraggableProps) => {
   const draggableId = `${data.type}-${data.id}-draggable`;
   const {attributes, listeners, setNodeRef, transform} = useDraggable({
@@ -51,19 +49,6 @@ export const Draggable: React.FunctionComponent<DraggableProps> = ({
       }
     : undefined;
 
-  // Call the provided onKeyDown function if it exists,
-  // then call the listeners.onKeyDown function if it exists.
-  // This allows for custom keyboard handling while still
-  // allowing the default keyboard handling provided by dnd-kit.
-  const handleKeyDown = (event: React.KeyboardEvent) => {
-    if (onKeyDown) {
-      onKeyDown(event);
-    }
-    if (listeners?.onKeyDown) {
-      listeners?.onKeyDown(event);
-    }
-  };
-
   return React.createElement(
     Component,
     {
@@ -72,31 +57,17 @@ export const Draggable: React.FunctionComponent<DraggableProps> = ({
       className: classNames(moduleStyles.draggable, className),
       ...listeners,
       ...attributes,
-      onKeyDown: handleKeyDown,
     },
     children
   );
 };
 
-type NotDraggableProps = {
-  children: React.ReactNode;
-  onKeyDown?: (event: React.KeyboardEvent) => void;
-};
-
-export const NotDraggable: React.FunctionComponent<NotDraggableProps> = ({
+export const NotDraggable: React.FunctionComponent<DraggableProps> = ({
   children,
-  onKeyDown,
-}: NotDraggableProps) => {
-  const handleKeyDown = (event: React.KeyboardEvent) => {
-    if (onKeyDown) {
-      onKeyDown(event);
-    }
-  };
-
+}) => {
   return React.createElement(
     'div',
     {
-      onKeyDown: handleKeyDown,
       className: moduleStyles.notDraggable,
       tabIndex: 0,
       role: 'button',

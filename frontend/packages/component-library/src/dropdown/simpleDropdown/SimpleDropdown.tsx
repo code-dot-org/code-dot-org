@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import {SelectHTMLAttributes} from 'react';
+import {HTMLAttributes} from 'react';
 
 import {
   ComponentSizeXSToL,
@@ -11,7 +11,7 @@ import moduleStyles from './simpleDropdown.module.scss';
 
 export interface SimpleDropdownProps
   extends DropdownFormFieldRelatedProps,
-    Omit<SelectHTMLAttributes<HTMLSelectElement>, 'size'> {
+    HTMLAttributes<HTMLSelectElement> {
   /** SimpleDropdown items list */
   items?: {value: string; text: string}[];
   /** SimpleDropdown grouped list of items */

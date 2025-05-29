@@ -32,7 +32,6 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
     <div
       className={classNames(
         moduleStyles[`message-container-${role}`],
-        customStyles && customStyles[`message-container-${role}`],
         'uitest-chat-message'
       )}
     >

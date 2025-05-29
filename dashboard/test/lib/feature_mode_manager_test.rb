@@ -37,7 +37,6 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
   end
 
   def test_get_mode_returns_nil_if_hoc_gatekeeper_property_does_not_match
-    skip 'enable when we re enable CACHED_UNITS_MAP'
     FeatureModeManager.set_mode('normal', @gatekeeper, @dcdo, HOC_UNITS, CSF_UNITS)
     @gatekeeper.set('postMilestone', where: {script_name: HOC_UNIT}, value: false)
     assert_nil FeatureModeManager.get_mode(@gatekeeper, @dcdo, HOC_UNITS, CSF_UNITS)
@@ -77,7 +76,6 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
   end
 
   def test_allows
-    skip 'enable when we re enable CACHED_UNITS_MAP'
     FeatureModeManager.set_mode('normal', @gatekeeper, @dcdo, HOC_UNITS, CSF_UNITS)
 
     assert FeatureModeManager.allows(@gatekeeper, 'normal', 'postMilestone', HOC_UNIT)

@@ -1,15 +1,15 @@
-@import '@code-dot-org/component-library-styles/colors.scss';
+@import 'color';
 
 .infoPanel {
   white-space: pre-wrap;
   width: 100%;
-  color: var(--text-neutral-primary);
-  background-color: var(--background-neutral-primary);
+  color: $white;
+  background-color: $light_black;
   overflow: hidden;
 }
 
 .infoPanelHeader {
-  border-bottom: 1px solid var(--borders-neutral-primary);
+  border-bottom: 1px solid $light_gray_800;
   margin-bottom: 0;
 }
 
@@ -24,7 +24,7 @@
   float: left;
   margin: 0.25rem 0;
   list-style: none;
-  background-color: var(--background-neutral-secondary);
+  background-color: $dark_gray;
   border: 1px solid rgba(0 0 0 / 0.15);
   border-radius: 4px;
   -webkit-box-shadow: 0 6px 12px rgba(0 0 0 / 0.175);
@@ -60,7 +60,7 @@
         cursor: pointer;
 
         &:focus-visible {
-          outline: 2px solid var(--borders-brand-teal-primary);
+          outline: 2px solid $light_primary_500;
           outline-offset: -2px;
         }
 

@@ -40,7 +40,7 @@ export const procedureDefMutator = {
     for (let i = 0; i < params.length; i++) {
       const parameter = Blockly.utils.xml.createElement('arg');
       const varModel = params[i].getVariableModel();
-      parameter.setAttribute('name', varModel.getName());
+      parameter.setAttribute('name', varModel.name);
       parameter.setAttribute('varid', varModel.getId());
       container.appendChild(parameter);
     }
@@ -121,11 +121,7 @@ export const procedureDefMutator = {
     state['invisible'] = this.invisible;
 
     if (doFullSerialization) {
-      // If fullSerialization is not true, the system will reuse an existing procedure model by ID.
-      // This is necessary for the modal function editor.
-      // If fullSerialization is true, it will instead use the model created at block instantiation.
-      // This is necessary for single-workspace labs so that multiple functions do not share the same model.
-      state['fullSerialization'] = !Blockly.useModalFunctionEditor;
+      state['fullSerialization'] = true;
       const params =
         this.getProcedureModel().getParameters() as ObservableParameterModel[];
 

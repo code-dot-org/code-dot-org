@@ -93,15 +93,11 @@
       gap: 0.5rem;
 
       li {
-        max-width: 11rem;
+        width: fit-content;
         height: 2.4253rem;
 
         .footerImageLinkListImg {
           display: contents;
-
-          img {
-            object-fit: contain;
-          }
         }
       }
     }

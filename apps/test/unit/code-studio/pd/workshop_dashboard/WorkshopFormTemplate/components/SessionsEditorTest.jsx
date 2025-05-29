@@ -3,7 +3,6 @@ import userEvent from '@testing-library/user-event';
 import moment from 'moment-timezone';
 import PropTypes from 'prop-types';
 import React, {useReducer} from 'react';
-import {Provider} from 'react-redux';
 
 import {
   DATE_FORMAT,
@@ -20,10 +19,6 @@ import {WorkshopCourseConfigs} from '@cdo/apps/generated/pd/sharedWorkshopConsta
 const config = WorkshopCourseConfigs.find(
   ({slug}) => slug === 'build_your_own_workshop'
 );
-
-// mock redux store
-const initialState = {mapbox: {mapboxAccessToken: 'test-token'}};
-const store = {getState: () => initialState, subscribe: () => {}};
 
 describe('generateNewSession', () => {
   const newIdRegex = /^new-\d+-\w+$/;
@@ -87,31 +82,32 @@ describe('SessionsEditor', () => {
   ];
   const user = userEvent.setup();
 
-  const renderDefault = (props = {}) =>
-    render(
-      <Provider store={store}>
-        <SessionsEditor
-          sessions={initialSessions}
-          dispatchSessions={mockDispatchSessions}
-          errors={{}}
-          fields={config.session_fields}
-          {...props}
-        />
-      </Provider>
-    );
-
   beforeEach(() => {
     mockDispatchSessions.mockClear();
   });
 
   it('renders', () => {
-    renderDefault();
+    render(
+      <SessionsEditor
+        sessions={initialSessions}
+        dispatchSessions={mockDispatchSessions}
+        errors={{}}
+        fields={config.session_fields}
+      />
+    );
 
     expect(screen.getByText('Add Date')).toBeInTheDocument();
   });
 
   it('adds a new session when "Add Date" is clicked', async () => {
-    renderDefault();
+    render(
+      <SessionsEditor
+        sessions={initialSessions}
+        dispatchSessions={mockDispatchSessions}
+        errors={{}}
+        fields={config.session_fields}
+      />
+    );
 
     const addButton = screen.getByText('Add Date');
     await user.click(addButton);
@@ -125,7 +121,14 @@ describe('SessionsEditor', () => {
   });
 
   it('does not allow deleting the last session', async () => {
-    renderDefault();
+    render(
+      <SessionsEditor
+        sessions={initialSessions}
+        dispatchSessions={mockDispatchSessions}
+        errors={{}}
+        fields={config.session_fields}
+      />
+    );
 
     const [firstSessionDeleteButton] = screen.getAllByRole('button', {
       name: 'delete workshop session',
@@ -139,21 +142,26 @@ describe('SessionsEditor', () => {
   });
 
   it('allows deleting any but the last session', async () => {
-    renderDefault({
-      sessions: [
-        ...initialSessions,
-        {
-          id: 'new-456-def',
-          date: '2025-03-29',
-          start: '8:00am',
-          end: '5:00pm',
-          locationAddress: '123 Main St',
-          locationName: 'Test Location',
-          meetingLink: '',
-          format: 'in_person',
-        },
-      ],
-    });
+    render(
+      <SessionsEditor
+        sessions={[
+          ...initialSessions,
+          {
+            id: 'new-456-def',
+            date: '2025-03-29',
+            start: '8:00am',
+            end: '5:00pm',
+            locationAddress: '123 Main St',
+            locationName: 'Test Location',
+            meetingLink: '',
+            format: 'in_person',
+          },
+        ]}
+        dispatchSessions={mockDispatchSessions}
+        errors={{}}
+        fields={config.session_fields}
+      />
+    );
 
     const [firstSessionDeleteButton] = screen.getAllByRole('button', {
       name: 'delete workshop session',
@@ -190,15 +198,13 @@ describe('SessionPart', () => {
     ]);
     if (!sessions.length) return null;
     return (
-      <Provider store={store}>
-        <SessionPart
-          fields={config.session_fields}
-          dispatchSessions={dispatchSessions.mockImplementation(dispatch)}
-          index={0}
-          {...props}
-          {...sessions[0]}
-        />
-      </Provider>
+      <SessionPart
+        fields={config.session_fields}
+        dispatchSessions={dispatchSessions.mockImplementation(dispatch)}
+        index={0}
+        {...props}
+        {...sessions[0]}
+      />
     );
   };
   SessionPartWithState.propTypes = {

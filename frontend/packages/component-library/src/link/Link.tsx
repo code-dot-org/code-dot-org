@@ -1,9 +1,7 @@
 import classNames from 'classnames';
 import {HTMLAttributes} from 'react';
 
-import {externalLinkIconProps} from '@/common/constants';
 import {ComponentSizeXSToL} from '@/common/types';
-import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
 import moduleStyles from './link.module.scss';
 
@@ -90,7 +88,6 @@ const Link: React.FunctionComponent<LinkProps> = ({
     {...HTMLAttributes}
   >
     {text || children}
-    {external && <FontAwesomeV6Icon {...externalLinkIconProps} />}
   </a>
 );
 

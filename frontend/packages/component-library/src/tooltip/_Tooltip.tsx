@@ -26,8 +26,6 @@ export interface TooltipProps extends HTMLAttributes<HTMLDivElement> {
   size?: ComponentSizeXSToL;
   /** Tooltip custom styles (used for positioning the tooltip on the go) */
   style?: React.CSSProperties;
-  /** Hides the tooltip's tail (arrow). Defaults to false. */
-  hideTail?: boolean;
 }
 
 export interface TooltipOverlayProps {
@@ -73,7 +71,6 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
       className,
       size = 'm',
       style = {},
-      hideTail = false,
       ...HTMLAttributes
     },
     ref,
@@ -87,7 +84,6 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
           moduleStyles.tooltip,
           moduleStyles[`tooltip-${direction}`],
           moduleStyles[`tooltip-${size}`],
-          hideTail && moduleStyles.noTail,
           className,
         )}
         style={style}

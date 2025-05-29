@@ -2,8 +2,6 @@
 @no_mobile
 Feature: Courses page
 
-# Broke during the marketing-sites transition
-@skip
 @as_student
 Scenario: Student courses
   Given I am on "http://studio.code.org/home"
@@ -26,8 +24,6 @@ Scenario: Teacher courses
   And I see no difference for "teacher courses page"
   And I close my eyes
 
-# Broke during the marketing-sites transition
-@skip
 @as_student
 Scenario: Student courses, non-english
   When I open my eyes to test "student courses non-english"
@@ -40,8 +36,6 @@ Scenario: Student courses, non-english
   And I see no difference for "student non-english courses page"
   And I close my eyes
 
-# Broke during the marketing-sites transition
-@skip
 Scenario: Signed out courses, learn
   When I open my eyes to test "signed out courses, learn"
   Given I am on "http://code.org/"
@@ -53,8 +47,6 @@ Scenario: Signed out courses, learn
   And I see no difference for "signed-out courses page, learn"
   And I close my eyes
 
-# Broke during the marketing-sites transition
-@skip
 Scenario: Signed out courses, teach
   When I open my eyes to test "signed out courses, teach"
   Given I am on "http://code.org/"
@@ -66,8 +58,6 @@ Scenario: Signed out courses, teach
   And I see no difference for "signed-out courses page, teach"
   And I close my eyes
 
-# Broke during the marketing-sites transition
-@skip
 Scenario: Signed out courses, non-english
   When I open my eyes to test "signed out courses, non-english"
   Given I am on "http://studio.code.org/home/lang/es"

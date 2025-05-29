@@ -23,20 +23,28 @@ import {
 } from '@cdo/apps/templates/currentUserRedux';
 import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
 import LessonOverview from '@cdo/apps/templates/lessonOverview/LessonOverview';
-import {prepareBlocklyForEmbeddingAllEnvironments} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
+import {prepareBlocklyForEmbedding} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
 import experiments from '@cdo/apps/util/experiments';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
 import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 $(document).ready(function () {
-  prepareBlocklyForEmbeddingAllEnvironments();
+  prepareBlockly();
   displayLessonOverview();
   prepareExpandableImageDialog();
   tooltipifyVocabulary();
   displayDifferentiationChat();
   renderCopyLessonButton();
 });
+
+function prepareBlockly() {
+  const customBlocksConfig = getScriptData('customBlocksConfig');
+  if (!customBlocksConfig) {
+    return;
+  }
+  prepareBlocklyForEmbedding(customBlocksConfig);
+}
 
 /**
  * Collect and preprocess all data for the lesson and its activities, and
@@ -146,10 +154,8 @@ function displayDifferentiationChat() {
     ReactDOM.render(
       <Provider store={getStore()}>
         <AiDiffFloatingActionButton
-          context={{
-            type: AiDiffContext.LESSON,
-            lessonId: lessonId,
-          }}
+          context={AiDiffContext.LESSON}
+          scriptId={lessonId}
           scriptName={lessonName}
           unitDisplayName={lessonData['unit']['displayName']}
         />

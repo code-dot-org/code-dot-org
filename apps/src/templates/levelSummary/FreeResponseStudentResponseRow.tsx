@@ -5,7 +5,7 @@ import React, {useState} from 'react';
 import {StudentWorkEvaluation} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import {
   FeedbackData,
-  logAiInteractionFeedback as logUserFeedbackOnStudentEvaluation,
+  logUserFeedbackOnStudentEvaluation,
 } from '@cdo/apps/aiEvaluation/aiInteractionFeedbackApi';
 
 import AiEvaluationFeedbackModal from './AiEvaluationFeedbackModal';

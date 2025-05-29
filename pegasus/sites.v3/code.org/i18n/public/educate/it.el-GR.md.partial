@@ -65,51 +65,52 @@ theme: responsive
         </tr>
       </table>
     </td>
-    <!-- "coming soon" system requirements, to be updated and made live from March through July. -->
+    <!-- "coming soon" system requirements, to be updated and made live from March through July.
     <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          Πρόγραμμα περιήγησης Ιούλιος '25
+          Browser July '25
         </th>
         <tr>
-          <td>Χρώμιο 109</td>
+          <td>Chrome 103.x</td>
         </tr>
         <tr>
-          <td>Σαφάρι 16.6</td>
+          <td>Safari 14.x</td>
         </tr>
         <tr>
-          <td>Σαφάρι για κινητά 16</td>
+          <td>Mobile Safari 14.x</td>
         </tr>
         <tr>
-          <td>Άκρη 128</td>
+          <td>Edge 119.x</td>
         </tr>
         <tr>
-          <td>Φάφοξ 115</td>
+          <td>Firefox 98.x</td>
         </tr>
       </table>
     </td>
     <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
       <table>
         <th>
-          Πλατφόρμα Ιουλίου '25
+          Platform July '25
         </th>
         <tr>
           <td>macOS 10.15</td>
         </tr>
         <tr>
-          <td>iOS 16.x</td>
+          <td>iOS 15.x</td>
         </tr>
         <tr>
-          <td>Παράθυρα 10</td>
+          <td>Windows 8</td>
         </tr>
         <tr>
-          <td>Ανδροειδές 8</td>
+          <td>Android 8.x</td>
         </tr>
         <tr>
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
     </td>
+    -->
   </tr>
 </table>
 
@@ -148,6 +149,7 @@ theme: responsive
 ### Can you play this video?
 
 Πριν ξεκινήσετε τα διαδικτυακά μαθήματα του Code.org, δοκιμάστε την αναπαραγωγή για το παρακάτω βίντεο για να βεβαιωθείτε ότι είστε έτοιμοι.
+
 
 <!--
 The following HTML is a copy of video_with_fallback.haml. once this file can be converted to

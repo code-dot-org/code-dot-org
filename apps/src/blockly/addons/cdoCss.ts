@@ -4,22 +4,25 @@ import color from '@cdo/apps/util/color';
 import {BlocklyWrapperType} from '../types';
 export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
   blocklyWrapper.Css.register(
-    `.blocklyFieldGrid {
-      margin: 5px;
-    }
-    .blocklyFieldGrid .blocklyFieldGridItem {
-      border: none;
+    `.fieldGridDropDownContainer.blocklyMenu .blocklyMenuItem {
       padding: 0px;
-      margin: 0px;
+      border: none;
     }
-    .blocklyFieldGrid .blocklyFieldGridItem img {
-      opacity: 1;
+    .fieldGridDropDownContainer .blocklyMenuItem.blocklyMenuItemSelected {
+      background-color: white;
+    }
+    /* A special class for image dropdown fields with all-white images */
+    .transparentContainer .blocklyMenuItem.blocklyMenuItemSelected {
+      background-color: rgba(1, 1, 1, 0.25);
+    }
+    /* Change look of focus/highlighted cell */
+    .fieldGridDropDownContainer .blocklyMenuItem.blocklyMenuItemHighlight {
+      box-shadow: 0 0 0 4px hsla(0.57, 10%, 34%, .2);
+    }
+    .blocklyMenuItemContent > img {
       object-fit: contain;
     }
-    .blocklyFieldGridContainer {
-      padding: 0px;
-      overflow: auto;
-    }
+
     .blocklyFlyoutButton {
       fill: ${color.brand_secondary_default};
       cursor: pointer;
@@ -51,6 +54,7 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
       fill: ${color.neutral_dark} !important;
     }
     .fieldAngleDropDownContainer .blocklyAngleHelperContainer {
+      box-shadow: 4px 4px 6px #bbb;
       border-width: 1px;
       float: right;
     }
@@ -59,6 +63,7 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     }
     .fieldAngleDropDownContainer .blocklyMenu::after {
       content: '';
+      border-left: 1px solid #949ca2;
       position: absolute;
       height: 80%;
       right: 0;
@@ -80,13 +85,6 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     }
     .blocklyShadowMusicFieldRect {
       fill: ${color.neutral_dark};
-    }
-    .blocklyDisabled .blocklyPath {
-      fill-opacity: 0.5;
-      stroke-opacity: 0.5;
-    }
-    .blocklyPath:focus {
-      outline: none;
     }
     `
   );

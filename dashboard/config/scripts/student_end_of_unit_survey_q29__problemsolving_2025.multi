@@ -1,12 +1,11 @@
 name 'student-end-of-unit-survey-q29_-problemsolving_2025'
 
-question 'My teacher gave me feedback on my work.'
+question 'I collaborated often with peers in activities.'
 
-right 'Never'
+right 'Most of the activities'
+right 'Most of the projects or larger activities'
 right 'Occasionally'
-right 'About half of the lessons'
-right 'Most of the lessons'
-right 'Almost every lesson'
+right 'Never'
 
 allow_multiple_attempts true
 

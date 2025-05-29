@@ -1,4 +1,3 @@
-import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
 import {render, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
@@ -29,7 +28,7 @@ const SAMPLE_VERSION_LIST: ProjectVersion[] = [
   {versionId: '3', lastModified: '2025-02-25T18:11:10.000Z', isLatest: true},
 ];
 
-describe('VersionHistoryDropdown', () => {
+describe('VersionHistoryButton', () => {
   let store: Store;
   const closeDropdown = jest.fn();
   const setSelectedVersion = jest.fn();
@@ -59,20 +58,18 @@ describe('VersionHistoryDropdown', () => {
   function renderDefault() {
     return render(
       <Provider store={store}>
-        <ThemeProvider>
-          <VersionHistoryDropdown
-            versionList={SAMPLE_VERSION_LIST}
-            startSources={{source: ''}}
-            closeDropdown={closeDropdown}
-            listLoaded={true}
-            buttonRef={{} as jest.Mocked<React.RefObject<HTMLDivElement>>}
-            listLoading={false}
-            listLoadError={false}
-            selectedVersion={'abc'}
-            setSelectedVersion={setSelectedVersion}
-            appName={'pythonlab'}
-          />
-        </ThemeProvider>
+        <VersionHistoryDropdown
+          versionList={SAMPLE_VERSION_LIST}
+          startSources={{source: ''}}
+          closeDropdown={closeDropdown}
+          listLoaded={true}
+          buttonRef={{} as jest.Mocked<React.RefObject<HTMLDivElement>>}
+          listLoading={false}
+          listLoadError={false}
+          selectedVersion={'abc'}
+          setSelectedVersion={setSelectedVersion}
+          appName={'pythonlab'}
+        />
       </Provider>
     );
   }
@@ -98,20 +95,18 @@ describe('VersionHistoryDropdown', () => {
 
     const {getByDisplayValue} = render(
       <Provider store={store}>
-        <ThemeProvider>
-          <VersionHistoryDropdown
-            versionList={SAMPLE_VERSION_LIST}
-            startSources={{source: ''}}
-            closeDropdown={closeDropdown}
-            listLoaded={true}
-            buttonRef={{} as jest.Mocked<React.RefObject<HTMLDivElement>>}
-            listLoading={false}
-            listLoadError={false}
-            selectedVersion={'2'}
-            setSelectedVersion={setSelectedVersion}
-            appName={'pythonlab'}
-          />
-        </ThemeProvider>
+        <VersionHistoryDropdown
+          versionList={SAMPLE_VERSION_LIST}
+          startSources={{source: ''}}
+          closeDropdown={closeDropdown}
+          listLoaded={true}
+          buttonRef={{} as jest.Mocked<React.RefObject<HTMLDivElement>>}
+          listLoading={false}
+          listLoadError={false}
+          selectedVersion={'2'}
+          setSelectedVersion={setSelectedVersion}
+          appName={'pythonlab'}
+        />
       </Provider>
     );
 
@@ -140,20 +135,18 @@ describe('VersionHistoryDropdown', () => {
   it('disables restore button when initial version is latest', () => {
     const {getByRole} = render(
       <Provider store={store}>
-        <ThemeProvider>
-          <VersionHistoryDropdown
-            versionList={[]}
-            startSources={{source: ''}}
-            closeDropdown={closeDropdown}
-            listLoaded={true}
-            buttonRef={{} as jest.Mocked<React.RefObject<HTMLDivElement>>}
-            listLoading={false}
-            listLoadError={false}
-            selectedVersion={'initial-version'}
-            setSelectedVersion={setSelectedVersion}
-            appName={'pythonlab'}
-          />
-        </ThemeProvider>
+        <VersionHistoryDropdown
+          versionList={[]}
+          startSources={{source: ''}}
+          closeDropdown={closeDropdown}
+          listLoaded={true}
+          buttonRef={{} as jest.Mocked<React.RefObject<HTMLDivElement>>}
+          listLoading={false}
+          listLoadError={false}
+          selectedVersion={'initial-version'}
+          setSelectedVersion={setSelectedVersion}
+          appName={'pythonlab'}
+        />
       </Provider>
     );
 
@@ -166,20 +159,18 @@ describe('VersionHistoryDropdown', () => {
   it('disables restore button when selected version is latest', async () => {
     const {getByRole} = render(
       <Provider store={store}>
-        <ThemeProvider>
-          <VersionHistoryDropdown
-            versionList={SAMPLE_VERSION_LIST}
-            startSources={{source: ''}}
-            closeDropdown={closeDropdown}
-            listLoaded={true}
-            buttonRef={{} as jest.Mocked<React.RefObject<HTMLDivElement>>}
-            listLoading={false}
-            listLoadError={false}
-            selectedVersion={'3'} // 3 is latest version
-            setSelectedVersion={setSelectedVersion}
-            appName={'pythonlab'}
-          />
-        </ThemeProvider>
+        <VersionHistoryDropdown
+          versionList={SAMPLE_VERSION_LIST}
+          startSources={{source: ''}}
+          closeDropdown={closeDropdown}
+          listLoaded={true}
+          buttonRef={{} as jest.Mocked<React.RefObject<HTMLDivElement>>}
+          listLoading={false}
+          listLoadError={false}
+          selectedVersion={'3'} // 3 is latest version
+          setSelectedVersion={setSelectedVersion}
+          appName={'pythonlab'}
+        />
       </Provider>
     );
 

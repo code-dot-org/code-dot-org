@@ -65,51 +65,52 @@ theme: responsive
         </tr>
       </table>
     </td>
-    <!-- "coming soon" system requirements, to be updated and made live from March through July. -->
+    <!-- "coming soon" system requirements, to be updated and made live from March through July.
     <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          ブラウザ '25 年 7 月
+          Browser July '25
         </th>
         <tr>
-          <td>クローム 109</td>
+          <td>Chrome 103.x</td>
         </tr>
         <tr>
-          <td>サファリ 16.6</td>
+          <td>Safari 14.x</td>
         </tr>
         <tr>
-          <td>モバイルサファリ 16</td>
+          <td>Mobile Safari 14.x</td>
         </tr>
         <tr>
-          <td>エッジ 128</td>
+          <td>Edge 119.x</td>
         </tr>
         <tr>
-          <td>ファイアーフォックス 115</td>
+          <td>Firefox 98.x</td>
         </tr>
       </table>
     </td>
     <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
       <table>
         <th>
-          プラットフォーム:'25年7月
+          Platform July '25
         </th>
         <tr>
-          <td>MacOS 10.15</td>
+          <td>macOS 10.15</td>
         </tr>
         <tr>
-          <td>iOS 16.x</td>
+          <td>iOS 15.x</td>
         </tr>
         <tr>
-          <td>ウィンドウズ 10</td>
+          <td>Windows 8</td>
         </tr>
         <tr>
-          <td>アンドロイド 8</td>
+          <td>Android 8.x</td>
         </tr>
         <tr>
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
     </td>
+    -->
   </tr>
 </table>
 
@@ -148,6 +149,7 @@ Hour of CodeとCS Fundamentalsは携帯電話でも受講可能です。 これ�
 ### この動画を再生できますか？
 
 Code.orgのオンラインコースの開始前に、以下のビデオを再生して、準備が整っていることをご確認ください。
+
 
 <!--
 The following HTML is a copy of video_with_fallback.haml. once this file can be converted to

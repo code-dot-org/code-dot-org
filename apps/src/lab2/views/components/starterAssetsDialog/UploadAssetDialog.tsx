@@ -1,19 +1,13 @@
 import Modal from '@code-dot-org/component-library/modal';
-import React, {ChangeEvent, useCallback, useState} from 'react';
+import React, {ChangeEvent, useState} from 'react';
 
 import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
 import {isNetworkError} from '@cdo/apps/util/HttpClient';
 
 import {deleteFile, uploadFile} from './api';
-import {
-  IMAGE_DIMENSION_WARNING,
-  PDF_PAGE_LIMIT,
-  PDF_PAGE_WARNING,
-} from './constants';
 import FileIcon from './FileIcon';
-import {DialogAlert, Loading} from './shared';
-import {CommonProps, UploadDialogProps} from './types';
-import {getImageDimensions, getPageCount} from './utils';
+import {ErrorAlert, Loading} from './shared';
+import {CommonProps, DialogProps} from './types';
 
 import styles from './starter-assets-dialog.module.scss';
 
@@ -31,18 +25,19 @@ const ACCEPTED_FILE_TYPES = [
 
 export interface UploadProps extends CommonProps {
   mode: 'upload';
+  clearError?: () => void;
 }
 
-const UploadAssetDialog: React.FC<UploadDialogProps & UploadProps> = ({
+const UploadAssetDialog: React.FC<DialogProps & UploadProps> = ({
   onClose,
   assets,
   addAsset,
   removeAsset,
   loading,
   levelName,
-  updateAlert,
-  alert,
-  clearAlert,
+  handleError,
+  errorMessage,
+  clearError,
 }) => {
   const [requestInProgress, setRequestInProgress] = useState<
     'upload' | 'delete'
@@ -54,45 +49,18 @@ const UploadAssetDialog: React.FC<UploadDialogProps & UploadProps> = ({
       return;
     }
 
-    // Starter Assets API only supports one file upload at a time.
-    const file = files[0];
-
-    if (file.name.endsWith('.pdf')) {
-      const pageCount = (await getPageCount(file)) || 0;
-      if (pageCount > PDF_PAGE_LIMIT) {
-        updateAlert(
-          `${file.name} is ${pageCount} pages long. PDFs must be less than ${PDF_PAGE_LIMIT} pages. Please try a smaller file.`,
-          'danger'
-        );
-        return;
-      } else if (pageCount > PDF_PAGE_WARNING) {
-        updateAlert(
-          `WARNING: ${file.name} is ${pageCount} pages long. PDFs with many pages and lots of text will increase response times, potentially resulting in timeouts.`,
-          'warning'
-        );
-      }
-    }
-
-    if (file.type.includes('image')) {
-      const {width, height} = await getImageDimensions(file);
-      if (width > IMAGE_DIMENSION_WARNING || height > IMAGE_DIMENSION_WARNING) {
-        updateAlert(
-          `WARNING: ${file.name} is ${width} x ${height} pixels. Images with large dimensions may result in degraded performance.`,
-          'warning'
-        );
-      }
-    }
-
     setRequestInProgress('upload');
     try {
-      const asset = await uploadFile(file, levelName);
+      // Starter Assets API only supports one file upload at a time.
+      const asset = await uploadFile(files[0], levelName);
       addAsset(asset);
     } catch (error) {
-      const errorMessage =
-        isNetworkError(error) && error.getDetails().status === 413
-          ? 'Images must be less than 20 MB, and PDFs less than 5 MB. Please try a smaller asset.'
-          : 'Something went wrong. Please try again.';
-      updateAlert(errorMessage, 'danger', error as Error);
+      let userErrorMessage;
+      if (isNetworkError(error) && error.getDetails().status === 413) {
+        userErrorMessage =
+          'Images must be less than 20 MB, and PDFs less than 5 MB. Please try a smaller asset.';
+      }
+      handleError(error as Error, userErrorMessage);
     }
     setRequestInProgress(undefined);
   };
@@ -102,24 +70,35 @@ const UploadAssetDialog: React.FC<UploadDialogProps & UploadProps> = ({
     ACCEPTED_FILE_TYPES.join(',')
   );
 
-  const onDelete = useCallback(
-    async (filename: string) => {
-      clearAlert();
-      setRequestInProgress('delete');
-      try {
-        await deleteFile(filename, levelName);
-        removeAsset(filename);
-      } catch (error) {
-        updateAlert(
-          'Error deleting file. Please try again',
-          'danger',
-          error as Error
-        );
-      }
-      setRequestInProgress(undefined);
-    },
-    [clearAlert, levelName, removeAsset, updateAlert]
-  );
+  const onDelete = async (filename: string) => {
+    clearError?.();
+    setRequestInProgress('delete');
+    try {
+      await deleteFile(filename, levelName);
+      removeAsset(filename);
+    } catch (error) {
+      handleError(error as Error);
+    }
+    setRequestInProgress(undefined);
+  };
+
+  const ModalBody = () => {
+    return (
+      <>
+        <FileInput />
+        <div className={styles.modalBody} id="dsco-dialog-description">
+          {assets.map(asset => (
+            <FileIcon
+              key={asset.filename}
+              asset={asset}
+              levelName={levelName}
+              onDelete={() => onDelete(asset.filename)}
+            />
+          ))}
+        </div>
+      </>
+    );
+  };
 
   const buttonText =
     requestInProgress === 'upload'
@@ -136,7 +115,7 @@ const UploadAssetDialog: React.FC<UploadDialogProps & UploadProps> = ({
       primaryButtonProps={{
         text: buttonText,
         onClick: () => {
-          clearAlert();
+          clearError?.();
           openFileInput();
         },
         iconLeft: {
@@ -146,27 +125,10 @@ const UploadAssetDialog: React.FC<UploadDialogProps & UploadProps> = ({
         disabled: loading || !!requestInProgress,
       }}
       secondaryButtonProps={{text: 'Cancel', onClick: onClose}}
-      customContent={
-        loading ? (
-          <Loading />
-        ) : (
-          <>
-            <FileInput />
-            <div className={styles.modalBody} id="dsco-dialog-description">
-              {assets.map(asset => (
-                <FileIcon
-                  {...asset}
-                  key={asset.filename}
-                  levelName={levelName}
-                  onDelete={onDelete}
-                  showWarnings={true}
-                />
-              ))}
-            </div>
-          </>
-        )
+      customContent={loading ? <Loading /> : <ModalBody />}
+      customBottomContent={
+        errorMessage && <ErrorAlert message={errorMessage} />
       }
-      customBottomContent={alert && <DialogAlert {...alert} />}
     />
   );
 };

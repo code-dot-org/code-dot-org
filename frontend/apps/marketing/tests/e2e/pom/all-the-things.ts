@@ -2,16 +2,13 @@ import {type Locator, type Page} from '@playwright/test';
 
 import {MarketingPage} from './marketing';
 
-export type Section =
+type Section =
   | 'Action Block'
-  | 'Action Block Carousel'
   | 'Full Width Action Block'
   | 'Button'
   | 'Divider'
-  | 'Editorial Card'
   | 'Heading'
   | 'Image'
-  | 'Image Carousel'
   | 'Localization'
   | 'Overline'
   | 'Paragraph'
@@ -27,15 +24,11 @@ export class AllTheThingsPage extends MarketingPage {
   }
 
   async enableDraftMode(token: string = 'ci-draft-mode') {
-    return await super.enableDraftMode(token, 'engineering/all-the-things');
+    return await super.enableDraftMode(token, 'all-the-things');
   }
 
-  async goto(path?: string) {
-    if (!path) {
-      return await super.goto('/engineering/all-the-things');
-    }
-
-    return await super.goto(path);
+  async goto() {
+    return await super.goto('/all-the-things');
   }
 
   getSectionLocator(heading: Section): Locator {

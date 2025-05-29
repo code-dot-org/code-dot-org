@@ -9,8 +9,8 @@ import {Heading2} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {ChangeEvent, FC, memo, useCallback, useMemo} from 'react';
 
-import {WorkshopGradeLevels} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {useFetch} from '@cdo/apps/util/useFetch';
+import {StudentGradeLevels} from '@cdo/generated-scripts/sharedConstants';
 
 import {BasicsProps, CourseOffering} from '../types';
 
@@ -158,7 +158,7 @@ export const Basics: FC<BasicsProps> = ({
               styleAsFormField={true}
               hideControls
               checkedOptions={grades}
-              allOptions={WorkshopGradeLevels.map((value: string) => ({
+              allOptions={StudentGradeLevels.map(value => ({
                 value,
                 label: value,
               }))}

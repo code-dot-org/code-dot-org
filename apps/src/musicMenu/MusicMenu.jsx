@@ -84,14 +84,11 @@ const optionsList = [
     description: 'Use a specific icon for text to speech stop button.',
   },
   {
-    name: 'play-tune-block-drums',
+    name: 'play-tune-block',
     type: 'radio',
     values: [
-      {
-        value: 'false',
-        description: "Don't use shared editor UI for drums (default).",
-      },
-      {value: 'true', description: 'Use shared editor UI for drums.'},
+      {value: 'false', description: 'Hide play tune block (default).'},
+      {value: 'true', description: 'Show play tune block.'},
     ],
   },
   {
@@ -230,15 +227,11 @@ const optionsList = [
     ],
   },
   {
-    name: 'timeline-layout',
+    name: 'timeline-original-layout',
     type: 'radio',
     values: [
-      {value: 'default', description: 'New timeline (default).'},
-      {value: 'old', description: 'Original timeline.'},
-      {
-        value: 'blocks',
-        description: 'Sort timeline event based on block order (experimental).',
-      },
+      {value: 'false', description: 'New timeline (default).'},
+      {value: 'true', description: 'Original timeline.'},
     ],
   },
   {

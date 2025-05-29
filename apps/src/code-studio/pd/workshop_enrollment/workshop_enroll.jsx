@@ -12,24 +12,19 @@ import {WorkshopPropType, FacilitatorPropType} from './enrollmentConstants';
 import FacilitatorBio from './facilitator_bio';
 import WorkshopDetails from './workshop_details';
 
-export const sessionCalendarShape = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  start: PropTypes.string.isRequired,
-  end: PropTypes.string.isRequired,
-  is_local: PropTypes.bool.isRequired,
-  session_format: PropTypes.string.isRequired,
-  location_address: PropTypes.string,
-  meeting_link: PropTypes.string,
-  description: PropTypes.string,
-  notes: PropTypes.string,
-});
-
 export default class WorkshopEnroll extends React.Component {
   static propTypes = {
     user_id: PropTypes.number.isRequired,
     workshop: WorkshopPropType,
+    workshop_location_for_calendar: PropTypes.string,
     session_dates: PropTypes.arrayOf(PropTypes.string),
-    session_info_for_calendar: PropTypes.arrayOf(sessionCalendarShape),
+    session_info_for_calendar: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        start: PropTypes.string.isRequired,
+        end: PropTypes.string.isRequired,
+      })
+    ),
     enrollment: PropTypes.shape({
       email: PropTypes.string,
       first_name: PropTypes.string,
@@ -159,6 +154,10 @@ export default class WorkshopEnroll extends React.Component {
       this.props.workshop.subject || ''
     );
     sessionStorage.setItem('workshopName', this.props.workshop.name || '');
+    sessionStorage.setItem(
+      'workshopLocation',
+      this.props.workshop_location_for_calendar || ''
+    );
     sessionStorage.setItem(
       'sessionTimeInfo',
       JSON.stringify(this.props.session_info_for_calendar)

@@ -1,12 +1,10 @@
 name 'student-end-of-unit-survey-q28_-problemsolving_2025'
 
-question 'I collaborated with peers in activities.'
+question 'Which option best reflects your classroom experience most often?'
 
-right 'Never'
-right 'Occasionally'
-right 'About half of the lessons'
-right 'Most of the lessons'
-right 'Almost every lesson'
+right 'My teacher teaches the entire lesson.'
+right 'My teacher introduces the activities and then I progress on my own, reaching out to my teacher when I want their feedback.'
+right 'I go through the activities on my own.'
 
 allow_multiple_attempts true
 

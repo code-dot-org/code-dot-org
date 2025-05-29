@@ -125,8 +125,6 @@ export const getLevelPropertiesPath = state => {
       sublevelPosition = currentLevel.levelNumber;
     }
 
-    // TODO: TEACH-1864
-    // use /courses/:course_name/units/:unit_position/... instead of /s/
     return `/s/${scriptName}/lessons/${lessonPosition}/levels/${levelPosition}/${
       sublevelPosition === undefined ? '' : `sublevel/${sublevelPosition}/`
     }level_properties`;
@@ -193,9 +191,7 @@ const levelWithProgress = (
     status = levelProgress.status;
     locked = levelProgress.locked;
     teacherFeedbackReviewState = levelProgress.teacherFeedbackReviewState;
-  } else if (
-    !(level.kind === LevelKind.assessment && level.app === 'level_group')
-  ) {
+  } else if (level.kind !== LevelKind.assessment) {
     // if we don't have levelProgress, get the status from `levelResults`.
     // however, `levelResults` doesn't track per-page results for multi-page
     // assessments, so for assessments we leave default values.

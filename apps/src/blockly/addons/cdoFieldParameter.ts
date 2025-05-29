@@ -84,7 +84,7 @@ export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
     if (variable) {
       // Find the index of the procedure parameter to delete
       const paramIndexToDelete = parameters.findIndex(
-        parameter => parameter.getName() === variable.getName()
+        parameter => parameter.getName() === variable.name
       );
 
       // Delete the parameter from the procedure model
@@ -101,10 +101,7 @@ export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
         const varField = paramBlock?.getField(
           'VAR'
         ) as GoogleBlockly.FieldVariable | null;
-        if (
-          varField &&
-          varField.getVariable()?.getName() === variable.getName()
-        ) {
+        if (varField && varField.getVariable()?.name === variable.name) {
           paramBlock.dispose(true);
         }
       });

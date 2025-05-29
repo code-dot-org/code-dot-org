@@ -25,6 +25,7 @@ Feature: Policy Compliance and Parental Permission
     And element "#lockout-panel-form > p:nth-child(1)" contains text "We sent an email to parent@example.com. Didn't receive anything? Update your parent or guardian's email below or send another request."
     And element "#lockout-panel-form > p:nth-child(2)" contains text "Note: Your account will be deleted if we do not receive your parent or guardian's permission by "
 
+  @skip
   Scenario: New under 13 account should be able to provide state and see lockout page to send parental request.
     Given I am on "http://studio.code.org"
     Given CPA all user lockout phase

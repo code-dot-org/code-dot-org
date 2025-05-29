@@ -1,6 +1,6 @@
 module ScriptLevelsHelper
-  def script_level_solved_response(response, script_level, unit_group_unit: nil)
-    next_user_redirect = script_level.next_level_or_redirect_path_for_user(current_user, @lesson, unit_group_unit: unit_group_unit)
+  def script_level_solved_response(response, script_level)
+    next_user_redirect = script_level.next_level_or_redirect_path_for_user(current_user, @lesson)
 
     if script_level.has_another_level_to_go_to?
       if script_level == script_level.lesson.last_progression_script_level
@@ -20,15 +20,10 @@ module ScriptLevelsHelper
             lesson_extras: true
           ).any?
         if enabled_for_lesson && (enabled_for_user || enabled_for_teacher)
-          lesson_position = (@lesson || script_level.lesson).absolute_position
-          redirect_path = script_lesson_extras_path(
+          response[:redirect] = script_lesson_extras_path(
             script_id: script_level.script.name,
-            lesson_position: lesson_position,
+            lesson_position: (@lesson || script_level.lesson).absolute_position
           )
-          if Policies::Courses.modularity_enabled? && unit_group_unit
-            redirect_path = course_unit_lesson_extras_path(unit_group_unit.unit_group, unit_group_unit.position, lesson_position: lesson_position)
-          end
-          response[:redirect] = redirect_path
         end
       end
     else
@@ -49,15 +44,11 @@ module ScriptLevelsHelper
     video_info_response
   end
 
-  def script_completion_redirect(user, script, unit_group_unit: nil)
+  def script_completion_redirect(user, script)
     if Policies::ScriptActivity.can_view_congrats_page?(user, script)
-      script.finish_url(unit_group_unit: unit_group_unit)
+      script.finish_url
     else
-      if Policies::Courses.modularity_enabled? && unit_group_unit
-        course_unit_path(unit_group_unit.unit_group, unit_group_unit.position)
-      else
-        script_path(script)
-      end
+      script_path(script)
     end
   end
 

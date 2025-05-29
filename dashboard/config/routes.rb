@@ -43,6 +43,7 @@ Dashboard::Application.routes.draw do
           get :parent_letter
           get :courses, params: :course_version_name, action: :show
           get :unit, params: :unitName, action: :show
+          get :download_progress_csv, action: :download_progress_csv
           get '*path', action: :show, via: :all, as: :subpath
         end
       end
@@ -51,7 +52,6 @@ Dashboard::Application.routes.draw do
     resource :user_preference, only: [:update] do
       get '/font_size/console', to: 'user_preferences#console_font_size'
       get '/font_size/editor', to: 'user_preferences#editor_font_size'
-      get '/theme', to: 'user_preferences#theme'
     end
 
     resources :survey_results, only: [:create], defaults: {format: 'json'}
@@ -728,22 +728,8 @@ Dashboard::Application.routes.draw do
 
     resources :zendesk_session, only: [:index]
 
-    # Public abuse report form
-    controller :report_abuse do
-      get  '/report_abuse', action: :report_abuse_form
-      post '/report_abuse', action: :report_abuse
-    end
-
-    # partial ports of legacy v3 APIs
-    scope path: '/v3' do
-      controller :report_abuse do
-        get    'channels/:channel_id/abuse', action: :show_abuse
-        delete 'channels/:channel_id/abuse', action: :reset_abuse
-        post   'channels/:channel_id/abuse/delete', action: :reset_abuse
-        patch  '(:endpoint)/:encrypted_channel_id', action: :update_file_abuse,
-               constraints: {endpoint: /(animations|assets|sources|files|libraries)/}
-      end
-    end
+    post '/report_abuse', to: 'report_abuse#report_abuse'
+    get '/report_abuse', to: 'report_abuse#report_abuse_form'
 
     get '/too_young', to: 'too_young#index'
 
@@ -899,8 +885,6 @@ Dashboard::Application.routes.draw do
       get 'workshop_dashboard/*path', to: 'workshop_dashboard#index'
       get 'workshop_dashboard', to: 'workshop_dashboard#index'
 
-      get 'workshops/:workshop_id', to: 'workshops#index'
-
       get 'misc_survey/thanks', to: 'misc_survey#thanks'
       get 'misc_survey/:form_tag', to: 'misc_survey#new'
       post 'misc_survey/submit', to: 'misc_survey#submit'
@@ -1009,8 +993,6 @@ Dashboard::Application.routes.draw do
     get '/api/lock_status', to: 'api#lockable_state'
     get '/dashboardapi/script_structure/:script', to: 'api#script_structure'
     get '/api/script_structure/:script', to: 'api#script_structure'
-    get '/dashboardapi/script_structure/courses/:course_name/units/:unit_position', to: 'api#script_structure'
-    get '/api/script_structure/courses/:course_name/units/:unit_position', to: 'api#script_structure'
     get '/dashboardapi/script_standards/:script', to: 'api#script_standards'
     get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
     get '/api/teacher_panel_progress/:section_id', to: 'api#teacher_panel_progress'
@@ -1273,6 +1255,12 @@ Dashboard::Application.routes.draw do
     resources :project_commits, only: [:create]
     get 'project_commits/get_token', to: 'project_commits#get_token'
     get 'project_commits/:channel_id', to: 'project_commits#project_commits'
+
+    # partial ports of legacy v3 APIs
+    get '/v3/channels/:channel_id/abuse', to: 'report_abuse#show_abuse'
+    delete '/v3/channels/:channel_id/abuse', to: 'report_abuse#reset_abuse'
+    post '/v3/channels/:channel_id/abuse/delete', to: 'report_abuse#reset_abuse'
+    patch '/v3/(:endpoint)/:encrypted_channel_id', constraints: {endpoint: /(animations|assets|sources|files|libraries)/}, to: 'report_abuse#update_file_abuse'
 
     post '/browser_events/put_logs', to: 'browser_events#put_logs'
     post '/browser_events/put_metric_data', to: 'browser_events#put_metric_data'

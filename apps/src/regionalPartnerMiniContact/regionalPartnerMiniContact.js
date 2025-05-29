@@ -13,7 +13,8 @@ window.showRegionalPartnerMiniContact = function () {
     '#regional-partner-mini-contact-container'
   );
   const sourcePageId = regionalPartnerMiniContactElement.data('source-page-id');
-  let options = {};
+  const notes = regionalPartnerMiniContactElement.data('options-notes');
+  let options = {notes: notes};
   const zipFromUrlParams = queryParams()['zip'];
 
   $.ajax({
@@ -25,6 +26,7 @@ window.showRegionalPartnerMiniContact = function () {
         user_name: results.user_name,
         email: results.email,
         zip: zipFromUrlParams || results.zip,
+        notes: notes,
       };
     })
     .complete(() => {
@@ -46,12 +48,17 @@ window.showRegionalPartnerMiniContactPopupLink = function () {
 
   const sourcePageId =
     regionalPartnerMiniContactPopupLinkElement.data('source-page-id');
+  const notes =
+    regionalPartnerMiniContactPopupLinkElement.data('options-notes');
   const linkText = regionalPartnerMiniContactPopupLinkElement.data('link-text');
   const isButton =
     regionalPartnerMiniContactPopupLinkElement.data('link-button');
 
   ReactDOM.render(
-    <RegionalPartnerMiniContactPopupLink sourcePageId={sourcePageId}>
+    <RegionalPartnerMiniContactPopupLink
+      notes={notes}
+      sourcePageId={sourcePageId}
+    >
       {isButton && <button type="button">{linkText}</button>}
       {!isButton && linkText}
     </RegionalPartnerMiniContactPopupLink>,

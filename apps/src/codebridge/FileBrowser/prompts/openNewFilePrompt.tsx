@@ -20,7 +20,6 @@ type OpenNewFilePromptArgsType = {
   sendCodebridgeAnalyticsEvent: (eventName: string) => unknown;
   isStartMode: boolean;
   validationFile: ProjectFile | undefined;
-  validFileTypes?: string[];
 };
 
 export const openNewFilePrompt = async ({
@@ -31,7 +30,6 @@ export const openNewFilePrompt = async ({
   sendCodebridgeAnalyticsEvent,
   isStartMode,
   validationFile,
-  validFileTypes,
 }: OpenNewFilePromptArgsType) => {
   const results = await dialogControl.showDialog({
     type: DialogType.GenericPrompt,
@@ -43,7 +41,6 @@ export const openNewFilePrompt = async ({
         projectFiles,
         isStartMode,
         validationFile,
-        validFileTypes,
       }),
   });
   if (results.type !== 'confirm') {

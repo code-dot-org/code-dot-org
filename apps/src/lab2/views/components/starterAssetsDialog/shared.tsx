@@ -4,12 +4,9 @@ import React from 'react';
 
 import styles from './starter-assets-dialog.module.scss';
 
-const DialogAlert: React.FC<{message: string; type: 'danger' | 'warning'}> = ({
-  message,
-  type,
-}) => (
+const ErrorAlert: React.FC<{message: string}> = ({message}) => (
   <div className={styles.alertContainer}>
-    <Alert text={message} type={type} size="xs" className={styles.alert} />
+    <Alert text={message} type="danger" size="xs" className={styles.alert} />
   </div>
 );
 
@@ -19,4 +16,4 @@ const Loading: React.FC = () => (
   </div>
 );
 
-export {DialogAlert, Loading};
+export {ErrorAlert, Loading};

@@ -83,9 +83,9 @@ class BubbleChoice < DSLDefined
     true
   end
 
-  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
+  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil)
     level_properties = super
-    summary = summarize(script_level: script_level, user: @view_as_user, should_localize: true, unit_group_unit: unit_group_unit)
+    summary = summarize(script_level: script_level, user: @view_as_user, should_localize: true)
 
     # Remove status since this summary should not be user-specific.
     summary[:sublevels].each do |sublevel|
@@ -106,7 +106,7 @@ class BubbleChoice < DSLDefined
   # @param [User] user
   # @param [Boolean] should_localize If true, translate the summary.
   # @return [Hash]
-  def summarize(script_level: nil, user: nil, should_localize: false, unit_group_unit: nil)
+  def summarize(script_level: nil, user: nil, should_localize: false)
     ActiveRecord::Base.connected_to(role: :reading) do
       user_id = user&.id
       summary = {
@@ -116,22 +116,18 @@ class BubbleChoice < DSLDefined
         name: name,
         type: type,
         teacher_markdown: teacher_markdown,
-        sublevels: summarize_sublevels(script_level: script_level, user_id: user_id, should_localize: should_localize, unit_group_unit: unit_group_unit),
+        sublevels: summarize_sublevels(script_level: script_level, user_id: user_id, should_localize: should_localize)
       }
 
       if script_level
-        previous_level_url = script_level.previous_level ? build_script_level_url(script_level.previous_level, unit_group_unit: unit_group_unit) : nil
-        redirect_url = script_level.next_level_or_redirect_path_for_user(user, bubble_choice_parent: true, unit_group_unit: unit_group_unit)
+        previous_level_url = script_level.previous_level ? build_script_level_url(script_level.previous_level) : nil
+        redirect_url = script_level.next_level_or_redirect_path_for_user(user, bubble_choice_parent: true)
 
-        unit_url = script_url(script_level.script)
-        if Policies::Courses.modularity_enabled? && unit_group_unit
-          unit_url = course_unit_url(unit_group_unit.unit_group, unit_group_unit.position)
-        end
         summary.merge!(
           {
             previous_level_url: previous_level_url,
             redirect_url: redirect_url,
-            script_url: unit_url
+            script_url: script_url(script_level.script)
           }
         )
       end
@@ -153,11 +149,11 @@ class BubbleChoice < DSLDefined
   # @param [Integer] user_id. Optional. If provided, "perfect" field will be calculated for sublevels.
   # @param [Boolean] should_localize If true, translate the summary.
   # @return [Array]
-  def summarize_sublevels(script_level: nil, user_id: nil, should_localize: false, unit_group_unit: nil)
+  def summarize_sublevels(script_level: nil, user_id: nil, should_localize: false)
     summary = []
     localized_properties = %i[display_name short_instructions long_instructions]
     sublevels.each_with_index do |level, index|
-      level_info = level.summary_for_lesson_plans(unit_group_unit: unit_group_unit).symbolize_keys
+      level_info = level.summary_for_lesson_plans.symbolize_keys
 
       level_desc = level.try(:bubble_choice_description)
       level_desc = I18n.t(level.name, scope: %i[data bubble_choice_description], default: level_desc) if should_localize
@@ -179,11 +175,11 @@ class BubbleChoice < DSLDefined
       level_info[:display_name] = level.display_name || level.name
 
       level_info[:url] = script_level ?
-        build_script_level_url(script_level, sublevel_position: index + 1, unit_group_unit: unit_group_unit) :
+        build_script_level_url(script_level, {sublevel_position: index + 1}) :
         level_url(level.id)
 
       level_info[:path] = script_level ?
-        build_script_level_path(script_level, sublevel_position: index + 1, unit_group_unit: unit_group_unit) :
+        build_script_level_path(script_level, {sublevel_position: index + 1}) :
         level_path(level.id)
 
       if user_id
@@ -198,7 +194,7 @@ class BubbleChoice < DSLDefined
 
         level_feedback = TeacherFeedback.get_latest_feedbacks_received(user_id, level.id, script_level.try(:script)).first
         level_info[:teacher_feedback_review_state] = level_feedback&.review_state
-        level_info[:exampleSolutions] = script_level.get_example_solutions(level, User.find_by(id: user_id), unit_group_unit: unit_group_unit) if script_level
+        level_info[:exampleSolutions] = script_level.get_example_solutions(level, User.find_by(id: user_id)) if script_level
       else
         # Pass an empty status if the user is not logged in so the ProgressBubble
         # in the sublevel display can render correctly.
@@ -280,7 +276,7 @@ class BubbleChoice < DSLDefined
 
     # otherwise, update sublevels to match
     levels_child_levels.sublevel.destroy_all
-    Level.where(name: sublevel_names).find_each do |new_sublevel|
+    Level.where(name: sublevel_names).each do |new_sublevel|
       ParentLevelsChildLevel.create!(
         child_level: new_sublevel,
         kind: ParentLevelsChildLevel::SUBLEVEL,

@@ -65,51 +65,52 @@ Cada any anirem actualitzant les versions mínimes requerides per als navegadors
         </tr>
       </table>
     </td>
-    <!-- "coming soon" system requirements, to be updated and made live from March through July. -->
+    <!-- "coming soon" system requirements, to be updated and made live from March through July.
     <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          Navegador Juliol '25
+          Browser July '25
         </th>
         <tr>
-          <td>Crom 109</td>
+          <td>Chrome 103.x</td>
         </tr>
         <tr>
-          <td>Safari 16.6</td>
+          <td>Safari 14.x</td>
         </tr>
         <tr>
-          <td>Safari mòbil 16</td>
+          <td>Mobile Safari 14.x</td>
         </tr>
         <tr>
-          <td>Vora 128</td>
+          <td>Edge 119.x</td>
         </tr>
         <tr>
-          <td>Firefox 115</td>
+          <td>Firefox 98.x</td>
         </tr>
       </table>
     </td>
     <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
       <table>
         <th>
-          Plataforma Juliol '25
+          Platform July '25
         </th>
         <tr>
           <td>macOS 10.15</td>
         </tr>
         <tr>
-          <td>iOS 16.x</td>
+          <td>iOS 15.x</td>
         </tr>
         <tr>
-          <td>Windows 10</td>
+          <td>Windows 8</td>
         </tr>
         <tr>
-          <td>Android 8</td>
+          <td>Android 8.x</td>
         </tr>
         <tr>
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
     </td>
+    -->
   </tr>
 </table>
 
@@ -148,6 +149,7 @@ Fem servir [YouTube](https://www.youtube.com) per integrar vídeos a Code.org i 
 ### Podeu reproduir aquest vídeo?
 
 Abans de començar els cursos en línia de Code.org, reproduïu el vídeo que trobareu a continuació per assegurar-vos que ho teniu tot llest.
+
 
 <!--
 The following HTML is a copy of video_with_fallback.haml. once this file can be converted to

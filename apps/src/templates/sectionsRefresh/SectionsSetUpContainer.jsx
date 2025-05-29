@@ -67,21 +67,10 @@ const useSections = section => {
         return section;
       }
     });
-
     setSections(newSections);
   };
 
-  const batchUpdateSection = (sectionIdx, updateList) => {
-    const newSections = sections.map((section, idx) => {
-      if (idx === sectionIdx) {
-        return {...section, ...updateList};
-      }
-    });
-
-    setSections(newSections);
-  };
-
-  return [sections, updateSection, batchUpdateSection];
+  return [sections, updateSection];
 };
 
 export default function SectionsSetUpContainer({
@@ -93,16 +82,9 @@ export default function SectionsSetUpContainer({
   setIsEditInProgress = value => {},
   isLoading = false,
 }) {
-  const [sections, updateSection, batchUpdateSection] =
-    useSections(sectionToBeEdited);
+  const [sections, updateSection] = useSections(sectionToBeEdited);
   const updateSectionAndSetEditInProgress = (sectionIdx, keyToUpdate, val) => {
     updateSection(sectionIdx, keyToUpdate, val);
-
-    setIsEditInProgress(true);
-  };
-
-  const batchUpdateSectionAndSetEditInProgress = (sectionIdx, updateList) => {
-    batchUpdateSection(sectionIdx, updateList);
     setIsEditInProgress(true);
   };
   const [isCoteacherOpen, setIsCoteacherOpen] = useState(false);
@@ -452,9 +434,6 @@ export default function SectionsSetUpContainer({
         section={sections[0]}
         updateSection={(key, val) =>
           updateSectionAndSetEditInProgress(0, key, val)
-        }
-        batchUpdateSection={updateList =>
-          batchUpdateSectionAndSetEditInProgress(0, updateList)
         }
         isNewSection={isNewSection}
         isLoading={isLoading}

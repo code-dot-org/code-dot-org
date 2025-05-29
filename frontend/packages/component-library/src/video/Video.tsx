@@ -156,9 +156,7 @@ const Video: React.FC<VideoProps> = ({
     }
   };
   return (
-    <figure
-      className={classNames(moduleStyles.videoComponentContainer, className)}
-    >
+    <figure className={moduleStyles.videoComponentContainer}>
       <div className={moduleStyles.videoWrapper}>{getVideoPlayer()}</div>
       <div className={moduleStyles.footer}>
         {showCaption && <Figcaption>{videoTitle}</Figcaption>}

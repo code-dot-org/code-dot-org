@@ -97,6 +97,30 @@ class Tutorials
   end
 end
 
+def no_credit_count
+  DB[:cdo_state_promote].where(cs_counts_t: 'No').count
+end
+
+def credit_count
+  DB[:cdo_state_promote].where("cs_counts_t = 'Yes' || cs_counts_t = 'Other'").count
+end
+
+def hs_access_count
+  DB[:cdo_state_promote].where(require_hs_s: 'Yes').count
+end
+
+def k12_access_count
+  DB[:cdo_state_promote].where(require_k12_s: 'Yes').count
+end
+
+def jobs_nationwide
+  $jobs_nationwide ||= DB[:cdo_state_promote].sum(:cs_jobs_i)
+end
+
+def grads_nationwide
+  $grads_nationwide ||= DB[:cdo_state_promote].sum(:cs_graduates_i)
+end
+
 def zip_code_from_code(code)
   DB[:geography_us_zip_codes].where(code_s: code.to_s.strip).first
 end

@@ -1,21 +1,7 @@
-import {
-  InstrumentTickEvent,
-  ScaleMode,
-} from '../player/interfaces/InstrumentEvent';
+import {InstrumentEventValue} from '../player/interfaces/InstrumentEvent';
 
-import {getNotesInKey} from './Notes';
-
-export const START_OCTAVE = 4;
-export const DISPLAY_OCTAVES = 3;
-
-export const isNoteAvailableInScaleMode = (
-  key: number,
-  note: number,
-  scaleMode?: ScaleMode
-) =>
-  scaleMode === 'simple'
-    ? getNotesInKey(key, START_OCTAVE, DISPLAY_OCTAVES).includes(note)
-    : true;
+// This file contains a helper function for tunes, and is used by the
+// block's custom field.
 
 // A single event from a tune to be rendered in a graph.
 export interface TuneGraphEvent {
@@ -26,7 +12,7 @@ export interface TuneGraphEvent {
 }
 
 interface GenerateGraphDataFromTuneOptions {
-  notes: InstrumentTickEvent[];
+  value: InstrumentEventValue;
   width: number;
   height: number;
   numOctaves: number;
@@ -37,7 +23,7 @@ interface GenerateGraphDataFromTuneOptions {
 
 // Given a ChordEventValue, generate a set of data for graphing it.
 export function generateGraphDataFromTune({
-  notes,
+  value,
   width,
   height,
   numOctaves,
@@ -45,6 +31,8 @@ export function generateGraphDataFromTune({
   padding,
   noteHeightScale,
 }: GenerateGraphDataFromTuneOptions): TuneGraphEvent[] {
+  const notes = value.events;
+
   // Note widths fit in the space; note heights are exaggerated.
   const noteWidth = Math.ceil((width - 2 * padding) / 16);
   const noteHeight = Math.ceil(

@@ -19,7 +19,6 @@ interface UseHorizontalLayoutProps {
   minRightPanelWidth: number;
   appName: string;
   heightOffset?: number;
-  showingRightmostPanel?: boolean;
 }
 /**
  * Hook that manages the layout of a lab with 3 resizable panels.
@@ -35,7 +34,6 @@ export const useHorizontalLayout = ({
   rightTopPanel,
   rightBottomPanel,
   minRightPanelWidth,
-  showingRightmostPanel,
   appName,
   heightOffset = 0,
 }: UseHorizontalLayoutProps) => {
@@ -51,7 +49,6 @@ export const useHorizontalLayout = ({
   const [rightBottomPanelHeight, setrightBottomPanelHeight] = useState<
     number | undefined
   >(rightBottomPanel.initialHeight);
-  const rightmostPanelWidth = 280;
 
   const {
     position: rawLeftPanelWidth,
@@ -87,10 +84,7 @@ export const useHorizontalLayout = ({
 
   const adjustRightPanelWidth = useCallback(() => {
     const newRightPanelWidth = Math.max(
-      window.innerWidth -
-        rawLeftPanelWidth -
-        RESIZE_BAR_SIZE_PX -
-        (showingRightmostPanel ? rightmostPanelWidth : 0),
+      window.innerWidth - rawLeftPanelWidth - RESIZE_BAR_SIZE_PX,
       minRightPanelWidth
     );
     setRightPanelWidth(newRightPanelWidth);
@@ -102,12 +96,7 @@ export const useHorizontalLayout = ({
       leftPanel.minWidth
     );
     setLeftPanelWidth(newLeftPanelWidth);
-  }, [
-    leftPanel.minWidth,
-    minRightPanelWidth,
-    rawLeftPanelWidth,
-    showingRightmostPanel,
-  ]);
+  }, [leftPanel.minWidth, minRightPanelWidth, rawLeftPanelWidth]);
 
   const throttledAdjustRightPanelWidth = useMemo(
     () => throttle(adjustRightPanelWidth, 30),
@@ -184,6 +173,5 @@ export const useHorizontalLayout = ({
     rightBottomPanelDragging,
     setLeftPanelSize,
     setRightBottomPanelSize,
-    rightmostPanelWidth,
   };
 };

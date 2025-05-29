@@ -1,4 +1,3 @@
-import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
 import {render, screen, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
@@ -75,14 +74,12 @@ describe('VersionHistoryButton', () => {
 
   function renderDefault() {
     return render(
-      <ThemeProvider>
-        <Provider store={store}>
-          <VersionHistoryButton
-            startSources={{source: ''}}
-            appName={'pythonlab'}
-          />
-        </Provider>
-      </ThemeProvider>
+      <Provider store={store}>
+        <VersionHistoryButton
+          startSources={{source: ''}}
+          appName={'pythonlab'}
+        />
+      </Provider>
     );
   }
 

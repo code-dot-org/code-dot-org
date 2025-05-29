@@ -35,7 +35,7 @@ export default function StyledCodeBlock({programmingExpression}) {
 StyledCodeBlock.propTypes = {
   programmingExpression: PropTypes.shape({
     color: PropTypes.string,
-    syntax: PropTypes.string,
+    syntax: PropTypes.string.isRequired,
     link: PropTypes.string,
     parameters: PropTypes.array,
     name: PropTypes.string,

@@ -8,8 +8,6 @@ import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {useState, useRef, useEffect, useCallback, useMemo} from 'react';
 
-import useOutsideClick from '@cdo/apps/util/hooks/useOutsideClick';
-
 import styles from './styles.module.scss';
 
 export type OptionId = string | number;
@@ -22,7 +20,6 @@ export interface Option {
 }
 
 export const MultiSelectInput: React.FC<{
-  name: string;
   label: string;
   options: Option[];
   selectedOptions: OptionId[];
@@ -34,7 +31,6 @@ export const MultiSelectInput: React.FC<{
   emptyStateMessage?: string;
   errorMessage?: string;
 }> = ({
-  name,
   label,
   options,
   selectedOptions,
@@ -49,18 +45,12 @@ export const MultiSelectInput: React.FC<{
   const [searchText, setSearchText] = useState('');
   const [menuOpen, setMenuOpen] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(-1);
+  const [focusedOptionId, setFocusedOptionId] = useState<OptionId | null>(null);
   const [hoveredOptionId, setHoveredOptionId] = useState<OptionId | null>(null);
 
-  const reset = () => {
-    setMenuOpen(false);
-    setSearchText('');
-    setActiveIndex(-1);
-  };
-
+  const wrapperRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-  const wrapperRef = useOutsideClick<HTMLDivElement>(reset);
-  const optionRefs = useRef<Map<OptionId, HTMLLIElement>>(new Map());
+  const optionRefs = useRef<Map<OptionId, HTMLDivElement>>(new Map());
 
   const filteredOptions = useMemo(
     () =>
@@ -77,41 +67,56 @@ export const MultiSelectInput: React.FC<{
     [options]
   );
 
-  const activeDescendant = useMemo(() => {
-    if (activeIndex >= 0 && filteredOptions[activeIndex]) {
-      return `${id}-option-${filteredOptions[activeIndex].id}`;
-    }
-    if (filteredOptions.length === 1) {
-      return `${id}-option-${filteredOptions[0].id}`;
-    }
-  }, [activeIndex, filteredOptions, id]);
-
-  // scrolls option into view
-  // activeIndex is set when navigating the option menu
+  // sets focus and scrolls option into view
+  // focusedOptionId is set when navigating the option menu
   // via keyboard interaction
   useEffect(() => {
-    if (activeIndex >= 0 && filteredOptions[activeIndex] && menuOpen) {
-      const activeElement = optionRefs.current.get(
-        filteredOptions[activeIndex].id ?? ''
-      );
-      activeElement?.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+    if (focusedOptionId !== null && menuOpen) {
+      const activeElement = optionRefs.current.get(focusedOptionId ?? '');
+      if (activeElement instanceof HTMLDivElement) {
+        activeElement.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+        activeElement.focus();
+      }
     }
-  }, [activeIndex, filteredOptions, menuOpen]);
+  }, [focusedOptionId, menuOpen]);
+
+  // clear the focusedOptionId when the option menu is closed
+  useEffect(() => {
+    if (!menuOpen) {
+      setFocusedOptionId(null);
+    }
+  }, [menuOpen]);
+
+  // listen for clicks outside the component to close the option menu
+  // removes the listener when the component unmounts
+  useEffect(() => {
+    const handleClickOutside = (event: Event) => {
+      if (
+        wrapperRef.current &&
+        !wrapperRef.current.contains(event.target as Node)
+      ) {
+        closeMenu({skipFocus: true});
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleClickOutside);
+    };
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const {value} = e.currentTarget;
-    setSearchText(value);
-    if (!menuOpen && value) {
+    setSearchText(e.target.value);
+    if (!menuOpen) {
       setMenuOpen(true);
-    }
-    if (!value) {
-      setActiveIndex(-1);
+    } else if (!e.target.value) {
+      closeMenu({skipFocus: true});
     }
   };
 
   const handleToggleOption = (optionId: OptionId) => {
-    setSearchText('');
-    setActiveIndex(-1);
     setSelectedOptions(
       selectedOptions.includes(optionId)
         ? selectedOptions.filter(id => id !== optionId)
@@ -125,68 +130,99 @@ export const MultiSelectInput: React.FC<{
 
   const handleClearAll = () => {
     setSelectedOptions([]);
-    reset();
+    closeMenu();
   };
 
   const handleInputKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    const {key} = e;
-
-    // Open menu on ArrowDown/ArrowUp if closed and there are options
-    if (!menuOpen && (key === 'ArrowDown' || key === 'ArrowUp')) {
-      if (filteredOptions.length > 0) {
+    switch (e.key) {
+      case 'Enter':
+        if (menuOpen && searchText && filteredOptions.length > 0) {
+          const option = filteredOptions[0];
+          handleToggleOption(option.id);
+          setSearchText('');
+        }
+        break;
+      case 'ArrowDown':
         e.preventDefault();
         setMenuOpen(true);
-        if (key === 'ArrowDown') {
-          setActiveIndex(0);
-        } else {
-          setActiveIndex(filteredOptions.length - 1);
+        setFocusedOptionId(filteredOptions[0]?.id ?? null);
+        break;
+      case 'ArrowUp':
+        e.preventDefault();
+        setMenuOpen(true);
+        setFocusedOptionId(
+          filteredOptions[filteredOptions.length - 1]?.id ?? null
+        );
+        break;
+      case 'Tab':
+        if (!anyOptionsSelected) {
+          closeMenu({skipFocus: true});
         }
-        return;
-      }
+        break;
+      case 'Escape':
+        closeMenu();
+        break;
+      case 'Backspace':
+        if (searchText === '' && selectedOptions[selectedOptions.length - 1]) {
+          handleToggleOption(selectedOptions[selectedOptions.length - 1]);
+        }
+        break;
     }
+  };
 
-    // Handle navigation and selection if menu is open
-    if (menuOpen) {
-      switch (key) {
-        case 'ArrowDown':
-          e.preventDefault();
-          setActiveIndex(prev =>
-            Math.min(prev + 1, filteredOptions.length - 1)
-          );
-          break;
-        case 'ArrowUp':
-          e.preventDefault();
-          setActiveIndex(prev => Math.max(prev - 1, 0));
-          break;
-        case 'Enter':
-          // when filtering results in a single option, Enter selects it
-          if (activeIndex < 0 && searchText && filteredOptions.length === 1) {
-            handleToggleOption(filteredOptions[0].id);
-          }
-        // fallthrough is intentional
-        // Space and Enter act the same when an option is active
-        // eslint-disable-next-line no-fallthrough
-        case ' ':
-          if (activeIndex >= 0 && filteredOptions[activeIndex]) {
-            handleToggleOption(filteredOptions[activeIndex].id);
-          }
-          break;
-        case 'Escape':
-          e.preventDefault();
-          reset();
-          break;
-        case 'Tab':
-          reset();
-          break;
-      }
+  const handleMenuKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (!filteredOptions.length) return;
+    switch (e.key) {
+      case 'ArrowDown':
+        e.preventDefault();
+        setFocusedOptionId(prev =>
+          prev === null
+            ? filteredOptions[0]?.id ?? null
+            : filteredOptions[
+                Math.min(
+                  filteredOptions.findIndex(option => option.id === prev) + 1,
+                  filteredOptions.length - 1
+                )
+              ]?.id ?? null
+        );
+        break;
+      case 'ArrowUp':
+        e.preventDefault();
+        setFocusedOptionId(prev =>
+          prev === null
+            ? filteredOptions[filteredOptions.length - 1]?.id ?? null
+            : filteredOptions[
+                Math.max(
+                  filteredOptions.findIndex(option => option.id === prev) - 1,
+                  0
+                )
+              ]?.id ?? null
+        );
+        break;
+      // intentional fallthrough case
+      case 'Escape':
+      case 'Tab':
+        closeMenu({skipFocus: e.key === 'Tab'});
+        break;
     }
+  };
 
-    if (key === 'Backspace' && searchText === '') {
-      if (selectedOptions.length > 0) {
-        handleRemoveOption(selectedOptions[selectedOptions.length - 1]);
-      } else {
-        reset();
-      }
+  const handleOptionKeyDown = (
+    e: React.KeyboardEvent<HTMLDivElement>,
+    id: OptionId
+  ) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      handleToggleOption(id);
+    }
+  };
+
+  const closeMenu = (options?: {skipFocus?: boolean}) => {
+    setMenuOpen(false);
+    setSearchText('');
+    setFocusedOptionId(null);
+    if (!options?.skipFocus) {
+      inputRef.current?.focus();
     }
   };
 
@@ -195,14 +231,24 @@ export const MultiSelectInput: React.FC<{
     [selectedOptions]
   );
 
+  const isOptionFocused = useCallback(
+    (id: OptionId) => focusedOptionId === id,
+    [focusedOptionId]
+  );
+
   const isOptionHovered = useCallback(
-    (id: OptionId) => hoveredOptionId === id && activeIndex < 0,
-    [hoveredOptionId, activeIndex]
+    (id: OptionId) => hoveredOptionId === id,
+    [hoveredOptionId]
   );
 
   const anyOptionsSelected = useMemo(
     () => selectedOptions.length > 0,
     [selectedOptions]
+  );
+
+  const activeDescendant = useMemo(
+    () => (focusedOptionId ? `${id}-option-${focusedOptionId}` : undefined),
+    [focusedOptionId, id]
   );
 
   return (
@@ -214,16 +260,21 @@ export const MultiSelectInput: React.FC<{
         size={size}
         errorMessage={errorMessage}
         onClick={e => {
+          // prevent label's native click event and stop propagation
           e.preventDefault();
           e.stopPropagation();
-          if (!menuOpen) setMenuOpen(true);
-          inputRef.current?.focus();
+          if (!menuOpen) {
+            inputRef.current?.focus();
+          }
         }}
       >
         <div
           className={classNames(styles.container, {
             [styles.focused]: isFocused,
           })}
+          role="combobox"
+          aria-controls={`${id}-listbox`}
+          aria-expanded={menuOpen}
           aria-haspopup="listbox"
         >
           <div className={styles.tagsAndSearchContainer}>
@@ -255,21 +306,20 @@ export const MultiSelectInput: React.FC<{
             <input
               className={styles.searchInput}
               ref={inputRef}
+              type="search"
               id={id}
-              name={name}
               placeholder={placeholder}
               value={searchText}
               onChange={handleInputChange}
               onFocus={() => setIsFocused(true)}
               onBlur={() => setIsFocused(false)}
+              onClick={() => setMenuOpen(true)}
               onKeyDown={handleInputKeyDown}
-              role="combobox"
               aria-autocomplete="list"
               aria-controls={`${id}-listbox`}
-              aria-expanded={menuOpen}
-              aria-activedescendant={activeDescendant}
               aria-labelledby={`${id}-label`}
-              autoComplete="new-password"
+              aria-label="filter options"
+              autoComplete="off"
             />
           </div>
           {anyOptionsSelected && (
@@ -281,39 +331,37 @@ export const MultiSelectInput: React.FC<{
           )}
 
           {menuOpen && (
-            <ul
-              className={classNames(styles.multiSelectMenu, {
-                [styles.keyboardNav]: activeIndex >= 0,
-              })}
+            <div
+              className={styles.multiSelectMenu}
               id={`${id}-listbox`}
               role="listbox"
-              aria-multiselectable="true"
+              aria-multiselectable
+              aria-activedescendant={activeDescendant}
               aria-labelledby={`${id}-label`}
+              tabIndex={-1}
+              onKeyDown={handleMenuKeyDown}
             >
               {filteredOptions.length > 0 ? (
                 filteredOptions.map((option, i) => {
                   const selected = isOptionSelected(option.id);
-                  const optionFocused =
-                    activeIndex === i || filteredOptions.length === 1;
+                  const optionFocused = isOptionFocused(option.id);
                   const optionHovered = isOptionHovered(option.id);
-                  const optionHtmlId = `${id}-option-${option.id}`;
+                  const optionId = `${id}-option-${option.id}`;
 
                   return (
-                    <li
+                    <div
                       key={option.id}
-                      id={optionHtmlId}
+                      id={optionId}
                       className={classNames(styles.option, {
-                        [styles.focused]: optionFocused,
+                        [styles.hover]: i === 0 && searchText.length,
                       })}
-                      onMouseDown={e => {
-                        e.preventDefault();
-                        handleToggleOption(option.id);
-                        inputRef.current?.focus();
-                      }}
+                      onClick={() => handleToggleOption(option.id)}
+                      onKeyDown={e => handleOptionKeyDown(e, option.id)}
                       onMouseEnter={() => setHoveredOptionId(option.id)}
                       onMouseLeave={() => setHoveredOptionId(null)}
                       role="option"
                       aria-selected={selected}
+                      tabIndex={-1}
                       ref={el =>
                         el
                           ? optionRefs.current.set(option.id, el)
@@ -335,17 +383,15 @@ export const MultiSelectInput: React.FC<{
                           aria-hidden
                         />
                       )}
-                    </li>
+                    </div>
                   );
                 })
               ) : (
-                <li>
-                  <BodyThreeText className={styles.emptyState}>
-                    {emptyStateMessage}
-                  </BodyThreeText>
-                </li>
+                <BodyThreeText className={styles.emptyState}>
+                  {emptyStateMessage}
+                </BodyThreeText>
               )}
-            </ul>
+            </div>
           )}
         </div>
       </FormFieldWrapper>

@@ -9,18 +9,9 @@ import React, {
   useState,
 } from 'react';
 
-import musicI18n from '../../locale';
 import MusicRegistry from '../../MusicRegistry';
-import {
-  InstrumentEventValue,
-  ScaleMode,
-} from '../../player/interfaces/InstrumentEvent';
-import {
-  getPitchName,
-  isBlackKey,
-  convertRelativeToAbsolutePitch,
-  convertAbsoluteToRelativePitch,
-} from '../../utils/Notes';
+import {InstrumentEventValue} from '../../player/interfaces/InstrumentEvent';
+import {getPitchName, isBlackKey} from '../../utils/Notes';
 import LoadingOverlay from '../LoadingOverlay';
 import PreviewControlsV2 from '../PreviewControlsV2';
 import EaseIntoView from '../util/EaseIntoView';
@@ -37,6 +28,7 @@ interface Props {
 }
 
 export type EditorType = 'drums' | 'notes';
+export type ScaleMode = 'simple' | 'chromatic';
 
 /**
  * Instrument grid editor for selecting notes in a pattern.
@@ -49,41 +41,14 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
   lengthMeasures,
 }) => {
   const instruments = getInstruments(editorType);
-  const [currentValue, setCurrentValue] = useState(() => {
-    // Convert to absolute when loading.
-    const convertedValue = {
-      ...initialValue,
-      events: initialValue.events.map(event => ({
-        ...event,
-        note: initialValue.relative
-          ? convertRelativeToAbsolutePitch(
-              MusicRegistry.player.getKey(),
-              event.note
-            )
-          : event.note,
-      })),
-    };
-    return convertedValue;
-  });
+  const [currentValue, setCurrentValue] = useState(initialValue);
   const [isLoading, setIsLoading] = useState(false);
   const [currentPreviewTick, setCurrentPreviewTick] = useState(0);
-
-  const scaleMode = currentValue.scaleMode;
-  const key = MusicRegistry.player.getKey();
+  const [scaleMode, setScaleMode] = useState<ScaleMode>('simple');
 
   useEffect(() => {
-    // Convert to relative before saving.
-    const convertedValue = {
-      ...currentValue,
-      events: currentValue.events.map(event => ({
-        ...event,
-        note: currentValue.relative
-          ? convertAbsoluteToRelativePitch(key, event.note)
-          : event.note,
-      })),
-    };
-    onChange(convertedValue);
-  }, [onChange, currentValue, key]);
+    onChange(currentValue);
+  }, [onChange, currentValue]);
 
   useEffect(() => {
     const instrument = currentValue.instrument;
@@ -114,7 +79,6 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
       const index = newEvents.findIndex(
         event => event.note === note && event.tick === tick
       );
-
       if (index !== -1) {
         newEvents.splice(index, 1);
       } else {
@@ -134,7 +98,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
 
   const startPreview = useCallback(() => {
     MusicRegistry.player.previewNotes(
-      {...currentValue, relative: false},
+      currentValue,
       (tick: number) => setCurrentPreviewTick(tick),
       () => setCurrentPreviewTick(0)
     );
@@ -145,22 +109,11 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
     MusicRegistry.player.cancelPreviews();
   }, [setCurrentPreviewTick]);
 
-  const allNotes = useMemo(
-    () =>
-      getDisplayNotes(
-        editorType,
-        'chromatic',
-        currentValue.instrument,
-        MusicRegistry.player.getKey()
-      ).sort((a, b) => b.note - a.note), // Sort descending
-    [editorType, currentValue.instrument]
-  );
-
   const displayNotes = useMemo(
     () =>
       getDisplayNotes(
         editorType,
-        scaleMode || 'simple',
+        scaleMode,
         currentValue.instrument,
         MusicRegistry.player.getKey()
       ).sort((a, b) => b.note - a.note), // Sort descending
@@ -169,59 +122,34 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
 
   const ticks = integers(lengthMeasures * 16, 1);
 
-  const interfaceMode =
-    editorType === 'drums' ? 'drums' : scaleMode || 'simple';
+  const interfaceMode = editorType === 'drums' ? 'drums' : scaleMode;
 
-  const colorsSimple = styles.colorsSimple.split(',');
-  const colorsSimpleDarker = styles.colorsSimpleDarker.split(',');
+  const RowLabel = (props: {name: string; note: number; i: number}) => {
+    const [style, label] = {
+      drums: [styles.textLabel, props.name],
+      simple: [styles.label, ((displayNotes.length - props.i - 1) % 7) + 1],
+      chromatic: [styles.keyLabel, getPitchName(props.note)],
+    }[interfaceMode];
 
-  const getRowInfo = (name: string, note: number) => {
-    if (interfaceMode === 'drums') {
-      return {style: styles.textLabel, label: name};
-    }
-
-    let color = undefined,
-      backgroundColor = undefined,
-      selectedBackgroundColor = undefined;
-
-    if (interfaceMode === 'simple') {
-      const displayNoteIndex = displayNotes.findIndex(
-        displayNote => displayNote.note === note
-      );
-      if (displayNoteIndex !== -1) {
-        color = 'white';
-        selectedBackgroundColor =
-          colorsSimple[(21 - displayNoteIndex) % colorsSimple.length];
-        backgroundColor =
-          colorsSimpleDarker[
-            (21 - displayNoteIndex) % colorsSimpleDarker.length
-          ];
-      }
-    }
-
-    if (backgroundColor === undefined) {
-      backgroundColor = isBlackKey(note) ? styles.black : styles.white;
-      color = isBlackKey(note) ? styles.white : styles.black;
-    }
-
-    if (selectedBackgroundColor === undefined) {
-      selectedBackgroundColor = styles.selectedColor;
-    }
-
-    const pitchRowClass = displayNotes.find(
-      displayNote => displayNote.note === note
-    )
-      ? styles.pitchRowShowing
-      : styles.pitchRowHidden;
-
-    return {
-      pitchRowClass,
-      style: styles.keyLabel,
-      label: getPitchName(note),
-      backgroundColor,
-      color,
-      selectedBackgroundColor,
-    };
+    return (
+      <button
+        type="button"
+        className={styles['cell-outer']}
+        onClick={() =>
+          MusicRegistry.player.previewNote(props.note, currentValue.instrument)
+        }
+      >
+        <div
+          className={classNames(
+            style,
+            isBlackKey(props.note) && styles.blackKey,
+            styles.innerCell
+          )}
+        >
+          {label}
+        </div>
+      </button>
+    );
   };
 
   const [scrollStart, scrollEnd] = useMemo(() => {
@@ -235,7 +163,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
     const topVisibleRow =
       displayNotes.length - notesInOctave - parseInt(displayRows);
     // Start scrolling a few rows below
-    const scrollStartRow = topVisibleRow + 3;
+    const scrollStartRow = topVisibleRow + 5;
     const cellHeightWithGap = parseInt(cellHeight) + parseInt(rowGap);
 
     return [
@@ -278,17 +206,11 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
           <SegmentedButtons
             className={styles.flexAutoWidth}
             buttons={[
-              {label: musicI18n.tuneKeyNotes(), value: 'simple'},
-              {label: musicI18n.tuneAllNotes(), value: 'chromatic'},
+              {label: 'Best Notes', value: 'simple'},
+              {label: 'All Notes', value: 'chromatic'},
             ]}
-            onChange={value => {
-              setCurrentValue({...currentValue, scaleMode: value as ScaleMode});
-              MusicRegistry.analyticsReporter.onButtonClicked(
-                'change-tune-scale-mode',
-                {scaleMode: value}
-              );
-            }}
-            selectedButtonValue={scaleMode || 'simple'}
+            onChange={value => setScaleMode(value as ScaleMode)}
+            selectedButtonValue={scaleMode}
             size="xs"
           />
         )}
@@ -300,72 +222,36 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
         scrollEnd={scrollEnd}
         className={classNames(styles[`sequence-editor-${interfaceMode}`])}
       >
-        {allNotes.map(({note, name}, i) => {
-          const {
-            pitchRowClass,
-            style,
-            label,
-            backgroundColor,
-            color,
-            selectedBackgroundColor,
-          } = getRowInfo(name, note);
-
-          return (
-            <div
-              className={classNames(styles.pitchRow, pitchRowClass)}
-              key={note}
-            >
-              <button
-                type="button"
-                className={styles['cell-outer']}
-                onClick={() =>
-                  MusicRegistry.player.previewNote(
-                    note,
-                    currentValue.instrument
-                  )
-                }
-              >
-                <div
-                  className={classNames(style, styles.innerCell)}
-                  style={{backgroundColor, color}}
-                >
-                  {label}
-                </div>
-              </button>
-
-              <div className={styles.cellRow}>
-                {ticks.map(tick => (
-                  <Fragment key={tick}>
-                    <button
-                      type="button"
-                      className={styles[`cell-outer-${interfaceMode}`]}
-                      key={tick}
-                      onClick={() => onClickCell(note, tick)}
-                    >
-                      <div
-                        className={classNames(
-                          styles.innerCell,
-                          isSelected(note, tick) && styles.selected,
-                          currentPreviewTick === tick && styles.preview
-                        )}
-                        style={{
-                          backgroundColor: isSelected(note, tick)
-                            ? selectedBackgroundColor
-                            : undefined,
-                        }}
-                      />
-                    </button>
-                    {
-                      tick % 4 === 0 && (
-                        <div className={styles.spacer} />
-                      ) /* Spacer */
-                    }
-                  </Fragment>
-                ))}
-              </div>
+        {displayNotes.map(({note, name}, i) => (
+          <div className={styles.pitchRow} key={note}>
+            <RowLabel name={name} note={note} i={i} />
+            <div className={styles.cellRow}>
+              {ticks.map(tick => (
+                <Fragment key={tick}>
+                  <button
+                    type="button"
+                    className={styles[`cell-outer-${interfaceMode}`]}
+                    key={tick}
+                    onClick={() => onClickCell(note, tick)}
+                  >
+                    <div
+                      className={classNames(
+                        styles.innerCell,
+                        isSelected(note, tick) && styles.selected,
+                        currentPreviewTick === tick && styles.preview
+                      )}
+                    />
+                  </button>
+                  {
+                    tick % 4 === 0 && (
+                      <div className={styles.spacer} />
+                    ) /* Spacer */
+                  }
+                </Fragment>
+              ))}
             </div>
-          );
-        })}
+          </div>
+        ))}
       </EaseIntoView>
       <LoadingOverlay show={isLoading} />
     </div>

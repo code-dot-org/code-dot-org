@@ -29,8 +29,6 @@ Feature: GDPR Dialog - data transfer agreement
     And I am on "http://studio.code.org/home"
     Then element ".ui-test-gdpr-dialog" is not visible
 
-  # Broken during the marketing-sites cutover
-  @skip
   Scenario: GDPR Dialog privacy link works from dashboard
     Given I am in Europe
     And I am a teacher

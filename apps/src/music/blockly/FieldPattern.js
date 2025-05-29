@@ -101,7 +101,7 @@ class FieldPattern extends GoogleBlockly.Field {
     this.renderContent();
 
     this.newDiv_.style.color = color.neutral_light;
-    if (appConfig.getValue('play-tune-block-drums') !== 'true') {
+    if (appConfig.getValue('play-tune-block') !== 'true') {
       this.newDiv_.style.width = '420px';
     }
     this.newDiv_.style.backgroundColor = color.dark_black;
@@ -115,7 +115,7 @@ class FieldPattern extends GoogleBlockly.Field {
       return;
     }
 
-    if (appConfig.getValue('play-tune-block-drums') === 'true') {
+    if (appConfig.getValue('play-tune-block') === 'true') {
       ReactDOM.render(
         <InstrumentGrid
           editorType="drums"

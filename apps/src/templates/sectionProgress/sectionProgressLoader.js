@@ -60,8 +60,6 @@ export function loadUnitProgress(scriptId, sectionId) {
   };
 
   // Get the script data
-  // TODO: TEACH-1865
-  // Use /dashboardapi/script_structure/courses/:course_name/units/:unit_position
   const scriptRequest = fetch(`/dashboardapi/script_structure/${scriptId}`, {
     credentials: 'include',
   })

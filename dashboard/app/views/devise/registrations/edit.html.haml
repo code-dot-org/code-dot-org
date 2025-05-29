@@ -1,6 +1,7 @@
 - require '../shared/middleware/helpers/experiments'
 - require 'policies/child_account'
 - require 'policies/lti'
+- require 'queries/user'
 - @page_title = t('activerecord.attributes.user.edit_header')
 - no_email = current_user.no_personal_email? || params[:noEmail] == 'true'
 
@@ -104,7 +105,7 @@
       = no_email ? t('user.create_personal_login_under_13_info') : t('user.create_personal_login_info')
       = t('user.create_personal_login_link_account') if current_user.migrated?
   .div{style: 'position: relative'}
-    = form_for(current_user, as: :user, url: '/users/upgrade', html: {id: 'edit_user_create_personal_account', style: (!@personal_account_linking_enabled ? 'opacity: 0.25;' : '')}, namespace: 'create_personal') do |form|
+    = form_for(current_user, url: '/users/upgrade', html: {id: 'edit_user_create_personal_account', style: (!@personal_account_linking_enabled ? 'opacity: 0.25;' : '')}, namespace: 'create_personal') do |form|
       = form.hidden_field :hashed_email
       %h3= t('user.enter_new_login_info')
       - if no_email
@@ -232,7 +233,7 @@
       authenticationOptions: current_user.authentication_options.map(&:summarize),
       isGoogleClassroomStudent: current_user.google_classroom_student?,
       isCleverStudent: current_user.clever_student?,
-      dependentStudentsCount: Queries::User::DependentStudentsCount.call(user_id: current_user.id),
+      dependentStudentsCount: Queries::User.dependent_students_count(current_user.id),
       personalAccountLinkingEnabled: @personal_account_linking_enabled,
       lmsName: Queries::Lti.get_lms_name_from_user(current_user),
       verifiedTeacher: current_user.verified_teacher?,

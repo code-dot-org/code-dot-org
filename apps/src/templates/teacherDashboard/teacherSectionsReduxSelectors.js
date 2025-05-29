@@ -271,7 +271,6 @@ export function newSectionData(participantType) {
     courseDisplayName: null,
     unitId: null,
     unitName: null,
-    unitPosition: null,
     isAssignedStandaloneCourse: false,
     hidden: false,
     restrictSection: false,

@@ -126,17 +126,15 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   );
 };
 
-// Exported for AI Tutor 2 (experimental). Pull this out into a separate component if needed.
-export const WaitingAnimation: React.FunctionComponent<{
-  shouldDisplay: boolean;
-  className?: string;
-}> = ({shouldDisplay, className}) => {
+const WaitingAnimation: React.FunctionComponent<{shouldDisplay: boolean}> = ({
+  shouldDisplay,
+}) => {
   if (shouldDisplay) {
     return (
       <img
         src="/blockly/media/aichat/typing-animation.gif"
         alt={aichatI18n.chatEventDescriptions_waitForResponse()}
-        className={classNames(moduleStyles.waitingForResponse, className)}
+        className={moduleStyles.waitingForResponse}
       />
     );
   }

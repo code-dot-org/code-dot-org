@@ -1,6 +1,8 @@
 import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {useMemo} from 'react';
+// import {useNavigate, NavigateFunction, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
@@ -15,8 +17,6 @@ import {Student} from '@cdo/apps/types/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, AppDispatch} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
-
-import LinkOption from './LinkOption';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -45,6 +45,38 @@ const onDeleteClick = (
     PLATFORMS.BOTH
   );
   onDeleteClickCallback(sectionId);
+};
+
+interface LinkElementProps {
+  value: string;
+  label: string;
+  iconName: string;
+  url: string;
+  eventName?: string;
+}
+
+const LinkOption: React.FC<LinkElementProps> = ({
+  value,
+  label,
+  iconName,
+  url,
+  eventName,
+}) => {
+  return (
+    <li key={value}>
+      <Link
+        to={url}
+        className={styles.dropdownMenuItem}
+        onClick={() => {
+          if (eventName)
+            analyticsReporter.sendEvent(eventName, {}, PLATFORMS.BOTH);
+        }}
+      >
+        <FontAwesomeV6Icon iconName={iconName} iconStyle="solid" />
+        <span>{label}</span>
+      </Link>
+    </li>
+  );
 };
 
 const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
@@ -80,31 +112,25 @@ const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
   const dropdownOptions = useMemo(() => {
     const options = [
       <LinkOption
-        key={'sectionSettings'}
-        value={TEACHER_NAVIGATION_PATHS.settings}
+        value="sectionSettings"
         label={i18n.sectionSettings()}
-        iconName={'gear'}
+        iconName="gear"
         url={`../${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.settings}`}
         eventName={EVENTS.SECTION_CARD_SETTINGS_CLICKED}
-        eventOptions={{}}
       />,
       <LinkOption
-        key={'roster'}
-        value={TEACHER_NAVIGATION_PATHS.roster}
+        value="roster"
         label={i18n.roster()}
-        iconName={'user'}
+        iconName="user"
         url={`../${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.roster}`}
         eventName={EVENTS.SECTION_CARD_ROSTER_CLICKED}
-        eventOptions={{}}
       />,
       <LinkOption
-        key={'loginCards'}
-        value={TEACHER_NAVIGATION_PATHS.loginInfo}
+        value="loginCards"
         label={i18n.loginCards()}
-        iconName={'id-card'}
+        iconName="id-card"
         url={`../${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.loginInfo}`}
         eventName={EVENTS.SECTION_CARD_LOGIN_CARDS_CLICKED}
-        eventOptions={{}}
       />,
       <li key={'certificates'}>
         <button

@@ -11,7 +11,6 @@ import {useAppSelector} from '../util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '../utils';
 
 import AiDiffChat from './AiDiffChat';
-import {Context} from './types';
 import AiDiffWelcome from './welcome/AiDiffWelcome';
 
 import style from './ai-differentiation.module.scss';
@@ -24,8 +23,9 @@ const AI_DIFF_HEADER_TEXT = 'AI Teaching Assistant';
 
 interface AiDiffContainerProps {
   closeTutor?: () => void;
-  context: Context;
+  context: string;
   open: boolean;
+  scriptId?: number;
   scriptName?: string;
   unitDisplayName?: string;
 }
@@ -34,6 +34,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   closeTutor,
   context,
   open,
+  scriptId,
   scriptName,
   unitDisplayName,
 }) => {
@@ -136,12 +137,14 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
             <AiDiffWelcome
               setShowWelcomeExperience={setShowWelcomeExperience}
               context={context}
+              scriptId={scriptId}
               scriptName={scriptName}
               unitDisplayName={unitDisplayName}
             />
           ) : (
             <AiDiffChat
               context={context}
+              scriptId={scriptId}
               scriptName={scriptName}
               unitDisplayName={unitDisplayName}
             />

@@ -6,7 +6,6 @@
     "properties": {
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSA",
-      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -19,8 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-23 02:04:54 UTC",
-    "hide_within_course": false,
+    "serialized_at": "2025-04-21 17:11:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -59,7 +57,8 @@
       "user_facing": true,
       "position": 3,
       "properties": {
-        "display_name": "End of Unit Survey"
+        "display_name": "Alternate Lessons",
+        "description": "This section contains the one-day version of the Personal Narrative Project."
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-4",
@@ -82,12 +81,13 @@
   "lessons": [
     {
       "key": "Two-Dimensional (2D) Arrays",
-      "name": "Lesson 1: Two-Dimensional (2D) Arrays",
+      "name": "Two-Dimensional (2D) Arrays",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/5/topic/1) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**What if the data I need to store is best represented as a table?**\n\nIn this lesson, students are introduced to two-dimensional (2D) arrays and explore how these can be used to store tables of data. Students discover that 2D arrays are arrays of arrays and identify similarities and differences between the structure and functionality of 1D and 2D arrays. They learn how to declare and initialize 2D arrays using the `new` keyword and initializer lists and practice creating 2D arrays to store data.",
         "preparation": "* **(Optional)** Print copies of the Two-Dimensional (2D) Arrays Guided Notes (one for each student)\n* Preview the *Two-Dimensional (2D) Arrays* video\n* Print copies of the Unit 5 Guide (one for each student)",
         "student_overview": "**What if the data I need to store is best represented as a table?**\n\nIn this lesson, you are introduced to two-dimensional (2D) arrays and explore how these can be used to store tables of data. You discover that 2D arrays are arrays of arrays and identify similarities and differences between the structure and functionality of 1D and 2D arrays. You learn how to declare and initialize 2D arrays using the `new` keyword and initializer lists and practice creating 2D arrays to store data."
@@ -100,12 +100,13 @@
     },
     {
       "key": "2D Array Elements",
-      "name": "Lesson 2: 2D Array Elements",
+      "name": "2D Array Elements",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/5/topic/2) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I access and modify rows and elements in a 2D array?**\n\nStudents now know how to declare and initialize a two-dimensional (2D) array using the `new` keyword and an initializer list. In this lesson, students explore how to access and modify individual rows and elements in a 2D array and identify similarities and differences between accessing elements in a 2D array and a 1D array. They then practice accessing and modifying rows and elements in a 2D array.",
         "preparation": "* **(Optional)** Print copies of the 2D Array Elements Guided Notes (one for each student)\n* Preview the *Working with 2D Array Elements* video",
         "student_overview": "**How can I access and modify rows and elements in a 2D array?**\n\nYou now know how to declare and initialize a two-dimensional (2D) array using the `new` keyword and an initializer list. In this lesson, you explore how to access and modify individual rows and elements in a 2D array and identify similarities and differences between accessing elements in a 2D array and a 1D array. You then practice accessing and modifying rows and elements in a 2D array."
@@ -118,12 +119,13 @@
     },
     {
       "key": "Row-Major Traversal",
-      "name": "Lesson 3: Row-Major Traversal",
+      "name": "Row-Major Traversal",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n* Topic Questions 8.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/5/topic/3) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I traverse a 2D array?**\n\nStudents have previously learned how to traverse a 1D array and use nested loops. In this lesson, students build on this knowledge to learn how to traverse a two-dimensional (2D) array in row-major order. Students explore how elements can be accessed in a 2D array using nested loops and consider the types of questions they could ask or problems they could solve with this approach. They trace code segments that traverse a 2D array in row-major order, then practice writing nested loops to traverse a 2D array and access its elements.",
         "preparation": "* **(Optional)** Print copies of the Row-Major Traversal Guided Notes (one for each student)\n* Preview the *Row-Major Traversal* video\n* Print copies of the Tracing 2D Array Traversals handout (one for each student)\n* Print copies of the Writing Algorithms with 2D Arrays handout (one for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies",
         "student_overview": "**How can I traverse a 2D array?**\n\nYou have previously learned how to traverse a 1D array and use nested loops. In this lesson, you build on this knowledge to learn how to traverse a two-dimensional (2D) array in row-major order. You explore how elements can be accessed in a 2D array using nested loops and consider the types of questions you could ask or problems you could solve with this approach. You trace code segments that traverse a 2D array in row-major order, then practice writing nested loops to traverse a 2D array and access its elements."
@@ -136,12 +138,13 @@
     },
     {
       "key": "Column-Major Traversal",
-      "name": "Lesson 4: Column-Major Traversal",
+      "name": "Column-Major Traversal",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/5/topic/4) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How do I access elements in a 2D array by column?**\n\nStudents learn to use nested loops to traverse a 2D array in column-major order and differentiate between column-major and row-major traversals. Students identify scenarios that are best for traversing in row-major and column-major order and develop an algorithm to traverse a 2D array in column-major order to find the sum of all values in each column of the array. Students then practice applying standard 1D array algorithms to 2D arrays to find information and perform calculations.",
         "preparation": "* **(Optional)** Print copies of the Column-Major Traversal Guided Notes (one for each student)\n* Preview the *Column-Major Traversal* video\n* Print copies of the Tracing Column-Major Traversals handout (one for each student)",
         "student_overview": "**How do I access elements in a 2D array by column?**\n\nYou learned to use nested loops to traverse a 2D array in row-major order and discovered that standard 1D array algorithms can be applied to 2D arrays. In this lesson, you learn to use nested loops to traverse a 2D array in column-major order and differentiate between column-major and row-major traversals. You identify scenarios that are best for traversing in row-major and column-major order and develop an algorithm to traverse a 2D array in column-major order to find the sum of all values in each column of the array. You then practice applying standard 1D array algorithms to 2D arrays to find information and perform calculations."
@@ -154,12 +157,13 @@
     },
     {
       "key": "Enhanced For Loops",
-      "name": "Lesson 5: Enhanced For Loops",
+      "name": "Enhanced For Loops",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/5/topic/5) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I use enhanced `for` loops to traverse a 2D array?**\n\nStudents revisit enhanced `for` loops to explore how these are used with 2D arrays. In the process, students discover that objects can be modified using an enhanced `for` loop because the loop variable is an alias of the object reference in the array. Students explore how enhanced `for` loops can be used with 2D arrays and identify similarities and differences between using enhanced `for` loops with 1D arrays and 2D arrays. Students then practice using enhanced `for` loops with 2D arrays.",
         "preparation": "* **(Optional)** Print copies of the Enhanced For Loops Guided Notes (one for each student)\n* Preview the *Enhanced For Loops and 2D Arrays* video\n* Print copies of the Enhanced For Loops Anticipation Guide (one for each student)",
         "student_overview": "**How can I use enhanced `for` loops to traverse a 2D array?**\n\nYou used enhanced `for` loops with 1D arrays to access each element from first to last. In this lesson, you revisit enhanced `for` loops to explore how these are used with 2D arrays. In the process, you discover that objects can be modified using an enhanced `for` loop because the loop variable is an alias of the object reference in the array. You explore how enhanced `for` loops can be used with 2D arrays and identify similarities and differences between using enhanced `for` loops with 1D arrays and 2D arrays. You then practice using enhanced `for` loops with 2D arrays."
@@ -172,12 +176,13 @@
     },
     {
       "key": "Images in The Theater",
-      "name": "Lesson 6: Images in The Theater",
+      "name": "Images in The Theater",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How can I create image filters using The Theater?**\n\nStudents apply their knowledge of 2D arrays and object-oriented programming to create image filters using The Theater. Students learn how images are made up of pixels and that pixels consist of red, green, and blue color values and explore the `Image` and `Pixel` classes. Students write pseudocode to create an image filter that sets a specific color value to zero and then implement their algorithm in Java.",
         "preparation": "* **(Optional)** Print copies of the Images in The Theater Guided Notes (one for each student)\n* Preview the *Images and Pixels* video\n* Print copies of the Creating Image Filters handout (one for each student)\n* (Optional) Cut out the manipulatives from the Creating Image Filters handout",
         "student_overview": "**How can I create image filters using The Theater?**\n\nYou may have used or seen image filters in various social media apps or photo editing programs. In this lesson, you apply your knowledge of 2D arrays and object-oriented programming to create image filters using The Theater. You learn how images are made up of pixels and that pixels consist of red, green, and blue color values and explore the `Image` and `Pixel` classes. You write pseudocode to create an image filter that sets a specific color value to zero and then implement your algorithm in Java."
@@ -190,12 +195,13 @@
     },
     {
       "key": "2D Array Algorithms",
-      "name": "Lesson 7: 2D Array Algorithms",
+      "name": "2D Array Algorithms",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/5/topic/7) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I use what I know about object-oriented programming and 2D arrays to plan and implement algorithms?**\n\nIn this lesson, students apply what they have learned so far to plan and implement standard algorithms to search or modify a two-dimensional (2D) array. They learn about the `indexOf()` method in the `String` class and how it can be used to check if a specific character or `String` appears in a `String` object and explore algorithms using the `indexOf()` method. Students then work with a partner and use manipulatives to plan and implement an algorithm to search or modify elements in a 2D array.",
         "preparation": "* **(Optional)** Print copies of the 2D Array Algorithms Guided Notes (one for each student)\n* Print copies of the Writing Algorithms with 2D Arrays handout (one for each student)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies",
         "student_overview": "**How can I use what I know about object-oriented programming and 2D arrays to plan and implement algorithms?**\n\nIn this lesson, you apply what you have learned so far to plan and implement standard algorithms to search or modify a two-dimensional (2D) array. You learn about the `indexOf()` method in the `String` class and how it can be used to check if a specific character or `String` appears in a `String` object and explore algorithms using the `indexOf()` method. You then work with a partner and use manipulatives to plan and implement an algorithm to search or modify elements in a 2D array."
@@ -208,12 +214,13 @@
     },
     {
       "key": "Modifying Images",
-      "name": "Lesson 8: Modifying Images",
+      "name": "Modifying Images",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n* Topic Questions 8.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can I modify standard algorithms to create image filters?**\n\nStudents practice working with two-dimensional (2D) arrays and modifying standard algorithms to create new image filters using The Theater. Students explore an example of a new image filter and then write pseudocode to create a new image filter. Students implement their algorithm in Java and create additional image filters by modifying `Pixel` objects stored in a 2D array.",
         "preparation": "* **(Optional)** Print copies of the Modifying Images Guided Notes (one for each student)\n* Print copies of the Modifying Colors handout (one for each student)",
         "student_overview": "**How can I modify standard algorithms to create image filters?**\n\nIn this lesson, you practice working with two-dimensional (2D) arrays and modifying standard algorithms to create new image filters using The Theater. You explore an example of a new image filter and then write pseudocode to create a new image filter. You implement your algorithm in Java and create additional image filters by modifying `Pixel` objects stored in a 2D array."
@@ -226,12 +233,13 @@
     },
     {
       "key": "Impacts of Programs",
-      "name": "Lesson 9: Impacts of Programs",
+      "name": "Impacts of Programs",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**What are the beneficial and harmful impacts of programs?**\n\nIn this lesson, students explore the beneficial and harmful impacts of programs by analyzing and discussing real-world applications of image manipulation, such as deep fakes. Students look at examples of deep fakes and realize the difficulty in identifying the difference between real and manipulated images. After considering the beneficial and harmful impacts of deep fakes, students explore some common image manipulation algorithms used to detect objects in an image or replace parts of an image with a different image.",
         "preparation": "* **(Optional)** Print copies of the Impacts of Programs Guided Notes (one for each student)\n* Preview the *This is Not Morgan Freeman* video\n* Print copies of the Unit 5 Study Guide (one for each student)",
         "student_overview": "**What are the beneficial and harmful impacts of programs?**\n\nIn this lesson, you explore the beneficial and harmful impacts of programs by analyzing and discussing real-world applications of image manipulation, such as deep fakes. You look at examples of deep fakes and realize the difficulty in identifying the difference between real and manipulated images. After considering the beneficial and harmful impacts of deep fakes, you explore some common image manipulation algorithms used to detect objects in an image or replace parts of an image with a different image."
@@ -244,7 +252,7 @@
     },
     {
       "key": "Personal Narrative Project",
-      "name": "Lesson 10a: Personal Narrative Project",
+      "name": "Personal Narrative Project",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -262,31 +270,12 @@
       }
     },
     {
-      "key": "Personal Narrative Project [1-Day Version]",
-      "name": "Lesson 10b: Personal Narrative Project [1-Day Version]",
+      "key": "GrayscaleImage FRQ",
+      "name": "GrayscaleImage FRQ",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 11,
-      "properties": {
-        "assessment": true,
-        "overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, students use the skills they have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. Students choose the topic for their personal narrative and the image filters or manipulation techniques they want to use. After brainstorming and planning, students develop their programs to create their personal narrative collage or animation.",
-        "preparation": "* Print copies of the Personal Narrative Project Planning Guide (one for each student)",
-        "student_overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, you use the skills you have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. You choose the topic for your personal narrative and the image filters or manipulation techniques you want to use. After brainstorming and planning, you develop your program to create your personal narrative collage or animation."
-      },
-      "seeding_key": {
-        "lesson.key": "Personal Narrative Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa5-2025"
-      }
-    },
-    {
-      "key": "GrayscaleImage FRQ",
-      "name": "Lesson 11: GrayscaleImage FRQ",
-      "absolute_position": 12,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 12,
       "properties": {
         "overview": "**How will I use what I know about 2D arrays and standard algorithms to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock 2D Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
         "preparation": "* Print copies of the GrayscaleImage FRQ handout (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Print copies of the GrayscaleImage FRQ Scoring Guidelines (one for each student)",
@@ -300,11 +289,11 @@
     },
     {
       "key": "Unit 5 Assessment",
-      "name": "Lesson 12: Unit 5 Assessment",
-      "absolute_position": 13,
+      "name": "Unit 5 Assessment",
+      "absolute_position": 12,
       "lockable": true,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 12,
       "properties": {
         "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
@@ -318,16 +307,20 @@
       }
     },
     {
-      "key": "End of Unit Survey",
-      "name": "End of Unit Survey",
-      "absolute_position": 14,
+      "key": "Personal Narrative Project [1-Day Version]",
+      "name": "Personal Narrative Project [1-Day Version]",
+      "absolute_position": 13,
       "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 14,
+      "has_lesson_plan": true,
+      "relative_position": 13,
       "properties": {
+        "assessment": true,
+        "overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, students use the skills they have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. Students choose the topic for their personal narrative and the image filters or manipulation techniques they want to use. After brainstorming and planning, students develop their programs to create their personal narrative collage or animation.",
+        "preparation": "* Print copies of the Personal Narrative Project Planning Guide (one for each student)",
+        "student_overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, you use the skills you have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. You choose the topic for your personal narrative and the image filters or manipulation techniques you want to use. After brainstorming and planning, you develop your program to create your personal narrative collage or animation."
       },
       "seeding_key": {
-        "lesson.key": "End of Unit Survey",
+        "lesson.key": "Personal Narrative Project [1-Day Version]",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa5-2025"
       }
@@ -335,10 +328,10 @@
     {
       "key": "Sandbox: Console",
       "name": "Sandbox: Console",
-      "absolute_position": 15,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 15,
+      "relative_position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -350,10 +343,10 @@
     {
       "key": "Sandbox: The Neighborhood",
       "name": "Sandbox: The Neighborhood",
-      "absolute_position": 16,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 16,
+      "relative_position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -365,6 +358,21 @@
     {
       "key": "Sandbox: The Theater",
       "name": "Sandbox: The Theater",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Sandbox: The Theater",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa5-2025"
+      }
+    },
+    {
+      "key": "Student End of Unit Survey",
+      "name": "Student End of Unit Survey",
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": false,
@@ -372,7 +380,7 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Sandbox: The Theater",
+        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa5-2025"
       }
@@ -813,73 +821,6 @@
       }
     },
     {
-      "key": "73fa07dd-051b-4acb-8d7d-4a1b3ccead6d",
-      "position": 5,
-      "properties": {
-        "name": "End of Unit Survey"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "73fa07dd-051b-4acb-8d7d-4a1b3ccead6d",
-        "lesson.key": "Personal Narrative Project",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa5-2025"
-      }
-    },
-    {
-      "key": "ed3c1a73-3daa-43bc-96c5-cc1f125b67a4",
-      "position": 1,
-      "properties": {
-        "duration": 10,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "ed3c1a73-3daa-43bc-96c5-cc1f125b67a4",
-        "lesson.key": "Personal Narrative Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa5-2025"
-      }
-    },
-    {
-      "key": "dbe9d9ad-929a-45cd-9e84-df3fb7f94f1c",
-      "position": 2,
-      "properties": {
-        "duration": 30,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "dbe9d9ad-929a-45cd-9e84-df3fb7f94f1c",
-        "lesson.key": "Personal Narrative Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa5-2025"
-      }
-    },
-    {
-      "key": "0ab6b66c-033b-4b26-98a9-06066f267a04",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0ab6b66c-033b-4b26-98a9-06066f267a04",
-        "lesson.key": "Personal Narrative Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa5-2025"
-      }
-    },
-    {
-      "key": "1f4fbf08-3215-4898-86d2-43159c0380f0",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "1f4fbf08-3215-4898-86d2-43159c0380f0",
-        "lesson.key": "Personal Narrative Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa5-2025"
-      }
-    },
-    {
       "key": "0de7dded-bc8d-4d90-8692-e90a934026a6",
       "position": 1,
       "properties": {
@@ -949,13 +890,43 @@
       }
     },
     {
-      "key": "2cd8906a-501c-47ea-b059-94bd01751035",
+      "key": "ed3c1a73-3daa-43bc-96c5-cc1f125b67a4",
       "position": 1,
       "properties": {
+        "duration": 10,
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "2cd8906a-501c-47ea-b059-94bd01751035",
-        "lesson.key": "End of Unit Survey",
+        "lesson_activity.key": "ed3c1a73-3daa-43bc-96c5-cc1f125b67a4",
+        "lesson.key": "Personal Narrative Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2025"
+      }
+    },
+    {
+      "key": "dbe9d9ad-929a-45cd-9e84-df3fb7f94f1c",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dbe9d9ad-929a-45cd-9e84-df3fb7f94f1c",
+        "lesson.key": "Personal Narrative Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2025"
+      }
+    },
+    {
+      "key": "0ab6b66c-033b-4b26-98a9-06066f267a04",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0ab6b66c-033b-4b26-98a9-06066f267a04",
+        "lesson.key": "Personal Narrative Project [1-Day Version]",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa5-2025"
       }
@@ -992,6 +963,18 @@
       "seeding_key": {
         "lesson_activity.key": "2de8342f-3b3d-4752-9b89-5292d59a245b",
         "lesson.key": "Sandbox: The Theater",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa5-2025"
+      }
+    },
+    {
+      "key": "ea927681-444c-45c1-b983-7dc6f3cb7396",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ea927681-444c-45c1-b983-7dc6f3cb7396",
+        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa5-2025"
       }
@@ -2024,7 +2007,7 @@
       "key": "ed69a799-1e52-4e5e-aafb-3c73f5221f55",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students recognize that primitive values (like int) are not modified by changes inside an enhanced for loop because the loop variable holds a copy of the value. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the values stored in the instance variables for each object are modified in the enhanced `for` loop. Students may wonder why objects can be modified in an enhanced `for` loop when primitive values cannot be modified."
       },
       "seeding_key": {
         "activity_section.key": "ed69a799-1e52-4e5e-aafb-3c73f5221f55",
@@ -2035,13 +2018,13 @@
       "key": "d9b365fc-b8e5-45cb-b009-5245f643755b",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why didn't the changes to the loop variable affect the original array? What does this tell you about how Java handles primitive types in enhanced for loops?*\n\n**Discussion Goal:** Students should realize that:\n- In enhanced for loops, primitive values are copied, not referenced.\n- Modifying the loop variable `(value *= 2)` does not affect the original array.\n- This behavior is different for objects, where the reference is copied",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think the changes made to the loop variable affected the original object reference?*\n\n**Discussion Goal:** Students recall that the enhanced `for` loop variable stores a copy of the value stored in the array. Students realize that the enhanced `for` loop variable is storing a copy of the object reference, which makes it an alias of the object reference stored in the array. Since the enhanced `for` loop variable is an alias, both variables reference the same object.",
         "duration": "15",
         "name": "Enhanced For Loops and 2D Arrays",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Ask additional guiding questions to help students understand why modifying a loop variable in an enhanced `for` loop doesn’t change the original array. For example:\n- What does the loop variable `value` represent in `for (int value : row)`?\n- When we write `value *= 2`, are we changing the array, or just the copy stored in `value`?\n- Why might the array look unchanged after running `changeValues()`?\n- What would we need to do differently if we actually wanted to modify the array values?"
+            "markdown": "Ask additional guiding questions to help students recall aliases and identify the relationship between the enhanced `for` loop variable and the object reference stored in the array. For example,\n* *The enhanced `for` loop makes a copy of the value stored in the array. If the value is an object reference, what is the enhanced `for` loop making a copy of?*\n* *What is it called when a reference variable points to the same object as another reference variable?*\n* *When two reference variables are aliases, do changes made using one variable impact the other variable?*"
           }
         ]
       },
@@ -3651,8 +3634,27 @@
       }
     },
     {
-      "key": "c43c7c22-d35a-4f1e-a72e-6c882406f05c",
+      "key": "4861ae77-fb4a-4dd8-a8da-4ff8f940d209",
       "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "End of Unit Survey",
+        "progression_name": "End of Unit Survey",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "We also have a teacher end-of-unit survey to learn more about how the unit went for you and your students. While students take their survey, please complete [**this end of unit survey for teachers**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=5) as well. Your feedback is valued and appreciated!"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4861ae77-fb4a-4dd8-a8da-4ff8f940d209",
+        "lesson_activity.key": "a8a15035-2d74-4c66-abaf-a71a7fe8a408"
+      }
+    },
+    {
+      "key": "c43c7c22-d35a-4f1e-a72e-6c882406f05c",
+      "position": 12,
       "properties": {
         "description": "---"
       },
@@ -3663,7 +3665,7 @@
     },
     {
       "key": "63eb564a-6aed-4473-bf7f-0b87362533e7",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "**Personal Narrative Project:** Use the rubric in the Personal Narrative Project Planning Guide to assess the projects.",
         "name": "Assessment: Grading the Project"
@@ -3671,158 +3673,6 @@
       "seeding_key": {
         "activity_section.key": "63eb564a-6aed-4473-bf7f-0b87362533e7",
         "lesson_activity.key": "a8a15035-2d74-4c66-abaf-a71a7fe8a408"
-      }
-    },
-    {
-      "key": "6a64640a-ad07-4a9a-9b1e-ab17ef126270",
-      "position": 1,
-      "properties": {
-        "description": "After completing this project, students should complete the End of Unit Survey linked in the final level. Their responses help us understand their experiences and improve future versions of this unit.",
-        "progression_name": "End of Unit Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "6a64640a-ad07-4a9a-9b1e-ab17ef126270",
-        "lesson_activity.key": "73fa07dd-051b-4acb-8d7d-4a1b3ccead6d"
-      }
-    },
-    {
-      "key": "e9a24d0c-2c1b-465d-aa58-54c114d35650",
-      "position": 1,
-      "properties": {
-        "description": "We have seen some examples of image filters, collages, and animations throughout the unit. People often use images and image filters are often used in collages and animations to portray a story about personal experiences or interests.",
-        "name": "Personal Narratives",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "e9a24d0c-2c1b-465d-aa58-54c114d35650",
-        "lesson_activity.key": "ed3c1a73-3daa-43bc-96c5-cc1f125b67a4"
-      }
-    },
-    {
-      "key": "0cd282fa-257d-4ea9-baad-b2980357522f",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of personal narratives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a collage or animation about your personal experiences or interests?*\n\n**Discussion Goal:** Students share ideas about collages or animations they might make to portray their personal experiences or interests. Students might wonder about how more complex visuals might be created or about the design choices the creators made about their visuals.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Personal Narrative Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "0cd282fa-257d-4ea9-baad-b2980357522f",
-        "lesson_activity.key": "ed3c1a73-3daa-43bc-96c5-cc1f125b67a4"
-      }
-    },
-    {
-      "key": "f8787ce2-da82-426f-9c1d-c203b0084ca4",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to plan their collage or animation, create UML diagrams for their classes, and identify the algorithms they need to develop on the Personal Narrative Project Planning Guide.",
-        "duration": "10",
-        "name": "Brainstorming and Planning"
-      },
-      "seeding_key": {
-        "activity_section.key": "f8787ce2-da82-426f-9c1d-c203b0084ca4",
-        "lesson_activity.key": "dbe9d9ad-929a-45cd-9e84-df3fb7f94f1c"
-      }
-    },
-    {
-      "key": "c7a45fcc-97a1-4cca-b701-077ec6218f09",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Personal Narrative Good Project.",
-        "duration": "20",
-        "name": "Development",
-        "progression_name": "Personal Narrative Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "c7a45fcc-97a1-4cca-b701-077ec6218f09",
-        "lesson_activity.key": "dbe9d9ad-929a-45cd-9e84-df3fb7f94f1c"
-      }
-    },
-    {
-      "key": "88184bfd-3264-443a-8f57-20adfbff8aed",
-      "position": 3,
-      "properties": {
-        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "88184bfd-3264-443a-8f57-20adfbff8aed",
-        "lesson_activity.key": "dbe9d9ad-929a-45cd-9e84-df3fb7f94f1c"
-      }
-    },
-    {
-      "key": "e687dfa2-e6e4-48f2-b364-a4b651b90b1d",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "e687dfa2-e6e4-48f2-b364-a4b651b90b1d",
-        "lesson_activity.key": "dbe9d9ad-929a-45cd-9e84-df3fb7f94f1c"
-      }
-    },
-    {
-      "key": "918d894d-5615-477a-9c32-772fac72ff9a",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Personal Narrative Project Planning Guide.",
-        "name": "End of Project Reflection",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "918d894d-5615-477a-9c32-772fac72ff9a",
-        "lesson_activity.key": "0ab6b66c-033b-4b26-98a9-06066f267a04"
-      }
-    },
-    {
-      "key": "598b8721-272a-4a4a-ade1-96bde752c378",
-      "position": 2,
-      "properties": {
-        "description": "---"
-      },
-      "seeding_key": {
-        "activity_section.key": "598b8721-272a-4a4a-ade1-96bde752c378",
-        "lesson_activity.key": "0ab6b66c-033b-4b26-98a9-06066f267a04"
-      }
-    },
-    {
-      "key": "ee8712a7-f9d1-4def-bd43-73f3ad2029df",
-      "position": 3,
-      "properties": {
-        "description": "**Personal Narrative Project:** Use the rubric in the Personal Narrative Project Planning Guide to assess the projects.",
-        "name": "Assessment: Grading the Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "ee8712a7-f9d1-4def-bd43-73f3ad2029df",
-        "lesson_activity.key": "0ab6b66c-033b-4b26-98a9-06066f267a04"
-      }
-    },
-    {
-      "key": "0a2a9d85-2365-4642-a714-840860314a9a",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.\n",
-        "name": "End of Unit Survey",
-        "progression_name": "End of Unit Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "0a2a9d85-2365-4642-a714-840860314a9a",
-        "lesson_activity.key": "1f4fbf08-3215-4898-86d2-43159c0380f0"
       }
     },
     {
@@ -4035,25 +3885,130 @@
       }
     },
     {
-      "key": "033f8e7c-1b5a-428a-95c9-04313aeab026",
+      "key": "e9a24d0c-2c1b-465d-aa58-54c114d35650",
       "position": 1,
       "properties": {
-        "progression_name": "End of Unit Survey"
+        "description": "We have seen some examples of image filters, collages, and animations throughout the unit. People often use images and image filters are often used in collages and animations to portray a story about personal experiences or interests.",
+        "name": "Personal Narratives",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "033f8e7c-1b5a-428a-95c9-04313aeab026",
-        "lesson_activity.key": "2cd8906a-501c-47ea-b059-94bd01751035"
+        "activity_section.key": "e9a24d0c-2c1b-465d-aa58-54c114d35650",
+        "lesson_activity.key": "ed3c1a73-3daa-43bc-96c5-cc1f125b67a4"
       }
     },
     {
-      "key": "71b6ec4c-c773-450a-bc53-e42635b778b4",
+      "key": "0cd282fa-257d-4ea9-baad-b2980357522f",
       "position": 2,
       "properties": {
-        "progression_name": "End of Unit Survey Page"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of personal narratives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a collage or animation about your personal experiences or interests?*\n\n**Discussion Goal:** Students share ideas about collages or animations they might make to portray their personal experiences or interests. Students might wonder about how more complex visuals might be created or about the design choices the creators made about their visuals.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Personal Narrative Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "71b6ec4c-c773-450a-bc53-e42635b778b4",
-        "lesson_activity.key": "2cd8906a-501c-47ea-b059-94bd01751035"
+        "activity_section.key": "0cd282fa-257d-4ea9-baad-b2980357522f",
+        "lesson_activity.key": "ed3c1a73-3daa-43bc-96c5-cc1f125b67a4"
+      }
+    },
+    {
+      "key": "f8787ce2-da82-426f-9c1d-c203b0084ca4",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to plan their collage or animation, create UML diagrams for their classes, and identify the algorithms they need to develop on the Personal Narrative Project Planning Guide.",
+        "duration": "10",
+        "name": "Brainstorming and Planning"
+      },
+      "seeding_key": {
+        "activity_section.key": "f8787ce2-da82-426f-9c1d-c203b0084ca4",
+        "lesson_activity.key": "dbe9d9ad-929a-45cd-9e84-df3fb7f94f1c"
+      }
+    },
+    {
+      "key": "c7a45fcc-97a1-4cca-b701-077ec6218f09",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Personal Narrative Good Project.",
+        "duration": "20",
+        "name": "Development",
+        "progression_name": "Personal Narrative Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "c7a45fcc-97a1-4cca-b701-077ec6218f09",
+        "lesson_activity.key": "dbe9d9ad-929a-45cd-9e84-df3fb7f94f1c"
+      }
+    },
+    {
+      "key": "88184bfd-3264-443a-8f57-20adfbff8aed",
+      "position": 3,
+      "properties": {
+        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "88184bfd-3264-443a-8f57-20adfbff8aed",
+        "lesson_activity.key": "dbe9d9ad-929a-45cd-9e84-df3fb7f94f1c"
+      }
+    },
+    {
+      "key": "e687dfa2-e6e4-48f2-b364-a4b651b90b1d",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e687dfa2-e6e4-48f2-b364-a4b651b90b1d",
+        "lesson_activity.key": "dbe9d9ad-929a-45cd-9e84-df3fb7f94f1c"
+      }
+    },
+    {
+      "key": "918d894d-5615-477a-9c32-772fac72ff9a",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Personal Narrative Project Planning Guide.",
+        "name": "End of Project Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "918d894d-5615-477a-9c32-772fac72ff9a",
+        "lesson_activity.key": "0ab6b66c-033b-4b26-98a9-06066f267a04"
+      }
+    },
+    {
+      "key": "598b8721-272a-4a4a-ade1-96bde752c378",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "598b8721-272a-4a4a-ade1-96bde752c378",
+        "lesson_activity.key": "0ab6b66c-033b-4b26-98a9-06066f267a04"
+      }
+    },
+    {
+      "key": "ee8712a7-f9d1-4def-bd43-73f3ad2029df",
+      "position": 3,
+      "properties": {
+        "description": "**Personal Narrative Project:** Use the rubric in the Personal Narrative Project Planning Guide to assess the projects.",
+        "name": "Assessment: Grading the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "ee8712a7-f9d1-4def-bd43-73f3ad2029df",
+        "lesson_activity.key": "0ab6b66c-033b-4b26-98a9-06066f267a04"
       }
     },
     {
@@ -4096,6 +4051,17 @@
       "seeding_key": {
         "activity_section.key": "a355907f-0a86-4476-8fcd-2806fdea8c27",
         "lesson_activity.key": "2de8342f-3b3d-4752-9b89-5292d59a245b"
+      }
+    },
+    {
+      "key": "aad58053-422f-4ef3-ae5c-4fa99aa3c7e6",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "aad58053-422f-4ef3-ae5c-4fa99aa3c7e6",
+        "lesson_activity.key": "ea927681-444c-45c1-b983-7dc6f3cb7396"
       }
     }
   ],
@@ -5579,76 +5545,29 @@
       "chapter": 60,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
-          "student-eou-survey_linked_page-csa5_2025"
+          "Student End of Unit Survey_csa5_2025"
         ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "student-eou-survey_linked_page-csa5_2025"
+          "Student End of Unit Survey_csa5_2025"
         ],
         "lesson.key": "Personal Narrative Project",
         "lesson_group.key": "lessonGroup-8",
         "script.name": "csa5-2025",
-        "activity_section.key": "6a64640a-ad07-4a9a-9b1e-ab17ef126270"
+        "activity_section.key": "4861ae77-fb4a-4dd8-a8da-4ff8f940d209"
       },
       "level_keys": [
-        "student-eou-survey_linked_page-csa5_2025"
+        "Student End of Unit Survey_csa5_2025"
       ]
     },
     {
       "chapter": 61,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA U5 Personal Narrative Project 1-Day_pilot_oo2025"
-        ],
-        "progression": "Personal Narrative Project"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U5 Personal Narrative Project 1-Day_pilot_oo2025"
-        ],
-        "lesson.key": "Personal Narrative Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa5-2025",
-        "activity_section.key": "c7a45fcc-97a1-4cca-b701-077ec6218f09"
-      },
-      "level_keys": [
-        "CSA U5 Personal Narrative Project 1-Day_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 62,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "End of Unit Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "student-eou-survey_linked_page-csa5-1b_2025"
-        ],
-        "lesson.key": "Personal Narrative Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa5-2025",
-        "activity_section.key": "0a2a9d85-2365-4642-a714-840860314a9a"
-      },
-      "level_keys": [
-        "student-eou-survey_linked_page-csa5-1b_2025"
-      ]
-    },
-    {
-      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5673,32 +5592,32 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
-          "student-eou-survey_2025-csa5"
+          "CSA U5 Personal Narrative Project 1-Day_pilot_oo2025"
         ],
-        "progression": "End of Unit Survey"
+        "progression": "Personal Narrative Project"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "student-eou-survey_2025-csa5"
+          "CSA U5 Personal Narrative Project 1-Day_pilot_oo2025"
         ],
-        "lesson.key": "End of Unit Survey",
+        "lesson.key": "Personal Narrative Project [1-Day Version]",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa5-2025",
-        "activity_section.key": "033f8e7c-1b5a-428a-95c9-04313aeab026"
+        "activity_section.key": "c7a45fcc-97a1-4cca-b701-077ec6218f09"
       },
       "level_keys": [
-        "student-eou-survey_2025-csa5"
+        "CSA U5 Personal Narrative Project 1-Day_pilot_oo2025"
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5722,7 +5641,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5747,7 +5666,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 65,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5772,7 +5691,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5793,6 +5712,28 @@
       },
       "level_keys": [
         "CSA 2023 Theater Sandbox_2025"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_-csa_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa5-2025",
+        "activity_section.key": "aad58053-422f-4ef3-ae5c-4fa99aa3c7e6"
+      },
+      "level_keys": [
+        "student-eou-survey_-csa_2025"
       ]
     }
   ],
@@ -6507,38 +6448,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "student-eou-survey_linked_page-csa5_2025",
+        "level.key": "Student End of Unit Survey_csa5_2025",
         "script_level.level_keys": [
-          "student-eou-survey_linked_page-csa5_2025"
+          "Student End of Unit Survey_csa5_2025"
         ],
         "lesson.key": "Personal Narrative Project",
         "lesson_group.key": "lessonGroup-8",
         "script.name": "csa5-2025",
-        "activity_section.key": "6a64640a-ad07-4a9a-9b1e-ab17ef126270"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U5 Personal Narrative Project 1-Day_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U5 Personal Narrative Project 1-Day_pilot_oo2025"
-        ],
-        "lesson.key": "Personal Narrative Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa5-2025",
-        "activity_section.key": "c7a45fcc-97a1-4cca-b701-077ec6218f09"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "student-eou-survey_linked_page-csa5-1b_2025",
-        "script_level.level_keys": [
-          "student-eou-survey_linked_page-csa5-1b_2025"
-        ],
-        "lesson.key": "Personal Narrative Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa5-2025",
-        "activity_section.key": "0a2a9d85-2365-4642-a714-840860314a9a"
+        "activity_section.key": "4861ae77-fb4a-4dd8-a8da-4ff8f940d209"
       }
     },
     {
@@ -6555,14 +6472,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "student-eou-survey_2025-csa5",
+        "level.key": "CSA U5 Personal Narrative Project 1-Day_pilot_oo2025",
         "script_level.level_keys": [
-          "student-eou-survey_2025-csa5"
+          "CSA U5 Personal Narrative Project 1-Day_pilot_oo2025"
         ],
-        "lesson.key": "End of Unit Survey",
+        "lesson.key": "Personal Narrative Project [1-Day Version]",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa5-2025",
-        "activity_section.key": "033f8e7c-1b5a-428a-95c9-04313aeab026"
+        "activity_section.key": "c7a45fcc-97a1-4cca-b701-077ec6218f09"
       }
     },
     {
@@ -6611,6 +6528,18 @@
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa5-2025",
         "activity_section.key": "a355907f-0a86-4476-8fcd-2806fdea8c27"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_-csa_2025",
+        "script_level.level_keys": [
+          "student-eou-survey_-csa_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa5-2025",
+        "activity_section.key": "aad58053-422f-4ef3-ae5c-4fa99aa3c7e6"
       }
     }
   ],

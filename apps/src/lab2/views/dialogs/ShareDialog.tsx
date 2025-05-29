@@ -9,7 +9,6 @@ import FocusLock from 'react-focus-lock';
 
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import DCDO from '@cdo/apps/dcdo';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectType} from '@cdo/apps/lab2/types';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -58,7 +57,7 @@ const CopyToClipboardButton: React.FunctionComponent<{
       ariaLabel={i18n.copyLinkToProject()}
       text={i18n.copyLinkToProject()}
       type="secondary"
-      color="black"
+      color="white"
       size="m"
       onClick={handleCopyToClipboard}
       className={moduleStyles.shareDialogButton}
@@ -86,6 +85,7 @@ const AfeCareerTourBlock: React.FunctionComponent = () => {
         href={careersUrl}
         text={i18n.careerTourAction()}
         type="primary"
+        color="white"
         size="m"
         target="_blank"
         iconRight={{
@@ -116,7 +116,7 @@ const SubmitButtonInfo: React.FunctionComponent<{
         iconLeft={{iconName: 'award'}}
         text={i18n.submitProjectGallery_header()}
         type="secondary"
-        color="black"
+        color="white"
         size="m"
         onClick={onSubmitClick}
         className={moduleStyles.shareDialogButton}
@@ -179,14 +179,9 @@ const ShareDialog: React.FunctionComponent<{
       : STUDENT_FEEDBACK_LINK;
   });
 
-  // We pull the theme from Lab2Registry because the ShareDialog is not wrapped by the lab's
-  // ThemeProvider (the header is in its own tree). We copy the lab theme to the registry
-  // in Lab2Wrapper.
-  const theme = Lab2Registry.getInstance().getTheme();
-
   return (
     <FocusLock>
-      <div className={moduleStyles.dialogContainer} data-theme={theme}>
+      <div className={moduleStyles.dialogContainer}>
         <div id="share-dialog" className={moduleStyles.shareDialog}>
           <Typography
             semanticTag="h1"
@@ -254,7 +249,7 @@ const ShareDialog: React.FunctionComponent<{
                     ariaLabel={i18n.keepPlaying()}
                     text={i18n.keepPlaying()}
                     type="secondary"
-                    color="black"
+                    color="white"
                     size="m"
                     onClick={handleClose}
                     className={moduleStyles.keepPlayingButton}
@@ -264,6 +259,7 @@ const ShareDialog: React.FunctionComponent<{
                     href={finishUrl}
                     text={i18n.finish()}
                     type="primary"
+                    color="white"
                     size="m"
                   />
                 </div>
@@ -272,6 +268,7 @@ const ShareDialog: React.FunctionComponent<{
                   ariaLabel={i18n.done()}
                   text={i18n.done()}
                   type="primary"
+                  color="white"
                   size="m"
                   onClick={handleClose}
                 />

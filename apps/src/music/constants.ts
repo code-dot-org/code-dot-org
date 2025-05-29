@@ -80,8 +80,6 @@ export const DEFAULT_TUNE: InstrumentEventValue = {
   instrument: 'piano',
   events: [],
   length: DEFAULT_TUNE_LENGTH,
-  relative: false,
-  scaleMode: 'simple',
 };
 
 export const LOCAL_STORAGE = 'local';

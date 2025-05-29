@@ -281,8 +281,7 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
       }
     end
 
-    student = User.find(student.id)
-    assert student.teacher?
+    assert student.reload.teacher?
     assert_redirected_to controller: 'pd/session_attendance', action: 'attend'
   end
 
@@ -303,8 +302,7 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
       }
     end
 
-    student = User.find(student.id)
-    assert student.teacher?
+    assert student.reload.teacher?
     assert_redirected_to controller: 'pd/session_attendance', action: 'attend'
   end
 
