@@ -16,11 +16,23 @@
     "aif5-2025",
     "aif6-2025"
   ],
-  "published_state": "beta",
+  "published_state": "preview",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
+    "announcements": [
+      {
+        "key": "15ca0d49-e1e7-4eaf-8a12-5e26ab7c4ccf",
+        "notice": "AI Foundations Professional Development",
+        "details": "Before starting this course, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+        "link": "https://studio.code.org/courses/teaching-ai-foundations-2025/",
+        "type": "information",
+        "visibility": "Teacher-only",
+        "dismissible": true,
+        "buttonText": "Let's Go!"
+      }
+    ],
     "family_name": "artificial-intelligence-foundations",
     "has_numbered_units": true,
     "has_verified_resources": true,

@@ -3,17 +3,57 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-#Check for Understanding: Answer
+# Check for Understanding: Answer
 
-#### **abstraction:** the process of focusing on only the essential details of a problem and ignoring everything else.
-
-#### **artificial intelligence:** a technology that mimics human intelligence.
-
-#### **neural network:** an interconnected network that makes decisions using weights and hidden layers.
-
-#### **hallucination:** when the model makes up false or misleading information that sounds real but isn’t true.
-
-#### **contradiction:** when an AI generates conflicting or opposing responses based on a similar input.
-
-#### **AI bias:** when a model favors certain information over others.
+<table style="width: 100%; border-collapse: separate; border-spacing: 20px; font-family: Arial, sans-serif;">
+  <tr>
+    <td style="width: 30%; background-color: #fff; border: 3px solid #ccc; padding: 20px; text-align: center; vertical-align: middle; border-radius: 10px;">
+      abstraction
+    </td>
+    <td style="width: 65%; background-color: #fff; border: 3px solid #a7dff3; padding: 20px; text-align: center; vertical-align: middle; border-radius: 10px;">
+      the process of focusing on only the essential details of a problem and ignoring everything else
+    </td>
+  </tr>
+  <tr>
+    <td style="background-color: #fff; border: 3px solid #ccc; padding: 20px; text-align: center; border-radius: 10px;">
+      artificial intelligence
+    </td>
+    <td style="background-color: #fff; border: 3px solid #a7dff3; padding: 20px; text-align: center; border-radius: 10px;">
+      a technology that mimics human intelligence
+    </td>
+  </tr>
+  <tr>
+    <td style="background-color: #fff; border: 3px solid #ccc; padding: 20px; text-align: center; border-radius: 10px;">
+      neural network
+    </td>
+    <td style="background-color: #fff; border: 3px solid #a7dff3; padding: 20px; text-align: center; border-radius: 10px;">
+      an interconnected network that makes decisions using weights and hidden layers
+    </td>
+  </tr>
+  <tr>
+    <td style="background-color: #fff; border: 3px solid #ccc; padding: 20px; text-align: center; border-radius: 10px;">
+      hallucination
+    </td>
+    <td style="background-color: #fff; border: 3px solid #a7dff3; padding: 20px; text-align: center; border-radius: 10px;">
+      when the model makes up false or misleading information that sounds real but isn’t true
+    </td>
+  </tr>
+    <tr>
+    <td style="background-color: #fff; border: 3px solid #ccc; padding: 20px; text-align: center; border-radius: 10px;">
+      contradiction
+    </td>
+    <td style="background-color: #fff; border: 3px solid #a7dff3; padding: 20px; text-align: center; border-radius: 10px;">
+      when an AI generates conflicting or opposing responses based on a similar input
+    </td>
+  </tr>
+    <tr>
+    <td style="background-color: #fff; border: 3px solid #ccc; padding: 20px; text-align: center; border-radius: 10px;">
+      AI bias
+    </td>
+    <td style="background-color: #fff; border: 3px solid #a7dff3; padding: 20px; text-align: center; border-radius: 10px;">
+      when a model favors certain information over others
+    </td>
+  </tr>
+  
+</table>
 MARKDOWN

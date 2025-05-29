@@ -54,12 +54,6 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
                [params[:grade].to_s]
              end
 
-    # Get avatars data from other sections to prevent duplicates
-    last_color = current_user.sections_instructed.select(&:avatar_color)&.max_by(&:id)&.avatar_color || 0
-    last_emoji = current_user.sections_instructed.select(&:avatar_emoji)&.max_by(&:id)&.avatar_emoji || 0
-    color = (last_color + 1) % 20
-    emoji = (last_emoji + 1) % 21
-
     section = Section.create(
       {
         user_id: current_user.id,
@@ -74,8 +68,8 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         tts_autoplay_enabled: params[:tts_autoplay_enabled].nil? ? false : params[:tts_autoplay_enabled],
         ai_tutor_enabled: params[:ai_tutor_enabled].nil? ? false : params[:ai_tutor_enabled],
         restrict_section: params[:restrict_section].nil? ? false : params[:restrict_section],
-        avatar_color: color,
-        avatar_emoji: emoji,
+        avatar_color: params[:avatar_color].nil? ? 0 : params[:avatar_color],
+        avatar_emoji: params[:avatar_emoji].nil? ? 0 : params[:avatar_emoji],
       }
     )
     return head :bad_request unless section.persisted?
@@ -126,14 +120,8 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     fields[:hidden] = params[:hidden] unless params[:hidden].nil?
     fields[:restrict_section] = params[:restrict_section] unless params[:restrict_section].nil?
     fields[:ai_tutor_enabled] = params[:ai_tutor_enabled] unless params[:ai_tutor_enabled].nil?
-
-    # Get avatars data from other sections to prevent duplicates
-    last_color = current_user.sections_instructed.select(&:avatar_color)&.max_by(&:id)&.avatar_color || 0
-    last_emoji = current_user.sections_instructed.select(&:avatar_emoji)&.max_by(&:id)&.avatar_emoji || 0
-
-    # Sets the avatar color and emoji if not already present
-    fields[:avatar_color] = (last_color + 1) % 20 if section[:avatar_color].nil?
-    fields[:avatar_emoji] = (last_emoji + 1) % 21 if section[:avatar_emoji].nil?
+    fields[:avatar_color] = params[:avatar_color].nil? ? 0 : params[:avatar_color]
+    fields[:avatar_emoji] = params[:avatar_emoji].nil? ? 0 : params[:avatar_emoji]
 
     section.update!(fields)
     if @unit
@@ -337,7 +325,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
                 else
                   params[:unit_id] ? Unit.get_from_cache(params[:unit_id]) : nil
                 end
-        return head :bad_request if @unit && @course.id != @unit.unit_group.try(:id)
+        return head :bad_request if @unit && @course && @unit.unit_groups.exclude?(@course)
       when 'Unit'
         unit_id = course_version.content_root_id
         @unit = Unit.get_from_cache(unit_id)

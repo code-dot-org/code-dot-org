@@ -250,7 +250,7 @@ const CustomizableCurriculumCatalogCard = ({
           sections={sectionsForDropdown}
           participantAudience="student"
           onAssignSuccess={onAssignSuccess}
-          isAssigningCourse={!!courseId}
+          isAssigningCourseOnly={!!courseId}
           courseId={courseId}
           sectionDirections={i18n.chooseSectionsDirectionsOnCatalog()}
           {...props}

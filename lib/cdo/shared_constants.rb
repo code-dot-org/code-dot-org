@@ -851,7 +851,8 @@ module SharedConstants
     LESSON: "lesson",
     UNIT: "unit",
     COURSE: "course",
-    GENERAL: "general"
+    GENERAL: "general",
+    LEVEL: "level"
   }.freeze
 
   DISALLOWED_ROUTES = [

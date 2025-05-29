@@ -1,6 +1,7 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {ProjectFile} from '@codebridge/types';
-import React from 'react';
+import classNames from 'classnames';
+import React, {useMemo} from 'react';
 
 import {FileRowIcon} from './FileRowIcon';
 import {FileRowName} from './FileRowName';
@@ -32,6 +33,17 @@ export const FileRow: React.FunctionComponent<FileRowProps> = ({
 }) => {
   const {openFile} = useCodebridgeContext();
   const dropdownOptions = useFileRowOptions(item, hasValidationFile);
+  const isActive = item.active || false;
+  const className = useMemo(() => {
+    const classes = [];
+    if (isActive) {
+      classes.push(moduleStyles.activeFile);
+    }
+    if (isDragging) {
+      classes.push(moduleStyles.dragging);
+    }
+    return classNames(...classes);
+  }, [isActive, isDragging]);
 
   return (
     <ItemRow
@@ -41,7 +53,7 @@ export const FileRow: React.FunctionComponent<FileRowProps> = ({
       IconComponent={FileRowIcon}
       NameComponent={FileRowName}
       openFunction={openFile}
-      className={isDragging ? moduleStyles.dragging : undefined}
+      className={className}
     />
   );
 };

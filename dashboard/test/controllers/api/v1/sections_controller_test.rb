@@ -826,7 +826,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :success
     @teacher.reload
     assert_equal 1, @teacher.scripts.size
-    assert_equal @single_unit_course.default_units.first, returned_section.script
+    assert_equal @single_unit_course.first_unit, returned_section.script
   end
 
   test 'creating a section with a coteacher adds both teachers' do
@@ -1045,6 +1045,31 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil section.script_id
   end
 
+  test "update: assigned unit must be part of assigned course" do
+    sign_in @teacher
+    section = create(:section, user: @teacher, script_id: nil)
+
+    post :update, params: {
+      id: section.id,
+      course_version_id: @csp_unit_group.course_version.id,
+      unit_id: @single_unit_course.default_units.first.id,
+    }
+    section.reload
+    assert_response :bad_request
+    assert_nil section.script_id
+    assert_nil section.course_id
+
+    post :update, params: {
+      id: section.id,
+      course_version_id: @csp_unit_group.course_version.id,
+      unit_id: @csp_script.id,
+    }
+    section.reload
+    assert_response :success
+    assert_equal @csp_script.id, section.script_id
+    assert_equal @csp_unit_group.id, section.course_id
+  end
+
   test "update: hidden script is unhidden when assigned" do
     sign_in @teacher
     @section.toggle_hidden_script @csp_script, true
@@ -1100,7 +1125,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :success
     section.reload
     assert_equal(@single_unit_course.id, section.course_id)
-    assert_equal(@single_unit_course.default_units.first.id, section.script_id)
+    assert_equal(@single_unit_course.first_unit.id, section.script_id)
   end
 
   test "update: non-matching course_version and script rejected" do

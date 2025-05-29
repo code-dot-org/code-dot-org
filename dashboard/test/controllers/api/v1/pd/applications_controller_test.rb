@@ -347,7 +347,7 @@ module Api::V1::Pd
     test 'update appends to the timestamp log if summer workshop is changed' do
       summer_workshop = create :summer_workshop,
         sessions_from: Date.new(2019, 6, 1),
-        processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+        session_location_address: 'Orchard Park NY'
 
       sign_in @program_manager
       @csd_teacher_application_with_partner.update(status_timestamp_change_log: '[]')
@@ -371,7 +371,7 @@ module Api::V1::Pd
     test 'update does not append to the timestamp log if summer workshop is not changed' do
       summer_workshop = create :summer_workshop,
         sessions_from: Date.new(2019, 6, 1),
-        processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+        session_location_address: 'Orchard Park NY'
 
       sign_in @program_manager
       @csd_teacher_application_with_partner.update(status_timestamp_change_log: '[]')
@@ -563,7 +563,7 @@ module Api::V1::Pd
       Timecop.freeze(time) do
         workshop = create :summer_workshop,
           sessions_from: Date.new(2020, 1, 1),
-          processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+          session_location_address: 'Orchard Park NY'
         create :pd_enrollment, workshop: workshop, user: @serializing_teacher
 
         application = create(
@@ -654,7 +654,7 @@ module Api::V1::Pd
       Timecop.freeze(time) do
         workshop = create :summer_workshop,
           sessions_from: Date.new(2020, 1, 1),
-          processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+          session_location_address: 'Orchard Park NY'
         create :pd_enrollment, workshop: workshop, user: @serializing_teacher
 
         application = create(

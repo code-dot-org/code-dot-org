@@ -7,7 +7,7 @@ markdown <<MARKDOWN
  
 #### While the The Fabric of the Internet and AI Unit is part of the **AI Foundations** course, it can also serve as a standalone unit for 9-12 students that can be integrated seamlessly into existing curriculum, including computer science, math, or science, offering teachers the flexibility to introduce it according to their schedule and educational needs.
 
-<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-family: Arial, sans-serif; font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
 
   <div>
     <h4 style="margin-top: 0; font-weight: bold;">Students will:</h4>
@@ -20,8 +20,8 @@ markdown <<MARKDOWN
   </div>
   <div>
     <img src="https://images.code.org/2e1bb1b21f46e5ccc05849706761ff02-Screenshot 2025-05-19 at 3.34.08 PM.png" 
-         alt="Icon with computer and data symbols" 
-         style="border-radius: 10px; width: 300px; height: auto;">
+         alt="internet icon" 
+         style="border-radius: 10px; width: 300px; height: auto; margin: 10px">
   </div>
 </div>
 

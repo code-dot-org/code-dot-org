@@ -252,6 +252,7 @@ class CourseOverview extends Component {
             title={script.title}
             name={script.name}
             id={script.id}
+            path={script.scriptPath}
             description={script.description}
             assignedSectionId={script.assigned_section_id}
             courseId={id}

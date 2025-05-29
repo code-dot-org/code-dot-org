@@ -30,6 +30,8 @@ export interface HeroBannerProps extends HTMLAttributes<HTMLElement> {
   description?: string | ReactNode;
   /** HeroBanner image */
   imageProps?: ImageProps;
+  /** Hide image on small screens */
+  hideImageOnSmallScreen?: boolean;
   /** HeroBanner video component. We use this composition here to allow using HeroBanner component for ssr pages.
    * More context can be found in this slack thread: https://codedotorg.slack.com/archives/C07UW4ED66Q/p1744640489709969
    * */
@@ -79,6 +81,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   description,
   partner,
   imageProps,
+  hideImageOnSmallScreen = false,
   VideoComponent,
   videoProps,
   buttonProps,
@@ -92,21 +95,9 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
 }) => (
   <section
     role="banner"
-    className={classNames(moduleStyles.heroBannerWrapper, className, {
-      [moduleStyles['heroBanner-withWideText']]: withWideText,
-    })}
     data-theme={HTMLAttributes['data-theme']}
+    className={className}
     {...HTMLAttributes}
-    style={{
-      ...(HTMLAttributes.style ?? {}),
-      backgroundColor: backgroundColor
-        ? backgroundColor
-        : HTMLAttributes.style?.backgroundColor,
-      backgroundImage: backgroundImageUrl
-        ? `url(${backgroundImageUrl})`
-        : HTMLAttributes.style?.backgroundImage,
-      ...(removeBackground ? {background: 'none'} : {}),
-    }}
   >
     {announcementBannerProps && (
       <Alert
@@ -117,42 +108,59 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
         link={announcementBannerProps.link}
       />
     )}
-    <div className={classNames(moduleStyles.heroBannerContainer)}>
-      <div className={moduleStyles.heroBannerTextContainer}>
-        <div>
-          <Heading1>{heading}</Heading1>
+    <div
+      className={classNames(moduleStyles.heroBannerWrapper, {
+        [moduleStyles['heroBanner-withWideText']]: withWideText,
+      })}
+      style={{
+        ...(HTMLAttributes.style ?? {}),
+        backgroundColor: backgroundColor
+          ? backgroundColor
+          : HTMLAttributes.style?.backgroundColor,
+        backgroundImage: backgroundImageUrl
+          ? `url(${backgroundImageUrl})`
+          : HTMLAttributes.style?.backgroundImage,
+        ...(removeBackground ? {background: 'none'} : {}),
+      }}
+    >
+      <div className={classNames(moduleStyles.heroBannerContainer)}>
+        <div className={moduleStyles.heroBannerTextContainer}>
+          <div>
+            <Heading1>{heading}</Heading1>
 
-          {subHeading && <BodyOneText>{subHeading}</BodyOneText>}
+            {subHeading && <BodyOneText>{subHeading}</BodyOneText>}
 
-          {description && <BodyTwoText>{description}</BodyTwoText>}
+            {description && <BodyTwoText>{description}</BodyTwoText>}
 
-          {partner && (
-            <span className={moduleStyles.heroBannerPartnerContainer}>
-              {partner.title}
-              <Image {...partner.logo} hasRoundedCorners={false} />
-            </span>
-          )}
-        </div>
-        <div>
+            {partner && (
+              <span className={moduleStyles.heroBannerPartnerContainer}>
+                {partner.title}
+                <Image {...partner.logo} hasRoundedCorners={false} />
+              </span>
+            )}
+          </div>
           {buttonProps && (
-            <LinkButton color="purple" type="primary" {...buttonProps} />
+            <div>
+              <LinkButton color="purple" type="primary" {...buttonProps} />
+            </div>
           )}
         </div>
+        {(imageProps || videoProps) && (
+          <div className={moduleStyles.heroBannerMediaContainer}>
+            {imageProps && !videoProps && (
+              <Image
+                {...imageProps}
+                className={classNames(
+                  imageProps.className,
+                  moduleStyles.heroBannerMediaImage,
+                  hideImageOnSmallScreen && moduleStyles.hideImageOnSmallScreen,
+                )}
+              />
+            )}
+            {videoProps && <VideoComponent {...videoProps} />}
+          </div>
+        )}
       </div>
-      {(imageProps || videoProps) && (
-        <div className={moduleStyles.heroBannerMediaContainer}>
-          {imageProps && !videoProps && (
-            <Image
-              {...imageProps}
-              className={classNames(
-                imageProps.className,
-                moduleStyles.heroBannerMediaImage,
-              )}
-            />
-          )}
-          {videoProps && <VideoComponent {...videoProps} />}
-        </div>
-      )}
     </div>
   </section>
 );

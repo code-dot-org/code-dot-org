@@ -1,0 +1,156 @@
+@use '@code-dot-org/component-library-styles/font.scss' as font;
+
+.afeEligibility {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--background-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
+  width: 100%;
+
+  .afeEligibilityFormContainer {
+    flex: 2.5;
+    border-right: 1px solid var(--borders-neutral-primary);
+    border-bottom: none;
+    padding: 2rem;
+
+    fieldset {
+      border: none;
+      margin: 0;
+      padding: 0;
+
+      legend {
+        @include font.main-font-semi-bold;
+        font-size: 1rem;
+        line-height: 1.48;
+      }
+
+      label {
+        width: 100%;
+      }
+    }
+
+    .afeEligibilityFormField {
+      width: 100%;
+      margin-bottom: 1rem;
+      min-width: 150px;
+
+      input:not([type='checkbox']),
+      select,
+      div:has(> select) {
+        width: 100%;
+      }
+
+      i {
+        text-align: center;
+      }
+
+      label {
+        margin: 0.25rem 0;
+      }
+
+      &:has(:required) {
+        span:first-child::after,
+        :has(> [type='checkbox']) span:last-child::after {
+          content: ' *';
+          color: var(--text-error-primary);
+        }
+      }
+
+      &:has(+ hr) {
+        margin-bottom: 0;
+      }
+    }
+
+    .afeEligibilityFormHelper {
+      margin-top: -1rem;
+      text-align: end;
+    }
+
+    .afeEligibilityFormGrid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+
+      .afeEligibilityFormField {
+        margin-bottom: 0;
+      }
+    }
+
+    .afeEligibilityNotice {
+      min-width: 39.375rem;
+      max-width: 50rem;
+      padding: 2.25rem 3.5rem 2.5rem 3.5rem;
+      gap: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 6px 18px 0 rgb(0 0 0 / 0.3);
+
+      .afeEligibilityNoticeLink {
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .afeEligibilityReqsContainer {
+    flex: 1;
+    padding: 2rem;
+  }
+
+  .afeEligibilityBrandText {
+    color: var(--text-brand-teal-primary);
+  }
+
+  .afeEligibilityInfoText {
+    color: var(--text-neutral-quaternary);
+  }
+
+  .afeEligibilityErrorText {
+    color: var(--text-error-primary);
+  }
+
+  .afeEligibilityDivider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0.75rem 0;
+    width: 100%;
+
+    &::before,
+    &::after {
+      content: '';
+      flex: 1;
+      border-bottom: 1px solid var(--borders-neutral-primary);
+    }
+
+    p {
+      border-radius: 50%;
+      border: 1px solid var(--borders-neutral-primary);
+      font-weight: 500;
+      font-size: 0.625rem;
+      margin: 0 0.25rem;
+      padding: 0.25rem 0.3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .afeEligibility {
+    flex-direction: column;
+
+    .afeEligibilityFormContainer {
+      border-right: none;
+      border-bottom: 1px solid var(--borders-neutral-primary);
+    }
+
+    .afeEligibilityFormContainer,
+    .afeEligibilityReqsContainer {
+      flex: 1 1 100%;
+    }
+  }
+}

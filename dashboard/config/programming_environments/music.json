@@ -10,25 +10,25 @@
     {
       "key": "play",
       "name": "Sounds",
-      "color": "#eeb3ff",
+      "color": "#ccb0e8",
       "position": 0
     },
     {
       "key": "control",
       "name": "Control",
-      "color": "#94e4ff",
+      "color": "#99e4ff",
       "position": 1
     },
     {
       "key": "effects",
       "name": "Effects",
-      "color": "#ffa3a3",
+      "color": "#ccb0e8",
       "position": 2
     },
     {
       "key": "functions",
       "name": "Functions",
-      "color": "#a8ffaa",
+      "color": "#c7f1a7",
       "position": 3
     }
   ]

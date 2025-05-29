@@ -89,10 +89,11 @@ class ScriptsControllerTest < ActionController::TestCase
     create :unit_group_unit, unit_group: course, script: unit, position: 1
 
     get :show, params: {
-      id: unit.name,
+      course_course_name: course.name,
+      position: 1
     }
     assert_response :ok
-    assert_includes(@response.body, "<link rel=\"canonical\" href=\"//test-studio.code.org/s/bogus-script")
+    assert_includes(@response.body, "<link rel=\"canonical\" href=\"//test-studio.code.org/courses/#{course.name}/units/1")
   end
 
   test 'canonical url is not added if is not single unit course' do
@@ -103,7 +104,8 @@ class ScriptsControllerTest < ActionController::TestCase
     create :unit_group_unit, unit_group: course, script: unit2, position: 2
 
     get :show, params: {
-      id: unit.name,
+      course_course_name: course.name,
+      position: 1
     }
     assert_response :ok
     refute_includes(@response.body, "<link rel=\"canonical\"")
@@ -334,29 +336,44 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "show: do not redirect when showing latest stable version of single-unit course for student" do
     sign_in create(:student)
-    get :show, params: {id: @single_unit_2024.name}
+    get :show, params: {
+      course_course_name: @single_unit_course_2024.name,
+      position: 1
+    }
     assert_response :success
   end
 
   test "show: redirect from older version to latest stable version of single-unit course for student" do
     sign_in create(:student)
-    get :show, params: {id: @single_unit_2023.name}
+    get :show, params: {
+      course_course_name: @single_unit_course_2023.name,
+      position: 1
+    }
     assert_redirected_to "/s/#{@single_unit_2024.name}?redirect_warning=true"
   end
 
   test "show: redirect from older version to latest stable version of single-unit course for logged out user" do
-    get :show, params: {id: @single_unit_2023.name}
+    get :show, params: {
+      course_course_name: @single_unit_course_2023.name,
+      position: 1
+    }
     assert_redirected_to "/s/#{@single_unit_2024.name}?redirect_warning=true"
   end
 
   test "show: redirect from new unstable version to latest stable version of single-unit course for student" do
     sign_in create(:student)
-    get :show, params: {id: @single_unit_2025.name}
+    get :show, params: {
+      course_course_name: @single_unit_course_2025.name,
+      position: 1
+    }
     assert_redirected_to "/s/#{@single_unit_2024.name}?redirect_warning=true"
   end
 
   test "show: redirect from new unstable version to latest stable version of single-unit course for logged out user" do
-    get :show, params: {id: @single_unit_2025.name}
+    get :show, params: {
+      course_course_name: @single_unit_course_2025.name,
+      position: 1
+    }
     assert_redirected_to "/s/#{@single_unit_2024.name}?redirect_warning=true"
   end
 
@@ -366,24 +383,34 @@ class ScriptsControllerTest < ActionController::TestCase
     section_single_unit_2023.add_student(student_single_unit_2023)
 
     sign_in student_single_unit_2023
-    get :show, params: {id: @single_unit_2025.name}
+    get :show, params: {
+      course_course_name: @single_unit_course_2025.name,
+      position: 1
+    }
     assert_redirected_to "/s/#{@single_unit_2023.name}?redirect_warning=true"
   end
 
   test "show: do not redirect teacher to latest stable version of single-unit course" do
     sign_in create(:teacher)
-    get :show, params: {id: @single_unit_2023.name}
+    get :show, params: {
+      course_course_name: @single_unit_course_2023.name,
+      position: 1
+    }
     assert_response :ok
   end
 
   test "show: redirect from family name to latest stable version of single-unit course" do
     get :show, params: {id: @single_unit_course_offering.key}
-    assert_redirected_to "/s/#{@single_unit_2024.name}"
+    assert_redirected_to "/courses/#{@single_unit_course_2024.name}/units/1"
   end
 
-  test "show: teacher in teacher-local-nav-v2 experiment is redirected to teacher dashboard if unit is in a section" do
+  test "show: teacher in teacher-local-nav-v2 experiment is redirected to teacher dashboard if course is in a section" do
+    # Have the same unit in two different courses to make sure the redirection
+    # goes to the course defined in the section.
+    original_course = create :unit_group, name: 'original-course'
     experiment_course = create :unit_group, name: 'experiment-course'
-    experiment_script = create :script, name: 'experiment-script'
+    experiment_script = create :script, name: 'experiment-script', original_unit_group: original_course
+    create :unit_group_unit, unit_group: original_course, script: experiment_script, position: 1
     create :unit_group_unit, unit_group: experiment_course, script: experiment_script, position: 1
     experiment_teacher = create :teacher
     experiment_section = create :section, user: experiment_teacher, unit_group: experiment_course
@@ -391,8 +418,55 @@ class ScriptsControllerTest < ActionController::TestCase
 
     sign_in experiment_teacher
 
-    get :show, params: {id: experiment_script.name}
-    assert_redirected_to "/teacher_dashboard/sections/#{experiment_section.id}/unit/#{experiment_script.name}"
+    get :show, params: {
+      course_course_name: experiment_course.name,
+      position: 1
+    }
+    assert_redirected_to "/teacher_dashboard/sections/#{experiment_section.id}/courses/#{experiment_course.name}/units/1"
+  end
+
+  test "show: teacher in teacher-local-nav-v2 experiment is redirected to teacher dashboard if unit is in a section" do
+    # Have the same unit in two different courses to make sure the redirection
+    # goes to the course defined in the section.
+    original_course = create :unit_group, name: 'original-course'
+    experiment_course = create :unit_group, name: 'experiment-course'
+    experiment_script = create :script, name: 'experiment-script', original_unit_group: original_course
+    create :unit_group_unit, unit_group: original_course, script: experiment_script, position: 1
+    create :unit_group_unit, unit_group: experiment_course, script: experiment_script, position: 1
+    experiment_teacher = create :teacher
+    experiment_section = create :section, user: experiment_teacher, script: experiment_script
+    SingleUserExperiment.find_or_create_by!(min_user_id: experiment_teacher.id, name: 'teacher-local-nav-v2')
+
+    sign_in experiment_teacher
+
+    get :show, params: {
+      course_course_name: experiment_course.name,
+      position: 1
+    }
+    assert_redirected_to "/teacher_dashboard/sections/#{experiment_section.id}/courses/#{experiment_course.name}/units/1"
+  end
+
+  test "show: teacher in teacher-local-nav-v2 experiment is NOT redirected to teacher dashboard if unit is NOT in a section" do
+    # Have the same unit in two different courses to make sure the redirection
+    # goes to the course defined in the section.
+    original_course = create :unit_group, name: 'original-course'
+    experiment_course = create :unit_group, name: 'experiment-course'
+    experiment_script = create :script, name: 'experiment-script', original_unit_group: original_course
+    experiment_script_2 = create :script, name: 'experiment-script-2', original_unit_group: original_course
+    create :unit_group_unit, unit_group: original_course, script: experiment_script, position: 1
+    create :unit_group_unit, unit_group: experiment_course, script: experiment_script, position: 1
+    create :unit_group_unit, unit_group: experiment_course, script: experiment_script_2, position: 2
+    experiment_teacher = create :teacher
+    section = create :section, user: experiment_teacher, unit_group: original_course
+    SingleUserExperiment.find_or_create_by!(min_user_id: experiment_teacher.id, name: 'teacher-local-nav-v2')
+
+    sign_in experiment_teacher
+
+    get :show, params: {
+      course_course_name: experiment_course.name,
+      position: 1
+    }
+    assert_redirected_to course_unit_path(experiment_course, 1, section_id: section.id)
   end
 
   test "show: should remove user_id url param from non-dashboard unit overview when teacher local nav v2 experiment enabled" do
@@ -1734,7 +1808,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Unit.expects(:get_without_cache).with(@migrated_unit.name, with_associated_models: true).returns(@migrated_unit).once
     get :edit, params: {id: @migrated_unit.name}
 
-    Unit.expects(:get_from_cache).with(@migrated_unit.name, raise_exceptions: false).returns(@migrated_unit).once
+    Unit.expects(:get_from_cache).with(@migrated_unit.name, raise_exceptions: false).returns(@migrated_unit).at_least_once
     Unit.expects(:get_without_cache).never
     get :show, params: {id: @migrated_unit.name}
   end
@@ -1789,7 +1863,7 @@ class ScriptsControllerTest < ActionController::TestCase
     let(:modularity_enabled) {false}
 
     before do
-      allow(Policies::Courses).to receive(:modularity_enabled?).with(user).and_return(modularity_enabled)
+      allow(Policies::Courses).to receive(:modularity_enabled?).and_return(modularity_enabled)
     end
 
     context 'modularity is off' do
@@ -1802,7 +1876,7 @@ class ScriptsControllerTest < ActionController::TestCase
       it '/courses/:course_course_name/units/:position/ does not redirect' do
         sign_in user
         get :show, params: {course_course_name: course.name, position: unit_position}
-        assert_response :success
+        assert_redirected_to "/s/#{unit.name}"
       end
     end
 

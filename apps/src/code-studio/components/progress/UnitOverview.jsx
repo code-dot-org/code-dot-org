@@ -69,6 +69,7 @@ class UnitOverview extends React.Component {
     // redux provided
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
+    scriptPath: PropTypes.string.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     hiddenLessonState: PropTypes.object,
     selectedSectionId: PropTypes.number,
@@ -125,6 +126,7 @@ class UnitOverview extends React.Component {
       studentResources,
       scriptId,
       scriptName,
+      scriptPath,
       viewAs,
       showCourseUnitVersionWarning,
       showScriptVersionWarning,
@@ -148,6 +150,7 @@ class UnitOverview extends React.Component {
       completedLessonNumber,
       courseOfferingId,
       courseVersionId,
+      courseId,
       isProfessionalLearningCourse,
       publishedState,
       participantAudience,
@@ -199,6 +202,7 @@ class UnitOverview extends React.Component {
               viewAs={viewAs}
               showAssignButton={showAssignButton}
               courseOfferingId={courseOfferingId}
+              currentCourseId={courseId}
               scriptId={scriptId}
               participantAudience={participantAudience}
               scriptOverviewPdfUrl={scriptOverviewPdfUrl}
@@ -235,6 +239,7 @@ class UnitOverview extends React.Component {
             publishedState={publishedState}
             participantAudience={participantAudience}
             isUnitWithLevels={unitHasLevels}
+            scriptPath={scriptPath}
           />
         </div>
         <ProgressTable minimal={false} />

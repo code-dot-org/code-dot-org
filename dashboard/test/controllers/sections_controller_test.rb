@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class SectionsControllerTest < ActionController::TestCase
+  include Minitest::RSpecMocks
+
   self.use_transactional_test_case = true
 
   setup_all do
@@ -293,5 +295,48 @@ class SectionsControllerTest < ActionController::TestCase
     assert_response :success
     response_json = JSON.parse(@response.body)
     assert_equal response_json, [{"text"=>"Flappy Code", "value"=>"/s/flappy"}, {"text"=>"Lesson 1: Flappy Code", "value"=>"/s/flappy/lessons/1/levels/1"}]
+  end
+
+  describe '#retrieve_lessons_for_dropdown' do
+    let(:teacher) {create :teacher}
+    let(:unit_group) {create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+    let(:unit) {create :unit, :with_levels, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+    let(:unit_position) {1}
+    let!(:unit_group_unit) {create :unit_group_unit, unit_group: unit_group, script: unit, position: unit_position}
+    let(:lesson) {unit.lessons.first}
+    let(:section) {create :section, user: teacher, script: unit, unit_group: unit_group, login_type: 'email'}
+    let(:response) {JSON.parse(@response.body, symbolize_names: true)}
+    let(:response_unit) {response.first}
+    let(:response_lesson) {response.second}
+
+    before do
+      sign_in teacher
+      lesson.update!(has_lesson_plan: true)
+      get :retrieve_lessons_for_dropdown, params: {id: section.id}
+    end
+
+    it 'returns success' do
+      assert_response :success
+    end
+
+    it 'returns Array' do
+      _(response).must_be_instance_of Array
+    end
+
+    it 'returns unit name' do
+      _(response_unit[:text]).must_equal unit.title_for_display(unit_group_unit: unit_group_unit)
+    end
+
+    it 'returns unit path' do
+      _(response_unit[:value]).must_equal "/courses/#{unit_group.name}/units/#{unit_position}"
+    end
+
+    it 'returns lesson name' do
+      _(response_lesson[:text]).must_equal "Lesson #{lesson.relative_position}: #{lesson.localized_name}"
+    end
+
+    it 'returns lesson path' do
+      _(response_lesson[:value]).must_equal "/courses/#{unit_group.name}/units/#{unit_position}/lessons/1/levels/1"
+    end
   end
 end

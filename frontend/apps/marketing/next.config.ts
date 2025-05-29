@@ -2,7 +2,11 @@ import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
   output: 'standalone',
-  serverExternalPackages: ['@statsig/statsig-node-core'],
+  serverExternalPackages: [
+    '@statsig/statsig-node-core',
+    '@opentelemetry/auto-instrumentations-node',
+    'pino',
+  ],
   cacheMaxMemorySize: 0, // disable default in-memory caching
   redirects: async function () {
     return [
@@ -1256,7 +1260,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/student/middle-high',
-        destination: '/middle-and-high-school-students',
+        destination: '/students/middle-and-high-school',
         permanent: false,
       },
       {
@@ -1401,7 +1405,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/educate/district/partners',
-        destination: '/district/partners',
+        destination: '/districts/partners',
         permanent: false,
       },
       {
@@ -1611,7 +1615,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/curriculum/cs-ai-foundations',
-        destination: '/curriculum/artifical-intelligence-foundations',
+        destination: '/curriculum/artificial-intelligence-foundations',
         permanent: false,
       },
       {
@@ -1641,17 +1645,17 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/aivideos',
-        destination: '/artifical-intelligencei',
+        destination: '/artificial-intelligencei',
         permanent: false,
       },
       {
         source: '/ethical-ai-panel',
-        destination: '/artifical-intelligence',
+        destination: '/artificial-intelligence',
         permanent: false,
       },
       {
         source: '/ai',
-        destination: '/artifical-intelligence',
+        destination: '/artificial-intelligence',
         permanent: false,
       },
       {
@@ -1671,7 +1675,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/about/hear-from-us',
-        destination: '/about/hear-from-code',
+        destination: '/about#hear-from-us',
         permanent: false,
       },
       {
@@ -1867,6 +1871,43 @@ const nextConfig: NextConfig = {
       {
         source: '/about/2014',
         destination: '/about/annual-report',
+        permanent: false,
+      },
+      {
+        source: '/global/fa/csf',
+        destination:
+          'https://studio.code.org/global/fa/catalog?marketingInitiative=csf',
+        permanent: false,
+      },
+      {
+        source: '/global/fa/hourofcode',
+        destination:
+          'https://studio.code.org/global/fa/catalog?marketingInitiative=hoc',
+        permanent: false,
+      },
+      {
+        source: '/global/fa',
+        destination: 'https://global.code.org/farsi',
+        permanent: false,
+      },
+      {
+        source: '/global/fa/videos',
+        destination: 'https://global.code.org/farsi',
+        permanent: false,
+      },
+      {
+        source: '/global/fa/about',
+        destination: 'https://global.code.org/farsi',
+        permanent: false,
+      },
+      {
+        source: '/global/fa/teacher',
+        destination: 'https://global.code.org/farsi',
+        permanent: false,
+      },
+      {
+        source: '/farsi',
+        destination: 'https://global.code.org/farsi',
         permanent: false,
       },
     ];

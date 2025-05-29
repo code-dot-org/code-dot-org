@@ -4,7 +4,7 @@
   "category": "Control",
   "category_key": "control",
   "block_name": "repeat_simple2",
-  "content": "Repeat the sounds inside the block for the number of times specified",
+  "content": "Repeat the sounds inside the block for the number of times specified\n\n<table>\n\n  <tr>\n    <td style=\"width: 40%\"><img src=\"https://images.code.org/41536b0a02f5e82793f483ed72b7071f-Slide24.PNG\"></td>\n    <td style=\"width: 60%; padding: 10px;\">\n      Most songs have lyrics that need to be played in a specific order, like the Verse of a song\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 40%\"><img src=\"https://images.code.org/21b966df306ef90357b6098dcf66f4c4-Slide25.PNG\"></td>\n    <td style=\"width: 60%; padding: 10px;\">\n      You can use loops to repeat a backing track underneath the lyrics\n    </td>\n  </tr>\n  \n  <tr>\n    <td style=\"width: 40%\"><img src=\"https://images.code.org/4d4f38744fff9c3a8d49a14c2786e318-Slide26.PNG\"></td>\n    <td style=\"width: 60%; padding: 10px;\">\n      If tracks have different lengths, they'll need different loops\n    </td>\n  </tr>\n  \n  <tr>\n    <td style=\"width: 40%\"><img src=\"https://images.code.org/5b059c6b2f349a34130d5f86f74aea9f-Slide27.PNG\"></td>\n    <td style=\"width: 60%; padding: 10px;\">\n      If they have the same length, you can play them together in the same loop\n    </td>\n  </tr>\n  \n  <tr>\n    <td style=\"width: 40%\"><img src=\"https://images.code.org/76c1e2fb6c3dd264a296f968d8372512-Slide28.PNG\"></td>\n    <td style=\"width: 60%; padding: 10px;\">\n      Key Takeaway: Use loops to create backing tracks for your lyrics. Use different loops when tracks have different lengths.\n    </td>\n  </tr>\n\n\n</table>    ",
   "palette_params": [
     {
       "name": "count",

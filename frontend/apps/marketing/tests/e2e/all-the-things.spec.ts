@@ -40,7 +40,8 @@ test.describe('All the things UI e2e test', () => {
       await page.waitForURL('**/en-US/engineering/all-the-things');
     });
 
-    test('should redirect from localeless paths to localized paths using the language cookie', async ({
+    // Re-enable when locales other than English are supported
+    test.skip('should redirect from localeless paths to localized paths using the language cookie', async ({
       page,
       context,
       browserName,
@@ -311,6 +312,35 @@ test.describe('All the things UI e2e test', () => {
 
         for (const separator of separators) {
           await expect(separator).toBeVisible();
+        }
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('editorial card', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator('Editorial Card');
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('renders', async () => {
+        const imageLocator = component.locator('img[alt=""]');
+        await expect(imageLocator).toHaveCount(7);
+        for (const image of await imageLocator.all()) {
+          await expect(image).toBeVisible();
+        }
+
+        const iconsLocator = component.locator(
+          'i.fa-circle-1, i.fa-circle-2, i.fa-circle-3',
+        );
+        await expect(iconsLocator).toHaveCount(3);
+        for (const icon of await iconsLocator.all()) {
+          await expect(icon).toBeVisible();
         }
       });
 

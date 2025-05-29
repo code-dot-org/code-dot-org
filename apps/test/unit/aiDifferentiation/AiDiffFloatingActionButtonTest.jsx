@@ -19,7 +19,9 @@ jest.mock('@react-pdf/renderer', () => {
 });
 
 const DEFAULT_PROPS = {
-  scriptId: 1,
+  context: {
+    scriptId: 1,
+  },
   scriptName: 'test_lesson',
   unitDisplayName: 'test unit name',
 };
@@ -63,7 +65,13 @@ describe('AIDiffFloatingActionButton', () => {
     expect(screen.getByText('AI Teaching Assistant')).not.toBeVisible();
   });
 
-  it('begins open if no session storage and has not been opened before', () => {
+  it('begins closed if has been closed before', () => {
+    localStorage.setItem('AiDiffHasClosedKey', 'true');
+    renderDefault();
+    expect(screen.getByText('AI Teaching Assistant')).not.toBeVisible();
+  });
+
+  it('begins open if no session or local storage and has not been opened before', () => {
     renderDefault({});
     expect(screen.getByText('AI Teaching Assistant')).toBeVisible();
   });

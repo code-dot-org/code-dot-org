@@ -17,7 +17,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-09 15:33:36 UTC",
+    "serialized_at": "2025-05-23 19:13:47 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1142,6 +1143,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-event-try_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1314,6 +1318,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-effects-panel_launch"
+        ],
         "progression": "Bonus Blocks"
       },
       "bonus": false,
@@ -1336,6 +1343,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-effects_launch"
+        ],
         "progression": "Bonus Blocks"
       },
       "bonus": false,
@@ -1874,6 +1884,42 @@
       "seeding_key": {
         "resource.key": "music_lab_inspiration"
       }
+    },
+    {
+      "name": "Quick Reference Guide",
+      "url": "https://drive.google.com/drive/folders/12GBFA753Lsu5qDa13DvwlSvXDcM6daBW",
+      "key": "quick_reference_guide",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "quick_reference_guide"
+      }
+    },
+    {
+      "name": "Quick Reference Guide",
+      "url": "https://drive.google.com/drive/folders/12GBFA753Lsu5qDa13DvwlSvXDcM6daBW",
+      "key": "quick_reference_guide_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "quick_reference_guide_1"
+      }
+    },
+    {
+      "name": "Quick Reference Guide",
+      "url": "https://drive.google.com/drive/folders/12GBFA753Lsu5qDa13DvwlSvXDcM6daBW",
+      "key": "quick_reference_guide_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "quick_reference_guide_2"
+      }
     }
   ],
   "lessons_resources": [
@@ -1881,6 +1927,12 @@
       "seeding_key": {
         "lesson.key": "Producer Power",
         "resource.key": "lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Producer Power",
+        "resource.key": "quick_reference_guide_1"
       }
     },
     {
@@ -1897,8 +1949,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Songwriter's Toolbox",
+        "resource.key": "quick_reference_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Sound Designer's Studio",
         "resource.key": "lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sound Designer's Studio",
+        "resource.key": "quick_reference_guide_2"
       }
     }
   ],

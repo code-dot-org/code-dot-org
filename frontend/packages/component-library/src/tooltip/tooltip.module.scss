@@ -72,6 +72,12 @@ $tooltip-span-vertical-top-spacing: 2px;
     color: var(--text-neutral-inverse);
     width: max-content;
   }
+
+  &.noTail {
+    &::after {
+      display: none;
+    }
+  }
 }
 
 // Direction

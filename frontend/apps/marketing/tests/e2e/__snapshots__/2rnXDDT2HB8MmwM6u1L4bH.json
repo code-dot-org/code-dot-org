@@ -3316,7 +3316,7 @@
                         "color": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
-                            "desktop": "primary"
+                            "desktop": "strong"
                           }
                         },
                         "margin": {
@@ -3426,7 +3426,7 @@
                         "color": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
-                            "desktop": "primary"
+                            "desktop": "strong"
                           }
                         },
                         "margin": {
@@ -6208,6 +6208,2016 @@
                         }
                       },
                       "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "5zyOvo0R",
+              "displayName": "Editorial Card",
+              "definitionId": "contentful-section",
+              "patternProperties": {},
+              "variables": {
+                "cfVerticalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfHorizontalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfVisibility": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": true
+                  }
+                },
+                "cfMargin": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfPadding": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfBackgroundColor": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "100%"
+                  }
+                },
+                "cfHeight": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "fit-content"
+                  }
+                },
+                "cfMaxWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "none"
+                  }
+                },
+                "cfFlexDirection": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "column"
+                  }
+                },
+                "cfFlexReverse": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": false
+                  }
+                },
+                "cfFlexWrap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "nowrap"
+                  }
+                },
+                "cfBorder": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px solid rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfGap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfHyperlink": {
+                  "key": "0zIBmw_",
+                  "type": "UnboundValue"
+                },
+                "cfOpenInNewTab": {
+                  "key": "LbAW-Uv",
+                  "type": "UnboundValue"
+                },
+                "cfBorderRadius": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfBackgroundImageUrl": {
+                  "key": "HmUDGQ4",
+                  "type": "UnboundValue"
+                },
+                "cfBackgroundImageOptions": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": {
+                      "scaling": "fill",
+                      "alignment": "left top",
+                      "targetSize": "2000px"
+                    }
+                  }
+                }
+              },
+              "children": [
+                {
+                  "id": "iAnEaEgb",
+                  "definitionId": "section",
+                  "patternProperties": {},
+                  "variables": {
+                    "background": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "secondary"
+                      }
+                    },
+                    "padding": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "m"
+                      }
+                    },
+                    "divider": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "none"
+                      }
+                    },
+                    "id": {
+                      "key": "io65oYg",
+                      "type": "UnboundValue"
+                    },
+                    "cfVisibility": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": true
+                      }
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "KbvRGvbe",
+                      "definitionId": "heading",
+                      "patternProperties": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xxl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "nXf_AKG",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "kCyXqFYa",
+                      "definitionId": "heading",
+                      "patternProperties": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "XonT3vx",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "tyRjn9oz",
+                      "definitionId": "contentful-columns",
+                      "patternProperties": {},
+                      "variables": {
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfBorderRadius": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0px"
+                          }
+                        },
+                        "cfBackgroundColor": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "rgba(0, 0, 0, 0)"
+                          }
+                        },
+                        "cfBackgroundImageUrl": {
+                          "key": "347Oltn",
+                          "type": "UnboundValue"
+                        },
+                        "cfBackgroundImageOptions": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": {
+                              "scaling": "fill",
+                              "alignment": "left top",
+                              "targetSize": "2000px"
+                            }
+                          }
+                        },
+                        "cfMargin": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0 0 0 0"
+                          }
+                        },
+                        "cfWidth": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "100%"
+                          }
+                        },
+                        "cfMaxWidth": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "1192px"
+                          }
+                        },
+                        "cfPadding": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0px 0 0px 0"
+                          }
+                        },
+                        "cfBorder": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0px solid rgba(0, 0, 0, 0)"
+                          }
+                        },
+                        "cfGap": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "1.5rem 1.5rem"
+                          }
+                        },
+                        "cfColumns": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "[3,3,3,3]"
+                          }
+                        },
+                        "cfWrapColumns": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfWrapColumnsCount": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "2"
+                          }
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "oA5CCPAo",
+                          "definitionId": "contentful-single-column",
+                          "patternProperties": {},
+                          "variables": {
+                            "cfVisibility": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": true
+                              }
+                            },
+                            "cfBorderRadius": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px"
+                              }
+                            },
+                            "cfBackgroundColor": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "rgba(0, 0, 0, 0)"
+                              }
+                            },
+                            "cfBackgroundImageUrl": {
+                              "key": "ABf-FSO",
+                              "type": "UnboundValue"
+                            },
+                            "cfBackgroundImageOptions": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": {
+                                  "scaling": "fill",
+                                  "alignment": "left top",
+                                  "targetSize": "2000px"
+                                }
+                              }
+                            },
+                            "cfVerticalAlignment": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "start"
+                              }
+                            },
+                            "cfHorizontalAlignment": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "center"
+                              }
+                            },
+                            "cfPadding": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0 0 0 0"
+                              }
+                            },
+                            "cfFlexDirection": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "column"
+                              }
+                            },
+                            "cfFlexWrap": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "nowrap"
+                              }
+                            },
+                            "cfBorder": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px solid rgba(0, 0, 0, 0)"
+                              }
+                            },
+                            "cfGap": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px"
+                              }
+                            },
+                            "cfColumnSpan": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "6"
+                              }
+                            },
+                            "cfColumnSpanLock": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": false
+                              }
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "gWLpFHSs",
+                              "definitionId": "editorialCard",
+                              "patternProperties": {},
+                              "variables": {
+                                "layoutOpt": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": "horizontal_with_image"
+                                  }
+                                },
+                                "heading": {
+                                  "key": "SO13Vmq",
+                                  "type": "UnboundValue"
+                                },
+                                "text": {
+                                  "path": "/3UNaYMj/fields/shortDescription/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "image": {
+                                  "path": "/b5Lvt-f/fields/image/~locale/fields/file/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "iconName": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": "smile"
+                                  }
+                                },
+                                "linkEntry": {
+                                  "path": "/gJB25Ug/fields/primaryLinkRef/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "cfVisibility": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": true
+                                  }
+                                }
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "ZAJJ0iiW",
+                          "definitionId": "contentful-single-column",
+                          "patternProperties": {},
+                          "variables": {
+                            "cfVisibility": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": true
+                              }
+                            },
+                            "cfBorderRadius": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px"
+                              }
+                            },
+                            "cfBackgroundColor": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "rgba(0, 0, 0, 0)"
+                              }
+                            },
+                            "cfBackgroundImageUrl": {
+                              "key": "aXCTjNk",
+                              "type": "UnboundValue"
+                            },
+                            "cfBackgroundImageOptions": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": {
+                                  "scaling": "fill",
+                                  "alignment": "left top",
+                                  "targetSize": "2000px"
+                                }
+                              }
+                            },
+                            "cfVerticalAlignment": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "start"
+                              }
+                            },
+                            "cfHorizontalAlignment": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "center"
+                              }
+                            },
+                            "cfPadding": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0 0 0 0"
+                              }
+                            },
+                            "cfFlexDirection": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "column"
+                              }
+                            },
+                            "cfFlexWrap": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "nowrap"
+                              }
+                            },
+                            "cfBorder": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px solid rgba(0, 0, 0, 0)"
+                              }
+                            },
+                            "cfGap": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px"
+                              }
+                            },
+                            "cfColumnSpan": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "6"
+                              }
+                            },
+                            "cfColumnSpanLock": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": false
+                              }
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "oB5N7VD7",
+                              "definitionId": "editorialCard",
+                              "patternProperties": {},
+                              "variables": {
+                                "layoutOpt": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": "horizontal_with_image"
+                                  }
+                                },
+                                "heading": {
+                                  "key": "mqPCQ9z",
+                                  "type": "UnboundValue"
+                                },
+                                "text": {
+                                  "path": "/yNxDeG0/fields/shortDescription/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "image": {
+                                  "path": "/_BG8Ipz/fields/image/~locale/fields/file/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "iconName": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": "smile"
+                                  }
+                                },
+                                "linkEntry": {
+                                  "path": "/WPQHtk0/fields/primaryLinkRef/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "cfVisibility": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": true
+                                  }
+                                }
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "0HS0ONm2",
+                          "definitionId": "contentful-single-column",
+                          "patternProperties": {},
+                          "variables": {
+                            "cfVisibility": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": true
+                              }
+                            },
+                            "cfBorderRadius": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px"
+                              }
+                            },
+                            "cfBackgroundColor": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "rgba(0, 0, 0, 0)"
+                              }
+                            },
+                            "cfBackgroundImageUrl": {
+                              "key": "acae6EU",
+                              "type": "UnboundValue"
+                            },
+                            "cfBackgroundImageOptions": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": {
+                                  "scaling": "fill",
+                                  "alignment": "left top",
+                                  "targetSize": "2000px"
+                                }
+                              }
+                            },
+                            "cfVerticalAlignment": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "start"
+                              }
+                            },
+                            "cfHorizontalAlignment": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "center"
+                              }
+                            },
+                            "cfPadding": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0 0 0 0"
+                              }
+                            },
+                            "cfFlexDirection": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "column"
+                              }
+                            },
+                            "cfFlexWrap": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "nowrap"
+                              }
+                            },
+                            "cfBorder": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px solid rgba(0, 0, 0, 0)"
+                              }
+                            },
+                            "cfGap": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px"
+                              }
+                            },
+                            "cfColumnSpan": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "6"
+                              }
+                            },
+                            "cfColumnSpanLock": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": false
+                              }
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "M7f6MF4w",
+                              "definitionId": "editorialCard",
+                              "patternProperties": {},
+                              "variables": {
+                                "layoutOpt": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": "horizontal_with_image"
+                                  }
+                                },
+                                "heading": {
+                                  "key": "xWwE9or",
+                                  "type": "UnboundValue"
+                                },
+                                "text": {
+                                  "path": "/TN8XTWJ/fields/shortDescription/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "image": {
+                                  "path": "/VExqHM0/fields/image/~locale/fields/file/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "iconName": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": "smile"
+                                  }
+                                },
+                                "linkEntry": {
+                                  "path": "/JqZWSk7/fields/primaryLinkRef/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "cfVisibility": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": true
+                                  }
+                                }
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "VmHyAkEI",
+                          "definitionId": "contentful-single-column",
+                          "patternProperties": {},
+                          "variables": {
+                            "cfVisibility": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": true
+                              }
+                            },
+                            "cfBorderRadius": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px"
+                              }
+                            },
+                            "cfBackgroundColor": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "rgba(0, 0, 0, 0)"
+                              }
+                            },
+                            "cfBackgroundImageUrl": {
+                              "key": "EKQDsC5",
+                              "type": "UnboundValue"
+                            },
+                            "cfBackgroundImageOptions": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": {
+                                  "scaling": "fill",
+                                  "alignment": "left top",
+                                  "targetSize": "2000px"
+                                }
+                              }
+                            },
+                            "cfVerticalAlignment": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "start"
+                              }
+                            },
+                            "cfHorizontalAlignment": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "center"
+                              }
+                            },
+                            "cfPadding": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0 0 0 0"
+                              }
+                            },
+                            "cfFlexDirection": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "column"
+                              }
+                            },
+                            "cfFlexWrap": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "nowrap"
+                              }
+                            },
+                            "cfBorder": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px solid rgba(0, 0, 0, 0)"
+                              }
+                            },
+                            "cfGap": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px"
+                              }
+                            },
+                            "cfColumnSpan": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "6"
+                              }
+                            },
+                            "cfColumnSpanLock": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": false
+                              }
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "uXHKjg4c",
+                              "definitionId": "editorialCard",
+                              "patternProperties": {},
+                              "variables": {
+                                "layoutOpt": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": "horizontal_with_image"
+                                  }
+                                },
+                                "heading": {
+                                  "key": "vwAdtQr",
+                                  "type": "UnboundValue"
+                                },
+                                "text": {
+                                  "path": "/OfnA27v/fields/shortDescription/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "image": {
+                                  "path": "/LRQ6mHr/fields/image/~locale/fields/file/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "iconName": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": "smile"
+                                  }
+                                },
+                                "linkEntry": {
+                                  "path": "/OlpMQbg/fields/primaryLinkRef/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "cfVisibility": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": true
+                                  }
+                                }
+                              },
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "YBCpbCJj",
+                      "definitionId": "divider",
+                      "patternProperties": {},
+                      "variables": {
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
+                        "margin": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "m"
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "q3uxB4j5",
+                      "definitionId": "heading",
+                      "patternProperties": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "8o4htNCj",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "1YSW91U9",
+                      "definitionId": "contentful-columns",
+                      "patternProperties": {},
+                      "variables": {
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfBorderRadius": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0px"
+                          }
+                        },
+                        "cfBackgroundColor": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "rgba(0, 0, 0, 0)"
+                          }
+                        },
+                        "cfBackgroundImageUrl": {
+                          "key": "wkPxn3cF",
+                          "type": "UnboundValue"
+                        },
+                        "cfBackgroundImageOptions": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": {
+                              "scaling": "fill",
+                              "alignment": "left top",
+                              "targetSize": "2000px"
+                            }
+                          }
+                        },
+                        "cfMargin": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0 0 0 0"
+                          }
+                        },
+                        "cfWidth": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "100%"
+                          }
+                        },
+                        "cfMaxWidth": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "1192px"
+                          }
+                        },
+                        "cfPadding": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0px 0 0px 0"
+                          }
+                        },
+                        "cfBorder": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0px solid rgba(0, 0, 0, 0)"
+                          }
+                        },
+                        "cfGap": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "1rem 1rem"
+                          }
+                        },
+                        "cfColumns": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "[4,4,4]"
+                          }
+                        },
+                        "cfWrapColumns": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfWrapColumnsCount": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "3"
+                          }
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "aoJUv1Zk",
+                          "definitionId": "contentful-single-column",
+                          "patternProperties": {},
+                          "variables": {
+                            "cfVisibility": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": true
+                              }
+                            },
+                            "cfBorderRadius": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px"
+                              }
+                            },
+                            "cfBackgroundColor": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "rgba(0, 0, 0, 0)"
+                              }
+                            },
+                            "cfBackgroundImageUrl": {
+                              "key": "9Xoxh3vz",
+                              "type": "UnboundValue"
+                            },
+                            "cfBackgroundImageOptions": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": {
+                                  "scaling": "fill",
+                                  "alignment": "left top",
+                                  "targetSize": "2000px"
+                                }
+                              }
+                            },
+                            "cfVerticalAlignment": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "start"
+                              }
+                            },
+                            "cfHorizontalAlignment": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "center"
+                              }
+                            },
+                            "cfPadding": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0 0 0 0"
+                              }
+                            },
+                            "cfFlexDirection": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "column"
+                              }
+                            },
+                            "cfFlexWrap": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "nowrap"
+                              }
+                            },
+                            "cfBorder": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px solid rgba(0, 0, 0, 0)"
+                              }
+                            },
+                            "cfGap": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px"
+                              }
+                            },
+                            "cfColumnSpan": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "4"
+                              }
+                            },
+                            "cfColumnSpanLock": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": false
+                              }
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "rKc3s7j0",
+                              "definitionId": "editorialCard",
+                              "patternProperties": {},
+                              "variables": {
+                                "layoutOpt": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": "vertical_with_image"
+                                  }
+                                },
+                                "heading": {
+                                  "key": "8GyXCkMG",
+                                  "type": "UnboundValue"
+                                },
+                                "text": {
+                                  "path": "/mcCci1w9/fields/shortDescription/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "image": {
+                                  "path": "/wxwxp5qd/fields/image/~locale/fields/file/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "iconName": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": "smile"
+                                  }
+                                },
+                                "linkEntry": {
+                                  "path": "/RCcFcxXH/fields/primaryLinkRef/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "cfVisibility": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": true
+                                  }
+                                }
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "jHkDH3sl",
+                          "definitionId": "contentful-single-column",
+                          "patternProperties": {},
+                          "variables": {
+                            "cfVisibility": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": true
+                              }
+                            },
+                            "cfBorderRadius": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px"
+                              }
+                            },
+                            "cfBackgroundColor": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "rgba(0, 0, 0, 0)"
+                              }
+                            },
+                            "cfBackgroundImageUrl": {
+                              "key": "sOrYv4IZ",
+                              "type": "UnboundValue"
+                            },
+                            "cfBackgroundImageOptions": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": {
+                                  "scaling": "fill",
+                                  "alignment": "left top",
+                                  "targetSize": "2000px"
+                                }
+                              }
+                            },
+                            "cfVerticalAlignment": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "start"
+                              }
+                            },
+                            "cfHorizontalAlignment": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "center"
+                              }
+                            },
+                            "cfPadding": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0 0 0 0"
+                              }
+                            },
+                            "cfFlexDirection": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "column"
+                              }
+                            },
+                            "cfFlexWrap": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "nowrap"
+                              }
+                            },
+                            "cfBorder": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px solid rgba(0, 0, 0, 0)"
+                              }
+                            },
+                            "cfGap": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px"
+                              }
+                            },
+                            "cfColumnSpan": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "4"
+                              }
+                            },
+                            "cfColumnSpanLock": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": false
+                              }
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "pzMz2OhY",
+                              "definitionId": "editorialCard",
+                              "patternProperties": {},
+                              "variables": {
+                                "layoutOpt": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": "vertical_with_image"
+                                  }
+                                },
+                                "heading": {
+                                  "key": "OCSRD9uM",
+                                  "type": "UnboundValue"
+                                },
+                                "text": {
+                                  "path": "/MQ496Bsp/fields/shortDescription/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "image": {
+                                  "path": "/hdNvVeZz/fields/image/~locale/fields/file/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "iconName": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": "smile"
+                                  }
+                                },
+                                "linkEntry": {
+                                  "path": "/GgZrqP95/fields/primaryLinkRef/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "cfVisibility": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": true
+                                  }
+                                }
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "bU9H6jve",
+                          "definitionId": "contentful-single-column",
+                          "patternProperties": {},
+                          "variables": {
+                            "cfVisibility": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": true
+                              }
+                            },
+                            "cfBorderRadius": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px"
+                              }
+                            },
+                            "cfBackgroundColor": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "rgba(0, 0, 0, 0)"
+                              }
+                            },
+                            "cfBackgroundImageUrl": {
+                              "key": "0ZmNLA6K",
+                              "type": "UnboundValue"
+                            },
+                            "cfBackgroundImageOptions": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": {
+                                  "scaling": "fill",
+                                  "alignment": "left top",
+                                  "targetSize": "2000px"
+                                }
+                              }
+                            },
+                            "cfVerticalAlignment": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "start"
+                              }
+                            },
+                            "cfHorizontalAlignment": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "center"
+                              }
+                            },
+                            "cfPadding": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0 0 0 0"
+                              }
+                            },
+                            "cfFlexDirection": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "column"
+                              }
+                            },
+                            "cfFlexWrap": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "nowrap"
+                              }
+                            },
+                            "cfBorder": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px solid rgba(0, 0, 0, 0)"
+                              }
+                            },
+                            "cfGap": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px"
+                              }
+                            },
+                            "cfColumnSpan": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "4"
+                              }
+                            },
+                            "cfColumnSpanLock": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": false
+                              }
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "fVrnXEBe",
+                              "definitionId": "editorialCard",
+                              "patternProperties": {},
+                              "variables": {
+                                "layoutOpt": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": "vertical_with_image"
+                                  }
+                                },
+                                "heading": {
+                                  "key": "3BL7DZFT",
+                                  "type": "UnboundValue"
+                                },
+                                "text": {
+                                  "path": "/Ajxuc3HO/fields/shortDescription/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "image": {
+                                  "path": "/ZsffSorr/fields/image/~locale/fields/file/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "iconName": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": "smile"
+                                  }
+                                },
+                                "linkEntry": {
+                                  "path": "/cNokTlRK/fields/primaryLinkRef/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "cfVisibility": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": true
+                                  }
+                                }
+                              },
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "q6NhaRVm",
+                      "definitionId": "divider",
+                      "patternProperties": {},
+                      "variables": {
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
+                        "margin": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "m"
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "dH7Gjk31",
+                      "definitionId": "heading",
+                      "patternProperties": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "Yf7O7sCY",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "GdhWRJFc",
+                      "definitionId": "contentful-columns",
+                      "patternProperties": {},
+                      "variables": {
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfBorderRadius": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0px"
+                          }
+                        },
+                        "cfBackgroundColor": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "rgba(0, 0, 0, 0)"
+                          }
+                        },
+                        "cfBackgroundImageUrl": {
+                          "key": "joAfMQhO",
+                          "type": "UnboundValue"
+                        },
+                        "cfBackgroundImageOptions": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": {
+                              "scaling": "fill",
+                              "alignment": "left top",
+                              "targetSize": "2000px"
+                            }
+                          }
+                        },
+                        "cfMargin": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0 0 0 0"
+                          }
+                        },
+                        "cfWidth": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "100%"
+                          }
+                        },
+                        "cfMaxWidth": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "1192px"
+                          }
+                        },
+                        "cfPadding": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0px 0 0px 0"
+                          }
+                        },
+                        "cfBorder": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0px solid rgba(0, 0, 0, 0)"
+                          }
+                        },
+                        "cfGap": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "1rem 1rem"
+                          }
+                        },
+                        "cfColumns": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "[4,4,4]"
+                          }
+                        },
+                        "cfWrapColumns": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfWrapColumnsCount": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "3"
+                          }
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "7W0IRB60",
+                          "definitionId": "contentful-single-column",
+                          "patternProperties": {},
+                          "variables": {
+                            "cfVisibility": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": true
+                              }
+                            },
+                            "cfBorderRadius": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px"
+                              }
+                            },
+                            "cfBackgroundColor": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "rgba(0, 0, 0, 0)"
+                              }
+                            },
+                            "cfBackgroundImageUrl": {
+                              "key": "kQ4rHG8h",
+                              "type": "UnboundValue"
+                            },
+                            "cfBackgroundImageOptions": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": {
+                                  "scaling": "fill",
+                                  "alignment": "left top",
+                                  "targetSize": "2000px"
+                                }
+                              }
+                            },
+                            "cfVerticalAlignment": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "center"
+                              }
+                            },
+                            "cfHorizontalAlignment": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "center"
+                              }
+                            },
+                            "cfPadding": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0 0 0 0"
+                              }
+                            },
+                            "cfFlexDirection": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "column"
+                              }
+                            },
+                            "cfFlexWrap": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "nowrap"
+                              }
+                            },
+                            "cfBorder": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px solid rgba(0, 0, 0, 0)"
+                              }
+                            },
+                            "cfGap": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px"
+                              }
+                            },
+                            "cfColumnSpan": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "4"
+                              }
+                            },
+                            "cfColumnSpanLock": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": false
+                              }
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "AffVKIg1",
+                              "definitionId": "editorialCard",
+                              "patternProperties": {},
+                              "variables": {
+                                "layoutOpt": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": "vertical_with_icon"
+                                  }
+                                },
+                                "heading": {
+                                  "key": "WTQ4Ru9V",
+                                  "type": "UnboundValue"
+                                },
+                                "text": {
+                                  "path": "/lZoDcpjz/fields/shortDescription/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "image": {
+                                  "path": "/2YBqvudj/fields/image/~locale/fields/file/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "iconName": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": "circle-1"
+                                  }
+                                },
+                                "linkEntry": {
+                                  "path": "/9RLki6fQ/fields/primaryLinkRef/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "cfVisibility": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": true
+                                  }
+                                }
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "sJE8ZKDk",
+                          "definitionId": "contentful-single-column",
+                          "patternProperties": {},
+                          "variables": {
+                            "cfVisibility": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": true
+                              }
+                            },
+                            "cfBorderRadius": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px"
+                              }
+                            },
+                            "cfBackgroundColor": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "rgba(0, 0, 0, 0)"
+                              }
+                            },
+                            "cfBackgroundImageUrl": {
+                              "key": "WzScpfoh",
+                              "type": "UnboundValue"
+                            },
+                            "cfBackgroundImageOptions": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": {
+                                  "scaling": "fill",
+                                  "alignment": "left top",
+                                  "targetSize": "2000px"
+                                }
+                              }
+                            },
+                            "cfVerticalAlignment": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "center"
+                              }
+                            },
+                            "cfHorizontalAlignment": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "center"
+                              }
+                            },
+                            "cfPadding": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0 0 0 0"
+                              }
+                            },
+                            "cfFlexDirection": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "column"
+                              }
+                            },
+                            "cfFlexWrap": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "nowrap"
+                              }
+                            },
+                            "cfBorder": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px solid rgba(0, 0, 0, 0)"
+                              }
+                            },
+                            "cfGap": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px"
+                              }
+                            },
+                            "cfColumnSpan": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "4"
+                              }
+                            },
+                            "cfColumnSpanLock": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": false
+                              }
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "g5QjgPLT",
+                              "definitionId": "editorialCard",
+                              "patternProperties": {},
+                              "variables": {
+                                "layoutOpt": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": "vertical_with_icon"
+                                  }
+                                },
+                                "heading": {
+                                  "key": "vTYAEM28",
+                                  "type": "UnboundValue"
+                                },
+                                "text": {
+                                  "path": "/eofemS00/fields/shortDescription/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "image": {
+                                  "path": "/RDnMnl65/fields/image/~locale/fields/file/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "iconName": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": "circle-2"
+                                  }
+                                },
+                                "linkEntry": {
+                                  "path": "/sbrUIE0x/fields/primaryLinkRef/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "cfVisibility": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": true
+                                  }
+                                }
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "670Z8b2P",
+                          "definitionId": "contentful-single-column",
+                          "patternProperties": {},
+                          "variables": {
+                            "cfVisibility": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": true
+                              }
+                            },
+                            "cfBorderRadius": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px"
+                              }
+                            },
+                            "cfBackgroundColor": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "rgba(0, 0, 0, 0)"
+                              }
+                            },
+                            "cfBackgroundImageUrl": {
+                              "key": "sgcocoTx",
+                              "type": "UnboundValue"
+                            },
+                            "cfBackgroundImageOptions": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": {
+                                  "scaling": "fill",
+                                  "alignment": "left top",
+                                  "targetSize": "2000px"
+                                }
+                              }
+                            },
+                            "cfVerticalAlignment": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "center"
+                              }
+                            },
+                            "cfHorizontalAlignment": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "center"
+                              }
+                            },
+                            "cfPadding": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0 0 0 0"
+                              }
+                            },
+                            "cfFlexDirection": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "column"
+                              }
+                            },
+                            "cfFlexWrap": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "nowrap"
+                              }
+                            },
+                            "cfBorder": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px solid rgba(0, 0, 0, 0)"
+                              }
+                            },
+                            "cfGap": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "0px"
+                              }
+                            },
+                            "cfColumnSpan": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "4"
+                              }
+                            },
+                            "cfColumnSpanLock": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": false
+                              }
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "ZaZM8AR8",
+                              "definitionId": "editorialCard",
+                              "patternProperties": {},
+                              "variables": {
+                                "layoutOpt": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": "vertical_with_icon"
+                                  }
+                                },
+                                "heading": {
+                                  "key": "Ah8TeN7u",
+                                  "type": "UnboundValue"
+                                },
+                                "text": {
+                                  "path": "/G80Abgv5/fields/shortDescription/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "image": {
+                                  "path": "/U67Bt9so/fields/image/~locale/fields/file/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "iconName": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": "circle-3"
+                                  }
+                                },
+                                "linkEntry": {
+                                  "path": "/lB5qBMen/fields/primaryLinkRef/~locale",
+                                  "type": "BoundValue"
+                                },
+                                "cfVisibility": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": true
+                                  }
+                                }
+                              },
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -10241,9 +12251,23 @@
       },
       "dataSource": {
         "en-US": {
+          "3UNaYMj": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "JZkN7NP": {
             "sys": {
               "id": "29RmoSX0ra5slBXtk5KXzM",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "JqZWSk7": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -10255,9 +12279,79 @@
               "linkType": "Asset"
             }
           },
+          "LRQ6mHr": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "OfnA27v": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "OlpMQbg": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "TN8XTWJ": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "Uzc6FQP": {
             "sys": {
               "id": "1JoMHQi1j1tApZYAZeMXzD",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "VExqHM0": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "WPQHtk0": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "_BG8Ipz": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "b5Lvt-f": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "gJB25Ug": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "yNxDeG0": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -10304,6 +12398,13 @@
               "linkType": "Asset"
             }
           },
+          "2YBqvudj": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "3xRBhtEN": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -10339,9 +12440,23 @@
               "linkType": "Entry"
             }
           },
+          "9RLki6fQ": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "9VSvsbCf": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "Ajxuc3HO": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -10388,9 +12503,23 @@
               "linkType": "Entry"
             }
           },
+          "G80Abgv5": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "Gac8HyiL": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "GgZrqP95": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -10412,6 +12541,13 @@
           "MKnXMzs0": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "MQ496Bsp": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -10465,6 +12601,20 @@
               "linkType": "Entry"
             }
           },
+          "RCcFcxXH": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "RDnMnl65": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "S9wdCChd": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -10482,6 +12632,13 @@
           "TDy6kSns": {
             "sys": {
               "id": "4SDvKKtx0qpCDwFTizoPVx",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "U67Bt9so": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -10535,6 +12692,13 @@
               "linkType": "Entry"
             }
           },
+          "ZsffSorr": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "baGfsFOR": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -10545,6 +12709,13 @@
           "btGygYlg": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "cNokTlRK": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -10570,6 +12741,13 @@
               "linkType": "Entry"
             }
           },
+          "eofemS00": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "f5guroL4": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -10587,6 +12765,13 @@
           "hbWAEPUa": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "hdNvVeZz": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -10619,9 +12804,30 @@
               "linkType": "Entry"
             }
           },
+          "lB5qBMen": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "lZoDcpjz": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "lnB5pwJz": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "mcCci1w9": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -10682,6 +12888,13 @@
               "linkType": "Entry"
             }
           },
+          "sbrUIE0x": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "tgGNSw4W": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -10724,6 +12937,13 @@
               "linkType": "Entry"
             }
           },
+          "wxwxp5qd": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "x7pyjFFj": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -10756,10 +12976,17 @@
       },
       "unboundValues": {
         "en-US": {
+          "0zIBmw_": {
+            "value": ""
+          },
+          "347Oltn": {},
           "6znvK3h": {},
+          "ABf-FSO": {},
+          "EKQDsC5": {},
           "Fe4Bfar": {
             "value": ""
           },
+          "HmUDGQ4": {},
           "ICrX3vs": {
             "value": ""
           },
@@ -10773,6 +13000,17 @@
           "KU5oIGN": {
             "value": ""
           },
+          "LbAW-Uv": {
+            "value": false
+          },
+          "SO13Vmq": {
+            "value": "Editorial Card 1"
+          },
+          "XonT3vx": {
+            "value": "Horizontal With Image"
+          },
+          "aXCTjNk": {},
+          "acae6EU": {},
           "bAIeQt5": {
             "value": false
           },
@@ -10783,10 +13021,24 @@
             "value": "Link"
           },
           "fupk4k7": {},
+          "io65oYg": {},
+          "mqPCQ9z": {
+            "value": "Editorial Card 2"
+          },
+          "nXf_AKG": {
+            "value": "Editorial Card"
+          },
+          "vwAdtQr": {
+            "value": "Editorial Card 4"
+          },
+          "xWwE9or": {
+            "value": "Editorial Card 3"
+          },
           "xbPE1--": {},
           "0BYMXHkY": {
             "value": "Full Width Action Block"
           },
+          "0ZmNLA6K": {},
           "18Loxedj": {
             "value": false
           },
@@ -10796,6 +13048,9 @@
           },
           "36YfTgYM": {
             "value": ""
+          },
+          "3BL7DZFT": {
+            "value": "Editorial Card 3"
           },
           "3kOq2u6E": {},
           "5OJDXQCx": {},
@@ -10835,8 +13090,14 @@
           "7WPQbEGK": {
             "value": ""
           },
+          "8GyXCkMG": {
+            "value": "Editorial Card 1"
+          },
           "8LDk6KB4": {
             "value": ""
+          },
+          "8o4htNCj": {
+            "value": "Vertical With Image"
           },
           "8opMv3ky": {
             "value": false
@@ -10850,9 +13111,13 @@
           "93BsbPz6": {
             "value": "Image Carousel"
           },
+          "9Xoxh3vz": {},
           "A43eNziB": {},
           "AKTPfVrs": {},
           "AYGGhSH9": {},
+          "Ah8TeN7u": {
+            "value": "Editorial Card 3"
+          },
           "Aw5CTnlT": {},
           "B1N7IJY8": {
             "value": "Right Aligned Button"
@@ -10913,6 +13178,9 @@
           "NspNpe6v": {
             "value": ""
           },
+          "OCSRD9uM": {
+            "value": "Editorial Card 2"
+          },
           "Oor1uCW9": {},
           "Ov2KaMlI": {
             "value": ""
@@ -10959,11 +13227,15 @@
           "W6IG1y86": {
             "value": "Action Block Carousel"
           },
+          "WTQ4Ru9V": {
+            "value": "Editorial Card 1"
+          },
           "WasTGlxj": {
             "value": "Centered Button"
           },
           "WelvRTbQ": {},
           "Wn9tbkAL": {},
+          "WzScpfoh": {},
           "X4E1tjHt": {
             "value": ""
           },
@@ -10973,6 +13245,9 @@
           },
           "YZg578lR": {
             "value": false
+          },
+          "Yf7O7sCY": {
+            "value": "Vertical With Icon"
           },
           "ZJnqNzR6": {
             "value": "Image"
@@ -11030,9 +13305,11 @@
           "i28p2boi": {
             "value": "Video Carousel"
           },
+          "joAfMQhO": {},
           "k7cc4DWU": {
             "value": "Heading 3"
           },
+          "kQ4rHG8h": {},
           "l2UKloU9": {
             "value": "Center Aligned: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
           },
@@ -11087,6 +13364,8 @@
           "sAMYhNiz": {
             "value": "Curriculum Carousel"
           },
+          "sOrYv4IZ": {},
+          "sgcocoTx": {},
           "tgfqSQxT": {
             "value": "Overline Primary Large"
           },
@@ -11106,9 +13385,13 @@
           "vNAYFsDQ": {
             "value": "nKIu9yen5nc"
           },
+          "vTYAEM28": {
+            "value": "Editorial Card 2"
+          },
           "vl7mGMNk": {
             "value": false
           },
+          "wkPxn3cF": {},
           "xaSe4Rjf": {
             "value": ""
           },

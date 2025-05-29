@@ -323,7 +323,8 @@ class UnconnectedMusicView extends React.Component {
             toolboxAllowList,
             this.props.isRtl,
             this.props.blockMode,
-            localizedToolboxDefinition
+            localizedToolboxDefinition,
+            this.props.levelProperties?.enableBlocklyKeyboardNavigation
           );
     }
 
@@ -641,6 +642,16 @@ class UnconnectedMusicView extends React.Component {
       canRedo: this.musicBlocklyWorkspace.canRedo(),
     });
 
+    if (e.type === Blockly.Events.SELECTED) {
+      if (
+        !this.props.isPlaying &&
+        e.newElementId !== this.props.selectedBlockId
+      ) {
+        this.props.selectBlockId(e.newElementId);
+      }
+      return;
+    }
+
     const codeChanged = this.compileSong();
     if (codeChanged) {
       this.executeCompiledSong().then(playbackEvents => {
@@ -653,15 +664,6 @@ class UnconnectedMusicView extends React.Component {
       this.analyticsReporter.onBlocksUpdated(
         this.musicBlocklyWorkspace.getAllBlocks()
       );
-    }
-
-    if (e.type === Blockly.Events.SELECTED) {
-      if (
-        !this.props.isPlaying &&
-        e.newElementId !== this.props.selectedBlockId
-      ) {
-        this.props.selectBlockId(e.newElementId);
-      }
     }
 
     // This may no-op due to throttling.

@@ -1,5 +1,6 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2025-03-13T00:40:19.000Z",
   "level_num": "custom",
@@ -12,23 +13,25 @@
     "csa_view_mode": "console",
     "start_sources": {
       "TeacherRunner.java": {
-        "text": "public class TeacherRunner {\n  public static void main(String[] args) {\n\n    int[][] augustGrades = { {85, 90, 78},\n                             {92, 87, 80},\n                             {76, 89, 97} };\n\n    Teacher msHamilton = new Teacher(augustGrades);\n\n    int currentStudent = msHamilton.getGrade(1, 1);\n    System.out.println(currentStudent);\n\n    msHamilton.setGrade(1, 1, 100);\n\n    currentStudent = msHamilton.getGrade(1, 1);\n    System.out.println(currentStudent);\n\n    System.out.println(\"\\nPrint First Row:\");\n    System.out.println(msHamilton.getStudentGrades());\n    \n  }\n}",
+        "text": "public class TeacherRunner {\n  public static void main(String[] args) {\n\n    int[][] augustGrades = { {85, 90, 78},\n                             {92, 87, 80},\n                             {76, 89, 97} };\n\n    Teacher msHamilton = new Teacher(augustGrades);\n\n    System.out.println(\"\\nPrint First Row:\");\n    System.out.println(msHamilton.getStudentGrades(0));\n\n    System.out.println(\"\\nPrint Second Row:\");\n    System.out.println(msHamilton.getStudentGrades(1));\n\n    System.out.println(\"\\nPrint Third Row:\");\n    System.out.println(msHamilton.getStudentGrades(2));\n  }\n}",
         "isVisible": true,
         "tabOrder": 0
       },
       "Teacher.java": {
-        "text": "public class Teacher {\n\n  private int[][] weeklyGrades;\n\n  public Teacher(int[][] weeklyGrades) {\n    this.weeklyGrades = weeklyGrades;\n  }\n\n  public int[][] getWeeklyGrades() {\n    return weeklyGrades;\n  }\n\n  public void setWeeklyGrades(int[][] weeklyGrades) {\n    this.weeklyGrades = weeklyGrades;\n  }\n\n  public int getGrade(int row, int col) {\n    return weeklyGrades[row][col];\n  }\n\n  public void setGrade(int row, int col, int newValue) {\n    weeklyGrades[row][col] = newValue;\n  }\n\n  public String getStudentGrades() {\n    String result = \"\";\n    \n    for (int index = 0; index < weeklyGrades[0].length; index++) {\n      result += weeklyGrades[0][index] + \"\\n\";\n    }\n\n    return result;\n  }\n  \n}",
+        "text": "public class Teacher {\n\n  private int[][] weeklyGrades;\n\n  public Teacher(int[][] weeklyGrades) {\n    this.weeklyGrades = weeklyGrades;\n  }\n\n  public int[][] getWeeklyGrades() {\n    return weeklyGrades;\n  }\n\n  public void setWeeklyGrades(int[][] weeklyGrades) {\n    this.weeklyGrades = weeklyGrades;\n  }\n\n  public int getGrade(int row, int col) {\n    return weeklyGrades[row][col];\n  }\n\n  public void setGrade(int row, int col, int newValue) {\n    weeklyGrades[row][col] = newValue;\n  }\n\n  public String getStudentGrades(int week) {\n    String result = \"\";\n    \n    for (int index = 0; index < weeklyGrades[week].length; index++) {\n      result += weeklyGrades[week][index] + \"\\n\";\n    }\n\n    return result;\n  }\n  \n}",
         "isVisible": true,
         "tabOrder": 1
       }
     },
+    "name_suffix": "_oo2025",
+    "ai_tutor_available": "true",
+    "encrypted_examples": [
+
+    ],
     "contained_level_names": [
       "CSA U5L1-L1 Contained_pilot_oo2025"
-    ],
-    "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-13T00:40:19.216+00:00\",\"changed\":[\"cloned from \\\"CSA U5L1-L1_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L1-L1_pilot-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-13T00:40:19.216+00:00\",\"changed\":[\"cloned from \\\"CSA U5L1-L1_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L1-L1_pilot-2025\"},{\"changed_at\":\"2025-05-22 17:56:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-22 17:57:46 +0000\",\"changed\":[\"contained_level_names\",\"ai_tutor_available\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-22 17:58:02 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

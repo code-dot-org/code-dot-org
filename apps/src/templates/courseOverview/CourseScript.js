@@ -15,6 +15,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import color from '@cdo/apps/util/color';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import MultipleAssignButton from '../MultipleAssignButton';
@@ -26,6 +27,7 @@ class CourseScript extends Component {
     title: PropTypes.string,
     name: PropTypes.string,
     id: PropTypes.number.isRequired,
+    path: PropTypes.string.isRequired,
     courseId: PropTypes.number,
     courseOfferingId: PropTypes.number,
     courseVersionId: PropTypes.number,
@@ -80,6 +82,7 @@ class CourseScript extends Component {
       title,
       name,
       id,
+      path,
       description,
       viewAs,
       selectedSectionId,
@@ -116,6 +119,14 @@ class CourseScript extends Component {
       selectedSection.unitId === id;
     const isAssigned = assignedToStudent || assignedByTeacher;
 
+    let unitPath = `${path}${location.search}`;
+    if (location.pathname.includes('/teacher_dashboard')) {
+      if (experiments.isEnabled(experiments.MODULARITY)) {
+        unitPath = `/teacher_dashboard/sections/${selectedSectionId}${path}`;
+      } else {
+        unitPath = `/teacher_dashboard/sections/${selectedSectionId}/unit/${name}`;
+      }
+    }
     return (
       <div
         style={{
@@ -134,11 +145,7 @@ class CourseScript extends Component {
             <Button
               __useDeprecatedTag
               text={i18n.goToUnit()}
-              href={
-                location.pathname.includes('teacher_dashboard')
-                  ? `/teacher_dashboard/sections/${selectedSectionId}/unit/${name}`
-                  : `/s/${name}${location.search}`
-              }
+              href={unitPath}
               color={Button.ButtonColor.gray}
               className="uitest-go-to-unit-button"
             />
@@ -157,8 +164,8 @@ class CourseScript extends Component {
                     scriptId={id}
                     assignmentName={title}
                     reassignConfirm={this.onReassignConfirm}
-                    isAssigningCourse={false}
-                    isStandAloneUnit={false}
+                    isAssigningCourseOnly={false}
+                    isAssigningUnitOnly={false}
                     participantAudience={participantAudience}
                   />
                 </div>

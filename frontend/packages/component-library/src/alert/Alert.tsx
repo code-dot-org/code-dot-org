@@ -110,8 +110,15 @@ const Alert: React.FunctionComponent<AlertProps> = ({
     >
       <div className={moduleStyles.alertContentContainer}>
         {showIcon && iconToRender && <FontAwesomeV6Icon {...iconToRender} />}
-        <span className={moduleStyles.alertText}>{text}</span>
-        {link && <Link {...link} size={size} />}
+        <span className={moduleStyles.alertText}>
+          {text}
+          {link && (
+            <>
+              &nbsp;&nbsp;
+              <Link {...link} size={size} />
+            </>
+          )}
+        </span>
       </div>
       {onClose && (
         <CloseButton

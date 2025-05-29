@@ -361,6 +361,7 @@ end
 When(/^I change the field "([^"]*)" dropdown to "(\d*)"$/) do |field, val|
   @browser.execute_script("Blockly.selected.getField('#{field}').setValue('#{val}')")
   # Refresh the dropdown
+  @browser.execute_script("Blockly.getMainWorkspace().hideChaff()")
   @browser.execute_script("Blockly.selected.getField('#{field}').showEditor()")
 end
 

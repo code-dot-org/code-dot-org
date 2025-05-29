@@ -168,7 +168,7 @@ And(/^I attempt to join the section$/) do
 end
 
 And /^I click the "([^"]*)" checkbox in the dialog$/ do |section_name|
-  @browser.execute_script("return $(\"span:contains(#{section_name})\").siblings()[0].click();")
+  @browser.execute_script("$(\"span:contains(#{section_name})\").click();")
 end
 
 And /^I see that "([^"]*)" is assigned to "([^"]*)" in the section table$/ do |section_name, course_name|
@@ -321,17 +321,17 @@ Then /^I navigate to manage students for the section I saved$/ do
   }
 end
 
-Then /^I navigate to the script "([^"]*)" lesson (\d+) lesson extras page for the section I saved$/ do |script_name, lesson_num|
+Then /^I navigate to the course "([^"]*)" unit (\d+) lesson (\d+) lesson extras page for the section I saved$/ do |course_name, unit_position, lesson_num|
   expect(@section_id).to be > 0
   steps %{
-    Then I am on "http://studio.code.org/s/#{script_name}/lessons/#{lesson_num}/extras?section_id=#{@section_id}"
+    Then I am on "http://studio.code.org/courses/#{course_name}/units/#{unit_position}/lessons/#{lesson_num}/extras?section_id=#{@section_id}"
   }
 end
 
-Then /^I navigate to the script "([^"]*)" lesson (\d+) level (\d+) for the section I saved$/ do |script_name, lesson_num, level_num|
+Then /^I navigate to the course "([^"]*)" unit (\d+) lesson (\d+) level (\d+) for the section I saved$/ do |course_name, unit_position, lesson_num, level_num|
   expect(@section_id).to be > 0
   steps %{
-    Then I am on "http://studio.code.org/s/#{script_name}/lessons/#{lesson_num}/levels/#{level_num}?section_id=#{@section_id}&noautoplay=true"
+    Then I am on "http://studio.code.org/courses/#{course_name}/units/#{unit_position}/lessons/#{lesson_num}/levels/#{level_num}?section_id=#{@section_id}&noautoplay=true"
   }
 end
 

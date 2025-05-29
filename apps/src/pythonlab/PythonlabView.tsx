@@ -9,6 +9,7 @@ import React, {useContext, useEffect, useMemo, useState} from 'react';
 
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {TestResults} from '@cdo/apps/constants';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
@@ -32,7 +33,9 @@ import {
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import CodebridgeRegistry from '../codebridge/CodebridgeRegistry';
+import {useAiTutor2} from '../lab2/views/components/aiTutor2/useAiTutor2';
 
+import getAiTutor2FullPromptFromData from './aiTutorHelper';
 import ProjectTypePicker from './components/ProjectTypePicker';
 import {
   DEFAULT_PROJECT,
@@ -92,6 +95,7 @@ const PythonlabView: React.FunctionComponent<
   const lastSavedLabConfig = useAppSelector(
     state => state.lab2Project.lastSavedLabConfig
   );
+
   const dispatch = useAppDispatch();
 
   const currentProjectType = useMemo(() => {
@@ -171,6 +175,20 @@ const PythonlabView: React.FunctionComponent<
     dispatch(setWidgetViewShowCode(false));
   });
 
+  const getAiTutor2FullPrompt = (question: string) => {
+    return getAiTutor2FullPromptFromData(
+      question,
+      source,
+      validationFile,
+      levelProperties.longInstructions
+    );
+  };
+
+  const [askAiTutor2, AiTutor2Response] = useAiTutor2(
+    getAiTutor2FullPrompt,
+    'hint'
+  );
+
   const onRun = async (
     runTests: boolean,
     dispatch: AppDispatch,
@@ -204,6 +222,14 @@ const PythonlabView: React.FunctionComponent<
       );
     }
     dispatch(submitPredictResponse({appType: 'pythonlab'}));
+
+    if (
+      levelProperties.aiTutor2Available ||
+      queryParams('show-ai-tutor2') === 'true'
+    ) {
+      // Ask a question to AITutor2.
+      askAiTutor2("What's wrong with my code, if anything?");
+    }
   };
 
   return (
@@ -222,6 +248,8 @@ const PythonlabView: React.FunctionComponent<
           sendConsoleInput={sendInput}
           levelProperties={levelProperties}
           projectPickerSettings={projectPickerSettings}
+          getAiTutor2FullPrompt={getAiTutor2FullPrompt}
+          AiTutor2ResponseView={AiTutor2Response}
         />
       )}
       {showProjectPickerModal && (
