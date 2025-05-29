@@ -337,6 +337,7 @@ steps:
       mount:
         - /home/ci/.rbenv
         - /var/lib/mysql
+        - ./apps/build
 
 volumes:
   - name: rbenv
@@ -352,6 +353,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: 2592ca7a9dbb42b21906f80b94efbe86eb4cf378cd73706d4b3527b082e95dfc
+hmac: 6646bfda5cd973eb102725e17d3dade6b986b372da0ebb87c687d40e29655dfc
 
 ...

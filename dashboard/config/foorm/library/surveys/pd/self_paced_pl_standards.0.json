@@ -196,7 +196,7 @@
             },
             {
               "type": "text",
-              "name": "computer_vision_email_focus_group",
+              "name": "self_paced_pl_email_focus_group",
               "title": "Great! Please share an email address where we may contact you.",
               "visibleIf": "{participate_focus_group}='yes'"
             }

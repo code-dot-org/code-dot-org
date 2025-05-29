@@ -42,6 +42,6 @@
 
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-19T14:31:42.057+00:00\",\"changed\":[\"cloned from \\\"CSA U2L1-L2-2_pilot_oo2025\\\"\"],\"cloned_from\":\"CSA U2L1-L2-2_pilot_oo2025\"},{\"changed_at\":\"2025-05-23 15:49:13 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-19T14:31:42.057+00:00\",\"changed\":[\"cloned from \\\"CSA U2L1-L2-2_pilot_oo2025\\\"\"],\"cloned_from\":\"CSA U2L1-L2-2_pilot_oo2025\"},{\"changed_at\":\"2025-05-23 15:49:13 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-05-27 16:30:17 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Javalab>

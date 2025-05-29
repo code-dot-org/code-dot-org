@@ -912,7 +912,7 @@ GEM
     tilt (2.0.11)
     time (0.4.1)
       date
-    timecop (0.8.1)
+    timecop (0.9.10)
     timeout (0.3.2)
     timers (4.3.5)
     trailblazer-option (0.1.2)
@@ -1148,7 +1148,7 @@ DEPENDENCIES
   syslog
   thin
   thwait
-  timecop
+  timecop (>= 0.9.4)
   twilio-ruby (< 6.0)
   twitter_cldr (~> 6.12.1)
   uglifier (>= 1.3.0)
