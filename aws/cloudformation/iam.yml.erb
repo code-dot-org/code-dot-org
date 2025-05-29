@@ -933,6 +933,7 @@ roles.each do |name, config| %>
                   - s3:GetObject
                   - s3:GetObjectAcl
                   - s3:ListBucket
+                  - s3:ListBucketMultipartUploads
                 Resource:
                   - 'arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets/*'
                   - 'arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets'
