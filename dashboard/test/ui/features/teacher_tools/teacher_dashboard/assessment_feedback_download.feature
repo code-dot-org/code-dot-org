@@ -45,6 +45,7 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
     And I click selector "button:contains(Hour of Code)"
     And I press the first "input[name='Artist']" element
     And I press the first "#uitest-save-section-changes" element
+    And I wait until element "h1:contains(Progress)" is visible
 
     # Assessments tab
     And I wait until element "#ui-test-teacher-sidebar a:contains(Assessments)" is visible
