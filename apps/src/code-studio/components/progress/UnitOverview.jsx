@@ -150,6 +150,7 @@ class UnitOverview extends React.Component {
       completedLessonNumber,
       courseOfferingId,
       courseVersionId,
+      courseId,
       isProfessionalLearningCourse,
       publishedState,
       participantAudience,
@@ -201,6 +202,7 @@ class UnitOverview extends React.Component {
               viewAs={viewAs}
               showAssignButton={showAssignButton}
               courseOfferingId={courseOfferingId}
+              currentCourseId={courseId}
               scriptId={scriptId}
               participantAudience={participantAudience}
               scriptOverviewPdfUrl={scriptOverviewPdfUrl}

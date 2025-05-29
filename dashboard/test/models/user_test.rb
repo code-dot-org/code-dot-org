@@ -389,22 +389,10 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test "can build user with panda in name" do
-    user = build :user, name: panda_panda
-    assert user.valid?
-    assert user.errors[:name].empty?
-  end
-
   test "cannot build user with no type" do
     user = build :user, user_type: nil
     refute user.valid?
     assert user.errors[:user_type].length == 1
-  end
-
-  test "cannot build user with no name" do
-    user = build :user, name: nil
-    refute user.valid?
-    assert user.errors[:name].length == 1
   end
 
   test "cannot build user with invalid type" do
@@ -633,24 +621,6 @@ class UserTest < ActiveSupport::TestCase
     all_auth_options.each do |ao|
       assert_empty ao.email
     end
-  end
-
-  test "saving user strips display name and family name" do
-    user = create :student, name: '  test name  ', family_name: '  test fam name  '
-    user.save
-    user.reload
-    assert_equal user.name, 'test name'
-    assert_equal user.family_name, 'test fam name'
-
-    user.name = '  test name 2  '
-    user.save
-    user.reload
-    assert_equal user.name, 'test name 2'
-
-    user.family_name = '  test fam name 2  '
-    user.save
-    user.reload
-    assert_equal user.family_name, 'test fam name 2'
   end
 
   test "can create a user with age" do
@@ -888,24 +858,6 @@ class UserTest < ActiveSupport::TestCase
     refute follower.student_user.reload.admin?
   end
 
-  test "short name" do
-    assert_equal 'Laurel', build(:user, name: 'Laurel Fan').short_name # first name last name
-    assert_equal 'Winnie', build(:user, name: 'Winnie the Pooh').short_name # middle name
-    assert_equal "D'Andre", build(:user, name: "D'Andre Means").short_name # punctuation ok
-    assert_equal '樊瑞', build(:user, name: '樊瑞').short_name # ok, this isn't actually right but ok for now
-    assert_equal 'Laurel', build(:user, name: 'Laurel').short_name # just one name
-    assert_equal 'some', build(:user, name: '  some whitespace in front  ').short_name # whitespace in front
-  end
-
-  test "initial" do
-    assert_equal 'L', build(:user, name: 'Laurel Fan').initial # first name last name
-    assert_equal 'W', build(:user, name: 'Winnie the Pooh').initial # middle name
-    assert_equal "D", build(:user, name: "D'Andre Means").initial # punctuation ok
-    assert_equal '樊', build(:user, name: '樊瑞').initial # ok, this isn't actually right but ok for now
-    assert_equal 'L', build(:user, name: 'Laurel').initial # just one name
-    assert_equal 'S', build(:user, name: '  some whitespace in front  ').initial # whitespace in front
-  end
-
   test "find_for_authentication with nonsense" do
     # login by username still works
     user = create :user
@@ -969,11 +921,6 @@ class UserTest < ActiveSupport::TestCase
     looked_up_user = User.find_for_authentication(hashed_email: User.hash_email(email))
 
     assert_equal migrated_student, looked_up_user
-  end
-
-  test "creating manual provider user without username generates username" do
-    user = User.create(@good_data.merge({provider: User::PROVIDER_MANUAL}))
-    assert_equal 'tester', user.username
   end
 
   def create_level_group(sub_level_name)
@@ -2670,13 +2617,6 @@ class UserTest < ActiveSupport::TestCase
     User.track_level_progress(**level_progress_params.merge(locale: current_locale))
     assert_equal current_locale, user_level.reload.locale
     assert_equal true, user_level.locale_supported
-  end
-
-  test 'can create user with same name as deleted user' do
-    create(:user, :deleted, name: 'Same Name')
-    assert_creates(User) do
-      create(:user, name: 'Same Name')
-    end
   end
 
   test 'student and teacher relationships' do
@@ -4642,28 +4582,6 @@ class UserTest < ActiveSupport::TestCase
     assert_equal(family_name, user.summarize[:family_name])
   end
 
-  test 'family name is not allowed on pl participants' do
-    user = create :user
-    family_name = 'TestFamilyName'
-
-    pl_section = create :section, :teacher_participants, user_id: @teacher.id
-    Follower.create!(section_id: pl_section.id, student_user_id: user.id)
-
-    assert(user.valid?)
-
-    user.family_name = family_name
-
-    refute(user.valid?)
-  end
-
-  test 'family name is not allowed on teachers' do
-    user = create :teacher
-    family_name = 'TestFamilyName'
-    user.family_name = family_name
-
-    refute(user.valid?)
-  end
-
   test 'school_info_school returns the school associated with the user' do
     school = create :school
     school_info = create :school_info, school: school
@@ -4877,26 +4795,6 @@ class UserTest < ActiveSupport::TestCase
 
     pl_units_started = user.pl_units_started
     assert_equal 100, pl_units_started[0][:percent_completed]
-  end
-
-  test "username characters are only validated when changed" do
-    student = create :student
-    # White spaces are not allowed in usernames
-    student.username = "big husky"
-    student.save!(validate: false)
-
-    # We only want to validate the username if it changes.
-    # An invalid username should not block other attributes of the user from
-    # changing.
-    # This is a temporary behavior while we investigate why users have invalid
-    # usernames.
-    student.update!(name: "#{student.name} Jr.")
-
-    # The username has changed to a new invalid value, so we expected validation
-    # to fail.
-    assert_raises(ActiveRecord::RecordInvalid) do
-      student.update!(username: "very big husky")
-    end
   end
 
   test "validate_us_state" do

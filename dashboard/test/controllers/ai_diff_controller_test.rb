@@ -4,9 +4,9 @@ class AiDiffControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup do
+    @unit_group = create(:unit_group, family_name: 'beepboop')
     @course_offering = create(:course_offering, display_name: 'Course Name')
-    @course_version = create(:course_version, :with_unit_group, course_offering: @course_offering)
-    @unit_group = @course_version.content_root
+    @course_version = create(:course_version, content_root: @unit_group, course_offering: @course_offering)
     @unit_in_course = create(:script, name: 'unit-in-teacher-instructed-course2')
     create(:unit_group_unit, script: @unit_in_course, unit_group: @unit_group, position: 1)
     @lesson_group = create(:lesson_group, script: @unit_in_course)
@@ -294,6 +294,75 @@ class AiDiffControllerTest < ActionController::TestCase
       assert_equal @session_id, json_response["session_id"]
       assert_equal @expected_response, json_response["chat_message_text"]
       assert_equal "assistant", json_response["role"]
+    end
+
+    test "returns bad_request when getting curriculum_courses if bad params for lesson context" do
+      sign_in @teacher
+
+      post :curriculum_courses, params: {
+        context: {
+          type: "lesson"
+        },
+      }
+
+      assert_response :bad_request
+    end
+
+    test "returns bad_request when getting curriculum_courses if no context type is provided" do
+      sign_in @teacher
+
+      post :curriculum_courses, params: {
+        context: {
+          lessonId: @lesson.id
+        },
+      }
+
+      assert_response :bad_request
+    end
+
+    test "returns forbidden when getting curriculum_courses if ai_diff experiment isn't enabled" do
+      sign_in @teacher_sans_experiment
+
+      post :curriculum_courses, params: {
+        context: {
+          type: "lesson",
+          lessonId: @lesson.id
+        },
+      }
+
+      assert_response :forbidden
+    end
+
+    test "does not get curriculum_courses if not a teacher" do
+      student = create :student
+      create :follower, student_user: student, user: @teacher
+
+      sign_in student
+
+      post :curriculum_courses, params: {
+        context: {
+          type: "lesson",
+          lessonId: @lesson.id
+        },
+      }
+
+      assert_response :forbidden
+    end
+
+    test "returns success for curriculum_courses" do
+      sign_in @teacher
+
+      post :curriculum_courses, params: {
+        context: {
+          type: "lesson",
+          lessonId: @lesson.id
+        },
+      }
+
+      json_response = JSON.parse(response.body)
+      assert_response :success
+      assert_equal 2, json_response["courses"].count
+      assert_includes(json_response["courses"], "beepboop")
     end
   end
 

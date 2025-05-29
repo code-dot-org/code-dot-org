@@ -64,9 +64,11 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
           editorConfigExtensions={editorConfigExtensions}
         />
       ) : (
-        <BodyOneText className={moduleStyles.noOpenFilesMessage}>
-          {codebridgeI18n.noOpenFiles()}
-        </BodyOneText>
+        <div className={moduleStyles.noOpenFilesContainer}>
+          <BodyOneText className={moduleStyles.noOpenFilesMessage}>
+            {codebridgeI18n.noOpenFiles()}
+          </BodyOneText>
+        </div>
       )}
     </div>
   );

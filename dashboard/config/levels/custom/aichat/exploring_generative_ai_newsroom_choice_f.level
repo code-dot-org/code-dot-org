@@ -43,8 +43,8 @@
         "gpt-4o-mini"
       ]
     },
-    "thumbnail_url": "https://images.code.org/d24da7505dbe3b97498ca0fa225dde6a-quiz.png"
+    "thumbnail_url": "https://images.code.org/ffd347896e0b1deccb9f7d299056298b-checklist (1).png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-25T20:28:34.080+00:00\",\"changed\":[\"cloned from \\\"exploring_generative_ai_newsroom_choice_e\\\"\"],\"cloned_from\":\"exploring_generative_ai_newsroom_choice_e\"},{\"changed_at\":\"2025-04-25 20:29:48 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-25 22:09:55 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-25T20:28:34.080+00:00\",\"changed\":[\"cloned from \\\"exploring_generative_ai_newsroom_choice_e\\\"\"],\"cloned_from\":\"exploring_generative_ai_newsroom_choice_e\"},{\"changed_at\":\"2025-04-25 20:29:48 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-25 22:09:55 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-05-28 19:49:48 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Aichat>

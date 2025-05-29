@@ -1,3 +1,4 @@
+import Alert from '@code-dot-org/component-library/alert';
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -81,7 +82,14 @@ class ConnectionInstructions extends React.Component {
       : this.renderWebSerialConnectButton();
 
     if (!shouldUseWebSerial()) {
-      return null;
+      return (
+        <div>
+          <Alert
+            text={applabI18n.makerSetupNotSupportedByBrowser()}
+            type={'info'}
+          />
+        </div>
+      );
     }
 
     return (

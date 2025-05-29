@@ -493,7 +493,7 @@ class Section < ApplicationRecord
         course_version_name = unit_group.name
         if script_id
           title_of_current_unit = script.title_for_display
-          link_to_current_unit = if Policies::Courses.modularity_enabled?
+          link_to_current_unit = if Policies::Courses.modularity_enabled? && unit_group_unit
                                    course_unit_path(unit_group, unit_group_unit.position)
                                  else
                                    script_path(script)

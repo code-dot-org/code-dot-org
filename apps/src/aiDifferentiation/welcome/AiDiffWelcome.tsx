@@ -39,6 +39,11 @@ import {
   PROFESSIONAL_LEARNING_PROMPT,
   CREATE_SECTION_PROMPT,
   ADDITIONAL_HELP_PROMPT,
+  APCSP_EXAM_PREPARATION_RESOURCES,
+  APCSP_EXAM_SAMPLE_QUESTIONS,
+  APCSP_EXAM_TIME_STRATEGIES,
+  APCSP_CREATE_PT_AI,
+  APCSP_CREATE_PT_PREPARATION,
 } from '../AiDiffPredefinedPrompts';
 import {ChatPrompt, Context} from '../types';
 
@@ -62,6 +67,7 @@ interface AiDiffWelcomeProps {
   scriptName?: string;
   unitDisplayName?: string;
   firstState?: WelcomeState;
+  curriculumCourses?: string[];
 }
 
 const SUGGESTED_PROMPTS_FOR_SELECTION: {
@@ -95,6 +101,16 @@ const SUGGESTED_PROMPTS_FOR_SELECTION: {
       PROFESSIONAL_LEARNING_PROMPT,
       CREATE_SECTION_PROMPT,
       ADDITIONAL_HELP_PROMPT,
+    ],
+  },
+  apcsp: {
+    initialMessage: `Let's get started with AP prep! What would you like help with preparing for the AP exam? Below are some of the tasks I can help you with.`,
+    suggestedPrompts: [
+      APCSP_EXAM_PREPARATION_RESOURCES,
+      APCSP_EXAM_SAMPLE_QUESTIONS,
+      APCSP_EXAM_TIME_STRATEGIES,
+      APCSP_CREATE_PT_AI,
+      APCSP_CREATE_PT_PREPARATION,
     ],
   },
 };
@@ -186,6 +202,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   unitDisplayName,
   // This should only be used for testing purposes
   firstState = 'get_started',
+  curriculumCourses,
 }) => {
   const [currentWelcomeState, setCurrentWelcomeState] =
     React.useState<WelcomeState>(firstState);
@@ -194,7 +211,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     React.useState(true);
 
   const [selectedOption, setSelectedOption] = React.useState<
-    'plan' | 'create' | 'support' | null
+    'plan' | 'create' | 'support' | 'apcsp' | null
   >(null);
 
   const [confettiActive, setConfettiActive] = React.useState<boolean>(false);
@@ -306,12 +323,21 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
               'Create',
               'Differentiate assessment materials, generate lesson-aligned activities and practice problems'
             )}
+            {curriculumCourses &&
+              curriculumCourses.includes('csp') &&
+              optionButton(
+                selectedOption === 'apcsp',
+                () => setSelectedOption('apcsp'),
+                'laptop-code',
+                'AP Prep',
+                'Get help preparing for the AP CSP exam, learn about the Create PT, get sample questions and exam resources'
+              )}
           </div>
           {continueAndSkipButtons(WelcomeStates.practice, !selectedOption)}
         </div>
       </div>
     );
-  }, [continueAndSkipButtons, selectedOption, context]);
+  }, [continueAndSkipButtons, selectedOption, context, curriculumCourses]);
 
   React.useEffect(() => {
     if (currentWelcomeState === WelcomeStates.end_page) {

@@ -35,7 +35,7 @@ Feature: Using Modular Courses
     # Check that the unit breadcrumb works
     And I wait until element ".unit-overview-top-row" is visible
     And I wait until current URL contains "/courses/ui-test-course-2017/units/"
-    Then I click selector ".unit-breadcrumb a"
+    Then I click selector ".unit-breadcrumb a" to load a new page
 
     Then I wait until element "#course_overview" is visible
     And check that I am on "http://studio.code.org/courses/ui-test-course-2017"
@@ -69,11 +69,10 @@ Feature: Using Modular Courses
     # Check that the unit breadcrumb works
     And I wait until element ".unit-overview-top-row" is visible
     And I wait until current URL contains "/courses/ui-test-course-2019/units/"
-    Then I click selector ".unit-breadcrumb a"
+    Then I click selector ".unit-breadcrumb a" to load a new page
 
     Then I wait until element "#course_overview" is visible
     And check that I am on "http://studio.code.org/courses/ui-test-course-2019"
-
 
   @eyes
   Scenario: Progress is saved across modular courses

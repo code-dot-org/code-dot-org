@@ -8,7 +8,7 @@ markdown <<MARKDOWN
 #### There are many ways to write a system prompt, but including four key components **role, goal, tone, and restriction** can help yield better responses from the chatbot. You might recognize each of these components from the prompt on the previous level.
 
 <p align="center">
-<img src="https://images.code.org/29c99d9ec0c5c98502e79a8cbdb6e57f-Screenshot 2024-08-30 at 2.37.31 PM.png" alt="lesson plan diagram" width="90%" style="border-radius:10px; border: 5px solid black;">
+<img src="https://images.code.org/29c99d9ec0c5c98502e79a8cbdb6e57f-Screenshot 2024-08-30 at 2.37.31 PM.png" alt="system prompt from last level with role, goal, tone, and restriction" width="90%" style="border-radius:10px; border: 5px solid black;">
 </p>
 
 <br>

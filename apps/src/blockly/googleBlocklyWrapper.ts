@@ -3,6 +3,7 @@ import {
   ObservableParameterModel,
 } from '@blockly/block-shareable-procedures';
 import {installAllBlocks as installFieldColourBlocks} from '@blockly/field-colour';
+import {KeyboardNavigation} from '@blockly/keyboard-experiment';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
 import {
   ScrollBlockDragger,
@@ -22,6 +23,7 @@ import {MetricEvent} from '@cdo/apps/metrics/events';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 import styleConstants from '@cdo/apps/styleConstants';
+import experiments from '@cdo/apps/util/experiments';
 import * as utils from '@cdo/apps/utils';
 
 import {START_BLOCKS} from '../constants';
@@ -889,6 +891,31 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
     if (options.noFunctionBlockFrame) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;
+    }
+
+    if (
+      options.enableKeyboardNavigation ||
+      experiments.isEnabledAllowingQueryString(
+        experiments.BLOCKLY_KEYBOARD_NAVIGATION
+      )
+    ) {
+      Blockly.blockly_.ShortcutRegistry.registry.unregister('undo');
+      Blockly.blockly_.ShortcutRegistry.registry.unregister('redo');
+      if (blocklyWrapper.KeyboardNavigation) {
+        Blockly.blockly_.ShortcutRegistry.registry.unregister('undo');
+        Blockly.blockly_.ShortcutRegistry.registry.unregister('redo');
+        blocklyWrapper.KeyboardNavigation.dispose();
+      }
+      // Add the keyboard shortcuts div. This is here to ensure it happens
+      // prior to keyboard nav installation
+      const shortcutDialog = document.createElement('div');
+      shortcutDialog.id = 'shortcuts';
+      document.body.appendChild(shortcutDialog);
+
+      blocklyWrapper.KeyboardNavigation = new KeyboardNavigation(workspace);
+      // Rerun user theme after Keyboard Experiment bug introduces incorrect theme
+      const theme = cdoUtils.getUserTheme(options.theme as GoogleBlockly.Theme);
+      workspace.setTheme(theme);
     }
 
     // Typically, we need to handle disabling blocks that are not connected to an
