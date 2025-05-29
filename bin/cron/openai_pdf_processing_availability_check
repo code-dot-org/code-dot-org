@@ -50,26 +50,31 @@ def main
   raw_content = JSON.parse(response.body).dig('choices', 0, 'message', 'content')
   classification = JSON.parse(raw_content)['classification']
 
+  # In the case that OpenAI returns a response outside the enumerated YES or NO,
+  # we have an alarm set up in CloudWatch to alert if we get 0 successes in an hour.
+  # This would also start alarming if this health check started failing for another reason.
   if classification == 'YES'
-    return
+    put_metric('Success')
   elsif classification == 'NO'
-    Cdo::Metrics.push(
-      SharedConstants::AICHAT_METRICS_NAMESPACE,
-      [
-        {
-          metric_name: "openaiPdfProcessingAvailabilityFailure",
-          value: 1,
-          unit: 'Count',
-          timestamp: Time.now,
-          dimensions: [
-            {name: 'Environment', value: CDO.rack_env}
-          ],
-        }
-      ]
-    )
-  else
-    raise "Unexpected response from OpenAI during PDF processing availability check: #{classification}"
+    put_metric('Failure')
   end
+end
+
+def put_metric(event)
+  Cdo::Metrics.push(
+    SharedConstants::AICHAT_METRICS_NAMESPACE,
+    [
+      {
+        metric_name: "OpenaiPdfProcessingAvailabilityTest.#{event}",
+        value: 1,
+        unit: 'Count',
+        timestamp: Time.now,
+        dimensions: [
+          {name: 'Environment', value: CDO.rack_env}
+        ],
+      }
+    ]
+  )
 end
 
 main
