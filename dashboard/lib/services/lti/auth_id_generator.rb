@@ -1,3 +1,4 @@
+require 'cdo/honeybadger'
 require "clients/lti_logger"
 
 module Services
