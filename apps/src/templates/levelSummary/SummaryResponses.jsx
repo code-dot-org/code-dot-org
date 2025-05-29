@@ -141,10 +141,7 @@ const SummaryResponses = ({
     studentWork: response.text,
   }));
 
-  const AiEvaluationMVPUnits = ['csp4-2024', 'csp6-2024', 'allthethings'];
-  const aiAnalysisAvailable =
-    AiEvaluationMVPUnits.includes(scriptData.reportingData.unitName) ||
-    hasAiAnalysis;
+  const aiAnalysisAvailable = hasAiAnalysis;
 
   return (
     <div className={styles.summaryContainer} id="summary-container">
