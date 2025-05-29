@@ -84,11 +84,11 @@ steps:
     # TODO: switch to codedotorg/cdo-ci
     image: codedotorg/code-dot-org:ruby-3.1
     pull: always
-    volumes:
-      - name: rbenv
-        path: /home/ci/.rbenv
-      - name: mysql
-        path: /var/lib/mysql
+    # volumes:
+    #   - name: rbenv
+    #     path: /home/ci/.rbenv
+    #   - name: mysql
+    #     path: /var/lib/mysql
     environment:
       # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/unit_tests.sh
       CLOUDFRONT_KEY_PAIR_ID:
@@ -123,11 +123,11 @@ steps:
   #     mount:
   #       - /home/ci/.rbenv
 
-volumes:
-  - name: rbenv
-    temp: {}
-  - name: mysql
-    temp: {}
+# volumes:
+#   - name: rbenv
+#     temp: {}
+#   - name: mysql
+#     temp: {}
 
 trigger:
   branch:
@@ -227,11 +227,11 @@ steps:
     # TODO: switch to codedotorg/cdo-ci
     image: codedotorg/code-dot-org:ruby-3.1
     pull: always
-    volumes:
-      - name: rbenv
-        path: /home/ci/.rbenv
-      - name: mysql
-        path: /var/lib/mysql
+    # volumes:
+    #   - name: rbenv
+    #     path: /home/ci/.rbenv
+    #   - name: mysql
+    #     path: /var/lib/mysql
     environment:
       # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/ui_tests.sh
       CLOUDFRONT_KEY_PAIR_ID:
@@ -259,11 +259,11 @@ steps:
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
       - exit $EXIT_CODE
 
-volumes:
-  - name: rbenv
-    temp: {}
-  - name: mysql
-    temp: {}
+# volumes:
+#   - name: rbenv
+#     temp: {}
+#   - name: mysql
+#     temp: {}
 
 trigger:
   branch:
