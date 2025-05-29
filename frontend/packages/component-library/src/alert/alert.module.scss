@@ -13,7 +13,7 @@ $alert-span-vertical-top-spacing: 2px;
   .alertContentContainer {
     display: flex;
     flex: 1 0 0;
-    align-items: center;
+    align-items: baseline;
 
     i {
       text-align: center;

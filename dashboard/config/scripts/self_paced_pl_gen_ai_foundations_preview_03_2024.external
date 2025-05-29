@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Embeddings
 
-<img src="https://images.code.org/7c8ab6af5c54c7bc979a13c8830907c6-Screenshot 2025-05-27 at 4.26.50 PM.png" alt="character repersentations by Kim and Hawa  representations" width="350px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 20px 20px 20px">
+<img src="https://images.code.org/7c8ab6af5c54c7bc979a13c8830907c6-Screenshot 2025-05-27 at 4.26.50 PM.png" alt="table showing embedding numbers connecting various words (i.e. tiger, puppy, man, teacher) to other words/ideas (i.e. canine, human, plural)" width="350px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 20px 20px 20px">
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word; margin-right: 390px;">
   <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">

@@ -1,26 +1,30 @@
-# Marketing App Resources
-# This template is manually deployed to create/update the Marketing App's AWS resources.
-
 AWSTemplateFormatVersion: 2010-09-09
 
-Description: Marketing App AWS resources
+Description: Provision a marketing website (<%="https://#{options[:subdomain_name]}.#{options[:base_domain_name]}"%>) powered by our Next.js web application server and the Contentful cloud service.
 
 Parameters:
   CloudFrontTLSCertificateArn:
     Type: String
-    Description: The ARN of the TLS certificate for marketing app's cloudfront distribution. (e.g. the ARN of the ACM cert for 'test.marketing.code.org')
-  BaseHostedZoneId:
+    Description: The ARN of the TLS certificate for this marketing site's CloudFront Distribution.
+  HostedZoneId:
     Type: String
-    Description: The ID of the Route53 hosted zone for the marketing app. (e.g. the hosted zone id for 'marketingsites.code.org')
+    Description: AWS Route 53 Hosted Zone ID to provision this marketing site's domain name. (e.g. the Hosted Zone ID for 'marketing-sites.dev-code.org').
   BaseDomainName:
     Type: String
-    Description: The base domain name (e.g. 'marketing-sites.code.org' in 'hoc.marketing-sites.code.org').
+    Description: The base domain name of this marketing site (e.g. 'marketing-sites.test-code.org' in 'hourofcode.marketing-sites.test-code.org').
   SubdomainName:
     Type: String
-    Description: Subdomain name for marketing (e.g. 'hoc' in 'hoc.marketing-sites.code.org').
+    Description: Subdomain name for this marketing site (e.g. 'hourofcode' in 'hourofcode.marketing-sites.test-code.org').
+  EnvironmentType:
+    Type: String
+    Default: development
+    Description: Is this a 'development', 'test', or 'production' system?
   ContainerImageHashDigest:
     Type: String
-    Description: "The sha256sum of the marketing container image."
+    Description: The sha256sum of the marketing sites Next.js container image.
+  WebApplicationServerSecretsARN:
+    Type: String
+    Description: AWS Secret ARN that contains passwords and API Keys used by the Next.js web application server.
 
 Mappings:
   # Cloudfront Mappings
@@ -59,6 +63,14 @@ Mappings:
     us-west-2:
       PrefixList: pl-82a045eb
 
+  ImportedPoliciesMap:
+    development:
+      policy: IAM-MarketingSitesPermissionsBoundaryDevelopment
+    test:
+      policy: IAM-MarketingSitesPermissionsBoundaryTest
+    production:
+      policy: IAM-MarketingSitesPermissionsBoundaryProduction
+
 Resources:
   ###########################
   # Start AWS VPC Resources #
@@ -73,7 +85,7 @@ Resources:
       EnableDnsSupport: true
       InstanceTenancy: default
 
-<% Config::REGIONS[aws_region.to_sym][:vpc][:public_subnets].each_with_index do |subnet, index| %>
+<% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:public_subnets].each_with_index do |subnet, index| %>
   VpcPublicSubnet<%= index %>:
     Type: AWS::EC2::Subnet
     Properties:
@@ -151,7 +163,7 @@ Resources:
         Ref: VpcPrivateSubnet<%= index %>RouteTable
 <% end %>
 
-<% Config::REGIONS[aws_region.to_sym][:vpc][:private_subnets].each_with_index do |subnet, index| %>
+<% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:private_subnets].each_with_index do |subnet, index| %>
   VpcPrivateSubnet<%= index %>:
     Type: AWS::EC2::Subnet
     Properties:
@@ -189,7 +201,7 @@ Resources:
       DomainValidationOptions:
         - DomainName: !Sub "${SubdomainName}-loadbalancer.${BaseDomainName}"
           HostedZoneId:
-            Ref: BaseHostedZoneId
+            Ref: HostedZoneId
       ValidationMethod: DNS
 
   EcsCluster:
@@ -204,11 +216,9 @@ Resources:
           Value: "false"
       Scheme: internet-facing
       SecurityGroups:
-        - Fn::GetAtt:
-            - FargateServiceLBSecurityGroup
-            - GroupId
+        - !GetAtt FargateServiceLBSecurityGroup.GroupId
       Subnets:
-<% Config::REGIONS[aws_region.to_sym][:vpc][:private_subnets].each_with_index do |_, index| %>
+<% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:private_subnets].each_with_index do |_, index| %>
         - Ref: VpcPublicSubnet<%= index %>
 <% end %>
       Type: application
@@ -273,7 +283,7 @@ Resources:
             - FargateServiceLB
             - CanonicalHostedZoneID
       HostedZoneId:
-        Ref: BaseHostedZoneId
+        Ref: HostedZoneId
       Name: !Sub "${SubdomainName}-loadbalancer.${BaseDomainName}"
       Type: A
 
@@ -296,6 +306,7 @@ Resources:
   FargateServiceTaskDefTaskRole:
     Type: AWS::IAM::Role
     Properties:
+      RoleName: !Sub "marketing-sites-${EnvironmentType}-${SubdomainName}-task-role"
       AssumeRolePolicyDocument:
         Statement:
           - Action: sts:AssumeRole
@@ -303,6 +314,8 @@ Resources:
             Principal:
               Service: ecs-tasks.amazonaws.com
         Version: "2012-10-17"
+      PermissionsBoundary:
+        Fn::ImportValue: !FindInMap [ImportedPoliciesMap, !Ref 'EnvironmentType', policy]
 
   FargateServiceTaskDef:
     Type: AWS::ECS::TaskDefinition
@@ -350,26 +363,26 @@ Resources:
               ReadOnly: false
           Secrets:
             - Name: CONTENTFUL_DELIVERY_TOKEN
-              ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:CONTENTFUL_DELIVERY_TOKEN::'
+              ValueFrom: !Sub "${WebApplicationServerSecretsARN}:CONTENTFUL_DELIVERY_TOKEN::"
             - Name: CONTENTFUL_PREVIEW_TOKEN
-              ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:CONTENTFUL_PREVIEW_TOKEN::'
+              ValueFrom: !Sub "${WebApplicationServerSecretsARN}:CONTENTFUL_PREVIEW_TOKEN::"
             - Name: CONTENTFUL_REVALIDATE_TOKEN
-              ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:CONTENTFUL_REVALIDATE_TOKEN::'
+              ValueFrom: !Sub "${WebApplicationServerSecretsARN}:CONTENTFUL_REVALIDATE_TOKEN::"
             - Name: DRAFT_MODE_TOKEN
-              ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:DRAFT_MODE_TOKEN::'
+              ValueFrom: !Sub "${WebApplicationServerSecretsARN}:DRAFT_MODE_TOKEN::"
             - Name: STATSIG_CLIENT_KEY
-              ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:STATSIG_CLIENT_KEY::'
+              ValueFrom: !Sub "${WebApplicationServerSecretsARN}:STATSIG_CLIENT_KEY::"
             - Name: STATSIG_SERVER_KEY
-              ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:STATSIG_SERVER_KEY::'
+              ValueFrom: !Sub "${WebApplicationServerSecretsARN}:STATSIG_SERVER_KEY::"
             - Name: OTEL_EXPORTER_OTLP_HEADERS
-              ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:OTEL_EXPORTER_OTLP_HEADERS::'
+              ValueFrom: !Sub "${WebApplicationServerSecretsARN}:OTEL_EXPORTER_OTLP_HEADERS::"
           LogConfiguration:
             LogDriver: awslogs
             Options:
-              awslogs-group: !Sub "/ecs/${AWS::StackName}-FargateServiceTaskDef"
+              awslogs-group: !Sub "/aws/ecs/${AWS::StackName}"
               awslogs-create-group: true
               awslogs-region: !Ref 'AWS::Region'
-              awslogs-stream-prefix: marketing-ecs
+              awslogs-stream-prefix: next-js
       Cpu: "1024"
       Memory: "2048"
       ExecutionRoleArn:
@@ -393,10 +406,10 @@ Resources:
               AccessPointId: !Ref CacheAccessPoint
               IAM: ENABLED
             TransitEncryption: ENABLED
-
   FargateServiceTaskDefExecutionRole:
     Type: AWS::IAM::Role
     Properties:
+      RoleName: !Sub "marketing-sites-${EnvironmentType}-${SubdomainName}-task-exec-role"
       AssumeRolePolicyDocument:
         Statement:
           - Action: sts:AssumeRole
@@ -409,34 +422,25 @@ Resources:
         PolicyDocument:
           Version: "2012-10-17"
           Statement:
-          - Effect: Allow
-            Action:
-              - logs:CreateLogStream
-              - logs:PutLogEvents
-            Resource:
-              - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/ecs/${AWS::StackName}-FargateServiceTaskDef:log-stream:marketing-ecs/*"
-          - Effect: Allow
-            Action:
-              - logs:CreateLogGroup
-            Resource:
-              - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/ecs/${AWS::StackName}-FargateServiceTaskDef"
-              - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/ecs/${AWS::StackName}-FargateServiceTaskDef:log-stream:*"
-
-  FargateServiceTaskDefExecutionRoleDefaultPolicy:
-    Type: AWS::IAM::Policy
-    Properties:
-      PolicyDocument:
-        Statement:
           - Action:
               - secretsmanager:DescribeSecret
               - secretsmanager:GetSecretValue
             Effect: Allow
-            Resource: arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371
-        Version: "2012-10-17"
-      PolicyName: FargateServiceTaskDefExecutionRoleDefaultPolicy
-      Roles:
-        - Ref: FargateServiceTaskDefExecutionRole
-
+            Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:marketing-sites/${EnvironmentType}/*"
+          - Action:
+              - logs:CreateLogStream
+              - logs:PutLogEvents
+            Effect: Allow
+            Resource:
+              - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/ecs/${AWS::StackName}:log-stream:next-js/*"
+          - Action:
+              - logs:CreateLogGroup
+            Effect: Allow
+            Resource:
+              - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/ecs/${AWS::StackName}"
+              - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/ecs/${AWS::StackName}:log-stream:*"
+      PermissionsBoundary:
+        Fn::ImportValue: !FindInMap [ImportedPoliciesMap, !Ref 'EnvironmentType', policy]
   FargateService:
     Type: AWS::ECS::Service
     Properties:
@@ -446,6 +450,7 @@ Resources:
         MaximumPercent: 200
         MinimumHealthyPercent: 50
       EnableECSManagedTags: false
+      HealthCheckGracePeriodSeconds: 60
       LaunchType: FARGATE
       DesiredCount: 3
       AvailabilityZoneRebalancing: ENABLED
@@ -462,7 +467,7 @@ Resources:
                 - FargateServiceSecurityGroup
                 - GroupId
           Subnets:
-<% Config::REGIONS[aws_region.to_sym][:vpc][:private_subnets].each_with_index do |_, index| %>
+<% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:private_subnets].each_with_index do |_, index| %>
             - Ref: VpcPrivateSubnet<%= index %>
 <% end %>
       TaskDefinition:
@@ -512,6 +517,9 @@ Resources:
       RoleARN: !GetAtt ECSAutoScalingRole.Arn
       ScalableDimension: ecs:service:DesiredCount
       ServiceNamespace: ecs
+    DependsOn:
+      - ECSAutoScalingRole
+      - FargateService
 
   ECSServiceScalingPolicy:
     Type: AWS::ApplicationAutoScaling::ScalingPolicy
@@ -529,6 +537,7 @@ Resources:
   ECSAutoScalingRole:
     Type: AWS::IAM::Role
     Properties:
+      RoleName: !Sub "marketing-sites-${EnvironmentType}-${SubdomainName}-autoscaling-role"
       AssumeRolePolicyDocument:
         Version: '2012-10-17'
         Statement:
@@ -539,6 +548,25 @@ Resources:
       Path: /
       ManagedPolicyArns:
         - arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceAutoscaleRole
+      Policies:
+        - PolicyName: AdditionalECSPermissions
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - ecs:UpdateService
+                Resource: !Ref FargateService
+              - Effect: Allow
+                Action:
+                  - cloudwatch:DescribeAlarms
+                  - cloudwatch:GetMetricStatistics
+                  - cloudwatch:PutMetricAlarm
+                  - cloudwatch:DeleteAlarms
+                  - ecs:DescribeServices
+                Resource: '*'
+      PermissionsBoundary:
+        Fn::ImportValue: !FindInMap [ImportedPoliciesMap, !Ref 'EnvironmentType', policy]
 
   StaticAssetsBucket:
     Type: AWS::S3::Bucket
@@ -582,7 +610,7 @@ Resources:
         - Key: Name
           Value: Marketing-EFS-Cache
 
-<% Config::REGIONS[aws_region.to_sym][:vpc][:private_subnets].each_with_index do |_, index| %>
+<% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:private_subnets].each_with_index do |_, index| %>
   CacheMountTarget<%= index %>:
     Type: AWS::EFS::MountTarget
     Properties:
@@ -786,7 +814,7 @@ Resources:
         DNSName: !GetAtt CloudFrontDistribution.DomainName
         HostedZoneId: Z2FDTNDATAQYW2 # Cloudfront Hosted Zone ID, see: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-aliastarget.html
       HostedZoneId:
-        Ref: BaseHostedZoneId
+        Ref: HostedZoneId
       Name: !Sub "${SubdomainName}.${BaseDomainName}"
       Type: A
   ################################
