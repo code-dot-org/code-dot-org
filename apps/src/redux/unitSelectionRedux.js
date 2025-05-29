@@ -42,14 +42,33 @@ const getSelectedUnit = state => {
     return null;
   }
 
-  let unit;
-  state.unitSelection.coursesWithProgress.forEach(course => {
-    const tempUnit = course.units.find(unit => scriptId === unit.id);
-    if (tempUnit) {
-      unit = tempUnit;
-    }
-  });
-  return unit;
+  let selectedSection;
+  if (
+    state.teacherSections?.sections &&
+    state.teacherSections?.selectedSectionId
+  ) {
+    selectedSection =
+      state.teacherSections.sections[state.teacherSections.selectedSectionId];
+  }
+  const courseVersionId = selectedSection?.courseVersionId;
+
+  if (!!courseVersionId) {
+    const course = state.unitSelection.coursesWithProgress.find(
+      course => course.id === courseVersionId
+    );
+    return course?.units.find(unit => scriptId === unit.id);
+  } else {
+    // The selection section doesn't have a Course defined, so match the Unit
+    // only using the scriptId
+    let unit;
+    state.unitSelection.coursesWithProgress.forEach(course => {
+      const tempUnit = course.units.find(unit => scriptId === unit.id);
+      if (tempUnit) {
+        unit = tempUnit;
+      }
+    });
+    return unit;
+  }
 };
 
 export const getSelectedUnitName = state => {
@@ -68,6 +87,10 @@ export const getSelectedScriptDescription = state => {
 
 export const doesCurrentCourseUseFeedback = state => {
   return !!getSelectedUnit(state)?.is_feedback_enabled;
+};
+
+export const getSelectedUnitPosition = state => {
+  return getSelectedUnit(state) ? getSelectedUnit(state).position : null;
 };
 
 export const asyncLoadCoursesWithProgress = () => (dispatch, getState) => {

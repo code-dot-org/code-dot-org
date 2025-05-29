@@ -13,6 +13,7 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   asyncLoadCoursesWithProgress,
   getSelectedUnitName,
+  getSelectedUnitPosition,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
@@ -41,6 +42,7 @@ const UnitCalendar: React.FC = () => {
   const selectedSection = useAppSelector(selectedSectionSelector);
 
   const unitName = useSelector(state => getSelectedUnitName(state));
+  const unitPosition = useSelector(state => getSelectedUnitPosition(state));
 
   const hasCalendar = useAppSelector(state => state.calendar?.showCalendar);
 
@@ -84,14 +86,18 @@ const UnitCalendar: React.FC = () => {
       unitToLoad &&
       userType &&
       userId &&
+      (unitName !== null || unitPosition !== null) &&
       (hasCalendar === undefined ||
         calendarLessons === null ||
         (unitToLoad !== calendarUnitName && unitName !== null))
     ) {
       setIsLoading(true);
-      HttpClient.fetchJson<UnitSummaryResponse>(
-        `/dashboardapi/unit_summary/${unitToLoad}`
-      )
+      const courseVersionName = selectedSection.courseVersionName;
+      const fetchUnitSummaryPath =
+        courseVersionName && unitPosition !== null
+          ? `/dashboardapi/unit_summary/${courseVersionName}/${unitPosition}`
+          : `/dashboardapi/unit_summary/${unitName}`;
+      HttpClient.fetchJson<UnitSummaryResponse>(fetchUnitSummaryPath)
         .then(response => response?.value)
         .then(responseJson => {
           // Initialize Redux state with the new data
@@ -122,6 +128,8 @@ const UnitCalendar: React.FC = () => {
     dispatch,
     isLoading,
     selectedSection.courseOfferingId,
+    selectedSection.courseVersionName,
+    unitPosition,
     unitToLoad,
     calendarUnitName,
   ]);

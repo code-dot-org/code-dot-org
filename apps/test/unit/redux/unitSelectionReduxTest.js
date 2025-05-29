@@ -1,6 +1,7 @@
 import unitSelection, {
   setScriptId,
   getSelectedUnitName,
+  getSelectedUnitPosition,
   getSelectedScriptDescription,
   setCoursesWithProgress,
 } from '@cdo/apps/redux/unitSelectionRedux';
@@ -16,24 +17,46 @@ describe('unitSelectionRedux', () => {
   });
 
   describe('getSelectedUnitName', () => {
-    it('returns the script name of the selected script', () => {
-      const state = {
-        unitSelection: {
-          scriptId: 5,
-          coursesWithProgress: fakeCoursesWithProgress,
-        },
-      };
-      expect(getSelectedUnitName(state)).toEqual('csd1-2018');
+    describe('with no section selected', () => {
+      it('returns the script name of the selected script', () => {
+        const state = {
+          unitSelection: {
+            scriptId: 5,
+            coursesWithProgress: fakeCoursesWithProgress,
+          },
+        };
+        expect(getSelectedUnitName(state)).toEqual('csd1-2018');
+      });
+
+      it('returns null if no script is selected', () => {
+        const state = {
+          unitSelection: {
+            scriptId: null,
+            coursesWithProgress: fakeCoursesWithProgress,
+          },
+        };
+        expect(getSelectedUnitName(state)).toBeNull();
+      });
     });
 
-    it('returns null if no script is selected', () => {
-      const state = {
-        unitSelection: {
-          scriptId: null,
-          coursesWithProgress: fakeCoursesWithProgress,
-        },
-      };
-      expect(getSelectedUnitName(state)).toBeNull();
+    describe('with section selected', () => {
+      it('returns the script name of the selected script', () => {
+        const state = {
+          unitSelection: {
+            scriptId: 5,
+            coursesWithProgress: fakeCoursesWithProgress,
+          },
+          teacherSections: {
+            selectedSectionId: 99,
+            sections: {
+              99: {
+                courseVersionId: 2,
+              },
+            },
+          },
+        };
+        expect(getSelectedUnitName(state)).toEqual('csd1-2018');
+      });
     });
   });
 
@@ -58,6 +81,50 @@ describe('unitSelectionRedux', () => {
         },
       };
       expect(getSelectedScriptDescription(state)).toEqual(null);
+    });
+  });
+
+  describe('getSelectedUnitPosition', () => {
+    describe('with no section selected', () => {
+      it('returns the script name of the selected script', () => {
+        const state = {
+          unitSelection: {
+            scriptId: 5,
+            coursesWithProgress: fakeCoursesWithProgress,
+          },
+        };
+        expect(getSelectedUnitPosition(state)).toEqual(1);
+      });
+
+      it('returns null if no script is selected', () => {
+        const state = {
+          unitSelection: {
+            scriptId: null,
+            coursesWithProgress: fakeCoursesWithProgress,
+          },
+        };
+        expect(getSelectedUnitPosition(state)).toBeNull();
+      });
+    });
+
+    describe('with section selected', () => {
+      it('returns the script name of the selected script', () => {
+        const state = {
+          unitSelection: {
+            scriptId: 5,
+            coursesWithProgress: fakeCoursesWithProgress,
+          },
+          teacherSections: {
+            selectedSectionId: 99,
+            sections: {
+              99: {
+                courseVersionId: 2,
+              },
+            },
+          },
+        };
+        expect(getSelectedUnitPosition(state)).toEqual(1);
+      });
     });
   });
 
