@@ -6022,3 +6022,15 @@ en:
 
             #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Teaching Problem-Solving with AI unit. However, you can engage with the content in the order that best meets your needs.
           version_title: ''
+        ui-test-course-2017:
+          title: ui-test-course-2017
+          description_short: This is a short description.
+          description_student: This is a student description.
+          description_teacher: This is a teacher description.
+          version_title: ''
+        ui-test-course-2019:
+          title: ui-test-course-2019
+          description_short: This is a short description.
+          description_student: This is a student description.
+          description_teacher: This is a teacher description.
+          version_title: ''
