@@ -143,7 +143,7 @@ const SummaryResponses = ({
 
   const AiEvaluationMVPUnits = ['csp4-2024', 'csp6-2024', 'allthethings'];
   const aiAnalysisAvailable =
-    AiEvaluationMVPUnits.includes(scriptData.reportingData.unitName) &&
+    AiEvaluationMVPUnits.includes(scriptData.reportingData.unitName) ||
     hasAiAnalysis;
 
   return (
