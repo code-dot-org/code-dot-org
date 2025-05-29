@@ -495,7 +495,7 @@ class Projects
   # We also use placeholder thumbnail images in a couple of labs (dance, flappy),
   # so accepting those as valid as well
   private def valid_thumbnail_url?(thumbnail_url)
-    (thumbnail_url.start_with?('/v3/files/') && thumbnail_url.end_with?('.metadata/thumbnail.png')) ||
+    (thumbnail_url.start_with?('/v3/files/') && thumbnail_url.end_with?('metadata/thumbnail.png')) ||
       thumbnail_url.start_with?('/blockly/media')
   end
 end

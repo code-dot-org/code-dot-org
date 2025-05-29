@@ -465,11 +465,11 @@ class ProjectsController < ApplicationController
     end
 
     if [Game::ARTIST, Game::SPRITELAB, Game::POETRY].include? @game.app
-      @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/.metadata/thumbnail.png", 'https:'
+      @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/metadata/thumbnail.png", 'https:'
     end
 
     if params[:key] == 'dance'
-      @project_image = CDO.studio_url "v3/files/#{@view_options['channel']}/.metadata/thumbnail.png", 'https:'
+      @project_image = CDO.studio_url "v3/files/#{@view_options['channel']}/metadata/thumbnail.png", 'https:'
       replay_video_view_options unless sharing || readonly
     end
 
