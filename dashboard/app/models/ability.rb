@@ -279,6 +279,7 @@ class Ability
 
       if Experiment.enabled?(user: user, experiment_name: 'ai-differentiation') && user.teacher?
         can :chat_completion, :ai_diff
+        can :curriculum_courses, :ai_diff
         can :submit_feedback, AidiffMessage
       end
     end

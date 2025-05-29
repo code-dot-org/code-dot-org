@@ -34,7 +34,7 @@ class Level < ApplicationRecord
   belongs_to :game, optional: true
   has_and_belongs_to_many :concepts
   has_and_belongs_to_many :script_levels
-  has_and_belongs_to_many :skills, join_table: 'levels_skills'
+  has_many :skills, through: :levels_skills
   belongs_to :ideal_level_source, class_name: "LevelSource", optional: true # "see the solution" link uses this
   belongs_to :user, optional: true
   has_one :level_concept_difficulty, dependent: :destroy
@@ -100,6 +100,7 @@ class Level < ApplicationRecord
     use_secondary_finish_button
     skip_url
     stay_on_level_after_submit
+    skill_keys
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495

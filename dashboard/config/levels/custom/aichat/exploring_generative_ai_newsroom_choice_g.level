@@ -43,8 +43,8 @@
         "gpt-4o-mini"
       ]
     },
-    "thumbnail_url": "https://images.code.org/04808d54c95e63d1572fce2168d2bc4d-fake-news.png"
+    "thumbnail_url": "https://images.code.org/8c8b107acef5c682a221393544f4f6a7-fake-artical.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-25T21:20:24.564+00:00\",\"changed\":[\"cloned from \\\"exploring_generative_ai_newsroom_choice_f\\\"\"],\"cloned_from\":\"exploring_generative_ai_newsroom_choice_f\"},{\"changed_at\":\"2025-04-25 21:21:46 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-25 22:11:37 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-25T21:20:24.564+00:00\",\"changed\":[\"cloned from \\\"exploring_generative_ai_newsroom_choice_f\\\"\"],\"cloned_from\":\"exploring_generative_ai_newsroom_choice_f\"},{\"changed_at\":\"2025-04-25 21:21:46 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-25 22:11:37 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-05-28 19:52:58 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Aichat>

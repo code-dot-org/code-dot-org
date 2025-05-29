@@ -114,5 +114,7 @@
   "generate": "Generate",
   "imageAttributionHeading": "Music Lab photos",
   "imageAttributionBodyCreativeCommons": "{artist} [photo]({srcUrl}) by {author} is licensed under [{licenseName}]({licenseUrl}).",
-  "imageAttributionBodyCopyright": "{artist} photo &copy; {year} {author}.  All rights reserved."
+  "imageAttributionBodyCopyright": "{artist} photo &copy; {year} {author}.  All rights reserved.",
+  "tuneKeyNotes": "Key Notes",
+  "tuneAllNotes": "All Notes"
 }
