@@ -17,7 +17,7 @@ Feature: Using Modular Courses
     And I wait until element ".unit-breadcrumb" contains text "ui-test-course-2017"
 
      # Check that level references the course we came from
-    Then I click ".progress-bubble-link" to load a new page
+    Then I click ".progress-bubble" to load a new page
     And I wait until element "#level-body" is visible
     And I wait until current URL contains "/courses/ui-test-course-2017/units/"
 
@@ -51,7 +51,7 @@ Feature: Using Modular Courses
     And I wait until element ".unit-breadcrumb" contains text "ui-test-course-2019"
 
      # Check that level references the course we came from
-    Then I click ".progress-bubble-link" to load a new page
+    Then I click ".progress-bubble" to load a new page
     And I wait until element "#level-body" is visible
     And I wait until current URL contains "/courses/ui-test-course-2019/units/"
 
