@@ -15,6 +15,7 @@
   teacher_dashboard_data[:localeCode] = request.locale
   teacher_dashboard_data[:canViewStudentAIChatMessages] = @current_user.can_view_student_ai_chat_messages?
   teacher_dashboard_data[:providers] = @current_user.providers
+  teacher_dashboard_data[:existingSchoolInfo] = @existing_school_info
 
 = render partial: 'shared/emulate_print_media'
 

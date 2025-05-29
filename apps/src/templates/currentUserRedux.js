@@ -27,6 +27,7 @@ const SET_DATE_PROGRESS_TABLE_INVITATION_LAST_DELAYED =
 const SET_SEEN_PROGRESS_TABLE_INVITATION =
   'currentUser/SET_SEEN_PROGRESS_TABLE_INVITATION';
 const SET_USER_CREATED_AT = 'currentUser/SET_USER_CREATED_AT';
+const SET_USER_SCHOOL_INFO = 'currentUser/SET_USER_SCHOOL_INFO';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 
@@ -108,6 +109,10 @@ export const setUserCreatedAt = userCreatedAt => ({
   type: SET_USER_CREATED_AT,
   userCreatedAt,
 });
+export const setUserSchoolInfo = userSchoolInfo => ({
+  type: SET_USER_SCHOOL_INFO,
+  userSchoolInfo,
+});
 
 const initialState = {
   userId: null,
@@ -131,6 +136,7 @@ const initialState = {
   inSection: null,
   userCreatedAt: null,
   userSharingDisabled: false,
+  userSchoolInfo: {},
 };
 
 export default function currentUser(state = initialState, action) {
@@ -239,6 +245,12 @@ export default function currentUser(state = initialState, action) {
     return {
       ...state,
       userCreatedAt: action.userCreatedAt,
+    };
+  }
+  if (action.type === SET_USER_SCHOOL_INFO) {
+    return {
+      ...state,
+      userSchoolInfo: action.userSchoolInfo,
     };
   }
 
