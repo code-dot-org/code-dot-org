@@ -919,7 +919,13 @@ roles.each do |name, config| %>
                 Condition:
                   StringEquals:
                     'aws:ResourceTag/environment-type': <%=environment_type%>
-              # TODO: Add permission for GitHub Actions to upload files to the static assets bucket.
+              # GitHub Actions uploads Next.js assets (CSS, javascript, etc.) to the static assets bucket during each build.
+              - Sid: AllowS3StaticAssetsUpload
+                Effect: Allow
+                Action:
+                  - s3:PutObject
+                  - s3:PutObjectAcl
+                Resource: 'arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets/*'
 
   # Enforce least privilege on Roles created/passed/attached by the Role that provisions marketing site Stacks.
   MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>Policy:
