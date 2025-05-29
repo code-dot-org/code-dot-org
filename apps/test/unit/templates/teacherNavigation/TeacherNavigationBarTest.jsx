@@ -32,6 +32,12 @@ import i18n from '@cdo/locale';
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   put: jest.fn(() => Promise.resolve({})),
+  post: jest.fn(() =>
+    Promise.resolve({
+      ok: true,
+      json: () => Promise.resolve({}),
+    })
+  ),
 }));
 
 const LocationElement = () => {

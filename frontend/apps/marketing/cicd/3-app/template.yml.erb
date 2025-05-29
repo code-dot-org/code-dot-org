@@ -25,6 +25,9 @@ Parameters:
   WebApplicationServerSecretsARN:
     Type: String
     Description: AWS Secret ARN that contains passwords and API Keys used by the Next.js web application server.
+  RoleBoundary:
+    Type: String
+    Description: The IAM Policy that any Role created by this template must apply as a Permissions Boundary.
 
 Mappings:
   # Cloudfront Mappings
@@ -62,14 +65,6 @@ Mappings:
       PrefixList: pl-4ea04527
     us-west-2:
       PrefixList: pl-82a045eb
-
-  ImportedPoliciesMap:
-    development:
-      policy: IAM-MarketingSitesPermissionsBoundaryDevelopment
-    test:
-      policy: IAM-MarketingSitesPermissionsBoundaryTest
-    production:
-      policy: IAM-MarketingSitesPermissionsBoundaryProduction
 
 Resources:
   ###########################
@@ -314,8 +309,7 @@ Resources:
             Principal:
               Service: ecs-tasks.amazonaws.com
         Version: "2012-10-17"
-      PermissionsBoundary:
-        Fn::ImportValue: !FindInMap [ImportedPoliciesMap, !Ref 'EnvironmentType', policy]
+      PermissionsBoundary: !Ref RoleBoundary
 
   FargateServiceTaskDef:
     Type: AWS::ECS::TaskDefinition
@@ -439,8 +433,7 @@ Resources:
             Resource:
               - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/ecs/${AWS::StackName}"
               - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/ecs/${AWS::StackName}:log-stream:*"
-      PermissionsBoundary:
-        Fn::ImportValue: !FindInMap [ImportedPoliciesMap, !Ref 'EnvironmentType', policy]
+      PermissionsBoundary: !Ref RoleBoundary
   FargateService:
     Type: AWS::ECS::Service
     Properties:
@@ -565,8 +558,7 @@ Resources:
                   - cloudwatch:DeleteAlarms
                   - ecs:DescribeServices
                 Resource: '*'
-      PermissionsBoundary:
-        Fn::ImportValue: !FindInMap [ImportedPoliciesMap, !Ref 'EnvironmentType', policy]
+      PermissionsBoundary: !Ref RoleBoundary
 
   StaticAssetsBucket:
     Type: AWS::S3::Bucket
