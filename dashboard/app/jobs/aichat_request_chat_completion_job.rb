@@ -62,6 +62,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
       begin
         response = make_openai_request(request)
       rescue OpenaiUserInputResponseTimeout => exception
+        log_chat_completion_timeout(request)
         return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_TIMEOUT], exception.message]
       end
     else
@@ -154,6 +155,23 @@ class AichatRequestChatCompletionJob < ApplicationJob
           metric_name: "#{self.class.name}.ExecutionTime",
           value: execution_time,
           unit: 'Seconds',
+          timestamp: Time.now,
+          dimensions: [
+            {name: 'Environment', value: CDO.rack_env},
+            {name: 'ModelId', value: get_model_id(request)},
+          ],
+        }
+      ]
+    )
+  end
+
+  private def log_chat_completion_timeout(request)
+    Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE,
+      [
+        {
+          metric_name: "#{self.class.name}.Timeout",
+          value: 1,
+          unit: 'Count',
           timestamp: Time.now,
           dimensions: [
             {name: 'Environment', value: CDO.rack_env},
