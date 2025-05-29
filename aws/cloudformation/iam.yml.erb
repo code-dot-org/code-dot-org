@@ -973,14 +973,14 @@ roles.each do |name, config| %>
               - logs:PutLogEvents
             Effect: Allow
             Resource:
-              - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/ecs/*<%=environment_type%>*:log-stream:*/*"
+              - !Sub "arn:aws:logs:*:${AWS::AccountId}:log-group:/aws/ecs/*<%=environment_type%>*:log-stream:*/*"
           - Sid: AllowECSTaskExecutionCreateLogGroup
             Action:
               - logs:CreateLogGroup
             Effect: Allow
             Resource:
-              - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/ecs/*<%=environment_type%>*"
-              - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/ecs/*<%=environment_type%>*:log-stream:*"
+              - !Sub "arn:aws:logs:*:${AWS::AccountId}:log-group:/aws/ecs/*<%=environment_type%>*"
+              - !Sub "arn:aws:logs:*:${AWS::AccountId}:log-group:/aws/ecs/*<%=environment_type%>*:log-stream:*"
           
           # Add more statements here as we need the Roles provisioned within a marketing sites Stack to have more permissions.
 
@@ -1021,7 +1021,7 @@ roles.each do |name, config| %>
                 # marketing-sites-test-code-org
                 # marketing-sites-development-code-org-my-feature-branch
                 # marketing-sites-development-code-org-my-other-branch
-                Resource: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/marketing-sites-<%=environment_type%>-*"
+                Resource: !Sub "arn:aws:cloudformation:*:${AWS::AccountId}:stack/marketing-sites-<%=environment_type%>-*"
               # CREATE new roles & ATTACH/DETACH policies from those roles — but only if they use our permissions boundary policy.
               - Sid: AllowCreateRoleWithBoundary
                 Effect: Allow
@@ -1064,8 +1064,8 @@ roles.each do |name, config| %>
 #                  TODO: Get this extra restriction working.
 #                  ArnLike:
 #                    iam:AssociatedResourceARN:
-#                      - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:task-definition/*-<%#=environment_type%>-*:*"
-#                      - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:service/*-<%#=environment_type%>-*/*"
+#                      - !Sub "arn:aws:ecs:*:${AWS::AccountId}:task-definition/*-<%#=environment_type%>-*:*"
+#                      - !Sub "arn:aws:ecs:*:${AWS::AccountId}:service/*-<%#=environment_type%>-*/*"
 
               # VPC and networking resources
               - Effect: Allow
@@ -1125,9 +1125,9 @@ roles.each do |name, config| %>
                   - ecs:DeleteCluster
                   - ecs:DeleteService
                 Resource:
-                  - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:cluster/*"
-                  - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:task-definition/*<%=environment_type%>*:*"
-                  - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:service/*/*-<%=environment_type%>-*"
+                  - !Sub "arn:aws:ecs:*:${AWS::AccountId}:cluster/*"
+                  - !Sub "arn:aws:ecs:*:${AWS::AccountId}:task-definition/*<%=environment_type%>*:*"
+                  - !Sub "arn:aws:ecs:*:${AWS::AccountId}:service/*/*-<%=environment_type%>-*"
               - Effect: Allow
                 Action:
                   - ecs:DeregisterTaskDefinition
