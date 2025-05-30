@@ -9,9 +9,11 @@ import React, {Suspense, useEffect, useMemo} from 'react';
 import {getCurrentLesson} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {setIsLoadingTheme} from '@cdo/apps/lab2/lab2Redux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {Level} from '@cdo/apps/types/progressTypes';
+import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../lab2EntryPoints';
@@ -80,7 +82,14 @@ const LabViewsRenderer: React.FunctionComponent = () => {
 
       if (useThemeUserPreference && signInState === SignInState.SignedIn) {
         const fetchAndSetTheme = async () => {
-          const userTheme = await new UserPreferences().getGlobalTheme();
+          const userTheme = await new UserPreferences().getGlobalTheme(
+            (error: NetworkError) =>
+              Lab2Registry.getInstance()
+                .getMetricsReporter()
+                .logError('Error fetching theme', undefined, {
+                  message: error.response,
+                })
+          );
           if (userTheme && supportedThemes.includes(userTheme)) {
             setTheme(userTheme);
             dispatch(setIsLoadingTheme(false));
