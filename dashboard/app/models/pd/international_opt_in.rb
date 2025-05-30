@@ -13,45 +13,18 @@
 #  index_pd_international_opt_ins_on_user_id  (user_id)
 #
 require 'json'
+require 'cdo/honeybadger'
 
 class Pd::InternationalOptIn < ApplicationRecord
   include Pd::Form
-  include InternationalOptInPeople
-
-  COLOMBIAN_SCHOOL_DATA = JSON.parse(
-    File.read(
-      File.join(Rails.root, 'config', 'colombianSchoolData.json')
-    )
-  ).freeze
-
-  CHILEAN_SCHOOL_DATA = JSON.parse(
-    File.read(
-      File.join(Rails.root, 'config', 'chileanSchoolData.json')
-    )
-  ).freeze
-
-  UZBEKISTAN_SCHOOL_DATA = JSON.parse(
-    File.read(
-      File.join(Rails.root, 'config', 'uzbekistanSchoolData.json')
-    )
-  ).freeze
 
   belongs_to :user
 
-  validates_presence_of :form_data
+  validates :form_data, presence: true
 
-  def self.required_fields
-    [
-      :first_name,
-      :last_name,
-      :school_name,
-      :school_country,
-      :date,
-      :workshop_organizer,
-      :workshop_course,
-      :email_opt_in,
-      :legal_opt_in
-    ]
+  ## Instance Methods
+  def email
+    sanitized_form_data_hash[:email]
   end
 
   def validate_with(options)
@@ -60,8 +33,7 @@ class Pd::InternationalOptIn < ApplicationRecord
     # validation.
     normalized_options = options.map do |key, values|
       normalized_values = values.map do |value|
-        return value.fetch(:answerValue, nil) if value.is_a? Hash
-        value
+        value.is_a?(Hash) ? value.fetch(:answerValue, nil) : value
       end
       [key, normalized_values]
     end.to_h
@@ -77,39 +49,6 @@ class Pd::InternationalOptIn < ApplicationRecord
     rescue ArgumentError
       errors.add(:form_data, :invalid)
     end
-  end
-
-  def self.options
-    entry_keys = {
-      schoolCountry: %w(antigua_and_barbuda australia barbados belize botswana brazil cambodia canada chile colombia dominican_republic ecuador egypt india indonesia israel italy jamaica kenya kosovo malaysia maldives malta mexico mongolia new_zealand paraguay peru philippines portugal puerto_rico romania slovakia south_africa south_korea spain sri_lanka thailand trinidad_and_tobago uruguay uzbekistan vietnam),
-      workshopCourse: %w(csf_af csf_express csd csp csa other not_applicable),
-      emailOptIn: %w(opt_in_yes opt_in_no),
-      legalOptIn: %w(opt_in_yes opt_in_no)
-    }
-
-    # Convert all entry keys to objects which define the form value and display
-    # text (in this case, _translated_ display text) separately.
-    #
-    # See the definition of the "Answer" object in
-    # apps/src/code-studio/pd/form_components/utils.js
-    entries = entry_keys.map do |key, values|
-      [key, values.map do |value|
-        # Capitalize country values to be consistent with other country strings in our database
-        answer = key.to_s == 'schoolCountry' ? value.titleize : value
-        {
-          answerText: I18n.t("pd.form_entries.#{key.to_s.underscore}.#{value.underscore}"),
-          answerValue: answer
-        }
-      end]
-    end.to_h
-
-    entries[:workshopOrganizer] = INTERNATIONAL_OPT_IN_PARTNERS
-
-    entries[:colombianSchoolData] = COLOMBIAN_SCHOOL_DATA
-    entries[:chileanSchoolData] = CHILEAN_SCHOOL_DATA
-    entries[:uzbekistanSchoolData] = UZBEKISTAN_SCHOOL_DATA
-
-    super.merge(entries)
   end
 
   # @override
@@ -131,6 +70,44 @@ class Pd::InternationalOptIn < ApplicationRecord
         required << :school_city
       end
     end
+  end
+
+  def email_opt_in?
+    sanitized_form_data_hash[:email_opt_in].casecmp?("yes")
+  end
+
+  ## Class Methods
+  def self.options
+    entry_keys = {
+      schoolCountry: international_partners.keys.map(&:to_s).sort,
+      workshopCourse: %w(csf_af csf_express csd csp csa other not_applicable),
+      emailOptIn: %w(opt_in_yes opt_in_no),
+      legalOptIn: %w(opt_in_yes opt_in_no)
+    }
+
+    # Convert all entry keys to objects which define the form value and display
+    # text (in this case, _translated_ display text) separately.
+    #
+    # See the definition of the "Answer" object in
+    # apps/src/code-studio/pd/form_components/utils.js
+    entries = entry_keys.map do |key, values|
+      [key, values.map do |value|
+        # Capitalize country values to be consistent with other country strings in our database
+        answer = key.to_s == 'schoolCountry' ? value.titleize : value
+        {
+          answerText: I18n.t("pd.form_entries.#{key.to_s.underscore}.#{value.underscore}"),
+          answerValue: answer
+        }
+      end]
+    end.to_h
+
+    entries[:workshopOrganizer] = partner_entries
+
+    entries[:colombianSchoolData] = colombian_school_data
+    entries[:chileanSchoolData] = chilean_school_data
+    entries[:uzbekistanSchoolData] = uzbekistan_school_data
+
+    super.merge(entries)
   end
 
   def self.labels
@@ -165,11 +142,50 @@ class Pd::InternationalOptIn < ApplicationRecord
     keys.index_with {|v| I18n.t("pd.form_labels.#{v.underscore}")}
   end
 
-  def email_opt_in?
-    sanitized_form_data_hash[:email_opt_in].casecmp?("yes")
+  def self.required_fields
+    [
+      :first_name,
+      :last_name,
+      :school_name,
+      :school_country,
+      :date,
+      :workshop_organizer,
+      :workshop_course,
+      :email_opt_in,
+      :legal_opt_in
+    ]
   end
 
-  def email
-    sanitized_form_data_hash[:email]
+  def self.international_partners
+    @international_partners ||= load_json('international_partners_data.json')
   end
+
+  def self.partner_entries
+    international_partners.transform_values do |partner_list|
+      partner_list + [I18n.t('pd.international_opt_in.organizer_not_listed')]
+    end
+  end
+
+  def self.colombian_school_data
+    @colombian_school_data ||= load_json('colombian_school_data.json')
+  end
+
+  def self.chilean_school_data
+    @chilean_school_data ||= load_json('chilean_school_data.json')
+  end
+
+  def self.uzbekistan_school_data
+    @uzbekistan_school_data ||= load_json('uzbekistan_school_data.json')
+  end
+
+  def self.load_json(filename)
+    JSON.parse(File.read(Rails.root.join('config', 'international_opt_in', filename))).freeze
+  rescue Errno::ENOENT, JSON::ParserError => exception
+    Honeybadger.notify(
+      exception,
+      error_message: "Error loading JSON for #{filename}: #{exception.message}"
+    )
+  end
+
+  private_class_method :load_json
 end
