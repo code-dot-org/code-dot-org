@@ -7,6 +7,8 @@ const marketingDomain = '${InternalMarketingDomainName}'
 const marketingPaths = {
   // Add key-value pairs for each path that should be served by the CMS
   // e.g. '/videos': true,
+  "/en-US/engineering/all-the-things": true,
+  // P-0-1
   "/about/supporters/amazon": true,
   '/computer-science-advanced-placement-data': true,
   "/promote/ap": true,
@@ -157,6 +159,8 @@ const marketingPaths = {
   "/curriculum/csf": true,
   "/educate/spritelab": true,
   "/about/supporters": true,
+  "/tos": true,
+  "/privacy": true,
   "/en-US/student/middle-high": true,
   "/en-US/student/elementary": true,
   "/en-US/about/hear-from-us": true,
@@ -169,6 +173,8 @@ const marketingPaths = {
   "/en-US/curriculum/csf": true,
   "/en-US/educate/spritelab": true,
   "/en-US/about/supporters": true,
+  "/en-US/tos": true,
+  "/en-US/privacy": true,
   // May 30
   "/tools": true,
   "/tools/musiclab": true,
@@ -229,8 +235,6 @@ const marketingPaths = {
   "/donate/policy": true,
   "/educate/it": true,
   "/districts": true,
-  "/tos": true,
-  "/privacy": true,
   "/privacy/data-privacy-addendum-illinois": true,
   "/about/it-requirements": true,
   "/terms-of-service": true,
@@ -240,12 +244,12 @@ const marketingPaths = {
   "/privacy/data-privacy-addendum-new-york": true,
   "/privacy/dpa": true,
   "/privacy/data-privacy-addendum": true,
+  "/professional-learning/elementary": true,
+  "/professional-learning/middle-high": true,
   "/en-US/privacy/dpa/il": true,
   "/en-US/donate/policy": true,
   "/en-US/educate/it": true,
   "/en-US/districts": true,
-  "/en-US/tos": true,
-  "/en-US/privacy": true,
   "/en-US/privacy/data-privacy-addendum-illinois": true,
   "/en-US/about/it-requirements": true,
   "/en-US/terms-of-service": true,
@@ -255,8 +259,8 @@ const marketingPaths = {
   "/en-US/privacy/data-privacy-addendum-new-york": true,
   "/en-US/privacy/dpa": true,
   "/en-US/privacy/data-privacy-addendum": true,
-  "/professional-learning/elementary": true,
-  "/professional-learning/middle-high": true,
+  "/en-US/professional-learning/elementary": true,
+  "/en-US/professional-learning/middle-high": true,
 }
 
 const nextJsAssetsPath = '/_next/static/';
