@@ -157,6 +157,10 @@ class FieldSounds extends GoogleBlockly.Field {
         showSoundFilters={MusicRegistry.showSoundFilters}
         defaultMode={defaultMode}
         sortUnrestrictedPacksByType={sortUnrestrictedPacksByType}
+        onClose={() => {
+          this.dropdownDispose_();
+          this.hide_();
+        }}
         onPreview={value => {
           this.playingPreview = value;
           this.renderContent();

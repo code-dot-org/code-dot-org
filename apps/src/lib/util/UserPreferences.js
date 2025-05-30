@@ -162,4 +162,36 @@ export default class UserPreferences extends Record({userId: 'me'}) {
       return null;
     }
   }
+
+  async getGlobalTheme() {
+    try {
+      const themeResponse = await HttpClient.fetchJson(
+        '/user_preference/theme'
+      );
+      return themeResponse.value?.theme?.global;
+    } catch (error) {
+      // Don't log error if 'Not found', as it just means the
+      // user has not set a theme yet.
+      if (error.response.status !== 404) {
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Error fetching theme', undefined, {
+            message: error.response,
+          });
+      }
+      return null;
+    }
+  }
+
+  async setGlobalTheme(theme) {
+    const body = {
+      theme: {
+        global: theme,
+      },
+    };
+
+    return HttpClient.put('/user_preference', JSON.stringify(body), true, {
+      'Content-Type': 'application/json',
+    });
+  }
 }

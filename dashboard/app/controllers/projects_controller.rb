@@ -456,6 +456,14 @@ class ProjectsController < ApplicationController
 
     @body_classes = @level.properties['background']
 
+    if @level.is_a?(Pythonlab)
+      user_theme = current_user ? UserPreference.find_by(user_id: current_user.id)&.theme : nil
+      theme_preference = user_theme['global'] if user_theme
+      if theme_preference
+        @body_classes = "background-#{theme_preference&.downcase}"
+      end
+    end
+
     if [Game::ARTIST, Game::SPRITELAB, Game::POETRY].include? @game.app
       @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/.metadata/thumbnail.png", 'https:'
     end

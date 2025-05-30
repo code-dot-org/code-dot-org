@@ -35,7 +35,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-27 16:10:16 UTC",
+    "serialized_at": "2025-05-29 22:55:29 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1179,7 +1179,7 @@
       "key": "5abf99cb-dfab-4dfb-bae4-91c0d1c09598",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *prompt*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 2 to complete Levels 2 through 4.\n- **Level 2:** Students input \"Give me 3 gift ideas\" into AI Chat.\n- **Level 3:** Students input a more specific prompt that defines the person who is getting the gift.\n- **Level 4:** Students upload an image to accompany the specific prompt that they reuse from Level 3.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *prompt*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 2 to complete Levels 2 through 4.\n- **Level 2:** Students input \"Give me 3 gift ideas\" into AI Chat.\n- **Level 3:** Students input a more specific prompt that defines the person who is getting the gift.\n- **Level 4:** Students add an image to accompany the specific prompt that they reuse from Level 3.",
         "duration": "20",
         "name": "Prompting AI",
         "progression_name": "Prompting AI"
@@ -1406,7 +1406,7 @@
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their **Problem Solving with AI Unit Guide.**\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Have students list everything they observe in the image found in the \"What's in an image?\" section of Lesson 2 in their Unit Guides. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students are listing observations, listen for students focusing only on objects rather than details like lighting, time of day, or social context. If needed, ask: \"What details beyond objects help describe this image?\"",
         "duration": "10",
-        "name": "Upload Images"
+        "name": "Add Images"
       },
       "seeding_key": {
         "activity_section.key": "fcdb51e8-fd5b-4a16-96fb-1318b13ddf00",
@@ -1429,7 +1429,7 @@
       "key": "16970e22-3cfa-4ae6-9c58-0c71de8616fe",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 1 to complete Levels 1 and 2.\n- **Level #1:** Students review multimodal concepts\n- **Level #2:** Students upload an image and ask AI Chat to describe it. Students should complete the \"What's in an image?\" and \"Privacy and Ethical Concerns\" sections in their Unit Guide.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 1 to complete Levels 1 and 2.\n- **Level #1:** Students review multimodal concepts\n- **Level #2:** Students add an image and ask AI Chat to describe it. Students should complete the \"What's in an image?\" and \"Privacy and Ethical Concerns\" sections in their Unit Guide.",
         "progression_name": "AI's Image Observation Skills"
       },
       "seeding_key": {
@@ -1611,7 +1611,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Not all students interacted with an AI Chat level that required them to upload a document. As you circulate during students’ work time, find students who uploaded both an image and a PDF to call on during the discussion."
+            "markdown": "Not all students interacted with an AI Chat level that required them to add a document. As you circulate during students’ work time, find students who added both an image and a PDF to call on during the discussion."
           }
         ]
       },

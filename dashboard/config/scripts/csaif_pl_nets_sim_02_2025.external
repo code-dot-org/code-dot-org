@@ -5,16 +5,16 @@ description 'description here'
 markdown <<MARKDOWN
 # Sending a Message
 
-#### In <a href='https://studio.code.org/s/nati-pilot-content-2024/lessons/1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 1</a>, students will send a direct message via the Internet Simulator. First, they’ll connect to a peer.
+#### In <a href='https://studio.code.org/s/aif4-2025/lessons/1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 1</a>, students will send a direct message via the Internet Simulator. First, they’ll connect to a peer.
 
 <p align="center">
-<img src="https://images.code.org/8a491b2d19e6c70a0f6098453b09e9de-Screenshot 2025-04-22 at 9.44.20 AM.png" alt="lesson plan diagram" width="80%" style="border-radius:10px; border: 5px solid black;">
+<img src="https://images.code.org/8a491b2d19e6c70a0f6098453b09e9de-Screenshot 2025-04-22 at 9.44.20 AM.png" alt=" two partners connecting to chat" width="80%" style="border-radius:10px; border: 5px solid black;">
 </p>
 
 
 #### Then they can send a message using various levels of abstraction (ASCII, decimal, or binary). Students will use the logs to see the messages they have sent and received.
 <p align="center">
-<img src="https://images.code.org/70249c604f955f59e0442c43bc71d800-Screenshot 2025-04-22 at 9.45.02 AM.png" alt="lesson plan diagram" width="70%" style="border-radius:10px; border: 5px solid black;">
+<img src="https://images.code.org/70249c604f955f59e0442c43bc71d800-Screenshot 2025-04-22 at 9.45.02 AM.png" alt="Internet Simulator screen showing the connection between partners and a message in ASCII, decimal, and binary" width="70%" style="border-radius:10px; border: 5px solid black;">
 </p>
 
 MARKDOWN

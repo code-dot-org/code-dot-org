@@ -26,5 +26,6 @@ This is a work in progress, and this implementation does not represent the final
             --subdomain_name code \
             --container_image_hash sha256:24116f75756f3d80af73d7a2ba43e91ef3d89f0302fea8ece356530360a1b938 \
             --role_arn  arn:aws:iam::123456789:role/admin/CloudFormationMarketingSitesTestRole \
-            --web_application_server_secrets_arn arn:aws:secretsmanager:us-east-1:123456789:secret:marketing-sites/test/marketing-sites.test-code.org/code-abc123
+            --web_application_server_secrets_arn arn:aws:secretsmanager:us-east-1:123456789:secret:marketing-sites/test/marketing-sites.test-code.org/code-abc123 \
+            --cloudformation_role_boundary arn:aws:iam::123456789:policy/marketing-sites-role-permissions-boundary-test
 ```

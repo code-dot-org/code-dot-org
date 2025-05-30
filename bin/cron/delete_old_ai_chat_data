@@ -5,6 +5,13 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 require_relative '../../dashboard/config/environment'
 require 'cdo/chat_client'
 
+# Use five minute timeout to allow long delete queries to complete.
+DASHBOARD_DB_LONG_TIMEOUT = Cdo::Sequel.database_connection_pool(
+  CDO.dashboard_db_writer,
+  CDO.dashboard_db_reader,
+  query_timeout: 300
+)
+
 # We want to avoid storing student chat messages any longer than
 # is necessary for analysis to prevent storing excess student PII. This deletes
 # any AichatEvent or AichatRequest older than 90 days.
@@ -13,14 +20,12 @@ require 'cdo/chat_client'
 # so we can easily monitor the deletion process.
 def main
   ninety_days_ago = Time.now - 90.days
-  # Pilot data collected before September 30th, 2024 is being retained for analysis.
-  pilot_end_date = DateTime.new(2024, 10, 1, 0, 0, 0)
 
-  destroyed_event_count = AichatEvent.where('created_at BETWEEN ? AND ?', pilot_end_date, ninety_days_ago).delete_all
-  ChatClient.message('cron-daily', "Deleted #{destroyed_event_count} AichatEvent records")
+  deleted_event_count = DASHBOARD_DB_LONG_TIMEOUT[:aichat_events].where {created_at < ninety_days_ago}.delete
+  ChatClient.message('cron-daily', "Deleted #{deleted_event_count} AichatEvent records")
 
-  destroyed_request_count = AichatRequest.where('created_at BETWEEN ? AND ?', pilot_end_date, ninety_days_ago).delete_all
-  ChatClient.message('cron-daily', "Deleted #{destroyed_request_count} AichatRequest records")
+  deleted_request_count = DASHBOARD_DB_LONG_TIMEOUT[:aichat_requests].where {created_at < ninety_days_ago}.delete
+  ChatClient.message('cron-daily', "Deleted #{deleted_request_count} AichatRequest records")
 end
 
 main
