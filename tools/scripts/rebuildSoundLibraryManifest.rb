@@ -105,7 +105,7 @@ class ManifestBuilder
   # Report any issues while talking to S3 and suggest most likely steps for fixing it.
   rescue Aws::Errors::ServiceError => exception
     warn exception.inspect
-    warn <<-OUTPUT.unindent
+    warn <<-WARNING.unindent
 
       #{bold 'There was an error talking to S3.'}  Make sure you have credentials set using one of:
 
@@ -114,7 +114,7 @@ class ManifestBuilder
         * ~/.aws/credentials
 
       #{dim 'See http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html for more details.'}
-    OUTPUT
+    WARNING
   end
 
   #
@@ -180,7 +180,7 @@ class ManifestBuilder
   # Report any issues while talking to S3 and suggest most likely steps for fixing it.
   rescue Aws::Errors::ServiceError => exception
     warn exception.inspect
-    warn <<-OUTPUT.unindent
+    warn <<-WARNING.unindent
 
       #{bold 'There was an error talking to S3.'}  Make sure you have credentials set using one of:
 
@@ -189,7 +189,7 @@ class ManifestBuilder
         * ~/.aws/credentials
 
       #{dim 'See http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html for more details.'}
-    OUTPUT
+    WARNING
   end
 
   # Given an S3 bucket, return map of sound file objects:
@@ -324,10 +324,10 @@ class ManifestBuilder
       # Generate appropriate sourceUrl pointing to the sound library API
       metadata['sourceUrl'] = "/api/v1/sound-library/#{name}.mp3"
 
-      verbose <<~OUTPUT
+      verbose <<~DEBUG
         #{bold name} @ #{metadata['version']}
         #{JSON.pretty_generate metadata}
-      OUTPUT
+      DEBUG
 
       metadata
     end

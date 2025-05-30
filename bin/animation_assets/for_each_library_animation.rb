@@ -45,7 +45,7 @@ class AnimationIterator
   # Report any issues while talking to S3 and suggest most likely steps for fixing it.
   rescue Aws::Errors::ServiceError => exception
     warn exception.inspect
-    warn <<-OUTPUT.unindent
+    warn <<-WARNING.unindent
 
       #{bold 'There was an error talking to S3.'}  Make sure you have credentials set using one of:
 
@@ -54,7 +54,7 @@ class AnimationIterator
         * ~/.aws/credentials
 
       #{dim 'See http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html for more details.'}
-    OUTPUT
+    WARNING
   end
 
   def verbose(s)

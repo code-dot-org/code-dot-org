@@ -96,7 +96,7 @@ class ManifestBuilder
   # Report any issues while talking to S3 and suggest most likely steps for fixing it.
   rescue Aws::Errors::ServiceError => exception
     warn exception.inspect
-    warn <<-OUTPUT.unindent
+    warn <<-WARNING.unindent
 
       #{bold 'There was an error talking to S3.'}  Make sure you have credentials set using one of:
 
@@ -105,7 +105,7 @@ class ManifestBuilder
         * ~/.aws/credentials
 
       #{dim 'See http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html for more details.'}
-    OUTPUT
+    WARNING
   end
 
   #
@@ -169,7 +169,7 @@ class ManifestBuilder
   # Report any issues while talking to S3 and suggest most likely steps for fixing it.
   rescue Aws::Errors::ServiceError => exception
     warn exception.inspect
-    warn <<-OUTPUT.unindent
+    warn <<-WARNING.unindent
 
       #{bold 'There was an error talking to S3.'}  Make sure you have credentials set using one of:
 
@@ -178,7 +178,7 @@ class ManifestBuilder
         * ~/.aws/credentials
 
       #{dim 'See http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html for more details.'}
-    OUTPUT
+    WARNING
   end
 
   # Returns a map of names and aliases used in animation metadata
@@ -239,10 +239,10 @@ class ManifestBuilder
       extension = object_summary.key[/(?<=\.)\w+$/]
       next if extension.nil? # Skip 'directory' objects
 
-      verbose <<-OUTPUT.unindent
+      verbose <<-DEBUG.unindent
         #{bold object_summary.key}
         #{object_summary.last_modified} | #{object_summary.size}
-      OUTPUT
+      DEBUG
       # Push into animations collection if unique
       animations_by_name[animation_name] ||= {}
       if animations_by_name[animation_name][extension].nil?
@@ -372,10 +372,10 @@ class ManifestBuilder
         metadata['sourceSize'] = PngUtils.dimensions_from_png(png_body)
       end
 
-      verbose <<~OUTPUT
+      verbose <<~DEBUG
         #{bold name} @ #{metadata['version']}
         #{JSON.pretty_generate metadata}
-      OUTPUT
+      DEBUG
 
       metadata
     end
