@@ -255,6 +255,8 @@ const marketingPaths = {
   "/en-US/privacy/data-privacy-addendum-new-york": true,
   "/en-US/privacy/dpa": true,
   "/en-US/privacy/data-privacy-addendum": true,
+  "/professional-learning/elementary": true,
+  "/professional-learning/middle-high": true,
 }
 
 const nextJsAssetsPath = '/_next/static/';
