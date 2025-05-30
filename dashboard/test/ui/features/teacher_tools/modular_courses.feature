@@ -83,7 +83,7 @@ Feature: Using Modular Courses
 
     Given I sign in as "Sally" and go home
     When I am on "http://studio.code.org/courses/ui-test-course-2017/units/3/lessons/1/levels/1"
-    And I click "button[type='submit']" to load a new page
+    When I click selector ".submitButton" to load a new page
 
     When I sign out
     And I sign in as "Teacher_Sally" and go home
