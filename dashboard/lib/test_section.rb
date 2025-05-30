@@ -27,9 +27,9 @@ class TestSection
     )
   end
 
-  # If teacher_id is provided, it will find the teacher by ID.
-  # If not, it will create a new teacher with the default email, name, and password.
-  # Hard-delete the default teacher and all of the teacher's sections and students
+  # If teacher_id is provided, find the teacher by ID and do not delete any data.
+  # If no teacher_id is provided, create a new teacher with the default email, name, and password.
+  # Hard-delete the to-be-created teacher and all of the teacher's sections and students
   # and recreate. Sections and followers would be soft-deleted by
   # dependency when we delete the teacher; but to not leave a trail of
   # old test data behind, we explictly hard-delete.
