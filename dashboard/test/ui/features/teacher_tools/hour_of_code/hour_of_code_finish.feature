@@ -17,35 +17,6 @@ Scenario: Completing Minecraft HoC should go to certificate page and generate a 
   And I press "button:contains(Submit)" using jQuery
   And I wait to see element with ID "uitest-thanks"
 
-@eyes
-Scenario: Flappy customized dashboard certificate pages
-  When I open my eyes to test "flappy certificates"
-  Given I am on "http://studio.code.org/congrats"
-  And I wait until element "#uitest-certificate" is visible
-
-  When I am on "http://code.org/api/hour/finish/flappy"
-  And I wait until current URL contains "/congrats"
-  And I wait to see element with ID "uitest-certificate"
-  Then the href of selector ".social-print-link" contains "/print_certificates/"
-  And I wait for 5 seconds
-  And I see no difference for "flappy congrats page"
-
-  When I type "Robo Códer" into "#name"
-  And I press "button:contains(Submit)" using jQuery
-  And I wait to see element with ID "uitest-thanks"
-  Then I wait to see an image "/certificate_images/"
-  And I wait for 5 seconds
-  And I see no difference for "personalixed flappy congrats page"
-
-  When I press the first "#uitest-certificate img" element to load a new page
-  And I wait until current URL contains "/certificates/"
-  Then I wait to see an image "/certificate_images/"
-
-  When I press the first "#certificate-share img" element to load a new page
-  And I wait until current URL contains "/print_certificates/"
-  Then I wait to see an image "/certificate_images/"
-  And I close my eyes
-
 Scenario: Pegasus share page preserves certificate when redirecting
   # Reset lesson data (otherwise it will pull a cached certificate from
   # other tests)
@@ -81,30 +52,6 @@ Scenario: non-mee 3rd party tutorial redirects to congrats page with params
   And I type "Robo Coder" into "#name"
   And I press "button:contains(Submit)" using jQuery
   Then I wait to see element with ID "uitest-thanks"
-
-@eyes
-Scenario: Oceans uncustomized dashboard certificate pages
-  When I open my eyes to test "oceans certificates"
-  Given I am on "http://studio.code.org/congrats"
-  And I wait until element "#uitest-certificate" is visible
-
-  When I am on "http://code.org/api/hour/finish/oceans"
-  And I wait until current URL contains "/congrats"
-  And I wait to see element with ID "uitest-certificate"
-  Then the href of selector ".social-print-link" contains "/print_certificates/"
-  And I wait for 5 seconds
-  And I see no difference for "oceans congrats page"
-
-  When I press the first "#uitest-certificate img" element to load a new page
-  And I wait until current URL contains "/certificates/"
-  And I see no difference for "oceans certificate page"
-
-  When I press the first "#certificate-share img" element to load a new page
-  And I wait until current URL contains "/print_certificates/"
-  # This page doesn't render any icons, so we don't need to wait for Font Awesome to load.
-  And I see no difference for "oceans print certificate page" without waiting for Font Awesome to load
-
-  And I close my eyes
 
 Scenario: Course A 2017 uncustomized dashboard certificate pages
   Given I create a student named "Student1"
@@ -165,7 +112,7 @@ Scenario: congrats certificate pages
 
 @eyes
 Scenario: flappy course certificates
-  When I open my eyes to test "flappy certificate pages"
+  When I open my eyes to test "flappy certificates"
   And I am on "http://code.org/api/hour/finish/flappy"
   And I wait until current URL contains "/congrats"
   And I wait to see element with ID "uitest-certificate"
@@ -183,9 +130,17 @@ Scenario: flappy course certificates
   And I see no difference for "customized flappy certificate"
   And I close my eyes
 
+  When I press the first "#uitest-certificate img" element to load a new page
+  And I wait until current URL contains "/certificates/"
+  Then I wait to see an image "/certificate_images/"
+
+  When I press the first "#certificate-share img" element to load a new page
+  And I wait until current URL contains "/print_certificates/"
+  Then I wait to see an image "/certificate_images/"
+
 @eyes
 Scenario: oceans course certificates
-  When I open my eyes to test "flappy certificate pages"
+  When I open my eyes to test "oceans certificates"
   And I am on "http://code.org/api/hour/finish/oceans"
   And I wait until current URL contains "/congrats"
   And I wait to see element with ID "uitest-certificate"
@@ -202,6 +157,15 @@ Scenario: oceans course certificates
   And I wait for 5 seconds
   And I see no difference for "customized oceans certificate"
   And I close my eyes
+
+  When I press the first "#uitest-certificate img" element to load a new page
+  And I wait until current URL contains "/certificates/"
+  And I see no difference for "oceans certificate page"
+
+  When I press the first "#certificate-share img" element to load a new page
+  And I wait until current URL contains "/print_certificates/"
+  # This page doesn't render any icons, so we don't need to wait for Font Awesome to load.
+  And I see no difference for "oceans print certificate page" without waiting for Font Awesome to load
 
 @eyes
 Scenario: accelerated course certificates
