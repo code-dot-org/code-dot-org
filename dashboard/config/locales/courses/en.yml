@@ -1505,7 +1505,7 @@ en:
 
             ##Just Starting this Course?
 
-            We recommend completing the free [**Exploring Generative AI Self-Paced Professional Learning Module**](https://studio.code.org/courses/self-paced-exploring-gen-ai). The module is designed to take 2-3 hours to complete. No previous computer science or AI experience is required.
+            We recommend completing the free [**Exploring Generative AI Self-Paced Professional Learning Module**](https://studio.code.org/courses/teaching-exp-gen-ai-2025). The module is designed to take 2-3 hours to complete. No previous computer science or AI experience is required.
 
             We also recommend watching the [5-Part Exploring Generative AI Video Series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfJLo5nNGPHo0xCd9Xw5lSs) which introduces key concepts for generative AI. The entire video series takes ~15 minutes to watch.
           version_title: "'25-'26"
@@ -4323,7 +4323,7 @@ en:
           description_short: ''
           description_student: |-
             ##Welcome
-            This self-paced module is designed to introduce educators to Code.org as a teaching tool, focusing on foundational aspects of the platform and its features. Educators will learn how to set up their classrooms, navigate the platform’s resources, and implement Code.org’s beginner-friendly coding curriculum. The module combines instructional videos, interactive activities, and practical assignments to help teachers gain confidence in using Code.org effectively in their classrooms. Upon completing this module, teachers will have a pathway to start using Code.org with their students immediately.
+            This self-paced module is designed to introduce educators to Code.org as a teaching tool, focusing on foundational aspects of the platform and its features. Educators will learn how to set up their classrooms, navigate the platform’s resources, and implement Code.org’s beginner-friendly coding curriculum. The module combines instructional videos and practical, interactive activities to help teachers gain confidence in using Code.org effectively in their classrooms. Upon completing this module, teachers will have a pathway to start using Code.org with their students immediately.
           description_teacher: |-
             ##Welcome
             This self-paced module is designed to introduce educators to Code.org as a teaching tool, focusing on foundational aspects of the platform and its features. Educators will learn how to set up their classrooms, navigate the platform’s resources, and implement Code.org’s beginner-friendly coding curriculum. The module combines instructional videos, interactive activities, and practical assignments to help teachers gain confidence in using Code.org effectively in their classrooms. Upon completing this module, teachers will have a pathway to start using Code.org with their students immediately.
@@ -4339,7 +4339,7 @@ en:
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
+          version_title: "'25-'26"
         self-paced-pl-csp-2025:
           title: Teaching CS Principles
           description_short: ''
@@ -5400,7 +5400,7 @@ en:
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: 25-26
+          version_title: "'25-'26"
         self-paced-pl-k5-2025:
           title: Teaching Computer Science Fundamentals
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
@@ -5673,7 +5673,7 @@ en:
             * **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**
 
             * **Pick your content:** The content is organized in to introduce all teachers CSD Unit 5 - Teaching Data and Society. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.**
-          version_title: 25-26
+          version_title: "'25-'26"
         teaching-csd-physical-computing-2025:
           title: Teaching Creating Apps with Devices (Circuit Playground)
           description_short: ''
@@ -5719,7 +5719,7 @@ en:
           description_short: ''
           description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 7 - Teaching AI and Machine Learning** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers CSD Unit 7 - Teaching AI and Machine Learning. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 7 - Teaching AI and Machine Learning** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers CSD Unit 7 - Teaching AI and Machine Learning. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
-          version_title: 25'-26'
+          version_title: "'25-'26"
         foundations-of-ai-programming-2025:
           title: Foundations of AI Programming
           description_short: ''
@@ -5817,11 +5817,11 @@ en:
           description_short: "## Welcome! \n##### This professional learning module is designed to help you prepare to teach Code.org’s Exploring Generative AI course.\n\n##### Exploring Generative AI is designed as standalone coursework for grade 8-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. \n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to the Exploring Generative AI Unit. "
           description_student: "## Welcome! \n##### This professional learning module is designed to help you prepare to teach Code.org’s Exploring Generative AI course.\n\n##### Exploring Generative AI is designed as standalone coursework for grade 8-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. \n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to the Exploring Generative AI Unit. "
           description_teacher: "## Welcome! \n##### This professional learning module is designed to help you prepare to teach Code.org’s Exploring Generative AI course.\n\n##### Exploring Generative AI is designed as standalone coursework for grade 8-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. \n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to the Exploring Generative AI Unit. "
-          version_title: 25 - 26
+          version_title: "'25-'26"
         teaching-ai-foundations-2025:
           title: Teaching AI Foundations
           description_short: ''
-          description_student: |-
+          description_student: |
             AI Foundations introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.
 
             ## Prerequisites
@@ -5829,9 +5829,15 @@ en:
 
             * No specific prior coursework in computer science is required for educators; all necessary pedagogical approaches and curriculum-specific knowledge are introduced and reinforced through guided activities, collaborative learning, and practical implementation strategies.
 
+            ## **Find the learning that works for you**
+
+            **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Teaching Problem-Solving with AI unit. However, you can engage with the content in the order that best meets your needs.
+
             ## Did you know?
-            * This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
-          description_teacher: |-
+            This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
+          description_teacher: |
             AI Foundations introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.
 
             ## Prerequisites
@@ -5839,8 +5845,14 @@ en:
 
             * No specific prior coursework in computer science is required for educators; all necessary pedagogical approaches and curriculum-specific knowledge are introduced and reinforced through guided activities, collaborative learning, and practical implementation strategies.
 
+            ## **Find the learning that works for you**
+
+            **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Teaching Problem-Solving with AI unit. However, you can engage with the content in the order that best meets your needs.
+
             ## Did you know?
-            * This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
+            This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
           version_title: 25 - 26
         teaching-foundations-ai-programming-2025:
           title: Teaching Foundations of AI Programming

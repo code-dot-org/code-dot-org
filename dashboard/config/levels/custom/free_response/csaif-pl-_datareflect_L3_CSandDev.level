@@ -18,7 +18,7 @@
     "skip_sound": true,
     "stay_on_level_after_submit": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-19T19:31:58.453+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-_hardware-software_forum_L21_CSandDev\\\"\"],\"cloned_from\":\"csaif-pl-_hardware-software_forum_L21_CSandDev\"},{\"changed_at\":\"2025-03-20 15:46:20 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-20 15:47:42 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-05-20 15:15:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-03-19T19:31:58.453+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-_hardware-software_forum_L21_CSandDev\\\"\"],\"cloned_from\":\"csaif-pl-_hardware-software_forum_L21_CSandDev\"},{\"changed_at\":\"2025-03-20 15:46:20 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-20 15:47:42 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-05-20 15:15:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-05-29 21:18:05 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

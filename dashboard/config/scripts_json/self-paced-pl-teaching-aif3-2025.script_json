@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-23 01:35:44 UTC",
+    "serialized_at": "2025-05-29 19:32:52 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -292,6 +292,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_overview_objectives_cs-devices_2025"
+        ],
         "progression": "Course Introduction"
       },
       "bonus": false,
@@ -314,6 +317,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_cert_L2-cs-devices_2025"
+        ],
         "progression": "Course Introduction"
       },
       "bonus": false,
@@ -336,6 +342,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_module_overview_l3-cs-devices_2025"
+        ],
         "progression": "Course Introduction"
       },
       "bonus": false,
@@ -358,6 +367,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_course_overview_l4-cs-devices_2025"
+        ],
         "progression": "Course Introduction"
       },
       "bonus": false,
@@ -380,6 +392,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_course_structure_L5-cs-devices_2025"
+        ],
         "progression": "Course Introduction"
       },
       "bonus": false,
@@ -402,6 +417,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_lesson_resources_L6-cs-devices_2025"
+        ],
         "progression": "Course Resources"
       },
       "bonus": false,
@@ -424,6 +442,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_career_overview_L7-cs-devices_2025"
+        ],
         "progression": "Course Resources"
       },
       "bonus": false,
@@ -446,6 +467,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_AI_chatbot_overview_L8-cs-devicesn_2025"
+        ],
         "progression": "Course Resources"
       },
       "bonus": false,
@@ -468,6 +492,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_teacher_Lesson1_L9-cs-devices_2025"
+        ],
         "progression": "Course Resources"
       },
       "bonus": false,
@@ -490,6 +517,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_lesson_overview_hardware-L1-CSandDev_2025"
+        ],
         "progression": "Computer systems"
       },
       "bonus": false,
@@ -512,6 +542,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-computersystems-video-L2-CSandDev_2025"
+        ],
         "progression": "Computer systems"
       },
       "bonus": false,
@@ -534,6 +567,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ispo-L3-CSandDev_2025"
+        ],
         "progression": "Computer systems"
       },
       "bonus": false,
@@ -556,6 +592,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-hardware-panels-L4-1-CSandDev_2025"
+        ],
         "progression": "Hardware"
       },
       "bonus": false,
@@ -578,6 +617,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-procssing-L4-2-CSandDev_2025"
+        ],
         "progression": "Hardware"
       },
       "bonus": false,
@@ -600,6 +642,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl-SNOT-overview-L5-CSandDev_2025"
+        ],
         "progression": "Hardware"
       },
       "bonus": false,
@@ -622,6 +667,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-hardware-troubleshoot-panels-L6-CSandDev_2025"
+        ],
         "progression": "Hardware"
       },
       "bonus": false,
@@ -644,6 +692,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-troubleshoot-AIbot-L7-CSandDev_2025"
+        ],
         "progression": "Hardware"
       },
       "bonus": false,
@@ -666,6 +717,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl-hardwarelesson-debrief-L8-CSandDev_2025"
+        ],
         "progression": "Hardware"
       },
       "bonus": false,
@@ -688,6 +742,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-hardware-assess-L8-CSandDev_2025"
+        ],
         "progression": "Hardware"
       },
       "bonus": false,
@@ -710,6 +767,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_software-L11-CSandDev_2025"
+        ],
         "progression": "Software and Operating Systems"
       },
       "bonus": false,
@@ -732,6 +792,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-matchingsoftware-L12-CSandDev_2025"
+        ],
         "progression": "Software and Operating Systems"
       },
       "bonus": false,
@@ -754,6 +817,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl-reflectsoftware-L13-CSandDev_2025"
+        ],
         "progression": "Software and Operating Systems"
       },
       "bonus": false,
@@ -776,6 +842,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_troubleshoot-about-L14-CSandDev_2025"
+        ],
         "progression": "Troubleshooting Software "
       },
       "bonus": false,
@@ -798,6 +867,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-software-troubleshooting-L15-CSandDev_2025"
+        ],
         "progression": "Troubleshooting Software "
       },
       "bonus": false,
@@ -820,6 +892,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-troubleshooting-synthesis-L16-CSandDev_2025"
+        ],
         "progression": "Troubleshooting Software "
       },
       "bonus": false,
@@ -842,6 +917,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-student-response-L17-CSandDev_2025"
+        ],
         "progression": "Troubleshooting Software "
       },
       "bonus": false,
@@ -864,6 +942,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_optimizing-lesson-L18-CSandDev_2025"
+        ],
         "progression": "Optimizing Software"
       },
       "bonus": false,
@@ -886,6 +967,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-optimize-bot-L19-CSandDev_2025"
+        ],
         "progression": "Optimizing Software"
       },
       "bonus": false,
@@ -908,6 +992,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-optimization-reflect-L20-CSandDev_2025"
+        ],
         "progression": "Optimizing Software"
       },
       "bonus": false,
@@ -930,6 +1017,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-_hardware-software_forum_L21_CSandDev_2025"
+        ],
         "progression": "Optimizing Software"
       },
       "bonus": false,
@@ -952,6 +1042,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_lesson_overview_data-L1-CSandDev_2025"
+        ],
         "progression": "Data in Computer Systems"
       },
       "bonus": false,
@@ -974,6 +1067,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-_datareflect_L3_CSandDev_2025"
+        ],
         "progression": "Data in Computer Systems"
       },
       "bonus": false,
@@ -996,6 +1092,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl-everyday-data-L2-CSandDev_2025"
+        ],
         "progression": "Data in Computer Systems"
       },
       "bonus": false,
@@ -1018,6 +1117,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl-analyzedatea-L4-CSandDev_2025"
+        ],
         "progression": "Data in Computer Systems"
       },
       "bonus": false,
@@ -1040,6 +1142,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-data-library-panels-L5-CSandDev_2025"
+        ],
         "progression": "Data in Computer Systems"
       },
       "bonus": false,
@@ -1062,6 +1167,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-librarydata-L6-CSandDev_2025"
+        ],
         "progression": "Data in Computer Systems"
       },
       "bonus": false,
@@ -1084,6 +1192,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl-AI-realworld-L7-CSandDev_2025"
+        ],
         "progression": "Data in Computer Systems"
       },
       "bonus": false,
@@ -1106,6 +1217,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-aiethics-video-L11-CSandDev_2025"
+        ],
         "progression": "Ethics and Data"
       },
       "bonus": false,
@@ -1128,6 +1242,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ethic-teaching-tips-L10-CSandDev_2025"
+        ],
         "progression": "Ethics and Data"
       },
       "bonus": false,
@@ -1150,6 +1267,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-_data_forum_L10_CSandDev_2025"
+        ],
         "progression": "Ethics and Data"
       },
       "bonus": false,
@@ -1172,6 +1292,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_lesson_overview_endofUnit_L1_CSandDev_2025"
+        ],
         "progression": "Preparing for the Project"
       },
       "bonus": false,
@@ -1194,6 +1317,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_project-description-L2-CSandDev_2025"
+        ],
         "progression": "Preparing for the Project"
       },
       "bonus": false,
@@ -1216,6 +1342,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_3-day-project-L3-CSandDev_2025"
+        ],
         "progression": "Preparing for the Project"
       },
       "bonus": false,
@@ -1238,6 +1367,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-_projectmanage_forum_L5_CSandDev_2025"
+        ],
         "progression": "Preparing for the Project"
       },
       "bonus": false,
@@ -1260,6 +1392,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-nextsteps-L6-csandDev_2025"
+        ],
         "progression": "Next Steps"
       },
       "bonus": false,
