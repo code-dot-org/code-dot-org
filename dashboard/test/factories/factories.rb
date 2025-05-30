@@ -1008,6 +1008,11 @@ FactoryBot.define do
     level_num {'custom'}
   end
 
+  factory :aichat, parent: :level, class: Aichat do
+    game {Game.aichat}
+    level_num {'custom'}
+  end
+
   factory :block do
     transient do
       sequence(:index)

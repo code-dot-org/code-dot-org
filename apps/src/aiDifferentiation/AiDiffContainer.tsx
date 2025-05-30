@@ -28,6 +28,7 @@ interface AiDiffContainerProps {
   open: boolean;
   scriptName?: string;
   unitDisplayName?: string;
+  curriculumCourses?: string[];
 }
 
 const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
@@ -36,6 +37,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   open,
   scriptName,
   unitDisplayName,
+  curriculumCourses,
 }) => {
   const [showWelcomeExperience, setShowWelcomeExperience] = useState(true);
 
@@ -132,20 +134,24 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
         </div>
 
         <div className={style.fabBackground}>
-          {!hasCompletedAiDifferentiationWelcome && showWelcomeExperience ? (
-            <AiDiffWelcome
-              setShowWelcomeExperience={setShowWelcomeExperience}
-              context={context}
-              scriptName={scriptName}
-              unitDisplayName={unitDisplayName}
-            />
-          ) : (
-            <AiDiffChat
-              context={context}
-              scriptName={scriptName}
-              unitDisplayName={unitDisplayName}
-            />
-          )}
+          {!hasCompletedAiDifferentiationWelcome && showWelcomeExperience
+            ? curriculumCourses && (
+                <AiDiffWelcome
+                  setShowWelcomeExperience={setShowWelcomeExperience}
+                  context={context}
+                  scriptName={scriptName}
+                  unitDisplayName={unitDisplayName}
+                  curriculumCourses={curriculumCourses}
+                />
+              )
+            : curriculumCourses && (
+                <AiDiffChat
+                  context={context}
+                  scriptName={scriptName}
+                  unitDisplayName={unitDisplayName}
+                  curriculumCourses={curriculumCourses}
+                />
+              )}
         </div>
       </div>
     </Draggable>

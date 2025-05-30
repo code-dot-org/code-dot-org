@@ -3,13 +3,16 @@
  * currently active Lab (determined by the current app name). This
  * helps facilitate level-switching between labs without page reloads.
  */
-import {useTheme, Theme} from '@code-dot-org/component-library/common/contexts';
-import React, {Suspense, useEffect} from 'react';
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import React, {Suspense, useEffect, useMemo} from 'react';
 
 import {getCurrentLesson} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {capitalizeFirstLetter} from '@cdo/apps/util/capitalizeFirstLetter';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {setIsLoadingTheme} from '@cdo/apps/lab2/lab2Redux';
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {Level} from '@cdo/apps/types/progressTypes';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../lab2EntryPoints';
 import {PERMISSIONS} from '../constants';
@@ -38,12 +41,17 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   );
 
   const isViewingExemplar = getAppOptionsViewingExemplar();
+  const lesson = useAppSelector(state => getCurrentLesson(state));
+  const {signInState} = useAppSelector(state => state.currentUser);
+  const dispatch = useAppDispatch();
 
-  const capitalizedLessonBackground = useAppSelector(
-    state =>
-      capitalizeFirstLetter(
-        getCurrentLesson(state)?.background || 'light'
-      ) as Theme
+  // We only use the global user preference for theme if the current lesson has
+  // at least one python lab level or the current level is a python lab level.
+  const useThemeUserPreference = useMemo(
+    () =>
+      levelProperties?.appName === 'pythonlab' ||
+      lesson?.levels.some((level: Level) => level.app === 'pythonlab'),
+    [lesson?.levels, levelProperties?.appName]
   );
 
   // Set the theme for the current app.
@@ -51,14 +59,42 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   useEffect(() => {
     if (currentAppName) {
       const supportedThemes = lab2EntryPoints[currentAppName]?.themes;
+      dispatch(setIsLoadingTheme(true));
 
-      if (supportedThemes.includes(capitalizedLessonBackground)) {
-        setTheme(capitalizedLessonBackground);
+      const setThemeHelper = () => {
+        // If the body has a class use that to set the theme, if its supported by the lab.
+        // Otherwise, use the first supported theme.
+        // We will only run this if we are not using the user preference, so it's safe to pull
+        // from the body class, as the user is not dynamically changing the theme.
+        const bodyClassList = document.body.classList;
+        const bodyTheme = bodyClassList.contains('background-light')
+          ? 'Light'
+          : 'Dark';
+        if (supportedThemes.includes(bodyTheme)) {
+          setTheme(bodyTheme);
+        } else {
+          setTheme(supportedThemes[0]);
+        }
+        dispatch(setIsLoadingTheme(false));
+      };
+
+      if (useThemeUserPreference && signInState === SignInState.SignedIn) {
+        const fetchAndSetTheme = async () => {
+          const userTheme = await new UserPreferences().getGlobalTheme();
+          if (userTheme && supportedThemes.includes(userTheme)) {
+            setTheme(userTheme);
+            dispatch(setIsLoadingTheme(false));
+          } else {
+            setThemeHelper();
+          }
+        };
+
+        fetchAndSetTheme();
       } else {
-        setTheme(supportedThemes[0]);
+        setThemeHelper();
       }
     }
-  }, [currentAppName, setTheme, capitalizedLessonBackground]);
+  }, [currentAppName, setTheme, useThemeUserPreference, signInState, dispatch]);
 
   // Do not render lab view if project is blocked and user is not a project validator.
   if (!currentAppName || (isBlocked && !isProjectValidator)) {

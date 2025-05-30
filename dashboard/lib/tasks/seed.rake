@@ -37,6 +37,10 @@ namespace :seed do
   CURRICULUM_CONTENT_DIR = ENV['CURRICULUM_CONTENT_DIR'] || '.'
   CURRICULUM_CONTENT_PATHNAME = Pathname(CURRICULUM_CONTENT_DIR)
 
+  timed_task_with_logging skills: :environment do
+    Skill.setup
+  end
+
   timed_task_with_logging videos: :environment do
     Video.setup(CURRICULUM_CONTENT_DIR)
   end
@@ -254,10 +258,12 @@ namespace :seed do
     :environment,
     :check_migrations,
     :games,
+    :skills,
     :deprecated_blockly_levels,
     :child_dsls,
     :custom_levels,
     :parent_dsls,
+    :levels_skills,
     :code_docs,
     :blocks,
     :standards,
@@ -464,6 +470,19 @@ namespace :seed do
   timed_task_with_logging custom_levels: :environment do
     level_name = ENV.fetch('LEVEL_NAME', nil)
     LevelLoader.load_custom_levels(level_name, CURRICULUM_CONTENT_DIR)
+  end
+
+  timed_task_with_logging levels_skills: :environment do
+    levels_with_skills = Level.where('properties like ?', '%"skill_keys":%').all
+    levels_with_skills.each do |level|
+      JSON.parse(level.skill_keys).each do |skill_key|
+        skill_id = Skill.find_by_key(skill_key).id
+        LevelsSkill.find_or_create_by!(
+          skill_id: skill_id,
+          level_id: level.id
+        )
+      end
+    end
   end
 
   timed_task_with_logging deprecated_blockly_levels: :environment do

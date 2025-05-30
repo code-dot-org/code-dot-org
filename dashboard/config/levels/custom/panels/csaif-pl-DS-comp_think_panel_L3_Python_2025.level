@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2025-04-23T18:57:37.000Z",
   "level_num": "custom",
@@ -20,7 +21,7 @@
         "layout": "text-top-left"
       },
       {
-        "text": "<h2>What is Pattern Recognition?</h2>\n<p style =\" font-size: 16px;\">\nAbstraction means focusing on the important details and ignoring unnecessary complexity.</p>\n<br>\n<p style =\" font-size: 16px;\">\n<b>Example:</b>\nA student notices that every square in a grid-based game requires the same sequence: move forward, turn right, move forward. <br><br>They recognize this pattern and reuse the steps instead of figuring out each square separately. </p>",
+        "text": "<h2>What is Pattern Recognition?</h2>\n<p style =\" font-size: 16px;\">\nPattern recognition refers to identifying similarities or repeated elements in problems or data. It helps us solve problems more efficiently by noticing what repeats and using that to create rules or shortcuts.<br>\n<p style =\" font-size: 16px;\">\n<b>Example:</b>\nA student notices that every square in a grid-based game requires the same sequence: move forward, turn right, move forward. <br><br>They recognize this pattern and reuse the steps instead of figuring out each square separately. </p>",
         "imageUrl": "https://images.code.org/2d73a51a4fc776c76b5d9f83958e1fb2-panel images (2).jpg",
         "key": "game_design_spr_types-4936be88-574e-4dd8-a31f-e671e54e482b",
         "layout": "text-top-left"
@@ -35,7 +36,6 @@
     "name_suffix": "_2025",
     "offer_browser_tts": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-23T18:57:37.700+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-DS-comp_think_panel_L3_Python\\\"\"],\"cloned_from\":\"csaif-pl-DS-comp_think_panel_L3_Python\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-23T18:57:37.700+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-DS-comp_think_panel_L3_Python\\\"\"],\"cloned_from\":\"csaif-pl-DS-comp_think_panel_L3_Python\"},{\"changed_at\":\"2025-05-29 20:44:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>

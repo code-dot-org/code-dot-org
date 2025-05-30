@@ -38,8 +38,8 @@ class ScriptsController < ApplicationController
         end
         return
       end
-      if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.script_id == @script.id || s.unit_group&.default_units&.any? {|u| u.id == @script.id}}
-        most_recent_section = current_user.sections_instructed.select {|s| s.script_id == @script.id || s.unit_group&.default_units&.any? {|u| u.id == @script.id}}.last
+      if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.script_id == @script.id || s.unit_group&.id == @course.id}
+        most_recent_section = current_user.sections_instructed.select {|s| s.script_id == @script.id || s.unit_group&.id == @course.id}.last
         section_id = params[:section_id]
         section_id ||= most_recent_section&.id
         if section_id

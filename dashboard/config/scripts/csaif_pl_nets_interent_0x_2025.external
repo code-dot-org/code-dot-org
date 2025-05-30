@@ -6,30 +6,32 @@ markdown <<MARKDOWN
 # HTTP and DNS
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Domain Name System (DNS):</strong> A protocol that allows computers to request and share web content, like webpages, images, and videos.</p>
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Domain Name System (DNS):</strong> translates human-friendly website names (like www.example.com) into numerical IP addresses (and vice versa).</p>
 </div>
 
-#### The DNS helps your device find the IP address of a website through a step-by-step process involving several servers, each with a specific role. This system is designed for efficiency, with servers working together like a team to quickly find the right information without overloading any one server. Additionally, caching helps speed things up by saving IP addresses of recently visited sites, so your device doesn’t have to repeat the entire process every time.
+#### DNS translates easy-to-remember domain names (like www.example.com) into machine-readable IP addresses—similar to how a phone book matches names to phone numbers. This translation is essential because computers use IP addresses to locate and communicate with each other on the Internet.
 
-#### DNS converts human-friendly usernames (or domain names) into machine-readable IP addresses and GET requests structure how information is requested. DNS makes our lives easier by automatically handling the translation of names to IP addresses—just like a phone book.
+#### To do this, DNS relies on a network of specialized servers that work together to find the correct IP address. Each server has a specific role, and they share the workload to avoid overloading any single server. To speed things up, DNS also uses **caching** to store the IP addresses of recently visited websites so your device doesn't have to go through the entire lookup process every time.
+
+#### Once DNS finds the correct IP address, HTTP takes over. HTTP is the system used by computers to request and deliver web content—like when your browser asks a website to send a page, image, or video. It defines how messages are formatted and transmitted, making it possible for your device and the web server to communicate smoothly.
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>HyperText Transfer Protocol (HTTP):</strong> A system that translates human-friendly website names (like www.example.com) into numerical IP addresses that computers use to find and communicate with each other on the Internet.</p>
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>HyperText Transfer Protocol (HTTP):</strong> Allows computers to request and share web content, like web page text, images, and videos.</p>
 </div>
 
 ## 📝 To Do
 
-#### Try out <a href='https://studio.code.org/s/nati-pilot-content-2024/lessons/6/levels/3?no_redirect=1 ' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>HTTP Cats for HTTP Requests Exploration</a>.
+#### Try out the <a href='https://docs.google.com/presentation/d/1ki13_JAxL2vcyozYA6v8QMSGaRyMOYbyI1-I9PwWVU4/edit?slide=id.g337c18634ef_0_0#slide=id.g337c18634ef_0_0' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Scavenger Hunt Activity</a> to explore how your browser requests and receives files from a website. Take the time to work through the four tasks, and document your own findings in a *copy* of the Activity Guide if you desire. 
 
 <div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> If you can, try this on a school computer on the school network. Students may not have access to the network settings they need to do this activity on their own. If not, you may need to modify this activity. One way to do this is to take screenshots of the content to display to students.
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> If you can, try this on a school computer on the school network. Students may or may not have access to developer tools. While using developer tools is an optional part of this activity, it would be good to know beforehand whether or not you should advise students to try using them.
 </p>
 </div>
 
 <br>
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This activity is from Lesson 6. You can find more details in the full <a href='https://studio.code.org/s/nati-pilot-content-2024/lessons/6' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+    ➡️ This activity is from Lesson 6. You can find more details in the full <a href='https://studio.code.org/s/aif4-2025/lessons/6' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
 </p>
 MARKDOWN
