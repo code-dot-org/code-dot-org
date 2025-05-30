@@ -28,6 +28,10 @@ const SET_SEEN_PROGRESS_TABLE_INVITATION =
   'currentUser/SET_SEEN_PROGRESS_TABLE_INVITATION';
 const SET_USER_CREATED_AT = 'currentUser/SET_USER_CREATED_AT';
 const SET_USER_SCHOOL_INFO = 'currentUser/SET_USER_SCHOOL_INFO';
+const SET_SHOW_SCHOOL_INFO_INTERSTITIAL =
+  'currentUser/SET_SHOW_SCHOOL_INFO_INTERSTITIAL';
+const SET_SHOW_SCHOOL_INFO_CONFIRMATION =
+  'currentUser/SET_SHOW_SCHOOL_INFO_CONFIRMATION';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 
@@ -113,6 +117,14 @@ export const setUserSchoolInfo = userSchoolInfo => ({
   type: SET_USER_SCHOOL_INFO,
   userSchoolInfo,
 });
+export const setShowSchoolInfoInterstitial = showSchoolInfoInterstitial => ({
+  type: SET_SHOW_SCHOOL_INFO_INTERSTITIAL,
+  showSchoolInfoInterstitial,
+});
+export const setShowSchoolInfoConfirmation = showSchoolInfoConfirmation => ({
+  type: SET_SHOW_SCHOOL_INFO_CONFIRMATION,
+  showSchoolInfoConfirmation,
+});
 
 const initialState = {
   userId: null,
@@ -137,6 +149,8 @@ const initialState = {
   userCreatedAt: null,
   userSharingDisabled: false,
   userSchoolInfo: {},
+  showSchoolInfoInterstitial: false,
+  showSchoolInfoConfirmation: false,
 };
 
 export default function currentUser(state = initialState, action) {
@@ -251,6 +265,18 @@ export default function currentUser(state = initialState, action) {
     return {
       ...state,
       userSchoolInfo: action.userSchoolInfo,
+    };
+  }
+  if (action.type === SET_SHOW_SCHOOL_INFO_INTERSTITIAL) {
+    return {
+      ...state,
+      showSchoolInfoInterstitial: action.showSchoolInfoInterstitial,
+    };
+  }
+  if (action.type === SET_SHOW_SCHOOL_INFO_CONFIRMATION) {
+    return {
+      ...state,
+      showSchoolInfoConfirmation: action.showSchoolInfoConfirmation,
     };
   }
 

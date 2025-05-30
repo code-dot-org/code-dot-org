@@ -16,6 +16,8 @@ import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser, {
   setCurrentUserHasSeenStandardsReportInfo,
   setUserSchoolInfo,
+  setShowSchoolInfoInterstitial,
+  setShowSchoolInfoConfirmation,
 } from '@cdo/apps/templates/currentUserRedux';
 import manageStudents, {
   setLoginType,
@@ -52,7 +54,8 @@ const {
   sectionOrder,
   providers,
   existingSchoolInfo,
-  usIp,
+  showSchoolInfoInterstitial,
+  showSchoolInfoConfirmation,
 } = scriptData;
 
 $(document).ready(function () {
@@ -75,7 +78,6 @@ $(document).ready(function () {
     isRtl,
   });
 
-  console.log(existingSchoolInfo, usIp);
   const store = getStore();
   store.dispatch(
     setCurrentUserHasSeenStandardsReportInfo(hasSeenStandardsReportInfo)
@@ -84,6 +86,8 @@ $(document).ready(function () {
   store.dispatch(setLocaleCode(localeCode));
   store.dispatch(setAuthProviders(providers));
   store.dispatch(setUserSchoolInfo(existingSchoolInfo));
+  store.dispatch(setShowSchoolInfoInterstitial(showSchoolInfoInterstitial));
+  store.dispatch(setShowSchoolInfoConfirmation(showSchoolInfoConfirmation));
 
   const showAITutorTab = canViewStudentAIChatMessages;
 

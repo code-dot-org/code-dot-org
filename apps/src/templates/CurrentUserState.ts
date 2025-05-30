@@ -46,4 +46,6 @@ export interface CurrentUserState {
   userSharingDisabled: boolean;
   inUSA: boolean;
   userSchoolInfo: CurrentUserSchoolInfo;
+  showSchoolInfoInterstitial: boolean;
+  showSchoolInfoConfirmation: boolean;
 }
