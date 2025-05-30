@@ -127,4 +127,20 @@ class FileBucketTest < FilesApiTestBase
     @file_bucket.s3.unstub(:list_object_versions)
     @file_bucket.s3.unstub(:delete_objects)
   end
+
+  def test_allowed_file_name_rejects_unsafe
+    unsafe_filenames = [
+      "bad\rname.png",
+      "bad\nname.png",
+      "bad\0name.png",
+      "bad\x01name.png",
+      "bad\x1Fname.png",
+      "bad/name.png",
+      "bad\\name.png",
+      ""
+    ]
+    unsafe_filenames.each do |filename|
+      refute @file_bucket.allowed_file_name?(filename), "Should reject: #{filename.inspect}"
+    end
+  end
 end

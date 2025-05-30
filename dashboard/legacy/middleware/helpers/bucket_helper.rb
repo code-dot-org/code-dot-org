@@ -18,7 +18,16 @@ class BucketHelper
     self.s3 ||= AWS::S3.create_client
   end
 
-  def allowed_file_name?(_filename)
+  # Returns true if the filename is safe for use in HTTP headers and S3 keys.
+  # Rejects filenames containing CR (\r) or LF (\n) to prevent header injection.
+  # Allows Unicode, dashes, underscores, dots, and other printable characters.
+  def allowed_file_name?(filename)
+    # Reject if filename contains CR or LF
+    return false if /[\r\n]/.match?(filename)
+    # Reject filenames with slashes or backslashes to prevent path traversal
+    return false if filename.include?("/") || filename.include?("\\")
+    # Reject empty filenames
+    return false if filename.empty?
     true
   end
 

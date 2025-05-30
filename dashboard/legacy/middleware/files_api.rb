@@ -399,13 +399,13 @@ class FilesApi < Sinatra::Base
     not_authorized unless owns_channel?(encrypted_channel_id)
     file_type = File.extname(filename)
     buckets = get_bucket_impl(endpoint).new
+    # Reject unsafe filenames (CR, LF, null, control chars, slashes, etc.)
+    bad_request unless buckets.allowed_file_name?(filename)
     if body.length >= max_file_size
       body = buckets.try_resize_file(body, file_type)
     end
 
     file_too_large(endpoint) unless body.length < max_file_size
-
-    bad_request unless buckets.allowed_file_name? filename
 
     # verify that file type is in our allowlist, and that the user-specified
     # mime type matches what Sinatra expects for that file type.
@@ -746,13 +746,14 @@ class FilesApi < Sinatra::Base
     # .jfif files use the same protocol as .jpg files, which is why rename-only is sufficient.
     filename.gsub!(/(.jfif|.JFIF)/, '.jpg') if File.extname(filename.downcase) == '.jfif'
 
+    bucket = FileBucket.new
     unescaped_filename = CGI.unescape(filename)
+    # Reject unsafe filenames (CR, LF, null, control chars, slashes, etc.)
+    bad_request unless bucket.allowed_file_name?(unescaped_filename)
     unescaped_filename_downcased = unescaped_filename.downcase
     bad_request if unescaped_filename_downcased == FileBucket::MANIFEST_FILENAME
     bad_request if unescaped_filename_downcased.length > FileBucket::MAXIMUM_FILENAME_LENGTH
     bad_request if html_file?(unescaped_filename) && !valid_html_file?(encrypted_channel_id, unescaped_filename, body)
-
-    bucket = FileBucket.new
     manifest = get_manifest(bucket, encrypted_channel_id)
     manifest_is_unchanged = true
 

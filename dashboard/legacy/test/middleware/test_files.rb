@@ -830,6 +830,28 @@ class FilesTest < FilesApiTestBase
     assert successful?
   end
 
+  def test_rejects_unsafe_filenames
+    # Only test CR and LF for header injection
+    unsafe_filenames = [
+      "bad\rname.txt",
+      "bad\nname.txt"
+    ]
+    unsafe_filenames.each do |filename|
+      post_file_data(@api, filename, "data", "text/plain")
+      # Should be sanitized or rejected
+      files = @api.list_objects["files"]
+      sanitized = filename.gsub(/[^\w.\-]/, '-')
+      stored = files.find {|f| f["filename"] == sanitized}
+      assert stored, "Expected sanitized filename #{sanitized} to be present"
+      @api.get_object(stored["filename"])
+      assert successful?
+      header = last_response['Content-Disposition']
+      refute_match(/[\r\n]/, header, "Header contains CR or LF: #{header.inspect}")
+      assert_equal "attachment; filename=\"#{stored["filename"]}\"", header, "Header was: #{header.inspect}"
+      delete_all_manifest_versions
+    end
+  end
+
   private def delete_all_files(bucket)
     delete_all_objects(CDO.files_s3_bucket, bucket)
   end
