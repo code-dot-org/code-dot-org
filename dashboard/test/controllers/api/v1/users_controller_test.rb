@@ -402,13 +402,13 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
       _(response.headers['Access-Control-Allow-Credentials']).must_equal 'true'
     end
 
-    CDO.marketing_hosts.each do |marketing_host|
-      it "allows CDO CORS from #{marketing_host}" do
-        request.headers['Origin'] = marketing_host
+    CDO.marketing_sites_hosts.each do |marketing_site_host|
+      it "allows CDO CORS from #{marketing_site_host}" do
+        request.headers['Origin'] = marketing_site_host
 
         get :signed_in
 
-        _(response.headers['Access-Control-Allow-Origin']).must_equal marketing_host
+        _(response.headers['Access-Control-Allow-Origin']).must_equal marketing_site_host
         _(response.headers['Access-Control-Allow-Methods']).must_equal 'GET'
         _(response.headers['Access-Control-Allow-Headers']).must_equal '*'
         _(response.headers['Access-Control-Allow-Credentials']).must_equal 'true'

@@ -14,7 +14,7 @@ module Cdo
     # Match CDO_*, plus RACK_ENV and RAILS_ENV.
     ENV_PREFIX = /^(CDO|(RACK|RAILS)(?=_ENV))_/
 
-    MARKETING_HOSTS = [
+    MARKETING_SITES_HOSTS = [
       # Contentful localhost
       'http://localhost:3001',
       'http://localhost.code.org:3001',
@@ -136,8 +136,8 @@ module Cdo
       site_host('code.org')
     end
 
-    def marketing_hosts
-      MARKETING_HOSTS
+    def marketing_sites_hosts
+      MARKETING_SITES_HOSTS
     end
 
     def site_url(domain, path = '', scheme = '', ge_region: nil)
