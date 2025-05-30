@@ -4,7 +4,7 @@ require 'csv'
 FILENAME = ARGV[0].freeze
 
 unless FILENAME
-  puts <<~EOS
+  puts <<~USAGE
     Usage: #{$0} filename.csv
     Requirements:
       * the part of the filename before .csv is the framework shortcode.
@@ -16,7 +16,7 @@ unless FILENAME
       * the first token in each cell is the shortcode and the rest is the description.
       * cells can be blank in the parent category and category columns. in this
         case, the most recent non-blank value for that column is reused.
-  EOS
+  USAGE
   exit(1)
 end
 

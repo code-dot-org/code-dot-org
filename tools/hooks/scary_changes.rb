@@ -52,7 +52,7 @@ class ScaryChangeDetector
     changes = @all.grep(/^dashboard\/test\/ui\/features\//)
     return if changes.empty?
 
-    puts red <<-EOS
+    puts red <<-OUTPUT
 
         Looks like you added or edited UI tests:
 
@@ -65,27 +65,27 @@ class ScaryChangeDetector
         Note that (as of January 2021) CI will not successfully run all tests across all browsers,
         so you may need another commit without the [test all browsers] tag
         if you'd like to see all tests (in Chrome) passing in CI without manual inspection.
-    EOS
+    OUTPUT
   end
 
   private def detect_new_table_or_new_column
     changes = @all.grep(/^dashboard\/db\/migrate\//)
     return if changes.empty? || !(@changed_lines.include?("add_column") || @changed_lines.include?("create_table"))
 
-    puts red <<-EOS
+    puts red <<-OUTPUT
 
         Looks like you are creating a table or adding a column in this migration:
         #{changes.join("\n")}
         Do you have all the indexes needed for this change?
 
-    EOS
+    OUTPUT
   end
 
   private def detect_column_rename
     changes = @all.grep(/^dashboard\/db\/migrate\//)
     return if changes.empty? || !@changed_lines.include?("rename_column")
 
-    puts red <<-EOS
+    puts red <<-OUTPUT
 
         Looks like you are renaming a column in this migration:
         #{changes.join("\n")}
@@ -93,14 +93,14 @@ class ScaryChangeDetector
         Have you verified that the updated database schema works with the previously deployed application version?
         For more information on this issue see https://docs.google.com/document/d/1QHCjUdLz7D7fE-Cy4HrrtJ5FOSnSth7sNHfSemwNSfw.
 
-    EOS
+    OUTPUT
   end
 
   private def detect_migration_causing_db_performance_risk
     changes = @all.grep(/^dashboard\/db\/migrate\//)
     return if changes.empty? || !(@changed_lines.include?("add_column") || @changed_lines.include?("add_index") || @changed_lines.include?("change_column"))
 
-    puts red <<-EOS
+    puts red <<-OUTPUT
 
         Looks like you are adding a column, changing a column or adding an index in this migration:
         #{changes.join("\n")}
@@ -109,7 +109,7 @@ class ScaryChangeDetector
         The may cause MySQL to rebuild the entire table.
         For more information see https://dev.mysql.com/doc/refman/8.0/en/innodb-online-ddl-operations.html#online-ddl-column-operations-table
 
-    EOS
+    OUTPUT
   end
 
   private def detect_missing_yarn_lock
@@ -128,14 +128,14 @@ class ScaryChangeDetector
   private def detect_special_files
     changes = @all.grep(/locals.yml$/)
     unless changes.empty?
-      puts red <<-EOS
+      puts red <<-OUTPUT
 
         Looks like you are changing locals.yml. This is probably a mistake.
         If this change is intentional, you can bypass this message with the
           --no-verify
         flag.
 
-      EOS
+      OUTPUT
       raise "Commit blocked."
     end
   end
@@ -143,7 +143,7 @@ class ScaryChangeDetector
   private def detect_dropbox_conflicts
     changes = @added.grep(/'s conflicted copy/)
     unless changes.empty?
-      puts red <<~EOS
+      puts red <<~OUTPUT
 
                 Looks like you are adding dropbox conflicted copy files.
                 This is probably a mistake.
@@ -161,7 +161,7 @@ class ScaryChangeDetector
                   --no-verify
                 flag.
 
-      EOS
+      OUTPUT
       raise "Commit blocked."
     end
   end
