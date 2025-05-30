@@ -1910,6 +1910,16 @@ const nextConfig: NextConfig = {
         destination: 'https://global.code.org/farsi',
         permanent: false,
       },
+      {
+        source: '/professional-learning/middle-high',
+        destination: 'https://studio.code.org/professional-learning/workshops',
+        permanent: false,
+      },
+      {
+        source: '/professional-learning/elementary',
+        destination: 'https://studio.code.org/professional-learning/workshops',
+        permanent: false,
+      },
     ];
   },
 };
