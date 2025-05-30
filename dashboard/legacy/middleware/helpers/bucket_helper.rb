@@ -24,8 +24,8 @@ class BucketHelper
   def allowed_file_name?(filename)
     # Reject if filename contains CR or LF
     return false if /[\r\n]/.match?(filename)
-    # Reject filenames with slashes or backslashes to prevent path traversal
-    return false if filename.include?("/") || filename.include?("\\")
+    # Reject filenames with backslashes, or ../ to prevent path traversal
+    return false if filename.include?("\\") || filename.include?("../")
     # Reject empty filenames
     return false if filename.empty?
     true
