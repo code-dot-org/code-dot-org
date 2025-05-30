@@ -24,6 +24,12 @@ class MusicRegistry {
     return this.playerRef;
   }
 
+  // Returns the current player, or null if it has not been set.
+  // Necessary for rendering blocks in code documentation, without a player.
+  public getOptionalPlayer(): MusicPlayer | null {
+    return this.playerRef;
+  }
+
   public set player(player: MusicPlayer) {
     this.playerRef = player;
   }

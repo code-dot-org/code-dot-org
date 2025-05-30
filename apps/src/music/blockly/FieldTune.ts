@@ -2,6 +2,7 @@ import * as GoogleBlockly from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import {DEFAULT_KEY} from '../constants';
 import MusicRegistry from '../MusicRegistry';
 import {
   InstrumentEventValue,
@@ -118,7 +119,7 @@ export default class FieldTune extends GoogleBlockly.Field {
     );
 
     const {events, scaleMode, relative} = this.getValue();
-    const key = MusicRegistry.player.getKey();
+    const key = MusicRegistry.getOptionalPlayer()?.getKey() || DEFAULT_KEY;
 
     const mapFn = relative
       ? (event: InstrumentTickEvent) => ({
