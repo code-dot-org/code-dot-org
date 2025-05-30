@@ -47,6 +47,7 @@ class MegaSection
       name: 'CSF - Mega Section',
       script_name_1: 'coursea-2019',
       script_name_2: 'coursea-2018',
+      unit_group_1_name: 'coursea-2019',
     )
 
     puts "Created section and progress in #{Time.now - mid_time} seconds"
@@ -101,12 +102,13 @@ class MegaSection
   def self.create_section(options)
     script_1 = Unit.get_from_cache(options[:script_name_1])
     script_2 = Unit.get_from_cache(options[:script_name_2])
+    unit_group_1 = UnitGroup.get_from_cache(options[:unit_group_1_name])
     script_levels_1 = script_1.script_levels.includes(:levels)
     script_levels_2 = script_2.script_levels.includes(:levels)
-
+    grades = Array(options[:grade])
     # Create the section
-    section = create :section, script: script_1,
-      **options.slice(:teacher, :name, :login_type, :grade)
+    section = create :section, script: script_1, grade: grades, unit_group: unit_group_1,
+      **options.slice(:teacher, :name, :login_type)
 
     # Create students
     students = []
@@ -150,8 +152,8 @@ class MegaSection
         teacher_feedbacks << build(:teacher_feedback,
           student_id: student_user.id,
           teacher_id: section.teacher.id,
-          script_level_id: script_level.id,
-          level_id: script_level.levels.first.id,
+          level: script_level.level,
+          script: script_level.script,
           comment: tiny_lipsum
         )
       end
@@ -170,8 +172,8 @@ class MegaSection
         teacher_feedbacks << build(:teacher_feedback,
           student_id: student_user.id,
           teacher_id: section.teacher.id,
-          script_level_id: script_level.id,
-          level_id: script_level.levels.first.id,
+          level: script_level.level,
+          script: script_level.script,
           comment: tiny_lipsum
         )
       end

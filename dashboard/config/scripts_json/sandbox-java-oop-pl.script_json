@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-23 15:10:50 UTC",
+    "serialized_at": "2025-05-27 15:53:30 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1524,6 +1524,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-accessor-video"
+        ],
         "progression": "Accessor and Mutator Methods"
       },
       "bonus": false,
@@ -1621,6 +1624,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-structure-mutator-methods-info-29-2"
+        ],
         "progression": "Accessor and Mutator Methods"
       },
       "bonus": false,
@@ -1643,6 +1649,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-mutator-video"
+        ],
         "progression": "Accessor and Mutator Methods"
       },
       "bonus": false,
@@ -1765,6 +1774,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-toString-video"
+        ],
         "progression": "Printing Objects"
       },
       "bonus": false,
@@ -1787,6 +1799,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-toString-panel-35"
+        ],
         "progression": "Printing Objects"
       },
       "bonus": false,
@@ -1809,6 +1824,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-structure-toPrint-info-35"
+        ],
         "progression": "Printing Objects"
       },
       "bonus": false,
@@ -1831,6 +1849,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-toPrint-modify-36"
+        ],
         "progression": "Printing Objects"
       },
       "bonus": false,
@@ -1853,6 +1874,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-toPrint-modify-37"
+        ],
         "progression": "Printing Objects"
       },
       "bonus": false,
@@ -1875,6 +1899,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-toPrint-practice-37"
+        ],
         "progression": "Printing Objects"
       },
       "bonus": false,
@@ -1897,6 +1924,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-next-steps"
+        ],
         "progression": "Printing Objects"
       },
       "bonus": false,

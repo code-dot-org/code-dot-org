@@ -5,19 +5,21 @@ description 'description here'
 markdown <<MARKDOWN
 # Handling Packets
 
-#### In <a href='https://studio.code.org/s/nati-pilot-content-2024/lessons/5' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 5</a>, students will develop and test a protocol to handle packets.
+#### In <a href='https://studio.code.org/s/aif4-2025/lessons/5' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 5</a>, students will develop and test a protocol to handle packets.
 
 
-#### Students will again join a different router than your partner and get their IP address. Then, using the simulator, they’ll chat about any topic (e.g., favorite movie, band, or superpower).
+#### Students will again join a different router than their partner and get their IP address. Then, using the simulator, they’ll chat about any topic (e.g., favorite movie, band, or superpower).
 <p align="center">
-<img src="https://images.code.org/cb50ff2aff8af716c00ae7c65f5d174b-Screenshot 2025-04-22 at 10.18.59 AM.png" alt="lesson plan diagram" width="80%" style="border-radius:10px; border: 5px solid black;">
+<img src="https://images.code.org/cb50ff2aff8af716c00ae7c65f5d174b-Screenshot 2025-04-22 at 10.18.59 AM.png" alt="Internet Simulator join lobby with 6 different routers" width="80%" style="border-radius:10px; border: 5px solid black;">
 </p>
 
-#### Students should notice some new features in the Internet Simulator.
+#### Students should notice some new features in the Internet Simulator which model how packets are sent and received over the Internet.
 <p align="center">
-<img src="https://images.code.org/143d32d0c809c57b90e2e663837a06ce-Screenshot 2025-04-22 at 10.20.10 AM.png" alt="lesson plan diagram" width="90%" style="border-radius:10px; border: 5px solid black;">
+<img src="https://images.code.org/143d32d0c809c57b90e2e663837a06ce-Screenshot 2025-04-22 at 10.20.10 AM.png" alt="updated send a message screen with limited package size and an add packet button" width="90%" style="border-radius:10px; border: 5px solid black;">
 </p>
 
-#### Students will continue to use the Internet Simulator in this lesson to test their own protocol to handle packets.
+#### These new features will limit the size of any given messages requiring messages to broken up into multiple chunks (i.e. packets). Additionally, these packets may be dropped or received out of order making the conversation difficult to follow. 
+
+#### Students will continue to use the Internet Simulator to develop and test their own protocol to handle packets. For example, a student protocol may involve numbering packets so that they can be put back into the correct order when received.
 
 MARKDOWN

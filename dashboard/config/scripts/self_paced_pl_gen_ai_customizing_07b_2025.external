@@ -1,0 +1,41 @@
+name 'self-paced-pl-gen-ai-customizing_07b_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# System Prompting
+
+#### There are two more strategies you can use when writing system prompts: **chain of reasoning** and **giving examples**.
+
+
+## Chain of Reasoning
+#### The steps the model takes to explain its answer, showing how it got from the question to the final response, like solving a math problem step by step.
+#### *Having trouble viewing the image or want more information, check out the relevant <a href='https://studio.code.org/s/exploring-gen-ai2-2025/lessons/5/levels/1?section_id=709' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>curriculum level</a>.*
+<img src="https://images.code.org/b47dd24b89e67d4dbb150d1bf6298daf-Screenshot 2024-09-11 at 2.17.19 PM.png" alt="chain of reasoning example" width="900px" style="border: 2px solid black; border-radius: 8px; float:center">
+
+<br>
+
+## Giving Examples
+
+#### Providing specific instances or situations to make the explanation clearer, like saying, "For example, when you..." to help people understand better.
+#### *Having trouble viewing the image or want more information, check out the relevant <a href='https://studio.code.org/s/exploring-gen-ai2-2025/lessons/5/levels/5?section_id=709' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>curriculum level</a>.*
+<img src="https://images.code.org/3432fa7472cb8abd54d4d89209b701fc-Screenshot 2024-09-11 at 2.18.21 PM.png" alt="giving examples example" width="900px" style="border: 2px solid black; border-radius: 8px; float:center">
+
+<br>
+
+## Up Next!
+#### The next level is a **Choice Level** from the curriculum. Choice levels offer a chance to differentiate learning - in this one you'll choose between different scenarios to apply your system prompting skills. 
+
+#### When you're trying out this level, remember the system prompting strategies we've discussed already - **role, tone, audience, and delivery** - as well as **chain of reasoning and giving examples**. Feel free to come back to this level if you get stuck.
+
+<br>
+
+
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 5. You can find teacher answer keys and exemplars as part of the <a href='https://studio.code.org' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+
+
+
+MARKDOWN

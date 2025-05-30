@@ -24,7 +24,7 @@
     "csa9-2025",
     "csa-postap-se-and-computer-vision-2025"
   ],
-  "published_state": "beta",
+  "published_state": "preview",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",

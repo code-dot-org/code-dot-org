@@ -23,6 +23,7 @@
 #  published_date                   :datetime
 #  self_paced_pl_course_offering_id :integer
 #  ai_teaching_assistant_available  :boolean          default(FALSE), not null
+#  facilitator_course_permissions   :json
 #
 # Indexes
 #
