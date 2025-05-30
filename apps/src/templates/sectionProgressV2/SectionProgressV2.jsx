@@ -29,6 +29,8 @@ import styles from './progress-table-v2.module.scss';
 function SectionProgressV2({
   scriptId,
   sectionId,
+  courseId,
+  unitPosition,
   unitData,
   isLoadingProgress,
   isRefreshingProgress,
@@ -38,6 +40,7 @@ function SectionProgressV2({
   loadExpandedLessonsFromLocalStorage,
   hideTopHeading,
 }) {
+  console.log(scriptId, courseId, unitPosition);
   const params = useParams();
   React.useEffect(() => {
     loadExpandedLessonsFromLocalStorage(scriptId, sectionId);
@@ -71,9 +74,12 @@ function SectionProgressV2({
       !isRefreshingProgress &&
       sectionId &&
       scriptId &&
+      courseId &&
+      unitPosition &&
       isMounted // only update loaded data if component is still mounted.
     ) {
-      loadUnitProgress(scriptId, sectionId).then(() =>
+      console.log(courseId, unitPosition);
+      loadUnitProgress(scriptId, sectionId, courseId, unitPosition).then(() =>
         setLoadedData({scriptId, sectionId})
       );
     }
@@ -83,6 +89,8 @@ function SectionProgressV2({
   }, [
     scriptId,
     sectionId,
+    courseId,
+    unitPosition,
     unitData,
     isLoadingProgress,
     isRefreshingProgress,
@@ -147,6 +155,8 @@ function SectionProgressV2({
 SectionProgressV2.propTypes = {
   scriptId: PropTypes.number,
   sectionId: PropTypes.number,
+  courseId: PropTypes.number,
+  unitPosition: PropTypes.number,
   unitData: unitDataPropType,
   isLoadingProgress: PropTypes.bool.isRequired,
   isRefreshingProgress: PropTypes.bool.isRequired,
@@ -161,6 +171,8 @@ export default connect(
   state => ({
     scriptId: state.unitSelection.scriptId,
     sectionId: state.teacherSections.selectedSectionId,
+    courseId: state.unitSelection.courseId,
+    unitPosition: state.unitSelection.unitPosition,
     unitData: getCurrentUnitData(state),
     isLoadingProgress: state.sectionProgress.isLoadingProgress,
     isRefreshingProgress: state.sectionProgress.isRefreshingProgress,

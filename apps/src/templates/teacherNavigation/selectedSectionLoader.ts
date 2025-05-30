@@ -1,7 +1,11 @@
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
-import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import {
+  setCourseId,
+  setScriptId,
+  setUnitPosition,
+} from '@cdo/apps/redux/unitSelectionRedux';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 import {
@@ -59,6 +63,7 @@ export const asyncLoadSelectedSection = async (
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const setSelectedSectionData = (sectionData: any) => {
+  console.log(sectionData);
   getStore().dispatch(
     setStudentsForCurrentSection(sectionData.id, sectionData.students)
   );
@@ -66,6 +71,16 @@ export const setSelectedSectionData = (sectionData: any) => {
   const defaultScriptId = sectionData.script ? sectionData.script.id : null;
   if (defaultScriptId) {
     getStore().dispatch(setScriptId(defaultScriptId));
+  }
+
+  // Default the courseId and unitPosition to the script assigned to the section
+  const defaultCourseId = sectionData.course_id;
+  if (defaultCourseId) {
+    getStore().dispatch(setCourseId(defaultCourseId));
+  }
+  const defaultUnitPosition = sectionData.unitPosition;
+  if (defaultUnitPosition) {
+    getStore().dispatch(setUnitPosition(defaultUnitPosition));
   }
 
   if (!sectionData.sharing_disabled && sectionData.script.project_sharing) {

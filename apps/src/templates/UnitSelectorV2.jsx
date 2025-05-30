@@ -37,6 +37,8 @@ function UnitSelectorV2({
   filterToSelectedCourse = false,
   sectionId,
   unitId,
+  courseId,
+  unitPosition,
   coursesWithProgress,
   className,
   setScriptId,
@@ -56,7 +58,7 @@ function UnitSelectorV2({
     e => {
       const newUnitId = parseInt(e.target.value);
       setScriptId(newUnitId);
-      loadUnitProgress(newUnitId, sectionId);
+      loadUnitProgress(newUnitId, sectionId, courseId, unitPosition);
 
       recordEvent('change_script', sectionId, {
         old_script_id: unitId,
@@ -69,7 +71,7 @@ function UnitSelectorV2({
         unitId: newUnitId,
       });
     },
-    [unitId, setScriptId, sectionId]
+    [unitId, setScriptId, sectionId, courseId, unitPosition]
   );
 
   const itemGroups = coursesWithProgress
@@ -122,6 +124,8 @@ function UnitSelectorV2({
 UnitSelectorV2.propTypes = {
   filterToSelectedCourse: PropTypes.bool,
   unitId: PropTypes.number,
+  courseId: PropTypes.number,
+  unitPosition: PropTypes.number,
   sectionId: PropTypes.number,
   coursesWithProgress: PropTypes.array.isRequired,
   setScriptId: PropTypes.func.isRequired,
@@ -137,6 +141,8 @@ export const UnconnectedUnitSelectorV2 = UnitSelectorV2;
 export default connect(
   state => ({
     unitId: state.unitSelection.scriptId,
+    courseId: state.unitSelection.courseId,
+    unitPosition: state.unitSelection.unitPosition,
     sectionId: state.teacherSections.selectedSectionId,
     coursesWithProgress: state.unitSelection.coursesWithProgress,
     isLoadingCourses: state.unitSelection.isLoadingCoursesWithProgress,

@@ -292,6 +292,7 @@ class ApiController < ApplicationController
 
   def show_courses_with_progress
     section = load_section
+    puts CourseVersion.courses_for_unit_selector(section.participant_unit_ids)
     render json: CourseVersion.courses_for_unit_selector(section.participant_unit_ids)
   end
 

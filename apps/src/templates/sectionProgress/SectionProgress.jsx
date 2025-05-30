@@ -44,6 +44,8 @@ class SectionProgress extends Component {
   static propTypes = {
     //Provided by redux
     scriptId: PropTypes.number,
+    courseId: PropTypes.number,
+    unitPosition: PropTypes.number,
     sectionId: PropTypes.number,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     setCurrentView: PropTypes.func.isRequired,
@@ -66,7 +68,13 @@ class SectionProgress extends Component {
 
   componentDidMount() {
     if (this.props.scriptId) {
-      loadUnitProgress(this.props.scriptId, this.props.sectionId)?.then(() => {
+      console.log(this.props);
+      loadUnitProgress(
+        this.props.scriptId,
+        this.props.sectionId,
+        this.props.courseId,
+        this.props.unitPosition
+      )?.then(() => {
         this.setState(state => ({
           ...state,
           loadedSectionId: this.props.sectionId,
@@ -78,9 +86,17 @@ class SectionProgress extends Component {
   componentDidUpdate(prevProps) {
     if (
       prevProps.scriptId !== this.props.scriptId ||
-      prevProps.sectionId !== this.props.sectionId
+      prevProps.sectionId !== this.props.sectionId ||
+      prevProps.courseId !== this.props.courseId ||
+      prevProps.unitPosition !== this.props.unitPosition
     ) {
-      loadUnitProgress(this.props.scriptId, this.props.sectionId)?.then(() => {
+      console.log(this.props);
+      loadUnitProgress(
+        this.props.scriptId,
+        this.props.sectionId,
+        this.props.courseId,
+        this.props.unitPosition
+      )?.then(() => {
         this.setState(state => ({
           ...state,
           loadedSectionId: this.props.sectionId,
@@ -321,6 +337,8 @@ export const UnconnectedSectionProgress = SectionProgress;
 export default connect(
   state => ({
     scriptId: state.unitSelection.scriptId,
+    courseId: state.unitSelection.courseId,
+    unitPosition: state.unitSelection.unitPosition,
     sectionId: state.teacherSections.selectedSectionId,
     currentView: state.sectionProgress.currentView,
     scriptData: getCurrentUnitData(state),

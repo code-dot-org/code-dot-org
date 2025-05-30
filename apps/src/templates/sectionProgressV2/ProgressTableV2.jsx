@@ -34,10 +34,13 @@ function ProgressTableV2({
   expandedLessonIds,
   isSkeleton,
   unitId,
+  courseId,
+  unitPosition,
   levelProgressByStudent,
   isLoadingSectionData,
 }) {
   const outsideTableRef = React.useRef();
+  console.log(unitId, courseId, unitPosition);
 
   const [scrollCallback, setScrollCallback] = React.useState(undefined);
 
@@ -51,9 +54,18 @@ function ProgressTableV2({
 
   React.useEffect(() => {
     if (!isSkeleton && filteredStudents.length !== students.length) {
-      loadUnitProgress(unitId, sectionId);
+      console.log(courseId, unitPosition);
+      loadUnitProgress(unitId, sectionId, courseId, unitPosition);
     }
-  }, [filteredStudents, students, unitId, sectionId, isSkeleton]);
+  }, [
+    filteredStudents,
+    students,
+    unitId,
+    sectionId,
+    isSkeleton,
+    courseId,
+    unitPosition,
+  ]);
 
   const sortedStudents = React.useMemo(() => {
     if (isSkeleton && filteredStudents.length === 0) {
@@ -171,6 +183,8 @@ ProgressTableV2.propTypes = {
   expandedLessonIds: PropTypes.arrayOf(PropTypes.number).isRequired,
   isSkeleton: PropTypes.bool,
   unitId: PropTypes.number,
+  courseId: PropTypes.number,
+  unitPosition: PropTypes.number,
   levelProgressByStudent: PropTypes.objectOf(
     PropTypes.objectOf(studentLevelProgressType)
   ),
@@ -183,6 +197,8 @@ export default connect(state => ({
   students: state.teacherSections.selectedStudents,
   unitData: getCurrentUnitData(state),
   unitId: state.unitSelection.scriptId,
+  courseId: state.unitSelection.courseId,
+  unitPosition: state.unitSelection.unitPosition,
   levelProgressByStudent:
     state.sectionProgress.studentLevelProgressByUnit[
       state.unitSelection.scriptId

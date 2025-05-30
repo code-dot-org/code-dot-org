@@ -34,6 +34,8 @@ import StandardsReportHeader from './StandardsReportHeader';
 
 function StandardsReport({
   scriptId,
+  courseId,
+  unitPosition,
   sectionId,
   scriptFriendlyName,
   scriptData,
@@ -56,7 +58,8 @@ function StandardsReport({
       const scriptIdFromTD =
         window.opener.teacherDashboardStoreInformation.scriptId;
       setScriptId(scriptIdFromTD);
-      loadUnitProgress(scriptIdFromTD, sectionId);
+      console.log(courseId, unitPosition);
+      loadUnitProgress(scriptIdFromTD, sectionId, courseId, unitPosition);
     } catch (e) {
       throw new Error(
         '/standards_report must be opened from the `generate PDF report` button of the Standards tab on the v1 progress page on a section assigned to curriculum that has standards (e.g. `Course C (2023)`).'
@@ -67,6 +70,8 @@ function StandardsReport({
     setTeacherCommentForReport,
     setScriptId,
     numStudentsInSection,
+    courseId,
+    unitPosition,
   ]);
 
   const getLinkToOverview = () => {
@@ -182,6 +187,8 @@ function StandardsReport({
 StandardsReport.propTypes = {
   //redux
   scriptId: PropTypes.number,
+  courseId: PropTypes.number,
+  unitPosition: PropTypes.number,
   sectionId: PropTypes.number.isRequired,
   scriptFriendlyName: PropTypes.string.isRequired,
   scriptData: unitDataPropType,
@@ -227,6 +234,8 @@ const styles = {
 export default connect(
   state => ({
     scriptId: state.unitSelection.scriptId,
+    courseId: state.unitSelection.courseId,
+    unitPosition: state.unitSelection.unitPosition,
     sectionId: state.teacherSections.selectedSectionId,
     scriptData: getCurrentUnitData(state),
     scriptFriendlyName: getSelectedScriptFriendlyName(state),
