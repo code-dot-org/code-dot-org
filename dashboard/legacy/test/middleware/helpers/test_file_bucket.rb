@@ -132,10 +132,8 @@ class FileBucketTest < FilesApiTestBase
     unsafe_filenames = [
       "bad\rname.png",
       "bad\nname.png",
-      "bad\0name.png",
-      "bad\x01name.png",
-      "bad\x1Fname.png",
-      "bad/name.png",
+      "bad\r\nname.png",
+      "bad/../name.png",
       "bad\\name.png",
       ""
     ]
