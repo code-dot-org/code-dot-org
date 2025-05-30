@@ -14,3 +14,4 @@ Dir.chdir(deploy_dir) do
   system 'touch ./build-started'
   ChatClient.log "build restarted via #{$0}"
 end
+
