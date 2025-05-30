@@ -1,5 +1,6 @@
 import * as Blockly from 'blockly/core';
 
+import type {InputPlugin} from '../plugins';
 import {isDarkTheme} from '../themes';
 
 type PuzzleTab = Blockly.blockRendering.PuzzleTab;
@@ -55,7 +56,7 @@ export default class CdoConstantsProvider extends Blockly.blockRendering
    * @returns The shape object for the connection.
    * @override
    */
-  shapeFor(connection: Blockly.Connection) {
+  shapeFor(connection: Blockly.RenderedConnection) {
     // `connection.check` returns a list of accepted value types for the connection
     // or null if all types are compatible.
     // For connections that are customized (sprite, behavior, location), there is

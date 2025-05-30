@@ -3,7 +3,7 @@ import * as Blockly from 'blockly/core';
 import {PluginType} from '../../plugins';
 import type {GlobalPlugin} from '../../plugins';
 
-import {FieldButton} from './fieldButton';
+import {FieldButton, FieldButtonOptions} from './fieldButton';
 
 /** SVG element namespace */
 const SVG_NS = 'http://www.w3.org/2000/svg';
@@ -15,7 +15,7 @@ const APP_HEIGHT = 400;
  * interacting with the playfield.
  */
 export class FieldLocation extends FieldButton {
-  static fromJson(options) {
+  static fromJson(options: FieldButtonOptions) {
     const icon = document.createElementNS(SVG_NS, 'tspan');
     icon.style.fontFamily = 'FontAwesome';
     icon.textContent = ' \uf276'; // map-pin

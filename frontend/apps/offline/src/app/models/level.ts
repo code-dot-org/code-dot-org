@@ -1,3 +1,4 @@
+import * as Blockly from 'blockly/core';
 import csv from 'csv-parser';
 import {createReadStream} from 'fs';
 import fs from 'fs/promises';
@@ -5,6 +6,9 @@ import {JSDOM} from 'jsdom';
 import path from 'path';
 
 import type {MazeData} from '@code-dot-org/maze';
+
+import type {BlocklySerialization} from '@/components/blockly/types';
+import {convertBlocklyXmlToJson} from '@/components/blockly/xml';
 
 /** Describes a single level hint. */
 export interface HintData {
@@ -65,7 +69,7 @@ export interface ArtistData {
   initialX?: number;
   initialY?: number;
   startDirection?: number;
-  predrawBlocks?: string;
+  predrawBlocks?: BlocklySerialization;
   images: {
     filename: string;
     position: [number, number];
@@ -75,9 +79,9 @@ export interface ArtistData {
 
 /** Generic description for Blockly data. */
 export interface BlocklyData {
-  startBlocks?: string;
-  toolboxBlocks?: string;
-  solutionBlocks?: string;
+  startBlocks?: BlocklySerialization;
+  toolboxBlocks?: Blockly.utils.toolbox.ToolboxInfo;
+  solutionBlocks?: BlocklySerialization;
 }
 
 /** Describes a level */
@@ -366,208 +370,6 @@ export const sanitizeJSON: (data: string) => string = data =>
     // Remove whitespace
     .trim();
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function convertBlocklyXmlToJson(xmlString: string): any {
-  const parser = new new JSDOM().window.DOMParser();
-  const xml = parser.parseFromString(xmlString, 'text/xml');
-
-  const blocksArray = Array.from(xml.documentElement.children)
-    .filter(el => el.tagName === 'block')
-    .map(el => parseBlockXml(el));
-
-  return {
-    blocks: {
-      blocks: blocksArray,
-    },
-  };
-}
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function parseBlockXml(blockEl: Element): any {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const block: any = {
-    type: blockEl.getAttribute('type') || undefined,
-    id: blockEl.getAttribute('id') || undefined,
-  };
-  console.log('parse block xml', block);
-
-  // Position (only in top-level blocks)
-  const x = blockEl.getAttribute('x');
-  const y = blockEl.getAttribute('y');
-  if (x && y) {
-    block.x = parseInt(x, 10);
-    block.y = parseInt(y, 10);
-  }
-
-  // Collect user-defined attributes as extraState
-  const knownAttrs = new Set(['type', 'id', 'x', 'y', 'deletable', 'movable']);
-  const extraState: Record<string, string | number | boolean> = {};
-  for (const attr of Array.from(blockEl.attributes)) {
-    if (!knownAttrs.has(attr.name)) {
-      extraState[attr.name] = parseValue(attr.value);
-    }
-  }
-  if (Object.keys(extraState).length > 0) {
-    block.extraState = extraState;
-    block.data = {...extraState};
-  }
-
-  // Fields
-  const fields = Array.from(blockEl.children).filter(
-    el => el.tagName === 'field' || el.tagName === 'title',
-  );
-  if (fields.length > 0) {
-    block.fields = {};
-    for (const fieldEl of fields) {
-      const name = fieldEl.getAttribute('name');
-      if (name) {
-        block.fields[name] = parseValue(fieldEl.textContent ?? '');
-      }
-    }
-  }
-
-  // Recursively parse values, statements, next
-  for (const child of Array.from(blockEl.children)) {
-    switch (child.tagName) {
-      case 'value':
-      case 'statement':
-        {
-          const inputName = child.getAttribute('name');
-          const subBlock = child.querySelector('block');
-          if (inputName && subBlock) {
-            block.inputs ??= {};
-            block.inputs[inputName] = {
-              block: parseBlockXml(subBlock),
-            };
-          }
-        }
-        break;
-
-      case 'next':
-        {
-          const nextBlock = child.querySelector('block');
-          if (nextBlock) {
-            block.next = {
-              block: parseBlockXml(nextBlock),
-            };
-          }
-        }
-        break;
-
-      case 'mutation':
-        // Place attributes into extra state
-        console.log(
-          'MUTATION',
-          child,
-          blockEl.getAttribute('type'),
-          'ok?',
-          child.tagName,
-          Array.from(child.attributes),
-          child.getAttribute('elseif'),
-          child.attributes[0],
-        );
-        for (const attr of Array.from(child.attributes)) {
-          block.extraState ??= {};
-          if (attr.name === 'elseif') {
-            block.extraState['elseIfCount'] = attr.value;
-          } else {
-            block.extraState[attr.name] = attr.value;
-          }
-        }
-
-        // Some specific legacy mutators also pull in attributes from the next sibling
-        for (const attr of Array.from(
-          child.nextElementSibling?.attributes || [],
-        )) {
-          block.extraState ??= {};
-          if (attr.name === 'elseif') {
-            block.extraState['elseIfCount'] = attr.value;
-          } else {
-            block.extraState[attr.name] = attr.value;
-          }
-        }
-        break;
-    }
-  }
-
-  return block;
-}
-
-function parseValue(value: string): string | number | boolean {
-  if (value === 'true') return true;
-  if (value === 'false') return false;
-  if (!isNaN(Number(value))) return Number(value);
-  return value;
-}
-
-/*
-export const convertBlocklyXmlToJson: (xmlString: string) => object = xmlString => {
-  // Parse XML string to DOM
-  const parser = new new JSDOM().window.DOMParser();
-  const xml = parser.parseFromString(xmlString, 'application/xml');
-
-  // Create temporary workspace
-  const tempWorkspace = new Blockly.Workspace();
-
-  // Walk XML <block> elements and stash their user-defined attributes
-  const blockExtraStates = new Map<string, Record<string, boolean | number | string>>();
-
-  const blockNodes = xml.getElementsByTagName('block');
-  for (const blockNode of Array.from(blockNodes)) {
-    const id = blockNode.getAttribute('id');
-    if (!id) continue;
-
-    const knownAttrs = new Set(['type', 'id', 'x', 'y', 'deletable', 'movable', 'editable']);
-    const extraState: Record<string, boolean | number | string> = {};
-
-    for (const attr of Array.from(blockNode.attributes)) {
-      if (!knownAttrs.has(attr.name)) {
-        // Save custom/user-defined attributes
-        const value = attr.value;
-        try {
-          // Try to parse booleans/numbers
-          if (value === 'true') extraState[attr.name] = true;
-          else if (value === 'false') extraState[attr.name] = false;
-          else if (!isNaN(Number(value))) extraState[attr.name] = Number(value);
-          else extraState[attr.name] = value;
-        } catch {
-          extraState[attr.name] = value;
-        }
-      }
-    }
-
-    if (Object.keys(extraState).length > 0) {
-      blockExtraStates.set(id, extraState);
-    }
-  }
-
-  // Inject blocks into workspace
-  Blockly.Xml.domToWorkspace(xml, tempWorkspace);
-
-  // Serialize workspace to JSON
-  const json = Blockly.serialization.workspaces.save(tempWorkspace);
-  console.log("JSON?", json);
-
-  // Inject extraState into corresponding block JSON
-  if (json.blocks?.blocks) {
-    for (const blockJson of json.blocks.blocks) {
-      const extra = blockExtraStates.get(blockJson.id);
-      if (extra) {
-        blockJson.extraState = {
-          ...(blockJson.extraState || {}),
-          ...extra
-        };
-      }
-    }
-  }
-
-  // Dispose of temp workspace
-  tempWorkspace.dispose();
-
-  return json;
-}
-*/
-
 /**
  * Parses a Code.org level file.
  */
@@ -659,7 +461,7 @@ export const parseLevelData: (
     root?.querySelector('xml > *') ? root?.innerHTML?.trim() : undefined;
 
   const convert = (xmlString?: string) =>
-    xmlString ? convertBlocklyXmlToJson(xmlString) : undefined;
+    xmlString ? convertBlocklyXmlToJson(parser, xmlString) : undefined;
 
   if (ret.type === 'Artist') {
     isBlockly = true;
@@ -714,7 +516,9 @@ export const parseLevelData: (
           | undefined,
     );
 
-    const createFlyoutToolbox = (blocks: Block[]) => ({
+    const createFlyoutToolbox = (
+      blocks: Blockly.serialization.blocks.State[],
+    ) => ({
       kind: 'flyoutToolbox',
       contents: blocks.map(block => ({
         ...block,
@@ -731,14 +535,6 @@ export const parseLevelData: (
       ),
       solutionBlocks: convert(parseXml(roots[2])),
     };
-
-    console.log(
-      'start blocks',
-      ret.blocklyData.startBlocks,
-      JSON.stringify(
-        convertBlocklyXmlToJson(ret.blocklyData.startBlocks || '<xml/>'),
-      ),
-    );
   }
 
   // Read video data

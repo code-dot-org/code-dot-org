@@ -1,4 +1,5 @@
-import React, {ReactNode} from 'react';
+import * as Blockly from 'blockly/core';
+import React, {ReactNode, useRef} from 'react';
 
 import type {LevelData} from '@/app/models/level';
 import {
@@ -7,7 +8,12 @@ import {
   BlocklyOptions,
 } from '@/components/blockly';
 import type {Plugin} from '@/components/blockly/plugins';
-import type {Theme, Renderer} from '@/components/blockly/types';
+import type {
+  Theme,
+  Renderer,
+  Environment,
+  BlocklySerialization,
+} from '@/components/blockly/types';
 import Workspace from '@/components/workspace';
 import Instructions from '@/components/workspace/information/instructions';
 import MultipleChoice from '@/components/workspace/information/multipleChoice';
@@ -15,10 +21,22 @@ import BlocklyProvider from '@/providers/BlocklyProvider';
 
 import moduleStyles from './blocklyLevel.module.scss';
 
-export interface BlocklyLevelProps {
+/**
+ * Specific environmental information for all blockly environments.
+ */
+export interface BlocklyLevelEnvironment extends Environment {
+  /** The main workspace reference, when available. */
+  mainWorkspace?: Blockly.Workspace;
+  /** The hidden workspace reference, when provided. */
+  hiddenWorkspace?: Blockly.Workspace;
+}
+
+export type BlocklyLevelProps<
+  T extends BlocklyLevelEnvironment = BlocklyLevelEnvironment,
+> = {
   levelData: LevelData;
-  startBlocks?: string;
-  hiddenBlocks?: string;
+  startBlocks?: BlocklySerialization;
+  hiddenBlocks?: BlocklySerialization;
   data?: object;
   options?: BlocklyOptions;
   customBlocks?: BlockDefinition[];
@@ -29,9 +47,13 @@ export interface BlocklyLevelProps {
   avatar?: string;
   /** A set of plugins to install to this workspace */
   plugins?: Plugin[];
-}
+  /** The environmental information to give to all extensions */
+  environment?: T;
+};
 
-const BlocklyLevel: React.FunctionComponent<BlocklyLevelProps> = ({
+function BlocklyLevel<
+  T extends BlocklyLevelEnvironment = BlocklyLevelEnvironment,
+>({
   levelData,
   startBlocks,
   hiddenBlocks,
@@ -44,9 +66,14 @@ const BlocklyLevel: React.FunctionComponent<BlocklyLevelProps> = ({
   theme,
   renderer,
   plugins,
-}) => {
+  environment,
+}: BlocklyLevelProps<T>): React.ReactElement {
+  const workspaceRef = useRef<Blockly.Workspace | null>(null);
+  const hiddenWorkspaceRef = useRef<Blockly.Workspace | null>(null);
+
   return (
     <BlocklyProvider
+      environment={environment as unknown as Environment}
       customBlocks={customBlocks}
       theme={theme}
       plugins={plugins}
@@ -77,16 +104,24 @@ const BlocklyLevel: React.FunctionComponent<BlocklyLevelProps> = ({
       >
         <div className={moduleStyles.blocklyLevel}>
           {hiddenBlocks && (
-            <BlocklyWorkspace
+            <BlocklyWorkspace<T>
               hidden
               options={{
                 readOnly: true,
               }}
               startBlocks={hiddenBlocks}
               plugins={plugins}
+              onInject={() => {
+                // Retain the hidden workspace in the environment, if it exists
+                if (environment) {
+                  environment.hiddenWorkspace =
+                    hiddenWorkspaceRef.current || undefined;
+                }
+              }}
+              workspaceRef={hiddenWorkspaceRef}
             />
           )}
-          <BlocklyWorkspace
+          <BlocklyWorkspace<T>
             data={data}
             options={{
               readOnly: levelData.multipleChoice ? true : undefined,
@@ -104,13 +139,23 @@ const BlocklyLevel: React.FunctionComponent<BlocklyLevelProps> = ({
                   ? undefined
                   : levelData.blocklyData?.toolboxBlocks
             }
-            onInject={onInject}
+            onInject={() => {
+              // Retain the main workspace in the environment, if it exists
+              if (environment) {
+                environment.mainWorkspace = workspaceRef.current || undefined;
+              }
+
+              if (onInject) {
+                onInject();
+              }
+            }}
+            workspaceRef={workspaceRef}
             plugins={plugins}
           />
         </div>
       </Workspace>
     </BlocklyProvider>
   );
-};
+}
 
 export default BlocklyLevel;

@@ -1,12 +1,54 @@
+import {IProcedureBlock} from '@blockly/block-shareable-procedures';
 import * as Blockly from 'blockly/core';
 import {JavascriptGenerator} from 'blockly/javascript';
 
+import type {RendererClassType} from './renderers/base';
+
+export interface BlocklySerialization {
+  blocks?: {
+    blocks?: Blockly.serialization.blocks.State[];
+  };
+}
+
+/**
+ * The content defining a list or dropdown field.
+ */
+export type BlockOptionsList = [
+  (
+    | string
+    | {
+        /** The image URL */
+        src: string;
+        /** The alt text for the image */
+        alt: string;
+        /** The width to enforce for the image */
+        width?: number;
+        /** The height to enforce for the image */
+        height?: number;
+      }
+  ),
+  string,
+][];
+
+/**
+ * The definition of an argument (arg0, etc)
+ */
 export interface BlockArgDefinition {
+  /** The registered field type */
   type: string;
+  /** The internal name for the field which is referenced by a generator */
   name: string;
-  options?: [string, string][];
+  /** The options for dropdowns or lists */
+  options?: BlockOptionsList;
+  /** The type to explicitly force connecting blocks to output */
   check?: string;
+  /** The initial value of the field */
   value?: string | number;
+  /** The initial text of the field */
+  text?: string;
+  /** For input fields, controls browser spellcheck */
+  spellcheck?: boolean;
+  variable?: string;
 }
 
 /**
@@ -42,6 +84,58 @@ export interface SimpleBlockDefinition {
 }
 
 /**
+ * Our encapsulation of block mutators.
+ */
+export interface Mutator {
+  name: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: any;
+}
+
+/**
+ * Specifically a block with the procedure mixin methods.
+ */
+export type ProcedureBlock = Blockly.BlockSvg & IProcedureBlock;
+
+/**
+ * A procedure block with some of the legacy callbacks included.
+ */
+export type LegacyProcedureBlock = ProcedureBlock & {
+  getProcedureCall: () => string;
+  renameProcedure: (p1: string, p2: string) => void;
+  getProcedureDef: () => [string, string[], boolean];
+};
+
+/**
+ * Our encapsulation of block extensions, which are functions that are used
+ * when generating and initializing certain blocks.
+ */
+export interface Extension {
+  /** The unique name of the extension which can be referenced from other blocks. */
+  name: string;
+  /** The extension method. We pass in the Blockly environment object, also. */
+  extension: (this: Blockly.BlockSvg, environment: Environment) => void;
+}
+
+/**
+ * Our encapsulation of block mixins, which just add methods and properties to
+ * particular block types.
+ */
+export interface Mixin {
+  /** The unique name of the mixin which can be referenced from other blocks. */
+  name: string;
+  /**
+   * The mixin object. Each key will be attached to the Block class for the
+   * particular block type which has this mixin listed as an 'extension'.
+   *
+   * If the mixin object has an 'environment' key, this will be populated by
+   * the Blockly environment info which is then accessible by the block's
+   * mixin methods.
+   */
+  mixin: object;
+}
+
+/**
  * Describes a custom block.
  */
 export interface ComplexBlockDefinition {
@@ -66,6 +160,8 @@ export interface ComplexBlockDefinition {
   previousStatement?: boolean;
   /** Whether or not the block can have subsequent blocks attached to it */
   nextStatement?: boolean;
+  /** The output type, which makes this a potential input for another block. */
+  output?: string;
   /** The first caption */
   message0?: string;
   /** The first set of interactive arguments */
@@ -82,8 +178,13 @@ export interface ComplexBlockDefinition {
   message3?: string;
   /** The fourth set of interactive arguments */
   args3?: BlockArgDefinition[];
+  /** Extensions / Mixins to add to this particular block type. */
+  extensions?: (string | Extension | Mixin)[];
+  /** A mutator to apply to this particular type of block. */
+  mutator?: string | Mutator;
 }
 
+/** Used for encapsulating all forms of block definitions we allow. */
 export type BlockDefinition = SimpleBlockDefinition | ComplexBlockDefinition;
 
 /**
@@ -162,6 +263,17 @@ export interface Theme {
  */
 export interface Renderer {
   name: string;
-  //class: Blockly.blockRendering.Renderer;
-  class: Blockly.IRegistrable;
+  class: RendererClassType;
+}
+
+/**
+ * Represents a payload for block mixins and extensions.
+ *
+ * This can be used to pass information to blocks and Blockly extensions that
+ * gives context to the current environment. For instance, to pass along the
+ * knowledge of external workspaces, media assets, or library routines.
+ */
+export interface Environment {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: any;
 }

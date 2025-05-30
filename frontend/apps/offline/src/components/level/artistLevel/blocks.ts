@@ -1,8 +1,10 @@
 import * as Blockly from 'blockly/core';
-import {javascriptGenerator} from 'blockly/javascript';
+import {javascriptGenerator, Order} from 'blockly/javascript';
 import * as En from 'blockly/msg/en';
 
 import type {BlockDefinition} from '@/components/blockly/types';
+
+import type {Skin} from './skins';
 
 type Direction =
   | 'up'
@@ -18,7 +20,7 @@ type Direction =
  * Describes the cardinal direction letters for a given direction.
  */
 const cardinals: {
-  [key: Direction]: {
+  [key in Direction]: {
     letter: string;
     full: string;
     type: string;
@@ -119,11 +121,11 @@ const generateSimpleBlocksForDirection = (
             name: 'LENGTH',
             options: [
               [
-                {src: skin.longDrawLine, alt: 'long distance'},
+                {src: skin.longLineDraw, alt: 'long distance'},
                 'LONG_MOVE_LENGTH',
               ],
               [
-                {src: skin.shortDrawLine, alt: 'short distance'},
+                {src: skin.shortLineDraw, alt: 'short distance'},
                 'SHORT_MOVE_LENGTH',
               ],
             ],
@@ -140,10 +142,12 @@ const generateSimpleBlocksForDirection = (
     },
   }) as BlockDefinition;
 
-const generateSimpleBlocksForAllDirections = (skin: Skin) => {
-  return ['move', 'jump']
+const generateSimpleBlocksForAllDirections: (
+  skin: Skin,
+) => BlockDefinition[] = (skin: Skin) => {
+  return (['move', 'jump'] as ('move' | 'jump')[])
     .map(type =>
-      ['up', 'down', 'left', 'right'].map(direction =>
+      (['up', 'down', 'left', 'right'] as Direction[]).map(direction =>
         generateSimpleBlocksForDirection(skin, type, direction, false),
       ),
     )
@@ -187,11 +191,7 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
       // Generate JavaScript for moving forward/backward
       const dir = block.getFieldValue('DIR');
       const distance =
-        javascriptGenerator.valueToCode(
-          block,
-          'VALUE',
-          javascriptGenerator.ORDER_NONE,
-        ) || '0';
+        javascriptGenerator.valueToCode(block, 'VALUE', Order.NONE) || '0';
       return `Artist.${dir}(${distance}, 'block_id_${block.id}');\n`;
     },
   },
@@ -237,11 +237,7 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
     generator: (block: Blockly.Block) => {
       // Generate JavaScript for moving forward/backward
       const value =
-        javascriptGenerator.valueToCode(
-          block,
-          'VALUE',
-          javascriptGenerator.ORDER_NONE,
-        ) || '0';
+        javascriptGenerator.valueToCode(block, 'VALUE', Order.NONE) || '0';
       return `Artist.globalAlpha(${value}, 'block_id_${block.id}');\n`;
     },
   },
@@ -272,11 +268,7 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
       // Generate JavaScript for jumping forward/backward
       const dir = block.getFieldValue('DIR');
       const distance =
-        javascriptGenerator.valueToCode(
-          block,
-          'VALUE',
-          javascriptGenerator.ORDER_NONE,
-        ) || '0';
+        javascriptGenerator.valueToCode(block, 'VALUE', Order.NONE) || '0';
       return `Artist.${dir}(${distance || '0'}, 'block_id_${block.id}');\n`;
     },
   },
@@ -308,37 +300,41 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
       return `Artist.jumpToXY(${xParam}, ${yParam}, 'block_id_${block.id}');\n`;
     },
   },
-  ...['draw_move_by_constant', 'draw_move_by_constant_dropdown'].map(type => ({
-    type: type,
-    helpUrl: '',
-    tooltip: 'Moves the artist forward or backward by the specified amount.',
-    style: 'default',
-    nextStatement: true,
-    previousStatement: true,
-    message0: 'move %1 by %2 pixels',
-    args0: [
-      {
-        type: 'field_dropdown',
-        name: 'DIR',
-        options: [
-          ['forward', 'moveForward'],
-          ['backward', 'moveBackward'],
+  ...['draw_move_by_constant', 'draw_move_by_constant_dropdown'].map(
+    type =>
+      ({
+        type: type,
+        helpUrl: '',
+        tooltip:
+          'Moves the artist forward or backward by the specified amount.',
+        style: 'default',
+        nextStatement: true,
+        previousStatement: true,
+        message0: 'move %1 by %2 pixels',
+        args0: [
+          {
+            type: 'field_dropdown',
+            name: 'DIR',
+            options: [
+              ['forward', 'moveForward'],
+              ['backward', 'moveBackward'],
+            ],
+          },
+          {
+            type: 'field_input',
+            name: 'VALUE',
+            check: 'Number',
+            value: 100,
+          },
         ],
-      },
-      {
-        type: 'field_input',
-        name: 'VALUE',
-        check: 'Number',
-        value: 100,
-      },
-    ],
-    generator: (block: Blockly.Block) => {
-      // Generate JavaScript for moving forward/backward
-      const dir = block.getFieldValue('DIR');
-      const distance = block.getFieldValue('VALUE');
-      return `Artist.${dir}(${distance}, 'block_id_${block.id}');\n`;
-    },
-  })),
+        generator: (block: Blockly.Block) => {
+          // Generate JavaScript for moving forward/backward
+          const dir = block.getFieldValue('DIR');
+          const distance = block.getFieldValue('VALUE');
+          return `Artist.${dir}(${distance}, 'block_id_${block.id}');\n`;
+        },
+      }) as BlockDefinition,
+  ),
   {
     type: 'draw_turn_by_constant',
     helpUrl: '',
@@ -403,37 +399,40 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
       return `Artist.${dir}(${angle}, 'block_id_${block.id}');\n`;
     },
   },
-  ...['jump_by_constant', 'jump_by_constant_dropdown'].map(type => ({
-    type: type,
-    helpUrl: '',
-    tooltip: 'Moves the artist without leaving any marks.',
-    style: 'default',
-    nextStatement: true,
-    previousStatement: true,
-    message0: 'jump %1 by %2 pixels',
-    args0: [
-      {
-        type: 'field_dropdown',
-        name: 'DIR',
-        options: [
-          ['forward', 'jumpForward'],
-          ['backward', 'jumpBackward'],
+  ...['jump_by_constant', 'jump_by_constant_dropdown'].map(
+    type =>
+      ({
+        type: type,
+        helpUrl: '',
+        tooltip: 'Moves the artist without leaving any marks.',
+        style: 'default',
+        nextStatement: true,
+        previousStatement: true,
+        message0: 'jump %1 by %2 pixels',
+        args0: [
+          {
+            type: 'field_dropdown',
+            name: 'DIR',
+            options: [
+              ['forward', 'jumpForward'],
+              ['backward', 'jumpBackward'],
+            ],
+          },
+          {
+            type: 'field_input',
+            name: 'VALUE',
+            check: 'Number',
+            value: 100,
+          },
         ],
-      },
-      {
-        type: 'field_input',
-        name: 'VALUE',
-        check: 'Number',
-        value: 100,
-      },
-    ],
-    generator: (block: Blockly.Block) => {
-      // Generate JavaScript for moving forward/backward
-      const dir = block.getFieldValue('DIR');
-      const distance = block.getFieldValue('VALUE');
-      return `Artist.${dir}(${distance}, 'block_id_${block.id}');\n`;
-    },
-  })),
+        generator: (block: Blockly.Block) => {
+          // Generate JavaScript for moving forward/backward
+          const dir = block.getFieldValue('DIR');
+          const distance = block.getFieldValue('VALUE');
+          return `Artist.${dir}(${distance}, 'block_id_${block.id}');\n`;
+        },
+      }) as BlockDefinition,
+  ),
   {
     type: 'draw_colour',
     helpUrl: '',
@@ -452,11 +451,8 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
     generator: (block: Blockly.Block) => {
       // Generate JavaScript for setting color
       const colour =
-        javascriptGenerator.valueToCode(
-          block,
-          'COLOUR',
-          javascriptGenerator.ORDER_NONE,
-        ) || "'#000'";
+        javascriptGenerator.valueToCode(block, 'COLOUR', Order.NONE) ||
+        "'#000'";
       return `Artist.penColour(${colour}, 'block_id_${block.id}');\n`;
     },
   },
@@ -521,41 +517,41 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
     previousStatement: true,
     generator: javascriptGenerator.forBlock.controls_repeat,
   },
-  ...['draw_width', 'draw_width_inline'].map(type => ({
-    type,
-    helpUrl: '',
-    tooltip: 'Changes the width of the pencil.',
-    style: 'default',
-    nextStatement: true,
-    previousStatement: true,
-    message0: 'set width %1',
-    args0: [
-      type === 'draw_width_inline'
-        ? {
-            type: 'field_input',
-            name: 'WIDTH',
-            check: 'Number',
-            value: 1,
-          }
-        : {
-            type: 'input_value',
-            name: 'WIDTH',
-            check: 'Number',
-          },
-    ],
-    generator: (block: Blockly.Block) => {
-      // Generate JavaScript for setting pen width
-      const width =
-        type === 'draw_width_inline'
-          ? block.getFieldValue('WIDTH')
-          : javascriptGenerator.valueToCode(
-              block,
-              'WIDTH',
-              javascriptGenerator.ORDER_NONE,
-            ) || '1';
-      return `Artist.penWidth(${width}, 'block_id_${block.id}');\n`;
-    },
-  })),
+  ...['draw_width', 'draw_width_inline'].map(
+    type =>
+      ({
+        type,
+        helpUrl: '',
+        tooltip: 'Changes the width of the pencil.',
+        style: 'default',
+        nextStatement: true,
+        previousStatement: true,
+        message0: 'set width %1',
+        args0: [
+          type === 'draw_width_inline'
+            ? {
+                type: 'field_input',
+                name: 'WIDTH',
+                check: 'Number',
+                value: 1,
+              }
+            : {
+                type: 'input_value',
+                name: 'WIDTH',
+                check: 'Number',
+              },
+        ],
+        generator: (block: Blockly.Block) => {
+          // Generate JavaScript for setting pen width
+          const width =
+            type === 'draw_width_inline'
+              ? block.getFieldValue('WIDTH')
+              : javascriptGenerator.valueToCode(block, 'WIDTH', Order.NONE) ||
+                '1';
+          return `Artist.penWidth(${width}, 'block_id_${block.id}');\n`;
+        },
+      }) as BlockDefinition,
+  ),
   ...generateSimpleBlocksForAllDirections(skin),
 ];
 

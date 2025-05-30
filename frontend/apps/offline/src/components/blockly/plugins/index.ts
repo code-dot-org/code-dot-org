@@ -5,7 +5,13 @@ import type {Theme} from '../types';
 /**
  * Determines the plugin type.
  */
-export const PluginType = {
+export const PluginType: {
+  Registry: 'registry';
+  Inject: 'inject';
+  Global: 'global';
+  Input: 'input';
+  Mixin: 'mixin';
+} = {
   /** This is a registry plugin. */
   Registry: 'registry',
   /** This plugin is instantiated after injection. */
@@ -30,7 +36,7 @@ export interface PluginBase {
  * injection.
  */
 export interface RegistryPlugin extends PluginBase {
-  type: PluginType.Registry;
+  type: typeof PluginType.Registry;
   slot: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   interface: new (...p: any[]) => any;
@@ -41,7 +47,7 @@ export interface RegistryPlugin extends PluginBase {
  * workspace as an argument.
  */
 export interface InjectPlugin extends PluginBase {
-  type: PluginType.Inject;
+  type: 'inject';
   instantiate: (workspace: Blockly.WorkspaceSvg, theme: Theme) => void;
 }
 
@@ -49,15 +55,16 @@ export interface InjectPlugin extends PluginBase {
  * Registers a global plugin which instantiates once before Blockly is injected.
  */
 export interface GlobalPlugin extends PluginBase {
-  type: PluginType.Global;
+  type: 'global';
   initialize: () => void;
+  uninitialize?: () => void;
 }
 
 /**
  * Registers an input plugin that adds an input type to a renderer.
  */
 export interface InputPlugin extends PluginBase {
-  type: PluginType.Input;
+  type: typeof PluginType.Input;
   /** The type to associate with this notch type. */
   check: string;
   /** The name for the shape. */
@@ -66,14 +73,14 @@ export interface InputPlugin extends PluginBase {
   makePath: (
     this: Blockly.blockRendering.ConstantProvider,
     shapeIndex: number,
-  ) => Blockly.blockRendering.Notch;
+  ) => Blockly.blockRendering.PuzzleTab;
 }
 
 /**
  * Registers a block mixin.
  */
 export interface MixinPlugin extends PluginBase {
-  type: PluginType.Mixin;
+  type: 'mixin';
   /** The name of the mixin which should be unique to all extensions. */
   name: string;
   /** A set of properties to add to the Block class. */

@@ -12,23 +12,31 @@ import type {Plugin} from '@/components/blockly/plugins';
 import BlockLimitsPlugin from '@/components/blockly/plugins/blockLimits';
 import FieldColourPlugin from '@/components/blockly/plugins/fields/fieldColour';
 import FieldLocationPlugin from '@/components/blockly/plugins/fields/fieldLocation';
+import RectangleInputPlugin from '@/components/blockly/plugins/inputs/rectangle';
 import RoundInputPlugin from '@/components/blockly/plugins/inputs/round';
 import TriangleInputPlugin from '@/components/blockly/plugins/inputs/triangle';
 import SharableProceduresPlugin from '@/components/blockly/plugins/sharableProcedures';
 import ToolboxTrashcanPlugin from '@/components/blockly/plugins/toolboxTrashcan';
 import ThrasosRenderer from '@/components/blockly/renderers/thrasos';
 import DefaultTheme from '@/components/blockly/themes/default';
-import {
-  getCodeFromBlockXmlSource,
-  getCodeFromBlockJsonSource,
-  getAllGeneratedCode,
-} from '@/components/blockly/utils';
-import BlocklyLevel, {BlocklyLevelProps} from '@/components/level/blocklyLevel';
+import {getAllGeneratedCode} from '@/components/blockly/utils';
+import BlocklyLevel, {
+  BlocklyLevelProps,
+  BlocklyLevelEnvironment,
+} from '@/components/level/blocklyLevel';
 
 import * as defaultAPI from './api';
 import blocks from './blocks';
 import SpriteLab from './SpriteLab';
 import Visualization from './Visualization';
+
+/**
+ * Specific environmental information for the Spritelab environment.
+ */
+export interface SpriteLabLevelEnvironment extends BlocklyLevelEnvironment {
+  useModalFunctionEditor: boolean;
+  noFunctionBlockFrame: boolean;
+}
 
 export interface SpriteLabLevelProps extends BlocklyLevelProps {
   levelData: LevelData;
@@ -44,6 +52,8 @@ const plugins: Plugin[] = [
   TriangleInputPlugin('Sprite'),
   // Use round notches for Behavior types
   RoundInputPlugin('Behavior'),
+  // Use rectangular notches for Location types
+  RectangleInputPlugin('Location'),
   // Animate a trashcan in the toolbox area
   ToolboxTrashcanPlugin,
   // Allow specifying block limits
@@ -70,69 +80,41 @@ const SpriteLabLevel: React.FunctionComponent<SpriteLabLevelProps> = ({
   const controller = useRef<SpriteLab | null>(null);
   const container = useRef<HTMLDivElement | null>(null);
 
+  // Create the environment. All blocks with extensions can see this data.
+  // This means we can reference the hidden workspace and some options.
+  const environment = useRef<SpriteLabLevelEnvironment>({
+    useModalFunctionEditor: true,
+    noFunctionBlockFrame: true,
+  });
+
   const currentAvatar = avatar || '/skins/gamelab/small_static_avatar.png';
 
   const [running, setRunning] = useState<boolean>(false);
-  const [stepping, setStepping] = useState<boolean>(false);
 
   const onReset = useCallback(() => {
-    console.log('onstep resetting');
     controller.current?.reset();
     setRunning(false);
-    setStepping(false);
   }, [controller]);
 
-  const execute = useCallback(
-    (step: boolean) => {
-      setStepping(step);
-      controller.current?.evaluate(
-        getAllGeneratedCode({
-          startBlock: 'when_run',
-        }),
-      );
-      setRunning(true);
-      if (!step) {
-        controller.current?.run();
-      }
-    },
-    [controller],
-  );
-
-  const onStep = useCallback(() => {
-    console.log('onstep', stepping);
-    if (!stepping) {
-      execute(true);
-    } else {
-      setRunning(true);
-    }
-    (async () => {
-      await controller.current?.step();
-      setRunning(false);
-    })();
-  }, [controller, stepping]);
+  const execute = useCallback(() => {
+    controller.current?.evaluate(
+      getAllGeneratedCode({
+        startBlock: 'when_run',
+      }),
+    );
+    setRunning(true);
+    controller.current?.run();
+  }, [controller]);
 
   const onRun = useCallback(() => {
-    execute(false);
-  }, [controller, stepping]);
+    execute();
+  }, [controller]);
 
   const onInject = useCallback(() => {
     if (container.current) {
-      const solutionCode = levelData.blocklyData?.solutionBlocks
-        ? typeof levelData.blocklyData?.solutionBlocks === 'string'
-          ? getCodeFromBlockXmlSource(levelData.blocklyData.solutionBlocks)
-          : getCodeFromBlockJsonSource(levelData.blocklyData.solutionBlocks)
-        : undefined;
-
-      console.log('LEVEL', levelData, solutionCode);
       controller.current = new SpriteLab({
         api: {...defaultAPI, ...(api || {})},
-        level: levelData.artistData || {
-          images: [],
-        },
-        instant: false,
-        isK1: false,
         container: container.current,
-        solutionCode,
       });
     }
   }, [controller, container]);
@@ -149,15 +131,25 @@ const SpriteLabLevel: React.FunctionComponent<SpriteLabLevelProps> = ({
     [];
   const filteredStartBlocks = {
     blocks: {
-      blocks: startBlocks.filter(block => block?.data?.uservisible !== false),
+      blocks: startBlocks.filter(
+        block => block?.extraState?.uservisible !== false,
+      ),
     },
   };
+
+  const procedures = startBlocks.filter(
+    block => block?.type === 'behavior_definition',
+  );
+  console.log('procedures', startBlocks, procedures);
 
   // Filter out blocks that are marked invisible to the user and place them in
   // a hidden workspace.
   const hiddenBlocks = {
     blocks: {
-      blocks: startBlocks.filter(block => block?.data?.uservisible === false),
+      blocks: startBlocks.filter(
+        block => block?.extraState?.uservisible === false,
+      ),
+      procedures: [],
     },
   };
 
@@ -173,14 +165,13 @@ const SpriteLabLevel: React.FunctionComponent<SpriteLabLevelProps> = ({
       visualization={
         visualization || (
           <Visualization
+            stepping={false}
             ref={container}
             running={running}
-            stepping={stepping}
             finishButton={false}
-            stepButton
+            pauseButton
             onRun={onRun}
             onReset={onReset}
-            onStep={onStep}
             onFinish={() => {}}
             className={visualizationClassName}
           />
@@ -194,6 +185,7 @@ const SpriteLabLevel: React.FunctionComponent<SpriteLabLevelProps> = ({
       }}
       onInject={onInject}
       plugins={plugins}
+      environment={environment.current}
       {...rest}
     />
   );

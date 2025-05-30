@@ -102,6 +102,8 @@ class Artist {
   private isFrozenSkin: boolean;
   /** The current speed value */
   private speed: number;
+  /** Whether or not we should animate the current step being invoked */
+  private shouldAnimate: boolean;
 
   /**
    * Instantiates an Artist class.
@@ -110,6 +112,7 @@ class Artist {
     this.options = options;
     this.pid = null;
     this.speed = 500;
+    this.shouldAnimate = false;
 
     const {api, skin} = options;
 
@@ -751,11 +754,11 @@ class Artist {
 
     // Animate all steps
     let animating = true;
-    this.shouldAnimate_ = true;
+    this.shouldAnimate = true;
     while (animating) {
       animating = await this.animate();
     }
-    this.shouldAnimate_ = false;
+    this.shouldAnimate = false;
   }
 
   /**
@@ -766,9 +769,9 @@ class Artist {
     await this.preloadAll();
 
     // Animate one step
-    this.shouldAnimate_ = true;
+    this.shouldAnimate = true;
     await this.animate();
-    this.shouldAnimate_ = false;
+    this.shouldAnimate = false;
   }
 
   /**
@@ -810,8 +813,8 @@ class Artist {
 
     console.log('animate', this.log);
     if (this.log.length === 0) {
-      if (!this.shouldAnimate_) {
-        this.driver.display();
+      if (!this.shouldAnimate) {
+        this.driver?.display();
       }
       return false;
     }
@@ -839,24 +842,24 @@ class Artist {
 
       const action = this.log[0];
 
-      if (this.shouldAnimate_) {
+      if (this.shouldAnimate) {
         //const id = action.arguments.id;
         //this.studioApp_.highlight(String(id));
       }
 
       // Should we execute another tuple in this frame of animation?
-      if (this.skin.consolidateTurnAndMove && this.checkforTurnAndMove_()) {
+      if (this.skin.consolidateTurnAndMove && this.checkforTurnAndMove()) {
         executeSecondTuple = true;
       }
 
       // We only smooth animate for Anna & Elsa, and only if there is not another tuple to be done.
 
       const tupleDone = this.performAction(action, {
-        smoothAnimate: this.skin.smoothAnimate && !executeSecondTuple,
+        smoothAnimate: !!(this.skin.smoothAnimate && !executeSecondTuple),
       });
 
-      if (this.shouldAnimate_) {
-        this.driver.display();
+      if (this.shouldAnimate) {
+        this.driver?.display();
       }
 
       if (tupleDone) {
@@ -876,10 +879,40 @@ class Artist {
     }
   }
 
+  /**
+   * Special case: if we have a turn, followed by a move forward, then we can just
+   * do the turn instantly and then begin the move forward in the same frame.
+   */
+  checkforTurnAndMove(): boolean {
+    let nextIsForward = false;
+
+    const action = this.log[0];
+    const {command} = action;
+
+    // Check first for a small turn movement.
+    if (command === 'RT') {
+      const {angle} = (action as RotateAction).arguments;
+      if (Math.abs(angle) <= 10) {
+        // Check that next command is a move forward.
+        if (this.log.length > 1) {
+          const nextAction = this.log[1];
+          const {command: nextCommand} = nextAction;
+          if (nextCommand === 'FD') {
+            nextIsForward = true;
+          }
+        }
+      }
+    }
+
+    return nextIsForward;
+  }
+
   resetStepInfo() {
-    this.driver.stepStartX = this.driver.x;
-    this.driver.stepStartY = this.driver.y;
-    this.driver.stepDistanceCovered = 0;
+    if (this.driver) {
+      this.driver.stepStartX = this.driver.x;
+      this.driver.stepStartY = this.driver.y;
+      this.driver.stepDistanceCovered = 0;
+    }
   }
 
   /**

@@ -9,7 +9,7 @@ interface ColorOverrides {
   text?: string;
 }
 
-interface FieldButtonOptions extends FieldConfig {
+export interface FieldButtonOptions extends Blockly.FieldConfig {
   value?: string;
   validator?: Blockly.FieldValidator<string> | null;
   onClick: () => void;
@@ -62,7 +62,7 @@ export class FieldButton extends Blockly.Field {
     this.allowReadOnlyClick = allowReadOnlyClick;
   }
 
-  static fromJson(options: Blockly.FieldButtonOptions) {
+  static fromJson(options: FieldButtonOptions) {
     //const options = options as FieldButtonOptions;
     return new FieldButton(options);
   }

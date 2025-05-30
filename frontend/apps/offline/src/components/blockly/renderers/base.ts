@@ -1,16 +1,18 @@
 import * as Blockly from 'blockly/core';
 
+import type {InputPlugin} from '../plugins';
+
 import CdoConstantsProvider from './constants';
 
-type RendererClassType<T extends Blockly.blockRendering.Renderer> = new (
-  name: string,
-) => T;
+export type RendererClassType = (
+  inputs: InputPlugin[],
+) => new (name: string) => Blockly.blockRendering.Renderer;
 
-function createRenderer<T extends RendererClassType>(
-  RendererClass: T,
+function createRenderer(
+  RendererClass: new (name: string) => Blockly.blockRendering.Renderer,
 ): RendererClassType {
   return (inputs: InputPlugin[]) =>
-    class Renderer extends RendererClass {
+    class extends RendererClass {
       /**
        * @override
        * Use our cdoConstantsProvider class instead of the default. Our PathObject has

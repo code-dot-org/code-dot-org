@@ -168,11 +168,17 @@ const Header: React.FC<HeaderProps> = ({
         className={moduleStyles.buttonLinks}
         aria-label={navLabel.secondary || 'Secondary navigation'}
       >
-        <ProjectsMenu
-          projectsLinks={projectsLinks}
-          projectsButtonLabel={projectsButtonLabel}
-          projectsButtonAriaLabel={projectsButtonAriaLabel}
-        />
+        {!!(
+          projectsLinks &&
+          projectsButtonLabel &&
+          projectsButtonAriaLabel
+        ) && (
+          <ProjectsMenu
+            projectsLinks={projectsLinks}
+            projectsButtonLabel={projectsButtonLabel}
+            projectsButtonAriaLabel={projectsButtonAriaLabel}
+          />
+        )}
         <SignInContext.Provider value={renderState}>
           <AccountButtons
             signIn={accountLinks.signIn}

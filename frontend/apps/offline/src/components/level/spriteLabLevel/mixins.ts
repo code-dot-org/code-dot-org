@@ -1,5 +1,9 @@
-import {IProcedureBlock} from '@blockly/block-shareable-procedures';
 import * as Blockly from 'blockly/core';
+
+import type {Environment} from '@/components/blockly/types';
+
+import type {SpriteLabLevelEnvironment} from './SpriteLabLevel';
+import type {AugmentedProcedureBlock} from './types';
 
 // This mixin's function is copied and modified from
 // https://github.com/google/blockly-samples/blob/9a83a2c78a3e2a993942e96c4933dcbb3b2c79d7/plugins/block-shareable-procedures/src/blocks.ts#L832-L858
@@ -7,11 +11,20 @@ import * as Blockly from 'blockly/core';
 // on behaviorId if there is no match by name. This is because a user might rename
 // a behavior for which there is a static behavior getter in the toolbox.
 
-type ProcedureBlock = Blockly.Block | IProcedureBlock;
-
+/**
+ * The calling block override for finding a function definition.
+ *
+ * We hide the function definitions in a hidden workspace when defining some
+ * behaviors or procedures that we want to provide as built-in. In other cases
+ * we allow defining behaviors in separate modals. Either way, this augments the
+ * normal procedure name lookup by also searching within the hidden workspace,
+ * if one exists.
+ */
 export const behaviorCallerGetDefMixin = {
   name: 'behavior_caller_get_def_mixin',
-  extension: function (this: ProcedureBlock) {
+  extension: function (this: Blockly.BlockSvg, environment: Environment) {
+    const spriteLabEnvironment = environment as SpriteLabLevelEnvironment;
+
     const mixin = {
       /**
        * Returns the procedure model that was found.
@@ -23,35 +36,49 @@ export const behaviorCallerGetDefMixin = {
        * @override
        */
       findProcedureModel_(
-        this: ProcedureBlock,
+        this: AugmentedProcedureBlock,
         name: string,
         params: string[] = [],
       ) {
         //if (Blockly.isEmbeddedWorkspace(this.workspace)) {
         //  return null;
         //}
-        const workspace = this.getTargetWorkspace_();
+
+        const workspace = this.workspace.isFlyout
+          ? this.workspace.targetWorkspace
+          : this.workspace;
         let model = workspace
-          .getProcedureMap()
-          .getProcedures()
-          .find(proc => proc.getName() === name);
+          ?.getProcedureMap()
+          ?.getProcedures()
+          ?.find(proc => proc.getName() === name);
+
+        if (this.workspace !== spriteLabEnvironment.mainWorkspace) {
+          //return null;
+        }
 
         /* Begin CDO Customization */
         // If we can't find a model normally, find one based on the behavior id.
         if (!model && this.behaviorId) {
           // All behavior definition blocks are on the hidden workspace.
-          const hiddenWorkspace = null; //Blockly.getHiddenDefinitionWorkspace();
+          const hiddenWorkspace = spriteLabEnvironment.hiddenWorkspace;
           if (hiddenWorkspace) {
+            console.log(
+              'environment looking at hidden workspace',
+              hiddenWorkspace,
+              hiddenWorkspace.getTopBlocks(),
+            );
             const definitionBlock = hiddenWorkspace
               .getTopBlocks()
               .filter(block => block.type === 'behavior_definition')
               .find(
                 block =>
-                  (block as ProcedureBlock).behaviorId === this.behaviorId,
-              ) as ProcedureBlock;
+                  (block as AugmentedProcedureBlock).behaviorId ===
+                  this.behaviorId,
+              ) as AugmentedProcedureBlock;
             if (definitionBlock) {
               model = definitionBlock.getProcedureModel();
             }
+            console.log('environment definition', definitionBlock, model);
           }
         }
         /* End CDO Customization */
@@ -106,7 +133,7 @@ function getAlphanumericId() {
 
 export const behaviorCreateDefMixin = {
   name: 'behavior_create_def_mixin',
-  extension: function (this: ProcedureBlock) {
+  extension: function (this: Blockly.BlockSvg, _: Environment) {
     const mixin = {
       /**
        * Creates a procedure definition block with the given name and params,
@@ -117,7 +144,11 @@ export const behaviorCreateDefMixin = {
        * @returns The procedure model associated with the new
        *     procedure definition block.
        */
-      createDef_(this: ProcedureBlock, name: string, params: string[] = []) {
+      createDef_(
+        this: AugmentedProcedureBlock,
+        name: string,
+        params: string[] = [],
+      ) {
         const xy = this.getRelativeToSurfaceXY();
         const newName = Blockly.Procedures.findLegalName(name, this);
         this.renameProcedure(name, newName);
@@ -133,12 +164,18 @@ export const behaviorCreateDefMixin = {
           },
           fields: {NAME: newName},
         };
-        const block = Blockly.serialization.blocks.append(
-          blockDef,
-          this.getTargetWorkspace_(),
-          {recordUndo: true},
-        ) as ProcedureBlock;
-        return block.getProcedureModel();
+        const targetWorkspace = this.workspace.isFlyout
+          ? this.workspace.targetWorkspace
+          : this.workspace;
+        if (targetWorkspace) {
+          const block = Blockly.serialization.blocks.append(
+            blockDef,
+            targetWorkspace,
+            {recordUndo: true},
+          ) as AugmentedProcedureBlock;
+          return block.getProcedureModel();
+        }
+        return null;
       },
     };
 

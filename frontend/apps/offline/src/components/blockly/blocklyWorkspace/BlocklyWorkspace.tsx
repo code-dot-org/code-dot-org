@@ -4,25 +4,32 @@ import * as Blockly from 'blockly/core';
 import {javascriptGenerator, JavascriptGenerator} from 'blockly/javascript';
 import * as En from 'blockly/msg/en';
 import classnames from 'classnames';
-import React, {createElement, useEffect, useRef, useContext} from 'react';
+import React, {
+  createElement,
+  useEffect,
+  useRef,
+  useContext,
+  MutableRefObject,
+} from 'react';
 
 import BlocklyContext from '@/contexts/BlocklyContext';
 
 import {disableOrphans, grayOutUndeletableBlocks} from '../events';
 import FunctionBlockMixin from '../mixins/functionBlockMixin';
 import {PluginType} from '../plugins';
-import type {Plugin, GlobalPlugin, InjectPlugin} from '../plugins';
-import {
-  forciblyInsertTopBlock,
-  positionBlocksOnWorkspace,
-} from '../serialization';
+import type {Plugin, GlobalPlugin, InjectPlugin, MixinPlugin} from '../plugins';
+import {positionBlocksOnWorkspace} from '../serialization';
 import DefaultTheme from '../themes/default';
 import type {
+  BlocklySerialization,
   BlockDefinition,
   Theme,
   Renderer,
   SimpleBlockDefinition,
   ComplexBlockDefinition,
+  Mutator,
+  Environment,
+  ProcedureBlock,
 } from '../types';
 
 import moduleStyles from './blockly.module.scss';
@@ -34,7 +41,7 @@ export interface BlocklyOptions extends Blockly.BlocklyOptions {
   grayOutUndeletableBlocks?: boolean;
 }
 
-export interface BlocklyWorkspaceProps {
+export interface BlocklyWorkspaceProps<T extends Environment & object> {
   /** A set of custom blocks to load within the Blockly instance. */
   customBlocks?: BlockDefinition[];
   /** A set of specialized options that is passed to block creators. */
@@ -42,9 +49,9 @@ export interface BlocklyWorkspaceProps {
   /** Some options that will alter the typical Blockly behavior. */
   options?: BlocklyOptions;
   /** A set of blocks to load as the starting point for the workspace */
-  startBlocks?: string;
+  startBlocks?: BlocklySerialization;
   /** A set of blocks to put into a single, simple toolbox within the workspace */
-  toolboxBlocks?: string;
+  toolboxBlocks?: Blockly.utils.toolbox.ToolboxInfo;
   /** The blockly renderer to use. */
   renderer?: Renderer;
   /** The blockly theme to use. */
@@ -57,6 +64,14 @@ export interface BlocklyWorkspaceProps {
   onInject?: () => void;
   /** A set of plugins to install to this workspace */
   plugins?: Plugin[];
+  /** The info to pass along to extensions */
+  environment?: T;
+  /**
+   * A MutableRef that can hold a reference to the workspace itself.
+   *
+   * This will be certainly set when onInject is called.
+   */
+  workspaceRef?: MutableRefObject<Blockly.Workspace | null>;
 }
 
 // Ensure these are still compiled into module initialization.
@@ -66,7 +81,7 @@ const __ = En;
 /**
  * Represents a Blockly workspace.
  */
-const BlocklyWorkspace: React.FunctionComponent<BlocklyWorkspaceProps> = ({
+function BlocklyWorkspace<T extends Environment & object = Environment>({
   customBlocks,
   data,
   options,
@@ -78,9 +93,13 @@ const BlocklyWorkspace: React.FunctionComponent<BlocklyWorkspaceProps> = ({
   hidden,
   onInject,
   plugins,
-}) => {
+  environment,
+  workspaceRef,
+}: BlocklyWorkspaceProps<T>): React.ReactElement {
   const anchor = useRef<HTMLDivElement | HTMLSpanElement | null>(null);
   const workspace = useRef<Blockly.WorkspaceSvg | null>(null);
+
+  console.log('BLOCKLY environment', environment);
 
   // Pull from the provider, if it exists there and we haven't specified it
   // ourselves.
@@ -89,12 +108,21 @@ const BlocklyWorkspace: React.FunctionComponent<BlocklyWorkspaceProps> = ({
     renderer: storedRenderer,
     plugins: storedPlugins,
     theme: storedTheme,
+    environment: storedEnvironment,
   } = useContext(BlocklyContext);
   customBlocks ||= storedCustomBlocks;
   renderer ||= storedRenderer;
   plugins ||= storedPlugins;
   theme ||= storedTheme || DefaultTheme;
-  console.log('BLOCKLY_INIT', customBlocks, startBlocks, renderer, theme);
+  environment ||= storedEnvironment as unknown as T;
+  console.log(
+    'BLOCKLY_INIT environment',
+    customBlocks,
+    startBlocks,
+    renderer,
+    theme,
+    environment,
+  );
 
   // Register renderer, if needed
   useEffect(() => {
@@ -133,26 +161,59 @@ const BlocklyWorkspace: React.FunctionComponent<BlocklyWorkspaceProps> = ({
 
         // Register mutator if we have never seen it before and it exists
         if (complexBlockDefinition.mutator) {
-          const name = blockDefinition.mutator.name;
-          if (!Blockly.Extensions.isRegistered(name)) {
-            Blockly.Extensions.registerMutator(name, blockDefinition.mutator);
+          if (typeof complexBlockDefinition.mutator !== 'string') {
+            const name = complexBlockDefinition.mutator.name;
+            if (!Blockly.Extensions.isRegistered(name)) {
+              const mutator: Mutator = {
+                ...complexBlockDefinition.mutator,
+              };
+
+              if ('environment' in mutator) {
+                type EnvironmentBlock = Blockly.Block & {
+                  environment: Environment & object;
+                };
+                mutator.loadExtraState = function (
+                  this: EnvironmentBlock,
+                  state: object,
+                ) {
+                  this.environment = environment;
+                  if (typeof complexBlockDefinition.mutator !== 'string') {
+                    complexBlockDefinition.mutator?.loadExtraState?.bind(this)(
+                      state,
+                    );
+                  }
+                };
+              }
+              Blockly.Extensions.registerMutator(name, mutator);
+            }
+            complexBlockDefinition.mutator = name;
           }
-          complexBlockDefinition.mutator = name;
         }
 
         // Register extensions if we have never seen it before and it exists
         complexBlockDefinition.extensions = [
           ...(complexBlockDefinition.extensions || []),
         ].map(extension => {
-          if (extension?.name && extension?.extension) {
+          if (typeof extension !== 'string' && 'extension' in extension) {
             const name = extension.name;
             if (!Blockly.Extensions.isRegistered(name)) {
-              Blockly.Extensions.register(name, extension.extension);
+              console.log(
+                'register extension with environment',
+                name,
+                extension,
+                environment,
+              );
+              Blockly.Extensions.register(
+                name,
+                function (this: ProcedureBlock) {
+                  return extension.extension.bind(this, environment)();
+                },
+              );
             }
             return name;
           }
 
-          if (extension?.name && extension?.mixin) {
+          if (typeof extension !== 'string' && 'mixin' in extension) {
             const name = extension.name;
             if (!Blockly.Extensions.isRegistered(name)) {
               Blockly.Extensions.registerMixin(name, extension.mixin);
@@ -333,6 +394,10 @@ const BlocklyWorkspace: React.FunctionComponent<BlocklyWorkspaceProps> = ({
         : {}),
     });
 
+    if (workspaceRef) {
+      workspaceRef.current = workspace.current;
+    }
+
     // Add injection plugins
     for (const plugin of (plugins || []).filter(
       plugin => plugin.type === PluginType.Inject,
@@ -343,42 +408,21 @@ const BlocklyWorkspace: React.FunctionComponent<BlocklyWorkspaceProps> = ({
       }
     }
 
+    // Level implementation callback for custom behaviors per-level type
+    if (onInject) {
+      onInject();
+    }
+
     // Apply the custom styles to our custom elements
     console.log('THEME', theme, Blockly.Theme);
-
-    // Massage start blocks to at least a valid empty document
-    if (
-      startBlocks === undefined ||
-      (typeof startBlocks === 'string' && startBlocks.trim() === '')
-    ) {
-      startBlocks = '<xml></xml>';
-    }
 
     if (options?.grayOutUndeletableBlocks) {
       workspace.current.addChangeListener(grayOutUndeletableBlocks);
     }
 
-    // For strings, these are XML starting blocks
-    if (typeof startBlocks === 'string') {
-      const parser = new DOMParser();
-      const xmlDoc = parser
-        .parseFromString(startBlocks, 'text/xml')
-        ?.querySelector(':root');
-
-      if (xmlDoc) {
-        if (options?.forceInsertTopBlock) {
-          forciblyInsertTopBlock(xmlDoc, options.forceInsertTopBlock);
-        }
-
-        Blockly.Xml.clearWorkspaceAndLoadFromXml(xmlDoc, workspace.current);
-        const blockJson = Blockly.serialization.workspaces.save(
-          workspace.current,
-        );
-        Blockly.serialization.workspaces.load(blockJson, workspace.current);
-      }
-    } else if (typeof startBlocks === 'object') {
-      // JSON serialization
-      console.log('serialization', startBlocks);
+    // JSON serialization
+    console.log('serialization', startBlocks);
+    if (startBlocks) {
       Blockly.serialization.workspaces.load(startBlocks, workspace.current);
       for (const block of workspace.current.getTopBlocks()) {
         console.log('JSON SERIAL', block);
@@ -440,11 +484,6 @@ const BlocklyWorkspace: React.FunctionComponent<BlocklyWorkspaceProps> = ({
     // blocks or procedures, etc.
     workspace.current.addChangeListener(disableOrphans);
 
-    // Level implementation callback for custom behaviors per-level type
-    if (onInject) {
-      onInject();
-    }
-
     // Deconstruct the blockly instance when the component is unmounted
     return () => {
       // De-construct global plugins
@@ -489,6 +528,6 @@ const BlocklyWorkspace: React.FunctionComponent<BlocklyWorkspaceProps> = ({
       ...(hidden ? [moduleStyles.hiddenWorkspace] : []),
     ]),
   });
-};
+}
 
 export default BlocklyWorkspace;

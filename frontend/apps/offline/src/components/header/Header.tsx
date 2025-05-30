@@ -91,7 +91,7 @@ const Header: React.FunctionComponent<HeaderProps> = ({inLevel, children}) => {
                 image: '/images/header/header-all-projects-icon.png',
               },
             ]
-          : undefined
+          : []
       }
       accountLinks={{
         signIn: {

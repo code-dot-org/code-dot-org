@@ -5,9 +5,11 @@ import type {
   BlockDefinition,
   Theme,
   Renderer,
+  Environment,
 } from '@/components/blockly/types';
 
 export interface BlocklyContent {
+  environment?: Environment & object;
   theme?: Theme;
   setTheme: (value: Theme) => void;
   renderer?: Renderer;

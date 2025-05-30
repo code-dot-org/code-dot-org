@@ -17,11 +17,13 @@ const spinnerIcon: FontAwesomeV6IconProps = {
 export interface VisualizationProps {
   stepping: boolean;
   running: boolean;
-  stepButton: boolean;
+  stepButton?: boolean;
+  pauseButton?: boolean;
   finishButton: boolean;
   onRun: () => void;
   onReset: () => void;
-  onStep: () => void;
+  onStep?: () => void;
+  onPause?: () => void;
   onFinish: () => void;
   className?: string;
 }
@@ -34,10 +36,12 @@ const Visualization = forwardRef<HTMLDivElement, VisualizationProps>(
       onRun,
       onReset,
       onStep,
+      onPause,
       onFinish,
       className,
       finishButton,
       stepButton,
+      pauseButton,
     },
     ref,
   ) => (
@@ -66,7 +70,7 @@ const Visualization = forwardRef<HTMLDivElement, VisualizationProps>(
             }}
           />
         )}
-        {(running || stepping) && (
+        {!!(running || stepping) && (
           <Button
             text="Reset"
             onClick={onReset}
@@ -84,13 +88,26 @@ const Visualization = forwardRef<HTMLDivElement, VisualizationProps>(
             onClick={onFinish}
           />
         )}
-        {stepButton !== false && (
+        {!!stepButton && (
           <Button
             text="Step"
             type="secondary"
             color="black"
             disabled={running}
-            onClick={onStep}
+            onClick={onStep || (() => {})}
+          />
+        )}
+        {!!pauseButton && (
+          <Button
+            text="Pause"
+            type="secondary"
+            color="black"
+            iconLeft={{
+              iconName: 'pause',
+              iconStyle: 'solid',
+            }}
+            disabled={!running}
+            onClick={onPause || (() => {})}
           />
         )}
       </div>

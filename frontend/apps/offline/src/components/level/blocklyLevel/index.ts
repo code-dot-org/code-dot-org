@@ -1,2 +1,2 @@
-export type {BlocklyLevelProps} from './BlocklyLevel';
+export type {BlocklyLevelProps, BlocklyLevelEnvironment} from './BlocklyLevel';
 export {default} from './BlocklyLevel';

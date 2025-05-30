@@ -5,11 +5,13 @@ import type {
   BlockDefinition,
   Theme,
   Renderer,
+  Environment,
 } from '@/components/blockly/types';
 import BlocklyContext from '@/contexts/BlocklyContext';
 
 export interface BlocklyProviderProps extends PropsWithChildren {
   customBlocks?: BlockDefinition[];
+  environment?: Environment & object;
   theme?: Theme;
   plugins?: Plugin[];
   renderer?: Renderer;
@@ -17,6 +19,7 @@ export interface BlocklyProviderProps extends PropsWithChildren {
 
 const BlocklyProvider: React.FunctionComponent<BlocklyProviderProps> = ({
   customBlocks,
+  environment,
   theme,
   plugins,
   renderer,
@@ -32,6 +35,7 @@ const BlocklyProvider: React.FunctionComponent<BlocklyProviderProps> = ({
         setTheme,
         plugins,
         renderer,
+        environment,
         customBlocks: customBlocks || [],
       }}
     >

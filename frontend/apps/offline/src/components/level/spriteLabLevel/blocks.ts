@@ -1,5 +1,13 @@
-import type {BlockDefinition} from '@/components/blockly/types';
+import type {
+  BlockDefinition,
+  BlockOptionsList,
+} from '@/components/blockly/types';
 
+import {
+  behaviorsBlockFrame,
+  behaviorsNameValidator,
+  modalProceduresNoDestroy,
+} from './extensions';
 import {
   behaviorCallerGetDefMixin,
   behaviorCallerGetDefBlockMixin,
@@ -7,10 +15,11 @@ import {
 } from './mixins';
 import {behaviorGetMutator} from './mutators';
 
-const spriteList = [
+const spriteList: BlockOptionsList = [
   [
     {
       src: 'https://studio.code.org/api/v1/animation-library/level_animations/aO_f11FfLOnQYDf5HoJI.wGnbJQDg6g_/tumbleweed2.png',
+      alt: 'tumbleweed',
       width: 32,
       height: 32,
     },
@@ -18,7 +27,7 @@ const spriteList = [
   ],
 ];
 
-const SPRITE_PROPERTIES = [
+const SPRITE_PROPERTIES: BlockOptionsList = [
   ['size', '"scale"'],
   ['rotation', '"rotation"'],
   ['x position', '"x"'],
@@ -28,14 +37,14 @@ const SPRITE_PROPERTIES = [
   ['speed', '"speed"'],
 ];
 
-const DIRECTION_OPTIONS = [
+const DIRECTION_OPTIONS: BlockOptionsList = [
   ['North', '"North"'],
   ['East', '"East"'],
   ['South', '"South"'],
   ['West', '"West"'],
 ];
 
-const FACE_OPTIONS = [
+const FACE_OPTIONS: BlockOptionsList = [
   ['right', '"right"'],
   ['left', '"left"'],
 ];
@@ -64,6 +73,7 @@ const blocks: BlockDefinition[] = [
         options: spriteList,
       },
     ],
+    generator: () => '\n',
   },
   {
     type: 'gamelab_makeNewSpriteAnon',
@@ -85,6 +95,7 @@ const blocks: BlockDefinition[] = [
         check: 'Location',
       },
     ],
+    generator: () => '\n',
   },
   {
     type: 'gamelab_location_picker',
@@ -100,6 +111,7 @@ const blocks: BlockDefinition[] = [
         check: 'Location',
       },
     ],
+    generator: () => '\n',
   },
   {
     type: 'gamelab_behavior_get',
@@ -131,6 +143,7 @@ const blocks: BlockDefinition[] = [
       behaviorCreateDefMixin,
     ],
     mutator: behaviorGetMutator,
+    generator: () => '\n',
   },
   {
     type: 'behavior_definition',
@@ -143,6 +156,7 @@ const blocks: BlockDefinition[] = [
     args0: [
       {
         type: 'field_label',
+        name: '_LABEL',
         text: ' ',
       },
       {
@@ -172,6 +186,23 @@ const blocks: BlockDefinition[] = [
         name: 'STACK',
       },
     ],
+    extensions: [
+      'procedure_def_get_def_mixin',
+      'procedure_def_var_mixin',
+      'procedure_def_update_shape_mixin',
+      'procedure_def_onchange_mixin',
+      'procedure_def_validator_helper',
+      'procedure_defnoreturn_get_caller_block_mixin',
+      'procedure_def_set_no_return_helper',
+      //'procedure_def_no_gray_out',
+      behaviorsBlockFrame,
+      //'procedure_def_mini_toolbox',
+      modalProceduresNoDestroy,
+      behaviorsNameValidator,
+      //'on_behavior_def_change',
+    ],
+    //mutator: behaviorDefMutator,
+    generator: () => '\n',
   },
   {
     type: 'gamelab_addBehaviorSimple',
@@ -193,10 +224,12 @@ const blocks: BlockDefinition[] = [
         check: 'Behavior',
       },
     ],
+    generator: () => '\n',
   },
   {
     type: 'gamelab_getProp',
     style: 'math_blocks',
+    tooltip: '',
     message0: '%1 %2',
     output: '',
     args0: [
@@ -211,6 +244,7 @@ const blocks: BlockDefinition[] = [
         options: SPRITE_PROPERTIES,
       },
     ],
+    generator: () => '\n',
   },
   {
     type: 'sprite_parameter_get',
@@ -227,6 +261,7 @@ const blocks: BlockDefinition[] = [
         text: 'this sprite',
       },
     ],
+    generator: () => '\n',
   },
   {
     type: 'gamelab_mirrorSprite',
@@ -248,6 +283,7 @@ const blocks: BlockDefinition[] = [
         options: FACE_OPTIONS,
       },
     ],
+    generator: () => '\n',
   },
   {
     type: 'gamelab_moveForward',
@@ -269,6 +305,7 @@ const blocks: BlockDefinition[] = [
         check: 'Number',
       },
     ],
+    generator: () => '\n',
   },
   {
     type: 'gamelab_isTouchingEdges',
@@ -284,6 +321,7 @@ const blocks: BlockDefinition[] = [
         check: 'Sprite',
       },
     ],
+    generator: () => '\n',
   },
   {
     type: 'gamelab_isTouchingSprite',
@@ -304,6 +342,7 @@ const blocks: BlockDefinition[] = [
         check: 'Sprite',
       },
     ],
+    generator: () => '\n',
   },
   {
     type: 'gamelab_edgesDisplace',
@@ -320,6 +359,7 @@ const blocks: BlockDefinition[] = [
         check: 'Sprite',
       },
     ],
+    generator: () => '\n',
   },
   {
     type: 'gamelab_changePropBy',
@@ -346,6 +386,7 @@ const blocks: BlockDefinition[] = [
         check: 'Number',
       },
     ],
+    generator: () => '\n',
   },
   {
     type: 'gamelab_moveInDirection',
@@ -372,6 +413,7 @@ const blocks: BlockDefinition[] = [
         options: DIRECTION_OPTIONS,
       },
     ],
+    generator: () => '\n',
   },
   {
     type: 'gamelab_turn',
@@ -398,6 +440,7 @@ const blocks: BlockDefinition[] = [
         options: FACE_OPTIONS,
       },
     ],
+    generator: () => '\n',
   },
 ];
 

@@ -11,6 +11,7 @@ import type {
   Renderer,
   BlockDefinition,
 } from '@/components/blockly/types';
+import {convertBlocklyXmlToJson} from '@/components/blockly/xml';
 import Markdown, {MarkdownProps} from '@/components/markdown';
 
 export interface BlocklyMarkdownProps extends MarkdownProps {
@@ -103,7 +104,10 @@ const BlocklyMarkdown: React.FunctionComponent<BlocklyMarkdownProps> = ({
                 theme={theme}
                 key={key}
                 inline
-                startBlocks={root.innerHTML}
+                startBlocks={convertBlocklyXmlToJson(
+                  new DOMParser(),
+                  root.innerHTML,
+                )}
               />
             );
           }

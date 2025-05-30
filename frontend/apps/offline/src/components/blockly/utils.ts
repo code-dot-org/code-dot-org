@@ -188,11 +188,15 @@ export function getCodeFromBlockXmlSource(blockXmlString: string): string {
   return result;
 }
 
-export function getCodeFromBlockJsonSource(json: object): string {
+export function getCodeFromBlockJsonSource(json: {
+  blocks?: {
+    blocks?: Blockly.serialization.blocks.State[];
+  };
+}): string {
   const workspace = new Blockly.Workspace();
   javascriptGenerator.init(workspace);
 
-  for (const jsonBlock of json.blocks.blocks) {
+  for (const jsonBlock of json.blocks?.blocks || []) {
     console.log('BLOCK', jsonBlock);
     Blockly.serialization.blocks.append(jsonBlock, workspace);
   }
