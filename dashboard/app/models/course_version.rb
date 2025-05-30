@@ -212,7 +212,7 @@ class CourseVersion < ApplicationRecord
         is_recommended: recommended?(locale_code),
         locales: content_root.supported_locale_names,
         locale_codes: content_root.supported_locale_codes,
-        units: units.select {|u| u.course_assignable?(user)}.map do |u|
+        units: units.map do |u|
           unit_group_unit = u.unit_group_units.find {|ugu| ugu.unit_group == content_root}
           u.summarize_for_assignment_dropdown(unit_group_unit: unit_group_unit)
         end.to_h

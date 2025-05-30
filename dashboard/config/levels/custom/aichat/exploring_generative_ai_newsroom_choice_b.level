@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "display_name": "Create a Comic or Joke",
-    "long_instructions": "## Create a Comic or Joke\r\n\r\n**Task:** Have AI come up with a one-panel comic idea or school-related joke.\r\n\r\n**Things to Try:**\r\n- Ask for a joke about school life (cafeteria, hallways, homework)\r\n- Ask for a funny caption for a cartoon of your choice\r\n- Test: Does the joke actually make sense?",
+    "long_instructions": "## Create a Comic or Joke\r\n\r\n\r\n**Before You Start:**\r\n\r\nMake sure you have filled in the **K** and **W** columns of your KWL chart for this task.\r\n\r\n**Do:**\r\n\r\nAsk AI to write a short comic strip idea or joke based on a school-related topic.\r\n\r\n**Try:**\r\n\r\nAsk for different formats-like a knock-knock joke, a 3-panel comic, or something pun-based.\r\n\r\n**Check:**\r\n\r\nIs it actually funny? Does the humor make sense and fit your topic?\r\n\r\n**After You Try It:**\r\n\r\n1. Fill in the **L** column of your KWL chart\r\n2. Press **Continue** to return to the task menu\r\n",
     "bubble_choice_description": "Ask AI to come up with a one-panel comic idea or school-related joke.",
     "aichat_settings": {
       "initialCustomizations": {
@@ -45,6 +45,6 @@
     },
     "thumbnail_url": "https://images.code.org/470b18e3980c747c59c41caa59bcc7c8-comedy.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-25T19:41:07.393+00:00\",\"changed\":[\"cloned from \\\"exploring_generative_ai_newsroom_choice_a\\\"\"],\"cloned_from\":\"exploring_generative_ai_newsroom_choice_a\"},{\"changed_at\":\"2025-04-25 19:43:47 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-25 22:04:45 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-25T19:41:07.393+00:00\",\"changed\":[\"cloned from \\\"exploring_generative_ai_newsroom_choice_a\\\"\"],\"cloned_from\":\"exploring_generative_ai_newsroom_choice_a\"},{\"changed_at\":\"2025-04-25 19:43:47 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-25 22:04:45 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-05-29 11:07:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Aichat>
