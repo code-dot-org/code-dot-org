@@ -279,7 +279,7 @@ module AWS
         },
         marketing_router: {
           EventType: 'origin-request',
-          LambdaFunctionARN: {Ref: 'MarketingRouterAlias'}  # Changed from MarketingRouterVersion
+          LambdaFunctionARN: {Ref: 'MarketingRouterVersion'}  # CloudFront requires Version, can't use Alias for Lambda@Edge.
         }
       }
 
