@@ -279,7 +279,7 @@ module AWS
         },
         marketing_router: {
           EventType: 'origin-request',
-          LambdaFunctionARN: {Ref: 'MarketingRouterVersion'}
+          LambdaFunctionARN: {Ref: 'MarketingRouterAlias'}  # Changed from MarketingRouterVersion
         }
       }
 
