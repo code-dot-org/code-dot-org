@@ -423,6 +423,7 @@ Resources:
     Type: AWS::Lambda::Version
     Properties:
       FunctionName: !Ref MarketingRouterLambda
+  # Create an Alias to make it easier to monitor Metrics in CloudWatch.
   MarketingRouterAlias:
     Type: AWS::Lambda::Alias
     Properties:
