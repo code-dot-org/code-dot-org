@@ -3,6 +3,8 @@
  * of code studio apps.
  */
 
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+
 import project from '../code-studio/initApp/project';
 import {canvasToBlob, svgToDataURI, toCanvas} from '../imageUtils';
 import {getStore} from '../redux';
@@ -74,6 +76,69 @@ export function captureThumbnailFromSvg(svg) {
     .then(createThumbnail)
     .then(canvasToBlob)
     .then(project.saveThumbnail);
+}
+
+/**
+ * Crops a given canvas to a smaller portion from the top-left corner.
+ * The resulting canvas will have its width and height divided by `divideBy`.
+ *
+ * @param {HTMLCanvasElement} canvas - The original canvas to crop from.
+ * @param {number} divideBy - The factor by which to divide the width and height.
+ */
+function cropCanvasFromTopLeft(canvas, divideBy) {
+  const croppedCanvas = document.createElement('canvas');
+  croppedCanvas.width = canvas.width / divideBy;
+  croppedCanvas.height = canvas.height / divideBy;
+
+  const context = croppedCanvas.getContext('2d');
+  if (context) {
+    context.drawImage(
+      canvas,
+      0,
+      0, // Source x,y
+      canvas.width / divideBy,
+      canvas.height / divideBy, // Source width, height
+      0,
+      0, // Destination x,y
+      croppedCanvas.width,
+      croppedCanvas.height // Destination width, height
+    );
+
+    return croppedCanvas;
+  }
+}
+
+/**
+ * Converts the contents of an SVG element into an image, shrinks it to a
+ * width equal to THUMBNAIL_WIDTH preserving aspect ratio, and saves it to
+ * the server.
+ * This version is to generate thumbnail image for lab2 projects using neighborhood mini-app.
+ * @param {SVGElement | undefined} svg SVG element to capture the contents of.
+ */
+export function captureThumbnailFromSvgLab2Neighborhood(svg) {
+  if (!svg) {
+    console.warn(`Thumbnail capture failed: svg element not found.`);
+    return;
+  }
+
+  // Skip capturing a screenshot if we just captured one recently.
+  const intervalMs = Date.now() - lastCaptureTimeMs;
+  if (intervalMs < MIN_CAPTURE_INTERVAL_MS) {
+    return;
+  }
+
+  if (
+    !Lab2Registry.getInstance().getProjectManager().getShouldCaptureThumbnail()
+  )
+    return;
+
+  lastCaptureTimeMs = Date.now();
+
+  return svgToDataURI(svg)
+    .then(toCanvas)
+    .then(canvas => cropCanvasFromTopLeft(canvas, 4))
+    .then(createThumbnail)
+    .then(canvasToBlob);
 }
 
 /**

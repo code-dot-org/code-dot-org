@@ -10,7 +10,8 @@
  *
  * If a project manager is destroyed, the enqueued save will be cancelled, if it exists.
  */
-import {NetworkError} from '@cdo/apps/util/HttpClient';
+import {getStore} from '@cdo/apps/redux';
+import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 import {currentLocation} from '@cdo/apps/utils';
 
 import LabMetricsReporter from '../Lab2MetricsReporter';
@@ -53,6 +54,8 @@ export default class ProjectManager {
   private reduceChannelUpdates: boolean;
   private initialSaveComplete: boolean;
   private forceReloading: boolean;
+  private thumbnailUrl: string | undefined;
+  private thumbnailPngBlob: Blob | undefined;
 
   constructor(
     sourcesStore: SourcesStore,
@@ -320,6 +323,37 @@ export default class ProjectManager {
     this.lastSource = JSON.stringify(lastSource);
   }
 
+  getShouldCaptureThumbnail() {
+    const {isShareView} = getStore().getState().lab;
+    return this.channelId && this.lastChannel?.isOwner && !isShareView;
+  }
+
+  setThumbnail(pngBlob: Blob) {
+    this.thumbnailPngBlob = pngBlob;
+    // Only set thumbnailUrl if we haven’t set it yet to lastChannel.
+    if (!this.lastChannel?.thumbnailUrl) {
+      this.thumbnailUrl = `/v3/files/${this.channelId}/metadata/thumbnail.png`;
+    }
+  }
+
+  /**
+   * Uploads a thumbnail image to the thumbnail path via the files API.
+   */
+  saveThumbnail(): Promise<Response | void> {
+    if (this.thumbnailUrl) {
+      return HttpClient.put(
+        this.thumbnailUrl,
+        this.thumbnailPngBlob,
+        true, // useAuthenticityToken
+        {
+          'Content-Type': 'image/png',
+        }
+      );
+    } else {
+      return Promise.resolve();
+    }
+  }
+
   /**
    * Helper function to save a project, called either after a timeout or directly by save().
    * On a save, we check if there are unsaved changes to the source or channel.
@@ -368,6 +402,10 @@ export default class ProjectManager {
           this.lastChannel.projectType,
           forceNewVersion
         );
+        if (this.thumbnailPngBlob) {
+          await this.saveThumbnail();
+          this.thumbnailPngBlob = undefined;
+        }
       } catch (error) {
         let errorToReport: Error;
         if (error instanceof Error) {
@@ -403,6 +441,13 @@ export default class ProjectManager {
         this.channelToSave = {
           ...this.channelToSave,
           labConfig: this.sourcesToSave?.labConfig,
+        };
+      }
+
+      if (this.thumbnailUrl && !this.lastChannel?.thumbnailUrl) {
+        this.channelToSave = {
+          ...this.channelToSave,
+          thumbnailUrl: this.thumbnailUrl,
         };
       }
 

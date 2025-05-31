@@ -8,11 +8,14 @@ import {MiniApps} from '@codebridge/constants';
 import {AnyAction, Dispatch} from 'redux';
 
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProgressManager from '@cdo/apps/lab2/progress/ProgressManager';
 import {getFileByName} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+import {SVG_ID} from '@cdo/apps/maze/constants';
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {getStore} from '@cdo/apps/redux';
+import {captureThumbnailFromSvgLab2Neighborhood} from '@cdo/apps/util/thumbnail';
 
 import {getValidationFromSource, RunType} from '../codebridge';
 
@@ -61,7 +64,19 @@ export async function handleRunClick(
     }
     await runPythonCode(code, source);
     if (isNeighborhoodLevel()) {
-      CodebridgeRegistry.getInstance().getNeighborhood()?.onClose();
+      const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
+      neighborhood?.onClose();
+      await neighborhood?.waitUntilDone(); // Wait for neighborhood signal processing to be completed.
+      const projectManager = Lab2Registry.getInstance().getProjectManager();
+      const shouldCapture = true;
+      if (!shouldCapture) return;
+
+      const svg = document.getElementById(SVG_ID);
+      const svgArg = svg instanceof SVGSVGElement ? svg : null;
+      if (svgArg) {
+        const pngBlob = await captureThumbnailFromSvgLab2Neighborhood(svgArg);
+        projectManager?.setThumbnail(pngBlob);
+      }
     }
   }
 }
