@@ -330,10 +330,7 @@ export default class ProjectManager {
 
   setThumbnail(pngBlob: Blob) {
     this.thumbnailPngBlob = pngBlob;
-    // Only set thumbnailUrl if we haven’t set it yet to lastChannel.
-    if (!this.lastChannel?.thumbnailUrl) {
-      this.thumbnailUrl = `/v3/files/${this.channelId}/metadata/thumbnail.png`;
-    }
+    this.thumbnailUrl = `/v3/files/${this.channelId}/metadata/thumbnail.png`;
   }
 
   /**
