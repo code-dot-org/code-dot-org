@@ -444,7 +444,7 @@ export function initializeVariableLocalization(
               const variable = varField?.getVariable();
               if (variable) {
                 const id = variable.getId();
-                const oldName = variable.name;
+                const oldName = variable.getName();
                 Blockly.SourceVariables[id] = oldName;
 
                 // And we note them as 'global' variables
@@ -462,7 +462,7 @@ export function initializeVariableLocalization(
   // We keep track of all variables in the workspace
   for (const variable of workspace.getAllVariables()) {
     const id = variable.getId();
-    const oldName = variable.name;
+    const oldName = variable.getName();
     Blockly.SourceVariables[id] = oldName;
 
     // And we note them as 'global' variables
@@ -520,7 +520,7 @@ export function localizeVariables(workspace: ExtendedWorkspaceSvg) {
   }
 
   for (const variable of workspace.getAllVariables()) {
-    Blockly.SourceVariables[variable.getId()] ||= variable.name;
+    Blockly.SourceVariables[variable.getId()] ||= variable.getName();
     const oldName = Blockly.SourceVariables[variable.getId()];
 
     // Make sure we've seen the old name before
