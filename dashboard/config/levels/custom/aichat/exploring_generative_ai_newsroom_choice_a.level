@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "display_name": "Write a School Event Ad",
-    "long_instructions": "## Write a School Event Ad\r\n\r\n**Task:** Ask AI to write a short ad or announcement for a school event.\r\n\r\n**Things to Try:**\r\n- Give the AI details (event name, date, location, reason to come)\r\n- Ask for two versions: one formal, one fun\r\n- See if the AI can add a catchy slogan or tagline",
+    "long_instructions": "## Write a School Event Ad\r\n\r\n\r\n\r\n**Before You Start:**\r\n\r\nMake sure you have filled in the **K** and **W** columns of your KWL chart for this task.\r\n\r\n**Do:** \r\n\r\nAsk AI to write a short ad for an upcoming school event (like a concert, game, or fundraiser).\r\n\r\n**Try:**\r\n\r\nTest how the ad changes if you give just the name of the event vs. more details like time, location, and who’s invited.\r\n\r\n**Check:**\r\n\r\nDoes it sound clear, exciting, and appropriate for your audience?\r\n\r\n**After You Try It:**\r\n\r\n1. Fill in the **L** column of your KWL chart\r\n2. Press **Continue** to return to the task menu\r\n",
     "bubble_choice_description": "Ask AI to write a short ad or announcement for a school event.",
     "aichat_settings": {
       "initialCustomizations": {
@@ -45,6 +45,6 @@
     },
     "thumbnail_url": "https://images.code.org/9d05ad9deaa6d0b4be3293ac25f811b2-calendar.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-25 19:38:58 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-25 21:59:56 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-25 19:38:58 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-25 21:59:56 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-05-29 11:03:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-05-29 11:03:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Aichat>

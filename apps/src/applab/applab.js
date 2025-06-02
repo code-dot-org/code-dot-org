@@ -287,7 +287,18 @@ function queueOnTick() {
 function handleExecutionError(err, lineNumber, outputString, libraryName) {
   outputError(outputString, lineNumber, libraryName);
   Applab.executionError = {err: err, lineNumber: lineNumber};
-
+  const analyticsData = studioApp().analyticsData();
+  logUserLevelInteraction({
+    levelId: analyticsData.levelId,
+    scriptId: analyticsData.scriptId,
+    interaction: UserLevelInteractions.code_execution_error,
+    metadata: JSON.stringify({
+      error: err,
+      lineNumber: lineNumber,
+      outputString: outputString,
+      libraryName: libraryName,
+    }),
+  });
   // prevent further execution
   Applab.clearEventHandlersKillTickLoop();
 

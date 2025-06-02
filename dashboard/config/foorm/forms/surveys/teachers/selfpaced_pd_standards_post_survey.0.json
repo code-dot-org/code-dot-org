@@ -1,5 +1,5 @@
 {
-  "title": "{module}: Post-module survey",
+  "title": "Teaching {module}: Post-module survey",
   "pages": [
     {
       "name": "page1",
@@ -22,12 +22,12 @@
         {
           "type": "html",
           "name": "intro",
-          "html": "<h1>{module} Self-paced Online Professional Learning</h1><h3><strong>Post-Module Survey</strong></h3>\n\n<p>Code.org relies on surveys as a crucial tool to stay connected to teachers, gather feedback about our curriculum and your teaching experience, and to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>{module} - Post-Module Survey</h2>"
+          "html": "<h1>Teaching {module} Self-paced Online Professional Learning</h1><h3><strong>Post-Module Survey</strong></h3>\n\n<p>Code.org relies on surveys as a crucial tool to stay connected to teachers, gather feedback about our curriculum and your teaching experience, and to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>Teaching {module}: Post-Module Survey</h2>"
         },
         {
           "type": "html",
           "name": "section1_goals",
-          "html": "\n<p><span style='font-size: 12pt;'>The questions in this section aim to understand your experience with the {module} self-paced professional learning module.</span></p>\n"
+          "html": "\n<p><span style='font-size: 12pt;'>The questions in this section aim to understand your experience with the Teaching {module} self-paced professional learning module.</span></p>\n"
         },
         {
           "type": "library_item",
@@ -37,7 +37,7 @@
         },
         {
           "type": "rating",
-          "name": "module_comfort_supporting_students_learn",
+          "name": "comfort_supporting_students_learn",
           "title": "After completing this module, I am more comfortable in my ability to support students [INSERT LEARNING OBJECTIVES]",
           "rateCount": 7,
           "rateMax": 7,
@@ -82,7 +82,8 @@
           "type": "library_item",
           "library_name": "surveys/pd/self_paced_pl_standards",
           "library_version": 0,
-          "name": "confidence_use_skills"
+          "name": "confidence_use_skills",
+          "natalia_comment": "INCLUDE ONLY IF MODULE IS ABOUT PEDAGOGICAL/TEACHING SKILLS"
         },
         {
           "type": "library_item",
@@ -96,7 +97,7 @@
           "library_name": "surveys/pd/self_paced_pl_standards",
           "library_version": 0,
           "name": "plan_use_skills_learned",
-          "natalia_comment": "INCLUDE ONLY IF MODULE IS ABOUT TEACHING SKILLS"
+          "natalia_comment": "INCLUDE ONLY IF MODULE IS ABOUT PEDAGOGICAL/TEACHING SKILLS"
         },
         {
           "type": "library_item",

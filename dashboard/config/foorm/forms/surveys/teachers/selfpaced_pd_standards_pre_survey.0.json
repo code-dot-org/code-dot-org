@@ -1,5 +1,5 @@
 {
-  "title": "{module}: Pre-module survey",
+  "title": "Teaching {module}: Pre-module survey",
   "pages": [
     {
       "name": "page1",
@@ -22,12 +22,12 @@
         {
           "type": "html",
           "name": "intro",
-          "html": "<h1>{module} Self-paced Online Professional Learning</h1><h3><strong>Pre-Module Survey</strong></h3>\n\n<p>Code.org relies on surveys as a crucial tool to stay connected to teachers, gather feedback about our curriculum and your teaching experience, and to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>{module} - Pre-Module Survey</h2>"
+          "html": "<h1>Teaching {module} Self-paced Online Professional Learning</h1><h3><strong>Pre-Module Survey</strong></h3>\n\n<p>Code.org relies on surveys as a crucial tool to stay connected to teachers, gather feedback about our curriculum and your teaching experience, and to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>Teaching {module} - Pre-Module Survey</h2>"
         },
         {
           "type": "html",
           "name": "section1_goals",
-          "html": "\n<p><span style='font-size: 12pt;'>The questions in this section aim to understand your goals for enagaging with the {module} self-paced professional learning module.</span></p>\n"
+          "html": "\n<p><span style='font-size: 12pt;'>The questions in this section aim to understand your goals for engaging with the {module} self-paced professional learning module.</span></p>\n"
         },
         {
           "type": "library_item",

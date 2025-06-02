@@ -5,12 +5,12 @@ description 'description here'
 markdown <<MARKDOWN
 # Determining the Message Path
 
-#### In <a href='https://studio.code.org/s/nati-pilot-content-2024/lessons/4' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 4</a>, students will use the Internet Simulator to diagram the path a message takes to get from them to their partner (the student sitting next to them in class).
+#### In <a href='https://studio.code.org/s/aif4-2025/lessons/4' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 4</a>, students will use the Internet Simulator to diagram the path a message takes to get from them to their partner (the student sitting next to them in class).
 
 
 #### Students choose a router that’s different from their partner’s.
 <p align="center">
-<img src="https://images.code.org/9ec11a04faed7f161bb52918335e9f9c-Screenshot 2025-04-22 at 9.49.30 AM.png" alt="lesson plan diagram" width="80%" style="border-radius:10px; border: 5px solid black;">
+<img src="https://images.code.org/9ec11a04faed7f161bb52918335e9f9c-Screenshot 2025-04-22 at 9.49.30 AM.png" alt="Internet Simulator join lobby with 6 different routers" width="80%" style="border-radius:10px; border: 5px solid black;">
 </p>
 
 
@@ -21,22 +21,22 @@ markdown <<MARKDOWN
 
 #### Students will identify their IP address by looking below their name and ask for the IP address for their partner.
 <p align="center">
-<img src="https://images.code.org/f7a37e7da9be9da8616dd1474f99e685-Screenshot 2025-04-22 at 9.51.04 AM.png" alt="lesson plan diagram" width="40%" style="border-radius:10px; border: 5px solid black;">
+<img src="https://images.code.org/f7a37e7da9be9da8616dd1474f99e685-Screenshot 2025-04-22 at 9.51.04 AM.png" alt="connection of a user to a router" width="40%" style="border-radius:10px; border: 5px solid black;">
 </p>
 
 #### Then they’ll type in their partner's IP address, and send a message to their partner.
 <p align="center">
-<img src="https://images.code.org/8902bd930ffbfec720594316866f22ec-Screenshot 2025-04-22 at 9.51.12 AM.png" alt="lesson plan diagram" width="70%" style="border-radius:10px; border: 5px solid black;">
+<img src="https://images.code.org/8902bd930ffbfec720594316866f22ec-Screenshot 2025-04-22 at 9.51.12 AM.png" alt="send message screen with starting and ending IP address" width="70%" style="border-radius:10px; border: 5px solid black;">
 </p>
 
 #### Once they’ve sent a few messages, they’ll go to the Log Browser. 
 <p align="center">
-<img src="https://images.code.org/e9c5dcd89861d2873c2f86dfc47ff090-Screenshot 2025-04-22 at 9.54.51 AM.png" alt="lesson plan diagram" width="60%" style="border-radius:10px; border: 5px solid black;">
+<img src="https://images.code.org/e9c5dcd89861d2873c2f86dfc47ff090-Screenshot 2025-04-22 at 9.54.51 AM.png" alt="Log Browser screen showing stats and logs" width="60%" style="border-radius:10px; border: 5px solid black;">
 </p>
 
 #### And use the traffic log to find the path their message took to get to their partner. Students will diagram this pathway and use it for the rest of the activity.
 <p align="center">
-<img src="https://images.code.org/81c0f52446d1460df8a2dab69e682fe3-Screenshot 2025-04-22 at 9.55.35 AM.png" alt="lesson plan diagram" width="90%" style="border-radius:10px; border: 5px solid black;">
+<img src="https://images.code.org/81c0f52446d1460df8a2dab69e682fe3-Screenshot 2025-04-22 at 9.55.35 AM.png" alt="all traffic log to IP address 2.12 showing the route messages took to arrive there" width="90%" style="border-radius:10px; border: 5px solid black;">
 </p>
 
 

@@ -20,8 +20,8 @@ class MultipleAssignButton extends React.Component {
     scriptId: PropTypes.number,
     assignmentName: PropTypes.string,
     reassignConfirm: PropTypes.func,
-    isAssigningCourse: PropTypes.bool,
-    isStandAloneUnit: PropTypes.bool,
+    isAssigningCourseOnly: PropTypes.bool,
+    isAssigningUnitOnly: PropTypes.bool,
     participantAudience: PropTypes.string,
     // Redux
     assignToSection: PropTypes.func.isRequired,
@@ -53,10 +53,10 @@ class MultipleAssignButton extends React.Component {
       courseVersionId,
       scriptId,
       assignmentName,
-      isStandAloneUnit,
+      isAssigningUnitOnly,
       sectionsForDropdown,
       participantAudience,
-      isAssigningCourse,
+      isAssigningCourseOnly,
       reassignConfirm,
     } = this.props;
 
@@ -79,8 +79,8 @@ class MultipleAssignButton extends React.Component {
             scriptId={scriptId}
             courseVersionId={courseVersionId}
             reassignConfirm={reassignConfirm}
-            isAssigningCourse={isAssigningCourse}
-            isStandAloneUnit={isStandAloneUnit}
+            isAssigningCourseOnly={isAssigningCourseOnly}
+            isAssigningUnitOnly={isAssigningUnitOnly}
             participantAudience={participantAudience}
           />
         )}

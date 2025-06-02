@@ -64,7 +64,13 @@ class HomeController < ApplicationController
   def index
     if current_user
       if should_redirect_to_script_overview?
-        redirect_to script_path(current_user.most_recently_assigned_script)
+        unit_group_unit = current_user.most_recently_assigned_unit_group_unit
+        if Policies::Courses.modularity_enabled? && unit_group_unit
+          unit_group = unit_group_unit.cached_unit_group
+          redirect_to course_unit_path(unit_group, unit_group_unit.position)
+        else
+          redirect_to script_path(current_user.most_recently_assigned_script)
+        end
       else
         redirect_to home_path
       end

@@ -197,9 +197,16 @@ class ScriptLevelsController < ApplicationController
       end
     end
 
-    # The lesson might contain a background that should be applied to all levels.
-    lesson_background = @script_level.lesson.properties['background'] if @level.uses_lab2? && @script_level.lesson
-    @body_classes = lesson_background ? "background-#{lesson_background}" : @level.properties['background']
+    # We decide the background color based on the following rules:
+    # 1. If this is a lab2 level and part of a lesson, we get the background color from the lesson (see lesson.rb for details).
+    # 2. Otherwise, we use the level's background color, if it exists.
+    @body_classes = @level.properties['background']
+    if @level.uses_lab2? && @script_level.lesson
+      background = @script_level.lesson.get_background_for_user(current_user)
+      if background
+        @body_classes = "background-#{background}"
+      end
+    end
 
     @rubric = @script_level.lesson.rubric
     ai_rubrics_enabled_for_user = @view_as_user&.verified_teacher? || @view_as_user&.teachers&.any?(&:verified_teacher?)
@@ -550,6 +557,8 @@ class ScriptLevelsController < ApplicationController
     # All database look-ups should have already been cached by Unit::unit_cache_from_db
     @game = @level.game
     @lesson ||= @script_level.lesson
+    unit_context = ScriptLevelsController.get_unit_context(request)
+    unit_group = unit_context[:unit_group]
 
     load_level_source
 
@@ -569,6 +578,7 @@ class ScriptLevelsController < ApplicationController
 
     @callback = milestone_script_level_url(
       user_id: current_user.try(:id) || 0,
+      course_id: unit_group&.id,
       script_level_id: @script_level.id,
       level_id: @level.id
     )
@@ -579,6 +589,7 @@ class ScriptLevelsController < ApplicationController
     if @level.game&.level_group? || @level.try(:contained_levels).present?
       @sublevel_callback = milestone_script_level_url(
         user_id: current_user.try(:id) || 0,
+        course_id: unit_group&.id,
         script_level_id: @script_level.id,
         level_id: ''
       )

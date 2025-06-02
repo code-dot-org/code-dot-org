@@ -3,13 +3,22 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 6.25rem 1rem;
+  padding: 6.25rem 2rem;
+  text-align: center;
 }
 
 .sadBeeContainer {
   display: inline-block;
-  width: auto;
+  width: 7.125rem;
   height: auto;
+}
+
+.errorHeading {
+  margin-bottom: 1.5rem;
+}
+
+.errorBody {
+  margin-block: 0 2rem;
 }
 
 .callToActionContainer {
