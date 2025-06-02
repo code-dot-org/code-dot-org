@@ -104,6 +104,13 @@ function parseBlockXml(blockEl: Element): any {
           }
         }
 
+        // Look for procedure arguments
+        for (const param of Array.from(child.querySelectorAll('arg'))) {
+          block.extraState ??= {};
+          block.extraState.params ??= [];
+          block.extraState.params.push(param.getAttribute('name'));
+        }
+
         // Some specific legacy mutators also pull in attributes from the next sibling
         for (const attr of Array.from(
           child.nextElementSibling?.attributes || [],
@@ -112,7 +119,7 @@ function parseBlockXml(blockEl: Element): any {
           if (attr.name === 'elseif') {
             block.extraState['elseIfCount'] = attr.value;
           } else {
-            block.extraState[attr.name] = attr.value;
+            block.extraState[attr.name] ??= attr.value;
           }
         }
         break;
