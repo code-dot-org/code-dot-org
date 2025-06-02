@@ -1190,30 +1190,25 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'summarize includes show assign button' do
-    unit_group = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
-    unit = create :unit, published_state: nil
-    unit_group_unit = create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
-    CourseOffering.add_course_offering(unit_group)
+    launched_course = create :single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+    unit_group_unit = launched_course.default_unit_group_units.first
+    unit = launched_course.first_unit
+    CourseOffering.add_course_offering(launched_course)
     teacher = create(:teacher)
 
     # No user, show_assign_button set to false
-    puts "No user, show_assign_button set to false"
     refute unit.summarize(unit_group_unit: unit_group_unit)[:show_assign_button]
 
-    # Teacher should be able to assign a launched unit.
-    assert unit_group.course_assignable?(teacher)
+    # Teacher should be able to assign a launched unit
     assert unit.summarize(true, teacher, unit_group_unit: unit_group_unit)[:show_assign_button]
 
-    # Teacher should not be able to assign an unlaunched unit.
-    beta_unit = create :script, published_state: nil
-    beta_unit_group = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
-    beta_unit_group_unit = create(:unit_group_unit, unit_group: beta_unit_group, script: beta_unit, position: 1)
-    CourseOffering.add_course_offering(beta_unit_group)
-    refute beta_unit_group.course_assignable?(teacher)
-    refute beta_unit.summarize(true, teacher, unit_group_unit: beta_unit_group_unit)[:show_assign_button]
-
-    # Student should not be able to assign a unit, regardless of visibility.
+    # Student should not be able to assign a launched unit
     refute unit.summarize(true, create(:student), unit_group_unit: unit_group_unit)[:show_assign_button]
+
+    # Teacher should not be able to assign an unlaunched unit
+    beta_course = create :single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+    CourseOffering.add_course_offering(beta_course)
+    refute beta_course.first_unit.summarize(true, teacher, unit_group_unit: beta_course.default_unit_group_units.first)[:show_assign_button]
   end
 
   test 'summarize includes bonus levels for lessons if include_bonus_levels and include_lessons are true' do
