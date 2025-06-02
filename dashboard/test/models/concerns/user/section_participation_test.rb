@@ -169,11 +169,8 @@ class SectionParticipationTest < ActiveSupport::TestCase
       let(:student) {create :student}
       let(:teacher) {create :teacher}
 
-      before do
-        create :follower, section: section1
-      end
-
       it 'returns nil' do
+        create :follower, section: section1
         _(student.last_section_id).must_be_nil
       end
     end
