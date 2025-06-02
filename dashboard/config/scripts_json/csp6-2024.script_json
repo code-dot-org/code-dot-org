@@ -19,8 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-30 14:46:28 UTC",
-    "hide_within_course": false,
+    "serialized_at": "2025-01-22 20:03:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3683,8 +3682,7 @@
         "level_keys": [
           "csp-20-21-u5-assess-lists2022_2024"
         ],
-        "progression": "Check For Understanding",
-        "show_ai_analysis": true
+        "progression": "Check For Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -3859,8 +3857,7 @@
         "level_keys": [
           "CSP Lists Predict_2024"
         ],
-        "progression": "Check for Understanding",
-        "show_ai_analysis": true
+        "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -4635,8 +4632,7 @@
         "level_keys": [
           "U5 L09 Traversals Exit Ticket_2024"
         ],
-        "progression": "Assessment: Check For Understanding\r",
-        "show_ai_analysis": true
+        "progression": "Assessment: Check For Understanding\r"
       },
       "bonus": false,
       "seeding_key": {
@@ -4761,8 +4757,7 @@
         "level_keys": [
           "CSP U5L10 CFU Traversals_2024"
         ],
-        "progression": "Check For Understanding",
-        "show_ai_analysis": true
+        "progression": "Check For Understanding"
       },
       "bonus": false,
       "seeding_key": {

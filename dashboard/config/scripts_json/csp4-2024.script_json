@@ -19,8 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-29 17:39:40 UTC",
-    "hide_within_course": false,
+    "serialized_at": "2025-04-04 15:03:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4182,8 +4181,7 @@
         "level_keys": [
           "U4 L02 CYU Exit Ticket_2024"
         ],
-        "progression": "Assessment: Check For Understanding\r",
-        "show_ai_analysis": true
+        "progression": "Assessment: Check For Understanding\r"
       },
       "bonus": false,
       "seeding_key": {
@@ -4583,8 +4581,7 @@
         "level_keys": [
           "U4 L05 CYU Exit Ticket_2024"
         ],
-        "progression": "Assessment: Check For Understanding\r",
-        "show_ai_analysis": true
+        "progression": "Assessment: Check For Understanding\r"
       },
       "bonus": false,
       "seeding_key": {
@@ -4759,8 +4756,7 @@
         "level_keys": [
           "U4 L06 CYU Exit Ticket_2024"
         ],
-        "progression": "Check Your Understanding",
-        "show_ai_analysis": true
+        "progression": "Check Your Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -5235,8 +5231,7 @@
         "level_keys": [
           "CSP U4 L09 CFU Exit Ticket_2024"
         ],
-        "progression": "Check For Understanding",
-        "show_ai_analysis": true
+        "progression": "Check For Understanding"
       },
       "bonus": false,
       "seeding_key": {
