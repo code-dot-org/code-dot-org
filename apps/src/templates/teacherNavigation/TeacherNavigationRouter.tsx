@@ -27,6 +27,7 @@ import SectionAssessments from '../sectionAssessments/SectionAssessments';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
 import TeacherHomepage from '../studioHomepages/teacherHomepageV2/TeacherHomepage';
+import {SchoolInfo} from '../studioHomepages/teacherHomepageV2/TeacherHomepageConstants';
 import SectionLoginInfo from '../teacherDashboard/SectionLoginInfo';
 import StatsTableWithData from '../teacherDashboard/StatsTableWithData';
 import {
@@ -71,14 +72,6 @@ const PathChangeHandler: React.FC<{needsReload: boolean}> = ({needsReload}) => {
 
   return null;
 };
-
-interface SchoolInfo {
-  country: string;
-  school_name: string;
-  school_zip: string;
-  school_id: string;
-  school_type: string;
-}
 
 interface TeacherNavigationRouterProps {
   studioUrlPrefix: string;

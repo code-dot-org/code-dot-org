@@ -18,18 +18,11 @@ import i18n from '@cdo/locale';
 import SchoolDataInputs from '../../SchoolDataInputs';
 
 import drawerConfirmationImage from './images/drawer-confirmation-image.png';
+import {SchoolInfo} from './TeacherHomepageConstants';
 
 import styles from './teacherHomepage.module.scss';
 
 const NON_SCHOOL_OPTIONS = ['selectASchool', 'clickToAd', 'noSchoolSetting'];
-
-interface SchoolInfo {
-  country: string;
-  school_name: string;
-  school_zip: string;
-  school_id: string;
-  school_type: string;
-}
 
 interface TeacherHomepageDrawerProps {
   showSchoolInfoInterstitial: boolean;

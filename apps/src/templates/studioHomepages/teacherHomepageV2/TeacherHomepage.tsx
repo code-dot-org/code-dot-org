@@ -16,20 +16,13 @@ import {
 import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
 import {SectionList} from './SectionList';
+import {SchoolInfo} from './TeacherHomepageConstants';
 import TeacherHomepageDrawer from './TeacherHomepageDrawer';
 import TeacherPromotions from './TeacherPromotions';
 
 import styles from './teacherHomepage.module.scss';
 
 export type ArchivedToggleOption = 'teaching' | 'archived';
-
-interface SchoolInfo {
-  country: string;
-  school_name: string;
-  school_zip: string;
-  school_id: string;
-  school_type: string;
-}
 
 interface TeacherHomepageProps {
   studioUrlPrefix: string;
