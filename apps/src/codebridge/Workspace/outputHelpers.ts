@@ -1,7 +1,9 @@
-export function scaleMiniApp(newHeight: number, newWidth: number) {
+import {MAX_MINI_APP_SIZE} from '@codebridge/Workspace/constants';
+
+export function scaleMiniApp(newHeight: number, newWidth: number): number {
   const sliderHeight = 37;
   // The original visualization is rendered at 800x800.
-  const originalVisualizationWidth = 800;
+  const originalVisualizationWidth = MAX_MINI_APP_SIZE;
   const headerSize = 40;
   const availableHeight = newHeight - headerSize - sliderHeight;
   const newVisualizationWidth = Math.min(availableHeight, newWidth);
@@ -24,4 +26,6 @@ export function scaleMiniApp(newHeight: number, newWidth: number) {
     width: newVisualizationWidth,
     'margin-left': (newWidth - newVisualizationWidth) / 2,
   });
+
+  return newVisualizationWidth / originalVisualizationWidth;
 }

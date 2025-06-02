@@ -3,6 +3,8 @@
  * of code studio apps.
  */
 
+import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
+
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 import project from '../code-studio/initApp/project';
@@ -15,7 +17,7 @@ const THUMBNAIL_WIDTH = 220;
 
 // Minimum time to wait after capturing a thumbnail image before capturing
 // another thumbnail.
-const MIN_CAPTURE_INTERVAL_MS = 60000;
+const MIN_CAPTURE_INTERVAL_MS = 1000;
 
 /**
  * @type {number} The last time at which a screenshot capture was attempted.
@@ -85,10 +87,12 @@ export function captureThumbnailFromSvg(svg) {
  * @param {HTMLCanvasElement} canvas - The original canvas to crop from.
  * @param {number} divideBy - The factor by which to divide the width and height.
  */
-function cropCanvasFromTopLeft(canvas, divideBy) {
+function cropCanvasFromTopLeft(canvas) {
+  const scale =
+    CodebridgeRegistry.getInstance().getNeighborhoodThumbnailScale();
   const croppedCanvas = document.createElement('canvas');
-  croppedCanvas.width = canvas.width / divideBy;
-  croppedCanvas.height = canvas.height / divideBy;
+  croppedCanvas.width = canvas.width * scale;
+  croppedCanvas.height = canvas.height * scale;
 
   const context = croppedCanvas.getContext('2d');
   if (context) {
@@ -96,8 +100,8 @@ function cropCanvasFromTopLeft(canvas, divideBy) {
       canvas,
       0,
       0, // Source x,y
-      canvas.width / divideBy,
-      canvas.height / divideBy, // Source width, height
+      canvas.width * scale,
+      canvas.height * scale, // Source width, height
       0,
       0, // Destination x,y
       croppedCanvas.width,
@@ -136,7 +140,7 @@ export function captureThumbnailFromSvgLab2Neighborhood(svg) {
 
   return svgToDataURI(svg)
     .then(toCanvas)
-    .then(canvas => cropCanvasFromTopLeft(canvas, 4))
+    .then(canvas => cropCanvasFromTopLeft(canvas))
     .then(createThumbnail)
     .then(canvasToBlob);
 }
