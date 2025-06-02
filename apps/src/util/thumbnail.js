@@ -81,13 +81,13 @@ export function captureThumbnailFromSvg(svg) {
 }
 
 /**
- * Crops a given canvas to a smaller portion from the top-left corner.
- * The resulting canvas will have its width and height divided by `divideBy`.
+ * Crops the given canvas to a smaller portion from the top-left corner.
+ * The resulting canvas will have its width and height scaled by neighborhoodThumbnailScale
+ * stored in Codebridge Registry. For now, this is only used by Python Lab neighborhood projects.
  *
  * @param {HTMLCanvasElement} canvas - The original canvas to crop from.
- * @param {number} divideBy - The factor by which to divide the width and height.
  */
-function cropCanvasFromTopLeft(canvas) {
+function cropNeighborhoodCanvasFromTopLeft(canvas) {
   const scale =
     CodebridgeRegistry.getInstance().getNeighborhoodThumbnailScale();
   const croppedCanvas = document.createElement('canvas');
@@ -116,10 +116,10 @@ function cropCanvasFromTopLeft(canvas) {
  * Converts the contents of an SVG element into an image, shrinks it to a
  * width equal to THUMBNAIL_WIDTH preserving aspect ratio, and saves it to
  * the server.
- * This version is to generate thumbnail image for lab2 projects using neighborhood mini-app.
+ * This version is to generate thumbnail image for Python Lab projects using Neighborhood mini-app.
  * @param {SVGElement | undefined} svg SVG element to capture the contents of.
  */
-export function captureThumbnailFromSvgLab2Neighborhood(svg) {
+export function captureThumbnailFromSvgPythonlabNeighborhood(svg) {
   if (!svg) {
     console.warn(`Thumbnail capture failed: svg element not found.`);
     return;
@@ -140,7 +140,7 @@ export function captureThumbnailFromSvgLab2Neighborhood(svg) {
 
   return svgToDataURI(svg)
     .then(toCanvas)
-    .then(canvas => cropCanvasFromTopLeft(canvas))
+    .then(canvas => cropNeighborhoodCanvasFromTopLeft(canvas))
     .then(createThumbnail)
     .then(canvasToBlob);
 }

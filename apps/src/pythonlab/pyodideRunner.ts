@@ -15,7 +15,7 @@ import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {SVG_ID} from '@cdo/apps/maze/constants';
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {getStore} from '@cdo/apps/redux';
-import {captureThumbnailFromSvgLab2Neighborhood} from '@cdo/apps/util/thumbnail';
+import {captureThumbnailFromSvgPythonlabNeighborhood} from '@cdo/apps/util/thumbnail';
 
 import {getValidationFromSource, RunType} from '../codebridge';
 
@@ -73,7 +73,9 @@ export async function handleRunClick(
       const svg = document.getElementById(SVG_ID);
       const svgArg = svg instanceof SVGSVGElement ? svg : null;
       if (svgArg) {
-        const pngBlob = await captureThumbnailFromSvgLab2Neighborhood(svgArg);
+        const pngBlob = await captureThumbnailFromSvgPythonlabNeighborhood(
+          svgArg
+        );
         projectManager?.setThumbnail(pngBlob);
       }
     }
