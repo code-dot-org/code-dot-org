@@ -1600,7 +1600,7 @@ class Unit < ApplicationRecord
         section_hidden_unit_info: section_hidden_unit_info(user),
         pilot_experiment: get_pilot_experiment,
         editor_experiment: editor_experiment,
-        show_assign_button: course_assignable?(user),
+        show_assign_button: unit_group_unit&.unit_group&.course_assignable?(user),
         project_sharing: project_sharing,
         curriculum_umbrella: curriculum_umbrella,
         family_name: family_name,
