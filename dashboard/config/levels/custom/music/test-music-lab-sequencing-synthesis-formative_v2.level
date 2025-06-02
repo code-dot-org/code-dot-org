@@ -1,0 +1,204 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T02:57:02.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential"
+          ]
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "play_sound_at_current_location_simple2",
+              "x": 450,
+              "y": 130,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "rosa_linn_hallelujah/drums_big_fill"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "}^I@9^#%haU46X_.kI.J",
+              "x": 230,
+              "y": 130,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "rosa_linn_hallelujah/guitar_acoustic"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "Uc}U0Yt51K:_b9f0%qt8",
+              "x": 230,
+              "y": 210,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "rosa_linn_hallelujah/vocals_hallelujah"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "]m=Fp=,v3h0!Own-0P#M",
+              "x": 230,
+              "y": 50,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "rosa_linn_hallelujah/vocals_oh_1"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "O1dySSO|EU%RAjc_EKA4",
+              "x": 450,
+              "y": 210,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "rosa_linn_hallelujah/vocals_oh_3"
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "rosa_linn_hallelujah",
+      "sounds": {
+        "rosa_linn_hallelujah": [
+          "drums_big_fill",
+          "guitar_acoustic",
+          "vocals_oh_1",
+          "vocals_hallelujah",
+          "vocals_oh_3"
+        ]
+      },
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_rest_at_current_location_simple2",
+            "fields": {
+              "rest_duration": "<field name=\"rest_duration\">1</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_sequential",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      }
+    },
+    "long_instructions": "### Check-In\r\n\r\nRecreate the example song below using just the provided tracks!\r\n\r\n![](https://images.code.org/bbf634a3dbe045dfdd18cebb960b383c-levelbuilder.png)",
+    "encrypted_exemplar_sources": "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\n",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
+      "validationMode": "default",
+      "playerTitle": "Example"
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-sequencing-synthesis-formative_57fa868f-998e-4b82-b631-cbec867d80b5",
+        "message": "auto-pass for exemplar",
+        "next": true,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "thumbnail_url": "https://images.code.org/bbf634a3dbe045dfdd18cebb960b383c-levelbuilder.png",
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:02.069+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequencing-synthesis-formative\\\"\"],\"cloned_from\":\"test-music-lab-sequencing-synthesis-formative\"}]"
+}]]></config>
+  <blocks/>
+</Music>
