@@ -157,41 +157,43 @@ class ActiveSupport::TestCase
   include ActiveSupport::Testing::SpecSyntax
   include CaptureQueries
 
-  def seed_deprecated_unit_fixtures
-    # Some of the functionality we're testing here relies on Scripts with
-    # certain hardcoded names. In the old fixture-based model, this data was
-    # all provided; in the new factory-based model, we need to do a little
-    # prep.
-    #
-    # NOTE for any future developers: please DO NOT add new scripts to this
-    # list. This exists to provide backwards compatibility to old tests which
-    # are dependent on factory-provided content. If you are writing new tests,
-    # please make sure that they are instead relying on factory-provided
-    # content.
-    tested_script_names = [
-      'ECSPD',
-      'allthethings',
-      Unit::COURSE1_NAME,
-      Unit::COURSE4_NAME,
-      Unit::FLAPPY_NAME,
-      Unit::FROZEN_NAME,
-      Unit::HOC_NAME,
-      Unit::PLAYLAB_NAME,
-      Unit::TWENTY_HOUR_NAME
-    ]
+  # Some of the functionality we're testing here relies on Scripts with
+  # certain hardcoded names. In the old fixture-based model, this data was
+  # all provided; in the new factory-based model, we need to do a little
+  # prep.
+  #
+  # NOTE for any future developers: please DO NOT add new scripts to this
+  # list. This exists to provide backwards compatibility to old tests which
+  # are dependent on factory-provided content. If you are writing new tests,
+  # please make sure that they are instead relying on factory-provided
+  # content.
+  DEFAULT_FIXTURE_UNIT_NAMES = [
+    'ECSPD',
+    'allthethings',
+    Unit::COURSE1_NAME,
+    Unit::COURSE4_NAME,
+    Unit::FLAPPY_NAME,
+    Unit::FROZEN_NAME,
+    Unit::HOC_NAME,
+    Unit::PLAYLAB_NAME,
+    Unit::TWENTY_HOUR_NAME
+  ].freeze
 
-    tested_script_names.each do |script_name|
+  def seed_deprecated_unit_fixtures(unit_names: DEFAULT_FIXTURE_UNIT_NAMES)
+    unit_names.each do |unit_name|
+      raise "unexpected unit name: #{unit_name}" unless DEFAULT_FIXTURE_UNIT_NAMES.include?(unit_name)
+
       # create a placeholder factory-provided Unit if we don't already have a
       # fixture-provided one.
       # Specify skip_name_format_validation because 'ECSPD' will fail to be
       # created otherwise, because upper case letters are not allowed.
-      script = Unit.find_by_name(script_name) ||
-        create(:script, :with_levels, levels_count: 5, name: script_name, skip_name_format_validation: true)
+      unit = Unit.find_by_name(unit_name) ||
+        create(:script, :with_levels, levels_count: 5, name: unit_name, skip_name_format_validation: true)
 
       # make sure that all the Unit's ScriptLevels have associated Levels.
       # This is expected during the interim period where we are no longer
       # generating Levels from fixtures, but are still generating Scripts
-      script.script_levels.each do |script_level|
+      unit.script_levels.each do |script_level|
         next unless script_level.levels.empty?
         script_level.levels = [create(:level)]
       end
