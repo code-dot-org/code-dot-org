@@ -769,6 +769,12 @@ module LevelsHelper
     end
     app_options[:share] = level_options[:share] if level_options[:share]
     app_options[:public_caching] = @public_caching
+    if @script_level&.lesson
+      app_options[:theme] = @script_level.lesson.get_background_for_user(current_user)
+    elsif @level.is_a?(Pythonlab) && current_user
+      theme_preference = UserPreference.find_by(user_id: current_user.id)&.theme
+      app_options[:theme] = (theme_preference && theme_preference['global']) || 'dark'
+    end
     app_options.camelize_keys
   end
 
