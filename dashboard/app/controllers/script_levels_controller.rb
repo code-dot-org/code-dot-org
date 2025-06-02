@@ -557,6 +557,8 @@ class ScriptLevelsController < ApplicationController
     # All database look-ups should have already been cached by Unit::unit_cache_from_db
     @game = @level.game
     @lesson ||= @script_level.lesson
+    unit_context = ScriptLevelsController.get_unit_context(request)
+    unit_group = unit_context[:unit_group]
 
     load_level_source
 
@@ -576,6 +578,7 @@ class ScriptLevelsController < ApplicationController
 
     @callback = milestone_script_level_url(
       user_id: current_user.try(:id) || 0,
+      course_id: unit_group&.id,
       script_level_id: @script_level.id,
       level_id: @level.id
     )
@@ -586,6 +589,7 @@ class ScriptLevelsController < ApplicationController
     if @level.game&.level_group? || @level.try(:contained_levels).present?
       @sublevel_callback = milestone_script_level_url(
         user_id: current_user.try(:id) || 0,
+        course_id: unit_group&.id,
         script_level_id: @script_level.id,
         level_id: ''
       )
