@@ -1,7 +1,6 @@
 require 'cdo/throttle'
 
 class AichatRequestsController < ApplicationController
-  include AichatSagemakerHelper
   authorize_resource class: false
 
   AICHAT_REQUEST_COUNT_PREFIX = "aichat/requests/".freeze
@@ -90,12 +89,12 @@ class AichatRequestsController < ApplicationController
 
   private def can_access_ai_tutor2?(level_id)
     # AiTutor2 requests only come from python lab levels.
-    return false unless level_id && DCDO.get("ai_tutor2_chat_completion", true)
+    return false if level_id == nil? || DCDO.get("block_ai_tutor2_chat_completion", false)
     Level.find(level_id).is_a? Pythonlab
   end
 
   private def can_access_aichat?
-    AichatSagemakerHelper.can_request_aichat_chat_completion? && current_user.has_aichat_access?
+    !DCDO.get("block_aichat_chat_completion", false) && current_user.has_aichat_access?
   end
 
   private def should_throttle_request_count?
