@@ -337,7 +337,7 @@ export default class ProjectManager {
    * Uploads a thumbnail image to the thumbnail path via the files API.
    */
   saveThumbnail(): Promise<Response | void> {
-    if (this.thumbnailUrl) {
+    if (this.thumbnailUrl && this.thumbnailPngBlob) {
       return HttpClient.put(
         this.thumbnailUrl,
         this.thumbnailPngBlob,
