@@ -810,6 +810,8 @@ module SharedConstants
     KAREN: "gen-ai-karen-creative-mistral-7b",
     PIRATE: "gen-ai-mistral-pirate-7b",
     CHATGPT: "gpt-4o-mini",
+    LEARNLM: "learnlm-2.0-flash-experimental",
+    GEMINI: "gemini-2.0-flash"
   }
 
   AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze
