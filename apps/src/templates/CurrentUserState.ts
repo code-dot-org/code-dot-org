@@ -36,5 +36,4 @@ export interface CurrentUserState {
   aiDifferentiationEnabled: boolean;
   hasCompletedAiDifferentiationWelcome: boolean;
   userSharingDisabled: boolean;
-  inUSA: boolean;
 }
