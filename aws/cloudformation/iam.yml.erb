@@ -1186,6 +1186,10 @@ roles.each do |name, config| %>
                   - cloudfront:DeleteOriginAccessControl
                   - cloudfront:DeleteCachePolicy
                   - cloudfront:DeleteFunction
+                  - cloudfront:CreateResponseHeadersPolicy
+                  - cloudfront:GetResponseHeadersPolicy
+                  - cloudfront:UpdateResponseHeadersPolicy
+                  - cloudfront:DeleteResponseHeadersPolicy
                 Resource: '*'
               # Route53 and ACM resources
               - Effect: Allow
