@@ -165,7 +165,6 @@ Feature: Curriculum Catalog Page
     And I wait until element "h1:contains(AI for Oceans)" is visible
 
   @no_mobile
-  @skip
   Scenario: Signed-out user can navigate to facilitator led workshop through expanded card
     Given I am on "http://studio.code.org/catalog"
     And I wait until element "h4:contains(CS Fundamentals: Course A)" is visible
