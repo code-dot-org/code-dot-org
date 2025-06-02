@@ -83,6 +83,9 @@ import Spacer, {
 import TabGroup, {
   TabGroupContentfulComponentDefinition,
 } from '@/components/contentful/tabGroup';
+import Testimonial, {
+  TestimonialContentfulComponentDefinition,
+} from '@/components/contentful/testimonial';
 import Video, {
   VideoContentfulComponentDefinition,
 } from '@/components/contentful/video';
@@ -205,6 +208,13 @@ defineComponents(
       definition: CurriculumSnapshotContentfulComponentDefinition,
     },
     {component: TabGroup, definition: TabGroupContentfulComponentDefinition},
+    {
+      component: Testimonial,
+      definition: TestimonialContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
+    },
     {
       component: Video,
       definition: VideoContentfulComponentDefinition,

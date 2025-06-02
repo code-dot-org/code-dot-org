@@ -102,7 +102,9 @@ function initLevelGroup(levelCount, currentPage, lastAttempt) {
       window.dashboard.reporting.sendReport({
         program: response,
         fallbackResponse: appOptions.dialog.fallbackResponse,
-        callback: appOptions.dialog.sublevelCallback + subLevelId,
+        callback: appOptions.dialog.sublevelCallback.includes('?')
+          ? appOptions.dialog.sublevelCallback.replace('?', subLevelId + '?')
+          : appOptions.dialog.sublevelCallback + subLevelId,
         app: subLevel.getAppName(),
         allowMultipleSends: true,
         level: subLevelId,

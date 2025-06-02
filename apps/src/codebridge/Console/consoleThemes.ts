@@ -2,7 +2,7 @@
 // black with white text.
 // We override a few colors to ensure good contrast.
 export const darkTheme = {
-  red: '#ff5f5f',
+  red: '#FF69B4',
   brightBlack: '#b2b2b2',
 };
 

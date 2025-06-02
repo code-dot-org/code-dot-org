@@ -1,0 +1,317 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T03:00:04.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "alessia_cara_scars_to_your_beautiful",
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "triggered_at_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "sounds": {
+        "alessia_cara_scars_to_your_beautiful": [
+          "drums_loop_1",
+          "drums_loop_2",
+          "bass_verse",
+          "bass_chorus",
+          "guitar",
+          "organ_pad",
+          "piano_verse",
+          "piano_chorus",
+          "impact",
+          "vocals_no_better_you",
+          "vocals_no_better_life",
+          "vocals_no_better_time",
+          "vocals_beautiful"
+        ],
+        "pop": [
+          "clap"
+        ]
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "repeat_simple2",
+                        "id": "repeat_simple2",
+                        "deletable": false,
+                        "movable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "times": 8
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "play_sound_at_current_location_simple2",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": true
+                              },
+                              "fields": {
+                                "sound": "alessia_cara_scars_to_your_beautiful/drums_loop_1"
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "repeat_simple2",
+                            "id": "qymu_(ZIinEAYc5xS}!v",
+                            "deletable": false,
+                            "movable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "times": 2
+                            },
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "play_sounds_sequential",
+                                  "id": "play_sounds_sequential",
+                                  "deletable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": true
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "p~SYOO!AZ:UnOZ0C%XHw",
+                                        "deletable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "alessia_cara_scars_to_your_beautiful/vocals_no_better_life"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "2=AZ8Gh7*uZ(1,jvIn]n",
+                                            "deletable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": true
+                                            },
+                                            "fields": {
+                                              "sound": "alessia_cara_scars_to_your_beautiful/vocals_no_better_you"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "next": {
+                              "block": {
+                                "type": "repeat_simple2",
+                                "id": "yw5KfPwe2^Q90|Hpi~*U",
+                                "deletable": false,
+                                "movable": false,
+                                "extraState": {
+                                  "disableNextConnection": true
+                                },
+                                "fields": {
+                                  "times": 2
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "play_sounds_together",
+                                      "id": "HRyX.0a%0/}P0WBlV5vn",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": true
+                                      },
+                                      "inputs": {
+                                        "code": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": ":(m$BJZHgPJ4lrH![zR[",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "alessia_cara_scars_to_your_beautiful/piano_verse"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "lKDccqdeNx+~FP_8Xu07",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": true
+                                                },
+                                                "fields": {
+                                                  "sound": "alessia_cara_scars_to_your_beautiful/organ_pad"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "editable": false,
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "alessia_cara_scars_to_your_beautiful/vocals_no_better_time"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "editable": false,
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "pop/clap"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "triggered_at_simple2",
+            "fields": {
+              "trigger": "<field name=\"trigger\">trigger1</field>",
+              "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      }
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false,
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
+      "playerTitle": "Example"
+    },
+    "long_instructions": "### Live Coding\r\n\r\nLet's add triggers to our code to enhance the live performance elements!\r\n\r\n- Use `Trigger 1` to play the last vocal on the next beat\r\n- Use `Trigger 2` to play the clap effect immediately\r\n\r\n**Run Your Code!** Use triggers to improvise in the moment!",
+    "encrypted_exemplar_sources": "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\njSsttk5zzCEb\n",
+    "validations": [
+      {
+        "key": "test-music-lab-loops-sythesize-skill-4c_84629c09-d56c-4078-9032-17134dd5161a",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: \"You Did It!\"",
+        "next": true,
+        "conditions": [
+          {
+            "name": "trigger_id_pressed",
+            "value": 1
+          },
+          {
+            "name": "trigger_id_pressed",
+            "value": 2
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "vocal:3"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "fx"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-sythesize-skill-4c_61c70aac-ea40-4cfb-b0f8-6e9b05b55c40",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for...\n- Trigger 1 to be pressed\n- Trigger 2 to be pressed\n- The third vocal and an effect to play",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:04.888+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-sythesize-skill-4c\\\"\"],\"cloned_from\":\"test-music-lab-loops-sythesize-skill-4c\"}]"
+}]]></config>
+  <blocks/>
+</Music>

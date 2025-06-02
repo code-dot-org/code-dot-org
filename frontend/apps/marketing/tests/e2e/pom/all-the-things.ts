@@ -32,7 +32,7 @@ export class AllTheThingsPage extends MarketingPage {
 
   async goto(path?: string) {
     if (!path) {
-      return await super.goto('/engineering/all-the-things');
+      return await super.goto('/engineering/all-the-things?otgeo=us');
     }
 
     return await super.goto(path);
