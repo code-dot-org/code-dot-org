@@ -4,12 +4,12 @@ import {PluginType} from '../../plugins';
 import type {InputPlugin} from '../../plugins';
 
 /**
- * Adds a spiky triangular notch for input/output connections.
+ * Adds a rectangular notch for an input/output of a block.
  */
 export const plugin: (check: string) => InputPlugin = (check: string) => ({
   type: PluginType.Input,
   check,
-  shape: 'TRIANGLE',
+  shape: 'RECTANGLE',
   makePath: function (shapeIndex: number) {
     const width = this.TAB_WIDTH;
     const height = this.TAB_HEIGHT;
@@ -20,8 +20,9 @@ export const plugin: (check: string) => InputPlugin = (check: string) => ({
      */
     function makeMainPath(up: number) {
       return Blockly.utils.svgPaths.line([
-        Blockly.utils.svgPaths.point(-width, (-1 * up * height) / 2),
-        Blockly.utils.svgPaths.point(width, (-1 * up * height) / 2),
+        Blockly.utils.svgPaths.point(-width, 0),
+        Blockly.utils.svgPaths.point(0, -1 * up * height),
+        Blockly.utils.svgPaths.point(width, 0),
       ]);
     }
 

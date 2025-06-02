@@ -73,6 +73,9 @@ export const definition = {
     lab_blocks: {
       colourPrimary: '#7435b2',
     },
+    comment_blocks: {
+      colourPrimary: '#aaaaaa',
+    },
   },
   categoryStyles: {},
   componentStyles: {

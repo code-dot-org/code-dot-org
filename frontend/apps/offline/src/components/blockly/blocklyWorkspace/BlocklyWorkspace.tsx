@@ -168,6 +168,8 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
                 ...complexBlockDefinition.mutator,
               };
 
+              const oldMutator: Mutator = complexBlockDefinition.mutator;
+
               if ('environment' in mutator) {
                 type EnvironmentBlock = Blockly.Block & {
                   environment: Environment & object;
@@ -177,11 +179,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
                   state: object,
                 ) {
                   this.environment = environment;
-                  if (typeof complexBlockDefinition.mutator !== 'string') {
-                    complexBlockDefinition.mutator?.loadExtraState?.bind(this)(
-                      state,
-                    );
-                  }
+                  oldMutator.loadExtraState?.bind(this)(state);
                 };
               }
               Blockly.Extensions.registerMutator(name, mutator);
@@ -197,12 +195,6 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
           if (typeof extension !== 'string' && 'extension' in extension) {
             const name = extension.name;
             if (!Blockly.Extensions.isRegistered(name)) {
-              console.log(
-                'register extension with environment',
-                name,
-                extension,
-                environment,
-              );
               Blockly.Extensions.register(
                 name,
                 function (this: ProcedureBlock) {
@@ -326,7 +318,6 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
         }
       }
 
-      console.log('MIXIN', Blockly.Blocks);
       for (const definition of Object.values(Blockly.Blocks)) {
         for (const [key, prop] of Object.entries(mixinPlugin.mixin)) {
           definition[key] ||= prop;
@@ -346,9 +337,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
       }
     }
 
-    console.log('BLOCKS', Blockly, Blockly.Blocks);
     const originalAppend = Blockly.serialization.blocks.append;
-    console.log('block serializing switching out', originalAppend);
     /*
     Blockly.serialization.blocks.append = function (json, workspace) {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -414,14 +403,11 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
     }
 
     // Apply the custom styles to our custom elements
-    console.log('THEME', theme, Blockly.Theme);
-
     if (options?.grayOutUndeletableBlocks) {
       workspace.current.addChangeListener(grayOutUndeletableBlocks);
     }
 
     // JSON serialization
-    console.log('serialization', startBlocks);
     if (startBlocks) {
       Blockly.serialization.workspaces.load(startBlocks, workspace.current);
       for (const block of workspace.current.getTopBlocks()) {
@@ -473,7 +459,6 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
           (container?.querySelector('svg')?.parentNode as HTMLElement | null)
             ?.classList || [],
         )) {
-          console.log(blocklyClassName);
           anchor.current.classList.add(blocklyClassName);
         }
       }

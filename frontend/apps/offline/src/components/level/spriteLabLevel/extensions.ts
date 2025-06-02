@@ -47,8 +47,8 @@ export const behaviorsNameValidator = {
     nameField?.setValidator(function (this: Blockly.Field<string>, newValue) {
       // The default validator provided by mainline Blockly. Strips whitespace.
       const rename = Blockly.Procedures.rename.bind(this);
-      console.log('rename', rename, newValue);
       const legalName = rename(newValue);
+      console.log('rename', legalName, newValue);
       const sourceBlock = this.sourceBlock_ as ProcedureBlock & {
         behaviorId: string;
       };

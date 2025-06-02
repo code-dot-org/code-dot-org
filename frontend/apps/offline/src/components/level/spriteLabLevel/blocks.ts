@@ -13,7 +13,7 @@ import {
   behaviorCallerGetDefBlockMixin,
   behaviorCreateDefMixin,
 } from './mixins';
-import {behaviorGetMutator} from './mutators';
+import {behaviorGetMutator /*, behaviorDefMutator*/} from './mutators';
 
 const spriteList: BlockOptionsList = [
   [
@@ -438,6 +438,25 @@ const blocks: BlockDefinition[] = [
         name: 'DIRECTION',
         type: 'field_dropdown',
         options: FACE_OPTIONS,
+      },
+    ],
+    generator: () => '\n',
+  },
+  // This block add a harmless comment to the code
+  {
+    type: 'gamelab_comment',
+    message0: 'comment: %1',
+    style: 'comment_blocks',
+    tooltip: '',
+    helpUrl: '',
+    nextStatement: true,
+    previousStatement: true,
+    args0: [
+      {
+        name: 'COMMENT',
+        check: 'String',
+        type: 'field_input',
+        text: '',
       },
     ],
     generator: () => '\n',

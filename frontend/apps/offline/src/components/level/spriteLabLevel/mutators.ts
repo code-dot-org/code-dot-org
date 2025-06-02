@@ -126,6 +126,7 @@ export const behaviorGetMutator = {
     this: BehaviorGetMutatorBlock,
     state: BehaviorGetMutatorState,
   ) {
+    console.log('LOADING EXTRA STATE', state);
     this.behaviorId = state.behaviorId || state.id || 'unnamed';
     this.deserialize_(this.behaviorId, state.params || []);
     if (state.disableNextConnection) {

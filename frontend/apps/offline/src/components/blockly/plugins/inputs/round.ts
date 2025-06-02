@@ -3,6 +3,9 @@ import * as Blockly from 'blockly/core';
 import {PluginType} from '../../plugins';
 import type {InputPlugin} from '../../plugins';
 
+/**
+ * Adds a round notch for input/output connections.
+ */
 export const plugin: (check: string) => InputPlugin = (check: string) => ({
   type: PluginType.Input,
   check,
