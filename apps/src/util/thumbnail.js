@@ -17,7 +17,7 @@ const THUMBNAIL_WIDTH = 220;
 
 // Minimum time to wait after capturing a thumbnail image before capturing
 // another thumbnail.
-const MIN_CAPTURE_INTERVAL_MS = 1000;
+const MIN_CAPTURE_INTERVAL_MS = 60000;
 
 /**
  * @type {number} The last time at which a screenshot capture was attempted.
