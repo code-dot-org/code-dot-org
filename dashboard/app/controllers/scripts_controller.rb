@@ -344,7 +344,7 @@ class ScriptsController < ApplicationController
       end
       if unit_group&.single_unit_course?
         script = unit_group.units_for_user(current_user).first
-        return script
+        return {script: script, unit_group: unit_group}
       end
     end
 
@@ -362,9 +362,12 @@ class ScriptsController < ApplicationController
         @script = context[:unit]
       end
     else
-      @script = get_unit_by_name
-      raise ActiveRecord::RecordNotFound unless @script
-      @course = @script.original_unit_group
+      result = get_unit_by_name
+      raise ActiveRecord::RecordNotFound unless result
+
+      @script = result[:script]
+      # Use the unit_group from the result if it's a single unit course, otherwise fall back to original logic
+      @course = result[:unit_group] || @script.original_unit_group
       @unit_group_unit = @script.unit_group_units.find {|ugu| ugu.unit_group == @course}
       @unit_position = @unit_group_unit&.position
     end
