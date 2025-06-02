@@ -56,7 +56,7 @@ test.describe('All the things UI e2e test', () => {
         {
           name: 'language_',
           path: '/',
-          domain: `.${allTheThingsPage.getBaseDomain()}`,
+          domain: `.${allTheThingsPage.getCookieDomain()}`,
           value: 'zh-CN',
         },
       ]);
@@ -81,7 +81,7 @@ test.describe('All the things UI e2e test', () => {
         {
           name: 'language_',
           path: '/',
-          domain: `.${allTheThingsPage.getBaseDomain()}`,
+          domain: `.${allTheThingsPage.getCookieDomain()}`,
           value: 'invalid',
         },
       ]);

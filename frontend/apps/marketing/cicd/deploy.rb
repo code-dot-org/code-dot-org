@@ -242,8 +242,13 @@ begin
     puts "  #{key}: #{value}"
   end
 
-  print "\nDo you want to continue? [y/N]: "
-  confirmation = $stdin.gets.chomp.downcase
+  if ENV['CI'] == 'true'
+    puts "Running in CI mode. Skipping confirmation..."
+    confirmation = 'yes'
+  else
+    puts "\nDo you want to continue? [y/N]: "
+    confirmation = $stdin.gets.chomp.downcase
+  end
 
   if ['y', 'yes'].include?(confirmation)
     # Generate certificate stack name

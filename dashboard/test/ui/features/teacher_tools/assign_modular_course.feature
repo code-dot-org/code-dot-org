@@ -17,9 +17,9 @@ Feature: Assigning Modular Courses
     And I am on "http://studio.code.org/home"
 
     Then I see that "Section 1" is assigned to "ui-test-course-2019" in the section table
-    And I see that "Section 1" is assigned to "ui-test-shared-unit" in the section table
+    And I see that "Section 1" is assigned to "UI Test Shared Unit" in the section table
     And I see that "Section 2" is not assigned to "ui-test-course-2019" in the section table
-    And I see that "Section 2" is not assigned to "ui-test-shared-unit" in the section table
+    And I see that "Section 2" is not assigned to "UI Test Shared Unit" in the section table
 
   Scenario: Assign unit in modular course from course overview page
     Given I am a teacher with student sections named Section 1 and Section 2
@@ -37,5 +37,5 @@ Feature: Assigning Modular Courses
     And I am on "http://studio.code.org/home"
 
     Then I see that "Section 1" is assigned to "ui-test-course-2019" in the section table
-    And I see that "Section 1" is assigned to "ui-test-shared-unit" in the section table
+    And I see that "Section 1" is assigned to "UI Test Shared Unit" in the section table
     And I see that "Section 2" is not assigned to "ui-test-course-2019" in the section table

@@ -18,7 +18,7 @@
     "skip_sound": true,
     "stay_on_level_after_submit": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-21T17:46:19.126+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-_projectmanage_forum_L5_python\\\"\"],\"cloned_from\":\"csaif-pl-_projectmanage_forum_L5_python\"},{\"changed_at\":\"2025-03-21 18:22:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-04-24 18:02:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-05-20 15:22:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-03-21T17:46:19.126+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-_projectmanage_forum_L5_python\\\"\"],\"cloned_from\":\"csaif-pl-_projectmanage_forum_L5_python\"},{\"changed_at\":\"2025-03-21 18:22:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-04-24 18:02:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-05-20 15:22:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-05-29 21:38:10 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

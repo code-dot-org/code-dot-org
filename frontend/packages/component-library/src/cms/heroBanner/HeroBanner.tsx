@@ -96,7 +96,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   <section
     role="banner"
     data-theme={HTMLAttributes['data-theme']}
-    className={className}
+    className={classNames(moduleStyles.heroBanner, className)}
     {...HTMLAttributes}
   >
     {announcementBannerProps && (
