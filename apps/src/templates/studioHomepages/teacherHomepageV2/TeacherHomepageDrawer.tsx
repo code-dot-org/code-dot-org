@@ -1,3 +1,4 @@
+import Alert from '@code-dot-org/component-library/alert';
 import Button from '@code-dot-org/component-library/button';
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import {
@@ -15,6 +16,8 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import SchoolDataInputs from '../../SchoolDataInputs';
+
+import drawerConfirmationImage from './images/drawer-confirmation-image.png';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -53,14 +56,24 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
     React.useState(showSchoolInfoInterstitial);
   const [schoolInfoConfirmationOpen, setSchoolInfoConfirmationOpen] =
     React.useState(showSchoolInfoConfirmation);
+  const [success, setSuccess] = React.useState(false);
+  const schoolName = existingSchoolInfo?.school_name || 'the same school?';
 
   const [showSchoolInfoUnknownError, setShowSchoolInfoUnknownError] =
     React.useState(false);
 
-  const handleSubmit = async () => {
-    if (schoolInfoConfirmationOpen) {
-      // If the confirmation drawer is open, the user can click through to the
+  const handlePrimaryButtonClick = async () => {
+    if (success) {
+      // If the drawer is already showing success, we just want to close it.
+      onDrawerClose();
+    } else if (schoolInfoConfirmationOpen) {
+      // If the confirmation drawer is open, the user can click through to
       // make the school info panel appear.
+      analyticsReporter.sendEvent(
+        EVENTS.CONFIRM_SCHOOL_CLICKED,
+        {},
+        PLATFORMS.BOTH
+      );
       setSchoolInfoInterstitialOpen(true);
       setSchoolInfoConfirmationOpen(false);
     } else if (schoolInfoInterstitialOpen) {
@@ -93,7 +106,8 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
           PLATFORMS.BOTH
         );
 
-        onDrawerClose();
+        setSuccess(true);
+        setSchoolInfoInterstitialOpen(false);
       } catch (error) {
         analyticsReporter.sendEvent(
           EVENTS.SCHOOL_INTERSTITIAL_SAVE_FAILURE,
@@ -116,56 +130,103 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
   };
 
   const onDrawerClose = () => {
-    // TODO: Analytics here
+    if (schoolInfoInterstitialOpen) {
+      analyticsReporter.sendEvent(
+        EVENTS.SCHOOL_INTERSTITIAL_DISMISS,
+        {},
+        PLATFORMS.BOTH
+      );
+      setSchoolInfoInterstitialOpen(false);
+    } else if (schoolInfoConfirmationOpen) {
+      analyticsReporter.sendEvent(
+        EVENTS.UPDATE_SCHOOL_INFO_DIALOG_CLOSED,
+        {},
+        PLATFORMS.BOTH
+      );
+      setSchoolInfoConfirmationOpen(false);
+    } else if (success) {
+      setSuccess(false);
+    }
   };
 
   return (
     <Drawer
       className={styles.drawer}
       anchor={'bottom'}
-      open={showSchoolInfoInterstitial || showSchoolInfoConfirmation}
-      onClose={onDrawerClose}
+      open={schoolInfoInterstitialOpen || schoolInfoConfirmationOpen || success}
       variant={'persistent'}
     >
       <div className={styles.toolbar}>
         <CloseButton
           aria-label={''}
-          onClick={() => setSchoolInfoInterstitialOpen(false)}
+          onClick={onDrawerClose}
           color={'light'}
           size="l"
           className={''}
         />
       </div>
-      <Heading2>
-        {schoolInfoConfirmationOpen
-          ? i18n.reviewSchoolInfo()
-          : i18n.censusHeading()}
-      </Heading2>
-      <BodyTwoText>
-        {schoolInfoConfirmationOpen
-          ? `${i18n.schoolInfoDialogDescription()}${i18n.schoolInfoDialogDescriptionSchoolName(
-              schoolInfo.schoolName
-            )}`
-          : i18n.schoolInfoInterstitialTitle()}
-      </BodyTwoText>
-      <div className={styles.drawerContent}>
-        {schoolInfoInterstitialOpen && (
-          <SchoolDataInputs {...schoolInfo} includeHeaders={false} />
+      <div className={styles.drawerText}>
+        {success && (
+          <img
+            className={styles.drawerImage}
+            src={drawerConfirmationImage}
+            alt=""
+          />
         )}
+        <Heading2>
+          {schoolInfoConfirmationOpen
+            ? i18n.reviewSchoolInfo()
+            : success
+            ? i18n.thankYouForUpdatingYourSchool()
+            : i18n.censusHeading()}
+        </Heading2>
+        <BodyTwoText>
+          {schoolInfoConfirmationOpen
+            ? `${i18n.schoolInfoDialogDescription()}${i18n.schoolInfoDialogDescriptionSchoolName(
+                {schoolName}
+              )}`
+            : success
+            ? i18n.schoolInfoDrawerSuccess()
+            : i18n.schoolInfoInterstitialTitle()}
+        </BodyTwoText>
       </div>
+      {schoolInfoInterstitialOpen && (
+        <div className={styles.drawerContent}>
+          {showSchoolInfoUnknownError && (
+            <Alert
+              type={'danger'}
+              size={'s'}
+              text={i18n.schoolInfoInterstitialUnknownError()}
+            />
+          )}
+          <SchoolDataInputs {...schoolInfo} includeHeaders={false} />
+        </div>
+      )}
       <div className={styles.drawerFooter}>
-        <Button
-          type={'secondary'}
-          size={'m'}
-          color={'gray'}
-          text={i18n.cancel()}
-          onClick={() => setSchoolInfoInterstitialOpen(false)}
-        />
+        {!success && (
+          <Button
+            type={'secondary'}
+            size={'m'}
+            color={'gray'}
+            text={
+              schoolInfoConfirmationOpen
+                ? i18n.imStillTeachingHere()
+                : i18n.dismiss()
+            }
+            onClick={onDrawerClose}
+          />
+        )}
         <Button
           type={'primary'}
           size={'m'}
-          text={i18n.save()}
-          onClick={handleSubmit}
+          text={
+            schoolInfoConfirmationOpen
+              ? i18n.imAtaNewSchool()
+              : success
+              ? i18n.closeDialog()
+              : i18n.save()
+          }
+          onClick={handlePrimaryButtonClick}
         />
       </div>
     </Drawer>

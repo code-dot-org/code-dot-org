@@ -437,6 +437,13 @@
   width: 100%;
 }
 
+.drawerText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 700px;
+}
+
 .drawerContent {
   display: flex;
   flex-direction: column;
@@ -452,4 +459,8 @@
   flex-direction: row;
   gap: 12px;
   align-items: center;
+}
+
+.drawerImage {
+  width: 192px;
 }
