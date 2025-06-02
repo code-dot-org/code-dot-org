@@ -1,0 +1,55 @@
+{
+  "entryContent": {
+    "fields": {
+      "internalName": {
+        "en-US": "Hero Banner Basic"
+      },
+      "heading": {
+        "en-US": "Hero Banner Basic"
+      },
+      "subheading": {
+        "en-US": "Hero banner subheading"
+      },
+      "description": {
+        "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam."
+      },
+      "primaryButton": {
+        "en-US": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "79dI2fR2dzbb0IN3dFQJ3t"
+            }
+          }
+        ]
+      },
+      "sectionImage": {
+        "en-US": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6fdNRFZbNXpiXQd6v7fHen"
+            }
+          }
+        ]
+      },
+      "announcementBannerText": {
+        "en-US": "This is an announcement banner!"
+      },
+      "announcementBannerLink": {
+        "en-US": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1MRgVjtophe1CDjLbTpqXz"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "contentType": "heroBanner"
+}

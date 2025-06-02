@@ -100,7 +100,8 @@ class LevelsControllerTest < ActionController::TestCase
       "helpVideos" => [],
       "baseAssetUrl" => "/blockly/",
       "isAssessment" => nil,
-      "progressionType" => nil
+      "progressionType" => nil,
+      "enableBlocklyKeyboardNavigation" => nil
     }
     assert_equal(expected_body, body)
   end

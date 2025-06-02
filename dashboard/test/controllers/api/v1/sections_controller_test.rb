@@ -1045,6 +1045,31 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil section.script_id
   end
 
+  test "update: assigned unit must be part of assigned course" do
+    sign_in @teacher
+    section = create(:section, user: @teacher, script_id: nil)
+
+    post :update, params: {
+      id: section.id,
+      course_version_id: @csp_unit_group.course_version.id,
+      unit_id: @single_unit_course.default_units.first.id,
+    }
+    section.reload
+    assert_response :bad_request
+    assert_nil section.script_id
+    assert_nil section.course_id
+
+    post :update, params: {
+      id: section.id,
+      course_version_id: @csp_unit_group.course_version.id,
+      unit_id: @csp_script.id,
+    }
+    section.reload
+    assert_response :success
+    assert_equal @csp_script.id, section.script_id
+    assert_equal @csp_unit_group.id, section.course_id
+  end
+
   test "update: hidden script is unhidden when assigned" do
     sign_in @teacher
     @section.toggle_hidden_script @csp_script, true
@@ -1456,6 +1481,43 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :set_ai_tutor_enabled, params: {id: -1, ai_tutor_enabled: true}
     assert_response :forbidden
+  end
+
+  test 'valid_course_offerings includes only published courses' do
+    sign_in @teacher
+    get :valid_course_offerings, params: {login_type: Section::LOGIN_TYPE_EMAIL}
+    assert_response :success
+
+    course_offering_ids = JSON.parse(@response.body).keys
+    assert course_offering_ids.include?(@csp_unit_group.course_version.course_offering.id.to_s)
+    assert course_offering_ids.include?(@single_unit_course.course_version.course_offering.id.to_s)
+    refute course_offering_ids.include?(@beta_unit_group.course_version.course_offering.id.to_s)
+  end
+
+  test 'valid_course_offerings includes units of published courses' do
+    @beta_unit_1 = create :unit, original_unit_group: @beta_unit_group
+    create :unit_group_unit, unit_group: @beta_unit_group, script: @beta_unit_1, position: 1
+    @beta_unit_2 = create :unit, original_unit_group: @beta_unit_group
+    create :unit_group_unit, unit_group: @beta_unit_group, script: @beta_unit_2, position: 2
+
+    modular_course = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    create :unit_group_unit, unit_group: modular_course, script: @beta_unit_1, position: 1
+    create :unit_group_unit, unit_group: modular_course, script: @beta_unit_2, position: 2
+    CourseOffering.add_course_offering(modular_course)
+
+    sign_in @teacher
+    get :valid_course_offerings, params: {login_type: Section::LOGIN_TYPE_EMAIL}
+    assert_response :success
+
+    course_offerings = JSON.parse(@response.body)
+
+    co_summary = course_offerings[@csp_unit_group.course_version.course_offering.id.to_s]
+    cv_summary = co_summary['course_versions'][@csp_unit_group.course_version.id.to_s]
+    assert_equal [@csp_script.id.to_s, @csp_script2.id.to_s], cv_summary['units'].keys
+
+    co_summary = course_offerings[modular_course.course_version.course_offering.id.to_s]
+    cv_summary = co_summary['course_versions'][modular_course.course_version.id.to_s]
+    assert_equal [@beta_unit_1.id.to_s, @beta_unit_2.id.to_s], cv_summary['units'].keys
   end
 
   private def set_up_code_review_groups

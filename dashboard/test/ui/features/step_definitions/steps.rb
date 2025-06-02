@@ -690,9 +690,9 @@ Then /^execute JavaScript expression "([^"]*)"( to load a new page)?$/ do |expre
   end
 end
 
-Then /^I navigate to the course page for "([^"]*)"$/ do |course|
+Then /^I navigate to the unit page for unit number "([^"]*)" in course "([^"]*)"$/ do |unit_position, course|
   steps %{
-    Then I am on "http://studio.code.org/s/#{course}"
+    Then I am on "http://studio.code.org/courses/#{course}/units/#{unit_position}"
     And I wait to see ".user-stats-block"
   }
 end
@@ -1183,6 +1183,12 @@ end
 Then /^the overview page contains ([\d]+) assign (?:button|buttons)$/ do |expected_num|
   actual_num = @browser.execute_script("return $('.uitest-assign-button').length;")
   expect(actual_num).to eq(expected_num.to_i)
+end
+
+When /^I click the button in the unit card for unit "([^"]*)"$/ do |unit_name|
+  unit_card = @browser.find_elements(css: '.uitest-CourseScript').find {|el| el.text.include?(unit_name)}
+  button = unit_card.find_element(xpath: ".//a[contains(., 'Go to Unit')]")
+  button.click
 end
 
 And /^I dismiss the language selector$/ do

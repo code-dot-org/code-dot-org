@@ -51,6 +51,7 @@ module SharedConstants
       click_run: "click_run",
       click_submit: "click_submit",
       click_validate: "click_validate",
+      code_execution_error: "code_execution_error",
     }
   ).freeze
 

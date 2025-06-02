@@ -10,5 +10,5 @@ export const PythonlabEntryPoint: Lab2EntryPoint = {
       })
     )
   ),
-  themes: ['Dark'],
+  themes: ['Dark', 'Light'],
 };

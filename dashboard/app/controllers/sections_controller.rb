@@ -89,10 +89,22 @@ class SectionsController < ApplicationController
     section = Section.find(params[:id])
     lessons = []
     if section.script_id
-      unit = Unit.find(section.script_id)
-      lessons << {text: unit.title_for_display.sub(" - ", ": "), value: unit.link}
+      unit = Unit.get_from_cache(section.script_id)
+      unit_group = UnitGroup.get_from_cache(section.course_id)
+      unit_group_unit = Queries::Courses.unit_group_unit(unit, unit_group)
+      lessons << {text: unit.title_for_display(unit_group_unit: unit_group_unit).sub(" - ", ": "), value: unit.link(unit_group_unit: unit_group_unit)}
       unit.lesson_groups.each do |lesson_group|
-        lessons.concat(lesson_group.lessons.select(&:has_lesson_plan).map {|lesson| {text: 'Lesson ' + lesson.relative_position.to_s + ': ' + lesson.localized_name, value: script_lesson_path(unit, lesson) << '/levels/1'}})
+        lessons.concat(lesson_group.lessons.select(&:has_lesson_plan).map do |lesson|
+          path = script_lesson_script_level_path(unit, lesson, 1)
+          if Policies::Courses.modularity_enabled? && unit_group_unit && unit_group
+            path = course_unit_lesson_script_level_path(unit_group, unit_group_unit.position, lesson, 1)
+          end
+          {
+            text: 'Lesson ' + lesson.relative_position.to_s + ': ' + lesson.localized_name,
+            value: path,
+          }
+        end
+        )
       end
     end
     render json: lessons

@@ -1,7 +1,7 @@
 Feature: Playing multi2 levels
 
 Background:
-  Given I am on "http://studio.code.org/s/allthethings/lessons/10/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/10/levels/1?noautoplay=true"
   Then I wait for 3 seconds
   And I wait until element ".submitButton" is visible
 

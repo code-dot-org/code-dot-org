@@ -1277,6 +1277,24 @@
                                   "path": "/D06vmzVo/fields/image/~locale/fields/file/~locale",
                                   "type": "BoundValue"
                                 },
+                                "videoTitle": {
+                                  "key": "qtdvi1G7h9Xv_rt24jpHJ",
+                                  "type": "UnboundValue"
+                                },
+                                "videoYouTubeId": {
+                                  "key": "ZjNhDMDj-A_r1U5fX4P_3",
+                                  "type": "UnboundValue"
+                                },
+                                "videoFallback": {
+                                  "key": "vqPcHC14XgqSYsn9IyRum",
+                                  "type": "UnboundValue"
+                                },
+                                "videoShowCaption": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": false
+                                  }
+                                },
                                 "primaryButton": {
                                   "path": "/0Uc1jnt8/fields/primaryLinkRef/~locale",
                                   "type": "BoundValue"
@@ -1445,6 +1463,24 @@
                                 "image": {
                                   "path": "/4rTEErM8/fields/image/~locale/fields/file/~locale",
                                   "type": "BoundValue"
+                                },
+                                "videoTitle": {
+                                  "key": "NlDrsQYH6YfDkTOhuiGCA",
+                                  "type": "UnboundValue"
+                                },
+                                "videoYouTubeId": {
+                                  "key": "bRZ_5eNDP4PPs0YRpv33P",
+                                  "type": "UnboundValue"
+                                },
+                                "videoFallback": {
+                                  "key": "0C-c5xDSOUoiupxN-tMsR",
+                                  "type": "UnboundValue"
+                                },
+                                "videoShowCaption": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": false
+                                  }
                                 },
                                 "primaryButton": {
                                   "path": "/wf6Nfy0h/fields/marketingLink/~locale",
@@ -1800,6 +1836,24 @@
                                   "path": "/3xRBhtEN/fields/image/~locale/fields/file/~locale",
                                   "type": "BoundValue"
                                 },
+                                "videoTitle": {
+                                  "key": "iDNU5n4mauFmUgQLUfXMq",
+                                  "type": "UnboundValue"
+                                },
+                                "videoYouTubeId": {
+                                  "key": "8_ui-w3T7YBJfrbKIZsqZ",
+                                  "type": "UnboundValue"
+                                },
+                                "videoFallback": {
+                                  "key": "NKhqZcRLslsP54yMLsR5h",
+                                  "type": "UnboundValue"
+                                },
+                                "videoShowCaption": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": false
+                                  }
+                                },
                                 "primaryButton": {
                                   "path": "/iKuwF5UL/fields/primaryLinkRef/~locale",
                                   "type": "BoundValue"
@@ -1968,6 +2022,24 @@
                                 "image": {
                                   "path": "/Gac8HyiL/fields/image/~locale/fields/file/~locale",
                                   "type": "BoundValue"
+                                },
+                                "videoTitle": {
+                                  "key": "ffghidWHggvoSMMiCh1cL",
+                                  "type": "UnboundValue"
+                                },
+                                "videoYouTubeId": {
+                                  "key": "PYAFM4N-beKo_shq2nV91",
+                                  "type": "UnboundValue"
+                                },
+                                "videoFallback": {
+                                  "key": "g0HwQRMBd_KNX24OHsNRb",
+                                  "type": "UnboundValue"
+                                },
+                                "videoShowCaption": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": false
+                                  }
                                 },
                                 "primaryButton": {
                                   "path": "/L1oQ0Cfn/fields/marketingLink/~locale",
@@ -2323,6 +2395,24 @@
                                   "path": "/hbWAEPUa/fields/image/~locale/fields/file/~locale",
                                   "type": "BoundValue"
                                 },
+                                "videoTitle": {
+                                  "key": "wFn89J5HPVSMpitbq3P6R",
+                                  "type": "UnboundValue"
+                                },
+                                "videoYouTubeId": {
+                                  "key": "ZB5FoBocb0a2xm1iIHy3V",
+                                  "type": "UnboundValue"
+                                },
+                                "videoFallback": {
+                                  "key": "EQwp1HmvvkB_vAVpnhrVs",
+                                  "type": "UnboundValue"
+                                },
+                                "videoShowCaption": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": false
+                                  }
+                                },
                                 "primaryButton": {
                                   "path": "/NQABxHSW/fields/primaryLinkRef/~locale",
                                   "type": "BoundValue"
@@ -2492,6 +2582,24 @@
                                   "path": "/q64yPb2d/fields/image/~locale/fields/file/~locale",
                                   "type": "BoundValue"
                                 },
+                                "videoTitle": {
+                                  "key": "c4v6YnB_qr1DPGprnz21k",
+                                  "type": "UnboundValue"
+                                },
+                                "videoYouTubeId": {
+                                  "key": "acbHb14E61rtxFPwilkay",
+                                  "type": "UnboundValue"
+                                },
+                                "videoFallback": {
+                                  "key": "31e004Qi2jxgOZbdzynWn",
+                                  "type": "UnboundValue"
+                                },
+                                "videoShowCaption": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": false
+                                  }
+                                },
                                 "primaryButton": {
                                   "path": "/9VSvsbCf/fields/primaryLinkRef/~locale",
                                   "type": "BoundValue"
@@ -2660,6 +2768,24 @@
                                 "image": {
                                   "path": "/EGqljg4x/fields/image/~locale/fields/file/~locale",
                                   "type": "BoundValue"
+                                },
+                                "videoTitle": {
+                                  "key": "S8bLV41F4hutoHarZ0rkC",
+                                  "type": "UnboundValue"
+                                },
+                                "videoYouTubeId": {
+                                  "key": "fI0vejApDKu8D64Tu7OI_",
+                                  "type": "UnboundValue"
+                                },
+                                "videoFallback": {
+                                  "key": "ffoqmsBPCGiToy1_8nIqI",
+                                  "type": "UnboundValue"
+                                },
+                                "videoShowCaption": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": false
+                                  }
                                 },
                                 "primaryButton": {
                                   "path": "/TBoKgmUE/fields/primaryLinkRef/~locale",
@@ -3281,6 +3407,24 @@
                           "path": "/FbSNI62I/fields/image/~locale/fields/file/~locale",
                           "type": "BoundValue"
                         },
+                        "videoTitle": {
+                          "key": "x-X4H6z9WU87N3ye_EFWT",
+                          "type": "UnboundValue"
+                        },
+                        "videoYouTubeId": {
+                          "key": "PCzKJMe9OjlbNoNQ_94r4",
+                          "type": "UnboundValue"
+                        },
+                        "videoFallback": {
+                          "key": "zzAR2RbYo5crCkVRXKeSK",
+                          "type": "UnboundValue"
+                        },
+                        "videoShowCaption": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
                         "primaryButton": {
                           "path": "/NqrmKrUA/fields/primaryLinkRef/~locale",
                           "type": "BoundValue"
@@ -3390,6 +3534,24 @@
                         "image": {
                           "path": "/DXDrLIKT/fields/image/~locale/fields/file/~locale",
                           "type": "BoundValue"
+                        },
+                        "videoTitle": {
+                          "key": "m4QjN6kQNz27cSdOQUkRf",
+                          "type": "UnboundValue"
+                        },
+                        "videoYouTubeId": {
+                          "key": "bqiEUCLI4bXV9vGPiy960",
+                          "type": "UnboundValue"
+                        },
+                        "videoFallback": {
+                          "key": "wNcVm6e_tn5ekVTzpelnd",
+                          "type": "UnboundValue"
+                        },
+                        "videoShowCaption": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
                         },
                         "primaryButton": {
                           "path": "/0TXnLT0j/fields/marketingLink/~locale",
@@ -3619,6 +3781,24 @@
                             "image": {
                               "path": "/w3A8mGao/fields/image/~locale/fields/file/~locale",
                               "type": "BoundValue"
+                            },
+                            "videoTitle": {
+                              "key": "8n2BleO7Gcx4W4_BZc4H8",
+                              "type": "UnboundValue"
+                            },
+                            "videoYouTubeId": {
+                              "key": "y3sqxFPxn3L-VtAsB29K_",
+                              "type": "UnboundValue"
+                            },
+                            "videoFallback": {
+                              "key": "HjYR79gp4557yEu5dZQnA",
+                              "type": "UnboundValue"
+                            },
+                            "videoShowCaption": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": false
+                              }
                             },
                             "primaryButton": {
                               "path": "/xSo60zbz/fields/primaryLinkRef/~locale",
@@ -8606,6 +8786,1862 @@
               ]
             },
             {
+              "id": "P9oDg6Un",
+              "displayName": "Hero Banner Basic",
+              "definitionId": "contentful-section",
+              "patternProperties": {},
+              "variables": {
+                "cfVerticalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfHorizontalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfVisibility": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": true
+                  }
+                },
+                "cfMargin": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfPadding": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfBackgroundColor": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "100%"
+                  }
+                },
+                "cfHeight": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "340px",
+                    "mobile": "443px"
+                  }
+                },
+                "cfMaxWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "none"
+                  }
+                },
+                "cfFlexDirection": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "column"
+                  }
+                },
+                "cfFlexReverse": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": false
+                  }
+                },
+                "cfFlexWrap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "nowrap"
+                  }
+                },
+                "cfBorder": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px solid rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfGap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfHyperlink": {
+                  "type": "UnboundValue",
+                  "key": "rtOw9NH"
+                },
+                "cfOpenInNewTab": {
+                  "type": "UnboundValue",
+                  "key": "9FFVH8n"
+                },
+                "cfBorderRadius": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfBackgroundImageUrl": {
+                  "type": "UnboundValue",
+                  "key": "U1KmKKh"
+                },
+                "cfBackgroundImageOptions": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": {
+                      "scaling": "fill",
+                      "alignment": "left top",
+                      "targetSize": "2000px"
+                    }
+                  }
+                }
+              },
+              "children": [
+                {
+                  "id": "hdmeVNvO",
+                  "definitionId": "heroBanner",
+                  "patternProperties": {},
+                  "variables": {
+                    "contentMode": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "Light"
+                      }
+                    },
+                    "imageSize": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "Big"
+                      }
+                    },
+                    "removeBackground": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": false
+                      }
+                    },
+                    "sectionVideoShowCaption": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": true
+                      }
+                    },
+                    "hideImageOnSmallScreen": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": false
+                      }
+                    },
+                    "announcementBannerIconName": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "",
+                        "mobile": ""
+                      }
+                    },
+                    "heading": {
+                      "path": "/-K2VWa1/fields/heading/~locale",
+                      "type": "BoundValue"
+                    },
+                    "subHeading": {
+                      "path": "/Z5z0C68/fields/subheading/~locale",
+                      "type": "BoundValue"
+                    },
+                    "description": {
+                      "path": "/uU2F7om/fields/description/~locale",
+                      "type": "BoundValue"
+                    },
+                    "sectionImages": {
+                      "type": "UnboundValue",
+                      "key": "3gD4aa9"
+                    },
+                    "backgroundImage": {
+                      "type": "UnboundValue",
+                      "key": "nZ3KuxH"
+                    },
+                    "sectionVideoTitle": {
+                      "type": "UnboundValue",
+                      "key": "ezWxsUM"
+                    },
+                    "sectionVideoYouTubeId": {
+                      "type": "UnboundValue",
+                      "key": "YdN-mw6"
+                    },
+                    "sectionVideoFallback": {
+                      "type": "UnboundValue",
+                      "key": "WmoW8Tc"
+                    },
+                    "buttonLinks": {
+                      "path": "/lSKgjSI/fields/primaryButton/~locale",
+                      "type": "BoundValue"
+                    },
+                    "partnerCallout": {
+                      "type": "UnboundValue",
+                      "key": "_zwsCfw"
+                    },
+                    "partnerLogo": {
+                      "type": "UnboundValue",
+                      "key": "n6pmjoG"
+                    },
+                    "announcementBannerText": {
+                      "type": "UnboundValue",
+                      "key": "8p5f3sx"
+                    },
+                    "announcementBannerLink": {
+                      "type": "UnboundValue",
+                      "key": "7OACowT"
+                    },
+                    "cfVisibility": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": true
+                      }
+                    },
+                    "cfBackgroundColor": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "rgba(0, 0, 0, 0)"
+                      }
+                    }
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "4nY572oI",
+              "displayName": "Hero Banner with Bg Color",
+              "definitionId": "contentful-section",
+              "patternProperties": {},
+              "variables": {
+                "cfVerticalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfHorizontalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfVisibility": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": true
+                  }
+                },
+                "cfMargin": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfPadding": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfBackgroundColor": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "100%"
+                  }
+                },
+                "cfHeight": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "340px",
+                    "mobile": "499px"
+                  }
+                },
+                "cfMaxWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "none"
+                  }
+                },
+                "cfFlexDirection": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "column"
+                  }
+                },
+                "cfFlexReverse": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": false
+                  }
+                },
+                "cfFlexWrap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "nowrap"
+                  }
+                },
+                "cfBorder": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px solid rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfGap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfHyperlink": {
+                  "type": "UnboundValue",
+                  "key": "oT3G3H6n"
+                },
+                "cfOpenInNewTab": {
+                  "type": "UnboundValue",
+                  "key": "Y2i0NmCg"
+                },
+                "cfBorderRadius": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfBackgroundImageUrl": {
+                  "type": "UnboundValue",
+                  "key": "dJFFS4dn"
+                },
+                "cfBackgroundImageOptions": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": {
+                      "scaling": "fill",
+                      "alignment": "left top",
+                      "targetSize": "2000px"
+                    }
+                  }
+                }
+              },
+              "children": [
+                {
+                  "id": "ULFjBceJ",
+                  "definitionId": "heroBanner",
+                  "patternProperties": {},
+                  "variables": {
+                    "contentMode": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "Light"
+                      }
+                    },
+                    "imageSize": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "Big"
+                      }
+                    },
+                    "removeBackground": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": false
+                      }
+                    },
+                    "sectionVideoShowCaption": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": true
+                      }
+                    },
+                    "hideImageOnSmallScreen": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": false
+                      }
+                    },
+                    "announcementBannerIconName": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "",
+                        "mobile": ""
+                      }
+                    },
+                    "heading": {
+                      "key": "lMpw2utY",
+                      "type": "UnboundValue"
+                    },
+                    "subHeading": {
+                      "path": "/8igjrRXc/fields/subheading/~locale",
+                      "type": "BoundValue"
+                    },
+                    "description": {
+                      "path": "/60UjMfzU/fields/description/~locale",
+                      "type": "BoundValue"
+                    },
+                    "sectionImages": {
+                      "type": "UnboundValue",
+                      "key": "4UefySBz"
+                    },
+                    "backgroundImage": {
+                      "type": "UnboundValue",
+                      "key": "neeT53Dk"
+                    },
+                    "sectionVideoTitle": {
+                      "type": "UnboundValue",
+                      "key": "av7tIVe0"
+                    },
+                    "sectionVideoYouTubeId": {
+                      "type": "UnboundValue",
+                      "key": "JAbzmYv0"
+                    },
+                    "sectionVideoFallback": {
+                      "type": "UnboundValue",
+                      "key": "cs21Yz63"
+                    },
+                    "buttonLinks": {
+                      "path": "/5NJymSdM/fields/primaryButton/~locale",
+                      "type": "BoundValue"
+                    },
+                    "partnerCallout": {
+                      "type": "UnboundValue",
+                      "key": "fP9VBKqZ"
+                    },
+                    "partnerLogo": {
+                      "type": "UnboundValue",
+                      "key": "jr98RSyJ"
+                    },
+                    "announcementBannerText": {
+                      "type": "UnboundValue",
+                      "key": "ZQBzXWAq"
+                    },
+                    "announcementBannerLink": {
+                      "type": "UnboundValue",
+                      "key": "puVvzXrl"
+                    },
+                    "cfVisibility": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": true
+                      }
+                    },
+                    "cfBackgroundColor": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "rgba(228, 230, 233, 1)"
+                      }
+                    }
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "4RC8SY0m",
+              "displayName": "Hero Banner with Bg Image",
+              "definitionId": "contentful-section",
+              "patternProperties": {},
+              "variables": {
+                "cfVerticalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfHorizontalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfVisibility": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": true
+                  }
+                },
+                "cfMargin": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfPadding": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfBackgroundColor": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "100%"
+                  }
+                },
+                "cfHeight": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "340px",
+                    "mobile": "499px"
+                  }
+                },
+                "cfMaxWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "none"
+                  }
+                },
+                "cfFlexDirection": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "column"
+                  }
+                },
+                "cfFlexReverse": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": false
+                  }
+                },
+                "cfFlexWrap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "nowrap"
+                  }
+                },
+                "cfBorder": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px solid rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfGap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfHyperlink": {
+                  "type": "UnboundValue",
+                  "key": "BJ2pvpv5"
+                },
+                "cfOpenInNewTab": {
+                  "type": "UnboundValue",
+                  "key": "ZM07TiyV"
+                },
+                "cfBorderRadius": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfBackgroundImageUrl": {
+                  "type": "UnboundValue",
+                  "key": "WTNtHrdr"
+                },
+                "cfBackgroundImageOptions": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": {
+                      "scaling": "fill",
+                      "alignment": "left top",
+                      "targetSize": "2000px"
+                    }
+                  }
+                }
+              },
+              "children": [
+                {
+                  "id": "FfjnJhjO",
+                  "definitionId": "heroBanner",
+                  "patternProperties": {},
+                  "variables": {
+                    "contentMode": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "Dark"
+                      }
+                    },
+                    "imageSize": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "Big"
+                      }
+                    },
+                    "removeBackground": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": false
+                      }
+                    },
+                    "sectionVideoShowCaption": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": true
+                      }
+                    },
+                    "hideImageOnSmallScreen": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": false
+                      }
+                    },
+                    "announcementBannerIconName": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "",
+                        "mobile": ""
+                      }
+                    },
+                    "heading": {
+                      "key": "8FL8qMqw",
+                      "type": "UnboundValue"
+                    },
+                    "subHeading": {
+                      "path": "/j9FE8ohf/fields/subheading/~locale",
+                      "type": "BoundValue"
+                    },
+                    "description": {
+                      "path": "/UG3nc1DD/fields/description/~locale",
+                      "type": "BoundValue"
+                    },
+                    "sectionImages": {
+                      "type": "UnboundValue",
+                      "key": "ccFVr1cJ"
+                    },
+                    "backgroundImage": {
+                      "path": "/wsVEWsAE/fields/file/~locale",
+                      "type": "BoundValue"
+                    },
+                    "sectionVideoTitle": {
+                      "type": "UnboundValue",
+                      "key": "26IBqL3f"
+                    },
+                    "sectionVideoYouTubeId": {
+                      "type": "UnboundValue",
+                      "key": "YaR6axmk"
+                    },
+                    "sectionVideoFallback": {
+                      "type": "UnboundValue",
+                      "key": "YWdvGNAX"
+                    },
+                    "buttonLinks": {
+                      "path": "/fZijOUnP/fields/primaryButton/~locale",
+                      "type": "BoundValue"
+                    },
+                    "partnerCallout": {
+                      "type": "UnboundValue",
+                      "key": "q93QFEXW"
+                    },
+                    "partnerLogo": {
+                      "type": "UnboundValue",
+                      "key": "4v9R8Bod"
+                    },
+                    "announcementBannerText": {
+                      "type": "UnboundValue",
+                      "key": "9jZF29Xj"
+                    },
+                    "announcementBannerLink": {
+                      "type": "UnboundValue",
+                      "key": "Jy1nky8K"
+                    },
+                    "cfVisibility": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": true
+                      }
+                    },
+                    "cfBackgroundColor": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "rgba(0, 0, 0, 0)"
+                      }
+                    }
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "usYMJ5ah",
+              "displayName": "Hero Banner with Image Big",
+              "definitionId": "contentful-section",
+              "patternProperties": {},
+              "variables": {
+                "cfVerticalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfHorizontalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfVisibility": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": true
+                  }
+                },
+                "cfMargin": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfPadding": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfBackgroundColor": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "100%"
+                  }
+                },
+                "cfHeight": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "443px",
+                    "mobile": "665px"
+                  }
+                },
+                "cfMaxWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "none"
+                  }
+                },
+                "cfFlexDirection": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "column"
+                  }
+                },
+                "cfFlexReverse": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": false
+                  }
+                },
+                "cfFlexWrap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "nowrap"
+                  }
+                },
+                "cfBorder": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px solid rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfGap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfHyperlink": {
+                  "type": "UnboundValue",
+                  "key": "kNxE8jNU"
+                },
+                "cfOpenInNewTab": {
+                  "type": "UnboundValue",
+                  "key": "4iDaBkxU"
+                },
+                "cfBorderRadius": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfBackgroundImageUrl": {
+                  "type": "UnboundValue",
+                  "key": "OaekmZwc"
+                },
+                "cfBackgroundImageOptions": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": {
+                      "scaling": "fill",
+                      "alignment": "left top",
+                      "targetSize": "2000px"
+                    }
+                  }
+                }
+              },
+              "children": [
+                {
+                  "id": "5mkaBW2Z",
+                  "definitionId": "heroBanner",
+                  "patternProperties": {},
+                  "variables": {
+                    "contentMode": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "Light"
+                      }
+                    },
+                    "imageSize": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "Big"
+                      }
+                    },
+                    "removeBackground": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": false
+                      }
+                    },
+                    "sectionVideoShowCaption": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": true
+                      }
+                    },
+                    "hideImageOnSmallScreen": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": false
+                      }
+                    },
+                    "announcementBannerIconName": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "",
+                        "mobile": ""
+                      }
+                    },
+                    "heading": {
+                      "key": "iH1kL29p",
+                      "type": "UnboundValue"
+                    },
+                    "subHeading": {
+                      "path": "/sTfEmEoK/fields/heading/~locale",
+                      "type": "BoundValue"
+                    },
+                    "description": {
+                      "path": "/7tg8fqU6/fields/description/~locale",
+                      "type": "BoundValue"
+                    },
+                    "sectionImages": {
+                      "path": "/S0ZhSbdr/fields/sectionImage/~locale",
+                      "type": "BoundValue"
+                    },
+                    "backgroundImage": {
+                      "type": "UnboundValue",
+                      "key": "oThcKeVH"
+                    },
+                    "sectionVideoTitle": {
+                      "type": "UnboundValue",
+                      "key": "lfVVFBsh"
+                    },
+                    "sectionVideoYouTubeId": {
+                      "type": "UnboundValue",
+                      "key": "UmzzoZTw"
+                    },
+                    "sectionVideoFallback": {
+                      "type": "UnboundValue",
+                      "key": "0FOHuKmh"
+                    },
+                    "buttonLinks": {
+                      "path": "/KNEEYqu2/fields/primaryButton/~locale",
+                      "type": "BoundValue"
+                    },
+                    "partnerCallout": {
+                      "type": "UnboundValue",
+                      "key": "1IroczRN"
+                    },
+                    "partnerLogo": {
+                      "type": "UnboundValue",
+                      "key": "zq3mza7y"
+                    },
+                    "announcementBannerText": {
+                      "type": "UnboundValue",
+                      "key": "640trRtn"
+                    },
+                    "announcementBannerLink": {
+                      "type": "UnboundValue",
+                      "key": "kykrsTI1"
+                    },
+                    "cfVisibility": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": true
+                      }
+                    },
+                    "cfBackgroundColor": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "rgba(0, 0, 0, 0)"
+                      }
+                    }
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "MpKRjo3D",
+              "displayName": "Hero Banner with Image Small",
+              "definitionId": "contentful-section",
+              "patternProperties": {},
+              "variables": {
+                "cfVerticalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfHorizontalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfVisibility": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": true
+                  }
+                },
+                "cfMargin": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfPadding": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfBackgroundColor": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "100%"
+                  }
+                },
+                "cfHeight": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "364px",
+                    "mobile": "665px"
+                  }
+                },
+                "cfMaxWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "none"
+                  }
+                },
+                "cfFlexDirection": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "column"
+                  }
+                },
+                "cfFlexReverse": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": false
+                  }
+                },
+                "cfFlexWrap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "nowrap"
+                  }
+                },
+                "cfBorder": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px solid rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfGap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfHyperlink": {
+                  "type": "UnboundValue",
+                  "key": "WJjz2Dl2"
+                },
+                "cfOpenInNewTab": {
+                  "type": "UnboundValue",
+                  "key": "hCapPNxm"
+                },
+                "cfBorderRadius": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfBackgroundImageUrl": {
+                  "type": "UnboundValue",
+                  "key": "PhNIy5V6"
+                },
+                "cfBackgroundImageOptions": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": {
+                      "scaling": "fill",
+                      "alignment": "left top",
+                      "targetSize": "2000px"
+                    }
+                  }
+                }
+              },
+              "children": [
+                {
+                  "id": "Fqv3MkSt",
+                  "definitionId": "heroBanner",
+                  "patternProperties": {},
+                  "variables": {
+                    "contentMode": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "Light"
+                      }
+                    },
+                    "imageSize": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "Small"
+                      }
+                    },
+                    "removeBackground": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": false
+                      }
+                    },
+                    "sectionVideoShowCaption": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": true
+                      }
+                    },
+                    "hideImageOnSmallScreen": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": false
+                      }
+                    },
+                    "announcementBannerIconName": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "",
+                        "mobile": ""
+                      }
+                    },
+                    "heading": {
+                      "key": "H6ykocnY",
+                      "type": "UnboundValue"
+                    },
+                    "subHeading": {
+                      "path": "/KjZ9WuCk/fields/heading/~locale",
+                      "type": "BoundValue"
+                    },
+                    "description": {
+                      "path": "/Vaz9Hbmc/fields/description/~locale",
+                      "type": "BoundValue"
+                    },
+                    "sectionImages": {
+                      "path": "/ElV9EIRQ/fields/sectionImage/~locale",
+                      "type": "BoundValue"
+                    },
+                    "backgroundImage": {
+                      "type": "UnboundValue",
+                      "key": "LSvTACg7"
+                    },
+                    "sectionVideoTitle": {
+                      "type": "UnboundValue",
+                      "key": "1guF9yEn"
+                    },
+                    "sectionVideoYouTubeId": {
+                      "type": "UnboundValue",
+                      "key": "haXmmTvi"
+                    },
+                    "sectionVideoFallback": {
+                      "type": "UnboundValue",
+                      "key": "fS0eRSbO"
+                    },
+                    "buttonLinks": {
+                      "path": "/yuwzRF76/fields/primaryButton/~locale",
+                      "type": "BoundValue"
+                    },
+                    "partnerCallout": {
+                      "type": "UnboundValue",
+                      "key": "KU4GQ6IT"
+                    },
+                    "partnerLogo": {
+                      "type": "UnboundValue",
+                      "key": "xLlgqSTM"
+                    },
+                    "announcementBannerText": {
+                      "type": "UnboundValue",
+                      "key": "dggzODpm"
+                    },
+                    "announcementBannerLink": {
+                      "type": "UnboundValue",
+                      "key": "9SU8qYse"
+                    },
+                    "cfVisibility": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": true
+                      }
+                    },
+                    "cfBackgroundColor": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "rgba(224, 248, 249, 1)"
+                      }
+                    }
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "WsxFVMof",
+              "displayName": "Hero Banner with Video",
+              "definitionId": "contentful-section",
+              "patternProperties": {},
+              "variables": {
+                "cfVerticalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfHorizontalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfVisibility": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": true
+                  }
+                },
+                "cfMargin": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfPadding": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfBackgroundColor": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "100%"
+                  }
+                },
+                "cfHeight": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "409px",
+                    "mobile": "689px"
+                  }
+                },
+                "cfMaxWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "none"
+                  }
+                },
+                "cfFlexDirection": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "column"
+                  }
+                },
+                "cfFlexReverse": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": false
+                  }
+                },
+                "cfFlexWrap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "nowrap"
+                  }
+                },
+                "cfBorder": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px solid rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfGap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfHyperlink": {
+                  "type": "UnboundValue",
+                  "key": "GEMV88f8"
+                },
+                "cfOpenInNewTab": {
+                  "type": "UnboundValue",
+                  "key": "oeJZ3M7B"
+                },
+                "cfBorderRadius": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfBackgroundImageUrl": {
+                  "type": "UnboundValue",
+                  "key": "CDhmJ0kv"
+                },
+                "cfBackgroundImageOptions": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": {
+                      "scaling": "fill",
+                      "alignment": "left top",
+                      "targetSize": "2000px"
+                    }
+                  }
+                }
+              },
+              "children": [
+                {
+                  "id": "qkGaMjtQ",
+                  "definitionId": "heroBanner",
+                  "patternProperties": {},
+                  "variables": {
+                    "contentMode": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "Light"
+                      }
+                    },
+                    "imageSize": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "Big"
+                      }
+                    },
+                    "removeBackground": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": false
+                      }
+                    },
+                    "sectionVideoShowCaption": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": true
+                      }
+                    },
+                    "hideImageOnSmallScreen": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": false
+                      }
+                    },
+                    "announcementBannerIconName": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "",
+                        "mobile": ""
+                      }
+                    },
+                    "heading": {
+                      "key": "YYj2nBSD",
+                      "type": "UnboundValue"
+                    },
+                    "subHeading": {
+                      "path": "/RO2nldF3/fields/heading/~locale",
+                      "type": "BoundValue"
+                    },
+                    "description": {
+                      "path": "/i1Ivo5Cm/fields/description/~locale",
+                      "type": "BoundValue"
+                    },
+                    "sectionImages": {
+                      "key": "ZF1JlQXv",
+                      "type": "UnboundValue"
+                    },
+                    "backgroundImage": {
+                      "type": "UnboundValue",
+                      "key": "n7OE6ZPP"
+                    },
+                    "sectionVideoTitle": {
+                      "path": "/3wbNYqnm/fields/videoTitle/~locale",
+                      "type": "BoundValue"
+                    },
+                    "sectionVideoYouTubeId": {
+                      "path": "/PYb2Xxao/fields/youTubeId/~locale",
+                      "type": "BoundValue"
+                    },
+                    "sectionVideoFallback": {
+                      "path": "/l4luizWo/fields/videoFallbackUrl/~locale",
+                      "type": "BoundValue"
+                    },
+                    "buttonLinks": {
+                      "path": "/bnsrLWuW/fields/primaryButton/~locale",
+                      "type": "BoundValue"
+                    },
+                    "partnerCallout": {
+                      "type": "UnboundValue",
+                      "key": "iGAgwfwT"
+                    },
+                    "partnerLogo": {
+                      "type": "UnboundValue",
+                      "key": "YbKlV53B"
+                    },
+                    "announcementBannerText": {
+                      "type": "UnboundValue",
+                      "key": "A4Z16hGr"
+                    },
+                    "announcementBannerLink": {
+                      "type": "UnboundValue",
+                      "key": "UCeQ9iXv"
+                    },
+                    "cfVisibility": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": true
+                      }
+                    },
+                    "cfBackgroundColor": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "rgba(0, 0, 0, 0)"
+                      }
+                    }
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "wigV8dBv",
+              "displayName": "Hero Banner with Partner Callout",
+              "definitionId": "contentful-section",
+              "patternProperties": {},
+              "variables": {
+                "cfVerticalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfHorizontalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfVisibility": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": true
+                  }
+                },
+                "cfMargin": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfPadding": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfBackgroundColor": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "100%"
+                  }
+                },
+                "cfHeight": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "388px",
+                    "mobile": "547px"
+                  }
+                },
+                "cfMaxWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "none"
+                  }
+                },
+                "cfFlexDirection": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "column"
+                  }
+                },
+                "cfFlexReverse": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": false
+                  }
+                },
+                "cfFlexWrap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "nowrap"
+                  }
+                },
+                "cfBorder": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px solid rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfGap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfHyperlink": {
+                  "type": "UnboundValue",
+                  "key": "kLDDuqZG"
+                },
+                "cfOpenInNewTab": {
+                  "type": "UnboundValue",
+                  "key": "KU6fzBI2"
+                },
+                "cfBorderRadius": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfBackgroundImageUrl": {
+                  "type": "UnboundValue",
+                  "key": "GCZkZgQg"
+                },
+                "cfBackgroundImageOptions": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": {
+                      "scaling": "fill",
+                      "alignment": "left top",
+                      "targetSize": "2000px"
+                    }
+                  }
+                }
+              },
+              "children": [
+                {
+                  "id": "WuzUV6lS",
+                  "definitionId": "heroBanner",
+                  "patternProperties": {},
+                  "variables": {
+                    "contentMode": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "Light"
+                      }
+                    },
+                    "imageSize": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "Big"
+                      }
+                    },
+                    "removeBackground": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": false
+                      }
+                    },
+                    "sectionVideoShowCaption": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": true
+                      }
+                    },
+                    "hideImageOnSmallScreen": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": false
+                      }
+                    },
+                    "announcementBannerIconName": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "",
+                        "mobile": ""
+                      }
+                    },
+                    "heading": {
+                      "key": "jTc0vIOy",
+                      "type": "UnboundValue"
+                    },
+                    "subHeading": {
+                      "path": "/rU3ah9na/fields/subheading/~locale",
+                      "type": "BoundValue"
+                    },
+                    "description": {
+                      "path": "/pIDJfntD/fields/description/~locale",
+                      "type": "BoundValue"
+                    },
+                    "sectionImages": {
+                      "key": "Aoife3lG",
+                      "type": "UnboundValue"
+                    },
+                    "backgroundImage": {
+                      "key": "T0ieOlqB",
+                      "type": "UnboundValue"
+                    },
+                    "sectionVideoTitle": {
+                      "key": "EPmvg0WJ",
+                      "type": "UnboundValue"
+                    },
+                    "sectionVideoYouTubeId": {
+                      "key": "m5IjfPMd",
+                      "type": "UnboundValue"
+                    },
+                    "sectionVideoFallback": {
+                      "key": "6axn1isp",
+                      "type": "UnboundValue"
+                    },
+                    "buttonLinks": {
+                      "path": "/bpNR5FUu/fields/primaryButton/~locale",
+                      "type": "BoundValue"
+                    },
+                    "partnerCallout": {
+                      "key": "Js55plSA",
+                      "type": "UnboundValue"
+                    },
+                    "partnerLogo": {
+                      "path": "/fm1568Qr/fields/file/~locale",
+                      "type": "BoundValue"
+                    },
+                    "announcementBannerText": {
+                      "type": "UnboundValue",
+                      "key": "zxogi8F5"
+                    },
+                    "announcementBannerLink": {
+                      "type": "UnboundValue",
+                      "key": "vXZLNu6a"
+                    },
+                    "cfVisibility": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": true
+                      }
+                    },
+                    "cfBackgroundColor": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "rgba(228, 230, 233, 1)"
+                      }
+                    }
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "7mN1LdWp",
+              "displayName": "Hero Banner with Announcement Banner",
+              "definitionId": "contentful-section",
+              "patternProperties": {},
+              "variables": {
+                "cfVerticalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfHorizontalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfVisibility": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": true
+                  }
+                },
+                "cfMargin": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfPadding": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfBackgroundColor": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "100%"
+                  }
+                },
+                "cfHeight": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "390px",
+                    "mobile": "628px"
+                  }
+                },
+                "cfMaxWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "none"
+                  }
+                },
+                "cfFlexDirection": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "column"
+                  }
+                },
+                "cfFlexReverse": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": false
+                  }
+                },
+                "cfFlexWrap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "nowrap"
+                  }
+                },
+                "cfBorder": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px solid rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfGap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfHyperlink": {
+                  "type": "UnboundValue",
+                  "key": "CtU2QeRy"
+                },
+                "cfOpenInNewTab": {
+                  "type": "UnboundValue",
+                  "key": "eUKHdTTY"
+                },
+                "cfBorderRadius": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfBackgroundImageUrl": {
+                  "type": "UnboundValue",
+                  "key": "Q0shKXpw"
+                },
+                "cfBackgroundImageOptions": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": {
+                      "scaling": "fill",
+                      "alignment": "left top",
+                      "targetSize": "2000px"
+                    }
+                  }
+                }
+              },
+              "children": [
+                {
+                  "id": "XV9Oc6f4",
+                  "definitionId": "heroBanner",
+                  "patternProperties": {},
+                  "variables": {
+                    "contentMode": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "Light"
+                      }
+                    },
+                    "imageSize": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "Big"
+                      }
+                    },
+                    "removeBackground": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": false
+                      }
+                    },
+                    "sectionVideoShowCaption": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": true
+                      }
+                    },
+                    "hideImageOnSmallScreen": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": false
+                      }
+                    },
+                    "announcementBannerIconName": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "smile",
+                        "mobile": "smile"
+                      }
+                    },
+                    "heading": {
+                      "key": "rxHzmdeX",
+                      "type": "UnboundValue"
+                    },
+                    "subHeading": {
+                      "path": "/mNyWRxLE/fields/subheading/~locale",
+                      "type": "BoundValue"
+                    },
+                    "description": {
+                      "path": "/jGWxEufG/fields/description/~locale",
+                      "type": "BoundValue"
+                    },
+                    "sectionImages": {
+                      "key": "EHyIYlxz",
+                      "type": "UnboundValue"
+                    },
+                    "backgroundImage": {
+                      "key": "MAPxIo7U",
+                      "type": "UnboundValue"
+                    },
+                    "sectionVideoTitle": {
+                      "key": "SWiUA59D",
+                      "type": "UnboundValue"
+                    },
+                    "sectionVideoYouTubeId": {
+                      "key": "QOmaSWNU",
+                      "type": "UnboundValue"
+                    },
+                    "sectionVideoFallback": {
+                      "key": "RvhBpXIN",
+                      "type": "UnboundValue"
+                    },
+                    "buttonLinks": {
+                      "path": "/kIPZPzjc/fields/primaryButton/~locale",
+                      "type": "BoundValue"
+                    },
+                    "partnerCallout": {
+                      "key": "cGlkfKmX",
+                      "type": "UnboundValue"
+                    },
+                    "partnerLogo": {
+                      "key": "6ftawYOW",
+                      "type": "UnboundValue"
+                    },
+                    "announcementBannerText": {
+                      "path": "/5pVNccfT/fields/announcementBannerText/~locale",
+                      "type": "BoundValue"
+                    },
+                    "announcementBannerLink": {
+                      "path": "/Md4QjG4e/fields/announcementBannerLink/~locale",
+                      "type": "BoundValue"
+                    },
+                    "cfVisibility": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": true
+                      }
+                    },
+                    "cfBackgroundColor": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "rgba(246, 237, 253, 1)"
+                      }
+                    }
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
               "id": "emFwvLP8",
               "displayName": "Image",
               "definitionId": "contentful-section",
@@ -12251,6 +14287,13 @@
       },
       "dataSource": {
         "en-US": {
+          "-K2VWa1": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "3UNaYMj": {
             "sys": {
               "id": "1M58VbIv8wux84Tq58P78v",
@@ -12328,6 +14371,13 @@
               "linkType": "Entry"
             }
           },
+          "Z5z0C68": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "_BG8Ipz": {
             "sys": {
               "id": "1M58VbIv8wux84Tq58P78v",
@@ -12345,6 +14395,20 @@
           "gJB25Ug": {
             "sys": {
               "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "lSKgjSI": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "uU2F7om": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -12405,6 +14469,13 @@
               "linkType": "Entry"
             }
           },
+          "3wbNYqnm": {
+            "sys": {
+              "id": "3BLuF3jm0oTV17RPwLOgC6",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "3xRBhtEN": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -12419,9 +14490,30 @@
               "linkType": "Entry"
             }
           },
+          "5NJymSdM": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "5gQSSrFE": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "5pVNccfT": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "60UjMfzU": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -12433,9 +14525,23 @@
               "linkType": "Entry"
             }
           },
+          "7tg8fqU6": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "8W24TK7L": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "8igjrRXc": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -12496,6 +14602,13 @@
               "linkType": "Entry"
             }
           },
+          "ElV9EIRQ": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "FbSNI62I": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -12524,6 +14637,20 @@
               "linkType": "Entry"
             }
           },
+          "KNEEYqu2": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "KjZ9WuCk": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "L1oQ0Cfn": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -12548,6 +14675,13 @@
           "MQ496Bsp": {
             "sys": {
               "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "Md4QjG4e": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -12594,6 +14728,13 @@
               "linkType": "Entry"
             }
           },
+          "PYb2Xxao": {
+            "sys": {
+              "id": "3BLuF3jm0oTV17RPwLOgC6",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "PkMzRu3l": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -12611,6 +14752,20 @@
           "RDnMnl65": {
             "sys": {
               "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "RO2nldF3": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "S0ZhSbdr": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -12643,6 +14798,13 @@
               "linkType": "Entry"
             }
           },
+          "UG3nc1DD": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "Ura63qS4": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -12660,6 +14822,13 @@
           "VTZgp9YI": {
             "sys": {
               "id": "1JoMHQi1j1tApZYAZeMXzD",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "Vaz9Hbmc": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -12702,6 +14871,20 @@
           "baGfsFOR": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "bnsrLWuW": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "bpNR5FUu": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -12755,6 +14938,20 @@
               "linkType": "Entry"
             }
           },
+          "fZijOUnP": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "fm1568Qr": {
+            "sys": {
+              "id": "6TJZRnAUG6nipPqCP7pVFL",
+              "type": "Link",
+              "linkType": "Asset"
+            }
+          },
           "gxYbZM71": {
             "sys": {
               "id": "6fdNRFZbNXpiXQd6v7fHen",
@@ -12776,6 +14973,13 @@
               "linkType": "Entry"
             }
           },
+          "i1Ivo5Cm": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "iKuwF5UL": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -12783,9 +14987,23 @@
               "linkType": "Entry"
             }
           },
+          "j9FE8ohf": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "jCkSbED3": {
             "sys": {
               "id": "3qrVQ4IDOS7JwR8uQy2VMV",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "jGWxEufG": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -12800,6 +15018,20 @@
           "k5eX10Tv": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "kIPZPzjc": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "l4luizWo": {
+            "sys": {
+              "id": "3BLuF3jm0oTV17RPwLOgC6",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -12825,6 +15057,13 @@
               "linkType": "Entry"
             }
           },
+          "mNyWRxLE": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "mcCci1w9": {
             "sys": {
               "id": "1M58VbIv8wux84Tq58P78v",
@@ -12842,6 +15081,13 @@
           "o8e0EuB2": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "pIDJfntD": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -12874,6 +15120,13 @@
               "linkType": "Entry"
             }
           },
+          "rU3ah9na": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "sCyp4umt": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -12884,6 +15137,13 @@
           "sOCuihY3": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "sTfEmEoK": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -12937,6 +15197,13 @@
               "linkType": "Entry"
             }
           },
+          "wsVEWsAE": {
+            "sys": {
+              "id": "5CxK7pS9iAl2fs6smAtV3Z",
+              "type": "Link",
+              "linkType": "Asset"
+            }
+          },
           "wxwxp5qd": {
             "sys": {
               "id": "1M58VbIv8wux84Tq58P78v",
@@ -12954,6 +15221,13 @@
           "xSo60zbz": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "yuwzRF76": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -12980,7 +15254,13 @@
             "value": ""
           },
           "347Oltn": {},
+          "3gD4aa9": {},
           "6znvK3h": {},
+          "7OACowT": {},
+          "8p5f3sx": {},
+          "9FFVH8n": {
+            "value": false
+          },
           "ABf-FSO": {},
           "EKQDsC5": {},
           "Fe4Bfar": {
@@ -13006,9 +15286,13 @@
           "SO13Vmq": {
             "value": "Editorial Card 1"
           },
+          "U1KmKKh": {},
+          "WmoW8Tc": {},
           "XonT3vx": {
             "value": "Horizontal With Image"
           },
+          "YdN-mw6": {},
+          "_zwsCfw": {},
           "aXCTjNk": {},
           "acae6EU": {},
           "bAIeQt5": {
@@ -13020,13 +15304,19 @@
           "c6Xllyd": {
             "value": "Link"
           },
+          "ezWxsUM": {},
           "fupk4k7": {},
           "io65oYg": {},
           "mqPCQ9z": {
             "value": "Editorial Card 2"
           },
+          "n6pmjoG": {},
           "nXf_AKG": {
             "value": "Editorial Card"
+          },
+          "nZ3KuxH": {},
+          "rtOw9NH": {
+            "value": ""
           },
           "vwAdtQr": {
             "value": "Editorial Card 4"
@@ -13038,14 +15328,18 @@
           "0BYMXHkY": {
             "value": "Full Width Action Block"
           },
+          "0FOHuKmh": {},
           "0ZmNLA6K": {},
           "18Loxedj": {
             "value": false
           },
+          "1IroczRN": {},
           "1VT4PEqW": {},
           "1g7RleiK": {
             "value": false
           },
+          "1guF9yEn": {},
+          "26IBqL3f": {},
           "36YfTgYM": {
             "value": ""
           },
@@ -13053,6 +15347,11 @@
             "value": "Editorial Card 3"
           },
           "3kOq2u6E": {},
+          "4UefySBz": {},
+          "4iDaBkxU": {
+            "value": false
+          },
+          "4v9R8Bod": {},
           "5OJDXQCx": {},
           "5OKBDu4C": {},
           "5dOroYow": {
@@ -13065,9 +15364,12 @@
             "value": ""
           },
           "5wXRsLJn": {},
+          "640trRtn": {},
+          "6axn1isp": {},
           "6dweZgN5": {
             "value": false
           },
+          "6ftawYOW": {},
           "6ktx3JHv": {
             "value": "about:blank"
           },
@@ -13090,6 +15392,9 @@
           "7WPQbEGK": {
             "value": ""
           },
+          "8FL8qMqw": {
+            "value": "Hero Banner with Background Image"
+          },
           "8GyXCkMG": {
             "value": "Editorial Card 1"
           },
@@ -13111,16 +15416,23 @@
           "93BsbPz6": {
             "value": "Image Carousel"
           },
+          "9SU8qYse": {},
           "9Xoxh3vz": {},
+          "9jZF29Xj": {},
           "A43eNziB": {},
+          "A4Z16hGr": {},
           "AKTPfVrs": {},
           "AYGGhSH9": {},
           "Ah8TeN7u": {
             "value": "Editorial Card 3"
           },
+          "Aoife3lG": {},
           "Aw5CTnlT": {},
           "B1N7IJY8": {
             "value": "Right Aligned Button"
+          },
+          "BJ2pvpv5": {
+            "value": ""
           },
           "BS3VZDDS": {
             "value": ""
@@ -13128,9 +15440,15 @@
           "C2eh9B38": {
             "value": "Secondary Black Button"
           },
+          "CDhmJ0kv": {},
+          "CtU2QeRy": {
+            "value": ""
+          },
           "DEtHVoSd": {
             "value": "Link"
           },
+          "EHyIYlxz": {},
+          "EPmvg0WJ": {},
           "ERvTdJXH": {
             "value": "Internal Link XS"
           },
@@ -13140,8 +15458,15 @@
           "GApUZWyE": {
             "value": "Self-Paced PL Carousel"
           },
+          "GCZkZgQg": {},
+          "GEMV88f8": {
+            "value": ""
+          },
           "GGSUj7T7": {
             "value": ""
+          },
+          "H6ykocnY": {
+            "value": "Hero Banner with Image Small"
           },
           "IAwsxK7N": {
             "value": "With all content"
@@ -13156,12 +15481,22 @@
           "J8z7Qo1L": {
             "value": "Heading 4"
           },
+          "JAbzmYv0": {},
           "JjsxkEPq": {
             "value": ""
+          },
+          "Js55plSA": {
+            "value": "In partnership with"
           },
           "JwQMnloG": {
             "value": "/ping"
           },
+          "Jy1nky8K": {},
+          "KU4GQ6IT": {},
+          "KU6fzBI2": {
+            "value": false
+          },
+          "LSvTACg7": {},
           "LY3fwrGF": {
             "value": ""
           },
@@ -13171,6 +15506,7 @@
           "M6UV6klE": {
             "value": "Math Symbols: 1 + 2 − 2 × 5 ≠ 0"
           },
+          "MAPxIo7U": {},
           "Mo4S1GHf": {},
           "NhzwQJMw": {
             "value": "https://code.org"
@@ -13181,6 +15517,7 @@
           "OCSRD9uM": {
             "value": "Editorial Card 2"
           },
+          "OaekmZwc": {},
           "Oor1uCW9": {},
           "Ov2KaMlI": {
             "value": ""
@@ -13191,19 +15528,25 @@
           "PeTivMde": {
             "value": "Link"
           },
+          "PhNIy5V6": {},
           "PyeBaTT5": {
             "value": "Image without rounded corners"
           },
+          "Q0shKXpw": {},
           "QDaxYIdJ": {
             "value": false
           },
+          "QOmaSWNU": {},
           "RLcvWIOm": {
             "value": false
           },
+          "RvhBpXIN": {},
           "SALwyVOh": {
             "value": ""
           },
           "SGrm6TeM": {},
+          "SWiUA59D": {},
+          "T0ieOlqB": {},
           "TC9267aF": {},
           "TSFzv7B9": {
             "value": "Paragraph Secondary Medium"
@@ -13214,6 +15557,8 @@
           "TnZjwBke": {
             "value": false
           },
+          "UCeQ9iXv": {},
+          "UmzzoZTw": {},
           "V8YHlFRp": {
             "value": "Container"
           },
@@ -13227,6 +15572,10 @@
           "W6IG1y86": {
             "value": "Action Block Carousel"
           },
+          "WJjz2Dl2": {
+            "value": ""
+          },
+          "WTNtHrdr": {},
           "WTQ4Ru9V": {
             "value": "Editorial Card 1"
           },
@@ -13243,15 +15592,29 @@
           "Xsx7dtxc": {
             "value": "With external link buttons"
           },
+          "Y2i0NmCg": {
+            "value": false
+          },
+          "YWdvGNAX": {},
+          "YYj2nBSD": {
+            "value": "Hero Banner with Video"
+          },
           "YZg578lR": {
             "value": false
           },
+          "YaR6axmk": {},
+          "YbKlV53B": {},
           "Yf7O7sCY": {
             "value": "Vertical With Icon"
           },
+          "ZF1JlQXv": {},
           "ZJnqNzR6": {
             "value": "Image"
           },
+          "ZM07TiyV": {
+            "value": false
+          },
+          "ZQBzXWAq": {},
           "ZdTFBVAL": {
             "value": false
           },
@@ -13259,6 +15622,7 @@
           "aPeti3xV": {
             "value": false
           },
+          "av7tIVe0": {},
           "avmUJimV": {
             "value": "Paragraph Secondary Bold"
           },
@@ -13269,15 +15633,22 @@
           "byHQXRz8": {
             "value": false
           },
+          "cGlkfKmX": {
+            "value": "In partnership with"
+          },
+          "ccFVr1cJ": {},
+          "cs21Yz63": {},
           "d5NKAnwp": {
             "value": "Localization"
           },
           "d7bQZFYP": {},
+          "dJFFS4dn": {},
           "dJNC5rnb": {},
           "dWrBnOHy": {},
           "dczpwBQS": {
             "value": "https://code.org"
           },
+          "dggzODpm": {},
           "eI0ylAC7": {
             "value": false
           },
@@ -13285,7 +15656,12 @@
             "value": ""
           },
           "eT6yBrVf": {},
+          "eUKHdTTY": {
+            "value": false
+          },
           "f0smL8E1": {},
+          "fP9VBKqZ": {},
+          "fS0eRSbO": {},
           "fvbdsWsT": {
             "value": "Divider"
           },
@@ -13299,26 +15675,50 @@
           "hAGyY1mh": {
             "value": false
           },
+          "hCapPNxm": {
+            "value": false
+          },
           "hEDkMrEi": {
             "value": false
           },
+          "haXmmTvi": {},
           "i28p2boi": {
             "value": "Video Carousel"
           },
+          "iGAgwfwT": {},
+          "iH1kL29p": {
+            "value": "Hero Banner with Image Big"
+          },
+          "jTc0vIOy": {
+            "value": "Hero Banner with Partner Callout"
+          },
           "joAfMQhO": {},
+          "jr98RSyJ": {},
           "k7cc4DWU": {
             "value": "Heading 3"
           },
+          "kLDDuqZG": {
+            "value": ""
+          },
+          "kNxE8jNU": {
+            "value": ""
+          },
           "kQ4rHG8h": {},
+          "kykrsTI1": {},
           "l2UKloU9": {
             "value": "Center Aligned: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
           },
           "lIsy1GAr": {
             "value": "Internal Link M"
           },
+          "lMpw2utY": {
+            "value": "Hero Banner with Background Color"
+          },
           "lTlx2Ck5": {
             "value": ""
           },
+          "lfVVFBsh": {},
+          "m5IjfPMd": {},
           "m93uQB8b": {
             "value": "Image with border"
           },
@@ -13330,19 +15730,30 @@
           },
           "mJJmzfsA": {},
           "mp03r8eT": {},
+          "n7OE6ZPP": {},
           "nBnzzrrg": {
             "value": "External Link L"
           },
           "nOVfFtTI": {
             "value": "Without fallback"
           },
+          "neeT53Dk": {},
           "oPc8lo0F": {},
+          "oT3G3H6n": {
+            "value": ""
+          },
+          "oThcKeVH": {},
+          "oeJZ3M7B": {
+            "value": false
+          },
           "pLRLaUbo": {
             "value": ""
           },
+          "puVvzXrl": {},
           "q5IUWqtG": {
             "value": ""
           },
+          "q93QFEXW": {},
           "qQFZT2Ct": {
             "value": "Localization - Long Text"
           },
@@ -13360,6 +15771,9 @@
           },
           "rqSvSSLH": {
             "value": ""
+          },
+          "rxHzmdeX": {
+            "value": "Hero Banner with Announcement Banner"
           },
           "sAMYhNiz": {
             "value": "Curriculum Carousel"
@@ -13388,10 +15802,12 @@
           "vTYAEM28": {
             "value": "Editorial Card 2"
           },
+          "vXZLNu6a": {},
           "vl7mGMNk": {
             "value": false
           },
           "wkPxn3cF": {},
+          "xLlgqSTM": {},
           "xaSe4Rjf": {
             "value": ""
           },
@@ -13415,11 +15831,14 @@
             "value": "/ping"
           },
           "zkx5V9ed": {},
+          "zq3mza7y": {},
+          "zxogi8F5": {},
           "-KqdBQBCJexO6AUlN6Hdk": {
             "value": "Overline"
           },
           "-hiP47xkS8H9dfmgslbdh": {},
           "08mxl1BGFzTbKwyQDG6DD": {},
+          "0C-c5xDSOUoiupxN-tMsR": {},
           "0v9inr8Fpqnw8F8ElhUQT": {},
           "1O9vd7afmvcqJPb-Hst2m": {
             "value": "Heading"
@@ -13437,6 +15856,7 @@
           "2T84aGT0sd1wyPrlXpm_v": {
             "value": false
           },
+          "31e004Qi2jxgOZbdzynWn": {},
           "3BFpKy2b749t3Z0j19D9a": {
             "value": "Right aligned"
           },
@@ -13453,10 +15873,13 @@
           "7tPoQs29dgRnwZubnGEms": {
             "value": "Column"
           },
+          "8_ui-w3T7YBJfrbKIZsqZ": {},
+          "8n2BleO7Gcx4W4_BZc4H8": {},
           "BHheSJr0-DKiQ2KV6nT9b": {},
           "C820WrIq2MCzdJJuM4oiI": {
             "value": "Left Aligned Button\n\n"
           },
+          "EQwp1HmvvkB_vAVpnhrVs": {},
           "EX79hiIuw8_2Ria-2tQkj": {
             "value": "Internal Link S"
           },
@@ -13478,6 +15901,7 @@
           "Gs0XOO8d5eKpR2MQKAm8x": {
             "value": false
           },
+          "HjYR79gp4557yEu5dZQnA": {},
           "HkS6sKTzMLaB2xX5evo7Z": {
             "value": "nKIu9yen5nc"
           },
@@ -13506,12 +15930,16 @@
           "MJmfC3N564sY154aazOqg": {
             "value": false
           },
+          "NKhqZcRLslsP54yMLsR5h": {},
           "NZ_PNrjRqoCQaO6_D-taO": {},
+          "NlDrsQYH6YfDkTOhuiGCA": {},
           "OmmiviO_PnQgExsnIQWG2": {},
+          "PCzKJMe9OjlbNoNQ_94r4": {},
           "PFl39glIFt1TSFfKzC2-Z": {
             "value": false
           },
           "PWEyhxSkmxTGO951MgkM_": {},
+          "PYAFM4N-beKo_shq2nV91": {},
           "Q8S_CqSaOYMVwDMKlR3jr": {},
           "QNG0pC1wH1Njlch34RMkL": {},
           "QcBjAcsD-IhgBz5nwADMs": {
@@ -13528,6 +15956,7 @@
           "Ry2EmrfLWGKKxHzN2NKK2": {
             "value": ""
           },
+          "S8bLV41F4hutoHarZ0rkC": {},
           "SHqULneHIzJfEOPmKB4fN": {},
           "SQ455se7uXiseEPWsgHS4": {},
           "TPp4t_zOnGYYUCQCHczCd": {},
@@ -13545,10 +15974,12 @@
             "value": false
           },
           "YfZC6-Hmjrj20Loaq6-FT": {},
+          "ZB5FoBocb0a2xm1iIHy3V": {},
           "ZClRveUvVcQjBrlrDvtm6": {
             "value": false
           },
           "ZUNHb1QCXiLvRUG9taeN8": {},
+          "ZjNhDMDj-A_r1U5fX4P_3": {},
           "_WdDIbt-5tT6wtW9kafcJ": {},
           "_byo2Rxu56P0ZbFndME7R": {},
           "aDgvlZ6op1gK3MYklFgKX": {
@@ -13557,13 +15988,21 @@
           "aL5ooU7rF-Cfhi4sEFovm": {},
           "aRYsNWTbO_8er8D_crzl2": {},
           "aTtjH3mTVn7fMVJ-xb2nG": {},
+          "acbHb14E61rtxFPwilkay": {},
+          "bRZ_5eNDP4PPs0YRpv33P": {},
+          "bqiEUCLI4bXV9vGPiy960": {},
+          "c4v6YnB_qr1DPGprnz21k": {},
           "cKcaNJOJ3vHPn3yBMhHgh": {},
           "dDFAtpAu4xTWTM3cwvHX_": {},
+          "fI0vejApDKu8D64Tu7OI_": {},
           "fLRxfb9Ecsh1B9F3VCTCi": {
             "value": "Center Aligned"
           },
           "fP6j0_ZupHdFnUUB_Ia5H": {},
           "fbxlhQrAD8jhqeEPcb_Zc": {},
+          "ffghidWHggvoSMMiCh1cL": {},
+          "ffoqmsBPCGiToy1_8nIqI": {},
+          "g0HwQRMBd_KNX24OHsNRb": {},
           "h1C3gxnYgR9u4L8CDjo3D": {},
           "hRhxjrt3N9VU1NMl2QRh3": {
             "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi blandit orci nec iaculis ullamcorper. Morbi blandit bibendum nibh, at auctor metus consequat sit amet. Fusce sodales nisi dolor. Nam at lorem mattis, aliquam elit ut, facilisis nunc. Donec mollis sollicitudin dolor, sed blandit diam accumsan id. Proin suscipit lacus et elit molestie dignissim. Aliquam nisi velit, lobortis ut porta volutpat, aliquam at arcu.\n\nDonec nunc sapien, mattis congue pulvinar vel, sollicitudin vel sapien. Morbi quis pulvinar nulla. Cras ac sem ante. Sed eu interdum sapien, id fermentum nunc. Donec vehicula ut erat eget vehicula. Ut euismod sem ut nisl vehicula sagittis. Suspendisse mattis justo elit, eu sagittis lorem mattis id. Sed sit amet scelerisque magna, nec dictum ex. Praesent tincidunt massa sed laoreet posuere. Sed efficitur, justo id pharetra pretium, dui turpis convallis metus, eleifend euismod risus nibh vel enim. Vestibulum molestie justo eget ligula posuere bibendum."
@@ -13574,6 +16013,7 @@
           "i-CBt91tEkCmZHGzb85xW": {
             "value": "Each Section in this page is composed of a unique CMS component. Add edge case scenarios to this section that you would like tested."
           },
+          "iDNU5n4mauFmUgQLUfXMq": {},
           "ilVAO2EaIUZ0lA5ewKtJI": {
             "value": ""
           },
@@ -13599,6 +16039,7 @@
           "m4M7qU_VBvy3rP_lT7V-J": {
             "value": false
           },
+          "m4QjN6kQNz27cSdOQUkRf": {},
           "m5B_-isX7sffstDtAWTWi": {
             "value": "/ping"
           },
@@ -13618,6 +16059,7 @@
             "value": "Section - Pattern Teal"
           },
           "qg0XcsQhQK20HDFZctW0_": {},
+          "qtdvi1G7h9Xv_rt24jpHJ": {},
           "rpWptElOUBNuPNQXKsjMo": {
             "value": false
           },
@@ -13634,13 +16076,19 @@
           },
           "vNE31MABBbkMScnKL4BMU": {},
           "vYKqsBQ5xXnkpbPCxrnKb": {},
+          "vqPcHC14XgqSYsn9IyRum": {},
           "vy3Z4qCBqa2yM79waYyZx": {},
+          "wFn89J5HPVSMpitbq3P6R": {},
+          "wNcVm6e_tn5ekVTzpelnd": {},
           "wmG6IXrB1B-h8zddto0vr": {},
           "ws1Q0E4GP0WIGLne79bIY": {
             "value": "Text Link"
           },
+          "x-X4H6z9WU87N3ye_EFWT": {},
+          "y3sqxFPxn3L-VtAsB29K_": {},
           "zcuX6eaiBiUs3mCXjHYq2": {},
-          "zpea3KaVPS0iJXoZMAHok": {}
+          "zpea3KaVPS0iJXoZMAHok": {},
+          "zzAR2RbYo5crCkVRXKeSK": {}
         }
       },
       "seoMetadata": {

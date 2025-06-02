@@ -17,7 +17,7 @@
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "build": "next build && yarn copy:static-assets",
-    "copy:static-assets": "cp -r public .next/standalone/apps/marketing",
+    "copy:static-assets": "cp -r public .next/standalone/apps/marketing && cp -r public .next/static",
     "dev": "next dev --turbopack -p 3001 | pino-pretty --ignore pid,hostname",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",

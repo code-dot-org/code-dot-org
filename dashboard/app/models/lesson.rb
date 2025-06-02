@@ -988,6 +988,40 @@ class Lesson < ApplicationRecord
     "https://support.code.org/hc/en-us/requests/new?&tf_description=#{CGI.escape(message)}"
   end
 
+  # For now, the lesson background color is determined by the following rules, which
+  # generally will only come into play in lab2 levels:
+  # 1. If this lesson contains any python lab levels, we check the user's theme preference.
+  #    If the user has a theme preference, we use that. If not, we use the lesson's background color, if it exists.
+  #    Otherwise, we default to dark mode.
+  # 2. If the lesson does not contain any python lab levels, we use the lesson's background color, if it exists.
+  # 3. If the lesson does not have a background color, we check the number of music and aichat levels in the lesson.
+  #    If there are more aichat levels, we use light. If there are more music levels, we use dark. If they are equal
+  #    and we have at least one of each, we use dark. Otherwise (no ai chat or music levels), we return nil.
+  # We are doing this because only python lab levels have the option to set a theme preference, music lab only supports dark mode,
+  # and ai chat only supports light mode. Eventually, we would like all lab2 labs to support
+  # both light and dark mode and a theme preference.
+  def get_background_for_user(current_user)
+    # The recommended rubocop syntax does not work here.
+    has_python_levels = levels.any? {|level| level.is_a?(Pythonlab)} # rubocop:disable Performance/RedundantEqualityComparisonBlock
+    theme_preference = nil
+    theme_default = has_python_levels ? 'dark' : nil
+    if has_python_levels && current_user
+      user_theme = UserPreference.find_by(user_id: current_user.id)&.theme
+      theme_preference = user_theme['global'] if user_theme
+    elsif !has_python_levels
+      music_count = levels.count {|level| level.is_a?(Music)}
+      aichat_count = levels.count {|level| level.is_a?(Aichat)}
+      if music_count > aichat_count
+        theme_default = 'dark'
+      elsif aichat_count > music_count
+        theme_default = 'light'
+      elsif music_count == aichat_count && music_count > 0
+        theme_default = 'dark'
+      end
+    end
+    theme_preference&.downcase || background || theme_default
+  end
+
   # Finds the LessonActivity by id, or creates a new one if id is not specified.
   # @param activity [Hash]
   # @returns [LessonActivity]

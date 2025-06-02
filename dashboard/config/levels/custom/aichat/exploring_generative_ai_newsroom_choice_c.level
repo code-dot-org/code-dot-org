@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "display_name": "Summarize a Current Event",
-    "long_instructions": "## Summarize a Current Event\r\n\r\n**Task:** Ask AI to give a short summary of a recent news event.\r\n\r\n**Things to Try:**\r\n- Pick a story you already know about\r\n- Ask for a 3-sentence summary\r\n- Check: Did it leave out anything important?",
+    "long_instructions": "## Summarize a Current Event\r\n\r\n**Before You Start:**\r\n\r\nMake sure you have filled in the **K** and **W** columns of your KWL chart for this task.\r\n\r\n**Do:**\r\n\r\nAsk AI to summarize a current news story or trending event.\r\n\r\n**Try:**\r\n\r\nCompare what happens if you ask for a summary in 2-3 sentences vs. a full paragraph.\r\n\r\n**Check:**\r\n\r\nDoes the summary include the most important facts and stay neutral?\r\n\r\n**After You Try It:**\r\n\r\n1. Fill in the **L** column of your KWL chart\r\n\r\n2. Press **Continue** to return to the task menu\r\n",
     "bubble_choice_description": "Ask AI to give a short summary of a recent news event.",
     "aichat_settings": {
       "initialCustomizations": {
@@ -45,6 +45,6 @@
     },
     "thumbnail_url": "https://images.code.org/f71d1edfc41511e88355a8d3a26d8832-announcement.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-25T19:45:34.302+00:00\",\"changed\":[\"cloned from \\\"exploring_generative_ai_newsroom_choice_b\\\"\"],\"cloned_from\":\"exploring_generative_ai_newsroom_choice_b\"},{\"changed_at\":\"2025-04-25 19:47:55 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-25 22:06:47 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-25T19:45:34.302+00:00\",\"changed\":[\"cloned from \\\"exploring_generative_ai_newsroom_choice_b\\\"\"],\"cloned_from\":\"exploring_generative_ai_newsroom_choice_b\"},{\"changed_at\":\"2025-04-25 19:47:55 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-25 22:06:47 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-05-29 11:09:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Aichat>

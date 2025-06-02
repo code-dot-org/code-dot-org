@@ -406,7 +406,7 @@ class CoursesControllerTest < ActionController::TestCase
 
     sign_in create(:teacher)
     get :show, params: {course_name: single_unit_course.name}
-    assert_redirected_to script_path(single_unit_course.first_unit)
+    assert_redirected_to course_unit_path(single_unit_course, 1)
   end
 
   test "show: teacher in teacher-local-nav-v2 experiment is redirected to teacher dashboard if course is in a section" do

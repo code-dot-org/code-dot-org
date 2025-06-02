@@ -16,9 +16,7 @@ import {
 } from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
 import SubmitProjectDialog from '@cdo/apps/templates/projects/submitProjectDialog/SubmitProjectDialog';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-
-import {LabState} from '../lab2Redux';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import ShareDialog from './dialogs/ShareDialog';
 
@@ -28,24 +26,17 @@ import ShareDialog from './dialogs/ShareDialog';
 const Lab2ShareDialogWrapper: React.FunctionComponent<
   Lab2ShareDialogWrapperProps
 > = ({shareDialogId, shareUrl, finishUrl}) => {
-  const isProjectLevel =
-    useSelector(
-      (state: {lab: LabState}) => state.lab.levelProperties?.isProjectLevel
-    ) || false;
-  const projectType = useSelector(
-    (state: {lab: LabState}) => state.lab.channel?.projectType
+  const isProjectLevel = useAppSelector(
+    state => state.lab.levelProperties?.isProjectLevel || false
   );
-  const channelId = useSelector(
-    (state: {lab: LabState}) => state.lab.channel?.id
+  const projectType = useAppSelector(state => state.lab.channel?.projectType);
+  const channelId = useAppSelector(state => state.lab.channel?.id);
+  const isSignedIn = useAppSelector(state => getIsSignedIn(state.currentUser));
+  const is13Plus = useAppSelector(state => !state.currentUser.under13);
+  const userSharingDisabled = useAppSelector(
+    state => state.currentUser.userSharingDisabled
   );
-  const isSignedIn: boolean = useSelector(
-    (state: {
-      currentUser: {signInState: 'Unknown' | 'SignedIn' | 'SignedOut'};
-    }) => getIsSignedIn(state.currentUser)
-  );
-  const is13Plus = useSelector(
-    (state: {currentUser: {under13: boolean}}) => !state.currentUser.under13
-  );
+
   // State to track which dialog is displayed (share or submit).
   const [dialogPanel, setDialogPanel] = useState<'share' | 'submit'>('share');
   const isDialogOpen = useSelector(
@@ -133,6 +124,7 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
         onSubmitClick={onSubmitClick}
         submissionStatus={submissionStatus}
         channelId={channelId}
+        userSharingDisabled={userSharingDisabled}
       />
     ) : (
       <SubmitProjectDialog

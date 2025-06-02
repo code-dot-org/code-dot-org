@@ -7,7 +7,7 @@ Feature: Using the teacher dashboard
     When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
     Given I am assigned to unit "allthethings"
-    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
+    And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
 
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
@@ -21,7 +21,7 @@ Feature: Using the teacher dashboard
     And I wait until element "a:contains(Sally)" is visible
     When I click selector "a:contains(Sally)" to load a new page
     And I wait until element "#teacher-panel-container" is visible
-    And check that the URL contains "/s/allthethings"
+    And check that the URL contains "/courses/allthethingscourse/units/1"
     And check that the URL contains "viewAs=Instructor"
 
   Scenario: Loading section projects
@@ -54,9 +54,9 @@ Feature: Using the teacher dashboard
   @properties_encryption_key
   Scenario: Toggling student progress
     Given I create an authorized teacher-associated student named "Sally"
-    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
-    And I complete the free response on "http://studio.code.org/s/allthethings/lessons/27/levels/1"
-    And I submit the assessment on "http://studio.code.org/s/allthethings/lessons/33/levels/1"
+    And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
+    And I complete the free response on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/1"
+    And I submit the assessment on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/33/levels/1"
 
     # Progress tab
     When I sign in as "Teacher_Sally" and go home
@@ -114,7 +114,7 @@ Feature: Using the teacher dashboard
     # Whether losing the predraw layer on remix is ok is a different issue, and
     # until it is resolved we want to make sure thumbnails include predraw.
 
-    When I am on "http://studio.code.org/s/allthethings/lessons/3/levels/8"
+    When I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/3/levels/8"
     And I wait for the lab page to fully load
     And I press "runButton"
     And I wait until element ".project_updated_at" contains text "Saved"
@@ -127,7 +127,7 @@ Feature: Using the teacher dashboard
     # We don't want to have to write the code by dragging blocks, so just remix
     # an existing project-backed level, and then run the project.
 
-    When I am on "http://studio.code.org/s/dance/lessons/1/levels/13"
+    When I am on "http://studio.code.org/courses/dance/units/1/lessons/1/levels/13"
     And I wait for the lab page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"

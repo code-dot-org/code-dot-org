@@ -5,12 +5,12 @@ description 'description here'
 markdown <<MARKDOWN
 # DNS Queries
 
-#### In <a href='https://studio.code.org/s/nati-pilot-content-2024/lessons/6' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 6</a>, students will use DNS GET requests to get IP addresses.
+#### In <a href='https://studio.code.org/s/aif4-2025/lessons/6' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 6</a>, students will use DNS GET requests to get IP addresses.
 
 
 #### Students will ask the DNS for the IP address of a user by sending GET username. They’ll then use the IP address they get back to communicate as they had in previous lessons using the Internt Simulator.
 <p align="center">
-<img src="https://images.code.org/4b51550cf1c48db53b18d2efc055c4b1-Screenshot 2025-04-22 at 10.03.28 AM.png" alt="lesson plan diagram" width="50%" style="border-radius:10px; border: 5px solid black;">
+<img src="https://images.code.org/4b51550cf1c48db53b18d2efc055c4b1-Screenshot 2025-04-22 at 10.03.28 AM.png" alt="Router 1 conneting users with DNS" width="50%" style="border-radius:10px; border: 5px solid black;">
 </p>
 
 MARKDOWN

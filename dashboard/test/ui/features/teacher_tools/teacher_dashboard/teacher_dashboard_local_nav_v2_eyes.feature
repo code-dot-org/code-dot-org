@@ -12,7 +12,7 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
     Given I create an authorized teacher-associated student named "Sally"
     Given I am assigned to unit "allthethings"
 
-    And I am on "http://studio.code.org/s/allthethings/lessons/10/levels/1?noautoplay=true"
+    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/10/levels/1?noautoplay=true"
     Then I wait for 3 seconds
     And I wait until element ".submitButton" is visible
     And I press ".answerbutton[index=1]" using jQuery

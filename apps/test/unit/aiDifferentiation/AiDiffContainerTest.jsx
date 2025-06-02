@@ -28,6 +28,7 @@ const DEFAULT_PROPS = {
   },
   scriptName: 'test_lesson',
   unitDisplayName: 'test unit name',
+  curriculumCourses: [],
 };
 
 describe('AiDiffContainer', () => {

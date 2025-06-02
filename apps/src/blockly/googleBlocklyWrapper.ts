@@ -3,6 +3,7 @@ import {
   ObservableParameterModel,
 } from '@blockly/block-shareable-procedures';
 import {installAllBlocks as installFieldColourBlocks} from '@blockly/field-colour';
+import {KeyboardNavigation} from '@blockly/keyboard-experiment';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
 import {
   ScrollBlockDragger,
@@ -22,6 +23,7 @@ import {MetricEvent} from '@cdo/apps/metrics/events';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 import styleConstants from '@cdo/apps/styleConstants';
+import experiments from '@cdo/apps/util/experiments';
 import * as utils from '@cdo/apps/utils';
 
 import {START_BLOCKS} from '../constants';
@@ -864,6 +866,12 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.showUnusedBlocks = options.showUnusedBlocks;
     blocklyWrapper.blockLimitMap = cdoUtils.createBlockLimitMap();
     blocklyWrapper.isDarkTheme = isDarkTheme(options.theme);
+
+    // Only allow toggling disabled blocks in start mode.
+    // This is also important for ensuring that Blockly does not
+    // mistakenly keep orphaned blocks disabled when they are connected.
+    options.disable = blocklyWrapper.isStartMode;
+
     const workspace = blocklyWrapper.blockly_.inject(
       container,
       options
@@ -883,6 +891,33 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
     if (options.noFunctionBlockFrame) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;
+    }
+
+    if (
+      options.enableKeyboardNavigation ||
+      experiments.isEnabledAllowingQueryString(
+        experiments.BLOCKLY_KEYBOARD_NAVIGATION
+      )
+    ) {
+      Blockly.blockly_.ShortcutRegistry.registry.unregister('undo');
+      Blockly.blockly_.ShortcutRegistry.registry.unregister('redo');
+      if (blocklyWrapper.KeyboardNavigation) {
+        Blockly.blockly_.ShortcutRegistry.registry.unregister('undo');
+        Blockly.blockly_.ShortcutRegistry.registry.unregister('redo');
+        blocklyWrapper.KeyboardNavigation.dispose();
+      }
+      // Add the shortcuts div prior to keyboard navigation initialization
+      // so the dialog has a place to land.
+      if (!document.getElementById('shortcuts')) {
+        const shortcutDialog = document.createElement('div');
+        shortcutDialog.id = 'shortcuts';
+        document.body.appendChild(shortcutDialog);
+      }
+
+      blocklyWrapper.KeyboardNavigation = new KeyboardNavigation(workspace);
+      // Rerun user theme after Keyboard Experiment bug introduces incorrect theme
+      const theme = cdoUtils.getUserTheme(options.theme as GoogleBlockly.Theme);
+      workspace.setTheme(theme);
     }
 
     // Typically, we need to handle disabling blocks that are not connected to an

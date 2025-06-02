@@ -12,9 +12,9 @@ Feature: Views the pages on the teacher dashboard that are untested elsewhere
     When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
     Given I am assigned to unit "allthethings"
-    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
-    And I complete the free response on "http://studio.code.org/s/allthethings/lessons/27/levels/1"
-    And I submit the assessment on "http://studio.code.org/s/allthethings/lessons/33/levels/1"
+    And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
+    And I complete the free response on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/1"
+    And I submit the assessment on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/33/levels/1"
 
     # Progress tab
     When I sign in as "Teacher_Sally" and go home

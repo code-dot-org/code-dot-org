@@ -75,6 +75,27 @@ describe('AiDiffChat', () => {
     screen.getByRole('checkbox', {name: 'Write an exit ticket'});
   });
 
+  it('initial message and suggested prompts are rendered, APCSP prompts included if csp in context', () => {
+    const overideProps = {
+      ...defaultProps,
+      curriculumCourses: ['csp-year', 'csp'],
+    };
+    render(<AiDiffChat {...overideProps} />);
+    const message = screen.getByLabelText(i18n.aiChatMessageBot());
+    expect(message).toHaveTextContent(
+      "Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me."
+    );
+    //suggested prompts
+    expect(screen.getAllByRole('checkbox')).toHaveLength(7);
+    screen.getByRole('checkbox', {name: 'Give me an example'});
+    screen.getByRole('checkbox', {name: 'Explain a concept'});
+    screen.getByRole('checkbox', {name: 'Debug common mistakes'});
+    screen.getByRole('checkbox', {name: 'Generate a mini lesson'});
+    screen.getByRole('checkbox', {name: 'Write an exit ticket'});
+    screen.getByRole('checkbox', {name: 'Create task support'});
+    screen.getByRole('checkbox', {name: 'AP exam support'});
+  });
+
   it('initial message and suggested prompts are rendered for general context', () => {
     const overrideProps = {
       ...defaultProps,
@@ -163,6 +184,105 @@ describe('AiDiffChat', () => {
     //bot message should show in the chat
     const message = screen.getAllByLabelText(i18n.aiChatMessageBot())[1];
     expect(message).toHaveTextContent("Beep boop I'm a bot");
+  });
+
+  it('Selecting a 2-stage APCSP suggested prompt gives response and second set of prompts', async () => {
+    const overideProps = {
+      ...defaultProps,
+      curriculumCourses: ['csp-year', 'csp'],
+    };
+    render(<AiDiffChat {...overideProps} />);
+
+    //click a suggested prompt
+    expect(screen.getAllByRole('checkbox')).toHaveLength(7);
+    const prompt = screen.getByRole('checkbox', {name: 'Create task support'});
+    fireEvent.click(prompt);
+
+    //bot message should show in the chat
+    const message = screen.getAllByLabelText(i18n.aiChatMessageBot())[1];
+    expect(message).toHaveTextContent(
+      'Let’s chat about the Create Task! Here are some ideas you can ask me, or type your question below'
+    );
+
+    //second set of suggested prompts
+    expect(screen.getAllByRole('checkbox')).toHaveLength(13);
+    screen.getByRole('checkbox', {name: 'Create Performance Task samples'});
+    screen.getByRole('checkbox', {
+      name: 'Can teachers review student submissions?',
+    });
+    screen.getByRole('checkbox', {
+      name: 'Student collaboration on the Create Task',
+    });
+    screen.getByRole('checkbox', {name: 'AI Tools on the Create Task'});
+    screen.getByRole('checkbox', {name: 'Can I grade the Create Task'});
+    screen.getByRole('checkbox', {
+      name: 'Resources to prepare for written responses',
+    });
+
+    //click a second step suggested prompt
+    const prompt2 = screen.getByRole('checkbox', {
+      name: 'Can I grade the Create Task',
+    });
+    fireEvent.click(prompt2);
+
+    const responseEventData = {
+      chatContext: {
+        type: AiDiffContext.LESSON,
+        lessonId: 2,
+      },
+      scriptName: 'test_lesson',
+      unitName: 'test unit name',
+      role: Role.USER,
+      isPreset: true,
+      text: 'Can I give students a grade on their Create PT?',
+      sessionId: '123abc',
+      url: window.location.href,
+    };
+    const responseEventData2 = {
+      chatContext: {
+        type: AiDiffContext.LESSON,
+        lessonId: 2,
+      },
+      scriptName: 'test_lesson',
+      unitName: 'test unit name',
+      role: Role.ASSISTANT,
+      isPreset: true,
+      text: "Beep boop I'm a bot",
+      sessionId: '123abc',
+      url: window.location.href,
+    };
+
+    //sends the api call then logs the suggested prompt and the bot message
+    await waitFor(() => {
+      expect(fetchStub).toHaveBeenCalledWith(
+        '/ai_diff/chat_completion',
+        JSON.stringify({
+          context: {
+            type: AiDiffContext.LESSON,
+            lessonId: 2,
+          },
+          inputText: responseEventData.text,
+          lessonId: responseEventData.lessonId,
+          unitDisplayName: responseEventData.unitName,
+          sessionId: null,
+          isPreset: true,
+        }),
+        true,
+        {
+          'Content-Type': 'application/json',
+        }
+      );
+      expect(sendEventSpy).toHaveBeenCalledWith(
+        EVENTS.AI_DIFF_CHAT_EVENT,
+        responseEventData,
+        PLATFORMS.STATSIG
+      );
+      expect(sendEventSpy).toHaveBeenCalledWith(
+        EVENTS.AI_DIFF_CHAT_EVENT,
+        responseEventData2,
+        PLATFORMS.STATSIG
+      );
+    });
   });
 
   it('Feedback on initial message has no API call, Feedback on actual assistant messages does', async () => {

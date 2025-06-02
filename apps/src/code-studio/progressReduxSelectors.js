@@ -193,7 +193,9 @@ const levelWithProgress = (
     status = levelProgress.status;
     locked = levelProgress.locked;
     teacherFeedbackReviewState = levelProgress.teacherFeedbackReviewState;
-  } else if (level.kind !== LevelKind.assessment) {
+  } else if (
+    !(level.kind === LevelKind.assessment && level.app === 'level_group')
+  ) {
     // if we don't have levelProgress, get the status from `levelResults`.
     // however, `levelResults` doesn't track per-page results for multi-page
     // assessments, so for assessments we leave default values.

@@ -13,7 +13,7 @@ end
 
 Given /^I am on the (\d+)(?:st|nd|rd|th)? Game ?Lab test level$/ do |level_index|
   steps <<-STEPS
-    And I am on "http://studio.code.org/s/allthethings/lessons/#{GAMELAB_ALLTHETHINGS_LESSON}/levels/#{level_index}"
+    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/#{GAMELAB_ALLTHETHINGS_LESSON}/levels/#{level_index}"
     And I wait for the lab page to fully load
   STEPS
 end
