@@ -39,11 +39,10 @@ class CoursesController < ApplicationController
   def show
     # If this is a single-unit course, redirect to the unit overview
     if @unit_group.single_unit_course?
-      if Policies::Courses.modularity_enabled?
-        redirect_to course_unit_path(@unit_group, 1)
-      else
-        redirect_to script_path(@unit_group.first_unit)
-      end
+      redirect_path = Policies::Courses.modularity_enabled? ?
+                        course_unit_path(@unit_group, 1) :
+                        script_path(@unit_group.first_unit)
+      redirect_to request.query_string.present? ? "#{redirect_path}?#{request.query_string}" : redirect_path
       return
     end
 
