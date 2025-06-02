@@ -66,11 +66,10 @@ export async function handleRunClick(
     if (isNeighborhoodLevel()) {
       const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
       neighborhood?.onClose();
-      await neighborhood?.waitUntilDone(); // Wait for neighborhood signal processing to be completed.
       const projectManager = Lab2Registry.getInstance().getProjectManager();
-      const shouldCapture = true;
+      const shouldCapture = projectManager?.getShouldCaptureThumbnail();
       if (!shouldCapture) return;
-
+      await neighborhood?.waitUntilDone(); // Wait for neighborhood signal processing to be completed.
       const svg = document.getElementById(SVG_ID);
       const svgArg = svg instanceof SVGSVGElement ? svg : null;
       if (svgArg) {
