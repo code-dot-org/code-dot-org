@@ -116,6 +116,7 @@
   display: flex;
   flex-direction: column;
   min-height: 0;
+  overflow-y: auto;
 }
 
 .text-Dark {
@@ -132,7 +133,7 @@
 
 .textContent {
   height: 100%;
-  padding: 15px 10px 5px;
+  padding: 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -142,6 +143,7 @@
   flex: 1;
   overflow-y: auto;
   min-height: 70px;
+  padding: 10px;
 }
 
 .scrollingContentWithTTS {
@@ -156,7 +158,7 @@
 
 %message {
   position: relative;
-  padding: 15px 20px 5px 20px;
+  padding: 15px 20px;
   border-radius: 4px;
   animation: slidein 0.5s;
 }
@@ -187,7 +189,6 @@
 
 .markdownText {
   line-height: 0;
-  overflow-y: auto;
 
   h1,
   h2,
