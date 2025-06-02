@@ -49,7 +49,6 @@ Feature: After completing the Hour of Code, the player is directed to a congratu
     And I wait to see element with ID "uitest-thanks"
     And I wait for 5 seconds
     And I see no difference for "customized flappy certificate"
-    And I close my eyes
 
     When I press the first "#uitest-certificate img" element to load a new page
     And I wait until current URL contains "/certificates/"
@@ -58,6 +57,7 @@ Feature: After completing the Hour of Code, the player is directed to a congratu
     When I press the first "#certificate-share img" element to load a new page
     And I wait until current URL contains "/print_certificates/"
     Then I wait to see an image "/certificate_images/"
+    And I close my eyes
 
   @eyes
   Scenario: oceans course certificates
