@@ -49,6 +49,12 @@ class AichatRequestChatCompletionJob < ApplicationJob
     request.update!(response: response, execution_status: status)
   end
 
+  private def openai_compatible_model?(model_id)
+    return [SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT],
+            SharedConstants::AI_CHAT_MODEL_IDS[:LEARNLM],
+            SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI]].include? model_id
+  end
+
   private def get_execution_status_and_response(request, locale)
     # Moderate user input for toxicity.
     user_toxicity = AichatSafetyHelper.find_toxicity('user', request.new_message['chatMessageText'], locale, request.level_id)
@@ -58,7 +64,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PII], "PII detected in user input: #{user_pii}"] if user_pii
 
     # Make the request.
-    if request.model_customizations['selectedModelId'] == SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]
+    if openai_compatible_model?(request.model_customizations['selectedModelId'])
       begin
         response = make_openai_request(request)
       rescue OpenaiUserInputResponseTimeout => exception

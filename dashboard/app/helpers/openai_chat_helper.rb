@@ -1,13 +1,13 @@
 module OpenaiChatHelper
   class Client
-    attr_accessor :api_key, :model
+    attr_accessor :api_key, :model, :url
 
-    OPEN_AI_URL = "https://api.openai.com/v1/chat/completions"
     DEFAULT_TEMPERATURE = 0
 
-    def initialize(api_key, model)
+    def initialize(api_key, model, url)
       @api_key = api_key
       @model = model
+      @url = url
     end
 
     # Optional "options" parameter is included to provide generic coverage for additional OpenAI parameters.
@@ -25,7 +25,7 @@ module OpenaiChatHelper
       }.merge(options)
 
       HTTParty.post(
-        OPEN_AI_URL,
+        url,
         headers: headers,
         body: data.to_json,
         open_timeout: DCDO.get('openai_http_open_timeout', 5),

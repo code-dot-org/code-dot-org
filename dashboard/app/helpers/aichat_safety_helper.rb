@@ -5,6 +5,7 @@ require 'cdo/aws/metrics'
 module AichatSafetyHelper
   API_KEY = CDO.openai_student_learning_api_key
   MODEL = SharedConstants::AICHAT_MODEL_VERSION
+  URL = "https://api.openai.com/v1/chat/completions"
 
   class ToxicityDetector
     DEFAULT_TOXICITY_THRESHOLD_USER_INPUT = 0.3
@@ -94,7 +95,7 @@ module AichatSafetyHelper
     end
 
     private def client
-      OpenaiChatHelper::Client.new(API_KEY, MODEL)
+      OpenaiChatHelper::Client.new(API_KEY, MODEL, URL)
     end
 
     private def comprehend_enabled?(role)

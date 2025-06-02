@@ -8,9 +8,6 @@ class OpenaiUserInputResponseTimeout < StandardError; end
 # This module is structured very similarly to the AichatSagemakerHelper module,
 # which manages AI Chat lab's interaction with models that use AWS Sagemaker.
 module AichatOpenaiHelper
-  API_KEY = CDO.openai_student_learning_api_key
-  MODEL = SharedConstants::AICHAT_MODEL_VERSION
-
   TOKEN_THROTTLING_PREFIX = "aichat/tokens/".freeze
   DEFAULT_TOKEN_LIMIT_PER_DAY = 10_000_000
   ONE_DAY_S = 60 * 60 * 24
@@ -25,9 +22,12 @@ module AichatOpenaiHelper
       encrypted_channel_id
     )
 
+    model_id = aichat_model_customizations["selectedModelId"]
+
     start_time = Time.now
     # We expose a temperature scale of 0.1-1 to users of AI Chat Lab, but OpenAI's API allows a scale of 0-2.
     response, usage = request_chat_completion(
+      model_id,
       messages,
       aichat_model_customizations['temperature'].to_f * 2
     )
@@ -70,8 +70,9 @@ module AichatOpenaiHelper
     formatted
   end
 
-  def self.request_chat_completion(messages, temperature)
+  def self.request_chat_completion(model_id, messages, temperature)
     begin
+      client = get_client(model_id)
       http_response = client.request_chat_completion(messages, temperature)
     rescue Net::ReadTimeout
       raise OpenaiUserInputResponseTimeout.new("Timeout waiting for OpenAI to provide response to user input.")
@@ -186,7 +187,13 @@ module AichatOpenaiHelper
     TOKEN_THROTTLING_PREFIX + 'model/' + model_id + '/user/' + user_id.to_s
   end
 
-  def self.client
-    OpenaiChatHelper::Client.new(API_KEY, MODEL)
+  def self.get_client(model_id)
+    model = model_id == "gpt-4o-mini" ? SharedConstants::AICHAT_MODEL_VERSION : model_id
+    api_key = model_id == "gpt-4o-mini" ? CDO.openai_student_learning_api_key : CDO.google_gemini_student_learning_api_key
+    url = model_id == "gpt-4o-mini" ?
+      "https://api.openai.com/v1/chat/completions" :
+      "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
+
+    return OpenaiChatHelper::Client.new(api_key, model, url)
   end
 end
