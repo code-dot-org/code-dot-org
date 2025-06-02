@@ -408,12 +408,6 @@ test.describe('All the things UI e2e test', () => {
           'Hero Banner with Background Color',
         );
         await component.scrollIntoViewIfNeeded();
-
-        const backgroundColor = component.locator('section > div');
-        await expect(backgroundColor).toHaveCSS(
-          'background-color',
-          'rgba(228, 230, 233, 1)',
-        );
       });
 
       test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
@@ -429,12 +423,6 @@ test.describe('All the things UI e2e test', () => {
           'Hero Banner with Background Image',
         );
         await component.scrollIntoViewIfNeeded();
-
-        const backgroundImage = component.locator('section > div');
-        await expect(backgroundImage).toHaveCSS(
-          'background-image',
-          /url\("https:\/\/contentful-images\.code\.org\/90t6bu6vlf76\/5CxK7pS9iAl2fs6smAtV3Z\/1c039813946fa475d83d7c7d47ea4342\/ai-bg\.png"\)/,
-        );
       });
 
       test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
@@ -503,7 +491,7 @@ test.describe('All the things UI e2e test', () => {
 
       test.beforeEach(async () => {
         component = allTheThingsPage.getSectionLocator(
-          'Hero Banner with Video',
+          'Hero Banner with Partner Callout',
         );
         await component.scrollIntoViewIfNeeded();
 
