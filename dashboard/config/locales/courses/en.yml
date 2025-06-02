@@ -5468,11 +5468,11 @@ en:
           description_teacher: ''
           version_title: '2025'
         pre-express-2025:
-          title: pre-express-2025
+          title: Pre Express 2025
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
+          version_title: '2025'
         artificial-intelligence-foundations-2025:
           title: AI Foundations (AIF)
           description_short: Learn how to code, think critically about AI, and use technology to solve real-world problems.
@@ -5796,10 +5796,10 @@ en:
           version_title: "'25-'26"
         teaching-coding-with-music-2025:
           title: Teaching Coding with Music
-          description_short: ''
-          description_student: ''
-          description_teacher: ''
-          version_title: 25 - 26
+          description_short: "## Welcome! \n##### This professional learning module is designed to help you prepare to teach Code.org’s Coding in Music course.\n\n##### Coding with Music is a creative, engaging way to introduce core computer science concepts using music as the hook. Each lesson features a real professional from the music or tech world, helping students see themselves in these creative careers for grade 3-5 students. Coding with Music can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. \n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**"
+          description_student: "## Welcome! \n##### This professional learning module is designed to help you prepare to teach Code.org’s Coding in Music curricula.\n\n##### Coding with Music is designed as standalone coursework for grade 3-5 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. \n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n"
+          description_teacher: "## Welcome! \n##### This professional learning module is designed to help you prepare to teach Code.org’s Coding in Music curricula.\n\n##### Coding with Music is designed as standalone coursework for grade 3-5 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. \n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n"
+          version_title: "'25-'26"
         career-journeys-for-elementary-2025:
           title: Career Journeys for Elementary
           description_short: In this lesson, students explore CS and AI careers and create a personalized project in Sprite Lab that shows how technology is used in a job they care about.
@@ -5853,7 +5853,7 @@ en:
 
             ## Did you know?
             This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
-          version_title: 25 - 26
+          version_title: "'25-'26"
         teaching-foundations-ai-programming-2025:
           title: Teaching Foundations of AI Programming
           description_short: ''

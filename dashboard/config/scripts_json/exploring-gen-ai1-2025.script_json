@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-30 01:07:36 UTC",
+    "serialized_at": "2025-05-31 02:48:05 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -645,42 +645,42 @@
       }
     },
     {
-      "key": "ce88e4cf-e4f4-48f6-a9a2-426d5c717de6",
+      "key": "a6e7d8f2-57d0-4787-b470-f6ca7aad8975",
       "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "ce88e4cf-e4f4-48f6-a9a2-426d5c717de6",
+        "lesson_activity.key": "a6e7d8f2-57d0-4787-b470-f6ca7aad8975",
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
       }
     },
     {
-      "key": "7a662228-e7f7-4906-9eca-1e392a5a0fa7",
+      "key": "2e4cf77f-7893-4415-9ca1-0c73407c2f0a",
       "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "7a662228-e7f7-4906-9eca-1e392a5a0fa7",
+        "lesson_activity.key": "2e4cf77f-7893-4415-9ca1-0c73407c2f0a",
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
       }
     },
     {
-      "key": "f23b0626-efe9-4d3c-ae65-8764fe4af59e",
+      "key": "ca29eb5a-3f77-4d63-aac7-acfef34a4779",
       "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "f23b0626-efe9-4d3c-ae65-8764fe4af59e",
+        "lesson_activity.key": "ca29eb5a-3f77-4d63-aac7-acfef34a4779",
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
@@ -2093,95 +2093,78 @@
       }
     },
     {
-      "key": "6e3da413-c46a-41f4-bc04-50e5d2af9a04",
+      "key": "98de8901-eaea-46f1-91c1-e271b58b9bb1",
       "position": 1,
       "properties": {
-        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g34feef8a4c7_0_0\"></td>\n    <td style=\"width: 75%\"><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the scenario: Students are helping build an AI-powered recommendation tool for a community organization. Read the quotes aloud from the AI Hype Person and AI Skeptic to frame the discussion.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g34feef8a4c7_0_117\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is the AI Hype Person trying to improve?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should notice that the Hype Persona values things like efficiency, speed, consistency, and making tools that are easy to use and helpful across the board.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is the AI Skeptic trying to protect?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should notice that the Skeptic Persona is concerned with representation, inclusion, and making sure AI doesn’t reinforce patterns that leave people out or repeat stereotypes.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g356ab3fb0b2_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the lesson objectives.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g356ab3fb0b2_0_4\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the Question of the Day.\n    </td>\n  </tr>\n\n</table>",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g34feef8a4c7_0_0\"></td>\n    <td style=\"width: 75%\">\n      <br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the scenario: Students are helping build an AI-powered recommendation tool for a community organization. Read the quotes aloud from the AI Hype Person and AI Skeptic to frame the discussion.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g34feef8a4c7_0_117\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is the AI Hype Person trying to improve?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should notice that the Hype Persona values things like efficiency, speed, consistency, and making tools that are easy to use and helpful across the board.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is the AI Skeptic trying to protect?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should notice that the Skeptic Persona is concerned with representation, inclusion, and making sure AI doesn’t reinforce patterns that leave people out or repeat stereotypes.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g356ab3fb0b2_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the lesson objectives.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g356ab3fb0b2_0_4\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the Question of the Day.\n    </td>\n  </tr>\n\n</table>",
         "duration": "5",
         "name": "Scenario: AI Recommendation Tool"
       },
       "seeding_key": {
-        "activity_section.key": "6e3da413-c46a-41f4-bc04-50e5d2af9a04",
-        "lesson_activity.key": "ce88e4cf-e4f4-48f6-a9a2-426d5c717de6"
+        "activity_section.key": "98de8901-eaea-46f1-91c1-e271b58b9bb1",
+        "lesson_activity.key": "a6e7d8f2-57d0-4787-b470-f6ca7aad8975"
       }
     },
     {
-      "key": "7ad36013-9f48-4907-b822-1154892cef32",
+      "key": "84dc9fdc-ad19-4b57-866a-bfbcb42e4a1d",
       "position": 2,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "7ad36013-9f48-4907-b822-1154892cef32",
-        "lesson_activity.key": "ce88e4cf-e4f4-48f6-a9a2-426d5c717de6"
+        "activity_section.key": "84dc9fdc-ad19-4b57-866a-bfbcb42e4a1d",
+        "lesson_activity.key": "a6e7d8f2-57d0-4787-b470-f6ca7aad8975"
       }
     },
     {
-      "key": "46ef59ca-2f68-4ffa-a240-3eea9ca76c22",
+      "key": "2c4ba38f-0298-4c15-8d01-e1659ce3cedf",
       "position": 1,
       "properties": {
-        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g34feef8a4c7_0_28\"></td>\n    <td style=\"width: 75%\">\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Give each student a copy of the “Is It Biased?” Activity Guide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g34feef8a4c7_0_120\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Direct students to Lesson 5, Level 1. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students choose 2-3 general “Recommend 5…” prompts from the list (books, foods, hairstyles, etc.). They should run each prompt through AI Chat, then save one response that felt balanced or helpful and one that felt limited or repetitive. After that, they annotate each example:\n\t\t<br />What’s showing up?\n\t\t<br />What’s missing or assumed?\n\t\t<br />Would this recommendation work for you?\n    </td>\n  </tr>\n\n</table>",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g34feef8a4c7_0_28\"></td>\n    <td style=\"width: 75%\">\n      <br />\n\t\t<br /><i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Give each student a copy of the “Is It Biased?” Activity Guide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g34feef8a4c7_0_120\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Direct students to Lesson 5, Level 1. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students choose 2-3 general “Recommend 5…” prompts from the list (books, foods, hairstyles, etc.). They should run each prompt through AI Chat, then save one response that felt balanced or helpful and one that felt limited or repetitive. After that, they reflect on each example:\n\t\t<br />What’s showing up?\n\t\t<br />What’s missing or assumed?\n\t\t<br />Would this recommendation work for you?\n    </td>\n  </tr>\n\n</table>",
         "duration": "15",
         "name": "Exploring AI Recommendations"
       },
       "seeding_key": {
-        "activity_section.key": "46ef59ca-2f68-4ffa-a240-3eea9ca76c22",
-        "lesson_activity.key": "7a662228-e7f7-4906-9eca-1e392a5a0fa7"
+        "activity_section.key": "2c4ba38f-0298-4c15-8d01-e1659ce3cedf",
+        "lesson_activity.key": "2e4cf77f-7893-4415-9ca1-0c73407c2f0a"
       }
     },
     {
-      "key": "49f2679f-390b-43c5-81e0-f903f62b356a",
+      "key": "b56e0d88-1631-4a08-a150-f30315d9035a",
       "position": 2,
       "properties": {
-        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g356fe8380ff_0_32\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the definition of bias. Walk students through the bullet points:\n\t\t<br />Bias isn’t always easy to spot\n\t\t<br />It can show up in what’s included or left out\n\t\t<br />AI works based on patterns, not understanding\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    ",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g356fe8380ff_0_32\"></td>\n    <td style=\"width: 75%\">\n      <br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the definition of bias. Walk students through the bullet points:\n\t\t<br />Bias isn’t always easy to spot\n\t\t<br />It can show up in what’s included or left out\n\t\t<br />AI works based on patterns, not understanding\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> No AI system is completely neutral because bias can show up in different ways. The AI isn’t trying to be unfair. It’s reflecting patterns from its training data. Our goal isn’t to remove all bias, but to recognize it, especially when something is missing, so we can make better choices about how we use and respond to AI.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g356fe8380ff_0_59\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i><strong>Say:</strong> Now that we’ve talked about what bias is, let’s go over some specific things to look for in AI responses. These are patterns that often show up when a system has learned from limited or one-sided data. We’ll use this chart in the next activity to spot and talk about bias in actual examples.\n\t\t<br />\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Walk through each row of the “Things to Look Out For” chart with students. Let students know they’ll use this checklist to analyze and revise AI responses in the upcoming activity.\n    </td>\n  </tr>\n\n</table>",
         "duration": "5",
-        "name": "Teacher Talk: What is Bias?",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Teaching Tip:** - Remind students that bias will always show up in some way. No AI system is completely neutral. The goal isn’t to remove all bias, but to learn how to recognize different kinds of bias and notice what might be missing, so we can make better choices about how we use AI and how we respond to its outputs."
-          }
-        ]
+        "name": "Teacher Talk: What is Bias?"
       },
       "seeding_key": {
-        "activity_section.key": "49f2679f-390b-43c5-81e0-f903f62b356a",
-        "lesson_activity.key": "7a662228-e7f7-4906-9eca-1e392a5a0fa7"
+        "activity_section.key": "b56e0d88-1631-4a08-a150-f30315d9035a",
+        "lesson_activity.key": "2e4cf77f-7893-4415-9ca1-0c73407c2f0a"
       }
     },
     {
-      "key": "52621942-e103-41b2-b850-ee79dcc7c93e",
+      "key": "e87fd60f-4943-46d0-abaf-59ab8e11707a",
       "position": 3,
       "properties": {
-        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g356fe8380ff_0_59\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review each item on the “Things to Watch For” tip sheet.\n    </td>\n  </tr>\n\n</table>"
-      },
-      "seeding_key": {
-        "activity_section.key": "52621942-e103-41b2-b850-ee79dcc7c93e",
-        "lesson_activity.key": "7a662228-e7f7-4906-9eca-1e392a5a0fa7"
-      }
-    },
-    {
-      "key": "33d59bed-7f5c-4667-9677-f03b354e6540",
-      "position": 4,
-      "properties": {
-        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g356fe8380ff_0_38\"></td>\n    <td style=\"width: 75%\">\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Direct students to Lesson 5, Level 2. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students take at least one of their earlier prompts and rewrite it to include a specific context, identity, or perspective. Then, they should compare how the AI responds to the original vs. the revised prompt in their activity guide.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g356fe8380ff_0_38\"></td>\n    <td style=\"width: 75%\">\n      <br />\n\t\t<br /><i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Direct students to Lesson 5, Level 2. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Students go to Lesson 5, Level 2 and choose one of their earlier prompts to revise by adding a specific context, identity, or perspective. As they compare the original and revised responses, they should use the “Things to Look Out For” checklist to help identify observed bias or patterns, note what might still be missing, and describe how the response changed.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
         "duration": "15",
         "name": "Refining Prompts to Mitigate Bias",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Teaching Tip:** - Encourage students to be curious. The goal isn’t to “catch” the AI, but to explore how input shapes output."
+            "markdown": "**Teaching Tip: Leaders Framework** - Encourage students to explore how changing a prompt can affect the AI’s response, not to “catch\" the AI, but to better understand the patterns behind what it says. You might ask: Who is being centered? Who’s being left out? This is a great time to highlight key ideas from the LEADERS framework, such as:\n- E – Errors occur for many reasons: Bias isn’t always intentional—it can come from patterns in the data.\n- A – Assume someone in the room is a datapoint: Frame discussions with care, knowing students may have personal connections to what’s included or excluded.\n- E – Empathy for multiple stakeholders: Encourage students to consider how someone else might feel reading the AI’s response.\n\nIf you'd like more support for conversations like this, check out the LEADERS framework in the Teacher Guide."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "33d59bed-7f5c-4667-9677-f03b354e6540",
-        "lesson_activity.key": "7a662228-e7f7-4906-9eca-1e392a5a0fa7"
+        "activity_section.key": "e87fd60f-4943-46d0-abaf-59ab8e11707a",
+        "lesson_activity.key": "2e4cf77f-7893-4415-9ca1-0c73407c2f0a"
       }
     },
     {
-      "key": "b89513e2-f7a7-4882-b2bf-abe99e45811b",
-      "position": 5,
+      "key": "0bb00c68-d3ae-4291-9433-0998bfe3e85f",
+      "position": 4,
       "properties": {
-        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g356fe8380ff_1_10\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Show the “Ethics and AI: Equal Access & Algorithmic Bias” video.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i><strong>Discuss:</strong> How does bias in real-world data influence the decisions made by AI systems?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Answers will vary. Students should recognize that bias in AI often comes from the real-world data it's trained on, and that this can affect how AI systems make decisions or provide recommendations.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i><strong>Discuss:</strong> Why is the inclusion of diverse data critical in creating fairer AI systems?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Answers will vary. Students should understand that including diverse data helps reduce bias and leads to more inclusive, accurate, and trustworthy AI systems.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g356fe8380ff_1_10\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Show the “Ethics and AI: Equal Access & Algorithmic Bias” video.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i><strong>Discuss:</strong> How does bias in real-world data influence the decisions made by AI systems?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Answers will vary. Students should recognize that bias in AI often comes from the real-world data it's trained on, and that this can affect how AI systems make decisions or provide recommendations.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i><strong>Discuss:</strong> Why is the inclusion of diverse data critical in creating fairer AI systems?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Answers will vary. Students should understand that including diverse data helps reduce bias and leads to more inclusive, accurate, and trustworthy AI systems.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2190,38 +2173,38 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "b89513e2-f7a7-4882-b2bf-abe99e45811b",
-        "lesson_activity.key": "7a662228-e7f7-4906-9eca-1e392a5a0fa7"
+        "activity_section.key": "0bb00c68-d3ae-4291-9433-0998bfe3e85f",
+        "lesson_activity.key": "2e4cf77f-7893-4415-9ca1-0c73407c2f0a"
       }
     },
     {
-      "key": "c59c2f30-9f11-4eca-9bf5-01f121e2cde4",
+      "key": "574e4c40-bb26-44f1-8076-d94c316ad439",
       "position": 1,
       "properties": {
         "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g34feef8a4c7_0_12\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the lesson objectives.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g34feef8a4c7_0_16\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the Question of the Day.\n    </td>\n  </tr>\n\n</table>"
       },
       "seeding_key": {
-        "activity_section.key": "c59c2f30-9f11-4eca-9bf5-01f121e2cde4",
-        "lesson_activity.key": "f23b0626-efe9-4d3c-ae65-8764fe4af59e"
+        "activity_section.key": "574e4c40-bb26-44f1-8076-d94c316ad439",
+        "lesson_activity.key": "ca29eb5a-3f77-4d63-aac7-acfef34a4779"
       }
     },
     {
-      "key": "2030bee8-196b-4bce-bff0-46c32cdc29ad",
+      "key": "c43a9847-99a9-496a-88b8-c51f32c92fae",
       "position": 2,
       "properties": {
-        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g356fe8380ff_0_10\"></td>\n    <td style=\"width: 75%\">\n      <br />\n\t\t<br /><i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Direct students to Lesson 5, Level 3. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have them review the prompt and chatbot response. They’ll complete a sentence frame to share their opinion and reasoning.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/export/png?id=1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I&pageid=g356fe8380ff_0_10\"></td>\n    <td style=\"width: 75%\">\n      <br />\n\t\t<br /><i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Direct students to Lesson 5, Level 3. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Students review the AI Chat response about Thanksgiving recipes. They’ will use the bias checklist to identify which items apply and explain how the response could be improved.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
         "duration": "5",
-        "name": "Refining Prompts to Mitigate Bias",
+        "name": "Ethical Checkpoint",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Teaching Tip:** - Remind students that there’s no single correct answer here. Some might see bias, some might not. The goal is to support their thinking with clear observations and begin to practice identifying patterns that may reflect bias in AI-generated content."
+            "markdown": "**Teaching Tip:** - Remind students that there’s no single correct answer here, but students should use the checklist to support their thinking. The goal is to support their thinking with clear observations and begin to practice identifying patterns that may reflect bias in AI-generated content."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "2030bee8-196b-4bce-bff0-46c32cdc29ad",
-        "lesson_activity.key": "f23b0626-efe9-4d3c-ae65-8764fe4af59e"
+        "activity_section.key": "c43a9847-99a9-496a-88b8-c51f32c92fae",
+        "lesson_activity.key": "ca29eb5a-3f77-4d63-aac7-acfef34a4779"
       }
     },
     {
@@ -5961,7 +5944,7 @@
     },
     {
       "name": "[Exemplar] Bias in AI Outputs",
-      "url": "https://docs.google.com/document/d/1FwCqYk3YzQa0kvBL3XqEPM3zx-dt2iPJCgs9UWKM42A/",
+      "url": "https://docs.google.com/document/d/13FOTnX7SP3SIeXy-sTHT9vDUI9IDBJ_Wl6pKhRY5E7Y",
       "key": "bias_in_ai_outputs",
       "properties": {
         "audience": "Verified Teacher",
@@ -5973,7 +5956,7 @@
     },
     {
       "name": "Bias in AI Outputs",
-      "url": "https://docs.google.com/document/d/10aMGBAlFvCso_39a_dGwWKKFY9nR_AV928HH0Nts3y8/",
+      "url": "https://docs.google.com/document/d/10aMGBAlFvCso_39a_dGwWKKFY9nR_AV928HH0Nts3y8",
       "key": "bias_in_ai_outputs_1",
       "properties": {
         "audience": "Student",
@@ -7213,16 +7196,6 @@
   ],
   "objectives": [
     {
-      "key": "0098d8b4-734d-4523-9ada-ec992b28c8ad",
-      "properties": {
-        "description": "Examine how identity-based prompts influence chatbot responses."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "objective.key": "0098d8b4-734d-4523-9ada-ec992b28c8ad"
-      }
-    },
-    {
       "key": "076c886e-5d15-46e3-8c7b-f7b94a0b10a0",
       "properties": {
         "description": "Identify and explain the four key components that make up a computer system."
@@ -7460,16 +7433,6 @@
       "seeding_key": {
         "lesson.key": "Project: Demystifying Generative AI",
         "objective.key": "f16b966e-1e35-4794-950d-5030ec847891"
-      }
-    },
-    {
-      "key": "f52f9f35-38e2-4250-94d4-07566e9e05f1",
-      "properties": {
-        "description": "Explain how training data shapes the patterns and representations in generative AI."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "objective.key": "f52f9f35-38e2-4250-94d4-07566e9e05f1"
       }
     },
     {

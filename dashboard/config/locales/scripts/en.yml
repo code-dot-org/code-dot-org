@@ -20698,17 +20698,16 @@ en:
               name: Introduction to Music Lab
             lesson-15:
               name: 'Project: Genre Mash-Up'
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Templates
+            lessonGroup-2:
+              display_name: Revisions
           name: musiclab-6-12-playground
           title: 6-12 Music Lab Playground
           description_audience: ''
           description_short: ''
-          description: |-
-            ## Out of date script
-
-            For current pilot with lesson plan updates, visit https://levelbuilder-studio.code.org/s/csd-programming-with-music-lab-2025-pilot
-
-            Use this script to stage bigger updates before launch while the pilot is still happening
+          description: ''
           student_description: ''
         pilot-pl-teaching-k5-music-lab:
           lessons: {}
@@ -23795,7 +23794,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-aif2-2025
-          title: Teaching Programming Fundamentals
+          title: Teaching Foundations of AI Programming
           description_audience: ''
           description_short: ''
           description: |-
