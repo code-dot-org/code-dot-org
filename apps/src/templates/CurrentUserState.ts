@@ -12,14 +12,6 @@ enum SignInState {
   SignedOut = 'SignedOut',
 }
 
-interface CurrentUserSchoolInfo {
-  country: string | undefined;
-  schoolName: string | undefined;
-  schoolId: string | undefined;
-  schoolZip: string | undefined;
-  schoolType: string | undefined;
-}
-
 export interface CurrentUserState {
   countryCode: string;
   userId: number;
@@ -45,7 +37,4 @@ export interface CurrentUserState {
   hasCompletedAiDifferentiationWelcome: boolean;
   userSharingDisabled: boolean;
   inUSA: boolean;
-  userSchoolInfo: CurrentUserSchoolInfo;
-  showSchoolInfoInterstitial: boolean;
-  showSchoolInfoConfirmation: boolean;
 }

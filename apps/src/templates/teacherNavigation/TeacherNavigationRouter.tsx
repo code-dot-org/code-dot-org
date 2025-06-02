@@ -26,7 +26,7 @@ import SectionProjectsListWithData from '../projects/SectionProjectsListWithData
 import SectionAssessments from '../sectionAssessments/SectionAssessments';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
-import {TeacherHomepage} from '../studioHomepages/teacherHomepageV2/TeacherHomepage';
+import TeacherHomepage from '../studioHomepages/teacherHomepageV2/TeacherHomepage';
 import SectionLoginInfo from '../teacherDashboard/SectionLoginInfo';
 import StatsTableWithData from '../teacherDashboard/StatsTableWithData';
 import {
@@ -72,9 +72,20 @@ const PathChangeHandler: React.FC<{needsReload: boolean}> = ({needsReload}) => {
   return null;
 };
 
+interface SchoolInfo {
+  country: string;
+  school_name: string;
+  school_zip: string;
+  school_id: string;
+  school_type: string;
+}
+
 interface TeacherNavigationRouterProps {
   studioUrlPrefix: string;
   showAITutorTab: boolean;
+  showSchoolInfoInterstitial: boolean;
+  showSchoolInfoConfirmation: boolean;
+  existingSchoolInfo?: SchoolInfo;
 }
 
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
@@ -84,6 +95,9 @@ const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
 const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   studioUrlPrefix,
   showAITutorTab,
+  showSchoolInfoInterstitial,
+  showSchoolInfoConfirmation,
+  existingSchoolInfo,
 }) => {
   const sectionId = useAppSelector(
     state => state.teacherSections.selectedSectionId
@@ -127,7 +141,12 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                 needsReload={needsReload ? needsReload : false}
               />
               <div>
-                <TeacherHomepage studioUrlPrefix={studioUrlPrefix} />
+                <TeacherHomepage
+                  studioUrlPrefix={studioUrlPrefix}
+                  showSchoolInfoInterstitial={showSchoolInfoInterstitial}
+                  showSchoolInfoConfirmation={showSchoolInfoConfirmation}
+                  existingSchoolInfo={existingSchoolInfo}
+                />
                 <ScrollRestoration />
               </div>
             </>
@@ -352,6 +371,9 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
       selectedSection,
       studioUrlPrefix,
       sectionHasAITutor,
+      showSchoolInfoInterstitial,
+      showSchoolInfoConfirmation,
+      existingSchoolInfo,
     ]
   );
 
