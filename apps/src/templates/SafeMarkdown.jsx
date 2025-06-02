@@ -119,7 +119,13 @@ blocklyTags.forEach(tag => {
   };
 });
 
+// These wrappers add context for Localize to better understand the markdown
+// output. This also will enable URL localization for all links.
 const localizationComponentWrappers = {
+  a: function (props) {
+    // eslint-disable-next-line jsx-a11y/anchor-has-content
+    return <a {...props} data-lz-url data-localize="markdown-url" />;
+  },
   p: function (props) {
     return <p {...props} data-isolate />;
   },
