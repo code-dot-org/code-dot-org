@@ -3,21 +3,27 @@
  * currently active Lab (determined by the current app name). This
  * helps facilitate level-switching between labs without page reloads.
  */
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
 import React, {Suspense, useEffect, useMemo} from 'react';
 
 import {getCurrentLesson} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {setIsLoadingTheme} from '@cdo/apps/lab2/lab2Redux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {Level} from '@cdo/apps/types/progressTypes';
+import {capitalizeFirstLetter} from '@cdo/apps/util/capitalizeFirstLetter';
+import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../lab2EntryPoints';
 import {PERMISSIONS} from '../constants';
 import ProgressContainer from '../progress/ProgressContainer';
-import {getAppOptionsViewingExemplar} from '../projects/utils';
+import {
+  getAppOptionsTheme,
+  getAppOptionsViewingExemplar,
+} from '../projects/utils';
 
 import NoExemplarPage from './components/NoExemplarPage';
 import ExtraLinks from './ExtraLinks';
@@ -34,6 +40,7 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   const currentAppName = levelProperties?.appName;
   const exemplarSources = levelProperties?.exemplarSources;
   const levelId = levelProperties?.id;
+  const initialTheme = getAppOptionsTheme();
 
   const isBlocked = useAppSelector(state => state.lab.isBlocked);
   const isProjectValidator = useAppSelector(state =>
@@ -62,16 +69,15 @@ const LabViewsRenderer: React.FunctionComponent = () => {
       dispatch(setIsLoadingTheme(true));
 
       const setThemeHelper = () => {
-        // If the body has a class use that to set the theme, if its supported by the lab.
-        // Otherwise, use the first supported theme.
-        // We will only run this if we are not using the user preference, so it's safe to pull
-        // from the body class, as the user is not dynamically changing the theme.
-        const bodyClassList = document.body.classList;
-        const bodyTheme = bodyClassList.contains('background-light')
-          ? 'Light'
-          : 'Dark';
-        if (supportedThemes.includes(bodyTheme)) {
-          setTheme(bodyTheme);
+        // Use the theme from app options if it exists and is supported,
+        // otherwise fall back to the first supported theme.
+        // We will only use the app options theme if we are not using the user preference,
+        // so it is safe to use that statically set theme.
+        const upperCasedTheme = initialTheme
+          ? (capitalizeFirstLetter(initialTheme) as Theme)
+          : undefined;
+        if (upperCasedTheme && supportedThemes.includes(upperCasedTheme)) {
+          setTheme(upperCasedTheme);
         } else {
           setTheme(supportedThemes[0]);
         }
@@ -80,7 +86,14 @@ const LabViewsRenderer: React.FunctionComponent = () => {
 
       if (useThemeUserPreference && signInState === SignInState.SignedIn) {
         const fetchAndSetTheme = async () => {
-          const userTheme = await new UserPreferences().getGlobalTheme();
+          const userTheme = await new UserPreferences().getGlobalTheme(
+            (error: NetworkError) =>
+              Lab2Registry.getInstance()
+                .getMetricsReporter()
+                .logError('Error fetching theme', undefined, {
+                  message: error.response,
+                })
+          );
           if (userTheme && supportedThemes.includes(userTheme)) {
             setTheme(userTheme);
             dispatch(setIsLoadingTheme(false));
@@ -94,7 +107,14 @@ const LabViewsRenderer: React.FunctionComponent = () => {
         setThemeHelper();
       }
     }
-  }, [currentAppName, setTheme, useThemeUserPreference, signInState, dispatch]);
+  }, [
+    currentAppName,
+    setTheme,
+    useThemeUserPreference,
+    signInState,
+    dispatch,
+    initialTheme,
+  ]);
 
   // Do not render lab view if project is blocked and user is not a project validator.
   if (!currentAppName || (isBlocked && !isProjectValidator)) {

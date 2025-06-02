@@ -42,7 +42,8 @@ class CourseOfferingsControllerTest < ActionController::TestCase
       key: course_offering.key,
       display_name: 'New Display Name',
       marketing_initiative: 'CSD',
-      is_featured: false
+      is_featured: false,
+      facilitator_course_permissions: ["CS Fundamentals", "CS Principles", "CS Discoveries"]
     }
 
     course_offering.reload
@@ -50,5 +51,29 @@ class CourseOfferingsControllerTest < ActionController::TestCase
     assert_equal 'New Display Name', course_offering.display_name
     assert_equal 'CSD', course_offering.marketing_initiative
     assert_equal false, course_offering.is_featured
+    assert_equal ["CS Fundamentals", "CS Principles", "CS Discoveries"], course_offering.facilitator_course_permissions
+  end
+
+  test 'update course offering updates fields with nested strong parameters' do
+    sign_in @levelbuilder
+
+    course_offering = create :course_offering, display_name: 'Course Offering Name', marketing_initiative: 'HOC', is_featured: true
+
+    put :update, params: {
+      key: course_offering.key,
+      course_offering: {
+        display_name: 'New Display Name',
+        marketing_initiative: 'CSD',
+        is_featured: false,
+        facilitator_course_permissions: ["CS Fundamentals", "CS Principles", "CS Discoveries"]
+      }
+    }
+
+    course_offering.reload
+
+    assert_equal 'New Display Name', course_offering.display_name
+    assert_equal 'CSD', course_offering.marketing_initiative
+    assert_equal false, course_offering.is_featured
+    assert_equal ["CS Fundamentals", "CS Principles", "CS Discoveries"], course_offering.facilitator_course_permissions
   end
 end
