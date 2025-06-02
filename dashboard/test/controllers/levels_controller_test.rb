@@ -6,10 +6,6 @@ class LevelsControllerTest < ActionController::TestCase
 
   STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
 
-  setup_all do
-    seed_deprecated_unit_fixtures
-  end
-
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     Policies::LevelFiles.stubs(:write_to_file?).returns(false) # don't write to level files
@@ -109,7 +105,7 @@ class LevelsControllerTest < ActionController::TestCase
   test "should get filtered levels with just page param" do
     get :get_filtered_levels, params: {page: 1}
     assert_equal 7, JSON.parse(@response.body)['levels'].length
-    assert_equal 22, JSON.parse(@response.body)['numPages']
+    assert_equal 9, JSON.parse(@response.body)['numPages']
   end
 
   test "should get filtered levels with name matching level key for blockly levels" do
