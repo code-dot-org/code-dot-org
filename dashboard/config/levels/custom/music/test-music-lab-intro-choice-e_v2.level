@@ -1,0 +1,61 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T02:56:03.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Choice E\r\n\r\nFind the example music player that says \"Choice E\" below these instructions. Press the Play button on the player to hear the song.\r\n\r\nRefer to your activity guide to see if it would work for any client's needs.\r\n\r\nOnce you're done, press Continue to return back to your choices and pick a different song.\r\n\r\n",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "default",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+        }
+      },
+      "showSoundFilters": true,
+      "showSoundsPanelInSoundsMode": true,
+      "sortUnrestrictedPacksByType": true,
+      "allowChangeStartingPlayheadPosition": true,
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      }
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "validationMode": "default",
+      "playerTitle": "Choice E"
+    },
+    "display_name": "Choice E",
+    "thumbnail_url": "https://images.code.org/5719963da0231456884c38b4a004790e-Screenshot 2025-04-02 at 7.42.24 AM.png",
+    "encrypted_exemplar_sources": "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\n",
+    "bubble_choice_description": "Click this option to hear a song with an **\"upbeat playful beat with lots of effects\"** from your Song Portfolio. After listening to the song, you can decide if it would meet the needs of one of your clients",
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:03.448+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-intro-choice-e\\\"\"],\"cloned_from\":\"test-music-lab-intro-choice-e\"}]"
+}]]></config>
+  <blocks/>
+</Music>
