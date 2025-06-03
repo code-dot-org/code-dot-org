@@ -882,26 +882,6 @@ class LessonTest < ActiveSupport::TestCase
     assert_includes(lesson.lesson_plan_pdf_url, "curriculum/#{lesson.script.name}/5/Teacher.pdf")
   end
 
-  test 'uncached lesson path helpers' do
-    skip 'enable when we re enable CACHED_UNITS_MAP'
-    hoc_unit = create :script, name: 'dance-ai-2023'
-    hoc_lesson_group = create :lesson_group, script: hoc_unit
-    hoc_lesson = create :lesson, script: hoc_unit, lesson_group: hoc_lesson_group
-
-    assert_equal "/lessons/#{hoc_lesson.id}", hoc_lesson.get_uncached_show_path
-    assert_equal "/lessons/#{hoc_lesson.id}/edit", hoc_lesson.get_uncached_edit_path
-
-    other_unit = create :script
-    other_lesson_group = create :lesson_group, script: other_unit
-    lesson_without_plan = create :lesson, script: other_unit, lesson_group: other_lesson_group, relative_position: 1, absolute_position: 1, has_lesson_plan: false
-    lesson_with_plan = create :lesson, script: other_unit, lesson_group: other_lesson_group, relative_position: 1, absolute_position: 2, has_lesson_plan: true
-
-    assert_equal "/s/#{other_unit.name}/lessons/1", lesson_with_plan.get_uncached_show_path
-    assert_equal "/s/#{other_unit.name}/lessons/1/edit", lesson_with_plan.get_uncached_edit_path
-
-    assert_equal "/lessons/#{lesson_without_plan.id}/edit", lesson_without_plan.get_uncached_edit_path
-  end
-
   test 'get_background_for_user returns lesson background for nil user' do
     lesson = create :lesson, background: 'dark'
     assert_equal 'dark', lesson.get_background_for_user(nil)
