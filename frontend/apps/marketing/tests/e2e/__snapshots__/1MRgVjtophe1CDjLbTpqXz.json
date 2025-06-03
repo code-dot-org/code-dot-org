@@ -1,0 +1,19 @@
+{
+  "entryContent": {
+    "fields": {
+      "linkName": {
+        "en-US": "⛔️ [ENGINEERING ONLY] Announcement banner link test"
+      },
+      "label": {
+        "en-US": "Announcement banner link"
+      },
+      "primaryTarget": {
+        "en-US": "/ping"
+      },
+      "isThisAnExternalLink": {
+        "en-US": false
+      }
+    }
+  },
+  "contentType": "link"
+}

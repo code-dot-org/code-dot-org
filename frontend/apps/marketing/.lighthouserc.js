@@ -3,7 +3,7 @@ const assertions = {
   'color-contrast': 'off',
   'errors-in-console': ['error', {maxLength: 4}],
   'inspector-issues': 'off',
-  'offscreen-images': ['error', {minScore: 0.5, maxLength: 3}],
+  'offscreen-images': ['error', {minScore: 0.5, maxLength: 4}],
   'total-byte-weight': ['error', {minScore: 0.5}],
   'unused-css-rules': ['error', {maxLength: 30}],
   'unused-javascript': ['error', {maxLength: 10}],

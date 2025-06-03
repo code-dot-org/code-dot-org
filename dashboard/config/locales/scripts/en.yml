@@ -10271,6 +10271,8 @@ en:
               name: Intro to Programming
             lesson-9:
               name: Validation practice
+            lesson-10:
+              name: Widget Playground
           lesson_groups:
             lessonGroup-2:
               display_name: Cyber
