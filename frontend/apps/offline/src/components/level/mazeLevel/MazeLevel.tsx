@@ -15,6 +15,7 @@ import BlockLimitsPlugin from '@/components/blockly/plugins/blockLimits';
 import ToolboxTrashcanPlugin from '@/components/blockly/plugins/toolboxTrashcan';
 import ThrasosRenderer from '@/components/blockly/renderers/thrasos';
 import DefaultTheme from '@/components/blockly/themes/default';
+import type {BlocklySerialization} from '@/components/blockly/types';
 import {getAllGeneratedCode} from '@/components/blockly/utils';
 import BlocklyLevel, {BlocklyLevelProps} from '@/components/level/blocklyLevel';
 import {useTimeout} from '@/components/useTimeout';
@@ -27,6 +28,17 @@ import {evalWith} from './interpreter';
 import defaultSkins, {skinFor} from './skins';
 import type {SkinsData, API} from './types';
 import Visualization from './Visualization';
+
+/** By default, a blank level should at least show a 'When Run' block */
+const DefaultStartBlocks: BlocklySerialization = {
+  blocks: {
+    blocks: [
+      {
+        type: 'when_run',
+      },
+    ],
+  },
+};
 
 export interface MazeLevelProps extends BlocklyLevelProps {
   levelData: LevelData;
@@ -464,6 +476,7 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
   return (
     <BlocklyLevel
       levelData={levelData}
+      startBlocks={levelData.blocklyData?.startBlocks || DefaultStartBlocks}
       data={{skin: skinConfig}}
       theme={theme || DefaultTheme}
       renderer={renderer || ThrasosRenderer}

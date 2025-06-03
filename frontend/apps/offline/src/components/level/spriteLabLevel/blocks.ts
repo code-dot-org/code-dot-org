@@ -7,6 +7,7 @@ import {
   behaviorsBlockFrame,
   behaviorsNameValidator,
   modalProceduresNoDestroy,
+  spritesFromStartAnimations,
 } from './extensions';
 import {
   behaviorCallerGetDefMixin,
@@ -14,27 +15,6 @@ import {
   behaviorCreateDefMixin,
 } from './mixins';
 import {behaviorGetMutator /*, behaviorDefMutator*/} from './mutators';
-
-const spriteList: BlockOptionsList = [
-  [
-    {
-      src: 'https://studio.code.org/api/v1/animation-library/gamelab/XMPMBS2lQ0s7C3cxq.j0JQ1ILAG86re7/category_animals/fish_01.png',
-      alt: 'fish_01_1',
-      width: 32,
-      height: 32,
-    },
-    '"fish_01_1"',
-  ],
-  [
-    {
-      src: 'https://studio.code.org/api/v1/animation-library/level_animations/aO_f11FfLOnQYDf5HoJI.wGnbJQDg6g_/tumbleweed2.png',
-      alt: 'tumbleweed',
-      width: 32,
-      height: 32,
-    },
-    '"tumbleweed"',
-  ],
-];
 
 const SPRITE_PROPERTIES: BlockOptionsList = [
   ['size', '"scale"'],
@@ -78,10 +58,11 @@ const blocks: BlockDefinition[] = [
     args0: [
       {
         type: 'field_sprite_dropdown',
-        name: 'SPRITE',
-        options: spriteList,
+        name: 'ANIMATION',
+        options: [['', '']],
       },
     ],
+    extensions: [spritesFromStartAnimations],
     generator: () => '\n',
   },
   {
@@ -96,7 +77,7 @@ const blocks: BlockDefinition[] = [
       {
         type: 'field_sprite_dropdown',
         name: 'ANIMATION_NAME',
-        options: spriteList,
+        options: [['', '']],
       },
       {
         type: 'input_value',
@@ -104,6 +85,7 @@ const blocks: BlockDefinition[] = [
         check: 'Location',
       },
     ],
+    extensions: [spritesFromStartAnimations],
     generator: () => '\n',
   },
   {

@@ -1,9 +1,13 @@
 import * as Blockly from 'blockly/core';
 import csv from 'csv-parser';
-import {createReadStream} from 'fs';
+import {createReadStream, createWriteStream} from 'fs';
 import fs from 'fs/promises';
 import {JSDOM} from 'jsdom';
 import path from 'path';
+import {Readable} from 'stream';
+import {finished} from 'stream/promises';
+import type {ReadableStream} from 'stream/web';
+import URL from 'url';
 
 import type {MazeData} from '@code-dot-org/maze';
 
@@ -77,6 +81,24 @@ export interface ArtistData {
   }[];
 }
 
+/** Data for sprite lab levels. */
+export interface SpriteLabData {
+  startAnimations: {
+    id: string;
+    url: string;
+    name: string;
+    categories: string[];
+    looping: boolean;
+    width: number;
+    height: number;
+    frames: number;
+    delay: number;
+    version: string;
+    /** A custom field holding the locally cached version of the image */
+    local: string;
+  }[];
+}
+
 /** Generic description for Blockly data. */
 export interface BlocklyData {
   startBlocks?: BlocklySerialization;
@@ -115,12 +137,33 @@ export interface LevelData {
   mazeData?: MazeData;
   /** Artist level data. */
   artistData?: ArtistData;
+  /** SpriteLab level data. */
+  spriteLabData?: SpriteLabData;
   /** Blockly level data. */
   blocklyData?: BlocklyData;
   /** Multiple choice question data. */
   multipleChoice?: MultipleChoiceData;
   /** The shared level template defining a potential 'workspace' */
   template?: LevelData;
+}
+
+export interface SpriteLabAnimationConfiguration {
+  orderedKeys?: string[];
+  propsByKey?: {
+    [key: string]: {
+      name: string;
+      sourceUrl: string;
+      frameSize: {
+        x: number;
+        y: number;
+      };
+      frameCount: number;
+      frameDelay: number;
+      looping: boolean;
+      categories: string[];
+      version: string;
+    };
+  };
 }
 
 /**
@@ -169,6 +212,8 @@ export interface LevelConfiguration {
     images?: string;
     /** The ideal number of blocks. This cause block count tracking to enable. */
     ideal?: string;
+    /** A set of animations to load in a spritelab level */
+    start_animations?: string;
   };
 }
 
@@ -373,25 +418,28 @@ export const sanitizeJSON: (data: string) => string = data =>
     // Remove whitespace
     .trim();
 
+export const urlToKey: (url: string) => string = url => {
+  const parsed = URL.parse(url);
+  return `${parsed.protocol?.replace(':', '') || 'relative'}-${parsed.host || 'unknown'}${parsed.pathname}`;
+};
+
 /**
  * Parses a Code.org level file.
  */
 export const parseLevelData: (
   key: string,
   xmlString: string,
-  path?: string,
+  levelPath?: string,
 ) => Promise<LevelData> = async (
   key: string,
   xmlString: string,
-  path?: string,
+  levelPath?: string,
 ) => {
   const parser = new new JSDOM().window.DOMParser();
   const xml = parser.parseFromString(xmlString, 'application/xml');
   const config = JSON.parse(
     sanitizeJSON(xml.querySelector('config')?.textContent || '{}'),
   ) as LevelConfiguration;
-
-  console.log(path);
 
   // Gather the general data from the level file
   const ret: LevelData = {
@@ -417,8 +465,8 @@ export const parseLevelData: (
   }
 
   // Retain path, if it is given to us
-  if (path) {
-    ret.path = path;
+  if (levelPath) {
+    ret.path = levelPath;
   }
 
   // Parse hint data
@@ -503,6 +551,61 @@ export const parseLevelData: (
       ),
       images: JSON.parse(sanitizeJSON(config.properties?.images || '[]')),
     };
+  }
+
+  // SpriteLab levels
+  if (ret.type === 'GamelabJr') {
+    isBlockly = true;
+
+    const animations = JSON.parse(
+      sanitizeJSON(config.properties?.start_animations || '{}'),
+    ) as SpriteLabAnimationConfiguration;
+
+    ret.spriteLabData = {
+      startAnimations: (animations.orderedKeys || [])
+        .map(key => {
+          const info = animations.propsByKey?.[key];
+
+          return info
+            ? {
+                id: key,
+                url: info.sourceUrl,
+                local: path.join('animations', urlToKey(info.sourceUrl)),
+                name: info.name,
+                categories: info.categories,
+                looping: info.looping,
+                width: info.frameSize?.x || 0,
+                height: info.frameSize?.y || 0,
+                frames: info.frameCount,
+                delay: info.frameDelay,
+                version: info.version,
+              }
+            : undefined;
+        })
+        .filter(item => item !== undefined),
+    };
+
+    // Fetch all animations to local disk
+    for (const info of ret.spriteLabData.startAnimations) {
+      const localPath = path.join(process.cwd(), 'public', info.local);
+      await fs.mkdir(path.dirname(localPath), {recursive: true});
+
+      try {
+        await fs.access(localPath, fs.constants.R_OK | fs.constants.W_OK);
+      } catch (_) {
+        // Could not find the file in the public path
+        // Download it
+        const res = await fetch(info.url);
+        if (res.body) {
+          const fileStream = createWriteStream(localPath, {flags: 'wx'});
+          await finished(
+            Readable.fromWeb(
+              res.body as unknown as ReadableStream<Uint8Array>,
+            ).pipe(fileStream),
+          );
+        }
+      }
+    }
   }
 
   // Last check for blockly data

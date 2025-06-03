@@ -22,6 +22,27 @@ export class FieldSpriteDropdown extends FieldGridDropdown {
       primaryColour: whiteBackground ? '#ffffff' : undefined,
     });
   }
+
+  setValue(value: string) {
+    // We have an issue where we sometimes try to set the value to a quoted string
+    value = value.replace(/^"/, '').replace(/"$/, '');
+    super.setValue(value);
+  }
+
+  setOptions(options: Blockly.MenuOption[]) {
+    const numColumns = Math.min(
+      options.length,
+      Math.max(4, Math.floor(Math.sqrt(options.length))),
+    );
+
+    (
+      this as unknown as {
+        menuGenerator_: Blockly.MenuOption[];
+      }
+    ).menuGenerator_ = options;
+
+    this.setColumns(numColumns);
+  }
 }
 
 export const plugin: GlobalPlugin = {

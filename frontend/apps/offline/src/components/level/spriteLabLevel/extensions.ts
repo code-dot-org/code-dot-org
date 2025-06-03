@@ -3,6 +3,7 @@ import * as Blockly from 'blockly/core';
 import type {ProcedureBlock, Environment} from '@/components/blockly/types';
 
 import BlockSvgFrame from './BlockSvgFrame';
+import type {FieldSpriteDropdown} from './fields/fieldSpriteDropdown';
 import type {SpriteLabLevelEnvironment} from './SpriteLabLevel';
 
 const isStartMode = () => {
@@ -13,7 +14,6 @@ export const behaviorsBlockFrame = {
   name: 'behaviors_block_frame',
   extension: function (this: Blockly.BlockSvg, environment: Environment) {
     const spriteLabEnvironment = environment as SpriteLabLevelEnvironment;
-    console.log('BLOCKLY environment blah', this, spriteLabEnvironment);
     let functionalSvg: BlockSvgFrame | null = null;
 
     if (
@@ -77,5 +77,35 @@ export const modalProceduresNoDestroy = {
     };
     // We can't register this as a mixin since we're overwriting existing methods
     Object.assign(this, mixin);
+  },
+};
+
+export const spritesFromStartAnimations = {
+  name: 'sprites_from_start_animations',
+  extension: function (this: Blockly.BlockSvg, environment: Environment) {
+    const spriteLabEnvironment = environment as SpriteLabLevelEnvironment;
+    const dropdownField = (this.getField('ANIMATION') ||
+      this.getField('ANIMATION_NAME')) as FieldSpriteDropdown;
+    if (dropdownField) {
+      dropdownField.setOptions(environment.animations || [['', '']]);
+      console.log(
+        'OK',
+        this,
+        dropdownField,
+        dropdownField.getValue(),
+        spriteLabEnvironment,
+        dropdownField.getOptions(),
+      );
+      const newValue = dropdownField.getOptions(false)[0][1];
+      dropdownField.setValue(newValue);
+      console.log(
+        'OK',
+        dropdownField,
+        dropdownField.getValue(),
+        spriteLabEnvironment,
+        dropdownField.getOptions(),
+        newValue,
+      );
+    }
   },
 };

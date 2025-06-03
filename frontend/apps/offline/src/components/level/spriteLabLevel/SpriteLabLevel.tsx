@@ -87,6 +87,21 @@ const SpriteLabLevel: React.FunctionComponent<SpriteLabLevelProps> = ({
   const environment = useRef<SpriteLabLevelEnvironment>({
     useModalFunctionEditor: true,
     noFunctionBlockFrame: true,
+    animations: [
+      ...(levelData?.template?.spriteLabData?.startAnimations ||
+        levelData?.spriteLabData?.startAnimations ||
+        []),
+    ]
+      .filter(info => !(info.categories || []).includes('backgrounds'))
+      .map(info => [
+        {
+          src: `/${info.local}`,
+          width: 32,
+          height: 32,
+          alt: info.name,
+        },
+        info.name,
+      ]),
   });
 
   const currentAvatar = avatar || '/skins/gamelab/small_static_avatar.png';
