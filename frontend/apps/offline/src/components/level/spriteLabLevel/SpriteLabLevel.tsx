@@ -11,7 +11,6 @@ import type {BlockDefinition} from '@/components/blockly';
 import type {Plugin} from '@/components/blockly/plugins';
 import BlockLimitsPlugin from '@/components/blockly/plugins/blockLimits';
 import FieldColourPlugin from '@/components/blockly/plugins/fields/fieldColour';
-import FieldLocationPlugin from '@/components/blockly/plugins/fields/fieldLocation';
 import RectangleInputPlugin from '@/components/blockly/plugins/inputs/rectangle';
 import RoundInputPlugin from '@/components/blockly/plugins/inputs/round';
 import TriangleInputPlugin from '@/components/blockly/plugins/inputs/triangle';
@@ -27,6 +26,8 @@ import BlocklyLevel, {
 
 import * as defaultAPI from './api';
 import blocks from './blocks';
+import FieldLocationPlugin from './fields/fieldLocation';
+import FieldSpriteDropdownPlugin from './fields/fieldSpriteDropdown';
 import SpriteLab from './SpriteLab';
 import Visualization from './Visualization';
 
@@ -62,6 +63,7 @@ const plugins: Plugin[] = [
   FieldColourPlugin,
   // Provide the 'field_location' field for locations
   FieldLocationPlugin,
+  FieldSpriteDropdownPlugin,
   SharableProceduresPlugin,
 ];
 

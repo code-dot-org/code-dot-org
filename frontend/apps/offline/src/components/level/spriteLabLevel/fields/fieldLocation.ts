@@ -1,9 +1,11 @@
 import * as Blockly from 'blockly/core';
 
-import {PluginType} from '../../plugins';
-import type {GlobalPlugin} from '../../plugins';
-
-import {FieldButton, FieldButtonOptions} from './fieldButton';
+import {PluginType} from '@/components/blockly/plugins';
+import type {GlobalPlugin} from '@/components/blockly/plugins';
+import {
+  FieldButton,
+  FieldButtonOptions,
+} from '@/components/blockly/plugins/fields/fieldButton';
 
 /** SVG element namespace */
 const SVG_NS = 'http://www.w3.org/2000/svg';

@@ -18,6 +18,15 @@ import {behaviorGetMutator /*, behaviorDefMutator*/} from './mutators';
 const spriteList: BlockOptionsList = [
   [
     {
+      src: 'https://studio.code.org/api/v1/animation-library/gamelab/XMPMBS2lQ0s7C3cxq.j0JQ1ILAG86re7/category_animals/fish_01.png',
+      alt: 'fish_01_1',
+      width: 32,
+      height: 32,
+    },
+    '"fish_01_1"',
+  ],
+  [
+    {
       src: 'https://studio.code.org/api/v1/animation-library/level_animations/aO_f11FfLOnQYDf5HoJI.wGnbJQDg6g_/tumbleweed2.png',
       alt: 'tumbleweed',
       width: 32,
@@ -68,7 +77,7 @@ const blocks: BlockDefinition[] = [
     message0: '%1',
     args0: [
       {
-        type: 'field_dropdown',
+        type: 'field_sprite_dropdown',
         name: 'SPRITE',
         options: spriteList,
       },
@@ -85,7 +94,7 @@ const blocks: BlockDefinition[] = [
     message0: 'make new %1 sprite at %2',
     args0: [
       {
-        type: 'field_dropdown',
+        type: 'field_sprite_dropdown',
         name: 'ANIMATION_NAME',
         options: spriteList,
       },
