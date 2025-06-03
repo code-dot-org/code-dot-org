@@ -8,12 +8,6 @@ module CachedUnitHelper
   # This is set to twice the proxy max-age because of a bug in CloudFront.
   DEFAULT_PUBLIC_CLIENT_MAX_AGE = DEFAULT_PUBLIC_PROXY_MAX_AGE * 2
 
-  def disable_session_for_cached_pages
-    if cachable_request?(request)
-      request.session_options[:skip] = true
-    end
-  end
-
   # Configure http caching for the given script. Caching is disabled unless the
   # Gatekeeper configuration for 'script' specifies that it is publicly
   # cachable, in which case the max-age and s-maxage headers are set based the

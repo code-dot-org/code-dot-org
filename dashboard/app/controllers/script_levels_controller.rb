@@ -8,7 +8,6 @@ class ScriptLevelsController < ApplicationController
   include VersionRedirectOverrider
   include CachedUnitHelper
 
-  before_action :disable_session_for_cached_pages
   before_action :redirect_admin_from_labs, only: [:reset, :next, :show, :lesson_extras]
   before_action :set_redirect_override, only: [:show]
   before_action :check_script_id_is_name, only: [:show, :lesson_extras]
