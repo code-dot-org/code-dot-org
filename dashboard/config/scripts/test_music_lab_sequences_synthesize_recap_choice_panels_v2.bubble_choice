@@ -5,3 +5,4 @@ description 'Take a moment to review key concepts before continuing to the check
 sublevels
 level 'test-music-lab-sequences-practice-play-sequential-panel_v2'
 level 'test-music-lab-sequences-practice-rest-panel_v2'
+uses_lab2

@@ -11,7 +11,6 @@ import {Version} from '@cdo/apps/templates/courseOverview/TeacherCourseOverview'
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import MultipleAssignButton from '@cdo/apps/templates/MultipleAssignButton';
 import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
-import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {
   isOnTeacherDashboard,
   showV2TeacherDashboard,
@@ -39,12 +38,6 @@ interface TeacherResource {
   includeInPdf: boolean;
   downloadUrl: string;
   isRollup: boolean;
-}
-
-interface DropdownSection {
-  id: number;
-  name: string;
-  isAssigned: boolean;
 }
 
 interface UnitOverviewActionRowProps {
@@ -127,15 +120,6 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
   const [confirmationMessageOpen, setConfirmationMessageOpen] =
     React.useState(false);
 
-  const sections = useAppSelector(state =>
-    sectionsForDropdown(
-      state.teacherSections,
-      courseOfferingId,
-      courseVersionId,
-      state.progress.scriptId
-    )
-  ) as DropdownSection[];
-
   const {unitTitle, unitName, scriptId, deeperLearningCourse} = useAppSelector(
     state => ({
       unitTitle: state.progress.unitTitle,
@@ -150,10 +134,6 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
 
   const isTeacher = useSelector(
     (state: {currentUser: {isTeacher: boolean}}) => state.currentUser.isTeacher
-  );
-
-  const selectedSectionId = useAppSelector(
-    state => state.teacherSections.selectedSectionId
   );
 
   const pdfDropdownOptions = compilePdfDropdownOptions(
@@ -190,11 +170,6 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
       viewType,
     });
   };
-
-  const selectedSection = React.useMemo(
-    () => sections.find(section => section.id === selectedSectionId),
-    [sections, selectedSectionId]
-  );
 
   const displayPrintingOptionsDropdown =
     pdfDropdownOptions.length > 0 &&
@@ -261,7 +236,7 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
             </div>
           )}
 
-          {selectedSection && showAssignButton && (
+          {showAssignButton && (
             <div className={styles.assignButton}>
               <MultipleAssignButton
                 courseOfferingId={courseOfferingId}

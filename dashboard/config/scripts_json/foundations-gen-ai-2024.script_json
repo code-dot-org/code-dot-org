@@ -11,6 +11,9 @@
       "include_student_lesson_plans": true,
       "is_migrated": true,
       "show_calendar": true,
+      "supported_locales": [
+        "es-MX"
+      ],
       "topic_tags": [
         "ai"
       ],
@@ -19,7 +22,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-07 16:23:10 UTC",
+    "serialized_at": "2025-06-02 17:46:42 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

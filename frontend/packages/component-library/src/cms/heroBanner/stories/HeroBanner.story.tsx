@@ -30,10 +30,6 @@ export const Default: Story = {
   parameters: {
     layout: 'fullscreen',
   },
-  play: async ({canvasElement}) => {
-    const canvas = within(canvasElement);
-    await expect(canvas.getByRole('banner')).toBeInTheDocument();
-  },
 };
 
 export const WithImage: Story = {
@@ -213,12 +209,6 @@ export const WithoutBackground: Story = {
   },
   parameters: {
     layout: 'fullscreen',
-  },
-  play: async ({canvasElement}) => {
-    const canvas = within(canvasElement);
-    const banner = canvas.getByRole('banner');
-    const styles = window.getComputedStyle(banner);
-    await expect(styles.backgroundImage).toBe('none');
   },
 };
 

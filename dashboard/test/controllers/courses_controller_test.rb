@@ -409,6 +409,14 @@ class CoursesControllerTest < ActionController::TestCase
     assert_redirected_to course_unit_path(single_unit_course, 1)
   end
 
+  test "show: query params are preserved in redirect to unit for single-unit course" do
+    single_unit_course = create :single_unit_course
+
+    sign_in create(:teacher)
+    get :show, params: {course_name: single_unit_course.name, viewAs: 'Instructor'}
+    assert_redirected_to course_unit_path(single_unit_course, 1, viewAs: 'Instructor')
+  end
+
   test "show: teacher in teacher-local-nav-v2 experiment is redirected to teacher dashboard if course is in a section" do
     experiment_course = create :unit_group, name: 'experiment-course', family_name: 'experiment-course', version_year: '2024', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     experiment_teacher = create :teacher
