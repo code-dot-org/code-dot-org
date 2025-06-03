@@ -10,13 +10,7 @@ import type {GlobalPlugin} from '@/components/blockly/plugins';
  * Note: this class *does not* inherit from `FieldDropdown`.
  */
 export class FieldSpriteDropdown extends FieldGridDropdown {
-  private whiteBackground: boolean;
-
-  constructor(
-    menu: Blockly.MenuOption[],
-    buttons: ButtonConfig[] | undefined,
-    whiteBackground: boolean = true,
-  ) {
+  constructor(menu: Blockly.MenuOption[], whiteBackground: boolean = true) {
     const initialOptions = menu;
     const numColumns = Math.min(
       initialOptions.length,

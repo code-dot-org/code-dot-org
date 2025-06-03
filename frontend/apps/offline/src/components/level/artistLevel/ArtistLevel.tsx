@@ -13,8 +13,8 @@ import FieldColour from '@/components/blockly/plugins/fields/fieldColour';
 import ToolboxTrashcanPlugin from '@/components/blockly/plugins/toolboxTrashcan';
 import ThrasosRenderer from '@/components/blockly/renderers/thrasos';
 import DefaultTheme from '@/components/blockly/themes/default';
+import type {BlocklySerialization} from '@/components/blockly/types';
 import {
-  getCodeFromBlockXmlSource,
   getCodeFromBlockJsonSource,
   getAllGeneratedCode,
 } from '@/components/blockly/utils';
@@ -26,6 +26,17 @@ import blocks from './blocks';
 import {skinFor} from './skins';
 import Visualization from './Visualization';
 
+/** By default, a blank level should at least show a 'When Run' block */
+const DefaultStartBlocks: BlocklySerialization = {
+  blocks: {
+    blocks: [
+      {
+        type: 'when_run',
+      },
+    ],
+  },
+};
+
 export interface ArtistLevelProps extends BlocklyLevelProps {
   levelData: LevelData;
   api?: object;
@@ -34,6 +45,9 @@ export interface ArtistLevelProps extends BlocklyLevelProps {
   visualizationClassName?: string;
 }
 
+/**
+ * Wraps a Blockly-based Artist level.
+ */
 const ArtistLevel: React.FunctionComponent<ArtistLevelProps> = ({
   levelData,
   customBlocks,
@@ -96,20 +110,14 @@ const ArtistLevel: React.FunctionComponent<ArtistLevelProps> = ({
 
   const skin = skinFor(levelData.artistData?.skinId || 'artist');
 
-  //levelData.blocklyData.startBlocks = levelData.artistData.predrawBlocks;
-
   const onInject = useCallback(() => {
     if (container.current) {
       const predrawCode = levelData.artistData?.predrawBlocks
-        ? typeof levelData.artistData?.predrawBlocks === 'string'
-          ? getCodeFromBlockXmlSource(levelData.artistData.predrawBlocks)
-          : getCodeFromBlockJsonSource(levelData.artistData.predrawBlocks)
+        ? getCodeFromBlockJsonSource(levelData.artistData.predrawBlocks)
         : undefined;
 
       const solutionCode = levelData.blocklyData?.solutionBlocks
-        ? typeof levelData.blocklyData?.solutionBlocks === 'string'
-          ? getCodeFromBlockXmlSource(levelData.blocklyData.solutionBlocks)
-          : getCodeFromBlockJsonSource(levelData.blocklyData.solutionBlocks)
+        ? getCodeFromBlockJsonSource(levelData.blocklyData.solutionBlocks)
         : undefined;
 
       console.log(
@@ -143,6 +151,7 @@ const ArtistLevel: React.FunctionComponent<ArtistLevelProps> = ({
   return (
     <BlocklyLevel
       levelData={levelData}
+      startBlocks={levelData.blocklyData?.startBlocks || DefaultStartBlocks}
       data={{}}
       theme={theme || DefaultTheme}
       renderer={renderer || ThrasosRenderer}
