@@ -89,7 +89,7 @@ Feature: OneTrust integration
     Then element "script[src$='977d-test/OtAutoBlock.js']" does exist
 
   @pegasus_content
-  Scenario: The dashboard pages load the test OneTrust libraries.
+  Scenario: The pegasus pages load the test OneTrust libraries.
     Given I am on "http://code.org/index?onetrust_cookie_scripts=test"
     Then element "script[src$='otSDKStub.js']" does exist
     Then element "script[src$='977d/OtAutoBlock.js']" does not exist
@@ -145,7 +145,6 @@ Feature: OneTrust integration
       | url                                                                     |
       | http://code.org/index                                                   |
       | http://hourofcode.com/us                                                |
-
 
   @as_student
   Scenario Outline: Embedded projects do not display the OneTrust banner
