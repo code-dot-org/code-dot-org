@@ -349,6 +349,34 @@ test.describe('All the things UI e2e test', () => {
       });
     });
 
+    test.describe('faq accordion', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator('FAQ Accordion');
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('renders', async () => {
+        const dialogLocator = component.getByRole('group');
+
+        await expect(dialogLocator).toHaveCount(3);
+
+        for (const dialog of await dialogLocator.all()) {
+          await expect(dialog).toBeVisible();
+        }
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        for (const dialog of await component.getByRole('group').all()) {
+          await dialog.click();
+          await expect(dialog).toHaveAttribute('open');
+        }
+
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
     test.describe('heading', () => {
       let component: Locator;
 

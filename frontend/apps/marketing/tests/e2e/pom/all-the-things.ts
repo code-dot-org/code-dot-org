@@ -9,6 +9,7 @@ export type Section =
   | 'Button'
   | 'Divider'
   | 'Editorial Card'
+  | 'FAQ Accordion'
   | 'Hero Banner Basic'
   | 'Hero Banner with Background Color'
   | 'Hero Banner with Background Image'
