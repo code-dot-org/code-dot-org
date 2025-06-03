@@ -60,7 +60,15 @@ describe I18nScriptUtils do
     let(:to_crowdin_yaml) {described_class.to_crowdin_yaml(to_crowdin_yaml_data)}
 
     let(:to_crowdin_yaml_data) {{en: {'test' => '#example', 'yes' => 'y'}}}
-    let(:to_crowdin_yaml_output) {"---\n:en:\n  test: \"#example\"\n  'yes': 'y'\n"}
+
+    let(:to_crowdin_yaml_output) do
+      # TODO infra: simplify to just the v4 case once we're fully upgraded to Ruby 3.1
+      if Psych::VERSION.starts_with?('4')
+        "---\n:en:\n  test: \"#example\"\n  'yes': \"y\"\n"
+      elsif Psych::VERSION.starts_with?('3')
+        "---\n:en:\n  test: \"#example\"\n  'yes': 'y'\n"
+      end
+    end
 
     it 'returns correctly formatted yaml' do
       _(to_crowdin_yaml).must_equal to_crowdin_yaml_output
