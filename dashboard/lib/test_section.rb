@@ -23,29 +23,49 @@ class TestSection
   def self.seed(options)
     teacher_id = options[:teacher_id] || nil
 
-    teacher = find_or_create_teacher(teacher_id)
+    teacher = nil
+    if teacher_id.nil?
+      teacher = find_or_create_teacher
+    else
+      teacher = User.find_by(id: teacher_id)
+      raise "Teacher with id #{teacher_id} not found. Please provide a valid teacher_id." if teacher.nil?
+    end
 
-    create_section(
+    unit = Unit.get_from_cache(options[:unit_name] || DEFAULT_UNIT)
+
+    section = create_section(
       teacher: teacher,
       name: options[:section_name] || DEFAULT_SECTION_NAME,
-      login_type: Section::LOGIN_TYPE_PICTURE,
-      grade: [2],
-      unit_name: options[:unit_name] || DEFAULT_UNIT,
+      unit: unit,
       unit_group_name: options[:unit_group_name] || DEFAULT_COURSE,
-      course_name: options[:course_name] || DEFAULT_COURSE,
-      num_students: options[:num_students] || DEFAULT_NUM_STUDENTS,
     )
+
+    students = add_students_to_section(section,
+      num_students: options[:num_students] || DEFAULT_NUM_STUDENTS
+    )
+
+    create_student_progress(students, unit: unit, teacher: teacher)
+
+    puts ''
+    puts "Created section with section_id: #{section.id}, num_students: #{students.count} and teacher: #{teacher.email}"
+
+    nil
   end
 
-  # If teacher_id is provided, find the teacher by ID and do not delete any data.
-  # If no teacher_id is provided, create a new teacher with the default email, name, and password.
-  # Hard-delete the to-be-created teacher and all of the teacher's sections and students
+  # Raise if run outside of a development environment.  Add this check at the top of any
+  # public methods that can mutate data.
+  def self.environment_check!
+    raise "Cannot create default teacher outside of adhoc or development" unless [:adhoc, :development].include?(CDO.rack_env)
+  end
+
+  # Create a new teacher with the default email, name, and password.
+  # Hard-delete any existing teacher that was already generated and all of the teacher's sections and students
   # and recreate. Sections and followers would be soft-deleted by
   # dependency when we delete the teacher; but to not leave a trail of
   # old test data behind, we explictly hard-delete.
-  def self.find_or_create_teacher(teacher_id)
-    return User.find_by(id: teacher_id) unless teacher_id.nil?
-
+  def self.find_or_create_teacher
+    # Only create a new teacher in safe environments, not on production.
+    environment_check!
     # Delete any existing test data
     user = User.find_by_email_or_hashed_email(DEFAULT_TEACHER_EMAIL)
     unless user.nil?
@@ -58,6 +78,9 @@ class TestSection
 
     # Make the teacher an authorized teacher
     UserPermission.create(user: teacher, permission: UserPermission::AUTHORIZED_TEACHER)
+
+    puts "Created test teacher with email: #{teacher.email}, name: '#{teacher.name}' and password: #{DEFAULT_TEACHER_PASSWORD}"
+
     teacher
   end
 
@@ -81,15 +104,16 @@ class TestSection
   end
 
   def self.create_section(options)
-    unit = Unit.get_from_cache(options[:unit_name])
     unit_group = UnitGroup.get_from_cache(options[:unit_group_name])
 
-    section = create :section, script: unit, unit_group: unit_group,
-      **options.slice(:teacher, :name, :login_type, :grade)
+    create :section, script: options[:unit], unit_group: unit_group, login_type: Section::LOGIN_TYPE_PICTURE, grade: [2],
+      **options.slice(:teacher, :name)
+  end
 
+  def self.add_students_to_section(section, options)
+    # Initialize student count and array to hold students
     current_student = 0
     students = []
-    level_count = unit.script_levels.count
 
     # Create students in section
     (1..options[:num_students]).each do
@@ -104,12 +128,17 @@ class TestSection
       students << student_user
     end
 
+    students
+  end
+
+  def self.create_student_progress(students, options)
+    level_count = options[:unit].script_levels.count
+
     students.each do |student_user|
       max_level = max_level_for_student(level_count)
-      create_user_levels(student_user, max_level, unit)
-      create_teacher_feedback(student_user, options[:teacher], max_level, unit)
+      create_user_levels(student_user, max_level, options[:unit])
+      create_teacher_feedback(student_user, options[:teacher], max_level, options[:unit])
     end
-    section
   end
 
   def self.max_level_for_student(level_count)
