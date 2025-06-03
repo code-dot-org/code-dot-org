@@ -58,8 +58,8 @@
     "next": "^15.2.4",
     "next-logger": "^5.0.1",
     "pino": "^9.6.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "react-schemaorg": "^2.0.0",
     "uuid": "^11.1.0"
   },
