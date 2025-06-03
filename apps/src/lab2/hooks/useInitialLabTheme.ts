@@ -22,6 +22,7 @@ interface UseInitialLabThemeProps {
   };
 }
 
+// Determine and set the theme for the lab that is currently being loaded.
 export const useInitialLabTheme = ({
   currentAppName,
   levelProperties,

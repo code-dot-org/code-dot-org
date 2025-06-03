@@ -6,13 +6,13 @@
 import React, {Suspense} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {PERMISSIONS} from '@cdo/apps/lab2/constants';
+import {useInitialLabTheme} from '@cdo/apps/lab2/hooks/useInitialLabTheme';
+import ProgressContainer from '@cdo/apps/lab2/progress/ProgressContainer';
+import {getAppOptionsViewingExemplar} from '@cdo/apps/lab2/projects/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../lab2EntryPoints';
-import {PERMISSIONS} from '../constants';
-import {useInitialLabTheme} from '../hooks/useInitialLabTheme';
-import ProgressContainer from '../progress/ProgressContainer';
-import {getAppOptionsViewingExemplar} from '../projects/utils';
 
 import NoExemplarPage from './components/NoExemplarPage';
 import ExtraLinks from './ExtraLinks';
