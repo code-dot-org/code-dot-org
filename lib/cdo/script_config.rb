@@ -5,11 +5,39 @@
 
 require_relative 'http_cache'
 
-UNCACHED_HOC_UNITS = %w(playlab artist infinity iceage).freeze
+HOC_UNITS = %w(
+  aquatic
+  artist
+  basketball
+  dance-2019
+  dance-ai-2023
+  flappy
+  frozen
+  hello-world-animals-2021
+  hello-world-emoji-2021
+  hello-world-food-2021
+  hello-world-retro-2021
+  hello-world-soccer-2022
+  hello-world-space-2022
+  hero
+  hourofcode
+  iceage
+  infinity
+  mc
+  minecraft
+  music-jam-2024
+  oceans
+  outbreak
+  playlab
+  poem-art-2021
+  sports
+  starwars
+  starwarsblocks
+).freeze
 
 class ScriptConfig
   def self.hoc_scripts
-    HttpCache.cached_scripts + UNCACHED_HOC_UNITS
+    HOC_UNITS
   end
 
   def self.csf_scripts
