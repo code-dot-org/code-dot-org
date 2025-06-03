@@ -48,26 +48,6 @@ class TeacherDashboardController < ApplicationController
     end
   end
 
-  def enable_experiments
-    if current_user.sections_instructed.empty?
-      redirect_to "/home"
-    else
-
-      section_id = current_user.sections_instructed.order(created_at: :desc).first.id
-      redirect_to "/teacher_dashboard/sections/#{section_id}/progress?enableExperiments=teacher-local-nav-v2"
-    end
-  end
-
-  def disable_experiments
-    if current_user.sections_instructed.empty?
-      redirect_to "/home"
-    else
-
-      section_id = current_user.sections_instructed.order(created_at: :desc).first.id
-      redirect_to "/teacher_dashboard/sections/#{section_id}/progress?disableExperiments=teacher-local-nav-v2"
-    end
-  end
-
   def parent_letter
     @section_summary = @section.selected_section_summarize
     @sections = current_user.sections_instructed.map(&:concise_summarize)

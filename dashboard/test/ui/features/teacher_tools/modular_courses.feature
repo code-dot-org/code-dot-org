@@ -2,7 +2,6 @@
 Feature: Using Modular Courses
   Background:
     Given I am on "http://studio.code.org/home"
-    Given I use a cookie to mock the DCDO key "teacher-local-nav-v2" as "true"
 
   Scenario: Navigating within modular courses
     Given I create a teacher named "Teacher_Sally"
@@ -30,7 +29,7 @@ Feature: Using Modular Courses
     And I wait to see ".header_popup_link"
     Then I open the progress drop down of the current page
     And I wait until element "a:contains(View Unit Overview)" is visible
-    Then I click selector "a:contains(View Unit Overview)"
+    Then I click selector "a:contains(View Unit Overview)" to load a new page
 
     # Check that the unit breadcrumb works
     And I wait until element ".unit-overview-top-row" is visible
@@ -64,7 +63,7 @@ Feature: Using Modular Courses
     And I wait to see ".header_popup_link"
     Then I open the progress drop down of the current page
     And I wait until element "a:contains(View Unit Overview)" is visible
-    Then I click selector "a:contains(View Unit Overview)"
+    Then I click selector "a:contains(View Unit Overview)" to load a new page
 
     # Check that the unit breadcrumb works
     And I wait until element ".unit-overview-top-row" is visible

@@ -327,12 +327,12 @@ class ScriptsController < ApplicationController
       Unit.get_without_cache(unit_name, with_associated_models: true) :
       Unit.get_from_cache(unit_name, raise_exceptions: false)
 
-    return script if script
+    return {script: script} if script
 
     if Unit.family_names.include?(unit_name)
       script = Unit.get_unit_family_redirect_for_user(unit_name, user: current_user, locale: request.locale)
       Unit.log_redirect(unit_name, script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type) if script.present?
-      return script
+      return {script: script}
     end
 
     # Redirect to the latest version or the assigned version of a single-unit course
@@ -344,7 +344,7 @@ class ScriptsController < ApplicationController
       end
       if unit_group&.single_unit_course?
         script = unit_group.units_for_user(current_user).first
-        return script
+        return {script: script, unit_group: unit_group}
       end
     end
 
@@ -362,9 +362,11 @@ class ScriptsController < ApplicationController
         @script = context[:unit]
       end
     else
-      @script = get_unit_by_name
-      raise ActiveRecord::RecordNotFound unless @script
-      @course = @script.original_unit_group
+      result = get_unit_by_name
+      raise ActiveRecord::RecordNotFound unless result && result[:script]
+      @script = result[:script]
+      # Use the unit_group from the result if it's a single unit course, otherwise fall back to original logic
+      @course = result[:unit_group] || @script.original_unit_group
       @unit_group_unit = @script.unit_group_units.find {|ugu| ugu.unit_group == @course}
       @unit_position = @unit_group_unit&.position
     end
