@@ -118,16 +118,7 @@ class ScriptLevelsController < ApplicationController
     raise ActiveRecord::RecordNotFound unless @script_level
 
     if @script.login_required? || (!params.nil? && params[:login_required] == "true")
-      if cachable_request?(request)
-        # if login_required on a cached level, redirect to cached_page_auth_redirect
-        # See https://codedotorg.atlassian.net/browse/TEACH-758 for more details.
-        uri = Addressable::URI.parse request.fullpath
-        uri.query_values = uri&.query_values&.except('login_required')
-        uri.query_values = nil if uri.query_values && uri.query_values.empty?
-        return redirect_to api_v1_users_cached_page_auth_redirect_path({user_return_to: uri.to_s})
-      else
-        authenticate_user!
-      end
+      authenticate_user!
     end
     authenticate_user! unless can?(:read, @script)
 

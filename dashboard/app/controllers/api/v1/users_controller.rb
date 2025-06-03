@@ -115,27 +115,6 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     }
   end
 
-  # This is used as a way to redirect correctly to either the sign in page or the
-  # URL specified in the user_return_to parameter. This is necessary because
-  # cached pages do not have a valid user auth token and therefore will attempt to
-  # redirect to the sign in page instead of the correct page if the user is signed in.
-  # See https://codedotorg.atlassian.net/browse/TEACH-758 for more details.
-  # GET /api/v1/users/cached_page_auth_redirect
-  def cached_page_auth_redirect
-    # We must ensure that we remove any redirections to this page or we would enter
-    # an infinite loop.
-    [params, session].each do |context|
-      context[:user_return_to] = nil if context[:user_return_to]&.include?('cached_page_auth_redirect')
-    end
-
-    if user_signed_in?
-      redirect_to params[:user_return_to] || home_url
-    else
-      session[:user_return_to] ||= params[:user_return_to]
-      authenticate_user!
-    end
-  end
-
   # GET /api/v1/users/<user_id>/using_text_mode
   def get_using_text_mode
     render json: {using_text_mode: !!@user&.using_text_mode}
