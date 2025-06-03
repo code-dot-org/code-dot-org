@@ -73,32 +73,20 @@ export default class VersionRow extends React.Component {
       );
     }
 
-    if (!this.props.isSelectedVersion) {
-      buttons.push(
-        <LinkButton
-          key="not-selected-version-button"
-          color="purple"
-          href={
-            location.origin + location.pathname + '?' + this.getQueryParams()
-          }
-          text={msg.view()}
-          target="_blank"
-        />
-      );
-    } else {
-      buttons.push(
-        <LinkButton
-          key={this.props.isSelectedVersion ? "disabled-view-button" : "not-selected-version-button"}
-          color="purple"
-          disabled={this.props.isSelectedVersion}
-          href={
-            location.origin + location.pathname + '?' + this.getQueryParams()
-          }
-          text={msg.view()}
-          target="_blank"
-        />
-      );
-    }
+    buttons.push(
+      <LinkButton
+        key={
+          this.props.isSelectedVersion
+            ? 'disabled-view-button'
+            : 'not-selected-version-button'
+        }
+        color="purple"
+        disabled={this.props.isSelectedVersion}
+        href={location.origin + location.pathname + '?' + this.getQueryParams()}
+        text={msg.view()}
+        target="_blank"
+      />
+    );
 
     return (
       <tr
