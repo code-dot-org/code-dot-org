@@ -163,12 +163,7 @@ describe('TeacherHomepage', () => {
               <Route
                 path={TEACHER_NAVIGATION_PATHS.home}
                 element={
-                  <TeacherHomepage
-                    studioUrlPrefix="https://studio.code.org"
-                    showSchoolInfoInterstitial={showSchoolInfoInterstitial}
-                    showSchoolInfoConfirmation={showSchoolInfoConfirmation}
-                    existingSchoolInfo={schoolInfo}
-                  />
+                  <TeacherHomepage studioUrlPrefix="https://studio.code.org" />
                 }
               />,
             ]),

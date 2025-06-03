@@ -27,10 +27,6 @@ class TeacherDashboardController < ApplicationController
     end
     @section_order = UserPreference.find_by(user_id: current_user.id)&.section_order
     @locale_code = request.locale
-    @show_school_info_interstitial = true # SchoolInfoInterstitialHelper.show?(current_user)
-    @show_school_info_confirmation = SchoolInfoInterstitialHelper.show_confirmation_dialog?(current_user)
-
-    SchoolInfoInterstitialHelper.update_last_seen_timestamp(current_user) if @show_school_info_interstitial || @show_school_info_confirmation_dialog
 
     view_options(full_width: true, no_padding_container: true)
   end
@@ -77,5 +73,18 @@ class TeacherDashboardController < ApplicationController
     @section_summary = @section.selected_section_summarize
     @sections = current_user.sections_instructed.map(&:concise_summarize)
     render layout: false
+  end
+
+  def get_school_info_interstitial_data
+    show_school_info_interstitial = true # SchoolInfoInterstitialHelper.show?(current_user)
+    show_school_info_confirmation = SchoolInfoInterstitialHelper.show_confirmation_dialog?(current_user)
+
+    SchoolInfoInterstitialHelper.update_last_seen_timestamp(current_user) if @show_school_info_interstitial || @show_school_info_confirmation_dialog
+    school_info = Queries::SchoolInfo.current_school(current_user)
+    render json: {
+      showSchoolInfoInterstitial: show_school_info_interstitial,
+      showSchoolInfoConfirmationDialog: show_school_info_confirmation,
+      schoolInfo: school_info,
+    }
   end
 end

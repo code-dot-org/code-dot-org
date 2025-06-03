@@ -50,9 +50,6 @@ const {
   canViewStudentAIChatMessages,
   sectionOrder,
   providers,
-  existingSchoolInfo,
-  showSchoolInfoInterstitial,
-  showSchoolInfoConfirmation,
 } = scriptData;
 
 $(document).ready(function () {
@@ -141,13 +138,7 @@ $(document).ready(function () {
     // If a teacher has no sections, we will send them directly to the homepage to bypass
     // all of the section loading logic in the TeacherNavigationRouter.
     if (sections.length === 0) {
-      return (
-        <TeacherHomepage
-          showSchoolInfoInterstitial={showSchoolInfoInterstitial}
-          showSchoolInfoConfirmation={showSchoolInfoConfirmation}
-          existingSchoolInfo={existingSchoolInfo}
-        />
-      );
+      return <TeacherHomepage />;
     } else {
       const selectedSectionFromList = window.location.pathname.includes(
         '/teacher_dashboard/home'
@@ -164,9 +155,6 @@ $(document).ready(function () {
         <TeacherNavigationRouter
           studioUrlPrefix={scriptData.studioUrlPrefix}
           showAITutorTab={showAITutorTab}
-          showSchoolInfoInterstitial={showSchoolInfoInterstitial}
-          showSchoolInfoConfirmation={showSchoolInfoConfirmation}
-          existingSchoolInfo={existingSchoolInfo}
         />
       );
     }

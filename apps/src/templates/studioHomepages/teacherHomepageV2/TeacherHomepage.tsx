@@ -16,7 +16,6 @@ import {
 import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
 import {SectionList} from './SectionList';
-import {SchoolInfo} from './TeacherHomepageConstants';
 import TeacherHomepageDrawer from './TeacherHomepageDrawer';
 import TeacherPromotions from './TeacherPromotions';
 
@@ -26,18 +25,12 @@ export type ArchivedToggleOption = 'teaching' | 'archived';
 
 interface TeacherHomepageProps {
   studioUrlPrefix: string;
-  showSchoolInfoInterstitial: boolean;
-  showSchoolInfoConfirmation: boolean;
-  existingSchoolInfo?: SchoolInfo;
 }
 
 const LOCAL_STORAGE_KEY = 'teacher_homepage_feedback_closed';
 
 export const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
   studioUrlPrefix,
-  showSchoolInfoInterstitial,
-  showSchoolInfoConfirmation,
-  existingSchoolInfo,
 }) => {
   const teacherName = useAppSelector(state => state.currentUser.displayName);
 
@@ -133,11 +126,7 @@ export const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
           <TeacherPromotions />
         </div>
       </div>
-      <TeacherHomepageDrawer
-        showSchoolInfoInterstitial={showSchoolInfoInterstitial}
-        showSchoolInfoConfirmation={showSchoolInfoConfirmation}
-        existingSchoolInfo={existingSchoolInfo}
-      />
+      <TeacherHomepageDrawer />
     </div>
   );
 };

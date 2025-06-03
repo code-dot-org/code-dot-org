@@ -12,6 +12,7 @@ import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useSchoolInfo} from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
 import {updateSchoolInfo} from '@cdo/apps/schoolInfo/utils/updateSchoolInfo';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
@@ -24,17 +25,38 @@ import styles from './teacherHomepage.module.scss';
 
 const NON_SCHOOL_OPTIONS = ['selectASchool', 'clickToAd', 'noSchoolSetting'];
 
-interface TeacherHomepageDrawerProps {
+interface DrawerData {
   showSchoolInfoInterstitial: boolean;
   showSchoolInfoConfirmation: boolean;
-  existingSchoolInfo?: SchoolInfo;
+  existingSchoolInfo: SchoolInfo;
 }
 
-export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
-  showSchoolInfoInterstitial,
-  showSchoolInfoConfirmation,
-  existingSchoolInfo,
-}) => {
+export const TeacherHomepageDrawer: React.FC = () => {
+  const [schoolInfoInterstitialOpen, setSchoolInfoInterstitialOpen] =
+    React.useState(false);
+  const [schoolInfoConfirmationOpen, setSchoolInfoConfirmationOpen] =
+    React.useState(false);
+  const [success, setSuccess] = React.useState(false);
+  const [showSchoolInfoUnknownError, setShowSchoolInfoUnknownError] =
+    React.useState(false);
+  const [existingSchoolInfo, setexistingSchoolInfo] = React.useState<
+    SchoolInfo | undefined
+  >(undefined);
+  const schoolName = existingSchoolInfo?.school_name || 'the same school?';
+  React.useEffect(() => {
+    HttpClient.fetchJson<DrawerData>(
+      '/teacher_dashboard/get_school_info_interstitial_data'
+    ).then(data => {
+      console.log(data);
+      setexistingSchoolInfo(data.value.existingSchoolInfo);
+      setSchoolInfoInterstitialOpen(data.value.showSchoolInfoInterstitial);
+      setSchoolInfoConfirmationOpen(data.value.showSchoolInfoConfirmation);
+    });
+  }, [
+    setexistingSchoolInfo,
+    setSchoolInfoInterstitialOpen,
+    setSchoolInfoConfirmationOpen,
+  ]);
   const usIp = useAppSelector(state => state.currentUser.inUSA);
   const schoolInfo = useSchoolInfo({
     usIp,
@@ -44,16 +66,6 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
     schoolZip: existingSchoolInfo?.school_zip,
     schoolType: existingSchoolInfo?.school_type,
   });
-
-  const [schoolInfoInterstitialOpen, setSchoolInfoInterstitialOpen] =
-    React.useState(showSchoolInfoInterstitial);
-  const [schoolInfoConfirmationOpen, setSchoolInfoConfirmationOpen] =
-    React.useState(showSchoolInfoConfirmation);
-  const [success, setSuccess] = React.useState(false);
-  const schoolName = existingSchoolInfo?.school_name || 'the same school?';
-
-  const [showSchoolInfoUnknownError, setShowSchoolInfoUnknownError] =
-    React.useState(false);
 
   const handlePrimaryButtonClick = async () => {
     if (success) {
