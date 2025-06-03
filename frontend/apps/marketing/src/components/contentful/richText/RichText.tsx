@@ -46,7 +46,7 @@ const extractNodeContent = (node: RichTextNode): ReactNode[] => {
 
   switch (node.nodeType) {
     case 'text': {
-      if (!node.value) return [node.value];
+      if (!node.value) return [];
 
       return [
         node.marks.reduce((value: ReactNode, {type}: Mark) => {
