@@ -21,9 +21,16 @@ module User::Verifiable
   # facilitator, authorized_teacher, or levelbuilder. All of these permissions tell us someone
   # should be trusted with locked down instructor only content. It is important to use this
   # method instead of verified_teacher? as teachers will not be instructors for all courses
+  #
+  INSTRUCTOR_ACCESS_PERMISSIONS = [
+    UserPermission::UNIVERSAL_INSTRUCTOR,
+    UserPermission::PLC_REVIEWER,
+    UserPermission::FACILITATOR,
+    UserPermission::AUTHORIZED_TEACHER,
+    UserPermission::LEVELBUILDER
+  ].freeze
+
   def verified_instructor?
-    permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || permission?(UserPermission::PLC_REVIEWER) ||
-      permission?(UserPermission::FACILITATOR) || permission?(UserPermission::AUTHORIZED_TEACHER) ||
-      permission?(UserPermission::LEVELBUILDER)
+    INSTRUCTOR_ACCESS_PERMISSIONS.any? {|required_permission| permission?(required_permission)}
   end
 end
