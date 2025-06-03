@@ -1,5 +1,10 @@
 import * as Blockly from 'blockly/core';
+import classNames from 'classnames';
 import React, {ReactNode, useRef} from 'react';
+
+import Button from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Heading6} from '@code-dot-org/component-library/typography';
 
 import type {LevelData} from '@/app/models/level';
 import {
@@ -14,6 +19,7 @@ import type {
   Environment,
   BlocklySerialization,
 } from '@/components/blockly/types';
+import {getToolboxWidth} from '@/components/blockly/utils';
 import Workspace from '@/components/workspace';
 import Instructions from '@/components/workspace/information/instructions';
 import MultipleChoice from '@/components/workspace/information/multipleChoice';
@@ -35,21 +41,57 @@ export type BlocklyLevelProps<
   T extends BlocklyLevelEnvironment = BlocklyLevelEnvironment,
 > = {
   levelData: LevelData;
+  /** A set of blocks to load as the starting point for the workspace */
   startBlocks?: BlocklySerialization;
+  /** A set of blocks to load into a hidden workspace */
   hiddenBlocks?: BlocklySerialization;
+  /** A set of specialized options that is passed to block creators. */
   data?: object;
+  /** Some options that will alter the typical Blockly behavior. */
   options?: BlocklyOptions;
+  /** A set of custom blocks to load within the Blockly instance. */
   customBlocks?: BlockDefinition[];
+  /** A component that is loaded as the level visualization */
   visualization?: ReactNode;
+  /** The blockly theme to use. */
   theme?: Theme;
+  /** The blockly renderer to use. */
   renderer?: Renderer;
+  /** A callback when the Blockly environment is loaded into the container */
   onInject?: () => void;
+  /** A callback for when anything in the workspace updates */
+  onChange?: (event: Blockly.Events.Abstract) => void;
+  /** The URL of an avatar image to serve as the graphical character */
   avatar?: string;
   /** A set of plugins to install to this workspace */
   plugins?: Plugin[];
+  /** Blocks that are not counted toward the block count goal */
+  uncountedBlockTypes?: string[];
   /** The environmental information to give to all extensions */
   environment?: T;
 };
+
+// Default 'uncounted' block types
+const UNCOUNTED_BLOCK_TYPES = ['draw_colour', 'alpha', 'comment'];
+
+const countBlocks = (workspace: Blockly.Workspace, uncounted: string[]) =>
+  (workspace.getAllBlocks() as (Blockly.Block | null)[]).filter(block => {
+    // disabled blocks are not counted
+    if (!block?.isEnabled()) {
+      return false;
+    }
+
+    // blocks that are of one of the uncounted block types are not
+    // counted, and neither are any of their children
+    while (block !== null) {
+      if (uncounted.indexOf(block.type) > -1) {
+        return false;
+      }
+      block = block.getSurroundParent();
+    }
+
+    return true;
+  }).length;
 
 function BlocklyLevel<
   T extends BlocklyLevelEnvironment = BlocklyLevelEnvironment,
@@ -62,14 +104,25 @@ function BlocklyLevel<
   visualization,
   customBlocks,
   onInject,
+  onChange,
   avatar,
   theme,
   renderer,
   plugins,
+  uncountedBlockTypes,
   environment,
 }: BlocklyLevelProps<T>): React.ReactElement {
   const workspaceRef = useRef<Blockly.Workspace | null>(null);
   const hiddenWorkspaceRef = useRef<Blockly.Workspace | null>(null);
+  const toolboxHeaderRef = useRef<HTMLDivElement | null>(null);
+  const blockCountRef = useRef<HTMLElement | null>(null);
+  const blockCount = useRef<number>(0);
+  const fullUncountedBlockTypes = [
+    ...UNCOUNTED_BLOCK_TYPES,
+    ...(uncountedBlockTypes || []),
+  ];
+
+  console.log('LEVEL', levelData);
 
   return (
     <BlocklyProvider
@@ -103,6 +156,70 @@ function BlocklyLevel<
         ]}
       >
         <div className={moduleStyles.blocklyLevel}>
+          <div className={moduleStyles.header}>
+            <div ref={toolboxHeaderRef} className={moduleStyles.toolboxHeader}>
+              <Heading6 className={moduleStyles.headerText}>
+                <FontAwesomeV6Icon
+                  iconName="puzzle-piece"
+                  iconStyle="solid"
+                  className={moduleStyles.headerIcon}
+                />
+                <span>Blocks</span>
+              </Heading6>
+            </div>
+            <div className={moduleStyles.workspaceHeader}>
+              <Heading6 className={moduleStyles.headerText}>Workspace</Heading6>
+              {!!levelData.blocklyData?.idealBlockCount && (
+                <>
+                  <Heading6
+                    className={classNames(
+                      moduleStyles.headerText,
+                      moduleStyles.blockCount,
+                      blockCount.current >
+                        (levelData.blocklyData?.idealBlockCount || 0)
+                        ? moduleStyles.over
+                        : undefined,
+                    )}
+                  >
+                    <span ref={blockCountRef}>{blockCount.current}</span>
+                  </Heading6>
+                  <Heading6
+                    className={classNames(
+                      moduleStyles.headerText,
+                      moduleStyles.idealCount,
+                    )}
+                  >
+                    {levelData.blocklyData?.idealBlockCount || 0} blocks
+                  </Heading6>
+                </>
+              )}
+            </div>
+            <div className={moduleStyles.actions}>
+              <Button
+                className={moduleStyles.startOverButton}
+                size="xs"
+                type="secondary"
+                color="gray"
+                text="Start over"
+                onClick={() => {}}
+                iconLeft={{
+                  iconName: 'arrow-rotate-left',
+                  iconStyle: 'solid',
+                }}
+              />
+              <Button
+                size="xs"
+                type="secondary"
+                color="gray"
+                text="Show code"
+                onClick={() => {}}
+                iconLeft={{
+                  iconName: 'code',
+                  iconStyle: 'solid',
+                }}
+              />
+            </div>
+          </div>
           {hiddenBlocks && (
             <BlocklyWorkspace<T>
               hidden
@@ -139,6 +256,44 @@ function BlocklyLevel<
                   ? undefined
                   : levelData.blocklyData?.toolboxBlocks
             }
+            onChange={(event: Blockly.Events.Abstract) => {
+              if (workspaceRef.current) {
+                blockCount.current = countBlocks(
+                  workspaceRef.current,
+                  fullUncountedBlockTypes,
+                );
+              }
+
+              // Get the width of the flyout / toolbox
+              if (toolboxHeaderRef.current && workspaceRef.current) {
+                toolboxHeaderRef.current.style.width =
+                  getToolboxWidth(
+                    workspaceRef.current as Blockly.WorkspaceSvg,
+                  ) + 'px';
+              }
+
+              // Dynamically update the counter
+              if (blockCountRef.current) {
+                blockCountRef.current.textContent =
+                  blockCount.current.toString();
+
+                // Apply styling to reflect we've gone over the ideal number
+                const headerNode = blockCountRef.current
+                  .parentNode as HTMLElement | null;
+                if (
+                  blockCount.current >
+                  (levelData.blocklyData?.idealBlockCount || 0)
+                ) {
+                  headerNode?.classList.add(moduleStyles.over);
+                } else {
+                  headerNode?.classList.remove(moduleStyles.over);
+                }
+              }
+
+              if (onChange) {
+                onChange(event);
+              }
+            }}
             onInject={() => {
               // Retain the main workspace in the environment, if it exists
               if (environment) {

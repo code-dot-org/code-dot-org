@@ -82,6 +82,7 @@ export interface BlocklyData {
   startBlocks?: BlocklySerialization;
   toolboxBlocks?: Blockly.utils.toolbox.ToolboxInfo;
   solutionBlocks?: BlocklySerialization;
+  idealBlockCount?: number;
 }
 
 /** Describes a level */
@@ -166,6 +167,8 @@ export interface LevelConfiguration {
     y?: string;
     /** A set of images associated with the level. */
     images?: string;
+    /** The ideal number of blocks. This cause block count tracking to enable. */
+    ideal?: string;
   };
 }
 
@@ -534,6 +537,9 @@ export const parseLevelData: (
         convert(parseXml(roots[1]))?.blocks?.blocks || [],
       ),
       solutionBlocks: convert(parseXml(roots[2])),
+      idealBlockCount: config.properties?.ideal
+        ? parseInt(config.properties.ideal)
+        : undefined,
     };
   }
 

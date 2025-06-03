@@ -1,3 +1,5 @@
+'use client';
+
 import useResizeObserver from '@react-hook/resize-observer';
 import * as libraryBlocks from 'blockly/blocks';
 import * as Blockly from 'blockly/core';
@@ -62,6 +64,8 @@ export interface BlocklyWorkspaceProps<T extends Environment & object> {
   hidden?: boolean;
   /** A callback when the Blockly environment is loaded into the container */
   onInject?: () => void;
+  /** A callback for when anything in the workspace updates */
+  onChange?: (event: Blockly.Events.Abstract) => void;
   /** A set of plugins to install to this workspace */
   plugins?: Plugin[];
   /** The info to pass along to extensions */
@@ -92,6 +96,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
   inline,
   hidden,
   onInject,
+  onChange,
   plugins,
   environment,
   workspaceRef,
@@ -468,6 +473,11 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
     // Add the orphan disabler which disables blocks that aren't connected to top
     // blocks or procedures, etc.
     workspace.current.addChangeListener(disableOrphans);
+
+    // Add main change listener
+    if (onChange) {
+      workspace.current.addChangeListener(onChange);
+    }
 
     // Deconstruct the blockly instance when the component is unmounted
     return () => {
