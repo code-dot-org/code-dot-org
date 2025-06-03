@@ -64,20 +64,7 @@ export async function handleRunClick(
     }
     await runPythonCode(code, source);
     if (isNeighborhoodLevel()) {
-      const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
-      neighborhood?.onClose();
-      const projectManager = Lab2Registry.getInstance().getProjectManager();
-      const shouldCapture = projectManager?.getShouldCaptureThumbnail();
-      if (!shouldCapture) return;
-      await neighborhood?.waitUntilDone(); // Wait for neighborhood signal processing to be completed.
-      const svg = document.getElementById(SVG_ID);
-      const svgArg = svg instanceof SVGSVGElement ? svg : null;
-      if (svgArg) {
-        const pngBlob = await captureThumbnailFromSvgPythonlabNeighborhood(
-          svgArg
-        );
-        projectManager?.setThumbnail(pngBlob);
-      }
+      setProjectThumbnail();
     }
   }
 }
@@ -182,5 +169,20 @@ function handleRunEndedUnexpectedly(
     CodebridgeRegistry.getInstance().getNeighborhood()?.onClose();
   } else {
     consoleManager?.writeConsoleMessage('');
+  }
+}
+
+async function setProjectThumbnail() {
+  const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
+  neighborhood?.onClose();
+  const projectManager = Lab2Registry.getInstance().getProjectManager();
+  const shouldCapture = projectManager?.getShouldCaptureThumbnail();
+  if (!shouldCapture) return;
+  await neighborhood?.waitUntilDone(); // Wait for neighborhood signal processing to be completed.
+  const svg = document.getElementById(SVG_ID);
+  const svgArg = svg instanceof SVGSVGElement ? svg : null;
+  if (svgArg) {
+    const pngBlob = await captureThumbnailFromSvgPythonlabNeighborhood(svgArg);
+    projectManager?.setThumbnail(pngBlob);
   }
 }

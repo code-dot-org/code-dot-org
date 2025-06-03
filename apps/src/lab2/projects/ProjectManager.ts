@@ -344,16 +344,21 @@ export default class ProjectManager {
   /**
    * Uploads a thumbnail image to the thumbnail path via the files API.
    */
-  saveThumbnail(): Promise<Response | void> {
+  async saveThumbnail() {
     if (this.thumbnailUrl && this.thumbnailPngBlob) {
-      return HttpClient.put(
-        this.thumbnailUrl,
-        this.thumbnailPngBlob,
-        true, // useAuthenticityToken
-        {
-          'Content-Type': 'image/png',
-        }
-      );
+      try {
+        return await HttpClient.put(
+          this.thumbnailUrl,
+          this.thumbnailPngBlob,
+          true, // useAuthenticityToken
+          {
+            'Content-Type': 'image/png',
+          }
+        );
+      } catch (e) {
+        this.metricsReporter.logWarning('Failed to save thumbnail.');
+        return;
+      }
     } else {
       return Promise.resolve();
     }

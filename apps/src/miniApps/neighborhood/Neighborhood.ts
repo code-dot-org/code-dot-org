@@ -293,6 +293,10 @@ export default class Neighborhood {
 
   // Returns a promise that resolves when all neighborhood signals have finished processing.
   waitUntilDone(): Promise<void> {
+    if (!this.isRunning()) {
+      return Promise.resolve();
+    }
+
     if (this.donePromise) {
       return this.donePromise;
     }
