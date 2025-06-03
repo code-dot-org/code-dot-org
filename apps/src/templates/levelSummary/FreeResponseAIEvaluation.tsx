@@ -5,6 +5,7 @@ import {
   StudentWorkEvaluation,
   evaluateStudentWork,
 } from '@cdo/apps/aiEvaluation/aiEvaluationApi';
+import {fetchStudentWorkEvaluations} from '@cdo/apps/aiEvaluation/studentWorkEvaluationsApi';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 
@@ -36,6 +37,66 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
   const evaluationComplete =
     evaluationCount > 0 && responses.length === evaluationCount;
 
+  // const loadExistingEvaluations = async () => {
+  //   console.log(
+  //     'Loading existing evaluations for levelId:',
+  //     levelData.levelId,
+  //     'unitId:',
+  //     levelData.unitId
+  //   );
+
+  //   const allExistingEvaluations = [];
+
+  //   for (const response of responses) {
+  //     try {
+  //       const data = await fetchStudentWorkEvaluations(
+  //         response.studentId,
+  //         levelData.levelId,
+  //         levelData.unitId
+  //       );
+
+  //       console.log(
+  //         `Fetched evaluations for student ${response.studentId}:`,
+  //         data
+  //       );
+
+  //       if (data) {
+  //         allExistingEvaluations.push(data); // or push(data) if you want a nested array
+  //       }
+  //     } catch (error) {
+  //       console.warn(
+  //         `Failed to fetch evaluations for student ${response.studentId}:`,
+  //         error
+  //       );
+  //     }
+  //   }
+
+  //   console.log('All existing evaluations:', allExistingEvaluations);
+  // };
+
+  const loadExistingEvaluations = async () => {
+    console.log('Loading existing evaluations...');
+
+    const promises = responses.map(response =>
+      fetchStudentWorkEvaluations(
+        response.studentId,
+        levelData.levelId,
+        levelData.unitId
+      ).catch(error => {
+        console.warn(`Failed for student ${response.studentId}`, error);
+        return null;
+      })
+    );
+
+    const results = await Promise.all(promises);
+
+    const allExistingEvaluations = results.filter(
+      data => data !== null && data.evaluation !== 'No attempt'
+    );
+
+    console.log('All existing evaluations:', allExistingEvaluations);
+  };
+
   const getAIEvaluations = async () => {
     analyticsReporter.sendEvent(
       EVENTS.CFU_AI_ANALYSIS_BUTTON_CLICKED,
@@ -49,6 +110,7 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
     const responsePromises = responses.map(async studentResponse => {
       return evaluateStudentResponse(studentResponse);
     });
+    loadExistingEvaluations();
 
     await Promise.allSettled(responsePromises);
   };

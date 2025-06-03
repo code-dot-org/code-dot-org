@@ -15,6 +15,24 @@ class StudentWorkEvaluationsController < ApplicationController
     end
   end
 
+  # GET /student_work_evaluations/:userId/:levelId/:unitId
+  def get_student_work_evaluations
+    user_id = params[:user_id]
+    level_id = params[:level_id]
+    unit_id = params[:unit_id]
+
+    evaluations = StudentWorkEvaluation.where(
+      student_id: user_id,
+      level_id: level_id,
+      unit_id: unit_id
+    )
+
+    last_evaluation = evaluations.order(created_at: :desc).first
+    return head :not_found unless last_evaluation
+
+    render json: last_evaluation, status: :ok
+  end
+
   def student_work_evaluation_params
     student_work_evaluation_params = params.transform_keys(&:underscore).permit(
       :type,

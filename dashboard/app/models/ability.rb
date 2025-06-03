@@ -96,6 +96,7 @@ class Ability
       can :create, UserLevel, user_id: user.id
       can :update, UserLevel, user_id: user.id
       can :create, StudentWorkEvaluation, user_id: user.id
+      can :get_student_work_evaluations, StudentWorkEvaluation, user_id: user.id
       can :create, StudentWorkEvaluationSummary
       can :create, UserLevelInteraction, user_id: user.id
       can :create, Follower, student_user_id: user.id
