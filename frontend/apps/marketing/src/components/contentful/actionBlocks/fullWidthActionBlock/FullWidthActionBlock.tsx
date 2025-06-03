@@ -87,6 +87,10 @@ const FullWidthActionBlock: React.FC<FullWidthActionBlockContentfulProps> = ({
             iconRight: secondaryButton.fields.isThisAnExternalLink
               ? externalLinkIconProps
               : undefined,
+            ...(secondaryButton.fields.isThisAnExternalLink && {
+              target: '_blank',
+              rel: 'noopener noreferrer',
+            }),
           }
         : undefined
     }

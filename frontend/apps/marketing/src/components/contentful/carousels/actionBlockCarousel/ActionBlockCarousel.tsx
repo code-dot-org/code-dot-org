@@ -106,6 +106,10 @@ const ActionBlockCarousel: React.FC<ActionBlockCarouselProps> = ({
                       iconRight: secondaryLinkRef.fields.isThisAnExternalLink
                         ? externalLinkIconProps
                         : undefined,
+                      ...(secondaryLinkRef.fields.isThisAnExternalLink && {
+                        target: '_blank',
+                        rel: 'noopener noreferrer',
+                      }),
                     }
                   : undefined
               }
