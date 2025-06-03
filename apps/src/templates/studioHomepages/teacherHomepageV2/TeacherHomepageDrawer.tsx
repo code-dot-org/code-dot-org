@@ -48,7 +48,6 @@ export const TeacherHomepageDrawer: React.FC = () => {
     HttpClient.fetchJson<DrawerData>(
       '/teacher_dashboard/get_school_info_interstitial_data'
     ).then(data => {
-      console.log(data);
       setexistingSchoolInfo(data.value.existingSchoolInfo);
       setSchoolInfoInterstitialOpen(data.value.showSchoolInfoInterstitial);
       setSchoolInfoConfirmationOpen(data.value.showSchoolInfoConfirmation);
