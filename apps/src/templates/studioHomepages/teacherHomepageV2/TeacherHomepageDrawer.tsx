@@ -39,7 +39,7 @@ export const TeacherHomepageDrawer: React.FC = () => {
   const [success, setSuccess] = React.useState(false);
   const [showSchoolInfoUnknownError, setShowSchoolInfoUnknownError] =
     React.useState(false);
-  const [existingSchoolInfo, setexistingSchoolInfo] = React.useState<
+  const [existingSchoolInfo, setExistingSchoolInfo] = React.useState<
     SchoolInfo | undefined
   >(undefined);
   const schoolName =
