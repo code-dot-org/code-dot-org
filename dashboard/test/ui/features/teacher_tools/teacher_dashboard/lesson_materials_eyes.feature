@@ -9,7 +9,6 @@ Feature: Lesson materials page - Eyes
 
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
-    Given I use a cookie to mock the DCDO key "teacher-local-nav-v2" as "true"
     Given I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
 
     When I click selector "a:contains(New Section)" once I see it to load a new page

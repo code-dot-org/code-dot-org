@@ -14,6 +14,18 @@ module Cdo
     # Match CDO_*, plus RACK_ENV and RAILS_ENV.
     ENV_PREFIX = /^(CDO|(RACK|RAILS)(?=_ENV))_/
 
+    MARKETING_SITES_HOSTS = [
+      # Contentful localhost
+      'http://localhost:3001',
+      'http://localhost.code.org:3001',
+      # Contentful development
+      'https://code.marketing-sites.dev-code.org',
+      # Contentful test
+      'https://code.marketing-sites.test-code.org',
+      # Contentful production
+      'https://code.marketing-sites.code.org',
+    ].freeze
+
     def initialize
       super
       root = File.expand_path('..', __dir__)
@@ -122,6 +134,10 @@ module Cdo
 
     def pegasus_site_host
       site_host('code.org')
+    end
+
+    def marketing_sites_hosts
+      MARKETING_SITES_HOSTS
     end
 
     def site_url(domain, path = '', scheme = '', ge_region: nil)

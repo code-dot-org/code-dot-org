@@ -17,12 +17,13 @@
       "topic_tags": [
         "maker"
       ],
+      "tts": true,
       "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-22 17:31:39 UTC",
+    "serialized_at": "2025-05-27 22:51:54 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,

@@ -18,6 +18,7 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   getFullPrompt,
 }) => {
   const [askAiTutor, AiTutorResponseView] = useAiTutor2(
+    true,
     getFullPrompt,
     type,
     true

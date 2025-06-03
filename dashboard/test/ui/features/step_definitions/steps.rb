@@ -1180,11 +1180,6 @@ And /^I check the pegasus URL$/ do
   puts "Pegasus URL is #{pegasus_url}"
 end
 
-Then /^the overview page contains ([\d]+) assign (?:button|buttons)$/ do |expected_num|
-  actual_num = @browser.execute_script("return $('.uitest-assign-button').length;")
-  expect(actual_num).to eq(expected_num.to_i)
-end
-
 When /^I click the button in the unit card for unit "([^"]*)"$/ do |unit_name|
   unit_card = @browser.find_elements(css: '.uitest-CourseScript').find {|el| el.text.include?(unit_name)}
   button = unit_card.find_element(xpath: ".//a[contains(., 'Go to Unit')]")

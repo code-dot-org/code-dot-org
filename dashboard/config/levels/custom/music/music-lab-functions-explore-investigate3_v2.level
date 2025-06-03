@@ -1,0 +1,1036 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T03:00:37.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false,
+        "blocks": {
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "procedures_callnoreturn",
+                  "id": "B(L6KzhM}K:?tvm4f!;o",
+                  "deletable": false,
+                  "editable": false,
+                  "extraState": {
+                    "name": "prechorus2"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "procedures_callnoreturn",
+                      "id": "dpv|xhk-IdQdkAK)8/sq",
+                      "deletable": false,
+                      "editable": false,
+                      "extraState": {
+                        "name": "verse1"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "procedures_callnoreturn",
+                          "id": "bHz5ycv;LbN?)q9iGD7F",
+                          "deletable": false,
+                          "editable": false,
+                          "extraState": {
+                            "name": "chorus2"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "procedures_callnoreturn",
+                              "id": "2b#{?{rD,X%,_A%7-!*b",
+                              "deletable": false,
+                              "editable": false,
+                              "extraState": {
+                                "name": "chorus1"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "procedures_callnoreturn",
+                                  "id": "T_+zm16N2fJIRcWlLZ#J",
+                                  "deletable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "name": "verse2"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "procedures_callnoreturn",
+                                      "id": "F9=1f2d:%42JlJsV@gt:",
+                                      "deletable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "name": "chorus4"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "procedures_callnoreturn",
+                                          "id": "v@f+-9^_+^ujbIX#wLf,",
+                                          "deletable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "name": "chorus3"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "procedures_callnoreturn",
+                                              "id": "_tr?rn!:63owB{}H[I.~",
+                                              "deletable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "name": "prechorus1"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "VG12+a]*j7,KmPP{/bD0",
+              "x": 830,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "IUz/W6S|1V~`A)zUvoj7",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "verse1"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "r$@!+*sW^m0VJBFVPEZ}",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": true
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "$*upESc;5++9tk^arYh.",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "chainsmokers_riptide/vocals_verse_1"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "repeat_simple2",
+                              "id": "W}7`$87pLX6x94(gTiUq",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "times": 2
+                              },
+                              "inputs": {
+                                "code": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "QJfDG@ZyqRP6p9!$vJoR",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": true
+                                    },
+                                    "fields": {
+                                      "sound": "chainsmokers_riptide/drums_scratch_tone"
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sounds_sequential",
+                                  "id": "2+fQi5iGiaYl4zM7zYWZ",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": true
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "q^0C*!1N%(CU:GJFB(!c",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "chainsmokers_riptide/bass_1"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "a6Yme78}J}U^QPn]#`(*",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": true
+                                            },
+                                            "fields": {
+                                              "sound": "chainsmokers_riptide/bass_2"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": ".A9N%{HG`J#=%ptrS,fL",
+              "x": 570,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "Dx!OSpQF,w[=3`|PxYHu",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "verse2"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "-.luz9,uY4c^FoHmu1C=",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": true
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "d.u2}U|P!(.o~n:Zai-|",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "chainsmokers_riptide/vocals_verse_2"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "repeat_simple2",
+                              "id": "VwJ@Ec-POx}SwPJP#k25",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "times": 2
+                              },
+                              "inputs": {
+                                "code": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "ETFzzb_IH(T6wE?0fys4",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": true
+                                    },
+                                    "fields": {
+                                      "sound": "chainsmokers_riptide/drums_scratch_tone"
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sounds_sequential",
+                                  "id": "yL3]@^g,^Pqc$Vf/6fA,",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": true
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "9kg0|oC+-rE]:9/J:,6U",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "chainsmokers_riptide/bass_1"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "+zDgCb4WUP?iy3byMj@U",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": true
+                                            },
+                                            "fields": {
+                                              "sound": "chainsmokers_riptide/bass_2"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "4R7+_^dBgiF^/}md%CJ7",
+              "x": 830,
+              "y": 350,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "AsNi/|iAOL3saCY_kRnf",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "prechorus1"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "{IaorIxRrm*#v2ZK8|f%",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": true
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "k[a=,N8-,cy}r`T7Iv?L",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "chainsmokers_riptide/vocals_prechorus_1"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "repeat_simple2",
+                              "id": "M2pZmMCb0mYS]i{pK{wh",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "times": 2
+                              },
+                              "inputs": {
+                                "code": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "o}Hw1p~S-6@_q)3Y57Bq",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": true
+                                    },
+                                    "fields": {
+                                      "sound": "chainsmokers_riptide/drums_full"
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sounds_sequential",
+                                  "id": "EG51Ghq#:mok$,REXYLp",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": true
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "?j7tX1y_f*FTyt%tuXcF",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "chainsmokers_riptide/bass_1"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "Hv6`Od8_QTBJ1(F_WD:N",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": true
+                                            },
+                                            "fields": {
+                                              "sound": "chainsmokers_riptide/bass_2"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "lYCW8Bxyg42(tlpSvIDp",
+              "x": 570,
+              "y": 350,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "qr-8aKR4hGG=NS(hPrV[",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "prechorus2"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "R,1rp+UsXg:l`Cn|uyJ)",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": true
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "pvBwFV$:Q#O)uWmbxpn@",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "chainsmokers_riptide/vocals_prechorus_2"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "repeat_simple2",
+                              "id": "ju*9sZ|H|D.fJ7@BuWr`",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "times": 2
+                              },
+                              "inputs": {
+                                "code": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "@}oaC+A.iGHy7ju2O}QV",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": true
+                                    },
+                                    "fields": {
+                                      "sound": "chainsmokers_riptide/drums_full"
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sounds_sequential",
+                                  "id": "L2PCg;fCq}Efe=[V2p!c",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": true
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "f^jC!z*/:JWdSWEa;Hu+",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "chainsmokers_riptide/bass_1"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "g?hR6ZWV|uUA?e=7riNH",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": true
+                                            },
+                                            "fields": {
+                                              "sound": "chainsmokers_riptide/bass_2"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "PmoC5R~#Y`_!b29,s{R|",
+              "x": 370,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "Xjnykp=SwP@j~`y45m{V",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "chorus1"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "9eHH[xAeqjsrm`c.MY/5",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": true
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "xK+AUs+~c4+h4[Q54.-a",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "chainsmokers_riptide/vocals_chorus_1"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "Egd5%Q{w2TM(nn=3r+/d",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "chainsmokers_riptide/drums_full"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "K@$v$ye-kWIRi0}d*-9[",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": true
+                                  },
+                                  "fields": {
+                                    "sound": "chainsmokers_riptide/synth_slide"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "L%K{NGp+:7RNyfL8AAaK",
+              "x": 370,
+              "y": 230,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "vxF4TBTKh[vr-xCJ=uW=",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "chorus2"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "[g-GX_5_t1)u5-FMJq({",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": true
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "e%pBYId7BTU?JvPlj(j!",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "chainsmokers_riptide/vocals_chorus_2"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "sWi.,qu0S{1/._Hs(K-Y",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "chainsmokers_riptide/drums_full"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "-^7(wkZ:}uT^X6VGG.z(",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": true
+                                  },
+                                  "fields": {
+                                    "sound": "chainsmokers_riptide/synth_slide"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "ox$Lu-=FBEdAEQFV}eq`",
+              "x": 370,
+              "y": 430,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "vXZ@}1nP/cqMStNQfM@[",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "chorus3"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "eDyj*VqE$%kvgx%}RXsS",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "48a_-@F}c~npNOFBDYdm",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "chainsmokers_riptide/vocals_chorus_3"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "1sa6^=B1^r4JW.5*cWP-",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "chainsmokers_riptide/drums_full"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "Ax4?mS0lH1zi/;?/`o_)",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": true
+                                  },
+                                  "fields": {
+                                    "sound": "chainsmokers_riptide/synth_slide"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "BKg#;H]zqAPFiT:~2[nL",
+              "x": 370,
+              "y": 630,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "?!{{bOX!@?7]{*OkV3(|",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "chorus4"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "PF4vbjN|iIG=spAc(y5V",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": true
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "E3*Q:z2r|p6WoNl4`rmx",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "chainsmokers_riptide/vocals_chorus_4"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "%ruS@etb/POqW4z*(-Jt",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "chainsmokers_riptide/drums_full"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "~:W)8%@Qf+5u]w?`yi`O",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": true
+                                  },
+                                  "fields": {
+                                    "sound": "chainsmokers_riptide/synth_slide"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "procedures": [
+          {
+            "id": "IUz/W6S|1V~`A)zUvoj7",
+            "name": "verse1",
+            "returnTypes": null
+          },
+          {
+            "id": "Dx!OSpQF,w[=3`|PxYHu",
+            "name": "verse2",
+            "returnTypes": null
+          },
+          {
+            "id": "AsNi/|iAOL3saCY_kRnf",
+            "name": "prechorus1",
+            "returnTypes": null
+          },
+          {
+            "id": "qr-8aKR4hGG=NS(hPrV[",
+            "name": "prechorus2",
+            "returnTypes": null
+          },
+          {
+            "id": "Xjnykp=SwP@j~`y45m{V",
+            "name": "chorus1",
+            "returnTypes": null
+          },
+          {
+            "id": "vxF4TBTKh[vr-xCJ=uW=",
+            "name": "chorus2",
+            "returnTypes": null
+          },
+          {
+            "id": "vXZ@}1nP/cqMStNQfM@[",
+            "name": "chorus3",
+            "returnTypes": null
+          },
+          {
+            "id": "?!{{bOX!@?7]{*OkV3(|",
+            "name": "chorus4",
+            "returnTypes": null
+          }
+        ]
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "chainsmokers_riptide",
+      "sounds": {
+        "chainsmokers_riptide": [
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_prechorus_1",
+          "vocals_prechorus_2",
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_chorus_3",
+          "vocals_chorus_4",
+          "drums_full",
+          "drums_scratch_tone",
+          "bass_2",
+          "bass_drop",
+          "synth_slide",
+          "bass_1"
+        ]
+      }
+    },
+    "long_instructions": "#### Investigate\r\n\r\nEmily noticed the functions we'd been making were still pretty big. She wondered if we could split them into even smaller functions to make the code more clear.\r\n\r\nShe was able to make all of her smaller functions, but is having trouble recreating the original song!\r\n\r\n> I know all of my functions are **defined** correctly - I just can't figure out the right order to **call** them in\r\n\r\nThe song should go from **verse** to **prechorus** to **chorus**. Can you help her rearrange her functions so the song sounds correct? \r\n\r\n**Hint:** You only need to move blocks around in the workspace to solve this level! Use the function names to help decide what order to put things in!",
+    "encrypted_exemplar_sources": "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\n",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: \"You Did It!\"",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
+      "playerTitle": "Original Song",
+      "validationMode": "default"
+    },
+    "validations": [
+      {
+        "key": "music-lab-functions-explore-investigate3_ba5eedf6-ccb2-4849-9ceb-bbcdd8fb44c7",
+        "message": "auto-pass for exemplar validation",
+        "next": true,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:37.401+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-explore-investigate3\\\"\"],\"cloned_from\":\"music-lab-functions-explore-investigate3\"}]"
+}]]></config>
+  <blocks/>
+</Music>

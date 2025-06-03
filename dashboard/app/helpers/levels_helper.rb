@@ -769,6 +769,12 @@ module LevelsHelper
     end
     app_options[:share] = level_options[:share] if level_options[:share]
     app_options[:public_caching] = @public_caching
+    if @script_level&.lesson
+      app_options[:theme] = @script_level.lesson.get_background_for_user(current_user)
+    elsif @level.is_a?(Pythonlab) && current_user
+      theme_preference = UserPreference.find_by(user_id: current_user.id)&.theme
+      app_options[:theme] = (theme_preference && theme_preference['global']) || 'dark'
+    end
     app_options.camelize_keys
   end
 
@@ -929,11 +935,10 @@ module LevelsHelper
     Digest::SHA1.base64digest(storage_encrypt(plaintext_id)).tr('=', '')
   end
 
-  # If this is a restricted level (i.e., applab), the user is under 13, and the
-  # user has no teacher that has accepted our (August 2016) terms of service,
-  # redirect with a flash alert.
-  # Also redirect if the user is pairing with a user who would receive a
-  # redirect.
+  # If this is a restricted level (i.e., applab, gamelab, weblab, or pythonlab),
+  # the user is under 13, and the user has no teacher that has accepted our (August 2016)
+  # terms of service, redirect with a flash alert.
+  # Also redirect if the user is pairing with a user who would receive a redirect.
   # @return [boolean] whether a (privacy) redirect happens.
   def redirect_under_13_without_tos_teacher(level)
     error_message = under_13_without_tos_teacher?(level)
@@ -958,7 +963,7 @@ module LevelsHelper
 
   def under_13_without_tos_teacher?(level)
     # Note that Game.applab includes both App Lab and Maker Toolkit.
-    return false unless level.game == Game.applab || level.game == Game.gamelab || level.game == Game.weblab
+    return false unless [Game.applab, Game.gamelab, Game.weblab, Game.pythonlab].include?(level.game)
 
     if current_user&.under_13? && current_user.terms_version.nil?
       if current_user.teachers.any?

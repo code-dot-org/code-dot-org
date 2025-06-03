@@ -111,3 +111,85 @@ export const ADDITIONAL_HELP_PROMPT = {
   label: 'Get help using Code.org',
   prompt: `Who can I go to if I have more questions about Code.org? Encourage me to ask you for help with most issues in the chat or look at the Code.org support center. The last part of your answer must include directing me to the "Submit a request" page at https://support.code.org/hc/en-us/requests/new to get support from a staff member at Code.org.`,
 };
+
+export const APCSP_EXAM_SAMPLE_QUESTIONS = {
+  label: 'Find sample questions',
+  prompt: `Where can I find sample questions for the AP CSP exam?`,
+};
+
+export const APCSP_EXAM_BIG_IDEAS = {
+  label: 'Breakdown of weighting big ideas',
+  prompt: `What is the breakdown of the weighting of each big idea?`,
+};
+
+export const APCSP_EXAM_PREPARATION_RESOURCES = {
+  label: 'Find resources to prepare students for the exam',
+  prompt: `Where can I find resources to help prepare students for the exam?`,
+};
+
+export const APCSP_EXAM_CONNECT_WITH_TEACHERS = {
+  label: 'Connect with other AP CSP teachers',
+  prompt: `Where can I connect with other AP CSP teachers?`,
+};
+
+export const APCSP_EXAM_TIME_STRATEGIES = {
+  label: 'Strategies to help students manage their time on the exam',
+  prompt: `What are some strategies to help students manage their time on the CSP exam?`,
+};
+
+export const APCSP_CREATE_PT_SAMPLE = {
+  label: 'Create Performance Task samples',
+  prompt: `Where can I find Create performance tasks samples?`,
+};
+
+export const APCSP_CREATE_PT_REVIEW = {
+  label: 'Can teachers review student submissions?',
+  prompt: `Can teachers review student submissions before they are sent to CB for scoring?`,
+};
+
+export const APCSP_CREATE_PT_COLLAB = {
+  label: 'Student collaboration on the Create Task',
+  prompt: `Who can students collaborate with on the Create PT?`,
+};
+
+export const APCSP_CREATE_PT_AI = {
+  label: 'AI Tools on the Create Task',
+  prompt: `Can students use AI tools on the Create PT?`,
+};
+
+export const APCSP_CREATE_PT_GRADE = {
+  label: 'Can I grade the Create Task',
+  prompt: `Can I give students a grade on their Create PT?`,
+};
+
+export const APCSP_CREATE_PT_PREPARATION = {
+  label: 'Resources to prepare for written responses',
+  prompt: `Where can I find resources to help students prepare the written response portion of the Create PT?`,
+};
+
+export const APCSP_DUMMY_CREATE = {
+  label: 'Create task support',
+  prompt: '',
+  response: `Let’s chat about the Create Task! Here are some ideas you can ask me, or type your question below`,
+  followUpPrompts: [
+    APCSP_CREATE_PT_AI,
+    APCSP_CREATE_PT_COLLAB,
+    APCSP_CREATE_PT_GRADE,
+    APCSP_CREATE_PT_PREPARATION,
+    APCSP_CREATE_PT_REVIEW,
+    APCSP_CREATE_PT_SAMPLE,
+  ],
+};
+
+export const APCSP_DUMMY_EXAM = {
+  label: 'AP exam support',
+  prompt: '',
+  response: `I would love to support your classroom as you get ready for the AP exam.  Here are some ideas you can ask me, or type your question below`,
+  followUpPrompts: [
+    APCSP_EXAM_BIG_IDEAS,
+    APCSP_EXAM_CONNECT_WITH_TEACHERS,
+    APCSP_EXAM_PREPARATION_RESOURCES,
+    APCSP_EXAM_SAMPLE_QUESTIONS,
+    APCSP_EXAM_TIME_STRATEGIES,
+  ],
+};

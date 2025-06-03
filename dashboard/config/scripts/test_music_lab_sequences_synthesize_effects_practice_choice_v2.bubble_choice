@@ -1,0 +1,10 @@
+name 'test-music-lab-sequences-synthesize-effects-practice-choice_v2'
+display_name 'Create'
+description 'Choose from the options below'
+
+sublevels
+level 'test-music-lab-sequences-synthesize-effects-practice-choice-a_v2'
+level 'test-music-lab-sequences-synthesize-effects-practice-choice-b_v2'
+level 'test-music-lab-sequences-synthesize-effects-practice-choice-c_v2'
+level 'music-lab-sequences-synthesis-challenge-freeplay_v2'
+uses_lab2

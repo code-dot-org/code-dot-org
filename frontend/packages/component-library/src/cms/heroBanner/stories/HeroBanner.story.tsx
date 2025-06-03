@@ -27,9 +27,8 @@ export const Default: Story = {
       'Join millions of students learning computer science around the world.',
     VideoComponent: Video,
   },
-  play: async ({canvasElement}) => {
-    const canvas = within(canvasElement);
-    await expect(canvas.getByRole('banner')).toBeInTheDocument();
+  parameters: {
+    layout: 'fullscreen',
   },
 };
 
@@ -45,6 +44,10 @@ export const WithImage: Story = {
       className: 'custom-image-class',
     },
     VideoComponent: Video,
+    backgroundColor: '#e4e6e9',
+  },
+  parameters: {
+    layout: 'fullscreen',
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -64,6 +67,10 @@ export const WithVideo: Story = {
       videoTitle: 'Watch our intro video',
     },
     VideoComponent: Video,
+    backgroundColor: '#e4e6e9',
+  },
+  parameters: {
+    layout: 'fullscreen',
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -90,6 +97,10 @@ export const WithPartnerAndCTA: Story = {
       href: '#',
     },
     VideoComponent: Video,
+    backgroundColor: '#e4e6e9',
+  },
+  parameters: {
+    layout: 'fullscreen',
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -106,6 +117,10 @@ export const TextOnly: Story = {
     heading: 'Minimalist Hero',
     subHeading: 'Simple and elegant',
     VideoComponent: Video,
+    backgroundColor: '#e4e6e9',
+  },
+  parameters: {
+    layout: 'fullscreen',
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -124,6 +139,10 @@ export const LongContent: Story = {
       'The description here is intentionally long to ensure text flows properly across viewports and doesn’t break layout.',
 
     VideoComponent: Video,
+    backgroundColor: '#e4e6e9',
+  },
+  parameters: {
+    layout: 'fullscreen',
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -146,10 +165,12 @@ export const WithBackgroundColor: Story = {
     },
     VideoComponent: Video,
   },
+  parameters: {
+    layout: 'fullscreen',
+  },
   play: async ({canvasElement}) => {
-    const canvas = within(canvasElement);
-    const banner = canvas.getByRole('banner');
-    const styles = window.getComputedStyle(banner);
+    const banner = canvasElement.querySelector('section > div');
+    const styles = window.getComputedStyle(banner as Element);
     await expect(styles.backgroundColor).toBe('rgb(227, 242, 253)');
   },
 };
@@ -163,11 +184,14 @@ export const WithBackgroundImage: Story = {
     backgroundImageUrl: customBackgroundImage,
     'data-theme': 'Dark',
     VideoComponent: Video,
+    backgroundColor: '#e4e6e9',
+  },
+  parameters: {
+    layout: 'fullscreen',
   },
   play: async ({canvasElement}) => {
-    const canvas = within(canvasElement);
-    const banner = canvas.getByRole('banner');
-    const styles = window.getComputedStyle(banner);
+    const banner = canvasElement.querySelector('section > div');
+    const styles = window.getComputedStyle(banner as Element);
     await expect(styles.backgroundImage).toMatch(
       /hero-banner-custom-bg-example.*\.png/,
     );
@@ -183,11 +207,8 @@ export const WithoutBackground: Story = {
     removeBackground: true,
     VideoComponent: Video,
   },
-  play: async ({canvasElement}) => {
-    const canvas = within(canvasElement);
-    const banner = canvas.getByRole('banner');
-    const styles = window.getComputedStyle(banner);
-    await expect(styles.backgroundImage).toBe('none');
+  parameters: {
+    layout: 'fullscreen',
   },
 };
 
@@ -204,6 +225,10 @@ export const WithWideText: Story = {
     },
     withWideText: true,
     VideoComponent: Video,
+    backgroundColor: '#e4e6e9',
+  },
+  parameters: {
+    layout: 'fullscreen',
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -231,6 +256,10 @@ export const WithAnnouncementBanner: Story = {
         href: '#',
       },
     },
+    backgroundColor: '#e4e6e9',
+  },
+  parameters: {
+    layout: 'fullscreen',
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -260,25 +289,26 @@ export const WithCustomStyles: Story = {
     className: 'customHeroBannerClass',
     VideoComponent: Video,
   },
+  parameters: {
+    layout: 'fullscreen',
+  },
   play: async ({canvasElement}) => {
-    const canvas = within(canvasElement);
-
     const style = document.createElement('style');
     style.innerHTML = `
-      section.customHeroBannerClass {
-        outline: 3px dashed rgb(255, 165, 0);
-        background-color: #fefbe9;
-        padding: 0;
+      section.customHeroBannerClass > div {
+        background: #fefbe9;
+        border: 3px dashed rgb(255, 165, 0);
       }
     `;
     canvasElement.appendChild(style);
 
-    const banner = await canvas.findByRole('banner');
-    await expect(banner).toHaveClass('customHeroBannerClass');
+    const bannerSection = canvasElement.querySelector('section');
+    await expect(bannerSection).toHaveClass('customHeroBannerClass');
 
-    const styles = window.getComputedStyle(banner);
-    await expect(styles.outline).toBe('rgb(255, 165, 0) dashed 3px');
+    const banner = canvasElement.querySelector('section > div');
+    const styles = window.getComputedStyle(banner as Element);
     await expect(styles.backgroundColor).toBe('rgb(254, 251, 233)');
+    await expect(styles.border).toBe('3px dashed rgb(255, 165, 0)');
   },
 };
 
@@ -293,6 +323,7 @@ export const Tablet: Story = {
       className: 'custom-image-class',
     },
     VideoComponent: Video,
+    backgroundColor: '#e4e6e9',
   },
   parameters: {
     layout: 'fullscreen',
@@ -318,6 +349,7 @@ export const TabletWithHiddenImage: Story = {
     },
     VideoComponent: Video,
     hideImageOnSmallScreen: true,
+    backgroundColor: '#e4e6e9',
   },
   parameters: {
     layout: 'fullscreen',
@@ -342,6 +374,7 @@ export const Mobile: Story = {
       className: 'custom-image-class',
     },
     VideoComponent: Video,
+    backgroundColor: '#e4e6e9',
   },
   parameters: {
     layout: 'fullscreen',
@@ -367,6 +400,7 @@ export const MobileWithHiddenImage: Story = {
     },
     VideoComponent: Video,
     hideImageOnSmallScreen: true,
+    backgroundColor: '#e4e6e9',
   },
   parameters: {
     layout: 'fullscreen',

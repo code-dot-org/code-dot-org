@@ -9,6 +9,14 @@ export type Section =
   | 'Button'
   | 'Divider'
   | 'Editorial Card'
+  | 'Hero Banner Basic'
+  | 'Hero Banner with Background Color'
+  | 'Hero Banner with Background Image'
+  | 'Hero Banner with Image Big'
+  | 'Hero Banner with Image Small'
+  | 'Hero Banner with Video'
+  | 'Hero Banner with Partner Callout'
+  | 'Hero Banner with Announcement Banner'
   | 'Heading'
   | 'Image'
   | 'Image Carousel'
@@ -32,7 +40,7 @@ export class AllTheThingsPage extends MarketingPage {
 
   async goto(path?: string) {
     if (!path) {
-      return await super.goto('/engineering/all-the-things');
+      return await super.goto('/engineering/all-the-things?otgeo=us');
     }
 
     return await super.goto(path);

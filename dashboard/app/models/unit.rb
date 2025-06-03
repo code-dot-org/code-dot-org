@@ -331,6 +331,7 @@ class Unit < ApplicationRecord
     is_deprecated
     content_area
     topic_tags
+    enable_blockly_keyboard_navigation
   )
 
   def self.twenty_hour_unit
@@ -1562,7 +1563,7 @@ class Unit < ApplicationRecord
       summary = {
         id: id,
         name: name,
-        title: title_for_display,
+        title: title_for_display(unit_group_unit: unit_group_unit),
         description: Services::MarkdownPreprocessor.process(localized_description),
         studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
         course_id: unit_group_unit&.cached_unit_group&.id,
@@ -1594,12 +1595,12 @@ class Unit < ApplicationRecord
         age_13_required: logged_out_age_13_required?,
         show_course_unit_version_warning: !unit_group_unit&.cached_unit_group&.has_dismissed_version_warning?(user) && has_older_course_progress,
         show_script_version_warning: !user_unit&.version_warning_dismissed && !has_older_course_progress && has_older_unit_progress,
-        course_versions: summarize_course_versions(user, locale_code),
+        course_versions: summarize_course_versions(user, locale_code, unit_group: unit_group_unit&.cached_unit_group),
         supported_locales: supported_locales,
         section_hidden_unit_info: section_hidden_unit_info(user),
         pilot_experiment: get_pilot_experiment,
         editor_experiment: editor_experiment,
-        show_assign_button: course_assignable?(user),
+        show_assign_button: unit_group_unit&.unit_group&.course_assignable?(user),
         project_sharing: project_sharing,
         curriculum_umbrella: curriculum_umbrella,
         family_name: family_name,
@@ -1615,8 +1616,8 @@ class Unit < ApplicationRecord
         weeklyInstructionalMinutes: weekly_instructional_minutes,
         includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
         useLegacyLessonPlans: is_migrated && use_legacy_lesson_plans,
-        courseVersionId: get_course_version&.id,
-        courseOfferingId: get_course_version&.course_offering&.id,
+        courseVersionId: unit_group_unit&.unit_group&.course_version&.id,
+        courseOfferingId: unit_group_unit&.unit_group&.course_version&.course_offering&.id,
         scriptOverviewPdfUrl: get_unit_overview_pdf_url,
         scriptResourcesPdfUrl: get_unit_resources_pdf_url,
         updated_at: updated_at.to_s,
@@ -1624,6 +1625,7 @@ class Unit < ApplicationRecord
         showAiAssessmentsAnnouncement: show_ai_assessments_announcement?(user),
         content_area: content_area,
         topic_tags: topic_tags,
+        enableBlocklyKeyboardNavigation: enable_blockly_keyboard_navigation,
       }
 
       #TODO: lessons should be summarized through lesson groups in the future
@@ -1652,10 +1654,10 @@ class Unit < ApplicationRecord
     end
     summary = {
       unitId: id,
-      title: title_for_display,
+      title: title_for_display(unit_group_unit: unit_group_unit),
       name: name,
       unitNumber: unit_position,
-      unitName: title_for_display,
+      unitName: title_for_display(unit_group_unit: unit_group_unit),
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
       scriptResourcesPdfUrl: get_unit_resources_pdf_url,
       teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
@@ -1676,7 +1678,7 @@ class Unit < ApplicationRecord
       link_path = course_unit_path(unit_group_unit.unit_group, unit_group_unit.position)
     end
     summary = {
-      title: title_for_display,
+      title: title_for_display(unit_group_unit: unit_group_unit),
       name: name,
       link: link_path
     }
@@ -1733,7 +1735,7 @@ class Unit < ApplicationRecord
   def summarize_header(unit_group_unit: nil)
     {
       name: name,
-      displayName: title_for_display,
+      displayName: title_for_display(unit_group_unit: unit_group_unit),
       disablePostMilestone: disable_post_milestone?,
       student_detail_progress_view: student_detail_progress_view?,
       age_13_required: logged_out_age_13_required?,
@@ -1746,7 +1748,7 @@ class Unit < ApplicationRecord
 
   def summarize_for_lesson_show(is_student = false, unit_group_unit: nil)
     {
-      displayName: title_for_display,
+      displayName: title_for_display(unit_group_unit: unit_group_unit),
       link: link(unit_group_unit: unit_group_unit),
       lessonGroups: lesson_groups.select {|lg| lg.lessons.any?(&:has_lesson_plan)}.map {|lg| lg.summarize_for_lesson_dropdown(is_student, unit_group_unit: unit_group_unit)},
       publishedState: get_published_state,
@@ -1797,7 +1799,9 @@ class Unit < ApplicationRecord
   # will always return false for participants so they will fall into the second check for
   # launched and can_view_version?. For instructors if course_assignable? is false then
   # launched will also be false.
-  def summarize_course_versions(user = nil, locale_code = 'en-us')
+  def summarize_course_versions(user = nil, locale_code = 'en-us', unit_group: nil)
+    unit_group ||= original_unit_group
+
     return {} if unit_group && !unit_group.single_unit_course?
 
     if unit_group&.single_unit_course?
@@ -1920,7 +1924,8 @@ class Unit < ApplicationRecord
       :show_calendar,
       :is_migrated,
       :include_student_lesson_plans,
-      :use_legacy_lesson_plans
+      :use_legacy_lesson_plans,
+      :enable_blockly_keyboard_navigation
     ]
 
     result = {}
