@@ -108,6 +108,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       useSecondaryFinishButton={useSecondaryFinishButton}
       onContinueOrFinish={() => dispatch(continueOrFinishLesson())}
       bottomComponent={bottomComponent}
+      noAnimation
     />
   );
 };
@@ -139,6 +140,7 @@ interface InstructionsPanelProps {
   useSecondaryFinishButton: boolean;
   onContinueOrFinish: () => void;
   bottomComponent?: React.ReactNode;
+  noAnimation?: boolean;
 }
 
 /**
@@ -150,7 +152,9 @@ interface InstructionsPanelProps {
  * TODO: Determine if we need this separate component anymore, or if we can merge this into Instructions.
  * https://codedotorg.atlassian.net/browse/CT-671
  */
-const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
+export const InstructionsPanel: React.FunctionComponent<
+  InstructionsPanelProps
+> = ({
   text,
   message,
   messageIndex,
@@ -168,6 +172,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   useSecondaryFinishButton,
   onContinueOrFinish,
   bottomComponent,
+  noAnimation,
 }) => {
   const vertical = layout === 'vertical';
 
@@ -235,7 +240,10 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
           <div
             key={text}
             id="instructions-text"
-            className={moduleStyles['text-' + theme]}
+            className={classNames(
+              moduleStyles['text-' + theme],
+              noAnimation && moduleStyles.noAnimation
+            )}
           >
             {offerBrowserTts && (
               <TextToSpeech text={text} higherPosition={!!bottomComponent} />
@@ -294,7 +302,10 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
           >
             <div
               id="instructions-feedback-message"
-              className={moduleStyles['message-' + theme]}
+              className={classNames(
+                moduleStyles['message-' + theme],
+                noAnimation && moduleStyles.noAnimation
+              )}
             >
               {offerBrowserTts && useMessage && !canShowNextButton && (
                 <TextToSpeech text={useMessage} />

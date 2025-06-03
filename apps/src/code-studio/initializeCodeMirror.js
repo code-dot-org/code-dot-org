@@ -21,7 +21,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import MainInstructionsPreview from '../codebridge/InfoPanel/MainInstructionsPreview';
+import {InstructionsPanel} from '../lab2/views/components/Instructions';
 import SafeMarkdown from '../templates/SafeMarkdown';
+
+import styles from '../lab2/views/components/instructions.module.scss';
 
 window.JSHINT = JSHINT;
 
@@ -84,6 +87,19 @@ function initializeCodeMirror(target, mode, options = {}) {
               instructionsText: editor.getValue(),
               theme: 'Dark',
               hasPassed: false,
+            }),
+            previewElement
+          );
+        } else if (game === 'Aichat') {
+          console.log('here');
+          ReactDOM.render(
+            React.createElement(InstructionsPanel, {
+              text: editor.getValue(),
+              theme: 'Light',
+              noAnimation: true,
+              className: styles.noAnimation,
+              setPredictResponse: () => {},
+              predictAnswerLocked: false,
             }),
             previewElement
           );
