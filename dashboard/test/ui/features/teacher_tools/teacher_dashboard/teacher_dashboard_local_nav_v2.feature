@@ -2,7 +2,6 @@
 Feature: Using the V2 teacher dashboard local navigation
   Background:
     Given I am on "http://studio.code.org/home"
-    Given I use a cookie to mock the DCDO key "teacher-local-nav-v2" as "true"
     Given I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I use a cookie to mock the DCDO key "ai-tutor-teacher-nav-v2" as "false"
 

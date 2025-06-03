@@ -61,7 +61,6 @@ export const TestimonialContentfulComponentDefinition: ComponentDefinition = {
       type: 'Text',
       group: 'content',
       description: "The testimonial author's title or context",
-      defaultValue: "Author's title",
       validations: {
         required: false,
         bindingSourceType: ['entry', 'manual'],

@@ -89,13 +89,14 @@ const StudentCodeDatasetMaker: React.FC = () => {
       id: aiResponse.id,
     };
     if (aiResponse.skillEvaluations) {
-      // TODO: Use skill id when we have Skills
-      for (let i = 1; i < aiResponse.skillEvaluations.length; i++) {
+      for (let i = 0; i < aiResponse.skillEvaluations.length; i++) {
         const skillEvaluation = aiResponse.skillEvaluations[i];
-        evaluation[`skill${i}evaluationCriteria`] =
+        const skillId = skillEvaluation.skillId;
+        evaluation[`skill${skillId}evaluationCriteria`] =
           skillEvaluation.evaluationCriteria;
-        evaluation[`skill${i}aiEvaluation`] = skillEvaluation.aiEvaluation;
-        evaluation[`skill${i}aiReasoning`] = skillEvaluation.aiReasoning;
+        evaluation[`skill${skillId}aiEvaluation`] =
+          skillEvaluation.aiEvaluation;
+        evaluation[`skill${skillId}aiReasoning`] = skillEvaluation.aiReasoning;
       }
     }
     setEvaluatedSamples(prevSamples => [...prevSamples, evaluation]);

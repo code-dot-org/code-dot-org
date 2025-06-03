@@ -18,7 +18,6 @@ class AiSystemPrompts::EvaluateSystemPromptHelperTest < ActionView::TestCase
     )
     assert_includes system_prompt, @base_system_prompt_snippet
     assert_includes system_prompt, 'JavaScript'
-    assert_includes system_prompt, 'Write a loop.'
     assert_includes system_prompt, 'no tests'
     assert_includes system_prompt, @level_instructions
     refute_includes system_prompt, 'skillEvaluations'
@@ -32,9 +31,20 @@ class AiSystemPrompts::EvaluateSystemPromptHelperTest < ActionView::TestCase
     )
     assert_includes system_prompt, @base_system_prompt_snippet
     assert_includes system_prompt, 'JavaScript'
-    assert_includes system_prompt, 'Write a loop.'
     assert_includes system_prompt, 'no tests'
     assert_includes system_prompt, @level_instructions
     assert_includes system_prompt, 'skillEvaluations'
+    assert_includes system_prompt, skill.evaluation_criteria
+  end
+
+  test "get_system_prompt for free response level" do
+    free_response_level = create(:free_response, :with_instructions)
+    create(:csp_script_level, levels: [free_response_level])
+    system_prompt = AiSystemPrompts::EvaluateSystemPromptHelper.get_system_prompt(
+      free_response_level, @csp_unit, SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]
+    )
+    assert_includes system_prompt, @base_system_prompt_snippet
+    assert_includes system_prompt, @level_instructions
+    refute_includes system_prompt, 'skillEvaluations'
   end
 end

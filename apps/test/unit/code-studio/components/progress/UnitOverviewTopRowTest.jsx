@@ -16,7 +16,6 @@ import teacherSections, {
   setSections,
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import * as TeacherNavFlagUtils from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils.ts';
 import i18n from '@cdo/locale';
 
 import {testLessons} from './unitCalendarTestData';
@@ -309,13 +308,7 @@ describe('UnitOverviewTopRow', () => {
     expect(wrapper.find(DropdownButton).length).toBe(0);
   });
 
-  it('renders student select dropdown if user is teacher and in teacher-local-nav-v2 experiment', () => {
-    jest
-      .spyOn(TeacherNavFlagUtils, 'showV2TeacherDashboard')
-      .mockImplementation(() => {
-        return true;
-      });
-
+  it('renders student select dropdown if user is teacher', () => {
     render(
       <Provider store={store}>
         <UnitOverviewTopRow

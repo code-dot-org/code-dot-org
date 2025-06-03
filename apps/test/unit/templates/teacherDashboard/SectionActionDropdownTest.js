@@ -154,7 +154,8 @@ describe('SectionActionDropdown', () => {
       <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[3]} />
     );
     const sectionId = wrapper.instance().props.sectionData.id;
-    const expectedUrl = '/sections/' + sectionId + '/edit';
+    const expectedUrl =
+      '/teacher_dashboard/sections/' + sectionId + '/settings';
     expect(wrapper).to.contain('Edit Section Details');
     expect(wrapper.find('.edit-section-details-link').props().href).to.equal(
       expectedUrl
@@ -167,9 +168,9 @@ describe('SectionActionDropdown', () => {
     );
     const sectionId = wrapper.instance().props.sectionData.id;
     const expectedUrl =
-      '/sections/' +
+      '/teacher_dashboard/sections/' +
       sectionId +
-      '/edit?redirectToPage=my-professional-learning';
+      '/settings?redirectToPage=my-professional-learning';
     expect(wrapper).to.contain('Edit Section Details');
     expect(wrapper.find('.edit-section-details-link').props().href).to.equal(
       expectedUrl

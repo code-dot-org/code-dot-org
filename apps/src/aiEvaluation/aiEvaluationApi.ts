@@ -17,8 +17,12 @@ export interface AIResponse {
   aiEvaluation: string;
   aiReasoning: string;
   evaluationCriteria: string;
-  skillEvaluations?: [AIResponse];
+  skillEvaluations?: [SkillBasedAIResponse];
   id: number;
+}
+
+export interface SkillBasedAIResponse extends AIResponse {
+  skillId: number;
 }
 
 export interface StudentWorkEvaluation extends StudentAnswer, AIResponse {

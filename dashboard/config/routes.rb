@@ -24,10 +24,6 @@ Dashboard::Application.routes.draw do
   get '/teacher_dashboard/sections/first_section/*location', to: "teacher_dashboard#redirect_to_newest_section"
   get '/teacher_dashboard/sections/first_section_progress', to: "teacher_dashboard#redirect_to_newest_section_progress"
 
-  # Redirect enable and disable experiments to most recent section
-  get '/teacher_dashboard/sections/enable_experiments', to: "teacher_dashboard#enable_experiments"
-  get '/teacher_dashboard/sections/disable_experiments', to: "teacher_dashboard#disable_experiments"
-
   constraints host: CDO.codeprojects_hostname do
     # Routes needed for the footer on weblab share links on codeprojects
     get '/weblab/footer', to: 'projects#weblab_footer'

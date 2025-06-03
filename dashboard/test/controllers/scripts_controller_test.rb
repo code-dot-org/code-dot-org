@@ -404,6 +404,14 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_redirected_to "/courses/#{@single_unit_course_2024.name}/units/1"
   end
 
+  test "show: redirect to correct course from course family name if single-unit course" do
+    another_course = create :single_unit_course, unit: @single_unit_2024, family_name: 'another-course', version_year: '2024', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(another_course)
+
+    get :show, params: {id: another_course.family_name}
+    assert_redirected_to "/courses/#{another_course.name}/units/1"
+  end
+
   test "show: teacher in teacher-local-nav-v2 experiment is redirected to teacher dashboard if course is in a section" do
     # Have the same unit in two different courses to make sure the redirection
     # goes to the course defined in the section.
@@ -1597,18 +1605,18 @@ class ScriptsControllerTest < ActionController::TestCase
       assert_includes(response.body, no_access_msg)
     end
 
-    test_user_gets_response_for(:show, response: :success, user: -> {@pilot_teacher},
+    test_user_gets_response_for(:show, response: :redirect, user: -> {@pilot_teacher},
       params: -> {{id: @pilot_unit.name, section_id: @pilot_section.id}},
       name: 'pilot teacher can view pilot unit'
     ) do
-      refute_includes(response.body, no_access_msg)
+      assert_redirected_to "http://test.host/teacher_dashboard/sections/#{@pilot_section.id}/unit/#{@pilot_unit.name}"
     end
 
-    test_user_gets_response_for(:show, response: :success, user: -> {@pilot_instructor},
+    test_user_gets_response_for(:show, response: :redirect, user: -> {@pilot_instructor},
                                 params: -> {{id: @pilot_pl_unit.name, section_id: @pilot_pl_section.id}},
                                 name: 'pilot instructor can view pilot unit'
     ) do
-      refute_includes(response.body, no_access_msg)
+      assert_redirected_to "http://test.host/teacher_dashboard/sections/#{@pilot_pl_section.id}/unit/#{@pilot_pl_unit.name}"
     end
 
     test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},

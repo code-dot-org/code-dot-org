@@ -46,6 +46,8 @@ const extractNodeContent = (node: RichTextNode): ReactNode[] => {
 
   switch (node.nodeType) {
     case 'text': {
+      if (!node.value) return [];
+
       return [
         node.marks.reduce((value: ReactNode, {type}: Mark) => {
           switch (type) {
@@ -79,8 +81,10 @@ const richTextRenderOptions: Options = {
       const paragraphContent = extractNodeContent(paragraphNode);
       // The Rich Text Editor wraps each line in a <p> tag, which acts as a spacer.
       // Replaces empty paragraphs with a <br /> To comply with HTML a11y guidelines.
-      return paragraphContent.length ? (
-        <BodyTwoText>{paragraphContent}</BodyTwoText>
+      return paragraphContent.some(content => content) ? (
+        <BodyTwoText className={moduleStyles.richTextParagraph}>
+          {paragraphContent}
+        </BodyTwoText>
       ) : (
         <br />
       );
