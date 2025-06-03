@@ -29,6 +29,12 @@ function parseBlockXml(blockEl: Element): any {
   const block: any = {
     type: blockEl.getAttribute('type') || undefined,
     id: blockEl.getAttribute('id') || undefined,
+    deletable: blockEl.hasAttribute('deletable')
+      ? parseValue(blockEl.getAttribute('deletable') || 'true')
+      : undefined,
+    movable: blockEl.hasAttribute('movable')
+      ? parseValue(blockEl.getAttribute('movable') || 'true')
+      : undefined,
   };
 
   // Position (only in top-level blocks)

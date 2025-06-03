@@ -4,10 +4,6 @@ import type {Theme} from '../../types';
 
 import BlockLimitIndicator from './BlockLimitIndicator';
 
-interface ExtendedBlockInfo extends Blockly.utils.toolbox.BlockInfo {
-  limit: string;
-}
-
 /**
  * This maintains the block limits for levels that want you to only use a
  * certain number of blocks.
@@ -36,14 +32,14 @@ class BlockLimitMap {
     this.theme = theme;
 
     // Iterate over each block element
-    toolboxBlocks.forEach(blockElement => {
-      if ((blockElement as ExtendedBlockInfo).limit) {
-        const extendedInfo = blockElement as ExtendedBlockInfo;
-        const limit = parseInt(extendedInfo.limit ?? '');
-
-        if (!isNaN(limit)) {
-          // Extract type and add to blockLimitMap
-          const type = extendedInfo.type;
+    toolboxBlocks.forEach(item => {
+      if (item.kind === 'block') {
+        const blockInfo = item as Blockly.utils.toolbox.BlockInfo;
+        const extraState = blockInfo.extraState;
+        if (extraState?.limit !== undefined) {
+          // Extract type and limit and add to blockLimitMap
+          const limit = extraState.limit;
+          const type = blockInfo.type;
           if (type) {
             this.blockLimitMap.set(type, limit);
           }

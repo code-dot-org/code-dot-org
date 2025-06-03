@@ -13,7 +13,6 @@ export class BlockLimits {
 
   constructor(workspace: Blockly.WorkspaceSvg, theme: Theme) {
     // TODO have an event for detecting site-wide theme changes
-    console.log('hmm', workspace.options);
     this.blockLimitMap = new BlockLimitMap(
       workspace.options.languageTree?.contents || [],
       theme || DefaultTheme,
