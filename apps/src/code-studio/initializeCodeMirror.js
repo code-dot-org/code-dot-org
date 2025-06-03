@@ -21,7 +21,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import MainInstructionsPreview from '../codebridge/InfoPanel/MainInstructionsPreview';
-import {InstructionsPanel} from '../lab2/views/components/Instructions';
+import InstructionsPanel from '../lab2/views/components/InstructionsPanel';
 import SafeMarkdown from '../templates/SafeMarkdown';
 
 import styles from '../lab2/views/components/instructions.module.scss';
