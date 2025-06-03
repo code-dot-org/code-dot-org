@@ -263,7 +263,6 @@ namespace :seed do
     :child_dsls,
     :custom_levels,
     :parent_dsls,
-    :levels_skills,
     :code_docs,
     :blocks,
     :standards,
