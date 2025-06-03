@@ -21,6 +21,7 @@ import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
 import {TeacherHomepage} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepage';
+import {SchoolInfo} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepageConstants';
 import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -84,7 +85,7 @@ describe('TeacherHomepage', () => {
     },
   ];
 
-  const schoolInfo = {
+  const schoolInfo: SchoolInfo = {
     country: 'US',
     school_name: 'Test School',
     school_zip: '12345',
@@ -149,7 +150,7 @@ describe('TeacherHomepage', () => {
     initialSections = serverSections,
     showSchoolInfoInterstitial = false,
     showSchoolInfoConfirmation = false,
-    existingSchoolInfo = {schoolInfo}
+    existingSchoolInfo = schoolInfo
   ) {
     const store = getStore();
     registerReducers({teacherSections, currentUser});
@@ -167,7 +168,7 @@ describe('TeacherHomepage', () => {
                     studioUrlPrefix="https://studio.code.org"
                     showSchoolInfoInterstitial={showSchoolInfoInterstitial}
                     showSchoolInfoConfirmation={showSchoolInfoConfirmation}
-                    existingSchoolInfo={schoolInfo}
+                    existingSchoolInfo={existingSchoolInfo}
                   />
                 }
               />,
@@ -287,5 +288,17 @@ describe('TeacherHomepage', () => {
     renderComponent();
     await act(async () => await new Promise(process.nextTick));
     screen.getByText(i18n.teacherHomePageFeedback());
+  });
+
+  it('renders school info drawer when showSchoolInfoInterstitial is true', async () => {
+    renderComponent(serverSections, true, false, schoolInfo);
+    await act(async () => await new Promise(process.nextTick));
+    screen.getByText(i18n.censusHeading());
+  });
+
+  it('renders school info confirmation drawer when showSchoolInfoConfirmation is true', async () => {
+    renderComponent(serverSections, false, true, schoolInfo);
+    await act(async () => await new Promise(process.nextTick));
+    screen.getByText(i18n.reviewSchoolInfo());
   });
 });
