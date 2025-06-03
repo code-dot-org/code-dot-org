@@ -98,7 +98,6 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       useSecondaryFinishButton={useSecondaryFinishButton}
       onContinueOrFinish={() => dispatch(continueOrFinishLesson())}
       bottomComponent={bottomComponent}
-      noAnimation
     />
   );
 };

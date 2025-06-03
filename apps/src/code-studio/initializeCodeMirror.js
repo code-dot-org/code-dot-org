@@ -24,8 +24,6 @@ import MainInstructionsPreview from '../codebridge/InfoPanel/MainInstructionsPre
 import InstructionsPanel from '../lab2/views/components/InstructionsPanel';
 import SafeMarkdown from '../templates/SafeMarkdown';
 
-import styles from '../lab2/views/components/instructions.module.scss';
-
 window.JSHINT = JSHINT;
 
 CodeMirrorSpellChecker({
@@ -91,13 +89,11 @@ function initializeCodeMirror(target, mode, options = {}) {
             previewElement
           );
         } else if (game === 'Aichat') {
-          console.log('here');
           ReactDOM.render(
             React.createElement(InstructionsPanel, {
               text: editor.getValue(),
               theme: 'Light',
-              noAnimation: true,
-              className: styles.noAnimation,
+              noTextAnimation: true,
               setPredictResponse: () => {},
               predictAnswerLocked: false,
             }),

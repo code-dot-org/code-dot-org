@@ -40,7 +40,7 @@ interface InstructionsPanelProps {
   useSecondaryFinishButton: boolean;
   onContinueOrFinish: () => void;
   bottomComponent?: React.ReactNode;
-  noAnimation?: boolean;
+  noTextAnimation?: boolean;
 }
 
 /**
@@ -65,7 +65,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   useSecondaryFinishButton,
   onContinueOrFinish,
   bottomComponent,
-  noAnimation,
+  noTextAnimation,
 }) => {
   const vertical = layout === 'vertical';
 
@@ -135,7 +135,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
             id="instructions-text"
             className={classNames(
               moduleStyles['text-' + theme],
-              noAnimation && moduleStyles.noAnimation
+              noTextAnimation && moduleStyles.noAnimation
             )}
           >
             {offerBrowserTts && (
@@ -195,10 +195,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
           >
             <div
               id="instructions-feedback-message"
-              className={classNames(
-                moduleStyles['message-' + theme],
-                noAnimation && moduleStyles.noAnimation
-              )}
+              className={moduleStyles['message-' + theme]}
             >
               {offerBrowserTts && useMessage && !canShowNextButton && (
                 <TextToSpeech text={useMessage} />
