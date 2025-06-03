@@ -443,6 +443,7 @@ en:
       settings: 'Account settings'
       logout: 'Sign out'
       signin: 'Sign in'
+      signin_cap: 'Sign In'
       signup: 'Create an account'
       create_account: 'Create Account'
       create_account_low_cap: 'Create account'

@@ -40,4 +40,4 @@ Scenario Outline: Show dashboard cookie banner, dismiss it and confirm it's dism
 
 Examples:
   | url                                                               | test_name                  |
-  | http://studio.code.org/s/frozen/lessons/1/levels/1                | studio.code.org puzzle     |
+  | http://studio.code.org/courses/frozen/units/1/lessons/1/levels/1                | studio.code.org puzzle     |

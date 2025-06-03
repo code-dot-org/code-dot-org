@@ -11,6 +11,10 @@ module AichatOpenaiHelper
   API_KEY = CDO.openai_student_learning_api_key
   MODEL = SharedConstants::AICHAT_MODEL_VERSION
 
+  TOKEN_THROTTLING_PREFIX = "aichat/tokens/".freeze
+  DEFAULT_TOKEN_LIMIT_PER_DAY = 10_000_000
+  ONE_DAY_S = 60 * 60 * 24
+
   def self.get_openai_assistant_response(aichat_model_customizations, stored_messages, new_message, level_id, project_id, user_id)
     encrypted_channel_id = storage_encrypt_channel_id(storage_id_for_user_id(user_id), project_id)
     messages = format_messages(
@@ -29,7 +33,8 @@ module AichatOpenaiHelper
     )
 
     response_time = Time.now - start_time
-    report_usage_metrics(usage, messages, level_id, project_id, user_id, response_time)
+
+    report_usage_and_throttling_metrics(usage, messages, level_id, project_id, user_id, aichat_model_customizations['selectedModelId'], response_time)
     response
   end
 
@@ -89,9 +94,26 @@ module AichatOpenaiHelper
     instructions
   end
 
-  # Reports and logs usage metrics to Cloudwatch
-  def self.report_usage_metrics(usage, messages, level_id, project_id, user_id, response_time)
-    return unless usage
+  # Reports and logs usage metrics to Cloudwatch and our throttling system.
+  def self.report_usage_and_throttling_metrics(usage, messages, level_id, project_id, user_id, model_id, response_time)
+    unless usage
+      Honeybadger.notify("OpenAI response detected without usage statistics, which are required for throttling.")
+      return
+    end
+
+    # Typical usage of our throttling module calls throttle at the point where it's deciding whether to throttle or not.
+    # In this case, we are just reporting token usage,
+    # and subsequent calls to our aichat_request endpoint check whether the user has been throttled.
+    #
+    # Prompt tokens are by far and away our largest cost driver (and the piece that users actually control),
+    # so we throttle on that.
+    limit = DCDO.get('aichat_token_limit_per_day', DEFAULT_TOKEN_LIMIT_PER_DAY)
+    Cdo::Throttle.throttle(token_throttling_key(model_id, user_id),
+      limit,
+      ONE_DAY_S,
+      throttle_for: ONE_DAY_S,
+      count: usage['prompt_tokens']
+    )
 
     messages_with_assets_count = messages.count do |message|
       message[:content].any? {|c| c[:type] != 'text'}
@@ -156,6 +178,12 @@ module AichatOpenaiHelper
       }
     end
     Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE, metrics)
+  end
+
+  def self.token_throttling_key(model_id, user_id)
+    # "/user/" included to leave space for potential throttling at the classroom/teacher level.
+    # Token throttling also only currently in place for gpt-4o-mini, but inclusion of model ID leaves space for other models.
+    TOKEN_THROTTLING_PREFIX + 'model/' + model_id + '/user/' + user_id.to_s
   end
 
   def self.client

@@ -2,7 +2,7 @@
   "key": "self-paced-pl-physical-computing",
   "display_name": "Teaching Creating Apps with Devices (Circuit Playground)",
   "is_featured": false,
-  "assignable": true,
+  "assignable": false,
   "curriculum_type": "Professional Learning",
   "marketing_initiative": null,
   "grade_levels": null,

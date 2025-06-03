@@ -39,8 +39,13 @@ import {
   PROFESSIONAL_LEARNING_PROMPT,
   CREATE_SECTION_PROMPT,
   ADDITIONAL_HELP_PROMPT,
+  APCSP_EXAM_PREPARATION_RESOURCES,
+  APCSP_EXAM_SAMPLE_QUESTIONS,
+  APCSP_EXAM_TIME_STRATEGIES,
+  APCSP_CREATE_PT_AI,
+  APCSP_CREATE_PT_PREPARATION,
 } from '../AiDiffPredefinedPrompts';
-import {ChatPrompt} from '../types';
+import {ChatPrompt, Context} from '../types';
 
 import style from './ai-diff-welcome.module.scss';
 
@@ -58,11 +63,11 @@ const WelcomeStates: {[key in WelcomeState]: WelcomeState} = {
 
 interface AiDiffWelcomeProps {
   setShowWelcomeExperience: (show: boolean) => void;
-  context: string;
-  scriptId?: number;
+  context: Context;
   scriptName?: string;
   unitDisplayName?: string;
   firstState?: WelcomeState;
+  curriculumCourses?: string[];
 }
 
 const SUGGESTED_PROMPTS_FOR_SELECTION: {
@@ -96,6 +101,16 @@ const SUGGESTED_PROMPTS_FOR_SELECTION: {
       PROFESSIONAL_LEARNING_PROMPT,
       CREATE_SECTION_PROMPT,
       ADDITIONAL_HELP_PROMPT,
+    ],
+  },
+  apcsp: {
+    initialMessage: `Let's get started with AP prep! What would you like help with preparing for the AP exam? Below are some of the tasks I can help you with.`,
+    suggestedPrompts: [
+      APCSP_EXAM_PREPARATION_RESOURCES,
+      APCSP_EXAM_SAMPLE_QUESTIONS,
+      APCSP_EXAM_TIME_STRATEGIES,
+      APCSP_CREATE_PT_AI,
+      APCSP_CREATE_PT_PREPARATION,
     ],
   },
 };
@@ -183,11 +198,11 @@ const progressBarHeader = (percentage: number, onBack: () => void) => {
 const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   setShowWelcomeExperience,
   context,
-  scriptId,
   scriptName,
   unitDisplayName,
   // This should only be used for testing purposes
   firstState = 'get_started',
+  curriculumCourses,
 }) => {
   const [currentWelcomeState, setCurrentWelcomeState] =
     React.useState<WelcomeState>(firstState);
@@ -196,7 +211,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     React.useState(true);
 
   const [selectedOption, setSelectedOption] = React.useState<
-    'plan' | 'create' | 'support' | null
+    'plan' | 'create' | 'support' | 'apcsp' | null
   >(null);
 
   const [confettiActive, setConfettiActive] = React.useState<boolean>(false);
@@ -204,13 +219,12 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   const reportingContext = React.useMemo(() => {
     return {
       aiDiffChatContext: context,
-      scriptId,
       scriptName,
       selectedOption,
       unitName: unitDisplayName,
       url: window.location.href,
     };
-  }, [context, scriptId, scriptName, unitDisplayName, selectedOption]);
+  }, [context, scriptName, unitDisplayName, selectedOption]);
 
   const updateShowWelcomeExperience = React.useCallback(
     (statsigKey: string) => {
@@ -287,7 +301,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             <Heading6 className={style.selectOptionSubtitle}>
               Using AI in multiple ways increases productivity.
             </Heading6>
-            {context === AiDiffContext.GENERAL &&
+            {context.type === AiDiffContext.GENERAL &&
               optionButton(
                 selectedOption === 'support',
                 () => setSelectedOption('support'),
@@ -309,12 +323,21 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
               'Create',
               'Differentiate assessment materials, generate lesson-aligned activities and practice problems'
             )}
+            {curriculumCourses &&
+              curriculumCourses.includes('csp') &&
+              optionButton(
+                selectedOption === 'apcsp',
+                () => setSelectedOption('apcsp'),
+                'laptop-code',
+                'AP Prep',
+                'Get help preparing for the AP CSP exam, learn about the Create PT, get sample questions and exam resources'
+              )}
           </div>
           {continueAndSkipButtons(WelcomeStates.practice, !selectedOption)}
         </div>
       </div>
     );
-  }, [continueAndSkipButtons, selectedOption, context]);
+  }, [continueAndSkipButtons, selectedOption, context, curriculumCourses]);
 
   React.useEffect(() => {
     if (currentWelcomeState === WelcomeStates.end_page) {
@@ -405,7 +428,6 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
         <div className={style.practiceContent}>
           <AiDiffChat
             context={context}
-            scriptId={scriptId}
             scriptName={scriptName}
             chatResponseCallback={() => setChatContinueButtonDisabled(false)}
             unitDisplayName={unitDisplayName}
@@ -423,7 +445,6 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   }, [
     selectedOption,
     context,
-    scriptId,
     scriptName,
     unitDisplayName,
     continueAndSkipButtons,

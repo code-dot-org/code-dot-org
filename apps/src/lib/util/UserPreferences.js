@@ -162,4 +162,32 @@ export default class UserPreferences extends Record({userId: 'me'}) {
       return null;
     }
   }
+
+  async getGlobalTheme(errorCallback) {
+    try {
+      const themeResponse = await HttpClient.fetchJson(
+        '/user_preference/theme'
+      );
+      return themeResponse.value?.theme?.global;
+    } catch (error) {
+      // Don't call the error callback if 'Not found', as it just means the
+      // user has not set a theme yet.
+      if (error.response.status !== 404) {
+        errorCallback(error);
+      }
+      return null;
+    }
+  }
+
+  async setGlobalTheme(theme) {
+    const body = {
+      theme: {
+        global: theme,
+      },
+    };
+
+    return HttpClient.put('/user_preference', JSON.stringify(body), true, {
+      'Content-Type': 'application/json',
+    });
+  }
 }

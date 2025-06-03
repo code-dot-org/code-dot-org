@@ -20,7 +20,7 @@
   {
     "name": "Firefox",
     "browserName": "firefox",
-    "browserVersion": "112",
+    "browserVersion": "115",
     "platformName": "Windows 11"
   },
   {

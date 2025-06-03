@@ -3,6 +3,7 @@ import {
   ObservableProcedureModel,
 } from '@blockly/block-shareable-procedures';
 import {FieldColour} from '@blockly/field-colour';
+import {KeyboardNavigation} from '@blockly/keyboard-experiment';
 import * as GoogleBlockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
 
@@ -182,6 +183,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   blockIdOverrides: {
     [originalBlockId: string]: string;
   };
+  KeyboardNavigation?: typeof KeyboardNavigation;
 }
 
 export type GoogleBlocklyInstance = typeof GoogleBlockly;
@@ -267,6 +269,7 @@ export interface ExtendedWorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
   setEnableToolbox: () => void;
   traceOn: () => void;
   isReadOnly: () => boolean;
+  cleanUp: (includeImmovableBlocks?: boolean) => void;
 }
 
 export interface EditorWorkspaceSvg extends ExtendedWorkspaceSvg {
@@ -294,6 +297,7 @@ export interface ExtendedBlocklyOptions extends GoogleBlockly.BlocklyOptions {
   showUnusedBlocks: boolean | undefined;
   analyticsData: AnalyticsData;
   isJigsaw: boolean;
+  enableKeyboardNavigation: boolean;
 }
 
 export interface ExtendedWorkspace extends GoogleBlockly.Workspace {

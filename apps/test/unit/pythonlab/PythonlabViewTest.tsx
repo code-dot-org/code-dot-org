@@ -1,3 +1,4 @@
+import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -61,10 +62,12 @@ describe('PythonLabView', () => {
   ) {
     return render(
       <Provider store={store}>
-        <PythonlabView
-          levelProperties={levelProperties}
-          initialSources={initialSources}
-        />
+        <ThemeProvider>
+          <PythonlabView
+            levelProperties={levelProperties}
+            initialSources={initialSources}
+          />
+        </ThemeProvider>
       </Provider>
     );
   }

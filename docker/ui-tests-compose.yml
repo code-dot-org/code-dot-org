@@ -34,7 +34,7 @@ services:
     env_file:
       - env.list
     shm_size: '2gb' # necessary to avoid "invalid session id"/"session deleted because of page crash" errors in Selenium
-    command: /bin/sh -c "docker/ui_tests.sh"
+    command: /bin/sh -c "docker/ci/scripts/ui_tests.sh"
 
   ui-tests-redis:
     image: redis

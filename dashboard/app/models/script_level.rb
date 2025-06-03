@@ -146,7 +146,8 @@ class ScriptLevel < ApplicationRecord
   def next_level_or_redirect_path_for_user(
     user,
     extras_lesson = nil,
-    bubble_choice_parent: false
+    bubble_choice_parent: false,
+    unit_group_unit: nil
   )
 
     if valid_progression_level?(user)
@@ -164,40 +165,76 @@ class ScriptLevel < ApplicationRecord
     if script.old_professional_learning_course?
       if level.try(:plc_evaluation?)
         if Plc::EnrollmentUnitAssignment.exists?(user: user, plc_course_unit: script.plc_course_unit)
-          script_preview_assignments_path(script)
+          if Policies::Courses.modularity_enabled? && unit_group_unit
+            course_unit_preview_assignments_path(unit_group_unit.unit_group, unit_group_unit.position)
+          else
+            script_preview_assignments_path(script)
+          end
         else
-          build_script_level_path(level_to_follow)
+          build_script_level_path(level_to_follow, unit_group_unit: unit_group_unit)
         end
       else
         if has_another_level_to_go_to?
-          build_script_level_path(level_to_follow)
+          build_script_level_path(level_to_follow, unit_group_unit: unit_group_unit)
         else
-          script_path(script)
+          if Policies::Courses.modularity_enabled? && unit_group_unit
+            course_unit_path(unit_group_unit.unit_group, unit_group_unit.position)
+          else
+            script_path(script)
+          end
         end
       end
     elsif script.pl_course?
-      return build_script_level_path(level_to_follow) if level_to_follow
+      return build_script_level_path(level_to_follow, unit_group_unit: unit_group_unit) if level_to_follow
       next_unit = script.next_unit(user)
-      next_unit ? script_path(next_unit) : script_completion_redirect(user, script)
+      if next_unit
+        next_ugu = next_unit.unit_group_units.find {|ugu| ugu.unit_group == unit_group_unit&.unit_group}
+        if Policies::Courses.modularity_enabled? && next_ugu
+          course_unit_path(next_ugu.unit_group, next_ugu.position)
+        else
+          script_path(next_unit)
+        end
+      else
+        script_completion_redirect(user, script, unit_group_unit: unit_group_unit)
+      end
     elsif bubble_choice? && !bubble_choice_parent
       # Redirect user back to the BubbleChoice activity page from sublevels.
-      build_script_level_path(self)
+      build_script_level_path(self, unit_group_unit: unit_group_unit)
     elsif bonus
       # If we got to this bonus level from another lesson's lesson extras, go back
       # to that lesson
-      script_lesson_extras_path(script.name, (extras_lesson || lesson).relative_position)
+      lesson_position = (extras_lesson || lesson).relative_position
+      if Policies::Courses.modularity_enabled? && unit_group_unit
+        course_unit_lesson_extras_path(unit_group_unit.unit_group, unit_group_unit.position, lesson_position)
+      else
+        script_lesson_extras_path(script.name, lesson_position)
+      end
     else
       # To help teachers have more control over the pacing of certain
       # scripts, we send students on the last level of a lesson to the unit
       # overview page.
       if end_of_lesson? && script.show_unit_overview_between_lessons?
         if script.lesson_extras_available
-          script_lesson_extras_path(script.name, (extras_lesson || lesson).relative_position)
+          lesson_position = (extras_lesson || lesson).relative_position
+          if Policies::Courses.modularity_enabled? && unit_group_unit
+            course_unit_lesson_extras_path(unit_group_unit.unit_group, unit_group_unit.position, lesson_position)
+          else
+            script_lesson_extras_path(script.name, lesson_position)
+          end
         else
-          script_path(script) + "?completedLessonNumber=#{lesson.relative_position}"
+          query_params = "?completedLessonNumber=#{lesson.relative_position}"
+          if Policies::Courses.modularity_enabled? && unit_group_unit
+            course_unit_path(unit_group_unit.unit_group, unit_group_unit.position) + query_params
+          else
+            script_path(script) + query_params
+          end
         end
       else
-        level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(user, script)
+        if level_to_follow
+          build_script_level_path(level_to_follow, unit_group_unit: unit_group_unit)
+        else
+          script_completion_redirect(user, script, unit_group_unit: unit_group_unit)
+        end
       end
     end
   end
@@ -310,11 +347,11 @@ class ScriptLevel < ApplicationRecord
     lesson.script_levels.to_a.size
   end
 
-  def path
-    build_script_level_path(self)
+  def path(unit_group_unit: nil)
+    build_script_level_path(self, unit_group_unit: unit_group_unit)
   end
 
-  def summarize(include_prev_next = true, for_edit: false, user_id: nil)
+  def summarize(include_prev_next = true, for_edit: false, user_id: nil, unit_group_unit: nil)
     ActiveRecord::Base.connected_to(role: :reading) do
       ids = level_ids
       active_id = oldest_active_level.id
@@ -334,8 +371,8 @@ class ScriptLevel < ApplicationRecord
         icon: level.icon,
         is_concept_level: level.concept_level?,
         title: level_display_text,
-        url: build_script_level_url(self),
-        path: build_script_level_path(self),
+        url: build_script_level_url(self, unit_group_unit: unit_group_unit),
+        path: build_script_level_path(self, unit_group_unit: unit_group_unit),
         freePlay: level.try(:free_play) == "true",
         bonus: bonus,
         display_as_unplugged: level.display_as_unplugged?,
@@ -404,11 +441,11 @@ class ScriptLevel < ApplicationRecord
     end
   end
 
-  def summarize_for_lesson_show(can_view_teacher_markdown, current_user)
-    summary = summarize(user_id: current_user&.id)
+  def summarize_for_lesson_show(can_view_teacher_markdown, current_user, unit_group_unit: nil)
+    summary = summarize(user_id: current_user&.id, unit_group_unit: unit_group_unit)
     summary[:id] = id.to_s
     summary[:scriptId] = script_id
-    summary[:exampleSolutions] = get_example_solutions(oldest_active_level, current_user)
+    summary[:exampleSolutions] = get_example_solutions(oldest_active_level, current_user, unit_group_unit: unit_group_unit)
     summary[:levels] = levels.map {|l| l.summarize_for_lesson_show(can_view_teacher_markdown)}
     summary
   end
@@ -455,7 +492,7 @@ class ScriptLevel < ApplicationRecord
     extra_levels
   end
 
-  def summarize_as_bonus
+  def summarize_as_bonus(unit_group_unit: nil)
     localized_level_description = I18n.t(level.name, scope: [:data, :bubble_choice_description], default: level.bubble_choice_description)
     localized_level_display_name = I18n.t(level.name, scope: [:data, :display_name], default: level.display_name)
     {
@@ -465,12 +502,12 @@ class ScriptLevel < ApplicationRecord
       description: localized_level_description,
       display_name: localized_level_display_name || I18n.t('lesson_extras.bonus_level'),
       thumbnail_url: level.try(:thumbnail_url) || level.try(:solution_image_url),
-      url: build_script_level_url(self),
+      url: build_script_level_url(self, unit_group_unit: unit_group_unit),
       maze_summary: {
         map: JSON.parse(level.try(:maze) || '[]'),
         serialized_maze: level.try(:serialized_maze) && JSON.parse(level.try(:serialized_maze)),
         skin: level.try(:skin),
-        level: level.summarize_as_bonus.camelize_keys
+        level: level.summarize_as_bonus(unit_group_unit: unit_group_unit).camelize_keys
       }.camelize_keys
     }
   end
@@ -692,7 +729,7 @@ class ScriptLevel < ApplicationRecord
     instructor_in_training && script.pl_course? && script.can_be_participant?(current_user)
   end
 
-  def get_example_solutions(level, current_user, section_id = nil)
+  def get_example_solutions(level, current_user, section_id = nil, unit_group_unit: nil)
     level_example_links = []
 
     return [] if !Policies::InlineAnswer.visible_for_script_level?(current_user, self) || CDO.properties_encryption_key.blank?
@@ -705,7 +742,7 @@ class ScriptLevel < ApplicationRecord
         sublevel_position = oldest_active_level.sublevel_position(level)
         return [] unless sublevel_position
 
-        path = build_script_level_path(self, {sublevel_position: sublevel_position})
+        path = build_script_level_path(self, sublevel_position: sublevel_position, unit_group_unit: unit_group_unit)
         level_example_links = [build_exemplar_url(path)]
       else
         # Otherwise, exemplar link should look like
@@ -741,7 +778,7 @@ class ScriptLevel < ApplicationRecord
       end
     elsif level.ideal_level_source_id && script # old style 'solutions' for blockly-type levels
       unless ScriptConfig.allows_public_caching_for_script(script.name)
-        level_example_links.push(build_script_level_url(self, {solution: true}.merge(section_id ? {section_id: section_id} : {})))
+        level_example_links.push(build_script_level_url(self, **{solution: true}.merge(section_id ? {section_id: section_id} : {})))
       end
     end
 

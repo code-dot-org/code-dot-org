@@ -1,7 +1,7 @@
 Feature: Playing the Artist Game
 
 Background:
-  Given I am on "http://studio.code.org/s/20-hour/lessons/5/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/20-hour/units/1/lessons/5/levels/1?noautoplay=true"
   And I wait for the lab page to fully load
   And I dismiss the login reminder
   Then element "#runButton" is visible
@@ -17,7 +17,7 @@ Scenario: Winning the first level
   And element "#resetButton" is visible
   And I wait until element ".congrats" is visible
   And I press "continue-button"
-  And I wait until I am on "http://studio.code.org/s/20-hour/lessons/5/levels/2"
+  And I wait until I am on "http://studio.code.org/courses/20-hour/units/1/lessons/5/levels/2"
 
 Scenario: Losing the first level
   Then I've initialized the workspace with losing artist blocks

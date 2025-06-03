@@ -31,30 +31,53 @@ MARKDOWN
 
 allow_multiple_attempts true
 teacher_markdown <<MARKDOWN
-Let's step through the code:
+The initial `ArrayList` is `[11, 8, 12, 7, 21, 15, 1]`.
 
-1. The initial `ArrayList` is `[11, 8, 12, 7, 21, 15, 1]`.
+The `insertionSort` method performs a descending-order insertion sort. In each iteration, it:
 
-2. The `for` loop iterates from `i = 1` to `i < nums.size()`, so it will run for the indices `1` and `2` in the first two passes.
+- Stores the value at index `i` in a temporary variable `temp`
+- Compares `temp` to the elements before it
+- Shifts smaller elements to the right while `temp > nums.get(index - 1)`
+- Inserts `temp` into its correct position
 
-3. In the first iteration (`i = 1`):
-   - The variable `temp` is assigned the value at index `1`, which is `8`.
-   - The variable `index` is set to `1`.
-   - The `while` loop condition is checked: `8 > 11` is false.
-   - The condition is not satisfied, so no changes are made.
-   - The list remains `[11, 8, 12, 7, 21, 15, 1]`.
+Let's walk through the first two iterations of the `for` loop:
 
-4. In the second iteration (`i = 2`):
-   - The variable `temp` is assigned the value at index `2`, which is `12`.
-   - The variable `index` is set to `2`.
-   - The `while` condition `12 > 8` is true.
-   - Shift `nums[1]` to `nums[2]`: `[11, 8, 8, 7, 21, 15, 1]`.
-   - Decrement `index` to `1`.
-   - Check `12 > 11` → still true.
-   - Shift `nums[0]` to `nums[1]`: `[11, 11, 8, 7, 21, 15, 1]`.
-   - Decrement `index` to `0`.
-   - Place `temp` (`12`) at index `0`: `[12, 11, 8, 7, 21, 15, 1]`.
+---
 
-After the `for` loop has executed twice, the `ArrayList` contains `[12, 11, 8, 7, 21, 15, 1]`.
+**Iteration 1 (`i = 1`)**
+- `temp = nums.get(1) = 8`
+- `index = 1`
+- Check condition: `index > 0 && temp > nums.get(index - 1)`
+  - `8 > 11` → `false`
+- No shifting occurs
+- Array remains: `[11, 8, 12, 7, 21, 15, 1]`
+
+---
+
+**Iteration 2 (`i = 2`)**
+- `temp = nums.get(2) = 12`
+- `index = 2`
+- First comparison:
+  - `12 > nums.get(1) = 8` → `true`
+  - Shift `8` to index 2 → `[11, 8, 8, 7, 21, 15, 1]`
+  - Decrement `index` to 1
+- Second comparison:
+  - `12 > nums.get(0) = 11` → `true`
+  - Shift `11` to index 1 → `[11, 11, 8, 7, 21, 15, 1]`
+  - Decrement `index` to 0
+- Insert `temp (12)` at index 0 → `[12, 11, 8, 7, 21, 15, 1]`
+
+---
+
+After the second iteration, the `ArrayList` contains:  
+**`[12, 11, 8, 7, 21, 15, 1]`**
+
+This is the correct result after two iterations of a descending-order insertion sort.
+
+
+
+
+
+
 
 MARKDOWN

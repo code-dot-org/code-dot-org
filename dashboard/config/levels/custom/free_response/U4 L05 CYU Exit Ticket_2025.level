@@ -1,11 +1,12 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2025-03-11T18:21:34.000Z",
   "level_num": "custom",
   "user_id": 13,
   "properties": {
-    "long_instructions": "Can a computer evaluate an expression to something between true and false? Can you write an expression to deal with a \"maybe\" answer?",
+    "long_instructions": "A student writes the following condition:\r\n\r\nif (!isHungry || hasFood)\r\n\r\nThey say this will check whether someone should eat lunch. Do you agree or disagree with this statement?",
     "title": "Conditionals",
     "allow_user_uploads": "false",
     "submittable": "true",
@@ -16,14 +17,14 @@
     "name_suffix": "_2025",
     "instructions_important": "false",
     "display_name": "Check Your Understanding",
-    "encrypted_solution": "Dm2afDZ6mOroUzAw437v5gc906yFhRlNbCFn7pjsH4bwme8zmYMPWH6UWoWl\nJM8HkE6NqvoYrjhpuEFAICvNHpbMQ7Xv0DkF5lupx9i6vlhIdV77QZBPyc1O\n0NXgkOGQ8B0VuEUGndfh4Tjdt3ujuVwQUHHcx6mkQqi74aKlyZdwtPUfg6pr\nVE96Xx52UBaQbxDurikoFNrIVDjsVBJKqzMTZemhYbhfscHc73lVVZ8tf+8i\nGvbVdcR0up0ewG495jf1UUCT8oJUXzVP+wx8z32Gl/CsEbIWUi3k4Fo2A1mX\nUuQhVtwCVDaaq7VosI1qNobLKanv0aH+w/MTeFCXKq/wptW/yhpZClV+UgAn\n5zJ1l3f1g4kULE5f1OZ5HTqqe61PgVe/A+lThLsqzq49dqcldU6iRs2GWzSS\nHumYXLIO2wo2hJfW4pAyU3/OnJggODEQekVY2VQ6O6mEU/8QEszz6iRTA3Ue\nETYNqgWSd94=\n",
+    "encrypted_solution": "uB7sxnnhRTakeMtBACDLXmNztZFhsqh/DfLJr7V1z9wPsvNxDKmYWOAoRmj9\n7G3zmxNY8gDB6sgfNd46HrvNDyFG7I+3hLgjlger35ptXjQPRt+VnoVEe88f\ntg3fjDHDbX9KKX7y+RT8laC/qZKFY/tE1k7b8BT/wjqEbudVqkP1ALotTbxZ\nkHs1NcEy7Ucuot90UFPEldWlB3fehBkx3onrbrOcU9MY9O85UVWQV8OkmbAq\nvAj4cfmX59eA7Eyt74LzYho5MoQl6exKOr7IYT0RP62O/wSH1FOWwYjustlx\ntBVZzQWe6XJUKha5BQoxCgb1gYTj7T4/uu8+XV6JudzkGItUOqaB9pHahmG7\nkv80RlG/V1qfEKiq+hWBTZFndn2aM31zUnjjMWXE5Tq6ulFUUEnMzOrI0+jF\nkSgopbNBVIPaVLsEPRCJH7UIsY0hEQ7s/OKkOk0UF84aR/XQKDoJxMl4RX8+\nIzfJqX7RsxYcH7OSzCVoTzbUdhKuyWc6CYFf6RMLtZSRw7SDCZLBDVMDb7Q5\n4FQ2f4pWCQshSz/LaS14DL41yPSSHi8s1+F8YY/3W3ZxsI+v2flQfqsh9/+Z\nHVsfSGP5IU9jtw8bJe8O3q9Dyu53D7BstJQX2DvCjUbu+CKnv26PnqAYQGkU\n44Rfa7UdxwyVIwL0Lm2xrs3+e77tW40nQvfEExqq7++6zT2cjMVComfiP/xb\n6UnjuRxc8cbjoYiUsCoCuUBuwOE=\n",
     "optional": "false",
     "encrypted": "false",
-    "allow_multiple_attempts": "true"
+    "allow_multiple_attempts": "true",
+    "stay_on_level_after_submit": "false"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-03-11T18:21:34.335+00:00\",\"changed\":[\"cloned from \\\"U4 L05 CYU Exit Ticket_2024\\\"\"],\"cloned_from\":\"U4 L05 CYU Exit Ticket_2024\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-03-11T18:21:34.335+00:00\",\"changed\":[\"cloned from \\\"U4 L05 CYU Exit Ticket_2024\\\"\"],\"cloned_from\":\"U4 L05 CYU Exit Ticket_2024\"},{\"changed_at\":\"2025-05-22 16:39:59 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

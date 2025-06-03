@@ -81,6 +81,8 @@ export interface LabState {
   isLoadingProjectOrLevel: boolean;
   // If the lab is loading. Can be updated by lab-specific components.
   isLoading: boolean;
+  // If we are currently loading the theme
+  isLoadingTheme: boolean;
   // Error currently on the page, if present.
   pageError: PageError | undefined;
   // channel for the current project, or undefined if there is no current project.
@@ -106,6 +108,7 @@ export interface LabState {
 const initialState: LabState = {
   isLoadingProjectOrLevel: false,
   isLoading: false,
+  isLoadingTheme: false,
   pageError: undefined,
   channel: undefined,
   initialSources: undefined,
@@ -284,13 +287,16 @@ export const setUpWithLevel = createAsyncThunk<
 
 // If any load is currently in progress.
 export const isLabLoading = (state: {lab: LabState}) =>
-  state.lab.isLoadingProjectOrLevel || state.lab.isLoading;
+  state.lab.isLoadingProjectOrLevel ||
+  state.lab.isLoading ||
+  state.lab.isLoadingTheme;
 
 // This may depend on more factors, such as share.
 export const isReadOnlyWorkspace = (state: RootState) => {
   const isEditMode = !!getAppOptionsEditBlocks();
   const isEditingExemplar = getAppOptionsEditingExemplar();
   const isViewingExemplar = getAppOptionsViewingExemplar();
+  const isWidgetView = !!state.lab.levelProperties?.widgetView;
 
   // Exemplar and block edit modes do not have a channel.
   if (isEditMode || isEditingExemplar) {
@@ -316,7 +322,8 @@ export const isReadOnlyWorkspace = (state: RootState) => {
     readonlyPredictLevel ||
     hasSubmitted ||
     isRunningAndReadonly ||
-    isViewingOldVersion
+    isViewingOldVersion ||
+    isWidgetView
   );
 };
 
@@ -343,6 +350,9 @@ const labSlice = createSlice({
   reducers: {
     setIsLoading(state, action: PayloadAction<boolean>) {
       state.isLoading = action.payload;
+    },
+    setIsLoadingTheme(state, action: PayloadAction<boolean>) {
+      state.isLoadingTheme = action.payload;
     },
     setPageError(
       state,
@@ -599,6 +609,7 @@ export const setLoadedPredictResponse = createAction<string>(
 
 export const {
   setIsLoading,
+  setIsLoadingTheme,
   setPageError,
   clearPageError,
   setValidationState,

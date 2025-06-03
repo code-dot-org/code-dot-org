@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2025-04-28T18:19:03.000Z",
   "level_num": "custom",
@@ -9,7 +10,7 @@
     "offer_browser_tts": "true",
     "panels": [
       {
-        "text": "Nice! Now that you've had practice naming, defining and calling functions, you are ready to make your own!",
+        "text": "Nice! Now that you've had practice naming, defining and calling functions, you are ready to make your own!\n\n🧑‍🏫 Teacher Tip: To transition from Modify to Create, encourage students to design their own function from scratch—start by asking, “What do you want your program to do?” and guide them to plan the steps before writing the code. This helps shift from editing to original thinking.",
         "imageUrl": "https://images.code.org/f2f927bbadf095ec28e7f1d6643632a2-Lesson 3 Level 9.png",
         "key": "music-coding-intro-functions-panel-dd6ade9d-4ac1-4787-89e4-4fa347cf3c12",
         "layout": "text-top-center",
@@ -18,7 +19,6 @@
     ],
     "name_suffix": "_1"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-28T18:19:03.632+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-panel2_launch\\\"\"],\"cloned_from\":\"music-coding-intro-functions-panel2_launch\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-28T18:19:03.632+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-panel2_launch\\\"\"],\"cloned_from\":\"music-coding-intro-functions-panel2_launch\"},{\"changed_at\":\"2025-05-21 19:45:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-05-21 19:45:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-05-21 19:46:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-05-21 19:46:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
 </Panels>

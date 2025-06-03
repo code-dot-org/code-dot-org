@@ -1,0 +1,42 @@
+{
+  "entryContent": {
+    "fields": {
+      "title": {
+        "en-US": "Editorial Card Test"
+      },
+      "actionBlockOverline": {
+        "en-US": "K-0 Teachers"
+      },
+      "shortDescription": {
+        "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam."
+      },
+      "image": {
+        "en-US": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "6fdNRFZbNXpiXQd6v7fHen"
+          }
+        }
+      },
+      "primaryLinkRef": {
+        "en-US": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "3IqvCruY4yXUCkvfArArsD"
+          }
+        }
+      },
+      "experienceLevel": {
+        "en-US": [
+          "Beginner"
+        ]
+      },
+      "duration": {
+        "en-US": 0
+      }
+    }
+  },
+  "contentType": "selfPacedPl"
+}

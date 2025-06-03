@@ -4,7 +4,7 @@
   "category": "Sounds",
   "category_key": "play",
   "block_name": "play_chord_at_current_location_simple2",
-  "content": "This block lets you play strings of notes, called arpeggios, using a number of different instruments. Select notes on the piano to add them to the arpeggio - you can select up to sixteen. The notes can be played in several different sequences - going up, going down, at random, or all together.",
+  "content": "\n\n\n<div style=\"display: flex; flex-direction: column; gap: 10px; width: 100%; margin-top: 10px\">\n    <!-- Section 1 -->\n    <div style=\"display: flex; width: 100%;\">\n        <img src=\"https://images.code.org/0a0b0ba1b4c005b864617b0afbc03f1c-piano block.gif\" \n             alt=\"Interface for Play AI Drums block\" \n             style=\"width: 30%; border-radius: 10px; margin: 0px 20px 20px 0px;\">\n        <div>\n            <p style=\"font-size: 10pt; line-height: 1.2; margin: 5px 0;\">\n                This block lets you play strings of notes, called arpeggios, using a number of different instruments. Select notes on the piano to add them to the arpeggio - you can select up to sixteen. The notes can be played in several different sequences - going up, going down, at random, or all together.\n            </p>\n        </div>\n    </div>\n</div>",
   "image_url": "https://images.code.org/e7cca02058f20f91d9217ae600ca694b-keys.png",
   "palette_params": [
     {

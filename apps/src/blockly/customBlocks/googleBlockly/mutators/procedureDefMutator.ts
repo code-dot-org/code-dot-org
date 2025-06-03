@@ -40,7 +40,7 @@ export const procedureDefMutator = {
     for (let i = 0; i < params.length; i++) {
       const parameter = Blockly.utils.xml.createElement('arg');
       const varModel = params[i].getVariableModel();
-      parameter.setAttribute('name', varModel.name);
+      parameter.setAttribute('name', varModel.getName());
       parameter.setAttribute('varid', varModel.getId());
       container.appendChild(parameter);
     }

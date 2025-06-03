@@ -45,7 +45,7 @@ Feature: Looking at a few things with Applitools Eyes - Part 3
     Examples:
       | url                                               | test_name                  |
       | http://studio.code.org/                           | logged out studio homepage |
-      | http://studio.code.org/s/allthethings             | logged out script progress |
+      | http://studio.code.org/courses/allthethingscourse/units/1             | logged out script progress |
 
   @no_ci
   @pegasus_content

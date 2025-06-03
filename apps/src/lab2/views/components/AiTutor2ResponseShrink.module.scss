@@ -1,0 +1,39 @@
+@keyframes slidein {
+  from {
+    opacity: 0;
+    margin-top: 20px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+.message-container-assistant {
+  min-height: 0;
+  overflow-y: scroll;
+}
+
+.message-assistant {
+  padding: 12px;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  animation: slidein 0.5s;
+  background-color: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
+  word-break: break-word;
+
+  p:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  code {
+    white-space: initial;
+  }
+}
+
+.waitingAnimation {
+  // Quick hacky way to make the light mode animation icon work in dark mode.
+  filter: invert(84%);
+  margin-top: 10px;
+}

@@ -1,4 +1,5 @@
 import ActionBlock from '@code-dot-org/component-library/actionBlock';
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import {
   BodyThreeText,
@@ -25,10 +26,12 @@ const ProjectTypePicker: React.FunctionComponent<ProjectTypePickerProps> = ({
 }) => {
   const isNeighborhood = currentProjectType === 'neighborhood';
   const isConsole = currentProjectType === 'console';
+  const {theme} = useTheme();
+  const mode = theme === 'Light' ? 'light' : 'dark';
   return (
-    <div className={moduleStyles.dialogContainer} data-theme="Dark">
+    <div className={moduleStyles.dialogContainer}>
       <CustomDialog
-        mode="dark"
+        mode={mode}
         className={moduleStyles.pickerDialog}
         aria-labelledby="project-picker-title"
         onClose={currentProjectType ? closeDialog : undefined}
@@ -54,7 +57,7 @@ const ProjectTypePicker: React.FunctionComponent<ProjectTypePickerProps> = ({
               image={{src: consoleImage}}
               primaryButton={{
                 text: pythonlabI18n.consoleOnly(),
-                color: 'black',
+                color: 'purple',
                 useAsLink: false,
                 onClick: () => setProjectCallback('console'),
                 iconRight: isConsole
@@ -68,7 +71,7 @@ const ProjectTypePicker: React.FunctionComponent<ProjectTypePickerProps> = ({
               image={{src: neighborhoodImage}}
               primaryButton={{
                 text: pythonlabI18n.neighborhood(),
-                color: 'black',
+                color: 'purple',
                 useAsLink: false,
                 onClick: () => setProjectCallback('neighborhood'),
                 iconRight: isNeighborhood

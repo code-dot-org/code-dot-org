@@ -53,6 +53,65 @@ class Pd::SessionTest < ActiveSupport::TestCase
     assert_equal '2016-03-01, 9:00am-5:00pm', session.formatted_date_with_start_and_end_times
   end
 
+  test 'formatted_location_details for in_person session with location details' do
+    session = create(
+      :pd_session,
+      session_format: 'in_person',
+      location_name: 'The auditorium',
+      location_address: '123 Main St, Denver CO, 12345'
+    )
+
+    assert_equal 'The auditorium, 123 Main St, Denver CO, 12345', session.formatted_location_details
+  end
+
+  test 'formatted_location_details for in_person session with only location_name' do
+    session = create(
+      :pd_session,
+      session_format: 'in_person',
+      location_name: 'The auditorium',
+    )
+
+    assert_equal 'The auditorium', session.formatted_location_details
+  end
+
+  test 'formatted_location_details for in_person session with only location_address' do
+    session = create(
+      :pd_session,
+      session_format: 'in_person',
+      location_address: '123 Main St, Denver CO, 12345'
+    )
+
+    assert_equal '123 Main St, Denver CO, 12345', session.formatted_location_details
+  end
+
+  test 'formatted_location_details for in_person session with no location details' do
+    session = create(
+      :pd_session,
+      session_format: 'in_person',
+    )
+
+    assert_equal 'N/A', session.formatted_location_details
+  end
+
+  test 'formatted_location_details for virtual session with meeting_link' do
+    session = create(
+      :pd_session,
+      session_format: 'virtual',
+      meeting_link: 'example.com',
+    )
+
+    assert_equal 'Virtual meeting: example.com', session.formatted_location_details
+  end
+
+  test 'formatted_location_details for virtual session without meeting_link' do
+    session = create(
+      :pd_session,
+      session_format: 'virtual',
+    )
+
+    assert_equal 'N/A', session.formatted_location_details
+  end
+
   test 'soft delete' do
     session = create :pd_session
     attendance = create :pd_attendance, session: session

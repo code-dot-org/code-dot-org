@@ -294,13 +294,13 @@ end
 
 Given 'I start a self-paced PL course' do
   steps <<~GHERKIN
-    Given I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/1"
+    Given I am on "http://studio.code.org/courses/alltheselfpacedplthings/units/1/lessons/1/levels/1"
     And I wait until element "a[aria-label='Level 3 Lesson Instructor In Training Levels']" is visible
     Then I click selector "a[aria-label='Level 3 Lesson Instructor In Training Levels']"
-    When I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/3"
+    When I am on "http://studio.code.org/courses/alltheselfpacedplthings/units/1/lessons/1/levels/3"
     Then I wait until element "a:contains(Submit)" is visible
     When I click selector "a:contains(Submit)"
-    Then I wait until I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/4"
+    Then I wait until I am on "http://studio.code.org/courses/alltheselfpacedplthings/units/1/lessons/1/levels/4"
     And I wait until element "a:contains(Submit)" is visible
   GHERKIN
 end
@@ -579,7 +579,7 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
       course: course,
       organizer_id: organizer.id,
       capacity: number.to_i,
-      session_location: 'Buffalo',
+      session_location_name: 'Buffalo',
       num_sessions: 1,
       sessions_from: Date.new(2018, 4, 1),
       enrolled_and_attending_users: number_type == 'people' ? number.to_i : 0

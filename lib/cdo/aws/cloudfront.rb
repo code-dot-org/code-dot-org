@@ -17,12 +17,8 @@ module AWS
       500 => '/assets/error-pages/500.html'
     }.freeze
     ERROR_CACHE_TTL = 60
-    # Configure CloudFront to forward these headers for S3 origins.
-    S3_FORWARD_HEADERS = %w(
-      Access-Control-Request-Headers
-      Access-Control-Request-Method
-      Origin
-    ).freeze
+    # Default headers to be sent to the origin for most behaviors.
+    DEFAULT_HEADERS = %w(Host CloudFront-Forwarded-Proto)
     # Use the same HTTP Cache configuration as cdo-varnish
     HTTP_CACHE = HttpCache.config(rack_env)
     CACHE_INVALIDATION_MAX_RETRIES = 10
@@ -264,11 +260,9 @@ module AWS
 
     # Returns a CloudFront CacheBehavior Hash compatible with AWS CloudFormation.
     def self.cache_behavior(behavior_config, path = nil)
-      s3 = ['cdo-assets', 'cdo-restricted'].include? behavior_config[:proxy]
-      # Include Host header in CloudFront's cache key to match Varnish for custom origins.
-      # Include S3 forward headers for s3 origins.
-      headers = behavior_config[:headers] +
-        (s3 ? S3_FORWARD_HEADERS : %w(Host CloudFront-Forwarded-Proto))
+      headers = behavior_config[:headers]
+      headers += DEFAULT_HEADERS unless exclude_default_headers?(behavior_config[:proxy])
+
       cookie_config = behavior_config[:cookies].is_a?(Array) ?
         {
           Forward: 'whitelist',
@@ -359,6 +353,13 @@ module AWS
         resource,
         policy: policy
       )
+    end
+
+    # Don't include the Host and CloudFront-Forwarded-Proto headers in the cache key for
+    # S3 origins or the NextJS-based marketing origin. For the marketing site switchover, we
+    # manually override the Host header in the marketing-router lambda function.
+    private_class_method def self.exclude_default_headers?(origin_proxy_name)
+      ['cdo-assets', 'cdo-restricted', 'marketing'].include?(origin_proxy_name)
     end
   end
 end

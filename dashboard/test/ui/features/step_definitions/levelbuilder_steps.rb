@@ -38,6 +38,7 @@ Given(/^the unit slug input contains the temp script name$/) do
   }
 end
 
+# The following steps are still accessing /s/ URLs because we are keeping /s/ for units without courses.
 Given(/^I view the temp unit overview page$/) do
   steps %{
     Given I am on "http://studio.code.org/s/#{@temp_script_name}"
@@ -45,6 +46,7 @@ Given(/^I view the temp unit overview page$/) do
   }
 end
 
+# The edit pages will also remain /s/ URLs, regardless of whether the unit is in a course or not
 Given(/^I view the temp unit edit page$/) do
   steps %{
     Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit"

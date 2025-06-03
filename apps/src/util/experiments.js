@@ -58,6 +58,10 @@ experiments.TEACHER_LOCAL_NAV_V2 = 'teacher-local-nav-v2';
 experiments.TEACHER_HOMEPAGE_V2 = 'teacher-homepage-v2';
 // Use glow effect for Blockly block highlighting
 experiments.BLOCKLY_GLOW_HIGHLIGHT = 'blockly-glow-highlight';
+// Turn on Blockly Keyboard Navigation
+experiments.BLOCKLY_KEYBOARD_NAVIGATION = 'blockly-keyboard-navigation';
+// Use nested course URLs like /courses/csd-2024/units/1/...
+experiments.MODULARITY = 'modularity';
 // Allows users to view the download progress CSV button on the section progress page
 experiments.DOWNLOAD_PROGRESS_CSV = 'download-progress-csv';
 

@@ -23,6 +23,7 @@ export const MockAgeGatedSections: Section[] = [
     sharingDisabled: false,
     ttsAutoplayEnabled: false,
     unitName: null,
+    unitPosition: null,
   },
   {
     id: 12,
@@ -45,6 +46,7 @@ export const MockAgeGatedSections: Section[] = [
     sharingDisabled: false,
     ttsAutoplayEnabled: false,
     unitName: null,
+    unitPosition: null,
   },
   {
     id: 13,
@@ -67,6 +69,7 @@ export const MockAgeGatedSections: Section[] = [
     sharingDisabled: false,
     ttsAutoplayEnabled: false,
     unitName: null,
+    unitPosition: null,
   },
   {
     id: 14,
@@ -89,5 +92,6 @@ export const MockAgeGatedSections: Section[] = [
     sharingDisabled: false,
     ttsAutoplayEnabled: false,
     unitName: null,
+    unitPosition: null,
   },
 ];

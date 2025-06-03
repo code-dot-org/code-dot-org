@@ -1,0 +1,24 @@
+@import '@code-dot-org/component-library-styles/primitiveColors';
+
+.workshopCatalog {
+  background-color: var(--background-neutral-secondary);
+
+  section {
+    padding-block: 4rem;
+  }
+  
+  .headerContainer {
+    max-width: 60em;
+    margin: 0 auto;
+  }
+
+  .bodyContainer {
+    background-color: var(--neutral-base-white);
+    border-top: 1px solid var(--neutral-gray-20);
+
+    .workshopInfoContainer {
+      max-width: 60em;
+      margin: 0 auto;
+    }
+  }
+}

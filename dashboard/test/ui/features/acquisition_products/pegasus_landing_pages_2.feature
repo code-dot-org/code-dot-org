@@ -1,3 +1,4 @@
+@skip
 @eyes
 @single_session
 @pegasus_content
@@ -13,5 +14,7 @@ Scenario Outline: Simple page view
   And I sign out
 Examples:
   | url                                                               | test_name                  |
+  | http://code.org/minecraft                                         | minecraft tutorial landing |
+  | http://code.org/starwars                                          | starwars tutorial landing  |
   | http://code.org/tools/applab                                      | app lab tutorial landing   |
   | http://code.org/dance                                             | dance tutorial landing     |

@@ -2,13 +2,13 @@ Feature: Viewing and dismissing the login callout
 # Build errors on clearing cookies on mobile, ie
 
 Scenario: Should see callout on 20-hour farmer lesson
-  Given I am on "http://studio.code.org/s/20-hour/lessons/9/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/20-hour/units/1/lessons/9/levels/1?noautoplay=true"
   And I wait for the lab page to fully load
   And element ".uitest-signincallout" is visible
 
 @no_mobile
 Scenario: Should be able to clear cookies and session storage to see callout again
-  Given I am on "http://studio.code.org/s/20-hour/lessons/9/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/20-hour/units/1/lessons/9/levels/1?noautoplay=true"
   And I wait for the lab page to fully load
   And element ".uitest-signincallout" is visible
   And I dismiss the login reminder
@@ -21,19 +21,19 @@ Scenario: Should be able to clear cookies and session storage to see callout aga
 
 @as_student
 Scenario: Should not see callout on farmer lesson if logged in
-  Given I am on "http://studio.code.org/s/20-hour/lessons/9/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/20-hour/units/1/lessons/9/levels/1?noautoplay=true"
   And I wait for the lab page to fully load
   And element ".uitest-signincallout" is not visible
 
 @as_student
 Scenario: Should not see callout on CSF coursea lesson if logged in
-  Given I am on "http://studio.code.org/s/coursea-2020/lessons/4/levels/2?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/coursea-2020/units/1/lessons/4/levels/2?noautoplay=true"
   And I wait for the lab page to fully load
   And element ".uitest-signincallout" is not visible
 
 @no_mobile
 Scenario: Clicking anywhere should dismiss the login reminder
-  Given I am on "http://studio.code.org/s/20-hour/lessons/9/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/20-hour/units/1/lessons/9/levels/1?noautoplay=true"
   And I wait for the lab page to fully load
   And element ".uitest-signincallout" is visible
   And I dismiss the login reminder
@@ -43,7 +43,7 @@ Scenario: Clicking anywhere should dismiss the login reminder
   And I clear session storage
 
 Scenario: See age callout, not signin callout on hour of code
-  Given I am on "http://studio.code.org/s/allthethings/lessons/37/levels/2?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/37/levels/2?noautoplay=true"
   And I wait for the lab page to fully load
   And I wait for 3 seconds
   And I wait until I don't see selector "#p5_loading"
@@ -51,7 +51,7 @@ Scenario: See age callout, not signin callout on hour of code
 
 @no_mobile
 Scenario: After dismissing the callout, it should not reappear upon refresh
-  Given I am on "http://studio.code.org/s/20-hour/lessons/9/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/20-hour/units/1/lessons/9/levels/1?noautoplay=true"
   And I wait for the lab page to fully load
   And element ".uitest-signincallout" is visible
   And I dismiss the login reminder
@@ -62,7 +62,7 @@ Scenario: After dismissing the callout, it should not reappear upon refresh
 
 @no_mobile
 Scenario: Nested callouts should work as expected
-  Given I am on "http://studio.code.org/s/coursea-2020/lessons/2/levels/2?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/coursea-2020/units/1/lessons/2/levels/2?noautoplay=true"
   And I wait for the lab page to fully load
   And element ".uitest-signincallout" is visible
   And I dismiss the login reminder
@@ -71,7 +71,7 @@ Scenario: Nested callouts should work as expected
   And I clear session storage
 
 Scenario: Should be immediately redirected to sign in if pressing sign in button
-  Given I am on "http://studio.code.org/s/20-hour/lessons/9/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/20-hour/units/1/lessons/9/levels/1?noautoplay=true"
   And I wait for the lab page to fully load
   And element ".uitest-signincallout" is visible
   And I click selector ".header_button" if I see it
