@@ -214,6 +214,12 @@ namespace :ci do
       raise "Sparse checkout failed. dashboard directory missing" unless Dir.exist?('dashboard')
 
       ChatClient.log "Sparse checkout complete. #{num_files} files remaining in pegasus/sites.v3."
+
+      # let the caller know that we did a sparse checkout
+      exit 11
+    else
+      # let the caller know that we did a full checkout
+      exit 0
     end
   end
 end

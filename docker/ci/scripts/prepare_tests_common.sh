@@ -14,16 +14,18 @@ export RACK_ENV=test
 export DISABLE_SPRING=1
 export LD_LIBRARY_PATH=/usr/local/lib
 
-bundle exec rake ci:sparse_checkout
-
-# Example file which will not be present if pegasus content is omitted
-# via sparse checkout.
-EXAMPLE_FILE="pegasus/sites.v3/code.org/homepage.json"
-
-# Disable Pegasus content if the example file is not present.
-if [ -f "$EXAMPLE_FILE" ]; then
-  echo "Pegasus homepage.json present"
+# Disable Pegasus content based on the exit code of the rake task.
+if bundle exec rake ci:sparse_checkout; then
+  echo "Full checkout – HAS_PEGASUS_CONTENT not set"
 else
-  export HAS_PEGASUS_CONTENT=false
-  echo "Pegasus homepage.json missing – HAS_PEGASUS_CONTENT set to false"
+  # Nest this check inside the outer `if` block to ensure that a non-zero exit
+  # code from the rake task does not cause this script to exit immediately.
+  exit_code=$?
+  if [ "$exit_code" -eq 11 ]; then
+    export HAS_PEGASUS_CONTENT=false
+    echo "Sparse checkout – HAS_PEGASUS_CONTENT set to false"
+  else
+    echo "Unexpected exit code from ci:sparse_checkout: $exit_code"
+    exit 1
+  fi
 fi
