@@ -3,7 +3,7 @@ include FactoryBot::Syntax::Methods
 class TestSection
   DEFAULT_TEACHER_EMAIL = 'test_teacher@code.org'
   DEFAULT_TEACHER_PASSWORD = 'test_password'
-  DEFAULT_TEACHER_NAME = 'Test Teacher'
+  DEFAULT_TEACHER_NAME = 'Teacher Generated'
   DEFAULT_SECTION_NAME = 'Generated Test Section'
   DEFAULT_NUM_STUDENTS = 10
 
