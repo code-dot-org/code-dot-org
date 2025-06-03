@@ -58,7 +58,8 @@ module Cdo
     # Returns the parsed configuration for the given region.
     def self.load_config(region)
       return unless region_available?(region)
-      config = YAML.load_file(CDO.dir('config', 'global_editions', "#{region}.yml")) || {}
+      content = File.read(CDO.dir('config', 'global_editions', "#{region}.yml"))
+      config = YAML.safe_load(content, aliases: true) || {}
       deep_freeze(config.deep_symbolize_keys)
     end
 

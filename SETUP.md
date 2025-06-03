@@ -68,13 +68,23 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
         <code>bundle exec rake install</code> must always be called from the local project's root directory, or it won't work.
     </details>
 
-1. fix your database charset, collation, and timezone to match our servers
-    - `bin/mysql-client-admin`
-    - `ALTER DATABASE dashboard_development CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
-    - `ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
-    - `SET GLOBAL time_zone = '+00:00';` Set time zone for all new database connections
-    - `SET PERSIST time_zone = '+00:00';` Save the setting to the mysqld-auto.cnf file which is read on restart
-    - `SELECT @@global.time_zone;` Verify the setting
+1. Fix your database charset, collation, and timezone to match our servers
+
+   Open the MySQL client:
+
+   ```sh
+   bin/mysql-client-admin
+   ```
+
+   Once inside the MySQL prompt, run the following SQL commands:
+
+   ```sql
+   ALTER DATABASE dashboard_development CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+   ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+   SET GLOBAL time_zone = '+00:00';
+   SET PERSIST time_zone = '+00:00';
+   SELECT @@global.time_zone;
+   ```
 
 1. `bundle exec rake build`
     - This may fail for external contributors who don't have permissions to access Code.org AWS Secrets. Assign placeholder values to any configuration settings that are [ordinarily populated in Development environments from AWS Secrets](https://github.com/code-dot-org/code-dot-org/blob/staging/config/development.yml.erb) as indicated in this example: https://github.com/code-dot-org/code-dot-org/blob/5b3baed4a9c2e7226441ca4492a3bca23a4d7226/locals.yml.default#L136-L139
@@ -93,7 +103,7 @@ Staff should see instructions for requesting AWS account access in our "AWS Acco
 Some functionality will not work on your local site without this, for example, some project-backed level types such as <https://studio.code.org/projects/gamelab>. 
 ### For external contributors
 
-External contributors can supply alternate placeholder values for secrets normally retrieved from AWS Secrets Manager by creating a file named "locals.yml", copying contents from ["locals.yml.default"](locals.yml.default) and uncommenting following configurations to use placeholder values
+External contributors can supply alternate placeholder values for secrets normally retrieved from AWS Secrets Manager by creating a file named "locals.yml", copying contents from ["locals.yml.default"](locals.yml.default) and uncommenting the following configurations to use placeholder values:
 
 ```
 slack_bot_token: localoverride
@@ -101,11 +111,47 @@ pardot_private_key: localoverride
 properties_encryption_key: ''
 ```
 
+### Setting up local S3 emulation
+
+Some parts of the build process require access to S3 buckets. As an external contributor without AWS credentials, one can emulate S3 locally using MinIO.
+
+1. Uncomment and set the following fields in your `locals.yml` file:
+    ```
+    aws_s3_endpoint: http://localhost:9000
+    aws_s3_access_key_id: local-development
+    aws_s3_secret_access_key: allstudents
+    aws_s3_emulated: true
+    ```
+
+1. Ensure Docker is installed on your machine. If you don't have it, install Docker Desktop from [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/).
+
+1. Start a local S3 emulator. We recommend using MinIO via Docker. From the project root, run:
+    ```
+    docker-compose -f docker/developers/docker-compose.minio.yml up
+    ```
+    This will start a local MinIO instance at `http://localhost:9000`.
+
+1. Once MinIO is running and your `locals.yml` is configured, you can proceed with:
+    ```
+    bundle exec rake install
+    ```
+
+This setup allows external contributors to bypass the need for AWS credentials and continue with a local development environment.
+
 ## OS-specific prerequisites
 
 ### macOS
 
 These steps are for Apple devices running **macOS 14.x**, including those running on [Apple Silicon (M1|M2|M3) ARM architecture CPUs](https://en.wikipedia.org/wiki/Apple_silicon#M_series). 
+
+For developers running **macOS 15.5** or later, and **Xcode 16.3** or later, you may have trouble building with Ruby 3.0.5. We recommend using Ruby 3.3.4 or later. Edit your `.ruby-version` file but do not commit and push it to the Code.org repo (this version of Ruby is not officially supported yet):
+```
+ruby-3.3.4
+```
+It may also be necessary to update `eyes_selenium` in your `Gemfile` to version 6.9 or later:
+```
+gem 'eyes_selenium', '~> 6.9'
+```
 
 1. Open a Terminal.
 
