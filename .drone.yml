@@ -203,7 +203,7 @@ steps:
       - name: mysql
         path: /drone/src/var/lib/mysql
     settings:
-      filename: cache-staging-misc-build-artifacts.tar.gz
+      filename: cache-staging-misc-build-artifacts.with-node_modules.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -325,6 +325,7 @@ steps:
         - /home/ci/.rbenv
         - /var/lib/mysql
         - ./apps/build
+        - ./apps/node_modules
 
 volumes:
   - name: rbenv
