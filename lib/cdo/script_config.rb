@@ -8,18 +8,6 @@ require_relative 'http_cache'
 UNCACHED_HOC_UNITS = %w(playlab artist infinity iceage).freeze
 
 class ScriptConfig
-  # Returns true if the script level path is excluded from caching, even if it
-  # is in a publicly cacheable script.
-  def self.uncached_script_level_path?(script_level_path)
-    HttpCache.uncached_script_level_path?(script_level_path)
-  end
-
-  # Returns true if the script levels for `script_name` can be publicly cached
-  # by proxies.
-  def self.allows_public_caching_for_script(script_name)
-    HttpCache.allows_public_caching_for_script(script_name)
-  end
-
   def self.hoc_scripts
     HttpCache.cached_scripts + UNCACHED_HOC_UNITS
   end

@@ -369,13 +369,4 @@ class HttpCache
       }
     }
   end
-
-  def self.uncached_script_level_path?(script_level_path)
-    UNCACHED_UNIT_LEVEL_PATHS.include?(script_level_path)
-  end
-
-  # Return true if the levels for the given script name can be publicly cached by proxies.
-  def self.allows_public_caching_for_script(script_name)
-    CACHED_UNITS_MAP.include?(script_name)
-  end
 end
