@@ -171,11 +171,11 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
   const layoutDropdownOptions: SimpleDropdownProps['items'] = [
     {
       value: 'horizontal',
-      text: 'Horizontal',
+      text: codebridgeI18n.horizontal(),
     },
     {
       value: 'vertical',
-      text: 'Vertical',
+      text: codebridgeI18n.vertical(),
     },
   ];
   const dropdownColor = theme === 'Dark' ? 'white' : 'black';
@@ -266,13 +266,13 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
         </div>
         <div className={moduleStyles.dropdownRow}>
           <label
-            htmlFor={codebridgeI18n.theme()}
+            htmlFor={codebridgeI18n.layout()}
             className={moduleStyles.dropdownLabel}
           >
-            Layout
+            {codebridgeI18n.layout()}
           </label>
           <SimpleDropdown
-            labelText={'Layout'}
+            labelText={codebridgeI18n.layout()}
             isLabelVisible={false}
             onChange={event => handleLayoutChange(event.target.value)}
             items={layoutDropdownOptions}
