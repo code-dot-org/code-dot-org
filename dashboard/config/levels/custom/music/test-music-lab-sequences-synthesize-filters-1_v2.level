@@ -1,0 +1,106 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T02:57:02.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "### Sequence the Effects \r\n\r\nYou have one sound to manipulate with effects. \r\n\r\nDo this:\r\n- Use at least one delay effect (high or low) \r\n- Use at least one filter effect (medium or low)",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "default",
+      "sounds": {
+        "electro": [
+          "drum_beat_edm"
+        ]
+      },
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": false
+    },
+    "reference_links": [
+      "/courses/alloftheplaygrounds/guides/music-lab-effects/"
+    ],
+    "map_reference": "/courses/alloftheplaygrounds/guides/music-lab-effects/",
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-synthesize-filters-1_38cadd17-85f9-4907-8a7b-f48e9976a303",
+        "message": "You Did It!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 1
+          },
+          {
+            "name": "used_effect_non_default"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-synthesize-filters-1_797319c6-1966-4164-84ea-6f73bebd7625",
+        "message": "You played a sound with an effect! Try changing from the default value!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 1
+          },
+          {
+            "name": "used_effect"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-synthesize-filters-1_482a4714-d2af-4bd2-aca1-e801c6985a65",
+        "message": "You played a sound! Be sure to add an effect!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-synthesize-filters-1_55602d65-6e0a-407a-8f99-957c654b7333",
+        "message": "Play at least one track!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHorhngLMpfwWbxdkMuo9zOTOR6pxMGtrCErPpofj3i3skLb\nKZjPWD3hdrt9AGESia/FBoBMSrZ23moHJfipdeUIs2/aumExOVvk8pQLpIQl\npyc9seASPKKKFZmRu5YLqpR2X0MJ5ydm2iSQ5Rg6qBnoHBGtWZjGL35HKzMS\nIZ/FGNZ17MHxduDxgCXZphY/XC4BdJPRTdIvSgHSLmyqHSxk/6b6o2FI0kuh\nzpa1jia0EeCwBSysaJA4j1FHXJAIEHRkmpbhV0tiXyim1DpjjEv7PBfGGxxJ\nFb50tQP/xTMAB/r2XkXz8I08Db2N5hH6I3YKy7HI0qFlS0ZJ35H35NkyQwl6\nws08s50RWYhODytm21pMp6O8IHAr1o328jbhIZwG25sd+HOxaNW4rCtou+Xg\ns3vrVh00Du6VSqFpMvrPyaXyEboFAGu/ffBjSW568N52zTDWhz0v8ehTpM1B\nDL7pkrlCdraM+LJNGH+KvVk++JWVxUdtN1bBKMH9lEgge63oNBtBXZlLPkmU\ndNMM9HyfG2Xxd3gnCATtb7p2athxlKG4rqyEeodqGTEGGjGEL7+b79a2S7XJ\nbBYYtxEEidfre6yW5GridWaT1mlg34wU/MMvksFYKtJknNK14Z8V9j9AVy7M\nBJ75D09yfqiC+HqjE5ZJPRvdQlB6u8oh4/AkXaSIew9eDyABhS/i1o68+LXx\nXrLAXu0zqf4ewkumQb2o2sSufa820QCxBQ3o6pJqwLJqUCTe9nscEbCq3tLm\njbEqyixQs6YJpT/XIPOYWUXohJf7ySl0zuYFpgkSRuHgLejfnoxTeGRw/e0/\nwNi45nTn\n",
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:02.926+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-filters-1\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-filters-1\"}]"
+}]]></config>
+  <blocks/>
+</Music>

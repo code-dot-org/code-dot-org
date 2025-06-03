@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-23 18:49:48 UTC",
+    "serialized_at": "2025-05-27 20:16:48 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -365,6 +365,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MLself-paced-pl-k5-2-intro_2024_Melissa_1_1_2025"
+        ],
         "progression": "Welcome to Teaching Coding with Music! "
       },
       "bonus": false,
@@ -387,6 +390,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MLPLGuide_L1_Opening2_1_1_2025"
+        ],
         "progression": "Welcome to Teaching Coding with Music! "
       },
       "bonus": false,
@@ -409,6 +415,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Certificate_2025"
+        ],
         "progression": "Welcome to Teaching Coding with Music! "
       },
       "bonus": false,
@@ -431,6 +440,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MLOPD-K5-PLVid_2023_K5CSConcepts_1_1_2025"
+        ],
         "progression": "Welcome to Teaching Coding with Music! "
       },
       "bonus": false,
@@ -453,6 +465,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "who_why_coding_with_music_2025"
+        ],
         "progression": "Welcome to Teaching Coding with Music! "
       },
       "bonus": false,
@@ -475,6 +490,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-CSDMusicLab-L1-lesson1resources_2025"
+        ],
         "progression": "About the Curriculum"
       },
       "bonus": false,
@@ -497,6 +515,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music_lab_PL_career_journeys_2025"
+        ],
         "progression": "About the Curriculum"
       },
       "bonus": false,
@@ -519,6 +540,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_career_journeys_in_classroom_2025"
+        ],
         "progression": "About the Curriculum"
       },
       "bonus": false,
@@ -541,6 +565,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ML-Panel Levels_1_1_2025"
+        ],
         "progression": "Platform and Pedagogy"
       },
       "bonus": false,
@@ -563,6 +590,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLmusic-coding-intro-seq-panel_1_1_1_2025"
+        ],
         "progression": "Platform and Pedagogy"
       },
       "bonus": false,
@@ -585,6 +615,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MLPLPLSP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PLPL_prod_1_1_2025"
+        ],
         "progression": "Platform and Pedagogy"
       },
       "bonus": false,
@@ -607,6 +640,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "songwriterstoolbox-pl_1_2025"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -629,6 +665,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "k5_musiclab_pl_songwriterstoolbox_2025"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -651,6 +690,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ct_in_music_lab_2025"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -673,6 +715,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-play-sound_launch_1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -695,6 +740,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-play-two_launch_1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -717,6 +765,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-timing-video_1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -739,6 +790,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-together1_launch_1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -761,6 +815,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-ingro-loop1_launch_1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -783,6 +840,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-5sounds_launch_1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -805,6 +865,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-loop-beat_launch_1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -827,6 +890,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-seq-match_launch_1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -849,6 +915,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_career_exploration_2025"
+        ],
         "progression": "Career Exploration"
       },
       "bonus": false,
@@ -871,6 +940,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-inspiration_1_2025"
+        ],
         "progression": "Inspire & Try"
       },
       "bonus": false,
@@ -893,6 +965,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-make_launch_1_2025"
+        ],
         "progression": "Inspire & Try"
       },
       "bonus": false,
@@ -915,6 +990,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Music_lab_share_restart_2025"
+        ],
         "progression": "Inspire & Try"
       },
       "bonus": false,
@@ -937,6 +1015,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MLpl-k5-2-behaviors -intro_2024_K5block_1_2025"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -959,6 +1040,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-video-hold_launch_1_2025"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -981,6 +1065,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MusicLab-functions-info_1"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -1003,6 +1090,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-need_launch_1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1025,6 +1115,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-need2_launch_1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1047,6 +1140,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-panel_launch_1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1069,6 +1165,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-define_launch_1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1091,6 +1190,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-chorus_launch_1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1113,6 +1215,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-call_launch_1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1135,6 +1240,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MLU2L4 Multiple Choice packets2022_1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1157,6 +1265,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-chorus2_launch_1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1179,6 +1290,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-cfu_1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1201,6 +1315,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-panel2_launch_1_2025"
+        ],
         "progression": "Remix & Freeplay"
       },
       "bonus": false,
@@ -1223,6 +1340,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-beat_launch_1_2025"
+        ],
         "progression": "Remix & Freeplay"
       },
       "bonus": false,
@@ -1245,6 +1365,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MusicLab-functions_1_2025"
+        ],
         "progression": "Remix & Freeplay"
       },
       "bonus": false,
@@ -1267,6 +1390,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sound-designers-studio-PL_1_2025"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -1289,6 +1415,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-events-video_1_2025"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -1311,6 +1440,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml_events_triggers_2025"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -1333,6 +1465,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-event-try_launch_1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1355,6 +1490,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-event-sound_launch_1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1377,6 +1515,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-video-hold3_launch_1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1399,6 +1540,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-event-function_launch_1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1421,6 +1565,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-events-cfu_1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1443,6 +1590,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-effects-panel_launch_1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1465,6 +1615,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-effects_launch_1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1487,6 +1640,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-freeplay3_launch_1_2025"
+        ],
         "progression": "Freeplay"
       },
       "bonus": false,
@@ -1509,6 +1665,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ML-next-steps_1_1_2025"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1530,6 +1689,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml_nextsteps_2025"
+        ]
       },
       "bonus": false,
       "seeding_key": {

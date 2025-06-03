@@ -3,30 +3,38 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Cybersecurity and Global Impacts Unit Overview
+# The Fabric of the Internet and AI Unit Overview
  
-#### While the Networks and the Internet Unit is part of the **AI Foundations** course, it can also serve as a standalone unit for 9-12 students that can be integrated seamlessly into existing curriculum, including computer science, math, or science, offering teachers the flexibility to introduce it according to their schedule and educational needs.
+#### While the The Fabric of the Internet and AI Unit is part of the **AI Foundations** course, it can also serve as a standalone unit for 9-12 students that can be integrated seamlessly into existing curriculum, including computer science, math, or science, offering teachers the flexibility to introduce it according to their schedule and educational needs.
 
-<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-family: Arial, sans-serif; font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
 
   <div>
     <h4 style="margin-top: 0; font-weight: bold;">Students will:</h4>
     <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
-      	<li>Describe how data is transmitted, routed, and reassembled over the Internet.
-Explain the roles of IP addressing, DNS, and redundancy in ensuring efficient communication.</li>
-		<li>Analyze the role of AI in enhancing network security.</li>
+      	<li>Describe how data is transmitted over the Internet.</li>
 		<li>Assess the implications of the digital divide and propose strategies to promote equitable Internet access.</li>
-		<li>Evaluate the ethical considerations of AI in network security and propose responsible solutions.</li>
-		<li>Identify and describe roles in networking and cybersecurity, such as Network Engineers and AI Cybersecurity Specialists.</li>
-		<li>Analyze how these careers contribute to addressing societal challenges and improving technology.</li>
-		<li>Use abstraction, decomposition, and pattern recognition to solve problems related to Internet communication and security.</li>
+        <li>Analyze the role of AI in enhancing network security.</li>
         <li>Propose and evaluate solutions to complex networking challenges, including security risks and accessibility issues.</li>
     </ul>
+  </div>
+  <div>
+    <img src="https://images.code.org/2e1bb1b21f46e5ccc05849706761ff02-Screenshot 2025-05-19 at 3.34.08 PM.png" 
+         alt="internet icon" 
+         style="border-radius: 10px; width: 300px; height: auto; margin: 10px">
   </div>
 </div>
 
 
-#### This unit consists of 11 lessons, takes about three weeks to complete, and does not have Python programming.
+
+## Unit Calendar 
+
+#### Take a quick look at the lessons included in this unit using the calendar tool.
+
+#### This version of the calendar shows the pacing for 45 minute class periods and can be customized using the drop-down menu to accommodate your schedule. 
+
+#### Check out the <a href="https://studio.code.org/s/aif4-2025" target="blank" rel="noopener noreferrer">calendar feature</a> on top of the unit preview. 
+
 
 <div style="clear:both;"></div>
 
@@ -35,7 +43,7 @@ Explain the roles of IP addressing, DNS, and redundancy in ensuring efficient co
 </p>
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ Preview the full <a href='https://studio.code.org/courses/networks-and-the-internet-2024' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Unit</a>.
+    ➡️ Preview the full <a href='https://studio.code.org/s/aif4-2025' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Unit</a>.
 </p>
 
 MARKDOWN

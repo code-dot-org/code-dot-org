@@ -4,23 +4,23 @@ Feature: Using the assessments tab in the teacher dashboard
 
   Scenario: Assessments tab survey submissions
     Given I create an authorized teacher-associated student named "Sally"
-    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/lessons/1/levels/1/page/6"
+    And I submit the assessment on "http://studio.code.org/courses/csp-2017/units/9/lessons/1/levels/1/page/6"
 
     And I create a student named "Student2"
     And I join the section
-    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/lessons/1/levels/1/page/6"
+    And I submit the assessment on "http://studio.code.org/courses/csp-2017/units/9/lessons/1/levels/1/page/6"
 
     And I create a student named "Student3"
     And I join the section
-    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/lessons/1/levels/1/page/6"
+    And I submit the assessment on "http://studio.code.org/courses/csp-2017/units/9/lessons/1/levels/1/page/6"
 
     And I create a student named "Student4"
     And I join the section
-    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/lessons/1/levels/1/page/6"
+    And I submit the assessment on "http://studio.code.org/courses/csp-2017/units/9/lessons/1/levels/1/page/6"
 
     And I create a student named "Student5"
     And I join the section
-    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/lessons/1/levels/1/page/6"
+    And I submit the assessment on "http://studio.code.org/courses/csp-2017/units/9/lessons/1/levels/1/page/6"
 
     # Assign a unit with an unlocked survey
     When I sign in as "Teacher_Sally" and go home

@@ -57,7 +57,7 @@ steps:
       - git lfs install --skip-repo
       # We should be in a cached git repo, but clone if the cache failed
       - "[ -d .git ] || (echo 'WARNING: get-cached-staging failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .)"
-      # Checkout our target branch (=the PR)
+      # Checkout our source branch (=the PR)
       - git fetch origin $DRONE_SOURCE_BRANCH
       - git checkout $DRONE_SOURCE_BRANCH
       - git pull
@@ -172,8 +172,8 @@ steps:
         bin/drone/vscode $hostname
         EOF
 
-  # We cache a clone of staging in the `cache-staging-clone` pipeline
-  - name: get-cached-staging
+  # We cache a clone of staging in the `cache-staging-build-artifacts` pipeline
+  - name: get-cached-staging-clone
     image: plugins/s3-cache
     settings:
       filename: cache-staging-clone.tar.gz
@@ -190,12 +190,13 @@ steps:
       - git lfs install --skip-repo
       # We should be in a cached git repo, but clone if the cache failed
       - "[ -d .git ] || (echo 'get-cached-staging failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .)"
-      # Checkout our target branch (the PR's branch).
+      # Checkout our source branch (the PR's branch).
       - git fetch origin $DRONE_SOURCE_BRANCH
       - git checkout $DRONE_SOURCE_BRANCH
       - git pull
       - git reset --hard $DRONE_COMMIT
-      # Also fetch the target branch (which is staging or staging-next for pull requests.) We need this for determining which tests to run based on changed files.
+      # Also fetch the target branch (usually staging for pull requests). We
+      # need this for determining which tests to run based on changed files.
       - git remote set-branches --add origin $DRONE_TARGET_BRANCH
       - git fetch --depth 100 origin $DRONE_TARGET_BRANCH
       # Merge so we're up-to-date with the target before running tests.
@@ -203,14 +204,23 @@ steps:
       - git config user.email "drone-fake-user@code.org"
       - git merge origin/$DRONE_TARGET_BRANCH
 
-  - name: restore-cache
+  # We cache staging's rbenv and database in the
+  # `cache-staging-build-artifacts` pipeline.
+  - name: get-cached-staging-misc-build-artifacts
     image: plugins/s3-cache
+    volumes:
+      # Even files cached with absolute paths will be restored into the
+      # workdir; so for this step, we mount the relevant volumes there, too.
+      - name: rbenv
+        path: /drone/src/home/ci/.rbenv
+      - name: mysql
+        path: /drone/src/var/lib/mysql
     settings:
+      filename: cache-staging-misc-build-artifacts.tar.gz
       endpoint: s3://cdo-drone
+      restore: true
       debug: true
       pull: true
-      restore: true
-      filename: ui-tests-cache-ubuntu-20.tar.gz
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
@@ -236,9 +246,9 @@ steps:
         from_secret: SAUCE_ACCESS_KEY
     shm_size: '2gb' # necessary to avoid "invalid session id"/"session deleted because of page crash" errors in Selenium
     commands:
+      # Cached data gets restored by the root user, so we need to reassign
       - sudo chown -R ci:ci .
-      # cache is restored to source directory, so we need to copy it into the right place
-      - cp -rn "$(pwd)/home/ci/.rbenv" /home/ci || true
+      - sudo chown -R mysql:mysql /var/lib/mysql
       # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
       - export GIT_COMMIT=$DRONE_COMMIT
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
@@ -248,23 +258,6 @@ steps:
       - /entrypoint.sh docker/ci/scripts/ui_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
       - exit $EXIT_CODE
-
-  - name: update-cache
-    image: plugins/s3-cache
-    volumes:
-      - name: rbenv
-        path: /home/ci/.rbenv
-    settings:
-      endpoint: s3://cdo-drone
-      debug: true
-      pull: true
-      rebuild: true
-      filename: ui-tests-cache-ubuntu-20.tar.gz
-      mount:
-        - /home/ci/.rbenv
-        # Used to avoid re-seeding UI test data unless something changed - see cached_ui_test task in https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/lib/tasks/seed.rake
-        - dashboard/db/ui_test_data.hash
-        - dashboard/db/ui_test_data.sql
 
 volumes:
   - name: rbenv
@@ -282,11 +275,13 @@ trigger:
     - pull_request
 
 ---
-# On push, cache a clone of staging to drone's S3 bucket.
-# The staging cache reduces git bandwidth in PR pipelines.
+# On a push to staging, cache several build artifacts to drone's S3 bucket:
+# - A fresh git clone of staging, to reduce git bandwidth
+# - A copy of the MySQL databases, to reduce seed time
+# - A copy of the ~/.rbenv directory, to reduce bundle install time
 kind: pipeline
 type: docker
-name: cache-staging-clone
+name: cache-staging-build-artifacts
 
 clone:
   disable: true
@@ -309,6 +304,47 @@ steps:
       mount:
         - .
 
+  # Do all the work necessary to run UI tests so we can capture a complete
+  # snapshot of rbenv and the database, but don't actually run the tests.
+  - name: prepare-ui-tests
+    image: codedotorg/code-dot-org:1.15
+    pull: always
+    environment:
+      PROPERTIES_ENCRYPTION_KEY:
+        from_secret: PROPERTIES_ENCRYPTION_KEY
+    volumes:
+      - name: rbenv
+        path: /home/ci/.rbenv
+      - name: mysql
+        path: /var/lib/mysql
+    commands:
+      - sudo chown -R ci:ci .
+      - /entrypoint.sh docker/ci/scripts/prepare_ui_tests.sh
+
+  - name: cache-staging-misc-build-artifacts
+    image: plugins/s3-cache
+    volumes:
+      - name: rbenv
+        path: /home/ci/.rbenv
+      - name: mysql
+        path: /var/lib/mysql
+    settings:
+      filename: cache-staging-misc-build-artifacts.tar.gz
+      endpoint: s3://cdo-drone
+      rebuild: true
+      debug: true
+      pull: true
+      mount:
+        - /home/ci/.rbenv
+        - /var/lib/mysql
+        - ./apps/build
+
+volumes:
+  - name: rbenv
+    temp: {}
+  - name: mysql
+    temp: {}
+
 trigger:
   branch:
     - "staging"
@@ -317,6 +353,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: 95bb212e743ae5140b77d802657cc7886de46c0d948e08ce4041fd6c47e031df
+hmac: 6646bfda5cd973eb102725e17d3dade6b986b372da0ebb87c687d40e29655dfc
 
 ...

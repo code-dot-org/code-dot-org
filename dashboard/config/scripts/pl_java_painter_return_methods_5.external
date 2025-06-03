@@ -11,7 +11,10 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/c341fec28bf1a2cef8f9e17a6da17e33-image-1674250917938.41.13 PM.png" style="width:50%" alt="UML diagram">
 
-#### A **void method** is a method that performs an action but does not return a value.
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 A <strong>Void method</strong> is a method that performs an action but does not return a value.</p>
+</div>
+
 
 #### All other methods return information or data.  They may also perform an action in addition to returning information. 
 

@@ -22,6 +22,30 @@ export const EMOJIS = [
   '🦄',
 ];
 
+export const EMOJI_LABELS = [
+  'Fire',
+  'Penguin',
+  'Alien',
+  'Ghost',
+  'Rainbow',
+  'Robot',
+  'Mushroom',
+  'Rocket',
+  'Dinosaur',
+  'Roller Skate',
+  'Cat',
+  'Umbrella',
+  'Doughnut',
+  'Octopus',
+  'Bee',
+  'Pretzel',
+  'Phone',
+  'Panda',
+  'Puzzle Piece',
+  'Dolphin',
+  'Unicorn',
+];
+
 export const COLORS = [
   '#EB1460',
   '#F62CAF',
@@ -43,4 +67,27 @@ export const COLORS = [
   '#9D9D9D',
   '#5E7C8B',
   '#000000',
+];
+
+export const COLOR_LABELS = [
+  'Magenta',
+  'Pink',
+  'Purple',
+  'Dark Purple',
+  'Navy Blue',
+  'Blue',
+  'Aqua Blue',
+  'Teal',
+  'Green',
+  'Light Green',
+  'Yellow Green',
+  'Yellow',
+  'Orange Yellow',
+  'Orange',
+  'Red Orange',
+  'Red',
+  'Brown',
+  'Gray',
+  'Blue Gray',
+  'Black',
 ];

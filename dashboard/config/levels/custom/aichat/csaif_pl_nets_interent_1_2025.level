@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-04-23T18:44:06.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "This chatbot is designed to help you explore how networking components function and how data flows across the Internet.\r\n\r\n### Do This:\r\n- Work with a partner and interact with the AI chatbot to identify the function of each networking component on your activity guide.\r\n- Use the activity guide  to **label each component** and **draw arrows** to show how data moves\r\n\r\n**Example Questions to Ask the Chatbot**\r\n- What does a router do when I visit a website?\r\n- What is a switch? How does it direct data?\r\n- How does a server help load a webpage?\r\n- What happens when I send a message online?\r\n\r\n**Tip**\r\n- Be specific with your questions, and if answers are too vague, or you don't understand them, rephrase your question for better results!   ",
+    "long_instructions": "##  🔍Teacher Tip\r\n**Welcome to AI chat lab!** If this is your first time using AI chat lab, take your time exploring it as you and your students will be using this tool throughout the Fabric of the Internet and AI Unit and the AIF curriculum.\r\n\r\nYou'll use this chatbot to complete AI Networks Chat Activity Guide you opened/printed on the previous level.\r\n\r\n---\r\n\r\n\r\nThis chatbot is designed to help you explore how networking components function and how data flows across the Internet.\r\n\r\n### Do This:\r\n- Interact with the AI chatbot to identify the function of each networking component on your activity guide.\r\n- Use the activity guide  to **label each component** and **draw arrows** to show how data moves\r\n\r\n**Example Questions to Ask the Chatbot**\r\n- What does a router do when I visit a website?\r\n- What is a switch? How does it direct data?\r\n- How does a server help load a webpage?\r\n- What happens when I send a message online?\r\n\r\n**Tip**\r\n- Be specific with your questions, and if answers are too vague, or you don't understand them, rephrase your question for better results!   ",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -44,7 +45,6 @@
     },
     "name_suffix": "_2025"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-23T18:44:06.976+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_nets_interent_1\\\"\"],\"cloned_from\":\"csaif_pl_nets_interent_1\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-23T18:44:06.976+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_nets_interent_1\\\"\"],\"cloned_from\":\"csaif_pl_nets_interent_1\"},{\"changed_at\":\"2025-05-29 19:47:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
 }]]></config>
 </Aichat>

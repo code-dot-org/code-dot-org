@@ -55,6 +55,13 @@
   }
 }
 
+.accessibleDescription {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
 .avatarDialogHeader {
   width: 100%;
   display: flex;
@@ -107,6 +114,19 @@
   &:hover {
     border: 2px solid var(--brand-teal-50);
   }
+
+  &:focus {
+    border: 2px solid var(--brand-teal-50);
+    outline: none;
+  }
+
+  &:active {
+    border: 2px solid var(--brand-teal-50);
+  }
+}
+
+.selectedGridItem {
+  border: 2px solid var(--brand-teal-50);
 }
 
 .colorBox {

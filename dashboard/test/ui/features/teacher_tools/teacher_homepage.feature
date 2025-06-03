@@ -36,15 +36,15 @@ Feature: Using the teacher homepage sections feature
   @properties_encryption_key
   Scenario: Navigate to course and unit pages
     # No sections, ensure that levels load correctly after navigating from MiniView
-    Given I am on "http://studio.code.org/s/csp2-2017/lessons/1/levels/1"
+    Given I am on "http://studio.code.org/courses/csp-2017/units/2/lessons/1/levels/1"
     And I wait to see ".header_popup_link"
     When I wait for jquery to load
     And I click selector ".header_popup_link"
     And I wait until element "a:contains(View Unit Overview)" is visible
     Then I click selector "a:contains(View Unit Overview)"
-    And I wait until current URL contains "/s/csp2-2017"
+    And I wait until current URL contains "/courses/csp-2017/units/2"
     Then I press the first ".uitest-ProgressPill" element
-    And I wait until current URL contains "/s/csp2-2017/lessons/1/levels/1"
+    And I wait until current URL contains "/courses/csp-2017/units/2/lessons/1/levels/1"
 
     Given I am on "http://studio.code.org/home"
     When I see the section set up box
@@ -96,16 +96,16 @@ Feature: Using the teacher homepage sections feature
     And I wait until element ".uitest-CourseScript" is visible
     Then the url contains the section id
 
-    When I am on "http://studio.code.org/s/csp1-2019"
+    When I am on "http://studio.code.org/courses/csp-2019/units/1"
     And I wait until element "#script-title" is visible
     Then the url contains the section id
 
-    When I am on "http://studio.code.org/s/coursea-2019"
+    When I am on "http://studio.code.org/courses/coursea-2019/units/1"
     And I wait until element "#script-title" is visible
     Then the url contains the section id
 
     # loading non-existent section succeeds, with no section selected
-    When I am on "http://studio.code.org/s/coursea-2019?section_id=99999"
+    When I am on "http://studio.code.org/courses/coursea-2019/units/1?section_id=99999"
     And I wait until element "#script-title" is visible
     And element ".uitest-sectionselect" has value ""
 
@@ -125,7 +125,7 @@ Feature: Using the teacher homepage sections feature
     And unit "CSP Unit 2 - Digital Information ('17-'18)" is marked as not visible
 
     # Verify hidden unit warning banner appears
-    When I am on "http://studio.code.org/s/csp2-2017"
+    When I am on "http://studio.code.org/courses/csp-2017/units/2"
     And I wait until element "#script-title" is visible
     Then I wait until element ".announcement-notification:contains(unit is hidden)" is visible
 
@@ -157,7 +157,7 @@ Feature: Using the teacher homepage sections feature
     When I see the section set up box
     And I create a new "High School" student section with course "Computer Science Principles", version "'17-'18"
     Then the student section table should have 1 rows
-    And the section table row at index 0 has secondary assignment path "/s/csp1-2017"
+    And the section table row at index 0 has secondary assignment path "/courses/csp-2017/units/1"
 
   Scenario: Assign a CSF course with multiple versions
     Given I am on "http://studio.code.org/home"
@@ -225,4 +225,4 @@ Feature: Using the teacher homepage sections feature
     And element ".uitest-owned-sections" does not contain text "Current unit:"
 
     When I click selector ".uitest-owned-sections a:contains('Single Unit Course 2025')" to load a new page
-    Then check that the URL contains "/s/ui-test-single-unit-2025"
+    Then check that the URL contains "/courses/ui-test-single-unit-course-2025/units/1"

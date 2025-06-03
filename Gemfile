@@ -103,7 +103,7 @@ group :development, :test do
   gem 'faker', '~> 3.4', require: false
   gem 'fakeredis', require: false
   gem 'mocha', require: false
-  gem 'timecop'
+  gem 'timecop', '>= 0.9.4' # required for Ruby 3.1 support
 
   # For UI testing.
   gem 'cucumber'

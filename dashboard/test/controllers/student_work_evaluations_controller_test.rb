@@ -10,6 +10,8 @@ class StudentWorkEvaluationsControllerTest < ActionController::TestCase
     @unit_group = create(:single_unit_course, name: 'csp-2024', family_name: 'csp', version_year: '2024', unit: @unit)
     CourseOffering.add_course_offering(@unit_group)
     @level = @unit.levels.first
+    @skill = create(:skill)
+    create(:levels_skill, level: @level, skill: @skill)
     @ule_params = {
       type: 'UserLevelEvaluation',
       level_id: @level.id,
@@ -26,6 +28,7 @@ class StudentWorkEvaluationsControllerTest < ActionController::TestCase
       level_id: @level.id,
       unit_id: @unit.id,
       student_id: @student.id,
+      skill_id: @skill.id,
       evaluator: "AI",
       evaluation_criteria: 'Did the student declare a variable correctly?',
       evaluation: 'Needs revision',

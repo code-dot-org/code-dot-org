@@ -9,6 +9,7 @@ on:
       - staging-next
     paths:
       - 'frontend/**'
+      - '.github/**'
 
 env:
   APPLITOOLS_BATCH_ID: ${{ github.event.pull_request.head.sha || github.sha }}
