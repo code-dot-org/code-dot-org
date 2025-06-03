@@ -1,6 +1,6 @@
 import * as Blockly from 'blockly/core';
 import classNames from 'classnames';
-import React, {ReactNode, useRef} from 'react';
+import React, {ReactNode, useRef, useCallback} from 'react';
 
 import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -121,6 +121,18 @@ function BlocklyLevel<
     ...UNCOUNTED_BLOCK_TYPES,
     ...(uncountedBlockTypes || []),
   ];
+  const toolboxBlocks = levelData.multipleChoice
+    ? undefined
+    : levelData.blocklyData?.toolboxBlocks?.contents?.length === 0
+      ? undefined
+      : levelData.blocklyData?.toolboxBlocks;
+  const setToolboxHeaderWidth = useCallback(() => {
+    // Get the width of the flyout / toolbox
+    if (toolboxHeaderRef.current && workspaceRef.current) {
+      toolboxHeaderRef.current.style.width =
+        getToolboxWidth(workspaceRef.current as Blockly.WorkspaceSvg) + 'px';
+    }
+  }, []);
 
   console.log('LEVEL', levelData);
 
@@ -158,14 +170,16 @@ function BlocklyLevel<
         <div className={moduleStyles.blocklyLevel}>
           <div className={moduleStyles.header}>
             <div ref={toolboxHeaderRef} className={moduleStyles.toolboxHeader}>
-              <Heading6 className={moduleStyles.headerText}>
-                <FontAwesomeV6Icon
-                  iconName="puzzle-piece"
-                  iconStyle="solid"
-                  className={moduleStyles.headerIcon}
-                />
-                <span>Blocks</span>
-              </Heading6>
+              {!!toolboxBlocks && (
+                <Heading6 className={moduleStyles.headerText}>
+                  <FontAwesomeV6Icon
+                    iconName="puzzle-piece"
+                    iconStyle="solid"
+                    className={moduleStyles.headerIcon}
+                  />
+                  <span>Blocks</span>
+                </Heading6>
+              )}
             </div>
             <div className={moduleStyles.workspaceHeader}>
               <Heading6 className={moduleStyles.headerText}>Workspace</Heading6>
@@ -249,27 +263,13 @@ function BlocklyLevel<
               levelData.template?.blocklyData?.startBlocks ||
               levelData.blocklyData?.startBlocks
             }
-            toolboxBlocks={
-              levelData.multipleChoice
-                ? undefined
-                : levelData.blocklyData?.toolboxBlocks?.contents?.length === 0
-                  ? undefined
-                  : levelData.blocklyData?.toolboxBlocks
-            }
+            toolboxBlocks={toolboxBlocks}
             onChange={(event: Blockly.Events.Abstract) => {
               if (workspaceRef.current) {
                 blockCount.current = countBlocks(
                   workspaceRef.current,
                   fullUncountedBlockTypes,
                 );
-              }
-
-              // Get the width of the flyout / toolbox
-              if (toolboxHeaderRef.current && workspaceRef.current) {
-                toolboxHeaderRef.current.style.width =
-                  getToolboxWidth(
-                    workspaceRef.current as Blockly.WorkspaceSvg,
-                  ) + 'px';
               }
 
               // Dynamically update the counter
@@ -290,6 +290,9 @@ function BlocklyLevel<
                 }
               }
 
+              // Update toolbox / flyout width
+              setToolboxHeaderWidth();
+
               if (onChange) {
                 onChange(event);
               }
@@ -299,6 +302,9 @@ function BlocklyLevel<
               if (environment) {
                 environment.mainWorkspace = workspaceRef.current || undefined;
               }
+
+              // Get the initial width of the flyout / toolbox
+              setToolboxHeaderWidth();
 
               if (onInject) {
                 onInject();
