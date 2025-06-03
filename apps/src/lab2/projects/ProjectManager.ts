@@ -10,7 +10,6 @@
  *
  * If a project manager is destroyed, the enqueued save will be cancelled, if it exists.
  */
-import {getStore} from '@cdo/apps/redux';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 import {currentLocation} from '@cdo/apps/utils';
 
@@ -54,16 +53,25 @@ export default class ProjectManager {
   private reduceChannelUpdates: boolean;
   private initialSaveComplete: boolean;
   private forceReloading: boolean;
+  private isShareView: boolean | undefined;
   private thumbnailUrl: string | undefined;
   private thumbnailPngBlob: Blob | undefined;
 
-  constructor(
-    sourcesStore: SourcesStore,
-    channelsStore: ChannelsStore,
-    channelId: string,
-    reduceChannelUpdates: boolean,
-    metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
-  ) {
+  constructor({
+    sourcesStore,
+    channelsStore,
+    channelId,
+    reduceChannelUpdates,
+    isShareView = false,
+    metricsReporter = Lab2Registry.getInstance().getMetricsReporter(),
+  }: {
+    sourcesStore: SourcesStore;
+    channelsStore: ChannelsStore;
+    channelId: string;
+    reduceChannelUpdates: boolean;
+    isShareView?: boolean;
+    metricsReporter?: LabMetricsReporter;
+  }) {
     this.channelId = channelId;
     this.sourcesStore = sourcesStore;
     this.channelsStore = channelsStore;
@@ -71,6 +79,7 @@ export default class ProjectManager {
     this.initialSaveComplete = false;
     this.forceReloading = false;
     this.metricsReporter = metricsReporter;
+    this.isShareView = isShareView;
   }
 
   getChannelId(): string {
@@ -324,8 +333,7 @@ export default class ProjectManager {
   }
 
   getShouldCaptureThumbnail() {
-    const {isShareView} = getStore().getState().lab;
-    return this.channelId && this.lastChannel?.isOwner && !isShareView;
+    return this.channelId && this.lastChannel?.isOwner && !this.isShareView;
   }
 
   setThumbnail(pngBlob: Blob) {
