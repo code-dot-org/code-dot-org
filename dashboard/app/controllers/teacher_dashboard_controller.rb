@@ -28,8 +28,6 @@ class TeacherDashboardController < ApplicationController
     @section_order = UserPreference.find_by(user_id: current_user.id)&.section_order
     @locale_code = request.locale
 
-    SchoolInfoInterstitialHelper.update_last_seen_timestamp(current_user) if @show_school_info_interstitial || @show_school_info_confirmation_dialog
-
     view_options(full_width: true, no_padding_container: true)
   end
 
