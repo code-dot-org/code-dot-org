@@ -6,7 +6,6 @@ class ScriptLevelsController < ApplicationController
   check_authorization
   include LevelsHelper
   include VersionRedirectOverrider
-  include CachedUnitHelper
 
   before_action :redirect_admin_from_labs, only: [:reset, :next, :show, :lesson_extras]
   before_action :set_redirect_override, only: [:show]
@@ -51,7 +50,7 @@ class ScriptLevelsController < ApplicationController
       redirect_to "/s/#{@script.redirect_to}/next"
       return
     end
-    configure_caching(@script)
+    prevent_caching
     if @script.finish_url && Policies::ScriptActivity.completed?(current_user, @script)
       redirect_to @script.finish_url
       return
@@ -104,7 +103,8 @@ class ScriptLevelsController < ApplicationController
     # will be true if the user is in any unarchived section where tts autoplay is enabled
     @tts_autoplay_enabled = current_user&.sections_as_student&.where({hidden: false})&.map(&:tts_autoplay_enabled)&.reduce(false, :|)
 
-    @public_caching = configure_caching(@script)
+    prevent_caching
+    @public_caching = false
 
     raise ActiveRecord::RecordNotFound unless @script_level
 

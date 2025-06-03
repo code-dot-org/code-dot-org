@@ -6,7 +6,6 @@ class LessonsController < ApplicationController
   before_action :redirect_to_canonical_path, only: [:show, :student_lesson_plan]
 
   include LevelsHelper
-  include CachedUnitHelper
 
   # Unit levels which are not in activity sections will not show up on the
   # lesson edit page, in which case saving the edit page would cause those
