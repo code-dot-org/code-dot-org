@@ -88,7 +88,7 @@ function initializeCodeMirror(target, mode, options = {}) {
             }),
             previewElement
           );
-        } else if (game === 'Aichat') {
+        } else if (game === 'Aichat' || game === 'Music') {
           ReactDOM.render(
             React.createElement(InstructionsPanel, {
               text: editor.getValue(),
