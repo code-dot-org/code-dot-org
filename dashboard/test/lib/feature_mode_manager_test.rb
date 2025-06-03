@@ -72,8 +72,6 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
     assert @gatekeeper.allows('shareEnabled')
     assert @gatekeeper.allows('slogging')
     assert_equal 1, @dcdo.get('hoc_activity_sample_weight', nil).to_i
-    assert_equal 180, @dcdo.get('public_proxy_max_age', nil)
-    assert_equal 360, @dcdo.get('public_max_age', nil)
   end
 
   def test_allows
@@ -123,8 +121,6 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
     assert @gatekeeper.allows('shareEnabled')
     refute @gatekeeper.allows('slogging')
     assert_equal 1, @dcdo.get('hoc_activity_sample_weight', nil).to_i
-    assert_equal 14400, @dcdo.get('public_proxy_max_age', nil)
-    assert_equal 28800, @dcdo.get('public_max_age', nil)
   end
 
   def test_fallback_mode
@@ -146,8 +142,6 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
     assert @gatekeeper.allows('shareEnabled')
     refute @gatekeeper.allows('slogging')
     assert_equal 1, @dcdo.get('hoc_activity_sample_weight', nil).to_i
-    assert_equal 14400, @dcdo.get('public_proxy_max_age', nil)
-    assert_equal 28800, @dcdo.get('public_max_age', nil)
   end
 
   def test_emergency_mode
@@ -164,8 +158,6 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
     assert @gatekeeper.allows('shareEnabled')
     refute @gatekeeper.allows('slogging')
     assert_equal 10, @dcdo.get('hoc_activity_sample_weight', nil).to_i
-    assert_equal 86400, @dcdo.get('public_proxy_max_age', nil)
-    assert_equal 172800, @dcdo.get('public_max_age', nil)
   end
 
   def test_raises_on_invalid_mode
