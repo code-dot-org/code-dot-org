@@ -117,7 +117,7 @@ module UsersHelper
   #     "135": {"status": "perfect", "result": 100}
   #   }
   # }
-  def summarize_user_progress(unit, user = current_user, exclude_level_progress = false)
+  def summarize_user_progress(unit, user = current_user)
     user_data = {}
     if user
       is_instructor = unit.can_be_instructor?(user)
@@ -129,14 +129,14 @@ module UsersHelper
       user_data[:isVerifiedInstructor] = true if user.verified_instructor?
     end
 
-    merge_unit_progress(user_data, user, unit, exclude_level_progress)
+    merge_unit_progress(user_data, user, unit)
     if unit.has_peer_reviews?
       user_data[:peerReviewsPerformed] = PeerReview.get_peer_review_summaries(user, unit).try(:map) do |summary|
         summary.merge(url: summary.key?(:id) ? peer_review_path(summary[:id]) : script_pull_review_path(unit))
       end
     end
 
-    user_data[:current_lesson] = user.next_unpassed_progression_level(unit)&.lesson&.id unless exclude_level_progress || unit.script_levels.empty?
+    user_data[:current_lesson] = user.next_unpassed_progression_level(unit)&.lesson&.id unless unit.script_levels.empty?
 
     user_data.compact
   end
@@ -320,7 +320,7 @@ module UsersHelper
   end
 
   # Merge the progress for the specified unit and user into the user_data result hash.
-  private def merge_unit_progress(user_data, user, unit, exclude_level_progress = false)
+  private def merge_unit_progress(user_data, user, unit)
     return user_data unless user
 
     if unit.old_professional_learning_course?
@@ -332,19 +332,17 @@ module UsersHelper
       end
     end
 
-    unless exclude_level_progress
-      user_levels_by_level = user.user_levels_by_level(unit)
-      teacher_feedback_by_level = teacher_feedbacks_by_student_by_level([user], unit)
-      paired_user_levels = PairedUserLevel.pairs(user_levels_by_level.values.map(&:id))
-      user_data[:completed] = Policies::ScriptActivity.completed?(user, unit)
-      user_data[:progress] = merge_user_progress_by_level(
-        script: unit,
-        user: user,
-        user_levels_by_level: user_levels_by_level,
-        teacher_feedback_by_level: teacher_feedback_by_level[user.id],
-        paired_user_levels: paired_user_levels
-      )
-    end
+    user_levels_by_level = user.user_levels_by_level(unit)
+    teacher_feedback_by_level = teacher_feedbacks_by_student_by_level([user], unit)
+    paired_user_levels = PairedUserLevel.pairs(user_levels_by_level.values.map(&:id))
+    user_data[:completed] = Policies::ScriptActivity.completed?(user, unit)
+    user_data[:progress] = merge_user_progress_by_level(
+      script: unit,
+      user: user,
+      user_levels_by_level: user_levels_by_level,
+      teacher_feedback_by_level: teacher_feedback_by_level[user.id],
+      paired_user_levels: paired_user_levels
+    )
 
     user_data
   end

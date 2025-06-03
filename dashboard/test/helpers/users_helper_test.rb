@@ -74,16 +74,6 @@ class UsersHelperTest < ActionView::TestCase
       summarize_user_progress(script, user)
     )
 
-    # Also test with level progress excluded.
-    exclude_level_progress = true
-    assert_equal(
-      {
-        lockableAuthorized: false,
-        isInstructor: false,
-      },
-      summarize_user_progress(script, user, exclude_level_progress)
-    )
-
     assert_in_delta 66.67, percent_complete_total(script, user)
   end
 
