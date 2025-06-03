@@ -200,7 +200,6 @@ describe('Applab Exporter,', function () {
       serverLevelId: 2176,
       gameDisplayName: 'App Lab',
       appName: 'Code.org',
-      publicCaching: false,
       is13Plus: true,
       hasContainedLevels: false,
       hideSource: true,

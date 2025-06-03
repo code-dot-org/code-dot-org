@@ -93,7 +93,6 @@ describe('loadApp.js', () => {
     beforeEach(() => {
       appOptions = {
         ...appOptions,
-        publicCaching: true,
         scriptName: 'test-script',
         lessonPosition: '1',
         levelPosition: '2',
