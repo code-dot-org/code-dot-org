@@ -42,7 +42,8 @@ export const TeacherHomepageDrawer: React.FC = () => {
   const [existingSchoolInfo, setexistingSchoolInfo] = React.useState<
     SchoolInfo | undefined
   >(undefined);
-  const schoolName = existingSchoolInfo?.school_name || 'the same school?';
+  const schoolName =
+    existingSchoolInfo?.school_name || i18n.schoolInfoDialogDescriptionNoName();
   React.useEffect(() => {
     HttpClient.fetchJson<DrawerData>(
       '/teacher_dashboard/get_school_info_interstitial_data'
