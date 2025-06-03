@@ -23,7 +23,7 @@ import {SchoolInfo} from './TeacherHomepageConstants';
 
 import styles from './teacherHomepage.module.scss';
 
-const NON_SCHOOL_OPTIONS = ['selectASchool', 'clickToAd', 'noSchoolSetting'];
+const NON_SCHOOL_OPTIONS = ['selectASchool', 'clickToAdd', 'noSchoolSetting'];
 
 interface DrawerData {
   showSchoolInfoInterstitial: boolean;
