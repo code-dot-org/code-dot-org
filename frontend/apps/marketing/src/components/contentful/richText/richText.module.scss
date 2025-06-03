@@ -1,7 +1,12 @@
 @use '@code-dot-org/component-library-styles/font.scss' as font;
 
 .richText {
-  & > * {
+  & > br:last-child {
+    display: none;
+  }
+
+  & > *,
+  .richTextParagraph {
     margin: 1rem 0 0;
 
     &:first-child,
@@ -9,7 +14,8 @@
       margin: 0;
     }
 
-    p {
+    p,
+    .richTextParagraph {
       margin: 0;
     }
   }
@@ -22,7 +28,8 @@
     font-weight: font.$semi-bold-font-weight;
   }
 
-  p {
+  p,
+  .richTextParagraph {
     white-space: pre-wrap;
   }
 
