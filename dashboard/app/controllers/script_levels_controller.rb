@@ -17,14 +17,6 @@ class ScriptLevelsController < ApplicationController
   # is the maximum number of times it will be shown across all lessons.
   MAX_SHOW_TA_SCORES_ALERT = 3
 
-  # Return true if request is one that can be publicly cached.
-  def cachable_request?(request)
-    unit_context = ScriptLevelsController.get_unit_context(request)
-    unit = unit_context[:unit]
-    unit && ScriptConfig.allows_public_caching_for_script(unit.name) &&
-      !ScriptConfig.uncached_script_level_path?(request.path)
-  end
-
   def reset
     authorize! :read, ScriptLevel
     unit_context = ScriptLevelsController.get_unit_context(request)

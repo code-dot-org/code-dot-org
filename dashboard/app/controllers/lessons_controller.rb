@@ -176,14 +176,6 @@ class LessonsController < ApplicationController
     render(json: {error: exception.message}.to_json, status: :not_acceptable)
   end
 
-  # Return true if request is one that can be publicly cached.
-  def cachable_request?(request)
-    unit_context = get_unit_context(request.params)
-    script = unit_context[:unit]
-    script && ScriptConfig.allows_public_caching_for_script(script.name) &&
-      !ScriptConfig.uncached_script_level_path?(request.path)
-  end
-
   # We have two urls you can use to edit a lesson with a lesson plan. This does the
   # work for both of them to prepare the data for editing
   private def setup_edit
