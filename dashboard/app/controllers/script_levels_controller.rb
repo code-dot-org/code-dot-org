@@ -104,7 +104,6 @@ class ScriptLevelsController < ApplicationController
     @tts_autoplay_enabled = current_user&.sections_as_student&.where({hidden: false})&.map(&:tts_autoplay_enabled)&.reduce(false, :|)
 
     prevent_caching
-    @public_caching = false
 
     raise ActiveRecord::RecordNotFound unless @script_level
 

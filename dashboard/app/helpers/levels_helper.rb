@@ -239,8 +239,6 @@ module LevelsHelper
     # Unsafe to generate these twice, so use the cached version if it exists.
     return @app_options unless @app_options.nil?
 
-    view_options(public_caching: @public_caching)
-
     # In general, we need to allocate a channel if a level is channel-backed.
     # As an optimization, we can skip allocating the channel in the following
     # two special cases where we know the channel will not be written to:
@@ -262,8 +260,7 @@ module LevelsHelper
     # When viewing a peer during code review their name is displayed in a banner above the code editor
     view_options(code_owners_name: @user&.name || @current_user&.name)
 
-    # If the level is cached, the channel is loaded client-side in loadApp.js
-    if level_requires_channel && !@public_caching
+    if level_requires_channel
       channel = get_channel_for(@level, @script&.id, @user)
       view_options(
         channel: channel,
@@ -768,7 +765,6 @@ module LevelsHelper
       app_options[:is_viewing_exemplar] = level_options[:is_viewing_exemplar] || false
     end
     app_options[:share] = level_options[:share] if level_options[:share]
-    app_options[:public_caching] = @public_caching
     if @script_level&.lesson
       app_options[:theme] = @script_level.lesson.get_background_for_user(current_user)
     elsif @level.is_a?(Pythonlab) && current_user

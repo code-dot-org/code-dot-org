@@ -278,24 +278,12 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal blockly_level_options, level.blockly_level_options
   end
 
-  test 'app_options sets a channel if the level is not cached for a channel-backed level' do
-    @public_caching = false
-
+  test 'app_options sets a channel for a channel-backed level' do
     @script = create(:script)
     @level = create :applab
     create(:script_level, script: @script, levels: [@level])
 
     refute_nil app_options['channel']
-  end
-
-  test 'app_options does not set a channel if the level is cached' do
-    @public_caching = true
-
-    @script = create(:script)
-    @level = create :applab
-    create(:script_level, script: @script, levels: [@level])
-
-    assert_nil app_options['channel']
   end
 
   test "app_options sets level_requires_channel to false if level is not channel backed" do

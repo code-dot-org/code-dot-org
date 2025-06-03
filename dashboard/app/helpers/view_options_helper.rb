@@ -30,7 +30,6 @@ module ViewOptionsHelper
     :unit_year,
     :lesson_position,
     :level_position,
-    :public_caching,
     :is_13_plus,
     :user_id,
     :has_contained_levels,

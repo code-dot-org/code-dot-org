@@ -99,7 +99,7 @@
 :ruby
   if should_show_progress
     view_as = @user || current_user
-    user_progress = current_user == nil ? 'null' : summarize_user_progress(script, view_as, view_as == current_user && @public_caching).to_json
+    user_progress = current_user == nil ? 'null' : summarize_user_progress(script, view_as).to_json
 
     if view_as
       lesson_extras_enabled = view_as.lesson_extras_enabled?(script)
@@ -111,7 +111,7 @@
     lesson_group_data = script.lesson_groups.map(&:summarize)
     lesson_data = (@lesson || script_level.lesson).summarize(include_bonus_levels = true, unit_group_unit: @unit_group_unit)
     # If caching, we don't know the sign in state, and should be nil
-    signed_in = @public_caching ? 'null' : !brakeman_no_warn(current_user).nil?
+    signed_in = !brakeman_no_warn(current_user).nil?
 
     # Pass script name through to header
     if @lesson_extras
@@ -172,9 +172,3 @@
 - elsif level
   :javascript
     dashboard.header.buildProjectInfoOnly("#{@level.id}")
-
--# If the page is cached, the sign-in button / user menu must be loaded separately
--# by the client.
-- if @public_caching
-  :javascript
-    dashboard.header.buildUserMenu()
