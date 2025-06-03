@@ -6,7 +6,7 @@ MODE="$1"
 PATTERNS_DIR="sparse-patterns"
 
 if [[ "$MODE" == "default" ]]; then
-  [ -f .git/info/sparse-checkout ] && rm .git/info/sparse-checkout
+  [ -f .git/info/sparse-checkout ] && rm -f .git/info/sparse-checkout
   git sparse-checkout disable
 elif [[ "$MODE" == "no-pegasus-content" ]]; then
   git checkout HEAD -- "$PATTERNS_DIR/no-pegasus-content"

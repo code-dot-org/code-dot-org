@@ -118,19 +118,6 @@ Feature: OneTrust integration
     Then element "script[src$='e345/OtAutoBlock.js']" does not exist
     Then element "script[src$='e345-test/OtAutoBlock.js']" does not exist
 
-  Scenario Outline: Critical Javascript files are appropriately categorized by OneTrust on dashboard
-    Given I am on "<url>"
-    Then element "script[src*='/assets/application']" is not categorized by OneTrust
-    Then element "script[src*='js/webpack-runtime']" is not categorized by OneTrust
-    Then element "script[src*='js/essential']" is not categorized by OneTrust
-    Then element "script[src*='js/vendors']" is not categorized by OneTrust
-    Then element "script[src*='/common_locale']" is not categorized by OneTrust
-    Then element "script[src*='js/code-studio-common']" is not categorized by OneTrust
-    Then element "script[src*='js/code-studio']" is not categorized by OneTrust
-  Examples:
-    | url                                                                     |
-    | http://studio.code.org/users/sign_in                                    |
-
   @pegasus_content
   Scenario Outline: Critical Javascript files are appropriately categorized by OneTrust on pegasus
     Given I am on "<url>"
@@ -145,6 +132,19 @@ Feature: OneTrust integration
       | url                                                                     |
       | http://code.org/index                                                   |
       | http://hourofcode.com/us                                                |
+
+  Scenario Outline: Critical Javascript files are appropriately categorized by OneTrust on dashboard
+    Given I am on "<url>"
+    Then element "script[src*='/assets/application']" is not categorized by OneTrust
+    Then element "script[src*='js/webpack-runtime']" is not categorized by OneTrust
+    Then element "script[src*='js/essential']" is not categorized by OneTrust
+    Then element "script[src*='js/vendors']" is not categorized by OneTrust
+    Then element "script[src*='/common_locale']" is not categorized by OneTrust
+    Then element "script[src*='js/code-studio-common']" is not categorized by OneTrust
+    Then element "script[src*='js/code-studio']" is not categorized by OneTrust
+    Examples:
+      | url                                                                     |
+      | http://studio.code.org/users/sign_in                                    |
 
   @as_student
   Scenario Outline: Embedded projects do not display the OneTrust banner

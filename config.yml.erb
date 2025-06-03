@@ -448,9 +448,6 @@ sinatra_session_secret:
 # environment variable, since that will also be picked up by the apps build.
 has_pegasus_content: <%= ENV['HAS_PEGASUS_CONTENT'] != 'false' %>
 
-# maximum number of files to expect in pegasus/sites.v3 when using sparse checkout.
-max_pegasus_sparse_checkout_files: 32
-
 # Configures Pegasus `settings.read_only`, which affects some (legacy) routes. Not actively used(?)
 read_only: false
 
