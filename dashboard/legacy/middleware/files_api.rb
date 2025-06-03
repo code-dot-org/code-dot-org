@@ -982,7 +982,7 @@ class FilesApi < Sinatra::Base
   # a new "metadata" section of the manifest.
   #
 
-  METADATA_PATH = 'metadata'.freeze
+  METADATA_PATH = '.metadata'.freeze
   THUMBNAIL_FILENAME = 'thumbnail.png'
   METADATA_FILENAMES = [THUMBNAIL_FILENAME].freeze
 
@@ -991,7 +991,7 @@ class FilesApi < Sinatra::Base
   #
   # Create or replace a metadata file. Optionally overwrite a specific version.
   #
-  put %r{/v3/files/([^/]+)/metadata/([^/]+)$} do |encrypted_channel_id, filename|
+  put %r{/v3/files/([^/]+)/.metadata/([^/]+)$} do |encrypted_channel_id, filename|
     dont_cache
     content_type :json
 
@@ -1012,7 +1012,7 @@ class FilesApi < Sinatra::Base
   #
   # Read a metadata file. Optionally get a specific version instead of the most recent.
   #
-  get %r{/v3/files/([^/]+)/metadata/([^/]+)$} do |encrypted_channel_id, filename|
+  get %r{/v3/files/([^/]+)/.metadata/([^/]+)$} do |encrypted_channel_id, filename|
     get_file('files', encrypted_channel_id, "#{METADATA_PATH}/#{filename}")
   end
 
@@ -1069,7 +1069,7 @@ class FilesApi < Sinatra::Base
   #
   # Delete a metadata file.
   #
-  delete %r{/v3/files/([^/]+)/metadata/([^/]+)$} do |encrypted_channel_id, filename|
+  delete %r{/v3/files/([^/]+)/.metadata/([^/]+)$} do |encrypted_channel_id, filename|
     dont_cache
 
     bad_request unless METADATA_FILENAMES.include? filename
