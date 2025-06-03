@@ -57,9 +57,9 @@ export const TeacherHomepageDrawer: React.FC = () => {
     setSchoolInfoInterstitialOpen,
     setSchoolInfoConfirmationOpen,
   ]);
-  const usIp = useAppSelector(state => state.currentUser.inUSA);
+  const inUSA = useAppSelector(state => state.currentUser.inUSA);
   const schoolInfo = useSchoolInfo({
-    usIp,
+    usIp: inUSA,
     country: existingSchoolInfo?.country,
     schoolName: existingSchoolInfo?.school_name,
     schoolId: existingSchoolInfo?.school_id,
@@ -150,6 +150,10 @@ export const TeacherHomepageDrawer: React.FC = () => {
       );
       setSchoolInfoConfirmationOpen(false);
     } else if (success) {
+      setSuccess(false);
+    } else {
+      setSchoolInfoInterstitialOpen(false);
+      setSchoolInfoConfirmationOpen(false);
       setSuccess(false);
     }
   };
