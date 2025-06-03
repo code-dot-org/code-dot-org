@@ -374,6 +374,162 @@ test.describe('All the things UI e2e test', () => {
       });
     });
 
+    test.describe('hero banner basic', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator('Hero Banner Basic');
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('renders', async () => {
+        const heading = component.getByText('Hero Banner Basic');
+        const subheading = component.getByText('Hero banner subheading');
+        const description = component.getByText(
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam.',
+        );
+        const button = component.getByText('Primary Button');
+        await expect(heading).toBeVisible();
+        await expect(subheading).toBeVisible();
+        await expect(description).toBeVisible();
+        await expect(button).toBeVisible();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('hero banner with background color', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator(
+          'Hero Banner with Background Color',
+        );
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('hero banner with background image', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator(
+          'Hero Banner with Background Image',
+        );
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('hero banner with image big', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator(
+          'Hero Banner with Image Big',
+        );
+        await component.scrollIntoViewIfNeeded();
+
+        const image = component.locator('img[alt=""]');
+        await expect(image).toBeVisible();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('hero banner with image small', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator(
+          'Hero Banner with Image Small',
+        );
+        await component.scrollIntoViewIfNeeded();
+
+        const image = component.locator('img[alt=""]');
+        await expect(image).toBeVisible();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('hero banner with video', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator(
+          'Hero Banner with Video',
+        );
+        await component.scrollIntoViewIfNeeded();
+
+        const playButton = component.getByAltText(
+          "Play video What Most Schools Don't Teach",
+        );
+        await expect(playButton).toBeVisible();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('hero banner with partner callout', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator(
+          'Hero Banner with Partner Callout',
+        );
+        await component.scrollIntoViewIfNeeded();
+
+        const partnerCallout = component.getByText('In partnership with');
+        await expect(partnerCallout).toBeVisible();
+        const partnerLogo = component.locator('img[alt=""]');
+        await expect(partnerLogo).toBeVisible();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('hero banner with announcement banner', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator(
+          'Hero Banner with Announcement Banner',
+        );
+        await component.scrollIntoViewIfNeeded();
+
+        const announcementBannerText = component.getByText(
+          'This is an announcement banner!',
+        );
+        const announcementBannerLink = component.getByText(
+          'Announcement banner link',
+        );
+        await expect(announcementBannerText).toBeVisible();
+        await expect(announcementBannerLink).toBeVisible();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
     test.describe('image', () => {
       let component: Locator;
 
