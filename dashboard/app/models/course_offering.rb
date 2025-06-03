@@ -322,6 +322,7 @@ class CourseOffering < ApplicationRecord
       published_date: published_date,
       self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
       ai_teaching_assistant_available: ai_teaching_assistant_available,
+      facilitator_course_permissions: facilitator_course_permissions || [],
     }
   end
 
@@ -373,6 +374,7 @@ class CourseOffering < ApplicationRecord
       published_date: published_date,
       self_paced_pl_course_offering_key: self_paced_pl_course_offering&.key,
       ai_teaching_assistant_available: ai_teaching_assistant_available,
+      facilitator_course_permissions: facilitator_course_permissions
     }
   end
 

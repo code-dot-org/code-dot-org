@@ -1,0 +1,91 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T03:01:00.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ]
+        },
+        "addFunctionDefinition": true,
+        "addFunctionCalls": true
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false,
+      "playerTitle": "Example",
+      "validationMode": "default"
+    },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6dATAqvqCNBaL7gcusy6Gy2fnwYBnaYjrEyWA22GQe18mHEDAVVuD+erp\n6+LrpK8JgB2eI/Ulu4eZqf6lTA7dPl8pyRY44SThBAixCQO2uPGvaLHvevoP\n2haLZw8WVSPfmTdT1IEQdUAYuaZdIu3NQIBRui+78JkvN9iuKfCrdA4=\n",
+    "long_instructions": "### Focus on Composition\r\n\r\nChoose a song to create a remix of. Design your code so it emphasizes **composing functions** - calling functions within other functions to keep the code of your song compact and easy to understand. Your code should have many small functions that are combined to make larger functions.\r\n\r\nIf you want to pick a new song, you can click the restart button in the upper-right corner [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=start-over-button). Some songs that might work well for this challenge are:\r\n\r\n- Can't Touch This - MC Hammer\r\n- Call Me Maybe - Carly Rae Jepsen\r\n- I Like to Move It - will.i.am\r\n- Something Just Like This - Chainsmokers & Coldplay\r\n- Angel - Halle\r\n\r\nTo pass this level, you must have at least **6 functions** and **each function cannot contain more than 6 blocks of code**",
+    "validations": [
+      {
+        "key": "music-lab-functions-practice-challengeA_de2a2de8-279c-4c4f-b954-be368ba56afc",
+        "message": "Your code has at least 6 functions - make sure they all have 6 blocks or less before continuing!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds_in_different_functions",
+            "value": 6
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-practice-challengeA_3dcc609d-d952-4e9d-97eb-8ff95d38cb2f",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for you to call **6 different functions**",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Focus on Composition",
+    "bubble_choice_description": "Choose a song to create a remix of. Design your code so it emphasizes **composing functions** - calling functions within other functions to keep the code of your song compact and easy to understand.",
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:01:00.427+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-challengeC2\\\"\"],\"cloned_from\":\"music-lab-functions-practice-challengeC2\"}]"
+}]]></config>
+  <blocks/>
+</Music>
