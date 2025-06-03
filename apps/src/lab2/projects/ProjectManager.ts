@@ -330,7 +330,7 @@ export default class ProjectManager {
 
   setThumbnail(pngBlob: Blob) {
     this.thumbnailPngBlob = pngBlob;
-    this.thumbnailUrl = `/v3/files/${this.channelId}/metadata/thumbnail.png`;
+    this.thumbnailUrl = `/v3/files/${this.channelId}/.metadata/thumbnail.png`;
   }
 
   /**
