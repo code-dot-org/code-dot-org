@@ -30,8 +30,8 @@ Feature: Looking at a few things with Applitools Eyes - Part 3
     And I close my eyes
     And I sign out
     Examples:
-      | url                                                                        | test_name           |
-      | https://studio.code.org/s/allthethings/lessons/13/levels/1?noautoplay=true | embedded blocks     |
+      | url                                                                                            | test_name           |
+      | https://studio.code.org/courses/allthethingscourse/units/1/lessons/13/levels/1?noautoplay=true | embedded blocks     |
 
   @properties_encryption_key
   Scenario Outline: Logged out simple page view without instructions dialog
