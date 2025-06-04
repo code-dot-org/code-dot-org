@@ -1925,6 +1925,12 @@ class ScriptsControllerTest < ActionController::TestCase
         get :show, params: {course_course_name: course.name, position: unit_position}
         assert_response :success
       end
+
+      it '/s/:id?foo=bar does redirect with query params' do
+        sign_in user
+        get :show, params: {id: unit.name, foo: 'bar'}
+        assert_redirected_to "/courses/#{course.name}/units/#{unit_position}?foo=bar"
+      end
     end
   end
 end

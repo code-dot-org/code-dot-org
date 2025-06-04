@@ -61,7 +61,8 @@ class ScriptsController < ApplicationController
       # return a temporary redirect rather than a permanent one, to avoid ever
       # serving a permanent redirect from a unit's new location to its old
       # location during the unit renaming process.
-      redirect_to canonical_path
+      redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
+      redirect_to "#{canonical_path}#{redirect_query_string}"
       return
     end
 
