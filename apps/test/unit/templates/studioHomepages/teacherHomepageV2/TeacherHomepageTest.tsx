@@ -21,7 +21,6 @@ import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
 import {TeacherHomepage} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepage';
-// import {SchoolInfo} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepageConstants';
 import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -84,14 +83,6 @@ describe('TeacherHomepage', () => {
       participantType: 'teacher',
     },
   ];
-
-  // const schoolInfo: SchoolInfo = {
-  //   country: 'US',
-  //   school_name: 'Test School',
-  //   school_zip: '12345',
-  //   school_id: '67890',
-  //   school_type: 'public',
-  // };
 
   const serverSections = sections.map(serverSectionFromSection);
 
@@ -278,17 +269,5 @@ describe('TeacherHomepage', () => {
     renderComponent();
     await act(async () => await new Promise(process.nextTick));
     screen.getByText(i18n.teacherHomePageFeedback());
-  });
-
-  it('renders school info drawer when showSchoolInfoInterstitial is true', async () => {
-    renderComponent(serverSections);
-    await act(async () => await new Promise(process.nextTick));
-    screen.getByText(i18n.censusHeading());
-  });
-
-  it('renders school info confirmation drawer when showSchoolInfoConfirmation is true', async () => {
-    renderComponent(serverSections);
-    await act(async () => await new Promise(process.nextTick));
-    screen.getByText(i18n.reviewSchoolInfo());
   });
 });
