@@ -36,22 +36,22 @@ class FilesApiTestHelper
   end
 
   def get_object(filename, body = '', headers = {})
-    get "/v3/#{@endpoint}/#{@channel_id}/#{CGI.escape(filename)}", body, headers
+    get "/v3/#{@endpoint}/#{@channel_id}/#{filename}", body, headers
     last_response.body
   end
 
   def get_codeproject_object(filename, body = '', headers = {})
-    get "/projects/weblab/#{@channel_id}/#{CGI.escape(filename)}", body, headers
+    get "/projects/weblab/#{@channel_id}/#{filename}", body, headers
     last_response.body
   end
 
   def put_object(filename, body = '', headers = {})
-    put "/v3/#{@endpoint}/#{@channel_id}/#{CGI.escape(filename)}", body, headers
+    put "/v3/#{@endpoint}/#{@channel_id}/#{filename}", body, headers
     last_response.body
   end
 
   def post_object(filename, body = '', headers = {})
-    post "/v3/#{@endpoint}/#{@channel_id}/#{CGI.escape(filename)}", body, headers
+    post "/v3/#{@endpoint}/#{@channel_id}/#{filename}", body, headers
     last_response.body
   end
 
@@ -77,7 +77,7 @@ class FilesApiTestHelper
   end
 
   def delete_object(filename)
-    delete "/v3/#{@endpoint}/#{@channel_id}/#{CGI.escape(filename)}"
+    delete "/v3/#{@endpoint}/#{@channel_id}/#{filename}"
   end
 
   def list_object_versions(filename)
