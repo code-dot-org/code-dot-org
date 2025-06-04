@@ -73,7 +73,7 @@ class ScriptsController < ApplicationController
 
     # Attempt to redirect user if we think they ended up on the wrong unit overview page.
     override_redirect = VersionRedirectOverrider.override_unit_redirect?(session, @script)
-    if !override_redirect && redirect_info = redirect_unit(@script, request.locale, @course)
+    if !override_redirect && redirect_info = get_redirect_info(@script, request.locale, @course)
       if redirect_info[:redirect_ugu]
         redirect_to course_unit_path(redirect_info[:redirect_ugu].unit_group, redirect_info[:redirect_ugu].position) + "?redirect_warning=true"
         return
@@ -455,7 +455,7 @@ class ScriptsController < ApplicationController
     end
   end
 
-  private def redirect_unit(unit, locale, course)
+  private def get_redirect_info(unit, locale, course)
     # Return nil if unit is nil or we know the user can view the version requested.
     return nil if !unit || unit.can_view_version?(current_user, locale: locale)
 
