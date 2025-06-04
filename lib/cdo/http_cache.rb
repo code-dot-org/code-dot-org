@@ -66,46 +66,24 @@ class HttpCache
   ].freeze
 
   # A list of script levels that should not be cached, even though they are
-  # in a cacheable script
+  # in a cacheable script. prediction levels are not cacheable.
   # TODO TEACH-1634 support the /courses/ path
   UNCACHED_UNIT_LEVEL_PATHS = [
     '/courses/dance-2019/units/1/lessons/1/levels/10',
     '/courses/dance-ai-2023/units/1/lessons/1/levels/10',
-    '/courses/poem-art-2021/units/1/lessons/1/levels/9',
-    '/courses/poem-art-2021/units/1/lessons/1/levels/2', # prediction levels are not cacheable
-    '/courses/poem-art-2021/units/1/lessons/1/levels/5', # prediction levels are not cacheable
-    '/courses/hello-world-food-2021/units/1/lessons/1/levels/11',
-    '/courses/hello-world-animals-2021/units/1/lessons/1/levels/11',
-    '/courses/hello-world-retro-2021/units/1/lessons/1/levels/11',
-    '/courses/hello-world-emoji-2021/units/1/lessons/1/levels/11',
-    '/courses/hello-world-space-2022/units/1/lessons/1/levels/11',
-    '/courses/hello-world-soccer-2022/units/1/lessons/1/levels/11',
-    '/courses/outbreak/units/1/lessons/1/levels/10'
   ]
 
   # A map from script name to script level URL pattern.
   CACHED_UNITS_MAP = %w(
     aquatic
-    starwars
-    starwarsblocks
-    mc
-    frozen
-    minecraft
-    hero
-    sports
-    basketball
     dance-2019
     dance-ai-2023
-    oceans
-    poem-art-2021
-    hello-world-food-2021
-    hello-world-animals-2021
-    hello-world-retro-2021
-    hello-world-emoji-2021
-    hello-world-space-2022
-    hello-world-soccer-2022
+    frozen
+    hero
+    mc
+    minecraft
     music-jam-2024
-    outbreak
+    starwarsblocks
   ).map do |script_name|
     # Most scripts use the default route pattern.
     # Assume all cached units are in single unit courses.

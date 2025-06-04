@@ -5,7 +5,23 @@
 
 require_relative 'http_cache'
 
-UNCACHED_HOC_UNITS = %w(playlab artist infinity iceage).freeze
+UNCACHED_HOC_UNITS = %w(
+  artist
+  basketball
+  hello-world-animals-2021
+  hello-world-emoji-2021
+  hello-world-food-2021
+  hello-world-retro-2021
+  hello-world-soccer-2022
+  hello-world-space-2022
+  iceage
+  infinity
+  outbreak
+  playlab
+  poem-art-2021
+  sports
+  starwars
+).freeze
 
 class ScriptConfig
   # Returns true if the script level path is excluded from caching, even if it
