@@ -14,7 +14,6 @@ import VersionHistoryButton from '@cdo/apps/lab2/views/components/versionHistory
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {sendPythonCodeToMicroBit} from '@cdo/apps/maker/boards/microBit/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {appendCustomFrames} from '@cdo/apps/p5lab/redux/animationList';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {currentLocation} from '@cdo/apps/utils';
 import commonI18n from '@cdo/locale';
@@ -59,10 +58,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
         type: DialogType.Skip,
         handleConfirm: () => {
           if (skipUrl) {
-            sendCodebridgeAnalyticsEvent(
-              EVENTS.SKIP_TO_PROJECT,
-              appendCustomFrames
-            );
+            sendCodebridgeAnalyticsEvent(EVENTS.SKIP_TO_PROJECT, appName);
             window.location.href = skipUrl;
           }
         },
