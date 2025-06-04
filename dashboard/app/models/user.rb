@@ -102,6 +102,7 @@ class User < ApplicationRecord
   include ProviderFlags
   include Verifiable
   include PartialRegistration
+  include Devise::DatabaseAuthenticationOverrides
   include Rails.application.routes.url_helpers
 
   self.inheritance_column = :user_type
@@ -440,7 +441,6 @@ class User < ApplicationRecord
   # modules, since it's trying to extend some methods added by those modules
   # that would be overridden by them if we included it before.
   include Devise::Models::ManualSessionExpiration
-  include Updateable
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
 
@@ -666,37 +666,58 @@ class User < ApplicationRecord
     end
   end
 
-  def managing_own_credentials?
-    if provider.blank?
-      true
-    elsif manual?
-      true
-    elsif migrated?
-      authentication_options.any? do |ao|
-        ao.credential_type == AuthenticationOption::EMAIL
-      end
+  def update_email_for(email:, provider: nil, uid: nil)
+    if migrated?
+      # Provider and uid are required to update email on AuthenticationOption for migrated user.
+      return unless provider.present? && uid.present?
+      auth_option = authentication_options.find_by(credential_type: provider, authentication_id: uid)
+      auth_option&.update(email: email)
     else
-      false
+      update(email: email)
     end
   end
 
-  def password_required?
-    # If the user is changing their password, then we should run all the password
-    # field verifications.
-    is_changing_password = password.present? || password_confirmation.present?
-    return true if is_changing_password
+  def update_primary_contact_info(new_email: nil, new_hashed_email: nil)
+    new_hashed_email = new_email.present? ? User.hash_email(new_email) : new_hashed_email
 
-    # Password is not required if the user is not managing their own account
-    # (i.e., someone is creating their account for them or the user is using OAuth).
-    return false unless managing_own_credentials?
+    return false if new_email.nil? && new_hashed_email.nil?
+    return false if teacher? && new_email.nil?
 
-    # Password is required for:
-    # New users with no encrypted_password set
-    !persisted? && encrypted_password.blank?
+    # If an auth option already exists with this email, it becomes the primary.
+    # Otherwise make a new one.
+    existing_auth_option = authentication_options.find_by hashed_email: new_hashed_email
+    new_primary = existing_auth_option || AuthenticationOption.new(
+      user: self,
+      credential_type: AuthenticationOption::EMAIL,
+      hashed_email: new_hashed_email
+    )
+    # Whether it's an existing auth option or a new one, always want to set a cleartext email.
+    new_primary.email = new_email
+
+    # Even though it's implied, pushing the new option into the
+    # authentication_options association now allows our validations to run
+    # when we save the user and produce useful error messages when, for example,
+    # the email is already taken.
+    self.primary_contact_info = new_primary
+    authentication_options << new_primary
+    success = save
+
+    if success
+      # Remove any email authentication options that the user isn't using, since
+      # we don't surface them in the UI.
+      authentication_options.
+        where(credential_type: AuthenticationOption::EMAIL).
+        where.not(hashed_email: new_hashed_email).
+        destroy_all
+    end
+
+    success
   end
 
-  def username_required?
-    manual? || username_changed?
+  def update_primary_contact_info!(new_email: nil, new_hashed_email: nil)
+    success = update_primary_contact_info(new_email: new_email, new_hashed_email: new_hashed_email)
+    raise "User's primary contact info was not updated successfully" unless success
+    success
   end
 
   def upgrade_to_personal_login(params)
