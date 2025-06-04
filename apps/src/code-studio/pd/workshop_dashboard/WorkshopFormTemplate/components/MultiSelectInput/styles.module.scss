@@ -50,6 +50,12 @@
         padding-top: 0;
         padding-bottom: 0;
       }
+
+      &.invalid {
+        > div {
+          background-color: var(--background-error-light);
+        }
+      }
     }
 
     input.searchInput {
