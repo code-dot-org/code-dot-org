@@ -55,21 +55,35 @@ class RaceInterstitialHelperTest < ActionView::TestCase
     context 'when closed dialog already' do
       let(:user) {create(:student, current_sign_in_ip: '127.0.0.1', races: 'closed_dialog')}
 
-      context 'when created after bugfix date' do
-        it 'returns true' do
-          _(show?).must_equal true
+      # These tests reference a bug that affected users between May 2023 and February 2024.
+      # PR with the fix: https://github.com/code-dot-org/code-dot-org/pull/56729
+      context 'when created after bug was fixed' do
+        it 'returns false' do
+          _(show?).must_equal false
         end
       end
 
-      context 'when created before bugfix date' do
+      context 'when created before bug was introduced' do
         let(:user) do
           create(:student, current_sign_in_ip: '127.0.0.1', races: 'closed_dialog') do |u|
-            u.created_at = Time.new(2022, 5, 1)
+            u.created_at = Time.new(2023, 4, 1)
           end
         end
 
         it 'returns false' do
           _(show?).must_equal false
+        end
+      end
+
+      context 'when created during bug-affected time period' do
+        let(:user) do
+          create(:student, current_sign_in_ip: '127.0.0.1', races: 'closed_dialog') do |u|
+            u.created_at = Time.new(2023, 6, 1)
+          end
+        end
+
+        it 'returns true' do
+          _(show?).must_equal true
         end
       end
     end

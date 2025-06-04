@@ -5,11 +5,14 @@ module RaceInterstitialHelper
     return false if user.teacher?
     return false if user.under_13?
 
-    # Special handling for users affected by a bug
-    bug_date = Time.new(2023, 5)
-    if user.created_at < bug_date && user.races.present?
+    # Special handling for users affected by a bug that prevented race information from being saved.
+    # Users were affected if they were created between May 2023 and February 2024.
+    # PR with the fix: https://github.com/code-dot-org/code-dot-org/pull/56729
+    bug_start_date = Time.new(2023, 5)
+    bug_end_date = Time.new(2024, 2)
+    if (user.created_at < bug_start_date || user.created_at > bug_end_date) && user.races.present?
       return false
-    elsif user.created_at >= bug_date && user.races.present? && user.races != 'closed_dialog'
+    elsif (bug_start_date <= user.created_at && user.created_at <= bug_end_date) && user.races.present? && user.races != 'closed_dialog'
       return false
     end
 
