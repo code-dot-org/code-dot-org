@@ -1939,22 +1939,25 @@ class UserTest < ActiveSupport::TestCase
   test 'update_primary_contact_info fails safely if the new email is already taken for sponsored user' do
     taken_email = 'taken@example.org'
     create :student, email: taken_email
-    update_primary_contact_info_fails_safely_for create(:student_in_picture_section),
-    new_email: taken_email
+    update_primary_contact_info_fails_safely_for \
+      create(:student_in_picture_section),
+      new_email: taken_email
   end
 
   test 'update_primary_contact_info fails safely if the new email is already taken for email user' do
     taken_email = 'taken@example.org'
     create :student, email: taken_email
-    update_primary_contact_info_fails_safely_for create(:student),
-    new_email: taken_email
+    update_primary_contact_info_fails_safely_for \
+      create(:student),
+      new_email: taken_email
   end
 
   test 'update_primary_contact_info fails safely if the new email is already taken for oauth user' do
     taken_email = 'taken@example.org'
     create :student, email: taken_email
-    update_primary_contact_info_fails_safely_for create(:student, :with_google_authentication_option),
-    new_email: taken_email
+    update_primary_contact_info_fails_safely_for \
+      create(:student, :with_google_authentication_option),
+      new_email: taken_email
   end
 
   def update_primary_contact_info_fails_safely_for(user, **params)
