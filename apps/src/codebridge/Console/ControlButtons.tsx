@@ -37,7 +37,8 @@ const ControlButtons: React.FunctionComponent = () => {
   const {onRun, onStop, labConfig, levelProperties} = useCodebridgeContext();
   const {id: levelId, appName, predictSettings} = levelProperties;
   const isPredictLevel = predictSettings?.isPredictLevel;
-  const levelPath = useAppSelector(state => getCurrentLevel(state)?.path);
+  const levelPath =
+    useAppSelector(state => getCurrentLevel(state)?.path) || 'standalone';
 
   const scriptId = useAppSelector(state => state.lab.scriptId);
   const source = useAppSelector(
