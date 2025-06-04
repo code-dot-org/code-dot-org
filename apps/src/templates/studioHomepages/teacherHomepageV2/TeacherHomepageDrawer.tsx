@@ -143,21 +143,16 @@ export const TeacherHomepageDrawer: React.FC = () => {
         {},
         PLATFORMS.BOTH
       );
-      setSchoolInfoInterstitialOpen(false);
     } else if (schoolInfoConfirmationOpen) {
       analyticsReporter.sendEvent(
         EVENTS.UPDATE_SCHOOL_INFO_DIALOG_CLOSED,
         {},
         PLATFORMS.BOTH
       );
-      setSchoolInfoConfirmationOpen(false);
-    } else if (success) {
-      setSuccess(false);
-    } else {
-      setSchoolInfoInterstitialOpen(false);
-      setSchoolInfoConfirmationOpen(false);
-      setSuccess(false);
     }
+    setSchoolInfoInterstitialOpen(false);
+    setSchoolInfoConfirmationOpen(false);
+    setSuccess(false);
   };
 
   return (
