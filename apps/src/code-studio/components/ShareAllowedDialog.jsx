@@ -325,7 +325,7 @@ class ShareAllowedDialog extends React.Component {
           {this.sharingDisabled() && (
             <div style={{position: 'relative'}}>
               <div style={{paddingRight: 10}}>
-                <p>{i18n.sharingBlockedByTeacher()}</p>
+                <p>{i18n.sharingBlockedByTeacherOpenEndedProjects()}</p>
               </div>
               <div style={{clear: 'both', height: 40}}>
                 <button
