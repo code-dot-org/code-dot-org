@@ -2,9 +2,16 @@ module RaceInterstitialHelper
   # Determine whether or not to show the race interstitial popup to a user
   def self.show?(user)
     return false if user.nil?
-    return false if user.races
     return false if user.teacher?
     return false if user.under_13?
+
+    # Special handling for users affected by a bug
+    bug_date = Time.new(2023, 5)
+    if user.created_at < bug_date && user.races.present?
+      return false
+    elsif user.created_at >= bug_date && user.races.present? && user.races != 'closed_dialog'
+      return false
+    end
 
     # Covers test cases if we don't have sign in records for a user
     return false if user.days_since_first_sign_in.nil?
