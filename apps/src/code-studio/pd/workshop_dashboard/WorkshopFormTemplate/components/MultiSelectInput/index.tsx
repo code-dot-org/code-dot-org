@@ -229,24 +229,23 @@ export const MultiSelectInput: React.FC<{
           <div className={styles.tagsAndSearchContainer}>
             {selectedOptions.map(id => {
               const option = optionsMap.get(id);
-              if (!option) {
-                return null;
-              }
 
               return (
                 <Tags
                   key={id}
-                  className={styles.tag}
+                  className={classNames(styles.tag, {
+                    [styles.invalid]: !option,
+                  })}
                   size="s"
                   tagsList={[
                     {
-                      label: option.label,
+                      label: option?.label ?? 'INVALID OPTION',
                       type: 'closable',
                       onClose: () => {
-                        handleRemoveOption(option.id);
+                        handleRemoveOption(id);
                       },
-                      key: option.id,
-                      ariaLabel: `Remove ${option.label}`,
+                      key: id,
+                      ariaLabel: `Remove ${option?.label ?? 'invalid option'}`,
                     },
                   ]}
                 />
