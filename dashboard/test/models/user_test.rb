@@ -1778,6 +1778,198 @@ class UserTest < ActiveSupport::TestCase
     refute student.roster_managed_account?
   end
 
+  test 'update_email_for does not update migrated user AuthenticationOption if provider and uid are not present' do
+    user = create :user
+    user.update_email_for(provider: nil, uid: nil, email: 'new@email.com')
+    user.reload
+    refute_equal User.hash_email('new@email.com'), user.hashed_email
+  end
+
+  test 'update_email_for does not update migrated user AuthenticationOption if no matching AuthenticationOption' do
+    user = create :user
+    google_auth_option = create :google_authentication_option, user: user, authentication_id: '123456'
+    user.update_email_for(provider: AuthenticationOption::GOOGLE, uid: 'not-my-uid', email: 'new@email.com')
+    google_auth_option.reload
+    refute_equal User.hash_email('new@email.com'), google_auth_option.hashed_email
+  end
+
+  test 'update_email_for updates migrated user AuthenticationOption if matching AuthenticationOption' do
+    uid = '123456'
+    user = create :user
+    google_auth_option = create :google_authentication_option, user: user, authentication_id: uid
+    user.reload
+    user.update_email_for(provider: AuthenticationOption::GOOGLE, uid: uid, email: 'new@email.com')
+    google_auth_option.reload
+    assert_equal User.hash_email('new@email.com'), google_auth_option.hashed_email
+  end
+
+  test 'update_primary_contact_info is false if email and hashed_email are nil' do
+    user = create :user
+    successful_save = user.update_primary_contact_info(new_email: nil, new_hashed_email: nil)
+    refute successful_save
+  end
+
+  test 'update_primary_contact_info is false if email is nil for teacher' do
+    teacher = create :teacher
+    successful_save = teacher.update_primary_contact_info(new_email: nil)
+    refute successful_save
+  end
+
+  test 'update_primary_contact_info adds new email option for teacher if no matches exist' do
+    teacher = create :teacher, :with_google_authentication_option
+
+    assert_equal 2, teacher.authentication_options.count
+    refute_nil teacher.primary_contact_info
+
+    successful_save = teacher.update_primary_contact_info(new_email: 'example@email.com')
+    teacher.reload
+    assert successful_save
+    assert_equal 2, teacher.authentication_options.count
+    assert_equal 'example@email.com', teacher.primary_contact_info.email
+  end
+
+  test 'update_primary_contact_info replaces email option for teacher if one already exists' do
+    teacher = create :teacher
+
+    assert_equal 1, teacher.authentication_options.count
+    refute_nil teacher.primary_contact_info
+
+    successful_save = teacher.update_primary_contact_info(new_email: 'second@email.com')
+    teacher.reload
+    assert successful_save
+    assert_equal 1, teacher.authentication_options.count
+    assert_equal 'second@email.com', teacher.primary_contact_info.email
+  end
+
+  test 'update_primary_contact_info oauth option replaces any existing email options for teacher' do
+    teacher = create :teacher, :with_google_authentication_option
+    existing_email = teacher.primary_contact_info.email
+
+    assert_equal 2, teacher.authentication_options.count
+    refute_nil teacher.primary_contact_info
+
+    # Update primary to a different email
+    teacher.update_primary_contact_info(new_email: 'example@email.com')
+    teacher.reload
+    assert_equal 2, teacher.authentication_options.count
+    assert_equal 'example@email.com', teacher.primary_contact_info.email
+
+    # Change back to original oauth email
+    successful_save = teacher.update_primary_contact_info(new_email: existing_email)
+    teacher.reload
+    assert successful_save
+    assert_equal 1, teacher.authentication_options.count
+    assert_equal existing_email, teacher.primary_contact_info.email
+  end
+
+  test 'update_primary_contact_info recalculates hashed_email if both email and hashed_email are supplied for teacher' do
+    teacher = create :teacher
+
+    assert_equal 1, teacher.authentication_options.count
+    refute_nil teacher.primary_contact_info
+
+    successful_save = teacher.update_primary_contact_info(new_email: 'first@email.com', new_hashed_email: User.hash_email('second@email.com'))
+    assert successful_save
+    assert_equal 1, teacher.authentication_options.count
+    assert_equal User.hash_email('first@email.com'), teacher.primary_contact_info.hashed_email
+  end
+
+  test 'update_primary_contact_info adds new email option for student if no matches exist' do
+    student = create :student, :with_google_authentication_option
+
+    assert_equal 2, student.authentication_options.count
+    refute_nil student.primary_contact_info
+
+    hashed_new_email = User.hash_email('example@email.com')
+    successful_save = student.update_primary_contact_info(new_hashed_email: hashed_new_email)
+    student.reload
+    assert successful_save
+    assert_equal 2, student.authentication_options.count
+    assert_equal hashed_new_email, student.primary_contact_info.hashed_email
+  end
+
+  test 'update_primary_contact_info replaces email option for student if one already exists' do
+    student = create :student
+
+    assert_equal 1, student.authentication_options.count
+    refute_nil student.primary_contact_info
+
+    hashed_new_email = User.hash_email('second@email.com')
+    successful_save = student.update_primary_contact_info(new_hashed_email: hashed_new_email)
+    student.reload
+    assert successful_save
+    assert_equal 1, student.authentication_options.count
+    assert_equal hashed_new_email, student.primary_contact_info.hashed_email
+  end
+
+  test 'update_primary_contact_info oauth option replaces any existing email options for student' do
+    student = create :student, :with_google_authentication_option, email: 'student@email.com'
+    existing_hashed_email = student.primary_contact_info.hashed_email
+
+    assert_equal 2, student.authentication_options.count
+    refute_nil student.primary_contact_info
+
+    # Update primary to a different email
+    hashed_new_email = User.hash_email('example@email.com')
+    student.update_primary_contact_info(new_hashed_email: hashed_new_email)
+    student.reload
+    assert_equal 2, student.authentication_options.count
+    assert_equal hashed_new_email, student.primary_contact_info.hashed_email
+
+    # Change back to original oauth email
+    successful_save = student.update_primary_contact_info(new_hashed_email: existing_hashed_email)
+    student.reload
+    assert successful_save
+    assert_equal 1, student.authentication_options.count
+    assert_equal existing_hashed_email, student.primary_contact_info.hashed_email
+  end
+
+  test 'update_primary_contact_info recalculates hashed_email if both email and hashed_email are supplied for student' do
+    student = create :student
+
+    assert_equal 1, student.authentication_options.count
+    refute_nil student.primary_contact_info
+
+    successful_save = student.update_primary_contact_info(new_email: 'first@email.com', new_hashed_email: User.hash_email('second@email.com'))
+    assert successful_save
+    assert_equal 1, student.authentication_options.count
+    assert_equal User.hash_email('first@email.com'), student.primary_contact_info.hashed_email
+  end
+
+  test 'update_primary_contact_info fails safely if the new email is already taken for sponsored user' do
+    taken_email = 'taken@example.org'
+    create :student, email: taken_email
+    update_primary_contact_info_fails_safely_for create(:student_in_picture_section), new_email: taken_email
+  end
+
+  test 'update_primary_contact_info fails safely if the new email is already taken for email user' do
+    taken_email = 'taken@example.org'
+    create :student, email: taken_email
+    update_primary_contact_info_fails_safely_for create(:student), new_email: taken_email
+  end
+
+  test 'update_primary_contact_info fails safely if the new email is already taken for oauth user' do
+    taken_email = 'taken@example.org'
+    create :student, email: taken_email
+    update_primary_contact_info_fails_safely_for create(:student, :with_google_authentication_option), new_email: taken_email
+  end
+
+  def update_primary_contact_info_fails_safely_for(user, **params)
+    original_primary_contact_info = user.primary_contact_info
+
+    refute_creates_or_destroys AuthenticationOption do
+      refute user.update_primary_contact_info(**params)
+    end
+
+    user.reload
+    if original_primary_contact_info.nil?
+      # starting in Minitest 6, don't use assert_equal to compare nil values
+      assert_nil user.primary_contact_info
+    else
+      assert_equal original_primary_contact_info, user.primary_contact_info
+    end
+  end
+
   def upgrade_to_personal_login_params(**args)
     {
       username: 'my_new_username',
