@@ -8,19 +8,26 @@ require_relative 'http_cache'
 UNCACHED_HOC_UNITS = %w(
   artist
   basketball
+  dance-2019
+  flappy
+  frozen
   hello-world-animals-2021
   hello-world-emoji-2021
   hello-world-food-2021
   hello-world-retro-2021
   hello-world-soccer-2022
   hello-world-space-2022
+  hero
+  hourofcode
   iceage
   infinity
+  minecraft
   outbreak
   playlab
   poem-art-2021
   sports
   starwars
+  starwarsblocks
 ).freeze
 
 class ScriptConfig

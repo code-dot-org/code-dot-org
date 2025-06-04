@@ -68,30 +68,19 @@ class HttpCache
   # A list of script levels that should not be cached, even though they are
   # in a cacheable script. prediction levels are not cacheable.
   UNCACHED_UNIT_LEVEL_PATHS = [
-    '/courses/dance-2019/units/1/lessons/1/levels/10',
     '/courses/dance-ai-2023/units/1/lessons/1/levels/10',
   ]
 
   # A map from script name to script level URL pattern.
   CACHED_UNITS_MAP = %w(
     aquatic
-    dance-2019
     dance-ai-2023
-    frozen
-    hero
     mc
-    minecraft
     music-jam-2024
-    starwarsblocks
   ).map do |script_name|
-    # Most scripts use the default route pattern.
     # Assume all cached units are in single unit courses.
     [script_name, "/courses/#{script_name}/units/1/lessons/*"]
-  end.to_h.merge(
-    # Add the "special case" routes here.
-    'hourofcode' => '/hoc/*',
-    'flappy' => '/flappy/*'
-  ).freeze
+  end.to_h.freeze
 
   def self.cached_scripts
     CACHED_UNITS_MAP.keys
