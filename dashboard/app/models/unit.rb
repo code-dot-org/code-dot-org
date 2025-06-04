@@ -1595,12 +1595,12 @@ class Unit < ApplicationRecord
         age_13_required: logged_out_age_13_required?,
         show_course_unit_version_warning: !unit_group_unit&.cached_unit_group&.has_dismissed_version_warning?(user) && has_older_course_progress,
         show_script_version_warning: !user_unit&.version_warning_dismissed && !has_older_course_progress && has_older_unit_progress,
-        course_versions: summarize_course_versions(user, locale_code),
+        course_versions: summarize_course_versions(user, locale_code, unit_group: unit_group_unit&.cached_unit_group),
         supported_locales: supported_locales,
         section_hidden_unit_info: section_hidden_unit_info(user),
         pilot_experiment: get_pilot_experiment,
         editor_experiment: editor_experiment,
-        show_assign_button: course_assignable?(user),
+        show_assign_button: unit_group_unit&.unit_group&.course_assignable?(user),
         project_sharing: project_sharing,
         curriculum_umbrella: curriculum_umbrella,
         family_name: family_name,
@@ -1799,7 +1799,9 @@ class Unit < ApplicationRecord
   # will always return false for participants so they will fall into the second check for
   # launched and can_view_version?. For instructors if course_assignable? is false then
   # launched will also be false.
-  def summarize_course_versions(user = nil, locale_code = 'en-us')
+  def summarize_course_versions(user = nil, locale_code = 'en-us', unit_group: nil)
+    unit_group ||= original_unit_group
+
     return {} if unit_group && !unit_group.single_unit_course?
 
     if unit_group&.single_unit_course?

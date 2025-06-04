@@ -1,66 +1,39 @@
-import {
-  Heading1,
-  Heading2,
-  BodyTwoText,
-} from '@code-dot-org/component-library/typography';
+import Breadcrumbs from '@code-dot-org/component-library/breadcrumbs';
+import {LinkWithText} from '@code-dot-org/component-library/link';
+import {Heading1} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
-import style from './workshopMarketingPage.module.scss';
+import EnrollInWorkshop from './components/EnrollInWorkshop';
+import OrganizerInformation from './components/OrganizerInformation';
+import WorkshopDetails from './components/WorkshopDetails';
+import {GetWorkshopInfoScriptDataResponse} from './types';
 
-interface SessionInfo {
-  id: number;
-  start: string;
-  end: string;
-  is_local: boolean;
-  location_name?: string;
-  location_address?: string;
-  meeting_link?: string;
-  session_format: string;
-}
+import moduleStyles from './workshopMarketingPage.module.scss';
 
-interface OrganizerInfo {
-  name: string;
-  email: string;
-}
+const workshopMarketingBreadcrumbs: LinkWithText[] = [
+  {
+    text: 'Explore workshops',
+    href: '/pd/workshop_dashboard/workshops/',
+  },
+  {
+    text: 'Workshop information',
+    href: window.location.pathname,
+  },
+];
 
-interface FacilitatorInfo {
-  name: string;
-  email: string;
-  bio?: string;
-}
+interface WorkshopMarketingPageProps
+  extends GetWorkshopInfoScriptDataResponse {}
 
-const WorkshopMarketingPage: React.FunctionComponent<{
-  id: number;
-  course: string;
-  subject?: string;
-  course_offerings?: string[];
-  name?: string;
-  capacity: number;
-  num_enrollments: number;
-  grade_levels?: string[];
-  sessions: SessionInfo[];
-  format: string;
-  location_name?: string;
-  fee?: string;
-  prereq?: string;
-  description?: string;
-  notes?: string;
-  custom_registration_link?: string;
-  regional_partner_name?: string;
-  organizer: OrganizerInfo;
-  facilitators?: FacilitatorInfo[];
-}> = ({
+const WorkshopMarketingPage: React.FunctionComponent<
+  WorkshopMarketingPageProps
+> = ({
   id,
-  course,
-  subject,
   course_offerings,
   name,
   capacity,
   num_enrollments,
   grade_levels,
   sessions,
-  format,
-  location_name,
   fee,
   prereq,
   description,
@@ -69,64 +42,51 @@ const WorkshopMarketingPage: React.FunctionComponent<{
   regional_partner_name,
   organizer,
   facilitators,
+  course,
+  subject,
+  format,
+  location_name,
 }) => {
   return (
-    <div className={style.workshopCatalog}>
-      <section className={style.headerContainer}>
+    <div className={moduleStyles.workshopCatalog}>
+      <section className={moduleStyles.header}>
+        <Breadcrumbs
+          name="workShopMarketingPage-HeaderBreadcrumbs"
+          size="l"
+          showHomeIcon={true}
+          breadcrumbs={workshopMarketingBreadcrumbs}
+        />
         <Heading1>Register for a workshop</Heading1>
       </section>
-      <section className={style.bodyContainer}>
-        <div className={style.workshopInfoContainer}>
-          <Heading2>Sample workshop title</Heading2>
-          <BodyTwoText>Course: {course}</BodyTwoText>
-          <BodyTwoText>Subject: {subject}</BodyTwoText>
-          <BodyTwoText>
-            PL Topics (course offerings): {course_offerings}
-          </BodyTwoText>
-          <BodyTwoText>Name: {name}</BodyTwoText>
-          <BodyTwoText>Capacity: {capacity}</BodyTwoText>
-          <BodyTwoText>Current # of enrollments: {num_enrollments}</BodyTwoText>
-          <BodyTwoText>Grade levels: {grade_levels}</BodyTwoText>
-          <BodyTwoText>Sessions:</BodyTwoText>
-          {sessions.map(session => (
-            <ul>
-              <li>Id: {session.id}</li>
-              <li>Start: {session.start}</li>
-              <li>End: {session.end}</li>
-              <li>Format: {session.session_format}</li>
-              <li>Is local: {session.is_local}</li>
-              <li>Location name: {session.location_name}</li>
-              <li>Location address: {session.location_address}</li>
-              <li>Meeting link: {session.meeting_link}</li>
-            </ul>
-          ))}
-          <BodyTwoText>Format: {format}</BodyTwoText>
-          <BodyTwoText>Location name: {location_name}</BodyTwoText>
-          <BodyTwoText>Fee: {fee}</BodyTwoText>
-          <BodyTwoText>Pre-requisites: {prereq}</BodyTwoText>
-          <BodyTwoText>Description: {description}</BodyTwoText>
-          <BodyTwoText>Notes: {notes}</BodyTwoText>
-          <BodyTwoText>
-            Custom registration link: {custom_registration_link}
-          </BodyTwoText>
-          <BodyTwoText>
-            Regional Partner name: {regional_partner_name}
-          </BodyTwoText>
-          <BodyTwoText>Organizer info:</BodyTwoText>
-          <ul>
-            <li>Name: {organizer?.name}</li>
-            <li>Email: {organizer?.email}</li>
-          </ul>
-          <BodyTwoText>Facilitators:</BodyTwoText>
-          {facilitators?.map(facilitator => (
-            <ul>
-              <li>Name: {facilitator.name}</li>
-              <li>Email: {facilitator.email}</li>
-              <li>Bio: {facilitator.bio}</li>
-            </ul>
-          ))}
+      <div className={moduleStyles.bodyWrapper}>
+        <div className={moduleStyles.bodyContainer}>
+          <WorkshopDetails
+            name={name}
+            grade_levels={grade_levels}
+            sessions={sessions}
+            fee={fee}
+            prereq={prereq}
+            description={description}
+            notes={notes}
+            course_offerings={course_offerings}
+            facilitators={facilitators}
+          />
+
+          <aside className={moduleStyles.sidebar}>
+            <EnrollInWorkshop
+              id={id}
+              custom_registration_link={custom_registration_link}
+              capacity={capacity}
+              num_enrollments={num_enrollments}
+            />
+
+            <OrganizerInformation
+              organizer={organizer}
+              regional_partner_name={regional_partner_name}
+            />
+          </aside>
         </div>
-      </section>
+      </div>
     </div>
   );
 };

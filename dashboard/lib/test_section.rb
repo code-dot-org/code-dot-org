@@ -96,7 +96,6 @@ class TestSection
     UserPermission.create(user: teacher, permission: UserPermission::AUTHORIZED_TEACHER)
 
     puts "Created test teacher with email: #{teacher.email}, name: '#{teacher.name}' and password: #{TestSectionData::DEFAULT_TEACHER_PASSWORD}"
-
     teacher
   end
 

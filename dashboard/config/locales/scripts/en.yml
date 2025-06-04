@@ -10271,6 +10271,8 @@ en:
               name: Intro to Programming
             lesson-9:
               name: Validation practice
+            lesson-10:
+              name: Widget Playground
           lesson_groups:
             lessonGroup-2:
               display_name: Cyber
@@ -20698,17 +20700,20 @@ en:
               name: Introduction to Music Lab
             lesson-15:
               name: 'Project: Genre Mash-Up'
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Templates
+            lessonGroup-2:
+              display_name: Revisions
+            lessonGroup-4:
+              display_name: Pre-Assessment
+            lessonGroup-5:
+              display_name: End of Unit Assessment and Survey
           name: musiclab-6-12-playground
           title: 6-12 Music Lab Playground
           description_audience: ''
           description_short: ''
-          description: |-
-            ## Out of date script
-
-            For current pilot with lesson plan updates, visit https://levelbuilder-studio.code.org/s/csd-programming-with-music-lab-2025-pilot
-
-            Use this script to stage bigger updates before launch while the pilot is still happening
+          description: ''
           student_description: ''
         pilot-pl-teaching-k5-music-lab:
           lessons: {}
@@ -23795,7 +23800,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-aif2-2025
-          title: Teaching Programming Fundamentals
+          title: Teaching Foundations of AI Programming
           description_audience: ''
           description_short: ''
           description: |-
@@ -24822,3 +24827,16 @@ en:
             #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
 
             #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Teaching Problem-Solving with AI unit. However, you can engage with the content in the order that best meets your needs.
+        ui-test-shared-unit:
+          lessons:
+            lesson-1:
+              name: Lesson 1
+            lesson-2:
+              name: Lesson 2
+          lesson_groups: {}
+          name: ui-test-shared-unit
+          title: UI Test Shared Unit
+          description_audience: ''
+          description_short: ''
+          description: Teacher Overview
+          student_description: Student Overview

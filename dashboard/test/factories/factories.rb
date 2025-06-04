@@ -1063,6 +1063,18 @@ FactoryBot.define do
     level_source {create :level_source, level: level}
   end
 
+  factory :skill do
+    sequence(:key) {|n| "skill-#{n}}"}
+    description {"Declares variables with conventional names"}
+    concept {"Variables"}
+    evaluation_criteria {"Does the student's work on this level demonstrate the skill?"}
+  end
+
+  factory :levels_skill do
+    association :level
+    association :skill
+  end
+
   factory :unit, aliases: [:script] do
     sequence(:name) {|n| "bogus-script-#{n}"}
     published_state {"beta"}

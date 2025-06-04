@@ -1,0 +1,9 @@
+name 'test-music-lab-loops-synthesis-practice-choice_v2'
+display_name 'Practice'
+description 'Choose a level below to try and complete!'
+
+sublevels
+level 'test-music-lab-loops-synthesis-challenge-choice-a_v2'
+level 'test-music-lab-loops-synthesis-challenge-choice-b_v2'
+level 'test-music-lab-loops-synthesis-challenge-choice-d_v2'
+uses_lab2

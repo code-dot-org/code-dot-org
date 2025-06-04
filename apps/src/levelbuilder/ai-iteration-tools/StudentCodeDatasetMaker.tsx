@@ -23,7 +23,7 @@ const StudentCodeDatasetMaker: React.FC = () => {
   const [datasetName, setDatasetName] = useState<string>('');
   const [levelId, setLevelId] = useState<string>('');
   const [unitId, setUnitId] = useState<string>('');
-  const [numSamples, setNumSamples] = useState<string>('25');
+  const [studentIds, setStudentIds] = useState<string>('');
   const [pending, setPending] = useState<boolean>(false);
   const [fetchedSamples, setFetchedSamples] = useState<StudentAnswer[]>([]);
   const [evaluationPending, setEvaluationPending] = useState<boolean>(false);
@@ -44,7 +44,7 @@ const StudentCodeDatasetMaker: React.FC = () => {
   const getStudentCodeSamples = async () => {
     setPending(true);
     const studentWorkRequest = {
-      numSamples: Number(numSamples),
+      studentIds: studentIds.split(','),
       unitId: Number(unitId),
       levelId: Number(levelId),
     };
@@ -89,13 +89,14 @@ const StudentCodeDatasetMaker: React.FC = () => {
       id: aiResponse.id,
     };
     if (aiResponse.skillEvaluations) {
-      // TODO: Use skill id when we have Skills
-      for (let i = 1; i < aiResponse.skillEvaluations.length; i++) {
+      for (let i = 0; i < aiResponse.skillEvaluations.length; i++) {
         const skillEvaluation = aiResponse.skillEvaluations[i];
-        evaluation[`skill${i}evaluationCriteria`] =
+        const skillId = skillEvaluation.skillId;
+        evaluation[`skill${skillId}evaluationCriteria`] =
           skillEvaluation.evaluationCriteria;
-        evaluation[`skill${i}aiEvaluation`] = skillEvaluation.aiEvaluation;
-        evaluation[`skill${i}aiReasoning`] = skillEvaluation.aiReasoning;
+        evaluation[`skill${skillId}aiEvaluation`] =
+          skillEvaluation.aiEvaluation;
+        evaluation[`skill${skillId}aiReasoning`] = skillEvaluation.aiReasoning;
       }
     }
     setEvaluatedSamples(prevSamples => [...prevSamples, evaluation]);
@@ -121,10 +122,10 @@ const StudentCodeDatasetMaker: React.FC = () => {
         <br />
         <br />
         <TextField
-          name="Number of Samples"
-          label="How many samples of student work do you want?"
-          onChange={e => setNumSamples(e.target.value)}
-          value={numSamples}
+          name="Student Ids"
+          label="Student Ids (comma separated)"
+          onChange={e => setStudentIds(e.target.value)}
+          value={studentIds}
         />
         <br />
         <br />

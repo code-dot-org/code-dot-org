@@ -306,13 +306,17 @@ function LandingPage({
 
     analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
       'regional partner': sessionStorage.getItem('rpName', null),
+      'workshop id': sessionStorage.getItem('workshopId', null),
       'workshop course': workshopCourse,
       'workshop subject': sessionStorage.getItem('workshopSubject', null),
+      'workshop format': sessionStorage.getItem('workshopFormat', null),
     });
     [
+      'workshopId',
       'workshopCourse',
       'workshopSubject',
       'workshopName',
+      'workshopFormat',
       'sessionTimeInfo',
       'rpName',
     ].forEach(sessionKey => sessionStorage.removeItem(sessionKey));

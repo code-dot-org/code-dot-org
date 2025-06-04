@@ -67,6 +67,7 @@ export const translatedCourseOfferingDurationsWithTime = {
 };
 
 export const translatedCourseOfferingMarketingInitiatives = {
+  aif: i18n.marketingInitiativeAIF(),
   csa: i18n.marketingInitiativeCSA(),
   csc: i18n.marketingInitiativeCSC(),
   csd: i18n.marketingInitiativeCSD(),

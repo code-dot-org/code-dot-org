@@ -35,7 +35,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-29 22:55:29 UTC",
+    "serialized_at": "2025-06-03 14:51:40 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -7822,6 +7822,19 @@
       }
     },
     {
+      "name": "Problem Solving with AI Unit Guide",
+      "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=drivesdk",
+      "key": "problem_solving_with_ai_unit_guide_pdf",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_with_ai_unit_guide_pdf"
+      }
+    },
+    {
       "name": "Remixing, Creativity, and Originality",
       "url": "https://docs.google.com/presentation/d/1MMdn2ei6iupAF8z0Tz9vHqpMPywMp0VMsvWSnW-HqQ8/edit?usp=drivesdk",
       "key": "remixing_creativity_and_originality",
@@ -8217,7 +8230,7 @@
     {
       "seeding_key": {
         "lesson.key": "Talking to Machines",
-        "resource.key": "problem_solving_with_ai_unit_guide"
+        "resource.key": "problem_solving_with_ai_unit_guide_pdf"
       }
     },
     {

@@ -103,7 +103,9 @@ const VerticalOutput: React.FunctionComponent<VerticalOutputProps> = ({
 
         const newHeight = newMiniAppHeight;
         const newWidth = desiredWidth;
-        scaleMiniApp(newHeight, newWidth);
+
+        const scale = scaleMiniApp(newHeight, newWidth);
+        CodebridgeRegistry.getInstance().setNeighborhoodThumbnailScale(scale);
 
         setWaitingForResize(false);
       }

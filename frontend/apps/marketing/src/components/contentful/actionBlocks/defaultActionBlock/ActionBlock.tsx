@@ -68,6 +68,10 @@ const ActionBlock: React.FC<ActionBlockContentfulProps> = ({
             iconRight: primaryButton.fields.isThisAnExternalLink
               ? externalLinkIconProps
               : undefined,
+            ...(primaryButton.fields.isThisAnExternalLink && {
+              target: '_blank',
+              rel: 'noopener noreferrer',
+            }),
           }
         : undefined
     }
@@ -80,6 +84,10 @@ const ActionBlock: React.FC<ActionBlockContentfulProps> = ({
             iconRight: secondaryButton.fields.isThisAnExternalLink
               ? externalLinkIconProps
               : undefined,
+            ...(secondaryButton.fields.isThisAnExternalLink && {
+              target: '_blank',
+              rel: 'noopener noreferrer',
+            }),
           }
         : undefined
     }
