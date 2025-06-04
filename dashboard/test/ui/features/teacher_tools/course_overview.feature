@@ -25,7 +25,7 @@ Feature: CourseOverview
     And I wait until element "#assignment-version-year" is visible
     And I press "assignment-version-year"
     And I click selector ".assignment-version-title:contains('19-'20)" once I see it
-    And I select the "CSP Unit 1 - The Internet ('19-'20" option in dropdown "uitest-secondary-assignment"
+    And I select the "CSP Unit 1 - The Internet ('19-'20)" option in dropdown "uitest-secondary-assignment"
     And I press the first "#uitest-save-section-changes" element to load a new page
     
     Then I sign in as "Ron"
