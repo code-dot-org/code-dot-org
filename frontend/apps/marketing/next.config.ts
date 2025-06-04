@@ -1,3 +1,5 @@
+import {setupHoneybadger} from '@honeybadger-io/nextjs';
+import {HoneybadgerNextJsConfig} from '@honeybadger-io/nextjs/dist/types';
 import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
@@ -8,6 +10,7 @@ const nextConfig: NextConfig = {
     'pino',
   ],
   cacheMaxMemorySize: 0, // disable default in-memory caching
+  productionBrowserSourceMaps: true,
   redirects: async function () {
     return [
       {
@@ -1960,4 +1963,26 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+const honeybadgerNextJsConfig: HoneybadgerNextJsConfig = {
+  // Disable source map upload (optional)
+  disableSourceMapUpload: false,
+
+  // Hide debug messages (optional)
+  silent: false,
+
+  // More information available at @honeybadger-io/webpack: https://github.com/honeybadger-io/honeybadger-js/tree/master/packages/webpack
+  webpackPluginOptions: {
+    apiKey: '',
+    assetsUrl: '',
+    revision: process.env.NEXT_PUBLIC_CONTAINER_DIGEST,
+    ignoreErrors: false,
+    retries: 3,
+    workerCount: 5,
+    deploy: {
+      environment: process.env.NODE_ENV,
+      repository: 'https://github.com/code-dot-org/code-dot-org',
+    },
+  },
+};
+
+export default setupHoneybadger(nextConfig, honeybadgerNextJsConfig);

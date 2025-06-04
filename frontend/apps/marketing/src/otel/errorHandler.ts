@@ -1,8 +1,10 @@
+import {Honeybadger} from '@honeybadger-io/react';
+
 import NewRelicAgent from '@/providers/newrelic/agent';
-export function handleError(error: Error, errorTraceId: string) {
+export function handleError(error: Error, errorTraceId: string | undefined) {
   console.error(error, errorTraceId);
   console.debug(
-    `Error ${errorTraceId} received ${error.message}, ${error.stack}`,
+    `Error ${errorTraceId} received ${error?.message}, ${error?.stack}`,
   );
 
   NewRelicAgent.then(agent => {
@@ -10,4 +12,7 @@ export function handleError(error: Error, errorTraceId: string) {
       agent.noticeError(error, {errorTraceId});
     }
   });
+
+  Honeybadger.setContext({errorTraceId});
+  Honeybadger.notify(error);
 }

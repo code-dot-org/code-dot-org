@@ -24,6 +24,10 @@ export type VideoCarouselProps = {
 };
 
 const VideoCarousel: React.FC<VideoCarouselProps> = ({slides}) => {
+  if (typeof window === 'undefined') {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (window as any).xyz.xyz = 123;
+  }
   if (!slides) {
     return (
       <div style={{color: 'var(--text-neutral-primary)'}}>

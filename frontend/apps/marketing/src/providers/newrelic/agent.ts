@@ -2,6 +2,7 @@ import {BrowserAgent} from '@newrelic/browser-agent';
 
 import {getNewRelicConfig} from '@/config/newrelic';
 import {getStage} from '@/config/stage';
+import {getEnv} from '@/providers/environment';
 
 async function initializeNewRelic(): Promise<BrowserAgent | undefined> {
   if (typeof window === 'undefined') {
@@ -45,7 +46,12 @@ async function initializeNewRelic(): Promise<BrowserAgent | undefined> {
   };
 
   // The agent loader code executes immediately on instantiation.
-  return new BrowserAgent(options);
+  const browserAgent = new BrowserAgent(options);
+  const applicationReleaseId = getEnv('NEXT_PUBLIC_CONTAINER_DIGEST');
+
+  if (applicationReleaseId) {
+    browserAgent.addRelease('@code-dot-org/marketing', applicationReleaseId);
+  }
 }
 
 export default initializeNewRelic();

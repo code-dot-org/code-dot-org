@@ -81,7 +81,7 @@ const ContentEditorHelper = ({isDraftModeEnabled}: ContentEditorToolsProps) => {
       )}
 
       {!popoverVisible &&
-        (searchParams.get('contentEditor') === 'true' ||
+        (searchParams?.get('contentEditor') === 'true' ||
           isDraftModeEnabled) && (
           <Button
             data-testid="content-editor-popover"

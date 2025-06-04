@@ -326,6 +326,8 @@ Resources:
               Value: experience
             - Name: NEXT_PUBLIC_STAGE
               Value: !Ref EnvironmentType
+            - Name: NEXT_PUBLIC_CONTAINER_DIGEST
+              Value: !Ref ContainerImageHashDigest
             - Name: NEXT_PUBLIC_INSTRUMENTATION_ENABLED
               Value: "true"
             - Name: OTEL_SERVICE_NAME
@@ -370,6 +372,10 @@ Resources:
               ValueFrom: !Sub "${WebApplicationServerSecretsARN}:STATSIG_SERVER_KEY::"
             - Name: OTEL_EXPORTER_OTLP_HEADERS
               ValueFrom: !Sub "${WebApplicationServerSecretsARN}:OTEL_EXPORTER_OTLP_HEADERS::"
+            - Name: HONEYBADGER_SERVER_API_KEY
+              ValueFrom: !Sub "${WebApplicationServerSecretsARN}:HONEYBADGER_SERVER_API_KEY::"
+            - Name: NEXT_PUBLIC_HONEYBADGER_BROWSER_API_KEY
+              ValueFrom: !Sub "${WebApplicationServerSecretsARN}:NEXT_PUBLIC_HONEYBADGER_BROWSER_API_KEY::"
           LogConfiguration:
             LogDriver: awslogs
             Options:

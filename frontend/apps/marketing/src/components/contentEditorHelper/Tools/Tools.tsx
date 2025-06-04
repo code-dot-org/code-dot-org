@@ -30,7 +30,7 @@ const ContentEditorTools = ({
   const getEnableDraftModeUrl = () => {
     const draftModeToken = localStorage.getItem('draftToken');
 
-    return `/api/draft?token=${draftModeToken}&slug=${pageParams.paths?.join('/')}&locale=${pageParams.locale}`;
+    return `/api/draft?token=${draftModeToken}&slug=${pageParams?.paths?.join('/')}&locale=${pageParams?.locale}`;
   };
   const handleEnterDraftMode = () => {
     redirect(getEnableDraftModeUrl());

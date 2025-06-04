@@ -16,28 +16,40 @@ import errorStyles from './error.module.scss';
 
 type ErrorProps = Error404Props | Error500Props;
 
-interface Error404Props {
+interface BaseErrorProps {
+  /** Trace ID for error tracking */
+  errorTraceId?: string;
+}
+
+interface Error404Props extends BaseErrorProps {
   statusCode: 404;
 }
 
-interface Error500Props {
+interface Error500Props extends BaseErrorProps {
   statusCode: 500;
   /** Error object */
   error: Error & {digest?: string};
   /** Next.js function to reset the error boundary */
-  resetAction: () => void;
+  resetAction?: () => void;
 }
 
 export default function Error(props: ErrorProps) {
   const [showError, setShowError] = useState(false);
-  const [traceId, setTraceId] = useState<string>();
+  const [traceId, setTraceId] = useState<string | undefined>(
+    props.errorTraceId,
+  );
 
   if (props.statusCode === 500) {
+    console.log(
+      `****************OH NO ERRROR************** ${props.error?.message}`,
+    );
     useEffect(() => {
-      const currentTraceId = uuid();
-      setTraceId(currentTraceId);
+      if (typeof traceId === 'undefined') {
+        const currentTraceId = uuid();
+        setTraceId(currentTraceId);
+      }
 
-      handleError(props.error, currentTraceId);
+      handleError(props.error, traceId);
     }, [props.error]);
   }
 
@@ -72,6 +84,19 @@ export default function Error(props: ErrorProps) {
     }
   };
 
+  const reset = () => {
+    if (props.statusCode === 500) {
+      const serverResetAction = props.resetAction;
+
+      if (serverResetAction) {
+        serverResetAction();
+      } else {
+        // If no reset action is provided, we can just reload the page
+        window.location.reload();
+      }
+    }
+  };
+
   const getCallToAction = () => {
     switch (props.statusCode) {
       case 404:
@@ -79,13 +104,7 @@ export default function Error(props: ErrorProps) {
       case 500:
         return (
           <>
-            <Button
-              onClick={
-                // Attempt to recover by trying to re-render the segment
-                () => props.resetAction()
-              }
-              text={'Reload this page'}
-            />
+            <Button onClick={reset} text={'Reload this page'} />
             <LinkButton
               href={'https://status.code.org/'}
               type={'secondary'}

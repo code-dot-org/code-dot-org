@@ -7,6 +7,7 @@ import {getGoogleAnalyticsMeasurementId} from '@/config/ga4';
 import OrganizationJsonLd from '@/config/jsonLd/OrganizationJsonLd';
 import {getStage} from '@/config/stage';
 import EnvironmentLoader from '@/providers/environment';
+import HoneybadgerLoader from '@/providers/honeybadger/HoneybadgerLoader';
 import NewRelicLoader from '@/providers/newrelic/NewRelicLoader';
 import OneTrustLoader from '@/providers/onetrust/OneTrustLoader';
 import OneTrustProvider from '@/providers/onetrust/OneTrustProvider';
@@ -36,6 +37,7 @@ export default async function Layout({
     <>
       <EnvironmentLoader />
       <NewRelicLoader />
+      <HoneybadgerLoader />
       <OneTrustLoader brand={brand} />
 
       <OneTrustProvider>
