@@ -1,0 +1,30 @@
+name 'music-lab-612-post-q1'
+
+question 'Looking at her code, what is the issue that you suggest she fix?'
+
+wrong 'wrong'
+wrong 'wrong'
+wrong 'wrong'
+right 'use play together instead of play sequential'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Sequencing
+
+Standard: Use the play together and play sequential blocks together to create layered tracks with different measure counts
+
+Lesson Type: Sequencing - Practice
+
+Skill Progression: Play 2+ sounds with different measure lengths together with at least 1 offset
+
+Pretest Modality: Given code, match to timeline
+
+Posttest Modality: Given algorithm / intent / incorrect code, match with code
+MARKDOWN
+
+markdown <<MARKDOWN
+Jessie wanted these two sounds to play at the same time, but the timeline doesn't match.
+
+![](https://images.code.org/62c62e3d4c7470f14a24bd2d931ea12d-image-1748977390156.png)
+MARKDOWN

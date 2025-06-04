@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Lesson 2: Lesson Exploration
  
-#### This lesson explores key networks and the Internet concepts, introduces important pedagogical approaches to teaching the unit, and provides time for teachers to explore selected lessons and activities from the Networks and the Internet unit.
+#### This lesson explores key networks and the Internet concepts, introduces important pedagogical approaches to teaching the unit, and provides time for teachers to explore selected lessons and activities from The Fabric of the Internet and AI unit.
 
 
 <div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-family: Arial, sans-serif; font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
@@ -14,10 +14,10 @@ markdown <<MARKDOWN
     <h4 style="margin-top: 0; font-weight: bold;">By the end of this lesson, you will:</h4>
     <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
       <li>Understand core networks concepts and how the Internet works.
-</li>
-    <li> Preview activities in the lessons.</li>
-        <li> Explore best practices for teaching networks and the Internet.
-</li>
+</li><br>
+    <li> Preview activities in the lessons.</li><br>
+        <li> Explore best practices for teaching The Fabric of the Internet and AI.
+</li><br>
     </ul>
   </div>
   <div>

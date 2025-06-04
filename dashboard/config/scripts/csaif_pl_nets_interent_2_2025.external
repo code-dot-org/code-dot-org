@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Sending Bits
 
-#### The Internet is a massive network of networks that allows computers around the world to communicate with each other. When information like websites, emails, or videos is sent across the Internet, it’s broken down into small pieces called **packets**.
+#### The Internet is a massive network of smaller networks that allows computers around the world to communicate with each other. When information like websites, emails, or videos is sent across the Internet, it’s broken down into small pieces called **packets**.
 
 <div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
@@ -16,14 +16,14 @@ markdown <<MARKDOWN
 #### All the data sent over the Internet is represented in **binary**, which is a system of only two digits: 1s and 0s. Each individual 1 or 0 is called a **bit**, short for “binary digit.” Bits are the smallest unit of data in computing, and they’re the building blocks of all digital information.
 
 <p align="center">
-<img src="https://images.code.org/10df7962c5b3ab87ca85db1c3f6534e6-Screenshot 2025-04-16 at 12.26.27 PM.png" alt="lesson plan diagram" width="50%" style="border-radius:10px; border: 5px solid black;">
+<img src="https://images.code.org/10df7962c5b3ab87ca85db1c3f6534e6-Screenshot 2025-04-16 at 12.26.27 PM.png" alt="bits can be represented as 1 or 0" width="50%" style="border-radius:10px; border: 5px solid black;">
 </p>
 
 
 #### To send text over the Internet, computers use a system called ASCII (American Standard Code for Information Interchange). **ASCII** assigns a unique binary code to each letter, number, and symbol. For example, the letter "A" is represented in binary as 1000001. The image below shows the rest of the ASCII encoding for the English alphabet.
 
 <p align="center">
-<img src="https://images.code.org/60660dedbac173cb5544a4dced1ad7f8-Screenshot 2025-04-21 at 2.05.27 PM.png" alt="lesson plan diagram" width="40%" style="border-radius:10px; border: 5px solid black;">
+<img src="https://images.code.org/60660dedbac173cb5544a4dced1ad7f8-Screenshot 2025-04-21 at 2.05.27 PM.png" alt="ASCII encoding for the English alphabet" width="40%" style="border-radius:10px; border: 5px solid black;">
 </p>
 
 <br>

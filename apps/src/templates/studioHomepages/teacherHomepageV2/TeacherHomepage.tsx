@@ -16,7 +16,6 @@ import {
 import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
 import {SectionList} from './SectionList';
-import {SchoolInfo} from './TeacherHomepageConstants';
 import TeacherHomepageDrawer from './TeacherHomepageDrawer';
 import TeacherPromotions from './TeacherPromotions';
 
@@ -133,11 +132,7 @@ export const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
           <TeacherPromotions />
         </div>
       </div>
-      <TeacherHomepageDrawer
-        showSchoolInfoInterstitial={showSchoolInfoInterstitial}
-        showSchoolInfoConfirmation={showSchoolInfoConfirmation}
-        existingSchoolInfo={existingSchoolInfo}
-      />
+      <TeacherHomepageDrawer />
     </div>
   );
 };

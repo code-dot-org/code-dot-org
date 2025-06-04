@@ -103,6 +103,7 @@ class ActivitySection < ApplicationRecord
         challenge: !!sl_data['challenge'],
         variants: sl_data['variants'],
         instructor_in_training: !!sl_data['instructor_in_training'],
+        show_ai_analysis: !!sl_data['show_ai_analysis'],
         progression: progression_name.present? && progression_name
       )
       sl.update_levels(sl_data['levels'] || [])

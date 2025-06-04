@@ -1,0 +1,255 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T02:57:20.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Debug\r\n\r\nChloe is trying to get her effects to work at the correct time, but all of her triggers have become messed up.\r\n\r\n> I want the alien to happen immediately when I press 3, the wormhole should happen on the next beat when I press 2, and the wheel should happen on the next measure when I press 1\r\n\r\nhelp Chloe debug her code so the triggers happen when she wants.",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "default",
+      "sounds": {
+        "electro": [
+          "drum_beat_cowbell",
+          "drum_beat_club",
+          "drum_beat_edm",
+          "drum_beat_hyper",
+          "drum_beat_fashion",
+          "drum_beat_noise",
+          "drum_beat_pause",
+          "drum_beat_shake",
+          "drum_beat_sharp",
+          "drum_beat_strobe",
+          "drum_beat_swirl",
+          "drum_beat_sync",
+          "drum_beat_tom",
+          "bass_synth_blocks",
+          "bass_synth_candy",
+          "bass_synth_chips",
+          "bass_synth_duct_tape",
+          "bass_synth_foam",
+          "bass_synth_glitter",
+          "bass_synth_hammer",
+          "bass_synth_nails",
+          "bass_synth_pop_rocks",
+          "bass_synth_sand",
+          "bass_synth_soda_pop",
+          "synth_airhorn",
+          "synth_cave",
+          "synth_sleek",
+          "synth_wiggle",
+          "guitar_code",
+          "guitar_melody",
+          "guitar_moment",
+          "guitar_reveal",
+          "guitar_shimmy",
+          "guitar_shine",
+          "alien",
+          "boom_impact",
+          "crackle",
+          "spring_lift",
+          "whua",
+          "whua_short",
+          "wormhole"
+        ],
+        "acoustic_arcade": [
+          "drum_beat_cabana",
+          "drum_beat_conga",
+          "drum_beat_hands",
+          "drum_beat_sweep",
+          "drum_beat_trees",
+          "drum_beat_wobble",
+          "bass_elevator",
+          "bass_float",
+          "bass_giant",
+          "bass_seesaw",
+          "bass_bounce",
+          "bass_stamp",
+          "synth_castle",
+          "synth_cloud",
+          "synth_cosmic",
+          "synth_round",
+          "synth_rubber",
+          "synth_tines",
+          "ukulele_knot",
+          "ukulele_shine",
+          "ukulele_slide",
+          "ukulele_knock",
+          "guitar_handle",
+          "guitar_path",
+          "guitar_window",
+          "guitar_flower",
+          "lead_zaps",
+          "lead_swoop",
+          "lead_violins",
+          "waterfall",
+          "bongo_roll",
+          "chimes",
+          "vibra_verb",
+          "sleigh_bells",
+          "wheel_spoke"
+        ]
+      },
+      "showSoundsPanelInSoundsMode": true,
+      "showSoundFilters": true,
+      "allowChangeStartingPlayheadPosition": true,
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_sequential",
+            "play_sounds_together",
+            "triggered_at_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "toolboxDefinition": {
+        "contents": [
+
+        ],
+        "kind": "flyoutToolbox"
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            },
+            {
+              "type": "triggered_at_simple2",
+              "id": "triggered_at_simple2",
+              "x": 170,
+              "y": 30,
+              "deletable": false,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger3</field>",
+                "trigger_start": "<field name=\"trigger_start\">next_beat</field>"
+              },
+              "next": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "play_sound_at_current_location_simple2",
+                  "deletable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "fields": {
+                    "sound": "electro/alien"
+                  }
+                }
+              }
+            },
+            {
+              "type": "triggered_at_simple2",
+              "id": "T119a|q?u}5r5^DMUV[l",
+              "x": 170,
+              "y": 170,
+              "deletable": false,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger1</field>",
+                "trigger_start": "<field name=\"trigger_start\">immediately</field>"
+              },
+              "next": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "v(XGvT~2is|Zvk{=f,p*",
+                  "deletable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "fields": {
+                    "sound": "electro/wormhole"
+                  }
+                }
+              }
+            },
+            {
+              "type": "triggered_at_simple2",
+              "id": "CVchQpQJN8yRz8~sLZk~",
+              "x": 170,
+              "y": 330,
+              "deletable": false,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger2</field>",
+                "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
+              },
+              "next": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "R@m2+Gs,ad_.{ppD9w:9",
+                  "deletable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "fields": {
+                    "sound": "acoustic_arcade/wheel_spoke"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-mini-project-walk-triggers-3_89615100-a05e-4558-b62d-00422a4f82b5",
+        "message": "You played 3 effects! Make sure they match the directions from the level!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "trigger_id_pressed",
+            "value": 1
+          },
+          {
+            "name": "trigger_id_pressed",
+            "value": 2
+          },
+          {
+            "name": "trigger_id_pressed",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-mini-project-walk-triggers-3_694961cf-36b8-48fd-8e75-f92464a13a4e",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to your song and waiting to hear 3 effects…",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:20.631+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-walk-triggers-3\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-walk-triggers-3\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -7,6 +7,7 @@ Feature: Unit overview page
   @properties_encryption_key
   Scenario: Viewing student progress
     Given I create an authorized teacher-associated student named "Sally"
+    Given I am assigned to course "allthethingscourse" and unit "allthethings" with teacher "Teacher_Sally"
 
     # Make progress as student
     And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
@@ -23,9 +24,9 @@ Feature: Unit overview page
     When I sign in as "Teacher_Sally"
     And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/29/levels/4?level_name=2-3 Artist 1 new"
     And I am on "http://studio.code.org/courses/allthethingscourse/units/1"
-    And I wait until element ".teacher-panel" is visible
+    And I wait until element "#uitest-view-as-student-selector" is visible
     Then I verify progress for lesson 29 level 4 in detail view is "perfect"
-    When I click selector ".teacher-panel table td:contains(Sally)" once I see it
+    Then I select the "Sally" option in dropdown "uitest-view-as-student-selector"
     And I wait until element "td:contains(Maze)" is visible
     # verify name format in summary view
     And element "td:contains(2. Maze)" is visible

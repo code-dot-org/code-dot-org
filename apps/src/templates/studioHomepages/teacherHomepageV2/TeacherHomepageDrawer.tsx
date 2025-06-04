@@ -12,6 +12,7 @@ import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useSchoolInfo} from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
 import {updateSchoolInfo} from '@cdo/apps/schoolInfo/utils/updateSchoolInfo';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
@@ -22,22 +23,43 @@ import {SchoolInfo} from './TeacherHomepageConstants';
 
 import styles from './teacherHomepage.module.scss';
 
-const NON_SCHOOL_OPTIONS = ['selectASchool', 'clickToAd', 'noSchoolSetting'];
+const NON_SCHOOL_OPTIONS = ['selectASchool', 'clickToAdd', 'noSchoolSetting'];
 
-interface TeacherHomepageDrawerProps {
+interface DrawerData {
   showSchoolInfoInterstitial: boolean;
   showSchoolInfoConfirmation: boolean;
-  existingSchoolInfo?: SchoolInfo;
+  existingSchoolInfo: SchoolInfo;
 }
 
-export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
-  showSchoolInfoInterstitial,
-  showSchoolInfoConfirmation,
-  existingSchoolInfo,
-}) => {
-  const usIp = useAppSelector(state => state.currentUser.inUSA);
+export const TeacherHomepageDrawer: React.FC = () => {
+  const [schoolInfoInterstitialOpen, setSchoolInfoInterstitialOpen] =
+    React.useState(false);
+  const [schoolInfoConfirmationOpen, setSchoolInfoConfirmationOpen] =
+    React.useState(false);
+  const [success, setSuccess] = React.useState(false);
+  const [showSchoolInfoUnknownError, setShowSchoolInfoUnknownError] =
+    React.useState(false);
+  const [existingSchoolInfo, setExistingSchoolInfo] = React.useState<
+    SchoolInfo | undefined
+  >(undefined);
+  const schoolName =
+    existingSchoolInfo?.school_name || i18n.schoolInfoDialogDescriptionNoName();
+  React.useEffect(() => {
+    HttpClient.fetchJson<DrawerData>(
+      '/teacher_dashboard/get_school_info_interstitial_data'
+    ).then(data => {
+      setExistingSchoolInfo(data.value.existingSchoolInfo);
+      setSchoolInfoInterstitialOpen(data.value.showSchoolInfoInterstitial);
+      setSchoolInfoConfirmationOpen(data.value.showSchoolInfoConfirmation);
+    });
+  }, [
+    setExistingSchoolInfo,
+    setSchoolInfoInterstitialOpen,
+    setSchoolInfoConfirmationOpen,
+  ]);
+  const inUSA = useAppSelector(state => state.currentUser.inUSA);
   const schoolInfo = useSchoolInfo({
-    usIp,
+    usIp: inUSA,
     country: existingSchoolInfo?.country,
     schoolName: existingSchoolInfo?.school_name,
     schoolId: existingSchoolInfo?.school_id,
@@ -45,15 +67,54 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
     schoolType: existingSchoolInfo?.school_type,
   });
 
-  const [schoolInfoInterstitialOpen, setSchoolInfoInterstitialOpen] =
-    React.useState(showSchoolInfoInterstitial);
-  const [schoolInfoConfirmationOpen, setSchoolInfoConfirmationOpen] =
-    React.useState(showSchoolInfoConfirmation);
-  const [success, setSuccess] = React.useState(false);
-  const schoolName = existingSchoolInfo?.school_name || 'the same school?';
+  const tryUpdateSchoolInfo = async () => {
+    const hasNcesId =
+      schoolInfo.schoolId && !NON_SCHOOL_OPTIONS.includes(schoolInfo.schoolId);
+    analyticsReporter.sendEvent(
+      EVENTS.SCHOOL_INTERSTITIAL_SUBMIT,
+      {
+        hasNcesId: hasNcesId.toString(),
+        attempt: showSchoolInfoUnknownError ? 2 : 1,
+      },
+      PLATFORMS.BOTH
+    );
+    try {
+      await updateSchoolInfo({
+        schoolId: schoolInfo.schoolId,
+        country: schoolInfo.country,
+        schoolName: schoolInfo.schoolName,
+        schoolZip: schoolInfo.schoolZip,
+      });
 
-  const [showSchoolInfoUnknownError, setShowSchoolInfoUnknownError] =
-    React.useState(false);
+      analyticsReporter.sendEvent(
+        EVENTS.SCHOOL_INTERSTITIAL_SAVE_SUCCESS,
+        {
+          attempt: showSchoolInfoUnknownError ? 2 : 1,
+        },
+        PLATFORMS.BOTH
+      );
+
+      setSuccess(true);
+      setSchoolInfoInterstitialOpen(false);
+    } catch (error) {
+      analyticsReporter.sendEvent(
+        EVENTS.SCHOOL_INTERSTITIAL_SAVE_FAILURE,
+        {
+          attempt: showSchoolInfoUnknownError ? 2 : 1,
+        },
+        PLATFORMS.BOTH
+      );
+
+      if (!showSchoolInfoUnknownError) {
+        // First failure, display error message and give the teacher a chance
+        // to try again.
+        setShowSchoolInfoUnknownError(true);
+      } else {
+        // We already failed once, let's not block the teacher any longer.
+        onDrawerClose();
+      }
+    }
+  };
 
   const handlePrimaryButtonClick = async () => {
     if (success) {
@@ -71,54 +132,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
       setSchoolInfoConfirmationOpen(false);
     } else if (schoolInfoInterstitialOpen) {
       // If the interstitial is open, we want to submit the school info.
-      const hasNcesId =
-        schoolInfo.schoolId &&
-        !NON_SCHOOL_OPTIONS.includes(schoolInfo.schoolId);
-      analyticsReporter.sendEvent(
-        EVENTS.SCHOOL_INTERSTITIAL_SUBMIT,
-        {
-          hasNcesId: hasNcesId.toString(),
-          attempt: showSchoolInfoUnknownError ? 2 : 1,
-        },
-        PLATFORMS.BOTH
-      );
-
-      try {
-        await updateSchoolInfo({
-          schoolId: schoolInfo.schoolId,
-          country: schoolInfo.country,
-          schoolName: schoolInfo.schoolName,
-          schoolZip: schoolInfo.schoolZip,
-        });
-
-        analyticsReporter.sendEvent(
-          EVENTS.SCHOOL_INTERSTITIAL_SAVE_SUCCESS,
-          {
-            attempt: showSchoolInfoUnknownError ? 2 : 1,
-          },
-          PLATFORMS.BOTH
-        );
-
-        setSuccess(true);
-        setSchoolInfoInterstitialOpen(false);
-      } catch (error) {
-        analyticsReporter.sendEvent(
-          EVENTS.SCHOOL_INTERSTITIAL_SAVE_FAILURE,
-          {
-            attempt: showSchoolInfoUnknownError ? 2 : 1,
-          },
-          PLATFORMS.BOTH
-        );
-
-        if (!showSchoolInfoUnknownError) {
-          // First failure, display error message and give the teacher a chance
-          // to try again.
-          setShowSchoolInfoUnknownError(true);
-        } else {
-          // We already failed once, let's not block the teacher any longer.
-          onDrawerClose();
-        }
-      }
+      tryUpdateSchoolInfo();
     }
   };
 
@@ -129,17 +143,16 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
         {},
         PLATFORMS.BOTH
       );
-      setSchoolInfoInterstitialOpen(false);
     } else if (schoolInfoConfirmationOpen) {
       analyticsReporter.sendEvent(
         EVENTS.UPDATE_SCHOOL_INFO_DIALOG_CLOSED,
         {},
         PLATFORMS.BOTH
       );
-      setSchoolInfoConfirmationOpen(false);
-    } else if (success) {
-      setSuccess(false);
     }
+    setSchoolInfoInterstitialOpen(false);
+    setSchoolInfoConfirmationOpen(false);
+    setSuccess(false);
   };
 
   return (

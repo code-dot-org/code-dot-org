@@ -1,5 +1,5 @@
 import CloseButton from '@code-dot-org/component-library/closeButton';
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
 import SimpleDropdown, {
   SimpleDropdownProps,
 } from '@code-dot-org/component-library/dropdown/simpleDropdown';
@@ -7,7 +7,7 @@ import {Heading6} from '@code-dot-org/component-library/typography';
 import {codebridgeLabsWithConsole} from '@codebridge/constants';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import FocusTrap from 'focus-trap-react';
-import React, {useState} from 'react';
+import React, {useMemo, useState} from 'react';
 import {createPortal} from 'react-dom';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -24,6 +24,7 @@ import useOutsideClick from '@cdo/apps/util/hooks/useOutsideClick';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 
+import {lab2EntryPoints} from '../../../lab2EntryPoints';
 import {useCodebridgeContext} from '../codebridgeContext';
 
 import moduleStyles from './settings-dropdown.module.scss';
@@ -72,9 +73,9 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
   const {levelProperties} = useCodebridgeContext();
   const appName = levelProperties.appName;
 
-  // We need to set the theme here becausse the dropdown is rendered in a portal, outside of the
+  // We need to set the theme here because the dropdown is rendered in a portal, outside of the
   // main lab container.
-  const {theme} = useTheme();
+  const {theme, setTheme} = useTheme();
 
   const dispatch = useAppDispatch();
   const [selectedEditorFontSizeValue, setSelectedEditorFontSizeValue] =
@@ -131,6 +132,33 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
     }
   };
 
+  const handleThemeChange = (value: Theme) => {
+    setTheme(value);
+    if (signInState === SignInState.SignedIn) {
+      new UserPreferences().setGlobalTheme(value);
+    }
+    sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_THEME_CHANGE, appName, {
+      levelPath: window.location.pathname,
+      theme: value,
+    });
+  };
+
+  const availableThemes: string[] = useMemo(() => {
+    if (!appName || !lab2EntryPoints[appName]) {
+      return [];
+    }
+    return lab2EntryPoints[appName].themes;
+  }, [appName]);
+
+  const themeDropdownOptions = availableThemes.map(theme => ({
+    text:
+      theme === 'Dark'
+        ? codebridgeI18n.darkTheme()
+        : codebridgeI18n.lightTheme(),
+    value: theme,
+  }));
+  const dropdownColor = theme === 'Dark' ? 'white' : 'black';
+
   const hasConsole = codebridgeLabsWithConsole.includes(appName);
 
   return createPortal(
@@ -174,7 +202,7 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
             selectedValue={selectedEditorFontSizeValue}
             name={'font-size'}
             size="s"
-            color="white"
+            color={dropdownColor}
           />
         </div>
         {hasConsole && (
@@ -193,10 +221,28 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
               selectedValue={selectedConsoleFontSizeValue}
               name={'font-size'}
               size="s"
-              color="white"
+              color={dropdownColor}
             />
           </div>
         )}
+        <div className={moduleStyles.dropdownRow}>
+          <label
+            htmlFor={codebridgeI18n.theme()}
+            className={moduleStyles.dropdownLabel}
+          >
+            Theme
+          </label>
+          <SimpleDropdown
+            labelText={codebridgeI18n.theme()}
+            isLabelVisible={false}
+            onChange={event => handleThemeChange(event.target.value as Theme)}
+            items={themeDropdownOptions}
+            selectedValue={theme}
+            name={'theme'}
+            size="s"
+            color={dropdownColor}
+          />
+        </div>
       </div>
     </FocusTrap>,
     document.body

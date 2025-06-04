@@ -1,3 +1,4 @@
+import Alert from '@code-dot-org/component-library/alert';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -39,7 +40,17 @@ export default class SetupGuide extends React.Component {
             dismissible
           />
         )}
+
         <h1>{applabI18n.makerSetupPageTitle()}</h1>
+
+        <Alert
+          text={applabI18n.chrome133PlusBugCallout()}
+          link={{
+            href: 'https://status.code.org',
+            text: i18n.learnMore(),
+          }}
+          type={'warning'}
+        />
 
         <HeaderCard {...this.setupGuideContent} />
 

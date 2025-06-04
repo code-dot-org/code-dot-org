@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-05-08T14:36:18.000Z",
   "level_num": "custom",
@@ -48,10 +49,9 @@
       "ROBOT CARTS! FACE PAYMENTS! Grocery Shopping Just Got Totally BONKERS!.pdf": "70bc377b-0dd5-487d-b1b0-ca2533a19d46.pdf",
       "AI, Energy, and the Environment.pdf": "13ac0ec7-f1e0-4be4-977b-45eb005a9108.pdf"
     },
-    "long_instructions": "##AI in My Community: Helpful or Harmful?\r\n###Grocery Stores\r\nYou're going to be working with news articles about Artificial Intelligence (AI). The text of each article is already attached within the assets section of the chatbot, so you can ask the AI questions directly about it.\r\n\r\n###Instructions\r\n* Click **Upload** > **From Library**. Select the article(s) that you wish the chatbot to engage with.\r\n* Use the chatbot to help you summarize the selected articles, find key points, and gain insights\r\n* Record outputs in your activity guide, focusing specifically on the following:\r\n\t* Who in the community benefits most from this AI?\r\n    * Who is most harmed by it?\r\n    * Are there any negative effects or unintended consequences, such as environmental impact?\r\n\r\nExperiment with different combinations of articles for different insights!\r\n",
+    "long_instructions": "##AI in My Community: Helpful or Harmful?\r\n###Grocery Stores\r\nYou're going to be working with news articles about Artificial Intelligence (AI). The text of each article is already attached within the assets section of the chatbot, so you can ask the AI questions directly about it.\r\n\r\n###Instructions\r\n* Click **Add** > **From Library**. Select the article(s) that you wish the chatbot to engage with.\r\n* Use the chatbot to help you summarize the selected articles, find key points, and gain insights\r\n* Record outputs in your activity guide, focusing specifically on the following:\r\n\t* Who in the community benefits most from this AI?\r\n    * Who is most harmed by it?\r\n    * Are there any negative effects or unintended consequences, such as environmental impact?\r\n\r\nExperiment with different combinations of articles for different insights!\r\n",
     "name_suffix": "_2025"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-08T14:36:18.967+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson12-level2a_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson12-level2a_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:36:18.967+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson12-level2a_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson12-level2a_2024\"},{\"changed_at\":\"2025-05-29 21:40:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Aichat>

@@ -1,0 +1,9 @@
+name 'test-music-lab-loops-sythesize-recap-choice_v2'
+display_name 'Skill Review'
+description 'Choose any of the concepts below to review before moving on.'
+
+sublevels
+level 'test-music-lab-loops-practice-parallel-panels_v2'
+level 'test-music-lab-loops-practice-panel-nested-loops_v2'
+level 'test-music-lab-loops-practice-panel-offbeat_v2'
+uses_lab2
