@@ -10,7 +10,7 @@ class TestSection
   SAMPLE_STUDENT_NAME_FORMAT = 'Student%s Generated'.freeze
   SAMPLE_STUDENT_NAME_REGEX = /Student\d* Generated/
 
-  DEFAULT_UNIT = 'csp3-2024'
+  DEFAULT_UNIT = 'csp4-2024'
   DEFAULT_COURSE = 'csp-2024'
 
   @@rng = nil
@@ -106,7 +106,7 @@ class TestSection
   def self.create_section(options)
     unit_group = UnitGroup.get_from_cache(options[:unit_group_name])
 
-    create :section, script: options[:unit], unit_group: unit_group, login_type: Section::LOGIN_TYPE_PICTURE, grade: [2],
+    create :section, script: options[:unit], unit_group: unit_group, login_type: Section::LOGIN_TYPE_PICTURE, grade: [10],
       **options.slice(:teacher, :name)
   end
 
@@ -121,7 +121,7 @@ class TestSection
       current_student += 1
 
       name = format(SAMPLE_STUDENT_NAME_FORMAT, current_student)
-      student_user = create :student, name: name, age: 10, gender: nil
+      student_user = create :student, name: name, age: 15, gender: nil
 
       # Add student to section
       create :follower, section: section, student_user: student_user
