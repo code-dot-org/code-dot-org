@@ -75,9 +75,6 @@ const PathChangeHandler: React.FC<{needsReload: boolean}> = ({needsReload}) => {
 interface TeacherNavigationRouterProps {
   studioUrlPrefix: string;
   showAITutorTab: boolean;
-  showSchoolInfoInterstitial: boolean;
-  showSchoolInfoConfirmation: boolean;
-  existingSchoolInfo?: SchoolInfo;
 }
 
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
@@ -87,9 +84,6 @@ const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
 const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   studioUrlPrefix,
   showAITutorTab,
-  showSchoolInfoInterstitial,
-  showSchoolInfoConfirmation,
-  existingSchoolInfo,
 }) => {
   const sectionId = useAppSelector(
     state => state.teacherSections.selectedSectionId
@@ -133,12 +127,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                 needsReload={needsReload ? needsReload : false}
               />
               <div>
-                <TeacherHomepage
-                  studioUrlPrefix={studioUrlPrefix}
-                  showSchoolInfoInterstitial={showSchoolInfoInterstitial}
-                  showSchoolInfoConfirmation={showSchoolInfoConfirmation}
-                  existingSchoolInfo={existingSchoolInfo}
-                />
+                <TeacherHomepage studioUrlPrefix={studioUrlPrefix} />
                 <ScrollRestoration />
               </div>
             </>
@@ -363,9 +352,6 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
       selectedSection,
       studioUrlPrefix,
       sectionHasAITutor,
-      showSchoolInfoInterstitial,
-      showSchoolInfoConfirmation,
-      existingSchoolInfo,
     ]
   );
 

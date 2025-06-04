@@ -25,18 +25,12 @@ export type ArchivedToggleOption = 'teaching' | 'archived';
 
 interface TeacherHomepageProps {
   studioUrlPrefix: string;
-  showSchoolInfoInterstitial: boolean;
-  showSchoolInfoConfirmation: boolean;
-  existingSchoolInfo?: SchoolInfo;
 }
 
 const LOCAL_STORAGE_KEY = 'teacher_homepage_feedback_closed';
 
 export const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
   studioUrlPrefix,
-  showSchoolInfoInterstitial,
-  showSchoolInfoConfirmation,
-  existingSchoolInfo,
 }) => {
   const teacherName = useAppSelector(state => state.currentUser.displayName);
 
