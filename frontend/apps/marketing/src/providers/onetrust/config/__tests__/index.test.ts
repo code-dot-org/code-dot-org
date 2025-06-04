@@ -39,7 +39,7 @@ describe('OneTrust Config Functions', () => {
       getStageMock.mockReturnValue('production');
       const result = getOnetrustAutoBlockScriptPath(Brand.CODE_DOT_ORG);
       expect(result).toBe(
-        '/onetrust/code.org/consent/27cca70a-7db3-4852-9ef0-a6660fd0977d/OtAutoBlock.js',
+        '/_next/static/public/onetrust/code.org/consent/27cca70a-7db3-4852-9ef0-a6660fd0977d/OtAutoBlock.js',
       );
     });
 
@@ -47,7 +47,7 @@ describe('OneTrust Config Functions', () => {
       getStageMock.mockReturnValue('production');
       const result = getOnetrustAutoBlockScriptPath(Brand.HOUR_OF_CODE);
       expect(result).toBe(
-        '/onetrust/hourofcode.com/consent/7c79c547-a2fc-4998-9b21-0c7a5e67e345/OtAutoBlock.js',
+        '/_next/static/public/onetrust/hourofcode.com/consent/7c79c547-a2fc-4998-9b21-0c7a5e67e345/OtAutoBlock.js',
       );
     });
 
@@ -64,7 +64,9 @@ describe('OneTrust Config Functions', () => {
     it('should return the correct stub script path for production stage', () => {
       getStageMock.mockReturnValue('production');
       const result = getOnetrustStubScriptPath(Brand.CODE_DOT_ORG);
-      expect(result).toBe('/onetrust/code.org/scripttemplates/otSDKStub.js');
+      expect(result).toBe(
+        '/_next/static/public/onetrust/code.org/scripttemplates/otSDKStub.js',
+      );
     });
 
     it('should return the correct stub script path for non-production stage', () => {

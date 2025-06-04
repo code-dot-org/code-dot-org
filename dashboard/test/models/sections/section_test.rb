@@ -793,7 +793,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'selected_section_summarize: section with a single-unit course assigned' do
     single_unit_course = create :single_unit_course
-    single_unit = single_unit_course.default_units.first
+    single_unit = single_unit_course.first_unit
     section = create :section, unit_group: single_unit_course
     CourseOffering.add_course_offering(single_unit_course)
 
@@ -1046,7 +1046,7 @@ class SectionTest < ActiveSupport::TestCase
         assignedTitle: 'somecourse',
         linkToAssigned: '/courses/somecourse',
         currentUnitTitle: 'Jigsaw',
-        linkToCurrentUnit: '/s/jigsaw',
+        linkToCurrentUnit: '/courses/somecourse/units/1',
         courseVersionName: 'somecourse',
         numberOfStudents: 0,
         linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
@@ -1184,7 +1184,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'summarize: section with a single-unit course assigned' do
     single_unit_course = create :single_unit_course
-    single_unit = single_unit_course.default_units.first
+    single_unit = single_unit_course.first_unit
     section = create :section, unit_group: single_unit_course
     CourseOffering.add_course_offering(single_unit_course)
 

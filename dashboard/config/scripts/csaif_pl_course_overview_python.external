@@ -3,9 +3,9 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Programming Fundamentals Curriculum Overview
+# Foundations of AI Programming Curriculum Overview
  
-#### The **Programming Fundamentals** curriculum unit introduces students to programming, algorithms, and ethical computing.
+#### The **Foundations of AI Programming** curriculum unit introduces students to programming, algorithms, and ethical computing.
 
 #### They learn how algorithms solve problems, how to design and debug Python programs with AI tools, and will consider the societal impact of computing. 
 

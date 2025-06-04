@@ -1,0 +1,24 @@
+{
+  "name": "teaching-foundations-ai-programming-2025",
+  "script_names": [
+    "self-paced-pl-teaching-foundations-ai-programming"
+  ],
+  "original_script_names": [
+    "self-paced-pl-teaching-foundations-ai-programming"
+  ],
+  "published_state": "stable",
+  "instruction_type": "self_paced",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "teaching-foundations-ai-programming",
+    "has_numbered_units": true,
+    "version_year": "2025"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

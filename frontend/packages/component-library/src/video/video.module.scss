@@ -80,6 +80,10 @@
 
   .download {
     margin-top: 0.25rem;
+
+    @media (max-width: 640px) {
+      display: none;
+    }
   }
 
   // Align the download button to the right

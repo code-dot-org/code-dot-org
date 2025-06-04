@@ -9,7 +9,7 @@ Scenario: Free Response level 1
   When I open my eyes to test "free response summary 1"
   Given I am a teacher
   And I create a new student section
-  And I am on "http://studio.code.org/s/allthethings/lessons/27/levels/1/summary"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/1/summary"
   And I wait until element "#summary-container" is visible
   And I wait to see ".uitest-sectionselect"
   Then I see no difference for "free response level summary 1"
@@ -23,7 +23,7 @@ Scenario: Free Response level 2
   When I open my eyes to test "free response summary 2"
   Given I am a teacher
   And I create a new student section
-  And I am on "http://studio.code.org/s/allthethings/lessons/27/levels/2/summary"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/2/summary"
   And I wait until element "#summary-container" is visible
   And I wait to see ".uitest-sectionselect"
   Then I see no difference for "free response level summary 2"
@@ -37,7 +37,7 @@ Scenario: Free Response level 3
   When I open my eyes to test "free response summary 3"
   Given I am a teacher
   And I create a new student section
-  And I am on "http://studio.code.org/s/allthethings/lessons/27/levels/3/summary"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/3/summary"
   And I wait until element "#summary-container" is visible
   And I wait to see ".uitest-sectionselect"
   Then I see no difference for "free response level summary 3"
@@ -52,7 +52,7 @@ Scenario: Multi level 1
   Given I create a teacher named "Teacher_1"
   And I give user "Teacher_1" authorized teacher permission
   And I create a new student section
-  And I am on "http://studio.code.org/s/allthethings/lessons/9/levels/1/summary"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/9/levels/1/summary"
   And I wait until element "#summary-container" is visible
   And I wait to see ".uitest-sectionselect"
   Then I see no difference for "multi level summary 1"
@@ -69,7 +69,7 @@ Scenario: Multi level 2
   Given I create a teacher named "Teacher_1"
   And I give user "Teacher_1" authorized teacher permission
   And I create a new student section
-  And I am on "http://studio.code.org/s/allthethings/lessons/9/levels/4/summary"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/9/levels/4/summary"
   And I wait until element "#summary-container" is visible
   And I wait to see ".uitest-sectionselect"
   Then I see no difference for "multi level summary 2"
@@ -81,12 +81,12 @@ Scenario: Check for Understanding summaries
   Given I am on "http://studio.code.org"
 
   Given I create an authorized teacher-associated student named "Sally"
-  And I am on "http://studio.code.org/s/allthethings/lessons/27/levels/1/"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/1/"
   And I type "sample response" into ".free-response > textarea"
   And I press ".submitButton" using jQuery to load a new page
 
   When I sign in as "Teacher_Sally" and go home
-  And I am on "http://studio.code.org/s/allthethings/lessons/27/levels/1/summary"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/1/summary"
 
   And I wait until element "#summary-container" is visible
   And I dismiss the teacher panel
@@ -133,18 +133,18 @@ Scenario: Check for Understanding summaries eyes
   When I open my eyes to test "Check for Understanding summaries"
 
   Given I create an authorized teacher-associated student named "Sally"
-  And I am on "http://studio.code.org/s/allthethings/lessons/27/levels/1/"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/1/"
   And I type "sample response" into ".free-response > textarea"
   And I press ".submitButton" using jQuery to load a new page
 
   And I create a student named "Student2"
   And I join the section
-  And I am on "http://studio.code.org/s/allthethings/lessons/27/levels/1/"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/1/"
   And I type "sample response 2" into ".free-response > textarea"
   And I press ".submitButton" using jQuery to load a new page
 
   When I sign in as "Teacher_Sally" and go home
-  And I am on "http://studio.code.org/s/allthethings/lessons/27/levels/1/summary"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/1/summary"
 
   And I wait until element "#summary-container" is visible
 

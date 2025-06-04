@@ -45,6 +45,7 @@ class UnitOverviewTopRow extends React.Component {
     courseVersionId: PropTypes.number,
     courseLink: PropTypes.string,
     isUnitWithLevels: PropTypes.bool,
+    scriptPath: PropTypes.string.isRequired,
 
     // redux provided
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
@@ -74,7 +75,7 @@ class UnitOverviewTopRow extends React.Component {
       unitAllowsHiddenLessons,
       deeperLearningCourse,
       scriptId,
-      scriptName,
+      scriptPath,
       viewAs,
       isRtl,
       studentResources,
@@ -110,7 +111,7 @@ class UnitOverviewTopRow extends React.Component {
               {isUnitWithLevels && (
                 <Button
                   __useDeprecatedTag
-                  href={`/s/${scriptName}/next`}
+                  href={`${scriptPath}/next`}
                   text={NEXT_BUTTON_TEXT[unitProgress]}
                   size={Button.ButtonSize.large}
                   style={{marginRight: 10}}

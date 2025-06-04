@@ -77,7 +77,7 @@ markdown <<MARKDOWN
     <summary style="font-size: 16pt; font-weight: bold;"><b>4. </b>Interactive student handouts</summary>
 <div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
        	<p style= "font-size: 14pt">
-         Handouts offer activities, practice problems, and note-taking guides to reinforce key concepts. In Programming with Music Lab, <b>only select lessons have associated handout</b>.
+         Handouts offer activities, practice problems, and note-taking guides to reinforce key concepts. In Coding with Music, <b>only select lessons have associated handout</b>.
         </p>
    </div>
 </details>

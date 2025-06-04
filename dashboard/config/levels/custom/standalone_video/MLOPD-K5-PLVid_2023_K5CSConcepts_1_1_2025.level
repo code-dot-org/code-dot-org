@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2025-05-23T11:30:42.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "music_lab_promo_long",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28494,
+    "name_suffix": "_2025",
+    "encrypted": "false",
+    "long_instructions": "\r\n## What is Coding with Music? \r\n\r\n\r\n#### Coding with Music is a short, accessible curriculum for grades 3-5 that teaches programming through music creation. Students learn to code melodies, loops, and interactive compositions in a fun, engaging way while meeting accessibility standards.\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-05-23T11:30:42.660+00:00\",\"changed\":[\"cloned from \\\"MLOPD-K5-PLVid_2023_K5CSConcepts_1_1\\\"\"],\"cloned_from\":\"MLOPD-K5-PLVid_2023_K5CSConcepts_1_1\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

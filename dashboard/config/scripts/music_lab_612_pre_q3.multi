@@ -1,0 +1,29 @@
+name 'music-lab-612-pre-q3'
+
+question 'put actual question here'
+
+wrong 'wrong'
+wrong 'wrong'
+wrong 'wrong'
+right 'correct'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Loops
+
+Standard: Use nested loops to repeat phrases of a song
+
+Lesson: Loops - Practice
+
+Skill Progression: Repeat at least 2 sounds of different lengths with nested loops
+
+Pretest Modality: Given starting code / shadow blocks, refactor
+
+Posttest Modality: Given starting code / shadow blocks, refactor
+
+MARKDOWN
+
+markdown <<MARKDOWN
+Put the images / context markdown here
+MARKDOWN

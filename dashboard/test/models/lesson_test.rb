@@ -883,6 +883,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'uncached lesson path helpers' do
+    skip 'enable when we re enable CACHED_UNITS_MAP'
     hoc_unit = create :script, name: 'dance-ai-2023'
     hoc_lesson_group = create :lesson_group, script: hoc_unit
     hoc_lesson = create :lesson, script: hoc_unit, lesson_group: hoc_lesson_group
@@ -899,6 +900,61 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal "/s/#{other_unit.name}/lessons/1/edit", lesson_with_plan.get_uncached_edit_path
 
     assert_equal "/lessons/#{lesson_without_plan.id}/edit", lesson_without_plan.get_uncached_edit_path
+  end
+
+  test 'get_background_for_user returns lesson background for nil user' do
+    lesson = create :lesson, background: 'dark'
+    assert_equal 'dark', lesson.get_background_for_user(nil)
+  end
+
+  test 'get_background_for_user returns user preference for python lab lesson' do
+    UserPreference.create!(user_id: @student.id, theme: {'global' => 'Light'})
+    script = create :script
+    lesson = create :lesson, background: 'dark', script: script
+    python_level = create :pythonlab
+    create :script_level, lesson: lesson, levels: [python_level], script: script
+    assert_equal 'light', lesson.get_background_for_user(@student)
+  end
+
+  test 'get_background_for_user returns default for music lesson' do
+    UserPreference.create!(user_id: @student.id, theme: {'global' => 'Light'})
+    script = create :script
+    lesson = create :lesson, script: script
+    music_level = create :music
+    create :script_level, lesson: lesson, levels: [music_level], script: script
+    # Music should default to dark background.
+    assert_equal 'dark', lesson.get_background_for_user(@student)
+  end
+
+  test 'get_background_for_user returns default for aichat lesson' do
+    UserPreference.create!(user_id: @student.id, theme: {'global' => 'Dark'})
+    script = create :script
+    lesson = create :lesson, script: script
+    aichat_level = create :aichat
+    create :script_level, lesson: lesson, levels: [aichat_level], script: script
+    # AI Chat should default to light background.
+    assert_equal 'light', lesson.get_background_for_user(@student)
+  end
+
+  test 'get_background_for_user returns preference for mixed lesson' do
+    UserPreference.create!(user_id: @student.id, theme: {'global' => 'Light'})
+    script = create :script
+    lesson = create :lesson, background: 'dark', script: script
+    python_level = create :pythonlab
+    music_level = create :music
+    create :script_level, lesson: lesson, levels: [python_level, music_level], script: script
+    assert_equal 'light', lesson.get_background_for_user(@student)
+  end
+
+  test 'get_background_for_user uses majority background for aichat and music lesson' do
+    script = create :script
+    lesson = create :lesson, script: script
+    aichat_level = create :aichat
+    music_level = create :music
+    music_level2 = create :music
+    create :script_level, lesson: lesson, levels: [aichat_level, music_level, music_level2], script: script
+    # We have more music levels than AI Chat levels, so we should use a dark background by default
+    assert_equal 'dark', lesson.get_background_for_user(nil)
   end
 
   class LessonCopyTests < ActiveSupport::TestCase

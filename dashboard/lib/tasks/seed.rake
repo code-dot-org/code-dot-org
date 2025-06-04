@@ -37,6 +37,10 @@ namespace :seed do
   CURRICULUM_CONTENT_DIR = ENV['CURRICULUM_CONTENT_DIR'] || '.'
   CURRICULUM_CONTENT_PATHNAME = Pathname(CURRICULUM_CONTENT_DIR)
 
+  timed_task_with_logging skills: :environment do
+    Skill.setup
+  end
+
   timed_task_with_logging videos: :environment do
     Video.setup(CURRICULUM_CONTENT_DIR)
   end
@@ -254,10 +258,12 @@ namespace :seed do
     :environment,
     :check_migrations,
     :games,
+    :skills,
     :deprecated_blockly_levels,
     :child_dsls,
     :custom_levels,
     :parent_dsls,
+    :levels_skills,
     :code_docs,
     :blocks,
     :standards,
@@ -292,7 +298,7 @@ namespace :seed do
   # left in the database that do not have a corresponding json file in config/course_offerings.
   # The ui test course offerings must be seeded after so they are not accidentally removed.
   timed_task_with_logging scripts_ui_tests: SCRIPTS_DEPENDENCIES + [:course_offerings_ui_tests] do
-    update_scripts(script_files: UI_TEST_SCRIPTS)
+    update_scripts(script_files: UI_TEST_SCRIPTS, incremental: true)
   end
 
   # Seeds only ui test scripts, skipping any dependencies. This is useful for
@@ -466,6 +472,19 @@ namespace :seed do
     LevelLoader.load_custom_levels(level_name, CURRICULUM_CONTENT_DIR)
   end
 
+  timed_task_with_logging levels_skills: :environment do
+    levels_with_skills = Level.where('properties like ?', '%"skill_keys":%').all
+    levels_with_skills.each do |level|
+      JSON.parse(level.skill_keys).each do |skill_key|
+        skill_id = Skill.find_by_key(skill_key).id
+        LevelsSkill.find_or_create_by!(
+          skill_id: skill_id,
+          level_id: level.id
+        )
+      end
+    end
+  end
+
   timed_task_with_logging deprecated_blockly_levels: :environment do
     Services::DeprecatedLevelLoader.load_blockly_levels(CURRICULUM_CONTENT_DIR)
   end
@@ -619,35 +638,6 @@ namespace :seed do
       )
       Follower.create!(section_id: section.id, student_user_id: follower.id)
     end
-  end
-
-  timed_task_with_logging :cached_ui_test do
-    HASH_FILE = 'db/ui_test_data.hash'
-
-    # patterns are relative to dashboard directory
-    watched_files = FileList[
-      'app/dsl/**/*',
-      'config/**/*',
-      'db/**/*',
-      'lib/tasks/**/*',
-      'test/ui/config/**/*',
-    ].exclude('db/ui_test_data.*')
-    current_hash = HashUtils.file_contents_hash(watched_files)
-
-    if File.exist?(HASH_FILE)
-      dump_hash = File.read(HASH_FILE)
-
-      if current_hash == dump_hash
-        puts 'Cache hit! Loading from db dump'
-        sh('mysql -u root < db/ui_test_data.sql')
-        next
-      end
-    end
-
-    puts 'Cache mismatch, running full ui test seed'
-    RakeUtils.rake_stream_output 'seed:ui_test'
-    File.write(HASH_FILE, current_hash)
-    sh('mysqldump -u root -B dashboard_test > db/ui_test_data.sql')
   end
 
   timed_task_with_logging :import_pegasus_data do

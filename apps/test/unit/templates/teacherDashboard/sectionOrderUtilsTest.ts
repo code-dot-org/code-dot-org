@@ -13,6 +13,7 @@ const SECTION: Section = {
   hidden: false,
   courseVersionName: 'csd-2024',
   unitName: null,
+  unitPosition: null,
   aiTutorEnabled: false,
   atRiskAgeGatedDate: new Date(),
   atRiskAgeGatedUsState: 'xyz',

@@ -5,7 +5,7 @@ Feature: Code review Finish Button
     Given I set up code review for teacher "Code Review Teacher" with 2 students in a group
     And I sign out using jquery
     And I sign in as "student_0"
-    And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true"
+    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/44/levels/2?noautoplay=true"
 
     # Create a commit
     And I wait to see "#javalab-editor-save"
@@ -36,7 +36,7 @@ Feature: Code review Finish Button
 
   Scenario: Running code in your peer's code review does not enable the finish button
     Given I sign in as "student_1"
-    And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true"
+    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/44/levels/2?noautoplay=true"
     And I load the review tab
     And I load the code review for peer number 1 in the list
     Then element "#finishButton" is disabled

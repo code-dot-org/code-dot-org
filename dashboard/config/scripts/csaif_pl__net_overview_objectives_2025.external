@@ -9,21 +9,23 @@ markdown <<MARKDOWN
 <div style="position: relative; text-align: left; color: white; margin-top: 20px;">
     <img src="https://images.code.org/a035808b2a48ce2f5885fe702272fbf2-image-1732312298159.51.29 PM.png" alt="Banner Background" style="width: 100%; border-radius: 10px;">
     <div style="position: absolute; top: 50%; left: 35%; transform: translate(-50%, -50%); padding: 20px; width: 90%; max-width: 800px; border-radius: 10px; display: flex; align-items: center; gap: 20px; justify-content: center;">
-        <img src="https://images.code.org/3d31333f31f8cf1fa3cd84558331238d-imageE.webp" alt="Banner Icon" style="width: 100px; height: auto; border-radius: 10px;">
-        <p style="color: white; line-height: 1; font-size: 25px; font-weight: bold; margin: 0;">Teaching Networks and the Internet</p>
+        <img src="https://images.code.org/2e1bb1b21f46e5ccc05849706761ff02-Screenshot 2025-05-19 at 3.34.08 PM.png" alt="Banner Icon" style="width: 100px; height: auto; border-radius: 10px;">
+        <p style="color: white; line-height: 1; font-size: 25px; font-weight: bold; margin: 0;">Teaching The Fabric of the Internet and AI
+
+</p>
     </div>
 </div>
 
 <!-- Welcome Section -->
-<div style="margin: 10px auto; width: 100%; font-family: Arial, sans-serif; line-height: 1.6; font-size: 14pt; color: #333;">
+<div style="margin: 10px auto; width: 100%; line-height: 1.6; font-size: 14pt; color: #333;">
     <h2>Welcome!</h2>
     <p style = "font-size: 14pt">
         This professional learning module is designed to help you prepare to teach Code.org’s 
-        <strong>Networks and the Internet</strong> Unit from the <a href="https://courseinfo.code.org/csaif/" target="blank" rel="noopener noreferrer">AI Foundations Curriculum</a>.
+        <strong>The Fabric of the Internet and AI </strong> Unit from the <a href="https://studio.code.org/courses/artificial-intelligence-foundations-2025" target="blank" rel="noopener noreferrer">AI Foundations Curriculum</a>.
     </p>
    
     <p style = "font-size: 14pt">
-        The Networks and the Internet content is designed for 9th - 12th grade students.
+        The The Fabric of the Internet and AI content is designed for 9th - 12th grade students.
     </p>
 </div>
 
@@ -31,9 +33,9 @@ markdown <<MARKDOWN
 <div style="margin: 20px auto; width: 90%; max-width: 900px; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
     <h2>In this module, you will:</h2>
     <ul style="list-style-type: disc; padding-left: 20px; font-size: 14pt">
-        <li>Get an introduction to teaching Networks and the Internet</li>
-        <li>Define and explore foundational concepts of Networks and the Internet</li>
-        <li>Explore Networks and the Internet lessons</li>
+        <li>Get an introduction to teaching The Fabric of the Internet and AI</li> <br>
+        <li>Define and explore foundational concepts of The Fabric of the Internet and AI</li><br>
+        <li>Explore The Fabric of the Internet and AI lessons</li>
     </ul>
 </div>
 
@@ -41,14 +43,16 @@ markdown <<MARKDOWN
 #### **Suggested Total Time:** 60 minutes
 #### **Lesson One Suggested Time:** 10 minutes
 
-<h2 style="text-align: center">Take the Pre-Survey</h2>
+---
 
-<p style="text-align: center; font-size: 14pt">
+<h2>Take the Pre-Survey</h2>
+
+<p style="font-size: 14pt">
 Code.org values and is responsive to feedback. Please fill out the pre-survey to  tell us about who you are and how we can best support you.
 </p>
 
-<p style="text-align: center;">
-<a class="btn btn-large btn-primary" href="https://studio.code.org/form/exploring_generative_ai_selfpaced_pl_pre_survey" target="blank" rel="noopener noreferrer">Take the pre-survey</a>
+<p>
+<a class="btn btn-large btn-primary" href="https://studio.code.org/form/selfpaced_pd_teaching_aif_internet_pre_survey" target="blank" rel="noopener noreferrer">Take the pre-survey</a>
 </p>
 
 MARKDOWN

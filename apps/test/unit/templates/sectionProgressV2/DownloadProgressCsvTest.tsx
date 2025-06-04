@@ -196,4 +196,74 @@ describe('getLevelProgressCSVData', () => {
       },
     ]);
   });
+
+  it('formats data correctly for locked levels in a lesson', () => {
+    const students = [{id: 101, name: 'Alice', familyName: 'Smith'}];
+
+    const unitData = {
+      id: 123,
+      name: 'csp4-2025',
+      lessons: [
+        {
+          id: 1001,
+          title: 'Locked Lesson',
+          name: 'locked_lesson',
+          relative_position: 1,
+          lockable: true,
+          levels: [
+            {
+              id: '201',
+              bubbleText: '1',
+            },
+            {
+              id: '202',
+              bubbleText: '2',
+            },
+          ],
+        },
+        {
+          id: 1002,
+          title: 'Normal Lesson',
+          name: 'normal_lesson',
+          relative_position: 2,
+          levels: [
+            {
+              id: '301',
+              bubbleText: '1',
+            },
+          ],
+        },
+      ],
+    };
+
+    const levelProgressByStudent = {
+      101: {
+        201: {status: 'perfect'},
+        202: {status: 'attempted'},
+        301: {status: 'perfect'},
+      },
+    };
+
+    const result = getLevelProgressCSVData(
+      students,
+      unitData,
+      levelProgressByStudent
+    );
+
+    expect(result.columnNames).toEqual([
+      'Student_Name',
+      'Locked Lesson 1/2',
+      'Locked Lesson 2/2',
+      '2.1',
+    ]);
+
+    expect(result.table).toEqual([
+      {
+        Student_Name: 'Alice Smith',
+        'Locked Lesson 1/2': 'Submitted',
+        'Locked Lesson 2/2': 'In progress',
+        '2.1': 'Submitted',
+      },
+    ]);
+  });
 });

@@ -3,6 +3,7 @@ require 'test_helper'
 class RoutesTest < ActionDispatch::IntegrationTest
   # Ensure view-only wildcard routes are generated correctly.
   def test_dance_session_cookie_and_cache_headers
+    skip 'enable when we re enable CACHED_UNITS_MAP'
     script = create :script, name: 'dance-2019'
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, relative_position: 1, lesson_group: lesson_group

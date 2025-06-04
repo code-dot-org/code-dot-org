@@ -74,6 +74,7 @@ const COURSE_SUMMARY = {
       title: 'CSP Unit 1',
       name: 'csp1',
       description: 'desc',
+      scriptPath: '/s/csp1',
     },
     {
       course_id: 30,
@@ -81,6 +82,7 @@ const COURSE_SUMMARY = {
       title: 'CSP Unit 2',
       name: 'csp2',
       description: 'desc',
+      scriptPath: '/s/csp2',
     },
   ],
   show_assign_button: true,

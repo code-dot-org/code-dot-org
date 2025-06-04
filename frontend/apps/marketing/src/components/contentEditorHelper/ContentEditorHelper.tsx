@@ -13,7 +13,7 @@ import TokenPrompt from './TokenPrompt';
 
 import styles from './styles.module.scss';
 
-type ContentEditorToolsProps = {
+export type ContentEditorToolsProps = {
   isDraftModeEnabled: boolean;
 };
 
@@ -84,6 +84,7 @@ const ContentEditorHelper = ({isDraftModeEnabled}: ContentEditorToolsProps) => {
         (searchParams.get('contentEditor') === 'true' ||
           isDraftModeEnabled) && (
           <Button
+            data-testid="content-editor-popover"
             className={styles.floatingButton}
             color={'destructive'}
             text={previewLabel}

@@ -1,0 +1,86 @@
+name 'self-paced-pl-gen-ai-customizing_07_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# System Prompting
+
+#### There are many ways to write a system prompt, but including four key components **role, goal, tone, and restriction** can help yield better responses from the chatbot. You might recognize each of these components from the prompt on the previous level.
+
+<p align="center">
+<img src="https://images.code.org/29c99d9ec0c5c98502e79a8cbdb6e57f-Screenshot 2024-08-30 at 2.37.31 PM.png" alt="system prompt from last level with role, goal, tone, and restriction" width="90%" style="border-radius:10px; border: 5px solid black;">
+</p>
+
+<br>
+
+#### Learn more about each one by expanding the boxes below.
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">Role
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+#### The part the model plays when responding, like being a teacher, helper, or friend.
+
+<img src="https://images.code.org/72763f3d42a80e44b0dfded8daff8f68-Screenshot 2024-09-11 at 2.00.51 PM.png" alt="system prompt example - role" width="900px" style="border: 2px solid black; border-radius: 8px; float:center">
+
+<br>
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">Tone
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+#### The way the model speaks, such as being formal, friendly, or casual.
+
+<img src="https://images.code.org/f7b61b13570706aa62dc8c6974528956-Screenshot 2024-09-11 at 2.00.58 PM.png" alt="system prompt example - tone" width="900px" style="border: 2px solid black; border-radius: 8px; float:center">
+
+
+<br>
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">Audience
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+#### The people the model is talking to, like kids, adults, or professionals.
+<img src="https://images.code.org/b451c5ba210c49b035f79dbcfb10fffc-Screenshot 2024-09-11 at 2.01.37 PM.png" alt="system prompt example - audience" width="900px" style="border: 2px solid black; border-radius: 8px; float:center">
+
+
+<br>
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">Delivery
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+#### How the model says things, whether it’s simple, detailed, quick, or slow, depending on who’s listening.
+<img src="https://images.code.org/21634632a6b6b454982372261637e6c5-Screenshot 2024-09-11 at 2.01.43 PM.png" alt="system prompt example - delivery" width="900px" style="border: 2px solid black; border-radius: 8px; float:center">
+
+
+<br>
+
+</p></div>
+</details>
+
+<br>
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> As students struggle getting the chatbot to respond in a particular way, they may want to know the “trick” or “secret” to getting the chatbot to respond how they want. You can assure students that there is no trick, just a set of strategies that tend to work more often than others but are still unreliable.  
+</p>
+</div>
+MARKDOWN

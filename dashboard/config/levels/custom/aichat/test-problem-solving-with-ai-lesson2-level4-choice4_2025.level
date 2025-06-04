@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-05-08T14:33:52.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Investigative Journalism\r\n\r\nUse AI Chat to analyze an image from a news article and generate a headline.\r\n\r\n### Do This:\r\n\r\n1. Look at the images and articles already uploaded to this level or choose an image/article related to a recent news event.\r\n2. Start with a general prompt:\r\n\r\n>Write a headline for this image.\r\n\r\n3. Press **Send** and **review AI Chat's response**.\r\n4. **Refine your prompt** by providing **keywords** about the event in the image:\r\n\r\n>Write a headline for this image about a [movie/climate event/sports match].\r\n\r\n5. **Experiment**: \r\n   - Try different **keywords** or **phrasing** and compare how AI’s headlines change.\r\n   - What happens if the **keywords don't match the image** at all?\r\n   - **Upload a related PDF** (e.g., a news article, government report, or historical document). How does AI’s response change when it has additional text to analyze?\r\n\r\n**Try it out!**",
+    "long_instructions": "## Investigative Journalism\r\n\r\nUse AI Chat to analyze an image from a news article alongside a PDF of the article.\r\n\r\n### Do This:\r\n\r\n1. Upload one of the **images** from the Library. **Copy and paste** the following prompt:\r\n\r\n> Analyze this image. Then write a catchy newspaper headline for the image. \r\n\r\n2. Upload the **image** again and the **matching article PDF** from the Library. **Copy and paste** the following prompt and press **Send**:\r\n\r\n> Analyze this image and article together. Write a catchy newspaper headline that fits with the image and article.\r\n\r\n3. Read AI Chat's response.\r\n4. **Experiment**: \r\n   - **Modify your prompt** by describing the image as well as uploading the image and PDF.\r\n   - **Change your input document or image** to see how AI’s response changes.\r\n\r\n**Try it out!**",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -53,19 +54,13 @@
       "fashion_3.jpg": "50c93b56-4e84-4d88-a0fa-03ea3a1b09da.jpg",
       "fashion_4.jpg": "fb5c6eaf-f684-451c-b57f-771666c05d0f.jpg",
       "Audience_1.jpg": "d888847b-3362-4549-80db-016ad45df26b.jpg",
-      "Caught-compressed.pdf": "d3dcdc28-9f96-4c61-bccc-08c58a3f7bff.pdf",
-      "Creating a New Nonprofit Outlet to Investigate Wildlife Crime – Global Investigative Journalism Network-compressed.pdf": "f758ee61-4c83-429a-863e-0c240ce1daa3.pdf",
       "From Audience to Community_ An Alternative Future for Watchdog Journalism – Global Investigative Journalism Network-compressed.pdf": "22165f76-4cd2-4a33-8c50-d707c10509d0.pdf",
-      "Investigative Reporting - The Pulitzer Prizes-compressed.pdf": "d8807cb2-a8fd-4edc-9258-94d6aa3c511e.pdf",
-      "Telltale Data Signs of Bogus Scientific Papers and Fraudulent Academic Research – Global Investigative Journalism Network-compressed.pdf": "e1e97a73-2c42-4cbe-bac4-41de2574a5f3.pdf",
       "Toiling away for Shein-compressed-compressed-compressed.pdf": "526c14b3-c572-4c64-b537-e7ff5cb5af90.pdf",
       "Uncovering the Deforestation, Mismanagement, and Funders Behind a Malaysian Oil Palm Plantation – Global Investigative Journalism Network-compressed.pdf": "8127818f-bc4c-4fb7-a8cc-2ca63ea58f1a.pdf",
-      "Using WhatsApp to Crowdsource Data on Ride Hailing Companies’ Labor Lockouts – Global Investigative Journalism Network-compressed.pdf": "fc2f7f34-8fb5-49b8-9f25-bfbe1cde5aad.pdf",
-      "logging_2.png": "1fca3ecc-9034-4160-8cb6-117c8230c25b.png"
+      "Using WhatsApp to Crowdsource Data on Ride Hailing Companies’ Labor Lockouts – Global Investigative Journalism Network-compressed.pdf": "fc2f7f34-8fb5-49b8-9f25-bfbe1cde5aad.pdf"
     },
     "name_suffix": "_2025"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-08T14:33:52.696+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level4-choice4\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level4-choice4\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:33:52.696+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level4-choice4\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level4-choice4\"},{\"changed_at\":\"2025-05-15 21:07:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-15 21:20:13 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-15 22:00:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-15 22:00:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

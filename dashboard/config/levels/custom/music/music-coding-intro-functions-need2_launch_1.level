@@ -167,7 +167,7 @@
         ]
       }
     },
-    "long_instructions": "##### **Teacher Note**: This is Lesson 2, Level 2 from the curriculum.\r\n___\r\n\r\n###<i class=\"fa-solid fa-head-side-gear\"></i> Introducing, functions!\r\n\r\nThis is the same song but now it uses a [function](#clickable=id-left:8Bb[IV38`R6Vq7n,t4|O)! \r\n\r\nLook closely at the code. \r\n\r\nPredict what sounds will play first, then try it out.\r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i>Hint](#clickable=id-left:8Bb[IV38`R6Vq7n,t4|O)\r\n\r\n\r\n\r\n\r\n",
+    "long_instructions": "#### <i class=\"fa-solid fa-person-chalkboard\"></i> **Teacher Tip:** \r\n##### This level continues to support the Use phase. Reinforce that functions make code more reusable, efficient, and flexible, helping students deepen their understanding.\r\n\r\n\r\n##### **Teacher Note**: This is Lesson 2, Level 2 from the curriculum.\r\n___\r\n\r\n###<i class=\"fa-solid fa-head-side-gear\"></i> Introducing, functions!\r\n\r\nThis is the same song but now it uses a [function](#clickable=id-left:8Bb[IV38`R6Vq7n,t4|O)! \r\n\r\nLook closely at the code. \r\n\r\nPredict what sounds will play first, then try it out.\r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i>Hint](#clickable=id-left:8Bb[IV38`R6Vq7n,t4|O)\r\n\r\n\r\n\r\n\r\n",
     "validations": [
       {
         "key": "music-coding-intro-functions-need_4e41262d-17d3-46b7-9d4d-2404f9fc902e",
@@ -202,7 +202,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-28T18:19:01.010+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-need2_launch\\\"\"],\"cloned_from\":\"music-coding-intro-functions-need2_launch\"},{\"changed_at\":\"2025-05-05 19:42:40 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-28T18:19:01.010+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-need2_launch\\\"\"],\"cloned_from\":\"music-coding-intro-functions-need2_launch\"},{\"changed_at\":\"2025-05-05 19:42:40 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-05-21 19:37:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

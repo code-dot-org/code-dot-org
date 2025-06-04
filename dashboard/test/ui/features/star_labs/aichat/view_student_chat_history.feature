@@ -13,7 +13,7 @@ Background:
   And I join the section
 
   # Student interacts with model to create chat history for teacher to view.
-  Given I am on "http://studio.code.org/s/customizing-llms-2024/lessons/2/levels/9"
+  Given I am on "http://studio.code.org/courses/customizing-llms-2024/units/1/lessons/2/levels/9"
   And I click selector "#ui-close-dialog" once I see it
   And I wait until element "#ui-close-dialog" is not visible
   When I press keys "Hello" for element "#uitest-chat-textarea"
@@ -35,7 +35,7 @@ Background:
 Scenario: Teacher views student chat history and interacts with student model
   # Teacher can view chat history and provide feedback on messages flagged as inappropriate.
   Given I sign in as "Simone"
-  And I am on "http://studio.code.org/s/customizing-llms-2024/lessons/2/levels/9"
+  And I am on "http://studio.code.org/courses/customizing-llms-2024/units/1/lessons/2/levels/9"
   When I click selector "#ui-close-dialog" once I see it
   And I wait until element "#ui-close-dialog" is not visible
   And I wait to see ".show-handle"

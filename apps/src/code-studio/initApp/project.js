@@ -2079,7 +2079,7 @@ function redirectEditView() {
 
 /**
  * Does a hard redirect if we end up with a hash based projects url. This can
- * happen on IE9, when we save a new project for hte first time.
+ * happen on IE9, when we save a new project for the first time.
  * @returns {boolean} True if we did an actual redirect
  */
 function redirectFromHashUrl() {

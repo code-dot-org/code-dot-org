@@ -1,0 +1,12 @@
+name 'test-music-lab-sequences-explore-song-choice-level_v2'
+display_name 'Challenge'
+description 'Try some of these additional challenges!'
+
+sublevels
+level 'test-music-lab-sequences-explore-song-choice-level-a_v2'
+level 'test-music-lab-sequences-explore-song-choice-level-b_v2'
+level 'test-music-lab-sequences-explore-challenge-e_v2'
+level 'test-music-lab-sequences-explore-choice-level-c_v2'
+level 'test-music-lab-sequences-explore-challenge-f_v2'
+level 'test-music-lab-sequences-explore-song-choice-level-c_v2'
+uses_lab2

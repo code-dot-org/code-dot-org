@@ -12,7 +12,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-09 19:20:34 UTC",
+    "serialized_at": "2025-05-19 21:13:28 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -94,6 +95,21 @@
         "lesson_group.key": "",
         "script.name": "pl-team-design-guide"
       }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Melissa's Section",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide"
+      }
     }
   ],
   "lesson_activities": [
@@ -141,6 +157,18 @@
       "seeding_key": {
         "lesson_activity.key": "1a21b280-518f-4601-8d8d-c645c2d9ad61",
         "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide"
+      }
+    },
+    {
+      "key": "7554974b-adbc-4fac-810a-fee0c7f658cb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7554974b-adbc-4fac-810a-fee0c7f658cb",
+        "lesson.key": "lesson-7",
         "lesson_group.key": "",
         "script.name": "pl-team-design-guide"
       }
@@ -324,8 +352,19 @@
       }
     },
     {
-      "key": "d6cd91a0-b394-4abc-a6dc-c22ad97f412a",
+      "key": "84e79e76-d172-4f67-b53d-676727c14007",
       "position": 6,
+      "properties": {
+        "progression_name": "Getting Started Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "84e79e76-d172-4f67-b53d-676727c14007",
+        "lesson_activity.key": "f3a34f15-f6e0-42bf-8476-f7f1ffe1b6ca"
+      }
+    },
+    {
+      "key": "d6cd91a0-b394-4abc-a6dc-c22ad97f412a",
+      "position": 7,
       "properties": {
         "progression_name": "LMS Overview"
       },
@@ -336,7 +375,7 @@
     },
     {
       "key": "c63bcdb2-faa5-4c48-a76d-ccc19e13aa16",
-      "position": 7,
+      "position": 8,
       "properties": {
         "progression_name": "Navigating this Course"
       },
@@ -347,7 +386,7 @@
     },
     {
       "key": "fa4ecf05-1059-4e8a-9da8-8c157d80d2aa",
-      "position": 8,
+      "position": 9,
       "properties": {
         "progression_name": "Module/Unit/Lesson Opening"
       },
@@ -358,7 +397,7 @@
     },
     {
       "key": "7efa86ef-bdda-4bbb-81db-cafbf81a510b",
-      "position": 9,
+      "position": 10,
       "properties": {
         "progression_name": "Module/Unit Roadmap"
       },
@@ -369,7 +408,7 @@
     },
     {
       "key": "58644db7-cbf3-43c7-9f7a-0ade15749664",
-      "position": 10,
+      "position": 11,
       "properties": {
         "progression_name": "Module/Unit/Lesson Closing"
       },
@@ -380,7 +419,7 @@
     },
     {
       "key": "c5998b9d-6bf3-43b2-a9d8-5b35c470f8ab",
-      "position": 11,
+      "position": 12,
       "properties": {
         "progression_name": "Congratulations"
       },
@@ -412,14 +451,14 @@
       }
     },
     {
-      "key": "3da3c34f-8118-4a28-b9e1-5720bc013fc3",
-      "position": 3,
+      "key": "ce187e34-f233-46ed-8a01-529be17c0f11",
+      "position": 1,
       "properties": {
-        "progression_name": "Melissa's Section"
+        "progression_name": "Computational Thinking"
       },
       "seeding_key": {
-        "activity_section.key": "3da3c34f-8118-4a28-b9e1-5720bc013fc3",
-        "lesson_activity.key": "1a21b280-518f-4601-8d8d-c645c2d9ad61"
+        "activity_section.key": "ce187e34-f233-46ed-8a01-529be17c0f11",
+        "lesson_activity.key": "7554974b-adbc-4fac-810a-fee0c7f658cb"
       }
     }
   ],
@@ -1130,6 +1169,31 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Getting Started Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLGuide_L1_GettingStarted"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "84e79e76-d172-4f67-b53d-676727c14007"
+      },
+      "level_keys": [
+        "PLGuide_L1_GettingStarted"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PLGuide_L1_LMSOverview"
+        ],
         "progression": "LMS Overview"
       },
       "bonus": false,
@@ -1147,8 +1211,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 9,
+      "chapter": 31,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1172,8 +1236,8 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 10,
+      "chapter": 32,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1197,8 +1261,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 11,
+      "chapter": 33,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1222,8 +1286,8 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 12,
+      "chapter": 34,
+      "position": 13,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1247,8 +1311,8 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 13,
+      "chapter": 35,
+      "position": 14,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1272,7 +1336,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1297,7 +1361,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1322,28 +1386,25 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 3,
+      "chapter": 38,
+      "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PL_styleguide_L4_melissapage"
-        ],
-        "progression": "Melissa's Section"
+        "progression": "Computational Thinking"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "PL_styleguide_L4_melissapage"
+          "self-paced-equity-U2L4-realizingpossibilities"
         ],
-        "lesson.key": "lesson-4",
+        "lesson.key": "lesson-7",
         "lesson_group.key": "",
         "script.name": "pl-team-design-guide",
-        "activity_section.key": "3da3c34f-8118-4a28-b9e1-5720bc013fc3"
+        "activity_section.key": "ce187e34-f233-46ed-8a01-529be17c0f11"
       },
       "level_keys": [
-        "PL_styleguide_L4_melissapage"
+        "self-paced-equity-U2L4-realizingpossibilities"
       ]
     }
   ],
@@ -1686,6 +1747,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "PLGuide_L1_GettingStarted",
+        "script_level.level_keys": [
+          "PLGuide_L1_GettingStarted"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "84e79e76-d172-4f67-b53d-676727c14007"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "PLGuide_L1_LMSOverview",
         "script_level.level_keys": [
           "PLGuide_L1_LMSOverview"
@@ -1782,14 +1855,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "PL_styleguide_L4_melissapage",
+        "level.key": "self-paced-equity-U2L4-realizingpossibilities",
         "script_level.level_keys": [
-          "PL_styleguide_L4_melissapage"
+          "self-paced-equity-U2L4-realizingpossibilities"
         ],
-        "lesson.key": "lesson-4",
+        "lesson.key": "lesson-7",
         "lesson_group.key": "",
         "script.name": "pl-team-design-guide",
-        "activity_section.key": "3da3c34f-8118-4a28-b9e1-5720bc013fc3"
+        "activity_section.key": "ce187e34-f233-46ed-8a01-529be17c0f11"
       }
     }
   ],

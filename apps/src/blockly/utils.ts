@@ -336,7 +336,7 @@ export function disableOrphanBlocks(eventWorkspace: GoogleBlockly.Workspace) {
   // its call blocks.
   eventWorkspace.getTopBlocks().forEach(block => {
     if (block.type === BLOCK_TYPES.procedureCall) {
-      block.setEnabled(false);
+      block.setDisabledReason(true, 'ORPHANED');
     }
     updateBlockEnabled(block);
   });
@@ -351,12 +351,12 @@ export function updateBlockEnabled(block: GoogleBlockly.Block) {
     if (parent && parent.isEnabled()) {
       const children = block.getDescendants(false);
       for (let i = 0, child; (child = children[i]); i++) {
-        child.setEnabled(true);
+        child.setDisabledReason(false, 'ORPHANED');
       }
     } else if (block.outputConnection || block.previousConnection) {
       let currentBlock: GoogleBlockly.Block | null = block;
       do {
-        currentBlock.setEnabled(false);
+        currentBlock.setDisabledReason(true, 'ORPHANED');
         currentBlock = currentBlock.getNextBlock();
       } while (currentBlock);
     }

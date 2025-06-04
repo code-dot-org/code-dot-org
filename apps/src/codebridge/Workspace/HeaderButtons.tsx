@@ -26,6 +26,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   const {startSources, levelProperties, projectPickerSettings} =
     useCodebridgeContext();
   const {appName, enableMicroBit, skipUrl} = levelProperties;
+  const isWidgetView = levelProperties.widgetView;
 
   const dialogControl = useDialogControl();
   const source = useAppSelector(
@@ -35,16 +36,18 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
 
   const feedbackTooltipProps: TooltipProps = {
     text: commonI18n.feedback(),
-    direction: 'onLeft',
+    direction: 'onBottom',
     tooltipId: 'feedback-tooltip',
     size: 'xs',
+    hideTail: true,
   };
 
   const documentationTooltipProps: TooltipProps = {
     text: commonI18n.documentation(),
-    direction: 'onLeft',
+    direction: 'onBottom',
     tooltipId: 'documentation-tooltip',
     size: 'xs',
+    hideTail: true,
   };
 
   const documentationUrl = `${currentLocation().origin}/docs/ide/${appName}`;
@@ -106,7 +109,9 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           color={'black'}
         />
       )}
-      <VersionHistoryButton startSources={startSources} appName={appName} />
+      {!isWidgetView && (
+        <VersionHistoryButton startSources={startSources} appName={appName} />
+      )}
       {appName === 'pythonlab' && (
         <WithTooltip tooltipProps={feedbackTooltipProps}>
           <LinkButton

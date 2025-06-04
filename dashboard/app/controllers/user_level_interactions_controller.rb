@@ -36,6 +36,7 @@ class UserLevelInteractionsController < ApplicationController
       :school_year,
       :interaction,
       :code_version,
+      :metadata,
     )
     user_level_interaction_params[:user_id] = current_user.id
     user_level_interaction_params[:school_year] = school_year
@@ -45,6 +46,7 @@ class UserLevelInteractionsController < ApplicationController
     project_data = get_project_and_version_id(user_level_interaction_params[:level_id], user_level_interaction_params[:script_id])
     channel = get_channel_for(level, script_id, current_user)
     user_level_interaction_params[:code_version] = project_data[:version_id]
+    params_metadata = JSON.parse(user_level_interaction_params[:metadata] || '{}')
     metadata = {
       course_offering: unit.properties["curriculum_umbrella"],
       version_year: unit.get_course_version.key,
@@ -53,8 +55,8 @@ class UserLevelInteractionsController < ApplicationController
       user_type: current_user.user_type,
       project_id: project_data[:project_id],
       channel: channel,
-    }.to_json
-    user_level_interaction_params[:metadata] = metadata
+    }
+    user_level_interaction_params[:metadata] = metadata.merge(params_metadata).to_json
     user_level_interaction_params
   end
 end

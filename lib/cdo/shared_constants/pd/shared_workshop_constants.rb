@@ -307,6 +307,8 @@ module Pd
       'Train the trainer'
     ].freeze
 
+    WORKSHOP_GRADE_LEVELS = %w(K 1 2 3 4 5 6 7 8 9 10 11 12).freeze
+
     PD_SESSION_FORMATS = [
       {value: 'in_person', label: 'In-Person', enum_value: 0},
       {value: 'virtual', label: 'Virtual', enum_value: 1}
@@ -396,6 +398,11 @@ module Pd
         required: false,
         stateKey: 'regionalPartnerId',
         label: 'Regional partner'
+      },
+      organizer_id: {
+        required: false,
+        stateKey: 'organizerId',
+        label: 'Organizer'
       },
       facilitators: {
         required: false,
