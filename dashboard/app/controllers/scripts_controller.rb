@@ -72,9 +72,14 @@ class ScriptsController < ApplicationController
 
     # Attempt to redirect user if we think they ended up on the wrong unit overview page.
     override_redirect = VersionRedirectOverrider.override_unit_redirect?(session, @script)
-    if !override_redirect && redirect_unit = redirect_unit(@script, request.locale, @course)
-      redirect_to script_path(redirect_unit) + "?redirect_warning=true"
-      return
+    if !override_redirect && redirect_info = redirect_unit(@script, request.locale, @course)
+      if redirect_info[:redirect_ugu]
+        redirect_to course_unit_path(redirect_info[:redirect_ugu].unit_group, redirect_info[:redirect_ugu].position) + "?redirect_warning=true"
+        return
+      elsif redirect_info[:redirect_unit]
+        redirect_to script_path(redirect_info[:redirect_unit]) + "?redirect_warning=true"
+        return
+      end
     end
 
     # Lastly, if user is assigned to newer version of this unit, we will
@@ -467,7 +472,8 @@ class ScriptsController < ApplicationController
     # Do not redirect if we are already on the correct unit.
     return nil if redirect_unit == unit
 
-    redirect_unit
+    ugu = Queries::Courses.unit_group_unit(redirect_unit, redirect_unit_group)
+    {redirect_unit: redirect_unit, redirect_ugu: ugu}
   end
 
   # Redirect /s/... to /courses/.../units/...
