@@ -1,4 +1,4 @@
-import {Button, LinkButton} from '@code-dot-org/component-library/button';
+import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Modal from '@code-dot-org/component-library/modal';
 import Tags from '@code-dot-org/component-library/tags';
@@ -10,6 +10,10 @@ import {
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
+
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {navigateToHref} from '@cdo/apps/utils';
 
 import {getSessionDate, getSessionTimes} from '../sessionDateUtils';
 
@@ -57,9 +61,24 @@ const RegionalWorkshopCatalogCard = ({
   const enrollButtonIconRight = customRegistrationLink
     ? {iconName: 'up-right-from-square'}
     : null;
-  const enrollButtonHref = customRegistrationLink
-    ? customRegistrationLink
-    : `/pd/workshops/${id}/enroll`;
+
+  const handleClickEnrollNow = () => {
+    analyticsReporter.sendEvent(
+      EVENTS.RP_LANDING_ENROLL_CLICKED,
+      {
+        workshop_id: id,
+        workshop_course: course,
+        workshop_subject: subject,
+        workshop_format: format,
+      },
+      PLATFORMS.BOTH
+    );
+    navigateToHref(
+      customRegistrationLink
+        ? customRegistrationLink
+        : `/pd/workshops/${id}/enroll`
+    );
+  };
 
   return (
     <>
@@ -70,10 +89,9 @@ const RegionalWorkshopCatalogCard = ({
           primaryButtonProps={{
             ariaLabel: 'enrollNow',
             text: 'Enroll now',
-            useAsLink: true,
             target: '_blank',
             iconRight: enrollButtonIconRight,
-            href: enrollButtonHref,
+            onClick: () => handleClickEnrollNow(),
             disabled: isFull,
           }}
           secondaryButtonProps={{
@@ -163,13 +181,13 @@ const RegionalWorkshopCatalogCard = ({
             onClick={() => setShowLearnMoreDialog(true)}
             className={style.wsCardButton}
           />
-          <LinkButton
+          <Button
             aria-label="enrollNow"
             text="Enroll now"
             target="_blank"
             color="purple"
             iconRight={enrollButtonIconRight}
-            href={enrollButtonHref}
+            onClick={() => handleClickEnrollNow()}
             className={style.wsCardButton}
             disabled={isFull}
           />

@@ -720,11 +720,6 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
       {
-        source: '/farsi',
-        destination: 'https://codeinfarsi.org/',
-        permanent: false,
-      },
-      {
         source: '/weblab',
         destination: '/tools/web-lab',
         permanent: false,

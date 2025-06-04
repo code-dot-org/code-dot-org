@@ -421,7 +421,6 @@ class CoursesControllerTest < ActionController::TestCase
     experiment_course = create :unit_group, name: 'experiment-course', family_name: 'experiment-course', version_year: '2024', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     experiment_teacher = create :teacher
     experiment_section = create :section, user: experiment_teacher, unit_group: experiment_course
-    SingleUserExperiment.find_or_create_by!(min_user_id: experiment_teacher.id, name: 'teacher-local-nav-v2')
 
     sign_in experiment_teacher
 
@@ -472,18 +471,18 @@ class CoursesControllerTest < ActionController::TestCase
     assert_includes(response.body, no_access_msg)
   end
 
-  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_teacher},
+  test_user_gets_response_for(:show, response: :redirect, user: -> {@pilot_teacher},
                               params: -> {{course_name: @pilot_unit_group.name, section_id: @pilot_section.id}},
                               name: 'pilot teacher can view pilot course'
   ) do
-    refute_includes(response.body, no_access_msg)
+    assert_redirected_to "http://test.host/teacher_dashboard/sections/#{@pilot_section.id}/courses/#{@pilot_unit_group.name}"
   end
 
-  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_facilitator},
+  test_user_gets_response_for(:show, response: :redirect, user: -> {@pilot_facilitator},
                               params: -> {{course_name: @pilot_pl_unit_group.name, section_id: @pilot_pl_section.id}},
                               name: 'pilot instructor can view pilot course'
   ) do
-    refute_includes(response.body, no_access_msg)
+    assert_redirected_to "http://test.host/teacher_dashboard/sections/#{@pilot_pl_section.id}/courses/#{@pilot_pl_unit_group.name}"
   end
 
   test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},

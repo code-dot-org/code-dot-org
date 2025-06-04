@@ -1605,18 +1605,18 @@ class ScriptsControllerTest < ActionController::TestCase
       assert_includes(response.body, no_access_msg)
     end
 
-    test_user_gets_response_for(:show, response: :success, user: -> {@pilot_teacher},
+    test_user_gets_response_for(:show, response: :redirect, user: -> {@pilot_teacher},
       params: -> {{id: @pilot_unit.name, section_id: @pilot_section.id}},
       name: 'pilot teacher can view pilot unit'
     ) do
-      refute_includes(response.body, no_access_msg)
+      assert_redirected_to "http://test.host/teacher_dashboard/sections/#{@pilot_section.id}/unit/#{@pilot_unit.name}"
     end
 
-    test_user_gets_response_for(:show, response: :success, user: -> {@pilot_instructor},
+    test_user_gets_response_for(:show, response: :redirect, user: -> {@pilot_instructor},
                                 params: -> {{id: @pilot_pl_unit.name, section_id: @pilot_pl_section.id}},
                                 name: 'pilot instructor can view pilot unit'
     ) do
-      refute_includes(response.body, no_access_msg)
+      assert_redirected_to "http://test.host/teacher_dashboard/sections/#{@pilot_pl_section.id}/unit/#{@pilot_pl_unit.name}"
     end
 
     test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},

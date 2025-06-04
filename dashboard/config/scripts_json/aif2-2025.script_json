@@ -35,7 +35,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-27 16:10:45 UTC",
+    "serialized_at": "2025-06-03 14:57:36 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -11066,6 +11066,19 @@
       }
     },
     {
+      "name": "Foundations of AI Programming Unit Guide",
+      "url": "https://docs.google.com/document/d/1m6dHtb5PClNJWkmQb-ZWhcfDbCV1ibiJq7ehd2-QkGg/edit?usp=drivesdk",
+      "key": "foundations_of_ai_programming_unit_guide_pdf",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "foundations_of_ai_programming_unit_guide_pdf"
+      }
+    },
+    {
       "name": "Function Template",
       "url": "https://docs.google.com/document/d/1qBYkaVcp1OFVbEUwWoO5vvv_WMH5pyZ0rpvaB3Aat9M/edit?usp=drivesdk",
       "key": "function_template",
@@ -11369,7 +11382,7 @@
     {
       "seeding_key": {
         "lesson.key": "Computing Careers",
-        "resource.key": "programming_fundamentals_unit_guide"
+        "resource.key": "foundations_of_ai_programming_unit_guide_pdf"
       }
     },
     {

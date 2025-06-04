@@ -20705,6 +20705,10 @@ en:
               display_name: Templates
             lessonGroup-2:
               display_name: Revisions
+            lessonGroup-4:
+              display_name: Pre-Assessment
+            lessonGroup-5:
+              display_name: End of Unit Assessment and Survey
           name: musiclab-6-12-playground
           title: 6-12 Music Lab Playground
           description_audience: ''

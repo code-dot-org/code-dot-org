@@ -21,7 +21,7 @@ Feature: Using the SectionActionDropdown
     And I wait to see ".ui-test-section-dropdown"
     And I open the section action dropdown
     And I press the first ".manage-students-link" element to load a new page
-    And I wait until current URL contains "/manage"
+    And I wait until current URL contains "/roster"
 
   # * Check that we get redirected to the right page
   Scenario: Printing Login Cards from SectionActionDropdown

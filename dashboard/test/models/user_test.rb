@@ -2687,64 +2687,6 @@ class UserTest < ActiveSupport::TestCase
     refute student.can_pair?
   end
 
-  test "verified teacher" do
-    # you can't just create your own authorized teacher account
-    assert @teacher.teacher?
-    refute @teacher.verified_teacher?
-
-    # you have to be in a cohort
-    real_teacher = create(:teacher)
-    real_teacher.permission = UserPermission::AUTHORIZED_TEACHER
-    assert real_teacher.teacher?
-    assert real_teacher.verified_teacher?
-
-    # or you have to be in a plc course
-    create(:plc_user_course_enrollment, user: (plc_teacher = create :teacher), plc_course: create(:plc_course))
-    assert plc_teacher.teacher?
-    assert plc_teacher.verified_teacher?
-  end
-
-  test "verified instructor" do
-    # normal teacher accounts are not automatically verified instructors
-    assert @teacher.teacher?
-    refute @teacher.verified_instructor?
-
-    # you need to be given the verified permission
-    real_teacher = create(:teacher)
-    real_teacher.permission = UserPermission::AUTHORIZED_TEACHER
-    assert real_teacher.teacher?
-    assert real_teacher.verified_instructor?
-
-    # or you have to be in a plc course
-    create(:plc_user_course_enrollment, user: (plc_teacher = create :teacher), plc_course: create(:plc_course))
-    assert plc_teacher.teacher?
-    assert plc_teacher.verified_instructor?
-
-    # admins are not verified instructorsg
-    assert @admin.teacher?
-    refute @admin.verified_instructor?
-
-    # facilitators should be verified instructors too
-    assert @facilitator.teacher?
-    assert @facilitator.verified_instructor?
-
-    # universal instructors should be verified instructors too
-    assert @universal_instructor.teacher?
-    assert @universal_instructor.verified_instructor?
-
-    #plc reviewers should be verified instructors too
-    assert @plc_reviewer.teacher?
-    assert @plc_reviewer.verified_instructor?
-
-    #levelbuilders should be verified instructors too
-    assert @levelbuilder.teacher?
-    assert @levelbuilder.verified_instructor?
-
-    #students should not be verified instructors
-    refute @student.teacher?
-    refute @student.verified_instructor?
-  end
-
   test 'terms_of_service_version for teacher without version' do
     assert_nil @teacher.terms_version
   end

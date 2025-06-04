@@ -5,7 +5,6 @@ Feature: Send Lesson
 Scenario: Send lesson dialog renders properly
   Given I open my eyes to test "send lesson dialog"
   When I am on "http://studio.code.org/courses/csp-2019/units/3"
-  And I dismiss the teacher panel
   Then I see no difference for "unit overview"
   When I open the send lesson dialog for lesson 4
   And I wait until element "span:contains(Google)" is visible

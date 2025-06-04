@@ -1,0 +1,29 @@
+name 'music-lab-612-pre-q8'
+
+question 'put actual question here'
+
+wrong 'wrong'
+wrong 'wrong'
+wrong 'wrong'
+right 'correct'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Computational Thinking
+
+Standard: Decomposition
+
+Lesson: Loops - Practice, Functions - Practice
+
+Skill Progression: All
+
+Pretest Modality: Given a snippet of how someone approached a problem, identify the CT skill it is (similar to PL question)
+
+Posttest Modality: Given a snippet of how someone approached a problem, identify the CT skill it is (similar to PL question)
+
+MARKDOWN
+
+markdown <<MARKDOWN
+Put the images / context markdown here
+MARKDOWN

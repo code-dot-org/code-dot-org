@@ -100,6 +100,7 @@ class User < ApplicationRecord
   include PasswordValidations
   include EmailValidations
   include ProviderFlags
+  include Verifiable
   include PartialRegistration
   include Rails.application.routes.url_helpers
 
@@ -919,21 +920,6 @@ class User < ApplicationRecord
     user_type == TYPE_TEACHER
   end
 
-  # Warning: Calling this method will trigger the sending of a verification email,
-  # as establish in the user_permission model
-  def verify_teacher!
-    self.permission = UserPermission::AUTHORIZED_TEACHER
-  end
-
-  # This method just checks if a user has the authorized teacher permission
-  # if you are hoping to know if someone can access content for verified instructors
-  # you should use the verified_instructor? method instead which includes checks for a
-  # couple different permissions that should have access instructor only content such
-  # as levelbuilders
-  def verified_teacher?
-    permission?(UserPermission::AUTHORIZED_TEACHER)
-  end
-
   def levelbuilder?
     permission?(UserPermission::LEVELBUILDER)
   end
@@ -944,16 +930,6 @@ class User < ApplicationRecord
   # our AI evaluation tools internally.
   def can_access_student_work?
     permission?(UserPermission::STUDENT_WORK_ACCESS)
-  end
-
-  # A user is a verified instructor if you are a universal_instructor, plc_reviewer,
-  # facilitator, authorized_teacher, or levelbuilder. All of these permissions tell us someone
-  # should be trusted with locked down instructor only content. It is important to use this
-  # method instead of verified_teacher? as teachers will not be instructors for all courses
-  def verified_instructor?
-    permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || permission?(UserPermission::PLC_REVIEWER) ||
-      permission?(UserPermission::FACILITATOR) || permission?(UserPermission::AUTHORIZED_TEACHER) ||
-      permission?(UserPermission::LEVELBUILDER)
   end
 
   def can_view_all_facilitator_landing_pages?
