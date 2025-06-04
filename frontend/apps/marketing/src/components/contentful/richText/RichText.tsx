@@ -91,6 +91,7 @@ const richTextRenderOptions: Options = {
     },
     [BLOCKS.UL_LIST]: (listNode: Block | Inline) => (
       <SimpleList
+        className={moduleStyles.richTextList}
         items={listNode.content.map(
           (itemNode: RichTextNode, index): SimpleListItem => {
             return {key: index, label: extractNodeContent(itemNode)};
