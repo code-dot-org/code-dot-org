@@ -1247,6 +1247,18 @@ roles.each do |name, config| %>
                   # test deployer --> `*test-code.org*static-assets`
                   - "arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets"
                   - "arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets/*"
+              # Allow CloudFront to log HTTP requests to S3.
+              - Effect: Allow
+                Action:
+                  - s3:GetBucketAcl
+                  - s3:PutBucketAcl
+                Resource:
+                  - "arn:aws:s3:::cdo-logs"
+              - Effect: Allow
+                Action:
+                  - s3:PutObject
+                Resource:
+                  - !Sub "arn:aws:s3:::cdo-logs/AWSLogs/${AWS::AccountId}/CloudFront/*"
               # Secrets Manager for ECS environment variables
               - Effect: Allow
                 Action:
