@@ -24,8 +24,8 @@ Feature: Multimodal chat using gpt-4o-mini as base model in AI Chat Lab
     When I click selector "#uploadDropdown-dropdown-button"
     And I click selector "button:contains(From Library)" once I see it
     And I click selector "input[name='select-a calf born in winter.pdf']" once I see it
-    And I wait until element "button:contains(Open)" is enabled using jQuery
-    And I press the last button with text "Open"
+    And I wait until element "button:contains(Attach)" is enabled using jQuery
+    And I press the last button with text "Attach"
     And I press keys "What text is in this PDF? Make sure your response is case sensitive." for element "#uitest-chat-textarea"
     And I wait until element "#uitest-chat-submit" is enabled
     And I click selector "#uitest-chat-submit"
