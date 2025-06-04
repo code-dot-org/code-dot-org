@@ -10,6 +10,7 @@ import React, {
 import type {MazeController} from '@code-dot-org/maze';
 
 import type {LevelData} from '@/app/models/level';
+import {SoundBoard, PlaybackOptions} from '@/audio';
 import type {BlockDefinition} from '@/components/blockly';
 import BlockLimitsPlugin from '@/components/blockly/plugins/blockLimits';
 import ToolboxTrashcanPlugin from '@/components/blockly/plugins/toolboxTrashcan';
@@ -65,6 +66,7 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
   const controller = useRef<MazeController | null>(null);
   const svg = useRef<SVGSVGElement | null>(null);
   const executionInfo = useRef<ExecutionInfo | null>(null);
+  const soundBoard = useRef<SoundBoard | null>(null);
 
   const Maze = useRef<typeof import('@code-dot-org/maze') | null>(null);
 
@@ -116,6 +118,10 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
       executionInfo.current = new ExecutionInfo({ticks: 1000});
       const code = getAllGeneratedCode({
         startBlock: 'when_run',
+      });
+
+      soundBoard.current?.play('start', {
+        volume: 0.5,
       });
 
       // Run the interpreter
@@ -425,6 +431,35 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
     ) {
       setCurrentAvatar(skinConfig.smallStaticAvatar);
 
+      // Create an audio device
+      soundBoard.current = new SoundBoard();
+
+      // Load all the audio
+      [
+        'win',
+        'start',
+        'obstacle',
+        'wall',
+        'walk',
+        'wall0',
+        'wall1',
+        'wall2',
+        'wall3',
+        'wall4',
+        'winGoal',
+        'fill',
+        'dig',
+      ].forEach(prefix => {
+        if (`${prefix}Sound` in skinConfig) {
+          soundBoard.current?.registerByFilenamesAndId?.(
+            (skinConfig as unknown as Record<string, string[]>)[
+              `${prefix}Sound`
+            ],
+            prefix,
+          );
+        }
+      });
+
       console.log('LEVEL DATA', levelData);
       controller.current = new Maze.current.default.MazeController(
         levelData.mazeData,
@@ -435,11 +470,15 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
         },
         {
           methods: {
-            playAudio: (sound, options) => {
-              console.log('PLAY AUDIO', sound, options);
+            playAudio: (name: string, options?: PlaybackOptions) => {
+              soundBoard.current?.play(name, {
+                volume: 0.5,
+                ...(options || {}),
+              });
             },
             playAudioOnFailure: () => {},
-            loadAudio: () => {},
+            loadAudio: (filenames: string[], name: string) =>
+              soundBoard.current?.registerByFilenamesAndId(filenames, name),
             getTestResults: () => {},
           },
         },
