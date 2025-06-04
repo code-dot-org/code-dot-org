@@ -21,6 +21,7 @@ class TestSection
   end
 
   def self.seed(options)
+    seed_environment_check!
     teacher_id = options[:teacher_id] || nil
 
     teacher = nil
@@ -52,9 +53,16 @@ class TestSection
     nil
   end
 
+  def self.seed_environment_check!
+    raise "Cannot create test data on production" unless [:development,
+                                                          :adhoc,
+                                                          :staging,
+                                                          :test].include?(CDO.rack_env)
+  end
+
   # Raise if run outside of a development environment.  Add this check at the top of any
   # public methods that can mutate data.
-  def self.environment_check!
+  def self.create_teacher_environment_check!
     raise "Cannot create default teacher outside of adhoc or development" unless [:adhoc, :development].include?(CDO.rack_env)
   end
 
@@ -65,7 +73,7 @@ class TestSection
   # old test data behind, we explictly hard-delete.
   def self.find_or_create_teacher
     # Only create a new teacher in safe environments, not on production.
-    environment_check!
+    create_teacher_environment_check!
     # Delete any existing test data
     user = User.find_by_email_or_hashed_email(DEFAULT_TEACHER_EMAIL)
     unless user.nil?
