@@ -89,7 +89,7 @@ class AichatRequestsController < ApplicationController
 
   private def can_access_ai_tutor2?(level_id)
     # AiTutor2 requests only come from python lab levels.
-    return false if level_id == nil? || DCDO.get("block_ai_tutor2_chat_completion", false)
+    return false if level_id.nil? || DCDO.get("block_ai_tutor2_chat_completion", false)
     Level.find(level_id).is_a? Pythonlab
   end
 
