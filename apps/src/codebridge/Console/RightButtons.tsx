@@ -92,7 +92,7 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
           color={'black'}
         />
       </WithTooltip>
-      {isWidgetView && <SettingsButton />}
+      {isWidgetView && !widgetViewShowCode && <SettingsButton />}
     </div>
   );
 };
