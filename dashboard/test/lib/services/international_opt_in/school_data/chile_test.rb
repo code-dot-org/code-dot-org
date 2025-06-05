@@ -6,12 +6,11 @@ class Services::InternationalOptIn::SchoolData::ChileTest < ActiveSupport::TestC
   let(:described_class) {Services::InternationalOptIn::SchoolData::Chile}
 
   describe '.data' do
-    it 'returns an array of hashes' do
+    it 'returns a hash of school data' do
       data = described_class.data
 
-      _(data).must_be_kind_of Array
+      _(data).must_be_kind_of Hash
       _(data).wont_be_empty
-      _(data.first).must_be_kind_of Hash
     end
 
     it 'returns frozen data' do
@@ -27,7 +26,9 @@ class Services::InternationalOptIn::SchoolData::ChileTest < ActiveSupport::TestC
 
     it 'returns empty hash and reports to Honeybadger when file is missing' do
       bad_filename = 'does_not_exist.json'
-      allow(Services::InternationalOptIn::SchoolData::Base).to receive(:load_json).and_raise(Errno::ENOENT.new('File not found'))
+      full_path = Services::InternationalOptIn::SchoolData::Base::SCHOOL_DATA_DIR.join(bad_filename)
+
+      allow(File).to receive(:read).with(full_path).and_raise(Errno::ENOENT.new('File not found'))
       allow(Honeybadger).to receive(:notify)
 
       result = described_class.send(:load_json, bad_filename)
