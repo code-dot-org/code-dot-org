@@ -15,7 +15,7 @@ import {useParams} from 'react-router-dom';
 import {useDebounce} from '@cdo/apps/util/hooks/useDebounce';
 import {useFetch} from '@cdo/apps/util/useFetch';
 
-import {MultiSelectInput, OptionId} from '../components/MultiSelectInput';
+import {MultiSelectInput, Option} from '../components/MultiSelectInput';
 import {
   Facilitator,
   PartnerFacilitatorProps,
@@ -117,10 +117,10 @@ export const PartnerFacilitator: FC<PartnerFacilitatorProps> = ({
   );
 
   const handleFacilitators = useCallback(
-    (newFacilitators: OptionId[]) => {
+    (newFacilitators: Option[]) => {
       dispatchWorkshop({
         type: 'UPDATE_WORKSHOP',
-        payload: {facilitators: newFacilitators.map(Number)},
+        payload: {facilitators: newFacilitators},
       });
     },
     [dispatchWorkshop]
