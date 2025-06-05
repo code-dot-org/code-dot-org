@@ -26,14 +26,14 @@ class TestSection
                      end
 
     if preset_options.nil?
-      raise "Invalid preset_name: #{options[:preset_name]}. Valid options are: 'csp4', 'random' or nil."
+      raise "Invalid preset_name: #{options[:preset_name]}. Valid options are: 'csp4', 'random' or nil (defaults to csp4 if not specified)."
     end
 
     teacher_id = options[:teacher_id] || nil
 
     teacher = nil
     if teacher_id.nil?
-      teacher = find_or_create_teacher
+      teacher = create_default_teacher
     else
       teacher = User.find_by(id: teacher_id)
       raise "Teacher with id #{teacher_id} not found. Please provide a valid teacher_id." if teacher.nil?
@@ -53,7 +53,11 @@ class TestSection
       age: preset_options[:age],
     )
 
-    create_student_progress(students, unit: unit, teacher: teacher)
+    if preset_name == 'random'
+      create_random_student_progress(students, unit: unit, teacher: teacher)
+    else
+      create_student_progress(students, unit: unit, teacher: teacher, **preset_options.slice(:data_per_student))
+    end
 
     puts ''
     puts "Created section with section_id: #{section.id}, num_students: #{students.count} and teacher: #{teacher.email}"
@@ -79,11 +83,12 @@ class TestSection
   # and recreate. Sections and followers would be soft-deleted by
   # dependency when we delete the teacher; but to not leave a trail of
   # old test data behind, we explictly hard-delete.
-  def self.find_or_create_teacher
+  def self.create_default_teacher
     # Only create a new teacher in safe environments, not on production.
     create_teacher_environment_check!
-    # Delete any existing test data
+
     user = User.find_by_email_or_hashed_email(TestSectionData::DEFAULT_TEACHER_EMAIL)
+
     unless user.nil?
       delete_existing_teacher(user)
     end
@@ -146,13 +151,31 @@ class TestSection
     students
   end
 
-  def self.create_student_progress(students, options)
+  def self.create_random_student_progress(students, options)
     level_count = options[:unit].script_levels.count
 
     students.each do |student_user|
       max_level = max_level_for_student(level_count)
-      create_user_levels(student_user, max_level, options[:unit])
+      create_random_user_levels(student_user, max_level, options[:unit])
       create_teacher_feedback(student_user, options[:teacher], max_level, options[:unit])
+    end
+  end
+
+  def self.create_student_progress(students, options)
+    preset_data_student_count = options[:data_per_student].count
+
+    students.each_with_index do |student_user, index|
+      break if index >= preset_data_student_count
+
+      data = options[:data_per_student][index]
+
+      # Create user levels based on the provided data
+      data.each do |level_id, level_data|
+        user_level = level_data[:user_level]
+        create :user_level, user: student_user, script_id: options[:unit].id,
+          level_id: level_id, attempts: user_level[:attempts],
+          best_result: user_level[:best_result]
+      end
     end
   end
 
@@ -165,7 +188,7 @@ class TestSection
     end
   end
 
-  def self.create_user_levels(student_user, max_level, unit)
+  def self.create_random_user_levels(student_user, max_level, unit)
     script_levels = unit.script_levels.includes(:levels)
     current_level = 0
 

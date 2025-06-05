@@ -16,5 +16,32 @@ class TestSectionData
     unit_group_name: 'csp-2024',
     grade: [10],
     age: 15,
+    data_per_student: [{
+      11967 => {
+        user_level: {
+          attempts: 1,
+          best_result: 30
+        }
+      },
+      53102 => {
+        user_level: {
+          attempts: 1,
+          best_result: 100
+        }
+      },
+    }, {
+      11967 => {
+        user_level: {
+          attempts: 1,
+          best_result: 100
+        }
+      },
+      53102 => {
+        user_level: {
+          attempts: 1,
+          best_result: 30
+        }
+      },
+    },]
   }
 end
