@@ -72,7 +72,7 @@ steps:
 
   # We cache staging's rbenv and database in the
   # `cache-staging-build-artifacts` pipeline.
-  - name: get-cached-staging-misc-build-artifacts
+  - name: get-cached-unit-test-build-artifacts
     image: plugins/s3-cache
     volumes:
       # Even files cached with absolute paths will be restored into the
@@ -80,7 +80,7 @@ steps:
       - name: rbenv
         path: /drone/src/home/ci/.rbenv
     settings:
-      filename: cache-staging-misc-build-artifacts.with-node_modules.tar.gz
+      filename: cache-unit-test-build-artifacts.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -193,7 +193,7 @@ steps:
 
   # We cache staging's rbenv and database in the
   # `cache-staging-build-artifacts` pipeline.
-  - name: get-cached-staging-misc-build-artifacts
+  - name: get-cached-ui-test-build-artifacts
     image: plugins/s3-cache
     volumes:
       # Even files cached with absolute paths will be restored into the
@@ -203,7 +203,7 @@ steps:
       - name: mysql
         path: /drone/src/var/lib/mysql
     settings:
-      filename: cache-staging-misc-build-artifacts.with-node_modules.tar.gz
+      filename: cache-ui-test-build-artifacts.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -283,6 +283,8 @@ steps:
 
   # - name: cache-staging-clone
   #   image: plugins/s3-cache
+  #   depends_on:
+  #     - clone
   #   settings:
   #     filename: cache-staging-clone.tar.gz
   #     endpoint: s3://cdo-drone
@@ -292,10 +294,46 @@ steps:
   #     mount:
   #       - .
 
+  # Do all the work necessary to run unit tests so we can capture a complete
+  # snapshot of rbenv, but don't actually run the tests.
+  - name: prepare-unit-tests
+    image: codedotorg/code-dot-org:1.15
+    depends_on:
+      # - cache-staging-clone
+      - clone
+    pull: always
+    volumes:
+      - name: rbenv
+        path: /home/ci/.rbenv
+    commands:
+      - sudo chown -R ci:ci .
+      - /entrypoint.sh docker/ci/scripts/prepare_unit_tests.sh
+
+  - name: cache-unit-test-build-artifacts
+    image: plugins/s3-cache
+    depends_on:
+      - prepare-unit-tests
+    volumes:
+      - name: rbenv
+        path: /home/ci/.rbenv
+    settings:
+      filename: cache-unit-test-build-artifacts.tar.gz
+      endpoint: s3://cdo-drone
+      rebuild: true
+      debug: true
+      pull: true
+      mount:
+        - /home/ci/.rbenv
+        - ./apps/build
+        - ./apps/node_modules
+
   # Do all the work necessary to run UI tests so we can capture a complete
-  # snapshot of rbenv and the database, but don't actually run the tests.
+  # snapshot of rbenv, database, and apps; but don't actually run the tests.
   - name: prepare-ui-tests
     image: codedotorg/code-dot-org:1.15
+    depends_on:
+      # - cache-staging-clone
+      - clone
     pull: always
     environment:
       PROPERTIES_ENCRYPTION_KEY:
@@ -309,15 +347,17 @@ steps:
       - sudo chown -R ci:ci .
       - /entrypoint.sh docker/ci/scripts/prepare_ui_tests.sh
 
-  - name: cache-staging-misc-build-artifacts
+  - name: cache-ui-test-build-artifacts
     image: plugins/s3-cache
+    depends_on:
+      - prepare-ui-tests
     volumes:
       - name: rbenv
         path: /home/ci/.rbenv
       - name: mysql
         path: /var/lib/mysql
     settings:
-      filename: cache-staging-misc-build-artifacts.with-node_modules.tar.gz
+      filename: cache-ui-test-build-artifacts.tar.gz
       endpoint: s3://cdo-drone
       rebuild: true
       debug: true
