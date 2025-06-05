@@ -172,6 +172,8 @@ class TestSection
 
       # Create user levels based on the provided data
       data.each do |level_id, level_data|
+        level = Level.find_by(id: level_id)
+
         level_source = level_data[:level_source]
         level_source_id = nil
         unless level_source.nil?
@@ -183,6 +185,29 @@ class TestSection
           create :user_level, user: student_user, script_id: unit_id,
             level_id: level_id, attempts: user_level[:attempts],
             best_result: user_level[:best_result], level_source_id: level_source_id
+
+          # Create a backing channel for this level if it's a type that needs it
+          if level.channel_backed?
+            ChannelToken.find_or_create_channel_token(
+              level,
+              '127.0.0.1',
+              find_or_create_storage_id_for_user_id(student_user.id),
+              options[:unit].id,
+              {
+                hidden: true
+              }
+            )
+          end
+        end
+
+        teacher_feedback = level_data[:teacher_feedback]
+        unless teacher_feedback.nil?
+          create :teacher_feedback,
+            student: student_user,
+            teacher: options[:teacher],
+            level: level,
+            script: options[:unit],
+            comment: teacher_feedback[:comment]
         end
       end
     end

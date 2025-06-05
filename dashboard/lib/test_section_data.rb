@@ -26,6 +26,15 @@ class TestSectionData
           data: 'test free response text',
         },
       },
+      3538 => {
+        user_level: {
+          attempts: 1,
+          best_result: 30
+        },
+        teacher_feedback: {
+          comment: 'test teacher feedback',
+        }
+      },
       53102 => {
         user_level: {
           attempts: 1,
