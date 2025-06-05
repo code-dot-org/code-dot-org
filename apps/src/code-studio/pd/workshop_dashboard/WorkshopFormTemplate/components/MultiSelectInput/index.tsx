@@ -254,7 +254,9 @@ export const MultiSelectInput: React.FC<{
                     {
                       label,
                       type: 'closable',
-                      onClose: () => {
+                      onClose: e => {
+                        e?.stopPropagation();
+                        e?.preventDefault();
                         handleRemoveOption(option);
                       },
                       key: id,
