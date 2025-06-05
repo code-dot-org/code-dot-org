@@ -19,7 +19,6 @@ class TestSection
   # - :num_students - Number of students to add to the section, defaults to TestSectionData::DEFAULT_NUM_STUDENTS
   # - :unit_name - Name of the unit to use, defaults to TestSectionData::DEFAULT_UNIT. Only used when preset_name is 'random'.
   # - :unit_group_name - Name of the unit group to use, defaults to TestSectionData::DEFAULT_UNIT_GROUP. Only used when preset_name is 'random'.
-  # - :age - Age of students, defaults to 15 for 'csp4' and random for 'random'
   #
   # Only runs in non-production environments (development, adhoc, staging, test).
   # Only creates a new teacher if :teacher_id is not provided and only on adhoc or development.
