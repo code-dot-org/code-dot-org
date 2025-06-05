@@ -14,6 +14,10 @@
 #
 require 'json'
 require 'cdo/honeybadger'
+require 'services/international_opt_in/partner_data_loader'
+require 'services/international_opt_in/school_data/colombia'
+require 'services/international_opt_in/school_data/chile'
+require 'services/international_opt_in/school_data/uzbekistan'
 
 class Pd::InternationalOptIn < ApplicationRecord
   include Pd::Form
@@ -53,22 +57,11 @@ class Pd::InternationalOptIn < ApplicationRecord
 
   # @override
   def dynamic_required_fields(hash)
-    [].tap do |required|
-      case hash[:school_country]
-      when 'Colombia'
-        required << :school_department
-        required << :school_municipality
-        required << :school_city
-      when 'Chile'
-        required << :school_department
-        required << :school_commune
-        required << :school_id
-      when 'Uzbekistan'
-        required << :school_department
-        required << :school_municipality
-      else
-        required << :school_city
-      end
+    case hash[:school_country]
+    when 'Colombia' then Services::InternationalOptIn::SchoolData::Colombia.required_fields
+    when 'Chile' then Services::InternationalOptIn::SchoolData::Chile.required_fields
+    when 'Uzbekistan'then Services::InternationalOptIn::SchoolData::Uzbekistan.required_fields
+    else %i[school_city]
     end
   end
 
@@ -79,7 +72,7 @@ class Pd::InternationalOptIn < ApplicationRecord
   ## Class Methods
   def self.options
     entry_keys = {
-      schoolCountry: international_partners.keys.map(&:to_s).sort,
+      schoolCountry: Services::InternationalOptIn::PartnerDataLoader.partners.keys.map(&:to_s).sort,
       workshopCourse: %w(csf_af csf_express csd csp csa other not_applicable),
       emailOptIn: %w(opt_in_yes opt_in_no),
       legalOptIn: %w(opt_in_yes opt_in_no)
@@ -103,8 +96,8 @@ class Pd::InternationalOptIn < ApplicationRecord
 
     entries[:workshopOrganizer] = partner_entries
 
-    entries[:colombianSchoolData] = colombian_school_data
-    entries[:chileanSchoolData] = chilean_school_data
+    entries[:colombianSchoolData] = colombia_school_data
+    entries[:chileanSchoolData] = chile_school_data
     entries[:uzbekistanSchoolData] = uzbekistan_school_data
 
     super.merge(entries)
@@ -156,36 +149,19 @@ class Pd::InternationalOptIn < ApplicationRecord
     ]
   end
 
-  def self.international_partners
-    @international_partners ||= load_json('international_partners_data.json')
-  end
-
   def self.partner_entries
-    international_partners.transform_values do |partner_list|
-      partner_list + [I18n.t('pd.international_opt_in.organizer_not_listed')]
-    end
+    Services::InternationalOptIn::PartnerDataLoader.partner_entries
   end
 
-  def self.colombian_school_data
-    @colombian_school_data ||= load_json('colombian_school_data.json')
+  def self.colombia_school_data
+    Services::InternationalOptIn::SchoolData::Colombia.data
   end
 
-  def self.chilean_school_data
-    @chilean_school_data ||= load_json('chilean_school_data.json')
+  def self.chile_school_data
+    Services::InternationalOptIn::SchoolData::Chile.data
   end
 
   def self.uzbekistan_school_data
-    @uzbekistan_school_data ||= load_json('uzbekistan_school_data.json')
+    Services::InternationalOptIn::SchoolData::Uzbekistan.data
   end
-
-  def self.load_json(filename)
-    JSON.parse(File.read(Rails.root.join('config', 'international_opt_in', filename))).freeze
-  rescue Errno::ENOENT, JSON::ParserError => exception
-    Honeybadger.notify(
-      exception,
-      error_message: "Error loading JSON for #{filename}: #{exception.message}"
-    )
-  end
-
-  private_class_method :load_json
 end
