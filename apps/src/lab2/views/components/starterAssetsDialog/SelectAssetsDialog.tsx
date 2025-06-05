@@ -43,7 +43,7 @@ const SelectAssetsDialog: React.FC<DialogProps & SelectProps> = ({
       onClose={onClose}
       title={'Library'}
       primaryButtonProps={{
-        text: 'Open',
+        text: 'Attach',
         onClick: primaryOnClick,
         disabled: selectedFiles.length === 0,
       }}

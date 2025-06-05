@@ -352,6 +352,7 @@ export interface Validation {
   callout?: string;
   next: boolean;
   key: string;
+  comment?: string;
 }
 
 /// ------ MISC ------ ///

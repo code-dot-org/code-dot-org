@@ -24840,3 +24840,16 @@ en:
           description_short: ''
           description: Teacher Overview
           student_description: Student Overview
+        pl-gamified-python-sandbox:
+          lessons:
+            lesson-1:
+              name: Hit the Road in The Neighborhood
+            lesson-2:
+              name: 'Fueling up at the Coffee Shop: Kickstart your Python Journey'
+          lesson_groups: {}
+          name: pl-gamified-python-sandbox
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

@@ -61,7 +61,8 @@ class ScriptsController < ApplicationController
       # return a temporary redirect rather than a permanent one, to avoid ever
       # serving a permanent redirect from a unit's new location to its old
       # location during the unit renaming process.
-      redirect_to canonical_path
+      redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
+      redirect_to "#{canonical_path}#{redirect_query_string}"
       return
     end
 
@@ -72,9 +73,14 @@ class ScriptsController < ApplicationController
 
     # Attempt to redirect user if we think they ended up on the wrong unit overview page.
     override_redirect = VersionRedirectOverrider.override_unit_redirect?(session, @script)
-    if !override_redirect && redirect_unit = redirect_unit(@script, request.locale, @course)
-      redirect_to script_path(redirect_unit) + "?redirect_warning=true"
-      return
+    if !override_redirect && redirect_info = get_redirect_info(@script, request.locale, @course)
+      if redirect_info[:redirect_ugu]
+        redirect_to course_unit_path(redirect_info[:redirect_ugu].unit_group, redirect_info[:redirect_ugu].position) + "?redirect_warning=true"
+        return
+      elsif redirect_info[:redirect_unit]
+        redirect_to script_path(redirect_info[:redirect_unit]) + "?redirect_warning=true"
+        return
+      end
     end
 
     # Lastly, if user is assigned to newer version of this unit, we will
@@ -449,7 +455,7 @@ class ScriptsController < ApplicationController
     end
   end
 
-  private def redirect_unit(unit, locale, course)
+  private def get_redirect_info(unit, locale, course)
     # Return nil if unit is nil or we know the user can view the version requested.
     return nil if !unit || unit.can_view_version?(current_user, locale: locale)
 
@@ -467,7 +473,8 @@ class ScriptsController < ApplicationController
     # Do not redirect if we are already on the correct unit.
     return nil if redirect_unit == unit
 
-    redirect_unit
+    ugu = Queries::Courses.unit_group_unit(redirect_unit, redirect_unit_group)
+    {redirect_unit: redirect_unit, redirect_ugu: ugu}
   end
 
   # Redirect /s/... to /courses/.../units/...

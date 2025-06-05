@@ -329,6 +329,7 @@
     "react-router": "3.2.6",
     "react-router-dom": "^6.26.0",
     "react-select": "^1.2.1",
+    "react-select-5": "npm:react-select@5",
     "react-sticky": "^6.0.3",
     "react-tether": "^1.0.4",
     "react-tooltip": "^3.2.7",
