@@ -21,11 +21,12 @@ import {
   convertRelativeToAbsolutePitch,
   convertAbsoluteToRelativePitch,
 } from '../../utils/Notes';
+import {EditorType, getDisplayNotes, integers} from '../../utils/Tunes';
 import LoadingOverlay from '../LoadingOverlay';
 import PreviewControlsV2 from '../PreviewControlsV2';
 import EaseIntoView from '../util/EaseIntoView';
 
-import {getDisplayNotes, getInstruments, integers} from './util';
+import {getInstruments} from './util';
 
 import styles from './styles.module.scss';
 
@@ -35,8 +36,6 @@ interface Props {
   editorType: EditorType;
   lengthMeasures: number;
 }
-
-export type EditorType = 'drums' | 'notes';
 
 /**
  * Instrument grid editor for selecting notes in a pattern.
