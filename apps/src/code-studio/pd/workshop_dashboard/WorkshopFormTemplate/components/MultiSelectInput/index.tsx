@@ -223,7 +223,7 @@ export const MultiSelectInput: React.FC<{
         className={classNames(styles.label, className)}
         id={`${id}-label`}
         size={size}
-        errorMessage={errorMessage}
+        errorMessage={anyOptionInvalid ? 'Invalid option' : errorMessage}
         onClick={e => {
           e.preventDefault();
           e.stopPropagation();
@@ -234,18 +234,20 @@ export const MultiSelectInput: React.FC<{
         <div
           className={classNames(styles.container, {
             [styles.focused]: isFocused,
+            [styles.invalid]: anyOptionInvalid,
           })}
           aria-haspopup="listbox"
         >
           <div className={styles.tagsAndSearchContainer}>
             {selectedOptions.map(option => {
               const {id, label} = option;
+              const invalid = !optionsMap.has(id);
 
               return (
                 <Tags
                   key={id}
                   className={classNames(styles.tag, {
-                    [styles.invalid]: !option,
+                    [styles.invalid]: invalid,
                   })}
                   size="s"
                   tagsList={[
