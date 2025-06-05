@@ -12,13 +12,7 @@ import {
  *
  * See: https://developer.onetrust.com/onetrust/docs/javascript-api
  */
-const OneTrustLoader = ({
-  brand,
-  hostname,
-}: {
-  brand: Brand;
-  hostname: string;
-}) => {
+const OneTrustLoader = ({brand}: {brand: Brand}) => {
   if (!brand) {
     return null;
   }
@@ -27,13 +21,13 @@ const OneTrustLoader = ({
     <>
       {/* OneTrust auto block script. */}
       <Script
-        src={getOnetrustAutoBlockScriptPath(brand, hostname)}
+        src={getOnetrustAutoBlockScriptPath(brand)}
         strategy={'beforeInteractive'}
       />
 
       {/* OneTrust SDK script. */}
       <Script
-        src={getOnetrustStubScriptPath(brand, hostname)}
+        src={getOnetrustStubScriptPath(brand)}
         data-domain-script={getOneTrustDomainId(brand)}
         strategy={'beforeInteractive'}
       />

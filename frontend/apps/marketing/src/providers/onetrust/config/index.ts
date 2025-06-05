@@ -20,23 +20,18 @@ function getOneTrustDomainIdByBrand(brand: Brand) {
  * Returns the OneTrust asset base path. For production, it is self-hosted. For pre-production, it is sourced from the
  * OneTrust CDN so that it enables live testing without having to upload new self-hosted files.
  * @param brand Code.org brand
- * @param hostname Hostname of the request, used to determine the base path for self-hosted assets
  */
-function getOneTrustAssetBasePath(brand: Brand, hostname: string) {
+function getOneTrustAssetBasePath(brand: Brand) {
   const stage = getStage();
 
   switch (stage) {
-    case 'pr':
-    case 'development':
-      return `http://${hostname}/_next/static/public/onetrust/${brand}`;
-    case 'test':
     case 'production':
       /**
        * TODO: Once Pegasus is deprecated, uncomment this line and remove the extra cp from package.json in
        * copy:static-assets to the .next/static/public directory
        * https://codedotorg.atlassian.net/browse/CMS-786
        */
-      return `https://${hostname}/_next/static/public/onetrust/${brand}`;
+      return `/_next/static/public/onetrust/${brand}`;
     default:
       return `https://cdn.cookielaw.org`;
   }
@@ -63,14 +58,14 @@ export function getOneTrustDomainId(brand: Brand) {
  * Returns the OneTrust Auto Block script path
  * @param brand Code.org brand
  */
-export function getOnetrustAutoBlockScriptPath(brand: Brand, hostname: string) {
-  return `${getOneTrustAssetBasePath(brand, hostname)}/consent/${getOneTrustDomainId(brand)}/OtAutoBlock.js`;
+export function getOnetrustAutoBlockScriptPath(brand: Brand) {
+  return `${getOneTrustAssetBasePath(brand)}/consent/${getOneTrustDomainId(brand)}/OtAutoBlock.js`;
 }
 
 /**
  * Returns the OneTrust SDK script path
  * @param brand Code.org brand
  */
-export function getOnetrustStubScriptPath(brand: Brand, hostname: string) {
-  return `${getOneTrustAssetBasePath(brand, hostname)}/scripttemplates/otSDKStub.js`;
+export function getOnetrustStubScriptPath(brand: Brand) {
+  return `${getOneTrustAssetBasePath(brand)}/scripttemplates/otSDKStub.js`;
 }
