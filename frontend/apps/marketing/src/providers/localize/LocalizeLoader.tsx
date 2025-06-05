@@ -2,12 +2,12 @@
 import Script from 'next/script';
 
 import {Brand} from '@/config/brand';
-import {getLocalizePath, getProjectId} from '@/providers/localize/config';
+import {getLocalizePath, getProjectId} from '@/config/localize';
 
 /**
  * Loads Localize in an SSR & CSR environment.
  */
-const LocalizeLoader = ({brand}: {brand: Brand}) => (
+const LocalizeLoader = ({brand, locale}: {brand: Brand; locale: string}) => (
   <>
     {/* Localize script for their widget from our CDN. */}
     <Script
@@ -56,7 +56,9 @@ const LocalizeLoader = ({brand}: {brand: Brand}) => (
           if (projectId !== '') {
             Localize.initialize({
               key: projectId!,
+              autodetectLanguage: true,
               rememberLanguage: true,
+              defaultLanguage: locale,
               // Block classes that match developer mode Next.js overlays
               blockedClasses: [
                 'nextjs-toast',

@@ -8,7 +8,6 @@ import OrganizationJsonLd from '@/config/jsonLd/OrganizationJsonLd';
 import {getStage} from '@/config/stage';
 import EnvironmentLoader from '@/providers/environment';
 import NewRelicLoader from '@/providers/newrelic/NewRelicLoader';
-import LocalizeLoader from '@/providers/localize/LocalizeLoader';
 import OneTrustLoader from '@/providers/onetrust/OneTrustLoader';
 import OneTrustProvider from '@/providers/onetrust/OneTrustProvider';
 import {generateBootstrapValues} from '@/providers/statsig/statsig-backend';
@@ -37,7 +36,6 @@ export default async function Layout({
     <>
       <EnvironmentLoader />
       <NewRelicLoader />
-      <LocalizeLoader brand={brand} />
       <OneTrustLoader brand={brand} />
 
       <OneTrustProvider>

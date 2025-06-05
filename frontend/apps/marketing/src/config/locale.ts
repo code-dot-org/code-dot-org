@@ -1,1 +1,22 @@
-export const SUPPORTED_LOCALES = new Set(['en-US']);
+export const SUPPORTED_LOCALES = new Set([
+  'es',
+  'ar',
+  'de',
+  'fa',
+  'fr',
+  'hi',
+  'id',
+  'it',
+  'ja',
+  'ko',
+  'mr',
+  'pl',
+  'pt-BR',
+  'sk',
+  'th',
+  'tr',
+  'uk',
+  'vi',
+  'zh-TW',
+  'en-US',
+]);
