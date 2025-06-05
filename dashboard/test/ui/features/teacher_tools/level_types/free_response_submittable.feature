@@ -42,3 +42,10 @@ Scenario: Level without multiple attempts allowed is locked after submit
   And element ".free-response > textarea" contains text "sample response"
   And element ".free-response > textarea" is readonly
   And element ".submitButton" is not visible
+
+Scenario: Level with stay_on_level_after_submit stays on level
+  Given I am on "http://studio.code.org/s/allthethings/lessons/27/levels/5"
+  And I type "sample response" into ".free-response > textarea"
+  And I press ".submitButton" using jQuery
+  And I wait to see ".nextLevelButton"
+  And element ".submitButton" is not disabled
