@@ -109,7 +109,7 @@ FactoryBot.define do
       after(:create) do |unit_group, evaluator|
         unit = evaluator.unit || create(:unit, :in_unit_group)
         create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
-        unit.reload
+        unit_group.reload
       end
 
       factory :csp_course do
