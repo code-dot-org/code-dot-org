@@ -37,65 +37,74 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
   const evaluationComplete =
     evaluationCount > 0 && responses.length === evaluationCount;
 
-  // const loadExistingEvaluations = async () => {
-  //   console.log(
-  //     'Loading existing evaluations for levelId:',
-  //     levelData.levelId,
-  //     'unitId:',
-  //     levelData.unitId
-  //   );
+  useEffect(() => {
+    if (responses.length > 0) {
+      const addStudentNameAndResponseToEvaluations = (
+        evaluations: StudentWorkEvaluation[]
+      ): StudentWorkEvaluation[] => {
+        return evaluations.map(evaluation => ({
+          ...evaluation,
+          studentDisplayName:
+            responses.find(
+              response => response.studentId === evaluation.studentId
+            )?.studentDisplayName || '',
+          studentWork:
+            responses.find(
+              response => response.studentId === evaluation.studentId
+            )?.studentWork || '',
+        }));
+      };
+      const loadExistingEvaluations = async () => {
+        console.log('Loading existing evaluations...');
 
-  //   const allExistingEvaluations = [];
+        const promises = responses.map(response =>
+          fetchStudentWorkEvaluations(
+            response.studentId,
+            levelData.levelId,
+            levelData.unitId
+          ).catch(error => {
+            console.warn(`Failed for student ${response.studentId}`, error);
+            return null;
+          })
+        );
+        const loadedEvaluations = await Promise.all(promises);
 
-  //   for (const response of responses) {
-  //     try {
-  //       const data = await fetchStudentWorkEvaluations(
-  //         response.studentId,
-  //         levelData.levelId,
-  //         levelData.unitId
-  //       );
+        // Likily need to clean something up here... would like to filter out arrays earlier perhaps in the controller
+        const allExistingEvaluations = loadedEvaluations
+          .filter(
+            data =>
+              data !== null &&
+              !Array.isArray(data) &&
+              data.evaluation !== 'No attempt'
+          )
+          .map(({evaluation, reasoning, ...rest}) => ({
+            ...rest,
+            aiEvaluation: evaluation,
+            aiReasoning: reasoning,
+          }));
 
-  //       console.log(
-  //         `Fetched evaluations for student ${response.studentId}:`,
-  //         data
-  //       );
+        console.log('All existing evaluations:', allExistingEvaluations);
+        return allExistingEvaluations;
+      };
 
-  //       if (data) {
-  //         allExistingEvaluations.push(data); // or push(data) if you want a nested array
-  //       }
-  //     } catch (error) {
-  //       console.warn(
-  //         `Failed to fetch evaluations for student ${response.studentId}:`,
-  //         error
-  //       );
-  //     }
-  //   }
+      ////// This is the line I changed here - I commented out what was working
+      const fetchAndSetEvaluations = async () => {
+        const evaluations = await loadExistingEvaluations();
+        // what if instead we add these to evaluations state
+        const completeEvaluations =
+          addStudentNameAndResponseToEvaluations(evaluations);
+        console.log('Fetched evaluations:', completeEvaluations);
+        setEvaluationCount(evaluations.length);
+        setEvaluations(prevEvaluations => [
+          ...prevEvaluations,
+          ...completeEvaluations,
+        ]);
+        // setExistingEvaluations(evaluations);
+      };
 
-  //   console.log('All existing evaluations:', allExistingEvaluations);
-  // };
-
-  const loadExistingEvaluations = async () => {
-    console.log('Loading existing evaluations...');
-
-    const promises = responses.map(response =>
-      fetchStudentWorkEvaluations(
-        response.studentId,
-        levelData.levelId,
-        levelData.unitId
-      ).catch(error => {
-        console.warn(`Failed for student ${response.studentId}`, error);
-        return null;
-      })
-    );
-
-    const results = await Promise.all(promises);
-
-    const allExistingEvaluations = results.filter(
-      data => data !== null && data.evaluation !== 'No attempt'
-    );
-
-    console.log('All existing evaluations:', allExistingEvaluations);
-  };
+      fetchAndSetEvaluations();
+    }
+  }, [responses, levelData.levelId, levelData.unitId]);
 
   const getAIEvaluations = async () => {
     analyticsReporter.sendEvent(
@@ -107,10 +116,25 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
       PLATFORMS.BOTH
     );
     setEvaluationsPending(true);
-    const responsePromises = responses.map(async studentResponse => {
-      return evaluateStudentResponse(studentResponse);
-    });
-    loadExistingEvaluations();
+    // Filter responses to only those without an existing evaluation for the studentId
+    // this is snake case on the evaluations.
+    const responsesWithoutAiEvaluation = responses.filter(
+      response =>
+        !evaluations.some(
+          evaluation => evaluation.studentId === response.studentId
+        )
+    );
+
+    console.log(
+      'Responses without AI evaluation:',
+      responsesWithoutAiEvaluation
+    );
+
+    const responsePromises = responsesWithoutAiEvaluation.map(
+      async studentResponse => {
+        return evaluateStudentResponse(studentResponse);
+      }
+    );
 
     await Promise.allSettled(responsePromises);
   };
