@@ -163,6 +163,7 @@ class TestSection
 
   def self.create_student_progress(students, options)
     preset_data_student_count = options[:data_per_student].count
+    unit_id = options[:unit].id
 
     students.each_with_index do |student_user, index|
       break if index >= preset_data_student_count
@@ -171,10 +172,18 @@ class TestSection
 
       # Create user levels based on the provided data
       data.each do |level_id, level_data|
+        level_source = level_data[:level_source]
+        level_source_id = nil
+        unless level_source.nil?
+          level_source_id = create(:level_source, level_id: level_id, data: level_source[:data]).id
+        end
+
         user_level = level_data[:user_level]
-        create :user_level, user: student_user, script_id: options[:unit].id,
-          level_id: level_id, attempts: user_level[:attempts],
-          best_result: user_level[:best_result]
+        unless user_level.nil?
+          create :user_level, user: student_user, script_id: unit_id,
+            level_id: level_id, attempts: user_level[:attempts],
+            best_result: user_level[:best_result], level_source_id: level_source_id
+        end
       end
     end
   end

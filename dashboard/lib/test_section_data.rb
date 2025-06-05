@@ -21,7 +21,10 @@ class TestSectionData
         user_level: {
           attempts: 1,
           best_result: 30
-        }
+        },
+        level_source: {
+          data: 'test free response text',
+        },
       },
       53102 => {
         user_level: {
@@ -34,7 +37,10 @@ class TestSectionData
         user_level: {
           attempts: 1,
           best_result: 100
-        }
+        },
+        level_source: {
+          data: 'test free response text',
+        },
       },
       53102 => {
         user_level: {
