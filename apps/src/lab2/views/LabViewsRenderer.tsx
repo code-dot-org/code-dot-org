@@ -30,7 +30,7 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   const exemplarSources = levelProperties?.exemplarSources;
   const levelId = levelProperties?.id;
 
-  const isBlocked = useAppSelector(state => state.lab.isBlocked);
+  const isBlocked = useAppSelector(state => state.lab.isBlockedAbuse);
   const isProjectValidator = useAppSelector(state =>
     state.lab.permissions?.includes(PERMISSIONS.PROJECT_VALIDATOR)
   );

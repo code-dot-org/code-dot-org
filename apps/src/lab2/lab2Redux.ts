@@ -100,7 +100,9 @@ export interface LabState {
   // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
   isShareView: boolean | undefined;
   // If this lab is blocked because abuse score >= 15.
-  isBlocked: boolean | undefined;
+  isBlockedAbuse: boolean | undefined;
+  // If this lab/project is blocked for project non-owners (excluding owner's teacher).
+  projectSharingDisabled: boolean | undefined;
   overrideValidations: Validation[] | undefined;
   permissions: string[];
 }
@@ -116,7 +118,8 @@ const initialState: LabState = {
   levelProperties: undefined,
   scriptId: undefined,
   isShareView: undefined,
-  isBlocked: undefined,
+  isBlockedAbuse: undefined,
+  projectSharingDisabled: undefined,
   overrideValidations: undefined,
   permissions: [],
 };
@@ -269,12 +272,16 @@ export const setUpWithLevel = createAsyncThunk<
 
     Lab2Registry.getInstance().setProjectManager(projectManager);
     // Load channel and source.
-    const {sources, channel, abuseScore} = await setUpAndLoadProject(
-      projectManager,
-      thunkAPI.dispatch
-    );
+    const {sources, channel, abuseScore, sharingDisabled} =
+      await setUpAndLoadProject(projectManager, thunkAPI.dispatch);
     setProjectAndLevelData(
-      {initialSources: sources, channel, levelProperties, abuseScore},
+      {
+        initialSources: sources,
+        channel,
+        levelProperties,
+        abuseScore,
+        sharingDisabled,
+      },
       thunkAPI.signal.aborted,
       thunkAPI.dispatch,
       thunkAPI.getState
@@ -386,14 +393,16 @@ const labSlice = createSlice({
         levelProperties: LevelProperties;
         initialSources?: ProjectSources;
         abuseScore?: number;
+        sharingDisabled?: boolean;
       }>
     ) {
       state.channel = action.payload.channel;
       state.levelProperties = action.payload.levelProperties;
       state.initialSources = action.payload.initialSources;
       if (typeof action.payload.abuseScore === 'number') {
-        state.isBlocked = action.payload.abuseScore >= 15 ? true : false;
+        state.isBlockedAbuse = action.payload.abuseScore >= 15 ? true : false;
       }
+      state.projectSharingDisabled = action.payload.sharingDisabled;
     },
     setIsShareView(state, action: PayloadAction<boolean>) {
       state.isShareView = action.payload;
@@ -525,6 +534,7 @@ function setProjectAndLevelData(
     channel?: Channel;
     initialSources?: ProjectSources;
     abuseScore?: number;
+    sharingDisabled?: boolean;
   },
   aborted: boolean,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>,
@@ -545,7 +555,8 @@ function setProjectAndLevelData(
       data.channel,
       data.initialSources,
       data.abuseScore,
-      isReadOnlyWorkspace(getState())
+      isReadOnlyWorkspace(getState()),
+      data.sharingDisabled
     );
 }
 
