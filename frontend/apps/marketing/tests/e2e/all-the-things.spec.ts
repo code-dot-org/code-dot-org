@@ -634,6 +634,34 @@ test.describe('All the things UI e2e test', () => {
       });
     });
 
+    test.describe('rich text', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator('Rich Text');
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('renders', async () => {
+        await expect(component.getByText('Normal text')).toBeVisible();
+        await expect(component.getByText('Bold text')).toBeVisible();
+        await expect(
+          component.getByText('Multiline complex text'),
+        ).toBeVisible();
+
+        await expect(component.getByText('Normal link')).toBeVisible();
+        await expect(component.getByText('Bold link')).toBeVisible();
+
+        await expect(component.getByRole('list')).toHaveCount(2);
+
+        await expect(component.getByRole('table')).toBeVisible();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
     test.describe('text link', () => {
       let component: Locator;
 
