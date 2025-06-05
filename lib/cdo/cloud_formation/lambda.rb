@@ -66,10 +66,10 @@ module Cdo::CloudFormation
 
       Dir.chdir(absolute_directory) do
         # If environment variables are provided, write them to a file.
-        if environment_variable_hash.present?
-          raise ArgumentError, 'Environment variable hash must be a Hash.' unless environment_variable_hash.is_a?(Hash)
+        if environment_variables.present?
+          raise ArgumentError, 'Environment variable hash must be a Hash.' unless environment_variables.is_a?(Hash)
           File.open('env.json', 'w') do |file|
-            file.write(environment_variable_hash.to_json)
+            file.write(environment_variables.to_json)
             CDO.log.info("Wrote lambda environment variables to #{absolute_directory}/env.json")
           end
         end
