@@ -126,8 +126,6 @@ export interface WorkshopRequest
   id?: number;
   facilitators: number[];
   organizer_id: number | null;
-  // TODO: ACQ-3081 remove legacyForm2025 flag
-  legacyForm2025?: boolean | null;
 }
 
 export interface CourseOffering {
@@ -186,7 +184,8 @@ type BasicsKeys =
 type PartnerFacilitatorKeys =
   | 'facilitators'
   | 'regionalPartnerId'
-  | 'organizerId';
+  | 'organizerId'
+  | 'courseOfferings';
 
 type AdditionalInfoKeys = 'fee' | 'participantGroupType' | 'notes';
 

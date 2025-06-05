@@ -1,0 +1,537 @@
+{
+  "script": {
+    "name": "pl-gamified-python-sandbox",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-06-04 21:16:32 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "pl-gamified-python-sandbox"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Hit the Road in The Neighborhood",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Fueling up at the Coffee Shop: Kickstart your Python Journey",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "b498b5ca-a853-45ea-b957-a99989a8d7f8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b498b5ca-a853-45ea-b957-a99989a8d7f8",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox"
+      }
+    },
+    {
+      "key": "d4849387-8b70-4d35-8aa6-cfe568e62f27",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d4849387-8b70-4d35-8aa6-cfe568e62f27",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "d46eac26-cec8-4a52-9ede-f4bc2589cc69",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d46eac26-cec8-4a52-9ede-f4bc2589cc69",
+        "lesson_activity.key": "b498b5ca-a853-45ea-b957-a99989a8d7f8"
+      }
+    },
+    {
+      "key": "bb3a1095-1984-450f-86d6-958c2a45dd54",
+      "position": 1,
+      "properties": {
+        "progression_name": "The Coffee Shop"
+      },
+      "seeding_key": {
+        "activity_section.key": "bb3a1095-1984-450f-86d6-958c2a45dd54",
+        "lesson_activity.key": "d4849387-8b70-4d35-8aa6-cfe568e62f27"
+      }
+    },
+    {
+      "key": "84b0cc31-eb8d-4cd5-9684-67c221ad65c0",
+      "position": 2,
+      "properties": {
+        "progression_name": "Dodge the Detour"
+      },
+      "seeding_key": {
+        "activity_section.key": "84b0cc31-eb8d-4cd5-9684-67c221ad65c0",
+        "lesson_activity.key": "d4849387-8b70-4d35-8aa6-cfe568e62f27"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-game-python-intro-1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox",
+        "activity_section.key": "d46eac26-cec8-4a52-9ede-f4bc2589cc69"
+      },
+      "level_keys": [
+        "pl-game-python-intro-1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-game-python-module-intro-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox",
+        "activity_section.key": "d46eac26-cec8-4a52-9ede-f4bc2589cc69"
+      },
+      "level_keys": [
+        "pl-game-python-module-intro-2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-game-python-overview-map-3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox",
+        "activity_section.key": "d46eac26-cec8-4a52-9ede-f4bc2589cc69"
+      },
+      "level_keys": [
+        "pl-game-python-overview-map-3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-game-python-hit-the-road-4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox",
+        "activity_section.key": "d46eac26-cec8-4a52-9ede-f4bc2589cc69"
+      },
+      "level_keys": [
+        "pl-game-python-hit-the-road-4"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-game-python-badges-7"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox",
+        "activity_section.key": "d46eac26-cec8-4a52-9ede-f4bc2589cc69"
+      },
+      "level_keys": [
+        "pl-game-python-badges-7"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-game-python-game-overview-5"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox",
+        "activity_section.key": "d46eac26-cec8-4a52-9ede-f4bc2589cc69"
+      },
+      "level_keys": [
+        "pl-game-python-game-overview-5"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Coffee Shop"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-game-python-coffee-shop-overview-9"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox",
+        "activity_section.key": "bb3a1095-1984-450f-86d6-958c2a45dd54"
+      },
+      "level_keys": [
+        "pl-game-python-coffee-shop-overview-9"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "The Coffee Shop"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-game-python-daily-news-update-10"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox",
+        "activity_section.key": "bb3a1095-1984-450f-86d6-958c2a45dd54"
+      },
+      "level_keys": [
+        "pl-game-python-daily-news-update-10"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "The Coffee Shop"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-game-python-coffee-shop-map-11"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox",
+        "activity_section.key": "bb3a1095-1984-450f-86d6-958c2a45dd54"
+      },
+      "level_keys": [
+        "pl-game-python-coffee-shop-map-11"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Dodge the Detour"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-game-python-panel-print-12"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox",
+        "activity_section.key": "84b0cc31-eb8d-4cd5-9684-67c221ad65c0"
+      },
+      "level_keys": [
+        "pl-game-python-panel-print-12"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Dodge the Detour"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-gamified-python-print-lab-12"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox",
+        "activity_section.key": "84b0cc31-eb8d-4cd5-9684-67c221ad65c0"
+      },
+      "level_keys": [
+        "pl-gamified-python-print-lab-12"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "pl-game-python-intro-1",
+        "script_level.level_keys": [
+          "pl-game-python-intro-1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox",
+        "activity_section.key": "d46eac26-cec8-4a52-9ede-f4bc2589cc69"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-game-python-module-intro-2",
+        "script_level.level_keys": [
+          "pl-game-python-module-intro-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox",
+        "activity_section.key": "d46eac26-cec8-4a52-9ede-f4bc2589cc69"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-game-python-overview-map-3",
+        "script_level.level_keys": [
+          "pl-game-python-overview-map-3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox",
+        "activity_section.key": "d46eac26-cec8-4a52-9ede-f4bc2589cc69"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-game-python-hit-the-road-4",
+        "script_level.level_keys": [
+          "pl-game-python-hit-the-road-4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox",
+        "activity_section.key": "d46eac26-cec8-4a52-9ede-f4bc2589cc69"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-game-python-badges-7",
+        "script_level.level_keys": [
+          "pl-game-python-badges-7"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox",
+        "activity_section.key": "d46eac26-cec8-4a52-9ede-f4bc2589cc69"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-game-python-game-overview-5",
+        "script_level.level_keys": [
+          "pl-game-python-game-overview-5"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox",
+        "activity_section.key": "d46eac26-cec8-4a52-9ede-f4bc2589cc69"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-game-python-coffee-shop-overview-9",
+        "script_level.level_keys": [
+          "pl-game-python-coffee-shop-overview-9"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox",
+        "activity_section.key": "bb3a1095-1984-450f-86d6-958c2a45dd54"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-game-python-daily-news-update-10",
+        "script_level.level_keys": [
+          "pl-game-python-daily-news-update-10"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox",
+        "activity_section.key": "bb3a1095-1984-450f-86d6-958c2a45dd54"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-game-python-coffee-shop-map-11",
+        "script_level.level_keys": [
+          "pl-game-python-coffee-shop-map-11"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox",
+        "activity_section.key": "bb3a1095-1984-450f-86d6-958c2a45dd54"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-game-python-panel-print-12",
+        "script_level.level_keys": [
+          "pl-game-python-panel-print-12"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox",
+        "activity_section.key": "84b0cc31-eb8d-4cd5-9684-67c221ad65c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-gamified-python-print-lab-12",
+        "script_level.level_keys": [
+          "pl-gamified-python-print-lab-12"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox",
+        "activity_section.key": "84b0cc31-eb8d-4cd5-9684-67c221ad65c0"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

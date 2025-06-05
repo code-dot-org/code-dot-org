@@ -25,11 +25,13 @@ import moduleStyles from './workspace.module.scss';
 interface WorkspaceProps {
   className?: string;
   style?: React.CSSProperties;
+  isWidgetView?: boolean;
 }
 
 const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   style,
   className,
+  isWidgetView,
 }) => {
   const {config} = useCodebridgeContext();
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
@@ -160,6 +162,12 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
             )}
             {projectTooLarge && (
               <Alert text={codebridgeI18n.projectTooLarge()} type={'danger'} />
+            )}
+            {isWidgetView && (
+              <Alert
+                text={codebridgeI18n.viewingWidgetView()}
+                type={'warning'}
+              />
             )}
             {viewingOldVersion && (
               <Alert

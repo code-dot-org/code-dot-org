@@ -1008,6 +1008,11 @@ FactoryBot.define do
     level_num {'custom'}
   end
 
+  factory :aichat, parent: :level, class: Aichat do
+    game {Game.aichat}
+    level_num {'custom'}
+  end
+
   factory :block do
     transient do
       sequence(:index)
@@ -1056,6 +1061,18 @@ FactoryBot.define do
     script
     level
     level_source {create :level_source, level: level}
+  end
+
+  factory :skill do
+    sequence(:key) {|n| "skill-#{n}}"}
+    description {"Declares variables with conventional names"}
+    concept {"Variables"}
+    evaluation_criteria {"Does the student's work on this level demonstrate the skill?"}
+  end
+
+  factory :levels_skill do
+    association :level
+    association :skill
   end
 
   factory :unit, aliases: [:script] do
@@ -2200,5 +2217,11 @@ FactoryBot.define do
     role {:assistant}
     content {"Lorem ipsum"}
     is_preset {false}
+  end
+
+  factory :sign_in do
+    association :user
+    sign_in_at {Time.now.utc}
+    sign_in_count {1}
   end
 end

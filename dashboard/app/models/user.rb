@@ -93,10 +93,15 @@ class User < ApplicationRecord
   include EmailPreferences
   include LevelProgressable
   include LocaleHelper
+  include Nameable
+  include Username
   include UserMultiAuthHelper
   include UserPermissionGrantee
+  include PasswordValidations
   include EmailValidations
   include ProviderFlags
+  include Verifiable
+  include Age
   include PartialRegistration
   include Rails.application.routes.url_helpers
 
@@ -141,7 +146,6 @@ class User < ApplicationRecord
   #   educator_role: Indicates the role of the educator, e.g. 'teacher', 'school_admin', 'district_admin', etc.
 
   AI_TUTOR_EXPERIMENT_NAME = 'ai-tutor'
-  AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
 
   DATA_TRANSFER_AGREEMENT_SOURCE_TYPES = [
@@ -153,13 +157,6 @@ class User < ApplicationRecord
   MAX_SECRET_RESET_ATTEMPTS = 5
   RESET_SECRETS = 'reset_secrets'.freeze
 
-  # Password Constants
-  PASSWORD_MAX_LENGTH = 128
-  PASSWORD_MIN_LENGTH = 6
-  PASSWORD_STRICT_MIN_LENGTH = 14
-  # Countries that require a 14 character password minimum
-  PASSWORD_STRICT_COUNTRIES = %w[AU NZ].freeze
-
   SYSTEM_DELETED_USERNAME = 'sys_deleted'
 
   # When adding a new version, append to the end of the array
@@ -167,8 +164,6 @@ class User < ApplicationRecord
   TERMS_OF_SERVICE_VERSIONS = [
     1  # (July 2016) Teachers can grant access to labs for U13 students.
   ].freeze
-
-  USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
 
   serialized_attrs %w(
     ops_first_name
@@ -315,10 +310,6 @@ class User < ApplicationRecord
   has_one :latest_parental_permission_request, -> {order(updated_at: :desc)}, class_name: 'ParentalPermissionRequest'
 
   ## Validation Macros
-  defer_age = proc {|user| %w(google_oauth2 clever).include?(user.provider) || user.sponsored? || Policies::Lti.lti?(user)}
-  validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
-  validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
-
   validate :complete_school_info, if: :school_info_id_changed?, unless: proc {|u| u.purged_at.present?}
 
   validates :data_transfer_agreement_accepted, acceptance: true, if: :data_transfer_agreement_required
@@ -329,9 +320,6 @@ class User < ApplicationRecord
 
   validates :gender_student_input, length: {maximum: 50}, no_utf8mb4: true
   validates :gender_teacher_input, no_utf8mb4: true
-
-  validates :name, presence: true, unless: -> {purged_at}
-  validates :name, length: {within: 1..70}, allow_blank: true
 
   validates :terms_of_service_version,
   inclusion: {in: TERMS_OF_SERVICE_VERSIONS},
@@ -346,8 +334,6 @@ class User < ApplicationRecord
   validate :lti_roster_sync_enabled, if: -> {lti_roster_sync_enabled.present?} do
     self.lti_roster_sync_enabled = ActiveRecord::Type::Boolean.new.cast(lti_roster_sync_enabled)
   end
-
-  validate :no_family_name_for_teachers
 
   validate :validate_parent_email
 
@@ -378,22 +364,10 @@ class User < ApplicationRecord
     user.errors.add(:uid, "User already exists with uid: #{user.uid} and provider: #{user.provider}") unless other.nil?
   end
 
-  # Username validations
-  before_validation :generate_username, on: :create
-  validates_length_of :username, within: 5..20, allow_blank: true
-  validates_format_of :username, if: :username_changed?, with: USERNAME_REGEX, allow_blank: true
-  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: -> {errors.blank?}
-  validates_uniqueness_of :username, case_sensitive: false, on: :update, if: -> {errors.blank? && username_changed?}
-  validates_presence_of :username, if: :username_required?
-
   validates_presence_of :user_type
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, if: :user_type?
 
   validates_inclusion_of :educator_role, in: Policies::User::ALLOWED_EDUCATOR_ROLES, if: :educator_role?
-
-  validates_presence_of     :password, if: :password_required?
-  validates_confirmation_of :password, if: :password_required?
-  validates_length_of       :password, minimum: :password_min_length, maximum: :password_max_length, allow_blank: true
 
   ## Callback Macros
 
@@ -421,10 +395,6 @@ class User < ApplicationRecord
     self.gender = Services::User::GenderNormalizer.call(raw_input: gender)
   end
 
-  before_validation on: [:create, :update], if: -> {name&.utf8mb4?} do
-    self.name = name.sanitize_utf8mb4
-  end
-
   before_validation :normalize_parent_email
 
   before_validation :update_share_setting, unless: :under_13?
@@ -437,8 +407,6 @@ class User < ApplicationRecord
     :fix_by_user_type
 
   before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
-
-  before_save :strip_display_family_names
 
   before_destroy :soft_delete_channels
 
@@ -470,14 +438,6 @@ class User < ApplicationRecord
   include Devise::Models::ManualSessionExpiration
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
-
-  def password_min_length
-    self.class.password_min_length(user_type, country_code)
-  end
-
-  def password_max_length
-    PASSWORD_MAX_LENGTH
-  end
 
   # Puts teachers directly into the progress table v2 view when new account is created.
   def save_show_progress_table_v2
@@ -573,17 +533,6 @@ class User < ApplicationRecord
 
   def memoized_teachers
     @memoized_teachers ||= teachers.to_a
-  end
-
-  def strip_display_family_names
-    self.name = name.strip if name && will_save_change_to_name?
-    self.family_name = family_name.strip if family_name && will_save_change_to_properties?
-  end
-
-  def no_family_name_for_teachers
-    if family_name && (teacher? || sections_as_pl_participant.any?)
-      errors.add(:family_name, "can't be set for teachers or PL participants")
-    end
   end
 
   def make_teachers_21
@@ -710,39 +659,6 @@ class User < ApplicationRecord
     else
       AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include?(provider) && encrypted_password.blank?
     end
-  end
-
-  def managing_own_credentials?
-    if provider.blank?
-      true
-    elsif manual?
-      true
-    elsif migrated?
-      authentication_options.any? do |ao|
-        ao.credential_type == AuthenticationOption::EMAIL
-      end
-    else
-      false
-    end
-  end
-
-  def password_required?
-    # If the user is changing their password, then we should run all the password
-    # field verifications.
-    is_changing_password = password.present? || password_confirmation.present?
-    return true if is_changing_password
-
-    # Password is not required if the user is not managing their own account
-    # (i.e., someone is creating their account for them or the user is using OAuth).
-    return false unless managing_own_credentials?
-
-    # Password is required for:
-    # New users with no encrypted_password set
-    !persisted? && encrypted_password.blank?
-  end
-
-  def username_required?
-    manual? || username_changed?
   end
 
   def update_without_password(params, *options)
@@ -1000,21 +916,6 @@ class User < ApplicationRecord
     user_type == TYPE_TEACHER
   end
 
-  # Warning: Calling this method will trigger the sending of a verification email,
-  # as establish in the user_permission model
-  def verify_teacher!
-    self.permission = UserPermission::AUTHORIZED_TEACHER
-  end
-
-  # This method just checks if a user has the authorized teacher permission
-  # if you are hoping to know if someone can access content for verified instructors
-  # you should use the verified_instructor? method instead which includes checks for a
-  # couple different permissions that should have access instructor only content such
-  # as levelbuilders
-  def verified_teacher?
-    permission?(UserPermission::AUTHORIZED_TEACHER)
-  end
-
   def levelbuilder?
     permission?(UserPermission::LEVELBUILDER)
   end
@@ -1025,16 +926,6 @@ class User < ApplicationRecord
   # our AI evaluation tools internally.
   def can_access_student_work?
     permission?(UserPermission::STUDENT_WORK_ACCESS)
-  end
-
-  # A user is a verified instructor if you are a universal_instructor, plc_reviewer,
-  # facilitator, authorized_teacher, or levelbuilder. All of these permissions tell us someone
-  # should be trusted with locked down instructor only content. It is important to use this
-  # method instead of verified_teacher? as teachers will not be instructors for all courses
-  def verified_instructor?
-    permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || permission?(UserPermission::PLC_REVIEWER) ||
-      permission?(UserPermission::FACILITATOR) || permission?(UserPermission::AUTHORIZED_TEACHER) ||
-      permission?(UserPermission::LEVELBUILDER)
   end
 
   def can_view_all_facilitator_landing_pages?
@@ -1095,75 +986,8 @@ class User < ApplicationRecord
     false
   end
 
-  # There are some shenanigans going on with this age stuff. The
-  # actual persisted column is birthday -- so we convert age to a
-  # birthday when writing and convert birthday to an age when
-  # reading. However -- when we are generating error messages for the
-  # user on an unsaved record, we actually 'read' and 'write' the
-  # attribute via these accessors. @age is a non-persisted member that
-  # we use to save the (possibly invalid) value that the user entered
-  # for age so we can generate the correct error message.
-
-  def age=(val)
-    @age = val
-    val = begin
-      val.to_i
-    rescue
-      0 # sometimes we get age: {"Pr" => nil}
-    end
-    return unless val > 0
-    return unless val < 200
-    return if birthday && val == age # don't change birthday if we want to stay the same age
-
-    self.birthday = val.years.ago
-  end
-
-  def age
-    return @age unless birthday
-    age = UserHelpers.age_from_birthday(birthday)
-    if age < 4
-      age = nil
-    elsif age >= 21
-      age = '21+'
-    end
-    age
-  end
-
-  # Duplicated by under_13? in auth_helpers.rb, which doesn't use the rails model.
-  def under_13?
-    age.nil? || age.to_i < 13
-  end
-
-  def over_21?
-    !age.nil? && age.to_i >= 21
-  end
-
   def mute_music?
     !!mute_music
-  end
-
-  def sort_by_family_name?
-    !!sort_by_family_name
-  end
-
-  def generate_username
-    # skip an expensive db query if the name is not valid anyway. we can't depend on validations being run
-    return if name.blank? || email&.utf8mb4?
-    self.username = UserHelpers.generate_username(User.with_deleted, name)
-  end
-
-  def short_name
-    return username if name.blank?
-
-    name.split.first # 'first name'
-  end
-
-  def second_name
-    name.split.second # 'second name'
-  end
-
-  def initial
-    UserHelpers.initial(name)
   end
 
   def valid_secret_words?(words)
@@ -1278,6 +1102,16 @@ class User < ApplicationRecord
       first
   end
 
+  # Get the UnitGroupUnit for the most recently assigned UserScript.
+  def most_recently_assigned_unit_group_unit
+    unit = most_recently_assigned_user_script&.script
+    return unless unit
+    # UserScript doesn't record the UnitGroup the user was in, so we will assume
+    # it is the most recently created section.
+    section = sections_as_student.select {|s| !s.hidden && s.script_id == unit.id}.last
+    Queries::Courses.unit_group_unit(unit, section&.unit_group)
+  end
+
   # Get script object of the user_script the user was most recently
   # assigned.
   def most_recently_assigned_script
@@ -1389,13 +1223,16 @@ class User < ApplicationRecord
     end
 
     pl_scripts.map do |script|
+      # TODO: TEACH-1555 Get the UnitGroupUnit from the user's activity.
+      unit_group_unit = Queries::Courses.unit_group_unit(script)
       percent_completed = percent_completed_by_script[script.id] || 0
       {
         name: script.name,
         title: script.title_for_display,
         percent_completed: percent_completed,
         finish_url: percent_completed == 100 ? script.finish_url : nil,
-        current_lesson_name: next_unpassed_progression_level(script)&.lesson&.localized_name
+        current_lesson_name: next_unpassed_progression_level(script)&.lesson&.localized_name,
+        path: script.link(unit_group_unit: unit_group_unit),
       }
     end
   end
@@ -2229,14 +2066,6 @@ class User < ApplicationRecord
     Services::User.assign_form_params(user, params)
 
     user
-  end
-
-  def self.password_min_length(user_type, country_code)
-    if user_type == TYPE_TEACHER && PASSWORD_STRICT_COUNTRIES.include?(country_code) && DCDO.get('strict-password-country', false)
-      PASSWORD_STRICT_MIN_LENGTH
-    else
-      PASSWORD_MIN_LENGTH
-    end
   end
 
   # Override how devise tries to find users by email to reset password

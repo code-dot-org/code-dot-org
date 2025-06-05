@@ -1,0 +1,24 @@
+{
+  "name": "python-adlibs",
+  "script_names": [
+    "python-adlibs"
+  ],
+  "original_script_names": [
+    "python-adlibs"
+  ],
+  "published_state": "beta",
+  "instruction_type": "self_paced",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "python-adlibs",
+    "has_numbered_units": true,
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

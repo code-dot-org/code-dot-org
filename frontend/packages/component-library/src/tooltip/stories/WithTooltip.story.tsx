@@ -65,6 +65,18 @@ IconsTooltipGroup.args = {
   ],
 };
 
+export const NoneDirectionTooltip = SingleTemplate.bind({});
+NoneDirectionTooltip.args = {
+  text: 'Tooltip with direction: none and custom position',
+  tooltipId: 'tooltipNone',
+  direction: 'none',
+  style: {
+    position: 'absolute',
+    left: '50px',
+    top: '100px',
+  },
+};
+
 export const DirectionOfTooltipGroup = MultipleTemplate.bind({});
 DirectionOfTooltipGroup.args = {
   components: [
@@ -256,4 +268,23 @@ export const ImperativeHideTooltip: StoryFn = () => {
       </WithTooltip>
     </div>
   );
+};
+
+export const ShowHideTailTooltip = MultipleTemplate.bind({});
+ShowHideTailTooltip.args = {
+  components: [
+    {
+      text: 'Tooltip with tail',
+      tooltipId: 'tooltipWithTail',
+      direction: 'onBottom',
+      size: 'm',
+    },
+    {
+      text: 'Tooltip without tail',
+      tooltipId: 'tooltipWithoutTail',
+      direction: 'onBottom',
+      size: 'm',
+      hideTail: true,
+    },
+  ],
 };

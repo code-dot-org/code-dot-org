@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-04-28T18:19:16.000Z",
   "level_num": "custom",
@@ -51,7 +52,7 @@
         }
       }
     },
-    "long_instructions": "####<i class=\"fa-solid fa-music\"></i> Now you're the songwriter, producer or sound designer!\r\nCreate your own song or music for a story or game! \r\n\r\n<i class=\"fa-solid fa-square-check\"></i> Make music with **sequenced** code.\r\n\r\n<i class=\"fa-solid fa-square-check\"></i>  Use **functions** to keep organized.\r\n\r\n<i class=\"fa-solid fa-square-check\"></i>  Add **event** triggers to control when sounds play.\r\n\r\n--- \r\nYou can choose a different song any time! \r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=start-over-button)\r\n\r\n\r\n\r\n\r\n",
+    "long_instructions": "#### <i class=\"fa-solid fa-person-chalkboard\"></i> **Teacher Tip:**\r\n##### In the Create step, you can have students design an event-triggered interaction that connects to something they've written or learned in another subject—like a poem in ELA, a life cycle in science, or a historical event in social studies. Encourage them to explain how the trigger enhances their message or idea.\r\n\r\n____\r\n\r\n\r\n\r\n####<i class=\"fa-solid fa-music\"></i> Now you're the songwriter, producer or sound designer!\r\nCreate your own song or music for a story or game! \r\n\r\n<i class=\"fa-solid fa-square-check\"></i> Make music with **sequenced** code.\r\n\r\n<i class=\"fa-solid fa-square-check\"></i>  Use **functions** to keep organized.\r\n\r\n<i class=\"fa-solid fa-square-check\"></i>  Add **event** triggers to control when sounds play.\r\n\r\n--- \r\nYou can choose a different song any time! \r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=start-over-button)\r\n\r\n\r\n\r\n\r\n",
     "name_suffix": "_1",
     "predict_settings": {
       "isPredictLevel": false
@@ -62,8 +63,7 @@
     },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-28T18:19:16.027+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-freeplay3_launch\\\"\"],\"cloned_from\":\"music-coding-intro-freeplay3_launch\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-28T18:19:16.027+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-freeplay3_launch\\\"\"],\"cloned_from\":\"music-coding-intro-freeplay3_launch\"},{\"changed_at\":\"2025-05-21 22:23:08 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

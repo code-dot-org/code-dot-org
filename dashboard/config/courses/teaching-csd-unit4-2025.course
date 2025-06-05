@@ -1,14 +1,12 @@
 {
   "name": "teaching-csd-unit4-2025",
   "script_names": [
-    "self-paced-pl-teaching-csd-unit4-0-2025",
     "self-paced-pl-teaching-csd-unit4-1-2025"
   ],
   "original_script_names": [
-    "self-paced-pl-teaching-csd-unit4-0-2025",
     "self-paced-pl-teaching-csd-unit4-1-2025"
   ],
-  "published_state": "in_development",
+  "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",

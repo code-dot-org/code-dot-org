@@ -16,11 +16,7 @@ module Cdo
     #   Defaults to 1, and only needs to be set if the metric you're throttling on is not 1:1 with request count.
     # @returns [Boolean] Whether the request should be throttled.
     def self.throttle(id, limit, period, throttle_for: throttle_time, count: 1)
-      full_key = cache_key(id)
-      raw_value = CDO.shared_cache.read(full_key)
-      value = raw_value.nil? ?
-        empty_value :
-        normalize_value(raw_value)
+      value = get_value(id)
       now = Time.now.utc
 
       value[:request_entries] << {timestamp: now, count: count}
@@ -39,8 +35,23 @@ module Cdo
       end
 
       expires_in = expiration_time(period, throttle_for)
+      full_key = cache_key(id)
       CDO.shared_cache.write(full_key, value, expires_in: expires_in)
       should_throttle
+    end
+
+    def self.throttled?(id)
+      value = get_value(id)
+      !!value[:throttled_until]&.future?
+    end
+
+    def self.get_value(id)
+      full_key = cache_key(id)
+      raw_value = CDO.shared_cache.read(full_key)
+
+      raw_value.nil? ?
+        empty_value :
+        normalize_value(raw_value)
     end
 
     def self.empty_value

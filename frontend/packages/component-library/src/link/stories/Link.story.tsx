@@ -7,10 +7,6 @@ export default {
   component: Link,
 } as Meta;
 
-//
-// TEMPLATE
-//
-// This is needed to fix children type error (passing string instead of React.ReactNode type)
 const SingleTemplate: StoryFn<LinkProps> = args => <Link {...args} />;
 
 const MultipleTemplate: StoryFn<{
@@ -18,8 +14,8 @@ const MultipleTemplate: StoryFn<{
 }> = args => (
   <>
     <p>
-      * Margins on this screen does not represent Component's margins, and are
-      only added to improve storybook view *{' '}
+      * Margins on this screen do not represent Component's margins, and are
+      only added to improve storybook view *
     </p>
     <p>Multiple Links:</p>
     <div style={{display: 'flex', gap: '20px'}}>
@@ -52,6 +48,20 @@ DisabledLink.args = {
   size: 'm',
 };
 
+export const ExternalLink = SingleTemplate.bind({});
+ExternalLink.args = {
+  text: 'External Link',
+  href: 'https://google.com',
+  external: true,
+};
+
+export const OpenInNewTabLink = SingleTemplate.bind({});
+OpenInNewTabLink.args = {
+  text: 'Open in New Tab',
+  href: 'https://google.com',
+  openInNewTab: true,
+};
+
 export const LinkWithTextPropVsLinkWithChildrenProp = MultipleTemplate.bind({});
 LinkWithTextPropVsLinkWithChildrenProp.args = {
   components: [
@@ -77,6 +87,7 @@ GroupOfTypesOfLinks.args = {
       text: 'Link M Primary',
       href: '#',
       size: 'm',
+      type: 'primary',
     },
     {
       children: 'Link M Secondary',
@@ -86,28 +97,13 @@ GroupOfTypesOfLinks.args = {
     },
   ],
 };
+
 export const GroupOfSizesOfLinks = MultipleTemplate.bind({});
 GroupOfSizesOfLinks.args = {
   components: [
-    {
-      children: 'Link XS',
-      href: '#',
-      size: 'xs',
-    },
-    {
-      children: 'Link S',
-      href: '#',
-      size: 's',
-    },
-    {
-      children: 'Link M',
-      href: '#',
-      size: 'm',
-    },
-    {
-      children: 'Link L',
-      href: '#',
-      size: 'l',
-    },
+    {children: 'Link XS', href: '#', size: 'xs'},
+    {children: 'Link S', href: '#', size: 's'},
+    {children: 'Link M', href: '#', size: 'm'},
+    {children: 'Link L', href: '#', size: 'l'},
   ],
 };

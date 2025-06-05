@@ -7,7 +7,7 @@
   "user_id": 21093,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Output\r\n\r\nWhat are some example questions you could use as a baseline to test for biased answers?\r\n\r\nWhat would you be looking for in the response to help detect if there are potential biases or hallucinations?",
+    "long_instructions": "## Output\r\n\r\nWhat are some example questions you could use as a baseline to test for biased answers?\r\n\r\nWhat would you be looking for in the response to help detect if there are potential biases?",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -18,7 +18,7 @@
     "name_suffix": "_2025",
     "stay_on_level_after_submit": "true"
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-06T18:33:30.843+00:00\",\"changed\":[\"cloned from \\\"genai-hallucinations-activity-lvl3c_2025\\\"\"],\"cloned_from\":\"genai-hallucinations-activity-lvl3c_2025\"},{\"changed_at\":\"2025-05-06 18:33:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-05-06T18:33:30.843+00:00\",\"changed\":[\"cloned from \\\"genai-hallucinations-activity-lvl3c_2025\\\"\"],\"cloned_from\":\"genai-hallucinations-activity-lvl3c_2025\"},{\"changed_at\":\"2025-05-06 18:33:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-05-20 20:11:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

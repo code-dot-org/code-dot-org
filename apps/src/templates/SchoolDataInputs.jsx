@@ -1,5 +1,6 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   BodyTwoText,
   Heading2,
@@ -44,6 +45,7 @@ export default function SchoolDataInputs({
   usIp,
   containerClassName,
   includeHeaders = true,
+  schoolsLoading = false,
   fieldNames = {
     country: 'user[school_info_attributes][country]',
     ncesSchoolId: 'user[school_info_attributes][school_id]',
@@ -144,10 +146,10 @@ export default function SchoolDataInputs({
           />
         )}
         {countryIsUS && !inputManually && (
-          <div>
+          <div className={style.schoolsList}>
             <SimpleDropdown
               id="uitest-school-dropdown"
-              disabled={!schoolZipIsValid}
+              disabled={!schoolZipIsValid || schoolsLoading}
               name={fieldNames.ncesSchoolId}
               className={classNames(labelClassName, style.dropdown)}
               labelText={i18n.selectYourSchool()}
@@ -177,6 +179,9 @@ export default function SchoolDataInputs({
                   handleSchoolChange(NonSchoolOptions.NO_SCHOOL_SETTING);
                 }}
               />
+            )}
+            {schoolsLoading && (
+              <FontAwesomeV6Icon iconName="spinner" animationType="spin" />
             )}
           </div>
         )}
@@ -214,6 +219,7 @@ SchoolDataInputs.propTypes = {
   schoolsList: PropTypes.arrayOf(
     PropTypes.shape({value: PropTypes.string, text: PropTypes.string})
   ).isRequired,
+  schoolsLoading: PropTypes.bool,
   usIp: PropTypes.bool,
   setSchoolId: PropTypes.func.isRequired,
   setCountry: PropTypes.func.isRequired,

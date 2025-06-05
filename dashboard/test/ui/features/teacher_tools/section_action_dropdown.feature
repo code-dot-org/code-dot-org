@@ -4,9 +4,9 @@ Feature: Using the SectionActionDropdown
   # * Check that we get redirected to the right page
   Scenario: Viewing progress from SectionActionDropdown
     Given I create a teacher-associated student named "Sally"
-    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
-    And I complete the free response on "http://studio.code.org/s/allthethings/lessons/27/levels/1"
-    And I submit the assessment on "http://studio.code.org/s/allthethings/lessons/33/levels/1"
+    And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
+    And I complete the free response on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/1"
+    And I submit the assessment on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/33/levels/1"
     And I sign out
 
     When I sign in as "Teacher_Sally" and go home
@@ -21,7 +21,7 @@ Feature: Using the SectionActionDropdown
     And I wait to see ".ui-test-section-dropdown"
     And I open the section action dropdown
     And I press the first ".manage-students-link" element to load a new page
-    And I wait until current URL contains "/manage"
+    And I wait until current URL contains "/roster"
 
   # * Check that we get redirected to the right page
   Scenario: Printing Login Cards from SectionActionDropdown

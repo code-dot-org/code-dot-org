@@ -30,6 +30,8 @@ const EVENTS = {
   FINISH_ACCOUNT_PAGE_LOADED: 'Finish Account Page Loaded',
   SECTION_SETUP_STARTED: 'Section Setup Started',
   LINK_ACCOUNT_PAGE_VISITED_EVENT: 'Link Account Page Visited',
+  UPGRADE_TO_TEACHER_ACCOUNT_PAGE_VISITED_EVENT:
+    'Upgrade To Teacher Account Page Visited',
 
   // School Association
   // Update School Info Dialog
@@ -109,9 +111,12 @@ const EVENTS = {
   LESSON_RESOURCE_LINK_VISITED_EVENT: 'Lesson Resource Link Visited',
 
   // Workshop enrollment
+  WORKSHOP_ENROLLMENT_PAGE_VISITED_EVENT: 'Workshop Enrollment Page Visited',
   WORKSHOP_ENROLLMENT_COMPLETED_EVENT: 'Workshop Enrollment Completed',
   WORKSHOP_ADD_SESSION_TO_CALENDAR_CLICK_EVENT:
     'Workshop Add Session to Calendar Clicked',
+  RP_LANDING_ZIP_ENTERED: 'Regional Partner Landing Zip Entered',
+  RP_LANDING_ENROLL_CLICKED: 'Regional Partner Landing Enroll Button Clicked',
 
   // Workshop session attendance
   WORKSHOP_ATTENDANCE_MARKED_EVENT: 'Workshop Attendance Marked',
@@ -540,6 +545,7 @@ const EVENTS = {
     'User changed font size on codebridge editor',
   CODEBRIDGE_CONSOLE_FONT_SIZE_CHANGE:
     'User changed font size on codebridge console',
+  CODEBRIDGE_THEME_CHANGE: 'User changed theme on codebridge',
 
   // Blockly Lab Settings
   BLOCKLY_LAB_SETTING_CHANGED: 'Setting changed in Blockly Lab',

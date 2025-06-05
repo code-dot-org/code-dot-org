@@ -8,7 +8,7 @@ module Pd
       COURSE_FACILITATOR = 'Facilitator'.freeze,
       COURSE_ADMIN_COUNSELOR = 'Admin/Counselor Workshop'.freeze,
       COURSE_BUILD_YOUR_OWN = 'Build Your Own Workshop'.freeze,
-      COURSE_AIF = 'AI Fundamentals'.freeze,
+      COURSE_AIF = 'AI Foundations'.freeze,
     ].freeze
 
     ARCHIVED_COURSES = [
@@ -306,6 +306,8 @@ module Pd
       'Facilitator',
       'Train the trainer'
     ].freeze
+
+    WORKSHOP_GRADE_LEVELS = %w(K 1 2 3 4 5 6 7 8 9 10 11 12).freeze
 
     PD_SESSION_FORMATS = [
       {value: 'in_person', label: 'In-Person', enum_value: 0},

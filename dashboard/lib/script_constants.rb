@@ -264,6 +264,10 @@ module ScriptConstants
     SELF_PACED_PL_EXPLORING_GEN_AI = 'self-paced-pl-exploring-gen-ai'.freeze,
     SELF_PACED_PL_K5_2024_1 = 'self-paced-pl-k5-2024-1'.freeze,
     SELF_PACED_PL_K5_2024_2 = 'self-paced-pl-k5-2024-2'.freeze,
+    SELF_PACED_PL_K5_GETTING_STARTED = 'self-paced-pl-k5-getting-started'.freeze,
+    SELF_PACED_PL_AIML_2023 = 'self-paced-pl-aiml-2023'.freeze,
+    SELF_PACED_PL_AIML1 = 'self-paced-pl-aiml1'.freeze,
+    SELF_PACED_PL_AIML2 = 'self-paced-pl-aiml2'.freeze,
     THREE_5GAMEDESIGN_2024 = '3-5gamedesign-2024'.freeze,
   ].freeze
 

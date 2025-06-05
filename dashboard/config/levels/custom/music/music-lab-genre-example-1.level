@@ -1,0 +1,1240 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-06-03T22:51:25.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Genre Mashup Example 1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "level_data": {
+      "library": "launch2024",
+      "packId": "will_i_am_i_like_to_move_it",
+      "toolbox": {
+        "blocks": {
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "set_effect_at_current_location_simple2",
+                  "id": "QQYqE+iM4u#-kg-p=Bjg",
+                  "fields": {
+                    "effects_name": "<field name=\"effects_name\">volume</field>",
+                    "effects_value": "<field name=\"effects_value\">normal</field>"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "set_effect_at_current_location_simple2",
+                      "id": "9)Ber3Z,|%*m4-.H^`-Y",
+                      "fields": {
+                        "effects_name": "<field name=\"effects_name\">filter</field>",
+                        "effects_value": "<field name=\"effects_value\">medium</field>"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "procedures_callnoreturn",
+                          "id": "ar`;!;1vnP`$%L,zG+Of",
+                          "extraState": {
+                            "name": "my function"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "set_effect_at_current_location_simple2",
+                              "id": "*rG#g%PkQTwRgMZ,wEW0",
+                              "fields": {
+                                "effects_name": "<field name=\"effects_name\">filter</field>",
+                                "effects_value": "<field name=\"effects_value\">normal</field>"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "set_effect_at_current_location_simple2",
+                                  "id": "set_effect_at_current_location_simple2",
+                                  "fields": {
+                                    "effects_name": "<field name=\"effects_name\">volume</field>",
+                                    "effects_value": "<field name=\"effects_value\">normal</field>"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sounds_together",
+                                      "id": "play_sounds_together",
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "inputs": {
+                                        "code": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "^h^D+gCh.dx)0piYBZY_",
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "will_i_am_i_like_to_move_it/vocals_chorus_1"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sounds_sequential",
+                                                "id": "v#33rPLxxwDc)S$#Od+=",
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "inputs": {
+                                                  "code": {
+                                                    "block": {
+                                                      "type": "play_rest_at_current_location_simple2",
+                                                      "id": "Io!N)idql18VB-)kw~8i",
+                                                      "extraState": {
+                                                        "disableNextConnection": false
+                                                      },
+                                                      "fields": {
+                                                        "rest_duration": "<field name=\"rest_duration\">0.5</field>"
+                                                      },
+                                                      "next": {
+                                                        "block": {
+                                                          "type": "play_rest_at_current_location_simple2",
+                                                          "id": "@2Rk=NU929Z(AF/^`h,0",
+                                                          "extraState": {
+                                                            "disableNextConnection": false
+                                                          },
+                                                          "fields": {
+                                                            "rest_duration": "<field name=\"rest_duration\">3</field>"
+                                                          },
+                                                          "next": {
+                                                            "block": {
+                                                              "type": "play_sound_at_current_location_simple2",
+                                                              "id": ".*28Z5a11%`GhT[jTMJ^",
+                                                              "extraState": {
+                                                                "disableNextConnection": false
+                                                              },
+                                                              "fields": {
+                                                                "sound": "acoustic_arcade/bongo_roll"
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "play_sounds_sequential",
+                                                    "id": ",#1KTV/|{%@ZOspM4Z`C",
+                                                    "extraState": {
+                                                      "disableNextConnection": false
+                                                    },
+                                                    "inputs": {
+                                                      "code": {
+                                                        "block": {
+                                                          "type": "play_rest_at_current_location_simple2",
+                                                          "id": "play_rest_at_current_location_simple2",
+                                                          "extraState": {
+                                                            "disableNextConnection": false
+                                                          },
+                                                          "fields": {
+                                                            "rest_duration": "<field name=\"rest_duration\">2</field>"
+                                                          },
+                                                          "next": {
+                                                            "block": {
+                                                              "type": "play_sound_at_current_location_simple2",
+                                                              "id": "S;hI!+|$-]O0+/a$vPn%",
+                                                              "extraState": {
+                                                                "disableNextConnection": false
+                                                              },
+                                                              "fields": {
+                                                                "sound": "will_i_am_i_like_to_move_it/guitar_upbeats"
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    },
+                                                    "next": {
+                                                      "block": {
+                                                        "type": "repeat_simple2",
+                                                        "id": "r(N|T0ohbXhc+K_jZo}`",
+                                                        "extraState": {
+                                                          "disableNextConnection": false
+                                                        },
+                                                        "fields": {
+                                                          "times": 2
+                                                        },
+                                                        "inputs": {
+                                                          "code": {
+                                                            "block": {
+                                                              "type": "play_sound_at_current_location_simple2",
+                                                              "id": "g2j5i;)`lmxF?qNj/#+v",
+                                                              "extraState": {
+                                                                "disableNextConnection": false
+                                                              },
+                                                              "fields": {
+                                                                "sound": "will_i_am_i_like_to_move_it/bass_guitar_stutter"
+                                                              }
+                                                            }
+                                                          }
+                                                        },
+                                                        "next": {
+                                                          "block": {
+                                                            "type": "repeat_simple2",
+                                                            "id": "aD2.!rUsDh2Vc(e8b^1X",
+                                                            "extraState": {
+                                                              "disableNextConnection": false
+                                                            },
+                                                            "fields": {
+                                                              "times": 2
+                                                            },
+                                                            "inputs": {
+                                                              "code": {
+                                                                "block": {
+                                                                  "type": "play_sound_at_current_location_simple2",
+                                                                  "id": "+Sc%eh9FPFTz8RLa9$xZ",
+                                                                  "extraState": {
+                                                                    "disableNextConnection": false
+                                                                  },
+                                                                  "fields": {
+                                                                    "sound": "rock/punk_beat"
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sounds_together",
+                                          "id": "wRZo51Z-)cU)1kv,(.up",
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "inputs": {
+                                            "code": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "jKgGdE=#Ex/.qutT?o]N",
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "sound": "will_i_am_i_like_to_move_it/vocals_chorus_2"
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "play_sounds_sequential",
+                                                    "id": "X^Rcqv*C-h,F]Mhl7f:M",
+                                                    "extraState": {
+                                                      "disableNextConnection": false
+                                                    },
+                                                    "inputs": {
+                                                      "code": {
+                                                        "block": {
+                                                          "type": "set_effect_at_current_location_simple2",
+                                                          "id": "g`rU,7C1LR%GBeD+U-]_",
+                                                          "fields": {
+                                                            "effects_name": "<field name=\"effects_name\">delay</field>",
+                                                            "effects_value": "<field name=\"effects_value\">low</field>"
+                                                          },
+                                                          "next": {
+                                                            "block": {
+                                                              "type": "play_rest_at_current_location_simple2",
+                                                              "id": "fV#e#zBu9H0vFP6i2Nb=",
+                                                              "extraState": {
+                                                                "disableNextConnection": false
+                                                              },
+                                                              "fields": {
+                                                                "rest_duration": "<field name=\"rest_duration\">0.5</field>"
+                                                              },
+                                                              "next": {
+                                                                "block": {
+                                                                  "type": "play_rest_at_current_location_simple2",
+                                                                  "id": "w$y[2sTAe,mhE`YQ=EGS",
+                                                                  "extraState": {
+                                                                    "disableNextConnection": false
+                                                                  },
+                                                                  "fields": {
+                                                                    "rest_duration": "<field name=\"rest_duration\">3</field>"
+                                                                  },
+                                                                  "next": {
+                                                                    "block": {
+                                                                      "type": "play_sound_at_current_location_simple2",
+                                                                      "id": "z*ba=m-pdJ1v;mFpQ8WO",
+                                                                      "extraState": {
+                                                                        "disableNextConnection": false
+                                                                      },
+                                                                      "fields": {
+                                                                        "sound": "acoustic_arcade/vibra_verb"
+                                                                      },
+                                                                      "next": {
+                                                                        "block": {
+                                                                          "type": "play_sound_at_current_location_simple2",
+                                                                          "id": "fX=6Et)a1SP/#iML1X8?",
+                                                                          "extraState": {
+                                                                            "disableNextConnection": false
+                                                                          },
+                                                                          "fields": {
+                                                                            "sound": "acoustic_arcade/vibra_verb"
+                                                                          },
+                                                                          "next": {
+                                                                            "block": {
+                                                                              "type": "set_effect_at_current_location_simple2",
+                                                                              "id": "DNjJ(RGH18uk,?|c1}!^",
+                                                                              "fields": {
+                                                                                "effects_name": "<field name=\"effects_name\">delay</field>",
+                                                                                "effects_value": "<field name=\"effects_value\">normal</field>"
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    },
+                                                    "next": {
+                                                      "block": {
+                                                        "type": "play_sounds_sequential",
+                                                        "id": "WAD|keQ=;v#/KZ)B1CPp",
+                                                        "extraState": {
+                                                          "disableNextConnection": false
+                                                        },
+                                                        "inputs": {
+                                                          "code": {
+                                                            "block": {
+                                                              "type": "play_rest_at_current_location_simple2",
+                                                              "id": "Zjr#Chvj+(G!9d3j:h64",
+                                                              "extraState": {
+                                                                "disableNextConnection": false
+                                                              },
+                                                              "fields": {
+                                                                "rest_duration": "<field name=\"rest_duration\">2</field>"
+                                                              },
+                                                              "next": {
+                                                                "block": {
+                                                                  "type": "play_sound_at_current_location_simple2",
+                                                                  "id": "^ml[nT+b!wfW!}Wf(pn#",
+                                                                  "extraState": {
+                                                                    "disableNextConnection": false
+                                                                  },
+                                                                  "fields": {
+                                                                    "sound": "electro/synth_sleek"
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        },
+                                                        "next": {
+                                                          "block": {
+                                                            "type": "repeat_simple2",
+                                                            "id": "#wP+v#/SUiR|49Dh-(-_",
+                                                            "extraState": {
+                                                              "disableNextConnection": false
+                                                            },
+                                                            "fields": {
+                                                              "times": 2
+                                                            },
+                                                            "inputs": {
+                                                              "code": {
+                                                                "block": {
+                                                                  "type": "play_sound_at_current_location_simple2",
+                                                                  "id": "m*oZ??i,rHQzT7,ET4S1",
+                                                                  "extraState": {
+                                                                    "disableNextConnection": false
+                                                                  },
+                                                                  "fields": {
+                                                                    "sound": "will_i_am_i_like_to_move_it/bass_guitar_slap"
+                                                                  }
+                                                                }
+                                                              }
+                                                            },
+                                                            "next": {
+                                                              "block": {
+                                                                "type": "repeat_simple2",
+                                                                "id": "bT={v|AR*I}=.(N`?8R0",
+                                                                "extraState": {
+                                                                  "disableNextConnection": false
+                                                                },
+                                                                "fields": {
+                                                                  "times": 2
+                                                                },
+                                                                "inputs": {
+                                                                  "code": {
+                                                                    "block": {
+                                                                      "type": "play_sound_at_current_location_simple2",
+                                                                      "id": "v]7fA*2n9}Pm$*W.yB5Y",
+                                                                      "extraState": {
+                                                                        "disableNextConnection": false
+                                                                      },
+                                                                      "fields": {
+                                                                        "sound": "will_i_am_i_like_to_move_it/drums_kick_perc_snare"
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "set_effect_at_current_location_simple2",
+                                              "id": "5;GE.gR?}Jybm4F3+abk",
+                                              "fields": {
+                                                "effects_name": "<field name=\"effects_name\">volume</field>",
+                                                "effects_value": "<field name=\"effects_value\">normal</field>"
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "set_effect_at_current_location_simple2",
+                                                  "id": "XC1PI^l3dr|_Ip)2.|KR",
+                                                  "fields": {
+                                                    "effects_name": "<field name=\"effects_name\">filter</field>",
+                                                    "effects_value": "<field name=\"effects_value\">medium</field>"
+                                                  },
+                                                  "next": {
+                                                    "block": {
+                                                      "type": "repeat_simple2",
+                                                      "id": "4Os1s0.*+Cpd_=QMyW??",
+                                                      "extraState": {
+                                                        "disableNextConnection": false
+                                                      },
+                                                      "fields": {
+                                                        "times": 2
+                                                      },
+                                                      "inputs": {
+                                                        "code": {
+                                                          "block": {
+                                                            "type": "play_sounds_together",
+                                                            "id": "285]Z[bs|0KD@0#^%XPz",
+                                                            "extraState": {
+                                                              "disableNextConnection": false
+                                                            },
+                                                            "inputs": {
+                                                              "code": {
+                                                                "block": {
+                                                                  "type": "play_sound_at_current_location_simple2",
+                                                                  "id": "4(j=i{eSsF}P]xv#pa=$",
+                                                                  "extraState": {
+                                                                    "disableNextConnection": false
+                                                                  },
+                                                                  "fields": {
+                                                                    "sound": "will_i_am_i_like_to_move_it/vocals_little_dance"
+                                                                  },
+                                                                  "next": {
+                                                                    "block": {
+                                                                      "type": "play_sound_at_current_location_simple2",
+                                                                      "id": "0H-5/W*WSX1!7@ujS{~,",
+                                                                      "extraState": {
+                                                                        "disableNextConnection": false
+                                                                      },
+                                                                      "fields": {
+                                                                        "sound": "will_i_am_i_like_to_move_it/drums_kick_perc"
+                                                                      },
+                                                                      "next": {
+                                                                        "block": {
+                                                                          "type": "play_sound_at_current_location_simple2",
+                                                                          "id": "p9JhLL(u?s5V#mH%1Goo",
+                                                                          "extraState": {
+                                                                            "disableNextConnection": false
+                                                                          },
+                                                                          "fields": {
+                                                                            "sound": "will_i_am_i_like_to_move_it/bass_guitar"
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      "next": {
+                                                        "block": {
+                                                          "type": "set_effect_at_current_location_simple2",
+                                                          "id": "M,.x-cH6/_a#_!QbdJ;x",
+                                                          "fields": {
+                                                            "effects_name": "<field name=\"effects_name\">filter</field>",
+                                                            "effects_value": "<field name=\"effects_value\">normal</field>"
+                                                          },
+                                                          "next": {
+                                                            "block": {
+                                                              "type": "set_effect_at_current_location_simple2",
+                                                              "id": "a@bAy6M07VSMrHf`s,aj",
+                                                              "fields": {
+                                                                "effects_name": "<field name=\"effects_name\">volume</field>",
+                                                                "effects_value": "<field name=\"effects_value\">normal</field>"
+                                                              },
+                                                              "next": {
+                                                                "block": {
+                                                                  "type": "play_sounds_together",
+                                                                  "id": "EPC%ckwWzUry`W]Srirw",
+                                                                  "extraState": {
+                                                                    "disableNextConnection": false
+                                                                  },
+                                                                  "inputs": {
+                                                                    "code": {
+                                                                      "block": {
+                                                                        "type": "play_sound_at_current_location_simple2",
+                                                                        "id": "~G-Mv(cRNEl2ASiqpF0Z",
+                                                                        "extraState": {
+                                                                          "disableNextConnection": false
+                                                                        },
+                                                                        "fields": {
+                                                                          "sound": "will_i_am_i_like_to_move_it/vocals_verse_1"
+                                                                        },
+                                                                        "next": {
+                                                                          "block": {
+                                                                            "type": "play_sounds_sequential",
+                                                                            "id": "tZgW|,fFdN~-vYPT[B#O",
+                                                                            "extraState": {
+                                                                              "disableNextConnection": false
+                                                                            },
+                                                                            "inputs": {
+                                                                              "code": {
+                                                                                "block": {
+                                                                                  "type": "play_rest_at_current_location_simple2",
+                                                                                  "id": "a-|8!@j)#o;1gky}J9|:",
+                                                                                  "extraState": {
+                                                                                    "disableNextConnection": false
+                                                                                  },
+                                                                                  "fields": {
+                                                                                    "rest_duration": "<field name=\"rest_duration\">0.5</field>"
+                                                                                  },
+                                                                                  "next": {
+                                                                                    "block": {
+                                                                                      "type": "play_rest_at_current_location_simple2",
+                                                                                      "id": "M2P0+~WrJeJgHqZl_Cs0",
+                                                                                      "extraState": {
+                                                                                        "disableNextConnection": false
+                                                                                      },
+                                                                                      "fields": {
+                                                                                        "rest_duration": "<field name=\"rest_duration\">3</field>"
+                                                                                      },
+                                                                                      "next": {
+                                                                                        "block": {
+                                                                                          "type": "play_sound_at_current_location_simple2",
+                                                                                          "id": "rWKeh@rl+nRx92QN%T{t",
+                                                                                          "extraState": {
+                                                                                            "disableNextConnection": false
+                                                                                          },
+                                                                                          "fields": {
+                                                                                            "sound": "acoustic_arcade/wheel_spoke"
+                                                                                          },
+                                                                                          "next": {
+                                                                                            "block": {
+                                                                                              "type": "play_sound_at_current_location_simple2",
+                                                                                              "id": "5:`hvE/0GS6I^kt$vX{K",
+                                                                                              "extraState": {
+                                                                                                "disableNextConnection": false
+                                                                                              },
+                                                                                              "fields": {
+                                                                                                "sound": "acoustic_arcade/wheel_spoke"
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            },
+                                                                            "next": {
+                                                                              "block": {
+                                                                                "type": "play_sounds_sequential",
+                                                                                "id": "ZPF(w:iDrcL~^z5ras+?",
+                                                                                "extraState": {
+                                                                                  "disableNextConnection": false
+                                                                                },
+                                                                                "inputs": {
+                                                                                  "code": {
+                                                                                    "block": {
+                                                                                      "type": "play_rest_at_current_location_simple2",
+                                                                                      "id": "A(xT6s2GYecC7V]aSt7l",
+                                                                                      "extraState": {
+                                                                                        "disableNextConnection": false
+                                                                                      },
+                                                                                      "fields": {
+                                                                                        "rest_duration": "<field name=\"rest_duration\">2</field>"
+                                                                                      },
+                                                                                      "next": {
+                                                                                        "block": {
+                                                                                          "type": "play_sound_at_current_location_simple2",
+                                                                                          "id": "/!TJ7!pBWWDc$=i**g9M",
+                                                                                          "extraState": {
+                                                                                            "disableNextConnection": false
+                                                                                          },
+                                                                                          "fields": {
+                                                                                            "sound": "electro/guitar_melody"
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                },
+                                                                                "next": {
+                                                                                  "block": {
+                                                                                    "type": "repeat_simple2",
+                                                                                    "id": "k2{KCekinAZH(1Ey`k0c",
+                                                                                    "extraState": {
+                                                                                      "disableNextConnection": false
+                                                                                    },
+                                                                                    "fields": {
+                                                                                      "times": 2
+                                                                                    },
+                                                                                    "inputs": {
+                                                                                      "code": {
+                                                                                        "block": {
+                                                                                          "type": "play_sound_at_current_location_simple2",
+                                                                                          "id": "m#WnY8|lHa,~TH;`$PH5",
+                                                                                          "extraState": {
+                                                                                            "disableNextConnection": false
+                                                                                          },
+                                                                                          "fields": {
+                                                                                            "sound": "will_i_am_i_like_to_move_it/bass_guitar_stutter"
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    },
+                                                                                    "next": {
+                                                                                      "block": {
+                                                                                        "type": "repeat_simple2",
+                                                                                        "id": ":B,cdf`3!gy/duD7TbS#",
+                                                                                        "extraState": {
+                                                                                          "disableNextConnection": false
+                                                                                        },
+                                                                                        "fields": {
+                                                                                          "times": 2
+                                                                                        },
+                                                                                        "inputs": {
+                                                                                          "code": {
+                                                                                            "block": {
+                                                                                              "type": "play_sound_at_current_location_simple2",
+                                                                                              "id": "ShQrvV)e`cOKdf2DX21d",
+                                                                                              "extraState": {
+                                                                                                "disableNextConnection": false
+                                                                                              },
+                                                                                              "fields": {
+                                                                                                "sound": "rock/punk_beat"
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  },
+                                                                  "next": {
+                                                                    "block": {
+                                                                      "type": "play_sounds_together",
+                                                                      "id": "F]rp`XKm3LF4Hk!?]Tjb",
+                                                                      "extraState": {
+                                                                        "disableNextConnection": false
+                                                                      },
+                                                                      "inputs": {
+                                                                        "code": {
+                                                                          "block": {
+                                                                            "type": "play_sound_at_current_location_simple2",
+                                                                            "id": "NfCdp|}{GP%)o*LM(Hva",
+                                                                            "extraState": {
+                                                                              "disableNextConnection": false
+                                                                            },
+                                                                            "fields": {
+                                                                              "sound": "will_i_am_i_like_to_move_it/vocals_verse_2"
+                                                                            },
+                                                                            "next": {
+                                                                              "block": {
+                                                                                "type": "play_sounds_sequential",
+                                                                                "id": "Ah_4jtA:85~Dr2c4aJ+B",
+                                                                                "extraState": {
+                                                                                  "disableNextConnection": false
+                                                                                },
+                                                                                "inputs": {
+                                                                                  "code": {
+                                                                                    "block": {
+                                                                                      "type": "set_effect_at_current_location_simple2",
+                                                                                      "id": ";u-j0U^gs8J(Q_@u?%Oz",
+                                                                                      "fields": {
+                                                                                        "effects_name": "<field name=\"effects_name\">delay</field>",
+                                                                                        "effects_value": "<field name=\"effects_value\">low</field>"
+                                                                                      },
+                                                                                      "next": {
+                                                                                        "block": {
+                                                                                          "type": "play_rest_at_current_location_simple2",
+                                                                                          "id": "(V7Q2!|/u:,[~279=O)=",
+                                                                                          "extraState": {
+                                                                                            "disableNextConnection": false
+                                                                                          },
+                                                                                          "fields": {
+                                                                                            "rest_duration": "<field name=\"rest_duration\">0.5</field>"
+                                                                                          },
+                                                                                          "next": {
+                                                                                            "block": {
+                                                                                              "type": "play_rest_at_current_location_simple2",
+                                                                                              "id": "6`b1a4j-=2~}fvN_@7+r",
+                                                                                              "extraState": {
+                                                                                                "disableNextConnection": false
+                                                                                              },
+                                                                                              "fields": {
+                                                                                                "rest_duration": "<field name=\"rest_duration\">3</field>"
+                                                                                              },
+                                                                                              "next": {
+                                                                                                "block": {
+                                                                                                  "type": "play_sound_at_current_location_simple2",
+                                                                                                  "id": "{Qq2GHPV#pmt?mi1lK?%",
+                                                                                                  "extraState": {
+                                                                                                    "disableNextConnection": false
+                                                                                                  },
+                                                                                                  "fields": {
+                                                                                                    "sound": "acoustic_arcade/bongo_roll"
+                                                                                                  },
+                                                                                                  "next": {
+                                                                                                    "block": {
+                                                                                                      "type": "set_effect_at_current_location_simple2",
+                                                                                                      "id": "W}@*|^dCuXZ~`,ss@VyN",
+                                                                                                      "fields": {
+                                                                                                        "effects_name": "<field name=\"effects_name\">delay</field>",
+                                                                                                        "effects_value": "<field name=\"effects_value\">normal</field>"
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                },
+                                                                                "next": {
+                                                                                  "block": {
+                                                                                    "type": "play_sounds_sequential",
+                                                                                    "id": "H$%1bRu[a=?c*5)4ycd[",
+                                                                                    "extraState": {
+                                                                                      "disableNextConnection": false
+                                                                                    },
+                                                                                    "inputs": {
+                                                                                      "code": {
+                                                                                        "block": {
+                                                                                          "type": "play_rest_at_current_location_simple2",
+                                                                                          "id": "j;h+{B7/@3:C8bD]/*Ab",
+                                                                                          "extraState": {
+                                                                                            "disableNextConnection": false
+                                                                                          },
+                                                                                          "fields": {
+                                                                                            "rest_duration": "<field name=\"rest_duration\">2</field>"
+                                                                                          },
+                                                                                          "next": {
+                                                                                            "block": {
+                                                                                              "type": "play_sound_at_current_location_simple2",
+                                                                                              "id": "R{7J3v?PFU2c!R6`m.MG",
+                                                                                              "extraState": {
+                                                                                                "disableNextConnection": false
+                                                                                              },
+                                                                                              "fields": {
+                                                                                                "sound": "electro/guitar_moment"
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    },
+                                                                                    "next": {
+                                                                                      "block": {
+                                                                                        "type": "repeat_simple2",
+                                                                                        "id": "Us(;sM0]fmW#iBt:D.1c",
+                                                                                        "extraState": {
+                                                                                          "disableNextConnection": false
+                                                                                        },
+                                                                                        "fields": {
+                                                                                          "times": 2
+                                                                                        },
+                                                                                        "inputs": {
+                                                                                          "code": {
+                                                                                            "block": {
+                                                                                              "type": "play_sound_at_current_location_simple2",
+                                                                                              "id": "{,akZf#1Kq-etc)LRv[S",
+                                                                                              "extraState": {
+                                                                                                "disableNextConnection": false
+                                                                                              },
+                                                                                              "fields": {
+                                                                                                "sound": "will_i_am_i_like_to_move_it/bass_guitar_slap"
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        },
+                                                                                        "next": {
+                                                                                          "block": {
+                                                                                            "type": "repeat_simple2",
+                                                                                            "id": "KbViJJD${Eq`zMg*,_+2",
+                                                                                            "extraState": {
+                                                                                              "disableNextConnection": false
+                                                                                            },
+                                                                                            "fields": {
+                                                                                              "times": 2
+                                                                                            },
+                                                                                            "inputs": {
+                                                                                              "code": {
+                                                                                                "block": {
+                                                                                                  "type": "play_sound_at_current_location_simple2",
+                                                                                                  "id": "W9@mYgLpBsnkHopV[5@W",
+                                                                                                  "extraState": {
+                                                                                                    "disableNextConnection": false
+                                                                                                  },
+                                                                                                  "fields": {
+                                                                                                    "sound": "will_i_am_i_like_to_move_it/drums_kick_perc_snare"
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      },
+                                                                      "next": {
+                                                                        "block": {
+                                                                          "type": "play_sounds_together",
+                                                                          "id": "8^6@X=j_e?IPA{ObC8t,",
+                                                                          "extraState": {
+                                                                            "disableNextConnection": false
+                                                                          },
+                                                                          "inputs": {
+                                                                            "code": {
+                                                                              "block": {
+                                                                                "type": "play_sound_at_current_location_simple2",
+                                                                                "id": "TJb}k7m9oWQHnXe2VUzU",
+                                                                                "extraState": {
+                                                                                  "disableNextConnection": false
+                                                                                },
+                                                                                "fields": {
+                                                                                  "sound": "will_i_am_i_like_to_move_it/vocals_verse_3"
+                                                                                },
+                                                                                "next": {
+                                                                                  "block": {
+                                                                                    "type": "play_sounds_sequential",
+                                                                                    "id": "X=;]P,-fSFE],J@..LkG",
+                                                                                    "extraState": {
+                                                                                      "disableNextConnection": false
+                                                                                    },
+                                                                                    "inputs": {
+                                                                                      "code": {
+                                                                                        "block": {
+                                                                                          "type": "set_effect_at_current_location_simple2",
+                                                                                          "id": "hw6.VykXW)I_pD?9J;lD",
+                                                                                          "fields": {
+                                                                                            "effects_name": "<field name=\"effects_name\">delay</field>",
+                                                                                            "effects_value": "<field name=\"effects_value\">low</field>"
+                                                                                          },
+                                                                                          "next": {
+                                                                                            "block": {
+                                                                                              "type": "play_rest_at_current_location_simple2",
+                                                                                              "id": "^XR-~S_=6[u%V9ZnP?vM",
+                                                                                              "extraState": {
+                                                                                                "disableNextConnection": false
+                                                                                              },
+                                                                                              "fields": {
+                                                                                                "rest_duration": "<field name=\"rest_duration\">0.5</field>"
+                                                                                              },
+                                                                                              "next": {
+                                                                                                "block": {
+                                                                                                  "type": "play_rest_at_current_location_simple2",
+                                                                                                  "id": ":+!a*[?*p`cCUuX)%gUK",
+                                                                                                  "extraState": {
+                                                                                                    "disableNextConnection": false
+                                                                                                  },
+                                                                                                  "fields": {
+                                                                                                    "rest_duration": "<field name=\"rest_duration\">3</field>"
+                                                                                                  },
+                                                                                                  "next": {
+                                                                                                    "block": {
+                                                                                                      "type": "play_sound_at_current_location_simple2",
+                                                                                                      "id": "Zh6lKNGN(@g9:Oc+#ylc",
+                                                                                                      "extraState": {
+                                                                                                        "disableNextConnection": false
+                                                                                                      },
+                                                                                                      "fields": {
+                                                                                                        "sound": "acoustic_arcade/vibra_verb"
+                                                                                                      },
+                                                                                                      "next": {
+                                                                                                        "block": {
+                                                                                                          "type": "play_sound_at_current_location_simple2",
+                                                                                                          "id": "S9BFoWW[Sxtb@l3b9Kjd",
+                                                                                                          "extraState": {
+                                                                                                            "disableNextConnection": false
+                                                                                                          },
+                                                                                                          "fields": {
+                                                                                                            "sound": "acoustic_arcade/vibra_verb"
+                                                                                                          },
+                                                                                                          "next": {
+                                                                                                            "block": {
+                                                                                                              "type": "set_effect_at_current_location_simple2",
+                                                                                                              "id": "dFi})jWDT*rp^i?|_teE",
+                                                                                                              "fields": {
+                                                                                                                "effects_name": "<field name=\"effects_name\">delay</field>",
+                                                                                                                "effects_value": "<field name=\"effects_value\">normal</field>"
+                                                                                                              }
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    },
+                                                                                    "next": {
+                                                                                      "block": {
+                                                                                        "type": "play_sounds_sequential",
+                                                                                        "id": "bG(~k60/0{w}H84}YWxZ",
+                                                                                        "extraState": {
+                                                                                          "disableNextConnection": false
+                                                                                        },
+                                                                                        "inputs": {
+                                                                                          "code": {
+                                                                                            "block": {
+                                                                                              "type": "play_rest_at_current_location_simple2",
+                                                                                              "id": "9({x%7g=Y[jxH42=v;B2",
+                                                                                              "extraState": {
+                                                                                                "disableNextConnection": false
+                                                                                              },
+                                                                                              "fields": {
+                                                                                                "rest_duration": "<field name=\"rest_duration\">2</field>"
+                                                                                              },
+                                                                                              "next": {
+                                                                                                "block": {
+                                                                                                  "type": "play_sound_at_current_location_simple2",
+                                                                                                  "id": ")wo07gps6h76HcT_+?-x",
+                                                                                                  "extraState": {
+                                                                                                    "disableNextConnection": false
+                                                                                                  },
+                                                                                                  "fields": {
+                                                                                                    "sound": "electro/guitar_moment"
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        },
+                                                                                        "next": {
+                                                                                          "block": {
+                                                                                            "type": "repeat_simple2",
+                                                                                            "id": "bJ,cG)YeCtEvDE]pI4(%",
+                                                                                            "extraState": {
+                                                                                              "disableNextConnection": false
+                                                                                            },
+                                                                                            "fields": {
+                                                                                              "times": 2
+                                                                                            },
+                                                                                            "inputs": {
+                                                                                              "code": {
+                                                                                                "block": {
+                                                                                                  "type": "play_sound_at_current_location_simple2",
+                                                                                                  "id": "P%~G%yR;7}N7Wno;}Afz",
+                                                                                                  "extraState": {
+                                                                                                    "disableNextConnection": false
+                                                                                                  },
+                                                                                                  "fields": {
+                                                                                                    "sound": "will_i_am_i_like_to_move_it/bass_guitar_stutter"
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            },
+                                                                                            "next": {
+                                                                                              "block": {
+                                                                                                "type": "repeat_simple2",
+                                                                                                "id": "repeat_simple2",
+                                                                                                "extraState": {
+                                                                                                  "disableNextConnection": false
+                                                                                                },
+                                                                                                "fields": {
+                                                                                                  "times": 2
+                                                                                                },
+                                                                                                "inputs": {
+                                                                                                  "code": {
+                                                                                                    "block": {
+                                                                                                      "type": "play_sound_at_current_location_simple2",
+                                                                                                      "id": "17s%t)Kw6g|+/DTa^*ko",
+                                                                                                      "extraState": {
+                                                                                                        "disableNextConnection": false
+                                                                                                      },
+                                                                                                      "fields": {
+                                                                                                        "sound": "will_i_am_i_like_to_move_it/drums_main_beat"
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                },
+                                                                                                "next": {
+                                                                                                  "block": {
+                                                                                                    "type": "set_effect_at_current_location_simple2",
+                                                                                                    "id": "B}E6X;sd~F](.1`|5o}0",
+                                                                                                    "fields": {
+                                                                                                      "effects_name": "<field name=\"effects_name\">delay</field>",
+                                                                                                      "effects_value": "<field name=\"effects_value\">medium</field>"
+                                                                                                    },
+                                                                                                    "next": {
+                                                                                                      "block": {
+                                                                                                        "type": "play_sounds_sequential",
+                                                                                                        "id": "play_sounds_sequential",
+                                                                                                        "extraState": {
+                                                                                                          "disableNextConnection": false
+                                                                                                        },
+                                                                                                        "inputs": {
+                                                                                                          "code": {
+                                                                                                            "block": {
+                                                                                                              "type": "play_rest_at_current_location_simple2",
+                                                                                                              "id": "esLgYQ^Gdad;%Nx@Ps3V",
+                                                                                                              "extraState": {
+                                                                                                                "disableNextConnection": false
+                                                                                                              },
+                                                                                                              "fields": {
+                                                                                                                "rest_duration": "<field name=\"rest_duration\">3</field>"
+                                                                                                              },
+                                                                                                              "next": {
+                                                                                                                "block": {
+                                                                                                                  "type": "play_rest_at_current_location_simple2",
+                                                                                                                  "id": "KFr(nGbfkM_DOs8y5m1J",
+                                                                                                                  "extraState": {
+                                                                                                                    "disableNextConnection": false
+                                                                                                                  },
+                                                                                                                  "fields": {
+                                                                                                                    "rest_duration": "<field name=\"rest_duration\">1</field>"
+                                                                                                                  },
+                                                                                                                  "next": {
+                                                                                                                    "block": {
+                                                                                                                      "type": "repeat_simple2",
+                                                                                                                      "id": "*KV)qp^EwAx.ohMda_.]",
+                                                                                                                      "extraState": {
+                                                                                                                        "disableNextConnection": false
+                                                                                                                      },
+                                                                                                                      "fields": {
+                                                                                                                        "times": 2
+                                                                                                                      },
+                                                                                                                      "inputs": {
+                                                                                                                        "code": {
+                                                                                                                          "block": {
+                                                                                                                            "type": "play_sound_at_current_location_simple2",
+                                                                                                                            "id": "play_sound_at_current_location_simple2",
+                                                                                                                            "extraState": {
+                                                                                                                              "disableNextConnection": false
+                                                                                                                            },
+                                                                                                                            "fields": {
+                                                                                                                              "sound": "will_i_am_i_like_to_move_it/synth_stutter"
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "procedures_defnoreturn",
+              "x": 530,
+              "y": 90,
+              "extraState": {
+                "procedureId": "vO:54j{Oyy*{GJ-ty397",
+                "initialDeleteConfig": true,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "my function"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "repeat_simple2",
+                    "id": "|X)%9`eJTj$UsK3D+6E0",
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "fields": {
+                      "times": 2
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": ")q_bk/50SUCi$s*mlDL$",
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "0w2U5+#WcI1:niO08/^r",
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "will_i_am_i_like_to_move_it/vocals_ants_pants"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": ";P{i%az^gRqB$T4kdD$p",
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "will_i_am_i_like_to_move_it/drums_kick_perc"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "h%Z=cpUK(wPw}n|mBalE",
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "will_i_am_i_like_to_move_it/bass_guitar"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "procedures": [
+          {
+            "id": "vO:54j{Oyy*{GJ-ty397",
+            "name": "my function",
+            "returnTypes": null
+          }
+        ]
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "display_name": "Move It, Move It",
+    "bubble_choice_description": "Move It, Move It in a punk rock / synth style",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/will_i_am_i_like_to_move_it/will_i_am_i_like_to_move_it.jpg",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-06-03T22:51:25.236+00:00\",\"changed\":[\"cloned from \\\"music-lab-walkup-example-4\\\"\"],\"cloned_from\":\"music-lab-walkup-example-4\"},{\"changed_at\":\"2025-06-03 22:51:52 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-03 22:53:10 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-03 22:53:45 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 19:14:54 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 19:19:00 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

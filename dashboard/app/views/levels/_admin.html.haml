@@ -72,7 +72,7 @@
             = link_to '[E]', edit_level_path(project_template_level)
 
       - elsif @script_level
-        %li= link_to 'edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", build_script_level_path(@script_level, @extra_params)).to_s
+        %li= link_to 'edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", build_script_level_path(@script_level, **@extra_params)).to_s
     - if @level.is_a?(Blockly) && !@level.uses_droplet?
       %button{type: 'button', onclick: 'window.levelbuilder.copySelectedBlockToClipboard()', class: 'btn btn-default btn-sm'}
         Copy selected block

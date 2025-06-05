@@ -389,22 +389,10 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test "can build user with panda in name" do
-    user = build :user, name: panda_panda
-    assert user.valid?
-    assert user.errors[:name].empty?
-  end
-
   test "cannot build user with no type" do
     user = build :user, user_type: nil
     refute user.valid?
     assert user.errors[:user_type].length == 1
-  end
-
-  test "cannot build user with no name" do
-    user = build :user, name: nil
-    refute user.valid?
-    assert user.errors[:name].length == 1
   end
 
   test "cannot build user with invalid type" do
@@ -633,24 +621,6 @@ class UserTest < ActiveSupport::TestCase
     all_auth_options.each do |ao|
       assert_empty ao.email
     end
-  end
-
-  test "saving user strips display name and family name" do
-    user = create :student, name: '  test name  ', family_name: '  test fam name  '
-    user.save
-    user.reload
-    assert_equal user.name, 'test name'
-    assert_equal user.family_name, 'test fam name'
-
-    user.name = '  test name 2  '
-    user.save
-    user.reload
-    assert_equal user.name, 'test name 2'
-
-    user.family_name = '  test fam name 2  '
-    user.save
-    user.reload
-    assert_equal user.family_name, 'test fam name 2'
   end
 
   test "can create a user with age" do
@@ -888,24 +858,6 @@ class UserTest < ActiveSupport::TestCase
     refute follower.student_user.reload.admin?
   end
 
-  test "short name" do
-    assert_equal 'Laurel', build(:user, name: 'Laurel Fan').short_name # first name last name
-    assert_equal 'Winnie', build(:user, name: 'Winnie the Pooh').short_name # middle name
-    assert_equal "D'Andre", build(:user, name: "D'Andre Means").short_name # punctuation ok
-    assert_equal '樊瑞', build(:user, name: '樊瑞').short_name # ok, this isn't actually right but ok for now
-    assert_equal 'Laurel', build(:user, name: 'Laurel').short_name # just one name
-    assert_equal 'some', build(:user, name: '  some whitespace in front  ').short_name # whitespace in front
-  end
-
-  test "initial" do
-    assert_equal 'L', build(:user, name: 'Laurel Fan').initial # first name last name
-    assert_equal 'W', build(:user, name: 'Winnie the Pooh').initial # middle name
-    assert_equal "D", build(:user, name: "D'Andre Means").initial # punctuation ok
-    assert_equal '樊', build(:user, name: '樊瑞').initial # ok, this isn't actually right but ok for now
-    assert_equal 'L', build(:user, name: 'Laurel').initial # just one name
-    assert_equal 'S', build(:user, name: '  some whitespace in front  ').initial # whitespace in front
-  end
-
   test "find_for_authentication with nonsense" do
     # login by username still works
     user = create :user
@@ -969,11 +921,6 @@ class UserTest < ActiveSupport::TestCase
     looked_up_user = User.find_for_authentication(hashed_email: User.hash_email(email))
 
     assert_equal migrated_student, looked_up_user
-  end
-
-  test "creating manual provider user without username generates username" do
-    user = User.create(@good_data.merge({provider: User::PROVIDER_MANUAL}))
-    assert_equal 'tester', user.username
   end
 
   def create_level_group(sub_level_name)
@@ -1258,46 +1205,6 @@ class UserTest < ActiveSupport::TestCase
     @student.reload
     assert_equal 'black,hispanic', @student.races
     assert @student.urm
-  end
-
-  test 'under 13' do
-    user = create :user
-    refute user.under_13?
-
-    user.age = 13
-    refute user.under_13?
-    user.save!
-    refute user.under_13?
-
-    user.age = 10
-    assert user.under_13?
-    user.save!
-    assert user.under_13?
-
-    user = create :user
-    user.update_attribute(:birthday, nil) # cheating...
-    user = user.reload
-    assert user.age.nil?
-    assert user.under_13?
-  end
-
-  test 'over 21' do
-    user = create :user
-    user.age = 15
-    refute user.over_21?
-    user.save!
-    refute user.over_21?
-
-    user.age = 21
-    assert user.over_21?
-    user.save!
-    assert user.over_21?
-
-    user = create :user
-    user.update_attribute(:birthday, nil) # cheating...
-    user = user.reload
-    assert user.age.nil?
-    refute user.over_21?
   end
 
   test "reset_secrets calls generate_secret_picture and generate_secret_words" do
@@ -2672,13 +2579,6 @@ class UserTest < ActiveSupport::TestCase
     assert_equal true, user_level.locale_supported
   end
 
-  test 'can create user with same name as deleted user' do
-    create(:user, :deleted, name: 'Same Name')
-    assert_creates(User) do
-      create(:user, name: 'Same Name')
-    end
-  end
-
   test 'student and teacher relationships' do
     teacher = create :teacher
     student = create :student
@@ -2745,64 +2645,6 @@ class UserTest < ActiveSupport::TestCase
     section.update!(pairing_allowed: false)
     student.reload
     refute student.can_pair?
-  end
-
-  test "verified teacher" do
-    # you can't just create your own authorized teacher account
-    assert @teacher.teacher?
-    refute @teacher.verified_teacher?
-
-    # you have to be in a cohort
-    real_teacher = create(:teacher)
-    real_teacher.permission = UserPermission::AUTHORIZED_TEACHER
-    assert real_teacher.teacher?
-    assert real_teacher.verified_teacher?
-
-    # or you have to be in a plc course
-    create(:plc_user_course_enrollment, user: (plc_teacher = create :teacher), plc_course: create(:plc_course))
-    assert plc_teacher.teacher?
-    assert plc_teacher.verified_teacher?
-  end
-
-  test "verified instructor" do
-    # normal teacher accounts are not automatically verified instructors
-    assert @teacher.teacher?
-    refute @teacher.verified_instructor?
-
-    # you need to be given the verified permission
-    real_teacher = create(:teacher)
-    real_teacher.permission = UserPermission::AUTHORIZED_TEACHER
-    assert real_teacher.teacher?
-    assert real_teacher.verified_instructor?
-
-    # or you have to be in a plc course
-    create(:plc_user_course_enrollment, user: (plc_teacher = create :teacher), plc_course: create(:plc_course))
-    assert plc_teacher.teacher?
-    assert plc_teacher.verified_instructor?
-
-    # admins are not verified instructorsg
-    assert @admin.teacher?
-    refute @admin.verified_instructor?
-
-    # facilitators should be verified instructors too
-    assert @facilitator.teacher?
-    assert @facilitator.verified_instructor?
-
-    # universal instructors should be verified instructors too
-    assert @universal_instructor.teacher?
-    assert @universal_instructor.verified_instructor?
-
-    #plc reviewers should be verified instructors too
-    assert @plc_reviewer.teacher?
-    assert @plc_reviewer.verified_instructor?
-
-    #levelbuilders should be verified instructors too
-    assert @levelbuilder.teacher?
-    assert @levelbuilder.verified_instructor?
-
-    #students should not be verified instructors
-    refute @student.teacher?
-    refute @student.verified_instructor?
   end
 
   test 'terms_of_service_version for teacher without version' do
@@ -3530,46 +3372,6 @@ class UserTest < ActiveSupport::TestCase
     google_auth_option.reload
     assert_equal 'fake oauth token', google_auth_option.data_hash[:oauth_token]
     assert_equal 'fake refresh token', google_auth_option.data_hash[:oauth_refresh_token]
-  end
-
-  test 'managing_own_credentials? is true for users with email logins' do
-    user = create :user
-    assert user.managing_own_credentials?
-  end
-
-  test 'managing_own_credentials? is true for students with email logins' do
-    user = create :student
-    assert user.managing_own_credentials?
-  end
-
-  test 'managing_own_credentials? is false for users with oauth logins' do
-    user = create :user, :sso_provider
-    refute user.managing_own_credentials?
-  end
-
-  test 'managing_own_credentials? is false for students with sponsored logins' do
-    user = create :student_in_picture_section
-    refute user.managing_own_credentials?
-  end
-
-  test 'password_required? is false if user is not creating their own account' do
-    user = create :student, :without_encrypted_password
-    user.expects(:managing_own_credentials?).returns(false)
-    refute user.password_required?
-  end
-
-  test 'new users require a password if no authentication provided' do
-    assert_raises(ActiveRecord::RecordInvalid) do
-      user = create :user, password: nil
-      refute user.errors[:password].empty?
-    end
-  end
-
-  test 'password_required? is true for user changing their password' do
-    user = create :user
-    user.password = "mypassword"
-    user.password_confirmation = "mypassword"
-    assert user.password_required?
   end
 
   test 'summarize' do
@@ -4682,28 +4484,6 @@ class UserTest < ActiveSupport::TestCase
     assert_equal(family_name, user.summarize[:family_name])
   end
 
-  test 'family name is not allowed on pl participants' do
-    user = create :user
-    family_name = 'TestFamilyName'
-
-    pl_section = create :section, :teacher_participants, user_id: @teacher.id
-    Follower.create!(section_id: pl_section.id, student_user_id: user.id)
-
-    assert(user.valid?)
-
-    user.family_name = family_name
-
-    refute(user.valid?)
-  end
-
-  test 'family name is not allowed on teachers' do
-    user = create :teacher
-    family_name = 'TestFamilyName'
-    user.family_name = family_name
-
-    refute(user.valid?)
-  end
-
   test 'school_info_school returns the school associated with the user' do
     school = create :school
     school_info = create :school_info, school: school
@@ -4919,26 +4699,6 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 100, pl_units_started[0][:percent_completed]
   end
 
-  test "username characters are only validated when changed" do
-    student = create :student
-    # White spaces are not allowed in usernames
-    student.username = "big husky"
-    student.save!(validate: false)
-
-    # We only want to validate the username if it changes.
-    # An invalid username should not block other attributes of the user from
-    # changing.
-    # This is a temporary behavior while we investigate why users have invalid
-    # usernames.
-    student.update!(name: "#{student.name} Jr.")
-
-    # The username has changed to a new invalid value, so we expected validation
-    # to fail.
-    assert_raises(ActiveRecord::RecordInvalid) do
-      student.update!(username: "very big husky")
-    end
-  end
-
   test "validate_us_state" do
     # If we don't know what country they are in, we don't require US State.
     student = create :student
@@ -5032,52 +4792,6 @@ class UserTest < ActiveSupport::TestCase
     student.update!(us_state: new_us_state)
 
     assert_equal new_us_state, student.reload.us_state
-  end
-
-  describe 'strict password requirements by country' do
-    let(:strict_country) {User::PASSWORD_STRICT_COUNTRIES.first}
-
-    before do
-      allow(DCDO).to receive(:get).and_call_original
-      allow(DCDO).to receive(:get).with('strict-password-country', false).and_return(true)
-    end
-
-    describe 'when creating a teacher in a strict country' do
-      context 'when using a short password' do
-        let(:user) {build(:teacher, country_code: strict_country, password: 'short', password_confirmation: 'short')}
-        it 'rejects passwords' do
-          _(user).wont_be :valid?
-          user.valid?
-          _(user.errors[:password]).must_include 'is too short (minimum is 14 characters)'
-        end
-      end
-      context 'when using a long password' do
-        let(:user) {create(:teacher, country_code: strict_country, password: 'longlongpassword', password_confirmation: 'longlongpassword')}
-
-        it 'accepts passwords that are at least 14 characters' do
-          _(user).must_be :valid?
-          user.valid?
-          _(user.errors[:password]).must_be :empty?
-        end
-      end
-    end
-
-    describe 'when updating a teacher in a strict country' do
-      let(:teacher) {build(:teacher, country_code: strict_country)}
-
-      it 'rejects a too-short password' do
-        result = teacher.update(password: 'tooshort', password_confirmation: 'tooshort')
-        _(result).must_equal false
-        _(teacher.errors[:password]).must_include 'is too short (minimum is 14 characters)'
-      end
-
-      it 'accepts a sufficiently long password' do
-        result = teacher.update(password: 'longlongpassword', password_confirmation: 'longlongpassword')
-        _(result).must_equal true
-        _(teacher.errors[:password]).must_be :empty?
-        _(teacher.password).must_equal 'longlongpassword'
-      end
-    end
   end
 
   test "teacher with oauth account can access AI Chat" do
@@ -5346,6 +5060,63 @@ class UserTest < ActiveSupport::TestCase
 
       it 'returns nil' do
         _authenticate_with_section_and_secret_picture.must_be_nil
+      end
+    end
+  end
+
+  describe '#pl_units_started' do
+    let(:subject) {user.pl_units_started}
+    let(:user) {create :teacher}
+    let(:unit) {create :pl_unit, :with_levels}
+    let(:unit_group) {create :unit_group, participant_audience: 'teacher', instructor_audience: 'facilitator'}
+    let!(:unit_group_unit) {create :unit_group_unit, course_id: unit_group.id, script_id: unit.id, position: 1}
+    let!(:user_script) {create :user_script, user: user, script: unit}
+    let(:modularity_enabled) {true}
+
+    before do
+      allow(Policies::Courses).to receive(:modularity_enabled?).and_return(modularity_enabled)
+      unit.reload
+      user.reload
+    end
+
+    it 'returns 1 result' do
+      _(subject.count).must_equal 1
+    end
+
+    it 'returns an Array of Hash' do
+      _(subject).must_be_kind_of Array
+      _(subject.first).must_be_kind_of Hash
+    end
+
+    it 'returns the Unit name' do
+      _(subject.first[:name]).must_equal unit.name
+    end
+
+    it 'returns the Unit title' do
+      _(subject.first[:title]).must_equal unit.title_for_display
+    end
+
+    it 'returns 0 percent completed' do
+      _(subject.first[:percent_completed]).must_equal 0
+    end
+
+    it 'returns nil finish_url' do
+      _(subject.first[:finish_url]).must_equal nil
+    end
+
+    it 'returns the current Lesson name' do
+      _(subject.first[:current_lesson_name]).must_equal unit.lessons.first.localized_name
+    end
+
+    it 'returns the path to the Unit' do
+      _(subject.first[:path]).must_equal "/courses/#{unit_group.name}/units/1"
+    end
+
+    context 'modularity experiment is off' do
+      let(:modularity_enabled) {false}
+
+      it 'returns the deprecated /s/ path' do
+        _(subject.first[:path]).must_equal "/s/#{unit.name}"
       end
     end
   end

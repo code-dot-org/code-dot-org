@@ -31,9 +31,11 @@ const defaultProps = {
 };
 
 describe('CourseOverviewTopRow', () => {
-  it('contains a SectionAssigner for a teacher', () => {
+  it('contains a SectionAssigner for a teacher if showV2TeacherDashboard is false', () => {
+    DCDO.set('teacher-local-nav-v2', false);
     const wrapper = shallow(<CourseOverviewTopRow {...defaultProps} />);
     expect(wrapper.find('Connect(SectionAssigner)').length).toEqual(1);
+    DCDO.set('teacher-local-nav-v2', true);
   });
 
   it('does not contain a SectionAssigner for a student', () => {
@@ -43,12 +45,10 @@ describe('CourseOverviewTopRow', () => {
     expect(wrapper.find('Connect(SectionAssigner)').length).toEqual(0);
   });
 
-  it('does not contain a SectionAssigner if showV2TeacherDashboard is true', () => {
-    DCDO.set('teacher-local-nav-v2', true);
+  it('does not contain a SectionAssigner', () => {
     const wrapper = shallow(
       <CourseOverviewTopRow {...defaultProps} isInstructor={false} />
     );
     expect(wrapper.find('Connect(SectionAssigner)').length).toEqual(0);
-    DCDO.set('teacher-local-nav-v2', false);
   });
 });

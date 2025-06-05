@@ -5,5 +5,6 @@
   "category_key": "control",
   "block_name": "play_sounds_together",
   "content": "All sounds placed within this block will play at the same time, allowing multiple instruments to play at once. ",
-  "short_description": "Plays multiple sounds at the same time"
+  "short_description": "Plays multiple sounds at the same time",
+  "video_key": "music-lab-roxanne-sequencing"
 }

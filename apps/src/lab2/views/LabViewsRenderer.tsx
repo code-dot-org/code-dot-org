@@ -3,18 +3,16 @@
  * currently active Lab (determined by the current app name). This
  * helps facilitate level-switching between labs without page reloads.
  */
-import {useTheme, Theme} from '@code-dot-org/component-library/common/contexts';
-import React, {Suspense, useEffect} from 'react';
+import React, {Suspense} from 'react';
 
-import {getCurrentLesson} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {capitalizeFirstLetter} from '@cdo/apps/util/capitalizeFirstLetter';
+import {PERMISSIONS} from '@cdo/apps/lab2/constants';
+import {useInitialLabTheme} from '@cdo/apps/lab2/hooks/useInitialLabTheme';
+import ProgressContainer from '@cdo/apps/lab2/progress/ProgressContainer';
+import {getAppOptionsViewingExemplar} from '@cdo/apps/lab2/projects/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../lab2EntryPoints';
-import {PERMISSIONS} from '../constants';
-import ProgressContainer from '../progress/ProgressContainer';
-import {getAppOptionsViewingExemplar} from '../projects/utils';
 
 import NoExemplarPage from './components/NoExemplarPage';
 import ExtraLinks from './ExtraLinks';
@@ -39,26 +37,10 @@ const LabViewsRenderer: React.FunctionComponent = () => {
 
   const isViewingExemplar = getAppOptionsViewingExemplar();
 
-  const capitalizedLessonBackground = useAppSelector(
-    state =>
-      capitalizeFirstLetter(
-        getCurrentLesson(state)?.background || 'light'
-      ) as Theme
-  );
-
-  // Set the theme for the current app.
-  const {setTheme} = useTheme();
-  useEffect(() => {
-    if (currentAppName) {
-      const supportedThemes = lab2EntryPoints[currentAppName]?.themes;
-
-      if (supportedThemes.includes(capitalizedLessonBackground)) {
-        setTheme(capitalizedLessonBackground);
-      } else {
-        setTheme(supportedThemes[0]);
-      }
-    }
-  }, [currentAppName, setTheme, capitalizedLessonBackground]);
+  useInitialLabTheme({
+    currentAppName,
+    levelProperties,
+  });
 
   // Do not render lab view if project is blocked and user is not a project validator.
   if (!currentAppName || (isBlocked && !isProjectValidator)) {

@@ -1,9 +1,9 @@
 name 'SP-PL-DS-Choice-DataVisuals_2025'
 display_name 'Practice with Data Visuals'
-description 'Choose one of the options below, or try them all!'
+description '#### In **Lesson 10**, students will deepen their understanding of data visualization by using additional features available in spreadsheets to analyze various datasets. They learn to use formulas and other visualization tools to interpret data through different lenses and discuss ethical considerations such as bias and privacy. **Choose one of the options below, or try them all!**'
 
 sublevels
-level 'sp-pl-DS-geochart_2025'
-level 'dsp-pl-DS-histogram_2025'
-level 'sp-pl-DS-usingFormulas_2025'
-level 'sp-pl-DS-lineGraphs_2025'
+level 'aif-pl-DS-histogram'
+level 'aif-pl-DS-scatterplot'
+level 'aif-pl-DS-using-Formulas'
+
