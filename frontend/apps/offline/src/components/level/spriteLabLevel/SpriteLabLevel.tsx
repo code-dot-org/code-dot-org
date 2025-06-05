@@ -7,18 +7,18 @@ import React, {
 } from 'react';
 
 import type {LevelData} from '@/app/models/level';
-import type {BlockDefinition} from '@/components/blockly';
-import type {Plugin} from '@/components/blockly/plugins';
-import BlockLimitsPlugin from '@/components/blockly/plugins/blockLimits';
-import FieldColourPlugin from '@/components/blockly/plugins/fields/fieldColour';
-import RectangleInputPlugin from '@/components/blockly/plugins/inputs/rectangle';
-import RoundInputPlugin from '@/components/blockly/plugins/inputs/round';
-import TriangleInputPlugin from '@/components/blockly/plugins/inputs/triangle';
-import SharableProceduresPlugin from '@/components/blockly/plugins/sharableProcedures';
-import ToolboxTrashcanPlugin from '@/components/blockly/plugins/toolboxTrashcan';
-import ThrasosRenderer from '@/components/blockly/renderers/thrasos';
-import DefaultTheme from '@/components/blockly/themes/default';
-import {getAllGeneratedCode} from '@/components/blockly/utils';
+import type {BlockDefinition} from '@/blockly';
+import type {Plugin} from '@/blockly/plugins';
+import BlockLimitsPlugin from '@/blockly/plugins/blockLimits';
+import FieldColourPlugin from '@/blockly/plugins/fields/fieldColour';
+import RectangleInputPlugin from '@/blockly/plugins/inputs/rectangle';
+import RoundInputPlugin from '@/blockly/plugins/inputs/round';
+import TriangleInputPlugin from '@/blockly/plugins/inputs/triangle';
+import SharableProceduresPlugin from '@/blockly/plugins/sharableProcedures';
+import ToolboxTrashcanPlugin from '@/blockly/plugins/toolboxTrashcan';
+import ThrasosRenderer from '@/blockly/renderers/thrasos';
+import DefaultTheme from '@/blockly/themes/default';
+import {getAllGeneratedCode} from '@/blockly/utils';
 import BlocklyLevel, {
   BlocklyLevelProps,
   BlocklyLevelEnvironment,

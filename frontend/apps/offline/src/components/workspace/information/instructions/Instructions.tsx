@@ -5,9 +5,8 @@ import Image from '@code-dot-org/component-library/image';
 import Typography from '@code-dot-org/component-library/typography';
 
 import type {HintData} from '@/app/models/level';
+import BlocklyMarkdown from '@/blockly/components/blocklyMarkdown';
 import LevelContext from '@/contexts/LevelContext';
-
-import BlocklyMarkdown from '../../../blockly/blocklyMarkdown';
 
 import moduleStyles from './instructions.module.scss';
 

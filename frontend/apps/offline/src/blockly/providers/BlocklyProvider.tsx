@@ -1,13 +1,13 @@
 import React, {PropsWithChildren, useState} from 'react';
 
-import type {Plugin} from '@/components/blockly/plugins';
+import BlocklyContext from '@/blockly/contexts/BlocklyContext';
+import type {Plugin} from '@/blockly/plugins';
 import type {
   BlockDefinition,
   Theme,
   Renderer,
   Environment,
-} from '@/components/blockly/types';
-import BlocklyContext from '@/contexts/BlocklyContext';
+} from '@/blockly/types';
 
 export interface BlocklyProviderProps extends PropsWithChildren {
   customBlocks?: BlockDefinition[];

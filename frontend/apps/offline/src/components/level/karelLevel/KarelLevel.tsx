@@ -1,7 +1,7 @@
 import React from 'react';
 
-import ThrasosRenderer from '@/components/blockly/renderers/thrasos';
-import DefaultTheme from '@/components/blockly/themes/default';
+import ThrasosRenderer from '@/blockly/renderers/thrasos';
+import DefaultTheme from '@/blockly/themes/default';
 import MazeLevel, {MazeLevelProps} from '@/components/level/mazeLevel';
 
 import * as api from './api';

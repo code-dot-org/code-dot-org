@@ -1,6 +1,6 @@
 import * as Blockly from 'blockly/core';
 
-import {frameSizes} from '@/components/blockly/constants';
+import {frameSizes} from '@/blockly/constants';
 
 const DEFAULT_HEADER_COLOR = '#949ca2';
 const DEFAULT_BASE_COLOR = '#e7e8ea';

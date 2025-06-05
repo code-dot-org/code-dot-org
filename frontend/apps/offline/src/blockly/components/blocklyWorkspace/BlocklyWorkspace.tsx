@@ -14,14 +14,19 @@ import React, {
   MutableRefObject,
 } from 'react';
 
-import BlocklyContext from '@/contexts/BlocklyContext';
+import BlocklyContext from '@/blockly/contexts/BlocklyContext';
 
-import {disableOrphans, grayOutUndeletableBlocks} from '../events';
-import FunctionBlockMixin from '../mixins/functionBlockMixin';
-import {PluginType} from '../plugins';
-import type {Plugin, GlobalPlugin, InjectPlugin, MixinPlugin} from '../plugins';
-import {positionBlocksOnWorkspace} from '../serialization';
-import DefaultTheme from '../themes/default';
+import {disableOrphans, grayOutUndeletableBlocks} from '../../events';
+import FunctionBlockMixin from '../../mixins/functionBlockMixin';
+import {PluginType} from '../../plugins';
+import type {
+  Plugin,
+  GlobalPlugin,
+  InjectPlugin,
+  MixinPlugin,
+} from '../../plugins';
+import {positionBlocksOnWorkspace} from '../../serialization';
+import DefaultTheme from '../../themes/default';
 import type {
   BlocklySerialization,
   BlockDefinition,
@@ -32,9 +37,9 @@ import type {
   Mutator,
   Environment,
   ProcedureBlock,
-} from '../types';
+} from '../../types';
 
-import moduleStyles from './blockly.module.scss';
+import moduleStyles from './blocklyWorkspace.module.scss';
 
 export interface BlocklyOptions extends Blockly.BlocklyOptions {
   /** When specified, this ensures that the given block exists and is the top block. */

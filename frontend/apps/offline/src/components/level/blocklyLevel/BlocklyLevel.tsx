@@ -7,23 +7,19 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Heading6} from '@code-dot-org/component-library/typography';
 
 import type {LevelData} from '@/app/models/level';
-import {
-  BlocklyWorkspace,
-  BlockDefinition,
-  BlocklyOptions,
-} from '@/components/blockly';
-import type {Plugin} from '@/components/blockly/plugins';
+import {BlocklyWorkspace, BlockDefinition, BlocklyOptions} from '@/blockly';
+import type {Plugin} from '@/blockly/plugins';
+import BlocklyProvider from '@/blockly/providers/BlocklyProvider';
 import type {
   Theme,
   Renderer,
   Environment,
   BlocklySerialization,
-} from '@/components/blockly/types';
-import {getToolboxWidth} from '@/components/blockly/utils';
+} from '@/blockly/types';
+import {getToolboxWidth} from '@/blockly/utils';
 import Workspace from '@/components/workspace';
 import Instructions from '@/components/workspace/information/instructions';
 import MultipleChoice from '@/components/workspace/information/multipleChoice';
-import BlocklyProvider from '@/providers/BlocklyProvider';
 
 import moduleStyles from './blocklyLevel.module.scss';
 

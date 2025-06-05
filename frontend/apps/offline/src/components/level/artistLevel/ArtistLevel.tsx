@@ -7,17 +7,14 @@ import React, {
 } from 'react';
 
 import type {LevelData} from '@/app/models/level';
-import type {BlockDefinition} from '@/components/blockly';
-import BlockLimitsPlugin from '@/components/blockly/plugins/blockLimits';
-import FieldColour from '@/components/blockly/plugins/fields/fieldColour';
-import ToolboxTrashcanPlugin from '@/components/blockly/plugins/toolboxTrashcan';
-import ThrasosRenderer from '@/components/blockly/renderers/thrasos';
-import DefaultTheme from '@/components/blockly/themes/default';
-import type {BlocklySerialization} from '@/components/blockly/types';
-import {
-  getCodeFromBlockJsonSource,
-  getAllGeneratedCode,
-} from '@/components/blockly/utils';
+import type {BlockDefinition} from '@/blockly';
+import BlockLimitsPlugin from '@/blockly/plugins/blockLimits';
+import FieldColour from '@/blockly/plugins/fields/fieldColour';
+import ToolboxTrashcanPlugin from '@/blockly/plugins/toolboxTrashcan';
+import ThrasosRenderer from '@/blockly/renderers/thrasos';
+import DefaultTheme from '@/blockly/themes/default';
+import type {BlocklySerialization} from '@/blockly/types';
+import {getCodeFromBlockJsonSource, getAllGeneratedCode} from '@/blockly/utils';
 import BlocklyLevel, {BlocklyLevelProps} from '@/components/level/blocklyLevel';
 
 import * as defaultAPI from './api';

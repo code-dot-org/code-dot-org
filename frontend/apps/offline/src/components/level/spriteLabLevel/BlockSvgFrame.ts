@@ -1,6 +1,6 @@
 import * as Blockly from 'blockly/core';
 
-import {frameSizes} from '@/components/blockly/constants';
+import {frameSizes} from '@/blockly/constants';
 
 import SvgFrame from './SvgFrame';
 

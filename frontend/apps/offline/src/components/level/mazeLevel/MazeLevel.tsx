@@ -11,16 +11,16 @@ import type {MazeController} from '@code-dot-org/maze';
 
 import type {LevelData} from '@/app/models/level';
 import {SoundBoard, PlaybackOptions} from '@/audio';
-import type {BlockDefinition} from '@/components/blockly';
-import BlockLimitsPlugin from '@/components/blockly/plugins/blockLimits';
-import ToolboxTrashcanPlugin from '@/components/blockly/plugins/toolboxTrashcan';
-import ThrasosRenderer from '@/components/blockly/renderers/thrasos';
-import DefaultTheme from '@/components/blockly/themes/default';
-import type {BlocklySerialization} from '@/components/blockly/types';
-import {getAllGeneratedCode} from '@/components/blockly/utils';
+import type {BlockDefinition} from '@/blockly';
+import BlockLimitsPlugin from '@/blockly/plugins/blockLimits';
+import ToolboxTrashcanPlugin from '@/blockly/plugins/toolboxTrashcan';
+import ThrasosRenderer from '@/blockly/renderers/thrasos';
+import DefaultTheme from '@/blockly/themes/default';
+import type {BlocklySerialization} from '@/blockly/types';
+import {getAllGeneratedCode} from '@/blockly/utils';
 import BlocklyLevel, {BlocklyLevelProps} from '@/components/level/blocklyLevel';
-import {useTimeout} from '@/components/useTimeout';
 import LevelContext from '@/contexts/LevelContext';
+import {useTimeout} from '@/hooks/useTimeout';
 
 import * as defaultAPI from './api';
 import blocks from './blocks';

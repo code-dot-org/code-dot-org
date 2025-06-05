@@ -11,8 +11,8 @@ import URL from 'url';
 
 import type {MazeData} from '@code-dot-org/maze';
 
-import type {BlocklySerialization} from '@/components/blockly/types';
-import {convertBlocklyXmlToJson} from '@/components/blockly/xml';
+import type {BlocklySerialization} from '@/blockly/types';
+import {convertBlocklyXmlToJson} from '@/blockly/xml';
 
 /** Describes a single level hint. */
 export interface HintData {

@@ -1,8 +1,8 @@
 import {FieldGridDropdown} from '@blockly/field-grid-dropdown';
 import * as Blockly from 'blockly/core';
 
-import {PluginType} from '@/components/blockly/plugins';
-import type {GlobalPlugin} from '@/components/blockly/plugins';
+import {PluginType} from '@/blockly/plugins';
+import type {GlobalPlugin} from '@/blockly/plugins';
 
 /**
  * Implements extra logic to style the image dropdown for sprite selection.

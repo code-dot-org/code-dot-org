@@ -6,15 +6,16 @@ import React from 'react';
 
 import {BodyTwoText} from '@code-dot-org/component-library/typography';
 
-import BlocklyWorkspace from '@/components/blockly/blocklyWorkspace';
+import BlocklyWorkspace from '@/blockly/components/blocklyWorkspace';
+import {convertBlocklyXmlToJson} from '@/blockly/xml';
+import Markdown, {MarkdownProps} from '@/components/markdown';
+
 import type {Plugin} from '@/components/blockly/plugins';
 import type {
   Theme,
   Renderer,
   BlockDefinition,
 } from '@/components/blockly/types';
-import {convertBlocklyXmlToJson} from '@/components/blockly/xml';
-import Markdown, {MarkdownProps} from '@/components/markdown';
 
 export interface BlocklyMarkdownProps extends MarkdownProps {
   customBlocks?: BlockDefinition[];
