@@ -8,6 +8,22 @@ class TestSection
     @@rng ||= Random.new(0)
   end
 
+  # Creates a test section with students and mocked student progress.
+  # Options:
+  # - :preset_name - 'csp4', 'random', or nil (defaults to 'csp4' if not specified)
+  #     If 'csp4', uses preset specified data from TestSectionData::CSP_4_TEST_SECTION preset data.
+  #     If 'random', creates a section with random progress. Only creates teacher_feedback and user_levels.
+  # - :teacher_id - ID of the teacher to assign to the section, or nil to create a default teacher
+  #      Default teacher has email TestSectionData::DEFAULT_TEACHER_EMAIL, and password TestSectionData::DEFAULT_TEACHER_PASSWORD.
+  # - :section_name - Name of the section to create, defaults to TestSectionData::DEFAULT_SECTION_NAME
+  # - :num_students - Number of students to add to the section, defaults to TestSectionData::DEFAULT_NUM_STUDENTS
+  # - :unit_name - Name of the unit to use, defaults to TestSectionData::DEFAULT_UNIT. Only used when preset_name is 'random'.
+  # - :unit_group_name - Name of the unit group to use, defaults to TestSectionData::DEFAULT_UNIT_GROUP. Only used when preset_name is 'random'.
+  # - :age - Age of students, defaults to 15 for 'csp4' and random for 'random'
+  #
+  # Only runs in non-production environments (development, adhoc, staging, test).
+  # Only creates a new teacher if :teacher_id is not provided and only on adhoc or development.
+  #
   def self.seed(options)
     seed_environment_check!
 
