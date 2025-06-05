@@ -303,7 +303,7 @@ steps:
       - clone
     pull: always
     volumes:
-      - name: rbenv
+      - name: unit-rbenv
         path: /home/ci/.rbenv
     commands:
       - sudo chown -R ci:ci .
@@ -314,7 +314,7 @@ steps:
     depends_on:
       - prepare-unit-tests
     volumes:
-      - name: rbenv
+      - name: unit-rbenv
         path: /home/ci/.rbenv
     settings:
       filename: cache-unit-test-build-artifacts.tar.gz
@@ -339,7 +339,7 @@ steps:
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
     volumes:
-      - name: rbenv
+      - name: ui-rbenv
         path: /home/ci/.rbenv
       - name: mysql
         path: /var/lib/mysql
@@ -352,7 +352,7 @@ steps:
     depends_on:
       - prepare-ui-tests
     volumes:
-      - name: rbenv
+      - name: ui-rbenv
         path: /home/ci/.rbenv
       - name: mysql
         path: /var/lib/mysql
@@ -369,7 +369,9 @@ steps:
         - ./apps/node_modules
 
 volumes:
-  - name: rbenv
+  - name: unit-rbenv
+    temp: {}
+  - name: ui-rbenv
     temp: {}
   - name: mysql
     temp: {}
