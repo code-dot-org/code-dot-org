@@ -1,7 +1,4 @@
-import type {
-  BlockDefinition,
-  BlockOptionsList,
-} from '@/components/blockly/types';
+import type {BlockDefinition, BlockOptionsList} from '@/blockly/types';
 
 import {
   behaviorsBlockFrame,

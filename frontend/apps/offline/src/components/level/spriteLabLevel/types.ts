@@ -1,6 +1,6 @@
 import * as Blockly from 'blockly/core';
 
-import type {LegacyProcedureBlock} from '@/components/blockly/types';
+import type {LegacyProcedureBlock} from '@/blockly/types';
 
 export type AugmentedProcedureBlock = LegacyProcedureBlock & {
   behaviorId: string;

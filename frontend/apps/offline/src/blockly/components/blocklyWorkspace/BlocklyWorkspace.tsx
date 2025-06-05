@@ -403,7 +403,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
     )) {
       const injectPlugin = plugin as InjectPlugin;
       if (injectPlugin.useWithInline || !inline) {
-        injectPlugin.instantiate(workspace.current, theme);
+        injectPlugin.instantiate(workspace.current, theme || DefaultTheme);
       }
     }
 

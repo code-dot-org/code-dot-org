@@ -1,6 +1,6 @@
 import * as Blockly from 'blockly/core';
 
-import type {Environment} from '@/components/blockly/types';
+import type {Environment} from '@/blockly/types';
 
 import type {SpriteLabLevelEnvironment} from './SpriteLabLevel';
 import type {AugmentedProcedureBlock} from './types';

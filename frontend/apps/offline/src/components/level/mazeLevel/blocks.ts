@@ -4,7 +4,7 @@ import * as En from 'blockly/msg/en';
 
 import type {Skin} from '@code-dot-org/maze';
 
-import type {BlockDefinition} from '@/components/blockly/types';
+import type {BlockDefinition} from '@/blockly/types';
 
 const blocks: BlockDefinition[] = [
   {

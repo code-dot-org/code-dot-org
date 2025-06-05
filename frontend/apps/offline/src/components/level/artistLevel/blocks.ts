@@ -2,7 +2,7 @@ import * as Blockly from 'blockly/core';
 import {javascriptGenerator, Order} from 'blockly/javascript';
 import * as En from 'blockly/msg/en';
 
-import type {BlockDefinition} from '@/components/blockly/types';
+import type {BlockDefinition} from '@/blockly/types';
 
 import type {Skin} from './skins';
 

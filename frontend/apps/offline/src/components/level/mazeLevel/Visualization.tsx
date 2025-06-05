@@ -5,6 +5,7 @@ import Button from '@code-dot-org/component-library/button';
 import {LOOK_ID, SVG_ID} from './constants';
 
 export interface VisualizationProps {
+  disabled: boolean;
   stepping: boolean;
   running: boolean;
   stepButton: boolean;
@@ -19,6 +20,7 @@ export interface VisualizationProps {
 const Visualization = forwardRef<SVGSVGElement, VisualizationProps>(
   (
     {
+      disabled,
       running,
       stepping,
       onRun,
@@ -51,6 +53,7 @@ const Visualization = forwardRef<SVGSVGElement, VisualizationProps>(
         {!running && !stepping && (
           <Button
             text="Run"
+            disabled={disabled}
             onClick={onRun}
             iconLeft={{
               iconName: 'play',
@@ -61,6 +64,7 @@ const Visualization = forwardRef<SVGSVGElement, VisualizationProps>(
         {(running || stepping) && (
           <Button
             text="Reset"
+            disabled={disabled}
             onClick={onReset}
             iconLeft={{
               iconName: 'rotate-right',
@@ -71,6 +75,7 @@ const Visualization = forwardRef<SVGSVGElement, VisualizationProps>(
         {!!finishButton && (
           <Button
             text="Finish"
+            disabled={disabled}
             type="secondary"
             color="black"
             onClick={onFinish}
@@ -81,7 +86,7 @@ const Visualization = forwardRef<SVGSVGElement, VisualizationProps>(
             text="Step"
             type="secondary"
             color="black"
-            disabled={running}
+            disabled={running || disabled}
             onClick={onStep}
           />
         )}

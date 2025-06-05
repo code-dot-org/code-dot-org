@@ -1,6 +1,6 @@
 import * as Blockly from 'blockly/core';
 
-import type {ProcedureBlock, Environment} from '@/components/blockly/types';
+import type {ProcedureBlock, Environment} from '@/blockly/types';
 
 import BlockSvgFrame from './BlockSvgFrame';
 import type {FieldSpriteDropdown} from './fields/fieldSpriteDropdown';
