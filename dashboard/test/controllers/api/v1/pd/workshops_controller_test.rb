@@ -11,7 +11,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     @program_manager = create(:program_manager, regional_partner: @regional_partner)
     @organizer = @program_manager
     @workshop_organizer = create(:workshop_organizer)
-    @facilitator = create(:facilitator)
+    @facilitator = create(:facilitator, course: Pd::Workshop::COURSES.first)
     @csf_facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
 
     @workshop = create(
@@ -1194,6 +1194,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
   test 'Facilitator-organizers get all their workshops when calling index' do
     user = create :workshop_organizer
     user.permission = UserPermission::FACILITATOR
+    create :pd_course_facilitator, facilitator: user, course: Pd::Workshop::COURSES.first
     expected_workshops = [
       create(:workshop, facilitators: [user]),
       create(:workshop, num_facilitators: 1, organizer: user),

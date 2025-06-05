@@ -42,12 +42,12 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'query by facilitator' do
-    facilitator = create(:facilitator)
+    facilitator = create(:facilitator, course: @workshop.course)
     @workshop.facilitators << facilitator
     @workshop.save!
 
     # create a workshop with a different facilitator, which should not be returned below
-    create(:workshop, facilitators: [create(:facilitator)])
+    create(:workshop, num_facilitators: 1)
 
     workshops = Pd::Workshop.facilitated_by facilitator
     assert_equal 1, workshops.length
@@ -105,6 +105,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'managed_by' do
     user = create :workshop_organizer
     user.permission = UserPermission::FACILITATOR
+    create :pd_course_facilitator, facilitator: user, course: COURSES.first
     regional_partner = create(:regional_partner_program_manager, program_manager: user).regional_partner
 
     expected_workshops = [
@@ -799,7 +800,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).returns(mock_mail).times(2)
     Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).returns(mock_mail)
 
-    workshop = create :workshop, facilitators: [create(:facilitator), create(:facilitator)]
+    workshop = create :workshop, num_facilitators: 2
     create_list :pd_enrollment, 3, workshop: workshop
     Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
 
@@ -835,7 +836,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).returns(mock_mail)
 
-    workshop = create :workshop, facilitators: [create(:facilitator), create(:facilitator)]
+    workshop = create :workshop, num_facilitators: 2
     create_list :pd_enrollment, 3, workshop: workshop
     Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
 
@@ -854,7 +855,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).returns(mock_mail).times(2)
     Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).returns(mock_mail)
 
-    workshop = create :workshop, facilitators: [create(:facilitator), create(:facilitator)]
+    workshop = create :workshop, num_facilitators: 2
     create_list :pd_enrollment, 3, workshop: workshop
     Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
 
@@ -870,8 +871,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     mock_mail = stub
     mock_mail.stubs(:deliver_now).returns(nil)
 
-    facilitator = create :facilitator
+    facilitator = create :facilitator, course: COURSES.first
     organizer = create :workshop_organizer
+    create :pd_course_facilitator, facilitator: organizer, course: COURSES.first
 
     # The organizer is also a facilitator, and should not receive a facilitator reminder email.
     workshop = create :workshop, organizer: organizer, facilitators: [organizer, facilitator]
@@ -1426,7 +1428,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'send_automated_emails sends pre-workshop 10 days before' do
     workshop = create :csf_intro_workshop, sessions_from: Time.zone.today + 10.days
 
-    facilitator = create(:facilitator)
+    facilitator = create(:facilitator, course: workshop.course)
     workshop.facilitators = [facilitator]
     workshop.save!
 
