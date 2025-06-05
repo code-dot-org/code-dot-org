@@ -12,6 +12,7 @@ import React, {
 import {useSelector} from 'react-redux';
 import {useParams} from 'react-router-dom';
 
+import {CourseBuildYourOwn} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {useDebounce} from '@cdo/apps/util/hooks/useDebounce';
 import {useFetch} from '@cdo/apps/util/useFetch';
 
@@ -65,11 +66,10 @@ export const PartnerFacilitator: FC<PartnerFacilitatorProps> = ({
         .join('&');
 
       url += '?' + courseOfferingsParams;
-      setFacilitatorUrl(url);
-    } else if (label) {
+    } else if (label && label !== CourseBuildYourOwn) {
       url += `?course=${encodeURIComponent(label)}`;
-      setFacilitatorUrl(url);
     }
+    setFacilitatorUrl(url);
   }, [label, debouncedCourseOfferings]);
 
   useEffect(() => {
