@@ -307,6 +307,9 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
   test 'workshops_as_facilitator_for_pl_page returns live facilitated workshops' do
     prepare_scenario
     facilitator = create :facilitator
+    create :pd_course_facilitator, facilitator: facilitator, course: Pd::Workshop::COURSE_CSD
+    create :pd_course_facilitator, facilitator: facilitator, course: Pd::Workshop::COURSE_CSA
+    create :pd_course_facilitator, facilitator: facilitator, course: Pd::Workshop::COURSE_CSF
     load_pl_landing facilitator
 
     # Check that no workshops are returned if user isn't facilitating any

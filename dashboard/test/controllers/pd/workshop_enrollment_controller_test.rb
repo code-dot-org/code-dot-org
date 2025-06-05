@@ -6,7 +6,6 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
   setup_all do
     @organizer = create :program_manager
     @workshop_organizer = create :workshop_organizer
-    @facilitator = create :facilitator
     @teacher = create :teacher
 
     @school_district = create :school_district
@@ -15,6 +14,7 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
 
   setup do
     @workshop = create :workshop, organizer: @organizer, num_sessions: 1
+    @facilitator = create :facilitator, course: @workshop.course
     @workshop.facilitators << @facilitator
     @existing_enrollment = create :pd_enrollment, workshop: @workshop
 

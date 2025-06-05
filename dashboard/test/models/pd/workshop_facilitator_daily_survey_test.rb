@@ -10,9 +10,11 @@ module Pd
     self.use_transactional_test_case = true
     setup_all do
       @user = create :user
-      @facilitator = create :facilitator
       @pd_summer_workshop = create :csp_summer_workshop, facilitators: [@facilitator]
       @pd_academic_year_workshop = create :csp_academic_year_workshop, facilitators: [@facilitator]
+      @facilitator = create :facilitator
+      create :pd_course_facilitator, facilitator: @facilitator, course: @pd_summer_workshop
+      create :pd_course_facilitator, facilitator: @facilitator, course: @pd_academic_year_workshop
     end
 
     test 'response_exists? and create_placeholder!' do

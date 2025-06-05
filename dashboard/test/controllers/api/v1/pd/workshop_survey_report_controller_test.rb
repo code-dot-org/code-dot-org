@@ -6,7 +6,7 @@ module Api::V1::Pd
 
     self.use_transactional_test_case = true
     setup_all do
-      @facilitator = create :facilitator
+      @facilitator = create :facilitator, course: COURSES.first
       @program_manager = create :program_manager
       @workshop = create(:workshop, organizer: @program_manager, facilitators: [@facilitator])
       @admin = create :workshop_admin

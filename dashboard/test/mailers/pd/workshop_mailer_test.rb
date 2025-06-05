@@ -22,8 +22,9 @@ class WorkshopMailerTest < ActionMailer::TestCase
   end
 
   test 'reminder emails are sent for workshops without suppress_reminders?' do
-    facilitator = create :facilitator
-    workshop = create :workshop, facilitators: [facilitator]
+    workshop = create :workshop
+    facilitator = create :facilitator, course: workshop.course
+    workshop.facilitators << facilitator
     enrollment = create :pd_enrollment, workshop: workshop
     Pd::Workshop.any_instance.expects(:suppress_reminders?).returns(false).times(3)
 
@@ -35,8 +36,9 @@ class WorkshopMailerTest < ActionMailer::TestCase
   end
 
   test 'reminder emails are skipped for workshops with suppress_reminders?' do
-    facilitator = create :facilitator
-    workshop = create :workshop, facilitators: [facilitator]
+    workshop = create :workshop
+    facilitator = create :facilitator, course: workshop.course
+    workshop.facilitators << facilitator
     enrollment = create :pd_enrollment, workshop: workshop
     Pd::Workshop.any_instance.expects(:suppress_reminders?).returns(true).times(3)
 

@@ -7,7 +7,7 @@ module Pd::SurveyPipeline
 
     self.use_transactional_test_case = true
     setup_all do
-      @facilitators = create_list :facilitator, 2
+      @facilitators = create_list :facilitator, 2, course: Pd::Workshop::COURSE_CSF
       @workshop = create :csf_deep_dive_workshop, facilitators: @facilitators
 
       @program_manager = create :program_manager
@@ -215,7 +215,7 @@ module Pd::SurveyPipeline
     end
 
     test 'get context of CSF survey submissions' do
-      facilitator = create :facilitator
+      facilitator = create :facilitator, course: Pd::Workshop::COURSE_CSF
       workshop = create :csf_deep_dive_workshop, facilitators: [facilitator]
       form_id = '1122334455'.to_i
 
