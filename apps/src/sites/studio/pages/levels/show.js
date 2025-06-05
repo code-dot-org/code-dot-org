@@ -54,6 +54,7 @@ function initPage() {
 
   const differentiationContext = {
     type: AiDiffContext.LEVEL,
+    hasStudentCode: getScriptData('hasstudentcode'),
   };
 
   if (hasScriptData('script[data-aitutordata]')) {
