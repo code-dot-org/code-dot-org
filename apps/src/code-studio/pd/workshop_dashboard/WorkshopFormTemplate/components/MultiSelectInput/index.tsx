@@ -129,7 +129,12 @@ export const MultiSelectInput: React.FC<{
     setSelectedOptions(selectedOptions.filter(opt => opt.id !== option.id));
   };
 
-  const handleClearAll = () => {
+  const handleClearAll = (
+    e?:
+      | React.MouseEvent<HTMLButtonElement, MouseEvent>
+      | React.KeyboardEvent<HTMLButtonElement>
+  ) => {
+    e?.stopPropagation();
     setSelectedOptions([]);
     reset();
   };
