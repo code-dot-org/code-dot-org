@@ -35,7 +35,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-03 14:51:40 UTC",
+    "serialized_at": "2025-06-04 19:44:12 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1220,7 +1220,7 @@
       "key": "a81c747b-bccf-4aa1-b716-f06a26510dab",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 5. Students choose one of the AI Chat levels that is configured for a specific task. They start by giving the AI Chat a generic prompt first (such as \"Help me plan a trip to Disney World\"), then make it more specific, then make it more specific and add an image. Students should update their prompt or interact with the AI Chat in at least three back and forth interactions.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 5. Students choose one of the AI Chat levels that is configured for a specific task. They start by giving the AI Chat a generic prompt first (such as \"Help me prepare for a class presentation.\"), then make it more specific, then make it more specific and add an image. Students should update their prompt or interact with the AI Chat in at least three back and forth interactions.",
         "progression_name": "Prompting Practice",
         "tips": [
           {
@@ -1267,7 +1267,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students sit in a circle or small groups. Pose the Question of the Day to students. One by one, they quickly state their answer to the Question of the Day. Responses should be brief (one sentence or key phrase). They should see how many unique answers they can come up with.",
-        "name": "Rapid Roundatable",
+        "name": "Rapid Roundtable",
         "tips": [
           {
             "type": "teachingTip",

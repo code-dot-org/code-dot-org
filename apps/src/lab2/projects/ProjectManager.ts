@@ -10,7 +10,7 @@
  *
  * If a project manager is destroyed, the enqueued save will be cancelled, if it exists.
  */
-import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
+import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {currentLocation} from '@cdo/apps/utils';
 
 import LabMetricsReporter from '../Lab2MetricsReporter';
@@ -19,6 +19,7 @@ import {ValidationError} from '../responseValidators';
 import {Channel, ProjectAndSources, ProjectSources} from '../types';
 
 import {ChannelsStore} from './ChannelsStore';
+import {getProjectThumbnailUrl, updateProjectThumbnail} from './filesApi';
 import {SourcesStore} from './SourcesStore';
 
 const {reload} = require('@cdo/apps/utils');
@@ -338,7 +339,7 @@ export default class ProjectManager {
 
   setThumbnail(pngBlob: Blob) {
     this.thumbnailPngBlob = pngBlob;
-    this.thumbnailUrl = `/v3/files/${this.channelId}/.metadata/thumbnail.png`;
+    this.thumbnailUrl = getProjectThumbnailUrl(this.channelId);
   }
 
   /**
@@ -347,14 +348,7 @@ export default class ProjectManager {
   async saveThumbnail() {
     if (this.thumbnailUrl && this.thumbnailPngBlob) {
       try {
-        return await HttpClient.put(
-          this.thumbnailUrl,
-          this.thumbnailPngBlob,
-          true, // useAuthenticityToken
-          {
-            'Content-Type': 'image/png',
-          }
-        );
+        updateProjectThumbnail(this.channelId, this.thumbnailPngBlob);
       } catch (e) {
         this.metricsReporter.logWarning('Failed to save thumbnail.');
         return;

@@ -2,6 +2,7 @@ import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Modal from '@code-dot-org/component-library/modal';
 import Tags from '@code-dot-org/component-library/tags';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {
   BodyOneText,
   BodyTwoText,
@@ -9,7 +10,7 @@ import {
 } from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React, {useState} from 'react';
+import React, {Fragment, useState} from 'react';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -21,19 +22,22 @@ import GradeLevelsBarDisplay from './GradeLevelsBarDisplay';
 
 import style from './regionalWorkshopCatalog.module.scss';
 
-const buildWorkshopStartText = sessions => {
+const buildSessionDateAndTime = session => {
   const firstSessionDate = getSessionDate({
-    session: sessions[0],
+    session: session,
     format: 'MM/DD/YY',
-    isLocal: sessions[0].is_local,
+    isLocal: session.is_local,
   });
   const {startTime, endTime} = getSessionTimes({
-    session: sessions[0],
+    session: session,
     format: 'h:mmA',
-    isLocal: sessions[0].is_local,
+    isLocal: session.is_local,
   });
-  const firstSessionDateTime = `${firstSessionDate} (${startTime}-${endTime})`;
+  return `${firstSessionDate} (${startTime}-${endTime})`;
+};
 
+const buildWorkshopStartText = sessions => {
+  const firstSessionDateTime = buildSessionDateAndTime(sessions[0]);
   return sessions.length > 1
     ? `${firstSessionDateTime} + ${sessions.length - 1} More`
     : firstSessionDateTime;
@@ -136,12 +140,28 @@ const RegionalWorkshopCatalogCard = ({
             )}
           </div>
           <div className={style.infoBlock}>
-            <span className={style.infoLine}>
-              <div className={style.infoLineIconContainer}>
-                <FontAwesomeV6Icon iconName={'calendar'} />
-              </div>
-              <BodyTwoText>{buildWorkshopStartText(sessions)}</BodyTwoText>
-            </span>
+            <WithTooltip
+              tooltipProps={{
+                tooltipId: sessions[0].start,
+                size: 'xs',
+                text: sessions.map(session => {
+                  const text = buildSessionDateAndTime(session);
+                  return (
+                    <Fragment key={text}>
+                      {text}
+                      <br />
+                    </Fragment>
+                  );
+                }),
+              }}
+            >
+              <span className={style.infoLine}>
+                <div className={style.infoLineIconContainer}>
+                  <FontAwesomeV6Icon iconName={'calendar'} />
+                </div>
+                <BodyTwoText>{buildWorkshopStartText(sessions)}</BodyTwoText>
+              </span>
+            </WithTooltip>
             <span className={style.infoLine}>
               <div className={style.infoLineIconContainer}>
                 <FontAwesomeV6Icon iconName={'screen-users'} />
