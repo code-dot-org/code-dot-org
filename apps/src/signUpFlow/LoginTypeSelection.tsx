@@ -23,6 +23,7 @@ import {isEmail} from '@cdo/apps/util/formatValidation';
 import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import statsigReporter from '../metrics/StatsigReporter';
 import {navigateToHref} from '../utils';
 
 import {
@@ -65,6 +66,19 @@ const LoginTypeSelection: React.FunctionComponent<{
   const [authToken, setAuthToken] = useState('');
   const [createAccountButtonDisabled, setCreateAccountButtonDisabled] =
     useState(true);
+
+  const [revealClever, setRevealClever] = useState(false);
+  const hideCleverOption = statsigReporter.getIsInExperiment(
+    'removing_clever_from_sign_up',
+    'hide_clever_option',
+    false
+  );
+
+  const showMoreOptions = statsigReporter.getIsInExperiment(
+    'removing_clever_from_sign_up',
+    'show_more_options',
+    false
+  );
 
   const isTeacher = userType === UserTypes.TEACHER;
   const finishAccountUrl = isTeacher
@@ -271,16 +285,28 @@ const LoginTypeSelection: React.FunctionComponent<{
             />
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
-          <form action="/users/auth/clever" method="POST">
+          {showMoreOptions && !revealClever && (
             <Button
-              text={locale.sign_up_clever()}
-              onClick={() => selectOauthLoginType('clever')}
-              iconLeft={{iconName: 'kit fa-clever', iconStyle: 'solid'}}
-              className={style.cleverButton}
-              buttonTagTypeAttribute="submit"
+              text="show more options"
+              onClick={() => setRevealClever(true)}
             />
-            <input type="hidden" name="authenticity_token" value={authToken} />
-          </form>
+          )}
+          {(!hideCleverOption || revealClever) && (
+            <form action="/users/auth/clever" method="POST">
+              <Button
+                text={locale.sign_up_clever()}
+                onClick={() => selectOauthLoginType('clever')}
+                iconLeft={{iconName: 'kit fa-clever', iconStyle: 'solid'}}
+                className={style.cleverButton}
+                buttonTagTypeAttribute="submit"
+              />
+              <input
+                type="hidden"
+                name="authenticity_token"
+                value={authToken}
+              />
+            </form>
+          )}
           <div className={style.greyTextbox}>
             {!isTeacher && (
               <div className={style.iconContainer}>
