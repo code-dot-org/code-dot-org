@@ -109,7 +109,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   const [suggestionPage, setSuggestionPage] = useState(0);
 
   const viewAsUserId = useAppSelector(
-    state => state.progress.viewAsUserId || undefined
+    state => state.progress?.viewAsUserId || undefined
   );
 
   const additionalPrompts: ChatPrompt[] = [];
