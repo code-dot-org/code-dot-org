@@ -19,7 +19,7 @@ class SoundBoard {
     [key: string]: Sound;
   };
   /** Whether or not to play via playUrl */
-  private isMuted: boolean = false;
+  private muted: boolean = false;
   /** The ids of paused sounds */
   private pausedSounds: string[] = [];
 
@@ -80,7 +80,7 @@ class SoundBoard {
    * again. Use `unload` to deregister the played URL audio.
    */
   playUrl(url: string, playbackOptions?: PlaybackOptions) {
-    if (this.isMuted) {
+    if (this.muted) {
       return;
     }
 
@@ -113,7 +113,7 @@ class SoundBoard {
   }
 
   playBytes(id: string, bytes: ArrayBuffer, playbackOptions?: PlaybackOptions) {
-    if (this.isMuted) {
+    if (this.muted) {
       return;
     }
 
@@ -141,25 +141,33 @@ class SoundBoard {
   }
 
   /**
+   * Stops playing the given sound by id.
+   */
+  stop(id: string) {
+    const sound: Sound | undefined = this.soundsById[id];
+    sound?.stop();
+  }
+
+  /**
    * Stops playing the sound using the URL as an id, as via playUrl.
    */
   stopPlayingUrl(url: string) {
-    const sound: Sound | undefined = this.soundsById[url];
-    sound?.stop();
+    // URLs are just ids, so just pass it to the stop method.
+    this.stop(url);
   }
 
   /**
    * While muted, playURL() has no effect.
    */
   muteURLs() {
-    this.isMuted = true;
+    this.muted = true;
   }
 
   /**
    * Reverses the muteURLs call to ensure playURL() takes effect.
    */
   unmuteURLs() {
-    this.isMuted = false;
+    this.muted = false;
   }
 
   /**
