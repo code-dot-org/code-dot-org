@@ -106,7 +106,7 @@ steps:
         from_secret: CLOUDFRONT_PRIVATE_KEY
     commands:
       # Cached data gets restored by the root user, so we need to reassign
-      - sudo chown -R ci:ci .
+      - sudo chown -R ci:ci . ~
       # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
       - export GIT_COMMIT=$DRONE_COMMIT
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
@@ -244,7 +244,7 @@ steps:
     shm_size: '2gb' # necessary to avoid "invalid session id"/"session deleted because of page crash" errors in Selenium
     commands:
       # Cached data gets restored by the root user, so we need to reassign
-      - sudo chown -R ci:ci .
+      - sudo chown -R ci:ci . ~
       - sudo chown -R mysql:mysql /var/lib/mysql
       # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
       - export GIT_COMMIT=$DRONE_COMMIT
@@ -320,7 +320,7 @@ steps:
       - name: mysql
         path: /var/lib/mysql
     commands:
-      - sudo chown -R ci:ci .
+      - sudo chown -R ci:ci . ~
       - /entrypoint.sh docker/ci/scripts/prepare_ui_tests.sh
 
   - name: cache-staging-misc-build-artifacts
