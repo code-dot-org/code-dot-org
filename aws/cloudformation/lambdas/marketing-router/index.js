@@ -1,8 +1,9 @@
 'use strict';
+const env = require('env.json');
 
-// This variable is injected via CloudFormation string substitution. This file must be used
-// in conjunction with the CloudFormation Sub function to set the value of MarketingDomainName.
-const marketingDomain = '${InternalMarketingDomainName}'
+// This variable is set via a CloudFormation parameter and passed in at build time.
+// It should contain the environment-specific domain of the marketing site Cloudfront distribution
+const marketingDomain = env.marketingDomain
 
 const marketingPaths = {
   // Add key-value pairs for each path that should be served by the CMS
