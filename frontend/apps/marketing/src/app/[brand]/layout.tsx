@@ -1,4 +1,5 @@
 import {GoogleAnalytics} from '@next/third-parties/google';
+import {headers} from 'next/headers';
 
 import Footer from '@/components/footer';
 import Header from '@/components/header';
@@ -26,6 +27,7 @@ export default async function Layout({
   params: Promise<{brand: Brand}>;
 }>) {
   const syncParams = await params;
+  const hostname = (await headers()).get('Host');
   const {brand} = syncParams;
 
   const googleAnalyticsMeasurementId = getGoogleAnalyticsMeasurementId(brand);
@@ -36,7 +38,7 @@ export default async function Layout({
     <>
       <EnvironmentLoader />
       <NewRelicLoader />
-      <OneTrustLoader brand={brand} />
+      {hostname && <OneTrustLoader brand={brand} hostname={hostname} />}
 
       <OneTrustProvider>
         {googleAnalyticsMeasurementId && (
