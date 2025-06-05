@@ -367,11 +367,13 @@ test.describe('All the things UI e2e test', () => {
         }
       });
 
-      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+      test('eyes', {tag: '@eyes'}, async ({page, eyes}, testInfo) => {
         for (const dialog of await component.getByRole('group').all()) {
           await dialog.click();
           await expect(dialog).toHaveAttribute('open');
         }
+
+        await page.waitForTimeout(500);
 
         await eyes.check(testInfo.title, {region: component});
       });
