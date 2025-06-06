@@ -202,24 +202,23 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
   };
 
   const [scrollStart, scrollEnd] = useMemo(() => {
-    const {cellHeight, rowGap, displayRows, peekHeight} = styles;
+    const {cellHeight, rowGap, peekHeight} = styles;
     if (editorType !== 'notes') {
       return [0, 0];
     }
 
     const notesInOctave = scaleMode === 'chromatic' ? 12 : 7;
     // Scroll so that the middle octave is at the bottom of the editor.
-    const topVisibleRow =
-      displayNotes.length - notesInOctave - parseInt(displayRows);
-    // Start scrolling a few rows below
-    const scrollStartRow = topVisibleRow + 3;
+    const firstVisibleRow = notesInOctave;
+    // Start scrolling from a few rows beyond.
+    const scrollStartRow = firstVisibleRow + 3;
     const cellHeightWithGap = parseInt(cellHeight) + parseInt(rowGap);
 
     return [
       -(scrollStartRow * cellHeightWithGap),
-      -(topVisibleRow * cellHeightWithGap - parseInt(peekHeight)),
+      -(firstVisibleRow * cellHeightWithGap - parseInt(peekHeight)),
     ];
-  }, [displayNotes.length, editorType, scaleMode]);
+  }, [editorType, scaleMode]);
 
   return (
     <div className={styles.container} data-theme="Dark">
