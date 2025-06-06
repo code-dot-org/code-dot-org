@@ -11,6 +11,8 @@ import PropTypes from 'prop-types';
 import React, {useEffect, useCallback, useState} from 'react';
 
 import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {ZIP_REGEX} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import CalendarEmptyStateIllustration from '@cdo/apps/templates/teacherNavigation/images/CalendarEmptyStateIllustration.svg';
 import CalendarNotAvailable from '@cdo/apps/templates/teacherNavigation/images/CalendarNotAvailable.svg';
@@ -41,14 +43,26 @@ export default function RegionalWorkshopCatalog({
   useEffect(() => {
     const zipFromUrl = queryParams()['zip'];
     const prepopulatedZip = zipFromUrl ? zipFromUrl : zipFromSchoolInfo;
-    if (prepopulatedZip) {
+    if (prepopulatedZip && ZIP_REGEX.test(prepopulatedZip)) {
       setZipCode(prepopulatedZip);
-      handleSubmitZip(prepopulatedZip);
+      handleSubmitZip(prepopulatedZip, true);
+    } else {
+      // Log page visit event with null info if there's no valid prepopulated zip
+      analyticsReporter.sendEvent(
+        EVENTS.RP_LANDING_PAGE_VISITED_EVENT,
+        {
+          'zip code': null,
+          'regional partner': null,
+          'number of regional workshops': 0,
+          'number of national workshops': availableNationalWorkshops.length,
+        },
+        PLATFORMS.BOTH
+      );
     }
-  }, [zipFromSchoolInfo, handleSubmitZip]);
+  }, [zipFromSchoolInfo, handleSubmitZip, availableNationalWorkshops]);
 
   const handleSubmitZip = useCallback(
-    async submittedZip => {
+    async (submittedZip, prepopulatingZip) => {
       if (isSubmitting) {
         return;
       }
@@ -90,6 +104,24 @@ export default function RegionalWorkshopCatalog({
           setAvailableRegionalWorkshops(
             jsonData.regional_workshop_data.available_regional_workshops
           );
+
+          // Log regional partner and workshop data as the page visit event if
+          // this query is triggered by a prepopulated zip (from the user info
+          // or from a URL param), otherwise log the data as the zip enter event.
+          analyticsReporter.sendEvent(
+            prepopulatingZip
+              ? EVENTS.RP_LANDING_PAGE_VISITED_EVENT
+              : EVENTS.RP_LANDING_ZIP_ENTERED,
+            {
+              'zip code': submittedZip,
+              'regional partner': regionalPartner.name,
+              'number of regional workshops':
+                jsonData.regional_workshop_data.available_regional_workshops
+                  .length,
+              'number of national workshops': availableNationalWorkshops.length,
+            },
+            PLATFORMS.BOTH
+          );
         }
       } catch (error) {
         console.error(
@@ -100,7 +132,7 @@ export default function RegionalWorkshopCatalog({
         setIsSubmitting(false);
       }
     },
-    [isSubmitting]
+    [isSubmitting, availableNationalWorkshops]
   );
 
   const RenderUpcomingLocalWorkshopsHeading = () => {
@@ -156,7 +188,7 @@ export default function RegionalWorkshopCatalog({
               <Button
                 text="Submit"
                 color="purple"
-                onClick={() => handleSubmitZip(zipCode)}
+                onClick={() => handleSubmitZip(zipCode, false)}
               />
             </div>
           </div>
@@ -295,7 +327,7 @@ export default function RegionalWorkshopCatalog({
               aria-label="submitZip"
               text="Submit"
               color="purple"
-              onClick={() => handleSubmitZip(zipCode)}
+              onClick={() => handleSubmitZip(zipCode, false)}
               isPending={isSubmitting}
             />
           </div>
@@ -322,6 +354,7 @@ export default function RegionalWorkshopCatalog({
                   disabled={!regionalPartnerName}
                 />
                 <LinkButton
+                  id="rpContactLink"
                   text="Contact"
                   target="_blank"
                   color="black"

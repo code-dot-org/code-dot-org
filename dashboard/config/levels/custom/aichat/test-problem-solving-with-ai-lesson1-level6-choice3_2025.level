@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-05-08T14:33:36.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Plan Your Outfits\r\n\r\nUse AI Chat to help you plan your outfits for the week. \r\n\r\n### Do This:\r\n\r\n1. Start by entering a **generic prompt** and read AI Chat's response. For example:\r\n\r\n>Help me plan my outfits for the week.\r\n2. Revise your prompt and add specific examples, like **what outfits you like to wear** or **what type of shoes you own**. Read AI Chat's updated response.\r\n2. Finally, revise your last prompt by including an **uploaded image**.\r\n3. Press **Send** and read AI Chat's response.\r\n\r\n**Try it out!**\r\n\r\n\r\n::: details [<i class=\"fa fa-file-image-o\" aria-hidden=\"true\"></i> **How do I upload an image?**]\r\n- Click the button labeled **Upload** below your chat input.\r\n- Choose **From Library**\r\n- Then browse the existing images.\r\n- When you have an image to upload, click the checkbox next to it to select it and then click **Open**.\r\n- You should see the image get added to the message being sent to AI Chat.\r\n:::\r\n",
+    "long_instructions": "## Plan Your Outfits\r\n\r\nUse AI Chat to help you plan your outfits for the week. \r\n\r\n### Do This:\r\n\r\n1. Start by entering a **generic prompt** and read AI Chat's response. For example:\r\n\r\n>Help me plan my outfits for the week.\r\n2. Revise your prompt and add specific examples, like **what outfits you like to wear** or **what type of shoes you own**. Read AI Chat's updated response.\r\n2. Finally, revise your last prompt by **adding an image**.\r\n3. Press **Send** and read AI Chat's response.\r\n\r\n**Try it out!**\r\n\r\n\r\n::: details [<i class=\"fa fa-file-image-o\" aria-hidden=\"true\"></i> **How do I add an image?**]\r\n- Click the button labeled **Add** below your chat input.\r\n- Choose **From Library**\r\n- Then browse the existing images.\r\n- When you have an image to upload, click the checkbox next to it to select it and then click **Attach**.\r\n- You should see the image get added to the message being sent to AI Chat.\r\n:::\r\n",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -59,7 +60,6 @@
     },
     "name_suffix": "_2025"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-08T14:33:36.911+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level6-choice3\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level6-choice3\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:33:36.911+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level6-choice3\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level6-choice3\"},{\"changed_at\":\"2025-05-29 21:22:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Aichat>

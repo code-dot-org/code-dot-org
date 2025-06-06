@@ -1483,6 +1483,43 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test 'valid_course_offerings includes only published courses' do
+    sign_in @teacher
+    get :valid_course_offerings, params: {login_type: Section::LOGIN_TYPE_EMAIL}
+    assert_response :success
+
+    course_offering_ids = JSON.parse(@response.body).keys
+    assert course_offering_ids.include?(@csp_unit_group.course_version.course_offering.id.to_s)
+    assert course_offering_ids.include?(@single_unit_course.course_version.course_offering.id.to_s)
+    refute course_offering_ids.include?(@beta_unit_group.course_version.course_offering.id.to_s)
+  end
+
+  test 'valid_course_offerings includes units of published courses' do
+    @beta_unit_1 = create :unit, original_unit_group: @beta_unit_group
+    create :unit_group_unit, unit_group: @beta_unit_group, script: @beta_unit_1, position: 1
+    @beta_unit_2 = create :unit, original_unit_group: @beta_unit_group
+    create :unit_group_unit, unit_group: @beta_unit_group, script: @beta_unit_2, position: 2
+
+    modular_course = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    create :unit_group_unit, unit_group: modular_course, script: @beta_unit_1, position: 1
+    create :unit_group_unit, unit_group: modular_course, script: @beta_unit_2, position: 2
+    CourseOffering.add_course_offering(modular_course)
+
+    sign_in @teacher
+    get :valid_course_offerings, params: {login_type: Section::LOGIN_TYPE_EMAIL}
+    assert_response :success
+
+    course_offerings = JSON.parse(@response.body)
+
+    co_summary = course_offerings[@csp_unit_group.course_version.course_offering.id.to_s]
+    cv_summary = co_summary['course_versions'][@csp_unit_group.course_version.id.to_s]
+    assert_equal [@csp_script.id.to_s, @csp_script2.id.to_s], cv_summary['units'].keys
+
+    co_summary = course_offerings[modular_course.course_version.course_offering.id.to_s]
+    cv_summary = co_summary['course_versions'][modular_course.course_version.id.to_s]
+    assert_equal [@beta_unit_1.id.to_s, @beta_unit_2.id.to_s], cv_summary['units'].keys
+  end
+
   private def set_up_code_review_groups
     # create a new section to avoid extra unassigned students
     @code_review_group_section = create(:section, user: @teacher, login_type: 'word')

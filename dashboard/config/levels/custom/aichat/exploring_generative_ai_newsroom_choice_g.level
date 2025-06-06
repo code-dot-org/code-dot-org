@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "display_name": "Write a Satirical Article",
-    "long_instructions": "## Write a Satirical Article\r\n\r\n**Task:** Ask AI to write a funny fake news article.\r\n\r\n**Things to Try:**\r\n- Give it a silly headline (like \"Principal Declares Pajama Day Every Friday\")\r\n- Ask for a short article (5-7 sentences)\r\n- Check: Is it realistic and funny, or too random?\r\n",
+    "long_instructions": "## Write a Satirical Article\r\n\r\n**Before You Start:**\r\n\r\nMake sure you have filled in the **K** and **W** columns of your KWL chart for this task.\r\n\r\n**Do:**\r\n\r\nAsk AI to write a fake news article in a satirical or silly tone (like The Onion or parody news).\r\n\r\n**Try:**\r\n\r\nGive it a real news headline and ask for a satirical version.\r\n\r\n**Check:**\r\n\r\nDoes the article feel like satire (clearly fake but with a message)? Or does it seem confusing or misleading?\r\n\r\n**After You Try It:**\r\n\r\n1. Fill in the **L** column of your KWL chart\r\n2. Press **Continue** to return to the task menu\r\n",
     "bubble_choice_description": "Ask AI to write a funny fake news article.",
     "aichat_settings": {
       "initialCustomizations": {
@@ -45,6 +45,6 @@
     },
     "thumbnail_url": "https://images.code.org/8c8b107acef5c682a221393544f4f6a7-fake-artical.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-25T21:20:24.564+00:00\",\"changed\":[\"cloned from \\\"exploring_generative_ai_newsroom_choice_f\\\"\"],\"cloned_from\":\"exploring_generative_ai_newsroom_choice_f\"},{\"changed_at\":\"2025-04-25 21:21:46 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-25 22:11:37 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-05-28 19:52:58 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-25T21:20:24.564+00:00\",\"changed\":[\"cloned from \\\"exploring_generative_ai_newsroom_choice_f\\\"\"],\"cloned_from\":\"exploring_generative_ai_newsroom_choice_f\"},{\"changed_at\":\"2025-04-25 21:21:46 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-25 22:11:37 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-05-28 19:52:58 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-05-29 11:17:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Aichat>

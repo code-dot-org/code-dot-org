@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-27 16:51:44 UTC",
+    "serialized_at": "2025-05-29 21:16:20 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -586,6 +586,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coding-with-music-play-together-standalone"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -608,6 +611,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coding-with-music-loop1-standalone"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -630,6 +636,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coding-with-music-loop-layer-standalone"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -677,6 +686,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coding-with-music-loop-together-standalone"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -699,6 +711,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coding-with-music-challenge-standalone"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -721,6 +736,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coding-with-music-seq-cfu-standalone"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -743,6 +761,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coding-with-music-career-videos-standalone"
+        ],
         "progression": "Career Exploration"
       },
       "bonus": false,
@@ -790,6 +811,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coding-with-music-freeplay-standalone"
+        ],
         "progression": "Inspire & Try"
       },
       "bonus": false,

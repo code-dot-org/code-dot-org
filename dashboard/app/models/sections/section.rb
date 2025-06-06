@@ -702,6 +702,7 @@ class Section < ApplicationRecord
       problem-solving-with-ai-2024
       artificial-intelligence-foundations-2025
       computing-foundations-for-a-digital-age-2025
+      idaho-digital-literacy-2025
       foundations-of-ai-programming-2025
       ai-and-the-systems-that-power-it-2025
       the-fabric-of-the-internet-and-ai-2025
