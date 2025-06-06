@@ -33,19 +33,19 @@ An Hour of Code is just the beginning. Whether you are an administrator, teacher
 
 You have many choices to fit your school. Most of the organizations offering Hour of Code tutorials also have curriculum and professional learning available. If you find a lesson you like, ask about going further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://<%= hourofcode %>/beyond)
 <% else %>
-An Hour of Code is just the beginning. Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://<%= hourofcode %>/beyond)
+An Hour of Code is just the beginning. Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://<%= hourofcode %>/beyond) 
 
 Code.org also offers full [introductory computer science courses](https://<%= codedotorg %>/educate/curriculum/cs-fundamentals-international) translated into over 25 languages at no cost to you or your school.
 <% end %>
-
+ 
 Thank you for leading the movement to give every student the chance to learn foundational computer science skills.
-
+ 
 Hadi Partovi<br />
 Founder, Code.org<br />
 
 <hr/>
 <small>
-You're receiving this email because you signed up for the Hour of Code, supported by more than 200 partners and organized by Code.org. Code.org is a 501c3 non-profit. Our address is [720 Seneca St. Ste 107, Seattle, WA 98101](https://maps.google.com/?q=1501+4th+Avenue,+Suite+900,+Seattle,+WA+98101&entry=gmail&source=g). Don't want these emails? [Unsubscribe](<%= local_assigns.fetch(:unsubscribe_link, "") %>).
+You're receiving this email because you signed up for the Hour of Code, supported by more than 200 partners and organized by Code.org. Code.org is a 501c3 non-profit. Our address is [801 5th Avenue, Suite 2100, Seattle, WA 98104](https://maps.google.com/?q=1501+4th+Avenue,+Suite+900,+Seattle,+WA+98101&entry=gmail&source=g). Don't want these emails? [Unsubscribe](<%= local_assigns.fetch(:unsubscribe_link, "") %>).
 </small>
 
 ![](<%= local_assigns.fetch(:tracking_pixel, "") %>)

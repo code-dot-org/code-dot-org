@@ -3,24 +3,24 @@ Date of Last Revision: August 24, 2016
 
 Code.org® is a non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color.
 
-Code.org is committed to protecting the privacy of children who use our sites and applications.  This notice describes our practices of collecting, using, and disclosing personal information from children under 13.  Please review our general [Privacy Policy](<%= CDO.code_org_url('/privacy') %>) and [Terms of Use Agreement](<%= CDO.code_org_url('/tos') %>) for additional information.  These policies are in accordance with the U.S. Children’s Online Privacy Protection Act (COPPA).  If you have any questions about these policies, you may write us at [http://code.org/contact](<%= CDO.code_org_url('/contact') %>) or at 720 Seneca St. Ste 107, Seattle, WA 98101.
+Code.org is committed to protecting the privacy of children who use our sites and applications.  This notice describes our practices of collecting, using, and disclosing personal information from children under 13.  Please review our general [Privacy Policy](<%= CDO.code_org_url('/privacy') %>) and [Terms of Use Agreement](<%= CDO.code_org_url('/tos') %>) for additional information.  These policies are in accordance with the U.S. Children’s Online Privacy Protection Act (COPPA).  If you have any questions about these policies, you may write us at [http://code.org/contact](<%= CDO.code_org_url('/contact') %>) or at 801 5th Avenue, Suite 2100, Seattle, WA 98104.
 
 ## 1. Authorization from the School
 
 With regard to school-based activities, COPPA allows teachers and school administrators to act in the stead of parents to provide consent for the collection of personal information from children.
 
-Code.org wishes to provide students under the age of 13 with full access to Code Studio, including App Lab and Game Lab, if the student is part of a section supervised by a teacher who is also using Code Studio.  Full access will allow the students to use tools where students can create and/or upload custom content (images, sounds, and text) in a classroom. Students under the age of 13 cannot use these tools unless they are part of a teacher’s Code Studio section.
+Code.org wishes to provide students under the age of 13 with full access to Code Studio, including App Lab and Game Lab, if the student is part of a section supervised by a teacher who is also using Code Studio.  Full access will allow the students to use tools where students can create and/or upload custom content (images, sounds, and text) in a classroom. Students under the age of 13 cannot use these tools unless they are part of a teacher’s Code Studio section.  
 
-Providing access to students under the age of 13 means that they can create and share simple apps that use custom images, sounds and freeform text. This gives them the ability to share personal and non-personal information.  We need your explicit prior consent before we enable this app-creation functionality for your students, because the code and the data for these apps would be stored by Code.org and would be accessed by anybody with whom the student shares their app.
+Providing access to students under the age of 13 means that they can create and share simple apps that use custom images, sounds and freeform text. This gives them the ability to share personal and non-personal information.  We need your explicit prior consent before we enable this app-creation functionality for your students, because the code and the data for these apps would be stored by Code.org and would be accessed by anybody with whom the student shares their app.  
 
-We will not collect or store any such information until we have received your consent.  If you are an existing Code Studio teacher, your students will continue to have access to Code Studio, but they won’t have access to App Lab or Game Lab if they are under 13 until you explicitly agree to our updated [Privacy Policy](<%= CDO.code_org_url('/privacy') %>) and [Terms of Use Agreement](<%= CDO.code_org_url('/tos') %>).
+We will not collect or store any such information until we have received your consent.  If you are an existing Code Studio teacher, your students will continue to have access to Code Studio, but they won’t have access to App Lab or Game Lab if they are under 13 until you explicitly agree to our updated [Privacy Policy](<%= CDO.code_org_url('/privacy') %>) and [Terms of Use Agreement](<%= CDO.code_org_url('/tos') %>).  
 
 
 
 ## 2. Information We Collect and Use
 Code.org only collects information from students for the use and benefit of the school, and for no commercial purpose.  Code.org does not create marketing profiles and online behavioral advertising campaigns using information collected from or created by students.
 
-In any instance that we collect personal information from a student, we will retain that information only so long as reasonably necessary to fulfill the educational activity request or allow the child to continue to participate in the educational activity, and ensure the security of our users and our services, or as required by law.  Code.org will delete student display names, coding projects, apps, uploaded images, and other assets associated with student accounts that have remained unused and inactive for a period of time in accordance with our data retention policy.  We do not require a child to provide more information than is reasonably necessary in order to participate.
+In any instance that we collect personal information from a student, we will retain that information only so long as reasonably necessary to fulfill the educational activity request or allow the child to continue to participate in the educational activity, and ensure the security of our users and our services, or as required by law.  Code.org will delete student display names, coding projects, apps, uploaded images, and other assets associated with student accounts that have remained unused and inactive for a period of time in accordance with our data retention policy.  We do not require a child to provide more information than is reasonably necessary in order to participate.  
 
 In the event we discover we have collected information from a child in a manner inconsistent with the requirements of COPPA or any other national or local laws, we will either delete the information or immediately seek the parent or the school’s consent for that collection.
 
@@ -28,7 +28,7 @@ In the event we discover we have collected information from a child in a manner 
 Code.org does not collect any personal information from students participating in the Hour of Code.  The Hour of Code tutorials do not require login or parental consent to use.
 
 ### Code Studio
-At Code.org, we collect limited personal information from registered users of the Code Studio tutorial platform.  Users can also try Code Studio tutorials without creating an account, but their learning progress won't be saved.
+At Code.org, we collect limited personal information from registered users of the Code Studio tutorial platform.  Users can also try Code Studio tutorials without creating an account, but their learning progress won't be saved.  
 
 The following table describes the personal data that Code.org collects from registered students on the Code Studio tutorial platform:
 
@@ -65,7 +65,7 @@ We may collect and store information about the school or classroom location to p
 
 ## 3. Disclosure of Information
 
-Code.org does not rent or sell personal information that we collect from the students, or exploit it for financial gain in any way.  Code.org will never share or grant rights to personal information with other third-party organizations to use without your express prior authorization, except as part of a specific program or feature for which you will have the explicit ability and choice to opt-in.  In particular, we do not share any Personal Information you provide with our donors or sponsors.
+Code.org does not rent or sell personal information that we collect from the students, or exploit it for financial gain in any way.  Code.org will never share or grant rights to personal information with other third-party organizations to use without your express prior authorization, except as part of a specific program or feature for which you will have the explicit ability and choice to opt-in.  In particular, we do not share any Personal Information you provide with our donors or sponsors.  
 
 However, Code.org may disclose anonymous or aggregate data to learn more about our users. In certain occasions, Code.org may work with third parties (such as educational researchers and universities) to improve our services or offerings. We may disclose automatically collected and other aggregate non-personal information to authorized partners to conduct research on online education or assist in understanding the usage, viewing, and demographic patterns for certain programs, content, services, promotions, and/or functionality on the Website.  We may also publish anonymized information about student performance on our tutorials and Websites; however, we will never publicly disclose personal information in these reports.  Data about student performance will remain anonymized, but aggregated, anonymized data over large populations of students may be reported by demographic criteria such as age, general location, gender, ethnicity, and socioeconomic status.
 
@@ -75,9 +75,9 @@ For a more detailed explanation of how we share and transfer data, please read t
 
 At any time, you (as the teacher) can refuse to permit us to collect further personal information from your students in association with a particular account, and can request that we delete from our records the personal information we have collected in connection with that account.  Please keep in mind that a request to delete records may lead to a termination of an account, membership, or other service.
 
-You may write us at [http://code.org/contact](<%= CDO.code_org_url('/contact') %>) or at 720 Seneca St. Ste 107, Seattle, WA 98101, to request access to review, change, or delete a student’s personal information.
+You may write us at [http://code.org/contact](<%= CDO.code_org_url('/contact') %>) or at 801 5th Avenue, Suite 2100, Seattle, WA 98104, to request access to review, change, or delete a student’s personal information.  
 
 ## 5. Revoking and Deleting Your Consent
 At any time, you may revoke your consent, refuse to allow us to further use or collect your students’ personal information, and direct us to delete the information.  If you revoke your consent, we will no longer permit your students to participate in certain activities on Code.org.  Your students will continue to have access to other activities on Code.org which do not require your students’ personal information.
 
-To revoke your consent, write us at [http://code.org/contact](<%= CDO.code_org_url('/contact') %>) or at 720 Seneca St. Ste 107, Seattle, WA 98101.
+To revoke your consent, write us at [http://code.org/contact](<%= CDO.code_org_url('/contact') %>) or at 801 5th Avenue, Suite 2100, Seattle, WA 98104.
