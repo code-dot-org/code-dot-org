@@ -43,10 +43,10 @@
     },
     "long_instructions": "This level allows multimodal (ie, images, PDFs) inputs to gpt-4o-mini as a base model. It is used in UI tests.",
     "starter_assets": {
-      "Cat.jpg": "2036f97f-ae1a-4322-a389-0549deaec2c7.jpg",
-      "a calf born in winter.pdf": "2bc76b2b-f948-4c17-8e61-d180f3bc25ca.pdf"
+      "Test PDF.pdf": "16bf909e-38ec-4d73-8bd7-49092075d718.pdf",
+      "Test Image.jpg": "eae8d610-0378-48da-acb6-5fea18d4dcb8.jpg"
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-19 15:45:30 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"ben+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-19 15:46:18 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"ben+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-19 15:47:24 -0700\",\"changed\":[\"tts_long_instructions_override\"],\"changed_by_id\":1,\"changed_by_email\":\"ben+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-19 15:50:59 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"ben+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-20 15:05:48 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"ben+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-20 16:36:49 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"ben+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-21 09:42:28 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"ben+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-19 15:45:30 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"ben+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-19 15:46:18 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"ben+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-19 15:47:24 -0700\",\"changed\":[\"tts_long_instructions_override\"],\"changed_by_id\":1,\"changed_by_email\":\"ben+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-19 15:50:59 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"ben+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-20 15:05:48 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"ben+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-20 16:36:49 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"ben+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-21 09:42:28 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"ben+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-06 15:59:43 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"ben+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>
