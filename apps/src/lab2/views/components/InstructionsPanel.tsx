@@ -45,7 +45,8 @@ interface InstructionsPanelProps {
 
 /**
  * Renders the instructions panel view, which is used within labs as well as to render a preview
- * of the instructions panel on the level edit page.
+ * of the instructions panel on the level edit page. Note that this component has
+ * a minor Redux dependency via the PredictSummary component, but that this is not rendered on the level edit page.
  */
 const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   text,
