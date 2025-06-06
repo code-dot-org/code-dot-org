@@ -14,20 +14,13 @@ class DatabaseAuthenticationOverridesTest < ActiveSupport::TestCase
     end
   end
 
-  describe "#update_with_password" do
-    context "when the user does not have a password" do
-      let(:student) {create(:student)}
-
-      before do
-        student.update_attribute(:encrypted_password, '')
-      end
-
-      it 'does not require current password to update attributes' do
-        _(student.encrypted_password).must_be :blank?
-
-        name = 'Some Student'
-        result = student.update_with_password(
-          name: name,
+  describe '#update_with_password' do
+    context 'when the user does not have a password' do
+      let(:student) {create(:student, :without_encrypted_password)}
+      let(:new_name) {'Some Student'}
+      let(:update_params) do
+        {
+          name: new_name,
           email: 'student@example.com',
           password: '[FILTERED]',
           password_confirmation: '[FILTERED]',
@@ -35,10 +28,13 @@ class DatabaseAuthenticationOverridesTest < ActiveSupport::TestCase
           locale: 'en-US',
           gender: '',
           age: '10'
-        )
+        }
+      end
 
-        _(result).must_equal true
-        _(student.name).must_equal name
+      it 'allows updating attributes without requiring current password' do
+        _(student.encrypted_password).must_be :blank?
+        _(student.update_with_password(update_params)).must_equal true
+        _(student.name).must_equal new_name
       end
     end
   end
