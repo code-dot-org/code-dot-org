@@ -1,5 +1,6 @@
 import $ from 'jquery';
 
+import {OPEN_ENDED_LEGACY_PROJECT_TYPES} from '@cdo/apps/constants';
 import firehoseClient from '@cdo/apps/metrics/firehose';
 import {getGlobalEditionRegion} from '@cdo/apps/util/globalEdition';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -1979,11 +1980,8 @@ function fetchAbuseScoreAndPrivacyViolations(project) {
     new Promise(fetchShareFailure),
   ];
 
-  if (
-    project.getStandaloneApp() === 'applab' ||
-    project.getStandaloneApp() === 'gamelab' ||
-    project.isWebLab()
-  ) {
+  // If open-ended project type, check if project owner's sharing is disabled.
+  if (OPEN_ENDED_LEGACY_PROJECT_TYPES.includes(project.getStandaloneApp())) {
     promises.push(new Promise(fetchSharingDisabled));
   }
   return Promise.all(promises);
