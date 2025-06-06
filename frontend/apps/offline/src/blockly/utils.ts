@@ -126,6 +126,19 @@ export function getBlockElements(xml: Element): Element[] {
   return Array.from(xml.querySelectorAll('xml > block'));
 }
 
+/**
+ * Extracts the fields that are within a block.
+ */
+export function getBlockFields(block: Blockly.Block): Blockly.Field[] {
+  const fields: Blockly.Field[] = [];
+  block.inputList.forEach(input => {
+    input.fieldRow.forEach(field => {
+      fields.push(field);
+    });
+  });
+  return fields;
+}
+
 export interface XmlBlockConfig {
   blocklyBlock: Blockly.Block;
   x: number;
@@ -207,4 +220,12 @@ export function getCodeFromBlockJsonSource(json: {
   const result = javascriptGenerator.finish(code.join('\n'));
   workspace.dispose();
   return result;
+}
+
+export function getAllUsedBlocks(
+  workspace: Blockly.Workspace,
+): Blockly.Block[] {
+  return workspace
+    .getAllBlocks()
+    .filter(block => block.isEnabled() && block.getRootBlock().isEnabled());
 }
