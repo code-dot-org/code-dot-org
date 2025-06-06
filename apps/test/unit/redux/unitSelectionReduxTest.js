@@ -4,6 +4,7 @@ import unitSelection, {
   getSelectedUnitPosition,
   getSelectedScriptDescription,
   setCoursesWithProgress,
+  getSelectedCourseId,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
