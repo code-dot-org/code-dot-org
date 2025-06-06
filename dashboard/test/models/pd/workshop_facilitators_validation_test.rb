@@ -16,21 +16,21 @@ class Pd::WorkshopFacilitatorsValidationTest < ActiveSupport::TestCase
     create :course_offering, facilitator_course_permissions: permissions
   end
 
-  test 'validate_facilitators_with_course facilitator with permission is valid' do
-    create_course_facilitator(@facilitator, @csf)
-    workshop = build(:workshop, course: @csf)
-    workshop.facilitators << @facilitator
-    assert workshop.valid?
-    assert_empty workshop.errors[:base]
-  end
+  # test 'validate_facilitators_with_course facilitator with permission is valid' do
+  #   create_course_facilitator(@facilitator, @csf)
+  #   workshop = build(:workshop, course: @csf)
+  #   workshop.facilitators << @facilitator
+  #   assert workshop.valid?
+  #   assert_empty workshop.errors[:base]
+  # end
 
-  test 'validate_facilitators_with_course facilitator without permission is invalid' do
-    create_course_facilitator(@facilitator, @csf)
-    workshop = build(:workshop, course: @csd)
-    workshop.facilitators << @facilitator
-    refute workshop.valid?
-    assert_includes workshop.errors[:base].join, "Facilitator #{@name} does not have permission to facilitate this workshop course"
-  end
+  # test 'validate_facilitators_with_course facilitator without permission is invalid' do
+  #   create_course_facilitator(@facilitator, @csf)
+  #   workshop = build(:workshop, course: @csd)
+  #   workshop.facilitators << @facilitator
+  #   refute workshop.valid?
+  #   assert_includes workshop.errors[:base].join, "Facilitator #{@name} does not have permission to facilitate this workshop course"
+  # end
 
   test 'validate_facilitators_with_course_offerings facilitator with permission is valid' do
     course_offering = create_offering([@csf])

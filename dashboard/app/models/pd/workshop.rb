@@ -145,8 +145,6 @@ class Pd::Workshop < ApplicationRecord
   def valid_facilitators
     if course == COURSE_BUILD_YOUR_OWN
       validate_facilitators_with_course_offerings
-    else
-      validate_facilitators_with_course
     end
   end
 
