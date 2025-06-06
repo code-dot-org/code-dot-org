@@ -26,6 +26,18 @@ import i18n from '@cdo/locale';
 import statsigReporter from '../metrics/StatsigReporter';
 import {navigateToHref} from '../utils';
 
+const hideCleverOption = statsigReporter.getIsInExperiment(
+  'removing_clever_from_sign_up',
+  'hide_clever_option',
+  false
+);
+
+const showMoreOptions = statsigReporter.getIsInExperiment(
+  'removing_clever_from_sign_up',
+  'show_more_options',
+  false
+);
+
 import {
   ACCOUNT_TYPE_SESSION_KEY,
   EMAIL_SESSION_KEY,
@@ -68,17 +80,6 @@ const LoginTypeSelection: React.FunctionComponent<{
     useState(true);
 
   const [revealClever, setRevealClever] = useState(false);
-  const hideCleverOption = statsigReporter.getIsInExperiment(
-    'removing_clever_from_sign_up',
-    'hide_clever_option',
-    false
-  );
-
-  const showMoreOptions = statsigReporter.getIsInExperiment(
-    'removing_clever_from_sign_up',
-    'show_more_options',
-    false
-  );
 
   const isTeacher = userType === UserTypes.TEACHER;
   const finishAccountUrl = isTeacher
