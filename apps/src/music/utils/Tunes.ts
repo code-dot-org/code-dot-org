@@ -63,7 +63,6 @@ export function generateGraphDataFromTune({
   const useWidth = width - 2 * padding - noteWidth;
   const useHeight = height - 2 * padding - noteHeight;
 
-  //const displayNotes = getDisplayNotes();
   return notes.map(note => {
     return {
       note: note.note,
@@ -104,9 +103,7 @@ export function getDisplayNotes(
     noteValues = getNotesInKey(rootKey, START_OCTAVE, DISPLAY_OCTAVES);
   }
 
-  const colors = {backgroundSelected: 'yellow'};
-
-  return noteValues.map(note => ({note, name: getNoteName(note), colors}));
+  return noteValues.map(note => ({note, name: getNoteName(note)}));
 }
 
 export function getInstruments(editorType: EditorType) {
