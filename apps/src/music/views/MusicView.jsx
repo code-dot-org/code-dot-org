@@ -170,6 +170,8 @@ class UnconnectedMusicView extends React.Component {
 
     this.state = {
       hasLoadedInitialSounds: false,
+      hasRun: false,
+      hasEdited: false,
     };
 
     this.isLevelLoadInProgress = false;
@@ -223,6 +225,8 @@ class UnconnectedMusicView extends React.Component {
       this.stopSong();
       this.setState({
         hasLoadedInitialSounds: false,
+        hasRun: false,
+        hasEdited: false,
       });
       this.props.clearCallout();
       this.musicBlocklyWorkspace.dispose();
@@ -257,6 +261,10 @@ class UnconnectedMusicView extends React.Component {
 
     if (prevProps.updateLoadProgress !== this.props.updateLoadProgress) {
       this.player.setUpdateLoadProgress(this.props.updateLoadProgress);
+    }
+
+    if (prevProps.isReadOnlyWorkspace !== this.props.isReadOnlyWorkspace) {
+      this.musicBlocklyWorkspace.setIsReadOnly(this.props.isReadOnlyWorkspace);
     }
   }
 
@@ -654,6 +662,9 @@ class UnconnectedMusicView extends React.Component {
 
     const codeChanged = this.compileSong();
     if (codeChanged) {
+      this.setState({
+        hasEdited: true,
+      });
       this.executeCompiledSong().then(playbackEvents => {
         // If code has changed mid-playback, clear and re-queue all events in the player
         if (this.props.isPlaying) {
@@ -826,6 +837,9 @@ class UnconnectedMusicView extends React.Component {
   };
 
   playSong = async () => {
+    this.setState({
+      hasRun: true,
+    });
     this.player.stopSong();
     this.playingTriggers = [];
 
@@ -917,6 +931,8 @@ class UnconnectedMusicView extends React.Component {
               this.executeSongCode(code);
             })
           }
+          hasRun={this.state.hasRun}
+          hasEdited={this.state.hasEdited}
         />
         <Callouts />
       </AnalyticsContext.Provider>
