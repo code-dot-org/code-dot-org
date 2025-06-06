@@ -1085,7 +1085,7 @@ __metadata:
     "@applitools/eyes-playwright": "npm:^1.36.3"
     "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/fonts": "workspace:*"
-    "@contentful/experiences-sdk-react": "npm:^1.39.0"
+    "@contentful/experiences-sdk-react": "npm:^1.40.2-beta.0"
     "@contentful/rich-text-html-renderer": "npm:^17.0.0"
     "@contentful/rich-text-plain-text-renderer": "npm:^17.0.0"
     "@newrelic/browser-agent": "npm:^1.290.0"
@@ -1146,41 +1146,41 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@contentful/experiences-components-react@npm:1.39.0":
-  version: 1.39.0
-  resolution: "@contentful/experiences-components-react@npm:1.39.0"
+"@contentful/experiences-components-react@npm:1.40.2-dev-20250606T1202-905bb9e.0":
+  version: 1.40.2-dev-20250606T1202-905bb9e.0
+  resolution: "@contentful/experiences-components-react@npm:1.40.2-dev-20250606T1202-905bb9e.0"
   dependencies:
-    "@contentful/experiences-core": "npm:1.39.0"
+    "@contentful/experiences-core": "npm:1.40.2-dev-20250606T1202-905bb9e.0"
     "@contentful/rich-text-react-renderer": "npm:^16.0.1"
     postcss-import: "npm:^16.0.1"
     style-inject: "npm:^0.3.0"
   peerDependencies:
     react: ">=17.0.0"
     react-dom: ">=17.0.0"
-  checksum: 10c0/f55ea35f660c4627b3201d8034246fb98d07ce0bb200e9fc2020aa0f2d6ac40848228d9e66e601f31fa7e80c64503d13b7fc507d739df33b7424278001f47951
+  checksum: 10c0/ebf34b669a627675b0bbec8f61112f56d1063e6daeadbcd875161b0a5e17ec614088aa387c4130062bf5fd9c512a63a41dc3e8524505ffcbf1b4ef92aca0a317
   languageName: node
   linkType: hard
 
-"@contentful/experiences-core@npm:1.39.0":
-  version: 1.39.0
-  resolution: "@contentful/experiences-core@npm:1.39.0"
+"@contentful/experiences-core@npm:1.40.2-dev-20250606T1202-905bb9e.0":
+  version: 1.40.2-dev-20250606T1202-905bb9e.0
+  resolution: "@contentful/experiences-core@npm:1.40.2-dev-20250606T1202-905bb9e.0"
   dependencies:
-    "@contentful/experiences-validators": "npm:1.39.0"
+    "@contentful/experiences-validators": "npm:1.40.2-dev-20250606T1202-905bb9e.0"
     "@contentful/rich-text-types": "npm:^17.0.0"
   peerDependencies:
     contentful: ">=10.6.0"
-  checksum: 10c0/7506388a9f89bd328385db09b4f203662b2463a5022e44e0a67fb0732946f86ed7037f940fb8a3e8e2435be24f9c8318ccc47473b55d49067765b82fa373bd4e
+  checksum: 10c0/508b1aa8df47ebb8960a399d7826ae74388b8fceee39a84648ff67f8a2010db013389beec7d10d23bfaa08f83adfc29a64efe7470c9d1b5a2075d90c9effadea
   languageName: node
   linkType: hard
 
-"@contentful/experiences-sdk-react@npm:^1.39.0":
-  version: 1.39.0
-  resolution: "@contentful/experiences-sdk-react@npm:1.39.0"
+"@contentful/experiences-sdk-react@npm:^1.40.2-beta.0":
+  version: 1.40.2-dev-20250606T1202-905bb9e.0
+  resolution: "@contentful/experiences-sdk-react@npm:1.40.2-dev-20250606T1202-905bb9e.0"
   dependencies:
-    "@contentful/experiences-components-react": "npm:1.39.0"
-    "@contentful/experiences-core": "npm:1.39.0"
-    "@contentful/experiences-validators": "npm:1.39.0"
-    "@contentful/experiences-visual-editor-react": "npm:1.39.0"
+    "@contentful/experiences-components-react": "npm:1.40.2-dev-20250606T1202-905bb9e.0"
+    "@contentful/experiences-core": "npm:1.40.2-dev-20250606T1202-905bb9e.0"
+    "@contentful/experiences-validators": "npm:1.40.2-dev-20250606T1202-905bb9e.0"
+    "@contentful/experiences-visual-editor-react": "npm:1.40.2-dev-20250606T1202-905bb9e.0"
     "@contentful/rich-text-types": "npm:^17.0.0"
     classnames: "npm:^2.3.2"
     csstype: "npm:^3.1.2"
@@ -1192,25 +1192,25 @@ __metadata:
     contentful: ">=10.6.0"
     react: ">=16.0.0"
     react-dom: ">=16.0.0"
-  checksum: 10c0/0d78ceda34d5145bab23ef51837746217f72fe86e1427b1807ffc6775aac89f10d45364b0d63512f75ecda300887795e31790715232a067bc1b039c46f51f5f2
+  checksum: 10c0/513ee075b166d5d038fed281f3ef684b71078c268ae00aa2b84b923c489ffd922043a3a3e7d6c17c250f87fb1ba2e294b6aa253644578a2e9a65ff974cb56c5c
   languageName: node
   linkType: hard
 
-"@contentful/experiences-validators@npm:1.39.0":
-  version: 1.39.0
-  resolution: "@contentful/experiences-validators@npm:1.39.0"
+"@contentful/experiences-validators@npm:1.40.2-dev-20250606T1202-905bb9e.0":
+  version: 1.40.2-dev-20250606T1202-905bb9e.0
+  resolution: "@contentful/experiences-validators@npm:1.40.2-dev-20250606T1202-905bb9e.0"
   dependencies:
     zod: "npm:^3.22.4"
-  checksum: 10c0/6be86f2271989d14c801f073cce09d749592d58db2712a94017ba5044b4ca5f8f2c48c8c2af4fc608702d97b06915e524d208c1d5578e2f74b1e4adba2e41ecd
+  checksum: 10c0/821c927b35b72520174e8c766f30588304c8cb4d01958abaa4abb470ac74084f7e277d716d8b06555b48e9f84e758007fe3faaca54a7ebc07965cbb3a4fe697e
   languageName: node
   linkType: hard
 
-"@contentful/experiences-visual-editor-react@npm:1.39.0":
-  version: 1.39.0
-  resolution: "@contentful/experiences-visual-editor-react@npm:1.39.0"
+"@contentful/experiences-visual-editor-react@npm:1.40.2-dev-20250606T1202-905bb9e.0":
+  version: 1.40.2-dev-20250606T1202-905bb9e.0
+  resolution: "@contentful/experiences-visual-editor-react@npm:1.40.2-dev-20250606T1202-905bb9e.0"
   dependencies:
-    "@contentful/experiences-components-react": "npm:1.39.0"
-    "@contentful/experiences-core": "npm:1.39.0"
+    "@contentful/experiences-components-react": "npm:1.40.2-dev-20250606T1202-905bb9e.0"
+    "@contentful/experiences-core": "npm:1.40.2-dev-20250606T1202-905bb9e.0"
     "@hello-pangea/dnd": "npm:^16.3.0"
     classnames: "npm:^2.3.2"
     contentful: "npm:^10.6.14"
@@ -1224,7 +1224,7 @@ __metadata:
   peerDependencies:
     react: ">=17.0.0"
     react-dom: ">=17.0.0"
-  checksum: 10c0/de12bd57b42e5130c5de1048fdc407f598d6e3ef32173cc93c58b801d7493a6a3fbe3a32f06c96b6723cef0c4dd7ff6fcb78057b757badc4a355df0c5ec4063b
+  checksum: 10c0/2f59e8a7b7e6f51cdc4a33fb932b073ac5c3a5f159413f2124dfdf01df804c4ac37ac90287861c54206bc9d34f52079fed2d86061806fa1f8e1a0008df59c7c2
   languageName: node
   linkType: hard
 
