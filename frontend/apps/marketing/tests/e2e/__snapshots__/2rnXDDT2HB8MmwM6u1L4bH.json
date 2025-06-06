@@ -3158,8 +3158,8 @@
               ]
             },
             {
-              "id": "8k3s7KuA",
-              "displayName": "Action Block Pattern Default",
+              "id": "LRiJRiIo",
+              "displayName": "Action Block Pattern Default ",
               "definitionId": "contentful-section",
               "patternProperties": {},
               "variables": {
@@ -3208,7 +3208,7 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "650px"
+                    "desktop": "709px"
                   }
                 },
                 "cfMaxWidth": {
@@ -3249,11 +3249,11 @@
                 },
                 "cfHyperlink": {
                   "type": "UnboundValue",
-                  "key": "JKgOR2U"
+                  "key": "zh7msz6"
                 },
                 "cfOpenInNewTab": {
                   "type": "UnboundValue",
-                  "key": "4dqEr0j"
+                  "key": "13Ib38_"
                 },
                 "cfBorderRadius": {
                   "type": "DesignValue",
@@ -3263,7 +3263,7 @@
                 },
                 "cfBackgroundImageUrl": {
                   "type": "UnboundValue",
-                  "key": "niMLIeN"
+                  "key": "cGdHTOr"
                 },
                 "cfBackgroundImageOptions": {
                   "type": "DesignValue",
@@ -3278,7 +3278,7 @@
               },
               "children": [
                 {
-                  "id": "yDyCEQs0",
+                  "id": "hZMPclhE",
                   "definitionId": "section",
                   "patternProperties": {},
                   "variables": {
@@ -3302,7 +3302,7 @@
                     },
                     "id": {
                       "type": "UnboundValue",
-                      "key": "LrkX-Uz"
+                      "key": "vSKlRHP"
                     },
                     "cfVisibility": {
                       "type": "DesignValue",
@@ -3342,6 +3342,42 @@
                         "cfTextAlign": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
+                            "desktop": "left"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "TOTzTf8y",
+                      "definitionId": "heading",
+                      "patternProperties": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "type": "UnboundValue",
+                          "key": "LRYvjsK"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
                             "desktop": "center"
                           }
                         }
@@ -3349,7 +3385,7 @@
                       "children": []
                     },
                     {
-                      "id": "pBQddPoy",
+                      "id": "qLIHIGLs",
                       "definitionId": "paragraph",
                       "patternProperties": {},
                       "variables": {
@@ -3373,7 +3409,7 @@
                         },
                         "children": {
                           "type": "UnboundValue",
-                          "key": "Fjhj0iG"
+                          "key": "4qoR2Ve"
                         },
                         "isStrong": {
                           "type": "DesignValue",
@@ -3397,7 +3433,7 @@
                       "children": []
                     },
                     {
-                      "id": "bhfyH9n7",
+                      "id": "zcjPri47",
                       "definitionId": "contentful-container",
                       "patternProperties": {},
                       "variables": {
@@ -3487,11 +3523,11 @@
                         },
                         "cfHyperlink": {
                           "type": "UnboundValue",
-                          "key": "A9ZX2Zt"
+                          "key": "go9slZF"
                         },
                         "cfOpenInNewTab": {
                           "type": "UnboundValue",
-                          "key": "quCuUcr"
+                          "key": "rOJjuA1"
                         },
                         "cfBorderRadius": {
                           "type": "DesignValue",
@@ -3501,7 +3537,7 @@
                         },
                         "cfBackgroundImageUrl": {
                           "type": "UnboundValue",
-                          "key": "cT0oaaX"
+                          "key": "RF1zjg6"
                         },
                         "cfBackgroundImageOptions": {
                           "type": "DesignValue",
@@ -3516,37 +3552,37 @@
                       },
                       "children": [
                         {
-                          "id": "atj7U1o1",
+                          "id": "93vwjXnn",
                           "definitionId": "verticalActionBlock",
                           "patternProperties": {},
                           "variables": {
                             "overline": {
                               "type": "UnboundValue",
-                              "key": "xx295yk"
+                              "key": "hDMAL2U"
                             },
                             "title": {
                               "type": "UnboundValue",
-                              "key": "YMDKPF5"
+                              "key": "w3AE6Sz"
                             },
                             "description": {
                               "type": "UnboundValue",
-                              "key": "ZMlsDYU"
+                              "key": "aBzIX6V"
                             },
                             "image": {
                               "type": "UnboundValue",
-                              "key": "w-woLCb"
+                              "key": "dF5TCmS"
                             },
                             "videoTitle": {
                               "type": "UnboundValue",
-                              "key": "5KmvmNG"
+                              "key": "SV5gVCc"
                             },
                             "videoYouTubeId": {
                               "type": "UnboundValue",
-                              "key": "ZkpOdZ5"
+                              "key": "TH-_LAe"
                             },
                             "videoFallback": {
                               "type": "UnboundValue",
-                              "key": "NfIAZfA"
+                              "key": "T68Oo4f"
                             },
                             "videoShowCaption": {
                               "type": "DesignValue",
@@ -3556,11 +3592,11 @@
                             },
                             "primaryButton": {
                               "type": "UnboundValue",
-                              "key": "bU6dy7R"
+                              "key": "UaQvzts"
                             },
                             "secondaryButton": {
                               "type": "UnboundValue",
-                              "key": "F329f2c"
+                              "key": "FBj3Am9"
                             },
                             "background": {
                               "type": "DesignValue",
@@ -3570,7 +3606,7 @@
                             },
                             "publishedDate": {
                               "type": "UnboundValue",
-                              "key": "0imXtWX"
+                              "key": "f24Wg65"
                             },
                             "cfVisibility": {
                               "type": "DesignValue",
@@ -3582,37 +3618,37 @@
                           "children": []
                         },
                         {
-                          "id": "Xxu0uukU",
+                          "id": "YmiE6Ywp",
                           "definitionId": "verticalActionBlock",
                           "patternProperties": {},
                           "variables": {
                             "overline": {
                               "type": "UnboundValue",
-                              "key": "ifVl1zt"
+                              "key": "E7Cjhbo"
                             },
                             "title": {
                               "type": "UnboundValue",
-                              "key": "uaEyo5N"
+                              "key": "jekav-Z"
                             },
                             "description": {
                               "type": "UnboundValue",
-                              "key": "o-o_ODX"
+                              "key": "aohR35B"
                             },
                             "image": {
                               "type": "UnboundValue",
-                              "key": "C5i8VM9"
+                              "key": "ESHDx-N"
                             },
                             "videoTitle": {
                               "type": "UnboundValue",
-                              "key": "1yGV6uK"
+                              "key": "KXMj-y0"
                             },
                             "videoYouTubeId": {
                               "type": "UnboundValue",
-                              "key": "PNYHRdm"
+                              "key": "lakTr2l"
                             },
                             "videoFallback": {
                               "type": "UnboundValue",
-                              "key": "IsQ-_ft"
+                              "key": "MOKb3tV"
                             },
                             "videoShowCaption": {
                               "type": "DesignValue",
@@ -3622,11 +3658,11 @@
                             },
                             "primaryButton": {
                               "type": "UnboundValue",
-                              "key": "pkqEL0A"
+                              "key": "FSg2WhG"
                             },
                             "secondaryButton": {
                               "type": "UnboundValue",
-                              "key": "joQ-0rl"
+                              "key": "M_8vrhJ"
                             },
                             "background": {
                               "type": "DesignValue",
@@ -3636,7 +3672,7 @@
                             },
                             "publishedDate": {
                               "type": "UnboundValue",
-                              "key": "CsXWCa_"
+                              "key": "1702ebh"
                             },
                             "cfVisibility": {
                               "type": "DesignValue",
@@ -3648,37 +3684,37 @@
                           "children": []
                         },
                         {
-                          "id": "GFUXPlaX",
+                          "id": "86MbYKov",
                           "definitionId": "verticalActionBlock",
                           "patternProperties": {},
                           "variables": {
                             "overline": {
                               "type": "UnboundValue",
-                              "key": "99VGFEi"
+                              "key": "Wz9SJiE"
                             },
                             "title": {
                               "type": "UnboundValue",
-                              "key": "Mb0Uu58"
+                              "key": "LDMq3zA"
                             },
                             "description": {
                               "type": "UnboundValue",
-                              "key": "gqGvC0B"
+                              "key": "ccJpf-l"
                             },
                             "image": {
                               "type": "UnboundValue",
-                              "key": "GWlR88E"
+                              "key": "4H-a8iq"
                             },
                             "videoTitle": {
                               "type": "UnboundValue",
-                              "key": "oMh8s0P"
+                              "key": "IgW-F6-"
                             },
                             "videoYouTubeId": {
                               "type": "UnboundValue",
-                              "key": "gWNQ4pG"
+                              "key": "yKDw71r"
                             },
                             "videoFallback": {
                               "type": "UnboundValue",
-                              "key": "eD0TeLJ"
+                              "key": "nluOMYh"
                             },
                             "videoShowCaption": {
                               "type": "DesignValue",
@@ -3688,11 +3724,11 @@
                             },
                             "primaryButton": {
                               "type": "UnboundValue",
-                              "key": "1HSXb_O"
+                              "key": "oGnTTO-"
                             },
                             "secondaryButton": {
                               "type": "UnboundValue",
-                              "key": "jvbrePD"
+                              "key": "GmGKjDd"
                             },
                             "background": {
                               "type": "DesignValue",
@@ -3702,7 +3738,7 @@
                             },
                             "publishedDate": {
                               "type": "UnboundValue",
-                              "key": "4JcG90l"
+                              "key": "CtWVJCR"
                             },
                             "cfVisibility": {
                               "type": "DesignValue",
@@ -3716,7 +3752,7 @@
                       ]
                     },
                     {
-                      "id": "rlsEGZv2",
+                      "id": "OINcNI7F",
                       "definitionId": "contentful-container",
                       "patternProperties": {},
                       "variables": {
@@ -3806,11 +3842,11 @@
                         },
                         "cfHyperlink": {
                           "type": "UnboundValue",
-                          "key": "14LxTYy"
+                          "key": "yG60pRy"
                         },
                         "cfOpenInNewTab": {
                           "type": "UnboundValue",
-                          "key": "fYxkyRp"
+                          "key": "sjc08rI"
                         },
                         "cfBorderRadius": {
                           "type": "DesignValue",
@@ -3820,7 +3856,7 @@
                         },
                         "cfBackgroundImageUrl": {
                           "type": "UnboundValue",
-                          "key": "HZvy-J9"
+                          "key": "OCvEUyr"
                         },
                         "cfBackgroundImageOptions": {
                           "type": "DesignValue",
@@ -3835,7 +3871,7 @@
                       },
                       "children": [
                         {
-                          "id": "QNhI7ejt",
+                          "id": "qX9jhnyf",
                           "definitionId": "button",
                           "patternProperties": {},
                           "variables": {
@@ -3853,19 +3889,19 @@
                             },
                             "text": {
                               "type": "UnboundValue",
-                              "key": "jPJEUXd"
+                              "key": "Khqf7OC"
                             },
                             "href": {
                               "type": "UnboundValue",
-                              "key": "yCA2mHv"
+                              "key": "ETBqUYX"
                             },
                             "isLinkExternal": {
                               "type": "UnboundValue",
-                              "key": "YTyf5wp"
+                              "key": "UjouKpK"
                             },
                             "ariaLabel": {
                               "type": "UnboundValue",
-                              "key": "YChsiOQ"
+                              "key": "HANecnh"
                             },
                             "iconLeftName": {
                               "type": "DesignValue",
@@ -3889,7 +3925,7 @@
                           "children": []
                         },
                         {
-                          "id": "hoo4yfiY",
+                          "id": "axzVGDQG",
                           "definitionId": "button",
                           "patternProperties": {},
                           "variables": {
@@ -3907,19 +3943,19 @@
                             },
                             "text": {
                               "type": "UnboundValue",
-                              "key": "t4kDBEd"
+                              "key": "i4tvl_O"
                             },
                             "href": {
                               "type": "UnboundValue",
-                              "key": "X-HK21R"
+                              "key": "HURk-ZX"
                             },
                             "isLinkExternal": {
                               "type": "UnboundValue",
-                              "key": "64_A-St"
+                              "key": "CCG45Cf"
                             },
                             "ariaLabel": {
                               "type": "UnboundValue",
-                              "key": "nbHy7vm"
+                              "key": "PAn6OhE"
                             },
                             "iconLeftName": {
                               "type": "DesignValue",
@@ -3999,7 +4035,7 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "543px"
+                    "desktop": "602px"
                   }
                 },
                 "cfMaxWidth": {
@@ -4069,7 +4105,7 @@
               },
               "children": [
                 {
-                  "id": "QDMs7LsT",
+                  "id": "KAaeXuCb",
                   "definitionId": "section",
                   "patternProperties": {},
                   "variables": {
@@ -4093,7 +4129,7 @@
                     },
                     "id": {
                       "type": "UnboundValue",
-                      "key": "eb_MPaz"
+                      "key": "0kPDA79g"
                     },
                     "cfVisibility": {
                       "type": "DesignValue",
@@ -4133,6 +4169,42 @@
                         "cfTextAlign": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
+                            "desktop": "left"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "Rq1QaSxv",
+                      "definitionId": "heading",
+                      "patternProperties": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "type": "UnboundValue",
+                          "key": "UCzH3lZH"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
                             "desktop": "center"
                           }
                         }
@@ -4140,7 +4212,7 @@
                       "children": []
                     },
                     {
-                      "id": "muIkX9xR",
+                      "id": "a9X5giIf",
                       "definitionId": "paragraph",
                       "patternProperties": {},
                       "variables": {
@@ -4164,7 +4236,7 @@
                         },
                         "children": {
                           "type": "UnboundValue",
-                          "key": "avoNRvi"
+                          "key": "bke8mAuc"
                         },
                         "isStrong": {
                           "type": "DesignValue",
@@ -4188,7 +4260,7 @@
                       "children": []
                     },
                     {
-                      "id": "SfoadPLi",
+                      "id": "309tDLjp",
                       "definitionId": "contentful-container",
                       "patternProperties": {},
                       "variables": {
@@ -4278,11 +4350,11 @@
                         },
                         "cfHyperlink": {
                           "type": "UnboundValue",
-                          "key": "7MeSlp7"
+                          "key": "1hMP95qt"
                         },
                         "cfOpenInNewTab": {
                           "type": "UnboundValue",
-                          "key": "rI0oR8-"
+                          "key": "3CADhMmH"
                         },
                         "cfBorderRadius": {
                           "type": "DesignValue",
@@ -4292,7 +4364,7 @@
                         },
                         "cfBackgroundImageUrl": {
                           "type": "UnboundValue",
-                          "key": "nSMsnuh"
+                          "key": "uwJDIDdP"
                         },
                         "cfBackgroundImageOptions": {
                           "type": "DesignValue",
@@ -4307,37 +4379,37 @@
                       },
                       "children": [
                         {
-                          "id": "KgTC33p3",
+                          "id": "nBmn1JMd",
                           "definitionId": "verticalActionBlock",
                           "patternProperties": {},
                           "variables": {
                             "overline": {
                               "type": "UnboundValue",
-                              "key": "h6Hi-X-"
+                              "key": "73db4weH"
                             },
                             "title": {
                               "type": "UnboundValue",
-                              "key": "Jo5MPY5"
+                              "key": "Ca3QU6Yy"
                             },
                             "description": {
                               "type": "UnboundValue",
-                              "key": "F0cPAPR"
+                              "key": "Cbj4oJVP"
                             },
                             "image": {
                               "type": "UnboundValue",
-                              "key": "cn1ZMlY"
+                              "key": "nzQ1wskT"
                             },
                             "videoTitle": {
                               "type": "UnboundValue",
-                              "key": "N5xYIJ9"
+                              "key": "cyAbVclk"
                             },
                             "videoYouTubeId": {
                               "type": "UnboundValue",
-                              "key": "SJl4svn"
+                              "key": "dxOviBkV"
                             },
                             "videoFallback": {
                               "type": "UnboundValue",
-                              "key": "h4i7T9A"
+                              "key": "NTMvp4T3"
                             },
                             "videoShowCaption": {
                               "type": "DesignValue",
@@ -4347,11 +4419,11 @@
                             },
                             "primaryButton": {
                               "type": "UnboundValue",
-                              "key": "s8rlauH"
+                              "key": "KMDGAxsG"
                             },
                             "secondaryButton": {
                               "type": "UnboundValue",
-                              "key": "3BUqauA"
+                              "key": "kCbgx5xB"
                             },
                             "background": {
                               "type": "DesignValue",
@@ -4361,7 +4433,7 @@
                             },
                             "publishedDate": {
                               "type": "UnboundValue",
-                              "key": "2ltG50H"
+                              "key": "jX7FtFyx"
                             },
                             "cfVisibility": {
                               "type": "DesignValue",
@@ -4373,37 +4445,37 @@
                           "children": []
                         },
                         {
-                          "id": "5GXqL1Ox",
+                          "id": "MGbvWLy6",
                           "definitionId": "verticalActionBlock",
                           "patternProperties": {},
                           "variables": {
                             "overline": {
                               "type": "UnboundValue",
-                              "key": "ewD1MIg"
+                              "key": "T1XSxOfG"
                             },
                             "title": {
                               "type": "UnboundValue",
-                              "key": "fd5WKVh"
+                              "key": "st5uoXAq"
                             },
                             "description": {
                               "type": "UnboundValue",
-                              "key": "uNyl6dN"
+                              "key": "WwX8DppO"
                             },
                             "image": {
                               "type": "UnboundValue",
-                              "key": "frxdqlM"
+                              "key": "eyHY3MEf"
                             },
                             "videoTitle": {
                               "type": "UnboundValue",
-                              "key": "_-SVfw4"
+                              "key": "5VjDE2CK"
                             },
                             "videoYouTubeId": {
                               "type": "UnboundValue",
-                              "key": "N0I7dhx"
+                              "key": "oVSHufbZ"
                             },
                             "videoFallback": {
                               "type": "UnboundValue",
-                              "key": "uE98osQ"
+                              "key": "NzFs8wiS"
                             },
                             "videoShowCaption": {
                               "type": "DesignValue",
@@ -4413,11 +4485,11 @@
                             },
                             "primaryButton": {
                               "type": "UnboundValue",
-                              "key": "yOGuxU7"
+                              "key": "ZGRiDrVS"
                             },
                             "secondaryButton": {
                               "type": "UnboundValue",
-                              "key": "mTrzQq4"
+                              "key": "GmnU58eE"
                             },
                             "background": {
                               "type": "DesignValue",
@@ -4427,7 +4499,7 @@
                             },
                             "publishedDate": {
                               "type": "UnboundValue",
-                              "key": "suSvUMU"
+                              "key": "zHKQk2B6"
                             },
                             "cfVisibility": {
                               "type": "DesignValue",
@@ -4439,37 +4511,37 @@
                           "children": []
                         },
                         {
-                          "id": "866bjZRG",
+                          "id": "DqkrNi7I",
                           "definitionId": "verticalActionBlock",
                           "patternProperties": {},
                           "variables": {
                             "overline": {
                               "type": "UnboundValue",
-                              "key": "YqyKjtN"
+                              "key": "1rLXmQf4"
                             },
                             "title": {
                               "type": "UnboundValue",
-                              "key": "d1U51lM"
+                              "key": "Fa2xfSTa"
                             },
                             "description": {
                               "type": "UnboundValue",
-                              "key": "0IdZYlg"
+                              "key": "cex92Z12"
                             },
                             "image": {
                               "type": "UnboundValue",
-                              "key": "vEgzB5W"
+                              "key": "aNOfIztd"
                             },
                             "videoTitle": {
                               "type": "UnboundValue",
-                              "key": "gdkP5AB"
+                              "key": "bisJWX6Q"
                             },
                             "videoYouTubeId": {
                               "type": "UnboundValue",
-                              "key": "FP8AFTh"
+                              "key": "9cnm11U7"
                             },
                             "videoFallback": {
                               "type": "UnboundValue",
-                              "key": "CMoJ7-h"
+                              "key": "65wUpmTS"
                             },
                             "videoShowCaption": {
                               "type": "DesignValue",
@@ -4479,11 +4551,11 @@
                             },
                             "primaryButton": {
                               "type": "UnboundValue",
-                              "key": "SblC9Eq"
+                              "key": "U3p4tTyP"
                             },
                             "secondaryButton": {
                               "type": "UnboundValue",
-                              "key": "okCunI6"
+                              "key": "lJTpbCYC"
                             },
                             "background": {
                               "type": "DesignValue",
@@ -4493,7 +4565,7 @@
                             },
                             "publishedDate": {
                               "type": "UnboundValue",
-                              "key": "B9Z5E8Z"
+                              "key": "zgUdfBPC"
                             },
                             "cfVisibility": {
                               "type": "DesignValue",
@@ -4507,7 +4579,7 @@
                       ]
                     },
                     {
-                      "id": "ZdHiCwYV",
+                      "id": "Co1Bs0NX",
                       "definitionId": "contentful-container",
                       "patternProperties": {},
                       "variables": {
@@ -4597,11 +4669,11 @@
                         },
                         "cfHyperlink": {
                           "type": "UnboundValue",
-                          "key": "Olsib0x"
+                          "key": "uWNHXGKp"
                         },
                         "cfOpenInNewTab": {
                           "type": "UnboundValue",
-                          "key": "OZztXDB"
+                          "key": "OpG1fkXt"
                         },
                         "cfBorderRadius": {
                           "type": "DesignValue",
@@ -4611,7 +4683,7 @@
                         },
                         "cfBackgroundImageUrl": {
                           "type": "UnboundValue",
-                          "key": "4YhZVDp"
+                          "key": "T6anbs8T"
                         },
                         "cfBackgroundImageOptions": {
                           "type": "DesignValue",
@@ -4626,7 +4698,7 @@
                       },
                       "children": [
                         {
-                          "id": "9DyhZR5N",
+                          "id": "XoeUOX2Z",
                           "definitionId": "button",
                           "patternProperties": {},
                           "variables": {
@@ -4644,19 +4716,19 @@
                             },
                             "text": {
                               "type": "UnboundValue",
-                              "key": "bvezkpM"
+                              "key": "fwWOH5sS"
                             },
                             "href": {
                               "type": "UnboundValue",
-                              "key": "mxhZ0oa"
+                              "key": "IxzSvJTD"
                             },
                             "isLinkExternal": {
                               "type": "UnboundValue",
-                              "key": "G-HH4lT"
+                              "key": "ovjouB0p"
                             },
                             "ariaLabel": {
                               "type": "UnboundValue",
-                              "key": "ByWMkbb"
+                              "key": "QZOw56pD"
                             },
                             "iconLeftName": {
                               "type": "DesignValue",
@@ -4680,7 +4752,7 @@
                           "children": []
                         },
                         {
-                          "id": "UuFjnNF5",
+                          "id": "hiMpRxOH",
                           "definitionId": "button",
                           "patternProperties": {},
                           "variables": {
@@ -4698,19 +4770,19 @@
                             },
                             "text": {
                               "type": "UnboundValue",
-                              "key": "Y77xSct"
+                              "key": "aOs7kMFE"
                             },
                             "href": {
                               "type": "UnboundValue",
-                              "key": "RYex6Om"
+                              "key": "KOIVMjgL"
                             },
                             "isLinkExternal": {
                               "type": "UnboundValue",
-                              "key": "6FOHYvV"
+                              "key": "gr0DK9TI"
                             },
                             "ariaLabel": {
                               "type": "UnboundValue",
-                              "key": "qLa440J"
+                              "key": "FS1U8GfG"
                             },
                             "iconLeftName": {
                               "type": "DesignValue",
@@ -17272,17 +17344,44 @@
       },
       "unboundValues": {
         "en-US": {
-          "0IdZYlg": {
-            "value": "Action block description goes here."
-          },
-          "0imXtWX": {},
           "0zIBmw_": {
             "value": ""
           },
-          "14LxTYy": {
-            "value": ""
+          "13Ib38_": {
+            "value": false
           },
-          "1HSXb_O": {
+          "1702ebh": {},
+          "347Oltn": {},
+          "3gD4aa9": {},
+          "4H-a8iq": {
+            "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
+          },
+          "4qoR2Ve": {
+            "value": "Paragraph"
+          },
+          "60M5ZzR": {},
+          "6znvK3h": {},
+          "7OACowT": {},
+          "8p5f3sx": {},
+          "9FFVH8n": {
+            "value": false
+          },
+          "ABf-FSO": {},
+          "CCG45Cf": {
+            "value": false
+          },
+          "CtWVJCR": {},
+          "DMiqqWu": {},
+          "E7Cjhbo": {},
+          "EKQDsC5": {},
+          "ESHDx-N": {
+            "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
+          },
+          "ETBqUYX": {
+            "value": "https://code.org"
+          },
+          "FBj3Am9": {},
+          "FSg2WhG": {
             "value": {
               "fields": {
                 "url": "#",
@@ -17290,66 +17389,15 @@
               }
             }
           },
-          "1yGV6uK": {},
-          "2ltG50H": {},
-          "347Oltn": {},
-          "3BUqauA": {},
-          "3gD4aa9": {},
-          "4JcG90l": {},
-          "4YhZVDp": {},
-          "4dqEr0j": {
-            "value": false
-          },
-          "5KmvmNG": {},
-          "60M5ZzR": {},
-          "64_A-St": {
-            "value": false
-          },
-          "6FOHYvV": {
-            "value": false
-          },
-          "6znvK3h": {},
-          "7MeSlp7": {
-            "value": ""
-          },
-          "7OACowT": {},
-          "8p5f3sx": {},
-          "99VGFEi": {},
-          "9FFVH8n": {
-            "value": false
-          },
-          "A9ZX2Zt": {
-            "value": ""
-          },
-          "ABf-FSO": {},
-          "B9Z5E8Z": {},
-          "ByWMkbb": {},
-          "C5i8VM9": {
-            "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
-          },
-          "CMoJ7-h": {},
-          "CsXWCa_": {},
-          "DMiqqWu": {},
-          "EKQDsC5": {},
-          "F0cPAPR": {
-            "value": "Action block description goes here."
-          },
-          "F329f2c": {},
-          "FP8AFTh": {},
           "Fe4Bfar": {
             "value": ""
           },
-          "Fjhj0iG": {
-            "value": "Paragraph"
-          },
-          "G-HH4lT": {
-            "value": false
-          },
-          "GWlR88E": {
-            "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
-          },
           "GkMrM3D": {},
-          "HZvy-J9": {},
+          "GmGKjDd": {},
+          "HANecnh": {},
+          "HURk-ZX": {
+            "value": "https://code.org"
+          },
           "HmUDGQ4": {},
           "ICrX3vs": {
             "value": ""
@@ -17360,48 +17408,44 @@
           "Idr0CiO": {
             "value": ""
           },
-          "IsQ-_ft": {},
+          "IgW-F6-": {},
           "JFCnn0N": {
             "value": false
-          },
-          "JKgOR2U": {
-            "value": ""
-          },
-          "Jo5MPY5": {
-            "value": "Action Block Title"
           },
           "KBQ3_Cb": {},
           "KU5oIGN": {
             "value": ""
           },
+          "KXMj-y0": {},
+          "Khqf7OC": {
+            "value": "Button"
+          },
+          "LDMq3zA": {
+            "value": "Action Block Title"
+          },
+          "LRYvjsK": {
+            "value": "Heading"
+          },
           "LbAW-Uv": {
             "value": false
           },
-          "LrkX-Uz": {},
           "LsBgETo": {
             "value": false
           },
-          "Mb0Uu58": {
-            "value": "Action Block Title"
-          },
-          "N0I7dhx": {},
-          "N5xYIJ9": {},
-          "NfIAZfA": {},
-          "OZztXDB": {
-            "value": false
-          },
-          "Olsib0x": {
-            "value": ""
-          },
-          "PNYHRdm": {},
-          "RYex6Om": {
-            "value": "https://code.org"
-          },
-          "SJl4svn": {},
+          "MOKb3tV": {},
+          "M_8vrhJ": {},
+          "OCvEUyr": {},
+          "PAn6OhE": {},
+          "RF1zjg6": {},
           "SO13Vmq": {
             "value": "Editorial Card 1"
           },
-          "SblC9Eq": {
+          "SV5gVCc": {},
+          "T1ZuBpV": {},
+          "T68Oo4f": {},
+          "TH-_LAe": {},
+          "U1KmKKh": {},
+          "UaQvzts": {
             "value": {
               "fields": {
                 "url": "#",
@@ -17409,36 +17453,22 @@
               }
             }
           },
-          "T1ZuBpV": {},
-          "U1KmKKh": {},
-          "WmoW8Tc": {},
-          "X-HK21R": {
-            "value": "https://code.org"
+          "UjouKpK": {
+            "value": false
           },
+          "WmoW8Tc": {},
+          "Wz9SJiE": {},
           "XonT3vx": {
             "value": "Horizontal With Image"
           },
-          "Y77xSct": {
-            "value": "Button"
-          },
-          "YChsiOQ": {},
-          "YMDKPF5": {
-            "value": "Action Block Title"
-          },
-          "YTyf5wp": {
-            "value": false
-          },
           "YdN-mw6": {},
-          "YqyKjtN": {},
           "ZKgwMwb": {
             "value": "Rich Text"
           },
-          "ZMlsDYU": {
+          "_zwsCfw": {},
+          "aBzIX6V": {
             "value": "Action block description goes here."
           },
-          "ZkpOdZ5": {},
-          "_-SVfw4": {},
-          "_zwsCfw": {},
           "aGWZHxe": {
             "value": ""
           },
@@ -17447,19 +17477,11 @@
           "alDLE92": {
             "value": "Action Block Pattern Hidden Elements"
           },
-          "avoNRvi": {
-            "value": "Paragraph"
+          "aohR35B": {
+            "value": "Action block description goes here."
           },
           "bAIeQt5": {
             "value": false
-          },
-          "bU6dy7R": {
-            "value": {
-              "fields": {
-                "url": "#",
-                "label": "Primary button"
-              }
-            }
           },
           "baOMaPo": {
             "value": false
@@ -17467,72 +17489,45 @@
           "bs0mKZu": {
             "value": "Action Block Pattern Default"
           },
-          "bvezkpM": {
-            "value": "Button"
-          },
           "c6Xllyd": {
             "value": "Link"
           },
+          "cGdHTOr": {},
           "cLEr2oT": {},
-          "cT0oaaX": {},
-          "cn1ZMlY": {
-            "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
-          },
-          "d1U51lM": {
-            "value": "Action Block Title"
-          },
-          "eD0TeLJ": {},
-          "eb_MPaz": {},
-          "ewD1MIg": {},
-          "ezWxsUM": {},
-          "fYxkyRp": {
-            "value": false
-          },
-          "fd5WKVh": {
-            "value": "Action Block Title"
-          },
-          "frxdqlM": {
-            "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
-          },
-          "fupk4k7": {},
-          "gWNQ4pG": {},
-          "gdkP5AB": {},
-          "gqGvC0B": {
+          "ccJpf-l": {
             "value": "Action block description goes here."
           },
-          "h4i7T9A": {},
-          "h6Hi-X-": {},
-          "ifVl1zt": {},
-          "io65oYg": {},
-          "jPJEUXd": {
+          "dF5TCmS": {
+            "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
+          },
+          "ezWxsUM": {},
+          "f24Wg65": {},
+          "fupk4k7": {},
+          "go9slZF": {
+            "value": ""
+          },
+          "hDMAL2U": {},
+          "i4tvl_O": {
             "value": "Button"
           },
-          "joQ-0rl": {},
-          "jvbrePD": {},
-          "mTrzQq4": {},
+          "io65oYg": {},
+          "jekav-Z": {
+            "value": "Action Block Title"
+          },
+          "lakTr2l": {},
           "mqPCQ9z": {
             "value": "Editorial Card 2"
           },
-          "mxhZ0oa": {
-            "value": "https://code.org"
-          },
           "n6pmjoG": {},
-          "nSMsnuh": {},
           "nXf_AKG": {
             "value": "Editorial Card"
           },
           "nZ3KuxH": {},
-          "nbHy7vm": {},
-          "niMLIeN": {},
+          "nluOMYh": {},
           "nsI4jPw": {
             "value": ""
           },
-          "o-o_ODX": {
-            "value": "Action block description goes here."
-          },
-          "oMh8s0P": {},
-          "okCunI6": {},
-          "pkqEL0A": {
+          "oGnTTO-": {
             "value": {
               "fields": {
                 "url": "#",
@@ -17540,46 +17535,24 @@
               }
             }
           },
-          "qLa440J": {},
-          "quCuUcr": {
-            "value": false
-          },
-          "rI0oR8-": {
+          "rOJjuA1": {
             "value": false
           },
           "rtOw9NH": {
             "value": ""
           },
-          "s8rlauH": {
-            "value": {
-              "fields": {
-                "url": "#",
-                "label": "Primary button"
-              }
-            }
-          },
-          "suSvUMU": {},
-          "t4kDBEd": {
-            "value": "Button"
-          },
-          "uE98osQ": {},
-          "uNyl6dN": {
-            "value": "Action block description goes here."
-          },
-          "uaEyo5N": {
-            "value": "Action Block Title"
+          "sjc08rI": {
+            "value": false
           },
           "uaOANCd": {
             "value": "FAQ Accordion"
           },
-          "vEgzB5W": {
-            "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
-          },
+          "vSKlRHP": {},
           "vwAdtQr": {
             "value": "Editorial Card 4"
           },
-          "w-woLCb": {
-            "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
+          "w3AE6Sz": {
+            "value": "Action Block Title"
           },
           "xF6NHMp": {
             "value": false
@@ -17588,26 +17561,22 @@
             "value": "Editorial Card 3"
           },
           "xbPE1--": {},
-          "xx295yk": {},
-          "yCA2mHv": {
-            "value": "https://code.org"
+          "yG60pRy": {
+            "value": ""
           },
-          "yOGuxU7": {
-            "value": {
-              "fields": {
-                "url": "#",
-                "label": "Primary button"
-              }
-            }
-          },
+          "yKDw71r": {},
           "zHoBMf8": {
             "value": false
+          },
+          "zh7msz6": {
+            "value": ""
           },
           "0BYMXHkY": {
             "value": "Full Width Action Block"
           },
           "0FOHuKmh": {},
           "0ZmNLA6K": {},
+          "0kPDA79g": {},
           "18Loxedj": {
             "value": false
           },
@@ -17617,12 +17586,19 @@
             "value": false
           },
           "1guF9yEn": {},
+          "1hMP95qt": {
+            "value": ""
+          },
+          "1rLXmQf4": {},
           "26IBqL3f": {},
           "36YfTgYM": {
             "value": ""
           },
           "3BL7DZFT": {
             "value": "Editorial Card 3"
+          },
+          "3CADhMmH": {
+            "value": false
           },
           "3kOq2u6E": {},
           "4UefySBz": {},
@@ -17632,6 +17608,7 @@
           "4v9R8Bod": {},
           "5OJDXQCx": {},
           "5OKBDu4C": {},
+          "5VjDE2CK": {},
           "5dOroYow": {
             "value": ""
           },
@@ -17643,6 +17620,7 @@
           },
           "5wXRsLJn": {},
           "640trRtn": {},
+          "65wUpmTS": {},
           "6axn1isp": {},
           "6dweZgN5": {
             "value": false
@@ -17657,6 +17635,7 @@
           "6pLrv7NC": {
             "value": false
           },
+          "73db4weH": {},
           "7954gvrQ": {},
           "7Cj0SIqV": {
             "value": "Right Aligned: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
@@ -17696,6 +17675,7 @@
           },
           "9SU8qYse": {},
           "9Xoxh3vz": {},
+          "9cnm11U7": {},
           "9jZF29Xj": {},
           "A43eNziB": {},
           "A4Z16hGr": {},
@@ -17719,6 +17699,12 @@
             "value": "Secondary Black Button"
           },
           "CDhmJ0kv": {},
+          "Ca3QU6Yy": {
+            "value": "Action Block Title"
+          },
+          "Cbj4oJVP": {
+            "value": "Action block description goes here."
+          },
           "CtU2QeRy": {
             "value": ""
           },
@@ -17733,6 +17719,10 @@
           "FHSW9Y15": {
             "value": ""
           },
+          "FS1U8GfG": {},
+          "Fa2xfSTa": {
+            "value": "Action Block Title"
+          },
           "GApUZWyE": {
             "value": "Self-Paced PL Carousel"
           },
@@ -17743,6 +17733,7 @@
           "GGSUj7T7": {
             "value": ""
           },
+          "GmnU58eE": {},
           "H6ykocnY": {
             "value": "Hero Banner with Image Small"
           },
@@ -17756,6 +17747,9 @@
             "value": "about:blank"
           },
           "IuXKDn7Q": {},
+          "IxzSvJTD": {
+            "value": "https://code.org"
+          },
           "J8z7Qo1L": {
             "value": "Heading 4"
           },
@@ -17770,6 +17764,17 @@
             "value": "/ping"
           },
           "Jy1nky8K": {},
+          "KMDGAxsG": {
+            "value": {
+              "fields": {
+                "url": "#",
+                "label": "Primary button"
+              }
+            }
+          },
+          "KOIVMjgL": {
+            "value": "https://code.org"
+          },
           "KU4GQ6IT": {},
           "KU6fzBI2": {
             "value": false
@@ -17786,17 +17791,22 @@
           },
           "MAPxIo7U": {},
           "Mo4S1GHf": {},
+          "NTMvp4T3": {},
           "NhzwQJMw": {
             "value": "https://code.org"
           },
           "NspNpe6v": {
             "value": ""
           },
+          "NzFs8wiS": {},
           "OCSRD9uM": {
             "value": "Editorial Card 2"
           },
           "OaekmZwc": {},
           "Oor1uCW9": {},
+          "OpG1fkXt": {
+            "value": false
+          },
           "Ov2KaMlI": {
             "value": ""
           },
@@ -17815,6 +17825,7 @@
             "value": false
           },
           "QOmaSWNU": {},
+          "QZOw56pD": {},
           "RLcvWIOm": {
             "value": false
           },
@@ -17825,6 +17836,8 @@
           "SGrm6TeM": {},
           "SWiUA59D": {},
           "T0ieOlqB": {},
+          "T1XSxOfG": {},
+          "T6anbs8T": {},
           "TC9267aF": {},
           "TSFzv7B9": {
             "value": "Paragraph Secondary Medium"
@@ -17835,7 +17848,18 @@
           "TnZjwBke": {
             "value": false
           },
+          "U3p4tTyP": {
+            "value": {
+              "fields": {
+                "url": "#",
+                "label": "Primary button"
+              }
+            }
+          },
           "UCeQ9iXv": {},
+          "UCzH3lZH": {
+            "value": "Heading"
+          },
           "UmzzoZTw": {},
           "V8YHlFRp": {
             "value": "Container"
@@ -17862,6 +17886,9 @@
           },
           "WelvRTbQ": {},
           "Wn9tbkAL": {},
+          "WwX8DppO": {
+            "value": "Action block description goes here."
+          },
           "WzScpfoh": {},
           "X4E1tjHt": {
             "value": ""
@@ -17886,6 +17913,14 @@
             "value": "Vertical With Icon"
           },
           "ZF1JlQXv": {},
+          "ZGRiDrVS": {
+            "value": {
+              "fields": {
+                "url": "#",
+                "label": "Primary button"
+              }
+            }
+          },
           "ZJnqNzR6": {
             "value": "Image"
           },
@@ -17897,12 +17932,22 @@
             "value": false
           },
           "ZpinQk1s": {},
+          "aNOfIztd": {
+            "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
+          },
+          "aOs7kMFE": {
+            "value": "Button"
+          },
           "aPeti3xV": {
             "value": false
           },
           "av7tIVe0": {},
           "avmUJimV": {
             "value": "Paragraph Secondary Bold"
+          },
+          "bisJWX6Q": {},
+          "bke8mAuc": {
+            "value": "Paragraph"
           },
           "bqv4sKJA": {},
           "bvkdCWAp": {
@@ -17915,7 +17960,11 @@
             "value": "In partnership with"
           },
           "ccFVr1cJ": {},
+          "cex92Z12": {
+            "value": "Action block description goes here."
+          },
           "cs21Yz63": {},
+          "cyAbVclk": {},
           "d5NKAnwp": {
             "value": "Localization"
           },
@@ -17927,6 +17976,7 @@
             "value": "https://code.org"
           },
           "dggzODpm": {},
+          "dxOviBkV": {},
           "eI0ylAC7": {
             "value": false
           },
@@ -17937,14 +17987,23 @@
           "eUKHdTTY": {
             "value": false
           },
+          "eyHY3MEf": {
+            "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
+          },
           "f0smL8E1": {},
           "fP9VBKqZ": {},
           "fS0eRSbO": {},
           "fvbdsWsT": {
             "value": "Divider"
           },
+          "fwWOH5sS": {
+            "value": "Button"
+          },
           "g1GOPI4w": {
             "value": ""
+          },
+          "gr0DK9TI": {
+            "value": false
           },
           "gwYa67z7": {},
           "gyjlsYtE": {
@@ -17970,11 +18029,13 @@
           "jTc0vIOy": {
             "value": "Hero Banner with Partner Callout"
           },
+          "jX7FtFyx": {},
           "joAfMQhO": {},
           "jr98RSyJ": {},
           "k7cc4DWU": {
             "value": "Heading 3"
           },
+          "kCbgx5xB": {},
           "kLDDuqZG": {
             "value": ""
           },
@@ -17989,6 +18050,7 @@
           "lIsy1GAr": {
             "value": "Internal Link M"
           },
+          "lJTpbCYC": {},
           "lMpw2utY": {
             "value": "Hero Banner with Background Color"
           },
@@ -18016,12 +18078,19 @@
             "value": "Without fallback"
           },
           "neeT53Dk": {},
+          "nzQ1wskT": {
+            "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
+          },
           "oPc8lo0F": {},
           "oT3G3H6n": {
             "value": ""
           },
           "oThcKeVH": {},
+          "oVSHufbZ": {},
           "oeJZ3M7B": {
+            "value": false
+          },
+          "ovjouB0p": {
             "value": false
           },
           "pLRLaUbo": {
@@ -18058,6 +18127,9 @@
           },
           "sOrYv4IZ": {},
           "sgcocoTx": {},
+          "st5uoXAq": {
+            "value": "Action Block Title"
+          },
           "tgfqSQxT": {
             "value": "Overline Primary Large"
           },
@@ -18068,9 +18140,13 @@
           "uTgCIxZc": {
             "value": "Video without Fallback"
           },
+          "uWNHXGKp": {
+            "value": ""
+          },
           "uqryIUsQ": {
             "value": "Section - Pattern Dark"
           },
+          "uwJDIDdP": {},
           "v6A0d7WI": {
             "value": "With secondary background"
           },
@@ -18105,9 +18181,11 @@
             "value": "Action Block"
           },
           "zBYukK4q": {},
+          "zHKQk2B6": {},
           "zQNTpdsD": {
             "value": "/ping"
           },
+          "zgUdfBPC": {},
           "zkx5V9ed": {},
           "zq3mza7y": {},
           "zxogi8F5": {},
