@@ -190,3 +190,13 @@ export const NOTIFICATION_ALERT_TYPE = 'notification';
 export const START_BLOCKS = 'start_blocks';
 
 export const DEPRECATED_PROJECT_TYPES = ['algebra_game', 'calc', 'eval'];
+
+export const OPEN_ENDED_LEGACY_PROJECT_TYPES = [
+  'applab',
+  'gamelab',
+  'weblab',
+  'javalab',
+  'spritelab',
+  'poetry',
+  'playlab',
+];
