@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2025-06-04T20:32:20.000Z",
   "level_num": "custom",
@@ -20,7 +21,7 @@
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "# This program prints a message\nprint(\"Hello, Python!\")",
+          "contents": "# This program prints a message\nprint(\"Welcome to the Neighborhood Cafe!\")",
           "folderId": "0",
           "active": true,
           "open": true
@@ -29,9 +30,10 @@
       "folders": {
       }
     },
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-06-04T20:32:20.461+00:00\",\"changed\":[\"cloned from \\\"aif-pl-print-L3-2-Python\\\"\"],\"cloned_from\":\"aif-pl-print-L3-2-Python\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-06-04T20:32:20.461+00:00\",\"changed\":[\"cloned from \\\"aif-pl-print-L3-2-Python\\\"\"],\"cloned_from\":\"aif-pl-print-L3-2-Python\"},{\"changed_at\":\"2025-06-05 16:36:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-06-05 16:36:36 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-06-05 16:37:13 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Pythonlab>

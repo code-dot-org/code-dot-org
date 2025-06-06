@@ -1,4 +1,5 @@
 import {SessionFormat} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/types';
+import {WorkshopFormats} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 export interface OrganizerInfo {
   name: string;
@@ -32,7 +33,7 @@ export interface GetWorkshopInfoScriptDataResponse {
   num_enrollments: number;
   grade_levels?: string[];
   sessions: SessionInfo[];
-  format: string;
+  format: keyof typeof WorkshopFormats;
   location_name?: string;
   fee?: string;
   prereq?: string;

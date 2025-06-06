@@ -10991,6 +10991,7 @@ __metadata:
     react-resizable-layout: "npm:^0.7.2"
     react-router: "npm:3.2.6"
     react-router-dom: "npm:^6.26.0"
+    react-schemaorg: "npm:^2.0.0"
     react-select: "npm:^1.2.1"
     react-select-5: "npm:react-select@5"
     react-sticky: "npm:^6.0.3"
@@ -11020,6 +11021,7 @@ __metadata:
     sass: "npm:^1.51.0"
     sass-loader: "npm:^12.1.0"
     save-csv: "npm:^4.0.6"
+    schema-dts: "npm:^1.1.5"
     script-loader: "npm:^0.7.2"
     seedrandom: "npm:2.4.2"
     sinon: "npm:^11.0.0"
@@ -26628,6 +26630,13 @@ canvg@gabelerner/canvg:
   dependencies:
     loose-envify: "npm:^1.1.0"
   checksum: 10/0c4557aa37bafca44ff21dc0ea7c92e2dbcb298bc62eae92b29a39b029134f02fb23917d6ebc8b1fa536b4184934314c20d8864d156a9f6357f3398aaf7bfda8
+  languageName: node
+  linkType: hard
+
+"schema-dts@npm:^1.1.5":
+  version: 1.1.5
+  resolution: "schema-dts@npm:1.1.5"
+  checksum: 10/74f8376449241f008349cbd938e30e2174f0c974bb5155c852bdbbb4873a0f151a12601cf2fe115ae0811a0f7ccaefd3525e21c2a8f0fab7ada9c0309230db0a
   languageName: node
   linkType: hard
 

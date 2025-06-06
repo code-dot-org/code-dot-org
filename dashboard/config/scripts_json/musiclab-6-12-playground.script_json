@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-03 19:28:01 UTC",
+    "serialized_at": "2025-06-05 18:29:04 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -136,6 +136,7 @@
             "buttonText": "Start Now!"
           }
         ],
+        "overview": "Students are introduced to sequencing by following step-by-step instructions to build a song. They learn how to layer tracks and use blocks like play together to combine sounds. Teachers guide discussions, highlight patterns, and encourage students to make predictions before running code.",
         "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be). "
       },
       "seeding_key": {
@@ -152,6 +153,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "overview": "Students practice sequencing by combining tracks of different lengths and adding rests to create offsets. Working in pairs, they apply concepts from the Explore lesson and build fluency through guided challenges. Teachers circulate to support and adjust instruction as needed.",
         "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be)."
       },
       "seeding_key": {
@@ -168,6 +170,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "overview": "Students review and apply sequencing skills in a more open-ended context, using new Effect blocks to enhance their songs. Inspired by a real-world producer, they explore how to layer tracks creatively—bridging structured learning with creative expression.",
         "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be)."
       },
       "seeding_key": {
@@ -184,6 +187,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "overview": "Students create personalized walk-up songs for characters using everything they've learned about sequencing. They explore a new feature, triggers, to add flair and timing to their music. This creative project gives students space to express themselves while demonstrating mastery of key concepts.",
         "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be)."
       },
       "seeding_key": {
@@ -212,6 +216,7 @@
             "buttonText": "Start Now!"
           }
         ],
+        "overview": "Students are introduced to loops through real-world performances using loop pedals. They make predictions about how a repeat block will behave and explore how looping can simplify and strengthen musical structure. Shadow blocks are introduced to help students visually identify patterns in their code.",
         "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be)."
       },
       "seeding_key": {
@@ -228,6 +233,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "overview": "Students deepen their understanding of loops by working with more complex structures, including nested loops and loops with rests. Pair programming supports peer collaboration, and check-in levels allow teachers to adapt pacing based on student progress.",
         "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be)."
       },
       "seeding_key": {
@@ -244,6 +250,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "overview": "Students explore the idea of live coding through the lens of creative performer Roxanne Harris. They review loops and build confidence using them in performance-like settings. This lesson gives students space to blend musical structure with real-time experimentation.",
         "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be)."
       },
       "seeding_key": {
@@ -260,6 +267,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "overview": "Students choose a looping cat GIF and design a musical loop that matches its mood. They explore the use of random blocks to introduce variety and surprise in their code. This project is a playful way to demonstrate mastery of loops while reinforcing creative expression.",
         "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be)."
       },
       "seeding_key": {
@@ -288,6 +296,7 @@
             "buttonText": "Start Now!"
           }
         ],
+        "overview": "Students listen to mashups and identify patterns that make each part of a song stand out. In Music Lab, they learn to use functions to organize code into reusable sections. Through Predict and Investigate levels, students discover how functions help reduce repetition and clarify musical structure.",
         "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be)."
       },
       "seeding_key": {
@@ -304,6 +313,7 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "overview": "Students apply their understanding of functions by defining, reusing, and composing multiple functions to structure a song. They explore function blocks alongside nested musical ideas, deepening their understanding of abstraction and reducing repetition.",
         "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be)."
       },
       "seeding_key": {
@@ -320,6 +330,7 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
+        "overview": "Students compare two versions of a song (the original and a remix) then remix their own track using functions. Inspired by remix artist Altrice, students apply functions to reorganize and reinterpret familiar musical patterns, reinforcing abstraction while fostering creative expression.",
         "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be)."
       },
       "seeding_key": {
@@ -336,6 +347,7 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
+        "overview": "In this end-of-unit project, students select an existing song and remix it into a new genre using the structure of functions. They draw on skills from the entire unit to define musical sections, apply abstraction, and shift tone or style, just like real-world remix artists.",
         "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be)."
       },
       "seeding_key": {
@@ -502,21 +514,8 @@
       }
     },
     {
-      "key": "a72b69f4-3a04-4d88-ab10-15cdc52cfaca",
-      "position": 1,
-      "properties": {
-        "name": "Before the Lesson"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a72b69f4-3a04-4d88-ab10-15cdc52cfaca",
-        "lesson.key": "Sequencing - Explore",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "musiclab-6-12-playground"
-      }
-    },
-    {
       "key": "aec773dc-62f3-42fd-af67-14d399ad42ce",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm-Up"
@@ -530,7 +529,7 @@
     },
     {
       "key": "65188266-b7ee-4eb6-be40-9fe42567d7df",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -544,7 +543,7 @@
     },
     {
       "key": "cccc4bbe-824f-4fe8-a085-0df878d09be0",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap-Up"
@@ -558,7 +557,7 @@
     },
     {
       "key": "7b5464bb-45ac-437a-99be-407ff10f5d36",
-      "position": 5,
+      "position": 4,
       "properties": {
         "name": "After the Lesson"
       },
@@ -625,21 +624,8 @@
       }
     },
     {
-      "key": "b3e6eee8-29bc-4f34-bddf-adf8179a30c6",
-      "position": 1,
-      "properties": {
-        "name": "Before the Lesson"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b3e6eee8-29bc-4f34-bddf-adf8179a30c6",
-        "lesson.key": "Sequencing - Synthesize",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "musiclab-6-12-playground"
-      }
-    },
-    {
       "key": "55faa4f3-c2ad-4e55-865f-1916f2346821",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -653,7 +639,7 @@
     },
     {
       "key": "d9bebcbb-5a56-428e-8c30-f57e75002188",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -667,7 +653,7 @@
     },
     {
       "key": "75385da3-ff7b-4e58-8d72-0ac76779394c",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -748,21 +734,8 @@
       }
     },
     {
-      "key": "b176e2a4-8d20-4acd-96dd-357fc2a447db",
-      "position": 1,
-      "properties": {
-        "name": "Before the Lesson"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b176e2a4-8d20-4acd-96dd-357fc2a447db",
-        "lesson.key": "Loops - Explore",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "musiclab-6-12-playground"
-      }
-    },
-    {
       "key": "61962fd8-858c-44bb-8e89-54e6fde7c86c",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -776,7 +749,7 @@
     },
     {
       "key": "4df2ed9e-96f3-47c0-853d-150b382057bd",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -790,7 +763,7 @@
     },
     {
       "key": "a24c79e8-321d-473f-95cb-473d631eea6a",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -804,7 +777,7 @@
     },
     {
       "key": "83c27cdd-49c7-4026-81c4-e4e015558c8a",
-      "position": 5,
+      "position": 4,
       "properties": {
         "name": "After the Lesson"
       },
@@ -871,21 +844,8 @@
       }
     },
     {
-      "key": "f09be0fc-16e7-4684-a2d6-0ed4d6a24fe8",
-      "position": 1,
-      "properties": {
-        "name": "Before the Lesson"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "f09be0fc-16e7-4684-a2d6-0ed4d6a24fe8",
-        "lesson.key": "Loops - Synthesize",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "musiclab-6-12-playground"
-      }
-    },
-    {
       "key": "2d7a39c5-3da2-47ff-b0a5-41b63360951b",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -899,7 +859,7 @@
     },
     {
       "key": "d52f972b-ebef-4d70-aa68-3976bad171d7",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -913,7 +873,7 @@
     },
     {
       "key": "b01e3854-ca92-4605-8e71-084cf72fc400",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -994,21 +954,8 @@
       }
     },
     {
-      "key": "77a717a7-204e-4f62-a51c-da643dedd387",
-      "position": 1,
-      "properties": {
-        "name": "Before the Lesson"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "77a717a7-204e-4f62-a51c-da643dedd387",
-        "lesson.key": "Functions - Explore",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "musiclab-6-12-playground"
-      }
-    },
-    {
       "key": "75959589-a263-4a4a-93d0-324fad9d6b7d",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1022,7 +969,7 @@
     },
     {
       "key": "a6f70837-6e75-4bae-b864-e4cb386d5f9d",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1036,7 +983,7 @@
     },
     {
       "key": "e33b1041-0a94-46c9-9b84-7a10bf05b9ae",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1050,7 +997,7 @@
     },
     {
       "key": "9cf7ea2e-69ea-43e6-bcc5-8f93ec5bb969",
-      "position": 5,
+      "position": 4,
       "properties": {
         "name": "After the Lesson"
       },
@@ -1117,21 +1064,8 @@
       }
     },
     {
-      "key": "1d01848a-d933-4e6a-a1aa-869e0e0c0cdc",
-      "position": 1,
-      "properties": {
-        "name": "Before the Lesson"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "1d01848a-d933-4e6a-a1aa-869e0e0c0cdc",
-        "lesson.key": "Functions - Synthesis",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "musiclab-6-12-playground"
-      }
-    },
-    {
       "key": "75431f3b-7b63-4111-9af0-32be4c5fe78f",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1145,7 +1079,7 @@
     },
     {
       "key": "75118a82-a01e-41b9-a531-a85c8c23b108",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1159,7 +1093,7 @@
     },
     {
       "key": "55818400-c172-422b-9f5f-95001361bee7",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1822,17 +1756,6 @@
       }
     },
     {
-      "key": "82f71594-583b-4cb2-b2db-d51f75c8e90e",
-      "position": 1,
-      "properties": {
-        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. "
-      },
-      "seeding_key": {
-        "activity_section.key": "82f71594-583b-4cb2-b2db-d51f75c8e90e",
-        "lesson_activity.key": "a72b69f4-3a04-4d88-ab10-15cdc52cfaca"
-      }
-    },
-    {
       "key": "798012bb-3326-4ef3-8c90-4d89822d848a",
       "position": 1,
       "properties": {
@@ -2057,20 +1980,8 @@
       }
     },
     {
-      "key": "1cc62a8d-d9ad-41aa-ba89-7cb9d4c7e383",
-      "position": 1,
-      "properties": {
-        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. ",
-        "name": "Pilot Information"
-      },
-      "seeding_key": {
-        "activity_section.key": "1cc62a8d-d9ad-41aa-ba89-7cb9d4c7e383",
-        "lesson_activity.key": "7f302ef9-17fc-445f-897f-83f652a36aac"
-      }
-    },
-    {
       "key": "62e64ec3-a9eb-40a4-a9ab-f3d69609ded8",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "Before teaching today's lesson, be sure to use the Teacher Dashboard to assess how students did to make a decision for how to start today's lesson. The Warm-Up for this lesson is adaptable based on how well students did with the Assessment level from the previous lesson. ",
         "name": "Reviewing the Assessment"
@@ -2252,17 +2163,6 @@
       }
     },
     {
-      "key": "a56cb149-d643-4a65-b078-a936585cb6d1",
-      "position": 1,
-      "properties": {
-        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. "
-      },
-      "seeding_key": {
-        "activity_section.key": "a56cb149-d643-4a65-b078-a936585cb6d1",
-        "lesson_activity.key": "b3e6eee8-29bc-4f34-bddf-adf8179a30c6"
-      }
-    },
-    {
       "key": "953ed881-2337-4569-8720-f4fcdee83983",
       "position": 1,
       "properties": {
@@ -2395,20 +2295,8 @@
       }
     },
     {
-      "key": "594b6bf0-8186-4feb-af14-d36b7778cff8",
-      "position": 1,
-      "properties": {
-        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. ",
-        "name": "Pilot Information"
-      },
-      "seeding_key": {
-        "activity_section.key": "594b6bf0-8186-4feb-af14-d36b7778cff8",
-        "lesson_activity.key": "0d39e16c-5f99-4d70-aa0d-bcf23c4cc3bb"
-      }
-    },
-    {
       "key": "764940aa-b9c7-4ada-a771-246b1c7b98a0",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "After reviewing the project guide and rubric, you can view an exemplar for this project in our self-paced professional learning course. [**Click here to view the exemplar**](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/2/levels/20)",
         "name": "Project Exemplar"
@@ -2430,8 +2318,19 @@
       }
     },
     {
-      "key": "b4cc6078-19c2-4bb0-a2bb-d1795a186de1",
+      "key": "9edd4bc0-39d0-47b2-95b8-36c8c083e76a",
       "position": 1,
+      "properties": {
+        "progression_name": "Example Projects"
+      },
+      "seeding_key": {
+        "activity_section.key": "9edd4bc0-39d0-47b2-95b8-36c8c083e76a",
+        "lesson_activity.key": "7ee0b90e-eb70-41d2-9df5-21a8679e9b9e"
+      }
+    },
+    {
+      "key": "b4cc6078-19c2-4bb0-a2bb-d1795a186de1",
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [Walk Up Songs Activity Guide](https://docs.google.com/document/d/1-NOQXuyOA4TXy2X4oACt97K0f64h2TlkP2tc3-YQKRI/edit) to each student\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Overview as a class\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Define portion of the activity guide\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students login to Music Lab to complete the Trigger levels and the Prepare portion of the activity guide",
         "progression_name": "Triggers"
@@ -2443,7 +2342,7 @@
     },
     {
       "key": "56703ae7-b49b-4542-8b03-65ebf58e54b1",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Prepare"
       },
@@ -2454,7 +2353,7 @@
     },
     {
       "key": "648854c7-225c-45c3-a52f-e125a9c868f8",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete the Trigger levels and the Prepare steps. They should check in with you before continuing to try and code their walk-up songs.\n\nOnce you've approved students progress so far, hand out a copy of the [Walk Up Songs Rubric](https://docs.google.com/document/d/1poW9kQYsXnBX2w7jCKhN9qjTbJ52qRDrn8jZf62S3-g/edit?tab=t.0) for students to use while coding. Then they can continue to the next levels."
       },
@@ -2465,7 +2364,7 @@
     },
     {
       "key": "bfc49da8-78a3-43ee-a0d2-b160379c7bce",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Walk-Up Songs"
       },
@@ -2476,7 +2375,7 @@
     },
     {
       "key": "84db9076-d8e5-4e5d-a554-2c199f97595b",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Students who finish their walk-up songs can participate in this Partner Game:\n- Tell your partners who your three characters are and describe the character's personalities.\n- Play one of your Walk-Up songs without saying which character it belongs to.\n- Allow your partner to match the song to a character.\n- Ask them to explain their choice.\n- If they guess wrong, listen to their explanation and adjust your code to make the song fit the character better.\n- Repeat with new partners until someone guesses all three correctly!",
         "progression_name": "(Optional) Partner Game"
@@ -2488,7 +2387,7 @@
     },
     {
       "key": "86dd765e-672a-44c0-8415-6bfe64310ac3",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -2518,17 +2417,6 @@
       "seeding_key": {
         "activity_section.key": "06234e04-4e55-4f51-a1a3-380770591661",
         "lesson_activity.key": "89e667f7-9185-448e-a344-fba122993607"
-      }
-    },
-    {
-      "key": "c7976284-5b88-4bdb-92d2-ec33ec1cee7d",
-      "position": 1,
-      "properties": {
-        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. "
-      },
-      "seeding_key": {
-        "activity_section.key": "c7976284-5b88-4bdb-92d2-ec33ec1cee7d",
-        "lesson_activity.key": "b176e2a4-8d20-4acd-96dd-357fc2a447db"
       }
     },
     {
@@ -2713,20 +2601,8 @@
       }
     },
     {
-      "key": "d2f5e883-9882-4b6b-baa2-0e393615c09a",
-      "position": 1,
-      "properties": {
-        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. ",
-        "name": "Pilot Information"
-      },
-      "seeding_key": {
-        "activity_section.key": "d2f5e883-9882-4b6b-baa2-0e393615c09a",
-        "lesson_activity.key": "1775a3b4-db2f-4d19-83f9-9477bde210b2"
-      }
-    },
-    {
       "key": "a223cf31-7c64-48f2-952d-6faca28201ba",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "Before teaching today's lesson, be sure to use the Teacher Dashboard to assess how students did to make a decision for how to start today's lesson. The Warm-Up for this lesson is adaptable based on how well students did with the Assessment level from the previous lesson. ",
         "name": "Reviewing the Assessment"
@@ -2885,17 +2761,6 @@
       }
     },
     {
-      "key": "46bd6ffb-4408-49e9-9234-5c5470171488",
-      "position": 1,
-      "properties": {
-        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. "
-      },
-      "seeding_key": {
-        "activity_section.key": "46bd6ffb-4408-49e9-9234-5c5470171488",
-        "lesson_activity.key": "f09be0fc-16e7-4684-a2d6-0ed4d6a24fe8"
-      }
-    },
-    {
       "key": "17cfc778-d274-4521-929d-b6de0eedfb14",
       "position": 1,
       "properties": {
@@ -3044,20 +2909,8 @@
       }
     },
     {
-      "key": "d14aa536-263c-4557-bf88-f71b5a975ee2",
-      "position": 1,
-      "properties": {
-        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. ",
-        "name": "Pilot Information"
-      },
-      "seeding_key": {
-        "activity_section.key": "d14aa536-263c-4557-bf88-f71b5a975ee2",
-        "lesson_activity.key": "8fab4ca5-f39b-44d4-9f75-92e4c938627d"
-      }
-    },
-    {
       "key": "9e83e462-35a0-4ed7-8863-949e96389b4e",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "After reviewing the project guide and rubric, you can view an exemplar for this project in our self-paced professional learning course. [**Click here to view the exemplar**](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/3/levels/19)",
         "name": "Project Exemplar"
@@ -3079,8 +2932,19 @@
       }
     },
     {
-      "key": "68e96651-260a-4dbf-ab65-f227ac4049e6",
+      "key": "76588b1c-6dad-44fa-8ce9-bd86f6435d81",
       "position": 1,
+      "properties": {
+        "progression_name": "Example Projects"
+      },
+      "seeding_key": {
+        "activity_section.key": "76588b1c-6dad-44fa-8ce9-bd86f6435d81",
+        "lesson_activity.key": "45d368cd-e7b3-4c91-9505-7930ce6d156e"
+      }
+    },
+    {
+      "key": "68e96651-260a-4dbf-ab65-f227ac4049e6",
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [Cat GIFs Activity Guide](https://docs.google.com/document/d/1JQWXQ39-DKoE2gbwLi7v-BdV0Dcn3Z9IMY0515-pKVI/edit) to each student\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Overview as a class\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Define portion of the activity guide\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students login to Music Lab to complete the Play Random levels and the Prepare portion of the activity guide",
         "progression_name": "Play Random"
@@ -3092,7 +2956,7 @@
     },
     {
       "key": "7b69d756-7319-4632-8ca9-56c11d9be19e",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Prepare"
       },
@@ -3103,7 +2967,7 @@
     },
     {
       "key": "8377f3a7-a119-4b20-a174-dfdb96353c16",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete the Trigger levels and the Prepare steps. They should check in with you before continuing to try and code their walk-up songs.\n\nOnce you've approved students progress so far, hand out a copy of the [Cat GIF Loops Rubric](https://docs.google.com/document/d/1ZW8gD3eA3lXAur9_PSC8nL2h6VJrcW2fBC3rxwm8Moc/edit?tab=t.0). Then they can continue to the next levels.",
         "progression_name": "Musical Cat GIFs"
@@ -3134,17 +2998,6 @@
       "seeding_key": {
         "activity_section.key": "b1f2b149-3bc8-49e1-886f-78800b147aed",
         "lesson_activity.key": "cb83a883-f532-4b69-97cd-6abf419db42f"
-      }
-    },
-    {
-      "key": "8e1214f3-7ef6-4463-9ec5-79bb018486a8",
-      "position": 1,
-      "properties": {
-        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. "
-      },
-      "seeding_key": {
-        "activity_section.key": "8e1214f3-7ef6-4463-9ec5-79bb018486a8",
-        "lesson_activity.key": "77a717a7-204e-4f62-a51c-da643dedd387"
       }
     },
     {
@@ -3316,20 +3169,8 @@
       }
     },
     {
-      "key": "2d788ec5-6792-43a2-a9dc-4bf38cd57ed2",
-      "position": 1,
-      "properties": {
-        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. ",
-        "name": "Pilot Information"
-      },
-      "seeding_key": {
-        "activity_section.key": "2d788ec5-6792-43a2-a9dc-4bf38cd57ed2",
-        "lesson_activity.key": "1412e5ac-1350-4f4d-9ca2-340fb72e3ea6"
-      }
-    },
-    {
       "key": "3b132d68-42d6-4b3d-958d-802ef581a312",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "Before teaching today's lesson, be sure to use the Teacher Dashboard to assess how students did to make a decision for how to start today's lesson. The Warm-Up for this lesson is adaptable based on how well students did with the Assessment level from the previous lesson. ",
         "name": "Reviewing the Assessment"
@@ -3492,17 +3333,6 @@
       }
     },
     {
-      "key": "c021bb63-56e7-4825-97e4-2196490af332",
-      "position": 1,
-      "properties": {
-        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. "
-      },
-      "seeding_key": {
-        "activity_section.key": "c021bb63-56e7-4825-97e4-2196490af332",
-        "lesson_activity.key": "1d01848a-d933-4e6a-a1aa-869e0e0c0cdc"
-      }
-    },
-    {
       "key": "f90b5a19-99d5-4155-856a-3778ee24ac2a",
       "position": 1,
       "properties": {
@@ -3649,20 +3479,8 @@
       }
     },
     {
-      "key": "eed03dba-c140-40ae-9387-25146f717c66",
-      "position": 1,
-      "properties": {
-        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. ",
-        "name": "Pilot Information"
-      },
-      "seeding_key": {
-        "activity_section.key": "eed03dba-c140-40ae-9387-25146f717c66",
-        "lesson_activity.key": "8b6903e4-e02b-48da-873b-51aedbd1c035"
-      }
-    },
-    {
       "key": "7c560a44-af23-4936-8d2d-904c49dbe0e6",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "After reviewing the project guide and rubric, you can view an exemplar for this project in our self-paced professional learning course. [**Click here to view the exemplar**](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/4/levels/18)",
         "name": "Project Exemplar"
@@ -3701,8 +3519,19 @@
       }
     },
     {
-      "key": "d8ec6877-21b5-4135-b343-276061de6c0c",
+      "key": "a3d0d3ee-cd1c-4fe5-b53d-715aaf44dd39",
       "position": 1,
+      "properties": {
+        "progression_name": "Examples"
+      },
+      "seeding_key": {
+        "activity_section.key": "a3d0d3ee-cd1c-4fe5-b53d-715aaf44dd39",
+        "lesson_activity.key": "6fe22d9a-ecb0-435b-83e6-ce96f2d00063"
+      }
+    },
+    {
+      "key": "d8ec6877-21b5-4135-b343-276061de6c0c",
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [Genre Mashup Activity Guide](https://docs.google.com/document/d/12HPEKHdaWP7EG4m84TnoNppAu1eqeYBF6rUEmIFcyLU/edit) to each student\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Overview as a class\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Define portion of the activity guide\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students login to Music Lab to complete the Prepare portion of the activity guide",
         "progression_name": "Prepare"
@@ -3714,7 +3543,7 @@
     },
     {
       "key": "4d008400-6038-4066-8c07-835e9667d505",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete the Prepare steps. They should check in with you before continuing to try and code their genre mashups.\n\nOnce you've approved students progress so far, pass out the [Genre Mashup Rubric](https://docs.google.com/document/d/1FQAtWffIufswEhLG6LwZnyKSfnP7KG1nhthJi5w65bM/edit?tab=t.0). Then they can continue to the next levels.",
         "progression_name": "Genre Mashup"
@@ -4123,6 +3952,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "music-lab-612-pre"
+        ],
         "progression": "Pre-Assessment"
       },
       "bonus": false,
@@ -4945,6 +4777,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Example Projects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-walkup-examples-choice"
+        ],
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "9edd4bc0-39d0-47b2-95b8-36c8c083e76a"
+      },
+      "level_keys": [
+        "music-lab-walkup-examples-choice"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "test-music-lab-mini-project-walk-triggers-1_v2"
         ],
@@ -4965,8 +4819,8 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 2,
+      "chapter": 36,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -4990,8 +4844,8 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 3,
+      "chapter": 37,
+      "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -5015,8 +4869,8 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 4,
+      "chapter": 38,
+      "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -5040,8 +4894,8 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 5,
+      "chapter": 39,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5065,8 +4919,8 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 6,
+      "chapter": 40,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5090,8 +4944,8 @@
       ]
     },
     {
-      "chapter": 40,
-      "position": 7,
+      "chapter": 41,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -5115,8 +4969,8 @@
       ]
     },
     {
-      "chapter": 41,
-      "position": 8,
+      "chapter": 42,
+      "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -5140,8 +4994,8 @@
       ]
     },
     {
-      "chapter": 42,
-      "position": 9,
+      "chapter": 43,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5165,7 +5019,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5190,7 +5044,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5215,7 +5069,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5240,7 +5094,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5265,7 +5119,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5290,7 +5144,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5315,7 +5169,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -5340,7 +5194,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5365,7 +5219,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5390,7 +5244,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5415,7 +5269,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5440,7 +5294,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5465,7 +5319,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5490,7 +5344,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -5515,7 +5369,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -5540,7 +5394,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5565,7 +5419,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -5590,7 +5444,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -5615,7 +5469,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -5640,7 +5494,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
@@ -5665,7 +5519,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -5690,7 +5544,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5715,7 +5569,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5740,7 +5594,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5765,7 +5619,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5790,7 +5644,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5815,7 +5669,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -5840,7 +5694,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -5865,7 +5719,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -5890,7 +5744,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 9,
       "activity_section_position": 6,
       "assessment": false,
@@ -5915,7 +5769,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -5940,7 +5794,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 75,
       "position": 11,
       "activity_section_position": 1,
       "assessment": true,
@@ -5965,7 +5819,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 76,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -5990,8 +5844,30 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 77,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Example Projects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-cats-examples-choice"
+        ],
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "76588b1c-6dad-44fa-8ce9-bd86f6435d81"
+      },
+      "level_keys": [
+        "music-lab-cats-examples-choice"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6015,8 +5891,8 @@
       ]
     },
     {
-      "chapter": 77,
-      "position": 2,
+      "chapter": 79,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -6040,8 +5916,8 @@
       ]
     },
     {
-      "chapter": 78,
-      "position": 3,
+      "chapter": 80,
+      "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -6065,8 +5941,8 @@
       ]
     },
     {
-      "chapter": 79,
-      "position": 4,
+      "chapter": 81,
+      "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -6090,8 +5966,8 @@
       ]
     },
     {
-      "chapter": 80,
-      "position": 5,
+      "chapter": 82,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6115,8 +5991,8 @@
       ]
     },
     {
-      "chapter": 81,
-      "position": 6,
+      "chapter": 83,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6140,8 +6016,8 @@
       ]
     },
     {
-      "chapter": 82,
-      "position": 7,
+      "chapter": 84,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -6165,8 +6041,8 @@
       ]
     },
     {
-      "chapter": 83,
-      "position": 8,
+      "chapter": 85,
+      "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -6190,8 +6066,8 @@
       ]
     },
     {
-      "chapter": 84,
-      "position": 9,
+      "chapter": 86,
+      "position": 10,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -6215,7 +6091,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 87,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6240,7 +6116,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 88,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6265,7 +6141,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 89,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6290,7 +6166,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 90,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6315,7 +6191,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 91,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6340,7 +6216,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 92,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6365,7 +6241,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 93,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6390,7 +6266,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 94,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6415,7 +6291,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 95,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6440,7 +6316,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 96,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6465,7 +6341,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 97,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6490,7 +6366,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 98,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6515,7 +6391,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 99,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6540,7 +6416,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 100,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6565,7 +6441,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 101,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6590,7 +6466,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 102,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -6615,7 +6491,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 103,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -6640,7 +6516,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 104,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -6665,7 +6541,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 105,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -6690,7 +6566,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 106,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -6715,7 +6591,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 107,
       "position": 13,
       "activity_section_position": 1,
       "assessment": true,
@@ -6740,7 +6616,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 108,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -6765,7 +6641,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 109,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6790,7 +6666,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 110,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -6815,7 +6691,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 111,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6840,7 +6716,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 112,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6865,7 +6741,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 113,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -6890,7 +6766,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 114,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -6915,7 +6791,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 115,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6940,7 +6816,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 116,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -6965,7 +6841,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 117,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -6990,8 +6866,30 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 118,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Examples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-genre-examples-choice"
+        ],
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "a3d0d3ee-cd1c-4fe5-b53d-715aaf44dd39"
+      },
+      "level_keys": [
+        "music-lab-genre-examples-choice"
+      ]
+    },
+    {
+      "chapter": 119,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -7015,8 +6913,8 @@
       ]
     },
     {
-      "chapter": 117,
-      "position": 2,
+      "chapter": 120,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -7040,11 +6938,14 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 121,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "music-lab-612-post"
+        ],
         "progression": "End of Unit Assessment"
       },
       "bonus": false,
@@ -7062,7 +6963,32 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 122,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_-problemsolving_musiclab"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_-problemsolving_musiclab"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "734b9e60-80c9-4292-b4cd-acfd7e43befb"
+      },
+      "level_keys": [
+        "student-eou-survey_-problemsolving_musiclab"
+      ]
+    },
+    {
+      "chapter": 123,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7087,7 +7013,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 124,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7112,7 +7038,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 125,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7137,7 +7063,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 126,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7162,7 +7088,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 127,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7187,7 +7113,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 128,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7212,7 +7138,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 129,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7237,7 +7163,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 130,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -7262,7 +7188,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 131,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7287,7 +7213,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 132,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -7312,7 +7238,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 133,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -7337,7 +7263,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 134,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -7362,7 +7288,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 135,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -7387,7 +7313,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 136,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -7412,7 +7338,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 137,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -7437,7 +7363,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 138,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -7462,7 +7388,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 139,
       "position": 17,
       "activity_section_position": 2,
       "assessment": false,
@@ -7487,7 +7413,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 140,
       "position": 18,
       "activity_section_position": 1,
       "assessment": false,
@@ -7512,7 +7438,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 141,
       "position": 19,
       "activity_section_position": 2,
       "assessment": false,
@@ -7537,7 +7463,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 142,
       "position": 20,
       "activity_section_position": 1,
       "assessment": false,
@@ -7562,7 +7488,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 143,
       "position": 21,
       "activity_section_position": 1,
       "assessment": false,
@@ -7587,7 +7513,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 144,
       "position": 22,
       "activity_section_position": 1,
       "assessment": false,
@@ -7612,7 +7538,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 145,
       "position": 23,
       "activity_section_position": 1,
       "assessment": false,
@@ -7637,7 +7563,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 146,
       "position": 24,
       "activity_section_position": 2,
       "assessment": false,
@@ -7662,7 +7588,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 147,
       "position": 25,
       "activity_section_position": 3,
       "assessment": false,
@@ -7687,7 +7613,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 148,
       "position": 26,
       "activity_section_position": 4,
       "assessment": false,
@@ -7712,7 +7638,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 149,
       "position": 27,
       "activity_section_position": 5,
       "assessment": false,
@@ -7737,7 +7663,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 150,
       "position": 28,
       "activity_section_position": 6,
       "assessment": false,
@@ -7762,7 +7688,7 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 151,
       "position": 29,
       "activity_section_position": 1,
       "assessment": false,
@@ -7787,7 +7713,7 @@
       ]
     },
     {
-      "chapter": 148,
+      "chapter": 152,
       "position": 30,
       "activity_section_position": 2,
       "assessment": false,
@@ -7812,7 +7738,7 @@
       ]
     },
     {
-      "chapter": 149,
+      "chapter": 153,
       "position": 31,
       "activity_section_position": 3,
       "assessment": false,
@@ -7837,7 +7763,7 @@
       ]
     },
     {
-      "chapter": 150,
+      "chapter": 154,
       "position": 32,
       "activity_section_position": 4,
       "assessment": false,
@@ -7862,7 +7788,7 @@
       ]
     },
     {
-      "chapter": 151,
+      "chapter": 155,
       "position": 33,
       "activity_section_position": 1,
       "assessment": false,
@@ -7887,7 +7813,7 @@
       ]
     },
     {
-      "chapter": 152,
+      "chapter": 156,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7912,7 +7838,7 @@
       ]
     },
     {
-      "chapter": 153,
+      "chapter": 157,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7937,7 +7863,7 @@
       ]
     },
     {
-      "chapter": 154,
+      "chapter": 158,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7962,7 +7888,7 @@
       ]
     },
     {
-      "chapter": 155,
+      "chapter": 159,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7987,7 +7913,7 @@
       ]
     },
     {
-      "chapter": 156,
+      "chapter": 160,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8012,7 +7938,7 @@
       ]
     },
     {
-      "chapter": 157,
+      "chapter": 161,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -8037,7 +7963,7 @@
       ]
     },
     {
-      "chapter": 158,
+      "chapter": 162,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -8062,7 +7988,7 @@
       ]
     },
     {
-      "chapter": 159,
+      "chapter": 163,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -8087,7 +8013,7 @@
       ]
     },
     {
-      "chapter": 160,
+      "chapter": 164,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -8112,7 +8038,7 @@
       ]
     },
     {
-      "chapter": 161,
+      "chapter": 165,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -8137,7 +8063,7 @@
       ]
     },
     {
-      "chapter": 162,
+      "chapter": 166,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -8162,7 +8088,7 @@
       ]
     },
     {
-      "chapter": 163,
+      "chapter": 167,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -8187,7 +8113,7 @@
       ]
     },
     {
-      "chapter": 164,
+      "chapter": 168,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -8212,7 +8138,7 @@
       ]
     },
     {
-      "chapter": 165,
+      "chapter": 169,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -8237,7 +8163,7 @@
       ]
     },
     {
-      "chapter": 166,
+      "chapter": 170,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -8262,7 +8188,7 @@
       ]
     },
     {
-      "chapter": 167,
+      "chapter": 171,
       "position": 16,
       "activity_section_position": 2,
       "assessment": false,
@@ -8287,7 +8213,7 @@
       ]
     },
     {
-      "chapter": 168,
+      "chapter": 172,
       "position": 17,
       "activity_section_position": 1,
       "assessment": false,
@@ -8309,28 +8235,6 @@
       },
       "level_keys": [
         "music-lab-functions-synthesis-formative"
-      ]
-    },
-    {
-      "chapter": 169,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "End of Unit Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "student-eou-survey_-problemsolving_musiclab"
-        ],
-        "lesson.key": "End of Unit Survey",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "musiclab-6-12-playground",
-        "activity_section.key": "734b9e60-80c9-4292-b4cd-acfd7e43befb"
-      },
-      "level_keys": [
-        "student-eou-survey_-problemsolving_musiclab"
       ]
     }
   ],
@@ -8729,6 +8633,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "musiclab-6-12-playground",
         "activity_section.key": "655f374e-1c08-4a4f-b09c-6138dfabe455"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-walkup-examples-choice",
+        "script_level.level_keys": [
+          "music-lab-walkup-examples-choice"
+        ],
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "9edd4bc0-39d0-47b2-95b8-36c8c083e76a"
       }
     },
     {
@@ -9237,6 +9153,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "music-lab-cats-examples-choice",
+        "script_level.level_keys": [
+          "music-lab-cats-examples-choice"
+        ],
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "76588b1c-6dad-44fa-8ce9-bd86f6435d81"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "test-music-lab-mini-project-gif-random-1_v2",
         "script_level.level_keys": [
           "test-music-lab-mini-project-gif-random-1_v2"
@@ -9717,6 +9645,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "music-lab-genre-examples-choice",
+        "script_level.level_keys": [
+          "music-lab-genre-examples-choice"
+        ],
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "a3d0d3ee-cd1c-4fe5-b53d-715aaf44dd39"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "music-lab-functions-project-prepare_v2",
         "script_level.level_keys": [
           "music-lab-functions-project-prepare_v2"
@@ -9749,6 +9689,18 @@
         "lesson_group.key": "lessonGroup-5",
         "script.name": "musiclab-6-12-playground",
         "activity_section.key": "010ef12a-8db1-4ad7-b23b-8c297f43f6ad"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_-problemsolving_musiclab",
+        "script_level.level_keys": [
+          "student-eou-survey_-problemsolving_musiclab"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "734b9e60-80c9-4292-b4cd-acfd7e43befb"
       }
     },
     {
@@ -10349,18 +10301,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "musiclab-6-12-playground",
         "activity_section.key": "7a392ec7-ebdb-4106-8160-346ae395da13"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "student-eou-survey_-problemsolving_musiclab",
-        "script_level.level_keys": [
-          "student-eou-survey_-problemsolving_musiclab"
-        ],
-        "lesson.key": "End of Unit Survey",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "musiclab-6-12-playground",
-        "activity_section.key": "734b9e60-80c9-4292-b4cd-acfd7e43befb"
       }
     }
   ],

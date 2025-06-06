@@ -1,12 +1,13 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-06-03T22:39:31.000Z",
   "level_num": "custom",
   "user_id": 14639,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Walkup Song Music Example 3",
+    "long_instructions": "Walk-up songs for characters from the **Marvel Comics**:\r\n\r\n1) **Doctor Strange** - magical, curious, time-traveling. His walk-up song feels like it could be from both the past and the future with the tracks it uses.\r\n2) **Star Lard (Peter Quill)** - playful, powerful, funny. His walk-up song has silly tracks and space effects along with old-school beats and guitar\r\n3) **Wanda Maximoff (Scarlet Witch)** - complex, chaotic, magical. Her walk-up song is chaotic with lots of tracks and effects playing at once.",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -39,7 +40,7 @@
               "y": 70,
               "fields": {
                 "trigger": "<field name=\"trigger\">trigger1</field>",
-                "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
+                "trigger_start": "<field name=\"trigger_start\">immediately</field>"
               },
               "next": {
                 "block": {
@@ -290,7 +291,7 @@
               "y": 70,
               "fields": {
                 "trigger": "<field name=\"trigger\">trigger2</field>",
-                "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
+                "trigger_start": "<field name=\"trigger_start\">immediately</field>"
               },
               "next": {
                 "block": {
@@ -521,7 +522,7 @@
               "y": 70,
               "fields": {
                 "trigger": "<field name=\"trigger\">trigger3</field>",
-                "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
+                "trigger_start": "<field name=\"trigger_start\">immediately</field>"
               },
               "next": {
                 "block": {
@@ -809,10 +810,11 @@
       "playerEnabled": false,
       "validationEnabled": false
     },
+    "display_name": "Marvel Characters",
+    "bubble_choice_description": "Explore Walk-Up songs for characters from the Marvel comics",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-06-03T22:39:31.669+00:00\",\"changed\":[\"cloned from \\\"music-lab-walkup-example-2\\\"\"],\"cloned_from\":\"music-lab-walkup-example-2\"},{\"changed_at\":\"2025-06-03 22:39:39 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-03 22:41:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-06-03T22:39:31.669+00:00\",\"changed\":[\"cloned from \\\"music-lab-walkup-example-2\\\"\"],\"cloned_from\":\"music-lab-walkup-example-2\"},{\"changed_at\":\"2025-06-03 22:39:39 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-03 22:41:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-05 21:47:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-05 21:52:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-05 21:53:36 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

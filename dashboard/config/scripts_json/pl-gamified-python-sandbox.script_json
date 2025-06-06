@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-04 21:16:32 UTC",
+    "serialized_at": "2025-06-05 20:44:30 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": "teacher_led",
@@ -130,6 +130,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-game-python-intro-1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -151,6 +154,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-game-python-module-intro-2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -172,6 +178,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-game-python-overview-map-3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -193,6 +202,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-game-python-hit-the-road-4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -214,27 +226,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "pl-game-python-badges-7"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-gamified-python-sandbox",
-        "activity_section.key": "d46eac26-cec8-4a52-9ede-f4bc2589cc69"
-      },
-      "level_keys": [
-        "pl-game-python-badges-7"
-      ]
-    },
-    {
-      "chapter": 6,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
+        "level_keys": [
+          "pl-game-python-game-overview-5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -251,11 +245,38 @@
       ]
     },
     {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-game-python-badges-7"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-game-python-badges-7"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-gamified-python-sandbox",
+        "activity_section.key": "d46eac26-cec8-4a52-9ede-f4bc2589cc69"
+      },
+      "level_keys": [
+        "pl-game-python-badges-7"
+      ]
+    },
+    {
       "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-game-python-coffee-shop-overview-9"
+        ],
         "progression": "The Coffee Shop"
       },
       "bonus": false,
@@ -278,6 +299,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-game-python-daily-news-update-10"
+        ],
         "progression": "The Coffee Shop"
       },
       "bonus": false,
@@ -300,6 +324,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-game-python-coffee-shop-map-11"
+        ],
         "progression": "The Coffee Shop"
       },
       "bonus": false,
@@ -322,6 +349,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-game-python-panel-print-12"
+        ],
         "progression": "Dodge the Detour"
       },
       "bonus": false,
@@ -344,6 +374,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-gamified-python-print-lab-12"
+        ],
         "progression": "Dodge the Detour"
       },
       "bonus": false,
@@ -412,9 +445,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-game-python-badges-7",
+        "level.key": "pl-game-python-game-overview-5",
         "script_level.level_keys": [
-          "pl-game-python-badges-7"
+          "pl-game-python-game-overview-5"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -424,9 +457,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-game-python-game-overview-5",
+        "level.key": "pl-game-python-badges-7",
         "script_level.level_keys": [
-          "pl-game-python-game-overview-5"
+          "pl-game-python-badges-7"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

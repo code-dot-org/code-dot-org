@@ -1,12 +1,13 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-06-03T22:33:32.000Z",
   "level_num": "custom",
   "user_id": 14639,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Walkup Song Music Example 1",
+    "long_instructions": "Walk-up songs for characters from **The Hunger Games**:\r\n\r\n1) **Johanna Mason** - volatile, unpredictable, aggressive. Her walk-up song uses sudden rock guitars and beats\r\n2) **Gale Hawthorne** - strategic, thinking, steady. His walk-up song has steady beats and crashing cymbals\r\n3) **Finnick Odair** - warm, charming, secretive. His walk-up music starts slow and melodic before exploding into guitars and bass",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -39,7 +40,7 @@
               "y": 30,
               "fields": {
                 "trigger": "<field name=\"trigger\">trigger1</field>",
-                "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
+                "trigger_start": "<field name=\"trigger_start\">immediately</field>"
               },
               "next": {
                 "block": {
@@ -177,7 +178,7 @@
               "y": 30,
               "fields": {
                 "trigger": "<field name=\"trigger\">trigger3</field>",
-                "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
+                "trigger_start": "<field name=\"trigger_start\">immediately</field>"
               },
               "next": {
                 "block": {
@@ -445,7 +446,7 @@
               "y": 30,
               "fields": {
                 "trigger": "<field name=\"trigger\">trigger2</field>",
-                "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
+                "trigger_start": "<field name=\"trigger_start\">immediately</field>"
               },
               "next": {
                 "block": {
@@ -737,10 +738,11 @@
       "playerEnabled": false,
       "validationEnabled": false
     },
+    "display_name": "The Hunger Games",
+    "bubble_choice_description": "Explore Walk-Up Songs for characters from The Hunger Games",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-06-03 22:34:14 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-03 22:36:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-06-03 22:34:14 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-03 22:36:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-05 18:29:23 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-05 18:42:18 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-05 18:52:08 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

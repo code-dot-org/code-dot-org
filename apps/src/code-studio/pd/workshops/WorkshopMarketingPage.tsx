@@ -6,6 +6,7 @@ import React from 'react';
 import EnrollInWorkshop from './components/EnrollInWorkshop';
 import OrganizerInformation from './components/OrganizerInformation';
 import WorkshopDetails from './components/WorkshopDetails';
+import WorkshopEventJsonLdData from './components/WorkshopEventJsonLdData';
 import {GetWorkshopInfoScriptDataResponse} from './types';
 
 import moduleStyles from './workshopMarketingPage.module.scss';
@@ -26,29 +27,27 @@ interface WorkshopMarketingPageProps
 
 const WorkshopMarketingPage: React.FunctionComponent<
   WorkshopMarketingPageProps
-> = ({
-  id,
-  course_offerings,
-  name,
-  capacity,
-  num_enrollments,
-  grade_levels,
-  sessions,
-  fee,
-  prereq,
-  description,
-  notes,
-  custom_registration_link,
-  regional_partner_name,
-  organizer,
-  facilitators,
-  course,
-  subject,
-  format,
-  location_name,
-}) => {
+> = props => {
+  const {
+    id,
+    course_offerings,
+    name,
+    capacity,
+    num_enrollments,
+    grade_levels,
+    sessions,
+    fee,
+    prereq,
+    description,
+    notes,
+    custom_registration_link,
+    regional_partner_name,
+    organizer,
+    facilitators,
+  } = props;
+
   return (
-    <div className={moduleStyles.workshopCatalog}>
+    <div className={moduleStyles.workshopMarketingPage}>
       <section className={moduleStyles.header}>
         <Breadcrumbs
           name="workShopMarketingPage-HeaderBreadcrumbs"
@@ -87,6 +86,8 @@ const WorkshopMarketingPage: React.FunctionComponent<
           </aside>
         </div>
       </div>
+
+      <WorkshopEventJsonLdData {...props} />
     </div>
   );
 };

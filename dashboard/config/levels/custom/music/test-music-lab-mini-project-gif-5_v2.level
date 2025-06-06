@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T03:00:23.000Z",
   "level_num": "custom",
@@ -140,7 +141,7 @@
     "validations": [
       {
         "key": "test-music-lab-mini-project-gif-5_68df9dcc-4122-4037-af9b-9c589d4782ec",
-        "message": "Your code is on the right track - make sure to check against the rubric to make sure you completed the project successfully!\n\n- ❌ A random block\n- ✅ A repeat block",
+        "message": "Your code is on the right track - make sure to check against the rubric to make sure you completed the project successfully!",
         "next": true,
         "conditions": [
           {
@@ -187,8 +188,7 @@
     "name_suffix": "_v2",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:23.012+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-gif-5\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-gif-5\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:23.012+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-gif-5\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-gif-5\"},{\"changed_at\":\"2025-06-06 00:35:46 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

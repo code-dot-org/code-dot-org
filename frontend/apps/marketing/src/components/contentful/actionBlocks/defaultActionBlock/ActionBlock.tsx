@@ -8,6 +8,7 @@ import DSCOVideo from '@code-dot-org/component-library/video';
 
 import {externalLinkIconProps} from '@/components/common/constants';
 import {VideoRelatedProps} from '@/components/common/types';
+import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
@@ -47,7 +48,7 @@ const ActionBlock: React.FC<ActionBlockContentfulProps> = ({
     overline={overline}
     title={title}
     description={description}
-    image={{src: `https:${image}`}}
+    image={{src: getAbsoluteImageUrl(image) || ''}}
     video={
       videoYouTubeId || videoFallback
         ? {
