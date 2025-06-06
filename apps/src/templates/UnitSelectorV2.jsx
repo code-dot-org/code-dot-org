@@ -9,6 +9,8 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   asyncLoadCoursesWithProgress,
   setUnit,
+  getSelectedCourseId,
+  getSelectedUnitPosition,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 import i18n from '@cdo/locale';
@@ -38,6 +40,8 @@ function UnitSelectorV2({
   sectionId,
   unitId,
   courseVersionId,
+  courseId,
+  unitPosition,
   coursesWithProgress,
   className,
   setUnit,
@@ -60,9 +64,7 @@ function UnitSelectorV2({
         .split('-')
         .map(id => parseInt(id));
       setUnit(newUnitId, newCourseVersionId);
-      // TODO: TEACH-1938 Pass the newCourseVersionId to the progress API
-      // loadUnitProgress(newUnitId, newCourseVersionId, sectionId);
-      loadUnitProgress(newUnitId, sectionId);
+      loadUnitProgress(newUnitId, sectionId, courseId, unitPosition);
 
       recordEvent('change_script', sectionId, {
         old_script_id: unitId,
@@ -75,7 +77,7 @@ function UnitSelectorV2({
         unitId: newUnitId,
       });
     },
-    [unitId, setUnit, sectionId]
+    [unitId, setUnit, sectionId, courseId, unitPosition]
   );
 
   const itemGroups = coursesWithProgress
@@ -132,6 +134,8 @@ UnitSelectorV2.propTypes = {
   filterToSelectedCourse: PropTypes.bool,
   unitId: PropTypes.number,
   courseVersionId: PropTypes.number,
+  courseId: PropTypes.number,
+  unitPosition: PropTypes.number,
   sectionId: PropTypes.number,
   coursesWithProgress: PropTypes.array.isRequired,
   setUnit: PropTypes.func.isRequired,
@@ -148,6 +152,8 @@ export default connect(
   state => ({
     unitId: state.unitSelection.scriptId,
     courseVersionId: state.unitSelection.courseVersionId,
+    courseId: getSelectedCourseId(state),
+    unitPosition: getSelectedUnitPosition(state),
     sectionId: state.teacherSections.selectedSectionId,
     coursesWithProgress: state.unitSelection.coursesWithProgress,
     isLoadingCourses: state.unitSelection.isLoadingCoursesWithProgress,

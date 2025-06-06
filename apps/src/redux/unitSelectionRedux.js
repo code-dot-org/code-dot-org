@@ -86,6 +86,10 @@ export const getSelectedUnitPosition = state => {
   return getSelectedUnit(state) ? getSelectedUnit(state).position : null;
 };
 
+export const getSelectedCourseId = state => {
+  return getSelectedUnit(state) ? getSelectedUnit(state).course_id : null;
+};
+
 export const asyncLoadCoursesWithProgress = () => (dispatch, getState) => {
   const state = getState();
   const selectedSection =

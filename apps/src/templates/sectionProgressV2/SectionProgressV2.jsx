@@ -6,6 +6,11 @@ import {useParams} from 'react-router-dom';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {
+  getSelectedCourseId,
+  getSelectedUnitPosition,
+} from '@cdo/apps/redux/unitSelectionRedux';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
@@ -26,6 +31,8 @@ import styles from './progress-table-v2.module.scss';
 function SectionProgressV2({
   scriptId,
   sectionId,
+  courseId,
+  unitPosition,
   unitData,
   isLoadingProgress,
   isRefreshingProgress,
@@ -68,9 +75,11 @@ function SectionProgressV2({
       !isRefreshingProgress &&
       sectionId &&
       scriptId &&
+      courseId &&
+      unitPosition &&
       isMounted // only update loaded data if component is still mounted.
     ) {
-      loadUnitProgress(scriptId, sectionId).then(() =>
+      loadUnitProgress(scriptId, sectionId, courseId, unitPosition).then(() =>
         setLoadedData({scriptId, sectionId})
       );
     }
@@ -80,6 +89,8 @@ function SectionProgressV2({
   }, [
     scriptId,
     sectionId,
+    courseId,
+    unitPosition,
     unitData,
     isLoadingProgress,
     isRefreshingProgress,
@@ -140,6 +151,8 @@ function SectionProgressV2({
 SectionProgressV2.propTypes = {
   scriptId: PropTypes.number,
   sectionId: PropTypes.number,
+  courseId: PropTypes.number,
+  unitPosition: PropTypes.number,
   unitData: unitDataPropType,
   isLoadingProgress: PropTypes.bool.isRequired,
   isRefreshingProgress: PropTypes.bool.isRequired,
@@ -154,6 +167,8 @@ export default connect(
   state => ({
     scriptId: state.unitSelection.scriptId,
     sectionId: state.teacherSections.selectedSectionId,
+    courseId: getSelectedCourseId(state),
+    unitPosition: getSelectedUnitPosition(state),
     unitData: getCurrentUnitData(state),
     isLoadingProgress: state.sectionProgress.isLoadingProgress,
     isRefreshingProgress: state.sectionProgress.isRefreshingProgress,
