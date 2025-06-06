@@ -29,9 +29,9 @@ exports.simpleBlock = function (block_type) {
     test: function (block) {
       // Special case for old static variable blocks. Newer parameter blocks are equivalent.
       if (block_type.startsWith('variables_get_')) {
-        return [block_type, 'parameters_get'].includes(block.getType());
+        return [block_type, 'parameters_get'].includes(block.type);
       }
-      return block.getType() === block_type;
+      return block.type === block_type;
     },
     type: block_type,
   };
