@@ -410,9 +410,7 @@ Resources:
     Properties:
       Description: 'Lambda for dynamically routing marketing traffic to different origins based on the URL path'
       FunctionName: !Sub "${AWS::StackName}-marketing-router"
-      # The JS file for this function depends on the Sub function to inject the value of MarketingDomainName
-      Code: 
-        ZipFile: <%=package_node_lambda('marketing-router', environment_variables: {marketingDomain: {Ref: 'InternalMarketingDomainName'}}) %>
+      Code: <%=package_node_lambda('marketing-router', environment_variables: {marketingDomain: {Ref: 'InternalMarketingDomainName'}}) %>
       Handler: index.handler
       Runtime: nodejs22.x
       Role: !GetAtt MarketingRouterLambdaRole.Arn
