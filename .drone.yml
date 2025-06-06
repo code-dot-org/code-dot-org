@@ -328,8 +328,8 @@ steps:
     volumes:
       - name: unit-rbenv
         path: /home/ci/.rbenv
-      - name: unit-yarn
-        path: /home/ci/.yarn
+      # - name: unit-yarn
+      #   path: /home/ci/.yarn
     settings:
       filename: cache-unit-test-build-artifacts.tar.gz
       endpoint: s3://cdo-drone
@@ -337,9 +337,9 @@ steps:
       debug: true
       pull: true
       mount:
-        - ./apps/build/babel-cache
+        - ./apps/build
         - /home/ci/.rbenv
-        - /home/ci/.yarn/berry/cache
+        # - /home/ci/.yarn/berry/cache
 
   # Do all the work necessary to run UI tests so we can capture a complete
   # snapshot of rbenv, database, and apps; but don't actually run the tests.
@@ -355,8 +355,8 @@ steps:
     volumes:
       - name: ui-rbenv
         path: /home/ci/.rbenv
-      - name: ui-rbenv
-        path: /home/ci/.yarn
+      # - name: ui-yarn
+      #   path: /home/ci/.yarn
       - name: mysql
         path: /var/lib/mysql
     commands:
@@ -370,8 +370,8 @@ steps:
     volumes:
       - name: ui-rbenv
         path: /home/ci/.rbenv
-      - name: ui-yarn
-        path: /home/ci/.yarn
+      # - name: ui-yarn
+      #   path: /home/ci/.yarn
       - name: mysql
         path: /var/lib/mysql
     settings:
@@ -381,9 +381,9 @@ steps:
       debug: true
       pull: true
       mount:
-        - ./apps/build/babel-cache
+        - ./apps/build
         - /home/ci/.rbenv
-        - /home/ci/.yarn/berry/cache
+        # - /home/ci/.yarn/berry/cache
         - /var/lib/mysql
 
 volumes:
@@ -391,10 +391,10 @@ volumes:
     temp: {}
   - name: ui-rbenv
     temp: {}
-  - name: unit-yarn
-    temp: {}
-  - name: ui-yarn
-    temp: {}
+  # - name: unit-yarn
+  #   temp: {}
+  # - name: ui-yarn
+  #   temp: {}
   - name: mysql
     temp: {}
 
