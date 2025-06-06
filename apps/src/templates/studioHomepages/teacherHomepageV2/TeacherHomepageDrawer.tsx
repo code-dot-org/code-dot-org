@@ -7,6 +7,7 @@ import {
 } from '@code-dot-org/component-library/typography';
 import Drawer from '@mui/material/Drawer';
 import React from 'react';
+import {useSearchParams} from 'react-router-dom';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -32,6 +33,8 @@ interface DrawerData {
 }
 
 export const TeacherHomepageDrawer: React.FC = () => {
+  const [searchParams] = useSearchParams();
+
   const [schoolInfoInterstitialOpen, setSchoolInfoInterstitialOpen] =
     React.useState(false);
   const [schoolInfoConfirmationOpen, setSchoolInfoConfirmationOpen] =
@@ -44,6 +47,8 @@ export const TeacherHomepageDrawer: React.FC = () => {
   >(undefined);
   const schoolName =
     existingSchoolInfo?.school_name || i18n.schoolInfoDialogDescriptionNoName();
+
+  // Load school data and set the drawer state based on the response.
   React.useEffect(() => {
     HttpClient.fetchJson<DrawerData>(
       '/teacher_dashboard/get_school_info_interstitial_data'
@@ -51,11 +56,21 @@ export const TeacherHomepageDrawer: React.FC = () => {
       setExistingSchoolInfo(data.value.existingSchoolInfo);
       setSchoolInfoInterstitialOpen(data.value.showSchoolInfoInterstitial);
       setSchoolInfoConfirmationOpen(data.value.showSchoolInfoConfirmation);
+
+      // If the URL has a query param to show the interstitial or confirmation,
+      // we want to set that state to true to open the drawer.
+      if (searchParams.get('showSchoolInfoInterstitial') === 'true') {
+        setSchoolInfoInterstitialOpen(true);
+        // We don't want to set both to true at the same time
+      } else if (searchParams.get('showSchoolInfoConfirmation') === 'true') {
+        setSchoolInfoConfirmationOpen(true);
+      }
     });
   }, [
     setExistingSchoolInfo,
     setSchoolInfoInterstitialOpen,
     setSchoolInfoConfirmationOpen,
+    searchParams,
   ]);
   const inUSA = useAppSelector(state => state.currentUser.inUSA);
   const schoolInfo = useSchoolInfo({
