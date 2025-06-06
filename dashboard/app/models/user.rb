@@ -397,7 +397,7 @@ class User < ApplicationRecord
 
   before_validation :normalize_parent_email
 
-  before_validation :update_share_setting, unless: :under_13?
+  before_validation :update_share_setting
 
   # NOTE: Order is important here.
   before_save :make_teachers_21,
@@ -1646,11 +1646,12 @@ class User < ApplicationRecord
     self.sharing_disabled = true if under_13?
   end
 
-  # If a user is now over age 13, we should update
-  # their share setting to enabled, if they are in no sections.
+  # If the user is not in any sections, set sharing based on age (disabled if under 13).
   def update_share_setting
-    self.sharing_disabled = false if sections_as_student.empty?
-    return true
+    if sections_as_student.empty?
+      self.sharing_disabled = under_13?
+    end
+    true
   end
 
   # When creating an account, we want to look for any channels that got created
