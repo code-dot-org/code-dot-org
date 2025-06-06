@@ -14,12 +14,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-20 16:42:24 UTC",
+    "serialized_at": "2025-05-27 16:18:52 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -88,7 +89,6 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/5/topic/1) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**What if the data I need to store is best represented as a table?**\n\nIn this lesson, students are introduced to two-dimensional (2D) arrays and explore how these can be used to store tables of data. Students discover that 2D arrays are arrays of arrays and identify similarities and differences between the structure and functionality of 1D and 2D arrays. They learn how to declare and initialize 2D arrays using the `new` keyword and initializer lists and practice creating 2D arrays to store data.",
         "preparation": "* **(Optional)** Print copies of the Two-Dimensional (2D) Arrays Guided Notes (one for each student)\n* Preview the *Two-Dimensional (2D) Arrays* video\n* Print copies of the Unit 5 Guide (one for each student)",
         "student_overview": "**What if the data I need to store is best represented as a table?**\n\nIn this lesson, you are introduced to two-dimensional (2D) arrays and explore how these can be used to store tables of data. You discover that 2D arrays are arrays of arrays and identify similarities and differences between the structure and functionality of 1D and 2D arrays. You learn how to declare and initialize 2D arrays using the `new` keyword and initializer lists and practice creating 2D arrays to store data."
@@ -107,7 +107,6 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/5/topic/2) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I access and modify rows and elements in a 2D array?**\n\nStudents now know how to declare and initialize a two-dimensional (2D) array using the `new` keyword and an initializer list. In this lesson, students explore how to access and modify individual rows and elements in a 2D array and identify similarities and differences between accessing elements in a 2D array and a 1D array. They then practice accessing and modifying rows and elements in a 2D array.",
         "preparation": "* **(Optional)** Print copies of the 2D Array Elements Guided Notes (one for each student)\n* Preview the *Working with 2D Array Elements* video",
         "student_overview": "**How can I access and modify rows and elements in a 2D array?**\n\nYou now know how to declare and initialize a two-dimensional (2D) array using the `new` keyword and an initializer list. In this lesson, you explore how to access and modify individual rows and elements in a 2D array and identify similarities and differences between accessing elements in a 2D array and a 1D array. You then practice accessing and modifying rows and elements in a 2D array."
@@ -126,7 +125,6 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n* Topic Questions 8.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/5/topic/3) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I traverse a 2D array?**\n\nStudents have previously learned how to traverse a 1D array and use nested loops. In this lesson, students build on this knowledge to learn how to traverse a two-dimensional (2D) array in row-major order. Students explore how elements can be accessed in a 2D array using nested loops and consider the types of questions they could ask or problems they could solve with this approach. They trace code segments that traverse a 2D array in row-major order, then practice writing nested loops to traverse a 2D array and access its elements.",
         "preparation": "* **(Optional)** Print copies of the Row-Major Traversal Guided Notes (one for each student)\n* Preview the *Row-Major Traversal* video\n* Print copies of the Tracing 2D Array Traversals handout (one for each student)\n* Print copies of the Writing Algorithms with 2D Arrays handout (one for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies",
         "student_overview": "**How can I traverse a 2D array?**\n\nYou have previously learned how to traverse a 1D array and use nested loops. In this lesson, you build on this knowledge to learn how to traverse a two-dimensional (2D) array in row-major order. You explore how elements can be accessed in a 2D array using nested loops and consider the types of questions you could ask or problems you could solve with this approach. You trace code segments that traverse a 2D array in row-major order, then practice writing nested loops to traverse a 2D array and access its elements."
@@ -145,7 +143,6 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/5/topic/4) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How do I access elements in a 2D array by column?**\n\nStudents learn to use nested loops to traverse a 2D array in column-major order and differentiate between column-major and row-major traversals. Students identify scenarios that are best for traversing in row-major and column-major order and develop an algorithm to traverse a 2D array in column-major order to find the sum of all values in each column of the array. Students then practice applying standard 1D array algorithms to 2D arrays to find information and perform calculations.",
         "preparation": "* **(Optional)** Print copies of the Column-Major Traversal Guided Notes (one for each student)\n* Preview the *Column-Major Traversal* video\n* Print copies of the Tracing Column-Major Traversals handout (one for each student)",
         "student_overview": "**How do I access elements in a 2D array by column?**\n\nYou learned to use nested loops to traverse a 2D array in row-major order and discovered that standard 1D array algorithms can be applied to 2D arrays. In this lesson, you learn to use nested loops to traverse a 2D array in column-major order and differentiate between column-major and row-major traversals. You identify scenarios that are best for traversing in row-major and column-major order and develop an algorithm to traverse a 2D array in column-major order to find the sum of all values in each column of the array. You then practice applying standard 1D array algorithms to 2D arrays to find information and perform calculations."
@@ -164,7 +161,6 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/5/topic/5) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I use enhanced `for` loops to traverse a 2D array?**\n\nStudents revisit enhanced `for` loops to explore how these are used with 2D arrays. In the process, students discover that objects can be modified using an enhanced `for` loop because the loop variable is an alias of the object reference in the array. Students explore how enhanced `for` loops can be used with 2D arrays and identify similarities and differences between using enhanced `for` loops with 1D arrays and 2D arrays. Students then practice using enhanced `for` loops with 2D arrays.",
         "preparation": "* **(Optional)** Print copies of the Enhanced For Loops Guided Notes (one for each student)\n* Preview the *Enhanced For Loops and 2D Arrays* video\n* Print copies of the Enhanced For Loops Anticipation Guide (one for each student)",
         "student_overview": "**How can I use enhanced `for` loops to traverse a 2D array?**\n\nYou used enhanced `for` loops with 1D arrays to access each element from first to last. In this lesson, you revisit enhanced `for` loops to explore how these are used with 2D arrays. In the process, you discover that objects can be modified using an enhanced `for` loop because the loop variable is an alias of the object reference in the array. You explore how enhanced `for` loops can be used with 2D arrays and identify similarities and differences between using enhanced `for` loops with 1D arrays and 2D arrays. You then practice using enhanced `for` loops with 2D arrays."
@@ -183,7 +179,6 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How can I create image filters using The Theater?**\n\nStudents apply their knowledge of 2D arrays and object-oriented programming to create image filters using The Theater. Students learn how images are made up of pixels and that pixels consist of red, green, and blue color values and explore the `Image` and `Pixel` classes. Students write pseudocode to create an image filter that sets a specific color value to zero and then implement their algorithm in Java.",
         "preparation": "* **(Optional)** Print copies of the Images in The Theater Guided Notes (one for each student)\n* Preview the *Images and Pixels* video\n* Print copies of the Creating Image Filters handout (one for each student)\n* (Optional) Cut out the manipulatives from the Creating Image Filters handout",
         "student_overview": "**How can I create image filters using The Theater?**\n\nYou may have used or seen image filters in various social media apps or photo editing programs. In this lesson, you apply your knowledge of 2D arrays and object-oriented programming to create image filters using The Theater. You learn how images are made up of pixels and that pixels consist of red, green, and blue color values and explore the `Image` and `Pixel` classes. You write pseudocode to create an image filter that sets a specific color value to zero and then implement your algorithm in Java."
@@ -202,7 +197,6 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/5/topic/7) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I use what I know about object-oriented programming and 2D arrays to plan and implement algorithms?**\n\nIn this lesson, students apply what they have learned so far to plan and implement standard algorithms to search or modify a two-dimensional (2D) array. They learn about the `indexOf()` method in the `String` class and how it can be used to check if a specific character or `String` appears in a `String` object and explore algorithms using the `indexOf()` method. Students then work with a partner and use manipulatives to plan and implement an algorithm to search or modify elements in a 2D array.",
         "preparation": "* **(Optional)** Print copies of the 2D Array Algorithms Guided Notes (one for each student)\n* Print copies of the Writing Algorithms with 2D Arrays handout (one for each student)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies",
         "student_overview": "**How can I use what I know about object-oriented programming and 2D arrays to plan and implement algorithms?**\n\nIn this lesson, you apply what you have learned so far to plan and implement standard algorithms to search or modify a two-dimensional (2D) array. You learn about the `indexOf()` method in the `String` class and how it can be used to check if a specific character or `String` appears in a `String` object and explore algorithms using the `indexOf()` method. You then work with a partner and use manipulatives to plan and implement an algorithm to search or modify elements in a 2D array."
@@ -221,7 +215,6 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n* Topic Questions 8.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can I modify standard algorithms to create image filters?**\n\nStudents practice working with two-dimensional (2D) arrays and modifying standard algorithms to create new image filters using The Theater. Students explore an example of a new image filter and then write pseudocode to create a new image filter. Students implement their algorithm in Java and create additional image filters by modifying `Pixel` objects stored in a 2D array.",
         "preparation": "* **(Optional)** Print copies of the Modifying Images Guided Notes (one for each student)\n* Print copies of the Modifying Colors handout (one for each student)",
         "student_overview": "**How can I modify standard algorithms to create image filters?**\n\nIn this lesson, you practice working with two-dimensional (2D) arrays and modifying standard algorithms to create new image filters using The Theater. You explore an example of a new image filter and then write pseudocode to create a new image filter. You implement your algorithm in Java and create additional image filters by modifying `Pixel` objects stored in a 2D array."
@@ -240,7 +233,6 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**What are the beneficial and harmful impacts of programs?**\n\nIn this lesson, students explore the beneficial and harmful impacts of programs by analyzing and discussing real-world applications of image manipulation, such as deep fakes. Students look at examples of deep fakes and realize the difficulty in identifying the difference between real and manipulated images. After considering the beneficial and harmful impacts of deep fakes, students explore some common image manipulation algorithms used to detect objects in an image or replace parts of an image with a different image.",
         "preparation": "* **(Optional)** Print copies of the Impacts of Programs Guided Notes (one for each student)\n* Preview the *This is Not Morgan Freeman* video\n* Print copies of the Unit 5 Study Guide (one for each student)",
         "student_overview": "**What are the beneficial and harmful impacts of programs?**\n\nIn this lesson, you explore the beneficial and harmful impacts of programs by analyzing and discussing real-world applications of image manipulation, such as deep fakes. You look at examples of deep fakes and realize the difficulty in identifying the difference between real and manipulated images. After considering the beneficial and harmful impacts of deep fakes, you explore some common image manipulation algorithms used to detect objects in an image or replace parts of an image with a different image."
@@ -871,6 +863,18 @@
       },
       "seeding_key": {
         "lesson_activity.key": "0ab6b66c-033b-4b26-98a9-06066f267a04",
+        "lesson.key": "Personal Narrative Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa5-2025"
+      }
+    },
+    {
+      "key": "1f4fbf08-3215-4898-86d2-43159c0380f0",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1f4fbf08-3215-4898-86d2-43159c0380f0",
         "lesson.key": "Personal Narrative Project [1-Day Version]",
         "lesson_group.key": "lessonGroup-8",
         "script.name": "csa5-2025"
@@ -3810,6 +3814,19 @@
       }
     },
     {
+      "key": "0a2a9d85-2365-4642-a714-840860314a9a",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.\n",
+        "name": "End of Unit Survey",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "0a2a9d85-2365-4642-a714-840860314a9a",
+        "lesson_activity.key": "1f4fbf08-3215-4898-86d2-43159c0380f0"
+      }
+    },
+    {
       "key": "4c67fe56-a553-4ece-988a-5d49bb2d0f51",
       "position": 1,
       "properties": {
@@ -5611,6 +5628,31 @@
     },
     {
       "chapter": 62,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page-csa5-1b_2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page-csa5-1b_2025"
+        ],
+        "lesson.key": "Personal Narrative Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa5-2025",
+        "activity_section.key": "0a2a9d85-2365-4642-a714-840860314a9a"
+      },
+      "level_keys": [
+        "student-eou-survey_linked_page-csa5-1b_2025"
+      ]
+    },
+    {
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5635,7 +5677,32 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_2025-csa5"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_2025-csa5"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2025",
+        "activity_section.key": "033f8e7c-1b5a-428a-95c9-04313aeab026"
+      },
+      "level_keys": [
+        "student-eou-survey_2025-csa5"
+      ]
+    },
+    {
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5659,7 +5726,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5684,7 +5751,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 67,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5709,7 +5776,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5730,31 +5797,6 @@
       },
       "level_keys": [
         "CSA 2023 Theater Sandbox_2025"
-      ]
-    },
-    {
-      "chapter": 67,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "student-eou-survey_2025-csa5"
-        ],
-        "progression": "End of Unit Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "student-eou-survey_2025-csa5"
-        ],
-        "lesson.key": "End of Unit Survey",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa5-2025",
-        "activity_section.key": "033f8e7c-1b5a-428a-95c9-04313aeab026"
-      },
-      "level_keys": [
-        "student-eou-survey_2025-csa5"
       ]
     }
   ],
@@ -6493,6 +6535,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "student-eou-survey_linked_page-csa5-1b_2025",
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page-csa5-1b_2025"
+        ],
+        "lesson.key": "Personal Narrative Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa5-2025",
+        "activity_section.key": "0a2a9d85-2365-4642-a714-840860314a9a"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA Unit 5 Assessment_pilot_oo2025",
         "script_level.level_keys": [
           "CSA Unit 5 Assessment_pilot_oo2025"
@@ -6501,6 +6555,18 @@
         "lesson_group.key": "lessonGroup-8",
         "script.name": "csa5-2025",
         "activity_section.key": "abbd63a9-d69e-49ee-8711-c04fcb0a0976"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_2025-csa5",
+        "script_level.level_keys": [
+          "student-eou-survey_2025-csa5"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2025",
+        "activity_section.key": "033f8e7c-1b5a-428a-95c9-04313aeab026"
       }
     },
     {
@@ -6549,18 +6615,6 @@
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa5-2025",
         "activity_section.key": "a355907f-0a86-4476-8fcd-2806fdea8c27"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "student-eou-survey_2025-csa5",
-        "script_level.level_keys": [
-          "student-eou-survey_2025-csa5"
-        ],
-        "lesson.key": "End of Unit Survey",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa5-2025",
-        "activity_section.key": "033f8e7c-1b5a-428a-95c9-04313aeab026"
       }
     }
   ],

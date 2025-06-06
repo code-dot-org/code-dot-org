@@ -1,45 +1,91 @@
 @import '../../../mixins.scss';
 
-.row {
-  display: flex;
-  align-items: baseline;
-  padding-bottom: 10px;
-}
-
 .validation {
   display: flex;
   flex-direction: column;
   border: 1px solid black;
   border-radius: 4px;
-  margin: 20px 0;
-  padding: 20px 10px;
+  margin: 10px 0;
+  gap: 5px;
+  padding: 5px;
+  width: 760px;
 
-  .validationTitle {
-    padding-bottom: 10px;
-    padding-right: 10px;
+  select, input, textarea, label {
+    margin-bottom: 0;
+  }
+
+  .simpleRow {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5px;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: space-between;
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      width: 100%;
+
+      &First {
+        width: 50px;
+        min-width: 50px;
+        background-color: var(--background-neutral-quaternary);
+        padding: 5px;
+      }
+
+      .row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        justify-content: space-between;
+      }
+    }
   }
 }
 
-.message {
-  width: 90%;
-}
-
-.callout {
-  width: 70%;
-}
-
 .label {
+  font-size: 12px;
   padding-right: 10px;
 }
 
-.conditionNameDropdown {
-  margin-right: 10px;
+.comment {
+  width: 530px;
+}
+
+.buttonsRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  gap: 0;
+  height: 100%;
 }
 
 .addConditionButton {
-  font-size: 14px;
+  font-size: 12px;
+  height: 24px;
+  max-width: 200px;
+  padding: 0 10px;
   background-color: var(--background-brand-teal-primary);
   color: var(--text-neutral-white-fixed);
+  border: none;
+}
+
+.message {
+  width: 400px;
+  min-height: 50px;
+  resize: vertical;
+}
+
+.callout {
+  width: 190px;
 }
 
 .addValidationButton {
@@ -65,7 +111,6 @@
 
 .deleteConditionButton {
   @extend %delete-button;
-  margin: 0 10px;
 }
 
 .deleteValidationButton {

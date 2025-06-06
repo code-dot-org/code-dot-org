@@ -4,10 +4,15 @@
 
 $mobileBreakpoint: 970px;
 
-.heroBannerWrapper {
+.heroBanner {
   width: 100%;
-  background: var(--background-neutral-tertiary);
+}
+
+.heroBannerWrapper {
+  box-sizing: border-box;
+  width: 100%;
   background-size: cover;
+  padding: 4rem 2rem;
 
   &.heroBanner-withWideText {
     .heroBannerTextContainer {
@@ -25,12 +30,11 @@ div.heroBannerAnnouncementBanner {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-
   border-radius: 0;
   background-color: var(--background-neutral-secondary);
   color: var(--text-neutral-primary);
 
-  > div {
+  & > div {
     justify-content: center;
   }
 
@@ -45,11 +49,9 @@ div.heroBannerAnnouncementBanner {
   margin: 0 auto;
   align-items: center;
   gap: 4.375rem;
-  padding: 4rem 0;
 
   @media (max-width: $mobileBreakpoint) {
     flex-direction: column;
-    padding-inline: 1.5rem;
     gap: 2rem;
 
     .heroBannerMediaContainer figure {
@@ -74,8 +76,11 @@ div.heroBannerAnnouncementBanner {
     }
   }
 
+  // Adding negative margin to the h1 element to align this
+  // optically in the center of the banner. The line height here
+  // is adding extra whitespace above the h1 element.
   h1 {
-    margin-bottom: 1.5rem;
+    margin-block: -0.75rem 1.5rem;
   }
 }
 
@@ -98,5 +103,11 @@ div.heroBannerAnnouncementBanner {
 
   .heroBannerMediaImage img {
     object-fit: contain;
+  }
+
+  @media (max-width: $mobileBreakpoint) {
+    .hideImageOnSmallScreen {
+      display: none;
+    }
   }
 }

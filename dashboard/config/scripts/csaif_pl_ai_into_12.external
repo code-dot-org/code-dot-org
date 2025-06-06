@@ -3,6 +3,62 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
+# Voices from the Classroom
+
+#### As AI becomes increasingly integrated into daily life, students need to move beyond simply using AI tools—they must develop the skills to critically evaluate, refine, and apply AI-generated content in responsible ways. The Problem Solving with AI unit introduces students to AI as a collaborator in analytical and creative work, helping them explore where AI succeeds, where it fails, and how human oversight improves AI-driven problem solving.
+
+#### See what educators are saying about teaching the **Problem Solving with AI** unit. 
+
+<!-- Flexbox Section 1 -->
+<div style="display: flex; align-items: center; gap: 5px; width: 80%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+   
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #b2dee3; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+      Once students realized how AI skills connect to real-world careers—from design to data analysis—they became much more invested
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
+</div>
+
+<!-- Flexbox Section 2 -->
+<div style="display: flex; align-items: center; gap: 5px; flex-direction: row-reverse; width: 80%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+   
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #ffd199; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+      The unit’s structure made it easy to guide students through complex ideas like prompting and AI bias. The hands-on activities and built-in tools saved me a ton of prep time.
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
+</div>
+
+<!-- Flexbox Section 3 -->
+<div style="display: flex; align-items: center; gap: 5px; width: 80%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #f6a6a6; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+This curriculum doesn’t just introduce students to AI—it helps them think critically about it. From hallucinations to ethical debates, students learned to question, refine, and really understand what’s happening under the hood.
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
+</div>
+
+---
+
 <div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
     
 <p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
@@ -18,6 +74,4 @@ You've finished the first lesson in this professional learning module!
         <td style="background-color: #b2dee3; text-align: center;"><b>Lesson One</b><br>Teaching Problem <br> Solving with AI</td>
         <td style="background-color: #f7f8fa; text-align: center;"><b>Lesson Two</b><br>Lesson Exploration</td>
 </table>
-
-## Let's continue to Lesson Two!
 MARKDOWN

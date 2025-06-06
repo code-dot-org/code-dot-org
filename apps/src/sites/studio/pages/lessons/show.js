@@ -146,8 +146,10 @@ function displayDifferentiationChat() {
     ReactDOM.render(
       <Provider store={getStore()}>
         <AiDiffFloatingActionButton
-          context={AiDiffContext.LESSON}
-          scriptId={lessonId}
+          context={{
+            type: AiDiffContext.LESSON,
+            lessonId: lessonId,
+          }}
           scriptName={lessonName}
           unitDisplayName={lessonData['unit']['displayName']}
         />

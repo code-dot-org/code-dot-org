@@ -30,7 +30,7 @@ markdown <<MARKDOWN
         <div>
             <p style="font-size: 14pt; font-weight: bold; margin: 0;">Lesson 2: Producer Power</p>
             <p style="font-size: 14pt; line-height: 1.2; margin: 5px 0;">
-                <i>featuring Producer Henny da Bizness</i> <br>A music producer reuses beats, builds patterns, and structures songs efficiently—just like a programmer uses functions to group and reuse code.
+                <i>featuring Producer Henny Tha Bizness</i> <br>A music producer reuses beats, builds patterns, and structures songs efficiently—just like a programmer uses functions to group and reuse code.
             </p>
         </div>
     </div>
@@ -41,7 +41,7 @@ markdown <<MARKDOWN
         <div>
             <p style="font-size: 14pt; font-weight: bold; margin: 0;">Lesson 3: Sound Designer’s Studio</p>
             <p style="font-size: 14pt; line-height: 1.2; margin: 5px 0;">
-                <i>featuring Artist, Creator, and Coder Roxanne</i> <br> Sound designers make effects that react to what players do in a game—like jumping, colliding, or collecting. In event-driven code runs only when something happens
+                <i>featuring Artist, Creator, and Coder Roxanne</i> <br> Sound designers make effects that react to what players do in a game—like jumping, colliding, or collecting. In event-driven code runs only when something happens.
             </p>
         </div>
     </div>

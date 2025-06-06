@@ -14,12 +14,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-20 16:42:19 UTC",
+    "serialized_at": "2025-05-27 16:18:27 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -106,7 +107,6 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/1) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I represent the attributes an object should have in a class?**\n\nIn this lesson, students expand on what they learned about classes in the previous unit to declare instance variables to represent an object's attributes. As students learn about instance variables, they discover the difference between `public` and `private` access and identify the need for encapsulation. Students also revisit inheritance to recall that subclasses share the attributes and behaviors of a class and practice declaring instance variables in a single class and in a superclass and subclass.",
         "preparation": "* **(Optional)** Print copies of the Attributes Guided Notes (one for each student)\n* Preview the *Instance Variables and Attributes* video",
         "student_overview": "**How can I represent the attributes an object should have in a class?**\n\nYou previously learned that a class is a blueprint that defines the attributes and behaviors an object should have. In this lesson, you expand on what you learned about classes in the previous unit to declare instance variables to represent an object's attributes. As you learn about instance variables, you discover the difference between `public` and `private` access and identify the need for encapsulation. You also revisit inheritance to recall that subclasses share the attributes and behaviors of a class and practice declaring instance variables in a single class and in a superclass and subclass."
@@ -125,7 +125,6 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.1\n* Topic Questions 5.8\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/2) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How does a constructor assign values to instance variables?**\n\nStudents have used constructors to create a variety of objects, including `Painter` objects. Students build on their knowledge of instance variables to explore how to assign values to the instance variables when an object is created. Students recall that the constructor they have used in the `Painter` class instantiates a `Painter` object with the same values every time, and they consider the decisions a software engineer needs to make to decide what default values should be assigned to instance variables. Students practice writing no-argument constructors and continue developing the `Dessert` class for the Joyful Pastries food truck.",
         "preparation": "* **(Optional)** Print copies of the No-Argument Constructors Guided Notes (one for each student)\n* Preview the *Constructors* video",
         "student_overview": "**How does a constructor assign values to instance variables?**\n\nYou have used constructors to create a variety of objects, including `Painter` objects. In this lesson, you build on your knowledge of instance variables to explore how to assign values to the instance variables when an object is created. You recall that the constructor you have used in the `Painter` class instantiates a `Painter` object with the same values every time, and you consider the decisions a software engineer needs to make to decide what default values should be assigned to instance variables. You practice writing no-argument constructors and continue developing the `Dessert` class for the Joyful Pastries food truck."
@@ -144,7 +143,6 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.2\n* Topic Questions 5.2\n* Topic Questions 9.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/3) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I create objects with specific values for its instance variables?**\n\nStudents have learned how to write no-argument constructors to assign default values to instance variables and use these to instantiate objects. In this lesson, students consider the limitations of no-argument constructors and learn about using parameterized constructors to assign specific values to the instance variables. Students explore the components of a parameterized constructor and its functionality, then practice writing parameterized constructors in a class.",
         "preparation": "* **(Optional)** Print copies of the Parameterized Constructors Guided Notes (one for each student)\n* Preview the *Overloaded Constructors* video",
         "student_overview": "**How can I create objects with specific values for its instance variables?**\n\nYou have learned how to write no-argument constructors to assign default values to instance variables and use these to instantiate objects. In this lesson, you consider the limitations of no-argument constructors and learn about using parameterized constructors to assign specific values to the instance variables. You explore the components of a parameterized constructor and its functionality, then practice writing parameterized constructors in a class."
@@ -163,9 +161,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "**How do I get input from the user?**\n\nStudents learn how to obtain user input using the `Scanner` class.",
+        "overview": "**How do I get input from the user?**\n\nIn this lesson, students learn how to collect input from users using the `Scanner` class. The lesson focuses on building programs that interact with users by asking for and processing input. Through guided notes, videos, and hands-on coding activities, students explore how to create and use `Scanner` objects and how to access documentation to learn more about available methods.",
         "preparation": "- (Optional) Print copies of the User Input Guided Notes (one for each student)\n- Preview the *Creating Scanner Objects* and *Scanner Class Methods* videos",
-        "student_overview": "**How do I get input from the user?**\n\nIn this lesson, you learn how to use the `Scanner`  class to obtain user input."
+        "student_overview": "**How do I get input from the user?**\n\nToday you learn how to make your programs interactive by asking the user for input. You use a tool in Java called the `Scanner` class to read information typed by the user. You practice writing code that takes this input and uses it in a program. You also learn how to look up more information about what the `Scanner` class can do and how to fix common mistakes in your code."
       },
       "seeding_key": {
         "lesson.key": "User Input",
@@ -181,7 +179,6 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.9\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/4) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I reduce ambiguity and redundancies in my program?**\n\nStudents continue building on what they have learned about constructors and parameters to explore the functionality of local variables. Students realize that the scope of local variables is limited to the constructor in which it is declared and learn to use the `this` keyword to refer to the current object and its instance variables. Students also consider how the `this` keyword can be used to minimize redundancies in their code, then practice writing parameterized constructors using the `this` keyword in a class and write parameterized constructors in the `Dessert` class.",
         "preparation": "* **(Optional)** Print copies of the The this Keyword Guided Notes (one for each student)\n* Print copies of the Anticipation Guide handout (one for each student)",
         "student_overview": "**How can I reduce ambiguity and redundancies in my program?**\n\nIn this lesson, you continue building on what you have learned about constructors and parameters to explore the functionality of local variables. You realize that the scope of local variables is limited to the constructor in which it is declared and learn to use the `this` keyword to refer to the current object and its instance variables. You also consider how the `this` keyword can be used to minimize redundancies in your code, then practice writing parameterized constructors using the `this` keyword in a class and write parameterized constructors in the `Dessert` class."
@@ -200,7 +197,6 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/5) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I assign values to the instance variables declared in a superclass from a subclass constructor?**\n\nStudents have learned how to write no-argument and parameterized constructors and used the `this` keyword to refer to the current object. In this lesson, students revisit inheritance and explore how to assign values to the instance variables declared in a superclass from a subclass constructor. Students learn how to use the `super` keyword to call the superclass constructor from a subclass and are introduced to the `Object` class. Students then practice writing no-argument and parameterized constructors in a subclass before applying these concepts to the `Dessert` subclasses they previously created.",
         "preparation": "* **(Optional)** Print copies of the Constructors and Inheritance Guided Notes (one for each student)",
         "student_overview": "**How can I assign values to the instance variables declared in a superclass from a subclass constructor?**\n\nYou have learned how to write no-argument and parameterized constructors and use the `this` keyword to refer to the current object. In this lesson, you revisit inheritance and explore how to assign values to the instance variables declared in a superclass from a subclass constructor. You learn how to use the `super` keyword to call the superclass constructor from a subclass and are introduced to the `Object` class. You then practice writing no-argument and parameterized constructors in a subclass before applying these concepts to the `Dessert` subclass you previously created."
@@ -219,7 +215,6 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/6) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How are the types of variables in Java similar and different?**\n\nIn this lesson, students revisit variables and data types and learn the difference between primitive and reference types. Students investigate variables of type `int`, `double`, `boolean`, and `String` and explore using the assignment operator to initialize or change the value stored in a variable. Students then practice tracing code segments to identify the current values stored in variables.",
         "preparation": "* **(Optional)** Print copies of the Variables Guided Notes (one for each student)\n* Preview the *Creating Variables* video\n* Print copies of the Investigate: Variables handout (one for each student)",
         "student_overview": "**How are the types of variables in Java similar and different?**\n\nIn this lesson, you revisit variables and data types and learn the difference between primitive and reference types. You investigate variables of type `int`, `double`, `boolean`, and `String` and explore using the assignment operator to initialize or change the value stored in a variable. You then practice tracing code segments to identify the current values stored in variables."
@@ -238,7 +233,6 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.5\n* Topic Questions 5.1\n* Topic Questions 5.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/7) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I access the values of an object's instance variables?**\n\nStudents have previously used methods in the `Painter` class to get information about the state of a `Painter` object. In this lesson, students learn about accessor methods and explore their syntax and functionality. They consider why they would use accessor methods in a program and how they might decide when to provide an accessor method for an instance variable. Students then practice writing an accessor method in a class before writing accessor methods in the `Dessert` class and subclass.",
         "preparation": "* **(Optional)** Print copies of the Accessor Methods Guided Notes (one for each student)\n* Preview the *Accessor Methods* video",
         "student_overview": "**How can I access the values of an object's instance variables?**\n\nYou have previously used methods in the `Painter` class to get information about the state of a `Painter` object. In this lesson, you learn about accessor methods and explore their syntax and functionality. You consider why you would use accessor methods in a program and how you might decide when to provide an accessor method for an instance variable. You then practice writing an accessor method in a class before writing accessor methods in the `Dessert` class and subclass."
@@ -257,7 +251,6 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/8) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I use variables and operators to perform calculations?**\n\nStudents have learned how to use variables to store primitive values and object references. In this lesson, students explore writing and evaluating expressions using arithmetic operators and compound assignment operators. Students discover how the data type impacts the way an expression is evaluated and the result of dividing an `int` or a `double` value by zero. They also learn about using compound assignment operators and explore the mod ( `%` ) operator.",
         "preparation": "* **(Optional)** Print copies of the Operators and Expressions Guided Notes (one for each student)",
         "student_overview": "**How can I use variables and operators to perform calculations?**\n\nYou have learned how to use variables to store primitive values and object references. In this lesson, you explore writing and evaluating expressions using arithmetic operators and compound assignment operators. You discover how the data type impacts the way an expression is evaluated and the result of dividing an `int` or a `double` value by zero. You also learn about using compound assignment operators and explore the mod ( `%` ) operator."
@@ -276,7 +269,6 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.3\n* Topic Questions 2.4\n* Topic Questions 3.1\n* Topic Questions 5.1\n* Topic Questions 5.5\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/9) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I change the values assigned to an object's instance variables after the object has been created?**\n\nIn this lesson, students learn to write and call mutator methods to change the values stored in an object's instance variables. Students explore the functionality and syntax of a mutator method. They consider scenarios where the value of an instance variable should not be changed and learn how to identify and address invalid values for instance variables. Students then practice writing a mutator method in a class before adding mutator methods to the `Dessert` class and subclass.",
         "preparation": "* **(Optional)** Print copies of the Mutator Methods Guided Notes (one for each student)\n* Preview the *Mutator Methods* video",
         "student_overview": "**How can I change the values assigned to an object's instance variables after the object has been created?**\n\nIn this lesson, you learn to write and call mutator methods to change the values stored in an object's instance variables. You explore the functionality and syntax of a mutator method. You consider scenarios where the value of an instance variable should not be changed and learn how to identify and address invalid values for instance variables. You then practice writing a mutator method in a class before adding mutator methods to the `Dessert` class and subclass."
@@ -295,7 +287,6 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.4\n* Topic Questions 9.1\n* Topic Questions 9.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/10) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I easily display information about an object?**\n\nStudents have learned to use accessor methods to obtain information about the state of an object. In this lesson, students explore how to print an object reference and the `toString()` method to easily obtain information about an object. Students revisit the `Object` class and learn how to override its `toString()` method and practice writing a `toString()` method in a class using escape sequences to format output. Students then write a `toString()` method in the `Dessert` class and subclass.",
         "preparation": "* **(Optional)** Print copies of the Printing Objects Guided Notes (one for each student)\n* Preview *The toString() Method* video\n* Print copies of the Unit 2 Study Guide (one for each student)",
         "student_overview": "**How can I easily display information about an object?**\n\nYou have learned to use accessor methods to obtain information about the state of an object. In this lesson, you explore how to print an object reference and the `toString()` method to easily obtain information about an object. You revisit the `Object` class and learn how to override its `toString()` method and practice writing a `toString()` method in a class using escape sequences to format output. You then write a `toString()` method in the `Dessert` class and subclass."
@@ -1049,6 +1040,18 @@
       },
       "seeding_key": {
         "lesson_activity.key": "9ab0bd9f-368d-4a36-b4b0-c9104e42ef37",
+        "lesson.key": "Store Management Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa2-2025"
+      }
+    },
+    {
+      "key": "fb9cfb0b-01cb-436e-869b-fd9596704524",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fb9cfb0b-01cb-436e-869b-fd9596704524",
         "lesson.key": "Store Management Project [1-Day Version]",
         "lesson_group.key": "lessonGroup-8",
         "script.name": "csa2-2025"
@@ -5072,6 +5075,19 @@
       }
     },
     {
+      "key": "f7c43c8d-6fc7-4286-a666-74762eee2673",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.\n",
+        "name": "End of Unit Survey",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "f7c43c8d-6fc7-4286-a666-74762eee2673",
+        "lesson_activity.key": "fb9cfb0b-01cb-436e-869b-fd9596704524"
+      }
+    },
+    {
       "key": "5e395094-8e40-4e10-95f1-faa1f4052173",
       "position": 1,
       "properties": {
@@ -7392,6 +7408,31 @@
     },
     {
       "chapter": 85,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page-csa2-1b_2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page-csa2-1b_2025"
+        ],
+        "lesson.key": "Store Management Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa2-2025",
+        "activity_section.key": "f7c43c8d-6fc7-4286-a666-74762eee2673"
+      },
+      "level_keys": [
+        "student-eou-survey_linked_page-csa2-1b_2025"
+      ]
+    },
+    {
+      "chapter": 86,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7416,7 +7457,32 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 87,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_2025-csa2"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_2025-csa2"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "94ccbbfb-ce21-4122-aa8a-7f5f495c3900"
+      },
+      "level_keys": [
+        "student-eou-survey_2025-csa2"
+      ]
+    },
+    {
+      "chapter": 88,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7440,7 +7506,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 89,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7465,7 +7531,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 90,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7487,31 +7553,6 @@
       },
       "level_keys": [
         "CSA 2023 Neighborhood - No Bucket Sandbox_2025"
-      ]
-    },
-    {
-      "chapter": 89,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "student-eou-survey_2025-csa2"
-        ],
-        "progression": "End of Unit Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "student-eou-survey_2025-csa2"
-        ],
-        "lesson.key": "End of Unit Survey",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-2025",
-        "activity_section.key": "94ccbbfb-ce21-4122-aa8a-7f5f495c3900"
-      },
-      "level_keys": [
-        "student-eou-survey_2025-csa2"
       ]
     }
   ],
@@ -8526,6 +8567,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "student-eou-survey_linked_page-csa2-1b_2025",
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page-csa2-1b_2025"
+        ],
+        "lesson.key": "Store Management Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa2-2025",
+        "activity_section.key": "f7c43c8d-6fc7-4286-a666-74762eee2673"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA Unit 2 Assessment_pilot_oo2025",
         "script_level.level_keys": [
           "CSA Unit 2 Assessment_pilot_oo2025"
@@ -8534,6 +8587,18 @@
         "lesson_group.key": "lessonGroup-8",
         "script.name": "csa2-2025",
         "activity_section.key": "061fd018-0a13-4dd6-ba8f-8fca83ee60fb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_2025-csa2",
+        "script_level.level_keys": [
+          "student-eou-survey_2025-csa2"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "94ccbbfb-ce21-4122-aa8a-7f5f495c3900"
       }
     },
     {
@@ -8570,18 +8635,6 @@
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa2-2025",
         "activity_section.key": "b37c63f2-0a60-4fad-9d91-641ee2e2c9bc"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "student-eou-survey_2025-csa2",
-        "script_level.level_keys": [
-          "student-eou-survey_2025-csa2"
-        ],
-        "lesson.key": "End of Unit Survey",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-2025",
-        "activity_section.key": "94ccbbfb-ce21-4122-aa8a-7f5f495c3900"
       }
     }
   ],

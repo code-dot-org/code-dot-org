@@ -4,6 +4,7 @@ import '@/contentful/register-custom-components';
 import {detachExperienceStyles} from '@contentful/experiences-sdk-react';
 import {Metadata} from 'next';
 import {draftMode} from 'next/headers';
+import {notFound} from 'next/navigation';
 
 import Bootstrap from '@/bootstrap';
 import ContentEditorHelper from '@/components/contentEditorHelper';
@@ -14,7 +15,19 @@ import {getContentfulSlug} from '@/contentful/slug/getContentfulSlug';
 import {getSeoMetadata} from '@/metadata/seo';
 import {getPageHeading} from '@/selectors/contentful/getExperienceEntryFields';
 
-export const revalidate = 3600; // Cache for one hour
+/**
+ * This sets the time for which a page is considered "fresh" to the upstream requester.
+ *
+ * The Code.org infrastructure currently has two upstream caches in a sequential chain:
+ * 1. Marketing CDN
+ * 2. Code.org front door CDN (targeted to be removed in the future)
+ *
+ * When this revalidate parameter is sent, it can take a total of [revalidate] * [number of upstream chains+1] seconds
+ *
+ * With the current value being 15 minutes, it can therefore take [900] * [2 + 1] = 45 minutes for a page to be updated.
+ */
+// NOTE: IF UPDATING THIS VALUE, PLEASE ALSO UPDATE THE VALUE IN THE `ViewerResponseCloudFrontFunction` in marketing.yml.erb
+export const revalidate = 900; // Fresh for 15 minutes, SEE ABOVE NOTE
 
 type ExperiencePageProps = {
   params: Promise<{locale?: string; paths?: string; brand?: Brand}>;
@@ -87,6 +100,9 @@ export default async function ExperiencePage({
   const {experience, error} = pageProps.experienceResult;
 
   if (error) {
+    if (error.message.startsWith('No experience entry with slug')) {
+      return notFound();
+    }
     return <div>{error.message}</div>;
   }
 

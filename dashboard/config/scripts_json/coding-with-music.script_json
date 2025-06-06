@@ -8,16 +8,19 @@
       "curriculum_umbrella": "CSC K-5",
       "hideable_lessons": true,
       "is_migrated": true,
+      "project_sharing": true,
       "show_calendar": true,
+      "student_detail_progress_view": true,
       "topic_tags": [
         "music_lab"
       ],
+      "tts": true,
       "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-20 14:16:32 UTC",
+    "serialized_at": "2025-05-29 21:16:20 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -584,14 +587,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "coding-with-music-play-together"
+          "coding-with-music-play-together-standalone"
         ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "coding-with-music-play-together"
+          "coding-with-music-play-together-standalone"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -599,7 +602,7 @@
         "activity_section.key": "15dece84-7076-4d4f-88f1-a354a8fe3785"
       },
       "level_keys": [
-        "coding-with-music-play-together"
+        "coding-with-music-play-together-standalone"
       ]
     },
     {
@@ -609,14 +612,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "coding-with-music-loop1"
+          "coding-with-music-loop1-standalone"
         ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "coding-with-music-loop1"
+          "coding-with-music-loop1-standalone"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -624,7 +627,7 @@
         "activity_section.key": "15dece84-7076-4d4f-88f1-a354a8fe3785"
       },
       "level_keys": [
-        "coding-with-music-loop1"
+        "coding-with-music-loop1-standalone"
       ]
     },
     {
@@ -634,14 +637,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "coding-with-music-loop-layer"
+          "coding-with-music-loop-layer-standalone"
         ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "coding-with-music-loop-layer"
+          "coding-with-music-loop-layer-standalone"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -649,7 +652,7 @@
         "activity_section.key": "15dece84-7076-4d4f-88f1-a354a8fe3785"
       },
       "level_keys": [
-        "coding-with-music-loop-layer"
+        "coding-with-music-loop-layer-standalone"
       ]
     },
     {
@@ -684,14 +687,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "coding-with-music-loop-together"
+          "coding-with-music-loop-together-standalone"
         ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "coding-with-music-loop-together"
+          "coding-with-music-loop-together-standalone"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -699,7 +702,7 @@
         "activity_section.key": "5b41ed47-c9ff-4459-951b-2f844a2f7f39"
       },
       "level_keys": [
-        "coding-with-music-loop-together"
+        "coding-with-music-loop-together-standalone"
       ]
     },
     {
@@ -709,14 +712,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "coding-with-music-challenge"
+          "coding-with-music-challenge-standalone"
         ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "coding-with-music-challenge"
+          "coding-with-music-challenge-standalone"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -724,7 +727,7 @@
         "activity_section.key": "5b41ed47-c9ff-4459-951b-2f844a2f7f39"
       },
       "level_keys": [
-        "coding-with-music-challenge"
+        "coding-with-music-challenge-standalone"
       ]
     },
     {
@@ -734,14 +737,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "coding-with-music-seq-cfu"
+          "coding-with-music-seq-cfu-standalone"
         ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "coding-with-music-seq-cfu"
+          "coding-with-music-seq-cfu-standalone"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -749,7 +752,7 @@
         "activity_section.key": "5b41ed47-c9ff-4459-951b-2f844a2f7f39"
       },
       "level_keys": [
-        "coding-with-music-seq-cfu"
+        "coding-with-music-seq-cfu-standalone"
       ]
     },
     {
@@ -759,14 +762,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "coding-with-music-career-videos"
+          "coding-with-music-career-videos-standalone"
         ],
         "progression": "Career Exploration"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "coding-with-music-career-videos"
+          "coding-with-music-career-videos-standalone"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -774,7 +777,7 @@
         "activity_section.key": "4ec25ee3-e298-4174-a630-e222c43daebd"
       },
       "level_keys": [
-        "coding-with-music-career-videos"
+        "coding-with-music-career-videos-standalone"
       ]
     },
     {
@@ -809,14 +812,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "coding-with-music-freeplay1"
+          "coding-with-music-freeplay-standalone"
         ],
         "progression": "Inspire & Try"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "coding-with-music-freeplay1"
+          "coding-with-music-freeplay-standalone"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -824,7 +827,7 @@
         "activity_section.key": "a1acba78-15fa-4743-9580-5a275759e680"
       },
       "level_keys": [
-        "coding-with-music-freeplay1"
+        "coding-with-music-freeplay-standalone"
       ]
     },
     {
@@ -1467,9 +1470,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "coding-with-music-play-together",
+        "level.key": "coding-with-music-play-together-standalone",
         "script_level.level_keys": [
-          "coding-with-music-play-together"
+          "coding-with-music-play-together-standalone"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1479,9 +1482,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "coding-with-music-loop1",
+        "level.key": "coding-with-music-loop1-standalone",
         "script_level.level_keys": [
-          "coding-with-music-loop1"
+          "coding-with-music-loop1-standalone"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1491,9 +1494,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "coding-with-music-loop-layer",
+        "level.key": "coding-with-music-loop-layer-standalone",
         "script_level.level_keys": [
-          "coding-with-music-loop-layer"
+          "coding-with-music-loop-layer-standalone"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1515,9 +1518,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "coding-with-music-loop-together",
+        "level.key": "coding-with-music-loop-together-standalone",
         "script_level.level_keys": [
-          "coding-with-music-loop-together"
+          "coding-with-music-loop-together-standalone"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1527,9 +1530,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "coding-with-music-challenge",
+        "level.key": "coding-with-music-challenge-standalone",
         "script_level.level_keys": [
-          "coding-with-music-challenge"
+          "coding-with-music-challenge-standalone"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1539,9 +1542,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "coding-with-music-seq-cfu",
+        "level.key": "coding-with-music-seq-cfu-standalone",
         "script_level.level_keys": [
-          "coding-with-music-seq-cfu"
+          "coding-with-music-seq-cfu-standalone"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1551,9 +1554,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "coding-with-music-career-videos",
+        "level.key": "coding-with-music-career-videos-standalone",
         "script_level.level_keys": [
-          "coding-with-music-career-videos"
+          "coding-with-music-career-videos-standalone"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1575,9 +1578,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "coding-with-music-freeplay1",
+        "level.key": "coding-with-music-freeplay-standalone",
         "script_level.level_keys": [
-          "coding-with-music-freeplay1"
+          "coding-with-music-freeplay-standalone"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1900,6 +1903,18 @@
       "seeding_key": {
         "resource.key": "lesson_slides"
       }
+    },
+    {
+      "name": "Quick Reference Teacher's Guide",
+      "url": "https://drive.google.com/drive/folders/12GBFA753Lsu5qDa13DvwlSvXDcM6daBW",
+      "key": "quick_reference_teacher_s_guide",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "quick_reference_teacher_s_guide"
+      }
     }
   ],
   "lessons_resources": [
@@ -1911,14 +1926,32 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Producer Power",
+        "resource.key": "quick_reference_teacher_s_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Sound Designer's Studio",
         "resource.key": "lesson_slides"
       }
     },
     {
       "seeding_key": {
+        "lesson.key": "Sound Designer's Studio",
+        "resource.key": "quick_reference_teacher_s_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "coding_with_music_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "quick_reference_teacher_s_guide"
       }
     }
   ],

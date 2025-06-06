@@ -14,12 +14,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-20 16:42:29 UTC",
+    "serialized_at": "2025-05-27 16:17:32 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -106,7 +107,6 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.6\n* Topic Questions 5.9\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**What are the similarities and differences between passing primitives and object references as parameters?**\n\nStudents revisit passing primitives and object references as parameters to identify similarities and differences between each. They explore the impact of using an object reference as a parameter on the original object and identify scenarios when it is not ideal to use an object reference as a parameter. Students then learn about user stories and some for their projects to identify required program features before revisiting their Need to Knows to determine what they have learned that will be useful for their project and what they still need to learn.",
         "preparation": "* **(Optional)** Print copies of the Object References as Parameters Guided Notes (one for each student)\n* Preview the *Software Engineering: User Stories* video",
         "student_overview": "**What are the similarities and differences between passing primitives and object references as parameters?**\n\nIn this lesson, you revisit passing primitives and object references as parameters to identify similarities and differences between each. You explore the impact of using an object reference as a parameter on the original object and identify scenarios when it is not ideal to use an object reference as a parameter. You then learn about user stories and write some for your project to identify required program features before revisiting your Need to Knows to determine what you have learned that will be useful for your project and what you still need to learn."
@@ -125,7 +125,6 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can overloading a method be useful in my programs?**\n\nStudents previously learned about overloading when writing multiple constructors in a class. In this lesson, students revisit overloaded constructors and learn how overloading can be applied to methods. They explore how overloaded methods work and consider scenarios where overloaded methods would be useful. Students then practice writing and calling overloaded methods and revisit their Need to Knows to determine what they have learned that will be useful for their project and what they still need to learn.",
         "preparation": "* **(Optional)** Print copies of the Overloaded Methods Guided Notes (one for each student)",
         "student_overview": "**How can overloading a method be useful in my programs?**\n\nYou previously learned about overloading when writing multiple constructors in a class. In this lesson, you revisit overloaded constructors and learn how overloading can be applied to methods. You explore how overloaded methods work and consider scenarios where overloaded methods would be useful. You then practice writing and calling overloaded methods and revisit your Need to Knows to determine what you have learned that will be useful for your project and what you still need to learn."
@@ -144,7 +143,6 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How does making a method `private` change its functionality?**\n\nIn this lesson, students have an opportunity to begin planning their Creative Coding with The Theater project. Students should spend this time creating UML diagrams, planning algorithms, and updating their Project Planning Board with tasks they need to complete. They then revisit the `private` keyword and how this access modifier is used to prevent other classes from accessing instance variables. Students explore how the `private` keyword can be used with methods and consider scenarios where they might want to make a method `private` instead of `public`. They practice writing and calling `private` methods and revisit their Need to Knows to determine what they have learned that will be useful for their project and what they still need to learn.",
         "preparation": "* **(Optional)** Print copies of the Private Methods Guided Notes (one for each student)\n* Preview the *Private Methods* video",
         "student_overview": "**How does making a method `private` change its functionality?**\n\nIn this lesson, you have an opportunity to begin planning your Creative Coding with The Theater project. You should spend this time creating UML diagrams, planning algorithms, and updating your Project Planning Board with tasks you need to complete. You then revisit the `private` keyword and how this access modifier is used to prevent other classes from accessing instance variables. You explore how the `private` keyword can be used with methods and consider scenarios where you might want to make a method `private` instead of `public`. You practice writing and calling `private` methods and revisit your Need to Knows to determine what you have learned that will be useful for your project and what you still need to learn."
@@ -163,7 +161,6 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**Are developers responsible for the ethical use of the code they create and integrate?**\n\nIn this lesson, students will explore the ethical and legal issues surrounding the use of open-source code and proprietary software. They will learn about the significance of intellectual property rights and the impact of using open-source code on society, economics, and culture. Through an Open Source Carousel activity, students will engage in discussions on various scenarios related to the ethical use of code, intellectual property rights, and the responsibilities of developers. This lesson encourages critical thinking about how open-source and non-open-source code can be integrated into projects responsibly. ",
         "preparation": "* **(Optional)** Print copies of the Intellectual Property Guided Notes (one for each student)\n* Print copies of the Project Planning Feedback handout (one for each student)\n* Print the Open Source Carousel Stations and post around the classroom with chart paper",
         "student_overview": "**Are developers responsible for the ethical use of the code they create and integrate?**\n\nIn this lesson, you will consider the ethical and legal issues related to open-source code and its role in the technology industry. You will learn about the ways open-source projects are created and shared, and the importance of intellectual property rights when developing software. You will participate in an Open Source Carousel activity to discuss current issues related to open-source software, share your thoughts and ideas, and brainstorm ways these issues can be addressed."
@@ -182,7 +179,6 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 10.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**What is recursion?**\n\nIn this lesson, students are introduced to recursion through an unplugged activity and realize how these algorithms differ from how they have implemented algorithms throughout the year. Students learn how to identify the base case and recursive case of a recursive algorithm and how to translate an iterative algorithm into a recursive one. They then practice tracing recursive algorithms and consider the benefits and drawbacks of writing an algorithm using recursion.",
         "preparation": "* **(Optional)** Print copies of the Recursion Guided Notes (one for each student)\n* Preview the *Recursion* video\n* Print copies of the Recursion Unplugged handout (one for each pair of students)\n* Print copies of the Coloring Page handout\n* Print and cut out the Method Cards\n* Gather sets of ten disposable cups and markers or colored pencils",
         "student_overview": "**What is recursion?**\n\nIn this lesson, you are introduced to recursion through an unplugged activity and realize how these algorithms differ from how you have implemented algorithms throughout the year. You learn how to identify the base case and recursive case of a recursive algorithm and how to translate an iterative algorithm into a recursive one. You then practice tracing recursive algorithms and consider the benefits and drawbacks of writing an algorithm using recursion."
@@ -819,6 +815,18 @@
       },
       "seeding_key": {
         "lesson_activity.key": "1f7b408a-e004-4ca5-92e2-90ef4d604360",
+        "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa7-2025"
+      }
+    },
+    {
+      "key": "cb755236-4eb1-4911-bf82-27284a213a36",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cb755236-4eb1-4911-bf82-27284a213a36",
         "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
         "lesson_group.key": "lessonGroup-8",
         "script.name": "csa7-2025"
@@ -3319,6 +3327,19 @@
       }
     },
     {
+      "key": "db52daf6-19de-4b10-8392-a818ed36f709",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.\n",
+        "name": "End of Unit Survey",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "db52daf6-19de-4b10-8392-a818ed36f709",
+        "lesson_activity.key": "cb755236-4eb1-4911-bf82-27284a213a36"
+      }
+    },
+    {
       "key": "1362d58c-17af-4193-a385-79820cdeba5e",
       "position": 1,
       "properties": {
@@ -4402,7 +4423,7 @@
       "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "student-eou-survey_linked_page-csa7_2025"
@@ -4450,6 +4471,31 @@
     },
     {
       "chapter": 34,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page-csa7-1b_2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page-csa7-1b_2025"
+        ],
+        "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa7-2025",
+        "activity_section.key": "db52daf6-19de-4b10-8392-a818ed36f709"
+      },
+      "level_keys": [
+        "student-eou-survey_linked_page-csa7-1b_2025"
+      ]
+    },
+    {
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4474,7 +4520,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4499,7 +4545,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4523,7 +4569,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4548,7 +4594,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4573,7 +4619,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4992,6 +5038,18 @@
         "lesson_group.key": "lessonGroup-8",
         "script.name": "csa7-2025",
         "activity_section.key": "a14daaa0-a963-44b9-93e9-626aa094b6bb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_linked_page-csa7-1b_2025",
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page-csa7-1b_2025"
+        ],
+        "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa7-2025",
+        "activity_section.key": "db52daf6-19de-4b10-8392-a818ed36f709"
       }
     },
     {

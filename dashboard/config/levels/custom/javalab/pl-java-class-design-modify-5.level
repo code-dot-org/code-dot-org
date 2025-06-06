@@ -1,5 +1,6 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2025-05-19T14:31:42.000Z",
   "level_num": "custom",
@@ -11,7 +12,7 @@
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
     "project_template_level_name": "CSA U2L1-Attributes PBT_pilot_oo2025",
-    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Modify the code in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Content</code> class:\r\n\r\n   1. In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Content</code> class, change the instance variable <code style=\"background-color: #ececec; color: black; font-weight: bold;\">year</code> to <code style=\"background-color: #ececec; color: black; font-weight: bold;\">public</code> instead of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">private</code>.\r\n\r\n   2. In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ContentRunner.java</code>, comment out the lines attempting to print <code style=\"background-color: #ececec; color: black; font-weight: bold;\">findingNemo.title</code> and <code style=\"background-color: #ececec; color: black; font-weight: bold;\">strangerThings.numEpisodes</code> on **Lines 9 and 10**.\r\n\r\nRun the program to observe the results.\r\n\r\nDo you still get the same error when attempting to print <code style=\"background-color: #ececec; color: black; font-weight: bold;\">canvas.year</code> to the console?\r\n\r\nWhat happens if you change <code style=\"background-color: #ececec; color: black; font-weight: bold;\">\"Content Year: \" + canvas.year</code> to <code style=\"background-color: #ececec; color: black; font-weight: bold;\">\"Content Title: \" + canvas.title</code>?",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Modify the code in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Content</code> class:\r\n\r\n   1. In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Content</code> class, change the instance variable <code style=\"background-color: #ececec; color: black; font-weight: bold;\">year</code> to <code style=\"background-color: #ececec; color: black; font-weight: bold;\">public</code> instead of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">private</code>.\r\n\r\n   2. In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ContentRunner.java</code>, comment out the lines attempting to print <code style=\"background-color: #ececec; color: black; font-weight: bold;\">findingNemo.title</code> and <code style=\"background-color: #ececec; color: black; font-weight: bold;\">strangerThings.numEpisodes</code> on **Lines 9 and 10**.\r\n\r\nRun the program to observe the results.\r\n\r\nDo you still get the same error when attempting to print <code style=\"background-color: #ececec; color: black; font-weight: bold;\">canvas.year</code> to the console?\r\n\r\nWhat happens if you change <code style=\"background-color: #ececec; color: black; font-weight: bold;\">\"Content Year: \" + canvas.year</code> to <code style=\"background-color: #ececec; color: black; font-weight: bold;\">\"Content Title: \" + canvas.title</code>?\r\n\r\n---\r\n\r\n## Need help?\r\n\r\n#### The 'For Teachers Only' tab shows an exemplar of the level.\r\n\r\n![](https://images.code.org/090e7a694c2d808d48d2fbaec60e9e35-image-1748015291454.png)",
     "start_sources": {
       "ContentRunner.java": {
         "text": "public class ContentRunner {\n  public static void main(String[] args) {\n\n    Content canvas = new Content();\n    Movie findingNemo = new Movie();\n    TVShow strangerThings = new TVShow();\n\n    System.out.println(\"Content Year: \" + canvas.year);\n    System.out.println(\"Movie Title: \" + findingNemo.title);\n    System.out.println(\"TV Show Episodes: \" + strangerThings.numEpisodes);\n\n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n  }\n}",
@@ -36,9 +37,11 @@
     },
     "teacher_markdown": "Making the `year` variable `public` instead of `private` allows the `ContentRunner` class to access and print the value assigned to `year`. When attempting to print the `title` variable, students will see the error about the variable being `private`.",
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "true",
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-19T14:31:42.057+00:00\",\"changed\":[\"cloned from \\\"CSA U2L1-L2-2_pilot_oo2025\\\"\"],\"cloned_from\":\"CSA U2L1-L2-2_pilot_oo2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-19T14:31:42.057+00:00\",\"changed\":[\"cloned from \\\"CSA U2L1-L2-2_pilot_oo2025\\\"\"],\"cloned_from\":\"CSA U2L1-L2-2_pilot_oo2025\"},{\"changed_at\":\"2025-05-23 15:49:13 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-05-27 16:30:17 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Javalab>

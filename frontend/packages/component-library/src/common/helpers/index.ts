@@ -33,7 +33,6 @@ export const getAriaPropsFromProps = (props: {
  * @param direction
  * @param tailOffset
  * @param tailLength
- * @param isPositionFixed
  */
 export const calculatePositionedElementStyles = ({
   nodePosition,
@@ -41,62 +40,108 @@ export const calculatePositionedElementStyles = ({
   direction,
   tailOffset,
   tailLength,
-  isPositionFixed = false,
 }: {
   nodePosition: HTMLElement | null;
   positionedElementRef: React.RefObject<HTMLDivElement | null>;
-  direction?: ComponentPlacementDirection | 'none';
+  direction: ComponentPlacementDirection;
   tailOffset: number;
   tailLength: number;
-  isPositionFixed?: boolean;
 }) => {
-  const styles: React.CSSProperties = {};
+  const styles: React.CSSProperties = {
+    position: 'absolute',
+    inset: '0px auto auto 0px',
+  };
+  let effectiveDirection = direction;
 
   if (nodePosition && positionedElementRef.current && direction !== 'none') {
     const rect = nodePosition.getBoundingClientRect();
     const tooltipRect = positionedElementRef.current.getBoundingClientRect();
-    const scrollY = isPositionFixed ? 0 : window.scrollY;
-    const scrollX = isPositionFixed ? 0 : window.scrollX;
-    const textDirection = document.documentElement.dir || 'ltr'; // Default to 'ltr' if not specified
+    const scrollY = window.scrollY;
+    const scrollX = window.scrollX;
+    const viewportHeight = window.innerHeight;
+    const viewportWidth = window.innerWidth;
+    const textDirection = document.documentElement.dir || 'ltr';
     const isLtr = textDirection === 'ltr';
 
-    const verticalMiddlePosition =
-      rect.top + scrollY + rect.height / 2 - tooltipRect.height / 2;
-    const verticalTopPosition =
-      rect.top + scrollY - tooltipRect.height - tailOffset - tailLength;
-    const verticalBottomPosition =
-      rect.top + rect.height + scrollY + tailOffset + tailLength;
+    let top = 0;
+    let left = 0;
 
-    const horizontalMiddlePosition =
-      rect.left + scrollX + rect.width / 2 - tooltipRect.width / 2;
-    const horizontalLeftPosition =
-      rect.left + scrollX - tooltipRect.width - tailOffset - tailLength;
-    const horizontalRightPosition =
-      rect.right + scrollX + tailOffset + tailLength;
+    const calculatePosition = (dir: ComponentPlacementDirection) => {
+      switch (dir) {
+        case 'onRight':
+          top = rect.top + scrollY + rect.height / 2 - tooltipRect.height / 2;
+          left =
+            (isLtr ? rect.right : rect.left - tooltipRect.width) +
+            scrollX +
+            tailOffset +
+            tailLength;
+          break;
+        case 'onBottom':
+          top = rect.bottom + scrollY + tailOffset + tailLength;
+          left = rect.left + scrollX + rect.width / 2 - tooltipRect.width / 2;
+          break;
+        case 'onLeft':
+          top = rect.top + scrollY + rect.height / 2 - tooltipRect.height / 2;
+          left =
+            (isLtr ? rect.left - tooltipRect.width : rect.right) +
+            scrollX -
+            tailOffset -
+            tailLength;
+          break;
+        case 'onTop':
+        default:
+          top =
+            rect.top + scrollY - tooltipRect.height - tailOffset - tailLength;
+          left = rect.left + scrollX + rect.width / 2 - tooltipRect.width / 2;
+          break;
+      }
 
-    // Calculate the tooltip position based on the direction and its tail length
-    switch (direction) {
-      case 'onRight':
-        styles.top = verticalMiddlePosition;
-        styles.left = isLtr ? horizontalRightPosition : horizontalLeftPosition;
-        break;
-      case 'onBottom':
-        styles.top = verticalBottomPosition;
-        styles.left = horizontalMiddlePosition;
-        break;
-      case 'onLeft':
-        styles.top = verticalMiddlePosition;
-        styles.left = isLtr ? horizontalLeftPosition : horizontalRightPosition;
-        break;
-      case 'onTop':
-      default:
-        styles.top = verticalTopPosition;
-        styles.left = horizontalMiddlePosition;
-        break;
+      return {top, left};
+    };
+
+    const fitsInViewport = (pos: {top: number; left: number}) => {
+      return (
+        pos.top >= scrollY &&
+        pos.top + tooltipRect.height <= scrollY + viewportHeight &&
+        pos.left >= scrollX &&
+        pos.left + tooltipRect.width <= scrollX + viewportWidth
+      );
+    };
+
+    let proposedPosition = calculatePosition(direction);
+    if (!fitsInViewport(proposedPosition)) {
+      // Flip logic
+      const flipDirection = {
+        onRight: 'onLeft',
+        onLeft: 'onRight',
+        onTop: 'onBottom',
+        onBottom: 'onTop',
+      }[direction];
+
+      const flippedPosition = calculatePosition(
+        flipDirection as ComponentPlacementDirection,
+      );
+      if (fitsInViewport(flippedPosition)) {
+        proposedPosition = flippedPosition;
+        effectiveDirection = flipDirection as ComponentPlacementDirection;
+      }
+      // Otherwise, fallback to original even if partially visible
     }
+
+    // Finally, clamp within viewport to always keep visible:
+    proposedPosition.top = Math.min(
+      Math.max(proposedPosition.top, scrollY + tailOffset),
+      scrollY + viewportHeight - tooltipRect.height - tailOffset,
+    );
+    proposedPosition.left = Math.min(
+      Math.max(proposedPosition.left, scrollX + tailOffset),
+      scrollX + viewportWidth - tooltipRect.width - tailOffset,
+    );
+
+    styles.transform = `translate3d(${proposedPosition.left}px, ${proposedPosition.top}px, 0px)`;
   }
 
-  return styles;
+  return {styles, effectiveDirection};
 };
 /**
  * Shortcut function to update React state for the positioned element styles based on the node position
@@ -106,39 +151,48 @@ export const calculatePositionedElementStyles = ({
  * @param positionedElementRef
  * @param direction
  * @param setPositionedElementStyles
+ * @param setPositionedElementDirection
  * @param tailOffset
  * @param tailLength
- * @param isPositionFixed
  */
 export const updatePositionedElementStyles = ({
   nodePosition,
   positionedElementRef,
   direction,
   setPositionedElementStyles,
+  setPositionedElementDirection,
   tailOffset,
   tailLength,
-  isPositionFixed = false,
 }: {
   nodePosition: HTMLElement | null;
   positionedElementRef: React.RefObject<HTMLDivElement | null>;
-  direction?: ComponentPlacementDirection | 'none';
+  direction: ComponentPlacementDirection;
   setPositionedElementStyles: React.Dispatch<
     React.SetStateAction<React.CSSProperties>
   >;
+  setPositionedElementDirection: React.Dispatch<
+    React.SetStateAction<ComponentPlacementDirection>
+  >;
   tailOffset: number;
   tailLength: number;
-  isPositionFixed?: boolean;
 }) => {
-  setPositionedElementStyles(
-    calculatePositionedElementStyles({
-      nodePosition,
-      positionedElementRef,
-      direction,
-      tailOffset,
-      tailLength,
-      isPositionFixed,
-    }),
-  );
+  const {styles, effectiveDirection} = calculatePositionedElementStyles({
+    nodePosition,
+    positionedElementRef,
+    direction,
+    tailOffset,
+    tailLength,
+  });
+
+  if (
+    effectiveDirection &&
+    effectiveDirection !== 'none' &&
+    effectiveDirection !== direction
+  ) {
+    setPositionedElementDirection(effectiveDirection);
+  } else {
+    setPositionedElementStyles(styles);
+  }
 };
 
 // Check to see if a URL is blocked.

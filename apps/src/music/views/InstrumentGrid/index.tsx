@@ -9,6 +9,7 @@ import React, {
   useState,
 } from 'react';
 
+import musicI18n from '../../locale';
 import MusicRegistry from '../../MusicRegistry';
 import {
   InstrumentEventValue,
@@ -54,10 +55,12 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
       ...initialValue,
       events: initialValue.events.map(event => ({
         ...event,
-        note: convertRelativeToAbsolutePitch(
-          MusicRegistry.player.getKey(),
-          event.note
-        ),
+        note: initialValue.relative
+          ? convertRelativeToAbsolutePitch(
+              MusicRegistry.player.getKey(),
+              event.note
+            )
+          : event.note,
       })),
     };
     return convertedValue;
@@ -74,7 +77,9 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
       ...currentValue,
       events: currentValue.events.map(event => ({
         ...event,
-        note: convertAbsoluteToRelativePitch(key, event.note),
+        note: currentValue.relative
+          ? convertAbsoluteToRelativePitch(key, event.note)
+          : event.note,
       })),
     };
     onChange(convertedValue);
@@ -273,12 +278,16 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
           <SegmentedButtons
             className={styles.flexAutoWidth}
             buttons={[
-              {label: 'Best Notes', value: 'simple'},
-              {label: 'All Notes', value: 'chromatic'},
+              {label: musicI18n.tuneKeyNotes(), value: 'simple'},
+              {label: musicI18n.tuneAllNotes(), value: 'chromatic'},
             ]}
-            onChange={value =>
-              setCurrentValue({...currentValue, scaleMode: value as ScaleMode})
-            }
+            onChange={value => {
+              setCurrentValue({...currentValue, scaleMode: value as ScaleMode});
+              MusicRegistry.analyticsReporter.onButtonClicked(
+                'change-tune-scale-mode',
+                {scaleMode: value}
+              );
+            }}
             selectedButtonValue={scaleMode || 'simple'}
             size="xs"
           />
@@ -320,7 +329,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
                   className={classNames(style, styles.innerCell)}
                   style={{backgroundColor, color}}
                 >
-                  {label.replace('#', '♯')}
+                  {label}
                 </div>
               </button>
 

@@ -1,7 +1,7 @@
 name 'music-coding-intro-inspiration_1'
 display_name 'Get Inspired'
 description '<i class="fa-solid fa-person-chalkboard"></i> **Teacher Tip:** 
-##### The following levels are provided to scaffold student learning utilizing the Use-Modify-Create pedagogical practice. In this level, students engage in the Use and Modify phases of the Use-Modify-Create model. Begin by having students run the existing code to observe how it works. Then, guide them to make specific changes—such as adjusting sounds or timing—to see how those edits affect the outcome. This helps build foundational understanding and prepares them for creating their own code in later levels. **Teacher Note**: This is Lesson 1, Level 12 from the curriculum. Explore and tinker with the code in these example projects! 
+##### The following levels are provided to scaffold student learning utilizing the Use-Modify-Create pedagogical practice. In this level, students engage in the Use and Modify phases of the Use-Modify-Create model. Begin by having students run the existing code to observe how it works. You can guide them to make specific changes—such as adjusting sounds or timing—to see how those edits affect the outcome. This helps build foundational understanding and prepares them for creating their own code in later levels. **Teacher Note**: This is Lesson 1, Level 12 from the curriculum. Explore and tinker with the code in these example projects! 
 '
 
 sublevels

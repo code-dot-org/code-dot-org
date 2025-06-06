@@ -48,6 +48,7 @@ Lynwood Unified School District,California
 Montebello Unified School District,California
 Monterey Peninsula Unified School District,California
 Moreno Valley Unified School District,California
+Mountain Empire Unified School District,California
 Orange Unified School District,California
 Pacific Charter Institute,California
 Piedmont Unified School District,California
@@ -67,6 +68,7 @@ Pueblo School District 60,Colorado
 Telluride School District No. R-1,Colorado
 Berlin Public Schools,Connecticut
 Bethel School District,Connecticut
+CREC Magnet Schools,Connecticut
 East Granby Public Schools,Connecticut
 East Granby Public Schools,Connecticut
 Hartford Public Schools,Connecticut
@@ -109,8 +111,11 @@ Hawaii State Department of Education,Hawaii
 American Falls School District,Idaho
 Blaine County School District,Idaho
 Caldwell School District,Idaho
+Castleford School District,Idaho
+Kamiah Joint School District #304,Idaho
 Lewiston Independent School District #1,Idaho
 Pocatello Chubbuck School District #25,Idaho
+Preston Idaho School District,Idaho
 Ball-Chatham 5,Illinois
 Beecher CUSD200U,Illinois
 Calvary Academy,Illinois
@@ -122,6 +127,7 @@ Evanston Skokie CCSD 65,Illinois
 Grayslake CCSD 46,Illinois
 Herscher Community Unit School District #2,Illinois
 Kankakee SD 111,Illinois
+North Mac CUSD #34,Illinois
 Ottawa Elementary School District 141,Illinois
 Pembroke Community Consolidated School District 259,Illinois
 Riverton Community Unit School District 14,Illinois
@@ -211,6 +217,7 @@ Granby Public Schools,Massachusetts
 Ipswich Public Schools,Massachusetts
 Maynard Public Schools,Massachusetts
 Melrose Public Schools,Massachusetts
+Milton Public Schools,Massachusetts
 Natick Public Schools,Massachusetts
 Needham Public Schools,Massachusetts
 Phoenix Charter Academy,Massachusetts
@@ -224,6 +231,7 @@ Bedford Public Schools,Michigan
 Bessemer Area Schools,Michigan
 Chippewa Valley Schools,Michigan
 Clarkston Community Schools,Michigan
+Detroit Academy of Arts & Sciences,Michigan
 Detroit Public Schools Community District,Michigan
 Grand Rapids Public Schools,Michigan
 Huron School District,Michigan
@@ -333,6 +341,7 @@ Clinton Township School District,New Jersey
 Dunellen Public Schools,New Jersey
 East Hanover Township School District,New Jersey
 Eastern Camden County Regional School District,New Jersey
+Gateway Regional High School District (NJ),New Jersey
 Glen Rock Public Schools,New Jersey
 Haddon Heights School District,New Jersey
 Hamilton Township School District,New Jersey
@@ -423,6 +432,7 @@ Currituck County School District,North Carolina
 Davie County Schools,North Carolina
 Duplin County Schools,North Carolina
 Durham Public School,North Carolina
+Edgecombe County Public Schools,North Carolina
 Franklin County Schools,North Carolina
 Gaston County Schools,North Carolina
 Guilford County Schools,North Carolina
@@ -434,8 +444,11 @@ Moore County Schools,North Carolina
 Providence Day School,North Carolina
 Public Schools of Robeson County,North Carolina
 Road to Hire,North Carolina
+Rowan-Salisbury Schools,North Carolina
 Sugar Creek Charter School,North Carolina
 Telra Institute,North Carolina
+The Expedition School,North Carolina
+The Math and Science Academy of Apex,North Carolina
 Transylvania County Schools,North Carolina
 Warren County Schools,North Carolina
 Wilson County Schools,North Carolina
@@ -494,6 +507,8 @@ Perrysburg Exempted Village School District,Ohio
 Pickerington Local School District,Ohio
 Pike-Delta-York Local Schools,Ohio
 Springfield Local Schools,Ohio
+Trotwood Madison City Schools,Ohio
+Union Local School District,Ohio
 Allen Public Schools,Oklahoma
 Bixby Public Schools,Oklahoma
 Broken Arrow Public School,Oklahoma
@@ -514,10 +529,12 @@ Carbon Learning Achievement School,Pennsylvania
 Community Academy of Philadelphia Charter School,Pennsylvania
 East Stroudsburg University,Pennsylvania
 Eastern York School District,Pennsylvania
+Esperanza Academy,Pennsylvania
 Interboro School District,Pennsylvania
 Montrose Area School District,Pennsylvania
 Norwin School District,Pennsylvania
 Philadelphia Academy Charter School,Pennsylvania
+River Valley School District,Pennsylvania
 Russell Byers Charter School,Pennsylvania
 Salem Christian School,Pennsylvania
 School District of Philadelphia,Pennsylvania
@@ -535,6 +552,7 @@ Lexington County School District One,South Carolina
 Lexington School District 2,South Carolina
 Wessington Springs,South Dakota
 Anderson County School District,Tennessee
+Bedford County Schools,Tennessee
 Bradley County Schools,Tennessee
 Bristol Tennessee City School District,Tennessee
 Cocke County School District,Tennessee
@@ -599,6 +617,7 @@ Alleghany Highlands Public Schools,Virginia
 Clarke County Public Schools,Virginia
 "Frederick County Public Schools, (VA)",Virginia
 Loudoun County Public Schools,Virginia
+Norfolk Public Schools,Virginia
 Osbourn High School,Virginia
 Russell County Public Schools,Virginia
 Suffolk Public Schools,Virginia
@@ -617,6 +636,8 @@ Fayette County Schools,West Virginia
 Monroe County Schools,West Virginia
 Raleigh County Schools,West Virginia
 Roane County School District,West Virginia
+Upshur County Schools,West Virginia
+Wyoming County Schools,West Virginia
 Cornell School District,Wisconsin
 Dodgeville Schools,Wisconsin
 Elmbrook School District,Wisconsin
@@ -633,3 +654,4 @@ Venture Academy,Wisconsin
 Converse County School District #2,Wyoming
 Sheridan County School District #2,Wyoming
 Sweetwater County School District #1,Wyoming
+Stafford Public Schools,CT

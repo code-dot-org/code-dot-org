@@ -1,10 +1,18 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import {Heading2} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
-import React, {FC, memo, useCallback, useEffect, useMemo} from 'react';
+import React, {
+  FC,
+  memo,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 import {useSelector} from 'react-redux';
 import {useParams} from 'react-router-dom';
 
+import {useDebounce} from '@cdo/apps/util/hooks/useDebounce';
 import {useFetch} from '@cdo/apps/util/useFetch';
 
 import {MultiSelectInput, OptionId} from '../components/MultiSelectInput';
@@ -17,24 +25,24 @@ import {
 
 import commonStyles from '../styles.module.scss';
 
+export const COURSE_OFFERINGS_FETCH_DEBOUNCE = 1000;
+
 export const PartnerFacilitator: FC<PartnerFacilitatorProps> = ({
   config: {fields, label},
   facilitators,
   regionalPartnerId,
+  courseOfferings,
   errors,
   dispatchWorkshop,
   organizerId,
 }) => {
   const {workshopId} = useParams();
+  const [facilitatorUrl, setFacilitatorUrl] = useState('');
   const {data: organizerData} = useFetch<PotentialOrganizer[]>(
     workshopId ? `/api/v1/pd/workshops/${workshopId}/potential_organizers` : ''
   );
 
-  const {data: facilitatorData} = useFetch<Facilitator[]>(
-    label
-      ? `/api/v1/pd/course_facilitators?course=${encodeURIComponent(label)}`
-      : ''
-  );
+  const {data: facilitatorData} = useFetch<Facilitator[]>(facilitatorUrl);
 
   const regionalPartnerData = useSelector(
     ({
@@ -43,6 +51,26 @@ export const PartnerFacilitator: FC<PartnerFacilitatorProps> = ({
       regionalPartners: {regionalPartners: RegionalPartner[]};
     }) => regionalPartners
   );
+
+  const debouncedCourseOfferings = useDebounce<
+    PartnerFacilitatorProps['courseOfferings']
+  >(courseOfferings, COURSE_OFFERINGS_FETCH_DEBOUNCE);
+
+  useEffect(() => {
+    let url = '/api/v1/pd/course_facilitators';
+
+    if (debouncedCourseOfferings.length) {
+      const courseOfferingsParams = debouncedCourseOfferings
+        .map(co => `course_offerings=${encodeURIComponent(co)}`)
+        .join('&');
+
+      url += '?' + courseOfferingsParams;
+      setFacilitatorUrl(url);
+    } else if (label) {
+      url += `?course=${encodeURIComponent(label)}`;
+      setFacilitatorUrl(url);
+    }
+  }, [label, debouncedCourseOfferings]);
 
   useEffect(() => {
     if (regionalPartnerData?.length === 1) {

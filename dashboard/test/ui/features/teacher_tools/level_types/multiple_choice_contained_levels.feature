@@ -7,7 +7,7 @@ Feature: Multiple Choice Contained Levels
 @eyes
 Scenario: GameLab with a submittable contained level
   When I open my eyes to test "gamelab submittable contained level"
-  Given I am on "http://studio.code.org/s/allthethings/lessons/41/levels/7"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/41/levels/7"
   And I wait for the lab page to fully load
   Then I see no difference for "initial load" using stitch mode "none"
   Then I press "unchecked_0"
@@ -21,7 +21,7 @@ Scenario: GameLab with a submittable contained level
 @eyes
 Scenario: Gamelab with multiple choice contained level
   When I open my eyes to test "gamelab multiple choice contained level"
-  Given I am on "http://studio.code.org/s/allthethings/lessons/41/levels/2"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/41/levels/2"
   And I wait for the lab page to fully load
   Then I see no difference for "initial load" using stitch mode "none"
   Then I press "unchecked_0"
@@ -30,7 +30,7 @@ Scenario: Gamelab with multiple choice contained level
   And I see no difference for "level run" using stitch mode "none"
   # At this point, we should have submitted our result to the server, do
   # a reload and make sure we have the submission
-  Then I am on "http://studio.code.org/s/allthethings/lessons/41/levels/2"
+  Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/41/levels/2"
   And I wait for the lab page to fully load
   And I see no difference for "reloaded with contained level answered" using stitch mode "none"
   Then I press "runButton"
@@ -46,7 +46,7 @@ Scenario: Unauthorized Teacher on Maze with multiple choice contained level
   When I open my eyes to test "maze multi contained level"
   Given I create a teacher-associated student named "Sally"
   And I sign in as "Teacher_Sally" and go home
-  Then I am on "http://studio.code.org/s/coursee-2019/lessons/4/levels/2"
+  Then I am on "http://studio.code.org/courses/coursee-2019/units/1/lessons/4/levels/2"
   And I wait for the lab page to fully load
   Then I see no difference for "initial load"
   Then I press "unchecked_0"
@@ -62,7 +62,7 @@ Scenario: Unauthorized Teacher on Maze with multiple choice contained level
 
 Scenario: Teacher can reset progress on multiple choice contained level
   Given I sign in as "Teacher_Lillian"
-  And I am on "http://studio.code.org/s/allthethings/lessons/41/levels/2"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/41/levels/2"
   And I wait for the lab page to fully load
   Then I press "unchecked_0"
   And I wait up to 5 seconds for element "#checked_0" to be visible
@@ -79,7 +79,7 @@ Scenario: Teacher can reset progress on multiple choice contained level
   And I verify progress in the header of the current page is "perfect" for level 2
 
 Scenario: Student can retry multiple choice contained level that allows multiple attempts
-  Given I am on "http://studio.code.org/s/allthethings/lessons/41/levels/10"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/41/levels/10"
   And I rotate to landscape
   And I wait for the lab page to fully load
   Then I press "unchecked_0"
@@ -92,7 +92,7 @@ Scenario: Student can retry multiple choice contained level that allows multiple
   Then I press "runButton"
   Then I press "resetButton"
   And I verify progress in the header of the current page is "perfect" for level 10
-  Then I am on "http://studio.code.org/s/allthethings/lessons/41/levels/10"
+  Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/41/levels/10"
   And I rotate to landscape
   And I wait for the lab page to fully load
   And I wait up to 5 seconds for element "#checked_1" to be visible

@@ -56,17 +56,20 @@ class HomeControllerTest < ActionController::TestCase
     assert_redirected_to '/home'
   end
 
-  test "student with assigned script and no progress is redirected to course overview" do
-    script = create :script
-    section = create :section, script: script
+  test "student with assigned unit and no progress is redirected to course overview" do
+    unit_group = create :unit_group
+    unit = create :unit, original_unit_group: unit_group
+    unit_group_unit = create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
+    section = create :section, script: unit
     student = create(:follower, section: section).student_user
     sign_in student
-    assert_equal script, student.most_recently_assigned_script
+    assert_equal unit, student.most_recently_assigned_script
+    assert_equal unit_group_unit, student.most_recently_assigned_unit_group_unit
     assert_nil student.user_script_with_most_recent_progress
 
     get :index
 
-    assert_redirected_to script_path(script)
+    assert_redirected_to course_unit_path(unit_group, 1)
   end
 
   test "student with assigned script then recent progress in a different script will go to index" do
@@ -85,10 +88,12 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student with recent progress then an assigned script should go to the assigned script overview" do
-    assigned_script = create :script
-    assigned_section = create :section, script: assigned_script
+    unit_group = create :unit_group
+    unit = create :unit, original_unit_group: unit_group
+    create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
+    assigned_section = create :section, script: unit
     student = create(:follower, section: assigned_section).student_user
-    user_script_with_progress = create :user_script, user: student, last_progress_at: 2.days.ago
+    user_script_with_progress = create :user_script, user: student, script: unit, last_progress_at: 2.days.ago
     sign_in student
 
     student.most_recently_assigned_user_script
@@ -96,27 +101,31 @@ class HomeControllerTest < ActionController::TestCase
 
     get :index
 
-    assert_redirected_to script_path(assigned_script)
+    assert_redirected_to course_unit_path(unit_group, 1)
   end
 
   test "student with assigned script then recent progress in that script will go to script overview" do
-    script = create :script
-    section = create :section, script: script
+    unit_group = create :unit_group
+    unit = create :unit, original_unit_group: unit_group
+    create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
+    section = create :section, script: unit
     student = create(:follower, section: section).student_user
     sign_in student
 
-    User.any_instance.stubs(:script_with_most_recent_progress).returns(script)
-    assert_equal script, student.most_recently_assigned_script
-    assert_equal script, student.script_with_most_recent_progress
+    User.any_instance.stubs(:script_with_most_recent_progress).returns(unit)
+    assert_equal unit, student.most_recently_assigned_script
+    assert_equal unit, student.script_with_most_recent_progress
 
     get :index
 
-    assert_redirected_to script_path(script)
+    assert_redirected_to course_unit_path(unit_group, 1)
   end
 
   test "student with assigned course or script and no age is still redirected to course overview" do
-    script = create :script
-    section = create :section, script: script
+    unit_group = create :unit_group
+    unit = create :unit, original_unit_group: unit_group
+    create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
+    section = create :section, script: unit
     student = create(:follower, section: section).student_user
     student.birthday = nil
     student.age = nil
@@ -124,7 +133,7 @@ class HomeControllerTest < ActionController::TestCase
     sign_in student
     get :index
 
-    assert_redirected_to script_path(script)
+    assert_redirected_to course_unit_path(unit_group, 1)
   end
 
   test "student with most recent assigned script only associated with archived sections they are enrolled in will go to index" do
@@ -170,14 +179,16 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student with pilot access will go to pilot script" do
-    pilot_script = create :script, pilot_experiment: 'pilot-experiment'
+    unit_group = create :unit_group
+    pilot_unit = create :unit, pilot_experiment: 'pilot-experiment', original_unit_group: unit_group
+    create :unit_group_unit, unit_group: unit_group, script: pilot_unit, position: 1
     pilot_teacher = create :teacher, pilot_experiment: 'pilot-experiment'
-    section = create :section, script: pilot_script, user: pilot_teacher
+    section = create :section, script: pilot_unit, user: pilot_teacher
     student = create(:follower, section: section).student_user
     sign_in student
     get :index
 
-    assert_redirected_to script_path(pilot_script)
+    assert_redirected_to course_unit_path(unit_group, 1)
   end
 
   test "redirect index when signed out" do

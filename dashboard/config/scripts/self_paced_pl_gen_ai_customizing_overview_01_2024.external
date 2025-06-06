@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 
 <div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="Lesson 2 Icon" style="width: 20%; max-width: 120px; height: auto;">
+        <img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="AI Bot cartoon" style="width: 20%; max-width: 120px; height: auto;">
         <div style="flex: 1; background: #B7E0E5; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); ">
             <h3> <b>Unit Overview</b></h3>
             <p style = "font-size: 14pt";>This unit focuses on practical skills for tailoring AI models using techniques like prompt engineering and retrieval, while promoting transparency through model cards.</p>

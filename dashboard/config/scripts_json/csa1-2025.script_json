@@ -14,12 +14,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-20 16:42:38 UTC",
+    "serialized_at": "2025-05-27 16:18:16 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1144,6 +1145,18 @@
       },
       "seeding_key": {
         "lesson_activity.key": "2f69ee0a-04f4-46bc-8902-29a2696c31a6",
+        "lesson.key": "Asphalt Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "csa1-2025"
+      }
+    },
+    {
+      "key": "07f14bce-80f9-4b9f-ad15-99acb89fe8a8",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "07f14bce-80f9-4b9f-ad15-99acb89fe8a8",
         "lesson.key": "Asphalt Art Project [1-Day Version]",
         "lesson_group.key": "lessonGroup-9",
         "script.name": "csa1-2025"
@@ -3393,6 +3406,7 @@
       "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Planning Programs handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students investigate and analyze prompts for using AI to help generate code in order to draw the Thailand flag in The Neighborhood. Students then write their own prompts before reflecting on how these prompts can improve AI-assisted coding.",
+        "duration": "15",
         "name": "Planning Programs",
         "tips": [
           {
@@ -5844,6 +5858,19 @@
       }
     },
     {
+      "key": "598ea6a9-0413-49ee-9ee1-89ce12e2ea28",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.\n",
+        "name": "End of Unit Survey",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "598ea6a9-0413-49ee-9ee1-89ce12e2ea28",
+        "lesson_activity.key": "07f14bce-80f9-4b9f-ad15-99acb89fe8a8"
+      }
+    },
+    {
       "key": "bb031953-0ba2-4e87-bee4-7c9dafa07ef2",
       "position": 1,
       "properties": {
@@ -7891,6 +7918,31 @@
     },
     {
       "chapter": 74,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page-csa1b_2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page-csa1b_2025"
+        ],
+        "lesson.key": "Asphalt Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "csa1-2025",
+        "activity_section.key": "598ea6a9-0413-49ee-9ee1-89ce12e2ea28"
+      },
+      "level_keys": [
+        "student-eou-survey_linked_page-csa1b_2025"
+      ]
+    },
+    {
+      "chapter": 75,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7915,7 +7967,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 76,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7940,7 +7992,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 77,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7965,7 +8017,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 78,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8865,6 +8917,18 @@
         "lesson_group.key": "lessonGroup-9",
         "script.name": "csa1-2025",
         "activity_section.key": "ed82a911-ff0d-4b14-8d95-c3408e72a17c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_linked_page-csa1b_2025",
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page-csa1b_2025"
+        ],
+        "lesson.key": "Asphalt Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "csa1-2025",
+        "activity_section.key": "598ea6a9-0413-49ee-9ee1-89ce12e2ea28"
       }
     },
     {

@@ -84,14 +84,6 @@ const optionsList = [
     description: 'Use a specific icon for text to speech stop button.',
   },
   {
-    name: 'play-tune-block',
-    type: 'radio',
-    values: [
-      {value: 'false', description: 'Hide play tune block (default).'},
-      {value: 'true', description: 'Show play tune block.'},
-    ],
-  },
-  {
     name: 'play-tune-block-drums',
     type: 'radio',
     values: [

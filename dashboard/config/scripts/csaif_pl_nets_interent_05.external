@@ -13,20 +13,20 @@ markdown <<MARKDOWN
 #### Much like the mail system uses an address to route mail to a specific place, an IP address is used to send digital information to the correct device.
 
 <p align="center">
-<img src="https://images.code.org/a309d4a77c2e696cf32bc6f0b8807a03-Screenshot 2025-04-15 at 12.44.01 PM.png" alt="lesson plan diagram" width="50%" style="border-radius:10px; border: 5px solid black;">
+<img src="https://images.code.org/a309d4a77c2e696cf32bc6f0b8807a03-Screenshot 2025-04-15 at 12.44.01 PM.png" alt="IP address and street address" width="50%" style="border-radius:10px; border: 5px solid black;">
 </p>
 
 
 #### If Sally were trying to send an image of her cat from her Smartphone (192.168.2.2) to her mom’s Desktop PC (192.168.4.5) it could take the pathway shown in the diagram below.
 
 <p align="center">
-<img src="https://images.code.org/3c99a063990ce63ede7768e8aa055600-Screenshot 2025-04-15 at 12.29.32 PM.png" alt="lesson plan diagram" width="50%" style="border-radius:10px; border: 5px solid black;">
+<img src="https://images.code.org/3c99a063990ce63ede7768e8aa055600-Screenshot 2025-04-15 at 12.29.32 PM.png" alt="routing from Smartphone to Desktop PC through Router C" width="50%" style="border-radius:10px; border: 5px solid black;">
 </p>
 
 #### If Sally were trying to send an image of her cat from her Smartphone (192.168.2.2) to her friend Jorge’s Laptop (192.168.1.1) it could take a longer path through multiple routers.
 
 <p align="center">
-<img src="https://images.code.org/b91298b8e5aacf039fb6e7cc5db834a7-Screenshot 2025-04-15 at 12.56.48 PM.png" alt="lesson plan diagram" width="50%" style="border-radius:10px; border: 5px solid black;">
+<img src="https://images.code.org/b91298b8e5aacf039fb6e7cc5db834a7-Screenshot 2025-04-15 at 12.56.48 PM.png" alt="routing from Smartphone to Laptop PC through Router C and Router A" width="50%" style="border-radius:10px; border: 5px solid black;">
 </p>
 
 ## AI-Assisted Routing

@@ -36,3 +36,47 @@ export const removeMarginBottomDefinition: ComponentDefinitionVariable = {
   defaultValue: false,
   group: 'style',
 };
+
+export const videoRelatedDefinitions: Record<
+  string,
+  ComponentDefinitionVariable
+> = {
+  videoTitle: {
+    displayName: 'Video title',
+    type: 'Text',
+    group: 'content',
+    description:
+      'The title of the video. This will double as the caption under the video player.',
+    validations: {
+      bindingSourceType: ['entry', 'manual'],
+    },
+  },
+  videoYouTubeId: {
+    displayName: 'Video YouTube ID',
+    type: 'Text',
+    group: 'content',
+    description:
+      'The YouTube ID of the video. This is the unique identifier for the video on YouTube.',
+    validations: {
+      bindingSourceType: ['entry', 'manual'],
+    },
+  },
+  videoFallback: {
+    displayName: 'Video fallback',
+    type: 'Text',
+    group: 'content',
+    description:
+      'This is the URL of the video that will be used in place of the YouTube video if YouTube is blocked.',
+    validations: {
+      bindingSourceType: ['entry', 'manual'],
+    },
+  },
+  videoShowCaption: {
+    displayName: 'Show video caption',
+    type: 'Boolean',
+    defaultValue: false,
+    group: 'style',
+    description:
+      'Check this to show a caption (video title) under the video player.',
+  },
+};

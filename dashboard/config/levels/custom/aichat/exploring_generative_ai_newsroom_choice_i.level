@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "display_name": "Create Your Own Task",
-    "long_instructions": "## Create Your Own Task\r\n\r\n**Task:** Come up with your own newspaper-style task to test what AI can do.\r\n\r\n**Things to Try:**\r\n- Choose a type of article, section, or feature you would want in a school newspaper (real or imaginary).",
+    "long_instructions": "## Create Your Own Task\r\n\r\n**Before You Start:**\r\n\r\nMake sure you’ve filled in the **K** and **W** columns of your KWL chart for this task.\r\n\r\n**Do:**\r\n\r\nWrite your own prompt for something you want to test with AI!\r\n\r\n**Try:**\r\n\r\nAsk something playful, surprising, or hard to get right.\r\n\r\n**Check:**\r\n\r\nDid the AI give you what you were expecting? Was the result useful, confusing, or unexpected?\r\n\r\n**After You Try It:**\r\n\r\n1. Fill in the **L** column of your KWL chart\r\n2. Press **Continue** to return to the task menu\r\n",
     "bubble_choice_description": "Come up with your own newspaper-style task to test what AI can do.",
     "aichat_settings": {
       "initialCustomizations": {
@@ -45,6 +45,6 @@
     },
     "thumbnail_url": "https://images.code.org/cc11c98d8d215a009e7842de8d515c2c-light-bulb.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-25T22:13:23.562+00:00\",\"changed\":[\"cloned from \\\"exploring_generative_ai_newsroom_choice_g\\\"\"],\"cloned_from\":\"exploring_generative_ai_newsroom_choice_g\"},{\"changed_at\":\"2025-04-25 22:15:05 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-25 22:16:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-25T22:13:23.562+00:00\",\"changed\":[\"cloned from \\\"exploring_generative_ai_newsroom_choice_g\\\"\"],\"cloned_from\":\"exploring_generative_ai_newsroom_choice_g\"},{\"changed_at\":\"2025-04-25 22:15:05 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-25 22:16:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-05-29 11:20:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Aichat>

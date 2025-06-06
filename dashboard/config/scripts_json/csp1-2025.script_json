@@ -15,12 +15,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-20 21:07:44 UTC",
+    "serialized_at": "2025-05-27 16:17:18 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -3096,7 +3097,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Video:** Students should have seen these definitions in the video at the end of yesterday’s class. However, it could be worthwhile to replay part of the video here as well to reinforce that vocabulary - specifically, just the section where Aloe Bloc discusses lossy & lossless compression.\n\n\n"
+            "markdown": "**Video:** Students should have seen these definitions in the video at the end of yesterday’s class. However, it could be worthwhile to replay part of the video here as well to reinforce that vocabulary - specifically, just the section where Aloe Bloc discusses lossy & lossless compression.\n\n**Note**: If you have students that are unable to see the effect of lossy compression on the visual images in this lesson, you might consider sharing this brief video that documents [audio sampling](https://youtu.be/hRhVb6iRArg?si=wERAwpEswow74bMn) and how the sound degrades when less samples are taken and the corresponding file size is compressed.\n"
           }
         ]
       },

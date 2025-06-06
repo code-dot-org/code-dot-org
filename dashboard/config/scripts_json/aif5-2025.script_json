@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "788752a5-117a-487b-a810-eb72567bc7ce",
+          "notice": "Cybersecurity and Global Impacts Professional Development",
+          "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+          "link": "https://studio.code.org/s/self-paced-pl-teaching-aif5-2025/",
+          "type": "information",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Let’s Go!"
+        }
+      ],
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "AIF",
       "has_unnumbered_lessons": true,
@@ -17,12 +29,13 @@
       "topic_tags": [
         "ai"
       ],
+      "tts": true,
       "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-20 20:48:21 UTC",
+    "serialized_at": "2025-05-27 16:10:24 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -3139,7 +3152,7 @@
       "url": "https://docs.google.com/document/d/1wbiRiTX2k3ULNmCKIl5kQec7eFhZCWoFeVNrAA1RQXs/edit?usp=sharing",
       "key": "csp_innovation_simulation_character_bios",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Student",
         "include_in_pdf": true,
         "type": "Handout"
       },
@@ -3152,7 +3165,7 @@
       "url": "https://drive.google.com/file/d/1R7IaTD4Cg8TJxAclAsdBMk_TPrVQ8GrV/view?usp=sharing",
       "key": "csp_innovation_simulation_nameplates",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Student",
         "type": "Handout"
       },
       "seeding_key": {
@@ -3161,11 +3174,10 @@
     },
     {
       "name": "Innovation Simulation Project Guide",
-      "url": "https://docs.google.com/document/d/1v3wdKIyI7Ro1iBGDokVPApA5NsMfil8SYP22Pa4pBIA/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/edit?usp=sharing",
       "key": "csp_innovation_simulation_project_guide",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -3345,6 +3357,19 @@
       }
     },
     {
+      "name": "Innovation Simulation Project Guide",
+      "url": "https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/edit?usp=sharing",
+      "key": "innovation_simulation_project_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "innovation_simulation_project_guide"
+      }
+    },
+    {
       "name": "Is Facial Recognition Invading Your Privacy?",
       "url": "https://youtu.be/f5qgOqNQ7zY",
       "key": "is_facial_recognition_invading_your_privacy_",
@@ -3447,12 +3472,6 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 1",
-        "resource.key": "csp_innovation_simulation_project_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 1",
         "resource.key": "csp_innovation_simulation_project_overview"
       }
     },
@@ -3460,6 +3479,12 @@
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 1",
         "resource.key": "csp_unit_8_-_lesson_1_-_project_innovation_simulation_part_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 1",
+        "resource.key": "innovation_simulation_project_guide"
       }
     },
     {

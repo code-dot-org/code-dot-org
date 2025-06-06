@@ -14,12 +14,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-20 16:56:19 UTC",
+    "serialized_at": "2025-05-27 18:56:34 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -89,7 +90,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**How can the problem-solving process help me plan and implement an algorithm?**\n\nStudents are introduced to iteration using `while` loops to repeat instructions as long as a condition is `true`. Students discover that `while` loops can be combined with methods in the `Painter` class to allow them to repeat a block of code as long as a `Painter` object can move forward in the direction it is facing, is on a paint bucket, or has paint. They learn about the problem solving process and how this approach can help them break down a problem into manageable tasks and practice developing and implementing algorithms using sequencing and iteration in Java.",
-        "preparation": "* **(Optional)** Print copies of the Loops Guided Notes (one for each student)\n* Print copies of the Writing Algorithms handout (one for each student)\n* Preview the *While Loops* video",
+        "preparation": "* Print copies of the Writing Algorithms handout (one for each student)\n* Preview the *While Loops* video",
         "student_overview": "**How can the problem-solving process help me plan and implement an algorithm?**\n\nIn this lesson, you are introduced to iteration using `while` loops to repeat instructions as long as a condition is `true`. You discover that `while` loops can be combined with methods in the `Painter` class to allow you to repeat a block of code as long as a `Painter` object can move forward in the direction it is facing, is on a paint bucket, or has paint. You learn about the problem solving process and how this approach can help you break down a problem into manageable tasks and practice developing and implementing algorithms using sequencing and iteration in Java."
       },
       "seeding_key": {
@@ -107,7 +108,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "**How can I write algorithms using sequencing, selection, and iteration in Java?**\n\nStudents have learned how to implement algorithms in Java that repeat a set of instructions while a condition is `true`. In this lesson, students explore selection and learn how to write algorithms using sequencing, selection, and iteration. Students discover additional methods in the `Painter` class that they can use in their algorithms to allow their `Painter` objects to make better decisions about which direction to move or turn or whether or not to paint. Students then practice writing algorithms using these components and methods while revisiting inheritance to create a subclass of the `PainterPlus` class.",
-        "preparation": "* **(Optional)** Print copies of the Selection Statements Guided Notes (one for each student)\n* Print copies of the Investigate: Selection Statements handout (one for each pair of students)\n* Print copies of the Writing Algorithms handout (one for each student)\n* Preview the *Conditional Statements* video\n* Gather index cards or scrap pieces of paper (one for each student)",
+        "preparation": "* Print copies of the Investigate: Selection Statements handout (one for each pair of students)\n* Print copies of the Writing Algorithms handout (one for each student)\n* Preview the *Conditional Statements* video\n* Gather index cards or scrap pieces of paper (one for each student)",
         "student_overview": "**How can I write algorithms using sequencing, selection, and iteration in Java?**\n\nYou have learned how to implement algorithms in Java that repeat a set of instructions while a condition is `true`. In this lesson, you explore selection and learn how to write algorithms using sequencing, selection, and iteration. You discover additional methods in the `Painter` class that you can use in your algorithms to allow your `Painter` objects to make better decisions about which direction to move or turn or whether or not to paint. You then practice writing algorithms using these components and methods while revisiting inheritance to create a subclass of the `PainterPlus` class."
       },
       "seeding_key": {
@@ -125,7 +126,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "**How can I check if a condition is NOT `true` or execute a separate block of code if the condition is `false`?**\n\nStudents expand their knowledge of selection statements and Boolean values to learn how to use two-way selection statements and the NOT ( `!` ) logical operator. Students explore the functionality of two-way selection statements and the NOT ( `!` ) logical operator and consider how these can be used to expand or improve the algorithms they have developed so far. Students then practice using these to develop algorithms and create a new subclass of the `PainterPlus` class.",
-        "preparation": "* **(Optional)** Print copies of the Two-Way Selection Statements Guided Notes (one for each student)\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up OR use [**this web-based version**](https://csabingo.up.railway.app/) to show the terms and definitions\n* Print copies of the Investigate: Selection and Logic handout (one for each pair of students)\n* Preview the *Two-Way Selection and NOT* video",
+        "preparation": "* Print copies of the Investigate: Selection and Logic handout (one for each pair of students)\n* Preview the *Two-Way Selection and NOT* video",
         "student_overview": "**How can I check if a condition is NOT `true` or execute a separate block of code if the condition is `false`?**\n\nSo far, you have used selection statements and Boolean values to execute a specific block of code if a condition is true. In this lesson, you learn how to use two-way selection statements and the NOT ( `!` ) logical operator. You explore the functionality of two-way selection statements and the NOT ( `!` ) logical operator and consider how these can be used to expand or improve the algorithms you have developed so far. You then practice using these to develop algorithms and create a new subclass of the `PainterPlus` class."
       },
       "seeding_key": {
@@ -143,7 +144,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**How can I check if two objects are equal?**\n\nIn this lesson, students discover the difference between comparing primitive values and object references. Students learn that two object references are considered aliases when they both reference the same object and how to identify aliases or `null` values using the `==` and `!=` operators. They revisit the `Object` class and learn how to override the `equals()` method to determine whether two instances of a class are equivalent. Students then practice overriding the `equals()` method in a class and comparing objects for equality.",
-        "preparation": "* **(Optional)** Print copies of the Object Aliases and Equality Guided Notes (one for each student)\n* Preview the *Aliasing* and *The equals() Method* videos",
+        "preparation": "* Preview the *Aliasing* and *The equals() Method* videos",
         "student_overview": "**How can I check if two objects are equal?**\n\nIn this lesson, you discover the difference between comparing primitive values and object references. You learn that two object references are considered aliases when they both reference the same object and how to identify aliases or `null` values using the `==` and `!=` operators. You revisit the `Object` class and learn how to override the `equals()` method to determine whether two instances of a class are equivalent. You then practice overriding the `equals()` method in a class and comparing objects for equality."
       },
       "seeding_key": {
@@ -161,7 +162,7 @@
       "relative_position": 5,
       "properties": {
         "overview": "**How can I test a combination of conditions before executing a specific action?**\n\nStudents have used `if` and `if-else` statements to execute blocks of code based on a condition. In this lesson, students explore the functionality of nested `if` statements and learn to use these to test a combination of conditions. They also learn how to use the `length()` method in the `String` class to find the length of a `String` object. Students consider scenarios where they would need to test multiple conditions and practice evaluating nested `if` statements to determine the output of a code segment. They then plan and implement an algorithm using nested `if` statements to test a combination of conditions.",
-        "preparation": "* **(Optional)** Print copies of the Nested If Statements Guided Notes (one for each student)\n* Print copies of the Writing Algorithms handout (one for each student)",
+        "preparation": "* Print copies of the Writing Algorithms handout (one for each student)",
         "student_overview": "**How can I test a combination of conditions before executing a specific action?**\n\nYou have used `if` and `if-else` statements to execute blocks of code based on a condition. In this lesson, you explore the functionality of nested `if` statements and learn how to use these to test a combination of conditions. You also learn how to use the `length()` method in the `String` class to find the length of a `String` object. You consider scenarios where you would need to test multiple conditions and practice evaluating nested `if` statements to determine the output of a code segment. You then plan and implement an algorithm using nested `if` statements to test a combination of conditions."
       },
       "seeding_key": {
@@ -179,7 +180,7 @@
       "relative_position": 6,
       "properties": {
         "overview": "**How can logical operators be used to evaluate multiple conditions?**\n\nStudents have previously learned to use the NOT ( `!` ) operator to reverse the outcome of a Boolean expression. In this lesson, they explore the use of the AND ( `&&` ) and OR ( `||` ) operators and how these can be used instead of nested `if` statements to test multiple conditions. Students learn about short-circuit evaluation and practice using truth tables to evaluate a Boolean expression involving logical operators.",
-        "preparation": "* **(Optional)** Print copies of the Logical Operators Guided Notes (one for each student)\n* Print copies of the Truth Tables handout (one for each student)\n* Gather the Dataset Summaries handouts collected in Lesson 5\n* Print copies of the Finding Patterns handout (one for each student)\n* Ensure students are able to access the Datasets in Level 5. If students do not have access, you may choose to download the datasets from the Lesson Resources and make them available to students through other means. ",
+        "preparation": "* Print copies of the Truth Tables handout (one for each student)\n",
         "student_overview": "**How can logical operators be used to evaluate multiple conditions?**\n\nYou have previously learned to use the NOT ( `!` ) operator to reverse the outcome of a Boolean expression. In this lesson, you explore the use of the AND ( `&&` ) and OR ( `||` ) operators and how these can be used instead of nested `if` statements to test multiple conditions. You learn about short-circuited evaluation and practice using truth tables to evaluate a Boolean expression involving logical operators."
       },
       "seeding_key": {
@@ -197,7 +198,7 @@
       "relative_position": 7,
       "properties": {
         "overview": "**What are De Morgan's Laws?**\n\nIn this lesson, students learn about De Morgan's Laws and how they are applied to Boolean expressions. They explore how equivalent Boolean expressions evaluate to the same value in all cases. Students then use truth tables to evaluate compound Boolean expressions and prove De Morgan's Laws.",
-        "preparation": "* **(Optional)** Print copies of the De Morgan's Laws Guided Notes (one for each student)\n* Print copies of the De Morgan's Laws handout (one for each student)\n* Print the De Morgan's Laws Stations resource\n* Create stations around the classroom as indicated on the De Morgan's Laws Stations resource",
+        "preparation": "* Print copies of the De Morgan's Laws handout (one for each student)\n* Print the De Morgan's Laws Stations resource\n* Create stations around the classroom as indicated on the De Morgan's Laws Stations resource",
         "student_overview": "**What are De Morgan's Laws?**\n\nYou have learned to use logical operators to create compound Boolean expressions. In this lesson, you learn about De Morgan's Laws and how they are applied to Boolean expressions. You explore how equivalent Boolean expressions evaluate to the same value in all cases. You then use truth tables to evaluate compound Boolean expressions and prove De Morgan's Laws."
       },
       "seeding_key": {
@@ -215,7 +216,7 @@
       "relative_position": 8,
       "properties": {
         "overview": "**How can I specify different outcomes for different conditions?**\n\nIn this lesson, students expand their knowledge of selection statements to evaluate and implement multi-selection statements. They explore the functionality of multi-selection statements and learn to use these to test a combination of conditions. Students then practice writing algorithms using multi-selection statements to solve problems.",
-        "preparation": "* **(Optional)** Print copies of the Multi-Selection Statements Guided Notes (one for each student)\n* Preview the *Multi-Selection Statements* video",
+        "preparation": "* Preview the *Multi-Selection Statements* video",
         "student_overview": "**How can I specify different outcomes for different conditions?**\n\nIn this lesson, you expand your knowledge of selection statements to evaluate and implement multi-selection statements. You explore the functionality of multi-selection statements and learn to use these to test a combination of conditions. You then practice writing algorithms using multi-selection statements to solve problems."
       },
       "seeding_key": {
@@ -232,9 +233,9 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "**How can I write more efficient code to traverse a 1D array?**\n\nStudents learn about the structure and functionality of a `for` loop and explore how it can be used to traverse a one-dimensional (1D) array. They identify similarities and differences between `while` loops and `for` loops and practice tracing code segments involving a `for` loop to determine the output. Students then practice converting `while` loops to `for` loops and using `for` loops to traverse 1D arrays to access and modify elements and identify ideal scenarios for using each type of loop.",
-        "preparation": "* **(Optional)** Print copies of the For Loops Guided Notes (one for each student)\n* Preview the *For Loops* video",
-        "student_overview": "**How can I write more efficient code to traverse a 1D array?**\n\nYou learn about the structure and functionality of a `for` loop and explore how it can be used to traverse a one-dimensional (1D) array. You identify similarities and differences between `while` loops and `for` loops and practice tracing code segments involving a `for` loop to determine the output. You then practice converting `while` loops to `for` loops and using `for` loops to traverse 1D arrays to access and modify elements and identify ideal scenarios for using each type of loop."
+        "overview": "**How can I write more efficient and readable code using `for` loops to repeat actions a set number of times?**\n\nStudents learn about the structure and functionality of a `for` loop and explore how it can be used to repeat a task a specific number of times. They identify similarities and differences between `while` loops and `for` loops and practice tracing code segments involving a `for` loop to determine the output. Students then practice converting `while` loops to `for` loops and using `for` loops to repeat a task a specific number of times and identify ideal scenarios for using each type of loop.",
+        "preparation": "* Preview the *For Loops* video",
+        "student_overview": "**How can I write more efficient and readable code using `for` loops to repeat actions a set number of times?**\n\nYou learn about the structure and functionality of a `for` loop and explore how it can be used to repeat an action a specific number of times. You identify similarities and differences between `while` loops and `for` loops and practice tracing code segments involving a `for` loop to determine the output. You then practice converting `while` loops to `for` loops and using `for` loops to repeat a task a specific number of times and identify ideal scenarios for using each type of loop."
       },
       "seeding_key": {
         "lesson.key": "For Loops",
@@ -251,7 +252,6 @@
       "relative_position": 10,
       "properties": {
         "overview": "**What methods can I use to write algorithms for parsing String objects?**\n\nIn this lesson, students are exposed to the `String` class and learn how to implement standard `String` algorithms using the `substring()` method. Students first investigate reversing a `String` object in order to determine if a sentence is a palindrome. Then, students practice using the `substring()` method and conditional expressions to determine if a `String` object meets a certain criteria. Finally, they practice creating algorithms to count how many `String` objects meet a certain criteria.\n",
-        "preparation": "* **(Optional)** Print copies of the Implementing String Algorithms Guided Notes (one for each student)",
         "student_overview": "**How can I implement algorithms for parsing String objects?**\n\nIn this lesson, you will be introduced to the `String` class and learn how to implement standard `String` algorithms using the `substring()` method. You will start by exploring how to reverse a `String` object to determine if a sentence is a palindrome. Next, you will practice using the `substring()` method along with conditional expressions to evaluate whether a `String` object meets a specific criteria. Finally, you will develop algorithms to count the occurrences of `String` objects that meet certain criteria.\n"
       },
       "seeding_key": {
@@ -269,7 +269,7 @@
       "relative_position": 11,
       "properties": {
         "overview": "**How can I adjust loop control variables of nested loops to produce different output?**\n\nStudents have already been exposed to loops, and will now discover nested iteration through nested `for` loops. Students explore a hands-on activity to recognize similarities between nested `for` loops and the movement of hands on a clock. Students then investigate different ways nested iteration can be used to produce printed patterns and then practice tracing nested loops. Finally, they automate repetitive programming tasks by writing their own nested `for` loops. ",
-        "preparation": "* **(Optional)** Print copies of the Nested Iteration Guided Notes (one for each student)\n* Choose to use the clock face cutouts or the online version\n* Preview the *Nested Iteration* video",
+        "preparation": "* Choose to use the clock face cutouts or the online version\n* Preview the *Nested Iteration* video",
         "student_overview": "**How can I adjust loop control variables of nested loops to produce different output?**\n\nYou have already seen and used `for` loops. Now, you will discover nested iteration through nested `for` loops. You explore a hands-on activity wherein you will recognize similarities between nested `for` loops and the movement of hands on a clock. You’ll then investigate different ways nested iteration can be used to produce printed patterns and then practice tracing nested loops. Finally, you will automate repetitive programming tasks by writing your own nested `for` loops. \n"
       },
       "seeding_key": {
@@ -286,7 +286,9 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "preparation": "* Print copies of the Informal Run-Time Analysis activity guide (one for each student)"
+        "overview": "**How can I determine the number of times a specific statement is executed within a loop in a program?**\n\nThis lesson helps students build foundational skills in informal run-time analysis by focusing on how often each statement in a program executes. Students begin by tracing code to determine execution counts, then apply these skills in hands-on partner activities using iterative and nested loops.",
+        "preparation": "* Print copies of the Informal Run-Time Analysis activity guide (one for each student)",
+        "student_overview": "**How can I determine the number of times a specific statement is executed within a loop in a program?**\n\nHave you ever wondered how many times a line of code actually runs in a program? Today you learn how to figure that out. You practice tracing code to count how many times each statement runs, especially in loops. You also learn tips and patterns to help you estimate how a program behaves without running it."
       },
       "seeding_key": {
         "lesson.key": "lesson-12",
@@ -1031,6 +1033,18 @@
       }
     },
     {
+      "key": "4516301b-d4a7-4e90-bfee-8da95dcd41b9",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4516301b-d4a7-4e90-bfee-8da95dcd41b9",
+        "lesson.key": "Creative Coding with the Console Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-alt-2025"
+      }
+    },
+    {
       "key": "b8f737e3-9423-4c2a-a9ef-f59e7e63b786",
       "position": 1,
       "properties": {
@@ -1122,6 +1136,18 @@
       },
       "seeding_key": {
         "lesson_activity.key": "a1d128e5-9641-49a6-8513-83b164859f42",
+        "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-alt-2025"
+      }
+    },
+    {
+      "key": "cea2f754-62e2-438f-bc44-ec6be14ef2f6",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cea2f754-62e2-438f-bc44-ec6be14ef2f6",
         "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa2-alt-2025"
@@ -1409,13 +1435,7 @@
       "key": "b4dc8d3c-3ca0-4736-9812-7ac7dccf6216",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as `boolean` and iteration. Students also identify the syntax for writing a `while` loop and how it can be used to repeat a set of instructions in The Neighborhood. They should realize that they now have the knowledge to develop more complex algorithms with two of the three components of an algorithm and might suggest selection as the next component to learn.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 1 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as `boolean` and iteration. Students also identify the syntax for writing a `while` loop and how it can be used to repeat a set of instructions in The Neighborhood. They should realize that they now have the knowledge to develop more complex algorithms with two of the three components of an algorithm and might suggest selection as the next component to learn.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "b4dc8d3c-3ca0-4736-9812-7ac7dccf6216",
@@ -1423,19 +1443,8 @@
       }
     },
     {
-      "key": "288bc5c5-f739-4b67-8f9e-3adc76ea753f",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "288bc5c5-f739-4b67-8f9e-3adc76ea753f",
-        "lesson_activity.key": "1106bb8b-00b5-4a47-8a7f-61ff19d59fdf"
-      }
-    },
-    {
       "key": "06367e38-df8e-4dfa-b04b-74ad80b5157f",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "---"
       },
@@ -1446,7 +1455,7 @@
     },
     {
       "key": "6e34acd6-61b0-46ca-8bf1-a362756eee6f",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -1454,18 +1463,6 @@
       },
       "seeding_key": {
         "activity_section.key": "6e34acd6-61b0-46ca-8bf1-a362756eee6f",
-        "lesson_activity.key": "1106bb8b-00b5-4a47-8a7f-61ff19d59fdf"
-      }
-    },
-    {
-      "key": "0d22a81b-e884-498c-9765-8dfa060f90ad",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "0d22a81b-e884-498c-9765-8dfa060f90ad",
         "lesson_activity.key": "1106bb8b-00b5-4a47-8a7f-61ff19d59fdf"
       }
     },
@@ -1725,13 +1722,7 @@
       "key": "e81cfd3a-b07c-4632-9529-aa0909274e8f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student an index card or piece of scrap paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write a question on their index card using one of the question stems. Have students turn to a neighbor and take turns asking and answering their questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 1 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student an index card or piece of scrap paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write a question on their index card using one of the question stems. Have students turn to a neighbor and take turns asking and answering their questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "e81cfd3a-b07c-4632-9529-aa0909274e8f",
@@ -1739,19 +1730,8 @@
       }
     },
     {
-      "key": "279611f6-2bf3-4a69-86a3-baeca303043d",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "279611f6-2bf3-4a69-86a3-baeca303043d",
-        "lesson_activity.key": "2db6386e-2089-467a-b8ab-bfb0b7cd24fb"
-      }
-    },
-    {
       "key": "95b8f480-7901-491e-bb0f-66bd992343c1",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "---"
       },
@@ -1762,7 +1742,7 @@
     },
     {
       "key": "38887ebe-849a-4d7f-8ddf-486aac651505",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -1774,44 +1754,13 @@
       }
     },
     {
-      "key": "e1dfcfe6-719c-4f6e-bf52-f23547858ebe",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.2\n* Topic Questions 5.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "e1dfcfe6-719c-4f6e-bf52-f23547858ebe",
-        "lesson_activity.key": "2db6386e-2089-467a-b8ab-bfb0b7cd24fb"
-      }
-    },
-    {
-      "key": "509a61f4-da52-4c36-9e74-2482cbdc9219",
+      "key": "827375ff-49dc-4d20-80ee-bf7ce2ac6e0e",
       "position": 1,
       "properties": {
-        "description": "We have learned a lot of new terms so far! Let's review some of these terms through a game of CS Bingo.",
-        "name": "CS Bingo",
-        "remarks": true
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Imagine you're organizing a field trip for your class. You check the weather and see it’s supposed to rain tomorrow. What would your plan be if it rains? What about if it doesn't?*\n\n**Discussion Goal:** Students should recognize that in real life, we often prepare for both possibilities when something is true and when it's false. This sets up the idea that `if/else` lets us write two different code paths based on whether a condition is true or not. It also helps introduce the idea of negation (e.g., `if NOT sunny`)."
       },
       "seeding_key": {
-        "activity_section.key": "509a61f4-da52-4c36-9e74-2482cbdc9219",
-        "lesson_activity.key": "b3016b81-49f5-4978-b3a5-8c470291739e"
-      }
-    },
-    {
-      "key": "bb9ef1e7-dad2-4dcd-a769-d919dccbfdea",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a unique CS Bingo Card.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for playing CS Bingo.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the CS Bingo activity. Choose a random definition and read it aloud to the class. Give students a moment to check their bingo card for the correct term, then state the correct term. Repeat until a student yells \"Java.\"",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "To allow for multiple students to \"win\" the game, continue pulling definitions until a couple more students win as well."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "bb9ef1e7-dad2-4dcd-a769-d919dccbfdea",
+        "activity_section.key": "827375ff-49dc-4d20-80ee-bf7ce2ac6e0e",
         "lesson_activity.key": "b3016b81-49f5-4978-b3a5-8c470291739e"
       }
     },
@@ -1986,14 +1935,7 @@
       "key": "a3235c95-f834-4acb-a5ec-8bf5ef1dcf04",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "name": "Show What You Know Week",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 1 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "a3235c95-f834-4acb-a5ec-8bf5ef1dcf04",
@@ -2001,31 +1943,8 @@
       }
     },
     {
-      "key": "e90a79b7-f346-4f7b-bdae-630f2557d8be",
-      "position": 2,
-      "properties": {
-        "description": "The next five lessons are an opportunity to Show What You Know! We begin with the unit project, then spend a day practicing answering AP-style free-response questions and wrapping up the unit with a multiple-choice assessment. You've learned so much in this unit, and now you're ready to show what you know!",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "e90a79b7-f346-4f7b-bdae-630f2557d8be",
-        "lesson_activity.key": "2ee430c5-8e96-43e1-bc35-56649d31b065"
-      }
-    },
-    {
-      "key": "b5673526-1b7f-42ab-a69a-570fee05c752",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 1 Study Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know Week.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Asphalt Art Project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "b5673526-1b7f-42ab-a69a-570fee05c752",
-        "lesson_activity.key": "2ee430c5-8e96-43e1-bc35-56649d31b065"
-      }
-    },
-    {
       "key": "e604cb41-8d65-409f-851d-7b228ac4df81",
-      "position": 4,
+      "position": 2,
       "properties": {
         "description": "---"
       },
@@ -2036,7 +1955,7 @@
     },
     {
       "key": "335902a6-1cc2-4919-a5e0-58f66f7b43fc",
-      "position": 5,
+      "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -2044,18 +1963,6 @@
       },
       "seeding_key": {
         "activity_section.key": "335902a6-1cc2-4919-a5e0-58f66f7b43fc",
-        "lesson_activity.key": "2ee430c5-8e96-43e1-bc35-56649d31b065"
-      }
-    },
-    {
-      "key": "7f49349d-49fd-4a1e-8bed-00e418c54aa1",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "7f49349d-49fd-4a1e-8bed-00e418c54aa1",
         "lesson_activity.key": "2ee430c5-8e96-43e1-bc35-56649d31b065"
       }
     },
@@ -2254,7 +2161,7 @@
       "key": "03658472-a115-4bc2-b511-7f3cd6b7ca31",
       "position": 12,
       "properties": {
-        "description": "**Do This:** Explain how to override the `equals()` method:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The method signature must be the same as the `equals()` method in the `Object` class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Cast the `Object` parameter as the type we need\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Checking if the `Object` parameter point to the same object as `this` object\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Using the `instanceof` operator to check if the `Object` parameter is an instance of the class\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding on Level 5, then continue to Level 6 to complete a choice level to debug the program. On Level 7, students override and use the `equals()` method.",
+        "description": "**Do This:** Explain how to override the `equals()` method:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The method signature must be the same as the `equals()` method in the `Object` class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Cast the `Object` parameter as the type we need\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Checking if the `Object` parameter point to the same object as `this` object\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Using the `instanceof` operator to check if the `Object` parameter is an instance of the class\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 and 6. Students complete a Check for Understanding on Level 5, then continue to Level 6 to complete a choice level to debug the program.",
         "progression_name": "Practice: The equals() Method",
         "tips": [
           {
@@ -2302,13 +2209,7 @@
       "key": "c6e20b54-9310-4b9b-b68e-b4f391a59492",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 4 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "c6e20b54-9310-4b9b-b68e-b4f391a59492",
@@ -2316,19 +2217,8 @@
       }
     },
     {
-      "key": "8144cd82-28a9-4c22-85f0-f4e9c1e788b0",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "8144cd82-28a9-4c22-85f0-f4e9c1e788b0",
-        "lesson_activity.key": "a0ab4037-a452-45ce-9595-e0689803c6ef"
-      }
-    },
-    {
       "key": "893f39b4-1842-462f-9afb-88780d40b54f",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "---"
       },
@@ -2339,7 +2229,7 @@
     },
     {
       "key": "104f4b28-bb11-41aa-a5c4-c08dd7043a3f",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -2526,29 +2416,10 @@
       }
     },
     {
-      "key": "1b8c5114-b18e-4dd3-8d60-717c66a3e87a",
+      "key": "2f3c6913-085f-4bb4-9dde-fe09c8a2285b",
       "position": 1,
       "properties": {
-        "description": "There are many different ways we can illustrate patterns and relationships we find in our datasets. These can be straightforward visuals, like charts and graphs, or something more abstract.",
-        "name": "Visualizing Patterns",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "1b8c5114-b18e-4dd3-8d60-717c66a3e87a",
-        "lesson_activity.key": "4572920b-0745-4c5e-b09c-bb9850230a8e"
-      }
-    },
-    {
-      "key": "2f3c6913-085f-4bb4-9dde-fe09c8a2285b",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What type of visualization might you create to represent the patterns and relationships in the dataset you chose for your Abstract Data Art Project?*\n\n**Discussion Goal:** Students suggest ways to visualize the data, such as charts or graphs or more abstract visualizations or animations that represent the patterns.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 4 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "**Discuss:** *Today we learned how to use nested `if` statements to check multiple conditions before running a block of code. Why might that be more useful than a single `if` statement?*\n\n**Discussion Goal:** Students should explain that nested `if` statements allow programs to make more specific decisions by checking an additional condition only if the first condition is true. This helps programs handle complex scenarios where different outcomes depend on combinations of conditions. Students should also be able to give a concrete example from their pseudocode or code implementation.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "2f3c6913-085f-4bb4-9dde-fe09c8a2285b",
@@ -2556,19 +2427,8 @@
       }
     },
     {
-      "key": "17ed36d1-810b-42f0-b43b-d5c80e495454",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "17ed36d1-810b-42f0-b43b-d5c80e495454",
-        "lesson_activity.key": "4572920b-0745-4c5e-b09c-bb9850230a8e"
-      }
-    },
-    {
       "key": "438118a4-d9b7-49ee-8dec-398777d053ac",
-      "position": 4,
+      "position": 2,
       "properties": {
         "description": "---"
       },
@@ -2579,7 +2439,7 @@
     },
     {
       "key": "c9e42cf7-6da8-4c97-84a8-521a640b795c",
-      "position": 5,
+      "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -2782,58 +2642,10 @@
       }
     },
     {
-      "key": "a6295ff6-d472-4a3f-93a9-21aa7c4beb6b",
+      "key": "055ee8a9-47aa-4c1f-a3d6-d4b3ce2573dc",
       "position": 1,
       "properties": {
-        "description": "In a previous lesson, you identified a dataset to use for your unit project. When software engineers create visualizations of data, they first identify the patterns and relationships they see in the data that they want to illustrate. These patterns and relationships help tell the story about the data.",
-        "name": "Finding Patterns in Data",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "a6295ff6-d472-4a3f-93a9-21aa7c4beb6b",
-        "lesson_activity.key": "73549527-bc55-40d9-ad8a-c2bf7b88927f"
-      }
-    },
-    {
-      "key": "4e13b26d-44e2-4cc3-a05a-571bb737f020",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Finding Patterns handout and return the Dataset Summaries handouts.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Dataset Summaries handouts were collected from students at the end of a previous lesson. If you chose to have students keep these, prompt them to take them out for this activity.\n\nThis activity helps prepare students for the Abstract Data Art Project at the end of the unit. These activities are intended to give students time to choose their datasets, identify patterns, and consider how they will visualize the information so the project time can be dedicated to planning and developing the program and conducting code reviews."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "4e13b26d-44e2-4cc3-a05a-571bb737f020",
-        "lesson_activity.key": "73549527-bc55-40d9-ad8a-c2bf7b88927f"
-      }
-    },
-    {
-      "key": "4abaf7ef-5608-4f1e-9baa-9dbddc4091c4",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio. Students review their selected dataset and complete the Finding Patterns handout to identify the patterns and relationships they notice in the data.",
-        "progression_name": "Finding Patterns"
-      },
-      "seeding_key": {
-        "activity_section.key": "4abaf7ef-5608-4f1e-9baa-9dbddc4091c4",
-        "lesson_activity.key": "73549527-bc55-40d9-ad8a-c2bf7b88927f"
-      }
-    },
-    {
-      "key": "055ee8a9-47aa-4c1f-a3d6-d4b3ce2573dc",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 4 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Today you used AND (`&&`), OR (`||`), and NOT (`!`) to combine conditions. Why might using logical operators be better than writing multiple or nested `if` statements?*\n\n**Discussion Goal:** Students should explain that logical operators help simplify code by letting them combine multiple conditions into a single line. This can make programs more readable, less repetitive, and easier to debug. They should also reflect on how logical operators help test combinations of scenarios more efficiently, especially compared to nested conditionals.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "055ee8a9-47aa-4c1f-a3d6-d4b3ce2573dc",
@@ -2841,19 +2653,8 @@
       }
     },
     {
-      "key": "412e1e0b-e4fc-485c-be5f-698422a9a165",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "412e1e0b-e4fc-485c-be5f-698422a9a165",
-        "lesson_activity.key": "73549527-bc55-40d9-ad8a-c2bf7b88927f"
-      }
-    },
-    {
       "key": "28a03122-a7ea-405a-9e6f-3730806d4632",
-      "position": 6,
+      "position": 2,
       "properties": {
         "description": "---"
       },
@@ -2864,7 +2665,7 @@
     },
     {
       "key": "c5fe7756-9e5c-44ef-8808-16218c7c763d",
-      "position": 7,
+      "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -3069,13 +2870,7 @@
       "key": "d2a03336-930d-4a4a-a8c7-e1375370d930",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the scenario.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to use De Morgan's Laws to determine if the two code segments are equivalent.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 4 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the scenario.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to use De Morgan's Laws to determine if the two code segments are equivalent.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "d2a03336-930d-4a4a-a8c7-e1375370d930",
@@ -3083,19 +2878,8 @@
       }
     },
     {
-      "key": "ad1f64e7-af26-4019-8d5b-2890880e3cdd",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "ad1f64e7-af26-4019-8d5b-2890880e3cdd",
-        "lesson_activity.key": "cd7f86ec-457e-46be-a9af-de8cd084c099"
-      }
-    },
-    {
       "key": "d5f6003c-fda3-4784-ae85-118215a253ff",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "---"
       },
@@ -3106,7 +2890,7 @@
     },
     {
       "key": "dc99c523-cf8c-40f0-891c-1426eb8d64f8",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -3283,7 +3067,7 @@
       "key": "0016108b-4f04-477b-b54d-7c919038bed0",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding on Level 5, then continue to Level 6 to implement their algorithm. On Level 7, students complete a choice level to use a multi-selection statement while traversing a one-dimensional (1D) array.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 and 6. Students complete a Check for Understanding on Level 5, then continue to Level 6 to implement their algorithm.",
         "progression_name": "Practice: Multi-Selection Statements",
         "tips": [
           {
@@ -3301,14 +3085,7 @@
       "key": "a1fe61af-e3c3-4cd9-b8c2-7dd49135e8e2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "name": "Show What You Know Week",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 4 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "a1fe61af-e3c3-4cd9-b8c2-7dd49135e8e2",
@@ -3316,31 +3093,8 @@
       }
     },
     {
-      "key": "b0f2aecc-ba0b-4fa6-ad35-aa0db4d20429",
-      "position": 2,
-      "properties": {
-        "description": "The next five lessons are an opportunity to Show What You Know! We begin with the unit project, then spend a day practicing answering AP-style free-response questions and wrapping up the unit with a multiple-choice assessment. You've learned so much in this unit, and now you're ready to show what you know!",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "b0f2aecc-ba0b-4fa6-ad35-aa0db4d20429",
-        "lesson_activity.key": "a0169863-853e-4c18-824a-495b53fd0c77"
-      }
-    },
-    {
-      "key": "04cd9627-b535-42a1-acba-d70bdbd54e9f",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 4 Study Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know Week.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Abstract Data Art Project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "04cd9627-b535-42a1-acba-d70bdbd54e9f",
-        "lesson_activity.key": "a0169863-853e-4c18-824a-495b53fd0c77"
-      }
-    },
-    {
       "key": "cf4a9072-173e-456d-99fe-e6bded0b85f0",
-      "position": 4,
+      "position": 2,
       "properties": {
         "description": "---"
       },
@@ -3351,7 +3105,7 @@
     },
     {
       "key": "05bbc95c-132f-4852-9d5b-497fdf45c36c",
-      "position": 5,
+      "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -3363,49 +3117,13 @@
       }
     },
     {
-      "key": "a7a0ef18-1f83-47ea-ad8d-384e7f5d3301",
+      "key": "071efc84-1c1c-4b70-b196-6740260d6a21",
       "position": 1,
       "properties": {
-        "description": "Data helps us find trends and even make predictions about our society. This visual shows us the popularity and revenues of music formats over the years.",
-        "name": "Data and the Music Industry",
-        "remarks": true
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think of something you've done where you had to repeat the same action over and over . . . maybe a chore, a warm-up drill, or something in a game. What was it? How did you keep track of how many times you had done it?*\n\n**Discussion Goal:** Students recognize that many tasks involve repeating actions a known number of times and that they often use counters (e.g., tally marks, scoreboards, timer apps). This prepares them to understand why `for` loops are useful in programming: they automate repetition when the number of iterations is known."
       },
       "seeding_key": {
-        "activity_section.key": "a7a0ef18-1f83-47ea-ad8d-384e7f5d3301",
-        "lesson_activity.key": "690b631c-26f6-4826-9371-82327f7a3ee1"
-      }
-    },
-    {
-      "key": "491fba5f-0425-4a91-b69b-def2c4e0b6f3",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How could we store this information in 1D arrays? What would be the data type for each 1D array?*\n\n**Discussion Goal:** Students suggest creating 1D arrays to store the revenue for each year or the revenue for each format. Students note that a 1D array to store the revenue would be declared to store `double` values.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Ask students to identify the specific data points in the visual, such as the total revenue for each year and each format. You can also have students consider the appropriate data types for each type of information."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "491fba5f-0425-4a91-b69b-def2c4e0b6f3",
-        "lesson_activity.key": "690b631c-26f6-4826-9371-82327f7a3ee1"
-      }
-    },
-    {
-      "key": "479f1583-80aa-49e3-93b9-71d591d07c07",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What surprises you about this data? What questions might someone be able to answer with this data?*\n\n**Discussion Goal:** Students may be surprised that streaming and downloading music has led to decreased revenue in comparison to CDs. Students suggest that a program would add up the values for each year or each format so it could be displayed in this visual.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "479f1583-80aa-49e3-93b9-71d591d07c07",
+        "activity_section.key": "071efc84-1c1c-4b70-b196-6740260d6a21",
         "lesson_activity.key": "690b631c-26f6-4826-9371-82327f7a3ee1"
       }
     },
@@ -3463,7 +3181,7 @@
       "properties": {
         "description": "In this program, we see an example of a `for` loop that can repeat a block of code. We often can use either a `while` loop or a `for` loop interchangeably, however there are some cases where a `for` loop might be easier to work with for a problem than a `while` loop.",
         "duration": "10",
-        "name": "Loops and 1D Arrays",
+        "name": "For Loops",
         "remarks": true
       },
       "seeding_key": {
@@ -3516,7 +3234,7 @@
       "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate tracing a `for` loop.",
-        "duration": "10",
+        "duration": "20",
         "name": "Tracing Loops",
         "tips": [
           {
@@ -3548,70 +3266,10 @@
       }
     },
     {
-      "key": "49f2ceb6-f767-4376-aea8-7ad047bf92df",
+      "key": "d18ff060-77b9-4a9d-9607-4c4c86e14660",
       "position": 11,
       "properties": {
-        "description": "A `for` loop has all the same components of a `while` loop but puts all of these components on one line instead of breaking them up across multiple lines of code. This also means we can work with and trace `for` loops the same way we do a `while` loop.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "49f2ceb6-f767-4376-aea8-7ad047bf92df",
-        "lesson_activity.key": "afe8090a-3c56-459e-8959-a27639540702"
-      }
-    },
-    {
-      "key": "245d8f3e-81ee-4d2d-b8ae-d3334234dfd2",
-      "position": 12,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall the syntax `for` traversing a 1D array with a `while` loop.\n\n**Do This:** Click through the animated slides to demonstrate traversing a 1D array with a `for` loop:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> First iteration\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Second iteration\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Third iteration"
-      },
-      "seeding_key": {
-        "activity_section.key": "245d8f3e-81ee-4d2d-b8ae-d3334234dfd2",
-        "lesson_activity.key": "afe8090a-3c56-459e-8959-a27639540702"
-      }
-    },
-    {
-      "key": "cc7e6437-da10-48d1-9bbe-51ad543b8eb7",
-      "position": 13,
-      "properties": {
-        "description": "Since a `for` loop has all the same components of a `while` loop, we can easily convert a `while` loop to a `for` loop or vice versa.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "cc7e6437-da10-48d1-9bbe-51ad543b8eb7",
-        "lesson_activity.key": "afe8090a-3c56-459e-8959-a27639540702"
-      }
-    },
-    {
-      "key": "b9948099-b277-473a-becd-5ff09640f2e6",
-      "position": 14,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students rewrite the code segment traversing a 1D array with a `while` loop using a `for` loop.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the solution."
-      },
-      "seeding_key": {
-        "activity_section.key": "b9948099-b277-473a-becd-5ff09640f2e6",
-        "lesson_activity.key": "afe8090a-3c56-459e-8959-a27639540702"
-      }
-    },
-    {
-      "key": "8ca98226-2342-45f3-bbea-079259065fd9",
-      "position": 15,
-      "properties": {
-        "description": "We now have two types of loops we can use in our programs. We can use either a `while` loop or a `for` loop to repeat a block of code. Both types of loops will repeat as long as a condition is `true` but are structured differently.",
-        "duration": "10",
-        "name": "Traversing 1D Arrays",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "8ca98226-2342-45f3-bbea-079259065fd9",
-        "lesson_activity.key": "afe8090a-3c56-459e-8959-a27639540702"
-      }
-    },
-    {
-      "key": "d18ff060-77b9-4a9d-9607-4c4c86e14660",
-      "position": 16,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding, then continue to Level 6 to complete a choice level to convert a `while` loop to a `for` loop. On Level 7, students complete a choice level to traverse a 1D array using a `for` loop in the console or The Neighborhood.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 and 6. Students complete a Check for Understanding, then continue to Level 6 to complete a choice level to traverse a 1D array using a `for` loop in the console or The Neighborhood.",
         "progression_name": "Practice: Using for Loops",
         "tips": [
           {
@@ -3642,13 +3300,7 @@
       "key": "f6758afe-593c-4d08-86a5-d29fcf3a3b0d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which type of loop would be best for this scenario? Why?*\n\n**Discussion Goal:** Students suggest using a `while` loop because this problem does not have a value that can be used as a loop control variable. Students realize that a `while` loop might be more ideal for this type of scenario because they are unsure how many times the loop might need to repeat.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which type of loop would be best for this scenario? Why?*\n\n**Discussion Goal:** Students suggest using a `for` loop because this problem has a value that can be used as a loop control variable. Students realize that a `for` loop might be more ideal for this type of scenario because they can determine how many times the loop needs to repeat.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 3 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which type of loop would be best for this scenario? Why?*\n\n**Discussion Goal:** Students suggest using a `while` loop because this problem does not have a value that can be used as a loop control variable. Students realize that a `while` loop might be more ideal for this type of scenario because they are unsure how many times the loop might need to repeat.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which type of loop would be best for this scenario? Why?*\n\n**Discussion Goal:** Students suggest using a `for` loop because this problem has a value that can be used as a loop control variable. Students realize that a `for` loop might be more ideal for this type of scenario because they can determine how many times the loop needs to repeat.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "f6758afe-593c-4d08-86a5-d29fcf3a3b0d",
@@ -3656,19 +3308,8 @@
       }
     },
     {
-      "key": "9652d5f0-595d-4f88-9e80-7cd81f584a41",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "9652d5f0-595d-4f88-9e80-7cd81f584a41",
-        "lesson_activity.key": "039015a6-817e-4392-bbb0-df2b4264c981"
-      }
-    },
-    {
       "key": "ba963308-e033-4fd1-9ae0-8657cf7faab4",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "---"
       },
@@ -3679,7 +3320,7 @@
     },
     {
       "key": "60a8d939-feb1-4ee7-bc8c-938940ae1762",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -4775,6 +4416,19 @@
       }
     },
     {
+      "key": "c9fa7f37-ea9d-45ad-a861-efe64bdacb45",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "End of Unit Survey",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "c9fa7f37-ea9d-45ad-a861-efe64bdacb45",
+        "lesson_activity.key": "4516301b-d4a7-4e90-bfee-8da95dcd41b9"
+      }
+    },
+    {
       "key": "9072ca71-d16a-49ff-985f-186c278ffb9f",
       "position": 1,
       "properties": {
@@ -5383,6 +5037,19 @@
       "seeding_key": {
         "activity_section.key": "687269f1-dc51-497e-be4f-c717341dcc59",
         "lesson_activity.key": "a1d128e5-9641-49a6-8513-83b164859f42"
+      }
+    },
+    {
+      "key": "f8c6e7b5-88bb-4799-a636-6485abe02638",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "End of Unit Survey",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "f8c6e7b5-88bb-4799-a636-6485abe02638",
+        "lesson_activity.key": "cea2f754-62e2-438f-bc44-ec6be14ef2f6"
       }
     },
     {
@@ -6054,31 +5721,6 @@
     {
       "chapter": 25,
       "position": 7,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U4L6-L7_alt-2025"
-        ],
-        "progression": "Practice: The equals() Method"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U4L6-L7_alt-2025"
-        ],
-        "lesson.key": "Object Aliases and Equality",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csa2-alt-2025",
-        "activity_section.key": "03658472-a115-4bc2-b511-7f3cd6b7ca31"
-      },
-      "level_keys": [
-        "CSA U4L6-L7_alt-2025"
-      ]
-    },
-    {
-      "chapter": 26,
-      "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -6102,7 +5744,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6127,7 +5769,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6152,7 +5794,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6177,7 +5819,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -6202,7 +5844,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -6227,7 +5869,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -6252,7 +5894,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -6277,7 +5919,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6302,7 +5944,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6327,7 +5969,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6352,7 +5994,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6377,33 +6019,8 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U4L8-L5 Finding Patterns_alt-2025"
-        ],
-        "progression": "Finding Patterns"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U4L8-L5 Finding Patterns_alt-2025"
-        ],
-        "lesson.key": "Logical Operators",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csa2-alt-2025",
-        "activity_section.key": "4abaf7ef-5608-4f1e-9baa-9dbddc4091c4"
-      },
-      "level_keys": [
-        "CSA U4L8-L5 Finding Patterns_alt-2025"
-      ]
-    },
-    {
-      "chapter": 39,
-      "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -6427,7 +6044,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6452,7 +6069,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6477,7 +6094,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6502,7 +6119,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6527,7 +6144,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 42,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6552,7 +6169,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 43,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6577,7 +6194,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 44,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6602,33 +6219,8 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 45,
       "position": 7,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U4L10-L7_alt-2025"
-        ],
-        "progression": "Practice: Multi-Selection Statements"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U4L10-L7_alt-2025"
-        ],
-        "lesson.key": "Multi-Selection Statements",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csa2-alt-2025",
-        "activity_section.key": "0016108b-4f04-477b-b54d-7c919038bed0"
-      },
-      "level_keys": [
-        "CSA U4L10-L7_alt-2025"
-      ]
-    },
-    {
-      "chapter": 48,
-      "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -6652,7 +6244,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6677,7 +6269,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6702,7 +6294,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 48,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6727,7 +6319,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 49,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6752,7 +6344,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 50,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6777,7 +6369,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 51,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6802,33 +6394,8 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 52,
       "position": 7,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U3L4-L7_alt-2025"
-        ],
-        "progression": "Practice: Using for Loops"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L4-L7_alt-2025"
-        ],
-        "lesson.key": "For Loops",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csa2-alt-2025",
-        "activity_section.key": "d18ff060-77b9-4a9d-9607-4c4c86e14660"
-      },
-      "level_keys": [
-        "CSA U3L4-L7_alt-2025"
-      ]
-    },
-    {
-      "chapter": 56,
-      "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -6852,7 +6419,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6877,7 +6444,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6902,7 +6469,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6927,7 +6494,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 56,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6952,7 +6519,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 57,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6977,7 +6544,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7002,7 +6569,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 59,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7027,7 +6594,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 60,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7052,7 +6619,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 61,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -7077,7 +6644,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 62,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -7102,7 +6669,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 63,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7127,7 +6694,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7152,7 +6719,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7177,10 +6744,10 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 66,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "student-eou-survey_linked_page_csa2-project1-2025"
@@ -7202,7 +6769,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7227,7 +6794,32 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 68,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page_csa2-project1b-2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_csa2-project1b-2025"
+        ],
+        "lesson.key": "Creative Coding with the Console Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-alt-2025",
+        "activity_section.key": "c9fa7f37-ea9d-45ad-a861-efe64bdacb45"
+      },
+      "level_keys": [
+        "student-eou-survey_linked_page_csa2-project1b-2025"
+      ]
+    },
+    {
+      "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7252,10 +6844,10 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 70,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "student-eou-survey_linked_page_csa2-project2-2025"
@@ -7277,7 +6869,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7302,7 +6894,32 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 72,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page_csa2-project2b-2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_csa2-project2b-2025"
+        ],
+        "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-alt-2025",
+        "activity_section.key": "f8c6e7b5-88bb-4799-a636-6485abe02638"
+      },
+      "level_keys": [
+        "student-eou-survey_linked_page_csa2-project2b-2025"
+      ]
+    },
+    {
+      "chapter": 73,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7327,7 +6944,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7352,7 +6969,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 75,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7377,7 +6994,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 76,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7401,7 +7018,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 77,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7716,18 +7333,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U4L6-L7_alt-2025",
-        "script_level.level_keys": [
-          "CSA U4L6-L7_alt-2025"
-        ],
-        "lesson.key": "Object Aliases and Equality",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csa2-alt-2025",
-        "activity_section.key": "03658472-a115-4bc2-b511-7f3cd6b7ca31"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "CSA U4L6-L8_alt-2025",
         "script_level.level_keys": [
           "CSA U4L6-L8_alt-2025"
@@ -7872,18 +7477,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U4L8-L5 Finding Patterns_alt-2025",
-        "script_level.level_keys": [
-          "CSA U4L8-L5 Finding Patterns_alt-2025"
-        ],
-        "lesson.key": "Logical Operators",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csa2-alt-2025",
-        "activity_section.key": "4abaf7ef-5608-4f1e-9baa-9dbddc4091c4"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "CSA U4L8-L6_alt-2025",
         "script_level.level_keys": [
           "CSA U4L8-L6_alt-2025"
@@ -7980,18 +7573,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U4L10-L7_alt-2025",
-        "script_level.level_keys": [
-          "CSA U4L10-L7_alt-2025"
-        ],
-        "lesson.key": "Multi-Selection Statements",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csa2-alt-2025",
-        "activity_section.key": "0016108b-4f04-477b-b54d-7c919038bed0"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "CSA U4L10-L8_alt-2025",
         "script_level.level_keys": [
           "CSA U4L10-L8_alt-2025"
@@ -8067,18 +7648,6 @@
         "level.key": "CSA U3L4-L6_alt-2025",
         "script_level.level_keys": [
           "CSA U3L4-L6_alt-2025"
-        ],
-        "lesson.key": "For Loops",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csa2-alt-2025",
-        "activity_section.key": "d18ff060-77b9-4a9d-9607-4c4c86e14660"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U3L4-L7_alt-2025",
-        "script_level.level_keys": [
-          "CSA U3L4-L7_alt-2025"
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "lessonGroup-3",
@@ -8280,6 +7849,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "student-eou-survey_linked_page_csa2-project1b-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_csa2-project1b-2025"
+        ],
+        "lesson.key": "Creative Coding with the Console Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-alt-2025",
+        "activity_section.key": "c9fa7f37-ea9d-45ad-a861-efe64bdacb45"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U7 Creative Coding with The Theater Project_pilot_oo20_2025-cb-alt",
         "script_level.level_keys": [
           "CSA U7 Creative Coding with The Theater Project_pilot_oo20_2025-cb-alt"
@@ -8312,6 +7893,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa2-alt-2025",
         "activity_section.key": "c09ce4a2-7cde-4ef7-839b-9f6d160481a7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_linked_page_csa2-project2b-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_csa2-project2b-2025"
+        ],
+        "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-alt-2025",
+        "activity_section.key": "f8c6e7b5-88bb-4799-a636-6485abe02638"
       }
     },
     {
@@ -8425,150 +8018,6 @@
       }
     },
     {
-      "name": "[EXEMPLAR] Implementing String Algorithms Extra Practice",
-      "url": "https://docs.google.com/document/d/10UB1f08trGZmaZ4jE9gMsUvfV8960mxKcaG_03QZ-ao/edit?usp=sharing",
-      "key": "_exemplar_csa_implementing_string_algorithms_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_csa_implementing_string_algorithms_extra_practice"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Guided Notes: Implementing String Algorithms",
-      "url": "https://docs.google.com/document/d/1bSS-wlPQH-KxpIVm1lrfpP9o6VqDQvDJ2W2xZGS5RvM/edit?usp=sharing",
-      "key": "_exemplar_guided_notes_implementing_string_algorithms",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_guided_notes_implementing_string_algorithms"
-      }
-    },
-    {
-      "name": "[Exemplar] Nested Iteration Guided Notes",
-      "url": "https://docs.google.com/document/d/1cTpq3R5lUfFd0XgBECZUxVsc03GVuMdrXFFCnez_ZQo/edit?usp=drive_link",
-      "key": "_exemplar_nested_iteration_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_nested_iteration_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Selection Statements Guided Notes",
-      "url": "https://docs.google.com/document/d/1RKmj91Z9w0tUosY15psijETM6xsk8fgAhlteKeaTqwY/edit?usp=sharing",
-      "key": "_exemplar_u1l11_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u1l11_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Two-Way Selection Statements Guided Notes",
-      "url": "https://docs.google.com/document/d/1gE0I47puwz3Pf1UY24ThE25DOUjLxnx0u4qcyom_Si0/edit?usp=sharing",
-      "key": "_exemplar_u1l14_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u1l14_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Loops Guided Notes",
-      "url": "https://docs.google.com/document/d/1TVlK7qZS-NYB_2Ig8I_0YPYSvtDsy67Qq3k8DPFqZ9I/edit?usp=sharing",
-      "key": "_exemplar_u1l7_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u1l7_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] For Loops Guided Notes",
-      "url": "https://docs.google.com/document/d/1AcYc1o7JjXrkd8HuVzSEw2tA7r-EIcZPseOj2LXaIIk/edit?usp=sharing",
-      "key": "_exemplar_u3l4_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u3l4_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Multi-Selection Statements Guided Notes",
-      "url": "https://docs.google.com/document/d/1V_8-7_OBAbVxDhCKnG_hKQErsHjvTbeYyI7H_E8IE90/edit?usp=sharing",
-      "key": "_exemplar_u4l10_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u4l10_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Object Aliases and Equality Guided Notes",
-      "url": "https://docs.google.com/document/d/1l-fE7hHBACKDqa64pPfaK9VRFmMVm_Al9eCYiKfrmh4/edit?usp=sharing",
-      "key": "_exemplar_u4l6_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u4l6_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Nested If Statements Guided Notes",
-      "url": "https://docs.google.com/document/d/1kuyZi5h14CF0y6hGxALtsq03yYxxQjMDn0AzsBDSE8g/edit?usp=sharing",
-      "key": "_exemplar_u4l7_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u4l7_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] Logical Operators Guided Notes",
-      "url": "https://docs.google.com/document/d/1aVXJF88_RWFr-Hzf382gqaL37BB3AFFKnfK33SyZZQs/edit?usp=sharing",
-      "key": "_exemplar_u4l8_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u4l8_guided_notes"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] De Morgan's Laws Guided Notes",
-      "url": "https://docs.google.com/document/d/1RiPYV7KSsxCD-hzyKL5ij3-xtCk5wacTrNg9m4N6dsk/edit?usp=sharing",
-      "key": "_exemplar_u4l9_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u4l9_guided_notes"
-      }
-    },
-    {
       "name": "[KEY] De Morgan's Laws",
       "url": "https://docs.google.com/document/d/1ak4Uvk9Vljg-gAiqSyEJ2523VxnSMt9BZrtHjdhu3Yg/edit?usp=sharing",
       "key": "_key_de_morgan_s_laws",
@@ -8626,114 +8075,6 @@
       },
       "seeding_key": {
         "resource.key": "_key_truth_tables"
-      }
-    },
-    {
-      "name": "[KEY] Selection Statements Extra Practice",
-      "url": "https://docs.google.com/document/d/1t4jnncvm5dTBuh12Yusu1fkpA2X4TmYCJPHtMsyuA7A/edit?usp=sharing",
-      "key": "_key_u1l11_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u1l11_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Two-Way Selection Statements Extra Practice",
-      "url": "https://docs.google.com/document/d/1IY6x-N2Y8tD1QMfRLOI9QfpplxOeMFoH1BKA71YGTl4/edit?usp=sharing",
-      "key": "_key_u1l14_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u1l14_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Loops Extra Practice",
-      "url": "https://docs.google.com/document/d/1l2Ve97r_9Msl7zKVQmrK446a1SA9ltoVq_SLGIsNA0o/edit?usp=sharing",
-      "key": "_key_u1l7_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u1l7_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] For Loops Extra Practice",
-      "url": "https://docs.google.com/document/d/1pz_eP3zPRcKLibhTtRpL-Of2B7XegCicDLnTezX4k1g/edit?usp=sharing",
-      "key": "_key_u3l4_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u3l4_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Multi-Selection Statements Extra Practice",
-      "url": "https://docs.google.com/document/d/18dJVwk0s1tdCHL5m8kKZIGOUdowsHgaGbn_mSwc0PXM/edit?usp=sharing",
-      "key": "_key_u4l10_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u4l10_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Object Aliases and Equality Extra Practice",
-      "url": "https://docs.google.com/document/d/1xDNVvi6Pe6BhOi2Rwaa5tz5-7H3ah1grjk6xczUax5A/edit?usp=sharing",
-      "key": "_key_u4l6_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u4l6_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Nested If Statements Extra Practice",
-      "url": "https://docs.google.com/document/d/1hPOzNj9M4PrAlDdvRUkzSoc25BYAqk3E4ePwsXlXsSE/edit?usp=sharing",
-      "key": "_key_u4l7_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u4l7_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Logical Operators Extra Practice",
-      "url": "https://docs.google.com/document/d/1EakFvhLw4_TVwGj09jzvyZIgJ0wGfC6fytxQ3gzP3TM/edit?usp=sharing",
-      "key": "_key_u4l8_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u4l8_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] De Morgan's Laws Extra Practice",
-      "url": "https://docs.google.com/document/d/1NailkiwxLDKrXzCubKB_KugNifSvYhtMRmGm_r_axQk/edit?usp=sharing",
-      "key": "_key_u4l9_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u4l9_extra_practice"
       }
     },
     {
@@ -8916,55 +8257,6 @@
       }
     },
     {
-      "name": "CS Bingo Cards",
-      "url": "https://docs.google.com/document/d/190-3YJjtJF4Gr8di3tCd4DQQwJ3SWFTwoNihzyXcQNg/edit?usp=sharing",
-      "key": "cs_bingo_cards_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "cs_bingo_cards_1"
-      }
-    },
-    {
-      "name": "CS Bingo Definitions",
-      "url": "https://docs.google.com/document/d/1O_ojYMEZ1Y68FUtwX7EVurR-16LlG17d1az545wnfcc/edit?usp=sharing",
-      "key": "cs_bingo_definitions_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "cs_bingo_definitions_1"
-      }
-    },
-    {
-      "name": "Implementing String Algorithms Extra Practice",
-      "url": "https://docs.google.com/document/d/18whzRMSzGaTc_y_zAwJGtaVW9FNI9zL5NA-yKa0C03k/edit?usp=sharing",
-      "key": "csa_implementing_string_algorithms_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "csa_implementing_string_algorithms_extra_practice"
-      }
-    },
-    {
-      "name": "Datasets",
-      "url": "https://drive.google.com/file/d/1OhrXnCwCDN4kW4xFnrHVX0srnGjfWA9X/view?usp=sharing",
-      "key": "datasets",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "datasets"
-      }
-    },
-    {
       "name": "De Morgan's Laws",
       "url": "https://docs.google.com/presentation/d/1FPkXR0olfTccXu7rfPvkdzbIY6l4XojqBB_MFj8x8II/edit?usp=drive_link",
       "key": "de_morgan_s_laws",
@@ -8999,19 +8291,6 @@
       },
       "seeding_key": {
         "resource.key": "de_morgan_s_laws_stations"
-      }
-    },
-    {
-      "name": "Finding Patterns",
-      "url": "https://docs.google.com/document/d/1OJIjB4GPp5eqri8qIIceuUGUYl8bzEYXbH3qXIpcg9I/edit?usp=sharing",
-      "key": "finding_patterns",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "finding_patterns"
       }
     },
     {
@@ -9058,18 +8337,6 @@
       },
       "seeding_key": {
         "resource.key": "guide_to_programming_levels_in_csa_4"
-      }
-    },
-    {
-      "name": "Guided Notes: Implementing String Algorithms",
-      "url": "https://docs.google.com/document/d/1SA4P-qcqKoZAV2nnSFITKF18Y3PL9M-WnTcUBFf2IxM/edit?usp=sharing",
-      "key": "guided_notes_implementing_string_algorithms",
-      "properties": {
-        "audience": "Student",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "guided_notes_implementing_string_algorithms"
       }
     },
     {
@@ -9208,18 +8475,6 @@
       }
     },
     {
-      "name": "Nested Iteration Guided Notes",
-      "url": "https://docs.google.com/document/d/1A0gRMtYFIwERoZZWm10ijQYm5Sw3_GnRen5C5608uRw/edit?usp=drive_link",
-      "key": "nested_iteration_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "nested_iteration_guided_notes"
-      }
-    },
-    {
       "name": "Nested Loops",
       "url": "https://youtu.be/xFJoqfqVEbg",
       "key": "nested_loops",
@@ -9314,240 +8569,6 @@
       },
       "seeding_key": {
         "resource.key": "two-way_selection_statements"
-      }
-    },
-    {
-      "name": "Selection Statements Extra Practice",
-      "url": "https://docs.google.com/document/d/1TCtlH9nNgAi6C0S52VFBJSFBO6GNNgiAB2m2ruRtcR8/edit?usp=sharing",
-      "key": "u1l11_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l11_extra_practice"
-      }
-    },
-    {
-      "name": "Selection Statements Guided Notes",
-      "url": "https://docs.google.com/document/d/1g1vA010kYlPyPKXoejO0moqPUSV2PuCK6q3Wxfc9HEM/edit?usp=sharing",
-      "key": "u1l11_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l11_guided_notes"
-      }
-    },
-    {
-      "name": "Two-Way Selection Statements Extra Practice",
-      "url": "https://docs.google.com/document/d/1MKRyMcTHiGQbKTgYL63qPrHWhEJirjXgdWy480Mm0Co/edit?usp=sharing",
-      "key": "u1l14_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l14_extra_practice"
-      }
-    },
-    {
-      "name": "Two-Way Selection Statements Guided Notes",
-      "url": "https://docs.google.com/document/d/1quRjUmGw8rQDOTu4bufSlLzpae7q4RQujT-67JShveM/edit?usp=sharing",
-      "key": "u1l14_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l14_guided_notes"
-      }
-    },
-    {
-      "name": "Loops Extra Practice",
-      "url": "https://docs.google.com/document/d/1pEsYPDjnIB_n9AmNduhZi_vHB-ZIP0YSEFmEBRmAexA/edit?usp=sharing",
-      "key": "u1l7_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l7_extra_practice"
-      }
-    },
-    {
-      "name": "Loops Guided Notes",
-      "url": "https://docs.google.com/document/d/1JEfYPxGY6evQw4U5aD3N4SmvwdByCy0LEPpfuhY2Geg/edit?usp=sharing",
-      "key": "u1l7_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u1l7_guided_notes"
-      }
-    },
-    {
-      "name": "For Loops Extra Practice",
-      "url": "https://docs.google.com/document/d/12XBj7ixvUZgMngl8j9lsTIXFzrvUJ5sroyu6rUOhCVQ/edit?usp=sharing",
-      "key": "u3l4_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u3l4_extra_practice"
-      }
-    },
-    {
-      "name": "For Loops Guided Notes",
-      "url": "https://docs.google.com/document/d/1C8AYNAz9k1hfeBmrPkUsda65aJp7UnACNK60BbN5Uqs/edit?usp=sharing",
-      "key": "u3l4_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u3l4_guided_notes"
-      }
-    },
-    {
-      "name": "Multi-Selection Statements Extra Practice",
-      "url": "https://docs.google.com/document/d/1Rj95LHcmN88kfYNEW8A8vXZtMeS3KT_saBivL7eWLYE/edit?usp=sharing",
-      "key": "u4l10_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u4l10_extra_practice"
-      }
-    },
-    {
-      "name": "Multi-Selection Statements Guided Notes",
-      "url": "https://docs.google.com/document/d/1W-C4EUeersGF_Gywpd6JvrXXVNRH_KgcKEZpRZxap6w/edit?usp=sharing",
-      "key": "u4l10_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u4l10_guided_notes"
-      }
-    },
-    {
-      "name": "Object Aliases and Equality Extra Practice",
-      "url": "https://docs.google.com/document/d/1YVOiViY6uMBgShNJdpHJGhHCEYo_IY_ar-hEu26OdtU/edit?usp=sharing",
-      "key": "u4l6_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u4l6_extra_practice"
-      }
-    },
-    {
-      "name": "Object Aliases and Equality Guided Notes",
-      "url": "https://docs.google.com/document/d/1xKGZgl8DkbacVK0clIvbeB81LvDrvTHF7Z66sawohXs/edit?usp=sharing",
-      "key": "u4l6_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u4l6_guided_notes"
-      }
-    },
-    {
-      "name": "Nested If Statements Extra Practice",
-      "url": "https://docs.google.com/document/d/15Uu9fw7QgO2rm_I9f_IAlUpeeOZe_Vrt1T9GiFKn1I8/edit?usp=sharing",
-      "key": "u4l7_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u4l7_extra_practice"
-      }
-    },
-    {
-      "name": "Nested If Statements Guided Notes",
-      "url": "https://docs.google.com/document/d/1E7rVpmESMuoOEQlg1Vgybbhh1sXHMzJQSkSv4zqXWAU/edit?usp=sharing",
-      "key": "u4l7_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u4l7_guided_notes"
-      }
-    },
-    {
-      "name": "Logical Operators Extra Practice",
-      "url": "https://docs.google.com/document/d/1UwWnEAvQD80wLadTBNOqb0-yNXc1b67nT-2c9WI4hJg/edit?usp=sharing",
-      "key": "u4l8_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u4l8_extra_practice"
-      }
-    },
-    {
-      "name": "Logical Operators Guided Notes",
-      "url": "https://docs.google.com/document/d/1EKx3X5JAe2QtdKvGKW08cocdlU9sAr1E682fwM6BF1E/edit?usp=sharing",
-      "key": "u4l8_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u4l8_guided_notes"
-      }
-    },
-    {
-      "name": "De Morgan's Laws Extra Practice",
-      "url": "https://docs.google.com/document/d/1WtW5w4OSXoGVjuXbEf1KhdLwwS31xjA5n1BsHRC1aGY/edit?usp=sharing",
-      "key": "u4l9_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u4l9_extra_practice"
-      }
-    },
-    {
-      "name": "De Morgan's Laws Guided Notes",
-      "url": "https://docs.google.com/document/d/1cfexcnFv5_YB2SLG3jSmkhSyrcHvVjrZK9WZM3z740Q/edit?usp=sharing",
-      "key": "u4l9_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u4l9_guided_notes"
       }
     },
     {
@@ -9697,19 +8718,7 @@
     {
       "seeding_key": {
         "lesson.key": "De Morgan's Laws",
-        "resource.key": "_exemplar_u4l9_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "De Morgan's Laws",
         "resource.key": "_key_de_morgan_s_laws"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "De Morgan's Laws",
-        "resource.key": "_key_u4l9_extra_practice"
       }
     },
     {
@@ -9732,30 +8741,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "De Morgan's Laws",
-        "resource.key": "u4l9_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "De Morgan's Laws",
-        "resource.key": "u4l9_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops",
-        "resource.key": "_exemplar_u3l4_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops",
-        "resource.key": "_key_u3l4_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "For Loops",
         "resource.key": "for_loops"
       }
@@ -9774,44 +8759,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "For Loops",
-        "resource.key": "u3l4_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops",
-        "resource.key": "u3l4_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Implementing String Algorithms",
-        "resource.key": "_exemplar_csa_implementing_string_algorithms_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Implementing String Algorithms",
-        "resource.key": "_exemplar_guided_notes_implementing_string_algorithms"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Implementing String Algorithms",
-        "resource.key": "csa_implementing_string_algorithms_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Implementing String Algorithms",
         "resource.key": "guide_to_programming_levels_in_csa"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Implementing String Algorithms",
-        "resource.key": "guided_notes_implementing_string_algorithms"
       }
     },
     {
@@ -9823,31 +8772,7 @@
     {
       "seeding_key": {
         "lesson.key": "Logical Operators",
-        "resource.key": "_exemplar_u4l8_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Logical Operators",
         "resource.key": "_key_truth_tables"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Logical Operators",
-        "resource.key": "_key_u4l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Logical Operators",
-        "resource.key": "datasets"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Logical Operators",
-        "resource.key": "finding_patterns"
       }
     },
     {
@@ -9870,30 +8795,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Logical Operators",
-        "resource.key": "u4l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Logical Operators",
-        "resource.key": "u4l8_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops",
-        "resource.key": "_exemplar_u1l7_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops",
-        "resource.key": "_key_u1l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Loops",
         "resource.key": "guide_to_programming_levels_in_csa"
       }
@@ -9907,18 +8808,6 @@
     {
       "seeding_key": {
         "lesson.key": "Loops",
-        "resource.key": "u1l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops",
-        "resource.key": "u1l7_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops",
         "resource.key": "while_loops"
       }
     },
@@ -9926,18 +8815,6 @@
       "seeding_key": {
         "lesson.key": "Loops",
         "resource.key": "writing_algorithms"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Multi-Selection Statements",
-        "resource.key": "_exemplar_u4l10_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Multi-Selection Statements",
-        "resource.key": "_key_u4l10_extra_practice"
       }
     },
     {
@@ -9967,31 +8844,7 @@
     {
       "seeding_key": {
         "lesson.key": "Multi-Selection Statements",
-        "resource.key": "u4l10_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Multi-Selection Statements",
-        "resource.key": "u4l10_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Multi-Selection Statements",
         "resource.key": "writing_algorithms_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested If Statements",
-        "resource.key": "_exemplar_u4l7_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested If Statements",
-        "resource.key": "_key_u4l7_extra_practice"
       }
     },
     {
@@ -10015,25 +8868,7 @@
     {
       "seeding_key": {
         "lesson.key": "Nested If Statements",
-        "resource.key": "u4l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested If Statements",
-        "resource.key": "u4l7_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested If Statements",
         "resource.key": "writing_algorithms_3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested Iteration",
-        "resource.key": "_exemplar_nested_iteration_guided_notes"
       }
     },
     {
@@ -10045,25 +8880,7 @@
     {
       "seeding_key": {
         "lesson.key": "Nested Iteration",
-        "resource.key": "nested_iteration_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested Iteration",
         "resource.key": "nested_loops"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Object Aliases and Equality",
-        "resource.key": "_exemplar_u4l6_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Object Aliases and Equality",
-        "resource.key": "_key_u4l6_extra_practice"
       }
     },
     {
@@ -10092,32 +8909,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Object Aliases and Equality",
-        "resource.key": "u4l6_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Object Aliases and Equality",
-        "resource.key": "u4l6_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Selection Statements",
-        "resource.key": "_exemplar_u1l11_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Selection Statements",
         "resource.key": "_key_investigate_selection_statements"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Selection Statements",
-        "resource.key": "_key_u1l11_extra_practice"
       }
     },
     {
@@ -10147,49 +8940,13 @@
     {
       "seeding_key": {
         "lesson.key": "Selection Statements",
-        "resource.key": "u1l11_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Selection Statements",
-        "resource.key": "u1l11_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Selection Statements",
         "resource.key": "writing_algorithms_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Two-Way Selection Statements",
-        "resource.key": "_exemplar_u1l14_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Two-Way Selection Statements",
         "resource.key": "_key_investigate_selection_and_logic"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Two-Way Selection Statements",
-        "resource.key": "_key_u1l14_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Two-Way Selection Statements",
-        "resource.key": "cs_bingo_cards_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Two-Way Selection Statements",
-        "resource.key": "cs_bingo_definitions_1"
       }
     },
     {
@@ -10214,18 +8971,6 @@
       "seeding_key": {
         "lesson.key": "Two-Way Selection Statements",
         "resource.key": "two-way_selection_statements"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Two-Way Selection Statements",
-        "resource.key": "u1l14_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Two-Way Selection Statements",
-        "resource.key": "u1l14_guided_notes"
       }
     },
     {
@@ -10842,16 +9587,6 @@
       "seeding_key": {
         "lesson.key": "De Morgan's Laws",
         "objective.key": "94ccf25a-ce24-4bba-b52b-69d939914ad4"
-      }
-    },
-    {
-      "key": "a5bf6639-2492-47c4-bff6-6fac02b115a8",
-      "properties": {
-        "description": "Traverse a one-dimensional (1D) array using a `for` loop"
-      },
-      "seeding_key": {
-        "lesson.key": "For Loops",
-        "objective.key": "a5bf6639-2492-47c4-bff6-6fac02b115a8"
       }
     },
     {

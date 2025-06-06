@@ -104,6 +104,9 @@ export default function initPage(unitEditorData) {
           scriptData.missingRequiredDeviceCompatibilities
         }
         allowMajorCurriculumChanges={scriptData.allowMajorCurriculumChanges}
+        initialEnableBlocklyKeyboardNavigation={
+          scriptData.enableBlocklyKeyboardNavigation
+        }
       />
     </Provider>,
     document.querySelector('.edit_container')

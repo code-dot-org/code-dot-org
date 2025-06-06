@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Routers and Redundancy
 
-<img src="https://images.code.org/0d372d6308a4f4ebccb0e1b65ed7c1fa-Screenshot 2025-04-21 at 10.52.56 AM.png" alt="Remember to chat responsibily pop-up" width="250px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
+<img src="https://images.code.org/0d372d6308a4f4ebccb0e1b65ed7c1fa-Screenshot 2025-04-21 at 10.52.56 AM.png" alt="diagram of four routers (1, 8, 6, and 2) and two IP addresses 1.1 and 2.12" width="250px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
 
 
 #### Take a look at the network diagram to the right, and imagine you were trying to send a message from the device with the IP address 1.1 to the device with the IP address 2.12. *What different routes could the message take?*

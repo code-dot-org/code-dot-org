@@ -8,12 +8,23 @@ export type Section =
   | 'Full Width Action Block'
   | 'Button'
   | 'Divider'
+  | 'Editorial Card'
+  | 'FAQ Accordion'
+  | 'Hero Banner Basic'
+  | 'Hero Banner with Background Color'
+  | 'Hero Banner with Background Image'
+  | 'Hero Banner with Image Big'
+  | 'Hero Banner with Image Small'
+  | 'Hero Banner with Video'
+  | 'Hero Banner with Partner Callout'
+  | 'Hero Banner with Announcement Banner'
   | 'Heading'
   | 'Image'
   | 'Image Carousel'
   | 'Localization'
   | 'Overline'
   | 'Paragraph'
+  | 'Rich Text'
   | 'Section - Pattern Dark'
   | 'Section - Pattern Teal'
   | 'Text Link'
@@ -31,7 +42,7 @@ export class AllTheThingsPage extends MarketingPage {
 
   async goto(path?: string) {
     if (!path) {
-      return await super.goto('/engineering/all-the-things');
+      return await super.goto('/engineering/all-the-things?otgeo=us');
     }
 
     return await super.goto(path);

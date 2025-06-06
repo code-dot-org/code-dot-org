@@ -1,0 +1,29 @@
+name 'music-lab-612-pre-q5'
+
+question 'put actual question here'
+
+wrong 'wrong'
+wrong 'wrong'
+wrong 'wrong'
+right 'correct'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Functions
+
+Standard: Decompose a song by creating functions for repeated sections
+
+Lesson: Functions - Practice
+
+Skill Progression: Create a function with at least 2 sounds and call it at least twice
+
+Pretest Modality: Given starting code / shadow blocks, refactor
+
+Posttest Modality: Given starting code / shadow blocks, refactor
+
+MARKDOWN
+
+markdown <<MARKDOWN
+Put the images / context markdown here
+MARKDOWN
