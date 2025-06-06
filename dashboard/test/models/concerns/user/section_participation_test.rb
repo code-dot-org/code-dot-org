@@ -3,7 +3,7 @@ require 'test_helper'
 class SectionParticipationTest < ActiveSupport::TestCase
   describe '#all_sections' do
     subject(:all_sections) {user.all_sections}
-    context 'when the user is a studnet' do
+    context 'when the user is a student' do
       let(:user) {create :student}
 
       it 'returns an empty array' do
