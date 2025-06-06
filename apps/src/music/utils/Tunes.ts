@@ -4,7 +4,7 @@ import {
 } from '../player/interfaces/InstrumentEvent';
 import MusicLibrary from '../player/MusicLibrary';
 
-import {getNoteName, getNotesInKey, Key} from './Notes';
+import {getNoteName, getNotesInKey, Key, isBlackKey} from './Notes';
 
 export const START_OCTAVE = 4;
 export const DISPLAY_OCTAVES = 3;
@@ -79,19 +79,6 @@ export function generateGraphDataFromTune({
   });
 }
 
-const noteColorsSimple = [
-  '#ee0916',
-  '#ff7b00',
-  '#ff0',
-  '#0f0',
-  '#0ff',
-  '#1a9cff',
-  '#c88eee',
-];
-
-//$colors-simple: #ee0916, #ff7b00, #ff0, #0f0, #0ff, #1a9cff, #c88eee;
-//$colors-simple-darker: #bb0710, #bd5b00, #7a7a00, #008a00, #008080, #0076d1, #9930df;
-
 export function getDisplayNotes(
   editorType: EditorType,
   scaleMode: ScaleMode,
@@ -129,10 +116,38 @@ export function getInstruments(editorType: EditorType) {
   return MusicLibrary.getInstance()?.instruments || [];
 }
 
-export function getNoteColor(scaleMode: ScaleMode, noteIndex: number) {
-  if (scaleMode === 'chromatic') {
-    return '#3cfff7';
+const noteColorsSimple = [
+  '#ee0916',
+  '#ff7b00',
+  '#ff0',
+  '#0f0',
+  '#0ff',
+  '#1a9cff',
+  '#c88eee',
+];
+
+const noteColorsSimpleKeys = [
+  '#bb0710',
+  '#bd5b00',
+  '#7a7a00',
+  '#008a00',
+  '#008080',
+  '#0076d1',
+  '#9930df',
+];
+
+export function getNoteColorInfo(scaleMode: ScaleMode, noteValue: number) {
+  if (scaleMode === 'simple') {
+    return {
+      textColor: 'white',
+      keyColor: noteColorsSimpleKeys[noteValue % noteColorsSimpleKeys.length],
+      selectedColor: noteColorsSimple[noteValue % noteColorsSimple.length],
+    };
   } else {
-    return noteColorsSimple[noteIndex % noteColorsSimple.length];
+    return {
+      textColor: isBlackKey(noteValue) ? 'white' : 'black',
+      keyColor: isBlackKey(noteValue) ? 'black' : 'white',
+      selectedColor: '#3cfff7',
+    };
   }
 }

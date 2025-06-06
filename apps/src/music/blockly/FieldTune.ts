@@ -10,7 +10,7 @@ import {
 import {getNoteName, convertRelativeToAbsolutePitch} from '../utils/Notes';
 import {
   generateGraphDataFromTune,
-  getNoteColor,
+  getNoteColorInfo,
   TuneGraphEvent,
   getDisplayNotes,
 } from '../utils/Tunes';
@@ -108,7 +108,7 @@ export default class FieldTune extends GoogleBlockly.Field {
     GoogleBlockly.utils.dom.createSvgElement(
       'rect',
       {
-        fill: '#292f36', // color.neutral_dark,
+        fill: color.neutral_dark,
         x: 1,
         y: 1,
         width: FIELD_WIDTH,
@@ -143,8 +143,6 @@ export default class FieldTune extends GoogleBlockly.Field {
             displayNote => displayNote.note === event.note
           ) !== -1
       );
-    //isNoteAvailableInScaleMode(key, event.note, scaleMode)
-    //);
 
     const graphNotes: TuneGraphEvent[] = generateGraphDataFromTune({
       notes,
@@ -157,20 +155,17 @@ export default class FieldTune extends GoogleBlockly.Field {
     });
 
     graphNotes.forEach(graphNote => {
-      const color = getNoteColor(
+      const {selectedColor} = getNoteColorInfo(
         scaleMode,
         displayNotes.findIndex(
           displayNote => displayNote.note === graphNote.note
         )
       );
-      /*const color = displayNotes.find(
-        displayNote => displayNote.note === graphNote.note
-      )?.colors?.backgroundSelected;*/
 
       GoogleBlockly.utils.dom.createSvgElement(
         'rect',
         {
-          fill: color || 'white',
+          fill: selectedColor || 'white',
           x: graphNote.x,
           y: graphNote.y,
           width: graphNote.width,

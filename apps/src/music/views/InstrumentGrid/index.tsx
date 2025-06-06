@@ -17,11 +17,15 @@ import {
 } from '../../player/interfaces/InstrumentEvent';
 import {
   getPitchName,
-  isBlackKey,
   convertRelativeToAbsolutePitch,
   convertAbsoluteToRelativePitch,
 } from '../../utils/Notes';
-import {EditorType, getDisplayNotes, integers} from '../../utils/Tunes';
+import {
+  EditorType,
+  getDisplayNotes,
+  integers,
+  getNoteColorInfo,
+} from '../../utils/Tunes';
 import LoadingOverlay from '../LoadingOverlay';
 import PreviewControlsV2 from '../PreviewControlsV2';
 import EaseIntoView from '../util/EaseIntoView';
@@ -171,41 +175,20 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
   const interfaceMode =
     editorType === 'drums' ? 'drums' : scaleMode || 'simple';
 
-  const colorsSimple = styles.colorsSimple.split(',');
-  const colorsSimpleDarker = styles.colorsSimpleDarker.split(',');
-
   const getRowInfo = (name: string, note: number) => {
     if (interfaceMode === 'drums') {
       return {style: styles.textLabel, label: name};
     }
 
-    let color = undefined,
-      backgroundColor = undefined,
-      selectedBackgroundColor = undefined;
+    const noteIndex =
+      interfaceMode === 'simple'
+        ? displayNotes.findIndex(displayNote => displayNote.note === note)
+        : note;
 
-    if (interfaceMode === 'simple') {
-      const displayNoteIndex = displayNotes.findIndex(
-        displayNote => displayNote.note === note
-      );
-      if (displayNoteIndex !== -1) {
-        color = 'white';
-        selectedBackgroundColor =
-          colorsSimple[(21 - displayNoteIndex) % colorsSimple.length];
-        backgroundColor =
-          colorsSimpleDarker[
-            (21 - displayNoteIndex) % colorsSimpleDarker.length
-          ];
-      }
-    }
-
-    if (backgroundColor === undefined) {
-      backgroundColor = isBlackKey(note) ? styles.black : styles.white;
-      color = isBlackKey(note) ? styles.white : styles.black;
-    }
-
-    if (selectedBackgroundColor === undefined) {
-      selectedBackgroundColor = styles.selectedColor;
-    }
+    const {textColor, keyColor, selectedColor} = getNoteColorInfo(
+      interfaceMode,
+      noteIndex
+    );
 
     const pitchRowClass = displayNotes.find(
       displayNote => displayNote.note === note
@@ -217,9 +200,9 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
       pitchRowClass,
       style: styles.keyLabel,
       label: getPitchName(note),
-      backgroundColor,
-      color,
-      selectedBackgroundColor,
+      textColor,
+      keyColor,
+      selectedColor,
     };
   };
 
@@ -304,9 +287,9 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
             pitchRowClass,
             style,
             label,
-            backgroundColor,
-            color,
-            selectedBackgroundColor,
+            textColor,
+            keyColor,
+            selectedColor,
           } = getRowInfo(name, note);
 
           return (
@@ -326,7 +309,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
               >
                 <div
                   className={classNames(style, styles.innerCell)}
-                  style={{backgroundColor, color}}
+                  style={{backgroundColor: keyColor, color: textColor}}
                 >
                   {label}
                 </div>
@@ -349,7 +332,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
                         )}
                         style={{
                           backgroundColor: isSelected(note, tick)
-                            ? selectedBackgroundColor
+                            ? selectedColor
                             : undefined,
                         }}
                       />
