@@ -58,6 +58,8 @@ module Cdo::CloudFormation
     # to assist in populating the `Code` Property of a CloudFormation template `AWS::Lambda::Function` Resource.
     # Assumes Lambdas are in `/aws/cloudformation/lambdas/`.
     # @param relative_directory [String] Name of Lambda directory relative to `/aws/cloudformation/lambdas`.
+    # @param environment_variables [Hash] Environment variables to write to `env.json` in the zip package. This is intended
+    # for use in Lambda@Edge functions greater than 4KB in size, which cannot be inlined and do not support Lambda environment variables.
     # @param key_prefix [String] String to prefix on zip package filename (object key) before uploading to S3.
     # @return [String] JSON Deployment package https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html
     def zip_directory(relative_directory, environment_variables: {}, key_prefix: 'lambda')

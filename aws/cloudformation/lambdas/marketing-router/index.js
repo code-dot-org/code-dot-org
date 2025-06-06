@@ -1,7 +1,7 @@
 'use strict';
 const env = require('env.json');
 
-// This variable is set via a CloudFormation parameter and passed in at build time.
+// This variable is set via Ruby code in cloud_formation_stack.yml.erb and passed in when the function is built.
 // It should contain the environment-specific domain of the marketing site Cloudfront distribution
 const marketingDomain = env.marketingDomain
 
