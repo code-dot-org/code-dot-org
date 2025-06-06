@@ -36,7 +36,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-03 14:57:33 UTC",
+    "serialized_at": "2025-06-04 14:16:34 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6709,7 +6709,7 @@
     },
     {
       "name": "Introduction to Data Science",
-      "url": "https://docs.google.com/presentation/d/1IzfzxF4S1cT-t4r5h8MBB1378duO71zzw5UVpcVJSM8/edit?usp=drivesdk",
+      "url": "https://docs.google.com/presentation/d/1pQYxYQZlE9Kl7H_a8yxVp7Y2H3W5gDAETPWR7PGa1u4/edit?usp=sharing",
       "key": "introduction_to_data_science",
       "properties": {
         "audience": "Teacher",
