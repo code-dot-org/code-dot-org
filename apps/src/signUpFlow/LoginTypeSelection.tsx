@@ -285,28 +285,32 @@ const LoginTypeSelection: React.FunctionComponent<{
             />
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
-          {showMoreOptions && !revealClever && (
-            <Button
-              text="show more options"
-              onClick={() => setRevealClever(true)}
-            />
-          )}
-          {(!hideCleverOption || revealClever) && (
-            <form action="/users/auth/clever" method="POST">
+          <form action="/users/auth/clever" method="POST">
+            {showMoreOptions && !revealClever && (
               <Button
-                text={locale.sign_up_clever()}
-                onClick={() => selectOauthLoginType('clever')}
-                iconLeft={{iconName: 'kit fa-clever', iconStyle: 'solid'}}
-                className={style.cleverButton}
-                buttonTagTypeAttribute="submit"
+                text="Show more options"
+                onClick={() => setRevealClever(true)}
+                type="secondary"
+                iconRight={{iconName: 'caret-down'}}
               />
-              <input
-                type="hidden"
-                name="authenticity_token"
-                value={authToken}
-              />
-            </form>
-          )}
+            )}
+            {(!hideCleverOption || revealClever) && (
+              <>
+                <Button
+                  text={locale.sign_up_clever()}
+                  onClick={() => selectOauthLoginType('clever')}
+                  iconLeft={{iconName: 'kit fa-clever', iconStyle: 'solid'}}
+                  className={style.cleverButton}
+                  buttonTagTypeAttribute="submit"
+                />
+                <input
+                  type="hidden"
+                  name="authenticity_token"
+                  value={authToken}
+                />
+              </>
+            )}
+          </form>
           <div className={style.greyTextbox}>
             {!isTeacher && (
               <div className={style.iconContainer}>
