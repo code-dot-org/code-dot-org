@@ -4,6 +4,7 @@ import QRCode from 'qrcode.react';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {OPEN_ENDED_LEGACY_PROJECT_TYPES} from '@cdo/apps/constants';
 import fontConstants from '@cdo/apps/fontConstants';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -158,7 +159,7 @@ class ShareAllowedDialog extends React.Component {
 
   sharingDisabled = () =>
     this.props.userSharingDisabled &&
-    ['applab', 'gamelab', 'weblab'].includes(this.props.appType);
+    OPEN_ENDED_LEGACY_PROJECT_TYPES.includes(this.props.appType);
 
   close = () => {
     recordShare('SHARING_CLOSE_ESCAPE', this.props.appType);
@@ -324,7 +325,7 @@ class ShareAllowedDialog extends React.Component {
         >
           {this.sharingDisabled() && (
             <div style={{position: 'relative'}}>
-              <div style={{paddingRight: 10}}>
+              <div style={{margin: 10, paddingRight: 10}}>
                 <p>{i18n.sharingBlockedByTeacherOpenEndedProjects()}</p>
               </div>
               <div style={{clear: 'both', height: 40}}>
