@@ -170,7 +170,6 @@ export default class FieldTune extends GoogleBlockly.Field {
           y: graphNote.y,
           width: graphNote.width,
           height: graphNote.height,
-          rx: 1,
         },
         this.backgroundElement
       );
