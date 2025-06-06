@@ -211,9 +211,9 @@ GEM
     aws-sdk-autoscaling (1.128.0)
       aws-sdk-core (~> 3, >= 3.210.0)
       aws-sigv4 (~> 1.5)
-    aws-sdk-bedrockagentruntime (1.38.0)
-      aws-sdk-core (~> 3, >= 3.210.0)
-      aws-sigv4 (~> 1.5)
+    aws-sdk-bedrockagentruntime (1.10.0)
+      aws-sdk-core (~> 3, >= 3.193.0)
+      aws-sigv4 (~> 1.1)
     aws-sdk-cloudformation (1.124.0)
       aws-sdk-core (~> 3, >= 3.210.0)
       aws-sigv4 (~> 1.5)
@@ -1168,4 +1168,4 @@ RUBY VERSION
    ruby 3.1.0p0
 
 BUNDLED WITH
-   2.5.17
+   2.3.22
