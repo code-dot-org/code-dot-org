@@ -7,7 +7,6 @@ import {
 } from '@code-dot-org/component-library/typography';
 import Drawer from '@mui/material/Drawer';
 import React from 'react';
-import {useSearchParams} from 'react-router-dom';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -33,8 +32,6 @@ interface DrawerData {
 }
 
 export const TeacherHomepageDrawer: React.FC = () => {
-  const [searchParams] = useSearchParams();
-
   const [schoolInfoInterstitialOpen, setSchoolInfoInterstitialOpen] =
     React.useState(false);
   const [schoolInfoConfirmationOpen, setSchoolInfoConfirmationOpen] =
@@ -59,6 +56,7 @@ export const TeacherHomepageDrawer: React.FC = () => {
 
       // If the URL has a query param to show the interstitial or confirmation,
       // we want to set that state to true to open the drawer.
+      const searchParams = new URLSearchParams(window.location.search);
       if (searchParams.get('showSchoolInfoInterstitial') === 'true') {
         setSchoolInfoInterstitialOpen(true);
         // We don't want to set both to true at the same time
@@ -70,7 +68,6 @@ export const TeacherHomepageDrawer: React.FC = () => {
     setExistingSchoolInfo,
     setSchoolInfoInterstitialOpen,
     setSchoolInfoConfirmationOpen,
-    searchParams,
   ]);
   const inUSA = useAppSelector(state => state.currentUser.inUSA);
   const schoolInfo = useSchoolInfo({
