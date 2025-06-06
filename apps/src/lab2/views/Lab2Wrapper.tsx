@@ -120,6 +120,12 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
   useLifecycleNotifier(LifecycleEvent.LevelChangeRequested, cancel);
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, cancel);
 
+  const blockedType = isBlockedAbuse
+    ? 'projectAbuse'
+    : projectSharingDisabled
+    ? 'projectSharingDisabled'
+    : undefined;
+
   return (
     <ErrorBoundary
       fallback={<ErrorFallbackPage />}
@@ -143,8 +149,11 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
         <Loading isLoading={isLoading} />
 
         {isPageError && <ErrorUI message={errorMessage} />}
-        {isBlockedAbuse && (
-          <ProjectBlockedUI isProjectValidator={isProjectValidator} />
+        {blockedType && (
+          <ProjectBlockedUI
+            blockedType={blockedType}
+            isProjectValidator={isProjectValidator}
+          />
         )}
       </div>
     </ErrorBoundary>

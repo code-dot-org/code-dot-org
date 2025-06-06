@@ -12,6 +12,7 @@ import {
   ThunkDispatch,
 } from '@reduxjs/toolkit';
 
+import {OPEN_ENDED_LAB2_PROJECT_TYPES} from '@cdo/apps/constants';
 import {
   getPublicCaching,
   getAppOptionsEditBlocks,
@@ -396,13 +397,16 @@ const labSlice = createSlice({
         sharingDisabled?: boolean;
       }>
     ) {
+      const levelProperties = action.payload.levelProperties;
       state.channel = action.payload.channel;
-      state.levelProperties = action.payload.levelProperties;
+      state.levelProperties = levelProperties;
       state.initialSources = action.payload.initialSources;
       if (typeof action.payload.abuseScore === 'number') {
         state.isBlockedAbuse = action.payload.abuseScore >= 15 ? true : false;
       }
-      state.projectSharingDisabled = action.payload.sharingDisabled;
+      state.projectSharingDisabled =
+        action.payload.sharingDisabled &&
+        OPEN_ENDED_LAB2_PROJECT_TYPES.includes(levelProperties.appName);
     },
     setIsShareView(state, action: PayloadAction<boolean>) {
       state.isShareView = action.payload;
