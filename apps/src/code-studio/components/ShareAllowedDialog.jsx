@@ -324,7 +324,10 @@ class ShareAllowedDialog extends React.Component {
           hideBackdrop={hideBackdrop}
         >
           {this.sharingDisabled() && (
-            <div style={{position: 'relative'}}>
+            <div
+              style={{position: 'relative'}}
+              id="sharing-disabled-legacy-dialog"
+            >
               <div style={{margin: 10, paddingRight: 10}}>
                 <p>{i18n.sharingBlockedByTeacherOpenEndedProjects()}</p>
               </div>

@@ -13,6 +13,11 @@ Feature: Project Sharing - Young Students
     Then I make a "dance" project named "Dance Project"
     And I open the project share dialog
     And element "#sharing-dialog-copy-button" is enabled
+  
+  Scenario: Young Student Not In Teacher Section Cannot Share Open-ended Projects via URL
+  Then I make a "spritelab" project named "Sprite Lab Project"
+  And I open the project share dialog
+  And element "#sharing-disabled-legacy-dialog" is visible
 
   Scenario: Young Students Can Not By Default Make App Lab Projects
     Then I am on "http://studio.code.org/projects/applab/new"
