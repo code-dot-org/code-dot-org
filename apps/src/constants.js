@@ -200,3 +200,5 @@ export const OPEN_ENDED_LEGACY_PROJECT_TYPES = [
   'poetry',
   'playlab',
 ];
+
+export const OPEN_ENDED_LAB2_PROJECT_TYPES = ['pythonlab', 'weblab2'];
