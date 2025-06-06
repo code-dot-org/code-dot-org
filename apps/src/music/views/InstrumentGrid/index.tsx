@@ -155,7 +155,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
         'chromatic',
         currentValue.instrument,
         MusicRegistry.player.getKey()
-      ).sort((a, b) => b.note - a.note), // Sort descending
+      ),
     [editorType, currentValue.instrument]
   );
 
@@ -166,7 +166,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
         scaleMode || 'simple',
         currentValue.instrument,
         MusicRegistry.player.getKey()
-      ).sort((a, b) => b.note - a.note), // Sort descending
+      ),
     [editorType, scaleMode, currentValue.instrument]
   );
 
@@ -180,14 +180,9 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
       return {style: styles.textLabel, label: name};
     }
 
-    const noteIndex =
-      interfaceMode === 'simple'
-        ? displayNotes.findIndex(displayNote => displayNote.note === note)
-        : note;
-
     const {textColor, keyColor, selectedColor} = getNoteColorInfo(
       interfaceMode,
-      noteIndex
+      displayNotes.findIndex(displayNote => displayNote.note === note)
     );
 
     const pitchRowClass = displayNotes.find(
@@ -221,8 +216,8 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
     const cellHeightWithGap = parseInt(cellHeight) + parseInt(rowGap);
 
     return [
-      scrollStartRow * cellHeightWithGap,
-      topVisibleRow * cellHeightWithGap - parseInt(peekHeight),
+      -(scrollStartRow * cellHeightWithGap),
+      -(topVisibleRow * cellHeightWithGap - parseInt(peekHeight)),
     ];
   }, [displayNotes.length, editorType, scaleMode]);
 
@@ -282,7 +277,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
         scrollEnd={scrollEnd}
         className={classNames(styles[`sequence-editor-${interfaceMode}`])}
       >
-        {allNotes.map(({note, name}, i) => {
+        {allNotes.map(({note, name}) => {
           const {
             pitchRowClass,
             style,

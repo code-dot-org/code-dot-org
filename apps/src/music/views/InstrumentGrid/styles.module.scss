@@ -61,6 +61,7 @@ $peek-height: 5px;
 .sequence-editor-chromatic {
   @extend %sequence-editor;
   max-height: ($cell-height + $row-gap) * $display-rows + ($peek-height * 2);
+  flex-direction: column-reverse;
 }
 
 .pitchRow {
