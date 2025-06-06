@@ -186,19 +186,23 @@ class TestSection
       data = options[:data_per_student][index]
 
       # Create user levels based on the provided data
-      data.each do |level_id, level_data|
-        level = Level.find_by(id: level_id)
+      data.each do |level_name, level_data|
+        level = Level.find_by(name: level_name)
+
+        if level.nil?
+          raise "Level with name '#{level_name}' not found. Please check the level names in the data."
+        end
 
         level_source = level_data[:level_source]
         level_source_id = nil
         unless level_source.nil?
-          level_source_id = create(:level_source, level_id: level_id, data: level_source[:data]).id
+          level_source_id = create(:level_source, level_id: level.id, data: level_source[:data]).id
         end
 
         user_level = level_data[:user_level]
         unless user_level.nil?
           create :user_level, user: student_user, script_id: unit_id,
-            level_id: level_id, attempts: user_level[:attempts],
+            level_id: level.id, attempts: user_level[:attempts],
             best_result: user_level[:best_result], level_source_id: level_source_id
 
           # Create a backing channel for this level if it's a type that needs it

@@ -17,7 +17,7 @@ class TestSectionData
     grade: [10],
     age: 15,
     data_per_student: [{
-      11967 => {
+      "CSP U4 Pre-Unit Pulse Q1_2024" => {
         user_level: {
           attempts: 1,
           best_result: 30
@@ -26,7 +26,7 @@ class TestSectionData
           data: 'test free response text',
         },
       },
-      3538 => {
+      "CSP U4 My Pet Rock Example App_2024" => {
         user_level: {
           attempts: 1,
           best_result: 30
@@ -35,28 +35,58 @@ class TestSectionData
           comment: 'test teacher feedback',
         }
       },
-      53102 => {
+      "U1 L02 CYU MC2022_2024" => {
         user_level: {
           attempts: 1,
           best_result: 100
+        },
+      },
+      "U4 L03 Variables numbers practice 4_2024" => {
+        user_level: {
+          attempts: 1,
+          best_result: 100
+        },
+        teacher_feedback: {
+          comment: 'test teacher feedback',
         }
       },
-    }, {
-      11967 => {
-        user_level: {
-          attempts: 1,
-          best_result: 100
-        },
-        level_source: {
-          data: 'test free response text',
-        },
-      },
-      53102 => {
+      "U4 L03 Variables operator practice 5_2024" => {
         user_level: {
           attempts: 1,
           best_result: 30
         }
       },
-    },]
+    }, {
+      "CSP U4 Pre-Unit Pulse Q1_2024" => {
+        user_level: {
+          attempts: 1,
+          best_result: 30
+        },
+        level_source: {
+          data: 'test free response text',
+        },
+      },
+      "U1 L02 CYU MC2022_2024" => {
+        user_level: {
+          attempts: 1,
+          best_result: 100
+        },
+      },
+      "U4 L03 Variables numbers practice 4_2024" => {
+        user_level: {
+          attempts: 1,
+          best_result: 100
+        },
+        teacher_feedback: {
+          comment: 'test teacher feedback',
+        }
+      },
+      "U4 L03 Variables operator practice 5_2024" => {
+        user_level: {
+          attempts: 1,
+          best_result: 30
+        }
+      },
+    }]
   }
 end
