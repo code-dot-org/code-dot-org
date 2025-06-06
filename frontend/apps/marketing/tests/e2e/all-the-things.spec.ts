@@ -110,7 +110,7 @@ test.describe('All the things UI e2e test', () => {
       'OpenGraph Description',
     );
     expect(await allTheThingsPage.getOpenGraph('image')).toBe(
-      'https://contentful-images.code.org/90t6bu6vlf76/4hXiOPiRlCXpmtypRNOZqc/9ebe430094c1ae1faf742e1de3f8aa8b/engineering-only-opengraph-default.png',
+      'https://contentful-images.code.org/90t6bu6vlf76/4hXiOPiRlCXpmtypRNOZqc/9ebe430094c1ae1faf742e1de3f8aa8b/engineering-only-opengraph-default.png?fm=avif',
     );
     expect(await allTheThingsPage.getOpenGraph('type')).toBe('website');
   });
