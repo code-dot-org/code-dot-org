@@ -90,7 +90,7 @@ Scenario: Teacher can delete a section from the section options dropdown
     And I create a new student section
     And I use a cookie to mock the DCDO key "teacher-homepage-v2" as "true"
     And I am on "http://studio.code.org/teacher_dashboard/home"
-    And I click "#ui-test-empty-state-button-Add-students" once i exists
+    Then I click "#ui-test-empty-state-button-Add-students" once i exists
     Then I wait to see "#uitest-manage-students-table"
 
   Scenario: Teacher can view student progress from the "View progress" button on the section card
@@ -98,7 +98,7 @@ Scenario: Teacher can delete a section from the section options dropdown
     And I create a new student section
     And I use a cookie to mock the DCDO key "teacher-homepage-v2" as "true"
     And I am on "http://studio.code.org/teacher_dashboard/home"
-    And I click "#task-button-View-progress" once it exists
+    Then I click "#task-button-View-progress" once it exists
     Then I wait to see "h1:contains(Progress)"
 
   Scenario: Teacher can view lesson materials from the "View lesson materials" button on the section card
@@ -106,7 +106,7 @@ Scenario: Teacher can delete a section from the section options dropdown
     And I create a new student section assigned to "interactive-games-animations-2024"
     And I use a cookie to mock the DCDO key "teacher-homepage-v2" as "true"
     And I am on "http://studio.code.org/teacher_dashboard/home"
-    And I click "#task-button-View-lesson-materials" once it exists
+    Then I click "#task-button-View-lesson-materials" once it exists
     Then I wait to see "h1:contains(Lesson Materials)"
 
   @eyes
