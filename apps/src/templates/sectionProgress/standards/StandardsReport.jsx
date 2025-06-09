@@ -61,8 +61,17 @@ function StandardsReport({
         window.opener.teacherDashboardStoreInformation.scriptId;
       const courseVersionIdFromTD =
         window.opener.teacherDashboardStoreInformation.courseVersionId;
+      const courseIdFromTD =
+        window.opener.teacherDashboardStoreInformation.courseId;
+      const unitPositionFromTD =
+        window.opener.teacherDashboardStoreInformation.unitPosition;
       setUnit(scriptIdFromTD, courseVersionIdFromTD);
-      loadUnitProgress(scriptIdFromTD, sectionId, courseId, unitPosition);
+      loadUnitProgress(
+        scriptIdFromTD,
+        sectionId,
+        courseIdFromTD,
+        unitPositionFromTD
+      );
     } catch (e) {
       throw new Error(
         '/standards_report must be opened from the `generate PDF report` button of the Standards tab on the v1 progress page on a section assigned to curriculum that has standards (e.g. `Course C (2023)`).'
