@@ -90,13 +90,19 @@ Scenario: Teacher can delete a section from the section options dropdown
     And I create a new student section
     And I use a cookie to mock the DCDO key "teacher-homepage-v2" as "true"
     And I am on "http://studio.code.org/teacher_dashboard/home"
-    Then I click "#ui-test-empty-state-button-Add-students" once i exists
+    Then I click "#ui-test-empty-state-button-Add-students" once it exists
     Then I wait to see "#uitest-manage-students-table"
 
   Scenario: Teacher can view student progress from the "View progress" button on the section card
-    Given I am a teacher
-    And I create a new student section
+    Given I create a teacher named "Teacher Hank"
     And I use a cookie to mock the DCDO key "teacher-homepage-v2" as "true"
+    And I sign in as "Teacher Hank" and go home
+    And I get levelbuilder access
+    And I create a new student section assigned to "interactive-games-animations-2024" and save the section
+    Then I create a student named "Bobby"
+    And I sign in as "Bobby"
+    And I join the section
+    Then I sign out and sign in as "Teacher Hank"
     And I am on "http://studio.code.org/teacher_dashboard/home"
     Then I click "#task-button-View-progress" once it exists
     Then I wait to see "h1:contains(Progress)"
