@@ -112,7 +112,7 @@ Scenario: Teacher can delete a section from the section options dropdown
     And I create a new student section assigned to "interactive-games-animations-2024"
     And I use a cookie to mock the DCDO key "teacher-homepage-v2" as "true"
     And I am on "http://studio.code.org/teacher_dashboard/home"
-    Then I click "#task-button-View-lesson-materials" once it exists
+    Then I click "#task-button-View-lesson materials" once it exists
     Then I wait to see "h1:contains(Lesson Materials)"
 
   @eyes
