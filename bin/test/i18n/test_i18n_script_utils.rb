@@ -60,7 +60,7 @@ describe I18nScriptUtils do
     let(:to_crowdin_yaml) {described_class.to_crowdin_yaml(to_crowdin_yaml_data)}
 
     let(:to_crowdin_yaml_data) {{en: {'test' => '#example', 'yes' => 'y'}}}
-    let(:to_crowdin_yaml_output) {"---\n:en:\n  test: \"#example\"\n  'yes': 'y'\n"}
+    let(:to_crowdin_yaml_output) {"---\n:en:\n  test: \"#example\"\n  'yes': \"y\"\n"}
 
     it 'returns correctly formatted yaml' do
       _(to_crowdin_yaml).must_equal to_crowdin_yaml_output

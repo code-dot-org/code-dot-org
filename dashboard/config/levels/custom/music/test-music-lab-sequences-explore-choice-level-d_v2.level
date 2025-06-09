@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:56:29.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Debugging with Eva\r\n\r\nA **bug** in your code is when something about your program isn't working correctly. **Debugging** is the process of finding bugs and fixing them so everything works like you'd expect!\r\n\r\nEva is trying to get all of her sounds to play together and match the timeline below. Can you help her **debug** her code to it matches the example?\r\n\r\nYou only need to rearrange Eva's blocks to complete this level! You don't need to add anything new!\r\n\r\n![](https://images.code.org/9516279ddc87971f6ea1c022e2cbfa9c-image-1742937610853.png)",
+    "long_instructions": "#### Debugging with Eva\r\n\r\nEva is trying to get all of her sounds to play together and match the timeline below. Can you help her **debug** her code to it matches the example? **Debugging** is the process of finding bugs and fixing them so everything works like you'd expect!\r\n\r\nYou only need to rearrange Eva's blocks to complete this level! You don't need to add anything new!\r\n\r\n![](https://images.code.org/9516279ddc87971f6ea1c022e2cbfa9c-image-1742937610853.png)",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -322,8 +323,7 @@
     "name_suffix": "_v2",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:29.931+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-choice-level-d\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-choice-level-d\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:29.931+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-choice-level-d\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-choice-level-d\"},{\"changed_at\":\"2025-06-06 21:29:29 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

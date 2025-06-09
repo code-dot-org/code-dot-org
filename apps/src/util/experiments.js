@@ -64,6 +64,8 @@ experiments.BLOCKLY_KEYBOARD_NAVIGATION = 'blockly-keyboard-navigation';
 experiments.MODULARITY = 'modularity';
 // Allows users to view the download progress CSV button on the section progress page
 experiments.DOWNLOAD_PROGRESS_CSV = 'download-progress-csv';
+// LocalizeJS
+experiments.LOCALIZEJS = 'localizejs';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,
