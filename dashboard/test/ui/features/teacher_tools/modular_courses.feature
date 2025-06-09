@@ -94,7 +94,7 @@ Feature: Using Modular Courses
     And I select the "UI Test Shared Unit" option in dropdown "unit-selector-v2"
     And I wait until element "#ui-test-lesson-header-1" is visible
     And I click selector "#ui-test-lesson-header-1"
-    And I wait until element "#ui-test-courses-ui-test-course-2017-units-1-lessons-1-levels-1-cell-data" is visible
+    And I wait until element "#ui-test-courses-ui-test-course-2017-units-3-lessons-1-levels-1-cell-data" is visible
     Then I see no difference for "modular course progress - first section"
 
     Then I select the "Course 2019" option in dropdown "uitest-sidebar-section-dropdown"
@@ -103,7 +103,7 @@ Feature: Using Modular Courses
     And I select the "UI Test Shared Unit" option in dropdown "unit-selector-v2"
     And I wait until element "#ui-test-lesson-header-1" is visible
     And I click selector "#ui-test-lesson-header-1"
-    And I wait until element "#ui-test-courses-ui-test-course-2019-units-1-lessons-1-levels-1-cell-data" is visible
+    And I wait until element "#ui-test-courses-ui-test-course-2019-units-3-lessons-1-levels-1-cell-data" is visible
     Then I see no difference for "modular course progress - second section"
 
     And I close my eyes
