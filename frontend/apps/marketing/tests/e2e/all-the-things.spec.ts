@@ -235,7 +235,7 @@ test.describe('All the things UI e2e test', () => {
         await component.scrollIntoViewIfNeeded();
       });
 
-      test('renders default action block pattern', async () => {
+      test('renders default action block pattern with hidden elements', async () => {
         const sectionHeading = component.getByText('Heading');
         const sectionParagraph = component.getByText('Paragraph');
         const sectionButton = component.getByText('Button');
