@@ -159,22 +159,6 @@ When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
   wait_until {!@browser.find_elements(selection_criteria).empty?}
 end
 
-When /^I wait until I see (\d*) of element "([.#])([^"]*)"$/ do |num, selector_symbol, selector|
-  selection_criteria = selector_symbol == '#' ? {id: selector} : {class: selector}
-  wait_until {@browser.find_elements(selection_criteria).length == num.to_i}
-end
-
-When /^I do not see element "([.#])([^"]*)"$/ do |selector_symbol, selector|
-  selection_criteria = selector_symbol == '#' ? {id: selector} : {class: selector}
-  expect(@browser.find_elements(selection_criteria).empty?).to eq(true)
-end
-
-When /^I press element (\d*) with selector "([.#])([^"]*)"(?: to load a new (page|tab))?$/ do |index, selector_symbol, selector, load|
-  selection_criteria = selector_symbol == '#' ? {id: selector} : {class: selector}
-  element = @browser.find_elements(selection_criteria)[index.to_i]
-  page_load(load) {element.click}
-end
-
 When /^I go to a new tab$/ do
   page_load('tab', blank_tab: true) do
     @browser.execute_script('window.open();')
