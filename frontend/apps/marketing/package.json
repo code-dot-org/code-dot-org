@@ -40,7 +40,7 @@
   "dependencies": {
     "@code-dot-org/component-library": "workspace:*",
     "@code-dot-org/fonts": "workspace:*",
-    "@contentful/experiences-sdk-react": "^1.40.2-beta.0",
+    "@contentful/experiences-sdk-react": "^1.39.0",
     "@contentful/rich-text-html-renderer": "^17.0.0",
     "@contentful/rich-text-plain-text-renderer": "^17.0.0",
     "@newrelic/browser-agent": "^1.290.0",
