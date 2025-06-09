@@ -5,6 +5,8 @@ import {MarketingPage} from './marketing';
 export type Section =
   | 'Action Block'
   | 'Action Block Carousel'
+  | 'Action Block Pattern Default'
+  | 'Action Block Pattern Hidden Elements'
   | 'Full Width Action Block'
   | 'Button'
   | 'Divider'

@@ -190,6 +190,78 @@ test.describe('All the things UI e2e test', () => {
       });
     });
 
+    test.describe('action block pattern default', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator(
+          'Action Block Pattern Default',
+        );
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('renders default action block pattern', async () => {
+        const sectionHeading = component.getByText('Heading');
+        const sectionParagraph = component.getByText('Paragraph');
+        const sectionButton = component.getByText('Button');
+        const actionBlockTitle = component.getByText('Action Block Title');
+        const actionBlockImage = component.locator('img[alt=""]');
+        const actionBlockDesc = component.locator(
+          'Action block description goes here.',
+        );
+        const actionBlockPrimaryButton = component.getByText('Primary button');
+
+        await expect(sectionHeading).toBeVisible();
+        await expect(sectionParagraph).toBeVisible();
+        expect(await sectionButton.count()).toBe(2);
+        expect(await actionBlockTitle.count()).toBe(3);
+        expect(await actionBlockImage.count()).toBe(3);
+        expect(await actionBlockDesc.count()).toBe(3);
+        expect(await actionBlockPrimaryButton.count()).toBe(3);
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('action block pattern hidden elements', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator(
+          'Action Block Pattern Hidden Elements',
+        );
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('renders default action block pattern', async () => {
+        const sectionHeading = component.getByText('Heading');
+        const sectionParagraph = component.getByText('Paragraph');
+        const sectionButton = component.getByText('Button');
+        const actionBlockTitle = component.getByText('Action Block Title');
+        const actionBlockImage = component.locator('img[alt=""]');
+        const actionBlockDesc = component.locator(
+          'Action block description goes here.',
+        );
+        const actionBlockPrimaryButton = component.getByText('Primary button');
+
+        await expect(sectionHeading).toBeVisible();
+        // Section paragraph should be hidden
+        await expect(sectionParagraph).not.toBeVisible();
+        // Section buttons should be hidden
+        expect(await sectionButton.count()).toBe(0);
+        expect(await actionBlockTitle.count()).toBe(3);
+        expect(await actionBlockImage.count()).toBe(3);
+        expect(await actionBlockDesc.count()).toBe(3);
+        expect(await actionBlockPrimaryButton.count()).toBe(3);
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
     test.describe('full width action block', () => {
       let component: Locator;
 
