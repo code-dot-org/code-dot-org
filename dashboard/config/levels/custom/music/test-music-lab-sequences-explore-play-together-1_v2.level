@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:56:27.000Z",
   "level_num": "custom",
@@ -155,7 +156,7 @@
       },
       {
         "key": "test-music-lab-sequences-explore-play-together-1_10ebe92f-d7e0-4e94-838c-08201b2d7599",
-        "message": "<!-- Checks that all sounds play together -->\n\nMake sure all sounds play together! [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id-up-inside:play_sounds_together).",
+        "message": "Make sure all sounds play together! [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id-up-inside:play_sounds_together).",
         "next": false,
         "conditions": [
           {
@@ -163,7 +164,8 @@
             "value": 2
           }
         ],
-        "callout": "id-up-inside:play_sounds_together"
+        "callout": "id-up-inside:play_sounds_together",
+        "comment": "Checks that all sounds play together "
       }
     ],
     "predict_settings": {
@@ -172,7 +174,7 @@
     "exemplar_settings": {
       "playerEnabled": true,
       "validationEnabled": true,
-      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationSuccessMessage": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: \"You Did It!\"",
       "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
       "playerTitle": "Example",
       "validationMode": "default"
@@ -181,8 +183,7 @@
     "name_suffix": "_v2",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:27.676+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-play-together-1\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-play-together-1\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:27.676+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-play-together-1\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-play-together-1\"},{\"changed_at\":\"2025-06-06 19:26:38 +0000\",\"changed\":[\"validations\",\"predict_settings\",\"exemplar_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -1,0 +1,26 @@
+name 'music-lab-612-post-q3'
+
+wrong 'wrong'
+wrong 'wrong'
+wrong 'wrong'
+right 'use play together instead of play sequential'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Loops
+
+Standard: Use nested loops to repeat phrases of a song
+
+Lesson: Loops - Practice
+
+Skill Progression: Repeat at least 2 sounds of different lengths with nested loops
+
+Pretest Modality: Given starting code / shadow blocks, refactor
+
+Posttest Modality: Given starting code / shadow blocks, refactor
+MARKDOWN
+
+markdown <<MARKDOWN
+question in the markdown
+MARKDOWN

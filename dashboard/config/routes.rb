@@ -34,6 +34,7 @@ Dashboard::Application.routes.draw do
     # React-router will handle sub-routes on the client.
     resource :teacher_dashboard, only: [] do
       get :home, controller: :teacher_dashboard, action: :show
+      get :get_school_info_interstitial_data, controller: :teacher_dashboard, action: :get_school_info_interstitial_data
       resources :sections, only: %i[show], param: :section_id, controller: :teacher_dashboard do
         member do
           get :parent_letter
@@ -65,6 +66,9 @@ Dashboard::Application.routes.draw do
     resources :student_work_evaluation_summaries, only: [:create]
 
     resources :user_level_interactions, only: [:create]
+
+    resources :skills, only: [:create]
+    resources :levels_skills, only: [:create]
 
     patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
 

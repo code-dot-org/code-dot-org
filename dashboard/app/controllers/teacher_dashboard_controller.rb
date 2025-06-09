@@ -53,4 +53,17 @@ class TeacherDashboardController < ApplicationController
     @sections = current_user.sections_instructed.map(&:concise_summarize)
     render layout: false
   end
+
+  def get_school_info_interstitial_data
+    show_school_info_interstitial = SchoolInfoInterstitialHelper.show?(current_user)
+    show_school_info_confirmation = SchoolInfoInterstitialHelper.show_confirmation_dialog?(current_user)
+
+    SchoolInfoInterstitialHelper.update_last_seen_timestamp(current_user) if @show_school_info_interstitial || @show_school_info_confirmation_dialog
+    school_info = Queries::SchoolInfo.current_school(current_user)
+    render json: {
+      showSchoolInfoInterstitial: show_school_info_interstitial,
+      showSchoolInfoConfirmationDialog: show_school_info_confirmation,
+      schoolInfo: school_info,
+    }
+  end
 end

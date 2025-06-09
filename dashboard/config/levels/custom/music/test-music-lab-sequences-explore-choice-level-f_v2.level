@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:56:30.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Simplifying with Annie\r\n\r\n**Abstraction** is when you focus on important information only and remove unimportant details. For example, Annie got too excited and added a ton of duplicate blocks and <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-waveform\" style=\"color: #F3DF55; margin-right: 2px\"></i> Effect </span> blocks to her song and now it doesn't sound very good. She needs help simplifying her code!\r\n\r\nUse **Abstraction** to focus just on <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-drum\" style=\"color: #E565F5; margin-right: 2px\"></i> Beat </span>, <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-boombox\" style=\"color: #58BEF9; margin-right: 2px\"></i> Bass </span>, and <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-guitars\" style=\"color: #64D25A; margin-right: 2px\"></i> Lead </span> tracks. Each `play together` blocks should have just these three types of tracks in them so it matches the example.\r\n\r\nYou only need to remove blocks from Annie's code to complete this level! You don't need to add anything new!\r\n\r\n![](https://images.code.org/ccca247c75eb0ac57c2ac7009df869da-image-1742940511673.png)",
+    "long_instructions": "#### Simplifying with Annie\r\n\r\nAnnie got too excited and added a ton of duplicate blocks and <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-waveform\" style=\"color: #F3DF55; margin-right: 2px\"></i> Effect </span> blocks to her song and now it doesn't sound very good. She needs help simplifying her code!\r\n\r\nUse **Abstraction** to focus just on <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-drum\" style=\"color: #E565F5; margin-right: 2px\"></i> Beat </span>, <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-boombox\" style=\"color: #58BEF9; margin-right: 2px\"></i> Bass </span>, and <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-guitars\" style=\"color: #64D25A; margin-right: 2px\"></i> Lead </span> tracks so it matches the example.\r\n\r\nYou only need to remove blocks from Annie's code to complete this level! You don't need to add anything new!\r\n\r\n![](https://images.code.org/ccca247c75eb0ac57c2ac7009df869da-image-1742940511673.png)",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -489,9 +490,10 @@
     "exemplar_settings": {
       "playerEnabled": true,
       "validationEnabled": true,
-      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationSuccessMessage": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: \"You Did It!\"",
       "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
-      "playerTitle": "Annie's Song"
+      "playerTitle": "Annie's Song",
+      "validationMode": "default"
     },
     "validations": [
       {
@@ -510,8 +512,7 @@
     "name_suffix": "_v2",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:30.448+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-choice-level-f\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-choice-level-f\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:30.448+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-choice-level-f\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-choice-level-f\"},{\"changed_at\":\"2025-06-06 21:40:59 +0000\",\"changed\":[\"long_instructions\",\"exemplar_settings\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-06 21:42:21 +0000\",\"changed\":[\"exemplar_settings\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-06 21:42:56 +0000\",\"changed\":[\"exemplar_settings\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

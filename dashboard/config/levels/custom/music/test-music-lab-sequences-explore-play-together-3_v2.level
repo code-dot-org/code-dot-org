@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:56:28.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Investigate\r\n\r\nBanks noticed that some tracks have different lengths, like the final <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-microphone-stand\" style=\"color: #F99258; margin-right: 2px\"></i> So call me maybe </span> vocal track. She wondered if we could find more tracks that were the same length to add to the end of the song:\r\n\r\n![](https://images.code.org/419e6c50fa4d740604e4ef7a2919cb31-image-1743111183638.png)\r\n\r\nTry to recreate the code above on your own, or follow the step-by-step instructions below:\r\n\r\n1) Drag out another <code style=\"background-color: rgb(0, 148, 202); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">play together</code> block and connect it underneath your code [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_together_toolbox)\r\n2) Drag out the <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-microphone-stand\" style=\"color: #F99258; margin-right: 2px\"></i> So call me maybe </span> block [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_first_toolbox)\r\n3) Drag out 3 more <code style=\"background-color: rgb(116, 53, 178); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">play</code> blocks and choose tracks from the Acoustic Arcade pack to play with it! [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_second_toolbox)\r\n\r\nPress the <code style=\"background-color: #fca401; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">Run</code> button and listen to how your song sounds!\r\n\r\nIf you're stuck, try clicking the <i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i> icons for hints!",
+    "long_instructions": "#### Investigate\r\n\r\nBanks noticed that some tracks have different lengths, like the final <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-microphone-stand\" style=\"color: #F99258; margin-right: 2px\"></i> So call me maybe </span> vocal track. She wondered if we could find more tracks that were the same length to add to the end of the song:\r\n\r\n![](https://images.code.org/419e6c50fa4d740604e4ef7a2919cb31-image-1743111183638.png)\r\n\r\nTry to recreate the code above on your own, or follow the step-by-step instructions below:\r\n\r\n1) Drag out another <code style=\"background-color: rgb(0, 148, 202); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">play together</code> block and connect it underneath your code [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_together_toolbox)\r\n2) Drag out the <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-microphone-stand\" style=\"color: #F99258; margin-right: 2px\"></i> So call me maybe </span> block [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_first_toolbox)\r\n3) Drag out 3 more <code style=\"background-color: rgb(116, 53, 178); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">play</code> blocks and choose tracks from the Acoustic Arcade pack to play with it! [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_second_toolbox)\r\n\r\nPress the <code style=\"background-color: #fca401; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">Run</code> button and listen to how your song sounds!\r\n\r\n> If you're stuck, try clicking the <i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i> icons for hints!",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -181,7 +182,7 @@
     "exemplar_settings": {
       "playerEnabled": true,
       "validationEnabled": true,
-      "validationSuccessMessage": "You did it!",
+      "validationSuccessMessage": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: \"You Did It!\"",
       "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
       "validationMode": "type",
       "playerTitle": "Example"
@@ -252,8 +253,7 @@
     "name_suffix": "_v2",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:28.414+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-play-together-3\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-play-together-3\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:28.414+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-play-together-3\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-play-together-3\"},{\"changed_at\":\"2025-06-06 19:29:33 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"exemplar_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

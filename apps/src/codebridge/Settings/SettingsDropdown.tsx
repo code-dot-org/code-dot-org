@@ -4,7 +4,7 @@ import SimpleDropdown, {
   SimpleDropdownProps,
 } from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import {Heading6} from '@code-dot-org/component-library/typography';
-import {codebridgeLabsWithConsole} from '@codebridge/constants';
+import {codebridgeLabsWithConsole, LayoutKey} from '@codebridge/constants';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import FocusTrap from 'focus-trap-react';
 import React, {useMemo, useState} from 'react';
@@ -70,7 +70,7 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
     state => state.lab2View.consoleFontSizeKey
   );
   const {signInState} = useAppSelector(state => state.currentUser);
-  const {levelProperties} = useCodebridgeContext();
+  const {config, setConfig, levelProperties} = useCodebridgeContext();
   const appName = levelProperties.appName;
 
   // We need to set the theme here because the dropdown is rendered in a portal, outside of the
@@ -82,6 +82,7 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
     useState(currentEditorFontSizeKey);
   const [selectedConsoleFontSizeValue, setSelectedConsoleFontSizeValue] =
     useState(currentConsoleFontSizeKey);
+  const [selectedLayout, setSelectedLayout] = useState(config.activeLayout);
 
   const getSelectedKey = (value: string) => value as keyof typeof FontSize;
 
@@ -126,7 +127,6 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
         type === 'Console' ? setConsoleFontSize : setEditorFontSize;
       dispatch(reduxAction(selectedKey));
       sendCodebridgeAnalyticsEvent(event, appName, {
-        levelPath: window.location.pathname,
         fontSize: selectedKey,
       });
     }
@@ -138,8 +138,16 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
       new UserPreferences().setGlobalTheme(value);
     }
     sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_THEME_CHANGE, appName, {
-      levelPath: window.location.pathname,
       theme: value,
+    });
+  };
+
+  const handleLayoutChange = (value: string) => {
+    const newLayout = value as LayoutKey;
+    setSelectedLayout(newLayout);
+    setConfig({
+      ...config,
+      activeLayout: newLayout,
     });
   };
 
@@ -157,6 +165,17 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
         : codebridgeI18n.lightTheme(),
     value: theme,
   }));
+
+  const layoutDropdownOptions: SimpleDropdownProps['items'] = [
+    {
+      value: 'horizontal',
+      text: codebridgeI18n.horizontal(),
+    },
+    {
+      value: 'vertical',
+      text: codebridgeI18n.vertical(),
+    },
+  ];
   const dropdownColor = theme === 'Dark' ? 'white' : 'black';
 
   const hasConsole = codebridgeLabsWithConsole.includes(appName);
@@ -230,7 +249,7 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
             htmlFor={codebridgeI18n.theme()}
             className={moduleStyles.dropdownLabel}
           >
-            Theme
+            {codebridgeI18n.theme()}
           </label>
           <SimpleDropdown
             labelText={codebridgeI18n.theme()}
@@ -239,6 +258,24 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
             items={themeDropdownOptions}
             selectedValue={theme}
             name={'theme'}
+            size="s"
+            color={dropdownColor}
+          />
+        </div>
+        <div className={moduleStyles.dropdownRow}>
+          <label
+            htmlFor={codebridgeI18n.layout()}
+            className={moduleStyles.dropdownLabel}
+          >
+            {codebridgeI18n.layout()}
+          </label>
+          <SimpleDropdown
+            labelText={codebridgeI18n.layout()}
+            isLabelVisible={false}
+            onChange={event => handleLayoutChange(event.target.value)}
+            items={layoutDropdownOptions}
+            selectedValue={selectedLayout}
+            name={'layout'}
             size="s"
             color={dropdownColor}
           />

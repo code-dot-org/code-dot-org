@@ -20705,6 +20705,10 @@ en:
               display_name: Templates
             lessonGroup-2:
               display_name: Revisions
+            lessonGroup-4:
+              display_name: Pre-Assessment
+            lessonGroup-5:
+              display_name: End of Unit Assessment and Survey
           name: musiclab-6-12-playground
           title: 6-12 Music Lab Playground
           description_audience: ''
@@ -24836,3 +24840,16 @@ en:
           description_short: ''
           description: Teacher Overview
           student_description: Student Overview
+        pl-gamified-python-sandbox:
+          lessons:
+            lesson-1:
+              name: Hit the Road in The Neighborhood
+            lesson-2:
+              name: 'Fueling up at the Coffee Shop: Kickstart your Python Journey'
+          lesson_groups: {}
+          name: pl-gamified-python-sandbox
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

@@ -1,0 +1,29 @@
+name 'music-lab-612-post-q4'
+
+question 'put actual question here'
+
+wrong 'wrong'
+wrong 'wrong'
+wrong 'wrong'
+right 'correct'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Loops
+
+Standard: Identify portions of a song that could be created with loops and write an algorithm representing the song
+
+Lesson: Loops - Synthesis
+
+Skill Progression: Create a background pattern of multiple sounds
+
+Pretest Modality: Given algorithm / intent / incorrect code, match with code
+
+Posttest Modality: Given algorithm / intent / incorrect code, match with code
+
+MARKDOWN
+
+markdown <<MARKDOWN
+Put the images / context markdown here
+MARKDOWN

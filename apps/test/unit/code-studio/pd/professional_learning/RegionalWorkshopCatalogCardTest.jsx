@@ -49,8 +49,7 @@ describe('RegionalWorkshopCatalog', () => {
     renderDefault({capacity: 5, numEnrollments: 5});
 
     screen.getByText('Full');
-    // Cannot find inaccessible link button since it's disabled
-    expect(screen.queryByRole('link', {name: 'enrollNow'})).toEqual(null);
+    expect(screen.queryByRole('button', {name: 'enrollNow'})).toBeDisabled();
   });
 
   it('card states how many spots are left and enables buttons if not full', () => {
@@ -59,7 +58,7 @@ describe('RegionalWorkshopCatalog', () => {
     screen.getByText(
       `${DEFAULT_PROPS.capacity - DEFAULT_PROPS.numEnrollments} Seats Remaining`
     );
-    expect(screen.getByRole('link', {name: 'enrollNow'})).not.toBeDisabled();
+    expect(screen.getByRole('button', {name: 'enrollNow'})).not.toBeDisabled();
   });
 
   it('card shows workshop name when available', () => {
@@ -139,24 +138,13 @@ describe('RegionalWorkshopCatalog', () => {
     });
   });
 
-  it('card renders button to send user to custom registration link if provided', () => {
-    const customRegistrationLink = 'customregistrationlink.com';
-    renderDefault({customRegistrationLink: customRegistrationLink});
-
-    expect(
-      screen.getByRole('link', {
-        name: 'enrollNow',
-      })
-    ).toHaveAttribute('href', customRegistrationLink);
-  });
-
-  it('card renders button send user to default enroll link if no registration link provided', () => {
+  it('card renders button to send user to registration link', () => {
     renderDefault();
 
     expect(
-      screen.getByRole('link', {
+      screen.getByRole('button', {
         name: 'enrollNow',
       })
-    ).toHaveAttribute('href', `/pd/workshops/${DEFAULT_PROPS.id}/enroll`);
+    ).not.toBeDisabled();
   });
 });
