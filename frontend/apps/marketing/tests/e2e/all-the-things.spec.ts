@@ -203,7 +203,9 @@ test.describe('All the things UI e2e test', () => {
       test('renders default action block pattern', async () => {
         const sectionHeading = component.getByText('Heading');
         const sectionParagraph = component.getByText('Paragraph');
-        const sectionButtons = component.getByText('Button');
+        const sectionButtons = component.getByRole('link', {
+          name: 'Button',
+        });
 
         await expect(sectionHeading).toBeVisible();
         await expect(sectionParagraph).toBeVisible();
@@ -228,7 +230,9 @@ test.describe('All the things UI e2e test', () => {
       test('renders default action block pattern with hidden elements', async () => {
         const sectionHeading = component.getByText('Heading');
         const sectionParagraph = component.getByText('Paragraph');
-        const sectionButtons = component.getByText('Button');
+        const sectionButtons = component.getByRole('link', {
+          name: 'Button',
+        });
 
         await expect(sectionHeading).toBeVisible();
         // Section paragraph should be hidden
