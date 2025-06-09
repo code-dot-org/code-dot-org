@@ -116,7 +116,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   if (curriculumCourses.includes('csp')) {
     additionalPrompts.push(...APCSP_PROMPTS);
   }
-  if (context.hasStudentCode) {
+  if (context.type === AiDiffContext.LEVEL) {
     additionalPrompts.push(DEBUG_THIS_CODE, IMPROVE_THIS_CODE);
     context.viewAsUserId = viewAsUserId;
   }

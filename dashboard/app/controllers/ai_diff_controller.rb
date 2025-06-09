@@ -211,7 +211,7 @@ class AiDiffController < ApplicationController
 
     course_display_name = CourseOffering.find_by(id: @unit_group&.course_version&.course_offering_id)&.display_name
 
-    student_code = get_student_code(context[:viewAsUserId], @level, @unit.id) if context[:hasStudentCode] && context[:viewAsUserId]
+    student_code = get_student_code(context[:viewAsUserId] || current_user.id, @level, @unit.id) if context[:type] == SharedConstants::AI_DIFF_CONTEXT[:LEVEL]
 
     prompt = AiDiffBedrockHelper.get_prompt_for_context(
       context[:type],
