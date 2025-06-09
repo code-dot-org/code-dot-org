@@ -70,25 +70,25 @@ steps:
       - git config user.email "drone-fake-user@code.org"
       - git merge origin/$DRONE_TARGET_BRANCH
 
-  # - name: restore-cache
-  #   image: plugins/s3-cache
-  #   settings:
-  #     endpoint: s3://cdo-drone
-  #     debug: true
-  #     pull: true
-  #     restore: true
-  #     filename: unit-tests-cache-ubuntu-20.tar.gz
+  - name: restore-cache
+    image: plugins/s3-cache
+    settings:
+      endpoint: s3://cdo-drone
+      debug: true
+      pull: true
+      restore: true
+      filename: unit-tests-cache-ubuntu-20.tar.gz
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
     # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:ruby-3.1
+    image: codedotorg/code-dot-org:1.16
     pull: always
-    # volumes:
-    #   - name: rbenv
-    #     path: /home/ci/.rbenv
-    #   - name: mysql
-    #     path: /var/lib/mysql
+    volumes:
+      - name: rbenv
+        path: /home/ci/.rbenv
+      - name: mysql
+        path: /var/lib/mysql
     environment:
       # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/unit_tests.sh
       CLOUDFRONT_KEY_PAIR_ID:
@@ -109,25 +109,25 @@ steps:
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
       - exit $EXIT_CODE
 
-  # - name: update-cache
-  #   image: plugins/s3-cache
-  #   volumes:
-  #     - name: rbenv
-  #       path: /home/ci/.rbenv
-  #   settings:
-  #     endpoint: s3://cdo-drone
-  #     debug: true
-  #     pull: true
-  #     rebuild: true
-  #     filename: unit-tests-cache-ubuntu-20.tar.gz
-  #     mount:
-  #       - /home/ci/.rbenv
+  - name: update-cache
+    image: plugins/s3-cache
+    volumes:
+      - name: rbenv
+        path: /home/ci/.rbenv
+    settings:
+      endpoint: s3://cdo-drone
+      debug: true
+      pull: true
+      rebuild: true
+      filename: unit-tests-cache-ubuntu-20.tar.gz
+      mount:
+        - /home/ci/.rbenv
 
-# volumes:
-#   - name: rbenv
-#     temp: {}
-#   - name: mysql
-#     temp: {}
+volumes:
+  - name: rbenv
+    temp: {}
+  - name: mysql
+    temp: {}
 
 trigger:
   branch:
@@ -204,34 +204,34 @@ steps:
       - git config user.email "drone-fake-user@code.org"
       - git merge origin/$DRONE_TARGET_BRANCH
 
-  # # We cache staging's rbenv and database in the
-  # # `cache-staging-build-artifacts` pipeline.
-  # - name: get-cached-staging-misc-build-artifacts
-  #   image: plugins/s3-cache
-  #   volumes:
-  #     # Even files cached with absolute paths will be restored into the
-  #     # workdir; so for this step, we mount the relevant volumes there, too.
-  #     - name: rbenv
-  #       path: /drone/src/home/ci/.rbenv
-  #     - name: mysql
-  #       path: /drone/src/var/lib/mysql
-  #   settings:
-  #     filename: cache-staging-misc-build-artifacts.tar.gz
-  #     endpoint: s3://cdo-drone
-  #     restore: true
-  #     debug: true
-  #     pull: true
+  # We cache staging's rbenv and database in the
+  # `cache-staging-build-artifacts` pipeline.
+  - name: get-cached-staging-misc-build-artifacts
+    image: plugins/s3-cache
+    volumes:
+      # Even files cached with absolute paths will be restored into the
+      # workdir; so for this step, we mount the relevant volumes there, too.
+      - name: rbenv
+        path: /drone/src/home/ci/.rbenv
+      - name: mysql
+        path: /drone/src/var/lib/mysql
+    settings:
+      filename: cache-staging-misc-build-artifacts.tar.gz
+      endpoint: s3://cdo-drone
+      restore: true
+      debug: true
+      pull: true
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
     # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:ruby-3.1
+    image: codedotorg/code-dot-org:1.16
     pull: always
-    # volumes:
-    #   - name: rbenv
-    #     path: /home/ci/.rbenv
-    #   - name: mysql
-    #     path: /var/lib/mysql
+    volumes:
+      - name: rbenv
+        path: /home/ci/.rbenv
+      - name: mysql
+        path: /var/lib/mysql
     environment:
       # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/ui_tests.sh
       CLOUDFRONT_KEY_PAIR_ID:
@@ -259,11 +259,11 @@ steps:
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
       - exit $EXIT_CODE
 
-# volumes:
-#   - name: rbenv
-#     temp: {}
-#   - name: mysql
-#     temp: {}
+volumes:
+  - name: rbenv
+    temp: {}
+  - name: mysql
+    temp: {}
 
 trigger:
   branch:
