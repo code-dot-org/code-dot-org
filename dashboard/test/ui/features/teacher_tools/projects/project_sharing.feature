@@ -16,8 +16,8 @@ Feature: Project Sharing - Young Students
   
   Scenario: Young Student Not In Teacher Section Cannot Share Open-ended Projects via URL
     Then I make a "spritelab" project named "Sprite Lab Project"
-    And I open the project share dialog
-    And element "#uitest-sharing-disabled-button" is enabled
+    Then I click selector ".project_share"
+    And I wait until element "#uitest-sharing-disabled-button" is visible
 
   Scenario: Young Students Can Not By Default Make App Lab Projects
     Then I am on "http://studio.code.org/projects/applab/new"
