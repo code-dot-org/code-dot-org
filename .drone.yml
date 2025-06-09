@@ -82,7 +82,7 @@ steps:
   - name: unit-tests
     # see: docker/ci/Dockerfile
     # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:1.15
+    image: codedotorg/code-dot-org:1.16
     pull: always
     volumes:
       - name: rbenv
@@ -225,7 +225,7 @@ steps:
   - name: ui-tests
     # see: docker/ci/Dockerfile
     # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:1.15
+    image: codedotorg/code-dot-org:1.16
     pull: always
     volumes:
       - name: rbenv
