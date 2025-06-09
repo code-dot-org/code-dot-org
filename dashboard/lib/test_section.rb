@@ -1,5 +1,7 @@
 include FactoryBot::Syntax::Methods
 
+require 'json'
+
 class TestSection
   @@rng = nil
 
@@ -180,6 +182,8 @@ class TestSection
     preset_data_student_count = options[:data_per_student].count
     unit_id = options[:unit].id
 
+    buckets = SourceBucket.new
+
     students.each_with_index do |student_user, index|
       break if index >= preset_data_student_count
 
@@ -206,17 +210,25 @@ class TestSection
             best_result: user_level[:best_result], level_source_id: level_source_id
 
           # Create a backing channel for this level if it's a type that needs it
-          if level.channel_backed?
-            ChannelToken.find_or_create_channel_token(
-              level,
-              '127.0.0.1',
-              find_or_create_storage_id_for_user_id(student_user.id),
-              options[:unit].id,
-              {
-                hidden: true
-              }
-            )
-          end
+          channel_token =
+            level.channel_backed? ?
+             ChannelToken.find_or_create_channel_token(
+               level,
+               '127.0.0.1',
+               find_or_create_storage_id_for_user_id(student_user.id),
+               options[:unit].id,
+               {
+                 hidden: true,
+                 level: "/projects/applab",
+                 migratedToS3: true
+               }
+             )
+           : nil
+
+        end
+
+        unless level_data[:source_code].nil? || channel_token.nil?
+          buckets.create_or_replace(channel_token.channel, "main.json", JSON.generate(level_data[:source_code]))
         end
 
         teacher_feedback = level_data[:teacher_feedback]

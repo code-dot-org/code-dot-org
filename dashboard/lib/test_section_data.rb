@@ -11,6 +11,39 @@ class TestSectionData
   DEFAULT_UNIT = 'csp4-2024'
   DEFAULT_UNIT_GROUP = 'csp-2024'
 
+  STUDENT_CODE_1 = "//Code was generated
+// Creating variables
+var petName;
+var petType;
+var petWeight;
+
+// Assigning values to variables. You can change the numbers
+// and strings assigned here if you want!
+petNames = \"Jack\";
+petType = \"Iguana\";
+petWeight = 60;
+
+// My story
+console.log(\"This is a story about my pet named\");
+console.log(petNames);
+
+console.log(\"It's a lot of work owning a\");
+console.log(petType);
+
+console.log(\"Especially because it weighs about\");
+console.log(petWeight);
+console.log(\"pounds!\");
+
+console.log(\"I love\");
+console.log(petNames);
+
+console.log(\"It's the best\");
+console.log(petType);
+console.log(\"in the world!\");
+
+// Add three lines to the story here.
+// Make sure to reference at least one variable."
+
   CSP_4_TEST_SECTION = {
     unit_name: 'csp4-2024',
     unit_group_name: 'csp-2024',
@@ -48,7 +81,10 @@ class TestSectionData
         },
         teacher_feedback: {
           comment: 'test teacher feedback',
-        }
+        },
+        source_code: {
+          source: STUDENT_CODE_1,
+        },
       },
       "U4 L03 Variables operator practice 5_2024" => {
         user_level: {
