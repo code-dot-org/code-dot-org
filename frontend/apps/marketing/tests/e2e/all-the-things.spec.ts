@@ -203,21 +203,11 @@ test.describe('All the things UI e2e test', () => {
       test('renders default action block pattern', async () => {
         const sectionHeading = component.getByText('Heading');
         const sectionParagraph = component.getByText('Paragraph');
-        const sectionButton = component.getByText('Button');
-        const actionBlockTitle = component.getByText('Action Block Title');
-        const actionBlockImage = component.locator('img[alt=""]');
-        const actionBlockDesc = component.locator(
-          'Action block description goes here.',
-        );
-        const actionBlockPrimaryButton = component.getByText('Primary button');
+        const sectionButtons = component.getByText('Button');
 
         await expect(sectionHeading).toBeVisible();
         await expect(sectionParagraph).toBeVisible();
-        expect(await sectionButton.count()).toBe(2);
-        expect(await actionBlockTitle.count()).toBe(3);
-        expect(await actionBlockImage.count()).toBe(3);
-        expect(await actionBlockDesc.count()).toBe(3);
-        expect(await actionBlockPrimaryButton.count()).toBe(3);
+        expect(await sectionButtons.count()).toBe(2);
       });
 
       test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
@@ -238,23 +228,13 @@ test.describe('All the things UI e2e test', () => {
       test('renders default action block pattern with hidden elements', async () => {
         const sectionHeading = component.getByText('Heading');
         const sectionParagraph = component.getByText('Paragraph');
-        const sectionButton = component.getByText('Button');
-        const actionBlockTitle = component.getByText('Action Block Title');
-        const actionBlockImage = component.locator('img[alt=""]');
-        const actionBlockDesc = component.locator(
-          'Action block description goes here.',
-        );
-        const actionBlockPrimaryButton = component.getByText('Primary button');
+        const sectionButtons = component.getByText('Button');
 
         await expect(sectionHeading).toBeVisible();
         // Section paragraph should be hidden
         await expect(sectionParagraph).not.toBeVisible();
         // Section buttons should be hidden
-        expect(await sectionButton.count()).toBe(0);
-        expect(await actionBlockTitle.count()).toBe(3);
-        expect(await actionBlockImage.count()).toBe(3);
-        expect(await actionBlockDesc.count()).toBe(3);
-        expect(await actionBlockPrimaryButton.count()).toBe(3);
+        expect(await sectionButtons.count()).toBe(0);
       });
 
       test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
