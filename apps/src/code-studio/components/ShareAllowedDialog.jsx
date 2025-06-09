@@ -1,4 +1,5 @@
 import Button, {buttonColors} from '@code-dot-org/component-library/button';
+import Dialog from '@code-dot-org/component-library/dialog';
 import PropTypes from 'prop-types';
 import QRCode from 'qrcode.react';
 import React from 'react';
@@ -103,6 +104,7 @@ class ShareAllowedDialog extends React.Component {
     isLoadingAccountAndProjectAge: false,
     isAccountOldEnoughToPublish: false,
     isProjectOldEnoughToPublish: false,
+    showSharingDisabledDialog: false,
   };
 
   componentDidMount() {
@@ -126,6 +128,10 @@ class ShareAllowedDialog extends React.Component {
     if (this.props.isOpen && !prevProps.isOpen) {
       recordShare('SHARING_DIALOG_OPEN', this.props.appType);
       this.setState({hasBeenCopied: false});
+
+      if (this.sharingDisabled()) {
+        this.setState({showSharingDisabledDialog: true});
+      }
 
       this.checkProjectAndAccountAge();
     }
@@ -166,6 +172,7 @@ class ShareAllowedDialog extends React.Component {
     this.props.onClose();
     this.setState({
       replayVideoUnavailable: false,
+      showSharingDisabledDialog: false,
     });
   };
 
@@ -317,33 +324,24 @@ class ShareAllowedDialog extends React.Component {
 
     return (
       <div>
-        <BaseDialog
-          style={styles.modal}
-          isOpen={isOpen}
-          handleClose={this.close}
-          hideBackdrop={hideBackdrop}
-        >
-          {this.sharingDisabled() && (
-            <div
-              style={{position: 'relative'}}
-              id="sharing-disabled-legacy-dialog"
-            >
-              <div style={{margin: 10, paddingRight: 10}}>
-                <p>{i18n.sharingBlockedByTeacherOpenEndedProjects()}</p>
-              </div>
-              <div style={{clear: 'both', height: 40}}>
-                <button
-                  type="button"
-                  id="continue-button"
-                  style={{position: 'absolute', right: 0, bottom: 0, margin: 0}}
-                  onClick={this.close}
-                >
-                  {i18n.dialogOK()}
-                </button>
-              </div>
-            </div>
-          )}
-          {!this.sharingDisabled() && (
+        {this.sharingDisabled() && this.state.showSharingDisabledDialog && (
+          <Dialog
+            title={i18n.sharingDisabledTitle()}
+            description={i18n.sharingBlockedByTeacherOpenEndedProjects()}
+            primaryButtonProps={{
+              onClick: this.close,
+              text: i18n.ok(),
+              id: 'uitest-sharing-disabled-button',
+            }}
+          />
+        )}
+        {!this.sharingDisabled() && (
+          <BaseDialog
+            style={styles.modal}
+            isOpen={isOpen}
+            handleClose={this.close}
+            hideBackdrop={hideBackdrop}
+          >
             <div>
               <div
                 id="project-share"
@@ -498,8 +496,8 @@ class ShareAllowedDialog extends React.Component {
                 </div>
               </div>
             </div>
-          )}
-        </BaseDialog>
+          </BaseDialog>
+        )}
         <PublishDialog />
         <LibraryCreationDialog channelId={channelId} />
       </div>
@@ -526,33 +524,6 @@ const styles = {
     color: color.red,
     fontSize: 13,
     fontWeight: 'bold',
-  },
-  button: {
-    // TODO: [Phase 2] Remove this once we have a new updated button component
-    fontSize: 'large',
-    height: 45,
-    paddingTop: 12.5,
-    paddingBottom: 12.5,
-    paddingLeft: 10,
-    paddingRight: 10,
-    marginTop: 0,
-    marginRight: 16,
-    marginBottom: 0,
-    marginLeft: 0,
-    verticalAlign: 'top',
-  },
-  buttonDisabled: {
-    height: 45,
-    fontSize: 'large',
-    paddingTop: 12.5,
-    paddingBottom: 12.5,
-    paddingLeft: 10,
-    paddingRight: 5,
-    marginTop: 0,
-    marginRight: 8,
-    marginBottom: 0,
-    marginLeft: 0,
-    verticalAlign: 'top',
   },
   thumbnail: {
     float: 'left',
@@ -626,6 +597,7 @@ export default connect(
     isOpen: state.shareDialog.isOpen,
     isUnpublishPending: state.shareDialog.isUnpublishPending,
     inRestrictedShareMode: state.project.inRestrictedShareMode,
+    showSharingDisabledDialog: state.shareDialog.showSharingDisabledDialog,
   }),
   dispatch => ({
     onClose: () => dispatch(hideShareDialog()),
