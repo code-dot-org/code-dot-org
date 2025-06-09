@@ -228,6 +228,9 @@ class TestSection
         end
 
         unless level_data[:source_code].nil? || channel_token.nil?
+          # Note: Generated student code only includes the source code and no other metadata.
+          # This can cause some issues with rendering in the UI.
+          # Most errors can be ignored or fixed by manually editing and running the generated code.
           buckets.create_or_replace(channel_token.channel, "main.json", JSON.generate(level_data[:source_code]))
         end
 
