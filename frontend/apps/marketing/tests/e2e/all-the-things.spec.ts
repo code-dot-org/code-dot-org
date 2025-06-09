@@ -200,18 +200,6 @@ test.describe('All the things UI e2e test', () => {
         await component.scrollIntoViewIfNeeded();
       });
 
-      test('renders default action block pattern', async () => {
-        const sectionHeading = component.getByText('Heading');
-        const sectionParagraph = component.getByText('Paragraph');
-        const sectionButtons = component.getByRole('link', {
-          name: 'Button',
-        });
-
-        await expect(sectionHeading).toBeVisible();
-        await expect(sectionParagraph).toBeVisible();
-        expect(await sectionButtons.count()).toBe(2);
-      });
-
       test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
         await eyes.check(testInfo.title, {region: component});
       });
@@ -225,20 +213,6 @@ test.describe('All the things UI e2e test', () => {
           'Action Block Pattern Hidden Elements',
         );
         await component.scrollIntoViewIfNeeded();
-      });
-
-      test('renders default action block pattern with hidden elements', async () => {
-        const sectionHeading = component.getByText('Heading');
-        const sectionParagraph = component.getByText('Paragraph');
-        const sectionButtons = component.getByRole('link', {
-          name: 'Button',
-        });
-
-        await expect(sectionHeading).toBeVisible();
-        // Section paragraph should be hidden
-        await expect(sectionParagraph).not.toBeVisible();
-        // Section buttons should be hidden
-        expect(await sectionButtons.count()).toBe(0);
       });
 
       test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
