@@ -22,19 +22,19 @@ Feature: Using the teacher homepage
 
     # Visit the section settings page from the section options dropdown
     And I click "#section-options-dropdown-dropdown-button" once it exists
-    And I click "#ui-test-settings" once it exists
+    And I click "#ui-test-Section-settings" once it exists
     Then I wait to see "#sections-set-up-container"
 
     # Visit the roster page from the section options dropdown
     Given I am on "http://studio.code.org/teacher_dashboard/home"
     And I click "#section-options-dropdown-dropdown-button" once it exists
-    And I click "#ui-test-roster" once it exists
+    And I click "#ui-test-Roster" once it exists
     Then I wait to see "#uitest-manage-students-table"
 
     # Visit the login info page from the section options dropdown
     Given I am on "http://studio.code.org/teacher_dashboard/home"
     And I click "#section-options-dropdown-dropdown-button" once it exists
-    And I click "#ui-test-login_info" once it exists
+    And I click "#ui-test-Login-cards" once it exists
     Then I wait to see "#ui-test-section-login-info"
 
     # Open the print certificates page from the section options dropdown
