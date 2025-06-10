@@ -293,6 +293,7 @@ module AWS
         AllowedMethods: ALLOWED_METHODS,
         CachedMethods: CACHED_METHODS,
         Compress: true,
+        EnableAcceptEncodingGzip: true,
         DefaultTTL: 0,
         ForwardedValues: {
           Cookies: cookie_config,
