@@ -101,7 +101,7 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
         tabIndex={0}
         onClick={onPress}
         onKeyDown={event => {
-          if (event.key === 'Enter' || event.key === ' ') {
+          if (event.key === 'Enter') {
             onPress();
           }
         }}
