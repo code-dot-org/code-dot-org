@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:56:32.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Zoe's Song\r\n\r\nZoe is working on a new mixtape and she wants a fun way to end her opening song. She has an idea and sketched out what it should look like and sound like for you:\r\n\r\n1) Play the beat, bass, and lead tracks together\r\n2) Surprise! Play 4 Blip effects in a row!\r\n3) Play the same beat, bass, and lead tracks together\r\n4) Surprise again! Play the Vibraslap!\r\n\r\nFollow Zoe's **algorithm** to recreate this song! It should sound like the example below!",
+    "long_instructions": "#### Zoe's Song\r\n\r\nZoe is working on a new mixtape and she wants a fun way to end her opening song. She has an idea and sketched out what it should look like and sound like for you:\r\n\r\n1) Play the beat, bass, and lead tracks together\r\n2) Surprise! Play 4 Blip effects in a row!\r\n3) Play the same beat, bass, and lead tracks together\r\n4) Surprise again! Play the Vibraslap!\r\n\r\nFollow Zoe's **algorithm** to recreate this song! It should sound like the example below!\r\n\r\n![](https://images.code.org/6e97d3fe9dc7bf38e61b82c6434a5c15-image-1749507274387.png)",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -82,8 +83,7 @@
     "name_suffix": "_v2",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:32.191+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-choice-level-c\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-choice-level-c\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:32.191+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-choice-level-c\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-choice-level-c\"},{\"changed_at\":\"2025-06-09 22:14:36 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

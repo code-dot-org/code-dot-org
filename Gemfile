@@ -210,8 +210,13 @@ gem 'retryable' # retry code blocks when they throw exceptions
 
 # Used by `uglifier` to minify JS assets in the Asset Pipeline.
 gem 'execjs'
+
 # JavaScript runtime used by ExecJS.
-gem 'mini_racer'
+# TODO: Either resume installing in all environments once Ubuntu and Mac OS
+# support the same version of mini_racer, or remove this dependency entirely
+# once node is installed in production. For more details, see
+# https://codedotorg.atlassian.net/browse/INF-708
+gem 'mini_racer', group: [:staging, :test, :production, :levelbuilder]
 
 gem 'jwt', '~> 2.7.0'
 

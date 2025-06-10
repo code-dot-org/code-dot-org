@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:57:36.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Snap Remix\r\nJuan is excited about a remix he made for Snap:\r\n\r\n> It starts with two sets of beats and effects, then it explodes into three sets of bass, beats, and leads. With loops, I was able to do it with 9 blocks!\r\n\r\nTry to recreate Juan's remix with the provided tracks! When you're finished, it should look like this:\r\n\r\n![](https://images.code.org/fca6d5ce6f4e1ba782c508cd6f4e0805-image-1741895798503.56.32 PM.png)\r\n\r\n",
+    "long_instructions": "#### Snap Remix\r\nJuan is excited about a remix he made for Snap:\r\n\r\n> It starts with two sets of beats and effects, then it explodes into three sets of bass, beats, and leads. With loops, I was able to do it with 9 blocks!\r\n\r\nTry to recreate Juan's remix with the provided tracks! When you're finished, it should look like this:\r\n\r\n![](https://images.code.org/fca6d5ce6f4e1ba782c508cd6f4e0805-image-1741895798503.56.32 PM.png)\r\n\r\n<!--\r\nJuan is excited about a remix he made for Snap:\r\n\r\n\"It starts with two sets of beats and effects, then it explodes into three sets of bass, beats, and leads. With loops, I was able to do it with just 9 blocks!\"\r\n\r\nJuan recognized a pattern in his music—repeating sets of similar tracks—and used that pattern to build his remix efficiently.\r\n\r\nYour task: Identify the patterns in Juan’s remix by listening closely to the structure of repeating sounds. Use loops or repeated code structures to recreate the remix using the provided tracks. Try to match Juan’s remix exactly while reusing patterns in your code.\r\n-->",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -408,8 +409,7 @@
     "name_suffix": "_v2",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:36.962+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-practice-choice-c\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-practice-choice-c\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:36.962+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-practice-choice-c\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-practice-choice-c\"},{\"changed_at\":\"2025-06-10 18:05:18 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
