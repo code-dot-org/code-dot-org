@@ -436,7 +436,7 @@ class User < ApplicationRecord
   devise :invitable, :database_authenticatable, :registerable, :omniauthable,
     :recoverable, :rememberable, :trackable, :lockable
 
-  # Make sure to include this Concern after we include the default Devise
+  # Make sure to include these Concerns after we include the default Devise
   # modules, since it's trying to extend some methods added by those modules
   # that would be overridden by them if we included it before.
   include Devise::Models::ManualSessionExpiration
