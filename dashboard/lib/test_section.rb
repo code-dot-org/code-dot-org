@@ -48,15 +48,15 @@ class TestSection
 
     teacher_id = options[:teacher_id] || nil
 
+    unit = Unit.get_from_cache(preset_options[:unit_name])
+
     teacher = nil
     if teacher_id.nil?
-      teacher = create_default_teacher
+      teacher = create_default_teacher(unit)
     else
       teacher = User.find_by(id: teacher_id)
       raise "Teacher with id #{teacher_id} not found. Please provide a valid teacher_id." if teacher.nil?
     end
-
-    unit = Unit.get_from_cache(preset_options[:unit_name])
 
     section = create_section(
       teacher: teacher,
@@ -100,14 +100,14 @@ class TestSection
   # and recreate. Sections and followers would be soft-deleted by
   # dependency when we delete the teacher; but to not leave a trail of
   # old test data behind, we explictly hard-delete.
-  def self.create_default_teacher
+  def self.create_default_teacher(unit)
     # Only create a new teacher in safe environments, not on production.
     create_teacher_environment_check!
 
     user = User.find_by_email_or_hashed_email(TestSectionData::DEFAULT_TEACHER_EMAIL)
 
     unless user.nil?
-      delete_existing_teacher(user)
+      delete_existing_teacher(user, unit)
     end
 
     # Create the test teacher
@@ -121,12 +121,21 @@ class TestSection
     teacher
   end
 
-  def self.delete_existing_teacher(user)
+  def self.delete_existing_teacher(user, unit)
     user.sections_instructed.each do |section|
       # Hard-delete all students in each section.
       section.students.each do |student_user|
         raise "Not a sample student - #{student_user.name}" unless TestSectionData::SAMPLE_STUDENT_NAME_REGEX.match?(student_user.name)
         UserGeo.where(user_id: student_user.id).destroy_all
+
+        channel_tokens = ChannelToken.where(storage_id: student_user.user_storage_id).all
+        buckets = SourceBucket.new
+
+        channel_tokens.each do |token|
+          buckets.hard_delete_channel_content(token.channel)
+          token.really_destroy!
+        end
+
         student_user.really_destroy!
       end
       # Hard-delete each section.
