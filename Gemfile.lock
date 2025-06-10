@@ -617,7 +617,7 @@ GEM
       net-protocol
     net-ssh (5.2.0)
     netrc (0.11.0)
-    newrelic_rpm (6.14.0)
+    newrelic_rpm (8.16.0)
     nio4r (2.7.0)
     nokogiri (1.14.3)
       mini_portile2 (~> 2.8.0)
@@ -1075,7 +1075,7 @@ DEPENDENCIES
   nakayoshi_fork
   naturally
   net-http-persistent
-  newrelic_rpm (~> 6.14.0)
+  newrelic_rpm (~> 8.3)
   nokogiri (>= 1.10.0)
   observer
   octokit
@@ -1164,7 +1164,7 @@ DEPENDENCIES
   youtube-dl.rb
 
 RUBY VERSION
-   ruby 3.0.5p211
+   ruby 3.1.0p0
 
 BUNDLED WITH
-   2.3.22
+   2.5.17

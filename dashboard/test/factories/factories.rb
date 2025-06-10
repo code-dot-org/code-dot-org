@@ -2218,4 +2218,10 @@ FactoryBot.define do
     content {"Lorem ipsum"}
     is_preset {false}
   end
+
+  factory :sign_in do
+    association :user
+    sign_in_at {Time.now.utc}
+    sign_in_count {1}
+  end
 end

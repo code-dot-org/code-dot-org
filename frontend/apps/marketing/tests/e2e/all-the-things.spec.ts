@@ -110,7 +110,7 @@ test.describe('All the things UI e2e test', () => {
       'OpenGraph Description',
     );
     expect(await allTheThingsPage.getOpenGraph('image')).toBe(
-      'https://contentful-images.code.org/90t6bu6vlf76/4hXiOPiRlCXpmtypRNOZqc/9ebe430094c1ae1faf742e1de3f8aa8b/engineering-only-opengraph-default.png',
+      'https://contentful-images.code.org/90t6bu6vlf76/4hXiOPiRlCXpmtypRNOZqc/9ebe430094c1ae1faf742e1de3f8aa8b/engineering-only-opengraph-default.png?fm=avif',
     );
     expect(await allTheThingsPage.getOpenGraph('type')).toBe('website');
   });
@@ -627,6 +627,34 @@ test.describe('All the things UI e2e test', () => {
           component.getByText('Paragraph Secondary Bold'),
         ).toBeVisible();
         await expect(component.getByText('Lorem ipsum')).toBeVisible();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('rich text', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator('Rich Text');
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('renders', async () => {
+        await expect(component.getByText('Normal text')).toBeVisible();
+        await expect(component.getByText('Bold text')).toBeVisible();
+        await expect(
+          component.getByText('Multiline complex text'),
+        ).toBeVisible();
+
+        await expect(component.getByText('Normal link')).toBeVisible();
+        await expect(component.getByText('Bold link')).toBeVisible();
+
+        await expect(component.getByRole('list')).toHaveCount(2);
+
+        await expect(component.getByRole('table')).toBeVisible();
       });
 
       test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {

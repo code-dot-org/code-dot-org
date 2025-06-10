@@ -21,7 +21,7 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
     - *Important*: When done, check for correct versions of these dependencies:
 
      ```sh
-     ruby --version     # --> ruby 3.0.5
+     ruby --version     # --> ruby 3.1.0
      node --version     # --> v20.18.3
      git-lfs --version  #  >= git-lfs/3.0
      uv --version       #  >= 0.5.8
@@ -29,6 +29,9 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
 
 1. `git lfs pull`
 
+1. `bundle config --local without staging test production levelbuilder`
+    - This step prevents installation of gems that are not needed for local development, some of which can break during the next step.
+    
 1. `bundle install`
     - This step often fails to due environment-specific issues. Look in the [Bundle Install Tips](#bundle-install-tips) section below for steps to resolve many common issues.
 
@@ -517,6 +520,13 @@ If bundle install fails with an error referencing `eventmachine`, try
 Where [VERSION] is the current version of eventmachine in Gemfile.lock. For example:
 
 - `gem install eventmachine -v 1.2.7 -- --with-openssl-dir=$(brew --prefix libressl)`
+
+#### mini_racer and libv8-node
+
+If `bundle install` fails while installing `mini_racer` or `libv8-node`, try running this first:
+```
+bundle config --local without staging test production levelbuilder
+```
 
 #### Xcode Set Up
 

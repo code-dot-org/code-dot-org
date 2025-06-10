@@ -3,7 +3,7 @@
 # but the defaults should usually be used (or tweaked/fixed).
 
 # Approximate max Dashboard memory usage per process
-DASHBOARD_USAGE = 800 * 1024
+DASHBOARD_USAGE = 4500 * 1024
 
 # Approximate max Pegasus memory usage per process
 PEGASUS_USAGE = 400 * 1024

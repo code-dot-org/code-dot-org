@@ -12,10 +12,12 @@
   "school_subject": null,
   "device_compatibility": null,
   "description": null,
-  "professional_learning_program": null,
+  "professional_learning_program": "https://code.org/apply",
   "video": null,
   "published_date": null,
   "self_paced_pl_course_offering_key": null,
   "ai_teaching_assistant_available": false,
-  "facilitator_course_permissions": null
+  "facilitator_course_permissions": [
+
+  ]
 }

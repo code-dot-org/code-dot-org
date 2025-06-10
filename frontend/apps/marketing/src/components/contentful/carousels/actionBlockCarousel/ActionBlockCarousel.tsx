@@ -10,6 +10,7 @@ import DSCOCarousel from '@code-dot-org/component-library/carousel';
 
 import {externalLinkIconProps} from '@/components/common/constants';
 import {showNewTag} from '@/components/contentful/actionBlocks/helpers';
+import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {Entry} from '@/types/contentful/Entry';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
@@ -79,7 +80,7 @@ const ActionBlockCarousel: React.FC<ActionBlockCarouselProps> = ({
               }
               title={title}
               description={shortDescription}
-              image={{src: `https:${image?.fields?.file?.url}`}}
+              image={{src: getAbsoluteImageUrl(image) || ''}}
               primaryButton={
                 primaryLinkRef?.fields?.label
                   ? {

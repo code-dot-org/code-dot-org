@@ -24,6 +24,7 @@ export type Section =
   | 'Localization'
   | 'Overline'
   | 'Paragraph'
+  | 'Rich Text'
   | 'Section - Pattern Dark'
   | 'Section - Pattern Teal'
   | 'Text Link'

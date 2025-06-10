@@ -1,0 +1,43 @@
+name 'pl-game-python-coffee-shop-overview-9'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+
+
+<img src="https://images.code.org/ebc027aaeb91b27d098d13993bc61d22-image-1749071984094.png" alt="Fueling up at the Coffee Shop banner with icon store front image" width="850px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+<!-- Welcome Section -->
+<div style="margin: 10px auto; width: 100%; line-height: 1.6; font-size: 14pt; color: #333;">
+    <h2>Welcome to the Neighborhood Cafe!</h2>
+    <p style = "font-size: 14pt">
+        The Neighborhood Cafe is a hub for curious learners and delicious treats—where ideas percolate as quickly as the espresso.<br><br> You’ll start your Python journey here, mastering essential coding skills through five challenges designed to fuel your mind and your teaching toolkit.
+    </p>
+    </div>
+
+
+<div style="display: flex; align-items: flex-start; margin-top: 30px;">
+  <div style="flex: 2; padding: 20px; background-color: #f5f5f5; border-radius: 8px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <h2 style="margin-top: 0; ">☕ For this task, you will:</h2>
+    <ul style="font-size: 14pt; margin-top: 0; padding-left: 20px;">
+      <li>Use <code>print()</code> statements to display output</li>
+      <li>Define and assign values to variables</li>
+      <li>Apply math expressions to calculate values</li>
+      <li>Use conditionals to control program flow</li>
+      <li>Create loops to repeat actions</li>
+    </ul>
+  </div>
+  <div style="flex: 1; padding-left: 20px;">
+    <img src="https://images.code.org/ca5b0e16bc82d93873e1eddbf6b1a75c-image-1749133312369.png" alt="a to go cup of coffee and two pink donuts" style="max-width: 90%; height: auto; border-radius: 10px;" />
+  </div>
+</div>
+
+---
+
+
+#### **Suggested Total Time:** 90 minutes
+#### **Lesson One Suggested Time:** 10 minutes
+
+
+MARKDOWN

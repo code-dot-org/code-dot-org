@@ -77,7 +77,7 @@ class Ability
     end
 
     can [:read, :docs_show, :docs_index, :get_summary_by_name], ProgrammingEnvironment do |environment|
-      environment.published || user.permission?(UserPermission::LEVELBUILDER)
+      environment.published || user.levelbuilder?
     end
 
     can [:read, :show_by_keys], ProgrammingClass do |programming_class|
@@ -297,7 +297,7 @@ class Ability
     can :read, UnitGroup do |unit_group|
       if unit_group.can_be_participant?(user) || unit_group.can_be_instructor?(user)
         if unit_group.in_development?
-          user.permission?(UserPermission::LEVELBUILDER)
+          user.levelbuilder?
         elsif unit_group.pilot?
           unit_group.has_pilot_access?(user)
         else
@@ -311,7 +311,7 @@ class Ability
     can :read, Unit do |script|
       if script.can_be_participant?(user) || script.can_be_instructor?(user)
         if script.in_development?
-          user.permission?(UserPermission::LEVELBUILDER)
+          user.levelbuilder?
         elsif script.pilot?
           script.has_pilot_access?(user)
         else
@@ -350,7 +350,7 @@ class Ability
     # there.
     ProjectsController::STANDALONE_PROJECTS.each_pair do |project_type_key, project_type_props|
       if project_type_props[:levelbuilder_required]
-        can :load_project, project_type_key if user.persisted? && user.permission?(UserPermission::LEVELBUILDER)
+        can :load_project, project_type_key if user.persisted? && user.levelbuilder?
       elsif project_type_props[:login_required]
         can :load_project, project_type_key if user.persisted?
       else
@@ -359,7 +359,7 @@ class Ability
     end
 
     # We allow loading extra links on non-levelbuilder environments (such as prod)
-    if user.persisted? && (user.permission?(UserPermission::LEVELBUILDER) || user.permission?(UserPermission::PROJECT_VALIDATOR))
+    if user.persisted? && (user.levelbuilder? || user.permission?(UserPermission::PROJECT_VALIDATOR))
       can :extra_links, Level
     end
 
@@ -389,7 +389,7 @@ class Ability
     # levelbuilder permission will mimic levelbuilder_mode instead of production
     # by default.
     if user.persisted? &&
-        user.permission?(UserPermission::LEVELBUILDER) &&
+        user.levelbuilder? &&
         (Rails.application.config.levelbuilder_mode || rack_env?(:test))
       can :manage, [
         Block,
@@ -412,6 +412,8 @@ class Ability
         ScriptLevel,
         Video,
         Vocabulary,
+        Skill,
+        LevelsSkill,
         :foorm_editor,
         Foorm::Form,
         Foorm::Library,
@@ -493,7 +495,7 @@ class Ability
       end
 
       can :access_token_with_override_validation, :javabuilder_session do
-        user.permission?(UserPermission::LEVELBUILDER)
+        user.levelbuilder?
       end
 
       can :use_unrestricted_javabuilder, :javabuilder_session do
