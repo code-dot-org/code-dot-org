@@ -29,6 +29,9 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
 
 1. `git lfs pull`
 
+1. `bundle config --local without staging test production levelbuilder`
+    - This step prevents installation of gems that are not needed for local development, some of which can break during the next step.
+    
 1. `bundle install`
     - This step often fails to due environment-specific issues. Look in the [Bundle Install Tips](#bundle-install-tips) section below for steps to resolve many common issues.
 
