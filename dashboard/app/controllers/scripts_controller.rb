@@ -12,7 +12,6 @@ class ScriptsController < ApplicationController
   before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
   before_action :redirect_to_canonical_path, only: [:show, :vocab, :resources, :code, :standards]
-  authorize_resource class: 'Unit', except: [:update]
   load_and_authorize_resource class: 'Unit', only: [:update]
 
   use_reader_connection_for_route(:show)
@@ -382,6 +381,8 @@ class ScriptsController < ApplicationController
   private def render_no_access
     if current_user && !current_user.admin? && !can?(:read, @script)
       render :no_access
+    else
+      authorize! params[:action].to_sym, @script
     end
   end
 
