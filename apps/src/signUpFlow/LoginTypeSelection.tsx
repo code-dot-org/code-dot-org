@@ -299,6 +299,7 @@ const LoginTypeSelection: React.FunctionComponent<{
                   setRevealClever(true);
                 }}
                 type="secondary"
+                color="gray"
                 iconRight={{iconName: 'caret-down'}}
               />
             )}
