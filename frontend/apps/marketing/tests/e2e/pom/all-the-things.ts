@@ -53,7 +53,6 @@ export class AllTheThingsPage extends MarketingPage {
     const headingLocator = this.page.getByRole('heading', {
       name: heading,
       exact: true,
-      level: 1, // selects only the h1 in each section
     });
 
     // Go through the top-level sections, finding the one that has this heading
