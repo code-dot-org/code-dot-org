@@ -1,10 +1,11 @@
 @no_mobile
 Feature: Using the teacher homepage
+  # This line can be removed when the new teacher homepage is the default
+  Background:
+    Given I use a cookie to mock the DCDO key "teacher-homepage-v2" as "true"
+
   Scenario: Teacher can access section pages from section options dropdown
     Given I create a teacher named "Teacher Hank"
-
-    # This line can be removed when the new teacher homepage is the default
-    And I use a cookie to mock the DCDO key "teacher-homepage-v2" as "true"
     And I sign in as "Teacher Hank" and go home
     And I get levelbuilder access
 
@@ -46,7 +47,6 @@ Feature: Using the teacher homepage
   Scenario: Teacher can archive and restore sections from the section options dropdown
     Given I am a teacher
     And I create a new student section
-    And I use a cookie to mock the DCDO key "teacher-homepage-v2" as "true"
     And I am on "http://studio.code.org/teacher_dashboard/home"
     And I click "#section-options-dropdown-dropdown-button" once it exists
     And I click "#ui-test-archive-section" once it exists
@@ -59,7 +59,6 @@ Feature: Using the teacher homepage
 Scenario: Teacher can delete a section from the section options dropdown
     Given I am a teacher
     And I create a new student section
-    And I use a cookie to mock the DCDO key "teacher-homepage-v2" as "true"
     And I am on "http://studio.code.org/teacher_dashboard/home"
     And I click "#section-options-dropdown-dropdown-button" once it exists
     And I click "#ui-test-delete-section" once it exists
@@ -69,7 +68,6 @@ Scenario: Teacher can delete a section from the section options dropdown
   Scenario: Teacher can assign a course from the "Assign a course" button and access lessons from the "Jump to" dropdown
     Given I am a teacher
     And I create a new student section
-    And I use a cookie to mock the DCDO key "teacher-homepage-v2" as "true"
     And I am on "http://studio.code.org/teacher_dashboard/home"
     And I click "#ui-test-empty-state-button-Assign-a-course" once it exists
     Then I wait until element "h4:contains(AI for Oceans)" is visible
@@ -88,14 +86,12 @@ Scenario: Teacher can delete a section from the section options dropdown
   Scenario: Teacher can access section roster from the "Add students" button on the section card
     Given I am a teacher
     And I create a new student section
-    And I use a cookie to mock the DCDO key "teacher-homepage-v2" as "true"
     And I am on "http://studio.code.org/teacher_dashboard/home"
     Then I click "#ui-test-empty-state-button-Add-students" once it exists
     Then I wait until element "#uitest-manage-students-table" is visible
 
   Scenario: Teacher can view student progress from the "View progress" button on the section card
     Given I create a teacher named "Teacher Hank"
-    And I use a cookie to mock the DCDO key "teacher-homepage-v2" as "true"
     And I sign in as "Teacher Hank" and go home
     And I get levelbuilder access
     And I create a new student section assigned to "interactive-games-animations-2024" and save the section
@@ -110,7 +106,6 @@ Scenario: Teacher can delete a section from the section options dropdown
   Scenario: Teacher can view lesson materials from the "View lesson materials" button on the section card
     Given I am a teacher
     And I create a new student section assigned to "interactive-games-animations-2024"
-    And I use a cookie to mock the DCDO key "teacher-homepage-v2" as "true"
     And I am on "http://studio.code.org/teacher_dashboard/home"
     Then I click "#task-button-View-lesson-materials" once it exists
     Then I wait until element "h1:contains(Lesson Materials)" is visible
@@ -119,9 +114,6 @@ Scenario: Teacher can delete a section from the section options dropdown
   Scenario: Teacher can view sections on new teacher homepage
     When I open my eyes to test "teacher homepage"
     Given I create a teacher named "Teacher Hank"
-
-    # This line can be removed when the new teacher homepage is the default
-    And I use a cookie to mock the DCDO key "teacher-homepage-v2" as "true"
     And I sign in as "Teacher Hank" and go home
     And I get levelbuilder access
 
