@@ -10220,7 +10220,7 @@
                         "visualAppearance": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
-                            "desktop": "heading-xl"
+                            "desktop": "heading-xxl"
                           }
                         },
                         "removeMarginBottom": {
