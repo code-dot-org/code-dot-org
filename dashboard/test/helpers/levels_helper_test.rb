@@ -1055,10 +1055,10 @@ class LevelsHelperTest < ActionView::TestCase
       name: "embedded blockly test",
       start_blocks: "<xml><block type='embedded_block' /></xml>"
 
-    #request.env['cdo-locale'] is used to generate the js_locale, but isn't
-    #correctly set up in this test context, so we have to mock it.
+    # `request.locale` is used to generate the js_locale, but isn't
+    # correctly set up in this test context, so we have to mock it.
     mock_request = mock
-    mock_request.stubs(:env).returns({"cdo.locale" => I18n.default_locale})
+    mock_request.stubs(:locale).returns(I18n.default_locale)
     stubs(:request).returns(mock_request)
 
     assert_equal render_multi_or_match_content("embedded blockly test.start_blocks"),

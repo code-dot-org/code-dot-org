@@ -3,11 +3,7 @@ require 'cdo/i18n'
 module LocaleHelper
   # Symbol of best valid locale code to be used for I18n.locale.
   def locale
-    current = request.env['cdo.locale']
-    # if(current_user && current_user.locale != current)
-    #   TODO: Set language cookie and reload the page.
-    # end
-    current.to_sym
+    request.locale.to_sym
   end
 
   def locale_dir
