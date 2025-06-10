@@ -2,7 +2,8 @@
 Feature: Using the teacher homepage
   # This line can be removed when the new teacher homepage is the default
   Background:
-    Given I use a cookie to mock the DCDO key "teacher-homepage-v2" as "true"
+    Given I am on "http://studio.code.org/home"
+    And I use a cookie to mock the DCDO key "teacher-homepage-v2" as "true"
 
   Scenario: Teacher can access section pages from section options dropdown
     Given I create a teacher named "Teacher Hank"
