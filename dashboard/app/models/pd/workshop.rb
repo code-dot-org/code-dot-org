@@ -86,7 +86,7 @@ class Pd::Workshop < ApplicationRecord
   validate :subject_must_be_valid_for_course
   validate :valid_registration_link_format, if: :registration_link
   validate :valid_grades
-  validate :valid_facilitators
+  validate :valid_facilitators_for_course_offerings, if: -> {course == COURSE_BUILD_YOUR_OWN}
   validate :config_validation
 
   before_create :set_registration_link
@@ -142,13 +142,7 @@ class Pd::Workshop < ApplicationRecord
     end
   end
 
-  def valid_facilitators
-    if course == COURSE_BUILD_YOUR_OWN
-      validate_facilitators_with_course_offerings
-    end
-  end
-
-  def validate_facilitators_with_course_offerings
+  def valid_facilitators_for_course_offerings
     permissions_arrays = course_offerings.map(&:facilitator_course_permissions)
     # If any permissions array is nil or empty, any facilitator is allowed to facilitate
     return if permissions_arrays.any?(&:blank?)
@@ -158,14 +152,6 @@ class Pd::Workshop < ApplicationRecord
       facilitator_courses = facilitator.courses_as_facilitator.pluck(:course)
       if (facilitator_courses & permitted_courses).empty?
         errors.add(:base, "Facilitator #{facilitator.name} does not have permission to facilitate the selected workshop topics.")
-      end
-    end
-  end
-
-  def validate_facilitators_with_course
-    facilitators.each do |facilitator|
-      unless facilitator.courses_as_facilitator.exists?(course: course)
-        errors.add(:base, "Facilitator #{facilitator.name} does not have permission to facilitate this workshop course")
       end
     end
   end
