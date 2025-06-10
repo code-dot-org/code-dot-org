@@ -23,25 +23,25 @@ Feature: Using the teacher homepage
     # Visit the section settings page from the section options dropdown
     And I click "#section-options-dropdown-dropdown-button" once it exists
     And I click "#ui-test-Section-settings" once it exists
-    Then I wait to see "#sections-set-up-container"
+    Then I wait until element "#sections-set-up-container" is visible
 
     # Visit the roster page from the section options dropdown
     Given I am on "http://studio.code.org/teacher_dashboard/home"
     And I click "#section-options-dropdown-dropdown-button" once it exists
     And I click "#ui-test-Roster" once it exists
-    Then I wait to see "#uitest-manage-students-table"
+    Then I wait until element "#uitest-manage-students-table" is visible
 
     # Visit the login info page from the section options dropdown
     Given I am on "http://studio.code.org/teacher_dashboard/home"
     And I click "#section-options-dropdown-dropdown-button" once it exists
     And I click "#ui-test-Login-cards" once it exists
-    Then I wait to see "#ui-test-section-login-info"
+    Then I wait until element "#ui-test-section-login-info" is visible
 
     # Open the print certificates page from the section options dropdown
     Given I am on "http://studio.code.org/teacher_dashboard/home"
     And I click "#section-options-dropdown-dropdown-button" once it exists
     And I click "#ui-test-print-certificates" once it exists
-    Then I wait to see "#certificate-batch"
+    Then I wait until element "#certificate-batch" is visible
 
   Scenario: Teacher can archive and restore sections from the section options dropdown
     Given I am a teacher
@@ -54,7 +54,7 @@ Feature: Using the teacher homepage
     And I click "#section-options-dropdown-dropdown-button" once it exists
     And I click "#ui-test-archive-section" once it exists
     And I click "#ui-test-teaching"
-    Then I wait to see "#section-options-dropdown-dropdown-button"
+    Then I wait until element "#section-options-dropdown-dropdown-button" is visible
 
 Scenario: Teacher can delete a section from the section options dropdown
     Given I am a teacher
@@ -79,11 +79,11 @@ Scenario: Teacher can delete a section from the section options dropdown
     And I click selector "button:contains(Confirm section assignments)"
     And I wait until element "p:contains(You have successfully assigned)" is visible
     Given I am on "http://studio.code.org/teacher_dashboard/home"
-    And I wait to see "#course-content-dropdown-Untitled-Section"
+    And I wait until element "#course-content-dropdown-Untitled-Section" is visible
     And element "#course-content-dropdown-Untitled-Section" has text "Course: AI for Oceans"
     Then I click "#go-to-lesson-dropdown-dropdown-button" once it exists
     And I click "#ui-test-Lesson-1-AI-for-Oceans" once it exists
-    Then I wait to see "a:contains(AI for Oceans)"
+    Then I wait until element "a:contains(AI for Oceans)" is visible
 
   Scenario: Teacher can access section roster from the "Add students" button on the section card
     Given I am a teacher
@@ -91,7 +91,7 @@ Scenario: Teacher can delete a section from the section options dropdown
     And I use a cookie to mock the DCDO key "teacher-homepage-v2" as "true"
     And I am on "http://studio.code.org/teacher_dashboard/home"
     Then I click "#ui-test-empty-state-button-Add-students" once it exists
-    Then I wait to see "#uitest-manage-students-table"
+    Then I wait until element "#uitest-manage-students-table" is visible
 
   Scenario: Teacher can view student progress from the "View progress" button on the section card
     Given I create a teacher named "Teacher Hank"
@@ -105,7 +105,7 @@ Scenario: Teacher can delete a section from the section options dropdown
     Then I sign out and sign in as "Teacher Hank"
     And I am on "http://studio.code.org/teacher_dashboard/home"
     Then I click "#task-button-View-progress" once it exists
-    Then I wait to see "h1:contains(Progress)"
+    Then I wait until element "h1:contains(Progress)" is visible
 
   Scenario: Teacher can view lesson materials from the "View lesson materials" button on the section card
     Given I am a teacher
@@ -113,7 +113,7 @@ Scenario: Teacher can delete a section from the section options dropdown
     And I use a cookie to mock the DCDO key "teacher-homepage-v2" as "true"
     And I am on "http://studio.code.org/teacher_dashboard/home"
     Then I click "#task-button-View-lesson-materials" once it exists
-    Then I wait to see "h1:contains(Lesson Materials)"
+    Then I wait until element "h1:contains(Lesson Materials)" is visible
 
   @eyes
   Scenario: Teacher can view sections on new teacher homepage
