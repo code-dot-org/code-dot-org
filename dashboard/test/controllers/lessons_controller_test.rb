@@ -133,7 +133,7 @@ class LessonsControllerTest < ActionController::TestCase
                               params: -> {{course_course_name: @pilot_pl_course.name, unit_position: 1, position: @pilot_pl_script.lessons[0].relative_position}}, name: 'participant cannot view pilot lesson'
 
   test_user_gets_response_for :show, response: :not_found, user: :teacher,
-                              params: -> {{course_course_name: @pilot_pl_course.name, unit_position: 1, position: @pilot_script.lessons[0].relative_position}},
+                              params: -> {{course_course_name: @pilot_course.name, unit_position: 1, position: @pilot_script.lessons[0].relative_position}},
                               name: 'teacher without pilot access cannot view pilot lesson'
 
   test_user_gets_response_for :show, response: :not_found, user: :facilitator,
@@ -1481,9 +1481,10 @@ class LessonsControllerTest < ActionController::TestCase
 
   describe '#show' do
     let!(:user) {create :teacher}
+    let(:unit_group) {create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
     let(:unit) {create :unit, :with_lessons}
-    let(:unit_group) {create :single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
     let(:unit_position) {1}
+    let!(:unit_group_unit) {create :unit_group_unit, unit_group: unit_group, script: unit, position: unit_position}
     let(:lesson) {unit.lessons.first}
     let(:lesson_position) {lesson.relative_position}
 
@@ -1556,9 +1557,10 @@ class LessonsControllerTest < ActionController::TestCase
 
   describe '#redirect_to_canonical_path' do
     let!(:user) {create :teacher}
+    let(:course) {create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
     let(:unit) {create :unit, :with_lessons}
-    let(:course) {create :single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
     let(:unit_position) {1}
+    let!(:unit_group_unit) {create :unit_group_unit, unit_group: course, script: unit, position: unit_position}
     let(:lesson) {unit.lessons.first}
     let(:lesson_position) {lesson.relative_position}
     let(:modularity_enabled) {false}
