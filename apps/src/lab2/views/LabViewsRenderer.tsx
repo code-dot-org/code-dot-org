@@ -30,7 +30,9 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   const exemplarSources = levelProperties?.exemplarSources;
   const levelId = levelProperties?.id;
 
-  const isBlocked = useAppSelector(state => state.lab.isBlocked);
+  const {isBlockedAbuse, projectSharingDisabled} = useAppSelector(
+    state => state.lab
+  );
   const isProjectValidator = useAppSelector(state =>
     state.lab.permissions?.includes(PERMISSIONS.PROJECT_VALIDATOR)
   );
@@ -43,7 +45,10 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   });
 
   // Do not render lab view if project is blocked and user is not a project validator.
-  if (!currentAppName || (isBlocked && !isProjectValidator)) {
+  if (
+    !currentAppName ||
+    ((isBlockedAbuse || projectSharingDisabled) && !isProjectValidator)
+  ) {
     return null;
   }
 
