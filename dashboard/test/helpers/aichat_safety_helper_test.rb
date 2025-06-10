@@ -4,19 +4,9 @@ class AichatSafetyHelperTest < ActionView::TestCase
   include AichatSafetyHelper
 
   ROLES = %w[user assistant].freeze
-  SERVICES = %w[blocklist webpurify comprehend openai].freeze
-  TEST_THRESHOLD = 0.5
+  SERVICES = %w[openai].freeze
 
   setup do
-    @blocklist_blocked_word = "blocked_profanity"
-    @comprehend_response = {
-      flagged_segment: 'comprehend-toxicity',
-      toxicity: 0.9,
-      max_category: {
-        score: TEST_THRESHOLD + 0.1,
-        name: "INSULT"
-      }
-    }
     openai_response_profanity_hash = {
       choices: [
         {
@@ -57,19 +47,13 @@ class AichatSafetyHelperTest < ActionView::TestCase
     @openai_response_safe_json = openai_response_safe_hash.to_json
     @openai_response_invalid_json = openai_response_invalid_hash.to_json
     @openai_response_structured_json = openai_response_structured_hash.to_json
-    @profane_message = "profanity hello #{@blocklist_blocked_word}"
+    @profane_message = "profanity"
     @openai_response = {
       evaluation: "INAPPROPRIATE"
     }
-    @webpurify_profanity = 'webpurify-profanity'
 
-    DCDO.stubs(:get).with("aichat_toxicity_threshold_user_input", anything).returns(TEST_THRESHOLD)
-    DCDO.stubs(:get).with("aichat_toxicity_threshold_model_output", anything).returns(TEST_THRESHOLD)
-    DCDO.stubs(:get).with("aichat_safety_profane_word_blocklist", anything).returns([@blocklist_blocked_word])
     DCDO.stubs(:get).with("aichat_openai_system_prompt", anything).returns('simple')
     Policies::Courses.stubs(:modularity_enabled?).with(anything).returns(false)
-    ShareFiltering.stubs(:find_profanity_failure).returns(ShareFailure.new(ShareFiltering::FailureType::PROFANITY, @webpurify_profanity))
-    AichatComprehendHelper.stubs(:get_toxicity).returns(@comprehend_response)
     mock_response = create_stubbed_response(@openai_response_profanity_json)
     OpenaiChatHelper::Client.any_instance.stubs(:request_chat_completion).returns(mock_response)
 
@@ -87,15 +71,7 @@ class AichatSafetyHelperTest < ActionView::TestCase
     end
   end
 
-  test "returns nil if no services are enabled for role" do
-    stub_safety_services('comprehend', 'assistant')
-    response = AichatSafetyHelper.find_toxicity('user', 'message', 'en', nil)
-    assert_nil response
-  end
-
   test "returns nil if no toxicity is detected" do
-    AichatComprehendHelper.stubs(:get_toxicity).returns(nil)
-    ShareFiltering.stubs(:find_profanity_failure).returns(nil)
     mock_response = create_stubbed_response(@openai_response_safe_json)
     OpenaiChatHelper::Client.any_instance.stubs(:request_chat_completion).returns(mock_response)
 
@@ -162,9 +138,6 @@ class AichatSafetyHelperTest < ActionView::TestCase
 
   def stub_safety_services(enabled_service, enabled_role)
     %w[user assistant].each do |role|
-      DCDO.stubs(:get).with("aichat_safety_blocklist_enabled_#{role}", anything).returns(enabled_service == 'blocklist' && role == enabled_role)
-      DCDO.stubs(:get).with("aichat_safety_webpurify_enabled_#{role}", anything).returns(enabled_service == 'webpurify' && role == enabled_role)
-      DCDO.stubs(:get).with("aichat_safety_comprehend_enabled_#{role}", anything).returns(enabled_service == 'comprehend' && role == enabled_role)
       DCDO.stubs(:get).with("aichat_safety_openai_enabled_#{role}", anything).returns(enabled_service == 'openai' && role == enabled_role)
     end
   end
@@ -175,13 +148,6 @@ class AichatSafetyHelperTest < ActionView::TestCase
     assert_equal enabled_service, response[:blocked_by]
     details = response[:details]
     case enabled_service
-    when 'blocklist'
-      assert_equal @blocklist_blocked_word, details[:blocked_word]
-    when 'webpurify'
-      assert_equal ShareFiltering::FailureType::PROFANITY, details[:type]
-      assert_equal @webpurify_profanity, details[:content]
-    when 'comprehend'
-      assert_equal @comprehend_response, details
     when 'openai'
       assert_equal @openai_response, details
     end
