@@ -1,6 +1,8 @@
 module Devise::DatabaseAuthenticationOverrides
   extend ActiveSupport::Concern
 
+  include Devise::Models::DatabaseAuthenticatable
+
   def update_without_password(params, *options)
     if params[:races]
       self.races = params[:races].join ','
