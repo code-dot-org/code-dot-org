@@ -1,7 +1,9 @@
+import * as Blockly from 'blockly/core';
 import React, {
   useRef,
   useState,
   useEffect,
+  useMemo,
   useCallback,
   ReactNode,
 } from 'react';
@@ -114,9 +116,15 @@ const SpriteLabLevel: React.FunctionComponent<SpriteLabLevelProps> = ({
   }, [controller]);
 
   const execute = useCallback(() => {
+    const workspaces: (Blockly.Workspace | undefined)[] = [
+      environment.current.hiddenWorkspace,
+      environment.current.mainWorkspace,
+    ];
+    console.log(workspaces);
     controller.current?.evaluate(
       getAllGeneratedCode({
         startBlock: 'when_run',
+        workspaces,
       }),
     );
     setRunning(true);
@@ -142,33 +150,47 @@ const SpriteLabLevel: React.FunctionComponent<SpriteLabLevelProps> = ({
     };
   }, [controller, levelData]);
 
-  const startBlocks =
-    levelData?.template?.blocklyData?.startBlocks?.blocks?.blocks ||
-    levelData?.blocklyData?.startBlocks?.blocks?.blocks ||
-    [];
-  const filteredStartBlocks = {
-    blocks: {
-      blocks: startBlocks.filter(
-        block => block?.extraState?.uservisible !== false,
-      ),
-    },
-  };
-
-  const procedures = startBlocks.filter(
-    block => block?.type === 'behavior_definition',
+  const startBlocks = useMemo(
+    () =>
+      levelData?.template?.blocklyData?.startBlocks?.blocks?.blocks ||
+      levelData?.blocklyData?.startBlocks?.blocks?.blocks ||
+      [],
+    [levelData],
   );
-  console.log('procedures', startBlocks, procedures);
+
+  const filteredStartBlocks = useMemo(
+    () => ({
+      blocks: {
+        blocks: startBlocks.filter(
+          block => block?.extraState?.uservisible !== false,
+        ),
+      },
+    }),
+    [startBlocks],
+  );
+
+  //const procedures = startBlocks.filter(
+  //  block => block?.type === 'behavior_definition',
+  //);
 
   // Filter out blocks that are marked invisible to the user and place them in
   // a hidden workspace.
-  const hiddenBlocks = {
-    blocks: {
-      blocks: startBlocks.filter(
-        block => block?.extraState?.uservisible === false,
-      ),
-      procedures: [],
-    },
-  };
+  const hiddenBlocks = useMemo(
+    () => ({
+      blocks: {
+        blocks: startBlocks.filter(
+          block => block?.extraState?.uservisible === false,
+        ),
+        procedures: [],
+      },
+    }),
+    [startBlocks],
+  );
+
+  const fullBlocks = useMemo(
+    () => [...blocks, ...(customBlocks || [])],
+    [blocks, customBlocks],
+  );
 
   return (
     <BlocklyLevel
@@ -194,7 +216,7 @@ const SpriteLabLevel: React.FunctionComponent<SpriteLabLevelProps> = ({
           />
         )
       }
-      customBlocks={[...blocks, ...(customBlocks || [])]}
+      customBlocks={fullBlocks}
       options={{
         forceInsertTopBlock: 'when_run',
         grayOutUndeletableBlocks: false,

@@ -15,7 +15,9 @@ class SpriteLab {
 
   run() {}
 
-  evaluate(_code: string) {}
+  evaluate(code: string) {
+    console.log('CODE', code);
+  }
 }
 
 export default SpriteLab;

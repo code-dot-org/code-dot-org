@@ -109,8 +109,6 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
   const anchor = useRef<HTMLDivElement | HTMLSpanElement | null>(null);
   const workspace = useRef<Blockly.WorkspaceSvg | null>(null);
 
-  console.log('BLOCKLY environment', environment);
-
   // Pull from the provider, if it exists there and we haven't specified it
   // ourselves.
   const {
@@ -125,14 +123,6 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
   plugins ||= storedPlugins;
   theme ||= storedTheme || DefaultTheme;
   environment ||= storedEnvironment as unknown as T;
-  console.log(
-    'BLOCKLY_INIT environment',
-    customBlocks,
-    startBlocks,
-    renderer,
-    theme,
-    environment,
-  );
 
   // Register renderer, if needed
   useEffect(() => {
@@ -147,7 +137,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
           plugin => plugin.type === PluginType.Input,
         );
 
-        console.log('REGISTER RENDERER', inputPlugins);
+        console.log('REGISTER RENDERER', renderer, plugins, inputPlugins);
         Blockly.registry.register(
           Blockly.registry.Type.RENDERER,
           renderer.name,
@@ -160,6 +150,14 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
 
   // Register any new custom blocks
   useEffect(() => {
+    console.log(
+      'BLOCKLY_INIT environment via renderer',
+      customBlocks,
+      startBlocks,
+      renderer,
+      theme,
+      environment,
+    );
     Blockly.setLocale(En as unknown as {[key: string]: string});
 
     // Make sure we have the default blocks
@@ -287,12 +285,22 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
   }, [customBlocks]);
 
   useEffect(() => {
+    console.log(
+      'BLOCKLY_INIT environment via anchor',
+      customBlocks,
+      startBlocks,
+      renderer,
+      theme,
+      environment,
+    );
+
     // Determine the location of the workspace
     // For inline workspaces (like those within markdown instructions) create
     // the container to build it offscreen before copying it to its final
     // location.
     const container = inline ? document.createElement('div') : anchor.current;
 
+    console.log(container, workspace.current);
     if (!container) {
       return;
     }
@@ -510,7 +518,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
       // Dispose of the workspace
       workspace.current?.dispose();
     };
-  }, [anchor.current, renderer]);
+  }, []);
 
   // Resize the Blockly workspace when the container changes size
   if (!inline) {

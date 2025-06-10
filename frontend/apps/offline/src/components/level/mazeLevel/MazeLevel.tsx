@@ -99,6 +99,12 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
     [levelData],
   );
 
+  // Determine all blocks
+  const fullBlocks = useMemo(
+    () => [...blocks, ...(customBlocks || [])],
+    [blocks, customBlocks],
+  );
+
   // Set up the driver
   useEffect(() => {
     if (svg.current) {
@@ -169,14 +175,14 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
           />
         )
       }
-      customBlocks={[...blocks, ...(customBlocks || [])]}
+      customBlocks={fullBlocks}
       options={{
         forceInsertTopBlock: 'when_run',
         grayOutUndeletableBlocks: true,
         ...(options || {}),
       }}
       onInject={onInject}
-      plugins={[ToolboxTrashcanPlugin, BlockLimitsPlugin]}
+      plugins={useMemo(() => [ToolboxTrashcanPlugin, BlockLimitsPlugin], [])}
       {...rest}
     />
   );

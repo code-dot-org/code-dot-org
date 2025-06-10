@@ -1,6 +1,6 @@
 import * as Blockly from 'blockly/core';
 import classNames from 'classnames';
-import React, {ReactNode, useRef, useCallback} from 'react';
+import React, {ReactNode, useMemo, useRef, useCallback} from 'react';
 
 import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -117,11 +117,15 @@ function BlocklyLevel<
     ...UNCOUNTED_BLOCK_TYPES,
     ...(uncountedBlockTypes || []),
   ];
-  const toolboxBlocks = levelData.multipleChoice
-    ? undefined
-    : levelData.blocklyData?.toolboxBlocks?.contents?.length === 0
-      ? undefined
-      : levelData.blocklyData?.toolboxBlocks;
+  const toolboxBlocks = useMemo(
+    () =>
+      levelData.multipleChoice
+        ? undefined
+        : levelData.blocklyData?.toolboxBlocks?.contents?.length === 0
+          ? undefined
+          : levelData.blocklyData?.toolboxBlocks,
+    [levelData],
+  );
   const setToolboxHeaderWidth = useCallback(() => {
     // Get the width of the flyout / toolbox
     if (toolboxHeaderRef.current && workspaceRef.current) {

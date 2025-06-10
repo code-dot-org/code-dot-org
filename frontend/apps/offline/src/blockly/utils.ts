@@ -11,6 +11,14 @@ export interface GetAllGeneratedCodeOptions {
   startBlock?: string;
   /** The code to inject at the start of the generated code block. */
   extraCode?: string;
+  /**
+   * The workspaces to use. By default, it just looks at whatever Blockly
+   * currently thinks is the main workspace.
+   *
+   * It will generate the code by appending each workspace in the order they
+   * are specified in this list.
+   */
+  workspaces?: (Blockly.Workspace | undefined)[];
 }
 
 /**
@@ -21,7 +29,7 @@ export function getAllGeneratedCode(options?: GetAllGeneratedCodeOptions) {
   // The students blocks are considered to be any on the main or hidden workspaces.
   let code = options?.extraCode || '';
 
-  [Blockly.getMainWorkspace()].forEach(workspace => {
+  (options?.workspaces || [Blockly.getMainWorkspace()]).forEach(workspace => {
     if (workspace) {
       javascriptGenerator.init(workspace);
       const blocks = workspace.getTopBlocks(true);
