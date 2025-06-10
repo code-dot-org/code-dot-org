@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {getStore} from '@cdo/apps/redux';
 import {
   asyncLoadCoursesWithProgress,
   setUnit,
@@ -64,7 +65,10 @@ function UnitSelectorV2({
         .split('-')
         .map(id => parseInt(id));
       setUnit(newUnitId, newCourseVersionId);
-      loadUnitProgress(newUnitId, sectionId, courseId, unitPosition);
+      const currentState = getStore().getState();
+      const newCourseId = getSelectedCourseId(currentState);
+      const newUnitPosition = getSelectedUnitPosition(currentState);
+      loadUnitProgress(newUnitId, sectionId, newCourseId, newUnitPosition);
 
       recordEvent('change_script', sectionId, {
         old_script_id: unitId,
@@ -77,7 +81,7 @@ function UnitSelectorV2({
         unitId: newUnitId,
       });
     },
-    [unitId, setUnit, sectionId, courseId, unitPosition]
+    [unitId, setUnit, sectionId]
   );
 
   const itemGroups = coursesWithProgress

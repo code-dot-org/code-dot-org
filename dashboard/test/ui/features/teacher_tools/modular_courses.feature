@@ -99,6 +99,8 @@ Feature: Using Modular Courses
 
     Then I select the "Course 2019" option in dropdown "uitest-sidebar-section-dropdown"
     And I wait until element "#ui-test-progress-table-v2" is visible
+    And I wait until element "#unit-selector-v2" is visible
+    And I select the "UI Test Shared Unit" option in dropdown "unit-selector-v2"
     And I wait until element "#ui-test-lesson-header-1" is visible
     And I click selector "#ui-test-lesson-header-1"
     And I wait until element "#ui-test-courses-ui-test-course-2019-units-3-lessons-1-levels-1-cell-data" is visible
