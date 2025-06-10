@@ -8098,7 +8098,7 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "fit-content"
+                    "desktop": "1368px"
                   }
                 },
                 "cfMaxWidth": {
@@ -8175,13 +8175,13 @@
                     "background": {
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
-                        "desktop": "secondary"
+                        "desktop": "primary"
                       }
                     },
                     "padding": {
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
-                        "desktop": "m"
+                        "desktop": "l"
                       }
                     },
                     "divider": {
@@ -10108,7 +10108,7 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "fit-content"
+                    "desktop": "389px"
                   }
                 },
                 "cfMaxWidth": {
@@ -10220,7 +10220,7 @@
                         "visualAppearance": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
-                            "desktop": "heading-xl"
+                            "desktop": "heading-xxl"
                           }
                         },
                         "removeMarginBottom": {
