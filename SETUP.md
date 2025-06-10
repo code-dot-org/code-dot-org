@@ -521,6 +521,13 @@ Where [VERSION] is the current version of eventmachine in Gemfile.lock. For exam
 
 - `gem install eventmachine -v 1.2.7 -- --with-openssl-dir=$(brew --prefix libressl)`
 
+#### mini_racer and libv8-node
+
+If `bundle install` fails while installing `mini_racer` or `libv8-node`, try running this first:
+```
+bundle config --local without staging test production levelbuilder
+```
+
 #### Xcode Set Up
 
 OS X: when running `bundle install`, you may need to also run `xcode-select --install`. See [stackoverflow](http://stackoverflow.com/a/39730475/3991031). If this doesn't work, step 9 in the overview will not run correctly. In that case run the following command in the Terminal (found from
