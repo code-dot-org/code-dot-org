@@ -290,7 +290,14 @@ const LoginTypeSelection: React.FunctionComponent<{
             {showMoreOptions && !revealClever && (
               <Button
                 text="Show more options"
-                onClick={() => setRevealClever(true)}
+                onClick={() => {
+                  analyticsReporter.sendEvent(
+                    EVENTS.SIGN_UP_SSO_SHOW_MORE_OPTIONS,
+                    {},
+                    PLATFORMS.BOTH
+                  );
+                  setRevealClever(true);
+                }}
                 type="secondary"
                 iconRight={{iconName: 'caret-down'}}
               />

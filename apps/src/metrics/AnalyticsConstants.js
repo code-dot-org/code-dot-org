@@ -12,6 +12,7 @@ const EVENTS = {
   ACCOUNT_TYPE_PICKED_EVENT: 'Account Type Picked',
   SIGN_UP_STARTED_EVENT: 'Sign Up Started',
   SIGN_UP_LOGIN_TYPE_PICKED_EVENT: 'User Login Type Picked',
+  SIGN_UP_SSO_SHOW_MORE_OPTIONS: 'SSO Show More Options Clicked',
   SIGN_UP_FINISHED_EVENT: 'Sign Up Finished',
   SECTION_SETUP_SIGN_IN_EVENT: 'Section Setup Sign In',
   ABANDON_SECTION_SETUP_SIGN_IN_EVENT: 'Abandon Section Setup Sign In',
