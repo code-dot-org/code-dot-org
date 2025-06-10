@@ -3,6 +3,7 @@ import {
   ObservableProcedureModel,
 } from '@blockly/block-shareable-procedures';
 import {FieldColour} from '@blockly/field-colour';
+import {KeyboardNavigation} from '@blockly/keyboard-experiment';
 import * as GoogleBlockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
 
@@ -86,8 +87,6 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   grayOutUndeletableBlocks: boolean;
   topLevelProcedureAutopopulate: boolean;
   isJigsaw: boolean;
-  getNewCursor: (type: string) => GoogleBlockly.Cursor;
-  LineCursor: typeof GoogleBlockly.BasicCursor;
   version: BlocklyVersion;
   blockly_: typeof GoogleBlockly;
   mainWorkspace: GoogleBlockly.WorkspaceSvg | undefined;
@@ -97,8 +96,6 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
     ObservableParameterModel
   >;
   themes: {[key in Themes]: GoogleBlockly.Theme};
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  navigationController: any; // Navigation Controller is not typed by Blockly
   BlockSpace: {
     EVENTS: typeof WORKSPACE_EVENTS;
     onMainBlockSpaceCreated: (callback: () => void) => void;
@@ -186,6 +183,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   blockIdOverrides: {
     [originalBlockId: string]: string;
   };
+  KeyboardNavigation?: typeof KeyboardNavigation;
 }
 
 export type GoogleBlocklyInstance = typeof GoogleBlockly;
@@ -271,6 +269,7 @@ export interface ExtendedWorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
   setEnableToolbox: () => void;
   traceOn: () => void;
   isReadOnly: () => boolean;
+  cleanUp: (includeImmovableBlocks?: boolean) => void;
 }
 
 export interface EditorWorkspaceSvg extends ExtendedWorkspaceSvg {
@@ -298,6 +297,7 @@ export interface ExtendedBlocklyOptions extends GoogleBlockly.BlocklyOptions {
   showUnusedBlocks: boolean | undefined;
   analyticsData: AnalyticsData;
   isJigsaw: boolean;
+  enableKeyboardNavigation: boolean;
 }
 
 export interface ExtendedWorkspace extends GoogleBlockly.Workspace {

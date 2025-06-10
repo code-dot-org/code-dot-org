@@ -1,7 +1,6 @@
 name 'test-music-lab-sequences-practice-artist-choice'
 display_name 'Practice'
 description 'Choose at least 2 options below to practice!'
-uses_lab2
 
 sublevels
 level 'test-music-lab-sequences-practice-artist-choice-a'

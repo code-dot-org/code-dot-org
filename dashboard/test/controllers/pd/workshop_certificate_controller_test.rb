@@ -5,6 +5,7 @@ class Pd::WorkshopCertificateControllerTest < ActionController::TestCase
     @user = create :teacher
     sign_in(@user)
     @workshop = create :workshop, num_sessions: 1, course: Pd::Workshop::COURSE_CSD
+    @workshop.update_columns(name: nil)
     @enrollment = create :pd_enrollment, :with_attendance, workshop: @workshop
 
     facilitator_1 = create :facilitator, name: 'Facilitator 1'
@@ -42,6 +43,7 @@ class Pd::WorkshopCertificateControllerTest < ActionController::TestCase
 
   test 'Generates certificate for CSF 101 workshop' do
     workshop = create :csf_intro_workshop
+    workshop.update_columns(name: nil)
     enrollment = create :pd_enrollment, :with_attendance, workshop: workshop
 
     mock_image = expect_renders_certificate
@@ -79,10 +81,13 @@ class Pd::WorkshopCertificateControllerTest < ActionController::TestCase
   end
 
   test 'Generates certificate for CSD teachercon' do
-    workshop = create :workshop,
+    workshop = build :workshop,
       num_sessions: 1,
       course: Pd::Workshop::COURSE_CSD,
-      subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON
+      subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON,
+      name: nil
+    # workshop subject is deprecated so validation must be skipped
+    workshop.save(validate: false)
     enrollment = create :pd_enrollment, :with_attendance, workshop: workshop
 
     mock_image = expect_renders_certificate
@@ -101,10 +106,13 @@ class Pd::WorkshopCertificateControllerTest < ActionController::TestCase
   end
 
   test 'Generates certificate for CSP teachercon' do
-    workshop = create :workshop,
+    workshop = build :workshop,
       num_sessions: 1,
       course: Pd::Workshop::COURSE_CSP,
-      subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON
+      subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON,
+      name: nil
+    # workshop subject is deprecated so validation must be skipped
+    workshop.save(validate: false)
     enrollment = create :pd_enrollment, :with_attendance, workshop: workshop
 
     mock_image = expect_renders_certificate

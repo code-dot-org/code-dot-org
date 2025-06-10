@@ -35,6 +35,7 @@ interface LessonMaterialsData {
   scriptResourcesPdfUrl: string;
   lessons: Lesson[];
   hasNumberedUnits: boolean;
+  hasUnnumberedLessons: boolean;
   versionYear?: number;
 }
 
@@ -58,9 +59,10 @@ const createDisplayName = (
   lessonName: string,
   lessonPosition: number,
   hasLessonPlan: boolean,
-  isLockable: boolean
+  isLockable: boolean,
+  hasUnnumberedLessons: boolean
 ) => {
-  if (isLockable && !hasLessonPlan) {
+  if (hasUnnumberedLessons || (isLockable && !hasLessonPlan)) {
     return lessonName;
   } else {
     return i18n.lessonNumberAndName({
@@ -144,9 +146,16 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     lessonMaterialsCachedLoader,
   ]);
 
-  const {hasNumberedUnits, lessons, unitNumber, versionYear} = useMemo(() => {
+  const {
+    hasNumberedUnits,
+    hasUnnumberedLessons,
+    lessons,
+    unitNumber,
+    versionYear,
+  } = useMemo(() => {
     return {
       hasNumberedUnits: lessonMaterials?.hasNumberedUnits || false,
+      hasUnnumberedLessons: lessonMaterials?.hasUnnumberedLessons || false,
       lessons: lessonMaterials?.lessons || [],
       unitNumber: lessonMaterials?.unitNumber || -1,
       versionYear: lessonMaterials?.versionYear || -1,
@@ -191,11 +200,12 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
         lesson.name,
         lesson.position,
         lesson.hasLessonPlan,
-        lesson.isLockable
+        lesson.isLockable,
+        hasUnnumberedLessons
       );
       return {text: displayName, value: lesson.id.toString()};
     });
-  }, [lessons]);
+  }, [lessons, hasUnnumberedLessons]);
 
   const lessonOptions = useMemo(
     () => generateLessonDropdownOptions(),

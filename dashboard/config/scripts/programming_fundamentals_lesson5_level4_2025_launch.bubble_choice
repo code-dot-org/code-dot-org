@@ -1,6 +1,6 @@
 name 'programming-fundamentals-lesson5-level4_2025-launch'
 display_name 'level display_name here'
-description 'level description here'
+description 'modify a program so that the Painter ends in a different position or faces a different direction'
 
 sublevels
 level 'programming-fundamentals-lesson5-level4a_2025-launch'

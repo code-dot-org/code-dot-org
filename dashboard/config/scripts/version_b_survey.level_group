@@ -1,0 +1,11 @@
+name 'Version B Survey'
+title 'Career Journey Lesson Survey'
+submittable 'true'
+anonymous 'true'
+
+page
+level ‘VersionB q1'
+level ‘VersionB q2'
+level ‘VersionB q3'
+level ‘VersionB q4'
+level ‘VersionB q5'

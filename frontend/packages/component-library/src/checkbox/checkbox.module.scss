@@ -1,4 +1,4 @@
-@import '@code-dot-org/component-library-styles/primitiveColors.scss';
+@use '@code-dot-org/component-library-styles/primitiveColors.scss';
 
 // Checkbox common styles
 .label {
@@ -23,6 +23,7 @@
   }
 
   input[type='checkbox'] {
+    cursor: pointer;
     position: absolute;
     opacity: 0;
 

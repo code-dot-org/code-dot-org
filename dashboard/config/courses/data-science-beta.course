@@ -4,6 +4,10 @@
     "intro-to-data-science-beta",
     "data-science-with-python-beta"
   ],
+  "original_script_names": [
+    "intro-to-data-science-beta",
+    "data-science-with-python-beta"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

@@ -58,16 +58,17 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
       {file ? (
         <CodeEditor
           key={`${file.id}/${1}`}
-          darkMode={true}
           onCodeChange={onChange}
           startCode={file.contents}
           appName={levelProperties.appName}
           editorConfigExtensions={editorConfigExtensions}
         />
       ) : (
-        <BodyOneText className={moduleStyles.noOpenFilesMessage}>
-          {codebridgeI18n.noOpenFiles()}
-        </BodyOneText>
+        <div className={moduleStyles.noOpenFilesContainer}>
+          <BodyOneText className={moduleStyles.noOpenFilesMessage}>
+            {codebridgeI18n.noOpenFiles()}
+          </BodyOneText>
+        </div>
       )}
     </div>
   );

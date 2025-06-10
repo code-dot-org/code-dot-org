@@ -1,0 +1,17 @@
+name 'csaif_pl_ai_02_04b'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Giving Examples
+
+#### You've seen how AI predictions get better when given more context. Now, you're going to test that idea by giving the AI different types of prompts—starting with no example, then adding one, and finally, adding multiple examples. Try to notice how the responses change at each level.
+
+## 📝 To Do
+
+#### In the next level, you'll choose one career to explore how providing context affects AI responses.
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 3. You can find more details in the full <a href='https://studio.code.org/s/aif1-2025/lessons/3' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+MARKDOWN

@@ -30,6 +30,8 @@ const EVENTS = {
   FINISH_ACCOUNT_PAGE_LOADED: 'Finish Account Page Loaded',
   SECTION_SETUP_STARTED: 'Section Setup Started',
   LINK_ACCOUNT_PAGE_VISITED_EVENT: 'Link Account Page Visited',
+  UPGRADE_TO_TEACHER_ACCOUNT_PAGE_VISITED_EVENT:
+    'Upgrade To Teacher Account Page Visited',
 
   // School Association
   // Update School Info Dialog
@@ -109,9 +111,12 @@ const EVENTS = {
   LESSON_RESOURCE_LINK_VISITED_EVENT: 'Lesson Resource Link Visited',
 
   // Workshop enrollment
+  WORKSHOP_ENROLLMENT_PAGE_VISITED_EVENT: 'Workshop Enrollment Page Visited',
   WORKSHOP_ENROLLMENT_COMPLETED_EVENT: 'Workshop Enrollment Completed',
   WORKSHOP_ADD_SESSION_TO_CALENDAR_CLICK_EVENT:
     'Workshop Add Session to Calendar Clicked',
+  RP_LANDING_ZIP_ENTERED: 'Regional Partner Landing Zip Entered',
+  RP_LANDING_ENROLL_CLICKED: 'Regional Partner Landing Enroll Button Clicked',
 
   // Workshop session attendance
   WORKSHOP_ATTENDANCE_MARKED_EVENT: 'Workshop Attendance Marked',
@@ -210,6 +215,8 @@ const EVENTS = {
     'Section New Progress One Student Row Collapsed',
   PROGRESS_V2_ALL_ROWS_COLLAPSED:
     'Section New Progress All Student Rows Collapsed',
+  PROGRESS_V2_DOWNLOAD_LEVEL_CSV: 'Section New Progress Download Level CSV',
+  PROGRESS_V2_DOWNLOAD_LESSON_CSV: 'Section New Progress Download Lesson CSV',
 
   // Levels
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',
@@ -232,6 +239,10 @@ const EVENTS = {
   CFU_RESPONSE_UNPINNED: 'Summary Page Response Unpinned',
   CFU_RESPONSE_ALL_UNHID: 'Summary Page Response Hidden Responses Unhidden',
   CFU_RESPONSE_ALL_UNPINNED: 'Summary Page Response All Unpinned',
+  CFU_SHOW_AI_INSIGHTS_TOGGLED_OFF: 'Summary Page AI Insights Toggled Off',
+  CFU_SHOW_AI_INSIGHTS_TOGGLED_ON: 'Summary Page AI Insights Toggled On',
+  CFU_AI_ANALYSIS_BUTTON_CLICKED: 'Summary Page AI Analysis Button Clicked',
+  CFU_AI_ANALYSIS_VIEW_DETAILS: 'Summary Page AI Analysis View Details',
 
   // Maker setup
   MAKER_SETUP_PAGE_BOARD_TYPE_EVENT: 'Board Type On Maker Setup Page',
@@ -296,6 +307,12 @@ const EVENTS = {
   AI_DIFF_CHAT_EVENT: 'AI Differentiation Message Event',
   AI_DIFF_FEEDBACK_EVENT: 'AI Differentiation Feedback Event',
   AI_DIFF_CHAT_TOGGLED: 'AI Differentiation Chat Toggled on/off',
+  AI_DIFF_GET_STARTED: 'AI Teaching Assistant Get Started',
+  AI_DIFF_CHOOSE_FLOW: 'AI Teaching Assistant Choose Flow',
+  AI_DIFF_FINISH_FIRST: 'AI Teaching Assistant Finish First Chat',
+  AI_DIFF_CELEBRATION: 'AI Teaching Assistant Celebration screen',
+  AI_DIFF_101: 'AI Teaching Assistant AI 101 CTA',
+  AI_DIFF_SKIP_WELCOME: 'AI Teaching Assistant Skip Welcome',
 
   // AI Tutor
   AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
@@ -479,6 +496,10 @@ const EVENTS = {
   AICHAT_MULTIMODAL_UPLOAD_OPENED: 'User clicks to upload multimodal assets',
   AICHAT_MULTIMODAL_UPLOAD_STAGED: 'User stages multimodal assets',
 
+  // Measures of learning
+  AI_SUMMARY_FRQ_PAGE_USER_FEEDBACK:
+    'Teacher gave feedback on AIs summary of student work',
+
   // Codebridge - File broswer-related events
   CODEBRIDGE_DELETE_FILE: 'Delete file on codebridge',
   CODEBRIDGE_DELETE_FOLDER: 'Delete folder on codebridge',
@@ -519,6 +540,12 @@ const EVENTS = {
   CODEBRIDGE_FOR_TEACHERS_ONLY_TOGGLE:
     'Toggled to For Teachers Only on codebridge',
   CODEBRIDGE_INSTRUCTIONS_TOGGLE: 'Toggled to Instructions on codebridge',
+  CODEBRIDGE_ZOOM: 'Zoomed in or out on codebridge',
+  CODEBRIDGE_EDITOR_FONT_SIZE_CHANGE:
+    'User changed font size on codebridge editor',
+  CODEBRIDGE_CONSOLE_FONT_SIZE_CHANGE:
+    'User changed font size on codebridge console',
+  CODEBRIDGE_THEME_CHANGE: 'User changed theme on codebridge',
 
   // Blockly Lab Settings
   BLOCKLY_LAB_SETTING_CHANGED: 'Setting changed in Blockly Lab',

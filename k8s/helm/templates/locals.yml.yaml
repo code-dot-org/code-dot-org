@@ -31,8 +31,8 @@ data:
 
     # FIXME: once mountDotAWS is reliable, we should uncomment this conditional
     # {{- if not .Values.localDev.mounts.mountDotAWS }}
-    cloudfront_key_pair_id: localoverride
-    cloudfront_private_key: localoverride
-    slack_bot_token: localoverride
+    cloudfront_key_pair_id: ''
+    cloudfront_private_key: ''
+    slack_bot_token: ''
     properties_encryption_key: ''
     # {{- end }}

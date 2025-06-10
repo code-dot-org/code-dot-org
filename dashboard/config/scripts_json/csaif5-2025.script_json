@@ -5,7 +5,7 @@
     "login_required": true,
     "properties": {
       "content_area": "curriculum_9_12",
-      "curriculum_umbrella": "Foundations of CS and AI",
+      "curriculum_umbrella": "Other",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -13,12 +13,15 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "topic_tags": [
+        "ai"
+      ],
       "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-22 02:07:34 UTC",
+    "serialized_at": "2025-04-23 18:13:55 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2315,6 +2318,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10 L01 CFU innovations_2025"
+        ],
         "progression": "Check For Understanding - Day 1"
       },
       "bonus": false,
@@ -2337,6 +2343,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10 L02 CFU innovations part 2_2025"
+        ],
         "progression": "Check For Understanding - Day 2"
       },
       "bonus": false,
@@ -2359,6 +2368,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10L3 CFU Why Collect PII2022_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2381,6 +2393,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP 20-21 Keylogging2022_2025"
+        ],
         "progression": "Keylogging"
       },
       "bonus": false,
@@ -2403,6 +2418,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP 20-21 Phishing2022_2025"
+        ],
         "progression": "Phishing"
       },
       "bonus": false,
@@ -2425,6 +2443,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP 20-21 Rogue Access Points2022_2025"
+        ],
         "progression": "Malware"
       },
       "bonus": false,
@@ -2447,6 +2468,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10 L07 CFU security risks_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2469,6 +2493,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10 L08 CFU security risks_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2491,6 +2518,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crack a Caesar Cipher_2025"
+        ],
         "progression": "Encryption Widgets"
       },
       "bonus": false,
@@ -2513,6 +2543,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crack Random Substitution_2025"
+        ],
         "progression": "Encryption Widgets"
       },
       "bonus": false,
@@ -2535,6 +2568,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10L9 CFU public key_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2557,6 +2593,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10L10 CFU MFA_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,

@@ -1,6 +1,8 @@
 %link{href: asset_path('css/lessons.css'), rel: 'stylesheet', type: 'text/css'}
+%script{src: webpack_asset_path("js/#{js_locale}/music_locale.js")}
 %script{src: webpack_asset_path('js/lessons/edit.js'),
-        data: {unitForLesson: @lesson.script.summarize_for_lesson_edit.to_json, lesson: @lesson_data.to_json, relatedLessons: @related_lessons.to_json, levelSearchingInfo: {searchOptions: @search_options, programmingEnvironments: ProgrammingEnvironment.all.map(&:summarize_for_lesson_edit)}.to_json}}
+        data: {unitForLesson: @lesson.script.summarize_for_lesson_edit.to_json, lesson: @lesson_data.to_json, relatedLessons: @related_lessons.to_json, levelSearchingInfo: {searchOptions: @search_options, programmingEnvironments: ProgrammingEnvironment.all.map(&:summarize_for_lesson_edit)}.to_json, customBlocksConfig: Block.for('GamelabJr').to_json}}
+%script{src: webpack_asset_path('js/googleblockly.js')}
 
 = form_for @lesson, {url: @lesson.get_uncached_show_path} do |f|
   #edit-container

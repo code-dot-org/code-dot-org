@@ -24,4 +24,5 @@ export type ItemRowProps = {
   IconComponent: FileBrowserIconComponentType;
   NameComponent: FileBrowserNameComponentType;
   openFunction: (id: string) => void;
+  className?: string;
 };

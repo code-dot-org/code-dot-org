@@ -14,6 +14,8 @@ import {
   programmingExpressionShape,
   programmingEnvironmentShape,
 } from '@cdo/apps/levelbuilder/shapes';
+import EmbeddedBlock from '@cdo/apps/templates/codeDocs/EmbeddedBlock';
+import StyledCodeBlock from '@cdo/apps/templates/lessonOverview/StyledCodeBlock';
 import color from '@cdo/apps/util/color';
 
 import {lessonEditorTableStyles} from './TableConstants';
@@ -62,12 +64,26 @@ class ProgrammingExpressionsEditor extends Component {
       {
         property: 'name',
         header: {
-          label: 'Name',
+          label: 'Expression',
           props: {
             style: {width: '30%'},
           },
         },
         cell: {
+          formatters: [
+            (name, {rowData}) => {
+              if (rowData.blockName) {
+                return (
+                  <EmbeddedBlock
+                    blockName={rowData.blockName}
+                    link={rowData.link}
+                  />
+                );
+              } else {
+                return <StyledCodeBlock programmingExpression={rowData} />;
+              }
+            },
+          ],
           props: {
             style: {
               ...lessonEditorTableStyles.cell,

@@ -3,6 +3,9 @@
   "script_names": [
     "csa-u8-dev"
   ],
+  "original_script_names": [
+    "csa-u8-dev"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

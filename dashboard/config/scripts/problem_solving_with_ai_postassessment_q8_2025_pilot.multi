@@ -7,7 +7,7 @@ wrong 'The AI automatically corrects itself when new data becomes available.'
 wrong 'The AI prevents misinformation by only sharing laws that it is 100% sure are correct.'
 right 'The student believes the false law and shares it on social media, spreading misinformation.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 7: AI's Wild Imagination

@@ -18,8 +18,9 @@
     align-items: center;
 
     .simpleListItemIcon {
-      flex-shrink: 0;
+      align-self: start;
       text-align: center;
+      flex-shrink: 0;
     }
 
     .simpleListItemLabel {
@@ -59,9 +60,11 @@
 
     .simpleListItemIcon {
       @include mixins.icon-dimensions(var(--font-size-body-lg));
+      line-height: 1.4;
 
       &.simpleListItemBullet {
         @include mixins.icon-dimensions(0.875rem);
+        line-height: 2;
       }
     }
   }
@@ -74,9 +77,11 @@
 
     .simpleListItemIcon {
       @include mixins.icon-dimensions(var(--font-size-body-md));
+      line-height: 1.48;
 
       &.simpleListItemBullet {
         @include mixins.icon-dimensions(0.75rem);
+        line-height: 1.97;
       }
     }
   }
@@ -89,9 +94,11 @@
 
     .simpleListItemIcon {
       @include mixins.icon-dimensions(var(--font-size-body-sm));
+      line-height: 1.54;
 
       &.simpleListItemBullet {
         @include mixins.icon-dimensions(0.625rem);
+        line-height: 2.15;
       }
     }
   }
@@ -104,9 +111,11 @@
 
     .simpleListItemIcon {
       @include mixins.icon-dimensions(var(--font-size-body-xs));
+      line-height: 1.64;
 
       &.simpleListItemBullet {
         @include mixins.icon-dimensions(0.5rem);
+        line-height: 2.67;
       }
     }
   }

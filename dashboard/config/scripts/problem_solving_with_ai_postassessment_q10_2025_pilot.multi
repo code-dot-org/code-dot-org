@@ -7,7 +7,7 @@ right 'It helps the AI focus on relevant background information to produce a mor
 wrong 'It automatically overrides any task instructions the user previously gave.'
 wrong 'It ensures the AI only uses the latest training data and ignores older data.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 8: Debugging and Refining Outputs

@@ -35,7 +35,9 @@ import styles from './teacher-navigation.module.scss';
 const TeacherNavigationBar: React.FC<{
   showAITutorTab: boolean;
 }> = showAITutorTab => {
-  const sections = useAppSelector(state => state.teacherSections.sections);
+  const {sections, sectionOrder} = useAppSelector(
+    state => state.teacherSections
+  );
 
   const [sectionArray, setSectionArray] = useState<
     {value: string; text: string}[]
@@ -48,15 +50,17 @@ const TeacherNavigationBar: React.FC<{
   );
 
   useEffect(() => {
-    const updatedSectionArray = Object.entries(sections)
-      .filter(([id, section]) => !section.hidden)
-      .map(([id, section]) => ({
-        value: id,
+    const updatedSectionArray = sectionOrder
+      .map(sectionId => sections[sectionId] || null)
+      .filter(section => section !== null)
+      .filter(section => !section.hidden)
+      .map(section => ({
+        value: section.id.toString(),
         text: section.name,
       }));
 
     setSectionArray(updatedSectionArray);
-  }, [sections, selectedSection]);
+  }, [sections, selectedSection, sectionOrder]);
 
   const getSectionHeader = (label: string) => {
     return (
@@ -93,7 +97,7 @@ const TeacherNavigationBar: React.FC<{
 
   let courseContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[];
   if (selectedSection?.unitName) {
-    if (currentPathName === TEACHER_NAVIGATION_PATH_NAMES.nestedUnitOverview) {
+    if (experiments.isEnabled(experiments.MODULARITY)) {
       courseContentKeys = ['nestedUnitOverview', 'lessonMaterials', 'calendar'];
     } else {
       courseContentKeys = ['unitOverview', 'lessonMaterials', 'calendar'];
@@ -149,16 +153,26 @@ const TeacherNavigationBar: React.FC<{
     if (currentPathObject?.absoluteUrl) {
       if (
         currentPathObject.url === TEACHER_NAVIGATION_PATHS.courseOverview ||
-        currentPathObject.url === TEACHER_NAVIGATION_PATHS.unitOverview
+        currentPathObject.url === TEACHER_NAVIGATION_PATHS.unitOverview ||
+        currentPathObject.url === TEACHER_NAVIGATION_PATHS.nestedUnitOverview
       ) {
-        const overviewUrl = sections[sectionId]?.unitName
-          ? LABELED_TEACHER_NAVIGATION_PATHS.unitOverview.absoluteUrl
-          : LABELED_TEACHER_NAVIGATION_PATHS.courseOverview.absoluteUrl;
+        let overviewUrl =
+          LABELED_TEACHER_NAVIGATION_PATHS.courseOverview.absoluteUrl;
+        if (sections[sectionId]?.unitName) {
+          if (experiments.isEnabled(experiments.MODULARITY)) {
+            overviewUrl =
+              LABELED_TEACHER_NAVIGATION_PATHS.nestedUnitOverview.absoluteUrl;
+          } else {
+            overviewUrl =
+              LABELED_TEACHER_NAVIGATION_PATHS.unitOverview.absoluteUrl;
+          }
+        }
         navigate(
           generatePath(overviewUrl, {
             sectionId: sectionId,
             courseVersionName: sections[sectionId]?.courseVersionName,
             unitName: sections[sectionId]?.unitName,
+            unitPosition: sections[sectionId]?.unitPosition,
           })
         );
       } else {
@@ -167,11 +181,9 @@ const TeacherNavigationBar: React.FC<{
             sectionId: sectionId,
             courseVersionName: sections[sectionId]?.courseVersionName,
             unitName: sections[sectionId]?.unitName,
+            unitPosition: sections[sectionId]?.unitPosition,
           })
         );
-        if (currentPathObject.url === TEACHER_NAVIGATION_PATHS.settings) {
-          window.location.reload();
-        }
       }
 
       analyticsReporter.sendEvent(EVENTS.NAVIGATE_TO_SECTION, {
@@ -208,6 +220,7 @@ const TeacherNavigationBar: React.FC<{
         isSelected={isOptionSelected(key)}
         sectionId={selectedSection.id}
         courseVersionName={selectedSection.courseVersionName}
+        unitPosition={selectedSection.unitPosition}
         unitName={selectedSection.unitName}
         pathKey={key as keyof typeof LABELED_TEACHER_NAVIGATION_PATHS}
       />
@@ -232,10 +245,24 @@ const TeacherNavigationBar: React.FC<{
 
   const aiContext = () => {
     if (selectedSection?.courseId && selectedSection?.unitId)
-      return AiDiffContext.COURSE;
-    if (selectedSection?.courseId) return AiDiffContext.COURSE;
-    if (selectedSection?.unitId) return AiDiffContext.UNIT;
-    return AiDiffContext.GENERAL;
+      return {
+        type: AiDiffContext.COURSE,
+        courseId: selectedSection.courseId,
+        unitId: selectedSection.unitId,
+      };
+    if (selectedSection?.courseId)
+      return {
+        type: AiDiffContext.COURSE,
+        courseId: selectedSection.courseId,
+      };
+    if (selectedSection?.unitId)
+      return {
+        type: AiDiffContext.UNIT,
+        unitId: selectedSection.unitId,
+      };
+    return {
+      type: AiDiffContext.GENERAL,
+    };
   };
 
   return (
@@ -267,11 +294,6 @@ const TeacherNavigationBar: React.FC<{
       {experiments.isEnabled('ai-differentiation') && (
         <AiDiffFloatingActionButton
           context={aiContext()}
-          scriptId={
-            selectedSection?.courseId
-              ? selectedSection?.courseId
-              : selectedSection?.unitId
-          }
           scriptName={selectedSection?.courseVersionName}
           unitDisplayName={selectedSection?.courseDisplayName}
         />

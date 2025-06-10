@@ -20,13 +20,14 @@ module ProjectsList
     dance: ['dance'],
     poetry: ['poetry', 'poetry_hoc'],
     library: ['applab', 'gamelab'],
-    music: ['music']
+    music: ['music'],
+    pythonlab: ['pythonlab']
   }.freeze
 
   # Sharing of advanced project types to the public gallery is restricted for
   # young students unless sharing is explicitly enabled by the student's
   # teacher for privacy reasons.
-  ADVANCED_PROJECT_TYPES = ['applab', 'gamelab', 'spritelab']
+  ADVANCED_PROJECT_TYPES = ['applab', 'gamelab', 'spritelab', 'pythonlab']
 
   class << self
     # Look up every project associated with the provided user_id, excluding those that are hidden.

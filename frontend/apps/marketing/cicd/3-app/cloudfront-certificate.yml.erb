@@ -1,0 +1,36 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: Provision CloudFront certificate for a marketing site (<%="https://#{options[:subdomain_name]}.#{options[:base_domain_name]}"%>) in us-east-1 (Cloudfront is a global service; its TLS certificates must be in us-east-1).
+
+# Market site domain names use this naming convention:
+# https://docs.google.com/spreadsheets/d/1abCYr1tFEs-Ag5lyq5m0r5zQi_ioGgr-Th3NAdocQPQ/edit?pli=1&gid=0#gid=0
+Parameters:
+  HostedZoneId:
+    Type: String
+    Description: AWS Route 53 Hosted Zone ID to provision this marketing site's domain name. (e.g. the Hosted Zone ID for 'marketing-sites.dev-code.org').
+  BaseDomainName:
+    Type: String
+    Description: The base domain name of this marketing site (e.g. 'marketing-sites.test-code.org' in 'hourofcode.marketing-sites.test-code.org').
+  SubdomainName:
+    Type: String
+    Description: Subdomain name of this marketing site (e.g. 'hourofcode' in 'hourofcode.marketing-sites.test-code.org').
+
+Conditions:
+  IsUSEast1: !Equals [!Ref "AWS::Region", "us-east-1"]
+
+Resources:
+  # TLS Cert for CloudFront Distribution (must be in us-east-1)
+   TLSCertificate:
+     Condition: IsUSEast1
+     Type: AWS::CertificateManager::Certificate
+     Properties:
+       DomainName: !Sub "${SubdomainName}.${BaseDomainName}"
+       DomainValidationOptions:
+         - DomainName: !Sub "${SubdomainName}.${BaseDomainName}"
+           HostedZoneId: !Ref HostedZoneId
+       ValidationMethod: DNS
+Outputs:
+  TLSCertificateArn:
+    Value: !Ref TLSCertificate
+    Export:
+      Name: !Sub "${AWS::StackName}-TLSCertificateArn"

@@ -3,6 +3,9 @@
   "script_names": [
     "vigenere"
   ],
+  "original_script_names": [
+    "vigenere"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

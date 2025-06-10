@@ -1,4 +1,7 @@
-# syntax=docker/dockerfile:1
+# syntax=docker/dockerfile:1.7-labs
+
+# We use syntax=docker/dockerfile:1.7-labs to get access to:
+# - `COPY --parents`, see: https://docs.docker.com/reference/dockerfile/#copy---parents
 
 # Pull in the static assets and db seed layers
 # built from separate dockerfiles by skaffold
@@ -22,11 +25,14 @@ COPY --chown=${UID} \
   Gemfile.lock \
   ./
 
-# /Gemfile includes '**/engines/*/*.gemspec', these will need to be added to this dockerfile
-# one by one as they are defined, or the build will be broken.
+# Gemfile includes **/engines/*/*.gemspec, so we need to include them here too
+#
+# WARNING: we are using `COPY --parents` here, which currently (mar 2025) requires `syntax=docker/dockerfile:1.7-labs`
+# the alternative would be to manually list each engine gemspec file as it gets added.
 COPY --chown=${UID} \
-  ./dashboard/engines/marketing/marketing.gemspec \
-  ./dashboard/engines/marketing/
+  --parents \
+  ./**/engines/*/*.gemspec \
+  ./
 
 RUN --mount=type=cache,sharing=locked,uid=${UID},gid=${GID},target=${HOME}/.rbenv/versions/3.0.5/lib/ruby/gems/3.0.0/cache <<EOF
   bundle install --jobs 8 --quiet
@@ -91,7 +97,7 @@ RUN \
   # Instuct Docker to maintain a download cache for yarn packages
   # so we don't have to re-download npms whenever package.json changes
   --mount=type=cache,sharing=locked,uid=${UID},gid=${GID},target=${SRC}/apps/.yarn/cache \
-<<EOF
+  <<EOF
   # yarn install
   cd apps
   CI=true yarn install --immutable --silent

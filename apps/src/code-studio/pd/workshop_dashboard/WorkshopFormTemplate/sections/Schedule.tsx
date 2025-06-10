@@ -8,8 +8,10 @@ import {ScheduleProps} from '../types';
 export const Schedule: FC<ScheduleProps> = ({
   timeZone,
   sessions,
+  config,
   dispatchWorkshop,
   dispatchSessions,
+  errors,
 }) => {
   const handleChange = useCallback(
     (tz: string) =>
@@ -17,15 +19,20 @@ export const Schedule: FC<ScheduleProps> = ({
     [dispatchWorkshop]
   );
   return (
-    <>
+    <section>
       <Heading2 visualAppearance="heading-sm">Schedule</Heading2>
       <TimeZoneEditor
-        text="Workshop time(s) will be set to your timezone:"
         timeZone={timeZone}
         handleChange={handleChange}
+        config={config}
       />
-      <SessionsEditor sessions={sessions} dispatchSessions={dispatchSessions} />
-    </>
+      <SessionsEditor
+        sessions={sessions}
+        dispatchSessions={dispatchSessions}
+        fields={config.session_fields}
+        errors={errors}
+      />
+    </section>
   );
 };
 

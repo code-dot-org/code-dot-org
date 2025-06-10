@@ -3,6 +3,9 @@
   "script_names": [
     "ey-ecosystems"
   ],
+  "original_script_names": [
+    "ey-ecosystems"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

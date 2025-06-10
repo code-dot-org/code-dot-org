@@ -25,6 +25,9 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
   private imageWidth_: number;
   private imageHeight_: number;
   private whiteBackground: boolean;
+  private primaryColour_?: string;
+  private borderColour_?: string;
+  private focusColour_?: string;
 
   constructor(
     menuGenerator:
@@ -49,144 +52,91 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
     super(
       () => fixMenuGenerator(menuGenerator, width, height),
       undefined /* validator */,
-      {columns: numColumns}
+      {
+        columns: numColumns,
+        primaryColour: color.white,
+        borderColour: color.white,
+      }
     );
 
     this.buttons_ = buttons;
     this.imageWidth_ = width;
     this.imageHeight_ = height;
     this.whiteBackground = whiteBackground;
+    this.focusColour_ = 'rgba(0,0,0,.3)';
   }
 
   /**
    * @override
-   * Duplicated from Blockly.FieldDropdown.showEditor_ and FieldGridDropdown.showEditor_
-   * There are two functionality changes:
-   * 1. Override primaryColour to always be white. FieldGridGropdown allows overriding the primary
-   *  color via config, but it happens in showEditor_, which we need to override because of 2.
-   * 2. Create MenuItems for the buttons and add them before we render the menu.
-   * We are accessing private fields here, so if we upgrade Blockly we should verify no names changed.
+   * Customized version of `Blockly.FieldDropdown.showEditor_` and
+   * `FieldGridDropdown.showEditor_` with the following functionality changes:
+   *
+   * 1. Overrides grid colours based on the source block.
+   * 2. Dynamically styles grid items and their embedded images.
+   * 3. Adds custom buttons below the grid.
+   *
+   * @param e Optional mouse event that triggered the field to open, or
+   *  undefined if triggered programmatically.
    */
-  showEditor_(opt_e?: MouseEvent) {
-    // dropdownCreate is private in the parent.
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (this as any).dropdownCreate();
-    // dropdownCreate creates a menu, this is just to make TypeScript happy.
-    if (!this.menu_) {
-      return;
+  protected showEditor_(e?: MouseEvent) {
+    super.showEditor_(e);
+
+    const block = this.getSourceBlock() as GoogleBlockly.BlockSvg | null;
+    if (block) {
+      const parent = block.getParent();
+      const isShadow = block.isShadow();
+
+      const colorSourceBlock = isShadow ? parent! : block;
+      if (this.whiteBackground) {
+        this.primaryColour_ = color.white;
+        this.focusColour_ = colorSourceBlock.style.colourTertiary;
+      } else {
+        this.primaryColour_ = colorSourceBlock.style.colourTertiary;
+        // Use the default focusColour_, a semi-transparent black.
+      }
+      this.borderColour_ = colorSourceBlock.style.colourPrimary;
+      Blockly.DropDownDiv.setColour(this.primaryColour_, this.borderColour_);
     }
-    if (opt_e && typeof opt_e.clientX === 'number') {
-      this.menu_.openingCoords = new Blockly.utils.Coordinate(
-        opt_e.clientX,
-        opt_e.clientY
-      );
-    } else {
-      this.menu_.openingCoords = null;
-    }
+
+    const gridItems: HTMLElement[] = Array.from(
+      document.querySelectorAll('.blocklyFieldGrid .blocklyFieldGridItem')
+    );
+    gridItems.forEach(element => {
+      // Dynamic styling for .blocklyFieldGrid .blocklyFieldGridItem
+      element.style.height = this.imageHeight_ + 'px';
+      element.style.width = this.imageWidth_ + 'px';
+      element.addEventListener('focus', () => {
+        element.style.boxShadow = `0 0 0 4px ${this.focusColour_}`;
+      });
+      element.addEventListener('blur', () => {
+        element.style.boxShadow = '';
+      });
+
+      // Dynamic styling for .blocklyFieldGrid .blocklyFieldGridItem img
+      const imgElement = element.querySelector(
+        'img'
+      ) as HTMLImageElement | null;
+      if (imgElement) {
+        imgElement.style.maxWidth = this.imageWidth_ + 'px';
+        imgElement.style.maxHeight = this.imageHeight_ + 'px';
+      }
+    });
 
     if (this.buttons_) {
-      // Force buttons to a new row by adding blank elements if needed.
-      // menuItems is private in the parent.
-      const numItems =
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        ((this.menu_ as any).menuItems as GoogleBlockly.MenuItem[]).length;
-      // columns is private in the parent.
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const columns = (this as any).columns as number;
-      const numInLastRow = numItems % columns;
-      const numBlankToAdd = numInLastRow > 0 ? columns - numInLastRow : 0;
-      for (let i = 0; i < numBlankToAdd; i++) {
-        const item = document.createElement('div');
-        item.style.width = this.imageWidth_ + 'px';
-        item.style.height = this.imageHeight_ + 'px';
-        const menuItem = new Blockly.MenuItem(item, '');
-        menuItem.setEnabled(false);
-        this.menu_.addChild(menuItem);
-      }
-
-      // Add buttons to menu
+      const gridContainer = document.querySelector(
+        '.blocklyFieldGridContainer'
+      ) as HTMLElement;
+      // Add buttons below the grid.
       this.buttons_.forEach(button => {
         const buttonElement = document.createElement('BUTTON');
         buttonElement.innerHTML = button.text;
         buttonElement.addEventListener('click', button.action);
         buttonElement.addEventListener('click', () =>
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          Blockly.DropDownDiv.hideIfOwner(this as any, true)
+          Blockly.DropDownDiv.hideIfOwner(this, true)
         );
-        const menuItem = new Blockly.MenuItem(buttonElement, '');
-        menuItem.setRole(Blockly.utils.aria.Role.OPTION);
-        menuItem.setRightToLeft(this.sourceBlock_?.RTL || false);
-        menuItem.setEnabled(false);
-        this.menu_?.addChild(menuItem);
+        gridContainer.appendChild(buttonElement);
       });
     }
-
-    // Element gets created in render.
-    this.menu_.render(Blockly.DropDownDiv.getContentDiv());
-    const menuElement = this.menu_.getElement();
-    if (menuElement) {
-      const menuItems = menuElement.querySelectorAll('.blocklyMenuItem');
-
-      menuItems.forEach(item => {
-        const element = item as HTMLElement;
-        element.style.width = `${this.imageWidth_}px`;
-        element.style.height = `${this.imageHeight_}px`;
-        const imgElement = element.querySelector(
-          'img'
-        ) as HTMLImageElement | null;
-        if (imgElement) {
-          imgElement.style.width = `${this.imageWidth_}px`;
-          imgElement.style.height = `${this.imageHeight_}px`;
-        }
-      });
-      Blockly.utils.dom.addClass(menuElement, 'blocklyDropdownMenu');
-      Blockly.utils.dom.addClass(menuElement, 'fieldGridDropDownContainer');
-      if (!this.whiteBackground) {
-        Blockly.utils.dom.addClass(menuElement, 'transparentContainer');
-      }
-    }
-
-    const sourceBlockSvg =
-      this.getSourceBlock() as GoogleBlockly.BlockSvg | null;
-    if (sourceBlockSvg) {
-      let backgroundColour = sourceBlockSvg.style.colourTertiary;
-      let borderColour = sourceBlockSvg.style.colourPrimary;
-
-      if (this.whiteBackground) {
-        backgroundColour = color.white;
-        const parent = sourceBlockSvg.getParent();
-        borderColour =
-          sourceBlockSvg.isShadow() && parent
-            ? parent.style.colourTertiary
-            : sourceBlockSvg.style.colourTertiary;
-      }
-      Blockly.DropDownDiv.setColour(backgroundColour, borderColour);
-    }
-
-    // Focusing needs to be handled after the menu is rendered and positioned.
-    // Otherwise it will cause a page scroll to get the misplaced menu in
-    // view. See issue #1329.
-    this.menu_.focus();
-
-    // selectedMenuItem is private in the parent.
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const selectedMenuItem = (this as any)
-      .selectedMenuItem as GoogleBlockly.MenuItem | null;
-    if (selectedMenuItem) {
-      this.menu_.setHighlighted(selectedMenuItem);
-    }
-
-    this.applyColour();
-
-    // updateColumnsStyling_ is private in the parent.
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (this as any).updateColumnsStyling_();
-
-    Blockly.DropDownDiv.showPositionedByField(
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      this as any,
-      this.dropdownDispose_.bind(this)
-    );
   }
 }
 

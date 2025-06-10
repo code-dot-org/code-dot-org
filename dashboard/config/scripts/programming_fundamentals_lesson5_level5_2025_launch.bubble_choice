@@ -1,6 +1,6 @@
 name 'programming-fundamentals-lesson5-level5_2025-launch'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Multiple Painters!'
+description 'These programs have given instructions to multiple `Painter`s, but only one has been created. Choose **ONE** of the scenarios, and fix the program by creating the missing `Painter`s.'
 
 sublevels
 level 'programming-fundamentals-lesson5-level5a_2025-launch'

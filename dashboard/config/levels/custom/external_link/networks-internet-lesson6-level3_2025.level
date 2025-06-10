@@ -1,17 +1,17 @@
 <ExternalLink>
   <config><![CDATA[{
+  "published": true,
   "game_id": 55,
   "created_at": "2025-03-22T01:35:46.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## HTTP Cats for HTTP Requests Exploration\r\n\r\n### Do This:\r\n1. Click on the link to visit HTTP Cats.\r\n2. **Observe the different HTTP status codes** displayed on the site\r\n   - Each cat image represents a different HTTP response code (e.g., 200 OK, 404 Not Found)\r\n3. **Open the Developer Tools (Network Tab)** in your browser:\r\n   - **On Chrome:** Press `Ctrl + Shift + I` (Windows) or `Cmd + Option + I` (Mac), then go to the **Network** tab.\r\n   - **On Firefox:** Press `Ctrl + Shift + E (Windows)` or `Cmd + Option + E` (Mac).\r\n4. **Click on different HTTP status codes** on the site and observe how your browser sends requests and receives responses.\r\n5. **Look at the Network tab and find the request details:**\r\n   - **Status Code** - What response did the server send?\r\n   - **Headers** - What information was included in the request and response?\r\n   - **Timing** - How long did it take to load?\r\n6. **Explore different status codes** to see how servers communicate different types of responses.",
-    "link_title": "HTTP Cats",
-    "url": "https://http.cat/",
+    "long_instructions": "## HTTP Requests Exploration with the Simulator\r\n\r\n### Do This:\r\n1. Open the **HTTP Explorer Simulator** to begin the activity.\r\n2. Follow the steps in the **Scavenger Hunt Activity Guide** to:\r\n   - Open Developer Tools in the simulator.\r\n   - Inspect how the browser requests files like HTML, images, and CSS.\r\n3. Observe each file’s:\r\n    - **Method**\r\n    - **Status Code**\r\n    - **File Type**\r\n    - **Load Time**\r\n3. Fill in the fields for each task and answer the reflection questions in your activity guide.",
+    "link_title": "HTTP Request Simulator",
+    "url": "https://docs.google.com/presentation/d/167Rqj73r2Pu9-ovxYj2UZxy4PJNxxzCR8RszaBI25xM/edit?usp=sharing",
     "name_suffix": "_2025"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-22T01:35:46.849+00:00\",\"changed\":[\"cloned from \\\"networks-internet-lesson6-level3-2024\\\"\"],\"cloned_from\":\"networks-internet-lesson6-level3-2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-22T01:35:46.849+00:00\",\"changed\":[\"cloned from \\\"networks-internet-lesson6-level3-2024\\\"\"],\"cloned_from\":\"networks-internet-lesson6-level3-2024\"},{\"changed_at\":\"2025-04-19 05:03:58 +0000\",\"changed\":[\"long_instructions\",\"link_title\",\"url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-04-19 05:32:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </ExternalLink>

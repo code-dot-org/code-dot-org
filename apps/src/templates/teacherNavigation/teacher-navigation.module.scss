@@ -53,7 +53,7 @@
   margin-bottom: 2px;
 }
 
-.sidebarNewTags{
+.sidebarNewTags {
   margin-inline-start: 10px;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .sidebarSectionHeader .sidebarNewTags div span {
-  color: white
+  color: white;
 }
 
 .sectionDropdown {
@@ -160,8 +160,12 @@
   }
 }
 
-.skeletonHeaderSectionName {
+h2.skeletonHeaderSectionName {
   width: fit-content;
+  height: 21px;
+  margin-bottom: 0;
+  margin-top: 0;
+  border-radius: 4px;
 }
 
 .calendarContentContainer {

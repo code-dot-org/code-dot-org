@@ -4,8 +4,12 @@ class AiDiffController < ApplicationController
 
   # params are
   # context:
+  # => type:
+  # => levelId:
+  # => lessonId:
+  # => unitId:
+  # => courseId:
   # inputText:
-  # contextId:
   # unitDisplayName:
   # sessionId:
   # isPreset:
@@ -65,10 +69,69 @@ class AiDiffController < ApplicationController
     render(status: :ok, json: response_body)
   end
 
+  def get_active_sections
+    # all sections updated in the last year that have curriculum assigned
+    contexts = @current_user&.sections&.where(hidden: false, updated_at: 1.year.ago..Time.now)&.select {|s| s.script_id || s.course_id}&.map do |section|
+      context_scope = SharedConstants::AI_DIFF_CONTEXT[:COURSE]
+      course_display_name = CourseOffering.find_by(id: section.course_offering_id)&.display_name
+      course_names = [section.unit_group&.name]
+      course_names.push(section.unit_group&.family_name) unless section.unit_group&.family_name.nil?
+      {
+        context: context_scope,
+        course_display_name: course_display_name,
+        course_names: course_names
+      }
+    end
+    contexts
+  end
+
+  # POST /ai_diff/curriculum_courses
+  def curriculum_courses
+    unless validate_context?
+      return render status: :bad_request, json: {}
+    end
+
+    context = params[:context]
+    courses = []
+
+    if context[:type] == SharedConstants::AI_DIFF_CONTEXT[:GENERAL]
+      get_active_sections.each do |c|
+        courses.push(*c[:course_names])
+      end
+    else
+      if context[:levelId]
+        level = Level.find(context[:levelId])
+      end
+
+      if context[:lessonId]
+        lesson = Lesson.find(context[:lessonId])
+      elsif level
+        script_level = level.script_levels&.first
+        lesson = script_level&.lesson
+      end
+
+      if context[:unitId]
+        unit = Unit.find(context[:unitId])
+      elsif lesson
+        unit = Unit.find(lesson.script_id)
+      end
+
+      if context[:courseId]
+        unit_group = UnitGroup.find(context[:courseId])
+      elsif unit
+        unit_group = unit&.unit_groups&.first
+      end
+
+      courses.push(*(unit_group.present? ? [unit_group.name, unit_group.family_name] : ([unit&.name, unit&.family_name] if unit.present?)))
+    end
+
+    render(status: :ok, json: {courses: courses})
+  end
+
   # Certain types of PII detected by Amazon Comprehend are actually allowed
   # for use in chat messages. We allow teachers to ask about lessons themed
   # on a favorite named celebrity, or how to help students at certain ages. etc.
-  ALLOWED_TYPES = %w[NAME AGE DATE_TIME USERNAME PIN].freeze
+  ALLOWED_TYPES = %w[NAME AGE DATE_TIME USERNAME PIN URL].freeze
 
   private def contains_pii?
     client =  if (Rails.application.config.respond_to?(:stub_aichat_external_services) && Rails.application.config.stub_aichat_external_services) || [:development, :test].include?(rack_env)
@@ -109,17 +172,33 @@ class AiDiffController < ApplicationController
     end
 
     # get lesson info for prompt generation
+    context = params[:context]
 
-    case params[:context]
-    when SharedConstants::AI_DIFF_CONTEXT[:LESSON]
-      @lesson = Lesson.find_by(id: params[:contextId])
-      @unit = Unit.find_by(id: @lesson&.script_id)
+    if context[:levelId]
+      @level = Level.find(context[:levelId])
+    end
+
+    if context[:lessonId]
+      @lesson = Lesson.find(context[:lessonId])
+    elsif @level
+      script_level = @level.script_levels&.first
+      @lesson = script_level&.lesson
+    end
+
+    if context[:unitId]
+      @unit = Unit.find(context[:unitId])
+    elsif @lesson
+      @unit = Unit.find(@lesson.script_id)
+    end
+
+    if context[:courseId]
+      @unit_group = UnitGroup.find(context[:courseId])
+    elsif @unit
       @unit_group = @unit&.unit_groups&.first
-    when SharedConstants::AI_DIFF_CONTEXT[:UNIT]
-      @unit = Unit.find_by(id: params[:contextId])
-      @unit_group = @unit&.unit_groups&.first
-    when SharedConstants::AI_DIFF_CONTEXT[:COURSE]
-      @unit_group = UnitGroup.find_by(id: params[:contextId]) #should this be a course offering instead?
+    end
+
+    if context[:type] == SharedConstants::AI_DIFF_CONTEXT[:GENERAL]
+      @section_contexts = get_active_sections
     end
 
     lesson_name = @lesson&.name
@@ -127,12 +206,20 @@ class AiDiffController < ApplicationController
 
     unit_num = @unit&.unit_group_units&.first&.position
 
-    course_name = @unit_group.present? ? @unit_group.name : @unit&.name
+    course_names = @unit_group.present? ? [@unit_group.name, @unit_group.family_name] : ([@unit&.name] if @unit.present?)
 
     course_display_name = CourseOffering.find_by(id: @unit_group&.course_version&.course_offering_id)&.display_name
-    prompt = AiDiffBedrockHelper.get_prompt_for_context(params[:context], course_display_name, params[:unitDisplayName], lesson_name, params[:isPreset])
+    prompt = AiDiffBedrockHelper.get_prompt_for_context(
+      context[:type],
+      course_display_name,
+      params[:unitDisplayName],
+      lesson_name,
+      params[:isPreset],
+      @section_contexts,
+      @level&.long_instructions
+    )
 
-    bedrock_rag_response = AiDiffBedrockHelper.request_bedrock_rag_chat(params[:inputText], prompt, lesson_num, unit_num, course_name, session_id)
+    bedrock_rag_response = AiDiffBedrockHelper.request_bedrock_rag_chat(params[:inputText], prompt, lesson_num, unit_num, course_names, session_id, @section_contexts)
     #TODO: check for profanity/PII in model response
 
     {
@@ -144,13 +231,34 @@ class AiDiffController < ApplicationController
   end
 
   private def has_required_params?
-    return false if params[:context].nil?
-
+    return false unless validate_context?
     begin
-      if params[:context] == SharedConstants::AI_DIFF_CONTEXT[:GENERAL]
-        params.require([:inputText, :isPreset])
-      elsif params[:context] == SharedConstants::AI_DIFF_CONTEXT[:LESSON] || params[:context] == SharedConstants::AI_DIFF_CONTEXT[:UNIT] || params[:context] == SharedConstants::AI_DIFF_CONTEXT[:COURSE]
-        params.require([:inputText, :contextId, :unitDisplayName, :isPreset])
+      params.require([:inputText, :isPreset])
+      unless params[:context][:type] == SharedConstants::AI_DIFF_CONTEXT[:COURSE] ||  params[:context][:type] == SharedConstants::AI_DIFF_CONTEXT[:GENERAL]
+        params.require(:unitDisplayName)
+      end
+    rescue ActionController::ParameterMissing
+      return false
+    end
+    return true
+  end
+
+  private def validate_context?
+    return false if params[:context].nil?
+    begin
+      params.require(:context)
+      context = params[:context]
+      context.require(:type)
+
+      case context[:type]
+      when SharedConstants::AI_DIFF_CONTEXT[:LESSON]
+        context.require(:lessonId)
+      when SharedConstants::AI_DIFF_CONTEXT[:LEVEL]
+        context.require(:levelId)
+      when SharedConstants::AI_DIFF_CONTEXT[:UNIT]
+        context.require(:unitId)
+      when SharedConstants::AI_DIFF_CONTEXT[:COURSE]
+        context.require(:courseId)
       end
     rescue ActionController::ParameterMissing
       return false

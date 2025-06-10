@@ -19,7 +19,8 @@ module RegistrationsControllerTests
         user: {
           email: email,
           password: 'mypassword',
-          password_confirmation: 'mypassword'
+          password_confirmation: 'mypassword',
+          user_type: User::TYPE_STUDENT,
         }
       }
       assert PartialRegistration.in_progress? session
@@ -40,7 +41,8 @@ module RegistrationsControllerTests
         user: {
           email: email,
           password: 'mypassword',
-          password_confirmation: 'mypassword'
+          password_confirmation: 'mypassword',
+          user_type: User::TYPE_TEACHER
         }
       }
       assert PartialRegistration.in_progress? session

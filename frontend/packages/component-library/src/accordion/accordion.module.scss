@@ -1,6 +1,6 @@
-@import '@code-dot-org/component-library-styles/colors.scss';
-@import '@code-dot-org/component-library-styles/mixins.scss';
-@import '@code-dot-org/component-library-styles/variables.scss';
+@use '@code-dot-org/component-library-styles/colors.scss';
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+@use '@code-dot-org/component-library-styles/variables.scss' as variables;
 
 // Accordion common styles
 .accordion {
@@ -17,7 +17,7 @@
     width: 100%;
     overflow: hidden;
 
-    border-radius: $regular-border-radius;
+    border-radius: variables.$regular-border-radius;
     border: 1px solid var(--borders-neutral-primary);
     background: var(--background-neutral-secondary);
 
@@ -31,7 +31,7 @@
       background: var(--background-neutral-primary);
 
       i {
-        @include transition-all;
+        @include mixins.transition-all;
         color: var(--text-neutral-placeholder);
       }
 
@@ -74,7 +74,7 @@
     }
 
     &:has(summary:focus-visible) {
-      @include focus-styles;
+      @include mixins.focus-styles;
       summary {
         outline: none;
       }

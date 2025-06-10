@@ -1969,20 +1969,6 @@ function fetchShareFailure(resolve) {
   });
 }
 
-function fetchPrivacyProfanityViolations(resolve) {
-  channels.fetch(current.id + '/privacy-profanity', (err, data) => {
-    // data.has_violation is 0 or true, coerce to a boolean
-    currentHasPrivacyProfanityViolation =
-      (data && !!data.has_violation) || currentHasPrivacyProfanityViolation;
-    resolve();
-    if (err) {
-      // Throw an error so that things like New Relic see this. This shouldn't
-      // affect anything else
-      throw err;
-    }
-  });
-}
-
 /**
  * @param project
  * @returns {Promise} A Promise which resolves when all network calls complete.
@@ -1993,9 +1979,7 @@ function fetchAbuseScoreAndPrivacyViolations(project) {
     new Promise(fetchShareFailure),
   ];
 
-  if (project.getStandaloneApp() === 'playlab') {
-    promises.push(new Promise(fetchPrivacyProfanityViolations));
-  } else if (
+  if (
     project.getStandaloneApp() === 'applab' ||
     project.getStandaloneApp() === 'gamelab' ||
     project.isWebLab()
@@ -2095,7 +2079,7 @@ function redirectEditView() {
 
 /**
  * Does a hard redirect if we end up with a hash based projects url. This can
- * happen on IE9, when we save a new project for hte first time.
+ * happen on IE9, when we save a new project for the first time.
  * @returns {boolean} True if we did an actual redirect
  */
 function redirectFromHashUrl() {

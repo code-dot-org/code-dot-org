@@ -108,6 +108,20 @@ const EditValidations: React.FunctionComponent<EditValidationsProps> = ({
     setValidations([...validations, createNewValidation()]);
   };
 
+  const duplicateValidation = (validationToDuplicate: Validation) => {
+    const index = validations.indexOf(validationToDuplicate);
+    const newValidation = {
+      ...validationToDuplicate,
+      conditions: validationToDuplicate.conditions.map(c => ({...c})),
+      key: levelName + '_' + createUuid(),
+    };
+    setValidations([
+      ...validations.slice(0, index),
+      newValidation,
+      ...validations.slice(index),
+    ]);
+  };
+
   return (
     <div>
       <input
@@ -142,6 +156,7 @@ const EditValidations: React.FunctionComponent<EditValidationsProps> = ({
             deleteValidation={deleteValidation}
             conditionTypes={conditionTypes}
             moveValidation={moveValidation}
+            duplicateValidation={duplicateValidation}
           />
         );
       })}

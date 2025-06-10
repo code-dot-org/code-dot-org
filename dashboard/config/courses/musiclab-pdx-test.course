@@ -3,6 +3,9 @@
   "script_names": [
     "musiclab-pdx-test"
   ],
+  "original_script_names": [
+    "musiclab-pdx-test"
+  ],
   "published_state": "pilot",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

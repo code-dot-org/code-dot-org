@@ -1,0 +1,81 @@
+name 'self-paced-CSDMusicLab-L4-introtofunctions'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lessons 10 - 13: Functions
+
+#### This third chunk of lessons introduces students to functions in Music Lab. Across the Explore-Practice-Synthesize-Project arc, students learn how to organize music into reusable parts, create structure through abstraction, and remix music creatively.
+
+#### This level is designed to give you a *brief* overview of the lessons before we dive into coding practice.
+
+<div style="background-color: #DECEEA; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 95%; margin: 20px auto;">
+  <p style="font-size: 16pt; font-weight: bold; margin: 0; text-align: center;">What are Functions?</p>
+  <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">A function is a reusable set of instructions that you can call by name. Instead of repeating blocks of code, you can define them once as a function and use them whenever needed.</p>
+  <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">In Music Lab, functions let students organize musical ideas, like a verse or chorus, into named sections. This helps simplify their code, reduce repetition, and build more structured songs.</p>
+</div>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 18px; font-weight: bold;">🔍 Explore Lesson</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; line-height: 150%;">
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2;">
+Briefly scan over the <a href='https://studio.code.org/s/csd-programming-with-music-lab-2025-pilot/lessons/10' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 10: Functions - Explore lesson plan</a>. How are students introduced to functions through explorations of the coding levels?
+</p>
+
+<p style="font-size: 18px;"><strong>Lesson Overview</strong><br>
+Students listen to mashups and identify patterns that make each part of a song stand out. In Music Lab, they learn to use functions to organize code into reusable sections. Through Predict and Investigate levels, students discover how functions help reduce repetition and clarify musical structure.
+</p>
+</div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 18px; font-weight: bold;">🛠️ Practice Lesson</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; line-height: 150%;">
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2;">
+Briefly scan over the <a href='https://studio.code.org/s/csd-programming-with-music-lab-2025-pilot/lessons/11' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 11: Functions - Practice lesson plan</a>. How do students develop fluency with defining and reusing functions?
+</p>
+
+<p style="font-size: 18px;"><strong>Lesson Overview</strong><br>
+Students apply their understanding of functions by defining, reusing, and composing multiple functions to structure a song. They explore function blocks alongside nested musical ideas, deepening their understanding of abstraction and reducing repetition.
+</p>
+</div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 18px; font-weight: bold;">🧠 Synthesize Lesson</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; line-height: 150%;">
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2;">
+Briefly scan over the <a href='https://studio.code.org/s/csd-programming-with-music-lab-2025-pilot/lessons/12' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 12: Functions - Synthesize lesson plan</a>. How does remixing highlight function design and creativity?
+</p>
+
+<p style="font-size: 18px;"><strong>Lesson Overview</strong><br>
+Students compare two versions of a song (the original and a remix) then remix their own track using functions. Inspired by remix artist Altrice, students apply functions to reorganize and reinterpret familiar musical patterns, reinforcing abstraction while fostering creative expression.
+</p>
+</div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 18px; font-weight: bold;">🎼 Project Lesson</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; line-height: 150%;">
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2;">
+Briefly scan over the <a href='https://studio.code.org/s/csd-programming-with-music-lab-2025-pilot/lessons/13' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 13: Genre Mashup Project lesson plan</a>. How does this project ask students to remix their code using functions?
+</p>
+
+<p style="font-size: 18px;"><strong>Lesson Overview</strong><br>
+In this end-of-unit project, students select an existing song and remix it into a new genre using the structure of functions. They draw on skills from the entire unit to define musical sections, apply abstraction, and shift tone or style, just like real-world remix artists.
+</p>
+</div>
+</details>
+
+## Up Next
+
+#### Ready? Let's dive in to functions. You'll learn the following:
+
+* #### **From Lesson 10:** How to define and call a function
+* #### **From Lesson 11:** How to reuse, combine, and compose functions
+* #### **From Lesson 12:** How to remix using function blocks and musical abstraction
+MARKDOWN

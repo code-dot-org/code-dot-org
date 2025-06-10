@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-18T19:57:06.000Z",
   "level_num": "custom",
@@ -8,10 +9,10 @@
     "encrypted": "false",
     "instructions_important": "false",
     "hint_prompt_attempts_threshold": "1",
-    "long_instructions": "####<i class=\"fa-duotone fa-solid fa-swords\"></i> Design the battle tune! \r\n1. Add sounds into the [battle](#clickable=id:battle_function) function. \r\n2. **Call** the battle function under the trigger.\r\n2. Press [Run](#clickable=run-button) then trigger your new tune.",
+    "long_instructions": "####<i class=\"fa-duotone fa-solid fa-party-horn\"></i> Celebration Sounds! \r\n1. Add a trigger event block. \r\n2. Add sounds under the event.\r\n2. Press Run, then trigger the celebration when **you** decide.\r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=flyout-id-left:triggered_at_simple2)\r\n",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "level_data": {
       "library": "launch2024",
       "packId": "default",
@@ -31,6 +32,7 @@
                   "type": "repeat_simple2",
                   "id": "repeat_simple2",
                   "deletable": false,
+                  "movable": false,
                   "extraState": {
                     "disableNextConnection": true
                   },
@@ -40,81 +42,25 @@
                   "inputs": {
                     "code": {
                       "block": {
-                        "type": "procedures_callnoreturn",
-                        "id": "p9|uoJJYV?FZ]SPtsS_P",
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "dP3zfB#Xy0SZ-kpD{Trb",
                         "deletable": false,
                         "movable": false,
                         "extraState": {
-                          "name": "background",
-                          "disableNextConnection": true
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            {
-              "type": "triggered_at_simple2",
-              "id": "RGSJBj`n#VPl7]2uP}=H",
-              "x": 30,
-              "y": 210,
-              "deletable": false,
-              "fields": {
-                "trigger": "<field name=\"trigger\">trigger1</field>",
-                "trigger_start": "<field name=\"trigger_start\">immediately</field>"
-              }
-            },
-            {
-              "type": "procedures_defnoreturn",
-              "id": "Ws$-#EhC5(^n)?Vh3Q#d",
-              "x": 330,
-              "y": 30,
-              "deletable": false,
-              "extraState": {
-                "procedureId": "}g/7xv0|iv~WsP5{h^5|",
-                "initialDeleteConfig": false,
-                "initialEditConfig": true,
-                "initialMoveConfig": true
-              },
-              "fields": {
-                "NAME": "background"
-              },
-              "inputs": {
-                "STACK": {
-                  "block": {
-                    "type": "play_sounds_together",
-                    "id": "play_sounds_together",
-                    "deletable": false,
-                    "movable": false,
-                    "extraState": {
-                      "disableNextConnection": true
-                    },
-                    "inputs": {
-                      "code": {
-                        "block": {
-                          "type": "play_sound_at_current_location_simple2",
-                          "id": "myVqMPQ$[a]6_^uNJ8[H",
-                          "deletable": false,
-                          "movable": false,
-                          "extraState": {
-                            "disableNextConnection": false
-                          },
-                          "fields": {
-                            "sound": "groove/bass_sub_pogo"
-                          },
-                          "next": {
-                            "block": {
-                              "type": "play_sound_at_current_location_simple2",
-                              "id": "play_sound_at_current_location_simple2",
-                              "deletable": false,
-                              "movable": false,
-                              "extraState": {
-                                "disableNextConnection": true
-                              },
-                              "fields": {
-                                "sound": "electro/drum_beat_tom"
-                              }
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "acoustic_arcade/lead_swoop"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "play_sound_at_current_location_simple2",
+                            "extraState": {
+                              "disableNextConnection": true
+                            },
+                            "fields": {
+                              "sound": "acoustic_arcade/lead_violins"
                             }
                           }
                         }
@@ -123,37 +69,9 @@
                   }
                 }
               }
-            },
-            {
-              "type": "procedures_defnoreturn",
-              "id": "6i43VA{gez=Vb]R##YgD",
-              "x": 330,
-              "y": 210,
-              "deletable": false,
-              "extraState": {
-                "procedureId": "X~GDbRUYHxxcNZ?iXd!]",
-                "initialDeleteConfig": false,
-                "initialEditConfig": true,
-                "initialMoveConfig": true
-              },
-              "fields": {
-                "NAME": "battle"
-              }
             }
           ]
-        },
-        "procedures": [
-          {
-            "id": "}g/7xv0|iv~WsP5{h^5|",
-            "name": "background",
-            "returnTypes": null
-          },
-          {
-            "id": "X~GDbRUYHxxcNZ?iXd!]",
-            "name": "battle",
-            "returnTypes": null
-          }
-        ]
+        }
       },
       "toolbox": {
         "type": "flyout",
@@ -171,12 +89,117 @@
           ]
         },
         "addFunctionCalls": true
+      },
+      "sounds": {
+        "acoustic_arcade": [
+          "drum_beat_cabana",
+          "drum_beat_conga",
+          "drum_beat_hands",
+          "drum_beat_sweep",
+          "drum_beat_trees",
+          "drum_beat_wobble",
+          "bass_elevator",
+          "bass_float",
+          "bass_giant",
+          "bass_seesaw",
+          "bass_bounce",
+          "bass_stamp",
+          "synth_castle",
+          "synth_cloud",
+          "synth_cosmic",
+          "synth_round",
+          "synth_rubber",
+          "synth_tines",
+          "ukulele_knot",
+          "ukulele_shine",
+          "ukulele_slide",
+          "ukulele_knock",
+          "guitar_handle",
+          "guitar_path",
+          "guitar_window",
+          "guitar_flower",
+          "lead_zaps",
+          "lead_swoop",
+          "lead_violins",
+          "waterfall",
+          "bongo_roll",
+          "chimes",
+          "vibra_verb",
+          "sleigh_bells",
+          "wheel_spoke"
+        ]
+      },
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "id": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "acoustic_arcade/drum_beat_cabana"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "triggered_at_simple2",
+            "id": "triggered_at_simple2",
+            "fields": {
+              "trigger": "<field name=\"trigger\">trigger1</field>",
+              "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "id": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_sequential",
+            "id": "play_sounds_sequential",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_random",
+            "id": "play_sounds_random",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "repeat_simple2",
+            "id": "repeat_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "times": 1
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
       }
     },
     "validations": [
       {
         "key": "music-coding-intro-event-functions_d26a772e-1917-4f37-b61a-15d582b58af0",
-        "message": "Nice work. You made your own battle event and it sounds great! ",
+        "message": "Nice work. You made your own celebration sound and it sounds great! ",
         "next": true,
         "conditions": [
           {
@@ -187,21 +210,25 @@
       },
       {
         "key": "music-coding-intro-event-functions_9db564ec-8f01-4945-8139-a5372246ea38",
-        "message": "You haven't triggered any sounds yet. Read the instructions and build your own trigger. ",
+        "message": "You haven't triggered any sounds yet. Read all of the instructions to build your own trigger. ",
         "next": false,
         "conditions": [
-          {
-            "name": "played_different_sounds_together_multiple_times",
-            "value": 3
-          }
-        ]
+
+        ],
+        "callout": "flyout-id-left:triggered_at_simple2"
       }
     ],
     "name_suffix": "_launch",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-18T19:57:06.803+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-functions\\\"\"],\"cloned_from\":\"music-coding-intro-event-functions\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-18T19:57:06.803+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-functions\\\"\"],\"cloned_from\":\"music-coding-intro-event-functions\"},{\"changed_at\":\"2025-04-24 16:11:55 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-24 16:22:35 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-24 16:23:46 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-24 16:29:10 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-24 16:29:52 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-24 16:30:49 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-24 16:31:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-24 16:32:46 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-24 17:11:04 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 18:17:47 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 18:18:32 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-01 17:44:40 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-01 17:45:16 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

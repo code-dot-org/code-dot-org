@@ -12,8 +12,8 @@
 #  section_id          :integer
 #  school_year         :string(255)
 #  evaluator           :string(255)
-#  evaluation_criteria :string(255)
-#  reasoning           :string(255)
+#  evaluation_criteria :text(65535)
+#  reasoning           :text(65535)
 #  evaluation          :string(255)
 #  ai_model_version    :string(255)
 #  code_version        :string(255)
@@ -33,4 +33,12 @@ class UserLevelEvaluation < StudentWorkEvaluation
   validates :student_id, presence: true
   validates :level_id, presence: true
   validates :unit_id, presence: true
+
+  has_many :student_work_evaluation_summaries,
+           foreign_key: :student_work_evaluation_summary_id,
+           class_name: 'StudentWorkEvaluationSummary'
+
+  has_many :user_level_skill_evaluations,
+           through: :student_work_evaluation_summaries,
+           source: :student_work_evaluation
 end

@@ -22,7 +22,7 @@ markdown <<MARKDOWN
   <div style="flex: 3; background-color: #b2dee3; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
     <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
     <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
-      The detailed lesson plans and slides are fantastic. They take the stress out of teaching new concepts, making the whole process seamless and enjoyable.
+      Quote
     </p>
     <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
   </div>
@@ -38,7 +38,7 @@ markdown <<MARKDOWN
   <div style="flex: 3; background-color: #ffd199; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
     <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
     <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
-      Connecting data science to Netflix, social media feeds, and online shopping really clicked with my students. They loved seeing how data impacts their daily lives!
+      Quote
     </p>
     <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
   </div>
@@ -54,7 +54,7 @@ markdown <<MARKDOWN
   <div style="flex: 3; background-color: #f6a6a6; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
     <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
     <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
-      With so many new terms, using a word wall for all the new concepts in the Data Science course is a brilliant idea! It keeps students engaged and helps them quickly grasp and remember complex ideas.
+      Quote
     </p>
     <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
   </div>

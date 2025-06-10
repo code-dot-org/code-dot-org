@@ -7,7 +7,7 @@ wrong 'They access the Internet in real time to find correct information.'
 wrong 'They memorize exact answers for every possible question.'
 wrong 'They rely on human reasoning and logic.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 3: The AI's Brain

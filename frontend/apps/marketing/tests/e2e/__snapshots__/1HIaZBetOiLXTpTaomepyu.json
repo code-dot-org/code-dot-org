@@ -1,0 +1,58 @@
+{
+  "entryContent": {
+    "fields": {
+      "title": {
+        "en-US": "Curriculum 4"
+      },
+      "actionBlockOverline": {
+        "en-US": "Grades 9-12"
+      },
+      "shortDescription": {
+        "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam."
+      },
+      "primaryLinkRef": {
+        "en-US": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "79dI2fR2dzbb0IN3dFQJ3t"
+          }
+        }
+      },
+      "secondaryLinkRef": {
+        "en-US": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "49SifjEqSHArcx1iEiSw4o"
+          }
+        }
+      },
+      "image": {
+        "en-US": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "46WnKBOGVA8e4bFtBSRPuE"
+          }
+        }
+      },
+      "experienceLevel": {
+        "en-US": [
+          "Beginner"
+        ]
+      },
+      "duration": {
+        "en-US": [
+          "School Year"
+        ]
+      },
+      "devices": {
+        "en-US": [
+          "Computer"
+        ]
+      }
+    }
+  },
+  "contentType": "curriculum"
+}

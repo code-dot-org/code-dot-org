@@ -1,17 +1,21 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {ProjectFile} from '@codebridge/types';
-import React from 'react';
+import classNames from 'classnames';
+import React, {useMemo} from 'react';
 
 import {FileRowIcon} from './FileRowIcon';
 import {FileRowName} from './FileRowName';
 import {useFileRowOptions} from './hooks';
 import {ItemRow} from './ItemRow';
 
+import moduleStyles from '@codebridge/FileBrowser/styles/filebrowser.module.scss';
+
 export type FileRowProps = {
   item: ProjectFile;
   // If the pop-up menu is enabled, we will show the 3-dot menu button on hover.
   enableMenu: boolean;
   hasValidationFile: boolean; // If the project has a validation file already.
+  isDragging?: boolean; // If the file is actively being dragged.
 };
 
 /**
@@ -25,9 +29,21 @@ export const FileRow: React.FunctionComponent<FileRowProps> = ({
   item,
   enableMenu,
   hasValidationFile,
+  isDragging,
 }) => {
   const {openFile} = useCodebridgeContext();
   const dropdownOptions = useFileRowOptions(item, hasValidationFile);
+  const isActive = item.active || false;
+  const className = useMemo(() => {
+    const classes = [];
+    if (isActive) {
+      classes.push(moduleStyles.activeFile);
+    }
+    if (isDragging) {
+      classes.push(moduleStyles.dragging);
+    }
+    return classNames(...classes);
+  }, [isActive, isDragging]);
 
   return (
     <ItemRow
@@ -37,6 +53,7 @@ export const FileRow: React.FunctionComponent<FileRowProps> = ({
       IconComponent={FileRowIcon}
       NameComponent={FileRowName}
       openFunction={openFile}
+      className={className}
     />
   );
 };

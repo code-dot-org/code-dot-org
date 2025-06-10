@@ -1,6 +1,7 @@
 import {Button} from '@code-dot-org/component-library/button';
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import classNames from 'classnames';
-import React, {useContext, useEffect, useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
@@ -15,8 +16,6 @@ import {
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import {ThemeContext} from '../ThemeWrapper';
 
 import PredictQuestion from './PredictQuestion';
 import PredictSummary from './PredictSummary';
@@ -35,6 +34,8 @@ interface InstructionsProps {
   manageNavigation?: boolean;
   /** Optional classname for the container */
   className?: string;
+  /** Optional component to render at the bottom of the main instructions. */
+  bottomComponent?: React.ReactNode;
 }
 
 /**
@@ -50,6 +51,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   handleInstructionsTextClick,
   className,
   manageNavigation = true,
+  bottomComponent,
 }) => {
   const instructionsText = useAppSelector(
     state => state.lab.levelProperties?.longInstructions
@@ -75,7 +77,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
 
   const dispatch = useAppDispatch();
 
-  const {theme} = useContext(ThemeContext);
+  const {theme} = useTheme();
 
   // Don't render anything if we don't have any instructions.
   if (instructionsText === undefined) {
@@ -105,6 +107,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       hasNextLevel={hasNextLevel}
       useSecondaryFinishButton={useSecondaryFinishButton}
       onContinueOrFinish={() => dispatch(continueOrFinishLesson())}
+      bottomComponent={bottomComponent}
     />
   );
 };
@@ -118,8 +121,8 @@ interface InstructionsPanelProps {
   messageIndex?: number;
   /** If the instructions panel should be rendered vertically or horizontally. Defaults to vertical. */
   layout?: 'vertical' | 'horizontal';
-  /** Display theme. Defaults to dark. */
-  theme?: 'dark' | 'light';
+  /** Display theme. Defaults to Dark. */
+  theme?: 'Dark' | 'Light';
   /**
    * A callback when the user clicks on clickable text.
    */
@@ -135,6 +138,7 @@ interface InstructionsPanelProps {
   hasNextLevel: boolean;
   useSecondaryFinishButton: boolean;
   onContinueOrFinish: () => void;
+  bottomComponent?: React.ReactNode;
 }
 
 /**
@@ -151,7 +155,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   message,
   messageIndex,
   layout = 'vertical',
-  theme = 'dark',
+  theme = 'Dark',
   handleInstructionsTextClick,
   predictSettings,
   predictResponse,
@@ -163,6 +167,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   hasNextLevel,
   useSecondaryFinishButton,
   onContinueOrFinish,
+  bottomComponent,
 }) => {
   const vertical = layout === 'vertical';
 
@@ -211,6 +216,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   return (
     <div
       id="instructions"
+      data-theme="Light"
       className={classNames(
         moduleStyles['instructions-' + theme],
         vertical && moduleStyles.vertical,
@@ -231,28 +237,48 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
             id="instructions-text"
             className={moduleStyles['text-' + theme]}
           >
-            {offerBrowserTts && <TextToSpeech text={text} />}
+            {offerBrowserTts && (
+              <TextToSpeech text={text} higherPosition={!!bottomComponent} />
+            )}
             <div
               id="instructions-text-content"
               className={moduleStyles.textContent}
             >
-              <EnhancedSafeMarkdown
-                markdown={text}
-                className={moduleStyles.markdownText}
-                handleInstructionsTextClick={handleInstructionsTextClick}
-              />
-              <PredictQuestion
-                predictSettings={predictSettings}
-                predictResponse={predictResponse}
-                setPredictResponse={setPredictResponse}
-                predictAnswerLocked={predictAnswerLocked}
-              />
-              {predictSettings?.isPredictLevel && (
-                <InstructorsOnly>
-                  <div className={moduleStyles['message-' + theme]}>
-                    <PredictSummary />
-                  </div>
-                </InstructorsOnly>
+              <div
+                className={
+                  offerBrowserTts
+                    ? moduleStyles.scrollingContentWithTTS
+                    : moduleStyles.scrollingContentWithoutTTS
+                }
+              >
+                <EnhancedSafeMarkdown
+                  markdown={text}
+                  className={moduleStyles.markdownText}
+                  handleInstructionsTextClick={handleInstructionsTextClick}
+                />
+                <PredictQuestion
+                  predictSettings={predictSettings}
+                  predictResponse={predictResponse}
+                  setPredictResponse={setPredictResponse}
+                  predictAnswerLocked={predictAnswerLocked}
+                />
+                {predictSettings?.isPredictLevel && (
+                  <InstructorsOnly>
+                    <div
+                      className={classNames(
+                        moduleStyles['message-' + theme],
+                        moduleStyles.predictSummary
+                      )}
+                    >
+                      <PredictSummary />
+                    </div>
+                  </InstructorsOnly>
+                )}
+              </div>
+              {bottomComponent && (
+                <div className={moduleStyles.bottomComponent}>
+                  {bottomComponent}
+                </div>
               )}
             </div>
           </div>

@@ -100,7 +100,6 @@ const CODE_STUDIO_ENTRIES = {
   'lti/v1/dynamic_registration': './src/sites/studio/pages/lti/v1/dynamic_registration.js',
   'lti/v1/sync_course': './src/sites/studio/pages/lti/v1/sync_course.js',
   'lti/v1/upgrade_account': './src/sites/studio/pages/lti/v1/upgrade_account.js',
-  'maker/home': './src/sites/studio/pages/maker/home.js',
   'maker/setup': './src/sites/studio/pages/maker/setup.js',
   'projects/featured': './src/sites/studio/pages/projects/featured.js',
   'projects/index': './src/sites/studio/pages/projects/index.js',
@@ -243,6 +242,7 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
   'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
   'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',
 
+  'pd/workshops/index': './src/sites/studio/pages/pd/workshops/index.js',
   'pd/workshop_dashboard/index': './src/sites/studio/pages/pd/workshop_dashboard/index.js',
   'pd/pre_workshop_survey/new': './src/sites/studio/pages/pd/pre_workshop_survey/new.js',
   'pd/teachercon_survey/new': './src/sites/studio/pages/pd/teachercon_survey/new.js',
@@ -308,6 +308,10 @@ const OTHER_ENTRIES = {
   regionalPartnerMiniContact: './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
 };
 
+const LOCALIZATION_ENTRIES = {
+  localization: './src/localization/entrypoint.js',
+};
+
 /**
  * Generate webpack entry points for all our apps, or just a subset
  *
@@ -342,4 +346,5 @@ module.exports = {
   PROFESSIONAL_DEVELOPMENT_ENTRIES,
   SHARED_ENTRIES,
   OTHER_ENTRIES,
+  LOCALIZATION_ENTRIES,
 };

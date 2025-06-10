@@ -3,6 +3,9 @@
   "script_names": [
     "pilot-k5-game-design"
   ],
+  "original_script_names": [
+    "pilot-k5-game-design"
+  ],
   "published_state": "pilot",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

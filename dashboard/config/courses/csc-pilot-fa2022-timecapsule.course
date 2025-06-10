@@ -3,6 +3,9 @@
   "script_names": [
     "csc-pilot-fa2022-timecapsule"
   ],
+  "original_script_names": [
+    "csc-pilot-fa2022-timecapsule"
+  ],
   "published_state": "pilot",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

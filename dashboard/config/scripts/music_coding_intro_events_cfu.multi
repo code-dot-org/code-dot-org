@@ -1,0 +1,16 @@
+name 'music-coding-intro-events-cfu'
+title 'Use event triggers!'
+question '*Who should use event triggers? Tyler, Sammy, Pedro or Lizzy?*'
+right 'Tyler wants to **control when the drum sounds play,** like a DJ.'
+wrong 'Sammy wants to **play Twinkle, Twinkle in order** when she presses Run.'
+wrong 'Pedro is trying to **make his code more efficient**.'
+wrong 'Lizzy wants to **loop the bass sound**.'
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+<div style="text-align: center;">
+  <h2><strong>For example:</strong></h2>
+</div>
+
+![](https://images.code.org/ffa2c7d439bec007b273a8af6785690e-image-1745535615418.png)
+MARKDOWN

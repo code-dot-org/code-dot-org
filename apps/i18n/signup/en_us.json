@@ -37,7 +37,7 @@
   "by_signing_up": "By signing up for Code.org you are agreeing to our [Terms of Service]({tosLink}) and [Privacy Policy]({privacyPolicyLink})",
   "email_address": "Email address",
   "password": "Password",
-  "minimum_six_chars": "Minimum 6 characters",
+  "minimum_num_chars": "Minimum {minChars} characters",
   "confirm_password": "Confirm password",
   "create_my_account": "Create my account",
   "finish_creating_teacher_account": "Finish creating your teacher account",

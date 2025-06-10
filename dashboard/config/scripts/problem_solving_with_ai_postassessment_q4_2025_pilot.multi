@@ -7,7 +7,7 @@ right 'When the task involves recognizing large-scale patterns in data quickly.'
 wrong 'When the task requires unique human experience.'
 wrong 'When the task involves a creative approach that has never been done before.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 4: Smart or Just Predictable?

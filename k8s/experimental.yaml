@@ -6,6 +6,7 @@ cleanup:
   howToCleanup: |
     - Delete skaffold.yaml
     - Delete the k8s/ directory
+    - Delete .github/workflows/k8s_*.yml
   whenToCleanup: |
     If its >=2026, we're not using skaffold or kukbernetes for local dev or
     for deploying production k8s clusters, and the last commit in this directory

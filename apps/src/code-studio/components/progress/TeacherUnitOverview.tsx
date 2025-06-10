@@ -121,7 +121,8 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
   const currentUnitSummaryAvailable =
     unitSummaryResponse.unitData.name === unitName ||
     (unitSummaryResponse.unitData.course_name === courseVersionName &&
-      unitSummaryResponse.unitData.unit_position === unitPosition);
+      unitSummaryResponse.unitData.unit_position?.toString() ===
+        unitPosition?.toString());
   if (!currentUnitSummaryAvailable) {
     return <Spinner size={'large'} />;
   }
@@ -164,6 +165,7 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
       redirectScriptUrl={unitSummaryResponse.unitData.redirect_unit_url}
       versions={unitSummaryResponse.unitData.course_versions}
       courseName={unitSummaryResponse.unitData.course_name}
+      scriptPath={unitSummaryResponse.unitData.scriptPath}
       showAssignButton={unitSummaryResponse.unitData.show_assign_button}
       isProfessionalLearningCourse={unitSummaryResponse.unitData.isPlCourse}
       userId={userId}

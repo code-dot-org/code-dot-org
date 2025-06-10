@@ -8,6 +8,7 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import AddSectionDialog from '../../teacherDashboard/AddSectionDialog';
+import RosterDialog from '../../teacherDashboard/RosterDialog';
 import {beginEditingSection} from '../../teacherDashboard/teacherSectionsRedux';
 
 import {ArchiveAllModal} from './ArchiveAllModal';
@@ -85,6 +86,7 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
       </div>
       <AddSectionDialog />
+      <RosterDialog />
     </div>
   );
 };

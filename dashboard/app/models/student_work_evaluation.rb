@@ -29,6 +29,8 @@
 class StudentWorkEvaluation < ApplicationRecord
   self.inheritance_column = :type
 
+  has_many :ai_interaction_feedbacks, as: :ai_interaction
+
   VALID_TYPES = ['UserLevelSkillEvaluation', 'UserLevelEvaluation', 'SectionLevelEvaluation'].freeze
 
   validates :type, inclusion: {in: VALID_TYPES}

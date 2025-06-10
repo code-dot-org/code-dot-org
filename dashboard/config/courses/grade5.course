@@ -3,6 +3,9 @@
   "script_names": [
     "grade5"
   ],
+  "original_script_names": [
+    "grade5"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

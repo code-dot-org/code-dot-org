@@ -3,6 +3,7 @@ require 'cdo/shared_constants'
 
 class UnitTest < ActiveSupport::TestCase
   include SharedConstants
+  include Minitest::RSpecMocks
 
   self.use_transactional_test_case = true
 
@@ -63,7 +64,7 @@ class UnitTest < ActiveSupport::TestCase
     Unit.script_cache
     Unit.unit_family_cache
 
-    # Also populate course_cache, as it's used by course_link
+    # Also populate course_cache, as we call .link on them
     UnitGroup.stubs(:should_cache?).returns true
     @@course_cached ||= UnitGroup.course_cache_to_cache
     UnitGroup.course_cache
@@ -963,7 +964,10 @@ class UnitTest < ActiveSupport::TestCase
       disablePostMilestone: false,
       student_detail_progress_view: false,
       age_13_required: false,
-      show_sign_in_callout: false
+      show_sign_in_callout: false,
+      hasUnnumberedLessons: false,
+      course_name: nil,
+      unit_position: nil,
     }
     assert_equal expected, unit.summarize_header
   end
@@ -1015,55 +1019,29 @@ class UnitTest < ActiveSupport::TestCase
   test 'summarize includes show_course_unit_version_warning' do
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017')
-    create(:unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1)
+    csp1_2017_ugu = create(:unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1)
     csp_2017.reload
     csp1_2017.reload
 
     csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
     csp1_2018 = create(:script, name: 'csp1-2018')
-    create(:unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1)
+    csp1_2018_ugu = create(:unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1)
     csp_2018.reload
     csp1_2018.reload
 
-    refute csp1_2017.summarize[:show_course_unit_version_warning]
+    refute csp1_2017.summarize(unit_group_unit: csp1_2017_ugu)[:show_course_unit_version_warning]
 
     user = create(:student)
-    refute csp1_2017.summarize(true, user)[:show_course_unit_version_warning]
-    refute csp1_2018.summarize(true, user)[:show_course_unit_version_warning]
+    refute csp1_2017.summarize(true, user, unit_group_unit: csp1_2017_ugu)[:show_course_unit_version_warning]
+    refute csp1_2018.summarize(true, user, unit_group_unit: csp1_2018_ugu)[:show_course_unit_version_warning]
 
     create(:user_script, user: user, script: csp1_2017)
-    refute csp1_2017.summarize(true, user)[:show_course_unit_version_warning]
-    assert csp1_2018.summarize(true, user)[:show_course_unit_version_warning]
+    refute csp1_2017.summarize(true, user, unit_group_unit: csp1_2017_ugu)[:show_course_unit_version_warning]
+    assert csp1_2018.summarize(true, user, unit_group_unit: csp1_2018_ugu)[:show_course_unit_version_warning]
 
     create(:user_script, user: user, script: csp1_2018)
-    refute csp1_2017.summarize(true, user)[:show_course_unit_version_warning]
-    assert csp1_2018.summarize(true, user)[:show_course_unit_version_warning]
-  end
-
-  test 'summarize includes show_script_version_warning' do
-    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true)
-    CourseOffering.add_course_offering(foo17)
-    foo18 = create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018', is_course: true)
-    CourseOffering.add_course_offering(foo18)
-    user = create(:student)
-
-    refute foo17.summarize[:show_script_version_warning]
-
-    refute foo17.summarize(true, user)[:show_script_version_warning]
-    refute foo18.summarize(true, user)[:show_script_version_warning]
-
-    create(:user_script, user: user, script: foo17)
-    refute foo17.summarize(true, user)[:show_script_version_warning]
-    assert foo18.summarize(true, user)[:show_script_version_warning]
-
-    user_unit_18 = create(:user_script, user: user, script: foo18)
-    refute foo17.summarize(true, user)[:show_script_version_warning]
-    assert foo18.summarize(true, user)[:show_script_version_warning]
-
-    # version warning can be dismissed
-    user_unit_18.version_warning_dismissed = true
-    user_unit_18.save!
-    refute foo18.summarize(true, user)[:show_script_version_warning]
+    refute csp1_2017.summarize(true, user, unit_group_unit: csp1_2017_ugu)[:show_course_unit_version_warning]
+    assert csp1_2018.summarize(true, user, unit_group_unit: csp1_2018_ugu)[:show_course_unit_version_warning]
   end
 
   test 'summarize only shows one version warning' do
@@ -1075,14 +1053,14 @@ class UnitTest < ActiveSupport::TestCase
 
     csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1', version_year: '2018')
-    create(:unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1)
+    csp1_2018_ugu = create(:unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1)
     csp_2018.reload
     csp1_2018.reload
 
     user = create(:student)
     create(:user_script, user: user, script: csp1_2017)
-    assert csp1_2018.summarize(true, user)[:show_course_unit_version_warning]
-    refute csp1_2018.summarize(true, user)[:show_script_version_warning]
+    assert csp1_2018.summarize(true, user, unit_group_unit: csp1_2018_ugu)[:show_course_unit_version_warning]
+    refute csp1_2018.summarize(true, user, unit_group_unit: csp1_2018_ugu)[:show_script_version_warning]
   end
 
   test 'summarize includes versions' do
@@ -1180,8 +1158,37 @@ class UnitTest < ActiveSupport::TestCase
 
     UnitGroup.any_instance.expects(:summarize_course_versions).once.returns(versioned_single_unit_course25.course_version&.course_offering&.course_versions)
     course_versions = single_unit.summarize_course_versions(create(:teacher))
-    puts course_versions.inspect
     assert_equal 2, course_versions.count
+  end
+
+  test 'summarize_course_versions for modular single-unit course' do
+    modular_unit = create :unit, name: 'modular-unit'
+
+    # original course versions
+    original_course_offering = create(:course_offering, key: 'original-course', display_name: 'original-course')
+    original_course_2024 = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, name: 'original-course-2024', family_name: 'original-course', version_year: '2024'
+    original_course_2025 = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, name: 'original-course-2025', family_name: 'original-course', version_year: '2025'
+    create :unit_group_unit, unit_group: original_course_2024, script: modular_unit, position: 1
+    create :unit_group_unit, unit_group: original_course_2024, script: (create :unit), position: 2
+    create :unit_group_unit, unit_group: original_course_2025, script: modular_unit, position: 1
+    create :unit_group_unit, unit_group: original_course_2025, script: (create :unit), position: 2
+    create :course_version, key: '2024', display_name: '2024', course_offering: original_course_offering, content_root: original_course_2024
+    create :course_version, key: '2025', display_name: '2025', course_offering: original_course_offering, content_root: original_course_2025
+
+    # modular course versions
+    modular_course_offering = create(:course_offering, key: 'modular-course', display_name: 'modular-course')
+    modular_single_unit_course24 = create(:single_unit_course, unit: modular_unit, name: 'mod-single-unit-2024', family_name: 'modular-single-unit-course', version_year: '2024', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    modular_single_unit_course25 = create(:single_unit_course, unit: modular_unit, name: 'mod-single-unit-2025', family_name: 'modular-single-unit-course', version_year: '2025', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    create(:course_version, :with_unit_group, key: '2024', course_offering: modular_course_offering, display_name: '2024', content_root: modular_single_unit_course24)
+    create(:course_version, :with_unit_group, key: '2025', course_offering: modular_course_offering, display_name: '2025', content_root: modular_single_unit_course25)
+
+    original_course_versions = modular_unit.summarize_course_versions(create(:teacher))
+    assert_equal 0, original_course_versions.count
+
+    single_unit_course_versions = modular_unit.summarize_course_versions(create(:teacher), unit_group: modular_single_unit_course25)
+    assert_equal 2, single_unit_course_versions.count
+    assert_equal 'mod-single-unit-2024', single_unit_course_versions.values[0][:name]
+    assert_equal 'mod-single-unit-2025', single_unit_course_versions.values[1][:name]
   end
 
   test 'summarize excludes unlaunched versions' do
@@ -1212,26 +1219,31 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'summarize includes show assign button' do
-    unit = create(:course_version, :with_unit).content_root
-    unit.update!(name: 'script', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
+    launched_course = create :single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+    unit_group_unit = launched_course.default_unit_group_units.first
+    unit = launched_course.first_unit
+    CourseOffering.add_course_offering(launched_course)
     teacher = create(:teacher)
 
     # No user, show_assign_button set to false
-    refute unit.summarize[:show_assign_button]
+    refute unit.summarize(unit_group_unit: unit_group_unit)[:show_assign_button]
 
-    # Teacher should be able to assign a launched unit.
-    assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview, unit.summarize[:publishedState]
-    assert unit.summarize(true, teacher)[:show_assign_button]
+    # Teacher should be able to assign a launched unit
+    assert unit.summarize(true, teacher, unit_group_unit: unit_group_unit)[:show_assign_button]
 
-    # Teacher should not be able to assign a unlaunched script.
-    hidden_unit = create(:script, name: 'unassignable-hidden', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
-    assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, hidden_unit.summarize[:publishedState]
-    refute hidden_unit.summarize(true, teacher)[:show_assign_button]
+    # Student should not be able to assign a launched unit
+    refute unit.summarize(true, create(:student), unit_group_unit: unit_group_unit)[:show_assign_button]
 
-    # Student should not be able to assign a unit,
-    # regardless of visibility.
-    assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview, unit.summarize[:publishedState]
-    refute unit.summarize(true, create(:student))[:show_assign_button]
+    # Teacher should not be able to assign an unlaunched unit
+    beta_course = create :single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+    CourseOffering.add_course_offering(beta_course)
+    refute beta_course.first_unit.summarize(true, teacher, unit_group_unit: beta_course.default_unit_group_units.first)[:show_assign_button]
+
+    # teacher can assign unit in launched modular course even if its original unit group is not launched
+    modular_course = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+    create :unit_group_unit, unit_group: modular_course, script: beta_course.first_unit, position: 1
+    CourseOffering.add_course_offering(modular_course)
+    assert modular_course.first_unit.summarize(true, teacher, unit_group_unit: modular_course.default_unit_group_units.first)[:show_assign_button]
   end
 
   test 'summarize includes bonus levels for lessons if include_bonus_levels and include_lessons are true' do
@@ -1630,42 +1642,7 @@ class UnitTest < ActiveSupport::TestCase
     assert_empty unit.text_response_levels
   end
 
-  test "course_link retuns nil if unit is in no courses" do
-    unit = create :script
-    create :unit_group, name: 'csp'
-
-    assert_nil unit.course_link
-  end
-
-  test "course_link returns nil if unit is in two courses" do
-    unit = create :script
-    unit_group = create :unit_group, name: 'csp'
-    other_unit_group = create :unit_group, name: 'othercsp'
-    create :unit_group_unit, position: 1, unit_group: unit_group, script: unit
-    create :unit_group_unit, position: 1, unit_group: other_unit_group, script: unit
-
-    assert_nil unit.course_link
-  end
-
-  test "course_link returns course_path if unit is in one course" do
-    unit = create :script
-    unit_group = create :unit_group, name: 'csp'
-    create :unit_group_unit, position: 1, unit_group: unit_group, script: unit
-    unit.reload
-    unit_group.reload
-
-    assert_equal '/courses/csp', unit.course_link
-  end
-
-  test 'course_link uses cache' do
-    populate_cache_and_disconnect_db
-    Unit.stubs(:should_cache?).returns true
-    UnitGroup.stubs(:should_cache?).returns true
-    unit = Unit.get_from_cache(@unit_in_unit_group.name)
-    assert_equal "/courses/#{@unit_group.name}", unit.course_link
-  end
-
-  test "logged_out_age_13_required?" do
+  test 'logged_out_age_13_required?' do
     unit = create :script, login_required: false
     lesson_group = create :lesson_group, script: unit
     level = create :applab
@@ -2045,8 +2022,8 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test "show_unit_overview_between_lessons" do
-    aiml_6_8 = create :unit, name: 'aiml-6-8', properties: {content_area: "6-8 Curriculum"}
-    aiml_9_12 = create :unit, name: 'aiml-9-12', properties: {content_area: "9-12 Curriculum"}
+    aiml_6_8 = create :unit, name: 'aiml-6-8', properties: {content_area: "curriculum_6_8"}
+    aiml_9_12 = create :unit, name: 'aiml-9-12', properties: {content_area: "curriculum_9_12"}
 
     assert @csd_unit.show_unit_overview_between_lessons?
     assert @csp_unit.show_unit_overview_between_lessons?
@@ -2236,6 +2213,53 @@ class UnitTest < ActiveSupport::TestCase
     student = create :student
 
     assert_nil unit1.next_unit(student)
+  end
+
+  test 'does allow major changes to newly created unit' do
+    unit = create :unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
+    assert unit.allow_major_curriculum_changes?
+  end
+
+  test 'does allow major changes to unit within in_development course' do
+    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
+    @unit_in_unit_group.update!(published_state: nil)
+    @unit_in_unit_group.reload
+    assert @unit_in_unit_group.allow_major_curriculum_changes?
+  end
+
+  test 'does allow major changes to unit within pilot course' do
+    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot)
+    @unit_in_unit_group.update!(published_state: nil)
+    @unit_in_unit_group.reload
+    assert @unit_in_unit_group.allow_major_curriculum_changes?
+  end
+
+  test 'does not allow major changes to unit within beta course' do
+    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
+    @unit_in_unit_group.update!(published_state: nil)
+    @unit_in_unit_group.reload
+    refute @unit_in_unit_group.allow_major_curriculum_changes?
+  end
+
+  test 'does not allow major changes to unit within stable course' do
+    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    @unit_in_unit_group.update!(published_state: nil)
+    @unit_in_unit_group.reload
+    refute @unit_in_unit_group.allow_major_curriculum_changes?
+  end
+
+  test 'does not allow major changes to in_development unit within stable course' do
+    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    @unit_in_unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
+    @unit_in_unit_group.reload
+    refute @unit_in_unit_group.allow_major_curriculum_changes?
+  end
+
+  test 'does allow major changes to hidden unit within stable course' do
+    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    @unit_in_unit_group.update!(published_state: nil, hide_within_course: true)
+    @unit_in_unit_group.reload
+    assert @unit_in_unit_group.allow_major_curriculum_changes?
   end
 
   class MigratedScriptCopyTests < ActiveSupport::TestCase
@@ -2626,6 +2650,7 @@ class UnitTest < ActiveSupport::TestCase
     unit_in_course = create :script, is_migrated: true, name: 'coursename1-2021'
     course_unit_group = create(:unit_group)
     unit_gp_unit = create :unit_group_unit, unit_group: course_unit_group, script: unit_in_course, position: 1
+    unit_in_course.update!(original_unit_group: nil)
     CourseOffering.add_course_offering(course_unit_group)
 
     UnitGroup.any_instance.expects(:write_serialization).never
@@ -2663,6 +2688,110 @@ class UnitTest < ActiveSupport::TestCase
     refute unit_without_rubrics.ai_assessment_enabled?
     refute unit_with_non_ai_rubric.ai_assessment_enabled?
     assert unit_with_ai_rubric.ai_assessment_enabled?
+  end
+
+  test 'can summarize has_unnumbered_lessons' do
+    unit = create :unit
+    refute unit.summarize[:hasUnnumberedLessons]
+    unit.update!(has_unnumbered_lessons: true)
+    assert unit.summarize[:hasUnnumberedLessons]
+    unit.update!(has_unnumbered_lessons: false)
+    refute unit.summarize[:hasUnnumberedLessons]
+  end
+
+  test 'has ai tutor level' do
+    unit_without_ai_tutor = create :unit
+    refute unit_without_ai_tutor.has_ai_tutor_level?
+
+    unit_with_ai_tutor = create :unit, :with_levels
+    unit_with_ai_tutor.levels[0].update!(ai_tutor_available: true)
+    assert unit_with_ai_tutor.has_ai_tutor_level?
+  end
+
+  describe '#title_for_display' do
+    let(:has_numbered_units) {false}
+    let(:unit_group) {create :unit_group, has_numbered_units: has_numbered_units}
+    let(:unit_title) {'my_unit_title'}
+    let(:unit) {create :unit, original_unit_group: unit_group}
+    let(:position) {2}
+    let!(:unit_group_unit) {create :unit_group_unit, script_id: unit.id, course_id: unit_group.id, position: position}
+    let(:unit_group_other) {create :unit_group, has_numbered_units: has_numbered_units}
+    let(:position_other) {1}
+    let!(:unit_group_unit_other) {create :unit_group_unit, script_id: unit.id, course_id: unit_group_other.id, position: position_other}
+
+    before do
+      # Add the unit to another unit_group
+      unit.reload
+      allow(unit).to receive(:localized_title).and_return(unit_title)
+    end
+
+    context 'default unit_group_unit' do
+      let(:subject) {unit.title_for_display}
+
+      context 'has_numbered_units is false' do
+        let(:has_numbered_units) {false}
+
+        it 'returns the unit title' do
+          _(subject).must_equal 'my_unit_title'
+        end
+      end
+
+      context 'has_numbered_units is true' do
+        let(:has_numbered_units) {true}
+
+        it 'returns the unit title with prefix' do
+          _(subject).must_equal 'Unit 2 - my_unit_title'
+        end
+      end
+    end
+
+    context 'unit_group_unit is the original' do
+      let(:subject) {unit.title_for_display(unit_group_unit: unit_group_unit)}
+
+      context 'has_numbered_units is false' do
+        let(:has_numbered_units) {false}
+
+        it 'returns the unit title' do
+          _(subject).must_equal 'my_unit_title'
+        end
+      end
+
+      context 'has_numbered_units is true' do
+        let(:has_numbered_units) {true}
+
+        it 'returns the unit title with prefix' do
+          _(subject).must_equal 'Unit 2 - my_unit_title'
+        end
+      end
+
+      context 'unit_group_unit is the other' do
+        let(:subject) {unit.title_for_display(unit_group_unit: unit_group_unit_other)}
+
+        context 'has_numbered_units is false' do
+          let(:has_numbered_units) {false}
+
+          it 'returns the unit title' do
+            _(subject).must_equal 'my_unit_title'
+          end
+        end
+
+        context 'has_numbered_units is true' do
+          let(:has_numbered_units) {true}
+
+          it 'returns the unit title with prefix' do
+            _(subject).must_equal 'Unit 1 - my_unit_title'
+          end
+
+          context 'position_other is 3' do
+            let(:position_other) {3}
+
+            it 'returns the unit title with prefix' do
+              _(subject).must_equal 'Unit 3 - my_unit_title'
+            end
+          end
+        end
+      end
+    end
   end
 
   private def has_unlaunched_unit?(units)

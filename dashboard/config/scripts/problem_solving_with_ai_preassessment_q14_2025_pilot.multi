@@ -7,7 +7,7 @@ wrong 'Because creators often co-write AI responses during model training.'
 wrong 'Because AI developers are legally required to pay for all training data.'
 right 'Because AI-generated content can be sold or monetized even when based on others\' work.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 11: Ownership, Ethics, and Creativity

@@ -95,20 +95,22 @@ export const useFileUploader = ({
 
   const changeHandler = useCallback(() => {
     Array.from(inputRef.current?.files || []).forEach(file => {
+      const fileNameErrorMessage = validateFileName(file.name);
+      if (fileNameErrorMessage) {
+        errorCallback(fileNameErrorMessage, callbackArgs.current);
+        return;
+      }
+
       if (!isValidMimeType(file.type, validMimeTypes)) {
         sendAnalyticsEvent(analyticsEvents.UPLOAD_UNACCEPTED_FILE, {
           name: file.name,
           type: file.type,
         });
+        const [, fileType] = file.name.split('.');
         errorCallback(
-          codebridgeI18n.invalidFileUpload({fileType: file.type}),
+          codebridgeI18n.invalidFileType({fileType: file.type || fileType}),
           callbackArgs.current
         );
-        return;
-      }
-      const fileNameErrorMessage = validateFileName(file.name);
-      if (fileNameErrorMessage) {
-        errorCallback(fileNameErrorMessage, callbackArgs.current);
         return;
       }
 

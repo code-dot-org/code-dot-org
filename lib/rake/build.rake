@@ -37,14 +37,6 @@ namespace :build do
     end
   end
 
-  desc 'Builds broken link checker.'
-  timed_task_with_logging :tools do
-    Dir.chdir(File.join(tools_dir, "scripts", "brokenLinkChecker")) do
-      ChatClient.log 'Installing <b>broken link checker</b> dependencies...'
-      RakeUtils.yarn_install
-    end
-  end
-
   desc 'Builds dashboard (install gems, migrate/seed db, compile assets).'
   timed_task_with_logging dashboard: :package do
     Dir.chdir(dashboard_dir) do
@@ -63,8 +55,13 @@ namespace :build do
         ChatClient.log 'Migrating <b>dashboard</b> database...'
         RakeUtils.rake 'db:setup_or_migrate'
 
-        # Update the schema cache file, except for production which always uses the cache.
-        unless rack_env?(:production)
+        # Update the schema cache file only on the staging branch, because the
+        # staging system's Rails database is the source of truth for dashboard's
+        # schema. In the future we could also generate it on the test machine,
+        # but that is not practical as of April 2025 because the database schema
+        # on test differs from other environments due to utf8mb3 vs utf8mb4
+        # issues.
+        if rack_env?(:staging)
           schema_cache_file = dashboard_dir('db/schema_cache.yml')
           RakeUtils.rake 'db:schema:cache:dump'
           # NOTE: Temporarily commenting the `else` check below (and ignoring
@@ -190,7 +187,6 @@ namespace :build do
   tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
-  tasks << :tools if rack_env?(:staging)
   tasks << :i18n if CDO.build_i18n
   timed_task_with_logging all: tasks
 end

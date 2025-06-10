@@ -3,6 +3,9 @@
   "script_names": [
     "music-intro-2024"
   ],
+  "original_script_names": [
+    "music-intro-2024"
+  ],
   "published_state": "beta",
   "instruction_type": "self_paced",
   "participant_audience": "student",

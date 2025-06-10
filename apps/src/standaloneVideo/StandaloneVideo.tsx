@@ -5,6 +5,7 @@
 // they will get an older-style level implemented with a HAML page and some
 // non-React JS code.
 
+import {Button} from '@code-dot-org/component-library/button';
 import React from 'react';
 
 import {
@@ -33,14 +34,12 @@ const StandaloneVideo: React.FunctionComponent<LabProps> = ({
   return (
     <div id="standalone-video">
       <Video {...levelVideo}>
-        <button
+        <Button
           id="standalone-video-continue-button"
-          type="button"
           onClick={() => nextButtonPressed()}
           className={styles.buttonNext}
-        >
-          {standaloneVideoLocale.continue()}
-        </button>
+          text={standaloneVideoLocale.continue()}
+        />
       </Video>
     </div>
   );

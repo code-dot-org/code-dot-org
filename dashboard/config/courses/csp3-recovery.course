@@ -3,6 +3,9 @@
   "script_names": [
     "csp3-recovery"
   ],
+  "original_script_names": [
+    "csp3-recovery"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

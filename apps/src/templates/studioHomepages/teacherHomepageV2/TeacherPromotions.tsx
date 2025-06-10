@@ -4,6 +4,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {trySetLocalStorage, tryGetLocalStorage} from '@cdo/apps/utils';
 
 import PermanentPromotions from './PermanentPromotions';
+import {SkeletonTeacherPromo} from './SkeletonTeacherPromo';
 import TeacherPromo, {TeacherPromoInfo} from './TeacherPromo';
 
 import styles from './teacherHomepage.module.scss';
@@ -25,6 +26,7 @@ interface ServerPromotion {
   image?: string;
   is_closable: boolean;
   partner_logo?: string;
+  is_external?: boolean;
 }
 
 const serverPromotionConverter = (serverPromotion: ServerPromotion) => ({
@@ -38,6 +40,7 @@ const serverPromotionConverter = (serverPromotion: ServerPromotion) => ({
   image: serverPromotion.image || null,
   isClosable: serverPromotion.is_closable,
   partnerLogo: serverPromotion.partner_logo || null,
+  isExternal: serverPromotion.is_external || false,
 });
 
 const TEACHER_PROMOTION_LOCAL_STORAGE_KEY = 'teacherPromotionClosed';
@@ -102,14 +105,20 @@ const TeacherPromotions: React.FC = () => {
   );
 
   return (
-    <div className={styles.promotions}>
-      {isLoading && <div>Loading...</div>}
-      {/* TODO(lfm): Add a skeleton here */}
-      {promotions.map(promotion => (
-        <TeacherPromo {...promotion} onClose={closePromotionCallback} />
-      ))}
+    <ul className={styles.promotions}>
+      {isLoading ? (
+        <SkeletonTeacherPromo />
+      ) : (
+        promotions.map(promotion => (
+          <TeacherPromo
+            {...promotion}
+            onClose={closePromotionCallback}
+            key={promotion.id}
+          />
+        ))
+      )}
       <PermanentPromotions />
-    </div>
+    </ul>
   );
 };
 

@@ -33,6 +33,7 @@ class Rubric < ApplicationRecord
         id: lesson.id,
         name: lesson.name,
         position: lesson.relative_position,
+        title: lesson.localized_title,
       },
       level: {
         id: level.id,

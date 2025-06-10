@@ -65,52 +65,51 @@ theme: responsive
         </tr>
       </table>
     </td>
-    <!-- "coming soon" system requirements, to be updated and made live from March through July.
+    <!-- "coming soon" system requirements, to be updated and made live from March through July. -->
     <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          Browser July '25
+          浏览器 25 年 7 月
         </th>
         <tr>
-          <td>Chrome 103.x</td>
+          <td>浏览器 109</td>
         </tr>
         <tr>
-          <td>Safari 14.x</td>
+          <td>苹果浏览器 16.6</td>
         </tr>
         <tr>
-          <td>Mobile Safari 14.x</td>
+          <td>移动版狩猎 16</td>
         </tr>
         <tr>
-          <td>Edge 119.x</td>
+          <td>边缘 128</td>
         </tr>
         <tr>
-          <td>Firefox 98.x</td>
+          <td>火狐 115</td>
         </tr>
       </table>
     </td>
     <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
       <table>
         <th>
-          Platform July '25
+          25年7月25日平台
         </th>
         <tr>
           <td>macOS 10.15</td>
         </tr>
         <tr>
-          <td>iOS 15.x</td>
+          <td>iOS 16.x</td>
         </tr>
         <tr>
-          <td>Windows 8</td>
+          <td>Windows 10</td>
         </tr>
         <tr>
-          <td>Android 8.x</td>
+          <td>安卓 8</td>
         </tr>
         <tr>
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
     </td>
-    -->
   </tr>
 </table>
 
@@ -149,7 +148,6 @@ theme: responsive
 ### 你能播放这个视频吗？
 
 在你开始Code.org的在线课程之前，请测试以下视频的播放，以确保你准备就绪。
-
 
 <!--
 The following HTML is a copy of video_with_fallback.haml. once this file can be converted to

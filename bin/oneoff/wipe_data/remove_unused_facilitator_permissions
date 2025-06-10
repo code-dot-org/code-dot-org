@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+
+# This script removes facilitator permissions for users who have not signed in since before 2024-01-01
+# DRY_RUN = true will not actually remove permissions, just print what would be removed
+
+require_relative '../../../dashboard/config/environment'
+
+date_cutoff = DateTime.new(2024, 1, 1)
+DRY_RUN = true
+
+removed_count = 0
+inactive_users = User.joins(:permissions).
+  where(user_permissions: {permission: UserPermission::FACILITATOR}).
+  where('users.last_sign_in_at < ?', date_cutoff)
+
+inactive_users.find_each do |user|
+  removed_count += 1
+  if DRY_RUN
+    puts "Would remove facilitator permission from user #{user.id} (last_sign_in_at: #{user.last_sign_in_at})"
+  else
+    user.delete_permission(UserPermission::FACILITATOR)
+    puts "Removed facilitator permission from user #{user.id} (last_sign_in_at: #{user.last_sign_in_at})"
+  end
+end
+
+puts "Removed facilitator permission from #{removed_count} users" unless DRY_RUN
+puts "Dry run complete. #{removed_count} users would have their facilitator permission removed" if DRY_RUN

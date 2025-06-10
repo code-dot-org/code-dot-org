@@ -289,7 +289,9 @@ export default function CurriculumQuickAssign({
       {isLoading && !isNewSection ? (
         <>
           <Heading3>{i18n.assignCurriculum()}</Heading3>
-          <Spinner />
+          <div className={moduleStyles.loadingSpinner}>
+            <Spinner />
+          </div>
         </>
       ) : (
         <>

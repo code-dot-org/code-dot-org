@@ -78,6 +78,7 @@ module OmniauthCallbacksControllerTests
             name: 'Student User',
             age: '13',
             gender: 'f',
+            us_state: '??',
             school_info_attributes: {
               country: 'US'
             },

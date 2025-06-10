@@ -119,8 +119,7 @@ module Pd::WorkshopFilters
         raise ArgumentError, "Unable to parse order_by param: #{order_by}" unless parsed
         field, direction = parsed[1..2]
         case field
-        when 'location_name'
-          workshops = workshops.order("location_name #{direction}".strip)
+
         when 'on_map'
           workshops = workshops.order("on_map #{direction}".strip)
         when 'funded'

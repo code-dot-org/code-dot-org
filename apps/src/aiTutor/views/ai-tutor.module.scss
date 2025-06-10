@@ -14,6 +14,9 @@ $default-spacing: 16px;
   z-index: 2000;
   width: 760px;
   color: $default_text;
+  display: flex;
+  flex-direction: column;
+  height: 560px;
 }
 
 .aiTutorChatWorkspace {
@@ -86,7 +89,7 @@ button.buttonStyle {
   padding-inline-start: 0.75rem;
 
   display: flex;
-  height: 40px;
+  min-height: 40px;
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
@@ -117,6 +120,7 @@ button.buttonStyle {
 .fabBackground {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   gap: 28px;
   padding: 1rem;
   border-right: $border-width solid $border-color;

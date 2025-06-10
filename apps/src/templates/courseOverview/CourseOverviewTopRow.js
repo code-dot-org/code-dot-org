@@ -40,7 +40,6 @@ export default class CourseOverviewTopRow extends Component {
             sections={sectionsForDropdown}
             showAssignButton={showAssignButton}
             courseId={id}
-            isAssigningCourse={true}
             courseOfferingId={courseOfferingId}
             courseVersionId={courseVersionId}
             assignmentName={courseName}

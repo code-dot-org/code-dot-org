@@ -3,6 +3,9 @@
   "script_names": [
     "edit-code"
   ],
+  "original_script_names": [
+    "edit-code"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

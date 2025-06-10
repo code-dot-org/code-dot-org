@@ -3,6 +3,9 @@
   "script_names": [
     "course-e-2018"
   ],
+  "original_script_names": [
+    "course-e-2018"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

@@ -23,7 +23,20 @@ import {isEmail} from '@cdo/apps/util/formatValidation';
 import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import statsigReporter from '../metrics/StatsigReporter';
 import {navigateToHref} from '../utils';
+
+const hideCleverOption = statsigReporter.getIsInExperiment(
+  'removing_clever_from_sign_up',
+  'hide_clever_option',
+  false
+);
+
+const showMoreOptions = statsigReporter.getIsInExperiment(
+  'removing_clever_from_sign_up',
+  'show_more_options',
+  false
+);
 
 import {
   ACCOUNT_TYPE_SESSION_KEY,
@@ -50,7 +63,8 @@ const getUserType = () => {
 
 const LoginTypeSelection: React.FunctionComponent<{
   isSignedOut: boolean;
-}> = ({isSignedOut}) => {
+  passwordMinLength: number;
+}> = ({isSignedOut, passwordMinLength}) => {
   const [userType, setUserType] = useState(getUserType());
   const [password, setPassword] = useState('');
   const [passwordIcon, setPasswordIcon] = useState(X_ICON);
@@ -64,6 +78,8 @@ const LoginTypeSelection: React.FunctionComponent<{
   const [authToken, setAuthToken] = useState('');
   const [createAccountButtonDisabled, setCreateAccountButtonDisabled] =
     useState(true);
+
+  const [revealClever, setRevealClever] = useState(false);
 
   const isTeacher = userType === UserTypes.TEACHER;
   const finishAccountUrl = isTeacher
@@ -136,7 +152,7 @@ const LoginTypeSelection: React.FunctionComponent<{
 
   const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
-    if (event.target.value.length >= 6) {
+    if (event.target.value.length >= passwordMinLength) {
       setPasswordIcon(CHECK_ICON);
       setPasswordIconClass(style.teal);
     } else {
@@ -174,6 +190,7 @@ const LoginTypeSelection: React.FunctionComponent<{
         email: email,
         password: password,
         password_confirmation: password,
+        user_type: userType,
       },
     };
     try {
@@ -270,14 +287,30 @@ const LoginTypeSelection: React.FunctionComponent<{
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <form action="/users/auth/clever" method="POST">
-            <Button
-              text={locale.sign_up_clever()}
-              onClick={() => selectOauthLoginType('clever')}
-              iconLeft={{iconName: 'kit fa-clever', iconStyle: 'solid'}}
-              className={style.cleverButton}
-              buttonTagTypeAttribute="submit"
-            />
-            <input type="hidden" name="authenticity_token" value={authToken} />
+            {showMoreOptions && !revealClever && (
+              <Button
+                text="Show more options"
+                onClick={() => setRevealClever(true)}
+                type="secondary"
+                iconRight={{iconName: 'caret-down'}}
+              />
+            )}
+            {(!hideCleverOption || revealClever) && (
+              <>
+                <Button
+                  text={locale.sign_up_clever()}
+                  onClick={() => selectOauthLoginType('clever')}
+                  iconLeft={{iconName: 'kit fa-clever', iconStyle: 'solid'}}
+                  className={style.cleverButton}
+                  buttonTagTypeAttribute="submit"
+                />
+                <input
+                  type="hidden"
+                  name="authenticity_token"
+                  value={authToken}
+                />
+              </>
+            )}
           </form>
           <div className={style.greyTextbox}>
             {!isTeacher && (
@@ -368,7 +401,9 @@ const LoginTypeSelection: React.FunctionComponent<{
                   className={passwordIconClass}
                   iconName={passwordIcon}
                 />
-                <BodyThreeText>{locale.minimum_six_chars()}</BodyThreeText>
+                <BodyThreeText>
+                  {locale.minimum_num_chars({minChars: passwordMinLength})}
+                </BodyThreeText>
               </div>
             </div>
             <div>

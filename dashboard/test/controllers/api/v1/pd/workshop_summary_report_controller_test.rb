@@ -60,8 +60,7 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ActionController::TestC
     create :pd_workshop_participant, workshop: @organizer_workshop, enrolled: true, attended: true
 
     # Non-CSF workshop from a different organizer
-    @other_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_ECS,
-      subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
+    @other_workshop = create :byo_workshop, :ended
   end
 
   [:admin, :workshop_organizer, :program_manager].each do |user_type|

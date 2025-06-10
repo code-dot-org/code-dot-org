@@ -1,6 +1,6 @@
-@import '@code-dot-org/component-library-styles/primitiveColors.scss';
-@import '@code-dot-org/component-library-styles/colors.scss';
-@import '@code-dot-org/component-library-styles/mixins.scss';
+@use '@code-dot-org/component-library-styles/primitiveColors.scss';
+@use '@code-dot-org/component-library-styles/colors.scss';
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
 
 //Slider colors for use in JSX/TSX
 $slider-black-track-fill-color: var(--background-neutral-primary-inverse);
@@ -51,7 +51,7 @@ $slider-aqua-track-disabled-color: var(--background-neutral-disabled);
   align-self: stretch;
 
   .sliderLabel {
-    @include label-two;
+    @include mixins.label-two;
     flex: 1;
     margin-bottom: 0;
   }

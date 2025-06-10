@@ -961,9 +961,7 @@ class AbilityTest < ActiveSupport::TestCase
   test 'teacher meeting AI Chat access requirements can perform AI Chat actions' do
     teacher = create :teacher
     teacher.stubs(:teacher_can_access_ai_chat?).returns(true)
-    [:start_chat_completion, :chat_request].each do |action|
-      assert Ability.new(teacher).can? action, :aichat_request
-    end
+    # :aichat_request actions are tested via the aichat_requests_controller tests.
     assert Ability.new(teacher).can? :log_chat_event, :aichat_event
     assert Ability.new(teacher).can? :chat_history, :aichat_event
   end
@@ -971,9 +969,7 @@ class AbilityTest < ActiveSupport::TestCase
   test 'teacher not meeting AI Chat access requirements cannot perform AI Chat actions' do
     teacher = create :teacher
     teacher.stubs(:teacher_can_access_ai_chat?).returns(false)
-    [:start_chat_completion, :chat_request].each do |action|
-      refute Ability.new(teacher).can? action, :aichat_request
-    end
+    # :aichat_request actions are tested via the aichat_requests_controller tests.
     refute Ability.new(teacher).can? :log_chat_event, :aichat_event
     refute Ability.new(teacher).can? :chat_history, :aichat_event
   end
@@ -981,9 +977,7 @@ class AbilityTest < ActiveSupport::TestCase
   test 'student meeting AI Chat access requirements can perform AI Chat actions' do
     student = create :student
     student.stubs(:student_can_access_ai_chat?).returns(true)
-    [:start_chat_completion, :chat_request].each do |action|
-      assert Ability.new(student).can? action, :aichat_request
-    end
+    # :aichat_request actions are tested via the aichat_requests_controller tests.
     assert Ability.new(student).can? :log_chat_event, :aichat_event
     assert Ability.new(student).can? :chat_history, :aichat_event
   end
@@ -991,9 +985,7 @@ class AbilityTest < ActiveSupport::TestCase
   test 'student not meeting AI Chat access requirements cannot perform AI Chat actions' do
     student = create :student
     student.stubs(:student_can_access_ai_chat?).returns(false)
-    [:start_chat_completion, :chat_request].each do |action|
-      refute Ability.new(student).can? action, :aichat_request
-    end
+    # :aichat_request actions are tested via the aichat_requests_controller tests.
     refute Ability.new(student).can? :log_chat_event, :aichat_event
     refute Ability.new(student).can? :chat_history, :aichat_event
   end

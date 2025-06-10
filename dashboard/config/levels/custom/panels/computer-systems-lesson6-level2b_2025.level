@@ -7,7 +7,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "offer_browser_tts": "false",
+    "offer_browser_tts": "true",
     "panels": [
       {
         "text": "**Gamer Greg**\n\n**Job/Hobby:** College student, part-time eSports streamer.\n\n**Purpose:** High-performance gaming and streaming.\n",
@@ -32,6 +32,6 @@
     "thumbnail_url": "https://images.code.org/c95e63693959ed8def4713670aa76c4d-greg.png",
     "name_suffix": "_2025"
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-22T01:23:57.528+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson6-level2b-2024\\\"\"],\"cloned_from\":\"computer-systems-lesson6-level2b-2024\"},{\"changed_at\":\"2025-04-02 20:30:45 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-02 20:31:16 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-02 20:32:21 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-22T01:23:57.528+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson6-level2b-2024\\\"\"],\"cloned_from\":\"computer-systems-lesson6-level2b-2024\"},{\"changed_at\":\"2025-04-02 20:30:45 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-02 20:31:16 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-02 20:32:21 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-25 17:06:43 +0000\",\"changed\":[\"offer_browser_tts\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

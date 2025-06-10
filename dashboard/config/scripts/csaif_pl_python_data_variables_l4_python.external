@@ -18,45 +18,48 @@ markdown <<MARKDOWN
 
 #### Look at these sample data cards. What do you notice about them?
 
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <!-- First Row (3 Cards) -->
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
+<div style="display: flex; justify-content: center; gap: 10px; padding: 10px; width: 98%; flex-wrap: nowrap;">
+<!-- Card 1 -->
+<div style="background-color: #f8f8f8; padding: 15px; border-radius: 10px; width: 18%; height: 220px; 
                 box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
         <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" 
-             alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102<br> 205<br> 311 <br><br><b> House Numbers</b></p>
+             alt="house Icon" style="width: 60px; height: 60px; margin-bottom: 10px;"><br>
+        <p style="font-size:13pt;">102<br>205<br>311<br><br><b>House Numbers</b></p>
     </div>
 
- <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
+<!-- Card 2 -->
+<div style="background-color: #f8f8f8; padding: 15px; border-radius: 10px; width: 18%; height: 220px; 
                 box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
         <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" 
-             alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street"<br> "Oak Avenue"<br> "Pine Drive" <br><br><b> Street Names</b></p>
+             alt="house Icon" style="width: 60px; height: 60px; margin-bottom: 10px;"><br>
+        <p style="font-size:13pt;">"Maple St"<br>"Oak Avenue"<br>"Pine Drive"<br><br><b>Street Names</b></p>
     </div>
 
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
+<!-- Card 3 -->
+<div style="background-color: #f8f8f8; padding: 15px; border-radius: 10px; width: 18%; height: 220px; 
                 box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
         <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" 
-             alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Sam"<br> "Jordan"<br> "Maria" <br><br><b> Resident Names</b></p>
+             alt="house Icon" style="width: 60px; height: 60px; margin-bottom: 10px;"><br>
+        <p style="font-size:13pt;">"Sam"<br>"Jordan"<br>"Maria"<br><br><b>Resident Names</b></p>
+    </div>
+
+<!-- Card 4 -->
+<div style="background-color: #f8f8f8; padding: 15px; border-radius: 10px; width: 18%; height: 220px; 
+                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
+        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" 
+             alt="house Icon" style="width: 60px; height: 60px; margin-bottom: 10px;"><br>
+        <p style="font-size:13pt;">True<br>False<br>True<br><br><b>Has a Garden?</b></p>
+    </div>
+
+<!-- Card 5 -->
+<div style="background-color: #f8f8f8; padding: 15px; border-radius: 10px; width: 18%; height: 220px; 
+                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
+        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" 
+             alt="house Icon" style="width: 60px; height: 60px; margin-bottom: 10px;"><br>
+        <p style="font-size:13pt;">250,000.50<br>187,500.75<br>320,000.00<br><br><b>House Price</b></p>
     </div>
 </div>
-<div style="clear:both;"></div>
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%; margin-top: 20px;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" 
-             alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True<br> False<br> True  <br><br><b> Has a Garden?</b></p>
-    </div>
 
-  <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" 
-             alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">250,000.50<br> 187,500.75<br> 320,000.00 <br><br><b> House Price</b></p>
-    </div>
-</div>
 <div style="clear:both;"></div>
 
 ---
@@ -89,7 +92,7 @@ markdown <<MARKDOWN
 
 <br>
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This activity is from Lesson 4. You can find more details in the full <a href='https://studio.code.org/s/pf-aitutor-pilot-content-2024/lessons/4' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+    ➡️ This activity is from Lesson 4. You can find more details in the full <a href='https://studio.code.org/s/aif2-2025/lessons/4' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
 </p>
 
 

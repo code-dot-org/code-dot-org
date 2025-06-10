@@ -3,6 +3,9 @@
   "script_names": [
     "cspunit4draft"
   ],
+  "original_script_names": [
+    "cspunit4draft"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

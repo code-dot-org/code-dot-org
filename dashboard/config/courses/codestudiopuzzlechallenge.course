@@ -3,6 +3,9 @@
   "script_names": [
     "CodeStudioPuzzleChallenge"
   ],
+  "original_script_names": [
+    "CodeStudioPuzzleChallenge"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

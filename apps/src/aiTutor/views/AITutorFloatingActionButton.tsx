@@ -22,6 +22,9 @@ const AITutorFloatingActionButton: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
   const level = useAppSelector(state => state.aiTutor.level);
   const isChatOpen = useAppSelector(state => state.aiTutor.isChatOpen);
+  const aiTutorAvailable = useAppSelector(
+    state => state.aiTutor.level?.aiTutorAvailable
+  );
 
   const handleClick = () => {
     const event = isChatOpen
@@ -34,7 +37,7 @@ const AITutorFloatingActionButton: React.FunctionComponent = () => {
     dispatch(setIsChatOpen(!isChatOpen));
   };
 
-  return (
+  return aiTutorAvailable ? (
     <div id="fab-contained">
       <button
         id="ui-floatingActionButton"
@@ -47,7 +50,7 @@ const AITutorFloatingActionButton: React.FunctionComponent = () => {
         <AITutorContainer open={isChatOpen} closeTutor={handleClick} />
       </Provider>
     </div>
-  );
+  ) : null;
 };
 
 export default AITutorFloatingActionButton;

@@ -1,21 +1,21 @@
-@import 'color.scss';
+@import '@code-dot-org/component-library-styles/colors.scss';
 
 .codebridgeContainer {
   height: 100%;
   width: 100%;
 
-  scrollbar-color: $light_gray_700 $light_black;
+  scrollbar-color: var(--background-neutral-quinary) var(--background-neutral-primary);
   // webkit-scrollbar is only used by Safari. Chrome and Firefox use scrollbar-color.
   ::-webkit-scrollbar {
-    background: $light_black;
+    background: var(--background-neutral-primary);
     width: 10px;
     height: 10px;
   }
   ::-webkit-scrollbar-thumb {
-    background: $light_gray_700;
+    background: var(--background-neutral-quinary);
     border-radius: 10px;
   }
   ::-webkit-scrollbar-corner {
-    background: $light_black;
+    background: var(--background-neutral-primary);
   }
 }

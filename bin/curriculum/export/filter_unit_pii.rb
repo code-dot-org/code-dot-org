@@ -30,10 +30,50 @@ $input_dir = File.join(home, 'sourced', $options[:input_dir])
 raise "Input directory must exist: #{$input_dir}" unless Dir.exist?($input_dir)
 raise "Input directory must not be empty: #{$input_dir}" if Dir.empty?($input_dir)
 
-input_filenames = Dir.glob(File.join($input_dir, '*.jsonl'))
-puts "#{File.basename(__FILE__)} found #{input_filenames.size} input files in #{$input_dir}"
+$options[:output_dir] ||= $options[:input_dir]
+$output_dir = File.join(home, 'filtered', $options[:output_dir])
 
-input_filenames.each do |input_filename|
-  puts "Processing #{input_filename}"
-  system("SKIP_SCRIPT_PRELOAD=1 bundle exec ruby #{File.join(__dir__, 'filter_pii_helper.rb')} -i #{$options[:input_dir]} -f #{File.basename(input_filename)}")
+def filter_progress_pii
+  input_filenames = Dir.glob(File.join($input_dir, 'progress', '*.jsonl'))
+  puts "#{File.basename(__FILE__)} found #{input_filenames.size} input files in #{$input_dir}/progress"
+
+  input_filenames.each do |input_filename|
+    filter_file_pii(File.basename(input_filename), 'progress')
+  end
 end
+
+def filter_evals_pii
+  return unless Dir.exist?(File.join($input_dir, 'evals'))
+  ai_evals_filename = get_evals_filename('_ai_evals_')
+  teacher_evals_filename = get_evals_filename('_teacher_evals_')
+  evidence_levels_filename = get_evals_filename('_evidence_levels_')
+
+  filter_file_pii(ai_evals_filename, 'ai_evals') if ai_evals_filename
+  filter_file_pii(teacher_evals_filename, 'teacher_evals') if teacher_evals_filename
+
+  command = "cp #{$input_dir}/evals/#{evidence_levels_filename} #{$output_dir}/evals/"
+  puts "command: #{command}"
+  system(command)
+end
+
+def get_evals_filename(pattern)
+  filenames = Dir.glob(File.join($input_dir, 'evals', '*.jsonl'))
+  filename = filenames.find {|name| name.include?(pattern)}
+  return File.basename(filename) if filename
+  puts "No #{pattern} found in #{$input_dir}/evals"
+  nil
+end
+
+def filter_file_pii(filename, type)
+  command = "SKIP_SCRIPT_PRELOAD=1 bundle exec ruby #{File.join(__dir__, 'filter_file_pii.rb')} " \
+    "-i #{$options[:input_dir]} -o #{$options[:output_dir]} -f #{filename} -t #{type}"
+  puts "command: #{command}"
+  system(command)
+end
+
+def main
+  filter_progress_pii
+  filter_evals_pii
+end
+
+main

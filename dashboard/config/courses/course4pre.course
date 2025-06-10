@@ -3,6 +3,9 @@
   "script_names": [
     "Course4pre"
   ],
+  "original_script_names": [
+    "Course4pre"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

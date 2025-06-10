@@ -44,6 +44,9 @@ export interface Section {
   ttsAutoplayEnabled: boolean;
   unitId?: number | null;
   unitName: string | null;
+  unitPosition: string | null;
+  avatar_color?: number | null;
+  avatar_emoji?: number | null;
 }
 
 type Course = {
@@ -103,6 +106,9 @@ export interface ServerSection {
   sync_enabled?: boolean;
   tts_autoplay_enabled?: boolean;
   unit_id?: number | null;
+  unitPosition?: number | null;
+  avatar_color?: number | null;
+  avatar_emoji?: number | null;
 }
 
 export interface Student {

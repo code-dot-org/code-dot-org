@@ -359,7 +359,7 @@
       "freeResponseHeight": 50,
       "codeEditableAfterSubmit": false
     },
-    "long_instructions": "# Predict and Run\r\n\r\n**What do you think this program does?**\r\n\r\nTake a look at the code in this program. Write down what you think this program will do. There are no wrong answers!",
+    "long_instructions": "# Predict and Run\r\n\r\nLet's take a look at functions in the neighborhood.\r\n\r\n**What do you think this program does?**\r\n\r\nTake a look at the code in this program. Write down what you think this program will do. There are no wrong answers!",
     "start_sources": {
       "files": {
         "0": {
@@ -376,6 +376,6 @@
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-28T16:22:04.810+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level1-aitutor-2024\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level1-aitutor-2024\"},{\"changed_at\":\"2025-03-28 16:26:46 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-28 19:35:45 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-28T16:22:04.810+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level1-aitutor-2024\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level1-aitutor-2024\"},{\"changed_at\":\"2025-03-28 16:26:46 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-28 19:35:45 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-04-22 20:25:28 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-04-23 16:32:00 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-04-23 17:27:39 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Pythonlab>

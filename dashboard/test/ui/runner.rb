@@ -40,7 +40,7 @@ GIT_BRANCH = GitUtils.current_branch
 COMMIT_HASH = RakeUtils.git_revision
 LOCAL_LOG_DIRECTORY = File.join(UI_TEST_DIR, 'log')
 S3_LOGS_BUCKET = 'cucumber-logs'
-S3_LOGS_PREFIX = ENV['CI'] ? "circle/#{ENV.fetch('CI_BUILD_NUMBER', nil)}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
+S3_LOGS_PREFIX = CI::Utils.running_on_ci? ? "circle/#{ENV.fetch('CI_BUILD_NUMBER', nil)}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
 LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, make_public: true)
 
 #
@@ -106,6 +106,7 @@ def parse_options
     options.csedweek_domain = 'test.csedweek.org'
     options.local = nil
     options.local_headless = true
+    options.first_run_local = nil
     options.html = nil
     options.maximize = nil
     options.auto_retry = false
@@ -147,6 +148,9 @@ def parse_options
       end
       opts.on("--headed", "Open visible chrome browser windows. Runs in headless mode without this flag. Only relevant when -l is specified.") do
         options.local_headless = false
+      end
+      opts.on("--first-run-local", "Use the local webdriver (not Saucelabs) only for the first run of a test; reruns will use Saucelabs.") do
+        options.first_run_local = 'true'
       end
       opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. localhost.code.org:3000") do |p|
         if p == 'localhost:3000'
@@ -241,7 +245,7 @@ def parse_options
     if options.force_db_access
       options.pegasus_db_access = true
       options.dashboard_db_access = true
-    elsif ENV['CI']
+    elsif CI::Utils.running_on_ci?
       options.pegasus_db_access = true
       options.dashboard_db_access = true
     elsif rack_env?(:development)
@@ -442,6 +446,8 @@ def report_tests_finished(start_time, run_results, run_status_page_url = nil)
   Infrastructure::Logger.put('runner_feature_tests_count', run_results.count, extra_dimensions)
   Infrastructure::Logger.flush
 
+  ChatClient.log "Skipped tests tagged with: #{skipped_tags.to_a.join(', ')}"
+
   test_report =  "\n#{test_type.upcase} TEST REPORT: #{failures.any? ? "*❌ FAILED*" : "*✅ PASSED*"}\n"
   test_report += "\n#{failures.count}x failed features:\n" + failures.map {|failure| "• #{failure}\n"}.join if failures.any?
   test_report += "\n"
@@ -565,8 +571,8 @@ end
 def parallel_config(parallel_limit)
   {
     # Run in parallel threads on CI (less memory), processes on main test machine (better CPU utilization)
-    in_threads: ENV['CI'] ? parallel_limit : nil,
-    in_processes: ENV['CI'] ? nil : parallel_limit,
+    in_threads: CI::Utils.running_on_ci? ? parallel_limit : nil,
+    in_processes: CI::Utils.running_on_ci? ? nil : parallel_limit,
 
     # This 'finish' lambda runs on the main thread after each Parallel.map work
     # item is completed.
@@ -663,7 +669,10 @@ def tag(tag, run = true)
   " -t #{tag}"
 end
 
+def skipped_tags = $skipped_tags ||= Set.new
+
 def skip_tag(tag)
+  skipped_tags << tag
   " -t 'not #{tag}'"
 end
 
@@ -708,6 +717,8 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@webpurify') unless CDO.webpurify_key
   arguments += skip_tag('@pegasus_db_access') unless options.pegasus_db_access
   arguments += skip_tag('@dashboard_db_access') unless options.dashboard_db_access
+  arguments += skip_tag('@properties_encryption_key') if CDO.properties_encryption_key.blank?
+  arguments += skip_tag('@cloudfront_key') if CDO.cloudfront_key_pair_id.blank?
   arguments
 end
 
@@ -725,7 +736,7 @@ def cucumber_arguments_for_feature(options, test_run_string, max_reruns)
 
   # In CI we export additional logs in junit xml format so CI could in theory
   # provide pretty test reports with success/fail/timing data upon completion.
-  if ENV['CI']
+  if CI::Utils.running_on_ci?
     arguments += " --format junit --out $CI_TEST_REPORTS/cucumber/#{test_run_string}.xml"
   end
 
@@ -766,7 +777,7 @@ def run_feature(browser, feature, options)
   run_environment['DASHBOARD_TEST_DOMAIN'] = options.dashboard_domain if options.dashboard_domain
   run_environment['HOUROFCODE_TEST_DOMAIN'] = options.hourofcode_domain if options.hourofcode_domain
   run_environment['CSEDWEEK_TEST_DOMAIN'] = options.csedweek_domain if options.csedweek_domain
-  run_environment['TEST_LOCAL'] = options.local ? "true" : "false"
+  run_environment['TEST_LOCAL'] = (options.local || options.first_run_local) ? "true" : "false"
   run_environment['TEST_LOCAL_HEADLESS'] = options.local_headless ? "true" : "false"
   run_environment['MAXIMIZE_LOCAL'] = options.maximize ? "true" : "false"
   run_environment['MOBILE'] = browser['appium:mobile'] ? "true" : "false"
@@ -798,6 +809,10 @@ def run_feature(browser, feature, options)
       duration: test_duration.to_s
     }
   )
+
+  # After the first run, we no longer want to consider the `first_run_local`
+  # option when deciding whether a test should be run locally.
+  run_environment['TEST_LOCAL'] = options.local ? "true" : "false"
 
   # only retry cucumber/selenium errors, not eyes mismatches.
   while !cucumber_succeeded && (reruns < max_reruns)
@@ -885,7 +900,7 @@ def run_feature(browser, feature, options)
     end
   puts prefix_string("UI tests for #{test_run_string} #{result_string} (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info}#{eyes_info})", log_prefix)
 
-  if scenario_count == 0 && !ENV['CI']
+  if scenario_count == 0 && !CI::Utils.running_on_ci?
     skip_warning = "We didn't actually run any tests, did you mean to do this?\n".yellow
     skip_warning += <<~EOS
       Check the excluded @tags in the cucumber command line above and in the #{feature} file:

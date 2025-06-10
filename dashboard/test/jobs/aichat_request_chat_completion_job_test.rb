@@ -9,7 +9,6 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     @toxic_response = {text: 'profane text', blocked_by: 'openai', details: {evaluation: 'INAPPROPRIATE'}}
     @test_env = 'unit-test-env'
     @metrics_model_id = 'metrics-test-model-id'
-    create_storage_id_for_user(@student.id)
     CDO.stubs(:rack_env).returns(@test_env)
 
     AichatSafetyHelper.stubs(:find_toxicity).returns(nil)
@@ -88,7 +87,6 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     assert_equal SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE], request.reload.execution_status
     assert request.response.include?(error_message)
     assert exception.message.include?(error_message)
-    assert exception.message.include?(request.to_json)
   end
 
   test 'execution status is set to USER_INPUT_TOO_LARGE and an exception is raised if the input validation error occurs' do

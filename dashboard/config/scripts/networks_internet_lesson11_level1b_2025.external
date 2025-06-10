@@ -1,6 +1,8 @@
 name 'networks-internet-lesson11-level1b_2025'
-title 'FinTrust Banking Solutions '
-description 'description here'
+title 'FinTrust Banking Solutions'
+display_name 'FinTrust Banking Solutions'
+bubble_choice_description 'FinTrust Banking Solutions has faced a wave of social engineering attacks targeting customer service representatives and IT staff. '
+thumbnail_url 'https://images.code.org/551ae36acfdf05b7c02efd90a16e35c1-image-1740388449348.jpg'
 
 markdown <<MARKDOWN
 # FinTrust Banking Solutions  

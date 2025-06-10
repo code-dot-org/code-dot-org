@@ -7,7 +7,7 @@ wrong 'AI is programmed to intentionally favor certain groups over others.'
 right 'AI learns from patterns in training data, which may reflect societal biases.'
 wrong 'AI randomly assigns characteristics to different groups.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 6: Understanding Bias

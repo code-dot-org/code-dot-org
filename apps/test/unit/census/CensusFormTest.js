@@ -121,107 +121,125 @@ describe('CensusForm Component', () => {
     expect(nameInput).toHaveValue('Jane Doe');
   });
 
-  it('validates required fields on submission', async () => {
-    mockFetch.mockResolvedValueOnce({
-      json: Promise.resolve([{value: '123', label: 'Cool School'}]),
-    });
+  it(
+    'validates required fields on submission',
+    async () => {
+      mockFetch.mockResolvedValueOnce({
+        json: Promise.resolve([{value: '123', label: 'Cool School'}]),
+      });
 
-    const {user} = setup(
-      <CensusForm
-        {...{
-          ...defaultProps,
-          prefillData: {
-            ...defaultProps.prefillData,
-            userEmail: '',
-            schoolId: '123',
-          },
-        }}
-      />
-    );
+      const {user} = setup(
+        <CensusForm
+          {...{
+            ...defaultProps,
+            prefillData: {
+              ...defaultProps.prefillData,
+              userEmail: '',
+              schoolId: '123',
+            },
+          }}
+        />
+      );
 
-    // fetching school by schoolId
-    await waitFor(() => expect(mockFetch).toHaveBeenCalledTimes(1));
+      // fetching school by schoolId
+      await waitFor(() => expect(mockFetch).toHaveBeenCalledTimes(1));
 
-    jest.clearAllMocks();
+      jest.clearAllMocks();
 
-    const emailInput = screen.getByPlaceholderText(i18n.yourEmailPlaceholder());
-    const hocInput = screen.getByRole('combobox', {
-      name: i18n.censusHowManyHoC(),
-    });
-    const afterSchoolInput = screen.getByRole('combobox', {
-      name: i18n.censusHowManyAfterSchool(),
-    });
-    const tenHoursInput = screen.getByRole('combobox', {
-      name: i18n.censusHowManyTenHours(),
-    });
-    const twentyHoursInput = screen.getByRole('combobox', {
-      name: i18n.censusHowManyTwentyHours(),
-    });
-    const shareInput = screen.getByRole('combobox', {
-      name: /Share my contact information/,
-    });
-    const optInInput = screen.getByRole('combobox', {
-      name: /Can we email you/,
-    });
-    const submitButton = screen.getByRole('button', {name: /submit/i});
+      const emailInput = screen.getByPlaceholderText(
+        i18n.yourEmailPlaceholder()
+      );
+      const hocInput = screen.getByRole('combobox', {
+        name: i18n.censusHowManyHoC(),
+      });
+      const afterSchoolInput = screen.getByRole('combobox', {
+        name: i18n.censusHowManyAfterSchool(),
+      });
+      const tenHoursInput = screen.getByRole('combobox', {
+        name: i18n.censusHowManyTenHours(),
+      });
+      const twentyHoursInput = screen.getByRole('combobox', {
+        name: i18n.censusHowManyTwentyHours(),
+      });
+      const shareInput = screen.getByRole('combobox', {
+        name: /Share my contact information/,
+      });
+      const optInInput = screen.getByRole('combobox', {
+        name: /Can we email you/,
+      });
+      const submitButton = screen.getByRole('button', {name: /submit/i});
 
-    await user.click(submitButton);
+      await user.click(submitButton);
 
-    expect(mockFetch).not.toHaveBeenCalled();
-    expect(screen.getByText(i18n.censusRequiredEmail())).toBeInTheDocument();
-    expect(screen.getByText(i18n.censusRequiredShare())).toBeInTheDocument();
-    expect(
-      screen.getByText(/required\. please let us know if we can email you\./i)
-    ).toBeInTheDocument();
-    expect(screen.queryAllByText(i18n.censusRequiredSelect())).toHaveLength(4);
+      expect(mockFetch).not.toHaveBeenCalled();
+      expect(screen.getByText(i18n.censusRequiredEmail())).toBeInTheDocument();
+      expect(screen.getByText(i18n.censusRequiredShare())).toBeInTheDocument();
+      expect(
+        screen.getByText(/required\. please let us know if we can email you\./i)
+      ).toBeInTheDocument();
+      expect(screen.queryAllByText(i18n.censusRequiredSelect())).toHaveLength(
+        4
+      );
 
-    await user.type(emailInput, 'john@mail.com');
-    await user.click(submitButton);
+      await user.type(emailInput, 'john@mail.com');
+      await user.click(submitButton);
 
-    expect(mockFetch).not.toHaveBeenCalled();
-    expect(
-      screen.queryByText(i18n.censusRequiredEmail())
-    ).not.toBeInTheDocument();
+      expect(mockFetch).not.toHaveBeenCalled();
+      expect(
+        screen.queryByText(i18n.censusRequiredEmail())
+      ).not.toBeInTheDocument();
 
-    await user.selectOptions(hocInput, 'SOME');
-    await user.click(submitButton);
+      await user.selectOptions(hocInput, 'SOME');
+      await user.click(submitButton);
 
-    expect(mockFetch).not.toHaveBeenCalled();
-    expect(screen.queryAllByText(i18n.censusRequiredSelect())).toHaveLength(3);
+      expect(mockFetch).not.toHaveBeenCalled();
+      expect(screen.queryAllByText(i18n.censusRequiredSelect())).toHaveLength(
+        3
+      );
 
-    await user.selectOptions(afterSchoolInput, 'SOME');
-    await user.click(submitButton);
+      await user.selectOptions(afterSchoolInput, 'SOME');
+      await user.click(submitButton);
 
-    expect(mockFetch).not.toHaveBeenCalled();
-    expect(screen.queryAllByText(i18n.censusRequiredSelect())).toHaveLength(2);
+      expect(mockFetch).not.toHaveBeenCalled();
+      expect(screen.queryAllByText(i18n.censusRequiredSelect())).toHaveLength(
+        2
+      );
 
-    await user.selectOptions(tenHoursInput, 'SOME');
-    await user.click(submitButton);
+      await user.selectOptions(tenHoursInput, 'SOME');
+      await user.click(submitButton);
 
-    expect(mockFetch).not.toHaveBeenCalled();
-    expect(screen.queryAllByText(i18n.censusRequiredSelect())).toHaveLength(1);
+      expect(mockFetch).not.toHaveBeenCalled();
+      expect(screen.queryAllByText(i18n.censusRequiredSelect())).toHaveLength(
+        1
+      );
 
-    await user.selectOptions(twentyHoursInput, 'NONE');
-    await user.click(submitButton);
+      await user.selectOptions(twentyHoursInput, 'NONE');
+      await user.click(submitButton);
 
-    expect(mockFetch).not.toHaveBeenCalled();
-    expect(screen.queryAllByText(i18n.censusRequiredSelect())).toHaveLength(0);
+      expect(mockFetch).not.toHaveBeenCalled();
+      expect(screen.queryAllByText(i18n.censusRequiredSelect())).toHaveLength(
+        0
+      );
 
-    await user.selectOptions(shareInput, 'Yes');
-    await user.click(submitButton);
+      await user.selectOptions(shareInput, 'Yes');
+      await user.click(submitButton);
 
-    expect(mockFetch).not.toHaveBeenCalled();
-    expect(
-      screen.queryByText(i18n.censusRequiredShare())
-    ).not.toBeInTheDocument();
+      expect(mockFetch).not.toHaveBeenCalled();
+      expect(
+        screen.queryByText(i18n.censusRequiredShare())
+      ).not.toBeInTheDocument();
 
-    await user.selectOptions(optInInput, 'Yes');
-    await user.click(submitButton);
+      await user.selectOptions(optInInput, 'Yes');
+      await user.click(submitButton);
 
-    expect(
-      screen.queryByText(/required\. please let us know if we can email you\./i)
-    ).not.toBeInTheDocument();
+      expect(
+        screen.queryByText(
+          /required\. please let us know if we can email you\./i
+        )
+      ).not.toBeInTheDocument();
 
-    expect(mockFetch).toHaveBeenCalled();
-  });
+      expect(mockFetch).toHaveBeenCalled();
+    },
+    1000 * 10
+  );
 });

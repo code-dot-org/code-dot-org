@@ -3,6 +3,9 @@
   "script_names": [
     "aws-demo"
   ],
+  "original_script_names": [
+    "aws-demo"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

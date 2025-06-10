@@ -3,6 +3,9 @@
   "script_names": [
     "pilot-coursef-maker-2024"
   ],
+  "original_script_names": [
+    "pilot-coursef-maker-2024"
+  ],
   "published_state": "pilot",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

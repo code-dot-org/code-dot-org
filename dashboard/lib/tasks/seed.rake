@@ -37,6 +37,10 @@ namespace :seed do
   CURRICULUM_CONTENT_DIR = ENV['CURRICULUM_CONTENT_DIR'] || '.'
   CURRICULUM_CONTENT_PATHNAME = Pathname(CURRICULUM_CONTENT_DIR)
 
+  timed_task_with_logging skills: :environment do
+    Skill.setup
+  end
+
   timed_task_with_logging videos: :environment do
     Video.setup(CURRICULUM_CONTENT_DIR)
   end
@@ -72,13 +76,16 @@ namespace :seed do
     ui-test-script-in-course-2019
     ui-test-script-2-in-course-2017
     ui-test-script-2-in-course-2019
+    ui-test-shared-unit
     ui-test-versioned-script-2017
     ui-test-versioned-script-2019
     ui-test-csa-family-script
     ui-test-teacher-pl-course
+    ui-test-self-paced-pl
     ui-test-facilitator-pl-course
     ui-test-single-unit-2025
     ui-test-single-unit-2026
+    ui-test-unnumbered-lessons
   ).map {|script| "test/ui/config/scripts_json/#{script}.script_json"}.freeze
   UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + %w(
     20-hour
@@ -148,6 +155,7 @@ namespace :seed do
     step
     oceans
     sports
+    jigsaw
   ).map {|script| "config/scripts_json/#{script}.script_json"}.freeze
 
   # To improve adhoc start time, we only seed the most recent year of our common curriculum
@@ -250,10 +258,12 @@ namespace :seed do
     :environment,
     :check_migrations,
     :games,
+    :skills,
     :deprecated_blockly_levels,
     :child_dsls,
     :custom_levels,
     :parent_dsls,
+    :levels_skills,
     :code_docs,
     :blocks,
     :standards,
@@ -283,8 +293,12 @@ namespace :seed do
     update_scripts(incremental: true)
   end
 
-  timed_task_with_logging scripts_ui_tests: SCRIPTS_DEPENDENCIES do
-    update_scripts(script_files: UI_TEST_SCRIPTS)
+  # Moved course offerings ui test seed after regular course offerings are seeded
+  # because the regular course offerings seed task removes any course_offerings records
+  # left in the database that do not have a corresponding json file in config/course_offerings.
+  # The ui test course offerings must be seeded after so they are not accidentally removed.
+  timed_task_with_logging scripts_ui_tests: SCRIPTS_DEPENDENCIES + [:course_offerings_ui_tests] do
+    update_scripts(script_files: UI_TEST_SCRIPTS, incremental: true)
   end
 
   # Seeds only ui test scripts, skipping any dependencies. This is useful for
@@ -311,6 +325,7 @@ namespace :seed do
        csp-2017
        csp-2019
        20-hour
+       algebra
        allthemigratedthings
        alltheselfpacedplthings
        allthettsthings
@@ -331,6 +346,7 @@ namespace :seed do
        coursec-2019
        coursee-2019
        coursea-2020
+       csp-ap
        interactive-games-animations-2023
        interactive-games-animations-2024
        customizing-llms-2024
@@ -348,18 +364,23 @@ namespace :seed do
        starwarsblocks
        step
        oceans
+       jigsaw
        sports).each do |course_name|
       UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end
-    %w(ui-test-course-2017
-       ui-test-course-2019
-       ui-test-single-unit-course-2025
-       ui-test-single-unit-course-2026
-       ui-test-csa-family-script
-       ui-test-facilitator-pl-course
-       ui-test-teacher-pl-course
-       ui-test-versioned-script-2017
-       ui-test-versioned-script-2019).each do |course_name|
+    %w(
+      ui-test-course-2017
+      ui-test-course-2019
+      ui-test-single-unit-course-2025
+      ui-test-single-unit-course-2026
+      ui-test-csa-family-script
+      ui-test-facilitator-pl-course
+      ui-test-teacher-pl-course
+      ui-test-self-paced-pl
+      ui-test-versioned-script-2017
+      ui-test-versioned-script-2019
+      ui-test-unnumbered-lessons
+    ).each do |course_name|
       UnitGroup.load_from_path("test/ui/config/courses/#{course_name}.course")
     end
   end
@@ -451,6 +472,19 @@ namespace :seed do
     LevelLoader.load_custom_levels(level_name, CURRICULUM_CONTENT_DIR)
   end
 
+  timed_task_with_logging levels_skills: :environment do
+    levels_with_skills = Level.where('properties like ?', '%"skill_keys":%').all
+    levels_with_skills.each do |level|
+      JSON.parse(level.skill_keys).each do |skill_key|
+        skill_id = Skill.find_by_key(skill_key).id
+        LevelsSkill.find_or_create_by!(
+          skill_id: skill_id,
+          level_id: level.id
+        )
+      end
+    end
+  end
+
   timed_task_with_logging deprecated_blockly_levels: :environment do
     Services::DeprecatedLevelLoader.load_blockly_levels(CURRICULUM_CONTENT_DIR)
   end
@@ -469,7 +503,16 @@ namespace :seed do
   end
 
   timed_task_with_logging course_offerings_ui_tests: :environment do
-    %w(ui-test-course ui-test-csa-family-script ui-test-teacher-pl-course ui-test-facilitator-pl-course ui-test-single-unit-course ui-test-versioned-course).each do |course_offering_name|
+    %w(
+      ui-test-course
+      ui-test-csa-family-script
+      ui-test-teacher-pl-course
+      ui-test-self-paced-pl
+      ui-test-facilitator-pl-course
+      ui-test-single-unit-course
+      ui-test-versioned-course
+      ui-test-unnumbered-lessons
+    ).each do |course_offering_name|
       CourseOffering.seed_record("test/ui/config/course_offerings/#{course_offering_name}.json")
     end
   end
@@ -597,35 +640,6 @@ namespace :seed do
     end
   end
 
-  timed_task_with_logging :cached_ui_test do
-    HASH_FILE = 'db/ui_test_data.hash'
-
-    # patterns are relative to dashboard directory
-    watched_files = FileList[
-      'app/dsl/**/*',
-      'config/**/*',
-      'db/**/*',
-      'lib/tasks/**/*',
-      'test/ui/config/**/*',
-    ].exclude('db/ui_test_data.*')
-    current_hash = HashUtils.file_contents_hash(watched_files)
-
-    if File.exist?(HASH_FILE)
-      dump_hash = File.read(HASH_FILE)
-
-      if current_hash == dump_hash
-        puts 'Cache hit! Loading from db dump'
-        sh('mysql -u root < db/ui_test_data.sql')
-        next
-      end
-    end
-
-    puts 'Cache mismatch, running full ui test seed'
-    RakeUtils.rake_stream_output 'seed:ui_test'
-    File.write(HASH_FILE, current_hash)
-    sh('mysqldump -u root -B dashboard_test > db/ui_test_data.sql')
-  end
-
   timed_task_with_logging :import_pegasus_data do
     db = DASHBOARD_DB
     table_prefix = "google_sheets_shared_"
@@ -634,7 +648,7 @@ namespace :seed do
   end
 
   FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :foorms, :import_pegasus_data, :datablock_storage].freeze
-  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_ui_tests, :scripts_ui_tests, :courses_ui_tests, :reseed_scripts_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :import_pegasus_data, :datablock_storage].freeze
+  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :reseed_scripts_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :import_pegasus_data, :datablock_storage].freeze
   ADHOC_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :import_pegasus_data, :datablock_storage].freeze
   DEFAULT_SEED_TASKS = if rack_env == :test then UI_TEST_SEED_TASKS elsif rack_env == :adhoc then ADHOC_SEED_TASKS else FULL_SEED_TASKS end
 

@@ -192,57 +192,6 @@ CarouselWithoutNavArrows.play = async ({
   }
 };
 
-export const CarouselWithTouchMove = SingleTemplate.bind({});
-CarouselWithTouchMove.args = {
-  allowTouchMove: true,
-  slides: Array.from({length: 6}, (_, index) => ({
-    id: `default-slide-${index + 1}`,
-    slide: createBasicSlide(index + 1),
-  })),
-};
-CarouselWithTouchMove.parameters = {
-  docs: {
-    description: {
-      story:
-        'This carousel allows slides to be moved by dragging/touching using the `allowTouchMove` prop. This is disabled by default and should not be used with Video carousels since it impedes the video player controls.',
-    },
-  },
-};
-CarouselWithTouchMove.play = async ({
-  canvasElement,
-}: {
-  canvasElement: HTMLElement;
-}) => {
-  const canvas = within(canvasElement);
-  const navArrowPrev = canvas.queryByLabelText('Previous slide');
-  const navArrowNext = canvas.queryByLabelText('Next slide');
-  const paginationDots = ['Go to slide 1', 'Go to slide 2', 'Go to slide 3'];
-  const slides = [
-    'This is slide 1',
-    'This is slide 2',
-    'This is slide 3',
-    'This is slide 4',
-    'This is slide 5',
-    'This is slide 6',
-  ];
-
-  // check that the navigation arrows are showing
-  await expect(navArrowPrev).toBeInTheDocument();
-  await expect(navArrowNext).toBeInTheDocument();
-
-  // check that the pagination dots are showing
-  for (const dotLabel of paginationDots) {
-    const dot = await canvas.findByLabelText(dotLabel);
-    await expect(dot).toBeInTheDocument();
-  }
-
-  // check that slides are in the carousel
-  for (const slideText of slides) {
-    const heading = await canvas.findByText(slideText);
-    await expect(heading).toBeInTheDocument();
-  }
-};
-
 export const CarouselWithCustomSlidesPerView = SingleTemplate.bind({});
 CarouselWithCustomSlidesPerView.args = {
   slidesPerView: 3,
@@ -315,7 +264,7 @@ ActionBlockCarousel.args = {
         <ActionBlock
           title="Action Block 1"
           description={DESCRIPTION}
-          image={image1}
+          image={{src: image1}}
           overline={'Overline 1'}
           primaryButton={{
             text: 'Primary Button',
@@ -330,7 +279,7 @@ ActionBlockCarousel.args = {
         <ActionBlock
           title="Action Block 2"
           description={DESCRIPTION_MED}
-          image={image2}
+          image={{src: image2}}
           overline={'Overline 2'}
           primaryButton={{
             text: 'Primary Button',
@@ -345,7 +294,7 @@ ActionBlockCarousel.args = {
         <ActionBlock
           title="Action Block 3"
           description={DESCRIPTION}
-          image={image3}
+          image={{src: image3}}
           overline={'Overline 3'}
           primaryButton={{
             text: 'Primary Button',
@@ -360,7 +309,7 @@ ActionBlockCarousel.args = {
         <ActionBlock
           title="Action Block 4"
           description={DESCRIPTION_MED}
-          image={image4}
+          image={{src: image4}}
           overline={'Overline 4'}
           primaryButton={{
             text: 'Primary Button',
@@ -375,7 +324,7 @@ ActionBlockCarousel.args = {
         <ActionBlock
           title="Action Block 5"
           description={DESCRIPTION}
-          image={image5}
+          image={{src: image5}}
           overline={'Overline 5'}
           primaryButton={{
             text: 'Primary Button',
@@ -390,7 +339,7 @@ ActionBlockCarousel.args = {
         <ActionBlock
           title="Action Block 6"
           description={DESCRIPTION_MED}
-          image={image6}
+          image={{src: image6}}
           overline={'Overline 6'}
           primaryButton={{
             text: 'Primary Button',

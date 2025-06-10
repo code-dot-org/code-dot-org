@@ -238,7 +238,7 @@ where
     <%= level_id && "and cs.level_id = #{level_id}" %>
     <%= unit_name && "and cs.script_name = '#{unit_name}'" %>
 $$)
-to 's3://cdo-data-sharing-internal/unloaded-unit-progress/<%=output_dir%>/<%=unit_name%>_'
+to 's3://cdo-data-sharing-internal/unloaded-unit-progress/<%=output_dir%>/progress/<%=unit_name%>_'
 FORMAT JSON
 EXTENSION 'jsonl'
 iam_role 'arn:aws:iam::475661607190:role/redshift-s3';

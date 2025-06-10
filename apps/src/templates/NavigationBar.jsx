@@ -1,33 +1,49 @@
 import {Link} from '@dsco_/link';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import colorUtil from '@cdo/apps/util/color';
+
+import {embedBlocklyBlock} from './utils/embeddedBlocklyRenderUtils';
 
 export const NavigationItem = ({
   text,
   href,
   indentLevel = 0,
   isActive = false,
-}) => (
-  <div
-    style={{paddingLeft: `${indentLevel * 12}px`}}
-    className={classNames({
-      'nav-link': true,
-      active: isActive,
-    })}
-  >
-    <Link className="link" href={href} weight="medium">
-      {text}
-    </Link>
-  </div>
-);
+  blockName,
+}) => {
+  const blockRef = React.createRef();
+
+  useEffect(() => {
+    if (blockName && blockRef.current) {
+      embedBlocklyBlock(blockRef.current, blockName);
+    }
+  }, [blockName, blockRef]);
+
+  return (
+    <div
+      style={{paddingLeft: `${indentLevel * 12}px`}}
+      className={classNames({
+        'nav-link': true,
+        active: isActive,
+      })}
+    >
+      <Link className="link" href={href} weight="medium">
+        {blockName ? <div ref={blockRef} /> : text}
+      </Link>
+    </div>
+  );
+};
+
 NavigationItem.propTypes = {
   text: PropTypes.node.isRequired,
   href: PropTypes.string.isRequired,
   indentLevel: PropTypes.number,
   isActive: PropTypes.bool,
+  blockName: PropTypes.string,
+  programmingEnvironmentName: PropTypes.string,
 };
 
 export const NavigationCategory = ({

@@ -7,10 +7,17 @@
     "self-paced-pl-ai-101-mod4",
     "self-paced-pl-ai-101-mod5"
   ],
+  "original_script_names": [
+    "self-paced-pl-ai-101-mod1",
+    "self-paced-pl-ai-101-mod2",
+    "self-paced-pl-ai-101-mod3",
+    "self-paced-pl-ai-101-mod4",
+    "self-paced-pl-ai-101-mod5"
+  ],
   "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
-  "instructor_audience": "universal_instructor",
+  "instructor_audience": "facilitator",
   "properties": {
     "family_name": "self-paced-pl-ai-101",
     "version_year": "2024"

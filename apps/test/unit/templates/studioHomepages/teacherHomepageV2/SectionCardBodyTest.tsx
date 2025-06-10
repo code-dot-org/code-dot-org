@@ -14,7 +14,7 @@ import {Store} from 'redux';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
-import {SectionCardBody} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionCardBody';
+import SectionCardBody from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionCardBody';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {
   TEACHER_NAVIGATION_SECTIONS_URL,
@@ -34,6 +34,7 @@ describe('SectionCardBody', () => {
     hidden: false,
     courseVersionName: 'csd-2024',
     unitName: null,
+    unitPosition: null,
     aiTutorEnabled: false,
     atRiskAgeGatedDate: new Date(),
     atRiskAgeGatedUsState: 'xyz',
@@ -71,6 +72,7 @@ describe('SectionCardBody', () => {
     hidden: false,
     courseVersionName: '',
     unitName: null,
+    unitPosition: null,
     aiTutorEnabled: false,
     atRiskAgeGatedDate: new Date(),
     atRiskAgeGatedUsState: 'xyz',
@@ -108,6 +110,7 @@ describe('SectionCardBody', () => {
     hidden: false,
     courseVersionName: 'csd-2024',
     unitName: null,
+    unitPosition: null,
     aiTutorEnabled: false,
     atRiskAgeGatedDate: new Date(),
     atRiskAgeGatedUsState: 'xyz',

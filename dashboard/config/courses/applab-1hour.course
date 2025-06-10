@@ -3,6 +3,9 @@
   "script_names": [
     "applab-1hour"
   ],
+  "original_script_names": [
+    "applab-1hour"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

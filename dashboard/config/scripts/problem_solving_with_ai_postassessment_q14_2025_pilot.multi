@@ -7,7 +7,7 @@ wrong 'To ensure AI systems remain objective.'
 right 'To maintain control over how their work is used and avoid exploitation.'
 wrong 'To speed up the AI training process.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 11: Ownership, Ethics, and Creativity

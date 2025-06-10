@@ -40,6 +40,10 @@ const context: CodebridgeContextType = {
   closeFile: jest.fn(),
 };
 
+beforeAll(() => {
+  window.HTMLElement.prototype.scrollIntoView = () => {};
+});
+
 describe('FileTabs', () => {
   function renderDefault() {
     render(

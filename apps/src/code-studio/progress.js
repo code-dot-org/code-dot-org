@@ -95,7 +95,13 @@ progress.generateLessonProgress = function (
 ) {
   const store = getStore();
 
-  const {name, displayName, disablePostMilestone, age_13_required} = scriptData;
+  const {
+    name,
+    displayName,
+    disablePostMilestone,
+    age_13_required,
+    hasUnnumberedLessons,
+  } = scriptData;
 
   initializeStoreWithProgress(
     store,
@@ -107,6 +113,7 @@ progress.generateLessonProgress = function (
       disablePostMilestone,
       age_13_required,
       id: lessonData.script_id,
+      hasUnnumberedLessons,
     },
     currentLevelId,
     false,
@@ -277,7 +284,13 @@ progress.initViewAsWithoutStore = function (
 
 progress.retrieveProgress = function (scriptName, scriptData, currentLevelId) {
   const store = getStore();
-  return $.getJSON(`/api/script_structure/${scriptName}`, scriptData => {
+  const courseName = scriptData?.course_name;
+  const unitPosition = scriptData?.unit_position;
+  let fetchURL = `/api/script_structure/${scriptName}`;
+  if (courseName && unitPosition) {
+    fetchURL = `/api/script_structure/courses/${courseName}/units/${unitPosition}`;
+  }
+  return $.getJSON(fetchURL, scriptData => {
     initializeStoreWithProgress(store, scriptData, currentLevelId, true);
     queryUserProgress(store, scriptData, currentLevelId);
   });
@@ -374,6 +387,7 @@ function initializeStoreWithProgress(
       unitTitle: scriptData.title,
       unitDescription: scriptData.description,
       unitStudentDescription: scriptData.studentDescription,
+      unitHasUnnumberedLessons: scriptData.hasUnnumberedLessons || false,
       courseVersionId: scriptData.courseVersionId,
       courseId: scriptData.course_id,
       isFullProgress: isFullProgress,

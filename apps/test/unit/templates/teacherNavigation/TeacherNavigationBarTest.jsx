@@ -30,6 +30,16 @@ import {
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
+jest.mock('@cdo/apps/util/HttpClient', () => ({
+  put: jest.fn(() => Promise.resolve({})),
+  post: jest.fn(() =>
+    Promise.resolve({
+      ok: true,
+      json: () => Promise.resolve({}),
+    })
+  ),
+}));
+
 const LocationElement = () => {
   const location = useLocation();
   return <div>{location.pathname} path</div>;
@@ -51,6 +61,7 @@ describe('TeacherNavigationBar', () => {
       hidden: false,
       courseVersionName: 'csd-2024',
       unitName: null,
+      participantType: 'student',
     },
     {
       id: 12,
@@ -58,6 +69,7 @@ describe('TeacherNavigationBar', () => {
       hidden: false,
       courseVersionName: 'csd-2023',
       unitName: null,
+      participantType: 'student',
     },
     {
       id: 13,
@@ -65,6 +77,8 @@ describe('TeacherNavigationBar', () => {
       hidden: false,
       courseVersionName: 'csd-2022',
       unitName: 'csd3-2022',
+      unitPosition: 1,
+      participantType: 'student',
     },
     {
       id: 14,
@@ -72,6 +86,8 @@ describe('TeacherNavigationBar', () => {
       hidden: false,
       courseVersionName: 'csd-2022',
       unitName: 'csd6-2022',
+      unitPosition: 6,
+      participantType: 'student',
     },
     {
       id: 15,
@@ -79,6 +95,7 @@ describe('TeacherNavigationBar', () => {
       hidden: true,
       courseVersionName: 'csd-2022',
       unitName: null,
+      participantType: 'student',
     },
     {
       id: 16,
@@ -86,6 +103,8 @@ describe('TeacherNavigationBar', () => {
       hidden: false,
       courseVersionName: 'csa-2022',
       unitName: 'csa1-2022',
+      unitPosition: 1,
+      participantType: 'student',
     },
   ];
   const serverSections = sections.map(serverSectionFromSection);
@@ -104,7 +123,7 @@ describe('TeacherNavigationBar', () => {
       teacherSections,
       currentUser,
     });
-    store.dispatch(setSections(serverSections));
+    store.dispatch(setSections(serverSections, true, [12, 13, 14, 11]));
     store.dispatch(
       setInitialData({
         id: 1,
@@ -192,10 +211,12 @@ describe('TeacherNavigationBar', () => {
 
   beforeEach(() => {
     window.HTMLElement.prototype.scrollIntoView = () => {};
+    localStorage.clear();
   });
 
   afterEach(() => {
     jest.restoreAllMocks();
+    localStorage.clear();
   });
 
   test('renders correctly with visible sections', async () => {
@@ -203,8 +224,11 @@ describe('TeacherNavigationBar', () => {
 
     await screen.findByText(i18n.classSections());
     screen.getByRole('combobox');
-    screen.getByText('Period 1');
-    screen.getByText('Period 2');
+    const p1 = await screen.findByText('Period 1');
+    const p2 = screen.getByText('Period 2');
+    expect(p1.compareDocumentPosition(p2)).toBe(
+      Node.DOCUMENT_POSITION_PRECEDING
+    );
     screen.getByText('Period 3');
     expect(screen.queryByText('hidden')).toBeNull();
     expect(loadSelectedSectionSpy).toHaveBeenCalledWith('11');
@@ -320,6 +344,7 @@ describe('TeacherNavigationBar', () => {
 
   test('renders AiDiffFloatingActionButton component', async () => {
     // mock experiment is enabled
+    localStorage.setItem('AiDiffHasOpenedKey', 'true');
     experiments.isEnabled = jest.fn(() => true);
     renderDefault(13, `/teacher_dashboard/sections/13/unit/csd3-2022`);
 

@@ -2,8 +2,8 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import classNames from 'classnames';
 import React from 'react';
 
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 import moduleStyles from '@codebridge/FileBrowser/styles/filebrowser.module.scss';
+import dropdownStyles from '@codebridge/styles/dropdown.module.scss';
 
 /*
   This component provides a default layout & styling for an item in the PopUpButton.
@@ -29,10 +29,20 @@ export const PopUpButtonOption = ({
   return (
     <div
       onClick={clickHandler}
+      onKeyDown={event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          if (clickHandler) {
+            clickHandler();
+          }
+        }
+      }}
       className={classNames(
-        darkModeStyles.dropdownItem,
+        dropdownStyles.dropdownItem,
         moduleStyles.dropdownItem
       )}
+      role="button"
+      tabIndex={0}
       id={id}
     >
       <FontAwesomeV6Icon iconName={iconName} iconStyle="solid" />

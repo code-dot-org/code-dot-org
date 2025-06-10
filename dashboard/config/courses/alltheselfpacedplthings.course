@@ -3,6 +3,9 @@
   "script_names": [
     "alltheselfpacedplthings"
   ],
+  "original_script_names": [
+    "alltheselfpacedplthings"
+  ],
   "published_state": "beta",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",

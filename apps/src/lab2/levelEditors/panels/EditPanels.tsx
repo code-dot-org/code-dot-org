@@ -1,4 +1,5 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
@@ -57,9 +58,22 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
     [panels]
   );
 
-  const addPanel = useCallback(() => {
-    setPanels([...panels, {text: '', imageUrl: '', key: createKey(levelName)}]);
-  }, [panels, levelName]);
+  const createNewPanel = useCallback(
+    () => ({
+      text: '',
+      imageUrl: '',
+      key: createKey(levelName),
+    }),
+    [levelName]
+  );
+
+  const prependPanel = useCallback(() => {
+    setPanels([createNewPanel(), ...panels]);
+  }, [panels, createNewPanel]);
+
+  const appendPanel = useCallback(() => {
+    setPanels([...panels, createNewPanel()]);
+  }, [panels, createNewPanel]);
 
   const movePanel = useCallback(
     (key: string, direction: 'up' | 'down') => {
@@ -120,18 +134,30 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
       <div className={moduleStyles.panelsContainer}>
         <Toast message={toastMessage} index={toastIndex} />
         <div className={moduleStyles.fullSizeContainer}>
-          <PanelsView
-            panels={panels}
-            background={'light'}
-            onContinue={onContinue}
-            targetWidth={PANEL_WIDTH}
-            targetHeight={PANEL_HEIGHT}
-            offerBrowserTts={false}
-            resetOnChange={false}
-            levelId={null}
-          />
+          <ThemeProvider>
+            <PanelsView
+              panels={panels}
+              onContinue={onContinue}
+              targetWidth={PANEL_WIDTH}
+              targetHeight={PANEL_HEIGHT}
+              offerBrowserTts={false}
+              resetOnChange={false}
+              levelId={null}
+            />
+          </ThemeProvider>
         </div>
       </div>
+      {panels.length > 0 && (
+        <div className={moduleStyles.addButtonContainer}>
+          <Button
+            type="button"
+            onClick={prependPanel}
+            text="Add Panel"
+            color="gray"
+            icon="plus"
+          />
+        </div>
+      )}
       <div className={moduleStyles.panelEditors}>
         {panels.map((panel, index) => (
           <EditPanel
@@ -148,7 +174,7 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
       <div className={moduleStyles.addButtonContainer}>
         <Button
           type="button"
-          onClick={addPanel}
+          onClick={appendPanel}
           text="Add Panel"
           color="gray"
           icon="plus"

@@ -105,6 +105,35 @@ export const SectionWithBackgroundPattern: Story = {
   },
 };
 
+export const SectionWithBottomDivider: Story = {
+  args: {
+    divider: 'primary',
+    padding: 'l',
+    children: (
+      <>
+        <Heading2>This is a section with a bottom divider</Heading2>
+        <BodyOneText>I'm just a sentence.</BodyOneText>
+      </>
+    ),
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `The \`divider\` prop can be set if you want to add a divider to the bottom of the section. It will remove the bottom padding of the section and add a divider instead.`,
+      },
+    },
+  },
+  play: async ({canvasElement}: {canvasElement: HTMLElement}) => {
+    const canvas = within(canvasElement);
+    const heading = canvas.getByText('This is a section with a bottom divider');
+    const section = heading.closest('section');
+    const divider = section?.querySelector('hr');
+
+    // check if divider is showing
+    expect(divider).toBeInTheDocument();
+  },
+};
+
 export const MultipleSections = MultipleTemplate.bind({});
 MultipleSections.args = {
   components: [

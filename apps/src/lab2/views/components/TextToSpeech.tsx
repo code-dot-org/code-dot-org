@@ -12,6 +12,7 @@ import moduleStyles from './TextToSpeech.module.scss';
 
 interface TextToSpeechProps {
   text: string;
+  higherPosition?: boolean;
 }
 
 const usePause = queryParams('tts-play-pause') === 'true';
@@ -28,7 +29,10 @@ const ttsButtonEnabled =
 /**
  * TextToSpeech play button.
  */
-const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({text}) => {
+const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({
+  text,
+  higherPosition,
+}) => {
   const {isTtsAvailable, speak, cancel, pause, resume} =
     useBrowserTextToSpeech();
   const [isPlaying, setIsPlaying] = useState(false);
@@ -86,7 +90,8 @@ const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({text}) => {
     <button
       className={classNames(
         moduleStyles.playButton,
-        isPlaying && moduleStyles.playButtonPlaying
+        isPlaying && moduleStyles.playButtonPlaying,
+        higherPosition && moduleStyles.playButtonHigherPosition
       )}
       onClick={playText}
       onKeyDown={handleKeyDown}

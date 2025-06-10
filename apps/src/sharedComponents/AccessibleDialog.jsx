@@ -21,6 +21,7 @@ function AccessibleDialog({
   closeOnClickBackdrop = false,
   onDeactivate = onClose,
   noMC = false, // exclude MineCraft button styles
+  theme,
 }) {
   // If these styles are provided by the given stylesheet, use them
   const modalStyle = styles?.modal || defaultStyle.modal;
@@ -33,7 +34,7 @@ function AccessibleDialog({
   const xIconOnClick = onDismiss ? onDismiss : onClose;
 
   return (
-    <div>
+    <div data-theme={theme}>
       <div className={backdropStyle} />
       <CloseOnEscape handleClose={onClose}>
         <FocusTrap
@@ -77,6 +78,7 @@ AccessibleDialog.propTypes = {
   closeOnClickBackdrop: PropTypes.bool,
   onDeactivate: PropTypes.func,
   noMC: PropTypes.bool,
+  theme: PropTypes.string,
 };
 
 export default AccessibleDialog;

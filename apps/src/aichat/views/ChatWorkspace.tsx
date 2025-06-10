@@ -7,7 +7,11 @@ import {useSelector} from 'react-redux';
 import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModal';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+import {
+  isLevelbuilderEnvironment,
+  tryGetLocalStorage,
+  trySetLocalStorage,
+} from '@cdo/apps/utils';
 
 import {ModalTypes} from '../constants';
 import aichatI18n from '../locale';
@@ -98,6 +102,11 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   );
 
   useEffect(() => {
+    // Skip showing the modal on levelbuilder
+    if (isLevelbuilderEnvironment()) {
+      return;
+    }
+
     const teacherSawAichatOnboardingModal = tryGetLocalStorage(
       'teacherSawAichatOnboarding',
       'no'

@@ -12,10 +12,12 @@ export function displayDifferentiationChat() {
     'ai-differentiation-fab-mount-point'
   );
 
+  const context = {type: AiDiffContext.GENERAL};
+
   if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
     ReactDOM.render(
       <Provider store={getStore()}>
-        <AiDiffFloatingActionButton context={AiDiffContext.GENERAL} />
+        <AiDiffFloatingActionButton context={context} />
       </Provider>,
       aiDiffFabMountPoint
     );

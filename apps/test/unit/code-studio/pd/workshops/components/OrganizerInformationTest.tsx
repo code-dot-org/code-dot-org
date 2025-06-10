@@ -1,0 +1,63 @@
+import {render, screen} from '@testing-library/react';
+import '@testing-library/jest-dom';
+import React from 'react';
+
+import OrganizerInformation from '@cdo/apps/code-studio/pd/workshops/components/OrganizerInformation';
+
+describe('OrganizerInformation', () => {
+  const organizer = {
+    name: 'WS Admin',
+    email: 'ws-admin@gmail.com',
+  };
+
+  const setup = (props = {}) =>
+    render(
+      <OrganizerInformation
+        organizer={organizer}
+        regional_partner_name="The Best Regional Partner"
+        {...props}
+      />
+    );
+
+  it('renders heading', () => {
+    setup();
+    expect(
+      screen.getByRole('heading', {name: /organizer information/i})
+    ).toBeInTheDocument();
+  });
+
+  it('renders organizer name', () => {
+    setup();
+    expect(screen.getByText(/ws admin/i)).toBeInTheDocument();
+  });
+
+  it('renders organizer email as mailto link', () => {
+    setup();
+    const emailLink = screen.getByRole('link', {
+      name: organizer.email,
+    });
+    expect(emailLink).toHaveAttribute('href', `mailto:${organizer.email}`);
+  });
+
+  it('renders regional partner name', () => {
+    setup();
+    expect(screen.getByText(/The Best Regional Partner/i)).toBeInTheDocument();
+  });
+
+  it('renders the contact regional partner link button', () => {
+    setup();
+    const button = screen.getByRole('link', {
+      name: /contact regional partner/i,
+    });
+    expect(button).toBeInTheDocument();
+    expect(button).toHaveAttribute(
+      'href',
+      '/professional-learning/contact-regional-partner'
+    );
+  });
+
+  it('does not render regional partner name if not provided', () => {
+    setup({regional_partner_name: undefined});
+    expect(screen.queryByText(/regional partner:/i)).not.toBeInTheDocument();
+  });
+});

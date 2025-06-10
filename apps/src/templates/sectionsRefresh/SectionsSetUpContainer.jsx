@@ -17,6 +17,7 @@ import InfoHelpTip from '@cdo/apps/sharedComponents/InfoHelpTip';
 import Notification, {
   NotificationType,
 } from '@cdo/apps/sharedComponents/Notification';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
 import {navigateToHref} from '@cdo/apps/utils';
@@ -66,10 +67,21 @@ const useSections = section => {
         return section;
       }
     });
+
     setSections(newSections);
   };
 
-  return [sections, updateSection];
+  const batchUpdateSection = (sectionIdx, updateList) => {
+    const newSections = sections.map((section, idx) => {
+      if (idx === sectionIdx) {
+        return {...section, ...updateList};
+      }
+    });
+
+    setSections(newSections);
+  };
+
+  return [sections, updateSection, batchUpdateSection];
 };
 
 export default function SectionsSetUpContainer({
@@ -79,10 +91,18 @@ export default function SectionsSetUpContainer({
   userCountry,
   defaultRedirectUrl,
   setIsEditInProgress = value => {},
+  isLoading = false,
 }) {
-  const [sections, updateSection] = useSections(sectionToBeEdited);
+  const [sections, updateSection, batchUpdateSection] =
+    useSections(sectionToBeEdited);
   const updateSectionAndSetEditInProgress = (sectionIdx, keyToUpdate, val) => {
     updateSection(sectionIdx, keyToUpdate, val);
+
+    setIsEditInProgress(true);
+  };
+
+  const batchUpdateSectionAndSetEditInProgress = (sectionIdx, updateList) => {
+    batchUpdateSection(sectionIdx, updateList);
     setIsEditInProgress(true);
   };
   const [isCoteacherOpen, setIsCoteacherOpen] = useState(false);
@@ -433,69 +453,84 @@ export default function SectionsSetUpContainer({
         updateSection={(key, val) =>
           updateSectionAndSetEditInProgress(0, key, val)
         }
+        batchUpdateSection={updateList =>
+          batchUpdateSectionAndSetEditInProgress(0, updateList)
+        }
         isNewSection={isNewSection}
+        isLoading={isLoading}
       />
 
-      {/* Allow the curriculum quick assign region to be configured per-region */}
-      <GlobalEditionWrapper
-        component={CurriculumQuickAssign}
-        componentId="CurriculumQuickAssign"
-        props={{
-          id: 'uitest-curriculum-quick-assign',
-          isNewSection: isNewSection,
-          updateSection: (key, val) => updateSection(0, key, val),
-          setIsEditInProgress: setIsEditInProgress,
-          sectionCourse: sections[0].course || consolidatedCourseData(),
-          initialParticipantType: sections[0].participantType,
-        }}
-      />
-
-      <div
-        className={classnames(
-          moduleStyles.containerWithMarginTop,
-          moduleStyles.withBorderTop
-        )}
-      >
-        {renderCoteacherSection()}
-        {renderAdvancedSettings()}
-      </div>
-      <div
-        className={classnames(
-          moduleStyles.splitButtonsContainer,
-          moduleStyles.containerWithMarginTop
-        )}
-      >
-        {isNewSection && ( // Only show 'save and add another' button when creating a new section
-          <Button
-            className={moduleStyles.buttonLeft}
-            icon="plus"
-            text={i18n.addAnotherClassSection()}
-            color={Button.ButtonColor.neutralDark}
-            onClick={e => {
-              e.preventDefault();
-              saveSection(sections[0], true, coteachersToAdd);
+      {isLoading ? (
+        <>
+          <Heading3>{i18n.assignCurriculum()}</Heading3>
+          <div className={moduleStyles.loadingSpinner}>
+            <Spinner />
+          </div>
+        </>
+      ) : (
+        <>
+          {/* Allow the curriculum quick assign region to be configured per-region */}
+          <GlobalEditionWrapper
+            component={CurriculumQuickAssign}
+            componentId="CurriculumQuickAssign"
+            props={{
+              id: 'uitest-curriculum-quick-assign',
+              isNewSection: isNewSection,
+              updateSection: (key, val) => updateSection(0, key, val),
+              setIsEditInProgress: setIsEditInProgress,
+              sectionCourse: sections[0].course || consolidatedCourseData(),
+              initialParticipantType: sections[0].participantType,
             }}
           />
-        )}
-        <Button
-          className={moduleStyles.buttonRight}
-          id="uitest-save-section-changes"
-          text={
-            isSaveInProgress
-              ? i18n.saving()
-              : isNewSection
-              ? i18n.finishCreatingSections()
-              : i18n.save()
-          }
-          color={Button.ButtonColor.brandSecondaryDefault}
-          disabled={isSaveInProgress}
-          onClick={e => {
-            e.preventDefault();
-            setIsSaveInProgress(true);
-            saveSection(sections[0], false, coteachersToAdd);
-          }}
-        />
-      </div>
+
+          <div
+            className={classnames(
+              moduleStyles.containerWithMarginTop,
+              moduleStyles.withBorderTop
+            )}
+          >
+            {renderCoteacherSection()}
+            {renderAdvancedSettings()}
+          </div>
+          <div
+            className={classnames(
+              moduleStyles.splitButtonsContainer,
+              moduleStyles.containerWithMarginTop
+            )}
+          >
+            {isNewSection && ( // Only show 'save and add another' button when creating a new section
+              <Button
+                className={moduleStyles.buttonLeft}
+                icon="plus"
+                text={i18n.addAnotherClassSection()}
+                color={Button.ButtonColor.neutralDark}
+                onClick={e => {
+                  e.preventDefault();
+                  saveSection(sections[0], true, coteachersToAdd);
+                }}
+              />
+            )}
+            <Button
+              className={moduleStyles.buttonRight}
+              id="uitest-save-section-changes"
+              text={
+                isSaveInProgress
+                  ? i18n.saving()
+                  : isNewSection
+                  ? i18n.finishCreatingSections()
+                  : i18n.save()
+              }
+              color={Button.ButtonColor.brandSecondaryDefault}
+              disabled={isSaveInProgress}
+              onClick={e => {
+                e.preventDefault();
+                setIsSaveInProgress(true);
+                saveSection(sections[0], false, coteachersToAdd);
+              }}
+            />
+          </div>
+        </>
+      )}
     </form>
   );
 }
@@ -507,4 +542,5 @@ SectionsSetUpContainer.propTypes = {
   userCountry: PropTypes.string,
   defaultRedirectUrl: PropTypes.string.isRequired,
   setIsEditInProgress: PropTypes.func,
+  isLoading: PropTypes.bool,
 };

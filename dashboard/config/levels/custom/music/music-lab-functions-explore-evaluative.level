@@ -388,6 +388,17 @@
         "message": "[Add validation for checking 3 unique functions]",
         "next": true,
         "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "procedures_callnoreturn:3"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-explore-evaluative_2d5d222b-226b-4bcb-bdd2-c2657b32dded",
+        "message": "You need to define and call your functions!",
+        "next": false,
+        "conditions": [
 
         ]
       }
@@ -397,7 +408,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-18T04:00:10.798+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-explore-summative\\\"\"],\"cloned_from\":\"music-lab-functions-explore-summative\"},{\"changed_at\":\"2025-03-18 04:00:14 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 16:45:32 +0000\",\"changed\":[\"offer_browser_tts\",\"long_instructions\",\"exemplar_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-18T04:00:10.798+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-explore-summative\\\"\"],\"cloned_from\":\"music-lab-functions-explore-summative\"},{\"changed_at\":\"2025-03-18 04:00:14 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 16:45:32 +0000\",\"changed\":[\"offer_browser_tts\",\"long_instructions\",\"exemplar_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-15 19:53:19 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

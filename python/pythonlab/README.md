@@ -23,7 +23,7 @@ This tests adds some customization to the output of unit tests, and has a functi
 
 ## Building a package
 From the package folder containing `pyproject.toml`, run `uv build`. The generated `.whl` file will be in the `code-dot-org/dist` folder.
-The generated `.whl` file can then be copied to [apps/lib/pyiodide](../../apps/lib/pyodide/).
+The generated `.whl` file can then be copied to [apps/lib/pyodide](../../apps/lib/pyodide/).
 
 ### TODO
 

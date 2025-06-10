@@ -1,0 +1,56 @@
+@import '@code-dot-org/component-library-styles/colors.scss';
+@import '@code-dot-org/component-library-styles/variables.scss';
+@import '@code-dot-org/component-library-styles/mixins.scss';
+
+.autocompleteInputContainer {
+  width: 100%;
+  position: relative;
+
+  input {
+    padding-right: 2rem;
+  }
+
+  i {
+    position: absolute;
+    right: 0;
+    bottom: 0.425rem;
+    inset-inline-end: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 125%;
+    margin-right: 0.25rem;
+  }
+
+  .optionList {
+    position: absolute;
+    top: calc(100% + 0.3rem);
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    border: 1px solid var(--borders-neutral-primary);
+    border-radius: $regular-border-radius;
+    box-shadow: 0 4px 18px 0 rgba(0 0 0 / 0.24);
+    cursor: default;
+    max-height: 20rem;
+    overflow-y: auto;
+    background-color: var(--background-neutral-primary);
+    padding: 0.25rem 0;
+    margin: 0;
+
+    &:not(.keyboardNav) {
+      .optionItem:hover {
+        background-color: var(--background-neutral-tertiary);
+      }
+    }
+
+    .optionItem {
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+
+      &.active {
+        @include focus-styles;
+        outline-offset: -2px;
+        background-color: var(--background-neutral-tertiary);
+      }
+    }
+  }
+}

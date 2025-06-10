@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Effective Data Questions
 
-#### In lesson 6, students will complete the **Three Reads** strategy again, but this time focus on improving their questions using the ***RSAIR*** approach.
+#### In lesson 5, students will complete the **Three Reads** strategy again, but this time focus on improving their questions using the ***RSAIR*** approach.
 
 ## RSAIR Criteria 
 <br>
@@ -46,11 +46,19 @@ markdown <<MARKDOWN
 <div style="clear:both;"></div>
 <br>
 
+## AI and Data Questions 
+
+#### In this lesson, students will engage with the AI Chatbot again to help formulate and assess effective data questions. 
+
 <div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
 <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> Use the criteria to guide your students' questions about a dataset, ensuring they are clear, directly connected to the available data, answerable, and respectful. This approach will help them craft strong data questions that lead to meaningful and responsible insights.
 </p>
-</div>
+</div><br>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 5. You can find more details in the full <a href='https://studio.code.org/s/aif6-2025/lessons/5' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
 
 
 

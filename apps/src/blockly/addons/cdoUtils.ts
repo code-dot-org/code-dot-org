@@ -148,7 +148,10 @@ function loadHiddenDefinitionBlocksToWorkspace(
  */
 function prepareSourcesForWorkspaces(source: string, embedded: boolean) {
   const parsedSource = parseSource(source, embedded);
-  const procedureTypesToHide = [BLOCK_TYPES.behaviorDefinition];
+  const procedureTypesToHide = [];
+  if (!embedded) {
+    procedureTypesToHide.push(BLOCK_TYPES.behaviorDefinition);
+  }
   if (Blockly.useModalFunctionEditor) {
     procedureTypesToHide.push(BLOCK_TYPES.procedureDefinition);
   }
@@ -196,7 +199,7 @@ export function moveHiddenBlocks(
   procedureTypesToHide: string[] = []
 ) {
   if (procedureTypesToHide.length === 0 || !hasBlocks(source)) {
-    return {mainSource: {}, hiddenDefinitionSource: {}};
+    return {mainSource: source, hiddenDefinitionSource: {}};
   }
 
   const mainSource = _.cloneDeep(source);

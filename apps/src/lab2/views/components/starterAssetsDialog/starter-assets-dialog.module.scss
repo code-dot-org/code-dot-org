@@ -33,6 +33,11 @@
   align-items: flex-start;
 }
 
+.loadingIcon {
+  font-size: 13px;
+  min-width: 1.5rem;
+}
+
 %file-icon {
   @include remove-button-styles;
   display: flex;
@@ -42,9 +47,35 @@
   text-align: center;
   gap: 8px;
 
+  .fileInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .fileInfoRow {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      gap: 4px;
+    }
+  }
+
   .filename {
     width: 100%;
     overflow-wrap: break-word;
+  }
+
+  .fileDetail {
+    color: var(--text-neutral-quaternary)
+  }
+}
+
+.warningIcon {
+  font-size: 13px;
+  color: var(--text-warning-primary);
+  &:hover {
+    color: var(--text-warning-secondary);
   }
 }
 

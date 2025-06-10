@@ -6,8 +6,9 @@ import {
 } from '@reduxjs/toolkit';
 import {AnyAction} from 'redux';
 
-import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import {LabConfig, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {RootState} from '@cdo/apps/types/redux';
+import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import Lab2Registry from '../Lab2Registry';
 
@@ -17,6 +18,7 @@ export interface Lab2ProjectState {
   restoredOldVersion: boolean;
   hasEdited: boolean;
   projectTooLarge: boolean;
+  lastSavedLabConfig: LabConfig | undefined;
 }
 
 const initialState: Lab2ProjectState = {
@@ -25,6 +27,7 @@ const initialState: Lab2ProjectState = {
   restoredOldVersion: false,
   hasEdited: false,
   projectTooLarge: false,
+  lastSavedLabConfig: undefined,
 };
 
 // THUNKS
@@ -38,6 +41,9 @@ export const setAndSaveProjectSources = (
 ): ThunkAction<void, RootState, undefined, AnyAction> => {
   return dispatch => {
     dispatch(projectSlice.actions.setProjectSource(projectSources));
+    dispatch(
+      projectSlice.actions.setLastSavedLabConfig(projectSources.labConfig)
+    );
     if (Lab2Registry.getInstance().getProjectManager()) {
       Lab2Registry.getInstance()
         .getProjectManager()
@@ -105,6 +111,19 @@ export const resetToCurrentVersion = createAsyncThunk(
   }
 );
 
+export const changeProjectType = createAsyncThunk<
+  void,
+  {newSources: ProjectSources},
+  {dispatch: AppDispatch; state: RootState}
+>('lab2Project/changeProjectType', async (payload, thunkAPI) => {
+  const projectManager = Lab2Registry.getInstance().getProjectManager();
+  if (projectManager) {
+    // We need to ensure we save the existing project before loading a new one.
+    await projectManager.flushSave();
+    thunkAPI.dispatch(setAndSaveProjectSources(payload.newSources, true, true));
+  }
+});
+
 // SLICE
 
 const projectSlice = createSlice({
@@ -145,6 +164,9 @@ const projectSlice = createSlice({
       state.hasEdited = false;
       state.viewingOldVersion = false;
       state.restoredOldVersion = false;
+    },
+    setLastSavedLabConfig(state, action: PayloadAction<LabConfig | undefined>) {
+      state.lastSavedLabConfig = action.payload;
     },
   },
 });

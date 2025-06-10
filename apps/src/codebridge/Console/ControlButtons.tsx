@@ -4,10 +4,10 @@ import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import WithConditionalTooltip from '@codebridge/components/WithConditionalTooltip';
 import {MiniApps} from '@codebridge/constants';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
-import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
 import {setShowSuggestedPrompts} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
@@ -26,8 +26,9 @@ import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/use
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 
+import {getSystemMessage} from './MessageHelpers';
+
 import moduleStyles from './console.module.scss';
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 // Control buttons for running and stopping code.
 // Can be extended in the future to include a test button.
@@ -36,6 +37,8 @@ const ControlButtons: React.FunctionComponent = () => {
   const {onRun, onStop, labConfig, levelProperties} = useCodebridgeContext();
   const {id: levelId, appName, predictSettings} = levelProperties;
   const isPredictLevel = predictSettings?.isPredictLevel;
+  const levelPath =
+    useAppSelector(state => getCurrentLevel(state)?.path) || 'standalone';
 
   const scriptId = useAppSelector(state => state.lab.scriptId);
   const source = useAppSelector(
@@ -70,7 +73,9 @@ const ControlButtons: React.FunctionComponent = () => {
   const handleRun = () => {
     if (onRun) {
       dispatch(setIsRunning(true));
-      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RUN_CLICK, appName);
+      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RUN_CLICK, appName, {
+        levelPath,
+      });
       logUserLevelInteraction({
         levelId: levelId,
         scriptId: scriptId,
@@ -89,7 +94,9 @@ const ControlButtons: React.FunctionComponent = () => {
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
-        ?.writeSystemMessage("We don't know how to run your code.", appName);
+        ?.writeConsoleMessage(
+          getSystemMessage(codebridgeI18n.handleRunError(), appName)
+        );
     }
   };
 
@@ -100,7 +107,9 @@ const ControlButtons: React.FunctionComponent = () => {
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
-        ?.writeSystemMessage("We don't know how to stop your code.", appName);
+        ?.writeConsoleMessage(
+          getSystemMessage(codebridgeI18n.handleStopError(), appName)
+        );
       dispatch(setIsRunning(false));
     }
   };
@@ -148,7 +157,6 @@ const ControlButtons: React.FunctionComponent = () => {
             text: disabledCodeActionsTooltip || '',
             size: 's',
             tooltipId: 'code-actions-tooltip',
-            className: darkModeStyles.tooltipRight,
           }}
         >
           <Button
@@ -158,11 +166,8 @@ const ControlButtons: React.FunctionComponent = () => {
             disabled={!!disabledCodeActionsTooltip}
             iconLeft={{iconStyle: 'solid', iconName: 'play'}}
             size={'xs'}
-            color={'white'}
-            className={classNames(
-              moduleStyles.controlButton,
-              darkModeStyles.primaryButton
-            )}
+            type={'primary'}
+            className={moduleStyles.controlButton}
           />
         </WithConditionalTooltip>
       )}

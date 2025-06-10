@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Choose Any Song!\r\n\r\nChoose any song from the Track List and make it your own. Explore different sound packs in the drop down menu to mix and match sounds from the song and sounds from different genres of music. \r\n\r\n![](https://images.code.org/4d1ceadcf2e11d837b7a698c79fb1722-image-1741388705634.05.02 PM.png)",
+    "long_instructions": "#### Choose Any Song!\r\n\r\nChoose any song from the Track List and make it your own. Explore different sound packs in the drop down menu to mix and match sounds from the song and sounds from different genres of music.\r\n\r\nTo pass this level, use at least **8 different sounds**\r\n\r\nIf you want to pick a new song, you can click the restart button in the upper-right corner [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=start-over-button)\r\n\r\n![](https://images.code.org/4d1ceadcf2e11d837b7a698c79fb1722-image-1741388705634.05.02 PM.png)",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "false",
@@ -43,9 +43,38 @@
     },
     "display_name": "Choose a Song",
     "thumbnail_url": "https://images.code.org/cc11d0d9910b9be176a0287cb43efc45-Screenshot 2025-03-07 at 3.11.36 PM.png",
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-explore-song-choice-level-c_90876d3d-830b-4f7f-bea0-dda4927c0fcb",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: \"You Did It!\"",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_different_sounds",
+            "value": 8
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-explore-song-choice-level-c_d110c82e-ee1d-4594-afb3-b5f212c4621c",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to your song...",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "bubble_choice_description": "Choose a song to recreate using what you've learned so far!",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-07T23:02:44.503+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-song-choice-level-b\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-song-choice-level-b\"},{\"changed_at\":\"2025-03-07 23:05:43 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 23:12:03 +0000\",\"changed\":[\"display_name\",\"thumbnail_url\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-07T23:02:44.503+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-song-choice-level-b\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-song-choice-level-b\"},{\"changed_at\":\"2025-03-07 23:05:43 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 23:12:03 +0000\",\"changed\":[\"display_name\",\"thumbnail_url\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-08 21:04:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-08 21:05:04 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-09 04:41:48 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

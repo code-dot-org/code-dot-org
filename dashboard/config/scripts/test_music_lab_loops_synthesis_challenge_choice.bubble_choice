@@ -1,11 +1,11 @@
 name 'test-music-lab-loops-synthesis-challenge-choice'
-display_name 'Take on a New Challenge'
-description 'Choose an option below to challenge yourself with new ways of live performance coding.'
+display_name 'Challenge'
+description 'Choose 2 options to try below'
 
 sublevels
-level 'test-music-lab-loops-synthesis-challenge-choice-a'
-level 'test-music-lab-loops-synthesis-challenge-choice-b'
-level 'test-music-lab-loops-synthesis-challenge-choice-d'
+level 'music-lab-loops-synthesis-practice-4'
+level 'music-lab-loops-synthesis-practice-5'
+level 'music-lab-loops-synthesis-practice-6'
 level 'test-music-lab-loops-synthesis-challenge-choice-c'
 
 

@@ -3,6 +3,9 @@
   "script_names": [
     "test-teaching-ap-cs-unit-1"
   ],
+  "original_script_names": [
+    "test-teaching-ap-cs-unit-1"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

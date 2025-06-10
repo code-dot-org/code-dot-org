@@ -3,6 +3,9 @@
   "script_names": [
     "sb-pt-exp"
   ],
+  "original_script_names": [
+    "sb-pt-exp"
+  ],
   "published_state": "pilot",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

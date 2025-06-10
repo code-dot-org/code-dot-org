@@ -9,6 +9,11 @@
   padding-top: 0;
   user-select: none;
 
+  &InsideInstructions {
+    background-color: $neutral_light;
+    padding: 8px 0 4px 0;
+  }
+
   .entry {
     background-color: $neutral_dark80;
     color: $neutral_light;

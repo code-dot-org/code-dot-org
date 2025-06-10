@@ -3,6 +3,9 @@
   "script_names": [
     "ui-test-csa-family-script"
   ],
+  "original_script_names": [
+    "ui-test-csa-family-script"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

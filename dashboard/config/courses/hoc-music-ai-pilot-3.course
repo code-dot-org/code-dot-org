@@ -3,6 +3,9 @@
   "script_names": [
     "hoc-music-ai-pilot-3"
   ],
+  "original_script_names": [
+    "hoc-music-ai-pilot-3"
+  ],
   "published_state": "pilot",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

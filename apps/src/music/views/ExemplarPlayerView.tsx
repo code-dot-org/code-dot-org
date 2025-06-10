@@ -1,33 +1,36 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useContext, useEffect, useState} from 'react';
 
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {DEFAULT_PACK} from '../constants';
+import {AnalyticsContext} from '../context';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
 import {setIsPlaying} from '../redux/musicRedux';
 
 import moduleStyles from './ExemplarPlayer.module.scss';
-
 interface ExemplarPlayerViewProps {
   playbackEvents: PlaybackEvent[];
   title: string;
   player: MusicPlayer;
+  insideInstructions: boolean;
 }
 
 const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
   playbackEvents,
   title,
   player,
+  insideInstructions,
 }) => {
   const dispatch = useAppDispatch();
   const isPlaying = useAppSelector(state => state.music.isPlaying);
   const [exemplarIsPlaying, setExemplarIsPlaying] = useState<boolean>(false);
+  const analyticsReporter = useContext(AnalyticsContext);
 
   const onMount = useCallback(async () => {
     await player.preloadSounds(playbackEvents, () => {});
@@ -77,11 +80,20 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
   const packImage = MusicLibrary.getInstance()?.getPackImageUrl(DEFAULT_PACK);
 
   return (
-    <div className={moduleStyles.exemplarPlayer}>
+    <div
+      className={classNames(
+        moduleStyles.exemplarPlayer,
+        insideInstructions && moduleStyles.exemplarPlayerInsideInstructions
+      )}
+    >
       <div
         className={moduleStyles.entry}
         key={'exemplar-player'}
         onClick={() => {
+          const action = exemplarIsPlaying ? 'stop' : 'play';
+          analyticsReporter?.onButtonClicked(`exemplar-player-${action}`, {
+            title,
+          });
           exemplarIsPlaying ? onStopSong() : onPlaySong();
         }}
       >

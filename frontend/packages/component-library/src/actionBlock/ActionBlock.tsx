@@ -1,23 +1,40 @@
 import classNames from 'classnames';
 
 import {LinkButton, LinkButtonProps} from '@/button';
+import Image, {ImageProps} from '@/image';
 import {
   Heading3,
   BodyThreeText,
   OverlineTwoText,
   StrongText,
+  BodyFourText,
 } from '@/typography';
+import Video, {VideoProps} from '@/video';
 
-import {ActionBlockProps} from './types';
+import {ActionBlockProps, ActionBlockWrapperProps} from './types';
 
 import moduleStyles from './actionBlock.module.scss';
 
-export const getImage = (image?: string) => {
+export const getImage = (image?: ImageProps) => {
   if (!image) return null;
+  return <Image src={image.src} loading="lazy" alt="" />;
+};
+
+export const getVideo = (VideoComponent?: typeof Video, video?: VideoProps) => {
+  if (!video) return null;
+  if (!VideoComponent) {
+    return (
+      <div>
+        VideoComponent is not provided. Please provide VideoComponent in order
+        to render a video.
+      </div>
+    );
+  }
+
   return (
-    <figure>
-      <img src={image} alt="" loading={'lazy'} />
-    </figure>
+    <div className={moduleStyles.videoWrapper}>
+      <VideoComponent {...video} />
+    </div>
   );
 };
 
@@ -64,10 +81,17 @@ export const getButtons = (
   );
 };
 
-export const ActionBlockWrapper: React.FC<ActionBlockProps> = ({
+export const getTag = (tag: string) => {
+  return (
+    <BodyFourText className={classNames(moduleStyles.tag)}>{tag}</BodyFourText>
+  );
+};
+
+export const ActionBlockWrapper: React.FC<ActionBlockWrapperProps> = ({
   background = 'primary',
   className,
   children,
+  ...HTMLAttributes
 }) => {
   return (
     <div
@@ -76,6 +100,7 @@ export const ActionBlockWrapper: React.FC<ActionBlockProps> = ({
         moduleStyles[`actionBlock-background-${background}`],
         className,
       )}
+      {...HTMLAttributes}
     >
       {children}
     </div>
@@ -100,7 +125,10 @@ export const ActionBlock: React.FC<ActionBlockProps> = ({
   title,
   description,
   image,
+  video,
+  VideoComponent,
   overline,
+  tag,
   details,
   primaryButton,
   secondaryButton,
@@ -115,6 +143,7 @@ export const ActionBlock: React.FC<ActionBlockProps> = ({
       {...HTMLAttributes}
     >
       <div>
+        {tag && getTag(tag)}
         {overline && (
           <OverlineTwoText className={classNames(moduleStyles.overline)}>
             {overline}
@@ -126,7 +155,7 @@ export const ActionBlock: React.FC<ActionBlockProps> = ({
         >
           {title}
         </Heading3>
-        {image && getImage(image)}
+        {video ? getVideo(VideoComponent, video) : image && getImage(image)}
         <BodyThreeText className={classNames(moduleStyles.description)}>
           {description}
         </BodyThreeText>

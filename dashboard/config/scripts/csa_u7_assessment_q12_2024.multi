@@ -44,5 +44,5 @@ For the method call `recurMethod("abc")`, here is the sequence of operations:
 
 Since all the recursive calls return `true`, the original call `recurMethod("abc")` also returns `true`.
 
-On the other hand, if the `String` were `"acb"`, for example, the function would return `false`, because `"a"` does not come before `"c"` in the alphabet.
+On the other hand, if the `String` were `"acb"`, for example, the function would return `false`, because `"c"` does not come before `"b"` in the alphabet.
 MARKDOWN

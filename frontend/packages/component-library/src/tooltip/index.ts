@@ -7,5 +7,5 @@ export {
   default as Tooltip,
   TooltipOverlay,
 } from './_Tooltip';
-export type {WithTooltipProps} from './WithTooltip';
+export type {WithTooltipProps, WithTooltipHandle} from './WithTooltip';
 export {default as WithTooltip} from './WithTooltip';

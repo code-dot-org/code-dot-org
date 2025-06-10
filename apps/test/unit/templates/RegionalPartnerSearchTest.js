@@ -54,7 +54,7 @@ const createServerResponses = (
     JSON.stringify(hasRP ? responseWithRP : responseWithoutRP)
   );
   server.respondWith(
-    /.*pd\/application\/applications_closed.*/,
+    /.*professional-learning\/application\/applications_closed.*/,
     JSON.stringify(applicationsClosed)
   );
 };

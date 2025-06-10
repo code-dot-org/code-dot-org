@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Viewing Student Responses 
 
-#### The previous level had an open-ended response. There are levels throughout the curriculum that have this feature.
+#### The previous level was an example of a student level with an open-ended response. There are levels throughout the curriculum that have this feature.
 
 <div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
@@ -27,17 +27,14 @@ markdown <<MARKDOWN
 
 - #### **Privacy Options:** Hide student names for anonymity and selectively conceal responses for better control over shared content.
 
-<img src="https://images.code.org/27de6fb89d1edc36e3640912a5b3e284-image-1724424496779.png" alt="design process graph of the cycle" width="250px" style="display: block; margin-left: auto; margin-right: auto;">
+<div style="clear:both;"></div>
+
+<img src="https://images.code.org/3482e9a563a95cfe991fdf0a42f2d578-image-1743694307534.png" alt="design process graph of the cycle" width="500px" style="display: block; margin-left: auto; margin-right: auto;">
 
 
 ### Use these features to create an engaging and inclusive classroom experience!
 
 #### *Note: This feature is not in the self-paced professional learning module. It is only available when a course is assigned through your teacher account.*
-
-
-
-
-
 
 
 MARKDOWN

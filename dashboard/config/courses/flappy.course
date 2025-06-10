@@ -3,6 +3,9 @@
   "script_names": [
     "flappy"
   ],
+  "original_script_names": [
+    "flappy"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

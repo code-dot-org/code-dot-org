@@ -1,6 +1,7 @@
 name 'programming-fundamentals-lesson3-level3_2025'
 submittable 'false'
 anonymous 'false'
+activity_guide_level 'true'
 
 page
 text 'programming-fundamentals-lesson3-level3-intro_2025'

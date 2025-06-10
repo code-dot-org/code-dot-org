@@ -3,6 +3,9 @@
   "script_names": [
     "applab-intro-staging"
   ],
+  "original_script_names": [
+    "applab-intro-staging"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

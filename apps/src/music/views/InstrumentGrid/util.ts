@@ -1,10 +1,9 @@
+import {ScaleMode} from '../../player/interfaces/InstrumentEvent';
 import MusicLibrary from '../../player/MusicLibrary';
 import {getNoteName, getNotesInKey, Key} from '../../utils/Notes';
+import {START_OCTAVE, DISPLAY_OCTAVES} from '../../utils/Tunes';
 
-import {EditorType, ScaleMode} from '.';
-
-const START_OCTAVE = 4;
-const DISPLAY_OCTAVES = 3;
+import {EditorType} from '.';
 
 export const integers = (length: number, start: number = 0) =>
   Array.from({length}, (_, i) => i + start);

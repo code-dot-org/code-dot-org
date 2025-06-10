@@ -129,6 +129,7 @@ export const openImportFromBackpackPrompt = async ({
           items: savedFilesInBackpack,
           selectedValue: savedFilesInBackpack[0].value,
           neutralText: codebridgeI18n.deleteFileBackpack(),
+          neutralDestructive: true,
         });
 
         if (results.type === 'cancel') return;
