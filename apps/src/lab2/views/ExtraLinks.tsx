@@ -36,7 +36,7 @@ async function fetchExtraLinksData(
   ) {
     let url = `/levels/${levelId}/extra_links`;
     if (scriptLevelId) {
-      url += `?script_level_id=${scriptLevelId}`;
+      url += `?scriptLevelId=${scriptLevelId}`;
     }
 
     const levelLinkDataResponse =

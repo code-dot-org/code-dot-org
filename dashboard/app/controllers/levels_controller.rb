@@ -537,7 +537,7 @@ class LevelsController < ApplicationController
       links[@level.name] << {text: "LCD: #{@level.level_concept_difficulty.concept_difficulties_as_string}", url: ''}
     end
 
-    if params[:script_level_id]
+    if params[:scriptLevelId]
       script_level = ScriptLevel.find_by(id: params[:scriptLevelId].to_i)
     end
 
