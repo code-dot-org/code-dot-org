@@ -537,18 +537,25 @@ class LevelsController < ApplicationController
       links[@level.name] << {text: "LCD: #{@level.level_concept_difficulty.concept_difficulties_as_string}", url: ''}
     end
 
+    if params[:script_level_id]
+      script_level = ScriptLevel.find_by(id: params[:scriptLevelId].to_i)
+    end
+
     is_standalone_project = ProjectsController::STANDALONE_PROJECTS.values.pluck(:name).include?(@level.name)
 
     # Curriculum writers rarely need to edit STANDALONE_PROJECTS levels, and accidental edits to these levels
     # can be quite disruptive. As a workaround you can navigate directly to the edit url for these levels.
     # We allow editing from the test environment to enable UI testing of the edit page.
-    if false
+    if (Rails.application.config.levelbuilder_mode || rack_env?(:test)) && !is_standalone_project
       can_edit_level = can? :edit, @level
+
       if can_edit_level
         links[@level.name] << {text: '[E]dit', url: edit_level_path(@level), access_key: 'e'}
+
         if [Javalab, Music, Pythonlab, Weblab2].include?(@level.class)
           links[@level.name] << {text: "[s]tart", url: edit_blocks_level_path(@level, :start_sources), access_key: 's'}
           links[@level.name] << {text: "e[x]emplar", url: edit_exemplar_level_path(@level), access_key: 'x'}
+
           if [Music].include?(@level.class)
             links[@level.name] << {text: "[t]oolbox", url: edit_blocks_level_path(@level, :toolbox_blocks), access_key: 't'}
           end
@@ -571,21 +578,21 @@ class LevelsController < ApplicationController
           {text: '(Cannot edit)', url: ''}
         links["Template Level"] << template_level_edit_link
       end
-    elsif @level&.script_levels.any?
+    elsif script_level
       links[@level.name] << {
         text: 'edit on levelbuilder',
-        url: URI.join("https://levelbuilder-studio.code.org/", build_script_level_path(@level.script_levels.first, **(@extra_params || {}))).to_s
+        url: URI.join("https://levelbuilder-studio.code.org/", build_script_level_path(script_level)).to_s
       }
     end
 
     script_level_path_links = []
     script_levels = @level.script_levels.includes(:script)
 
-    script_levels.each do |script_level|
-      script_level_path = build_script_level_path(script_level)
+    script_levels.each do |sl|
+      script_level_path = build_script_level_path(sl)
 
       script_level_path_links << {
-        script: script_level.script.name,
+        script: sl.script.name,
         path: script_level_path
       }
     end
