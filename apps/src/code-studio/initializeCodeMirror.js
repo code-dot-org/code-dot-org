@@ -92,7 +92,7 @@ function initializeCodeMirror(target, mode, options = {}) {
           ReactDOM.render(
             React.createElement(InstructionsPanel, {
               text: editor.getValue(),
-              theme: 'Light',
+              theme: game === 'Music' ? 'Dark' : 'Light',
               noTextAnimation: true,
               setPredictResponse: () => {},
               predictAnswerLocked: false,
