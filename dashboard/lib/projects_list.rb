@@ -96,38 +96,6 @@ module ProjectsList
       end
     end
 
-    # Retrieve a hash of lists of published projects from the database, e.g.
-    #   {
-    #     applab: [{...}, {...}, {...}]
-    #   }
-    # when a single project group is requested, or the following when all types
-    # are requested:
-    #   {
-    #     applab: [{...}, {...}, {...}]
-    #     gamelab: [{...}, {...}, {...}]
-    #     playlab: [{...}, {...}, {...}]
-    #     artist: [{...}, {...}, {...}]
-    #   }
-    # @param project_group [String] Project group to retrieve. Must be one of
-    # PUBLISHED_PROJECT_TYPE_GROUPS.keys, or 'all' to retrieve all project groups.
-    # @param limit [Integer] Maximum number of projects to retrieve from each group.
-    #   Must be between 1 and MAX_LIMIT, inclusive.
-    # @param published_before [string] String representing a DateTime before
-    #   which to search for the requested projects. Must not be specified
-    #   when requesting all project types. Optional.
-    # @return [Hash<Array<Hash>>] A hash of lists of published projects.
-    def fetch_published_projects(project_group, limit:, published_before: nil)
-      unless limit && limit.to_i >= 1 && limit.to_i <= MAX_LIMIT
-        raise ArgumentError, "limit must be between 1 and #{MAX_LIMIT}"
-      end
-      if project_group == 'all'
-        raise ArgumentError, 'Cannot specify published_before when requesting all project types' if published_before
-        fetch_published_project_types(PUBLISHED_PROJECT_TYPE_GROUPS.keys, limit: limit)
-      end
-      raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.key?(project_group.to_sym)
-      fetch_published_project_types([project_group.to_sym], limit: limit, published_before: published_before)
-    end
-
     # @param project_group [String] Project group to retrieve. Must be one of
     #   PUBLISHED_PROJECT_TYPE_GROUPS.keys, or 'all' to retrieve all project groups.
     # @param featured_before [string] String representing a DateTime before
