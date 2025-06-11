@@ -25,15 +25,13 @@ function getOneTrustAssetBasePath(brand: Brand) {
   const stage = getStage();
 
   switch (stage) {
-    case 'production':
+    default:
       /**
        * TODO: Once Pegasus is deprecated, uncomment this line and remove the extra cp from package.json in
        * copy:static-assets to the .next/static/public directory
        * https://codedotorg.atlassian.net/browse/CMS-786
        */
       return `/_next/static/public/onetrust/${brand}`;
-    default:
-      return `https://cdn.cookielaw.org`;
   }
 }
 
