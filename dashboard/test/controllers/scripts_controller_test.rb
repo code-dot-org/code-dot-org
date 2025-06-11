@@ -578,6 +578,26 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal unit, assigns(:script)
   end
 
+  test "edit: script_data includes the original course information" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+    unit = create(:course_version, :with_single_unit_course).content_root.first_unit
+    secondary_course = create(:single_unit_course, unit: unit)
+    create(:course_version, content_root: secondary_course)
+
+    # Use /s/ URL
+    get :edit, params: {id: unit.name}
+    script_data = assigns(:script_data)
+    assert_equal unit.name, script_data[:script][:name]
+    assert_equal unit.original_unit_group.course_version.id, script_data[:script][:courseVersionId]
+
+    # Use /courses/ URL with secondary course. It should still return the original course information.
+    get :edit, params: {course_course_name: secondary_course.name, position: "1"}
+    script_data = assigns(:script_data)
+    assert_equal unit.name, script_data[:script][:name]
+    assert_equal unit.original_unit_group.course_version.id, script_data[:script][:courseVersionId]
+  end
+
   test 'platformization partner cannot create unit' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:platformization_partner)

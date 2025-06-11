@@ -60,6 +60,10 @@ FactoryBot.define do
     trait :with_csp_unit do
       association(:content_root, factory: :csp_script, is_course: true)
     end
+
+    trait :with_single_unit_course do
+      association(:content_root, factory: :single_unit_course)
+    end
   end
 
   factory :unit_group_unit do
