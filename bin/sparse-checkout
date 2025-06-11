@@ -3,7 +3,11 @@
 set -e
 
 MODE="$1"
-PATTERNS_DIR="sparse-patterns"
+
+# keep the sparse-patterns directory in pegasus for now since that's the only
+# place we're using it. if we add more patterns, consider moving this to a
+# more central location.
+PATTERNS_DIR="pegasus/sparse-patterns"
 
 if [[ "$MODE" == "default" ]]; then
   [ -f .git/info/sparse-checkout ] && rm -f .git/info/sparse-checkout
