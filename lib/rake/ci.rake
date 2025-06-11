@@ -55,8 +55,8 @@ SKIP_EYES = 'skip eyes'.freeze
 
 # Runs without pegasus content:
 # 1. omits most pegasus content from the git client via git sparse-checkout
-# 2. runs all test suites
-# 3. skips any tests tagged with @pegasus_content or CDO.has_pegasus_content
+# 2. skips any tests tagged with @pegasus_content or CDO.has_pegasus_content
+# For more information, see: https://github.com/code-dot-org/code-dot-org/pull/65825
 SKIP_PEGASUS_CONTENT = 'skip pegasus content'.freeze
 
 namespace :ci do
@@ -69,10 +69,6 @@ namespace :ci do
 
     if CI::Utils.tagged?(RUN_ALL_TESTS_TAG)
       ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{RUN_ALL_TESTS_TAG}], force-running all tests."
-      RakeUtils.rake_stream_output 'test:all'
-    elsif CI::Utils.tagged?(SKIP_PEGASUS_CONTENT)
-      # Because we only test with SKIP_PEGASUS_CONTENT periodically, we want to run all tests regardless of which files changed.
-      ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{SKIP_PEGASUS_CONTENT}], force-running all tests."
       RakeUtils.rake_stream_output 'test:all'
     elsif CI::Utils.tagged?(RUN_APPS_TESTS_TAG)
       ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{RUN_APPS_TESTS_TAG}], force-running apps tests."
