@@ -10108,7 +10108,7 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "389px"
+                    "desktop": "fit-content"
                   }
                 },
                 "cfMaxWidth": {
