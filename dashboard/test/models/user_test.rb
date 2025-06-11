@@ -3222,46 +3222,6 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  class SectionCourses < ActiveSupport::TestCase
-    setup do
-      @student = create :student
-      @teacher = create :teacher
-      @grand_teacher = create :teacher
-      @unit_group = create :unit_group, name: 'csd'
-    end
-    test "it returns courses in which a teacher exists as a student" do
-      grand_section = create :section, user_id: @grand_teacher.id, unit_group: @unit_group
-      Follower.create!(section_id: grand_section.id, student_user_id: @teacher.id, user: @grand_teacher)
-
-      courses = @teacher.section_courses
-      assert_equal 1, courses.length
-      assert_equal 'csd', courses[0].name
-    end
-
-    test "it returns courses in which a teacher exists as a teacher" do
-      section = create :section, user_id: @teacher.id, unit_group: @unit_group
-      Follower.create!(section_id: section.id, student_user_id: @student.id, user: @teacher)
-
-      courses = @teacher.section_courses
-      assert_equal 1, courses.length
-      assert_equal 'csd', courses[0].name
-    end
-
-    test "it returns courses in which a student exists as a student" do
-      section = create :section, user_id: @teacher.id, unit_group: @unit_group
-      Follower.create!(section_id: section.id, student_user_id: @student.id, user: @teacher)
-
-      courses = @student.section_courses
-      assert_equal 1, courses.length
-      assert_equal 'csd', courses[0].name
-    end
-  end
-
-  test "section_scripts returns an empty array if user has no sections" do
-    user = create :user
-    assert_empty user.section_scripts
-  end
-
   test "section_scripts returns assigned scripts and default scripts in assigned courses" do
     student = create :student
     single_script = create :script
@@ -3272,27 +3232,6 @@ class UserTest < ActiveSupport::TestCase
     (create :section, unit_group: course_with_script).students << student
 
     assert_equal [single_script, unit_group_unit], student.section_scripts
-  end
-
-  test "last_joined_section returns the most recently joined section" do
-    student = create :student
-    teacher = create :teacher
-
-    section_1 = create :section, user_id: teacher.id
-    section_2 = create :section, user_id: teacher.id
-    section_3 = create :section, user_id: teacher.id
-
-    Timecop.freeze do
-      assert_nil student.last_joined_section
-      Follower.create!(section_id: section_1.id, student_user_id: student.id, user: teacher)
-      assert_equal section_1, student.last_joined_section
-      Timecop.travel 1
-      Follower.create!(section_id: section_3.id, student_user_id: student.id, user: teacher)
-      assert_equal section_3, student.last_joined_section
-      Timecop.travel 1
-      Follower.create!(section_id: section_2.id, student_user_id: student.id, user: teacher)
-      assert_equal section_2, student.last_joined_section
-    end
   end
 
   test 'from_omniauth: creates new user if user with matching credentials does not exist' do

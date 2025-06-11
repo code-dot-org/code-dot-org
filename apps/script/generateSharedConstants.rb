@@ -184,6 +184,7 @@ def main
         PD_SESSION_FORMATS
         WORKSHOP_FORMATS
         WORKSHOP_COURSE_CONFIGS
+        COURSE_BUILD_YOUR_OWN
       ),
       source_module: Pd::SharedWorkshopConstants,
       transform_keys: false
