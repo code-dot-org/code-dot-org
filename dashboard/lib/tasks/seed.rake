@@ -91,7 +91,7 @@ namespace :seed do
     20-hour
     algebra
     allthehiddenthings
-    allthemigratedthings
+    allthelessonplans
     alltheplcthings
     alltheselfpacedplthings
     allthethings
@@ -204,7 +204,7 @@ namespace :seed do
   ADHOC_SCRIPTS = MOST_RECENT_ADHOC_SCRIPTS + %w(
     algebra
     allthehiddenthings
-    allthemigratedthings
+    allthelessonplans
     alltheplcthings
     alltheselfpacedplthings
     allthethings
@@ -325,7 +325,7 @@ namespace :seed do
        csp-2019
        20-hour
        algebra
-       allthemigratedthings
+       allthelessonplans
        alltheselfpacedplthings
        allthettsthings
        artist
@@ -358,6 +358,7 @@ namespace :seed do
        infinity
        mc
        minecraft
+       original-curriculum-things-course
        playlab
        starwars
        starwarsblocks
