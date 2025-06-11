@@ -180,7 +180,6 @@ const INTERNAL_ENTRIES = {
   'rubrics/new': './src/sites/studio/pages/rubrics/new.js',
   'rubrics/edit': './src/sites/studio/pages/rubrics/edit.js',
   'sections/new': './src/sites/studio/pages/sections/new.js',
-  'sections/edit': './src/sites/studio/pages/sections/edit.js',
   'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
   'scripts/new': './src/sites/studio/pages/scripts/new.js',
   'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
