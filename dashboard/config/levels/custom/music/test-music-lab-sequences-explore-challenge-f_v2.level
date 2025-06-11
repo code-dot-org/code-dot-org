@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:56:32.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Gravity\r\n\r\nPutting together songs can involve **pattern recognition** - looking for similarities to help solve a problem. For example, you can use patterns to fill in the backing tracks to the song Gravity. Pay attention to how long certain tracks are!\r\n\r\nTo complete this level, your code will need:\r\n- Four <code style=\"background-color: rgb(0, 148, 202); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">play together</code> blocks\r\n- Each block should contain 4 tracks: <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-microphone-stand\" style=\"color: #F99258; margin-right: 2px\"></i> Vocal </span>, <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-boombox\" style=\"color: #58BEF9; margin-right: 2px\"></i> Bass </span>, <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-drum\" style=\"color: #E565F5; margin-right: 2px\"></i> Beat </span>, and <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-guitars\" style=\"color: #64D25A; margin-right: 2px\"></i> Lead </span>.\r\n- Your song should match the example below!",
+    "long_instructions": "#### Gravity\r\n\r\nPutting together songs can involve **pattern recognition** - looking for similarities to help solve a problem. For example, you can use patterns to fill in the backing tracks to the song Gravity. Pay attention to how long certain tracks are!\r\n\r\nTo complete this level, your code will need:\r\n- Four <code style=\"background-color: rgb(0, 148, 202); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">play together</code> blocks\r\n- Each block should contain 4 tracks: <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-microphone-stand\" style=\"color: #F99258; margin-right: 2px\"></i> Vocal </span>, <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-boombox\" style=\"color: #58BEF9; margin-right: 2px\"></i> Bass </span>, <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-drum\" style=\"color: #E565F5; margin-right: 2px\"></i> Beat </span>, and <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-guitars\" style=\"color: #64D25A; margin-right: 2px\"></i> Lead </span>.\r\n- Your song should match the example below!\r\n\r\n![](https://images.code.org/a1a59a6ee064972bb94d08eba144927d-image-1749507346817.png)",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -89,8 +90,7 @@
     "name_suffix": "_v2",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:32.413+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-challenge-f\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-challenge-f\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:32.413+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-challenge-f\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-challenge-f\"},{\"changed_at\":\"2025-06-09 22:15:49 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

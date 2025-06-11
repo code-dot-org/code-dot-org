@@ -35,7 +35,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-04 19:44:12 UTC",
+    "serialized_at": "2025-06-09 15:01:57 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -300,7 +300,7 @@
       "relative_position": 11,
       "properties": {
         "overview": "**What are the ethical considerations of AI collaboration?**\n\nStudents explore the ethical tradeoffs of using AI in creative contexts by engaging with real-world controversies involving ownership, attribution, and compensation. Through a values-based warm-up, rotating discussion stations, and a reflection on guiding principles, students consider how AI-generated content affects creators and what fairness looks like in these scenarios. The lesson helps students evaluate AI’s role as a collaborator and justify when its use may or may not be appropriate.",
-        "preparation": "- Review the [Ownership and AI Stations Resource](https://docs.google.com/document/d/1-PWipeUM-LWIp7peClR7MZmgiFl_HisgP9xrhidrJ6k/edit?usp=drive_link\t\n) to see how to set up your room for the Stations activity in the lesson\n- Print copies of the Station Instructions from the Ownership and AI Stations resource.\n- Print copies of the Ownership and AI Stations activity guide (one for each student)",
+        "preparation": "- Review the Ownership and AI Stations Resource to see how to set up your room for the Stations activity in the lesson\n- Print copies of the Station Instructions from the Ownership and AI Stations resource.\n- Print copies of the Ownership and AI Stations activity guide (one for each student)",
         "student_overview": "**What are the ethical considerations of AI collaboration?**\n\nIn this lesson, you explore real-world examples of how AI is used to create things like art, music, and writing — and the ethical questions that come with it. You think about values like fairness, credit, and consent, and decide what matters most when AI uses other people’s work."
       },
       "seeding_key": {

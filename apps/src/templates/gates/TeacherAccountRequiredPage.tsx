@@ -6,18 +6,19 @@ import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 import AccountCard from '@cdo/apps/templates/account/AccountCard';
 import i18n from '@cdo/locale';
 
-import styles from './style.module.scss';
+import styles from './gate-pages.module.scss';
 
-const StudentUserTypeChangePrompt: React.FunctionComponent<{
-  userReturnTo?: string;
-}> = ({userReturnTo}) => {
+const TeacherAccountRequiredPage: React.FunctionComponent<{
+  sourcePage: string;
+  editAccountLink: string;
+}> = ({sourcePage, editAccountLink}) => {
   useEffect(() => {
     analyticsReporter.sendEvent(
       EVENTS.UPGRADE_TO_TEACHER_ACCOUNT_PAGE_VISITED_EVENT,
-      {source: 'workshop enroll'},
+      {source: sourcePage},
       PLATFORMS.BOTH
     );
-  }, []);
+  }, [sourcePage]);
 
   return (
     <main>
@@ -44,11 +45,7 @@ const StudentUserTypeChangePrompt: React.FunctionComponent<{
             content={i18n.accountSwitchTeacherAccountCardContentGeneric()}
             buttonText={i18n.accountSwitchTeacherAccountCardButton()}
             buttonType="primary"
-            href={`/users/edit${
-              userReturnTo
-                ? `?user_return_to=${encodeURIComponent(userReturnTo)}`
-                : ''
-            }#change-user-type-modal-form`}
+            href={editAccountLink}
           />
         </div>
       </div>
@@ -56,4 +53,4 @@ const StudentUserTypeChangePrompt: React.FunctionComponent<{
   );
 };
 
-export default StudentUserTypeChangePrompt;
+export default TeacherAccountRequiredPage;

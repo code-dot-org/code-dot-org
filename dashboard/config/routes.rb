@@ -609,6 +609,9 @@ Dashboard::Application.routes.draw do
     get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
     post '/join(/:section_code)', to: 'followers#student_register', as: 'student_register'
 
+    get '/logged_out', to: 'gates#logged_out'
+    get '/teacher_account_required', to: 'gates#teacher_account_required'
+
     post '/milestone/:user_id/level/:level_id', to: 'activities#milestone', as: 'milestone_level'
     post '/milestone/:user_id/:script_level_id', to: 'activities#milestone', as: 'milestone'
     post '/milestone/:user_id/:script_level_id/:level_id', to: 'activities#milestone', as: 'milestone_script_level'
@@ -881,6 +884,7 @@ Dashboard::Application.routes.draw do
 
     get 'my-professional-learning', to: 'pd/professional_learning#index', as: 'professional_learning'
     get 'professional-learning/workshops', to: 'pd/professional_learning#workshops'
+    get 'professional-learning/workshops/:workshop_id', to: 'pd/professional_learning#workshop_marketing_page'
     get 'professional-learning/contact-regional-partner', to: 'pd/professional_learning#contact_regional_partner'
     get 'professional-learning/facilitator/computer-science-a', to: 'pd/professional_learning#csa'
     get 'professional-learning/facilitator/computer-science-discoveries', to: 'pd/professional_learning#csd'
@@ -898,8 +902,6 @@ Dashboard::Application.routes.draw do
       # React-router will handle sub-routes on the client.
       get 'workshop_dashboard/*path', to: 'workshop_dashboard#index'
       get 'workshop_dashboard', to: 'workshop_dashboard#index'
-
-      get 'workshops/:workshop_id', to: 'workshops#index'
 
       get 'misc_survey/thanks', to: 'misc_survey#thanks'
       get 'misc_survey/:form_tag', to: 'misc_survey#new'
