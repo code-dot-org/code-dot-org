@@ -107,11 +107,10 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         'teacherSawAichatOnboarding',
         'no'
       );
-      if (!teacherSawAichatOnboardingModal) {
-        return ModalTypes.TEACHER_ONBOARDING;
-      }
 
-      return undefined;
+      return teacherSawAichatOnboardingModal === 'yes'
+        ? undefined
+        : ModalTypes.TEACHER_ONBOARDING;
     };
 
     dispatch(setShowModalType(modalToShow()));
