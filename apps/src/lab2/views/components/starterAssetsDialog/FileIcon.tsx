@@ -57,6 +57,8 @@ const FileIcon: React.FC<FileIconProps> = ({
   };
   const [width, height] = dimensions || [];
 
+  // Large PDF and image warnings are currently levelbuilder only,
+  // so they are not translated.
   return (
     <div className={styles.fileIconWrapper}>
       {onSelect && !loadingMetadata && (
