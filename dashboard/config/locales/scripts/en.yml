@@ -9917,6 +9917,8 @@ en:
               name: Python Lab
             lesson-12:
               name: Lesson 10 - Data Visualization
+            lesson-13:
+              name: EscA.I.pe Room
           lesson_groups: {}
           name: emmas-playground
           title: ''
@@ -10271,6 +10273,8 @@ en:
               name: Intro to Programming
             lesson-9:
               name: Validation practice
+            lesson-10:
+              name: Widget Playground
           lesson_groups:
             lessonGroup-2:
               display_name: Cyber
@@ -20703,6 +20707,10 @@ en:
               display_name: Templates
             lessonGroup-2:
               display_name: Revisions
+            lessonGroup-4:
+              display_name: Pre-Assessment
+            lessonGroup-5:
+              display_name: End of Unit Assessment and Survey
           name: musiclab-6-12-playground
           title: 6-12 Music Lab Playground
           description_audience: ''
@@ -24834,3 +24842,31 @@ en:
           description_short: ''
           description: Teacher Overview
           student_description: Student Overview
+        pl-gamified-python-sandbox:
+          lessons:
+            lesson-1:
+              name: Hit the Road in The Neighborhood
+            lesson-2:
+              name: 'Fueling up at the Coffee Shop: Kickstart your Python Journey'
+          lesson_groups: {}
+          name: pl-gamified-python-sandbox
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        programming-with-music-lab-2025:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Programming with Music Lab
+            lessonGroup-4:
+              display_name: End of Unit Assessment and Survey
+          name: programming-with-music-lab-2025
+          title: Programming with Music Lab (2025)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

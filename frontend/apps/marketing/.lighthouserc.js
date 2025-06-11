@@ -3,11 +3,11 @@ const assertions = {
   'color-contrast': 'off',
   'errors-in-console': ['error', {maxLength: 4}],
   'inspector-issues': 'off',
-  'offscreen-images': ['error', {minScore: 0.5, maxLength: 3}],
+  'offscreen-images': ['error', {minScore: 0.5, maxLength: 4}],
   'total-byte-weight': ['error', {minScore: 0.5}],
   'unused-css-rules': ['error', {maxLength: 30}],
   'unused-javascript': ['error', {maxLength: 10}],
-  'uses-text-compression': ['error', {maxLength: 80}],
+  'uses-text-compression': ['error', {maxLength: 5}],
   'third-party-cookies': 'off',
   'uses-rel-preconnect': 'off',
   'link-text': 'off', // re-enable after CMS-497

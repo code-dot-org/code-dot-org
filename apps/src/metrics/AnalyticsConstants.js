@@ -12,6 +12,7 @@ const EVENTS = {
   ACCOUNT_TYPE_PICKED_EVENT: 'Account Type Picked',
   SIGN_UP_STARTED_EVENT: 'Sign Up Started',
   SIGN_UP_LOGIN_TYPE_PICKED_EVENT: 'User Login Type Picked',
+  SIGN_UP_SSO_SHOW_MORE_OPTIONS: 'SSO Show More Options Clicked',
   SIGN_UP_FINISHED_EVENT: 'Sign Up Finished',
   SECTION_SETUP_SIGN_IN_EVENT: 'Section Setup Sign In',
   ABANDON_SECTION_SETUP_SIGN_IN_EVENT: 'Abandon Section Setup Sign In',
@@ -30,6 +31,8 @@ const EVENTS = {
   FINISH_ACCOUNT_PAGE_LOADED: 'Finish Account Page Loaded',
   SECTION_SETUP_STARTED: 'Section Setup Started',
   LINK_ACCOUNT_PAGE_VISITED_EVENT: 'Link Account Page Visited',
+  UPGRADE_TO_TEACHER_ACCOUNT_PAGE_VISITED_EVENT:
+    'Upgrade To Teacher Account Page Visited',
 
   // School Association
   // Update School Info Dialog
@@ -109,9 +112,12 @@ const EVENTS = {
   LESSON_RESOURCE_LINK_VISITED_EVENT: 'Lesson Resource Link Visited',
 
   // Workshop enrollment
+  WORKSHOP_ENROLLMENT_PAGE_VISITED_EVENT: 'Workshop Enrollment Page Visited',
   WORKSHOP_ENROLLMENT_COMPLETED_EVENT: 'Workshop Enrollment Completed',
   WORKSHOP_ADD_SESSION_TO_CALENDAR_CLICK_EVENT:
     'Workshop Add Session to Calendar Clicked',
+  RP_LANDING_ZIP_ENTERED: 'Regional Partner Landing Zip Entered',
+  RP_LANDING_ENROLL_CLICKED: 'Regional Partner Landing Enroll Button Clicked',
 
   // Workshop session attendance
   WORKSHOP_ATTENDANCE_MARKED_EVENT: 'Workshop Attendance Marked',

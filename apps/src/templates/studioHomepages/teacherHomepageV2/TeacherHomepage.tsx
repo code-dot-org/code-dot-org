@@ -16,6 +16,7 @@ import {
 import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
 import {SectionList} from './SectionList';
+import TeacherHomepageDrawer from './TeacherHomepageDrawer';
 import TeacherPromotions from './TeacherPromotions';
 
 import styles from './teacherHomepage.module.scss';
@@ -125,6 +126,9 @@ export const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
           <TeacherPromotions />
         </div>
       </div>
+      <TeacherHomepageDrawer />
     </div>
   );
 };
+
+export default TeacherHomepage;

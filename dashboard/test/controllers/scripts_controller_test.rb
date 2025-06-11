@@ -349,7 +349,7 @@ class ScriptsControllerTest < ActionController::TestCase
       course_course_name: @single_unit_course_2023.name,
       position: 1
     }
-    assert_redirected_to "/s/#{@single_unit_2024.name}?redirect_warning=true"
+    assert_redirected_to "/courses/#{@single_unit_course_2024.name}/units/1?redirect_warning=true"
   end
 
   test "show: redirect from older version to latest stable version of single-unit course for logged out user" do
@@ -357,7 +357,7 @@ class ScriptsControllerTest < ActionController::TestCase
       course_course_name: @single_unit_course_2023.name,
       position: 1
     }
-    assert_redirected_to "/s/#{@single_unit_2024.name}?redirect_warning=true"
+    assert_redirected_to "/courses/#{@single_unit_course_2024.name}/units/1?redirect_warning=true"
   end
 
   test "show: redirect from new unstable version to latest stable version of single-unit course for student" do
@@ -366,7 +366,7 @@ class ScriptsControllerTest < ActionController::TestCase
       course_course_name: @single_unit_course_2025.name,
       position: 1
     }
-    assert_redirected_to "/s/#{@single_unit_2024.name}?redirect_warning=true"
+    assert_redirected_to "/courses/#{@single_unit_course_2024.name}/units/1?redirect_warning=true"
   end
 
   test "show: redirect from new unstable version to latest stable version of single-unit course for logged out user" do
@@ -374,7 +374,7 @@ class ScriptsControllerTest < ActionController::TestCase
       course_course_name: @single_unit_course_2025.name,
       position: 1
     }
-    assert_redirected_to "/s/#{@single_unit_2024.name}?redirect_warning=true"
+    assert_redirected_to "/courses/#{@single_unit_course_2024.name}/units/1?redirect_warning=true"
   end
 
   test "show: redirect from new unstable version of single-unit course to assigned version for student" do
@@ -387,7 +387,7 @@ class ScriptsControllerTest < ActionController::TestCase
       course_course_name: @single_unit_course_2025.name,
       position: 1
     }
-    assert_redirected_to "/s/#{@single_unit_2023.name}?redirect_warning=true"
+    assert_redirected_to "/courses/#{@single_unit_course_2023.name}/units/1?redirect_warning=true"
   end
 
   test "show: do not redirect teacher to latest stable version of single-unit course" do
@@ -402,6 +402,37 @@ class ScriptsControllerTest < ActionController::TestCase
   test "show: redirect from family name to latest stable version of single-unit course" do
     get :show, params: {id: @single_unit_course_offering.key}
     assert_redirected_to "/courses/#{@single_unit_course_2024.name}/units/1"
+  end
+
+  test "show: redirect to correct course from course family name if single-unit course" do
+    another_course = create :single_unit_course, unit: @single_unit_2024, family_name: 'another-course', version_year: '2024', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(another_course)
+
+    get :show, params: {id: another_course.family_name}
+    assert_redirected_to "/courses/#{another_course.name}/units/1"
+  end
+
+  test "show: redirect from older version to latest stable version of a modular single-unit course for student" do
+    modular_single_unit_course_2023 = create :single_unit_course, family_name: "modular-single-unit-course", version_year: '2023', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, unit: @single_unit_2023
+    modular_single_unit_course_2024 = create :single_unit_course, family_name: "modular-single-unit-course", version_year: '2024', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, unit: @single_unit_2024
+
+    sign_in create(:student)
+    get :show, params: {
+      course_course_name: modular_single_unit_course_2023.name,
+      position: 1
+    }
+    assert_redirected_to "/courses/#{modular_single_unit_course_2024.name}/units/1?redirect_warning=true"
+  end
+
+  test "show: redirect from older version to latest stable version of a modular single-unit course for logged out user" do
+    modular_single_unit_course_2023 = create :single_unit_course, family_name: "modular-single-unit-course", version_year: '2023', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, unit: @single_unit_2023
+    modular_single_unit_course_2024 = create :single_unit_course, family_name: "modular-single-unit-course", version_year: '2024', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, unit: @single_unit_2024
+
+    get :show, params: {
+      course_course_name: modular_single_unit_course_2023.name,
+      position: 1
+    }
+    assert_redirected_to "/courses/#{modular_single_unit_course_2024.name}/units/1?redirect_warning=true"
   end
 
   test "show: teacher in teacher-local-nav-v2 experiment is redirected to teacher dashboard if course is in a section" do
@@ -1597,18 +1628,18 @@ class ScriptsControllerTest < ActionController::TestCase
       assert_includes(response.body, no_access_msg)
     end
 
-    test_user_gets_response_for(:show, response: :success, user: -> {@pilot_teacher},
+    test_user_gets_response_for(:show, response: :redirect, user: -> {@pilot_teacher},
       params: -> {{id: @pilot_unit.name, section_id: @pilot_section.id}},
       name: 'pilot teacher can view pilot unit'
     ) do
-      refute_includes(response.body, no_access_msg)
+      assert_redirected_to "http://test.host/teacher_dashboard/sections/#{@pilot_section.id}/unit/#{@pilot_unit.name}"
     end
 
-    test_user_gets_response_for(:show, response: :success, user: -> {@pilot_instructor},
+    test_user_gets_response_for(:show, response: :redirect, user: -> {@pilot_instructor},
                                 params: -> {{id: @pilot_pl_unit.name, section_id: @pilot_pl_section.id}},
                                 name: 'pilot instructor can view pilot unit'
     ) do
-      refute_includes(response.body, no_access_msg)
+      assert_redirected_to "http://test.host/teacher_dashboard/sections/#{@pilot_pl_section.id}/unit/#{@pilot_pl_unit.name}"
     end
 
     test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},
@@ -1893,6 +1924,12 @@ class ScriptsControllerTest < ActionController::TestCase
         sign_in user
         get :show, params: {course_course_name: course.name, position: unit_position}
         assert_response :success
+      end
+
+      it '/s/:id?foo=bar does redirect with query params' do
+        sign_in user
+        get :show, params: {id: unit.name, foo: 'bar'}
+        assert_redirected_to "/courses/#{course.name}/units/#{unit_position}?foo=bar"
       end
     end
   end

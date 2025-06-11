@@ -190,7 +190,7 @@ class ScriptLevelsController < ApplicationController
         end
 
       # TODO: Change/remove this check as we add support for more level types.
-      if levels[0].is_a?(FreeResponse) || levels[0].is_a?(Multi) || levels[0].predict_level? || levels[0].is_a?(LevelGroup)
+      if levels[0].is_a?(FreeResponse) || levels[0].is_a?(Multi) || levels[0]&.predict_level? || levels[0].is_a?(LevelGroup)
         @responses = levels.map do |sublevel|
           UserLevel.where(level: sublevel, user: @section&.students)
         end

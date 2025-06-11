@@ -2,7 +2,6 @@
 Feature: Using Modular Courses
   Background:
     Given I am on "http://studio.code.org/home"
-    Given I use a cookie to mock the DCDO key "teacher-local-nav-v2" as "true"
 
   Scenario: Navigating within modular courses
     Given I create a teacher named "Teacher_Sally"

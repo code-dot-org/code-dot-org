@@ -21,11 +21,13 @@ export const SectionDeleteModal: React.FC<SectionDeleteModalProps> = ({
       description={i18n.deleteSectionConfirm()}
       onClose={onCloseCallback}
       primaryButtonProps={{
+        id: 'ui-test-delete-section-confirm',
         text: i18n.delete(),
         ariaLabel: i18n.delete(),
         onClick: sectionDeleteCallback,
       }}
       secondaryButtonProps={{
+        id: 'ui-test-delete-section-cancel',
         text: i18n.dialogCancel(),
         ariaLabel: i18n.dialogCancel(),
         onClick: onCloseCallback,

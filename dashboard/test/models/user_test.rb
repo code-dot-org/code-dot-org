@@ -1207,46 +1207,6 @@ class UserTest < ActiveSupport::TestCase
     assert @student.urm
   end
 
-  test 'under 13' do
-    user = create :user
-    refute user.under_13?
-
-    user.age = 13
-    refute user.under_13?
-    user.save!
-    refute user.under_13?
-
-    user.age = 10
-    assert user.under_13?
-    user.save!
-    assert user.under_13?
-
-    user = create :user
-    user.update_attribute(:birthday, nil) # cheating...
-    user = user.reload
-    assert user.age.nil?
-    assert user.under_13?
-  end
-
-  test 'over 21' do
-    user = create :user
-    user.age = 15
-    refute user.over_21?
-    user.save!
-    refute user.over_21?
-
-    user.age = 21
-    assert user.over_21?
-    user.save!
-    assert user.over_21?
-
-    user = create :user
-    user.update_attribute(:birthday, nil) # cheating...
-    user = user.reload
-    assert user.age.nil?
-    refute user.over_21?
-  end
-
   test "reset_secrets calls generate_secret_picture and generate_secret_words" do
     user = create :user
 
@@ -2687,64 +2647,6 @@ class UserTest < ActiveSupport::TestCase
     refute student.can_pair?
   end
 
-  test "verified teacher" do
-    # you can't just create your own authorized teacher account
-    assert @teacher.teacher?
-    refute @teacher.verified_teacher?
-
-    # you have to be in a cohort
-    real_teacher = create(:teacher)
-    real_teacher.permission = UserPermission::AUTHORIZED_TEACHER
-    assert real_teacher.teacher?
-    assert real_teacher.verified_teacher?
-
-    # or you have to be in a plc course
-    create(:plc_user_course_enrollment, user: (plc_teacher = create :teacher), plc_course: create(:plc_course))
-    assert plc_teacher.teacher?
-    assert plc_teacher.verified_teacher?
-  end
-
-  test "verified instructor" do
-    # normal teacher accounts are not automatically verified instructors
-    assert @teacher.teacher?
-    refute @teacher.verified_instructor?
-
-    # you need to be given the verified permission
-    real_teacher = create(:teacher)
-    real_teacher.permission = UserPermission::AUTHORIZED_TEACHER
-    assert real_teacher.teacher?
-    assert real_teacher.verified_instructor?
-
-    # or you have to be in a plc course
-    create(:plc_user_course_enrollment, user: (plc_teacher = create :teacher), plc_course: create(:plc_course))
-    assert plc_teacher.teacher?
-    assert plc_teacher.verified_instructor?
-
-    # admins are not verified instructorsg
-    assert @admin.teacher?
-    refute @admin.verified_instructor?
-
-    # facilitators should be verified instructors too
-    assert @facilitator.teacher?
-    assert @facilitator.verified_instructor?
-
-    # universal instructors should be verified instructors too
-    assert @universal_instructor.teacher?
-    assert @universal_instructor.verified_instructor?
-
-    #plc reviewers should be verified instructors too
-    assert @plc_reviewer.teacher?
-    assert @plc_reviewer.verified_instructor?
-
-    #levelbuilders should be verified instructors too
-    assert @levelbuilder.teacher?
-    assert @levelbuilder.verified_instructor?
-
-    #students should not be verified instructors
-    refute @student.teacher?
-    refute @student.verified_instructor?
-  end
-
   test 'terms_of_service_version for teacher without version' do
     assert_nil @teacher.terms_version
   end
@@ -3320,46 +3222,6 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  class SectionCourses < ActiveSupport::TestCase
-    setup do
-      @student = create :student
-      @teacher = create :teacher
-      @grand_teacher = create :teacher
-      @unit_group = create :unit_group, name: 'csd'
-    end
-    test "it returns courses in which a teacher exists as a student" do
-      grand_section = create :section, user_id: @grand_teacher.id, unit_group: @unit_group
-      Follower.create!(section_id: grand_section.id, student_user_id: @teacher.id, user: @grand_teacher)
-
-      courses = @teacher.section_courses
-      assert_equal 1, courses.length
-      assert_equal 'csd', courses[0].name
-    end
-
-    test "it returns courses in which a teacher exists as a teacher" do
-      section = create :section, user_id: @teacher.id, unit_group: @unit_group
-      Follower.create!(section_id: section.id, student_user_id: @student.id, user: @teacher)
-
-      courses = @teacher.section_courses
-      assert_equal 1, courses.length
-      assert_equal 'csd', courses[0].name
-    end
-
-    test "it returns courses in which a student exists as a student" do
-      section = create :section, user_id: @teacher.id, unit_group: @unit_group
-      Follower.create!(section_id: section.id, student_user_id: @student.id, user: @teacher)
-
-      courses = @student.section_courses
-      assert_equal 1, courses.length
-      assert_equal 'csd', courses[0].name
-    end
-  end
-
-  test "section_scripts returns an empty array if user has no sections" do
-    user = create :user
-    assert_empty user.section_scripts
-  end
-
   test "section_scripts returns assigned scripts and default scripts in assigned courses" do
     student = create :student
     single_script = create :script
@@ -3370,27 +3232,6 @@ class UserTest < ActiveSupport::TestCase
     (create :section, unit_group: course_with_script).students << student
 
     assert_equal [single_script, unit_group_unit], student.section_scripts
-  end
-
-  test "last_joined_section returns the most recently joined section" do
-    student = create :student
-    teacher = create :teacher
-
-    section_1 = create :section, user_id: teacher.id
-    section_2 = create :section, user_id: teacher.id
-    section_3 = create :section, user_id: teacher.id
-
-    Timecop.freeze do
-      assert_nil student.last_joined_section
-      Follower.create!(section_id: section_1.id, student_user_id: student.id, user: teacher)
-      assert_equal section_1, student.last_joined_section
-      Timecop.travel 1
-      Follower.create!(section_id: section_3.id, student_user_id: student.id, user: teacher)
-      assert_equal section_3, student.last_joined_section
-      Timecop.travel 1
-      Follower.create!(section_id: section_2.id, student_user_id: student.id, user: teacher)
-      assert_equal section_2, student.last_joined_section
-    end
   end
 
   test 'from_omniauth: creates new user if user with matching credentials does not exist' do

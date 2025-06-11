@@ -1158,8 +1158,37 @@ class UnitTest < ActiveSupport::TestCase
 
     UnitGroup.any_instance.expects(:summarize_course_versions).once.returns(versioned_single_unit_course25.course_version&.course_offering&.course_versions)
     course_versions = single_unit.summarize_course_versions(create(:teacher))
-    puts course_versions.inspect
     assert_equal 2, course_versions.count
+  end
+
+  test 'summarize_course_versions for modular single-unit course' do
+    modular_unit = create :unit, name: 'modular-unit'
+
+    # original course versions
+    original_course_offering = create(:course_offering, key: 'original-course', display_name: 'original-course')
+    original_course_2024 = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, name: 'original-course-2024', family_name: 'original-course', version_year: '2024'
+    original_course_2025 = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, name: 'original-course-2025', family_name: 'original-course', version_year: '2025'
+    create :unit_group_unit, unit_group: original_course_2024, script: modular_unit, position: 1
+    create :unit_group_unit, unit_group: original_course_2024, script: (create :unit), position: 2
+    create :unit_group_unit, unit_group: original_course_2025, script: modular_unit, position: 1
+    create :unit_group_unit, unit_group: original_course_2025, script: (create :unit), position: 2
+    create :course_version, key: '2024', display_name: '2024', course_offering: original_course_offering, content_root: original_course_2024
+    create :course_version, key: '2025', display_name: '2025', course_offering: original_course_offering, content_root: original_course_2025
+
+    # modular course versions
+    modular_course_offering = create(:course_offering, key: 'modular-course', display_name: 'modular-course')
+    modular_single_unit_course24 = create(:single_unit_course, unit: modular_unit, name: 'mod-single-unit-2024', family_name: 'modular-single-unit-course', version_year: '2024', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    modular_single_unit_course25 = create(:single_unit_course, unit: modular_unit, name: 'mod-single-unit-2025', family_name: 'modular-single-unit-course', version_year: '2025', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    create(:course_version, :with_unit_group, key: '2024', course_offering: modular_course_offering, display_name: '2024', content_root: modular_single_unit_course24)
+    create(:course_version, :with_unit_group, key: '2025', course_offering: modular_course_offering, display_name: '2025', content_root: modular_single_unit_course25)
+
+    original_course_versions = modular_unit.summarize_course_versions(create(:teacher))
+    assert_equal 0, original_course_versions.count
+
+    single_unit_course_versions = modular_unit.summarize_course_versions(create(:teacher), unit_group: modular_single_unit_course25)
+    assert_equal 2, single_unit_course_versions.count
+    assert_equal 'mod-single-unit-2024', single_unit_course_versions.values[0][:name]
+    assert_equal 'mod-single-unit-2025', single_unit_course_versions.values[1][:name]
   end
 
   test 'summarize excludes unlaunched versions' do
@@ -1190,26 +1219,31 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'summarize includes show assign button' do
-    unit = create(:course_version, :with_unit).content_root
-    unit.update!(name: 'script', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
+    launched_course = create :single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+    unit_group_unit = launched_course.default_unit_group_units.first
+    unit = launched_course.first_unit
+    CourseOffering.add_course_offering(launched_course)
     teacher = create(:teacher)
 
     # No user, show_assign_button set to false
-    refute unit.summarize[:show_assign_button]
+    refute unit.summarize(unit_group_unit: unit_group_unit)[:show_assign_button]
 
-    # Teacher should be able to assign a launched unit.
-    assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview, unit.summarize[:publishedState]
-    assert unit.summarize(true, teacher)[:show_assign_button]
+    # Teacher should be able to assign a launched unit
+    assert unit.summarize(true, teacher, unit_group_unit: unit_group_unit)[:show_assign_button]
 
-    # Teacher should not be able to assign a unlaunched script.
-    hidden_unit = create(:script, name: 'unassignable-hidden', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
-    assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, hidden_unit.summarize[:publishedState]
-    refute hidden_unit.summarize(true, teacher)[:show_assign_button]
+    # Student should not be able to assign a launched unit
+    refute unit.summarize(true, create(:student), unit_group_unit: unit_group_unit)[:show_assign_button]
 
-    # Student should not be able to assign a unit,
-    # regardless of visibility.
-    assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview, unit.summarize[:publishedState]
-    refute unit.summarize(true, create(:student))[:show_assign_button]
+    # Teacher should not be able to assign an unlaunched unit
+    beta_course = create :single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+    CourseOffering.add_course_offering(beta_course)
+    refute beta_course.first_unit.summarize(true, teacher, unit_group_unit: beta_course.default_unit_group_units.first)[:show_assign_button]
+
+    # teacher can assign unit in launched modular course even if its original unit group is not launched
+    modular_course = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+    create :unit_group_unit, unit_group: modular_course, script: beta_course.first_unit, position: 1
+    CourseOffering.add_course_offering(modular_course)
+    assert modular_course.first_unit.summarize(true, teacher, unit_group_unit: modular_course.default_unit_group_units.first)[:show_assign_button]
   end
 
   test 'summarize includes bonus levels for lessons if include_bonus_levels and include_lessons are true' do

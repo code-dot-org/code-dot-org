@@ -174,6 +174,8 @@ const Video: React.FC<VideoProps> = ({
             size="xs"
             text={downloadLabel || 'Download'}
             type="secondary"
+            target="_blank"
+            rel="noopener noreferrer"
           />
         )}
       </div>

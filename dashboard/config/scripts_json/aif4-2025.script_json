@@ -35,7 +35,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-27 16:10:26 UTC",
+    "serialized_at": "2025-06-03 14:59:16 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -5358,6 +5358,19 @@
       }
     },
     {
+      "name": "Fabric of the Internet and AI Unit Guide",
+      "url": "https://docs.google.com/document/d/17JASBAF04uTECGIupU8WWiRkbodoOKRdiSIlxdPcLjs/edit?usp=drivesdk",
+      "key": "fabric_of_the_internet_and_ai_unit_guide_pdf",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "fabric_of_the_internet_and_ai_unit_guide_pdf"
+      }
+    },
+    {
       "name": "Gallery Walk Info Tracker",
       "url": "https://docs.google.com/document/d/1V2iIOaQIiqLmw1PvRSZ1X9T24GCtgqP7sfdbuH9lelU/edit?tab=t.0#heading=h.o7zffas5nipv",
       "key": "gallery_walk_info_tracker",
@@ -5574,6 +5587,7 @@
       "key": "networks_and_the_internet_unit_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -5972,13 +5986,13 @@
     {
       "seeding_key": {
         "lesson.key": "Introduction to the Internet",
-        "resource.key": "introduction_to_the_internet"
+        "resource.key": "fabric_of_the_internet_and_ai_unit_guide_pdf"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Introduction to the Internet",
-        "resource.key": "networks_and_the_internet_unit_guide"
+        "resource.key": "introduction_to_the_internet"
       }
     },
     {

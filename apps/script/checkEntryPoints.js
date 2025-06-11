@@ -95,6 +95,9 @@ const SILENCED = [
   'googleblockly',
   'brambleHost',
   'levelbuilder',
+
+  // needed to initialize the locales before all other app code loads
+  'localization',
 ].concat(has_pegasus_content ? [] : Object.keys(PEGASUS_ENTRIES));
 const SITES_CONFIG = {
   studio: {
