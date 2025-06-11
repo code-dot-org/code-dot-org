@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-05-23T19:23:48.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#### Ethical Checkpoint\r\n\r\nSome professionals use AI as part of their careers in specific situations (like the newspaper example in an earlier lesson). \r\n\r\n- What's a situation where using AI might require careful prompting?\r\n- How could a human involved help mitigate unintended consequences from a leading prompt?",
+    "stay_on_level_after_submit": "true",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-23T19:23:48.773+00:00\",\"changed\":[\"cloned from \\\"genai-choices-cfu\\\"\"],\"cloned_from\":\"genai-choices-cfu\"},{\"changed_at\":\"2025-05-23 19:26:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-05-23 19:30:02 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

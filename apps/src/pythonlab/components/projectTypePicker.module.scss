@@ -5,13 +5,9 @@
   max-width: 600px;
 }
 
-// Ensures the dialog and overlay are on top of other Python Lab elements.
-div.dialogContainer > div[role='presentation'] {
-  z-index: 5;
-}
-
 .pickerDialog {
   padding: 24px 32px;
+  border-radius: 4px;
 }
 
 .boldWarning {

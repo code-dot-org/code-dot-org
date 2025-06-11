@@ -133,7 +133,6 @@ npm-debug.log
 /bin/i18n/crowdin/etags/**/*test.json
 /bin/test/coverage
 /dashboard/config/newrelic.yml
-/dashboard/db/ui_test_data.*
 /dashboard/public/blockly
 /dashboard/public/code-studio
 /dashboard/public/shared

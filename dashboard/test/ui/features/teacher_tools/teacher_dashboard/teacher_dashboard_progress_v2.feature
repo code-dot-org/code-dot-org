@@ -4,7 +4,7 @@ Feature: Using the V2 progress page
 Scenario: Teacher can open and close Icon Key and details
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"
-  And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
+  And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
 
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
@@ -32,7 +32,7 @@ Scenario: Teacher can open and close Icon Key and details
 Scenario: Viewing student metadata
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"
-  And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/9?noautoplay=true"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/44/levels/9?noautoplay=true"
   And I wait to see "#runButton"
   And I submit this level
 
@@ -85,11 +85,11 @@ Scenario: Teacher can open and close lessons and see level data cells
   # Teacher can open lesson to view level data
   And I wait until element "#ui-test-lesson-header-2" is visible
   And I click selector "#ui-test-lesson-header-2"
-  And I wait until element "#ui-test-s-allthethings-lessons-2-levels-1-cell-data" is visible
+  And I wait until element "#ui-test-courses-allthethingscourse-units-1-lessons-2-levels-1-cell-data" is visible
 
   # Teacher can close lesson so level data is no longer visible
   And I click selector "#ui-test-expanded-progress-column-header-2"
-  And element "#ui-test-s-allthethings-lessons-2-levels-1-cell-data" is not visible
+  And element "#ui-test-courses-allthethingscourse-units-1-lessons-2-levels-1-cell-data" is not visible
 
 @properties_encryption_key
 Scenario: Teacher can navigate to student work by clicking level cell.
@@ -103,9 +103,9 @@ Scenario: Teacher can navigate to student work by clicking level cell.
   # Teacher opens lesson data and clicks on level data cell
   And I wait until element "#ui-test-lesson-header-2" is visible
   And I click selector "#ui-test-lesson-header-2"
-  And I click selector "#ui-test-s-allthethings-lessons-2-levels-1-cell-data" once I see it to load a new tab
+  And I click selector "#ui-test-courses-allthethingscourse-units-1-lessons-2-levels-1-cell-data" once I see it to load a new tab
   And check that the URL contains "&user_id="
-  And check that the URL contains "allthethings/lessons/2/levels/1"
+  And check that the URL contains "courses/allthethingscourse/units/1/lessons/2/levels/1"
 
 @skip
 Scenario: Teacher can open lesson data, refresh the page, and lesson data will still be shown
@@ -119,13 +119,13 @@ Scenario: Teacher can open lesson data, refresh the page, and lesson data will s
   # Open a lesson to see level data
   And I wait until element "#ui-test-lesson-header-2" is visible
   And I click selector "#ui-test-lesson-header-2"
-  And I wait until element "#ui-test-s-allthethings-lessons-2-levels-1-cell-data" is visible
+  And I wait until element "#ui-test-courses-allthethingscourse-units-1-lessons-2-levels-1-cell-data" is visible
   # Waiting to make sure the user object has been updated before reloading the page
   And I wait for 3 seconds
 
   # Verify the lesson is still open
   Then I reload the page
-  And I wait until element "#ui-test-s-allthethings-lessons-2-levels-1-cell-data" is visible
+  And I wait until element "#ui-test-courses-allthethingscourse-units-1-lessons-2-levels-1-cell-data" is visible
 
 
 @eyes
@@ -133,10 +133,10 @@ Scenario: Teacher can view lesson progress for when students have completed a le
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"
   # Student completes one of many levels in lesson 2
-  And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
+  And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
 
   # Student completes all the levels in lesson 10 (there is only one level)
-  Given I am on "http://studio.code.org/s/allthethings/lessons/10/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/10/levels/1?noautoplay=true"
   Then I wait for 3 seconds
   And I wait until element ".submitButton" is visible
   And I press ".answerbutton[index=1]" using jQuery
@@ -161,7 +161,7 @@ Scenario: Teacher can view student work, ask student to keep working, on rubric 
   Given I am assigned to unit "allthethings"
 
   # Student submits project
-  Given I am on "http://studio.code.org/s/allthethings/lessons/38/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/38/levels/1?noautoplay=true"
   Then I wait to see "#runButton"
   And I press "runButton"
   And I wait to see "#finishButton"
@@ -179,7 +179,7 @@ Scenario: Teacher can view student work, ask student to keep working, on rubric 
   And I see no difference for "needs feedback icon is displayed"
 
   # Teacher gives feedbackAnd I wait to see "#rubric-input-performanceLevel1"
-  And I click selector "#ui-test-s-allthethings-lessons-38-levels-1-cell-data" once I see it to load a new tab
+  And I click selector "#ui-test-courses-allthethingscourse-units-1-lessons-38-levels-1-cell-data" once I see it to load a new tab
   And I wait to see "#ui-test-feedback-input"
   And I press the first "#ui-test-feedback-input" element
   And I press keys "Nice!" for element "#ui-test-feedback-input"
@@ -195,7 +195,7 @@ Scenario: Teacher can view student work, ask student to keep working, on rubric 
   And I see no difference for "feedback given icon is displayed"
 
   # Teacher can indicate student needs to keep working
-  And I click selector "#ui-test-s-allthethings-lessons-38-levels-1-cell-data" once I see it to load a new tab
+  And I click selector "#ui-test-courses-allthethingscourse-units-1-lessons-38-levels-1-cell-data" once I see it to load a new tab
   And I wait to see "#ui-test-feedback-input"
   And I click selector "#keep-working" once I see it
   And I press "#ui-test-submit-feedback" using jQuery
@@ -219,7 +219,7 @@ Scenario: Teacher can view choice levels
   Given I am assigned to unit "allthethings"
 
   # Student submits choice level
-  Given I am on "http://studio.code.org/s/allthethings/lessons/40/levels/1/sublevel/2?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/40/levels/1/sublevel/2?noautoplay=true"
   And I wait until I see selector "button:contains(Submit)"
   And I click selector "button:contains(Submit)"
   And I wait to see "#confirm-button"

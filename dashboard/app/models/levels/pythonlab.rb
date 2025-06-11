@@ -85,7 +85,7 @@ class Pythonlab < Level
     properties["start_sources"]
   end
 
-  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil)
+  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
     level_properties = super
     level_properties[:serializedMaze] = get_serialized_maze
     level_properties

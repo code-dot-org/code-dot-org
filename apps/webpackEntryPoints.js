@@ -61,8 +61,8 @@ const CODE_STUDIO_ENTRIES = {
   'devise/shared/_oauth_links': './src/sites/studio/pages/devise/shared/_oauth_links.js',
   'devise/registrations/edit': './src/sites/studio/pages/devise/registrations/edit.js',
   'devise/registrations/account_type': './src/sites/studio/pages/devise/registrations/account_type.js',
-  'followers/students_cannot_join': './src/sites/studio/pages/followers/students_cannot_join.js',
-  'followers/join_logged_out': './src/sites/studio/pages/followers/join_logged_out.js',
+  'gates/logged_out': './src/sites/studio/pages/gates/logged_out.js',
+  'gates/teacher_account_required': './src/sites/studio/pages/gates/teacher_account_required.js',
   'essential': './src/sites/studio/pages/essential.js',
   'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
   'layouts/_parent_email_banner': './src/sites/studio/pages/layouts/_parent_email_banner.js',
@@ -249,14 +249,13 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
   'pd/application/teacher_application/new': './src/sites/studio/pages/pd/application/teacher_application/new.js',
   'pd/application/principal_approval_application/new': './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
   'pd/workshop_daily_survey/new_general_foorm': './src/sites/studio/pages/pd/workshop_daily_survey/new_general_foorm.js',
-  'pd/workshop_enrollment/logged_out': './src/sites/studio/pages/pd/workshop_enrollment/logged_out.js',
-  'pd/workshop_enrollment/students_cannot_enroll': './src/sites/studio/pages/pd/workshop_enrollment/students_cannot_enroll.js',
   'pd/workshop_enrollment/new': './src/sites/studio/pages/pd/workshop_enrollment/new.js',
   'pd/workshop_enrollment/cancel': './src/sites/studio/pages/pd/workshop_enrollment/cancel.js',
   'pd/session_attendance/attendance_recorded': './src/sites/studio/pages/pd/session_attendance/attendance_recorded.js',
 
   'pd/professional_learning/index': './src/sites/studio/pages/pd/professional_learning/index.js',
   'pd/professional_learning/regional_workshop_catalog': './src/sites/studio/pages/pd/professional_learning/regional_workshop_catalog.js',
+  'pd/professional_learning/workshops/index': './src/sites/studio/pages/pd/professional_learning/workshops/index.js',
   'pd/regional_partner_mini_contact/new': './src/sites/studio/pages/pd/regional_partner_mini_contact/new.js',
 
   'pd/international_opt_in/new': './src/sites/studio/pages/pd/international_opt_in/new.js',
@@ -307,6 +306,10 @@ const OTHER_ENTRIES = {
   regionalPartnerMiniContact: './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
 };
 
+const LOCALIZATION_ENTRIES = {
+  localization: './src/localization/entrypoint.js',
+};
+
 /**
  * Generate webpack entry points for all our apps, or just a subset
  *
@@ -341,4 +344,5 @@ module.exports = {
   PROFESSIONAL_DEVELOPMENT_ENTRIES,
   SHARED_ENTRIES,
   OTHER_ENTRIES,
+  LOCALIZATION_ENTRIES,
 };

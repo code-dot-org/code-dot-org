@@ -79,13 +79,6 @@ body.music-black, body.background-dark {
   color: $neutral_light;
 }
 
-body.background-dark, body.background-light {
-  .header-wrapper .header {
-    position: fixed;
-    z-index: 1;
-  }
-}
-
 // For modern Lab2 labs, prevent the entire body from scrolling.
 // All content is typically displayed on the page at once, and
 // internal components manage their own scroll behavior.

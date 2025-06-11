@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-05-08T14:36:19.000Z",
   "level_num": "custom",
@@ -48,10 +49,9 @@
       "AI INVADES OUR SCHOOLS!.pdf": "a99c7c9d-9a78-4880-ae05-ca5ec87ad980.pdf",
       "AI Might Be Smart, But It Shouldn’t Be the Principal.pdf": "5d56e167-8c32-4eef-b6c5-e5d71e91c715.pdf"
     },
-    "long_instructions": "##AI in My Community: Helpful or Harmful?\r\n###AI in Schools\r\nYou're going to be working with news articles about Artificial Intelligence (AI). The text of each article is already attached within the assets section of the chatbot, so you can ask the AI questions directly about it.\r\n\r\n###Instructions\r\n* Click  **Upload** > **From Library**. Select the article(s) that you wish the chatbot to engage with.\r\n* Use the  chatbot to help you summarize the selected articles, find key points, and gain insights\r\n* Record outputs in your activity guide, focusing specifically on the following:\r\n\t* Who in the community benefits most from this AI?\r\n    * Who is most harmed by it?\r\n    * Are there any negative effects or unintended consequences, such as environmental impact?\r\n\r\nExperiment with different combinations of articles for different insights!\r\n",
+    "long_instructions": "##AI in My Community: Helpful or Harmful?\r\n###AI in Schools\r\nYou're going to be working with news articles about Artificial Intelligence (AI). The text of each article is already attached within the assets section of the chatbot, so you can ask the AI questions directly about it.\r\n\r\n###Instructions\r\n* Click  **Add** > **From Library**. Select the article(s) that you wish the chatbot to engage with.\r\n* Use the  chatbot to help you summarize the selected articles, find key points, and gain insights\r\n* Record outputs in your activity guide, focusing specifically on the following:\r\n\t* Who in the community benefits most from this AI?\r\n    * Who is most harmed by it?\r\n    * Are there any negative effects or unintended consequences, such as environmental impact?\r\n\r\nExperiment with different combinations of articles for different insights!\r\n",
     "name_suffix": "_2025"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-08T14:36:19.496+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson12-level2d_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson12-level2d_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:36:19.496+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson12-level2d_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson12-level2d_2024\"},{\"changed_at\":\"2025-05-29 21:41:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Aichat>

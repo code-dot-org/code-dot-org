@@ -13,10 +13,10 @@ Scenario:
   And I wait for the lab page to fully load
   And I verify progress in the header of the current page is "perfect" for level 1
   # Course overview should also show progress
-  Then I navigate to the course page for "hourofcode"
+  Then I navigate to the unit page for unit number "1" in course "hourofcode"
   And I verify progress for lesson 1 level 1 is "perfect"
   # Course overview in a different unit shouldn't show progress
-  Then I am on "http://studio.code.org/s/20-hour/lessons/2/levels/2?noautoplay=true"
+  Then I am on "http://studio.code.org/courses/20-hour/units/1/lessons/2/levels/2?noautoplay=true"
   And I verify progress in the header of the current page is "not_tried" for level 1
   # Level source is saved
   Then I am on "http://studio.code.org/hoc/1?noautoplay=true"
@@ -45,7 +45,7 @@ Scenario: Progress on the server that is not on the client
   Then I am on "http://studio.code.org/hoc/reset"
   Then I am on "http://studio.code.org/hoc/20?noautoplay=true"
   And I verify progress in the header of the current page is "attempted" for level 20
-  And I navigate to the course page for "hourofcode"
+  And I navigate to the unit page for unit number "1" in course "hourofcode"
   And I verify progress for lesson 1 level 20 is "attempted"
 
 @no_mobile

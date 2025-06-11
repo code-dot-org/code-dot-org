@@ -103,7 +103,7 @@ group :development, :test do
   gem 'faker', '~> 3.4', require: false
   gem 'fakeredis', require: false
   gem 'mocha', require: false
-  gem 'timecop'
+  gem 'timecop', '>= 0.9.4' # required for Ruby 3.1 support
 
   # For UI testing.
   gem 'cucumber'
@@ -189,7 +189,7 @@ gem 'highline', '~> 3.1.0'
 
 gem 'honeybadger', '>= 4.5.6' # error monitoring
 
-gem 'newrelic_rpm', '~> 6.14.0', group: [:staging, :development, :production] # perf/error/etc monitoring
+gem 'newrelic_rpm', '~> 8.3', group: [:staging, :development, :production] # perf/error/etc monitoring
 
 gem 'redcarpet', '~> 3.6.0'
 
@@ -210,8 +210,13 @@ gem 'retryable' # retry code blocks when they throw exceptions
 
 # Used by `uglifier` to minify JS assets in the Asset Pipeline.
 gem 'execjs'
+
 # JavaScript runtime used by ExecJS.
-gem 'mini_racer'
+# TODO: Either resume installing in all environments once Ubuntu and Mac OS
+# support the same version of mini_racer, or remove this dependency entirely
+# once node is installed in production. For more details, see
+# https://codedotorg.atlassian.net/browse/INF-708
+gem 'mini_racer', group: [:staging, :test, :production, :levelbuilder]
 
 gem 'jwt', '~> 2.7.0'
 

@@ -41,10 +41,12 @@ export const Header: React.FC<HeaderProps> = ({
           selectedButtonValue={selectedArchiveToggle}
           buttons={[
             {
+              id: 'ui-test-teaching',
               label: i18n.teaching(),
               value: 'teaching',
             },
             {
+              id: 'ui-test-archived',
               label: i18n.archived(),
               value: 'archived',
             },

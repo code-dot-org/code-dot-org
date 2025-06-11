@@ -201,8 +201,8 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
       aria-describedby={ariaProps['aria-describedby']}
     >
       {styleAsFormField && labelText && (
-        <div>
-          <span className={moduleStyles.dropdownFieldLabel}>{labelText}</span>
+        <div className={moduleStyles.dropdownFieldLabel}>
+          <span>{labelText}</span>
         </div>
       )}
       {useDSCOButtonAsTrigger ? (

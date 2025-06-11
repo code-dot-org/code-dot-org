@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## AI as a College Admissions Officer\r\n\r\nUse AI Chat to choose which two students to admit. \r\n\r\n### Do This:\r\n\r\n1. **Upload the PDF** with the six student profiles into AI Chat.\r\n2. **Copy and paste** the prompt below into AI Chat. Press **Send** and read AI Chat's response.\r\n\r\n>You are a college admissions officer. Read these six student profiles and choose which two should be admitted to your university. Explain why you selected these two students.\r\n\r\n3. Find the section in your Activity Guide called \"AI’s Selections\" and answer the questions.\r\n4. Revise your prompt to AI Chat and have it prioritize the same things you did.\r\n\r\n**Try it out!**",
+    "long_instructions": "## AI as a College Admissions Officer\r\n\r\nUse AI Chat to choose which two students to admit. \r\n\r\n### Do This:\r\n\r\n1. **Add the PDF** with the six student profiles into AI Chat.\r\n2. **Copy and paste** the prompt below into AI Chat. Press **Send** and read AI Chat's response.\r\n\r\n>You are a college admissions officer. Read these six student profiles and choose which two should be admitted to your university. Explain why you selected these two students.\r\n\r\n3. Find the section in your Activity Guide called \"AI’s Selections\" and answer the questions.\r\n4. Revise your prompt to AI Chat and have it prioritize the same things you did.\r\n\r\n**Try it out!**",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -50,6 +50,6 @@
       "College Applicants.pdf": "5a6f58aa-a450-4ec6-8482-a2c3ce435399.pdf"
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-08T14:34:51.495+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson6-level4b_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson6-level4b_2024\"},{\"changed_at\":\"2025-05-12 23:38:04 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-12 23:39:31 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-12 23:40:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:34:51.495+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson6-level4b_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson6-level4b_2024\"},{\"changed_at\":\"2025-05-12 23:38:04 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-12 23:39:31 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-12 23:40:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-29 21:36:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Aichat>

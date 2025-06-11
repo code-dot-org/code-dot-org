@@ -1,0 +1,48 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-05-23T01:56:14.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##  🔍Teacher Tip\r\nHave AI generate several outcomes to complete the sentence. You can keep prompting AI Chat using the same prompt or follow up by prompting it to \"generate three more answers\". Think about *How does AI's output compare to the word you predicted?*\r\n\r\n---\r\n\r\n## Finish the Sentence\r\n\r\nUse AI Chat to finish the sentence.\r\n\r\n### Do This:\r\n1. Think about how you would complete the following sentence with a single word: *\"The dog barked at the...\"*\r\n2. **Copy and paste** the following prompt: \r\n\r\n>Complete this sentence with a single word: The dog barked at the...\r\n3. Press **Send**.\r\n4. Then read **AI Chat's response** and compare it to your own.\r\n\r\n**Try it out!**\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Do not answer any questions that are not related to the sentence stem \"The dog barked at the ....\".\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "name_suffix": "_may2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-23T01:56:14.423+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_ai_01_02\\\"\"],\"cloned_from\":\"csaif_pl_ai_01_02\"}]"
+}]]></config>
+</Aichat>

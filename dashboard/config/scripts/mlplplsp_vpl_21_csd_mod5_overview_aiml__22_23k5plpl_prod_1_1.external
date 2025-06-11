@@ -19,11 +19,11 @@ markdown <<MARKDOWN
     </div>
     <div style="width: 30px; text-align: center;">→</div>
     <div style="background-color: #E8DAEF; padding: 15px; border-radius: 10px; text-align: center; width: 200px;">
-        Try some Code
+        Run some Code.
     </div>
     <div style="width: 30px; text-align: center;">→</div>
     <div style="background-color: #D1F2EB; padding: 15px; border-radius: 10px; text-align: center; width: 240px;">
-        Student run code that plays music.
+        Students run code that plays music.
     </div>
 </div>
 
@@ -34,7 +34,7 @@ markdown <<MARKDOWN
     </div>
     <div style="width: 30px; text-align: center;">→</div>
     <div style="background-color: #E8DAEF; padding: 15px; border-radius: 10px; text-align: center; width: 200px;">
-        Edit or Add Code
+        Modify the Code.
     </div>
     <div style="width: 30px; text-align: center;">→</div>
     <div style="background-color: #D1F2EB; padding: 15px; border-radius: 10px; text-align: center; width: 240px;">
@@ -49,7 +49,7 @@ markdown <<MARKDOWN
     </div>
     <div style="width: 30px; text-align: center;">→</div>
     <div style="background-color: #E8DAEF; padding: 15px; border-radius: 10px; text-align: center; width: 200px;">
-        Create with Code
+        Create new Code.
     </div>
     <div style="width: 30px; text-align: center;">→</div>
     <div style="background-color: #D1F2EB; padding: 15px; border-radius: 10px; text-align: center; width: 240px;">

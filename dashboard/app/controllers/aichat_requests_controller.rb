@@ -1,7 +1,6 @@
 require 'cdo/throttle'
 
 class AichatRequestsController < ApplicationController
-  include AichatSagemakerHelper
   authorize_resource class: false
 
   AICHAT_REQUEST_COUNT_PREFIX = "aichat/requests/".freeze
@@ -23,10 +22,10 @@ class AichatRequestsController < ApplicationController
   # aichatModelCustomizations: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
   # aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
   def start_chat_completion
-    return render status: :forbidden, json: {} unless AichatSagemakerHelper.can_request_aichat_chat_completion?
     unless chat_completion_has_required_params?
       return render status: :bad_request, json: {}
     end
+    return render status: :forbidden, json: {user_type: current_user.user_type} unless can_access_aichat? || can_access_ai_tutor2?(params[:aichatContext][:currentLevelId])
 
     return head :too_many_requests if should_throttle_request_count?
 
@@ -86,6 +85,16 @@ class AichatRequestsController < ApplicationController
       response: request.response
     }
     render(status: :ok, json: response_body)
+  end
+
+  private def can_access_ai_tutor2?(level_id)
+    # AiTutor2 requests only come from python lab levels.
+    return false if level_id.nil? || DCDO.get("block_ai_tutor2_chat_completion", false)
+    Level.find(level_id).is_a? Pythonlab
+  end
+
+  private def can_access_aichat?
+    !DCDO.get("block_aichat_chat_completion", false) && current_user.has_aichat_access?
   end
 
   private def should_throttle_request_count?

@@ -107,6 +107,7 @@ class UnitEditor extends React.Component {
     isCSDCourseOffering: PropTypes.bool,
     isMissingRequiredDeviceCompatibilities: PropTypes.bool,
     allowMajorCurriculumChanges: PropTypes.bool,
+    initialEnableBlocklyKeyboardNavigation: PropTypes.bool,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
@@ -167,6 +168,8 @@ class UnitEditor extends React.Component {
       instructionType: this.props.initialInstructionType,
       instructorAudience: this.props.initialInstructorAudience,
       participantAudience: this.props.initialParticipantAudience,
+      enableBlocklyKeyboardNavigation:
+        this.props.initialEnableBlocklyKeyboardNavigation || false,
     };
   }
 
@@ -300,6 +303,8 @@ class UnitEditor extends React.Component {
       is_migrated: this.props.isMigrated,
       include_student_lesson_plans: this.state.includeStudentLessonPlans,
       use_legacy_lesson_plans: this.state.useLegacyLessonPlans,
+      enable_blockly_keyboard_navigation:
+        this.state.enableBlocklyKeyboardNavigation,
     };
 
     $.ajax({
@@ -545,6 +550,26 @@ class UnitEditor extends React.Component {
               style={styles.input}
               onChange={e => this.setState({wrapupVideo: e.target.value})}
             />
+          </label>
+          <label>
+            Enable Keyboard Navigation in Blockly (Experimental)
+            <input
+              type="checkbox"
+              checked={this.state.enableBlocklyKeyboardNavigation}
+              style={styles.checkbox}
+              onChange={() =>
+                this.setState({
+                  enableBlocklyKeyboardNavigation:
+                    !this.state.enableBlocklyKeyboardNavigation,
+                })
+              }
+            />
+            <HelpTip>
+              <p>
+                Experimental: Enables keyboard-based navigation in Blockly
+                workspaces. May not be fully stable.
+              </p>
+            </HelpTip>
           </label>
         </CollapsibleEditorSection>
         <CollapsibleEditorSection title="Supported locales" collapsed={true}>

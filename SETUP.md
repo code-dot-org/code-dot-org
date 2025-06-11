@@ -21,7 +21,7 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
     - *Important*: When done, check for correct versions of these dependencies:
 
      ```sh
-     ruby --version     # --> ruby 3.0.5
+     ruby --version     # --> ruby 3.1.0
      node --version     # --> v20.18.3
      git-lfs --version  #  >= git-lfs/3.0
      uv --version       #  >= 0.5.8
@@ -29,6 +29,9 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
 
 1. `git lfs pull`
 
+1. `bundle config --local without staging test production levelbuilder`
+    - This step prevents installation of gems that are not needed for local development, some of which can break during the next step.
+    
 1. `bundle install`
     - This step often fails to due environment-specific issues. Look in the [Bundle Install Tips](#bundle-install-tips) section below for steps to resolve many common issues.
 
@@ -518,9 +521,16 @@ Where [VERSION] is the current version of eventmachine in Gemfile.lock. For exam
 
 - `gem install eventmachine -v 1.2.7 -- --with-openssl-dir=$(brew --prefix libressl)`
 
+#### mini_racer and libv8-node
+
+If `bundle install` fails while installing `mini_racer` or `libv8-node`, try running this first:
+```
+bundle config --local without staging test production levelbuilder
+```
+
 #### Xcode Set Up
 
-OS X: when running `bundle install`, you may need to also run `xcode-select --install`. See [stackoverflow](http://stackoverflow.com/a/39730475/3991031). If this doesn't work, step 9 in the overview will not run correctly. In that case run the following command in the Terminal (found from
+OS X: when running `bundle install`, you may need to also run `xcode-select --install`. See [stackoverflow](http://stackoverflow.com/a/39730475/3991031). If this doesn't work, `rake build` will not run correctly. In that case run the following command in the Terminal (found from
   <https://github.com/nodejs/node-gyp/issues/569>): `sudo xcode-select -s /Applications/Xcode.app/Contents/Developer`
 
 ### Recommended hardware

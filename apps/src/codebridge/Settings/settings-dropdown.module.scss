@@ -9,6 +9,7 @@ $space-l: 8px;
   position: absolute;
   cursor: pointer;
   border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
   background-color: var(--background-neutral-secondary);
   scrollbar-color: var(--text-neutral-tertiary) var(--background-neutral-secondary);
   color: var(--text-neutral-primary);

@@ -22,7 +22,9 @@ import {
 } from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-jest.mock('@cdo/apps/schoolInfo/utils/fetchSchools');
+jest.mock('@cdo/apps/schoolInfo/utils/fetchSchools', () => ({
+  fetchSchools: jest.fn().mockResolvedValue([]),
+}));
 jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({
   getAuthenticityToken: jest.fn().mockReturnValue('authToken'),
 }));

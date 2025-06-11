@@ -1,0 +1,133 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:56:46.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential"
+          ]
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "bcwhxx6%aN9.4jm8=BQ1",
+              "x": 150,
+              "y": 50,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "yahritza_y_su_esencia_no_se_puede_decir_adios/vocals_chorus_1"
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "yahritza_y_su_esencia_no_se_puede_decir_adios",
+      "sounds": {
+        "yahritza_y_su_esencia_no_se_puede_decir_adios": [
+          "vocals_chorus_1"
+        ],
+        "indie": [
+          "guitar_chord_change",
+          "guitar_clean_arp",
+          "guitar_clean_phrase",
+          "guitar_clean_strum",
+          "guitar_indie_riff",
+          "guitar_lick",
+          "guitar_low_riff",
+          "guitar_octave_line",
+          "guitar_slap_line",
+          "guitar_tremolo_line",
+          "rhythm_guitar"
+        ],
+        "pop": [
+          "guitar_clean_line",
+          "guitar_drive_line",
+          "guitar_funky_wah",
+          "guitar_plastic_line",
+          "guitar_short_phrase",
+          "guitar_slap_phrase",
+          "guitar_stabs"
+        ],
+        "groove": [
+          "guitar_bird",
+          "guitar_cloud",
+          "guitar_funnel",
+          "guitar_high_riff",
+          "guitar_rainbow",
+          "guitar_thread"
+        ]
+      },
+      "showSoundFilters": true,
+      "showSoundsPanelInSoundsMode": true,
+      "sortUnrestrictedPacksByType": true
+    },
+    "long_instructions": "#### Check-In\r\n\r\nCreate a song with guitar tracks that play underneath the chorus vocals. You should use at least 2 _different_ guitar lead tracks. Try to mix and match what sounds good to you!\r\n\r\nYour code will need to combine `play together` and `play sequential` blocks to pass this level. Try listening to the example for what this could sound like!",
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHor/cwejr3U15rWOIkH8dDTLeaAYtCh7rvJ4qD5+CIxST/M\nKcKET2BXjPSzgsj4vEPimRw60pGInB6rV5fMMX6hhwMIDB/wWGDi0Uim+eQY\ndohrM9z9HTHVugFaWEp0771ePHyEt95yP7+EOTOPZV1diVnMbs9/2135knGd\n9s1YpuRWKDoN/mgAnRW28sSXbRoSi5/qfR4hECOM+iaC22fJdytqzOpH7Rb1\nfVezfUgyRbhAwbadoBgZslLzLfolYgW26MtzkJKOvzobGO8VkIuRvqxmxIYH\nwffbU66u+4yYcvJXHIHenhaEwNyWAhZnr6e2RLVPv8INVaISxBp7SyTKmNcW\nSF+FRiBQI+yF3Z5k654ab8/nHmEiztlWrK/GkjvhibZBa2QAh0mpwiWceGqy\nt/xO0w7zoKsPzeqB/fTrJAwPEoRo0xUcg0lt0Vbkh+vBQv8+9jgBKZ1qq18g\nmA5ijsP/dmM6Pb9Ol01UYH8UXHPzn4kWzrC1LmuitXvzbd2BmfKTf2xW6b4A\ntASSeJgNkpjzLjxmDaQ0PYg8MIqmXfDfkjdGmr3wyJNj+UR/GuMzMXYvBHOy\n1A0TnzqvVk/D3K0UPR8ffNH2cebt19lCkpBt0Lr1rYjLsUcYJN1eZyGSuJLn\nzgSGSSsYdxQC7JWpKwIVeSE7zjFr6cw9Vu3RiQwu8x2H1JUQCrvHCBCmRHR3\nvbd7NfHPwd9UTbyTbOGXjcxLCOCEdCsmEW8lFku7blxm0mKoNEP/zeZRj9ME\nTzHqLzLFyKnFSEt1boe9bDQYdbyJ8ImPX/lPP9PUk9Y/engxoNnsfL0NX6wy\nhj1875VBgU6QIuckg/V/SARnQ0fPQN1YXGMN0h+zEzlsTmTkUKrSoMwdvkcX\nTuR677a8jNTuSP6GRC70gCMGRWiKovDcAAkq+rTDkr1tofPk76TAAydlZTLw\nJh+mYmYuj4BMNIyNBBCb2+ce1dc8ieVHjHroO9mv8/61MMzrkO4wToxE+PRl\n6ihRnZFHPTZYm4mTEQacWjkAJKXK6QhYGqklO0aVPm5AWjgoN6OabWjHmdKp\nUj2u0+3PtytZm/I6zU/Xu/cYC3iDq6lva4zUh6rCglO9cvQxLL44yK6rNhLS\n9GZwDJZZnjUT/NHfHQhzpfpftmbPX6+BMAVP0Qy8QxIAU3NTLj71gmIcae8v\nMn1I65K28EM2VEcHYco69Y77KVeElwZyy40nar8j25+xVBbOMAj9sQ==\n",
+    "validations": [
+      {
+        "key": "test-music-lab-sequence-practice-formative_4de548a7-8e34-4d32-a71a-4abd525f0732",
+        "message": "[Auto-pass to validation]",
+        "next": true,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "You did it!",
+      "validationFailureMessage": "Something's not quite right! Try reading the requirements again!",
+      "playerTitle": "Example",
+      "validationMode": "type"
+    },
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:46.028+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequence-practice-formative\\\"\"],\"cloned_from\":\"test-music-lab-sequence-practice-formative\"},{\"changed_at\":\"2025-06-09 22:24:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

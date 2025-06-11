@@ -5,26 +5,59 @@ description 'description here'
 markdown <<MARKDOWN
 # Voices from the Classroom
 
-#### Grounded in computational thinking and real-world relevance, this unit fosters curiosity, critical thinking, and innovation, preparing students to engage with networking technologies and their societal implications. Students examine data transmission, IP addressing, DNS resolution, network security, and AI’s role in cybersecurity. Through hands-on simulations and discussions, they analyze how data moves through networks, how protocols ensure secure communication, and how issues like the digital divide affect global connectivity. Ethical problem-solving and collaboration help students propose solutions to improve Internet access and security.
+#### Code.org's Fabric of the Internet unit explores how the Internet and networks function, their societal and ethical impacts, and their real-world applications. You examine data transmission, IP addressing, DNS resolution, network security, and AI’s role in cybersecurity. Grounded in computational thinking and real-world relevance, this unit fosters curiosity, critical thinking, and innovation, preparing you to engage with networking technologies and their societal implications.
 
-#### See what educators are saying about teaching the **Networks and the Internet** unit. 
+#### See what educators are saying about teaching **The Fabric of the Internet and AI** unit. 
 
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f0f0f0; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/79eb210b5f7afd55420449d359b9a7e2-image-1740767255820.png" alt="Quotation Mark Icon" style="width: 40px; height: 40px; margin-bottom: 10px;">
-        <p style="font-size:14pt;">“Quote”</p>
-    </div>
-<div style="background-color: #f0f0f0; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/79eb210b5f7afd55420449d359b9a7e2-image-1740767255820.png" alt="Quotation Mark Icon" style="width: 40px; height: 40px; margin-bottom: 10px;">
-        <p style="font-size:14pt;">“Quote”</p>
-    </div>
-    
-<div style="background-color: #f0f0f0; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/79eb210b5f7afd55420449d359b9a7e2-image-1740767255820.png" alt="Quotation Mark Icon" style="width: 40px; height: 40px; margin-bottom: 10px;">
-        <p style="font-size:14pt;">“Quote”</p>
-    </div>
+<!-- Flexbox Section 1 -->
+<div style="display: flex; align-items: center; gap: 5px; width: 80%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+   
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #b2dee3; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+      The lesson tools and simulators made complex concepts like data transmission and network security feel accessible and fun to teach.
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
 </div>
 
+<!-- Flexbox Section 2 -->
+<div style="display: flex; align-items: center; gap: 5px; flex-direction: row-reverse; width: 80%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+   
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #ffd199; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+      This unit does an amazing job blending technical knowledge with real-world relevance. Students not only learn how the Internet works but also think critically about digital equity, ethics, and AI’s role in cybersecurity.
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
+</div>
+
+<!-- Flexbox Section 3 -->
+<div style="display: flex; align-items: center; gap: 5px; width: 80%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #f6a6a6; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+      At first, some students weren’t sure what to make of the AI chatbot, but as they interacted with it more, it really got them thinking critically about AI and the Internet.
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
+</div>
+
+---
 
 <div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
     
@@ -36,11 +69,10 @@ You've finished the first lesson in this professional learning module! <br><br><
     </p>
 </div>
 
-
 <table width="100%" cellspacing="0" cellpadding="15">
     <tr>
-        <td style="background-color: #b2dee3; text-align: center;"><b>Lesson One</b><br>Teaching Networks <br>and the Internet</td>
-        <td style="background-color: #f7f8fa; text-align: center;"><b>Lesson Two</b><br>Lesson <br> Exploration</td>
+        <td style="background-color: #b2dee3; text-align: center;"><b>Lesson One</b><br>Teaching The Fabric of the <br> Internet and AI</td>
+        <td style="background-color: #f7f8fa; text-align: center;"><b>Lesson Two</b><br>Lesson Exploration</td>
 </table>
 
 

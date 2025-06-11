@@ -39,6 +39,12 @@ class OpenaiEvaluateController < ApplicationController
       aiReasoning: "The response contains profanity and could not be evaluated.",
     }
 
+    pii_detected_response = {
+      aiEvaluation: "PII detected",
+      evaluationCriteria: "Does the student work contain personally identifying information?",
+      aiReasoning: "The response contains PII and could not be evaluated.",
+    }
+
     if level.is_a?(FreeResponse) && student_work.delete(' ').empty?
       no_attempt_response[:aiReasoning] = "The student response was blank."
       # mimic the format of the response from AI
@@ -51,6 +57,9 @@ class OpenaiEvaluateController < ApplicationController
       return render(status: :ok, json: json_response)
     elsif ProfanityFilter.find_potential_profanity(student_work, "en", {})
       json_response = {"content" => profanity_detected_response.to_json}
+      return render(status: :ok, json: json_response)
+    elsif ShareFiltering.find_pii_failure(student_work)
+      json_response = {"content" => pii_detected_response.to_json}
       return render(status: :ok, json: json_response)
     elsif Rails.env.test?
       # Return dummy data in the test environment

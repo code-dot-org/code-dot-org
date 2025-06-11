@@ -1,7 +1,6 @@
 - @page_title = 'Workshop Catalog'
-- @zip_from_school_info = current_user.school_info&.school&.zip&.to_s&.rjust(5, '0') || current_user.school_info&.zip&.to_s&.rjust(5, '0')
 #regional-workshop-catalog
 
 %link{href: "/shared/css/2022-rebrand-update.css", rel: "stylesheet"}
 %link{href: asset_path('css/pd.css'), rel: "stylesheet"}
-%script{src: webpack_asset_path('js/pd/professional_learning/regional_workshop_catalog.js'), data: {zipFromSchoolInfo: @zip_from_school_info.to_json}}
+%script{src: webpack_asset_path('js/pd/professional_learning/regional_workshop_catalog.js'), data: {availableNationalWorkshops: @available_national_workshops.to_json, zipFromSchoolInfo: @zip_from_school_info.to_json}}

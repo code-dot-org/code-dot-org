@@ -199,7 +199,7 @@ module Services
         "New UnitGroup has the same instructor_audience as the existing unit" => @unit_group.instructor_audience == dupe_unit.instructor_audience,
         "New UnitGroup has the same participant_audience as the existing unit" => @unit_group.participant_audience == dupe_unit.participant_audience,
         "New UnitGroup has the same published_state as the existing unit" => @unit_group.published_state == dupe_unit.published_state,
-        "New UnitGroup is assigned to the existing unit" => @unit_group.default_units.first.id == @unit.id,
+        "New UnitGroup is assigned to the existing unit" => @unit_group.first_unit.id == @unit.id,
         "New UnitGroup is a single unit course" => @unit_group.single_unit_course?,
         "New UnitGroup has the same course_version as the existing unit" => @unit_group.course_version.id == original_course_version_id,
         "CourseVersion has a content_root_type of 'UnitGroup'" => course_version.content_root_type == 'UnitGroup',

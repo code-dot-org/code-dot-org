@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-04-28T18:19:15.000Z",
   "level_num": "custom",
@@ -172,7 +173,7 @@
         "callout": "run-button"
       }
     ],
-    "long_instructions": "####<i class=\"fa-solid fa-music\"></i> Try the Bonus Blocks!\r\nThe blocks are already in place but you need to define the notes & drums.\r\n1. Click on the `play notes` block to create a unique melody. [<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=id:notes)\r\n2. Then, click on the `play drums` block to make your own beat. [<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=id:drums)\r\n3. Press [Run](#clickable=run-button) then trigger your new sounds!",
+    "long_instructions": "#### <i class=\"fa-solid fa-person-chalkboard\"></i> **Teacher Tip:**\r\nAs part of the Modify step, have students change either what causes the sound to play or the sound itself. Then, ask them to test it and explain how the change affects the program’s behavior or mood.\r\n___\r\n####<i class=\"fa-solid fa-music\"></i> Try the Bonus Blocks!\r\nThe blocks are already in place but you need to define the notes & drums.\r\n1. Click on the `play notes` block to create a unique melody. [<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=id:notes)\r\n2. Then, click on the `play drums` block to make your own beat. [<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=id:drums)\r\n3. Press [Run](#clickable=run-button) then trigger your new sounds!",
     "name_suffix": "_1",
     "predict_settings": {
       "isPredictLevel": false
@@ -183,8 +184,7 @@
     },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-28T18:19:15.037+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-effects_launch\\\"\"],\"cloned_from\":\"music-coding-intro-effects_launch\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-28T18:19:15.037+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-effects_launch\\\"\"],\"cloned_from\":\"music-coding-intro-effects_launch\"},{\"changed_at\":\"2025-05-21 22:21:25 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

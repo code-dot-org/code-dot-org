@@ -71,6 +71,12 @@ jobs:
           file: frontend/apps/marketing/Dockerfile
           tags: marketing:test
           push: false
+          network: host # This is required for the `turbo` command to work properly in the Dockerfile.
+          # Note TURBO_TOKEN is not a secret because we use a local turbo instance, it is stubbed out for future use only.
+          build-args: |
+            TURBO_TEAM=${{ vars.TURBO_REPO_TEAM }}
+            TURBO_TOKEN=${{ secrets.TURBO_REPO_TOKEN }}
+            TURBO_API=${{ vars.TURBO_REPO_API }}
 
       - name: Prepare Test Environment
         shell: bash
@@ -102,16 +108,8 @@ jobs:
       - name: UI Tests
         uses: ./.github/actions/frontend/marketing/ui-tests
         with:
-          STAGE: pr
+          ENVIRONMENT_TYPE: pr
           CONTENTFUL_SPACE_ID: ${{ vars.CONTENTFUL_SPACE_ID }}
           CONTENTFUL_DELIVERY_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_TOKEN}}
           APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY}}
           DRAFT_MODE_TOKEN: ci-draft-mode
-
-      - name: Run Google Lighthouse Audits
-        uses: treosh/lighthouse-ci-action@2f8dda6cf4de7d73b29853c3f29e73a01e297bd8
-        with:
-          urls: ${{ inputs.MARKETING_BASE_URL || 'http://localhost:3001' }}/en-US/engineering/all-the-things
-          uploadArtifacts: true
-          temporaryPublicStorage: true
-          configPath: './frontend/apps/marketing/.lighthouserc.js'
