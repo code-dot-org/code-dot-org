@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Career Connections Overview
 
-#### The <a href="https://courseinfo.code.org/csaif/" target="blank" rel="noopener noreferrer">AI Foundations Curriculum</a> integrates career exploration and emerging technologies as students develop foundational skills in computing.
+#### The <a href="https://studio.code.org/courses/artificial-intelligence-foundations-2025/" target="blank" rel="noopener noreferrer">AI Foundations Curriculum</a> integrates career exploration and emerging technologies as students develop foundational skills in computing.
 
 #### Throughout the course, students engage with real-world case studies, hands-on projects, and industry-relevant tools to see how programming skills apply across various fields. 
 
@@ -45,11 +45,6 @@ markdown <<MARKDOWN
 
 </body>
 </html>
-
-
----
-
-#### In the **Programming Fundamentals** unit, students begin by exploring how their skills and interests align with computing careers and the evolving tech landscape. This early connection helps them see the real-world impact of coding and problem-solving.
 
 
 <div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">

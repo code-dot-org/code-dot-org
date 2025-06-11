@@ -19,6 +19,7 @@ import {ValidationError} from '../responseValidators';
 import {Channel, ProjectAndSources, ProjectSources} from '../types';
 
 import {ChannelsStore} from './ChannelsStore';
+import {getProjectThumbnailUrl, updateProjectThumbnail} from './filesApi';
 import {SourcesStore} from './SourcesStore';
 
 const {reload} = require('@cdo/apps/utils');
@@ -53,14 +54,25 @@ export default class ProjectManager {
   private reduceChannelUpdates: boolean;
   private initialSaveComplete: boolean;
   private forceReloading: boolean;
+  private isShareView: boolean | undefined;
+  private thumbnailUrl: string | undefined;
+  private thumbnailPngBlob: Blob | undefined;
 
-  constructor(
-    sourcesStore: SourcesStore,
-    channelsStore: ChannelsStore,
-    channelId: string,
-    reduceChannelUpdates: boolean,
-    metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
-  ) {
+  constructor({
+    sourcesStore,
+    channelsStore,
+    channelId,
+    reduceChannelUpdates,
+    isShareView = false,
+    metricsReporter = Lab2Registry.getInstance().getMetricsReporter(),
+  }: {
+    sourcesStore: SourcesStore;
+    channelsStore: ChannelsStore;
+    channelId: string;
+    reduceChannelUpdates: boolean;
+    isShareView?: boolean;
+    metricsReporter?: LabMetricsReporter;
+  }) {
     this.channelId = channelId;
     this.sourcesStore = sourcesStore;
     this.channelsStore = channelsStore;
@@ -68,6 +80,7 @@ export default class ProjectManager {
     this.initialSaveComplete = false;
     this.forceReloading = false;
     this.metricsReporter = metricsReporter;
+    this.isShareView = isShareView;
   }
 
   getChannelId(): string {
@@ -92,7 +105,10 @@ export default class ProjectManager {
 
     this.lastChannel = channel;
     const abuseScore = await this.channelsStore.getAbuseScore(channel);
-    return {sources, channel, abuseScore};
+    const sharingDisabled = await this.channelsStore.getSharingDisabled(
+      channel
+    );
+    return {sources, channel, abuseScore, sharingDisabled};
   }
 
   // Restore the given version of the project. This will call restore on the sources store
@@ -320,6 +336,31 @@ export default class ProjectManager {
     this.lastSource = JSON.stringify(lastSource);
   }
 
+  getShouldCaptureThumbnail() {
+    return this.channelId && this.lastChannel?.isOwner && !this.isShareView;
+  }
+
+  setThumbnail(pngBlob: Blob) {
+    this.thumbnailPngBlob = pngBlob;
+    this.thumbnailUrl = getProjectThumbnailUrl(this.channelId);
+  }
+
+  /**
+   * Uploads a thumbnail image to the thumbnail path via the files API.
+   */
+  async saveThumbnail() {
+    if (this.thumbnailUrl && this.thumbnailPngBlob) {
+      try {
+        updateProjectThumbnail(this.channelId, this.thumbnailPngBlob);
+      } catch (e) {
+        this.metricsReporter.logWarning('Failed to save thumbnail.');
+        return;
+      }
+    } else {
+      return Promise.resolve();
+    }
+  }
+
   /**
    * Helper function to save a project, called either after a timeout or directly by save().
    * On a save, we check if there are unsaved changes to the source or channel.
@@ -368,6 +409,10 @@ export default class ProjectManager {
           this.lastChannel.projectType,
           forceNewVersion
         );
+        if (this.thumbnailPngBlob) {
+          await this.saveThumbnail();
+          this.thumbnailPngBlob = undefined;
+        }
       } catch (error) {
         let errorToReport: Error;
         if (error instanceof Error) {
@@ -403,6 +448,13 @@ export default class ProjectManager {
         this.channelToSave = {
           ...this.channelToSave,
           labConfig: this.sourcesToSave?.labConfig,
+        };
+      }
+
+      if (this.thumbnailUrl && !this.lastChannel?.thumbnailUrl) {
+        this.channelToSave = {
+          ...this.channelToSave,
+          thumbnailUrl: this.thumbnailUrl,
         };
       }
 

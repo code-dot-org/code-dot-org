@@ -9,7 +9,7 @@
     "encrypted": "false",
     "background": "music-black",
     "instructions_important": "false",
-    "long_instructions": "#### <i class=\"fa-solid fa-person-chalkboard\"></i> **Teacher Tip:** \r\n##### This is another opportunity for students to create using what they have learned, and is the final step in the Use-Modify-Create pedagogical practice. \r\n\r\n##### **Teacher Note**: This is Lesson 2, Level 12 from the curriculum.\r\n\r\n\r\n___\r\n####<i class=\"fa-duotone fa-solid fa-sparkles\"></i> Create a function!\r\nNow it's your turn.  \r\n\r\n1. Drag [my function](#clickable=flyout-fourth-block) into your workspace.\r\n2. Name the function.\r\n3. Add sounds into the function to define it.\r\n4. Call the function by dragging it from the toolbox to under [when run](#clickable=when-run-block).\r\n\r\n--- \r\nYou can choose a different song any time! \r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=start-over-button)\r\n\r\n\r\n",
+    "long_instructions": "#### <i class=\"fa-solid fa-person-chalkboard\"></i> **Teacher Tip:** \r\n##### In this Create step, you can encourage students to design a function that adds a unique feature to their project. Give them the freedom to be creative, and support them by asking guiding questions like, “What steps does your function need to follow?” or “How will you know it works?”\r\n\r\n##### **Teacher Note**: This is Lesson 2, Level 12 from the curriculum.\r\n\r\n\r\n___\r\n####<i class=\"fa-duotone fa-solid fa-sparkles\"></i> Create a function!\r\nNow it's your turn.  \r\n\r\n1. Drag [my function](#clickable=flyout-fourth-block) into your workspace.\r\n2. Name the function.\r\n3. Add sounds into the function to define it.\r\n4. Call the function by dragging it from the toolbox to under [when run](#clickable=when-run-block).\r\n\r\n--- \r\nYou can choose a different song any time! \r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=start-over-button)\r\n\r\n\r\n",
     "hide_share_and_remix": "false",
     "level_data": {
       "validationTimeout": 3,
@@ -59,7 +59,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-28T18:19:03.808+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-beat_launch\\\"\"],\"cloned_from\":\"music-coding-intro-functions-beat_launch\"},{\"changed_at\":\"2025-04-28 22:44:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-05-05 19:59:00 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-28T18:19:03.808+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-beat_launch\\\"\"],\"cloned_from\":\"music-coding-intro-functions-beat_launch\"},{\"changed_at\":\"2025-04-28 22:44:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-05-05 19:59:00 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-05-21 19:47:55 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

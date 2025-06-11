@@ -4,7 +4,7 @@ description 'description here'
 
 markdown <<MARKDOWN
 ## Who is Coding with Music for? 
-#### Music Lab is designed for students with diverse interests and abilities, including those who may not connect with traditional programming activities. It’s ideal for teachers seeking flexible, inclusive resources to introduce computer science in an engaging, creative format.
+#### Coding with Music is designed for students with diverse interests and abilities, including those who may not connect with traditional programming activities. It’s ideal for teachers seeking flexible, inclusive resources to introduce computer science in an engaging, creative format.
 
 ## Why Teach Coding with Music? 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 0 auto; max-width: 1200px;">
@@ -37,7 +37,7 @@ markdown <<MARKDOWN
       <img src="https://images.code.org/60e46998f659c5791728b71310db942b-image-1736454577157.png" alt="Teacher-friendly icon" style="width: 40px; height: 40px; margin-bottom: 10px;">
       <p style="font-size: 16pt; font-weight: bold;">Teacher-Friendly</p>
       <ul style="text-align: left; font-size: 14pt;">
-        Built for educators new to CS or music, with no prior experience required. Music teachers can explore tangents if desired.
+        Built for educators new to CS or music, with no prior experience required. Music teachers can explore more advanced musical ideas.
       </ul>
     </div>
   </div>

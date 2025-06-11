@@ -16,10 +16,7 @@ import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {sendSuccessReport} from '../code-studio/progressRedux';
-import {
-  getCurrentLevel,
-  getCurrentLesson,
-} from '../code-studio/progressReduxSelectors';
+import {getCurrentLevel} from '../code-studio/progressReduxSelectors';
 import {queryParams} from '../code-studio/utils';
 import useLifecycleNotifier from '../lab2/hooks/useLifecycleNotifier';
 import {LabProps} from '../lab2/types';
@@ -79,9 +76,6 @@ const PanelsLabView: React.FunctionComponent<
   const dispatch = useAppDispatch();
 
   const {panels, appName, skipUrl, offerBrowserTts} = levelProperties;
-  const background = useAppSelector(
-    state => getCurrentLesson(state)?.background || null
-  );
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
 
   const dialogControl = useDialogControl();
@@ -171,7 +165,6 @@ const PanelsLabView: React.FunctionComponent<
   return (
     <PanelsView
       panels={panels}
-      background={background}
       onContinue={onContinue}
       onSkip={skipUrl ? onSkip : undefined}
       targetWidth={windowWidth}

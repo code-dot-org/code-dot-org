@@ -29,6 +29,8 @@ export interface ChannelsStore {
   unpublish: (channel: Channel) => Promise<Response>;
 
   getAbuseScore: (channel: Channel) => Promise<number>;
+
+  getSharingDisabled: (channel: Channel) => Promise<boolean>;
 }
 
 // Note: We don't need to actually save a channel for local storage.
@@ -74,6 +76,11 @@ export class LocalChannelsStore implements ChannelsStore {
   getAbuseScore() {
     // Abuse score is not supported for local storage.
     return Promise.resolve(0);
+  }
+
+  getSharingDisabled() {
+    // sharingDisabled is not supported for local storage.
+    return Promise.resolve(false);
   }
 }
 
@@ -121,5 +128,9 @@ export class RemoteChannelsStore implements ChannelsStore {
 
   getAbuseScore(channel: Channel) {
     return channelsApi.fetchAbuseScore(channel.id);
+  }
+
+  getSharingDisabled(channel: Channel) {
+    return channelsApi.fetchSharingDisabled(channel.id);
   }
 }

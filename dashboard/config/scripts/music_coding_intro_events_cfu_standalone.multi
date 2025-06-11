@@ -1,6 +1,6 @@
 name 'music-coding-intro-events-cfu_standalone'
-title 'Use event triggers!'
-question '*Who should use event triggers? Tyler, Sammy, Pedro or Lizzy?*'
+title 'Use events!'
+question '*Who should use events? Tyler, Sammy, Pedro or Lizzy?*'
 right 'Tyler wants to **control when the drum sounds play,** like a DJ.'
 wrong 'Sammy wants to **play Twinkle, Twinkle in order** when she presses Run.'
 wrong 'Pedro is trying to **make his code more efficient**.'

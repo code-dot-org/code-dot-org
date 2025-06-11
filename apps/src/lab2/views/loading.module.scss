@@ -52,14 +52,7 @@
   pointer-events: none;
   opacity: 0;
   z-index: 70;
-
-  &Dark {
-    background-color: $dark_black;
-  }
-
-  &Light {
-    background-color: $neutral_light;
-  }
+  background-color: var(--background-neutral-lab);
 
   &.noFadeLoading {
     opacity: 0;

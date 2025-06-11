@@ -1,0 +1,446 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T03:00:55.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+        },
+        "addFunctionDefinition": true,
+        "addFunctionCalls": true
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sounds_sequential",
+                        "id": "play_sounds_sequential",
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "play_sound_at_current_location_simple2",
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "beethoven_symphony_no_6/main_theme_1"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "x81^T9x(l1(#r5o;gYM.",
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "beethoven_symphony_no_6/main_theme_2"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "*;EaQ)fmNmyozx?ktA8C",
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "beethoven_symphony_no_6/main_theme_3"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": ",F0{Wk~YaONg#.eu{ZqQ",
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "beethoven_symphony_no_6/main_theme_4"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sounds_sequential",
+                            "id": "aPjvh,WgZ@wK9Wgk=t~t",
+                            "deletable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "k`8Hby4]cv=OPPspjm%:",
+                                  "deletable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "hiphop/drum_beat_bounce"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "B}4Hh*N%wwn,Q;Cewrc2",
+                                      "deletable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "hiphop/hats_beat"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "D6$CcNW79dJ|:``+r8c5",
+                                          "deletable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "hiphop/drum_beat_trap"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "Uu8{lz68Wwjc3/%2wUl^",
+                                              "deletable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "hiphop/drum_beat_knock"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "gNn$=m=9:oQPo5NQ;[%y",
+                      "deletable": false,
+                      "movable": false,
+                      "editable": false,
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "play_sounds_sequential",
+                            "id": "4?d}|+_tDBA2Z_=R?76i",
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "8smF^PLU3=5u|2i|3Ds=",
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "beethoven_symphony_no_6/main_theme_1"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "bjS6_[lGW=90nFR^H4uR",
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "beethoven_symphony_no_6/main_theme_2"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "_3AZgd}#cqB4i}|x2@0!",
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "beethoven_symphony_no_6/main_theme_3"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": ":lyet$4=KX]f3HIQ[pB=",
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "beethoven_symphony_no_6/main_theme_4"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sounds_sequential",
+                                "id": "Z;~eRxTP).|kH.~`83%=",
+                                "deletable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "v,wjIF.Y?6:HqHvdqZNO",
+                                      "deletable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "rock/arena_beat"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "uQV^cAM7ocER/0-4FDH?",
+                                          "deletable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "rock/drum_kit_crusher"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "fxr4#B,v/VU$v%OmWF12",
+                                              "deletable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "rock/punk_beat"
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "~iP3Aq?vr8kDjt4G__+2",
+                                                  "deletable": false,
+                                                  "editable": false,
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "sound": "rock/drum_kit_hands"
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "packId": "beethoven_symphony_no_6",
+      "sounds": {
+        "beethoven_symphony_no_6": [
+          "main_theme_1",
+          "main_theme_2",
+          "main_theme_3",
+          "main_theme_4"
+        ],
+        "hiphop": [
+          "drum_beat_808",
+          "drum_beat_bounce",
+          "relaxed_alternate_beat",
+          "drum_beat_cuts",
+          "hats_beat",
+          "drum_beat_knock",
+          "drum_beat_lofi",
+          "relaxed_beat",
+          "drum_beat_slow",
+          "sub_beat",
+          "drum_beat_trap",
+          "vinyl_beat"
+        ],
+        "rock": [
+          "arena_beat",
+          "arena_alternate_beat",
+          "drum_kit_basement",
+          "drum_kit_can",
+          "drum_kit_crash",
+          "drum_kit_crusher",
+          "gutter_beat",
+          "drum_kit_hands",
+          "drum_kit_interlude",
+          "punk_beat",
+          "punk_alternate_beat",
+          "drum_kit_roll"
+        ],
+        "pop": [
+          "drum_beat_action",
+          "drum_beat_cosmos",
+          "drum_kit_dizzy",
+          "drum_beat_pump",
+          "drum_kit_jumpy",
+          "drum_beat_relax",
+          "drum_beat_salt",
+          "drum_kit_pop",
+          "shake_beat",
+          "sugar_beat",
+          "drum_kit_surf",
+          "sugar_alternate_beat"
+        ],
+        "indie": [
+          "drum_beat_fan",
+          "drum_beat_jangle",
+          "drum_beat_lid",
+          "drum_beat_nod",
+          "drum_beat_ping",
+          "drum_beat_straight",
+          "drum_beat_swish",
+          "drum_beat_tap",
+          "bold_beat",
+          "bold_alternate_beat",
+          "drum_kit_indie",
+          "drum_kit_northern"
+        ],
+        "groove": [
+          "drum_beat_congas",
+          "drum_beat_flam",
+          "drum_beat_machine",
+          "drum_beat_patter",
+          "drum_beat_plexi",
+          "drum_kit_disco",
+          "groovy_beat",
+          "drum_beat_knock",
+          "groovy_alternate_beat",
+          "reggaeton_beat",
+          "reggaeton_alternate_beat",
+          "syncopated_beat"
+        ],
+        "electro": [
+          "drum_beat_cowbell",
+          "drum_beat_club",
+          "drum_beat_edm",
+          "drum_beat_hyper",
+          "drum_beat_fashion",
+          "drum_beat_noise",
+          "drum_beat_pause",
+          "drum_beat_shake",
+          "drum_beat_sharp",
+          "drum_beat_strobe",
+          "drum_beat_swirl",
+          "drum_beat_sync",
+          "drum_beat_tom"
+        ]
+      }
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "playerTitle": "Example",
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!"
+    },
+    "encrypted_exemplar_sources": "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\nvaYPQ0qepvy2ZPL1ExD7VI4=\n",
+    "long_instructions": "template level",
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:55.937+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-reusable-template\\\"\"],\"cloned_from\":\"music-lab-functions-practice-reusable-template\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -290,6 +290,10 @@ When /^I wait until (?:element )?"([^"]*)" is (not )?checked$/ do |selector, neg
   wait_until {@browser.execute_script("return $(\"#{selector}\").is(':checked');") == negation.nil?}
 end
 
+def jquery_is_element_enabled(selector)
+  "return $(#{selector.dump}).is(':enabled') && $(#{selector.dump}).css('visibility') !== 'hidden';"
+end
+
 def jquery_is_element_visible(selector)
   "return $(#{selector.dump}).is(':visible') && $(#{selector.dump}).css('visibility') !== 'hidden';"
 end
@@ -310,6 +314,11 @@ end
 When /^I wait until (?:element )?"([.#])([^"]*)" is (not )?enabled$/ do |selector_symbol, name, negation|
   selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
   wait_for_element(selection_criteria, negation.nil?)
+end
+
+When /^I wait until element "([^"]*)" is (not )?enabled using jQuery$/ do |selector, negation|
+  wait_for_jquery
+  wait_until {@browser.execute_script(jquery_is_element_enabled(selector)) == negation.nil?}
 end
 
 When /^I wait until element with css selector "([^"]*)" is (not )?enabled$/ do |css_selector, negation|
@@ -690,9 +699,9 @@ Then /^execute JavaScript expression "([^"]*)"( to load a new page)?$/ do |expre
   end
 end
 
-Then /^I navigate to the course page for "([^"]*)"$/ do |course|
+Then /^I navigate to the unit page for unit number "([^"]*)" in course "([^"]*)"$/ do |unit_position, course|
   steps %{
-    Then I am on "http://studio.code.org/s/#{course}"
+    Then I am on "http://studio.code.org/courses/#{course}/units/#{unit_position}"
     And I wait to see ".user-stats-block"
   }
 end
@@ -1180,9 +1189,10 @@ And /^I check the pegasus URL$/ do
   puts "Pegasus URL is #{pegasus_url}"
 end
 
-Then /^the overview page contains ([\d]+) assign (?:button|buttons)$/ do |expected_num|
-  actual_num = @browser.execute_script("return $('.uitest-assign-button').length;")
-  expect(actual_num).to eq(expected_num.to_i)
+When /^I click the button in the unit card for unit "([^"]*)"$/ do |unit_name|
+  unit_card = @browser.find_elements(css: '.uitest-CourseScript').find {|el| el.text.include?(unit_name)}
+  button = unit_card.find_element(xpath: ".//a[contains(., 'Go to Unit')]")
+  button.click
 end
 
 And /^I dismiss the language selector$/ do

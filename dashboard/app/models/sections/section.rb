@@ -440,7 +440,7 @@ class Section < ApplicationRecord
         login_type_name = Policies::Lti.issuer_name(issuer)
       end
 
-      selected_unit = unit_group&.single_unit_course? ? unit_group.default_units.first : script
+      selected_unit = unit_group&.single_unit_course? ? unit_group.first_unit : script
 
       primary_instructor = {
         email: teacher.email,
@@ -493,7 +493,7 @@ class Section < ApplicationRecord
         course_version_name = unit_group.name
         if script_id
           title_of_current_unit = script.title_for_display
-          link_to_current_unit = if Policies::Courses.modularity_enabled?
+          link_to_current_unit = if Policies::Courses.modularity_enabled? && unit_group_unit
                                    course_unit_path(unit_group, unit_group_unit.position)
                                  else
                                    script_path(script)
@@ -514,7 +514,7 @@ class Section < ApplicationRecord
         end
       end
 
-      selected_unit = unit_group&.single_unit_course? ? unit_group.default_units.first : script
+      selected_unit = unit_group&.single_unit_course? ? unit_group.first_unit : script
 
       # Remove ordering from scope when not including full
       # list of students, in order to improve query performance.
@@ -702,6 +702,7 @@ class Section < ApplicationRecord
       problem-solving-with-ai-2024
       artificial-intelligence-foundations-2025
       computing-foundations-for-a-digital-age-2025
+      idaho-digital-literacy-2025
       foundations-of-ai-programming-2025
       ai-and-the-systems-that-power-it-2025
       the-fabric-of-the-internet-and-ai-2025
@@ -831,10 +832,6 @@ class Section < ApplicationRecord
   end
 
   private def unit_group_unit
-    if unit_group && script
-      script.unit_group_units.find {|ugu| ugu.unit_group == unit_group}
-    elsif script
-      script.unit_group_units.first
-    end
+    Queries::Courses.unit_group_unit(script, unit_group)
   end
 end

@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-04-23T18:44:16.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## AI Threat Detection  \r\n\r\nThis chatbot is a cybersecurity expert AI assistant trained to provide security analysis based on different scenarios you give it.\r\n\r\n### Do This:\r\n\r\n1. Choose a card from your Threat Detected! card deck. \r\n2. Ask the chatbot:\r\n   - How did AI detect this threat?\r\n   - What mitigation strategy does AI recommend?\r\n   - How would this threat have been handled without AI?\r\n3. Use your \"Threat Detection Notetaker\" and answer the prompts. ",
+    "long_instructions": "##  🔍Teacher Tip\r\n\r\nUse this chatbot to explore one scenario from the <a href='https://docs.google.com/document/d/1xkXDiVCEattulslAG9ZI4TV3ejU09VNH1J1Xq7oKWSw/edit?tab=t.0#heading=h.10sosi3gwomj' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Threat Detected! Cards</a>.\r\n\r\n---\r\n\r\n## AI Threat Detection  \r\n\r\nThis chatbot is a cybersecurity expert AI assistant trained to provide security analysis based on different scenarios you give it.\r\n\r\n### Do This:\r\n\r\n1. Choose a card from your Threat Detected! card deck. \r\n2. Ask the chatbot:\r\n   - How did AI detect this threat?\r\n   - What mitigation strategy does AI recommend?\r\n   - How would this threat have been handled without AI?\r\n3. While you're investigating think about: *How did AI detect this threat? What mitigation strategy does AI recommend? How would this threat have been handled without AI?*",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -46,7 +47,6 @@
     },
     "name_suffix": "_2025"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-23T18:44:16.590+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_nets_project_2_C\\\"\"],\"cloned_from\":\"csaif_pl_nets_project_2_C\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-23T18:44:16.590+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_nets_project_2_C\\\"\"],\"cloned_from\":\"csaif_pl_nets_project_2_C\"},{\"changed_at\":\"2025-05-29 19:54:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
 }]]></config>
 </Aichat>

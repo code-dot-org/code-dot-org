@@ -7,9 +7,9 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Try it out! \r\n\r\nCreate two variables and print them together! \r\n",
-    "ai_tutor_available": "true",
+    "ai_tutor2_available": "true",
     "submittable": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "enable_micro_bit": "false",
     "predict_settings": {
       "isPredictLevel": false

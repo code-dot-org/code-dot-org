@@ -8,6 +8,8 @@ class AichatRequestsControllerTest < ActionController::TestCase
     unit_group = create :unit_group, name: 'exploring-gen-ai-2024'
     section = create :section, user: @authorized_teacher1, unit_group: unit_group
     @authorized_student1 = create(:follower, section: section).student_user
+    @unauthorized_student = create(:student)
+    @unauthorized_teacher = create(:teacher)
 
     @level = create(:level)
     @script = create(:script)
@@ -33,24 +35,72 @@ class AichatRequestsControllerTest < ActionController::TestCase
 
   setup do
     @controller.stubs(:storage_decrypt_channel_id).returns([123, @project_id])
-  end
-
-  users = [:student, :teacher]
-  [
-    :start_chat_completion,
-    [:chat_request, :get, {id: 1}]
-  ].each do |action, method = :post, params = {}|
-    users.each do |user|
-      test_user_gets_response_for action,
-        name: "#{user}_no_access_#{action}_test",
-        user: user,
-        method: method,
-        params: params,
-        response: :forbidden
-    end
+    DCDO.stubs(:get).with('block_ai_tutor2_chat_completion', anything).returns(false)
+    DCDO.stubs(:get).with('block_aichat_chat_completion', anything).returns(false)
+    DCDO.stubs(:get).with('aichat_request_limit_per_min', anything).returns(AichatRequestsController::DEFAULT_REQUEST_LIMIT_PER_MIN)
+    DCDO.stubs(:get).with('aichat_polling_interval_ms', anything).returns(AichatRequestsController::DEFAULT_POLLING_INTERVAL_MS)
+    DCDO.stubs(:get).with('aichat_polling_backoff_rate', anything).returns(AichatRequestsController::DEFAULT_POLLING_BACKOFF_RATE)
+    DCDO.stubs(:get).with('throttle_time_default', anything).returns(60)
   end
 
   # start_chat_completion tests
+  test 'start_chat_completion returns forbidden if user is not signed in' do
+    post :start_chat_completion, params: @valid_params_chat_completion, as: :json
+    assert_response :forbidden
+  end
+
+  test 'teachers without access to chat completion get forbidden response' do
+    sign_in(@unauthorized_teacher)
+    post :start_chat_completion, params: @valid_params_chat_completion, as: :json
+    assert_response :forbidden
+  end
+
+  test 'students without access to chat completion get forbidden response' do
+    sign_in(@unauthorized_student)
+    post :start_chat_completion, params: @valid_params_chat_completion, as: :json
+    assert_response :forbidden
+  end
+
+  test 'unauthorized users can access start_chat_completion from python lab levels' do
+    sign_in(@unauthorized_student)
+    python_lab_level = create :pythonlab
+    params_with_python_level = @valid_params_chat_completion.merge(aichatContext: @default_aichat_context.merge(currentLevelId: python_lab_level.id))
+    post :start_chat_completion, params: params_with_python_level, as: :json
+    assert_response :success
+  end
+
+  test 'ai_tutor2 DCDO flag blocks access to start_chat_completion from python lab levels' do
+    sign_in(@unauthorized_student)
+    DCDO.stubs(:get).with('block_ai_tutor2_chat_completion', anything).returns(true)
+    python_lab_level = create :pythonlab
+    params_with_python_level = @valid_params_chat_completion.merge(aichatContext: @default_aichat_context.merge(currentLevelId: python_lab_level.id))
+    post :start_chat_completion, params: params_with_python_level, as: :json
+    assert_response :forbidden
+  end
+
+  test 'ai_tutor2 DCDO flag does not block start_chat_completion from non python lab levels' do
+    sign_in(@authorized_teacher1)
+    DCDO.stubs(:get).with('block_ai_tutor2_chat_completion', anything).returns(true)
+    post :start_chat_completion, params: @valid_params_chat_completion, as: :json
+    assert_response :success
+  end
+
+  test 'aichat DCDO flag does not block access to start_chat_completion from python lab levels' do
+    sign_in(@unauthorized_student)
+    DCDO.stubs(:get).with('block_aichat_chat_completion', anything).returns(true)
+    python_lab_level = create :pythonlab
+    params_with_python_level = @valid_params_chat_completion.merge(aichatContext: @default_aichat_context.merge(currentLevelId: python_lab_level.id))
+    post :start_chat_completion, params: params_with_python_level, as: :json
+    assert_response :success
+  end
+
+  test 'aichat DCDO flag blocks start_chat_completion from non python lab levels' do
+    sign_in(@authorized_teacher1)
+    DCDO.stubs(:get).with('block_aichat_chat_completion', anything).returns(true)
+    post :start_chat_completion, params: @valid_params_chat_completion, as: :json
+    assert_response :forbidden
+  end
+
   test 'authorized teacher has access to start_chat_completion test' do
     sign_in(@authorized_teacher1)
     post :start_chat_completion, params: @valid_params_chat_completion, as: :json
@@ -117,18 +167,6 @@ class AichatRequestsControllerTest < ActionController::TestCase
     assert_response :too_many_requests
   end
 
-  test 'can_request_aichat_chat_completion returns false when DCDO flag is set to `false`' do
-    DCDO.stubs(:get).with('aichat_chat_completion', true).returns(false)
-    assert_equal false, AichatSagemakerHelper.can_request_aichat_chat_completion?
-  end
-
-  test 'returns forbidden when DCDO flag is set to `false`' do
-    AichatSagemakerHelper.stubs(:can_request_aichat_chat_completion?).returns(false)
-    sign_in(@authorized_teacher1)
-    post :start_chat_completion, params: @valid_params_chat_completion, as: :json
-    assert_response :forbidden
-  end
-
   # chat_request tests
   test 'GET chat_request returns not found if request does not exist' do
     sign_in(@authorized_student1)
@@ -139,6 +177,12 @@ class AichatRequestsControllerTest < ActionController::TestCase
   test 'GET chat_request returns forbidden if user is not the requester' do
     sign_in(@authorized_teacher1)
     request = create(:aichat_request, user: @authorized_student1)
+    get :chat_request, params: {id: request.id}, as: :json
+    assert_response :forbidden
+  end
+
+  test 'GET chat_request returns forbidden if user is not signed in' do
+    request = create(:aichat_request, user: @authorized_teacher1)
     get :chat_request, params: {id: request.id}, as: :json
     assert_response :forbidden
   end

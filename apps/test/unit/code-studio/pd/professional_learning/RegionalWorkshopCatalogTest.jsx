@@ -6,6 +6,7 @@ import RegionalWorkshopCatalog from '@cdo/apps/code-studio/pd/professional_learn
 import {
   setWindowLocation,
   resetWindowLocation,
+  updateQueryParam,
 } from '@cdo/apps/code-studio/utils';
 
 jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({
@@ -14,22 +15,45 @@ jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({
 
 const REGIONAL_PARTNER = 'Reggie Partner';
 
-const TEST_SESSION = {
+const TEST_SESSION_1 = {
   id: 1,
   start: '2025-04-22T13:00:00Z',
   end: '2025-04-22T21:00:00Z',
   is_local: false,
 };
 
-const TEST_WORKSHOPS = [
+const TEST_SESSION_2 = {
+  id: 2,
+  start: '2025-05-22T13:00:00Z',
+  end: '2025-05-22T21:00:00Z',
+  is_local: false,
+};
+
+const TEST_NATIONAL_WORKSHOP = {
+  id: 3,
+  course: 'Test Course 3',
+  subject: 'Test Subject',
+  name: 'National Scottsdale Workshop',
+  capacity: 5,
+  num_enrollments: 2,
+  sessions: [TEST_SESSION_2],
+  format: 'In-Person',
+  location_name: 'Seattle Public School',
+  fee: null,
+  has_prereq: false,
+  description: 'Test description',
+  custom_registration_link: null,
+};
+
+const TEST_REGIONAL_WORKSHOPS = [
   {
     id: 1,
     course: 'Test Course 1',
     subject: 'Test Subject',
-    name: 'Regional Seattle Workshop',
+    name: 'North Seattle Workshop',
     capacity: 5,
     num_enrollments: 2,
-    sessions: [TEST_SESSION],
+    sessions: [TEST_SESSION_1],
     format: 'In-Person',
     location_name: 'Seattle Public School',
     fee: null,
@@ -41,12 +65,12 @@ const TEST_WORKSHOPS = [
     id: 2,
     course: 'Test Course 2',
     subject: 'Test Subject',
-    name: 'National Austin Workshop',
+    name: 'South Seattle Workshop',
     capacity: 5,
     num_enrollments: 4,
-    sessions: [TEST_SESSION],
+    sessions: [TEST_SESSION_1],
     format: 'Virtual',
-    location_name: 'Austin Public School',
+    location_name: 'Seattle Private School',
     fee: '$400',
     has_prereq: true,
     description: 'Test description',
@@ -54,16 +78,35 @@ const TEST_WORKSHOPS = [
   },
 ];
 
+const renderDefault = (overrideProps = {}) => {
+  const props = {
+    ...{
+      availableNationalWorkshops: [TEST_NATIONAL_WORKSHOP],
+      zipFromSchoolInfo: '',
+    },
+    ...overrideProps,
+  };
+  render(<RegionalWorkshopCatalog {...props} />);
+};
+
 describe('RegionalWorkshopCatalog', () => {
+  afterEach(() => {
+    updateQueryParam('zip', null, true);
+  });
+
   it('page defaults to telling the user they need to enter a zip code', () => {
-    render(<RegionalWorkshopCatalog zipFromSchoolInfo="" />);
+    renderDefault();
     screen.getByText('Enter zip code to see workshops');
 
     // No regional partner retrieved with an empty zip
     screen.getByText('Zip code required');
+
+    // Still shows National workshops
+    expect(screen.getAllByText('National workshops').length).toBe(2);
+    screen.getByText(TEST_NATIONAL_WORKSHOP.name);
   });
 
-  it('shows no workshop display when entered zip code yields no workshops', async () => {
+  it('shows no workshop display when entered zip code yields no regional workshops', async () => {
     const zip = '11111';
     const fetchStub = jest.spyOn(window, 'fetch').mockResolvedValue({
       ok: true,
@@ -71,11 +114,11 @@ describe('RegionalWorkshopCatalog', () => {
         Promise.resolve({
           regional_workshop_data: {
             regional_partner: {name: '', additional_info: ''},
-            available_workshops: [],
+            available_regional_workshops: [],
           },
         }),
     });
-    render(<RegionalWorkshopCatalog zipFromSchoolInfo="" />);
+    renderDefault();
 
     fireEvent.change(screen.getByRole('textbox', {name: 'zipSearch'}), {
       target: {value: zip},
@@ -101,11 +144,16 @@ describe('RegionalWorkshopCatalog', () => {
         },
         method: 'GET',
       });
+
+      // Still shows National workshops
+      expect(screen.getAllByText('National workshops').length).toBe(2);
+      screen.getByText(TEST_NATIONAL_WORKSHOP.name);
+
       fetchStub.mockRestore();
     });
   });
 
-  it('shows workshops available to that zip code', async () => {
+  it('shows regional workshops available to that zip code', async () => {
     const zip = '98122';
 
     const fetchStub = jest.spyOn(window, 'fetch').mockResolvedValue({
@@ -114,11 +162,11 @@ describe('RegionalWorkshopCatalog', () => {
         Promise.resolve({
           regional_workshop_data: {
             regional_partner: {name: REGIONAL_PARTNER},
-            available_workshops: TEST_WORKSHOPS,
+            available_regional_workshops: TEST_REGIONAL_WORKSHOPS,
           },
         }),
     });
-    render(<RegionalWorkshopCatalog zipFromSchoolInfo="" />);
+    renderDefault();
 
     fireEvent.change(screen.getByRole('textbox', {name: 'zipSearch'}), {
       target: {value: zip},
@@ -137,17 +185,16 @@ describe('RegionalWorkshopCatalog', () => {
         `/professional-learning/contact-regional-partner?zip=${zip}`
       );
 
-      // Workshop content is displayed
-      screen.getByText('Upcoming workshops');
+      // Regional workshop content is displayed
       expect(
         screen.getByRole('link', {
-          name: 'contact your Regional Partner',
+          name: 'contact your regional partner',
         })
       ).toHaveAttribute(
         'href',
         `/professional-learning/contact-regional-partner?zip=${zip}`
       );
-      TEST_WORKSHOPS.forEach(ws => screen.getByText(ws.name));
+      TEST_REGIONAL_WORKSHOPS.forEach(ws => screen.getByText(ws.name));
 
       expect(fetchStub).toHaveBeenCalledWith(`regional_workshop_data/${zip}`, {
         headers: {
@@ -156,6 +203,11 @@ describe('RegionalWorkshopCatalog', () => {
         },
         method: 'GET',
       });
+
+      // Still shows National workshops
+      expect(screen.getAllByText('National workshops').length).toBe(2);
+      screen.getByText(TEST_NATIONAL_WORKSHOP.name);
+
       fetchStub.mockRestore();
     });
   });
@@ -173,11 +225,11 @@ describe('RegionalWorkshopCatalog', () => {
               name: REGIONAL_PARTNER,
               additional_info: regionalPartnerInfo,
             },
-            available_workshops: TEST_WORKSHOPS,
+            available_regional_workshops: TEST_REGIONAL_WORKSHOPS,
           },
         }),
     });
-    render(<RegionalWorkshopCatalog zipFromSchoolInfo="" />);
+    renderDefault();
 
     // Button to open dialog starts not enabled
     expect(screen.getByRole('button', {name: 'partnerInfo'})).toBeDisabled();
@@ -206,10 +258,14 @@ describe('RegionalWorkshopCatalog', () => {
     await waitFor(() => {
       expect(screen.getAllByText(REGIONAL_PARTNER).length).toBe(1);
       expect(screen.queryByText(regionalPartnerInfo)).toBe(null);
-    });
-  });
 
-  it('immediately shows workshops available to given zip code if provided in url', async () => {
+      // Still shows National workshops
+      expect(screen.getAllByText('National workshops').length).toBe(2);
+      screen.getByText(TEST_NATIONAL_WORKSHOP.name);
+    });
+  }, 10000);
+
+  it('immediately shows regional workshops available to given zip code if provided in url', async () => {
     const zip = '98122';
 
     const fetchStub = jest.spyOn(window, 'fetch').mockResolvedValue({
@@ -218,12 +274,12 @@ describe('RegionalWorkshopCatalog', () => {
         Promise.resolve({
           regional_workshop_data: {
             regional_partner: {name: REGIONAL_PARTNER},
-            available_workshops: TEST_WORKSHOPS,
+            available_regional_workshops: TEST_REGIONAL_WORKSHOPS,
           },
         }),
     });
     setWindowLocation({search: `?zip=${zip}`});
-    render(<RegionalWorkshopCatalog zipFromSchoolInfo="" />);
+    renderDefault();
 
     await waitFor(() => {
       // Regional Partner name and contact
@@ -237,9 +293,8 @@ describe('RegionalWorkshopCatalog', () => {
         `/professional-learning/contact-regional-partner?zip=${zip}`
       );
 
-      // Workshop content is displayed
-      screen.getByText('Upcoming workshops');
-      TEST_WORKSHOPS.forEach(ws => screen.getByText(ws.name));
+      // Regional workshop content is displayed
+      TEST_REGIONAL_WORKSHOPS.forEach(ws => screen.getByText(ws.name));
 
       expect(fetchStub).toHaveBeenCalledWith(`regional_workshop_data/${zip}`, {
         headers: {
@@ -248,6 +303,10 @@ describe('RegionalWorkshopCatalog', () => {
         },
         method: 'GET',
       });
+
+      // Still shows National workshops
+      expect(screen.getAllByText('National workshops').length).toBe(2);
+      screen.getByText(TEST_NATIONAL_WORKSHOP.name);
 
       resetWindowLocation();
       fetchStub.mockRestore();
@@ -263,11 +322,11 @@ describe('RegionalWorkshopCatalog', () => {
         Promise.resolve({
           regional_workshop_data: {
             regional_partner: {name: REGIONAL_PARTNER},
-            available_workshops: TEST_WORKSHOPS,
+            available_regional_workshops: TEST_REGIONAL_WORKSHOPS,
           },
         }),
     });
-    render(<RegionalWorkshopCatalog zipFromSchoolInfo={zip} />);
+    renderDefault({zipFromSchoolInfo: zip});
 
     await waitFor(() => {
       // Regional Partner name and contact
@@ -281,9 +340,8 @@ describe('RegionalWorkshopCatalog', () => {
         `/professional-learning/contact-regional-partner?zip=${zip}`
       );
 
-      // Workshop content is displayed
-      screen.getByText('Upcoming workshops');
-      TEST_WORKSHOPS.forEach(ws => screen.getByText(ws.name));
+      // Regional workshop content is displayed
+      TEST_REGIONAL_WORKSHOPS.forEach(ws => screen.getByText(ws.name));
 
       expect(fetchStub).toHaveBeenCalledWith(`regional_workshop_data/${zip}`, {
         headers: {
@@ -292,7 +350,21 @@ describe('RegionalWorkshopCatalog', () => {
         },
         method: 'GET',
       });
+
+      // Still shows National workshops
+      expect(screen.getAllByText('National workshops').length).toBe(2);
+      screen.getByText(TEST_NATIONAL_WORKSHOP.name);
+
       fetchStub.mockRestore();
     });
+  });
+
+  it('does not show national workshops if none are present', () => {
+    renderDefault({availableNationalWorkshops: []});
+
+    // Only shows one instance of "National workshops", which is the skip link at the top of the page.
+    expect(screen.getAllByText('National workshops').length).toBe(1);
+    expect(screen.getByRole('link', {name: 'National workshops'}));
+    expect(screen.queryByText(TEST_NATIONAL_WORKSHOP.name)).toBe(null);
   });
 });

@@ -71,23 +71,6 @@ export const EmailsReminders: FC<EmailsRemindersProps> = ({
               </div>
             </div>
           )}
-          <div className={commonStyles.toggleWrapper}>
-            <div className={commonStyles.row}>
-              <Toggle
-                label="Pre-workshop survey*"
-                name="pre-workshop survey email"
-                size="s"
-                checked={true}
-                onChange={() => {}}
-                disabled={true}
-              />
-              {/* TODO: blank href for now until we have mailjet email preview links */}
-              <PreviewEmailLink href="" />
-            </div>
-            <BodyFourText>
-              *We require this email for every workshop.
-            </BodyFourText>
-          </div>
         </div>
         <div className={commonStyles.col}>
           <OverlineThreeText>post-workshop emails</OverlineThreeText>

@@ -22,6 +22,10 @@
     @include focus-styles;
   }
 
+  &.invalid {
+    border-color: var(--borders-error-primary);
+  }
+
   .clearAllButton {
     margin-right: 0.75rem;
   }
@@ -49,6 +53,18 @@
         height: 1.375rem;
         padding-top: 0;
         padding-bottom: 0;
+      }
+
+      &.invalid {
+        > div {
+          background-color: var(--background-neutral-primary);
+          border: 1px solid var(--background-error-primary);
+          box-sizing: border-box;
+
+          > span {
+            color: var(--background-error-primary);
+          }
+        }
       }
     }
 

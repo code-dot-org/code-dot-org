@@ -33,10 +33,10 @@
     ],
     "display_name": "Jobs that Solve Problems",
     "thumbnail_url": "https://images.code.org/c36e1c76a2999cf8da10195f29f1cc0c-puzzle2.jpg",
-    "bubble_choice_description": "**<i class=\"fa-solid fa-image\"></i> Images that explore:**\n* Cyber Detective\n\n* Sports Statistics\n\n- VR Developer",
+    "bubble_choice_description": "**<i class=\"fa-solid fa-image\"></i> Photo story that explores**\n* Cyber Detective\n\n* Sports Statistics\n\n- VR Developer",
     "name_suffix": "_b"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-08T00:18:33.389+00:00\",\"changed\":[\"cloned from \\\"test-elem-career-journeys-explore-panels4\\\"\"],\"cloned_from\":\"test-elem-career-journeys-explore-panels4\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-08T00:18:33.389+00:00\",\"changed\":[\"cloned from \\\"test-elem-career-journeys-explore-panels4\\\"\"],\"cloned_from\":\"test-elem-career-journeys-explore-panels4\"},{\"changed_at\":\"2025-05-23 15:11:49 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

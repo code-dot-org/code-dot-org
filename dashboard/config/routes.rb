@@ -24,10 +24,6 @@ Dashboard::Application.routes.draw do
   get '/teacher_dashboard/sections/first_section/*location', to: "teacher_dashboard#redirect_to_newest_section"
   get '/teacher_dashboard/sections/first_section_progress', to: "teacher_dashboard#redirect_to_newest_section_progress"
 
-  # Redirect enable and disable experiments to most recent section
-  get '/teacher_dashboard/sections/enable_experiments', to: "teacher_dashboard#enable_experiments"
-  get '/teacher_dashboard/sections/disable_experiments', to: "teacher_dashboard#disable_experiments"
-
   constraints host: CDO.codeprojects_hostname do
     # Routes needed for the footer on weblab share links on codeprojects
     get '/weblab/footer', to: 'projects#weblab_footer'
@@ -38,6 +34,7 @@ Dashboard::Application.routes.draw do
     # React-router will handle sub-routes on the client.
     resource :teacher_dashboard, only: [] do
       get :home, controller: :teacher_dashboard, action: :show
+      get :get_school_info_interstitial_data, controller: :teacher_dashboard, action: :get_school_info_interstitial_data
       resources :sections, only: %i[show], param: :section_id, controller: :teacher_dashboard do
         member do
           get :parent_letter
@@ -69,6 +66,9 @@ Dashboard::Application.routes.draw do
     resources :student_work_evaluation_summaries, only: [:create]
 
     resources :user_level_interactions, only: [:create]
+
+    resources :skills, only: [:create]
+    resources :levels_skills, only: [:create]
 
     patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
 
@@ -609,6 +609,9 @@ Dashboard::Application.routes.draw do
     get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
     post '/join(/:section_code)', to: 'followers#student_register', as: 'student_register'
 
+    get '/logged_out', to: 'gates#logged_out'
+    get '/teacher_account_required', to: 'gates#teacher_account_required'
+
     post '/milestone/:user_id/level/:level_id', to: 'activities#milestone', as: 'milestone_level'
     post '/milestone/:user_id/:script_level_id', to: 'activities#milestone', as: 'milestone'
     post '/milestone/:user_id/:script_level_id/:level_id', to: 'activities#milestone', as: 'milestone_script_level'
@@ -622,7 +625,7 @@ Dashboard::Application.routes.draw do
         post :replace_mappings
       end
     end
-    get 'regional-partner-search', to: 'regional_partners#regional_partner_search'
+    get 'regional-partner-search', to: redirect('/professional-learning/workshops')
 
     scope path: '/admin' do
       # internal report dashboards
@@ -881,6 +884,7 @@ Dashboard::Application.routes.draw do
 
     get 'my-professional-learning', to: 'pd/professional_learning#index', as: 'professional_learning'
     get 'professional-learning/workshops', to: 'pd/professional_learning#workshops'
+    get 'professional-learning/workshops/:workshop_id', to: 'pd/professional_learning#workshop_marketing_page'
     get 'professional-learning/contact-regional-partner', to: 'pd/professional_learning#contact_regional_partner'
     get 'professional-learning/facilitator/computer-science-a', to: 'pd/professional_learning#csa'
     get 'professional-learning/facilitator/computer-science-discoveries', to: 'pd/professional_learning#csd'
@@ -898,8 +902,6 @@ Dashboard::Application.routes.draw do
       # React-router will handle sub-routes on the client.
       get 'workshop_dashboard/*path', to: 'workshop_dashboard#index'
       get 'workshop_dashboard', to: 'workshop_dashboard#index'
-
-      get 'workshops/:workshop_id', to: 'workshops#index'
 
       get 'misc_survey/thanks', to: 'misc_survey#thanks'
       get 'misc_survey/:form_tag', to: 'misc_survey#new'
@@ -1009,6 +1011,8 @@ Dashboard::Application.routes.draw do
     get '/api/lock_status', to: 'api#lockable_state'
     get '/dashboardapi/script_structure/:script', to: 'api#script_structure'
     get '/api/script_structure/:script', to: 'api#script_structure'
+    get '/dashboardapi/script_structure/courses/:course_name/units/:unit_position', to: 'api#script_structure'
+    get '/api/script_structure/courses/:course_name/units/:unit_position', to: 'api#script_structure'
     get '/dashboardapi/script_standards/:script', to: 'api#script_standards'
     get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
     get '/api/teacher_panel_progress/:section_id', to: 'api#teacher_panel_progress'
@@ -1291,6 +1295,7 @@ Dashboard::Application.routes.draw do
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 
     post 'ai_diff/chat_completion', to: 'ai_diff#chat_completion'
+    post 'ai_diff/curriculum_courses', to: 'ai_diff#curriculum_courses'
     post 'aidiff_messages/:aidiff_message_id/submit_feedback', to: 'aidiff_messages#submit_feedback'
 
     resources :ai_tutor_interactions, only: [:create, :index] do
