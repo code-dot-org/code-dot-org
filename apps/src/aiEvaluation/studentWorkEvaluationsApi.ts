@@ -146,6 +146,5 @@ export async function fetchStudentWorkEvaluations(
     );
     return;
   }
-  const data = await response.json();
-  return data;
+  return await response.json();
 }

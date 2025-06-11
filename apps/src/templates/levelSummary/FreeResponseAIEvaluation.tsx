@@ -36,6 +36,8 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
     useState<boolean>(false);
   const evaluationComplete =
     evaluationCount > 0 && responses.length === evaluationCount;
+  const [loadingExistingEvaluations, setLoadingExistingEvaluations] =
+    useState<boolean>(true);
 
   useEffect(() => {
     if (responses.length > 0) {
@@ -87,6 +89,7 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
       };
 
       const fetchAndSetEvaluations = async () => {
+        setLoadingExistingEvaluations(true);
         const evaluations = await loadExistingEvaluations();
         const completeEvaluations =
           addStudentNameAndResponseToEvaluations(evaluations);
@@ -95,6 +98,7 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
           ...prevEvaluations,
           ...completeEvaluations,
         ]);
+        setLoadingExistingEvaluations(false);
       };
 
       fetchAndSetEvaluations();
@@ -175,7 +179,9 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
     <div>
       <FreeResponseAiSummaryBox
         aiEvaluationHandler={getAIEvaluations}
-        disabled={!responses.length || evaluationsPending}
+        disabled={
+          !responses.length || evaluationsPending || loadingExistingEvaluations
+        }
         isPending={evaluationsPending}
         studentWorkEvaluations={evaluations}
         evaluationComplete={evaluationComplete}
