@@ -7,11 +7,7 @@ import {useSelector} from 'react-redux';
 import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModal';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {
-  isLevelbuilderEnvironment,
-  tryGetLocalStorage,
-  trySetLocalStorage,
-} from '@cdo/apps/utils';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 import {ModalTypes} from '../constants';
 import aichatI18n from '../locale';
@@ -102,20 +98,23 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   );
 
   useEffect(() => {
-    // Skip showing the modal on levelbuilder
-    if (isLevelbuilderEnvironment()) {
-      return;
-    }
+    const modalToShow = () => {
+      if (!isUserTeacher) {
+        return ModalTypes.WARNING;
+      }
 
-    const teacherSawAichatOnboardingModal = tryGetLocalStorage(
-      'teacherSawAichatOnboarding',
-      'no'
-    );
-    const modalToShow =
-      isUserTeacher && teacherSawAichatOnboardingModal !== 'yes'
-        ? ModalTypes.TEACHER_ONBOARDING
-        : ModalTypes.WARNING;
-    dispatch(setShowModalType(modalToShow));
+      const teacherSawAichatOnboardingModal = tryGetLocalStorage(
+        'teacherSawAichatOnboarding',
+        'no'
+      );
+      if (!teacherSawAichatOnboardingModal) {
+        return ModalTypes.TEACHER_ONBOARDING;
+      }
+
+      return undefined;
+    };
+
+    dispatch(setShowModalType(modalToShow()));
   }, [isUserTeacher, dispatch]);
 
   useEffect(() => {
