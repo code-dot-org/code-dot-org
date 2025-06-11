@@ -32,20 +32,29 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
 }) => {
   const [lessonList, setLessonList] = useState<UnitLessonOptions[]>([]);
 
-  // Retrieve units and lessons for the section
   useEffect(() => {
-    if (section.unitId) {
+    const fetchLessonList = async () => {
       HttpClient.fetchJson<UnitLessonOptions[]>(
         `/sections/${section.id}/retrieve_lessons_for_dropdown`
       )
         .then(response => setLessonList(response.value))
         .catch(error => console.error(error));
-    }
-  }, [section.id, section.unitId]);
+    };
 
-  const dropdownOptions = useMemo(
-    () =>
-      lessonList.map(lesson => (
+    if (section.unitId && lessonList.length === 0) {
+      fetchLessonList();
+    }
+  }, [section, lessonList]);
+
+  const dropdownOptions = useMemo(() => {
+    if (lessonList.length === 0) {
+      return (
+        <li>
+          <BodyThreeText>{'testing'}</BodyThreeText>
+        </li>
+      );
+    } else {
+      return lessonList.map(lesson => (
         <LinkOption
           key={lesson.value}
           value={lesson.value}
@@ -59,9 +68,9 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
           }
           eventOptions={{lesson: lesson.value}}
         />
-      )),
-    [lessonList]
-  );
+      ));
+    }
+  }, [lessonList]);
 
   return (
     <div className={styles.courseContentDropdownContainer}>
