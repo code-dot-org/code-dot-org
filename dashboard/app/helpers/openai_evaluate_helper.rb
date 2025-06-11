@@ -65,11 +65,11 @@ module OpenaiEvaluateHelper
     end
   end
 
-  private def client
+  def self.client
     AiEvaluationOpenaiHelper::Client.new(API_KEY, MODEL)
   end
 
-  private def prepend_system_prompt(system_prompt, messages)
+  def self.prepend_system_prompt(system_prompt, messages)
     system_prompt_message = {
       content: system_prompt,
       role: "system"
@@ -78,4 +78,6 @@ module OpenaiEvaluateHelper
     messages.unshift(system_prompt_message)
     messages
   end
+
+  private_class_method :client, :prepend_system_prompt
 end

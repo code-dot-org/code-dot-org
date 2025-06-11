@@ -41,6 +41,7 @@ class TestSection
                      else
                        nil
                      end
+    skip_ai_evaluation = options[:skip_ai_evaluation] || false
 
     if preset_options.nil?
       raise "Invalid preset_name: #{options[:preset_name]}. Valid options are: 'csp4', 'random' or nil (defaults to csp4 if not specified)."
@@ -73,7 +74,7 @@ class TestSection
     if preset_name == 'random'
       create_random_student_progress(students, unit: unit, teacher: teacher)
     else
-      create_student_progress(students, unit: unit, teacher: teacher, **preset_options.slice(:data_per_student))
+      create_student_progress(students, unit: unit, teacher: teacher, skip_ai_evaluation: skip_ai_evaluation, **preset_options.slice(:data_per_student, :school_year))
     end
 
     puts ''
@@ -225,7 +226,7 @@ class TestSection
                level,
                '127.0.0.1',
                find_or_create_storage_id_for_user_id(student_user.id),
-               options[:unit].id,
+               unit_id,
                {
                  hidden: true,
                  level: "/projects/applab",
@@ -240,7 +241,35 @@ class TestSection
           # Note: Generated student code only includes the source code and no other metadata.
           # This can cause some issues with rendering in the UI.
           # Most errors can be ignored or fixed by manually editing and running the generated code.
-          buckets.create_or_replace(channel_token.channel, "main.json", JSON.generate(level_data[:source_code]))
+          s3_response = buckets.create_or_replace(channel_token.channel, "main.json", JSON.generate(level_data[:source_code]))
+
+          unless options[:skip_ai_evaluation]
+            ai_evaluation = OpenaiEvaluateHelper.evaluate(level, options[:unit],
+              {
+                student_work: level_data[:source_code][:source],
+                evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]
+              }
+            )
+
+            parsed_evaluation = JSON.parse(ai_evaluation[:json]['content'])
+
+            student_work_evaluation_params = {
+              type: 'UserLevelEvaluation',
+              student_id: student_user.id,
+              code_version: s3_response.version_id,
+              level_id: level.id,
+              unit_id: unit_id,
+              evaluator: 'AI',
+              evaluation_criteria: parsed_evaluation['evaluationCriteria'],
+              evaluation: parsed_evaluation['aiEvaluation'],
+              reasoning: parsed_evaluation['aiReasoning'],
+              requester_id: options[:teacher].id,
+              school_year: options[:school_year] || '2024-25',
+              ai_model_version: SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
+            }
+
+            StudentWorkEvaluation.new(student_work_evaluation_params).save
+          end
         end
 
         teacher_feedback = level_data[:teacher_feedback]

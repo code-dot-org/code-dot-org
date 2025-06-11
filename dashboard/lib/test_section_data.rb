@@ -47,6 +47,7 @@ console.log(\"in the world!\");
   CSP_4_TEST_SECTION = {
     unit_name: 'csp4-2024',
     unit_group_name: 'csp-2024',
+    school_year: '2024-25',
     grade: [10],
     age: 15,
     data_per_student: [{
