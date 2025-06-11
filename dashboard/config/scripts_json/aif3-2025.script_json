@@ -35,7 +35,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-27 16:10:17 UTC",
+    "serialized_at": "2025-06-03 14:58:53 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6115,6 +6115,19 @@
       }
     },
     {
+      "name": "AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1XO4Z4l7dMaK4Y1r45wDUNibkpwUaAq7joHz5qVW0Au0/edit?usp=drivesdk",
+      "key": "ai_and_the_systems_that_power_it_unit_guide_pdf",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai_and_the_systems_that_power_it_unit_guide_pdf"
+      }
+    },
+    {
       "name": "AI Chat FAQ",
       "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
       "key": "ai_chat_faq",
@@ -6824,6 +6837,12 @@
     {
       "seeding_key": {
         "lesson.key": "Introduction to Computer Systems",
+        "resource.key": "ai_and_the_systems_that_power_it_unit_guide_pdf"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Computer Systems",
         "resource.key": "ai_chat_lab_faq"
       }
     },
@@ -6831,12 +6850,6 @@
       "seeding_key": {
         "lesson.key": "Introduction to Computer Systems",
         "resource.key": "computer_innovations_and_careers"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Computer Systems",
-        "resource.key": "computer_systems_and_devices_unit_guide"
       }
     },
     {

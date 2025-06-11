@@ -20,7 +20,7 @@
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "noun1 = input(\"Enter a noun: \")\nverb1 = input(\"Enter a verb: \")\n\nStory = \"The \" + noun1 + \"ran down the road.\"\n\n# Add a verb to the story.\n\n\n# Print out the story.\n\n",
+          "contents": "noun1 = input(\"Enter a noun: \")\nverb1 = input(\"Enter a verb: \")\n\nstory = \"The \" + noun1 + \"ran down the road.\"\n\n# Add a verb to the story.\n\n\n# Print out the story.\n\n",
           "folderId": "0",
           "active": true,
           "open": true
@@ -32,6 +32,6 @@
     "widget_view": "false"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-07 15:53:58 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-07 15:54:55 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-07 15:54:57 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-07 15:55:01 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-19 19:02:14 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-19 19:03:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-07 15:53:58 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-07 15:54:55 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-07 15:54:57 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-07 15:55:01 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-19 19:02:14 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-19 19:03:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-30 16:20:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-30 16:20:21 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

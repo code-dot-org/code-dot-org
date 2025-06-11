@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-27 15:57:26 UTC",
+    "serialized_at": "2025-05-30 16:12:09 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -41,7 +41,7 @@
   "lessons": [
     {
       "key": "Teaching Programming Fundamentals",
-      "name": "Teaching Programming Fundamentals",
+      "name": "Teaching Foundations of AI Programming",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,

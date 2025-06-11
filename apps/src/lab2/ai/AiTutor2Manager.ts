@@ -73,6 +73,7 @@ export default class AiTutor2Manager {
         channelId: this.channelId || '',
         modelId: AiChatModelIds.CHATGPT,
         systemPrompt: systemPrompts[type],
+        type,
         userMessage: message,
       },
     };

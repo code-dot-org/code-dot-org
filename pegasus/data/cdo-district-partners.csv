@@ -68,6 +68,7 @@ Pueblo School District 60,Colorado
 Telluride School District No. R-1,Colorado
 Berlin Public Schools,Connecticut
 Bethel School District,Connecticut
+CREC Magnet Schools,Connecticut
 East Granby Public Schools,Connecticut
 East Granby Public Schools,Connecticut
 Hartford Public Schools,Connecticut
@@ -77,6 +78,7 @@ New Canaan Public Schools,Connecticut
 Norwalk Public Schools,Connecticut
 Plainville Community Schools,Connecticut
 Regional School District 15,Connecticut
+Stafford Public Schools,Connecticut
 Stamford Public Schools,Connecticut
 Wallingford School District,Connecticut
 Brandywine School District,Delaware
@@ -110,9 +112,11 @@ Hawaii State Department of Education,Hawaii
 American Falls School District,Idaho
 Blaine County School District,Idaho
 Caldwell School District,Idaho
+Castleford School District,Idaho
 Kamiah Joint School District #304,Idaho
 Lewiston Independent School District #1,Idaho
 Pocatello Chubbuck School District #25,Idaho
+Preston Idaho School District,Idaho
 Ball-Chatham 5,Illinois
 Beecher CUSD200U,Illinois
 Calvary Academy,Illinois
@@ -124,6 +128,7 @@ Evanston Skokie CCSD 65,Illinois
 Grayslake CCSD 46,Illinois
 Herscher Community Unit School District #2,Illinois
 Kankakee SD 111,Illinois
+North Mac CUSD #34,Illinois
 Ottawa Elementary School District 141,Illinois
 Pembroke Community Consolidated School District 259,Illinois
 Riverton Community Unit School District 14,Illinois
@@ -199,6 +204,7 @@ Terrebonne Parish,Louisiana
 Washington Parish School System,Louisiana
 Winn Parish,Louisiana
 Great Salt Bay School,Maine
+MSAD #6,Maine
 Baltimore City Public Schools,Maryland
 Charles County Public Schools,Maryland
 Garrett County Public Schools,Maryland
@@ -312,6 +318,7 @@ Raymond Central Public Schools,Nebraska
 Sandy Creek,Nebraska
 Scribner Snyder Community Schools,Nebraska
 Wakefield Community Schools,Nebraska
+Westside Community Schools,Nebraska
 Alpine Academy,Nevada
 Clark County School District,Nevada
 Elko County School District,Nevada
@@ -428,6 +435,7 @@ Currituck County School District,North Carolina
 Davie County Schools,North Carolina
 Duplin County Schools,North Carolina
 Durham Public School,North Carolina
+Edgecombe County Public Schools,North Carolina
 Franklin County Schools,North Carolina
 Gaston County Schools,North Carolina
 Guilford County Schools,North Carolina
@@ -442,6 +450,7 @@ Road to Hire,North Carolina
 Rowan-Salisbury Schools,North Carolina
 Sugar Creek Charter School,North Carolina
 Telra Institute,North Carolina
+The Expedition School,North Carolina
 The Math and Science Academy of Apex,North Carolina
 Transylvania County Schools,North Carolina
 Warren County Schools,North Carolina
@@ -501,6 +510,8 @@ Perrysburg Exempted Village School District,Ohio
 Pickerington Local School District,Ohio
 Pike-Delta-York Local Schools,Ohio
 Springfield Local Schools,Ohio
+Trotwood Madison City Schools,Ohio
+Union Local School District,Ohio
 Allen Public Schools,Oklahoma
 Bixby Public Schools,Oklahoma
 Broken Arrow Public School,Oklahoma
@@ -517,12 +528,15 @@ Wayne Public Schools,Oklahoma
 Culver School District,Oregon
 Pine Eagle School District,Oregon
 Berwick Area School District,Pennsylvania
+Canon-McMillan,Pennsylvania
 Carbon Learning Achievement School,Pennsylvania
 Community Academy of Philadelphia Charter School,Pennsylvania
 East Stroudsburg University,Pennsylvania
 Eastern York School District,Pennsylvania
+Esperanza Academy,Pennsylvania
 Interboro School District,Pennsylvania
 Montrose Area School District,Pennsylvania
+North Penn School District,Pennsylvania
 Norwin School District,Pennsylvania
 Philadelphia Academy Charter School,Pennsylvania
 River Valley School District,Pennsylvania
@@ -532,6 +546,7 @@ School District of Philadelphia,Pennsylvania
 School District of Springfield Township,Pennsylvania
 Union Area School District,Pennsylvania
 Wyoming Area School District,Pennsylvania
+Chariho Regional School District,Rhode Island
 Smithfield Public Schools,Rhode Island
 Aiken County Public Schools,South Carolina
 Beaufort County Schools,South Carolina
@@ -608,6 +623,7 @@ Alleghany Highlands Public Schools,Virginia
 Clarke County Public Schools,Virginia
 "Frederick County Public Schools, (VA)",Virginia
 Loudoun County Public Schools,Virginia
+Norfolk Public Schools,Virginia
 Osbourn High School,Virginia
 Russell County Public Schools,Virginia
 Suffolk Public Schools,Virginia
@@ -626,6 +642,8 @@ Fayette County Schools,West Virginia
 Monroe County Schools,West Virginia
 Raleigh County Schools,West Virginia
 Roane County School District,West Virginia
+Upshur County Schools,West Virginia
+Wyoming County Schools,West Virginia
 Cornell School District,Wisconsin
 Dodgeville Schools,Wisconsin
 Elmbrook School District,Wisconsin

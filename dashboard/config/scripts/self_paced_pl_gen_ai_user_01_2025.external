@@ -1,0 +1,56 @@
+name 'self-paced-pl-gen-ai-user_01_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# User-Centered Design
+
+#### For the remainder of this unit students develop their skills related to **User-Centered Design** focusing on building chatbots that are not only functional, but also useful for users in their specific situations.
+
+#### Explore some of the main learning goals of this section of the unit below.
+
+---
+
+## Issue Statement
+
+<img src="https://images.code.org/42c3d3887db130910c13a6afb2aa0a49-Screenshot 2024-09-03 at 10.19.33 AM.png" alt="comparing models in AI chat lab" width="50%" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0px 10px 10px 10px;">
+
+#### An **issue statement** is a concise summary of a problem they want to address. These statements form the foundation for designing chatbot solutions with purpose and empathy.
+
+#### One method of developing an issue statement is the “5 Why’s” technique. This technique allows designers to dig deeper into surface-level observations and helps them reframe specific situations (like people being on their phones during lunch) into broader, addressable issues such as social disconnection or lack of inclusive conversation starters.
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+➡️ This topic is covered in Lesson 12. You can find more details in the full <a href='https://levelbuilder-studio.code.org/courses/exploring-gen-ai-2025/units/2/lessons/12' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.</p>
+
+---
+
+## User Testing
+
+#### Like many products, chatbots need to be tested by a wide range of users to uncover usability problems, inaccuracies, and unintended consequences. For example, early crash tests ignored women and children, and AI systems can similarly fail when they’re not tested with diverse perspectives.
+
+#### **User testing** can uncover flaws like gender bias or inappropriate advice, and how these issues may reflect deeper biases in training data or system design.
+
+#### Even with testing, it’s up to people to decide whether to launch, delay, or cancel AI tools. AI designers must weigh societal impacts and make judgment calls about when and how to deploy an AI system.
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+➡️ This topic is covered in Lesson 13. You can find more details in the full <a href='https://levelbuilder-studio.code.org/courses/exploring-gen-ai-2025/units/2/lessons/13' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.</p>
+
+---
+
+## Fine Tuning
+
+<img src="https://images.code.org/98ce6352ee4c01959436a4c0735c556f-Screenshot 2024-10-07 at 10.38.43 AM.png" alt="comparing models in AI chat lab" width="50%" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0px 10px 10px 10px;">
+
+#### **Fine-tuning** is the process of retraining a pre-existing language model with additional, domain-specific data to create a more specialized version. This changes how the model represents and responds to information, enabling deeper expertise in specific topics. Models that are fine-tuned are more technical and use subject-specific jargon compared to general-purpose models.
+
+#### For example, Mistral 7B is a general purpose chatbot. It can be trained with domain-specific data such as biomedical journal text to create a more specialized version (e.g., BioMistral).
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This topic is covered in Lesson 14. You can find more details in the full <a href='https://levelbuilder-studio.code.org/courses/exploring-gen-ai-2025/units/2/lessons/14' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+
+
+---
+
+#### The lessons in this portion of the unit will help students develop their skills to complete the **Final Project, Solving Community Problems with Chatbots**.
+
+MARKDOWN

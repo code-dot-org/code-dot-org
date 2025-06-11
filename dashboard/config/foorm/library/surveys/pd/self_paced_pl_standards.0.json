@@ -6,7 +6,7 @@
         {
           "type": "checkbox",
           "name": "barriers_implementation_ai",
-          "title": "Do you anticipate any barriers to using what you’ve learned?",
+          "title": "Do you anticipate any barriers to using what you’ve learned about AI?",
           "description": "(Select all that apply)",
           "choices": [
             {
@@ -43,7 +43,7 @@
         {
           "type": "checkbox",
           "name": "barriers_implementation_teaching_cs",
-          "title": "Do you anticipate any barriers to using what you’ve learned?",
+          "title": "Do you anticipate any barriers to using what you’ve learned about teaching {module}?",
           "description": "(Select all that apply)",
           "choices": [
             {
@@ -76,7 +76,7 @@
         {
           "type": "rating",
           "name": "better_understanding_concepts",
-          "title": "After completing this module, I have a better understanding of {module} concepts.",
+          "title": "After completing this module, I have a better understanding of the concepts introduced in {module}.",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Strongly disagree",
@@ -311,7 +311,7 @@
         {
           "type": "matrix",
           "name": "module_supported_learning",
-          "title": "How did each of the following supported your learning?",
+          "title": "How did each of the following support your learning?",
           "description": "Rate how helpful was each option from Not helpful (1) to Very helpful (7).",
           "columns": [
             {
@@ -434,7 +434,7 @@
         {
           "type": "rating",
           "name": "plan_ongoing_assessment",
-          "title": "After completing this module, I have a clear idea of how I will incorporate ongoing assessment into my {module} class",
+          "title": "After completing this module, I have a clear idea of how I will incorporate ongoing assessment into my {module} class.",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Strongly disagree",
@@ -444,10 +444,10 @@
           "type": "rating",
           "name": "plan_to_teach",
           "title": "Are you planning to teach Code.org's {module} content?",
-          "natalia_comment": "NOTE: set the {module} variable in the simple survey configuration to pass-through the value you want to appear in the survey (eg. computer vision)",
+          "natalia_comment": "NOTE: set the {curriculum} variable in the simple survey configuration to pass-through the value you want to appear in the survey (eg. computer vision)",
           "rateCount": 7,
           "rateMax": 7,
-          "minRateDescription": "Not at all",
+          "minRateDescription": "Not really",
           "maxRateDescription": "Yes, definitely"
         },
         {
@@ -502,7 +502,7 @@
         {
           "type": "comment",
           "name": "self_paced_pl_other_feedback",
-          "title": "Do you have any feedback about this module that you would like to share with the Code.org team? "
+          "title": "Do you have any feedback about this module that you would like to share with the Code.org team?"
         },
         {
           "type": "rating",

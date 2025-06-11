@@ -1,0 +1,22 @@
+name 'pl-game-python-module-intro-2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<img src="https://images.code.org/c794834da281ac9150f50756a1d6589a-image-1749145609569.png" alt="Banner saying Welcome to the Neighborhood a teacher's path to Python" width="750px" style="display: block; margin-left: auto; margin-right: auto;">
+
+## Your Path to Python Starts Here!
+
+<img src="https://images.code.org/5fa8044a13dd560393e9061947590566-image-1749145991484.png" alt="image of cars and road in cartoon style" width="300px" style="border-radius:5px; float:right; margin: 0 0 20px 10px;">
+
+#### You’re about to begin your journey through “The Neighborhood,” a legendary land where Python powers possibilities and teaching turns into an art form.
+
+
+
+#### This isn’t just any stroll through the city—it's a playful expedition filled with quirky stops, clever coding challenges, and moments that mirror the real-world classroom. From brewing up syntax at the Neighborhood Café to decoding strategies in the Library of Learning, you’ll collect milestone badges that mark your progress and prepare you to guide your students with confidence.
+
+#### Grab your notebook, cue the coffee, and take your first step. The Neighborhood awaits—and the Cup of Logic is calling.
+
+<div style="clear:both;"></div>
+
+MARKDOWN

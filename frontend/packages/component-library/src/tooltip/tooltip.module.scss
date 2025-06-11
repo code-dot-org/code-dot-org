@@ -52,6 +52,8 @@ $tooltip-span-vertical-top-spacing: 2px;
 .tooltip {
   visibility: hidden;
   position: absolute;
+  inset: 0 auto auto 0;
+  will-change: transform; // improves rendering performance
   z-index: 10;
   display: flex;
   align-items: center;

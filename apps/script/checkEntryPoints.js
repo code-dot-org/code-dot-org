@@ -92,6 +92,9 @@ const SILENCED = [
   'googleblockly',
   'brambleHost',
   'levelbuilder',
+
+  // needed to initialize the locales before all other app code loads
+  'localization',
 ];
 const SITES_CONFIG = {
   studio: {

@@ -45,3 +45,12 @@ export async function fetchAbuseScore(channelId: string): Promise<number> {
   );
   return value.abuse_score;
 }
+
+export async function fetchSharingDisabled(
+  channelId: string
+): Promise<boolean> {
+  const {value} = await HttpClient.fetchJson<{sharing_disabled: boolean}>(
+    `${rootUrl}/${channelId}/sharing_disabled`
+  );
+  return value.sharing_disabled;
+}

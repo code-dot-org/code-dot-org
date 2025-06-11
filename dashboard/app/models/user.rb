@@ -100,6 +100,8 @@ class User < ApplicationRecord
   include PasswordValidations
   include EmailValidations
   include ProviderFlags
+  include Verifiable
+  include Age
   include PartialRegistration
   include Rails.application.routes.url_helpers
 
@@ -144,7 +146,6 @@ class User < ApplicationRecord
   #   educator_role: Indicates the role of the educator, e.g. 'teacher', 'school_admin', 'district_admin', etc.
 
   AI_TUTOR_EXPERIMENT_NAME = 'ai-tutor'
-  AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
 
   DATA_TRANSFER_AGREEMENT_SOURCE_TYPES = [
@@ -309,10 +310,6 @@ class User < ApplicationRecord
   has_one :latest_parental_permission_request, -> {order(updated_at: :desc)}, class_name: 'ParentalPermissionRequest'
 
   ## Validation Macros
-  defer_age = proc {|user| %w(google_oauth2 clever).include?(user.provider) || user.sponsored? || Policies::Lti.lti?(user)}
-  validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
-  validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
-
   validate :complete_school_info, if: :school_info_id_changed?, unless: proc {|u| u.purged_at.present?}
 
   validates :data_transfer_agreement_accepted, acceptance: true, if: :data_transfer_agreement_required
@@ -400,7 +397,7 @@ class User < ApplicationRecord
 
   before_validation :normalize_parent_email
 
-  before_validation :update_share_setting, unless: :under_13?
+  before_validation :update_share_setting
 
   # NOTE: Order is important here.
   before_save :make_teachers_21,
@@ -919,21 +916,6 @@ class User < ApplicationRecord
     user_type == TYPE_TEACHER
   end
 
-  # Warning: Calling this method will trigger the sending of a verification email,
-  # as establish in the user_permission model
-  def verify_teacher!
-    self.permission = UserPermission::AUTHORIZED_TEACHER
-  end
-
-  # This method just checks if a user has the authorized teacher permission
-  # if you are hoping to know if someone can access content for verified instructors
-  # you should use the verified_instructor? method instead which includes checks for a
-  # couple different permissions that should have access instructor only content such
-  # as levelbuilders
-  def verified_teacher?
-    permission?(UserPermission::AUTHORIZED_TEACHER)
-  end
-
   def levelbuilder?
     permission?(UserPermission::LEVELBUILDER)
   end
@@ -944,16 +926,6 @@ class User < ApplicationRecord
   # our AI evaluation tools internally.
   def can_access_student_work?
     permission?(UserPermission::STUDENT_WORK_ACCESS)
-  end
-
-  # A user is a verified instructor if you are a universal_instructor, plc_reviewer,
-  # facilitator, authorized_teacher, or levelbuilder. All of these permissions tell us someone
-  # should be trusted with locked down instructor only content. It is important to use this
-  # method instead of verified_teacher? as teachers will not be instructors for all courses
-  def verified_instructor?
-    permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || permission?(UserPermission::PLC_REVIEWER) ||
-      permission?(UserPermission::FACILITATOR) || permission?(UserPermission::AUTHORIZED_TEACHER) ||
-      permission?(UserPermission::LEVELBUILDER)
   end
 
   def can_view_all_facilitator_landing_pages?
@@ -1012,49 +984,6 @@ class User < ApplicationRecord
 
   def confirmation_required?
     false
-  end
-
-  # There are some shenanigans going on with this age stuff. The
-  # actual persisted column is birthday -- so we convert age to a
-  # birthday when writing and convert birthday to an age when
-  # reading. However -- when we are generating error messages for the
-  # user on an unsaved record, we actually 'read' and 'write' the
-  # attribute via these accessors. @age is a non-persisted member that
-  # we use to save the (possibly invalid) value that the user entered
-  # for age so we can generate the correct error message.
-
-  def age=(val)
-    @age = val
-    val = begin
-      val.to_i
-    rescue
-      0 # sometimes we get age: {"Pr" => nil}
-    end
-    return unless val > 0
-    return unless val < 200
-    return if birthday && val == age # don't change birthday if we want to stay the same age
-
-    self.birthday = val.years.ago
-  end
-
-  def age
-    return @age unless birthday
-    age = UserHelpers.age_from_birthday(birthday)
-    if age < 4
-      age = nil
-    elsif age >= 21
-      age = '21+'
-    end
-    age
-  end
-
-  # Duplicated by under_13? in auth_helpers.rb, which doesn't use the rails model.
-  def under_13?
-    age.nil? || age.to_i < 13
-  end
-
-  def over_21?
-    !age.nil? && age.to_i >= 21
   end
 
   def mute_music?
@@ -1171,6 +1100,16 @@ class User < ApplicationRecord
       where("assigned_at").
       order(assigned_at: :desc).
       first
+  end
+
+  # Get the UnitGroupUnit for the most recently assigned UserScript.
+  def most_recently_assigned_unit_group_unit
+    unit = most_recently_assigned_user_script&.script
+    return unless unit
+    # UserScript doesn't record the UnitGroup the user was in, so we will assume
+    # it is the most recently created section.
+    section = sections_as_student.select {|s| !s.hidden && s.script_id == unit.id}.last
+    Queries::Courses.unit_group_unit(unit, section&.unit_group)
   end
 
   # Get script object of the user_script the user was most recently
@@ -1707,11 +1646,12 @@ class User < ApplicationRecord
     self.sharing_disabled = true if under_13?
   end
 
-  # If a user is now over age 13, we should update
-  # their share setting to enabled, if they are in no sections.
+  # If the user is not in any sections, set sharing based on age (disabled if under 13).
   def update_share_setting
-    self.sharing_disabled = false if sections_as_student.empty?
-    return true
+    if sections_as_student.empty?
+      self.sharing_disabled = under_13?
+    end
+    true
   end
 
   # When creating an account, we want to look for any channels that got created

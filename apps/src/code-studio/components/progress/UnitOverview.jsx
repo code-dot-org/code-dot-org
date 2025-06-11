@@ -224,7 +224,6 @@ class UnitOverview extends React.Component {
           <UnitOverviewTopRow
             teacherResources={teacherResources}
             studentResources={studentResources}
-            showAssignButton={showAssignButton}
             assignedSectionId={assignedSectionId}
             showCalendar={showCalendar}
             weeklyInstructionalMinutes={weeklyInstructionalMinutes}

@@ -11,6 +11,7 @@ import TextField from '@code-dot-org/component-library/textField';
 import Typography from '@code-dot-org/component-library/typography';
 import React, {Fragment, useMemo, useState} from 'react';
 
+import {DATA_SHARING_NOTICE} from '@cdo/apps/code-studio/pd/constants';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import {useSchoolInfo} from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
@@ -927,19 +928,7 @@ export default function EnrollForm(props: EnrollFormProps) {
           </>
         )}
       <Typography semanticTag="p" visualAppearance="body-four">
-        Code.org works closely with local Regional Partners and Code.org
-        facilitators to deliver the Professional Learning Program. By enrolling
-        in this workshop, you are agreeing to allow Code.org to share
-        information on how you use Code.org and the Professional Learning
-        resources with your Regional Partner, school district and facilitators.
-        We will share your contact information, which courses/units you are
-        using and aggregate data about your classes with these partners. This
-        includes the number of students in your classes, the demographic
-        breakdown of your classroom, and the name of your school and district.
-        We will not share any information about individual students with our
-        partners - all information will be de-identified and aggregated. Our
-        Regional Partners and facilitators are contractually obliged to treat
-        this information with the same level of confidentiality as Code.org.
+        {DATA_SHARING_NOTICE}
       </Typography>
       {Object.keys(formErrors).length > 0 && (
         <Alert

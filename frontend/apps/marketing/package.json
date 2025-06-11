@@ -17,7 +17,7 @@
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "build": "next build && yarn copy:static-assets",
-    "copy:static-assets": "cp -r public .next/standalone/apps/marketing",
+    "copy:static-assets": "cp -r public .next/standalone/apps/marketing && cp -r public .next/static",
     "dev": "next dev --turbopack -p 3001 | pino-pretty --ignore pid,hostname",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
@@ -40,7 +40,7 @@
   "dependencies": {
     "@code-dot-org/component-library": "workspace:*",
     "@code-dot-org/fonts": "workspace:*",
-    "@contentful/experiences-sdk-react": "^1.37.1",
+    "@contentful/experiences-sdk-react": "^1.39.0",
     "@contentful/rich-text-html-renderer": "^17.0.0",
     "@contentful/rich-text-plain-text-renderer": "^17.0.0",
     "@newrelic/browser-agent": "^1.290.0",

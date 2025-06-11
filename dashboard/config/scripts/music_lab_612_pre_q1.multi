@@ -1,0 +1,29 @@
+name 'music-lab-612-pre-q1'
+
+question 'Put actual question here'
+
+wrong 'wrong'
+wrong 'wrong'
+wrong 'wrong'
+right 'correct'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Sequencing
+
+Standard: Use the play together and play sequential blocks together to create layered tracks with different measure counts
+
+Lesson Type: Sequencing - Practice
+
+Skill Progression: Play 2+ sounds with different measure lengths together with at least 1 offset
+
+Pretest Modality: Given code, match to timeline
+
+Posttest Modality: Given algorithm / intent / incorrect code, match with code
+
+MARKDOWN
+
+markdown <<MARKDOWN
+Put the images / context markdown here
+MARKDOWN

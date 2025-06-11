@@ -53,6 +53,7 @@ export interface ProjectAndSources {
   sources?: ProjectSources;
   channel: Channel;
   abuseScore?: number;
+  sharingDisabled?: boolean;
 }
 
 /// ------ SOURCES ------ ///
@@ -352,6 +353,7 @@ export interface Validation {
   callout?: string;
   next: boolean;
   key: string;
+  comment?: string;
 }
 
 /// ------ MISC ------ ///

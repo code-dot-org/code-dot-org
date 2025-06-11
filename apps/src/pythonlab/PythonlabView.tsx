@@ -96,6 +96,10 @@ const PythonlabView: React.FunctionComponent<
     state => state.lab2Project.lastSavedLabConfig
   );
 
+  const isAiTutor2Enabled =
+    levelProperties.aiTutor2Available ||
+    queryParams('show-ai-tutor2') === 'true';
+
   const dispatch = useAppDispatch();
 
   const currentProjectType = useMemo(() => {
@@ -185,6 +189,7 @@ const PythonlabView: React.FunctionComponent<
   };
 
   const [askAiTutor2, AiTutor2Response] = useAiTutor2(
+    isAiTutor2Enabled,
     getAiTutor2FullPrompt,
     'hint'
   );
@@ -223,10 +228,7 @@ const PythonlabView: React.FunctionComponent<
     }
     dispatch(submitPredictResponse({appType: 'pythonlab'}));
 
-    if (
-      levelProperties.aiTutor2Available ||
-      queryParams('show-ai-tutor2') === 'true'
-    ) {
+    if (isAiTutor2Enabled) {
       // Ask a question to AITutor2.
       askAiTutor2("What's wrong with my code, if anything?");
     }

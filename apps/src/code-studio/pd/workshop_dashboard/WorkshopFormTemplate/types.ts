@@ -184,7 +184,8 @@ type BasicsKeys =
 type PartnerFacilitatorKeys =
   | 'facilitators'
   | 'regionalPartnerId'
-  | 'organizerId';
+  | 'organizerId'
+  | 'courseOfferings';
 
 type AdditionalInfoKeys = 'fee' | 'participantGroupType' | 'notes';
 

@@ -207,6 +207,12 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
       {
+        source: '/dataportal',
+        destination:
+          'https://us-east-1.online.tableau.com/#/site/codeorg/views/DashboardPortal2_0/DataPortalHome',
+        permanent: false,
+      },
+      {
         source: '/educate/curriculum/csf-transition-guide',
         destination:
           'https://support.code.org/hc/en-us/articles/26001058366093-Teaching-Computer-Science-Fundamentals-Courses-A-F',
@@ -235,12 +241,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/yourschool/thankyou',
-        destination: 'https://studio.code.org/your-school',
+        destination: '/your-school',
         permanent: false,
       },
       {
         source: '/yourschool',
-        destination: 'https://studio.code.org/your-school',
+        destination: '/your-school',
         permanent: false,
       },
       {
@@ -600,22 +606,22 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/afe/success',
-        destination: 'https://studio.code.org/amazon-future-engineer',
+        destination: '/amazon-future-engineer',
         permanent: false,
       },
       {
         source: '/afe/start-codeorg',
-        destination: 'https://studio.code.org/amazon-future-engineer',
+        destination: '/amazon-future-engineer',
         permanent: false,
       },
       {
         source: '/afe/india',
-        destination: 'https://studio.code.org/amazon-future-engineer',
+        destination: 'https://global.code.org',
         permanent: false,
       },
       {
         source: '/afe',
-        destination: 'https://studio.code.org/amazon-future-engineer',
+        destination: '/amazon-future-engineer',
         permanent: false,
       },
       {
@@ -654,6 +660,11 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
       {
+        source: '/learn',
+        destination: 'https://hourofcode.com/learn',
+        permanent: false,
+      },
+      {
         source: '/learn/codehs',
         destination: 'https://hourofcode.com/learn',
         permanent: false,
@@ -675,6 +686,11 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/international/index',
+        destination: 'https://global.code.org',
+        permanent: false,
+      },
+      {
+        source: '/international',
         destination: 'https://global.code.org',
         permanent: false,
       },
@@ -701,11 +717,6 @@ const nextConfig: NextConfig = {
       {
         source: '/contact',
         destination: 'https://codeorg.zendesk.com/hc/en-us/requests/new',
-        permanent: false,
-      },
-      {
-        source: '/farsi',
-        destination: 'https://codeinfarsi.org/',
         permanent: false,
       },
       {
@@ -790,6 +801,11 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/educate/resources/index',
+        destination: '/teachers',
+        permanent: false,
+      },
+      {
+        source: '/educate/resources',
         destination: '/teachers',
         permanent: false,
       },
@@ -884,6 +900,11 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
       {
+        source: '/csjourneys',
+        destination: '/students/careers-in-computer-science',
+        permanent: false,
+      },
+      {
         source: '/csjourneys/engage-parents',
         destination: '/students/careers-in-computer-science',
         permanent: false,
@@ -905,6 +926,11 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/careers-with-cs/index',
+        destination: '/students/careers-in-computer-science',
+        permanent: false,
+      },
+      {
+        source: '/careers-with-cs',
         destination: '/students/careers-in-computer-science',
         permanent: false,
       },
@@ -990,6 +1016,11 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/educate/regional-partner/index',
+        destination: '/professional-learning/regional-partner-program',
+        permanent: false,
+      },
+      {
+        source: '/educate/regional-partner',
         destination: '/professional-learning/regional-partner-program',
         permanent: false,
       },
@@ -1554,6 +1585,11 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
       {
+        source: '/educate/csd',
+        destination: '/curriculum/computer-science-discoveries',
+        permanent: false,
+      },
+      {
         source: '/curriculum/csd',
         destination: '/curriculum/computer-science-discoveries',
         permanent: false,
@@ -1739,6 +1775,11 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
       {
+        source: '/advocacy/state-facts',
+        destination: 'https://advocacy.code.org/stateofcs/',
+        permanent: false,
+      },
+      {
         source: '/yourschool/accessreport',
         destination: 'https://advocacy.code.org/report-data/',
         permanent: false,
@@ -1908,6 +1949,11 @@ const nextConfig: NextConfig = {
       {
         source: '/farsi',
         destination: 'https://global.code.org/farsi',
+        permanent: false,
+      },
+      {
+        source: '/csaif',
+        destination: '/curriculum/artificial-intelligence-foundations',
         permanent: false,
       },
     ];

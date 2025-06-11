@@ -52,7 +52,7 @@ class SectionLoginInfo extends React.Component {
       : this.props.students;
 
     return (
-      <div>
+      <div id="ui-test-section-login-info">
         {[SectionLoginType.word, SectionLoginType.picture].includes(
           section.loginType
         ) && (

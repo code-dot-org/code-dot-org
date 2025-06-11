@@ -184,21 +184,17 @@ describe('OwnedSectionsTable', () => {
 
     // If section has 0 students, shows "Add students" button
     const noStudentsButton = screen.getByText('Add students').closest('a');
-    expect(
-      noStudentsButton.href.includes(
-        `/teacher_dashboard/sections/${sectionRowData[3].id}/manage_students`
-      )
-    ).toBeTruthy();
+    expect(noStudentsButton.href).toContain(
+      `/teacher_dashboard/sections/${sectionRowData[3].id}/roster`
+    );
 
     // If section has 1+ students, displays number of students
     const someStudentsButton = screen
       .getByText(`${sectionRowData[0].studentCount}`)
       .closest('a');
-    expect(
-      someStudentsButton.href.includes(
-        `/teacher_dashboard/sections/${sectionRowData[0].id}/manage_students`
-      )
-    ).toBeTruthy();
+    expect(someStudentsButton.href).toContain(
+      `/teacher_dashboard/sections/${sectionRowData[0].id}/roster`
+    );
   });
 
   it('studentsFormatter provides a link to teacher dashboard roster page when new teacher dashboard experiment is enabled', () => {
@@ -284,11 +280,9 @@ describe('OwnedSectionsTable', () => {
     const twoAssignmentPathsUnitName = screen
       .getByText(sectionRowData[0].assignmentNames[1])
       .closest('a');
-    expect(
-      twoAssignmentPathsUnitName.href.includes(
-        sectionRowData[0].assignmentPaths[1]
-      )
-    ).toBeTruthy();
+    expect(twoAssignmentPathsUnitName.href).toContain(
+      sectionRowData[0].assignmentPaths[1].replace('/s/', '/unit/')
+    );
 
     // For sections with a single-unit course, show course name only
     const singleUnitCourseName = screen

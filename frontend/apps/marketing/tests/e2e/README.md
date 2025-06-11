@@ -96,43 +96,43 @@ yarn test:ui:fork
 
 2. Make updates on the forked page in Contentful.
 
-3. If you're adding a new component: add the component to the Section Type on `/apps/marketing/tests/e2e/pom/all-the-things.ts` and add unit and Eyes tests to `/apps/marketing/tests/e2e/all-the-things.spec.ts`.
-
-4. Update the `development` snapshot with your forked version; the ID can be found in the url on the forked experience in Contentful:
+3. Update the `development` snapshot with your forked version; the ID can be found in the url on the forked experience in Contentful:
 
 ```bash
 yarn test:ui:update-snapshot --source-entry-id <ID HERE> --environment development
 ```
 
-5. Create a PR with the updates from steps 1-4.
+4. Create a PR with the updates from steps 1-3.
 
-6. Once the PR is merged, update your workspace with `staging`.
+5. Once the PR is merged, update your workspace with `staging`.
 
-7. Publish the updated snapshot in the `development` environment:
+6. Publish the updated snapshot in the `development` environment:
 
 ```bash
 yarn test:ui:publish-snapshot --environment development
 ```
 
-8. Open the development output link in the terminal in Contentful, and Publish the experience.
+7. Open the development output link in the terminal in Contentful, and Publish the experience.
 
-9. Publish the updated snapshot in the `test` environment:
+8. Publish the updated snapshot in the `test` environment:
 
 ```bash
 yarn test:ui:publish-snapshot --environment test
 ```
 
-10. Publish the updated snapshot in the `production` environment:
+9. Publish the updated snapshot in the `production` environment:
 
 ```bash
 yarn test:ui:publish-snapshot --environment production
 ```
 
-11. Eyes diffs will show up in a Marketing-App-Deploy message in the _#infra-marketing-app-staging_ Slack channel.
+10. Publish updated `production` version of the All The Things page in Contentful.
 
-12. Approve Eyes diffs and rerun failed tests if needed.
+11. **If you're adding a new component:** add the component to the Section Types on `/apps/marketing/tests/e2e/pom/all-the-things.ts` and add unit and Eyes tests to `/apps/marketing/tests/e2e/all-the-things.spec.ts`. Create/merge a PR with these tests.
 
-13. Publish updated `production` version of the All The Things page in Contentful.
+12. Eyes diffs may show up in a Marketing-App-Deploy message in the _#infra-marketing-app-staging_ Slack channel.
+
+13. Approve Eyes diffs and rerun failed tests if needed.
 
 #### ⛔️ Troubleshooting
 
