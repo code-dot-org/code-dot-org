@@ -8,6 +8,8 @@ import type {Theme} from '../../types';
 import BlockLimitIndicator from './BlockLimitIndicator';
 import BlockLimitMap from './BlockLimitMap';
 
+export {BlockLimitMap, BlockLimitIndicator};
+
 export class BlockLimits {
   private blockLimitMap: BlockLimitMap;
 

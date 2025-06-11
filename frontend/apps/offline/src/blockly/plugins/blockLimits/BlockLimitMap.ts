@@ -94,6 +94,17 @@ class BlockLimitMap {
   }
 
   /**
+   * Returns `true` if any of the blocks are over their limit.
+   */
+  anyOver(): boolean {
+    return (
+      Array.from(this.blockLimitMap).some(
+        ([type, limit]) => this.blockCountMap.get(type) > limit,
+      ).length > 0
+    );
+  }
+
+  /**
    * Instantiates, if needed, a block indicator for the given block.
    */
   indicatorFor(
