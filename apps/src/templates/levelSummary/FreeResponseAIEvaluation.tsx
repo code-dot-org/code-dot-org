@@ -69,7 +69,6 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
         );
         const loadedEvaluations = await Promise.all(promises);
 
-        // Likily need to clean something up here... would like to filter out arrays earlier perhaps in the controller
         const allExistingEvaluations = loadedEvaluations
           .filter(
             data =>
@@ -87,19 +86,15 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
         return allExistingEvaluations;
       };
 
-      ////// This is the line I changed here - I commented out what was working
       const fetchAndSetEvaluations = async () => {
         const evaluations = await loadExistingEvaluations();
-        // what if instead we add these to evaluations state
         const completeEvaluations =
           addStudentNameAndResponseToEvaluations(evaluations);
-        console.log('Fetched evaluations:', completeEvaluations);
         setEvaluationCount(evaluations.length);
         setEvaluations(prevEvaluations => [
           ...prevEvaluations,
           ...completeEvaluations,
         ]);
-        // setExistingEvaluations(evaluations);
       };
 
       fetchAndSetEvaluations();

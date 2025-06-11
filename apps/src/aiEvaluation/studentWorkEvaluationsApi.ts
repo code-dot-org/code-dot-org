@@ -120,28 +120,22 @@ export async function fetchStudentWorkEvaluations(
   levelId: number,
   unitId: number
 ) {
-  try {
-    const response = await fetch(
-      `/student_work_evaluations/${userId}/${levelId}/${unitId}`,
-      {
-        method: 'GET',
-        headers: {
-          Accept: 'application/json',
-          'X-CSRF-Token': await getAuthenticityToken(),
-        },
-      }
-    );
-    if (!response.ok) {
-      throw new Error('Failed to fetch StudentWorkEvaluations');
+  const response = await fetch(
+    `/student_work_evaluations/${userId}/${levelId}/${unitId}`,
+    {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'X-CSRF-Token': await getAuthenticityToken(),
+      },
     }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    MetricsReporter.logError({
-      event: MetricEvent.STUDENT_WORK_EVALUATION_SAVE_FAIL,
-      errorMessage:
-        (error as Error).message || 'Failed to fetch StudentWorkEvaluations',
-    });
-    return [];
+  );
+  if (!response.ok) {
+    console.info(
+      `No StudentWorkEvaluations found for user ${userId}, level ${levelId}, unit ${unitId}.`
+    );
+    return;
   }
+  const data = await response.json();
+  return data;
 }
