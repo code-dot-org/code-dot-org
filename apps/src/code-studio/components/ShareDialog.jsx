@@ -20,7 +20,6 @@ class ShareDialog extends Component {
     isAbusive: PropTypes.bool,
     canPrint: PropTypes.bool,
     canPublish: PropTypes.bool,
-    isPublished: PropTypes.bool,
     channelId: PropTypes.string,
     appType: PropTypes.string,
     onClickPopup: PropTypes.func,
