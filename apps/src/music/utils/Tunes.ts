@@ -92,7 +92,6 @@ export function getDisplayNotes(
       kitFolder?.sounds.map((sound, i) => ({
         name: sound.name,
         note: i,
-        colors: null,
       })) || []
     );
   }
