@@ -54,7 +54,7 @@ runs:
         name: playwright-report
 
     - name: Run Google Lighthouse Audits
-      uses: treosh/lighthouse-ci-action@2f8dda6cf4de7d73b29853c3f29e73a01e297bd8
+      uses: treosh/lighthouse-ci-action@9917efea514615fb2ff2890f5b8be2d51e703b6e
       env:
         HTTP_PROTOCOL: ${{ inputs.APPLICATION_BASE_ADDRESS == 'localhost:3001' && 'http' || 'https' }}
       with:
