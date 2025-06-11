@@ -51,6 +51,7 @@ module ViewOptionsHelper
     :is_viewing_own_project,
     :code_owners_name,
     :stay_on_level_after_submit,
+    :allow_multiple_attempts,
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)

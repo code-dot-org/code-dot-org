@@ -307,6 +307,7 @@ module LevelsHelper
     view_options(server_level_id: @level.id)
 
     view_options(stay_on_level_after_submit: @level.stay_on_level_after_submit?)
+    view_options(allow_multiple_attempts: @level.allow_multiple_attempts?) if @level.respond_to?(:allow_multiple_attempts?)
 
     if @script_level
       view_options(

@@ -70,7 +70,11 @@ $(document).ready(() => {
 
       var onComplete = function (willRedirect) {
         if (appOptions.stayOnLevelAfterSubmit) {
-          $('.response').attr('disabled', true);
+          if (!appOptions.allowMultipleAttempts) {
+            $('.response').attr('disabled', true);
+          } else {
+            submitButton.attr('disabled', false);
+          }
           $('.nextLevelButton').show();
         } else if (!willRedirect) {
           $('.submitButton').attr('disabled', false);

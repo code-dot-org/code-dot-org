@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-06-04T17:30:28.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Re-read the article from the perspective of an AI Engineer who wants to use this for training data in RecipeBot. Look for unique words that appear in the article and could be used by a language model to start developing meaning. For example: \"Naan\", or \"Ounce\", or \"Bake\".\r\n\r\n**Identify at least 10 recipe-related words that a language model could learn from this article**",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2025",
+    "stay_on_level_after_submit": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-06-04T13:30:28.213-04:00\",\"changed\":[\"cloned from \\\"genai-lesson3-activity-lv5_2025\\\"\"],\"cloned_from\":\"genai-lesson3-activity-lv5_2025\"},{\"changed_at\":\"2025-06-04 13:30:36 -0400\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"bethany+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>
