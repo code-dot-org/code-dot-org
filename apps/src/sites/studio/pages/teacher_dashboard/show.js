@@ -12,7 +12,7 @@ import verifiedInstructor from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import viewAs from '@cdo/apps/code-studio/viewAsRedux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
-import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import unitSelection, {setUnit} from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser, {
   setCurrentUserHasSeenStandardsReportInfo,
 } from '@cdo/apps/templates/currentUserRedux';
@@ -113,8 +113,9 @@ $(document).ready(function () {
     const defaultScriptId = selectedSection.script
       ? selectedSection.script.id
       : null;
+    const defaultCourseVersionId = selectedSection.courseVersionId;
     if (defaultScriptId) {
-      store.dispatch(setScriptId(defaultScriptId));
+      store.dispatch(setUnit(defaultScriptId, defaultCourseVersionId));
     }
     return (
       <BrowserRouter basename={baseUrl}>

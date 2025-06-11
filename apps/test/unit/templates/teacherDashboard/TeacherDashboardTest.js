@@ -4,7 +4,7 @@ import {Provider} from 'react-redux';
 import {MemoryRouter} from 'react-router-dom';
 
 import {registerReducers, restoreRedux, stubRedux} from '@cdo/apps/redux';
-import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import unitSelection, {setUnit} from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import manageStudents from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
@@ -45,7 +45,7 @@ describe('TeacherDashboard', () => {
     });
 
     store = createStore(5, 5);
-    store.dispatch(setScriptId(1));
+    store.dispatch(setUnit(1, 99));
     store.dispatch(setTeacherCommentForReport('Comment!'));
 
     jest
@@ -58,6 +58,7 @@ describe('TeacherDashboard', () => {
     replaceOnWindow('opener', {
       teacherDashboardStoreInformation: {
         scriptId: 1,
+        courseVersionId: 99,
         teacherComment: 'Comment!',
       },
     });
