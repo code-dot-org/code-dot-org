@@ -6,6 +6,8 @@ export type Section =
   | 'Action Block'
   | 'Action Block Carousel'
   | 'Full Width Action Block'
+  | 'Action Block Pattern Default'
+  | 'Action Block Pattern Hidden Elements'
   | 'Button'
   | 'Divider'
   | 'Editorial Card'

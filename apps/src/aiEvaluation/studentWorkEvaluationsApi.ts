@@ -38,10 +38,19 @@ export async function logStudentWorkEvaluations(
           evaluation: skillEvaluation.aiEvaluation,
           reasoning: skillEvaluation.aiReasoning,
         });
-        logStudentWorkEvaluationSummary({
-          studentWorkEvaluationId: ulse.id,
-          studentWorkEvaluationSummaryId: ule.id,
-        });
+        try {
+          await logStudentWorkEvaluationSummary({
+            studentWorkEvaluationId: ulse.id,
+            studentWorkEvaluationSummaryId: ule.id,
+          });
+        } catch (error) {
+          MetricsReporter.logError({
+            event: MetricEvent.STUDENT_WORK_EVALUATION_SUMMARY_SAVE_FAIL,
+            errorMessage:
+              (error as Error).message ||
+              `Failed to save StudentWorkEvaluationSummary for ULSE ID ${ulse.id} and ULE ID ${ule.id}`,
+          });
+        }
       })
     );
   }

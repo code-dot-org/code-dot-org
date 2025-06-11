@@ -17,7 +17,8 @@ type CallbackArgs = {
     channel: Channel | undefined,
     initialSources: ProjectSources | undefined,
     abuseScore: number | undefined,
-    isReadOnly: boolean | undefined
+    isReadOnly: boolean | undefined,
+    projectSharingDisabled: boolean | undefined
   ];
 };
 

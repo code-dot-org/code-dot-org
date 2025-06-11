@@ -14,7 +14,7 @@ import moduleStyles from './workshopMarketingPage.module.scss';
 const workshopMarketingBreadcrumbs: LinkWithText[] = [
   {
     text: 'Explore workshops',
-    href: '/pd/workshop_dashboard/workshops/',
+    href: '/professional-learning/workshops/',
   },
   {
     text: 'Workshop information',
@@ -53,6 +53,7 @@ const WorkshopMarketingPage: React.FunctionComponent<
           name="workShopMarketingPage-HeaderBreadcrumbs"
           size="l"
           showHomeIcon={true}
+          homeIconHref="/my-professional-learning"
           breadcrumbs={workshopMarketingBreadcrumbs}
         />
         <Heading1>Register for a workshop</Heading1>

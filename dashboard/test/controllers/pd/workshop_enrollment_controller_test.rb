@@ -33,22 +33,22 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
   test 'non-logged-in users cannot enroll in csf workshop' do
     workshop = create :workshop, course: Pd::Workshop::COURSE_CSF
     get :new, params: {workshop_id: workshop.id}
-    assert_response :success
-    assert_template :logged_out
+    assert_response :redirect
+    assert_redirected_to "/logged_out?source_page=workshop%20enroll&return_to=%2Fpd%2Fworkshops%2F#{workshop.id}%2Fenroll"
   end
 
   test 'non-logged-in users cannot enroll in csd workshop' do
     workshop = create :workshop, course: Pd::Workshop::COURSE_CSD
     get :new, params: {workshop_id: workshop.id}
-    assert_response :success
-    assert_template :logged_out
+    assert_response :redirect
+    assert_redirected_to "/logged_out?source_page=workshop%20enroll&return_to=%2Fpd%2Fworkshops%2F#{workshop.id}%2Fenroll"
   end
 
   test 'non-logged-in users cannot enroll in csp workshop' do
     workshop = create :workshop, course: Pd::Workshop::COURSE_CSP
     get :new, params: {workshop_id: workshop.id}
-    assert_response :success
-    assert_template :logged_out
+    assert_response :redirect
+    assert_redirected_to "/logged_out?source_page=workshop%20enroll&return_to=%2Fpd%2Fworkshops%2F#{workshop.id}%2Fenroll"
   end
 
   test 'logged-in users can enroll in csf workshop' do
@@ -75,13 +75,13 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
     assert_template :new
   end
 
-  test 'students are shown students_cannot_enroll view' do
+  test 'students are sent to Teacher Acount Required page' do
     student = create :student
     sign_in student
     workshop = create :workshop, course: Pd::Workshop::COURSE_CSD
     get :new, params: {workshop_id: workshop.id}
-    assert_response :success
-    assert_template :students_cannot_enroll
+    assert_response :redirect
+    assert_redirected_to "/teacher_account_required?source_page=workshop%20enroll&return_to=%2Fpd%2Fworkshops%2F#{workshop.id}%2Fenroll"
   end
 
   test 'teacher with missing application gets missing application view' do

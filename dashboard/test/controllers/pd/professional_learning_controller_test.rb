@@ -721,6 +721,34 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
     assert_equal [non_hidden_workshop.id], Pd::ProfessionalLearningController.national_workshop_data.pluck(:id)
   end
 
+  test 'logged-out users can view workshop marketing page' do
+    workshop = create :workshop
+    get :workshop_marketing_page, params: {workshop_id: workshop.id}
+
+    assert_response :success
+    assert_template :index
+  end
+
+  test 'students can view workshop marketing page' do
+    workshop = create :workshop
+    student = create :student
+    sign_in student
+    get :workshop_marketing_page, params: {workshop_id: workshop.id}
+
+    assert_response :success
+    assert_template :index
+  end
+
+  test 'teachers can view workshop marketing page' do
+    workshop = create :workshop
+    teacher = create :teacher
+    sign_in teacher
+    get :workshop_marketing_page, params: {workshop_id: workshop.id}
+
+    assert_response :success
+    assert_template :index
+  end
+
   private def go_to_workshop(workshop, teacher)
     enrollment = create :pd_enrollment, email: teacher.email, workshop: workshop
     create :pd_attendance, session: workshop.sessions.first, enrollment: enrollment
