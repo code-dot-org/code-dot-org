@@ -190,6 +190,36 @@ test.describe('All the things UI e2e test', () => {
       });
     });
 
+    test.describe('action block pattern default', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator(
+          'Action Block Pattern Default',
+        );
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('action block pattern hidden elements', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator(
+          'Action Block Pattern Hidden Elements',
+        );
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
     test.describe('full width action block', () => {
       let component: Locator;
 
