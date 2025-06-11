@@ -214,7 +214,7 @@ class ScriptsController < ApplicationController
     end
     raise "The new unit editor does not support level variants with experiments" if @script.is_migrated && @script.script_levels.any?(&:has_experiment?)
     @script_data = {
-      script: @script ? @script.summarize_for_unit_edit(unit_group_unit: @script.original_unit_group_unit) : {},
+      script: @script ? @script.summarize_for_unit_edit : {},
       has_course: @script&.unit_groups&.any?,
       i18n: @script ? @script.summarize_i18n_for_edit : {},
       locales: Cdo::I18n.locale_options,

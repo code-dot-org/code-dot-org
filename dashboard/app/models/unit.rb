@@ -1689,9 +1689,9 @@ class Unit < ApplicationRecord
     summary
   end
 
-  def summarize_for_unit_edit(unit_group_unit: original_unit_group_unit)
+  def summarize_for_unit_edit
     include_lessons = false
-    summary = summarize(include_lessons, unit_group_unit: unit_group_unit)
+    summary = summarize(include_lessons, unit_group_unit: original_unit_group_unit)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
     summary[:courseOfferingEditPath] = edit_course_offering_path(course_version&.course_offering&.key) if course_version
     summary[:missingRequiredDeviceCompatibilities] = course_version&.course_offering&.missing_required_device_compatibility?
