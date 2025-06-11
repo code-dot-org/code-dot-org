@@ -19,7 +19,6 @@ const mockedUseFetch = useFetch;
 // mock redux store
 const initialState = {
   mapbox: {mapboxAccessToken: 'test-token'},
-  regionalPartners: {regionalPartners: [{id: 1, name: 'Bill Smith'}]},
 };
 
 describe('WorkshopFormTemplate', () => {
@@ -54,7 +53,16 @@ describe('WorkshopFormTemplate', () => {
       getState: mockGetState,
       subscribe: () => {},
     };
-    mockedUseFetch.mockReturnValue({data: null, loading: false, error: null});
+    mockedUseFetch.mockImplementation(url => {
+      if (url.includes('/api/v1/regional_partners')) {
+        return {
+          data: [{id: 1, name: 'Bill Smith'}],
+          loading: false,
+          error: null,
+        };
+      }
+      return {data: null, loading: false, error: null};
+    });
   });
 
   it.each(testConfigs)('renders the form for %s', (_, config) => {
@@ -112,14 +120,18 @@ describe('WorkshopFormTemplate', () => {
   it.each(testConfigs)(
     'does not pre-fill regional partner if there is more than one option for %s',
     async (_, config) => {
-      mockGetState.mockReturnValue({
-        ...initialState,
-        regionalPartners: {
-          regionalPartners: [
-            {id: 1, name: 'Bill Smith'},
-            {id: 2, name: 'Jane Yates'},
-          ],
-        },
+      mockedUseFetch.mockImplementation(url => {
+        if (url.includes('/api/v1/regional_partners')) {
+          return {
+            data: [
+              {id: 1, name: 'Bill Smith'},
+              {id: 2, name: 'Jane Yates'},
+            ],
+            loading: false,
+            error: null,
+          };
+        }
+        return {data: null, loading: false, error: null};
       });
       renderDefault({
         config,

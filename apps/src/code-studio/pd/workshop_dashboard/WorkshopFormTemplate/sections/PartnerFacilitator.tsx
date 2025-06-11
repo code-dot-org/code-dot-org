@@ -9,7 +9,6 @@ import React, {
   useMemo,
   useState,
 } from 'react';
-import {useSelector} from 'react-redux';
 import {useParams} from 'react-router-dom';
 
 import {useDebounce} from '@cdo/apps/util/hooks/useDebounce';
@@ -44,12 +43,8 @@ export const PartnerFacilitator: FC<PartnerFacilitatorProps> = ({
 
   const {data: facilitatorData} = useFetch<Facilitator[]>(facilitatorUrl);
 
-  const regionalPartnerData = useSelector(
-    ({
-      regionalPartners: {regionalPartners},
-    }: {
-      regionalPartners: {regionalPartners: RegionalPartner[]};
-    }) => regionalPartners
+  const {data: regionalPartnerData} = useFetch<RegionalPartner[]>(
+    '/api/v1/regional_partners'
   );
 
   const debouncedCourseOfferings = useDebounce<
