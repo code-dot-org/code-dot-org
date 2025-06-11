@@ -132,7 +132,7 @@ Resources:
           DATABASE: !Ref AccessLogDatabase
           TABLE: !Ref AccessLogTable
           PREFIX: !Ref BucketPrefix
-      Runtime: ruby2.7
+      Runtime: ruby3.2
       Role: !GetAtt AccessLogRole.Arn
   AccessLogPartitionPermission:
     Type: AWS::Lambda::Permission
@@ -188,7 +188,7 @@ Resources:
       FunctionName: AccessLogProcessor
       Code: ./access_logs.rb
       Handler: access_logs.handler
-      Runtime: ruby2.7
+      Runtime: ruby3.2
       MemorySize: 1024
       Timeout: 60
       Environment:
