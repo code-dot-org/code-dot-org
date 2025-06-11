@@ -31,7 +31,7 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
   end
 
   def course_offering_names
-    object.course_offerings&.map(&:display_name)&.sort&.join(', ')
+    object.course_offerings&.map(&:display_name_with_latest_year)&.sort&.join(', ')
   end
 
   def enrolled_teacher_count

@@ -93,7 +93,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
               location_name: @workshop.location_name,
               virtual: @workshop.virtual?,
               format: @workshop.format,
-              course_offerings: @workshop.course_offerings
+              course_offerings: @workshop.course_offerings.map(&:summarize_self_paced_pl)
             }
           ),
           session_dates: session_dates,
