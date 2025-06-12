@@ -70,7 +70,7 @@
     - else
       -# rubocop:disable CustomCops/DashboardDbUsage
       - short_name = ERB::Util.h(current_user.short_name)
-      %span.display_name{id: 'header_display_name', 'data-id': current_user.id, 'data-shortname': short_name}= short_name
+      %span.display_name{id: 'header_display_name', data: {id: current_user.id, shortname: short_name, notranslate: ''}}= short_name
       -# rubocop:enable CustomCops/DashboardDbUsage
     &nbsp;
     %i.user_menu_arrow_down{class: "fa fa-chevron-down"}

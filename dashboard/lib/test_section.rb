@@ -1,18 +1,8 @@
 include FactoryBot::Syntax::Methods
 
+require 'json'
+
 class TestSection
-  DEFAULT_TEACHER_EMAIL = 'test_teacher@code.org'
-  DEFAULT_TEACHER_PASSWORD = 'test_password'
-  DEFAULT_TEACHER_NAME = 'Teacher Generated'
-  DEFAULT_SECTION_NAME = 'Generated Test Section'
-  DEFAULT_NUM_STUDENTS = 10
-
-  SAMPLE_STUDENT_NAME_FORMAT = 'Student%s Generated'.freeze
-  SAMPLE_STUDENT_NAME_REGEX = /Student\d* Generated/
-
-  DEFAULT_UNIT = 'csp4-2024'
-  DEFAULT_COURSE = 'csp-2024'
-
   @@rng = nil
 
   # Returns a seeded random number generator for consistent test data
@@ -20,32 +10,71 @@ class TestSection
     @@rng ||= Random.new(0)
   end
 
+  # Creates a test section with students and mocked student progress.
+  # Options:
+  # - :preset_name - 'csp4', 'random', or nil (defaults to 'csp4' if not specified)
+  #     If 'csp4', uses preset specified data from TestSectionData::CSP_4_TEST_SECTION preset data.
+  #     If 'random', creates a section with random progress. Only creates teacher_feedback and user_levels.
+  # - :teacher_id - ID of the teacher to assign to the section, or nil to create a default teacher
+  #      Default teacher has email TestSectionData::DEFAULT_TEACHER_EMAIL, and password TestSectionData::DEFAULT_TEACHER_PASSWORD.
+  # - :section_name - Name of the section to create, defaults to TestSectionData::DEFAULT_SECTION_NAME
+  # - :num_students - Number of students to add to the section, defaults to TestSectionData::DEFAULT_NUM_STUDENTS
+  # - :unit_name - Name of the unit to use, defaults to TestSectionData::DEFAULT_UNIT. Only used when preset_name is 'random'.
+  # - :unit_group_name - Name of the unit group to use, defaults to TestSectionData::DEFAULT_UNIT_GROUP. Only used when preset_name is 'random'.
+  #
+  # Only runs in non-production environments (development, adhoc, staging, test).
+  # Only creates a new teacher if :teacher_id is not provided and only on adhoc or development.
+  #
   def self.seed(options)
     seed_environment_check!
+
+    preset_name = options[:preset_name]
+    preset_options = if preset_name == 'random'
+                       {
+                         unit_name: options[:unit_name] || TestSectionData::DEFAULT_UNIT,
+                         unit_group_name: options[:unit_group_name] || TestSectionData::DEFAULT_UNIT_GROUP,
+                         grade: [10],
+                         age: 15,
+                       }
+                     elsif preset_name == 'csp4' || preset_name.nil?
+                       TestSectionData::CSP_4_TEST_SECTION
+                     else
+                       nil
+                     end
+
+    if preset_options.nil?
+      raise "Invalid preset_name: #{options[:preset_name]}. Valid options are: 'csp4', 'random' or nil (defaults to csp4 if not specified)."
+    end
+
     teacher_id = options[:teacher_id] || nil
 
     teacher = nil
     if teacher_id.nil?
-      teacher = find_or_create_teacher
+      teacher = create_default_teacher
     else
       teacher = User.find_by(id: teacher_id)
       raise "Teacher with id #{teacher_id} not found. Please provide a valid teacher_id." if teacher.nil?
     end
 
-    unit = Unit.get_from_cache(options[:unit_name] || DEFAULT_UNIT)
+    unit = Unit.get_from_cache(preset_options[:unit_name])
 
     section = create_section(
       teacher: teacher,
-      name: options[:section_name] || DEFAULT_SECTION_NAME,
+      name: options[:section_name] || TestSectionData::DEFAULT_SECTION_NAME,
       unit: unit,
-      unit_group_name: options[:unit_group_name] || DEFAULT_COURSE,
+      **preset_options.slice(:unit_group_name, :grade)
     )
 
     students = add_students_to_section(section,
-      num_students: options[:num_students] || DEFAULT_NUM_STUDENTS
+      num_students: options[:num_students] || TestSectionData::DEFAULT_NUM_STUDENTS,
+      age: preset_options[:age],
     )
 
-    create_student_progress(students, unit: unit, teacher: teacher)
+    if preset_name == 'random'
+      create_random_student_progress(students, unit: unit, teacher: teacher)
+    else
+      create_student_progress(students, unit: unit, teacher: teacher, **preset_options.slice(:data_per_student))
+    end
 
     puts ''
     puts "Created section with section_id: #{section.id}, num_students: #{students.count} and teacher: #{teacher.email}"
@@ -71,24 +100,24 @@ class TestSection
   # and recreate. Sections and followers would be soft-deleted by
   # dependency when we delete the teacher; but to not leave a trail of
   # old test data behind, we explictly hard-delete.
-  def self.find_or_create_teacher
+  def self.create_default_teacher
     # Only create a new teacher in safe environments, not on production.
     create_teacher_environment_check!
-    # Delete any existing test data
-    user = User.find_by_email_or_hashed_email(DEFAULT_TEACHER_EMAIL)
+
+    user = User.find_by_email_or_hashed_email(TestSectionData::DEFAULT_TEACHER_EMAIL)
+
     unless user.nil?
       delete_existing_teacher(user)
     end
 
     # Create the test teacher
-    teacher = create :teacher, email: DEFAULT_TEACHER_EMAIL, name: DEFAULT_TEACHER_NAME,
-      password: DEFAULT_TEACHER_PASSWORD, terms_of_service_version: 1
+    teacher = create :teacher, email: TestSectionData::DEFAULT_TEACHER_EMAIL, name: TestSectionData::DEFAULT_TEACHER_NAME,
+      password: TestSectionData::DEFAULT_TEACHER_PASSWORD, terms_of_service_version: 1
 
     # Make the teacher an authorized teacher
     UserPermission.create(user: teacher, permission: UserPermission::AUTHORIZED_TEACHER)
 
-    puts "Created test teacher with email: #{teacher.email}, name: '#{teacher.name}' and password: #{DEFAULT_TEACHER_PASSWORD}"
-
+    puts "Created test teacher with email: #{teacher.email}, name: '#{teacher.name}' and password: #{TestSectionData::DEFAULT_TEACHER_PASSWORD}"
     teacher
   end
 
@@ -96,7 +125,7 @@ class TestSection
     user.sections_instructed.each do |section|
       # Hard-delete all students in each section.
       section.students.each do |student_user|
-        raise "Not a sample student - #{student_user.name}" unless SAMPLE_STUDENT_NAME_REGEX.match?(student_user.name)
+        raise "Not a sample student - #{student_user.name}" unless TestSectionData::SAMPLE_STUDENT_NAME_REGEX.match?(student_user.name)
         UserGeo.where(user_id: student_user.id).destroy_all
         student_user.really_destroy!
       end
@@ -105,7 +134,7 @@ class TestSection
     end
     UserGeo.where(user_id: user.id).destroy_all
     # Delete the existing test teacher
-    unless (user.name.eql? DEFAULT_TEACHER_NAME) && (user.email.eql? DEFAULT_TEACHER_EMAIL)
+    unless (user.name.eql? TestSectionData::DEFAULT_TEACHER_NAME) && (user.email.eql? TestSectionData::DEFAULT_TEACHER_EMAIL)
       raise "Not a sample teacher - #{user.name}"
     end
     user.really_destroy!
@@ -114,8 +143,8 @@ class TestSection
   def self.create_section(options)
     unit_group = UnitGroup.get_from_cache(options[:unit_group_name])
 
-    create :section, script: options[:unit], unit_group: unit_group, login_type: Section::LOGIN_TYPE_PICTURE, grade: [10],
-      **options.slice(:teacher, :name)
+    create :section, script: options[:unit], unit_group: unit_group, login_type: Section::LOGIN_TYPE_PICTURE,
+      **options.slice(:teacher, :name, :grade)
   end
 
   def self.add_students_to_section(section, options)
@@ -128,8 +157,8 @@ class TestSection
       # Choose random properties and create student
       current_student += 1
 
-      name = format(SAMPLE_STUDENT_NAME_FORMAT, current_student)
-      student_user = create :student, name: name, age: 15, gender: nil
+      name = format(TestSectionData::SAMPLE_STUDENT_NAME_FORMAT, current_student)
+      student_user = create :student, name: name, age: options[:age], gender: nil
 
       # Add student to section
       create :follower, section: section, student_user: student_user
@@ -139,13 +168,82 @@ class TestSection
     students
   end
 
-  def self.create_student_progress(students, options)
+  def self.create_random_student_progress(students, options)
     level_count = options[:unit].script_levels.count
 
     students.each do |student_user|
       max_level = max_level_for_student(level_count)
-      create_user_levels(student_user, max_level, options[:unit])
+      create_random_user_levels(student_user, max_level, options[:unit])
       create_teacher_feedback(student_user, options[:teacher], max_level, options[:unit])
+    end
+  end
+
+  def self.create_student_progress(students, options)
+    preset_data_student_count = options[:data_per_student].count
+    unit_id = options[:unit].id
+
+    buckets = SourceBucket.new
+
+    students.each_with_index do |student_user, index|
+      break if index >= preset_data_student_count
+
+      data = options[:data_per_student][index]
+
+      # Create user levels based on the provided data
+      data.each do |level_name, level_data|
+        level = Level.find_by(name: level_name)
+
+        if level.nil?
+          raise "Level with name '#{level_name}' not found. Please check the level names in the data."
+        end
+
+        level_source = level_data[:level_source]
+        level_source_id = nil
+        unless level_source.nil?
+          level_source_id = create(:level_source, level_id: level.id, data: level_source[:data]).id
+        end
+
+        user_level = level_data[:user_level]
+        unless user_level.nil?
+          create :user_level, user: student_user, script_id: unit_id,
+            level_id: level.id, attempts: user_level[:attempts],
+            best_result: user_level[:best_result], level_source_id: level_source_id
+
+          # Create a backing channel for this level if it's a type that needs it
+          channel_token =
+            level.channel_backed? ?
+             ChannelToken.find_or_create_channel_token(
+               level,
+               '127.0.0.1',
+               find_or_create_storage_id_for_user_id(student_user.id),
+               options[:unit].id,
+               {
+                 hidden: true,
+                 level: "/projects/applab",
+                 migratedToS3: true
+               }
+             )
+           : nil
+
+        end
+
+        unless level_data[:source_code].nil? || channel_token.nil?
+          # Note: Generated student code only includes the source code and no other metadata.
+          # This can cause some issues with rendering in the UI.
+          # Most errors can be ignored or fixed by manually editing and running the generated code.
+          buckets.create_or_replace(channel_token.channel, "main.json", JSON.generate(level_data[:source_code]))
+        end
+
+        teacher_feedback = level_data[:teacher_feedback]
+        unless teacher_feedback.nil?
+          create :teacher_feedback,
+            student: student_user,
+            teacher: options[:teacher],
+            level: level,
+            script: options[:unit],
+            comment: teacher_feedback[:comment]
+        end
+      end
     end
   end
 
@@ -158,7 +256,7 @@ class TestSection
     end
   end
 
-  def self.create_user_levels(student_user, max_level, unit)
+  def self.create_random_user_levels(student_user, max_level, unit)
     script_levels = unit.script_levels.includes(:levels)
     current_level = 0
 

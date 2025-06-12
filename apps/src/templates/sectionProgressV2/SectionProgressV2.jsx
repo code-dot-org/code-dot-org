@@ -16,7 +16,6 @@ import {
   getCurrentUnitData,
   loadExpandedLessonsFromLocalStorage,
 } from '../sectionProgress/sectionProgressRedux';
-import {showV2TeacherDashboard} from '../teacherNavigation/TeacherNavFlagUtils';
 import UnitSelectorV2 from '../UnitSelectorV2';
 
 import DownloadProgressCsv from './DownloadProgressCsv';
@@ -97,9 +96,8 @@ function SectionProgressV2({
   }, [expandedLessonIds, unitData]);
 
   const isLoading = React.useMemo(() => {
-    if (showV2TeacherDashboard() && parseInt(params.sectionId) !== sectionId) {
-      // If we're in the V2 teacher dashboard, we want to show a loading state if the
-      // redux section does not yet match the URL section.
+    if (parseInt(params.sectionId) !== sectionId) {
+      // Show a loading state if the redux section does not yet match the URL section.
       return true;
     }
     return (

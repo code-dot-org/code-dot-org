@@ -1,0 +1,193 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2025-06-09T19:36:53.000Z",
+  "level_num": "custom",
+  "user_id": 20,
+  "properties": {
+    "skin": "artist",
+    "short_instructions": "Figure out the missing values.",
+    "x": "75",
+    "y": "50",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "slider_speed": "0.8",
+    "free_play": "false",
+    "start_direction": "130",
+    "ideal": "14",
+    "embed": "false",
+    "long_instructions": "The Artist needs to draw a psychedelic spiral. Figure out the missing numbers by dragging the block into the open spaces and determining what value to add in.\r\n\r\n",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "false",
+    "disable_sharing": "false",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "never_autoplay_video": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "validation_enabled": "false",
+    "discard_background": "false",
+    "enable_download_image": "false",
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/2573040f537a8bfe19d0e7388df20bfd=levelbuilder/336249.png",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-06-09T19:36:53.502+00:00\",\"changed\":[\"cloned from \\\"Standalone_Artist_7\\\"\"],\"cloned_from\":\"Standalone_Artist_7\"},{\"changed_at\":\"2025-06-09 19:36:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-09 19:43:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-09 19:44:09 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-09 19:44:23 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-09 19:45:14 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-09 19:47:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-09 19:48:13 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-09 19:49:44 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"short_instructions\",\"long_instructions\",\"start_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-09 19:52:34 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"long_instructions\",\"start_blocks\",\"encrypted_examples\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-09 19:54:59 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-09 19:55:42 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-09 19:56:51 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"start_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-09 19:59:06 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-09 19:59:26 +0000\",\"changed\":[\"predraw_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-09 20:00:29 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"start_blocks\",\"predraw_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-09 20:01:55 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"start_blocks\",\"predraw_blocks\",\"encrypted_examples\",\"solution_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-09 20:02:16 +0000\",\"changed\":[\"required_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml xmlns="https://developers.google.com/blockly/xml">
+        <variables>
+          <variable id="W[45mTDl+fV5#-)Pw1*f">length</variable>
+        </variables>
+        <block type="when_run" deletable="false" movable="false" x="16" y="16">
+          <next>
+            <block type="jump_to">
+              <field name="VALUE">13</field>
+              <next>
+                <block type="variables_set">
+                  <field name="VAR" id="W[45mTDl+fV5#-)Pw1*f">length</field>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <field name="NUM">1</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_repeat_ext">
+                      <statement name="DO">
+                        <block type="draw_colour">
+                          <value name="COLOUR">
+                            <block type="colour_random"/>
+                          </value>
+                          <next>
+                            <block type="draw_move">
+                              <field name="DIR">moveForward</field>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <field name="VAR" id="W[45mTDl+fV5#-)Pw1*f">length</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <field name="DIR">turnRight</field>
+                                  <next>
+                                    <block type="math_change">
+                                      <field name="VAR" id="W[45mTDl+fV5#-)Pw1*f">length</field>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="math_number" id="-DRc$(Np0ru]h3@kI5R$" x="0" y="0">
+          <field name="NUM">0</field>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml xmlns="https://developers.google.com/blockly/xml"/>
+    </required_blocks>
+    <solution_blocks>
+      <xml xmlns="https://developers.google.com/blockly/xml">
+        <variables>
+          <variable id="W[45mTDl+fV5#-)Pw1*f">length</variable>
+        </variables>
+        <block type="when_run" deletable="false" movable="false" x="16" y="16">
+          <next>
+            <block type="jump_to">
+              <field name="VALUE">13</field>
+              <next>
+                <block type="variables_set">
+                  <field name="VAR" id="W[45mTDl+fV5#-)Pw1*f">length</field>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <field name="NUM">1</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_repeat_ext">
+                      <value name="TIMES">
+                        <block type="math_number">
+                          <field name="NUM">60</field>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="draw_colour">
+                          <value name="COLOUR">
+                            <block type="colour_random"/>
+                          </value>
+                          <next>
+                            <block type="draw_move">
+                              <field name="DIR">moveForward</field>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <field name="VAR" id="W[45mTDl+fV5#-)Pw1*f">length</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <field name="DIR">turnRight</field>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <field name="NUM">40</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="math_change">
+                                      <field name="VAR" id="W[45mTDl+fV5#-)Pw1*f">length</field>
+                                      <value name="DELTA">
+                                        <block type="math_number">
+                                          <field name="NUM">2</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+    <predraw_blocks>
+      <xml xmlns="https://developers.google.com/blockly/xml">
+        <block type="when_run" deletable="false" movable="false" x="16" y="16"/>
+      </xml>
+    </predraw_blocks>
+  </blocks>
+</Artist>

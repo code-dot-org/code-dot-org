@@ -1,5 +1,6 @@
 @no_mobile
 @single_session
+@pegasus_content
 Feature: Header navigation bar - Signed out
   Scenario: Signed out user in English should see 7 header links
     Given I am on "http://code.org/"

@@ -282,7 +282,7 @@ begin
 
     # Step 3: Get certificate ARN from stack output.
     puts "\n=== Step 3: Getting Certificate ARN ==="
-    certificate_arn = get_stack_output(cert_stack_name, "TLSCertificateArn", "us-east-1")
+    certificate_arn = get_stack_output(cert_stack_name, "CloudFrontTLSCertificateArn", "us-east-1")
 
     # Step 4: Process marketing site template.
     puts "\n=== Step 4: Processing Marketing Site Template ==="

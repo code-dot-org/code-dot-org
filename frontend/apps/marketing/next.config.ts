@@ -1951,6 +1951,11 @@ const nextConfig: NextConfig = {
         destination: 'https://global.code.org/farsi',
         permanent: false,
       },
+      {
+        source: '/csaif',
+        destination: '/curriculum/artificial-intelligence-foundations',
+        permanent: false,
+      },
     ];
   },
 };

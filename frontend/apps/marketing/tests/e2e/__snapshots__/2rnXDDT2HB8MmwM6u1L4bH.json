@@ -3158,6 +3158,1660 @@
               ]
             },
             {
+              "id": "LRiJRiIo",
+              "displayName": "Action Block Pattern Default ",
+              "definitionId": "contentful-section",
+              "patternProperties": {},
+              "variables": {
+                "cfVerticalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfHorizontalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfVisibility": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": true
+                  }
+                },
+                "cfMargin": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfPadding": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfBackgroundColor": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "100%"
+                  }
+                },
+                "cfHeight": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "709px"
+                  }
+                },
+                "cfMaxWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "none"
+                  }
+                },
+                "cfFlexDirection": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "column"
+                  }
+                },
+                "cfFlexReverse": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": false
+                  }
+                },
+                "cfFlexWrap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "nowrap"
+                  }
+                },
+                "cfBorder": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px solid rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfGap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfHyperlink": {
+                  "key": "zh7msz6",
+                  "type": "UnboundValue"
+                },
+                "cfOpenInNewTab": {
+                  "key": "13Ib38_",
+                  "type": "UnboundValue"
+                },
+                "cfBorderRadius": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfBackgroundImageUrl": {
+                  "key": "cGdHTOr",
+                  "type": "UnboundValue"
+                },
+                "cfBackgroundImageOptions": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": {
+                      "scaling": "fill",
+                      "alignment": "left top",
+                      "targetSize": "2000px"
+                    }
+                  }
+                }
+              },
+              "children": [
+                {
+                  "id": "hZMPclhE",
+                  "definitionId": "section",
+                  "patternProperties": {},
+                  "variables": {
+                    "background": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "primary"
+                      }
+                    },
+                    "padding": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "l"
+                      }
+                    },
+                    "divider": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "none"
+                      }
+                    },
+                    "id": {
+                      "key": "vSKlRHP",
+                      "type": "UnboundValue"
+                    },
+                    "cfVisibility": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": true
+                      }
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "gFPpTXnU",
+                      "definitionId": "heading",
+                      "patternProperties": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xxl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "bs0mKZu",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "TOTzTf8y",
+                      "definitionId": "heading",
+                      "patternProperties": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "LRYvjsK",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "center"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "qLIHIGLs",
+                      "definitionId": "paragraph",
+                      "patternProperties": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "body-two"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "4qoR2Ve",
+                          "type": "UnboundValue"
+                        },
+                        "isStrong": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "center"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "zcjPri47",
+                      "definitionId": "contentful-container",
+                      "patternProperties": {},
+                      "variables": {
+                        "cfVerticalAlignment": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "center"
+                          }
+                        },
+                        "cfHorizontalAlignment": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "center"
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfMargin": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0 0 0 0"
+                          }
+                        },
+                        "cfPadding": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0 0 0 0"
+                          }
+                        },
+                        "cfBackgroundColor": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "rgba(0, 0, 0, 0)"
+                          }
+                        },
+                        "cfWidth": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "100%"
+                          }
+                        },
+                        "cfHeight": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "fit-content"
+                          }
+                        },
+                        "cfMaxWidth": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "1192px"
+                          }
+                        },
+                        "cfFlexDirection": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "row"
+                          }
+                        },
+                        "cfFlexReverse": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "cfFlexWrap": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "nowrap"
+                          }
+                        },
+                        "cfBorder": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0px solid rgba(0, 0, 0, 0)"
+                          }
+                        },
+                        "cfGap": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "24px 24px"
+                          }
+                        },
+                        "cfHyperlink": {
+                          "key": "go9slZF",
+                          "type": "UnboundValue"
+                        },
+                        "cfOpenInNewTab": {
+                          "key": "rOJjuA1",
+                          "type": "UnboundValue"
+                        },
+                        "cfBorderRadius": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0px"
+                          }
+                        },
+                        "cfBackgroundImageUrl": {
+                          "key": "RF1zjg6",
+                          "type": "UnboundValue"
+                        },
+                        "cfBackgroundImageOptions": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": {
+                              "scaling": "fill",
+                              "alignment": "left top",
+                              "targetSize": "2000px"
+                            }
+                          }
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "93vwjXnn",
+                          "definitionId": "verticalActionBlock",
+                          "patternProperties": {},
+                          "variables": {
+                            "overline": {
+                              "key": "hDMAL2U",
+                              "type": "UnboundValue"
+                            },
+                            "title": {
+                              "key": "w3AE6Sz",
+                              "type": "UnboundValue"
+                            },
+                            "description": {
+                              "key": "aBzIX6V",
+                              "type": "UnboundValue"
+                            },
+                            "image": {
+                              "key": "dF5TCmS",
+                              "type": "UnboundValue"
+                            },
+                            "videoTitle": {
+                              "key": "SV5gVCc",
+                              "type": "UnboundValue"
+                            },
+                            "videoYouTubeId": {
+                              "key": "TH-_LAe",
+                              "type": "UnboundValue"
+                            },
+                            "videoFallback": {
+                              "key": "T68Oo4f",
+                              "type": "UnboundValue"
+                            },
+                            "videoShowCaption": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": false
+                              }
+                            },
+                            "primaryButton": {
+                              "key": "UaQvzts",
+                              "type": "UnboundValue"
+                            },
+                            "secondaryButton": {
+                              "key": "FBj3Am9",
+                              "type": "UnboundValue"
+                            },
+                            "background": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "primary"
+                              }
+                            },
+                            "publishedDate": {
+                              "key": "f24Wg65",
+                              "type": "UnboundValue"
+                            },
+                            "cfVisibility": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": true
+                              }
+                            }
+                          },
+                          "children": []
+                        },
+                        {
+                          "id": "YmiE6Ywp",
+                          "definitionId": "verticalActionBlock",
+                          "patternProperties": {},
+                          "variables": {
+                            "overline": {
+                              "key": "E7Cjhbo",
+                              "type": "UnboundValue"
+                            },
+                            "title": {
+                              "key": "jekav-Z",
+                              "type": "UnboundValue"
+                            },
+                            "description": {
+                              "key": "aohR35B",
+                              "type": "UnboundValue"
+                            },
+                            "image": {
+                              "key": "ESHDx-N",
+                              "type": "UnboundValue"
+                            },
+                            "videoTitle": {
+                              "key": "KXMj-y0",
+                              "type": "UnboundValue"
+                            },
+                            "videoYouTubeId": {
+                              "key": "lakTr2l",
+                              "type": "UnboundValue"
+                            },
+                            "videoFallback": {
+                              "key": "MOKb3tV",
+                              "type": "UnboundValue"
+                            },
+                            "videoShowCaption": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": false
+                              }
+                            },
+                            "primaryButton": {
+                              "key": "FSg2WhG",
+                              "type": "UnboundValue"
+                            },
+                            "secondaryButton": {
+                              "key": "M_8vrhJ",
+                              "type": "UnboundValue"
+                            },
+                            "background": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "primary"
+                              }
+                            },
+                            "publishedDate": {
+                              "key": "1702ebh",
+                              "type": "UnboundValue"
+                            },
+                            "cfVisibility": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": true
+                              }
+                            }
+                          },
+                          "children": []
+                        },
+                        {
+                          "id": "86MbYKov",
+                          "definitionId": "verticalActionBlock",
+                          "patternProperties": {},
+                          "variables": {
+                            "overline": {
+                              "key": "Wz9SJiE",
+                              "type": "UnboundValue"
+                            },
+                            "title": {
+                              "key": "LDMq3zA",
+                              "type": "UnboundValue"
+                            },
+                            "description": {
+                              "key": "ccJpf-l",
+                              "type": "UnboundValue"
+                            },
+                            "image": {
+                              "key": "4H-a8iq",
+                              "type": "UnboundValue"
+                            },
+                            "videoTitle": {
+                              "key": "IgW-F6-",
+                              "type": "UnboundValue"
+                            },
+                            "videoYouTubeId": {
+                              "key": "yKDw71r",
+                              "type": "UnboundValue"
+                            },
+                            "videoFallback": {
+                              "key": "nluOMYh",
+                              "type": "UnboundValue"
+                            },
+                            "videoShowCaption": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": false
+                              }
+                            },
+                            "primaryButton": {
+                              "key": "oGnTTO-",
+                              "type": "UnboundValue"
+                            },
+                            "secondaryButton": {
+                              "key": "GmGKjDd",
+                              "type": "UnboundValue"
+                            },
+                            "background": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "primary"
+                              }
+                            },
+                            "publishedDate": {
+                              "key": "CtWVJCR",
+                              "type": "UnboundValue"
+                            },
+                            "cfVisibility": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": true
+                              }
+                            }
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "OINcNI7F",
+                      "definitionId": "contentful-container",
+                      "patternProperties": {},
+                      "variables": {
+                        "cfVerticalAlignment": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "center"
+                          }
+                        },
+                        "cfHorizontalAlignment": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "center"
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfMargin": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "24px 0 0 0"
+                          }
+                        },
+                        "cfPadding": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0 0 0 0"
+                          }
+                        },
+                        "cfBackgroundColor": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "rgba(0, 0, 0, 0)"
+                          }
+                        },
+                        "cfWidth": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "100%"
+                          }
+                        },
+                        "cfHeight": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "fit-content"
+                          }
+                        },
+                        "cfMaxWidth": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "1192px"
+                          }
+                        },
+                        "cfFlexDirection": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "row"
+                          }
+                        },
+                        "cfFlexReverse": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "cfFlexWrap": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "nowrap"
+                          }
+                        },
+                        "cfBorder": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0px solid rgba(0, 0, 0, 0)"
+                          }
+                        },
+                        "cfGap": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0px 16px"
+                          }
+                        },
+                        "cfHyperlink": {
+                          "key": "yG60pRy",
+                          "type": "UnboundValue"
+                        },
+                        "cfOpenInNewTab": {
+                          "key": "sjc08rI",
+                          "type": "UnboundValue"
+                        },
+                        "cfBorderRadius": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0px"
+                          }
+                        },
+                        "cfBackgroundImageUrl": {
+                          "key": "OCvEUyr",
+                          "type": "UnboundValue"
+                        },
+                        "cfBackgroundImageOptions": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": {
+                              "scaling": "fill",
+                              "alignment": "left top",
+                              "targetSize": "2000px"
+                            }
+                          }
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "qX9jhnyf",
+                          "definitionId": "button",
+                          "patternProperties": {},
+                          "variables": {
+                            "color": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "purple"
+                              }
+                            },
+                            "type": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "primary"
+                              }
+                            },
+                            "text": {
+                              "key": "Khqf7OC",
+                              "type": "UnboundValue"
+                            },
+                            "href": {
+                              "key": "ETBqUYX",
+                              "type": "UnboundValue"
+                            },
+                            "isLinkExternal": {
+                              "key": "UjouKpK",
+                              "type": "UnboundValue"
+                            },
+                            "ariaLabel": {
+                              "key": "HANecnh",
+                              "type": "UnboundValue"
+                            },
+                            "iconLeftName": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": ""
+                              }
+                            },
+                            "cfVisibility": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": true
+                              }
+                            },
+                            "cfTextAlign": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "left"
+                              }
+                            }
+                          },
+                          "children": []
+                        },
+                        {
+                          "id": "axzVGDQG",
+                          "definitionId": "button",
+                          "patternProperties": {},
+                          "variables": {
+                            "color": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "black"
+                              }
+                            },
+                            "type": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "secondary"
+                              }
+                            },
+                            "text": {
+                              "key": "i4tvl_O",
+                              "type": "UnboundValue"
+                            },
+                            "href": {
+                              "key": "HURk-ZX",
+                              "type": "UnboundValue"
+                            },
+                            "isLinkExternal": {
+                              "key": "CCG45Cf",
+                              "type": "UnboundValue"
+                            },
+                            "ariaLabel": {
+                              "key": "PAn6OhE",
+                              "type": "UnboundValue"
+                            },
+                            "iconLeftName": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": ""
+                              }
+                            },
+                            "cfVisibility": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": true
+                              }
+                            },
+                            "cfTextAlign": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "left"
+                              }
+                            }
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "xSkU9PU0",
+              "displayName": "Action Block Pattern Hidden Elements",
+              "definitionId": "contentful-section",
+              "patternProperties": {},
+              "variables": {
+                "cfVerticalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfHorizontalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfVisibility": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": true
+                  }
+                },
+                "cfMargin": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfPadding": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfBackgroundColor": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "100%"
+                  }
+                },
+                "cfHeight": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "602px"
+                  }
+                },
+                "cfMaxWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "none"
+                  }
+                },
+                "cfFlexDirection": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "column"
+                  }
+                },
+                "cfFlexReverse": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": false
+                  }
+                },
+                "cfFlexWrap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "nowrap"
+                  }
+                },
+                "cfBorder": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px solid rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfGap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfHyperlink": {
+                  "key": "IcIQJVk",
+                  "type": "UnboundValue"
+                },
+                "cfOpenInNewTab": {
+                  "key": "xF6NHMp",
+                  "type": "UnboundValue"
+                },
+                "cfBorderRadius": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfBackgroundImageUrl": {
+                  "key": "60M5ZzR",
+                  "type": "UnboundValue"
+                },
+                "cfBackgroundImageOptions": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": {
+                      "scaling": "fill",
+                      "alignment": "left top",
+                      "targetSize": "2000px"
+                    }
+                  }
+                }
+              },
+              "children": [
+                {
+                  "id": "KAaeXuCb",
+                  "definitionId": "section",
+                  "patternProperties": {},
+                  "variables": {
+                    "background": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "primary"
+                      }
+                    },
+                    "padding": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "l"
+                      }
+                    },
+                    "divider": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "none"
+                      }
+                    },
+                    "id": {
+                      "key": "0kPDA79g",
+                      "type": "UnboundValue"
+                    },
+                    "cfVisibility": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": true
+                      }
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "iEYHtr8L",
+                      "definitionId": "heading",
+                      "patternProperties": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xxl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "alDLE92",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "Rq1QaSxv",
+                      "definitionId": "heading",
+                      "patternProperties": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "UCzH3lZH",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "center"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "a9X5giIf",
+                      "definitionId": "paragraph",
+                      "patternProperties": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "body-two"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "bke8mAuc",
+                          "type": "UnboundValue"
+                        },
+                        "isStrong": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "center"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "309tDLjp",
+                      "definitionId": "contentful-container",
+                      "patternProperties": {},
+                      "variables": {
+                        "cfVerticalAlignment": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "center"
+                          }
+                        },
+                        "cfHorizontalAlignment": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "center"
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfMargin": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0 0 0 0"
+                          }
+                        },
+                        "cfPadding": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0 0 0 0"
+                          }
+                        },
+                        "cfBackgroundColor": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "rgba(0, 0, 0, 0)"
+                          }
+                        },
+                        "cfWidth": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "100%"
+                          }
+                        },
+                        "cfHeight": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "fit-content"
+                          }
+                        },
+                        "cfMaxWidth": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "1192px"
+                          }
+                        },
+                        "cfFlexDirection": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "row"
+                          }
+                        },
+                        "cfFlexReverse": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "cfFlexWrap": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "nowrap"
+                          }
+                        },
+                        "cfBorder": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0px solid rgba(0, 0, 0, 0)"
+                          }
+                        },
+                        "cfGap": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "24px 24px"
+                          }
+                        },
+                        "cfHyperlink": {
+                          "key": "1hMP95qt",
+                          "type": "UnboundValue"
+                        },
+                        "cfOpenInNewTab": {
+                          "key": "3CADhMmH",
+                          "type": "UnboundValue"
+                        },
+                        "cfBorderRadius": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0px"
+                          }
+                        },
+                        "cfBackgroundImageUrl": {
+                          "key": "uwJDIDdP",
+                          "type": "UnboundValue"
+                        },
+                        "cfBackgroundImageOptions": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": {
+                              "scaling": "fill",
+                              "alignment": "left top",
+                              "targetSize": "2000px"
+                            }
+                          }
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "nBmn1JMd",
+                          "definitionId": "verticalActionBlock",
+                          "patternProperties": {},
+                          "variables": {
+                            "overline": {
+                              "key": "73db4weH",
+                              "type": "UnboundValue"
+                            },
+                            "title": {
+                              "key": "Ca3QU6Yy",
+                              "type": "UnboundValue"
+                            },
+                            "description": {
+                              "key": "Cbj4oJVP",
+                              "type": "UnboundValue"
+                            },
+                            "image": {
+                              "key": "nzQ1wskT",
+                              "type": "UnboundValue"
+                            },
+                            "videoTitle": {
+                              "key": "cyAbVclk",
+                              "type": "UnboundValue"
+                            },
+                            "videoYouTubeId": {
+                              "key": "dxOviBkV",
+                              "type": "UnboundValue"
+                            },
+                            "videoFallback": {
+                              "key": "NTMvp4T3",
+                              "type": "UnboundValue"
+                            },
+                            "videoShowCaption": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": false
+                              }
+                            },
+                            "primaryButton": {
+                              "key": "KMDGAxsG",
+                              "type": "UnboundValue"
+                            },
+                            "secondaryButton": {
+                              "key": "kCbgx5xB",
+                              "type": "UnboundValue"
+                            },
+                            "background": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "primary"
+                              }
+                            },
+                            "publishedDate": {
+                              "key": "jX7FtFyx",
+                              "type": "UnboundValue"
+                            },
+                            "cfVisibility": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": true
+                              }
+                            }
+                          },
+                          "children": []
+                        },
+                        {
+                          "id": "MGbvWLy6",
+                          "definitionId": "verticalActionBlock",
+                          "patternProperties": {},
+                          "variables": {
+                            "overline": {
+                              "key": "T1XSxOfG",
+                              "type": "UnboundValue"
+                            },
+                            "title": {
+                              "key": "st5uoXAq",
+                              "type": "UnboundValue"
+                            },
+                            "description": {
+                              "key": "WwX8DppO",
+                              "type": "UnboundValue"
+                            },
+                            "image": {
+                              "key": "eyHY3MEf",
+                              "type": "UnboundValue"
+                            },
+                            "videoTitle": {
+                              "key": "5VjDE2CK",
+                              "type": "UnboundValue"
+                            },
+                            "videoYouTubeId": {
+                              "key": "oVSHufbZ",
+                              "type": "UnboundValue"
+                            },
+                            "videoFallback": {
+                              "key": "NzFs8wiS",
+                              "type": "UnboundValue"
+                            },
+                            "videoShowCaption": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": false
+                              }
+                            },
+                            "primaryButton": {
+                              "key": "ZGRiDrVS",
+                              "type": "UnboundValue"
+                            },
+                            "secondaryButton": {
+                              "key": "GmnU58eE",
+                              "type": "UnboundValue"
+                            },
+                            "background": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "primary"
+                              }
+                            },
+                            "publishedDate": {
+                              "key": "zHKQk2B6",
+                              "type": "UnboundValue"
+                            },
+                            "cfVisibility": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": true
+                              }
+                            }
+                          },
+                          "children": []
+                        },
+                        {
+                          "id": "DqkrNi7I",
+                          "definitionId": "verticalActionBlock",
+                          "patternProperties": {},
+                          "variables": {
+                            "overline": {
+                              "key": "1rLXmQf4",
+                              "type": "UnboundValue"
+                            },
+                            "title": {
+                              "key": "Fa2xfSTa",
+                              "type": "UnboundValue"
+                            },
+                            "description": {
+                              "key": "cex92Z12",
+                              "type": "UnboundValue"
+                            },
+                            "image": {
+                              "key": "aNOfIztd",
+                              "type": "UnboundValue"
+                            },
+                            "videoTitle": {
+                              "key": "bisJWX6Q",
+                              "type": "UnboundValue"
+                            },
+                            "videoYouTubeId": {
+                              "key": "9cnm11U7",
+                              "type": "UnboundValue"
+                            },
+                            "videoFallback": {
+                              "key": "65wUpmTS",
+                              "type": "UnboundValue"
+                            },
+                            "videoShowCaption": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": false
+                              }
+                            },
+                            "primaryButton": {
+                              "key": "U3p4tTyP",
+                              "type": "UnboundValue"
+                            },
+                            "secondaryButton": {
+                              "key": "lJTpbCYC",
+                              "type": "UnboundValue"
+                            },
+                            "background": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "primary"
+                              }
+                            },
+                            "publishedDate": {
+                              "key": "zgUdfBPC",
+                              "type": "UnboundValue"
+                            },
+                            "cfVisibility": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": true
+                              }
+                            }
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "Co1Bs0NX",
+                      "definitionId": "contentful-container",
+                      "patternProperties": {},
+                      "variables": {
+                        "cfVerticalAlignment": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "center"
+                          }
+                        },
+                        "cfHorizontalAlignment": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "center"
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "cfMargin": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "24px 0 0 0"
+                          }
+                        },
+                        "cfPadding": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0 0 0 0"
+                          }
+                        },
+                        "cfBackgroundColor": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "rgba(0, 0, 0, 0)"
+                          }
+                        },
+                        "cfWidth": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "100%"
+                          }
+                        },
+                        "cfHeight": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "fit-content"
+                          }
+                        },
+                        "cfMaxWidth": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "1192px"
+                          }
+                        },
+                        "cfFlexDirection": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "row"
+                          }
+                        },
+                        "cfFlexReverse": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "cfFlexWrap": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "nowrap"
+                          }
+                        },
+                        "cfBorder": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0px solid rgba(0, 0, 0, 0)"
+                          }
+                        },
+                        "cfGap": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0px 16px"
+                          }
+                        },
+                        "cfHyperlink": {
+                          "key": "uWNHXGKp",
+                          "type": "UnboundValue"
+                        },
+                        "cfOpenInNewTab": {
+                          "key": "OpG1fkXt",
+                          "type": "UnboundValue"
+                        },
+                        "cfBorderRadius": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "0px"
+                          }
+                        },
+                        "cfBackgroundImageUrl": {
+                          "key": "T6anbs8T",
+                          "type": "UnboundValue"
+                        },
+                        "cfBackgroundImageOptions": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": {
+                              "scaling": "fill",
+                              "alignment": "left top",
+                              "targetSize": "2000px"
+                            }
+                          }
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "XoeUOX2Z",
+                          "definitionId": "button",
+                          "patternProperties": {},
+                          "variables": {
+                            "color": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "purple"
+                              }
+                            },
+                            "type": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "primary"
+                              }
+                            },
+                            "text": {
+                              "key": "fwWOH5sS",
+                              "type": "UnboundValue"
+                            },
+                            "href": {
+                              "key": "IxzSvJTD",
+                              "type": "UnboundValue"
+                            },
+                            "isLinkExternal": {
+                              "key": "ovjouB0p",
+                              "type": "UnboundValue"
+                            },
+                            "ariaLabel": {
+                              "key": "QZOw56pD",
+                              "type": "UnboundValue"
+                            },
+                            "iconLeftName": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": ""
+                              }
+                            },
+                            "cfVisibility": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": true
+                              }
+                            },
+                            "cfTextAlign": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "left"
+                              }
+                            }
+                          },
+                          "children": []
+                        },
+                        {
+                          "id": "hiMpRxOH",
+                          "definitionId": "button",
+                          "patternProperties": {},
+                          "variables": {
+                            "color": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "black"
+                              }
+                            },
+                            "type": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "secondary"
+                              }
+                            },
+                            "text": {
+                              "key": "aOs7kMFE",
+                              "type": "UnboundValue"
+                            },
+                            "href": {
+                              "key": "KOIVMjgL",
+                              "type": "UnboundValue"
+                            },
+                            "isLinkExternal": {
+                              "key": "gr0DK9TI",
+                              "type": "UnboundValue"
+                            },
+                            "ariaLabel": {
+                              "key": "FS1U8GfG",
+                              "type": "UnboundValue"
+                            },
+                            "iconLeftName": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": ""
+                              }
+                            },
+                            "cfVisibility": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": true
+                              }
+                            },
+                            "cfTextAlign": {
+                              "type": "DesignValue",
+                              "valuesByBreakpoint": {
+                                "desktop": "left"
+                              }
+                            }
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "id": "pD8UQKqT",
               "displayName": "Full Width Action Block",
               "definitionId": "contentful-section",
@@ -6444,7 +8098,7 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "fit-content"
+                    "desktop": "1368px"
                   }
                 },
                 "cfMaxWidth": {
@@ -6521,13 +8175,13 @@
                     "background": {
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
-                        "desktop": "secondary"
+                        "desktop": "primary"
                       }
                     },
                     "padding": {
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
-                        "desktop": "m"
+                        "desktop": "l"
                       }
                     },
                     "divider": {
@@ -8494,12 +10148,12 @@
                   }
                 },
                 "cfHyperlink": {
-                  "type": "UnboundValue",
-                  "key": "nsI4jPw"
+                  "key": "nsI4jPw",
+                  "type": "UnboundValue"
                 },
                 "cfOpenInNewTab": {
-                  "type": "UnboundValue",
-                  "key": "LsBgETo"
+                  "key": "LsBgETo",
+                  "type": "UnboundValue"
                 },
                 "cfBorderRadius": {
                   "type": "DesignValue",
@@ -8508,8 +10162,8 @@
                   }
                 },
                 "cfBackgroundImageUrl": {
-                  "type": "UnboundValue",
-                  "key": "DMiqqWu"
+                  "key": "DMiqqWu",
+                  "type": "UnboundValue"
                 },
                 "cfBackgroundImageOptions": {
                   "type": "DesignValue",
@@ -8547,8 +10201,8 @@
                       }
                     },
                     "id": {
-                      "type": "UnboundValue",
-                      "key": "cLEr2oT"
+                      "key": "cLEr2oT",
+                      "type": "UnboundValue"
                     },
                     "cfVisibility": {
                       "type": "DesignValue",
@@ -8566,7 +10220,7 @@
                         "visualAppearance": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
-                            "desktop": "heading-xl"
+                            "desktop": "heading-xxl"
                           }
                         },
                         "removeMarginBottom": {
@@ -9049,8 +10703,8 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "340px",
-                    "mobile": "443px"
+                    "mobile": "443px",
+                    "desktop": "340px"
                   }
                 },
                 "cfMaxWidth": {
@@ -9090,12 +10744,12 @@
                   }
                 },
                 "cfHyperlink": {
-                  "type": "UnboundValue",
-                  "key": "rtOw9NH"
+                  "key": "rtOw9NH",
+                  "type": "UnboundValue"
                 },
                 "cfOpenInNewTab": {
-                  "type": "UnboundValue",
-                  "key": "9FFVH8n"
+                  "key": "9FFVH8n",
+                  "type": "UnboundValue"
                 },
                 "cfBorderRadius": {
                   "type": "DesignValue",
@@ -9104,8 +10758,8 @@
                   }
                 },
                 "cfBackgroundImageUrl": {
-                  "type": "UnboundValue",
-                  "key": "U1KmKKh"
+                  "key": "U1KmKKh",
+                  "type": "UnboundValue"
                 },
                 "cfBackgroundImageOptions": {
                   "type": "DesignValue",
@@ -9157,8 +10811,8 @@
                     "announcementBannerIconName": {
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
-                        "desktop": "",
-                        "mobile": ""
+                        "mobile": "",
+                        "desktop": ""
                       }
                     },
                     "heading": {
@@ -9174,44 +10828,44 @@
                       "type": "BoundValue"
                     },
                     "sectionImages": {
-                      "type": "UnboundValue",
-                      "key": "3gD4aa9"
+                      "key": "3gD4aa9",
+                      "type": "UnboundValue"
                     },
                     "backgroundImage": {
-                      "type": "UnboundValue",
-                      "key": "nZ3KuxH"
+                      "key": "nZ3KuxH",
+                      "type": "UnboundValue"
                     },
                     "sectionVideoTitle": {
-                      "type": "UnboundValue",
-                      "key": "ezWxsUM"
+                      "key": "ezWxsUM",
+                      "type": "UnboundValue"
                     },
                     "sectionVideoYouTubeId": {
-                      "type": "UnboundValue",
-                      "key": "YdN-mw6"
+                      "key": "YdN-mw6",
+                      "type": "UnboundValue"
                     },
                     "sectionVideoFallback": {
-                      "type": "UnboundValue",
-                      "key": "WmoW8Tc"
+                      "key": "WmoW8Tc",
+                      "type": "UnboundValue"
                     },
                     "buttonLinks": {
                       "path": "/lSKgjSI/fields/primaryButton/~locale",
                       "type": "BoundValue"
                     },
                     "partnerCallout": {
-                      "type": "UnboundValue",
-                      "key": "_zwsCfw"
+                      "key": "_zwsCfw",
+                      "type": "UnboundValue"
                     },
                     "partnerLogo": {
-                      "type": "UnboundValue",
-                      "key": "n6pmjoG"
+                      "key": "n6pmjoG",
+                      "type": "UnboundValue"
                     },
                     "announcementBannerText": {
-                      "type": "UnboundValue",
-                      "key": "8p5f3sx"
+                      "key": "8p5f3sx",
+                      "type": "UnboundValue"
                     },
                     "announcementBannerLink": {
-                      "type": "UnboundValue",
-                      "key": "7OACowT"
+                      "key": "7OACowT",
+                      "type": "UnboundValue"
                     },
                     "cfVisibility": {
                       "type": "DesignValue",
@@ -9281,8 +10935,8 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "340px",
-                    "mobile": "499px"
+                    "mobile": "499px",
+                    "desktop": "340px"
                   }
                 },
                 "cfMaxWidth": {
@@ -9322,12 +10976,12 @@
                   }
                 },
                 "cfHyperlink": {
-                  "type": "UnboundValue",
-                  "key": "oT3G3H6n"
+                  "key": "oT3G3H6n",
+                  "type": "UnboundValue"
                 },
                 "cfOpenInNewTab": {
-                  "type": "UnboundValue",
-                  "key": "Y2i0NmCg"
+                  "key": "Y2i0NmCg",
+                  "type": "UnboundValue"
                 },
                 "cfBorderRadius": {
                   "type": "DesignValue",
@@ -9336,8 +10990,8 @@
                   }
                 },
                 "cfBackgroundImageUrl": {
-                  "type": "UnboundValue",
-                  "key": "dJFFS4dn"
+                  "key": "dJFFS4dn",
+                  "type": "UnboundValue"
                 },
                 "cfBackgroundImageOptions": {
                   "type": "DesignValue",
@@ -9389,8 +11043,8 @@
                     "announcementBannerIconName": {
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
-                        "desktop": "",
-                        "mobile": ""
+                        "mobile": "",
+                        "desktop": ""
                       }
                     },
                     "heading": {
@@ -9406,44 +11060,44 @@
                       "type": "BoundValue"
                     },
                     "sectionImages": {
-                      "type": "UnboundValue",
-                      "key": "4UefySBz"
+                      "key": "4UefySBz",
+                      "type": "UnboundValue"
                     },
                     "backgroundImage": {
-                      "type": "UnboundValue",
-                      "key": "neeT53Dk"
+                      "key": "neeT53Dk",
+                      "type": "UnboundValue"
                     },
                     "sectionVideoTitle": {
-                      "type": "UnboundValue",
-                      "key": "av7tIVe0"
+                      "key": "av7tIVe0",
+                      "type": "UnboundValue"
                     },
                     "sectionVideoYouTubeId": {
-                      "type": "UnboundValue",
-                      "key": "JAbzmYv0"
+                      "key": "JAbzmYv0",
+                      "type": "UnboundValue"
                     },
                     "sectionVideoFallback": {
-                      "type": "UnboundValue",
-                      "key": "cs21Yz63"
+                      "key": "cs21Yz63",
+                      "type": "UnboundValue"
                     },
                     "buttonLinks": {
                       "path": "/5NJymSdM/fields/primaryButton/~locale",
                       "type": "BoundValue"
                     },
                     "partnerCallout": {
-                      "type": "UnboundValue",
-                      "key": "fP9VBKqZ"
+                      "key": "fP9VBKqZ",
+                      "type": "UnboundValue"
                     },
                     "partnerLogo": {
-                      "type": "UnboundValue",
-                      "key": "jr98RSyJ"
+                      "key": "jr98RSyJ",
+                      "type": "UnboundValue"
                     },
                     "announcementBannerText": {
-                      "type": "UnboundValue",
-                      "key": "ZQBzXWAq"
+                      "key": "ZQBzXWAq",
+                      "type": "UnboundValue"
                     },
                     "announcementBannerLink": {
-                      "type": "UnboundValue",
-                      "key": "puVvzXrl"
+                      "key": "puVvzXrl",
+                      "type": "UnboundValue"
                     },
                     "cfVisibility": {
                       "type": "DesignValue",
@@ -9513,8 +11167,8 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "340px",
-                    "mobile": "499px"
+                    "mobile": "499px",
+                    "desktop": "340px"
                   }
                 },
                 "cfMaxWidth": {
@@ -9554,12 +11208,12 @@
                   }
                 },
                 "cfHyperlink": {
-                  "type": "UnboundValue",
-                  "key": "BJ2pvpv5"
+                  "key": "BJ2pvpv5",
+                  "type": "UnboundValue"
                 },
                 "cfOpenInNewTab": {
-                  "type": "UnboundValue",
-                  "key": "ZM07TiyV"
+                  "key": "ZM07TiyV",
+                  "type": "UnboundValue"
                 },
                 "cfBorderRadius": {
                   "type": "DesignValue",
@@ -9568,8 +11222,8 @@
                   }
                 },
                 "cfBackgroundImageUrl": {
-                  "type": "UnboundValue",
-                  "key": "WTNtHrdr"
+                  "key": "WTNtHrdr",
+                  "type": "UnboundValue"
                 },
                 "cfBackgroundImageOptions": {
                   "type": "DesignValue",
@@ -9621,8 +11275,8 @@
                     "announcementBannerIconName": {
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
-                        "desktop": "",
-                        "mobile": ""
+                        "mobile": "",
+                        "desktop": ""
                       }
                     },
                     "heading": {
@@ -9638,44 +11292,44 @@
                       "type": "BoundValue"
                     },
                     "sectionImages": {
-                      "type": "UnboundValue",
-                      "key": "ccFVr1cJ"
+                      "key": "ccFVr1cJ",
+                      "type": "UnboundValue"
                     },
                     "backgroundImage": {
                       "path": "/wsVEWsAE/fields/file/~locale",
                       "type": "BoundValue"
                     },
                     "sectionVideoTitle": {
-                      "type": "UnboundValue",
-                      "key": "26IBqL3f"
+                      "key": "26IBqL3f",
+                      "type": "UnboundValue"
                     },
                     "sectionVideoYouTubeId": {
-                      "type": "UnboundValue",
-                      "key": "YaR6axmk"
+                      "key": "YaR6axmk",
+                      "type": "UnboundValue"
                     },
                     "sectionVideoFallback": {
-                      "type": "UnboundValue",
-                      "key": "YWdvGNAX"
+                      "key": "YWdvGNAX",
+                      "type": "UnboundValue"
                     },
                     "buttonLinks": {
                       "path": "/fZijOUnP/fields/primaryButton/~locale",
                       "type": "BoundValue"
                     },
                     "partnerCallout": {
-                      "type": "UnboundValue",
-                      "key": "q93QFEXW"
+                      "key": "q93QFEXW",
+                      "type": "UnboundValue"
                     },
                     "partnerLogo": {
-                      "type": "UnboundValue",
-                      "key": "4v9R8Bod"
+                      "key": "4v9R8Bod",
+                      "type": "UnboundValue"
                     },
                     "announcementBannerText": {
-                      "type": "UnboundValue",
-                      "key": "9jZF29Xj"
+                      "key": "9jZF29Xj",
+                      "type": "UnboundValue"
                     },
                     "announcementBannerLink": {
-                      "type": "UnboundValue",
-                      "key": "Jy1nky8K"
+                      "key": "Jy1nky8K",
+                      "type": "UnboundValue"
                     },
                     "cfVisibility": {
                       "type": "DesignValue",
@@ -9745,8 +11399,8 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "443px",
-                    "mobile": "665px"
+                    "mobile": "665px",
+                    "desktop": "443px"
                   }
                 },
                 "cfMaxWidth": {
@@ -9786,12 +11440,12 @@
                   }
                 },
                 "cfHyperlink": {
-                  "type": "UnboundValue",
-                  "key": "kNxE8jNU"
+                  "key": "kNxE8jNU",
+                  "type": "UnboundValue"
                 },
                 "cfOpenInNewTab": {
-                  "type": "UnboundValue",
-                  "key": "4iDaBkxU"
+                  "key": "4iDaBkxU",
+                  "type": "UnboundValue"
                 },
                 "cfBorderRadius": {
                   "type": "DesignValue",
@@ -9800,8 +11454,8 @@
                   }
                 },
                 "cfBackgroundImageUrl": {
-                  "type": "UnboundValue",
-                  "key": "OaekmZwc"
+                  "key": "OaekmZwc",
+                  "type": "UnboundValue"
                 },
                 "cfBackgroundImageOptions": {
                   "type": "DesignValue",
@@ -9853,8 +11507,8 @@
                     "announcementBannerIconName": {
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
-                        "desktop": "",
-                        "mobile": ""
+                        "mobile": "",
+                        "desktop": ""
                       }
                     },
                     "heading": {
@@ -9874,40 +11528,40 @@
                       "type": "BoundValue"
                     },
                     "backgroundImage": {
-                      "type": "UnboundValue",
-                      "key": "oThcKeVH"
+                      "key": "oThcKeVH",
+                      "type": "UnboundValue"
                     },
                     "sectionVideoTitle": {
-                      "type": "UnboundValue",
-                      "key": "lfVVFBsh"
+                      "key": "lfVVFBsh",
+                      "type": "UnboundValue"
                     },
                     "sectionVideoYouTubeId": {
-                      "type": "UnboundValue",
-                      "key": "UmzzoZTw"
+                      "key": "UmzzoZTw",
+                      "type": "UnboundValue"
                     },
                     "sectionVideoFallback": {
-                      "type": "UnboundValue",
-                      "key": "0FOHuKmh"
+                      "key": "0FOHuKmh",
+                      "type": "UnboundValue"
                     },
                     "buttonLinks": {
                       "path": "/KNEEYqu2/fields/primaryButton/~locale",
                       "type": "BoundValue"
                     },
                     "partnerCallout": {
-                      "type": "UnboundValue",
-                      "key": "1IroczRN"
+                      "key": "1IroczRN",
+                      "type": "UnboundValue"
                     },
                     "partnerLogo": {
-                      "type": "UnboundValue",
-                      "key": "zq3mza7y"
+                      "key": "zq3mza7y",
+                      "type": "UnboundValue"
                     },
                     "announcementBannerText": {
-                      "type": "UnboundValue",
-                      "key": "640trRtn"
+                      "key": "640trRtn",
+                      "type": "UnboundValue"
                     },
                     "announcementBannerLink": {
-                      "type": "UnboundValue",
-                      "key": "kykrsTI1"
+                      "key": "kykrsTI1",
+                      "type": "UnboundValue"
                     },
                     "cfVisibility": {
                       "type": "DesignValue",
@@ -9977,8 +11631,8 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "364px",
-                    "mobile": "665px"
+                    "mobile": "665px",
+                    "desktop": "364px"
                   }
                 },
                 "cfMaxWidth": {
@@ -10018,12 +11672,12 @@
                   }
                 },
                 "cfHyperlink": {
-                  "type": "UnboundValue",
-                  "key": "WJjz2Dl2"
+                  "key": "WJjz2Dl2",
+                  "type": "UnboundValue"
                 },
                 "cfOpenInNewTab": {
-                  "type": "UnboundValue",
-                  "key": "hCapPNxm"
+                  "key": "hCapPNxm",
+                  "type": "UnboundValue"
                 },
                 "cfBorderRadius": {
                   "type": "DesignValue",
@@ -10032,8 +11686,8 @@
                   }
                 },
                 "cfBackgroundImageUrl": {
-                  "type": "UnboundValue",
-                  "key": "PhNIy5V6"
+                  "key": "PhNIy5V6",
+                  "type": "UnboundValue"
                 },
                 "cfBackgroundImageOptions": {
                   "type": "DesignValue",
@@ -10085,8 +11739,8 @@
                     "announcementBannerIconName": {
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
-                        "desktop": "",
-                        "mobile": ""
+                        "mobile": "",
+                        "desktop": ""
                       }
                     },
                     "heading": {
@@ -10106,40 +11760,40 @@
                       "type": "BoundValue"
                     },
                     "backgroundImage": {
-                      "type": "UnboundValue",
-                      "key": "LSvTACg7"
+                      "key": "LSvTACg7",
+                      "type": "UnboundValue"
                     },
                     "sectionVideoTitle": {
-                      "type": "UnboundValue",
-                      "key": "1guF9yEn"
+                      "key": "1guF9yEn",
+                      "type": "UnboundValue"
                     },
                     "sectionVideoYouTubeId": {
-                      "type": "UnboundValue",
-                      "key": "haXmmTvi"
+                      "key": "haXmmTvi",
+                      "type": "UnboundValue"
                     },
                     "sectionVideoFallback": {
-                      "type": "UnboundValue",
-                      "key": "fS0eRSbO"
+                      "key": "fS0eRSbO",
+                      "type": "UnboundValue"
                     },
                     "buttonLinks": {
                       "path": "/yuwzRF76/fields/primaryButton/~locale",
                       "type": "BoundValue"
                     },
                     "partnerCallout": {
-                      "type": "UnboundValue",
-                      "key": "KU4GQ6IT"
+                      "key": "KU4GQ6IT",
+                      "type": "UnboundValue"
                     },
                     "partnerLogo": {
-                      "type": "UnboundValue",
-                      "key": "xLlgqSTM"
+                      "key": "xLlgqSTM",
+                      "type": "UnboundValue"
                     },
                     "announcementBannerText": {
-                      "type": "UnboundValue",
-                      "key": "dggzODpm"
+                      "key": "dggzODpm",
+                      "type": "UnboundValue"
                     },
                     "announcementBannerLink": {
-                      "type": "UnboundValue",
-                      "key": "9SU8qYse"
+                      "key": "9SU8qYse",
+                      "type": "UnboundValue"
                     },
                     "cfVisibility": {
                       "type": "DesignValue",
@@ -10209,8 +11863,8 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "409px",
-                    "mobile": "689px"
+                    "mobile": "689px",
+                    "desktop": "409px"
                   }
                 },
                 "cfMaxWidth": {
@@ -10250,12 +11904,12 @@
                   }
                 },
                 "cfHyperlink": {
-                  "type": "UnboundValue",
-                  "key": "GEMV88f8"
+                  "key": "GEMV88f8",
+                  "type": "UnboundValue"
                 },
                 "cfOpenInNewTab": {
-                  "type": "UnboundValue",
-                  "key": "oeJZ3M7B"
+                  "key": "oeJZ3M7B",
+                  "type": "UnboundValue"
                 },
                 "cfBorderRadius": {
                   "type": "DesignValue",
@@ -10264,8 +11918,8 @@
                   }
                 },
                 "cfBackgroundImageUrl": {
-                  "type": "UnboundValue",
-                  "key": "CDhmJ0kv"
+                  "key": "CDhmJ0kv",
+                  "type": "UnboundValue"
                 },
                 "cfBackgroundImageOptions": {
                   "type": "DesignValue",
@@ -10317,8 +11971,8 @@
                     "announcementBannerIconName": {
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
-                        "desktop": "",
-                        "mobile": ""
+                        "mobile": "",
+                        "desktop": ""
                       }
                     },
                     "heading": {
@@ -10338,8 +11992,8 @@
                       "type": "UnboundValue"
                     },
                     "backgroundImage": {
-                      "type": "UnboundValue",
-                      "key": "n7OE6ZPP"
+                      "key": "n7OE6ZPP",
+                      "type": "UnboundValue"
                     },
                     "sectionVideoTitle": {
                       "path": "/3wbNYqnm/fields/videoTitle/~locale",
@@ -10358,20 +12012,20 @@
                       "type": "BoundValue"
                     },
                     "partnerCallout": {
-                      "type": "UnboundValue",
-                      "key": "iGAgwfwT"
+                      "key": "iGAgwfwT",
+                      "type": "UnboundValue"
                     },
                     "partnerLogo": {
-                      "type": "UnboundValue",
-                      "key": "YbKlV53B"
+                      "key": "YbKlV53B",
+                      "type": "UnboundValue"
                     },
                     "announcementBannerText": {
-                      "type": "UnboundValue",
-                      "key": "A4Z16hGr"
+                      "key": "A4Z16hGr",
+                      "type": "UnboundValue"
                     },
                     "announcementBannerLink": {
-                      "type": "UnboundValue",
-                      "key": "UCeQ9iXv"
+                      "key": "UCeQ9iXv",
+                      "type": "UnboundValue"
                     },
                     "cfVisibility": {
                       "type": "DesignValue",
@@ -10441,8 +12095,8 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "388px",
-                    "mobile": "547px"
+                    "mobile": "547px",
+                    "desktop": "388px"
                   }
                 },
                 "cfMaxWidth": {
@@ -10482,12 +12136,12 @@
                   }
                 },
                 "cfHyperlink": {
-                  "type": "UnboundValue",
-                  "key": "kLDDuqZG"
+                  "key": "kLDDuqZG",
+                  "type": "UnboundValue"
                 },
                 "cfOpenInNewTab": {
-                  "type": "UnboundValue",
-                  "key": "KU6fzBI2"
+                  "key": "KU6fzBI2",
+                  "type": "UnboundValue"
                 },
                 "cfBorderRadius": {
                   "type": "DesignValue",
@@ -10496,8 +12150,8 @@
                   }
                 },
                 "cfBackgroundImageUrl": {
-                  "type": "UnboundValue",
-                  "key": "GCZkZgQg"
+                  "key": "GCZkZgQg",
+                  "type": "UnboundValue"
                 },
                 "cfBackgroundImageOptions": {
                   "type": "DesignValue",
@@ -10549,8 +12203,8 @@
                     "announcementBannerIconName": {
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
-                        "desktop": "",
-                        "mobile": ""
+                        "mobile": "",
+                        "desktop": ""
                       }
                     },
                     "heading": {
@@ -10598,12 +12252,12 @@
                       "type": "BoundValue"
                     },
                     "announcementBannerText": {
-                      "type": "UnboundValue",
-                      "key": "zxogi8F5"
+                      "key": "zxogi8F5",
+                      "type": "UnboundValue"
                     },
                     "announcementBannerLink": {
-                      "type": "UnboundValue",
-                      "key": "vXZLNu6a"
+                      "key": "vXZLNu6a",
+                      "type": "UnboundValue"
                     },
                     "cfVisibility": {
                       "type": "DesignValue",
@@ -10673,8 +12327,8 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "390px",
-                    "mobile": "628px"
+                    "mobile": "628px",
+                    "desktop": "390px"
                   }
                 },
                 "cfMaxWidth": {
@@ -10714,12 +12368,12 @@
                   }
                 },
                 "cfHyperlink": {
-                  "type": "UnboundValue",
-                  "key": "CtU2QeRy"
+                  "key": "CtU2QeRy",
+                  "type": "UnboundValue"
                 },
                 "cfOpenInNewTab": {
-                  "type": "UnboundValue",
-                  "key": "eUKHdTTY"
+                  "key": "eUKHdTTY",
+                  "type": "UnboundValue"
                 },
                 "cfBorderRadius": {
                   "type": "DesignValue",
@@ -10728,8 +12382,8 @@
                   }
                 },
                 "cfBackgroundImageUrl": {
-                  "type": "UnboundValue",
-                  "key": "Q0shKXpw"
+                  "key": "Q0shKXpw",
+                  "type": "UnboundValue"
                 },
                 "cfBackgroundImageOptions": {
                   "type": "DesignValue",
@@ -10781,8 +12435,8 @@
                     "announcementBannerIconName": {
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
-                        "desktop": "smile",
-                        "mobile": "smile"
+                        "mobile": "smile",
+                        "desktop": "smile"
                       }
                     },
                     "heading": {
@@ -13090,12 +14744,12 @@
                   }
                 },
                 "cfHyperlink": {
-                  "type": "UnboundValue",
-                  "key": "aGWZHxe"
+                  "key": "aGWZHxe",
+                  "type": "UnboundValue"
                 },
                 "cfOpenInNewTab": {
-                  "type": "UnboundValue",
-                  "key": "zHoBMf8"
+                  "key": "zHoBMf8",
+                  "type": "UnboundValue"
                 },
                 "cfBorderRadius": {
                   "type": "DesignValue",
@@ -13104,8 +14758,8 @@
                   }
                 },
                 "cfBackgroundImageUrl": {
-                  "type": "UnboundValue",
-                  "key": "T1ZuBpV"
+                  "key": "T1ZuBpV",
+                  "type": "UnboundValue"
                 },
                 "cfBackgroundImageOptions": {
                   "type": "DesignValue",
@@ -13143,8 +14797,8 @@
                       }
                     },
                     "id": {
-                      "type": "UnboundValue",
-                      "key": "GkMrM3D"
+                      "key": "GkMrM3D",
+                      "type": "UnboundValue"
                     },
                     "cfVisibility": {
                       "type": "DesignValue",
@@ -15693,8 +17347,19 @@
           "0zIBmw_": {
             "value": ""
           },
+          "13Ib38_": {
+            "value": false
+          },
+          "1702ebh": {},
           "347Oltn": {},
           "3gD4aa9": {},
+          "4H-a8iq": {
+            "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
+          },
+          "4qoR2Ve": {
+            "value": "Paragraph"
+          },
+          "60M5ZzR": {},
           "6znvK3h": {},
           "7OACowT": {},
           "8p5f3sx": {},
@@ -15702,19 +17367,48 @@
             "value": false
           },
           "ABf-FSO": {},
+          "CCG45Cf": {
+            "value": false
+          },
+          "CtWVJCR": {},
           "DMiqqWu": {},
+          "E7Cjhbo": {},
           "EKQDsC5": {},
+          "ESHDx-N": {
+            "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
+          },
+          "ETBqUYX": {
+            "value": "https://code.org"
+          },
+          "FBj3Am9": {},
+          "FSg2WhG": {
+            "value": {
+              "fields": {
+                "url": "#",
+                "label": "Primary button"
+              }
+            }
+          },
           "Fe4Bfar": {
             "value": ""
           },
           "GkMrM3D": {},
+          "GmGKjDd": {},
+          "HANecnh": {},
+          "HURk-ZX": {
+            "value": "https://code.org"
+          },
           "HmUDGQ4": {},
           "ICrX3vs": {
+            "value": ""
+          },
+          "IcIQJVk": {
             "value": ""
           },
           "Idr0CiO": {
             "value": ""
           },
+          "IgW-F6-": {},
           "JFCnn0N": {
             "value": false
           },
@@ -15722,18 +17416,48 @@
           "KU5oIGN": {
             "value": ""
           },
+          "KXMj-y0": {},
+          "Khqf7OC": {
+            "value": "Button"
+          },
+          "LDMq3zA": {
+            "value": "Action Block Title"
+          },
+          "LRYvjsK": {
+            "value": "Pattern Header"
+          },
           "LbAW-Uv": {
             "value": false
           },
           "LsBgETo": {
             "value": false
           },
+          "MOKb3tV": {},
+          "M_8vrhJ": {},
+          "OCvEUyr": {},
+          "PAn6OhE": {},
+          "RF1zjg6": {},
           "SO13Vmq": {
             "value": "Editorial Card 1"
           },
+          "SV5gVCc": {},
           "T1ZuBpV": {},
+          "T68Oo4f": {},
+          "TH-_LAe": {},
           "U1KmKKh": {},
+          "UaQvzts": {
+            "value": {
+              "fields": {
+                "url": "#",
+                "label": "Primary button"
+              }
+            }
+          },
+          "UjouKpK": {
+            "value": false
+          },
           "WmoW8Tc": {},
+          "Wz9SJiE": {},
           "XonT3vx": {
             "value": "Horizontal With Image"
           },
@@ -15742,24 +17466,55 @@
             "value": "Rich Text"
           },
           "_zwsCfw": {},
+          "aBzIX6V": {
+            "value": "Action block description goes here."
+          },
           "aGWZHxe": {
             "value": ""
           },
           "aXCTjNk": {},
           "acae6EU": {},
+          "alDLE92": {
+            "value": "Action Block Pattern Hidden Elements"
+          },
+          "aohR35B": {
+            "value": "Action block description goes here."
+          },
           "bAIeQt5": {
             "value": false
           },
           "baOMaPo": {
             "value": false
           },
+          "bs0mKZu": {
+            "value": "Action Block Pattern Default"
+          },
           "c6Xllyd": {
             "value": "Link"
           },
+          "cGdHTOr": {},
           "cLEr2oT": {},
+          "ccJpf-l": {
+            "value": "Action block description goes here."
+          },
+          "dF5TCmS": {
+            "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
+          },
           "ezWxsUM": {},
+          "f24Wg65": {},
           "fupk4k7": {},
+          "go9slZF": {
+            "value": ""
+          },
+          "hDMAL2U": {},
+          "i4tvl_O": {
+            "value": "Button"
+          },
           "io65oYg": {},
+          "jekav-Z": {
+            "value": "Action Block Title"
+          },
+          "lakTr2l": {},
           "mqPCQ9z": {
             "value": "Editorial Card 2"
           },
@@ -15768,30 +17523,60 @@
             "value": "Editorial Card"
           },
           "nZ3KuxH": {},
+          "nluOMYh": {},
           "nsI4jPw": {
             "value": ""
+          },
+          "oGnTTO-": {
+            "value": {
+              "fields": {
+                "url": "#",
+                "label": "Primary button"
+              }
+            }
+          },
+          "rOJjuA1": {
+            "value": false
           },
           "rtOw9NH": {
             "value": ""
           },
+          "sjc08rI": {
+            "value": false
+          },
           "uaOANCd": {
             "value": "FAQ Accordion"
           },
+          "vSKlRHP": {},
           "vwAdtQr": {
             "value": "Editorial Card 4"
+          },
+          "w3AE6Sz": {
+            "value": "Action Block Title"
+          },
+          "xF6NHMp": {
+            "value": false
           },
           "xWwE9or": {
             "value": "Editorial Card 3"
           },
           "xbPE1--": {},
+          "yG60pRy": {
+            "value": ""
+          },
+          "yKDw71r": {},
           "zHoBMf8": {
             "value": false
+          },
+          "zh7msz6": {
+            "value": ""
           },
           "0BYMXHkY": {
             "value": "Full Width Action Block"
           },
           "0FOHuKmh": {},
           "0ZmNLA6K": {},
+          "0kPDA79g": {},
           "18Loxedj": {
             "value": false
           },
@@ -15801,12 +17586,19 @@
             "value": false
           },
           "1guF9yEn": {},
+          "1hMP95qt": {
+            "value": ""
+          },
+          "1rLXmQf4": {},
           "26IBqL3f": {},
           "36YfTgYM": {
             "value": ""
           },
           "3BL7DZFT": {
             "value": "Editorial Card 3"
+          },
+          "3CADhMmH": {
+            "value": false
           },
           "3kOq2u6E": {},
           "4UefySBz": {},
@@ -15816,6 +17608,7 @@
           "4v9R8Bod": {},
           "5OJDXQCx": {},
           "5OKBDu4C": {},
+          "5VjDE2CK": {},
           "5dOroYow": {
             "value": ""
           },
@@ -15827,6 +17620,7 @@
           },
           "5wXRsLJn": {},
           "640trRtn": {},
+          "65wUpmTS": {},
           "6axn1isp": {},
           "6dweZgN5": {
             "value": false
@@ -15841,6 +17635,7 @@
           "6pLrv7NC": {
             "value": false
           },
+          "73db4weH": {},
           "7954gvrQ": {},
           "7Cj0SIqV": {
             "value": "Right Aligned: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
@@ -15880,6 +17675,7 @@
           },
           "9SU8qYse": {},
           "9Xoxh3vz": {},
+          "9cnm11U7": {},
           "9jZF29Xj": {},
           "A43eNziB": {},
           "A4Z16hGr": {},
@@ -15903,6 +17699,12 @@
             "value": "Secondary Black Button"
           },
           "CDhmJ0kv": {},
+          "Ca3QU6Yy": {
+            "value": "Action Block Title"
+          },
+          "Cbj4oJVP": {
+            "value": "Action block description goes here."
+          },
           "CtU2QeRy": {
             "value": ""
           },
@@ -15917,6 +17719,10 @@
           "FHSW9Y15": {
             "value": ""
           },
+          "FS1U8GfG": {},
+          "Fa2xfSTa": {
+            "value": "Action Block Title"
+          },
           "GApUZWyE": {
             "value": "Self-Paced PL Carousel"
           },
@@ -15927,6 +17733,7 @@
           "GGSUj7T7": {
             "value": ""
           },
+          "GmnU58eE": {},
           "H6ykocnY": {
             "value": "Hero Banner with Image Small"
           },
@@ -15940,6 +17747,9 @@
             "value": "about:blank"
           },
           "IuXKDn7Q": {},
+          "IxzSvJTD": {
+            "value": "https://code.org"
+          },
           "J8z7Qo1L": {
             "value": "Heading 4"
           },
@@ -15954,6 +17764,17 @@
             "value": "/ping"
           },
           "Jy1nky8K": {},
+          "KMDGAxsG": {
+            "value": {
+              "fields": {
+                "url": "#",
+                "label": "Primary button"
+              }
+            }
+          },
+          "KOIVMjgL": {
+            "value": "https://code.org"
+          },
           "KU4GQ6IT": {},
           "KU6fzBI2": {
             "value": false
@@ -15970,17 +17791,22 @@
           },
           "MAPxIo7U": {},
           "Mo4S1GHf": {},
+          "NTMvp4T3": {},
           "NhzwQJMw": {
             "value": "https://code.org"
           },
           "NspNpe6v": {
             "value": ""
           },
+          "NzFs8wiS": {},
           "OCSRD9uM": {
             "value": "Editorial Card 2"
           },
           "OaekmZwc": {},
           "Oor1uCW9": {},
+          "OpG1fkXt": {
+            "value": false
+          },
           "Ov2KaMlI": {
             "value": ""
           },
@@ -15999,6 +17825,7 @@
             "value": false
           },
           "QOmaSWNU": {},
+          "QZOw56pD": {},
           "RLcvWIOm": {
             "value": false
           },
@@ -16009,6 +17836,8 @@
           "SGrm6TeM": {},
           "SWiUA59D": {},
           "T0ieOlqB": {},
+          "T1XSxOfG": {},
+          "T6anbs8T": {},
           "TC9267aF": {},
           "TSFzv7B9": {
             "value": "Paragraph Secondary Medium"
@@ -16019,7 +17848,18 @@
           "TnZjwBke": {
             "value": false
           },
+          "U3p4tTyP": {
+            "value": {
+              "fields": {
+                "url": "#",
+                "label": "Primary button"
+              }
+            }
+          },
           "UCeQ9iXv": {},
+          "UCzH3lZH": {
+            "value": "Pattern Header"
+          },
           "UmzzoZTw": {},
           "V8YHlFRp": {
             "value": "Container"
@@ -16046,6 +17886,9 @@
           },
           "WelvRTbQ": {},
           "Wn9tbkAL": {},
+          "WwX8DppO": {
+            "value": "Action block description goes here."
+          },
           "WzScpfoh": {},
           "X4E1tjHt": {
             "value": ""
@@ -16070,6 +17913,14 @@
             "value": "Vertical With Icon"
           },
           "ZF1JlQXv": {},
+          "ZGRiDrVS": {
+            "value": {
+              "fields": {
+                "url": "#",
+                "label": "Primary button"
+              }
+            }
+          },
           "ZJnqNzR6": {
             "value": "Image"
           },
@@ -16081,12 +17932,22 @@
             "value": false
           },
           "ZpinQk1s": {},
+          "aNOfIztd": {
+            "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
+          },
+          "aOs7kMFE": {
+            "value": "Button"
+          },
           "aPeti3xV": {
             "value": false
           },
           "av7tIVe0": {},
           "avmUJimV": {
             "value": "Paragraph Secondary Bold"
+          },
+          "bisJWX6Q": {},
+          "bke8mAuc": {
+            "value": "Paragraph"
           },
           "bqv4sKJA": {},
           "bvkdCWAp": {
@@ -16099,7 +17960,11 @@
             "value": "In partnership with"
           },
           "ccFVr1cJ": {},
+          "cex92Z12": {
+            "value": "Action block description goes here."
+          },
           "cs21Yz63": {},
+          "cyAbVclk": {},
           "d5NKAnwp": {
             "value": "Localization"
           },
@@ -16111,6 +17976,7 @@
             "value": "https://code.org"
           },
           "dggzODpm": {},
+          "dxOviBkV": {},
           "eI0ylAC7": {
             "value": false
           },
@@ -16121,14 +17987,23 @@
           "eUKHdTTY": {
             "value": false
           },
+          "eyHY3MEf": {
+            "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
+          },
           "f0smL8E1": {},
           "fP9VBKqZ": {},
           "fS0eRSbO": {},
           "fvbdsWsT": {
             "value": "Divider"
           },
+          "fwWOH5sS": {
+            "value": "Button"
+          },
           "g1GOPI4w": {
             "value": ""
+          },
+          "gr0DK9TI": {
+            "value": false
           },
           "gwYa67z7": {},
           "gyjlsYtE": {
@@ -16154,11 +18029,13 @@
           "jTc0vIOy": {
             "value": "Hero Banner with Partner Callout"
           },
+          "jX7FtFyx": {},
           "joAfMQhO": {},
           "jr98RSyJ": {},
           "k7cc4DWU": {
             "value": "Heading 3"
           },
+          "kCbgx5xB": {},
           "kLDDuqZG": {
             "value": ""
           },
@@ -16173,6 +18050,7 @@
           "lIsy1GAr": {
             "value": "Internal Link M"
           },
+          "lJTpbCYC": {},
           "lMpw2utY": {
             "value": "Hero Banner with Background Color"
           },
@@ -16200,12 +18078,19 @@
             "value": "Without fallback"
           },
           "neeT53Dk": {},
+          "nzQ1wskT": {
+            "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
+          },
           "oPc8lo0F": {},
           "oT3G3H6n": {
             "value": ""
           },
           "oThcKeVH": {},
+          "oVSHufbZ": {},
           "oeJZ3M7B": {
+            "value": false
+          },
+          "ovjouB0p": {
             "value": false
           },
           "pLRLaUbo": {
@@ -16242,6 +18127,9 @@
           },
           "sOrYv4IZ": {},
           "sgcocoTx": {},
+          "st5uoXAq": {
+            "value": "Action Block Title"
+          },
           "tgfqSQxT": {
             "value": "Overline Primary Large"
           },
@@ -16252,9 +18140,13 @@
           "uTgCIxZc": {
             "value": "Video without Fallback"
           },
+          "uWNHXGKp": {
+            "value": ""
+          },
           "uqryIUsQ": {
             "value": "Section - Pattern Dark"
           },
+          "uwJDIDdP": {},
           "v6A0d7WI": {
             "value": "With secondary background"
           },
@@ -16289,9 +18181,11 @@
             "value": "Action Block"
           },
           "zBYukK4q": {},
+          "zHKQk2B6": {},
           "zQNTpdsD": {
             "value": "/ping"
           },
+          "zgUdfBPC": {},
           "zkx5V9ed": {},
           "zq3mza7y": {},
           "zxogi8F5": {},

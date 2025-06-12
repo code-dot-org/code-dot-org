@@ -20,6 +20,7 @@ Conditions:
 
 Resources:
   # TLS Cert for CloudFront Distribution (must be in us-east-1)
+  # Deprecated: Remove after CloudfrontTLSCertificate is deployed to production.
    TLSCertificate:
      Condition: IsUSEast1
      Type: AWS::CertificateManager::Certificate
@@ -29,8 +30,28 @@ Resources:
          - DomainName: !Sub "${SubdomainName}.${BaseDomainName}"
            HostedZoneId: !Ref HostedZoneId
        ValidationMethod: DNS
+
+  # Wildcard TLS Cert for CloudFront Distribution (must be in us-east-1)
+   CloudFrontTLSCertificate:
+     Condition: IsUSEast1
+     Type: AWS::CertificateManager::Certificate
+     Properties:
+       DomainName: !Sub "${SubdomainName}.${BaseDomainName}"
+       SubjectAlternativeNames:
+         - !Sub "preview-${SubdomainName}.${BaseDomainName}"
+       DomainValidationOptions:
+         - DomainName: !Sub "${SubdomainName}.${BaseDomainName}"
+           HostedZoneId: !Ref HostedZoneId
+         - DomainName: !Sub "preview-${SubdomainName}.${BaseDomainName}"
+           HostedZoneId: !Ref HostedZoneId
+       ValidationMethod: DNS
+
 Outputs:
   TLSCertificateArn:
     Value: !Ref TLSCertificate
     Export:
       Name: !Sub "${AWS::StackName}-TLSCertificateArn"
+  CloudFrontTLSCertificateArn:
+    Value: !Ref CloudFrontTLSCertificate
+    Export:
+      Name: !Sub "${AWS::StackName}-CloudFrontTLSCertificateArn"
