@@ -74,6 +74,7 @@ copyCommonImageAssets(); // This runs when Next.js starts (dev or build)
 const nextConfig: NextConfig = {
   reactStrictMode: false,
   output: 'standalone',
+  outputFileTracingRoot: path.join(__dirname, '../../'),
   serverExternalPackages: [],
   cacheMaxMemorySize: 0, // disable default in-memory caching
 };
