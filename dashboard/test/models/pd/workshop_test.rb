@@ -950,8 +950,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'teachers_attending_all_sessions with a teacher who deleted their account' do
-    workshop = create :workshop,
-      course: Pd::Workshop::COURSE_CSF
+    workshop = create :workshop
 
     workshop_participant = create :pd_workshop_participant,
       enrolled: true,
@@ -1057,7 +1056,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'pre_survey?' do
     csd_workshop = create :workshop, course: Pd::Workshop::COURSE_CSD
     csp_workshop = create :workshop, course: Pd::Workshop::COURSE_CSP
-    other_workshop = create :workshop, course: Pd::Workshop::COURSE_CSF
+    other_workshop = create :byo_workshop
 
     assert csd_workshop.pre_survey?
     assert csp_workshop.pre_survey?
@@ -1355,7 +1354,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_automated_emails sends pre-workshop 10 days before' do
-    workshop = create :csf_intro_workshop, sessions_from: Time.zone.today + 10.days
+    workshop = create :csd_academic_year_workshop, sessions_from: Time.zone.today + 10.days
 
     facilitator = create(:facilitator)
     workshop.facilitators = [facilitator]

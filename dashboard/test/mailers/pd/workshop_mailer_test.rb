@@ -162,7 +162,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
 
   test 'teacher cancel receipt links are complete urls' do
     test_cases = [
-      {course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_101},
+      {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_WORKSHOP_1},
     ]
 
     test_cases.each do |test_case|

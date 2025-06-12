@@ -14,7 +14,7 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
   end
 
   setup do
-    @workshop = create :workshop, organizer: @organizer, num_sessions: 1
+    @workshop = create :byo_workshop, organizer: @organizer, num_sessions: 1
     @workshop.facilitators << @facilitator
     @existing_enrollment = create :pd_enrollment, workshop: @workshop
 

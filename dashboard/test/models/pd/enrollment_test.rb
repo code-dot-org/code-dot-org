@@ -16,7 +16,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     user = create :teacher
 
     enrollment1 = create :pd_enrollment, user_id: nil, email: user.email, workshop: (create :workshop, course: COURSE_CSD)
-    enrollment2 = create :pd_enrollment, user_id: user.id, email: 'someoneelse@example.com', workshop: (create :workshop, course: COURSE_CSF)
+    enrollment2 = create :pd_enrollment, user_id: user.id, email: 'someoneelse@example.com', workshop: (create :workshop, course: COURSE_CSP)
 
     enrollments = Pd::Enrollment.for_user(user).to_a
     assert_equal Set.new([enrollment1, enrollment2]), Set.new(enrollments)

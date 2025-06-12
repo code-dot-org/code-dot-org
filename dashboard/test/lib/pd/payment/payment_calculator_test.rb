@@ -17,7 +17,7 @@ module Pd::Payment
     end
 
     test 'Raise error if workshop is not ended' do
-      workshop = create(:workshop, course: Pd::Workshop::COURSE_CSF)
+      workshop = create(:workshop)
       error = assert_raises(RuntimeError) do
         PaymentCalculator.instance.calculate(workshop)
       end

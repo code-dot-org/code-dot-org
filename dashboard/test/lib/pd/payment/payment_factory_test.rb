@@ -45,9 +45,7 @@ module Pd::Payment
     end
 
     test 'unpaid' do
-      workshop_district_wrong_type = create :workshop, :ended, on_map: false, funded: false,
-        course: Pd::Workshop::COURSE_CSF
-
+      workshop_district_wrong_type = create :workshop, :ended, on_map: false, funded: false
       workshop_csd = create :workshop, :ended, on_map: true, funded: true,
         course: Pd::Workshop::COURSE_CSD
 
