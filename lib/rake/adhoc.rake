@@ -85,4 +85,28 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
       Rake::Task['adhoc:validate'].invoke
     end
   end
+
+  namespace :bugcrowd do
+    timed_task_with_logging environment: 'adhoc:environment' do
+      ENV['DATABASE'] = '1'
+      ENV['STACK_NAME'] = 'adhoc-bugcrowd'
+      ENV['CDN_ENABLED'] = '1'
+    end
+
+    desc 'Launch an adhoc server configured for Bugcrowd testing.
+Note: You must specify `RAILS_ENV=adhoc`'
+    timed_task_with_logging start: :environment do
+      Rake::Task['adhoc:start'].invoke
+    end
+
+    timed_task_with_logging validate: :environment do
+      Rake::Task['adhoc:validate'].invoke
+    end
+
+    timed_task_with_logging stop: :environment do
+      # TODO:
+      # - disable termination protection on the ec2 instance in the stack
+      Rake::Task['adhoc:stop'].invoke
+    end
+  end
 end
