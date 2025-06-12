@@ -1368,17 +1368,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::Workshop.send_automated_emails
   end
 
-  test 'send_automated_emails sends post-workshop 30 days after' do
-    workshop = create :csf_intro_workshop, sessions_from: Time.zone.today - 30.days, enrolled_and_attending_users: 1
-
-    Pd::WorkshopMailer.any_instance.expects(:facilitator_pre_workshop).
-      never
-    Pd::WorkshopMailer.any_instance.expects(:teacher_follow_up).
-      with(workshop.enrollments.first)
-
-    Pd::Workshop.send_automated_emails
-  end
-
   test 'workshop date range string is NA when no sessions' do
     workshop = create :workshop, num_sessions: 0
     assert_equal 'N/A', workshop.workshop_date_range_string

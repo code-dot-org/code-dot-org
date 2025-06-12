@@ -50,14 +50,12 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
   end
 
   test 'handles course and subject correctly' do
-    term_1 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: 1.month.from_now.to_date, course: Pd::Workshop::COURSE_CSF)
-    term_2 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: 1.month.from_now.to_date, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP)
-    term_3 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: 1.month.from_now.to_date, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1)
+    term_1 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: 1.month.from_now.to_date, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP)
+    term_2 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: 1.month.from_now.to_date, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1)
 
     params = {num_sessions: 1, sessions_from: 2.months.from_now.to_date, organizer: @program_manager_1}
-    assert_equal term_1, Pd::PaymentTerm.for_workshop(create(:workshop, **params, course: Pd::Workshop::COURSE_CSF))
-    assert_equal term_2, Pd::PaymentTerm.for_workshop(create(:workshop, **params, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP))
-    assert_equal term_3, Pd::PaymentTerm.for_workshop(create(:csp_academic_year_workshop, **params))
+    assert_equal term_1, Pd::PaymentTerm.for_workshop(create(:workshop, **params, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP))
+    assert_equal term_2, Pd::PaymentTerm.for_workshop(create(:csp_academic_year_workshop, **params))
   end
 
   test 'validations for payment terms' do
