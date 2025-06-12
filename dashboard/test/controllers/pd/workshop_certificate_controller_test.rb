@@ -4,7 +4,7 @@ class Pd::WorkshopCertificateControllerTest < ActionController::TestCase
   setup do
     @user = create :teacher
     sign_in(@user)
-    @workshop = create :workshop, num_sessions: 1, course: Pd::Workshop::COURSE_CSD
+    @workshop = create :workshop, num_sessions: 1, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP
     @workshop.update_columns(name: nil)
     @enrollment = create :pd_enrollment, :with_attendance, workshop: @workshop
 
