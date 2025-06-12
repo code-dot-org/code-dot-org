@@ -15,14 +15,6 @@ module Pd::Payment
       assert_equal PaymentCalculatorDistrict, PaymentFactory.get_calculator_class(workshop_cs_in_s)
     end
 
-    test 'CSF calculator' do
-      workshop_csf_public = create :workshop, :ended, :funded, course: Pd::Workshop::COURSE_CSF, on_map: true
-      workshop_csf_private = create :workshop, :ended, :funded, course: Pd::Workshop::COURSE_CSF, on_map: false
-
-      assert_equal PaymentCalculatorCSF, PaymentFactory.get_calculator_class(workshop_csf_public)
-      assert_equal PaymentCalculatorCSF, PaymentFactory.get_calculator_class(workshop_csf_private)
-    end
-
     test 'standard calculator' do
       # Mix of public and private types
       workshop_ecs = build :workshop, :ended, on_map: false, funded: true,

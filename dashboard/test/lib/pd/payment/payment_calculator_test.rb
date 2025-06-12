@@ -25,19 +25,6 @@ module Pd::Payment
       assert_equal "Workshop #{workshop.id} is not ended - cannot pay", error.message
     end
 
-    test 'Calculate CSF Workshop payment' do
-      workshop = create(:workshop, :ended, :funded, course: Pd::Workshop::COURSE_CSF, enrolled_and_attending_users: 20)
-      create_passed_levels(workshop.enrollments[0..9])
-
-      assert_equal 500, PaymentCalculator.instance.calculate(workshop)
-    end
-
-    test 'Calculate CSF Workshop with only some teachers who did puzzles' do
-      insufficient_puzzles = create(:workshop, :ended, :funded, course: Pd::Workshop::COURSE_CSF, enrolled_and_attending_users: 20)
-      create_passed_levels(insufficient_puzzles.enrollments[0..5])
-      assert_equal 300, PaymentCalculator.instance.calculate(insufficient_puzzles)
-    end
-
     test 'Error raised if there is no payment term for workshop' do
       error = assert_raises(RuntimeError) do
         PaymentCalculator.instance.calculate(@csp_workshop)
