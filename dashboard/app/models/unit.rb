@@ -1520,7 +1520,7 @@ class Unit < ApplicationRecord
     get_published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
-  def summarize(include_lessons = true, user = nil, include_bonus_levels = false, locale_code = 'en-us', unit_group_unit: nil)
+  def summarize(include_lessons = true, user = nil, include_bonus_levels = false, locale_code = 'en-us', unit_group_unit: original_unit_group_unit)
     ActiveRecord::Base.connected_to(role: :reading) do
       # TODO: Set up peer reviews to be more consistent with the rest of the system
       # so that they don't need a bunch of one off cases (example peer reviews
@@ -1691,7 +1691,7 @@ class Unit < ApplicationRecord
 
   def summarize_for_unit_edit
     include_lessons = false
-    summary = summarize(include_lessons)
+    summary = summarize(include_lessons, unit_group_unit: original_unit_group_unit)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
     summary[:courseOfferingEditPath] = edit_course_offering_path(course_version&.course_offering&.key) if course_version
     summary[:missingRequiredDeviceCompatibilities] = course_version&.course_offering&.missing_required_device_compatibility?
@@ -1946,6 +1946,10 @@ class Unit < ApplicationRecord
     # rubocop:enable Style/ZeroLengthPredicate
     #
     UnitGroup.get_from_cache(original_unit_group_id)
+  end
+
+  def original_unit_group_unit
+    unit_group_units.find {|ugu| ugu.unit_group == original_unit_group}
   end
 
   # If this unit is a standalone unit, returns its CourseVersion. Otherwise,

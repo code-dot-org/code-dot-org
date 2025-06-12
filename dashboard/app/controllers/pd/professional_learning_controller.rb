@@ -39,6 +39,13 @@ class Pd::ProfessionalLearningController < ApplicationController
     render :regional_workshop_catalog
   end
 
+  # GET professional-learning/workshops/:workshop_id
+  def workshop_marketing_page
+    view_options(full_width: true, responsive_content: true, no_padding_container: true)
+    @workshop_info = Pd::Workshop.find(params[:workshop_id])&.summarize_for_marketing_page
+    render 'pd/professional_learning/workshops/index'
+  end
+
   # GET professional-learning/contact-regional-partner
   def contact_regional_partner
     render :contact_regional_partner

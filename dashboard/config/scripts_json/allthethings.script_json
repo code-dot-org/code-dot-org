@@ -6510,6 +6510,27 @@
     },
     {
       "chapter": 179,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AI Chat Test Level - gpt-4o-mini multimodal"
+        ],
+        "lesson.key": "lesson-50",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "84daf7f5-b7c6-4c69-9aa8-ca2417519231"
+      },
+      "level_keys": [
+        "AI Chat Test Level - gpt-4o-mini multimodal"
+      ]
+    },
+    {
+      "chapter": 180,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6533,7 +6554,7 @@
       ]
     },
     {
-      "chapter": 180,
+      "chapter": 181,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -6557,7 +6578,7 @@
       ]
     },
     {
-      "chapter": 181,
+      "chapter": 182,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6581,7 +6602,7 @@
       ]
     },
     {
-      "chapter": 182,
+      "chapter": 183,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6605,7 +6626,7 @@
       ]
     },
     {
-      "chapter": 183,
+      "chapter": 184,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6629,7 +6650,7 @@
       ]
     },
     {
-      "chapter": 184,
+      "chapter": 185,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6653,7 +6674,7 @@
       ]
     },
     {
-      "chapter": 185,
+      "chapter": 186,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6677,7 +6698,7 @@
       ]
     },
     {
-      "chapter": 186,
+      "chapter": 187,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6701,7 +6722,7 @@
       ]
     },
     {
-      "chapter": 187,
+      "chapter": 188,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -6725,7 +6746,7 @@
       ]
     },
     {
-      "chapter": 188,
+      "chapter": 189,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -6749,7 +6770,7 @@
       ]
     },
     {
-      "chapter": 189,
+      "chapter": 190,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -6773,7 +6794,7 @@
       ]
     },
     {
-      "chapter": 190,
+      "chapter": 191,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -6797,7 +6818,7 @@
       ]
     },
     {
-      "chapter": 191,
+      "chapter": 192,
       "position": 9,
       "activity_section_position": 9,
       "assessment": false,
@@ -6821,7 +6842,7 @@
       ]
     },
     {
-      "chapter": 192,
+      "chapter": 193,
       "position": 10,
       "activity_section_position": 10,
       "assessment": false,
@@ -6845,7 +6866,7 @@
       ]
     },
     {
-      "chapter": 193,
+      "chapter": 194,
       "position": 11,
       "activity_section_position": 11,
       "assessment": false,
@@ -6869,7 +6890,7 @@
       ]
     },
     {
-      "chapter": 194,
+      "chapter": 195,
       "position": 12,
       "activity_section_position": 12,
       "assessment": false,
@@ -6893,7 +6914,7 @@
       ]
     },
     {
-      "chapter": 195,
+      "chapter": 196,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6917,7 +6938,7 @@
       ]
     },
     {
-      "chapter": 196,
+      "chapter": 197,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6941,7 +6962,7 @@
       ]
     },
     {
-      "chapter": 197,
+      "chapter": 198,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6965,7 +6986,7 @@
       ]
     },
     {
-      "chapter": 198,
+      "chapter": 199,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6989,7 +7010,7 @@
       ]
     },
     {
-      "chapter": 199,
+      "chapter": 200,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7013,7 +7034,7 @@
       ]
     },
     {
-      "chapter": 200,
+      "chapter": 201,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -7037,7 +7058,7 @@
       ]
     },
     {
-      "chapter": 201,
+      "chapter": 202,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -7061,7 +7082,7 @@
       ]
     },
     {
-      "chapter": 202,
+      "chapter": 203,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -7085,7 +7106,7 @@
       ]
     },
     {
-      "chapter": 203,
+      "chapter": 204,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -7109,7 +7130,7 @@
       ]
     },
     {
-      "chapter": 204,
+      "chapter": 205,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -7133,7 +7154,7 @@
       ]
     },
     {
-      "chapter": 205,
+      "chapter": 206,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7157,7 +7178,7 @@
       ]
     },
     {
-      "chapter": 206,
+      "chapter": 207,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -9437,6 +9458,18 @@
         "level.key": "AI Chat Test Template Backed - 3",
         "script_level.level_keys": [
           "AI Chat Test Template Backed - 3"
+        ],
+        "lesson.key": "lesson-50",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "84daf7f5-b7c6-4c69-9aa8-ca2417519231"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AI Chat Test Level - gpt-4o-mini multimodal",
+        "script_level.level_keys": [
+          "AI Chat Test Level - gpt-4o-mini multimodal"
         ],
         "lesson.key": "lesson-50",
         "lesson_group.key": "",

@@ -52,9 +52,7 @@ function initPage() {
     );
   }
 
-  const differentiationContext = {
-    type: AiDiffContext.LEVEL,
-  };
+  const differentiationContext = {type: AiDiffContext.LEVEL};
 
   if (hasScriptData('script[data-aitutordata]')) {
     const aiTutorData = getScriptData('aitutordata');
