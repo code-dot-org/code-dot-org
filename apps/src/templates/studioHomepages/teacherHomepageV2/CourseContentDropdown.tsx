@@ -46,15 +46,9 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
     }
   }, [section, lessonList]);
 
-  const dropdownOptions = useMemo(() => {
-    if (lessonList.length === 0) {
-      return (
-        <li>
-          <BodyThreeText>{'testing'}</BodyThreeText>
-        </li>
-      );
-    } else {
-      return lessonList.map(lesson => (
+  const dropdownOptions = useMemo(
+    () =>
+      lessonList.map(lesson => (
         <LinkOption
           key={lesson.value}
           value={lesson.value}
@@ -68,9 +62,9 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
           }
           eventOptions={{lesson: lesson.value}}
         />
-      ));
-    }
-  }, [lessonList]);
+      )),
+    [lessonList]
+  );
 
   return (
     <div className={styles.courseContentDropdownContainer}>
@@ -80,11 +74,12 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
       </BodyThreeText>
       {section.unitId ? (
         <CustomDropdown
-          name="go-to-lesson-dropdown"
+          className={styles.courseContentDropdown}
+          name="go-to-lesson"
           labelText={i18n.jumpTo()}
           labelType="thin"
-          size="m"
           disabled={lessonList.length === 0}
+          size="m"
         >
           <ul>{dropdownOptions}</ul>
         </CustomDropdown>
