@@ -174,6 +174,19 @@ class ShareAllowedDialog extends React.Component {
   isSocialShareAllowed = () =>
     this.props.canShareSocial && !this.props.inRestrictedShareMode;
 
+  getWarningText = () => {
+    if (this.props.inRestrictedShareMode) {
+      return i18n.restrictedShareInfo();
+    }
+
+    if (this.state.replayVideoUnavailable) {
+      return i18n.downloadReplayVideoButtonError();
+    }
+
+    if (!this.props.thumbnailUrl) {
+      return i18n.thumbnailWarning();
+    }
+  };
   render() {
     const {
       canPrint,
@@ -239,6 +252,8 @@ class ShareAllowedDialog extends React.Component {
         iframeWidth: p5labConstants.APP_WIDTH + 40,
       };
     }
+
+    const warningText = this.getWarningText();
 
     return (
       <div>
@@ -388,7 +403,16 @@ class ShareAllowedDialog extends React.Component {
                     <div style={{clear: 'both'}} />
                   </div>
                 )}
-
+                {warningText && (
+                  <div style={styles.warningMessageContainer}>
+                    <span
+                      style={styles.thumbnailWarning}
+                      className="thumbnail-warning"
+                    >
+                      {warningText}
+                    </span>
+                  </div>
+                )}
                 <div style={{clear: 'both', marginTop: 40}}>
                   {isDroplet && (
                     <AdvancedShareOptions
