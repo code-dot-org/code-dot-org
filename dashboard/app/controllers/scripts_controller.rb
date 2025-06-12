@@ -380,7 +380,7 @@ class ScriptsController < ApplicationController
   end
 
   private def render_no_access
-    if current_user && !current_user.admin? && !can?(:read, @script)
+    if current_user && !current_user.admin? && !can?(:read, @script, @course)
       render :no_access
     end
   end
@@ -491,6 +491,6 @@ class ScriptsController < ApplicationController
   # TEACH-1975 for more details).This solves the issue by explicitly calling authorize!
   # on the @script if it is set.
   private def authorize_script
-    authorize! params[:action].to_sym, @script || Unit
+    authorize! params[:action].to_sym, @script || Unit, @course
   end
 end
