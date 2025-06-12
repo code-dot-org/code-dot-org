@@ -16,12 +16,4 @@ module Policies::ActiveRecordRoles
     configurations = ActiveRecord::Base.configurations.configs_for(env_name: Rails.env, include_replicas: true)
     configurations.find(&:replica?)&.spec_name&.to_sym || get_writing_role_name
   end
-
-  # Get the name of the ActiveRecord "role" used for connecting to the reporting
-  # database which is a clone of our primary database meant for large / long
-  # queries usually used for data analysis. This role should not be used when
-  # handling web requests.
-  def self.get_reporting_role_name
-    :primary_reporting
-  end
 end
