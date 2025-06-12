@@ -11,22 +11,32 @@ class TestSection
   end
 
   # Creates a test section with students and mocked student progress.
-  # Options:
-  # - :preset_name - 'csp4', 'random', or nil (defaults to 'csp4' if not specified)
-  #     If 'csp4', uses preset specified data from TestSectionData::CSP_4_TEST_SECTION preset data.
-  #     If 'random', creates a section with random progress. Only creates teacher_feedback and user_levels.
-  # - :teacher_id - ID of the teacher to assign to the section, or nil to create a default teacher
-  #      Default teacher has email TestSectionData::DEFAULT_TEACHER_EMAIL, and password TestSectionData::DEFAULT_TEACHER_PASSWORD.
-  # - :section_name - Name of the section to create, defaults to TestSectionData::DEFAULT_SECTION_NAME
-  # - :num_students - Number of students to add to the section, defaults to TestSectionData::DEFAULT_NUM_STUDENTS
-  # - :unit_name - Name of the unit to use, defaults to TestSectionData::DEFAULT_UNIT. Only used when preset_name is 'random'.
-  # - :unit_group_name - Name of the unit group to use, defaults to TestSectionData::DEFAULT_UNIT_GROUP. Only used when preset_name is 'random'.
-  #
-  # Only runs in non-production environments (development, adhoc, staging, test).
-  # Only creates a new teacher if :teacher_id is not provided and only on adhoc or development.
-  #
+  # Run with no arguments to see usage.
   def self.seed(options)
     seed_environment_check!
+
+    if options.nil? || !options.is_a?(Hash)
+      pp 'Creates a test section with students and mocked student progress.'
+      pp 'Options:'
+      pp '  - :preset_name - "csp4", "random", or nil (defaults to "csp4" if not specified)'
+      pp '      If "csp4", uses preset specified data from TestSectionData::CSP_4_TEST_SECTION preset data.'
+      pp '      If "random", creates a section with random progress. Only creates teacher_feedback and user_levels.'
+      pp '  - :teacher_id - ID of the teacher to assign to the section, or nil to create a default teacher'
+      pp '      Default teacher has email TestSectionData::DEFAULT_TEACHER_EMAIL, and password TestSectionData::DEFAULT_TEACHER_PASSWORD.'
+      pp '  - :section_name - Name of the section to create, defaults to TestSectionData::DEFAULT_SECTION_NAME'
+      pp '  - :num_students - Number of students to add to the section, defaults to TestSectionData::DEFAULT_NUM_STUDENTS'
+      pp '  - :unit_name - Name of the unit to use, defaults to TestSectionData::DEFAULT_UNIT. Only used when preset_name is "random".'
+      pp '  - :unit_group_name - Name of the unit group to use, defaults to TestSectionData::DEFAULT_UNIT_GROUP. Only used when preset_name is "random".'
+      pp '  - :skip_ai_evaluation - Skip AI evaluation of student work, defaults to false. AI evaluations take a long time to generate, if you don\'t need evaluations, it is recommended to set this to true.'
+      pp ''
+      pp 'Only runs in non-production environments (development, adhoc, staging, test).'
+      pp 'Only creates a new teacher if :teacher_id is not provided and only on adhoc or development.'
+      pp ''
+      pp 'Example usage:'
+      pp '  TestSection.seed({})'
+      pp '  TestSection.seed({preset_name: "random", teacher_id: 456, section_name: "Random Section", num_students: 15})'
+      return
+    end
 
     preset_name = options[:preset_name]
     preset_options = if preset_name == 'random'
@@ -129,12 +139,20 @@ class TestSection
         raise "Not a sample student - #{student_user.name}" unless TestSectionData::SAMPLE_STUDENT_NAME_REGEX.match?(student_user.name)
         UserGeo.where(user_id: student_user.id).destroy_all
 
+        # Delete channel tokens and their content for each student.
         channel_tokens = ChannelToken.where(storage_id: student_user.user_storage_id).all
         buckets = SourceBucket.new
-
         channel_tokens.each do |token|
           buckets.hard_delete_channel_content(token.channel)
           token.really_destroy!
+        end
+
+        # Delete ai evaluations for each student.
+        ai_evaluations = StudentWorkEvaluation.where(student_id: student_user.id).all
+        ai_evaluations&.each do |ai_eval|
+          StudentWorkEvaluationSummary.where(student_work_evaluation_id: ai_eval.id).destroy_all
+          StudentWorkEvaluationSummary.where(student_work_evaluation_summary_id: ai_eval.id).destroy_all
+          ai_eval.destroy
         end
 
         student_user.really_destroy!
@@ -211,6 +229,11 @@ class TestSection
         level_source_id = nil
         unless level_source.nil?
           level_source_id = create(:level_source, level_id: level.id, data: level_source[:data]).id
+
+          unless level_source[:data].nil?
+            pp 'generating AI code response for level source data'
+            generate_ai_code_response(student_user, level, level_source[:data], options.slice(:teacher, :unit, :school_year))
+          end
         end
 
         user_level = level_data[:user_level]
@@ -244,31 +267,8 @@ class TestSection
           s3_response = buckets.create_or_replace(channel_token.channel, "main.json", JSON.generate(level_data[:source_code]))
 
           unless options[:skip_ai_evaluation]
-            ai_evaluation = OpenaiEvaluateHelper.evaluate(level, options[:unit],
-              {
-                student_work: level_data[:source_code][:source],
-                evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]
-              }
-            )
-
-            parsed_evaluation = JSON.parse(ai_evaluation[:json]['content'])
-
-            student_work_evaluation_params = {
-              type: 'UserLevelEvaluation',
-              student_id: student_user.id,
-              code_version: s3_response.version_id,
-              level_id: level.id,
-              unit_id: unit_id,
-              evaluator: 'AI',
-              evaluation_criteria: parsed_evaluation['evaluationCriteria'],
-              evaluation: parsed_evaluation['aiEvaluation'],
-              reasoning: parsed_evaluation['aiReasoning'],
-              requester_id: options[:teacher].id,
-              school_year: options[:school_year] || '2024-25',
-              ai_model_version: SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
-            }
-
-            StudentWorkEvaluation.new(student_work_evaluation_params).save
+            pp 'generating AI code response for student source code'
+            generate_ai_code_response(student_user, level, level_data[:source_code][:source], {code_version: s3_response.version_id, **options.slice(:teacher, :unit, :school_year)})
           end
         end
 
@@ -282,6 +282,59 @@ class TestSection
             comment: teacher_feedback[:comment]
         end
       end
+    end
+  end
+
+  def self.generate_ai_code_response(student_user, level, student_work, options)
+    pp 'generating AI code response'
+    ai_evaluation = OpenaiEvaluateHelper.evaluate(level, options[:unit],
+      {
+        student_work: student_work,
+        evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]
+      }
+    )
+
+    parsed_evaluation = JSON.parse(ai_evaluation[:json]['content'])
+    pp 'AI evaluation response:', parsed_evaluation
+
+    student_work_evaluation_params = {
+      type: 'UserLevelEvaluation',
+      student_id: student_user.id,
+      code_version: options[:code_version],
+      level_id: level.id,
+      unit_id: options[:unit].id,
+      evaluator: 'AI',
+      evaluation_criteria: parsed_evaluation['evaluationCriteria'],
+      evaluation: parsed_evaluation['aiEvaluation'],
+      reasoning: parsed_evaluation['aiReasoning'],
+      requester_id: options[:teacher].id,
+      school_year: options[:school_year] || '2024-25',
+      ai_model_version: SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
+    }
+
+    work_evaluation = StudentWorkEvaluation.create!(student_work_evaluation_params)
+
+    skill_evaluations = parsed_evaluation['skillEvaluations']
+    skill_evaluations&.each do |skill_evaluation|
+      skill_evaluation_params = {
+        type: 'UserLevelSkillEvaluation',
+        student_id: student_user.id,
+        code_version: options[:code_version],
+        level_id: level.id,
+        unit_id: options[:unit].id,
+        evaluator: 'AI',
+        evaluation_criteria: skill_evaluation['evaluationCriteria'],
+        evaluation: skill_evaluation['aiEvaluation'],
+        reasoning: skill_evaluation['aiReasoning'],
+        skill_id: skill_evaluation['skillId'],
+      }
+
+      created_skill_evaluation = StudentWorkEvaluation.create!(skill_evaluation_params)
+
+      summary_params = {student_work_evaluation_id: created_skill_evaluation.id,
+        student_work_evaluation_summary_id: work_evaluation.id}
+
+      StudentWorkEvaluationSummary.create!(summary_params)
     end
   end
 
