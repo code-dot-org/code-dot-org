@@ -792,6 +792,10 @@ class Pd::Workshop < ApplicationRecord
     course == COURSE_CSF
   end
 
+  def byo?
+    course == COURSE_BUILD_YOUR_OWN
+  end
+
   def csf_intro?
     course == Pd::Workshop::COURSE_CSF && subject == Pd::Workshop::SUBJECT_CSF_101
   end

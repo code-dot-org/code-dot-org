@@ -362,13 +362,13 @@ class Pd::Enrollment < ApplicationRecord
   private_class_method def self.currently_receives_foorm_survey(workshop)
     !(workshop.workshop_ending_date < Date.new(2020, 9, 1) && workshop.csf_201?) &&
       !(workshop.workshop_ending_date < Date.new(2020, 5, 8) &&
-      (workshop.csf_intro? || workshop.local_summer? || workshop.csp_wfrt?))
+      (workshop.csf_intro? || workshop.local_summer? || workshop.csp_wfrt? || workshop.byo?))
   end
 
   private_class_method def self.filter_for_foorm_survey_completion(enrollments, select_completed)
     completed_surveys, uncompleted_surveys = enrollments.partition do |enrollment|
       workshop = enrollment.workshop
-      form_name = POST_SURVEY_CONFIG_PATHS[workshop.subject]
+      form_name = POST_SURVEY_CONFIG_PATHS[workshop.subject || workshop.course]
       Pd::WorkshopSurveyFoormSubmission.where(pd_workshop: workshop, user: enrollment.user).
         joins(:foorm_submission).
         exists?(foorm_submissions: {form_name: form_name})
