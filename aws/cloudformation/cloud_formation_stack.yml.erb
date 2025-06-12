@@ -29,6 +29,8 @@ Parameters:
     Description: Subdomain name for corporate web site ("Pegasus").
   # This domain name needs to be referenced both in Cloudformation and in the code for MarketingRouterLambda.
   # As a result, it is declared here in Ruby so that it can be passed to the Lambda function.
+  # WARNING: Changing this value is NOT sufficient to change the value in the stack. It ONLY changes the default value.
+  # The value must be changed manually in the AWS Console or CLI, followed by an update to the stack. 
   <% INTERNAL_MARKETING_DOMAIN_NAME = "code.marketing-sites.#{rack_env?(:production) ? 'code.org' : 'test-code.org'}" %>
   InternalMarketingDomainName:
     Type: String
