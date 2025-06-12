@@ -11,7 +11,7 @@ class TestSection
   end
 
   # Creates a test section with students and mocked student progress.
-  # Run with no arguments to see usage.
+  # Run with nil to see usage ('TestSection.seed(nil)').
   def self.seed(options)
     seed_environment_check!
 
@@ -147,6 +147,8 @@ class TestSection
           token.really_destroy!
         end
 
+        UserLevel.where(user_id: student_user.id, script_id: unit.id).destroy_all
+
         # Delete ai evaluations for each student.
         ai_evaluations = StudentWorkEvaluation.where(student_id: student_user.id).all
         ai_evaluations&.each do |ai_eval|
@@ -160,6 +162,8 @@ class TestSection
       # Hard-delete each section.
       section.really_destroy!
     end
+
+    TeacherFeedback.where(teacher_id: user.id).destroy_all
     UserGeo.where(user_id: user.id).destroy_all
     # Delete the existing test teacher
     unless (user.name.eql? TestSectionData::DEFAULT_TEACHER_NAME) && (user.email.eql? TestSectionData::DEFAULT_TEACHER_EMAIL)
@@ -231,7 +235,6 @@ class TestSection
           level_source_id = create(:level_source, level_id: level.id, data: level_source[:data]).id
 
           unless level_source[:data].nil?
-            pp 'generating AI code response for level source data'
             generate_ai_code_response(student_user, level, level_source[:data], options.slice(:teacher, :unit, :school_year))
           end
         end
@@ -240,7 +243,8 @@ class TestSection
         unless user_level.nil?
           create :user_level, user: student_user, script_id: unit_id,
             level_id: level.id, attempts: user_level[:attempts],
-            best_result: user_level[:best_result], level_source_id: level_source_id
+            best_result: user_level[:best_result], level_source_id: level_source_id,
+            time_spent: user_level[:time_spent] || 0, submitted: user_level[:submitted] || false
 
           # Create a backing channel for this level if it's a type that needs it
           channel_token =
@@ -267,7 +271,6 @@ class TestSection
           s3_response = buckets.create_or_replace(channel_token.channel, "main.json", JSON.generate(level_data[:source_code]))
 
           unless options[:skip_ai_evaluation]
-            pp 'generating AI code response for student source code'
             generate_ai_code_response(student_user, level, level_data[:source_code][:source], {code_version: s3_response.version_id, **options.slice(:teacher, :unit, :school_year)})
           end
         end
@@ -286,7 +289,6 @@ class TestSection
   end
 
   def self.generate_ai_code_response(student_user, level, student_work, options)
-    pp 'generating AI code response'
     ai_evaluation = OpenaiEvaluateHelper.evaluate(level, options[:unit],
       {
         student_work: student_work,
@@ -295,7 +297,6 @@ class TestSection
     )
 
     parsed_evaluation = JSON.parse(ai_evaluation[:json]['content'])
-    pp 'AI evaluation response:', parsed_evaluation
 
     student_work_evaluation_params = {
       type: 'UserLevelEvaluation',
