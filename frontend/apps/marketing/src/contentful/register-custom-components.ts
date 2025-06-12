@@ -90,144 +90,139 @@ import Video, {
   VideoContentfulComponentDefinition,
 } from '@/components/contentful/video';
 
-defineComponents(
-  [
-    {
-      component: ActionBlock,
-      definition: ActionBlockContentfulComponentDefinition,
-      options: {
-        wrapContainerWidth: '100%',
-      },
-    },
-    {
-      component: ActionBlockCarousel,
-      definition: ActionBlockCarouselContentfulComponentDefinition,
-    },
-    {
-      component: AFEEligibility,
-      definition: AFEEligibilityContentfulComponentDefinition,
-    },
-    {component: Button, definition: ButtonContentfulComponentDefinition},
-    {
-      component: ActionBlockCarousel,
-      definition: ActionBlockCarouselContentfulComponentDefinition,
-    },
-    {
-      component: Divider,
-      definition: DividerContentfulComponentDefinition,
-      options: {
-        wrapContainerWidth: '100%',
-      },
-    },
-    {
-      component: EditorialCard,
-      definition: EditorialCardContentfulComponentDefinition,
-    },
-    {
-      component: FAQAccordion,
-      definition: FAQAccordionContentfulComponentDefinition,
-    },
-    {
-      component: FullWidthActionBlock,
-      definition: FullWidthActionBlockContentfulComponentDefinition,
-      options: {
-        wrapContainerWidth: '100%',
-      },
-    },
-    {
-      component: Heading,
-      definition: HeadingContentfulComponentDefinition,
-    },
-    {
-      component: HeroBanner,
-      definition: HeroBannerContentfulComponentDefinition,
-      options: {
-        wrapContainerWidth: '100%',
-      },
-    },
-    {
-      component: IconHighlight,
-      definition: IconHighlightContentfulComponentDefinition,
-    },
-    {
-      component: Iframe,
-      definition: IframeContentfulComponentDefinition,
-      options: {
-        wrapContainerWidth: '100%',
-      },
-    },
-    {
-      component: Image,
-      definition: ImageContentfulComponentDefinition,
-    },
-    {
-      component: ImageCarousel,
-      definition: ImageCarouselContentfulComponentDefinition,
-    },
-    {
-      component: LabSnapshot,
-      definition: LabSnapshotContentfulComponentDefinition,
-    },
-    {
-      component: Link,
-      definition: LinkContentfulComponentDefinition,
-    },
-    {component: Overline, definition: OverlineContentfulComponentDefinition},
-    {
-      component: Paragraph,
-      definition: ParagraphContentfulComponentDefinition,
-    },
-    {
-      component: RichText,
-      definition: RichTextContentfulComponentDefinition,
-    },
-    {
-      component: Section,
-      definition: SectionContentfulComponentDefinition,
-      options: {
-        wrapContainerWidth: '100%',
-      },
-    },
-    {
-      component: SimpleList,
-      definition: SimpleListContentfulComponentDefinition,
-    },
-    {
-      component: SkinnyBanner,
-      definition: SkinnyBannerContentfulComponentDefinition,
-      options: {
-        wrapContainerWidth: '100%',
-      },
-    },
-    {
-      component: Spacer,
-      definition: SpacerContentfulComponentDefinition,
-    },
-    {
-      component: CurriculumSnapshot,
-      definition: CurriculumSnapshotContentfulComponentDefinition,
-    },
-    {component: TabGroup, definition: TabGroupContentfulComponentDefinition},
-    {
-      component: Testimonial,
-      definition: TestimonialContentfulComponentDefinition,
-      options: {
-        wrapContainerWidth: '100%',
-      },
-    },
-    {
-      component: Video,
-      definition: VideoContentfulComponentDefinition,
-      options: {
-        wrapContainerWidth: '100%',
-      },
-    },
-    {
-      component: VideoCarousel,
-      definition: VideoCarouselContentfulComponentDefinition,
-    },
-  ],
+defineComponents([
   {
-    enabledBuiltInComponents: [],
+    component: ActionBlock,
+    definition: ActionBlockContentfulComponentDefinition,
+    options: {
+      wrapContainerWidth: '100%',
+    },
   },
-);
+  {
+    component: ActionBlockCarousel,
+    definition: ActionBlockCarouselContentfulComponentDefinition,
+  },
+  {
+    component: AFEEligibility,
+    definition: AFEEligibilityContentfulComponentDefinition,
+  },
+  {component: Button, definition: ButtonContentfulComponentDefinition},
+  {
+    component: ActionBlockCarousel,
+    definition: ActionBlockCarouselContentfulComponentDefinition,
+  },
+  {
+    component: Divider,
+    definition: DividerContentfulComponentDefinition,
+    options: {
+      wrapContainerWidth: '100%',
+    },
+  },
+  {
+    component: EditorialCard,
+    definition: EditorialCardContentfulComponentDefinition,
+  },
+  {
+    component: FAQAccordion,
+    definition: FAQAccordionContentfulComponentDefinition,
+  },
+  {
+    component: FullWidthActionBlock,
+    definition: FullWidthActionBlockContentfulComponentDefinition,
+    options: {
+      wrapContainerWidth: '100%',
+    },
+  },
+  {
+    component: Heading,
+    definition: HeadingContentfulComponentDefinition,
+  },
+  {
+    component: HeroBanner,
+    definition: HeroBannerContentfulComponentDefinition,
+    options: {
+      wrapContainerWidth: '100%',
+    },
+  },
+  {
+    component: IconHighlight,
+    definition: IconHighlightContentfulComponentDefinition,
+  },
+  {
+    component: Iframe,
+    definition: IframeContentfulComponentDefinition,
+    options: {
+      wrapContainerWidth: '100%',
+    },
+  },
+  {
+    component: Image,
+    definition: ImageContentfulComponentDefinition,
+  },
+  {
+    component: ImageCarousel,
+    definition: ImageCarouselContentfulComponentDefinition,
+  },
+  {
+    component: LabSnapshot,
+    definition: LabSnapshotContentfulComponentDefinition,
+  },
+  {
+    component: Link,
+    definition: LinkContentfulComponentDefinition,
+  },
+  {component: Overline, definition: OverlineContentfulComponentDefinition},
+  {
+    component: Paragraph,
+    definition: ParagraphContentfulComponentDefinition,
+  },
+  {
+    component: RichText,
+    definition: RichTextContentfulComponentDefinition,
+  },
+  {
+    component: Section,
+    definition: SectionContentfulComponentDefinition,
+    options: {
+      wrapContainerWidth: '100%',
+    },
+  },
+  {
+    component: SimpleList,
+    definition: SimpleListContentfulComponentDefinition,
+  },
+  {
+    component: SkinnyBanner,
+    definition: SkinnyBannerContentfulComponentDefinition,
+    options: {
+      wrapContainerWidth: '100%',
+    },
+  },
+  {
+    component: Spacer,
+    definition: SpacerContentfulComponentDefinition,
+  },
+  {
+    component: CurriculumSnapshot,
+    definition: CurriculumSnapshotContentfulComponentDefinition,
+  },
+  {component: TabGroup, definition: TabGroupContentfulComponentDefinition},
+  {
+    component: Testimonial,
+    definition: TestimonialContentfulComponentDefinition,
+    options: {
+      wrapContainerWidth: '100%',
+    },
+  },
+  {
+    component: Video,
+    definition: VideoContentfulComponentDefinition,
+    options: {
+      wrapContainerWidth: '100%',
+    },
+  },
+  {
+    component: VideoCarousel,
+    definition: VideoCarouselContentfulComponentDefinition,
+  },
+]);
