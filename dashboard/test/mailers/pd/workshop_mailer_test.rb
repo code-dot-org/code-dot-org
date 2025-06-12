@@ -95,7 +95,8 @@ class WorkshopMailerTest < ActionMailer::TestCase
     ]
 
     courses.each do |course|
-      workshop = create :workshop, course: course
+      workshop = build :workshop, course: course
+      workshop.save(validate: false)
       enrollment = create :pd_enrollment, workshop: workshop
       mail = Pd::WorkshopMailer.detail_change_notification(enrollment)
 
@@ -145,7 +146,9 @@ class WorkshopMailerTest < ActionMailer::TestCase
   end
 
   test 'facilitator and organizer email links are complete urls' do
-    csf_workshop = create :csf_intro_workshop
+    csf_workshop = build :csf_intro_workshop
+    csf_workshop.facilitators << create(:facilitator)
+    csf_workshop.save(validate: false)
     csf_enrollment = create :pd_enrollment, workshop: csf_workshop
     mails = []
 

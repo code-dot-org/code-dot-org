@@ -598,7 +598,8 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
     rp = create :regional_partner
     rp.mappings.find_or_create_by!(zip_code: "11111")
     pm = create :program_manager, regional_partner: rp
-    csf_workshop = create :workshop, course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_101, sessions: [session_on_day(1)], organizer: pm
+    csf_workshop = build :workshop, course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_101, sessions: [session_on_day(1)], organizer: pm
+    csf_workshop.save(validate: false)
 
     reg_ws_data_response = get :regional_workshop_data, params: {zip_code: "11111"}
     assert_response :success

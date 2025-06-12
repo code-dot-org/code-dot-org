@@ -18,7 +18,8 @@ module Api::V1::Pd
     end
 
     test 'facilitators cannot see results for other types of workshops' do
-      workshop = create :csf_intro_workshop, facilitators: [@facilitator]
+      workshop = build :csf_intro_workshop, facilitators: [@facilitator]
+      workshop.save(validate: false)
       sign_in @facilitator
 
       get :generic_survey_report, params: {workshop_id: workshop.id}

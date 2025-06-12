@@ -310,9 +310,13 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'filter_for_survey_completion' do
+    workshop_1 = build :csf_intro_workshop
+    workshop_1.save(validate: false)
+    workshop_2 = build :csf_intro_workshop
+    workshop_2.save(validate: false)
     enrollments = [
-      enrollment_no_survey = create(:pd_enrollment),
-      enrollment_with_processed_survey = create(:pd_enrollment, :from_user)
+      enrollment_no_survey = create(:pd_enrollment, workshop: workshop_1),
+      enrollment_with_processed_survey = create(:pd_enrollment, :from_user, workshop: workshop_2)
     ]
 
     existing_survey = create :csf_intro_post_foorm_submission,

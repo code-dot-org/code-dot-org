@@ -726,12 +726,12 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'CSF 101 workshops are capped at 7 hours' do
-    workshop = create :csf_intro_workshop, each_session_hours: 8
+    workshop = build :csf_intro_workshop, each_session_hours: 8
     assert_equal 7, workshop.effective_num_hours
   end
 
   test 'CSF 201 workshops are capped at 6 hours' do
-    workshop_csf_201 = create :csf_deep_dive_workshop, each_session_hours: 7
+    workshop_csf_201 = build :csf_deep_dive_workshop, each_session_hours: 7
     assert_equal 6, workshop_csf_201.effective_num_hours
   end
 
@@ -1277,7 +1277,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     csd_facilitator = create :facilitator, course: COURSE_CSD
 
     # csf workshop has workshop admins, program managers, and other csf facilitators in list
-    csf_workshop = create :workshop, course: COURSE_CSF
+    csf_workshop = build :workshop, course: COURSE_CSF
     potential_organizer_ids = csf_workshop.potential_organizers.ids
 
     assert_includes(potential_organizer_ids, workshop_admin.id)
@@ -1339,7 +1339,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'CSF workshop must not require teacher application' do
-    workshop = create :csf_workshop, regional_partner: @regional_partner
+    workshop = build :csf_workshop, regional_partner: @regional_partner
     refute workshop.require_application?
   end
 

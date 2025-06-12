@@ -135,7 +135,9 @@ module Pd::Foorm
     def setup_csf_workshop
       rollup_configuration = JSON.parse(File.read('test/fixtures/rollup_config.json'), symbolize_names: true)
       questions_to_summarize = rollup_configuration[:'CS Fundamentals']
-      workshop = create :csf_workshop
+      workshop = build :csf_workshop
+      workshop.facilitators << create(:facilitator)
+      workshop.save(validate: false)
       @facilitator_id = workshop.facilitators.pick(:id)
       @facilitators = {@facilitator_id => "name"}
       create :csf_intro_post_facilitator_workshop_submission,
