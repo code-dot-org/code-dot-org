@@ -55,3 +55,6 @@ test-results
 /public/blockly
 /public/skins
 /public/common_images
+
+# Assets found in buckets
+/public/animations

@@ -61,7 +61,7 @@ export interface TestResultsOptions {
  * NOTE: We store the results for user attempts in our db, so changing these
  * values would necessitate a migration
  */
-enum Status {
+export enum Status {
   // Default value before any tests are run.
   NO_TESTS_RUN = -1,
 

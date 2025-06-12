@@ -25,6 +25,7 @@ import blocks from '../blocks';
 import Maze from '../Maze';
 import defaultSkins, {skinFor} from '../skins';
 import type {SkinsData, API} from '../types';
+import Validator from '../Validator';
 
 import Visualization from './Visualization';
 
@@ -122,11 +123,13 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
         levelData?.mazeData || {
           skinId: skin.id,
         },
+        environment.current,
         skin,
         {
           ...(api || {}),
         },
         svg.current,
+        Validator,
       );
 
       // Hook it up to the component state via events

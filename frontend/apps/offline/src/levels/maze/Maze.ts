@@ -4,12 +4,14 @@ import type {MazeController, MazeData, Skin} from '@code-dot-org/maze';
 
 import {SoundBoard, PlaybackOptions} from '@/audio';
 import {getAllGeneratedCode} from '@/blockly/utils';
+import type {BlocklyLevelEnvironment} from '@/levels/blockly/components/BlocklyLevel';
 
 import * as defaultAPI from './api';
 import ExecutionInfo, {Action} from './ExecutionInfo';
 import {evalWith} from './interpreter';
-import TestResults from './TestResults';
+import TestResults, {MINIMUM_PASS_RESULT, Status} from './TestResults';
 import type {API} from './types';
+import Validator from './Validator';
 
 /**
  * Controls the maze level.
@@ -41,22 +43,37 @@ class Maze extends EventTarget {
   private workspace: Blockly.Workspace;
   /* The last test result */
   private testResults?: TestResults;
+  /* The test status */
+  private testStatus?: Status;
+  /* The Blockly environment data */
+  private environment: BlocklyLevelEnvironment;
+  /* The validator to decide if the level goal has been met. */
+  private validatorClass: new (maze: MazeController, skin: Skin) => Validator;
+  /* The instantiated validator */
+  private validator?: Validator;
 
+  /**
+   * Constructs a maze level controller.
+   */
   constructor(
     workspace: Blockly.Workspace,
     mazeData: MazeData,
+    environment: BlocklyLevelEnvironment,
     skin: Skin,
     api: API,
     svg: SVGSVGElement,
+    validatorClass: new (maze: MazeController, skin: Skin) => Validator,
   ) {
     super();
 
     // Retain level data
     this.mazeData = mazeData;
+    this.environment = environment;
     this.skin = skin;
     this.api = api;
     this.svg = svg;
     this.workspace = workspace;
+    this.validatorClass = validatorClass;
 
     // Create a sound device
     this.soundBoard = new SoundBoard();
@@ -74,6 +91,7 @@ class Maze extends EventTarget {
       'wall3',
       'wall4',
       'winGoal',
+      'failure',
       'fill',
       'dig',
     ].forEach(prefix => {
@@ -94,6 +112,9 @@ class Maze extends EventTarget {
     this.initialize();
   }
 
+  /**
+   * Eventually initializes the Maze library.
+   */
   private async initialize() {
     const MazeModule = await this.mazeLoader;
 
@@ -119,10 +140,24 @@ class Maze extends EventTarget {
           playAudioOnFailure: () => {},
           loadAudio: (filenames: string[], name: string) =>
             this.soundBoard.registerByFilenamesAndId(filenames, name),
-          getTestResults: () => {},
+          getTestResults: (levelComplete: boolean) => {
+            const code = getAllGeneratedCode({
+              startBlock: 'when_run',
+            });
+
+            this.testResults = new TestResults(this.workspace, {
+              levelComplete,
+              usedBlockCount: this.environment?.usedBlockCount,
+              idealBlockCount: this.environment?.idealBlockCount,
+              code,
+            });
+            return this.testResults.status;
+          },
         },
       },
     );
+
+    this.validator = new this.validatorClass(this.controller, this.skin);
 
     this.controller.map.resetDirt();
     this.controller.subtype.initStartFinish();
@@ -139,7 +174,6 @@ class Maze extends EventTarget {
    * Will ensure that the controller can tear itself down gracefully.
    */
   uninitialize() {
-    console.log('UNINIT RESET??', this.svg);
     // We need to remount the old <svg> so that the controller can uninitialize
     const container = document.createElement('div');
     container.style.display = 'hidden';
@@ -160,11 +194,17 @@ class Maze extends EventTarget {
     return this.mazeLoaded;
   }
 
+  /**
+   * Runs the current code.
+   */
   run() {
     this.stopTimers();
     this.execute(false);
   }
 
+  /**
+   * Performs a step through the code.
+   */
   step() {
     this.stopTimers();
     if (!this.stepping) {
@@ -180,6 +220,9 @@ class Maze extends EventTarget {
     }
   }
 
+  /**
+   * Resets the runtime of the learner's code.
+   */
   reset() {
     this.stopTimers();
     this.controller?.reset?.(false);
@@ -187,6 +230,12 @@ class Maze extends EventTarget {
     this.dispatchEvent(new CustomEvent('stopped'));
   }
 
+  /**
+   * Runs the entire code and essentially queues every action and immediately
+   * validates the result.
+   *
+   * @param step - Whether or not we intend to start by stepping.
+   */
   async execute(step: boolean) {
     // We must have loaded the Maze module
     const MazeModule = await this.mazeLoader;
@@ -196,7 +245,6 @@ class Maze extends EventTarget {
       return;
     }
 
-    console.log('execute', step);
     this.dispatchEvent(new CustomEvent('reset'));
 
     this.stepping = step;
@@ -219,6 +267,7 @@ class Maze extends EventTarget {
         executionInfo: this.executionInfo,
         tiles: MazeModule.tiles,
         controller: this.controller,
+        validator: this.validator,
         ...defaultAPI,
         ...this.api,
         Maze: {},
@@ -234,9 +283,53 @@ class Maze extends EventTarget {
     // Also run any tests
     this.testResults = new TestResults(this.workspace, {
       levelComplete: true,
+      usedBlockCount: this.environment.usedBlockCount,
+      idealBlockCount: this.environment.idealBlockCount,
       code,
     });
-    console.log('TEST RESULT', this.testResults, this.testResults.status);
+    this.testStatus = this.testResults.status;
+
+    // If we haven't terminated, make one last check for success
+    if (!this.executionInfo.isTerminated()) {
+      this.checkSuccess();
+    }
+
+    switch (this.executionInfo.terminationValue()) {
+      case null:
+        // didn't terminate
+        this.executionInfo.queueAction('finish');
+        this.testStatus = Math.min(99, this.testStatus || 0);
+        //this.result = ResultType.FAILURE;
+        //this.stepSpeed = 150;
+        break;
+      case Infinity:
+        // Detected an infinite loop.  Animate what we have as quickly as
+        // possible
+        //this.result = ResultType.TIMEOUT;
+        this.executionInfo.queueAction('finish');
+        //this.stepSpeed = this.shouldSpeedUpInfiniteLoops ? 0 : 100;
+        break;
+      case true:
+        //this.result = ResultType.SUCCESS;
+        //this.stepSpeed = 100;
+        break;
+      case false:
+        //this.result = ResultType.ERROR;
+        //this.stepSpeed = 150;
+        break;
+      default:
+        // App-specific failure.
+        this.testStatus =
+          this.validator?.getTestResults(
+            this.executionInfo.terminationValue(),
+          ) || 0;
+        //this.result =
+        //  this.testStatus >= MINIMUM_PASS_RESULT
+        //    ? ResultType.SUCCESS
+        //    : ResultType.ERROR;
+        this.executionInfo.queueAction('finish');
+        break;
+    }
 
     const actions = this.executionInfo.getActions(step);
     this.schedule(0, actions, step, 1100);
@@ -244,11 +337,18 @@ class Maze extends EventTarget {
 
   /**
    * Draws a hint path.
+   *
+   * This is done by some 'hints' that the learner elects to use.
+   *
+   * @param path - The set of grid coordinates (x,y) that make up the hint path.
    */
   drawHintPath(path: [number, number][]) {
     this.controller?.drawHintPath?.(this.svg, path);
   }
 
+  /**
+   * Ensures the internal timers are stopped.
+   */
   private stopTimers() {
     for (const id of this.timers) {
       window.clearTimeout(id);
@@ -256,6 +356,10 @@ class Maze extends EventTarget {
     this.timers = [];
   }
 
+  /**
+   * Schedules the animation of an action. This is usually some kind of animation
+   * that represents a line of code.
+   */
   schedule(
     index: number,
     actions: Action[],
@@ -291,6 +395,9 @@ class Maze extends EventTarget {
     );
   }
 
+  /**
+   * Perform the actual animation of an action.
+   */
   async animate(action: Action, timePerStep: number) {
     const MazeModule = await this.mazeLoader;
 
@@ -356,26 +463,21 @@ class Maze extends EventTarget {
         this.controller.animatedTurn(MazeModule.tiles.TurnDirection.RIGHT);
         break;
       case 'finish':
-        //this.finish(timePerStep);
         // Only schedule victory animation for certain conditions:
-        /*
-        if (this.testResults >= TestResults.MINIMUM_PASS_RESULT) {
-          var finishButton = document.getElementById('finishButton');
-          if (finishButton) {
-            finishButton.removeAttribute('disabled');
-          }
-          var finishIcon = document.getElementById('finish');
-          if (finishIcon) {
-            studioApp().playAudio('winGoal');
-          }
-          studioApp().playAudioOnWin();
+        if (
+          this.checkSuccess() &&
+          (this.testStatus || 0) >= MINIMUM_PASS_RESULT
+        ) {
+          this.soundBoard.play('winGoal', {volume: 0.5});
           this.controller.animatedFinish(timePerStep);
         } else {
-          timeoutList.setTimeout(function () {
-            studioApp().playAudioOnFailure();
-          }, this.stepSpeed);
+          // Failure
+          this.timers.push(
+            window.setTimeout(() => {
+              this.soundBoard.play('failure', {volume: 0.5});
+            }, 100),
+          );
         }
-        */
         break;
       case 'putdown':
         this.controller.scheduleFill();
@@ -428,7 +530,6 @@ class Maze extends EventTarget {
   async finish() {
     this.stopTimers();
     if (this.stepping) {
-      console.log('stepped');
       this.dispatchEvent(new CustomEvent('stepped'));
     }
 
@@ -441,9 +542,7 @@ class Maze extends EventTarget {
     const waitTime = stepsRemaining ? 0 : 1000;
 
     // Check for success
-    console.log('STEPS REMAINING', stepsRemaining, this.stepping);
     if (!stepsRemaining) {
-      console.log('done!');
       // Wait a little bit and then display feedback
       this.timers.push(
         window.setTimeout(() => {
@@ -458,8 +557,32 @@ class Maze extends EventTarget {
     }
   }
 
+  /**
+   * Emit an event for the particular result.
+   */
   displayFeedback() {
     this.dispatchEvent(new CustomEvent('done'));
+  }
+
+  /**
+   * Whether or not each movement step should check for goal conditions.
+   */
+  shouldCheckSuccessOnMove(): boolean {
+    return !!this.validator?.shouldCheckSuccessOnMove();
+  }
+
+  /**
+   * Checks whether or not all goals have been accomplished.
+   */
+  checkSuccess(): boolean {
+    const succeeded = !!this.validator?.succeeded();
+    if (succeeded && this.executionInfo) {
+      // Finished.  Terminate the user's program.
+      this.executionInfo.queueAction('finish');
+      this.executionInfo.terminateWithValue(true);
+    }
+
+    return succeeded;
   }
 }
 

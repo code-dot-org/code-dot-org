@@ -1,6 +1,7 @@
 import type {MazeController, Tiles, WordSearch} from '@code-dot-org/maze';
 
 import ExecutionInfo from '@/levels/maze/ExecutionInfo';
+import Validator from '@/levels/maze/Validator';
 
 /**
  * A description of the global space of the interpreted program.
@@ -8,6 +9,7 @@ import ExecutionInfo from '@/levels/maze/ExecutionInfo';
 export interface APIGlobals {
   controller: MazeController;
   executionInfo: ExecutionInfo;
+  validator?: Validator;
   tiles: Tiles;
 }
 
@@ -23,7 +25,6 @@ export const API_FUNCTION = function (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
 ): any {
   if (!this.executionInfo.isTerminated()) {
-    console.log(fn, this, rest);
     return fn.apply(this, rest);
   }
 };
@@ -32,7 +33,7 @@ export const API_FUNCTION = function (
  * Check whether all goals have been accomplished
  */
 function checkSuccess(this: APIGlobals) {
-  const succeeded = false; //this.resultsHandler.succeeded();
+  const succeeded = !!this.validator?.succeeded();
 
   if (succeeded) {
     // Finished.  Terminate the user's program.
@@ -52,7 +53,7 @@ function shouldCheckSuccessOnMove(this: APIGlobals) {
   if (this.controller.map.hasMultiplePossibleGrids()) {
     return false;
   }
-  return 0; //this.resultsHandler.shouldCheckSuccessOnMove();
+  return !!this.validator?.shouldCheckSuccessOnMove();
 }
 
 function isPath(this: APIGlobals, direction: number, id: string): boolean {

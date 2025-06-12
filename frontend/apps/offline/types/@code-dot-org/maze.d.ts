@@ -21,7 +21,7 @@ declare module '@code-dot-org/maze' {
     getTestResults?: (
       levelComplete: boolean,
       options: GetTestResultsOptions = {},
-    ) => void;
+    ) => number;
   }
 
   export interface Tiles {
@@ -425,6 +425,11 @@ declare module '@code-dot-org/maze' {
   export const cells: Cells;
 
   export class Subtype {
+    finish?: {
+      x: number;
+      y: number;
+    };
+
     constructor(maze: MazeController, config: Configuration = {});
 
     getValue(row: number, col: number): number;
@@ -890,6 +895,10 @@ declare module '@code-dot-org/maze' {
     hideDefaultPegman();
     showPegman(id?: string);
     hidePegman(id?: string);
+    getTestResults(
+      levelComplete: boolean,
+      options: GetTestResultsOptions = {},
+    ): number;
   }
 
   const exports = {

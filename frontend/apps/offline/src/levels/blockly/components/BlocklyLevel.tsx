@@ -31,6 +31,10 @@ export interface BlocklyLevelEnvironment extends Environment {
   mainWorkspace?: Blockly.Workspace;
   /** The hidden workspace reference, when provided. */
   hiddenWorkspace?: Blockly.Workspace;
+  /** The current block count, if known. */
+  usedBlockCount?: number;
+  /** The ideal block count, if provided. */
+  idealBlockCount?: number;
 }
 
 export type BlocklyLevelProps<
@@ -266,6 +270,13 @@ function BlocklyLevel<
                   workspaceRef.current,
                   fullUncountedBlockTypes,
                 );
+                if (environment) {
+                  environment.usedBlockCount = blockCount.current;
+                }
+              }
+              if (environment) {
+                environment.idealBlockCount =
+                  levelData.blocklyData?.idealBlockCount;
               }
 
               // Dynamically update the counter
