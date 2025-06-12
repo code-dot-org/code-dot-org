@@ -13,6 +13,7 @@ export interface StandaloneVideoLevelProps {
 const StandaloneVideoLevel: React.FunctionComponent<
   StandaloneVideoLevelProps
 > = ({levelData}) => {
+  console.log(levelData);
   return (
     <div className={moduleStyles.standaloneVideoLevel}>
       <div>

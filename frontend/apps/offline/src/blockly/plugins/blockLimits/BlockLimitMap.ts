@@ -97,10 +97,9 @@ class BlockLimitMap {
    * Returns `true` if any of the blocks are over their limit.
    */
   anyOver(): boolean {
-    return (
-      Array.from(this.blockLimitMap).some(
-        ([type, limit]) => this.blockCountMap.get(type) > limit,
-      ).length > 0
+    const blockCountMap = this.blockCountMap;
+    return Array.from(this.blockLimitMap).some(
+      ([type, limit]) => (blockCountMap.get(type) || 0) > (limit || Infinity),
     );
   }
 

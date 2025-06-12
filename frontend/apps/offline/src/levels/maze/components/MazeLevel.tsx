@@ -106,7 +106,7 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
 
   // Determine all blocks
   const fullBlocks = useMemo(
-    () => [...blocks, ...(customBlocks || [])],
+    () => [...blocks(skin), ...(customBlocks || [])],
     [blocks, customBlocks],
   );
 
@@ -160,7 +160,6 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
     <BlocklyLevel
       levelData={levelData}
       startBlocks={levelData.blocklyData?.startBlocks || DefaultStartBlocks}
-      data={{skin: skin}}
       theme={theme || DefaultTheme}
       renderer={renderer || ThrasosRenderer}
       avatar={currentAvatar}

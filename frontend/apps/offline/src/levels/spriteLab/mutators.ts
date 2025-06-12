@@ -13,7 +13,7 @@ import {
 } from '@blockly/block-shareable-procedures';
 import * as Blockly from 'blockly/core';
 
-import type {SpriteLabLevelEnvironment} from './SpriteLabLevel';
+import type {SpriteLabLevelEnvironment} from './components/SpriteLabLevel';
 import type {AugmentedProcedureBlock} from './types';
 
 // Considers an attribute true only if it is explicitly set to 'true' (i.e. defaults to false if unset).

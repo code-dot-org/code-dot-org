@@ -10,7 +10,7 @@ export const PluginType: {
   Inject: 'inject';
   Global: 'global';
   Input: 'input';
-  Mixin: 'mixin';
+  Field: 'field';
 } = {
   /** This is a registry plugin. */
   Registry: 'registry',
@@ -20,8 +20,8 @@ export const PluginType: {
   Global: 'global',
   /** This plugin is instantiated alongside the renderer for notch types. */
   Input: 'input',
-  /** This is a block mixin. */
-  Mixin: 'mixin',
+  /** This is a field plugin. */
+  Field: 'field',
 };
 
 export interface PluginBase {
@@ -36,7 +36,7 @@ export interface PluginBase {
  * injection.
  */
 export interface RegistryPlugin extends PluginBase {
-  type: typeof PluginType.Registry;
+  type: 'registry';
   slot: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   interface: new (...p: any[]) => any;
@@ -76,17 +76,17 @@ export interface InputPlugin extends PluginBase {
   ) => Blockly.blockRendering.PuzzleTab;
 }
 
-/**
- * Registers a block mixin.
- */
-export interface MixinPlugin extends PluginBase {
-  type: 'mixin';
-  /** The name of the mixin which should be unique to all extensions. */
+export interface FieldPlugin extends PluginBase {
+  type: 'field';
+  /** The name of the field. */
   name: string;
-  /** A set of properties to add to the Block class. */
-  mixin: object;
-  /** Whether or not the mixin should be applied to all blocks, past and future. */
-  global?: boolean;
+  /** The field class to register */
+  field?: Blockly.fieldRegistry.RegistrableField;
+  /**
+   * If the field class is not specified, it uses an initialize/uninitialize function instead
+   */
+  initialize?: () => void;
+  uninitialize?: () => void;
 }
 
 /**
@@ -100,7 +100,7 @@ export type Plugin =
   | InjectPlugin
   | GlobalPlugin
   | InputPlugin
-  | MixinPlugin;
+  | FieldPlugin;
 
 export function WrapPlugin(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

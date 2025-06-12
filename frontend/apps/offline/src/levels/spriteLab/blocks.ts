@@ -1,3 +1,5 @@
+import * as Blockly from 'blockly/core';
+
 import type {BlockDefinition, BlockOptionsList} from '@/blockly/types';
 
 import {
@@ -6,6 +8,8 @@ import {
   modalProceduresNoDestroy,
   spritesFromStartAnimations,
 } from './extensions';
+import fieldLocation from './fields/fieldLocation';
+import fieldSpriteDropdown from './fields/fieldSpriteDropdown';
 import {
   behaviorCallerGetDefMixin,
   behaviorCallerGetDefBlockMixin,
@@ -54,7 +58,7 @@ const blocks: BlockDefinition[] = [
     message0: '%1',
     args0: [
       {
-        type: 'field_sprite_dropdown',
+        type: fieldSpriteDropdown,
         name: 'ANIMATION',
         options: [['', '']],
       },
@@ -72,7 +76,7 @@ const blocks: BlockDefinition[] = [
     message0: 'make new %1 sprite at %2',
     args0: [
       {
-        type: 'field_sprite_dropdown',
+        type: fieldSpriteDropdown,
         name: 'ANIMATION_NAME',
         options: [['', '']],
       },
@@ -94,7 +98,7 @@ const blocks: BlockDefinition[] = [
     message0: '%1',
     args0: [
       {
-        type: 'field_location',
+        type: fieldLocation,
         name: 'LOCATION',
         check: 'Location',
       },
@@ -447,7 +451,8 @@ const blocks: BlockDefinition[] = [
         text: '',
       },
     ],
-    generator: () => '\n',
+    generator: (block: Blockly.Block) =>
+      `// ${block.getFieldValue('COMMENT')}\n`,
   },
 ];
 

@@ -211,7 +211,11 @@ class TestResults {
 
     // Test for the number of blocks versus the given ideal
     if (!levelComplete) {
-      if (options.usedBlockCount < options.idealBlockCount) {
+      if (
+        options.usedBlockCount !== undefined &&
+        options.idealBlockCount !== undefined &&
+        options.usedBlockCount < options.idealBlockCount
+      ) {
         return Status.TOO_FEW_BLOCKS_FAIL;
       }
 
@@ -225,12 +229,18 @@ class TestResults {
     }
 
     // Check for too many blocks
-    if (options.usedBlockCount > options.idealBlockCount) {
+    if (
+      options.usedBlockCount !== undefined &&
+      options.idealBlockCount !== undefined &&
+      options.usedBlockCount > options.idealBlockCount
+    ) {
       return Status.TOO_MANY_BLOCKS_FAIL;
       //} else if (this.hasExtraTopBlocks() && Blockly.showUnusedBlocks) {
       //  return Status.PASS_WITH_EXTRA_TOP_BLOCKS;
       //}
     } else if (
+      options.usedBlockCount !== undefined &&
+      options.idealBlockCount !== undefined &&
       isFinite(options.idealBlockCount) &&
       options.usedBlockCount < options.idealBlockCount
     ) {

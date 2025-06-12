@@ -1,5 +1,7 @@
-// This contains our custom Blockly events that we can elect to use to respond to
-// different situations.
+/**
+ * This contains our custom Blockly events that we can elect to use to respond to
+ * different situations.
+ */
 
 import * as Blockly from 'blockly/core';
 

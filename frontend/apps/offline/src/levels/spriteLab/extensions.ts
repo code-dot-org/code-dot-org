@@ -3,8 +3,8 @@ import * as Blockly from 'blockly/core';
 import type {ProcedureBlock, Environment} from '@/blockly/types';
 
 import BlockSvgFrame from './BlockSvgFrame';
+import type {SpriteLabLevelEnvironment} from './components/SpriteLabLevel';
 import type {FieldSpriteDropdown} from './fields/fieldSpriteDropdown';
-import type {SpriteLabLevelEnvironment} from './SpriteLabLevel';
 
 const isStartMode = () => {
   return true;
@@ -48,7 +48,7 @@ export const behaviorsNameValidator = {
       // The default validator provided by mainline Blockly. Strips whitespace.
       const rename = Blockly.Procedures.rename.bind(this);
       const legalName = rename(newValue);
-      console.log('rename', legalName, newValue);
+      //console.log('rename', legalName, newValue);
       const sourceBlock = this.sourceBlock_ as ProcedureBlock & {
         behaviorId: string;
       };

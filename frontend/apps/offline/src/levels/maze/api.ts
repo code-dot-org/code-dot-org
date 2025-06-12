@@ -2,6 +2,9 @@ import type {MazeController, Tiles, WordSearch} from '@code-dot-org/maze';
 
 import ExecutionInfo from '@/levels/maze/ExecutionInfo';
 
+/**
+ * A description of the global space of the interpreted program.
+ */
 export interface APIGlobals {
   controller: MazeController;
   executionInfo: ExecutionInfo;
@@ -11,17 +14,17 @@ export interface APIGlobals {
 /**
  * Only call API functions if we haven't yet terminated execution
  */
-
 export const API_FUNCTION = function (
   this: APIGlobals,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   fn: (this: APIGlobals, ...args: any[]) => void,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   ...rest: any[]
-) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+): any {
   if (!this.executionInfo.isTerminated()) {
     console.log(fn, this, rest);
-    fn.apply(this, rest);
+    return fn.apply(this, rest);
   }
 };
 
@@ -211,5 +214,14 @@ export function turnRight(this: APIGlobals, id: string) {
 
   API_FUNCTION.bind(this)(() => {
     turn.bind(this)(TurnDirection.RIGHT, id);
+  });
+}
+
+/**
+ * Determines if the level has been completed and the goal achieved.
+ */
+export function notFinished(this: APIGlobals): boolean {
+  return !!API_FUNCTION.bind(this)(() => {
+    return ~checkSuccess.bind(this)();
   });
 }

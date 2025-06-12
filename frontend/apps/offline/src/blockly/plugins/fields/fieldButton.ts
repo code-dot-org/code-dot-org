@@ -1,7 +1,7 @@
 import * as Blockly from 'blockly/core';
 
 import {PluginType} from '../../plugins';
-import type {GlobalPlugin} from '../../plugins';
+import type {FieldPlugin} from '../../plugins';
 
 interface ColorOverrides {
   button?: string;
@@ -148,14 +148,10 @@ export class FieldButton extends Blockly.Field {
   }
 }
 
-export const plugin: GlobalPlugin = {
-  type: PluginType.Global,
-  initialize: () => {
-    Blockly.fieldRegistry.register('field_button', FieldButton);
-  },
-  uninitialize: () => {
-    Blockly.fieldRegistry.unregister('field_button');
-  },
+export const plugin: FieldPlugin = {
+  type: PluginType.Field,
+  name: 'field_button',
+  field: FieldButton,
 };
 
 export default plugin;

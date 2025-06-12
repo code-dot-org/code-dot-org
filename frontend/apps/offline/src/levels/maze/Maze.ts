@@ -39,6 +39,8 @@ class Maze extends EventTarget {
   private svg: SVGSVGElement;
   /* The Blockly workspace */
   private workspace: Blockly.Workspace;
+  /* The last test result */
+  private testResults?: TestResults;
 
   constructor(
     workspace: Blockly.Workspace,

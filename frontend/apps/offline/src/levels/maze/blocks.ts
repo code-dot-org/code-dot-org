@@ -6,7 +6,12 @@ import type {Skin} from '@code-dot-org/maze';
 
 import type {BlockDefinition} from '@/blockly/types';
 
-const blocks: BlockDefinition[] = [
+/**
+ * Generates the block list considering the given Skin.
+ *
+ * Some of the blocks use the images from the skin.
+ */
+const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
   {
     type: 'when_run',
     style: 'setup_blocks',
@@ -17,13 +22,17 @@ const blocks: BlockDefinition[] = [
     nextStatement: true,
   },
   {
+    // Simply moves forward
     type: 'maze_moveForward',
-    title: 'move forward',
     helpUrl: 'http://code.google.com/p/blockly/wiki/Move',
     tooltip: 'Move me forward one space.',
-    functionName: 'Maze.moveForward',
+    style: 'default',
     previousStatement: true,
     nextStatement: true,
+    message0: 'move forward',
+    generator: (block: Blockly.Block) => {
+      return `Maze.moveForward('block_id_${block.id}');\n`;
+    },
   },
   {
     // Block for moving forward / backward
@@ -103,14 +112,24 @@ const blocks: BlockDefinition[] = [
     helpUrl: 'http://code.google.com/p/blockly/wiki/Repeat',
     tooltip: 'Repeat the enclosed actions until finish point is reached.',
     previousStatement: true,
-    init: (block: Blockly.Block, options) => {
-      const skin = options?.skin as Skin;
-      const field = block.appendDummyInput().appendField('repeat until');
-      if (skin?.maze_forever) {
-        field.appendField(new Blockly.FieldImage(skin?.maze_forever, 35, 35));
-      }
-      block.appendStatementInput('DO').appendField('do');
-    },
+    nextStatement: true,
+    message0: 'repeat until %1',
+    args0: [
+      {
+        type: 'field_image',
+        src: skin.maze_forever,
+        width: 35,
+        height: 35,
+        name: 'IMAGE',
+      },
+    ],
+    message1: 'do %1',
+    args1: [
+      {
+        type: 'input_statement',
+        name: 'DO',
+      },
+    ],
     generator: (block: Blockly.Block, generator: JavascriptGenerator) => {
       // Generate JavaScript for do forever loop.
       const branch = generator.statementToCode(block, 'DO');
@@ -121,6 +140,66 @@ const blocks: BlockDefinition[] = [
         branch;
        */
       return 'while (Maze.notFinished()) {\n' + branch + '}\n';
+    },
+  },
+  {
+    // Do until
+    type: 'maze_untilBlocked',
+    style: 'loop_blocks',
+    helpUrl: 'http://code.google.com/p/blockly/wiki/Repeat',
+    tooltip: 'Repeat the enclosed actions until finish point is reached.',
+    previousStatement: true,
+    nextStatement: true,
+    message0: 'while path ahead',
+    message1: En.CONTROLS_REPEAT_INPUT_DO + ' %1',
+    args1: [
+      {
+        type: 'input_statement',
+        name: 'DO',
+      },
+    ],
+    generator: (block: Blockly.Block, generator: JavascriptGenerator) => {
+      const branch = generator.statementToCode(block, 'DO');
+      /*branch =
+        Blockly.getInfiniteLoopTrap() +
+        Blockly.loopHighlight('Maze', this.id) +
+        branch;*/
+      return `while (Maze.notFinished()) {\n${branch}}\n`;
+    },
+  },
+  {
+    // Do until
+    type: 'maze_untilBlockedOrNotClear',
+    style: 'loop_blocks',
+    helpUrl: 'http://code.google.com/p/blockly/wiki/Repeat',
+    tooltip: 'Repeat the enclosed actions until finish point is reached.',
+    previousStatement: true,
+    nextStatement: true,
+    message0: 'while %1',
+    args0: [
+      {
+        name: 'DIR',
+        type: 'field_dropdown',
+        options: [
+          ['path ahead', 'isPathForward'],
+          ['there is a pile', 'pilePresent'],
+          ['there is a hole', 'holePresent'],
+        ],
+      },
+    ],
+    message1: En.CONTROLS_REPEAT_INPUT_DO + ' %1',
+    args1: [
+      {
+        type: 'input_statement',
+        name: 'DO',
+      },
+    ],
+    generator: (block: Blockly.Block, generator: JavascriptGenerator) => {
+      const dir = block.getFieldValue('DIR');
+      const argument = `Maze.${dir}('block_id_${block.id}')`;
+      const branch = generator.statementToCode(block, 'DO');
+      //branch = Blockly.getInfiniteLoopTrap() + branch;
+      return `while (${argument}) {\n${branch}}\n`;
     },
   },
   {
@@ -205,6 +284,26 @@ const blocks: BlockDefinition[] = [
         'if (' + argument + ') {\n' + branch0 + '} else {\n' + branch1 + '}\n';
       return code;
     },
+  },
+  // This block add a harmless comment to the code
+  {
+    type: 'comment',
+    message0: 'comment: %1',
+    style: 'comment_blocks',
+    tooltip: '',
+    helpUrl: '',
+    nextStatement: true,
+    previousStatement: true,
+    args0: [
+      {
+        name: 'COMMENT',
+        check: 'String',
+        type: 'field_input',
+        text: '',
+      },
+    ],
+    generator: (block: Blockly.Block) =>
+      `// ${block.getFieldValue('COMMENT')}\n`,
   },
 ];
 

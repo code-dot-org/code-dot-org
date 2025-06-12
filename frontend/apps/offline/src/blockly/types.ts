@@ -2,6 +2,7 @@ import {IProcedureBlock} from '@blockly/block-shareable-procedures';
 import * as Blockly from 'blockly/core';
 import {JavascriptGenerator} from 'blockly/javascript';
 
+import type {FieldPlugin} from './plugins';
 import type {RendererClassType} from './renderers/base';
 
 export interface BlocklySerialization {
@@ -35,7 +36,7 @@ export type BlockOptionsList = [
  */
 export interface BlockArgDefinition {
   /** The registered field type */
-  type: string;
+  type: string | FieldPlugin;
   /** The internal name for the field which is referenced by a generator */
   name: string;
   /** The options for dropdowns or lists */
@@ -49,38 +50,6 @@ export interface BlockArgDefinition {
   /** For input fields, controls browser spellcheck */
   spellcheck?: boolean;
   variable?: string;
-}
-
-/**
- * Describes a simple block.
- */
-export interface SimpleBlockDefinition {
-  /** The generic name of the block */
-  type: string;
-  /** The text rendered within the block */
-  title: string;
-  /** The image to use instead of text to represent what this block does for pre-readers */
-  titleImage?: string;
-  /** The tooltip for the block when it is hovered over */
-  tooltip: string;
-  /** The URL for the documentation for this block */
-  helpUrl?: string;
-  /** The style group to apply, e.g. 'math_blocks' */
-  style?: string;
-  /** The name of the function this block calls for code generation */
-  functionName?: string;
-  /** Whether or not this can be attached to a statement */
-  previousStatement?: boolean;
-  /** Whether or not the block can have subsequent blocks attached to it */
-  nextStatement?: boolean;
-  /** The function that sets up this block. */
-  init?: (
-    block: Blockly.Block,
-    options?: {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      [key: string]: any;
-    },
-  ) => void;
 }
 
 /**
@@ -137,8 +106,13 @@ export interface Mixin {
 
 /**
  * Describes a custom block.
+ *
+ * We add a few additional nice-to-haves over the general Blockly block
+ * definition for its JSON serialization. These additions let us just
+ * directly reference extensions and mixins so that we can guarantee that
+ * we register them when we re-use blocks across different environments.
  */
-export interface ComplexBlockDefinition {
+export interface BlockDefinition {
   /** The generic name of the block */
   type: string;
   /** The tooltip for the block when it is hovered over */
@@ -183,9 +157,6 @@ export interface ComplexBlockDefinition {
   /** A mutator to apply to this particular type of block. */
   mutator?: string | Mutator;
 }
-
-/** Used for encapsulating all forms of block definitions we allow. */
-export type BlockDefinition = SimpleBlockDefinition | ComplexBlockDefinition;
 
 /**
  * Describes a collision region.

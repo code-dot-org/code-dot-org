@@ -1,7 +1,5 @@
-import * as Blockly from 'blockly/core';
-
 import {PluginType} from '@/blockly/plugins';
-import type {GlobalPlugin} from '@/blockly/plugins';
+import type {FieldPlugin} from '@/blockly/plugins';
 import {
   FieldButton,
   FieldButtonOptions,
@@ -46,14 +44,10 @@ export class FieldLocation extends FieldButton {
   }
 }
 
-export const plugin: GlobalPlugin = {
-  type: PluginType.Global,
-  initialize: () => {
-    Blockly.fieldRegistry.register('field_location', FieldLocation);
-  },
-  uninitialize: () => {
-    Blockly.fieldRegistry.unregister('field_location');
-  },
+export const plugin: FieldPlugin = {
+  type: PluginType.Field,
+  name: 'field_location',
+  field: FieldLocation,
 };
 
 export default plugin;

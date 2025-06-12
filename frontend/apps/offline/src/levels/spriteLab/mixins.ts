@@ -2,7 +2,7 @@ import * as Blockly from 'blockly/core';
 
 import type {Environment} from '@/blockly/types';
 
-import type {SpriteLabLevelEnvironment} from './SpriteLabLevel';
+import type {SpriteLabLevelEnvironment} from './components/SpriteLabLevel';
 import type {AugmentedProcedureBlock} from './types';
 
 // This mixin's function is copied and modified from

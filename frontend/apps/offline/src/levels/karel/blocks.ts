@@ -1,12 +1,18 @@
+import * as Blockly from 'blockly/core';
+
 const blocks = [
   {
+    // Simply collect
     type: 'collector_collect',
-    title: 'collect',
     helpUrl: '',
     tooltip: 'Collect an item',
-    functionName: 'Maze.collect',
+    style: 'default',
+    message0: 'collect',
     previousStatement: true,
     nextStatement: true,
+    generator: (block: Blockly.Block) => {
+      return `Maze.collect('block_id_${block.id}');\n`;
+    },
   },
 ];
 

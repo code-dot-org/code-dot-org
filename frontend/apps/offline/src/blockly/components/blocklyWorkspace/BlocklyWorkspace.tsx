@@ -19,12 +19,8 @@ import BlocklyContext from '@/blockly/contexts/BlocklyContext';
 import {disableOrphans, grayOutUndeletableBlocks} from '../../events';
 import FunctionBlockMixin from '../../mixins/functionBlockMixin';
 import {PluginType} from '../../plugins';
-import type {
-  Plugin,
-  GlobalPlugin,
-  InjectPlugin,
-  MixinPlugin,
-} from '../../plugins';
+import type {Plugin} from '../../plugins';
+import Registry from '../../Registry';
 import {positionBlocksOnWorkspace} from '../../serialization';
 import DefaultTheme from '../../themes/default';
 import type {
@@ -32,11 +28,7 @@ import type {
   BlockDefinition,
   Theme,
   Renderer,
-  SimpleBlockDefinition,
-  ComplexBlockDefinition,
-  Mutator,
   Environment,
-  ProcedureBlock,
 } from '../../types';
 
 import moduleStyles from './blocklyWorkspace.module.scss';
@@ -51,8 +43,6 @@ export interface BlocklyOptions extends Blockly.BlocklyOptions {
 export interface BlocklyWorkspaceProps<T extends Environment & object> {
   /** A set of custom blocks to load within the Blockly instance. */
   customBlocks?: BlockDefinition[];
-  /** A set of specialized options that is passed to block creators. */
-  data?: object;
   /** Some options that will alter the typical Blockly behavior. */
   options?: BlocklyOptions;
   /** A set of blocks to load as the starting point for the workspace */
@@ -92,7 +82,6 @@ const __ = En;
  */
 function BlocklyWorkspace<T extends Environment & object = Environment>({
   customBlocks,
-  data,
   options,
   startBlocks,
   toolboxBlocks,
@@ -124,29 +113,11 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
   theme ||= storedTheme || DefaultTheme;
   environment ||= storedEnvironment as unknown as T;
 
-  // Register renderer, if needed
-  useEffect(() => {
-    if (renderer) {
-      if (!renderer.name) {
-        throw new Error(
-          "Renderer needs to have a string for a 'name' field that uniquely identifies the renderer",
-        );
-      } else {
-        // Add input plugins
-        const inputPlugins = (plugins || []).filter(
-          plugin => plugin.type === PluginType.Input,
-        );
-
-        console.log('REGISTER RENDERER', renderer, plugins, inputPlugins);
-        Blockly.registry.register(
-          Blockly.registry.Type.RENDERER,
-          renderer.name,
-          renderer.class(inputPlugins),
-          true,
-        );
-      }
-    }
-  }, [renderer, plugins]);
+  // Create a new plugin registry to keep track of the current blockly
+  // registered plugins for this session.
+  const registry = useRef<Registry<T>>(
+    new Registry<T>(environment, theme, renderer),
+  );
 
   // Register any new custom blocks
   useEffect(() => {
@@ -162,125 +133,25 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
 
     // Make sure we have the default blocks
     (customBlocks || []).forEach(blockDefinition => {
-      if ((blockDefinition as ComplexBlockDefinition).message0) {
-        const complexBlockDefinition = {
-          ...blockDefinition,
-        } as ComplexBlockDefinition;
+      blockDefinition = {
+        ...blockDefinition,
+      };
 
-        // Register mutator if we have never seen it before and it exists
-        if (complexBlockDefinition.mutator) {
-          if (typeof complexBlockDefinition.mutator !== 'string') {
-            const name = complexBlockDefinition.mutator.name;
-            if (!Blockly.Extensions.isRegistered(name)) {
-              const mutator: Mutator = {
-                ...complexBlockDefinition.mutator,
-              };
+      // Register (and modify the block definition to just reference mixins
+      // and extensions by name) any block fields, extensions, etc.
+      registry.current.registerFromBlockDefinition(blockDefinition);
 
-              const oldMutator: Mutator = complexBlockDefinition.mutator;
+      Blockly.common.defineBlocksWithJsonArray([blockDefinition]);
 
-              if ('environment' in mutator) {
-                type EnvironmentBlock = Blockly.Block & {
-                  environment: Environment & object;
-                };
-                mutator.loadExtraState = function (
-                  this: EnvironmentBlock,
-                  state: object,
-                ) {
-                  this.environment = environment;
-                  oldMutator.loadExtraState?.bind(this)(state);
-                };
-              }
-              Blockly.Extensions.registerMutator(name, mutator);
-            }
-            complexBlockDefinition.mutator = name;
-          }
-        }
-
-        // Register extensions if we have never seen it before and it exists
-        complexBlockDefinition.extensions = [
-          ...(complexBlockDefinition.extensions || []),
-        ].map(extension => {
-          if (typeof extension !== 'string' && 'extension' in extension) {
-            const name = extension.name;
-            if (!Blockly.Extensions.isRegistered(name)) {
-              Blockly.Extensions.register(
-                name,
-                function (this: ProcedureBlock) {
-                  return extension.extension.bind(this, environment)();
-                },
-              );
-            }
-            return name;
-          }
-
-          if (typeof extension !== 'string' && 'mixin' in extension) {
-            const name = extension.name;
-            if (!Blockly.Extensions.isRegistered(name)) {
-              Blockly.Extensions.registerMixin(name, extension.mixin);
-            }
-            return name;
-          }
-
-          return extension;
-        });
-
-        Blockly.common.defineBlocksWithJsonArray([complexBlockDefinition]);
-
-        javascriptGenerator.forBlock[complexBlockDefinition.type] = function (
-          _block: Blockly.Block,
-          _generator: JavascriptGenerator,
-        ) {
-          if (complexBlockDefinition.generator) {
-            return complexBlockDefinition.generator(
-              _block,
-              javascriptGenerator,
-              {},
-            );
-          }
-
-          return '';
-        };
-      } else {
-        const simpleBlockDefinition = blockDefinition as SimpleBlockDefinition;
-        Blockly.Blocks[blockDefinition.type] ||= {
-          helpUrl: simpleBlockDefinition.helpUrl,
-          init: function () {
-            this.setStyle(simpleBlockDefinition.style || 'default');
-            if (simpleBlockDefinition.title) {
-              const input = this.appendEndRowInput();
-              input.appendField(simpleBlockDefinition.title);
-            } else if (simpleBlockDefinition.titleImage) {
-              const input = this.appendEndRowInput();
-              input.appendField(
-                new Blockly.FieldImage(
-                  simpleBlockDefinition.titleImage,
-                  32,
-                  32,
-                ),
-              );
-            }
-            if (simpleBlockDefinition.previousStatement) {
-              this.setPreviousStatement(
-                simpleBlockDefinition.previousStatement,
-              );
-            }
-            if (simpleBlockDefinition.nextStatement) {
-              this.setNextStatement(simpleBlockDefinition.nextStatement);
-            }
-            this.setTooltip(simpleBlockDefinition.tooltip);
-            if (simpleBlockDefinition.init) {
-              simpleBlockDefinition.init(this, data);
-            }
-          },
-        };
-
-        javascriptGenerator.forBlock[simpleBlockDefinition.type] = function (
-          _block: Blockly.Block,
-          _generator: JavascriptGenerator,
-        ) {
-          return `${simpleBlockDefinition.functionName}('block_id_${this.id}');\n`;
-        };
-      }
+      // Bind the given block definition's generator to the overall generator
+      javascriptGenerator.forBlock[blockDefinition.type] = function (
+        block: Blockly.Block,
+        _generator: JavascriptGenerator,
+      ) {
+        return (
+          blockDefinition.generator?.(block, javascriptGenerator, {}) || ''
+        );
+      };
     });
   }, [customBlocks]);
 
@@ -319,70 +190,8 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
       }
     }
 
-    const mixinPlugins = (plugins || []).filter(
-      plugin => plugin.type === PluginType.Mixin,
-    );
-
-    // Add block mixins
-    for (const plugin of mixinPlugins) {
-      const mixinPlugin = plugin as unknown as MixinPlugin;
-      try {
-        Blockly.Extensions.registerMixin(mixinPlugin.name, mixinPlugin.mixin);
-      } catch (err) {
-        if (err instanceof Error) {
-          if (!err.toString().includes('already registered')) {
-            throw err;
-          }
-        }
-      }
-
-      for (const definition of Object.values(Blockly.Blocks)) {
-        for (const [key, prop] of Object.entries(mixinPlugin.mixin)) {
-          definition[key] ||= prop;
-        }
-      }
-    }
-
-    const globalPlugins = (plugins || []).filter(
-      plugin => plugin.type === PluginType.Global,
-    );
-
-    // Add global plugins
-    for (const plugin of globalPlugins) {
-      const globalPlugin = plugin as unknown as GlobalPlugin;
-      if (globalPlugin.useWithInline || !inline) {
-        globalPlugin.initialize();
-      }
-    }
-
-    const originalAppend = Blockly.serialization.blocks.append;
-    /*
-    Blockly.serialization.blocks.append = function (json, workspace) {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const extra = (json as any).extraState;
-      console.log('ok. block serializing...', json, JSON.stringify(extra));
-      const block = originalAppend.call(this, json, workspace);
-
-      console.log('ok. block serializing', block, json, extra);
-      if (block?.data?.uservisible === false) {
-        block.setVisible?.(false);
-      }
-
-      return block;
-    };
-    const originalSave = Blockly.serialization.blocks.save;
-    Blockly.serialization.blocks.save = function (
-      block,
-      state,
-      doFullSerialization,
-    ) {
-      originalSave(block, state, doFullSerialization);
-      state.extraState = {
-        ...(state.extraState || {}),
-        ...(block.data || {}),
-      };
-    };
-    */
+    // Add plugins
+    registry.current.registerAll(plugins || []);
 
     // Create the workspace within the container
     workspace.current = Blockly.inject(container, {
@@ -406,14 +215,11 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
     }
 
     // Add injection plugins
-    for (const plugin of (plugins || []).filter(
-      plugin => plugin.type === PluginType.Inject,
-    )) {
-      const injectPlugin = plugin as InjectPlugin;
-      if (injectPlugin.useWithInline || !inline) {
-        injectPlugin.instantiate(workspace.current, theme || DefaultTheme);
-      }
-    }
+    registry.current.registerAll(
+      (plugins || []).filter(plugin => plugin.type === PluginType.Inject),
+      inline,
+      workspace.current,
+    );
 
     // Level implementation callback for custom behaviors per-level type
     if (onInject) {
@@ -494,26 +300,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
 
     // Deconstruct the blockly instance when the component is unmounted
     return () => {
-      // De-construct global plugins
-      for (const plugin of globalPlugins) {
-        const globalPlugin = plugin as unknown as GlobalPlugin;
-        if (globalPlugin.useWithInline || !inline) {
-          globalPlugin.uninitialize?.();
-        }
-      }
-
-      // De-register block mixins
-      for (const plugin of mixinPlugins) {
-        const mixinPlugin = plugin as unknown as MixinPlugin;
-        Blockly.Extensions.unregister(mixinPlugin.name);
-
-        // Remove the extension from any block definitions since it no longer exists
-      }
-
-      // Un-rewire the json serialization append routine
-      if (originalAppend) {
-        Blockly.serialization.blocks.append = originalAppend;
-      }
+      registry.current.unregisterAll();
 
       // Dispose of the workspace
       workspace.current?.dispose();

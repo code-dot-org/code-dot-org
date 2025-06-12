@@ -2,7 +2,7 @@ import {FieldGridDropdown} from '@blockly/field-grid-dropdown';
 import * as Blockly from 'blockly/core';
 
 import {PluginType} from '@/blockly/plugins';
-import type {GlobalPlugin} from '@/blockly/plugins';
+import type {FieldPlugin} from '@/blockly/plugins';
 
 /**
  * Implements extra logic to style the image dropdown for sprite selection.
@@ -45,17 +45,10 @@ export class FieldSpriteDropdown extends FieldGridDropdown {
   }
 }
 
-export const plugin: GlobalPlugin = {
-  type: PluginType.Global,
-  initialize: () => {
-    Blockly.fieldRegistry.register(
-      'field_sprite_dropdown',
-      FieldSpriteDropdown,
-    );
-  },
-  uninitialize: () => {
-    Blockly.fieldRegistry.unregister('field_sprite_dropdown');
-  },
+export const plugin: FieldPlugin = {
+  type: PluginType.Field,
+  name: 'field_sprite_dropdown',
+  field: FieldSpriteDropdown,
 };
 
 export default plugin;

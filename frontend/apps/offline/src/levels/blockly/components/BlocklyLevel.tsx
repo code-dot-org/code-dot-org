@@ -41,8 +41,6 @@ export type BlocklyLevelProps<
   startBlocks?: BlocklySerialization;
   /** A set of blocks to load into a hidden workspace */
   hiddenBlocks?: BlocklySerialization;
-  /** A set of specialized options that is passed to block creators. */
-  data?: object;
   /** Some options that will alter the typical Blockly behavior. */
   options?: BlocklyOptions;
   /** A set of custom blocks to load within the Blockly instance. */
@@ -95,7 +93,6 @@ function BlocklyLevel<
   levelData,
   startBlocks,
   hiddenBlocks,
-  data,
   options,
   visualization,
   customBlocks,
@@ -253,7 +250,6 @@ function BlocklyLevel<
             />
           )}
           <BlocklyWorkspace<T>
-            data={data}
             options={{
               readOnly: levelData.multipleChoice ? true : undefined,
               ...options,

@@ -150,7 +150,6 @@ const ArtistLevel: React.FunctionComponent<ArtistLevelProps> = ({
     <BlocklyLevel
       levelData={levelData}
       startBlocks={levelData.blocklyData?.startBlocks || DefaultStartBlocks}
-      data={{}}
       theme={theme || DefaultTheme}
       renderer={renderer || ThrasosRenderer}
       avatar={currentAvatar}

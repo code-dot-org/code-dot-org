@@ -28,8 +28,6 @@ import BlocklyLevel, {
 
 import * as defaultAPI from '../api';
 import blocks from '../blocks';
-import FieldLocationPlugin from '../fields/fieldLocation';
-import FieldSpriteDropdownPlugin from '../fields/fieldSpriteDropdown';
 import SpriteLab from '../SpriteLab';
 
 import Visualization from './Visualization';
@@ -64,9 +62,6 @@ const plugins: Plugin[] = [
   BlockLimitsPlugin,
   // Allow the 'field_colour' field for blocks
   FieldColourPlugin,
-  // Provide the 'field_location' field for locations
-  FieldLocationPlugin,
-  FieldSpriteDropdownPlugin,
   SharableProceduresPlugin,
 ];
 
@@ -198,7 +193,6 @@ const SpriteLabLevel: React.FunctionComponent<SpriteLabLevelProps> = ({
       levelData={levelData}
       startBlocks={filteredStartBlocks}
       hiddenBlocks={hiddenBlocks}
-      data={{}}
       theme={theme || DefaultTheme}
       renderer={renderer || ThrasosRenderer}
       avatar={currentAvatar}
