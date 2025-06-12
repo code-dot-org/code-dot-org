@@ -435,6 +435,19 @@ pegasus_web_server_name: pegasus
 pegasus_workers: 8
 sinatra_session_secret:
 
+# Whether most pegasus content is present in the sites and sites.v3 directories.
+# This flag should be set to false if this content has been omitted from the
+# local git client via git-sparse-checkout.
+#
+# When set to false, application features and tests which depend on most
+# pegasus content will be disabled. A small subset of pegasus content will still
+# be available to support certain features used by dashboard, such as
+# certificates, dcdo flags, and image optimization.
+#
+# It is recommended to control this flag via the `HAS_PEGASUS_CONTENT`
+# environment variable, since that will also be picked up by the apps build.
+has_pegasus_content: <%= ENV['HAS_PEGASUS_CONTENT'] != 'false' %>
+
 # Configures Pegasus `settings.read_only`, which affects some (legacy) routes. Not actively used(?)
 read_only: false
 

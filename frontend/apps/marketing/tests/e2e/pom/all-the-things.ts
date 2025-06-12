@@ -1,6 +1,6 @@
 import {type Locator, type Page} from '@playwright/test';
 
-import {MarketingPage} from './marketing';
+import {MarketingPage, MarketingPageOptions} from './marketing';
 
 export type Section =
   | 'Action Block'
@@ -34,8 +34,8 @@ export type Section =
   | 'Video Carousel';
 
 export class AllTheThingsPage extends MarketingPage {
-  constructor(page: Page, locale: string) {
-    super(page, locale);
+  constructor(page: Page, options: MarketingPageOptions) {
+    super(page, options);
   }
 
   async enableDraftMode(token: string = 'ci-draft-mode') {

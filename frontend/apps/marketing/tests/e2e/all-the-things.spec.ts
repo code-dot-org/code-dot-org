@@ -10,7 +10,7 @@ import {MarketingPage} from './pom/marketing';
 test.describe('All the things UI e2e test', () => {
   test.describe('a11y', () => {
     test('should have no accessibility violations', async ({page}) => {
-      const allTheThingsPage = new AllTheThingsPage(page, 'en-US');
+      const allTheThingsPage = new AllTheThingsPage(page, {locale: 'en-US'});
       await allTheThingsPage.goto();
 
       const accessibilityScanResults = await new AxeBuilder({page}).analyze();
@@ -93,7 +93,7 @@ test.describe('All the things UI e2e test', () => {
   });
 
   test('should have the correct top level SEO metadata', async ({page}) => {
-    const allTheThingsPage = new AllTheThingsPage(page, 'en-US');
+    const allTheThingsPage = new AllTheThingsPage(page, {locale: 'en-US'});
     await allTheThingsPage.goto();
 
     expect(await allTheThingsPage.pageTitle).toBe(
@@ -120,7 +120,7 @@ test.describe('All the things UI e2e test', () => {
       let component: Locator;
 
       test.beforeEach(async ({page}) => {
-        const allTheThingsPage = new AllTheThingsPage(page, locale);
+        const allTheThingsPage = new AllTheThingsPage(page, {locale});
         await allTheThingsPage.goto();
 
         component = allTheThingsPage.getSectionLocator('Localization');
@@ -151,7 +151,7 @@ test.describe('All the things UI e2e test', () => {
     let allTheThingsPage: AllTheThingsPage;
 
     test.beforeEach(async ({page}) => {
-      allTheThingsPage = new AllTheThingsPage(page, 'en-US');
+      allTheThingsPage = new AllTheThingsPage(page, {locale: 'en-US'});
       await allTheThingsPage.goto();
     });
 

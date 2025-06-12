@@ -13,34 +13,8 @@ class SectionsController < ApplicationController
   end
 
   def edit
-    existing_section = Section.find_by(
-      id: params[:id]
-    )
-
-    if DCDO.get('teacher-local-nav-v2', true)
-      redirect_to "/teacher_dashboard/sections/#{params[:id]}/settings"
-      return
-    end
-
-    @section = existing_section.attributes
-
-    @section['course'] = {
-      course_offering_id: existing_section.unit_group ? existing_section.unit_group&.course_version&.course_offering&.id : existing_section.script&.course_version&.course_offering&.id,
-      version_id: existing_section.unit_group ? existing_section.unit_group&.course_version&.id : existing_section.script&.course_version&.id,
-      unit_id: existing_section.unit_group ? existing_section.script_id : nil,
-      lesson_extras_available: existing_section.script.try(:lesson_extras_available),
-      text_to_speech_enabled: existing_section.script.try(:text_to_speech_enabled?),
-    }
-
-    @section['sectionInstructors'] = ActiveModelSerializers::SerializableResource.new(existing_section.section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
-
-    @section['primaryInstructor'] = {
-      email: existing_section.teacher.email,
-      name: existing_section.teacher.name,
-      lti_roster_sync_enabled: existing_section.teacher&.properties&.[]("lti_roster_sync_enabled")
-    }
-
-    @section = @section.to_json.camelize
+    redirect_to "/teacher_dashboard/sections/#{params[:id]}/settings"
+    return
   end
 
   def show
