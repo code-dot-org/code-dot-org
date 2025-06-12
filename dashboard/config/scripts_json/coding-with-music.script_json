@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-29 21:16:20 UTC",
+    "serialized_at": "2025-06-06 21:58:40 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1906,7 +1906,7 @@
     },
     {
       "name": "Quick Reference Teacher's Guide",
-      "url": "https://drive.google.com/drive/folders/12GBFA753Lsu5qDa13DvwlSvXDcM6daBW",
+      "url": "https://drive.google.com/file/d/1M_jampRMM1ix6RdH6AWMXVrSa5pbCKdO/view?usp=drive_link",
       "key": "quick_reference_teacher_s_guide",
       "properties": {
         "audience": "Teacher",

@@ -7,13 +7,19 @@ const assertions = {
   'total-byte-weight': ['error', {minScore: 0.5}],
   'unused-css-rules': ['error', {maxLength: 30}],
   'unused-javascript': ['error', {maxLength: 10}],
-  'uses-text-compression': ['error', {maxLength: 80}],
+  'uses-text-compression': ['error', {maxLength: 5}],
   'third-party-cookies': 'off',
   'uses-rel-preconnect': 'off',
   'link-text': 'off', // re-enable after CMS-497
   'meta-description': 'off', // Substituted by equivalent test in 'All The Things' UI Test.
   'uses-responsive-images': ['error', {maxLength: 1}], // re-enable after CMS-516
   'valid-source-maps': ['error', {minScore: 0}], // One Trust script has no source map
+  'font-display-insight': 'off',
+  'forced-reflow-insight': 'off',
+  'image-delivery-insight': ['error', {minScore: 0.5}],
+  'legacy-javascript-insight': 'off',
+  'modern-http-insight': 'off',
+  'network-dependency-tree-insight': 'off',
 };
 
 if (process.env.STAGE !== 'production') {

@@ -84,14 +84,6 @@ describe('TeacherHomepage', () => {
     },
   ];
 
-  const schoolInfo = {
-    country: 'US',
-    school_name: 'Test School',
-    school_zip: '12345',
-    school_id: '67890',
-    school_type: 'public',
-  };
-
   const serverSections = sections.map(serverSectionFromSection);
 
   let fetchSpy: jest.SpyInstance;
@@ -145,12 +137,7 @@ describe('TeacherHomepage', () => {
     restoreRedux();
   });
 
-  function renderComponent(
-    initialSections = serverSections,
-    showSchoolInfoInterstitial = false,
-    showSchoolInfoConfirmation = false,
-    existingSchoolInfo = {schoolInfo}
-  ) {
+  function renderComponent(initialSections = serverSections) {
     const store = getStore();
     registerReducers({teacherSections, currentUser});
     store.dispatch(setInitialData({id: 1, display_name: 'Rubber Ducky'}));

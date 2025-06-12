@@ -101,6 +101,8 @@ class User < ApplicationRecord
   include EmailValidations
   include ProviderFlags
   include Verifiable
+  include Age
+  include SectionParticipation
   include PartialRegistration
   include Rails.application.routes.url_helpers
 
@@ -145,7 +147,6 @@ class User < ApplicationRecord
   #   educator_role: Indicates the role of the educator, e.g. 'teacher', 'school_admin', 'district_admin', etc.
 
   AI_TUTOR_EXPERIMENT_NAME = 'ai-tutor'
-  AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
 
   DATA_TRANSFER_AGREEMENT_SOURCE_TYPES = [
@@ -310,10 +311,6 @@ class User < ApplicationRecord
   has_one :latest_parental_permission_request, -> {order(updated_at: :desc)}, class_name: 'ParentalPermissionRequest'
 
   ## Validation Macros
-  defer_age = proc {|user| %w(google_oauth2 clever).include?(user.provider) || user.sponsored? || Policies::Lti.lti?(user)}
-  validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
-  validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
-
   validate :complete_school_info, if: :school_info_id_changed?, unless: proc {|u| u.purged_at.present?}
 
   validates :data_transfer_agreement_accepted, acceptance: true, if: :data_transfer_agreement_required
@@ -401,7 +398,7 @@ class User < ApplicationRecord
 
   before_validation :normalize_parent_email
 
-  before_validation :update_share_setting, unless: :under_13?
+  before_validation :update_share_setting
 
   # NOTE: Order is important here.
   before_save :make_teachers_21,
@@ -436,10 +433,11 @@ class User < ApplicationRecord
   devise :invitable, :database_authenticatable, :registerable, :omniauthable,
     :recoverable, :rememberable, :trackable, :lockable
 
-  # Make sure to include this Concern after we include the default Devise
+  # Make sure to include these Concerns after we include the default Devise
   # modules, since it's trying to extend some methods added by those modules
   # that would be overridden by them if we included it before.
   include Devise::Models::ManualSessionExpiration
+  include Devise::DatabaseAuthenticationOverrides
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
 
@@ -662,23 +660,6 @@ class User < ApplicationRecord
       authentication_options.all?(&:oauth?) && encrypted_password.blank?
     else
       AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include?(provider) && encrypted_password.blank?
-    end
-  end
-
-  def update_without_password(params, *options)
-    if params[:races]
-      self.races = params[:races].join ','
-    end
-    params.delete(:races)
-    super
-  end
-
-  def update_with_password(params, *options)
-    if encrypted_password.blank?
-      params.delete(:current_password) # user does not have password so current password is irrelevant
-      update(params, *options)
-    else
-      super
     end
   end
 
@@ -990,49 +971,6 @@ class User < ApplicationRecord
     false
   end
 
-  # There are some shenanigans going on with this age stuff. The
-  # actual persisted column is birthday -- so we convert age to a
-  # birthday when writing and convert birthday to an age when
-  # reading. However -- when we are generating error messages for the
-  # user on an unsaved record, we actually 'read' and 'write' the
-  # attribute via these accessors. @age is a non-persisted member that
-  # we use to save the (possibly invalid) value that the user entered
-  # for age so we can generate the correct error message.
-
-  def age=(val)
-    @age = val
-    val = begin
-      val.to_i
-    rescue
-      0 # sometimes we get age: {"Pr" => nil}
-    end
-    return unless val > 0
-    return unless val < 200
-    return if birthday && val == age # don't change birthday if we want to stay the same age
-
-    self.birthday = val.years.ago
-  end
-
-  def age
-    return @age unless birthday
-    age = UserHelpers.age_from_birthday(birthday)
-    if age < 4
-      age = nil
-    elsif age >= 21
-      age = '21+'
-    end
-    age
-  end
-
-  # Duplicated by under_13? in auth_helpers.rb, which doesn't use the rails model.
-  def under_13?
-    age.nil? || age.to_i < 13
-  end
-
-  def over_21?
-    !age.nil? && age.to_i >= 21
-  end
-
   def mute_music?
     !!mute_music
   end
@@ -1324,28 +1262,6 @@ class User < ApplicationRecord
     user_course_data + user_script_data
   end
 
-  def sections_as_student_participant
-    sections_as_student.select {|s| !s.pl_section?}
-  end
-
-  def sections_as_pl_participant
-    sections_as_student.select(&:pl_section?)
-  end
-
-  def all_sections
-    sections_as_teacher = student? ? [] : sections_instructed.to_a
-    sections_as_teacher.concat(sections_as_student).uniq
-  end
-
-  # Figures out the unique set of courses assigned to sections that this user
-  # is a part of.
-  # @return [Array<Course>]
-  def section_courses
-    # In the future we may want to make it so that if assigned a script, but that
-    # script has a default course, it shows up as a course here
-    all_sections.filter_map(&:unit_group).uniq
-  end
-
   def visible_scripts
     scripts.map(&:cached).select {|s| [Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview].include?(s.get_published_state)}
   end
@@ -1364,17 +1280,6 @@ class User < ApplicationRecord
     end
 
     all_scripts
-  end
-
-  # return the id of the most-recently-created section the user instructs.
-  def last_section_id
-    teacher? ? sections_instructed.where(hidden: false).last&.id : nil
-  end
-
-  # The section which the user most recently joined as a student, or nil if none exists.
-  # @return [Section|nil]
-  def last_joined_section
-    Follower.where(student_user: self).order(created_at: :desc).first.try(:section)
   end
 
   # Returns integer days since account creation, rounded down
@@ -1693,11 +1598,12 @@ class User < ApplicationRecord
     self.sharing_disabled = true if under_13?
   end
 
-  # If a user is now over age 13, we should update
-  # their share setting to enabled, if they are in no sections.
+  # If the user is not in any sections, set sharing based on age (disabled if under 13).
   def update_share_setting
-    self.sharing_disabled = false if sections_as_student.empty?
-    return true
+    if sections_as_student.empty?
+      self.sharing_disabled = under_13?
+    end
+    true
   end
 
   # When creating an account, we want to look for any channels that got created

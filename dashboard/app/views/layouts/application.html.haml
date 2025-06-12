@@ -2,6 +2,7 @@
 -require '../shared/middleware/helpers/experiments'
 %html{dir: locale_dir, lang: locale}
   %head
+    %script{src: webpack_asset_path("js/localization.js"), 'data-ot-ignore' => ''}
     = render partial: 'i18n/crowdin_in_context_tool'
     = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'onetrust_cookie_scripts.haml')), type: :haml, locals: {dashboard: true, domain: 'code.org'}
     - appname = Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]"

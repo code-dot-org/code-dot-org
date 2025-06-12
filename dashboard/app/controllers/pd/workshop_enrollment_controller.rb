@@ -31,15 +31,15 @@ class Pd::WorkshopEnrollmentController < ApplicationController
         }.to_json
       }
     elsif !current_user
-      @script_data = {
-        props: {
-          new_account_url: "/users/sign_up/login_type?user_type=teacher&user_return_to=/pd/workshops/#{@workshop.id}/enroll",
-          existing_account_url: "/users/sign_in?user_return_to=/pd/workshops/#{@workshop.id}/enroll"
-        }.to_json
-      }
-      render :logged_out
+      source_page = ERB::Util.url_encode('workshop enroll')
+      return_to = ERB::Util.url_encode("/pd/workshops/#{@workshop.id}/enroll")
+
+      redirect_to "/logged_out?source_page=#{source_page}&return_to=#{return_to}"
     elsif current_user.user_type == 'student'
-      render :students_cannot_enroll
+      source_page = ERB::Util.url_encode('workshop enroll')
+      return_to = ERB::Util.url_encode("/pd/workshops/#{@workshop.id}/enroll")
+
+      redirect_to "/teacher_account_required?source_page=#{source_page}&return_to=#{return_to}"
     elsif missing_application?
       render :missing_application
     elsif current_user.teacher? && current_user.email.blank?

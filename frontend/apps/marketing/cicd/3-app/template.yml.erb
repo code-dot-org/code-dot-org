@@ -692,6 +692,7 @@ Resources:
               - next-url
               - Accept
               - x-prerender-revalidate
+              - Host
           CookiesConfig:
             CookieBehavior: whitelist
             Cookies:
@@ -726,6 +727,19 @@ Resources:
         Comment: Adds Cache-Control if not present
         Runtime: cloudfront-js-2.0
 
+  # For immutable static assets (hashed assets like JS/CSS files), ensure that the Cache-Control header is set to immutable
+  ImmutableStaticAssetsResponseHeadersPolicy:
+    Type: AWS::CloudFront::ResponseHeadersPolicy
+    Properties:
+      ResponseHeadersPolicyConfig:
+        Name: !Sub "${AWS::StackName}-Assets-ResponseHeader-Policy"
+        Comment: "Ensure immutable static assets have Cache-Control header set to immutable"
+        CustomHeadersConfig:
+          Items:
+            - Header: cache-control
+              Override: false # Do not override the cache control from the origin if it is available
+              Value: public, max-age=31536000, immutable
+
   CloudFrontDistribution:
     Type: AWS::CloudFront::Distribution
     Properties:
@@ -737,6 +751,7 @@ Resources:
 
         Aliases:
           - !Sub "${SubdomainName}.${BaseDomainName}"
+          - !Sub "preview-${SubdomainName}.${BaseDomainName}"
 
         Origins:
           - Id: marketing-sites-application-origin
@@ -756,7 +771,7 @@ Resources:
           TargetOriginId: marketing-sites-application-origin
           ViewerProtocolPolicy: redirect-to-https
           Compress: true
-          CachePolicyId: !Ref ApplicationCachingPolicy
+          CachePolicyId: 4135ea2d-6df8-44a3-9df3-4b5a84be39ad # Managed-CachingDisabled (Disabled until this distribution becomes the main one instead of daisy chained)
           OriginRequestPolicyId: "216adef6-5c7f-47e4-b989-5492eafa07d3" # AllViewer
           FunctionAssociations:
             - EventType: viewer-response
@@ -770,6 +785,12 @@ Resources:
         Restrictions:
           GeoRestriction:
             RestrictionType: none
+
+        # Temporary until distribution becomes the main one, after which Real Time Logging is enabled to avoid double counting between Pegasus and this distribution.
+        Logging:
+          Bucket: "cdo-logs.s3.amazonaws.com"
+          Prefix: !Sub "AWSLogs/${AWS::AccountId}/CloudFront/${SubdomainName}.${BaseDomainName}/"
+          IncludeCookies: false
 
         CacheBehaviors:
           # Path: /api/*
@@ -795,9 +816,11 @@ Resources:
               - HEAD
               - OPTIONS
             CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6 # Managed-CachingOptimized
+            Compress: true
             PathPattern: /_next/*
             TargetOriginId: marketing-sites-static-assets-origin
             ViewerProtocolPolicy: redirect-to-https
+            ResponseHeadersPolicyId: !Ref ImmutableStaticAssetsResponseHeadersPolicy
 
   CloudFrontDistributionDNS:
     Type: AWS::Route53::RecordSet
@@ -809,6 +832,18 @@ Resources:
         Ref: HostedZoneId
       Name: !Sub "${SubdomainName}.${BaseDomainName}"
       Type: A
+
+  PreviewCloudFrontDistributionDNS:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      AliasTarget:
+        DNSName: !GetAtt CloudFrontDistribution.DomainName
+        HostedZoneId: Z2FDTNDATAQYW2 # Cloudfront Hosted Zone ID, see: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-aliastarget.html
+      HostedZoneId:
+        Ref: HostedZoneId
+      Name: !Sub "preview-${SubdomainName}.${BaseDomainName}"
+      Type: A
+
   ################################
   # End AWS Cloudfront Resources #
   ################################

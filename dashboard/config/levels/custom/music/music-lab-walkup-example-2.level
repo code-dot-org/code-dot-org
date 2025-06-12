@@ -7,7 +7,7 @@
   "user_id": 14639,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Walkup Song Music Example 2",
+    "long_instructions": "Walk-up songs for characters from **Encanto**:\r\n\r\n1) **Antonio Madrigal** - playful, upbeat, optimistic. His walk-up song is upbeat and groovy to match his high-energy animal companions.\r\n2) **Julieta Madrigal** - gentle, warm, supportive. Her walk-up song is restrained with gentle beats to match her healing food.\r\n3) **Isabela Madrigal** - passionate, complicated. Her walk-up song starts restrained but then builds to a big distorted explosion, matching her transformation in the movie.",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -36,8 +36,8 @@
             {
               "type": "triggered_at_simple2",
               "id": "triggered_at_simple2",
-              "x": 619,
-              "y": 10,
+              "x": 650,
+              "y": 110,
               "fields": {
                 "trigger": "<field name=\"trigger\">trigger1</field>",
                 "trigger_start": "<field name=\"trigger_start\">immediately</field>"
@@ -90,7 +90,7 @@
                   "next": {
                     "block": {
                       "type": "play_sounds_together",
-                      "id": "(@Et@wG+L4k:D|5j+wlG",
+                      "id": "E0m)P3@obsJ6w#[yVTY]",
                       "extraState": {
                         "disableNextConnection": false
                       },
@@ -98,22 +98,46 @@
                         "code": {
                           "block": {
                             "type": "play_sound_at_current_location_simple2",
-                            "id": "$1o#S@=qz1ikW`Dg`H?0",
+                            "id": "h9{bg`uT#6IxAfDox}JX",
                             "extraState": {
                               "disableNextConnection": false
                             },
                             "fields": {
-                              "sound": "indie/guitar_lick"
+                              "sound": "pop/bass_jelly"
                             },
                             "next": {
                               "block": {
                                 "type": "play_sound_at_current_location_simple2",
-                                "id": "llZu0]QDPK3ia=rJa0tb",
+                                "id": "3N;VYGEhj-(Ftd_SLH]K",
                                 "extraState": {
                                   "disableNextConnection": false
                                 },
                                 "fields": {
-                                  "sound": "rock/arena_alternate_beat"
+                                  "sound": "hiphop/bass_fly"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "-/Q{z?wE(1@uTCwO~q0V",
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "electro/drum_beat_edm"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "$1o#S@=qz1ikW`Dg`H?0",
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "indie/guitar_lick"
+                                        }
+                                      }
+                                    }
+                                  }
                                 }
                               }
                             }
@@ -123,7 +147,7 @@
                       "next": {
                         "block": {
                           "type": "play_sounds_together",
-                          "id": "$ee,@L:g|q|J|P.O@_2u",
+                          "id": "hT7Z5G6V/UR:ljDa@#B;",
                           "extraState": {
                             "disableNextConnection": false
                           },
@@ -131,22 +155,58 @@
                             "code": {
                               "block": {
                                 "type": "play_sound_at_current_location_simple2",
-                                "id": "g`e2/~:6R)i|5BF[~1dO",
+                                "id": "3P-aXdT?6_X9l^2aa~B2",
                                 "extraState": {
                                   "disableNextConnection": false
                                 },
                                 "fields": {
-                                  "sound": "groove/drum_beat_plexi"
+                                  "sound": "pop/bass_jelly"
                                 },
                                 "next": {
                                   "block": {
                                     "type": "play_sound_at_current_location_simple2",
-                                    "id": "jzo6`O|ObuT6AhKS4`tM",
+                                    "id": "12}S{-5y8(`7{hjRg1[x",
                                     "extraState": {
                                       "disableNextConnection": false
                                     },
                                     "fields": {
-                                      "sound": "groove/guitar_high_riff"
+                                      "sound": "hiphop/bass_fly"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "V6Mq-Uk[{6p,2t/~O@%b",
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "electro/drum_beat_edm"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "Dj{x6|Xor}~)O!8VJ9dz",
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "indie/guitar_lick"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "|kFQvz$Y+Y]G#]F)lYW-",
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "sound": "hiphop/synth_whistle"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
                                     }
                                   }
                                 }
@@ -423,6 +483,18 @@
                                         },
                                         "fields": {
                                           "sound": "rock/riff_guitar"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "riux2[(q}.sgrG?~4@b{",
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "rock/crash"
+                                            }
+                                          }
                                         }
                                       }
                                     }
@@ -446,9 +518,11 @@
       "playerEnabled": false,
       "validationEnabled": false
     },
+    "display_name": "Encanto",
+    "bubble_choice_description": "Explore Walk-Up songs for characters from Encanto",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-06-03T22:36:49.974+00:00\",\"changed\":[\"cloned from \\\"music-lab-walkup-example-1\\\"\"],\"cloned_from\":\"music-lab-walkup-example-1\"},{\"changed_at\":\"2025-06-03 22:36:57 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-03 22:37:14 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-03 22:38:30 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-03 22:38:40 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-06-03T22:36:49.974+00:00\",\"changed\":[\"cloned from \\\"music-lab-walkup-example-1\\\"\"],\"cloned_from\":\"music-lab-walkup-example-1\"},{\"changed_at\":\"2025-06-03 22:36:57 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-03 22:37:14 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-03 22:38:30 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-03 22:38:40 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-05 18:51:25 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-05 19:00:31 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-05 19:01:34 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-05 20:09:48 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -127,7 +127,6 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
         type === 'Console' ? setConsoleFontSize : setEditorFontSize;
       dispatch(reduxAction(selectedKey));
       sendCodebridgeAnalyticsEvent(event, appName, {
-        levelPath: window.location.pathname,
         fontSize: selectedKey,
       });
     }
@@ -139,7 +138,6 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
       new UserPreferences().setGlobalTheme(value);
     }
     sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_THEME_CHANGE, appName, {
-      levelPath: window.location.pathname,
       theme: value,
     });
   };

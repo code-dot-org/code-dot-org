@@ -290,6 +290,10 @@ When /^I wait until (?:element )?"([^"]*)" is (not )?checked$/ do |selector, neg
   wait_until {@browser.execute_script("return $(\"#{selector}\").is(':checked');") == negation.nil?}
 end
 
+def jquery_is_element_enabled(selector)
+  "return $(#{selector.dump}).is(':enabled') && $(#{selector.dump}).css('visibility') !== 'hidden';"
+end
+
 def jquery_is_element_visible(selector)
   "return $(#{selector.dump}).is(':visible') && $(#{selector.dump}).css('visibility') !== 'hidden';"
 end
@@ -310,6 +314,11 @@ end
 When /^I wait until (?:element )?"([.#])([^"]*)" is (not )?enabled$/ do |selector_symbol, name, negation|
   selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
   wait_for_element(selection_criteria, negation.nil?)
+end
+
+When /^I wait until element "([^"]*)" is (not )?enabled using jQuery$/ do |selector, negation|
+  wait_for_jquery
+  wait_until {@browser.execute_script(jquery_is_element_enabled(selector)) == negation.nil?}
 end
 
 When /^I wait until element with css selector "([^"]*)" is (not )?enabled$/ do |css_selector, negation|

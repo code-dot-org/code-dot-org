@@ -37,6 +37,7 @@ const LinkOption: React.FC<LinkElementProps> = ({
     <li>
       {isTeacherDashboard ? (
         <Link
+          id={`ui-test-${label.replace(' ', '-')}`}
           to={url}
           className={styles.dropdownMenuItem}
           onClick={() => {
@@ -55,6 +56,7 @@ const LinkOption: React.FC<LinkElementProps> = ({
         </Link>
       ) : (
         <a
+          id={`ui-test-${label.replaceAll(' ', '-').replaceAll(':', '')}`}
           className={styles.dropdownMenuItem}
           href={url}
           onClick={() => {

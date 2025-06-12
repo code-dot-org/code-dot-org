@@ -720,11 +720,6 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
       {
-        source: '/farsi',
-        destination: 'https://codeinfarsi.org/',
-        permanent: false,
-      },
-      {
         source: '/weblab',
         destination: '/tools/web-lab',
         permanent: false,
@@ -1954,6 +1949,11 @@ const nextConfig: NextConfig = {
       {
         source: '/farsi',
         destination: 'https://global.code.org/farsi',
+        permanent: false,
+      },
+      {
+        source: '/csaif',
+        destination: '/curriculum/artificial-intelligence-foundations',
         permanent: false,
       },
     ];

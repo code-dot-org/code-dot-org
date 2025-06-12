@@ -12,6 +12,9 @@ describe('Brand Unit Tests', () => {
     });
 
     it('should return Code.org', () => {
+      expect(getBrandFromHostname('code.marketing-sites.localhost:3001')).toBe(
+        Brand.CODE_DOT_ORG,
+      );
       expect(getBrandFromHostname('localhost:3001')).toBe(Brand.CODE_DOT_ORG);
       expect(getBrandFromHostname('code.org')).toBe(Brand.CODE_DOT_ORG);
       expect(getBrandFromHostname('staging.code.org')).toBe(Brand.CODE_DOT_ORG);

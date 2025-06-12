@@ -1,10 +1,15 @@
 import {render, screen, fireEvent, waitFor} from '@testing-library/react';
 import React from 'react';
+import {Provider} from 'react-redux';
 
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import AiDiffChat from '@cdo/apps/aiDifferentiation/AiDiffChat';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {getStore, registerReducers} from '@cdo/apps/redux';
+import currentUser, {
+  setInitialData,
+} from '@cdo/apps/templates/currentUserRedux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {
   AiInteractionStatus as Status,
@@ -60,8 +65,28 @@ describe('AiDiffChat', () => {
     jest.restoreAllMocks();
   });
 
+  function renderDefault(propOverrides = {}) {
+    const store = getStore();
+
+    registerReducers({
+      currentUser,
+    });
+    store.dispatch(
+      setInitialData({
+        id: 1,
+        name: 'test_user',
+      })
+    );
+
+    render(
+      <Provider store={store}>
+        <AiDiffChat {...defaultProps} {...propOverrides} />
+      </Provider>
+    );
+  }
+
   it('initial message and suggested prompts are rendered', () => {
-    render(<AiDiffChat {...defaultProps} />);
+    renderDefault();
     const message = screen.getByLabelText(i18n.aiChatMessageBot());
     expect(message).toHaveTextContent(
       "Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me."
@@ -76,11 +101,11 @@ describe('AiDiffChat', () => {
   });
 
   it('initial message and suggested prompts are rendered, APCSP prompts included if csp in context', () => {
-    const overideProps = {
+    const overrideProps = {
       ...defaultProps,
       curriculumCourses: ['csp-year', 'csp'],
     };
-    render(<AiDiffChat {...overideProps} />);
+    renderDefault(overrideProps);
     const message = screen.getByLabelText(i18n.aiChatMessageBot());
     expect(message).toHaveTextContent(
       "Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me."
@@ -101,7 +126,7 @@ describe('AiDiffChat', () => {
       ...defaultProps,
       context: {type: AiDiffContext.GENERAL},
     };
-    render(<AiDiffChat {...overrideProps} />);
+    renderDefault(overrideProps);
     const message = screen.getByLabelText(i18n.aiChatMessageBot());
     expect(message).toHaveTextContent(
       "Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me."
@@ -116,7 +141,7 @@ describe('AiDiffChat', () => {
   });
 
   it('Selecting a suggested prompt gives response', async () => {
-    render(<AiDiffChat {...defaultProps} />);
+    renderDefault();
 
     //click a suggested prompt
     const prompt = screen.getByRole('checkbox', {name: 'Explain a concept'});
@@ -187,11 +212,11 @@ describe('AiDiffChat', () => {
   });
 
   it('Selecting a 2-stage APCSP suggested prompt gives response and second set of prompts', async () => {
-    const overideProps = {
+    const overrideProps = {
       ...defaultProps,
       curriculumCourses: ['csp-year', 'csp'],
     };
-    render(<AiDiffChat {...overideProps} />);
+    renderDefault(overrideProps);
 
     //click a suggested prompt
     expect(screen.getAllByRole('checkbox')).toHaveLength(7);
@@ -286,7 +311,7 @@ describe('AiDiffChat', () => {
   });
 
   it('Feedback on initial message has no API call, Feedback on actual assistant messages does', async () => {
-    render(<AiDiffChat {...defaultProps} />);
+    renderDefault();
 
     //clicking feedback on the inital dummy message doesn't log or call api
     const thumbsUpBtn = screen.getByRole('button', {
@@ -404,7 +429,7 @@ describe('AiDiffChat', () => {
   });
 
   it('Typing a message shows in chat, then gets a response', async () => {
-    render(<AiDiffChat {...defaultProps} />);
+    renderDefault();
     const userMessage = 'Hello this is a user message';
     const textbox = screen.getByRole('textbox');
     const submit_btn = screen.getByRole('button', {name: i18n.submit()});
@@ -491,7 +516,7 @@ describe('AiDiffChat', () => {
   });
 
   it('Selecting a prompt does nothing if there are more recent messages', async () => {
-    render(<AiDiffChat {...defaultProps} />);
+    renderDefault();
     const userMessage = 'Hello this is a user message';
     const textbox = screen.getByRole('textbox');
     const submit_btn = screen.getByRole('button', {name: i18n.submit()});
@@ -576,7 +601,7 @@ describe('AiDiffChat', () => {
   });
 
   it('Suggest prompt button is present and works', () => {
-    render(<AiDiffChat {...defaultProps} />);
+    renderDefault();
     expect(screen.getAllByRole('checkbox')).toHaveLength(5);
     const suggest_prompt = screen.getByRole('button', {
       name: i18n.aiDifferentiation_suggest_prompt(),

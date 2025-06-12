@@ -8,7 +8,7 @@ module Pd
       COURSE_FACILITATOR = 'Facilitator'.freeze,
       COURSE_ADMIN_COUNSELOR = 'Admin/Counselor Workshop'.freeze,
       COURSE_BUILD_YOUR_OWN = 'Build Your Own Workshop'.freeze,
-      COURSE_AIF = 'AI Fundamentals'.freeze,
+      COURSE_AIF = 'AI Foundations'.freeze,
     ].freeze
 
     ARCHIVED_COURSES = [

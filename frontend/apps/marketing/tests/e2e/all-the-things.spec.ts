@@ -10,7 +10,7 @@ import {MarketingPage} from './pom/marketing';
 test.describe('All the things UI e2e test', () => {
   test.describe('a11y', () => {
     test('should have no accessibility violations', async ({page}) => {
-      const allTheThingsPage = new AllTheThingsPage(page, 'en-US');
+      const allTheThingsPage = new AllTheThingsPage(page, {locale: 'en-US'});
       await allTheThingsPage.goto();
 
       const accessibilityScanResults = await new AxeBuilder({page}).analyze();
@@ -93,7 +93,7 @@ test.describe('All the things UI e2e test', () => {
   });
 
   test('should have the correct top level SEO metadata', async ({page}) => {
-    const allTheThingsPage = new AllTheThingsPage(page, 'en-US');
+    const allTheThingsPage = new AllTheThingsPage(page, {locale: 'en-US'});
     await allTheThingsPage.goto();
 
     expect(await allTheThingsPage.pageTitle).toBe(
@@ -110,7 +110,7 @@ test.describe('All the things UI e2e test', () => {
       'OpenGraph Description',
     );
     expect(await allTheThingsPage.getOpenGraph('image')).toBe(
-      'https://contentful-images.code.org/90t6bu6vlf76/4hXiOPiRlCXpmtypRNOZqc/9ebe430094c1ae1faf742e1de3f8aa8b/engineering-only-opengraph-default.png',
+      'https://contentful-images.code.org/90t6bu6vlf76/4hXiOPiRlCXpmtypRNOZqc/9ebe430094c1ae1faf742e1de3f8aa8b/engineering-only-opengraph-default.png?fm=avif',
     );
     expect(await allTheThingsPage.getOpenGraph('type')).toBe('website');
   });
@@ -120,7 +120,7 @@ test.describe('All the things UI e2e test', () => {
       let component: Locator;
 
       test.beforeEach(async ({page}) => {
-        const allTheThingsPage = new AllTheThingsPage(page, locale);
+        const allTheThingsPage = new AllTheThingsPage(page, {locale});
         await allTheThingsPage.goto();
 
         component = allTheThingsPage.getSectionLocator('Localization');
@@ -151,7 +151,7 @@ test.describe('All the things UI e2e test', () => {
     let allTheThingsPage: AllTheThingsPage;
 
     test.beforeEach(async ({page}) => {
-      allTheThingsPage = new AllTheThingsPage(page, 'en-US');
+      allTheThingsPage = new AllTheThingsPage(page, {locale: 'en-US'});
       await allTheThingsPage.goto();
     });
 
@@ -183,6 +183,36 @@ test.describe('All the things UI e2e test', () => {
         expect(await primaryButton.count()).toBeGreaterThan(0);
         expect(await secondaryButton.count()).toBeGreaterThan(0);
         expect(await externalLinkButton.count()).toBeGreaterThan(0);
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('action block pattern default', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator(
+          'Action Block Pattern Default',
+        );
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('action block pattern hidden elements', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator(
+          'Action Block Pattern Hidden Elements',
+        );
+        await component.scrollIntoViewIfNeeded();
       });
 
       test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
@@ -627,6 +657,34 @@ test.describe('All the things UI e2e test', () => {
           component.getByText('Paragraph Secondary Bold'),
         ).toBeVisible();
         await expect(component.getByText('Lorem ipsum')).toBeVisible();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('rich text', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator('Rich Text');
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('renders', async () => {
+        await expect(component.getByText('Normal text')).toBeVisible();
+        await expect(component.getByText('Bold text')).toBeVisible();
+        await expect(
+          component.getByText('Multiline complex text'),
+        ).toBeVisible();
+
+        await expect(component.getByText('Normal link')).toBeVisible();
+        await expect(component.getByText('Bold link')).toBeVisible();
+
+        await expect(component.getByRole('list')).toHaveCount(2);
+
+        await expect(component.getByRole('table')).toBeVisible();
       });
 
       test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {

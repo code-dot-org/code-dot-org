@@ -10,8 +10,9 @@ import {
 import {getNoteName, convertRelativeToAbsolutePitch} from '../utils/Notes';
 import {
   generateGraphDataFromTune,
-  isNoteAvailableInScaleMode,
+  getNoteColorInfo,
   TuneGraphEvent,
+  getDisplayNotes,
 } from '../utils/Tunes';
 import InstrumentGrid from '../views/InstrumentGrid';
 
@@ -107,7 +108,7 @@ export default class FieldTune extends GoogleBlockly.Field {
     GoogleBlockly.utils.dom.createSvgElement(
       'rect',
       {
-        fill: color.neutral_dark90,
+        fill: color.neutral_dark,
         x: 1,
         y: 1,
         width: FIELD_WIDTH,
@@ -127,10 +128,20 @@ export default class FieldTune extends GoogleBlockly.Field {
         })
       : (event: InstrumentTickEvent) => event;
 
+    const displayNotes = getDisplayNotes(
+      'notes',
+      scaleMode,
+      this.getValue().instrument,
+      key
+    );
+
     const notes = events
       .map(mapFn)
-      .filter((event: InstrumentTickEvent) =>
-        isNoteAvailableInScaleMode(key, event.note, scaleMode)
+      .filter(
+        (event: InstrumentTickEvent) =>
+          displayNotes.findIndex(
+            displayNote => displayNote.note === event.note
+          ) !== -1
       );
 
     const graphNotes: TuneGraphEvent[] = generateGraphDataFromTune({
@@ -144,15 +155,21 @@ export default class FieldTune extends GoogleBlockly.Field {
     });
 
     graphNotes.forEach(graphNote => {
+      const {selectedColor} = getNoteColorInfo(
+        scaleMode,
+        displayNotes.findIndex(
+          displayNote => displayNote.note === graphNote.note
+        )
+      );
+
       GoogleBlockly.utils.dom.createSvgElement(
         'rect',
         {
-          fill: '#68d1f7',
+          fill: selectedColor,
           x: graphNote.x,
           y: graphNote.y,
           width: graphNote.width,
           height: graphNote.height,
-          rx: 1,
         },
         this.backgroundElement
       );
