@@ -132,7 +132,7 @@ class ScriptLevelsController < ApplicationController
     end
     authenticate_user! unless can?(:read, @script, @unit_group)
 
-    return render 'levels/no_access' unless can?(:read, @script_level, @unit_group)
+    return render 'levels/no_access' unless can?(:read, @script_level, {context_unit_group: @unit_group})
 
     if current_user&.script_level_hidden?(@script_level)
       view_options(full_width: true)
