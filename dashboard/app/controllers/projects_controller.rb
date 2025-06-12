@@ -566,7 +566,6 @@ class ProjectsController < ApplicationController
     begin
       storage_id, _ = storage_decrypt_channel_id(channel_id)
       Projects.new(storage_id).publish(channel_id, project_type, current_user)
-      return render(status: :forbidden, json: {error: exception.message})
     end
     # Send ZenDesk ticket with user/project info and submission description.
     send_project_submission(current_user.name || '', current_user.username || '', project_type, channel_id, submission_description)
