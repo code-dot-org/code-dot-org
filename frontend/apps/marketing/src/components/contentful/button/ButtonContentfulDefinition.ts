@@ -12,21 +12,21 @@ export const ButtonContentfulComponentDefinition: ComponentDefinition = {
     imageUrl:
       'https://contentful-images.code.org/90t6bu6vlf76/6B9UVqsphQR9MUnNf4tYHU/94e6f32fcb793401f02399ceb0069722/component_button_tooltip.png',
   },
-  builtInStyles: ['cfTextAlign'],
+  builtInStyles: ['cfTextAlign', 'cfBackgroundColor', 'cfTextColor'],
   variables: {
-    color: {
-      displayName: 'Color',
-      type: 'Text',
-      defaultValue: 'purple',
-      group: 'style',
-      validations: {
-        in: [
-          {value: 'purple', displayName: 'Purple'},
-          {value: 'black', displayName: 'Black'},
-          {value: 'white', displayName: 'White'},
-        ],
-      },
-    },
+    // color: {
+    //   displayName: 'Color',
+    //   type: 'Text',
+    //   defaultValue: 'purple',
+    //   group: 'style',
+    //   validations: {
+    //     in: [
+    //       {value: 'purple', displayName: 'Purple'},
+    //       {value: 'black', displayName: 'Black'},
+    //       {value: 'white', displayName: 'White'},
+    //     ],
+    //   },
+    // },
     type: {
       displayName: 'Type',
       type: 'Text',

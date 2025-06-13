@@ -16,7 +16,7 @@ type ButtonProps = {
   /** Button text */
   text?: string;
   /** Button color */
-  color: Extract<ButtonColor, 'purple' | 'black' | 'white'>;
+  color: Extract<ButtonColor, 'purple' | 'black' | 'white' | 'custom'>;
   /** Button type (semantic) */
   type: Extract<ButtonType, 'primary' | 'secondary'>;
   /** Button link href */

@@ -1,6 +1,7 @@
 'use client';
 // Register custom components client-side
 import '@/contentful/register-custom-components';
+import '@/contentful/register-tokens';
 import {ExperienceRoot} from '@contentful/experiences-sdk-react';
 
 type ExperiencePageLoaderProps = {
