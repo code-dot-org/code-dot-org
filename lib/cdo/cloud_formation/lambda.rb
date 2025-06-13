@@ -38,9 +38,9 @@ module Cdo::CloudFormation
     # by installing dependencies, zipping the Lambda directory, uploading to S3, and returning the S3 URI to
     # populate the `AWS::Lambda::Function` `Code` Property.
     # Assumes Lambdas are in `/aws/cloudformation/lambdas/`.
-    def package_node_lambda(relative_directory)
+    def package_node_lambda(relative_directory, environment_variables: {})
       install_node_dependencies(relative_directory)
-      return zip_directory(relative_directory)
+      return zip_directory(relative_directory, environment_variables: environment_variables)
     end
 
     # Install npm packages used by a lambda to prepare the directory the lambda is in for being zipped and uploaded.
@@ -58,13 +58,24 @@ module Cdo::CloudFormation
     # to assist in populating the `Code` Property of a CloudFormation template `AWS::Lambda::Function` Resource.
     # Assumes Lambdas are in `/aws/cloudformation/lambdas/`.
     # @param relative_directory [String] Name of Lambda directory relative to `/aws/cloudformation/lambdas`.
+    # @param environment_variables [Hash] Environment variables to write to `env.json` in the zip package. This is intended
+    # for use in Lambda@Edge functions greater than 4KB in size, which cannot be inlined and do not support Lambda environment variables.
     # @param key_prefix [String] String to prefix on zip package filename (object key) before uploading to S3.
     # @return [String] JSON Deployment package https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html
-    def zip_directory(relative_directory, key_prefix: 'lambda')
+    def zip_directory(relative_directory, environment_variables: {}, key_prefix: 'lambda')
       absolute_directory = aws_dir('cloudformation/lambdas' + '//' + relative_directory)
       raise "#{absolute_directory} is not a file system directory." unless File.directory?(absolute_directory)
 
       Dir.chdir(absolute_directory) do
+        # If environment variables are provided, write them to a file.
+        if environment_variables.present?
+          raise ArgumentError, 'Environment variable hash must be a Hash.' unless environment_variables.is_a?(Hash)
+          File.open('env.json', 'w') do |file|
+            file.write(environment_variables.to_json)
+            CDO.log.info("Wrote lambda environment variables to #{absolute_directory}/env.json")
+          end
+        end
+
         # Zip files contain non-deterministic timestamps, so calculate a deterministic hash based on file contents.
         globs = absolute_directory + '/**/*'
         hash = Digest::MD5.hexdigest(
@@ -86,6 +97,9 @@ module Cdo::CloudFormation
           CDO.log.info("Uploading Lambda zip package to S3 (#{code_zip.length} bytes)...")
           s3_client.put_object({bucket: S3_LAMBDA_BUCKET, key: key, body: code_zip})
         end
+
+        File.delete('env.json') if environment_variables.present?
+
         {
           S3Bucket: S3_LAMBDA_BUCKET,
           S3Key: key
