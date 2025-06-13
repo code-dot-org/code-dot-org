@@ -1597,11 +1597,9 @@ var projects = (module.exports = {
    * @param {string} newName
    * @param {Object} options Optional parameters.
    * @param {boolean} options.shouldNavigate Whether to navigate to the project URL.
-   * @param {boolean} options.shouldPublish Whether to publish the new project.
    * @returns {Promise} Promise which resolves when the operation is complete.
    */
   copy(newName, options = {}) {
-    const {shouldPublish} = options;
     current = current || {};
     const queryParams = current.id ? {parent: current.id} : null;
     delete current.id;
@@ -1609,9 +1607,6 @@ var projects = (module.exports = {
     delete current.libraryName;
     delete current.libraryDescription;
     current.projectType = this.getStandaloneApp();
-    if (shouldPublish) {
-      current.shouldPublish = true;
-    }
     this.setName(newName);
     return new Promise((resolve, reject) => {
       channels.create(

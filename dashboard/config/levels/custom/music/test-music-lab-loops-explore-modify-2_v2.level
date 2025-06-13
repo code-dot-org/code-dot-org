@@ -672,10 +672,11 @@
     "bubble_choice_description": "Help Evie update her song to use loops!",
     "display_name": "Evie's Remix",
     "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/acoustic_arcade/acoustic_arcade.png",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:37.210+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-modify-2\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-modify-2\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:37.210+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-modify-2\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-modify-2\"},{\"changed_at\":\"2025-06-12 15:58:57 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

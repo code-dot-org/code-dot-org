@@ -32,7 +32,7 @@ class Pd::ProfessionalLearningController < ApplicationController
 
   # GET professional-learning/workshops
   def workshops
-    @available_national_workshops = Pd::ProfessionalLearningController.national_workshop_data
+    @national_workshops = Pd::ProfessionalLearningController.national_workshop_data
     @zip_from_school_info = current_user&.school_info&.school&.zip&.to_s&.rjust(5, '0') || current_user&.school_info&.zip&.to_s&.rjust(5, '0')
 
     view_options(full_width: true, no_padding_container: true)
@@ -212,7 +212,7 @@ class Pd::ProfessionalLearningController < ApplicationController
   # Returns if the given workshop is within the provided regional partner's area.
   private def in_region?(workshop, regional_partner)
     workshop.regional_partner_id == regional_partner.id &&
-      (workshop.participant_group_type == 'Regional' ||
+      (['Regional', 'National'].include?(workshop.participant_group_type)  ||
       [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSA, Pd::Workshop::COURSE_CSF].include?(workshop.course))
   end
 

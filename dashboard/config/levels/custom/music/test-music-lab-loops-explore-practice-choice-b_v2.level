@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:57:36.000Z",
   "level_num": "custom",
@@ -221,10 +222,10 @@
       "isPredictLevel": false
     },
     "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/chloe_treat_me/chloe_treat_me.jpg",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:36.732+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-practice-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-practice-choice-b\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:36.732+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-practice-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-practice-choice-b\"},{\"changed_at\":\"2025-06-12 15:54:30 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

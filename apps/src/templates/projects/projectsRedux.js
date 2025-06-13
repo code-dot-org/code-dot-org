@@ -6,11 +6,8 @@ import {combineReducers} from 'redux';
 
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 
-import {channels as channelsApi} from '../../clientApi';
-
 import {DELETE_SUCCESS} from './deleteDialog/deleteProjectDialogRedux';
 import {Galleries} from './projectConstants';
-import {PUBLISH_SUCCESS} from './publishDialog/publishDialogRedux';
 
 // Action types
 
@@ -23,10 +20,6 @@ const SET_PERSONAL_PROJECTS_LIST = 'projects/SET_PERSONAL_PROJECTS_LIST';
 const SET_LOADING_PERSONAL_PROJECTS_LIST =
   'projects/SET_LOADING_PERSONAL_PROJECTS_LIST';
 const UPDATE_PERSONAL_PROJECT_DATA = 'projects/UPDATE_PERSONAL_PROJECT_DATA';
-
-const UNPUBLISH_REQUEST = 'projects/UNPUBLISH_REQUEST';
-const UNPUBLISH_SUCCESS = 'projects/UNPUBLISH_SUCCESS';
-const UNPUBLISH_FAILURE = 'projects/UNPUBLISH_FAILURE';
 
 const START_RENAMING_PROJECT = 'projects/START_RENAMING_PROJECT';
 const UPDATE_PROJECT_NAME = 'projects/UPDATE_PROJECT_NAME';
@@ -89,14 +82,6 @@ export function setLoadingPersonalProjectsList(isLoading) {
 
 export function updatePersonalProjectData(projectId, data) {
   return {type: UPDATE_PERSONAL_PROJECT_DATA, projectId, data};
-}
-
-export function publishSuccess(lastPublishedAt, lastPublishedProjectData) {
-  return {type: PUBLISH_SUCCESS, lastPublishedAt, lastPublishedProjectData};
-}
-
-export function unpublishSuccess(projectId) {
-  return {type: UNPUBLISH_SUCCESS, projectId};
 }
 
 export function deleteSuccess(projectId) {
@@ -252,54 +237,6 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
       return {
         ...state,
         projects: projectsList,
-      };
-    case PUBLISH_SUCCESS:
-      if (!state.projects?.length) {
-        // We haven't loaded the projects and therefore have nothing to update.
-        return state;
-      }
-      var publishedChannel = action.lastPublishedProjectData.channel;
-
-      var publishedProjectIndex = state.projects.findIndex(
-        project => project.channel === publishedChannel
-      );
-
-      var updatedProjects = [...state.projects];
-      updatedProjects[publishedProjectIndex] = {
-        ...updatedProjects[publishedProjectIndex],
-        publishedAt: action.lastPublishedAt,
-      };
-
-      return {
-        ...state,
-        projects: updatedProjects,
-      };
-    case UNPUBLISH_REQUEST:
-      return {
-        ...state,
-        isUnpublishPending: true,
-      };
-    case UNPUBLISH_SUCCESS:
-      var unpublishedChannel = action.projectId;
-
-      var unpublishedProjectIndex = state.projects.findIndex(
-        project => project.channel === unpublishedChannel
-      );
-
-      var newProjects = [...state.projects];
-      newProjects[unpublishedProjectIndex] = {
-        ...newProjects[unpublishedProjectIndex],
-        publishedAt: null,
-      };
-
-      return {
-        ...state,
-        projects: newProjects,
-      };
-    case UNPUBLISH_FAILURE:
-      return {
-        ...state,
-        isUnpublishPending: false,
       };
     case DELETE_SUCCESS:
       var deletedChannel = action.projectId;
@@ -497,30 +434,6 @@ const fetchProjectToUpdate = (projectId, onComplete) => {
       onComplete(status, jqXhr.responseJSON);
     });
 };
-
-export function unpublishProject(projectId) {
-  return dispatch => {
-    dispatch({type: UNPUBLISH_REQUEST});
-    return new Promise((resolve, reject) => {
-      channelsApi.withProjectId(projectId).ajax(
-        'POST',
-        'unpublish',
-        () => {
-          dispatch({
-            type: UNPUBLISH_SUCCESS,
-            projectId: projectId,
-          });
-          resolve();
-        },
-        err => {
-          dispatch({type: UNPUBLISH_FAILURE});
-          reject(err);
-        },
-        null
-      );
-    });
-  };
-}
 
 export const updateProjectLibrary = (projectId, newData) => {
   return dispatch => {

@@ -90,7 +90,7 @@
       "sortUnrestrictedPacksByType": true
     },
     "display_name": "Layering Beats",
-    "thumbnail_url": "https://images.code.org/03c8a014a6af831580dee6a50c017cf7-Screenshot 2025-03-14 at 12.03.13 PM.png",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/shakira_whenever_wherever/shakira_whenever_wherever.jpg",
     "exemplar_settings": {
       "playerEnabled": true,
       "validationEnabled": true,
@@ -118,7 +118,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:48.964+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-choice-a\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:48.964+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-choice-a\"},{\"changed_at\":\"2025-06-12 15:32:51 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
