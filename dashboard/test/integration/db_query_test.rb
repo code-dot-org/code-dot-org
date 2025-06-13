@@ -10,6 +10,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     setup_script_cache
   end
 
+  # TODO: TEACH-1788: This will need to be updated when we change the test fixtures
   test "script level show" do
     student = create :student
     sign_in student

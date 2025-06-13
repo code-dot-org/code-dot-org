@@ -111,12 +111,12 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     get '/courses/course-with-bonus/units/1'
     assert :success
 
-    # TODO: Figure out stage urls?
     get '/s/script-with-bonus/stage/1/extras?section_id=999999'
     assert_redirected_to '/s/script-with-bonus/lessons/1/extras?section_id=999999'
+    follow_redirect!
+    assert_redirected_to '/courses/course-with-bonus/units/1/lessons/1/extras?section_id=999999'
   end
 
-  # TODO: Figure out lockable urls?
   test 'redirects urls with lockable and puzzle to lockable and levels' do
     @unit = create :script, name: 'test-script'
     create :single_unit_course, unit: @unit, name: 'test-course'
@@ -127,9 +127,13 @@ class RedirectsTest < ActionDispatch::IntegrationTest
 
     get '/s/test-script/lockable/1/puzzle/1'
     assert_redirected_to '/s/test-script/lockable/1/levels/1'
+    follow_redirect!
+    assert_redirected_to '/courses/test-course/units/1/lockable/1/levels/1'
 
     get '/s/test-script/lockable/1/puzzle/1/page/1'
     assert_redirected_to '/s/test-script/lockable/1/levels/1/page/1'
+    follow_redirect!
+    assert_redirected_to '/courses/test-course/units/1/lockable/1/levels/1/page/1'
 
     # ideally we would just return a 404, but it is easier to implement a
     # redirect to a url which 404s.

@@ -69,7 +69,6 @@ class ScriptsTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  # TODO: Figure out instruction urls?
   test 'levelbuilder instructions for csp2-2020' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in(create(:levelbuilder))
