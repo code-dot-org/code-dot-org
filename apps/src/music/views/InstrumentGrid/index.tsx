@@ -225,7 +225,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
     <FocusTrap
       focusTrapOptions={{
         initialFocus: '#instrument-dropdown',
-        escapeDeactivates: true,
+        fallbackFocus: '.blocklyDropDownDiv',
         clickOutsideDeactivates: true,
         allowOutsideClick: true,
       }}

@@ -157,7 +157,6 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
     <FocusTrap
       focusTrapOptions={{
         clickOutsideDeactivates: true,
-        escapeDeactivates: true,
         initialFocus: '#pattern-panel-select',
         fallbackFocus: '.blocklyDropDownDiv',
       }}
