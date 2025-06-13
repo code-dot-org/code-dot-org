@@ -44,8 +44,8 @@ experiments.GENDER_FEATURE_ENABLED = 'gender';
 experiments.AI_DIFFERENTIATION = 'ai-differentiation';
 // Experiment for showing the toggle a teacher can use to turn on AI Tutor for their section
 experiments.AI_TUTOR_ACCESS = 'ai-tutor';
-// Adds documentation links to block context menus in Sprite Lab (supported with Google Blockly only)
-experiments.SPRITE_LAB_DOCS = 'sl_docs';
+// Adds a "Get help with this block" option to block context menus if docs exist (e.g. Sprite Lab)
+experiments.BLOCKLY_DOCS = 'blockly_docs';
 // Adds a keyboard navigation toggle to the workspace header in Google Blockly labs
 experiments.KEYBOARD_NAVIGATION = 'blockly_keyboard';
 // Adds the ability to toggle between v1 and v2 of the section progress page of the teacher dashboard

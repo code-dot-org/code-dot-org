@@ -889,6 +889,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.topLevelProcedureAutopopulate =
       !!options.topLevelProcedureAutopopulate;
     blocklyWrapper.readOnly = !!opt_options.readOnly;
+    blocklyWrapper.showBlockHelp = !!optOptionsExtended.showBlockHelp;
 
     if (options.noFunctionBlockFrame) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;

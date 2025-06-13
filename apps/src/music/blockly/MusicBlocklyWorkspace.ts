@@ -192,6 +192,7 @@ export default class MusicBlocklyWorkspace {
         appType: EVENTS.BLOCKLY_APP_TYPE_MUSIC,
       },
       enableKeyboardNavigation,
+      showBlockHelp: true,
     } as GoogleBlockly.BlocklyOptions);
 
     this.resizeBlockly();
