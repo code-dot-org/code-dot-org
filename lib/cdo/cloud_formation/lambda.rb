@@ -1,4 +1,6 @@
 require 'active_support/core_ext/numeric/bytes'
+require 'zip'
+require 'stringio'
 
 module Cdo::CloudFormation
   # Helper functions related to use of Lambda functions in CloudFormation stacks.
@@ -66,14 +68,18 @@ module Cdo::CloudFormation
       absolute_directory = aws_dir('cloudformation/lambdas' + '//' + relative_directory)
       raise "#{absolute_directory} is not a file system directory." unless File.directory?(absolute_directory)
 
-      Dir.chdir(absolute_directory) do
+      env_json_path = File.join(absolute_directory, 'env.json')
+      env_json_created = false
+
+      begin
         # If environment variables are provided, write them to a file.
         if environment_variables.present?
           raise ArgumentError, 'Environment variable hash must be a Hash.' unless environment_variables.is_a?(Hash)
-          File.open('env.json', 'w') do |file|
+          File.open(env_json_path, 'w') do |file|
             file.write(environment_variables.to_json)
-            CDO.log.info("Wrote lambda environment variables to #{absolute_directory}/env.json")
+            CDO.log.info("Wrote lambda environment variables to #{env_json_path}")
           end
+          env_json_created = true
         end
 
         # Zip files contain non-deterministic timestamps, so calculate a deterministic hash based on file contents.
@@ -85,25 +91,41 @@ module Cdo::CloudFormation
             map {|file_name| Digest::MD5.file(file_name)}.
             join
         )
-        code_zip = `zip -qr - .`
+
+        # Create zip file in memory using Zip::File
+        zip_buffer = StringIO.new
+        Zip::File.open(zip_buffer, Zip::File::CREATE) do |zipfile|
+          Dir.glob(File.join(absolute_directory, '**', '*')).each do |file_path|
+            next if File.directory?(file_path)
+
+            # Calculate relative path within the zip (relative to absolute_directory)
+            relative_path = file_path.sub("#{absolute_directory}/", '')
+            zipfile.add(relative_path, file_path)
+          end
+        end
+
+        code_zip = zip_buffer.string
         key = "#{key_prefix}-#{hash}.zip"
+
         s3_client = Aws::S3::Client.new(http_read_timeout: 30)
         object_exists = begin
           s3_client.head_object(bucket: S3_LAMBDA_BUCKET, key: key)
         rescue
           nil
         end
+
         unless object_exists
           CDO.log.info("Uploading Lambda zip package to S3 (#{code_zip.length} bytes)...")
           s3_client.put_object({bucket: S3_LAMBDA_BUCKET, key: key, body: code_zip})
         end
 
-        File.delete('env.json') if environment_variables.present?
-
         {
           S3Bucket: S3_LAMBDA_BUCKET,
           S3Key: key
         }.to_json
+      ensure
+        # Clean up env.json file if we created it
+        File.delete(env_json_path) if env_json_created && File.exist?(env_json_path)
       end
     end
 
