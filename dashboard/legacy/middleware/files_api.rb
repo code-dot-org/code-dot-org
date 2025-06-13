@@ -1023,8 +1023,9 @@ class FilesApi < Sinatra::Base
   #
   get %r{/v3/files-public/([^/]+)/.metadata/([^/]+)$} do |encrypted_channel_id, filename|
     s3_prefix = "#{METADATA_PATH}/#{filename}"
+    file = get_file('files', encrypted_channel_id, s3_prefix)
     cache_for 1.hour
-    get_file('files', encrypted_channel_id, s3_prefix)
+    file
   end
 
   #
