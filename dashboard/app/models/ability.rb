@@ -329,7 +329,7 @@ class Ability
 
     can :read, ScriptLevel do |script_level, params|
       script = script_level.script
-      unit_group = params[:context_unit_group] || script.original_unit_group
+      unit_group = params&.[](:context_unit_group) || script.original_unit_group
       if can?(:read, script, unit_group)
         # login is required if this script always requires it or if request
         # params were passed to authorize! and includes login_required=true
