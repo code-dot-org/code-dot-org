@@ -308,48 +308,5 @@ module ProjectsList
         :users__properties___properties,
       ]
     end
-
-    private def fetch_published_project_types(project_groups, limit:, published_before: nil)
-      users = :"dashboard_#{CDO.rack_env}__users"
-
-      user_project_storage_ids = :"#{CDO.dashboard_db_name}__user_project_storage_ids"
-
-      {}.tap do |projects|
-        project_groups.map do |project_group|
-          project_types = PUBLISHED_PROJECT_TYPE_GROUPS[project_group]
-          projects[project_group] = Projects.table.
-            select(*project_and_user_fields).
-            join(user_project_storage_ids, id: :storage_id).
-            join(users, id: :user_id).
-            where(state: 'active', project_type: project_types).
-            where {published_before.nil? || published_at < DateTime.parse(published_before)}.
-            exclude(published_at: nil).
-            order(Sequel.desc(:published_at)).
-            limit(limit).
-            filter_map {|project_and_user| get_published_project_and_user_data project_and_user}
-        end
-      end
-    end
-
-    # Extracts published project data from a row that is a join of the
-    # projects and user tables.
-    #
-    # @param [hash] the join of projects and user tables for a published project.
-    #  See project_and_user_fields for which fields it contains.
-    # @returns [hash, nil] containing fields relevant to the published project or
-    #  nil when the user has sharing_disabled = true for App Lab, Game Lab and Sprite Lab.
-    private def get_published_project_and_user_data(project_and_user)
-      return nil if get_sharing_disabled_from_properties(project_and_user[:properties]) && ADVANCED_PROJECT_TYPES.include?(project_and_user[:project_type])
-      return nil if project_and_user[:abuse_score] > 0
-      channel_id = storage_encrypt_channel_id(project_and_user[:storage_id], project_and_user[:id])
-      Projects.get_published_project_data(project_and_user, channel_id).merge(
-        {
-          # For privacy reasons, include only the first initial of the student's name.
-          studentName: UserHelpers.initial(project_and_user[:name]),
-          studentAgeRange: UserHelpers.age_range_from_birthday(project_and_user[:birthday]),
-          isFeatured: false
-        }
-      ).with_indifferent_access
-    end
   end
 end
