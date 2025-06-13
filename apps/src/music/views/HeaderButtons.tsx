@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import React, {useCallback, useContext} from 'react';
 import {useSelector} from 'react-redux';
 
+import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
@@ -206,6 +207,33 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
               className={'icon'}
             />
           </button>
+          {Blockly.showBlockHelp && (
+            <button
+              onClick={() => {
+                const url = '/docs/ide/music';
+                const dialog = new LegacyDialog({
+                  body: $('<iframe>')
+                    .addClass('markdown-instructions-container')
+                    .width('100%')
+                    .attr('src', url),
+                  autoResizeScrollableElement:
+                    '.markdown-instructions-container',
+                  id: 'block-documentation-lightbox',
+                  link: url,
+                });
+                dialog.show();
+                // window.open('/docs/ide/music', '_blank');
+              }}
+              type="button"
+              className={classNames(moduleStyles.button)}
+            >
+              <FontAwesome
+                title={musicI18n.documentation()}
+                icon="book"
+                className={'icon'}
+              />
+            </button>
+          )}
         </>
       )}
       {skipUrl && (
