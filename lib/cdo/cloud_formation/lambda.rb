@@ -49,11 +49,12 @@ module Cdo::CloudFormation
     # Assumes Lambdas are in `/aws/cloudformation/lambdas/`.
     def install_node_dependencies(relative_directory)
       absolute_directory = aws_dir('cloudformation/lambdas' + '//' + relative_directory)
-      Dir.chdir(absolute_directory) do
-        # Use the `ci` parameter to only install the versions identified in the lock file.
-        # Use `--only=prod` to skip dev dependencies.
-        RakeUtils.npm_install 'ci --only=prod'
-      end
+
+      CDO.log.info("Installing Node dependencies in #{absolute_directory}")
+
+      # Use shell command with explicit directory change to ensure npm runs in correct location
+      # The 'cd' and 'npm' commands run in the same shell, so npm will use the correct working directory
+      RakeUtils.system("cd #{absolute_directory} && npm ci --only=prod")
     end
 
     # Zip a directory containing a Lambda's source code and dependencies, upload to S3, and return the S3 location
