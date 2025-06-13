@@ -14,60 +14,6 @@ export const HeroBannerContentfulComponentDefinition: ComponentDefinition = {
   },
   builtInStyles: ['cfBackgroundColor'],
   variables: {
-    // Style Props:
-    contentMode: {
-      displayName: 'Content Mode',
-      type: 'Text',
-      defaultValue: 'Light',
-      group: 'style',
-      validations: {
-        in: [
-          {value: 'Light', displayName: 'Light'},
-          {value: 'Dark', displayName: 'Dark'},
-        ],
-      },
-    },
-    imageSize: {
-      displayName: 'Image Size',
-      type: 'Text',
-      defaultValue: 'Big',
-      group: 'style',
-      validations: {
-        in: [
-          {value: 'Small', displayName: 'Small'},
-          {value: 'Big', displayName: 'Big'},
-        ],
-      },
-    },
-    removeBackground: {
-      displayName: 'Remove background',
-      type: 'Boolean',
-      defaultValue: false,
-      group: 'style',
-    },
-    sectionVideoShowCaption: {
-      displayName: 'Show video caption',
-      type: 'Boolean',
-      defaultValue: true,
-      group: 'style',
-      description:
-        'Check this to show a caption (video title) under the video player.',
-    },
-    hideImageOnSmallScreen: {
-      displayName: 'Hide image on small screens',
-      type: 'Boolean',
-      defaultValue: false,
-      group: 'style',
-      description: 'Check this to hide the image on small screens.',
-    },
-    announcementBannerIconName: {
-      displayName: 'Announcement Banner Icon Name',
-      type: 'Text',
-      group: 'style',
-      description:
-        'Font Awesome icon name. This will be used in the announcement banner.',
-      defaultValue: '',
-    },
     // Content Props:
     heading: {
       displayName: 'Heading',

@@ -14,6 +14,15 @@ export const ButtonContentfulComponentDefinition: ComponentDefinition = {
   },
   builtInStyles: ['cfTextAlign'],
   variables: {
+    component: {
+      displayName: 'Component',
+      type: 'Text',
+      defaultValue: 'a',
+      group: 'style',
+      validations: {
+        in: [{value: 'a', displayName: 'Anchor Link'}],
+      },
+    },
     color: {
       displayName: 'Color',
       type: 'Text',
@@ -27,19 +36,7 @@ export const ButtonContentfulComponentDefinition: ComponentDefinition = {
         ],
       },
     },
-    type: {
-      displayName: 'Type',
-      type: 'Text',
-      defaultValue: 'primary',
-      group: 'style',
-      validations: {
-        in: [
-          {value: 'primary', displayName: 'Primary'},
-          {value: 'secondary', displayName: 'Secondary'},
-        ],
-      },
-    },
-    text: {
+    children: {
       displayName: 'Text',
       type: 'Text',
       defaultValue: 'Button',
@@ -56,32 +53,6 @@ export const ButtonContentfulComponentDefinition: ComponentDefinition = {
       validations: {
         bindingSourceType: ['entry', 'manual'],
       },
-    },
-    isLinkExternal: {
-      displayName:
-        'Is this link external? (Does this link leave the code.org site?)',
-      description:
-        'External links will be opened in a new tab, while internal links will be opened in the same tab.',
-      type: 'Boolean',
-      defaultValue: false,
-      group: 'content',
-      validations: {
-        bindingSourceType: ['entry', 'manual'],
-      },
-    },
-    ariaLabel: {
-      displayName: 'Aria Label',
-      type: 'Text',
-      group: 'content',
-      validations: {
-        bindingSourceType: ['entry', 'manual'],
-      },
-    },
-    iconLeftName: {
-      displayName: 'Left Icon Name',
-      type: 'Text',
-      group: 'style',
-      defaultValue: '',
     },
   },
 };
