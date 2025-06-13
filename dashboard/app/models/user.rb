@@ -104,6 +104,7 @@ class User < ApplicationRecord
   include Age
   include AiAccessible
   include SectionParticipation
+  include AssignedCoursesAndScripts
   include PartialRegistration
   include Purgeable
   include Rails.application.routes.url_helpers
@@ -991,24 +992,38 @@ class User < ApplicationRecord
     end
   end
 
-  # Returns an array of hashes storing data for each unique course assigned to # sections that this user is a part of.
-  # @return [Array{CourseData}]
-  def assigned_courses
-    section_courses.map(&:summarize_short)
+  # Returns an array of experiment name strings
+  def get_active_experiment_names
+    Experiment.get_all_enabled(user: self).pluck(:name)
   end
 
-  def assigned_course?(course)
-    section_courses.include?(course)
+  # Returns an array of experiment name strings that a student's teachers are enrolled in
+  def get_active_experiment_names_by_teachers
+    experiments = []
+    teachers.each do |teacher|
+      experiments.concat(Experiment.get_all_enabled(user: teacher).pluck(:name))
+    end
+    experiments.uniq
   end
 
-  def assigned_script?(script)
-    section_scripts.include?(script) || section_courses.include?(script&.unit_group)
-  end
+  # # Returns an array of hashes storing data for each unique course assigned to # sections that this user is a part of.
+  # # @return [Array{CourseData}]
+  # def assigned_courses
+  #   section_courses.map(&:summarize_short)
+  # end
 
-  # Returns the set of courses the user has been assigned to or has progress in.
-  def courses_as_participant
-    visible_scripts.filter_map(&:unit_group).concat(section_courses).uniq
-  end
+  # def assigned_course?(course)
+  #   section_courses.include?(course)
+  # end
+
+  # def assigned_script?(script)
+  #   section_scripts.include?(script) || section_courses.include?(script&.unit_group)
+  # end
+
+  # # Returns the set of courses the user has been assigned to or has progress in.
+  # def courses_as_participant
+  #   visible_scripts.filter_map(&:unit_group).concat(section_courses).uniq
+  # end
 
   # Checks if there are any launched scripts assigned to the user.
   # @return [Array] of Scripts
@@ -1209,25 +1224,25 @@ class User < ApplicationRecord
     user_course_data + user_script_data
   end
 
-  def visible_scripts
-    scripts.map(&:cached).select {|s| [Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview].include?(s.get_published_state)}
-  end
+  # def visible_scripts
+  #   scripts.map(&:cached).select {|s| [Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview].include?(s.get_published_state)}
+  # end
 
-  # Figures out the unique set of scripts assigned to sections that this user
-  # is a part of. Includes default scripts for any assigned courses as well.
-  # @return [Array<Unit>]
-  def section_scripts
-    all_scripts = []
-    all_sections.each do |section|
-      if section.script.present?
-        all_scripts << section.script
-      elsif section.unit_group.present?
-        all_scripts.concat(section.unit_group.default_units)
-      end
-    end
+  # # Figures out the unique set of scripts assigned to sections that this user
+  # # is a part of. Includes default scripts for any assigned courses as well.
+  # # @return [Array<Unit>]
+  # def section_scripts
+  #   all_scripts = []
+  #   all_sections.each do |section|
+  #     if section.script.present?
+  #       all_scripts << section.script
+  #     elsif section.unit_group.present?
+  #       all_scripts.concat(section.unit_group.default_units)
+  #     end
+  #   end
 
-    all_scripts
-  end
+  #   all_scripts
+  # end
 
   # Returns integer days since account creation, rounded down
   def account_age_days
