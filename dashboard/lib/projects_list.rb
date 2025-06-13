@@ -1,6 +1,9 @@
 require_relative '../legacy/middleware/helpers/user_helpers'
 
 module ProjectsList
+  # ---------------------------------
+  # CONSTANTS
+  # ---------------------------------
   # Maximum number of projects of each type that can be requested.
   MAX_LIMIT = 100
   # Maximum number of featured projects of each type that can be requested.
@@ -30,6 +33,10 @@ module ProjectsList
   ADVANCED_PROJECT_TYPES = ['applab', 'gamelab', 'spritelab', 'pythonlab']
 
   class << self
+    # ---------------------------------
+    # Public API: FETCHERS
+    # ---------------------------------
+
     # Look up every project associated with the provided user_id, excluding those that are hidden.
     # Return a set of metadata which can be used to display a table of personal projects in the UI.
     # @param user_id
@@ -43,16 +50,6 @@ module ProjectsList
         personal_projects_list << project_data if project_data
       end
       personal_projects_list
-    end
-
-    def user_has_project_type(user_id, types)
-      storage_id = storage_id_for_user_id(user_id)
-      Projects.new(storage_id).get_active_projects.each do |project|
-        if types.include?(project[:project_type])
-          return true
-        end
-      end
-      false
     end
 
     # Look up every project associated with the provided user_id, and project state, excluding those that are hidden.
@@ -127,6 +124,28 @@ module ProjectsList
       all_active_published_featured_projects
     end
 
+    def fetch_active_published_featured_projects_by_type(project_type, featured_before: nil)
+      projects = :"#{CDO.dashboard_db_name}__projects"
+      user_project_storage_ids = :"#{CDO.dashboard_db_name}__user_project_storage_ids"
+
+      project_featured_project_user_combo_data = DASHBOARD_DB[:featured_projects].
+        select(*project_and_featured_project_and_user_fields).
+        join(projects, id: :storage_app_id).
+        join(user_project_storage_ids, id: Sequel[:projects][:storage_id]).
+        join(:users, id: Sequel[user_project_storage_ids][:user_id]).
+        where(
+          unfeatured_at: nil,
+          project_type: project_type.to_s,
+          state: 'active'
+        ).
+        where {featured_before.nil? || featured_at < DateTime.parse(featured_before)}.
+        exclude(featured_at: nil).
+        exclude(published_at: nil).
+        exclude(abuse_score: 1...).
+        order(Sequel.desc(:featured_at)).limit(FEATURED_MAX_LIMIT)
+      extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
+    end
+
     # Retrieve a class set of libraries for a specified class section
     # @param section The section that has all users whose libraries should
     #                be returned.
@@ -188,6 +207,20 @@ module ProjectsList
       updated_library_channels
     end
 
+    # ---------------------------------
+    # HELPERS
+    # ---------------------------------
+
+    def user_has_project_type(user_id, types)
+      storage_id = storage_id_for_user_id(user_id)
+      Projects.new(storage_id).get_active_projects.each do |project|
+        if types.include?(project[:project_type])
+          return true
+        end
+      end
+      false
+    end
+
     def project_and_featured_project_and_user_fields
       [
         :projects__id___id,
@@ -201,28 +234,6 @@ module ProjectsList
         :users__birthday___birthday,
         :users__properties___properties,
       ]
-    end
-
-    def fetch_active_published_featured_projects_by_type(project_type, featured_before: nil)
-      projects = :"#{CDO.dashboard_db_name}__projects"
-      user_project_storage_ids = :"#{CDO.dashboard_db_name}__user_project_storage_ids"
-
-      project_featured_project_user_combo_data = DASHBOARD_DB[:featured_projects].
-        select(*project_and_featured_project_and_user_fields).
-        join(projects, id: :storage_app_id).
-        join(user_project_storage_ids, id: Sequel[:projects][:storage_id]).
-        join(:users, id: Sequel[user_project_storage_ids][:user_id]).
-        where(
-          unfeatured_at: nil,
-          project_type: project_type.to_s,
-          state: 'active'
-        ).
-        where {featured_before.nil? || featured_at < DateTime.parse(featured_before)}.
-        exclude(featured_at: nil).
-        exclude(published_at: nil).
-        exclude(abuse_score: 1...).
-        order(Sequel.desc(:featured_at)).limit(FEATURED_MAX_LIMIT)
-      extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
     end
 
     def extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
