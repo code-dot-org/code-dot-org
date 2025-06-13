@@ -33,6 +33,7 @@ Feature: Model customizations and interactions in AI Chat Lab
 
     Given I reload the page
     And I dismiss the teacher panel
+    And I wait until element "#system-prompt" is visible
     Then element "#system-prompt" has text "You are a safe chatbot"
 
   Scenario: Publishing model enables published view and saves
