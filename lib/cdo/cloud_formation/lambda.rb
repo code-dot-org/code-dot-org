@@ -71,6 +71,7 @@ module Cdo::CloudFormation
 
       env_json_path = File.join(absolute_directory, 'env.json')
       env_json_created = false
+      debug_mode = ENV['RAKE_DEBUG'] == 'true' || ENV['DEBUG'] == 'true'
 
       begin
         # If environment variables are provided, write them to a file.
@@ -93,19 +94,36 @@ module Cdo::CloudFormation
             join
         )
 
-        # Create zip file in memory using Zip::File
-        zip_buffer = StringIO.new
-        Zip::File.open(zip_buffer, Zip::File::CREATE) do |zipfile|
+        # Create zip file in memory using Zip::OutputStream
+        zip_buffer = Zip::OutputStream.write_buffer do |zip|
           Dir.glob(File.join(absolute_directory, '**', '*')).each do |file_path|
             next if File.directory?(file_path)
 
             # Calculate relative path within the zip (relative to absolute_directory)
-            relative_path = file_path.sub("#{absolute_directory}/", '')
-            zipfile.add(relative_path, file_path)
+            relative_path = Pathname.new(file_path).relative_path_from(Pathname.new(absolute_directory)).to_s
+
+            zip.put_next_entry(relative_path)
+            zip.write(File.read(file_path))
           end
         end
 
         code_zip = zip_buffer.string
+
+        # Debug: Write zip to temporary file if debug mode is enabled
+        if debug_mode
+          debug_zip_path = "/tmp/lambda-debug-#{relative_directory}-#{hash}.zip"
+          File.write(debug_zip_path, code_zip)
+          CDO.log.info("DEBUG: Lambda zip written to #{debug_zip_path} (#{code_zip.length} bytes)")
+
+          # Verify zip contents
+          verify_zip_contents(debug_zip_path)
+        end
+
+        # Validate zip content
+        if code_zip.empty?
+          raise "Generated Lambda zip is empty! Directory: #{absolute_directory}"
+        end
+
         key = "#{key_prefix}-#{hash}.zip"
 
         s3_client = Aws::S3::Client.new(http_read_timeout: 30)
@@ -189,6 +207,18 @@ module Cdo::CloudFormation
       }
       custom_resource['DependsOn'] = depends_on if depends_on
       custom_resource.to_json
+    end
+
+    # Debug helper to verify zip contents
+    private def verify_zip_contents(zip_path)
+      Zip::File.open(zip_path) do |zipfile|
+        CDO.log.info("DEBUG: Zip contains #{zipfile.size} files:")
+        zipfile.each do |entry|
+          CDO.log.info("  #{entry.name} (#{entry.size} bytes)")
+        end
+      end
+    rescue => exception
+      CDO.log.error("DEBUG: Failed to verify zip contents: #{exception.message}")
     end
   end
 end
