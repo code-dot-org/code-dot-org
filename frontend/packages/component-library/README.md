@@ -297,6 +297,8 @@ color application across components and simplifies light/dark mode handling.
 Example:
 
 ```scss
+@use '@code-dot-org/component-library-styles/colors';
+
 .customHeadingStyle {
   color: var(--text-neutral-primary);
 }

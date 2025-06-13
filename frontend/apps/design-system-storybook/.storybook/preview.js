@@ -1,11 +1,9 @@
 import {default as RtlPreview} from 'storybook-addon-rtl/preview';
 
-import {loadFonts, injectFontAwesome} from '@code-dot-org/fonts';
+import {loadFonts} from '@code-dot-org/fonts';
 
 import '@code-dot-org/fonts/index.css';
 import './preview.module.scss';
-
-injectFontAwesome();
 
 /**
  * Ensure fonts are loaded prior to rendering the story

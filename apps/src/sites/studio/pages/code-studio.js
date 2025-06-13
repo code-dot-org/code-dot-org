@@ -6,8 +6,6 @@
  * Note: This is included _after_ application.js.erb during our transition period,
  * so when moving things preserve the include order as much as possible.
  */
-import '@code-dot-org/component-library-styles/colors.scss';
-import {injectFontAwesome} from '@code-dot-org/fonts';
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -140,4 +138,3 @@ checkForUnsupportedBrowsersOnLoad();
 initHamburger();
 initSigninState(userType, under13);
 initResponsive();
-injectFontAwesome();
