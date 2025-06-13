@@ -1,5 +1,3 @@
-require 'queries/user/enabled_experiments'
-
 # Adds methods for determining and enforcing AI access rules.
 # Relies on these serialized attributes:
 # - ai_tutor_access_denied

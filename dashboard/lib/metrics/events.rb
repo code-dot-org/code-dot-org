@@ -1,4 +1,3 @@
-require 'queries/user/enabled_experiments'
 require 'cdo/global_edition'
 require 'cdo/statsig'
 
