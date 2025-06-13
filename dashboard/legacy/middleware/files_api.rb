@@ -1019,6 +1019,7 @@ class FilesApi < Sinatra::Base
   MODERATE_THUMBNAILS_FOR_PROJECT_TYPES = %w(
     applab
     gamelab
+    spritelab
   )
 
   #
