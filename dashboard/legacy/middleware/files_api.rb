@@ -1016,12 +1016,6 @@ class FilesApi < Sinatra::Base
     get_file('files', encrypted_channel_id, "#{METADATA_PATH}/#{filename}")
   end
 
-  MODERATE_THUMBNAILS_FOR_PROJECT_TYPES = %w(
-    applab
-    gamelab
-    spritelab
-  )
-
   #
   # GET /v3/files-public/<channel-id>/.metadata/<filename>?version=<version-id>
   #

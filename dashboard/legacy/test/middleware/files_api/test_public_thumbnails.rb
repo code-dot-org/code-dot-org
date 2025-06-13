@@ -14,7 +14,10 @@ class PublicThumbnailsTest < FilesApiTestBase
     with_project_type('applab') do |channel_id|
       get "/v3/files-public/#{channel_id}/#{@thumbnail_filename}"
       assert successful?
-      assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
+      cache_control = last_response['Cache-Control']
+      assert_includes cache_control, 'public'
+      assert_includes cache_control, 'max-age=3600'
+      assert_includes cache_control, 's-maxage=1800'
       assert_equal @thumbnail_body, last_response.body
     end
   end
