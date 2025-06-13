@@ -25,9 +25,9 @@ module Queries
       #
       # @return [Array<String>] unique experiment names from teachers
       def from_teachers
-        @user.teachers.flat_map do |teacher|
+        user&.teachers&.flat_map do |teacher|
           Experiment.get_all_enabled(user: teacher).pluck(:name)
-        end.uniq
+        end&.uniq || []
       end
 
       # Gets all experiment names directly enabled for the user.
