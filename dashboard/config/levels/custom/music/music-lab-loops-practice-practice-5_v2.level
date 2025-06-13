@@ -180,7 +180,7 @@
     },
     "display_name": "Gravity Ad-libs",
     "long_instructions": "### Gravity\r\n\r\nCreate a loop using the Ad Lib vocal tracks from Gravity by Tinashe. Choose a vocal track, then combine it with a beat, bass, and lead from other song packs - mix and match to find a combination you like! Once you have an initial combination, loop the whole thing so it repeats 3 times. Listen to the example for what this could sound like!",
-    "bubble_choice_description": "Create a loop using the Ad Lib vocal tracks from Gravity by Tinashe.",
+    "bubble_choice_description": "Create a loop using the Ad Lib vocal tracks from \"Gravity\" by Tinashe.",
     "validations": [
       {
         "key": "music-lab-loops-practice-practice-5_1c850068-4096-48e6-ac0b-dd76a35c6134",
@@ -372,10 +372,11 @@
       }
     ],
     "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/tinashe_gravity/tinashe_gravity.jpg",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:48.243+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-practice-practice-5\\\"\"],\"cloned_from\":\"music-lab-loops-practice-practice-5\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:48.243+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-practice-practice-5\\\"\"],\"cloned_from\":\"music-lab-loops-practice-practice-5\"},{\"changed_at\":\"2025-06-12 16:09:20 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-12 16:10:35 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

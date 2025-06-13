@@ -22,13 +22,6 @@ class Projects
     @table = Projects.table
   end
 
-  #### NOTE: This references the Rails model (Project, singular)
-  #### rather than this middleware class (Projects, plural)
-  #### such that we can make use of model associations managed by Rails.
-  def get_rails_project(project_id)
-    Project.find(project_id)
-  end
-
   def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true, level: nil)
     validate_thumbnail_url(nil, value['thumbnailUrl'])
 
@@ -134,10 +127,6 @@ class Projects
 
     project_query_result = @table.where(id: project_id).exclude(state: 'deleted')
     raise NotFound, "channel `#{channel_id}` not found" if project_query_result.empty?
-
-    rails_project = get_rails_project(project_id)
-    raise PublishError, "User too new to publish channel `#{channel_id}`" unless rails_project.owner_existed_long_enough_to_publish?
-    raise PublishError, "Project too new to publish channel `#{channel_id}`" unless rails_project.existed_long_enough_to_publish?
 
     project_query_result.update(row)
 

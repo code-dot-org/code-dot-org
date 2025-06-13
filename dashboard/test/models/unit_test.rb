@@ -1317,6 +1317,17 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal expected_announcements, summary[:announcements]
   end
 
+  test 'summarize defaults to original unit group when no unit group unit is provided' do
+    unit = create(:course_version, :with_single_unit_course).content_root.first_unit
+    secondary_course = create(:single_unit_course, unit: unit)
+    create(:course_version, content_root: secondary_course)
+
+    summary = unit.summarize
+
+    assert_equal unit.name, summary[:name]
+    assert_equal unit.original_unit_group.course_version.id, summary[:courseVersionId]
+  end
+
   test 'summarize_for_unit_selector determines whether feedback is enabled' do
     course_version = create :course_version, :with_unit
     course_offering = course_version.course_offering

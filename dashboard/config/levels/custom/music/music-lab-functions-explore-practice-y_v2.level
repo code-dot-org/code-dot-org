@@ -941,10 +941,11 @@
     "bubble_choice_description": "Help Drew simplify his code for a remix of Karma that he made",
     "display_name": "Karma Remix",
     "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/denzel_kennedy_karma/denzel_kennedy_karma.jpg",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:39.540+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-explore-practice-y\\\"\"],\"cloned_from\":\"music-lab-functions-explore-practice-y\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:39.540+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-explore-practice-y\\\"\"],\"cloned_from\":\"music-lab-functions-explore-practice-y\"},{\"changed_at\":\"2025-06-12 21:05:07 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

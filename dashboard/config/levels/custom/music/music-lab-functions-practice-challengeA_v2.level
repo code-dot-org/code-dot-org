@@ -86,10 +86,11 @@
     "display_name": "Focus on Abstraction",
     "bubble_choice_description": "Choose a song to create a remix of. Design your code so it emphasizes **abstraction** - simplifying similar chunks of code into single functions.",
     "name_suffix": "_v2",
+    "thumbnail_url": "https://images.code.org/3c1476e49e5b023bf9049f7997250b2a-bluegreen.png",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:59.956+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-challengeA\\\"\"],\"cloned_from\":\"music-lab-functions-practice-challengeA\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:59.956+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-challengeA\\\"\"],\"cloned_from\":\"music-lab-functions-practice-challengeA\"},{\"changed_at\":\"2025-06-12 21:13:08 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-12 21:55:17 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

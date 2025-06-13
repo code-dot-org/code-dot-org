@@ -1,5 +1,6 @@
 class AiDiffController < ApplicationController
   include AiDiffBedrockHelper
+  include LevelsHelper
   authorize_resource class: false
 
   # params are
@@ -209,6 +210,9 @@ class AiDiffController < ApplicationController
     course_names = @unit_group.present? ? [@unit_group.name, @unit_group.family_name] : ([@unit&.name] if @unit.present?)
 
     course_display_name = CourseOffering.find_by(id: @unit_group&.course_version&.course_offering_id)&.display_name
+
+    student_code = get_student_code(context[:viewAsUserId] || current_user.id, @level, @unit.id) if context[:type] == SharedConstants::AI_DIFF_CONTEXT[:LEVEL]
+
     prompt = AiDiffBedrockHelper.get_prompt_for_context(
       context[:type],
       course_display_name,
@@ -216,7 +220,8 @@ class AiDiffController < ApplicationController
       lesson_name,
       params[:isPreset],
       @section_contexts,
-      @level&.long_instructions
+      @level&.long_instructions,
+      student_code
     )
 
     bedrock_rag_response = AiDiffBedrockHelper.request_bedrock_rag_chat(params[:inputText], prompt, lesson_num, unit_num, course_names, session_id, @section_contexts)

@@ -489,12 +489,13 @@
         ]
       }
     ],
-    "bubble_choice_description": "A record producer has sent you the vocals for Something Just Like This and wants you to add the backing tracks",
+    "bubble_choice_description": "A record producer has sent you the vocals for \"Something Just Like This\" and wants you to add the backing tracks",
     "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/chainsmokers_riptide/chainsmokers_riptide.jpg",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:47.740+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-choice-a\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:47.740+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-choice-a\"},{\"changed_at\":\"2025-06-12 16:08:29 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-12 16:10:14 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -1,14 +1,12 @@
 import React from 'react';
 
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
-import {queryParams} from '@cdo/apps/code-studio/utils';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import i18n from '@cdo/locale';
 
 import * as utils from '../../utils';
 import MultipleAssignButton from '../MultipleAssignButton';
 import AssignmentVersionSelector from '../teacherDashboard/AssignmentVersionSelector';
-import {showV2TeacherDashboard} from '../teacherNavigation/TeacherNavFlagUtils';
 
 import styles from './course-overview.module.scss';
 
@@ -52,14 +50,7 @@ const CourseOverviewActionRow: React.FC<CourseOverviewActionRowProps> = ({
     (versionId: number) => {
       const version = versions[versionId];
       if (versionId !== courseVersionId && version) {
-        const sectionId = queryParams('section_id');
-
-        if (showV2TeacherDashboard()) {
-          utils.navigateToHref(version.path);
-        } else {
-          const queryString = sectionId ? `?section_id=${sectionId}` : '';
-          utils.navigateToHref(`${version.path}${queryString}`);
-        }
+        utils.navigateToHref(version.path);
       }
     },
     [courseVersionId, versions]

@@ -243,7 +243,14 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
 
   return (
     <FocusOn className={styles.focusLock}>
-      <div className={styles.dialogContainer}>
+      <div
+        className={styles.dialogContainer}
+        onKeyDown={event => {
+          if (event.key === 'Escape') {
+            setPackToDefault();
+          }
+        }}
+      >
         <div id="pack-dialog" className={styles.packDialog}>
           <div id="hidden-item" tabIndex={0} role="button" />
           <Typography
