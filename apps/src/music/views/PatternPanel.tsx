@@ -159,6 +159,7 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
         clickOutsideDeactivates: true,
         escapeDeactivates: true,
         initialFocus: '#pattern-panel-select',
+        fallbackFocus: '.blocklyDropDownDiv',
       }}
     >
       <div className={styles.patternPanel}>
