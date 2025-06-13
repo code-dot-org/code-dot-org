@@ -101,7 +101,6 @@ export default async function ExperiencePage({
 
   if (error) {
     if (error.message.startsWith('No experience entry with slug')) {
-      return notFound();
     }
     return <div>{error.message}</div>;
   }
