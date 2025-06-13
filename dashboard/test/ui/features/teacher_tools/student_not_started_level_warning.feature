@@ -2,7 +2,7 @@
 Feature: Student Has Not Started Level Warning
 
   Background:
-    Given I create a teacher-associated student named "Sally"
+    Given I create an authorized teacher-associated student named "Sally"
 
 Scenario: Game lab level where student has not started
   When I open my eyes to test "game lab student has not started"
