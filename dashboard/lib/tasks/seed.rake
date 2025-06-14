@@ -473,16 +473,16 @@ namespace :seed do
   end
 
   timed_task_with_logging levels_skills: :environment do
-    levels_with_skills = Level.where('properties like ?', '%"skill_keys":%').all
-    levels_with_skills.each do |level|
-      JSON.parse(level.skill_keys).each do |skill_key|
-        skill_id = Skill.find_by_key(skill_key).id
-        LevelsSkill.find_or_create_by!(
-          skill_id: skill_id,
-          level_id: level.id
-        )
-      end
-    end
+    # levels_with_skills = Level.where('properties like ?', '%"skill_keys":%').all
+    # levels_with_skills.each do |level|
+    #   JSON.parse(level.skill_keys).each do |skill_key|
+    #     skill_id = Skill.find_by_key(skill_key).id
+    #     LevelsSkill.find_or_create_by!(
+    #       skill_id: skill_id,
+    #       level_id: level.id
+    #     )
+    #   end
+    # end
   end
 
   timed_task_with_logging deprecated_blockly_levels: :environment do
