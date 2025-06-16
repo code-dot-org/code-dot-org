@@ -50,16 +50,26 @@ module Cdo
     end
 
     # Retrieves the global configuration for the given region.
-    def self.configuration_for(region)
+    def self.configuration_for(region, inheriting = false)
       @@configurations ||= {}
-      @@configurations[region.to_s] ||= load_config(region) || {}
+      @@configurations[region.to_s] ||= load_config(region, inheriting) || {}
     end
 
     # Returns the parsed configuration for the given region.
-    def self.load_config(region)
+    def self.load_config(region, inheriting = false)
       return unless region_available?(region)
       config = YAML.load_file(CDO.dir('config', 'global_editions', "#{region}.yml")) || {}
-      deep_freeze(config.deep_symbolize_keys)
+      config = config.deep_symbolize_keys
+
+      # If this inherits, load the inherited region too
+      # (But only allow one inherit, to avoid loops or misconfigurations)
+      if config[:inherit] && !inheriting
+        inherited = configuration_for(config[:inherit], true)
+
+        # Merge
+        config = inherited.merge(config)
+      end
+      deep_freeze(config)
     end
 
     def self.target_host?(hostname)

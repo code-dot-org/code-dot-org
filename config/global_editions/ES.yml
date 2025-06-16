@@ -1,0 +1,7 @@
+# Espana
+
+name: España
+country: ES
+
+# We just inherit from the International-Spanish global edition
+inherit: es

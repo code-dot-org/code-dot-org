@@ -1,0 +1,7 @@
+# Argentina
+
+name: Argentina
+country: AR
+
+# We just inherit from the International-Spanish global edition
+inherit: es

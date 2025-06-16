@@ -2,6 +2,7 @@
 :ruby
   require 'cdo/create_header'
   require 'cdo/language_dir'
+  require 'cdo/global_edition'
 
   # Determine if we want to show the create menu
   if local_assigns[:show_create_menu]
@@ -19,6 +20,28 @@
 
   ge_region = local_assigns[:ge_region]
   ge_region ||= request.ge_region if request.respond_to?(:ge_region)
+
+  current_region = Cdo::GlobalEdition.configuration_for(ge_region)
+  current_country = current_region[:country] || "US"
+
+  show_region_dropdown = true
+  region_drop_down_items = Cdo::GlobalEdition::REGIONS.map do |region|
+    config = Cdo::GlobalEdition.configuration_for(region)
+
+    if config[:country]
+      country = config[:country].downcase
+      {
+        flag: "#{country}.png",
+        ge_region: region.intern,
+        name: config[:name] || country,
+        globalName: config[:globalName] || config[:name] || country,
+      }
+    end
+  end
+  region_drop_down_items.compact!
+  region_drop_down_items.sort! do |a, b|
+    (a[:globalName] || a[:name]) <=> (b[:globalName] || b[:name])
+  end
 
   if show_create_menu
     limit_project_types = request.cookies["_limit_project_types_#{rack_env}"]
@@ -39,6 +62,20 @@
 %script{data: {'managed-test-server': "#{CDO.running_web_application? && CDO.test_system?}"}}
 
 = render inline: File.read(shared_dir('haml/user_header_event_logger.haml')), type: :haml, locals: {is_signed_out: user_type.nil?, user_type: user_type, page_controller_name: params[:controller], page_action_name: params[:action], create_menu_options: create_drop_down_items&.map{|entry| entry[:title]}&.append("view_all")}
+
+- if show_region_dropdown
+  .header_button.region_menu{id: "header_region_menu", tabindex: 0, role: "button", class: user_type ? "hide-mobile" : "show-small-desktop"}
+    %span.region_button
+      %img{src: "/shared/images/header/flags/#{current_country.downcase}.png", alt: current_region[:name] || "United States"}
+    &nbsp;
+    %i.region_menu_arrow_down{class: "fa fa-chevron-down"}
+    %i.region_menu_arrow_up{class: "fa fa-chevron-up", style: "display: none"}
+    .region_options{style: 'display: none', dir: language_dir_class}
+      - region_drop_down_items.each do |entry|
+        %a.project_link_box{id: "region_menu_option_#{entry[:ge_region]}", href: entry[:ge_region] == :root ? "/home?ge_region=" : "/global/#{entry[:ge_region]}/home"}
+          %img{src: "/shared/images/header/flags/#{entry[:flag]}"}
+          .project_link{id: "region_menu_option_link_#{entry[:ge_region]}"}
+            .text= entry[:name]
 
 - if show_create_menu && !(request.path_info.include? '/global/')
   .header_button.create_menu{id: "header_create_menu", tabindex: 0, role: "button", class: user_type ? "hide-mobile" : "show-small-desktop"}
@@ -175,6 +212,34 @@
             sessionStorage.clear();
           } catch (e) {}
         }
+      });
+    });
+
+    function hideRegionOptions() {
+      $('.region_options').slideUp();
+      $('.region_menu_arrow_down').show();
+      $('.region_menu_arrow_up').hide();
+      $(document).off('click', hideRegionOptions);
+    }
+    $(document).ready(function() {
+      $('.region_menu').on('keypress click', function (e) {
+        if ((e.type === 'keypress' && e.which === 13) || e.type === 'click') {
+          if ($('.region_options').is(':hidden')) {
+            e.stopPropagation();
+            $('.region_options').slideDown();
+            $('.region_menu_arrow_down').hide();
+            $('.region_menu_arrow_up').show();
+            $(document).on('keypress click', hideRegionOptions);
+            hideUserOptions()
+            $("#hamburger-icon").removeClass('active');
+            $("#help-icon").removeClass('active');
+            $('#hamburger #hamburger-contents').slideUp();
+            $('#help-button #help-contents').slideUp();
+          }
+        }
+      });
+      $('.region_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
       });
     });
 

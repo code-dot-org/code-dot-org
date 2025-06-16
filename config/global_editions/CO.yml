@@ -1,0 +1,7 @@
+# Colombia
+
+name: Colombia
+country: CO
+
+# We just inherit from the International-Spanish global edition
+inherit: es

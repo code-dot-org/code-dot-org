@@ -1,0 +1,8 @@
+# Iran
+
+name: ایران
+globalName: Iran
+country: IR
+
+# Use the Farsi Global Edition
+inherit: fa

@@ -1,0 +1,7 @@
+# Chile
+
+name: Chile
+country: CL
+
+# We just inherit from the International-Spanish global edition
+inherit: es

@@ -1,0 +1,7 @@
+# Peru
+
+name: Perú
+country: PE
+
+# We just inherit from the International-Spanish global edition
+inherit: es

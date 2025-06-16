@@ -189,7 +189,7 @@ module Rack
     end
 
     private def global_edition_enabled?(env)
-      DCDO.get('global_edition_enabled', false) && Cdo::GlobalEdition.target_host?(Request.new(env).hostname)
+      Cdo::GlobalEdition.target_host?(Request.new(env).hostname)
     end
 
     private def process_request(env)

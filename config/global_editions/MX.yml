@@ -1,0 +1,7 @@
+# Mexico
+
+name: México
+country: MX
+
+# We just inherit from the International-Spanish global edition
+inherit: es

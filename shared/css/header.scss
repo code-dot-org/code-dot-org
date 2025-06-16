@@ -130,16 +130,16 @@
     }
   }
 
-  .user_menu, .create_menu {
+  .user_menu, .create_menu, .region_menu {
     color: $white;
     background-color: transparent;
     border: 2px solid $white;
 
-    .pairing_name, .display_name, .create_button {
+    .pairing_name, .display_name, .create_button, .region_button {
       @include main-font-regular;
     }
 
-    .user_options, .create_options, .help_contents {
+    .user_options, .create_options, .help_contents, .region_button {
       font-size: 14px;
     }
   }
@@ -154,7 +154,7 @@
   }
 
   @media screen and (max-width: 1120px) {
-    .create_menu {
+    .create_menu, .region_menu {
       display: none !important;
     }
     #signin_button {
@@ -164,6 +164,7 @@
 }
 
 #language_dir.rtl #pageheader-wrapper {
+  .region_options,
   .create_options {
     direction: rtl;
     .project_link {

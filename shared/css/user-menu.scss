@@ -1,12 +1,17 @@
 @import 'color.scss';
 @import 'font';
 
-.user_menu, .create_menu, .help_button {
+.user_menu, .create_menu, .region_menu, .help_button {
   user-select: none;
   height: 38px;
   position: relative;
 
-  .create_button, .display_name, .pairing_name {
+  &.region_menu {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .create_button, .region_button, .display_name, .pairing_name {
     max-width: 120px;
     display: inline-block;
     text-overflow: ellipsis;
@@ -18,15 +23,25 @@
     }
   }
 
+  .region_button {
+    > img {
+      width: 20px;
+      height: 20px;
+      border: 1px solid $light_gray_200;
+    }
+  }
+
   .user_menu_arrow_down,
   .user_menu_arrow_up,
+  .region_menu_arrow_down,
+  .region_menu_arrow_up,
   .create_menu_arrow_down,
   .create_menu_arrow_up {
     font-size: 0.875rem;
     margin-inline-start: 5px;
   }
 
-  .user_options, .create_options {
+  .user_options, .create_options, .region_options {
     top: 46px;
   }
 
@@ -34,7 +49,7 @@
     top: 54px;
   }
 
-  .user_options, .create_options, .help_contents {
+  .user_options, .create_options, .help_contents, .region_options {
     z-index: 100001;
     position: absolute;
     inset-inline-end: 0px;
@@ -154,7 +169,9 @@
   }
 }
 
+.region_menu,
 .create_menu {
+  .region_options,
   .create_options {
     inset-inline-end: unset;
     inset-inline-start: 0px;
@@ -179,10 +196,19 @@
       display: flex;
       gap: 0.5rem;
       align-items: center;
+      text-decoration: none;
     }
     .text,
     #view_all_projects {
       color: $light_black;
+    }
+  }
+
+  .region_options {
+    img {
+      height: 20px;
+      width: 20px;
+      border-radius: 2px;
     }
   }
 

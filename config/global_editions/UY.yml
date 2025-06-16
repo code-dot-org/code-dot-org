@@ -1,0 +1,7 @@
+# Uruguay
+
+name: Uruguay
+country: UY
+
+# We just inherit from the International-Spanish global edition
+inherit: es

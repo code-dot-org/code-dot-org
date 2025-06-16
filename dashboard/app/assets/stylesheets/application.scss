@@ -330,9 +330,9 @@ img.video_thumbnail {
     }
   }
 
-  .user_menu, .create_menu, .help_button {
+  .user_menu, .create_menu, .region_menu, .help_button {
     margin-top: 7px;
-    .create_button, .display_name, .pairing_name {
+    .create_button, .region_button, .display_name, .pairing_name {
       html[dir=rtl] & {
         float: right;
         padding-left: 3px;
@@ -426,6 +426,7 @@ img.video_thumbnail {
 
 
 #language_dir.rtl #pageheader-wrapper {
+  .region_options,
   .create_options {
     direction: rtl;
     .project_link {
