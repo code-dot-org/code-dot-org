@@ -6,12 +6,12 @@ export const DoubleTheDonationContentfulComponentDefinition: ComponentDefinition
     name: 'Double the Donation',
     category: '08: Advanced',
     thumbnailUrl:
-      'https://contentful-images.code.org/90t6bu6vlf76/1KBqVuN3E8F9xCfpqm9mDh/1a0aaa4e1580355e7b696b0512303155/component_afe_icon.png',
+      'https://contentful-images.code.org/90t6bu6vlf76/74ExwNwZ0rUACiixPFxPKE/3d911e35a139d451127228c2f78ce12f/component_double_the_donation_icon.png',
     tooltip: {
       description:
         'Embeds the Double the Donation employee match search form. This component is case-specific and intended for use on a specific page only.',
       imageUrl:
-        'https://contentful-images.code.org/90t6bu6vlf76/45xOdiOzDWKEs3AZDL8fSe/c79d09ed7bd7a82488fb7e75e83db715/component_afe_tooltip.png',
+        'https://contentful-images.code.org/90t6bu6vlf76/1yEmxilfATc6AqePRADl2h/23ffdc94ca3f7d1c86e9d7f51a9e6286/component_double_the_donation_tooltip.png',
     },
     variables: {},
   };
