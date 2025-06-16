@@ -20,7 +20,7 @@ export default class ImageURLInput extends React.Component {
     if (ABSOLUTE_REGEXP.test(url)) {
       this.props.assetChosen(url, moment());
       analyticsReporter.sendEvent(
-        EVENTS.UPLOAD_CUSTOM_IMAGE,
+        EVENTS.SUBMIT_IMAGE_URL,
         {appType: 'applab'},
         PLATFORMS.BOTH
       );
