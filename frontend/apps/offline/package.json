@@ -15,7 +15,6 @@
   },
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
-    "//": "  icons - The source directory. We convery all SVGs here to TSX components.",
     "build": "next build && yarn copy:static-assets",
     "compile:icons": "svgr --no-prettier --no-dimensions --typescript --no-index --jsx-runtime 'automatic' --out-dir src/icons icons",
     "copy:static-assets": "cp -r public .next/standalone/apps/offline; cp -r .next/static .next/standalone/apps/offline/.next; cp -r cache .next/standalone/apps/offline",
