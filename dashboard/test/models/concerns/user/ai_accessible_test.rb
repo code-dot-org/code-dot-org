@@ -21,7 +21,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
     allow(DCDO).to receive(:get).with('ai-tutor-disabled', false).and_return(false)
     allow(SingleUserExperiment).to receive(:enabled?).with(user: user, experiment_name: 'ai-tutor').and_return(false)
 
-    allow(Queries::User::EnabledExperiments).to receive(:new).with(user: user).and_return(
+    allow(Queries::User::EnabledExperiments).to receive(:new).with(user).and_return(
       instance_double('Queries::User::EnabledExperiments', from_teachers: ['ai-tutor'])
     )
   end
