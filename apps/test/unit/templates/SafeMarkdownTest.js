@@ -13,7 +13,10 @@ describe('SafeMarkdown', () => {
       wrapper.equals(
         <div>
           <p>
-            <strong>some</strong> <em>basic</em> <a href="markdown">inline</a>
+            <strong>some</strong> <em>basic</em>{' '}
+            <a href="markdown" data-lz-url="true" data-localize="markdown-url">
+              inline
+            </a>
           </p>
         </div>
       )
@@ -30,7 +33,10 @@ describe('SafeMarkdown', () => {
       basicWrapper.equals(
         <div>
           <p>
-            <strong>some</strong> <em>basic</em> <a href="markdown">inline</a>
+            <strong>some</strong> <em>basic</em>{' '}
+            <a href="markdown" data-lz-url="true" data-localize="markdown-url">
+              inline
+            </a>
           </p>
         </div>
       )
@@ -71,7 +77,7 @@ describe('SafeMarkdown', () => {
     );
 
     expect(paragraphWrapper.html()).toBe(
-      '<p id="test-markdown"><strong>some</strong> <em>basic</em> <a href="markdown">inline</a></p>'
+      '<p id="test-markdown"><strong>some</strong> <em>basic</em> <a href="markdown" data-lz-url="true" data-localize="markdown-url">inline</a></p>'
     );
   });
 
@@ -121,7 +127,7 @@ describe('SafeMarkdown', () => {
     expect(
       regularCodeBlock.equals(
         <div>
-          <p>
+          <p data-isolate="true">
             some markdown with a <code>regular</code> code block
           </p>
         </div>
@@ -155,7 +161,7 @@ describe('SafeMarkdown', () => {
 
     // inline xml blocks render within their containing paragraph
     expect(inlineXml.html()).toBe(
-      '<div><p>Text with <xml is="xml"><block is="block" type="xml"></block></xml> inline</p></div>'
+      '<div><p data-isolate="true">Text with <xml is="xml"><block is="block" type="xml"></block></xml> inline</p></div>'
     );
 
     // Need to use markdown={} rather than markdown="" here so React doesn't
@@ -184,7 +190,13 @@ describe('SafeMarkdown', () => {
       externalLink.equals(
         <div>
           <p>
-            <a href="example.com">external link</a>
+            <a
+              href="example.com"
+              data-lz-url="true"
+              data-localize="markdown-url"
+            >
+              external link
+            </a>
           </p>
         </div>
       )
@@ -215,13 +227,20 @@ describe('SafeMarkdown', () => {
       externalLink.equals(
         <div>
           <p>
-            <a href="example.com" target="_blank" rel="noreferrer noopener">
+            <a
+              href="example.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              data-lz-url="true"
+              data-localize="markdown-url"
+            >
               external link
             </a>
           </p>
         </div>
       )
     ).toBe(true);
+
 
     const internalLink = shallow(
       <SafeMarkdown
@@ -230,16 +249,22 @@ describe('SafeMarkdown', () => {
       />
     );
     expect(
-      internalLink.equals(
-        <div>
-          <p>
-            <a href="code.org" target="_blank" rel="noreferrer noopener">
-              internal link
-            </a>
-          </p>
-        </div>
-      )
-    ).toBe(true);
+        internalLink.equals(
+          <div>
+            <p>
+              <a
+                href="code.org"
+                target="_blank"
+                rel="noreferrer noopener"
+                data-lz-url="true"
+                data-localize="markdown-url"
+              >
+                internal link
+              </a>
+            </p>
+          </div>
+        )
+      ).toBe(true);
   });
 
   it('is resistant to JS injection', () => {
