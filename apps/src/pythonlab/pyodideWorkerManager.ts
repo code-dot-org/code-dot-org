@@ -189,7 +189,7 @@ const registerServiceWorker = async () => {
   if (canSupportInput()) {
     try {
       // Do not move the url into a variable, because webpack needs it to be passed as
-      // a parmaeter to register() directly in order to set up inputServiceWorker as a service worker.
+      // a parameter to register() directly in order to set up inputServiceWorker as a service worker.
       // The service worker is versioned to ensure the correct version is loaded.
       // Update the version if you update the service worker.
       const registration = await navigator.serviceWorker.register(
