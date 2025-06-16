@@ -426,6 +426,7 @@ Resources:
     Type: AWS::Lambda::Version
     Properties:
       FunctionName: !Ref MarketingRouterLambda
+      CodeSha256: !GetAtt MarketingRouterLambda.CodeSha256
   MarketingRouterLambdaRole:
     Type: AWS::IAM::Role
     Properties:
