@@ -241,7 +241,6 @@ describe('SafeMarkdown', () => {
       )
     ).toBe(true);
 
-
     const internalLink = shallow(
       <SafeMarkdown
         openExternalLinksInNewTab
@@ -249,22 +248,22 @@ describe('SafeMarkdown', () => {
       />
     );
     expect(
-        internalLink.equals(
-          <div>
-            <p>
-              <a
-                href="code.org"
-                target="_blank"
-                rel="noreferrer noopener"
-                data-lz-url="true"
-                data-localize="markdown-url"
-              >
-                internal link
-              </a>
-            </p>
-          </div>
-        )
-      ).toBe(true);
+      internalLink.equals(
+        <div>
+          <p>
+            <a
+              href="code.org"
+              target="_blank"
+              rel="noreferrer noopener"
+              data-lz-url="true"
+              data-localize="markdown-url"
+            >
+              internal link
+            </a>
+          </p>
+        </div>
+      )
+    ).toBe(true);
   });
 
   it('is resistant to JS injection', () => {
