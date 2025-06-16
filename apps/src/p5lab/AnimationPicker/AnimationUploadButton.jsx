@@ -71,7 +71,6 @@ export function UnconnectedAnimationUploadButton({
       showUploadModal();
     } else {
       onUploadClick();
-      console.log('animation upload - appType', appType);
       if (appType) {
         analyticsReporter.sendEvent(
           EVENTS.UPLOAD_CUSTOM_IMAGE,
