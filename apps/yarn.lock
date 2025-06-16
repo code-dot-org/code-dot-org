@@ -10958,7 +10958,7 @@ __metadata:
     progress-bar-webpack-plugin: "npm:^2.1.0"
     prop-types: "npm:^15.6.2"
     pusher-js: "npm:4.1.0"
-    pyodide: "npm:^0.27.7"
+    pyodide: "npm:^0.27.5"
     qrcode.react: "npm:^0.8.0"
     qtip2: "npm:2.2.0"
     query-string: "npm:4.1.0"
@@ -23974,12 +23974,12 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"pyodide@npm:^0.27.7":
-  version: 0.27.7
-  resolution: "pyodide@npm:0.27.7"
+"pyodide@npm:^0.27.5":
+  version: 0.27.5
+  resolution: "pyodide@npm:0.27.5"
   dependencies:
     ws: "npm:^8.5.0"
-  checksum: 10/df381182877ee34f12c05c0aa26a113ee8a86d4a449b6ea7177cc354694a228ffc0669857139afe4e82e763888f08537c8e0835e48c5e79afcd58e3217fb2a99
+  checksum: 10/a7ec95d13a14e0b27102963d34c366059be00b286430232cb0b7f548a4e340cd23c18ee9d1bdf87449f4d57b6ea32586e074edb246e0135f720fdbf98ba2043c
   languageName: node
   linkType: hard
 
