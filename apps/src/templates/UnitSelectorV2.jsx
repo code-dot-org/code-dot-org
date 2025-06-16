@@ -56,9 +56,9 @@ function UnitSelectorV2({
   const onSelectUnit = React.useCallback(
     e => {
       const value = e.target.value;
-      const [newCourseVersionId, newUnitId] = value.includes('-')
-        ? value.split('-').map(id => parseInt(id))
-        : [undefined, parseInt(value)];
+      const [newCourseVersionId, newUnitId] = value
+        .split('-')
+        .map(id => parseInt(id));
       setUnit(newUnitId, newCourseVersionId);
       // TODO: TEACH-1938 Pass the newCourseVersionId to the progress API
       // loadUnitProgress(newUnitId, newCourseVersionId, sectionId);
@@ -147,7 +147,7 @@ export const UnconnectedUnitSelectorV2 = UnitSelectorV2;
 export default connect(
   state => ({
     unitId: state.unitSelection.scriptId,
-    courseVersionId: state.unitSelection.courseId,
+    courseVersionId: state.unitSelection.courseVersionId,
     sectionId: state.teacherSections.selectedSectionId,
     coursesWithProgress: state.unitSelection.coursesWithProgress,
     isLoadingCourses: state.unitSelection.isLoadingCoursesWithProgress,

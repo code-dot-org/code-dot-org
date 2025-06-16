@@ -140,11 +140,7 @@ const SummaryResponses = ({
     studentWork: response.text,
   }));
 
-  const AiEvaluationMVPUnits = ['csp4-2024', 'csp6-2024', 'allthethings'];
-
-  const aiAnalysisAvailable =
-    AiEvaluationMVPUnits.includes(scriptData.reportingData.unitName) ||
-    scriptData.show_ai_analysis;
+  const hasAiAnalysis = scriptData.show_ai_analysis;
 
   return (
     <div className={styles.summaryContainer} id="summary-container">
@@ -203,7 +199,7 @@ const SummaryResponses = ({
                 size={'s'}
                 name={'showStudentNames'}
               />
-              {aiAnalysisAvailable && (
+              {hasAiAnalysis && (
                 <div className={styles.aiToggleContainer}>
                   <Toggle
                     onChange={toggleAIAnalysis}

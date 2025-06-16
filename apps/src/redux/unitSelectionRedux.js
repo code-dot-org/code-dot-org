@@ -38,11 +38,13 @@ export const finishedLoadingCoursesWithProgress = () => ({
 
 // Selectors
 export const getSelectedUnitId = state => state.unitSelection.scriptId;
-export const getSelectedCourseId = state => state.unitSelection.courseId;
+export const getSelectedCourseId = state => state.unitSelection.courseVersionId;
 
 export const getSelectedCourse = state => {
-  const courseId = getSelectedCourseId(state);
-  return state.unitSelection.coursesWithProgress.find(c => c.id === courseId);
+  const courseVersionId = getSelectedCourseId(state);
+  return state.unitSelection.coursesWithProgress.find(
+    c => c.id === courseVersionId
+  );
 };
 
 export const getSelectedCourseName = state => {
@@ -50,14 +52,14 @@ export const getSelectedCourseName = state => {
 };
 
 const getSelectedUnit = state => {
-  const courseId = getSelectedCourseId(state);
+  const courseVersionId = getSelectedCourseId(state);
   const unitId = getSelectedUnitId(state);
-  if (!courseId || !unitId) {
+  if (!courseVersionId || !unitId) {
     return null;
   }
 
   const course = state.unitSelection.coursesWithProgress.find(
-    course => course.id === courseId
+    course => course.id === courseVersionId
   );
   return course?.units.find(unit => unitId === unit.id);
 };
@@ -104,10 +106,10 @@ export const asyncLoadCoursesWithProgress = () => (dispatch, getState) => {
       // Reorder coursesWithProgress so that the current section is at the top and other sections are in order from newest to oldest
       const reorderedCourses = [
         ...coursesWithProgress.filter(
-          course => course.id !== selectedSection.courseId
+          course => course.id !== selectedSection.courseVersionId
         ),
         ...coursesWithProgress.filter(
-          course => course.id === selectedSection.courseId
+          course => course.id === selectedSection.courseVersionId
         ),
       ].reverse();
       dispatch(setCoursesWithProgress(reorderedCourses));
@@ -123,7 +125,7 @@ export const asyncLoadCoursesWithProgress = () => (dispatch, getState) => {
 // Initial state of unitSelectionRedux
 const initialState = {
   scriptId: null,
-  courseId: null,
+  courseVersionId: null,
   coursesWithProgress: [],
   isLoadingCoursesWithProgress: false,
   loadedSectionId: null,
@@ -141,7 +143,10 @@ export default function unitSelection(state = initialState, action) {
       // This automatically selects the first unit of the first course
       // unless a Unit is already set
       scriptId: state.scriptId === null ? firstUnit?.id : state.scriptId,
-      courseId: state.courseId === null ? firstCourse?.id : state.courseId,
+      courseVersionId:
+        state.courseVersionId === null
+          ? firstCourse?.id
+          : state.courseVersionId,
     };
   }
 
@@ -149,7 +154,7 @@ export default function unitSelection(state = initialState, action) {
     return {
       ...state,
       scriptId: action.scriptId,
-      courseId: action.courseId,
+      courseVersionId: action.courseVersionId,
     };
   }
 

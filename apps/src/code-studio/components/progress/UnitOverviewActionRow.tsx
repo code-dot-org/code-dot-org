@@ -11,10 +11,6 @@ import {Version} from '@cdo/apps/templates/courseOverview/TeacherCourseOverview'
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import MultipleAssignButton from '@cdo/apps/templates/MultipleAssignButton';
 import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
-import {
-  isOnTeacherDashboard,
-  showV2TeacherDashboard,
-} from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
@@ -157,7 +153,7 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
   };
 
   const viewAsToggleAction = (viewType: string) => {
-    if (!isOnTeacherDashboard()) {
+    if (!location.pathname.includes('teacher_dashboard')) {
       updateQueryParam('viewAs', viewType);
     }
 
@@ -253,7 +249,7 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
           )}
         </div>
 
-        {showV2TeacherDashboard() && isTeacher && (
+        {isTeacher && (
           <div className={styles.viewAs}>
             {<label className={styles.viewAsLabel}>{i18n.viewPageAs()}</label>}
             <SegmentedButtons

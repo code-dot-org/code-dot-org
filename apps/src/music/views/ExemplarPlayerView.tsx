@@ -70,6 +70,14 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
     }
   });
 
+  const onPress = () => {
+    const action = exemplarIsPlaying ? 'stop' : 'play';
+    analyticsReporter?.onButtonClicked(`exemplar-player-${action}`, {
+      title,
+    });
+    exemplarIsPlaying ? onStopSong() : onPlaySong();
+  };
+
   useEffect(() => {
     if (isPlaying && exemplarIsPlaying) {
       onStopSong();
@@ -89,12 +97,13 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
       <div
         className={moduleStyles.entry}
         key={'exemplar-player'}
-        onClick={() => {
-          const action = exemplarIsPlaying ? 'stop' : 'play';
-          analyticsReporter?.onButtonClicked(`exemplar-player-${action}`, {
-            title,
-          });
-          exemplarIsPlaying ? onStopSong() : onPlaySong();
+        role="button" // Makes the div behave like a button for accessibility
+        tabIndex={0}
+        onClick={onPress}
+        onKeyDown={event => {
+          if (event.key === 'Enter') {
+            onPress();
+          }
         }}
       >
         <div

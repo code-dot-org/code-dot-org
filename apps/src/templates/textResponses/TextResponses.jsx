@@ -168,7 +168,7 @@ export default connect(
   state => ({
     sectionId: state.teacherSections.selectedSectionId,
     scriptId: state.unitSelection.scriptId,
-    courseVersionId: state.unitSelection.courseId,
+    courseVersionId: state.unitSelection.courseVersionId,
     scriptName: getSelectedUnitName(state),
   }),
   dispatch => ({

@@ -17,15 +17,20 @@ import {
 } from '../../player/interfaces/InstrumentEvent';
 import {
   getPitchName,
-  isBlackKey,
   convertRelativeToAbsolutePitch,
   convertAbsoluteToRelativePitch,
 } from '../../utils/Notes';
+import {
+  EditorType,
+  getDisplayNotes,
+  integers,
+  getNoteColorInfo,
+} from '../../utils/Tunes';
 import LoadingOverlay from '../LoadingOverlay';
 import PreviewControlsV2 from '../PreviewControlsV2';
 import EaseIntoView from '../util/EaseIntoView';
 
-import {getDisplayNotes, getInstruments, integers} from './util';
+import {getInstruments} from './util';
 
 import styles from './styles.module.scss';
 
@@ -35,8 +40,6 @@ interface Props {
   editorType: EditorType;
   lengthMeasures: number;
 }
-
-export type EditorType = 'drums' | 'notes';
 
 /**
  * Instrument grid editor for selecting notes in a pattern.
@@ -152,7 +155,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
         'chromatic',
         currentValue.instrument,
         MusicRegistry.player.getKey()
-      ).sort((a, b) => b.note - a.note), // Sort descending
+      ),
     [editorType, currentValue.instrument]
   );
 
@@ -163,7 +166,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
         scaleMode || 'simple',
         currentValue.instrument,
         MusicRegistry.player.getKey()
-      ).sort((a, b) => b.note - a.note), // Sort descending
+      ),
     [editorType, scaleMode, currentValue.instrument]
   );
 
@@ -172,41 +175,15 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
   const interfaceMode =
     editorType === 'drums' ? 'drums' : scaleMode || 'simple';
 
-  const colorsSimple = styles.colorsSimple.split(',');
-  const colorsSimpleDarker = styles.colorsSimpleDarker.split(',');
-
   const getRowInfo = (name: string, note: number) => {
     if (interfaceMode === 'drums') {
       return {style: styles.textLabel, label: name};
     }
 
-    let color = undefined,
-      backgroundColor = undefined,
-      selectedBackgroundColor = undefined;
-
-    if (interfaceMode === 'simple') {
-      const displayNoteIndex = displayNotes.findIndex(
-        displayNote => displayNote.note === note
-      );
-      if (displayNoteIndex !== -1) {
-        color = 'white';
-        selectedBackgroundColor =
-          colorsSimple[(21 - displayNoteIndex) % colorsSimple.length];
-        backgroundColor =
-          colorsSimpleDarker[
-            (21 - displayNoteIndex) % colorsSimpleDarker.length
-          ];
-      }
-    }
-
-    if (backgroundColor === undefined) {
-      backgroundColor = isBlackKey(note) ? styles.black : styles.white;
-      color = isBlackKey(note) ? styles.white : styles.black;
-    }
-
-    if (selectedBackgroundColor === undefined) {
-      selectedBackgroundColor = styles.selectedColor;
-    }
+    const {textColor, keyColor, selectedColor} = getNoteColorInfo(
+      interfaceMode,
+      displayNotes.findIndex(displayNote => displayNote.note === note)
+    );
 
     const pitchRowClass = displayNotes.find(
       displayNote => displayNote.note === note
@@ -218,31 +195,30 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
       pitchRowClass,
       style: styles.keyLabel,
       label: getPitchName(note),
-      backgroundColor,
-      color,
-      selectedBackgroundColor,
+      textColor,
+      keyColor,
+      selectedColor,
     };
   };
 
   const [scrollStart, scrollEnd] = useMemo(() => {
-    const {cellHeight, rowGap, displayRows, peekHeight} = styles;
+    const {cellHeight, rowGap, peekHeight} = styles;
     if (editorType !== 'notes') {
       return [0, 0];
     }
 
     const notesInOctave = scaleMode === 'chromatic' ? 12 : 7;
     // Scroll so that the middle octave is at the bottom of the editor.
-    const topVisibleRow =
-      displayNotes.length - notesInOctave - parseInt(displayRows);
-    // Start scrolling a few rows below
-    const scrollStartRow = topVisibleRow + 3;
+    const firstVisibleRow = notesInOctave;
+    // Start scrolling from a few rows beyond.
+    const scrollStartRow = firstVisibleRow + 3;
     const cellHeightWithGap = parseInt(cellHeight) + parseInt(rowGap);
 
     return [
-      scrollStartRow * cellHeightWithGap,
-      topVisibleRow * cellHeightWithGap - parseInt(peekHeight),
+      -(scrollStartRow * cellHeightWithGap),
+      -(firstVisibleRow * cellHeightWithGap - parseInt(peekHeight)),
     ];
-  }, [displayNotes.length, editorType, scaleMode]);
+  }, [editorType, scaleMode]);
 
   return (
     <div className={styles.container} data-theme="Dark">
@@ -300,14 +276,14 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
         scrollEnd={scrollEnd}
         className={classNames(styles[`sequence-editor-${interfaceMode}`])}
       >
-        {allNotes.map(({note, name}, i) => {
+        {allNotes.map(({note, name}) => {
           const {
             pitchRowClass,
             style,
             label,
-            backgroundColor,
-            color,
-            selectedBackgroundColor,
+            textColor,
+            keyColor,
+            selectedColor,
           } = getRowInfo(name, note);
 
           return (
@@ -327,7 +303,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
               >
                 <div
                   className={classNames(style, styles.innerCell)}
-                  style={{backgroundColor, color}}
+                  style={{backgroundColor: keyColor, color: textColor}}
                 >
                   {label}
                 </div>
@@ -350,7 +326,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
                         )}
                         style={{
                           backgroundColor: isSelected(note, tick)
-                            ? selectedBackgroundColor
+                            ? selectedColor
                             : undefined,
                         }}
                       />

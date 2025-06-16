@@ -50,6 +50,11 @@ module Cdo
       return 'code.org'
     end
 
+    def http_host_and_port(host, port = 80)
+      return host if port == 80
+      "#{host}:#{port}"
+    end
+
     def site
       @site ||= site_from_host
     end
