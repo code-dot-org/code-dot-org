@@ -73,6 +73,11 @@ environment_defaults: &environment_defaults
   primary_reporting:
     replica: true
     <<: *mysql_defaults
+    <% if !CDO.running_web_application?
+    # Set the MySQL client timeout to 10 minutes for reporting queries that are not executing within a web application server
+    # such as queries executing in an ActiveJob worker, a cron job, or irb (dashboard-console).
+    read_timeout: 600
+    %>
     host: <%= CDO.db_endpoint_proxy_reporting %>
     port: <%= CDO.db_endpoint_proxy_reporting_port %>
     username: <%= CDO.db_credential_reader['username'] %>
