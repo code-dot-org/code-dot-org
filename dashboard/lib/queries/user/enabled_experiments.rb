@@ -1,12 +1,8 @@
-# Query object for retrieving enabled experiment names for a given user.
-#
-# Provides methods to get the current user's enabled experiments and
-# any experiments enabled for the user's associated teachers.
+# Query object for retrieving experiment names directly enabled for a user.
 #
 # Usage:
-#   query = Queries::User::EnabledExperiments.new(user)
-#   query.call            # => enabled experiment names for the user
-#   query.from_teachers   # => unique experiment names from user's teachers
+#   Queries::User::EnabledExperiments.call(user)
+#   => ["experiment_1", "experiment_2"]
 module Queries
   module User
     class EnabledExperiments < Queries::Base
@@ -15,28 +11,10 @@ module Queries
         @user = user
       end
 
-      # Returns the enabled experiment names for the user.
+      # Gets all experiment names directly enabled for the user
       #
       # @return [Array<String>] list of experiment names
       def call
-        experiment_names
-      end
-
-      # Gets all unique experiment names enabled for the user's teachers.
-      #
-      # @return [Array<String>] unique experiment names from teachers
-      def from_teachers
-        return [] if user&.teachers.blank?
-
-        user.teachers.flat_map do |teacher|
-          Experiment.get_all_enabled(user: teacher).pluck(:name)
-        end.uniq
-      end
-
-      # Gets all experiment names directly enabled for the user.
-      #
-      # @return [Array<String>] experiment names
-      private def experiment_names
         Experiment.get_all_enabled(user: user).pluck(:name)
       end
 
