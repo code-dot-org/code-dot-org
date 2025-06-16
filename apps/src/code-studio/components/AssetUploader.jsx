@@ -31,8 +31,8 @@ export default class AssetUploader extends React.Component {
     this.refs.uploader.openFileChooser();
     analyticsReporter.sendEvent(
       EVENTS.UPLOAD_CUSTOM_IMAGE,
-      {appType: 'applab'},
-      PLATFORMS.BOTH
+      {LabType: 'applab'},
+      PLATFORMS.STATSIG
     );
   };
 

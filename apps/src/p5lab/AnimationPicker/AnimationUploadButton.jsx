@@ -74,8 +74,8 @@ export function UnconnectedAnimationUploadButton({
       if (appType) {
         analyticsReporter.sendEvent(
           EVENTS.UPLOAD_CUSTOM_IMAGE,
-          {appType},
-          PLATFORMS.BOTH
+          {LabType: appType},
+          PLATFORMS.STATSIG
         );
       }
     }

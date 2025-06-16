@@ -21,8 +21,8 @@ export default class ImageURLInput extends React.Component {
       this.props.assetChosen(url, moment());
       analyticsReporter.sendEvent(
         EVENTS.SUBMIT_IMAGE_URL,
-        {appType: 'applab'},
-        PLATFORMS.BOTH
+        {LabType: 'applab'},
+        PLATFORMS.STATSIG
       );
     } else {
       this.setState({showError: true});
