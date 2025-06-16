@@ -34,6 +34,7 @@ let inputServiceWorker: ServiceWorker | undefined;
 let lastInputId = '';
 let setupPromise: Promise<void> | undefined;
 let outputToNeighborhood = false;
+let isPyodideLoading = false;
 
 const getMessageHandlers = (
   consoleManager: ConsoleManager | null,
@@ -61,8 +62,8 @@ const getMessageHandlers = (
     };
   } else {
     return {
-      writeConsoleMessage: () => {},
-      writePartialLine: () => {},
+      writeConsoleMessage: (message: string) => console.log(message),
+      writePartialLine: (message: string) => console.log(message),
     };
   }
 };
@@ -95,6 +96,12 @@ const setUpPyodideWorker = () => {
     switch (type) {
       case 'sysout':
       case 'syserr':
+        // Write messages to the dev console if we are still loading pyodide.
+        // These messages are confusing to students, as they are part of the pyodide loading process.
+        if (isPyodideLoading) {
+          console.log(message);
+          break;
+        }
         // We currently treat sysout and syserr the same, but we may want to
         // change this in the future. Test output goes to syserr by default.
         if (message.startsWith(MessageTag.MATPLOTLIB_IMG)) {
@@ -158,9 +165,11 @@ const setUpPyodideWorker = () => {
         writeConsoleMessage(getErrorMessage(pythonlabI18n.loadFailed()));
         break;
       case 'loading_pyodide':
+        isPyodideLoading = true;
         getStore().dispatch(setLoadedCodeEnvironment(false));
         break;
       case 'loaded_pyodide':
+        isPyodideLoading = false;
         getStore().dispatch(setLoadedCodeEnvironment(true));
         if (message && parseInt(message)) {
           Lab2Registry.getInstance()
