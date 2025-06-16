@@ -10,6 +10,7 @@
 module Queries
   module User
     class EnabledExperiments < Queries::Base
+      # @param user [::User] the user to query experiments for
       def initialize(user)
         @user = user
       end
@@ -25,9 +26,11 @@ module Queries
       #
       # @return [Array<String>] unique experiment names from teachers
       def from_teachers
-        user&.teachers&.flat_map do |teacher|
+        return [] if user&.teachers.blank?
+
+        user.teachers.flat_map do |teacher|
           Experiment.get_all_enabled(user: teacher).pluck(:name)
-        end&.uniq || []
+        end.uniq
       end
 
       # Gets all experiment names directly enabled for the user.
