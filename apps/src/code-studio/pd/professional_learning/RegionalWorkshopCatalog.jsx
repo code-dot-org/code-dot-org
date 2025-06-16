@@ -8,7 +8,7 @@ import {
   OverlineTwoText,
 } from '@code-dot-org/component-library/typography';
 import PropTypes from 'prop-types';
-import React, {useEffect, useCallback, useState} from 'react';
+import React, {useEffect, useCallback, useMemo, useState} from 'react';
 
 import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -23,7 +23,7 @@ import RegionalWorkshopCatalogCard from './RegionalWorkshopCatalogCard';
 import style from './regionalWorkshopCatalog.module.scss';
 
 export default function RegionalWorkshopCatalog({
-  availableNationalWorkshops,
+  nationalWorkshops,
   zipFromSchoolInfo,
 }) {
   const [zipCode, setZipCode] = useState('');
@@ -37,6 +37,20 @@ export default function RegionalWorkshopCatalog({
   const [availableRegionalWorkshops, setAvailableRegionalWorkshops] = useState(
     []
   );
+  // Don't show national workshops run by the given regional partner under
+  // the "National workshops" section since they'll show up under the
+  // "Upcoming local workshops" section.
+  const availableNationalWorkshops = useMemo(() => {
+    if (!availableRegionalWorkshops) {
+      return nationalWorkshops;
+    }
+    const availableRegionalWorkshopIds = new Set(
+      availableRegionalWorkshops.map(ws => ws.id)
+    );
+    return nationalWorkshops?.filter(
+      ws => !availableRegionalWorkshopIds.has(ws.id)
+    );
+  }, [nationalWorkshops, availableRegionalWorkshops]);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Load workshops for the given zip if one is present in the URL or is passed in as a prop
@@ -54,12 +68,18 @@ export default function RegionalWorkshopCatalog({
           'zip code': null,
           'regional partner': null,
           'number of regional workshops': 0,
-          'number of national workshops': availableNationalWorkshops.length,
+          'number of national workshops': nationalWorkshops?.length || 0,
         },
         PLATFORMS.BOTH
       );
     }
-  }, [zipFromSchoolInfo, handleSubmitZip, availableNationalWorkshops]);
+  }, [zipFromSchoolInfo, handleSubmitZip, nationalWorkshops]);
+
+  const submitOnEnter = event => {
+    if (event.key === 'Enter') {
+      handleSubmitZip(zipCode, false);
+    }
+  };
 
   const handleSubmitZip = useCallback(
     async (submittedZip, prepopulatingZip) => {
@@ -101,9 +121,10 @@ export default function RegionalWorkshopCatalog({
             setRegionalPartnerName('');
             setRegionalPartnerInfo('');
           }
-          setAvailableRegionalWorkshops(
-            jsonData.regional_workshop_data.available_regional_workshops
-          );
+
+          const newRegionalWorkshops =
+            jsonData.regional_workshop_data.available_regional_workshops;
+          setAvailableRegionalWorkshops(newRegionalWorkshops);
 
           // Log regional partner and workshop data as the page visit event if
           // this query is triggered by a prepopulated zip (from the user info
@@ -115,10 +136,9 @@ export default function RegionalWorkshopCatalog({
             {
               'zip code': submittedZip,
               'regional partner': regionalPartner.name,
-              'number of regional workshops':
-                jsonData.regional_workshop_data.available_regional_workshops
-                  .length,
-              'number of national workshops': availableNationalWorkshops.length,
+              'number of regional workshops': newRegionalWorkshops?.length || 0,
+              'number of national workshops':
+                availableNationalWorkshops?.length || 0,
             },
             PLATFORMS.BOTH
           );
@@ -319,9 +339,11 @@ export default function RegionalWorkshopCatalog({
               aria-label="zipSearch"
               label="School ZIP Code:"
               onChange={e => setZipCode(e.target.value)}
+              onKeyDown={submitOnEnter}
               value={zipCode}
               maxLength={255}
               placeholder="12345"
+              color="gray"
             />
             <Button
               aria-label="submitZip"
@@ -393,6 +415,6 @@ export default function RegionalWorkshopCatalog({
 }
 
 RegionalWorkshopCatalog.propTypes = {
-  availableNationalWorkshops: PropTypes.arrayOf(PropTypes.object),
+  nationalWorkshops: PropTypes.arrayOf(PropTypes.object),
   zipFromSchoolInfo: PropTypes.string,
 };

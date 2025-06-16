@@ -88,9 +88,10 @@
     },
     "bubble_choice_description": "Use **pattern recognition** to complete a remix of Gravity",
     "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/tinashe_tightrope/tinashe_tightrope.jpg",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:32.413+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-challenge-f\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-challenge-f\"},{\"changed_at\":\"2025-06-09 22:15:49 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:32.413+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-challenge-f\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-challenge-f\"},{\"changed_at\":\"2025-06-09 22:15:49 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-12 15:17:45 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

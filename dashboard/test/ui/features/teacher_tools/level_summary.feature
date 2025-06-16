@@ -124,7 +124,7 @@ Scenario: Check free response AI
 
   And I click selector "a:contains('View detailed analysis')" once I see it
 
-  And I wait until element "p:contains('Ok. Dummy data returned for testing purposes.')" is visible
+  And I wait until element "p:contains('Dummy data returned for testing purposes.')" is visible
 
   # Check that a non-assessment level doesn't show AI analysis
   Given I am on "http://studio.code.org/s/allthethings/lessons/27/levels/2/summary"

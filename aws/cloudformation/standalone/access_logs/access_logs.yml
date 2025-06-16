@@ -74,6 +74,7 @@ Parameters:
       When updating fields in a log configuration, a mix of records with old and new fields will
       arrive for up to several hours after the update. To handle records with old fields properly, copy
       LogFields to OldLogFields.
+      
 Resources:
   AccessLogConfig:
     Type: AWS::CloudFront::RealtimeLogConfig
@@ -113,8 +114,8 @@ Resources:
           Prefix: !Ref BucketPrefix
           Status: Enabled
           Tierings:
-            - {AccessTier: ARCHIVE_ACCESS, Days: 90}
-            - {AccessTier: DEEP_ARCHIVE_ACCESS, Days: 180}
+            - {AccessTier: ARCHIVE_ACCESS, Days: 475}
+            - {AccessTier: DEEP_ARCHIVE_ACCESS, Days: 730}
       LifecycleConfiguration:
         Rules:
           - Prefix: !Ref BucketPrefix

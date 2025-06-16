@@ -804,6 +804,15 @@ module SharedConstants
     MODEL_TIMEOUT: 1006,
   }
 
+  STUDENT_WORK_EVALUATION_STATUS = {
+    # The student submitted a blank free response or did not change the starter code.
+    NO_ATTEMPT: 'no_attempt',
+    # Profanity detected in the student's work.
+    STUDENT_PROFANITY: 'student_profanity',
+    # PII detected in the student's work.
+    STUDENT_PII: 'student_pii',
+  }
+
   AI_CHAT_MODEL_IDS = {
     ARITHMO: "gen-ai-arithmo2-mistral-7b",
     BIOMISTRAL: "gen-ai-biomistral-7b",

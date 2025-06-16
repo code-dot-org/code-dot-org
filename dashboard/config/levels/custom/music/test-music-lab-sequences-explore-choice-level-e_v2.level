@@ -445,9 +445,10 @@
     },
     "bubble_choice_description": "Help fix Rafa's code so his song sounds like it's supposed to!",
     "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/acoustic_arcade/acoustic_arcade.png",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:30.186+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-choice-level-e\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-choice-level-e\"},{\"changed_at\":\"2025-06-06 21:38:28 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:30.186+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-choice-level-e\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-choice-level-e\"},{\"changed_at\":\"2025-06-06 21:38:28 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-12 15:10:10 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -47,6 +47,7 @@ console.log(\"in the world!\");
   CSP_4_TEST_SECTION = {
     unit_name: 'csp4-2024',
     unit_group_name: 'csp-2024',
+    school_year: '2024-25',
     grade: [10],
     age: 15,
     data_per_student: [{
@@ -62,11 +63,13 @@ console.log(\"in the world!\");
       "CSP U4 My Pet Rock Example App_2024" => {
         user_level: {
           attempts: 1,
-          best_result: 30
+          best_result: 30,
+          submitted: true,
+          time_spent: 2,
         },
         teacher_feedback: {
           comment: 'test teacher feedback',
-        }
+        },
       },
       "U1 L02 CYU MC2022_2024" => {
         user_level: {

@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:57:38.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Match New Sound Lengths\r\nUh oh! Kaysha needs to make these three sounds match up in her timeline. However, they are all different measure lengths.\r\n- Main Beat = 4 measures\r\n- Piano Fill = 3 measures\r\n- Blip = 1 measure \r\n\r\nMake all sounds start and end at the same time. Your song should match the example below!\r\n\r\n![](https://images.code.org/11807806b213c8a710caceb0e699a406-image-1744235904248.png)",
+    "long_instructions": "#### Match New Sound Lengths\r\n\r\nKaysha needs to make these three sounds match up in her timeline. However, they are all different measure lengths.\r\n\r\n- Main Beat = 4 measures\r\n- Piano Fill = 3 measures\r\n- Blip = 1 measure \r\n\r\nTo solve this, Kaysha needs to identify a common pattern where all tracks can loop and end at the same time.\r\n\r\n**Your task:** Use **pattern recognition** to figure out how often each sound needs to repeat so they all align, then use loops to build your code. Your final song should match the example exactly!\r\n\r\n![](https://images.code.org/11807806b213c8a710caceb0e699a406-image-1744235904248.png)",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -171,10 +172,10 @@
     },
     "bubble_choice_description": "Help create a backing track when the measure lengths aren't perfect matches!",
     "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/sabrina_carpenter_feather/sabrina_carpenter_feather.jpg",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:38.778+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-practice-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-practice-choice-a\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:38.778+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-practice-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-practice-choice-a\"},{\"changed_at\":\"2025-06-12 16:05:06 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-14 00:06:06 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
