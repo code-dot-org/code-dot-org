@@ -265,7 +265,7 @@ end
 When /^I wait until (?:element )?"([^"]*)" (?:has|contains) (placeholder )?text "([^"]*)"$/ do |selector, is_placeholder, text|
   wait_for_jquery
   getter = is_placeholder ? "attr('placeholder')" : "text()"
-  wait_until {@browser.execute_script("return $(#{selector.dump}).#{getter};").include? text}
+  wait_until {@browser.execute_script("return $(#{selector.dump}).#{getter};")&.include?(text)}
 end
 
 When /^I wait until (?:element )?"([^"]*)" does not (?:have|contain) text "([^"]*)"$/ do |selector, text|
