@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Recreate This Timeline\r\nChloe is working with another artist to create a new song. Her job is to make the beginning portion of the song before the beat drops. Her partner gave her this timeline to recreate. Use the sounds you have been given and code a song that matches the timeline below. \r\n\r\n![](https://images.code.org/41449167c6868065c171234b4507e788-image-1741889152965.05.48 AM.png)\r\n\r\nNeed help? Listen to the song in the music player. ",
+    "long_instructions": "#### Recreate This Timeline\r\n\r\nChloe is working with another artist to create a new song. Her job is to make the beginning portion of the song before the beat drops. Her partner gave her this timeline to recreate:\r\n\r\n![](https://images.code.org/41449167c6868065c171234b4507e788-image-1741889152965.05.48 AM.png)\r\n\r\nTo keep her code clean and focused, Chloe wants to simplify by focusing only on the essential sounds that build the mood before the beat drops.\r\n\r\n**Your task:** Use **abstraction** to focus on the key sounds from the timeline - those that shape the atmosphere of the intro. Use the sounds you have been given and code a song that matches the timeline below.",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -225,7 +225,7 @@
     "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/chloe_treat_me/chloe_treat_me.jpg",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:36.732+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-practice-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-practice-choice-b\"},{\"changed_at\":\"2025-06-12 15:54:30 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:36.732+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-practice-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-practice-choice-b\"},{\"changed_at\":\"2025-06-12 15:54:30 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-13 20:39:35 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

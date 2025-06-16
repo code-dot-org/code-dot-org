@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T03:00:04.000Z",
   "level_num": "custom",
@@ -104,7 +105,7 @@
       "validationEnabled": false
     },
     "project_template_level_name": "test-music-lab-loops-sythesize-skill-template_v2",
-    "long_instructions": "### Live Coding\r\n\r\nPart of live coding is preparation. Every performance has some element of planning and some element of improvisation. \r\n\r\n**Do this:** \r\n- Prepare: Drag out 3 new `play` blocks into an empty part of the workspace. Find at least three new sounds that you can layer into your backtrack. \r\n- Try: While the song is playing, drag these tracks into your code. The timeline will update automatically to play your new track in real time! \r\n  - For example: drag in a new `lead` sound for a few measures, then remove it!\r\n- Reflect: As you listen, challenge yourself to break from the plan by adding that sound earlier or later than expected. Take mental notes on what felt good and you'll skip next time.\r\n\r\nListen and improvise in your song for at least 10 measures before continuing!\r\n\r\n*NOTE: Quickly close the sound picker dropdown menu so the sound preview doesn't overlap with your song.*",
+    "long_instructions": "### Live Coding\r\n\r\nPart of live coding is preparation. Every performance has some element of planning and some element of improvisation. \r\n\r\n**Do this:** \r\n- **Prepare:** Drag out 3 new `play` blocks into an empty part of the workspace. Find at least three new sounds that you can layer into your backtrack. \r\n- **Try:** While the song is playing, drag these tracks into your code. The timeline will update automatically to play your new track in real time! \r\n  - For example: drag in a new `lead` sound for a few measures, then remove it!\r\n- **Reflect:** As you listen, challenge yourself to break from the plan by adding that sound earlier or later than expected. Take mental notes on what felt good and you'll skip next time.\r\n\r\nListen and improvise in your song for at least 10 measures before continuing!\r\n\r\n*NOTE: Quickly close the sound picker dropdown menu so the sound preview doesn't overlap with your song.*",
     "validations": [
       {
         "key": "test-music-lab-loops-sythesize-skill-3_62a03606-ff53-4043-993e-36d9c688b3d0",
@@ -132,8 +133,7 @@
     "name_suffix": "_v2",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:04.084+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-sythesize-skill-3\\\"\"],\"cloned_from\":\"test-music-lab-loops-sythesize-skill-3\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:04.084+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-sythesize-skill-3\\\"\"],\"cloned_from\":\"test-music-lab-loops-sythesize-skill-3\"},{\"changed_at\":\"2025-06-13 16:52:10 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

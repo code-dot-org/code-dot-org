@@ -6,20 +6,20 @@ module OpenaiEvaluateHelper
   # for evaluation. Instead, return a custom response explaining why the student's
   # work was not evaluated.
   NO_ATTEMPT_RESPONSE = {
-    aiEvaluation: "No attempt",
+    aiEvaluation: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:NO_ATTEMPT],
     evaluationCriteria: "Did the student attempt the level?",
   }
 
   PROFANITY_DETECTED_RESPONSE = {
-    aiEvaluation: "Profanity detected",
+    aiEvaluation:  SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:STUDENT_PROFANITY],
     evaluationCriteria: "Did the student use profanity?",
     aiReasoning: "The response contains profanity and could not be evaluated.",
   }
 
   PII_DETECTED_RESPONSE = {
-    aiEvaluation: "PII detected",
+    aiEvaluation: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:STUDENT_PII],
     evaluationCriteria: "Does the student work contain personally identifying information?",
-    aiReasoning: "The response contains PII and could not be evaluated.",
+    aiReasoning: "The response could not be evaluated because it contains personal information that is not safe for your student to share.",
   }
 
   DUMMY_RESPONSE = {
