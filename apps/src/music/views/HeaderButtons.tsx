@@ -225,6 +225,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
                 // window.open('/docs/ide/music', '_blank');
               }}
               type="button"
+              id="documentation-button"
               className={classNames(moduleStyles.button)}
             >
               <FontAwesome
