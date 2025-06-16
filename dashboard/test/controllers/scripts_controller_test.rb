@@ -1944,15 +1944,18 @@ class ScriptsControllerTest < ActionController::TestCase
     let(:modular_course) {create :single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development}
     let(:pilot_teacher) {create :teacher, pilot_experiment: 'my-experiment'}
 
+    let(:original_course_params) {{course_course_name: original_course.name, position: unit_position}}
+    let(:modular_course_params)  {{course_course_name: modular_course.name, position: unit_position}}
+
     context 'when the modular course is stable' do
       before do
         modular_course.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
       end
       test_user_gets_response_for :show, response: :redirect, user: nil,
-                                  params: -> {{course_course_name: original_course.name, position: unit_position}},
+                                  params: -> {original_course_params},
                                   name: 'signed out user cannot view in-development original course'
       test_user_gets_response_for :show, response: :success, user: nil,
-                                  params: -> {{course_course_name: modular_course.name, position: unit_position}},
+                                  params: -> {modular_course_params},
                                   name: 'signed out user can view stable modular course'
     end
 
@@ -1961,10 +1964,10 @@ class ScriptsControllerTest < ActionController::TestCase
         original_course.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
       end
       test_user_gets_response_for :show, response: :success, user: nil,
-                                  params: -> {{course_course_name: original_course.name, position: unit_position}},
+                                  params: -> {original_course_params},
                                   name: 'signed out user can view stable original course'
       test_user_gets_response_for :show, response: :redirect, user: nil,
-                                  params: -> {{course_course_name: modular_course.name, position: unit_position}},
+                                  params: -> {modular_course_params},
                                   name: 'signed out user cannot view in-development modular course'
     end
 
@@ -1973,17 +1976,17 @@ class ScriptsControllerTest < ActionController::TestCase
         original_course.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, pilot_experiment: 'test-pilot')
       end
       test_user_gets_response_for :show, response: :redirect, user: nil,
-                                  params: -> {{course_course_name: original_course.name, position: unit_position}},
+                                  params: -> {original_course_params},
                                   name: 'signed out user cannot view pilot original course'
       test_user_gets_response_for :show, response: :redirect, user: nil,
-                                  params: -> {{course_course_name: modular_course.name, position: unit_position}},
+                                  params: -> {modular_course_params},
                                   name: 'signed out user cannot view in-development modular course'
 
       test_user_gets_response_for :show, response: :success, user: -> {pilot_teacher},
-                                  params: -> {{course_course_name: original_course.name, position: unit_position}},
+                                  params: -> {original_course_params},
                                   name: 'pilot teacher can view pilot original_course'
       test_user_gets_response_for(:show, response: :success, user: -> {pilot_teacher},
-                                  params: -> {{course_course_name: modular_course.name, position: unit_position}},
+                                  params: -> {modular_course_params},
                                   name: 'pilot teacher cannot view in-development modular course'
       ) do
         assert_includes(response.body, no_access_msg)
@@ -1995,20 +1998,20 @@ class ScriptsControllerTest < ActionController::TestCase
         modular_course.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, pilot_experiment: 'test-pilot')
       end
       test_user_gets_response_for :show, response: :redirect, user: nil,
-                                  params: -> {{course_course_name: original_course.name, position: unit_position}},
+                                  params: -> {original_course_params},
                                   name: 'signed out user cannot view in-development original course'
       test_user_gets_response_for :show, response: :redirect, user: nil,
-                                  params: -> {{course_course_name: modular_course.name, position: unit_position}},
+                                  params: -> {modular_course_params},
                                   name: 'signed out user cannot view pilot modular course'
 
       test_user_gets_response_for(:show, response: :success, user: -> {pilot_teacher},
-                                  params: -> {{course_course_name: original_course.name, position: unit_position}},
+                                  params: -> {original_course_params},
                                   name: 'pilot teacher cannot view in-development original course'
       ) do
         assert_includes(response.body, no_access_msg)
       end
       test_user_gets_response_for :show, response: :success, user: -> {pilot_teacher},
-                                  params: -> {{course_course_name: modular_course.name, position: unit_position}},
+                                  params: -> {modular_course_params},
                                   name: 'pilot teacher can view pilot modular course'
     end
   end

@@ -1587,6 +1587,13 @@ class LessonsControllerTest < ActionController::TestCase
     let(:lesson) {unit.lessons.first}
     let(:lesson_position) {lesson.relative_position}
 
+    let(:original_course_params) do
+      {course_course_name: original_course.name, unit_position: unit_position, position: lesson_position}
+    end
+    let(:modular_course_params) do
+      {course_course_name: modular_course.name, unit_position: unit_position, position: lesson_position}
+    end
+
     let(:pilot_teacher) {create :teacher, pilot_experiment: 'test-pilot'}
 
     context 'when the modular course is stable' do
@@ -1594,10 +1601,10 @@ class LessonsControllerTest < ActionController::TestCase
         modular_course.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
       end
       test_user_gets_response_for :show, response: :not_found, user: nil,
-                                  params: -> {{course_course_name: original_course.name, unit_position: unit_position, position: lesson_position}},
+                                  params: -> {original_course_params},
                                   name: 'signed out user cannot view in-development original course'
       test_user_gets_response_for :show, response: :success, user: nil,
-                                  params: -> {{course_course_name: modular_course.name, unit_position: unit_position, position: lesson_position}},
+                                  params: -> {modular_course_params},
                                   name: 'signed out user can view stable modular course'
     end
 
@@ -1606,10 +1613,10 @@ class LessonsControllerTest < ActionController::TestCase
         original_course.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
       end
       test_user_gets_response_for :show, response: :success, user: nil,
-                                  params: -> {{course_course_name: original_course.name, unit_position: unit_position, position: lesson_position}},
+                                  params: -> {original_course_params},
                                   name: 'signed out user can view stable original course'
       test_user_gets_response_for :show, response: :not_found, user: nil,
-                                  params: -> {{course_course_name: modular_course.name, unit_position: unit_position, position: lesson_position}},
+                                  params: -> {modular_course_params},
                                   name: 'signed out user cannot view in-development modular course'
     end
 
@@ -1618,17 +1625,17 @@ class LessonsControllerTest < ActionController::TestCase
         original_course.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, pilot_experiment: 'test-pilot')
       end
       test_user_gets_response_for :show, response: :not_found, user: nil,
-                                  params: -> {{course_course_name: original_course.name, unit_position: unit_position, position: lesson_position}},
+                                  params: -> {original_course_params},
                                   name: 'signed out user cannot view pilot original course'
       test_user_gets_response_for :show, response: :not_found, user: nil,
-                                  params: -> {{course_course_name: modular_course.name, unit_position: unit_position, position: lesson_position}},
+                                  params: -> {modular_course_params},
                                   name: 'signed out user cannot view in-development modular course'
 
       test_user_gets_response_for :show, response: :success, user: -> {pilot_teacher},
-                                  params: -> {{course_course_name: original_course.name, unit_position: unit_position, position: lesson_position}},
+                                  params: -> {original_course_params},
                                   name: 'pilot teacher can view pilot original course'
       test_user_gets_response_for :show, response: :not_found, user: -> {pilot_teacher},
-                                  params: -> {{course_course_name: modular_course.name, unit_position: unit_position, position: lesson_position}},
+                                  params: -> {modular_course_params},
                                   name: 'pilot teacher cannot view in-development modular course'
     end
 
@@ -1637,17 +1644,17 @@ class LessonsControllerTest < ActionController::TestCase
         modular_course.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, pilot_experiment: 'test-pilot')
       end
       test_user_gets_response_for :show, response: :not_found, user: nil,
-                                  params: -> {{course_course_name: original_course.name, unit_position: unit_position, position: lesson_position}},
+                                  params: -> {original_course_params},
                                   name: 'signed out user cannot view in-development original course'
       test_user_gets_response_for :show, response: :not_found, user: nil,
-                                  params: -> {{course_course_name: modular_course.name, unit_position: unit_position, position: lesson_position}},
+                                  params: -> {modular_course_params},
                                   name: 'signed out user cannot view pilot modular course'
 
       test_user_gets_response_for :show, response: :not_found, user: -> {pilot_teacher},
-                                  params: -> {{course_course_name: original_course.name, unit_position: unit_position, position: lesson_position}},
+                                  params: -> {original_course_params},
                                   name: 'pilot teacher cannot view in-development original course'
       test_user_gets_response_for :show, response: :success, user: -> {pilot_teacher},
-                                  params: -> {{course_course_name: modular_course.name, unit_position: unit_position, position: lesson_position}},
+                                  params: -> {modular_course_params},
                                   name: 'pilot teacher can view pilot modular course'
     end
   end
