@@ -9,10 +9,9 @@ import {finished} from 'stream/promises';
 import type {ReadableStream} from 'stream/web';
 import URL from 'url';
 
-import type {MazeData} from '@code-dot-org/maze';
-
 import type {BlocklySerialization} from '@/blockly/types';
 import {convertBlocklyXmlToJson} from '@/blockly/xml';
+import type {MazeData} from '@/levels/maze/MazeController';
 
 /** Describes a single level hint. */
 export interface HintData {

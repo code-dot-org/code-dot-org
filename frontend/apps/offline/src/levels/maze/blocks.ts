@@ -2,9 +2,9 @@ import * as Blockly from 'blockly/core';
 import {javascriptGenerator, JavascriptGenerator} from 'blockly/javascript';
 import * as En from 'blockly/msg/en';
 
-import type {Skin} from '@code-dot-org/maze';
-
 import type {BlockDefinition} from '@/blockly/types';
+
+import type {Skin} from './skin';
 
 /**
  * Generates the block list considering the given Skin.

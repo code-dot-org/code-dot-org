@@ -1,4 +1,4 @@
-import type {SkinData} from '@code-dot-org/maze';
+import type {SkinData} from './skin';
 
 /**
  * Represents a set of skins for a particular level set.

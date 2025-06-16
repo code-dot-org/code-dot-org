@@ -1,5 +1,5 @@
-import type {Skin, MazeController} from '@code-dot-org/maze';
-
+import type MazeController from './MazeController';
+import type {Skin} from './skin';
 import TestResults, {Status} from './TestResults';
 
 /**

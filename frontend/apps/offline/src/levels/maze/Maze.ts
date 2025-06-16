@@ -1,15 +1,19 @@
 import * as Blockly from 'blockly/core';
 
-import type {MazeController, MazeData, Skin} from '@code-dot-org/maze';
-
 import {SoundBoard, PlaybackOptions} from '@/audio';
 import {getAllGeneratedCode} from '@/blockly/utils';
 import type {BlocklyLevelEnvironment} from '@/levels/blockly/components/BlocklyLevel';
 
 import * as defaultAPI from './api';
+import Bee from './Bee';
 import ExecutionInfo, {Action} from './ExecutionInfo';
+import Harvester from './Harvester';
 import {evalWith} from './interpreter';
+import MazeController, {MazeData} from './MazeController';
+import Planter from './Planter';
+import type {Skin} from './skin';
 import TestResults, {MINIMUM_PASS_RESULT, Status} from './TestResults';
+import * as tiles from './tiles';
 import type {API} from './types';
 import Validator from './Validator';
 
@@ -17,12 +21,8 @@ import Validator from './Validator';
  * Controls the maze level.
  */
 class Maze extends EventTarget {
-  /* Tracks the asynchronous loading of the maze library */
-  private mazeLoader: Promise<typeof import('@code-dot-org/maze')>;
-  /* Whether or not the 'maze' import loaded */
-  private mazeLoaded: boolean = false;
   /* The instance of the maze driver */
-  private controller?: MazeController;
+  private controller: MazeController;
   /* The specific level data for the maze */
   private mazeData: MazeData;
   /* The audio manager device */
@@ -103,26 +103,8 @@ class Maze extends EventTarget {
       }
     });
 
-    // Load the maze library, since it uses `window`.
-    // If the maze library is built without requiring window for import, this
-    // can just be a normal import.
-    this.mazeLoader = import('@code-dot-org/maze');
-
     // Initialize the MazeController
-    this.initialize();
-  }
-
-  /**
-   * Eventually initializes the Maze library.
-   */
-  private async initialize() {
-    const MazeModule = await this.mazeLoader;
-
-    // The library has loaded
-    this.mazeLoaded = true;
-
-    // Create a MazeController
-    this.controller = new MazeModule.default.MazeController(
+    this.controller = new MazeController(
       this.mazeData,
       this.skin,
       {
@@ -159,7 +141,7 @@ class Maze extends EventTarget {
 
     this.validator = new this.validatorClass(this.controller, this.skin);
 
-    this.controller.map.resetDirt();
+    this.controller.map?.resetDirt();
     this.controller.subtype.initStartFinish();
     this.controller.subtype.createDrawer(this.svg);
     this.controller.subtype.initWallMap();
@@ -183,15 +165,8 @@ class Maze extends EventTarget {
       this.controller.reset(false);
       this.controller.destroy?.();
     }
-    this.controller = undefined;
+    this.soundBoard.stopAllAudio();
     container.remove();
-  }
-
-  /**
-   * Whether or not the maze library has loaded.
-   */
-  get loaded(): boolean {
-    return this.mazeLoaded;
   }
 
   /**
@@ -237,14 +212,6 @@ class Maze extends EventTarget {
    * @param step - Whether or not we intend to start by stepping.
    */
   async execute(step: boolean) {
-    // We must have loaded the Maze module
-    const MazeModule = await this.mazeLoader;
-
-    // Also need a valid MazeController
-    if (!this.controller) {
-      return;
-    }
-
     this.dispatchEvent(new CustomEvent('reset'));
 
     this.stepping = step;
@@ -265,7 +232,7 @@ class Maze extends EventTarget {
     evalWith(code, {
       Maze: {
         executionInfo: this.executionInfo,
-        tiles: MazeModule.tiles,
+        tiles: tiles,
         controller: this.controller,
         validator: this.validator,
         ...defaultAPI,
@@ -399,8 +366,6 @@ class Maze extends EventTarget {
    * Perform the actual animation of an action.
    */
   async animate(action: Action, timePerStep: number) {
-    const MazeModule = await this.mazeLoader;
-
     if (action.blockId) {
       // Tell blockly to highlight a block
       this.dispatchEvent(
@@ -408,47 +373,30 @@ class Maze extends EventTarget {
       );
     }
 
-    // Only handle an active MazeController
-    if (!this.controller) {
-      return;
-    }
-
     switch (action.command) {
       case 'north':
-        this.controller.animatedMove(
-          MazeModule.tiles.Direction.NORTH,
-          timePerStep,
-        );
+        this.controller.animatedMove(tiles.Direction.NORTH, timePerStep);
         break;
       case 'east':
-        this.controller.animatedMove(
-          MazeModule.tiles.Direction.EAST,
-          timePerStep,
-        );
+        this.controller.animatedMove(tiles.Direction.EAST, timePerStep);
         break;
       case 'south':
-        this.controller.animatedMove(
-          MazeModule.tiles.Direction.SOUTH,
-          timePerStep,
-        );
+        this.controller.animatedMove(tiles.Direction.SOUTH, timePerStep);
         break;
       case 'west':
-        this.controller.animatedMove(
-          MazeModule.tiles.Direction.WEST,
-          timePerStep,
-        );
+        this.controller.animatedMove(tiles.Direction.WEST, timePerStep);
         break;
       case 'look_north':
-        this.controller.animatedLook(MazeModule.tiles.Direction.NORTH);
+        this.controller.animatedLook(tiles.Direction.NORTH);
         break;
       case 'look_east':
-        this.controller.animatedLook(MazeModule.tiles.Direction.EAST);
+        this.controller.animatedLook(tiles.Direction.EAST);
         break;
       case 'look_south':
-        this.controller.animatedLook(MazeModule.tiles.Direction.SOUTH);
+        this.controller.animatedLook(tiles.Direction.SOUTH);
         break;
       case 'look_west':
-        this.controller.animatedLook(MazeModule.tiles.Direction.WEST);
+        this.controller.animatedLook(tiles.Direction.WEST);
         break;
       case 'fail_forward':
         this.controller.animatedFail(true);
@@ -457,10 +405,10 @@ class Maze extends EventTarget {
         this.controller.animatedFail(false);
         break;
       case 'left':
-        this.controller.animatedTurn(MazeModule.tiles.TurnDirection.LEFT);
+        this.controller.animatedTurn(tiles.TurnDirection.LEFT);
         break;
       case 'right':
-        this.controller.animatedTurn(MazeModule.tiles.TurnDirection.RIGHT);
+        this.controller.animatedTurn(tiles.TurnDirection.RIGHT);
         break;
       case 'finish':
         // Only schedule victory animation for certain conditions:
@@ -489,32 +437,32 @@ class Maze extends EventTarget {
         this.controller.animatedFail(false);
         break;
       case 'nectar':
-        if (this.controller.subtype instanceof MazeModule.subtypes.Bee) {
+        if (this.controller.subtype instanceof Bee) {
           this.controller.subtype.animateGetNectar();
         }
         break;
       case 'honey':
-        if (this.controller.subtype instanceof MazeModule.subtypes.Bee) {
+        if (this.controller.subtype instanceof Bee) {
           this.controller.subtype.animateMakeHoney();
         }
         break;
       case 'get_corn':
-        if (this.controller.subtype instanceof MazeModule.subtypes.Harvester) {
+        if (this.controller.subtype instanceof Harvester) {
           this.controller.subtype.animateGetCorn();
         }
         break;
       case 'get_pumpkin':
-        if (this.controller.subtype instanceof MazeModule.subtypes.Harvester) {
+        if (this.controller.subtype instanceof Harvester) {
           this.controller.subtype.animateGetPumpkin();
         }
         break;
       case 'get_lettuce':
-        if (this.controller.subtype instanceof MazeModule.subtypes.Harvester) {
+        if (this.controller.subtype instanceof Harvester) {
           this.controller.subtype.animateGetLettuce();
         }
         break;
       case 'plant':
-        if (this.controller.subtype instanceof MazeModule.subtypes.Planter) {
+        if (this.controller.subtype instanceof Planter) {
           this.controller.subtype.animatePlant();
         }
         break;

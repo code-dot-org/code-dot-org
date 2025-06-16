@@ -1,5 +1,4 @@
-import type {Skin, SkinData} from '@code-dot-org/maze';
-
+import type {Skin, SkinData} from './skin';
 import {SkinsData} from './types';
 
 const defaultSkins: SkinsData = {

@@ -1,7 +1,10 @@
-import type {MazeController, Tiles, WordSearch} from '@code-dot-org/maze';
-
 import ExecutionInfo from '@/levels/maze/ExecutionInfo';
 import Validator from '@/levels/maze/Validator';
+
+import type MazeController from './MazeController';
+import type WordSearch from './WordSearch';
+
+type Tiles = typeof import('./tiles');
 
 /**
  * A description of the global space of the interpreted program.
@@ -50,7 +53,7 @@ function checkSuccess(this: APIGlobals) {
  * has finished running completely.
  */
 function shouldCheckSuccessOnMove(this: APIGlobals) {
-  if (this.controller.map.hasMultiplePossibleGrids()) {
+  if (this.controller.map?.hasMultiplePossibleGrids()) {
     return false;
   }
   return !!this.validator?.shouldCheckSuccessOnMove();
@@ -59,35 +62,35 @@ function shouldCheckSuccessOnMove(this: APIGlobals) {
 function isPath(this: APIGlobals, direction: number, id: string): boolean {
   const {Direction, SquareType} = this.tiles;
 
-  const effectiveDirection = this.controller.getPegmanD() + direction;
+  const effectiveDirection = (this.controller.getPegmanD() || 0) + direction;
   let square;
   let command;
   switch (this.tiles.constrainDirection4(effectiveDirection)) {
     case Direction.NORTH:
-      square = this.controller.map.getTile(
-        this.controller.getPegmanY() - 1,
-        this.controller.getPegmanX(),
+      square = this.controller.map?.getTile(
+        (this.controller.getPegmanY() || 0) - 1,
+        this.controller.getPegmanX() || 0,
       );
       command = 'look_north';
       break;
     case Direction.EAST:
-      square = this.controller.map.getTile(
-        this.controller.getPegmanY(),
-        this.controller.getPegmanX() + 1,
+      square = this.controller.map?.getTile(
+        this.controller.getPegmanY() || 0,
+        (this.controller.getPegmanX() || 0) + 1,
       );
       command = 'look_east';
       break;
     case Direction.SOUTH:
-      square = this.controller.map.getTile(
-        this.controller.getPegmanY() + 1,
-        this.controller.getPegmanX(),
+      square = this.controller.map?.getTile(
+        (this.controller.getPegmanY() || 0) + 1,
+        this.controller.getPegmanX() || 0,
       );
       command = 'look_south';
       break;
     case Direction.WEST:
-      square = this.controller.map.getTile(
-        this.controller.getPegmanY(),
-        this.controller.getPegmanX() - 1,
+      square = this.controller.map?.getTile(
+        this.controller.getPegmanY() || 0,
+        (this.controller.getPegmanX() || 0) - 1,
       );
       command = 'look_west';
       break;
@@ -114,10 +117,10 @@ function move(this: APIGlobals, direction: number, id: string) {
     return;
   }
   // If moving backward, flip the effective direction.
-  const effectiveDirection = this.controller.getPegmanD() + direction;
+  const effectiveDirection = (this.controller.getPegmanD() || 0) + direction;
   let command;
-  const currentPegmanX = this.controller.getPegmanX();
-  const currentPegmanY = this.controller.getPegmanY();
+  const currentPegmanX = this.controller.getPegmanX() || 0;
+  const currentPegmanY = this.controller.getPegmanY() || 0;
   switch (this.tiles.constrainDirection4(effectiveDirection)) {
     case Direction.NORTH:
       this.controller.setPegmanY(currentPegmanY - 1);
@@ -141,8 +144,8 @@ function move(this: APIGlobals, direction: number, id: string) {
   }
   if (this.controller.subtype.isWordSearch()) {
     (this.controller.subtype as WordSearch).markTileVisited(
-      this.controller.getPegmanY(),
-      this.controller.getPegmanX(),
+      this.controller.getPegmanY() || 0,
+      this.controller.getPegmanX() || 0,
       false,
     );
   }
@@ -159,7 +162,7 @@ function move(this: APIGlobals, direction: number, id: string) {
 function turn(this: APIGlobals, direction: number, id: string) {
   const {TurnDirection} = this.tiles;
 
-  const currentD = this.controller.getPegmanD();
+  const currentD = this.controller.getPegmanD() || 0;
   if (direction === TurnDirection.RIGHT) {
     // Right turn (clockwise).
     this.controller.setPegmanD(currentD + TurnDirection.RIGHT);
@@ -170,7 +173,7 @@ function turn(this: APIGlobals, direction: number, id: string) {
     this.executionInfo.queueAction('left', id);
   }
   this.controller.setPegmanD(
-    this.tiles.constrainDirection4(this.controller.getPegmanD()),
+    this.tiles.constrainDirection4(this.controller.getPegmanD() || 0),
   );
 }
 
