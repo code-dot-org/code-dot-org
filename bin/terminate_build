@@ -3,6 +3,7 @@
 require_relative '../deployment'
 require 'os'
 require 'open3'
+require 'cdo/chat_client'
 
 # Terminates a build being executed by aws/ci_build (our polling-based continuous deployment system) by killing
 # the parent process and all of its child processes. The build process carries out many different types of activities
@@ -21,6 +22,7 @@ def execute_system_command(command)
 end
 
 CDO.log.info 'Terminating currently executing build (aws/ci_build) including its child processes ...'
+ChatClient.log "A user has invoked bin/terminate_build on this environment's daemon server ...", color: 'red'
 
 raise "#{$0} does not work in development mode." if rack_env?(:development)
 raise "#{$0} only works in Linux operating systems." unless OS.linux?
@@ -56,6 +58,7 @@ execute_system_command("pgrep -g #{process_group_id} -a")
 # The hyphen ('-') in front of the Process Group ID specifies we want to kill all processes with that Process Group ID.
 execute_system_command("kill -9 -#{process_group_id}")
 CDO.log.info 'Done killing the current build and its child processes!'
+ChatClient.log "Done killing the current build and its child processes!", color: 'red'
 
 CDO.log.info 'Deleting the file build-started to prevent a new build from starting on the current commit.'
 FileUtils.rm STARTED if File.file?(STARTED)
