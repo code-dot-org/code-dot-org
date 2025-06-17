@@ -57,8 +57,73 @@ module ShareFiltering
 
     xml_tag_regexp = /<[^>]*>/
     program_tags_removed = program.gsub(xml_tag_regexp, "\n")
+    texts = []
+    # Extract user-edited text.
+    if project_type == 'spritelab' || project_type == 'poetry'
+      texts = extract_user_strings_spritelab(program)
+      puts "texts - spritelab: #{texts}"
+    end
 
     find_failure(program_tags_removed, locale, exceptions: exceptions)
+  end
+
+  def self.extract_user_strings_spritelab(program_json)
+    json = JSON.parse(program_json)
+    texts = []
+  
+    # Traverse each block recursively
+    json.dig("blocks", "blocks")&.each do |block|
+      traverse_block(block, texts)
+    end
+  
+    texts.compact.uniq
+  end
+
+  # === Helper: Clean string values from XML-wrapped field values ===
+  def self.clean_text_value(value)
+    return nil unless value.is_a?(String)
+
+    # Match value inside field tag: <field name="...">"up"</field>
+    if value =~ /<field name=.*?>(.*?)<\/field>/m
+      $1.gsub('"', '')
+    else
+      value.gsub('"', '')
+    end
+  end
+  # === Helper: Recursively walk through the block tree ===
+  def self.traverse_block(block, texts)
+    return unless block.is_a?(Hash)
+
+    type = block["type"]
+    fields = block["fields"] || {}
+    inputs = block["inputs"] || {}
+
+    # === Extract from known user-content blocks ===
+    if type == "gamelab_comment"
+      comment = clean_text_value(fields["COMMENT"])
+      texts << comment if comment && !comment.strip.empty?
+    end
+
+    # === Extract from general string fields ===
+    fields.each_value do |value|
+      cleaned = clean_text_value(value)
+      texts << cleaned if cleaned && !cleaned.strip.empty?
+    end
+    # Extract known string fields
+    # %w[TEXT MESSAGE TITLE SUBTITLE KEY PROPERTY DIRECTION].each do |key|
+    #   raw_val = fields[key]
+    #   cleaned = clean_text_value(raw_val)
+    #   texts << cleaned if cleaned && !cleaned.strip.empty?
+    # end
+
+    # Recurse into input blocks (normal and shadow)
+    inputs.each_value do |input|
+      traverse_block(input["block"], texts) if input["block"]
+      traverse_block(input["shadow"], texts) if input["shadow"]
+    end
+
+    # Recurse into the 'next' chain
+    traverse_block(block.dig("next", "block"), texts)
   end
 
   def self.should_filter_program(program, project_type)
@@ -152,6 +217,7 @@ module ShareFiltering
   def self.find_failure(text, locale, profanity_filter_replace_text_list = {}, exceptions: false)
     # We only fail programs when the webpurity service is enabled
     return nil unless Gatekeeper.allows('webpurify', default: true)
+    puts "inside find_failure"
 
     # First, check for PII issues
     pii_failure = find_pii_failure(text, exceptions: exceptions)
