@@ -1,4 +1,5 @@
 class SectionsController < ApplicationController
+  include LevelsHelper
   include UsersHelper
   before_action :load_section_by_code, only: [:log_in, :show]
   load_and_authorize_resource :section, only: [:edit]
@@ -95,7 +96,16 @@ class SectionsController < ApplicationController
       lessons << {text: unit.title_for_display(unit_group_unit: unit_group_unit).sub(" - ", ": "), value: unit.link(unit_group_unit: unit_group_unit)}
       unit.lesson_groups.each do |lesson_group|
         lessons.concat(lesson_group.lessons.select(&:has_lesson_plan).map do |lesson|
-          path = lesson.start_url
+          path =
+            if lesson.script_levels.nil_or_empty? && unit_group_unit && unit_group
+              course_unit_lesson_path(unit_group, unit_group_unit.position, lesson)
+            elsif !lesson.script_levels.nil_or_empty? && unit_group_unit && unit_group
+              course_unit_lesson_script_level_path(unit_group, unit_group_unit.position, lesson, 1)
+            elsif !lesson.script_levels.nil_or_empty?
+              script_lesson_script_level_path(unit, lesson, 1)
+            else
+              script_lesson_path(unit, lesson)
+            end
           {
             text: 'Lesson ' + lesson.relative_position.to_s + ': ' + lesson.localized_name,
             value: path,
@@ -104,6 +114,7 @@ class SectionsController < ApplicationController
         )
       end
     end
+    puts lessons
     render json: lessons
   end
 
