@@ -53,7 +53,7 @@ echo "Wrote settings and secrets from env vars into locals.yml."
 
 set -x
 
-bundle install --quiet
+bundle install --quiet --binstubs
 bundle exec rake install
 bundle exec rake build
 

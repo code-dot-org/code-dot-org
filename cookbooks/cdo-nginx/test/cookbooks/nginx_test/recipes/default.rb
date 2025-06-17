@@ -45,7 +45,7 @@ file '/home/kitchen/Gemfile' do
   RUBY
 end
 
-execute "bundle install" do
+execute "bundle install --binstubs" do
   cwd "/home/#{node[:current_user]}"
   user node[:current_user]
   group node[:current_user]
