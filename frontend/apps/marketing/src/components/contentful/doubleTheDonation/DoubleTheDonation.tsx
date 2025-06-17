@@ -4,7 +4,7 @@ import React, {useEffect, useState} from 'react';
 
 import {BodyOneText} from '@code-dot-org/component-library/typography';
 
-import {getEnv} from '@/providers/environment';
+import {DOUBLE_THE_DONATION_PUBLIC_KEY} from '@/config/doubleTheDonation';
 
 declare global {
   interface Window {
@@ -20,7 +20,7 @@ const DoubleTheDonationSearch: React.FC = () => {
 
     if (typeof window !== 'undefined') {
       window.DDCONF = {
-        API_KEY: getEnv('NEXT_PUBLIC_DOUBLE_THE_DONATION_KEY') ?? '',
+        API_KEY: DOUBLE_THE_DONATION_PUBLIC_KEY,
       };
 
       const script = document.createElement('script');
