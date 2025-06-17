@@ -88,7 +88,6 @@ class SectionsController < ApplicationController
         )
       end
     end
-    puts lessons
     render json: lessons
   end
 
