@@ -601,12 +601,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/afe/success',
-        destination: '/amazon-future-engineer',
+        destination: '/resources/amazon-future-engineer',
         permanent: false,
       },
       {
         source: '/afe/start-codeorg',
-        destination: '/amazon-future-engineer',
+        destination: '/resources/amazon-future-engineer',
         permanent: false,
       },
       {
@@ -616,7 +616,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/afe',
-        destination: '/amazon-future-engineer',
+        destination: '/resources/amazon-future-engineer',
         permanent: false,
       },
       {
