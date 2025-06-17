@@ -14,6 +14,10 @@ jest.mock('@/config/stage', () => ({
   getStage: jest.fn(),
 }));
 
+jest.mock('next/headers', () => ({
+  cookies: jest.fn().mockReturnValue({get: jest.fn()}),
+}));
+
 describe('withLocale middleware', () => {
   const cookieMock = {
     set: jest.fn(),
@@ -141,7 +145,7 @@ describe('withLocale middleware', () => {
 
     expect(response).toBeInstanceOf(NextResponse);
     expect(response?.headers.get('location')).toBe(
-      'https://code.marketing-sites.local/zh-TW/home',
+      'https://code.marketing-sites.local/zh-TW/',
     );
   });
 
