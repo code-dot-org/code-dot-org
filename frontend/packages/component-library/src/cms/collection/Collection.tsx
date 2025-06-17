@@ -5,9 +5,9 @@ import moduleStyles from './collection.module.scss';
 export interface CollectionProps extends HTMLAttributes<HTMLElement> {
   /** Collection items */
   items?: ReactNode[];
-  // CSS grid columns, e.g., 'repeat(3, 1fr)'
+  // CSS grid columns
   columns?: number;
-  // CSS grid gap, e.g., '16px'
+  // CSS grid gap
   gap?: string;
   /** Collection class */
   className?: string;
