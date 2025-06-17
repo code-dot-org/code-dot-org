@@ -7,8 +7,6 @@ defineDesignTokens({
   spacing: {XS: '4px', S: '16px', M: '32px', L: '64px', XL: '128px'},
   sizing: {XS: '16px', S: '100px', M: '300px', L: '600px', XL: '1024px'},
   color: {
-    Purple: '#8c52ba',
-    Teal: '#0093a4',
     Black: '#000000',
     White: '#FFFFFF',
     Red: '#ff3e48',
@@ -28,5 +26,5 @@ defineDesignTokens({
     MD: '0.15em',
     LG: '0.2em',
   },
-  textColor: {Dark: '#1a1a1a', Light: '#efefef', Slate: '#94a3b8'},
+  textColor: {Dark: '#1a1a1a', Light: '#efefef'},
 });

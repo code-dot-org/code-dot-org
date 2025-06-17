@@ -1,4 +1,5 @@
 import {GoogleAnalytics} from '@next/third-parties/google';
+import {DM_Sans} from 'next/font/google';
 
 import Footer from '@/components/footer';
 import Header from '@/components/header';
@@ -14,6 +15,11 @@ import OneTrustLoader from '@/providers/onetrust/OneTrustLoader';
 import OneTrustProvider from '@/providers/onetrust/OneTrustProvider';
 import {generateBootstrapValues} from '@/providers/statsig/statsig-backend';
 import StatsigProvider from '@/providers/statsig/StatsigProvider';
+
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export default async function Layout({
   children,
@@ -31,7 +37,11 @@ export default async function Layout({
   const localeConfig = SUPPORTED_LOCALES_MAP.get(locale);
 
   return (
-    <html lang={locale} dir={localeConfig?.isRTL ? 'rtl' : 'ltr'}>
+    <html
+      lang={locale}
+      dir={localeConfig?.isRTL ? 'rtl' : 'ltr'}
+      className={dmSans.className}
+    >
       <body>
         <EnvironmentLoader />
         <NewRelicLoader />
