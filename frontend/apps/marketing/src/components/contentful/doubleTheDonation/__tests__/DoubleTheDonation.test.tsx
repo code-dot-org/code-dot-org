@@ -1,9 +1,11 @@
 import {render, waitFor, cleanup} from '@testing-library/react';
 
+import {DOUBLE_THE_DONATION_PUBLIC_KEY} from '@/config/doubleTheDonation';
+
 import DoubleTheDonationSearch from '../DoubleTheDonation';
 
 jest.mock('@/providers/environment', () => ({
-  getEnv: jest.fn(() => 'test-api-key'),
+  getEnv: jest.fn(() => DOUBLE_THE_DONATION_PUBLIC_KEY),
 }));
 
 describe('DoubleTheDonationSearch', () => {
@@ -18,7 +20,7 @@ describe('DoubleTheDonationSearch', () => {
     render(<DoubleTheDonationSearch />);
     await waitFor(() => {
       expect(window.DDCONF).toBeDefined();
-      expect(window.DDCONF?.API_KEY).toBe('test-api-key');
+      expect(window.DDCONF?.API_KEY).toBe(DOUBLE_THE_DONATION_PUBLIC_KEY);
       const script = Array.from(document.getElementsByTagName('script')).find(
         s => s.src === 'https://doublethedonation.com/api/js/ddplugin.js',
       );
