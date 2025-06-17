@@ -122,7 +122,7 @@ module RakeUtils
     without = CDO.rack_envs - [CDO.rack_env]
     run_bundle_command('config set --local without', *without)
     run_bundle_command('config set --local deployment \'true\'') unless local_environment?
-    run_bundle_command('install --binstubs --quiet --jobs', nproc, *args)
+    run_bundle_command('install --quiet --jobs', nproc, *args)
   end
 
   def self.run_bundle_command(*args)

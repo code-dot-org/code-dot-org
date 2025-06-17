@@ -35,7 +35,7 @@ COPY --chown=${UID} \
   ./
 
 RUN --mount=type=cache,sharing=locked,uid=${UID},gid=${GID},target=${HOME}/.rbenv/versions/3.0.5/lib/ruby/gems/3.0.0/cache <<EOF
-  bundle install --jobs 8 --quiet --binstubs
+  bundle install --jobs 8 --quiet
 EOF
 
 ################################################################################

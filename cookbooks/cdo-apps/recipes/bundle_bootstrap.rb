@@ -38,7 +38,7 @@ file "#{root}/.bundle/config" do
 end
 
 execute 'bundle-install' do
-  command 'bundle install --binstubs'
+  command 'bundle install'
   cwd root
   environment node['cdo-apps']['bundle_env']
   group user
