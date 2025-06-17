@@ -187,6 +187,6 @@ module AichatOpenaiHelper
   end
 
   def self.client
-    OpenaiChatHelper::Client.new(API_KEY, MODEL)
+    AichatOpenaiResponsesHelper::Client.new(API_KEY, MODEL)
   end
 end

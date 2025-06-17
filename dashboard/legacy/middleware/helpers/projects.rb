@@ -129,13 +129,6 @@ class Projects
     raise NotFound, "channel `#{channel_id}` not found" if project_query_result.empty?
 
     project_query_result.update(row)
-
-    project = @table.where(id: project_id).first
-    Projects.get_published_project_data(project, channel_id).merge(
-      # For privacy reasons, include only the first initial of the student's name.
-      studentName: user && UserHelpers.initial(user[:name]),
-      studentAgeRange: user && UserHelpers.age_range_from_birthday(user[:birthday]),
-    )
   end
 
   def get_active_projects
@@ -173,20 +166,6 @@ class Projects
       where(storage_id: @storage_id, state: 'deleted').
       where(Sequel.lit('updated_at >= ?', deleted_time.localtime)).
       update(state: 'active', updated_at: Time.now)
-  end
-
-  # extracts published project data from a project (aka projects table row).
-  def self.get_published_project_data(project, channel_id)
-    project_value = JSON.parse(project[:value])
-    {
-      channel: channel_id,
-      name: project_value['name'],
-      thumbnailUrl: Projects.make_thumbnail_url_cacheable(project_value['thumbnailUrl']),
-      # Note that we are using the new :project_type field rather than extracting
-      # it from :value. :project_type might not be present in unpublished projects.
-      type: project[:project_type],
-      publishedAt: project[:published_at],
-    }
   end
 
   # This method can be removed once thumbnails are being served with s3 version ids.

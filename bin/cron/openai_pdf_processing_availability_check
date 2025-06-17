@@ -41,7 +41,7 @@ def main
     }
   ]
 
-  client = OpenaiChatHelper::Client.new(
+  client = AichatOpenaiResponsesHelper::Client.new(
     CDO.openai_student_learning_api_key,
     'gpt-4o-mini-2024-07-18'
   )

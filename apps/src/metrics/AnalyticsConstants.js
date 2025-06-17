@@ -437,6 +437,10 @@ const EVENTS = {
     'User Clicks Submit To Be Featured In Share Dialog',
   SUBMIT_PROJECT_DIALOG_SUBMIT: 'User Clicks Submit In Submit Project Dialog',
 
+  // Add custom image to project
+  UPLOAD_CUSTOM_IMAGE: 'User clicks on upload image to project',
+  SUBMIT_IMAGE_URL: 'User clicks on submit image URL to project',
+
   // Export app
   EXPORT_APP: 'User Exports App From Share Advanced Options',
 

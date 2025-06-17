@@ -9,6 +9,8 @@ const baseProps = {
   custom_registration_link: undefined,
   num_enrollments: 0,
   capacity: 10,
+  is_signed_out: false,
+  is_student: false,
 };
 
 describe('EnrollInWorkshop', () => {
@@ -23,6 +25,32 @@ describe('EnrollInWorkshop', () => {
     render(<EnrollInWorkshop {...baseProps} num_enrollments={10} />);
     const fullButton = screen.getByRole('button', {name: /Workshop is full/i});
     expect(fullButton).toBeDisabled();
+  });
+
+  it('enroll button sends logged out users to logged out gate', () => {
+    render(<EnrollInWorkshop {...baseProps} is_signed_out={true} />);
+    const linkButton = screen.getByRole('link', {
+      name: /Enroll in this workshop/i,
+    });
+    expect(linkButton).toHaveAttribute(
+      'href',
+      `/logged_out?source_page=${encodeURIComponent(
+        'workshop enroll'
+      )}&return_to=${encodeURIComponent('/pd/workshops/1/enroll')}`
+    );
+  });
+
+  it('enroll button sends students to update account type gate', () => {
+    render(<EnrollInWorkshop {...baseProps} is_student={true} />);
+    const linkButton = screen.getByRole('link', {
+      name: /Enroll in this workshop/i,
+    });
+    expect(linkButton).toHaveAttribute(
+      'href',
+      `/teacher_account_required?source_page=${encodeURIComponent(
+        'workshop enroll'
+      )}&return_to=${encodeURIComponent('/pd/workshops/1/enroll')}`
+    );
   });
 
   it('shows partner registration link if custom_registration_link is present', () => {
