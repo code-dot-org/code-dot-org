@@ -42,6 +42,8 @@ module ShareFiltering
     PROFANITY = 'profanity'.freeze
   end
 
+  FILTERED_PROJECT_TYPES = ['spritelab', 'playlab', 'poetry'].freeze
+
   # Searches for a sharing failure given a program and locale.
   # Returns both the error type and the offending text snippet.
   #
@@ -50,8 +52,8 @@ module ShareFiltering
   #
   # @param [String] program the student's program text
   # @param [String] locale a two-character ISO 639-1 language code
-  def self.find_share_failure(program, locale, exceptions: false)
-    return nil unless should_filter_program(program)
+  def self.find_share_failure(program, locale, project_type, exceptions: false)
+    return nil unless should_filter_program(program, project_type)
 
     xml_tag_regexp = /<[^>]*>/
     program_tags_removed = program.gsub(xml_tag_regexp, "\n")
@@ -59,10 +61,9 @@ module ShareFiltering
     find_failure(program_tags_removed, locale, exceptions: exceptions)
   end
 
-  def self.should_filter_program(program)
-    Gatekeeper.allows('webpurify', default: true) &&
-      program =~ /#{PLAYLAB_APP_INDICATOR}/o &&
-      program =~ /(#{USER_ENTERED_TEXT_INDICATORS.join('|')})/
+  def self.should_filter_program(program, project_type)
+    puts "inside should_filter_program: #{program}"
+    return FILTERED_PROJECT_TYPES.include?(project_type)
   end
 
   # Searches for a sharing failure given a program name and locale.

@@ -239,7 +239,7 @@ class Game < ApplicationRecord
   end
 
   def sharing_filtered?
-    app == STUDIO
+    [STUDIO, SPRITELAB, POETRY].include?(app)
   end
 
   def flappy?

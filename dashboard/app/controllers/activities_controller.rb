@@ -57,8 +57,9 @@ class ActivitiesController < ApplicationController
     if params[:program] && sharing_allowed
       share_failure = nil
       if @level.game.sharing_filtered?
+        project_type = (@level.game == 'studio') ? 'playlab' : @level.game
         begin
-          share_failure = ShareFiltering.find_share_failure(params[:program], locale)
+          share_failure = ShareFiltering.find_share_failure(params[:program], locale, project_type)
         rescue WebPurify::TextTooLongError, OpenURI::HTTPError, IO::EAGAINWaitReadable => exception
           # If WebPurify or Geocoder fail, the program will be allowed, and we
           # retain the share_filtering_error to log it alongside the level_source
