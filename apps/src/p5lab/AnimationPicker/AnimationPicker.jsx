@@ -35,7 +35,7 @@ export const PICKER_TYPE = makeEnum(
 
 /**
  * Dialog used for finding/selecting/uploading one or more assets to add to a
- * GameLab project.
+ * Game Lab/Sprite Lab project or curriculum levels.
  *
  * When opened, the picker can have one of two goals:
  *   NEW_ANIMATION - the picked assets become new animations in the project.

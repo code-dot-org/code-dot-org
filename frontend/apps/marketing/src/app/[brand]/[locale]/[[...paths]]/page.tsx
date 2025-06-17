@@ -48,10 +48,11 @@ async function getPageProps({params, searchParams}: ExperiencePageProps) {
 
   const slug = getContentfulSlug(paths);
 
+  // Translations are provided by LocalizeJS based on the en-US version of the experience.
   return {
     experienceResult: await getExperience(
       slug,
-      locale,
+      'en-US', // Even though we have the locale in the page param, we will request for the en-US version of the page.
       isDraftModeEnabled
         ? (await searchParams).expEditorMode === 'true'
         : false,

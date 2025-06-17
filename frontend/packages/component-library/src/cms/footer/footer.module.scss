@@ -56,9 +56,13 @@
       margin: 0;
     }
 
-    .footerSocialList {
+    .footerLanguageDropdown {
       grid-row: span 3;
       display: inline-flex;
+    }
+
+    .footerSocialList {
+      display: flex;
       flex-wrap: wrap;
       list-style: none;
       column-gap: 1.25rem;
