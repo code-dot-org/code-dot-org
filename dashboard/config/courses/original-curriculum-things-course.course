@@ -1,11 +1,9 @@
 {
   "name": "original-curriculum-things-course",
   "script_names": [
-    "allthelessonplans",
-    "alltheselfpacedplthings"
+    "allthelessonplans"
   ],
   "original_script_names": [
-    "alltheselfpacedplthings",
     "allthelessonplans"
   ],
   "published_state": "in_development",
