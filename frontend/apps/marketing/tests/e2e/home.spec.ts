@@ -84,8 +84,6 @@ test.describe('Home Page', () => {
 
     await marketingPage.goto('/');
 
-    await expect
-      .poll(() => page.evaluate(() => window.location.href), {timeout: 30_000})
-      .toContain('studio.code.org');
+    await expect(page.getByText('Mocked Code Studio')).toBeVisible();
   });
 });
