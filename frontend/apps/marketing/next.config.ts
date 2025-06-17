@@ -1956,6 +1956,11 @@ const nextConfig: NextConfig = {
         destination: '/curriculum/artificial-intelligence-foundations',
         permanent: false,
       },
+      {
+        source: '/translate',
+        destination: 'https://global.code.org/',
+        permanent: false,
+      },
     ];
   },
 };

@@ -11,6 +11,7 @@ import {StudentWorkEvaluation} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {StudentWorkEvaluationStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import aiBot from './AI-Bot-default.png';
@@ -109,13 +110,18 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
     : 0;
 
   const flaggedStudentCount = studentWorkEvaluations
-    ? countEvaluationsByType(studentWorkEvaluations, ['Profanity detected'])
+    ? countEvaluationsByType(studentWorkEvaluations, [
+        StudentWorkEvaluationStatus.STUDENT_PII,
+        StudentWorkEvaluationStatus.STUDENT_PROFANITY,
+      ])
     : 0;
 
   // A student can have "no response" if they have not started the level yet OR
   // if they have submitted a response but it is empty.
   const noResponseStudentCount = studentWorkEvaluations
-    ? countEvaluationsByType(studentWorkEvaluations, ['No attempt']) +
+    ? countEvaluationsByType(studentWorkEvaluations, [
+        StudentWorkEvaluationStatus.NO_ATTEMPT,
+      ]) +
       (totalNumberOfStudents - studentWorkEvaluations.length)
     : 0;
 

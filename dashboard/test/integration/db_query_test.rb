@@ -10,6 +10,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     setup_script_cache
   end
 
+  # TODO: TEACH-1788: This will need to be updated when we change the test fixtures
   test "script level show" do
     student = create :student
     sign_in student
@@ -66,14 +67,17 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student = create :student
     sign_in student
 
-    sl = create(:script, :with_levels, levels_count: 3).script_levels[2]
+    script = create(:script, :with_levels, levels_count: 3)
+    course = create(:single_unit_course, unit: script)
+    sl = script.script_levels[2]
     params = {program: 'fake program', testResult: 100, result: 'true'}
 
     setup_script_cache
     assert_cached_queries(9) do
       post milestone_path(
         user_id: student.id,
-        script_level_id: sl.id
+        script_level_id: sl.id,
+        course_id: course.id
       ), params: params
       assert_response :success
     end
@@ -83,14 +87,17 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student = create :student
     sign_in student
 
-    sl = create(:script, :with_levels, levels_count: 3).script_levels[1]
+    script = create(:script, :with_levels, levels_count: 3)
+    course = create(:single_unit_course, unit: script)
+    sl = script.script_levels[1]
     params = {program: 'fake program', testResult: 100, result: 'true'}
 
     setup_script_cache
     assert_cached_queries(7) do
       post milestone_path(
         user_id: student.id,
-        script_level_id: sl.id
+        script_level_id: sl.id,
+        course_id: course.id
       ), params: params
       assert_response :success
     end
@@ -100,13 +107,16 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student = create :student
     sign_in student
 
-    sl = create(:script, :with_levels, levels_count: 3).script_levels[2]
+    script = create(:script, :with_levels, levels_count: 3)
+    course = create(:single_unit_course, unit: script)
+    sl = script.script_levels[2]
     params = {program: 'fake program', testResult: 0, result: 'false'}
 
     assert_cached_queries(7) do
       post milestone_path(
         user_id: student.id,
-        script_level_id: sl.id
+        script_level_id: sl.id,
+        course_id: course.id
       ), params: params
       assert_response :success
     end
@@ -116,6 +126,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     script = create(
       :script,
       :with_levels,
+      :in_unit_group,
       levels_count: 10
     )
     course = create(:single_unit_course, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: 'unversioned', family_name: 'hoc-family')
@@ -128,8 +139,8 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student.assign_script(script)
     sign_in student
 
-    assert_cached_queries(6) do
-      get "/s/#{script.name}"
+    assert_cached_queries(5) do
+      get "/courses/#{course.name}/units/1/"
       assert_response :success
     end
 
@@ -151,13 +162,10 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     unit = create(
       :script,
       :with_levels,
-      levels_count: 10,
-      is_course: true,
-      family_name: 'hoc-family',
-      version_year: 'unversioned',
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+      levels_count: 10
     )
-    CourseOffering.add_course_offering(unit)
+    course = create(:single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: 'unversioned', family_name: 'hoc-family')
+    CourseOffering.add_course_offering(course)
 
     # make sure the new unit is in the cache
     setup_script_cache
@@ -172,7 +180,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     sign_in student
 
     assert_cached_queries(19) do
-      get "/s/#{unit.name}/lessons/1/levels/1"
+      get "/courses/#{course.name}/units/1/lessons/1/levels/1"
       assert_response :success
     end
 

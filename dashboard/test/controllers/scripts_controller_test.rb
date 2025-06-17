@@ -435,81 +435,6 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_redirected_to "/courses/#{modular_single_unit_course_2024.name}/units/1?redirect_warning=true"
   end
 
-  test "show: teacher in teacher-local-nav-v2 experiment is redirected to teacher dashboard if course is in a section" do
-    # Have the same unit in two different courses to make sure the redirection
-    # goes to the course defined in the section.
-    original_course = create :unit_group, name: 'original-course'
-    experiment_course = create :unit_group, name: 'experiment-course'
-    experiment_script = create :script, name: 'experiment-script', original_unit_group: original_course
-    create :unit_group_unit, unit_group: original_course, script: experiment_script, position: 1
-    create :unit_group_unit, unit_group: experiment_course, script: experiment_script, position: 1
-    experiment_teacher = create :teacher
-    experiment_section = create :section, user: experiment_teacher, unit_group: experiment_course
-    SingleUserExperiment.find_or_create_by!(min_user_id: experiment_teacher.id, name: 'teacher-local-nav-v2')
-
-    sign_in experiment_teacher
-
-    get :show, params: {
-      course_course_name: experiment_course.name,
-      position: 1
-    }
-    assert_redirected_to "/teacher_dashboard/sections/#{experiment_section.id}/courses/#{experiment_course.name}/units/1"
-  end
-
-  test "show: teacher in teacher-local-nav-v2 experiment is redirected to teacher dashboard if unit is in a section" do
-    # Have the same unit in two different courses to make sure the redirection
-    # goes to the course defined in the section.
-    original_course = create :unit_group, name: 'original-course'
-    experiment_course = create :unit_group, name: 'experiment-course'
-    experiment_script = create :script, name: 'experiment-script', original_unit_group: original_course
-    create :unit_group_unit, unit_group: original_course, script: experiment_script, position: 1
-    create :unit_group_unit, unit_group: experiment_course, script: experiment_script, position: 1
-    experiment_teacher = create :teacher
-    experiment_section = create :section, user: experiment_teacher, script: experiment_script
-    SingleUserExperiment.find_or_create_by!(min_user_id: experiment_teacher.id, name: 'teacher-local-nav-v2')
-
-    sign_in experiment_teacher
-
-    get :show, params: {
-      course_course_name: experiment_course.name,
-      position: 1
-    }
-    assert_redirected_to "/teacher_dashboard/sections/#{experiment_section.id}/courses/#{experiment_course.name}/units/1"
-  end
-
-  test "show: teacher in teacher-local-nav-v2 experiment is NOT redirected to teacher dashboard if unit is NOT in a section" do
-    # Have the same unit in two different courses to make sure the redirection
-    # goes to the course defined in the section.
-    original_course = create :unit_group, name: 'original-course'
-    experiment_course = create :unit_group, name: 'experiment-course'
-    experiment_script = create :script, name: 'experiment-script', original_unit_group: original_course
-    experiment_script_2 = create :script, name: 'experiment-script-2', original_unit_group: original_course
-    create :unit_group_unit, unit_group: original_course, script: experiment_script, position: 1
-    create :unit_group_unit, unit_group: experiment_course, script: experiment_script, position: 1
-    create :unit_group_unit, unit_group: experiment_course, script: experiment_script_2, position: 2
-    experiment_teacher = create :teacher
-    section = create :section, user: experiment_teacher, unit_group: original_course
-    SingleUserExperiment.find_or_create_by!(min_user_id: experiment_teacher.id, name: 'teacher-local-nav-v2')
-
-    sign_in experiment_teacher
-
-    get :show, params: {
-      course_course_name: experiment_course.name,
-      position: 1
-    }
-    assert_redirected_to course_unit_path(experiment_course, 1, section_id: section.id)
-  end
-
-  test "show: should remove user_id url param from non-dashboard unit overview when teacher local nav v2 experiment enabled" do
-    experiment_teacher = create :teacher
-    SingleUserExperiment.find_or_create_by!(min_user_id: experiment_teacher.id, name: 'teacher-local-nav-v2')
-
-    sign_in experiment_teacher
-
-    get :show, params: {id: @coursez_2019.name, user_id: 1}
-    assert_redirected_to "/s/#{@coursez_2019.name}"
-  end
-
   test "should not get edit on production" do
     CDO.stubs(:rack_env).returns(:production)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
@@ -576,6 +501,26 @@ class ScriptsControllerTest < ActionController::TestCase
     get :edit, params: {id: unit.name}
 
     assert_equal unit, assigns(:script)
+  end
+
+  test "edit: script_data includes the original course information" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+    unit = create(:course_version, :with_single_unit_course).content_root.first_unit
+    secondary_course = create(:single_unit_course, unit: unit)
+    create(:course_version, content_root: secondary_course)
+
+    # Use /s/ URL
+    get :edit, params: {id: unit.name}
+    script_data = assigns(:script_data)
+    assert_equal unit.name, script_data[:script][:name]
+    assert_equal unit.original_unit_group.course_version.id, script_data[:script][:courseVersionId]
+
+    # Use /courses/ URL with secondary course. It should still return the original course information.
+    get :edit, params: {course_course_name: secondary_course.name, position: "1"}
+    script_data = assigns(:script_data)
+    assert_equal unit.name, script_data[:script][:name]
+    assert_equal unit.original_unit_group.course_version.id, script_data[:script][:courseVersionId]
   end
 
   test 'platformization partner cannot create unit' do

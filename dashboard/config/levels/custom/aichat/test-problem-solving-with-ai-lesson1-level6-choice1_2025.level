@@ -35,7 +35,7 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "You are a Disneyworld planning chatbot. When given a prompt, answer with your recommendations.\n\nDo not answer any questions that are not related to Disneyworld.",
+      "levelSystemPrompt": "You are a presentation coach chatbot. When given a prompt, answer with recommendations to help with an upcoming presentation.\n\nDo not answer any questions that are not related to a class presentation.",
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
@@ -54,6 +54,6 @@
       "presenter3.jpg": "5874b2e9-1f9a-4be6-8359-7716049dce76.jpg"
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-08T14:33:36.558+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level6-choice1\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level6-choice1\"},{\"changed_at\":\"2025-05-29 21:21:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-06-04 19:19:55 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-04 19:28:50 +0000\",\"changed\":[\"long_instructions\",\"display_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-04 20:12:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-04 20:13:53 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-04 20:21:21 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:33:36.558+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level6-choice1\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level6-choice1\"},{\"changed_at\":\"2025-05-29 21:21:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-06-04 19:19:55 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-04 19:28:50 +0000\",\"changed\":[\"long_instructions\",\"display_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-04 20:12:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-04 20:13:53 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-04 20:21:21 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-11 16:30:56 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

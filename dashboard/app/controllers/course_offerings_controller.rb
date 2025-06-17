@@ -6,7 +6,7 @@ class CourseOfferingsController < ApplicationController
 
   def edit
     @course_offering = CourseOffering.find_by!(key: params[:key])
-    @self_paced_pl_course_offerings = CourseOffering.professional_learning_and_self_paced_course_offerings
+    @self_paced_pl_course_offerings = CourseOffering.professional_learning_and_self_paced_course_offerings_basic_info
     @professional_learning_program_paths = CourseOffering::PROFESSIONAL_LEARNING_PROGRAM_PATHS
     @videos = Video.videos_for_course_offering_editor
     render :not_found unless @course_offering

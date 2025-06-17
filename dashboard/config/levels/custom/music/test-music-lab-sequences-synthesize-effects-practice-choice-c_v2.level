@@ -81,10 +81,11 @@
       "validationEnabled": false
     },
     "name_suffix": "_v2",
+    "thumbnail_url": "https://images.code.org/cc11d0d9910b9be176a0287cb43efc45-Screenshot 2025-03-07 at 3.11.36 PM.png",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:07.573+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-effects-practice-choice-c\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-effects-practice-choice-c\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:07.573+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-effects-practice-choice-c\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-effects-practice-choice-c\"},{\"changed_at\":\"2025-06-12 16:01:29 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

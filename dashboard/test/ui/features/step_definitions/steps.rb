@@ -262,9 +262,10 @@ Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
   @browser.find_element(selection_criteria)
 end
 
-When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
+When /^I wait until (?:element )?"([^"]*)" (?:has|contains) (placeholder )?text "([^"]*)"$/ do |selector, is_placeholder, text|
   wait_for_jquery
-  wait_until {@browser.execute_script("return $(#{selector.dump}).text();").include? text}
+  getter = is_placeholder ? "attr('placeholder')" : "text()"
+  wait_until {@browser.execute_script("return $(#{selector.dump}).#{getter};")&.include?(text)}
 end
 
 When /^I wait until (?:element )?"([^"]*)" does not (?:have|contain) text "([^"]*)"$/ do |selector, text|

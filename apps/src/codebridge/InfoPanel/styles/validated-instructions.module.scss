@@ -1,4 +1,3 @@
-@import '@code-dot-org/component-library-styles/colors.scss';
 @import 'font.scss';
 
 @keyframes slidein {
@@ -96,9 +95,12 @@ button.validationButton {
   h3,
   h4 {
     margin: 0 0 10px 0;
-    font-family: $barlowSemiCondensed-semibold;
     font-size: 1.75em;
     line-height: 1.2em;
+
+    &, em, strong {
+      font-family: $barlowSemiCondensed-semibold;
+    }
   }
 
   ol, ul {

@@ -692,6 +692,7 @@ Resources:
               - next-url
               - Accept
               - x-prerender-revalidate
+              - Host
           CookiesConfig:
             CookieBehavior: whitelist
             Cookies:
@@ -750,6 +751,7 @@ Resources:
 
         Aliases:
           - !Sub "${SubdomainName}.${BaseDomainName}"
+          - !Sub "preview-${SubdomainName}.${BaseDomainName}"
 
         Origins:
           - Id: marketing-sites-application-origin
@@ -830,6 +832,18 @@ Resources:
         Ref: HostedZoneId
       Name: !Sub "${SubdomainName}.${BaseDomainName}"
       Type: A
+
+  PreviewCloudFrontDistributionDNS:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      AliasTarget:
+        DNSName: !GetAtt CloudFrontDistribution.DomainName
+        HostedZoneId: Z2FDTNDATAQYW2 # Cloudfront Hosted Zone ID, see: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-aliastarget.html
+      HostedZoneId:
+        Ref: HostedZoneId
+      Name: !Sub "preview-${SubdomainName}.${BaseDomainName}"
+      Type: A
+
   ################################
   # End AWS Cloudfront Resources #
   ################################
