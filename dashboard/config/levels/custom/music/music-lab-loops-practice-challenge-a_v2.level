@@ -593,10 +593,11 @@
       }
     ],
     "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/sabrina_carpenter_feather/sabrina_carpenter_feather.jpg",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:49.564+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-practice-challenge-a\\\"\"],\"cloned_from\":\"music-lab-loops-practice-challenge-a\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:49.564+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-practice-challenge-a\\\"\"],\"cloned_from\":\"music-lab-loops-practice-challenge-a\"},{\"changed_at\":\"2025-06-12 20:32:37 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

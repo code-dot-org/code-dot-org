@@ -81,7 +81,7 @@ const TEST_REGIONAL_WORKSHOPS = [
 const renderDefault = (overrideProps = {}) => {
   const props = {
     ...{
-      availableNationalWorkshops: [TEST_NATIONAL_WORKSHOP],
+      nationalWorkshops: [TEST_NATIONAL_WORKSHOP],
       zipFromSchoolInfo: '',
     },
     ...overrideProps,
@@ -360,11 +360,38 @@ describe('RegionalWorkshopCatalog', () => {
   });
 
   it('does not show national workshops if none are present', () => {
-    renderDefault({availableNationalWorkshops: []});
+    renderDefault({nationalWorkshops: []});
 
     // Only shows one instance of "National workshops", which is the skip link at the top of the page.
     expect(screen.getAllByText('National workshops').length).toBe(1);
     expect(screen.getByRole('link', {name: 'National workshops'}));
     expect(screen.queryByText(TEST_NATIONAL_WORKSHOP.name)).toBe(null);
+  });
+
+  it('shows national workshop under regional workshop section if its rp is returned in the zip search', async () => {
+    const fetchStub = jest.spyOn(window, 'fetch').mockResolvedValue({
+      ok: true,
+      json: () =>
+        Promise.resolve({
+          regional_workshop_data: {
+            regional_partner: {name: REGIONAL_PARTNER},
+            available_regional_workshops: [TEST_NATIONAL_WORKSHOP],
+          },
+        }),
+    });
+    renderDefault({zipFromSchoolInfo: '98122'});
+
+    await waitFor(() => {
+      // Since the 1 national workshop is shown in the regional workshop section, the national workshop
+      // section has no workshops to display so it doesn't show up. The only remaining use of "National
+      // workshops" is the anchor link at the top of the page.
+      expect(screen.getAllByText('National workshops').length).toBe(1);
+
+      // National workshop is instead displayed with the regional workshops
+      screen.getByText('Upcoming local workshops');
+      screen.getByText(TEST_NATIONAL_WORKSHOP.name);
+
+      fetchStub.mockRestore();
+    });
   });
 });

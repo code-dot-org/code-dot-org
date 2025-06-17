@@ -1,6 +1,7 @@
 @no_mobile
 Feature: GDPR Dialog - data transfer agreement
 
+  @pegasus_content
   Scenario: EU user sees the GDPR Dialog on dashboard, opt out
     Given I am in Europe
     And I am a teacher
@@ -29,6 +30,7 @@ Feature: GDPR Dialog - data transfer agreement
     And I am on "http://studio.code.org/home"
     Then element ".ui-test-gdpr-dialog" is not visible
 
+  @pegasus_content
   # Broken during the marketing-sites cutover
   @skip
   Scenario: GDPR Dialog privacy link works from dashboard

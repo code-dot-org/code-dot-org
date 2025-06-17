@@ -1,5 +1,6 @@
 @no_mobile
 @chrome
+@pegasus_content
 Feature: Global Edition - Region Switch Confirm Modal
 
   Background:

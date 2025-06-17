@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import {Key, HTMLAttributes, AnchorHTMLAttributes} from 'react';
 
+import {DefaultDropdown} from '@/dropdown/simpleDropdown/stories/SimpleDropdown.story';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 import Image, {ImageProps} from '@/image';
 
@@ -26,6 +27,11 @@ export interface ImageLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
   image: ImageProps;
 }
 
+export interface LanguageOption {
+  value: string;
+  text: string;
+}
+
 export interface FooterProps extends HTMLAttributes<HTMLElement> {
   /** Footer links */
   siteLinks: SiteLink[];
@@ -35,6 +41,12 @@ export interface FooterProps extends HTMLAttributes<HTMLElement> {
   imageLinks: ImageLink[];
   /** Footer copyright notices */
   copyright: string;
+  /** Footer language options */
+  languages: LanguageOption[];
+  /** Callback for language change */
+  onLanguageChange: (args: string) => void;
+  /** The selected locale code for the language dropdown */
+  selectedLocaleCode?: string;
   /** Footer brand */
   brand?: string;
   /** Footer class */
@@ -61,6 +73,9 @@ const Footer: React.FC<FooterProps> = ({
   imageLinks,
   copyright,
   className,
+  languages,
+  selectedLocaleCode,
+  onLanguageChange,
   ...HTMLAttributes
 }) => (
   <footer
@@ -87,6 +102,24 @@ const Footer: React.FC<FooterProps> = ({
         ))}
       </ul>
 
+      <DefaultDropdown
+        className={classNames(
+          'notranslate',
+          moduleStyles.footerLanguageDropdown,
+        )}
+        size={'s'}
+        dropdownTextThickness={'thin'}
+        color={'black'}
+        items={languages}
+        onChange={e => onLanguageChange(e.target.value)}
+        labelText={''}
+        selectedValue={selectedLocaleCode}
+        name={'language'}
+        aria-label={'Language selection dropdown'}
+      />
+
+      <small className={moduleStyles.footerCopyright}>{copyright}</small>
+
       <ul className={moduleStyles.footerSocialList} aria-label="Social links">
         {socialLinks?.map(({key, label, href, icon, ...link}) => (
           <li key={key}>
@@ -96,8 +129,6 @@ const Footer: React.FC<FooterProps> = ({
           </li>
         ))}
       </ul>
-
-      <small className={moduleStyles.footerCopyright}>{copyright}</small>
 
       <ul className={moduleStyles.footerImageLinkList}>
         {imageLinks?.map(({key, label, href, image, ...link}) => (

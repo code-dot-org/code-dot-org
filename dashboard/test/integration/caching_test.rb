@@ -16,6 +16,7 @@ class CachingTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  # TODO: TEACH-1788: This will need to be updated when we change the test fixtures
   test "should get /s/frozen" do
     assert_cached_queries(0) do
       get '/s/frozen'

@@ -41,7 +41,7 @@ test.describe('All the things UI e2e test', () => {
     });
 
     // Re-enable when locales other than English are supported
-    test.skip('should redirect from localeless paths to localized paths using the language cookie', async ({
+    test('should redirect from localeless paths to localized paths using the language cookie', async ({
       page,
       context,
       browserName,
@@ -57,16 +57,20 @@ test.describe('All the things UI e2e test', () => {
           name: 'language_',
           path: '/',
           domain: `.${allTheThingsPage.getCookieDomain()}`,
-          value: 'zh-CN',
+          value: 'zh-TW',
         },
       ]);
 
       await allTheThingsPage.goto('/engineering/all-the-things');
 
-      await page.waitForURL('**/zh-CN/engineering/all-the-things');
+      await page.waitForURL('**/zh-TW/engineering/all-the-things');
     });
 
-    test('should redirect from localeless paths to localized english when language cookie is invalid', async ({
+    test.use({
+      locale: 'completely-invalid',
+    });
+
+    test('should redirect from localeless paths to localized english when language cookie is invalid and no accept-header', async ({
       page,
       browserName,
       context,
@@ -89,6 +93,43 @@ test.describe('All the things UI e2e test', () => {
       await allTheThingsPage.goto('/engineering/all-the-things');
 
       await page.waitForURL('**/en-US/engineering/all-the-things');
+    });
+
+    test('should stay on the same locale if starting from a localized page', async ({
+      page,
+      browserName,
+    }) => {
+      test.skip(
+        browserName !== 'chromium',
+        'This test only needs to run once on Chromium',
+      );
+      const allTheThingsPage = new MarketingPage(page);
+
+      await allTheThingsPage.goto('/zh-TW/engineering/all-the-things');
+
+      // The middleware should send us back to /zh-TW with the language_ cookie set via the previous visit
+      await allTheThingsPage.goto('/engineering/all-the-things');
+      await page.waitForURL('**/zh-TW/engineering/all-the-things');
+    });
+
+    test.describe('accept-language header', () => {
+      test.use({
+        locale: 'zh-TW',
+      });
+
+      test('redirects to localized page via accept-language', async ({
+        page,
+        browserName,
+      }) => {
+        test.skip(
+          browserName !== 'chromium',
+          'This test only needs to run once on Chromium',
+        );
+        const allTheThingsPage = new MarketingPage(page);
+        await allTheThingsPage.goto('/engineering/all-the-things');
+
+        await page.waitForURL('**/zh-TW/engineering/all-the-things');
+      });
     });
   });
 
@@ -123,7 +164,9 @@ test.describe('All the things UI e2e test', () => {
         const allTheThingsPage = new AllTheThingsPage(page, {locale});
         await allTheThingsPage.goto();
 
-        component = allTheThingsPage.getSectionLocator('Localization');
+        component = allTheThingsPage.getSectionLocator(
+          entry.heading as Section,
+        );
         await component.scrollIntoViewIfNeeded();
       });
 

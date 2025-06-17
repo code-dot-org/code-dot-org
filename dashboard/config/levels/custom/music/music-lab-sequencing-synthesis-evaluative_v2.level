@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:57:04.000Z",
   "level_num": "custom",
@@ -226,10 +227,10 @@
     "display_name": "Building Effects",
     "bubble_choice_description": "Use effects and varying track lengths to create a song that \"builds\" to a particular moment.",
     "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/chainsmokers_coldplay_something_just_like_this/chainsmokers_coldplay_something_just_like_this.jpg",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:04.908+00:00\",\"changed\":[\"cloned from \\\"music-lab-sequencing-synthesis-evaluative\\\"\"],\"cloned_from\":\"music-lab-sequencing-synthesis-evaluative\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:04.908+00:00\",\"changed\":[\"cloned from \\\"music-lab-sequencing-synthesis-evaluative\\\"\"],\"cloned_from\":\"music-lab-sequencing-synthesis-evaluative\"},{\"changed_at\":\"2025-06-12 16:14:34 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

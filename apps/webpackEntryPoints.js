@@ -103,7 +103,6 @@ const CODE_STUDIO_ENTRIES = {
   'maker/setup': './src/sites/studio/pages/maker/setup.js',
   'projects/featured': './src/sites/studio/pages/projects/featured.js',
   'projects/index': './src/sites/studio/pages/projects/index.js',
-  'regional_partners/regional_partner_search': './src/sites/studio/pages/regional_partners/regional_partner_search.js',
   'report_abuse/report_abuse_form': './src/sites/studio/pages/report_abuse/report_abuse_form.js',
   'reference_guides/show': './src/sites/studio/pages/reference_guides/show.js',
   'scripts/show': './src/sites/studio/pages/scripts/show.js',
@@ -180,7 +179,6 @@ const INTERNAL_ENTRIES = {
   'rubrics/new': './src/sites/studio/pages/rubrics/new.js',
   'rubrics/edit': './src/sites/studio/pages/rubrics/edit.js',
   'sections/new': './src/sites/studio/pages/sections/new.js',
-  'sections/edit': './src/sites/studio/pages/sections/edit.js',
   'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
   'scripts/new': './src/sites/studio/pages/scripts/new.js',
   'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
@@ -255,6 +253,7 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
   'pd/session_attendance/attendance_recorded': './src/sites/studio/pages/pd/session_attendance/attendance_recorded.js',
 
   'pd/professional_learning/index': './src/sites/studio/pages/pd/professional_learning/index.js',
+  'pd/professional_learning/self_paced_pl_catalog': './src/sites/studio/pages/pd/professional_learning/self_paced_pl_catalog.js',
   'pd/professional_learning/regional_workshop_catalog': './src/sites/studio/pages/pd/professional_learning/regional_workshop_catalog.js',
   'pd/professional_learning/workshops/index': './src/sites/studio/pages/pd/professional_learning/workshops/index.js',
   'pd/regional_partner_mini_contact/new': './src/sites/studio/pages/pd/regional_partner_mini_contact/new.js',
