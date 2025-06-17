@@ -93,7 +93,7 @@
       "allowChangeStartingPlayheadPosition": true
     },
     "display_name": "Hallelujah",
-    "thumbnail_url": "https://images.code.org/1a8f256186c1659c75f5170f652ed39c-Screenshot 2025-03-14 at 12.05.11 PM.png",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/rosa_linn_hallelujah/rosa_linn_hallelujah.jpg",
     "exemplar_settings": {
       "playerEnabled": true,
       "validationEnabled": false,
@@ -158,7 +158,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:49.433+00:00\",\"changed\":[\"cloned from \\\"music-lab-sequences-challenge-choice-c\\\"\"],\"cloned_from\":\"music-lab-sequences-challenge-choice-c\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:49.433+00:00\",\"changed\":[\"cloned from \\\"music-lab-sequences-challenge-choice-c\\\"\"],\"cloned_from\":\"music-lab-sequences-challenge-choice-c\"},{\"changed_at\":\"2025-06-12 15:33:15 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -107,6 +107,7 @@ def main
       AI_TUTOR_INTERACTION_STATUS
       AI_TUTOR_TYPES
       AI_REQUEST_EXECUTION_STATUS
+      STUDENT_WORK_EVALUATION_STATUS
       AI_CHAT_MODEL_IDS
       AI_CHAT_TEACHER_FEEDBACK
       FEATURED_PROJECT_STATUS
@@ -184,6 +185,7 @@ def main
         PD_SESSION_FORMATS
         WORKSHOP_FORMATS
         WORKSHOP_COURSE_CONFIGS
+        COURSE_BUILD_YOUR_OWN
       ),
       source_module: Pd::SharedWorkshopConstants,
       transform_keys: false

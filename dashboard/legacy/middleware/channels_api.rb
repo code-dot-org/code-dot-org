@@ -88,26 +88,12 @@ class ChannelsApi < Sinatra::Base
 
     timestamp = Time.now
 
-    published_at = nil
-
-    if data['shouldPublish']
-      project_type = data['projectType']
-      bad_request unless ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-      forbidden if sharing_disabled? && !ALWAYS_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-
-      # The client decides whether to publish the project, but we rely on the
-      # server to generate the timestamp. Remove shouldPublish from the project
-      # data because it doesn't make sense to persist it.
-      published_at = timestamp
-      data.delete('shouldPublish')
-    end
-
     begin
       id = project.create(
         data.merge('createdAt' => timestamp, 'updatedAt' => timestamp),
         ip: request.ip,
         type: data['projectType'],
-        published_at: published_at,
+        published_at: nil,
         remix_parent_id: remix_parent_id,
         )
     rescue Projects::ValidationError
@@ -197,37 +183,6 @@ class ChannelsApi < Sinatra::Base
   end
   put %r{/v3/channels/([^/]+)$} do |_id|
     call(env.merge('REQUEST_METHOD' => 'PATCH'))
-  end
-
-  #
-  # POST /v3/channels/<channel-id>/publish/<project-type>
-  #
-  # Marks the specified channel as published.
-  #
-  post %r{/v3/channels/([^/]+)/publish/([^/]+)} do |channel_id, project_type|
-    not_authorized unless owns_channel?(channel_id)
-    bad_request unless ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-    forbidden('Sharing disabled for user account') if sharing_disabled? && CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-    forbidden('Project in restricted share mode') if Projects.in_restricted_share_mode(channel_id, project_type)
-
-    begin
-      # Once we have back-filled the project_type column for all channels,
-      # it will no longer be necessary to specify the project type here.
-      Projects.new(get_storage_id).publish(channel_id, project_type, current_user).to_json
-    rescue Projects::PublishError => exception
-      forbidden(exception.message)
-    end
-  end
-
-  #
-  # POST /v3/channels/<channel-id>/unpublish
-  #
-  # Marks the specified channel as no longer published.
-  #
-  post %r{/v3/channels/([^/]+)/unpublish} do |channel_id|
-    not_authorized unless owns_channel?(channel_id)
-    Projects.new(get_storage_id).unpublish(channel_id)
-    {publishedAt: nil}.to_json
   end
 
   #

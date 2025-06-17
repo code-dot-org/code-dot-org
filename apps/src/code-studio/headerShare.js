@@ -52,7 +52,6 @@ export function shareProject(shareUrl) {
           isAbusive={dashboard.project.exceedsAbuseThreshold()}
           canPrint={appType === 'artist'}
           canPublish={canPublish}
-          isPublished={dashboard.project.isPublished()}
           channelId={dashboard.project.getCurrentId()}
           appType={appType}
           onClickPopup={popupWindow}

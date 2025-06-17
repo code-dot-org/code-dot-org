@@ -12,6 +12,7 @@ const EVENTS = {
   ACCOUNT_TYPE_PICKED_EVENT: 'Account Type Picked',
   SIGN_UP_STARTED_EVENT: 'Sign Up Started',
   SIGN_UP_LOGIN_TYPE_PICKED_EVENT: 'User Login Type Picked',
+  SIGN_UP_SSO_SHOW_MORE_OPTIONS: 'SSO Show More Options Clicked',
   SIGN_UP_FINISHED_EVENT: 'Sign Up Finished',
   SECTION_SETUP_SIGN_IN_EVENT: 'Section Setup Sign In',
   ABANDON_SECTION_SETUP_SIGN_IN_EVENT: 'Abandon Section Setup Sign In',
@@ -435,6 +436,10 @@ const EVENTS = {
   SHARING_DIALOG_SUBMIT_TO_BE_FEATURED:
     'User Clicks Submit To Be Featured In Share Dialog',
   SUBMIT_PROJECT_DIALOG_SUBMIT: 'User Clicks Submit In Submit Project Dialog',
+
+  // Add custom image to project
+  UPLOAD_CUSTOM_IMAGE: 'User clicks on upload image to project',
+  SUBMIT_IMAGE_URL: 'User clicks on submit image URL to project',
 
   // Export app
   EXPORT_APP: 'User Exports App From Share Advanced Options',

@@ -1,5 +1,6 @@
 import $ from 'jquery';
 
+import {OPEN_ENDED_LEGACY_PROJECT_TYPES} from '@cdo/apps/constants';
 import firehoseClient from '@cdo/apps/metrics/firehose';
 import {getGlobalEditionRegion} from '@cdo/apps/util/globalEdition';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -1596,11 +1597,9 @@ var projects = (module.exports = {
    * @param {string} newName
    * @param {Object} options Optional parameters.
    * @param {boolean} options.shouldNavigate Whether to navigate to the project URL.
-   * @param {boolean} options.shouldPublish Whether to publish the new project.
    * @returns {Promise} Promise which resolves when the operation is complete.
    */
   copy(newName, options = {}) {
-    const {shouldPublish} = options;
     current = current || {};
     const queryParams = current.id ? {parent: current.id} : null;
     delete current.id;
@@ -1608,9 +1607,6 @@ var projects = (module.exports = {
     delete current.libraryName;
     delete current.libraryDescription;
     current.projectType = this.getStandaloneApp();
-    if (shouldPublish) {
-      current.shouldPublish = true;
-    }
     this.setName(newName);
     return new Promise((resolve, reject) => {
       channels.create(
@@ -1979,11 +1975,8 @@ function fetchAbuseScoreAndPrivacyViolations(project) {
     new Promise(fetchShareFailure),
   ];
 
-  if (
-    project.getStandaloneApp() === 'applab' ||
-    project.getStandaloneApp() === 'gamelab' ||
-    project.isWebLab()
-  ) {
+  // If open-ended project type, check if project owner's sharing is disabled.
+  if (OPEN_ENDED_LEGACY_PROJECT_TYPES.includes(project.getStandaloneApp())) {
     promises.push(new Promise(fetchSharingDisabled));
   }
   return Promise.all(promises);

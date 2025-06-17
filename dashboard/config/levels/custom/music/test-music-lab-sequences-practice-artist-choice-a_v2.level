@@ -91,7 +91,7 @@
         "kind": "flyoutToolbox"
       }
     },
-    "display_name": "\"Tightrope\"",
+    "display_name": "Create \"Tightrope\"",
     "thumbnail_url": "https://images.code.org/9e31194af19b904a457bdb178ccce575-tinashe.png",
     "exemplar_settings": {
       "playerEnabled": true,
@@ -115,10 +115,11 @@
       "isPredictLevel": false
     },
     "name_suffix": "_v2",
+    "bubble_choice_description": "Use what you know about sequencing to create this portion of Tinashe's \"Tightrope\".",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:47.465+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-artist-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-artist-choice-a\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:47.465+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-artist-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-artist-choice-a\"},{\"changed_at\":\"2025-06-12 15:19:47 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-12 15:28:17 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

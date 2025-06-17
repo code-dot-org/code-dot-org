@@ -30,13 +30,29 @@ class Pd::ProfessionalLearningController < ApplicationController
     }.compact
   end
 
+  # GET professional-learning/courses
+  def courses
+    @self_paced_pl_course_offerings = CourseOffering.self_paced_course_offerings_for_catalog
+    view_options(full_width: true, no_padding_container: true)
+    render :self_paced_pl_catalog
+  end
+
   # GET professional-learning/workshops
   def workshops
-    @available_national_workshops = Pd::ProfessionalLearningController.national_workshop_data
+    @national_workshops = Pd::ProfessionalLearningController.national_workshop_data
     @zip_from_school_info = current_user&.school_info&.school&.zip&.to_s&.rjust(5, '0') || current_user&.school_info&.zip&.to_s&.rjust(5, '0')
 
     view_options(full_width: true, no_padding_container: true)
     render :regional_workshop_catalog
+  end
+
+  # GET professional-learning/workshops/:workshop_id
+  def workshop_marketing_page
+    view_options(full_width: true, responsive_content: true, no_padding_container: true)
+    @workshop_info = Pd::Workshop.find(params[:workshop_id])&.summarize_for_marketing_page
+    @is_signed_out = current_user.nil?
+    @is_student = current_user&.student? || false
+    render 'pd/professional_learning/workshops/index'
   end
 
   # GET professional-learning/contact-regional-partner
@@ -205,7 +221,7 @@ class Pd::ProfessionalLearningController < ApplicationController
   # Returns if the given workshop is within the provided regional partner's area.
   private def in_region?(workshop, regional_partner)
     workshop.regional_partner_id == regional_partner.id &&
-      (workshop.participant_group_type == 'Regional' ||
+      (['Regional', 'National'].include?(workshop.participant_group_type)  ||
       [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSA, Pd::Workshop::COURSE_CSF].include?(workshop.course))
   end
 

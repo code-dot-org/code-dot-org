@@ -64,7 +64,7 @@
       "allowChangeStartingPlayheadPosition": true
     },
     "display_name": "Layering Lyrics",
-    "thumbnail_url": "https://images.code.org/1a8f256186c1659c75f5170f652ed39c-Screenshot 2025-03-14 at 12.05.11 PM.png",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/shakira_whenever_wherever/shakira_whenever_wherever.jpg",
     "exemplar_settings": {
       "playerEnabled": true,
       "validationEnabled": false,
@@ -107,7 +107,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:49.199+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-choice-b\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:49.199+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-choice-b\"},{\"changed_at\":\"2025-06-12 15:32:57 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

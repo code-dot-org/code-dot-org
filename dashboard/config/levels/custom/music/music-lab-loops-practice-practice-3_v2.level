@@ -174,7 +174,7 @@
     },
     "display_name": "Wake Me Up",
     "long_instructions": "### Wake Me Up\r\n\r\nRecreate the verse for Wake Me Up by Aloe Blacc. The lyrics are already provided but you should choose the backing instruments. Your song should have:\r\n- 2 Backing Beats\r\n- 1 Backing Bass\r\n- 2 Backing Leads\r\n\r\nYour final song should look like the example below\r\n\r\n![](https://images.code.org/6da980b189007c9fef0f52c4be0067fa-image-1744321484407.png)",
-    "bubble_choice_description": "Recreate the verse to Wake Me Up by Aloe Blacc",
+    "bubble_choice_description": "Recreate the verse to \"Wake Me Up\" by Aloe Blacc",
     "validations": [
       {
         "key": "music-lab-loops-practice-practice-3_c9ce2fce-3883-4768-b7ac-3dca1f33c20b",
@@ -236,10 +236,11 @@
       }
     ],
     "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/aloe_blacc_wake_me_up/aloe_blacc_wake_me_up.jpg",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:48.005+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-practice-practice-3\\\"\"],\"cloned_from\":\"music-lab-loops-practice-practice-3\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:48.005+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-practice-practice-3\\\"\"],\"cloned_from\":\"music-lab-loops-practice-practice-3\"},{\"changed_at\":\"2025-06-12 16:08:58 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-12 16:10:24 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

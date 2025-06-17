@@ -7,11 +7,7 @@ import {useSelector} from 'react-redux';
 import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModal';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {
-  isLevelbuilderEnvironment,
-  tryGetLocalStorage,
-  trySetLocalStorage,
-} from '@cdo/apps/utils';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 import {ModalTypes} from '../constants';
 import aichatI18n from '../locale';
@@ -102,20 +98,22 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   );
 
   useEffect(() => {
-    // Skip showing the modal on levelbuilder
-    if (isLevelbuilderEnvironment()) {
-      return;
-    }
+    const modalToShow = () => {
+      if (!isUserTeacher) {
+        return ModalTypes.WARNING;
+      }
 
-    const teacherSawAichatOnboardingModal = tryGetLocalStorage(
-      'teacherSawAichatOnboarding',
-      'no'
-    );
-    const modalToShow =
-      isUserTeacher && teacherSawAichatOnboardingModal !== 'yes'
-        ? ModalTypes.TEACHER_ONBOARDING
-        : ModalTypes.WARNING;
-    dispatch(setShowModalType(modalToShow));
+      const teacherSawAichatOnboardingModal = tryGetLocalStorage(
+        'teacherSawAichatOnboarding',
+        'no'
+      );
+
+      return teacherSawAichatOnboardingModal === 'yes'
+        ? undefined
+        : ModalTypes.TEACHER_ONBOARDING;
+    };
+
+    dispatch(setShowModalType(modalToShow()));
   }, [isUserTeacher, dispatch]);
 
   useEffect(() => {
@@ -187,8 +185,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const onCloseModal = useCallback(() => {
     // We only want to show the teacher onboarding modal the first time a teacher user
     // interacts with the aichat tool. Thus, we store a value in local storage when
-    // closing the modal. After the first time viewing the modal, the teacher user
-    // sees the warning modal on page load from then on.
+    // closing the modal.
     if (
       isUserTeacher &&
       showModalType === ModalTypes.TEACHER_ONBOARDING &&

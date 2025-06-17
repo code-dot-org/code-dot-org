@@ -193,7 +193,7 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
       options={[
         {
           value: 'fromLibrary',
-          label: 'From Library',
+          label: aichatI18n.fromLibrary(),
           icon: {iconName: 'copy'},
           onClick: () => {
             setShowAssetManager(true);
@@ -206,7 +206,7 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
         },
         {
           value: 'fromDevice',
-          label: 'From Device',
+          label: aichatI18n.fromDevice(),
           icon: {iconName: 'file-magnifying-glass'},
           onClick: onDeviceUploadClick,
         },

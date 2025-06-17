@@ -1,11 +1,13 @@
 import {type Locator, type Page} from '@playwright/test';
 
-import {MarketingPage} from './marketing';
+import {MarketingPage, MarketingPageOptions} from './marketing';
 
 export type Section =
   | 'Action Block'
   | 'Action Block Carousel'
   | 'Full Width Action Block'
+  | 'Action Block Pattern Default'
+  | 'Action Block Pattern Hidden Elements'
   | 'Button'
   | 'Divider'
   | 'Editorial Card'
@@ -32,8 +34,8 @@ export type Section =
   | 'Video Carousel';
 
 export class AllTheThingsPage extends MarketingPage {
-  constructor(page: Page, locale: string) {
-    super(page, locale);
+  constructor(page: Page, options: MarketingPageOptions) {
+    super(page, options);
   }
 
   async enableDraftMode(token: string = 'ci-draft-mode') {
@@ -53,7 +55,6 @@ export class AllTheThingsPage extends MarketingPage {
     const headingLocator = this.page.getByRole('heading', {
       name: heading,
       exact: true,
-      level: 1, // selects only the h1 in each section
     });
 
     // Go through the top-level sections, finding the one that has this heading
