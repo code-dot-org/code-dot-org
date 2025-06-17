@@ -495,8 +495,7 @@ class LessonsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script, :with_levels
-    create(:single_unit_course, unit: unit)
+    unit = create :script, :in_single_unit_course, :with_levels
     lesson = unit.lessons.first
 
     error = assert_raises RuntimeError do
@@ -514,8 +513,7 @@ class LessonsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script, :with_lessons, lessons_count: 1
-    create(:single_unit_course, unit: unit)
+    unit = create :script, :in_single_unit_course, :with_lessons, lessons_count: 1
     lesson = unit.lessons.first
     create(
       :script_level,
@@ -537,7 +535,7 @@ class LessonsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create(:single_unit_course).first_unit
+    script = create(:unit, :in_single_unit_course)
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
 
@@ -556,7 +554,7 @@ class LessonsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create(:single_unit_course).first_unit
+    script = create(:unit, :in_single_unit_course)
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
     lesson_activity = create :lesson_activity, lesson: lesson
@@ -583,7 +581,7 @@ class LessonsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create(:single_unit_course).first_unit
+    script = create(:unit, :in_single_unit_course)
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
     lesson_activity = create :lesson_activity, lesson: lesson
@@ -613,7 +611,7 @@ class LessonsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create(:single_unit_course).first_unit
+    script = create(:unit, :in_single_unit_course)
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
     lesson_activity = create :lesson_activity, lesson: lesson

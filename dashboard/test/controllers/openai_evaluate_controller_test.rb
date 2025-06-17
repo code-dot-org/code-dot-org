@@ -9,7 +9,7 @@ class OpenaiEvaluateControllerTest < ActionController::TestCase
   test 'evaluate returns not found for bogus level",' do
     student = create(:student)
     sign_in(student)
-    unit = create(:single_unit_course).first_unit
+    unit = create(:unit, :in_single_unit_course)
     get :evaluate, params: {level_id: 18976, unit_id: unit.id, student_work: "This is a good answer.", evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]}
     assert_response :not_found
   end

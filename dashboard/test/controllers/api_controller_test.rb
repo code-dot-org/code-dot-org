@@ -15,8 +15,7 @@ class ApiControllerTest < ActionController::TestCase
     @section = create(:section, user: @section_owner, login_type: 'word')
     create(:section_instructor, instructor: @teacher, section: @section, status: :active)
 
-    @script = create(:script, :with_levels, levels_count: 1)
-    create(:single_unit_course, unit: @script)
+    @script = create(:script, :in_single_unit_course, :with_levels, levels_count: 1)
     @script_level = @script.script_levels[0]
     @level = @script_level.level
 
@@ -57,7 +56,7 @@ class ApiControllerTest < ActionController::TestCase
 
     section = create :section
     level = create :dance, :with_example_solutions
-    script = create(:single_unit_course).first_unit
+    script = create(:unit, :in_single_unit_course)
     script_level = create :script_level, script: script, levels: [level]
 
     get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: section.id}
@@ -74,7 +73,7 @@ class ApiControllerTest < ActionController::TestCase
     sign_in teacher
 
     level = create(:level, :blockly, :with_ideal_level_source)
-    script = create(:single_unit_course).first_unit
+    script = create(:unit, :in_single_unit_course)
     script_level = create :script_level, script: script, levels: [level]
 
     get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: ""}
@@ -92,7 +91,7 @@ class ApiControllerTest < ActionController::TestCase
 
     section = create :section
     level = create(:level, :blockly, :with_ideal_level_source)
-    script = create(:single_unit_course).first_unit
+    script = create(:unit, :in_single_unit_course)
     script_level = create :script_level, script: script, levels: [level]
 
     get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: section.id}
@@ -164,7 +163,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get text_responses for section with script with text response" do
-    script = create :script, name: 'text-response-script'
+    script = create :script, :in_single_unit_course, name: 'text-response-script'
     lesson_group = create :lesson_group, script: script
     lesson1 = create :lesson, script: script, name: 'First Lesson', key: 'First Lesson', lesson_group: lesson_group
     lesson2 = create :lesson, script: script, name: 'Second Lesson', key: 'Second Lesson', lesson_group: lesson_group
@@ -1095,7 +1094,7 @@ class ApiControllerTest < ActionController::TestCase
 
   test "user_app_options should return previous attempt with swapped level" do
     sign_in @student_1
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
     level1a = create :maze, name: 'maze 1'
@@ -1306,7 +1305,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get paired icons for paired user levels" do
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
     sl = create :script_level, lesson: lesson, script: script
@@ -1348,7 +1347,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should not return progress for bonus levels" do
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
     create :script_level, script: script, lesson: lesson
@@ -1948,7 +1947,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   private def create_script_with_bonus_levels
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
 
@@ -1962,7 +1961,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   private def create_script_with_lockable_lesson
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
 
     # Create a LevelGroup level.
