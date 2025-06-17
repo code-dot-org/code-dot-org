@@ -1,5 +1,4 @@
 import Negotiator from 'negotiator';
-import {cookies} from 'next/headers';
 import {NextFetchEvent, NextRequest, NextResponse} from 'next/server';
 
 import {
@@ -69,7 +68,7 @@ export const withLocale: MiddlewareFactory = next => {
     if (isRootRoute) {
       // If the _short_name cookie is set, then Dashboard successfully logged in the user which is an early indicator
       // that the user is logged in right now. Therefore, send the user to Code Studio
-      const userTypeCookie = (await cookies()).get('_user_type');
+      const userTypeCookie = request.cookies.get('_user_type');
 
       if (userTypeCookie?.value) {
         return NextResponse.redirect(getStudioBaseUrl());
