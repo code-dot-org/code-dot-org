@@ -117,19 +117,24 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
     setEvaluationsPending(true);
     // Filter responses to only those without an existing evaluation for the studentId
     // this is snake case on the evaluations.
-    const responsesWithoutAiEvaluation = responses.filter(
-      response =>
-        !evaluations.some(
-          evaluation => evaluation.studentId === response.studentId
-        )
-    );
+    const responsesWithoutUpdatedAiEvaluation = responses.filter(response => {
+      const evaluation = evaluations.find(
+        evaluation => evaluation.studentId === response.studentId
+      );
+      if (!evaluation) {
+        return true;
+      }
+      if (
+        response.updatedAt &&
+        evaluation.updatedAt &&
+        new Date(response.updatedAt) > new Date(evaluation.updatedAt)
+      ) {
+        return true;
+      }
+      return false;
+    });
 
-    console.log(
-      'Responses without AI evaluation:',
-      responsesWithoutAiEvaluation
-    );
-
-    const responsePromises = responsesWithoutAiEvaluation.map(
+    const responsePromises = responsesWithoutUpdatedAiEvaluation.map(
       async studentResponse => {
         return evaluateStudentResponse(studentResponse);
       }

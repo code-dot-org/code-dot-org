@@ -11,6 +11,7 @@ export interface StudentAnswer {
   studentWork: string;
   codeVersion?: string;
   projectId?: string;
+  updatedAt?: string;
 }
 
 export interface AIResponse {

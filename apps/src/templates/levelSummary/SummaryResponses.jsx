@@ -138,6 +138,7 @@ const SummaryResponses = ({
     studentId: response.user_id,
     studentDisplayName: response.student_display_name,
     studentWork: response.text,
+    updatedAt: response.updated_at,
   }));
 
   const AiEvaluationMVPUnits = ['csp4-2024', 'csp6-2024', 'allthethings'];
