@@ -31,6 +31,10 @@
         height: 2.625rem;
         background: var(--background-neutral-quaternary);
         border-radius: 50%;
+
+        figure {
+          border-radius: 50%;
+        }
       }
 
       .workshopFacilitatorContactInfo {

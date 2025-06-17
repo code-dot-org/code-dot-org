@@ -30,6 +30,13 @@ class Pd::ProfessionalLearningController < ApplicationController
     }.compact
   end
 
+  # GET professional-learning/courses
+  def courses
+    @self_paced_pl_course_offerings = CourseOffering.self_paced_course_offerings_for_catalog
+    view_options(full_width: true, no_padding_container: true)
+    render :self_paced_pl_catalog
+  end
+
   # GET professional-learning/workshops
   def workshops
     @national_workshops = Pd::ProfessionalLearningController.national_workshop_data
@@ -43,6 +50,8 @@ class Pd::ProfessionalLearningController < ApplicationController
   def workshop_marketing_page
     view_options(full_width: true, responsive_content: true, no_padding_container: true)
     @workshop_info = Pd::Workshop.find(params[:workshop_id])&.summarize_for_marketing_page
+    @is_signed_out = current_user.nil?
+    @is_student = current_user&.student? || false
     render 'pd/professional_learning/workshops/index'
   end
 

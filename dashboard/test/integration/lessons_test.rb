@@ -8,6 +8,7 @@ class LessonsTest < ActionDispatch::IntegrationTest
     File.stubs(:write)
 
     @script = create :script, name: 'unit-1', is_migrated: true
+    @course = create(:single_unit_course, unit: @script)
     lesson_group = create :lesson_group, script: @script
     @lesson = create(
       :lesson,
@@ -74,14 +75,14 @@ class LessonsTest < ActionDispatch::IntegrationTest
   end
 
   test 'lesson show page contains expected data' do
-    get script_lesson_path(@lesson.script, @lesson)
+    get course_unit_lesson_path(@course, 1, @lesson)
     assert_response :success
     assert_select 'script[data-lesson]', 1
     lesson_data = JSON.parse(css_select('script[data-lesson]').first.attribute('data-lesson').to_s)
     assert_equal 'lesson overview', lesson_data['overview']
-    assert_equal '/s/unit-1', lesson_data['unit']['link']
-    assert_equal script_lesson_path(@lesson.script, @lesson), lesson_data['unit']['lessonGroups'][0]['lessons'][0]['link']
-    assert_equal script_lesson_path(@lesson2.script, @lesson2), lesson_data['unit']['lessonGroups'][0]['lessons'][1]['link']
+    assert_equal "/courses/#{@course.name}/units/1", lesson_data['unit']['link']
+    assert_equal course_unit_lesson_path(@course, 1, @lesson), lesson_data['unit']['lessonGroups'][0]['lessons'][0]['link']
+    assert_equal course_unit_lesson_path(@course, 1, @lesson2), lesson_data['unit']['lessonGroups'][0]['lessons'][1]['link']
     assert_equal 'Standard Description', lesson_data['standards'][0]['description']
     assert_equal 'Opportunity Standard Description', lesson_data['opportunityStandards'][0]['description']
   end

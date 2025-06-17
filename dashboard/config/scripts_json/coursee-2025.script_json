@@ -21,7 +21,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-02 03:45:51 UTC",
+    "serialized_at": "2025-06-13 18:41:45 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5073,6 +5074,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-video_b_csf-e"
+        ],
         "progression": "Intro Video"
       },
       "bonus": false,
@@ -5095,6 +5099,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-explore-videos_b_csf-e"
+        ],
         "progression": "Career Exploration"
       },
       "bonus": false,
@@ -5117,6 +5124,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-explore-projects_b_csf-e"
+        ],
         "progression": "Build Your Project"
       },
       "bonus": false,
@@ -5139,6 +5149,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-plan_b_csf-e"
+        ],
         "progression": "Build Your Project"
       },
       "bonus": false,
@@ -5161,6 +5174,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-sprite-location_b_csf-e"
+        ],
         "progression": "Build Your Project"
       },
       "bonus": false,
@@ -5183,6 +5199,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-backgrounds_b_csf-e"
+        ],
         "progression": "Build Your Project"
       },
       "bonus": false,
@@ -5205,6 +5224,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-event-say_b_csf-e"
+        ],
         "progression": "Build Your Project"
       },
       "bonus": false,
@@ -5227,6 +5249,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-extra-skills_b_csf-e"
+        ],
         "progression": "Build Your Project"
       },
       "bonus": false,
@@ -5249,6 +5274,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-share_b_csf-e"
+        ],
         "progression": "Share Out"
       },
       "bonus": false,
@@ -6346,6 +6374,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-video-hold_launch_csf_e"
+        ],
         "progression": "Video Intro"
       },
       "bonus": false,
@@ -6368,6 +6399,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-play-ramp-functions1"
+        ],
         "progression": "The Basics"
       },
       "bonus": false,
@@ -6390,6 +6424,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-play-two-ramp-functions2"
+        ],
         "progression": "The Basics"
       },
       "bonus": false,
@@ -6412,6 +6449,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-together-ramp-functions3"
+        ],
         "progression": "The Basics"
       },
       "bonus": false,
@@ -6434,6 +6474,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-need_launch_csf_e"
+        ],
         "progression": "Notice & Predict"
       },
       "bonus": false,
@@ -6456,6 +6499,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-need2_launch_csf_e"
+        ],
         "progression": "Notice & Predict"
       },
       "bonus": false,
@@ -6478,6 +6524,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-panel_launch_csf_e"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6500,6 +6549,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-define_launch_csf_e"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6522,6 +6574,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-chorus_launch_csf_e"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6544,6 +6599,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-call_launch_csf_e"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6566,6 +6624,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-use_launch_csf_e"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6588,6 +6649,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-chorus2_launch_csf_e"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6610,6 +6674,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-cfu_csf_e"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6632,6 +6699,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-panel2_launch_csf_e"
+        ],
         "progression": "Freeplay"
       },
       "bonus": false,
@@ -6654,6 +6724,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-beat_launch_csf_e"
+        ],
         "progression": "Freeplay"
       },
       "bonus": false,
@@ -10353,16 +10426,15 @@
       }
     },
     {
-      "name": "CSF Change Log 2024-25",
-      "url": "https://docs.google.com/document/d/1Xbo3W7uLcrOtl3qPWcuAaJuBu4cFa1ukldDAwJBLFAE/template/preview",
-      "key": "csf_change_log_2024-25",
+      "name": "CSF Change Log 20255-26",
+      "url": "https://docs.google.com/document/d/1WGwamsReVGP7vUPISG9ivX3RHNBjlHa5GmU28abHNHo/edit?usp=sharing",
+      "key": "csf_change_log_20255-26",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/document/d/1Xbo3W7uLcrOtl3qPWcuAaJuBu4cFa1ukldDAwJBLFAE/template/export",
         "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "csf_change_log_2024-25"
+        "resource.key": "csf_change_log_20255-26"
       }
     },
     {
@@ -11099,7 +11171,7 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csf_change_log_2024-25",
+        "resource.key": "csf_change_log_20255-26",
         "script.name": "coursee-2025"
       }
     },

@@ -10,6 +10,7 @@ export interface FacilitatorInfo {
   name: string;
   email: string;
   bio?: string;
+  image_path?: string;
 }
 
 export interface SessionInfo {

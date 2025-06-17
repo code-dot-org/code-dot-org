@@ -3,7 +3,7 @@ import {
   ObservableProcedureModel,
 } from '@blockly/block-shareable-procedures';
 import {FieldColour} from '@blockly/field-colour';
-import {KeyboardNavigation} from '@blockly/keyboard-experiment';
+import {KeyboardNavigation} from '@blockly/keyboard-navigation';
 import * as GoogleBlockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
 

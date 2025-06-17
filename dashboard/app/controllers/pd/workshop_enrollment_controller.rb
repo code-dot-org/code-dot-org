@@ -56,7 +56,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       session_info_for_calendar = @workshop.sessions.map(&:session_info_for_calendar)
 
       facilitators = @workshop.facilitators.map do |facilitator|
-        # TODO: Come up with more permanent solution that doesn't require cross-project file dependency.
+        # TODO [CMS-65]: Come up with more permanent solution that doesn't require cross-project file dependency.
         bio_file = pegasus_dir("sites.v3/code.org/views/workshop_affiliates/#{facilitator.id}_bio.md")
         image_file = pegasus_dir("sites.v3/code.org/public/images/affiliate-images/#{facilitator.id}.jpg")
 
