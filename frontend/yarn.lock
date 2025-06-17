@@ -1107,6 +1107,8 @@ __metadata:
     "@testing-library/user-event": "npm:14.5.2"
     "@types/fs-extra": "npm:^11.0.4"
     "@types/jest": "npm:^29.5.14"
+    "@types/localizejs-library": "npm:^1.0.6"
+    "@types/negotiator": "npm:^0.6.3"
     "@types/node": "npm:^20"
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
@@ -1120,6 +1122,7 @@ __metadata:
     eslint-plugin-jest: "npm:^28.9.0"
     jest: "npm:^29.7.0"
     jest-environment-jsdom: "npm:^29.7.0"
+    negotiator: "npm:^1.0.0"
     next: "npm:^15.2.4"
     next-logger: "npm:^5.0.1"
     pino: "npm:^9.6.0"
@@ -6960,6 +6963,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/localizejs-library@npm:^1.0.6":
+  version: 1.0.6
+  resolution: "@types/localizejs-library@npm:1.0.6"
+  checksum: 10c0/e65641398ed89c76bb1296ef845747af535f43b46f527c53680becb4d8898579d32b2386711b17c2f7b673a2cccb04fa0d5f92ec14df891d64dfca7d39825e06
+  languageName: node
+  linkType: hard
+
 "@types/lodash@npm:^4":
   version: 4.17.13
   resolution: "@types/lodash@npm:4.17.13"
@@ -6996,6 +7006,13 @@ __metadata:
   dependencies:
     "@types/node": "npm:*"
   checksum: 10c0/3cf279e7db05d56c0544532a4380b9079f579092379a04c8138bd5cf88dda5b31208ac2d23ce7dbf4e3a3f43aaeed44e72f9f19f726518f308efe95a7435619a
+  languageName: node
+  linkType: hard
+
+"@types/negotiator@npm:^0.6.3":
+  version: 0.6.3
+  resolution: "@types/negotiator@npm:0.6.3"
+  checksum: 10c0/d182002d9d7d3248139008e29857dddbc98bd7ada1fddbb33c96fce2f62821698a1ac62e90a92ea004c594abc6865e143f50146e21123a0aeb0641c2bf832aa3
   languageName: node
   linkType: hard
 
@@ -15927,6 +15944,13 @@ __metadata:
   version: 0.6.4
   resolution: "negotiator@npm:0.6.4"
   checksum: 10c0/3e677139c7fb7628a6f36335bf11a885a62c21d5390204590a1a214a5631fcbe5ea74ef6a610b60afe84b4d975cbe0566a23f20ee17c77c73e74b80032108dea
+  languageName: node
+  linkType: hard
+
+"negotiator@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "negotiator@npm:1.0.0"
+  checksum: 10c0/4c559dd52669ea48e1914f9d634227c561221dd54734070791f999c52ed0ff36e437b2e07d5c1f6e32909fc625fe46491c16e4a8f0572567d4dd15c3a4fda04b
   languageName: node
   linkType: hard
 

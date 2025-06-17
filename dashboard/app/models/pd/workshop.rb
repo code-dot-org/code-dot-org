@@ -988,11 +988,16 @@ class Pd::Workshop < ApplicationRecord
 
   def summarize_for_marketing_page
     facilitators_info = facilitators.map do |facilitator|
+      # TODO [CMS-65]: Come up with more permanent solution that doesn't require cross-project file dependency.
+
       bio_file = pegasus_dir("sites.v3/code.org/views/workshop_affiliates/#{facilitator.id}_bio.md")
+      image_file = pegasus_dir("sites.v3/code.org/public/images/affiliate-images/#{facilitator.id}.jpg")
+
       {
         name: facilitator.name,
         email: facilitator.email,
-        bio: File.exist?(bio_file) ? File.read(bio_file) : nil
+        bio: File.exist?(bio_file) ? File.read(bio_file) : nil,
+        image_path: File.exist?(image_file) ? CDO.code_org_url("/images/affiliate-images/fit-150/#{facilitator.id}.jpg") : nil
       }
     end
 
