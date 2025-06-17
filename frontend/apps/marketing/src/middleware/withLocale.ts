@@ -1,4 +1,5 @@
 import Negotiator from 'negotiator';
+import {cookies} from 'next/headers';
 import {NextFetchEvent, NextRequest, NextResponse} from 'next/server';
 
 import {
@@ -8,6 +9,7 @@ import {
   SUPPORTED_LOCALES_SET,
 } from '@/config/locale';
 import {getStage} from '@/config/stage';
+import {getStudioBaseUrl} from '@/config/studio';
 import {getContentfulSlug} from '@/contentful/slug/getContentfulSlug';
 
 import {MiddlewareFactory} from './types';
@@ -62,7 +64,19 @@ export const withLocale: MiddlewareFactory = next => {
 
     // If pathParts is empty, then it is a request to / which should resolve to the / slug
     // It is an empty string here because when a call is made to Contentful, `/` is automatically prepended
-    const slug = pathParts.length === 0 ? '' : getContentfulSlug(pathParts);
+    const isRootRoute = pathParts.length === 0;
+
+    if (isRootRoute) {
+      // If the _short_name cookie is set, then Dashboard successfully logged in the user which is an early indicator
+      // that the user is logged in right now. Therefore, send the user to Code Studio
+      const userTypeCookie = (await cookies()).get('_user_type');
+
+      if (userTypeCookie?.value) {
+        return NextResponse.redirect(getStudioBaseUrl());
+      }
+    }
+
+    const slug = isRootRoute ? '' : getContentfulSlug(pathParts);
 
     const cookieLocale = getLanguageFromCookie(request);
     const browserPreferredLocale = getLanguageFromAcceptLanguageHeader(request);
