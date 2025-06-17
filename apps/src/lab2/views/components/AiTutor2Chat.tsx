@@ -1,3 +1,4 @@
+import Button from '@code-dot-org/component-library/button';
 import React, {useCallback} from 'react';
 
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
@@ -24,6 +25,21 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
     true
   );
 
+  const buttons = [
+    {
+      text: 'example',
+      question: 'Can you give me an example?',
+    },
+    {
+      text: 'hint',
+      question: 'Can you give me a hint?',
+    },
+    {
+      text: 'doc',
+      question: 'Can you give me some documentation?',
+    },
+  ];
+
   // If the submit button is clicked, then ask the LLM.
   const handleSubmit = useCallback(
     (userMessage: string) => {
@@ -36,6 +52,19 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
     <div className={moduleStyles.container}>
       {AiTutorResponseView}
       <div className={moduleStyles.userMessageContainer}>
+        <div className={moduleStyles.buttonsContainer}>
+          {buttons.map(button => (
+            <Button
+              key={button.text}
+              aria-label={button.text}
+              id="button-hint"
+              onClick={() => handleSubmit(button.question)}
+              text={button.text}
+              size="s"
+              color="white"
+            />
+          ))}
+        </div>
         <UserMessageEditor
           onSubmit={handleSubmit}
           disabled={false}
