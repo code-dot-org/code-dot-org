@@ -2,10 +2,24 @@ export interface SkillsByConcept {
   [key: string]: Array<Skill>;
 }
 
-export interface Skill {
-  id: string;
+export interface SkillIdentifier {
+  id: number;
   key: string;
+}
+export interface Skill extends SkillIdentifier {
   concept: string;
   description: string;
   evaluationCriteria: string;
+}
+
+export interface Levels {
+  levelId: number;
+  levelName: string;
+  unitNames: string[];
+  skills: SkillIdentifier[];
+}
+
+export interface LevelsSkill {
+  skillId: number;
+  levelId: number;
 }

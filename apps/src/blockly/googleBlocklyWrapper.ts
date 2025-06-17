@@ -915,6 +915,25 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       }
 
       blocklyWrapper.KeyboardNavigation = new KeyboardNavigation(workspace);
+
+      // Now that the shortcutModal is initialized, we can add a keydown
+      // event listener to the modal to close it when the Escape key is pressed.
+      const shortcutModal = document.querySelector('.shortcut-modal');
+      if (shortcutModal) {
+        shortcutModal.addEventListener('keydown', event => {
+          const keyboardEvent = event as KeyboardEvent;
+          if (keyboardEvent.key === 'Escape') {
+            keyboardEvent.stopPropagation();
+            // Simulate a click on the close button to mimic the behavior
+            const closeButton = document.querySelector(
+              '.close-modal'
+            ) as HTMLElement;
+            if (closeButton) {
+              closeButton.click();
+            }
+          }
+        });
+      }
       // Rerun user theme after Keyboard Experiment bug introduces incorrect theme
       const theme = cdoUtils.getUserTheme(options.theme as GoogleBlockly.Theme);
       workspace.setTheme(theme);
