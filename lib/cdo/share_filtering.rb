@@ -55,18 +55,15 @@ module ShareFiltering
   def self.find_share_failure(program, locale, project_type, exceptions: false)
     return nil unless should_filter_program(program, project_type)
 
-    program_text = ""
     # Extract program text including variable names, field values, text values in block inputs and comments.
-    if ['spritelab', 'poetry'].include?(project_type)
-      texts = extract_user_text_spritelab(program)
-      program_text = texts.join(" ")
-      puts "program_text #{program_text}"
-    end
+    texts = extract_user_text_blockly(program)
+    program_text = texts.join(" ")
+    puts "program_text #{program_text}"
 
     find_failure(program_text, locale, exceptions: exceptions)
   end
 
-  def self.extract_user_text_spritelab(program_json)
+  def self.extract_user_text_blockly(program_json)
     json = JSON.parse(program_json)
     texts = []
 
