@@ -47,6 +47,7 @@ export function useAiTutor2(
     setResponse(undefined);
   }, [isEnabled, currentLevelId, scriptId, channelId]);
 
+  const [question, setQuestion] = useState<string>();
   const [response, setResponse] = useState<string>();
 
   const askAiTutor2 = useCallback(
@@ -56,6 +57,7 @@ export function useAiTutor2(
       }
 
       console.log('🤖: starting chat request', question);
+      setQuestion(question);
 
       setLoading(true);
       const response = await managerRef.current?.askAiTutor2(
@@ -83,5 +85,16 @@ export function useAiTutor2(
     />
   ) : null;
 
-  return [askAiTutor2, AiTutor2Response] as const;
+  const QuestionAndResponse = (
+    <>
+      <ChatMessage
+        text={question?.trim() || ''}
+        role={Role.USER}
+        customStyles={shrink ? moduleStylesShrink : moduleStylesFixed}
+      />
+      {AiTutor2Response}
+    </>
+  );
+
+  return [askAiTutor2, QuestionAndResponse] as const;
 }
