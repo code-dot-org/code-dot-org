@@ -1,0 +1,24 @@
+// Collection common styles
+.collection {
+  display: grid;
+  width: 100%;
+
+  @media (max-width: 1023px) {
+    // Override inline style set in component markup
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  @media (max-width: 640px) {
+    // Override inline style set in component markup
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+
+.collectionItem {
+  text-align: center;
+  display: flex;
+
+  & > * {
+    flex: 1;
+  }
+}
