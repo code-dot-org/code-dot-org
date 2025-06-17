@@ -66,7 +66,7 @@ module Cdo::CloudFormation
     # @param key_prefix [String] String to prefix on zip package filename (object key) before uploading to S3.
     # @return [String] JSON Deployment package https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html
     def zip_directory(relative_directory, environment_variables: {}, key_prefix: 'lambda')
-      absolute_directory = aws_dir('cloudformation/lambdas' + '//' + relative_directory)
+      absolute_directory = aws_dir(File.join('cloudformation/lambdas', relative_directory))
       raise "#{absolute_directory} is not a file system directory." unless File.directory?(absolute_directory)
 
       env_json_path = File.join(absolute_directory, 'env.json')
@@ -124,7 +124,8 @@ module Cdo::CloudFormation
           raise "Generated Lambda zip is empty! Directory: #{absolute_directory}"
         end
 
-        key = "#{key_prefix}-#{hash}.zip"
+        # Include relative_directory in the S3 key for better debugging
+        key = "#{key_prefix}-#{relative_directory}-#{hash}.zip"
 
         s3_client = Aws::S3::Client.new(http_read_timeout: 30)
         object_exists = begin
