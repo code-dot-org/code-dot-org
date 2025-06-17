@@ -15,6 +15,11 @@ export function initializeKeyboardNavigation(
 
   createShortcutsModalContainer();
   Blockly.KeyboardNavigation = new KeyboardNavigation(workspace);
+  patchShortcuts({
+    keyboard_nav_copy: 67, // Ctrl+C
+    keyboard_nav_paste: 86, // Ctrl+V
+    keyboard_nav_cut: 88, // Ctrl+X
+  });
 
   enableShortcutModalEscape();
   // Rerun user theme after Keyboard Experiment bug introduces incorrect theme
@@ -27,6 +32,26 @@ function unregisterShortcuts(shortcutNames: string[]) {
       Blockly.ShortcutRegistry.registry.unregister(name);
     }
   });
+}
+
+function patchShortcuts(shortcutNames: {[key: string]: number}) {
+  const shortcutRegistry = Blockly.ShortcutRegistry.registry;
+
+  (Object.entries(shortcutNames) as [string, number][]).forEach(
+    ([shortcutName, keyCode]) => {
+      const shortcut =
+        Blockly.ShortcutRegistry.registry.getRegistry()[shortcutName];
+      if (shortcut) {
+        shortcut.keyCodes = [
+          shortcutRegistry.createSerializedKey(keyCode, [17]), // Ctrl
+          shortcutRegistry.createSerializedKey(keyCode, [18]), // Alt
+          shortcutRegistry.createSerializedKey(keyCode, [91]), // Meta (Command on Mac)
+        ];
+        shortcutRegistry.unregister(shortcutName); // Unregister the existing shortcut
+        shortcutRegistry.register(shortcut); // Re-register the updated shortcut
+      }
+    }
+  );
 }
 
 function backupShortcuts(shortcutNames: string[]) {
