@@ -56,7 +56,7 @@ module User::AiAccessible
   end
 
   private def in_ai_tutor_experiment_with_enabled_section?
-    Queries::User::TeaacherEnabledExperiments.call(self).include?(AI_TUTOR_EXPERIMENT_NAME) &&
+    Queries::User::TeacherEnabledExperiments.call(self).include?(AI_TUTOR_EXPERIMENT_NAME) &&
       sections_as_student.any?(&:ai_tutor_enabled)
   end
 end
