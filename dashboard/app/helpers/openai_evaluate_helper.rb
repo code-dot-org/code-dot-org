@@ -49,7 +49,7 @@ module OpenaiEvaluateHelper
     elsif ShareFiltering.find_pii_failure(student_work)
       json_response = {"content" => PII_DETECTED_RESPONSE.to_json}
       return {status: :ok, json: json_response}
-    elsif Rails.env.test?
+    elsif Rails.env.test? || Rails.env.development? # TODO remove before merging. just dont want to wait for requests.
       # Return dummy data in the test environment
       json_response = {"content" => DUMMY_RESPONSE.to_json}
       return {status: :ok, json: json_response}
@@ -63,6 +63,56 @@ module OpenaiEvaluateHelper
       evaluation =  {status: response.code, json: response_body}
       return {status: evaluation[:status], json: evaluation[:json]}
     end
+  end
+
+  def self.evaluate_section(unit, section, options)
+    # Get all students in the section
+    students = section.students
+
+    # Get all levels in the unit
+    levels = unit.levels
+
+    # Find UserLevels for students in this section and levels in this unit
+    user_levels = UserLevel.joins(:user, :level).
+                          where(user: students, level: levels, script: unit).
+                          includes(:user, :level, :level_source)
+
+    user_levels.each do |user_level|
+      if user_level.level_source && user_level.level_source.data.present?
+        response = evaluate_free_response(user_level, unit, 'single_student')
+        pp 'lfm free response evaluation', response
+      else
+        pp 'lfm no evaluation', {level_source: user_level.level_source, level_name: user_level.level.name, user_name: user_level.user.name}
+        # No work submitted for this level
+        {
+          user_level_id: user_level.id,
+          student_name: user_level.user.name,
+          level_name: user_level.level.name,
+          evaluation: {
+            status: :ok,
+            json: {"content" => {**NO_ATTEMPT_RESPONSE, aiReasoning: "No work submitted for this level."}.to_json}
+          }
+        }
+      end
+    end
+  end
+
+  def self.evaluate_free_response(user_level, unit, evaluation_type)
+    student_work = user_level.level_source.data
+
+    response = evaluate(
+      user_level.level,
+      unit,
+      student_work: student_work,
+      evaluation_type: evaluation_type
+    )
+
+    {
+      user_level_id: user_level.id,
+      student_name: user_level.user.name,
+      level_name: user_level.level.name,
+      evaluation: response
+    }
   end
 
   def self.client
@@ -79,5 +129,5 @@ module OpenaiEvaluateHelper
     messages
   end
 
-  private_class_method :client, :prepend_system_prompt
+  private_class_method :client, :prepend_system_prompt, :evaluate_free_response
 end
