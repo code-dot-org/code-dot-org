@@ -66,7 +66,9 @@ end
 #
 def explain_share_failure(channel_id, locale = 'en')
   body = channel_main_json_body channel_id
-  share_failure_from_body body, locale, ''
+  _, project_id = storage_decrypt_channel_id(channel_id)
+  project_type = Project.find(project_id).project_type
+  share_failure_from_body body, locale, project_type
 end
 
 # Effectively private

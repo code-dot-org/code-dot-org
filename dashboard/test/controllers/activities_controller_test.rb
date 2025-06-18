@@ -731,6 +731,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'sharing program with swear word returns error' do
+    Game.any_instance.stubs(:sharing_filtered?).returns(true)
     ProfanityFilter.stubs(:find_potential_profanity).returns 'shit'
 
     script = create(:single_unit_course).first_unit
@@ -755,6 +756,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'sharing program with swear word in German rejects word' do
+    Game.any_instance.stubs(:sharing_filtered?).returns(true)
     ProfanityFilter.stubs(:find_potential_profanity).returns 'scheiße'
 
     with_default_locale(:de) do
@@ -773,7 +775,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test 'sharing program with http error logs' do
     # allow sharing when there's an error, slog so it's possible to look up and review later
-
+    Game.any_instance.stubs(:sharing_filtered?).returns(true)
     ProfanityFilter.stubs(:find_potential_profanity).raises(OpenURI::HTTPError.new('something broke', 'fake io'))
 
     assert_creates(LevelSource) do
@@ -794,6 +796,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'sharing program with IO::EAGAINWaitReadable error logs' do
+    Game.any_instance.stubs(:sharing_filtered?).returns(true)
     ProfanityFilter.stubs(:find_potential_profanity).raises(IO::EAGAINWaitReadable)
 
     assert_creates(LevelSource) do
@@ -814,6 +817,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'sharing program with swear word in Spanish rejects word' do
+    Game.any_instance.stubs(:sharing_filtered?).returns(true)
     ProfanityFilter.stubs(:find_potential_profanity).returns 'putamadre'
 
     with_default_locale(:es) do
@@ -831,6 +835,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'sharing program with phone number' do
+    Game.any_instance.stubs(:sharing_filtered?).returns(true)
     assert_does_not_create(LevelSource) do
       post :milestone,
         params: @milestone_params.merge(
