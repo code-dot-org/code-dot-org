@@ -52,13 +52,14 @@ module ShareFiltering
   #
   # @param [String] program the student's program text
   # @param [String] locale a two-character ISO 639-1 language code
+  # @param [String] project_type
   def self.find_share_failure(program, locale, project_type, exceptions: false)
+    # Filter projects geared for young students that accept user-generated text.
     return nil unless should_filter_program(program, project_type)
 
-    # Extract program text including variable names, field values, text values in block inputs and comments.
+    # Extract program text including field values, text values in block inputs, comments, and variable names.
     texts = extract_user_text_blockly(program)
     program_text = texts.join(" ")
-    puts "program_text #{program_text}"
 
     find_failure(program_text, locale, exceptions: exceptions)
   end
