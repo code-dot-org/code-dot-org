@@ -1,0 +1,38 @@
+name 'ea-fac-csaif_pl_backpack-L18_Python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Using the Backpack Feature
+
+#### The Backpack feature in coding platforms allows teachers and students to save and reuse code snippets, functions, or entire blocks of code across different projects.
+
+#### This is especially useful for students as it enables them to store commonly used functions, avoid repetitive coding, and build on their work efficiently over time. They won't have to keep creating functions like `turn_right()` every time they start a new level.
+
+#### For example, if a student creates a helpful function in `custom.py`, they can save it in their Backpack. Later, they can easily pull that function into a new project without having to rewrite it—just like reusing a tool they've already built!
+
+## How to Save to the Backpack
+
+#### Students should get in the habit of saving their `custom.py` file after each level they build in it. This way, they can easily access the code on future projects. 
+
+- #### Click the three-dot menu icon next to the `custom.py` file name.
+- #### Select "Save to backpack" from the drop-down menu.
+- #### Click the "Save to backpack" button in the pop-up dialog box.
+
+<img src="https://images.code.org/a5083c7ccc54bfa4ea561fa29adf2902-image-1740077664809.gif" alt="gif of how to use the backpack" width="650px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+## How to Import the Backpack 
+#### Students can import their previous work to use on current projects. 
+
+- #### Click the `+` icon next to the File menu.
+- #### Select "Import from backpack" from the drop-down menu.
+- #### Select your file and click the "Import to project" button.
+
+<img src="https://images.code.org/f53f681651f42c532cf0c7078fc14099-image-1740078209718.gif" alt="gif of how to use the backpack" width="650px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+
+## Let's practice using the backpack! 
+
+MARKDOWN

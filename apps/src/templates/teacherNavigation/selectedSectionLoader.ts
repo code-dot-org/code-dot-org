@@ -1,10 +1,13 @@
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
-import {setScriptId, setUnitName} from '@cdo/apps/redux/unitSelectionRedux';
+import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 import {
   setLoginType,
   setShowSharingColumn,
+  loadSectionStudentData,
 } from '../manageStudents/manageStudentsRedux';
 import {
   finishLoadingSectionData,
@@ -16,18 +19,23 @@ import {
   updateSelectedSection,
 } from '../teacherDashboard/teacherSectionsRedux';
 
-export const asyncLoadSelectedSection = async (sectionId: string) => {
+export const asyncLoadSelectedSection = async (
+  sectionId: string,
+  forceReload?: boolean
+) => {
   const state = getStore().getState().teacherSections;
 
   if (
-    state.selectedSectionId === parseInt(sectionId) ||
-    state.isLoadingSectionData
+    (state.selectedSectionId === parseInt(sectionId) ||
+      state.isLoadingSectionData) &&
+    !forceReload
   ) {
     return;
   }
 
   getStore().dispatch(startLoadingSectionData());
   getStore().dispatch(selectSection(sectionId));
+  getStore().dispatch(loadSectionStudentData(sectionId));
 
   const response = fetch(`/dashboardapi/section/${sectionId}`, {
     method: 'GET',
@@ -40,7 +48,13 @@ export const asyncLoadSelectedSection = async (sectionId: string) => {
   return response
     .then(r => r.json())
     .then(setSelectedSectionData)
-    .then(() => getStore().dispatch(finishLoadingSectionData()));
+    .then(() => getStore().dispatch(finishLoadingSectionData()))
+    .catch(error => {
+      analyticsReporter.sendEvent(EVENTS.SECTION_LOAD_FAILURE, {
+        sectionId,
+      });
+      console.log(error);
+    });
 };
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -58,9 +72,6 @@ export const setSelectedSectionData = (sectionData: any) => {
     getStore().dispatch(setShowSharingColumn(true));
   }
 
-  // TODO: update sections list with selected section data to ensure consistency.
-
-  getStore().dispatch(setUnitName(sectionData.script.name));
   getStore().dispatch(setLoginType(sectionData.login_type));
   getStore().dispatch(setRosterProvider(sectionData.login_type));
   getStore().dispatch(setRosterProviderName(sectionData.login_type_name));

@@ -79,9 +79,11 @@ describe('ProgressTableV2', () => {
       Node.DOCUMENT_POSITION_FOLLOWING
     );
 
+    // eslint-disable-next-line no-restricted-properties
     const cell1 = screen.getByTestId(
       'lesson-data-cell-' + LESSON_ID_1 + '-' + STUDENT_1.id
     );
+    // eslint-disable-next-line no-restricted-properties
     const cell2 = screen.getByTestId(
       'lesson-data-cell-' + LESSON_ID_1 + '-' + STUDENT_2.id
     );
@@ -99,12 +101,14 @@ describe('ProgressTableV2', () => {
       Node.DOCUMENT_POSITION_PRECEDING
     );
 
+    // eslint-disable-next-line no-restricted-properties
     const cell1 = screen.getByTestId(
       'lesson-data-cell-' + LESSON_ID_1 + '-' + STUDENT_1.id,
       {
         exact: false,
       }
     );
+    // eslint-disable-next-line no-restricted-properties
     const cell2 = screen.getByTestId(
       'lesson-data-cell-' + LESSON_ID_1 + '-' + STUDENT_2.id,
       {

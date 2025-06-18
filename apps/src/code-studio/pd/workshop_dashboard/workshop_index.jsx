@@ -2,11 +2,18 @@
  * Workshop Index. Displays workshop summaries and controls for CRUD actions.
  * Route: /workshops
  */
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import $ from 'jquery';
-import PropTypes from 'prop-types';
 import React from 'react';
-import {Button, ButtonToolbar} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import {Button, ButtonToolbar, DropdownButton, MenuItem} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
+
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
+import {
+  DATE_ORDER_ASC,
+  DATE_ORDER_DESC,
+} from '@cdo/apps/code-studio/pd/constants';
+import {WorkshopCourseConfigs} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 import ServerSortWorkshopTable from './components/server_sort_workshop_table';
 import {
@@ -21,7 +28,6 @@ import SubmissionsDownloadForm from './reports/foorm/submissions_download_form';
 
 const FILTER_API_URL = '/api/v1/pd/workshops/filter';
 const defaultFilters = {
-  date_order: 'desc',
   limit: 5,
 };
 const filterParams = {
@@ -45,19 +51,24 @@ export class WorkshopIndex extends React.Component {
     permission: PermissionPropType.isRequired,
   };
 
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
+  static contextType = RouterContext;
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
+  handleNewWorkshopClick = (e, slug) => {
+    e.preventDefault();
+    this.context.router.push(`/workshops/new/${slug}`);
   };
 
-  handleNewWorkshopClick = () => {
-    this.context.router.push('/workshops/new');
-  };
-
-  handleAttendanceReportsClick = () => {
+  handleAttendanceReportsClick = e => {
+    e.preventDefault();
     this.context.router.push('/reports');
   };
 
-  handleLegacySurveySummariesClick = () => {
+  handleLegacySurveySummariesClick = e => {
+    e.preventDefault();
     this.context.router.push('/legacy_survey_summaries');
   };
 
@@ -100,20 +111,42 @@ export class WorkshopIndex extends React.Component {
         <h1>Your Workshops</h1>
         <ButtonToolbar>
           {canCreate && (
-            <Button
-              className="btn-primary"
-              onClick={this.handleNewWorkshopClick}
+            <DropdownButton
+              id="new-workshop-button"
+              title={
+                <span>
+                  New Workshop&nbsp;&nbsp; <FontAwesomeV6Icon iconName="plus" />
+                </span>
+              }
+              bsStyle="primary"
+              noCaret
+              className="newWorkshopButton"
             >
-              New Workshop
-            </Button>
+              {WorkshopCourseConfigs.map(({label, slug, icon}) => (
+                <MenuItem
+                  key={slug}
+                  href={`/pd/workshop_dashboard/workshops/new/${slug}`}
+                  onClick={e => this.handleNewWorkshopClick(e, slug)}
+                >
+                  <FontAwesomeV6Icon iconName={icon} /> {label}
+                </MenuItem>
+              ))}
+            </DropdownButton>
           )}
+
           {canSeeAttendanceReports && (
-            <Button onClick={this.handleAttendanceReportsClick}>
+            <Button
+              href={this.context.router.createHref('/reports')}
+              onClick={this.handleAttendanceReportsClick}
+            >
               Attendance Reports
             </Button>
           )}
           {canSeeLegacySurveySummaries && (
-            <Button onClick={this.handleLegacySurveySummariesClick}>
+            <Button
+              href={this.context.router.createHref('/legacy_survey_summaries')}
+              onClick={this.handleLegacySurveySummariesClick}
+            >
               Legacy Facilitator Survey Summaries
             </Button>
           )}
@@ -139,6 +172,7 @@ export class WorkshopIndex extends React.Component {
           tableId="inProgressWorkshopsTable"
           showOrganizer={showOrganizer}
           moreUrl={this.generateFilterUrl('In Progress')}
+          initialOrderBy={DATE_ORDER_DESC}
         />
         <h2>Not Started</h2>
         <ServerSortWorkshopTable
@@ -149,6 +183,7 @@ export class WorkshopIndex extends React.Component {
           showSignupUrl
           showOrganizer={showOrganizer}
           moreUrl={this.generateFilterUrl('Not Started')}
+          initialOrderBy={DATE_ORDER_ASC}
         />
         <h2>Past</h2>
         <ServerSortWorkshopTable
@@ -157,6 +192,7 @@ export class WorkshopIndex extends React.Component {
           tableId="endedWorkshopsTable"
           showOrganizer={showOrganizer}
           moreUrl={this.generateFilterUrl('Ended')}
+          initialOrderBy={DATE_ORDER_DESC}
         />
       </div>
     );

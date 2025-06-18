@@ -14,6 +14,10 @@
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
 %script{src: webpack_asset_path('js/projects/index.js'), data: {projects: projects_data.to_json}}
 
-%link{href: "/shared/css/phase1-design-system.css", rel: "stylesheet"}
+%link{href: "/shared/css/2022-rebrand-update.css", rel: "stylesheet"}
 
 #projects-page
+
+/ Supply the FAB mount-point for the differentiation if allowed by the current user and this lesson
+- if Policies::Ai.ai_differentiation_enabled?(current_user)
+  %div#ai-differentiation-fab-mount-point

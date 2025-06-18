@@ -1,4 +1,5 @@
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
+import '@testing-library/jest-dom';
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
@@ -7,6 +8,7 @@ import locale from '@cdo/apps/signUpFlow/locale';
 import {
   ACCOUNT_TYPE_SESSION_KEY,
   EMAIL_SESSION_KEY,
+  MAX_DISPLAY_NAME_LENGTH,
   SCHOOL_ID_SESSION_KEY,
   SCHOOL_NAME_SESSION_KEY,
   SCHOOL_ZIP_SESSION_KEY,
@@ -20,7 +22,9 @@ import {
 } from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-jest.mock('@cdo/apps/schoolInfo/utils/fetchSchools');
+jest.mock('@cdo/apps/schoolInfo/utils/fetchSchools', () => ({
+  fetchSchools: jest.fn().mockResolvedValue([]),
+}));
 jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({
   getAuthenticityToken: jest.fn().mockReturnValue('authToken'),
 }));
@@ -34,8 +38,22 @@ const navigateToHrefMock = navigateToHref as jest.Mock;
 const getAuthenticityTokenMock = getAuthenticityToken as jest.Mock;
 
 describe('FinishTeacherAccount', () => {
-  afterEach(() => {
+  let fetchStub: sinon.SinonStub;
+
+  beforeEach(() => {
     sessionStorage.clear();
+
+    // Stub fetch to return a default mock response
+    fetchStub = sinon.stub(window, 'fetch').resolves({
+      ok: true,
+      status: 200,
+      json: () => Promise.resolve({gdpr: false, force_in_eu: false}),
+    } as Response);
+  });
+
+  afterEach(() => {
+    // Restore the original fetch
+    fetchStub.restore();
   });
 
   function renderDefault(
@@ -58,7 +76,19 @@ describe('FinishTeacherAccount', () => {
     });
 
     expect(navigateToHrefMock).toHaveBeenCalledWith(
-      '/users/new_sign_up/account_type'
+      '/users/sign_up/account_type'
+    );
+  });
+
+  it('redirects user back to account type page if invalid user type set', async () => {
+    sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, 'invalid');
+
+    await waitFor(() => {
+      renderDefault(true, false, false);
+    });
+
+    expect(navigateToHrefMock).toHaveBeenCalledWith(
+      '/users/sign_up/account_type'
     );
   });
 
@@ -68,12 +98,12 @@ describe('FinishTeacherAccount', () => {
     });
 
     expect(navigateToHrefMock).toHaveBeenCalledWith(
-      '/users/new_sign_up/login_type'
+      `/users/sign_up/login_type?user_type=${UserTypes.TEACHER}`
     );
   });
 
-  it('renders finish teacher account page with school zip when usIp is true', () => {
-    renderDefault(true);
+  it('renders finish teacher account page with school zip when usIp is true', async () => {
+    await waitFor(renderDefault);
 
     // Renders page title
     screen.getByText(locale.finish_creating_teacher_account());
@@ -96,8 +126,10 @@ describe('FinishTeacherAccount', () => {
     screen.getByText(locale.go_to_my_account());
   });
 
-  it('renders finish teacher account page with school name when usIp is false', () => {
-    renderDefault(false);
+  it('renders finish teacher account page with school name when usIp is false', async () => {
+    await waitFor(() => {
+      renderDefault(false);
+    });
 
     // Renders page title
     screen.getByText(locale.finish_creating_teacher_account());
@@ -116,19 +148,20 @@ describe('FinishTeacherAccount', () => {
     screen.getByText(locale.go_to_my_account());
   });
 
-  it('school info is tracked in sessionStorage', () => {
-    renderDefault();
+  it('school info is tracked in sessionStorage', async () => {
+    await waitFor(renderDefault);
+
     const zipCode = '98122';
     const schoolName = 'Seattle Academy';
 
     // Fill out zip code and add school by name
-    fireEvent.change(screen.getAllByRole('textbox')[1], {
+    fireEvent.change(screen.getByLabelText(i18n.enterYourSchoolZip()), {
       target: {value: zipCode},
     });
-    fireEvent.change(screen.getAllByRole('combobox')[1], {
+    fireEvent.change(screen.getByLabelText(i18n.selectYourSchool()), {
       target: {value: NonSchoolOptions.CLICK_TO_ADD},
     });
-    fireEvent.change(screen.getAllByRole('textbox')[2], {
+    fireEvent.change(screen.getByLabelText(i18n.schoolOrganizationQuestion()), {
       target: {value: schoolName},
     });
 
@@ -139,17 +172,17 @@ describe('FinishTeacherAccount', () => {
     expect(sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY)).toBe(schoolName);
   });
 
-  it('finish teacher signup button starts disabled', () => {
-    renderDefault();
+  it('finish teacher signup button starts disabled', async () => {
+    await waitFor(renderDefault);
 
     const finishSignUpButton = screen.getByRole('button', {
       name: locale.go_to_my_account(),
     });
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+    expect(finishSignUpButton).toBeDisabled();
   });
 
-  it('leaving the displayName field empty shows error message', () => {
-    renderDefault();
+  it('leaving the displayName field empty shows error message', async () => {
+    await waitFor(renderDefault);
     const displayNameInput = screen.getAllByDisplayValue('')[0];
 
     // Error message doesn't show and button is disabled by default
@@ -168,34 +201,249 @@ describe('FinishTeacherAccount', () => {
     screen.getByText(locale.display_name_error_message());
   });
 
+  it('only whitespace in the displayName field shows error message', async () => {
+    await waitFor(renderDefault);
+    const displayNameInput = screen.getAllByDisplayValue('')[0];
+
+    // Error message doesn't show and button is disabled by default
+    expect(screen.queryByText(locale.display_name_error_message())).toBe(null);
+
+    // Enter display name
+    fireEvent.change(displayNameInput, {target: {value: ' '}});
+
+    // Error shows with whitespace display name
+    screen.getByText(locale.display_name_error_message());
+
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+    expect(finishSignUpButton).toBeDisabled();
+  });
+
+  it('adding a long display name shows error message', async () => {
+    await waitFor(renderDefault);
+    const displayNameInput = screen.getAllByDisplayValue('')[0];
+
+    // Error message doesn't show and button is disabled by default
+    expect(screen.queryByText(locale.display_name_error_message())).toBe(null);
+
+    // Enter display name
+    fireEvent.change(displayNameInput, {
+      target: {value: 'a'.repeat(MAX_DISPLAY_NAME_LENGTH + 1)},
+    });
+
+    // Error shows with long display name
+    screen.getByText(
+      locale.display_name_too_long_error_message({
+        maxLength: MAX_DISPLAY_NAME_LENGTH,
+      })
+    );
+
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+    expect(finishSignUpButton).toBeDisabled();
+  });
+
   it('GDPR has expected behavior if api call returns true', async () => {
-    const fetchStub = sinon.stub(window, 'fetch').resolves({
+    fetchStub.resolves({
       ok: true,
       status: 200,
       json: () => Promise.resolve({gdpr: true, force_in_eu: false}),
     } as Response);
 
-    renderDefault();
+    await waitFor(renderDefault);
 
     // Check that GDPR message is displayed
     await screen.findByText(locale.data_transfer_notice());
 
     // Check that button is disabled until GDPR is checked (and other required fields are filled)
-    const displayNameInput = screen.getAllByRole('textbox')[0];
+    const displayNameInput = screen.getByLabelText(
+      locale.what_do_you_want_to_be_called()
+    );
     fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
+    fireEvent.change(screen.getByLabelText(locale.what_is_your_role()), {
+      target: {value: 'classroom_teacher'},
+    });
+    fireEvent.change(screen.getByLabelText(i18n.whatCountry()), {
+      target: {value: 'AU'},
+    });
+    fireEvent.change(screen.getByLabelText(i18n.schoolOrganizationQuestion()), {
+      target: {value: 'Test School'},
+    });
     const finishSignUpButton = screen.getByRole('button', {
       name: locale.go_to_my_account(),
     });
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+    expect(finishSignUpButton).toBeDisabled();
     fireEvent.click(screen.getAllByRole('checkbox')[0]);
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe(null);
+    expect(finishSignUpButton).not.toBeDisabled();
+  });
 
-    // Restore the original fetch implementation
-    fetchStub.restore();
+  it('clicking finish sign up button triggers fetch call and shows generic error if 500 error response', async () => {
+    const errorMessage = 'SAMPLE ERROR MESSAGE';
+
+    fetchStub.callsFake(() =>
+      Promise.resolve({
+        ok: false,
+        status: 400,
+        json: () => Promise.resolve({error: errorMessage}),
+      } as Response)
+    );
+
+    // Declare parameter values and set sessionStorage variables
+    const name = 'FirstName';
+    const email = 'fake@email.com';
+    const finishSignUpParams = {
+      user: {
+        user_type: UserTypes.TEACHER,
+        email: email,
+        name: name,
+        email_preference_opt_in: true,
+        school_info_attributes: {
+          country: 'AU',
+          school_name: 'Test School',
+        },
+        country_code: 'US',
+        educator_role: 'classroom_teacher',
+      },
+    };
+    sessionStorage.setItem('email', email);
+
+    await waitFor(() => {
+      renderDefault();
+    });
+
+    // Set up finish sign up button onClick jest function
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    }) as HTMLButtonElement;
+    const handleClick = jest.fn();
+    finishSignUpButton.onclick = handleClick;
+
+    // Fill in fields
+    fireEvent.change(
+      screen.getByLabelText(locale.what_do_you_want_to_be_called()),
+      {target: {value: 'FirstName'}}
+    );
+    fireEvent.change(screen.getByLabelText(locale.what_is_your_role()), {
+      target: {value: 'classroom_teacher'},
+    });
+    fireEvent.change(screen.getByLabelText(i18n.whatCountry()), {
+      target: {value: 'AU'},
+    });
+    fireEvent.change(screen.getByLabelText(i18n.schoolOrganizationQuestion()), {
+      target: {value: 'Test School'},
+    });
+    fireEvent.click(screen.getByRole('checkbox'));
+
+    // Click finish sign up button
+    fireEvent.click(finishSignUpButton);
+
+    await waitFor(() => {
+      // Verify the button's click handler was called
+      expect(handleClick).toHaveBeenCalled();
+
+      // Verify the authenticity token was obtained
+      expect(getAuthenticityTokenMock).toHaveBeenCalled;
+
+      // Verify the button's fetch method was called
+      expect(fetchStub.calledTwice).toBe(true);
+      const fetchCall = fetchStub.getCall(1);
+      expect(fetchCall.args[0]).toEqual('/users');
+      expect(fetchCall.args[1]?.body).toEqual(
+        JSON.stringify(finishSignUpParams)
+      );
+
+      // Verify the user is NOT redirected to the finish sign up page
+      expect(navigateToHrefMock).toHaveBeenCalledTimes(0);
+      // Verify the error message is shown. Since the message includes a hyperlinked email, it requires the use of a
+      // SafeMarkdown tag, so the email itself is checked to know if the message shows.
+      screen.getByText(errorMessage);
+    });
+  });
+
+  it('clicking finish sign up button triggers fetch call and shows generic error if 500 error response', async () => {
+    fetchStub.callsFake(() =>
+      Promise.resolve({
+        ok: false,
+        status: 500,
+        json: () => Promise.resolve({success: false}),
+      } as Response)
+    );
+
+    // Declare parameter values and set sessionStorage variables
+    const name = 'FirstName';
+    const email = 'fake@email.com';
+    const finishSignUpParams = {
+      user: {
+        user_type: UserTypes.TEACHER,
+        email: email,
+        name: name,
+        email_preference_opt_in: true,
+        school_info_attributes: {
+          country: 'AU',
+          school_name: 'Test School',
+        },
+        country_code: 'US',
+        educator_role: 'classroom_teacher',
+      },
+    };
+    sessionStorage.setItem('email', email);
+
+    await waitFor(() => {
+      renderDefault();
+    });
+
+    // Set up finish sign up button onClick jest function
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    }) as HTMLButtonElement;
+    const handleClick = jest.fn();
+    finishSignUpButton.onclick = handleClick;
+
+    // Fill in fields
+    fireEvent.change(
+      screen.getByLabelText(locale.what_do_you_want_to_be_called()),
+      {target: {value: 'FirstName'}}
+    );
+    fireEvent.change(screen.getByLabelText(locale.what_is_your_role()), {
+      target: {value: 'classroom_teacher'},
+    });
+    fireEvent.change(screen.getByLabelText(i18n.whatCountry()), {
+      target: {value: 'AU'},
+    });
+    fireEvent.change(screen.getByLabelText(i18n.schoolOrganizationQuestion()), {
+      target: {value: 'Test School'},
+    });
+    fireEvent.click(screen.getByRole('checkbox'));
+
+    // Click finish sign up button
+    fireEvent.click(finishSignUpButton);
+
+    await waitFor(() => {
+      // Verify the button's click handler was called
+      expect(handleClick).toHaveBeenCalled();
+
+      // Verify the authenticity token was obtained
+      expect(getAuthenticityTokenMock).toHaveBeenCalled;
+
+      // Verify the button's fetch method was called
+      expect(fetchStub.calledTwice).toBe(true);
+      const fetchCall = fetchStub.getCall(1);
+      expect(fetchCall.args[0]).toEqual('/users');
+      expect(fetchCall.args[1]?.body).toEqual(
+        JSON.stringify(finishSignUpParams)
+      );
+
+      // Verify the user is NOT redirected to the finish sign up page
+      expect(navigateToHrefMock).toHaveBeenCalledTimes(0);
+      // Verify the error message is shown. Since the message includes a hyperlinked email, it requires the use of a
+      // SafeMarkdown tag, so the email itself is checked to know if the message shows.
+      screen.getByText('support@code.org');
+    });
   });
 
   it('clicking finish sign up button triggers fetch call and redirects user to home page', async () => {
-    const fetchStub = sinon.stub(window, 'fetch');
     fetchStub.callsFake(url => {
       if (typeof url === 'string' && url.includes('/users/gdpr_check')) {
         return Promise.resolve({
@@ -216,28 +464,22 @@ describe('FinishTeacherAccount', () => {
     const name = 'FirstName';
     const email = 'fake@email.com';
     const finishSignUpParams = {
-      new_sign_up: true,
       user: {
         user_type: UserTypes.TEACHER,
         email: email,
         name: name,
         email_preference_opt_in: true,
         school_info_attributes: {
-          schoolId: NonSchoolOptions.SELECT_A_SCHOOL,
-          country: 'US',
-          schoolName: '',
-          schoolZip: '',
-          schoolsList: [],
-          usIp: true,
+          country: 'AU',
+          school_name: 'Test School',
         },
         country_code: 'US',
+        educator_role: 'classroom_teacher',
       },
     };
     sessionStorage.setItem('email', email);
 
-    await waitFor(() => {
-      renderDefault();
-    });
+    await waitFor(renderDefault);
 
     // Set up finish sign up button onClick jest function
     const finishSignUpButton = screen.getByRole('button', {
@@ -247,8 +489,18 @@ describe('FinishTeacherAccount', () => {
     finishSignUpButton.onclick = handleClick;
 
     // Fill in fields
-    fireEvent.change(screen.getAllByDisplayValue('')[0], {
-      target: {value: name},
+    fireEvent.change(
+      screen.getByLabelText(locale.what_do_you_want_to_be_called()),
+      {target: {value: 'FirstName'}}
+    );
+    fireEvent.change(screen.getByLabelText(locale.what_is_your_role()), {
+      target: {value: 'classroom_teacher'},
+    });
+    fireEvent.change(screen.getByLabelText(i18n.whatCountry()), {
+      target: {value: 'AU'},
+    });
+    fireEvent.change(screen.getByLabelText(i18n.schoolOrganizationQuestion()), {
+      target: {value: 'Test School'},
     });
     fireEvent.click(screen.getByRole('checkbox'));
 
@@ -273,12 +525,9 @@ describe('FinishTeacherAccount', () => {
       // Verify the user is redirected to the finish sign up page
       expect(navigateToHrefMock).toHaveBeenCalledWith('/home');
     });
-
-    fetchStub.restore();
   });
 
   it('setting redirect url in sessionStorage then clicking finish sign up button triggers fetch call and redirects user to redirect page', async () => {
-    const fetchStub = sinon.stub(window, 'fetch');
     fetchStub.callsFake(url => {
       if (typeof url === 'string' && url.includes('/users/gdpr_check')) {
         return Promise.resolve({
@@ -300,21 +549,17 @@ describe('FinishTeacherAccount', () => {
     const email = 'fake@email.com';
     const userReturnToUrl = '/sample/url';
     const finishSignUpParams = {
-      new_sign_up: true,
       user: {
         user_type: UserTypes.TEACHER,
         email: email,
         name: name,
         email_preference_opt_in: true,
         school_info_attributes: {
-          schoolId: NonSchoolOptions.SELECT_A_SCHOOL,
-          country: 'US',
-          schoolName: '',
-          schoolZip: '',
-          schoolsList: [],
-          usIp: true,
+          country: 'AU',
+          school_name: 'Test School',
         },
         country_code: 'US',
+        educator_role: 'classroom_teacher',
       },
     };
     sessionStorage.setItem('email', email);
@@ -332,8 +577,18 @@ describe('FinishTeacherAccount', () => {
     finishSignUpButton.onclick = handleClick;
 
     // Fill in fields
-    fireEvent.change(screen.getAllByDisplayValue('')[0], {
-      target: {value: name},
+    fireEvent.change(
+      screen.getByLabelText(locale.what_do_you_want_to_be_called()),
+      {target: {value: 'FirstName'}}
+    );
+    fireEvent.change(screen.getByLabelText(locale.what_is_your_role()), {
+      target: {value: 'classroom_teacher'},
+    });
+    fireEvent.change(screen.getByLabelText(i18n.whatCountry()), {
+      target: {value: 'AU'},
+    });
+    fireEvent.change(screen.getByLabelText(i18n.schoolOrganizationQuestion()), {
+      target: {value: 'Test School'},
     });
     fireEvent.click(screen.getByRole('checkbox'));
 
@@ -358,7 +613,36 @@ describe('FinishTeacherAccount', () => {
       // Verify the user is redirected to the finish sign up page
       expect(navigateToHrefMock).toHaveBeenCalledWith(userReturnToUrl);
     });
+  });
 
-    fetchStub.restore();
+  it('requires educator role', async () => {
+    await waitFor(renderDefault);
+
+    const roleDropdown = screen.getByLabelText(locale.what_is_your_role());
+    expect(roleDropdown).toBeInTheDocument();
+
+    fireEvent.change(
+      screen.getByLabelText(locale.what_do_you_want_to_be_called()),
+      {target: {value: 'FirstName'}}
+    );
+    fireEvent.change(screen.getByLabelText(i18n.whatCountry()), {
+      target: {value: 'AU'},
+    });
+    fireEvent.change(screen.getByLabelText(i18n.schoolOrganizationQuestion()), {
+      target: {value: 'Test School'},
+    });
+
+    let finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+    expect(finishSignUpButton).toBeDisabled();
+
+    fireEvent.change(roleDropdown, {target: {value: 'classroom_teacher'}});
+
+    finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+
+    expect(finishSignUpButton).toBeEnabled();
   });
 });

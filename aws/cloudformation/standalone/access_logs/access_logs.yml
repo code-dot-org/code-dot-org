@@ -74,6 +74,7 @@ Parameters:
       When updating fields in a log configuration, a mix of records with old and new fields will
       arrive for up to several hours after the update. To handle records with old fields properly, copy
       LogFields to OldLogFields.
+
 Resources:
   AccessLogConfig:
     Type: AWS::CloudFront::RealtimeLogConfig

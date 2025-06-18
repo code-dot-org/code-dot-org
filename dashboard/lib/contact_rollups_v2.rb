@@ -23,7 +23,7 @@ class ContactRollupsV2
     # to a create connection with custom query_timeout and read_timeout values.
     #
     # However, Sequel write operations to the dashboard database don't work in test environments
-    # (in local, Drone, and test machine) and Rails console sandbox. In those environments,
+    # (in local, CI, and test machine) and Rails console sandbox. In those environments,
     # all database operations are wrapped in a ActiveRecord transaction so they can be rolled
     # back later. Sequel write operations cannot acquire a lock to the dashboard database, which
     # already locked by ActiveRecord, then fail with "Lock wait timeout exceeded" error.

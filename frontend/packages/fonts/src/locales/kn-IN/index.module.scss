@@ -1,0 +1,6 @@
+@use '@fontsource-variable/noto-sans-kannada/scss/mixins' as NotoSansKannada;
+@include NotoSansKannada.faces($family: 'Noto Sans Kannada');
+
+.className {
+  font-family: 'Noto Sans Kannada', sans-serif;
+}

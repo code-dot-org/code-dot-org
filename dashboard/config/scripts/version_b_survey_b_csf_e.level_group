@@ -1,0 +1,12 @@
+name 'Version B Survey_b_csf-e'
+title 'Career Journey Lesson Survey'
+submittable 'true'
+anonymous 'true'
+
+page
+level 'VersionB q1_b_csf-e'
+level 'VersionB q2_b_csf-e'
+level 'VersionB q3_b_csf-e'
+level 'VersionB q6_b_csf-e'
+level 'VersionB q4_b_csf-e'
+level 'VersionB q5_b_csf-e'

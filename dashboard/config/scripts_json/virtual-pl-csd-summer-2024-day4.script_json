@@ -4,15 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "pl_workshop_activities",
+      "curriculum_umbrella": "PD Workshop Activity CSD",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
-      "tts": true
+      "tts": true,
+      "version_year": "2024"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-07 22:25:50 UTC",
+    "serialized_at": "2025-05-05 21:06:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2669,23 +2672,23 @@
       }
     },
     {
-      "name": "CSD Virtual Summer Workshop Day 4 Agenda",
-      "url": "https://docs.google.com/document/d/14ijHPfcESnvetaqWjRto4v4GpYSbeYKyKXYFg8H_Bn8/edit?usp=drive_link",
-      "key": "csd_virtual_summer_workshop_day_4_agenda",
+      "name": "CSD VIrtual Summer Workshop Day 4 Agenda",
+      "url": "https://docs.google.com/document/d/1znXzl4KnRjUlsuHVWGJpn_ccebFd2PdJq2Vg_pvQQPI/edit?usp=drive_link",
+      "key": "csd_virtual_summer_workshop_day_4_agenda_1",
       "properties": {
       },
       "seeding_key": {
-        "resource.key": "csd_virtual_summer_workshop_day_4_agenda"
+        "resource.key": "csd_virtual_summer_workshop_day_4_agenda_1"
       }
     },
     {
-      "name": "CSD Virtual Summer Workshop Day 4 Slides",
-      "url": "https://docs.google.com/presentation/d/1hSn_77ZeJX0LNOP9Quc3BUzm7mCHyyA8WsBpvTtRrXA/edit?usp=drive_link",
-      "key": "csd_virtual_summer_workshop_day_4_slides",
+      "name": "CSD VIrtual Summer Workshop Day 4 Slides",
+      "url": "https://docs.google.com/presentation/d/1LGlmwk50v_K4aHaKMKvfgKH3LVWo6Rnkm8K3b3_cU34/edit?usp=drive_link",
+      "key": "csd_virtual_summer_workshop_day_4_slides_1",
       "properties": {
       },
       "seeding_key": {
-        "resource.key": "csd_virtual_summer_workshop_day_4_slides"
+        "resource.key": "csd_virtual_summer_workshop_day_4_slides_1"
       }
     },
     {
@@ -2902,13 +2905,13 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "csd_virtual_summer_workshop_day_4_agenda",
+        "resource.key": "csd_virtual_summer_workshop_day_4_agenda_1",
         "script.name": "virtual-pl-csd-summer-2024-day4"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "csd_virtual_summer_workshop_day_4_slides",
+        "resource.key": "csd_virtual_summer_workshop_day_4_slides_1",
         "script.name": "virtual-pl-csd-summer-2024-day4"
       }
     }

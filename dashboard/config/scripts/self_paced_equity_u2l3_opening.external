@@ -1,0 +1,24 @@
+name 'self-paced-equity-U2L3-opening'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Welcome!
+
+## Module 2, Lesson 1: Expanding Access to Computer Science
+
+<img src="https://images.code.org/73e849d38e6b50a497245a8410f3da76-image-1736141051850.24.09 PM.png" alt="Three students smile at the camera" style="width: 30%; height: auto; border-radius: 10px; float: right;">
+
+### In this lesson, you will:
+ 
+
+* #### Become an advocate for equity and inclusion within your school and community.
+* #### Expand participation in computer science classes.
+<br>
+
+### **Suggested time for this lesson:** 20 minutes
+
+<br>
+
+#### **Note:** This lesson is differentiated into two parts: Expanding Access in Elementary School and Expanding Access in Middle and High School. We will note each section in the subsequent levels, but feel free to direct yourself to the levels that are relevant to your teaching context.
+MARKDOWN

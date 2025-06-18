@@ -1,0 +1,40 @@
+name 'self-paced-equity-U2L1-accessibility'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Making Computer Science Accessible
+
+## Why Accessibility?
+
+#### Part of ensuring that students feel like they belong in the classroom is making sure that our computer science classrooms are **accessible**. As we prepare students for a future shaped by technology, it’s essential to ensure that **every learner** — regardless of ability — can fully engage with the curriculum and materials. 
+
+___
+
+<div style="display: flex; justify-content: space-between; gap: 10px; margin-top: 20px; margin-bottom: 20px; ">
+    <img src="https://images.code.org/2c79fc3528fb785e210160c843d89224-image-1736035933486.12.09 PM.png" alt="A student at a table places their finger on a trackpad." style="width: 23%; height: auto; border-radius: 10px;">
+    <img src="https://images.code.org/ebb82072fb8c1fc14b73d71df1d6cdbf-image-1736035995726.13.12 PM.png" alt="A student holds up a Circuit Playground in front of a laptop." style="width: 23%; height: auto; border-radius: 10px;">
+    <img src="https://images.code.org/8b29a536cf62d0ee43cd8010a55dbd48-image-1736035945738.12.22 PM.png" alt="Two students work at a laptop together." style="width: 23%; height: auto; border-radius: 10px;">
+    <img src="https://images.code.org/a6afd61edc757dcaed2093f2d4f37375-image-1736035959255.12.33 PM.png" alt="A student looks off to the left and smiles." style="width: 23%; height: auto; border-radius: 10px;">
+</div>
+
+___
+
+#### Recall this definition of accessibility from earlier in this lesson:
+
+<div style="background-color: #C6E3E7; border-radius: 20px; color: #000000; width: 95%; padding: 10px 20px 10px 20px; margin: 20px 0px 20px 0px"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
+
+#### **Accessibility:** When a person with a disability is afforded the opportunity to acquire the same information, engage in the same interactions, and enjoy the same services as a person without a disability in an equally integrated and equally effective manner, with substantially equivalent ease of use.<sup>2</sup></p></div>
+
+#### Accessibility includes ensuring that physical materials are available in formats that suit diverse needs. It also means utilizing teaching materials and learning activities that can be understood, used, and enjoyed by all students, with equal ease. Accessibility isn’t just an adjustment — it’s a commitment to equity, belonging, and opportunity. We'll cover ways to make computer science more accessible in the new few levels.
+
+#### By making your curriculum and resources accessible, you:
+
+* #### Empower students with disabilities to participate meaningfully in the learning process.
+* #### Foster an inclusive classroom culture where diversity is celebrated.
+* #### Set the stage for innovation by encouraging all students to bring their unique perspectives to computer science.
+
+___
+
+##### <sup>2</sup>Microsoft. Guide to Inclusive Computer Science Education, 2023, https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4GC0a. 
+MARKDOWN

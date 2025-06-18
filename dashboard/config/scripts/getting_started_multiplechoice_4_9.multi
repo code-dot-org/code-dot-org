@@ -1,0 +1,10 @@
+name 'Getting-Started_MultipleChoice_4_9'
+title 'Multiple Choice: Teacher Resources'
+description ''
+question 'Which of the following resources are provided by Code.org? '
+
+wrong 'Lesson Plans'
+wrong 'Lesson Slide Decks'
+wrong 'Assessments'
+right 'All of the Above'
+allow_multiple_attempts true

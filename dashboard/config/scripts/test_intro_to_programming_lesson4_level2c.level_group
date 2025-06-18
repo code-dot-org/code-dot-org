@@ -1,0 +1,10 @@
+name 'test-intro-to-programming-lesson4-level2c'
+
+submittable 'false'
+anonymous 'false'
+
+page
+text 'test-intro-to-programming-lesson4-level2c0'
+level 'test-intro-to-programming-lesson4-level2c1'
+level 'test-intro-to-programming-lesson4-level2c2'
+level 'test-intro-to-programming-lesson4-level2c3'

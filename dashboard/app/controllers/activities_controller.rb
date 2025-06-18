@@ -27,6 +27,8 @@ class ActivitiesController < ApplicationController
     solved = (params[:result] == 'true')
     script_name = ''
 
+    @unit_group = UnitGroup.get_from_cache(params[:course_id]) if params[:course_id]
+
     if params[:script_level_id]
       @script_level = ScriptLevel.cache_find(params[:script_level_id].to_i)
       @level = params[:level_id] ? Unit.cache_find_level(params[:level_id].to_i) : @script_level.oldest_active_level
@@ -144,9 +146,9 @@ class ActivitiesController < ApplicationController
       script_level: @script_level,
       level: @level,
       solved?: solved,
+      unit_group: @unit_group,
       level_source: @level_source.try(:hidden) ? nil : @level_source,
       level_source_image: @level_source_image,
-      activity: @activity,
       new_level_completed: @new_level_completed,
       share_failure: share_failure,
       user_level: @user_level
@@ -165,26 +167,7 @@ class ActivitiesController < ApplicationController
     authorize! :create, UserLevel
 
     test_result = params[:testResult].to_i
-    solved = (params[:result] == 'true')
 
-    lines = params[:lines].to_i
-
-    # Create the activity.
-    attributes = {
-      user: current_user,
-      level: @level,
-      action: solved, # TODO: I think we don't actually use this. (maybe in a report?)
-      test_result: test_result,
-      attempt: params[:attempt].to_i,
-      lines: lines,
-      time: params[:time].to_i.clamp(0, MAX_INT_MILESTONE),
-      level_source_id: @level_source.try(:id)
-    }
-
-    allow_activity_writes = Gatekeeper.allows('activities', where: {script_name: @script_level.script.name}, default: true)
-    if allow_activity_writes
-      @activity = Activity.new(attributes).tap(&:atomic_save!)
-    end
     if @script_level
       # convert milliseconds to seconds
       time_since_last_milestone = [(params[:timeSinceLastMilestone].to_f / 1000).ceil.to_i, MAX_INT_TIME_SPENT].min
@@ -196,6 +179,7 @@ class ActivitiesController < ApplicationController
         submitted: params[:submitted] == 'true',
         level_source_id: @level_source.try(:id),
         pairing_user_ids: pairing_user_ids,
+        locale: locale,
         time_spent: time_since_last_milestone
       )
 
@@ -215,6 +199,7 @@ class ActivitiesController < ApplicationController
           submitted: false,
           level_source_id: nil,
           pairing_user_ids: pairing_user_ids,
+          locale: locale,
           time_spent: time_since_last_milestone
         )
       end

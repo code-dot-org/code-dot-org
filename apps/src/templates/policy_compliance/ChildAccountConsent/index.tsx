@@ -1,14 +1,14 @@
-import cookies from 'js-cookie';
-import PropTypes from 'prop-types';
-import React from 'react';
-
 import {
   Heading4,
   BodyThreeText,
   BodyTwoText,
   EmText,
   StrongText,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@code-dot-org/component-library/typography';
+import cookies from 'js-cookie';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -73,18 +73,26 @@ export interface ChildAccountConsentProps {
   permissionGranted?: boolean;
   permissionGrantedDate?: Date;
   studentId?: number;
+  usState?: string;
 }
 
 const ChildAccountConsent: React.FC<ChildAccountConsentProps> = ({
   permissionGranted,
   permissionGrantedDate,
   studentId,
+  usState,
 }) => {
   if (permissionGranted && permissionGrantedDate) {
-    reportEvent(EVENTS.CAP_PARENT_CONSENT_GRANTED, {studentId: studentId});
+    reportEvent(EVENTS.CAP_PARENT_CONSENT_GRANTED, {
+      studentId,
+      us_state: usState,
+    });
     return permissionGrantedMessage(permissionGrantedDate);
   } else {
-    reportEvent(EVENTS.CAP_PARENT_CONSENT_EXPIRED);
+    reportEvent(EVENTS.CAP_PARENT_CONSENT_EXPIRED, {
+      studentId,
+      us_state: usState,
+    });
     return expiredTokenMessage();
   }
 };

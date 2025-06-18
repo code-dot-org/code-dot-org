@@ -38,8 +38,8 @@ options.freeze
 $revert = options[:revert]
 
 def migrate_storage_apps_to_dashboard
-  pegasus_storage_apps = "#{CDO.pegasus_db_name}__storage_apps".to_sym
-  dashboard_projects = "#{CDO.dashboard_db_name}__projects".to_sym
+  pegasus_storage_apps = :"#{CDO.pegasus_db_name}__storage_apps"
+  dashboard_projects = :"#{CDO.dashboard_db_name}__projects"
 
   puts "Renaming table pegasus.storage_apps -> dashboard.projects"
   # Rename the table to move it from the Pegasus schema to Dashboard
@@ -54,8 +54,8 @@ def migrate_storage_apps_to_dashboard
 end
 
 def revert_migrate_storage_apps_to_dashboard
-  pegasus_storage_apps = "#{CDO.pegasus_db_name}__storage_apps".to_sym
-  dashboard_projects = "#{CDO.dashboard_db_name}__projects".to_sym
+  pegasus_storage_apps = :"#{CDO.pegasus_db_name}__storage_apps"
+  dashboard_projects = :"#{CDO.dashboard_db_name}__projects"
 
   puts "Dropping view pegasus.storage_apps"
   DB.drop_view(pegasus_storage_apps)

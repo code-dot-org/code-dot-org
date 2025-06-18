@@ -1,0 +1,12 @@
+name 'gen-ai-foundations-studentsurvey-premodule_2025'
+title 'Foundations of Generative AI Pre-Survey'
+submittable 'true'
+anonymous 'true'
+
+page
+text 'gen-ai-foundations-studentsurvey-premodule-preamble_2025'
+level 'gen-ai-foundations-studentsurvey-premodule-q1_2025'
+level 'gen-ai-foundations-studentsurvey-premodule-q2_2025'
+level 'gen-ai-foundations-studentsurvey-premodule-q3_2025'
+level 'gen-ai-foundations-studentsurvey-premodule-q4_2025'
+level 'gen-ai-foundations-studentsurvey-premodule-q5_2025'

@@ -4,24 +4,12 @@ import {connect} from 'react-redux';
 
 import SyncOmniAuthSectionControl from '@cdo/apps/accounts/SyncOmniAuthSectionControl';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
-import {loadSectionStudentData} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 import ManageStudentsTable from './Table';
 
-function ManageStudents({
-  studioUrlPrefix,
-  sectionId,
-  isLoadingStudents,
-  loadSectionStudentData,
-  isLoadingSectionData,
-}) {
-  React.useEffect(() => {
-    if (!isLoadingSectionData) {
-      loadSectionStudentData(sectionId);
-    }
-  }, [sectionId, isLoadingSectionData, loadSectionStudentData]);
-
+function ManageStudents({studioUrlPrefix, sectionId, isLoadingStudents}) {
   return (
+    // eslint-disable-next-line react/forbid-dom-props
     <div data-testid={'manage-students-tab'}>
       {isLoadingStudents && <Spinner />}
       {!isLoadingStudents && (
@@ -45,19 +33,9 @@ ManageStudents.propTypes = {
   // Provided by redux
   sectionId: PropTypes.number,
   isLoadingStudents: PropTypes.bool.isRequired,
-  loadSectionStudentData: PropTypes.func.isRequired,
-  isLoadingSectionData: PropTypes.bool.isRequired,
 };
 
-export default connect(
-  state => ({
-    sectionId: state.teacherSections.selectedSectionId,
-    isLoadingStudents: state.manageStudents.isLoadingStudents,
-    isLoadingSectionData: state.teacherSections.isLoadingSectionData,
-  }),
-  dispatch => ({
-    loadSectionStudentData(sectionId) {
-      dispatch(loadSectionStudentData(sectionId));
-    },
-  })
-)(ManageStudents);
+export default connect(state => ({
+  sectionId: state.teacherSections.selectedSectionId,
+  isLoadingStudents: state.manageStudents.isLoadingStudents,
+}))(ManageStudents);

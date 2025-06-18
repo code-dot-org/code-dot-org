@@ -19,6 +19,7 @@ import {RowType} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import RubricSettings from '@cdo/apps/templates/rubrics/RubricSettings';
 import teacherRubric, {
   setAllTeacherEvaluationData,
+  setAiEvalStatusCounters,
 } from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import teacherSections, {
   selectSection,
@@ -216,6 +217,7 @@ describe('RubricSettings', () => {
   });
 
   it('disables run AI assessment for all button when no students have attempted', async () => {
+    store.dispatch(setAiEvalStatusCounters(noAttempts));
     render(
       <Provider store={store}>
         <RubricSettings
@@ -223,7 +225,6 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
-          aiEvalStatusCounters={noAttempts}
         />
       </Provider>
     );
@@ -234,6 +235,7 @@ describe('RubricSettings', () => {
   });
 
   it('disables run AI assessment for all button when all student work has been evaluated', async () => {
+    store.dispatch(setAiEvalStatusCounters(noUnevaluated));
     render(
       <Provider store={store}>
         <RubricSettings
@@ -241,7 +243,6 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
-          aiEvalStatusCounters={noUnevaluated}
         />
       </Provider>
     );
@@ -256,6 +257,7 @@ describe('RubricSettings', () => {
   });
 
   it('shows pending status when eval is pending', async () => {
+    store.dispatch(setAiEvalStatusCounters(ready));
     // show ready state on initial load
     render(
       <Provider store={store}>
@@ -264,7 +266,6 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
-          aiEvalStatusCounters={ready}
         />
       </Provider>
     );

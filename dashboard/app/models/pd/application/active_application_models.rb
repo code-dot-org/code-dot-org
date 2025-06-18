@@ -7,6 +7,7 @@ module Pd
       # - used to determine the current summer workshops year in summer_workshops_to_gdrive script
       # - used in two other scripts (teacher_applications_to_gdrive and scheduled_pd_application_emails)
       # - used for regional partner workshop enrollment counts
+      APPLICATION_PRIOR_YEAR = Pd::SharedApplicationConstants::APPLICATION_PRIOR_YEAR
       APPLICATION_CURRENT_YEAR = Pd::SharedApplicationConstants::APPLICATION_CURRENT_YEAR
 
       # Active (this year's) application classes and factories

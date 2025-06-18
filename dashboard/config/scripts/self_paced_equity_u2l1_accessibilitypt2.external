@@ -1,0 +1,39 @@
+name 'self-paced-equity-U2L1-accessibilitypt2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Making Computer Science Accessible
+
+#### Read the following from the <a href="https://advocacy.code.org/stateofcs/" target="blank" rel="noopener noreferrer">State of Computer Science Education Report</a>. It provides an overview of students with disabilities in computer science.
+
+### While you read, consider the following: 
+
+* #### How have you made accommodations for your students (regardless of whether they have an IEP or 504 plan) in your classroom in the past?
+
+<div style="background-color: #F7F8FA; border-radius: 10px; padding: 10px 20px 20px 20px; margin: 20px 0px 20px 0px; width: 100%; box-sizing: border-box;">
+  <p style="margin: 0; font-size: 18px; line-height: 1.2; color: #333; text-align: left;">
+
+### **Students with Disabilities in Computer Science**
+
+#### Students with disabilities face significant and wide-ranging barriers to learning computer science. For example, blind students frequently encounter inaccessible programming tools, and Deaf students may encounter uncaptioned video. Students with disabilities are supported in two main ways in educational environments: 504 plans provide students with accommodations to meet the same educational goals as their peers, and individualized education plans (IEPs) may provide both accommodations and modifications to meet students’ needs.
+     
+#### Students with 504 plans continue to be well-represented in foundational computer science, whereas students with IEPs remain underrepresented. There are many organizations dedicated to making sure computer science classes are accessible for all learners; however, there is still much work to do to ensure all students get this opportunity. 
+  </p>
+  <div style="margin-top: 20px; text-align: center;">
+    <img src="https://images.code.org/af9d74d242854bb26b8d71ec9aca09ca-image-1736036629328.21.43 PM.png" alt="A chart that shows that the amount of students with IEPs and 504 plans in CS. Students with IEPs are underrepresented, while students with 504 plans are not." style="max-width: 50%; height: auto; border-radius: 10px;">
+  </div>
+</div>
+
+
+
+## What if I don't have any students with IEPs or 504 plans?
+
+<img src="https://images.code.org/a7c53fa3c7dfacd643d54b012ba49308-image-1736276375887.59.31 AM.png" alt="A seated student points at their laptop while another student, who is standing, looks on." style="border-radius:20px; float: right; padding-right: 10px; height: 180px; clear: both; margin: 0px 20px 20px 20px;">
+
+#### Maybe not now, but that doesn't mean you never will.
+
+#### Further, attending to accessibility helps everyone. You may be a person with typical hearing, but have you ever benefited from video captions? What about walking up a ramp instead of taking the stairs to access a building? In the same way, a neurotypical student who prefers instructions to be read aloud to them may benefit from utilizing a text-to-speech feature.
+
+#### The bottom line is that learning about accessibility is a key component of leading young learners. You never know how making your classroom more accessible will help other students thrive.
+MARKDOWN

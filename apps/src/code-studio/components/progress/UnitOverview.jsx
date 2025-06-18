@@ -25,6 +25,7 @@ import {
 import i18n from '@cdo/locale';
 
 import UnitCalendarGrid from './UnitCalendarGrid';
+import UnitOverviewActionRow from './UnitOverviewActionRow';
 import UnitOverviewHeader from './UnitOverviewHeader';
 import UnitOverviewTopRow from './UnitOverviewTopRow';
 
@@ -39,6 +40,7 @@ class UnitOverview extends React.Component {
     courseId: PropTypes.number,
     courseTitle: PropTypes.string,
     courseLink: PropTypes.string,
+    isSingleUnitCourse: PropTypes.bool,
     excludeCsfColumnInLegend: PropTypes.bool.isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
     studentResources: PropTypes.arrayOf(resourceShape),
@@ -67,6 +69,7 @@ class UnitOverview extends React.Component {
     // redux provided
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
+    scriptPath: PropTypes.string.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     hiddenLessonState: PropTypes.object,
     selectedSectionId: PropTypes.number,
@@ -83,6 +86,22 @@ class UnitOverview extends React.Component {
     if (props.userType === 'teacher') {
       analyticsReporter.sendEvent(
         EVENTS.UNIT_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT,
+        {
+          'unit name': props.scriptName,
+        },
+        PLATFORMS.BOTH
+      );
+    } else if (props.userType === 'student') {
+      analyticsReporter.sendEvent(
+        EVENTS.UNIT_OVERVIEW_PAGE_VISITED_BY_STUDENT_EVENT,
+        {
+          'unit name': props.scriptName,
+        },
+        PLATFORMS.BOTH
+      );
+    } else {
+      analyticsReporter.sendEvent(
+        EVENTS.UNIT_OVERVIEW_PAGE_VISITED_BY_SIGNED_OUT_USER_EVENT,
         {
           'unit name': props.scriptName,
         },
@@ -107,6 +126,7 @@ class UnitOverview extends React.Component {
       studentResources,
       scriptId,
       scriptName,
+      scriptPath,
       viewAs,
       showCourseUnitVersionWarning,
       showScriptVersionWarning,
@@ -130,6 +150,7 @@ class UnitOverview extends React.Component {
       completedLessonNumber,
       courseOfferingId,
       courseVersionId,
+      courseId,
       isProfessionalLearningCourse,
       publishedState,
       participantAudience,
@@ -150,12 +171,11 @@ class UnitOverview extends React.Component {
           <EndOfLessonDialog lessonNumber={completedLessonNumber} />
         )}
         <div>
-          {this.props.courseLink && (
+          {!this.props.isSingleUnitCourse && this.props.courseLink && (
             <div className="unit-breadcrumb" style={styles.navArea}>
-              <a
-                href={this.props.courseLink}
-                style={styles.navLink}
-              >{`< ${this.props.courseTitle}`}</a>
+              <a href={this.props.courseLink} style={styles.navLink}>
+                {`< ${this.props.courseTitle}`}
+              </a>
             </div>
           )}
           {displayRedirectDialog && (
@@ -175,7 +195,22 @@ class UnitOverview extends React.Component {
             versions={versions}
             courseName={courseName}
             userId={userId}
-          />
+          >
+            <UnitOverviewActionRow
+              courseVersionId={courseVersionId}
+              versions={versions}
+              viewAs={viewAs}
+              showAssignButton={showAssignButton}
+              courseOfferingId={courseOfferingId}
+              currentCourseId={courseId}
+              scriptId={scriptId}
+              participantAudience={participantAudience}
+              scriptOverviewPdfUrl={scriptOverviewPdfUrl}
+              scriptResourcesPdfUrl={scriptResourcesPdfUrl}
+              teacherResources={teacherResources}
+              isMigrated={isMigrated}
+            />
+          </UnitOverviewHeader>
           {/* unit-calendar-for-printing has style `display: none` from `style/curriculum/scripts.scss` which is added from the BE */}
           {showCalendar && viewAs === ViewType.Instructor && (
             <div className="unit-calendar-for-printing print-only">
@@ -189,7 +224,6 @@ class UnitOverview extends React.Component {
           <UnitOverviewTopRow
             teacherResources={teacherResources}
             studentResources={studentResources}
-            showAssignButton={showAssignButton}
             assignedSectionId={assignedSectionId}
             showCalendar={showCalendar}
             weeklyInstructionalMinutes={weeklyInstructionalMinutes}
@@ -197,13 +231,12 @@ class UnitOverview extends React.Component {
             isMigrated={isMigrated}
             scriptOverviewPdfUrl={scriptOverviewPdfUrl}
             scriptResourcesPdfUrl={scriptResourcesPdfUrl}
-            courseOfferingId={courseOfferingId}
-            courseVersionId={courseVersionId}
             isProfessionalLearningCourse={isProfessionalLearningCourse}
             courseLink={this.props.courseLink}
             publishedState={publishedState}
             participantAudience={participantAudience}
             isUnitWithLevels={unitHasLevels}
+            scriptPath={scriptPath}
           />
         </div>
         <ProgressTable minimal={false} />

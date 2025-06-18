@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "pl_workshop_activities",
       "curriculum_umbrella": "PD Workshop Activity CSD",
       "hideable_lessons": true,
       "is_migrated": true,
@@ -12,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-23 21:36:47 UTC",
+    "serialized_at": "2024-11-19 01:19:53 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1107,6 +1108,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 images explore_csd-vpl-m1-2024"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -1129,6 +1133,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag 1_csd-vpl-m1-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1151,6 +1158,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Credit_csd-vpl-m1-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1173,6 +1183,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag Debug_csd-vpl-m1-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1195,6 +1208,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image choose name_csd-vpl-m1-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1217,6 +1233,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag 2_csd-vpl-m1-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1239,6 +1258,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image practice_pilot_csd-vpl-m1-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1261,6 +1283,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image assessment_csd-vpl-m1-2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1283,6 +1308,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L Assess FR_csd-vpl-m1-2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1305,6 +1333,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image challenge_pilot_csd-vpl-m1-2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1327,6 +1358,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games properties predict_csd-vpl-m1-2024"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -1349,6 +1383,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games properties xy_csd-vpl-m1-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1371,6 +1408,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games properties new_csd-vpl-m1-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1393,6 +1433,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Properties practice_csd-vpl-m1-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1415,6 +1458,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Games properties assessment_csd-vpl-m1-2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1437,6 +1483,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Properties challenge_csd-vpl-m1-2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,

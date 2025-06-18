@@ -55,10 +55,10 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
     this.allowReadOnlyClick = allowReadOnlyClick;
   }
 
-  static fromJson(options: CdoFieldButtonOptions) {
+  static fromJson(_options: GoogleBlockly.FieldConfig) {
+    const options = _options as CdoFieldButtonOptions;
     return new CdoFieldButton(options);
   }
-
   /**
    * Create the block UI for this field.
    * @override
@@ -82,9 +82,6 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
    */
   getDisplayText_() {
     const text = this.getText();
-    if (!text) {
-      return GoogleBlockly.Field.NBSP;
-    }
     // The transformText function customizes the text for display.
     if (this.transformText) {
       return this.transformText(text);

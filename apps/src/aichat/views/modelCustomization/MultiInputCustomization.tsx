@@ -1,9 +1,9 @@
+import Button from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {StrongText} from '@code-dot-org/component-library/typography';
 import React, {useState, useCallback} from 'react';
 
-import Button from '@cdo/apps/componentLibrary/button/Button';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
-
+import aichatI18n from '../../locale';
 import {Visibility} from '../../types';
 
 import FieldLabel from './FieldLabel';
@@ -68,7 +68,7 @@ const MultiInputCustomization: React.FunctionComponent<{
           <div className={modelCustomizationStyles.addItemContainer}>
             <Button
               id={addButtonId}
-              text="Add"
+              text={aichatI18n.addCustomizationButtonText()}
               type="secondary"
               color="gray"
               size="s"
@@ -80,7 +80,7 @@ const MultiInputCustomization: React.FunctionComponent<{
         </>
       )}
       <div className={modelCustomizationStyles.addedItemsHeaderContainer}>
-        <StrongText>Added</StrongText>
+        <StrongText>{aichatI18n.addCustomizationCompletionText()}</StrongText>
       </div>
       {addedItems.map((message, index) => {
         return (

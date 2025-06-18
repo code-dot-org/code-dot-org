@@ -1,6 +1,16 @@
 :ruby
   videos = [
     {
+      youtube_code: 'sypjpycrR7k',
+      caption: hoc_s("hoc_2024.video_caption.visible"),
+      download_link: "//videos.code.org/hour-of-code-2024.mp4",
+    },
+    {
+      youtube_code: '7EuMEcFQfWc',
+      caption: hoc_s("hoc_2024.video_caption.in_a_world"),
+      download_link: "//videos.code.org/hour-of-code-2024-in-a-world.mp4",
+    },
+    {
       youtube_code: 'VYqHGIR7a_k',
       caption: hoc_s(:videos_creativity),
       download_link: "//videos.code.org/social/creativity-is.mp4",
@@ -37,8 +47,8 @@
 .carousel-wrapper.video-carousel
   %swiper-container.videos{navigation: "true", "navigation-next-el": ".nav-next-videos", "navigation-prev-el": ".nav-prev-videos", pagination: "true", init: "false", "allow-touch-move": "false"}
     - videos.each do |video|
-      -# Show playlist link for the second video
-      - if video == videos[1]
+      -# Show playlist link for the third video
+      - if video == videos[2]
         %swiper-slide
           %a{href: "https://www.youtube.com/playlist?list=PLzdnOPI1iJNcXMS80NRhQd0NA3po1swJf", target: "_blank", rel: "noopener noreferrer"}
             %figure

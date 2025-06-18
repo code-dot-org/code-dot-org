@@ -17,12 +17,7 @@ import Notification, {
 import styleConstants from '@cdo/apps/styleConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
-import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
-import {
-  assignmentCourseVersionShape,
-  sectionForDropdownShape,
-} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import color from '@cdo/apps/util/color';
 import {
   onDismissRedirectDialog,
@@ -32,11 +27,9 @@ import {
 } from '@cdo/apps/util/dismissVersionRedirect';
 import i18n from '@cdo/locale';
 
-import {queryParams} from '../../code-studio/utils';
-import * as utils from '../../utils';
 import SafeMarkdown from '../SafeMarkdown';
 
-import CourseOverviewTopRow from './CourseOverviewTopRow';
+import CourseOverviewActionRow from './CourseOverviewActionRow';
 import CourseScript from './CourseScript';
 import VerifiedResourcesNotification from './VerifiedResourcesNotification';
 
@@ -50,12 +43,6 @@ class CourseOverview extends Component {
     courseVersionId: PropTypes.number,
     descriptionStudent: PropTypes.string,
     descriptionTeacher: PropTypes.string,
-    sectionsInfo: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        name: PropTypes.string.isRequired,
-      })
-    ).isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
     studentResources: PropTypes.arrayOf(resourceShape),
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
@@ -72,7 +59,6 @@ class CourseOverview extends Component {
     participantAudience: PropTypes.string,
     // Redux
     announcements: PropTypes.arrayOf(announcementShape),
-    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     isSignedIn: PropTypes.bool.isRequired,
   };
 
@@ -90,17 +76,24 @@ class CourseOverview extends Component {
         },
         PLATFORMS.BOTH
       );
+    } else if (props.userType === 'student') {
+      analyticsReporter.sendEvent(
+        EVENTS.COURSE_OVERVIEW_PAGE_VISITED_BY_STUDENT_EVENT,
+        {
+          'unit group name': props.name,
+        },
+        PLATFORMS.BOTH
+      );
+    } else {
+      analyticsReporter.sendEvent(
+        EVENTS.COURSE_OVERVIEW_PAGE_VISITED_BY_SIGNED_OUT_USER_EVENT,
+        {
+          'unit group name': props.name,
+        },
+        PLATFORMS.BOTH
+      );
     }
   }
-
-  onChangeVersion = versionId => {
-    const version = this.props.versions[versionId];
-    if (versionId !== this.props.id && version) {
-      const sectionId = queryParams('section_id');
-      const queryString = sectionId ? `?section_id=${sectionId}` : '';
-      utils.navigateToHref(`${version.path}${queryString}`);
-    }
-  };
 
   onDismissVersionWarning = () => {
     if (!this.props.scripts[0]) {
@@ -139,8 +132,6 @@ class CourseOverview extends Component {
       courseVersionId,
       descriptionStudent,
       descriptionTeacher,
-      sectionsInfo,
-      sectionsForDropdown,
       teacherResources,
       studentResources,
       viewAs,
@@ -206,15 +197,19 @@ class CourseOverview extends Component {
         {showNotification && <VerifiedResourcesNotification />}
         <div style={styles.titleWrapper}>
           <h1 style={styles.title}>{assignmentFamilyTitle}</h1>
-          {Object.values(versions).length > 1 && (
-            <AssignmentVersionSelector
-              onChangeVersion={this.onChangeVersion}
-              courseVersions={versions}
-              rightJustifiedPopupMenu={true}
-              selectedCourseVersionId={this.props.courseVersionId}
-            />
-          )}
         </div>
+        <CourseOverviewActionRow
+          courseVersionId={courseVersionId}
+          courseId={id}
+          versions={versions}
+          teacherResources={teacherResources}
+          studentResources={studentResources}
+          isInstructor={viewAs === ViewType.Instructor}
+          viewAs={viewAs}
+          showAssignButton={showAssignButton}
+          title={title}
+          participantAudience={participantAudience}
+        />
         <SafeMarkdown
           style={styles.description}
           openExternalLinksInNewTab={true}
@@ -224,33 +219,20 @@ class CourseOverview extends Component {
               : descriptionTeacher
           }
         />
-        <div>
-          <CourseOverviewTopRow
-            sectionsInfo={sectionsInfo}
-            sectionsForDropdown={sectionsForDropdown}
-            courseOfferingId={courseOfferingId}
-            courseVersionId={courseVersionId}
-            id={id}
-            courseName={title}
-            teacherResources={teacherResources}
-            studentResources={studentResources}
-            showAssignButton={showAssignButton}
-            isInstructor={viewAs === ViewType.Instructor}
-            participantAudience={participantAudience}
-          />
-        </div>
         {scripts.map((script, index) => (
           <CourseScript
             key={index}
             title={script.title}
             name={script.name}
             id={script.id}
+            path={script.scriptPath}
             description={script.description}
             assignedSectionId={script.assigned_section_id}
             courseId={id}
             courseOfferingId={courseOfferingId}
             courseVersionId={courseVersionId}
             showAssignButton={showAssignButton}
+            participantAudience={participantAudience}
           />
         ))}
       </div>
@@ -289,12 +271,6 @@ const styles = {
 
 export const UnconnectedCourseOverview = CourseOverview;
 export default connect((state, ownProps) => ({
-  sectionsForDropdown: sectionsForDropdown(
-    state.teacherSections,
-    ownProps.courseOfferingId,
-    ownProps.courseVersionId,
-    null
-  ),
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
   viewAs: state.viewAs,
   isVerifiedInstructor: state.verifiedInstructor.isVerified,

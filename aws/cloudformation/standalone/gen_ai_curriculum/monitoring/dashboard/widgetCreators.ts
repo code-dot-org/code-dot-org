@@ -133,31 +133,29 @@ export function createBrowserLatencyComparisonGraph(
 export function createBrowserLatencyByModelGraph(
   models: {name: string; id: string}[],
   environment: string,
-  browser?: string
+  browser: string
 ): Widget {
   return {
     ...commonGraphProps,
     properties: {
       region: REGION,
-      title: `Chat Request Latency by Model - ${browser || 'All Browsers'}`,
-      metrics: models
-        .map<WidgetMetric[]>(({name, id}, i) => [
-          [
-            {
-              expression: getLatencySearch(environment, browser, id),
-              id: `e${i + 1}`,
-              visible: false,
-            },
-          ],
-          [
-            {
-              expression: `SUM(e${i + 1})/DATAPOINT_COUNT(e${i + 1})`,
-              label: name,
-              color: MODEL_COLORS[id],
-            },
-          ],
-        ])
-        .flat(),
+      title: `Chat Request Latency by Model - ${browser}`,
+      metrics: models.map<WidgetMetric>(({name, id}) => [
+        `${environment}-browser-metrics`,
+        'AichatModelResponseTime',
+        'Hostname',
+        'studio.code.org',
+        'ModelId',
+        id,
+        'AppName',
+        'aichat',
+        'Browser',
+        browser,
+        {
+          label: name,
+          color: MODEL_COLORS[id],
+        },
+      ]),
     },
   };
 }
@@ -176,74 +174,123 @@ function getLatencySearch(
 
 export function createBrowserChatPerformanceGraph(
   environment: string,
-  browser?: string
+  browser: string
 ): Widget {
   return {
     ...commonGraphProps,
     properties: {
       region: REGION,
-      title: `Chat Completion Performance - ${browser || 'All Browsers'}`,
+      title: `Chat Completion Performance - ${browser}`,
       metrics: [
-        [
+        ...[
+          'ChatCompletionRequestInitiated',
+          'ChatCompletionErrorUnhandled',
+          'ChatCompletionErrorRateLimited',
+        ].map<WidgetMetric>((metric, i) => [
+          `${environment}-browser-metrics`,
+          `Aichat.${metric}`,
+          'Hostname',
+          'studio.code.org',
+          'AppName',
+          'aichat',
+          'Browser',
+          browser,
           {
-            expression: getBrowserMetricSearch(
-              'ChatCompletionRequestInitiated',
-              environment,
-              browser
-            ),
-            id: `e1${browser}`,
-            visible: false,
-          },
-        ],
-        [
-          {
-            expression: getBrowserMetricSearch(
-              'ChatCompletionErrorUnhandled',
-              environment,
-              browser
-            ),
-            id: `e2${browser}`,
-            visible: false,
-          },
-        ],
-        [
-          {
-            expression: getBrowserMetricSearch(
-              'ChatCompletionErrorRateLimited',
-              environment,
-              browser
-            ),
-            id: `e3${browser}`,
-            visible: false,
-          },
-        ],
-        [
-          {
-            expression: `SUM(e1${browser})`,
-            label: `Request Count`,
+            visible: i === 0,
+            id: `m${i + 1}`,
             color: COUNT_COLOR,
+            label: i === 0 ? 'Request Count' : metric,
           },
-        ],
+        ]),
         [
           {
-            expression: `SUM(e2${browser})/SUM(e1${browser}) * 100`,
+            id: 'e1',
+            expression: `m2/m1 * 100`,
             label: `Error Rate (%)`,
             yAxis: 'right',
             color: ERROR_COLOR,
           },
-        ],
+        ] as unknown as ExpressionMetric,
         [
           {
-            expression: `SUM(e3${browser})/SUM(e1${browser}) * 100`,
+            id: 'e2',
+            expression: `m3/m1 * 100`,
             label: `Rate Limited (%)`,
             yAxis: 'right',
             color: WARNING_COLOR,
           },
         ] as unknown as ExpressionMetric,
-      ] as WidgetMetric[],
+      ],
+      stat: 'Sum',
       yAxis: {
         right: {label: '%', showUnits: false, min: 0, max: 100},
-        left: {label: 'Count', showUnits: false},
+      },
+    },
+  };
+}
+
+export function createOverallChatPerformanceGraph(
+  environment: string,
+  browsers: string[]
+): Widget {
+  const browserIndices = browsers.map((_, i) => i + 1);
+  return {
+    ...commonGraphProps,
+    properties: {
+      region: REGION,
+      title: 'Chat Completion Performance - All Browsers',
+      metrics: [
+        ...[
+          'ChatCompletionRequestInitiated',
+          'ChatCompletionErrorUnhandled',
+          'ChatCompletionErrorRateLimited',
+        ]
+          .map<WidgetMetric[]>((metric, i) =>
+            browsers.map<WidgetMetric>((browser, j) => [
+              `${environment}-browser-metrics`,
+              `Aichat.${metric}`,
+              'Hostname',
+              'studio.code.org',
+              'AppName',
+              'aichat',
+              'Browser',
+              browser,
+              {id: `m${i + 1}${j + 1}`, visible: false},
+            ])
+          )
+          .flat(),
+        [
+          {
+            expression: browserIndices.map(i => `m1${i}`).join('+'),
+            label: 'Request Count',
+            color: COUNT_COLOR,
+            id: 'e1',
+          },
+        ] as unknown as ExpressionMetric,
+        [
+          {
+            expression: `(${browserIndices
+              .map(i => `m2${i}`)
+              .join('+')})/e1 * 100`,
+            label: 'Error Rate (%)',
+            yAxis: 'right',
+            color: ERROR_COLOR,
+          },
+        ] as unknown as ExpressionMetric,
+        [
+          {
+            expression: `(${browserIndices
+              .map(i => `m3${i}`)
+              .join('+')})/e1 * 100`,
+            label: 'Rate Limited (%)',
+            yAxis: 'right',
+            color: WARNING_COLOR,
+          },
+        ] as unknown as ExpressionMetric,
+      ],
+      stat: 'Sum',
+      yAxis: {
+        right: {label: '%', showUnits: false, min: 0, max: 100},
       },
     },
   };
@@ -251,87 +298,120 @@ export function createBrowserChatPerformanceGraph(
 
 export function createBrowserSavePerformanceGraph(
   environment: string,
-  browser?: string
+  browser: string
 ): Widget {
   return {
     ...commonGraphProps,
     properties: {
       region: REGION,
-      title: `Save/Update Performance - ${browser || 'All Browsers'}`,
+      title: `Save/Update Performance - ${browser}`,
       metrics: [
-        [
+        ...[
+          'SaveStarted',
+          'SaveFailError',
+          'SaveFailToxicityDetected',
+        ].map<WidgetMetric>((metric, i) => [
+          `${environment}-browser-metrics`,
+          `Aichat.${metric}`,
+          'Hostname',
+          'studio.code.org',
+          'AppName',
+          'aichat',
+          'Browser',
+          browser,
           {
-            expression: getBrowserMetricSearch(
-              'SaveStarted',
-              environment,
-              browser
-            ),
-            id: `e1${browser}`,
-            visible: false,
-          },
-        ],
-        [
-          {
-            expression: getBrowserMetricSearch(
-              'SaveFailError',
-              environment,
-              browser
-            ),
-            id: `e2${browser}`,
-            visible: false,
-          },
-        ],
-        [
-          {
-            expression: getBrowserMetricSearch(
-              'SaveFailToxicityDetected',
-              environment,
-              browser
-            ),
-            id: `e3${browser}`,
-            visible: false,
-          },
-        ],
-        [
-          {
-            expression: `SUM(e1${browser})`,
-            label: `Save/Update Count`,
+            visible: i === 0,
+            id: `m${i + 1}`,
             color: COUNT_COLOR,
+            label: i === 0 ? 'Save/Update Count' : metric,
           },
-        ],
+        ]),
         [
           {
-            expression: `SUM(e2${browser})/SUM(e1${browser}) * 100`,
+            expression: `m2/m1 * 100`,
             label: `Error Rate (%)`,
             yAxis: 'right',
             color: ERROR_COLOR,
           },
-        ],
+        ] as unknown as ExpressionMetric,
         [
           {
-            expression: `SUM(e3${browser})/SUM(e1${browser}) * 100`,
+            expression: `m3/m1 * 100`,
             label: `Toxicity Detected (%)`,
             yAxis: 'right',
             color: WARNING_COLOR,
           },
         ] as unknown as ExpressionMetric,
-      ] as WidgetMetric[],
+      ],
+      stat: 'Sum',
       yAxis: {
         right: {label: '%', showUnits: false, min: 0, max: 100},
-        left: {label: 'Count', showUnits: false},
       },
     },
   };
 }
 
-function getBrowserMetricSearch(
-  metric: string,
+export function createOverallSavePerformanceGraph(
   environment: string,
-  browser?: string
-) {
-  return `SEARCH('{${environment}-browser-metrics,AppName,Browser,BrowserVersion,Hostname} AppName=\"aichat\" ${
-    browser ? `Browser=\"${browser}\"` : ''
-  } MetricName=\"Aichat.${metric}\"', 'Sum', 300)`;
+  browsers: string[]
+): Widget {
+  const browserIndices = browsers.map((_, i) => i + 1);
+  return {
+    ...commonGraphProps,
+    properties: {
+      region: REGION,
+      title: 'Save/Update Performance - All Browsers',
+      metrics: [
+        ...['SaveStarted', 'SaveFailError', 'SaveFailToxicityDetected']
+          .map<WidgetMetric[]>((metric, i) =>
+            browsers.map<WidgetMetric>((browser, j) => [
+              `${environment}-browser-metrics`,
+              `Aichat.${metric}`,
+              'Hostname',
+              'studio.code.org',
+              'AppName',
+              'aichat',
+              'Browser',
+              browser,
+              {id: `m${i + 1}${j + 1}`, visible: false},
+            ])
+          )
+          .flat(),
+        [
+          {
+            expression: browserIndices.map(i => `m1${i}`).join('+'),
+            label: 'Save/Update Count',
+            color: COUNT_COLOR,
+            id: 'e1',
+          },
+        ] as unknown as ExpressionMetric,
+        [
+          {
+            expression: `(${browserIndices
+              .map(i => `m2${i}`)
+              .join('+')})/e1 * 100`,
+            label: 'Error Rate (%)',
+            yAxis: 'right',
+            color: ERROR_COLOR,
+          },
+        ] as unknown as ExpressionMetric,
+        [
+          {
+            expression: `(${browserIndices
+              .map(i => `m3${i}`)
+              .join('+')})/e1 * 100`,
+            label: 'Toxicity Detected (%)',
+            yAxis: 'right',
+            color: WARNING_COLOR,
+          },
+        ] as unknown as ExpressionMetric,
+      ],
+      stat: 'Sum',
+      yAxis: {
+        right: {label: '%', showUnits: false, min: 0, max: 100},
+      },
+    },
+  };
 }
 
 export function createJobPerformanceGraph(environment: string): Widget {

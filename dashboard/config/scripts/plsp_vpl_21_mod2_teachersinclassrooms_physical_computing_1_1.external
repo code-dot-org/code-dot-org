@@ -1,0 +1,23 @@
+name 'PLSP-VPL-21-mod2-TeachersInClassrooms_physical-computing_1_1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Accessing Unit Level Resources
+#### Code.org offers a wide range of additional resources for each unit. Follow the steps below to learn how to access them.
+
+<div style="text-align: center;">
+  <img src="https://images.code.org/d66347b3b5bd21066f83200ac3244803-image-1742933817353.16.51 PM.png" alt="CS Discoveries Unit page highlighting the go to unit button" style="width: 600px;">
+</div>
+
+#### 1. From the Unit Overview page, navigate to your unit of choice. 
+#### 2. Click on "Go to Unit" 
+
+<div style="text-align: center;">
+  <img src="https://images.code.org/ebeb3ec12d2ffe66ad776bd91ed056fd-image-1742933858347.17.34 PM.png" alt="Course page highlighting additional resources" style="width: 600px;">
+</div>
+
+
+#### 3. Click on "Teacher Resources"
+#### 4. Select your resource 
+MARKDOWN

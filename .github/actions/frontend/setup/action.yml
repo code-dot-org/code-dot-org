@@ -1,0 +1,23 @@
+name: "Install & Setup Frontend Directory"
+description: "Setup for the frontend directory"
+
+runs:
+  using: composite
+  steps:
+    - name: Enable Corepack before setting up Node
+      shell: bash
+      run: corepack enable
+
+    - name: Cache turborepo
+      uses: rharkor/caching-for-turbo@a1c4079258ae08389be75b57d4d7a70f23c1c66d # v1.8
+
+    - uses: actions/setup-node@v4
+      with:
+        node-version-file: ".nvmrc"
+        cache: "yarn"
+        cache-dependency-path: 'frontend/yarn.lock'
+
+    - name: Install dependencies
+      shell: bash
+      run: yarn install
+      working-directory: ./frontend

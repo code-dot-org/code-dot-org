@@ -16,6 +16,14 @@ module CertificatesHelper
     "/certificate_images/#{encoded}.jpg"
   end
 
+  def twitter_certificate_image_url(name, course, donor)
+    return CDO.code_org_url('/images/hour_of_code_certificate.jpg', 'https:') if course.blank?
+    is_prefilled = CertificateImage.prefilled_title_course?(course)
+    return CDO.code_org_url("/images/#{CertificateImage.certificate_template_for(course)}", 'https:') if is_prefilled && !name
+    encoded = encode_params(name, course, donor)
+    CDO.studio_url("/certificate_images/#{encoded}.jpg", 'https:')
+  end
+
   def certificate_print_url(name, course, donor)
     encoded = encode_params(name, course, donor)
     "/print_certificates/#{encoded}"

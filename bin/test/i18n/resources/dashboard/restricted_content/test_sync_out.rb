@@ -10,7 +10,7 @@ describe I18n::Resources::Dashboard::RestrictedContent::SyncOut do
 
   let(:crowdin_file_path) {CDO.dir('i18n/crowdin', i18n_locale, "dashboard/restricted.yml")}
   let(:i18n_file_path) {CDO.dir('i18n/locales', i18n_locale, "dashboard/restricted.yml")}
-  let(:target_i18n_file_path) {CDO.dir('dashboard/config/locales', "restricted.#{i18n_locale}.yml")}
+  let(:target_i18n_file_path) {CDO.dir('dashboard/config/locales/restricted', "#{i18n_locale}.yml")}
 
   around do |test|
     FakeFS.with_fresh {test.call}

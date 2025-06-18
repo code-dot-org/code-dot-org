@@ -1,0 +1,29 @@
+@import 'color';
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: $black;
+
+  // We hide the input element because we use the label to trigger the file picker
+  // We use opacity 0 and height 0 rather than hidden so the input is still tabbable.
+  input[type="file"] {
+    opacity: 0;
+    height: 0;
+    line-height: 0;
+  }
+}
+
+.camera {
+  font-size: 48px;
+}
+
+.prompt {
+  color: $white;
+  text-align: center;
+  font-size: 13px;
+  margin-top: 4px;
+}
+

@@ -4,11 +4,12 @@ module Pd::Payment
   class PaymentCalculatorDistrictTest < ActiveSupport::TestCase
     setup do
       @workshop = create :workshop, :ended,
-        on_map: false, funded: false,
-        course: Pd::Workshop::COURSE_CS_IN_A,
-        subject: Pd::Workshop::SUBJECT_CS_IN_A_PHASE_2,
+        on_map: false,
+        funded: false,
         num_sessions: 3,
         num_facilitators: 2
+
+      @workshop.update_columns(course: Pd::Workshop::COURSE_CS_IN_A, subject: Pd::Workshop::SUBJECT_CS_IN_A_PHASE_2)
 
       # One unqualified teacher, below min attendance
       create :pd_workshop_participant, workshop: @workshop,

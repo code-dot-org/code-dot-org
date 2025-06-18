@@ -103,7 +103,6 @@ export default class FunctionEditor {
     // Disable blocks that aren't attached. We don't want these to generate
     // code in the hidden workspace.
     this.editorWorkspace.addChangeListener(disableOrphans);
-    Blockly.navigationController.addWorkspace(this.editorWorkspace);
     // Close handler
     document
       .getElementById(MODAL_EDITOR_CLOSE_ID)
@@ -142,26 +141,9 @@ export default class FunctionEditor {
     functionEditorTrashcan.init();
     // Set primary workspace to be active (until a function is shown).
     Blockly.common.setMainWorkspace(this.primaryWorkspace);
-    if (this.primaryWorkspace.keyboardAccessibilityMode) {
-      this.primaryWorkspace
-        .getMarkerManager()
-        .setCursor(
-          Blockly.getNewCursor(Blockly.navigationController.cursorType)
-        );
-      Blockly.navigationController.navigation.focusWorkspace(
-        this.primaryWorkspace
-      );
-    }
   }
 
   hide() {
-    // If keyboard navigation was on, enable it on the primary workspace
-    if (this.editorWorkspace?.keyboardAccessibilityMode) {
-      // Disable it on the current workspace so there's no chance of
-      // controlling it accidentally while it is hidden.
-      Blockly.navigationController.disable(this.editorWorkspace);
-      Blockly.navigationController.enable(this.primaryWorkspace);
-    }
     if (this.dom) {
       this.dom.style.display = 'none';
       this.editorWorkspace?.hideChaff();
@@ -191,10 +173,8 @@ export default class FunctionEditor {
   }
 
   // Leaving these two functions as placeholders for when we implement parameters.
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-empty-function
   renameParameter(_oldName: string, _newName: string) {}
 
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
   refreshParamsEverywhere() {}
 
   autoOpenFunction(functionName: string) {
@@ -301,27 +281,14 @@ export default class FunctionEditor {
     }
     this.block?.setDeletable(false);
 
-    // If keyboard navigation was on, enable it on the editor workspace.
-    if (
-      this.editorWorkspace.keyboardAccessibilityMode ||
-      this.primaryWorkspace?.keyboardAccessibilityMode
-    ) {
-      // Disable it on the primary workspace so there's no chance of
-      // controlling it accidentally while the function editor is open.
-      Blockly.navigationController.disable(this.primaryWorkspace);
-      Blockly.navigationController.enable(this.editorWorkspace);
-
-      this.editorWorkspace
-        .getMarkerManager()
-        .setCursor(
-          Blockly.getNewCursor(Blockly.navigationController.cursorType)
-        );
-      // If this editor was already open (e.g. changing from one function to another)
-      // we need to re-focus so the cursor highlights the correct block.
-      Blockly.navigationController.navigation.focusWorkspace(
-        this.editorWorkspace
-      );
+    // We store the workspace width for RTL workspaces so that we can move
+    // blocks back to the correct positions after a browser window resize.
+    // See: https://github.com/google/blockly/issues/8637
+    if (this.editorWorkspace.RTL) {
+      this.editorWorkspace.previousViewWidth =
+        this.editorWorkspace.getMetrics().viewWidth;
     }
+
     // We only want to be able to delete things that are user-created (functions and behaviors)
     // and not things that are being previewed from a read-only workspace.
     // We allow deleting non-user created behaviors in start mode.
@@ -353,6 +320,8 @@ export default class FunctionEditor {
 
     // Make the function editor workspace the active/focused workspace.
     Blockly.common.setMainWorkspace(this.editorWorkspace);
+    // Focus the procedure block.
+    Blockly.FocusManager.getFocusManager().focusNode(this.block!);
   }
 
   /**
@@ -653,8 +622,8 @@ export default class FunctionEditor {
 
       variables.forEach(variable => {
         functionEditorVariableMap.createVariable(
-          variable.name,
-          variable.type,
+          variable.getName(),
+          variable.getType(),
           variable.getId()
         );
       });

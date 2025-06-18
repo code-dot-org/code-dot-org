@@ -4,17 +4,17 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "is_course": true,
-      "is_migrated": true,
-      "version_year": "unversioned"
+      "content_area": "pl_workshop_activities",
+      "curriculum_umbrella": "PD Workshop Activity CSD",
+      "is_migrated": true
     },
     "new_name": null,
-    "family_name": "pl-csd-bugs",
-    "serialized_at": "2024-08-15 22:37:42 UTC",
-    "published_state": "beta",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-03-28 09:28:40 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "pl-csd-bugs"
     }
@@ -220,6 +220,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Text debug"
+        ],
         "progression": "Unit 3 - Interactive Animations & Games Debugging"
       },
       "bonus": false,
@@ -242,6 +245,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Movement debug"
+        ],
         "progression": "Unit 3 - Interactive Animations & Games Debugging"
       },
       "bonus": false,
@@ -264,6 +270,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Watcher Debug PL"
+        ],
         "progression": "Unit 3 - Interactive Animations & Games Debugging"
       },
       "bonus": false,
@@ -286,6 +295,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Debug Paragraph Style"
+        ],
         "progression": "Unit 3 - Interactive Animations & Games Debugging"
       },
       "bonus": false,

@@ -15,7 +15,6 @@ import i18n from '@cdo/locale';
 
 import {h3Style} from '../../legacySharedComponents/Headings';
 import firehoseClient from '../../metrics/firehose';
-import {showV2TeacherDashboard} from '../teacherNavigation/TeacherNavFlagUtils';
 
 import LessonSelector from './LessonSelector';
 import ProgressViewHeader from './ProgressViewHeader';
@@ -29,7 +28,6 @@ import {
 import UnitSelector from './UnitSelector';
 
 import styleConstants from './progressTables/progress-table-constants.module.scss';
-import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 import navigationStyles from '@cdo/apps/templates/teacherNavigation/teacher-navigation.module.scss';
 
 const SECTION_PROGRESS = 'SectionProgress';
@@ -60,18 +58,32 @@ class SectionProgress extends Component {
 
     this.state = {
       reportedInitialRender: false,
+      loadedSectionId: null,
     };
   }
 
   componentDidMount() {
     if (this.props.scriptId) {
-      loadUnitProgress(this.props.scriptId, this.props.sectionId);
+      loadUnitProgress(this.props.scriptId, this.props.sectionId)?.then(() => {
+        this.setState(state => ({
+          ...state,
+          loadedSectionId: this.props.sectionId,
+        }));
+      });
     }
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.scriptId !== this.props.scriptId) {
-      loadUnitProgress(this.props.scriptId, this.props.sectionId);
+    if (
+      prevProps.scriptId !== this.props.scriptId ||
+      prevProps.sectionId !== this.props.sectionId
+    ) {
+      loadUnitProgress(this.props.scriptId, this.props.sectionId)?.then(() => {
+        this.setState(state => ({
+          ...state,
+          loadedSectionId: this.props.sectionId,
+        }));
+      });
     }
 
     if (this.levelDataInitialized() && !this.state.reportedInitialRender) {
@@ -82,7 +94,10 @@ class SectionProgress extends Component {
           scriptId: this.props.scriptId,
         }
       );
-      this.setState({reportedInitialRender: true});
+      this.setState(state => ({
+        ...state,
+        reportedInitialRender: true,
+      }));
     }
 
     if (
@@ -160,8 +175,21 @@ class SectionProgress extends Component {
   };
 
   levelDataInitialized = () => {
-    const {scriptData, isLoadingProgress, isRefreshingProgress} = this.props;
-    return scriptData && !isLoadingProgress && !isRefreshingProgress;
+    const {
+      scriptData,
+      isLoadingProgress,
+      isRefreshingProgress,
+      sectionId,
+      scriptId,
+    } = this.props;
+    const {loadedSectionId} = this.state;
+    return (
+      scriptData &&
+      !isLoadingProgress &&
+      !isRefreshingProgress &&
+      sectionId === loadedSectionId &&
+      scriptData.id === scriptId
+    );
   };
 
   render() {
@@ -184,11 +212,8 @@ class SectionProgress extends Component {
 
     return (
       <div
-        className={
-          showV2TeacherDashboard()
-            ? navigationStyles.widthLockedPage
-            : dashboardStyles.dashboardPage
-        }
+        className={navigationStyles.widthLockedPage}
+        // eslint-disable-next-line react/forbid-dom-props
         data-testid="section-progress-v1"
       >
         <div style={styles.topRowContainer}>

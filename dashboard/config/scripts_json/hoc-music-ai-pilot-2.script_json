@@ -4,18 +4,21 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_course": true,
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "is_migrated": true,
-      "pilot_experiment": "hoc-music-ai-pilot-2",
-      "version_year": "unversioned"
+      "topic_tags": [
+        "ai",
+        "music_lab"
+      ]
     },
     "new_name": null,
-    "family_name": "hoc-music-ai-pilot-2",
-    "serialized_at": "2024-09-24 22:32:21 UTC",
-    "published_state": "pilot",
-    "instruction_type": "self_paced",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-03-28 09:29:28 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "hoc-music-ai-pilot-2"
     }

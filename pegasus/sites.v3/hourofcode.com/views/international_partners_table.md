@@ -2,6 +2,7 @@
 |---|---|---|---|
 |Americas|The Trust for the Americas|Pierina Nepote Rangel|pnepote@trust-oea.org<br>https://www.thetrustfortheamericas.org/|
 |Antigua and Barbuda|iLabGlobal & Caribbean Tech Genius Foundation|Makŏ Williams|mako@iLabGlobal.com<br>https://ilabglobal.com/<br>http://techgenius.edu.ag/|
+|Argentina|Municipalidad de Córdoba|Alicia La Terza|seceduc.lic.laterza@gmail.com<br>https://cordoba.gob.ar/areas-de-gobierno/secretaria-de-educacion/|
 |Australia|Grok Academy|Lisette Tennant|https://groklearning.com|
 |Botswana|CSEdBotswana|Dr. Ethel Tshukudu|ethel.tshukudu01@gmail.com<br>https://www.csedbotswana.org/|
 |Brasil|Universidade Federal Do Amapá|Simone De Almeida Delphim Leal|leal@unifap.br<br>www.unifap.br|
@@ -39,6 +40,7 @@
 |Indonesia|Prestasi Junior Indonesia|Retna Widiyasrini|retno@prestasijunior.org<br>www.prestasijunior.org|
 |Indonesia|ProVisi Mandiri Pratama|Chatarina Trihastuti|rina@provisimandiripratama.com<br>https://provisimandiripratama.com/|
 |Iraq|ABCode|Batool Hussain|ABcode.global@gmail.com|
+|Ireland|National Learning Network|Pranav Chavan|pranav.chavan@nln.ie<br>https://rehab.ie/national-learning-network/|
 |Israel|Wix|Hour of Code Israel Team|connect@hourofcode.com<br>https://www.hourofcode.co.il|
 |Italy|Programma il Futuro|Enrico Nardelli|didattica@programmailfuturo.it<br>https://programmailfuturo.it|
 |Japan|Code for Everyone / 特定非営利活動法人みんなのコード|Yuta Tonegawa|info@code.or.jp<br>https://code.or.jp/|
@@ -47,6 +49,7 @@
 |Korea of republic|Korea National University of Education|Kwihoon Kim|kimkh@knue.ac.kr<br>https://en.knue.ac.kr/smain.html|
 |Kosovo|SHPIK|Bekim Kasumi|bekim.kasumi@shpik.org<br>www.shpik.org|
 |Latin America|Eidos Global|Marina Puente Pistarini|marina@eidosglobal.org<br>https://www.eidosglobal.org/|
+|Macau|Macau International STEAM Education Association (MISEA)|Man Fai Lai|macaumisea@gmail.com<br>https://www.steam.mo/|
 |Malaysia|Chumbaka|Nigel Sim|nigel@chumbaka.asia<br>www.chumbaka.asia|
 |Malaysia|Fondation Rolf Schnyder|Scott and Andrea Wong|scott.andrea@fondationrolfschnyder.org<br>www.fondationrolfschnyder.org|
 |Malaysia|Malaysia Digital Economy Corporation (MDEC)|Sofia Akmal Abu Bakar|sofia@mdec.com.my<br>https://mdec.my/|
@@ -63,6 +66,7 @@
 |New Zealand|Ara Institute of Canterbury|Amitrajit Sarkar|sarkara@cpit.ac.nz<br>http://www.ara.ac.nz|
 |Nigeria|Odyssey Educational Foundation|Stella UzochukwuDenis|ifywayne@gmail.com<br>www.odysseyedufoundation.org|
 |Nigeria|Skooqs|Oluwadamilola Soyombo|hello@skooqs.com<br>https://skooqs.com|
+|Nigeria and The United States of America|CTRL Code|Mary Adegbesan|ctrl.code1@gmail.com<br>www.ctrlcode.org|
 |Pakistan|DIGIT|Majid Hussain|majid.hussain@digit.com.pk<br>https://digit.com.pk/|
 |Peru|Code en mi Cole|Renzo Sousa|http://codenmicole.com|
 |Peru|Instituto San Agustín - ISAT|Mariano Rojas Erazo|mrojas@isat.edu.pe, comunicaciones@isat.edu.pe<br>https://isat.edu.pe|
@@ -73,7 +77,6 @@
 |Portugal|Gabinete de Modernização das Tecnologias Educativas|Rodolfo Pinto|http://www02.madeira-edu.pt/dre/main.aspx|
 |Romania|ADFABER|Alin Chiriac|alin@adfaber.org<br>https://adfaber.org|
 |Rwanda|Creativity Lab|Ildephonse Mungwarakarama|ildephonse@creativity.rw<br>https://creativity.rw|
-|Singapore|Infocomm Media Development Authority of Singapore||https://www.imda.gov.sg|
 |Slovakia|Accenture|Soňa Dunčková|sona.dunckova@accenture.com|
 |Slovakia|Informatika 2.0||servus@informatika20.sk<br>www.informatika20.sk|
 |South Africa|Code for Change|Sibusiso Khoza|sibusiso@codejika.com<br>https://codeforchange.org.za/|
@@ -87,14 +90,13 @@
 |Sri Lanka|Shilpa Sayura Foundation|Niranjan Meegammana|niranjan.meegammana@gmail.com<br>http://shilpasayura.org|
 |Sri Lanka|Spectrum Institute of Science & Technology|Dinu Ravindra|dinu@spectrumcampus.edu.lk<br>https://www.spectrumcampus.edu.lk/|
 |Sri Lanka|STEMUP Educational Foundation|Prabhath Mannapperuma|prabhath@stemup.foundation<br>http://stemup.lk|
-|Taiwan|Junyi Academy|Ray Lu|support@junyiacademy.org<br>https://www.junyiacademy.org|
 |Tanzania|Jenga Hub||info@jengahub.com<br>http://jengahub.com|
 |Thailand|Aksorn Education PLC|Sasithorn Eve|sasithornr@aksorn.com<br>www.aksorn.com|
 |Thailand|Digital Economy Promotion Agency (DEPA)||https://www.depa.or.th/|
-|Thailand|Spark Education|Apinya Hiranyawech|apinya@spark-education.co<br>www.spark-education.co|
+|Thailand|Spark Education|Apinya Hiranyawech|apinya@spark-education.co<br>https://spark-education.co/|
 |Turkey|RobinCode|Gözde Erbaz|gozde@robincode.org<br>http://www.robincode.org|
 |UK|Computing At School (CAS)|Abi Edwards|compatsch@bcs.uk<br>http://www.computingatschool.org.uk|
-|United Kingdom|Apps for Good|Ross Dempster Johnson|education@appsforgood.org<br>www.appsforgood.org|
+|United Kingdom|Apps for Good|Ross Dempster Johnson|education@appsforgood.org<br>https://www.appsforgood.org/|
 |United States|Code.X||contact@codedotx.org<br>https://www.codedotx.org/|
 |Uruguay|Elemental|Magela Fuzatti|info@elemental.edu.uy<br>https://www.elemental.edu.uy/|
 |Uruguay|UNESCO|Zelmira May|z.may@unesco.org<br>https://es.unesco.org/fieldoffice/montevideo|

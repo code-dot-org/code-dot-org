@@ -352,48 +352,29 @@ class LevelsHelperTest < ActionView::TestCase
     refute_equal channel, get_channel_for(level, script.id)
   end
 
-  test 'use_google_blockly is false if not set' do
-    Experiment.stubs(:enabled?).returns(false)
-    @level = build :level
-    refute use_google_blockly
-    Experiment.unstub(:enabled?)
-    reset_view_options
-  end
-
-  test 'use_google_blockly is true if Experiment is enabled for google_blockly' do
-    Experiment.stubs(:enabled?).returns(true)
+  test 'use_google_blockly is true if not set' do
     @level = build :level
     assert use_google_blockly
-    Experiment.unstub(:enabled?)
   end
 
   test 'use_google_blockly is true if blocklyVersion is set to Google in view_options' do
-    Experiment.stubs(:enabled?).returns(false)
     view_options(blocklyVersion: 'google')
     @level = build :level
     assert use_google_blockly
-    Experiment.unstub(:enabled?)
     reset_view_options
   end
 
-  test 'use_google_blockly is false if blocklyVersion is set to Cdo in view_options even if level uses google_blockly' do
-    Experiment.stubs(:enabled?).returns(false)
+  test 'use_google_blockly is false if blocklyVersion is set to Cdo in view_options' do
     view_options(blocklyVersion: 'cdo')
     @level = build :level
-    @level.stubs(:uses_google_blockly?).returns(true)
     refute use_google_blockly
-    Experiment.unstub(:enabled?)
     reset_view_options
   end
 
-  test 'use_google_blockly is true if level uses google_blockly and blocklyVersion is not set to cdo' do
-    Experiment.stubs(:enabled?).returns(false)
+  test 'use_google_blockly is true if blocklyVersion is not set to cdo in view_options' do
     view_options(blocklyVersion: nil)
     @level = build :level
-    @level.stubs(:uses_google_blockly?).returns(true)
     assert use_google_blockly
-    @level.unstub(:uses_google_blockly?)
-    Experiment.unstub(:enabled?)
     reset_view_options
   end
 
@@ -754,38 +735,38 @@ class LevelsHelperTest < ActionView::TestCase
     lesson = unit.lessons[0]
     assert_equal 1, lesson.absolute_position
     assert_equal 1, lesson.relative_position
-    assert_equal '/s/test-script/lockable/1/levels/1', build_script_level_path(lesson.script_levels[0], {})
-    assert_equal '/s/test-script/lockable/1/levels/1/page/1', build_script_level_path(lesson.script_levels[0], {puzzle_page: '1'})
+    assert_equal '/s/test-script/lockable/1/levels/1', build_script_level_path(lesson.script_levels[0])
+    assert_equal '/s/test-script/lockable/1/levels/1/page/1', build_script_level_path(lesson.script_levels[0], puzzle_page: '1')
 
     lesson = unit.lessons[1]
     assert_equal 2, lesson.absolute_position
     assert_equal 1, lesson.relative_position
-    assert_equal '/s/test-script/lessons/1/levels/1', build_script_level_path(lesson.script_levels[0], {})
-    assert_equal '/s/test-script/lessons/1/levels/1/page/1', build_script_level_path(lesson.script_levels[0], {puzzle_page: '1'})
+    assert_equal '/s/test-script/lessons/1/levels/1', build_script_level_path(lesson.script_levels[0])
+    assert_equal '/s/test-script/lessons/1/levels/1/page/1', build_script_level_path(lesson.script_levels[0], puzzle_page: '1')
 
     lesson = unit.lessons[2]
     assert_equal 3, lesson.absolute_position
     assert_equal 2, lesson.relative_position
-    assert_equal '/s/test-script/lockable/2/levels/1', build_script_level_path(lesson.script_levels[0], {})
-    assert_equal '/s/test-script/lockable/2/levels/1/page/1', build_script_level_path(lesson.script_levels[0], {puzzle_page: '1'})
+    assert_equal '/s/test-script/lockable/2/levels/1', build_script_level_path(lesson.script_levels[0])
+    assert_equal '/s/test-script/lockable/2/levels/1/page/1', build_script_level_path(lesson.script_levels[0], puzzle_page: '1')
 
     lesson = unit.lessons[3]
     assert_equal 4, lesson.absolute_position
     assert_equal 3, lesson.relative_position
-    assert_equal '/s/test-script/lockable/3/levels/1', build_script_level_path(lesson.script_levels[0], {})
-    assert_equal '/s/test-script/lockable/3/levels/1/page/1', build_script_level_path(lesson.script_levels[0], {puzzle_page: '1'})
+    assert_equal '/s/test-script/lockable/3/levels/1', build_script_level_path(lesson.script_levels[0])
+    assert_equal '/s/test-script/lockable/3/levels/1/page/1', build_script_level_path(lesson.script_levels[0], puzzle_page: '1')
 
     lesson = unit.lessons[4]
     assert_equal 5, lesson.absolute_position
     assert_equal 2, lesson.relative_position
-    assert_equal '/s/test-script/lessons/2/levels/1', build_script_level_path(lesson.script_levels[0], {})
-    assert_equal '/s/test-script/lessons/2/levels/1/page/1', build_script_level_path(lesson.script_levels[0], {puzzle_page: '1'})
+    assert_equal '/s/test-script/lessons/2/levels/1', build_script_level_path(lesson.script_levels[0])
+    assert_equal '/s/test-script/lessons/2/levels/1/page/1', build_script_level_path(lesson.script_levels[0], puzzle_page: '1')
 
     lesson = unit.lessons[5]
     assert_equal 6, lesson.absolute_position
     assert_equal 3, lesson.relative_position
-    assert_equal '/s/test-script/lessons/3/levels/1', build_script_level_path(lesson.script_levels[0], {})
-    assert_equal '/s/test-script/lessons/3/levels/1/page/1', build_script_level_path(lesson.script_levels[0], {puzzle_page: '1'})
+    assert_equal '/s/test-script/lessons/3/levels/1', build_script_level_path(lesson.script_levels[0])
+    assert_equal '/s/test-script/lessons/3/levels/1/page/1', build_script_level_path(lesson.script_levels[0], puzzle_page: '1')
   end
 
   test 'build_script_level_path uses names for bonus levels to support cross-environment links' do
@@ -794,7 +775,7 @@ class LevelsHelperTest < ActionView::TestCase
     unit.reload
 
     bonus_script_level = unit.lessons.first.script_levels[1]
-    uri = URI(build_script_level_path(bonus_script_level, {}))
+    uri = URI(build_script_level_path(bonus_script_level))
     assert_equal '/s/test-bonus-level-links/lessons/1/extras', uri.path
 
     query_params = CGI.parse(uri.query)
@@ -808,14 +789,14 @@ class LevelsHelperTest < ActionView::TestCase
     unit.reload
 
     sl = unit.script_levels[2]
-    uri = URI(build_script_level_path(sl, {}))
+    uri = URI(build_script_level_path(sl))
     query_params = CGI.parse(uri.query)
     assert_equal '/s/my-cool-script/lessons/1/extras', uri.path
     assert_equal sl.level.name, query_params['level_name'].first
     assert_nil query_params['solution'].first
 
     sl = unit.script_levels[3]
-    uri = URI(build_script_level_path(sl, {solution: true}))
+    uri = URI(build_script_level_path(sl, solution: true))
     query_params = CGI.parse(uri.query)
     assert_equal '/s/my-cool-script/lessons/1/extras', uri.path
     assert_equal sl.level.name, query_params['level_name'].first
@@ -1074,10 +1055,10 @@ class LevelsHelperTest < ActionView::TestCase
       name: "embedded blockly test",
       start_blocks: "<xml><block type='embedded_block' /></xml>"
 
-    #request.env['cdo-locale'] is used to generate the js_locale, but isn't
-    #correctly set up in this test context, so we have to mock it.
+    # `request.locale` is used to generate the js_locale, but isn't
+    # correctly set up in this test context, so we have to mock it.
     mock_request = mock
-    mock_request.stubs(:env).returns({"cdo.locale" => I18n.default_locale})
+    mock_request.stubs(:locale).returns(I18n.default_locale)
     stubs(:request).returns(mock_request)
 
     assert_equal render_multi_or_match_content("embedded blockly test.start_blocks"),

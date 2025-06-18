@@ -3,12 +3,13 @@ require 'test_helper'
 
 class OpenaiChatControllerTest < ActionController::TestCase
   setup do
-    response = Net::HTTPResponse.new(nil, '200', nil)
-    OpenaiChatHelper.stubs(:request_chat_completion).returns(response)
-    OpenaiChatHelper.stubs(:get_chat_completion_response_message).returns({status: 200, json: {}})
-    ShareFiltering.stubs(:find_failure).returns(nil)
+    mock_response = stub(
+      body: {choices: [{message: {content: 'model response'}}]}.to_json,
+      code: 200
+    )
+    OpenaiChatHelper::Client.any_instance.stubs(:request_chat_completion).returns(mock_response)
 
-    @controller = OpenaiChatController.new
+    ShareFiltering.stubs(:find_failure).returns(nil)
   end
 
   # Student without ai tutor access is unable to access the chat completion endpoint

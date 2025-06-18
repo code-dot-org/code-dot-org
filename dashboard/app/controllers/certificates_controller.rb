@@ -20,6 +20,7 @@ class CertificatesController < ApplicationController
     announcement = Announcements.get_announcement_for_page('/certificates')
 
     @image_url = certificate_image_url(data['name'], data['course'], data['donor'])
+    @twitter_image_url = twitter_certificate_image_url(data['name'], data['course'], data['donor'])
     course_name = CurriculumHelper.find_matching_unit_or_unit_group(data['course'])&.localized_title || I18n.t('certificates.one_hour_of_code')
     image_alt = data['name'] ?
       I18n.t('certificates.alt_text_with_name', course_name: course_name, student_name: data['name']) :
@@ -65,7 +66,7 @@ class CertificatesController < ApplicationController
 
     course_title = course_name == 'hourofcode' ? I18n.t('certificate_hour_of_code') : course_version.localized_title
 
-    student_names = request.method == 'POST' ? params[:names] : []
+    student_names = params[:names]&.present? || request.method == 'POST' ? params[:names] : []
 
     @certificate_data = {
       courseName: course_name,

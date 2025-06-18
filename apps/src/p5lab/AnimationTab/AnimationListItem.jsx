@@ -60,6 +60,7 @@ class AnimationListItem extends React.Component {
       frameDelay: frameDelay,
       name: name,
       isNameValid: true,
+      isFocused: false,
     };
   }
 
@@ -86,6 +87,14 @@ class AnimationListItem extends React.Component {
       );
     }, 200);
   }
+
+  onFocus = () => {
+    this.setState({isFocused: true});
+  };
+
+  onBlur = () => {
+    this.setState({isFocused: false});
+  };
 
   onSelect = () => {
     if (this.props.interfaceMode === P5LabInterfaceMode.BACKGROUND) {
@@ -184,14 +193,17 @@ class AnimationListItem extends React.Component {
   };
 
   render() {
-    const {allAnimationsSingleFrame, isSelected, isSpriteLab, labType, style} =
+    const {allAnimationsSingleFrame, isSpriteLab, labType, style, isSelected} =
       this.props;
+
     const animationProps = Object.assign(
       {},
       this.getAnimationProps(this.props),
       {frameDelay: this.state.frameDelay}
     );
-    const name = this.state.name;
+
+    const {name, isFocused} = this.state;
+
     let animationName;
     if (isSelected) {
       let invalidNameStyle = this.state.isNameValid
@@ -217,12 +229,19 @@ class AnimationListItem extends React.Component {
     const arrowStyle = isSelected ? styles.rightArrow : {};
 
     return (
-      <button style={tileStyle} onClick={this.onSelect} type="button">
+      <button
+        style={tileStyle}
+        onClick={this.onSelect}
+        onFocus={this.onFocus}
+        onBlur={this.onBlur}
+        type="button"
+      >
         <div style={arrowStyle} />
         <ListItemThumbnail
           ref="thumbnail"
           animationProps={animationProps}
           isSelected={isSelected}
+          isFocused={isFocused}
           singleFrameAnimation={allAnimationsSingleFrame}
         />
         {!isSpriteLab && animationName}

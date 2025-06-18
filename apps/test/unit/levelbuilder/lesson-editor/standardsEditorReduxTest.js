@@ -1,4 +1,4 @@
-import _ from 'lodash'; // eslint-disable-line no-restricted-imports
+import _ from 'lodash';
 
 import createStandardsEditor, {
   addStandard,

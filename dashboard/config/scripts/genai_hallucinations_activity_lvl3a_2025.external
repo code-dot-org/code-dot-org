@@ -1,0 +1,11 @@
+name 'genai-hallucinations-activity-lvl3a_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI Auditors
+
+## Scenario 2
+
+#### Your school is designing a chatbot to help students sign up for classes each year. Students can chat with the chatbot about their interests and future career plans, and the chatbot will recommend different core classes or electives to take. The school wants to make sure the chatbot provides information that keeps students on-track for graduation, and doesn’t implicitly steer students away from certain courses.
+MARKDOWN

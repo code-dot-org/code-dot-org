@@ -31,29 +31,32 @@ class Pd::WorkshopEnrollmentController < ApplicationController
         }.to_json
       }
     elsif !current_user
-      @script_data = {
-        props: {
-          new_account_url: "#{new_user_registration_url}?user_return_to=#{request.fullpath}",
-          existing_account_url: "/users/sign_in?user_return_to=#{request.fullpath}"
-        }.to_json
-      }
-      render :logged_out
+      source_page = ERB::Util.url_encode('workshop enroll')
+      return_to = ERB::Util.url_encode("/pd/workshops/#{@workshop.id}/enroll")
+
+      redirect_to "/logged_out?source_page=#{source_page}&return_to=#{return_to}"
     elsif current_user.user_type == 'student'
-      render :students_cannot_enroll
+      source_page = ERB::Util.url_encode('workshop enroll')
+      return_to = ERB::Util.url_encode("/pd/workshops/#{@workshop.id}/enroll")
+
+      redirect_to "/teacher_account_required?source_page=#{source_page}&return_to=#{return_to}"
     elsif missing_application?
       render :missing_application
     elsif current_user.teacher? && current_user.email.blank?
       render '/pd/application/teacher_application/no_teacher_email'
+    elsif @workshop.enrollments.any? {|enrollment| enrollment.user_id == current_user.id}
+      @user_email = current_user.email
+      render :already_enrolled
     else
       @enrollment = ::Pd::Enrollment.new workshop: @workshop
       @enrollment.full_name = current_user.name
-      @enrollment.email = current_user.email_for_enrollments
-      @enrollment.email_confirmation = current_user.email_for_enrollments
+      @enrollment.email = current_user.email
 
       session_dates = @workshop.sessions.map(&:formatted_date_with_start_and_end_times)
+      session_info_for_calendar = @workshop.sessions.map(&:session_info_for_calendar)
 
       facilitators = @workshop.facilitators.map do |facilitator|
-        # TODO: Come up with more permanent solution that doesn't require cross-project file dependency.
+        # TODO [CMS-65]: Come up with more permanent solution that doesn't require cross-project file dependency.
         bio_file = pegasus_dir("sites.v3/code.org/views/workshop_affiliates/#{facilitator.id}_bio.md")
         image_file = pegasus_dir("sites.v3/code.org/public/images/affiliate-images/#{facilitator.id}.jpg")
 
@@ -87,15 +90,20 @@ class Pd::WorkshopEnrollmentController < ApplicationController
               course_url: @workshop.course_url,
               fee: @workshop.fee,
               properties: nil,
-              virtual: @workshop.virtual
+              location_name: @workshop.location_name,
+              virtual: @workshop.virtual?,
+              format: @workshop.format,
+              course_offerings: @workshop.course_offerings
             }
           ),
           session_dates: session_dates,
+          session_info_for_calendar: session_info_for_calendar,
           enrollment: @enrollment,
           facilitators: facilitators,
           workshop_enrollment_status: "unsubmitted",
           previous_courses: Pd::TeacherApplicationConstants::SUBJECTS_TAUGHT_IN_PAST,
-          collect_demographics: collect_demographics
+          collect_demographics: collect_demographics,
+          school_info: Queries::SchoolInfo.current_school(current_user)
         }.to_json
       }
     end
@@ -185,11 +193,20 @@ class Pd::WorkshopEnrollmentController < ApplicationController
   # Gets the workshop enrollment associated with the current user id or email used for
   # enrollments if one exists. Otherwise returns a new enrollment for that user.
   private def get_workshop_user_enrollment
-    @workshop.enrollments.where(user_id: current_user.id).or(@workshop.enrollments.where(email: current_user.email_for_enrollments)).first || Pd::Enrollment.new(
+    enrollment_by_user_id = @workshop.enrollments.where(user_id: current_user.id).first
+    return enrollment_by_user_id if enrollment_by_user_id.present?
+
+    enrollment_by_email = @workshop.enrollments.where(email: current_user.email).first
+    return enrollment_by_email if enrollment_by_email.present?
+
+    enrollment_by_alternate_email = @workshop.enrollments.where(email: current_user.alternate_email).first
+    return enrollment_by_alternate_email if enrollment_by_alternate_email.present?
+
+    Pd::Enrollment.new(
       pd_workshop_id: @workshop.id,
       user_id: current_user.id,
       full_name: current_user.name,
-      email: current_user.email_for_enrollments
+      email: current_user.email
     )
   end
 

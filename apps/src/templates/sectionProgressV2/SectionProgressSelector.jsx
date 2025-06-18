@@ -1,3 +1,4 @@
+import Link from '@code-dot-org/component-library/link';
 import classNames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -5,12 +6,12 @@ import React, {useCallback, useEffect, useState} from 'react';
 import {connect} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import Link from '@cdo/apps/componentLibrary/link';
 import DCDO from '@cdo/apps/dcdo';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {setShowProgressTableV2} from '@cdo/apps/templates/currentUserRedux';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
@@ -113,7 +114,7 @@ function SectionProgressSelector({
       ? showProgressTableV2
       : DCDO.get('progress-table-v2-default-v2', false));
 
-  const toggleV1OrV2Link = () => (
+  const ProgressV1OrV2ToggleLink = () => (
     <div className={styles.toggleViews}>
       <Link
         type="primary"
@@ -153,8 +154,10 @@ function SectionProgressSelector({
       {displayV2 && (
         <ProgressBanners hasJustSwitchedToV2={hasJustToggledViews} />
       )}
-      {toggleV1OrV2Link()}
-
+      <GlobalEditionWrapper
+        component={ProgressV1OrV2ToggleLink}
+        componentId="ProgressV1OrV2ToggleLink"
+      />
       {displayV2 ? (
         <SectionProgressV2 hideTopHeading={!isInV1Navigaton} />
       ) : (

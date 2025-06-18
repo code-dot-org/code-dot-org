@@ -3,62 +3,85 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Introduction
+# Voices from the Classroom
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
-
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">Data science is revolutionizing how we live and work. Understanding its principles and impacts is essential. <b>Code.org's Data Science Course </b> covers into key concepts, explores real-world applications, and highlights the importance of data ethics.
-</p></div>
+#### Data science is revolutionizing how we live and work. Understanding its principles and impacts is essential. **Code.org's Insights from Data and AI** covers into key concepts, explores real-world applications, and highlights the importance of data ethics.
 
 
-
-##
+#### See what educators are saying about teaching the Insights from Data and AI unit. 
 
 <hr style="clear:both">
 
-<img src="https://images.code.org/afffe2a6888d8098395f88716b2b7a4b-image-1724090541798.png" style="float: left; height: 175px; clear: both; margin: 0 20px 20px 0;">
-
-<div style="background-color: #dccbea; border-radius: 40px 40px 5px 40px; color: #000000; width: 80%; margin-left: 10%; padding: 0.5px 10px 1px 10px;">
-
-
-<p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 30px;">Using a word wall for all the new concepts in the Data Science course is a brilliant idea! It keeps students engaged and helps them quickly grasp and remember complex ideas.
-</p>
-<p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
-<p style="text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px">
-</p>
+<!-- Flexbox Section 1 -->
+<div style="display: flex; align-items: center; gap: 5px; width: 80%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+   
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #b2dee3; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+      The detailed lesson plans and slides are fantastic. They take the stress out of teaching new concepts, making the whole process seamless and enjoyable.
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
 </div>
 
-  <div style="clear: both;"></div>
-
-
-<img src="https://images.code.org/34f93a1bb0c37cd5f58bcd45bac326d1-image-1724091632850.png" style="float: right; height: 175px; clear: both; margin: 0 20px 20px 0;">
-
-<div style="background-color: #ffd199; border-radius: 40px 40px 5px 40px; color: #000000; width: 80%; margin-left: 10%; padding: 0.5px 10px 1px 10px;">
-
-
-<p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
-<p style="line-height: 1.5; margin-left: 30px; margin-right: 10px;">Connecting data science to Netflix, social media feeds, and online shopping really clicked with my students. They loved seeing how data impacts their daily lives!
-</p>
-<p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
-<p style="text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px">
-</p>
+<!-- Flexbox Section 2 -->
+<div style="display: flex; align-items: center; gap: 5px; flex-direction: row-reverse; width: 80%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+   
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #ffd199; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+      Connecting data science to Netflix, social media feeds, and online shopping really clicked with my students. They loved seeing how data impacts their daily lives!
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
 </div>
 
-  <div style="clear: both;"></div>
-  
-<img src="https://images.code.org/975f5c4d0697ea6ac583777803008a86-image-1724092021325.png" style="float: left; height: 175px; clear: both; margin: 0 20px 20px 0;">
+<!-- Flexbox Section 3 -->
+<div style="display: flex; align-items: center; gap: 5px; width: 80%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
 
-<div style="background-color: #f6a6a6; border-radius: 40px 40px 5px 40px; color: #000000; width: 80%; margin-left: 10%; padding: 0.5px 10px 1px 10px;">
-
-
-<p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 30px;">The detailed lesson plans and slides are fantastic. They take the stress out of teaching new concepts, making the whole process seamless and enjoyable.
-</p>
-<p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
-<p style="text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px">
-</p>
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #f6a6a6; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+      With so many new terms, using a word wall for all the new concepts in the Insights from Data and AI course is a brilliant idea! It keeps students engaged and helps them quickly grasp and remember complex ideas.
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
 </div>
+
+---
+
+<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+    
+<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
+<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
+
+<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
+You've finished the first lesson in this professional learning module! <br><br><b>Introduction to Data Science</b> is up next! 
+    </p>
+</div>
+
+
+
+<table width="100%" cellspacing="0" cellpadding="15">
+    <tr>
+        <td style="background-color: #b2dee3; text-align: center;"><b>Lesson One</b><br>Teaching Insights <br>from Data and AI</td>
+        <td style="background-color: #f7f8fa; text-align: center;"><b>Lesson Two</b><br>Introduction to<br> Data Science</td>
+        <td style="background-color: #f7f8fa; text-align: center;"><b>Lesson Three</b><br>Data <br> Visualizations</td>
+          
+</table>
+
 
 
 MARKDOWN

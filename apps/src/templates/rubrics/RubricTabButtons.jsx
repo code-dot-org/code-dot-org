@@ -1,9 +1,9 @@
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import ReactTooltip from 'react-tooltip';
 
-import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
 import {RubricAiEvaluationLimits} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -24,7 +24,6 @@ export default function RubricTabButtons({
   rubric,
   studentName,
   reportingData,
-  updateAiEvalStatusForUser,
 }) {
   const [status, setStatus] = useState(STATUS.INITIAL_LOAD);
 
@@ -94,7 +93,6 @@ export default function RubricTabButtons({
               status={status}
               setStatus={setStatus}
               reportingData={reportingData}
-              updateAiEvalStatusForUser={updateAiEvalStatusForUser}
             />
             {!!statusText() && (
               <ReactTooltip
@@ -125,5 +123,4 @@ RubricTabButtons.propTypes = {
   rubric: rubricShape.isRequired,
   studentName: PropTypes.string,
   reportingData: reportingDataShape,
-  updateAiEvalStatusForUser: PropTypes.func,
 };

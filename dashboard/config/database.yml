@@ -16,6 +16,7 @@ mysql_defaults: &mysql_defaults
   encoding: utf8mb4
   collation: utf8mb4_unicode_ci
   default_group: 'cdo'
+  database_timezone: :utc
 
   # ActiveRecord connection-pool settings:
   # See: https://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/ConnectionPool.html
@@ -65,6 +66,18 @@ environment_defaults: &environment_defaults
     port: <%= reader.port || 3306 %>
     username: <%= reader.user %>
   <% end %>
+  # Always provision a reporting replica database connection pool, even in environments that do not have an Aurora
+  # cluster with a "reporting" RDS Proxy, such as local development environments and continuous integration
+  # builds. In those non-AWS environments, CDO.db_endpoint_proxy_reporting is set to the same servername as the writer
+  # (typically 'localhost').
+  primary_reporting:
+    replica: true
+    <<: *mysql_defaults
+    host: <%= CDO.db_endpoint_proxy_reporting %>
+    port: <%= CDO.db_endpoint_proxy_reporting_port %>
+    username: <%= CDO.db_credential_reader['username'] %>
+    password: <%= CDO.db_credential_reader['password'] %>
+    database: <%= CDO.dashboard_db_name %>
 
 development:
   <<: *environment_defaults

@@ -1,0 +1,9 @@
+name 'ea-fac-csaif-pl_choice-objects-L15_Python'
+display_name 'Practice with Moving'
+description '#### Here is another example of a choice level. **Choose one** of the options below to practice moving the painter object with methods!'
+
+sublevels
+level '4test-intro-to-programming-lesson6-level4'
+level '4test-intro-to-programming-lesson6-level6'
+
+

@@ -4,14 +4,8 @@ import reducer, * as shareDialog from '@cdo/apps/code-studio/components/shareDia
 describe('Share dialog redux module', () => {
   let originalState = {
     isOpen: false,
-    isUnpublishPending: false,
-    didUnpublish: false,
     libraryDialogIsOpen: false,
   };
-
-  const UNPUBLISH_REQUEST = 'shareDialog/UNPUBLISH_REQUEST';
-  const UNPUBLISH_SUCCESS = 'shareDialog/UNPUBLISH_SUCCESS';
-  const UNPUBLISH_FAILURE = 'shareDialog/UNPUBLISH_FAILURE';
 
   it('has expected default state', () => {
     expect(reducer(undefined, {})).toEqual(originalState);
@@ -32,8 +26,6 @@ describe('Share dialog redux module', () => {
     expect(
       reducer(
         {
-          isUnpublishPending: true,
-          didUnpublish: true,
           libraryDialogIsOpen: true,
         },
         shareDialog.showShareDialog()
@@ -47,19 +39,6 @@ describe('Share dialog redux module', () => {
     );
   });
 
-  it('hideShareDialog sets unpublish values to false', () => {
-    expect(
-      reducer(
-        {isOpen: true, isUnpublishPending: true, didUnpublish: true},
-        shareDialog.hideShareDialog()
-      )
-    ).toEqual({
-      isOpen: false,
-      isUnpublishPending: false,
-      didUnpublish: false,
-    });
-  });
-
   it('hideShareDialog leaves libraryDialogIsOpen unchanged', () => {
     expect(
       reducer(
@@ -67,50 +46,6 @@ describe('Share dialog redux module', () => {
         shareDialog.hideShareDialog()
       ).libraryDialogIsOpen
     ).toBe(true);
-  });
-
-  it('unpublish project sets isUnpublishPending to true', () => {
-    expect(
-      reducer(undefined, {type: UNPUBLISH_REQUEST}).isUnpublishPending
-    ).toBe(true);
-  });
-
-  it('unpublish project only changes isUnpublishPending', () => {
-    let state = {isOpen: true, libraryDialogIsOpen: true};
-    expect(reducer(state, {type: UNPUBLISH_REQUEST})).toEqual({
-      ...state,
-      isUnpublishPending: true,
-    });
-  });
-
-  it('unpublish success changes publish values to original state', () => {
-    let result = reducer(
-      {isOpen: true, isUnpublishPending: true, didUnpublish: false},
-      {type: UNPUBLISH_SUCCESS}
-    );
-    expect(result.isOpen).toBe(false);
-    expect(result.isUnpublishPending).toBe(false);
-    expect(result.didUnpublish).toBe(true);
-  });
-
-  it('unpublish success leaves libraryDialogIsOpen unchanged', () => {
-    expect(
-      reducer({libraryDialogIsOpen: true}, {type: UNPUBLISH_SUCCESS})
-        .libraryDialogIsOpen
-    ).toBe(true);
-  });
-
-  it('unpublish fail changes only isUnpublishPending', () => {
-    let state = {
-      isOpen: true,
-      isUnpublishPending: true,
-      didUnpublish: true,
-      libraryDialogIsOpen: true,
-    };
-    expect(reducer(state, {type: UNPUBLISH_FAILURE})).toEqual({
-      ...state,
-      ...{isUnpublishPending: false},
-    });
   });
 
   it('saveReplayLog sets the changes only the replay log', () => {

@@ -30,7 +30,7 @@ module Services
     end
 
     def self.create_lti_user_identity(user)
-      auth_option = user.authentication_options.find(&:lti?)
+      auth_option = user.authentication_options.order(created_at: :desc).find_by(credential_type: AuthenticationOption::LTI_V1)
       issuer, client_id, subject = auth_option.authentication_id.split('|')
       lti_integration = Queries::Lti.get_lti_integration(issuer, client_id)
       LtiUserIdentity.create!(user: user, subject: subject, lti_integration: lti_integration)
@@ -83,11 +83,16 @@ module Services
     end
 
     def self.lti_user_type(current_user, lti_integration, nrps_section)
-      lti_user_id = Queries::Lti.lti_user_id(current_user, lti_integration)
-      member_roles = lti_user_roles(nrps_section, lti_user_id)
+      lti_user_ids = Queries::Lti.lti_user_ids(current_user, lti_integration)
 
-      if Policies::Lti.lti_teacher?(member_roles)
-        return ::User::TYPE_TEACHER
+      return ::User::TYPE_STUDENT unless lti_user_ids
+
+      # Check if any of the user's LTI IDs have teacher roles
+      lti_user_ids.each do |lti_user_id|
+        member_roles = lti_user_roles(nrps_section, lti_user_id)
+        if Policies::Lti.lti_teacher?(member_roles)
+          return ::User::TYPE_TEACHER
+        end
       end
 
       return ::User::TYPE_STUDENT

@@ -22,8 +22,8 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializer < ActiveModel::Serializer
   def attributes(requested_attrs = nil, reload = false)
     super(requested_attrs, reload).tap do |data|
       object.workshop.sessions.each_with_index do |session, i|
-        data["session_#{i + 1}_date".to_sym] = session.formatted_date
-        data["session_#{i + 1}_attendance".to_sym] = session.attendances.exists?(pd_enrollment_id: object.id)
+        data[:"session_#{i + 1}_date"] = session.formatted_date
+        data[:"session_#{i + 1}_attendance"] = session.attendances.exists?(pd_enrollment_id: object.id)
       end
     end
   end

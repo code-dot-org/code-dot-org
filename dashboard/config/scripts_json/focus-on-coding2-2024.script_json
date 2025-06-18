@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -13,12 +14,11 @@
       "show_calendar": true,
       "student_detail_progress_view": true,
       "tts": true,
-      "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-11 19:38:26 UTC",
+    "serialized_at": "2025-04-29 20:27:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -12186,7 +12186,7 @@
     },
     {
       "name": "Web Design for Users (A)",
-      "url": "https://docs.google.com/document/d/1dZxd7DuruNKhqjp9nxAzr0RSICJFyb3sc-B6bgY2bIs/view",
+      "url": "https://docs.google.com/document/d/1NYVEB_fULN0TwhKRyIBP7j2e-EZreodBpBhURM9aT8Y/view",
       "key": "web_design_for_users_a_",
       "properties": {
         "audience": "Student",

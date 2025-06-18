@@ -1,13 +1,13 @@
+import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
+import {Button} from '@code-dot-org/component-library/button';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import Link from '@code-dot-org/component-library/link';
+import TextField from '@code-dot-org/component-library/textField';
+import {Heading2} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
-import React, {useMemo, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
 import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
-import Alert, {alertTypes} from '@cdo/apps/componentLibrary/alert/Alert';
-import {Button} from '@cdo/apps/componentLibrary/button';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import Link from '@cdo/apps/componentLibrary/link/Link';
-import TextField from '@cdo/apps/componentLibrary/textField/TextField';
-import {Heading2} from '@cdo/apps/componentLibrary/typography';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
@@ -17,6 +17,8 @@ import {AccountInformationProps} from './types';
 
 import styles from './style.module.scss';
 import commonStyles from '../common/common.styles.module.scss';
+
+export const ACCOUNT_UPDATE_SUCCESS = 'account-update-success';
 
 export const AccountInformation: React.FC<AccountInformationProps> = ({
   verifiedTeacher,
@@ -88,6 +90,15 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
     [studentInLockoutFlow]
   );
 
+  useEffect(() => {
+    const accountUpdateSuccess =
+      sessionStorage.getItem(ACCOUNT_UPDATE_SUCCESS) === String(true);
+    if (accountUpdateSuccess) {
+      setShowAccountUpdateSuccess(true);
+      sessionStorage.removeItem(ACCOUNT_UPDATE_SUCCESS);
+    }
+  }, []);
+
   const handleSubmitAccountSettingsUpdate = async () => {
     resetMessages();
     setErrors({});
@@ -116,9 +127,26 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
 
     if (response.ok) {
       setShowAccountUpdateSuccess(true);
+      handleReload();
     } else {
       const validationErrors = await response.json();
       setErrors(validationErrors);
+    }
+  };
+
+  /**
+   * Page must be reloaded if student updates their age or state.
+   * These values affect whether or not the student is locked out,
+   * which is passed down to the account settings page components
+   * through script data.
+   */
+  const handleReload = () => {
+    if (
+      isStudent &&
+      (age !== userAge || usState !== userProperties?.us_state)
+    ) {
+      sessionStorage.setItem(ACCOUNT_UPDATE_SUCCESS, String(true));
+      window.location.reload();
     }
   };
 

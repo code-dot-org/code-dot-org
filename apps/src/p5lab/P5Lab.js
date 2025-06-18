@@ -1067,6 +1067,11 @@ export default class P5Lab {
 
       if (this.isBlockly) {
         this.library = this.createLibrary({p5: this.p5Wrapper.p5});
+        // Add each command name to the Blockly generator's reserved word list.
+        // This prevents students from overriding commands with their functions.
+        Object.keys(this.library.commands).forEach(commandName => {
+          Blockly.JavaScript.nameDB_.reservedWords.add(commandName);
+        });
 
         const libraryCommands = this.library.commands;
         for (const command in libraryCommands) {

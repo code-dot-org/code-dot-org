@@ -1,0 +1,27 @@
+name 'self-paced-equity-U2L1-closing'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Great Job! 🎉
+
+<img src="https://images.code.org/1f7a70e1bdd222cd717b1c81a75ecee7-image-1736058900739.34.58 PM.png" alt="A student with a gleeful look on their face beams at the camera with a wide grin." style="border-radius:20px; float: right; padding-right: 10px; height: 200px; clear: both; margin: 20px 20px 20px 20px;">
+
+#### So far, you have:
+
+* #### Used a common definition of inclusion and accessibility.
+* #### Recognized that all students can and should learn CS.
+* #### Described the influence you have over culture and student success in a CS classroom
+
+## Up Next
+
+#### In the next section of this professional learning module, you will:
+
+* #### Use a shared definition of unconscious bias and stereotype threat.
+* #### Identify and address your own implicit biases and assumptions about students. 
+* #### Describe the impact of bias and stereotypes on student learning and engagement.
+
+<br>
+
+#### Click continue to keep going!
+MARKDOWN

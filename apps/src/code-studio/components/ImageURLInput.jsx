@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import {ABSOLUTE_REGEXP} from '@cdo/apps/assetManagement/assetPrefix';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import InputPrompt from '@cdo/apps/templates/InputPrompt';
 import i18n from '@cdo/locale';
 
@@ -17,6 +19,11 @@ export default class ImageURLInput extends React.Component {
   handleSubmitWrapper = url => {
     if (ABSOLUTE_REGEXP.test(url)) {
       this.props.assetChosen(url, moment());
+      analyticsReporter.sendEvent(
+        EVENTS.SUBMIT_IMAGE_URL,
+        {LabType: 'applab'},
+        PLATFORMS.STATSIG
+      );
     } else {
       this.setState({showError: true});
     }

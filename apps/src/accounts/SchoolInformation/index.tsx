@@ -1,8 +1,8 @@
+import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
+import {Button} from '@code-dot-org/component-library/button';
+import {Heading2} from '@code-dot-org/component-library/typography';
 import React, {useEffect, useMemo, useState} from 'react';
 
-import Alert, {alertTypes} from '@cdo/apps/componentLibrary/alert/Alert';
-import {Button} from '@cdo/apps/componentLibrary/button';
-import {Heading2} from '@cdo/apps/componentLibrary/typography';
 import {useSchoolInfo} from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
 import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
 import {updateSchoolInfo} from '@cdo/apps/schoolInfo/utils/updateSchoolInfo';
@@ -14,7 +14,7 @@ import commonStyles from '../common/common.styles.module.scss';
 interface SchoolInfo {
   country: string;
   school_name: string;
-  zip: string;
+  school_zip: string;
   school_id: string;
   school_type: string;
 }
@@ -35,7 +35,7 @@ export const SchoolInformation: React.FC<SchoolInformationProps> = ({
     schoolId: schoolInfo?.school_id,
     schoolName: schoolInfo?.school_name,
     country: schoolInfo?.country,
-    schoolZip: schoolInfo?.zip,
+    schoolZip: schoolInfo?.school_zip,
     schoolType: schoolInfo?.school_type,
   });
 

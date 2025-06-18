@@ -493,7 +493,7 @@ export default class FormController extends React.Component {
         style={styles.pageButtons}
         items={this.getPageComponents().length}
         activePage={this.state.currentPage + 1}
-        onSelect={i => this.setPage(i - 1)} // eslint-disable-line react/jsx-no-bind
+        onSelect={i => this.setPage(i - 1)}
       />
     );
 

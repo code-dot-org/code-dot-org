@@ -128,16 +128,6 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
     }
   }, [hideChaff, dialogControl, analyticsReporter, clearCode]);
 
-  const onFeedbackClicked = () => {
-    if (analyticsReporter) {
-      analyticsReporter.onButtonClicked('feedback');
-    }
-    window.open(
-      'https://docs.google.com/forms/d/e/1FAIpQLScnUgehPPNjhSNIcCpRMcHFgtE72TlfTOh6GkER6aJ-FtIwTQ/viewform?usp=sf_link',
-      '_blank'
-    );
-  };
-
   const onClickSkip = useCallback(() => {
     if (dialogControl) {
       dialogControl.showDialog({
@@ -153,24 +143,25 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
 
   return (
     <div className={moduleStyles.container}>
-      {!readOnlyWorkspace && (
-        <div className={moduleStyles.subContainer}>
-          {!allowPackSelection && packFolder && (
-            <button
-              type="button"
-              className={classNames(
-                moduleStyles.button,
-                moduleStyles.buttonWide,
-                moduleStyles.buttonInteractionDisabled
-              )}
-              disabled={true}
-            >
-              <CurrentPack packFolder={packFolder} noRightPadding={true} />
-            </button>
+      {!allowPackSelection && packFolder && (
+        <button
+          type="button"
+          className={classNames(
+            moduleStyles.button,
+            moduleStyles.buttonWide,
+            moduleStyles.buttonInteractionDisabled
           )}
+          disabled={true}
+        >
+          <CurrentPack packFolder={packFolder} noRightPadding={true} />
+        </button>
+      )}
+      {!readOnlyWorkspace && (
+        <>
           <button
             onClick={onClickStartOver}
             type="button"
+            id="start-over-button"
             className={classNames(
               moduleStyles.button,
               allowPackSelection && packFolder && moduleStyles.buttonWide
@@ -215,26 +206,29 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
               className={'icon'}
             />
           </button>
-        </div>
+          {Blockly.showBlockHelp && (
+            <button
+              onClick={() => window.open('/docs/ide/music', '_blank')}
+              type="button"
+              id="documentation-button"
+              className={classNames(moduleStyles.button)}
+            >
+              <FontAwesome
+                title={musicI18n.documentation()}
+                icon="book"
+                className={'icon'}
+              />
+            </button>
+          )}
+        </>
       )}
-      <button
-        onClick={onFeedbackClicked}
-        type="button"
-        className={classNames(moduleStyles.button)}
-      >
-        <FontAwesome
-          title={musicI18n.feedback()}
-          icon="commenting"
-          className={'icon'}
-        />
-      </button>
       {skipUrl && (
         <button
           onClick={onClickSkip}
           type="button"
           className={classNames(moduleStyles.button, moduleStyles.buttonSkip)}
         >
-          {commonI18n.skipToProject()}
+          <span>{commonI18n.skipToProject()}</span>
           <FontAwesome
             title={commonI18n.skipToProject()}
             icon="arrow-right"

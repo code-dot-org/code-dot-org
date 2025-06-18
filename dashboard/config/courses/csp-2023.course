@@ -13,6 +13,19 @@
     "csp10-2023",
     "csp-post-survey-2023"
   ],
+  "original_script_names": [
+    "csp1-2023",
+    "csp2-2023",
+    "csp3-2023",
+    "csp4-2023",
+    "csp5-2023",
+    "csp6-2023",
+    "csp7-2023",
+    "csp8-2023",
+    "csp9-2023",
+    "csp10-2023",
+    "csp-post-survey-2023"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

@@ -37,6 +37,11 @@ export default onClickOutside(
                   this.props.onOptionClicked(option);
                   e.preventDefault();
                 }}
+                /* 
+                  Despite not explicitly handling focus events,
+                  this component is already keyboard accessible via the parent component's (Watchers) onKeyDown handler.
+                */
+                /* eslint-disable-next-line jsx-a11y/mouse-events-have-key-events */
                 onMouseOver={() => this.props.onOptionHovered(index)}
                 style={{
                   ...styles.autocompleteOption,

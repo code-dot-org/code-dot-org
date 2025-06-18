@@ -17,7 +17,6 @@ export default function ModalFunctionEditor() {
   const isRtl = useSelector((state: {isRtl: boolean}) => state.isRtl);
   const buttonSize = Button.ButtonSize.narrow;
   // functionEditor.js handles setting the click handlers on these buttons.
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
   const emptyOnClick = () => {};
   const toolbarStyles = classNames(
     'toolbar',

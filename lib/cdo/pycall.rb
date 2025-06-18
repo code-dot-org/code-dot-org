@@ -12,7 +12,7 @@ Dir.chdir(File.expand_path('../../', __dir__)) do
 
   ENV['PYTHON'] = PythonVenv.python_bin_path
   unless File.exist? ENV['PYTHON']
-    raise "Python bin not found at #{ENV['PYTHON']}. Please run `pdm install` again."
+    raise "Python bin not found at #{ENV['PYTHON']}. Please run `uv sync` again."
   end
 
   require 'pycall'

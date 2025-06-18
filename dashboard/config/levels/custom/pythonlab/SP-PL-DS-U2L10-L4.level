@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "> Now, perform multiple aggregations on the dataset using the `agg()` function, summarizing and visualizing total, average, minimum, and maximum sea level anomalies to uncover long-term trends and patterns.\r\n\r\n# Summarize Data\r\n\r\n::: details [**✅ Step 1**]\r\nRun the code and consider:\r\n- *How do the `min` and `max` values establish the range of sea level changes?*\r\n- *Why might this range be important for understanding variability in the dataset?*\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nAdd `sum` and `mean` to the `agg()` function to calculate these additional statistics.\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nThink about:\r\n- *How does combining `sum`, `mean`, `min`, and `max` in one analysis provide a more comprehensive understanding of the data than using any of these values alone?*\r\n:::\r\n",
+    "long_instructions": "> Now, perform multiple aggregations on the dataset using the `agg()` function, summarizing and visualizing total, average, minimum, and maximum sea level anomalies to uncover long-term trends and patterns.\r\n\r\n# Summarize Data\r\n\r\n::: details [**✅ Step 1**]\r\nRun the code and consider:\r\n- *How do the `min` and `max` values establish the range of sea level changes?*\r\n- *Why might this range be important for understanding variability in the dataset?*\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nAdd `sum` and `mean` to the `agg()` function to calculate these additional statistics.\r\n:::\r\n\r\n::: details [**🔎 Show me how**]\r\n![](https://images.code.org/8251ccadb932488b3be86a66223a9067-image-1732648797475.png)\r\n:::\r\n\r\n\r\n::: details [**✅ Step 3**]\r\nThink about:\r\n- *How does combining `sum`, `mean`, `min`, and `max` in one analysis provide a more comprehensive understanding of the data than using any of these values alone?*\r\n:::\r\n\r\n",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -43,6 +43,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-14T15:08:16.746+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L9-L4_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L9-L4_2024-pilot\"},{\"changed_at\":\"2024-10-14 15:51:55 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-14T15:08:16.746+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L9-L4_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L9-L4_2024-pilot\"},{\"changed_at\":\"2024-10-14 15:51:55 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-26 19:20:28 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Pythonlab>

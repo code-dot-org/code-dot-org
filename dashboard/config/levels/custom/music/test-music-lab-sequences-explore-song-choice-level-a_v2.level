@@ -1,0 +1,96 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:56:31.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Benson Boone's \"In the Stars\" \r\n\r\nPutting together songs can involve **pattern recognition** - looking for similarities to help solve a problem. For example, you can use patterns to recreate the chorus to \"In the Stars\" using the provided tracks.\r\n\r\nTo complete this level, your code will need:\r\n- Four <code style=\"background-color: rgb(0, 148, 202); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">play together</code> blocks\r\n- Each block should contain 4 tracks: Two <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-microphone-stand\" style=\"color: #F99258; margin-right: 2px\"></i> Vocal </span> tracks, a <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-boombox\" style=\"color: #58BEF9; margin-right: 2px\"></i> Bass </span> track, and a <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-guitars\" style=\"color: #64D25A; margin-right: 2px\"></i> Lead </span> track.\r\n- Your song should match the example below!\r\n\r\n![](https://images.code.org/2ffd07a262bb59fa1786b7f8b902e5cb-image-1749246622085.png)",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+        "benson_boone_in_the_stars": [
+          "piano_chorus_1",
+          "piano_chorus_2",
+          "piano_chorus_3",
+          "piano_chorus_4",
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_chorus_3",
+          "vocals_chorus_4",
+          "vocals_chorus_backups_1",
+          "vocals_chorus_backups_2",
+          "vocals_chorus_backups_3",
+          "vocals_chorus_backups_4",
+          "bass_chorus_1",
+          "bass_chorus_2",
+          "bass_chorus_3",
+          "bass_chorus_4"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together"
+          ]
+        },
+        "type": "flyout"
+      },
+      "packId": "benson_boone_in_the_stars",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "display_name": "Recreate \"In the Stars\"",
+    "thumbnail_url": "https://images.code.org/436c0cc957896420f040d6c29060cde0-Screenshot 2025-03-07 at 3.07.34 PM.png",
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Uh-oh - your song doesn't match the example!",
+      "playerTitle": "\"In The Stars\" Chorus"
+    },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHorpleEeoerSvfZ2JHZpm1GhsSDwCOxBL+fVO3bL+jSF8nT\nSLLgyZESro/z/SmEg9BVi31eWydz/dme415Re50YBGh/VYpR9lUAJzlEp66o\nVOZ7EsScGj1EyBtB7NaNbl461gDyFerx8ylTDTztBB8wskI4qJ5odvWqljxH\n/GUxAzV2RRag8Z9E72xB41PKdzHpTYuIvOpUlH0mqy71YNcaBbCH+8eix6tb\nAC+/mtS3gzTv39aqQ3nfBZabdrWJpWRN5EO/T1Pf6AY9lCMuMzENf+x8D88L\no3TKgsThbV8C42ukD36CijtVir6rygVuz6jRYyQNQ9jt860su5Dht02iXFSS\nHkmsV5QBXNrSFzW6x2FWCzF6/OjkCbpT/YurTh+hiqJb2VLD2QzmViTqNtk/\nMjBddAUQ3cLBPcoyRpqSTMjh+3k420KH1NoqURrRQVkhv2ysxcvQPwHZkElX\nh5lr556w3HqKAa3XtN5ciN2Qen9qOcDgr2BcL1AQ9Gyc6iIoXpnj9J14OgOW\ntHLRle7eaNJteWM7mR1hRqnq14GS7SinDoicl3PAmZYXsirz0fIJji7qwiWc\nLmtNTodDcLlimckjIVZeEStEe7+vbAcO9ezgaZl3a787NqLQFODg3UT+SihT\naaDoq+rrKvxny4APFoBweJKGrkfIRV0rzYy80cAzVcc0+R9OkaU/qpxWh47g\n/yuFqhuKcY+Jl2Mh2dYD0rgIYR4pTKS9u+MxaiH9ToAMfYBHD6DClzi7wSJX\nPeDV/5/pi+UDrICjciLZHR/IGAu+/2acz7EsVo+SrmpjElzBITPSB2232/ep\nl33n4zQJUtbOFvC3mI7oaQc14Q6CRscay8fvd6n5WAnV4x7ZMvSpGnw7rrrp\nQkgOUD+lTKFRTk0tE8EFcYSkSe0PWXDkxNb8K7/GMJ6MKszvXOoZvK2NdoNZ\ntonC8CYxozodybFLKJZBw65ObYk2G/0cbr+9g47wMP7nsl0XEo16odFIJvPy\nrPkg0mWiEFgXzogujLNHhc0x58Q9+7Lm5/Gk0iqpGveoK7bZD/iBrP72mpi6\n4LDtlr5cWpuiUOb4ltSQxAIC6djrE5v1p1jlgqRV2cPLEww0KfFi+d697ttO\nK2PSGfllaX+Sl94N4W8f3AjZYRvjhCFQGHoeksKIf6D/tplB+Xk0I5uBDgj6\n5/wwIeEJYGaIqgOXejRWNjiPrfhJMBqCZa4utuT9zCRa7Upsu1Mbh59Bfk16\nNf+vXJnFpgqABPUkEBd5wvl9fja3ZWSlJ2DklfPoA3vnGDS4RxTLfXF0m5MC\n7fnEMt+FASkWzn/YVRvYPfMF4xVnjwaLSZWmrvVnU4eyTWEhWGDb948/12Vm\nKfuYp25+sBu1SkmqyVYR4FwJmHpcvWHINLol/dbXvfjHLxNuhHzu6/xPsDJ2\nOGkg9ZWcaUvDynQ6WioZQqaCiw88mHBgzoSmdX2EBbTb+RDre7BK59ZyXsTC\n9moGFT8jG+LIYR58OeKeyp9rJRlLBmRXXvDQSmFM3hXfXZEpSTM0ErCkWrE/\nxlam5o1X9GFLC+HvjNy1td7UdxwdM03dMQbqTG7RqA/aWmSEyxHYq7Zr3QXm\nYh9m888lfhfiCRza/vyhU6wG3UCxKNCmGSNk2U2btSIGJadQyxFU4w8R7oxy\n7dmNp4cQ6qIIebeqEiQo7D4OqJAfQWQ4LWJQus6Bx9NR/L/UO1CIfAYHnk35\nNwU1ilE2eEwIH8voX4884cEy1eS7ZhCcozWA+C1Lad+UVrDXHHenV2T8DsJo\noGD3YU0QjNenLr96F7Mo2E6pDON6yKUSGmlFHb0xag5EqsqvpgEAZbzH5O2V\nqbEIg+kW8r5IXioS+FT2vssUccLQ+PYmfbVO0eFtaeN+EgENpzTd4JgxGv+j\nEMY+l2qf/Qwi3ZsdtOSff7jsF/BHifcx+PXAHu6yfid1A7PJQeB+oQtMB7of\nxcgPZQAljdogfhAwFQfsM2GLa5mfHEd55hWIgJgPDnqSyx3z/ZytnP6kGBrc\ndKdbR7V6ZuXNST0QMjZLioywrbI7M6pHR9q9dgzBzEuUVEtJUfTx1ISjfJwz\nLykml5ABCTrsVoYWCu0OqjCMGHmz5hXU1xX/to+3y0RHTGSlj9YxlXEWIVf3\nTJO2pnSp10bLJHmCUmNC/R1zQfIMPm/NVG6fjGjbzAMFBironcLanCaWaUIR\nU1y1fqZEsqC7/N/RgeqZC28hh4SS5Z4OHLNL2TtXCPRoEbO0mkR8ssrblhmG\nTtcC5OR1z6jaS0BApBtsnLP3dZDrUvX0pQiLOsXlFwD4BPb3DUJGKaHqZSu7\n22Kp5BYR6vUg4UkXF6wopHMJQUAgYX5OplMeECR3cSDQVodK9rA+s7x1MRJK\n4K2qcJUua2iUBBIeF0vgWGajGyuapkLhRDWeSrp9wZgBq6y1Gl49Fz/yEjG9\n8TFqQZ2TCCkLdhPZzDfkxGkD8V6UlKCpp3CW6SA0Vhjjm9gk+a7wbbVtaYHG\n2Za3dNdzdOWF7FzedCButsgQg53Xs4SYa6/y6tRTs3JE8LLtOI0MrV53Mbt+\n9QloIUQ1ZNGqjQV3/JmdmnXyudygoBiGKYSJeBfkTcf/DtSmhzJCqzdxDUv8\n30AIHdQZq+upsBGXcpum2MR4Yfag9PDPIlDDncLdi8gYG2sMhgk6jIepIL0s\nf2hp2OsU9XXOEM61JnRCHwBDSt7sJvo8WiS8QTQEPwVAS+r9jf0rzH0sm0TF\n/HoZJ/7juDMv8gk4JNNWn7AOQqEQTQcWjAUA+R3OAhYallBqi+A9rJXBuyL0\nPZZKSkYGWLBdiaY+LbY1OfqKD2EelVqhhI27wOJC2FdR7Pnv3Ipg//GfiV5C\nss05xyfGr6e69FHj/s7Uqqi21bkIGBKh012QDxHzTsDtNhFoZ4Gy+fM5+mzm\nC9dzXBFSXz+rcYaNC8PFfT8Rpc5RnmAXNS2QMytVyqsZsCDoAaUE/+9VvNz3\nKHr4cAoBQb6vPfC4Ar6HbaV8y4nifYRFGQyMAgWPnQ+GbgKhcX7ru2DCd1Et\n5hHGx2JNDDq0evN8y2N1nNLmpq4CWFdkyo2XiFhY+a0ZQ5Ixoe+KfgGN9Jz2\nXfWbCEoe8m06aYQNWtOC5Z0y+H1nV0yJ80W0bP0ZXONv7lsc3jnPxHKjx3TK\nptzNLoCvDlozCPiKLCfY9RmQXz24aceEdUVit0aTN7xG7HcCp/9f/5iTTjq5\nYltkbi8TCcWZuz5FfdcVo/uAWmnBK7hk0zBTqwfBM52JtiQ3HzMR3uWpWLwe\nkSDBwkxf0ENE2P+Jgo83JwQa5QzN0RawLfm0gwO8yubvLjtvMa/LJpFV1SsM\nHimLeqql933dSsTInIeFlLU1H2duohmFL5btEou6lg1zfjnIZwmoKHQpeGtj\nUQn76NfscqJ0wXYQF91c7+VE6B46eMV6Uul6QXCzD9uIobAa4D2e1qMvkqrW\no76TNmdwdODetFz8g6RFXBsh4GAi48yFk8TueYCB+M4mKHHmI6sYm291SPjZ\n8DkdUwHiCj4QHBxz2NkZ9xge9cdbuNrNdSUugwsWgNwGnL9xAS3e+NH1PePc\nm3i9d5hfNe8PQ7cedkaWuQkptV90oRmxG//jqAq7Ydfdqsejaq2xbfYt2zWr\ndClPtXB4iellDyLKPWsez66QuA==\n",
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-explore-song-choice-level-a_2f7e9fa5-9da6-402f-8ada-78e75bc1e411",
+        "message": "Auto-pass to get to exemplar validation",
+        "next": true,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "bubble_choice_description": "Use **pattern recognition** to recreate the chorus to In The Stars",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:31.515+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-song-choice-level-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-song-choice-level-a\"},{\"changed_at\":\"2025-06-06 21:50:25 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

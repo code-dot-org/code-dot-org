@@ -1,0 +1,8 @@
+name 'gen-ai-customizing-intro-L8_latm'
+display_name 'You Try!'
+description 'Choose at least 2 levels to try'
+
+sublevels
+level 'gen-ai-customizing-intro-L8A_latm'
+level 'gen-ai-customizing-intro-L8B_latm'
+level 'gen-ai-customizing-intro-L8C_latm'

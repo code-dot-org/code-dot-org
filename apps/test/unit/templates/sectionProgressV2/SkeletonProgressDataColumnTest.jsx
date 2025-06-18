@@ -79,10 +79,13 @@ describe('SkeletonProgressDataColumn', () => {
   it('Shows skeleton if fake lesson', () => {
     renderDefault({lesson: {id: 1, isFake: true}});
 
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId(getTestId(1, STUDENT_1.id));
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId(getTestId(1, STUDENT_2.id));
     screen.getByLabelText('Loading lesson');
     expect(
+      // eslint-disable-next-line no-restricted-properties
       screen.getAllByTestId('lesson-skeleton-cell', {exact: false})
     ).toHaveLength(2);
   });
@@ -90,10 +93,13 @@ describe('SkeletonProgressDataColumn', () => {
   it('Shows real header', () => {
     renderDefault();
 
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId(getTestId(LESSON.id, STUDENT_1.id));
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId(getTestId(LESSON.id, STUDENT_2.id));
     expect(screen.queryByLabelText('Loading lesson')).toBeFalsy();
     expect(
+      // eslint-disable-next-line no-restricted-properties
       screen.getAllByTestId('lesson-skeleton-cell', {exact: false})
     ).toHaveLength(2);
   });
@@ -102,11 +108,16 @@ describe('SkeletonProgressDataColumn', () => {
     renderDefault({expandedMetadataStudentIds: [1]});
     store.dispatch(expandMetadataForStudents([STUDENT_1.id]));
 
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId(getTestId(LESSON.id, STUDENT_1.id));
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId(getTestId(LESSON.id, STUDENT_1.id, '-last-updated'));
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId(getTestId(LESSON.id, STUDENT_1.id, '-time-spent'));
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId(getTestId(LESSON.id, STUDENT_2.id));
     expect(
+      // eslint-disable-next-line no-restricted-properties
       screen.getAllByTestId('lesson-skeleton-cell', {exact: false})
     ).toHaveLength(4);
   });

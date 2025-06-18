@@ -1,0 +1,48 @@
+{
+  "entryContent": {
+    "fields": {
+      "internalName": {
+        "en-US": "Self-paced PL Carousel"
+      },
+      "carouselName": {
+        "en-US": "Self-paced PL Carousel"
+      },
+      "carouselType": {
+        "en-US": "Self Paced PL"
+      },
+      "slides": {
+        "en-US": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3Z8qPEuqmMhHtCcsDgunT9"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "23EyWhGd4P97u4WbR4IXk"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "20bNKCaJYcMUpF36ym6ylR"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "4kfldHEBEkW1lZczj6JYRh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "contentType": "carousel"
+}

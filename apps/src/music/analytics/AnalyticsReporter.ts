@@ -32,6 +32,7 @@ const blockFeatureList = [
   'functions',
   BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
   BlockTypes.PLAY_PATTERN_AI_AT_CURRENT_LOCATION_SIMPLE2,
+  BlockTypes.PLAY_TUNE_AT_CURRENT_LOCATION_SIMPLE2,
 ];
 
 const triggerBlocks: string[] = [
@@ -83,19 +84,43 @@ const trackedProjectProperties = [
  * outside of Music Lab, check {@link apps/src/metrics/AnalyticsReporter}.
  */
 export default class AnalyticsReporter {
-  private initialized: boolean;
-  private session: Session | undefined;
+  private static initialized = false;
 
-  constructor() {
-    this.initialized = false;
+  /**
+   * Temporarily available as a public static method so this reporter can be used outside of the
+   * context of Music Lab, specifically for Panels levels in 2024 Hour of Code progression.
+   * TODO: Remove/consolidate reporters after HOC 2024.
+   */
+  public static async initialize() {
+    if (AnalyticsReporter.initialized) {
+      return;
+    }
+
+    const response = await fetch(API_KEY_ENDPOINT);
+    const responseJson = await response.json();
+
+    if (!responseJson.key) {
+      throw new Error('No key for analytics.');
+    }
+
+    AnalyticsReporter.initialized = true;
+    init(responseJson.key);
   }
 
+  private session: Session | undefined;
+  private startInProgress: boolean = false;
+
   async startSession() {
+    // If a session is already in the process of starting, do not start another.
+    if (this.startInProgress) {
+      return;
+    }
+    this.startInProgress = true;
     // Capture start time before making init call
     const startTime = Date.now();
 
     try {
-      await this.initialize();
+      await AnalyticsReporter.initialize();
       this.session = {
         startTime,
         soundsUsed: new Set(),
@@ -125,21 +150,7 @@ export default class AnalyticsReporter {
     }
 
     trackEvent('music', 'music_session_start');
-  }
-
-  private async initialize(): Promise<void> {
-    if (this.initialized) {
-      return;
-    }
-    const response = await fetch(API_KEY_ENDPOINT);
-    const responseJson = await response.json();
-
-    if (!responseJson.key) {
-      throw new Error('No key for analytics.');
-    }
-
-    init(responseJson.key);
-    this.initialized = true;
+    this.startInProgress = false;
   }
 
   isSessionInProgress() {

@@ -1,0 +1,10 @@
+name 'programming-fundamentals-lesson7-level5-aitutor-2024'
+display_name 'Practice with Debugging'
+description 'Choose one of the options below!'
+
+sublevels
+level 'programming-fundamentals-lesson7-level5a-aitutor-2024'
+level 'programming-fundamentals-lesson7-level5b-aitutor-2024'
+level 'programming-fundamentals-lesson7-level5c-aitutor-2024'
+level 'programming-fundamentals-lesson7-level5d-aitutor-2024'
+

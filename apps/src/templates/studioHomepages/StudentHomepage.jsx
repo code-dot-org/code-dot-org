@@ -9,6 +9,7 @@ import Notification, {
   NotificationType,
 } from '@cdo/apps/sharedComponents/Notification';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
@@ -39,6 +40,12 @@ export default class StudentHomepage extends Component {
   componentDidMount() {
     // The component used here is implemented in legacy HAML/CSS rather than React.
     $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
+
+    analyticsReporter.sendEvent(
+      EVENTS.STUDENT_HOMEPAGE_VISITED,
+      {},
+      PLATFORMS.BOTH
+    );
   }
 
   render() {
@@ -82,9 +89,13 @@ export default class StudentHomepage extends Component {
 
           <ProtectedStatefulDiv ref="flashes" />
           {specialAnnouncement && (
-            <MarketingAnnouncementBanner
-              announcement={specialAnnouncement}
-              marginBottom="30px"
+            <GlobalEditionWrapper
+              component={MarketingAnnouncementBanner}
+              componentId="MarketingAnnouncementBanner"
+              props={{
+                announcement: specialAnnouncement,
+                marginBottom: '30px',
+              }}
             />
           )}
           {showVerifiedTeacherWarning && (

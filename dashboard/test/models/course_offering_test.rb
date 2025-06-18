@@ -91,7 +91,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
     end
 
     test "add_course_offering updates existing CourseOffering and CourseVersion for #{content_root_type}" do
-      offering = course_offering_with_versions(1, "with_#{content_root_type}".to_sym)
+      offering = course_offering_with_versions(1, :"with_#{content_root_type}")
       content_root = offering.course_versions.first.content_root
       old_offering_key = offering.key
       old_version_year = offering.course_versions.first.key
@@ -109,7 +109,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
     end
 
     test "add_course_offering updates existing CourseOffering with multiple CourseVersion for #{content_root_type}" do
-      offering = course_offering_with_versions(2, "with_#{content_root_type}".to_sym)
+      offering = course_offering_with_versions(2, :"with_#{content_root_type}")
       content_root = offering.course_versions.first.content_root
       old_offering_key = offering.key
       old_version_year = offering.course_versions.first.key
@@ -127,7 +127,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
     end
 
     test "add_course_version deletes CourseOffering and CourseVersion if is_course is changed to false for #{content_root_type}" do
-      offering = course_offering_with_versions(1, "with_#{content_root_type}".to_sym)
+      offering = course_offering_with_versions(1, :"with_#{content_root_type}")
       content_root = offering.course_versions.first.content_root
       old_offering_key = offering.key
       old_version_year = offering.course_versions.first.key
@@ -144,7 +144,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
     end
 
     test "add_course_version deletes CourseVersion but not CourseOffering if is_course is changed to false for #{content_root_type} but other versions remain" do
-      offering = course_offering_with_versions(2, "with_#{content_root_type}".to_sym)
+      offering = course_offering_with_versions(2, :"with_#{content_root_type}")
       content_root = offering.course_versions.first.content_root
       old_offering_key = offering.key
       old_version_year = offering.course_versions.first.key

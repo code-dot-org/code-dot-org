@@ -14,18 +14,18 @@
           "key": "2315916a-3a9e-4e19-8222-fafdb7b48866"
         }
       ],
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSP",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_migrated": true,
       "project_sharing": true,
       "student_detail_progress_view": true,
-      "use_legacy_lesson_plans": true,
-      "version_year": "2018"
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": "csp1",
-    "serialized_at": "2022-09-28 14:31:27 UTC",
+    "serialized_at": "2025-01-22 18:59:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3067,7 +3067,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_socialBelonging_intervention_2018",
+        "level.key": "csp_socialBelonging_control_2018",
         "script_level.level_keys": [
           "csp_socialBelonging_control_2018",
           "csp_socialBelonging_intervention_2018"
@@ -3080,7 +3080,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_socialBelonging_control_2018",
+        "level.key": "csp_socialBelonging_intervention_2018",
         "script_level.level_keys": [
           "csp_socialBelonging_control_2018",
           "csp_socialBelonging_intervention_2018"
@@ -4091,6 +4091,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

@@ -1,11 +1,12 @@
-import React, {useState, useEffect, useReducer} from 'react';
+import React, {useState, useEffect, useReducer, useMemo} from 'react';
+import {useSelector} from 'react-redux';
 
-import {getStore} from '@cdo/apps/redux';
 import {
   ltiFeedbackReducer,
   fetchLtiFeedback,
   createLtiFeedback,
 } from '@cdo/apps/redux/lti/ltiFeedbackReducer';
+import {RootState} from '@cdo/apps/types/redux';
 import {trySetLocalStorage, tryGetLocalStorage} from '@cdo/apps/utils';
 import {LmsLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
@@ -23,8 +24,11 @@ import FeedbackBanner, {
  * @component
  */
 const LtiFeedbackBanner: React.FC = () => {
-  const currentUser = getStore().getState().currentUser;
-  const key = `lti-fb-${currentUser.uuid}`;
+  const currentUser = useSelector((state: RootState) => state.currentUser);
+  const key = useMemo(
+    () => (currentUser ? `lti-fb-${currentUser.uuid}` : ''),
+    [currentUser]
+  );
 
   /**
    * Reducer for managing the state of the LTI feedback.
@@ -41,22 +45,28 @@ const LtiFeedbackBanner: React.FC = () => {
    * The status is stored in local storage to persist across sessions.
    */
   const [status, setStatus] = useState<string>(() => {
-    if (!currentUser.isLti || !currentUser.isTeacher)
-      return BANNER_STATUS.UNAVAILABLE;
+    return BANNER_STATUS.UNSET;
+  });
+
+  useEffect(() => {
+    if (!currentUser || !currentUser.isLti || !currentUser.isTeacher)
+      setStatus(BANNER_STATUS.UNAVAILABLE);
 
     let status = tryGetLocalStorage(key, BANNER_STATUS.UNSET);
     if (status === BANNER_STATUS.UNAVAILABLE) status = BANNER_STATUS.UNSET;
 
     !status && fetchLtiFeedback(ltiFeedbackAction);
 
-    return status;
-  });
+    setStatus(status);
+  }, [currentUser, key]);
 
   /**
    * Effect for updating the local storage whenever the status changes.
    */
   useEffect(() => {
-    trySetLocalStorage(key, status);
+    if (key) {
+      trySetLocalStorage(key, status);
+    }
   }, [key, status]);
 
   /**

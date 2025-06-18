@@ -23,7 +23,7 @@ module I18n
           end
 
           private def dashboard_i18n_file_path(type, i18n_locale, extension)
-            File.join(ORIGIN_I18N_DIR_PATH, "#{type}.#{i18n_locale}.#{extension}")
+            File.join(ORIGIN_I18N_DIR_PATH, "#{type}/#{i18n_locale}.#{extension}")
           end
 
           private def restore_level_content(file_subpath, crowdin_file_path)

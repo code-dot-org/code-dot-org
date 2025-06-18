@@ -15,7 +15,7 @@ theme: responsive_full_width
       %p=hoc_s(:teach_page_top_desc_01)
       %p.body-three
         =hoc_s(:teach_page_top_desc_02)
-      %a{href: CDO.studio_url("/users/sign_up"), class: "link-button"}
+      %a{href: CDO.studio_url("/users/sign_up/account_type"), class: "link-button"}
         =hoc_s(:call_to_action_sign_up_free)
     %figure.col-45{style: "float: right; margin-top: 1.25rem;"}
       %img.rounded-corners.box-shadow-primary{src: "/images/global/fa/farsi-image-3.png", alt: "", style: "position: relative; width: 100%;"}
@@ -42,7 +42,7 @@ theme: responsive_full_width
 
 %section.resources.bg-neutral-light
   .wrapper
-    = view :"global/fa/resources_tabs", resources_heading: hoc_s(:resources_tabs_heading), resources_desc: hoc_s(:resources_tabs_desc, markdown: :inline, locals: {sign_up_url: CDO.studio_url("/users/sign_up")})
+    = view :"global/fa/resources_tabs", resources_heading: hoc_s(:resources_tabs_heading), resources_desc: hoc_s(:resources_tabs_desc, markdown: :inline, locals: {sign_up_url: CDO.studio_url("/users/sign_up/account_type")})
 
 %section
   .wrapper

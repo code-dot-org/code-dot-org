@@ -7,7 +7,6 @@ import {
 } from '@cdo/apps/accounts/ManageLinkedAccounts';
 
 import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
-import {replaceOnWindow, restoreOnWindow} from '../../util/testUtils';
 
 const DEFAULT_PROPS = {
   userType: 'student',
@@ -253,15 +252,37 @@ describe('ManageLinkedAccounts', () => {
     expect(googleConnectButton).to.have.attr('disabled');
   });
 
+  describe('LTI Account Unlinking', () => {
+    it('disables disconnecting from lti if user only has lti auth', () => {
+      const authOptions = {1: {id: 1, credentialType: 'lti_v1'}};
+      const wrapper = mount(
+        <ManageLinkedAccounts
+          {...DEFAULT_PROPS}
+          userHasPassword={true} // Should disable disconnecting from lti even if the user has a password attached to their account
+          authenticationOptions={authOptions}
+        />
+      );
+      const ltiConnectButton = wrapper.find('BootstrapButton').at(4);
+      expect(ltiConnectButton).to.have.attr('disabled');
+    });
+
+    it('does not disable disconnecting from lti if the user has another authentication option', () => {
+      const authOptions = {
+        1: {id: 1, credentialType: 'google_oauth2'},
+        2: {id: 2, credentialType: 'lti_v1'},
+      };
+      const wrapper = mount(
+        <ManageLinkedAccounts
+          {...DEFAULT_PROPS}
+          authenticationOptions={authOptions}
+        />
+      );
+      const ltiConnectButton = wrapper.find('BootstrapButton').at(4);
+      expect(ltiConnectButton).to.not.have.attr('disabled');
+    });
+  });
+
   describe('CPA lockout to prevent students from connecting oauth accounts without parent permission', () => {
-    beforeEach(() => {
-      replaceOnWindow('CPA_EXPERIENCE', 'true');
-    });
-
-    afterEach(() => {
-      restoreOnWindow('CPA_EXPERIENCE', undefined);
-    });
-
     it('disables the connect buttons when personal account linking is disabled', () => {
       const wrapper = mount(
         <ManageLinkedAccounts

@@ -1,7 +1,8 @@
 class CoursesController < ApplicationController
   include VersionRedirectOverrider
+  include TeacherDashboardUtils
 
-  before_action :require_levelbuilder_mode, except: [:index, :show, :vocab, :resources, :code, :standards]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :vocab, :resources, :code, :standards]
   before_action :authenticate_user!, except: [:index, :show, :vocab, :resources, :code, :standards]
   check_authorization except: [:index]
   before_action :set_unit_group, only: [:show, :vocab, :resources, :code, :standards, :edit, :update, :get_rollup_resources]
@@ -29,9 +30,19 @@ class CoursesController < ApplicationController
     @course_families_course_types = @course_families_course_types.to_h
   end
 
+  def all
+    authorize! :manage, UnitGroup
+    # Show all the units groups
+    @courses = UnitGroup.all
+  end
+
   def show
-    if !params[:section_id] && current_user&.last_section_id
-      redirect_to "#{request.path}?section_id=#{current_user.last_section_id}"
+    # If this is a single-unit course, redirect to the unit overview
+    if @unit_group.single_unit_course?
+      redirect_path = Policies::Courses.modularity_enabled? ?
+                        course_unit_path(@unit_group, 1) :
+                        script_path(@unit_group.first_unit)
+      redirect_to request.query_string.present? ? "#{redirect_path}?#{request.query_string}" : redirect_path
       return
     end
 
@@ -42,9 +53,27 @@ class CoursesController < ApplicationController
       return
     end
 
+    if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.course_id == @unit_group.id} && TeacherDashboardUtils.can_redirect_to_teacher_dashboard?(current_user)
+      section_id = params[:section_id] || current_user.sections_instructed.select {|s| s.course_id == @unit_group.id}.last.id
+      if section_id
+        redirect_to "/teacher_dashboard/sections/#{section_id}/courses/#{@unit_group.name}"
+        return
+      end
+    end
+    if !params[:section_id] && current_user&.last_section_id && !TeacherDashboardUtils.can_redirect_to_teacher_dashboard?(current_user)
+      redirect_to "#{request.path}?section_id=#{current_user.last_section_id}"
+      return
+    end
+
     @sections = current_user.try {|u| u.sections_instructed.all.reject(&:hidden).map(&:summarize)}
 
     @locale_code = request.locale
+
+    @page_title = @unit_group.localized_title
+    @page_description = I18n.t("data.course.name.#{@unit_group.name}.description_short", default: '').truncate(200, separator: '.', omission: '.')
+
+    link = UnitGroup.latest_stable_version(@unit_group.family_name)&.link
+    @canonical_url = CDO.studio_url(link) if link
 
     render 'show', locals: {unit_group: @unit_group, redirect_warning: params[:redirect_warning] == 'true'}
   end
@@ -68,7 +97,7 @@ class CoursesController < ApplicationController
   end
 
   def update
-    @unit_group.persist_strings_and_units_changes(params[:scripts], params[:alternate_units], i18n_params)
+    @unit_group.persist_strings_and_units_changes(params[:scripts], i18n_params)
     @unit_group.update(course_params)
     CourseOffering.add_course_offering(@unit_group)
     @unit_group.reload
@@ -88,7 +117,7 @@ class CoursesController < ApplicationController
     raise ActiveRecord::ReadOnlyRecord if @unit_group.try(:plc_course)
     @unit_group_data = {
       course_summary: @unit_group.summarize(@current_user, for_edit: true),
-      script_names: Unit.all.select {|unit| unit.is_course? == false && unit.unit_groups.none?}.map(&:name),
+      script_names: Unit.all.map(&:name),
       course_families: UnitGroup.family_names,
       version_year_options: UnitGroup.get_version_year_options,
       missing_required_device_compatibilities: @unit_group&.course_version&.course_offering&.missing_required_device_compatibility?

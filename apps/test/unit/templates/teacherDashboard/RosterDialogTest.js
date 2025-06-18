@@ -21,6 +21,14 @@ const fakeClassroom = {
   enrollment_code: '12345',
 };
 
+const archivedClassroom = {
+  id: '3',
+  name: 'archivedClassroom',
+  section: '1st Pd',
+  enrollment_code: '12345',
+  course_state: 'ARCHIVED',
+};
+
 describe('RosterDialog', () => {
   it('displays the loadError when there is one', () => {
     const wrapper = shallow(
@@ -75,6 +83,7 @@ describe('RosterDialog', () => {
     );
     expect(wrapper.text()).contains('myClassroom');
     expect(wrapper.text()).contains('12345');
+    expect(wrapper.text()).not.contains('ARCHIVED');
   });
 
   it('sends section set up completed analytics event when import is called', () => {
@@ -146,5 +155,20 @@ describe('RosterDialog', () => {
       .catch(error => {
         expect(handleImportFailureMock.mock.calls.length).to.equal(1);
       });
+  });
+
+  it('should label archived sections as archived ', () => {
+    const wrapper = mount(
+      <RosterDialog
+        handleImport={() => {}}
+        handleCancel={() => {}}
+        isOpen={true}
+        classrooms={[archivedClassroom]}
+        loadError={null}
+        rosterProvider={OAuthSectionTypes.google_classroom}
+        userId={90}
+      />
+    );
+    expect(wrapper.text()).contains('ARCHIVED');
   });
 });

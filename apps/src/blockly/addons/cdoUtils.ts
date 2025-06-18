@@ -25,6 +25,7 @@ import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/procedure
 import cdoTheme from '../themes/cdoTheme';
 import {
   BlockColor,
+  ExtendedBlock,
   JsonBlockConfig,
   SerializedFields,
   WorkspaceSerialization,
@@ -147,7 +148,10 @@ function loadHiddenDefinitionBlocksToWorkspace(
  */
 function prepareSourcesForWorkspaces(source: string, embedded: boolean) {
   const parsedSource = parseSource(source, embedded);
-  const procedureTypesToHide = [BLOCK_TYPES.behaviorDefinition];
+  const procedureTypesToHide = [];
+  if (!embedded) {
+    procedureTypesToHide.push(BLOCK_TYPES.behaviorDefinition);
+  }
   if (Blockly.useModalFunctionEditor) {
     procedureTypesToHide.push(BLOCK_TYPES.procedureDefinition);
   }
@@ -195,7 +199,7 @@ export function moveHiddenBlocks(
   procedureTypesToHide: string[] = []
 ) {
   if (procedureTypesToHide.length === 0 || !hasBlocks(source)) {
-    return {mainSource: {}, hiddenDefinitionSource: {}};
+    return {mainSource: source, hiddenDefinitionSource: {}};
   }
 
   const mainSource = _.cloneDeep(source);
@@ -237,7 +241,7 @@ export function moveHiddenBlocks(
 }
 
 export function handleColorAndStyle(
-  block: GoogleBlockly.Block,
+  block: ExtendedBlock,
   color: BlockColor,
   style: string
 ) {
@@ -395,6 +399,12 @@ export function getField(type: string) {
  * @returns {?Blockly.Field}
  */
 export function getUserTheme(themeOption: GoogleBlockly.Theme | undefined) {
+  if (Blockly.isJigsaw) {
+    // Jigsaw uses its own custom theme with an extra large font size.
+    // Blocks use hard-coded colors instead of styles, so switching
+    // palettes is not possible.
+    return Blockly.themes.jigsaw;
+  }
   // Today we only store the theme's base name in localStorage, which never includes 'dark'.
   // Until March, 2024 we stored the full theme name, so we need to convert it now.
   // getBaseName strips the 'dark' suffix from a theme name, if present.
@@ -795,7 +805,7 @@ export function getAllGeneratedCode(extraCode?: string) {
       if (workspace) {
         Blockly.getGenerator().init(workspace);
         const blocks = workspace.getTopBlocks(true);
-        const blocksCode: GoogleBlockly.Block[] = [];
+        const blocksCode: (string | [string, number])[] = [];
         blocks.forEach(block =>
           blocksCode.push(Blockly.JavaScript.blockToCode(block))
         );
@@ -814,7 +824,7 @@ export function getCodeFromBlockXmlSource(blockXmlString: string) {
   Blockly.Xml.domToBlockSpace(workspace, domBlocks);
   Blockly.getGenerator().init(workspace);
   const blocks = workspace.getTopBlocks(true);
-  const code = [] as string[];
+  const code: (string | [string, number])[] = [];
   blocks.forEach(block => code.push(Blockly.JavaScript.blockToCode(block)));
   const result = Blockly.getGenerator().finish(code.join('\n'));
   workspace.dispose();

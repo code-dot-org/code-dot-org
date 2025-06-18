@@ -1,14 +1,16 @@
-import React, {useCallback, useMemo} from 'react';
+import React, {useCallback, useMemo, memo} from 'react';
 
 import AppConfig from '../appConfig';
+import {BlockTypes} from '../blockly/blockTypes';
+import {collectBlockIdsRecursively} from '../blockly/blockUtils';
+import {MAX_FUNCTION_BOUNDS_RENDER_DEPTH} from '../constants';
 import {FunctionEvents} from '../player/interfaces/FunctionEvents';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 
 import TimelineElement from './TimelineElement';
 import {useMusicSelector} from './types';
 
-const useOriginalTimelineLayout =
-  AppConfig.getValue('timeline-original-layout') === 'true';
+const timelineLayoutParam = AppConfig.getValue('timeline-layout');
 
 /**
  * Compute the extents for the given function, given the list of unique sounds and all functions.
@@ -24,7 +26,8 @@ interface FunctionExtents {
 const getFunctionExtents = (
   orderedFunction: FunctionEvents,
   uniqueSounds: string[],
-  orderedFunctions: FunctionEvents[]
+  orderedFunctions: FunctionEvents[],
+  depth: number = 0
 ): FunctionExtents | null => {
   let left = Number.MAX_SAFE_INTEGER,
     top = Number.MAX_SAFE_INTEGER,
@@ -51,23 +54,33 @@ const getFunctionExtents = (
     );
   }
 
-  for (const calledFunctionId of orderedFunction.calledFunctionIds) {
-    const calledFunction = orderedFunctions.find(
-      orderedF => orderedF.uniqueInvocationId === calledFunctionId
-    );
-    if (calledFunction) {
-      const extents = getFunctionExtents(
-        calledFunction,
-        uniqueSounds,
-        orderedFunctions
+  if (depth < MAX_FUNCTION_BOUNDS_RENDER_DEPTH) {
+    for (const calledFunctionId of orderedFunction.calledFunctionIds) {
+      const calledFunction = orderedFunctions.find(
+        orderedF => orderedF.uniqueInvocationId === calledFunctionId
       );
-      if (extents) {
-        left = Math.min(left, extents.left);
-        right = Math.max(right, extents.right);
-        top = Math.min(top, extents.top);
-        bottom = Math.max(bottom, extents.bottom);
+      if (calledFunction) {
+        const extents = getFunctionExtents(
+          calledFunction,
+          uniqueSounds,
+          orderedFunctions,
+          depth + 1
+        );
+        if (extents) {
+          left = Math.min(left, extents.left);
+          right = Math.max(right, extents.right);
+          top = Math.min(top, extents.top);
+          bottom = Math.max(bottom, extents.bottom);
+        }
       }
     }
+  }
+
+  // It's possible to have a function that doesn't play any sounds, but does
+  // call another function, but no events are ever emitted.  In that case, there's
+  // no bound to render.
+  if (left === Number.MAX_SAFE_INTEGER) {
+    return null;
   }
 
   return {left, right, top, bottom};
@@ -117,25 +130,53 @@ const FunctionExtentsSimple2: React.FunctionComponent<
 const getOrderedByWhenSoundEvents = (soundEvents: PlaybackEvent[]) => {
   // This sort arranges all of the sounds played under "when run" in order of when
   // played.  Triggered sounds come after them.
-  return [...soundEvents].sort((soundEvent1, soundEvent2) => {
-    if (soundEvent1.triggered && soundEvent2.triggered) {
-      const soundEvent1Name = soundEvent1.functionContext?.name || '';
-      const soundEvent2Name = soundEvent2.functionContext?.name || '';
-      if (soundEvent1Name < soundEvent2Name) {
-        return -1;
-      } else if (soundEvent1 > soundEvent2) {
-        return 1;
-      } else {
-        return 0;
-      }
-    } else if (soundEvent1.triggered && !soundEvent2.triggered) {
-      return 1;
-    } else if (!soundEvent1.triggered && soundEvent2.triggered) {
-      return -1;
-    } else {
-      return soundEvent1.when - soundEvent2.when;
-    }
+  return [...soundEvents].sort((a, b) =>
+    sortByTriggered(a, b, (x, y) => x.when - y.when)
+  );
+};
+
+/**
+ * Given an array of playback events, returns a copy of the array that is sorted
+ * primarily by block order.
+ */
+const getOrderedByBlockSoundEvents = (soundEvents: PlaybackEvent[]) => {
+  // This sort arranges all of the sounds played under "when run" in block
+  // order.  Triggered sounds come after them.
+  const whenRunBlock =
+    Blockly.getMainWorkspace()?.getBlocksByType(
+      BlockTypes.WHEN_RUN_SIMPLE2
+    )[0] || null;
+  const blockIdList = collectBlockIdsRecursively(whenRunBlock);
+
+  const blockIdToOrder = new Map<string, number>();
+  blockIdList.forEach((id, index) => {
+    blockIdToOrder.set(id, index);
   });
+  return [...soundEvents].sort((a, b) =>
+    sortByTriggered(a, b, (x, y) => {
+      const order1 = blockIdToOrder.get(x.blockId || '') ?? Infinity;
+      const order2 = blockIdToOrder.get(y.blockId || '') ?? Infinity;
+      return order1 - order2;
+    })
+  );
+};
+
+const sortByTriggered = function (
+  a: PlaybackEvent,
+  b: PlaybackEvent,
+  sortFunction: (a: PlaybackEvent, b: PlaybackEvent) => number
+): number {
+  if (a.triggered && b.triggered) {
+    const aName = a.functionContext?.name || '';
+    const bName = b.functionContext?.name || '';
+    return aName.localeCompare(bName);
+  } else if (a.triggered && !b.triggered) {
+    return 1;
+  } else if (!a.triggered && b.triggered) {
+    return -1;
+  } else {
+    return sortFunction(a, b);
+  }
 };
 
 /**
@@ -144,24 +185,29 @@ const getOrderedByWhenSoundEvents = (soundEvents: PlaybackEvent[]) => {
 interface TimelineSimple2EventsProps {
   paddingOffset: number;
   barWidth: number;
-  eventVerticalSpace: number;
   getEventHeight: (numUniqueRows: number, availableHeight?: number) => number;
+  getEventVerticalSpace: (eventHeight: number) => number;
 }
 
 const TimelineSimple2Events: React.FunctionComponent<
   TimelineSimple2EventsProps
-> = ({paddingOffset, barWidth, eventVerticalSpace, getEventHeight}) => {
+> = ({paddingOffset, barWidth, getEventHeight, getEventVerticalSpace}) => {
   const soundEventsOriginal = useMusicSelector(
     state => state.music.playbackEvents
   );
 
   // soundEventsOriginal has sounds sorted primarily by the immediate function
-  // that generates them, and next by when they are played.  Unless useOriginalTimelineLayout
-  // is true, then they are resorted so that all sounds played somewhere under
-  // "when run" are sorted by when they are played.
-  const soundEvents = useOriginalTimelineLayout
-    ? soundEventsOriginal
-    : getOrderedByWhenSoundEvents(soundEventsOriginal);
+  // that generates them, and next by when they are played.
+  // If timelineLayoutParam is 'blocks', the events are reordered to follow the block layout.
+  // If it's 'default' (or any invalid value) the events are resorted so that all sounds
+  // played under "when run" are ordered chronologically by when they play.
+  // If it's 'old', the original ordering is preserved.
+  let soundEvents = soundEventsOriginal;
+  if (timelineLayoutParam === 'blocks') {
+    soundEvents = getOrderedByBlockSoundEvents(soundEventsOriginal);
+  } else if (timelineLayoutParam !== 'old') {
+    soundEvents = getOrderedByWhenSoundEvents(soundEventsOriginal);
+  }
 
   const orderedFunctions = useMusicSelector(
     state => state.music.orderedFunctions
@@ -184,39 +230,37 @@ const TimelineSimple2Events: React.FunctionComponent<
     return uniqueSounds;
   }, [soundEvents]);
 
-  // Next, for each function, determine the pixel extents of the sound events
+  const eventHeight = useMemo(
+    () => getEventHeight(currentUniqueSounds.length),
+    [getEventHeight, currentUniqueSounds.length]
+  );
+
+  const eventVerticalSpace = useMemo(
+    () => getEventVerticalSpace(eventHeight),
+    [getEventVerticalSpace, eventHeight]
+  );
+
+  const getVerticalOffsetForEventId = useCallback(
+    (id: string) => currentUniqueSounds.indexOf(id) * eventHeight,
+    [currentUniqueSounds, eventHeight]
+  );
+
+  // For each function, determine the pixel extents of the sound events
   // generated, including by functions it calls.
   // The outcome is an object with each function's extents.
   // Each timeline extent has left/right position in measures, and
   // top/bottom position in rows.
-  const uniqueFunctionExtentsArray = useMemo(() => {
-    return orderedFunctions
-      .map(orderedFunction =>
-        getFunctionExtents(
-          orderedFunction,
-          currentUniqueSounds,
-          orderedFunctions
-        )
-      )
-      .filter(orderedFunction => orderedFunction);
-  }, [orderedFunctions, currentUniqueSounds]);
+  const uniqueFunctionExtentsArray = orderedFunctions
+    .map(orderedFunction =>
+      getFunctionExtents(orderedFunction, currentUniqueSounds, orderedFunctions)
+    )
+    .filter(orderedFunction => orderedFunction);
 
-  const eventHeight = useMemo(
-    () => getEventHeight(currentUniqueSounds.length),
-    [currentUniqueSounds.length, getEventHeight]
-  );
-
-  const getVerticalOffsetForEventId = useCallback(
-    (id: string) =>
-      currentUniqueSounds.indexOf(id) *
-      getEventHeight(currentUniqueSounds.length),
-    [currentUniqueSounds, getEventHeight]
-  );
-
-  return (
-    <div id="timeline-events">
-      <div id="timeline-events-function-extents">
-        {uniqueFunctionExtentsArray.map((functionExtents, index) => (
+  const timelineFunctionExtents = (
+    <div id="timeline-events-function-extents">
+      {uniqueFunctionExtentsArray
+        .filter(functionExtents => functionExtents)
+        .map((functionExtents, index) => (
           <FunctionExtentsSimple2
             key={index}
             index={index}
@@ -226,25 +270,35 @@ const TimelineSimple2Events: React.FunctionComponent<
             functionExtents={functionExtents}
           />
         ))}
-      </div>
-      <div id="timeline-events-sound-events">
-        {soundEvents.map((eventData, index) => (
-          <TimelineElement
-            key={index}
-            eventData={eventData}
-            barWidth={barWidth}
-            height={eventHeight - eventVerticalSpace - 1}
-            top={
-              32 +
-              getVerticalOffsetForEventId(
-                eventData.functionContext?.name + ' ' + eventData.id
-              )
-            }
-            left={paddingOffset + barWidth * (eventData.when - 1)}
-          />
-        ))}
-      </div>
+    </div>
+  );
+
+  const timelineSoundEvents = (
+    <div id="timeline-events-sound-events">
+      {soundEvents.map((eventData, index) => (
+        <TimelineElement
+          key={index}
+          eventData={eventData}
+          barWidth={barWidth}
+          height={eventHeight - eventVerticalSpace}
+          top={
+            32 +
+            getVerticalOffsetForEventId(
+              eventData.functionContext?.name + ' ' + eventData.id
+            )
+          }
+          left={paddingOffset + barWidth * (eventData.when - 1)}
+        />
+      ))}
+    </div>
+  );
+
+  return (
+    <div id="timeline-events">
+      {timelineFunctionExtents}
+      {timelineSoundEvents}
     </div>
   );
 };
-export default TimelineSimple2Events;
+
+export default memo(TimelineSimple2Events);

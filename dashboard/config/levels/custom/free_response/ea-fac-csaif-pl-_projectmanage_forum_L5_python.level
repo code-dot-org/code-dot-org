@@ -1,0 +1,23 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-04-03T04:11:37.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Reflecting on the Project",
+    "long_instructions": "#### As students work on their projects, balancing structure with creative freedom is key —thoughtful planning, guided problem-solving, and opportunities for peer collaboration will help them turn their ideas into meaningful, well-executed code.\r\n\r\n## Discussion Questions: \r\n#### 1️⃣ How will you support students in breaking down their ideas into manageable coding tasks while still allowing for creative freedom in their projects?\r\n\r\n#### 2️⃣ What strategies will you use to ensure that students engage in constructive and actionable peer feedback during the review process?\r\n\r\n#### 3️⃣ What methods will you use to assess both the process and the final product to ensure students gain both coding proficiency and problem-solving experience?\r\n\r\n#### *These questions are just starting points for reflection and discussion — there is no need to answer all of them. Focus on the ones that resonate most with your teaching experience and goals.*\r\n\r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">📝 Share in the forum!\r\n</summary>\r\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;\">\r\n    <p>\r\n\r\n####Participating in the <a href=\"https://forum.code.org/t/about-the-cs-ai-foundations-category/40251?u=plteam\" target=\"_blank\">Computer Science and AI Foundations PL Community</a> is optional and not necessary to earn a certificate for this module. However, we encourage you to engage with the broader Computer Science learner community. Please share your response to this reflection in the forum and take the time to read and respond to other educators' posts.\r\n*update link*\r\n### <a href=\"https://forum.code.org/t/reflecting-on-your-experience-with-codap/40257?u=plteam\" target=\"_blank\">Direct Link to this Forum Topic</a>\r\n\r\n\r\n</p></div>\r\n</details>\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "stay_on_level_after_submit": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-04-03T04:11:37.574+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-_projectmanage_forum_L5_python\\\"\"],\"cloned_from\":\"csaif-pl-_projectmanage_forum_L5_python\"}]"
+}]]></config>
+</FreeResponse>

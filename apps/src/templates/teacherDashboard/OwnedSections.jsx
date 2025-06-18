@@ -8,15 +8,31 @@ import {connect} from 'react-redux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import LtiFeedbackBanner from '@cdo/apps/simpleSignUp/lti/feedback/LtiFeedbackBanner';
 import styleConstants from '@cdo/apps/styleConstants';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
+import firehoseClient from '../../metrics/firehose';
+
 import {recordImpression} from './impressionHelpers';
 import OwnedPlSectionsTable from './OwnedPlSectionsTable';
 import OwnedSectionsTable from './OwnedSectionsTable';
-import {recordOpenEditSectionDetails} from './sectionHelpers';
 import {beginEditingSection} from './teacherSectionsRedux';
+
+const recordOpenEditSectionDetails = (sectionId, studyGroup) => {
+  firehoseClient.putRecord(
+    {
+      study: 'teacher_dashboard_actions',
+      study_group: studyGroup,
+      event: 'open_edit_section_dashboard_header',
+      data_json: JSON.stringify({
+        section_id: sectionId,
+      }),
+    },
+    {includeUserId: true}
+  );
+};
 
 class OwnedSections extends React.Component {
   static propTypes = {
@@ -95,7 +111,10 @@ class OwnedSections extends React.Component {
       <div>
         {hasSections && (
           <div>
-            <LtiFeedbackBanner />
+            <GlobalEditionWrapper
+              component={LtiFeedbackBanner}
+              componentId="LtiFeedbackBanner"
+            />
             {this.ownedSectionsTable(false)}
             <div style={styles.buttonContainer}>
               {hiddenSectionIds.length > 0 && (

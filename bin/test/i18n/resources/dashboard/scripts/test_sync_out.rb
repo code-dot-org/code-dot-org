@@ -144,7 +144,7 @@ describe I18n::Resources::Dashboard::Scripts::SyncOut do
 
     it 'distributes localization of the language' do
       I18nScriptUtils.expects(:sanitize_file_and_write).with(
-        crowdin_file_path, CDO.dir("dashboard/config/locales/scripts.#{i18n_locale}.yml")
+        crowdin_file_path, CDO.dir("dashboard/config/locales/scripts/#{i18n_locale}.yml")
       ).once
 
       distribute_localization_of_language

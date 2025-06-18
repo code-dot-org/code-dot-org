@@ -1,5 +1,6 @@
 <StandaloneVideo>
   <config><![CDATA[{
+  "published": true,
   "game_id": 54,
   "created_at": "2024-03-25T22:51:21.000Z",
   "level_num": "custom",
@@ -12,11 +13,10 @@
     "parent_level_id": 28813,
     "name_suffix": "_2024",
     "encrypted": "false",
-    "long_instructions": "## Variables in Java\r\nLet's get started with variables in Java.  This video is used in Code.org's CSA Curriculum to introduce students to variables in Java. Throughout this lesson we will build on the concepts in this video.  \r\n\r\n## Vocabulary\r\n\r\n* **variable** - A container that stores a value in memory\r\n* **data type** - the format of the data that can be stored in a variable\r\n* **declaration** - giving a name and data type to a variable\r\n* **initialization** - giving a starting value to a variable using the assignment operator ( = )\r\n* **primitive variables** - a basic data type that Java predefines including `int`, `double`, and `boolean`\r\n* **reference variables** -  data type that contains a pointer to the memory location of an object\r\n\r\n## Additional resources\r\nLooking for more practice and resource understanding if statements in Java? Consider using the following resources:\r\n\r\n*  <a href=\"https://runestone.academy/ns/books/published/csawesome/Unit1-Getting-Started/topic-1-3-variables.html\" target=\"_blank\">CS Awesome’s chapter on variables</a>\r\n\r\n* <a href=\"https://codehs.com/textbook/apcsa_textbook/1.4\" target=\"_blank\">CodeHS's chapter on variables</a>\r\n\r\n**Up next:** In the next level, we will practice what data type should be used for different information. \r\n"
+    "long_instructions": "## Variables in Java\r\n#### Let's get started with variables in Java.  This video is used in Code.org's CSA Curriculum to introduce students to variables in Java. Throughout this lesson we will build on the concepts in this video.  \r\n\r\n## Vocabulary\r\n\r\n- #### **variable** - A container that stores a value in memory\r\n- #### **data type** - the format of the data that can be stored in a variable\r\n- #### **declaration** - giving a name and data type to a variable\r\n- #### **initialization** - giving a starting value to a variable using the assignment operator ( = )\r\n- #### **primitive variables** - a basic data type that Java predefines including `int`, `double`, and `boolean`\r\n- #### **reference variables** -  data type that contains a pointer to the memory location of an object\r\n\r\n## Additional resources\r\n#### Looking for more practice and resource understanding if statements in Java? Consider using the following resources:\r\n\r\n*  <a href=\"https://runestone.academy/ns/books/published/csawesome/Unit1-Getting-Started/topic-1-3-variables.html\" target=\"_blank\" style= \"font-size: 14pt\">CS Awesome’s chapter on variables</a>\r\n\r\n* <a href=\"https://codehs.com/textbook/apcsa_textbook/1.4\" target=\"_blank\" style= \"font-size: 14pt\">CodeHS's chapter on variables</a>\r\n\r\n#### **Up next:** In the next level, we will practice what data type should be used for different information. \r\n"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-25T22:51:21.089+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-L2-variables-video_2023\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-L2-variables-video_2023\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-25T22:51:21.089+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-L2-variables-video_2023\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-L2-variables-video_2023\"},{\"changed_at\":\"2024-10-31 14:40:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

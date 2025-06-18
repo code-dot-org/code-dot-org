@@ -4,23 +4,25 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "9-12 Special topics",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
-      "is_course": true,
       "is_migrated": true,
-      "pilot_experiment": "gen-ai-foundations-v1",
       "show_calendar": true,
-      "version_year": "unversioned",
+      "topic_tags": [
+        "ai"
+      ],
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": "gen-ai-foudations-pilot-v1",
-    "serialized_at": "2024-05-06 17:43:57 UTC",
-    "published_state": "pilot",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-03-28 09:29:24 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "gen-ai-foudations-pilot-v1"
     }

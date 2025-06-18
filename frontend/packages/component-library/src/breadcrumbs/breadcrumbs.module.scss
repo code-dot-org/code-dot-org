@@ -1,0 +1,130 @@
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+
+// Breadcrumbs common styles
+.breadcrumbs {
+  display: inline-flex;
+  align-items: center;
+
+  .breadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-neutral-primary);
+    font-feature-settings:
+      'liga' off,
+      'clig' off;
+    text-decoration: none;
+    border-radius: 4px;
+
+    // Current location styles
+    &:last-child {
+      color: var(--text-brand-teal-primary);
+      cursor: default;
+    }
+
+    // Hover, Pressed, Visited styles
+    &:hover,
+    :active,
+    :visited {
+      &:not(:last-child) {
+        color: var(--text-neutral-secondary);
+
+        .homeIcon {
+          color: var(--text-neutral-secondary);
+        }
+      }
+    }
+
+    // Focus styles
+    &:focus-visible {
+      color: var(--text-neutral-primary);
+      outline: 2px solid var(--borders-brand-teal-primary);
+      outline-offset: 2px;
+    }
+
+    .homeIcon {
+      color: inherit;
+    }
+  }
+
+  i {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-neutral-tertiary);
+  }
+}
+
+// Breadcrumbs sizes
+.breadcrumbs-l {
+  .breadcrumb {
+    @include mixins.label-one;
+    margin: 0;
+
+    .homeIcon {
+      font-size: 1rem; // 16px
+    }
+  }
+
+  i {
+    padding: 6px;
+    font-size: 13px;
+    width: 16px;
+    line-height: 1.25;
+  }
+}
+
+.breadcrumbs-m {
+  .breadcrumb {
+    @include mixins.label-two;
+    margin: 0;
+
+    .homeIcon {
+      font-size: 0.875rem; // 14px
+    }
+  }
+
+  i {
+    padding: 5px 6px;
+    font-size: 12px;
+    width: 15px;
+    line-height: 1.25;
+  }
+}
+
+.breadcrumbs-s {
+  .breadcrumb {
+    @include mixins.label-three;
+    margin: 0;
+
+    .homeIcon {
+      font-size: 0.75rem; // 12px
+    }
+  }
+
+  i {
+    padding: 5px 6px;
+    font-size: 11px;
+    width: 14px;
+    line-height: 1.25;
+  }
+}
+
+.breadcrumbs-xs {
+  .breadcrumb {
+    @include mixins.label-four;
+    margin: 0;
+
+    .homeIcon {
+      font-size: 0.625rem; // 10px
+    }
+  }
+
+  i {
+    padding: 4px 6px;
+    font-size: 10px;
+    width: 13px;
+    line-height: 1.25;
+  }
+}

@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 require 'cdo/shared_constants'
@@ -33,6 +34,8 @@ class Level < ApplicationRecord
   belongs_to :game, optional: true
   has_and_belongs_to_many :concepts
   has_and_belongs_to_many :script_levels
+  has_many :levels_skills
+  has_many :skills, through: :levels_skills
   belongs_to :ideal_level_source, class_name: "LevelSource", optional: true # "see the solution" link uses this
   belongs_to :user, optional: true
   has_one :level_concept_difficulty, dependent: :destroy
@@ -43,7 +46,7 @@ class Level < ApplicationRecord
   before_validation :strip_name
   before_destroy :remove_empty_script_levels
 
-  validates_length_of :name, within: 1..70
+  validates :name, length: {within: 1..70}
   validate :reject_illegal_chars
 
   # Together, these validations prevent collisions between level keys, including
@@ -51,8 +54,8 @@ class Level < ApplicationRecord
   # custom levels, DSLDefined levels, and deprecated blockly levels. For more
   # context on these categories and level keys, see:
   # https://docs.google.com/document/d/1rS1ekCEVU1Q49ckh2S9lfq0tQo-m-G5KJLiEalAzPts/edit
-  validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where(level_num: ['custom', nil])}
-  validates_uniqueness_of :level_num, case_sensitive: true, scope: :game, conditions: -> {where.not(level_num: ['custom', nil])}
+  validates :name, uniqueness: {case_sensitive: false, conditions: -> {where(level_num: ['custom', nil])}}
+  validates :level_num, uniqueness: {case_sensitive: true, scope: :game, conditions: -> {where.not(level_num: ['custom', nil])}}
 
   validate :validate_game, on: [:create, :update]
 
@@ -96,6 +99,9 @@ class Level < ApplicationRecord
     ai_tutor_available
     offer_browser_tts
     use_secondary_finish_button
+    skip_url
+    stay_on_level_after_submit
+    skill_keys
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -238,9 +244,7 @@ class Level < ApplicationRecord
         hash['notes'] = Encryption.decrypt_object(encrypted_notes)
       end
     rescue Encryption::KeyMissingError
-      # developers and adhoc environments must be able to seed levels without properties_encryption_key
-      non_ci_test = rack_env == :test && !CDO.ci && !CDO.chef_managed
-      raise unless rack_env?(:development) || rack_env?(:adhoc) || non_ci_test
+      raise if rack_env?(:production)
       puts "WARNING: level '#{name}' not seeded properly due to missing CDO.properties_encryption_key"
     end
     hash
@@ -298,7 +302,7 @@ class Level < ApplicationRecord
 
   # Overriden in subclasses, provides a summary for rendering thumbnails on the
   # lesson extras page
-  def summarize_as_bonus
+  def summarize_as_bonus(unit_group_unit: nil)
     {}
   end
 
@@ -491,6 +495,12 @@ class Level < ApplicationRecord
     false
   end
 
+  # Programming levels are levels where students write code.
+  # These are the lab types that support programming used in 6-12th grade curriculum.
+  def upper_grades_programming_level?
+    %w(Applab Gamelab Javalab Pythonlab Weblab).include?(type)
+  end
+
   # Currently only Web Lab, Game Lab and App Lab levels can have teacher feedback
   def can_have_feedback?
     ["Applab", "Gamelab", "Weblab"].include?(type)
@@ -550,7 +560,7 @@ class Level < ApplicationRecord
     }
   end
 
-  def summary_for_lesson_plans
+  def summary_for_lesson_plans(unit_group_unit: nil)
     summary = summarize
 
     %w(title questions answers short_instructions long_instructions markdown teacher_markdown pages reference
@@ -564,7 +574,7 @@ class Level < ApplicationRecord
     end
 
     unless contained_levels.empty?
-      summary[:contained_levels] = contained_levels.map(&:summary_for_lesson_plans)
+      summary[:contained_levels] = contained_levels.map {|l| l.summary_for_lesson_plans(unit_group_unit: unit_group_unit)}
     end
 
     summary
@@ -590,10 +600,6 @@ class Level < ApplicationRecord
   end
 
   def uses_droplet?
-    false
-  end
-
-  def uses_google_blockly?
     false
   end
 
@@ -705,7 +711,7 @@ class Level < ApplicationRecord
 
   def show_help_and_tips_in_level_editor?
     (uses_droplet? || is_a?(Blockly) || is_a?(Weblab) || is_a?(Ailab) || is_a?(Javalab)) &&
-      !(is_a?(NetSim) || is_a?(GamelabJr) || is_a?(Dancelab) || is_a?(BubbleChoice))
+      !(is_a?(NetSim) || is_a?(GamelabJr) || is_a?(Dancelab) || is_a?(BubbleChoice) || is_a?(Music))
   end
 
   def localized_teacher_markdown
@@ -751,6 +757,38 @@ class Level < ApplicationRecord
     end
   end
 
+  def localized_exemplar_settings
+    exemplar = get_exemplar_settings
+    if should_localize?
+      exemplar_clone = exemplar.clone
+
+      exemplar_clone['validationSuccessMessage'] = I18n.t(
+        'validationSuccessMessage',
+        scope: [:data, :exemplar, name],
+        default: exemplar_clone['validationSuccessMessage'],
+        smart: true
+      )
+
+      exemplar_clone['validationFailureMessage'] = I18n.t(
+        'validationFailureMessage',
+        scope: [:data, :exemplar, name],
+        default: exemplar_clone['validationFailureMessage'],
+        smart: true
+      )
+
+      exemplar_clone['playerTitle'] = I18n.t(
+        'playerTitle',
+        scope: [:data, :exemplar, name],
+        default: exemplar_clone['playerTitle'],
+        smart: true
+      )
+
+      exemplar_clone
+    else
+      exemplar
+    end
+  end
+
   def localized_panels
     if should_localize?
       panels_clone = panels.map(&:clone)
@@ -777,6 +815,14 @@ class Level < ApplicationRecord
         default: nil,
         smart: true
       )
+    end
+  end
+
+  def localized_properties
+    return properties unless should_localize?
+
+    properties.each_with_object({}) do |(key, value), i18n|
+      i18n[key] = try(:localized_property, key) || get_localized_property(key) || value
     end
   end
 
@@ -832,14 +878,24 @@ class Level < ApplicationRecord
     }
   end
 
+  def summarize_for_sublevel_edit
+    {
+      name: name,
+      id: id,
+      properties: properties,
+      isDslDefined: is_a?(DSLDefined)
+    }
+  end
+
   # Summarize the properties for a lab2 level.
   # Called by ScriptLevelsController.level_properties.
   # These properties are usually just the serialized properties for
   # the level, which usually include levelData.  If this level is a
   # StandaloneVideo then we put its properties into levelData.
-  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil)
+  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
     video = specified_autoplay_video&.summarize(false)&.camelize_keys
     properties_camelized = properties.camelize_keys
+    properties_camelized[:name] = name
     properties_camelized[:id] = id
     properties_camelized[:levelData] = video if video
     properties_camelized[:helpVideos] = related_videos.map(&:summarize)
@@ -847,23 +903,35 @@ class Level < ApplicationRecord
     properties_camelized[:appName] = game&.app
     properties_camelized[:useRestrictedSongs] = game.use_restricted_songs?
     properties_camelized[:usesProjects] = try(:is_project_level) || channel_backed?
-    properties_camelized[:finishUrl] = script_level.next_level_or_redirect_path_for_user(current_user) if script_level
+    properties_camelized[:finishUrl] = script_level.next_level_or_redirect_path_for_user(current_user, unit_group_unit: unit_group_unit) if script_level
+    properties_camelized[:baseAssetUrl] = Blockly.base_url
+    properties_camelized[:isAssessment] = script_level&.assessment
+    properties_camelized[:progressionType] = script_level&.primm_progression_type
+    properties_camelized[:enableBlocklyKeyboardNavigation] = script&.enable_blockly_keyboard_navigation
 
     if try(:project_template_level).try(:start_sources)
       properties_camelized['templateSources'] = try(:project_template_level).try(:start_sources)
+    elsif (level_data = try(:project_template_level).try(:level_data)) && level_data['startSources']
+      # Music Lab's sources are part of level_data
+      properties_camelized['templateSources'] = try(:project_template_level).try(:level_data)['startSources']
     end
+
     # Localized properties
     properties_camelized["validations"] = localized_validations if get_validations
+    properties_camelized["exemplarSettings"] = localized_exemplar_settings if get_exemplar_settings
     properties_camelized["panels"] = localized_panels if properties_camelized["panels"]
     properties_camelized["longInstructions"] = (get_localized_property("long_instructions") || long_instructions) if properties_camelized["longInstructions"]
     if script_level
-      properties_camelized[:exampleSolutions] = script_level.get_example_solutions(self, current_user, nil)
+      properties_camelized[:exampleSolutions] = script_level.get_example_solutions(self, current_user, nil, unit_group_unit: unit_group_unit)
     end
-    if current_user&.verified_instructor? || current_user&.permission?(UserPermission::LEVELBUILDER)
+    is_verified_instructor = current_user&.verified_instructor? || current_user&.permission?(UserPermission::LEVELBUILDER)
+    if is_verified_instructor || try(:exemplar_settings)
       # Verified instructors can view exemplars and levelbuilders can edit them, so we include them in the properties
       # for these users.
+      # For levels that support exemplar validation or an exemplar music player, we also need to include the exemplar sources.
       properties_camelized[:exemplarSources] = try(:exemplar_sources)
-    else
+    end
+    unless is_verified_instructor
       # Users who are not verified teachers or levelbuilders should not be able to see predict level solutions
       properties_camelized["predictSettings"]&.delete("solution")
       properties_camelized["predictSettings"]&.delete("multipleChoiceAnswers")
@@ -890,6 +958,59 @@ class Level < ApplicationRecord
   # Wrapper around validations property. Some labs override this with derived validations.
   def get_validations
     properties['validations']
+  end
+
+  # Some labs override this if starter code isn't block-based.
+  def get_starter_code
+    properties["start_blocks"]
+  end
+
+  def get_exemplar_settings
+    properties['exemplar_settings']
+  end
+
+  # Ensure that if this is a multiple choice predict level, there is at least one correct answer
+  # specified.
+  def has_correct_multiple_choice_answer?
+    if predict_settings && predict_settings["isPredictLevel"] && predict_settings["questionType"] == 'multipleChoice'
+      options = predict_settings["multipleChoiceOptions"]
+      answers = predict_settings["solution"]
+      unless options && answers && !options.empty? && answers.present?
+        errors.add(:predict_settings, 'multiple choice questions must have at least one correct answer')
+      end
+    end
+  end
+
+  def clean_up_predict_settings
+    return unless predict_settings
+    if !predict_settings["isPredictLevel"]
+      # If this is not a predict level, remove any predict settings that may have been set.
+      self.predict_settings = {isPredictLevel: false}
+    elsif predict_settings["questionType"] == 'multipleChoice'
+      # Remove any free response settings if this is a multiple choice question.
+      predict_settings.delete("placeholderText")
+      predict_settings.delete("freeResponseHeight")
+    else
+      # Remove any multiple choice settings if this is a free response question.
+      predict_settings.delete("multipleChoiceOptions")
+    end
+  end
+
+  def summarize_for_levels_skills
+    {
+      level_id: id,
+      level_name: name,
+      unit_names: script_levels.map {|sl| sl.script.name}.uniq.sort,
+      skills: skill_identifiers,
+    }.deep_transform_keys {|key| key.to_s.camelize(:lower)}
+  end
+
+  def skill_identifiers
+    skills.map {|skill| {id: skill.id, key: skill.key}}
+  end
+
+  def skill_keys
+    skills.pluck(:key)
   end
 
   # Returns the level name, removing the name_suffix first (if present), and

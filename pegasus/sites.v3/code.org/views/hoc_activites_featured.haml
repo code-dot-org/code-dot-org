@@ -18,14 +18,6 @@
       button_label: hoc_s(:call_to_action_explore_dance_party)
     },
     {
-      overline: hoc_s(:module_grade_3_12),
-      title: hoc_s(:curriculum_name_ai_for_oceans),
-      image: "/images/ai/ai-curriclum-oceans.png",
-      desc: hoc_s(:ai_curriculum_desc_03),
-      url: "/oceans",
-      button_label: hoc_s(:call_to_action_explore_ai_for_oceans)
-    },
-    {
       overline: hoc_s(:module_grade_2_12),
       title: hoc_s(:curriculum_name_minecraft),
       image: "/images/mc/minecraft-tile-generic.png",
@@ -34,16 +26,6 @@
       button_label: hoc_s(:call_to_action_explore_minecraft)
     },
   ]
-
-  -# TODO ACQ-2556 - Clean this up after the 2024 HOC launch
-  oceans_index = 2
-  music_lab_index = 0
-  if !!DCDO.get('hoc-2024-nov-launch', false)
-    block_item.delete_at(oceans_index)
-  else
-    block_item.delete_at(music_lab_index)
-  end
-
 
 .action-block__wrapper.action-block__wrapper--three-col
   - block_item.each do |block_item|

@@ -4,14 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "curriculum_umbrella": "AI",
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "9-12 Special topics",
       "is_migrated": true,
       "show_calendar": true,
+      "topic_tags": [
+        "ai"
+      ],
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-09-16 15:26:49 UTC",
+    "serialized_at": "2024-11-19 01:18:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

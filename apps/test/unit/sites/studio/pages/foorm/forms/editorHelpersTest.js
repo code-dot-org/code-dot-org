@@ -1,4 +1,4 @@
-import {lintFoormKeys} from '@cdo/apps/sites/studio/pages/foorm/forms/editorHelpers'; // eslint-disable-line no-restricted-imports
+import {lintFoormKeys} from '@cdo/apps/sites/studio/pages/foorm/forms/editorHelpers';
 
 const fakeCodeMirror = {
   posFromIndex: x => ({from: 0, to: 1}),

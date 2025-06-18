@@ -4,12 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
-      "is_migrated": true
+      "is_migrated": true,
+      "topic_tags": [
+        "survey"
+      ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-24 20:32:39 UTC",
+    "serialized_at": "2024-11-19 01:18:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

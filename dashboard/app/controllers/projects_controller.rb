@@ -2,7 +2,7 @@ require 'active_support/core_ext/hash/indifferent_access'
 require 'cdo/firehose'
 
 class ProjectsController < ApplicationController
-  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config, :weblab_footer, :get_or_create_for_level, :can_publish_age_status]
+  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config, :weblab_footer, :get_or_create_for_level, :can_publish_age_status, :submission_status, :submit]
   before_action :redirect_admin_from_labs, only: [:load, :create_new, :show, :edit, :remix]
   before_action :authorize_load_project!, only: [:load, :create_new, :edit, :remix]
   before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix, :export_config, :export_create_channel]
@@ -186,11 +186,24 @@ class ProjectsController < ApplicationController
     },
     transformers: {
       name: 'New Transformers Project'
+    },
+    weblab2: {
+      name: 'New Web Lab 2 Project',
     }
     # Note: When adding to this list, remember that project level files must include "is_project_level": true
   }.with_indifferent_access.freeze
 
   @@project_level_cache = {}
+
+  PROJECT_SUBMISSION_ERROR_MAP = {
+    PROJECT_SUBMISSION_STATUS[:ALREADY_SUBMITTED] => "Once submitted, a project cannot be submitted again.",
+    PROJECT_SUBMISSION_STATUS[:PROJECT_TYPE_NOT_ALLOWED] => "Submission disabled because project type is not allowed in the featured project gallery.",
+    PROJECT_SUBMISSION_STATUS[:NOT_PROJECT_OWNER] => "Submission disabled for user account because non-owner.",
+    PROJECT_SUBMISSION_STATUS[:SHARING_DISABLED] => "Submission disabled for user account because sharing disabled.",
+    PROJECT_SUBMISSION_STATUS[:RESTRICTED_SHARE_MODE] => "Submission disabled because project is in restricted share mode.",
+    PROJECT_SUBMISSION_STATUS[:OWNER_TOO_NEW] => "Submission disabled because user's account has not existed for required time period.",
+    PROJECT_SUBMISSION_STATUS[:PROJECT_TOO_NEW] => "Submission disabled because project has not existed for required time period."
+  }
 
   # GET /projects/:tab_name
   # Where a valid :tab_name is (nil|public|libraries)
@@ -219,7 +232,7 @@ class ProjectsController < ApplicationController
   end
 
   def combine_projects_and_featured_projects_data
-    projects = "#{CDO.dashboard_db_name}__projects".to_sym
+    projects = :"#{CDO.dashboard_db_name}__projects"
     project_featured_project_combo_data = DASHBOARD_DB[:featured_projects].
       select(*project_and_featured_project_fields).
       join(projects, id: :storage_app_id, state: 'active').all
@@ -443,6 +456,14 @@ class ProjectsController < ApplicationController
 
     @body_classes = @level.properties['background']
 
+    if @level.is_a?(Pythonlab)
+      user_theme = current_user ? UserPreference.find_by(user_id: current_user.id)&.theme : nil
+      theme_preference = user_theme['global'] if user_theme
+      if theme_preference
+        @body_classes = "background-#{theme_preference&.downcase}"
+      end
+    end
+
     if [Game::ARTIST, Game::SPRITELAB, Game::POETRY].include? @game.app
       @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/.metadata/thumbnail.png", 'https:'
     end
@@ -507,6 +528,47 @@ class ProjectsController < ApplicationController
     SourceBucket.new.remix_source src_channel_id, new_channel_id, animation_list
     FileBucket.new.copy_files src_channel_id, new_channel_id if uses_file_bucket?(project_type)
     redirect_to action: 'edit', channel_id: new_channel_id
+  end
+
+  # GET /projects/:project_type/:channel_id/submission_status
+  def submission_status
+    _, project_id = storage_decrypt_channel_id(params[:channel_id])
+    project = Project.find_by(id: project_id)
+    begin
+      authorize! :submission_status, project
+    rescue CanCan::AccessDenied => exception
+      return render status: :forbidden, json: {error: exception.message}
+    end
+    status = project.submission_status
+    render(status: :ok, json: {status: status})
+  end
+
+  # POST /projects/:project_type/:channel_id/submit
+  def submit
+    submission_description = params[:submissionDescription]
+    channel_id = params[:channel_id]
+    project_type = params[:project_type]
+    return render status: :bad_request, json: {error: "Project description is required for submission."} if submission_description.empty?
+    _, project_id = storage_decrypt_channel_id(channel_id)
+    project = Project.find_by(id: project_id)
+    begin
+      authorize! :submit, project
+    rescue CanCan::AccessDenied => exception
+      Honeybadger.notify(
+        "Project submission error: #{exception.message}",
+        context: {
+          message:  "Project submission failed due to unauthorized submission status - user unexpectedly bypassed submission_status restriction in the share dialog and attempted to submit project."
+        }
+      )
+      return render status: :forbidden, json: {error: PROJECT_SUBMISSION_ERROR_MAP[project.submission_status]}
+    end
+    # Publish the project, i.e., make it public.
+    begin
+      storage_id, _ = storage_decrypt_channel_id(channel_id)
+      Projects.new(storage_id).publish(channel_id, project_type, current_user)
+    end
+    # Send ZenDesk ticket with user/project info and submission description.
+    send_project_submission(current_user.name || '', current_user.username || '', project_type, channel_id, submission_description)
   end
 
   def can_publish_age_status
@@ -585,20 +647,23 @@ class ProjectsController < ApplicationController
     owner_info['name'] = User.find_channel_owner(src_channel_id).try(:username)
     project_info['is_featured_project'] = FeaturedProject.exists?(storage_app_id: project_info['id'])
 
+    project = Project.find_by_channel_id(src_channel_id)
     remix_ancestry = Projects.remix_ancestry(src_channel_id, depth: 5)
     project_info['remix_ancestry'] = []
-    project_type = Project.find_by_channel_id(src_channel_id)['project_type']
+    project_type = project.project_type
     if remix_ancestry.present?
       remix_ancestry.each do |channel_id|
         project_info['remix_ancestry'] << "/projects/#{project_type}/#{channel_id}/view"
       end
     end
     if project_info['is_featured_project']
-      project = FeaturedProject.find_by project_id: project_info['id']
-      project_info['featured_status'] = project.status
+      featured_project = FeaturedProject.find_by project_id: project_info['id']
+      project_info['featured_status'] = featured_project.status
     else
       project_info['featured_status'] = 'n/a'
     end
+    project_info['abuse_score'] = project['abuse_score']
+    project_info['is_published_project'] = project['published_at'] ? 'yes' : 'no'
     return render json: {owner_info: owner_info, project_info: project_info}
   end
 
@@ -695,5 +760,52 @@ class ProjectsController < ApplicationController
     if sharing == true
       view_options(responsive_content: true)
     end
+  end
+
+  # Temporary - will be replaced with storing in database.
+  private def send_project_submission(name, username, project_type, channel_id, description)
+    unless Rails.env.development? || Rails.env.test?
+      subject = 'Featured project gallery submission'
+      response = HTTParty.post(
+        'https://codeorg.zendesk.com/api/v2/tickets.json',
+        headers: {"Content-Type" => "application/json", "Accept" => "application/json"},
+        body: {
+          ticket: {
+            requester: {
+              name: username
+            },
+            subject: subject,
+            comment: {
+              body: [
+                "name: #{name}",
+                "user name: #{username}",
+                "project url: https://studio.code.org/projects/#{project_type}/#{channel_id}",
+                "project description: #{description}",
+                "project type: #{project_type}"
+              ].join("\n")
+            },
+            tags: ['project_submission', project_type]
+          }
+        }.to_json,
+        basic_auth: {username: 'dev@code.org/token', password: Dashboard::Application.config.zendesk_dev_token}
+      )
+      raise ZendeskError.new(response.code, response.body) unless response.success?
+    end
+  end
+end
+
+# Temporary - will be removed once project submission is stored in database.
+class ZendeskError < StandardError
+  attr_reader :error_details
+
+  def initialize(code, error_details)
+    @error_details = error_details
+    super("Zendesk failed with response code: #{code}")
+  end
+
+  def to_honeybadger_context
+    {
+      details: JSON.parse(@error_details)
+    }
   end
 end

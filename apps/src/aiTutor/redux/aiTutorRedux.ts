@@ -1,11 +1,12 @@
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
 import _ from 'lodash';
 
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 
+import {initialAssistantGreeting} from '../constants';
 import {savePromptAndResponse} from '../interactionsApi';
 import {
-  Role,
   AITutorInteractionStatus as Status,
   ChatCompletionMessage,
   Level,
@@ -21,12 +22,13 @@ export interface AITutorState {
   chatMessages: ChatCompletionMessage[];
   isWaitingForChatResponse: boolean;
   isChatOpen: boolean;
+  showSuggestedPrompts: boolean;
 }
 
 const initialChatMessages: ChatCompletionMessage[] = [
   {
     role: Role.ASSISTANT,
-    chatMessageText: "Hi! I'm your AI Tutor.",
+    chatMessageText: initialAssistantGreeting,
     status: Status.OK,
   },
 ];
@@ -38,6 +40,7 @@ const initialState: AITutorState = {
   chatMessages: initialChatMessages,
   isWaitingForChatResponse: false,
   isChatOpen: false,
+  showSuggestedPrompts: false,
 };
 
 export const formatQuestionForAITutor = (chatContext: ChatContext) => {
@@ -66,6 +69,7 @@ const formatResponseForStudent = (response: string) => {
 export const askAITutor = createAsyncThunk(
   'aitutor/askAITutor',
   async (chatContext: ChatContext, thunkAPI) => {
+    thunkAPI.dispatch(setIsWaitingForChatResponse(true));
     const state = thunkAPI.getState();
     const aiTutorState = state as {aiTutor: AITutorState};
     const levelContext = {
@@ -84,7 +88,9 @@ export const askAITutor = createAsyncThunk(
     const formattedQuestion = formatQuestionForAITutor(chatContext);
     // We currently use the default system prompt stored on the server,
     // so don't pass in an override here.
-    const systemPrompt = undefined;
+    const systemPrompt = !!chatContext.systemPrompt
+      ? chatContext.systemPrompt
+      : undefined;
     const chatApiResponse = await getChatCompletionMessage(
       formattedQuestion,
       storedMessages,
@@ -92,6 +98,7 @@ export const askAITutor = createAsyncThunk(
       levelContext.levelId,
       levelContext.scriptId
     );
+    thunkAPI.dispatch(setIsWaitingForChatResponse(false));
     thunkAPI.dispatch(
       updateLastChatMessage({
         status: chatApiResponse.status,
@@ -130,6 +137,11 @@ const aiTutorSlice = createSlice({
       state.aiResponse = action.payload;
     },
     setLevel: (state, action: PayloadAction<Level | undefined>) => {
+      if (state.level?.id !== action.payload?.id) {
+        // Reset chat if the level changes (e.g. when switching levels without a page reload)
+        state.chatMessages = initialChatMessages;
+        state.isChatOpen = false;
+      }
       state.level = action.payload;
     },
     setScriptId: (state, action: PayloadAction<number | undefined>) => {
@@ -160,18 +172,9 @@ const aiTutorSlice = createSlice({
     setIsChatOpen: (state, action: PayloadAction<boolean>) => {
       state.isChatOpen = action.payload;
     },
-  },
-  extraReducers: builder => {
-    builder.addCase(askAITutor.fulfilled, state => {
-      state.isWaitingForChatResponse = false;
-    });
-    builder.addCase(askAITutor.rejected, (state, action) => {
-      state.isWaitingForChatResponse = false;
-      console.error(action.error);
-    });
-    builder.addCase(askAITutor.pending, state => {
-      state.isWaitingForChatResponse = true;
-    });
+    setShowSuggestedPrompts: (state, action: PayloadAction<boolean>) => {
+      state.showSuggestedPrompts = action.payload;
+    },
   },
 });
 
@@ -185,4 +188,5 @@ export const {
   setIsWaitingForChatResponse,
   updateLastChatMessage,
   setIsChatOpen,
+  setShowSuggestedPrompts,
 } = aiTutorSlice.actions;

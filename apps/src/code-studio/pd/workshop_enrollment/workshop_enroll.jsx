@@ -4,29 +4,34 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {COURSE_BUILD_YOUR_OWN} from '../workshop_dashboard/workshopConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {navigateToHref} from '@cdo/apps/utils';
 
+import {SUBMISSION_STATUSES} from './constants';
 import EnrollForm from './enroll_form';
 import {WorkshopPropType, FacilitatorPropType} from './enrollmentConstants';
 import FacilitatorBio from './facilitator_bio';
 import WorkshopDetails from './workshop_details';
 
-const SUBMISSION_STATUSES = {
-  UNSUBMITTED: 'unsubmitted',
-  DUPLICATE: 'duplicate',
-  OWN: 'own',
-  CLOSED: 'closed',
-  FULL: 'full',
-  NOT_FOUND: 'not found',
-  SUCCESS: 'success',
-  UNKNOWN_ERROR: 'error',
-};
+export const sessionCalendarShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  start: PropTypes.string.isRequired,
+  end: PropTypes.string.isRequired,
+  is_local: PropTypes.bool.isRequired,
+  session_format: PropTypes.string.isRequired,
+  location_address: PropTypes.string,
+  meeting_link: PropTypes.string,
+  description: PropTypes.string,
+  notes: PropTypes.string,
+});
 
 export default class WorkshopEnroll extends React.Component {
   static propTypes = {
     user_id: PropTypes.number.isRequired,
     workshop: WorkshopPropType,
     session_dates: PropTypes.arrayOf(PropTypes.string),
+    session_info_for_calendar: PropTypes.arrayOf(sessionCalendarShape),
     enrollment: PropTypes.shape({
       email: PropTypes.string,
       first_name: PropTypes.string,
@@ -36,40 +41,39 @@ export default class WorkshopEnroll extends React.Component {
     workshop_enrollment_status: PropTypes.string,
     previous_courses: PropTypes.arrayOf(PropTypes.string).isRequired,
     collect_demographics: PropTypes.bool,
+    school_info: PropTypes.shape({
+      country: PropTypes.string,
+      school_id: PropTypes.string,
+      school_name: PropTypes.string,
+      school_type: PropTypes.string,
+      school_zip: PropTypes.string,
+    }),
   };
 
   constructor(props) {
     super(props);
 
-    if (this.props.workshop.course === COURSE_BUILD_YOUR_OWN) {
-      this.skipEnrollForm();
+    const workshopTitle = props.workshop.name
+      ? props.workshop.name
+      : `a ${props.workshop.course}`;
+    let workshopEnrollTitle = `Register for ${workshopTitle}`;
+    if (!workshopTitle.toLowerCase().endsWith('workshop')) {
+      workshopEnrollTitle += ' workshop';
     }
 
     this.state = {
+      workshopEnrollTitle: workshopEnrollTitle,
       workshopEnrollmentStatus:
         this.props.workshop_enrollment_status ||
         SUBMISSION_STATUSES.UNSUBMITTED,
     };
-  }
 
-  skipEnrollForm = () => {
-    const postParams = {
-      user_id: this.props.user_id,
-      first_name: this.props.enrollment.first_name,
-      last_name: this.props.enrollment.last_name,
-      email: this.props.enrollment.email,
-      previous_courses: this.props.previous_courses,
-    };
-    this.submitRequest = $.ajax({
-      method: 'POST',
-      url: `/api/v1/pd/workshops/${this.props.workshop.id}/enrollments`,
-      contentType: 'application/json',
-      data: JSON.stringify(postParams),
-      complete: result => {
-        this.onSubmissionComplete(result);
-      },
-    });
-  };
+    analyticsReporter.sendEvent(
+      EVENTS.WORKSHOP_ENROLLMENT_PAGE_VISITED_EVENT,
+      {source: 'workshop enroll'},
+      PLATFORMS.BOTH
+    );
+  }
 
   onSubmissionComplete = result => {
     if (result) {
@@ -153,10 +157,24 @@ export default class WorkshopEnroll extends React.Component {
   renderSuccess() {
     // Redirect to My PL landing page. The WORKSHOP_ENROLLMENT_COMPLETED_EVENT event will be logged
     // on that page since event logs immediately followed by redirects sometimes do not fire.
-    const rpName = this.props.workshop.regional_partner?.name;
-    const wsCourse = this.props.workshop.course;
-    const wsSubject = this.props.workshop.subject;
-    window.location.href = `/my-professional-learning?rpName=${rpName}&wsCourse=${wsCourse}&wsSubject=${wsSubject}`;
+    sessionStorage.setItem(
+      'rpName',
+      this.props.workshop.regional_partner?.name || ''
+    );
+    sessionStorage.setItem('workshopId', this.props.workshop.id);
+    sessionStorage.setItem('workshopCourse', this.props.workshop.course);
+    sessionStorage.setItem(
+      'workshopSubject',
+      this.props.workshop.subject || ''
+    );
+    sessionStorage.setItem('workshopName', this.props.workshop.name || '');
+    sessionStorage.setItem('workshopFormat', this.props.workshop.format);
+    sessionStorage.setItem(
+      'sessionTimeInfo',
+      JSON.stringify(this.props.session_info_for_calendar)
+    );
+
+    navigateToHref('/my-professional-learning');
   }
 
   render() {
@@ -176,7 +194,7 @@ export default class WorkshopEnroll extends React.Component {
       default:
         return (
           <div>
-            <h1>{`Register for a ${this.props.workshop.course} workshop`}</h1>
+            <h1>{this.state.workshopEnrollTitle}</h1>
             <p>
               Taught by Code.org facilitators who are experienced computer
               science educators, our workshops will prepare you to teach the
@@ -208,11 +226,13 @@ export default class WorkshopEnroll extends React.Component {
                         workshop_id={this.props.workshop.id}
                         workshop_course={this.props.workshop.course}
                         first_name={this.props.enrollment.first_name}
+                        last_name={this.props.enrollment.last_name}
                         email={this.props.enrollment.email}
                         onSubmissionComplete={this.onSubmissionComplete}
                         workshop_subject={this.props.workshop.subject}
                         previous_courses={this.props.previous_courses}
                         collect_demographics={this.props.collect_demographics}
+                        school_info={this.props.school_info}
                       />
                     </div>
                   </div>

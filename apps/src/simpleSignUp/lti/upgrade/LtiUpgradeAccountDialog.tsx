@@ -70,6 +70,7 @@ export const LtiUpgradeAccountDialog = ({
     }
 
     return (
+      // eslint-disable-next-line react/forbid-dom-props
       <div data-testid="lti-upgrade-account">
         <h2 style={styles.dialogHeader}>
           {i18n.ltiUpgradeAccountDialogTitle()}

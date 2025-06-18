@@ -1,10 +1,12 @@
-- artist_index = 4
-
-- artist_photo = ["/images/music-lab/tinashe.png", "/images/music-lab/aloe-blacc.png", "/images/music-lab/rosa-linn.png", "/images/music-lab/chainsmokers.png"]
-
-- artist_alt_text = ["Tinashe", "Aloe Blacc", "Rosa Linn", "The Chainsmokers"]
+:ruby
+  artists = [
+    {image: '/images/music-lab/sabrina-carpenter.png', alt_text: 'Sabrina Carpenter'},
+    {image: '/images/music-lab/shakira.png', alt_text: 'Shakira'},
+    {image: '/images/music-lab/benson-boone.png', alt_text: 'Benson Boone'},
+    {image: '/images/music-lab/henry-moodie.png', alt_text: 'Henry Moodie'},
+  ]
 
 %ul.featured-artists.clear-styles.flex-container.justify-space-between.wrap
-  - artist_index.times do |index|
+  - artists.each do |artist|
     %li
-      %img{src: artist_photo[index], alt: artist_alt_text[index]}
+      %img{src: artist[:image], alt: artist[:alt_text]}

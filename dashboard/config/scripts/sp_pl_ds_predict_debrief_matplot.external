@@ -5,19 +5,29 @@ description 'description here'
 markdown <<MARKDOWN
 # Debriefing Predict and Run
 
+<img src="https://images.code.org/7c64e7eb7f399ddd871549e1874cb845-image-1732118690522.png" alt="Python code snippit using matplotlib" width="550px" style="display: block; margin-left: auto; margin-right: auto;">
+
+<img src="https://images.code.org/fee63fd0e5ad5d4734a8fe28cc69edb7-image-1727886727528.png" alt="notice emoji" width="80px" style="border-radius:10px; float:left; margin: 1px 1px 1px 0px;transform: scaleX(-1)">
 
 ## You might have noticed:
-<img src="https://images.code.org/fee63fd0e5ad5d4734a8fe28cc69edb7-image-1727886727528.png" alt="notice emoji" width="250px" style="border-radius:10px; float:right; margin: 0 40px 0px 0px;">
+
+<div style="clear:both;"></div>
 
 - #### The code creates a line chart based on the label "date" or "line style."
 - #### The line in the chart will be "blue."
 - #### The line chart has a title and axis labels.
-- #### The code mentions [type=bar], indicating the creation of a bar chart.
-- #### The bar chart does not yet have a title or axis labels, unlike the line chart.
+- #### The code mentions *plt.bar*, indicating the creation of a bar chart.
+
+<div style="clear:both;"></div>
+<br>
+
+<img src="https://images.code.org/faca492bd8cc0621808c9dfba040ba02-image-1732118423807.png" alt="Python code snippit using matplotlib" width="550px" style="display: block; margin-left: auto; margin-right: auto;">
+
+<img src="https://images.code.org/848c3672cf46fce0d2e63eb58f7580e3-image-1727886614718.png" alt="wonder emoji" width="45px" style="border-radius:10px; float:left; margin: 15px 15px 10px 15px;transform: scaleX(-1)">
 
 ## You might Wonder: 
 
-<img src="https://images.code.org/848c3672cf46fce0d2e63eb58f7580e3-image-1727886614718.png" alt="notice emoji" width="130px" style="border-radius:10px; float:right; margin: 0 90px 0px 0px;">
+<div style="clear:both;"></div>
 
 - #### Why the code doesn't explicitly state that it creates a line chart.
 - #### Why the bar chart lacks a title and axis labels.
@@ -34,8 +44,7 @@ markdown <<MARKDOWN
 </p>
 </div>
 
-##Let's continue to the **Investigate & Modify** levels.
-
+##Let's continue to the *Investigate & Modify* levels.
 
 
 MARKDOWN

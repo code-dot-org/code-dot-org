@@ -1,15 +1,21 @@
 @import 'color.scss';
-@import '@cdo/apps/componentLibrary/typography/typography.module';
+@import 'font.scss';
+@import '@code-dot-org/component-library-styles/typography.module';
 
 $message-border-radius: 8px;
 $user-color: $light_gray_100;
 $assistant-color: $brand_primary_light;
+$bot-container-size: 32px;
+$icon-message-gap: 8px;
+$icon-overlay-padding-right: 8px;
 
 %message {
   @extend %markdown-styles;
+  display: flex;
   padding: 12px;
-  overflow: hidden;
-  white-space: pre-line;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
   border-start-start-radius: $message-border-radius;
   border-start-end-radius: $message-border-radius;
 }
@@ -46,6 +52,12 @@ $assistant-color: $brand_primary_light;
   }
 }
 
+.messageWithChildren {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .message-user {
   @extend %message;
   background-color: $user_color;
@@ -61,9 +73,25 @@ $assistant-color: $brand_primary_light;
   overflow-x: auto;
 }
 
+%message-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.message-container-assistant {
+  @extend %message-container;
+  justify-content: flex-start;
+}
+
+.message-container-user {
+  @extend %message-container;
+  justify-content: flex-end;
+}
+
 %container {
   display: flex;
-  gap: 8px;
+  flex-direction: row;
+  gap: $icon-message-gap;
 }
 
 .container-assistant {
@@ -77,25 +105,64 @@ $assistant-color: $brand_primary_light;
   justify-content: flex-end;
 }
 
-.userProfaneMessageButton {
-  width: 120px;
-  margin-top: -10px;
-}
-
 .botIconContainer {
-  flex: 0 0 32px;
-  height: 32px;
-  background: $assistant-color;
+  flex: 0 0 $bot-container-size;
+  height: $bot-container-size;
+  width: $bot-container-size;
+  background: $light-black;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 8px;
+}
+
+.botIconContainerWithOverlay {
+  position: relative;
+  display: flex;
+  padding-right: $icon-overlay-padding-right;
+  padding-top: 3px;
+}
+
+.footer {
+  margin-left: $bot-container-size + $icon-message-gap;
+}
+
+.footerWithOverlay {
+  margin-left: $bot-container-size + $icon-message-gap + $icon-overlay-padding-right;
 }
 
 .botIcon {
-  width: 19.25px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   flex-shrink: 0;
+}
+
+.botOverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  padding: 2px 3px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 58px;
+  background: $ai_rubric_cyan;
+  border-width: 1px;
+  border-color: $background_gray;
+  border-style: solid;
+
+  span {
+    @include main-font-medium;
+    color: $light-black;
+    font-size: 8px;
+    font-style: normal;
+    line-height: 100%;
+    text-transform: uppercase;
+    p {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .danger {

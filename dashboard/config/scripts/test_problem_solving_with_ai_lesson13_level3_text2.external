@@ -1,0 +1,13 @@
+name 'test-problem-solving-with-ai-lesson13-level3-text2'
+title 'Initial Predictions'
+description 'description here'
+
+markdown <<MARKDOWN
+#### Discuss the following questions:
+- #### Does AI’s prediction feel believable? Why or why not?
+- #### What supporting evidence or perspectives could strengthen this prediction?
+- #### What ethical concerns, if any, does this prediction raise?
+
+
+
+MARKDOWN

@@ -16,6 +16,7 @@
           "key": "96261a6a-6742-48e0-ab85-c8fcc3b83a95"
         }
       ],
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSA",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -28,7 +29,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-09-02 07:30:59 UTC",
+    "serialized_at": "2024-11-19 01:14:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

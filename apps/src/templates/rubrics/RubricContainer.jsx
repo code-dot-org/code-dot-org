@@ -1,10 +1,10 @@
+import {Heading6} from '@code-dot-org/component-library/typography';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useCallback, useEffect, useState, useRef} from 'react';
 import Draggable from 'react-draggable';
 import {connect} from 'react-redux';
 
-import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -23,7 +23,10 @@ import {
 } from './rubricShapes';
 import RubricSubmitFooter from './RubricSubmitFooter';
 import RubricTabButtons from './RubricTabButtons';
-import {loadAllTeacherEvaluationData} from './teacherRubricRedux';
+import {
+  loadAllTeacherEvaluationData,
+  loadAiEvalStatusForAll,
+} from './teacherRubricRedux';
 
 import style from './rubrics.module.scss';
 
@@ -39,14 +42,14 @@ function RubricContainer({
   rubric,
   studentLevelInfo,
   teacherHasEnabledAi,
-  currentLevelName,
+  onLevelForEvaluation,
   reportingData,
   open,
   closeRubric,
   sectionId,
   loadAllTeacherEvaluationData,
+  loadAiEvalStatusForAll,
 }) {
-  const onLevelForEvaluation = currentLevelName === rubric.level.name;
   const canProvideFeedback = !!studentLevelInfo && onLevelForEvaluation;
   const rubricTabSessionKey = 'rubricFABTabSessionKey';
   const rubricPositionX = 'rubricFABPositionX';
@@ -113,35 +116,11 @@ function RubricContainer({
     }
   }, [rubricId, sectionId, loadAllTeacherEvaluationData]);
 
-  const [aiEvalStatusCounters, setAiEvalStatusCounters] = useState(null);
-  const [aiEvalStatusMap, setAiEvalStatusMap] = useState(null);
-
-  const fetchAiEvaluationStatusAll = (rubricId, sectionId) => {
-    return fetch(
-      `/rubrics/${rubricId}/ai_evaluation_status_for_all?section_id=${sectionId}`
-    );
-  };
-
   useEffect(() => {
     if (!!rubricId && !!sectionId) {
-      fetchAiEvaluationStatusAll(rubricId, sectionId).then(response => {
-        if (response.ok) {
-          response.json().then(data => {
-            setAiEvalStatusMap(data?.aiEvalStatusMap);
-            delete data.aiEvalStatusMap;
-            setAiEvalStatusCounters(data);
-          });
-        }
-      });
+      loadAiEvalStatusForAll({rubricId, sectionId});
     }
-  }, [rubricId, sectionId]);
-
-  const updateAiEvalStatusForUser = (userId, status) => {
-    setAiEvalStatusMap({
-      ...aiEvalStatusMap,
-      [userId]: status,
-    });
-  };
+  }, [rubricId, sectionId, loadAiEvalStatusForAll]);
 
   useEffect(() => {
     trySetSessionStorage(rubricTabSessionKey, selectedTab);
@@ -287,11 +266,11 @@ function RubricContainer({
       handle=".ai-rubric-handle"
     >
       <div
+        // eslint-disable-next-line react/forbid-dom-props
         data-testid="draggable-test-id"
         id="draggable-id"
-        className={classnames(style.rubricContainer, {
-          [style.hiddenRubricContainer]: !open,
-        })}
+        className={style.rubricContainer}
+        style={open ? null : {display: 'none'}}
       >
         <Steps
           enabled={canProvideFeedback && productTour && teacherHasEnabledAi}
@@ -315,6 +294,7 @@ function RubricContainer({
         />
         <div
           className={classnames(style.rubricHeaderRedesign, 'ai-rubric-handle')}
+          // eslint-disable-next-line react/forbid-dom-props
           data-testid="ai-rubric-handle-test-id"
         >
           <div className={style.rubricHeaderLeftSide}>
@@ -358,7 +338,6 @@ function RubricContainer({
             refreshAiEvaluations={fetchAiEvaluations}
             rubric={rubric}
             studentName={studentLevelInfo && studentLevelInfo.name}
-            updateAiEvalStatusForUser={updateAiEvalStatusForUser}
           />
           <RubricContent
             productTour={productTour}
@@ -386,7 +365,6 @@ function RubricContainer({
             feedbackAdded={feedbackAdded}
             setFeedbackAdded={setFeedbackAdded}
             sectionId={sectionId}
-            aiEvalStatusMap={aiEvalStatusMap}
           />
           {showSettings && (
             <RubricSettings
@@ -396,8 +374,6 @@ function RubricContainer({
               sectionId={sectionId}
               tabSelectCallback={tabSelectCallback}
               reportingData={reportingData}
-              aiEvalStatusCounters={aiEvalStatusCounters}
-              setAiEvalStatusMap={setAiEvalStatusMap}
             />
           )}
         </div>
@@ -421,18 +397,22 @@ RubricContainer.propTypes = {
   reportingData: reportingDataShape,
   studentLevelInfo: studentLevelInfoShape,
   teacherHasEnabledAi: PropTypes.bool,
-  currentLevelName: PropTypes.string,
+  onLevelForEvaluation: PropTypes.bool,
   closeRubric: PropTypes.func,
   open: PropTypes.bool,
   sectionId: PropTypes.number,
 
   // Redux provided
   loadAllTeacherEvaluationData: PropTypes.func,
+  loadAiEvalStatusForAll: PropTypes.func,
 };
 
 export default connect(null, dispatch => ({
   loadAllTeacherEvaluationData(params) {
     dispatch(loadAllTeacherEvaluationData(params));
+  },
+  loadAiEvalStatusForAll(params) {
+    dispatch(loadAiEvalStatusForAll(params));
   },
 }))(RubricContainer);
 

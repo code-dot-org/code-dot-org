@@ -1,0 +1,32 @@
+name 'sp-pl-DS_cfu-answerExplain'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Check for Understanding 
+
+## Reviewing Lists 
+
+#### Let's take a look at the code from the previous **Check for Understanding** level.
+#### The question asks for the output of the code when you print the variable `message`.
+<img src="https://images.code.org/f941fe9b61009ec613f5487d5636a4f5-image-1732033355941.png" alt="code for declaring a list with a chart of example" width="350px" style="display: block; float:left;">
+
+<div style="clear:both;"></div>
+
+## Index
+#### Index 1 was assigned to the variable `favorite`.
+#### The value stored in `favorite` was then called or accessed in the `message` string, which was subsequently printed.  
+#### Remember, lists are always indexed starting at zero (0). 
+
+<img src="https://images.code.org/d7af1e2812041818ae6613d39fa038e5-image-1732034114419.png" alt="graph of element count and index for python" width="350px" style="display: block; float:left;">
+
+<div style="clear:both;"></div>
+
+#### Therefore, the answer to the question is **My favorite fruit is banana!**
+
+
+
+## Now, let's move on to *Practice* or *Choice* levels.
+
+
+MARKDOWN

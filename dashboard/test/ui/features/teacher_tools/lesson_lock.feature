@@ -2,11 +2,12 @@
 Feature: Lesson Locking
 
 @eyes
+@properties_encryption_key
 Scenario: Stage Locking Dialog
   Given I create an authorized teacher-associated student named "bobby"
   When I open my eyes to test "stage locking"
   Then I sign in as "Teacher_bobby"
-  Then I am on "http://studio.code.org/s/allthethings"
+  Then I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   And I see no difference for "selected section"
   Then I open the lesson lock dialog
   And I see no difference for "stage lock dialog"
@@ -16,12 +17,13 @@ Scenario: Stage Locking Dialog
   And I see no difference for "course overview for authorized teacher"
   And I close my eyes
 
+@properties_encryption_key
 Scenario: Readonly view does not show teacher only boxes
   Given I create an authorized teacher-associated student named "bobby"
 
   # teacher marks readonly
   And I sign in as "Teacher_bobby"
-  And I am on "http://studio.code.org/s/allthethings"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the lesson lock dialog for lockable lesson 3
@@ -32,34 +34,35 @@ Scenario: Readonly view does not show teacher only boxes
   # now unlocked/submitted for student
 
   When I sign in as "bobby"
-  And I am on "http://studio.code.org/s/allthethings"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   Then I verify the lesson named "Example CSP Assessment" is unlocked
-  Then I verify progress for lesson 47 level 1 is "not_tried" without waiting
-  Then I verify progress for lesson 47 level 2 is "not_tried" without waiting
-  Then I verify progress for lesson 47 level 3 is "not_tried" without waiting
+  Then I verify progress for lesson 47 level 1 is "not_tried"
+  Then I verify progress for lesson 47 level 2 is "not_tried"
+  Then I verify progress for lesson 47 level 3 is "not_tried"
 
-  When I am on "http://studio.code.org/s/allthethings/lockable/3/levels/1/page/3"
+  When I am on "http://studio.code.org/courses/allthethingscourse/units/1/lockable/3/levels/1/page/3"
   And I wait until element "h2:contains(CS Principles Unit 1 Assessment)" is visible
   Then element "h3:contains(Answer)" is visible
   Then element "h3:contains(For Teacher Only)" is not visible
   Then element ".previousPageButton" is visible
 
+@properties_encryption_key
 Scenario: Lock settings for students in survey
   Given I create an authorized teacher-associated student named "bobby"
 
   # initially locked for student in summary view
 
-  When I am on "http://studio.code.org/s/allthethings"
+  When I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   Then I verify the lesson named "Anonymous student survey 2" is locked
 
-  When I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/1"
+  When I am on "http://studio.code.org/courses/allthethingscourse/units/1/lockable/1/levels/1/page/1"
   And I wait until element "#level-body" is visible
   Then element "#locked-lesson:contains(lesson is currently locked)" is visible
 
   # teacher unlocks
 
   And I sign in as "Teacher_bobby"
-  And I am on "http://studio.code.org/s/allthethings"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the lesson lock dialog
@@ -69,30 +72,30 @@ Scenario: Lock settings for students in survey
   # now unlocked/not tried for student
 
   When I sign in as "bobby"
-  And I am on "http://studio.code.org/s/allthethings"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   Then I verify the lesson named "Anonymous student survey 2" is unlocked
-  Then I verify progress for lesson 31 level 1 is "not_tried" without waiting
-  Then I verify progress for lesson 31 level 2 is "not_tried" without waiting
-  Then I verify progress for lesson 31 level 3 is "not_tried" without waiting
-  Then I verify progress for lesson 31 level 4 is "not_tried" without waiting
+  Then I verify progress for lesson 31 level 1 is "not_tried"
+  Then I verify progress for lesson 31 level 2 is "not_tried"
+  Then I verify progress for lesson 31 level 3 is "not_tried"
+  Then I verify progress for lesson 31 level 4 is "not_tried"
 
   # student submits
 
-  When I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/4"
+  When I am on "http://studio.code.org/courses/allthethingscourse/units/1/lockable/1/levels/1/page/4"
   And I click selector ".submitButton" once I see it
   And I wait to see a dialog titled "Submit your survey"
   And I press "ok-button"
-  And I wait until current URL contains "/s/allthethings/lessons/31/levels/1"
+  And I wait until current URL contains "/courses/allthethingscourse/units/1/lessons/31/levels/1"
 
   # now locked for student
 
-  When I am on "http://studio.code.org/s/allthethings"
+  When I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   Then I verify the lesson named "Anonymous student survey 2" is locked
 
   # teacher marks readonly
 
   And I sign in as "Teacher_bobby"
-  And I am on "http://studio.code.org/s/allthethings"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the lesson lock dialog
@@ -102,34 +105,35 @@ Scenario: Lock settings for students in survey
   # now unlocked/submitted for student
 
   When I sign in as "bobby"
-  And I am on "http://studio.code.org/s/allthethings"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   Then I verify the lesson named "Anonymous student survey 2" is unlocked
-  Then I verify progress for lesson 31 level 1 is "not_tried" without waiting
-  Then I verify progress for lesson 31 level 2 is "not_tried" without waiting
-  Then I verify progress for lesson 31 level 3 is "not_tried" without waiting
-  Then I verify progress for lesson 31 level 4 is "not_tried" without waiting
+  Then I verify progress for lesson 31 level 1 is "not_tried"
+  Then I verify progress for lesson 31 level 2 is "not_tried"
+  Then I verify progress for lesson 31 level 3 is "not_tried"
+  Then I verify progress for lesson 31 level 4 is "not_tried"
 
-  When I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/4"
+  When I am on "http://studio.code.org/courses/allthethingscourse/units/1/lockable/1/levels/1/page/4"
   And I wait until element "h2:contains(Pre-survey)" is visible
   Then element "h3:contains(Answer)" is visible
   Then element ".previousPageButton" is visible
 
+@properties_encryption_key
 Scenario: Lock settings for students who never submit
   Given I create an authorized teacher-associated student named "billy"
 
   # initially locked for student in summary view
 
-  When I am on "http://studio.code.org/s/allthethings"
+  When I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   Then I verify the lesson named "Anonymous student survey 2" is locked
 
-  When I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/1"
+  When I am on "http://studio.code.org/courses/allthethingscourse/units/1/lockable/1/levels/1/page/1"
   And I wait until element "#level-body" is visible
   Then element "#locked-lesson:contains(lesson is currently locked)" is visible
 
   # teacher unlocks
 
   And I sign in as "Teacher_billy"
-  And I am on "http://studio.code.org/s/allthethings"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the lesson lock dialog
@@ -139,17 +143,17 @@ Scenario: Lock settings for students who never submit
   # now unlocked/not tried for student
 
   When I sign in as "billy"
-  And I am on "http://studio.code.org/s/allthethings"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   Then I verify the lesson named "Anonymous student survey 2" is unlocked
-  Then I verify progress for lesson 31 level 1 is "not_tried" without waiting
-  Then I verify progress for lesson 31 level 2 is "not_tried" without waiting
-  Then I verify progress for lesson 31 level 3 is "not_tried" without waiting
-  Then I verify progress for lesson 31 level 4 is "not_tried" without waiting
+  Then I verify progress for lesson 31 level 1 is "not_tried"
+  Then I verify progress for lesson 31 level 2 is "not_tried"
+  Then I verify progress for lesson 31 level 3 is "not_tried"
+  Then I verify progress for lesson 31 level 4 is "not_tried"
 
   # student does not submit assessment before teacher switches to readonly 
 
   And I sign in as "Teacher_billy"
-  And I am on "http://studio.code.org/s/allthethings"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the lesson lock dialog
@@ -159,9 +163,9 @@ Scenario: Lock settings for students who never submit
   # now unlocked/not submitted for student
 
   When I sign in as "billy"
-  And I am on "http://studio.code.org/s/allthethings"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   Then I verify the lesson named "Anonymous student survey 2" is unlocked
-  Then I verify progress for lesson 31 level 1 is "not_tried" without waiting
-  Then I verify progress for lesson 31 level 2 is "not_tried" without waiting
-  Then I verify progress for lesson 31 level 3 is "not_tried" without waiting
-  Then I verify progress for lesson 31 level 4 is "not_tried" without waiting
+  Then I verify progress for lesson 31 level 1 is "not_tried"
+  Then I verify progress for lesson 31 level 2 is "not_tried"
+  Then I verify progress for lesson 31 level 3 is "not_tried"
+  Then I verify progress for lesson 31 level 4 is "not_tried"

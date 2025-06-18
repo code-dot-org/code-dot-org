@@ -1,13 +1,13 @@
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-import React from 'react';
-
 import {
   Heading2,
   BodyOneText,
   BodyThreeText,
   BodyFourText,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@code-dot-org/component-library/typography';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import Button from '@cdo/apps/legacySharedComponents/Button';
 
 import styles from './twoColumnActionBlock.module.scss';
@@ -25,6 +25,7 @@ export default function TwoColumnActionBlock({
     <div
       id={id}
       className={styles.container}
+      // eslint-disable-next-line react/forbid-dom-props
       data-testid="two-column-action-block"
     >
       {heading && <Heading2>{heading}</Heading2>}
@@ -36,6 +37,7 @@ export default function TwoColumnActionBlock({
           src={imageUrl}
           alt=""
           className={styles.image}
+          // eslint-disable-next-line react/forbid-dom-props
           data-testid="two-column-action-block-img"
         />
         <div className={styles.contentWrapper}>

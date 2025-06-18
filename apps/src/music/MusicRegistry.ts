@@ -11,8 +11,11 @@ class MusicRegistry {
   private analyticsReporterRef: AnalyticsReporter | null = null;
 
   public showSoundFilters: boolean = false;
+  public showSoundsPanelInSoundsMode: boolean = false;
+  public sortUnrestrictedPacksByType: boolean = false;
   public hideAiTemperature: boolean = false;
   public showAiTemperatureExplanation: boolean = false;
+  public showAiGenerateAgainHelp: boolean = false;
 
   public get player(): MusicPlayer {
     if (!this.playerRef) {

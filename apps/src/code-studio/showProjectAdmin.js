@@ -70,9 +70,6 @@ export default project => {
     $('#admin-abuse-reset').click(function () {
       project.adminResetAbuseScore(0);
     });
-    $('#admin-abuse-buffer').click(function () {
-      project.adminResetAbuseScore(-50);
-    });
     var abusive = project.exceedsAbuseThreshold();
     if (sharingDisabled || privateOrProfane || abusive) {
       $('.blocked').show();

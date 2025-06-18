@@ -5,7 +5,10 @@ import ReactDOM from 'react-dom';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 
+import appConfig from '../appConfig';
+import {DEFAULT_PATTERN_LENGTH} from '../constants';
 import {generateGraphDataFromPattern} from '../utils/Patterns';
+import InstrumentGrid from '../views/InstrumentGrid';
 import PatternPanel from '../views/PatternPanel';
 
 const FIELD_WIDTH = 32;
@@ -24,6 +27,7 @@ class FieldPattern extends GoogleBlockly.Field {
     this.SERIALIZABLE = true;
     this.CURSOR = 'default';
     this.backgroundElement = null;
+    this.onValueChange = value => this.setValue(value);
   }
 
   saveState() {
@@ -35,6 +39,7 @@ class FieldPattern extends GoogleBlockly.Field {
       state.instrument = state.kit;
       delete state.kit;
     }
+    state.length ||= DEFAULT_PATTERN_LENGTH;
     this.setValue(state);
   }
 
@@ -96,7 +101,9 @@ class FieldPattern extends GoogleBlockly.Field {
     this.renderContent();
 
     this.newDiv_.style.color = color.neutral_light;
-    this.newDiv_.style.width = '420px';
+    if (appConfig.getValue('play-tune-block-drums') !== 'true') {
+      this.newDiv_.style.width = '420px';
+    }
     this.newDiv_.style.backgroundColor = color.dark_black;
     this.newDiv_.style.padding = '5px';
 
@@ -108,15 +115,26 @@ class FieldPattern extends GoogleBlockly.Field {
       return;
     }
 
-    ReactDOM.render(
-      <PatternPanel
-        initValue={this.getValue()}
-        onChange={value => {
-          this.setValue(value);
-        }}
-      />,
-      this.newDiv_
-    );
+    if (appConfig.getValue('play-tune-block-drums') === 'true') {
+      ReactDOM.render(
+        <InstrumentGrid
+          editorType="drums"
+          // Make a copy of the value object so that we don't overwrite Blockly's data.
+          initialValue={JSON.parse(JSON.stringify(this.getValue()))}
+          onChange={this.onValueChange}
+          lengthMeasures={1}
+        />,
+        this.newDiv_
+      );
+    } else {
+      ReactDOM.render(
+        <PatternPanel
+          initValue={this.getValue()}
+          onChange={this.onValueChange}
+        />,
+        this.newDiv_
+      );
+    }
   }
 
   dropdownDispose_() {
@@ -171,10 +189,6 @@ class FieldPattern extends GoogleBlockly.Field {
     });
 
     this.renderContent();
-  }
-
-  getText() {
-    return this.getValue().kit;
   }
 
   updateSize_() {

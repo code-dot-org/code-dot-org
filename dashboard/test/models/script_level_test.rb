@@ -149,7 +149,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
       sl = create(:script_level, levels: [level], script: script)
 
       # Javalab levels should only have one example solution.
-      # Remove scheme (http v https) for assertion b/c these are inconsistent between drone and development
+      # Remove scheme (http v https) for assertion b/c these are inconsistent between CI and development
       # https://github.com/code-dot-org/code-dot-org/blob/986459ab24cb401efa567d0551f23fec6e3d6af3/config.yml.erb#L331
       example_solutions = sl.get_example_solutions(level, @authorized_teacher)
       parsed_url = URI(example_solutions.first)
@@ -167,7 +167,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
       sl = create :script_level, levels: [bubble_choice], script: script
 
       # Javalab levels should only have one example solution.
-      # Remove scheme (http v https) for assertion b/c these are inconsistent between drone and development
+      # Remove scheme (http v https) for assertion b/c these are inconsistent between CI and development
       # https://github.com/code-dot-org/code-dot-org/blob/986459ab24cb401efa567d0551f23fec6e3d6af3/config.yml.erb#L331
       example_solutions = sl.get_example_solutions(sublevel, @authorized_teacher)
       parsed_url = URI(example_solutions.first)
@@ -781,8 +781,13 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'next_level_or_redirect_path_for_user returns to next unit if at the end of the current self paced pl unit' do
+    unit_group = create :unit_group
     unit1 = create :unit
+    create :unit_group_unit, unit_group: unit_group, script: unit1, position: 1
     unit2 = create :unit
+    create :unit_group_unit, unit_group: unit_group, script: unit2, position: 2
+    unit1.reload
+    unit2.reload
     unit1.stubs(:pl_course?).returns true
     unit1.stubs(:next_unit).returns(unit2)
 
@@ -790,7 +795,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
     student = create :student
 
-    assert_equal "/s/#{unit2.name}", script_level.next_level_or_redirect_path_for_user(student)
+    assert_equal "/courses/#{unit_group.name}/units/2", script_level.next_level_or_redirect_path_for_user(student, unit_group_unit: unit1.unit_group_units.first)
   end
 
   test 'end of lesson' do

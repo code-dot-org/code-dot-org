@@ -49,6 +49,12 @@ describe('SchoolZipSearch', () => {
     expect(screen.getByText(i18n.zipInvalidMessage())).toBeInTheDocument();
   });
 
+  it('should display an error message when the zip code is 00000', () => {
+    renderDefault({schoolZip: '00000'});
+
+    expect(screen.getByText(i18n.zipInvalidMessage())).toBeInTheDocument();
+  });
+
   it('should not display an error message when the zip code is valid', () => {
     renderDefault({schoolZip: '12345'});
 

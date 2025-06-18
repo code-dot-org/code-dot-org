@@ -1,0 +1,39 @@
+name 'ea-fac-csaif_pl_lesson_overview_comp_think_L1_python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson 2: Computational Thinking
+ 
+#### This lesson explores key computational thinking concepts and how they connect to coding instruction.
+
+#### By understanding these concepts, you will build a **strong foundation for teaching programming** and discover strategies to help students develop problem-solving skills. 
+
+#### These concepts are weaved throughout all of the **Computer Science and AI Foundations** courses. You will see plugged and unplugged lessons on topics like decomposition, pattern recognition, abstraction, and algorithms.
+
+
+
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
+
+  <div>
+    <h4 style="margin-top: 0; font-weight: bold;">By the end of this lesson, you will:</h4>
+    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
+      <li>Understand core computational thinking concepts, including abstraction, decomposition, pattern recognition, and algorithms.
+</li><br>
+    <li> Explore how students apply computational thinking while learning to code.</li><br>
+        <li> Learn unplugged pedagogy strategies to make computational thinking more accessible and engaging.
+</li>
+    </ul>
+  </div>
+  <div>
+    <img src="https://images.code.org/d6a6ef0ecac37004a3c2438c9a9e674f-image-1741018469136.png" 
+         alt="Icon with gears symbolizing thinking" 
+         style="border-radius: 10px; width: 300px; height: auto;">
+  </div>
+</div>
+
+
+#### **Suggested Time:** 20 minutes
+
+
+MARKDOWN

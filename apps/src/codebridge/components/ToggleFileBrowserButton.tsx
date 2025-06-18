@@ -1,20 +1,17 @@
+import Button from '@code-dot-org/component-library/button';
+import {
+  TooltipProps,
+  WithTooltip,
+} from '@code-dot-org/component-library/tooltip';
 import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import Button from '@cdo/apps/componentLibrary/button';
-import {TooltipProps} from '@cdo/apps/componentLibrary/tooltip';
-import WithTooltip from '@cdo/apps/componentLibrary/tooltip/WithTooltip';
 
 import {useCodebridgeContext} from '../codebridgeContext';
-
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 /*
   This component will look to the `showFileBrowser` boolean in the config and flip it back and forth.
   If we're showing it, the icon is solid, and if not, the icon is regular.
-
-  If no `showFileBrowser` boolean is provided in the config, then this button will not render.
-
 */
 
 const ToggleFileBrowserButton: React.FunctionComponent = () => {
@@ -34,7 +31,6 @@ const ToggleFileBrowserButton: React.FunctionComponent = () => {
     direction: 'onRight',
     tooltipId: 'toggle-file-browser-tooltip',
     size: 'xs',
-    className: darkModeStyles.tooltipRight,
   };
 
   return (
@@ -46,12 +42,12 @@ const ToggleFileBrowserButton: React.FunctionComponent = () => {
             iconName: 'folder',
           }}
           isIconOnly
-          color={'white'}
           onClick={onClick}
           ariaLabel={codebridgeI18n.toggleFileBrowser()}
           size={'xs'}
           type={'tertiary'}
-          className={darkModeStyles.iconOnlyTertiaryButton}
+          aria-expanded={config.showFileBrowser}
+          color={'black'}
         />
       </WithTooltip>
     </span>

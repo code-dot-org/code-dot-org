@@ -30,6 +30,7 @@
           "key": "c218a443-86fe-414e-82bc-b6409f3573dc"
         }
       ],
+      "content_area": "curriculum_9_12",
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit6/{LESSON}",
       "curriculum_umbrella": "CSP",
       "has_verified_resources": true,
@@ -41,7 +42,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-28 14:31:33 UTC",
+    "serialized_at": "2024-11-19 01:16:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1313,6 +1314,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

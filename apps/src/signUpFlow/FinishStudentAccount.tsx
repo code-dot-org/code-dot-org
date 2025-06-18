@@ -1,20 +1,24 @@
-import classNames from 'classnames';
-import React, {useState, useEffect, useMemo} from 'react';
-
-import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
-import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
-import TextField from '@cdo/apps/componentLibrary/textField/TextField';
+import {Button, buttonColors} from '@code-dot-org/component-library/button';
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import CloseButton from '@code-dot-org/component-library/closeButton';
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import TextField from '@code-dot-org/component-library/textField';
 import {
   Heading2,
   BodyTwoText,
   BodyThreeText,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@code-dot-org/component-library/typography';
+import classNames from 'classnames';
+import cookies from 'js-cookie';
+import React, {useState, useEffect, useMemo} from 'react';
+
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {isEmail} from '@cdo/apps/util/formatValidation';
+import trackEvent from '@cdo/apps/util/trackEvent';
 import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {navigateToHref} from '../utils';
@@ -26,6 +30,8 @@ import {
   OAUTH_LOGIN_TYPE_SESSION_KEY,
   USER_RETURN_TO_SESSION_KEY,
   clearSignUpSessionStorage,
+  SIGN_UP_USER_TYPE,
+  MAX_DISPLAY_NAME_LENGTH,
 } from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
@@ -46,7 +52,7 @@ const FinishStudentAccount: React.FunctionComponent<{
   const [gender, setGender] = useState('');
 
   // Field errors
-  const [showNameError, setShowNameError] = useState(false);
+  const [nameErrorMessage, setNameErrorMessage] = useState<string | null>(null);
   const [showParentEmailError, setShowParentEmailError] = useState(false);
   const [showAgeError, setShowAgeError] = useState(false);
   const [showStateError, setShowStateError] = useState(false);
@@ -57,17 +63,32 @@ const FinishStudentAccount: React.FunctionComponent<{
   const [userReturnTo, setUserReturnTo] = useState('/home');
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorCreatingAccountMessage, setErrorCreatingAccountMessage] =
+    useState('');
+
+  // Remove oauth user_type cookie if it exists
+  cookies.remove(SIGN_UP_USER_TYPE);
 
   useEffect(() => {
     // If the user hasn't selected a user type or login type, redirect them back to the incomplete step of signup.
-    if (sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === null) {
-      navigateToHref('/users/new_sign_up/account_type');
+    if (
+      sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) !== UserTypes.STUDENT
+    ) {
+      navigateToHref('/users/sign_up/account_type');
     } else if (
       sessionStorage.getItem(EMAIL_SESSION_KEY) === null &&
       sessionStorage.getItem(OAUTH_LOGIN_TYPE_SESSION_KEY) === null
     ) {
-      navigateToHref('/users/new_sign_up/login_type');
+      navigateToHref(
+        `/users/sign_up/login_type?user_type=${UserTypes.STUDENT}`
+      );
     }
+
+    analyticsReporter.sendEvent(
+      EVENTS.FINISH_ACCOUNT_PAGE_LOADED,
+      {'user type': 'student'},
+      PLATFORMS.BOTH
+    );
 
     const fetchGdprData = async () => {
       const urlParams = new URLSearchParams(window.location.search);
@@ -111,9 +132,14 @@ const FinishStudentAccount: React.FunctionComponent<{
     analyticsReporter.sendEvent(
       EVENTS.PARENT_OR_GUARDIAN_SIGN_UP_CLICKED,
       {},
-      PLATFORMS.STATSIG
+      PLATFORMS.BOTH
     );
     const newIsParentCheckedChoice = !isParent;
+    // If the user unchecks the parent checkbox, clear the parent email field
+    if (!newIsParentCheckedChoice) {
+      setParentEmail('');
+      setShowParentEmailError(false);
+    }
     setIsParent(newIsParentCheckedChoice);
   };
 
@@ -134,10 +160,16 @@ const FinishStudentAccount: React.FunctionComponent<{
     const newName = e.target.value;
     setName(newName);
 
-    if (newName === '') {
-      setShowNameError(true);
+    if (newName.trim() === '') {
+      setNameErrorMessage(locale.display_name_error_message());
+    } else if (newName.length > MAX_DISPLAY_NAME_LENGTH) {
+      setNameErrorMessage(
+        locale.display_name_too_long_error_message({
+          maxLength: MAX_DISPLAY_NAME_LENGTH,
+        })
+      );
     } else {
-      setShowNameError(false);
+      setNameErrorMessage(null);
     }
   };
 
@@ -164,24 +196,33 @@ const FinishStudentAccount: React.FunctionComponent<{
   };
 
   const sendFinishEvent = (): void => {
+    // Log to Statsig and Amplitude
     analyticsReporter.sendEvent(
       EVENTS.SIGN_UP_FINISHED_EVENT,
       {
         'user type': 'student',
         'has school': false,
         'has marketing value selected': true,
-        'has display name': !showNameError,
+        'has display name': !nameErrorMessage,
       },
       PLATFORMS.BOTH
     );
+
+    // Log to Google Analytics
+    trackEvent('sign_up', 'sign_up_success', {
+      value: 'student',
+    });
   };
 
   const submitStudentAccount = async () => {
-    sendFinishEvent();
+    if (isSubmitting) {
+      return;
+    }
     setIsSubmitting(true);
+    sendFinishEvent();
+    setErrorCreatingAccountMessage('');
 
     const signUpParams = {
-      new_sign_up: true,
       user: {
         user_type: UserTypes.STUDENT,
         email: sessionStorage.getItem(EMAIL_SESSION_KEY),
@@ -195,7 +236,7 @@ const FinishStudentAccount: React.FunctionComponent<{
       },
     };
     const authToken = await getAuthenticityToken();
-    await fetch('/users', {
+    const response = await fetch('/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -204,8 +245,19 @@ const FinishStudentAccount: React.FunctionComponent<{
       body: JSON.stringify(signUpParams),
     });
 
-    clearSignUpSessionStorage(false);
-    navigateToHref(userReturnTo);
+    if (response.ok) {
+      clearSignUpSessionStorage(false);
+      navigateToHref(userReturnTo);
+    } else {
+      if (response.status === 400) {
+        response
+          .json()
+          .then(badRequest => setErrorCreatingAccountMessage(badRequest.error));
+      } else {
+        setErrorCreatingAccountMessage(locale.error_signing_up_message());
+      }
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -215,6 +267,23 @@ const FinishStudentAccount: React.FunctionComponent<{
           <Heading2>{locale.finish_creating_student_account()}</Heading2>
           <BodyTwoText>{locale.tailor_experience()}</BodyTwoText>
         </div>
+        {errorCreatingAccountMessage && (
+          <div className={style.errorSigningUpMessage}>
+            <div className={style.errorMessageWithXMark}>
+              <FontAwesomeV6Icon
+                iconName={'circle-xmark'}
+                className={style.xIcon}
+              />
+              <BodyThreeText className={style.errorMessageText}>
+                <SafeMarkdown markdown={errorCreatingAccountMessage} />
+              </BodyThreeText>
+            </div>
+            <CloseButton
+              onClick={() => setErrorCreatingAccountMessage('')}
+              aria-label={locale.error_signing_up_message_aria_label()}
+            />
+          </div>
+        )}
         <fieldset className={style.inputContainer}>
           <div className={style.parentInfoContainer}>
             <Checkbox
@@ -258,20 +327,22 @@ const FinishStudentAccount: React.FunctionComponent<{
           <div>
             <TextField
               name="displayName"
+              id="uitest-display-name"
               label={locale.display_name_eg()}
               value={name}
               placeholder={locale.coder()}
               onChange={onNameChange}
             />
-            {showNameError && (
+            {nameErrorMessage && (
               <BodyThreeText className={style.errorMessage}>
-                {locale.display_name_error_message()}
+                {nameErrorMessage}
               </BodyThreeText>
             )}
           </div>
           <div>
             <SimpleDropdown
               name="userAge"
+              id="uitest-user-age"
               className={style.dropdownContainer}
               labelText={locale.what_is_your_age()}
               size="m"
@@ -289,6 +360,7 @@ const FinishStudentAccount: React.FunctionComponent<{
             <div>
               <SimpleDropdown
                 name="userState"
+                id="uitest-user-state"
                 className={style.dropdownContainer}
                 labelText={locale.what_state_are_you_in()}
                 size="m"
@@ -307,7 +379,6 @@ const FinishStudentAccount: React.FunctionComponent<{
             name="userGender"
             label={locale.what_is_your_gender()}
             value={gender}
-            placeholder={locale.female()}
             onChange={e => setGender(e.target.value)}
           />
           {showGDPR && (
@@ -350,10 +421,11 @@ const FinishStudentAccount: React.FunctionComponent<{
               title: 'arrow-right',
             }}
             disabled={
-              name === '' ||
+              name?.trim() === '' ||
+              name?.length > MAX_DISPLAY_NAME_LENGTH ||
               age === '' ||
               (usIp && state === '') ||
-              (isParent && parentEmail === '') ||
+              (isParent && (parentEmail === '' || showParentEmailError)) ||
               !gdprValid
             }
             isPending={isSubmitting}

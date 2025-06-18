@@ -6,6 +6,8 @@ import React from 'react';
 import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
+
 import Spinner from '../../../../sharedComponents/Spinner';
 import {PermissionPropType} from '../permission';
 
@@ -23,9 +25,7 @@ export class TeacherAttendanceReport extends React.Component {
     course: PropTypes.oneOf(COURSE_VALUES),
   };
 
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
-  };
+  static contextType = RouterContext;
 
   state = {
     loading: true,

@@ -34,9 +34,9 @@ module I18n
           end
 
           private def distribute_localizations(language)
-            frameworks_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, "frameworks.#{language[:locale_s]}.json")
-            categories_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, "standard_categories.#{language[:locale_s]}.json")
-            standards_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, "standards.#{language[:locale_s]}.json")
+            frameworks_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, "frameworks/#{language[:locale_s]}.json")
+            categories_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, "standard_categories/#{language[:locale_s]}.json")
+            standards_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, "standards/#{language[:locale_s]}.json")
 
             frameworks_i18n_data = resource_i18n_data(frameworks_i18n_file_path)
             categories_i18n_data = resource_i18n_data(categories_i18n_file_path)

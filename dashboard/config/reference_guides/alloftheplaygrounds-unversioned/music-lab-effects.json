@@ -1,0 +1,9 @@
+{
+  "key": "music-lab-effects",
+  "course_version_key": "unversioned",
+  "course_offering_key": "alloftheplaygrounds",
+  "parent_reference_guide_key": null,
+  "display_name": "music-lab-effects",
+  "content": "# Different Effects\n\n- Delay: creates an echo effect. High = more echo, low = less echo, off = no echo\n- Filter: muffles or dampens the sound. Medium = some muffling, low = more muffling, off = no muffling\n  - We use Low for more filtering and Medium for less filtering because we're using a low-pass filter, which is a filter that filters out high frequencies, and keeps in low frequencies (like when you only hear the thump of the bass when you're standing outside a concert venue). So Low = more and Medium = less.\n- Filter and Delay both have an \"off\" state while volume does not\n- The default state for volume is the highest one (i.e. Full or High etc).",
+  "position": 2
+}

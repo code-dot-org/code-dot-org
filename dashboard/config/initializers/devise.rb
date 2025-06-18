@@ -349,10 +349,11 @@ Devise.setup do |config|
   end
 
   OmniAuth.config.before_request_phase do |env|
+    session = env['rack.session']
     Metrics::Events.log_event(
-      session: env['rack.session'],
+      session: session,
       event_name: "#{env['omniauth.strategy'].options[:name]}-begin-auth",
-      )
+    )
   end
 
   # ==> Mountable engine configurations
@@ -372,5 +373,7 @@ end
 
 Rails.application.config.to_prepare do
   # See lib/devise/models/custom_lockable.rb
-  Devise::Models::Lockable.prepend Devise::Models::CustomLockable
+  unless Devise::Models::Lockable.ancestors.include?(Devise::Models::CustomLockable)
+    Devise::Models::Lockable.prepend(Devise::Models::CustomLockable)
+  end
 end

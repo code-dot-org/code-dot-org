@@ -1,6 +1,8 @@
 require 'test_reporter'
 require 'faker'
 
+require_relative '../../lib/cdo/ci_utils'
+
 if defined? ActiveRecord
   ActiveRecord::Migration&.check_pending!
 end
@@ -11,8 +13,8 @@ Minitest.extensions.delete('rails')
 Minitest.extensions.unshift('rails')
 
 reporters = [CowReporter.new]
-if ENV['CIRCLECI']
-  reporters << Minitest::Reporters::JUnitReporter.new("#{ENV.fetch('CIRCLE_TEST_REPORTS', nil)}/dashboard")
+if CI::Utils.ci_job_ui_tests?
+  reporters << Minitest::Reporters::JUnitReporter.new("#{ENV.fetch('CI_TEST_REPORTS', nil)}/dashboard")
 end
 # Skip this if the tests are run in RubyMine
 Minitest::Reporters.use! reporters unless ENV['RM_INFO']
@@ -134,6 +136,18 @@ class ActiveSupport::TestCase
   def expect_no_s3_upload
     CDO.stubs(disable_s3_image_uploads: false)
     AWS::S3.expects(:upload_to_bucket).never
+  end
+
+  # helper method to stub out the source data for a project when we don't want to look in s3
+  def stub_project_source_data(channel_id, code: 'fake-code', version_id: 'fake-version-id')
+    fake_main_json = {source: code}.to_json
+    fake_source_data = {
+      status: 'FOUND',
+      body: StringIO.new(fake_main_json),
+      version_id: version_id,
+      last_modified: DateTime.now
+    }
+    SourceBucket.any_instance.stubs(:get).with(channel_id, "main.json").returns(fake_source_data)
   end
 
   # Add more helper methods to be used by all tests here...
@@ -259,6 +273,10 @@ class ActiveSupport::TestCase
       actual_data = JSON.parse(actual_option.data).symbolize_keys
       assert_attributes actual_data, expected_data
     end
+  end
+
+  def set_request_locale(locale)
+    request.env['cdo.locale'] = locale
   end
 
   def with_default_locale(locale)

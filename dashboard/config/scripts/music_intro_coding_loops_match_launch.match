@@ -1,0 +1,23 @@
+name 'music-intro-coding-loops-match_launch'
+title 'Show What You Know!'
+description 'Can you 🔀 match the the long code with the more efficient function?'
+
+height '400'
+width '200'
+
+question 'https://images.code.org/0859c2c8bda3b56722cfc092b705ff21-image-1738939923337.jpg'
+answer 'https://images.code.org/fa4719c57db8799cd5a10c88d70220e0-image-1738939920111.jpg'
+question 'https://images.code.org/a9fdb6cccbbcba9379491eb674e6699a-image-1738940722081.jpg'
+answer 'https://images.code.org/2caa7e3fd18faf8572c17fe7d27d2040-image-1738940732920.jpg'
+allow_multiple_attempts true
+
+
+markdown <<MARKDOWN
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+
+
+MARKDOWN

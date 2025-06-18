@@ -1,0 +1,53 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2025-01-07T21:25:25.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "false",
+    "hide_animation_mode": "false",
+    "show_type_hints": true,
+    "hide_custom_blocks": true,
+    "all_animations_single_frame": "true",
+    "use_modal_function_editor": "true",
+    "standalone_app_name": "spritelab",
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "true",
+    "start_in_animation_tab": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "enable_big_playspace": "true",
+    "instructions_icon": "smiley",
+    "start_animations": "{\"orderedKeys\":[\"c4d6e877-fc11-4223-bd41-e67b10970b72\",\"2683378a-644b-4956-a0cf-cf8dfdde1afb\",\"62b23571-14b3-4f89-8a2b-d24706ba7e51\",\"7e003737-e1a8-4c57-870f-0641103fc86c\",\"af6223f3-a646-4019-80a5-35bea184d803\",\"3848355f-5521-4d72-ba54-da6f7ef672fb\",\"af3fa107-8ed6-455a-95f6-67e133200e4e\"],\"propsByKey\":{\"c4d6e877-fc11-4223-bd41-e67b10970b72\":{\"name\":\"top-view-case\",\"frameCount\":1,\"frameSize\":{\"x\":612,\"y\":792},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2025-01-07T22:50:44.000Z\",\"pngLastModified\":\"2025-01-07T22:50:44.000Z\",\"version\":\"Yotv69.P.zkvRO6eZsClaOIGlBbPVnAh\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/Yotv69.P.zkvRO6eZsClaOIGlBbPVnAh/top-view-case.png\",\"sourceSize\":{\"x\":612,\"y\":792}},\"2683378a-644b-4956-a0cf-cf8dfdde1afb\":{\"name\":\"cpu\",\"frameCount\":1,\"frameSize\":{\"x\":200,\"y\":200},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2025-01-07T23:39:14.000Z\",\"pngLastModified\":\"2025-01-07T23:39:14.000Z\",\"version\":\"4ydsB5KdYmJ8hKgbtZLqRDyw_EuqbAsP\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/4ydsB5KdYmJ8hKgbtZLqRDyw_EuqbAsP/cpu.png\",\"sourceSize\":{\"x\":200,\"y\":200}},\"62b23571-14b3-4f89-8a2b-d24706ba7e51\":{\"name\":\"gpu\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":200},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2025-01-07T23:39:28.000Z\",\"pngLastModified\":\"2025-01-07T23:39:28.000Z\",\"version\":\"KJxhiQ2Ugtwo6Nz1dtjn7cZItIk3I2H6\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/KJxhiQ2Ugtwo6Nz1dtjn7cZItIk3I2H6/gpu.png\",\"sourceSize\":{\"x\":400,\"y\":200}},\"7e003737-e1a8-4c57-870f-0641103fc86c\":{\"name\":\"hard-drive\",\"frameCount\":1,\"frameSize\":{\"x\":250,\"y\":200},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2025-01-07T23:39:40.000Z\",\"pngLastModified\":\"2025-01-07T23:39:40.000Z\",\"version\":\"oXXOXBnI0GhT8BB0gY5EPruJi02fWOKs\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/oXXOXBnI0GhT8BB0gY5EPruJi02fWOKs/hard-drive.png\",\"sourceSize\":{\"x\":250,\"y\":200}},\"af6223f3-a646-4019-80a5-35bea184d803\":{\"name\":\"motherboard\",\"frameCount\":1,\"frameSize\":{\"x\":800,\"y\":800},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2025-01-07T23:19:09.000Z\",\"pngLastModified\":\"2025-01-07T23:19:09.000Z\",\"version\":\"YTkoZUlxpeOH0ETwtjIxfjeHqGwraPIh\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/YTkoZUlxpeOH0ETwtjIxfjeHqGwraPIh/motherboard.png\",\"sourceSize\":{\"x\":800,\"y\":800}},\"3848355f-5521-4d72-ba54-da6f7ef672fb\":{\"name\":\"power-supply-unit\",\"frameCount\":1,\"frameSize\":{\"x\":300,\"y\":246},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2025-01-07T23:39:59.000Z\",\"pngLastModified\":\"2025-01-07T23:39:59.000Z\",\"version\":\"BRPCS91xubPDyjJ6rqNrvXHhefr._BKW\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/BRPCS91xubPDyjJ6rqNrvXHhefr._BKW/power-supply-unit.png\",\"sourceSize\":{\"x\":300,\"y\":246}},\"af3fa107-8ed6-455a-95f6-67e133200e4e\":{\"name\":\"ram\",\"frameCount\":1,\"frameSize\":{\"x\":200,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2025-01-07T23:40:20.000Z\",\"pngLastModified\":\"2025-01-07T23:40:20.000Z\",\"version\":\"yJfVVTSOYp5WTbDE_m.VfQLY_IYEJHD4\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/yJfVVTSOYp5WTbDE_m.VfQLY_IYEJHD4/ram.png\",\"sourceSize\":{\"x\":200,\"y\":400}}}}"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-07 21:27:33 +0000\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-07 21:28:00 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"embed\",\"validation_enabled\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-07 22:28:42 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-07 23:46:53 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-07 23:49:34 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-07 23:50:06 +0000\",\"changed\":[\"use_default_sprites\",\"hide_animation_mode\",\"preload_asset_list\",\"encrypted_examples\",\"enable_big_playspace\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-08 00:01:33 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</GamelabJr>

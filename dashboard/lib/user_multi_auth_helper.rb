@@ -52,6 +52,11 @@ module UserMultiAuthHelper
   end
 
   def migrate_to_multi_auth
+    if DCDO.get('migration_service_enabled', false)
+      Services::User::MultiAuthMigrator.call(user: self)
+      return save!
+    end
+
     raise "Migration not implemented for provider #{provider}" unless
       provider.nil? ||
         %w(manual migrated sponsored).include?(provider) ||

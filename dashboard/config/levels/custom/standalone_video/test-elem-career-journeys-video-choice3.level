@@ -1,0 +1,26 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2025-03-21T20:20:35.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "uses_lab2": true,
+    "background": "music-black",
+    "encrypted": "false",
+    "video_key": "career_pharmacist_hold",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "video_full_width": true,
+    "name_suffix": "_launch",
+    "bubble_choice_description": "<i class=\"fa-solid fa-video\"></i> **A video to explore:**\n\n- Pharmacist",
+    "thumbnail_url": "https://images.code.org/0f50d40dc8e99be284f0998103fa50cc-pharmacist.jpg",
+    "display_name": "Pharmacist"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-21T20:20:35.530+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-songwriter-aloe-blacc-video\\\"\"],\"cloned_from\":\"music-coding-intro-songwriter-aloe-blacc-video\"},{\"changed_at\":\"2025-03-21 20:22:49 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-21 20:34:36 +0000\",\"changed\":[\"bubble_choice_description\",\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-21 20:35:03 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-21 20:58:47 +0000\",\"changed\":[\"bubble_choice_description\",\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

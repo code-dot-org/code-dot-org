@@ -3,26 +3,44 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Data Science with Python 
+# Introduction to Data Science with Python Part 1
 
-####Now that you have explored data visualizations and storytelling, Unit 2 in the Data Science Unit focuses on how to use Panda libraries in Python. 
+#### The Data Science units are designed to be modular, meaning you can choose to teach one or both units depending on the needs of your course and your students.  
 
-<img src="https://images.code.org/d413739658a53d9c68d3bfa3e0ac25ae-image-1724770105942.png" alt="pixel grid of an X" style="border-radius:40px; float: right; padding-right: 10px; height: 200px; clear: both; margin: 0 60px 20px 0;">
+#### Unit 2 focuses on how to use **Pandas** and **Matplotlib** libraries in Python. 
+
+<br>
+
+<img src="https://images.code.org/1fbd805fdb9a29707582dcb5fb934d4a-image-1731943408107.png" alt="A red push pin. This icon is used to signal a callback to synchronous work in the workshop." width="40px" style="border-radius:10px; float:left; margin: 5px 10px 5px 0px;">
+
+#### **Pandas** is a Python library for working with structured data, like tables or spreadsheets. It helps you clean, organize, analyze, and even visualize data easily, making it a go-to tool for data science and analysis.
+
+<br>
+
+<img src="https://images.code.org/11d076b1ccbee63578b9ac994b068707-image-1731943597800.png" alt="A red push pin. This icon is used to signal a callback to synchronous work in the workshop." width="50px" style="border-radius:10px; float:left; margin: 5px 3px 5px 0px;">
+
+#### **Matplotlib** is a Python library for creating visualizations like charts and graphs. It makes it easy to turn data into clear, customizable visuals for analysis and presentations.
+
+---
+
+
+
+<img src="https://images.code.org/d413739658a53d9c68d3bfa3e0ac25ae-image-1724770105942.png" alt="pixel grid of an X" style="border-radius:40px; float: right; padding-right: 10px; height: 180px; clear: both; margin: 10px 50px 20px 0;">
 
 ## In this lesson, you will:
 
-- #### Review the content of the Python and Pandas Lessons
+- #### Review the content of the **Data Science with Python** lessons
 - #### Preview activities in the lessons
 - #### Analyze data using the Python, Pandas, and Matplotlib
-- #### Create a plan for teaching Unit 2 of the Data Science Unit
 
 
 
 
-### **Suggested time:** 90 minutes
+
+### **Suggested time:** 45 minutes
 
 
-## Let's get started 
+## Let's get started!
 
 
 MARKDOWN

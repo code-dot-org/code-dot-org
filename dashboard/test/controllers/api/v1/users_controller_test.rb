@@ -276,6 +276,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_equal teacher.username, response["username"]
     assert_equal "teacher", response["user_type"]
     assert_equal teacher.short_name, response["short_name"]
+    assert_equal teacher.educator_role, response["educator_role"]
     assert_equal false, response["is_verified_instructor"]
   end
 
@@ -303,28 +304,6 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     sign_in(@user)
     get :get_school_name, params: {user_id: '-1'}
     assert_response 403
-  end
-
-  test "get_school_donor_name 403s when not signed in" do
-    get :get_school_donor_name, params: {user_id: 'me'}
-    assert_response 403
-  end
-
-  test "get_school_donor_name returns null when no donor is found" do
-    sign_in create :teacher
-    get :get_school_donor_name, params: {user_id: 'me'}
-    assert_response 200
-    assert_equal 'null', response.body
-  end
-
-  test "get_school_donor_name returns donor name" do
-    usi = create :user_school_info
-    create :donor_school, name: 'DonorName', nces_id: usi.school_info.school_id
-
-    sign_in usi.user
-    get :get_school_donor_name, params: {user_id: 'me'}
-    assert_response 200
-    assert_equal '"DonorName"', response.body
   end
 
   test "teacher can update ai tutor access for student in section" do
@@ -368,5 +347,83 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     post :update_ai_tutor_access, params: {user_id: -1, ai_tutor_access: false}
 
     assert_response :unauthorized
+  end
+
+  test 'set_seen_ta_scores updates seen_ta_scores_map' do
+    teacher = create :teacher
+    assert_nil teacher.seen_ta_scores_map
+    sign_in(teacher)
+
+    unit = create :unit, :with_lessons
+    lesson = unit.lessons.first
+    params = {lesson_id: lesson.id}
+
+    post :set_seen_ta_scores, params: params
+    assert_response :success
+    assert_equal({lesson.id.to_s => true}, teacher.reload.seen_ta_scores_map)
+  end
+
+  test 'set_seen_ta_scores returns 400 if lesson id is missing' do
+    teacher = create :teacher
+    sign_in(teacher)
+
+    post :set_seen_ta_scores
+    assert_response :bad_request
+  end
+
+  test 'set_seen_ta_scores returns 400 if lesson id is not a number' do
+    teacher = create :teacher
+    sign_in(teacher)
+
+    post :set_seen_ta_scores, params: {lesson_id: 'not_a_number'}
+    assert_response :bad_request
+  end
+
+  describe 'GET signed_in' do
+    let(:current_user) {@user}
+
+    before do
+      sign_in(current_user) if current_user
+    end
+
+    it 'renders correct current user signed-in indicator' do
+      get :signed_in
+
+      assert_response :success
+      _(json_response).must_equal({'is_signed_in' => true})
+    end
+
+    it 'allows CDO CORS from code.org by default' do
+      get :signed_in
+
+      _(response.headers['Access-Control-Allow-Origin']).must_equal 'http://test.code.org'
+      _(response.headers['Access-Control-Allow-Methods']).must_equal 'GET'
+      _(response.headers['Access-Control-Allow-Headers']).must_equal '*'
+      _(response.headers['Access-Control-Allow-Credentials']).must_equal 'true'
+    end
+
+    CDO.marketing_sites_hosts.each do |marketing_site_host|
+      it "allows CDO CORS from #{marketing_site_host}" do
+        request.headers['Origin'] = marketing_site_host
+
+        get :signed_in
+
+        _(response.headers['Access-Control-Allow-Origin']).must_equal marketing_site_host
+        _(response.headers['Access-Control-Allow-Methods']).must_equal 'GET'
+        _(response.headers['Access-Control-Allow-Headers']).must_equal '*'
+        _(response.headers['Access-Control-Allow-Credentials']).must_equal 'true'
+      end
+    end
+
+    context 'when no signed-in user' do
+      let(:current_user) {nil}
+
+      it 'renders correct current user signed-in indicator' do
+        get :signed_in
+
+        assert_response :success
+        _(json_response).must_equal({'is_signed_in' => false})
+      end
+    end
   end
 end

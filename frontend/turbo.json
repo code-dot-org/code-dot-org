@@ -1,0 +1,58 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "tui",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
+    },
+    "clean": {
+      "dependsOn": ["^clean"]
+    },
+    "//#format": {},
+    "//#format:fix": {},
+    "release:dryrun": {
+      "dependsOn": ["build", "lint", "test"]
+    },
+    "lint": {
+      "dependsOn": ["^lint", "prettier", "stylelint", "typecheck", "//#format"]
+    },
+    "lint:fix": {
+      "dependsOn": [
+        "^lint:fix",
+        "prettier:fix",
+        "stylelint:fix",
+        "//#format:fix"
+      ]
+    },
+    "prettier": {
+      "dependsOn": ["^prettier"]
+    },
+    "prettier:fix": {
+      "dependsOn": ["^prettier:fix"]
+    },
+    "stylelint": {
+      "dependsOn": ["^stylelint"]
+    },
+    "stylelint:fix": {
+      "dependsOn": ["^stylelint:fix"]
+    },
+    "typecheck": {
+      "dependsOn": ["^typecheck"]
+    },
+    "test": {
+      "dependsOn": ["^test"]
+    },
+    "test:ui:ci": {
+      "cache": false,
+      "dependsOn": ["^test:ui:ci"],
+      "env": ["STAGE"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "dependsOn": ["^build"]
+    }
+  }
+}

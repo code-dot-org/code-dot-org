@@ -1,0 +1,9 @@
+name 'computer-systems-lesson1-level7_2025-preview'
+display_name 'Industry Professional for Scholarlab'
+description 'Explore how educators and students use Scholarlab Simulations to conduct virtual science experiments and enhance STEM learning. Choose a professional to interview and learn how AI is shaping the future of education.'
+
+sublevels
+level 'computer-systems-lesson1-level7a_2025-preview'
+level 'computer-systems-lesson1-level7b_2025-preview'
+level 'computer-systems-lesson1-level7c_2025-preview'
+level 'computer-systems-lesson1-level7d_2025-preview'

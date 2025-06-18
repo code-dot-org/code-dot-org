@@ -18,6 +18,7 @@ def under_13?(user_id)
   user = user_id ? DASHBOARD_DB[:users].select(:birthday).first(id: user_id) : current_user
   return true unless user
   birthday = user[:birthday]
+  return true unless birthday
   age = UserHelpers.age_from_birthday(birthday)
   age < 13
 end

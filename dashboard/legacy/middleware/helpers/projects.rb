@@ -22,13 +22,6 @@ class Projects
     @table = Projects.table
   end
 
-  #### NOTE: This references the Rails model (Project, singular)
-  #### rather than this middleware class (Projects, plural)
-  #### such that we can make use of model associations managed by Rails.
-  def get_rails_project(project_id)
-    Project.find(project_id)
-  end
-
   def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true, level: nil)
     validate_thumbnail_url(nil, value['thumbnailUrl'])
 
@@ -135,20 +128,7 @@ class Projects
     project_query_result = @table.where(id: project_id).exclude(state: 'deleted')
     raise NotFound, "channel `#{channel_id}` not found" if project_query_result.empty?
 
-    rails_project = get_rails_project(project_id)
-    if rails_project.apply_project_age_publish_limits?
-      raise PublishError, "User too new to publish channel `#{channel_id}`" unless rails_project.owner_existed_long_enough_to_publish?
-      raise PublishError, "Project too new to publish channel `#{channel_id}`" unless rails_project.existed_long_enough_to_publish?
-    end
-
     project_query_result.update(row)
-
-    project = @table.where(id: project_id).first
-    Projects.get_published_project_data(project, channel_id).merge(
-      # For privacy reasons, include only the first initial of the student's name.
-      studentName: user && UserHelpers.initial(user[:name]),
-      studentAgeRange: user && UserHelpers.age_range_from_birthday(user[:birthday]),
-    )
   end
 
   def get_active_projects
@@ -186,20 +166,6 @@ class Projects
       where(storage_id: @storage_id, state: 'deleted').
       where(Sequel.lit('updated_at >= ?', deleted_time.localtime)).
       update(state: 'active', updated_at: Time.now)
-  end
-
-  # extracts published project data from a project (aka projects table row).
-  def self.get_published_project_data(project, channel_id)
-    project_value = JSON.parse(project[:value])
-    {
-      channel: channel_id,
-      name: project_value['name'],
-      thumbnailUrl: Projects.make_thumbnail_url_cacheable(project_value['thumbnailUrl']),
-      # Note that we are using the new :project_type field rather than extracting
-      # it from :value. :project_type might not be present in unpublished projects.
-      type: project[:project_type],
-      publishedAt: project[:published_at],
-    }
   end
 
   # This method can be removed once thumbnails are being served with s3 version ids.
@@ -256,13 +222,23 @@ class Projects
     return true
   end
 
-  def increment_abuse(channel_id, amount = 10)
+  def increment_abuse(channel_id, amount, override_frozen = false)
     _owner, project_id = storage_decrypt_channel_id(channel_id)
 
     row = @table.where(id: project_id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
+    # If the project is frozen then it is an active featured project or a curriculum exemplar.
+    # Do not update the abuse score of a frozen project unless override_frozen is true.
+    # This flag is set to true if the current_user is a project validator or if the project's
+    # thumbnail image was flagged by image moderation.
+    increment_amount =
+      if JSON.parse(row[:value])['frozen'] && !override_frozen
+        0
+      else
+        amount
+      end
 
-    new_score = row[:abuse_score] + (JSON.parse(row[:value])['frozen'] ? 0 : amount)
+    new_score = row[:abuse_score] + increment_amount
 
     update_count = @table.where(id: project_id).exclude(state: 'deleted').update({abuse_score: new_score})
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
@@ -280,15 +256,6 @@ class Projects
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
     0
-  end
-
-  def buffer_abuse_score(channel_id)
-    buffered_abuse_score = -50
-    # Reset to 0 first so projects that are featured,
-    # unfeatured, then re-featured don't have super low
-    # abuse scores.
-    reset_abuse(channel_id)
-    increment_abuse(channel_id, buffered_abuse_score)
   end
 
   def content_moderation_disabled?(channel_id)

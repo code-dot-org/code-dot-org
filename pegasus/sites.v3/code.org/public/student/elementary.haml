@@ -151,3 +151,5 @@ theme: responsive_full_width
         .content-footer
           %a.link-button{href: "https://code.org/csc", target: "_blank", rel: "noopener noreferrer"}
             =hoc_s(:call_to_action_explore_curricula)
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::ELEMENTARY_STUDENT_PAGE_VISITED_EVENT

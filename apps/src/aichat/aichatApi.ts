@@ -7,27 +7,32 @@ import {
 import {Role} from '../aiComponentLibrary/chatMessage/types';
 import {ValueOf} from '../types/utils';
 
+import {chatHistoryValidator} from './api/validators';
 import {
   AiCustomizations,
   AichatContext,
   AichatModelCustomizations,
-  ChatCompletionApiResponse,
   ChatEvent,
-  ChatMessage,
   DetectToxicityResponse,
-  LogChatEventApiResponse,
+  FeedbackValue,
+  PendingChatMessage,
+  ServerChatEvent,
+  CompletedChatMessage,
 } from './types';
 import {extractFieldsToCheckForToxicity} from './utils';
 
-const ROOT_URL = '/aichat';
+const ROOT_GENERAL_URL = '/aichat';
+const ROOT_REQUEST_URL = '/aichat_request';
+const ROOT_EVENT_URL = '/aichat_events';
 const paths = {
-  CHAT_COMPLETION_URL: `${ROOT_URL}/chat_completion`,
-  GET_CHAT_REQUEST_URL: `${ROOT_URL}/chat_request`,
-  LOG_CHAT_EVENT_URL: `${ROOT_URL}/log_chat_event`,
-  START_CHAT_COMPLETION_URL: `${ROOT_URL}/start_chat_completion`,
-  STUDENT_CHAT_HISTORY_URL: `${ROOT_URL}/student_chat_history`,
-  USER_HAS_AICHAT_ACCESS_URL: `${ROOT_URL}/user_has_access`,
-  FIND_TOXICITY_URL: `${ROOT_URL}/find_toxicity`,
+  START_CHAT_COMPLETION_URL: `${ROOT_REQUEST_URL}/start_chat_completion`,
+  GET_CHAT_REQUEST_URL: `${ROOT_REQUEST_URL}/chat_request`,
+  CHAT_COMPLETION_URL: `${ROOT_GENERAL_URL}/chat_completion`,
+  LOG_CHAT_EVENT_URL: `${ROOT_EVENT_URL}/log_chat_event`,
+  CHAT_HISTORY_URL: `${ROOT_EVENT_URL}/chat_history`,
+  SUBMIT_TEACHER_FEEDBACK_URL: `${ROOT_EVENT_URL}/submit_teacher_feedback`,
+  USER_HAS_AICHAT_ACCESS_URL: `${ROOT_GENERAL_URL}/user_has_access`,
+  FIND_TOXICITY_URL: `${ROOT_GENERAL_URL}/find_toxicity`,
 };
 
 const MAX_POLLING_TIME_MS = 45000;
@@ -44,13 +49,13 @@ interface UserHasAichatAccessResponse {
  * and assistant message if successful.
  */
 export async function postAichatCompletionMessage(
-  newMessage: ChatMessage,
-  storedMessages: ChatMessage[],
+  newMessage: PendingChatMessage,
+  storedMessages: CompletedChatMessage[],
   aiCustomizations: AiCustomizations,
   aichatContext: AichatContext,
   // Configurable for testing
   maxPollingTimeMs = MAX_POLLING_TIME_MS
-): Promise<ChatCompletionApiResponse> {
+): Promise<CompletedChatMessage[]> {
   const aichatModelCustomizations: AichatModelCustomizations = {
     selectedModelId: aiCustomizations.selectedModelId,
     temperature: aiCustomizations.temperature,
@@ -66,6 +71,29 @@ export async function postAichatCompletionMessage(
     maxPollingTimeMs
   );
 }
+/**
+ * @param eventId
+ * @param feedback
+ *
+ * Sends a POST request to the aichat submit teacher feedback backend controller.
+ */
+export async function postSubmitTeacherFeedback(
+  eventId: number,
+  feedback: FeedbackValue | undefined
+) {
+  const payload = {
+    eventId,
+    feedback,
+  };
+  await HttpClient.post(
+    `${paths.SUBMIT_TEACHER_FEEDBACK_URL}`,
+    JSON.stringify(payload),
+    true,
+    {
+      'Content-Type': 'application/json; charset=UTF-8',
+    }
+  );
+}
 
 /**
  * This function sends a POST request to the aichat log event backend controller, then returns
@@ -74,7 +102,7 @@ export async function postAichatCompletionMessage(
 export async function postLogChatEvent(
   newChatEvent: ChatEvent,
   aichatContext: AichatContext
-): Promise<LogChatEventApiResponse> {
+): Promise<ChatEvent> {
   const payload = {
     newChatEvent,
     aichatContext,
@@ -95,23 +123,22 @@ export async function postLogChatEvent(
  * This function sends a GET request to the aichat student chat history backend controller, then returns
  * a list of chat events if successful.
  */
-export async function getStudentChatHistory(
-  studentUserId: number,
+export async function getUserChatHistory(
+  userId: number,
   levelId: number,
-  scriptId: number | null,
-  scriptLevelId: number | undefined
-): Promise<ChatEvent[]> {
+  scriptId: number | null
+): Promise<ServerChatEvent[]> {
   const params: Record<string, string> = {
-    studentUserId: studentUserId.toString(),
+    userId: userId.toString(),
     levelId: levelId.toString(),
     scriptId: scriptId?.toString() || '',
   };
-  if (scriptLevelId) {
-    params.scriptLevelId = scriptLevelId.toString();
-  }
-  const response = await HttpClient.fetchJson<ChatEvent[]>(
-    paths.STUDENT_CHAT_HISTORY_URL + '?' + new URLSearchParams(params)
+  const response = await HttpClient.fetchJson<ServerChatEvent[]>(
+    paths.CHAT_HISTORY_URL + '?' + new URLSearchParams(params),
+    undefined,
+    chatHistoryValidator
   );
+
   return response.value;
 }
 
@@ -120,11 +147,15 @@ export async function getStudentChatHistory(
  * Returns a {@link DetectToxicityResponse}.
  */
 export async function detectToxicityInCustomizations(
-  aiCustomizations: AiCustomizations
+  aiCustomizations: AiCustomizations,
+  levelId: number | null
 ): Promise<DetectToxicityResponse> {
   const response = await HttpClient.post(
     paths.FIND_TOXICITY_URL,
-    JSON.stringify(extractFieldsToCheckForToxicity(aiCustomizations)),
+    JSON.stringify({
+      ...extractFieldsToCheckForToxicity(aiCustomizations),
+      levelId,
+    }),
     true,
     {
       'Content-Type': 'application/json; charset=UTF-8',
@@ -149,12 +180,12 @@ export interface GetChatRequestResponse {
  * Perform chat completion by initiating an asynchronous request and polling for the response.
  */
 async function postChatCompletionAsyncPolling(
-  newMessage: ChatMessage,
-  storedMessages: ChatMessage[],
+  newMessage: PendingChatMessage,
+  storedMessages: CompletedChatMessage[],
   aichatModelCustomizations: AichatModelCustomizations,
   aichatContext: AichatContext,
   maxPollingTimeMs = MAX_POLLING_TIME_MS
-): Promise<ChatCompletionApiResponse> {
+): Promise<CompletedChatMessage[]> {
   const payload = {
     newMessage,
     storedMessages,
@@ -202,22 +233,23 @@ async function postChatCompletionAsyncPolling(
 
   if (executionStatus < AiRequestExecutionStatus.SUCCESS) {
     // Timed out
-    throw new Error('Chat completion request timed out');
+    throw new Error('Chat completion request timed out (client side)');
   }
 
-  return {
-    messages: getUpdatedMessages(newMessage, modelResponse, executionStatus),
-  };
+  return getUpdatedMessages(newMessage, modelResponse, executionStatus).map(
+    message => ({...message, requestId})
+  );
 }
 
 /**
  * Get the updated user and assistant message based on the status of the chat completion request.
+ * Returns a {@link CompletedChatMessage} without a request ID (added by the caller).
  */
 function getUpdatedMessages(
-  userMessage: ChatMessage,
+  userMessage: PendingChatMessage,
   modelResponse: string,
   executionStatus: ValueOf<typeof AiRequestExecutionStatus>
-): ChatMessage[] {
+) {
   switch (executionStatus) {
     case AiRequestExecutionStatus.SUCCESS:
       return [
@@ -284,6 +316,19 @@ function getUpdatedMessages(
           role: Role.ASSISTANT,
           timestamp: Date.now(),
           status: AiInteractionStatus.USER_INPUT_TOO_LARGE,
+        },
+      ];
+    case AiRequestExecutionStatus.MODEL_TIMEOUT:
+      return [
+        {
+          ...userMessage,
+          status: AiInteractionStatus.MODEL_TIMEOUT,
+        },
+        {
+          chatMessageText: modelResponse, // Note that this message (and the ones above) are overwritten in the ChatMessageView component.
+          role: Role.ASSISTANT,
+          timestamp: Date.now(),
+          status: AiInteractionStatus.MODEL_TIMEOUT,
         },
       ];
     default:

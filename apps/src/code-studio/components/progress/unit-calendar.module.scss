@@ -1,0 +1,49 @@
+@import 'color';
+
+.weekColumn {
+  width: 100px;
+  min-width: 100px;
+  background-color: $purple;
+  color: white;
+  text-align: center;
+  border: 1px solid + $purple;
+  border-collapse: collapse;
+  font-weight: bold;
+  min-height: 50px;
+}
+
+.scheduleColumn {
+  border: 1px solid $purple;
+  border-collapse: collapse;
+  display: flex;
+  min-height: 50px;
+  margin: 0;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid $purple;
+}
+
+.key {
+  border: 1px solid $purple;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.keyIcon {
+  margin-right: 5px;
+}
+
+.keySection {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  font-size: 15px;
+}
+
+.keyCell {
+  margin-inline-start: 24px;
+}

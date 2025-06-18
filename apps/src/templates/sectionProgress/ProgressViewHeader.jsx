@@ -28,13 +28,7 @@ class ProgressViewHeader extends Component {
 
   getLinkToOverview() {
     const {scriptData, sectionId} = this.props;
-    return scriptData
-      ? getUnitUrl(
-          sectionId,
-          scriptData.name,
-          `${scriptData.path}?section_id=${sectionId}`
-        )
-      : null;
+    return scriptData ? getUnitUrl(sectionId, scriptData.name, null) : null;
   }
 
   navigateToScript = () => {

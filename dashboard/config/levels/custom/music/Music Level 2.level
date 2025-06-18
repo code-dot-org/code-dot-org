@@ -57,7 +57,7 @@
     },
     "instructions_important": "false",
     "long_instructions": "Second, please play three sounds at the same time.",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "validations": [
       {
         "conditions": [

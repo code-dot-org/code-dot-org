@@ -4,6 +4,7 @@
  * manage their own accounts via email/oauth, or to sync students with an
  * external service like Microsoft Classroom or Clever.
  */
+import Typography from '@code-dot-org/component-library/typography';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -13,7 +14,6 @@ import {
   LmsLoginTypeNames,
   LmsLoginInstructionUrls,
 } from '@cdo/apps/accounts/constants';
-import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {Heading3} from '@cdo/apps/legacySharedComponents/Headings';
@@ -22,7 +22,6 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import color from '@cdo/apps/util/color';
-import experiments from '@cdo/apps/util/experiments';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -118,8 +117,7 @@ class LoginTypePicker extends Component {
       ['US', 'RD'].includes(currentUser.countryCode) ||
       !!currentUser.usStateCode;
     const showStudentsToSectionPermissionWarning =
-      (inUSA && currentUser.isTeacher) ||
-      experiments.isEnabledAllowingQueryString(experiments.CPA_EXPERIENCE);
+      inUSA && currentUser.isTeacher;
 
     const style = {
       container: {
@@ -242,6 +240,7 @@ class LoginTypePicker extends Component {
             </Typography>
             <div
               style={style.lmsInfoCardsContainer}
+              // eslint-disable-next-line react/forbid-dom-props
               data-testid={'lms-info-cards-container'}
             >
               {!withClever && (

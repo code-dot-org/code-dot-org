@@ -20,19 +20,30 @@ services:
       - 6379
 
 steps:
-  - name: info
+  - name: bin/drone/shell
     image: curlimages/curl
     commands:
+      - set +x
       # If running on EC2, get hostname from ec2 metadata
       - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
       - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
-      - echo "Running on $hostname"
+      - |
+        cat <<EOF
+
+        Running on hostname: $hostname
+        
+        To "ssh" into this drone instance, wait until the 'unit-tests' step starts and run:
+        bin/drone/shell $hostname
+
+        You can also open a VSCode tunnel into drone to edit live:
+        bin/drone/vscode $hostname
+        EOF
 
   # We cache a clone of staging in the `cache-staging-clone` pipeline
   - name: get-cached-staging
     image: plugins/s3-cache
     settings:
-      filename: cache-staging-clone.tar
+      filename: cache-staging-clone.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -46,7 +57,7 @@ steps:
       - git lfs install --skip-repo
       # We should be in a cached git repo, but clone if the cache failed
       - "[ -d .git ] || (echo 'WARNING: get-cached-staging failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .)"
-      # Checkout our target branch (=the PR)
+      # Checkout our source branch (=the PR)
       - git fetch origin $DRONE_SOURCE_BRANCH
       - git checkout $DRONE_SOURCE_BRANCH
       - git pull
@@ -66,33 +77,35 @@ steps:
       debug: true
       pull: true
       restore: true
-      filename: unit-tests-cache-ubuntu-20.tar
+      filename: unit-tests-cache-ubuntu-20.tar.gz
 
   - name: unit-tests
-    # see: docker/continuous-integration/Dockerfile
+    # see: docker/ci/Dockerfile
     # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:1.11.0
+    image: codedotorg/code-dot-org:1.16
     pull: always
     volumes:
       - name: rbenv
-        path: /home/circleci/.rbenv
+        path: /home/ci/.rbenv
       - name: mysql
         path: /var/lib/mysql
     environment:
-      # Each Drone secret below must be explicitly written to locals.yml in /docker/unit_tests.sh
+      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/unit_tests.sh
       CLOUDFRONT_KEY_PAIR_ID:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
       CLOUDFRONT_PRIVATE_KEY:
         from_secret: CLOUDFRONT_PRIVATE_KEY
     commands:
-      - sudo chown -R circleci:circleci .
+      - sudo chown -R ci:ci .
       # cache is restored to source directory, so we need to copy it into the right place
-      - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
-      - rm -rf "$(pwd)/home/circleci/.rbenv"
-      # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
-      - export CIRCLE_SHA1=$DRONE_COMMIT
+      - cp -rn "$(pwd)/home/ci/.rbenv" /home/ci || true
+      - rm -rf "$(pwd)/home/ci/.rbenv"
+      # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
+      - export GIT_COMMIT=$DRONE_COMMIT
+      - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
+      - export CI_HEAD_BRANCH=$DRONE_SOURCE_BRANCH
       - EXIT_CODE=0
-      - /entrypoint.sh docker/unit_tests.sh || EXIT_CODE=$?
+      - /entrypoint.sh docker/ci/scripts/unit_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
       - exit $EXIT_CODE
 
@@ -100,15 +113,15 @@ steps:
     image: plugins/s3-cache
     volumes:
       - name: rbenv
-        path: /home/circleci/.rbenv
+        path: /home/ci/.rbenv
     settings:
       endpoint: s3://cdo-drone
       debug: true
       pull: true
       rebuild: true
-      filename: unit-tests-cache-ubuntu-20.tar
+      filename: unit-tests-cache-ubuntu-20.tar.gz
       mount:
-        - /home/circleci/.rbenv
+        - /home/ci/.rbenv
 
 volumes:
   - name: rbenv
@@ -140,19 +153,30 @@ services:
       - 6379
 
 steps:
-  - name: info
+  - name: bin/drone/shell
     image: curlimages/curl
     commands:
+      - set +x
       # If running on EC2, get hostname from ec2 metadata
       - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
       - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
-      - echo "Running on $hostname"
+      - |
+        cat <<EOF
 
-  # We cache a clone of staging in the `cache-staging-clone` pipeline
-  - name: get-cached-staging
+        Running on hostname: $hostname
+        
+        To "ssh" into this drone instance, wait until the 'ui-tests' step starts and run:
+        bin/drone/shell $hostname
+
+        You can also open a VSCode tunnel into drone to edit live:
+        bin/drone/vscode $hostname
+        EOF
+
+  # We cache a clone of staging in the `cache-staging-build-artifacts` pipeline
+  - name: get-cached-staging-clone
     image: plugins/s3-cache
     settings:
-      filename: cache-staging-clone.tar
+      filename: cache-staging-clone.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -166,12 +190,13 @@ steps:
       - git lfs install --skip-repo
       # We should be in a cached git repo, but clone if the cache failed
       - "[ -d .git ] || (echo 'get-cached-staging failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .)"
-      # Checkout our target branch (the PR's branch).
+      # Checkout our source branch (the PR's branch).
       - git fetch origin $DRONE_SOURCE_BRANCH
       - git checkout $DRONE_SOURCE_BRANCH
       - git pull
       - git reset --hard $DRONE_COMMIT
-      # Also fetch the target branch (which is staging or staging-next for pull requests.) We need this for determining which tests to run based on changed files.
+      # Also fetch the target branch (usually staging for pull requests). We
+      # need this for determining which tests to run based on changed files.
       - git remote set-branches --add origin $DRONE_TARGET_BRANCH
       - git fetch --depth 100 origin $DRONE_TARGET_BRANCH
       # Merge so we're up-to-date with the target before running tests.
@@ -179,27 +204,36 @@ steps:
       - git config user.email "drone-fake-user@code.org"
       - git merge origin/$DRONE_TARGET_BRANCH
 
-  - name: restore-cache
+  # We cache staging's rbenv and database in the
+  # `cache-staging-build-artifacts` pipeline.
+  - name: get-cached-staging-misc-build-artifacts
     image: plugins/s3-cache
+    volumes:
+      # Even files cached with absolute paths will be restored into the
+      # workdir; so for this step, we mount the relevant volumes there, too.
+      - name: rbenv
+        path: /drone/src/home/ci/.rbenv
+      - name: mysql
+        path: /drone/src/var/lib/mysql
     settings:
+      filename: cache-staging-misc-build-artifacts.tar.gz
       endpoint: s3://cdo-drone
+      restore: true
       debug: true
       pull: true
-      restore: true
-      filename: ui-tests-cache-ubuntu-20.tar
 
   - name: ui-tests
-    # see: docker/continuous-integration/Dockerfile
+    # see: docker/ci/Dockerfile
     # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:1.11.0
+    image: codedotorg/code-dot-org:1.16
     pull: always
     volumes:
       - name: rbenv
-        path: /home/circleci/.rbenv
+        path: /home/ci/.rbenv
       - name: mysql
         path: /var/lib/mysql
     environment:
-      # Each Drone secret below must be explicitly written to locals.yml in /docker/ui_tests.sh
+      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/ui_tests.sh
       CLOUDFRONT_KEY_PAIR_ID:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
       CLOUDFRONT_PRIVATE_KEY:
@@ -210,33 +244,20 @@ steps:
         from_secret: SAUCE_USERNAME
       SAUCE_ACCESS_KEY:
         from_secret: SAUCE_ACCESS_KEY
+    shm_size: '2gb' # necessary to avoid "invalid session id"/"session deleted because of page crash" errors in Selenium
     commands:
-      - sudo chown -R circleci:circleci .
-      # cache is restored to source directory, so we need to copy it into the right place
-      - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
-      # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
-      - export CIRCLE_SHA1=$DRONE_COMMIT
+      # Cached data gets restored by the root user, so we need to reassign
+      - sudo chown -R ci:ci .
+      - sudo chown -R mysql:mysql /var/lib/mysql
+      # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
+      - export GIT_COMMIT=$DRONE_COMMIT
+      - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
+      - export CI_HEAD_BRANCH=$DRONE_SOURCE_BRANCH
+      - export CI_BUILD_NUMBER=$DRONE_BUILD_NUMBER # used by UI tests to set their S3 log path
       - EXIT_CODE=0
-      - /entrypoint.sh docker/ui_tests.sh || EXIT_CODE=$?
+      - /entrypoint.sh docker/ci/scripts/ui_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
       - exit $EXIT_CODE
-
-  - name: update-cache
-    image: plugins/s3-cache
-    volumes:
-      - name: rbenv
-        path: /home/circleci/.rbenv
-    settings:
-      endpoint: s3://cdo-drone
-      debug: true
-      pull: true
-      rebuild: true
-      filename: ui-tests-cache-ubuntu-20.tar
-      mount:
-        - /home/circleci/.rbenv
-        # Used to avoid re-seeding UI test data unless something changed - see cached_ui_test task in https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/lib/tasks/seed.rake
-        - dashboard/db/ui_test_data.hash
-        - dashboard/db/ui_test_data.sql
 
 volumes:
   - name: rbenv
@@ -254,11 +275,13 @@ trigger:
     - pull_request
 
 ---
-# On push, cache a clone of staging to drone's S3 bucket.
-# The staging cache reduces git bandwidth in PR pipelines.
+# On a push to staging, cache several build artifacts to drone's S3 bucket:
+# - A fresh git clone of staging, to reduce git bandwidth
+# - A copy of the MySQL databases, to reduce seed time
+# - A copy of the ~/.rbenv directory, to reduce bundle install time
 kind: pipeline
 type: docker
-name: cache-staging-clone
+name: cache-staging-build-artifacts
 
 clone:
   disable: true
@@ -273,13 +296,54 @@ steps:
   - name: cache-staging-clone
     image: plugins/s3-cache
     settings:
-      filename: cache-staging-clone.tar
+      filename: cache-staging-clone.tar.gz
       endpoint: s3://cdo-drone
       rebuild: true
       debug: true
       pull: true
       mount:
         - .
+
+  # Do all the work necessary to run UI tests so we can capture a complete
+  # snapshot of rbenv and the database, but don't actually run the tests.
+  - name: prepare-ui-tests
+    image: codedotorg/code-dot-org:1.16
+    pull: always
+    environment:
+      PROPERTIES_ENCRYPTION_KEY:
+        from_secret: PROPERTIES_ENCRYPTION_KEY
+    volumes:
+      - name: rbenv
+        path: /home/ci/.rbenv
+      - name: mysql
+        path: /var/lib/mysql
+    commands:
+      - sudo chown -R ci:ci .
+      - /entrypoint.sh docker/ci/scripts/prepare_ui_tests.sh
+
+  - name: cache-staging-misc-build-artifacts
+    image: plugins/s3-cache
+    volumes:
+      - name: rbenv
+        path: /home/ci/.rbenv
+      - name: mysql
+        path: /var/lib/mysql
+    settings:
+      filename: cache-staging-misc-build-artifacts.tar.gz
+      endpoint: s3://cdo-drone
+      rebuild: true
+      debug: true
+      pull: true
+      mount:
+        - /home/ci/.rbenv
+        - /var/lib/mysql
+        - ./apps/build
+
+volumes:
+  - name: rbenv
+    temp: {}
+  - name: mysql
+    temp: {}
 
 trigger:
   branch:
@@ -289,6 +353,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: a23424eb3b46ffbbc17d8c215769cc6639ba651799eed53d6e0d263ba7e71f65
+hmac: d706a958430c49a672f3c7c5a42209f54dd4cc1aada7d68e2489307e2d98b275
 
 ...

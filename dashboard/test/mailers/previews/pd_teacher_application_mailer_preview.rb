@@ -17,10 +17,10 @@ class PdTeacherApplicationMailerPreview < ActionMailer::Preview
     registration_reminder
     declined
   ).each do |mail_type|
-    define_method "#{mail_type}__with_partner".to_sym do
+    define_method :"#{mail_type}__with_partner" do
       Pd::Application::TeacherApplicationMailer.send mail_type, build_application(matched: true, is_awaiting_admin_approval: false)
     end
-    define_method "#{mail_type}__without_partner".to_sym do
+    define_method :"#{mail_type}__without_partner" do
       Pd::Application::TeacherApplicationMailer.send mail_type, build_application(matched: false, is_awaiting_admin_approval: false)
     end
   end

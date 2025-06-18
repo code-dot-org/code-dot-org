@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import {getSelectedScriptName} from '@cdo/apps/redux/unitSelectionRedux';
+import {getSelectedUnitName} from '@cdo/apps/redux/unitSelectionRedux';
 import {unitUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
@@ -38,7 +38,7 @@ class ManageStudentNameCell extends Component {
     const studentUrl = unitUrlForStudent(sectionId, scriptName, id);
 
     return (
-      <div style={tableLayoutStyles.tableText}>
+      <div style={tableLayoutStyles.tableNameText}>
         {!this.props.isEditing && (
           <div>
             {studentUrl && (
@@ -90,7 +90,7 @@ const styles = {
 
 export default connect(
   state => ({
-    scriptName: getSelectedScriptName(state),
+    scriptName: getSelectedUnitName(state),
   }),
   dispatch => ({
     editStudent(id, studentInfo) {

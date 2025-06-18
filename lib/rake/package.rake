@@ -10,7 +10,7 @@ namespace :package do
 
   namespace :apps do
     def apps_packager
-      S3Packaging.new('apps', apps_dir, dashboard_dir('public/apps-package'))
+      S3Packaging.new('apps', apps_dir, [apps_dir, frontend_dir], dashboard_dir('public/apps-package'))
     end
 
     desc 'Update apps static asset package.'
@@ -30,7 +30,7 @@ namespace :package do
     desc 'Build and test apps package and upload to S3.'
     timed_task_with_logging 'build' do
       # Don't build apps if there are staged changes
-      Rake::Task['circle:check_for_unexpected_apps_changes'].invoke
+      Rake::Task['ci:check_for_unexpected_apps_changes'].invoke
 
       # Store initial commit hash to make sure it doesn't change out from under us during the build
       packager = apps_packager
@@ -40,7 +40,7 @@ namespace :package do
 
       unless rack_env?(:adhoc)
         # Check that building apps did not generate unexpected changes either.
-        Rake::Task['circle:check_for_unexpected_apps_changes'].invoke
+        Rake::Task['ci:check_for_unexpected_apps_changes'].invoke
 
         ChatClient.wrap('Testing apps') {Rake::Task['test:apps'].invoke}
       end

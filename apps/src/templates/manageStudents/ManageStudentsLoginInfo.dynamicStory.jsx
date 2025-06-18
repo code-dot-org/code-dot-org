@@ -32,6 +32,7 @@ export default {
         sectionName: 'Name',
         studioUrlPrefix: 'http://localhost-studio.code.org:3000',
         studentData: studentData,
+        providePrivacyLetter: true,
       },
     };
   `,

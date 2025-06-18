@@ -81,7 +81,7 @@ describe('UnitEditor', () => {
       initialLocales: [],
       isMigrated: false,
       initialPublishedState: PublishedState.in_development,
-      initialUnitPublishedState: null,
+      initialHideWithinCourse: false,
       initialInstructionType: InstructionType.teacher_led,
       initialInstructorAudience: InstructorAudience.teacher,
       initialParticipantAudience: ParticipantAudience.student,
@@ -121,19 +121,22 @@ describe('UnitEditor', () => {
   describe('Script Editor', () => {
     it('does not show publishing editor if hasCourse is true', () => {
       renderDefault({hasCourse: true});
+      // eslint-disable-next-line no-restricted-properties
       expect(screen.queryByTestId('course-version-publishing-editor')).to.not
         .exist;
     });
 
     it('shows publishing editor if hasCourse is false', () => {
       renderDefault({hasCourse: false});
+      // eslint-disable-next-line no-restricted-properties
       screen.queryByTestId('course-version-publishing-editor');
     });
 
     it('topic tags is a multiple chips component with initial options selected', () => {
       renderDefault({initialTopicTags: ['music_lab', 'ai']});
+      // eslint-disable-next-line no-restricted-properties
       const topicTags = screen.getByTestId('chips-unit-editor-topic-tags');
-      expect(within(topicTags).getAllByRole('checkbox').length).to.equal(3);
+      expect(within(topicTags).getAllByRole('checkbox').length).to.equal(5);
 
       expect(within(topicTags).getByLabelText('Music lab').checked).to.equal(
         true
@@ -148,8 +151,9 @@ describe('UnitEditor', () => {
 
     it('selecting topic tag chips updates input element selection state', () => {
       renderDefault({initialTopicTags: ['music_lab', 'ai']});
+      // eslint-disable-next-line no-restricted-properties
       const topicTags = screen.getByTestId('chips-unit-editor-topic-tags');
-      expect(within(topicTags).getAllByRole('checkbox').length).to.equal(3);
+      expect(within(topicTags).getAllByRole('checkbox').length).to.equal(5);
 
       expect(within(topicTags).getByLabelText('Maker').checked).to.equal(false);
 
@@ -163,7 +167,7 @@ describe('UnitEditor', () => {
       renderDefault({initialContentArea: 'self_paced_pl_k_5'});
 
       const contentArea = screen.getByLabelText('Content Area');
-      expect(within(contentArea).getAllByRole('option').length).to.equal(11);
+      expect(within(contentArea).getAllByRole('option').length).to.equal(12);
       expect(
         within(contentArea).getByText('K-5 self-paced PL').selected
       ).to.equal(true);
@@ -195,11 +199,11 @@ describe('UnitEditor', () => {
       assert.equal(wrapper.find('.unit-test-hide-unit-in-course').length, 0);
     });
 
-    it('clicking hide unit checkbox updates unit published state', () => {
+    it('clicking hide unit checkbox updates checkbox state', () => {
       const wrapper = createWrapper({
         hasCourse: true,
-        initialPublishedState: 'pilot',
-        initialUnitPublishedState: 'in_development',
+        initialPublishedState: 'stable',
+        initialHideWithinCourse: true,
       });
       assert.equal(wrapper.find('.unit-test-hide-unit-in-course').length, 1);
       assert.equal(
@@ -219,14 +223,9 @@ describe('UnitEditor', () => {
         initialCourseVersionId: 1,
       });
 
-      // To update based on the list of topic tags
-      expect(wrapper.find('input').length).to.equal(27);
-      expect(wrapper.find('input[type="checkbox"]').length).to.equal(14);
-      expect(wrapper.find('textarea').length).to.equal(4);
-      expect(wrapper.find('select').length).to.equal(6);
-      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(11);
+      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(10);
       expect(wrapper.find('SaveBar').length).to.equal(1);
-      expect(wrapper.find('CourseTypeEditor').length).to.equal(1);
+      expect(wrapper.find('CourseTypeEditor').length).to.equal(0);
 
       expect(wrapper.find('UnitCard').length).to.equal(1);
     });
@@ -277,7 +276,7 @@ describe('UnitEditor', () => {
 
     it('disables changing student facing lesson plan checkbox when not allowed to make major curriculum changes', () => {
       const wrapper = createWrapper({
-        initialPublishedState: 'stable',
+        allowMajorCurriculumChanges: false,
         isMigrated: true,
         initialUseLegacyLessonPlans: false,
       });
@@ -292,8 +291,7 @@ describe('UnitEditor', () => {
 
     it('allows changing student facing lesson plan checkbox when allowed to make major curriculum changes to hidden unit', () => {
       const wrapper = createWrapper({
-        initialPublishedState: 'stable',
-        initialUnitPublishedState: 'in_development',
+        allowMajorCurriculumChanges: true,
         isMigrated: true,
         initialUseLegacyLessonPlans: false,
       });
@@ -385,7 +383,7 @@ describe('UnitEditor', () => {
         .true;
       saveAndKeepEditingButton.simulate('click');
 
-      // check the the spinner is showing
+      // check that the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
       expect(unitEditor.state().isSaving).to.equal(true);
 
@@ -423,7 +421,7 @@ describe('UnitEditor', () => {
         .true;
       saveAndKeepEditingButton.simulate('click');
 
-      // check the the spinner is showing
+      // check that the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
       expect(unitEditor.state().isSaving).to.equal(true);
 
@@ -458,7 +456,7 @@ describe('UnitEditor', () => {
         .true;
       saveAndKeepEditingButton.simulate('click');
 
-      // check the the spinner is showing
+      // check that the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
       expect(unitEditor.state().isSaving).to.equal(true);
 
@@ -539,117 +537,6 @@ describe('UnitEditor', () => {
             'Error Saving: Please provide a positive number of instructional minutes per week in Unit Calendar Settings.'
           )
       ).to.be.true;
-      $.ajax.restore();
-    });
-
-    it('shows error when published state is pilot but no pilot experiment given', () => {
-      sinon.stub($, 'ajax');
-      const wrapper = createWrapper({});
-
-      const unitEditor = wrapper.find('UnitEditor');
-      unitEditor.setState({
-        publishedState: PublishedState.pilot,
-        pilotExperiment: '',
-      });
-
-      const saveBar = wrapper.find('SaveBar');
-
-      const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
-        .true;
-      saveAndKeepEditingButton.simulate('click');
-
-      expect($.ajax).to.not.have.been.called;
-
-      expect(unitEditor.state().isSaving).to.equal(false);
-      expect(unitEditor.state().error).to.equal(
-        'Please provide a pilot experiment in order to save with published state as pilot.'
-      );
-
-      expect(
-        wrapper
-          .find('.saveBar')
-          .contains(
-            'Error Saving: Please provide a pilot experiment in order to save with published state as pilot.'
-          )
-      ).to.be.true;
-
-      $.ajax.restore();
-    });
-
-    it('shows error when published state is preview or stable and device compatibility JSON is null', () => {
-      sinon.stub($, 'ajax');
-      const wrapper = createWrapper({
-        isMissingRequiredDeviceCompatibilities: true,
-        hasCourse: true,
-      });
-
-      const unitEditor = wrapper.find('UnitEditor');
-      unitEditor.setState({
-        publishedState: PublishedState.preview,
-        courseOfferingDeviceCompatibilities: null,
-      });
-
-      const saveBar = wrapper.find('SaveBar');
-
-      const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
-        .true;
-      saveAndKeepEditingButton.simulate('click');
-
-      expect($.ajax).to.not.have.been.called;
-
-      expect(unitEditor.state().isSaving).to.equal(false);
-      expect(unitEditor.state().error).to.equal(
-        'Please set all device compatibilities in order to save with published state as preview or stable.'
-      );
-
-      expect(
-        wrapper
-          .find('.saveBar')
-          .contains(
-            'Error Saving: Please set all device compatibilities in order to save with published state as preview or stable.'
-          )
-      ).to.be.true;
-
-      $.ajax.restore();
-    });
-
-    it('shows error when published state is preview or stable and at least one device compatibility is not set', () => {
-      sinon.stub($, 'ajax');
-      const wrapper = createWrapper({
-        isMissingRequiredDeviceCompatibilities: true,
-        hasCourse: true,
-      });
-
-      const unitEditor = wrapper.find('UnitEditor');
-      unitEditor.setState({
-        publishedState: PublishedState.stable,
-        courseOfferingDeviceCompatibilities:
-          '{"computer":"","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
-      });
-
-      const saveBar = wrapper.find('SaveBar');
-
-      const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
-        .true;
-      saveAndKeepEditingButton.simulate('click');
-
-      expect($.ajax).to.not.have.been.called;
-
-      expect(unitEditor.state().isSaving).to.equal(false);
-      expect(unitEditor.state().error).to.equal(
-        'Please set all device compatibilities in order to save with published state as preview or stable.'
-      );
-
-      expect(
-        wrapper
-          .find('.saveBar')
-          .contains(
-            'Error Saving: Please set all device compatibilities in order to save with published state as preview or stable.'
-          )
-      ).to.be.true;
 
       $.ajax.restore();
     });
@@ -680,7 +567,7 @@ describe('UnitEditor', () => {
         .true;
       saveAndKeepEditingButton.simulate('click');
 
-      // check the the spinner is showing
+      // check that the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
       expect(unitEditor.state().isSaving).to.equal(true);
 
@@ -734,38 +621,6 @@ describe('UnitEditor', () => {
       $.ajax.restore();
     });
 
-    it('shows error when moving standalone unit out of in development if not supplied all standalone unit information', () => {
-      sinon.stub($, 'ajax');
-      const wrapper = createWrapper({initialIsCourse: false, hasCourse: false});
-
-      const unitEditor = wrapper.find('UnitEditor');
-      unitEditor.setState({publishedState: 'beta'});
-
-      const saveBar = wrapper.find('SaveBar');
-
-      const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
-        .true;
-      saveAndKeepEditingButton.simulate('click');
-
-      expect($.ajax).to.not.have.been.called;
-
-      expect(unitEditor.state().isSaving).to.equal(false);
-      expect(unitEditor.state().error).to.equal(
-        'Standalone units that are not in development must be a standalone unit with family name and version year.'
-      );
-
-      expect(
-        wrapper
-          .find('.saveBar')
-          .contains(
-            'Error Saving: Standalone units that are not in development must be a standalone unit with family name and version year.'
-          )
-      ).to.be.true;
-
-      $.ajax.restore();
-    });
-
     it('saves successfully when moving standalone unit out of in development if professional learning course', () => {
       sinon.stub(window, 'confirm').callsFake(() => true);
       const wrapper = createWrapper({initialIsCourse: false, hasCourse: false});
@@ -791,7 +646,7 @@ describe('UnitEditor', () => {
         .true;
       saveAndKeepEditingButton.simulate('click');
 
-      // check the the spinner is showing
+      // check that the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
       expect(unitEditor.state().isSaving).to.equal(true);
 
@@ -866,7 +721,7 @@ describe('UnitEditor', () => {
       expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
       saveAndCloseButton.simulate('click');
 
-      // check the the spinner is showing
+      // check that the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
       expect(unitEditor.state().isSaving).to.equal(true);
 
@@ -897,7 +752,7 @@ describe('UnitEditor', () => {
       expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
       saveAndCloseButton.simulate('click');
 
-      // check the the spinner is showing
+      // check that the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
       expect(unitEditor.state().isSaving).to.equal(true);
 

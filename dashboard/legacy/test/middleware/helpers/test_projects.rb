@@ -167,18 +167,6 @@ class ProjectsTest < Minitest::Test
     project.get(new_project_channel_id)
   end
 
-  def test_buffer_abuse_score
-    signedin_storage_id = create_storage_id_for_user(20)
-    project = Projects.new(signedin_storage_id)
-
-    # Create a new typeless project
-    # abuse_score should be 0 by default on project creation for projects of any type.
-    new_project_channel_id = project.create({}, ip: 123)
-    assert_equal 0, Projects.get_abuse(new_project_channel_id)
-    project.buffer_abuse_score(new_project_channel_id)
-    assert_equal(-50, Projects.get_abuse(new_project_channel_id))
-  end
-
   def test_uses_type_over_level_project_type
     signedin_storage_id = create_storage_id_for_user(20)
     project = Projects.new(signedin_storage_id)

@@ -8,10 +8,11 @@ Feature: Create Dropdown in Header
 
 Scenario: Create Dropdown does NOT show on level pages
   Given I create a student named "16 Year Old"
-  Given I am on "http://studio.code.org/s/allthethings/lessons/18/levels/7?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/18/levels/7?noautoplay=true"
   And I wait until element ".create_menu" is not visible
   Then I sign out
 
+@pegasus_content
 Scenario: Signed Out - Correct Create Links
   Given I am on "http://code.org"
   And I wait until element ".create_menu" is visible

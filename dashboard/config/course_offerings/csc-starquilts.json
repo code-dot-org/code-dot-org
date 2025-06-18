@@ -16,5 +16,6 @@
   "video": "https://www.youtube-nocookie.com/embed/XtbUUMbqeSY/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=XtbUUMbqeSY&wmode=transparent",
   "published_date": "2023-07-10 09:00:00 UTC",
   "self_paced_pl_course_offering_key": "self-paced-pl-csc",
-  "ai_teaching_assistant_available": false
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": null
 }

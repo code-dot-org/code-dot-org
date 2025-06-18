@@ -1,0 +1,63 @@
+name 'self-paced-equity-U1L2-cic_reflection1'
+
+markdown <<MARKDOWN
+<div style="width:60%;">
+
+# Tackling Inequities in Computer Science
+
+#### Promoting equity in K-12 computer science education requires a multi-pronged approach. It's important to examine data from multiple angles. Consider the following questions:
+
+* #### Do your students have access to the technology required for computer science classes?
+* #### Are qualified teachers leading classes?
+* #### Do teachers have access to high-quality, rigorous curriculum?
+* #### How many schools offer computer science in your district/region?
+* #### How many students participant in computer science?
+	* #### What are their demographics (race, ethnicity, gender) as compared to the entire school population?
+	* #### Do students feel like they belong in computer science classes?
+</div>
+<br>
+
+<div style="width:60%;">
+
+## Control-Influence-Concern Framework
+
+#### While the above is a long list of factors, we’ll be focusing on where you will have the biggest impact, which likely involves your classroom and school. You have the power to influence access, diversity, inclusion, and students' sense of belonging.
+
+#### The following is a **Control-Influence-Concern** model. It's a great way to think about where you can effect change.
+</div>
+<br>
+
+<div style="text-align: center; width:60%;">
+<br>
+    <img src="https://images.code.org/67ad03fec48ab80e59d61fdb7cc980c6-image-1733265697951.41.11 PM.png" alt="Three circles are overlaid on top of each other. The bottom one is concern, the middle one is influence, the top is control." style="display: inline-block; width: 60%; margin:auto;"></div>
+<br><br>
+
+<div style="width:60%;">
+
+#### Here are some examples of what you might be able to Control, Influence, and have Concern over:
+* #### **Concern**: Some students don’t have computers at home.
+* #### **Influence**: Some students are being pulled out of CS class for additional services.
+* #### **Control**: Students are being exposed to curriculum materials that reinforce stereotypes that only certain types of people can succeed in computer science.
+<br>
+
+___
+## Reflection 
+
+<div style="display: flex; align-items: center; border: solid .1px; border-radius: 20px 20px 20px 20px; padding: 15px 5px 10px 5px;">
+	<a href="code.org" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/b3228ff3b84aeb85ec00b47136800a8f-image-1731959884476.png" style="width: auto; height: 50px;" alt="A piece of paper with lines and a pencil."></a>
+	<div style="background-color: #FFFFFF; border-radius: 20px 20px 20px 20px; color: #000000; width: 60%; margin-left: 0%; margin-right: 0%; padding: 0px 10px 5px 10px;">
+		<p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Activity Guide <mark>(update icon link)</mark></b></p>
+	<p style="color: black; line-height: 1; margin-left: 10px; margin-right: 0px; font-size: 16px">These reflection is also in your Activity Guide on page <mark>5.</mark></p>
+	</div>
+</div>
+<br>
+
+#### Thinking about the Control-Influence-Concern model, answer the following questions:
+
+* #### What do you have control over in your school?
+* #### What factors might you influence?
+* #### What challenges might you face in bringing computer science to your students?
+</div>
+<br>
+
+MARKDOWN

@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSA",
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -14,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-24 14:46:48 UTC",
+    "serialized_at": "2024-11-19 01:15:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6248,6 +6249,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

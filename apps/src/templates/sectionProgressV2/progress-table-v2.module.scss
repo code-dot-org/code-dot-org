@@ -1,3 +1,5 @@
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
 @import 'color.scss';
 
 .progressV2Page {
@@ -145,7 +147,7 @@ $level-cell-width: 52;
   display: flex;
   flex-direction: row;
 
-  &Students {
+  .titleStudents {
     height: 100%;
     min-width: 195px;
     margin-right: 12px;
@@ -155,16 +157,73 @@ $level-cell-width: 52;
     justify-content: flex-end;
   }
 
-  &UnitSelector {
+  .titleUnitSelector {
     display: flex;
     flex-direction: row;
     line-height: 32px;
     min-width: fit-content;
     max-height: 32px;
 
-    &Dropdown {
+    .titleUnitSelectorDropdown {
       margin-inline-start: 8px;
     }
+  }
+
+  // CSV download button
+  .downloadCsvDropdown {
+    display: flex;
+    margin-inline-start: 5px;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.downloadCsvContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownOption {
+  /* Reset's every elements apperance */
+  background: none repeat scroll 0 0 transparent;
+  border: none !important;
+  border-radius: 0;
+  border-spacing: 0;
+  list-style: none outside none;
+  margin: 0;
+  text-decoration: none;
+  text-indent: 0;
+  box-shadow: none;
+  flex-grow: 1;
+
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--neutral-base-black);
+
+  padding: 0.3125rem 0.875rem 0.3125rem 0.625rem;
+  gap: 0.5rem;
+
+  &:active {
+    border: 0 !important;
+  }
+
+  &:hover {
+    color: var(--neutral-base-black);
+    text-decoration: none;
+  }
+
+  i {
+    font-size: 1rem;
+    line-height: 125%;
+    width: 1.25rem;
+    text-align: center;
+  }
+
+  span {
+    @include typography.body-three;
+    color: inherit;
+    margin-bottom: 0;
   }
 }
 

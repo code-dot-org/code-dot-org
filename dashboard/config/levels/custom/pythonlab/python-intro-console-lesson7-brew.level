@@ -1,0 +1,56 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-01-23T23:42:56.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**Scenario:** The hero brews a potion using the ingredients collected earlier.\r\n\r\n## Do This\r\n- Run the code and observe the hero adding all ingredients to the cauldron until their pouch is empty.\r\n- Modify the `brew_potion()` function to print a message when the potion is brewed. \r\n- Reflect: \r\n\t- How does the while hero.has_ingredients() loop ensure all ingredients are used?\r\n\t- Why is it helpful to encapsulate this logic in a function?",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "I would have needed to rewrite the while loop again. \n\nwhile hero.is_on_ingredient():\n        hero.collect_ingredient()\n        show_ingredient_message()\n        hero.move()",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": true,
+      "placeholderText": "",
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": true
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "from support import hero, show_art_and_message\n\ndef brew_potion():\n    while hero.has_ingredients():\n        hero.add_to_cauldron()\n    # add your code here to print the message \"Potion brewed!\"\n\nbrew_potion()\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "support.py",
+          "language": "py",
+          "contents": "import random\n\n# Simulated Hero class\nclass Hero:\n    def __init__(self):\n        self.ingredients = 0          # Total ingredients collected\n        self.potions = {\"growth\": 0, \"healing\": 0, \"vine\": 0}  # Potions available\n        self.villagers_to_heal = 5    # Number of villagers to heal\n        self.vine_sections = 0        # Sections of vine path grown\n\n    # Collect ingredients logic\n    def is_on_ingredient(self):\n        return random.choice([True, False])\n\n    def collect_ingredient(self):\n        self.ingredients += 1\n        print(f\"🍄 Collected an ingredient! Total ingredients: {self.ingredients}\")\n\n    def move(self):\n        print(\"➡️ Moving to the next spot...\")\n\n    # Brew potions logic\n    def has_ingredients(self):\n        return self.ingredients > 0\n\n    def add_to_cauldron(self):\n        self.ingredients -= 1\n        print(\"✨ Added an ingredient to the cauldron!\")\n\n    def brew_potion(self, potion_type):\n        if potion_type in self.potions:\n            self.potions[potion_type] += 1\n            print(f\"🧪 Brewed a {potion_type} potion! Total {potion_type} potions: {self.potions[potion_type]}\")\n\n    # Growth potion logic\n    def has_potion(self, potion_type):\n        return self.potions.get(potion_type, 0) > 0\n\n    def grow_forest(self):\n        print(\"🌳 A magical forest grows, blocking the enemies!\")\n\n    # Healing potion logic\n    def heal_villager(self):\n        if self.villagers_to_heal > 0:\n            self.villagers_to_heal -= 1\n            print(f\"💖 You healed a villager! Villagers left to heal: {self.villagers_to_heal}\")\n        else:\n            print(\"All villagers are already healed!\")\n\n    # Vine potion logic\n    def grow_vine(self):\n        self.vine_sections += 1\n        print(f\"🌿 A vine section grows! Total sections: {self.vine_sections}\")\n\n# ASCII art and dynamic feedback\nartwork = {\n    \"cauldron\": \"\"\"\n        ( (\n         ) )\n        ( ( \n        ) ) \n        ( (\n       _|_|_\n      (     )\n       `---'\n    \"\"\",\n    \"forest\": \"\"\"\n      🌳🌳🌳\n     🌳🌳🌳\n      🌳🌳🌳\n    \"\"\",\n    \"vine\": \"\"\"\n      🌿🌿🌿\n     🌿🌿🌿\n      🌿🌿🌿\n    \"\"\",\n    \"healed\": \"\"\"\n      💖 💖 💖\n     💖 💖 💖\n      💖 💖 💖\n    \"\"\"\n}\n\n# Function to display ASCII art and messages\ndef show_art_and_message(event):\n    if event == \"cauldron\":\n        print(\"✨ The potion is brewing!\")\n        print(artwork[\"cauldron\"])\n    elif event == \"forest\":\n        print(\"🌳 A magical forest grows!\")\n        print(artwork[\"forest\"])\n    elif event == \"vine\":\n        print(\"🌿 A vine path stretches across the gap!\")\n        print(artwork[\"vine\"])\n    elif event == \"healed\":\n        print(\"💖 The villagers are healed!\")\n        print(artwork[\"healed\"])\n\n# Instantiate the hero\nhero = Hero()\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "support"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-23T23:42:56.338+00:00\",\"changed\":[\"cloned from \\\"python-intro-console-lesson7-collectMove\\\"\"],\"cloned_from\":\"python-intro-console-lesson7-collectMove\"},{\"changed_at\":\"2025-01-24 00:04:12 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-24 00:07:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-24 00:08:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Pythonlab>

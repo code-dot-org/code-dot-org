@@ -81,6 +81,7 @@ export const lessonShape = PropTypes.shape({
             position: PropTypes.number.isRequired,
             displayName: PropTypes.string.isRequired,
             link: PropTypes.string.isRequired,
+            title: PropTypes.string.isRequired,
           })
         ).isRequired,
       })
@@ -136,6 +137,7 @@ export const navigationLessonShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   key: PropTypes.string.isRequired,
   unit: PropTypes.shape({
+    hasUnnumberedLessons: PropTypes.bool,
     lessonGroups: PropTypes.arrayOf(
       PropTypes.shape({
         key: PropTypes.string.isRequired,

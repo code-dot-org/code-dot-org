@@ -22,6 +22,8 @@ import {isRosterDialogOpen} from './teacherSectionsReduxSelectors';
 const COMPLETED_EVENT = 'Section Setup Completed';
 const CANCELLED_EVENT = 'Section Setup Cancelled';
 
+const ARCHIVED_STATE = 'ARCHIVED';
+
 const ctaButtonStyle = {
   background: color.orange,
   color: color.white,
@@ -48,6 +50,12 @@ const ClassroomList = ({classrooms, onSelect, selectedId, rosterProvider}) =>
           {classroom.name}
           {classroom.section && (
             <span style={{color: '#aaa'}}> ({classroom.section})</span>
+          )}
+          {classroom.course_state === ARCHIVED_STATE && (
+            <span id="course-state" style={{color: color.bootstrap_error_text}}>
+              {' '}
+              - {classroom.course_state}
+            </span>
           )}
           <span style={{float: 'right'}}>
             {locale.code()}
@@ -93,8 +101,10 @@ NoClassroomsFound.propTypes = {
   rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
 };
 
-const ROSTERED_SECTIONS_SUPPORT_URL =
+const GOOGLE_CLASSROOMS_SYNC_SUPPORT_URL =
   'https://support.code.org/hc/en-us/articles/115001319312';
+const ROSTERED_SECTIONS_SUPPORT_URL =
+  'https://support.code.org/hc/en-us/articles/6496495212557';
 
 const LoadError = ({rosterProvider, loginType}) => {
   switch (rosterProvider) {
@@ -105,7 +115,7 @@ const LoadError = ({rosterProvider, loginType}) => {
           <ReauthorizeGoogleClassroom />
           <p>
             <a
-              href={ROSTERED_SECTIONS_SUPPORT_URL}
+              href={GOOGLE_CLASSROOMS_SYNC_SUPPORT_URL}
               target="_blank"
               rel="noopener noreferrer"
             >

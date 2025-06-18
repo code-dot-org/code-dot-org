@@ -1,10 +1,12 @@
+import Button from '@code-dot-org/component-library/button';
 import classnames from 'classnames';
-import React, {useState, useCallback, useMemo} from 'react';
+import React, {useState, useCallback, useMemo, useEffect, useRef} from 'react';
 
-import Button from '@cdo/apps/componentLibrary/button/Button';
 import {commonI18n} from '@cdo/apps/types/locale';
 
 import moduleStyles from './user-message-editor.module.scss';
+
+const MAX_MESSAGE_LENGTH = 10000;
 
 /**
  * Renders the user message editor component.
@@ -31,8 +33,9 @@ const UserMessageEditor = React.forwardRef<
       customPlaceholder,
       showSubmitLabel = false,
     },
-    ref
+    externalInputRef
   ) => {
+    const internalInputRef = useRef<HTMLTextAreaElement | null>(null);
     const [userMessage, setUserMessage] = useState<string>('');
 
     const userMessageIsEmpty = useMemo(() => {
@@ -54,7 +57,18 @@ const UserMessageEditor = React.forwardRef<
       [onSubmit]
     );
 
+    useEffect(() => {
+      if (!internalInputRef.current) {
+        return;
+      }
+
+      internalInputRef.current.style.height = 'auto'; // Need to reset height before update.
+      internalInputRef.current.style.height =
+        internalInputRef.current.scrollHeight + 2 + 'px'; // Add a couple of pixels to avoid scrollbars.
+    }, [userMessage]);
+
     const icon = {iconName: 'paper-plane'};
+
     return (
       <div
         className={classnames(
@@ -63,7 +77,16 @@ const UserMessageEditor = React.forwardRef<
         )}
       >
         <textarea
-          ref={ref}
+          ref={node => {
+            internalInputRef.current = node;
+
+            if (
+              typeof externalInputRef === 'object' &&
+              externalInputRef !== null
+            ) {
+              externalInputRef.current = node;
+            }
+          }}
           id="uitest-chat-textarea"
           className={moduleStyles.textArea}
           placeholder={
@@ -73,10 +96,13 @@ const UserMessageEditor = React.forwardRef<
           value={userMessage}
           disabled={disabled}
           onKeyDown={e => handleKeyPress(e, userMessage)}
+          maxLength={MAX_MESSAGE_LENGTH}
+          rows={1}
         />
 
-        <div className={moduleStyles.centerSingleItemContainer}>
+        <div className={moduleStyles.endSingleItemContainer}>
           <Button
+            aria-label={commonI18n.submit()}
             id="uitest-chat-submit"
             isIconOnly={!showSubmitLabel}
             onClick={() => handleSubmit(userMessage)}

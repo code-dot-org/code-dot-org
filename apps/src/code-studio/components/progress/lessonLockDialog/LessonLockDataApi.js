@@ -31,7 +31,6 @@ export function useGetLockState(unitId, lessonId, sectionId) {
 
   const serverLockState = useMemo(
     () => extractLockData(data, sectionId, lessonId),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     [data, sectionId, lessonId]
   );
 

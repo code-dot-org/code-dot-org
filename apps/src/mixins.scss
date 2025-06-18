@@ -31,3 +31,21 @@
     border: none !important;
   }
 }
+
+@mixin icon-button($background, $selected, $active) {
+  i {
+    color: var(--text-neutral-tertiary);
+  }
+
+  &.selected i, &:hover i {
+    color: $selected;
+  }
+
+  &:hover {
+    background-color: $background;
+  }
+
+  &:active i {
+    color: $active;
+  }
+}

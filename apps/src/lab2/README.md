@@ -50,6 +50,7 @@ Currently, the following level apps are built for **Lab2**:
 - [Music](../music/)
 - [Panels](../panels/)
 - [StandaloneVideo](../standaloneVideo)
+- [BubbleChoice](../bubbleChoice)
 
 The full list of supported level apps, along with their associated properties, is declared in `LabViewsRenderer` [here](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/lab2/views/LabViewsRenderer.tsx#L47).
 

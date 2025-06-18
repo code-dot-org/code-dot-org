@@ -178,10 +178,6 @@ class FieldPatternAi extends GoogleBlockly.Field {
     this.renderContent();
   }
 
-  getText() {
-    return this.getValue().kit;
-  }
-
   updateSize_() {
     const width = FIELD_WIDTH + 2 * FIELD_PADDING;
     const height = FIELD_HEIGHT + 2 * FIELD_PADDING;

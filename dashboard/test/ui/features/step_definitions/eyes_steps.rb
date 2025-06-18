@@ -27,8 +27,6 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
     config[:viewport_size] = {width: 1024, height: 690}
   end
   @browser.capabilities[:takes_screenshot] = true
-  @eyes.force_full_page_screenshot = true
-  # Default stitch mode can be customized for each checkpoint in the I See No Difference step.
   @eyes.stitch_mode = Applitools::STITCH_MODE[:css]
 
   @eyes.open(config)
@@ -47,24 +45,30 @@ And(/^I close my eyes$/) do
 end
 
 # A Feature can optionally specify the stitch mode ('css' or 'scroll') for Eyes to create the full screenshot.
-And(/^I see no difference for "([^"]*)"(?: using stitch mode "([^"]*)")?$/) do |identifier, stitch_mode|
+And(/^I see no difference for "([^"]*)"(?: using stitch mode "([^"]*)")?( without waiting for Font Awesome to load)?$/) do |identifier, stitch_mode, skip_fa_wait|
   next if CDO.disable_all_eyes_running
 
-  if stitch_mode == "none"
-    @eyes.force_full_page_screenshot = false
-  else
-    @eyes.stitch_mode = stitch_mode == "scroll" ?
-      Applitools::STITCH_MODE[:scroll] :
-      Applitools::STITCH_MODE[:css]
+  # Wait until the fonts are fully loaded and rendering the page
+  # Hopefully fixes many of the issues with font wiggle due to lazily loading
+  # alternative fonts for symbols and localized glyphs.
+  wait_until do
+    fonts_loaded? && (skip_fa_wait || font_awesome_loaded?)
   end
 
-  @eyes.check_window(identifier, MATCH_TIMEOUT, false)
+  is_full_page_screenshot = stitch_mode != "none"
+  @eyes.check_window(identifier, MATCH_TIMEOUT, is_full_page_screenshot)
+end
 
-  # Return to full page screenshot for remaining checkpoints in this Scenario.
-  @eyes.force_full_page_screenshot = true
+And(/^I see no difference for "([^"]*)" within "([^"]*)"$/) do |identifier, selector|
+  next if CDO.disable_all_eyes_running
 
-  # Return to default stitch mode for remaining checkpoints in this Scenario.
-  @eyes.stitch_mode = Applitools::STITCH_MODE[:css]
+  element = nil
+  wait_until do
+    element = @browser.find_element(:css, selector)
+    element.displayed? && fonts_loaded?
+  end
+
+  @eyes.check_region(element, tag: identifier, match_timeout: MATCH_TIMEOUT, stitch_content: true)
 end
 
 And(/^The header is finished animating$/) do
@@ -80,4 +84,14 @@ def ensure_eyes_available
   @eyes = Applitools::Selenium::Eyes.new
   @eyes.api_key = CDO.applitools_eyes_api_key
   @eyes.log_handler = Logger.new('../../log/eyes.log')
+end
+
+# There are several fonts we sometimes load associated with Font Awesome, but Font Awesome 6 at the "solid" weight (900) is our default,
+# and used in the header (which appears across almost all pages), so we wait for that one to load at least.
+def font_awesome_loaded?
+  @browser.execute_script('return [...document.fonts].find(font => font.family === "Font Awesome 6 Pro" && font.weight === "900")?.status === "loaded"') == true
+end
+
+def fonts_loaded?
+  @browser.execute_script('return document.fonts.status === "loaded"') == true
 end

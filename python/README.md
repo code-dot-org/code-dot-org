@@ -5,8 +5,8 @@ run Python code from Rails. This is enabled by [pycall.rb](https://github.com/mr
 and allows us to take advantage of Python's great package ecosystem. More information is available
 in [the initial pycall PR](https://github.com/code-dot-org/code-dot-org/pull/60048).
 
-For package management and virtual env we use [pdm](https://pdm-project.org/), see
-[section on using pdm below](#pdm-manage-python-packages-and-virtualenv).
+For package management and virtual env we use [uv](https://docs.astral.sh/uv/), see
+[section on using uv below](#uv-manage-python-packages-and-virtualenv).
 
 ### PyCall (currently) doesn't work from Rails web requests
 
@@ -22,20 +22,20 @@ This means, at present, **PyCall should be used from ActiveJob workers**.
   your locals.yml and launch workers manually using `bundle exec bin/delayed_job start`.
   See comments in [locals.yml.default](../locals.yml.default) for more details.
 
-## pdm: manage python packages and virtualenv
+## uv: manage python packages and virtualenv
 
-[pdm](https://pdm-project.org/) uses [pyproject.toml](../pyproject.toml) to create a python virtualenv, and install and manage its
+[uv](https://docs.astral.sh/uv/) uses [pyproject.toml](../pyproject.toml) to create a python virtualenv, and install and manage its
 dependencies. Its similar to `bundle` from the Ruby world, or `yarn`/`npm` from the Node world,
 and includes many of the same features.
 
 Common commands:
 
-- `pdm install`: install dependencies specified in pyproject.toml. like: `yarn install` or `bundle install`
-- `pdm add boto9000`: add boto9000 to pyproject.toml and install it. like: `yarn install boto9000`
-- `pdm run ____`: run `____` inside the repo's python virtualenv. like: `bundle exec ____`
-  - example: `pdm run ipython`: start ipython
-  - example: `pdm run pytest`: run pytest in the current dir
-- `source .venv/bin/activate`: activate the python virtual environment created by pdm (see `pdm venv activate` for exact command)
+- `uv sync`: install dependencies specified in pyproject.toml. like: `yarn install` or `bundle install`
+- `uv add boto9000`: add boto9000 to pyproject.toml and install it. like: `yarn install boto9000`
+- `uv run ____`: run `____` inside the repo's python virtualenv. like: `bundle exec ____`
+  - example: `uv run ipython`: start ipython
+  - example: `uv run pytest`: run pytest in the current dir
+- `source .venv/bin/activate`: activate the python virtual environment created by uv (see `uv venv activate` for exact command)
 
 ## pycall.rb: how to invoke python code from rails
 
@@ -130,24 +130,51 @@ test and run your package in its own virtualenv, as well as in the repo-wide vir
      ```
 
 1. Try out your module from inside it's directory (e.g. from /python/myfeature) run:
-   1. `pdm install`: this will make a new venv for just your feature in /python/myfeature/.venv
-   1. `pdm run python`
+   1. `uv sync`: this will switch the current venv to include myfeature's dependencies
+   1. `uv run python`
       1. `import myfeature`
       1. `myfeature.testmefunc()`
 1. Modify the toplevel [/pyproject.toml](../pyproject.toml)'s dependencies section to point to your new package:
 
    ```
    dependencies = [
-    # ...
-    "myfeature @ file:///${PROJECT_ROOT}/python/myfeature",
+    "myfeature",
+   ...
+   [tool.uv.sources]
+   myfeature = { workspace = true }
+   ...
+   [tool.uv.workspace]
+   members = [
+      'python/myfeature',
    ```
 
 1. Now try out your package from the project repo directory (i.e. from code-dot-org/) run:
-1. `pdm install`
-1. `pdm run python3 -c 'import myfeature; print(myfeature.testmefunc)'`
+1. `uv sync`
+1. `uv run python3 -c 'import myfeature; print(myfeature.testmefunc)'`
 1. Now you're ready to try our code from Ruby:
 1. `bin/dashboard-console`:
    ```
    pyimport 'myfeature'
    myfeature.testmefunc()
    ```
+
+**NOTE: when adding python dependencies, please prefer '>=' version matches** to '==' matches. The lockfile will ensure that
+version numbers are kept constant, and using '>=' will make it much easier to do package version upgrades
+repo-wide.
+
+#### Testing python packages
+
+Python packages should be testable by running `uv run pytest` from the package's main directory.
+
+Most likely you want to configure your project to use pytest on the tests/ sub-dir by configuring pyproject.toml like:
+```
+[tool.pytest.ini_options]
+testpaths = ['tests']
+```
+
+
+Our CI system will automatically run `uv run pytest` against every directory that contains a pyproject.toml.
+
+#### Linting python packages
+
+All .py files in python/ will be automatically linted using Ruff, both at commit and in CI.

@@ -4,6 +4,10 @@ require_relative './test_helper'
 class SiteTest < Minitest::Test
   include Rack::Test::Methods
 
+  def setup
+    skip unless CDO.has_pegasus_content
+  end
+
   def app
     Rack::Builder.parse_file(File.absolute_path('../config.ru', __dir__)).first
   end

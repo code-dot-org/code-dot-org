@@ -4,7 +4,6 @@
  */
 
 // TODO: Can we fix our imports and no longer need to ignore this rule?
-/* eslint-disable @typescript-eslint/no-var-requires */
 
 import {
   AnyAction,

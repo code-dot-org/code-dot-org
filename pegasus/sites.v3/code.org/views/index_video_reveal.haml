@@ -24,7 +24,7 @@
   - unless download_filename.nil_or_empty?
     %div.download-link
       %i{class: "#{icon_download}"}
-      %a{href: "http://s3.amazonaws.com/cdo-videos/#{download_filename}"}
+      %a{href: download_filename}
         =hoc_s(:call_to_action_download_video)
 
   - unless download_path.nil_or_empty?

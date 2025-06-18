@@ -9,24 +9,10 @@ import Notification, {
   NotificationType,
 } from '../../sharedComponents/Notification';
 import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
-import MarketingAnnouncementBanner from '../studioHomepages/MarketingAnnouncementBanner';
 
-import {
-  UnconnectedCensusForm as CensusForm,
-  censusFormPrefillDataShape,
-} from './CensusForm';
+import {CensusForm} from './CensusForm';
 import CensusMap from './CensusMap';
 import YourSchoolResources from './YourSchoolResources';
-
-const accessReportBannerParams = {
-  id: 'announcement-id',
-  image: '/images/marketing/accessreport_teacherdash.png',
-  title: i18n.accessReportBannerTitle(),
-  body: i18n.accessReportBannerDesc(),
-  buttonUrl: 'https://advocacy.code.org/stateofcs/',
-  buttonText: i18n.accessReportBannerButton(),
-  buttonId: 'access-report-launch-2024',
-};
 
 class YourSchool extends Component {
   static propTypes = {
@@ -34,12 +20,21 @@ class YourSchool extends Component {
     alertHeading: PropTypes.string,
     alertText: PropTypes.string,
     alertUrl: PropTypes.string,
-    prefillData: censusFormPrefillDataShape,
+    prefillData: PropTypes.shape({
+      userName: PropTypes.string,
+      userEmail: PropTypes.string,
+      isTeacher: PropTypes.bool,
+      schoolCountry: PropTypes.string,
+      schoolId: PropTypes.string,
+      schoolType: PropTypes.string,
+      schoolName: PropTypes.string,
+      schoolState: PropTypes.string,
+      schoolZip: PropTypes.string,
+    }),
     hideMap: PropTypes.bool,
     currentCensusYear: PropTypes.number,
     teacherApplicationMode: PropTypes.string,
     tileset: PropTypes.string.isRequired,
-    showReportLaunchBanner: PropTypes.bool,
   };
 
   state = {
@@ -98,12 +93,6 @@ class YourSchool extends Component {
           )}
         <h1 style={styles.heading}>{i18n.yourSchoolHeading()}</h1>
         <h3 style={styles.description}>{i18n.yourSchoolDescription()}</h3>
-        {this.props.showReportLaunchBanner && (
-          <MarketingAnnouncementBanner
-            announcement={accessReportBannerParams}
-            marginBottom="16px"
-          />
-        )}
         <YourSchoolResources />
         {!this.props.hideMap && (
           <div id="map">

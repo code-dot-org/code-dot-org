@@ -25,7 +25,7 @@ markdown <<MARKDOWN
         
 <br>
 
-## The astype()function
+## The astype() function
 
 #### Since **'Age'** is typically represented as a **Int** and not a **Float**, we will make that change using the **astype()** function. 
 
@@ -50,6 +50,10 @@ markdown <<MARKDOWN
         </tr>
     </table>
 
+## More functions in this lesson  
 
-## **Let's practice!**
+> #### **info()** - Displays a DataFrame's column names, non-null counts, and data types
+> #### **describe()** - Generates summary statistics of a DataFrame's numerical columns
+
+## **Let's practice in a *modify* level!**
 MARKDOWN

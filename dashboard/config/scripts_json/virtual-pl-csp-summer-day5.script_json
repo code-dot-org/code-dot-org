@@ -4,12 +4,14 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "pl_workshop_activities",
+      "curriculum_umbrella": "PD Workshop Activity CSP",
       "is_migrated": true,
       "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-10 16:03:34 UTC",
+    "serialized_at": "2024-11-19 01:19:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -443,6 +445,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-01-2024"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -465,6 +470,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-02-2024"
+        ],
         "progression": "AP Scavenger Hunt"
       },
       "bonus": false,
@@ -487,6 +495,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-03-2024"
+        ],
         "progression": "Code.org Platform Tour"
       },
       "bonus": false,
@@ -509,6 +520,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-04-2024"
+        ],
         "progression": "Code.org Platform Tour"
       },
       "bonus": false,
@@ -531,6 +545,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-05-2024"
+        ],
         "progression": "Code.org Platform Tour"
       },
       "bonus": false,
@@ -553,6 +570,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-06-2024"
+        ],
         "progression": "Code.org Platform Tour"
       },
       "bonus": false,
@@ -575,6 +595,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-07-2024"
+        ],
         "progression": "Code.org Platform Tour"
       },
       "bonus": false,
@@ -597,6 +620,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-08-2024"
+        ],
         "progression": "Code.org Platform Tour"
       },
       "bonus": false,
@@ -619,6 +645,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-09-2024"
+        ],
         "progression": "Code.org Platform Tour"
       },
       "bonus": false,
@@ -641,6 +670,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-10-2024"
+        ],
         "progression": "Code.org Platform Tour"
       },
       "bonus": false,
@@ -663,6 +695,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-11-2024"
+        ],
         "progression": "Code.org Platform Tour"
       },
       "bonus": false,
@@ -685,6 +720,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-12-2024"
+        ],
         "progression": "Code.org Platform Tour"
       },
       "bonus": false,

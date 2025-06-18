@@ -7,8 +7,9 @@
 
 set -e
 
-MEM_PER_KARMA_PROCESS_MB=$(node -e "console.log(require('./Gruntfile').MEM_PER_KARMA_PROCESS_MB)" 2>/dev/null)
-NODE_OPTIONS="--max-old-space-size=${MEM_PER_KARMA_PROCESS_MB}"
+MEM_PER_TEST_PROCESS_MB=$(node -e "console.log(require('./Gruntfile').MEM_PER_TEST_PROCESS_MB)" 2>/dev/null)
+NODE_OPTIONS="--max-old-space-size=${MEM_PER_TEST_PROCESS_MB}"
+PERCENT_OF_MEM_AVAILABLE_TO_USE_FOR_TESTS=80
 
 function linuxNumProcs() {
   local nprocs=$(nproc)
@@ -21,7 +22,11 @@ function linuxNumProcs() {
   fi
 
   # Don't run more processes than can fit in free memory.
-  local mem_procs=$(awk "/${mem_metric}/ {printf \"%d\", \$2/1024/${MEM_PER_KARMA_PROCESS_MB}}" /proc/meminfo)
+  local mem_available_mb=$(
+    awk "/${mem_metric}/ {printf \"%d\", \$2 / 1024}" /proc/meminfo
+  )
+  local mem_you_can_use_mb=$(( mem_available_mb * PERCENT_OF_MEM_AVAILABLE_TO_USE_FOR_TESTS / 100 ))
+  local mem_procs=$(( mem_you_can_use_mb / MEM_PER_TEST_PROCESS_MB ))
   local procs=$(( ${mem_procs} < ${nprocs} ? ${mem_procs} : ${nprocs} ))
 
   if ((procs == 0)); then
@@ -43,7 +48,8 @@ function macMemAvailableMB() {
 }
 
 function macNumProcs() {
-  local mem_procs=$(( $(macMemAvailableMB) / MEM_PER_KARMA_PROCESS_MB ))
+  local mem_you_can_use=$(( $(macMemAvailableMB) * PERCENT_OF_MEM_AVAILABLE_TO_USE_FOR_TESTS / 100 ))
+  local mem_procs=$(( mem_you_can_use / MEM_PER_TEST_PROCESS_MB ))
   local procs=$(( ${mem_procs} < $(nproc) ? ${mem_procs} : $(nproc) ))
 
   # Run at least two copies in parallel
@@ -69,7 +75,7 @@ echo "#     Running test jobs with ${PROCS}x-parallelism     #"
 echo "##################################################"
 echo
 
-echo && echo "Starting jest"
+echo && echo "Starting jest with ${PROCS}x workers:"
 
 npx jest --silent --maxWorkers ${PROCS}
 

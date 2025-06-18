@@ -119,7 +119,7 @@
         {
           "type": "radiogroup",
           "name": "csf_maker_microbit_grade_division_helpful",
-          "title": "Having the course split into different grade levels was helpful to me.",
+          "title": "Having the course split into grade levels was helpful to me.",
           "choices": [
             {
               "value": "1",

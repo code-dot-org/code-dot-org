@@ -122,6 +122,10 @@ const PROJECT_INFO = {
     thumbnail: '/shared/images/fill-70x70/courses/logo_music.png',
     urlOverride: '/s/music-intro-2024/reset',
   },
+  pythonlab: {
+    label: i18n.projectTypePythonlab(),
+    thumbnail: '/shared/images/fill-70x70/courses/logo_pythonlab.png',
+  },
 };
 
 const TILES_PER_ROW = 4;

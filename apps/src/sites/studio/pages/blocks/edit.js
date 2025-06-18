@@ -20,6 +20,8 @@ const INVALID_COLOR = '#d00';
 let poolField, nameField, helperEditor, configEditor, validationDiv;
 let hasLintingErrors = false;
 let isValidBlockConfig = false;
+let originalBlockName;
+let saveButton;
 
 $(document).ready(() => {
   registerReducers({animationList: animationList});
@@ -37,6 +39,9 @@ function initializeEditPage(defaultSprites) {
 
   poolField = document.getElementById('block_pool');
   nameField = document.getElementById('block_name');
+  saveButton = document.getElementById('block_submit');
+  originalBlockName = nameField.value;
+
   Blockly.inject(document.getElementById('blockly-container'), {
     assetUrl,
     valueTypeTabShapeMap: valueTypeTabShapeMap(Blockly),
@@ -150,6 +155,7 @@ function updateBlockPreview() {
     parsedConfig.func || parsedConfig.name,
     poolField.value
   );
+  checkBlockNameChanges(blockName);
   nameField.value = blockName;
   // Calling this function just so that we can catch and show errors (if any)
   installCustomBlocks({
@@ -174,4 +180,16 @@ function updateBlockPreview() {
 function onBlockSpaceChange() {
   document.getElementById('code-preview').innerText =
     Blockly.getWorkspaceCode();
+}
+
+function checkBlockNameChanges(blockName) {
+  // Add a prompt to the "Update Block" button if the user has changed the block name or pool.
+  if (originalBlockName && blockName !== originalBlockName) {
+    saveButton.setAttribute(
+      'data-confirm',
+      `Are you sure you want to update ${originalBlockName}?\n\n` +
+        `This will affect everywhere that this block is used.\n\n` +
+        `If you change the block pool or block name, this could break existing levels or projects.`
+    );
+  }
 }

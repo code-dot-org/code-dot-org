@@ -5,7 +5,6 @@
 
 # Only native gems and AWS SDK are available in AWS Lambda.
 require 'aws-sdk-glue'
-
 GLUE = Aws::Glue::Client.new
 
 DATABASE = ENV.fetch('DATABASE', nil)

@@ -5,6 +5,7 @@ import reduxThunk from 'redux-thunk';
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
+import * as globalEdition from '@cdo/apps/util/globalEdition';
 
 export const reduxStore = (reducers = {}, state = {}) => {
   return createStore(
@@ -20,4 +21,22 @@ export const reduxStoreDecorator = function (Story, context) {
     children: Story(),
     store: reduxStore(this.reducers, state),
   });
+};
+
+export const withGlobalEdition = (storyFn, context) => {
+  let globalRegionsStub = null;
+
+  const {region} = context.args;
+
+  beforeEach(() => {
+    globalRegionsStub = jest.spyOn(globalEdition, 'getGlobalEditionRegion');
+    globalRegionsStub.mockImplementation(() => region || 'root');
+  });
+
+  afterEach(() => {
+    globalRegionsStub?.mockClear();
+    globalRegionsStub = null;
+  });
+
+  return storyFn();
 };

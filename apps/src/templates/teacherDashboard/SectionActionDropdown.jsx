@@ -79,9 +79,8 @@ class SectionActionDropdown extends Component {
    * Returns the URL to the correct section to be edited
    */
   editRedirectUrl = (sectionId, isPl) => {
-    let editSectionUrl = '/sections/' + sectionId + '/edit';
-    editSectionUrl += isPl ? '?redirectToPage=my-professional-learning' : '';
-    return editSectionUrl;
+    const append = isPl ? '?redirectToPage=my-professional-learning' : '';
+    return teacherDashboardUrl(sectionId, '/settings') + append;
   };
 
   /**
@@ -172,7 +171,7 @@ class SectionActionDropdown extends Component {
             {i18n.sectionViewProgress()}
           </PopUpMenu.Item>
           <PopUpMenu.Item
-            href={teacherDashboardUrl(sectionData.id, '/manage_students')}
+            href={teacherDashboardUrl(sectionData.id, '/roster')}
             className="manage-students-link"
             hrefOnClick={() => {
               analyticsReporter.sendEvent(

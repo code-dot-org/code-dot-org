@@ -83,6 +83,7 @@ export interface ProgressState {
   courseVersionId: number | undefined;
   unitDescription: string | undefined;
   unitStudentDescription: string | undefined;
+  unitHasUnnumberedLessons: boolean;
   changeFocusAreaPath: string | undefined;
   unitCompleted: boolean | undefined;
 }
@@ -146,6 +147,7 @@ const initialState: ProgressState = {
   courseVersionId: undefined,
   unitDescription: undefined,
   unitStudentDescription: undefined,
+  unitHasUnnumberedLessons: false,
   changeFocusAreaPath: undefined,
   unitCompleted: undefined,
 };
@@ -176,6 +178,7 @@ const progressSlice = createSlice({
       state.unitTitle = action.payload.unitTitle;
       state.unitDescription = action.payload.unitDescription;
       state.unitStudentDescription = action.payload.unitStudentDescription;
+      state.unitHasUnnumberedLessons = action.payload.unitHasUnnumberedLessons;
       state.courseId = action.payload.courseId;
       state.courseVersionId = action.payload.courseVersionId;
       state.currentLessonId = currentLessonId;
@@ -282,7 +285,7 @@ const progressSlice = createSlice({
     setLessonExtrasEnabled(state, action: PayloadAction<boolean>) {
       state.lessonExtrasEnabled = action.payload;
     },
-    setViewAsUserId(state, action: PayloadAction<number>) {
+    setViewAsUserId(state, action: PayloadAction<number | null>) {
       state.viewAsUserId = action.payload;
     },
   },
@@ -330,6 +333,10 @@ export function navigateToLevelId(levelId: string): ProgressThunkAction {
     const currentLevel = getCurrentLevel(getState());
 
     if (canChangeLevelInPage(currentLevel, newLevel)) {
+      // If the requested level is the same as the current level, don't do anything.
+      if (state.currentLevelId === levelId) {
+        return;
+      }
       updateBrowserForLevelNavigation(state, newLevel.path, levelId);
       // Notify the Lab2 system that the level is changing.
       notifyLevelChange(currentLevel.id, levelId);
@@ -467,6 +474,12 @@ function sendReportHelper(
       // Update the progress store by merging in this
       // particular result immediately.
       dispatch(mergeResults({[levelId]: result}));
+      // If the level is the sublevel of a bubble level,
+      // also update the status of the parent level.
+      const currentLevel = getCurrentLevel(getState());
+      if (currentLevel.parentLevelId) {
+        dispatch(mergeResults({[currentLevel.parentLevelId]: result}));
+      }
     }
   });
 }

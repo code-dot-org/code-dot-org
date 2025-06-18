@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 class StarWarsGrid < Studio
@@ -41,10 +42,6 @@ class StarWarsGrid < Studio
   # List of possible skins, the first is used as a default.
   def self.skins
     %w(hoc2015x)
-  end
-
-  def uses_google_blockly?
-    true
   end
 
   def common_blocks(_)

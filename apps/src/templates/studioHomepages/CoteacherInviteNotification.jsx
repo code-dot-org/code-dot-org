@@ -1,8 +1,11 @@
+import {
+  BodyTwoText,
+  StrongText,
+} from '@code-dot-org/component-library/typography';
 import PropTypes from 'prop-types';
 import React, {useMemo} from 'react';
 import {connect} from 'react-redux';
 
-import {BodyTwoText, StrongText} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -22,6 +25,8 @@ const CoteacherInviteNotification = ({
   asyncLoadSectionData,
   coteacherInvite,
   coteacherInviteForPl,
+  // This prop is used to allow asyncLoadSectionData to be run in a way that might remove data
+  destructiveLoad = false,
 }) => {
   const invite = useMemo(() => {
     if (!!coteacherInviteForPl && isForPl) {
@@ -36,7 +41,7 @@ const CoteacherInviteNotification = ({
     HttpClient.put(api, '', true)
       .then(() => {
         asyncLoadCoteacherInvite();
-        asyncLoadSectionData();
+        asyncLoadSectionData(null, destructiveLoad);
       })
       .catch(err => console.error(err));
   };
@@ -115,6 +120,7 @@ CoteacherInviteNotification.propTypes = {
   asyncLoadSectionData: PropTypes.func.isRequired,
   coteacherInvite: PropTypes.object,
   coteacherInviteForPl: PropTypes.object,
+  destructiveLoad: PropTypes.bool,
 };
 
 // The Notification object uses styles instead of className for legacy reasons.

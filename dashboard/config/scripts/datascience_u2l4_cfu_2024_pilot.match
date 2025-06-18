@@ -13,4 +13,4 @@ question '`plt.show()`'
 answer 'Displays the plot'
 question '`plt.plot(x, y)`'
 answer 'Creates a line graph'
-allow_multiple_attempts false
+allow_multiple_attempts true

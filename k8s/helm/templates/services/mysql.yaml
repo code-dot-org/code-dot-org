@@ -1,0 +1,53 @@
+# NOTE: this mysql config is intended for dev/testing only.
+{{- if .Values.services.mysql.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "cdo.fullname" (merge (dict "component" "mysql") .) }}
+  labels:
+    {{ include "cdo.labels" (merge (dict "component" "mysql") .) | nindent 4 }}
+spec:
+  ports:
+    - name: mysql
+      protocol: TCP
+      port: 3306
+  selector:
+    {{ include "cdo.selectorLabels" (merge (dict "component" "mysql") .) | nindent 4 }}
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ include "cdo.fullname" (merge (dict "component" "mysql") .) }}
+  labels:
+    {{ include "cdo.labels" (merge (dict "component" "mysql") .) | nindent 4 }}
+spec:
+  serviceName: {{ include "cdo.fullname" (merge (dict "component" "mysql") .) }}
+  replicas: 1
+  selector:
+    matchLabels:
+      {{ include "cdo.selectorLabels" (merge (dict "component" "mysql") .) | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{ include "cdo.labels" (merge (dict "component" "mysql") .) | nindent 8 }}
+    spec:
+      containers:
+      - name: db
+        image: mysql:8.0
+        ports:
+        - containerPort: 3306
+        env:
+        - name: MYSQL_ALLOW_EMPTY_PASSWORD
+          value: "yes"
+        volumeMounts:
+        - name: mysql-data
+          mountPath: /var/lib/mysql/
+  volumeClaimTemplates:
+  - metadata:
+      name: mysql-data
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 1Gi
+{{- end }}

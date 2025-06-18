@@ -16,21 +16,20 @@
           "buttonText": "CS Connections Landing Page"
         }
       ],
-      "curriculum_umbrella": "CSC",
+      "content_area": "curriculum_k_5",
+      "curriculum_umbrella": "CSC K-5",
       "hideable_lessons": true,
-      "is_course": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
-      "tts": true,
-      "version_year": "2022"
+      "tts": true
     },
     "new_name": null,
-    "family_name": "csc-fables",
-    "serialized_at": "2023-06-27 22:22:41 UTC",
-    "published_state": "sunsetting",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-03-28 09:29:39 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csc-fables-2022"
     }
@@ -2766,6 +2765,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

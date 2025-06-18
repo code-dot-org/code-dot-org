@@ -37,10 +37,11 @@ Dashboard::Application.configure do
     config.i18n.backend = Cdo::I18n::LazyLoadableBackend.new(lazy_load: true)
   end
 
-  # In CI environments (ie, Drone), stub relevant AWS services (currently just SageMaker)
+  # In CI environments (ie, Drone), stub relevant third-party services
+  # (currently SageMaker, our safety check via OpenAI, and currently unused AWS Comprehend safety check)
   # so we can run UI tests for our AI Chat (ie, Generative AI) lab.
-  if is_ci
-    config.stub_aichat_aws_services = true
+  if CI::Utils.ci_job_ui_tests?
+    config.stub_aichat_external_services = true
   end
 
   config.assets.quiet = true
@@ -99,4 +100,9 @@ Dashboard::Application.configure do
   end
 
   config.experiment_cache_time_seconds = 0
+
+  # Prevent merge conflicts on schema.rb by skipping regeneration of schema.rb
+  # on the test machine. this is necessary because as of April 2025 the test DB
+  # schema differs from other environments due to utf8mb3 vs utf8mb4 issues.
+  config.active_record.dump_schema_after_migration = !CDO.test_system?
 end

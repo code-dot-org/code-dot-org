@@ -61,6 +61,7 @@ FactoryBot.define do
     association :workshop, factory: :workshop
     start {Time.zone.today + 9.hours}
     self.end {start + duration_hours.hours}
+    session_format {Pd::SharedWorkshopConstants::PD_SESSION_FORMATS.first[:value]}
 
     trait :with_assigned_code do
       after :build, &:assign_code
@@ -75,27 +76,12 @@ FactoryBot.define do
   factory :pd_teachercon_survey, class: 'Pd::TeacherconSurvey' do
     association :pd_enrollment, factory: :pd_enrollment, strategy: :create
 
-    transient do
-      randomized_survey_answers {false}
-    end
-
-    after(:build) do |survey, evaluator|
+    after(:build) do |survey, _|
       if survey.form_data.presence.nil?
         enrollment = survey.pd_enrollment
         workshop = enrollment.workshop
 
         survey_hash = build :pd_teachercon_survey_hash
-
-        if evaluator.randomized_survey_answers
-          survey_hash.each do |k, _|
-            survey_hash[k] =
-              if Pd::TeacherconSurvey.options.key? k.underscore.to_sym
-                Pd::TeacherconSurvey.options[k.underscore.to_sym].sample
-              else
-                SecureRandom.hex[0..8]
-              end
-          end
-        end
 
         Pd::TeacherconSurvey.facilitator_required_fields.each do |field|
           survey_hash[field] = {}
@@ -107,15 +93,15 @@ FactoryBot.define do
           Pd::TeacherconSurvey.facilitator_required_fields.each do |field|
             if Pd::TeacherconSurvey.options.key? field
               answers = Pd::TeacherconSurvey.options.key? field
-              survey_hash[field][facilitator.name] = evaluator.randomized_survey_answers ? answers.sample : answers.last
+              survey_hash[field][facilitator.name] = answers.last
             else
-              survey_hash[field][facilitator.name] = evaluator.randomized_survey_answers ? SecureRandom.hex[0..8] : 'Free Response'
+              survey_hash[field][facilitator.name] = 'Free Response'
             end
           end
         end
 
         if Pd::TeacherconSurvey::DISAGREES.include?(survey_hash['personalLearningNeedsMet'])
-          survey_hash[:how_could_improve] = evaluator.randomized_survey_answers ? SecureRandom.hex[0..8] : 'Rant about how to improve things'
+          survey_hash[:how_could_improve] = 'Rant about how to improve things'
         end
 
         survey.update_form_data_hash(survey_hash)
@@ -505,7 +491,7 @@ FactoryBot.define do
       form_data_hash do
         build(
           :pd_principal_approval_application_hash_common,
-          "approved_#{approved.downcase}".to_sym,
+          :"approved_#{approved.downcase}",
           course: course,
         )
       end

@@ -126,9 +126,10 @@ describe('ProgressTableView', () => {
       );
     });
 
-    it('renders a ProgressTableSummaryCell for each lesson for each student', () => {
+    it('renders a ProgressTableSummaryCell for each lesson for each student', async () => {
       const wrapper = setUp(ViewType.SUMMARY);
       const expectedSummaryCellCount = STUDENTS.length * LESSONS.length;
+      await setTimeout(() => {}, 50);
       expect(wrapper.find(ProgressTableSummaryCell)).toHaveLength(
         expectedSummaryCellCount
       );

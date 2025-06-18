@@ -1,6 +1,6 @@
+import Button from '@code-dot-org/component-library/button';
 import React, {useEffect, useState} from 'react';
 
-import Button from '@cdo/apps/componentLibrary/button';
 import {ExtraLinksLevelData, ExtraLinksProjectData} from '@cdo/apps/lab2/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -13,10 +13,8 @@ import moduleStyles from './extra-links.module.scss';
 
 interface ExtraLinksProps {
   levelId: number;
-}
-
-interface PermissionResponse {
-  permissions: string[];
+  scriptLevelId?: string;
+  positionRightOfFooter?: boolean;
 }
 
 interface ExtraLinksData {
@@ -25,25 +23,24 @@ interface ExtraLinksData {
 }
 
 async function fetchExtraLinksData(
+  permissions: string[],
   levelId: number,
+  scriptLevelId?: string,
   channelId?: string
 ): Promise<ExtraLinksData> {
-  // Fetch permissions.
-  const permissionsResponse = await HttpClient.fetchJson<PermissionResponse>(
-    '/api/v1/users/current/permissions'
-  );
-  const {permissions} = permissionsResponse.value;
-
   // Fetch level link data.
   let levelLinkData: ExtraLinksLevelData | undefined;
   if (
     permissions.includes(PERMISSIONS.LEVELBUILDER) ||
     permissions.includes(PERMISSIONS.PROJECT_VALIDATOR)
   ) {
+    let url = `/levels/${levelId}/extra_links`;
+    if (scriptLevelId) {
+      url += `?scriptLevelId=${scriptLevelId}`;
+    }
+
     const levelLinkDataResponse =
-      await HttpClient.fetchJson<ExtraLinksLevelData>(
-        `/levels/${levelId}/extra_links`
-      );
+      await HttpClient.fetchJson<ExtraLinksLevelData>(url);
     levelLinkData = levelLinkDataResponse.value;
   }
 
@@ -68,6 +65,8 @@ async function fetchExtraLinksData(
 // then display a modal with the link data.
 const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
   levelId,
+  scriptLevelId,
+  positionRightOfFooter,
 }: ExtraLinksProps) => {
   const [isLoading, setIsLoading] = useState(false);
   const [extraLinksData, setExtraLinksData] = useState<ExtraLinksData | null>(
@@ -79,13 +78,17 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
     state => state.lab.channel && state.lab.channel.id
   );
 
+  const permissions = useAppSelector(state => state.lab.permissions);
+
   useEffect(() => {
     setIsLoading(true);
-    fetchExtraLinksData(levelId, channelId).then(data => {
-      setExtraLinksData(data);
-      setIsLoading(false);
-    });
-  }, [levelId, channelId]);
+    fetchExtraLinksData(permissions, levelId, scriptLevelId, channelId).then(
+      data => {
+        setExtraLinksData(data);
+        setIsLoading(false);
+      }
+    );
+  }, [permissions, levelId, scriptLevelId, channelId]);
   const {levelLinkData, projectLinkData} = extraLinksData || {};
 
   if (isLoading || (!levelLinkData && !projectLinkData)) {
@@ -97,7 +100,11 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
       <Button
         onClick={() => setIsModalOpen(true)}
         text={'Extra Links'}
-        className={moduleStyles.extraLinksButton}
+        className={
+          positionRightOfFooter
+            ? moduleStyles.buttonRightOfFooter
+            : moduleStyles.extraLinksButton
+        }
         size={'s'}
         id={'uitest-extra-links-button'}
       />

@@ -12,11 +12,35 @@
     "csa9-2024",
     "csa-postap-se-and-computer-vision-2024"
   ],
+  "original_script_names": [
+    "csa1-2024",
+    "csa2-2024",
+    "csa3-2024",
+    "csa4-2024",
+    "csa5-2024",
+    "csa6-2024",
+    "csa7-2024",
+    "csa8-2024",
+    "csa9-2024",
+    "csa-postap-se-and-computer-vision-2024"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
+    "announcements": [
+      {
+        "key": "ee52a67a-7424-4e19-9bd9-ad28eecf8a0a",
+        "notice": "AP CS Assessments Focus Group",
+        "details": "Join us in investigating disparities in AP CSP and AP CSA assessments. We are aiming to learn more about performance gaps among students from underrepresented backgrounds and exploring potential solutions to improve equity in CS education. Your insights will contribute to informing these solutions to support all learners.",
+        "link": "https://usabi.li/do/24a50b8956e8/dfad",
+        "type": "feedback",
+        "visibility": "Teacher-only",
+        "dismissible": true,
+        "buttonText": "Sign up now!"
+      }
+    ],
     "family_name": "csa",
     "has_numbered_units": true,
     "has_verified_resources": true,
@@ -116,11 +140,9 @@
     },
     {
       "name": "CSA Syllabus",
-      "url": "https://docs.google.com/document/d/19G65CZ_Y9njvy6eVgoHNN_at6mP-Ow3bl0C1ZTsUu_8/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1KnhaELLMdLXf1X1JUHFPumLKYQNYM0tp8Bxn1xr46zU/",
       "key": "csa_syllabus",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csa_syllabus"

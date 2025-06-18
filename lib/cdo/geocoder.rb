@@ -148,7 +148,7 @@ module Geocoder
   singleton_class.prepend SauceLabsOverride
 
   # Override Geocoder#search to default to the same behavior as the FreeGeoIP service used on our staging and production
-  # servers. Localhost lookups are usually because UI tests are making requests and we want our developer and drone
+  # servers. Localhost lookups are usually because UI tests are making requests and we want our developer and CI
   # environments to behave similar to production and staging.
   # https://github.com/alexreisner/geocoder/blob/350cf0cc6a158d510aec3d91594d9b5718f877a9/lib/geocoder/lookups/freegeoip.rb#L41-L54
   module LocahostOverride

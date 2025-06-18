@@ -1,0 +1,26 @@
+{
+  "name": "sandbox-java-pl",
+  "script_names": [
+    "sandbox-java-basics-pl",
+    "sandbox-java-oop-pl"
+  ],
+  "original_script_names": [
+    "sandbox-java-basics-pl",
+    "sandbox-java-oop-pl"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "self_paced",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "sandbox-java-pl",
+    "has_numbered_units": true,
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

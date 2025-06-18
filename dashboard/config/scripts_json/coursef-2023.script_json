@@ -16,9 +16,9 @@
           "buttonText": "Get free resources"
         }
       ],
+      "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
-      "is_course": true,
       "is_migrated": true,
       "lesson_extras_available": true,
       "project_widget_types": [
@@ -26,16 +26,17 @@
         "playlab_k1",
         "artist"
       ],
+      "show_calendar": true,
       "tts": true,
-      "version_year": "2023"
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": "coursef",
-    "serialized_at": "2024-01-31 21:32:30 UTC",
-    "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-04-03 01:05:34 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "coursef-2023"
     }

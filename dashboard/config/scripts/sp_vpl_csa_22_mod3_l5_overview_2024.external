@@ -5,15 +5,16 @@ description 'description here'
 markdown <<MARKDOWN
 ## Arrays
 
-This is the last lesson in this module!  Here we will be focusing on using arrays in Java.  We will also incorporate your knowledge of for loops, conditional statements, arithmetic operations, and variables as you write and debug code in programs.  We also are going to focus more on the language we use when we discuss arrays so you can model using this language with students. 
+#### This is the last lesson in this module!  Here we will be focusing on using arrays in Java. We will also incorporate your knowledge of for loops, conditional statements, arithmetic operations, and variables as you write and debug code in programs.
+####We also are going to focus more on the language we use when we discuss arrays so you can model using this language with students. 
 
-**After this lesson you will be able to:**
+#### **After this lesson you will be able to:**
 
-* Declare and initialize a 1D array of primitive data types
-* Access and modify elements in an array
-* Traverse an array
+- #### Declare and initialize a 1D array of primitive data types
+- #### Access and modify elements in an array
+- #### Traverse an array
 
-Let’s get started! 
+## Let’s get started! 
 
 
 MARKDOWN

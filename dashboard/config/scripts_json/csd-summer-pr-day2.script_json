@@ -4,11 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "pl_workshop_activities",
+      "curriculum_umbrella": "PD Workshop Activity CSD",
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-26 20:13:14 UTC",
+    "serialized_at": "2024-11-19 01:16:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2156,6 +2158,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Entertainment Sample 4_-pr-2024"
+        ],
         "progression": "Sample Programs"
       },
       "bonus": false,
@@ -2178,6 +2183,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Entertainment Sample 3_-pr-2024"
+        ],
         "progression": "Sample Programs"
       },
       "bonus": false,
@@ -2200,6 +2208,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Entertainment Sample 1_-pr-2024"
+        ],
         "progression": "Sample Programs"
       },
       "bonus": false,
@@ -2222,6 +2233,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Entertainment Sample 2_-pr-2024"
+        ],
         "progression": "Sample Programs"
       },
       "bonus": false,
@@ -2244,6 +2258,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Plotting Shapes Shape Lab_-pr-2024"
+        ],
         "progression": "Drawing Shapes"
       },
       "bonus": false,
@@ -2266,6 +2283,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 rect_-pr-2024"
+        ],
         "progression": "Introduction to Game Lab"
       },
       "bonus": false,
@@ -2288,6 +2308,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Drawing in Game Lab 1_-pr-2024"
+        ],
         "progression": "Video: Drawing in Game Lab - Part 1"
       },
       "bonus": false,
@@ -2310,6 +2333,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Drawing Squares to Corners_-pr-2024"
+        ],
         "progression": "Using the Grid"
       },
       "bonus": false,
@@ -2332,6 +2358,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Drawing in Game Lab 2_-pr-2024"
+        ],
         "progression": "Video: Drawing in Game Lab - Part 2"
       },
       "bonus": false,
@@ -2354,6 +2383,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 fill_-pr-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2376,6 +2408,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 sequence_-pr-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2398,6 +2433,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 ellipse_-pr-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2420,6 +2458,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawing practice choice_-pr-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2442,6 +2483,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 debug_-pr-2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -2464,6 +2508,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawing challenges_-pr-2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -2486,6 +2533,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Predict Where X_-pr-2024"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2508,6 +2558,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Variables - Part 1_-pr-2024"
+        ],
         "progression": "Video: Introduction to Variables"
       },
       "bonus": false,
@@ -2530,6 +2583,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Predict Where XY_-pr-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2552,6 +2608,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables naming rules v2_-pr-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2574,6 +2633,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Draw Poppy_-pr-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2596,6 +2658,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games variables practice_-pr-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2618,6 +2683,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables assessment_-pr-2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -2640,6 +2708,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games variables challenge_-pr-2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -2662,6 +2733,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random random ellipse_-pr-2024"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -2684,6 +2758,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random random ellipse2_-pr-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2706,6 +2783,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables random with assignment_-pr-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2728,6 +2808,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables random reassign_-pr-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2750,6 +2833,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games random practice_-pr-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2772,6 +2858,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random rainbow snake_-pr-2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -2794,6 +2883,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games random challenge_-pr-2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -2816,6 +2908,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites Exploration_-pr-2024"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -2838,6 +2933,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Sprites in Game Lab_-pr-2024"
+        ],
         "progression": "Video: Introduction to Sprites"
       },
       "bonus": false,
@@ -2860,6 +2958,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro sprites_-pr-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2882,6 +2983,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro debug_-pr-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2904,6 +3008,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites anitab 1_-pr-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2926,6 +3033,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Animation Tab_-pr-2024"
+        ],
         "progression": "Video: The Animation Tab"
       },
       "bonus": false,
@@ -2948,6 +3058,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites sequencing_-pr-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2970,6 +3083,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawSprites placement match_-pr-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2992,6 +3108,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Sprites practice_-pr-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3014,6 +3133,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites assessment_-pr-2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -3036,6 +3158,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Sprites Challenges_-pr-2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -3058,6 +3183,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games properties predict_-pr-2024"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -3080,6 +3208,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games properties xy_-pr-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3102,6 +3233,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games properties new_-pr-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3124,6 +3258,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Properties practice_-pr-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3146,6 +3283,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Games properties assessment_-pr-2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -3168,6 +3308,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Properties challenge_-pr-2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -3190,6 +3333,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Scene Example_-pr-2024"
+        ],
         "progression": "Sprite Scenes"
       },
       "bonus": false,
@@ -3212,6 +3358,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites scene drawing_-pr-2024"
+        ],
         "progression": "Create a Background"
       },
       "bonus": false,
@@ -3234,6 +3383,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites scene sprites_-pr-2024"
+        ],
         "progression": "Add Sprites"
       },
       "bonus": false,
@@ -3256,6 +3408,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites scene text_-pr-2024"
+        ],
         "progression": "Add Text"
       },
       "bonus": false,
@@ -3278,6 +3433,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites scene challenge_-pr-2024"
+        ],
         "progression": "Review Your Scene"
       },
       "bonus": false,

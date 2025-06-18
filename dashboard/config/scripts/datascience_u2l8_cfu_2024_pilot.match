@@ -12,4 +12,4 @@ answer 'Comparing the growth of Griffin and Phoenix sightings over the past deca
 question 'Bar Chart'
 answer 'Comparing the number of sightings of each mythical creature in a single forest'
 
-allow_multiple_attempts false
+allow_multiple_attempts true

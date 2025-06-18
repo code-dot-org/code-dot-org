@@ -1,3 +1,12 @@
+import Link from '@code-dot-org/component-library/link';
+import Toggle from '@code-dot-org/component-library/toggle';
+import {
+  BodyTwoText,
+  BodyThreeText,
+  Heading3,
+  Heading4,
+  StrongText,
+} from '@code-dot-org/component-library/typography';
 import classnames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -5,20 +14,12 @@ import React, {useEffect, useState, useMemo, useCallback} from 'react';
 import {CSVLink} from 'react-csv';
 import {connect} from 'react-redux';
 
-import Link from '@cdo/apps/componentLibrary/link/Link';
-import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
-import {
-  BodyTwoText,
-  BodyThreeText,
-  Heading3,
-  Heading4,
-  StrongText,
-} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {setAiRubricsDisabled} from '@cdo/apps/templates/currentUserRedux';
+import {setAiEvalStatusMap} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import i18n from '@cdo/locale';
 
 import {UNDERSTANDING_LEVEL_STRINGS_V2, TAB_NAMES} from './rubricHelpers';
@@ -273,12 +274,7 @@ function RubricSettings({
       })}
     >
       <div className={style.studentInfoGroup}>
-        <Heading3>
-          {i18n.lessonNumbered({
-            lessonNumber: lesson.position,
-            lessonName: lesson.name,
-          })}
-        </Heading3>
+        <Heading3>{lesson.title}</Heading3>
         <div className={style.selectors}>
           <SectionSelector reloadOnChange={true} />
         </div>
@@ -403,11 +399,11 @@ RubricSettings.propTypes = {
   reportingData: reportingDataShape,
   aiRubricsDisabled: PropTypes.bool,
   setAiRubricsDisabled: PropTypes.func.isRequired,
-  aiEvalStatusCounters: PropTypes.object,
-  setAiEvalStatusMap: PropTypes.func,
 
   // Redux provided
   allTeacherEvaluationData: PropTypes.array,
+  aiEvalStatusCounters: PropTypes.object,
+  setAiEvalStatusMap: PropTypes.func,
 };
 
 export const UnconnectedRubricSettings = RubricSettings;
@@ -416,9 +412,11 @@ export default connect(
   state => ({
     aiRubricsDisabled: state.currentUser.aiRubricsDisabled,
     allTeacherEvaluationData: state.teacherRubric.allTeacherEvaluationData,
+    aiEvalStatusCounters: state.teacherRubric.aiEvalStatusCounters,
   }),
   dispatch => ({
     setAiRubricsDisabled: aiRubricsDisabled =>
       dispatch(setAiRubricsDisabled(aiRubricsDisabled)),
+    setAiEvalStatusMap: statusMap => dispatch(setAiEvalStatusMap(statusMap)),
   })
 )(RubricSettings);

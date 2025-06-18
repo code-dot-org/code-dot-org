@@ -9,6 +9,7 @@ import i18n from '@cdo/locale';
 
 import BaseDialog from '../BaseDialog';
 
+import {NON_LMS_LOGIN_TYPES} from './LoginTypeConstants';
 import LoginTypePicker from './LoginTypePicker';
 import PadAndCenter from './PadAndCenter';
 import ParticipantTypePicker from './ParticipantTypePicker';
@@ -73,13 +74,7 @@ const AddSectionDialog = ({
 
   const onLoginTypeSelection = loginType => {
     // Oauth section types should use the roster dialog, not the section setup page
-    if (
-      [
-        SectionLoginType.picture,
-        SectionLoginType.word,
-        SectionLoginType.email,
-      ].includes(loginType)
-    ) {
+    if (NON_LMS_LOGIN_TYPES.includes(loginType)) {
       redirectToNewSectionPage(participantType, loginType);
     }
     setLoginType(loginType);
@@ -124,8 +119,9 @@ const AddSectionDialog = ({
         useUpdatedStyles
         fixedWidth={1010}
         isOpen={isOpen}
-        overflow="hidden"
+        overflow="auto"
         uncloseable
+        style={{overflow: 'hidden'}}
       >
         <PadAndCenter>{getDialogContent()}</PadAndCenter>
       </BaseDialog>

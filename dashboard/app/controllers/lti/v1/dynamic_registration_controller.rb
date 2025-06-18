@@ -33,6 +33,7 @@ module Lti
           issuer: openid_config['issuer'],
           lms_account_name: openid_config.dig(Policies::Lti::LTI_PLATFORM_CONFIGURATION, Policies::Lti::CANVAS_ACCOUNT_NAME),
         }
+        @lms_name = Policies::Lti.issuer_name(openid_config['issuer'])
         # Expire cache in 1 hour to match expiration of registration token
         @cache.write(@registration_id, registration_data, 1.hour)
         render 'lti/v1/dynamic_registration', layout: false
@@ -88,14 +89,6 @@ module Lti
             jwks_url: platform[:jwks_url],
             access_token_url: platform[:access_token_url],
             admin_email: admin_email,
-          )
-          metadata = {
-            lms_name: platform[:name],
-          }
-          Metrics::Events.log_event(
-            session: session,
-            event_name: 'lti_dynamic_registration_completed',
-            metadata: metadata,
           )
 
           return render status: :created, json: {}

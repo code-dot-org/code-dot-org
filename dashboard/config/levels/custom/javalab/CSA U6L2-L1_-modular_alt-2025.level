@@ -1,0 +1,29 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2025-03-19T20:19:44.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "StringRunner.java": {
+        "text": "public class StringRunner {\n  public static void main(String[] args) {\n\n    String palindromeDefinition = \"A word spelled the same forwards and backwards\";\n    String palindrome = \"racecar\";\n    String notPalindrome = \"hotrod\";\n\n    String forward = \"\";\n    for(int i = 0; i < notPalindrome.length();i++){\n       String currentLetter = notPalindrome.substring(i,i+1);\n       forward = forward + currentLetter;\n    }\n    System.out.println(forward);\n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "contained_level_names": [
+      "CSA U6L2-L1 Contained_-modular_alt-2025"
+    ],
+    "name_suffix": "_alt-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-19T20:19:44.904+00:00\",\"changed\":[\"cloned from \\\"CSA U6L2-L1_-modular\\\"\"],\"cloned_from\":\"CSA U6L2-L1_-modular\"}]"
+}]]></config>
+</Javalab>

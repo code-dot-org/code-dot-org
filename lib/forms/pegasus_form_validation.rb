@@ -117,7 +117,7 @@ module PegasusFormValidation
       elsif value.instance_of?(Hash)
         suberrors = data_to_errors(value)
         suberrors.each_pair do |subkey, subvalue|
-          newkey = "#{key}[#{subkey}]".to_sym
+          newkey = :"#{key}[#{subkey}]"
           errors[newkey] = subvalue
         end
       end

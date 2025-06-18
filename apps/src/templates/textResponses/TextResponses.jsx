@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {
   setScriptId,
-  getSelectedScriptName,
+  getSelectedUnitName,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import UnitSelector from '@cdo/apps/templates/sectionProgress/UnitSelector';
 import {loadTextResponsesFromServer} from '@cdo/apps/templates/textResponses/textReponsesDataApi';
@@ -171,7 +171,7 @@ export default connect(
   state => ({
     sectionId: state.teacherSections.selectedSectionId,
     scriptId: state.unitSelection.scriptId,
-    scriptName: getSelectedScriptName(state),
+    scriptName: getSelectedUnitName(state),
   }),
   dispatch => ({
     setScriptId(scriptId) {

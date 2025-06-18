@@ -1,0 +1,244 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:56:29.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Gemma's Song\r\n\r\nAn **algorithm** is a series of steps to accomplish a task. For example, your friend Gemma heard a great sound combination online and described it as:\r\n\r\n- First there were three sounds together, like a **Patter**, **Boom**, and **Cloud**\r\n- Then they repeated - the same three sounds!\r\n- But then the bass and lead changed - it sounded **funky** like the music was **funneling** into me\r\n\r\nFollow Gemma's **algorithm** to recreate her song. You can listen to her song below. Your song should match hers exactly!\r\n\r\n![](https://images.code.org/3899b4f06e1afcab08fa6080c0359192-image-1741387084637.37.44 PM.png)",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+        "groove": [
+          "drum_beat_patter",
+          "funky_bass",
+          "boom_bass",
+          "guitar_cloud",
+          "guitar_funnel"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together"
+          ]
+        },
+        "type": "flyout"
+      },
+      "packId": "default",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundsPanelInSoundsMode": true,
+      "showSoundFilters": true,
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "groove/drum_beat_patter"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "groove/boom_bass"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "groove/guitar_cloud"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "editable": false,
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      },
+      "validationTimeout": 1
+    },
+    "display_name": "Gemma's Song",
+    "thumbnail_url": "\thttps://curriculum.code.org/media/musiclab/library-launch2024/packs/groove/groove.png",
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHorpleEeoerSvfZ2JHZpm1GhsSDwCOxBL+fVO3bL+jSF8lL\nW/SyrxeYBOE22MW62zzXxl7ZWtb3HROyH4RPTHsAcBBPo4PK1usYOsBDZKBO\nSB45w5QfTSl1PV+PTL2tu7L/zOMVsZ+3oATtBDd7H5bIlKixaN0iRSXfBQfO\nUP3iAZsT8Eyuhbmx+/+7bQ0+D5ozC1BLzE/l6Sxl0cp7JVy55SPCJdw6h7Bg\nd/njIZRIfi0Hfd0LgeBlY+FXFjmymE9DlvTMyePgxoF3AZOqstijiVVWBc4I\n47L3KqsFIAMIdnd+D8+wY1UHCJLB3++QJ+1FPXMZfGoLYy1RSqV/YdMI7RDP\nz9tcacftrQtuZKj3tKxnZ8buu//s05CWhlkS3r1FJiVGJ3sxgnZ5nBbQgQAo\niJM+AaL7TmdIUdwISVmILl3Nq1JHCO+2GmCnuu2dguKX8PZlBGuA5BqEuOn3\nT3Ub2YVVv6TUr/rBjvRvN9AJ8wp9cbca1MACmjKLQvQfpm3i5XPDOaOdD1PE\nKbXAfmgixFb6hyhVxOyYD4TReQh+R+j69J4MUTkXQKO74M2ArgXFE+z4hmAV\nhTwYI3au4TuHpvYpbIIYQWgISAy0Vtvk+Kp/wpP86107H4K1JQ/nRd7OXPjw\nymtEQ6Z7eKtDZL4fsdXo8WPWaOjVdLRbgtptI2YJ0JW+thxEICwvNox0YmLH\nsD/P9WyIQ3F30DG4+uoAZGj/F7m7eDK7VaVv6mBSz9wcpENlSn1yhbG1a7vJ\nR/YdnfsOQev9QK8WCw6yDD0UZ+x7NI7IJP2JKQDLApG8ebA+iFlnpd0Lo+aG\n0xiNVzBbHE6XmFN5dnAWlcI0ln2Sc/lpscU6+NxxVGuAhnOYhvaJAR1e5Bhl\nTw6SFXhCa3Btk1skduBtyg6X77kdQcH3Sk3wSBrezisA0TAYYzVlhP+nkulz\nVtpbo6RaVEiQF681MM9Zq0n/72MqRRzbe9JABXl4DfAd+VIsME+PX/ZRlrkb\n5jP5Ov+T62prvkZRLaAygagpqBklNCuvqlZpCnkLNVmaKEkjzvVEbI+X92P+\nKuV8mRSuJj/2q8C7j9IMH1DEJF1GpHggDjfElKqJGjmiv/Bu4nQBYrDSrNTL\nfuRBIbeEzMQXtmzfDnHgxkN7NyYQrNY0svHE/g1M8xwGjown9r3wW7vqmfrh\nXn0Xs63/P3fF5Dlow6IfU8zKaff+6rrf6NiJeo1kfi55l527baK+n1yuYJbN\ns1ZYMl6euDfN++PIcLq250XIM+TV/pg9vFhW3vs9qlJDG+9wqCfwoQ/ZGiCi\n/phz/2/ebxYEx48Q6M0daA9rMUfC9S34ikq7WgfvbMchuAe684No8GsMXJB1\nmnAMRMAB6T93a5CyCFg84lPDiJMrXM0BALUxjghuL/U8lL3EgPLVYH/o/r3p\n8YcNdNVWg5NWNlImZcN5V+gX9UrFxPT+6i4cVWy/D+wVugX9njD1DRGw1Ykh\n+VWptdE6EOhnB3a2scljuuUXukfIuf59zspQ0QHMO2PXfH7cyPx3NXm03eE3\nN/7RhSrhZ5lKmjUY03H9nj2xqpPKCF2Hi+cuXuW9fUpomlUEhR1TugqB9IkD\nazPmnJ2l2hGeeXqWdU2trNskegWPDNdQVDgJPKVDMFqQBr4UrpGcQslI52eD\nIB4EO1QT7sEstfzI26m3m3r5M+Bo4Vw3y2IuNKLSfEGBvKRUGeJ0gXGg17+S\nm7YgFOHCVmAl303xAv8mCMenv/n89IJoOYSqZwpNjT1b70G+3IQw3FHWzE7j\n8ZLfdtkVnebKBlLX676HyDxwJBFjoQeK6fRaYXvlajW0YX4jM6e+q4qLu9e7\n6DlldgfgC0SC8QH9bLe+drMGvUfqowfxzqOUSE4uqARBCFFnWGh8rTBsNr/u\nkzVOFdHNTO8kmJ9E\n",
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: \"You Did It!\"",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
+      "playerTitle": "Gemma's Song"
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-explore-choice-level-a_v2_695e5a4a-fcce-4705-8ee3-8b86ea64490f",
+        "message": "exemplar",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_different_sounds_together_multiple_times",
+            "value": 2
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:1"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "bass:1"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "lead:1"
+          },
+          {
+            "name": "played_sounds",
+            "value": 7
+          }
+        ],
+        "comment": "If made it here: we're into the 3rd chunk, so check exemplar"
+      },
+      {
+        "key": "test-music-lab-sequences-explore-choice-level-a_v2_15212f96-f557-438b-8862-9e789f538659",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to the second part...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_different_sounds_together_multiple_times",
+            "value": 2
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:1"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "bass:1"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "lead:1"
+          },
+          {
+            "name": "played_sounds",
+            "value": 6
+          }
+        ],
+        "comment": "If made it here: the first chunk and second chunk is correct..."
+      },
+      {
+        "key": "test-music-lab-sequences-explore-choice-level-a_v2_d4e174f7-56a3-44a0-8dd1-4131aac8c50d",
+        "message": "(exemplar validation)",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_different_sounds_together_multiple_times",
+            "value": 1
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:1"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "bass:1"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "lead:1"
+          },
+          {
+            "name": "played_sounds",
+            "value": 4
+          }
+        ],
+        "comment": "If made it here: the first chunk is correct but something is wrong with the second chunk so go to exemplar validation"
+      },
+      {
+        "key": "test-music-lab-sequences-explore-choice-level-a_v2_b62f7b8e-57bf-4355-aa94-ea90adc52973",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to the first part...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_different_sounds_together_multiple_times",
+            "value": 1
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:1"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "bass:1"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "lead:1"
+          }
+        ],
+        "comment": "If made it here: the first chunk is correct, so display the DJ Robot listening until the 2nd chunk...."
+      },
+      {
+        "key": "test-music-lab-sequences-explore-choice-level-a_7a31a667-f05d-4fc4-b952-06d8ff8fbdaf",
+        "message": "exemplar",
+        "next": true,
+        "conditions": [
+
+        ],
+        "comment": "If made it here: something is wrong, so use exemplar for failure"
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "bubble_choice_description": "Recreate a song that your friend Gemma heard online",
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:29.474+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-choice-level-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-choice-level-a\"},{\"changed_at\":\"2025-06-06 20:52:32 +0000\",\"changed\":[\"exemplar_settings\",\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-06 20:55:15 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-06 20:58:53 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-06 20:58:55 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-06 21:00:16 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-12 15:07:36 +0000\",\"changed\":[\"thumbnail_url\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -29,6 +29,7 @@ export default class CourseUnitsEditor extends Component {
       <div>
         {this.props.unitsInCourse.concat('').map((selectedUnit, index) => (
           <select
+            className="uitest-unit-selector"
             style={{
               ...this.props.inputStyle,
               opacity: selectedUnit === '' ? 0.4 : 1,
@@ -47,6 +48,11 @@ export default class CourseUnitsEditor extends Component {
             {unitNames.map((name, index) => (
               <option key={index} value={name}>
                 {name}
+              </option>
+            ))}
+            {this.props.initialUnitsInCourse.map((courseUnitName, index) => (
+              <option key={unitNames.length + index} value={courseUnitName}>
+                {courseUnitName}
               </option>
             ))}
           </select>

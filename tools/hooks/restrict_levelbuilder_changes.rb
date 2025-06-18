@@ -17,11 +17,11 @@ PROGRAMMING_EXPRESSIONS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/pro
 VIDEO_THUMBNAILS_DIR = File.expand_path(REPO_DIR + '/dashboard/public/c/video_thumbnails', __FILE__).freeze
 FOORM_DIR = File.expand_path(REPO_DIR + '/dashboard/config/foorm', __FILE__).freeze
 ALLOWED_FILES = %w(
-  dashboard/config/locales/dsls.en.yml
-  dashboard/config/locales/scripts.en.yml
-  dashboard/config/locales/courses.en.yml
-  dashboard/config/locales/unplugged.en.yml
-  dashboard/config/locales/data.en.yml
+  dashboard/config/locales/dsls/en.yml
+  dashboard/config/locales/scripts/en.yml
+  dashboard/config/locales/courses/en.yml
+  dashboard/config/locales/unplugged/en.yml
+  dashboard/config/locales/data/en.yml
   dashboard/config/videos.csv
 ).map {|f| File.join(REPO_DIR, f)}.freeze
 ERROR_MESSAGE = "Levelbuilder branch should only commit files in levels directory and specific allowed files. See #{__FILE__} for details.".freeze

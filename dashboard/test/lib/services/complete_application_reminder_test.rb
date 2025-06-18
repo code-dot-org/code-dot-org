@@ -118,7 +118,7 @@ class Services::CompleteApplicationReminderTest < ActiveSupport::TestCase
       teacher_without_email = create :teacher, :with_school_info, :demigrated
       teacher_without_email.update_attribute(:email, '')
       teacher_without_email.update_attribute(:hashed_email, '')
-      application_hash_without_email = build :pd_teacher_application_hash, alternate_email: ''
+      application_hash_without_email = build :pd_teacher_application_hash
       application_without_email = create :pd_teacher_application,
                                          status: 'incomplete',
                                          user: teacher_without_email,

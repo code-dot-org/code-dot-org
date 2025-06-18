@@ -1,12 +1,12 @@
-import PropTypes from 'prop-types';
-import React, {useContext, useState} from 'react';
-
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import {
   BodyFourText,
   StrongText,
   EmText,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@code-dot-org/component-library/typography';
+import PropTypes from 'prop-types';
+import React, {useContext, useState} from 'react';
+
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -130,6 +130,7 @@ export default function AiAssessmentFeedback({aiEvalInfo, aiFeedbackId}) {
                   setAIOtherContent(e.target.value);
                 }}
                 type="text"
+                // eslint-disable-next-line react/forbid-dom-props
                 data-testid="ai-assessment-feedback-textarea"
               />
             </div>

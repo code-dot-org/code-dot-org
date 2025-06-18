@@ -18,6 +18,9 @@ const RESPONSES = [
 const DEFAULT_PROPS = {
   responses: RESPONSES,
   showStudentNames: false,
+  eventData: {levelId: 1, unitId: 1},
+  unitName: 'unitName',
+  levelInstructions: 'Answer the question.',
 };
 
 describe('FreeResponseResponses', () => {

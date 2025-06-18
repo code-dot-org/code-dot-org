@@ -164,12 +164,22 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       reset_password_token: 'fake-reset-password-token'
     refute_nil user.encrypted_password
     refute_nil user.reset_password_token
+
+    purge_user user
+
+    assert_nil user.encrypted_password
+    assert_nil user.reset_password_token
+  end
+
+  test 'clears secret picture and words' do
+    user = create(:student, :sponsored, reset_password_token: 'fake-reset-password-token')
+
+    refute_nil user.reset_password_token
     refute_nil user.secret_picture
     refute_nil user.secret_words
 
     purge_user user
 
-    assert_nil user.encrypted_password
     assert_nil user.reset_password_token
     assert_nil user.secret_picture
     assert_nil user.secret_words
@@ -245,7 +255,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     purge_user user
 
-    assert_nil user.urm
+    refute user.urm
     assert_nil user.races
   end
 
@@ -1035,10 +1045,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "clears form_data from pd_regional_partner_mini_contacts" do
-    RegionalPartner.stubs(:find_by_zip).returns([nil, nil])
+    zip = "90210"
+    rp = create :regional_partner
+    rp.mappings.find_or_create_by!(zip_code: zip)
 
     teacher = create :teacher
-    mini_contact = create :pd_regional_partner_mini_contact, user: teacher
+    mini_contact = create :pd_regional_partner_mini_contact, user: teacher, form_data: build(:pd_regional_partner_mini_contact_hash).merge("zip" => zip).to_json, regional_partner: rp
     refute_equal '{}', mini_contact.form_data
 
     purge_user mini_contact.user

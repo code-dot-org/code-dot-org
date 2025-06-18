@@ -1,4 +1,4 @@
-import showProjectAdmin from '@cdo/apps/code-studio/showProjectAdmin'; // eslint-disable-line no-restricted-imports
+import showProjectAdmin from '@cdo/apps/code-studio/showProjectAdmin';
 
 import {assertVisible, assertHidden} from '../../util/assertions';
 import {enforceDocumentBodyCleanup} from '../../util/testUtils';

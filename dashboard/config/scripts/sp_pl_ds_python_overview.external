@@ -12,7 +12,11 @@ markdown <<MARKDOWN
 
 ## Python VS Java 
 
-#### You may have experience coding in different languages like Java or JavaScript. Though the logic is similar to other languages, Python's syntax is is simpler and more concise.
+#### You may have experience coding in different languages like Java. ***If not, that's okay.***
+
+#### Note, though the logic is similar to other languages, Python's syntax is is simpler and more concise.
+
+#### Some key differences you might notice with Python is the absence of semicolons and the need to explicitly define variable types.
 
 #### **Check out these examples:** 
 
@@ -20,7 +24,7 @@ markdown <<MARKDOWN
 <img src="https://images.code.org/51137721d45758df431d592930a9b10a-image-1726778843465.png" alt="table of syntax comparisons for python and java" width="500px" style="display: block; margin-left: auto; margin-right: auto;">
 
 
-#### Some key difference you might notice with Python is the absence of semicolons and the need to explicitly define variable types.
+
 
 ## Documentation 
 

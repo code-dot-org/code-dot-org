@@ -37,7 +37,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     @admin = create(:admin)
 
-    @script = create(:script)
+    @script = create(:single_unit_course).first_unit
     @script_level_prev = create(:script_level, script: @script)
     @script_level = create(:script_level, script: @script)
     @script_level_next = create(:script_level, script: @script)
@@ -57,6 +57,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @milestone_params = {
       user_id: @user,
       script_level_id: @script_level.id,
+      course_id: @script.original_unit_group_id,
       attempt: '1',
       result: 'true',
       testResult: '100',
@@ -110,9 +111,9 @@ class ActivitiesControllerTest < ActionController::TestCase
       '</title><title name="TEXT">type text here</title></block></next></block>'
   end
 
-  def build_expected_response(options = {})
+  def build_expected_response(options = {}, unit_group: nil)
     {
-      redirect: build_script_level_path(@script_level_next),
+      redirect: build_script_level_path(@script_level_next, unit_group_unit: Queries::Courses.unit_group_unit(@script, unit_group)),
     }.merge options
   end
 
@@ -127,12 +128,14 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
 
-    assert_creates(LevelSource, Activity, UserLevel, UserScript) do
-      post :milestone, params: @milestone_params
+    assert_creates(LevelSource, UserLevel, UserScript) do
+      assert_does_not_create(Activity) do
+        post :milestone, params: @milestone_params
+      end
     end
     assert_response :success
 
-    expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
+    expected_response = build_expected_response({level_source: "http://test.host/c/#{assigns(:level_source).id}"})
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
     # created a user script
@@ -156,6 +159,21 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     post :milestone, params: params
     assert_response :success
+  end
+
+  test "successful milestone with modular course" do
+    secondary_course = create(:single_unit_course, unit: @script)
+
+    params = @milestone_params
+    params[:course_id] = secondary_course.id
+    params[:result] = 'true'
+
+    post :milestone, params: params
+    assert_response :success
+
+    puts JSON.parse(@response.body)
+    expected_response = build_expected_response({level_source: "http://test.host/c/#{assigns(:level_source).id}"}, unit_group: secondary_course)
+    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
   test "unsuccessful milestone does not require script_level_id" do
@@ -244,8 +262,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     UserScript.create(user: @user, script: @script_level.script)
     UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script)
 
-    assert_creates(LevelSource, Activity) do
-      assert_does_not_create(UserLevel, UserScript) do
+    assert_creates(LevelSource) do
+      assert_does_not_create(UserLevel, UserScript, Activity) do
         post :milestone, params: @milestone_params
       end
     end
@@ -259,8 +277,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
 
-    assert_creates(Activity, UserLevel, UserScript) do
-      assert_does_not_create(LevelSource) do
+    assert_creates(UserLevel, UserScript) do
+      assert_does_not_create(LevelSource, Activity) do
         post :milestone, params: @milestone_params.merge(program: "<hey>" * 10000)
       end
     end
@@ -285,8 +303,10 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
 
-    assert_creates(Activity, UserLevel, UserScript, LevelSource) do
-      post :milestone, params: @milestone_params.merge(program: "<hey>#{panda_panda}</hey>")
+    assert_creates(UserLevel, UserScript, LevelSource) do
+      assert_does_not_create(Activity) do
+        post :milestone, params: @milestone_params.merge(program: "<hey>#{panda_panda}</hey>")
+      end
     end
 
     assert_response :success
@@ -313,9 +333,11 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
 
-    assert_creates(LevelSource, Activity, UserLevel) do
-      post :milestone,
-        params: @milestone_params.merge(result: 'false', testResult: 10)
+    assert_creates(LevelSource, UserLevel) do
+      assert_does_not_create(Activity) do
+        post :milestone,
+          params: @milestone_params.merge(result: 'false', testResult: 10)
+      end
     end
 
     assert_response :success
@@ -326,13 +348,15 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
 
-    assert_creates(LevelSource, Activity, UserLevel) do
-      post :milestone,
-        params: @milestone_params.merge(
-          result: 'false',
-          testResult: 10,
-          image: Base64.encode64(@good_image)
-        )
+    assert_creates(LevelSource, UserLevel) do
+      assert_does_not_create(Activity) do
+        post :milestone,
+          params: @milestone_params.merge(
+            result: 'false',
+            testResult: 10,
+            image: Base64.encode64(@good_image)
+          )
+      end
     end
 
     # assert_equal @good_image.size, LevelSourceImage.last.image.size
@@ -347,16 +371,16 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expect_s3_upload
 
-    original_activity_count = Activity.count
     original_user_level_count = UserLevel.count
 
     expected_created_classes = [LevelSource, UserLevel, LevelSourceImage]
 
     assert_creates(*expected_created_classes) do
-      post :milestone,
-        params: @milestone_params.merge(image: Base64.encode64(@good_image))
+      assert_does_not_create(Activity) do
+        post :milestone,
+          params: @milestone_params.merge(image: Base64.encode64(@good_image))
+      end
     end
-    assert_equal original_activity_count + 1, Activity.count
     assert_equal original_user_level_count + 1, UserLevel.count
     refute_nil UserLevel.where(
       user_id: @user,
@@ -368,7 +392,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -387,8 +411,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expect_no_s3_upload
 
-    assert_creates(Activity, UserLevel) do
-      assert_does_not_create(LevelSource) do
+    assert_creates(UserLevel) do
+      assert_does_not_create(LevelSource, Activity) do
         post :milestone,
           params: @milestone_params.merge(
             program: program,
@@ -404,7 +428,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal level_source, assigns(:level_source)
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -419,8 +443,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expect_no_s3_upload
 
-    assert_creates(Activity, UserLevel) do
-      assert_does_not_create(LevelSource) do
+    assert_creates(UserLevel) do
+      assert_does_not_create(LevelSource, Activity) do
         post :milestone,
           params: @milestone_params.merge(
             program: program,
@@ -434,7 +458,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal level_source, assigns(:level_source)
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -449,8 +473,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expect_no_s3_upload
 
-    assert_creates(Activity, UserLevel) do
-      assert_does_not_create(LevelSource) do
+    assert_creates(UserLevel) do
+      assert_does_not_create(LevelSource, Activity) do
         post :milestone,
           params: @milestone_params.merge(
             program: program,
@@ -466,7 +490,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal level_source, assigns(:level_source)
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -481,8 +505,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expect_no_s3_upload
 
-    assert_creates(Activity, UserLevel) do
-      assert_does_not_create(LevelSource) do
+    assert_creates(UserLevel) do
+      assert_does_not_create(LevelSource, Activity) do
         post :milestone,
           params: @milestone_params.merge(
             program: program,
@@ -498,7 +522,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal level_source, assigns(:level_source)
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -523,15 +547,15 @@ class ActivitiesControllerTest < ActionController::TestCase
       then.
       returns(existing_user_level)
 
-    assert_creates(LevelSource, Activity) do
-      assert_does_not_create(UserLevel) do
+    assert_creates(LevelSource) do
+      assert_does_not_create(UserLevel, Activity) do
         post :milestone, params: @milestone_params
       end
     end
 
     assert_response :success
 
-    expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
+    expected_response = build_expected_response({level_source: "http://test.host/c/#{assigns(:level_source).id}"})
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -558,6 +582,29 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal false, UserLevel.where(user_id: @user.id, level: @level.id).first.submitted?
   end
 
+  test 'logged in milestone with current locale' do
+    current_locale = set_request_locale('uk-UA')
+
+    post :milestone, params: @milestone_params
+    assert_response :success
+
+    user_level = UserLevel.find_by(user_id: @user.id, level: @level.id)
+    assert_equal current_locale, user_level.locale
+    assert_equal false, user_level.locale_supported
+  end
+
+  test 'logged in milestone with current locale support flag' do
+    current_locale = set_request_locale('uk-UA')
+    @script.update!(supported_locales: [current_locale])
+
+    post :milestone, params: @milestone_params
+    assert_response :success
+
+    user_level = UserLevel.find_by(user_id: @user.id, level: @level.id)
+    assert_equal current_locale, user_level.locale
+    assert_equal true, user_level.locale_supported
+  end
+
   test "Milestone with milestone posts disabled returns 503 status" do
     Gatekeeper.set('postMilestone', where: {script_name: @script.name}, value: false)
     post :milestone, params: @milestone_params
@@ -579,7 +626,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -602,7 +649,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -654,7 +701,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -686,10 +733,13 @@ class ActivitiesControllerTest < ActionController::TestCase
   test 'sharing program with swear word returns error' do
     ProfanityFilter.stubs(:find_potential_profanity).returns 'shit'
 
+    script = create(:single_unit_course).first_unit
+
     assert_does_not_create(LevelSource) do
       post :milestone, params: {
         user_id: @user.id,
-        script_level_id: create(:script_level, :playlab).id,
+        script_level_id: create(:script_level, :playlab, script: script).id,
+        course_id: script.original_unit_group_id,
         program: studio_program_with_text('shit')
       }
     end
@@ -1136,18 +1186,22 @@ class ActivitiesControllerTest < ActionController::TestCase
       submitted: false
     }
 
+    current_locale = set_request_locale('uk-UA')
+
     post :milestone, params: milestone_params
     assert_response :success
 
     user_level = UserLevel.find_by(user: @user, level: sublevel1, script: script)
     refute_nil user_level
     assert_equal 100, user_level.best_result
+    assert_equal current_locale, user_level.locale
 
     assert_nil UserLevel.find_by(user: @user, level: sublevel2, script: script)
 
     parent_user_level = UserLevel.find_by(user: @user, level: bubble_choice, script: script)
     refute_nil parent_user_level
     assert_equal 100, parent_user_level.best_result
+    assert_equal current_locale, parent_user_level.locale
   end
 
   test 'milestone triggers AI rubric eval job' do

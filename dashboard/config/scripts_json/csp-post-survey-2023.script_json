@@ -4,13 +4,17 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSP",
       "hideable_lessons": true,
-      "is_migrated": true
+      "is_migrated": true,
+      "topic_tags": [
+        "survey"
+      ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-19 20:26:21 UTC",
+    "serialized_at": "2024-11-19 01:17:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -83,6 +87,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-levelgroup_2023"
+        ],
         "progression": "Survey"
       },
       "bonus": false,
@@ -142,6 +149,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

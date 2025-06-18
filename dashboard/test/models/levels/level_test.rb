@@ -153,7 +153,7 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal(summary[:type], 'Maze')
     assert_equal(summary[:name], 'test_level')
     assert_equal(summary[:owner], 'Best Curriculum Writer')
-    assert_includes(summary[:updated_at], "03/27/20 at") # The time is different locally than on drone
+    assert_includes(summary[:updated_at], "03/27/20 at") # The time is different locally than on CI
     assert_equal(summary[:url], "/levels/#{level.id}/edit")
   end
 

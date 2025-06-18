@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2023-11-28T21:11:46.000Z",
   "level_num": "custom",
@@ -76,7 +77,7 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
-    "long_instructions": "<img src=\"https://images.code.org/30077f29d50d7a45d18a99f015c447d2-image-1663871176287.gif\" style=\"float:right;height:150px\">\r\n\r\n# Animate the Rainbow Snake\r\n\r\nThis level brings back the rainbow snake from an earlier lesson so that you can animate it with the draw loop!\r\n\r\n# Do This\r\n\r\nUpdate the rainbow snake scene using the draw loop so that the snake is animated similar to the image to the right.\r\n1) Create your sprite for the snake head and set it's location to be at the front of the body.\r\n2) Set the animation for the snake head.\r\n3) Resize the snake head.\r\n4) Add a draw loop and move the necessary code into it so that the snake is animated.\r\n5) Update the appropriate sprite property for the snake head so that it is also animated with the rest of the body.",
+    "long_instructions": "<img src=\"https://images.code.org/30077f29d50d7a45d18a99f015c447d2-image-1663871176287.gif\" style=\"float:right;height:150px\">\r\n\r\n# Animate the Rainbow Snake\r\n\r\nThis level brings back the rainbow snake from an earlier lesson so that you can animate it with the draw loop!\r\n\r\n# Do This\r\n\r\nUpdate the rainbow snake scene using the draw loop so that the snake is animated similar to the image to the right.\r\n1) Create your sprite for the snake head and set its location to be at the front of the body.\r\n2) Set the animation for the snake head.\r\n3) Resize the snake head.\r\n4) Add a draw loop and move the necessary code into it so that the snake is animated.\r\n5) Update the appropriate sprite property for the snake head so that it is also animated with the rest of the body.",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"074bc886-63fc-4e4b-8932-4f1899dd53de\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"074bc886-63fc-4e4b-8932-4f1899dd53de\": {\r\n      \"name\": \"head\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/gamelab/HzAGG.6y7PfQCCfXDSJo5kV.cv6cDaak/category_animals/snake_token.png\",\r\n      \"frameSize\": {\r\n        \"x\": 284,\r\n        \"y\": 285\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"HzAGG.6y7PfQCCfXDSJo5kV.cv6cDaak\",\r\n      \"categories\": [\r\n        \"animals\"\r\n      ]\r\n    }\r\n  }\r\n}",
     "encrypted_examples": "XMK5qEpe+2VNpGX7H9TgO4CoDSqay/7g5qwfReZUox3lV8ukuV+OwLXVIx5J\n1A9yptiXZJj1pzmuaf/qequjdQ==\n",
     "disable_procedure_autopopulate": "false",
@@ -106,9 +107,8 @@
     "start_blocks": "//Setting World Frame Rate\r\nWorld.frameRate = 5;\r\n\r\n//1) Create your sprite for the snake head and set it's location to be at the front of the body.\r\n\r\n//2) Set the animation for the snake head.\r\n\r\n//3) Resize the snake head.\r\n\r\n//Rainbow Snake Code\r\nbackground(\"skyBlue\");\r\n\r\nfill(\"red\");\r\nellipse(100, randomNumber(190,210), 50, 50);\r\n\r\nfill(\"orange\");\r\nellipse(140, randomNumber(190,210), 50, 50);\r\n\r\nfill(\"yellow\");\r\nellipse(180, randomNumber(190,210), 50, 50);\r\n\r\nfill(\"green\");\r\nellipse(220, randomNumber(190,210), 50, 50);\r\n\r\nfill(\"blue\");\r\nellipse(260, randomNumber(190,210), 50, 50);\r\n\r\nfill(\"purple\");\r\nellipse(300, randomNumber(190,210), 50, 50);\r\n\r\n//4) Add a draw loop and move the necessary code into it so that the snake is animated.\r\n\r\n//5) Update the appropriate sprite property for the snake head so that it is also animated with the rest of the body.\r\n\r\n\r\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T21:11:46.879+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Draw Loop challenge _2023\\\"\"],\"cloned_from\":\"CSD U3 Draw Loop challenge _2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T21:11:46.879+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Draw Loop challenge _2023\\\"\"],\"cloned_from\":\"CSD U3 Draw Loop challenge _2023\"},{\"changed_at\":\"2024-11-14 17:49:22 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

@@ -10,7 +10,7 @@
 }
 
 .sound {
-  @include sound-type-style(Beat, #FC55FF, #FC55FF, #89308a, #FC55FF);
+  @include sound-type-style(Beat, #F46FF6, #F46FF6, #89308a, #F46FF6);
   @include sound-type-style(Bass, #00C0FF, #00C0FF, #03789e, #00C0FF);
   @include sound-type-style(Lead, #23C347, #23C347, #14742a, #23C347);
   @include sound-type-style(Fx, #E3CB0C, #E3CB0C, #928308, #E3CB0C);

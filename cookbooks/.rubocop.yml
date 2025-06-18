@@ -1,4 +1,4 @@
-inherit_from: ../.rubocop.yml
+inherit_from: ../.config/rubocop/config.yml
 
 AllCops:
   # Chef embeds its own version of Ruby which is used to execute these

@@ -1,0 +1,231 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:57:36.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Recreate This Timeline\r\n\r\nChloe is working with another artist to create a new song. Her job is to make the beginning portion of the song before the beat drops. Her partner gave her this timeline to recreate:\r\n\r\n![](https://images.code.org/41449167c6868065c171234b4507e788-image-1741889152965.05.48 AM.png)\r\n\r\nTo keep her code clean and focused, Chloe wants to simplify by focusing only on the essential sounds that build the mood before the beat drops.\r\n\r\n**Your task:** Use **abstraction** to focus on the key sounds from the timeline - those that shape the atmosphere of the intro. Use the sounds you have been given and code a song that matches the timeline below.",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+        "chloe_x_halle_do_it": [
+          "tape_speed",
+          "drums_percussion_2",
+          "synth",
+          "drums_hats"
+        ],
+        "groove": [
+          "crash_reverse"
+        ],
+        "hiphop": [
+          "kick_impact"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+        },
+        "type": "flyout"
+      },
+      "packId": "chloe_x_halle_do_it",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "play_sound_at_current_location_simple2",
+              "x": 450,
+              "y": 70,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "chloe_x_halle_do_it/drums_hats"
+              }
+            },
+            {
+              "type": "repeat_simple2",
+              "id": "repeat_simple2",
+              "x": 250,
+              "y": 70,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 1
+              }
+            },
+            {
+              "type": "play_sounds_together",
+              "id": "XAX+n9M|?S:5ZCqvz=K=",
+              "x": 250,
+              "y": 170,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              }
+            },
+            {
+              "type": "play_sounds_together",
+              "id": "play_sounds_together",
+              "x": 250,
+              "y": 270,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "fP8|FCKgMKDT#KlzHX^q",
+              "x": 450,
+              "y": 150,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "chloe_x_halle_do_it/drums_percussion_2"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "Z3tJzGt+6e(n/$6H]MU*",
+              "x": 450,
+              "y": 230,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "chloe_x_halle_do_it/synth"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "?%XZuvo1ludX*;_}^Oed",
+              "x": 450,
+              "y": 310,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "chloe_x_halle_do_it/tape_speed"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "1#2Ci+b8-6,oZWzKoFb/",
+              "x": 450,
+              "y": 390,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "groove/crash_reverse"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "Jf!-4SuClz:4S-~[|23B",
+              "x": 450,
+              "y": 470,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "hiphop/kick_impact"
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "display_name": "Intro Beat Drop",
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
+      "playerTitle": "Chloe's Song"
+    },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6lfe2BzN4biKVeTvfD80/YL+3G5Bj3YmNK3/UM/xNlM4UFpxqaM8r0Ju1\nAECRzcycDraxxDvwhRR3E1WGqwBVYl2igtUE+clNUhMch5zn39NedMm86QQD\nSNE/vqliphrufSGnbbJ7q2y+Nx6eM5RXJ+lZZk4sqapSH+vKD0pDXXdgOc+W\nOubeIkjQXgAlbS41Zryd0OBtFrr6KBsLWVi2pChorvbEOodr/j6OExpMueqB\nt42lWpiO5iblPYgmpC26wgk1chW1+WbZj4jCfidRG1mcApzF0dSJFIKMvpbU\nLwktBsaVFBoZrXJGcIyS8nrR3ThGTIBbYToGMXV+egifpfqid6OneviFDmNh\njfCqvJgPSQYIMMdU8f8kaLgERzW9r+hIBINJCjtqIR5SMzB3+CniC8BThLbj\nyrWeyBl0uI9hVrv5YAERTrXpvMAzkrY3hZ/+13Yq+v2VrWxMA3GCvStmfQdS\nVC8zND6HQ3IqoZEBOY3adRdwO8VY/XTR3v3NQhkbfZjxkPGZB7OJMEPqbQIO\nsN5kZYV9bnAIvq1iUQQnFvYiVrYS5HXzEB4NRj6g5TBXElqiSSCvem4k08ln\ntyEKtuVVsVQUBrLoXr2Upj+dleUj9YUHikdo95N7xkEDMH7wMQ74LMLAphgo\nP4cGinsLWMCqT8AhIgBORai+JGDO6ijhaKHN/1N2G29LhOqMFMNv7tFoIpgm\nyNlhJyp6D5ONo9vs50L5EexHH6KYLAIY8gDVOCpgR27XDgdKoL8b9LEacFkh\nlcfq01cYsJD0LcnSxtCRyRWawYf0mmvkuMZMyc6mw0M9mvOLpqaqCVd2QiTz\nHRHTybj0ATQa/4EGHmZZxvnSaOgd5HhXtfIB1xrqvrZ2s5wFAn+yGZAEc89A\n9PNVcrB61qxE3V1vpPdewMcJi3qdDt4H+ZUhF9wt0hjJSTfBKIQXz9loV0YH\n7177wXELhF17dF5ZufbVc8cIm8PEQS2VzKvxhYtlrtHcHTuSW8FZ6g6sFvTP\nHIBesPn/MRy9G94GXpk0KfBqD53o2W3YMSjf+RPDJVfjfScVDtJhT30TJgMk\nyQ+XkHdtloL09tFZExc/QN0NzFu1n1p4Ifi5pSw0C0jeNfoK5Jvt4v8gQrTP\nD9/7JFFyGJazlp3tf7VV34+2ZeHHZA/l59FOBj1CNbrp8pdIyJ5HI6angT1V\n9TkoegaHi+spXytYGU+veYEq/7GBDgbqxmEDUfwwSqDtv+1157f4IWUT7bHb\nNcWpRF3WQ4S9KudH8vWpwFNNTHK+nvJzqt50QjvL9aHffqydXr9OOS6kXQns\nN/TrLZaWfovmoLidzzprcwplXExKHLsYiuzX4AIdstxdURSH0kWBa7byj/6l\nOH9yTUQdU+AtZHksArlEGffVkDXnTevasdYwGvQDZQpKKb9zyXARkZhJpZyf\nhsBEV8GDRwYw6sZ1BnisZWigu6QTmMiJMPRdzXfFgzNVcWRxVU5jPxyIElqf\niTTmLpDWaByCAfBdWYtnsV0ZY5xmHerAzVmanHNiBj7/3/gLWiVz4M2EaP0y\nxWO6m5qQchB+dr+msBYIWqU4uPeC3pHrVcRT8C+luMepgmRfhgE72gyWq9ao\n466lS5TNXq2y2Y8BujMs876vERhrunlUbLJy6sq9BoRxrh/PtS+fQvi0nW8D\nsj4Ymkn8lVoPupnDB/v3Q1WQy9WJRQePlKKvFHaXSW43pgb+DDVSP9C5fo7s\nraACo69QmvrDirVIwcscVCwtVtnhSKXA/p0=\n",
+    "bubble_choice_description": "Chloe is working with another artist to create a new song. Can you help her make the beginning portion of the song before the beat drops?",
+    "validations": [
+      {
+        "key": "test-music-lab-loops-explore-practice-choice-b_bb94584f-ed8d-4b7a-aeab-9df0cdadea5f",
+        "message": "[auto-pass for validation]",
+        "next": true,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/chloe_treat_me/chloe_treat_me.jpg",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:36.732+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-practice-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-practice-choice-b\"},{\"changed_at\":\"2025-06-12 15:54:30 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-13 20:39:35 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

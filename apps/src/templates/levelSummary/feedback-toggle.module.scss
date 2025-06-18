@@ -1,0 +1,34 @@
+@import 'color';
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  align-self: stretch;
+
+  button {
+    background-color: transparent !important;
+
+    &:hover {
+      background: var(--background-neutral-quaternary, #e4e6e9) !important;
+    }
+  }
+}
+
+.blackIcon i {
+  color: var(--text-neutral-primary, #292f36);
+}
+
+.grayIcon i {
+  color: var(--text-neutral-quaternary, #727a83);
+}
+.whiteIcon i {
+  color: var(--text-neutral-disabled, #d1d4d8);
+}
+
+.thumbsUpSelected i {
+  color: var(--text-success-primary-fixed, #3ea33e);
+}
+.thumbsDownSelected i {
+  color: var(--text-error-primary-fixed, #e02d16);
+}

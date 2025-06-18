@@ -1,0 +1,18 @@
+.previewContainer {
+  background-color: var(--background-neutral-primary);
+}
+
+.previewHeader {
+  height: 40px;
+  min-height: 40px;
+
+  & > div {
+    height: 40px;
+  }
+}
+
+.miniAppContainer {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}

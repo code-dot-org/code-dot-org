@@ -1,0 +1,34 @@
+name 'computer-systems-lesson3-robots-in-space'
+title 'Robots in Space'
+description 'See how engineers design and troubleshoot robotic systems for the unique challenges of space exploration.'
+
+markdown <<MARKDOWN
+# Robots in Space
+
+<br/> 
+<p style="font-size:16px">See how engineers design and troubleshoot robotic systems for the unique challenges of space exploration.</p>
+<br/>
+<p style="font-size:16px">As you watch, be prepared to reflect on the following in the next activity:</p>
+
+<ul style="font-size:16px">
+  <li>What kind of hardware components are used by people in this career? </li>
+  <li>What kind of troubleshooting might they need to do? Put another way, what kinds of bugs could they run into?</li>
+</ul>
+
+<br>
+
+<p style="font-size:16px"><strong>Note</strong>: This video opens in a new tab ⧉.</p>
+
+<br>
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://www.youtube.com/watch?v=Rh9qxBsvXVY" target="_blank" rel="noopener noreferrer">
+    <img src="https://images.code.org/3584d2ccc3b2523d3794a6548c3a1e90-robots.png" 
+         alt="YouTube Video Thumbnail" 
+         style="width: 80%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
+  </a>
+</div>
+
+<br/><br/>
+
+MARKDOWN

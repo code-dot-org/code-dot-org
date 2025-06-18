@@ -16,6 +16,7 @@
           "buttonText": "Learn More"
         }
       ],
+      "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -29,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-09-11 16:46:42 UTC",
+    "serialized_at": "2025-04-04 21:23:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -17418,18 +17419,6 @@
       }
     },
     {
-      "name": "The Counter Pattern",
-      "url": "https://www.youtube.com/watch?v=GiHbeLq1ZkM",
-      "key": "the_counter_pattern",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "the_counter_pattern"
-      }
-    },
-    {
       "name": "The Draw Loop",
       "url": "https://drive.google.com/file/d/1MxfQObaxvA82Y50YHIRTxUa55gZMNlSW/view?usp=sharing",
       "key": "the_draw_loop",
@@ -18103,12 +18092,6 @@
       "seeding_key": {
         "lesson.key": "Sprite Movement",
         "resource.key": "sprite_movement_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Movement",
-        "resource.key": "the_counter_pattern"
       }
     },
     {

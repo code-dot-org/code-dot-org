@@ -1,0 +1,39 @@
+# Build kubernetes oriented docker images using skaffold (see /skaffold.yaml and 
+# k8s/README.md for details).
+#
+# This is currently an experimental feature, see: k8s/experimental.yaml
+
+name: k8s
+on:
+  # Trigger on merges into production (i.e. DTP), or on any PR, however note that we filter
+  # PRs down to PRs where the source-branch is *k8s* using `if:` blocks below.
+  push:
+    branches:
+      - production
+  pull_request:
+
+jobs:
+  # Step 1: build platform specific docker images: amd64, arm64, using `skaffold build`
+  skaffold-build:
+    name: skaffold build
+    uses: ./.github/workflows/k8s_skaffold_build.yml
+    # only run on PRs where the source branch is *k8s*:
+    if: github.event_name != 'pull_request' || contains(github.head_ref, 'k8s')
+    secrets: inherit
+
+  # Step 2: stitch the platform specific images into a multi-platform image
+  stitch-multiplatform-image:
+    name: stitch multi-platform image
+    uses: ./.github/workflows/k8s_stitch_multiplatform_image.yml
+    needs: skaffold-build
+    # only run on PRs where the source branch is *k8s*:
+    if: github.event_name != 'pull_request' || contains(github.head_ref, 'k8s')
+    with:
+      docker_tags_json: ${{ toJSON(needs.skaffold-build.outputs) }}
+      docker_tag: ${{ needs.skaffold-build.outputs.docker_tag }}
+    secrets: inherit
+
+# Grant the GITHUB_TOKEN the necessary permissions to publish to GitHub Packages
+permissions:
+  contents: read
+  packages: write

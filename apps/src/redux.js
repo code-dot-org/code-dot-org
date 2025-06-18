@@ -39,28 +39,32 @@ if (process.env.NODE_ENV !== 'production') {
 let reduxStore;
 let globalReducers = {};
 
+let __oldReduxStore;
+let __oldGlobalReducers;
+
+// These are exported for use in Typescript unit tests.
+export const stubRedux = function () {
+  if (__oldReduxStore) {
+    throw new Error(
+      'Redux store has already been stubbed. Did you forget to call restore?'
+    );
+  }
+  __oldReduxStore = reduxStore;
+  __oldGlobalReducers = globalReducers;
+  reduxStore = null;
+  globalReducers = {};
+};
+
+export const restoreRedux = function () {
+  reduxStore = __oldReduxStore;
+  globalReducers = __oldGlobalReducers;
+  __oldReduxStore = null;
+  __oldGlobalReducers = null;
+};
+
 if (IN_UNIT_TEST) {
-  let __oldReduxStore;
-  let __oldGlobalReducers;
-
-  module.exports.stubRedux = function () {
-    if (__oldReduxStore) {
-      throw new Error(
-        'Redux store has already been stubbed. Did you forget to call restore?'
-      );
-    }
-    __oldReduxStore = reduxStore;
-    __oldGlobalReducers = globalReducers;
-    reduxStore = null;
-    globalReducers = {};
-  };
-
-  module.exports.restoreRedux = function () {
-    reduxStore = __oldReduxStore;
-    globalReducers = __oldGlobalReducers;
-    __oldReduxStore = null;
-    __oldGlobalReducers = null;
-  };
+  module.exports.stubRedux = stubRedux;
+  module.exports.restoreRedux = restoreRedux;
 }
 
 if (IN_STORYBOOK || IN_UNIT_TEST) {

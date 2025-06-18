@@ -1,3 +1,4 @@
+import {Triggers} from '../constants';
 import musicI18n from '../locale';
 
 import {backupFunctionDefinitons} from './blockUtils';
@@ -12,6 +13,7 @@ import {
   FIELD_EFFECTS_EXTENSION,
   FIELD_SOUNDS_VALIDATOR,
   FIELD_PATTERNS_VALIDATOR,
+  NEXT_CONNECTION_MUTATOR,
 } from './constants';
 import {
   getDefaultTrackNameExtension,
@@ -19,6 +21,7 @@ import {
   effectsFieldExtension,
   fieldSoundsValidator,
   fieldPatternsValidator,
+  nextConnectionMutator,
 } from './extensions';
 import FieldChord from './FieldChord';
 import FieldPattern from './FieldPattern';
@@ -32,19 +35,20 @@ import {BlockConfig} from './types';
  * Set up the global Blockly environment for Music Lab. This should
  * only be called once per page load, as it configures the global
  * Blockly state.
- * @param {string} blockMode - The block mode to determine whether advanced blocks should be registered.
  */
 export function setUpBlocklyForMusicLab() {
   backupFunctionDefinitons();
-  Blockly.Extensions.register(
+
+  safeRegisterExtension(
     DEFAULT_TRACK_NAME_EXTENSION,
     getDefaultTrackNameExtension()
   );
+  safeRegisterExtension(FIELD_EFFECTS_EXTENSION, effectsFieldExtension);
+  safeRegisterExtension(FIELD_SOUNDS_VALIDATOR, fieldSoundsValidator);
+  safeRegisterExtension(FIELD_PATTERNS_VALIDATOR, fieldPatternsValidator);
 
-  Blockly.Extensions.register(FIELD_EFFECTS_EXTENSION, effectsFieldExtension);
-  Blockly.Extensions.register(FIELD_SOUNDS_VALIDATOR, fieldSoundsValidator);
-  Blockly.Extensions.register(FIELD_PATTERNS_VALIDATOR, fieldPatternsValidator);
-  Blockly.Extensions.registerMutator(PLAY_MULTI_MUTATOR, playMultiMutator);
+  safeRegisterMutator(PLAY_MULTI_MUTATOR, playMultiMutator);
+  safeRegisterMutator(NEXT_CONNECTION_MUTATOR, nextConnectionMutator);
 
   // Needed for TypeScript to recognize the type of the MUSIC_BLOCKS. Remove
   // after converting musicBlocks to TypeScript.
@@ -57,8 +61,12 @@ export function setUpBlocklyForMusicLab() {
       },
     };
 
-    Blockly.JavaScript[blockType] = blockConfig.generator;
+    Blockly.JavaScript.forBlock[blockType] = blockConfig.generator;
   }
+
+  Blockly.JavaScript.addReservedWords(
+    ['Sequencer', 'when_run', ...Triggers.map(trigger => trigger.id)].join(',')
+  );
 
   Blockly.fieldRegistry.register(FIELD_SOUNDS_TYPE, FieldSounds);
   Blockly.fieldRegistry.register(FIELD_PATTERN_TYPE, FieldPattern);
@@ -69,6 +77,21 @@ export function setUpBlocklyForMusicLab() {
   // Rename the new function placeholder text for Music Lab specifically.
   Blockly.Msg['PROCEDURES_DEFNORETURN_PROCEDURE'] =
     musicI18n.blockly_functionNamePlaceholder();
+}
 
-  Blockly.setInfiniteLoopTrap();
+// Register an extension after checking if it is already registered.
+function safeRegisterExtension(name: string, initFn: () => void) {
+  if (Blockly.Extensions.isRegistered(name)) {
+    Blockly.Extensions.unregister(name);
+  }
+  Blockly.Extensions.register(name, initFn);
+}
+
+// Mixin objects use an any type in Blockly core
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function safeRegisterMutator(name: string, mixinObj: any) {
+  if (Blockly.Extensions.isRegistered(name)) {
+    Blockly.Extensions.unregister(name);
+  }
+  Blockly.Extensions.registerMutator(name, mixinObj);
 }

@@ -1,6 +1,8 @@
 - content_for(:head) do
   = stylesheet_link_tag 'css/pd', media: 'all'
 
+%script{src: webpack_asset_path('js/pd/session_attendance/attendance_recorded.js'), data: {sessionId: @session.id.to_json}}
+
 %h1 Attendance recorded
 
 .workshop-attendance-recorded

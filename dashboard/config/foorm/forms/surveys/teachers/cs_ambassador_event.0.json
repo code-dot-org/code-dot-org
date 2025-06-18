@@ -15,6 +15,7 @@
           "name": "teacher_account",
           "title": "Are you logged in to your teacher account?",
           "description": "If you are logged into your teacher account you will see an option to create a section on your dashboard.",
+          "isRequired": true,
           "choices": [
             {
               "value": true,
@@ -42,14 +43,16 @@
           "type": "text",
           "name": "event_date",
           "visibleIf": "{teacher_account} = true",
-          "title": "What was the date of your event?",
+          "title": "What is the date of your event?",
+          "isRequired": true,
           "inputType": "date"
         },
         {
           "type": "radiogroup",
           "name": "event_type",
           "visibleIf": "{teacher_account} = true",
-          "title": "Was this an \"Experience CS\" event or a \"Connect with CS\" event? ",
+          "title": "Is this an \"Experience CS\" event or a \"Connect with CS\" event? ",
+          "isRequired": true,
           "choices": [
             {
               "value": "experience_cs",
@@ -65,21 +68,45 @@
           "type": "text",
           "name": "total_participants",
           "visibleIf": "{teacher_account} = true",
-          "title": "How many students attended your event? If you do not know, provide your best estimate. ",
+          "title": "How many students attended your event? If you were not able to get an exact count, provide your best estimate. ",
+          "isRequired": true,
+          "inputType": "number"
+        },
+        {
+          "type": "checkbox",
+          "name": "collection_cat",
+          "visibleIf": "{teacher_account} = true",
+          "title": "Did you collect information from event participants about their interest in enrolling in a computer science class at your school next year, at the start and end of your event?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "collected_start",
+              "text": "I collected this information at the start of my event"
+            },
+            {
+              "value": "collected_end",
+              "text": "I collected this information at the end of my event"
+            },
+            {
+              "value": "did_not_collect",
+              "text": "I did not collect this information"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "num_pre_enrollment",
+          "visibleIf": "{teacher_account} = true and {collection_cat} contains 'collected_start'",
+          "title": "At the *start* of your event, how many students indicated interest in enrolling in a computer science class at your school next year?",
+          "isRequired": true,
           "inputType": "number"
         },
         {
           "type": "text",
-          "name": "pre_enrollment",
-          "visibleIf": "{teacher_account} = true",
-          "title": "At the *start* of your event, how many students indicated interest in enrolling in a computer science class at your school next year? \n\nIf you do not know, leave it blank. ",
-          "inputType": "number"
-        },
-        {
-          "type": "text",
-          "name": "post_enrollment",
-          "visibleIf": "{teacher_account} = true",
-          "title": "At the *end* of your event, how many students indicated interest in enrolling in a computer science class at your school next year? \n\nIf you do not know, leave it blank.",
+          "name": "num_post_enrollment",
+          "visibleIf": "{teacher_account} = true and {collection_cat} contains 'collected_end'",
+          "title": "At the *end* of your event, how many students indicated interest in enrolling in a computer science class at your school next year?",
+          "isRequired": true,
           "inputType": "number"
         },
         {

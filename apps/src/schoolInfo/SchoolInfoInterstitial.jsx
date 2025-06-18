@@ -1,8 +1,8 @@
+import Button from '@code-dot-org/component-library/button';
 import PropTypes from 'prop-types';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
@@ -17,17 +17,25 @@ import {schoolInfoInvalid} from './utils/schoolInfoInvalid';
 import {updateSchoolInfo} from './utils/updateSchoolInfo';
 
 export default function SchoolInfoInterstitial({
-  scriptData: {existingSchoolInfo, usIp},
+  scriptData: {
+    existingSchoolInfo,
+    usIp,
+    // TODO: ACQ-3300 remove when school info has been updated for affected users
+    affectedByMissingSchoolData,
+  },
   onClose,
 }) {
-  const schoolInfo = useSchoolInfo({
-    usIp,
-    country: existingSchoolInfo.country,
-    schoolName: existingSchoolInfo.school_name,
-    schoolId: existingSchoolInfo.school_id,
-    schoolZip: existingSchoolInfo.school_zip,
-    schoolType: existingSchoolInfo.school_type,
-  });
+  const schoolInfo = useSchoolInfo(
+    {
+      usIp,
+      country: existingSchoolInfo.country,
+      schoolName: existingSchoolInfo.school_name,
+      schoolId: existingSchoolInfo.school_id,
+      schoolZip: existingSchoolInfo.school_zip,
+      schoolType: existingSchoolInfo.school_type,
+    },
+    affectedByMissingSchoolData
+  );
 
   const [showSchoolInfoUnknownError, setShowSchoolInfoUnknownError] =
     useState(false);
@@ -138,21 +146,23 @@ export default function SchoolInfoInterstitial({
         </div>
         <div style={styles.bottom}>
           <Button
-            onClick={dismissSchoolInfoForm}
-            style={styles.button}
-            color="gray"
-            size="large"
             text={i18n.dismiss()}
+            onClick={dismissSchoolInfoForm}
+            size="m"
+            type="secondary"
             id="dismiss-button"
+            color="gray"
+            style={styles.button}
           />
           <Button
-            onClick={handleSchoolInfoSubmit}
-            style={styles.button}
-            size="large"
             text={i18n.save()}
-            color={Button.ButtonColor.brandSecondaryDefault}
+            onClick={handleSchoolInfoSubmit}
+            size="m"
+            type="primary"
             id="save-button"
+            color="purple"
             disabled={saveDisabled}
+            style={styles.button}
           />
         </div>
       </div>
@@ -173,6 +183,7 @@ SchoolInfoInterstitial.propTypes = {
       school_zip: PropTypes.string,
       school_type: PropTypes.string,
     }),
+    affectedByMissingSchoolData: PropTypes.bool,
   }).isRequired,
   onClose: PropTypes.func.isRequired,
 };
@@ -207,6 +218,7 @@ const styles = {
     color: color.red,
   },
   button: {
+    width: '6.25em',
     marginLeft: 7,
     marginRight: 7,
     marginTop: 15,

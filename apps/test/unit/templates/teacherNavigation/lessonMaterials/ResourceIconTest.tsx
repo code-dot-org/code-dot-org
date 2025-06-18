@@ -14,7 +14,9 @@ describe('ResourceIcon', () => {
     render(
       <ResourceIcon resourceType={'Slides'} resourceUrl={googleSlidesUrl} />
     );
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('font-awesome-v6-icon');
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('resource-icon-' + RESOURCE_ICONS.SLIDES.icon);
   });
 
@@ -22,7 +24,9 @@ describe('ResourceIcon', () => {
     render(
       <ResourceIcon resourceType={'Handout'} resourceUrl={googleDocsUrl} />
     );
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('font-awesome-v6-icon');
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('resource-icon-' + RESOURCE_ICONS.GOOGLE_DOC.icon);
   });
 
@@ -30,7 +34,9 @@ describe('ResourceIcon', () => {
     render(
       <ResourceIcon resourceType={'Video'} resourceUrl={nonGoogleResourceUrl} />
     );
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('font-awesome-v6-icon');
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('resource-icon-' + RESOURCE_ICONS.VIDEO.icon);
   });
 
@@ -41,7 +47,9 @@ describe('ResourceIcon', () => {
         resourceUrl={nonGoogleResourceUrl}
       />
     );
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('font-awesome-v6-icon');
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('resource-icon-' + RESOURCE_ICONS.LESSON_PLAN.icon);
   });
 
@@ -52,7 +60,9 @@ describe('ResourceIcon', () => {
         resourceUrl={nonGoogleResourceUrl}
       />
     );
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('font-awesome-v6-icon');
+    // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('resource-icon-' + RESOURCE_ICONS.LINK.icon);
   });
 });

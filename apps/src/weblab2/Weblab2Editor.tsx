@@ -13,7 +13,6 @@ const Weblab2Editor: React.FunctionComponent = () => {
   // To use css, replace html() with css() and htmlLinter with cssLinter.
   // Also uncomment the import for stylelint-bundle in _lab2.html.haml.
   const editorExtensions = [html(), htmlLinter, lintGutter()];
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
   const onCodeChange = () => {};
 
   return (
@@ -22,6 +21,7 @@ const Weblab2Editor: React.FunctionComponent = () => {
         onCodeChange={onCodeChange}
         startCode={'<!DOCTYPE HTML>\n<h1>Hello, world!</h1>'}
         editorConfigExtensions={editorExtensions}
+        appName="weblab2"
       />
     </div>
   );

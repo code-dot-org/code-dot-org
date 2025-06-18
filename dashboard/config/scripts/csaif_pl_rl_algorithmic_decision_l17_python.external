@@ -1,0 +1,36 @@
+name 'csaif_pl_RL-algorithmic-decision-L17-python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Real-life Algorithmic Decision Making
+
+#### Algorithms are embedded in our everyday lives and can shape the opportunities we receive, the content we see, and even the decisions made about us—often without us realizing it.
+
+## Consider this:
+
+<div style="clear:both;"></div>
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+<p style="font-size: 14pt">
+<b>Example:</b> You apply for a loan online, and within seconds, the system approves or denies it.<br><br> <b>But how did it decide?</b>
+
+</p>
+    
+  	<ul style="font-size: 14pt; line-height: 1.5; margin-top: 10px; padding-left: 20px;">         
+       <li> Many financial institutions use AI-driven algorithms to assess creditworthiness, sometimes leading to biased outcomes.
+</li><br>
+    <li>Similarly, hiring algorithms may screen job applicants before a human ever sees their résumé.</li><br>
+    <li>Even social media feeds and online shopping recommendations are tailored by algorithms predicting what you will engage with most.
+.</li><br>
+   
+</ul>
+</div>
+
+## Prioritizing Understanding
+
+#### By working through the unplugged activity first, students develop a deeper understanding of computational thinking before applying these concepts in Python.
+
+
+
+MARKDOWN

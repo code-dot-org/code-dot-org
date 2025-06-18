@@ -1,5 +1,5 @@
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {
-  Role,
   AITutorInteractionStatus as Status,
   AITutorInteractionStatusValue,
   ChatCompletionMessage,
@@ -131,13 +131,13 @@ export async function getChatCompletionMessage(
   }
 }
 
-type OpenaiChatCompletionMessage = {
+export type OpenaiChatCompletionMessage = {
   status?: AITutorInteractionStatusValue;
   role: Role;
   content: string;
   // Only used in case of PII or profanity violation
   flagged_content?: string;
-  safety_status?: AITutorInteractionStatusValue;
+  safety_status?: ShareFilterStatus;
 };
 
 type ChatCompletionResponse = {

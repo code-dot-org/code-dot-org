@@ -1,0 +1,16 @@
+name 'test-intro-to-programming-lesson10-level6'
+display_name 'Conditionals Choice Level'
+description 'Pick one of the levels below. Use conditionals to control the painter.'
+
+sublevels
+level 'test-intro-to-programming-lesson10-level6a'
+level 'test-intro-to-programming-lesson10-level6b'
+level 'test-intro-to-programming-lesson10-level6c'
+level 'test-intro-to-programming-lesson10-level6d'
+
+
+
+
+
+
+

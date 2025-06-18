@@ -11,6 +11,17 @@
     "csppostap-2018",
     "csp-post-survey-2018"
   ],
+  "original_script_names": [
+    "csp1-2018",
+    "csp3-2018",
+    "csp-explore-2018",
+    "csp-create-2018",
+    "csp2-2018",
+    "csp4-2018",
+    "csp5-2018",
+    "csppostap-2018",
+    "csp-post-survey-2018"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

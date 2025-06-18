@@ -5,22 +5,26 @@ title 'Check for Understanding'
 markdown <<MARKDOWN
 #Check for Understanding
 
-> #### In this check for understading level, students will practice cleaning data in CODAP. 
+> #### In this check for understanding level, students will practice cleaning data in Google Sheets. 
 
-#### Data scientist ***clean*** data by: 
-- #### Fixing errors (i.e. misspeslled words)
+#### Data scientists ***clean*** data by: 
+- #### Fixing errors (i.e. misspelled words)
 - #### Creating categories (i.e. "other")
 - #### Deleting unnecessary data 
 ---
-###At the following link:
 
-###[CODAP - Pizza Choice](https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FdWwulootxTIlVBkHuHWu%2Ffile.json)
+### At the following link practice cleaning data:
+
+<p style="font-size:16pt;"> <a href="https://docs.google.com/spreadsheets/d/1MMsZwVwDaGNSol6RMsQk9NklsYBtgQyiEIxuSwmykIA/edit?usp=drive_link">Google Sheets - Pizza Choice</a></p>
+
 
 ####For each response, decide if you want to:
-- ####Keep it the same
-- ####Delete it
-- ####Change it
-####Put your cleaned data in the second column--and graph it!
+- #### Keep it the same
+- #### Delete it
+- #### Change it
 
-![](https://images.code.org/6c462ee743bd36e5570e7467da253e03-image-1721315101092.png)
+#### Put your cleaned data in the second column--and graph it! See the sample below:
+
+
+![Data set showing topping preferences and a sample bar chart](https://images.code.org/e18f3f41255f3b529344dba9dcb86677-image-1744731350249.png)
 MARKDOWN

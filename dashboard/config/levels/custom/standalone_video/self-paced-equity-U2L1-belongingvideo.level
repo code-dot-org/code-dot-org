@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2024-12-11T23:39:10.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "PL-equitymod-belongingvid",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28731,
+    "name_suffix": "_2024",
+    "encrypted": "false",
+    "long_instructions": "#### The following Edutopia video provides some examples of what belonging looks like in different classrooms. While you watch, consider the following:\r\n\r\n* #### How might you apply the strategies highlighted in this video in a computer science setting? \r\n* #### How might they look similar or different?\r\n\r\n___\r\n\r\n#### Prefer to read? Check out the <a href=\"https://www.edutopia.org/video/building-belonging-classroom/\" rel=\"noopener noreferrer\" target=\"blank\">full transcript</a> at Edutopia's website instead.\r\n<br>"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-12-11T23:39:10.221+00:00\",\"changed\":[\"cloned from \\\"self-paced-equity-U1L1-equityvid\\\"\"],\"cloned_from\":\"self-paced-equity-U1L1-equityvid\"},{\"changed_at\":\"2024-12-13 23:20:32 +0000\",\"changed\":[\"video_key\",\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2024-12-13 23:22:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2024-12-13 23:23:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

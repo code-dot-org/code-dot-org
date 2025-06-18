@@ -182,80 +182,6 @@ class SourcesTest < FilesApiTestBase
     delete_all_source_versions(filename)
   end
 
-  def test_get_source_blocks_profanity_violations
-    # Given a Play Lab program with a privacy violation
-    filename = MAIN_JSON
-    file_data = File.read(File.expand_path('../../fixtures/privacy-profanity/playlab-normal-source.json', __FILE__))
-    file_headers = {'CONTENT_TYPE' => 'application/json'}
-    @api.put_object(filename, file_data, file_headers)
-    assert successful?
-
-    # Given a program with profanity
-    ProfanityFilter.stubs(:find_potential_profanity).returns 'profane'
-
-    # owner can view
-    @api.get_object(filename)
-    assert successful?
-
-    # non-owner cannot view
-    with_session(:non_owner) do
-      non_owner_api = FilesApiTestHelper.new(current_session, 'sources', @channel)
-      non_owner_api.get_object(filename)
-      refute successful?
-      assert not_found?
-    end
-
-    assert_newrelic_metrics []
-
-    delete_all_source_versions(filename)
-  end
-
-  def test_get_source_blocks_privacy_violations
-    filename = MAIN_JSON
-    file_data = File.read(File.expand_path('../../fixtures/privacy-profanity/playlab-privacy-violation-source.json', __FILE__))
-    file_headers = {'CONTENT_TYPE' => 'application/json'}
-    @api.put_object(filename, file_data, file_headers)
-    assert successful?
-
-    # Given a program with profanity or PII
-    ProfanityFilter.stubs(:find_potential_profanity).returns 'profane'
-
-    # owner can view
-    @api.get_object(filename)
-    assert successful?
-
-    # admin can view
-    with_session(:admin) do
-      admin_api = FilesApiTestHelper.new(current_session, 'sources', @channel)
-      FilesApi.any_instance.stubs(:admin?).returns(true)
-      admin_api.get_object(filename)
-      assert successful?
-      FilesApi.any_instance.unstub(:admin?)
-    end
-
-    # non-owner cannot view
-    with_session(:non_owner) do
-      non_owner_api = FilesApiTestHelper.new(current_session, 'sources', @channel)
-      non_owner_api.get_object(filename)
-      refute successful?
-      assert not_found?
-    end
-
-    # teacher cannot view
-    with_session(:teacher) do
-      teacher_api = FilesApiTestHelper.new(current_session, 'sources', @channel)
-      FilesApi.any_instance.stubs(:teaches_student?).returns(true)
-      teacher_api.get_object(filename)
-      refute successful?
-      assert not_found?
-      FilesApi.any_instance.unstub(:teaches_student?)
-    end
-
-    assert_newrelic_metrics []
-
-    delete_all_source_versions(filename)
-  end
-
   def test_policy_channel_api
     filename = MAIN_JSON
     file_data = File.read(File.expand_path('../../fixtures/privacy-profanity/playlab-privacy-violation-source.json', __FILE__))
@@ -312,7 +238,7 @@ class SourcesTest < FilesApiTestBase
     assert successful?
     response = JSON.parse(last_response.body)
     timestamp1 = response['timestamp'].to_s
-    # this assert passes locally but fails on circle
+    # this assert passes locally but fails on CI
     # assert_equal timestamp1, Time.now.to_s
     version1 = response['versionId']
 

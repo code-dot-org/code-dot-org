@@ -15,7 +15,6 @@ import {
 } from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {stringifyQueryParams} from '../../utils';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import wrappedSortable from '../tables/wrapped_sortable';
 
@@ -46,26 +45,38 @@ export const sectionLinkFormatter = function (name, {rowData}) {
 };
 
 export const courseLinkFormatter = function (course, {rowData}) {
-  const {assignmentNames, assignmentPaths, courseOfferingsAreLoaded} = rowData;
+  const {
+    assignmentNames,
+    assignmentPaths,
+    courseOfferingsAreLoaded,
+    isAssignedSingleUnitCourse,
+  } = rowData;
+
   return (
     <div>
       {courseOfferingsAreLoaded ? (
         <>
           <a
-            href={`${assignmentPaths[0]}${stringifyQueryParams({
-              section_id: rowData.id,
-            })}`}
+            href={
+              assignmentPaths.length > 0 && assignmentPaths[0].includes('/s/')
+                ? teacherDashboardUrl(
+                    rowData.id,
+                    assignmentPaths[0].replace('/s/', '/unit/')
+                  )
+                : teacherDashboardUrl(rowData.id, assignmentPaths[0])
+            }
             style={tableLayoutStyles.link}
           >
             {assignmentNames[0]}
           </a>
-          {assignmentPaths.length > 1 && (
+          {assignmentPaths.length > 1 && !isAssignedSingleUnitCourse && (
             <div style={styles.currentUnit}>
               <div>{i18n.currentUnit()}</div>
               <a
-                href={`${assignmentPaths[1]}${stringifyQueryParams({
-                  section_id: rowData.id,
-                })}`}
+                href={teacherDashboardUrl(
+                  rowData.id,
+                  assignmentPaths[1].replace('/s/', '/unit/')
+                )}
                 style={tableLayoutStyles.link}
               >
                 {assignmentNames[1]}
@@ -84,6 +95,7 @@ export const courseLinkFormatter = function (course, {rowData}) {
       ) : (
         <span
           className={skeletonizeContent.skeletonizeContent}
+          // eslint-disable-next-line react/forbid-dom-props
           data-testid={'skeletonize-content'}
           style={{width: random(30, 90) + '%'}}
         />
@@ -116,19 +128,18 @@ export const loginInfoFormatter = function (loginType, {rowData}) {
 };
 
 export const studentsFormatter = function (studentCount, {rowData}) {
-  const manageStudentsUrl = teacherDashboardUrl(rowData.id, '/manage_students');
   const studentHtml =
     rowData.studentCount <= 0 ? (
       <Button
         __useDeprecatedTag
         text={i18n.addStudents()}
-        href={manageStudentsUrl}
+        href={teacherDashboardUrl(rowData.id, '/roster')}
         color={Button.ButtonColor.neutralDark}
       />
     ) : (
       <a
         style={tableLayoutStyles.link}
-        href={manageStudentsUrl}
+        href={teacherDashboardUrl(rowData.id, '/roster')}
         aria-label={i18n.manageStudentsAriaLabel({
           numStudents: studentCount,
         })}

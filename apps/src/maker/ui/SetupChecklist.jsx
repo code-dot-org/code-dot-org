@@ -24,10 +24,6 @@ const STATUS_BOARD_CONNECT = 'statusBoardConnect';
 const STATUS_BOARD_COMPONENTS = 'statusBoardComponents';
 const STATUS_BOARD_UPDATE_FIRMATA = 'statusBoardUpdateFirmata';
 
-const MICROBIT_FIRMATA_URL =
-  'https://github.com/microbit-foundation/microbit-firmata#installing-firmata-on-your-bbc-microbit';
-const EXPRESS_FIRMATA_URL =
-  'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd';
 const CLASSIC_FIRMATA_URL =
   'https://learn.adafruit.com/circuit-playground-firmata/overview';
 
@@ -361,12 +357,9 @@ class SetupChecklist extends Component {
   installFirmware() {
     let firmataMarkdown;
     if (this.state.boardTypeDetected === BOARD_TYPE.MICROBIT) {
-      firmataMarkdown = applabI18n.makerSetupInstallFirmataMB({
-        firmataURL: MICROBIT_FIRMATA_URL,
-      });
+      firmataMarkdown = applabI18n.makerSetupInstallFirmataMB();
     } else {
       firmataMarkdown = applabI18n.makerSetupInstallFirmataCP({
-        firmataURLExpress: EXPRESS_FIRMATA_URL,
         firmataURLClassic: CLASSIC_FIRMATA_URL,
       });
     }

@@ -95,7 +95,7 @@ module Pd::Payment
       # Attendance days 1-5
       session_attendance_counts = attendance_count_per_session
       (1..REPORT_ATTENDANCE_DAY_COUNT).each do |n|
-        line_item["attendance_day_#{n}".to_sym] = session_attendance_counts[n - 1]
+        line_item[:"attendance_day_#{n}"] = session_attendance_counts[n - 1]
       end
 
       # Waiting to add some columns until after attendance to make payment processing easier
@@ -115,8 +115,8 @@ module Pd::Payment
 
       # Facilitator names and emails, 1-6
       (1..REPORT_FACILITATOR_DETAILS_COUNT).each do |n|
-        line_item["facilitator_name_#{n}".to_sym] = workshop.facilitators[n - 1].try(&:name)
-        line_item["facilitator_email_#{n}".to_sym] = workshop.facilitators[n - 1].try(&:email)
+        line_item[:"facilitator_name_#{n}"] = workshop.facilitators[n - 1].try(&:name)
+        line_item[:"facilitator_email_#{n}"] = workshop.facilitators[n - 1].try(&:email)
       end
 
       if with_payment

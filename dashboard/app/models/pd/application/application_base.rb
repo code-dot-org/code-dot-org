@@ -120,7 +120,7 @@ module Pd::Application
     end
 
     def formatted_applicant_email
-      applicant_email = user.email.presence || sanitized_form_data_hash[:alternate_email]
+      applicant_email = user.email
       if applicant_email.blank?
         raise "invalid email address for application #{id}"
       end
@@ -234,7 +234,7 @@ module Pd::Application
     #                 Field name for the additional text field associated with this option.
     # @returns [String, Array] - adjusted string or array of user response(s) with additional text appended in place
     def self.answer_with_additional_text(hash, field_name, option = OTHER_WITH_TEXT, additional_text_field_name = nil)
-      additional_text_field_name ||= "#{field_name}_other".to_sym
+      additional_text_field_name ||= :"#{field_name}_other"
       answer = hash[field_name]
       case answer
       when String
@@ -264,7 +264,7 @@ module Pd::Application
           next unless hash.key? field_name
 
           option ||= OTHER_WITH_TEXT
-          additional_text_field_name ||= "#{field_name}_other".to_sym
+          additional_text_field_name ||= :"#{field_name}_other"
           hash[field_name] = self.class.answer_with_additional_text hash, field_name, option, additional_text_field_name
           hash.delete additional_text_field_name
         end
@@ -288,7 +288,7 @@ module Pd::Application
     end
 
     def email
-      user.try(:email) || sanitized_form_data_hash[:alternate_email]
+      user.try(:email)
     end
 
     def regional_partner_name

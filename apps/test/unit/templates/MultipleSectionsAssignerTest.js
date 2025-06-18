@@ -8,6 +8,7 @@ import {fakeTeacherSectionsForDropdown} from '@cdo/apps/templates/teacherDashboa
 import {
   assignToSection,
   unassignSection,
+  sectionHasNewData,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
@@ -26,7 +27,8 @@ describe('MultipleSectionsAssigner', () => {
     assignToSection: assignToSection,
     updateHiddenScript: updateHiddenScript,
     participantAudience: 'student',
-    isAssigningCourse: true,
+    isAssigningCourseOnly: true,
+    sectionHasNewData: sectionHasNewData,
   };
   const setUp = (overrideProps = {}) => {
     const props = {...defaultProps, ...overrideProps};
@@ -35,9 +37,9 @@ describe('MultipleSectionsAssigner', () => {
 
   it('renders checked and unchecked checkboxes for sections on the UNIT landing page', () => {
     const wrapper = setUp({
-      isAssigningCourse: false,
+      isAssigningCourseOnly: false,
       courseId: assignedCourseANDUnitSection.courseId,
-      isStandAloneUnit: false,
+      isAssigningUnitOnly: false,
       scriptId: assignedCourseANDUnitSection.unitId,
     });
 
@@ -62,9 +64,9 @@ describe('MultipleSectionsAssigner', () => {
 
   it('renders checked and unchecked checkboxes for sections on the COURSE landing page', () => {
     const wrapper = setUp({
-      isAssigningCourse: true,
+      isAssigningCourseOnly: true,
       courseId: assignedCourseANDUnitSection.courseId,
-      isStandAloneUnit: false,
+      isAssigningUnitOnly: false,
       scriptId: assignedCourseANDUnitSection.unitId,
     });
 
@@ -107,9 +109,9 @@ describe('MultipleSectionsAssigner', () => {
 
   it('renders checked and unchecked checkboxes for sections on a STAND ALONE landing page', () => {
     const wrapper = setUp({
-      isAssigningCourse: false,
+      isAssigningCourseOnly: false,
       courseId: assigedStandaloneUnitSection.courseId,
-      isStandAloneUnit: true,
+      isAssigningUnitOnly: true,
       scriptId: assigedStandaloneUnitSection.unitId,
       courseVersionId: assigedStandaloneUnitSection.courseVersionId,
     });
@@ -135,9 +137,9 @@ describe('MultipleSectionsAssigner', () => {
 
   it('renders all student sections for a student course', () => {
     const wrapper = setUp({
-      isAssigningCourse: true,
+      isAssigningCourseOnly: true,
       courseId: assignedCourseANDUnitSection.courseId,
-      isStandAloneUnit: false,
+      isAssigningUnitOnly: false,
       scriptId: assignedCourseANDUnitSection.unitId,
       courseOfferingId: assignedCourseANDUnitSection.courseOfferingId,
       courseVersionId: assignedCourseANDUnitSection.courseVersionId,
@@ -168,9 +170,9 @@ describe('MultipleSectionsAssigner', () => {
 
   it('renders all teacher sections for a teacher course', () => {
     const wrapper = setUp({
-      isAssigningCourse: true,
+      isAssigningCourseOnly: true,
       courseId: assignedCourseANDUnitSection.courseId,
-      isStandAloneUnit: false,
+      isAssigningUnitOnly: false,
       scriptId: assignedCourseANDUnitSection.unitId,
       courseOfferingId: assignedCourseANDUnitSection.courseOfferingId,
       courseVersionId: assignedCourseANDUnitSection.courseVersionId,
@@ -205,9 +207,9 @@ describe('MultipleSectionsAssigner', () => {
     let reassignConfirm = sinon.fake();
 
     const wrapper = setUp({
-      isAssigningCourse: false,
+      isAssigningCourseOnly: false,
       courseId: assignedCourseANDUnitSection.courseId,
-      isStandAloneUnit: false,
+      isAssigningUnitOnly: false,
       scriptId: assignedCourseANDUnitSection.unitId,
       assignToSection,
       reassignConfirm,
@@ -247,9 +249,9 @@ describe('MultipleSectionsAssigner', () => {
     let updateHiddenScript = sinon.fake();
 
     const wrapper = setUp({
-      isAssigningCourse: false,
+      isAssigningCourseOnly: false,
       courseId: assigedStandaloneUnitSection.courseId,
-      isStandAloneUnit: true,
+      isAssigningUnitOnly: true,
       scriptId: assigedStandaloneUnitSection.unitId,
       assignToSection,
       reassignConfirm,
@@ -290,9 +292,9 @@ describe('MultipleSectionsAssigner', () => {
     let reassignConfirm = sinon.fake();
 
     const wrapper = setUp({
-      isAssigningCourse: false,
+      isAssigningCourseOnly: false,
       courseId: assigedStandaloneUnitSection.courseId,
-      isStandAloneUnit: true,
+      isAssigningUnitOnly: true,
       scriptId: assigedStandaloneUnitSection.unitId,
       unassignSection,
       reassignConfirm,
@@ -329,9 +331,9 @@ describe('MultipleSectionsAssigner', () => {
     let updateHiddenScript = sinon.fake();
 
     const wrapper = setUp({
-      isAssigningCourse: false,
+      isAssigningCourseOnly: false,
       courseId: assignedCourseANDUnitSection.courseId,
-      isStandAloneUnit: false,
+      isAssigningUnitOnly: false,
       scriptId: assignedCourseANDUnitSection.unitId,
       reassignConfirm,
       assignToSection,
@@ -373,9 +375,9 @@ describe('MultipleSectionsAssigner', () => {
     let reassignConfirm = sinon.fake();
 
     const wrapper = setUp({
-      isAssigningCourse: true,
+      isAssigningCourseOnly: true,
       courseId: assignedCourseANDUnitSection.courseId,
-      isStandAloneUnit: false,
+      isAssigningUnitOnly: false,
       scriptId: assignedCourseANDUnitSection.unitId,
       unassignSection,
       reassignConfirm,
@@ -412,9 +414,9 @@ describe('MultipleSectionsAssigner', () => {
     let reassignConfirm = sinon.fake();
 
     const wrapper = setUp({
-      isAssigningCourse: true,
+      isAssigningCourseOnly: true,
       courseId: assignedCourseANDUnitSection.courseId,
-      isStandAloneUnit: false,
+      isAssigningUnitOnly: false,
       scriptId: assignedCourseANDUnitSection.unitId,
       assignToSection,
       reassignConfirm,
@@ -451,9 +453,9 @@ describe('MultipleSectionsAssigner', () => {
 
   it('can select all sections using the `select all` link', () => {
     const wrapper = setUp({
-      isAssigningCourse: false,
+      isAssigningCourseOnly: false,
       courseId: assignedCourseANDUnitSection.courseId,
-      isStandAloneUnit: false,
+      isAssigningUnitOnly: false,
       scriptId: assignedCourseANDUnitSection.unitId,
     });
 

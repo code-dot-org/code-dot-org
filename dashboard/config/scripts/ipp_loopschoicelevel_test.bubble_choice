@@ -1,0 +1,16 @@
+name 'IPP-loopsChoiceLevel-test'
+display_name 'Loops Practice'
+description 'Pick one of the levels below!'
+
+sublevels
+level 'test-intro-to-programming-lesson9-level5a'
+level 'test-intro-to-programming-lesson9-level5b'
+level 'test-intro-to-programming-lesson9-level5c'
+level 'test-intro-to-programming-lesson9-level5d'
+level 'test-intro-to-programming-lesson9-level5e'
+
+
+
+
+
+

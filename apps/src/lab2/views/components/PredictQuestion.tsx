@@ -46,49 +46,53 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
 
   return (
     <div className={className}>
-      {predictSettings.questionType === PredictQuestionType.FreeResponse ? (
-        <textarea
-          value={predictResponse}
-          placeholder={predictSettings.placeholderText}
-          onChange={e => setPredictResponse(e.target.value)}
-          style={{
-            height:
-              predictSettings.freeResponseHeight ||
-              PREDICT_FREE_RESPONSE_DEFAULT_HEIGHT,
-          }}
-          className={moduleStyles.freeResponse}
-          readOnly={predictAnswerLocked}
-        />
-      ) : (
-        predictSettings.multipleChoiceOptions?.map((option, index) => {
-          // Add a capital letter to the beginning of each option, starting with A.
-          const letterForOption = String.fromCharCode(index + 65) + '.';
-          return (
-            <label
-              key={`multiple-choice-${index}`}
-              className={moduleStyles.multipleChoiceContainer}
-            >
-              <input
-                type={predictSettings.isMultiSelect ? 'checkbox' : 'radio'}
-                value={index.toString()}
-                checked={
-                  (predictResponse &&
-                    predictResponse.split(',').includes(index.toString())) ||
-                  false
-                }
-                onChange={handleMultiSelectChanged}
-                name={option}
-                key={index}
-                disabled={predictAnswerLocked}
-              />
-              <span className={moduleStyles.multipleChoiceLetter}>
-                {letterForOption}
-              </span>
-              <span className={moduleStyles.multipleChoiceLabel}>{option}</span>
-            </label>
-          );
-        })
-      )}
+      <div className={moduleStyles.predictQuestionContainer}>
+        {predictSettings.questionType === PredictQuestionType.FreeResponse ? (
+          <textarea
+            value={predictResponse}
+            placeholder={predictSettings.placeholderText}
+            onChange={e => setPredictResponse(e.target.value)}
+            style={{
+              height:
+                predictSettings.freeResponseHeight ||
+                PREDICT_FREE_RESPONSE_DEFAULT_HEIGHT,
+            }}
+            className={moduleStyles.freeResponse}
+            readOnly={predictAnswerLocked}
+          />
+        ) : (
+          predictSettings.multipleChoiceOptions?.map((option, index) => {
+            // Add a capital letter to the beginning of each option, starting with A.
+            const letterForOption = String.fromCharCode(index + 65) + '.';
+            return (
+              <label
+                key={`multiple-choice-${index}`}
+                className={moduleStyles.multipleChoiceContainer}
+              >
+                <input
+                  type={predictSettings.isMultiSelect ? 'checkbox' : 'radio'}
+                  value={index.toString()}
+                  checked={
+                    (predictResponse &&
+                      predictResponse.split(',').includes(index.toString())) ||
+                    false
+                  }
+                  onChange={handleMultiSelectChanged}
+                  name={option}
+                  key={index}
+                  disabled={predictAnswerLocked}
+                />
+                <span className={moduleStyles.multipleChoiceLetter}>
+                  {letterForOption}
+                </span>
+                <span className={moduleStyles.multipleChoiceLabel}>
+                  {option}
+                </span>
+              </label>
+            );
+          })
+        )}
+      </div>
       <PredictResetButton />
     </div>
   );

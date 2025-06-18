@@ -1,0 +1,28 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-01-27T23:53:00.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "### What is a return statement? \n\n- Functions can send back a value using the `return` keyword. \n- The returned value can be stored in a variable or printed. \n",
+        "imageUrl": "https://images.code.org/820defcc20e27850c745322767b1d47b-Screen Shot 2025-01-27 at 3.58.17 PM.png",
+        "key": "python-intro-console-lesson8-slides-return-bc612f9d-7bf8-4b95-9d21-2c050884236b",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### Why use str() \n- print() can only combine strings with strings.\n- Use str() to convert numbers to strings for printing.",
+        "imageUrl": "https://images.code.org/edda82c001d0c2559df899d3e6069744-Screen Shot 2025-01-27 at 4.13.45 PM.png",
+        "key": "python-intro-console-lesson8-slides-return-68081c07-8e0b-4129-95b2-a0b731304c76",
+        "layout": "text-bottom-right"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-28 00:14:10 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Panels>

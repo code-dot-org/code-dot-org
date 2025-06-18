@@ -4,12 +4,14 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "is_migrated": true,
       "version_year": "2024"
     },
     "new_name": null,
     "family_name": "virtual-pl-csp-summer-day1",
-    "serialized_at": "2023-09-28 19:48:51 UTC",
+    "serialized_at": "2024-11-19 01:19:47 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

@@ -2,7 +2,7 @@ require 'fileutils'
 require 'net/http'
 require 'net/http/responses'
 require 'uri'
-require 'cdo/circle_utils'
+require 'cdo/ci_utils'
 require 'cdo/slack'
 
 # This class is intended to be a thin wrapper around our chat client

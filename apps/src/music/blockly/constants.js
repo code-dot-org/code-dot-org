@@ -7,6 +7,7 @@ export const FIELD_EFFECTS_EXTENSION = 'field_effects_extension';
 export const FIELD_PATTERNS_VALIDATOR = 'field_patterns_extensions';
 export const FIELD_SOUNDS_VALIDATOR = 'field_sounds_validator';
 export const PLAY_MULTI_MUTATOR = 'play_multi_mutator';
+export const NEXT_CONNECTION_MUTATOR = 'next_connection_mutator';
 
 // Field / Input Names
 

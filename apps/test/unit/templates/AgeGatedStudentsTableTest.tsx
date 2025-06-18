@@ -30,7 +30,7 @@ describe('AgeGatedStudentsTable', () => {
     loginType: 'google_oauth2',
     rowType: RowType.STUDENT,
     age: 10,
-    atRiskAgeGatedStudent: true,
+    atRiskAgeGatedDate: new Date('2025/01/01'),
     childAccountComplianceState: ChildAccountComplianceStates.LOCKED_OUT,
     latestPermissionRequestSentAt: null,
   };
@@ -44,7 +44,7 @@ describe('AgeGatedStudentsTable', () => {
     loginType: 'google_oauth2',
     rowType: RowType.STUDENT,
     age: 10,
-    atRiskAgeGatedStudent: false,
+    atRiskAgeGatedDate: null,
     childAccountComplianceState: '',
     latestPermissionRequestSentAt: null,
   };
@@ -58,7 +58,7 @@ describe('AgeGatedStudentsTable', () => {
     loginType: 'google_oauth2',
     rowType: RowType.STUDENT,
     age: 10,
-    atRiskAgeGatedStudent: true,
+    atRiskAgeGatedDate: new Date('2025/01/01'),
     childAccountComplianceState: ChildAccountComplianceStates.GRACE_PERIOD,
     latestPermissionRequestSentAt: new Date(),
   };
@@ -72,7 +72,7 @@ describe('AgeGatedStudentsTable', () => {
     loginType: 'google_oauth2',
     rowType: RowType.STUDENT,
     age: 10,
-    atRiskAgeGatedStudent: true,
+    atRiskAgeGatedDate: new Date('2025/01/01'),
     childAccountComplianceState:
       ChildAccountComplianceStates.PERMISSION_GRANTED,
     latestPermissionRequestSentAt: new Date(),
@@ -87,7 +87,7 @@ describe('AgeGatedStudentsTable', () => {
     loginType: 'google_oauth2',
     rowType: RowType.STUDENT,
     age: 10,
-    atRiskAgeGatedStudent: true,
+    atRiskAgeGatedDate: new Date('2025/01/01'),
     childAccountComplianceState: '',
     latestPermissionRequestSentAt: null,
   };

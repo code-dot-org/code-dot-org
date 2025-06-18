@@ -1,0 +1,6 @@
+@use '@fontsource-variable/noto-sans-telugu/scss/mixins' as NotoSansTelugu;
+@include NotoSansTelugu.faces($family: 'Noto Sans Telugu');
+
+.className {
+  font-family: 'Noto Sans Telugu', sans-serif;
+}

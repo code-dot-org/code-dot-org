@@ -1,9 +1,9 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import {BodyFourText} from '@code-dot-org/component-library/typography';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {CSSProperties, useState} from 'react';
 
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -104,6 +104,7 @@ export default function LtiSectionSyncDialog({
       PLATFORMS.STATSIG
     );
     return (
+      // eslint-disable-next-line react/forbid-dom-props
       <div data-testid={'disable-roster-sync'}>
         <div>
           <h2 style={styles.dialogHeader}>

@@ -14,11 +14,10 @@ Feature: School Info Confirmation Dialog
 # 4. A year later after the user has completed school info, the user sees prompt to
 # confirm or update current school info.
 
-@no_safari
 Scenario: School Info Confirmation Dialog
   # Teacher account is created with partial school info
   Given I create a teacher named "Teacher_Chuba" and go home
-   # Wait for homepage to load before reloading the page.
+  # Wait for homepage to load before reloading the page.
   Then I wait until element "h1" contains text "My Dashboard"
   # The date of the teacher's account is updated to 7 days ago to simulate time travel
   # This enables the condition (see school_info_interstitial helper.rb) that checks
@@ -31,22 +30,24 @@ Scenario: School Info Confirmation Dialog
   # Teacher completes school info interstitial
   And I select the "United States" option in dropdown "uitest-country-dropdown"
   And I press keys "31513" for element "#uitest-school-zip"
+  Then I wait until element "#uitest-school-dropdown" contains text "Appling County High School"
   And I select the "Appling County High School" option in dropdown "uitest-school-dropdown"
-  And I open my eyes to test "School Association"
-  And I see no difference for "School Association: all fields"
   Then I press "#save-button" using jQuery
+  And I wait until element ".modal" is gone
 
   # One week later, the teacher does not see the prompt
   And eight days pass for user "Teacher_Chuba"
   Then I reload the page
   And element ".modal" is not visible
 
-  # One year later, the teacher sees the school info confirmation dialog
+  # One year later, the teacher sees the school info confirmation dialog and confirms at the same school
   And one year passes for user "Teacher_Chuba"
   Then I reload the page
   And element ".modal-body" is visible
-  Then I press "#update-button" using jQuery
-  And element ".modal" is visible
-  Then I wait to see a modal containing text "United States"
-  Then element "#uitest-school-zip" has value "31513"
-  Then I wait to see a modal containing text "Appling County High School"
+  Then I press "#yes-button" using jQuery
+  And I wait until element ".modal" is gone
+
+  # One week later, the teacher does not see the prompt
+  And eight days pass for user "Teacher_Chuba"
+  Then I reload the page
+  And element ".modal" is not visible

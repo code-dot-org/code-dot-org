@@ -1,18 +1,18 @@
 require 'nokogiri'
 
-IGNORED_SOLUTION_BLOCK_ATTRS = {
-  'uservisible' => 'false',
-  'deletable' => 'false',
-  'editable' => 'false',
-  'disabled' => 'true',
-  'movable' => 'false'
-}.freeze
-NEW_CATEGORY_XML = '<category name="NEW BLOCKS"/>'.freeze
-STRIPPED_NODES_XPATH = './next|./value|./statement|./title'.freeze
-STRIPPED_ATTRS = (['id', 'inline'] + IGNORED_SOLUTION_BLOCK_ATTRS.keys).freeze
-
 module SolutionBlocks
   extend ActiveSupport::Concern
+
+  IGNORED_SOLUTION_BLOCK_ATTRS = {
+    'uservisible' => 'false',
+    'deletable' => 'false',
+    'editable' => 'false',
+    'disabled' => 'true',
+    'movable' => 'false'
+  }.freeze
+  NEW_CATEGORY_XML = '<category name="NEW BLOCKS"/>'.freeze
+  STRIPPED_NODES_XPATH = './next|./value|./statement|./title'.freeze
+  STRIPPED_ATTRS = (['id', 'inline'] + IGNORED_SOLUTION_BLOCK_ATTRS.keys).freeze
 
   def strip_block(block)
     stripped_block = block.dup

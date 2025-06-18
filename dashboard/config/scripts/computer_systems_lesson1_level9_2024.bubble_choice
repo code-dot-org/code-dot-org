@@ -1,0 +1,9 @@
+name 'computer-systems-lesson1-level9-2024'
+display_name 'Industry Professional for Oura Ring 4'
+description 'Discover how the Oura Ring helps professionals track sleep, heart rate, and body temperature to improve health and wellness. Select a role and interview an expert to learn how AI-driven wearables support their work.'
+
+sublevels
+level 'computer-systems-lesson1-level9a-2024'
+level 'computer-systems-lesson1-level9b-2024'
+level 'computer-systems-lesson1-level9c-2024'
+level 'computer-systems-lesson1-level9d-2024'

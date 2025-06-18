@@ -1,5 +1,3 @@
-@import 'color.scss';
-
 .icon {
   margin-right: 4px;
 }
@@ -8,7 +6,7 @@
   table-layout: auto;
   width: 100%;
   border-collapse: collapse;
-  border: 1px solid $light_white;
+  border: 1px solid var(--borders-neutral-primary);
 
   thead td{
     font-weight: bold;
@@ -16,8 +14,16 @@
   }
 
   td {
-    border: 1px solid $light_white;
+    border: 1px solid var(--borders-neutral-primary);
     padding: 4px 6px;
+  }
+
+  h6 {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-bottom: 0;
   }
 }
 
@@ -25,4 +31,13 @@
   margin-top: 10px;
   font-size: 16px;
   font-weight: bold;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4px;
+  text-align: center;
 }

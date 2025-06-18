@@ -4,10 +4,10 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "curriculum_umbrella": "AI",
+      "content_area": "curriculum_6_8",
+      "curriculum_umbrella": "6-8 Special topics",
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
-      "is_course": true,
       "is_migrated": true,
       "show_calendar": true,
       "supported_locales": [
@@ -25,17 +25,19 @@
         "th-TH",
         "tr-TR"
       ],
+      "topic_tags": [
+        "ai"
+      ],
       "tts": true,
-      "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": "how-ai-works",
-    "serialized_at": "2024-09-09 23:23:21 UTC",
-    "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-05-06 20:06:49 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "how-ai-works-2023"
     }
@@ -1267,7 +1269,7 @@
       "key": "0908008c-2b65-45ce-ad57-53cd07a86842",
       "position": 1,
       "properties": {
-        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://studio.code.org/form/how_ai_works_post_lesson_survey).",
         "name": "Teacher Survey"
       },
       "seeding_key": {
@@ -1738,7 +1740,7 @@
       "key": "b8fc8bcd-f477-431a-9586-9c2ad827f9da",
       "position": 1,
       "properties": {
-        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://studio.code.org/form/how_ai_works_post_lesson_survey).",
         "name": "Teacher Survey"
       },
       "seeding_key": {
@@ -2224,7 +2226,7 @@
       "key": "baa54416-708e-4655-85be-bcf5cfa48590",
       "position": 1,
       "properties": {
-        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://studio.code.org/form/how_ai_works_post_lesson_survey).",
         "name": "Teacher Survey"
       },
       "seeding_key": {
@@ -2705,7 +2707,7 @@
       "key": "9c0c2fff-b384-4ac6-ac73-58a8e121487d",
       "position": 1,
       "properties": {
-        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://studio.code.org/form/how_ai_works_post_lesson_survey).",
         "name": "Teacher Survey"
       },
       "seeding_key": {
@@ -3106,7 +3108,7 @@
       "key": "aa1caf44-9127-400c-a5d0-291fedca756d",
       "position": 1,
       "properties": {
-        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://studio.code.org/form/how_ai_works_post_lesson_survey).",
         "name": "Teacher Survey"
       },
       "seeding_key": {
@@ -3496,7 +3498,7 @@
       "key": "0b1baac9-5323-4fc0-9a06-b715d53561a2",
       "position": 1,
       "properties": {
-        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://studio.code.org/form/how_ai_works_post_lesson_survey).",
         "name": "Teacher Survey"
       },
       "seeding_key": {
@@ -4157,7 +4159,7 @@
       "key": "b14ca57e-bb0c-4cdc-bcc6-f0d2fee69b03",
       "position": 1,
       "properties": {
-        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://studio.code.org/form/how_ai_works_post_lesson_survey).",
         "name": "Teacher Survey"
       },
       "seeding_key": {
@@ -4415,7 +4417,7 @@
       "key": "22d6a465-1588-4f86-8b85-53d2b9f85a1f",
       "position": 1,
       "properties": {
-        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How AI Works Teacher Survey](https://studio.code.org/form/how_ai_works_post_lesson_survey).",
         "name": "Teacher Survey"
       },
       "seeding_key": {

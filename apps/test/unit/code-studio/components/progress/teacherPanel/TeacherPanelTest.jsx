@@ -16,8 +16,9 @@ import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRed
 import i18n from '@cdo/locale';
 
 const students = [
-  {id: 1, name: 'Student 1'},
-  {id: 2, name: 'Student 2'},
+  {id: 1, name: 'Student 1', familyName: 'B'},
+  {id: 2, name: 'Student 2', familyName: 'C'},
+  {id: 3, name: 'Student 3', familyName: 'A'},
 ];
 
 const DEFAULT_PROPS = {
@@ -33,6 +34,7 @@ const DEFAULT_PROPS = {
   levelsWithProgress: [],
   loadLevelsWithProgress: () => {},
   teacherId: 5,
+  isSortedByFamilyName: false,
   exampleSolutions: [],
   selectUser: () => {},
   setViewAsUserId: () => {},
@@ -241,6 +243,162 @@ describe('TeacherPanel', () => {
         students: students,
       });
       expect(wrapper.find(StudentTable)).toHaveLength(0);
+    });
+
+    it('displays students in correct order when sorting by given name', () => {
+      const store = createStore(combineReducers({viewAs, currentUser}), {
+        viewAs: ViewType.Instructor,
+      });
+
+      const props = {
+        ...DEFAULT_PROPS,
+        viewAs: ViewType.Instructor,
+        students: students,
+      };
+
+      const wrapper = mount(
+        <Provider store={store}>
+          <TeacherPanel {...props} />
+        </Provider>
+      );
+
+      expect(wrapper.find('tr').at(1).text()).toEqual('Student 1 B');
+      expect(wrapper.find('tr').at(2).text()).toEqual('Student 2 C');
+      expect(wrapper.find('tr').at(3).text()).toEqual('Student 3 A');
+    });
+
+    it('displays students in correct order when sorting by family name', () => {
+      const store = createStore(combineReducers({viewAs, currentUser}), {
+        viewAs: ViewType.Instructor,
+        currentUser: {
+          isSortedByFamilyName: true,
+        },
+      });
+
+      const props = {
+        ...DEFAULT_PROPS,
+        viewAs: ViewType.Instructor,
+        isSortedByFamilyName: true,
+        students: students,
+      };
+
+      const wrapper = mount(
+        <Provider store={store}>
+          <TeacherPanel {...props} />
+        </Provider>
+      );
+
+      expect(wrapper.find('tr').at(1).text()).toEqual('Student 3 A');
+      expect(wrapper.find('tr').at(2).text()).toEqual('Student 1 B');
+      expect(wrapper.find('tr').at(3).text()).toEqual('Student 2 C');
+    });
+
+    it('next button navigates to correct student when sorting by given name', () => {
+      const store = createStore(combineReducers({viewAs, currentUser}), {
+        viewAs: ViewType.Instructor,
+      });
+
+      const selectUserStub = jest.fn();
+
+      const props = {
+        ...DEFAULT_PROPS,
+        viewAs: ViewType.Instructor,
+        students: students,
+        selectUser: selectUserStub,
+      };
+
+      const wrapper = mount(
+        <Provider store={store}>
+          <TeacherPanel {...props} />
+        </Provider>
+      );
+
+      const nextButton = wrapper.find('i').at(3);
+      nextButton.simulate('click');
+      expect(selectUserStub).toHaveBeenCalledWith(1, false);
+    });
+
+    it('next button navigates to correct student when sorting by family name', () => {
+      const store = createStore(combineReducers({viewAs, currentUser}), {
+        viewAs: ViewType.Instructor,
+        currentUser: {
+          isSortedByFamilyName: true,
+        },
+      });
+
+      const selectUserStub = jest.fn();
+
+      const props = {
+        ...DEFAULT_PROPS,
+        viewAs: ViewType.Instructor,
+        isSortedByFamilyName: true,
+        students: students,
+        selectUser: selectUserStub,
+      };
+
+      const wrapper = mount(
+        <Provider store={store}>
+          <TeacherPanel {...props} />
+        </Provider>
+      );
+
+      const nextButton = wrapper.find('i').at(3);
+      nextButton.simulate('click');
+      expect(selectUserStub).toHaveBeenCalledWith(3, false);
+    });
+
+    it('previous button navigates to correct student when sorting by given name', () => {
+      const store = createStore(combineReducers({viewAs, currentUser}), {
+        viewAs: ViewType.Instructor,
+      });
+
+      const selectUserStub = jest.fn();
+
+      const props = {
+        ...DEFAULT_PROPS,
+        viewAs: ViewType.Instructor,
+        students: students,
+        selectUser: selectUserStub,
+      };
+
+      const wrapper = mount(
+        <Provider store={store}>
+          <TeacherPanel {...props} />
+        </Provider>
+      );
+
+      const previousButton = wrapper.find('i').at(2);
+      previousButton.simulate('click');
+      expect(selectUserStub).toHaveBeenCalledWith(3, false);
+    });
+
+    it('previous button navigates to correct student when sorting by family name', () => {
+      const store = createStore(combineReducers({viewAs, currentUser}), {
+        viewAs: ViewType.Instructor,
+        currentUser: {
+          isSortedByFamilyName: true,
+        },
+      });
+
+      const selectUserStub = jest.fn();
+
+      const props = {
+        ...DEFAULT_PROPS,
+        viewAs: ViewType.Instructor,
+        isSortedByFamilyName: true,
+        students: students,
+        selectUser: selectUserStub,
+      };
+
+      const wrapper = mount(
+        <Provider store={store}>
+          <TeacherPanel {...props} />
+        </Provider>
+      );
+
+      const previousButton = wrapper.find('i').at(2);
+      previousButton.simulate('click');
+      expect(selectUserStub).toHaveBeenCalledWith(2, false);
     });
 
     it('calls selectUser when user is clicked with isAsync true when on overview page', () => {

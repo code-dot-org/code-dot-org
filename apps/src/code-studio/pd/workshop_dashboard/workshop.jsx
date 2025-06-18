@@ -1,8 +1,7 @@
 /**
- * Workshop view / edit. Displays and optionally edits details for a workshop.
+ * Workshop view. Displays details for a workshop.
  * Routes:
  *   /workshops/:workshopId
- *   /Workshops/:workshopId/edit
  */
 import $ from 'jquery';
 import _ from 'lodash';
@@ -10,6 +9,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Grid, Row, Col} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
+
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 
 import Spinner from '../../../sharedComponents/Spinner';
 
@@ -22,16 +23,11 @@ import {PermissionPropType, WorkshopAdmin} from './permission';
 import SignUpPanel from './SignUpPanel';
 
 export class Workshop extends React.Component {
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
-  };
+  static contextType = RouterContext;
 
   static propTypes = {
     params: PropTypes.shape({
       workshopId: PropTypes.string.isRequired,
-    }).isRequired,
-    route: PropTypes.shape({
-      view: PropTypes.string,
     }).isRequired,
     permission: PermissionPropType.isRequired,
   };
@@ -60,11 +56,7 @@ export class Workshop extends React.Component {
     }
 
     // Don't allow editing a workshop that has been started.
-    if (
-      this.props.route.view === 'edit' &&
-      this.state.workshop &&
-      this.state.workshop.state !== 'Not Started'
-    ) {
+    if (this.state.workshop && this.state.workshop.state !== 'Not Started') {
       this.context.router.replace(`/workshops/${this.props.params.workshopId}`);
       return false;
     }
@@ -80,36 +72,7 @@ export class Workshop extends React.Component {
       .done(data => {
         this.setState({
           loadingWorkshop: false,
-          workshop: _.pick(data, [
-            'id',
-            'organizer',
-            'facilitators',
-            'location_name',
-            'location_address',
-            'capacity',
-            'enrolled_teacher_count',
-            'on_map',
-            'funded',
-            'funding_type',
-            'course',
-            'subject',
-            'fee',
-            'notes',
-            'sessions',
-            'state',
-            'account_required_for_attendance?',
-            'ready_to_close?',
-            'regional_partner_name',
-            'regional_partner_id',
-            'scholarship_workshop?',
-            'potential_organizers',
-            'created_at',
-            'virtual',
-            'suppress_email',
-            'third_party_provider',
-            'course_offerings',
-            'module',
-          ]),
+          workshop: data,
         });
       })
       .fail(data => {
@@ -152,11 +115,6 @@ export class Workshop extends React.Component {
     }
   }
 
-  handleWorkshopSaved = workshop => {
-    this.setState({workshop: workshop});
-    this.context.router.replace(`/workshops/${this.props.params.workshopId}`);
-  };
-
   render() {
     if (this.state.loadingWorkshop) {
       return <Spinner />;
@@ -164,20 +122,27 @@ export class Workshop extends React.Component {
       return <p>No workshop found</p>;
     }
 
-    const {params, permission, route} = this.props;
+    const {params, permission} = this.props;
     const {workshopId} = params;
     const isWorkshopAdmin = permission.has(WorkshopAdmin);
     const {workshop, enrollments, loadingEnrollments} = this.state;
-    const {created_at, sessions, state: workshopState} = workshop;
+    const {created_at, sessions, state: workshopState, time_zone} = workshop;
 
     return (
       <Grid>
+        <DetailsPanel
+          workshopId={workshopId}
+          workshop={workshop}
+          workshopState={workshopState}
+          isWorkshopAdmin={isWorkshopAdmin}
+        />
         {workshopState === 'Not Started' && (
           <SignUpPanel workshopId={workshopId} />
         )}
         <IntroPanel
           workshopId={workshopId}
           workshopState={workshopState}
+          workshopTimezone={time_zone}
           sessions={sessions}
           isAccountRequiredForAttendance={
             workshop['account_required_for_attendance?']
@@ -203,14 +168,7 @@ export class Workshop extends React.Component {
           isWorkshopAdmin={isWorkshopAdmin}
           loadEnrollments={this.loadEnrollments}
         />
-        <DetailsPanel
-          view={route.view}
-          workshopId={workshopId}
-          workshop={workshop}
-          workshopState={workshopState}
-          isWorkshopAdmin={isWorkshopAdmin}
-          onWorkshopSaved={this.handleWorkshopSaved}
-        />
+
         <MetadataFooter createdAt={created_at} />
       </Grid>
     );

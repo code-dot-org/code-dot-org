@@ -70,6 +70,14 @@
       "contents": "this is a test validation file",
       "folderId": "0",
       "type": "validation"
+    },
+    "8": {
+      "id": "8",
+      "name": "system_support_file.vld",
+      "language": "vld",
+      "contents": "this is a test system support file",
+      "folderId": "0",
+      "type": "system_support"
     }
   },
   "openFiles": []

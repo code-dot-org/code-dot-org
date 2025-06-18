@@ -1,0 +1,27 @@
+name 'networks-preassessment_2025-preview'
+title 'Networks and the Internet Pre-Assessment'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'networks-preassessment-intro_2025-preview'
+level 'networks-preassessment-question1_2025-preview'
+level 'networks-preassessment-question2_2025-preview'
+level 'networks-preassessment-question3_2025-preview'
+level 'networks-preassessment-question4_2025-preview'
+level 'networks-preassessment-question5_2025-preview'
+
+page
+level 'networks-preassessment-question6_2025-preview'
+level 'networks-preassessment-question7_2025-preview'
+level 'networks-preassessment-question8_2025-preview'
+level 'networks-preassessment-question9_2025-preview'
+level 'networks-preassessment-question10_2025-preview'
+
+page
+level 'networks-preassessment-question11_2025-preview'
+level 'networks-preassessment-question12_2025-preview'
+level 'networks-preassessment-question13_2025-preview'
+level 'networks-preassessment-question14_2025-preview'
+level 'networks-preassessment-question15_2025-preview'

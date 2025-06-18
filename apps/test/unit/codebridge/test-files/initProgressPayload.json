@@ -1,0 +1,206 @@
+{
+  "currentLevelId": "2",
+  "deeperLearningCourse": false,
+  "saveAnswersBeforeNavigation": false,
+  "isFullProgress": false,
+  "lessons": [
+    {
+      "script_id": 78,
+      "script_name": "allthethings",
+      "num_script_lessons": 56,
+      "id": 589,
+      "position": 53,
+      "relative_position": 50,
+      "name": "Python Lab",
+      "key": "lesson-53",
+      "assessment": false,
+      "title": "Lesson 50: Python Lab",
+      "lesson_group_display_name": "Content",
+      "lockable": false,
+      "hasLessonPlan": true,
+      "numberedLesson": true,
+      "levels": [
+        {
+          "id": "1",
+          "ids": [
+            "1"
+          ],
+          "activeId": "1",
+          "inactiveIds": [],
+          "position": 1,
+          "kind": "puzzle",
+          "icon": null,
+          "is_concept_level": false,
+          "title": 1,
+          "url": "//localhost-studio.code.org:3000/s/allthethings/lessons/50/levels/1",
+          "path": "/s/allthethings/lessons/50/levels/1",
+          "freePlay": false,
+          "bonus": false,
+          "display_as_unplugged": false,
+          "app": "pythonlab",
+          "uses_lab2": true,
+          "is_validated": false,
+          "can_have_feedback": false
+        },
+        {
+          "id": "2",
+          "ids": [
+            "2"
+          ],
+          "activeId": "2",
+          "inactiveIds": [],
+          "position": 2,
+          "kind": "puzzle",
+          "icon": null,
+          "is_concept_level": false,
+          "title": 2,
+          "url": "//localhost-studio.code.org:3000/s/allthethings/lessons/50/levels/2",
+          "path": "/s/allthethings/lessons/50/levels/2",
+          "freePlay": false,
+          "bonus": false,
+          "display_as_unplugged": false,
+          "app": "pythonlab",
+          "uses_lab2": true,
+          "is_validated": true,
+          "can_have_feedback": false
+        },
+        {
+          "id": "3",
+          "ids": [
+            "3"
+          ],
+          "activeId": "3",
+          "inactiveIds": [],
+          "position": 3,
+          "kind": "puzzle",
+          "icon": null,
+          "is_concept_level": false,
+          "title": 3,
+          "url": "//localhost-studio.code.org:3000/s/allthethings/lessons/50/levels/3",
+          "path": "/s/allthethings/lessons/50/levels/3",
+          "freePlay": false,
+          "bonus": false,
+          "display_as_unplugged": false,
+          "app": "pythonlab",
+          "uses_lab2": true,
+          "is_validated": true,
+          "can_have_feedback": false
+        },
+        {
+          "id": "4",
+          "ids": [
+            "4"
+          ],
+          "activeId": "4",
+          "inactiveIds": [],
+          "position": 4,
+          "kind": "puzzle",
+          "icon": null,
+          "is_concept_level": false,
+          "title": 4,
+          "url": "//localhost-studio.code.org:3000/s/allthethings/lessons/50/levels/4",
+          "path": "/s/allthethings/lessons/50/levels/4",
+          "freePlay": false,
+          "bonus": false,
+          "display_as_unplugged": false,
+          "app": "pythonlab",
+          "uses_lab2": true,
+          "is_validated": true,
+          "can_have_feedback": false
+        },
+        {
+          "id": "5",
+          "ids": [
+            "5"
+          ],
+          "activeId": "5",
+          "inactiveIds": [],
+          "position": 5,
+          "kind": "puzzle",
+          "icon": null,
+          "is_concept_level": false,
+          "title": 5,
+          "url": "//localhost-studio.code.org:3000/s/allthethings/lessons/50/levels/5",
+          "path": "/s/allthethings/lessons/50/levels/5",
+          "freePlay": false,
+          "bonus": false,
+          "display_as_unplugged": false,
+          "app": "pythonlab",
+          "uses_lab2": true,
+          "is_validated": false,
+          "can_have_feedback": false
+        },
+        {
+          "id": "6",
+          "ids": [
+            "6"
+          ],
+          "activeId": "6",
+          "inactiveIds": [],
+          "position": 6,
+          "kind": "puzzle",
+          "icon": null,
+          "is_concept_level": false,
+          "title": 6,
+          "url": "//localhost-studio.code.org:3000/s/allthethings/lessons/50/levels/6",
+          "path": "/s/allthethings/lessons/50/levels/6",
+          "freePlay": false,
+          "bonus": false,
+          "display_as_unplugged": false,
+          "app": "pythonlab",
+          "uses_lab2": true,
+          "is_validated": false,
+          "can_have_feedback": false
+        },
+        {
+          "id": "7",
+          "ids": [
+            "7"
+          ],
+          "activeId": "7",
+          "inactiveIds": [],
+          "position": 7,
+          "kind": "puzzle",
+          "icon": null,
+          "is_concept_level": false,
+          "title": 7,
+          "url": "//localhost-studio.code.org:3000/s/allthethings/lessons/50/levels/7",
+          "path": "/s/allthethings/lessons/50/levels/7",
+          "freePlay": false,
+          "bonus": false,
+          "display_as_unplugged": false,
+          "app": "pythonlab",
+          "uses_lab2": true,
+          "is_validated": false,
+          "can_have_feedback": false
+        }
+      ],
+      "description_student": "",
+      "description_teacher": "",
+      "unplugged": null,
+      "lessonEditPath": "/s/allthethings/lessons/50/edit",
+      "lessonStartUrl": "http://localhost-studio.code.org:3000/s/allthethings/lessons/50/levels/1",
+      "duration": 0,
+      "lesson_plan_html_url": "/s/allthethings/lessons/50",
+      "lesson_plan_pdf_url": "https://lesson-plans.code.org/allthethings/20240918193124/teacher-lesson-plans/Python-Lab.pdf",
+      "lesson_extras_level_url": "http://localhost-studio.code.org:3000/s/allthethings/lessons/50/extras",
+      "lessonNumber": 1
+    }
+  ],
+  "lessonGroups": [
+    {
+      "id": 97,
+      "key": "",
+      "display_name": "Content",
+      "description": null,
+      "big_questions": null,
+      "user_facing": false,
+      "position": 1
+    }
+  ],
+  "scriptId": 78,
+  "scriptName": "allthethings",
+  "scriptDisplayName": "All the Things!",
+  "isLessonExtras": false,
+  "currentPageNumber": -1
+}

@@ -1,13 +1,13 @@
-import classnames from 'classnames';
-import PropTypes from 'prop-types';
-import React, {useState} from 'react';
-
 import {
   BodyThreeText,
   BodyTwoText,
   Heading3,
   Heading4,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@code-dot-org/component-library/typography';
+import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import i18n from '@cdo/locale';
 
@@ -51,7 +51,6 @@ export default function RubricContent({
   feedbackAdded,
   setFeedbackAdded,
   sectionId,
-  aiEvalStatusMap,
 }) {
   const {lesson} = rubric;
   const rubricLevel = rubric.level;
@@ -75,12 +74,7 @@ export default function RubricContent({
     >
       {infoText && <InfoAlert text={infoText} />}
       <div className={style.studentInfoGroup}>
-        <Heading3>
-          {i18n.lessonNumbered({
-            lessonNumber: lesson?.position,
-            lessonName: lesson?.name,
-          })}
-        </Heading3>
+        <Heading3>{lesson?.title}</Heading3>
 
         <div className={style.selectors}>
           <SectionSelector reloadOnChange={true} />
@@ -90,7 +84,6 @@ export default function RubricContent({
             reloadOnChange={true}
             sectionId={sectionId}
             reportingData={reportingData}
-            aiEvalStatusMap={aiEvalStatusMap}
           />
         </div>
 
@@ -166,7 +159,6 @@ RubricContent.propTypes = {
   feedbackAdded: PropTypes.bool,
   setFeedbackAdded: PropTypes.func,
   sectionId: PropTypes.number,
-  aiEvalStatusMap: PropTypes.object,
 };
 
 export const InfoAlert = ({text, dismissable}) => {
@@ -181,6 +173,7 @@ export const InfoAlert = ({text, dismissable}) => {
         [style.infoAlert]: !closed,
         [style.infoAlertClosed]: !!closed,
       })}
+      // eslint-disable-next-line react/forbid-dom-props
       data-testid="info-alert"
     >
       <div className={style.infoAlertLeft}>

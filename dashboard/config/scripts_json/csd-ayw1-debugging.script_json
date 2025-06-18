@@ -4,11 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "pl_workshop_activities",
+      "curriculum_umbrella": "PD Workshop Activity CSD",
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-15 22:52:57 UTC",
+    "serialized_at": "2024-11-19 01:16:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -103,6 +105,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-PL AYWS1 Debugging Intro"
+        ],
         "progression": "Start Here!"
       },
       "bonus": false,
@@ -125,6 +130,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Debug Paragraph Style"
+        ],
         "progression": "Unit 2 - Web Development Debugging"
       },
       "bonus": false,
@@ -147,6 +155,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Missing Image Debug 1"
+        ],
         "progression": "Unit 2 - Web Development Debugging"
       },
       "bonus": false,
@@ -169,6 +180,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Missing Image Debug 2"
+        ],
         "progression": "Unit 2 - Web Development Debugging"
       },
       "bonus": false,
@@ -191,6 +205,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Classes Debug"
+        ],
         "progression": "Unit 2 - Web Development Debugging"
       },
       "bonus": false,
@@ -213,6 +230,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Classes Debug"
+        ],
         "progression": "Unit 2 - Web Development Debugging"
       },
       "bonus": false,
@@ -235,6 +255,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Flexbox Debug"
+        ],
         "progression": "Unit 2 - Web Development Debugging"
       },
       "bonus": false,
@@ -257,6 +280,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Flexbox Debug 2"
+        ],
         "progression": "Unit 2 - Web Development Debugging"
       },
       "bonus": false,
@@ -279,6 +305,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawing practice 1"
+        ],
         "progression": "Unit 3 - Interactive Animations & Games Debugging"
       },
       "bonus": false,
@@ -301,6 +330,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawing practice 3"
+        ],
         "progression": "Unit 3 - Interactive Animations & Games Debugging"
       },
       "bonus": false,
@@ -323,6 +355,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variable names debug"
+        ],
         "progression": "Unit 3 - Interactive Animations & Games Debugging"
       },
       "bonus": false,
@@ -345,6 +380,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites debug"
+        ],
         "progression": "Unit 3 - Interactive Animations & Games Debugging"
       },
       "bonus": false,
@@ -367,6 +405,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Text debug"
+        ],
         "progression": "Unit 3 - Interactive Animations & Games Debugging"
       },
       "bonus": false,
@@ -389,6 +430,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Movement debug"
+        ],
         "progression": "Unit 3 - Interactive Animations & Games Debugging"
       },
       "bonus": false,
@@ -411,6 +455,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Watcher Debug PL"
+        ],
         "progression": "Unit 3 - Interactive Animations & Games Debugging"
       },
       "bonus": false,

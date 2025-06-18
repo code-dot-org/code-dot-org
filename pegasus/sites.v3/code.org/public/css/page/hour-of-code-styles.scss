@@ -1,28 +1,78 @@
 // Custom styles for code.org/hourofcode
 // — supplemental to shared/css/design-system-pegasus.scss
 
-@import 'breakpoints';
+@import "breakpoints";
 
 // Hero banner
 .hero-banner-basic {
-  background: linear-gradient(110deg, #6977CD -10.82%, #BCDEDE 43.13%, #34DFE5 68.88%, #688AED 95.85%);
+  &.overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
 
-  .wrapper {
-    padding: 0;
-  }
-
-  figure {
-    max-width: 344px;
-
-    img {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #000000, #37283d 60%, #185960 100%);
+      z-index: 1;
+
+      @media (max-width: $width-sm) {
+        background: linear-gradient(180deg, #000000, #37283d 60%, #185960 100%);
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("/images/banners/banner-bg-music.png");
+      background-repeat: repeat-x;
+      background-size: cover;
+      z-index: 2;
     }
   }
 
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    color: unset;
+  @media screen and (max-width: $width-sm) {
+    background-size: 50%;
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 10;
+
+    @media screen and (max-width: $width-md) {
+      gap: 2rem;
+    }
+  }
+
+  p.has-icon {
+    margin-bottom: 0.5rem;
+
+    strong::before {
+      font: var(--fa-font-solid);
+      content: "\f001";
+      font-size: 1rem;
+      margin-inline: 6px;
+    }
+  }
+
+  .afe {
+    gap: 0.5rem;
+
+    & > figure {
+      width: 200px;
+
+      img {
+        width: 100%;
+      }
+    }
   }
 }
 

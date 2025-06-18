@@ -1,0 +1,38 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-11-08T22:53:21.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "<i class=\"fa-solid fa-music\"></i> You're doing great! ",
+        "imageUrl": "https://images.code.org/5c2c42127013e19ddf836ed36167ff95-discoball.jpg",
+        "key": "music-intro-coding-seq-panel-c89c8094-7ebd-4fdf-8e56-6b3283b69e64",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "**<i class=\"fa-solid fa-list-check\"></i>** You're making music with code in the sequence you choose. ",
+        "imageUrl": "https://images.code.org/cabe3ba5e668729a398daa9f5f72191f-sequence (1).gif",
+        "key": "music-intro-coding-seq-panel-1691297d-ba17-44dc-9a45-d24db5194f15",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "**<i class=\"fa-solid fa-shuffle\"></i>** You can also change the order of the blocks whenever you want.",
+        "imageUrl": "",
+        "key": "music-intro-coding-seq-panel2-179d11e6-9497-46d5-80b2-c7f756fdae28"
+      },
+      {
+        "text": "**Let's keep learning!**\n\n**<i class=\"fa-regular fa-face-thinking\"></i>** Check out this code!\n\n1.  What do you predict you will hear?  \n2. What do you think the new block does?  ",
+        "imageUrl": "https://images.code.org/91f6ab4f708f4a28449c85f8ac234d7c-Untitled 3.jpg",
+        "key": "music-intro-coding-seq-panel2-4a99f3ea-9008-4551-9153-87258dd8d619"
+      }
+    ],
+    "offer_browser_tts": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-11-08T22:53:21.363+00:00\",\"changed\":[\"cloned from \\\"music-intro-coding-seq-panel\\\"\"],\"cloned_from\":\"music-intro-coding-seq-panel\"},{\"changed_at\":\"2024-11-08 22:54:16 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-13 18:50:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-13 19:00:07 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-13 20:46:07 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-13 20:48:36 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-13 20:53:29 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-13 21:38:12 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

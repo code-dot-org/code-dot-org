@@ -8,19 +8,30 @@ $text-vertical-padding: 1.8cqw;
 $text-horizontal-padding: 2.6cqw;
 
 @keyframes fade-in {
-  0%, 50% {
+  from {
     opacity: 0;
   }
-  100% {
+  to{
     opacity: 1;
   }
 }
 
+@keyframes slide-in {
+  from {
+    margin-top: $text-offset-y;
+    margin-bottom: -$text-offset-y;
+  }
+  to {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
 @keyframes delay-pointer-events {
-  0%, 49% {
+  from {
     pointer-events: none;
   }
-  50%, 100% {
+  to {
     pointer-events: initial;
   }
 }
@@ -35,12 +46,14 @@ $text-horizontal-padding: 2.6cqw;
   top: 0;
   left: 0;
   flex-direction: column;
+  background-color: var(--background-neutral-lab);
 
   .panel {
     margin: 0 auto;
     position: relative;
     container-name: panel;
     container-type: inline-size;
+    overflow: hidden;
 
     .image {
       position: absolute;
@@ -54,17 +67,24 @@ $text-horizontal-padding: 2.6cqw;
       background-position: center;
 
       &Current {
-        animation: fade-in 0.5s;
+        animation: 0.5s ease 0s fade-in;
+        animation-fill-mode: both;
+      }
+
+      &Invisible {
+        opacity: 0;
       }
     }
 
     .text {
       background-color: $neutral_light;
+      color: $neutral_dark;
       border-radius: 5px;
       width: 40%;
       position: absolute;
       padding: $text-vertical-padding $text-horizontal-padding;
-      animation: fade-in 1.5s;
+      animation: 0.5s ease 0.5s fade-in, 0.5s ease 0.5s slide-in;
+      animation-fill-mode: both;
       font-size: 1.6cqw;
       line-height: 1.4em;
 
@@ -75,9 +95,12 @@ $text-horizontal-padding: 2.6cqw;
 
       h1, h2, h3, h4 {
         margin: 0 0 1cqw 0;
-        font-family: $barlowSemiCondensed-semibold;
         font-size: 3cqw;
         line-height: 1.2em;
+
+        &, em, strong {
+          font-family: $barlowSemiCondensed-semibold;
+        }
       }
 
       p {
@@ -86,6 +109,16 @@ $text-horizontal-padding: 2.6cqw;
 
         &:last-child {
           margin-bottom: 0;
+        }
+      }
+
+      ol, ul {
+        font-size: 1.6cqw;
+        margin: 0 0 1.1cqw 2.2cqw;
+
+        li {
+          margin-bottom: 1.1cqw;
+          line-height: 1.4em;
         }
       }
 
@@ -146,15 +179,19 @@ $text-horizontal-padding: 2.6cqw;
 
     .button {
       position: absolute;
-      right: 0;
+      inset-inline-end: 0;
       height: 38px;
 
+      // After typing, the button will be ready.
       &Ready {
-        animation: fade-in 0.5s;
+        animation: 0.5s ease 0s fade-in, 0.5s ease 0s delay-pointer-events;
+        animation-fill-mode: both;
       }
 
+      // If no typing, the button appears with a delay.
       &Delay {
-        animation: fade-in 3s, delay-pointer-events 3s;
+        animation: 0.5s ease 1.2s fade-in, 0.5s ease 1.2s delay-pointer-events;
+        animation-fill-mode: both;
       }
     }
 
@@ -162,11 +199,11 @@ $text-horizontal-padding: 2.6cqw;
       margin: 0 7px;
 
       &Current {
-        color: $neutral_light;
+        color: var(--text-neutral-primary);
       }
 
       &NotCurrent {
-        color: $neutral_dark70;
+        color: var(--text-neutral-placeholder);
         cursor: pointer;
       }
     }

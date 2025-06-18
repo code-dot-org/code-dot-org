@@ -1,0 +1,54 @@
+name 'aif-PL-applyingFilters-L32-DS'
+title 'Applying Filters'
+description 'description here'
+
+markdown <<MARKDOWN
+#Applying Filters
+
+## Create filters to help analyze the data.
+
+#### 1. Navigate to your copy of the Pizza Party Survey Data.
+#### 2. Go to the **Filtering Data Workspace** tab. 
+#### 3. Practice creating filters and visualizations to help you analyze the data for two questions:
+
+<table style="border-collapse: collapse; width: 100%; font-size: 14pt;">
+  <tr>
+    <th style="border: 1px solid #d3d3d3; background-color: #caa8d4ff; padding: 10px; text-align: center; color: black;">
+       <strong>What songs should we play based on the grades that attend the party?</strong>
+    </th>
+    <th style="border: 1px solid #d3d3d3; background-color: #caa8d4ff; padding: 10px; text-align: center; color: black;">
+       <strong>What kind of pizza do the different party personalities like best?</strong>
+    </th>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #d3d3d3; padding: 10px; vertical-align: top; font-size: 14pt;">
+      <strong>Prompts for analysis:</strong>
+      <ul>
+        <li style = "font-size: 14pt;">What songs are most popular in 7th grade?</li>
+        <li style = "font-size: 14pt;">Now change the filter to 8th grade, 9th grade, etc. How does the chart change?</li>
+        <li style = "font-size: 14pt;">Do middle schoolers and high schoolers like the same music, or do preferences shift?</li>
+        <li style = "font-size: 14pt;">What might explain the differences?</li>
+      </ul>
+    </td>
+    <td style="border: 1px solid #d3d3d3; padding: 10px; vertical-align: top; font-size: 14pt;">
+      <strong>Prompts for analysis:</strong>
+      <ul>
+        <li style = "font-size: 14pt;">What do you notice about the pizza preferences for this party personality?</li>
+        <li style = "font-size: 14pt;">Now change the filter to a different personality (e.g., Social Butterfly or Performer). How does the pizza chart change?</li>
+        <li style = "font-size: 14pt;">Do different personalities prefer different kinds of pizza?</li>
+        <li style = "font-size: 14pt;">What could you learn from this if you were in charge of ordering pizza for the party?</li>
+        <li style = "font-size: 14pt;">Is there one kind of pizza that seems to make everyone happy?</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+
+::: details [**Can't find your copy of the dataset? Click here**]
+Misplaced your copy of the Pizza Party Survey Data Google Sheet? **Click <a href="https://docs.google.com/spreadsheets/d/1AlVNpxzypX82fNlPDxDEa5ww72J_G2kyfZ2sFJedBJA/view" target="_blank">HERE</a>.** to open the original and make yourself **a new copy**!
+:::
+MARKDOWN

@@ -16,6 +16,7 @@
           "buttonText": "Learn More"
         }
       ],
+      "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -25,12 +26,11 @@
       "show_calendar": true,
       "student_detail_progress_view": true,
       "tts": true,
-      "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-09-11 16:42:12 UTC",
+    "serialized_at": "2025-05-10 00:33:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2223,7 +2223,7 @@
       "key": "9490ea37-9e60-4c48-bb79-da9927ac4b2a",
       "position": 2,
       "properties": {
-        "description": "[pull-right]\n\n![](https://images.code.org/53413b93e9f5aa4cd3c1779a1131d86d-image-1611864452394.13.21-PM.png)\n\n[/pull-right]\n\nAsk one or two volunteers to come to the front of the room and act as \"computers\" for the activity. They should sit with their backs to the board so that they cannot see what is being projected.  Give each volunteer a blank sheet of paper.\n\n**Display:** Project [Sample Share Drawing - Exemplar](https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screenshot-2017-05-24-at-1.13.21-PM.png) where it can be seen by the class."
+        "description": "\n\n![](https://images.code.org/53413b93e9f5aa4cd3c1779a1131d86d-image-1611864452394.13.21-PM.png)\n\n\n\nAsk one or two volunteers to come to the front of the room and act as \"computers\" for the activity. They should sit with their backs to the board so that they cannot see what is being projected.  Give each volunteer a blank sheet of paper.\n\n**Display:** Project [Sample Share Drawing - Exemplar](https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screenshot-2017-05-24-at-1.13.21-PM.png) where it can be seen by the class."
       },
       "seeding_key": {
         "activity_section.key": "9490ea37-9e60-4c48-bb79-da9927ac4b2a",
@@ -17567,7 +17567,7 @@
     },
     {
       "name": "Velocity and the Counter Pattern",
-      "url": "https://drive.google.com/file/d/1blEk-rMG-vei9DBrOo6Tk9ctt8lQaJx-/view?usp=sharing",
+      "url": "https://studio.code.org/docs/concepts/game-lab/velocity-and-the-counter-pattern/#:~:text=You%20can%20use%20a%20sprite's,speed%20up%20or%20slow%20down.",
       "key": "velocity_and_the_counter_pattern",
       "properties": {
         "audience": "Teacher",
@@ -21993,7 +21993,7 @@
     },
     {
       "understanding": 2,
-      "teacher_description": "At least 2 shapes, 2 sprites, and 2 lines of text are placed correctly on the screen using the coordinate system.",
+      "teacher_description": "At least 1 shape, 2 sprites, and 1 line of text are placed on the screen using the coordinate system.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 2,

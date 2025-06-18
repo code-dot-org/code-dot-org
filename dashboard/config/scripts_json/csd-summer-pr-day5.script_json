@@ -4,11 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "pl_workshop_activities",
+      "curriculum_umbrella": "PD Workshop Activity CSD",
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-26 20:16:55 UTC",
+    "serialized_at": "2024-11-19 01:16:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1623,6 +1625,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-L2 unsupervised - 1_-pr-2024"
+        ],
         "progression": "Looking for Patterns"
       },
       "bonus": false,
@@ -1645,6 +1650,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-L2 supervised - green glass door_-pr-2024"
+        ],
         "progression": "Green Glass Door"
       },
       "bonus": false,
@@ -1667,6 +1675,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro ai lab- fruit veggie widget_-pr-2025"
+        ],
         "progression": "Fruit and Veggie Explorer"
       },
       "bonus": false,
@@ -1689,6 +1700,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro ai lab-shapes v1_-pr-2025"
+        ],
         "progression": "Recognizing Shapes"
       },
       "bonus": false,
@@ -1711,6 +1725,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro categorical-pizza_-pr-2025"
+        ],
         "progression": "Pizza Recommendations"
       },
       "bonus": false,
@@ -1733,6 +1750,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro categorical-food choices_-pr-2025"
+        ],
         "progression": "You Choose: Restaurant Recommendations"
       },
       "bonus": false,

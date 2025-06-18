@@ -7,5 +7,5 @@ right '`info()` provides data types and non-null counts of each column, while `d
 wrong 'both `info()` and `describe()` provide the same information, but `describe()` displays it in a more detailed format.'
 wrong '`info()` displays the first few rows of the dataset, while `describe()` provides statistical summaries of the entire dataset.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 

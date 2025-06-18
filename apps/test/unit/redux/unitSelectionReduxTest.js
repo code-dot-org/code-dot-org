@@ -1,6 +1,6 @@
 import unitSelection, {
   setScriptId,
-  getSelectedScriptName,
+  getSelectedUnitName,
   getSelectedScriptDescription,
   setCoursesWithProgress,
 } from '@cdo/apps/redux/unitSelectionRedux';
@@ -15,7 +15,7 @@ describe('unitSelectionRedux', () => {
     expect(nextState.scriptId).toEqual(2);
   });
 
-  describe('getSelectedScriptName', () => {
+  describe('getSelectedUnitName', () => {
     it('returns the script name of the selected script', () => {
       const state = {
         unitSelection: {
@@ -23,7 +23,7 @@ describe('unitSelectionRedux', () => {
           coursesWithProgress: fakeCoursesWithProgress,
         },
       };
-      expect(getSelectedScriptName(state)).toEqual('csd1-2018');
+      expect(getSelectedUnitName(state)).toEqual('csd1-2018');
     });
 
     it('returns null if no script is selected', () => {
@@ -33,7 +33,7 @@ describe('unitSelectionRedux', () => {
           coursesWithProgress: fakeCoursesWithProgress,
         },
       };
-      expect(getSelectedScriptName(state)).toEqual(null);
+      expect(getSelectedUnitName(state)).toBeNull();
     });
   });
 

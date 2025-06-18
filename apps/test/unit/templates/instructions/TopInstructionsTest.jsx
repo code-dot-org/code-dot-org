@@ -245,7 +245,7 @@ describe('TopInstructions', () => {
         ).toBe(true);
       });
 
-      it('passes displayFeedback = false to TopInstructionsHeader on a level with a TA Rubric', () => {
+      it('passes displayFeedback = true to TopInstructionsHeader on a level with a TA Rubric', () => {
         const wrapper = shallow(
           <TopInstructions {...DEFAULT_PROPS} taRubric={{learningGoals: []}} />
         );
@@ -268,7 +268,7 @@ describe('TopInstructions', () => {
 
         expect(
           wrapper.find(TopInstructionsHeader).props().displayFeedback
-        ).toBe(false);
+        ).toBe(true);
       });
 
       it('passes displayFeedback = true to TopInstructionsHeader teacher is viewing student work and cannot leave feedback', () => {
@@ -336,7 +336,7 @@ describe('TopInstructions', () => {
         ).toBe(true);
       });
 
-      it('passes displayFeedback = false to TopInstructionsHeader on a level where there is a TA Rubric', () => {
+      it('passes displayFeedback = true to TopInstructionsHeader on a level where there is a TA Rubric', () => {
         const wrapper = shallow(
           <TopInstructions
             {...DEFAULT_PROPS}
@@ -372,7 +372,7 @@ describe('TopInstructions', () => {
 
         expect(
           wrapper.find(TopInstructionsHeader).props().displayFeedback
-        ).toBe(false);
+        ).toBe(true);
       });
 
       it('passes displayFeedback = false to TopInstructionsHeader on a level where the instructor has not given feedback and there is no miniRubric', () => {

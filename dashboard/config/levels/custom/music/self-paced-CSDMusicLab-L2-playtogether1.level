@@ -1,0 +1,157 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-04-14T21:42:46.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "##### **Teacher Note**: This is Lesson 2, Level 2. Students will *predict* what they think the code will do before they run it. Note that we've kept all student-facing language intact, so you'll see references to classroom instruction. Ignore these!\r\n\r\n##### By the way - you can look at your students' answers in real-time during your lesson by using our <a href=\"https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels#:~:text=From%20the%20dropdown%20menu%20in,the%20top%20of%20the%20instructions.\" Target=\"blank\" rel=\"noopener noreferrrer\">\"View Student Responses\" feature</a>.\r\n\r\n___\r\n\r\n#### Predict\r\n\r\nThis program has some new blocks! Before we run our code, let's write down some thoughts on what we think might happen.\r\n\r\n1) Write down anything you **notice** about the code. _It's okay to write things that feel obvious, like \"the new block is a different color\"_\r\n2) Make a **prediction** - what do you think will happen when you press Run? _This is just a guess - it's okay to be unsure!_\r\n\r\nOnce you've answered the questions, Press \"Run\" and listen. Then wait for next steps from your teacher.\r\n\r\n\r\n\r\n",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+        "carly_rae_jepsen_call_me_maybe": [
+          "hey_i_just_met_you",
+          "chorus_instruments",
+          "strings_big",
+          "strings_small",
+          "muted_guitar",
+          "bass",
+          "drums_full",
+          "drums_intro",
+          "drums_prechorus",
+          "drums_steady",
+          "sweep",
+          "strings_flourish",
+          "strings_slowdown"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+        },
+        "type": "flyout"
+      },
+      "packId": "carly_rae_jepsen_call_me_maybe",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "play_sound_at_current_location_simple2",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "carly_rae_jepsen_call_me_maybe/hey_i_just_met_you"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "g?.Wt;h[;suX(UtaXH37",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "carly_rae_jepsen_call_me_maybe/strings_big"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sound_at_current_location_simple2",
+                      "id": "cC?h+(+L.;u#)]9H0OJ(",
+                      "deletable": false,
+                      "movable": false,
+                      "editable": false,
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "fields": {
+                        "sound": "carly_rae_jepsen_call_me_maybe/bass"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "Answer (1) and (2) in here!",
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-explore-predict_c9c657d3-7cdf-4462-b2f1-862a3a0bd75f",
+        "message": "Continue to the next level to keep experimenting with this song!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_different_sounds",
+            "value": 3
+          }
+        ],
+        "callout": ""
+      },
+      {
+        "key": "test-music-lab-sequences-explore-predict_d7ca51ab-1fc5-4974-bd5a-7f84c07b99d6",
+        "message": "Look at the timeline! Did it match your prediction?",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-14T21:42:46.501+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-predict\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-predict\"},{\"changed_at\":\"2025-04-16 21:26:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-04-16 21:27:12 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-04-16 21:28:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-04-16 21:28:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-04-16 21:29:00 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-04-16 21:32:44 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-04-17 21:17:51 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

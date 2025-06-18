@@ -128,6 +128,21 @@ header.build = function (
     // Only render sign in callout if the course is CSF and the user is
     // not signed in
     if (scriptData.show_sign_in_callout && signedIn === false) {
+      // Additionally, update those urls to return user to level after
+      const currentUrl = window.location.pathname;
+      const buttons = [
+        document.querySelector('#signin_button'),
+        document.querySelector('#create_account_button'),
+      ];
+
+      buttons.forEach(button => {
+        if (button) {
+          const url = new URL(button.href);
+          url.searchParams.set('user_return_to', currentUrl);
+          button.href = url.toString();
+        }
+      });
+
       ReactDOM.render(
         <SignInCalloutWrapper />,
         document.querySelector('.signin_callout_wrapper')
@@ -179,37 +194,6 @@ header.buildUserMenu = function () {
       });
   });
 };
-
-function setupReduxSubscribers(store) {
-  let state = {};
-  store.subscribe(() => {
-    let lastState = state;
-    state = store.getState();
-
-    // Update the project state when a PublishDialog state transition indicates
-    // that a project has just been published.
-    if (
-      lastState.publishDialog &&
-      lastState.publishDialog.lastPublishedAt !==
-        state.publishDialog.lastPublishedAt
-    ) {
-      window.dashboard.project.setPublishedAt(
-        state.publishDialog.lastPublishedAt
-      );
-    }
-
-    // Update the project state when a ShareDialog state transition indicates
-    // that a project has just been unpublished.
-    if (
-      lastState.shareDialog &&
-      !lastState.shareDialog.didUnpublish &&
-      state.shareDialog.didUnpublish
-    ) {
-      window.dashboard.project.setPublishedAt(null);
-    }
-  });
-}
-setupReduxSubscribers(getStore());
 
 function setUpGlobalData(store) {
   fetch('/api/v1/users/current', {

@@ -1,0 +1,9 @@
+name 'data-science-ch1-lesson9-level2-choice_2025'
+display_name 'Data Visualizations'
+description 'Create data visualizations based on Micah\'s room. Choose a dataset below:'
+
+sublevels
+level 'data-science-ch1-lesson9-level2a_2025-launch'
+level 'data-science-ch1-lesson9-level2b_2025-launch'
+level 'data-science-ch1-lesson9-level2c_2025-launch'
+level 'data-science-ch1-lesson9-level2d_2025-launch'

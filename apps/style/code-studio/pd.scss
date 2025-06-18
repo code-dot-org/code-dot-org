@@ -1,4 +1,5 @@
-@import 'color', 'font';
+@import 'color';
+@import '@code-dot-org/component-library-styles/font';
 @import "bootstrap-sass/assets/stylesheets/bootstrap/mixins/buttons";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/variables";
 @import "mixins";
@@ -27,10 +28,9 @@
 // doesn't conflict with the footer and header that are still using
 // Bootstrap 2.2.3
 // TODO: Remove this once Dashboard is upgraded to Bootstrap 3
-#workshop-container,
+#workshop-container .legacy-bs,
 #application-container,
-#application-header,
-#enroll-form {
+#application-header {
   @import "bootstrap-sass/assets/stylesheets/bootstrap"; /* stylelint-disable-line no-invalid-position-at-import-rule */
   @include buttons;
   @include user-selects(auto);
@@ -93,6 +93,19 @@
   form.form-inline {
     display: inline-block;
     padding: 0 2px;
+  }
+
+  .newWorkshopButton.btn.btn-primary {
+    background-color: $brand_secondary_default;
+    + ul {
+      i {
+        margin-right: 1rem;
+        width: 0.5rem;
+      }
+      a {
+        background-image: none;
+      }
+    }
   }
 
   /* stylelint-disable max-line-length */

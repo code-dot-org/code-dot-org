@@ -7,7 +7,6 @@ type PartialApplicationFunctionType<T extends StringRecordType, U> = (
 ) => U;
 
 // if you wanna get really fancy, you can use this utility to ensure that your partial args match the function.
-// eslint-disable-next-line
 export type PAFunctionArgs<
   F extends PartialApplicationFunctionType<any, ReturnType<F>> // eslint-disable-line
 > = Partial<Parameters<F>[0]>;
