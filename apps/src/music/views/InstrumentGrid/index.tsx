@@ -185,11 +185,13 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
       displayNotes.findIndex(displayNote => displayNote.note === note)
     );
 
-    const pitchRowClass = displayNotes.find(
-      displayNote => displayNote.note === note
-    )
+    const showing = displayNotes.find(displayNote => displayNote.note === note);
+
+    const pitchRowClass = showing
       ? styles.pitchRowShowing
       : styles.pitchRowHidden;
+
+    const tabIndex = showing ? 0 : -1;
 
     return {
       pitchRowClass,
@@ -198,6 +200,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
       textColor,
       keyColor,
       selectedColor,
+      tabIndex,
     };
   };
 
@@ -284,6 +287,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
             textColor,
             keyColor,
             selectedColor,
+            tabIndex,
           } = getRowInfo(name, note);
 
           return (
@@ -300,6 +304,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
                     currentValue.instrument
                   )
                 }
+                tabIndex={tabIndex}
               >
                 <div
                   className={classNames(style, styles.innerCell)}
@@ -317,6 +322,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
                       className={styles[`cell-outer-${interfaceMode}`]}
                       key={tick}
                       onClick={() => onClickCell(note, tick)}
+                      tabIndex={tabIndex}
                     >
                       <div
                         className={classNames(
