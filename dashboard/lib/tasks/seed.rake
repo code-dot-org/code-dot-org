@@ -358,8 +358,8 @@ namespace :seed do
        infinity
        mc
        minecraft
+       original-allthelessonplans-course
        original-alltheselfpacedplthings-course
-       original-curriculum-things-course
        playlab
        starwars
        starwarsblocks

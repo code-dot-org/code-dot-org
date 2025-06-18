@@ -1,5 +1,5 @@
 {
-  "name": "original-curriculum-things-course",
+  "name": "original-allthelessonplans-course",
   "script_names": [
     "allthelessonplans"
   ],
@@ -11,7 +11,7 @@
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
-    "family_name": "original-curriculum-things-course",
+    "family_name": "original-allthelessonplans-course",
     "has_numbered_units": true,
     "version_year": "unversioned"
   },
