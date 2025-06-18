@@ -310,6 +310,10 @@ class User < ApplicationRecord
 
   has_one :latest_parental_permission_request, -> {order(updated_at: :desc)}, class_name: 'ParentalPermissionRequest'
 
+  has_one :data_retention_status, class_name: 'DataRetention::Status'
+  delegate :pii_scrubbed_at, to: :data_retention_status, allow_nil: true
+  delegate :anonymized_at, to: :data_retention_status, allow_nil: true
+
   ## Validation Macros
   validate :complete_school_info, if: :school_info_id_changed?, unless: proc {|u| u.purged_at.present?}
 
