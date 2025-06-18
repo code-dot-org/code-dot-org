@@ -1,11 +1,12 @@
 name 'music-lab-612-pre-q2'
 
-question 'put actual question here'
+question '**Which code will make the Small Chorus vocals volume low and the Big Chorus vocals volume on full?**'
 
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
-right 'correct'
+right 'https://images.code.org/0b030dec3ff9ce868e02e48ad73755ca-image-1750186681868.png'
+wrong 'https://images.code.org/5faf26c2c30c3f27c64384629e191cd4-image-1750186685623.png'
+wrong 'https://images.code.org/59405246972d88c4623cc10c5c7f4b4b-image-1750186692182.png'
+wrong 'https://images.code.org/1ebddce2bf3503111134647f01b3cadc-image-1750186697864.png'
+
 
 allow_multiple_attempts true
 
@@ -25,5 +26,9 @@ Posttest Modality: Given algorithm / intent / incorrect code, match with code
 MARKDOWN
 
 markdown <<MARKDOWN
-Put the images / context markdown here
+Luca is working on the chorus vocals of a new song. He wants it to sound like the vocals are building up by getting louder, so he adjusts the volume in his code to make it happen. 
+
+<img src="https://images.code.org/fec4744e9189ed64160b0ab6f007e9b6-image-1750181083739.png" width="100">
+
+<img src="https://images.code.org/5ec2346d268fb547ba4ba3336812a295-image-1750186788227.png" width="150">
 MARKDOWN

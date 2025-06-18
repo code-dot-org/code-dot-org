@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2025-02-05T18:31:49.000Z",
   "level_num": "custom",
@@ -25,9 +24,8 @@
               "type": "when_run_simple2",
               "id": "when-run-block",
               "x": 30,
-              "y": 30,
-              "deletable": false,
-              "movable": false
+              "y": 350,
+              "deletable": false
             }
           ]
         }
@@ -37,7 +35,8 @@
     "long_instructions": "Simple2 - Curriculum Library",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-05T18:31:49.625+00:00\",\"changed\":[\"cloned from \\\"music-lab-simple-testlibrary1\\\"\"],\"cloned_from\":\"music-lab-simple-testlibrary1\"},{\"changed_at\":\"2025-02-05 18:32:02 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-02-05T18:31:49.625+00:00\",\"changed\":[\"cloned from \\\"music-lab-simple-testlibrary1\\\"\"],\"cloned_from\":\"music-lab-simple-testlibrary1\"},{\"changed_at\":\"2025-02-05 18:32:02 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-17 17:00:35 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

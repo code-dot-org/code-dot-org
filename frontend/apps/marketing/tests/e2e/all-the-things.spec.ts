@@ -33,11 +33,20 @@ test.describe('All the things UI e2e test', () => {
   test.describe('locale-less redirect', () => {
     test('should redirect from localeless paths to english localized paths when no language cookie is set', async ({
       page,
+      context,
     }) => {
       const allTheThingsPage = new MarketingPage(page);
       await allTheThingsPage.goto('/engineering/all-the-things');
 
       await page.waitForURL('**/en-US/engineering/all-the-things');
+
+      // Should set the language cookie to en-US
+      expect(await context.cookies()).toContainEqual(
+        expect.objectContaining({
+          name: 'language_',
+          value: 'en-US',
+        }),
+      );
     });
 
     // Re-enable when locales other than English are supported
