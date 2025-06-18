@@ -31,14 +31,18 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
 > = ({responses, levelData, totalNumberOfStudents}) => {
   const [evaluationsPending, setEvaluationsPending] = useState<boolean>(false);
   const [evaluations, setEvaluations] = useState<StudentWorkEvaluation[]>([]);
-  const [evaluationCount, setEvaluationCount] = useState<number>(0);
+  // const [evaluationCount, setEvaluationCount] = useState<number>(0);
   const [showDetailedAnalysis, setShowDetailedAnalysis] =
     useState<boolean>(false);
-  const evaluationComplete =
-    evaluationCount > 0 && responses.length === evaluationCount;
+  const [evaluationComplete, setEvaluationComplete] = useState<boolean>(false);
+  // const evaluationComplete =
+  //   evaluationCount > 0 && responses.length === evaluationCount;
   const [loadingExistingEvaluations, setLoadingExistingEvaluations] =
     useState<boolean>(true);
 
+  // if there are responses
+  // load existing evaluations for those responses
+  // for responses that have blank answers, remove them from the exising evaluations
   useEffect(() => {
     if (responses.length > 0) {
       const addStudentNameAndResponseToEvaluations = (
@@ -84,7 +88,11 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
             aiReasoning: reasoning,
           }));
 
-        console.log('All existing evaluations:', allExistingEvaluations);
+        // console.log('All existing evaluations:', allExistingEvaluations);
+        // setEvaluationCount(allExistingEvaluations.length);
+        setEvaluationComplete(
+          allExistingEvaluations.length === responses.length
+        );
         return allExistingEvaluations;
       };
 
@@ -93,11 +101,11 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
         const evaluations = await loadExistingEvaluations();
         const completeEvaluations =
           addStudentNameAndResponseToEvaluations(evaluations);
-        setEvaluationCount(evaluations.length);
         setEvaluations(prevEvaluations => [
           ...prevEvaluations,
           ...completeEvaluations,
         ]);
+        // setEvaluationCount(evaluations.length + completeEvaluations.length);
         setLoadingExistingEvaluations(false);
       };
 
@@ -115,8 +123,7 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
       PLATFORMS.BOTH
     );
     setEvaluationsPending(true);
-    // Filter responses to only those without an existing evaluation for the studentId
-    // this is snake case on the evaluations.
+    // Filter responses to only those without an existing evaluation or where the prior evaluation is older than the response
     const responsesWithoutUpdatedAiEvaluation = responses.filter(response => {
       const evaluation = evaluations.find(
         evaluation => evaluation.studentId === response.studentId
@@ -134,6 +141,11 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
       return false;
     });
 
+    console.log(
+      'Responses without updated AI evaluation:',
+      responsesWithoutUpdatedAiEvaluation
+    );
+
     const responsePromises = responsesWithoutUpdatedAiEvaluation.map(
       async studentResponse => {
         return evaluateStudentResponse(studentResponse);
@@ -141,6 +153,9 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
     );
 
     await Promise.allSettled(responsePromises);
+
+    setEvaluationComplete(true);
+    setEvaluationsPending(false); // <-- move here, after all evaluations are done
   };
 
   const evaluateStudentResponse = async (studentAnswer: StudentAnswer) => {
@@ -158,8 +173,20 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
       unitId: levelData.unitId,
       id: aiResponse.id,
     };
-    setEvaluations(prevEvaluations => [...prevEvaluations, evaluation]);
-    setEvaluationCount(prevCount => prevCount + 1);
+    // if there is an existing evaluation for this student, replace it
+    const existingEvaluationIndex = evaluations.findIndex(
+      evaluation => evaluation.studentId === studentAnswer.studentId
+    );
+    if (existingEvaluationIndex !== -1) {
+      setEvaluations(prevEvaluations => {
+        const updatedEvaluations = [...prevEvaluations];
+        updatedEvaluations[existingEvaluationIndex] = evaluation;
+        return updatedEvaluations;
+      });
+    } else {
+      // Update the evaluations state with the new evaluation
+      setEvaluations(prevEvaluations => [...prevEvaluations, evaluation]);
+    }
   };
 
   const openDetailedAnalysisHandler = () => {
@@ -173,12 +200,6 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
     );
     setShowDetailedAnalysis(true);
   };
-
-  useEffect(() => {
-    if (evaluationComplete) {
-      setEvaluationsPending(false);
-    }
-  }, [evaluationComplete]);
 
   return (
     <div>
