@@ -1,6 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
+import {Provider} from 'react-redux';
 import {MemoryRouter, Route, Routes} from 'react-router-dom';
 
 import {
@@ -15,24 +16,44 @@ jest.mock('@cdo/apps/util/useFetch');
 
 const mockedUseFetch = useFetch;
 
+// mock redux store
+const initialState = {
+  mapbox: {mapboxAccessToken: 'test-token'},
+  regionalPartners: {regionalPartners: [{id: 1, name: 'Bill Smith'}]},
+};
+
 describe('WorkshopFormTemplate', () => {
   const testConfigs = WorkshopCourseConfigs.map(config => [
     config.label,
     config,
   ]);
   let user;
+  let store;
+  let mockGetState;
 
-  const renderDefault = (props = {}) =>
+  const renderDefault = (props = {}, path = '/') =>
     render(
-      <MemoryRouter initialEntries={['/']}>
-        <Routes>
-          <Route path="/" element={<WorkshopFormTemplate {...props} />} />
-        </Routes>
-      </MemoryRouter>
+      <Provider store={store}>
+        <MemoryRouter initialEntries={[path]}>
+          <Routes>
+            <Route path="/" element={<WorkshopFormTemplate {...props} />} />
+            <Route
+              path="/:workshopId"
+              element={<WorkshopFormTemplate {...props} />}
+            />
+          </Routes>
+        </MemoryRouter>
+      </Provider>
     );
 
   beforeEach(() => {
+    jest.resetAllMocks();
     user = userEvent.setup();
+    mockGetState = jest.fn().mockReturnValue(initialState);
+    store = {
+      getState: mockGetState,
+      subscribe: () => {},
+    };
     mockedUseFetch.mockReturnValue({data: null, loading: false, error: null});
   });
 
@@ -62,9 +83,12 @@ describe('WorkshopFormTemplate', () => {
       );
 
       Object.values(config.fields).forEach(field => {
-        expect(screen.getByText(field.label)).toBeInTheDocument();
-        if (field.helperMessage) {
-          expect(screen.getByText(field.helperMessage)).toBeInTheDocument();
+        // organizerId is not in form on create, only edit
+        if (field.stateKey !== 'organizerId') {
+          expect(screen.getByText(field.label)).toBeInTheDocument();
+          if (field.helperMessage) {
+            expect(screen.getByText(field.helperMessage)).toBeInTheDocument();
+          }
         }
       });
     }
@@ -75,7 +99,6 @@ describe('WorkshopFormTemplate', () => {
     async (_, config) => {
       renderDefault({
         config,
-        regionalPartnerData: [{id: 1, name: 'Regional Partner 1'}],
       });
 
       const input = screen.getByLabelText(
@@ -89,12 +112,17 @@ describe('WorkshopFormTemplate', () => {
   it.each(testConfigs)(
     'does not pre-fill regional partner if there is more than one option for %s',
     async (_, config) => {
+      mockGetState.mockReturnValue({
+        ...initialState,
+        regionalPartners: {
+          regionalPartners: [
+            {id: 1, name: 'Bill Smith'},
+            {id: 2, name: 'Jane Yates'},
+          ],
+        },
+      });
       renderDefault({
         config,
-        regionalPartnerData: [
-          {id: 1, name: 'Regional Partner 1'},
-          {id: 2, name: 'Regional Partner 2'},
-        ],
       });
 
       const input = screen.getByLabelText(
@@ -120,7 +148,10 @@ describe('WorkshopFormTemplate', () => {
       ).toBeInTheDocument();
 
       Object.values(config.fields).forEach(field => {
-        expect(screen.getByText(field.label)).toBeInTheDocument();
+        // organizerId is not in form on create, only edit
+        if (field.stateKey !== 'organizerId') {
+          expect(screen.getByText(field.label)).toBeInTheDocument();
+        }
         if (field.required) {
           if (field.helperMessage) {
             expect(
@@ -129,8 +160,13 @@ describe('WorkshopFormTemplate', () => {
           }
         }
       });
+
+      const expectedErrorLength = Object.values(config.fields).filter(
+        f => f.required
+      ).length;
+
       expect(screen.getAllByText(REQUIRED_ERROR)).toHaveLength(
-        Object.values(config.fields).filter(f => f.required).length
+        expectedErrorLength
       );
 
       // special case when user indicates the workshop has prerequisites
@@ -146,7 +182,7 @@ describe('WorkshopFormTemplate', () => {
       expect(screen.getAllByText(REQUIRED_ERROR)).toHaveLength(
         // prereq isn't required in the config. it only becomes required if the user
         // indicates it has prerequisites
-        Object.values(config.fields).filter(f => f.required).length + 1
+        expectedErrorLength + 1
       );
 
       await user.selectOptions(
@@ -159,7 +195,7 @@ describe('WorkshopFormTemplate', () => {
       await user.click(publishButton);
 
       expect(screen.getAllByText(REQUIRED_ERROR)).toHaveLength(
-        Object.values(config.fields).filter(f => f.required).length
+        expectedErrorLength
       );
 
       // special case when user clears session date input
@@ -169,7 +205,7 @@ describe('WorkshopFormTemplate', () => {
       await user.click(publishButton);
 
       expect(screen.getAllByText(REQUIRED_ERROR)).toHaveLength(
-        Object.values(config.fields).filter(f => f.required).length + 1
+        expectedErrorLength + 1
       );
 
       await user.type(dateInput, '2025-03-28');
@@ -177,7 +213,7 @@ describe('WorkshopFormTemplate', () => {
       await user.click(publishButton);
 
       expect(screen.getAllByText(REQUIRED_ERROR)).toHaveLength(
-        Object.values(config.fields).filter(f => f.required).length
+        expectedErrorLength
       );
     }
   );

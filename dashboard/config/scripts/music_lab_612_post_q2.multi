@@ -1,0 +1,28 @@
+name 'music-lab-612-post-q2'
+
+question 'this question is just in the DSL'
+
+wrong 'wrong'
+wrong 'wrong'
+wrong 'wrong'
+right 'use play together instead of play sequential'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Sequencing
+
+Standard: Modify the volume, delay, or filter settings for a song,
+
+Lesson: Sequencing - Synthesis
+
+Skill Progression: Use filter/delay/volume blocks strategically
+
+Pretest Modality: Given algorithm / intent / incorrect code, match with code
+
+Posttest Modality: Given algorithm / intent / incorrect code, match with code
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

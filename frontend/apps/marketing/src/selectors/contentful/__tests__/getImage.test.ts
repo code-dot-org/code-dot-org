@@ -42,7 +42,7 @@ describe('getAbsoluteImageUrl', () => {
       },
     } as ExperienceAsset;
     expect(getAbsoluteImageUrl(asset)).toBe(
-      'https://assets.code.org/images/example.jpg',
+      'https://assets.code.org/images/example.jpg?fm=avif',
     );
   });
 
@@ -53,5 +53,10 @@ describe('getAbsoluteImageUrl', () => {
       },
     } as ExperienceAsset;
     expect(getAbsoluteImageUrl(asset)).toBeUndefined();
+  });
+
+  it('should return the absolute URL if asset is a string', () => {
+    const asset = '//assets.code.org/images/example.jpg?test=true';
+    expect(getAbsoluteImageUrl(asset)).toBe('https:' + asset + '&fm=avif');
   });
 });

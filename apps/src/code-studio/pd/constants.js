@@ -24,3 +24,5 @@ export const PrivacyDialogMode = utils.makeEnum(
 
 export const DATE_ORDER_ASC = 'date asc';
 export const DATE_ORDER_DESC = 'date desc';
+
+export const DATA_SHARING_NOTICE = `Code.org works closely with local Regional Partners and Code.org facilitators to deliver the Professional Learning Program. By enrolling in this workshop, you are agreeing to allow Code.org to share your personal information on how you use Code.org and the Professional Learning resources with your Regional Partner, school district, and facilitators. We will share your contact information, which courses or units you are teaching and any aggregate data about your classes with these partners. This includes the number of students in your classes, the demographic breakdown of your classroom, and the name of your school and district. We will not share any personal information about individual students with our partners - all information will be de-identified and aggregated. Our Regional Partners and facilitators are contractually obligated to treat your information with the same level of privacy and confidentiality as Code.org.`;

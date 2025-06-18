@@ -1,0 +1,7 @@
+name 'problem-solving-with-ai-lesson12-level4_2025_launch'
+display_name 'Collaborate with AI'
+description 'Use AI Chat either as the co-pilot or pilot to help you share your voice on your topic.'
+
+sublevels
+level 'problem-solving-with-ai-lesson12-level4a_2025'
+level 'problem-solving-with-ai-lesson12-level4b_2025'

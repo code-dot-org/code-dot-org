@@ -61,7 +61,7 @@ describe('getExperience', () => {
 
     expect(fetchBySlug).toHaveBeenCalledWith({
       client: {},
-      slug: mockSlug,
+      slug: `/${mockSlug}`,
       experienceTypeId: process.env.CONTENTFUL_EXPERIENCE_CONTENT_TYPE_ID!,
       localeCode: mockLocaleCode,
     });
@@ -77,7 +77,7 @@ describe('getExperience', () => {
 
     expect(fetchBySlug).toHaveBeenCalledWith({
       client: {},
-      slug: mockSlug,
+      slug: `/${mockSlug}`,
       experienceTypeId: process.env.CONTENTFUL_EXPERIENCE_CONTENT_TYPE_ID!,
       localeCode: mockLocaleCode,
     });

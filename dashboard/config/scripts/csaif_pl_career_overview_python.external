@@ -49,7 +49,7 @@ markdown <<MARKDOWN
 
 ---
 
-#### In the **Programming Fundamentals** unit, students begin by exploring how their skills and interests align with computing careers and the evolving tech landscape. This early connection helps them see the real-world impact of coding and problem-solving.
+#### In the **Foundations of AI Programming** unit, students begin by exploring how their skills and interests align with computing careers and the evolving tech landscape. This early connection helps them see the real-world impact of coding and problem-solving.
 
 
 <div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
@@ -62,19 +62,21 @@ markdown <<MARKDOWN
         </ul>
     </div>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">📝 Share in the forum!
-</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
-    <p>
+<div style="display: flex; align-items: left; margin:20px 0px 30px 0px">
 
-####Participating in the <a href="https://forum.code.org/t/about-the-cs-ai-foundations-category/40251?u=plteam" target="_blank">Coumputer Science and AI PL Community</a> is optional and not necessary to earn a certificate for this module. However, we encourage you to engage with the broader Computer Science learner community. <br><br>Please share your response to this reflection <i><b>'How can you make career connections meaningful in your class'</b></i> in the forum and take the time to read and respond to other educators' posts.
+<a href="https://forum.code.org/t/student-logins-reflection/40539" target="_blank" rel="noopener noreferrer">
+<img src="https://images.code.org/7dbe63a051fbad4ef262d6ab710e2966-image-1731959037460.png" style="width: auto; height: 100px;"  alt="A browser with two text boxes, both including an avatar and lines of text."></a>
 
-### <a href="https://forum.code.org/t/reflecting-on-your-experience-with-codap/40257?u=plteam" target="_blank">Direct Link to this Forum Topic</a>
+<div style="background-color: #007786; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;">
+
+<p style="color: white; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Post to the Code.org Forum</b></p>
+
+<p style="color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px">Share your response and read other educators' ideas on the forum! Click on the icon to the left to direct to our forum post.
+</p>
 
 
-</p></div>
-</details>
+</div>
+
 
 
 

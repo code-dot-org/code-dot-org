@@ -1,0 +1,75 @@
+name 'ML-next-steps_1_1_2025'
+skip_dialog true
+markdown <<MARKDOWN
+<br>
+<br>
+
+<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+    
+<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
+<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
+
+<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
+You have completed the Coding with Music Module!
+    </p>
+</div>
+
+#Plan and Prepare
+
+
+### You’ve done so much great work to get to know the Coding with Music curriculum. Now that you’re a pro, let’s think about how to prepare this lesson for your students.
+
+
+
+
+<!-- Unified container for the grid of cards -->
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; width: 90%; margin: 20px auto;">
+    <!-- Card 1 -->
+    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; 
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+                
+                <img src="https://images.code.org/03707b4dbece73d7970dfefd10fc43cd-image-1736454374683.png" alt="Three people bunched together under a heart" style="width: 40px; height: 40px; margin-bottom: 10px;">
+    <p style="font-size: 14pt; font-weight: bold; margin: 0;">Review Lesson Plans</p>
+    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;"> <p style="font-size: 16pt; font-weight: bold;"></p>
+      <ul style="text-align: left; font-size: 14pt;">
+        <li><strong>Lesson 1:</strong> <a href="https://studio.code.org/s/coding-with-music/lessons/1" target="_blank">Songwriter's Toolbox</a></li>
+        <li><strong>Lesson 2:</strong> <a href="https://studio.code.org/s/coding-with-music/lessons/2" target="_blank">Producer Power</a></li>
+           <li><strong>Lesson 3:</strong> <a href="https://studio.code.org/s/coding-with-music/lessons/3" target="_blank">Sound Designer's Studio</a></li>
+      </ul> </p>
+ 
+    </div>
+    <!-- Card 2 -->
+    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; 
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+    <img src="https://images.code.org/985e8511f3ff59863698c4eca63e7e29-image-1736454372720.png" alt="Four puzzle pieces fitting together" style="width: 40px; height: 40px; margin-bottom: 10px;">
+    <p style="font-size: 14pt; font-weight: bold; margin: 0;">Prepare to Teach</p>
+    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;"><ul style="text-align: left; font-size: 14pt;">
+        <li>Make a copy of the module <a href="https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/edit?slide=id.g310cce97867_0_0#slide=id.g310cce97867_0_0" target="_blank">slide deck</a></li> 
+        <li><strong>Note:</strong> There are detailed notes in the slides under the "speaker notes" section.</li>
+      </ul></p>
+    </div>
+    <!-- Card 3 -->
+    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; 
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+ <img src="https://images.code.org/0343fe4337e6e3cf9590b7a2120c53ac-image-1746805231912.39.59_AM-removebg-preview.png"  
+         alt="rubber ruck icon" style="width: 50px; height: 50px; margin-bottom: 10px;">
+    <p style="font-size: 14pt; font-weight: bold; margin: 0;">Print Addtional Resources</p>
+    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;"> <ul style="text-align: left; font-size: 14pt;">
+        <li><a href="https://drive.google.com/file/d/1M_jampRMM1ix6RdH6AWMXVrSa5pbCKdO/view?usp=drive_link" target="_blank">Quick Reference Sheets</a> for each lesson </li>
+        <li><a href="https://drive.google.com/file/d/1DXDs9KIHtOdunuQS9gY1AyP4RXOJznOn/view?usp=drive_link" target="_blank">Debugging Duck</a> for students to design and use as they code</li>
+   
+      </ul></p>
+    </div>
+    <!-- Card 4 -->
+    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; 
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+         <img src="https://images.code.org/56ec5f8bdeccf4e9a0ffb986ce283449-image-1736454514965.png" alt="An illuminated light bulb with a yellow brain in place of the glass." style="width: 40px; height: 40px; margin-bottom: 10px;">  <p style="font-size: 14pt; font-weight: bold; margin: 0;">Connect with Other Teachers</p>
+    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;"> <ul style="text-align: left; font-size: 14pt;">
+        <li>Engage with other teachers <a href=" https://sites.google.com/code.org/pilot-intro-to-prog-music-lab/community?authuser=0" target="_blank">here</a></li>
+        <li> Give tips,ask questions,and share successes with other teachers.</li>
+      </ul></p>
+    </div>
+
+</div>
+
+MARKDOWN

@@ -16,7 +16,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-02 03:54:40 UTC",
+    "serialized_at": "2025-06-13 18:40:32 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4829,6 +4830,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-video_csf_d"
+        ],
         "progression": "Intro Video"
       },
       "bonus": false,
@@ -4851,6 +4855,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-play-sound_launch_csf_d"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4873,6 +4880,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-play-two_launch_csf_d"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4895,6 +4905,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-together1_launch_csf_d"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4917,6 +4930,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-ingro-loop1_launch_csf_d"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4939,6 +4955,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-5sounds_launch_csf_d"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4961,6 +4980,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-timing-video_csf_d"
+        ],
         "progression": "Music Integration Video"
       },
       "bonus": false,
@@ -4983,6 +5005,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-loop-beat_launch_csf_d"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5005,6 +5030,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-layer_launch_csf_d"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5027,6 +5055,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-seq-match_launch_csf_d"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5049,6 +5080,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-songwriter-videos_csf_d"
+        ],
         "progression": "Career Exploration"
       },
       "bonus": false,
@@ -5071,6 +5105,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-inspiration_csf_d"
+        ],
         "progression": "Inspire & Try"
       },
       "bonus": false,
@@ -5093,6 +5130,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-make_launch_csf_d"
+        ],
         "progression": "Inspire & Try"
       },
       "bonus": false,
@@ -5115,6 +5155,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-events-video_csf_d"
+        ],
         "progression": "Intro Video"
       },
       "bonus": false,
@@ -5137,6 +5180,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-event-try_launch_csf_d"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5158,6 +5204,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-event-sound_launch_csf_d"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5180,6 +5229,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-2events-sound_launch_csf_d"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5202,6 +5254,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-video-hold3_launch_csf_d"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5224,6 +5279,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-event-functions_launch_csf_d"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5246,6 +5304,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-event-function_launch_csf_d"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5268,6 +5329,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-events-cfu_csf_d"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5290,6 +5354,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-effects-panel_launch_csf_d"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5312,6 +5379,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-effects_launch_csf_d"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5334,6 +5404,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-review_csf_d"
+        ],
         "progression": "Freeplay"
       },
       "bonus": false,
@@ -5356,6 +5429,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-freeplay3_launch_csf_d"
+        ],
         "progression": "Freeplay"
       },
       "bonus": false,
@@ -11460,16 +11536,15 @@
       }
     },
     {
-      "name": "CSF Change Log 2024-25",
-      "url": "https://docs.google.com/document/d/1Xbo3W7uLcrOtl3qPWcuAaJuBu4cFa1ukldDAwJBLFAE/template/preview",
-      "key": "csf_change_log_2024-25",
+      "name": "CSF Change Log 2025-26",
+      "url": "https://docs.google.com/document/d/1WGwamsReVGP7vUPISG9ivX3RHNBjlHa5GmU28abHNHo/edit?usp=sharing",
+      "key": "csf_change_log_2025-26",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/document/d/1Xbo3W7uLcrOtl3qPWcuAaJuBu4cFa1ukldDAwJBLFAE/template/export",
         "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "csf_change_log_2024-25"
+        "resource.key": "csf_change_log_2025-26"
       }
     },
     {
@@ -12343,7 +12418,7 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csf_change_log_2024-25",
+        "resource.key": "csf_change_log_2025-26",
         "script.name": "coursed-2025"
       }
     },
@@ -12587,6 +12662,16 @@
       }
     },
     {
+      "key": "measure",
+      "word": "Measure",
+      "definition": "Used to divide and organize music.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "measure"
+      }
+    },
+    {
       "key": "monitor",
       "word": "Monitor",
       "definition": "The screen that displays pictures and text for a computer",
@@ -12665,6 +12750,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "key": "rest",
+      "word": "Rest",
+      "definition": "A silent space in music  where no sound is played.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "rest"
       }
     },
     {
@@ -13086,7 +13181,19 @@
     {
       "seeding_key": {
         "lesson.key": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
+        "vocabulary.key": "measure"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
         "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
+        "vocabulary.key": "rest"
       }
     },
     {
@@ -13189,7 +13296,7 @@
     {
       "key": "30895fb6-eac1-4a17-8560-cd0177e34b79",
       "properties": {
-        "description": "**Find patterns**- Use loops to repeat parts of your code."
+        "description": "Use loops to repeat parts of code"
       },
       "seeding_key": {
         "lesson.key": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
@@ -13379,7 +13486,7 @@
     {
       "key": "b33d55ce-5e44-4447-a162-12069fcf0c67",
       "properties": {
-        "description": "**Order matters** - Write steps in a clear order to make your program do what you want."
+        "description": "Write a sequence of steps in a program in the correct order"
       },
       "seeding_key": {
         "lesson.key": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
@@ -13459,7 +13566,7 @@
     {
       "key": "d23a85c6-1e1e-421f-a88b-28f56892ad54",
       "properties": {
-        "description": "**Break it down** - Learn how to solve big problems by breaking them into smaller, easier steps."
+        "description": "Decompose problems by breaking them down into smaller steps"
       },
       "seeding_key": {
         "lesson.key": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",

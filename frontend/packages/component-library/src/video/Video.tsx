@@ -156,7 +156,9 @@ const Video: React.FC<VideoProps> = ({
     }
   };
   return (
-    <figure className={moduleStyles.videoComponentContainer}>
+    <figure
+      className={classNames(moduleStyles.videoComponentContainer, className)}
+    >
       <div className={moduleStyles.videoWrapper}>{getVideoPlayer()}</div>
       <div className={moduleStyles.footer}>
         {showCaption && <Figcaption>{videoTitle}</Figcaption>}
@@ -172,6 +174,8 @@ const Video: React.FC<VideoProps> = ({
             size="xs"
             text={downloadLabel || 'Download'}
             type="secondary"
+            target="_blank"
+            rel="noopener noreferrer"
           />
         )}
       </div>

@@ -1,14 +1,14 @@
 name 'student-end-of-unit-survey-q11_-problemsolving_2025'
 
-question 'People like me do computer science.'
+question 'I can really be myself in this computer science class.'
 
-right 'Strongly agree'
-right 'Agree'
-right 'Slightly agree'
-right 'Neither'
-right 'Slightly disagree'
-right 'Disagree'
 right 'Strongly disagree'
+right 'Disagree'
+right 'Slightly disagree'
+right 'Neither'
+right 'Slightly agree'
+right 'Agree'
+right 'Strongly agree'
 
 allow_multiple_attempts true
 

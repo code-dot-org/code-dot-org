@@ -2,9 +2,18 @@ import * as GoogleBlockly from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {InstrumentEventValue} from '../player/interfaces/InstrumentEvent';
-import {getNoteName} from '../utils/Notes';
-import {generateGraphDataFromTune, TuneGraphEvent} from '../utils/Tunes';
+import MusicRegistry from '../MusicRegistry';
+import {
+  InstrumentEventValue,
+  InstrumentTickEvent,
+} from '../player/interfaces/InstrumentEvent';
+import {getNoteName, convertRelativeToAbsolutePitch} from '../utils/Notes';
+import {
+  generateGraphDataFromTune,
+  getNoteColorInfo,
+  TuneGraphEvent,
+  getDisplayNotes,
+} from '../utils/Tunes';
 import InstrumentGrid from '../views/InstrumentGrid';
 
 const color = require('@cdo/apps/util/color');
@@ -39,7 +48,6 @@ export default class FieldTune extends GoogleBlockly.Field {
     this.options = options;
     this.newDiv = null;
     this.SERIALIZABLE = true;
-    this.CURSOR = 'default';
     this.backgroundElement = null;
   }
 
@@ -100,7 +108,7 @@ export default class FieldTune extends GoogleBlockly.Field {
     GoogleBlockly.utils.dom.createSvgElement(
       'rect',
       {
-        fill: color.neutral_dark90,
+        fill: color.neutral_dark,
         x: 1,
         y: 1,
         width: FIELD_WIDTH,
@@ -110,8 +118,34 @@ export default class FieldTune extends GoogleBlockly.Field {
       this.backgroundElement
     );
 
+    const {events, scaleMode, relative} = this.getValue();
+    const key = MusicRegistry.player.getKey();
+
+    const mapFn = relative
+      ? (event: InstrumentTickEvent) => ({
+          ...event,
+          note: convertRelativeToAbsolutePitch(key, event.note),
+        })
+      : (event: InstrumentTickEvent) => event;
+
+    const displayNotes = getDisplayNotes(
+      'notes',
+      scaleMode,
+      this.getValue().instrument,
+      key
+    );
+
+    const notes = events
+      .map(mapFn)
+      .filter(
+        (event: InstrumentTickEvent) =>
+          displayNotes.findIndex(
+            displayNote => displayNote.note === event.note
+          ) !== -1
+      );
+
     const graphNotes: TuneGraphEvent[] = generateGraphDataFromTune({
-      value: this.getValue(),
+      notes,
       width: FIELD_WIDTH,
       height: FIELD_HEIGHT,
       numOctaves: 3,
@@ -121,15 +155,21 @@ export default class FieldTune extends GoogleBlockly.Field {
     });
 
     graphNotes.forEach(graphNote => {
+      const {selectedColor} = getNoteColorInfo(
+        scaleMode,
+        displayNotes.findIndex(
+          displayNote => displayNote.note === graphNote.note
+        )
+      );
+
       GoogleBlockly.utils.dom.createSvgElement(
         'rect',
         {
-          fill: '#68d1f7',
+          fill: selectedColor,
           x: graphNote.x,
           y: graphNote.y,
           width: graphNote.width,
           height: graphNote.height,
-          rx: 1,
         },
         this.backgroundElement
       );

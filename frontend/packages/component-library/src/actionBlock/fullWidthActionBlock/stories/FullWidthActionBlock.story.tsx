@@ -2,6 +2,8 @@ import image from '@public/images/action-block-01.png';
 import type {Meta, StoryObj} from '@storybook/react';
 import {within, expect} from '@storybook/test';
 
+import Video from '@/video';
+
 import FullWidthActionBlock, {ActionBlockProps} from '../index';
 
 export default {
@@ -144,6 +146,20 @@ export const WithoutSecondaryButton: Story = {
 
     // check that secondary button is not present
     await expect(secondaryButton).toBeNull();
+  },
+};
+
+export const WithVideo: Story = {
+  args: {
+    ...defaultArgs,
+    title: 'Watch Our Mission',
+    description: 'See how we’re making an impact.',
+    video: {
+      videoTitle: 'What Most Schools Don’t Teach',
+      youTubeId: 'nKIu9yen5nc',
+      isYouTubeCookieAllowed: true,
+    },
+    VideoComponent: Video,
   },
 };
 

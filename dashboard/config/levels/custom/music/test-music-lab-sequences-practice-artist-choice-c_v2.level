@@ -1,0 +1,122 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T02:56:47.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Sharkira's \"Amarillo\" \r\n\r\nRecreate this portion of the song using what you know about sequencing sounds and playing them together.\r\n\r\n**Prepare:**\r\n1) Listen to the song in the music player. \r\n2) Use the timeline image below as reference. \r\n\r\n**Try:**\r\n3) Build the song with your own code. \r\n\r\n![](https://images.code.org/88618fa2d5816802fccb1818ec8d396b-image-1741978636549.57.11 AM.png)",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+        "shakira_amarillo": [
+          "drums_chorus_main",
+          "bass_chorus_1",
+          "synth_chorus_1",
+          "guitar_chorus_1",
+          "vocals_chorus_1"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential"
+          ]
+        },
+        "type": "flyout"
+      },
+      "packId": "shakira_amarillo",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "shakira_amarillo/vocals_chorus_1"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_sequential",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      }
+    },
+    "display_name": "Create \"Amarillo\"",
+    "thumbnail_url": "https://images.code.org/6d46542f3c97701e1226a1210c9e52ed-shakira.png",
+    "encrypted_exemplar_sources": "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\nKiNZS0NQV1WXeQR6cYtdgPClXslZvdgL\n",
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-practice-artist-choice-c_ee2214c2-b209-4132-99c6-ad07c1c7c2ed",
+        "message": "",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 4
+          }
+        ]
+      }
+    ],
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "Great work ordering those sounds. That was a tricky one! ",
+      "validationFailureMessage": "Remember, you can use `play together` inside a `play sequential` block. ",
+      "playerTitle": "Shakira's Chorus"
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2",
+    "bubble_choice_description": "Use what you know about sequencing to create this portion of Shakira's \"Amarillo\".",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:47.923+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-artist-choice-c\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-artist-choice-c\"},{\"changed_at\":\"2025-06-12 15:25:54 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-12 15:30:04 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-12 15:30:08 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

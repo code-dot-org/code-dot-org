@@ -65,52 +65,51 @@ theme: responsive
         </tr>
       </table>
     </td>
-    <!-- "coming soon" system requirements, to be updated and made live from March through July.
+    <!-- "coming soon" system requirements, to be updated and made live from March through July. -->
     <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          Browser July '25
+          ব্রাউজার জুলাই '25
         </th>
         <tr>
-          <td>Chrome 103.x</td>
+          <td>ক্রোম 109</td>
         </tr>
         <tr>
-          <td>Safari 14.x</td>
+          <td>সাফারি 16.6</td>
         </tr>
         <tr>
-          <td>Mobile Safari 14.x</td>
+          <td>মোবাইল সাফারি 16</td>
         </tr>
         <tr>
-          <td>Edge 119.x</td>
+          <td>এজ 128</td>
         </tr>
         <tr>
-          <td>Firefox 98.x</td>
+          <td>ফায়ারফক্স 115</td>
         </tr>
       </table>
     </td>
     <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
       <table>
         <th>
-          Platform July '25
+          প্ল্যাটফর্ম জুলাই '25
         </th>
         <tr>
-          <td>macOS 10.15</td>
+          <td>ম্যাকোস 10.15</td>
         </tr>
         <tr>
-          <td>iOS 15.x</td>
+          <td>আইওএস 16.x</td>
         </tr>
         <tr>
-          <td>Windows 8</td>
+          <td>উইন্ডোজ 10</td>
         </tr>
         <tr>
-          <td>Android 8.x</td>
+          <td>অ্যান্ড্রয়েড 8</td>
         </tr>
         <tr>
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
     </td>
-    -->
   </tr>
 </table>
 
@@ -149,7 +148,6 @@ theme: responsive
 ### Can you play this video?
 
 আপনি Code.org এর অনলাইন কোর্স শুরু করার আগে, নিচের ভিডিওর জন্য প্লেব্যাক পরীক্ষা করুন যাতে আপনি যেতে ভাল কিনা তা নিশ্চিত করুন।
-
 
 <!--
 The following HTML is a copy of video_with_fallback.haml. once this file can be converted to

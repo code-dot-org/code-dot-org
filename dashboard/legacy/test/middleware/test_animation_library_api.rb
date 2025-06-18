@@ -29,7 +29,7 @@ class AnimationLibraryTest < Minitest::Test
     AWS::S3.s3 = nil
   end
 
-  # POST endpoints require both admin and levelbuilder privileges.
+  # POST endpoints require elevated privileges.
   def test_post_level_animations_forbidden_without_authorization
     post '/api/v1/animation-library/level_animations/test.png', 'DATA', 'CONTENT_TYPE' => 'image/png'
     assert last_response.forbidden?

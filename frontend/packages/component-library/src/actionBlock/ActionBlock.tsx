@@ -9,14 +9,33 @@ import {
   StrongText,
   BodyFourText,
 } from '@/typography';
+import Video, {VideoProps} from '@/video';
 
-import {ActionBlockProps} from './types';
+import {ActionBlockProps, ActionBlockWrapperProps} from './types';
 
 import moduleStyles from './actionBlock.module.scss';
 
 export const getImage = (image?: ImageProps) => {
   if (!image) return null;
   return <Image src={image.src} loading="lazy" alt="" />;
+};
+
+export const getVideo = (VideoComponent?: typeof Video, video?: VideoProps) => {
+  if (!video) return null;
+  if (!VideoComponent) {
+    return (
+      <div>
+        VideoComponent is not provided. Please provide VideoComponent in order
+        to render a video.
+      </div>
+    );
+  }
+
+  return (
+    <div className={moduleStyles.videoWrapper}>
+      <VideoComponent {...video} />
+    </div>
+  );
 };
 
 export const getDetail = (details?: {label: string; description: string}) => {
@@ -68,10 +87,11 @@ export const getTag = (tag: string) => {
   );
 };
 
-export const ActionBlockWrapper: React.FC<ActionBlockProps> = ({
+export const ActionBlockWrapper: React.FC<ActionBlockWrapperProps> = ({
   background = 'primary',
   className,
   children,
+  ...HTMLAttributes
 }) => {
   return (
     <div
@@ -80,6 +100,7 @@ export const ActionBlockWrapper: React.FC<ActionBlockProps> = ({
         moduleStyles[`actionBlock-background-${background}`],
         className,
       )}
+      {...HTMLAttributes}
     >
       {children}
     </div>
@@ -104,6 +125,8 @@ export const ActionBlock: React.FC<ActionBlockProps> = ({
   title,
   description,
   image,
+  video,
+  VideoComponent,
   overline,
   tag,
   details,
@@ -132,7 +155,7 @@ export const ActionBlock: React.FC<ActionBlockProps> = ({
         >
           {title}
         </Heading3>
-        {image && getImage(image)}
+        {video ? getVideo(VideoComponent, video) : image && getImage(image)}
         <BodyThreeText className={classNames(moduleStyles.description)}>
           {description}
         </BodyThreeText>

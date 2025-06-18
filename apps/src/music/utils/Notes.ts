@@ -45,10 +45,27 @@ export const getNoteOctave = (note: number): number =>
 export const getPitchName = (note: number): string =>
   getNoteName(note) + getNoteOctave(note);
 
-// Transpose the note by adding the note offset to the target note defined
-// by the target key.
-export const getTranposedNote = (targetKey: Key, noteOffset: number) =>
-  targetKey + ROOT_NOTE_START + noteOffset;
+// Get the appropriate offset from the root note for a given key, with
+// extra handling to pick the closest transposition.
+const getTranspositionOffsetForKey = (targetKey: Key) =>
+  targetKey > 6 ? targetKey - 12 : targetKey;
+
+// Convert a pitch from relative to absolute, by adding the note offset
+// to the target note defined by the target key.
+export const convertRelativeToAbsolutePitch = (
+  targetKey: Key,
+  noteOffset: number
+) => {
+  return getTranspositionOffsetForKey(targetKey) + ROOT_NOTE_START + noteOffset;
+};
+
+// Convert a pitch from absolute to relative.
+export const convertAbsoluteToRelativePitch = (
+  targetKey: Key,
+  note: number
+) => {
+  return note - ROOT_NOTE_START - getTranspositionOffsetForKey(targetKey);
+};
 
 /**
  * Returns diatonic notes in the given key and number of octaves.
@@ -61,7 +78,7 @@ export const getNotesInKey = (
   numOctaves: number
 ) => {
   // Find transposition offset
-  const offset = key > 6 ? key - 12 : key;
+  const offset = getTranspositionOffsetForKey(key);
   // Major scale intervals
   const intervals = [2, 2, 1, 2, 2, 2, 1];
 

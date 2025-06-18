@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-04-30T16:51:15.000Z",
   "level_num": "custom",
@@ -422,7 +423,7 @@
         "kind": "flyoutToolbox"
       }
     },
-    "long_instructions": "### <i class=\"fa-duotone fa-solid fa-masks-theater\"></i> Sound is also a feeling. \r\n**Buttons 1 & 2 create different feelings for levels in a game.**\r\n\r\n1. **Try it first.** Press Run then press 1 or 2 to trigger the sounds.\r\n- **Next, code the third event trigger.** What feeling will you set? \r\n\t- Celebrating winning the game?\r\n    - An intense new battle?\r\n    - A fun fast-paced level? \r\n",
+    "long_instructions": "### <i class=\"fa-duotone fa-solid fa-masks-theater\"></i> Sound is also a feeling\r\n**Buttons 1 and 2 trigger different moods in a game.**\r\n\r\n1. **Try it first.** Press Run, then press 1 or 2.\r\n- Then, code the third event to set a new feeling. [<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=flyout-id:play---id:Trigger3)\r\n\r\n>What will you create?\r\n>- A celebration for winning?\r\n>- The background to an intense final battle?\r\n>- Music for a fun fast-paced level? \r\n",
     "validations": [
       {
         "key": "music-coding-intro-event-function_launch_3fc14b1c-01e9-4af2-bfdc-4d7690260cec",
@@ -493,8 +494,7 @@
     },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-30T16:51:15.317+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-function_launch\\\"\"],\"cloned_from\":\"music-coding-intro-event-function_launch\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-30T16:51:15.317+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-function_launch\\\"\"],\"cloned_from\":\"music-coding-intro-event-function_launch\"},{\"changed_at\":\"2025-05-09 17:20:07 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-09 17:21:37 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

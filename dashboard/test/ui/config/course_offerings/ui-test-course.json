@@ -2,5 +2,5 @@
   "key": "ui-test-course",
   "display_name": "ui-test-course",
   "is_featured": false,
-  "assignable": false
+  "assignable": true
 }

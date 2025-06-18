@@ -129,7 +129,8 @@ export default class MusicBlocklyWorkspace {
     toolboxAllowList: ToolboxData | undefined,
     isRtl: boolean,
     blockMode: ValueOf<typeof BlockMode>,
-    toolboxDefinition?: GoogleBlockly.utils.toolbox.ToolboxInfo
+    toolboxDefinition?: GoogleBlockly.utils.toolbox.ToolboxInfo,
+    enableKeyboardNavigation?: boolean
   ) {
     const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
 
@@ -190,6 +191,7 @@ export default class MusicBlocklyWorkspace {
       analyticsData: {
         appType: EVENTS.BLOCKLY_APP_TYPE_MUSIC,
       },
+      enableKeyboardNavigation,
     } as GoogleBlockly.BlocklyOptions);
 
     this.resizeBlockly();
@@ -647,7 +649,7 @@ export default class MusicBlocklyWorkspace {
     (this.workspace as GoogleBlockly.WorkspaceSvg)
       .getAllBlocks()
       .forEach(block => {
-        block.id === blockId ? block.select() : block.unselect();
+        block.id === blockId ? block.addSelect() : block.removeSelect();
       });
   }
 

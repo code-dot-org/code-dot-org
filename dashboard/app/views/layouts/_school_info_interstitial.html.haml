@@ -15,6 +15,8 @@
 - if school_info
   - script_data[:existingSchoolInfo] = school_info
 - script_data[:usIp] = us_ip
+-# TODO: ACQ-3300 remove when school info has been updated for affected users
+- script_data[:affectedByMissingSchoolData] = affected_by_missing_school_data
 
 - content_for(:head) do
   %script{src: webpack_asset_path('js/layouts/_school_info_interstitial.js'), data: {schoolinfointerstitial: script_data.to_json}}

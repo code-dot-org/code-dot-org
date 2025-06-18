@@ -88,12 +88,27 @@ class Pd::Session < ApplicationRecord
     "#{formatted_date}, #{formatted_start}-#{formatted_end} #{tz_abbreviation}".strip
   end
 
+  def formatted_location_details
+    if in_person?
+      location_parts = [location_name, location_address].compact
+      location_parts.any? ? location_parts.join(', ') : "N/A"
+    else
+      meeting_link ? "Virtual meeting: #{meeting_link}" : "N/A"
+    end
+  end
+
   def session_info_for_calendar
     {
       id: id,
       start: start_time.utc.iso8601,
       end: end_time.utc.iso8601,
-      is_local: local?
+      is_local: local?,
+      location_name: location_name,
+      location_address: location_address,
+      meeting_link: meeting_link,
+      session_format: session_format,
+      description: workshop.description,
+      notes: workshop.notes,
     }
   end
 

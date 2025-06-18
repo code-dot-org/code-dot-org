@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-04-30T20:39:52.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "encrypted": "false",
     "background": "music-black",
     "instructions_important": "false",
-    "long_instructions": "###<i class=\"fa-duotone fa-solid fa-bullhorn\"></i> Step 3: Call a Function\r\nA function has already been named and defined!\r\n1. To call the [chorus](#clickable=flyout-first-block) function, add it under [when run](#clickable=when-run-block). \r\n- Press [Run](#clickable=run-button) to see how it works. \r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=flyout-first-block---when-run-block)\r\n\r\n---\r\n*Timeline example:*\r\n\r\n![](https://images.code.org/acf62850ce6df738f6177f9881aadb7e-image-1744666588604.png)",
+    "long_instructions": "###<i class=\"fa-duotone fa-solid fa-bullhorn\"></i> Step 3: Call a Function\r\nA function has already been named and defined!\r\n1. To call the [chorus](#clickable=flyout-first-block) function, add it under [when run](#clickable=when-run-block). \r\n- Press [Run](#clickable=run-button) to see how the chorus block works. \r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=flyout-first-block---when-run-block)\r\n\r\n---\r\n*Timeline example:*\r\n\r\n![](https://images.code.org/acf62850ce6df738f6177f9881aadb7e-image-1744666588604.png)",
     "hide_share_and_remix": "true",
     "level_data": {
       "library": "launch2024",
@@ -352,8 +353,7 @@
     },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-30T20:39:52.894+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-call_launch\\\"\"],\"cloned_from\":\"music-coding-intro-functions-call_launch\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-30T20:39:52.894+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-call_launch\\\"\"],\"cloned_from\":\"music-coding-intro-functions-call_launch\"},{\"changed_at\":\"2025-05-09 17:01:57 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

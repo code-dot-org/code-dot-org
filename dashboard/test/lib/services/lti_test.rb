@@ -704,6 +704,30 @@ class Services::LtiTest < ActiveSupport::TestCase
     assert lti_course.reload.sections.length, 2
   end
 
+  test 'should sync if user has multiple LTI identities with one that is the instructor' do
+    teacher = create :teacher
+    lti_user_id1 = create :lti_user_identity, lti_integration: @lti_integration, user: teacher, subject: 'student-0'
+    lti_user_id2 = create :lti_user_identity, lti_integration: @lti_integration, user: teacher, subject: 'user-id-1'
+    auth_id1 = @lti_integration.issuer + "|" + @lti_integration.client_id + "|" + lti_user_id1.subject
+    auth_id2 = @lti_integration.issuer + "|" + @lti_integration.client_id + "|" + lti_user_id2.subject
+    teacher.authentication_options << build(:lti_authentication_option, authentication_id: auth_id1, user: teacher)
+    teacher.authentication_options << build(:lti_authentication_option, authentication_id: auth_id2, user: teacher)
+    teacher.save
+    Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
+
+    lti_course = create :lti_course, lti_integration: @lti_integration
+    create :lti_section, lti_course: lti_course
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
+
+    Services::Lti.sync_course_roster(lti_integration: @lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
+    assert lti_course.reload.sections.length, 3
+
+    # Make changes and sync again
+    parsed_response.delete(@lms_section_ids.first.to_s)
+    Services::Lti.sync_course_roster(lti_integration: @lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
+    assert lti_course.reload.sections.length, 2
+  end
+
   test 'should add or remove sections when syncing a course' do
     teacher = create :teacher
     lti_integration = create :lti_integration
@@ -786,5 +810,15 @@ class Services::LtiTest < ActiveSupport::TestCase
     user_type = Services::Lti.lti_user_type(teacher, lti_integration, @nrps_full_response)
 
     assert_equal User::TYPE_STUDENT, user_type
+  end
+
+  test 'lti_user_type should return teacher if any LTI user role is instructor' do
+    teacher = create :teacher
+    lti_integration = create :lti_integration
+    create :lti_user_identity, lti_integration: lti_integration, user: teacher, subject: 'student-0'
+    create :lti_user_identity, lti_integration: lti_integration, user: teacher, subject: 'user-id-1'
+    user_type = Services::Lti.lti_user_type(teacher, lti_integration, @nrps_full_response)
+
+    assert_equal User::TYPE_TEACHER, user_type
   end
 end

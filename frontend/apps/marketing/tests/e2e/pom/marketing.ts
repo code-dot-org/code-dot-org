@@ -2,13 +2,20 @@ import {type Page} from '@playwright/test';
 
 import {loadFonts, FONT_FAMILY_NAMES} from '@code-dot-org/fonts';
 
+export interface MarketingPageOptions {
+  locale?: string;
+  isPreview?: boolean;
+}
+
 export class MarketingPage {
   readonly locale: string | undefined;
+  readonly isPreview: boolean;
   readonly page: Page;
 
-  constructor(page: Page, locale?: string) {
+  constructor(page: Page, options?: MarketingPageOptions) {
     this.page = page;
-    this.locale = locale;
+    this.locale = options?.locale;
+    this.isPreview = options?.isPreview ?? false;
   }
 
   async enableDraftMode(token: string, slug: string) {
@@ -18,24 +25,19 @@ export class MarketingPage {
   }
 
   getBaseDomain() {
-    const stage = process.env.STAGE;
+    const domain = process.env.APPLICATION_BASE_ADDRESS;
 
-    if (!stage) {
-      console.error('No stage specified!');
+    if (!domain) {
+      console.warn(
+        'No domain specified, defaulting to code.marketing-sites.localhost!',
+      );
 
-      throw new Error('Missing environment variable STAGE');
+      return this.isPreview
+        ? 'preview-code.marketing-sites.localhost:3001'
+        : 'code.marketing-sites.localhost:3001';
     }
 
-    switch (stage) {
-      default:
-      case 'localhost':
-      case 'pr':
-        return 'localhost';
-      case 'test':
-        return 'code.marketing-sites.dev-code.org';
-      case 'production':
-        return 'code.org';
-    }
+    return this.isPreview ? `preview-${domain}` : domain;
   }
 
   getBaseUrl() {
@@ -51,11 +53,18 @@ export class MarketingPage {
       default:
       case 'localhost':
       case 'pr':
-        return `http://${this.getBaseDomain()}:3001`;
+        return `http://${this.getBaseDomain()}`;
       case 'test':
       case 'production':
         return `https://${this.getBaseDomain()}`;
     }
+  }
+
+  getCookieDomain() {
+    const baseDomain = this.getBaseDomain();
+
+    // Remove the port number if it exists, e.g. "localhost:3001" becomes "localhost"
+    return baseDomain.replace(/:\d+$/, '');
   }
 
   getBasePath() {

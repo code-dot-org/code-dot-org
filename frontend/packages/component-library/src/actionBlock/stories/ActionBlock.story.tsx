@@ -4,6 +4,8 @@ import image3 from '@public/images/action-block-03.png';
 import type {Meta, StoryObj} from '@storybook/react';
 import {within, expect} from '@storybook/test';
 
+import Video from '@/video';
+
 import ActionBlock, {ActionBlockProps} from '../index';
 
 export default {
@@ -291,6 +293,33 @@ export const WithSecondaryBackground: Story = {
     // check if background color is white
     await expect(actionBlock).toHaveStyle(
       `background-color: ${expectedBackgroundColor};`,
+    );
+  },
+};
+
+export const WithVideo: Story = {
+  args: {
+    ...defaultArgs,
+    title: 'Watch Our Mission',
+    description: 'See how we’re making an impact.',
+    video: {
+      videoTitle: 'What Most Schools Don’t Teach',
+      youTubeId: 'nKIu9yen5nc',
+      isYouTubeCookieAllowed: true,
+    },
+    VideoComponent: Video,
+  },
+  render: args => {
+    return (
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, 1fr)',
+          gap: '1.5rem',
+        }}
+      >
+        <ActionBlock {...args} />
+      </div>
     );
   },
 };

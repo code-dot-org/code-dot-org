@@ -1884,6 +1884,14 @@ columns:
     default_function: 
     collation: 
     comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: facilitator_course_permissions
+    sql_type_metadata: *20
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
   course_offerings_pd_workshops:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: pd_workshop_id
@@ -6329,6 +6337,14 @@ columns:
     sql_type_metadata: *2
     'null': true
     default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: hide_within_course
+    sql_type_metadata: *13
+    'null': true
+    default: '0'
     default_function: 
     collation: 
     comment: 
@@ -14441,7 +14457,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20250509130059
+version: 20250530162508
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

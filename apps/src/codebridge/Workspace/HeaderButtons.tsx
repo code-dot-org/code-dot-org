@@ -26,6 +26,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   const {startSources, levelProperties, projectPickerSettings} =
     useCodebridgeContext();
   const {appName, enableMicroBit, skipUrl} = levelProperties;
+  const isWidgetView = levelProperties.widgetView;
 
   const dialogControl = useDialogControl();
   const source = useAppSelector(
@@ -35,16 +36,18 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
 
   const feedbackTooltipProps: TooltipProps = {
     text: commonI18n.feedback(),
-    direction: 'onLeft',
+    direction: 'onBottom',
     tooltipId: 'feedback-tooltip',
     size: 'xs',
+    hideTail: true,
   };
 
   const documentationTooltipProps: TooltipProps = {
     text: commonI18n.documentation(),
-    direction: 'onLeft',
+    direction: 'onBottom',
     tooltipId: 'documentation-tooltip',
     size: 'xs',
+    hideTail: true,
   };
 
   const documentationUrl = `${currentLocation().origin}/docs/ide/${appName}`;
@@ -55,9 +58,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
         type: DialogType.Skip,
         handleConfirm: () => {
           if (skipUrl) {
-            sendCodebridgeAnalyticsEvent(EVENTS.SKIP_TO_PROJECT, appName, {
-              levelPath: window.location.pathname,
-            });
+            sendCodebridgeAnalyticsEvent(EVENTS.SKIP_TO_PROJECT, appName);
             window.location.href = skipUrl;
           }
         },
@@ -106,7 +107,9 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           color={'black'}
         />
       )}
-      <VersionHistoryButton startSources={startSources} appName={appName} />
+      {!isWidgetView && (
+        <VersionHistoryButton startSources={startSources} appName={appName} />
+      )}
       {appName === 'pythonlab' && (
         <WithTooltip tooltipProps={feedbackTooltipProps}>
           <LinkButton
@@ -132,6 +135,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
             type={'tertiary'}
             target="_blank"
             color={'black'}
+            aria-label={commonI18n.documentation()}
           />
         </WithTooltip>
       )}

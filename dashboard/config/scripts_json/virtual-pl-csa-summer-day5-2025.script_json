@@ -6,12 +6,14 @@
     "properties": {
       "content_area": "pl_workshop_activities",
       "curriculum_umbrella": "PD Workshop Activity CSA",
+      "has_unnumbered_lessons": true,
       "is_migrated": true,
+      "tts": true,
       "version_year": "2025"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-07 02:34:31 UTC",
+    "serialized_at": "2025-05-09 19:06:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -588,6 +590,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day5-async1intro_2025"
+        ],
         "progression": "Asynchronous Part 1"
       },
       "bonus": false,
@@ -610,6 +615,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day5_async1planning_2025"
+        ],
         "progression": "Asynchronous Part 1"
       },
       "bonus": false,
@@ -632,6 +640,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day5_async1nextSteps_2025"
+        ],
         "progression": "Asynchronous Part 1"
       },
       "bonus": false,

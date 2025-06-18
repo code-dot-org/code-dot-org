@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_05_09_130059) do
+ActiveRecord::Schema.define(version: 2025_05_30_162508) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -501,6 +501,7 @@ ActiveRecord::Schema.define(version: 2025_05_09_130059) do
     t.datetime "published_date"
     t.integer "self_paced_pl_course_offering_id"
     t.boolean "ai_teaching_assistant_available", default: false, null: false
+    t.json "facilitator_course_permissions"
     t.index ["key"], name: "index_course_offerings_on_key", unique: true
   end
 
@@ -2025,6 +2026,7 @@ ActiveRecord::Schema.define(version: 2025_05_09_130059) do
     t.string "instructor_audience"
     t.string "participant_audience"
     t.integer "original_unit_group_id"
+    t.boolean "hide_within_course", default: false
     t.index ["family_name"], name: "index_scripts_on_family_name"
     t.index ["instruction_type"], name: "index_scripts_on_instruction_type"
     t.index ["instructor_audience"], name: "index_scripts_on_instructor_audience"

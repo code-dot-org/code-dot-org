@@ -6,13 +6,15 @@
     "properties": {
       "content_area": "pl_workshop_activities",
       "curriculum_umbrella": "PD Workshop Activity CSA",
+      "has_unnumbered_lessons": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2025"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-07 02:07:58 UTC",
+    "serialized_at": "2025-05-09 19:05:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -495,6 +497,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day3-async1intro_2025"
+        ],
         "progression": "Introduction to Asynchronous Part 1"
       },
       "bonus": false,
@@ -517,6 +522,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day3_async1jigsaw1_2025"
+        ],
         "progression": "Lesson Investigation Jigsaw"
       },
       "bonus": false,
@@ -539,6 +547,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day3_async1jigsaw2_2025"
+        ],
         "progression": "Lesson Investigation Jigsaw"
       },
       "bonus": false,
@@ -561,6 +572,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day3-async2intro_2025"
+        ],
         "progression": "Asynchronous Part 2"
       },
       "bonus": false,
@@ -583,6 +597,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day3_async2industry_2025"
+        ],
         "progression": "Asynchronous Part 2"
       },
       "bonus": false,
@@ -605,6 +622,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day3_async2buildassess_2025"
+        ],
         "progression": "Asynchronous Part 2"
       },
       "bonus": false,
@@ -627,6 +647,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day3_async2wrapup_2025"
+        ],
         "progression": "Module 3 Wrap Up "
       },
       "bonus": false,

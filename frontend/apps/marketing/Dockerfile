@@ -35,7 +35,7 @@ RUN corepack enable
 WORKDIR /app
 
 COPY . .
- 
+
 # Generate a partial monorepo with a pruned lockfile for a target workspace.
 # See: https://turbo.build/repo/docs/reference/prune
 RUN yarn dlx turbo prune @code-dot-org/marketing --docker
@@ -51,6 +51,16 @@ RUN yarn dlx turbo prune @code-dot-org/marketing --docker
 
 FROM base AS builder
 
+# Enable Turborepo
+ARG TURBO_TEAM
+ENV TURBO_TEAM=$TURBO_TEAM
+
+ARG TURBO_TOKEN
+ENV TURBO_TOKEN=$TURBO_TOKEN
+
+ARG TURBO_API
+ENV TURBO_API=$TURBO_API
+
 # Enable corepack
 RUN corepack enable
 
@@ -61,7 +71,6 @@ COPY --link --from=source-code /app/out/json/ .
 RUN yarn install
 
 # Build the project
-COPY --link --from=source-code /app/.turbo .turbo
 COPY --link --from=source-code /app/out/full/ .
 RUN yarn turbo run build
 

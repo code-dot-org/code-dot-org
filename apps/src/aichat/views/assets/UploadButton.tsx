@@ -174,8 +174,8 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
   const buttonProps: ButtonProps = {
     type: 'secondary',
     color: 'gray',
-    iconLeft: {iconName: 'upload'},
-    text: aichatI18n.upload(),
+    iconLeft: {iconName: 'plus'},
+    text: aichatI18n.aichatAddFile(),
   };
 
   const commonProps = {
@@ -193,7 +193,7 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
       options={[
         {
           value: 'fromLibrary',
-          label: 'From Library',
+          label: aichatI18n.fromLibrary(),
           icon: {iconName: 'copy'},
           onClick: () => {
             setShowAssetManager(true);
@@ -206,7 +206,7 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
         },
         {
           value: 'fromDevice',
-          label: 'From Device',
+          label: aichatI18n.fromDevice(),
           icon: {iconName: 'file-magnifying-glass'},
           onClick: onDeviceUploadClick,
         },

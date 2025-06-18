@@ -1238,11 +1238,12 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal ['csx1', 'csx2', 'csx3'], csx.units_for_user(teacher).map(&:name)
     assert_equal ['csx1', 'csx2', 'csx3'], csx.units_for_user(levelbuilder).map(&:name)
 
+    csx1.update!(hide_within_course: true)
     csx2.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
     csx.reload
 
-    assert_equal ['csx1', 'csx3'], csx.units_for_user(nil).map(&:name)
-    assert_equal ['csx1', 'csx3'], csx.units_for_user(teacher).map(&:name)
+    assert_equal ['csx2', 'csx3'], csx.units_for_user(nil).map(&:name)
+    assert_equal ['csx2', 'csx3'], csx.units_for_user(teacher).map(&:name)
     assert_equal ['csx1', 'csx2', 'csx3'], csx.units_for_user(levelbuilder).map(&:name)
   end
 
@@ -1281,5 +1282,18 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     assert single_unit_course.single_unit_course?
     refute multi_unit_course.single_unit_course?
+  end
+
+  test 'first_unit' do
+    single_unit_course = create :single_unit_course
+
+    multi_unit_course = create :unit_group, name: 'multi-unit-course', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    multi_unit1 = create :script, name: 'multi-unit1'
+    multi_unit2 = create :script, name: 'multi-unit2'
+    create :unit_group_unit, unit_group: multi_unit_course, script: multi_unit1, position: 1
+    create :unit_group_unit, unit_group: multi_unit_course, script: multi_unit2, position: 2
+
+    assert_equal single_unit_course.default_units.first, single_unit_course.first_unit
+    assert_equal multi_unit_course.default_units.first, multi_unit_course.first_unit
   end
 end

@@ -9,12 +9,7 @@ runs:
       run: corepack enable
 
     - name: Cache turborepo
-      uses: actions/cache@v4
-      with:
-        path: frontend/.turbo
-        key: "${{ runner.os }}-turbo-${{ github.sha }}"
-        restore-keys: |
-          ${{ runner.os }}-turbo-
+      uses: rharkor/caching-for-turbo@a1c4079258ae08389be75b57d4d7a70f23c1c66d # v1.8
 
     - uses: actions/setup-node@v4
       with:

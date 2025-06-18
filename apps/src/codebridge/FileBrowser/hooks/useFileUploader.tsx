@@ -12,7 +12,9 @@ import {
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
-type UseFileUploaderArgs = Exclude<FileUploaderProps, 'sendAnalyticsEvent'>;
+type UseFileUploaderArgs = Omit<FileUploaderProps, 'sendAnalyticsEvent'> & {
+  validFileTypes?: string[];
+};
 
 export const useFileUploader = (
   args: UseFileUploaderArgs,
@@ -45,6 +47,7 @@ export const useFileUploader = (
     [appName]
   );
 
+  const {validFileTypes, ...lab2FileUploaderArgs} = args;
   const validateFileName = useCallback(
     (fileName: string) => {
       return validateCodebridgeFileName({
@@ -53,14 +56,15 @@ export const useFileUploader = (
         projectFiles: source.files,
         isStartMode,
         validationFile,
+        validFileTypes,
       });
     },
-    [folderId, source.files, isStartMode, validationFile]
+    [folderId, source.files, isStartMode, validationFile, validFileTypes]
   );
 
   return useLab2FileUploader({
     sendAnalyticsEvent,
     validateFileName,
-    ...args,
+    ...lab2FileUploaderArgs,
   });
 };

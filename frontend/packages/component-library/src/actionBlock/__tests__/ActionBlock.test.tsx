@@ -1,7 +1,39 @@
 import {render, screen} from '@testing-library/react';
-
 import '@testing-library/jest-dom';
+import {ReactPlayerProps} from 'react-player';
+import ReactPlayer from 'react-player/file';
+
+import Video from '@/video';
+
 import ActionBlock, {ActionBlockProps} from '../index';
+
+ReactPlayer.canPlay = jest.fn();
+
+jest.mock('react-player/youtube', () => ({
+  __esModule: true,
+  default: ({light, playIcon, onError}: ReactPlayerProps) => (
+    <div>
+      YouTube Player
+      {light}
+      {playIcon}
+      <button onClick={onError}>Trigger Error</button>
+    </div>
+  ),
+  canPlay: jest.fn(),
+}));
+
+jest.mock('react-player/file', () => ({
+  __esModule: true,
+  default: ({light, playIcon, onError}: ReactPlayerProps) => (
+    <div>
+      Fallback Player
+      {light}
+      {playIcon}
+      <button onClick={onError}>Trigger Error</button>
+    </div>
+  ),
+  canPlay: jest.fn(),
+}));
 
 describe('ActionBlock', () => {
   const defaultProps: ActionBlockProps = {
@@ -100,5 +132,40 @@ describe('ActionBlock', () => {
       'Secondary Button aria label',
     );
     expect(secondaryButton).not.toBeInTheDocument();
+  });
+
+  it('renders video component when video prop and VideoComponent are provided', () => {
+    render(
+      <ActionBlock
+        {...defaultProps}
+        VideoComponent={Video}
+        video={{
+          youTubeId: 'abc123',
+          videoTitle: 'Sample Video Title',
+          isYouTubeCookieAllowed: true,
+        }}
+      />,
+    );
+
+    expect(
+      screen.getByLabelText('Play video Sample Video Title'),
+    ).toBeInTheDocument();
+  });
+
+  it('shows fallback message if video is provided but VideoComponent is missing', () => {
+    render(
+      <ActionBlock
+        {...defaultProps}
+        video={{
+          youTubeId: 'abc123',
+          videoTitle: 'Fallback',
+          isYouTubeCookieAllowed: true,
+        }}
+      />,
+    );
+
+    expect(
+      screen.getByText(/VideoComponent is not provided/i),
+    ).toBeInTheDocument();
   });
 });

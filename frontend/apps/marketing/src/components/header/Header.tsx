@@ -4,7 +4,7 @@ import DSCOHeader, {
   getDefaultHeaderProps,
 } from '@code-dot-org/component-library/cms/header';
 
-import {getStudioUrl} from '@/config/studio';
+import {getStudioBaseUrl} from '@/config/studio';
 import logoImage from '@public/images/cdo-logo-inverse.svg';
 import allProjectsImage from '@public/images/header-all-projects-icon.png';
 import appLabImage from '@public/images/header-app-lab-icon.png';
@@ -25,7 +25,7 @@ const defaultProps = getDefaultHeaderProps({
   dancePartyImage: dancePartyImage.src,
   pythonLabImage: pythonLabImage.src,
   allProjectsImage: allProjectsImage.src,
-  studioUrl: getStudioUrl(),
+  studioUrl: getStudioBaseUrl(),
 });
 
 const Header: React.FC = () => <DSCOHeader {...defaultProps} />;

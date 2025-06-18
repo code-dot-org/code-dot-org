@@ -1,0 +1,29 @@
+name 'music-lab-612-pre-q6'
+
+question 'put actual question here'
+
+wrong 'wrong'
+wrong 'wrong'
+wrong 'wrong'
+right 'correct'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Functions
+
+Standard: Create an algorithm for a song that includes functions with parameters
+
+Lesson: Functions - Synthesis
+
+Skill Progression: Create a function with at least 1 parameter and call it at least twice with different arguments
+
+Pretest Modality: Given algorithm / intent / incorrect code, match with code
+
+Posttest Modality: Given algorithm / intent / incorrect code, match with code
+
+MARKDOWN
+
+markdown <<MARKDOWN
+Put the images / context markdown here
+MARKDOWN

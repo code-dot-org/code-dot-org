@@ -1,6 +1,8 @@
 import {Dispatch} from 'react';
 
-export interface Option {
+import {Option} from './components/MultiSelectInput';
+
+export interface FieldOption {
   value: string;
   label: string;
 }
@@ -10,7 +12,7 @@ export interface FieldConfig<T extends WorkshopFormState | SessionFormState> {
   stateKey: keyof T;
   label: string;
   helperMessage?: string;
-  options?: Option[];
+  options?: FieldOption[];
 }
 export interface SessionFields {
   date: FieldConfig<SessionFormState>;
@@ -58,6 +60,11 @@ export interface Organizer {
   id: number;
   name: string;
   email: string;
+}
+
+export interface PotentialOrganizer {
+  value: number;
+  label: string;
 }
 
 export type SessionFormat = 'virtual' | 'in_person';
@@ -120,9 +127,7 @@ export interface WorkshopRequest
   extends Omit<Workshop, 'id' | 'facilitators' | 'organizer'> {
   id?: number;
   facilitators: number[];
-  organizer?: number;
-  // TODO: ACQ-3081 remove legacyForm2025 flag
-  legacyForm2025?: boolean | null;
+  organizer_id: number | null;
 }
 
 export interface CourseOffering {
@@ -142,11 +147,10 @@ export interface Facilitator {
 }
 
 export interface WorkshopFormState {
-  id?: number;
   course: string;
   capacity: string;
   description: string;
-  facilitators: number[];
+  facilitators: Option[];
   fee: string;
   grades: string[];
   hidden: boolean;
@@ -179,7 +183,11 @@ type BasicsKeys =
   | 'description'
   | 'courseOfferings';
 
-type PartnerFacilitatorKeys = 'facilitators' | 'regionalPartnerId';
+type PartnerFacilitatorKeys =
+  | 'facilitators'
+  | 'regionalPartnerId'
+  | 'organizerId'
+  | 'courseOfferings';
 
 type AdditionalInfoKeys = 'fee' | 'participantGroupType' | 'notes';
 
@@ -206,8 +214,6 @@ export interface BasicsProps
 export interface PartnerFacilitatorProps
   extends SectionProps,
     Pick<WorkshopFormState, PartnerFacilitatorKeys> {
-  regionalPartnerData: RegionalPartner[] | null;
-  facilitatorData: Facilitator[] | null;
   errors: WorkshopErrors;
 }
 

@@ -12,11 +12,11 @@ import {
   asyncLoadTeacherHomepageSectionData,
   asyncLoadCoteacherInvite,
 } from '../../teacherDashboard/teacherSectionsRedux';
-import CoteacherInviteNotification from '../CoteacherInviteNotification';
 
 import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
 import {SectionList} from './SectionList';
+import TeacherHomepageDrawer from './TeacherHomepageDrawer';
 import TeacherPromotions from './TeacherPromotions';
 
 import styles from './teacherHomepage.module.scss';
@@ -113,7 +113,7 @@ export const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
               selectedArchiveToggle={selectedArchiveToggle}
               setSelectedArchiveToggle={onArchiveToggleChange}
             />
-            <CoteacherInviteNotification isForPl={false} />
+
             {numSections === 0 ? (
               <EmptyHomepage showHiddenOnly={showHiddenOnly} />
             ) : (
@@ -126,6 +126,9 @@ export const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
           <TeacherPromotions />
         </div>
       </div>
+      <TeacherHomepageDrawer />
     </div>
   );
 };
+
+export default TeacherHomepage;

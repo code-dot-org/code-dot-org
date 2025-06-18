@@ -17,7 +17,13 @@
         }
       },
       "videoFallbackUrl": {
-        "en-US": "https://videos.ctfassets.net/90t6bu6vlf76/5Unfit2zLyqPp9HofyWU9T/4f0a43abe3dc649dc752ca321f1945c7/what-most-schools-dont-teach.mp4"
+        "en-US": "https://contentful-videos.code.org/90t6bu6vlf76/5Unfit2zLyqPp9HofyWU9T/4f0a43abe3dc649dc752ca321f1945c7/what-most-schools-dont-teach.mp4"
+      },
+      "publishedDate": {
+        "en-US": "2013-02-26T00:00-04:00"
+      },
+      "description": {
+        "en-US": "Learn about a new \"superpower\" that isn't being taught in more than half of U.S. schools.  "
       }
     }
   },

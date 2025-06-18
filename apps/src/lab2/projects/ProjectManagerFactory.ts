@@ -15,18 +15,21 @@ export default class ProjectManagerFactory {
    * Get a project manager for a specific storage type and project identitifer.
    * @param projectManagerStorageType The storage type for the project manager
    * @param projectId The identifier for the project.
+   * @param isShareView Project is in share view mode.
    * @returns A project manager
    */
   static getProjectManager(
     projectManagerStorageType: ProjectManagerStorageType,
-    projectId: string
+    projectId: string,
+    isShareView: boolean = false
   ): ProjectManager {
-    return new ProjectManager(
-      this.getSourcesStore(projectManagerStorageType),
-      this.getChannelsStore(projectManagerStorageType),
-      projectId,
-      false // reduceChannelUpdates will only be true for a project in a script.
-    );
+    return new ProjectManager({
+      sourcesStore: this.getSourcesStore(projectManagerStorageType),
+      channelsStore: this.getChannelsStore(projectManagerStorageType),
+      channelId: projectId,
+      reduceChannelUpdates: false,
+      isShareView,
+    });
   }
 
   /**
@@ -69,12 +72,12 @@ export default class ProjectManagerFactory {
     if (!channelId) {
       throw new Error('Could not load channel for level');
     }
-    return new ProjectManager(
-      this.getSourcesStore(projectManagerStorageType),
+    return new ProjectManager({
+      sourcesStore: this.getSourcesStore(projectManagerStorageType),
       channelsStore,
       channelId,
-      reduceChannelUpdates
-    );
+      reduceChannelUpdates,
+    });
   }
 
   static getSourcesStore(projectManagerStorageType: ProjectManagerStorageType) {

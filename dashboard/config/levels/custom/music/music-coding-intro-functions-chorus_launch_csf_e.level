@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-04-30T16:56:02.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "encrypted": "false",
     "background": "music-black",
     "instructions_important": "false",
-    "long_instructions": "####<i class=\"fa-duotone fa-regular fa-file-music\"></i> Step 2: Define the function\r\n\r\n\r\n1. Add <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-drum\" style=\"color: #E565F5; margin-right: 2px\"></i> Beat </span> and <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-boombox\" style=\"color: #58BEF9; margin-right: 2px\"></i> Bass </span> sounds to define the [beat](#clickable=id:thebeat) function.\r\n2. Press Run. Notice how the beat repeats!\r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=flyout-id:play---id-up-inside:hint_block)\r\n\r\n---\r\n*Example timeline:*\r\n\r\n![](https://images.code.org/1fcec58260addb806ab12a9d3af86304-image-1744664200641.png)",
+    "long_instructions": "####<i class=\"fa-duotone fa-regular fa-file-music\"></i> Step 2: Define the function by adding code\r\n\r\n\r\n1. Add <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-drum\" style=\"color: #E565F5; margin-right: 2px\"></i> Beat </span> and <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-boombox\" style=\"color: #58BEF9; margin-right: 2px\"></i> Bass </span> sounds to define the [beat](#clickable=id:thebeat) function.\r\n2. Press Run. Notice how the beat repeats!\r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=flyout-id:play---id-up-inside:hint_block)\r\n\r\n---\r\n*Example timeline:*\r\n\r\n![](https://images.code.org/1fcec58260addb806ab12a9d3af86304-image-1744664200641.png)",
     "hide_share_and_remix": "true",
     "validations": [
       {
@@ -346,8 +347,7 @@
     },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-30T16:56:02.624+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-chorus_launch\\\"\"],\"cloned_from\":\"music-coding-intro-functions-chorus_launch\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-30T16:56:02.624+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-chorus_launch\\\"\"],\"cloned_from\":\"music-coding-intro-functions-chorus_launch\"},{\"changed_at\":\"2025-05-09 17:00:29 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

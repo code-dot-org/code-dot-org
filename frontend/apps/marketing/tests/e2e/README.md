@@ -71,7 +71,7 @@ yarn test:ui:update-snapshot --environment <development|test|production>
 If working on a fork and you want to update the version control version, specify the source entry id:
 
 ```bash
-yarn test:ui:update-snapshot --enviornment development --source-entry-id <fork experience entry id>
+yarn test:ui:update-snapshot --environment development --source-entry-id <fork experience entry id>
 ```
 
 ### Updating "All The Things" on Contentful from source control
@@ -85,6 +85,58 @@ yarn test:ui:publish-snapshot --environment <development|test|production>
 This will save "All The Things", open up the experience in the associated environment and publish the page if it looks correct.
 
 **Note**: Normally for a merge to `test` or `production`, you will want to do this after merging your PR.
+
+### ✅ How to add or update a component step-by-step
+
+1. Create a new fork (see [Forking](#forking) section above):
+
+```bash
+yarn test:ui:fork
+```
+
+2. Make updates on the forked page in Contentful.
+
+3. Update the `development` snapshot with your forked version; the ID can be found in the url on the forked experience in Contentful:
+
+```bash
+yarn test:ui:update-snapshot --source-entry-id <ID HERE> --environment development
+```
+
+4. Create a PR with the updates from steps 1-3.
+
+5. Once the PR is merged, update your workspace with `staging`.
+
+6. Publish the updated snapshot in the `development` environment:
+
+```bash
+yarn test:ui:publish-snapshot --environment development
+```
+
+7. Open the development output link in the terminal in Contentful, and Publish the experience.
+
+8. Publish the updated snapshot in the `test` environment:
+
+```bash
+yarn test:ui:publish-snapshot --environment test
+```
+
+9. Publish the updated snapshot in the `production` environment:
+
+```bash
+yarn test:ui:publish-snapshot --environment production
+```
+
+10. Publish updated `production` version of the All The Things page in Contentful.
+
+11. **If you're adding a new component:** add the component to the Section Types on `/apps/marketing/tests/e2e/pom/all-the-things.ts` and add unit and Eyes tests to `/apps/marketing/tests/e2e/all-the-things.spec.ts`. Create/merge a PR with these tests.
+
+12. Eyes diffs may show up in a Marketing-App-Deploy message in the _#infra-marketing-app-staging_ Slack channel.
+
+13. Approve Eyes diffs and rerun failed tests if needed.
+
+#### ⛔️ Troubleshooting
+
+If tests or builds continue to fail and you need to make updates to the All The Things page to fix something, you will need to follow these steps each time.
 
 ## Resources
 

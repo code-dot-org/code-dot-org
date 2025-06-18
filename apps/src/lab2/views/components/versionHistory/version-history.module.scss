@@ -1,5 +1,3 @@
-@import '@code-dot-org/component-library-styles/colors.scss';
-
 $space-xs: 2px;
 $space-s: 4px;
 $space-m: 6px;
@@ -18,6 +16,7 @@ $space-xl: 10px;
   vertical-align: top;
   z-index: 1000;
   right: 0;
+  border-radius: 4px;
 }
 
 .header {

@@ -7,6 +7,12 @@
       "elements": [
         {
           "type": "html",
+          "name": "variable_test",
+          "visible": false,
+          "html": "<h2 style='background-color: yellow'>Panel for variable testing (hide before shipping)</p><strong>PL topics: {pl_topics}</strong></p>"
+        },
+        {
+          "type": "html",
           "name": "intro_text",
           "html": "<p><strong>Well done, you've completed Code.org's professional development workshop!</strong></p><p>This survey asks questions about your experience today. Your feedback is crucial to ensuring we best serve educators through continual program improvement.</p><p><strong>Privacy and Confidentiality</strong></p><ul><li>Your individual responses here are completely <strong>confidential</strong>.</li><li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li><li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li><li>Your <strong>de-identified</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li></ul>"
         },
@@ -71,17 +77,17 @@
             {
               "value": "more_prepared",
               "text": "I feel more prepared to teach the material covered in this workshop than before I came.",
-              "visibleIf": "{pl_topics} <> 'getting-started' and {pl_topics} <> 'self-paced-pl-ai-101' and {pl_topics} <> 'self-paced-pl-k5'"
+              "visibleIf": "{pl_topics} <> ['getting-started', 'self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started', 'self-paced-pl-ai-101'] and {pl_topics} <> ['getting-started', 'self-paced-pl-k5'] and {pl_topics} <> ['self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started'] and {pl_topics} <> ['self-paced-pl-ai-101'] and {pl_topics} <> ['self-paced-pl-k5']"
             },
             {
               "value": "plan_to_teach",
               "text": "I am planning to teach this curriculum.",
-              "visibleIf": "{pl_topics} <> 'getting-started' and {pl_topics} <> 'self-paced-pl-ai-101' and {pl_topics} <> 'self-paced-pl-k5'"
+              "visibleIf": "{pl_topics} <> ['getting-started', 'self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started', 'self-paced-pl-ai-101'] and {pl_topics} <> ['getting-started', 'self-paced-pl-k5'] and {pl_topics} <> ['self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started'] and {pl_topics} <> ['self-paced-pl-ai-101'] and {pl_topics} <> ['self-paced-pl-k5']"
             },
             {
               "value": "know_where_to_get_help",
               "text": "I know where to go if I need help preparing to teach this material.",
-              "visibleIf": "{pl_topics} <> 'getting-started' and {pl_topics} <> 'self-paced-pl-ai-101' and {pl_topics} <> 'self-paced-pl-k5'"
+              "visibleIf": "{pl_topics} <> ['getting-started', 'self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started', 'self-paced-pl-ai-101'] and {pl_topics} <> ['getting-started', 'self-paced-pl-k5'] and {pl_topics} <> ['self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started'] and {pl_topics} <> ['self-paced-pl-ai-101'] and {pl_topics} <> ['self-paced-pl-k5']"
             },
             {
               "value": "intention_to_apply_in_classroom",
@@ -102,7 +108,7 @@
         {
           "type": "checkbox",
           "name": "barriers_implementation_curriculum",
-          "visibleIf": "{pl_topics} <> 'getting-started' and {pl_topics} <> 'self-paced-pl-ai-101' and {pl_topics} <> 'self-paced-pl-k5'",
+          "visibleIf": "{pl_topics} <> ['getting-started', 'self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started', 'self-paced-pl-ai-101'] and {pl_topics} <> ['getting-started', 'self-paced-pl-k5'] and {pl_topics} <> ['self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started'] and {pl_topics} <> ['self-paced-pl-ai-101'] and {pl_topics} <> ['self-paced-pl-k5']",
           "title": "Please share the main reasons you might not teach this workshop's content in your classroom this year.",
           "description": "(Select all that apply)",
           "choices": [
@@ -135,7 +141,7 @@
         {
           "type": "rating",
           "name": "nps_self_paced_pd_byow",
-          "title": "How likely are you to recommend this professional learning workshop about {pl_topics} to a friend or colleague?",
+          "title": "How likely are you to recommend this professional learning workshop to a friend or colleague?",
           "rateCount": 11,
           "rateMin": 0,
           "rateMax": 10,
@@ -195,17 +201,17 @@
             {
               "value": "someone_to_turn_to",
               "text": "When I need help teaching computer science, I have someone to turn to.",
-              "visibleIf": "{pl_topics} <> 'getting-started' and {pl_topics} <> 'self-paced-pl-ai-101' and {pl_topics} <> 'self-paced-pl-k5'"
+              "visibleIf": "{pl_topics} <> ['getting-started', 'self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started', 'self-paced-pl-ai-101'] and {pl_topics} <> ['getting-started', 'self-paced-pl-k5'] and {pl_topics} <> ['self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started'] and {pl_topics} <> ['self-paced-pl-ai-101'] and {pl_topics} <> ['self-paced-pl-k5']"
             },
             {
               "value": "rp_as_resource",
               "text": "I see my Regional Partner as a resource and support for computer science education in my community.",
-              "visibleIf": "{pl_topics} <> 'getting-started' and {pl_topics} <> 'self-paced-pl-ai-101' and {pl_topics} <> 'self-paced-pl-k5'"
+              "visibleIf": "{pl_topics} <> ['getting-started', 'self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started', 'self-paced-pl-ai-101'] and {pl_topics} <> ['getting-started', 'self-paced-pl-k5'] and {pl_topics} <> ['self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started'] and {pl_topics} <> ['self-paced-pl-ai-101'] and {pl_topics} <> ['self-paced-pl-k5']"
             },
             {
               "value": "workshop_helped_create_community",
               "text": "This workshop has allowed me to meet CS teachers in my community to collaborate with.",
-              "visibleIf": "{pl_topics} <> 'getting-started' and {pl_topics} <> 'self-paced-pl-ai-101' and {pl_topics} <> 'self-paced-pl-k5'"
+              "visibleIf": "{pl_topics} <> ['getting-started', 'self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started', 'self-paced-pl-ai-101'] and {pl_topics} <> ['getting-started', 'self-paced-pl-k5'] and {pl_topics} <> ['self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started'] and {pl_topics} <> ['self-paced-pl-ai-101'] and {pl_topics} <> ['self-paced-pl-k5']"
             }
           ]
         }
@@ -268,28 +274,18 @@
           "type": "text",
           "name": "other_feedback_logistics",
           "title": "Do you have any feedback about the way logistics were run for the workshop?"
-        }
-      ]
-    },
-    {
-      "name": "page3",
-      "elements": [
+        },
         {
-          "name": "facilitator_feedback_page",
-          "elements": [
-            {
-              "type": "library_item",
-              "library_name": "surveys/pd/facilitator_panel",
-              "library_version": 0,
-              "name": "facilitator_heading"
-            },
-            {
-              "type": "library_item",
-              "library_name": "surveys/pd/facilitator_panel",
-              "library_version": 0,
-              "name": "facilitators"
-            }
-          ]
+          "type": "library_item",
+          "library_name": "surveys/pd/facilitator_panel",
+          "library_version": 0,
+          "name": "facilitator_heading"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/facilitator_panel",
+          "library_version": 0,
+          "name": "facilitators"
         }
       ]
     },
@@ -338,10 +334,6 @@
             {
               "value": "school_admin",
               "text": "School administrator"
-            },
-            {
-              "value": "other",
-              "text": "Other"
             }
           ],
           "hasOther": true
@@ -400,5 +392,5 @@
       ]
     }
   ],
-  "published": false
+  "published": true
 }

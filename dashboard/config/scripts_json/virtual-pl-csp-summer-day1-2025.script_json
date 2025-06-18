@@ -6,12 +6,14 @@
     "properties": {
       "content_area": "pl_workshop_activities",
       "curriculum_umbrella": "PD Workshop Activity CSP",
+      "has_unnumbered_lessons": true,
       "is_migrated": true,
+      "tts": true,
       "version_year": "2025"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-06 19:43:15 UTC",
+    "serialized_at": "2025-05-09 18:47:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

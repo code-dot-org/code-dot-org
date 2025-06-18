@@ -1,7 +1,39 @@
 import {render, screen} from '@testing-library/react';
-
 import '@testing-library/jest-dom';
+import {ReactPlayerProps} from 'react-player';
+import ReactPlayer from 'react-player/file';
+
+import Video from '@/video';
+
 import FullWidthActionBlock, {ActionBlockProps} from '../index';
+
+ReactPlayer.canPlay = jest.fn();
+
+jest.mock('react-player/youtube', () => ({
+  __esModule: true,
+  default: ({light, playIcon, onError}: ReactPlayerProps) => (
+    <div>
+      YouTube Player
+      {light}
+      {playIcon}
+      <button onClick={onError}>Trigger Error</button>
+    </div>
+  ),
+  canPlay: jest.fn(),
+}));
+
+jest.mock('react-player/file', () => ({
+  __esModule: true,
+  default: ({light, playIcon, onError}: ReactPlayerProps) => (
+    <div>
+      Fallback Player
+      {light}
+      {playIcon}
+      <button onClick={onError}>Trigger Error</button>
+    </div>
+  ),
+  canPlay: jest.fn(),
+}));
 
 describe('FullWidthActionBlock', () => {
   const defaultProps: ActionBlockProps = {
@@ -47,6 +79,48 @@ describe('FullWidthActionBlock', () => {
     expect(screen.getByAltText('')).toHaveAttribute('src', 'image.png');
   });
 
+  it('renders a video if provided and image is ignored', () => {
+    render(
+      <FullWidthActionBlock
+        {...defaultProps}
+        image={{src: 'image.png', alt: ''}}
+        video={{
+          youTubeId: '123abc',
+          videoTitle: 'My Test Video',
+          isYouTubeCookieAllowed: true,
+        }}
+        VideoComponent={Video}
+      />,
+    );
+
+    // Image should NOT be rendered when video is provided
+    expect(screen.queryByAltText('')).not.toBeInTheDocument();
+
+    // Video should be rendered when provided
+    expect(
+      screen.getByLabelText('Play video My Test Video'),
+    ).toBeInTheDocument();
+  });
+
+  it('shows fallback message if VideoComponent is missing', () => {
+    render(
+      <FullWidthActionBlock
+        {...defaultProps}
+        video={{
+          youTubeId: 'abc123',
+          videoTitle: 'Missing Component Video',
+          isYouTubeCookieAllowed: true,
+        }}
+      />,
+    );
+
+    expect(
+      screen.getByText(
+        'VideoComponent is not provided. Please provide VideoComponent in order to render a video.',
+      ),
+    ).toBeInTheDocument();
+  });
+
   it('renders an overline', () => {
     render(
       <FullWidthActionBlock
@@ -85,14 +159,12 @@ describe('FullWidthActionBlock', () => {
       />,
     );
 
-    // check for primary button
     const primaryButton = screen.getByLabelText(
       'Full Width Primary Button aria label',
     );
     expect(primaryButton).toBeInTheDocument();
     expect(primaryButton).toHaveAttribute('href', 'https://code.org');
 
-    // check for secondary button
     const secondaryButton = screen.getByLabelText(
       'Full Width Secondary Button aria label',
     );

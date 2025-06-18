@@ -52,7 +52,7 @@ const Carousel: React.FC<CarouselProps> = ({
   showNavArrows = true,
   slidesPerView = 2,
   slidesPerGroup = 2,
-  allowTouchMove = false,
+  allowTouchMove = true,
   autoHeight = false,
   slides,
   className,

@@ -15,6 +15,7 @@ import {
   getCurrentLevel,
   nextLevelId,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {
@@ -74,7 +75,8 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   handleInstructionsTextClick,
   className,
 }) => {
-  const {onRun, onStop, levelProperties} = useCodebridgeContext();
+  const {onRun, onStop, levelProperties, AiTutor2ResponseView} =
+    useCodebridgeContext();
   const dialogControl = useDialogControl();
 
   const {
@@ -84,6 +86,8 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     submittable: isSubmittable,
     appName: appType,
   } = levelProperties;
+
+  const showAiTutor2 = queryParams('show-ai-tutor2-hint') === 'true';
 
   const scriptId = useAppSelector(state => state.lab.scriptId);
   const hasNextLevel = useSelector(state => nextLevelId(state) !== undefined);
@@ -299,7 +303,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
           moduleStyles.buttonInstruction,
           moduleStyles.validationButton
         )}
-        color={'white'}
+        color={'black'}
         size={'s'}
         id={'uitest-validate-button'}
       />
@@ -377,6 +381,8 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
               </div>
             </>
           )}
+
+          {showAiTutor2 && AiTutor2ResponseView}
           {predictSettings?.isPredictLevel && (
             <InstructorsOnly>
               <div className={moduleStyles.bubble}>

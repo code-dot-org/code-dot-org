@@ -22,6 +22,7 @@ import {MetricEvent} from '@cdo/apps/metrics/events';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 import styleConstants from '@cdo/apps/styleConstants';
+import experiments from '@cdo/apps/util/experiments';
 import * as utils from '@cdo/apps/utils';
 
 import {START_BLOCKS} from '../constants';
@@ -50,11 +51,13 @@ import CdoFieldToggle from './addons/cdoFieldToggle';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import initializeGenerator from './addons/cdoGenerator';
 import {gestureOverrides} from './addons/cdoGesture';
+import {initializeKeyboardNavigation} from './addons/cdoKeyboardNavigation';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRendererGeras from './addons/cdoRendererGeras';
 import CdoRendererThrasos from './addons/cdoRendererThrasos';
 import CdoRendererZelos from './addons/cdoRendererZelos';
 import {initializeScrollbarPair} from './addons/cdoScrollbar';
+import {cleanUp} from './addons/cdoSerializationHelpers';
 import {getPointerBlockImageUrl} from './addons/cdoSpritePointer';
 import CdoTrashcan from './addons/cdoTrashcan';
 import * as cdoUtils from './addons/cdoUtils';
@@ -182,8 +185,8 @@ const BlocklyWrapper = function (
       const fieldClass = override[2];
 
       // Force Google Blockly to use our custom versions of fields
-      this.blockly_.fieldRegistry.unregister(fieldRegistryName);
-      this.blockly_.fieldRegistry.register(fieldRegistryName, fieldClass);
+      this.fieldRegistry.unregister(fieldRegistryName);
+      this.fieldRegistry.register(fieldRegistryName, fieldClass);
 
       // Add each field for when our wrapper is accessed in /apps code
       // This method helps us avoid duplicated boilerplate, but we would
@@ -267,8 +270,12 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   });
 
   // Installs colour_picker, colour_rgb, colour_random, and colour_blend blocks.
-  // These are exclusively provided via the FieldColour plugin as of Blockly v11.
-  installFieldColourBlocks({javascript: javascriptGenerator});
+  // Unit tests may attempt to install multiple times, which is currently unsafe.
+  try {
+    installFieldColourBlocks({javascript: javascriptGenerator});
+  } catch (e) {
+    console.warn(e);
+  }
 
   type registrableFieldType = GoogleBlockly.fieldRegistry.RegistrableField;
   // elements in this list should be structured as follows:
@@ -294,13 +301,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   ];
   blocklyWrapper.overrideFields(fieldOverrides);
 
-  // Overrides applied directly to core blockly
-  // TODO: Can we remove this assignment?
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  (blocklyWrapper.blockly_ as any).FunctionEditor = FunctionEditor;
   // TODO: Can/should we make CdoTrashcan have the same type as Trashcan?
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  blocklyWrapper.blockly_.Trashcan = CdoTrashcan as any;
+  blocklyWrapper.Trashcan = CdoTrashcan as any;
 
   // Code.org custom fields
   blocklyWrapper.AngleHelper = CdoAngleHelper;
@@ -314,53 +317,53 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   blocklyWrapper.FieldAngleDropdown = CdoFieldAngleDropdown;
   blocklyWrapper.FieldAngleTextInput = CdoFieldAngleTextInput;
 
-  blocklyWrapper.blockly_.registry.register(
-    blocklyWrapper.blockly_.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
-    blocklyWrapper.blockly_.registry.DEFAULT,
+  blocklyWrapper.registry.register(
+    blocklyWrapper.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
+    blocklyWrapper.registry.DEFAULT,
     CdoVerticalFlyout,
     true /* opt_allowOverrides */
   );
 
-  blocklyWrapper.blockly_.registry.register(
-    blocklyWrapper.blockly_.registry.Type.RENDERER,
+  blocklyWrapper.registry.register(
+    blocklyWrapper.registry.Type.RENDERER,
     Renderers.GERAS,
     CdoRendererGeras,
     true /* opt_allowOverrides */
   );
-  blocklyWrapper.blockly_.registry.register(
-    blocklyWrapper.blockly_.registry.Type.RENDERER,
+  blocklyWrapper.registry.register(
+    blocklyWrapper.registry.Type.RENDERER,
     Renderers.THRASOS,
     CdoRendererThrasos,
     true /* opt_allowOverrides */
   );
-  blocklyWrapper.blockly_.registry.register(
-    blocklyWrapper.blockly_.registry.Type.RENDERER,
+  blocklyWrapper.registry.register(
+    blocklyWrapper.registry.Type.RENDERER,
     Renderers.ZELOS,
     CdoRendererZelos,
     true /* opt_allowOverrides */
   );
-  blocklyWrapper.blockly_.registry.register(
-    blocklyWrapper.blockly_.registry.Type.CONNECTION_CHECKER,
+  blocklyWrapper.registry.register(
+    blocklyWrapper.registry.Type.CONNECTION_CHECKER,
     'cdo_connection_checker',
     CdoConnectionChecker,
     true /* opt_allowOverrides */
   );
-  blocklyWrapper.blockly_.serialization.registry.unregister('blocks');
-  blocklyWrapper.blockly_.serialization.registry.register(
+  blocklyWrapper.serialization.registry.unregister('blocks');
+  blocklyWrapper.serialization.registry.register(
     'blocks',
     new CdoBlockSerializer()
   );
 
   const procedureSerializer =
-    new blocklyWrapper.blockly_.serialization.procedures.ProcedureSerializer(
+    new blocklyWrapper.serialization.procedures.ProcedureSerializer(
       ObservableProcedureModel,
       ObservableParameterModel
     );
 
   blocklyWrapper.procedureSerializer = procedureSerializer;
   // Register the shareable procedures serializer, used for the modal function editor.
-  blocklyWrapper.blockly_.serialization.registry.unregister('procedures');
-  blocklyWrapper.blockly_.serialization.registry.register(
+  blocklyWrapper.serialization.registry.unregister('procedures');
+  blocklyWrapper.serialization.registry.register(
     'procedures',
     procedureSerializer
   );
@@ -386,7 +389,20 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   });
   Object.defineProperty(blocklyWrapper, 'selected', {
     get: function () {
-      return this.blockly_.getSelected();
+      // In the event that the block is no longer focused, we can
+      // potentially use the workspace's focused node.
+      // This allows `Blockly.selected` to work from the dev console.
+      const focusedNode = this.FocusableTreeTraverser.findFocusedNode(
+        // common.getMainWorkspace() gets the currently active workspace,
+        // as opposed to the student's "primary" workspace.
+        Blockly.common.getMainWorkspace()
+      );
+      if (focusedNode && Blockly.isSelectable(focusedNode)) {
+        return focusedNode;
+      }
+      // If the focused node is not selectable, fall back to the
+      // getSelected() method.
+      return Blockly.getSelected();
     },
   });
   Object.defineProperty(blocklyWrapper, 'BlockFieldHelper', {
@@ -846,6 +862,12 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.showUnusedBlocks = options.showUnusedBlocks;
     blocklyWrapper.blockLimitMap = cdoUtils.createBlockLimitMap();
     blocklyWrapper.isDarkTheme = isDarkTheme(options.theme);
+
+    // Only allow toggling disabled blocks in start mode.
+    // This is also important for ensuring that Blockly does not
+    // mistakenly keep orphaned blocks disabled when they are connected.
+    options.disable = blocklyWrapper.isStartMode;
+
     const workspace = blocklyWrapper.blockly_.inject(
       container,
       options
@@ -867,6 +889,13 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;
     }
 
+    if (
+      options.enableKeyboardNavigation ||
+      experiments.isEnabledAllowingQueryString(experiments.KEYBOARD_NAVIGATION)
+    ) {
+      initializeKeyboardNavigation(workspace, options.theme);
+    }
+
     // Typically, we need to handle disabling blocks that are not connected to an
     // appropriate top block. A few exceptions exist.
     if (
@@ -884,12 +913,24 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     }
 
     // In toolbox mode, automatically clean up the workspace as blocks are moved.
+    // This needs to use Google Blockly's built-in cleanUp method, which arranges
+    // all blocks into a single column.
     if (blocklyWrapper.isToolboxMode) {
       workspace.addChangeListener(event => {
         if (event.type === GoogleBlockly.Events.MOVE) {
           workspace.cleanUp();
         }
       });
+    } else {
+      // Outside of toolbox mode, we need use a custom workspace cleanUp method.
+      // Our version prevents blocks from overlapping, moving the blocks as
+      // minimally as possible.
+      // This command is accessible via the workspace context menu.
+      extendedWorkspaceSvg.cleanUp = function (
+        includeImmovableBlocks?: boolean
+      ) {
+        cleanUp(this, includeImmovableBlocks);
+      };
     }
     // When either the main workspace or the toolbox workspace viewport
     // changes, adjust any callouts so they stay pointing to the appropriate
@@ -978,12 +1019,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       blocklyWrapper.functionEditor = new FunctionEditor();
       blocklyWrapper.functionEditor.init(options);
     }
-
-    const blocklySvgElement = document.querySelector('.blocklySvg');
-    if (blocklySvgElement) {
-      blocklySvgElement.setAttribute('tabindex', '-1');
-    }
-
     return workspace;
   };
 

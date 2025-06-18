@@ -102,7 +102,7 @@
       cronjob at:'*/10 * * * *', do:deploy_dir('bin', 'cron', 'delete_twilio_data')
       cronjob at:'* * * * *', do:deploy_dir('bin', 'cron', 'confirm_usage')
       cronjob at:'0 */2 * * *', do:deploy_dir('bin', 'cron', 'teacher_applications_to_gdrive')
-      cronjob at:'30 */2 * * *', do:deploy_dir('bin', 'cron', 'summer_workshops_to_gdrive')
+      cronjob at:'0 5 * * *', do:deploy_dir('bin', 'cron', 'summer_workshops_to_gdrive')
       cronjob at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'csf_workshop_attendance_to_gdrive')
       cronjob at:'0 13 * * *', do:deploy_dir('bin', 'cron', 'eir_teachers_to_gdrive')
       cronjob at:'0 7 * * 6', do:deploy_dir('bin', 'cron', 'stop_inactive_adhoc_instances')
@@ -118,6 +118,7 @@
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'monitor_projects')
       cronjob at:'0 4 * * *', do:deploy_dir('bin', 'cron', 'cleanup_mvp_ai_tutor_interactions')
       cronjob at:'0 4 * * *', do:deploy_dir('bin', 'cron', 'delete_old_ai_chat_data')
+      cronjob at:'0 * * * *', do:deploy_dir('bin', 'cron', 'openai_pdf_processing_availability_check')
 
       # Send warning emails to teachers about their sections with CAP affected students
       # every Wednesday at 12:00 AM EST (04:00 AM UTC)

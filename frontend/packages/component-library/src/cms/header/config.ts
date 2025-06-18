@@ -96,13 +96,6 @@ export function getDefaultHeaderProps({
         description: 'Build simple animations',
       },
       {
-        key: 'artist',
-        label: 'Artist',
-        href: `${studioUrl}/projects/artist/new`,
-        image: artistImage,
-        description: 'Create art with code',
-      },
-      {
         key: 'appLab',
         label: 'App Lab',
         href: `${studioUrl}/projects/applab/new`,
@@ -124,18 +117,25 @@ export function getDefaultHeaderProps({
         description: 'Create music with code',
       },
       {
-        key: 'danceParty',
-        label: 'Dance Party',
-        href: `${studioUrl}/projects/dance/new`,
-        image: dancePartyImage,
-        description: 'Make a dance party with AI',
-      },
-      {
         key: 'pythonLab',
         label: 'Python Lab',
         href: `${studioUrl}/projects/pythonlab/new`,
         image: pythonLabImage,
         description: 'Code using Python',
+      },
+      {
+        key: 'artist',
+        label: 'Artist',
+        href: `${studioUrl}/projects/artist/new`,
+        image: artistImage,
+        description: 'Create art with code',
+      },
+      {
+        key: 'danceParty',
+        label: 'Dance Party',
+        href: `${studioUrl}/projects/dance/new`,
+        image: dancePartyImage,
+        description: 'Make a dance party with AI',
       },
       {
         key: 'viewAllProjects',

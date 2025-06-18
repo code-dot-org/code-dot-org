@@ -7,28 +7,51 @@ markdown <<MARKDOWN
 
 ## What are Career Journeys?
 
-#### To help students see the real-world applications of computer science and music, we've included Career Spotlights in the curriculum.Students solve **authentic problems** inspired by these careers.
+#### To help students connect computer science to the real world—especially through music—we’ve included **Career Journeys** in each lesson. These spotlights feature real professionals from the music and tech industries. By sharing diverse voices and creative paths, we help students see themselves in CS-related careers.
 
-## Why Do Career Journeys Matter?
-#### Highlighting careers: 
-
-
-
-- #### **Builds Awareness:** Helps students explore future career possibilities early on.
-- #### **Makes Learning Personal:** Connects CS to students’ interests like music or games.
-- #### **Promotes Equity:** Highlights diverse role models and fosters a sense of belonging.
-- #### **Shows Real-World Use:** Demonstrates how CS applies across industries and jobs.
-- #### **Encourages Key Skills:** Reinforces creativity, collaboration, and problem-solving.
-- #### **Empowers Teachers:** Positions educators as mentors guiding meaningful learning.
-
-
-
-
-
-
-<div style="display: flex; justify-content: space-between; width: 100%; margin: 20pt auto; padding: 0 5px;">
-  <img src="https://images.code.org/794fce27e2665539fc2ee035962dd389-image-1744653846449.03.30 AM.png" style="border-radius: 5pt; width: 32%;" alt="Image of a woman singing with the text, A record producer is someone who brings the singers, the songwriters, the engineers, the musicians together">
-  <img src="https://images.code.org/34e053cb621b242bb88cccb1f7606df8-image-1744653848780.01.55 AM.png" style="border-radius: 5pt; width: 32%;" alt="A woman codes in front of a screen. The text says, Creative Coding - Roxanne performs music using code.">
-  <img src="https://images.code.org/fafa657031d5f3671fec4180da9f8a7a-image-1744653850201.01.41 AM.png" style="border-radius: 5pt; width: 32%;" alt="An image of a man with the text, Remix Artist - This is Altrice. He's an electronic and remix musical artist.">
+## Career Journeys in the Curriculum 
+<!-- Main container wrapping all sections -->
+<div style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
+    <!-- Section 1 -->
+    <div style="display: flex; align-items: center; width: 100%;">
+        <img src="https://images.code.org/b1e4ca3e722641a13fd296d462544ab5-image-1747758631405.png" alt="A woman with long, wavy, light brown hair and a warm complexion poses in front of a blurred red carpet backdrop. She is wearing a gold-toned outfit and has a confident expression."
+             style="width: 10%; border-radius: 10px; margin: 0px 20px 20px 0px;">
+        <div>
+            <p style="font-size: 14pt; font-weight: bold; margin: 0;">Lesson 1: Songwriter's Toolbox</p>
+            <p style="font-size: 14pt; line-height: 1.2; margin: 5px 0;">
+               <i>featuring Singer/Songwriter Shakira</i> <br>Just like a songwriter puts lyrics and notes in the right order to tell a story, programmers put code blocks in a specific sequence to make a program work.
+            </p>
+        </div>
+    </div>
+    <!-- Section 2 -->
+    <div style="display: flex; align-items: center; width: 100%;">
+        <img src="https://images.code.org/d0a65be85406bbf005d6e080a01cd029-image-1747759032726.36.00 AM.png" alt="A man with a bald head and neatly groomed beard smiles slightly while looking at the camera. He is wearing a black crew-neck shirt. The background is blurred and features what appears to be a screen or equipment, suggesting a studio or tech environment."
+             style="width: 10%; border-radius: 10px; margin: 0px 20px 20px 0px;">
+        <div>
+            <p style="font-size: 14pt; font-weight: bold; margin: 0;">Lesson 2: Producer Power</p>
+            <p style="font-size: 14pt; line-height: 1.2; margin: 5px 0;">
+                <i>featuring Producer Henny Tha Bizness</i> <br>A music producer reuses beats, builds patterns, and structures songs efficiently—just like a programmer uses functions to group and reuse code.
+            </p>
+        </div>
+    </div>
+    <!-- Section 3 -->
+    <div style="display: flex; align-items: center; width: 100%;">
+     <img src="https://images.code.org/7c8b5827590d965e79a1439697c514ed-image-1747758977924.34.36 AM.png" alt="A woman with a voluminous natural afro hairstyle smiles softly while looking at the camera. She is wearing gold hoop earrings, layered silver necklaces, and a black collared shirt over a dark top. The background is softly blurred."
+             style="width: 10%; border-radius: 10px; margin: 0px 20px 20px 0px;">
+        <div>
+            <p style="font-size: 14pt; font-weight: bold; margin: 0;">Lesson 3: Sound Designer’s Studio</p>
+            <p style="font-size: 14pt; line-height: 1.2; margin: 5px 0;">
+                <i>featuring Artist, Creator, and Coder Roxanne</i> <br> Sound designers make effects that react to what players do in a game—like jumping, colliding, or collecting. In event-driven code runs only when something happens.
+            </p>
+        </div>
+    </div>
+    </div>
 </div>
+
+
+
+
+
+
+
 MARKDOWN

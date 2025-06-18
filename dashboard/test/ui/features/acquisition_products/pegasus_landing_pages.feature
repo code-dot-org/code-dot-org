@@ -1,5 +1,6 @@
 @eyes
 @single_session
+@pegasus_content
 Feature: Looking at tutorial landing pages on Pegasus
 
 Scenario Outline: Simple page view
@@ -12,5 +13,4 @@ Scenario Outline: Simple page view
   And I sign out
 Examples:
   | url                                                               | test_name                  |
-  | http://code.org/minecraft                                         | minecraft tutorial landing |
-  | http://code.org/starwars                                          | starwars tutorial landing  |
+  | http://hourofcode.com/us/learn                                    | hoc learn landing page     |

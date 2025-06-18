@@ -14,8 +14,12 @@ class Api::V1::Pd::RegionalPartnerMiniContactsControllerTest < ActionDispatch::I
   end
 
   test 'create returns error if email is missing' do
+    zip = '12345'
+    regional_partner = create :regional_partner
+    regional_partner.mappings.find_or_create_by!(zip_code: zip)
     form_data = build(:pd_regional_partner_mini_contact_hash).
-      merge("email" => "")
+      merge("email" => "", "zip" => zip)
+
     refute_valid_form(form_data)
     response_body = JSON.parse(response.body)
     assert_equal ['email'], response_body['errors']['form_data']
@@ -26,7 +30,15 @@ class Api::V1::Pd::RegionalPartnerMiniContactsControllerTest < ActionDispatch::I
       merge("zip" => "")
     refute_valid_form(form_data)
     response_body = JSON.parse(response.body)
-    assert_equal ['zip'], response_body['errors']['form_data']
+    assert_equal ['zip', 'regionalPartner'], response_body['errors']['form_data']
+  end
+
+  test 'create returns error if zip does not match with a RP' do
+    form_data = build(:pd_regional_partner_mini_contact_hash).
+      merge("zip" => "11")
+    refute_valid_form(form_data)
+    response_body = JSON.parse(response.body)
+    assert_equal ['regionalPartner'], response_body['errors']['form_data']
   end
 
   private def assert_valid_form(form_data)

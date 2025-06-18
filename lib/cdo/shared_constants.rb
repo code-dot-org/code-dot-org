@@ -51,6 +51,7 @@ module SharedConstants
       click_run: "click_run",
       click_submit: "click_submit",
       click_validate: "click_validate",
+      code_execution_error: "code_execution_error",
     }
   ).freeze
 
@@ -752,6 +753,7 @@ module SharedConstants
     PII_VIOLATION: 'pii_violation',
     PROFANITY_VIOLATION: 'profanity_violation',
     USER_INPUT_TOO_LARGE: 'user_input_too_large',
+    MODEL_TIMEOUT: 'model_timeout',
     OK: 'ok',
     UNKNOWN: 'unknown',
   }.freeze
@@ -797,7 +799,18 @@ module SharedConstants
     # PII detected in the model's output.
     MODEL_PII: 1004,
     # The user input request exceeded the maximum token size allowed.
-    USER_INPUT_TOO_LARGE: 1005
+    USER_INPUT_TOO_LARGE: 1005,
+    # The model took too long to respond.
+    MODEL_TIMEOUT: 1006,
+  }
+
+  STUDENT_WORK_EVALUATION_STATUS = {
+    # The student submitted a blank free response or did not change the starter code.
+    NO_ATTEMPT: 'no_attempt',
+    # Profanity detected in the student's work.
+    STUDENT_PROFANITY: 'student_profanity',
+    # PII detected in the student's work.
+    STUDENT_PII: 'student_pii',
   }
 
   AI_CHAT_MODEL_IDS = {
@@ -848,7 +861,8 @@ module SharedConstants
     LESSON: "lesson",
     UNIT: "unit",
     COURSE: "course",
-    GENERAL: "general"
+    GENERAL: "general",
+    LEVEL: "level"
   }.freeze
 
   DISALLOWED_ROUTES = [

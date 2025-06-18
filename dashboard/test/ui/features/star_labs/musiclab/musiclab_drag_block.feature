@@ -32,7 +32,7 @@ Scenario Outline: Dragging play sound block
   And element ".timeline-element" is visible
 
   # Click the field inside the attached "play sound" block.
-  And I click block field "[data-id='when-run-block'] > [data-id='play_sound_at_current_location_simple2'] > .blocklyEditableText"
+  And I click block field "[data-id='when-run-block'] > [data-id='play_sound_at_current_location_simple2'] > .blocklyEditableField"
 
   # Click on the second pack inside the sounds panel.
   And I click selector "#sounds-panel .sounds-panel-folder-row:nth-of-type(2)"
@@ -51,5 +51,5 @@ Scenario Outline: Dragging play sound block
 
 Examples:
   | url                                                       | test_name               |
-  | http://studio.code.org/s/allthethings/lessons/46/levels/4 | music lab script level  |
+  | http://studio.code.org/courses/allthethingscourse/units/1/lessons/46/levels/4 | music lab script level  |
   | http://studio.code.org/projects/music/new                 | music lab project       |

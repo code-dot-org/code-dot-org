@@ -36,5 +36,5 @@ export async function deleteFile(filename: string, levelName: string) {
 }
 
 export function getFileUrl(filename: string, levelName: string) {
-  return `${getPath(levelName)}/${filename}`;
+  return `${getPath(levelName)}/${encodeURIComponent(filename)}`;
 }

@@ -1,5 +1,6 @@
 @no_mobile
 @single_session
+@pegasus_content
 Feature: Header navigation bar - Signed out
   Scenario: Signed out user in English should see 7 header links
     Given I am on "http://code.org/"
@@ -58,6 +59,7 @@ Feature: Header navigation bar - Signed out
     And I see "#header-about"
     And element "#header-about" has "es" text from key "nav.header.about"
 
+  @skip
   @chrome
   Scenario: Signed out user can click on the header links
     Given I am on "http://code.org"

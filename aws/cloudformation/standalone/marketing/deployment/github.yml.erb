@@ -81,6 +81,10 @@ Resources:
                 - "${StaticAssetsBucketArn}/*"
                 - StaticAssetsBucketArn:
                     Fn::ImportValue: !Sub "${MarketingApplicationStackName}-StaticAssetsBucketArn"
+          - Effect: Allow
+            Action:
+              - "cloudfront:CreateInvalidation"
+            Resource: !Sub 'arn:aws:cloudfront::${AWS::AccountId}:distribution/${CloudFrontDistribution}'
 
   GithubDeployerAccessKey:
     Type: AWS::IAM::AccessKey

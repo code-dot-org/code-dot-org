@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-05-08T14:33:36.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Plan a Trip to Disney World\r\n\r\nUse AI Chat to help you plan a trip to Disney World. \r\n\r\n### Do This:\r\n\r\n1. Start by entering a **generic prompt** and read AI Chat's response. For example: \r\n\r\n>Help me plan a trip to Disney World\r\n2. *Revise your prompt* and add specific examples, like **what rides you want to go on** or **which characters you want to meet**. Press **Send** and read AI Chat's updated response.\r\n2. Finally, re-submit your previous prompt and include some **uploaded images**.\r\n3. Press **Send** and read AI Chat's response.\r\n\r\n**Try it out!**\r\n\r\n\r\n::: details [<i class=\"fa fa-file-image-o\" aria-hidden=\"true\"></i> **How do I upload an image?**]\r\n- Click the button labeled **Upload** below your chat input.\r\n- Choose **From Library**\r\n- Then browse the existing images.\r\n- When you have an image to upload, click the checkbox next to it to select it and then click **Open**.\r\n- You should see the image get added to the message being sent to AI Chat.\r\n:::\r\n",
+    "long_instructions": "## AI as a Presentation Coach\r\n\r\nUse AI Chat to help you coach you through an upcoming presentation. \r\n\r\n### Do This:\r\n\r\n1. Start by entering a **generic prompt** and read AI Chat's response. For example: \r\n\r\n>Help me prepare for my class presentation.\r\n2. *Revise your prompt* and add specific examples, like **what topics you plan to present** or **what emotions you might feel while presenting**. Press **Send** and read AI Chat's updated response.\r\n2. Finally, re-submit your previous prompt and **add some images**.\r\n3. Press **Send** and read AI Chat's response.\r\n\r\n**Try it out!**\r\n\r\n\r\n::: details [<i class=\"fa fa-file-image-o\" aria-hidden=\"true\"></i> **How do I add an image?**]\r\n- Click the button labeled **Add** below your chat input.\r\n- Choose **From Library**\r\n- Then browse the existing images.\r\n- When you have an image to upload, click the checkbox next to it to select it and then click **Attach**.\r\n- You should see the image get added to the message being sent to AI Chat.\r\n:::\r\n",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -34,43 +35,25 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "You are a Disneyworld planning chatbot. When given a prompt, answer with your recommendations.\n\nDo not answer any questions that are not related to Disneyworld.",
+      "levelSystemPrompt": "You are a presentation coach chatbot. When given a prompt, answer with recommendations to help with an upcoming presentation.\n\nDo not answer any questions that are not related to a class presentation.",
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
       ],
       "multimodalEnabled": true
     },
-    "bubble_choice_description": "Use AI Chat to help you plan a trip to Disneyworld. Come up with a prompt and select an image that matches.",
-    "display_name": "Plan a Trip to Disneyworld",
-    "thumbnail_url": "https://images.code.org/0edef213fdb81bebcdca1985ed991c2d-Pasted Graphic.png",
+    "bubble_choice_description": "Use AI Chat to help you prepare for a class presentation. Come up with a prompt and select an image that matches.",
+    "display_name": "AI as a Coach",
+    "thumbnail_url": "https://images.code.org/838718e82d2e220168ad790c5e84e2cb-Screenshot 2025-06-04 at 1.19.41 PM.png",
+    "name_suffix": "_2025",
     "starter_assets": {
-      "activity1.png": "eae26ca1-2a53-4d75-9a9e-24cbf4083805.png",
-      "activity2.png": "09467d7e-e54c-4bb9-b64a-ac089b4bc584.png",
-      "activity3.png": "f44cbe4d-c2c4-4bb2-8259-3274c63b406c.png",
-      "activity4.png": "dc48ac67-5c02-43ab-8a3c-28a4e383381d.png",
-      "activity5.png": "77904247-bad3-4e17-b373-6cbb758aed1d.png",
-      "activity6.png": "9a72ad51-17d5-45e7-9841-9edee4db8297.png",
-      "food1.png": "15118dfa-b07a-4251-8495-a460172429a1.png",
-      "food2.png": "a06d8ed4-7871-4f48-9f7c-0f5856a6f572.png",
-      "food3.png": "97059334-e055-48af-bd6b-47d55686539c.png",
-      "food4.png": "6931f2d9-3411-4760-a3db-413a2bded6ce.png",
-      "food5.png": "8929fda6-682c-4172-b2d7-0be55bdbca67.png",
-      "food6.png": "c48a140d-64bf-431b-a329-c74c0408253e.png",
-      "giftshop1.png": "1f323e3e-f3f5-4eb9-961c-0c6b96f7490f.png",
-      "giftshop2.png": "0660e464-70e1-4eb2-8e92-b5e0578f1e52.png",
-      "giftshop3.png": "05b31061-87d8-45c7-bb2a-9837471d1ae3.png",
-      "lodging1.png": "ef095f7e-f8f5-49cf-9805-67f09d2cf1c1.png",
-      "lodging2.png": "78aaea68-ca0d-44ac-bfbb-6bf685ac6558.png",
-      "lodging3.png": "d49998f5-5fea-443e-abd0-8db7ecccdcc3.png",
-      "transportation1.png": "ba454599-9c35-4998-ae2b-cd9f4bb5119b.png",
-      "transportation2.png": "8e8737e5-9bb7-4c3f-840b-d71f91b24d1a.png",
-      "transportation3.png": "9b65fa1d-7d71-4d4a-9fc2-b5a1feda62f9.png",
-      "transportation4.png": "b539eaff-f7b2-4d70-be8a-6eda0bd632c4.png"
-    },
-    "name_suffix": "_2025"
+      "artwork.jpg": "52a5bc20-2316-4b12-83de-de67279a8ad5.jpg",
+      "planning.jpg": "43ef578b-d8c7-458e-a93d-6c77a5396a00.jpg",
+      "presenter.jpg": "997daa23-4293-4731-8082-8347dbc15dd4.jpg",
+      "presenter2.jpg": "ac3bc566-cfd6-4438-857c-616b653aeb56.jpg",
+      "presenter3.jpg": "5874b2e9-1f9a-4be6-8359-7716049dce76.jpg"
+    }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-08T14:33:36.558+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level6-choice1\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level6-choice1\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:33:36.558+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level6-choice1\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level6-choice1\"},{\"changed_at\":\"2025-05-29 21:21:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-06-04 19:19:55 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-04 19:28:50 +0000\",\"changed\":[\"long_instructions\",\"display_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-04 20:12:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-04 20:13:53 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-04 20:21:21 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-11 16:30:56 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

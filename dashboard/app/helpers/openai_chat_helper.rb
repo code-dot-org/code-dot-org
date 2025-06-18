@@ -10,7 +10,9 @@ module OpenaiChatHelper
       @model = model
     end
 
-    def request_chat_completion(messages, temperature = DEFAULT_TEMPERATURE)
+    # Optional "options" parameter is included to provide generic coverage for additional OpenAI parameters.
+    # Examples include "response_format" for JSON response formatting, and "tools" for function calling.
+    def request_chat_completion(messages, temperature = DEFAULT_TEMPERATURE, options: {})
       headers = {
         "Content-Type" => "application/json",
         "Authorization" => "Bearer #{api_key}"
@@ -20,7 +22,7 @@ module OpenaiChatHelper
         model: model,
         temperature: temperature,
         messages: messages
-      }
+      }.merge(options)
 
       HTTParty.post(
         OPEN_AI_URL,

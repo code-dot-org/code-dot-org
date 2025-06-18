@@ -14,7 +14,7 @@ Scenario: Auto-placing blocks
   And block "whenCollideGround" is near offset "16, 186"
 
 Scenario: Auto-placing blocks with XML positioning
-  Given I am on "http://studio.code.org/s/allthethings/lessons/5/levels/4?noautoplay=true&blocklyVersion=google"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/5/levels/4?noautoplay=true&blocklyVersion=google"
   And I wait for the lab page to fully load
 
   When I've initialized the workspace with a manually-positioned playlab puzzle

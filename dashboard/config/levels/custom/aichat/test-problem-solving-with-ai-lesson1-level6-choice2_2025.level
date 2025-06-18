@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-05-08T14:33:36.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Plan Your Lunches\r\n\r\nUse AI Chat to help you plan your lunches for the week. \r\n\r\n### Do This:\r\n\r\n1. Start by entering a **generic prompt** and read AI Chat's response. For example: \r\n\r\n>Help me plan my lunches for the week.\r\n2. Revise your prompt and add specific examples, like **what foods you typically eat** or **which foods you hate**. Press **Send** and read AI Chat's updated response.\r\n3. Finally, re-submit your previous prompt and include an **uploaded image**.\r\n4. Press **Send** and read AI Chat's response.\r\n\r\n**Try it out!**\r\n\r\n\r\n::: details [<i class=\"fa fa-file-image-o\" aria-hidden=\"true\"></i> **How do I upload an image?**]\r\n- Click the button labeled **Upload** below your chat input.\r\n- Choose **From Library**\r\n- Then browse the existing images.\r\n- When you have an image to upload, click the checkbox next to it to select it and then click **Open**.\r\n- You should see the image get added to the message being sent to AI Chat.\r\n:::\r\n\r\n",
+    "long_instructions": "## Using AI as Tutor\r\n\r\nUse AI Chat to help explain difficult topics. \r\n\r\n### Do This:\r\n\r\n1. Start by entering a **generic prompt** and read AI Chat's response. For example: \r\n\r\n>Help me understand my geometry class.\r\n2. Revise your prompt and add specific examples, like **what topics you are learning in class** or **which concepts you already understand**. Press **Send** and read AI Chat's updated response.\r\n3. Finally, re-submit your previous prompt and **add an image**.\r\n4. Press **Send** and read AI Chat's response.\r\n\r\n**Try it out!**\r\n\r\n\r\n::: details [<i class=\"fa fa-file-image-o\" aria-hidden=\"true\"></i> **How do I add an image?**]\r\n- Click the button labeled **Add** below your chat input.\r\n- Choose **From Library**\r\n- Then browse the existing images.\r\n- When you have an image to upload, click the checkbox next to it to select it and then click **Attach**.\r\n- You should see the image get added to the message being sent to AI Chat.\r\n:::\r\n\r\n",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -34,28 +35,24 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "You are a lunch planner. When given a prompt, answer with your recommendations.\n\nDo not answer any questions that are not related to lunch or meal planning.",
+      "levelSystemPrompt": "You are a tutor chatbot. When given a prompt, answer with helpful explainations about the topic requested.\n\nDo not answer any questions that are not related to tutoring help with difficult school topics.",
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
       ],
       "multimodalEnabled": true
     },
-    "bubble_choice_description": "Use AI Chat to help you plan your lunches. Come up with a prompt and select an image that matches.",
-    "display_name": "Plan Your Lunches",
-    "thumbnail_url": "https://images.code.org/391de17354b4038fd83564bae37ea562-meal-planning.png",
+    "bubble_choice_description": "Use AI Chat to help explain difficult topics. Come up with a prompt and select an image that matches.",
+    "display_name": "AI as a Tutor",
+    "thumbnail_url": "https://images.code.org/40baa32c4566fde2f85d60149470662a-Screenshot 2025-06-04 at 1.37.31 PM.png",
+    "name_suffix": "_2025",
     "starter_assets": {
-      "pexels-photo-115740.jpg": "2f6015d9-32b7-45e6-8ba3-274aef4c46e8.jpg",
-      "pexels-photo-1128678.jpg": "2a968e9d-6b88-4e72-be7a-bd939153bb34.jpg",
-      "pexels-photo-2802527.jpg": "b42c8aff-c44e-478b-8035-b603100ab95d.jpg",
-      "pexels-photo-1414651.jpg": "299887e3-43be-4594-967b-eb7899f12220.jpg",
-      "pexels-photo-539451.jpg": "1b9006e4-9512-4717-80a3-2ca4c3b85ad6.jpg",
-      "pexels-photo-1437267.jpg": "9d2930c1-ebe7-4662-8dee-4eba0a6e3488.jpg",
-      "pexels-photo-2233729.jpg": "9034c64b-b5fe-4220-a3bb-57033f6c4e18.jpg"
-    },
-    "name_suffix": "_2025"
+      "balancing_equations.jpg": "7e673e2a-9ba0-4a7b-a109-5d4739e4e08b.jpg",
+      "plant_cell.png": "fa1431b8-1a1a-47f9-ad0d-5bb5d12499bb.png",
+      "simple_machines.png": "1f112d23-5776-4226-8132-15ec331d124b.png",
+      "basic-geometry-formulas.png": "7d48f920-a5d1-4f7c-9963-d216e490167e.png"
+    }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-08T14:33:36.736+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level6-choice2\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level6-choice2\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:33:36.736+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level6-choice2\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level6-choice2\"},{\"changed_at\":\"2025-05-29 21:21:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-06-04 19:29:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-04 19:31:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-04 19:39:50 +0000\",\"changed\":[\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-04 19:40:17 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-04 19:45:29 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-04 20:14:06 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-04 20:26:44 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-11 16:33:50 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

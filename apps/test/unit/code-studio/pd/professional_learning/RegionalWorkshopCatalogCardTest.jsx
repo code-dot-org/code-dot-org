@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
@@ -29,14 +29,14 @@ const DEFAULT_PROPS = {
   name: 'National Test Workshop',
   capacity: 10,
   numEnrollments: 2,
+  supportedGradeLevels: null,
   sessions: [TEST_SESSION_1],
   format: 'In-Person',
   locationName: 'Test University',
   fee: '$400',
   hasPrereq: true,
-  requiresApplication: false,
-  customApplicationLink: '',
-  customRegistrationLink: '',
+  description: 'Test description',
+  customRegistrationLink: null,
 };
 
 const renderDefault = (overrideProps = {}) => {
@@ -49,8 +49,7 @@ describe('RegionalWorkshopCatalog', () => {
     renderDefault({capacity: 5, numEnrollments: 5});
 
     screen.getByText('Full');
-    // Cannot find inaccessible link button since it's disabled
-    expect(screen.queryByRole('link', {name: 'enrollNow'})).toEqual(null);
+    expect(screen.queryByRole('button', {name: 'enrollNow'})).toBeDisabled();
   });
 
   it('card states how many spots are left and enables buttons if not full', () => {
@@ -59,7 +58,7 @@ describe('RegionalWorkshopCatalog', () => {
     screen.getByText(
       `${DEFAULT_PROPS.capacity - DEFAULT_PROPS.numEnrollments} Seats Remaining`
     );
-    expect(screen.getByRole('link', {name: 'enrollNow'})).not.toBeDisabled();
+    expect(screen.getByRole('button', {name: 'enrollNow'})).not.toBeDisabled();
   });
 
   it('card shows workshop name when available', () => {
@@ -72,6 +71,30 @@ describe('RegionalWorkshopCatalog', () => {
     renderDefault({name: ''});
 
     screen.getByText(`${DEFAULT_PROPS.course}: ${DEFAULT_PROPS.subject}`);
+  });
+
+  it('card does not list grade levels if workshop has null list of which grades it supports', () => {
+    renderDefault();
+
+    expect(screen.queryByText('FOR TEACHERS OF GRADES:')).toBe(null);
+    expect(screen.queryByText('K')).toBe(null);
+    expect(screen.queryByText('12')).toBe(null);
+  });
+
+  it('card does not list grade levels if workshop has empty list of which grades it supports', () => {
+    renderDefault({supportedGradeLevels: []});
+
+    expect(screen.queryByText('FOR TEACHERS OF GRADES:')).toBe(null);
+    expect(screen.queryByText('K')).toBe(null);
+    expect(screen.queryByText('12')).toBe(null);
+  });
+
+  it('card lists grade levels if workshop lists which grades it supports', () => {
+    renderDefault({supportedGradeLevels: ['1', '2', '3']});
+
+    screen.getByText('FOR TEACHERS OF GRADES:');
+    screen.getByText('K');
+    screen.getByText('12');
   });
 
   it('card lists start datetime of first session for workshop with one session', () => {
@@ -88,48 +111,40 @@ describe('RegionalWorkshopCatalog', () => {
     screen.getByText('04/22/25 (1:00PM-9:00PM) + 1 More');
   });
 
-  it('card renders button to send user to custom application link if provided and applications are required', () => {
-    const customApplicationLink = 'customapplicationlink.com';
-    renderDefault({
-      requiresApplication: true,
-      customApplicationLink: customApplicationLink,
+  it('card renders Learn More button that opens dialog with provided description', async () => {
+    renderDefault();
+
+    expect(screen.queryByText(DEFAULT_PROPS.description)).toBe(null);
+    expect(screen.queryByRole('button', {name: 'closeLearnMoreDialog'})).toBe(
+      null
+    );
+
+    fireEvent.click(screen.getByRole('button', {name: 'learnMore'}));
+
+    await waitFor(() => {
+      screen.getByText(DEFAULT_PROPS.description);
+      screen.getByRole('button', {name: 'closeLearnMoreDialog'});
     });
-
-    expect(
-      screen.getByRole('link', {
-        name: 'applyNow',
-      })
-    ).toHaveAttribute('href', customApplicationLink);
   });
 
-  it('card renders button to send user to teacher application if applications are required and no custom link is provided', () => {
-    renderDefault({requiresApplication: true});
+  it('card renders Learn More button that opens dialog with default description if none provided', async () => {
+    renderDefault({description: ''});
 
-    expect(
-      screen.getByRole('link', {
-        name: 'applyNow',
-      })
-    ).toHaveAttribute('href', '/pd/application/teacher');
+    fireEvent.click(screen.getByRole('button', {name: 'learnMore'}));
+
+    await waitFor(() => {
+      screen.getByText('No description available.');
+      screen.getByRole('button', {name: 'closeLearnMoreDialog'});
+    });
   });
 
-  it('card renders button to send user to custom registration link if provided and applications are not required', () => {
-    const customRegistrationLink = 'customregistrationlink.com';
-    renderDefault({customRegistrationLink: customRegistrationLink});
-
-    expect(
-      screen.getByRole('link', {
-        name: 'enrollNow',
-      })
-    ).toHaveAttribute('href', customRegistrationLink);
-  });
-
-  it('card renders button to send user to workshop registration link if applications are not required and no custom link is provided', () => {
+  it('card renders button to send user to registration link', () => {
     renderDefault();
 
     expect(
-      screen.getByRole('link', {
+      screen.getByRole('button', {
         name: 'enrollNow',
       })
-    ).toHaveAttribute('href', `/pd/workshops/${DEFAULT_PROPS.id}/enroll`);
+    ).not.toBeDisabled();
   });
 });
