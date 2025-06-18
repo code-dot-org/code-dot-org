@@ -5499,7 +5499,7 @@ en:
             * You can find the *Syllabus* and other resources to help you implement this curriculum in the Teacher Resources menu below.
           version_title: "'25-'26"
         self-paced-pl-ai-foundations-2025:
-          title: Teaching AI Foundations
+          title: PREVIEW - Teaching AI Foundations
           description_short: ''
           description_student: This Professional Learning (PL) unit on AI Foundations will equip you to guide your students in exploring the core principles of how computers and artificial intelligence empower individuals to solve problems, make decisions, and foster creativity. You will gain insights into the student learning journey as they write their own programs in Python, unravel the workings of devices and the Internet, and learn to analyze data to identify patterns and construct narratives. This PL will also focus on how to effectively integrate AI tools into the learning process, facilitate critical discussions around privacy and fairness, and cultivate the essential skills students need to become creators of technology, rather than just consumers. By engaging with this unit, you will be prepared to build a strong foundation in AI and computing for your students, fostering both their understanding and their capacity for innovation.
           description_teacher: |-
@@ -5712,7 +5712,7 @@ en:
           version_title: ''
         teaching-csd-microbit-2025:
           title: Preparing to Teach Creating Apps for Devices (micro:bit)
-          description_short: ''
+          description_short: " After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 6 - Teaching Creating Apps with Devices (micro:bit)** with your students."
           description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 6 - Teaching Creating Apps with Devices (micro:bit)** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers CSD Unit 6 - Teaching Creating Apps with Devices. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 6 - Teaching Creating Apps with Devices (micro:bit)** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers CSD Unit 6 - Teaching Creating Apps with Devices. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           version_title: 25-26
@@ -5933,7 +5933,7 @@ en:
           description_short: Welcome to Code.org's free self-paced online educator course for getting started with Computer Science Fundamentals!
           description_student: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_teacher: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
-          version_title: 25 - 26
+          version_title: "'25-'26"
         teaching-fabric-of-internet-2025:
           title: Teaching Fabric of the Internet
           description_short: ''

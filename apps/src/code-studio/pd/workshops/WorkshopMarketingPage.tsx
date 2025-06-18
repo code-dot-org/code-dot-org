@@ -22,8 +22,10 @@ const workshopMarketingBreadcrumbs: LinkWithText[] = [
   },
 ];
 
-interface WorkshopMarketingPageProps
-  extends GetWorkshopInfoScriptDataResponse {}
+interface WorkshopMarketingPageProps extends GetWorkshopInfoScriptDataResponse {
+  is_signed_out: boolean;
+  is_student: boolean;
+}
 
 const WorkshopMarketingPage: React.FunctionComponent<
   WorkshopMarketingPageProps
@@ -44,6 +46,8 @@ const WorkshopMarketingPage: React.FunctionComponent<
     regional_partner_name,
     organizer,
     facilitators,
+    is_signed_out,
+    is_student,
   } = props;
 
   return (
@@ -78,6 +82,8 @@ const WorkshopMarketingPage: React.FunctionComponent<
               custom_registration_link={custom_registration_link}
               capacity={capacity}
               num_enrollments={num_enrollments}
+              is_signed_out={is_signed_out}
+              is_student={is_student}
             />
 
             <OrganizerInformation

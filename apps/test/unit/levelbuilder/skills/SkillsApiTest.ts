@@ -3,6 +3,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 describe('skillsApi', () => {
   const skillData = {
+    id: 0,
     key: 'new_skill',
     description: 'This is a new skill',
     evaluationCriteria: 'Criteria for evaluation',

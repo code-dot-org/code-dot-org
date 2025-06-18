@@ -10,11 +10,16 @@ import {GetWorkshopInfoScriptDataResponse} from '@cdo/apps/code-studio/pd/worksh
 
 import moduleStyles from './../workshopMarketingPage.module.scss';
 
+const WORKSHOP_ENROLL_SOURCE_PAGE = 'workshop enroll';
+
 interface EnrollInWorkshopProps
   extends Pick<
     GetWorkshopInfoScriptDataResponse,
     'custom_registration_link' | 'num_enrollments' | 'capacity' | 'id'
-  > {}
+  > {
+  is_signed_out: boolean;
+  is_student: boolean;
+}
 
 /** Component to display the enrollment information for a workshop. */
 const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
@@ -22,8 +27,26 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
   custom_registration_link,
   num_enrollments,
   capacity,
+  is_signed_out,
+  is_student,
 }) => {
   const isFull = num_enrollments >= capacity;
+
+  const buildEnrollButtonLink = (enrollLink: string) => {
+    if (is_signed_out) {
+      return `/logged_out?source_page=${encodeURIComponent(
+        WORKSHOP_ENROLL_SOURCE_PAGE
+      )}&return_to=${encodeURIComponent(enrollLink)}`;
+    }
+
+    if (is_student) {
+      return `/teacher_account_required?source_page=${encodeURIComponent(
+        WORKSHOP_ENROLL_SOURCE_PAGE
+      )}&return_to=${encodeURIComponent(enrollLink)}`;
+    }
+
+    return enrollLink;
+  };
 
   const renderEnrollmentAction = () => {
     if (isFull) {
@@ -46,7 +69,7 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
             partner.
           </BodyThreeText>
           <LinkButton
-            href={custom_registration_link}
+            href={buildEnrollButtonLink(custom_registration_link)}
             className={moduleStyles.fullWidthButton}
             type="primary"
             size="m"
@@ -62,7 +85,7 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
         className={moduleStyles.fullWidthButton}
         type="primary"
         size="m"
-        href={`/pd/workshops/${id}/enroll`}
+        href={buildEnrollButtonLink(`/pd/workshops/${id}/enroll`)}
         text="Enroll in this workshop"
       />
     );

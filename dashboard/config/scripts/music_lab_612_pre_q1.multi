@@ -1,11 +1,11 @@
 name 'music-lab-612-pre-q1'
 
-question 'Put actual question here'
+question 'Which timeline matches Alina\'s code?'
 
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
-right 'correct'
+wrong 'https://images.code.org/14888b6ddf46c78a5d9ab858de7aa90a-image-1750180290651.png'
+wrong 'https://images.code.org/810ebcea6cd9b0936c654f4f2033c89c-image-1750180294589.png'
+wrong 'https://images.code.org/c4a7e8ae7030c2631033af3a9a710b74-image-1750180298380.png'
+right 'https://images.code.org/35f5af4a2baf04c7a07cc3c2997c7cc8-image-1750180209486.png'
 
 allow_multiple_attempts true
 
@@ -25,5 +25,7 @@ Posttest Modality: Given algorithm / intent / incorrect code, match with code
 MARKDOWN
 
 markdown <<MARKDOWN
-Put the images / context markdown here
+Alina is exploring which drum and bass sounds work best together following the guitar intro. This is the code she has so far.
+
+![](https://images.code.org/e3f1025b55996bbc8e0520b97d52ccce-image-1750180334262.png)
 MARKDOWN

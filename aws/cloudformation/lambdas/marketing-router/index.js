@@ -266,24 +266,107 @@ const marketingPaths = {
   "/en-US/tools/python-lab": true,
   "/en-US/curriculum/computer-science-connections": true,
   // Farsi Redirects
-  "/global/fa": true,
   "/global/fa/csf": true,
+  "/global/fa": true,
   "/global/fa/hourofcode": true,
   "/global/fa/videos": true,
   "/global/fa/about": true,
   "/global/fa/teacher": true,
   "/farsi": true,
+  // Post Launch 1
+  "/afe": true,
+  "/music": true,
+  "/helloworld": true,
+  "/minecraft": true,
+  "/beyond": true,
+  "/afe/start-codeorg": true,
+  "/afe/success": true,
+  "/careers-with-cs/k5": true,
+  "/csjourneys/cs-in-college": true,
+  "/csjourneys/csadventures": true,
+  "/csjourneys/engage-parents": true,
+  "/csjourneys/index": true,
+  "/csjourneys/nextsteps": true,
+  "/csjourneys/pastchats": true,
+  "/curriculum/3rd-party": true,
+  "/help": true,
+  "/maker/circuitplayground": true,
+  "/maker/microbit": true,
+  "/maker/pick-a-device": true,
+  "/promote/thanks": true,
+  "/pluralsight": true,
+  "/project-ideas": true,
+  "/quotes": true,
+  "/youngwomen": true,
+  "/afe/india": true,
+  "/girls": true,
+  "/translate": true,
+  "/hour-of-code/music": true,
+  "/hour-of-code/helloworld": true,
+  "/hour-of-code/minecraft": true,
+  "/incubator": true,
+  "/resources/amazon-future-engineer": true,
+  "/starwars": true,
+  "/hour-of-code/starwars": true,
+  "/engineering/all-the-things": true,
+  "/hourofcode": true,
+  "/hour-of-code": true,
+  "/csjourneys": true
 }
 
 const nextJsAssetsPath = '/_next/static/';
+
+const SUPPORTED_LOCALES = new Set([
+  'en-US',
+  'es',
+  'ar',
+  'de',
+  'fa',
+  'fr',
+  'hi',
+  'id',
+  'it',
+  'ja',
+  'ko',
+  'mr',
+  'pl',
+  'pt-BR',
+  'sk',
+  'th',
+  'tr',
+  'uk',
+  'vi',
+  'zh-TW',
+  'sq',
+  'tl',
+  'he',
+]);
+
+// Remove the localized portion of paths, if there is a localized portion.
+// For example:
+// 1. /en-US/engineering/all-the-things becomes /engineering/all-the-things
+// 2. /engineering/all-the-things remains unchanged
+function extractPaths(uri) {
+  const parts = uri.split('/').filter(Boolean); // Remove empty segments
+  const localeRegex = /^[a-z]{2}(-[A-Z]{2})?$/;
+
+  if (parts.length && localeRegex.test(parts[0]) && SUPPORTED_LOCALES.has(parts[0])) {
+    // Has locale, return everything after locale
+    return '/' + parts.slice(1).join('/');
+  }
+
+  // No locale, return as-is
+  return uri;
+}
 
 module.exports.handler = (event, context, callback) => {
   try {
     const request = event?.Records?.[0]?.cf?.request;
     const uri = request?.uri;
-  
+    const normalizedURI = extractPaths(uri);
+
     // Set CMS origin if the requested path matches
-    if (marketingPaths[uri] || (uri && uri.startsWith(nextJsAssetsPath))) {
+    if (marketingPaths[normalizedURI] || (uri && uri.startsWith(nextJsAssetsPath))) {
       request.origin = {
         custom: {
           domainName: marketingDomain,

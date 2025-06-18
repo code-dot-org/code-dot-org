@@ -1,5 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Image from '@code-dot-org/component-library/image';
 import {
   BodyTwoText,
   BodyThreeText,
@@ -21,7 +22,11 @@ const FacilitatorItem: React.FC<{facilitator: FacilitatorInfo}> = ({
     <div className={moduleStyles.workshopFacilitatorItem}>
       <div className={moduleStyles.workshopFacilitatorItemHeader}>
         <div className={moduleStyles.workshopFacilitatorContactImage}>
-          <FontAwesomeV6Icon iconName="user" />
+          {facilitator.image_path ? (
+            <Image src={facilitator.image_path} />
+          ) : (
+            <FontAwesomeV6Icon iconName="user" />
+          )}
         </div>
         <div className={moduleStyles.workshopFacilitatorContactInfo}>
           <BodyTwoText>

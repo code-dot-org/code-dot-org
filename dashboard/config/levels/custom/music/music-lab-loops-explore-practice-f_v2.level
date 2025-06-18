@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:57:37.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Fade Out\r\n\r\nRosa wants to create a \"fade out\" effect where the song gradually stops playing certain tracks:\r\n\r\n> First I want the vocals to stop after 2 measures. Then the guitar should stop, and then the bass. Then the beat stops so all that's playing is the flute for one last measure. I love the flute part!\r\n\r\nCan you help her create this effect using loops? When you're finished, your timeline should look like this:\r\n\r\n![](https://images.code.org/ad443c960e5d186f910a6e922b41a1f6-image-1743189322873.png)\r\n\r\n\r\n<!--\r\nRosa wants to create a \"fade out\" effect where the song gradually stops playing certain tracks:\r\n\r\n\"First I want the vocals to stop after 2 measures. Then the guitar should stop, and then the bass. Then the beat stops so all that's playing is the flute for one last measure. I love the flute part!\"\r\n\r\nRosa is focusing on the essential layers of her song to shape the mood. She’s using abstraction to highlight just the flute in the end.\r\n\r\nYour task: Use abstraction to focus on the most important tracks for the fade-out. Identify which tracks should continue or stop at each stage, and simplify your code by organizing repeated musical structure into loops. Your final version should feature the flute alone in the last measure.\r\n-->",
+    "long_instructions": "#### Fade Out\r\n\r\nRosa wants to create a \"fade out\" effect where the song gradually stops playing certain tracks:\r\n\r\n> First I want the vocals to stop after 2 measures. Then the guitar should stop, and then the bass. Then the beat stops so all that's playing is the flute for one last measure. I love the flute part!\r\n\r\nRosa is focusing on the essential layers of her song to shape the mood, using **abstraction** to highlight just the flute in the end.\r\n\r\n**Your task**: Create this remix by identifying which tracks should continue or stop at each stage. Use loops to simplify your code so the flute alone in the last measure. When you're finished, your timeline should look like this:\r\n\r\n![](https://images.code.org/ad443c960e5d186f910a6e922b41a1f6-image-1743189322873.png)\r\n",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -120,8 +121,7 @@
     "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/shakira_whenever_wherever/shakira_whenever_wherever.jpg",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:37.487+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-explore-practice-f\\\"\"],\"cloned_from\":\"music-lab-loops-explore-practice-f\"},{\"changed_at\":\"2025-06-10 18:07:20 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-12 15:52:33 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-12 15:59:14 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:37.487+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-explore-practice-f\\\"\"],\"cloned_from\":\"music-lab-loops-explore-practice-f\"},{\"changed_at\":\"2025-06-10 18:07:20 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-12 15:52:33 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-12 15:59:14 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-13 21:07:38 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

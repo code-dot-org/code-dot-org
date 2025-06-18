@@ -2,12 +2,7 @@ import {MetricEvent} from '@cdo/apps/metrics/events';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-interface Skill {
-  key: string;
-  description: string;
-  evaluationCriteria: string;
-  concept: string;
-}
+import {LevelsSkill, Skill} from './types';
 
 export async function createSkill(skill: Skill) {
   const response = await HttpClient.post(
@@ -33,11 +28,6 @@ export async function createSkill(skill: Skill) {
       });
     });
   return response;
-}
-
-interface LevelsSkill {
-  skillId: number;
-  levelId: number;
 }
 
 export async function createLevelsSkill(levelsSkill: LevelsSkill) {

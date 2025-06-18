@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:57:36.000Z",
   "level_num": "custom",
@@ -473,7 +474,7 @@
       "validationMode": "default",
       "playerTitle": "Example"
     },
-    "long_instructions": "### Izzy's Version\r\n\r\nIzzy wants to recreate the intro to Wake Me Up by Aloe Blacc using the shadow blocks in the workspace. Izzy's strategy is:\r\n\r\n> I noticed the two beat blocks are the same length, so I can play those together in a loop. I also noticed the bass and lead are the same length, so I can play those in a loop too. I just need 2 loops to make this code!\r\n\r\n![](https://images.code.org/1f25f69419bbe868b898d4ec0db742ac-image-1745259843954.png)\r\n\r\nFollow Izzy's strategy to recreate this song. All the blocks you need are already in the workspace. When you're finished, the song should look and sound the same but use loops instead!\r\n\r\n",
+    "long_instructions": "### Izzy's Version\r\n\r\nIzzy wants to recreate the intro to Wake Me Up by Aloe Blacc using the shadow blocks in the workspace:\r\n\r\n> I noticed the two beat blocks are the same length, so I can play those together in a loop. I also noticed the bass and lead are the same length, so I can play those in a loop too. I just need 2 loops to make this code!\r\n\r\n![](https://images.code.org/1f25f69419bbe868b898d4ec0db742ac-image-1745259843954.png)\r\n\r\nIzzy is using abstraction by grouping similar elements - beat blocks in one loop, bass and lead in another - to simplify the overall design of the code.\r\n\r\n**Your task:** Use **abstraction** to group repeating sounds and build loops that focus only on the essential track combinations. Create two loops - one for beats and one for bass & lead - and reconstruct the timeline so that it sounds the same but uses fewer blocks.",
     "predict_settings": {
       "isPredictLevel": false
     },
@@ -573,8 +574,7 @@
     "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/aloe_blacc_wake_me_up/aloe_blacc_wake_me_up.jpg",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:36.462+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-explore-practicev2B\\\"\"],\"cloned_from\":\"music-lab-loops-explore-practicev2B\"},{\"changed_at\":\"2025-06-12 15:51:00 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:36.462+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-explore-practicev2B\\\"\"],\"cloned_from\":\"music-lab-loops-explore-practicev2B\"},{\"changed_at\":\"2025-06-12 15:51:00 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-13 20:27:30 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

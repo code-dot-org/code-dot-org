@@ -3,7 +3,7 @@ import {
   ObservableProcedureModel,
 } from '@blockly/block-shareable-procedures';
 import {FieldColour} from '@blockly/field-colour';
-import {KeyboardNavigation} from '@blockly/keyboard-experiment';
+import {KeyboardNavigation} from '@blockly/keyboard-navigation';
 import * as GoogleBlockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
 
@@ -184,6 +184,9 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
     [originalBlockId: string]: string;
   };
   KeyboardNavigation?: typeof KeyboardNavigation;
+  shortcutBackups: {
+    [name: string]: GoogleBlockly.ShortcutRegistry.KeyboardShortcut | undefined;
+  };
 }
 
 export type GoogleBlocklyInstance = typeof GoogleBlockly;
