@@ -692,7 +692,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test 'pilot teacher can assign pilot script' do
+  test 'pilot teacher can assign pilot course' do
     pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
     pilot_course = create :single_unit_course, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
     pilot_script = pilot_course.first_unit
@@ -710,7 +710,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal pilot_script, returned_section.script
   end
 
-  test 'non pilot teacher cannot assign a pilot script' do
+  test 'non pilot teacher cannot assign a pilot course' do
     pilot_course = create :single_unit_course, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
     CourseOffering.add_course_offering(pilot_course)
 
