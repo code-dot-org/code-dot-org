@@ -306,18 +306,33 @@ Resources:
       VpcId:
         Ref: Vpc
 
-  FargateServiceTaskDefTaskRole:
-    Type: AWS::IAM::Role
-    Properties:
-      RoleName: !Sub "marketing-sites-${EnvironmentType}-${SubdomainName}-task-role"
-      AssumeRolePolicyDocument:
-        Statement:
-          - Action: sts:AssumeRole
-            Effect: Allow
-            Principal:
-              Service: ecs-tasks.amazonaws.com
-        Version: "2012-10-17"
-      PermissionsBoundary: !Ref RoleBoundary
+FargateServiceTaskDefTaskRole:
+  Type: AWS::IAM::Role
+  Properties:
+    RoleName: !Sub "marketing-sites-${EnvironmentType}-${SubdomainName}-task-role"
+    AssumeRolePolicyDocument:
+      Statement:
+        - Action: sts:AssumeRole
+          Effect: Allow
+          Principal:
+            Service: ecs-tasks.amazonaws.com
+      Version: "2012-10-17"
+    PermissionsBoundary: !Ref RoleBoundary
+    Policies:
+      - !If
+        - IsProductionEnvironment
+        - !Ref AWS::NoValue
+        - PolicyName: ECSExecPolicy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - ssmmessages:CreateControlChannel
+                  - ssmmessages:CreateDataChannel
+                  - ssmmessages:OpenControlChannel
+                  - ssmmessages:OpenDataChannel
+                Resource: "*"
 
   FargateServiceTaskDef:
     Type: AWS::ECS::TaskDefinition
