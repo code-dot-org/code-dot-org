@@ -108,6 +108,7 @@ Resources:
               - iam:*
               - organizations:*
               - secretsmanager:*
+              - ecs:ExecuteCommand
             Resource: '*'
           - Sid: IAMReadOnlyAccess
             Effect: Allow
@@ -140,6 +141,15 @@ Resources:
           - Effect: Allow
             Action: secretsmanager:GetSecretValue
             Resource: '*'
+          # Allow ECS ExecuteCommand on test environment resources only
+          - Sid: AllowECSExecuteCommandOnTestResources
+            Effect: Allow
+            Action:
+              - ecs:ExecuteCommand
+            Resource: '*'
+            Condition:
+              StringEquals:
+                aws:ResourceTag/environment-type: test
   # Permissions which grant the CurriculumBuilder project read-only acces to
   # the DCDO database, so select configuration variables can be shared between
   # the two projects.
@@ -870,7 +880,8 @@ roles.each do |name, config| %>
         base_domain_name: 'code.org'
       }
     }
-    marketing_sites_environment_type_configuration.each do |environment_type, configuration|
+    marketing_sites_environment_type_configuration.each do |env_type, configuration|
+      environment_type = env_type.to_s
       hyphenated_base_domain = configuration[:base_domain_name].tr('.', '-')
   %>
   GitHubActions<%=environment_type.capitalize%>Role:
@@ -992,8 +1003,16 @@ roles.each do |name, config| %>
             Resource:
               - !Sub "arn:aws:logs:*:${AWS::AccountId}:log-group:/aws/ecs/*<%=hyphenated_base_domain%>*"
               - !Sub "arn:aws:logs:*:${AWS::AccountId}:log-group:/aws/ecs/*<%=hyphenated_base_domain%>*:log-stream:*"
-          
-          # Add more statements here as we need the Roles provisioned within a marketing sites Stack to have more permissions.
+<% if environment_type == 'test' %>
+          - Sid: AllowSSMMessagesForECSExec
+            Effect: Allow
+            Action:
+              - ssmmessages:CreateControlChannel
+              - ssmmessages:CreateDataChannel
+              - ssmmessages:OpenControlChannel
+              - ssmmessages:OpenDataChannel
+            Resource: '*'
+<% end %>
 
   CloudFormationServiceMarketingSites<%=environment_type.capitalize%>Role:
     Type: AWS::IAM::Role
