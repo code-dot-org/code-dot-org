@@ -176,17 +176,31 @@ function LevelDataCell({
           {levelCellUnexpanded}
         </div>
         <div
-          className={classNames(styles.gridBox, styles.gridBoxMetadata, {
-            [styles.gridBoxChoiceSubLevel]: level.parentLevelId !== undefined,
-          })}
+          className={classNames(
+            styles.gridBox,
+            styles.gridBoxMetadata,
+            index % 2 === 0
+              ? styles.lighterBackground
+              : styles.darkerBackground,
+            {
+              [styles.gridBoxChoiceSubLevel]: level.parentLevelId !== undefined,
+            }
+          )}
           aria-label={i18n.timeSpentMins()}
         >
           {!level.parentLevelId && formatTimeSpent(studentLevelProgress)}
         </div>
         <div
-          className={classNames(styles.gridBox, styles.gridBoxMetadata, {
-            [styles.gridBoxChoiceSubLevel]: level.parentLevelId !== undefined,
-          })}
+          className={classNames(
+            styles.gridBox,
+            styles.gridBoxMetadata,
+            index % 2 === 0
+              ? styles.lighterBackground
+              : styles.darkerBackground,
+            {
+              [styles.gridBoxChoiceSubLevel]: level.parentLevelId !== undefined,
+            }
+          )}
           aria-label={i18n.lastUpdated()}
         >
           {!level.parentLevelId && formatLastUpdated(studentLevelProgress)}

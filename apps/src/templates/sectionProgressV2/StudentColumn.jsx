@@ -104,7 +104,8 @@ function StudentColumn({
       <div
         className={classNames(
           styles.gridBox,
-          styles.studentColumnExpandedHeaderText
+          styles.studentColumnExpandedHeaderText,
+          ind % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
         )}
       >
         {i18n.timeSpentMins()}
@@ -112,7 +113,8 @@ function StudentColumn({
       <div
         className={classNames(
           styles.gridBox,
-          styles.studentColumnExpandedHeaderText
+          styles.studentColumnExpandedHeaderText,
+          ind % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
         )}
       >
         {i18n.lastUpdatedTitle()}
