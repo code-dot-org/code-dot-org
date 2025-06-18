@@ -64,7 +64,7 @@ class ContentCommitter
   # @raise [RuntimeError] If the content push was unsuccessful
   def commit_content
     Dir.chdir(deploy_dir) do
-      success = ContentPush.commit_and_push('robo-commit', force: true)
+      success = ContentPush.commit_and_push('robo-commit')
       raise "Content push was unsuccessful" unless success
     end
   end
