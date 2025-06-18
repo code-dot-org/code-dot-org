@@ -1,5 +1,5 @@
 import Negotiator from 'negotiator';
-import {NextFetchEvent, NextRequest, NextResponse} from 'next/server';
+import {NextFetchEvent, NextRequest} from 'next/server';
 
 import {
   getLocalizeJsLocale,
@@ -10,6 +10,7 @@ import {
 import {getStage} from '@/config/stage';
 import {getStudioBaseUrl} from '@/config/studio';
 import {getContentfulSlug} from '@/contentful/slug/getContentfulSlug';
+import {getCachedRedirectResponse} from '@/middleware/utils/getCachedRedirectResponse';
 
 import {MiddlewareFactory} from './types';
 
@@ -71,7 +72,7 @@ export const withLocale: MiddlewareFactory = next => {
       const userTypeCookie = request.cookies.get('_user_type');
 
       if (userTypeCookie?.value) {
-        return NextResponse.redirect(getStudioBaseUrl());
+        return getCachedRedirectResponse(getStudioBaseUrl());
       }
     }
 
@@ -89,7 +90,7 @@ export const withLocale: MiddlewareFactory = next => {
     const locale = cookieLocale || browserPreferredLocale || 'en-US';
 
     const redirectUrl = new URL(`/${locale}/${slug}`, request.url);
-    const response = NextResponse.redirect(redirectUrl);
+    const response = getCachedRedirectResponse(redirectUrl);
 
     // Set the language cookie if discovered via Accept-Language header
     response.cookies.set('language_', getPegasusLocale(locale), {

@@ -87,6 +87,9 @@ describe('withLocale middleware', () => {
     expect(response?.headers.get('location')).toBe(
       'https://test.code.org/zh-TW/home',
     );
+    expect(response?.headers.get('Cache-Control')).toEqual(
+      's-maxage=3600, stale-while-revalidate=31535100',
+    );
   });
 
   it('should redirect to the locale path if no locale is present in the path but has accept-language haeder', async () => {
@@ -107,6 +110,9 @@ describe('withLocale middleware', () => {
     expect(response).toBeInstanceOf(NextResponse);
     expect(response?.headers.get('location')).toBe(
       'https://test.code.org/zh-TW/home',
+    );
+    expect(response?.headers.get('Cache-Control')).toEqual(
+      's-maxage=3600, stale-while-revalidate=31535100',
     );
   });
 
@@ -163,6 +169,9 @@ describe('withLocale middleware', () => {
 
     expect(response).toBeInstanceOf(NextResponse);
     expect(response?.headers.get('location')).toContain('studio.code.org');
+    expect(response?.headers.get('Cache-Control')).toEqual(
+      's-maxage=3600, stale-while-revalidate=31535100',
+    );
   });
 
   it('should handle paths with multiple segments correctly', async () => {
