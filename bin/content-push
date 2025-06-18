@@ -1,16 +1,20 @@
 #!/usr/bin/env ruby
+#
+# This script serves as a command-line wrapper around the ContentPush module.
+# While most local code should use the ContentPush module directly, this wrapper
+# is maintained for:
+#
+# 1. Remote calls from other servers (e.g., from bin/dotd which runs commands on staging/levelbuilder)
+# 2. Backward compatibility with existing scripts and documentation
+# 3. Command-line usage by developers
+#
+# For programmatic use within Ruby code, prefer using the ContentPush module directly:
+#   require 'cdo/content_push'
+#   ContentPush.commit_and_push(name)
+#
 require 'optparse'
 require_relative '../deployment'
-require 'cdo/git_utils'
-require 'cdo/only_one'
-
-CONTENT_PATHS = 'dashboard pegasus aws/dms'.freeze
-
-# Revert any local changes to these files on levelbuilder
-LEVELBUILDER_OMISSIONS = [
-  'dashboard/db/schema_cache.yml',
-  'dashboard/db/schema.rb',
-]
+require 'cdo/content_push'
 
 def ask_for_name
   name = ''
@@ -20,66 +24,6 @@ def ask_for_name
   end
   puts "Hi #{name}!"
   name
-end
-
-def disallow_case_change
-  `git add -A #{CONTENT_PATHS}`
-  ignore_levelbuilder_omissions
-  `git status --porcelain --untracked-files=all #{CONTENT_PATHS}`.split("\n").each do |line|
-    next unless (%r{^R  ([^ ]+) -> ([^ ]+)}.match(line) || %r{^R  ("[^"]+") -> ("[^"]+")}.match(line)) && $1.casecmp($2) == 0
-    warn "\nAborting due to case-only rename:\n\n    #{line}\n\n"
-    warn "To fix this, run the following commands:\n\n"
-    warn "    git add #{$2}\n\n"
-    warn "    git mv #{$2} #{$2}.tmp\n\n"
-    warn "    git commit --only #{$1} #{$2}.tmp -m 'temporarily rename #{$1} -> #{$2}.tmp'\n\n"
-    warn "    git mv #{$2}.tmp #{$2}\n\n"
-    warn "    bin/content-push\n\n"
-    # unstage all changes so the above instructions can be followed
-    `git reset HEAD`
-    exit 1
-  end
-end
-
-def ignore_levelbuilder_omissions
-  if GitUtils.current_branch == 'levelbuilder'
-    system("git reset -q HEAD -- '#{LEVELBUILDER_OMISSIONS.join("' '")}'")
-    system("git checkout -q HEAD -- '#{LEVELBUILDER_OMISSIONS.join("' '")}'")
-  end
-end
-
-def has_changes?
-  !`git status --porcelain --untracked-files=all #{CONTENT_PATHS}`.empty?
-end
-
-def check_changes
-  unless has_changes?
-    puts "There are no unstaged or untracked files to commit."
-    return false
-  end
-
-  disallow_case_change
-
-  system("git status --untracked-files=all #{CONTENT_PATHS}")
-  print "Should I commit and push all of these unstaged and untracked files in pegasus and dashboard? [Y/n] "
-  input = gets.chomp
-  if input == '' || input[0].casecmp?('y')
-    puts "Cool!"
-    true
-  else
-    puts "Ok, not doing anything."
-    false
-  end
-end
-
-def commit_changes(name)
-  ignore_levelbuilder_omissions
-  exit 0 unless has_changes?
-
-  branchname = GitUtils.current_branch
-  exit 1 unless system("git add -A #{CONTENT_PATHS}")
-  exit 1 unless system("git commit -m '#{branchname} content changes (-#{name})'")
-  exit 1 unless system("git pull")
-  exit 1 unless system("git push")
 end
 
 options = {}
@@ -105,10 +49,22 @@ end.parse!
 
 raise OptionParser::MissingArgument, 'Name is required if forcing push' if options['force'] && options['name'].nil?
 
-Dir.chdir(deploy_dir) do
-  name = options['name'] || ask_for_name
+name = options['name'] || ask_for_name
 
-  if options['force'] || check_changes
-    commit_changes(name)
+# Handle interactive mode if not forcing
+if !options['force']
+  # Show status and ask for confirmation
+  status = ContentPush.get_status
+  puts status
+  
+  print "Should I commit and push all of these unstaged and untracked files in pegasus and dashboard? [Y/n] "
+  input = gets.chomp
+  if input != '' && !input[0].casecmp?('y')
+    puts "Ok, not doing anything."
+    exit(0)
   end
+  puts "Ok, pushing!"
 end
+
+success = ContentPush.commit_and_push(name)
+exit(success ? 0 : 1)

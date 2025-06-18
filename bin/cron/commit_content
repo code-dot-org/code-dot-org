@@ -8,6 +8,8 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/developers_topic'
+require 'cdo/levelbuilder_content_restrictions'
+require 'cdo/content_push'
 
 class ContentCommitter
   # @param [Symbol] env The environment the commit is being performed on.
@@ -58,13 +60,13 @@ class ContentCommitter
     false
   end
 
-  # Runs content-push, creating a new commit with any new content.
-  # @raise [RuntimeError] If the content-push was unsuccessful.
-  # TODO(asher): As we are now using content-push as a service rather than as an executable, we
-  # should convert it from an executable to a module.
+  # Commits content changes using the ContentPush module
+  # @raise [RuntimeError] If the content push was unsuccessful
   def commit_content
-    success = system "~/#{@env}/bin/content-push --force --name robo-commit"
-    raise "#{@env}/bin/content-push was unsuccessful" unless success
+    Dir.chdir(deploy_dir) do
+      success = ContentPush.commit_and_push('robo-commit', force: true)
+      raise "Content push was unsuccessful" unless success
+    end
   end
 
   def set_slack_failed
