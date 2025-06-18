@@ -4,18 +4,20 @@
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Professional Learning",
-  "marketing_initiative": null,
-  "grade_levels": null,
+  "marketing_initiative": "CSD",
+  "grade_levels": "6,7,8,9,10",
   "header": "self_paced",
-  "image": null,
-  "cs_topic": null,
+  "image": "https://images.code.org/2743ced9225e2dc92480a08cd2c93c93-self-paced-pl-tile-maker-cp.avif",
+  "cs_topic": "physical_computing",
   "school_subject": null,
   "device_compatibility": null,
-  "description": null,
+  "description": "After completing this professional learning experience, you'll be ready to get started teaching Code.org's CSD Unit 6 - Creating Apps with Devices (Circuit Playground) with your students.",
   "professional_learning_program": null,
   "video": null,
-  "published_date": null,
+  "published_date": "2025-05-30 05:00:00 UTC",
   "self_paced_pl_course_offering_key": null,
   "ai_teaching_assistant_available": false,
-  "facilitator_course_permissions": null
+  "facilitator_course_permissions": [
+
+  ]
 }

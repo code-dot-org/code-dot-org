@@ -3,7 +3,6 @@ import {
   ObservableParameterModel,
 } from '@blockly/block-shareable-procedures';
 import {installAllBlocks as installFieldColourBlocks} from '@blockly/field-colour';
-import {KeyboardNavigation} from '@blockly/keyboard-navigation';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
 import {
   ScrollBlockDragger,
@@ -52,6 +51,7 @@ import CdoFieldToggle from './addons/cdoFieldToggle';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import initializeGenerator from './addons/cdoGenerator';
 import {gestureOverrides} from './addons/cdoGesture';
+import {initializeKeyboardNavigation} from './addons/cdoKeyboardNavigation';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRendererGeras from './addons/cdoRendererGeras';
 import CdoRendererThrasos from './addons/cdoRendererThrasos';
@@ -185,8 +185,8 @@ const BlocklyWrapper = function (
       const fieldClass = override[2];
 
       // Force Google Blockly to use our custom versions of fields
-      this.blockly_.fieldRegistry.unregister(fieldRegistryName);
-      this.blockly_.fieldRegistry.register(fieldRegistryName, fieldClass);
+      this.fieldRegistry.unregister(fieldRegistryName);
+      this.fieldRegistry.register(fieldRegistryName, fieldClass);
 
       // Add each field for when our wrapper is accessed in /apps code
       // This method helps us avoid duplicated boilerplate, but we would
@@ -301,13 +301,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   ];
   blocklyWrapper.overrideFields(fieldOverrides);
 
-  // Overrides applied directly to core blockly
-  // TODO: Can we remove this assignment?
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  (blocklyWrapper.blockly_ as any).FunctionEditor = FunctionEditor;
   // TODO: Can/should we make CdoTrashcan have the same type as Trashcan?
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  blocklyWrapper.blockly_.Trashcan = CdoTrashcan as any;
+  blocklyWrapper.Trashcan = CdoTrashcan as any;
 
   // Code.org custom fields
   blocklyWrapper.AngleHelper = CdoAngleHelper;
@@ -321,53 +317,53 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   blocklyWrapper.FieldAngleDropdown = CdoFieldAngleDropdown;
   blocklyWrapper.FieldAngleTextInput = CdoFieldAngleTextInput;
 
-  blocklyWrapper.blockly_.registry.register(
-    blocklyWrapper.blockly_.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
-    blocklyWrapper.blockly_.registry.DEFAULT,
+  blocklyWrapper.registry.register(
+    blocklyWrapper.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
+    blocklyWrapper.registry.DEFAULT,
     CdoVerticalFlyout,
     true /* opt_allowOverrides */
   );
 
-  blocklyWrapper.blockly_.registry.register(
-    blocklyWrapper.blockly_.registry.Type.RENDERER,
+  blocklyWrapper.registry.register(
+    blocklyWrapper.registry.Type.RENDERER,
     Renderers.GERAS,
     CdoRendererGeras,
     true /* opt_allowOverrides */
   );
-  blocklyWrapper.blockly_.registry.register(
-    blocklyWrapper.blockly_.registry.Type.RENDERER,
+  blocklyWrapper.registry.register(
+    blocklyWrapper.registry.Type.RENDERER,
     Renderers.THRASOS,
     CdoRendererThrasos,
     true /* opt_allowOverrides */
   );
-  blocklyWrapper.blockly_.registry.register(
-    blocklyWrapper.blockly_.registry.Type.RENDERER,
+  blocklyWrapper.registry.register(
+    blocklyWrapper.registry.Type.RENDERER,
     Renderers.ZELOS,
     CdoRendererZelos,
     true /* opt_allowOverrides */
   );
-  blocklyWrapper.blockly_.registry.register(
-    blocklyWrapper.blockly_.registry.Type.CONNECTION_CHECKER,
+  blocklyWrapper.registry.register(
+    blocklyWrapper.registry.Type.CONNECTION_CHECKER,
     'cdo_connection_checker',
     CdoConnectionChecker,
     true /* opt_allowOverrides */
   );
-  blocklyWrapper.blockly_.serialization.registry.unregister('blocks');
-  blocklyWrapper.blockly_.serialization.registry.register(
+  blocklyWrapper.serialization.registry.unregister('blocks');
+  blocklyWrapper.serialization.registry.register(
     'blocks',
     new CdoBlockSerializer()
   );
 
   const procedureSerializer =
-    new blocklyWrapper.blockly_.serialization.procedures.ProcedureSerializer(
+    new blocklyWrapper.serialization.procedures.ProcedureSerializer(
       ObservableProcedureModel,
       ObservableParameterModel
     );
 
   blocklyWrapper.procedureSerializer = procedureSerializer;
   // Register the shareable procedures serializer, used for the modal function editor.
-  blocklyWrapper.blockly_.serialization.registry.unregister('procedures');
-  blocklyWrapper.blockly_.serialization.registry.register(
+  blocklyWrapper.serialization.registry.unregister('procedures');
+  blocklyWrapper.serialization.registry.register(
     'procedures',
     procedureSerializer
   );
@@ -895,48 +891,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
     if (
       options.enableKeyboardNavigation ||
-      experiments.isEnabledAllowingQueryString(
-        experiments.BLOCKLY_KEYBOARD_NAVIGATION
-      )
+      experiments.isEnabledAllowingQueryString(experiments.KEYBOARD_NAVIGATION)
     ) {
-      Blockly.blockly_.ShortcutRegistry.registry.unregister('undo');
-      Blockly.blockly_.ShortcutRegistry.registry.unregister('redo');
-      if (blocklyWrapper.KeyboardNavigation) {
-        Blockly.blockly_.ShortcutRegistry.registry.unregister('undo');
-        Blockly.blockly_.ShortcutRegistry.registry.unregister('redo');
-        blocklyWrapper.KeyboardNavigation.dispose();
-      }
-      // Add the shortcuts div prior to keyboard navigation initialization
-      // so the dialog has a place to land.
-      if (!document.getElementById('shortcuts')) {
-        const shortcutDialog = document.createElement('div');
-        shortcutDialog.id = 'shortcuts';
-        document.body.appendChild(shortcutDialog);
-      }
-
-      blocklyWrapper.KeyboardNavigation = new KeyboardNavigation(workspace);
-
-      // Now that the shortcutModal is initialized, we can add a keydown
-      // event listener to the modal to close it when the Escape key is pressed.
-      const shortcutModal = document.querySelector('.shortcut-modal');
-      if (shortcutModal) {
-        shortcutModal.addEventListener('keydown', event => {
-          const keyboardEvent = event as KeyboardEvent;
-          if (keyboardEvent.key === 'Escape') {
-            keyboardEvent.stopPropagation();
-            // Simulate a click on the close button to mimic the behavior
-            const closeButton = document.querySelector(
-              '.close-modal'
-            ) as HTMLElement;
-            if (closeButton) {
-              closeButton.click();
-            }
-          }
-        });
-      }
-      // Rerun user theme after Keyboard Experiment bug introduces incorrect theme
-      const theme = cdoUtils.getUserTheme(options.theme as GoogleBlockly.Theme);
-      workspace.setTheme(theme);
+      initializeKeyboardNavigation(workspace, options.theme);
     }
 
     // Typically, we need to handle disabling blocks that are not connected to an

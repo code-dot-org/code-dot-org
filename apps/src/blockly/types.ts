@@ -184,6 +184,9 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
     [originalBlockId: string]: string;
   };
   KeyboardNavigation?: typeof KeyboardNavigation;
+  shortcutBackups: {
+    [name: string]: GoogleBlockly.ShortcutRegistry.KeyboardShortcut | undefined;
+  };
 }
 
 export type GoogleBlocklyInstance = typeof GoogleBlockly;

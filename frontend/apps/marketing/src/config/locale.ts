@@ -27,7 +27,7 @@ export const SUPPORTED_LOCALES = [
 
 // Map of LocalizeJS locale codes to Pegasus locale codes
 const PEGASUS_LOCALE_MAP: Record<string, string | undefined> = {
-  'en-US': 'en_US',
+  'en-US': 'en-US',
   es: 'es-MX',
   ar: 'ar-SA',
   de: 'de-DE',
