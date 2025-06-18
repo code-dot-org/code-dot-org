@@ -1,5 +1,4 @@
 import classNames from 'classnames';
-import FocusTrap from 'focus-trap-react';
 import React, {
   ChangeEvent,
   useCallback,
@@ -7,6 +6,7 @@ import React, {
   useMemo,
   useState,
 } from 'react';
+import FocusLock from 'react-focus-lock';
 
 import {TICKS_PER_MEASURE} from '../constants';
 import MusicRegistry from '../MusicRegistry';
@@ -154,19 +154,9 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
   }, [currentValue.instrument, setIsLoading]);
 
   return (
-    <FocusTrap
-      focusTrapOptions={{
-        clickOutsideDeactivates: true,
-        initialFocus: '#pattern-panel-select',
-        fallbackFocus: '.blocklyDropDownDiv',
-      }}
-    >
+    <FocusLock>
       <div className={styles.patternPanel}>
-        <select
-          id="pattern-panel-select"
-          value={currentValue.instrument}
-          onChange={handleFolderChange}
-        >
+        <select value={currentValue.instrument} onChange={handleFolderChange}>
           {availableKits.map(folder => (
             <option key={folder.id} value={folder.id}>
               {folder.name}
@@ -210,7 +200,7 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
           isPlayingPreview={currentPreviewTick > 0}
         />
       </div>
-    </FocusTrap>
+    </FocusLock>
   );
 };
 

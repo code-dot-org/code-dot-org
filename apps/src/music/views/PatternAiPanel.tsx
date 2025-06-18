@@ -3,7 +3,6 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Slider from '@code-dot-org/component-library/slider';
 import classNames from 'classnames';
-import FocusTrap from 'focus-trap-react';
 import React, {
   ChangeEvent,
   useCallback,
@@ -11,6 +10,7 @@ import React, {
   useMemo,
   useState,
 } from 'react';
+import FocusLock from 'react-focus-lock';
 
 const aiBotImages = [
   require(`@cdo/static/music/ai/ai-bot-0.png`),
@@ -552,14 +552,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
   const aiBotImage = getAiBotImage();
 
   return (
-    <FocusTrap
-      focusTrapOptions={{
-        initialFocus: '#instrument-dropdown',
-        fallbackFocus: '.blocklyDropDownDiv',
-        clickOutsideDeactivates: true,
-        allowOutsideClick: true,
-      }}
-    >
+    <FocusLock>
       <div className={styles.patternPanel} dir="ltr">
         <LoadingOverlay show={isLoading} />
 
@@ -582,7 +575,6 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
             <div className={styles.topRow}>
               <SimpleDropdown
                 name="instrument-dropdown"
-                id="instrument-dropdown"
                 labelText=""
                 isLabelVisible={false}
                 selectedValue={currentValue.instrument}
@@ -718,7 +710,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
           </div>
         </div>
       </div>
-    </FocusTrap>
+    </FocusLock>
   );
 };
 

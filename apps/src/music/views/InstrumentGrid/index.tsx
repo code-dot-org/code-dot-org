@@ -1,7 +1,6 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import classNames from 'classnames';
-import FocusTrap from 'focus-trap-react';
 import React, {
   Fragment,
   useCallback,
@@ -9,6 +8,7 @@ import React, {
   useMemo,
   useState,
 } from 'react';
+import FocusLock from 'react-focus-lock';
 
 import musicI18n from '../../locale';
 import MusicRegistry from '../../MusicRegistry';
@@ -222,14 +222,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
   }, [editorType, scaleMode]);
 
   return (
-    <FocusTrap
-      focusTrapOptions={{
-        initialFocus: '#instrument-dropdown',
-        fallbackFocus: '.blocklyDropDownDiv',
-        clickOutsideDeactivates: true,
-        allowOutsideClick: true,
-      }}
-    >
+    <FocusLock>
       <div className={styles.container} data-theme="Dark">
         <div className={styles.controlRow}>
           <div className={styles.left}>
@@ -250,7 +243,6 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
               labelText="Instrument"
               isLabelVisible={false}
               selectedValue={currentValue.instrument}
-              id="instrument-dropdown"
             />
             <PreviewControlsV2
               enabled={currentValue.events.length > 0 && !isLoading}
@@ -360,7 +352,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
         </EaseIntoView>
         <LoadingOverlay show={isLoading} />
       </div>
-    </FocusTrap>
+    </FocusLock>
   );
 };
 
