@@ -258,6 +258,7 @@ gem 'aws-sdk-route53'
 gem 'aws-sdk-s3'
 gem 'aws-sdk-sagemakerruntime'
 gem 'aws-sdk-secretsmanager'
+gem 'aws-sdk-bedrockruntime'
 
 # Lint tools
 group :development, :staging, :levelbuilder, :test do
