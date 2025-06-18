@@ -5499,7 +5499,7 @@ en:
             * You can find the *Syllabus* and other resources to help you implement this curriculum in the Teacher Resources menu below.
           version_title: "'25-'26"
         self-paced-pl-ai-foundations-2025:
-          title: Teaching AI Foundations
+          title: PREVIEW - Teaching AI Foundations
           description_short: ''
           description_student: This Professional Learning (PL) unit on AI Foundations will equip you to guide your students in exploring the core principles of how computers and artificial intelligence empower individuals to solve problems, make decisions, and foster creativity. You will gain insights into the student learning journey as they write their own programs in Python, unravel the workings of devices and the Internet, and learn to analyze data to identify patterns and construct narratives. This PL will also focus on how to effectively integrate AI tools into the learning process, facilitate critical discussions around privacy and fairness, and cultivate the essential skills students need to become creators of technology, rather than just consumers. By engaging with this unit, you will be prepared to build a strong foundation in AI and computing for your students, fostering both their understanding and their capacity for innovation.
           description_teacher: |-
@@ -5933,7 +5933,7 @@ en:
           description_short: Welcome to Code.org's free self-paced online educator course for getting started with Computer Science Fundamentals!
           description_student: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_teacher: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
-          version_title: 25 - 26
+          version_title: "'25-'26"
         teaching-fabric-of-internet-2025:
           title: Teaching Fabric of the Internet
           description_short: ''
