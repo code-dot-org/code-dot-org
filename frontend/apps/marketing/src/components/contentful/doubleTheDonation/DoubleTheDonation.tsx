@@ -1,6 +1,6 @@
 'use client';
 
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 
 import {BodyOneText} from '@code-dot-org/component-library/typography';
 
@@ -13,11 +13,7 @@ declare global {
 }
 
 const DoubleTheDonationSearch: React.FC = () => {
-  const [isClient, setIsClient] = useState(false);
-
   useEffect(() => {
-    setIsClient(true);
-
     if (typeof window !== 'undefined') {
       window.DDCONF = {
         API_KEY: DOUBLE_THE_DONATION_PUBLIC_KEY,
@@ -36,7 +32,7 @@ const DoubleTheDonationSearch: React.FC = () => {
     }
   }, []);
 
-  if (!isClient) {
+  if (typeof window === 'undefined') {
     return (
       <div id="dd-container">
         <BodyOneText>
