@@ -315,7 +315,6 @@ Devise.setup do |config|
   end
 
   require 'cdo/cookie_helpers'
-  require_relative '../../lib/queries/user/enabled_experiments'
   Warden::Manager.after_set_user do |user, auth|
     user_type =
       if user.teacher?
