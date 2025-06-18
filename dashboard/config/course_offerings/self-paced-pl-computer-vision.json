@@ -5,19 +5,17 @@
   "assignable": true,
   "curriculum_type": "Professional Learning",
   "marketing_initiative": null,
-  "grade_levels": "9,10,11,12",
+  "grade_levels": null,
   "header": "self_paced",
-  "image": "https://images.code.org/c5a19f79a41a063794f7e7a39f2e32bb-ai-curriculum-computer-vision.avif",
-  "cs_topic": "artificial_intelligence",
+  "image": null,
+  "cs_topic": null,
   "school_subject": null,
   "device_compatibility": null,
-  "description": "This professional learning module equips educators to teach Code.org's Computer Vision curriculum.",
+  "description": null,
   "professional_learning_program": null,
   "video": null,
-  "published_date": "2024-05-17 05:00:00 UTC",
+  "published_date": null,
   "self_paced_pl_course_offering_key": null,
   "ai_teaching_assistant_available": false,
-  "facilitator_course_permissions": [
-
-  ]
+  "facilitator_course_permissions": null
 }
