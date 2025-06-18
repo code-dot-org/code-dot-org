@@ -16,9 +16,9 @@ export function initializeKeyboardNavigation(
   createShortcutsModalContainer();
   Blockly.KeyboardNavigation = new KeyboardNavigation(workspace);
   patchShortcuts({
-    keyboard_nav_copy: 67, // Ctrl+C
-    keyboard_nav_paste: 86, // Ctrl+V
-    keyboard_nav_cut: 88, // Ctrl+X
+    keyboard_nav_copy: Blockly.utils.KeyCodes.C,
+    keyboard_nav_paste: Blockly.utils.KeyCodes.V,
+    keyboard_nav_cut: Blockly.utils.KeyCodes.X,
   });
 
   enableShortcutModalEscape();
@@ -43,9 +43,15 @@ function patchShortcuts(shortcutNames: {[key: string]: number}) {
         Blockly.ShortcutRegistry.registry.getRegistry()[shortcutName];
       if (shortcut) {
         shortcut.keyCodes = [
-          shortcutRegistry.createSerializedKey(keyCode, [17]), // Ctrl
-          shortcutRegistry.createSerializedKey(keyCode, [18]), // Alt
-          shortcutRegistry.createSerializedKey(keyCode, [91]), // Meta (Command on Mac)
+          shortcutRegistry.createSerializedKey(keyCode, [
+            Blockly.utils.KeyCodes.CTRL,
+          ]),
+          shortcutRegistry.createSerializedKey(keyCode, [
+            Blockly.utils.KeyCodes.ALT,
+          ]),
+          shortcutRegistry.createSerializedKey(keyCode, [
+            Blockly.utils.KeyCodes.META,
+          ]),
         ];
         shortcutRegistry.unregister(shortcutName); // Unregister the existing shortcut
         shortcutRegistry.register(shortcut); // Re-register the updated shortcut
