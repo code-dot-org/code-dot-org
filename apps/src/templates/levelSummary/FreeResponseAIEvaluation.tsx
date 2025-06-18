@@ -90,9 +90,6 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
 
         // console.log('All existing evaluations:', allExistingEvaluations);
         // setEvaluationCount(allExistingEvaluations.length);
-        setEvaluationComplete(
-          allExistingEvaluations.length === responses.length
-        );
         return allExistingEvaluations;
       };
 
