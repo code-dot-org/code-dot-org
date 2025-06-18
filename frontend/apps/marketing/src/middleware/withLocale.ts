@@ -89,7 +89,8 @@ export const withLocale: MiddlewareFactory = next => {
      */
     const locale = cookieLocale || browserPreferredLocale || 'en-US';
 
-    const redirectUrl = new URL(`/${locale}/${slug}`, request.url);
+    const localizedPath = isRootRoute ? `/${locale}` : `/${locale}/${slug}`;
+    const redirectUrl = new URL(localizedPath, request.url);
     const response = getCachedRedirectResponse(redirectUrl);
 
     // Set the language cookie if discovered via Accept-Language header

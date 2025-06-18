@@ -151,7 +151,7 @@ describe('withLocale middleware', () => {
 
     expect(response).toBeInstanceOf(NextResponse);
     expect(response?.headers.get('location')).toBe(
-      'https://code.marketing-sites.local/zh-TW/',
+      'https://code.marketing-sites.local/zh-TW',
     );
   });
 
