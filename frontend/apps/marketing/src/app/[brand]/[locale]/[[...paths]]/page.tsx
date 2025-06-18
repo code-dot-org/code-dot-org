@@ -9,7 +9,6 @@ import {notFound} from 'next/navigation';
 import Bootstrap from '@/bootstrap';
 import ContentEditorHelper from '@/components/contentEditorHelper';
 import {Brand} from '@/config/brand';
-import {SUPPORTED_LOCALE_CODES} from '@/config/locale';
 import ExperiencePageLoader from '@/contentful/components/ExperiencePageLoader';
 import {getExperience} from '@/contentful/get-experience';
 import {getContentfulSlug} from '@/contentful/slug/getContentfulSlug';
@@ -37,17 +36,10 @@ type ExperiencePageProps = {
 
 /**
  * Activates incremental static regeneration (ISR) for this page.
- * Pages in this array are pulled from Contentful at build time and will be available even if Contentful were to go down.
- *
- * Other pages are generated using on-demand ISR.
+ * Currently, no pages are generated at build time. Pages are rather generated using on-demand ISR.
  */
 export async function generateStaticParams() {
-  return SUPPORTED_LOCALE_CODES.map(locale => ({
-    brand: Brand.CODE_DOT_ORG,
-    // '' is home page because `/` is prepended when making a request to Contentful.
-    paths: [''],
-    locale,
-  }));
+  return [];
 }
 
 async function getPageProps({params, searchParams}: ExperiencePageProps) {
