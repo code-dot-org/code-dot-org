@@ -127,7 +127,7 @@ const localizationComponentWrappers = {
     return <a {...props} data-lz-url data-localize="markdown-url" />;
   },
   p: function (props) {
-    return <p {...props} data-isolate />;
+    return <p {...props} data-isolate="true" />;
   },
 };
 
