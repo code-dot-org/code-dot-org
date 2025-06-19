@@ -328,6 +328,8 @@ Resources:
               Value: !Ref EnvironmentType
             - Name: NEXT_PUBLIC_INSTRUMENTATION_ENABLED
               Value: "true"
+            - Name: REDIS_URL
+              Value: !Sub rediss://${RedisCluster.PrimaryEndPoint.Address}:6379
             - Name: OTEL_SERVICE_NAME
               Value: marketing-sites
             - Name: OTEL_ATTRIBUTE_VALUE_LENGTH_LIMIT
@@ -848,6 +850,64 @@ Resources:
   ################################
   # End AWS Cloudfront Resources #
   ################################
+
+  #########################
+  # Start Redis Resources #
+  #########################
+
+  RedisSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Redis access from ECS
+      VpcId: !Ref Vpc
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 6379
+          ToPort: 6379
+          SourceSecurityGroupId: !Ref FargateServiceSecurityGroup
+
+  RedisSubnetGroup:
+    Type: AWS::ElastiCache::SubnetGroup
+    Properties:
+      Description: Marketing Sites Redis Cache Subnet Group
+      SubnetIds:
+<% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:private_subnets].each_with_index do |_, index| %>
+        - Ref: VpcPrivateSubnet<%= index %>
+<% end %>
+
+  # This enables keyspace notifications for Redis, which is required for the Next.js caching.
+  # See: https://github.com/trieb-work/nextjs-turbo-redis-cache
+  RedisParameterGroup:
+    Type: AWS::ElastiCache::ParameterGroup
+    Properties:
+      CacheParameterGroupFamily: redis7
+      Description: Enable keyspace notifications
+      Properties:
+        notify-keyspace-events: Exe
+
+  RedisCluster:
+    Type: AWS::ElastiCache::ReplicationGroup
+    Properties:
+      ReplicationGroupDescription: Marketing Sites Redis Cache Replication Group
+      Engine: redis
+      CacheParameterGroupName: !Ref RedisParameterGroup
+      EngineVersion: 7.1
+      CacheNodeType: cache.r7g.xlarge
+      NumNodeGroups: 1
+      ReplicasPerNodeGroup: 1
+      SecurityGroupIds:
+        - !Ref RedisSecurityGroup
+      CacheSubnetGroupName: !Ref RedisSubnetGroup
+      MultiAZEnabled: true
+      TransitEncryptionEnabled: true
+      AtRestEncryptionEnabled: true
+      AutomaticFailoverEnabled: true
+      AutoMinorVersionUpgrade: true
+      PreferredMaintenanceWindow: "sun:05:00-sun:06:00"
+
+  #######################
+  # End Redis Resources #
+  #######################
 
 Outputs:
   FargateServiceTaskDefExecutionRoleArn:
