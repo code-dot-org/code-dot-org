@@ -64,8 +64,8 @@ Feature: Policy Compliance and Parental Permission
     And element "#permission-status" contains text "Not Submitted"
 
     # The sign out button should navigate and show the sign in button
-    When I press "lockout-signout"
-    Then I wait to see "#header_user_signin"
+    And I click "#lockout-signout" to load a new page
+    Then check that the URL contains "http://code.org"
 
   Scenario: New under 13 account should be able to resend the email
     Given I am on "http://studio.code.org"

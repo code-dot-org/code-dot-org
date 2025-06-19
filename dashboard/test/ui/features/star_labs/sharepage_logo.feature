@@ -62,8 +62,7 @@ Feature: Lab share page logo
     And I sign out
     And I navigate to the last shared URL
     And element "div:contains('STUDIO')" does not exist
-    And I press the first "#logo-img img" element to load a new page
-    And check that I am on "http://code.org/"
+    And the href of selector "#logo-img" contains "http://code.org/"
 
   @no_mobile
   @pegasus_content
@@ -77,8 +76,7 @@ Feature: Lab share page logo
     And I sign out
     And I navigate to the last shared URL
     And element "div:contains('STUDIO')" does not exist
-    And I press the first "#logo-img img" element to load a new page
-    And check that I am on "http://code.org/"
+    And the href of selector "#logo-img" contains "http://code.org/"
 
   @only_mobile
   Scenario: When on an applab share page while logged out on mobile, there is no logo.
