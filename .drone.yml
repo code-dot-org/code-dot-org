@@ -346,6 +346,48 @@ volumes:
     temp: {}
 
 trigger:
+  event:
+    - pull_request
+---
+# REMOVE ME BEFORE MERGING, JUST FOR TESTING THE PR
+kind: pipeline
+type: docker
+name: cache-staging-build-artifacts-test
+
+clone:
+  disable: true
+
+steps:
+  - name: clone
+    image: bitnami/git
+    commands:
+      - git lfs install
+      - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL . 
+
+  # Do all the work necessary to run UI tests so we can capture a complete
+  # snapshot of rbenv and the database, but don't actually run the tests.
+  - name: prepare-ui-tests
+    image: codedotorg/code-dot-org:1.16
+    pull: always
+    environment:
+      PROPERTIES_ENCRYPTION_KEY:
+        from_secret: PROPERTIES_ENCRYPTION_KEY
+    volumes:
+      - name: rbenv
+        path: /home/ci/.rbenv
+      - name: mysql
+        path: /var/lib/mysql
+    commands:
+      - sudo chown -R ci:ci .
+      - /entrypoint.sh docker/ci/scripts/prepare_ui_tests.sh
+
+volumes:
+  - name: rbenv
+    temp: {}
+  - name: mysql
+    temp: {}
+
+trigger:
   branch:
     - "staging"
     - "staging-next"
@@ -353,6 +395,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: d706a958430c49a672f3c7c5a42209f54dd4cc1aada7d68e2489307e2d98b275
+hmac: 9e5191ce147e55a9e49a480d1f843d6fb3f85e7f8a23bf2dd39cfc7a96950240
 
 ...
