@@ -210,6 +210,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   KeyboardNavigation?: typeof KeyboardNavigation;
   shortcutBackups: {
     [name: string]: GoogleBlockly.ShortcutRegistry.KeyboardShortcut | undefined;
+  };
   SourceMsg: {[key: string]: string};
   SourceVariables: {[key: string]: string};
   SourceCustomInputTypes: CustomInputTypes;
