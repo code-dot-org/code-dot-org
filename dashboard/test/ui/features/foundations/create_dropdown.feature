@@ -15,7 +15,6 @@ Scenario: Create Dropdown does NOT show on level pages
 @pegasus_content
 Scenario: Signed Out - Correct Create Links
   Given I am on "http://code.org"
-  And I dismiss the language selector
   And I wait until element ".create_menu" is visible
   And I click selector ".create_menu"
   And I wait until element "#create_dropdown_spritelab" is visible

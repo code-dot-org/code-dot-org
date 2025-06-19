@@ -55,8 +55,6 @@ module BrowserHelpers
   end
 
   def element_text(selector)
-    return @browser.find_element(:css, selector)&.text unless jquery?
-
     @browser.execute_script("return $(\"#{selector}\").text();")
   end
 

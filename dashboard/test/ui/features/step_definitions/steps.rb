@@ -118,13 +118,8 @@ def shadow_element(shadow_host, element_selector)
   @browser.execute_script(<<~JS, shadow_root, element_selector)
     const shadowDOM = arguments[0].querySelector('*');
     const selector = arguments[1];
-    return shadowDOM.querySelector(selector);
+    return $(shadowDOM).find(selector)[0];
   JS
-end
-
-def jquery?
-  return false
-  @browser.execute_script("return (typeof jQuery !== 'undefined');")
 end
 
 Given /^I am on "([^"]*)"$/ do |url|
@@ -301,23 +296,7 @@ def jquery_is_element_enabled(selector)
 end
 
 def jquery_is_element_visible(selector)
-  selector = selector.dump
-
-  if jquery?
-    "return $(#{selector}).is(':visible') && $(#{selector}).css('visibility') !== 'hidden';"
-  else
-    format(<<~JS, selector: selector)
-      const el = document.querySelector(%{selector});
-      if (!el) return false;
-
-      return (
-        window.getComputedStyle(el).visibility !== 'hidden' &&
-        el.offsetWidth > 0 ||
-        el.offsetHeight > 0 ||
-        el.getClientRects().length > 0
-      );
-    JS
-  end
+  "return $(#{selector.dump}).is(':visible') && $(#{selector.dump}).css('visibility') !== 'hidden';"
 end
 
 def jquery_is_element_displayed(selector)
@@ -611,18 +590,11 @@ When /^I click selector "([^"]*)"(?: within shadow-host "([^"]*)")?(?: to load a
   # normal a href links can only be clicked this way
   page_load(load) do
     jquery_selector = shadow_element(shadow_host, jquery_selector) if shadow_host
-
-    if jquery?
-      @browser.execute_script('$(arguments[0])[0].click();', jquery_selector)
-    else
-      @browser.find_element(:css, jquery_selector)&.click
-    end
+    @browser.execute_script('$(arguments[0])[0].click();', jquery_selector)
   end
 end
 
 When /^I click selector "([^"]*)" if it exists$/ do |jquery_selector|
-  return @browser.find_element(:css, jquery_selector)&.click unless jquery?
-
   if @browser.execute_script("return $(\"#{jquery_selector}\").length > 0")
     @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
   end
@@ -1074,11 +1046,7 @@ end
 
 Then /^I wait until I (don't )?see selector "(.*)"$/ do |negation, selector|
   wait_until do
-    if jquery?
-      @browser.execute_script("return $(\"#{selector}:visible\").length != 0;") == negation.nil?
-    else
-      element_visible?(selector) == negation.nil?
-    end
+    @browser.execute_script("return $(\"#{selector}:visible\").length != 0;") == negation.nil?
   end
 end
 
@@ -1131,7 +1099,7 @@ end
 
 def wait_for_jquery
   wait_until do
-    jquery?
+    @browser.execute_script("return (typeof jQuery !== 'undefined');")
   rescue Selenium::WebDriver::Error::ScriptTimeoutError
     puts "execute_script timed out after 30 seconds, likely because this is \
 Safari and the browser was still on about:blank when wait_for_jquery \
