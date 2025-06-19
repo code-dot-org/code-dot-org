@@ -4,8 +4,6 @@ export async function generateStaticParams() {
     locale,
   }));
 }
-function NotebookPage() {
-  return 'Hello World!';
+export default function NotebookPage() {
+  return 'Hello World';
 }
-
-export default NotebookPage;
