@@ -48,7 +48,7 @@ export default function NotebookPage() {
     };
   }, [notebookId]);
 
-  const goBack = () => router.push('/notebooks');
+  const goBack = () => router.push(`/${params.locale}/notebooks`);
 
   return (
     <div className="notebook">

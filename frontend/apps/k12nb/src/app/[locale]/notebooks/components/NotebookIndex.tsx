@@ -11,6 +11,8 @@ import {
   importNotebookFromFile,
   importNotebookFromUrl,
 } from '@/storage/notebookStorage';
+import {Heading1, Heading3} from '@code-dot-org/component-library/typography';
+import Button from '@code-dot-org/component-library/button';
 
 function NotebookCard({
   notebook,
@@ -22,11 +24,15 @@ function NotebookCard({
   const params = useParams();
   return (
     <div className="notebook-card">
-      <h3>{notebook.title || 'Untitled Notebook'}</h3>
+      <Heading3>{notebook.title || 'Untitled Notebook'}</Heading3>
       <Link href={`/${params.locale}/notebooks/${notebook.id}`}>
-        <button>Open</button>
+        <Button onClick={() => {}} text={'Open'} />
       </Link>
-      <button onClick={() => onDelete(notebook.id)}>Delete</button>
+      <Button
+        onClick={() => onDelete(notebook.id)}
+        text={'Delete'}
+        type={'secondary'}
+      />
     </div>
   );
 }
@@ -134,10 +140,18 @@ export default function NotebookIndexPage() {
   return (
     <div className="notebook-index">
       <div className="header-container">
-        <h1 className="notebook-title">Notebooks</h1>
-        <button onClick={createBlankNotebook}>Add Notebook</button>
-        <button onClick={importFromFile}>Import from File</button>
-        <button onClick={importFromUrl}>Import from URL</button>
+        <Heading1>Notebooks</Heading1>
+        <Button onClick={createBlankNotebook} text={'Add Notebook'} />
+        <Button
+          onClick={importFromFile}
+          text={'Import from File'}
+          type={'secondary'}
+        />
+        <Button
+          onClick={importFromUrl}
+          text={'Import from URL'}
+          type={'secondary'}
+        />
       </div>
       <div className="notebook-grid">
         {notebooks.length === 0 ? (

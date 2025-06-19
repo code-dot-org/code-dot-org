@@ -5,6 +5,7 @@ import {notebookStore} from '@/components/renderer/store/notebookStore';
 
 import {sendChatCompletion} from './chatService';
 import type {ChatConfig, ChatMessage} from './types';
+import Button from '@code-dot-org/component-library/button';
 
 export default function ChatCell({cell, locale}: {cell: any; locale: string}) {
   const [error, setError] = useState<string | null>(null);
@@ -221,20 +222,21 @@ export default function ChatCell({cell, locale}: {cell: any; locale: string}) {
               onChange={e => setNewMessage(e.target.value)}
               onKeyDown={handleKeyPress}
             />
-            <button
+            <Button
+              type={'secondary'}
               className="send-btn"
               disabled={!newMessage.trim() || isLoading}
               onClick={sendMessage}
+              text={'➤'}
             >
               ➤
-            </button>
-            <button
+            </Button>
+            <Button
               className="clear-btn"
               disabled={isLoading || displayMessages.length === 0}
               onClick={clearChat}
-            >
-              Clear Chat
-            </button>
+              text={'Clear Chat'}
+            ></Button>
           </div>
           <div className="chat-config-info">
             <span className="chip">Model: {chatConfig.model}</span>

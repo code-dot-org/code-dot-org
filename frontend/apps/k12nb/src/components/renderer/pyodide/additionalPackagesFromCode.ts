@@ -1,10 +1,10 @@
 const getURL = (pkg: string) => {
   if (process.env.NODE_ENV === 'development') {
     // Local dev server
-    return `${process.env.NEXT_PUBLIC_BASE_URL}/pyodide/${pkg}`;
+    return `/pyodide/${pkg}`;
   } else {
     // Production
-    return `${process.env.NEXT_PUBLIC_BASE_URL}/pyodide/${pkg}`;
+    return `/pyodide/${pkg}`;
   }
 };
 
