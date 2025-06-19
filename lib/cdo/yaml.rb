@@ -10,7 +10,7 @@ module Cdo
 
       yaml = match[:yaml]
       yaml = ERB.new(yaml).result_with_hash(locals)
-      [YAML.safe_load(yaml), match.post_match]
+      [YAML.safe_load(yaml, aliases: ENV['YAML_ENABLE_ALIAS'] == 'true'), match.post_match]
     end
 
     # Return +nil+ if file not found.
