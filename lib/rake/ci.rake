@@ -245,8 +245,18 @@ def check_for_new_file_changes
     RakeUtils.system_stream_output('git diff -- dashboard/config/locales | cat')
     raise 'Unexpected change to dashboard/config/locales/ - Make sure you run seeding locally and include those changes in your branch.'
   end
-  if GitUtils.changed_in_branch_or_local?(GitUtils.current_branch, ['dashboard/db/schema.rb'])
-    RakeUtils.system_stream_output('git diff -- dashboard/db/schema.rb | cat')
-    raise 'Unexpected change to schema.rb - Make sure you run your migration locally and push those changes into your branch.'
-  end
+
+  # Skip checking schema.rb for now, because (1) it usually doesn't catch
+  # anything presumably because drone loads the DB from schema.rb, and (2) when
+  # drone does run a migration this can give false positives due to utf8mb3 vs
+  # mb4 issues between development and drone.
+  #
+  # TODO: remove this check, or fix it by (1) reworking this check to account
+  # for utf8mb4 issues and (2) modifying drone config to actually run migrations
+  # in the current PR.
+  #
+  # if GitUtils.changed_in_branch_or_local?(GitUtils.current_branch, ['dashboard/db/schema.rb'])
+  #   RakeUtils.system_stream_output('git diff -- dashboard/db/schema.rb | cat')
+  #   raise 'Unexpected change to schema.rb - Make sure you run your migration locally and push those changes into your branch.'
+  # end
 end
