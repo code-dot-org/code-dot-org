@@ -346,10 +346,12 @@ volumes:
     temp: {}
 
 trigger:
+  branch:
+    - "staging"
+    - "staging-next"
   event:
-    - pull_request
+    - push
 ---
-# REMOVE ME BEFORE MERGING, JUST FOR TESTING THE PR
 kind: pipeline
 type: docker
 name: cache-staging-build-artifacts-test
@@ -388,13 +390,10 @@ volumes:
     temp: {}
 
 trigger:
-  branch:
-    - "staging"
-    - "staging-next"
   event:
-    - push
+    - pull_request
 ---
 kind: signature
-hmac: 9e5191ce147e55a9e49a480d1f843d6fb3f85e7f8a23bf2dd39cfc7a96950240
+hmac: 786dff2afec9a56e09e28c65b7c0ff6f4756f09cbc23900c9b95aa2d45bb18f0
 
 ...
