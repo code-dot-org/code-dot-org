@@ -51,6 +51,7 @@
     "@statsig/web-analytics": "^3.14.1",
     "@vercel/otel": "^1.12.0",
     "cookies-next": "^5.1.0",
+    "marked": "^15.0.12",
     "next": "^15.2.4",
     "next-logger": "^5.0.1",
     "pino": "^9.6.0",

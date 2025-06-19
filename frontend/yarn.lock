@@ -1245,6 +1245,7 @@ __metadata:
     eslint-plugin-jest: "npm:^28.9.0"
     jest: "npm:^29.7.0"
     jest-environment-jsdom: "npm:^29.7.0"
+    marked: "npm:^15.0.12"
     next: "npm:^15.2.4"
     next-logger: "npm:^5.0.1"
     pino: "npm:^9.6.0"
@@ -16347,6 +16348,15 @@ __metadata:
     lodash.unescape: "npm:^4.0.1"
     marked: "npm:^4.0.14"
   checksum: 10c0/af5b9c80b0f234123a73652faeb7b3cf74830f297370d4816c957724b206e9f31010a2541a359a19e272db21492e647a81a8a873858b49190f19fe4b66a55902
+  languageName: node
+  linkType: hard
+
+"marked@npm:^15.0.12":
+  version: 15.0.12
+  resolution: "marked@npm:15.0.12"
+  bin:
+    marked: bin/marked.js
+  checksum: 10c0/e09da211544b787ecfb25fed07af206060bf7cd6d9de6cb123f15c496a57f83b7aabea93340aaa94dae9c94e097ae129377cad6310abc16009590972e85f4212
   languageName: node
   linkType: hard
 

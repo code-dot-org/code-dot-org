@@ -95,7 +95,7 @@ export default function NotebookPage() {
             initialNotebook={notebook}
             id={notebookId}
             // theme={settingsStore.theme}
-            // locale={settingsStore.locale}
+            locale={params.locale}
           />
         )}
 
