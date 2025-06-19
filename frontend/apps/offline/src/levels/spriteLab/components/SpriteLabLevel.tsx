@@ -41,7 +41,7 @@ export interface SpriteLabLevelEnvironment extends BlocklyLevelEnvironment {
 }
 
 export interface SpriteLabLevelProps extends BlocklyLevelProps {
-  levelData: LevelData;
+  level: LevelData;
   api?: object;
   customBlocks?: BlockDefinition[];
   visualization?: ReactNode;
@@ -66,7 +66,7 @@ const plugins: Plugin[] = [
 ];
 
 const SpriteLabLevel: React.FunctionComponent<SpriteLabLevelProps> = ({
-  levelData,
+  level,
   customBlocks,
   theme,
   renderer,
@@ -86,8 +86,8 @@ const SpriteLabLevel: React.FunctionComponent<SpriteLabLevelProps> = ({
     useModalFunctionEditor: true,
     noFunctionBlockFrame: true,
     animations: [
-      ...(levelData?.template?.spriteLabData?.startAnimations ||
-        levelData?.spriteLabData?.startAnimations ||
+      ...(level?.template?.spriteLabData?.startAnimations ||
+        level?.spriteLabData?.startAnimations ||
         []),
     ]
       .filter(info => !(info.categories || []).includes('backgrounds'))
@@ -144,14 +144,14 @@ const SpriteLabLevel: React.FunctionComponent<SpriteLabLevelProps> = ({
     return () => {
       console.log('UNINIT THE SPRITE LEVEL');
     };
-  }, [controller, levelData]);
+  }, [controller, level]);
 
   const startBlocks = useMemo(
     () =>
-      levelData?.template?.blocklyData?.startBlocks?.blocks?.blocks ||
-      levelData?.blocklyData?.startBlocks?.blocks?.blocks ||
+      level?.template?.blocklyData?.startBlocks?.blocks?.blocks ||
+      level?.blocklyData?.startBlocks?.blocks?.blocks ||
       [],
-    [levelData],
+    [level],
   );
 
   const filteredStartBlocks = useMemo(
@@ -190,7 +190,7 @@ const SpriteLabLevel: React.FunctionComponent<SpriteLabLevelProps> = ({
 
   return (
     <BlocklyLevel
-      levelData={levelData}
+      level={level}
       startBlocks={filteredStartBlocks}
       hiddenBlocks={hiddenBlocks}
       theme={theme || DefaultTheme}

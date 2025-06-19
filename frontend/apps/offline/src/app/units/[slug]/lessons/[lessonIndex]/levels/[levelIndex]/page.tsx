@@ -13,6 +13,14 @@ export default function UnitLevelPage() {
   const {lessonIndex, levelIndex, level} = useContext(LevelContext);
   const realLessonIndex = (lessonIndex || 1) - 1;
   const realLevelIndex = (levelIndex || 1) - 1;
+  console.log(unit, realLessonIndex, level);
+
+  const lesson = unit?.lessons[realLessonIndex];
+  const levelInfo = lesson?.levels[realLevelIndex];
+  const activitySection =
+    levelInfo?.activitySectionIndex !== undefined
+      ? lesson?.activitySections[levelInfo.activitySectionIndex]
+      : undefined;
 
   return (
     <div
@@ -33,7 +41,9 @@ export default function UnitLevelPage() {
           />
         )}
       </Header>
-      {unit && level && <UnitLevel levelData={level} />}
+      {unit && level && (
+        <UnitLevel activitySection={activitySection} level={level} />
+      )}
     </div>
   );
 }

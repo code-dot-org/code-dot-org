@@ -3,12 +3,12 @@ import MazeLevel, {MazeLevelProps} from '@/levels/maze';
 import blocks from '../blocks';
 
 const StarWarsLevel: React.FunctionComponent<MazeLevelProps> = ({
-  levelData,
+  level,
   customBlocks,
 }) => {
   return (
     <MazeLevel
-      levelData={levelData}
+      level={level}
       customBlocks={[...blocks, ...(customBlocks || [])]}
     />
   );

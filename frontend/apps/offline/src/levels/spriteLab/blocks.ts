@@ -434,6 +434,18 @@ const blocks: BlockDefinition[] = [
     ],
     generator: () => '\n',
   },
+  {
+    // docFunc: "spritelab_adding-and-removing-behaviors",
+    // "func": "tumbling",
+    type: 'gamelab_tumbling',
+    style: 'behavior_blocks',
+    tooltip: '',
+    helpUrl: '',
+    message0: 'tumbling',
+    args0: [],
+    output: 'Behavior',
+    generator: () => '\n',
+  },
   // This block add a harmless comment to the code
   {
     type: 'gamelab_comment',

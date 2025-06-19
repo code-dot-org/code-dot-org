@@ -13,12 +13,12 @@ import moduleStyles from './karelLevel.module.scss';
 export type KarelLevelProps = MazeLevelProps;
 
 const KarelLevel: React.FunctionComponent<MazeLevelProps> = ({
-  levelData,
+  level,
   customBlocks,
 }) => {
   return (
     <MazeLevel
-      levelData={levelData}
+      level={level}
       theme={DefaultTheme}
       renderer={ThrasosRenderer}
       skins={skins}

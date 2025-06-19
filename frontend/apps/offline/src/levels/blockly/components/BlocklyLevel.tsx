@@ -40,7 +40,7 @@ export interface BlocklyLevelEnvironment extends Environment {
 export type BlocklyLevelProps<
   T extends BlocklyLevelEnvironment = BlocklyLevelEnvironment,
 > = {
-  levelData: LevelData;
+  level: LevelData;
   /** A set of blocks to load as the starting point for the workspace */
   startBlocks?: BlocklySerialization;
   /** A set of blocks to load into a hidden workspace */
@@ -94,7 +94,7 @@ const countBlocks = (workspace: Blockly.Workspace, uncounted: string[]) =>
 function BlocklyLevel<
   T extends BlocklyLevelEnvironment = BlocklyLevelEnvironment,
 >({
-  levelData,
+  level,
   startBlocks,
   hiddenBlocks,
   options,
@@ -120,12 +120,12 @@ function BlocklyLevel<
   ];
   const toolboxBlocks = useMemo(
     () =>
-      levelData.multipleChoice
+      level.multipleChoice
         ? undefined
-        : levelData.blocklyData?.toolboxBlocks?.contents?.length === 0
+        : level.blocklyData?.toolboxBlocks?.contents?.length === 0
           ? undefined
-          : levelData.blocklyData?.toolboxBlocks,
-    [levelData],
+          : level.blocklyData?.toolboxBlocks,
+    [level],
   );
   const setToolboxHeaderWidth = useCallback(() => {
     // Get the width of the flyout / toolbox
@@ -135,7 +135,7 @@ function BlocklyLevel<
     }
   }, []);
 
-  console.log('LEVEL', levelData);
+  console.log('LEVEL', level);
 
   return (
     <BlocklyProvider
@@ -151,13 +151,13 @@ function BlocklyLevel<
           {
             value: 'instructions',
             text: 'Instructions',
-            tabContent: levelData.multipleChoice ? (
-              <MultipleChoice multipleChoice={levelData.multipleChoice} />
+            tabContent: level.multipleChoice ? (
+              <MultipleChoice multipleChoice={level.multipleChoice} />
             ) : (
               <Instructions
                 avatar={avatar}
-                instructions={levelData.longInstructions || ''}
-                hints={levelData.hints}
+                instructions={level.longInstructions || ''}
+                hints={level.hints}
               />
             ),
           },
@@ -184,14 +184,14 @@ function BlocklyLevel<
             </div>
             <div className={moduleStyles.workspaceHeader}>
               <Heading6 className={moduleStyles.headerText}>Workspace</Heading6>
-              {!!levelData.blocklyData?.idealBlockCount && (
+              {!!level.blocklyData?.idealBlockCount && (
                 <>
                   <Heading6
                     className={classNames(
                       moduleStyles.headerText,
                       moduleStyles.blockCount,
                       blockCount.current >
-                        (levelData.blocklyData?.idealBlockCount || 0)
+                        (level.blocklyData?.idealBlockCount || 0)
                         ? moduleStyles.over
                         : undefined,
                     )}
@@ -204,7 +204,7 @@ function BlocklyLevel<
                       moduleStyles.idealCount,
                     )}
                   >
-                    {levelData.blocklyData?.idealBlockCount || 0} blocks
+                    {level.blocklyData?.idealBlockCount || 0} blocks
                   </Heading6>
                 </>
               )}
@@ -255,13 +255,13 @@ function BlocklyLevel<
           )}
           <BlocklyWorkspace<T>
             options={{
-              readOnly: levelData.multipleChoice ? true : undefined,
+              readOnly: level.multipleChoice ? true : undefined,
               ...options,
             }}
             startBlocks={
               startBlocks ||
-              levelData.template?.blocklyData?.startBlocks ||
-              levelData.blocklyData?.startBlocks
+              level.template?.blocklyData?.startBlocks ||
+              level.blocklyData?.startBlocks
             }
             toolboxBlocks={toolboxBlocks}
             onChange={(event: Blockly.Events.Abstract) => {
@@ -276,7 +276,7 @@ function BlocklyLevel<
               }
               if (environment) {
                 environment.idealBlockCount =
-                  levelData.blocklyData?.idealBlockCount;
+                  level.blocklyData?.idealBlockCount;
               }
 
               // Dynamically update the counter
@@ -288,8 +288,7 @@ function BlocklyLevel<
                 const headerNode = blockCountRef.current
                   .parentNode as HTMLElement | null;
                 if (
-                  blockCount.current >
-                  (levelData.blocklyData?.idealBlockCount || 0)
+                  blockCount.current > (level.blocklyData?.idealBlockCount || 0)
                 ) {
                   headerNode?.classList.add(moduleStyles.over);
                 } else {

@@ -46,7 +46,7 @@ const Progress: React.FunctionComponent<ProgressProps> = ({
             onClick={() => {}}
             type="secondary"
             icon={{
-              iconName: 'left',
+              iconName: 'arrow-left',
               iconStyle: 'solid',
             }}
             isIconOnly
@@ -80,7 +80,7 @@ const Progress: React.FunctionComponent<ProgressProps> = ({
                 }}
                 type="secondary"
                 icon={{
-                  iconName: 'left',
+                  iconName: 'arrow-left',
                   iconStyle: 'solid',
                 }}
                 isIconOnly
@@ -170,7 +170,7 @@ const Progress: React.FunctionComponent<ProgressProps> = ({
             onClick={() => {}}
             type="secondary"
             icon={{
-              iconName: 'right',
+              iconName: 'arrow-right',
               iconStyle: 'solid',
             }}
             isIconOnly
@@ -205,7 +205,7 @@ const Progress: React.FunctionComponent<ProgressProps> = ({
                 }}
                 type="secondary"
                 icon={{
-                  iconName: 'right',
+                  iconName: 'arrow-right',
                   iconStyle: 'solid',
                 }}
                 isIconOnly

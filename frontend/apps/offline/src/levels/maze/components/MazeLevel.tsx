@@ -41,7 +41,7 @@ const DefaultStartBlocks: BlocklySerialization = {
 };
 
 export interface MazeLevelProps extends BlocklyLevelProps {
-  levelData: LevelData;
+  level: LevelData;
   skins?: SkinsData;
   api?: API;
   customBlocks?: BlockDefinition[];
@@ -50,7 +50,7 @@ export interface MazeLevelProps extends BlocklyLevelProps {
 }
 
 const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
-  levelData,
+  level,
   customBlocks,
   skins,
   theme,
@@ -71,7 +71,7 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
   // Respond to a hint showing a path
   useEffect(() => {
     if (hintsShown > 0) {
-      const hint = (levelData.hints || [])[hintsShown - 1];
+      const hint = (level.hints || [])[hintsShown - 1];
       if (hint.path && maze.current) {
         maze.current.drawHintPath(hint.path);
       }
@@ -100,9 +100,8 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
 
   // Pull out the skin asset paths
   const skin = useMemo(
-    () =>
-      skinFor(skins || defaultSkins, levelData?.mazeData?.skinId || 'birds'),
-    [levelData],
+    () => skinFor(skins || defaultSkins, level?.mazeData?.skinId || 'birds'),
+    [level],
   );
 
   // Determine all blocks
@@ -120,7 +119,7 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
       // Create our Maze driver
       maze.current = new Maze(
         environment.current.mainWorkspace,
-        levelData?.mazeData || {
+        level?.mazeData || {
           skinId: skin.id,
         },
         environment.current,
@@ -151,7 +150,7 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
       console.log('UNINIT THE MAZE LEVEL');
       maze.current?.uninitialize();
     };
-  }, [svg, levelData]);
+  }, [svg, level]);
 
   // When blockly is loaded and initialized
   const onInject = useCallback(() => {
@@ -159,10 +158,25 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
     setBlocklyLoaded(true);
   }, [setBlocklyLoaded]);
 
+  // Ensure a 'when_run' block exists... as some levels omit it for some reason
+  const startBlocks = useMemo(() => {
+    // Deep duplicate the block data
+    const initial = level.blocklyData?.startBlocks || DefaultStartBlocks;
+    const data = {...initial};
+    data.blocks ||= {};
+    data.blocks = {...data.blocks};
+    data.blocks.blocks ||= [];
+    data.blocks.blocks = [...data.blocks.blocks];
+    if (!data.blocks.blocks.some(block => block.type === 'when_run')) {
+      data.blocks.blocks.unshift({type: 'when_run'});
+    }
+    return data;
+  }, [level]);
+
   return (
     <BlocklyLevel
-      levelData={levelData}
-      startBlocks={levelData.blocklyData?.startBlocks || DefaultStartBlocks}
+      level={level}
+      startBlocks={startBlocks}
       theme={theme || DefaultTheme}
       renderer={renderer || ThrasosRenderer}
       avatar={currentAvatar}

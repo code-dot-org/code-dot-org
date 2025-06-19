@@ -3,24 +3,28 @@ import React from 'react';
 import Video from '@code-dot-org/component-library/video';
 
 import type {LevelData} from '@/app/models/level';
+import type {ActivitySectionData} from '@/app/models/unit';
 
 import moduleStyles from './standaloneVideoLevel.module.scss';
 
 export interface StandaloneVideoLevelProps {
-  levelData: LevelData;
+  activitySection?: ActivitySectionData;
+  level: LevelData;
 }
 
 const StandaloneVideoLevel: React.FunctionComponent<
   StandaloneVideoLevelProps
-> = ({levelData}) => {
-  console.log(levelData);
+> = ({activitySection, level}) => {
+  console.log(level);
   return (
     <div className={moduleStyles.standaloneVideoLevel}>
       <div>
         <Video
-          youTubeId={levelData.videoData?.youTubeId}
-          videoFallback={levelData?.videoData?.download}
+          youTubeId={level.videoData?.youTubeId}
+          videoFallback={level.videoData?.download}
           isYouTubeCookieAllowed={true}
+          showCaption
+          videoTitle={activitySection?.title}
         />
       </div>
     </div>

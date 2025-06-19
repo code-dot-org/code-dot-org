@@ -36,7 +36,7 @@ const DefaultStartBlocks: BlocklySerialization = {
 };
 
 export interface ArtistLevelProps extends BlocklyLevelProps {
-  levelData: LevelData;
+  level: LevelData;
   api?: object;
   customBlocks?: BlockDefinition[];
   visualization?: ReactNode;
@@ -47,7 +47,7 @@ export interface ArtistLevelProps extends BlocklyLevelProps {
  * Wraps a Blockly-based Artist level.
  */
 const ArtistLevel: React.FunctionComponent<ArtistLevelProps> = ({
-  levelData,
+  level,
   customBlocks,
   theme,
   renderer,
@@ -106,28 +106,28 @@ const ArtistLevel: React.FunctionComponent<ArtistLevelProps> = ({
     execute(false);
   }, [controller, stepping]);
 
-  const skin = skinFor(levelData.artistData?.skinId || 'artist');
+  const skin = skinFor(level.artistData?.skinId || 'artist');
 
   const onInject = useCallback(() => {
     if (container.current) {
-      const predrawCode = levelData.artistData?.predrawBlocks
-        ? getCodeFromBlockJsonSource(levelData.artistData.predrawBlocks)
+      const predrawCode = level.artistData?.predrawBlocks
+        ? getCodeFromBlockJsonSource(level.artistData.predrawBlocks)
         : undefined;
 
-      const solutionCode = levelData.blocklyData?.solutionBlocks
-        ? getCodeFromBlockJsonSource(levelData.blocklyData.solutionBlocks)
+      const solutionCode = level.blocklyData?.solutionBlocks
+        ? getCodeFromBlockJsonSource(level.blocklyData.solutionBlocks)
         : undefined;
 
       console.log(
         'LEVEL',
-        levelData,
-        levelData.artistData?.predrawBlocks,
+        level,
+        level.artistData?.predrawBlocks,
         predrawCode,
         solutionCode,
       );
       controller.current = new Artist({
         api: {...defaultAPI, ...(api || {})},
-        level: levelData.artistData || {
+        level: level.artistData || {
           images: [],
         },
         instant: false,
@@ -144,12 +144,12 @@ const ArtistLevel: React.FunctionComponent<ArtistLevelProps> = ({
     return () => {
       console.log('UNINIT THE ARTIST LEVEL');
     };
-  }, [controller, levelData]);
+  }, [controller, level]);
 
   return (
     <BlocklyLevel
-      levelData={levelData}
-      startBlocks={levelData.blocklyData?.startBlocks || DefaultStartBlocks}
+      level={level}
+      startBlocks={level.blocklyData?.startBlocks || DefaultStartBlocks}
       theme={theme || DefaultTheme}
       renderer={renderer || ThrasosRenderer}
       avatar={currentAvatar}

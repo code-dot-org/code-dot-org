@@ -5,18 +5,16 @@ import type {LevelData} from '@/app/models/level';
 import PanelsView from './PanelsView';
 
 export interface PanelsLevelProps {
-  levelData: LevelData;
+  level: LevelData;
 }
 
-const PanelsLevel: React.FunctionComponent<PanelsLevelProps> = ({
-  levelData,
-}) => {
+const PanelsLevel: React.FunctionComponent<PanelsLevelProps> = ({level}) => {
   return (
     <PanelsView
-      panels={levelData.panels || []}
+      panels={level.panels || []}
       background="dark"
       onContinue={() => {}}
-      levelId={levelData.key}
+      levelId={level.key}
       offerBrowserTts
     />
   );

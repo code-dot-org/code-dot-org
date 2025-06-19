@@ -7,6 +7,7 @@ import FontAwesomeV6Icon, {
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import type {LevelData} from '@/app/models/level';
+import type {ActivitySectionData} from '@/app/models/unit';
 
 import ArtistLevel from '../artist';
 import KarelLevel from '../karel';
@@ -23,13 +24,17 @@ const spinnerIcon: FontAwesomeV6IconProps = {
 };
 
 export interface LevelProps {
-  levelData: LevelData;
+  activitySection?: ActivitySectionData;
+  level: LevelData;
 }
 
 /**
  * Represents a generic Code.org level (learning activity).
  */
-const Level: React.FunctionComponent<LevelProps> = ({levelData}) => (
+const Level: React.FunctionComponent<LevelProps> = ({
+  activitySection,
+  level,
+}) => (
   <div
     style={{
       flex: '1 1 100%',
@@ -38,22 +43,18 @@ const Level: React.FunctionComponent<LevelProps> = ({levelData}) => (
       justifyContent: 'center',
     }}
   >
-    {!levelData && (
+    {!level && (
       <FontAwesomeV6Icon {...spinnerIcon} style={{fontSize: '3rem'}} />
     )}
-    {levelData?.type === 'Maze' && <MazeLevel levelData={levelData} />}
-    {levelData?.type === 'Karel' && <KarelLevel levelData={levelData} />}
-    {levelData?.type === 'Artist' && <ArtistLevel levelData={levelData} />}
-    {levelData?.type === 'GamelabJr' && (
-      <SpriteLabLevel levelData={levelData} />
+    {level?.type === 'Maze' && <MazeLevel level={level} />}
+    {level?.type === 'Karel' && <KarelLevel level={level} />}
+    {level?.type === 'Artist' && <ArtistLevel level={level} />}
+    {level?.type === 'GamelabJr' && <SpriteLabLevel level={level} />}
+    {level?.type === 'StarWarsGrid' && <StarWarsLevel level={level} />}
+    {level?.type === 'StandaloneVideo' && (
+      <StandaloneVideoLevel activitySection={activitySection} level={level} />
     )}
-    {levelData?.type === 'StarWarsGrid' && (
-      <StarWarsLevel levelData={levelData} />
-    )}
-    {levelData?.type === 'StandaloneVideo' && (
-      <StandaloneVideoLevel levelData={levelData} />
-    )}
-    {levelData?.type === 'Panels' && <PanelsLevel levelData={levelData} />}
+    {level?.type === 'Panels' && <PanelsLevel level={level} />}
   </div>
 );
 
