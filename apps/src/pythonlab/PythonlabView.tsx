@@ -100,6 +100,8 @@ const PythonlabView: React.FunctionComponent<
     levelProperties.aiTutor2Available ||
     queryParams('show-ai-tutor2') === 'true';
 
+  const isAiTutor2HintEnabled = queryParams('show-ai-tutor2-hint') === 'true';
+
   const dispatch = useAppDispatch();
 
   const currentProjectType = useMemo(() => {
@@ -189,7 +191,7 @@ const PythonlabView: React.FunctionComponent<
   };
 
   const [askAiTutor2, AiTutor2Response] = useAiTutor2(
-    isAiTutor2Enabled,
+    isAiTutor2HintEnabled,
     getAiTutor2FullPrompt,
     'hint'
   );

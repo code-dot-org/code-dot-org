@@ -600,18 +600,13 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
       {
-        source: '/amazon-future-engineer',
-        destination: 'https://studio.code.org/amazon-future-engineer',
-        permanent: false,
-      },
-      {
         source: '/afe/success',
-        destination: '/amazon-future-engineer',
+        destination: '/resources/amazon-future-engineer',
         permanent: false,
       },
       {
         source: '/afe/start-codeorg',
-        destination: '/amazon-future-engineer',
+        destination: '/resources/amazon-future-engineer',
         permanent: false,
       },
       {
@@ -621,7 +616,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/afe',
-        destination: '/amazon-future-engineer',
+        destination: '/resources/amazon-future-engineer',
         permanent: false,
       },
       {
@@ -945,7 +940,7 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
       {
-        source: '/beyond/',
+        source: '/beyond',
         destination: '/students/careers-in-computer-science',
         permanent: false,
       },

@@ -29,6 +29,8 @@ import VideoCarousel, {
 import Divider, {
   DividerContentfulComponentDefinition,
 } from '@/components/contentful/divider';
+import {DoubleTheDonationContentfulComponentDefinition} from '@/components/contentful/doubleTheDonation';
+import DoubleTheDonation from '@/components/contentful/doubleTheDonation/DoubleTheDonation';
 import EditorialCard, {
   EditorialCardContentfulComponentDefinition,
 } from '@/components/contentful/editorialCard';
@@ -119,6 +121,11 @@ defineComponents(
         wrapContainerWidth: '100%',
       },
     },
+    {
+      component: DoubleTheDonation,
+      definition: DoubleTheDonationContentfulComponentDefinition,
+    },
+
     {
       component: EditorialCard,
       definition: EditorialCardContentfulComponentDefinition,

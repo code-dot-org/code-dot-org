@@ -80,7 +80,7 @@ Scenario: Teacher can delete a section from the section options dropdown
     Given I am on "http://studio.code.org/teacher_dashboard/home"
     And I wait until element "#course-content-dropdown-Untitled-Section" is visible
     And element "#course-content-dropdown-Untitled-Section" has text "Course: AI for Oceans"
-    Then I click "#go-to-lesson-dropdown-dropdown-button" once it exists
+    Then I click "#go-to-lesson-dropdown-button" once it exists
     And I click "#ui-test-Lesson-1-AI-for-Oceans" once it exists
     Then I wait until element "a:contains(AI for Oceans)" is visible
 

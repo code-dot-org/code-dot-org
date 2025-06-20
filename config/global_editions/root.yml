@@ -316,11 +316,6 @@ header:
       level: Weblab
       url: /docs/ide/weblab
       id: weblab-docs
-    - title: music_lab_documentation
-      domain: studio.code.org
-      level: Music
-      url: /docs/ide/music
-      id: musiclab-docs
     - title: help_support
       url: https://support.code.org
       id: support
