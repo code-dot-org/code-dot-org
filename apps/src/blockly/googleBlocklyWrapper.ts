@@ -126,14 +126,6 @@ import {
   isDarkTheme,
 } from './utils';
 
-const options = {
-  contextMenu: true,
-  shortcut: true,
-};
-
-const plugin = new CrossTabCopyPaste();
-plugin.init(options);
-
 const MAX_GET_CODE_RETRIES = 2;
 const RETRY_GET_CODE_INTERVAL_MS = 500;
 
@@ -755,6 +747,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     container.style.display = 'inline-block';
     container.appendChild(svg);
     svg.appendChild(workspace.createDom());
+    workspace.setTheme(theme);
     // We do not include hidden definitions in embedded workspaces
     // because embedded workspaces are only used for displaying blocks.
     const includeHiddenDefinitions = false;
@@ -775,13 +768,13 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
         const svgTransform = svgTransformList.getItem(0);
         const svgTranslationX = svgTransform.matrix.e;
         svgTransform.setTranslate(svgTranslationX, 0);
+        block.render();
       });
 
     // Shrink SVG to size of the block
     const bbox = (svg as SVGGraphicsElement).getBBox();
     svg.setAttribute('height', `${bbox.height + bbox.y}`);
     svg.setAttribute('width', `${bbox.width + bbox.x}`);
-    workspace.setTheme(theme);
     return workspace;
   };
 
@@ -884,6 +877,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.topLevelProcedureAutopopulate =
       !!options.topLevelProcedureAutopopulate;
     blocklyWrapper.readOnly = !!opt_options.readOnly;
+    blocklyWrapper.showBlockHelp = !!optOptionsExtended.showBlockHelp;
 
     if (options.noFunctionBlockFrame) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;
@@ -894,6 +888,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       experiments.isEnabledAllowingQueryString(experiments.KEYBOARD_NAVIGATION)
     ) {
       initializeKeyboardNavigation(workspace, options.theme);
+    } else {
+      const plugin = new CrossTabCopyPaste();
+      plugin.init();
     }
 
     // Typically, we need to handle disabling blocks that are not connected to an
