@@ -773,6 +773,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test 'sharing program with http error logs' do
     # allow sharing when there's an error, slog so it's possible to look up and review later
+
     ProfanityFilter.stubs(:find_potential_profanity).raises(OpenURI::HTTPError.new('something broke', 'fake io'))
 
     assert_creates(LevelSource) do
