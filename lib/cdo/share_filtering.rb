@@ -57,14 +57,24 @@ module ShareFiltering
     return nil unless should_filter_program(program, project_type)
 
     # Extract program text including field values, text values in block inputs, comments, and variable names.
-    texts = extract_user_text_blockly(program)
+    texts = extract_text_blockly(program)
     program_text = texts.join(" ")
 
     find_failure(program_text, locale, exceptions: exceptions)
   end
 
-  def self.extract_user_text_blockly(program_json)
-    json = JSON.parse(program_json)
+  def self.extract_text_blockly(program)
+    stripped = program.lstrip # removes all leading whitespace
+    unless stripped.start_with?("{", "[")
+      # XML, not JSON. These programs are from Play Lab activity levels.
+      # Replace tags with newlines,
+      # convert to array of lines split at newline,
+      # strip leading/trailing whitespace from each line,
+      # drop any blank lines.
+      return stripped.gsub(/<[^>]*>/, "\n").split("\n").map(&:strip).reject(&:empty?)
+    end
+
+    json = JSON.parse(stripped)
     texts = []
 
     # Extract variable names.
@@ -133,7 +143,7 @@ module ShareFiltering
 
     # For Playlab projects, only filter if program contains user-entered indicators.
     if project_type == 'playlab'
-      return program =~ /(#{USER_ENTERED_TEXT_INDICATORS.join('|')})/
+      return program.match?(/(?:#{USER_ENTERED_TEXT_INDICATORS.join('|')})/)
     end
     true
   end
