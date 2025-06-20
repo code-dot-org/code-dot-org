@@ -128,7 +128,7 @@ module ShareFiltering
 
   def self.should_filter_program(program, project_type)
     # Return false early if filtering is disabled or project type not in filter list.
-    return false unless Gatekeeper.allows?('webpurify', default: true)
+    return false unless Gatekeeper.allows('webpurify', default: true)
     return false unless FILTERED_PROJECT_TYPES.include?(project_type)
 
     # For Playlab projects, only filter if program contains user-entered indicators.
