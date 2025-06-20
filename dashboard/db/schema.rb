@@ -555,7 +555,7 @@ ActiveRecord::Schema.define(version: 2025_06_17_212412) do
     t.index ["name"], name: "index_data_docs_on_name"
   end
 
-  create_table "data_retention_statuses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "data_retention_statuses", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.datetime "pii_scrubbed_at"
     t.datetime "anonymized_at"
