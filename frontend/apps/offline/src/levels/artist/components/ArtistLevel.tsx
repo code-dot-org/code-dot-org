@@ -3,6 +3,7 @@ import React, {
   useState,
   useEffect,
   useCallback,
+  useMemo,
   ReactNode,
 } from 'react';
 
@@ -146,10 +147,25 @@ const ArtistLevel: React.FunctionComponent<ArtistLevelProps> = ({
     };
   }, [controller, level]);
 
+  // Ensure a 'when_run' block exists... as some levels omit it for some reason
+  const startBlocks = useMemo(() => {
+    // Deep duplicate the block data
+    const initial = level.blocklyData?.startBlocks || DefaultStartBlocks;
+    const data = {...initial};
+    data.blocks ||= {};
+    data.blocks = {...data.blocks};
+    data.blocks.blocks ||= [];
+    data.blocks.blocks = [...data.blocks.blocks];
+    if (!data.blocks.blocks.some(block => block.type === 'when_run')) {
+      data.blocks.blocks.unshift({type: 'when_run'});
+    }
+    return data;
+  }, [level]);
+
   return (
     <BlocklyLevel
       level={level}
-      startBlocks={level.blocklyData?.startBlocks || DefaultStartBlocks}
+      startBlocks={startBlocks}
       theme={theme || DefaultTheme}
       renderer={renderer || ThrasosRenderer}
       avatar={currentAvatar}
@@ -171,7 +187,6 @@ const ArtistLevel: React.FunctionComponent<ArtistLevelProps> = ({
       }
       customBlocks={[...blocks(skin), ...(customBlocks || [])]}
       options={{
-        forceInsertTopBlock: 'when_run',
         grayOutUndeletableBlocks: true,
         ...(options || {}),
       }}

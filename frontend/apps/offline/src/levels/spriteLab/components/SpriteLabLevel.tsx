@@ -213,7 +213,6 @@ const SpriteLabLevel: React.FunctionComponent<SpriteLabLevelProps> = ({
       }
       customBlocks={fullBlocks}
       options={{
-        forceInsertTopBlock: 'when_run',
         grayOutUndeletableBlocks: false,
         ...(options || {}),
       }}

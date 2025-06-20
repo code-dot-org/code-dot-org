@@ -4,7 +4,6 @@ import React, {
   useState,
   useEffect,
   useCallback,
-  useContext,
   ReactNode,
 } from 'react';
 
@@ -15,17 +14,15 @@ import ToolboxTrashcanPlugin from '@/blockly/plugins/toolboxTrashcan';
 import ThrasosRenderer from '@/blockly/renderers/thrasos';
 import DefaultTheme from '@/blockly/themes/default';
 import type {BlocklySerialization} from '@/blockly/types';
-import LevelContext from '@/contexts/LevelContext';
 import BlocklyLevel, {
   BlocklyLevelEnvironment,
   BlocklyLevelProps,
 } from '@/levels/blockly/components/BlocklyLevel';
 
 import blocks from '../blocks';
-import Maze from '../Maze';
-import defaultSkins, {skinFor} from '../skins';
+import Studio from '../Studio';
 import type {SkinsData, API} from '../types';
-import Validator from '../Validator';
+//import Validator from '../Validator';
 
 import Visualization from './Visualization';
 
@@ -40,7 +37,7 @@ const DefaultStartBlocks: BlocklySerialization = {
   },
 };
 
-export interface MazeLevelProps extends BlocklyLevelProps {
+export interface StudioLevelProps extends BlocklyLevelProps {
   level: LevelData;
   skins?: SkinsData;
   api?: API;
@@ -49,7 +46,7 @@ export interface MazeLevelProps extends BlocklyLevelProps {
   visualizationClassName?: string;
 }
 
-const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
+const StudioLevel: React.FunctionComponent<StudioLevelProps> = ({
   level,
   customBlocks,
   skins,
@@ -63,20 +60,8 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
   ...rest
 }) => {
   const svg = useRef<SVGSVGElement | null>(null);
-  const maze = useRef<Maze | null>(null);
+  const studio = useRef<Studio | null>(null);
   const environment = useRef<BlocklyLevelEnvironment>({});
-
-  const {hintsShown} = useContext(LevelContext);
-
-  // Respond to a hint showing a path
-  useEffect(() => {
-    if (hintsShown > 0) {
-      const hint = (level.hints || [])[hintsShown - 1];
-      if (hint.path && maze.current) {
-        maze.current.drawHintPath(hint.path);
-      }
-    }
-  }, [hintsShown, maze]);
 
   const [currentAvatar, setCurrentAvatar] = useState<string>(avatar || '');
   const [running, setRunning] = useState<boolean>(false);
@@ -85,30 +70,31 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
 
   // When the reset button is pressed
   const onReset = useCallback(() => {
-    maze.current?.reset?.();
-  }, [maze]);
+    studio.current?.reset?.();
+  }, [studio]);
 
   // When the 'step' button is pressed
   const onStep = useCallback(() => {
-    maze.current?.step?.();
-  }, [maze]);
+    studio.current?.step?.();
+  }, [studio]);
 
   // When the 'run' button is pressed
   const onRun = useCallback(() => {
-    maze.current?.run?.();
-  }, [maze]);
+    studio.current?.run?.();
+  }, [studio]);
 
   // Pull out the skin asset paths
   const skin = useMemo(
-    () => skinFor(skins || defaultSkins, level?.mazeData?.skinId || 'birds'),
+    () => (skins || {})[level?.mazeData?.skinId || 'hoc2015x'],
     [level],
   );
 
   // Determine all blocks
   const fullBlocks = useMemo(
-    () => [...blocks(skin), ...(customBlocks || [])],
+    () => [...blocks, ...(customBlocks || [])],
     [blocks, customBlocks],
   );
+  console.log(level);
 
   // Set up the driver
   useEffect(() => {
@@ -116,39 +102,38 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
       // Update the avatar image
       setCurrentAvatar(skin.smallStaticAvatar);
 
-      // Create our Maze driver
-      maze.current = new Maze(
-        environment.current.mainWorkspace,
-        level?.mazeData || {
+      // Create our Studio driver
+      studio.current = new Studio(
+        level?.studioData || {
+          map: [],
           skinId: skin.id,
         },
-        environment.current,
         skin,
+        environment.current,
         {
           ...(api || {}),
         },
         svg.current,
-        Validator,
       );
 
       // Hook it up to the component state via events
-      maze.current.addEventListener('reset', onReset);
-      maze.current.addEventListener('stepping', () => {
+      studio.current.addEventListener('reset', onReset);
+      studio.current.addEventListener('stepping', () => {
         setStepping(true);
         setRunning(true);
       });
-      maze.current.addEventListener('running', () => setRunning(true));
-      maze.current.addEventListener('stopped', () => {
+      studio.current.addEventListener('running', () => setRunning(true));
+      studio.current.addEventListener('stopped', () => {
         setRunning(false);
         setStepping(false);
       });
-      maze.current.addEventListener('stepped', () => setRunning(false));
-      maze.current.addEventListener('done', () => setRunning(false));
+      studio.current.addEventListener('stepped', () => setRunning(false));
+      studio.current.addEventListener('done', () => setRunning(false));
     }
 
     return () => {
       console.log('UNINIT THE MAZE LEVEL');
-      maze.current?.uninitialize();
+      studio.current?.uninitialize();
     };
   }, [svg, level]);
 
@@ -210,4 +195,4 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
   );
 };
 
-export default MazeLevel;
+export default StudioLevel;

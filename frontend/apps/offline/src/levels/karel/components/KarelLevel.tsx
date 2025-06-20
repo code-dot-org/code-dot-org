@@ -25,10 +25,6 @@ const KarelLevel: React.FunctionComponent<MazeLevelProps> = ({
       customBlocks={[...blocks, ...(customBlocks || [])]}
       visualizationClassName={moduleStyles.karelMaze}
       api={api}
-      options={{
-        forceInsertTopBlock: 'when_run',
-        grayOutUndeletableBlocks: true,
-      }}
     />
   );
 };

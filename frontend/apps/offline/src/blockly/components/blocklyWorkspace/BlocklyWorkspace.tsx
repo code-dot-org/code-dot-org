@@ -34,8 +34,6 @@ import type {
 import moduleStyles from './blocklyWorkspace.module.scss';
 
 export interface BlocklyOptions extends Blockly.BlocklyOptions {
-  /** When specified, this ensures that the given block exists and is the top block. */
-  forceInsertTopBlock?: string;
   /** When specified, undeletable blocks are grayed out. */
   grayOutUndeletableBlocks?: boolean;
 }
