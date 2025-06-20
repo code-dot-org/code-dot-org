@@ -1,11 +1,15 @@
 name 'music-lab-612-pre-q5'
 
-question 'put actual question here'
+question '**Sasha and Logan\'s songs sound the same. Which code could be Logan\’s?** '
 
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
-right 'correct'
+width '200'
+height '200'
+
+right 'https://images.code.org/5283fec106201d5ee44ddb43db2c93ed-image-1750277023817.png'
+wrong 'https://images.code.org/28c5789e7c172322ace6695f2792436e-image-1750277041152.png'
+wrong 'https://images.code.org/2477d310faf60dc0bcecf9cf8851ab56-image-1750277044426.png'
+wrong 'https://images.code.org/8e294d323e20346f83461e86acc01813-image-1750277047447.png'
+
 
 allow_multiple_attempts true
 
@@ -25,5 +29,14 @@ Posttest Modality: Given starting code / shadow blocks, refactor
 MARKDOWN
 
 markdown <<MARKDOWN
-Put the images / context markdown here
+Sasha and Logan used different code to make songs that sound exactly the same. 
+
+**This is Sasha\'s code:**
+
+<img src="https://images.code.org/1c5bff78db45e78a5e576b86e67f9b4e-image-1750277182806.png" width="400">
+
+--- 
+Both Sasha and Logan\'s timelines look like this: 
+
+<img src="https://images.code.org/def4914c1cb2cd65ac32718323ebe235-image-1750276938980.png" width="400">
 MARKDOWN

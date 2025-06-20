@@ -1,11 +1,12 @@
 name 'music-lab-612-pre-q3'
 
-question 'put actual question here'
-
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
-right 'correct'
+question '**Which code could replace Sam\'s shadow code to create the same sound and timeline?**'
+height '210'
+width '200'
+wrong 'https://images.code.org/957c8160ad253afef78feb21c978092b-image-1750273441612.png'
+wrong 'https://images.code.org/047773f78a58e023eb660d75342e279c-image-1750273445338.png'
+wrong 'https://images.code.org/3bec11e0fa3019d6ab95192eab2d8391-image-1750273449479.png'
+right 'https://images.code.org/b9edad2edada02dae49694732bff7215-image-1750273436722.png'
 
 allow_multiple_attempts true
 
@@ -25,5 +26,7 @@ Posttest Modality: Given starting code / shadow blocks, refactor
 MARKDOWN
 
 markdown <<MARKDOWN
-Put the images / context markdown here
+Sam is remixing some background beats and vocals. They just discovered that a loop using a repeat block could make this code more efficient. This is the code they have so far:
+
+<img src="https://images.code.org/ab3bcc06560956ac8967edca1899aa83-image-1750273275289.png" width="200">
 MARKDOWN
