@@ -165,6 +165,10 @@ export class Localization extends TypedEventEmitter<LocalizationEventMap> {
     });
   }
 
+  isLocalizeJS(): boolean {
+    return !!this.Localize;
+  }
+
   async waitUntilLoaded(): Promise<boolean> {
     if (this.loader === undefined) {
       return true;
