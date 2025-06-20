@@ -12,7 +12,7 @@ class ScriptsController < ApplicationController
   before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
   before_action :redirect_to_canonical_path, only: [:show, :vocab, :resources, :code, :standards]
-  authorize_resource class: 'Unit', except: [:update]
+  before_action :authorize_script, except: [:update]
   load_and_authorize_resource class: 'Unit', only: [:update]
 
   use_reader_connection_for_route(:show)
@@ -380,7 +380,7 @@ class ScriptsController < ApplicationController
   end
 
   private def render_no_access
-    if current_user && !current_user.admin? && !can?(:read, @script)
+    if current_user && !current_user.admin? && !can?(:read, @script, @course)
       render :no_access
     end
   end
@@ -482,5 +482,15 @@ class ScriptsController < ApplicationController
     unit_name_or_id = params[:script_id] || params[:id]
     canonical_path = Services::Courses.canonical_path(request.fullpath, unit_name_or_id)
     redirect_to canonical_path unless canonical_path == request.fullpath
+  end
+
+  # Authorize in a separate before_action rather than using CanCan's authorize_resource
+  # After the URL restructuring from /s/... to /courses/.../units/... the selected unit
+  # was no longer being authorized, and instead the Unit model was being authorized, leading
+  # some users to have access to certain courses they shouldn't have access to (see
+  # TEACH-1975 for more details).This solves the issue by explicitly calling authorize!
+  # on the @script if it is set.
+  private def authorize_script
+    authorize! params[:action].to_sym, @script || Unit, @course
   end
 end

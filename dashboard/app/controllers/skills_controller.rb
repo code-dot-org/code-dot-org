@@ -14,6 +14,8 @@ class SkillsController < ApplicationController
       end
     end
     @skills_by_concept = skills_by_concept
+    levels = LevelsSkill.all.map(&:level).uniq
+    @levels_skills = levels.map(&:summarize_for_levels_skills)
   end
 
   def create

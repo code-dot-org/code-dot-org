@@ -940,7 +940,7 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
       {
-        source: '/beyond/',
+        source: '/beyond',
         destination: '/students/careers-in-computer-science',
         permanent: false,
       },

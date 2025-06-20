@@ -26,6 +26,10 @@
   p:not(:last-child) {
     margin-bottom: 10px;
   }
+
+  code {
+    white-space: pre-wrap;
+  }
 }
 
 .waitingAnimation {

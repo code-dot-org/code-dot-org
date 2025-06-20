@@ -1,16 +1,41 @@
 import {render, screen} from '@testing-library/react';
+import '@testing-library/jest-dom';
 import React from 'react';
 
+import {SessionFormat} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/types';
 import EnrollInWorkshop from '@cdo/apps/code-studio/pd/workshops/components/EnrollInWorkshop';
-import '@testing-library/jest-dom';
+
+const baseUserInfo = {
+  is_student: false,
+  id: 123,
+  email: 'sample@google.com',
+  firstName: 'John',
+  lastName: 'Doe',
+};
 
 const baseProps = {
   id: 1,
   custom_registration_link: undefined,
   num_enrollments: 0,
   capacity: 10,
-  is_signed_out: false,
-  is_student: false,
+  userInfo: baseUserInfo,
+  regional_partner_name: 'Sample Partner',
+  course: 'CS Principles',
+  name: 'Sample Workshop',
+  format: 'hybrid' as const,
+  subject: 'Computer Science',
+  sessions: [
+    {
+      id: 1,
+      start: '2025-05-22T07:00:00.000Z',
+      end: '2025-05-22T19:00:00.000Z',
+      is_local: true,
+      location_name: 'Kyiv, Intercontinental Hotel',
+      location_address: '',
+      meeting_link: '',
+      session_format: 'in_person' as SessionFormat,
+    },
+  ],
 };
 
 describe('EnrollInWorkshop', () => {
@@ -28,28 +53,33 @@ describe('EnrollInWorkshop', () => {
   });
 
   it('enroll button sends logged out users to logged out gate', () => {
-    render(<EnrollInWorkshop {...baseProps} is_signed_out={true} />);
+    render(<EnrollInWorkshop {...baseProps} userInfo={null} />);
     const linkButton = screen.getByRole('link', {
-      name: /Enroll in this workshop/i,
+      name: /Sign-in to enroll/i,
     });
     expect(linkButton).toHaveAttribute(
       'href',
       `/logged_out?source_page=${encodeURIComponent(
         'workshop enroll'
-      )}&return_to=${encodeURIComponent('/pd/workshops/1/enroll')}`
+      )}&return_to=${encodeURIComponent('/professional-learning/workshops/1')}`
     );
   });
 
   it('enroll button sends students to update account type gate', () => {
-    render(<EnrollInWorkshop {...baseProps} is_student={true} />);
+    render(
+      <EnrollInWorkshop
+        {...baseProps}
+        userInfo={{...baseUserInfo, is_student: true}}
+      />
+    );
     const linkButton = screen.getByRole('link', {
-      name: /Enroll in this workshop/i,
+      name: /Switch to teacher account/i,
     });
     expect(linkButton).toHaveAttribute(
       'href',
       `/teacher_account_required?source_page=${encodeURIComponent(
         'workshop enroll'
-      )}&return_to=${encodeURIComponent('/pd/workshops/1/enroll')}`
+      )}&return_to=${encodeURIComponent('/professional-learning/workshops/1')}`
     );
   });
 
@@ -69,12 +99,13 @@ describe('EnrollInWorkshop', () => {
     expect(linkButton).toHaveAttribute('href', customLink);
   });
 
-  it('shows internal enrollment link if available and not full', () => {
+  it('shows internal enrollment button if user is signed in and not a student', () => {
     render(<EnrollInWorkshop {...baseProps} />);
-    const enrollLink = screen.getByRole('link', {
+    const enrollButton = screen.getByRole('button', {
       name: /Enroll in this workshop/i,
     });
-    expect(enrollLink).toHaveAttribute('href', '/pd/workshops/1/enroll');
+    expect(enrollButton).toBeInTheDocument();
+    expect(enrollButton).toBeEnabled();
   });
 
   it('always shows "Click to see data sharing notice" link', () => {

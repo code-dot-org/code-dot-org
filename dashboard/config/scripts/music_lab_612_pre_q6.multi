@@ -1,11 +1,11 @@
 name 'music-lab-612-pre-q6'
 
-question 'put actual question here'
+question '**In Rosa Linn\'s code shown here, how many times will the Chorus Bass sound play?**'
 
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
-right 'correct'
+wrong '0 times'
+wrong '1 time'
+wrong '4 times'
+right '5 times'
 
 allow_multiple_attempts true
 
@@ -25,5 +25,7 @@ Posttest Modality: Given algorithm / intent / incorrect code, match with code
 MARKDOWN
 
 markdown <<MARKDOWN
-Put the images / context markdown here
+Rosa Linn put the drum and bass sounds into a function so she could easily experiment with different beats with her verse vocals. Her code and timeline are below. 
+
+![](https://images.code.org/89865a83431e69231d6f78844c3ea179-image-1750285705011.png)
 MARKDOWN
