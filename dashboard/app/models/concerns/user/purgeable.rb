@@ -3,7 +3,7 @@
 # Concern for business logic related to user data retention. Includes methods
 # relating to deleting personal data and personally identifiable information,
 # or otherwise purging data from a user record.
-module User::Retainable
+module User::Purgeable
   extend ActiveSupport::Concern
 
   included do
