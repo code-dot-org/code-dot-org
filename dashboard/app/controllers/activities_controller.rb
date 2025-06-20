@@ -57,7 +57,7 @@ class ActivitiesController < ApplicationController
     if params[:program] && sharing_allowed
       share_failure = nil
       if @level.game.sharing_filtered?
-        project_type = (@level.game == 'studio') ? 'playlab' : @level.game
+        project_type = 'playlab'
         begin
           share_failure = ShareFiltering.find_share_failure(params[:program], locale, project_type)
         rescue WebPurify::TextTooLongError, OpenURI::HTTPError, IO::EAGAINWaitReadable => exception
