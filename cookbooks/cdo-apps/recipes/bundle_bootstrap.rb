@@ -23,8 +23,6 @@ env = {
   'BUNDLE_APP_CONFIG' => "#{Chef::Config[:file_cache_path]}/.bundle",
   # Install gems to vendor/bundle as per https://bundler.io/guides/deploying.html
   'BUNDLE_DEPLOYMENT' => 'true',
-  # Install executables to project bin dir, for easier $PATH addition
-  'BUNDLE_BIN' => "#{root}/bin"
 }
 node.default['cdo-apps']['bundle_env'] = env
 directory(env['BUNDLE_APP_CONFIG']) {owner user; group user}
