@@ -6,7 +6,7 @@ require 'mini_magick'
 def main
   client = Aws::BedrockRuntime::Client.new
 
-  messages = [
+  image_messages = [
     {
       "role": "user",
       "content": [{"text": "What's in this image?"}],
@@ -23,12 +23,31 @@ def main
           }
         }
       ]
-    }
+    },
+  ]
+
+  # Had to move the text into content for PDF. What's the difference?
+  pdf_messages = [
+    {
+      "role": "user",
+      "content": [
+        {"text": "Use the information in the following PDF to succinctly answer Question 1 in Section II."},
+        {
+          "document": {
+            "format": "pdf",
+            "name": "test",
+            "source": {
+              "bytes": File.binread('/Users/benjaminbrooks/Downloads/ap22-frq-us-history.pdf')
+            }
+          }
+        }
+      ]
+    },
   ]
 
   response = client.converse(
     {
-      messages: messages,
+      messages: pdf_messages,
       model_id: 'amazon.nova-lite-v1:0'
     }
   )
