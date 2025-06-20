@@ -1,4 +1,6 @@
 module OpenaiEvaluateHelper
+  include LevelsHelper
+
   API_KEY = CDO.openai_measures_of_learning_api_key
   MODEL = SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
 
@@ -49,7 +51,7 @@ module OpenaiEvaluateHelper
     elsif ShareFiltering.find_pii_failure(student_work)
       json_response = {"content" => PII_DETECTED_RESPONSE.to_json}
       return {status: :ok, json: json_response}
-    elsif Rails.env.test? || Rails.env.development? # TODO remove before merging. just dont want to wait for requests.
+    elsif Rails.env.test? # || Rails.env.development? # TODO remove before merging. just dont want to wait for requests.
       # Return dummy data in the test environment
       json_response = {"content" => DUMMY_RESPONSE.to_json}
       return {status: :ok, json: json_response}
@@ -66,53 +68,92 @@ module OpenaiEvaluateHelper
   end
 
   def self.evaluate_section(unit, section, options)
-    # Get all students in the section
     students = section.students
 
-    # Get all levels in the unit
     levels = unit.levels
 
-    # Find UserLevels for students in this section and levels in this unit
     user_levels = UserLevel.joins(:user, :level).
                           where(user: students, level: levels, script: unit).
                           includes(:user, :level, :level_source)
 
     user_levels.each do |user_level|
       if user_level.level_source && user_level.level_source.data.present?
-        response = evaluate_free_response(user_level, unit, 'single_student')
-        pp 'lfm free response evaluation', response
-      else
-        pp 'lfm no evaluation', {level_source: user_level.level_source, level_name: user_level.level.name, user_name: user_level.user.name}
-        # No work submitted for this level
-        {
-          user_level_id: user_level.id,
-          student_name: user_level.user.name,
-          level_name: user_level.level.name,
-          evaluation: {
-            status: :ok,
-            json: {"content" => {**NO_ATTEMPT_RESPONSE, aiReasoning: "No work submitted for this level."}.to_json}
-          }
-        }
+        evaluate_free_response(user_level, unit)
+      elsif user_level.level.name == 'U4 L03 Variables operator practice 5_2024' || user_level.level.name == 'U4 L03 Variables numbers practice 4_2024'
+        evaluate_code_level(user_level, unit)
       end
     end
+
+    nil
   end
 
-  def self.evaluate_free_response(user_level, unit, evaluation_type)
+  def self.evaluate_free_response(user_level, unit)
     student_work = user_level.level_source.data
 
     response = evaluate(
       user_level.level,
       unit,
       student_work: student_work,
-      evaluation_type: evaluation_type
+      evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]
     )
 
-    {
-      user_level_id: user_level.id,
-      student_name: user_level.user.name,
-      level_name: user_level.level.name,
-      evaluation: response
+    create_ai_evaluations_from_ai_response(user_level.user, user_level, unit, response, {})
+  end
+
+  def self.evaluate_code_level(user_level, unit)
+    # Why isn't this retrieving the student code?
+    helper = ApplicationController.helpers
+    student_code = helper.get_student_code(user_level.user.id, user_level.level, unit.id)
+
+    unless student_code.nil? || student_code[:student_code].nil?
+      response = evaluate(user_level.level, unit, student_work: student_code[:student_code], evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT])
+
+      create_ai_evaluations_from_ai_response(user_level.user, user_level, unit, response, code_version: student_code[:code_version])
+    end
+  end
+
+  def self.create_ai_evaluations_from_ai_response(student, user_level, unit, ai_response, options)
+    parsed_evaluation = JSON.parse(ai_response[:json]['content'])
+
+    student_work_evaluation_params = {
+      type: 'UserLevelEvaluation',
+      student_id: user_level.user.id,
+      code_version: options[:code_version] || nil,
+      level_id: user_level.level.id,
+      unit_id: unit.id,
+      evaluator: 'AI',
+      evaluation_criteria: parsed_evaluation['evaluationCriteria'],
+      evaluation: parsed_evaluation['aiEvaluation'],
+      reasoning: parsed_evaluation['aiReasoning'],
+      requester_id: current_user&.id || nil,
+      school_year: '2024-25',
+      ai_model_version: SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
     }
+
+    work_evaluation = StudentWorkEvaluation.create!(student_work_evaluation_params) # TODO change from new to create when ready
+
+    skill_evaluations = parsed_evaluation['skillEvaluations']
+    skill_evaluations&.each do |skill_evaluation|
+      skill_evaluation_params = {
+        type: 'UserLevelSkillEvaluation',
+        student_id: user_level.user.id,
+        code_version: options[:code_version] || nil,
+        level_id: user_level.level.id,
+        unit_id: unit.id,
+        evaluator: 'AI',
+        evaluation_criteria: skill_evaluation['evaluationCriteria'],
+        evaluation: skill_evaluation['aiEvaluation'],
+        reasoning: skill_evaluation['aiReasoning'],
+        skill_id: skill_evaluation['skillId'],
+      }
+
+      created_skill_evaluation = StudentWorkEvaluation.create!(skill_evaluation_params)
+
+      summary_params = {student_work_evaluation_id: created_skill_evaluation.id,
+        student_work_evaluation_summary_id: work_evaluation.id}
+
+      StudentWorkEvaluationSummary.create!(summary_params)
+    end
   end
 
   def self.client
