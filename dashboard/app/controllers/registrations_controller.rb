@@ -309,7 +309,7 @@ class RegistrationsController < Devise::RegistrationsController
     user_params[:hashed_email] = User.hash_email(user_params[:email]) if user_params[:email].present?
     current_user.reload # Needed to make tests pass for reasons noted in registrations_controller_test.rb
 
-    successfully_updated = current_user.upgrade_to_personal_login(upgrade_params)
+    successfully_updated = Services::User::UpgradeToPersonalLogin.call(user: current_user, params: upgrade_params)
     has_email = current_user.parent_email.blank? && current_user.hashed_email.present?
     success_message_kind = has_email ? :personal_login_created_email : :personal_login_created_username
 
