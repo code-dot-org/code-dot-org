@@ -1,5 +1,5 @@
 import {render, screen, within} from '@testing-library/react';
-import '@testing-library/jest-dom';
+import userEvent from '@testing-library/user-event';
 
 import Footer, {FooterProps, SiteLink, SocialLink, ImageLink} from '../Footer';
 
@@ -31,12 +31,19 @@ describe('CMS Footer', () => {
       },
     },
   ];
+  const languages = [
+    {value: 'en', text: 'English'},
+    {value: 'es', text: 'Spanish'},
+  ];
+  const mockLanguageChange = jest.fn();
 
   const renderFooterContainer = (props: Partial<FooterProps> = {}) => {
     render(
       <Footer
         {...props}
         {...{title, copyright, siteLinks, socialLinks, imageLinks}}
+        onLanguageChange={mockLanguageChange}
+        languages={languages}
       />,
     );
   };
@@ -98,5 +105,28 @@ describe('CMS Footer', () => {
     document.head.appendChild(style);
 
     expect(footer).toHaveStyle(classStyle);
+  });
+
+  it('renders footer with language selector', () => {
+    renderFooterContainer();
+    const languageSelect = screen.getByRole('combobox');
+
+    expect(languageSelect).toBeVisible();
+    userEvent.click(languageSelect);
+
+    expect(languageSelect).toHaveTextContent('English');
+    expect(languageSelect).toHaveTextContent('Spanish');
+    // Don't translate the language dropdown - one of the parents must have the notranslate class
+    expect(languageSelect.closest('.notranslate')).not.toBeNull();
+  });
+
+  it('calls onLanguageChange when language is changed', async () => {
+    renderFooterContainer();
+    const languageSelect = screen.getByRole('combobox');
+
+    // Simulate changing the language
+    await userEvent.selectOptions(languageSelect, 'es');
+
+    expect(mockLanguageChange).toHaveBeenCalledWith('es');
   });
 });

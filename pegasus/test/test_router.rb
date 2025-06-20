@@ -101,6 +101,7 @@ class RouterTest < Minitest::Test
   end
 
   def test_no_erb_in_yaml
+    skip unless CDO.has_pegasus_content
     # This test exists for mostly historic reasons; it used to be the case that
     # the YAML headers in pegasus documents would be parsed first as ERB before
     # being parsed as YAML.

@@ -2,13 +2,20 @@ import {type Page} from '@playwright/test';
 
 import {loadFonts, FONT_FAMILY_NAMES} from '@code-dot-org/fonts';
 
+export interface MarketingPageOptions {
+  locale?: string;
+  isPreview?: boolean;
+}
+
 export class MarketingPage {
   readonly locale: string | undefined;
+  readonly isPreview: boolean;
   readonly page: Page;
 
-  constructor(page: Page, locale?: string) {
+  constructor(page: Page, options?: MarketingPageOptions) {
     this.page = page;
-    this.locale = locale;
+    this.locale = options?.locale;
+    this.isPreview = options?.isPreview ?? false;
   }
 
   async enableDraftMode(token: string, slug: string) {
@@ -21,12 +28,16 @@ export class MarketingPage {
     const domain = process.env.APPLICATION_BASE_ADDRESS;
 
     if (!domain) {
-      console.warn('No domain specified, defaulting to localhost:3001!');
+      console.warn(
+        'No domain specified, defaulting to code.marketing-sites.localhost!',
+      );
 
-      return 'localhost:3001';
+      return this.isPreview
+        ? 'preview-code.marketing-sites.localhost:3001'
+        : 'code.marketing-sites.localhost:3001';
     }
 
-    return domain;
+    return this.isPreview ? `preview-${domain}` : domain;
   }
 
   getBaseUrl() {
@@ -52,7 +63,8 @@ export class MarketingPage {
   getCookieDomain() {
     const baseDomain = this.getBaseDomain();
 
-    return baseDomain === 'localhost:3001' ? 'localhost' : baseDomain;
+    // Remove the port number if it exists, e.g. "localhost:3001" becomes "localhost"
+    return baseDomain.replace(/:\d+$/, '');
   }
 
   getBasePath() {

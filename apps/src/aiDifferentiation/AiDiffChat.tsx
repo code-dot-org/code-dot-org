@@ -2,6 +2,7 @@ import React, {useEffect, useRef, useState} from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
   AiInteractionStatus as Status,
   AiDiffContext,
@@ -31,6 +32,8 @@ import {
   ADDITIONAL_HELP_PROMPT,
   APCSP_DUMMY_CREATE,
   APCSP_DUMMY_EXAM,
+  DEBUG_THIS_CODE,
+  IMPROVE_THIS_CODE,
 } from './AiDiffPredefinedPrompts';
 import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
 import {ChatItem, ChatPrompt, Context} from './types';
@@ -105,7 +108,18 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
 
   const [suggestionPage, setSuggestionPage] = useState(0);
 
-  const isCSP = curriculumCourses.includes('csp');
+  const viewAsUserId = useAppSelector(
+    state => state.progress?.viewAsUserId || undefined
+  );
+
+  const additionalPrompts: ChatPrompt[] = [];
+  if (curriculumCourses.includes('csp')) {
+    additionalPrompts.push(...APCSP_PROMPTS);
+  }
+  if (context.type === AiDiffContext.LEVEL) {
+    additionalPrompts.push(DEBUG_THIS_CODE, IMPROVE_THIS_CODE);
+    context.viewAsUserId = viewAsUserId;
+  }
 
   const [messageHistory, setMessageHistory] = useState<ChatItem[]>([
     {
@@ -113,7 +127,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
       chatMessageText: initialChatMessage,
       status: Status.OK,
     },
-    isCSP ? suggestedPrompts.concat(APCSP_PROMPTS) : suggestedPrompts,
+    suggestedPrompts.concat(additionalPrompts),
   ]);
 
   const onMessageSend = (message: string) => {
@@ -158,7 +172,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     setSuggestionPage(nextPage);
     setMessageHistory(prevMessages => [
       ...prevMessages,
-      isCSP ? newSuggestions.concat(APCSP_PROMPTS) : newSuggestions,
+      newSuggestions.concat(additionalPrompts),
     ]);
   };
 

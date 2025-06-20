@@ -1,4 +1,5 @@
 @chrome
+@pegasus_content
 Feature: Global Edition - Farsi MVP - Sign Up page
 
   Background:

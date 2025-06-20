@@ -21,6 +21,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import MainInstructionsPreview from '../codebridge/InfoPanel/MainInstructionsPreview';
+import InstructionsPanel from '../lab2/views/components/InstructionsPanel';
 import SafeMarkdown from '../templates/SafeMarkdown';
 
 window.JSHINT = JSHINT;
@@ -84,6 +85,17 @@ function initializeCodeMirror(target, mode, options = {}) {
               instructionsText: editor.getValue(),
               theme: 'Dark',
               hasPassed: false,
+            }),
+            previewElement
+          );
+        } else if (game === 'Aichat' || game === 'Music') {
+          ReactDOM.render(
+            React.createElement(InstructionsPanel, {
+              text: editor.getValue(),
+              theme: game === 'Music' ? 'Dark' : 'Light',
+              noTextAnimation: true,
+              setPredictResponse: () => {},
+              predictAnswerLocked: false,
             }),
             previewElement
           );

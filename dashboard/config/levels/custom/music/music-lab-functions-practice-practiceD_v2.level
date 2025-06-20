@@ -767,7 +767,7 @@
             {
               "type": "procedures_defnoreturn",
               "id": "ZjJrcfk%Q@P(;xd9/8E(",
-              "x": 790,
+              "x": 750,
               "y": 90,
               "extraState": {
                 "procedureId": "t=rA6ym~|zutqSqe}!xL",
@@ -782,7 +782,7 @@
             {
               "type": "procedures_defnoreturn",
               "id": "uB[KH`xZK(stRP!q@u4;",
-              "x": 1010,
+              "x": 910,
               "y": 90,
               "extraState": {
                 "procedureId": "F#j;Kk{+$3:%sgS)a_O=",
@@ -800,7 +800,8 @@
               "x": 590,
               "y": 30,
               "disabledReasons": [
-                "MANUALLY_DISABLED"
+                "MANUALLY_DISABLED",
+                "ORPHANED"
               ],
               "extraState": {
                 "name": "bass_verse"
@@ -809,10 +810,11 @@
             {
               "type": "procedures_callnoreturn",
               "id": "uOI!:S[39|vCvG{y(1Xk",
-              "x": 790,
+              "x": 758,
               "y": 30,
               "disabledReasons": [
-                "MANUALLY_DISABLED"
+                "MANUALLY_DISABLED",
+                "ORPHANED"
               ],
               "extraState": {
                 "name": "synth_verse"
@@ -821,10 +823,11 @@
             {
               "type": "procedures_callnoreturn",
               "id": "ysPwrSfP1+k*-9H.6Hx7",
-              "x": 1010,
+              "x": 910,
               "y": 30,
               "disabledReasons": [
-                "MANUALLY_DISABLED"
+                "MANUALLY_DISABLED",
+                "ORPHANED"
               ],
               "extraState": {
                 "name": "vocals_verse"
@@ -851,7 +854,8 @@
               "x": 370,
               "y": 30,
               "disabledReasons": [
-                "MANUALLY_DISABLED"
+                "MANUALLY_DISABLED",
+                "ORPHANED"
               ],
               "extraState": {
                 "name": "drums_verse"
@@ -890,7 +894,7 @@
             {
               "type": "procedures_defnoreturn",
               "id": "VkYP8s8P_;__zOI0c_+e",
-              "x": 850,
+              "x": 790,
               "y": 390,
               "extraState": {
                 "procedureId": "PN]WrmNyhbD96;-f5~3Z",
@@ -905,7 +909,7 @@
             {
               "type": "procedures_defnoreturn",
               "id": "Oz+;s3@=2w;N{XBdbQj[",
-              "x": 1190,
+              "x": 970,
               "y": 390,
               "extraState": {
                 "procedureId": "-`dCdKP3am_bR:Nj+:lB",
@@ -923,7 +927,8 @@
               "x": 370,
               "y": 330,
               "disabledReasons": [
-                "MANUALLY_DISABLED"
+                "MANUALLY_DISABLED",
+                "ORPHANED"
               ],
               "extraState": {
                 "name": "drums_prechorus"
@@ -935,7 +940,8 @@
               "x": 610,
               "y": 330,
               "disabledReasons": [
-                "MANUALLY_DISABLED"
+                "MANUALLY_DISABLED",
+                "ORPHANED"
               ],
               "extraState": {
                 "name": "bass_prechorus"
@@ -944,10 +950,11 @@
             {
               "type": "procedures_callnoreturn",
               "id": "_!So5S{B/Itm?#)e-@}7",
-              "x": 850,
+              "x": 770,
               "y": 330,
               "disabledReasons": [
-                "MANUALLY_DISABLED"
+                "MANUALLY_DISABLED",
+                "ORPHANED"
               ],
               "extraState": {
                 "name": "synth_prechorus"
@@ -956,10 +963,11 @@
             {
               "type": "procedures_callnoreturn",
               "id": "eHC$ca*^1$UWw%DkRCAV",
-              "x": 1190,
+              "x": 970,
               "y": 330,
               "disabledReasons": [
-                "MANUALLY_DISABLED"
+                "MANUALLY_DISABLED",
+                "ORPHANED"
               ],
               "extraState": {
                 "name": "vocals_prechorus"
@@ -1064,7 +1072,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:58.662+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-practiceD\\\"\"],\"cloned_from\":\"music-lab-functions-practice-practiceD\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:58.662+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-practiceD\\\"\"],\"cloned_from\":\"music-lab-functions-practice-practiceD\"},{\"changed_at\":\"2025-06-10 23:42:48 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-10 23:43:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-10 23:48:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

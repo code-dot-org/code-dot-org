@@ -48,7 +48,9 @@ export interface Lab2WrapperProps {
 const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
   const isLoading: boolean = useSelector(isLabLoading);
   const isPageError: boolean = useSelector(hasPageError);
-  const isBlocked = useAppSelector(state => state.lab.isBlocked);
+  const {isBlockedAbuse, projectSharingDisabled} = useAppSelector(
+    state => state.lab
+  );
   const dispatch = useAppDispatch();
   const isProjectValidator = useAppSelector(state =>
     state.lab.permissions?.includes(PERMISSIONS.PROJECT_VALIDATOR)
@@ -116,6 +118,12 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
   useLifecycleNotifier(LifecycleEvent.LevelChangeRequested, cancel);
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, cancel);
 
+  const blockedType = isBlockedAbuse
+    ? 'projectAbuse'
+    : projectSharingDisabled
+    ? 'projectSharingDisabled'
+    : undefined;
+
   return (
     <ErrorBoundary
       fallback={<ErrorFallbackPage />}
@@ -139,8 +147,11 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
         <Loading isLoading={isLoading} />
 
         {isPageError && <ErrorUI message={errorMessage} />}
-        {isBlocked && (
-          <ProjectBlockedUI isProjectValidator={isProjectValidator} />
+        {blockedType && (
+          <ProjectBlockedUI
+            blockedType={blockedType}
+            isProjectValidator={isProjectValidator}
+          />
         )}
       </div>
     </ErrorBoundary>

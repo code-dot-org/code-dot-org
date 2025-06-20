@@ -95,9 +95,12 @@ $text-horizontal-padding: 2.6cqw;
 
       h1, h2, h3, h4 {
         margin: 0 0 1cqw 0;
-        font-family: $barlowSemiCondensed-semibold;
         font-size: 3cqw;
         line-height: 1.2em;
+
+        &, em, strong {
+          font-family: $barlowSemiCondensed-semibold;
+        }
       }
 
       p {

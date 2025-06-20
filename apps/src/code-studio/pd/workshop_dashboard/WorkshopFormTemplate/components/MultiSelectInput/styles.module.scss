@@ -1,4 +1,3 @@
-@import '@code-dot-org/component-library-styles/colors.scss';
 @import '@code-dot-org/component-library-styles/variables.scss';
 @import '@code-dot-org/component-library-styles/mixins.scss';
 
@@ -20,6 +19,10 @@
 
   &.focused {
     @include focus-styles;
+  }
+
+  &.invalid {
+    border-color: var(--borders-error-primary);
   }
 
   .clearAllButton {
@@ -49,6 +52,18 @@
         height: 1.375rem;
         padding-top: 0;
         padding-bottom: 0;
+      }
+
+      &.invalid {
+        > div {
+          background-color: var(--background-neutral-primary);
+          border: 1px solid var(--background-error-primary);
+          box-sizing: border-box;
+
+          > span {
+            color: var(--background-error-primary);
+          }
+        }
       }
     }
 

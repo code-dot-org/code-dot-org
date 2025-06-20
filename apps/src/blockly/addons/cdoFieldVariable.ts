@@ -135,18 +135,19 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
       this as GoogleBlockly.FieldVariable
     );
 
+    const workspace = this.getSourceBlock()?.workspace;
+    // Embedded workspaces are read-only, so we don't need to modify the dropdown options.
+    if (!workspace || Blockly.embeddedWorkspaces.includes(workspace.id)) {
+      return options;
+    }
+
     // Remove the last two options (Delete and Rename)
     options.pop();
     options.pop();
 
+    // Filter out variables that are function parameters (Music Lab advanced functions)
+    const nonParamVarIds = getNonFunctionVariableIds(workspace);
     const filteredOptions = options.filter(option => {
-      const workspace = this.getSourceBlock()?.workspace;
-      // Embedded workspaces are read-only, so we don't need to modify the dropdown options.
-      if (!workspace || Blockly.embeddedWorkspaces.includes(workspace.id)) {
-        return true;
-      }
-
-      const nonParamVarIds = getNonFunctionVariableIds(workspace);
       const optionValue = option[1] as string;
       return nonParamVarIds.includes(optionValue);
     });

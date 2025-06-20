@@ -76,6 +76,7 @@ class ScriptLevelsController < ApplicationController
     authorize! :read, ScriptLevel
     unit_context = ScriptLevelsController.get_unit_context(request)
     @unit_group_unit = unit_context[:unit_group_unit]
+    @unit_group = unit_context[:unit_group]
     @script = unit_context[:unit]
     @script_level = ScriptLevelsController.get_script_level(@script, params)
 
@@ -129,9 +130,9 @@ class ScriptLevelsController < ApplicationController
         authenticate_user!
       end
     end
-    authenticate_user! unless can?(:read, @script)
+    authenticate_user! unless can?(:read, @script, @unit_group)
 
-    return render 'levels/no_access' unless can?(:read, @script_level)
+    return render 'levels/no_access' unless can?(:read, @script_level, {context_unit_group: @unit_group})
 
     if current_user&.script_level_hidden?(@script_level)
       view_options(full_width: true)
@@ -190,7 +191,7 @@ class ScriptLevelsController < ApplicationController
         end
 
       # TODO: Change/remove this check as we add support for more level types.
-      if levels[0].is_a?(FreeResponse) || levels[0].is_a?(Multi) || levels[0].predict_level? || levels[0].is_a?(LevelGroup)
+      if levels[0].is_a?(FreeResponse) || levels[0].is_a?(Multi) || levels[0]&.predict_level? || levels[0].is_a?(LevelGroup)
         @responses = levels.map do |sublevel|
           UserLevel.where(level: sublevel, user: @section&.students)
         end
