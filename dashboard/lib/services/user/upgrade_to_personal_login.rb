@@ -1,6 +1,6 @@
 module Services
   module User
-    class UpgradePersonalLogin
+    class UpgradeToPersonalLogin < Services::Base
       attr_reader :user, :params
 
       def initialize(user:, params:)
