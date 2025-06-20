@@ -249,12 +249,14 @@ export class Localization extends TypedEventEmitter<LocalizationEventMap> {
     event: K,
     listener: (payload: LocalizationEventMap[K]) => void
   ): this {
-    return super.on(event, listener);
+    const ret = super.on(event, listener);
 
     // Ensure that we call the 'change' event at least once
     if (event === 'change') {
       this.emit('change', {locale: this.locale, rtl: this.rtl});
     }
+
+    return ret;
   }
 
   override addListener<K extends keyof LocalizationEventMap>(
