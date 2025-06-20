@@ -13,9 +13,9 @@ module Services
       def call
         case user_type
         when ::User::TYPE_TEACHER
-          UpgradeToTeacher.new(user: user, email: email, email_preference: email_preference).call
+          Services::User::UserType::UpgradeToTeacher.call(user: user, email: email, email_preference: email_preference)
         when ::User::TYPE_STUDENT
-          DowngradeToStudent.new(user: user).call
+          Services::User::UserType::DowngradeToStudent.call(user: user)
         else
           false
         end

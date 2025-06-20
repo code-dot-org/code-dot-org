@@ -717,18 +717,6 @@ class User < ApplicationRecord
     success
   end
 
-  def set_user_type(user_type, email = nil, email_preference = nil)
-    Services::User::UserTypeSetter.call(user: self, user_type: user_type, email: email, email_preference: email_preference)
-    # case user_type
-    # when TYPE_TEACHER
-    #   upgrade_to_teacher(email, email_preference)
-    # when TYPE_STUDENT
-    #   downgrade_to_student
-    # else
-    #   false # Unexpected user type
-    # end
-  end
-
   # def downgrade_to_student
   #   return true if student? # No-op if user is already a student
   #   update(user_type: TYPE_STUDENT)

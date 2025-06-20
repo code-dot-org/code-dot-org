@@ -375,10 +375,11 @@ class RegistrationsController < Devise::RegistrationsController
         if forbidden_change?(current_user, params)
           false
         else
-          current_user.set_user_type(
-            set_user_type_params[:user_type],
-            set_user_type_params[:email],
-            email_preference_params(EmailPreference::ACCOUNT_TYPE_CHANGE, "0")
+          Services::User::UserTypeSetter.call(
+            user: current_user,
+            user_type: set_user_type_params[:user_type],
+            email: set_user_type_params[:email],
+            email_preference: email_preference_params(EmailPreference::ACCOUNT_TYPE_CHANGE, "0")
           )
         end
       else
