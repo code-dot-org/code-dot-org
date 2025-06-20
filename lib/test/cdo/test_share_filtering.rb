@@ -203,4 +203,80 @@ class ShareFilteringTest < Minitest::Test
     ShareFiltering.expects(:find_failure).with(text, locale, {}, exceptions: false).returns nil
     assert_nil ShareFiltering.find_name_failure(text, locale)
   end
+
+  def test_clean_text_value_helper_function
+    # Field-tagged value
+    wrapped = '<field name="TITLE">"hello world"</field>'
+    assert_equal 'hello world', ShareFiltering.clean_text_value(wrapped)
+
+    # No field tag, just quotes
+    simple_string = '"just some text"'
+    assert_equal 'just some text', ShareFiltering.clean_text_value(simple_string)
+
+    # Non-string or nil
+    assert_nil ShareFiltering.clean_text_value(nil)
+    assert_nil ShareFiltering.clean_text_value(123)
+  end
+
+  # Helper function for testing
+  def generate_json_program
+    {
+      "variables" => [
+        {"name" => "myVar"},
+        {"name" => ""},
+        {"name" => nil}
+      ],
+      "blocks" => {
+        "blocks" => [
+          {
+            "type" => "gamelab_comment",
+            "fields" => {"COMMENT" => '<field name="C">nice comment</field>'},
+            "inputs" => {
+              "INPUT1" => {
+                "block" => {
+                  "type" => "some_block",
+                  "fields" => {"TEXT" => '"inner text"'},
+                  "next" => {"block" => nil}
+                },
+                "shadow" => nil
+              }
+            },
+            "next" => {"block" => nil}
+          }
+        ]
+      }
+    }.to_json
+  end
+
+  def test_extract_text_blockly_helper_function
+    texts = ShareFiltering.extract_text_blockly(generate_json_program)
+    # variable myVar
+    assert_includes texts, 'myVar'
+    # comment
+    assert_includes texts, 'nice comment'
+    # inner TEXT field
+    assert_includes texts, 'inner text'
+    # no duplicates
+    assert_equal texts.uniq, texts
+  end
+
+  def test_should_filter_program_check_project_type
+    Gatekeeper.stubs(:allows).with('webpurify', default: true).returns(true)
+    # 'gamelab' is not in FILTERED_PROJECT_TYPES
+    assert_equal false, ShareFiltering.should_filter_program('<xml/>', 'gamelab')
+  end
+
+  def test_should_filter_program_playlab_only_with_indicator
+    Gatekeeper.stubs(:allows).with('webpurify', default: true).returns(true)
+    indicator = ShareFiltering::USER_ENTERED_TEXT_INDICATORS.first
+
+    # no indicator in program
+    no_indicator = "<xml><block type=\"studio_showTitleScreen\"/></xml>"
+    assert_equal false, ShareFiltering.should_filter_program(no_indicator, 'playlab')
+
+    # has an indicator somewhere
+    with_indicator = "<xml><field name=\"FNAME\">#{indicator}</field></xml>"
+    assert_equal true,
+      ShareFiltering.should_filter_program(with_indicator, 'playlab')
+  end
 end
