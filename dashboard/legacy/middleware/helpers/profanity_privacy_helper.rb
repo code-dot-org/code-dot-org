@@ -25,7 +25,7 @@ end
 def channel_policy_violation?(channel_id)
   body = channel_main_json_body channel_id
   return false unless body
-  project = Projects.new(get_storage_id).get(encrypted_channel_id)
+  project = Projects.new(get_storage_id).get(channel_id)
   project_type = project[:projectType]&.downcase
   profanity_privacy_violation?(BLOCKLY_SOURCE_FILENAME, body, project_type)
 end
@@ -66,7 +66,7 @@ end
 #
 def explain_share_failure(channel_id, locale = 'en')
   body = channel_main_json_body channel_id
-  project = Projects.new(get_storage_id).get(encrypted_channel_id)
+  project = Projects.new(get_storage_id).get(channel_id)
   project_type = project[:projectType]&.downcase
   share_failure_from_body body, locale, project_type
 end
