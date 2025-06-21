@@ -45,3 +45,22 @@ export interface GetWorkshopInfoScriptDataResponse {
   organizer: OrganizerInfo;
   facilitators?: FacilitatorInfo[];
 }
+
+export type UserInfoForWorkshop = {
+  id: number;
+  email: string;
+  is_student?: boolean;
+  first_name?: string;
+  last_name?: string;
+};
+
+export type WorkshopEnrollmentParams = Pick<
+  UserInfoForWorkshop,
+  'email' | 'first_name' | 'last_name'
+> & {
+  user_id: number;
+};
+
+export interface GetUserInfoForWorkshopResponse {
+  userInfo: UserInfoForWorkshop | null;
+}

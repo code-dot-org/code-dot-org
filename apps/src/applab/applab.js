@@ -11,7 +11,6 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import applabMsg from '@cdo/applab/locale';
-import {evaluateStudentWork} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import autogenerateML from '@cdo/apps/applab/ai';
 import * as aiConfig from '@cdo/apps/applab/ai/dropletConfig';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
@@ -1126,31 +1125,6 @@ Applab.runButtonClick = function () {
     scriptId: analyticsData.scriptId,
     interaction: UserLevelInteractions.click_run,
   });
-
-  const config = studioApp().config;
-  const levelUrl = config.currentScriptLevelUrl;
-  // These are the hand-selected levels that are eligible for AI code analysis
-  // as part of the initial Evaluate Student Learning pilot. We want to tightly
-  // scope which levels we run AI code analysis on in for early testing. If we
-  // gain confidence in the approach and accuracy of AI evaluations, we'll expand,
-  // and ultimately likely store this information as a property of the level itself.
-  const aiEvaluationLevels = [
-    '/s/csp4-2024/lessons/3/levels/2',
-    '/s/csp4-2024/lessons/3/levels/6',
-  ];
-  const shouldEvaluateStudentCode = aiEvaluationLevels.includes(levelUrl);
-  if (shouldEvaluateStudentCode) {
-    evaluateStudentWork(
-      {
-        studentId: config.userId,
-        studentDisplayName: config.codeOwnersName,
-        studentWork: config.getCode(),
-        codeVersion: project.getCurrentSourceVersionId(),
-      },
-      analyticsData.levelId,
-      analyticsData.scriptId
-    );
-  }
 
   // Enable the Finish button if is present:
   var shareCell = document.getElementById('share-cell');

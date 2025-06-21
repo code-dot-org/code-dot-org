@@ -893,7 +893,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
     if (
       options.enableKeyboardNavigation ||
-      experiments.isEnabledAllowingQueryString(experiments.KEYBOARD_NAVIGATION)
+      experiments.isEnabledAllowingQueryString(
+        experiments.BLOCKLY_KEYBOARD_NAVIGATION
+      )
     ) {
       initializeKeyboardNavigation(workspace, options.theme);
     }
