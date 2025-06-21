@@ -1,3 +1,4 @@
+import {Button} from '@code-dot-org/component-library/button';
 import React, {useCallback, useEffect, useRef} from 'react';
 
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
@@ -23,17 +24,26 @@ const UserChatMessageEditor: React.FunctionComponent<{
   const uploadsPending = useAppSelector(state =>
     state.aichat.stagedFiles.some(file => file.status === 'uploading')
   );
-
+  const chatButtons = useAppSelector(state => state.aichat.chatButtons);
   const dispatch = useAppDispatch();
 
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
+  const userMessageExtra = useAppSelector(
+    state => state.aichat.userMessageExtra
+  );
+
   const handleSubmit = useCallback(
     (userMessage: string) => {
       if (!isWaitingForChatResponse) {
+        /*const fullText = userMessageExtra
+          ? userMessageExtra(userMessage)
+          : userMessage;*/
+        const textHidden = userMessageExtra ? userMessageExtra('') : '';
         dispatch(
           submitChatContents({
             text: userMessage,
+            textHidden: textHidden || '',
             assets:
               multimodalEnabled && chatAssets.length > 0
                 ? chatAssets
@@ -42,7 +52,13 @@ const UserChatMessageEditor: React.FunctionComponent<{
         );
       }
     },
-    [isWaitingForChatResponse, multimodalEnabled, chatAssets, dispatch]
+    [
+      isWaitingForChatResponse,
+      userMessageExtra,
+      dispatch,
+      multimodalEnabled,
+      chatAssets,
+    ]
   );
 
   const disabled = isWaitingForChatResponse || saveInProgress || uploadsPending;
@@ -56,12 +72,29 @@ const UserChatMessageEditor: React.FunctionComponent<{
   }, [disabled]);
 
   return (
-    <UserMessageEditor
-      onSubmit={handleSubmit}
-      disabled={disabled}
-      editorContainerClassName={editorContainerClassName}
-      ref={inputRef}
-    />
+    <>
+      {chatButtons && (
+        <div>
+          {chatButtons.map(button => (
+            <Button
+              key={button.label}
+              aria-label={button.label}
+              id="button-hint"
+              onClick={() => handleSubmit(button.value)}
+              text={button.label}
+              size="s"
+              color="white"
+            />
+          ))}
+        </div>
+      )}
+      <UserMessageEditor
+        onSubmit={handleSubmit}
+        disabled={disabled}
+        editorContainerClassName={editorContainerClassName}
+        ref={inputRef}
+      />
+    </>
   );
 };
 

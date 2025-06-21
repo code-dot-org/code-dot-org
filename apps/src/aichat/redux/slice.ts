@@ -22,6 +22,7 @@ import {
   isCompletedChatMessage,
   PendingChatMessage,
   ChatAsset,
+  ChatButton,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -47,6 +48,8 @@ const initialState: AichatState = {
   userHasAichatAccess: false,
   stagedFiles: [],
   stagedFilesAlert: undefined,
+  userMessageExtra: undefined,
+  chatButtons: [],
 };
 
 const aichatSlice = createSlice({
@@ -56,11 +59,20 @@ const aichatSlice = createSlice({
     addEventToChatEventsCurrent: (state, action: PayloadAction<ChatEvent>) => {
       state.chatEventsCurrent.push(action.payload);
     },
+    setUserMessageExtra: (
+      state,
+      action: PayloadAction<(text: string) => void>
+    ) => {
+      state.userMessageExtra = action.payload;
+    },
     setStudentChatHistory: (
       state,
       action: PayloadAction<ServerChatEvent[]>
     ) => {
       state.studentChatHistory = action.payload;
+    },
+    setChatButtons: (state, action: PayloadAction<ChatButton[]>) => {
+      state.chatButtons = action.payload;
     },
     setOwnChatHistory: (state, action: PayloadAction<ServerChatEvent[]>) => {
       // It's confusing / not helpful for users to see their own history of when they loaded the level.
@@ -231,6 +243,20 @@ const aichatSlice = createSlice({
       };
       state.currentAiCustomizations = updatedAiCustomizations;
     },
+    setSavedAiCustomizationProperty: <T extends keyof AiCustomizations>(
+      state: AichatState,
+      action: PayloadAction<{
+        property: T;
+        value: AiCustomizations[T];
+      }>
+    ) => {
+      const {property, value} = action.payload;
+      const updatedAiCustomizations = {
+        ...state.savedAiCustomizations,
+        [property]: value,
+      };
+      state.savedAiCustomizations = updatedAiCustomizations;
+    },
     setModelCardProperty: <T extends keyof ModelCardInfo>(
       state: AichatState,
       action: PayloadAction<{
@@ -352,4 +378,7 @@ export const {
   clearStagedFiles,
   stagedFilesLimitExceeded,
   clearStagedFilesAlert,
+  setUserMessageExtra,
+  setChatButtons,
+  setSavedAiCustomizationProperty,
 } = aichatSlice.actions;

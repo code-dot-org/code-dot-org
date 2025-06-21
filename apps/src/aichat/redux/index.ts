@@ -21,4 +21,7 @@ export {
   stagedFilesLimitExceeded,
   clearStagedFilesAlert,
   clearStagedFiles,
+  setUserMessageExtra,
+  setChatButtons,
+  setSavedAiCustomizationProperty,
 } from './slice';

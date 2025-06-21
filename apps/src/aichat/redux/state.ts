@@ -8,9 +8,13 @@ import {
   SaveType,
   ServerChatEvent,
   ViewMode,
+  ChatButton,
 } from '../types';
 
 export interface AichatState {
+  chatButtons: ChatButton[];
+  // Extra content to be added to each user message.
+  userMessageExtra?: (text: string) => void;
   // Content from previous chat sessions that we track purely for visibility to the user
   // and do not send to the model as history.
   chatEventsPast: ChatEvent[];

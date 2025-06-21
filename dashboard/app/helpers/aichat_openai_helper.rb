@@ -57,7 +57,7 @@ module AichatOpenaiHelper
   end
 
   def self.format_message(message, encrypted_channel_id, level_name)
-    formatted = {role: message['role'], content: [{type: "text", text: message['chatMessageText']}]}
+    formatted = {role: message['role'], content: [{type: "text", text: message['chatMessageText'] + (message['chatMessageTextHidden'] || '')}]}
     message['assets']&.each do |asset|
       data = AichatAssetHelper.get_asset_data_uri(asset, encrypted_channel_id, level_name)
       is_pdf = File.extname(asset["filename"]) == '.pdf'

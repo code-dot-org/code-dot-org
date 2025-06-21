@@ -12,6 +12,10 @@ const getAiTutor2FullPromptFromData = (
   validationFile: ProjectFile | undefined,
   longInstructions: string | undefined
 ) => {
+  if (!source) {
+    return '';
+  }
+
   const sourceCode = Object.entries(source.files)
     .filter(
       ([_, file]) =>
@@ -28,7 +32,7 @@ const getAiTutor2FullPromptFromData = (
   );
 
   const fullQuestion = [
-    question,
+    //question,
     'Here is my code:',
     sourceCode,
     ...(validationContents
