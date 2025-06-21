@@ -1,101 +1,119 @@
 require 'cdo/aws/metrics'
 
-class OpenaiUserInputResponseTimeout < StandardError; end
+# TODO - check naming convention for classes
+class GenericAIClient
+  # TODO - Rename me to match actual functionality
+  def post_request(aichat_model_customizations, stored_messages, new_message, level_id, encrypted_channel_id, user_id, project_id)
+    # start_time = Time.now
 
-# Prepares the input (user/level system prompt, context, existing chat history)
-# from AI Chat lab to be sent to the OpenAI API, and sends the request to the API.
-#
-# This module is structured very similarly to the AichatSagemakerHelper module,
-# which manages AI Chat lab's interaction with models that use AWS Sagemaker.
-module AichatOpenaiHelper
-  API_KEY = CDO.openai_student_learning_api_key
-  MODEL = SharedConstants::AICHAT_MODEL_VERSION
+    # TODO? - pass these to post_request directly, not as part of model customizations?
+    # model_id = aichat_model_customizations["selectedModelId"]
+    temperature = aichat_model_customizations['temperature'].to_f
+
+    level = Level.find_by(id: level_id)
+
+    # level system prompt - string or nil
+    # TODO - determine if we're still using level system prompts
+    level_system_prompt = level&.properties&.dig('aichat_settings', 'levelSystemPrompt')
+
+    # level name - string
+    level_name = level&.name
+
+    # system prompt - string or nil
+    system_prompt = aichat_model_customizations['systemPrompt']
+
+    # system prompt - array of strings or nil
+    retrieval_contexts = aichat_model_customizations['retrievalContexts']
+
+    system_instructions = combine_system_instructions(
+      system_prompt,
+      level_system_prompt,
+      retrieval_contexts
+    )
+
+    body = create_body(
+      stored_messages,
+      new_message,
+      system_instructions,
+      temperature,
+      level_name,
+      encrypted_channel_id
+    )
+
+    headers = {
+      "Content-Type" => "application/json",
+    }.merge(custom_headers)
+
+    http_response = HTTParty.post(
+      url,
+      headers: headers,
+      body: body.to_json,
+      open_timeout: DCDO.get('openai_http_open_timeout', 5),
+      read_timeout: DCDO.get('openai_http_read_timeout', 30)
+    )
+
+    response_body = JSON.parse(http_response.body)
+
+    raise_possible_response_errors(response_body)
+
+    # TODO - the fact we called this generate_text_response shows we need to adapt this class for multimodal
+    # responses even if we have a way to disable them in level builder
+    response_text = generate_text_response(response_body)
+
+    # TODO - add back report_usage_and_throttling_metrics
+    # This requires some thought around how to make it implementation agnostics re: 'messages' and 'usage'
+
+    # if model_id == "gpt-4o-mini"
+    #   usage = response_body&.dig('usage')
+    #   response_time = Time.now - start_time
+    #   report_usage_and_throttling_metrics(usage, messages, level_id, project_id, user_id, model_id, response_time)
+    # end
+
+    raise StandardError.new("Unexpected response from AI API: #{http_response.body}") unless response_text
+
+    response_text
+  end
+
+  attr_accessor :api_key, :model
 
   TOKEN_THROTTLING_PREFIX = "aichat/tokens/".freeze
   DEFAULT_TOKEN_LIMIT_PER_DAY = 10_000_000
   ONE_DAY_S = 60 * 60 * 24
+  DEFAULT_TEMPERATURE = 0
 
-  def self.get_openai_assistant_response(aichat_model_customizations, stored_messages, new_message, level_id, project_id, user_id)
-    encrypted_channel_id = storage_encrypt_channel_id(storage_id_for_user_id(user_id), project_id)
-    messages = format_messages(
-      aichat_model_customizations,
-      stored_messages,
-      new_message,
-      level_id,
-      encrypted_channel_id
-    )
-
-    start_time = Time.now
-    # We expose a temperature scale of 0.1-1 to users of AI Chat Lab, but OpenAI's API allows a scale of 0-2.
-    response, usage = request_chat_completion(
-      messages,
-      aichat_model_customizations['temperature'].to_f * 2
-    )
-
-    response_time = Time.now - start_time
-
-    report_usage_and_throttling_metrics(usage, messages, level_id, project_id, user_id, aichat_model_customizations['selectedModelId'], response_time)
-    response
+  private def url
+    raise_not_implemented_error
   end
 
-  def self.format_messages(aichat_model_customizations, stored_messages, new_message, level_id, encrypted_channel_id)
-    level = Level.find_by(id: level_id)
-    level_system_prompt = level&.properties&.dig('aichat_settings', 'levelSystemPrompt') || ""
-    level_name = level&.name
-
-    instructions = get_instructions(
-      aichat_model_customizations['systemPrompt'],
-      level_system_prompt,
-      aichat_model_customizations['retrievalContexts']
-    )
-
-    [
-      {role: "system", content: [{type: "text", text: instructions}]},
-      *stored_messages.map {|message| format_message(message, encrypted_channel_id, level_name)},
-      format_message(new_message, encrypted_channel_id, level_name)
-    ]
+  private def raise_possible_response_errors
+    raise_not_implemented_error
   end
 
-  def self.format_message(message, encrypted_channel_id, level_name)
-    formatted = {role: message['role'], content: [{type: "text", text: message['chatMessageText']}]}
-    message['assets']&.each do |asset|
-      data = AichatAssetHelper.get_asset_data_uri(asset, encrypted_channel_id, level_name)
-      is_pdf = File.extname(asset["filename"]) == '.pdf'
-      formatted[:content] << if is_pdf
-                               {type: 'file', file: {filename: asset["filename"], file_data: data}}
-                             else
-                               {type: "image_url", image_url: {url: data}}
-                             end
-    end
-    formatted
+  private def generate_text_response
+    raise_not_implemented_error
   end
 
-  def self.request_chat_completion(messages, temperature)
-    begin
-      http_response = client.request_chat_completion(messages, temperature)
-    rescue Net::ReadTimeout
-      raise OpenaiUserInputResponseTimeout.new("Timeout waiting for OpenAI to provide response to user input.")
-    end
-
-    body = JSON.parse(http_response.body)
-    raise StandardError.new(body['error']) if body['error']
-
-    response = body&.dig("choices")&.first&.dig('message', 'content')
-    raise StandardError.new("Unexpected response from OpenAI: #{body}") unless response
-
-    [response, body&.dig('usage')]
+  private def custom_headers
+    {}
   end
 
-  def self.get_instructions(system_prompt, level_system_prompt, retrieval_contexts)
+  private def combine_system_instructions(system_prompt, level_system_prompt, retrieval_contexts)
     instructions = ""
-    instructions = level_system_prompt + " " unless level_system_prompt.empty?
-    instructions << (system_prompt + " ") unless system_prompt.empty?
-    instructions << retrieval_contexts.join(" ") if retrieval_contexts
+    instructions << (level_system_prompt + " ") if level_system_prompt.present?
+    instructions << (system_prompt + " ") if system_prompt.present?
+    instructions << retrieval_contexts.join(" ") if retrieval_contexts.present?
     instructions
   end
 
+  private def token_throttling_key(model_id, user_id)
+    # "/user/" included to leave space for potential throttling at the classroom/teacher level.
+    # Token throttling also only currently in place for gpt-4o-mini, but inclusion of model ID leaves space for other models.
+    TOKEN_THROTTLING_PREFIX + 'model/' + model_id + '/user/' + user_id.to_s
+  end
+
+  # TODO - rework this to make it provider agnostic and add call
   # Reports and logs usage metrics to Cloudwatch and our throttling system.
-  def self.report_usage_and_throttling_metrics(usage, messages, level_id, project_id, user_id, model_id, response_time)
+  private def report_usage_and_throttling_metrics(usage, messages, level_id, project_id, user_id, model_id, response_time)
     unless usage
       Honeybadger.notify("OpenAI response detected without usage statistics, which are required for throttling.")
       return
@@ -180,13 +198,231 @@ module AichatOpenaiHelper
     Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE, metrics)
   end
 
+  private def raise_not_implemented_error
+    raise NotImplementedError, "This method must be implemented in the derived class"
+  end
+end
+
+class OpenaiCompletionsClient < GenericAIClient
+  def initialize(api_key, model)
+    @api_key = api_key
+    @model = model
+  end
+
+  private def url
+    "https://api.openai.com/v1/chat/completions"
+  end
+
+  private def custom_headers
+    {
+      "Authorization" => "Bearer #{api_key}"
+    }
+  end
+
+  private def raise_possible_response_errors(response_body)
+    raise StandardError.new(response_body['error']) if response_body['error']
+  end
+
+  private def generate_text_response(response_body)
+    response_body&.dig("choices")&.first&.dig('message', 'content')
+  end
+
+  private def create_body(
+    stored_messages,
+    new_message,
+    system_instructions,
+    temperature,
+    level_name,
+    encrypted_channel_id
+    )
+
+    # We expose a temperature scale of 0.1-1 to users, but OpenAI's API allows a scale of 0-2.
+    temperature *= 2
+
+    messages = [
+      {role: "system", content: [{type: "text", text: system_instructions}]},
+      *stored_messages.map {|message| format_message(message, encrypted_channel_id, level_name)},
+      format_message(new_message, encrypted_channel_id, level_name)
+    ]
+
+    body = {
+      model: model,
+      temperature: temperature,
+      messages: messages
+    }
+
+    body
+  end
+
+  private def format_message(message, encrypted_channel_id, level_name)
+    formatted = {role: message['role'], content: [{type: "text", text: message['chatMessageText']}]}
+    message['assets']&.each do |asset|
+      data = AichatAssetHelper.get_asset_data_uri(asset, encrypted_channel_id, level_name)
+      is_pdf = File.extname(asset["filename"]) == '.pdf'
+      formatted[:content] << if is_pdf
+                               {type: 'file', file: {filename: asset["filename"], file_data: data}}
+                             else
+                               {type: "image_url", image_url: {url: data}}
+                             end
+    end
+    formatted
+  end
+end
+
+class GeminiClient < GenericAIClient
+  def initialize(api_key, model)
+    @api_key = api_key
+    @model = model
+  end
+
+  # TODO secret will be per product (ai chat vs tutor) - currently we have just one for both
+  private def url
+    "https://generativelanguage.googleapis.com/v1beta/models/#{model}:generateContent?key=#{api_key}"
+  end
+
+  private def raise_possible_response_errors(response_body)
+    # TODO - check that works with all possible gemini errors
+    # gemini (openid compat layer) was returning an **array** with object element not an object
+    raise StandardError.new(response_body['error']) if response_body['error']
+  end
+
+  private def generate_text_response(response_body)
+    response_body&.dig("candidates")&.first&.dig('content', 'parts')&.first&.dig('text')
+  end
+
+  # convert role to gemini's role
+  # TODO - verify role is only ever 'user' or 'assistant'
+  private def convert_role(role)
+    if role == 'assistant'
+      return 'model'
+    end
+
+    # else 'user', which is still 'user' for gemini
+    role
+  end
+
+  private def format_content_item(message, encrypted_channel_id, level_name)
+    # TODO - determine if any benefit for files to come first.
+    # This seems more logical regarding how it is currently displayed
+    # in the UI (above text) and thus possibly how user may refer to is
+    # (referencing the previous files)
+
+    content_item = {
+      role: convert_role(message['role']),
+
+      parts: [
+        {
+          text: message['chatMessageText']
+        }
+      ]
+    }
+
+    # TODO - filename need to be added to message which is necessary to
+    # reference a given file when multiple are uploaded. This is not
+    # possible natively in gemini but can be handled with additional
+    # message snippet. Filename is accessible with: asset["filename"]
+
+    # TODO - add image - not possible with url so need to upload directly as base64
+
+    # TODO don't pass data with `data:application/pdf;base64,` so we have to remove
+    # but rather add for openai
+
+    #HACK - FIXME - why are there bad characters after == ?
+
+    message['assets']&.each do |asset|
+      data = AichatAssetHelper.get_asset_data_uri(asset, encrypted_channel_id, level_name)
+      is_pdf = File.extname(asset["filename"]) == '.pdf'
+      content_item[:parts] << if is_pdf
+                                {inline_data: {mime_type: "application/pdf", data: data.delete_prefix('data:application/pdf;base64,').delete("\n")}}
+                                #else
+                                #  {type: "image_url", image_url: {url: data}}
+                              end
+    end
+    content_item
+  end
+
+  private def create_body(
+    stored_messages,
+    new_message,
+    system_instruction_text,
+    temperature,
+    level_name,
+    encrypted_channel_id
+    )
+
+    # We expose a temperature scale of 0.1-1 to users, but Gemini's latest APIs allow a scale of 0-2.
+    temperature *= 2
+
+    body = {
+      generationConfig: {
+        temperature: temperature
+      },
+      system_instruction: {
+        parts: [
+          {
+            text: system_instruction_text
+          }
+        ]
+      },
+      contents: [
+        *stored_messages.map {|message| format_content_item(message, encrypted_channel_id, level_name)},
+        format_content_item(new_message, encrypted_channel_id, level_name)
+      ]
+    }
+
+    body
+  end
+end
+
+class OpenaiUserInputResponseTimeout < StandardError; end
+
+# Prepares the input (user/level system prompt, context, existing chat history)
+# from AI Chat lab to be sent to the OpenAI API, and sends the request to the API.
+#
+# This module is structured very similarly to the AichatSagemakerHelper module,
+# which manages AI Chat lab's interaction with models that use AWS Sagemaker.
+module AichatOpenaiHelper
+  # TODO - dedup
+  TOKEN_THROTTLING_PREFIX = "aichat/tokens/".freeze
+
+  def self.get_openai_assistant_response(aichat_model_customizations, stored_messages, new_message, level_id, project_id, user_id)
+    encrypted_channel_id = storage_encrypt_channel_id(storage_id_for_user_id(user_id), project_id)
+
+    # TODO - remove me this is duped
+    model_id = aichat_model_customizations["selectedModelId"]
+
+    client = get_client(model_id)
+
+    begin
+      response = client.post_request(
+        aichat_model_customizations,
+        stored_messages,
+        new_message,
+        level_id,
+        encrypted_channel_id,
+        user_id,
+        project_id
+      )
+    rescue Net::ReadTimeout
+      raise OpenaiUserInputResponseTimeout.new("Timeout waiting for OpenAI to provide response to user input.")
+    end
+
+    response
+  end
+
+  # TODO - dedup - currently used here: dashboard/app/controllers/aichat_requests_controller.rb
   def self.token_throttling_key(model_id, user_id)
     # "/user/" included to leave space for potential throttling at the classroom/teacher level.
     # Token throttling also only currently in place for gpt-4o-mini, but inclusion of model ID leaves space for other models.
     TOKEN_THROTTLING_PREFIX + 'model/' + model_id + '/user/' + user_id.to_s
   end
 
-  def self.client
-    AichatOpenaiResponsesHelper::Client.new(API_KEY, MODEL)
+  # TODO - this is a quick hack, we need a map from model_id to model/key (not sure why model id isn't just model but whatever)
+  def self.get_client(model_id)
+    if model_id == "gpt-4o-mini"
+      return OpenaiCompletionsClient.new(CDO.openai_student_learning_api_key, SharedConstants::AICHAT_MODEL_VERSION)
+    else # TODO - check specific models
+      return GeminiClient.new(CDO.google_gemini_student_learning_api_key, model_id)
+    end
   end
 end

@@ -36,6 +36,14 @@ const genAIEndpoints = [
     id: AiChatModelIds.CHATGPT,
     name: 'ChatGPT + Webpurify',
   },
+  {
+    id: AiChatModelIds.GEMINI,
+    name: 'Google Gemini + Webpurify',
+  },
+  {
+    id: AiChatModelIds.LEARNLM,
+    name: 'Google LearnLM + Webpurify',
+  },
 ];
 
 export const genAIEndpointIds = genAIEndpoints.map(endpoint => endpoint.id);
