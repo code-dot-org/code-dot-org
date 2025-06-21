@@ -13,8 +13,8 @@ Feature: Policy Compliance
     And element "#permission-status" contains text "Not Submitted"
 
     # The sign out button should navigate and show the sign in button
-    When I press "lockout-signout"
-    Then I wait to see "#header_user_signin"
+    And I click "#lockout-signout" to load a new page
+    Then check that the URL contains "http://code.org"
 
   Scenario: Existing under 13 account in Colorado should not be locked out.
     Given I am on "http://studio.code.org"
