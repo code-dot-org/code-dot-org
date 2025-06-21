@@ -3,8 +3,6 @@ require 'cdo/geocoder'
 require 'cdo/profanity_filter'
 require 'dynamic_config/gatekeeper'
 
-USER_ENTERED_TEXT_INDICATORS = ['TITLE', 'TEXT', 'title name\=\"VAL\"'].freeze
-
 # This is raised if there is any violation and you query with exceptions
 # enabled.
 class ShareFilterException < StandardError
@@ -41,6 +39,7 @@ module ShareFiltering
     PROFANITY = 'profanity'.freeze
   end
 
+  USER_ENTERED_TEXT_INDICATORS = ['TITLE', 'TEXT', 'title name\=\"VAL\"'].freeze
   FILTERED_PROJECT_TYPES = ['spritelab', 'playlab', 'poetry'].freeze
 
   # Searches for a sharing failure given a program and locale.
@@ -56,24 +55,27 @@ module ShareFiltering
     # Filter projects geared for young students that accept user-generated text.
     return nil unless should_filter_program(program, project_type)
 
-    # Extract program text including field values, text values in block inputs, comments, and variable names.
     texts = extract_text_blockly(program)
     program_text = texts.join(" ")
 
     find_failure(program_text, locale, exceptions: exceptions)
   end
 
+  # Parses a Blockly program (XML or JSON) and returns an array of text entries.
+  # @param program [String] Blockly program (XML or JSON).
+  # @return [Array<String>] Non-empty, cleaned text values found in the program.
   def self.extract_text_blockly(program)
-    stripped = program.lstrip # removes all leading whitespace
+    stripped = program.lstrip # Removes all leading whitespace.
     unless stripped.start_with?("{", "[")
       # XML, not JSON. These programs are from Play Lab activity levels.
-      # Replace tags with newlines,
+      # Replace <...> tags with newlines,
       # convert to array of lines split at newline,
       # strip leading/trailing whitespace from each line,
       # drop any blank lines.
       return stripped.gsub(/<[^>]*>/, "\n").split("\n").map(&:strip).reject(&:empty?)
     end
 
+    # Texts will include field values, text values in block inputs, comments, and variable names.
     json = JSON.parse(stripped)
     texts = []
 
@@ -85,11 +87,12 @@ module ShareFiltering
       end
     end
 
-    # Traverse each block recursively.
+    # Traverse each block recursively extracting comments, field values, nested inputs via traverse_block.
     json.dig("blocks", "blocks")&.each do |block|
       traverse_block(block, texts)
     end
 
+    # Return a list of all extracted text (no duplicates).
     texts.compact.uniq
   end
 
@@ -100,13 +103,20 @@ module ShareFiltering
     # Extracts text inside a <field> tag if present and removes all double quotes.
     # Removes double quotes if no field tag is found
     if value =~ /<field name=.*?>(.*?)<\/field>/m
-      $1.delete('"', '')
+      $1.delete('"')
     else
-      value.delete('"', '')
+      value.delete('"')
     end
   end
 
-  # Recursively traverse through the block tree.
+  # This function recursively traverses a Blockly “block”, extracting any user-entered text
+  # (comments, field values, etc.), 'cleans' the text value (strips XML tags & quotes), and
+  # adds the text value to the texts array.
+  # For each block it:
+  #   1. Checks for a “gamelab_comment” type and adds its COMMENT field.
+  #   2. Iterates all other fields, cleaning and collecting string values.
+  #   3. Recurses into both normal and shadow inputs.
+  #   4. Follows the “next” chain to handle sequenced blocks.
   def self.traverse_block(block, texts)
     return unless block.is_a?(Hash)
 
@@ -114,19 +124,16 @@ module ShareFiltering
     fields = block["fields"] || {}
     inputs = block["inputs"] || {}
 
-    # Extract from known user-content blocks
     if type == "gamelab_comment"
       comment = clean_text_value(fields["COMMENT"])
       texts << comment if comment && !comment.strip.empty?
     end
 
-    # Extract from general string fields
     fields.each_value do |value|
       cleaned = clean_text_value(value)
       texts << cleaned if cleaned && !cleaned.strip.empty?
     end
 
-    # Recurse into input blocks (normal and shadow).
     inputs.each_value do |input|
       traverse_block(input["block"], texts) if input["block"]
       traverse_block(input["shadow"], texts) if input["shadow"]
