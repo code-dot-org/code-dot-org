@@ -19,6 +19,7 @@ import {changeProjectType} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
+import {useLocalization} from '@cdo/apps/localization';
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {
   restartPyodideIfProgramIsRunning,
@@ -47,6 +48,7 @@ import VerticalLayout from './layout/VerticalLayout';
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import PythonValidator from './progress/PythonValidator';
 import {handleRunClick, stopPythonCode} from './pyodideRunner';
+import PythonLocalizer from './PythonLocalizer';
 
 import moduleStyles from './pythonlab-view.module.scss';
 
@@ -77,10 +79,17 @@ const PythonlabView: React.FunctionComponent<
   LabProps<CodebridgeLevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
+  const locale = useLocalization();
+
+  const localizer: PythonLocalizer = useMemo(
+    () => new PythonLocalizer(locale),
+    [locale]
+  );
   const {startSources} = useSource(
     DEFAULT_PROJECT,
     levelProperties,
-    initialSources
+    initialSources,
+    localizer
   );
   const validationFile = levelProperties.validationFile;
   const isPredictLevel = levelProperties.predictSettings?.isPredictLevel;

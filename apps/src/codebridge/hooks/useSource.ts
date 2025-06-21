@@ -1,3 +1,4 @@
+import type Localizer from '@codebridge/Localizer';
 import {CodebridgeLevelProperties} from '@codebridge/types';
 import {prepareSourceForLevelbuilderSave} from '@codebridge/utils';
 import {useEffect, useMemo, useRef} from 'react';
@@ -23,7 +24,8 @@ import {useInitialSources} from './useInitialSources';
 export const useSource = (
   defaultSources: ProjectSources,
   levelProperties: CodebridgeLevelProperties,
-  initiaServerSources: ProjectSources | undefined
+  initialServerSources?: ProjectSources,
+  localizer?: Localizer
 ) => {
   const dispatch = useAppDispatch();
   const source = useAppSelector(
@@ -36,7 +38,12 @@ export const useSource = (
     levelStartSources,
     templateStartSources,
     parsedDefaultSources,
-  } = useInitialSources(defaultSources, levelProperties, initiaServerSources);
+  } = useInitialSources(
+    defaultSources,
+    levelProperties,
+    initialServerSources,
+    localizer
+  );
   const previousLevelIdRef = useRef<number | null>(null);
   const previousInitialSources = useRef<ProjectSources | null>(null);
 
