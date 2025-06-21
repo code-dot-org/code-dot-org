@@ -22,7 +22,7 @@ export const FileRowName: FileBrowserNameComponentType = ({item}) => {
       tooltipOverlayClassName={moduleStyles.nameContainer}
       className={moduleStyles.nameContainer}
     >
-      <span>{item.name}</span>
+      <span data-notranslate>{item.name}</span>
     </OverflowTooltip>
   );
 };

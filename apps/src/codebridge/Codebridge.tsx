@@ -168,6 +168,15 @@ export const Codebridge = React.memo(
     // Send analytics when user zooms in/out (will be compared to user updating font size via settings).
     useZoomTracker(appName);
 
+    const localizedStartSources = useMemo(() => {
+      /*
+      if (typeof startSources.source !== 'string') {
+        startSources.source.files[0].contents =
+          '# LOCALIZED\n\n' + startSources.source.files[0].contents;
+      }*/
+      return startSources;
+    }, [startSources]);
+
     return (
       <CodebridgeContextProvider
         value={{
@@ -175,7 +184,7 @@ export const Codebridge = React.memo(
           config,
           setProject,
           setConfig,
-          startSources,
+          startSources: localizedStartSources,
           onRun,
           onStop,
           ...sourceUtilities,
