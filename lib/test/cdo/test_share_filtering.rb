@@ -4,8 +4,8 @@ require 'cdo/share_filtering'
 class ShareFilteringTest < Minitest::Test
   # @param title_name [String] The name of the title of the program.
   # @param title_text [String] The text of the title of the program.
-  # @return [String] A sample program.
-  def generate_program(title_name, title_text)
+  # @return [String] A sample XML program.
+  def generate_xml_program(title_name, title_text)
     '<xml><block type="when_run" deletable="false">' \
       '<next><block type="studio_showTitleScreen">' \
       "<title name=\"TITLE\">#{title_name}</title>" \
@@ -14,7 +14,7 @@ class ShareFilteringTest < Minitest::Test
   end
 
   def test_find_share_failure_with_email_address
-    program = generate_program('My Email', 'test@example.com')
+    program = generate_xml_program('My Email', 'test@example.com')
     assert_equal(
       ShareFailure.new(ShareFiltering::FailureType::EMAIL, 'test@example.com'),
       ShareFiltering.find_share_failure(program, 'en', 'playlab')
@@ -33,7 +33,7 @@ class ShareFilteringTest < Minitest::Test
       stubs(:find_potential_street_address).
       returns('1600 Pennsylvania Ave NW, Washington, DC 20500')
 
-    program = generate_program(
+    program = generate_xml_program(
       'My Street Address',
       '1600 Pennsylvania Ave NW, Washington, DC 20500'
     )
@@ -61,7 +61,7 @@ class ShareFilteringTest < Minitest::Test
       stubs(:find_potential_street_address).
       returns(nil)
 
-    program = generate_program('My Phone Number', '123-456-7890')
+    program = generate_xml_program('My Phone Number', '123-456-7890')
     assert_equal(
       ShareFailure.new(ShareFiltering::FailureType::PHONE, '123-456-7890'),
       ShareFiltering.find_share_failure(program, 'en', 'playlab')
@@ -78,7 +78,7 @@ class ShareFilteringTest < Minitest::Test
   def test_find_share_failure_with_profanity
     WebPurify.stubs(:find_potential_profanities).returns(['damn'])
 
-    program = generate_program('My Profanity', 'damn')
+    program = generate_xml_program('My Profanity', 'damn')
     assert_equal(
       ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'damn'),
       ShareFiltering.find_share_failure(program, 'en', 'playlab')
@@ -96,8 +96,8 @@ class ShareFilteringTest < Minitest::Test
     # "fu" is a past-tense "to be" in Italian, but should be blocked
     # as profanity in English.  WebPurify doesn't support this, so we
     # have custom filtering that takes locale into account for this word.
-    program = generate_program('My Custom Profanity', 'fu')
-    innocent_program = generate_program('My Innocent Program', 'funny tofu')
+    program = generate_xml_program('My Custom Profanity', 'fu')
+    innocent_program = generate_xml_program('My Innocent Program', 'funny tofu')
 
     # Stub WebPurify because we expect our custom blocking to handle this case.
     WebPurify.stubs(:find_potential_profanities).returns(nil)
@@ -149,8 +149,8 @@ class ShareFilteringTest < Minitest::Test
     # "fick" means "got" in Swedish, but should be blocked
     # as profanity in English.  WebPurify doesn't support this, so we
     # have custom filtering that takes locale into account for this word.
-    questionable_program = generate_program('My Custom Profanity', 'fick')
-    innocent_program = generate_program('My Innocent Program', 'fickle')
+    questionable_program = generate_xml_program('My Custom Profanity', 'fick')
+    innocent_program = generate_xml_program('My Innocent Program', 'fickle')
 
     # Stub WebPurify because we expect our custom blocking to handle this case.
     WebPurify.stubs(:find_potential_profanities).returns(nil)
@@ -178,7 +178,7 @@ class ShareFilteringTest < Minitest::Test
     )
   end
 
-  def test_find_share_failure_for_non_playlab
+  def test_find_share_failure_for_non_filtered_project_types
     program = '<xml><block type=\"controls_repeat\">' \
       '<title name=\"TIMES\">4</title><statement name=\"DO\">' \
       '<block type=\"draw_move_by_constant\">' \
@@ -227,43 +227,66 @@ class ShareFilteringTest < Minitest::Test
         {"name" => nil}
       ],
       "blocks" => {
+        "languageVersion" => 0,
         "blocks" => [
           {
-            "type" => "gamelab_comment",
-            "fields" => {"COMMENT" => '<field name="C">nice comment</field>'},
-            "inputs" => {
-              "INPUT1" => {
-                "block" => {
-                  "type" => "some_block",
-                  "fields" => {"TEXT" => '"inner text"'},
-                  "next" => {"block" => nil}
-                },
-                "shadow" => nil
-              }
+            "type" => "when_run",
+            "id"   => "abc123",
+            "fields" => {
+              "TEXT" => '"some text"'
             },
-            "next" => {"block" => nil}
+            "inputs" => {},
+            "next" => {
+              "block" => {
+                "type" => "gamelab_comment",
+                "id"   => "cmt001",
+                "fields" => {
+                  "COMMENT" => '<field name="C">nice comment</field>'
+                },
+                "inputs" => {
+                  "INPUT1" => {
+                    "block" => {
+                      "type" => "some_block",
+                      "id"   => "blk002",
+                      "fields" => {
+                        "TEXT" => '"inner text"'
+                      },
+                      "next" => {"block" => nil}
+                    },
+                    "shadow" => nil
+                  }
+                },
+                "next" => {"block" => nil}
+              }
+            }
           }
         ]
       }
     }.to_json
   end
 
-  def test_extract_text_blockly_helper_function
-    texts = ShareFiltering.extract_text_blockly(generate_json_program)
-    # variable myVar
+  def test_extract_user_text_blockly_helper_function
+    json = generate_json_program
+    texts = ShareFiltering.extract_text_blockly(json)
+
+    # should find the variable name
     assert_includes texts, 'myVar'
-    # comment
+    # should find the comment text
     assert_includes texts, 'nice comment'
-    # inner TEXT field
+    # should strip quotes around the TEXT fields
+    assert_includes texts, 'some text'
     assert_includes texts, 'inner text'
     # no duplicates
     assert_equal texts.uniq, texts
+    # should have exactly four entries
+    assert_equal 4, texts.length
   end
 
   def test_should_filter_program_check_project_type
     Gatekeeper.stubs(:allows).with('webpurify', default: true).returns(true)
     # 'gamelab' is not in FILTERED_PROJECT_TYPES
     assert_equal false, ShareFiltering.should_filter_program('<xml/>', 'gamelab')
+    assert_equal true, ShareFiltering.should_filter_program('<xml/>', 'poetry')
   end
 
   def test_should_filter_program_playlab_only_with_indicator

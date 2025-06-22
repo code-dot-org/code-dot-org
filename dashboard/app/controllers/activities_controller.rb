@@ -56,7 +56,7 @@ class ActivitiesController < ApplicationController
     sharing_allowed = Gatekeeper.allows('shareEnabled', where: {script_name: script_name}, default: true)
     if params[:program] && sharing_allowed
       share_failure = nil
-      # True if STUDIO app. The other open-ended project types for young users
+      # True if STUDIO game. The other open-ended 'game's geared for young users
       # are channel-backed and filtered in loadProjectBackedLevel_ in project.js.
       if @level.game.sharing_filtered?
         project_type = 'playlab'

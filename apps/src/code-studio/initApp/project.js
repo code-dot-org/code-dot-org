@@ -1970,13 +1970,13 @@ function fetchShareFailure(resolve) {
 
 function fetchPrivacyProfanityViolations(resolve) {
   channels.fetch(current.id + '/privacy-profanity', (err, data) => {
-    // data.has_violation is 0 or true, coerce to a boolean
+    // data.has_violation is 0 or true, coerce to a boolean.
     currentHasPrivacyProfanityViolation =
       (data && !!data.has_violation) || currentHasPrivacyProfanityViolation;
     resolve();
     if (err) {
       // Throw an error so that things like New Relic see this. This shouldn't
-      // affect anything else
+      // affect anything else.
       throw err;
     }
   });
