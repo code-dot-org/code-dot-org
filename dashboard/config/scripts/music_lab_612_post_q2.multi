@@ -1,11 +1,13 @@
 name 'music-lab-612-post-q2'
+ 
+question '**Which code should Jenna use so the vocals play at a higher volume than the backup instruments?**'
+height '300'
+width '200'
+wrong 'https://images.code.org/fd0239c8322dd9d5b7c2865c7eb3f4b1-image-1750446316245.png'
+wrong 'https://images.code.org/858d605cd1bf2aa0afb5340d953da3bb-image-1750446310700.png'
+right 'https://images.code.org/1cc8e783a482294fa34cfc2992942f74-image-1750446302081.png'
+wrong 'https://images.code.org/d27b988cc9a354db2066cf7ac2bc2eac-image-1750446307172.png'
 
-question 'this question is just in the DSL'
-
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
-right 'use play together instead of play sequential'
 
 allow_multiple_attempts true
 
@@ -24,5 +26,5 @@ Posttest Modality: Given algorithm / intent / incorrect code, match with code
 MARKDOWN
 
 markdown <<MARKDOWN
-
+Jenna loves the sound of Rosa Linn\'s vocals and plans to emphasize verse vocals louder than the instrumental music. 
 MARKDOWN

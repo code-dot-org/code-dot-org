@@ -206,6 +206,20 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
               className={'icon'}
             />
           </button>
+          {Blockly.showBlockHelp && (
+            <button
+              onClick={() => window.open('/docs/ide/music', '_blank')}
+              type="button"
+              id="documentation-button"
+              className={classNames(moduleStyles.button)}
+            >
+              <FontAwesome
+                title={musicI18n.documentation()}
+                icon="book"
+                className={'icon'}
+              />
+            </button>
+          )}
         </>
       )}
       {skipUrl && (

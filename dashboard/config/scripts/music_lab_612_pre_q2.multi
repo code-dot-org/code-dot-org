@@ -26,7 +26,7 @@ Posttest Modality: Given algorithm / intent / incorrect code, match with code
 MARKDOWN
 
 markdown <<MARKDOWN
-Luca is working on the chorus vocals of a new song. He wants it to sound like the vocals are building up by getting louder, so he adjusts the volume in his code to make it happen. 
+Luca is working on the chorus vocals of a new song. He wants it to sound like the vocals are building up by getting louder, so he adjusts the volume in his code to begin low then play the Big Chorus at full volume. 
 
 <img src="https://images.code.org/fec4744e9189ed64160b0ab6f007e9b6-image-1750181083739.png" width="100">
 

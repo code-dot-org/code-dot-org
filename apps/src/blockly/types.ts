@@ -138,6 +138,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   SNAP_RADIUS: number;
   Variables: ExtendedVariables;
   hasLoadedBlocks: boolean;
+  showBlockHelp: boolean;
 
   wrapReadOnlyProperty: (propertyName: string) => void;
   wrapSettableProperty: (propertyName: string) => void;
@@ -301,6 +302,7 @@ export interface ExtendedBlocklyOptions extends GoogleBlockly.BlocklyOptions {
   analyticsData: AnalyticsData;
   isJigsaw: boolean;
   enableKeyboardNavigation: boolean;
+  showBlockHelp: boolean;
 }
 
 export interface ExtendedWorkspace extends GoogleBlockly.Workspace {
