@@ -126,6 +126,14 @@ import {
   isDarkTheme,
 } from './utils';
 
+const options = {
+  contextMenu: true,
+  shortcut: true,
+};
+
+const plugin = new CrossTabCopyPaste();
+plugin.init(options);
+
 const MAX_GET_CODE_RETRIES = 2;
 const RETRY_GET_CODE_INTERVAL_MS = 500;
 
@@ -885,12 +893,11 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
     if (
       options.enableKeyboardNavigation ||
-      experiments.isEnabledAllowingQueryString(experiments.KEYBOARD_NAVIGATION)
+      experiments.isEnabledAllowingQueryString(
+        experiments.BLOCKLY_KEYBOARD_NAVIGATION
+      )
     ) {
       initializeKeyboardNavigation(workspace, options.theme);
-    } else {
-      const plugin = new CrossTabCopyPaste();
-      plugin.init();
     }
 
     // Typically, we need to handle disabling blocks that are not connected to an
