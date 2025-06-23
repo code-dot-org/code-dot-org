@@ -12,7 +12,6 @@ require 'pdf/conversion'
 #
 # Also add a new test case which tests adding, creating, and deleting your new model.
 module Services
-  #TODO: Fix this test
   class ScriptSeedTest < ActiveSupport::TestCase
     setup do
       Game.game_cache = nil
