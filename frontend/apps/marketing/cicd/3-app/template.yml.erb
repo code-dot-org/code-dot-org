@@ -29,6 +29,12 @@ Parameters:
     Type: String
     Description: The IAM Policy that any Role created by this template must apply as a Permissions Boundary.
 
+Conditions:
+  IsProductionEnvironment:
+    Fn::Equals:
+      - !Ref EnvironmentType
+      - production
+
 Mappings:
   # Cloudfront Mappings
   # See: https://aws.amazon.com/blogs/networking-and-content-delivery/limit-access-to-your-origins-using-the-aws-managed-prefix-list-for-amazon-cloudfront/
@@ -895,7 +901,11 @@ Resources:
       Engine: redis
       CacheParameterGroupName: !Ref RedisParameterGroup
       EngineVersion: 7.1
-      CacheNodeType: cache.r7g.xlarge
+      CacheNodeType:
+        Fn::If:
+          - IsProductionEnvironment
+          - cache.r7g.xlarge
+          - cache.t3.medium
       NumNodeGroups: 1
       ReplicasPerNodeGroup: 1
       SecurityGroupIds:
