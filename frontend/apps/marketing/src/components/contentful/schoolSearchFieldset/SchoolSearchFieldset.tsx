@@ -28,6 +28,7 @@ export interface SchoolSearchFieldsetProps {
   required?: boolean;
   school?: School | null;
   noSchoolId?: string;
+  errorMessage?: string;
   className?: string;
   onSelect: (school: School | null) => void;
 }
@@ -36,6 +37,7 @@ const SchoolSearchFieldset: React.FC<SchoolSearchFieldsetProps> = ({
   required = false,
   school,
   noSchoolId = '',
+  errorMessage,
   className,
   onSelect,
 }) => {
@@ -153,6 +155,7 @@ const SchoolSearchFieldset: React.FC<SchoolSearchFieldsetProps> = ({
           name="schoolName"
           label="School name"
           value={getSchoolOptionText(school)}
+          errorMessage={errorMessage}
           onChange={() => {}}
         />
       ) : (
@@ -161,6 +164,7 @@ const SchoolSearchFieldset: React.FC<SchoolSearchFieldsetProps> = ({
           name="schoolId"
           labelText="Select your school from the list"
           value={schoolId}
+          errorMessage={errorMessage}
           onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
             selectSchool(e.target.value)
           }
