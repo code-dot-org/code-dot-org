@@ -13,7 +13,7 @@ import {getStudioUrl} from '@/config/studio';
 const ZIP_LENGTH = 5;
 const ZIP_REGEX = new RegExp(`(?!00000)\\d{${ZIP_LENGTH}}`);
 
-type School = {
+export type School = {
   nces_id: string;
   name: string;
   zip?: string;

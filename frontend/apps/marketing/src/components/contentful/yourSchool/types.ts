@@ -1,12 +1,6 @@
-export type School = {
-  nces_id: string;
-  name: string;
-  zip?: string;
-  city?: string;
-  state?: string;
-  latitude?: string;
-  longitude?: string;
-  school_type?: string;
+import type {School as SchoolSearchData} from '@/components/contentful/schoolSearchFieldset';
+
+export type School = SchoolSearchData & {
   isNew?: boolean;
   teachesCs?: string;
 };
