@@ -1,3 +1,6 @@
+import {Button} from '@code-dot-org/component-library/button';
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
+import Typography from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {
   useCallback,
@@ -8,9 +11,6 @@ import React, {
 } from 'react';
 import {FocusOn} from 'react-focus-on';
 
-import {Button} from '@cdo/apps/componentLibrary/button';
-import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
-import Typography from '@cdo/apps/componentLibrary/typography';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import appConfig from '../appConfig';
@@ -243,7 +243,14 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
 
   return (
     <FocusOn className={styles.focusLock}>
-      <div className={styles.dialogContainer}>
+      <div
+        className={styles.dialogContainer}
+        onKeyDown={event => {
+          if (event.key === 'Escape') {
+            setPackToDefault();
+          }
+        }}
+      >
         <div id="pack-dialog" className={styles.packDialog}>
           <div id="hidden-item" tabIndex={0} role="button" />
           <Typography
@@ -260,7 +267,6 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
               appConfig.getValue('pack-dialog-2-stacked') === 'true' &&
                 styles.bodyStacked
             )}
-            data-theme="Dark"
           >
             <div>{musicI18n.packDialogBody()}</div>
 
@@ -303,7 +309,7 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
                 ariaLabel={musicI18n.skip()}
                 text={musicI18n.skip()}
                 type="secondary"
-                color="white"
+                color="purple"
                 size="s"
                 onClick={setPackToDefault}
               />
@@ -311,7 +317,7 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
                 ariaLabel={musicI18n.select()}
                 text={musicI18n.select()}
                 type="primary"
-                color="white"
+                color="purple"
                 size="s"
                 disabled={!selectedFolderId}
                 onClick={setPackToSelectedFolder}

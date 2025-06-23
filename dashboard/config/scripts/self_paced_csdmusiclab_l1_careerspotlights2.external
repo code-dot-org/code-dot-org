@@ -1,0 +1,68 @@
+name 'self-paced-CSDMusicLab-L1-careerspotlights2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What do Career Spotlights look like in the curriculum?
+
+#### Career Spotlights provide a connecting thread throughout Synthesize lessons. Each lesson contains the following:
+
+## **An Artist Spotlight**
+
+#### The **Sequencing and Loops Synthesize lessons** (lessons 4 and 8) contain videos for you and your students to watch. Click the images below to watch each video.
+
+<div style="width: 80%; margin: 25px auto; display: flex; gap: 5%;">
+  <!-- Video 1: Sequencing -->
+  <div style="text-align: center; width: 43%;">
+    <a href="https://www.youtube.com/watch?v=OrrZPzgWPII" target="_blank">
+      <img src="https://images.code.org/e237ecc91f265333140e5db625446295-image-1745279755766.51.59 PM.png" alt="Henny Tha Bizness video thumbnail" style="width: 100%; border-radius: 8px;">
+    </a>
+    <p style="font-size: 14pt; margin-top: 10px;"><b>Sequencing Spotlight</b>: Henny Tha Bizness</p>
+  </div>
+
+  <!-- Video 2: Loops -->
+  <div style="text-align: center; width: 45%;">
+    <a href="https://www.youtube.com/watch?v=MDtQjObQ8yY" target="_blank">
+      <img src="https://images.code.org/f130f21e59936b796dd29ebf0a65e91b-image-1745279755764.53.31 PM.png" alt="Roxanne Harris video thumbnail" style="width: 100%; border-radius: 8px;">
+    </a>
+    <p style="font-size: 14pt; margin-top: 10px;"><b>Loops Spotlight</b>: Roxanne Harris, Creative Coder</p>
+  </div>
+
+</div>
+
+
+#### The **Functions Synthesize lesson** (lesson 12) includes an activity where students listen to a remix by the artist Altrice to prepare them for the lesson.
+
+## **A Panel Level**
+
+#### Once students are released to work on coding levels, they'll see a **panel level** that reiterates some of the concepts they learned about in the video. You can think of these levels like mini-slideshows - students will progress through images with captions to remind them of these Career Spotlights.
+
+#### <a href="https://studio.code.org/s/csd-programming-with-music-lab-2025-pilot/lessons/4/levels/3" target="blank" rel="noopener noreferrer">View the Sequencing Career Spotlights Panel Level</a>
+
+## Relevant Coding Challenges and Reflections
+
+#### Take a look at the student challenges below. These both come from the Sequencing Synthesize lesson. While you read, consider how you might help students make connections to the real world.
+
+<div style="background-color: #B7E0E5; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 90%; margin: 20px auto;">
+    <p style="font-size: 14pt; font-weight: bold; margin: 0; text-align: center;">Sequencing Synthesize - Real-World Problem Example</p>
+
+#### **Define**: You've been asked to design a new alarm clock ringtone that helps people wake up. The volume should slowly increase as different tracks play and end in some kind of big surprise.
+
+#### **Prepare**: Pick the tracks and effects you want to use and imagine what you want the timeline to look like. Consider using rests to surprise the listener!
+
+#### **Try**: Create your alarm clock ringtone!
+
+#### **Reflect**: In order to pass this level, make sure your code has:
+* #### At least 6 tracks
+* #### At least 3 effects
+* #### A "rising" volume and a surprise moment!
+</div>
+
+#### Lessons end with **reflection prompts** that ask students to consider their personal interest in the field and how they might apply them.
+
+<div style="background-color: #B7E0E5; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 90%; margin: 20px auto;">
+    <p style="font-size: 14pt; font-weight: bold; margin: 0; text-align: center;">Sequencing Synthesize - Reflection Prompt</p>
+
+#### A record producer brings people together to create music and uses technology to edit and finalize songs, using technology to bring people together. Are there aspects of this job you would like to see in your own future career? Why or why not?
+</div
+MARKDOWN

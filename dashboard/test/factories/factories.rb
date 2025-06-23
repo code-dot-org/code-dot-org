@@ -11,6 +11,7 @@ FactoryBot.define do
     sequence(:display_name, 'a') {|c| "bogus-course-offering-#{c}"}
     assignable {true}
 
+    # TODO: TEACH-1678 Remove this trait
     trait :with_units do
       after(:create) do |course_offering|
         create(:course_version, :with_unit, course_offering: course_offering)
@@ -28,6 +29,26 @@ FactoryBot.define do
         create(:course_version, :with_unit_group, course_offering: course_offering)
       end
     end
+
+    factory :csp_course_offering do
+      sequence(:key, 'a') {|c| "csp-course-offering-#{c}"}
+      sequence(:display_name, 'a') {|c| "csp-course-offering-#{c}"}
+      assignable {true}
+      grade_levels {"9,10,11,12"}
+
+      # TODO: TEACH-1678 Remove this trait
+      trait :with_units do
+        after(:create) do |csp_course_offering|
+          create(:course_version, :with_csp_unit, course_offering: csp_course_offering)
+        end
+      end
+
+      trait :with_unit_group do
+        after(:create) do |csp_course_offering|
+          create(:course_version, :with_csp_unit_group, course_offering: csp_course_offering)
+        end
+      end
+    end
   end
 
   factory :course_version do
@@ -40,12 +61,28 @@ FactoryBot.define do
       association(:content_root, factory: :unit_group)
     end
 
+    # TODO: TEACH-1678 Remove these traits
     trait :with_unit do
       association(:content_root, factory: :script, is_course: true)
+    end
+
+    trait :with_csp_unit do
+      association(:content_root, factory: :csp_script, is_course: true)
+    end
+
+    trait :with_single_unit_course do
+      association(:content_root, factory: :single_unit_course)
+    end
+
+    trait :with_csp_unit_group do
+      association(:content_root, factory: :csp_course)
     end
   end
 
   factory :unit_group_unit do
+    after(:create) do |unit_group_unit|
+      unit_group_unit.script.update!(original_unit_group: unit_group_unit.unit_group) if unit_group_unit.script.original_unit_group_id.nil?
+    end
   end
 
   factory :unit_group do
@@ -56,6 +93,82 @@ FactoryBot.define do
     instruction_type {"teacher_led"}
     participant_audience {"student"}
     instructor_audience {"teacher"}
+
+    trait :pl_course do
+      participant_audience {"teacher"}
+      instructor_audience {"facilitator"}
+    end
+
+    factory :single_unit_course do
+      sequence(:name) {|n| "bogus-single-unit-course-#{n}"}
+      sequence(:family_name) {|n| "bogus-single-unit-course-#{n}"}
+      transient do
+        unit {nil}
+      end
+      # TODO: TEACH-1678 We can clean this unit create up once we remove those fields from the unit factory
+      after(:create) do |unit_group, evaluator|
+        unit = evaluator.unit || create(:unit, :in_unit_group)
+        create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
+        unit.reload
+      end
+
+      factory :csp_course do
+        after(:create) do |csp_course|
+          unit = csp_course.first_unit
+          if unit
+            unit.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSP
+            unit.save!
+          end
+        end
+      end
+
+      factory :hoc_course do
+        sequence(:name) {|n| "bogus-hoc-name-#{n}"}
+        sequence(:version_year) {|n| "bogus-hoc-version-year-#{n}"}
+        sequence(:family_name) {|n| "bogus-hoc-family-name-#{n}"}
+
+        after(:create) do |hoc_course|
+          unit = hoc_course.first_unit
+          if unit
+            unit.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC
+            unit.save!
+          end
+
+          course_offering = CourseOffering.add_course_offering(hoc_course)
+          course_offering.update!(marketing_initiative: 'HOC')
+        end
+      end
+    end
+
+    trait :with_unit do
+      transient do
+        unit {nil}
+      end
+      # TODO: TEACH-1678 We can clean this unit create up once we remove those fields from the unit factory
+      after(:create) do |unit_group, evaluator|
+        unit = evaluator.unit || create(:unit, :in_unit_group)
+        create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
+        unit_group.reload
+      end
+    end
+    # TODO: TEACH-1678 We can clean this unit create up once we remove those fields from the unit factory
+    trait :with_units do
+      transient do
+        units {[create(:unit, :in_unit_group), create(:unit, :in_unit_group)]}
+      end
+      after(:create) do |unit_group, evaluator|
+        evaluator.units.each_with_index do |unit, index|
+          create :unit_group_unit, unit_group: unit_group, script: unit, position: index + 1
+        end
+        unit_group.reload
+      end
+    end
+
+    trait :with_course_offering do
+      after(:create) do |unit_group|
+        CourseOffering.add_course_offering(unit_group)
+      end
+    end
   end
 
   factory :experiment do
@@ -102,7 +215,7 @@ FactoryBot.define do
   factory :studio_person do
   end
 
-  factory :user do
+  factory :user, class: Student do
     birthday {Time.zone.today - 21.years}
     email {"#{user_type}_#{SecureRandom.uuid}@code.org"}
     password {"00secret"}
@@ -118,13 +231,16 @@ FactoryBot.define do
       after(:create, &:demigrate_from_multi_auth)
     end
 
-    factory :teacher do
+    factory :teacher, class: Teacher do
       user_type {User::TYPE_TEACHER}
       birthday {Date.new(1980, 3, 14)}
       factory :admin do
         google_sso_provider
         password {nil}
         after(:create) {|user| user.update(admin: true)}
+      end
+      trait :with_educator_role do
+        educator_role {SharedConstants::EDUCATOR_ROLES.first[:value]}
       end
       trait :with_school_info do
         school_info
@@ -166,6 +282,19 @@ FactoryBot.define do
         after(:create) do |ai_tutor_access|
           ai_tutor_access.permission = UserPermission::AI_TUTOR_ACCESS
           ai_tutor_access.save
+        end
+      end
+      factory :ai_iteration_tools_user do
+        after(:create) do |ai_iteration_tools_user|
+          ai_iteration_tools_user.permission = UserPermission::AI_TUTOR_ACCESS
+          ai_iteration_tools_user.permission = UserPermission::LEVELBUILDER
+          ai_iteration_tools_user.save
+        end
+      end
+      factory :student_work_dataset_maker do
+        after(:create) do |student_work_dataset_maker|
+          student_work_dataset_maker.permission = UserPermission::STUDENT_WORK_ACCESS
+          student_work_dataset_maker.save
         end
       end
       factory :facilitator do
@@ -276,7 +405,7 @@ FactoryBot.define do
       end
     end
 
-    factory :student do
+    factory :student, class: Student do
       user_type {User::TYPE_STUDENT}
       birthday {Time.zone.today - 17.years}
 
@@ -485,6 +614,8 @@ FactoryBot.define do
         ao = user.authentication_options.find_by(credential_type: AuthenticationOption::EMAIL)
         ao&.destroy
         user.save
+        # Reload to ensure that further uses of the pre-loaded user don't see the now-destroyed auth option
+        user.reload
       end
     end
 
@@ -492,6 +623,7 @@ FactoryBot.define do
       after(:create) do |user|
         user.lms_landing_opted_out = true
         user.authentication_options.destroy_all
+        user.reload
         lti_user_id = create(:lti_user_identity, user: user)
         user.lti_user_identities << lti_user_id
         auth_id = lti_user_id.lti_integration.issuer + "|" + lti_user_id.lti_integration.client_id + "|" + lti_user_id.subject
@@ -586,6 +718,7 @@ FactoryBot.define do
             oauth_token_expiration: '999999'
           }.to_json
         )
+        user.reload
       end
     end
 
@@ -603,6 +736,7 @@ FactoryBot.define do
             oauth_token_expiration: '999999'
           }.to_json
         )
+        user.reload
       end
     end
 
@@ -618,6 +752,7 @@ FactoryBot.define do
             oauth_token: 'some-clever-token'
           }.to_json
         )
+        user.reload
       end
     end
 
@@ -665,6 +800,11 @@ FactoryBot.define do
     credential_type {AuthenticationOption::EMAIL}
     authentication_id {SecureRandom.uuid}
 
+    after(:create) do |auth_option|
+      # Ensure that the original user model reloads the auth options list
+      auth_option.user&.reload
+    end
+
     factory :google_authentication_option do
       credential_type {AuthenticationOption::GOOGLE}
     end
@@ -692,6 +832,12 @@ FactoryBot.define do
     participant_type {'student'}
 
     initialize_with {Section.new(attributes)}
+
+    after(:create) do |section|
+      if section.script_id && section.course_id.nil?
+        section.update!(course_id: section.script.original_unit_group_id)
+      end
+    end
 
     trait :teacher_participants do
       participant_type {'teacher'}
@@ -780,6 +926,13 @@ FactoryBot.define do
     trait :with_instructions do
       after(:create) do |level|
         level.properties['long_instructions'] = 'Write a loop.'
+        level.save!
+      end
+    end
+
+    trait :with_starter_code do
+      after(:create) do |level|
+        level.properties['start_blocks'] = 'const isCode = true;'
         level.save!
       end
     end
@@ -945,6 +1098,11 @@ FactoryBot.define do
     level_num {'custom'}
   end
 
+  factory :aichat, parent: :level, class: Aichat do
+    game {Game.aichat}
+    level_num {'custom'}
+  end
+
   factory :block do
     transient do
       sequence(:index)
@@ -995,14 +1153,36 @@ FactoryBot.define do
     level_source {create :level_source, level: level}
   end
 
+  factory :skill do
+    sequence(:key) {|n| "skill-#{n}}"}
+    description {"Declares variables with conventional names"}
+    concept {"Variables"}
+    evaluation_criteria {"Does the student's work on this level demonstrate the skill?"}
+  end
+
+  factory :levels_skill do
+    association :level
+    association :skill
+  end
+
   factory :unit, aliases: [:script] do
     sequence(:name) {|n| "bogus-script-#{n}"}
-    published_state {"beta"}
     is_migrated {true}
+    # TODO: TEACH-1678 Delete these fields
+    published_state {"beta"}
     instruction_type {"teacher_led"}
     participant_audience {"student"}
     instructor_audience {"teacher"}
 
+    # TODO: TEACH-1678 Delete this trait once we have deleted the fields in the unit factory
+    trait :in_unit_group do
+      published_state {nil}
+      instruction_type {nil}
+      participant_audience {nil}
+      instructor_audience {nil}
+    end
+
+    # TODO: TEACH-1678 Delete this trait
     trait :is_course do
       sequence(:version_year) {|n| "bogus-version-year-#{n}"}
       sequence(:family_name) {|n| "bogus-family-name-#{n}"}
@@ -1068,15 +1248,7 @@ FactoryBot.define do
       end
     end
 
-    factory :csc_script do
-      after(:create) do |csc_script|
-        csc_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSC
-        csc_script.save!
-        course_offering = CourseOffering.add_course_offering(csc_script)
-        course_offering.update!(marketing_initiative: 'CSC')
-      end
-    end
-
+    # TODO: TEACH-1678 Delete this factory
     factory :hoc_script do
       is_course {true}
       sequence(:version_year) {|n| "bogus-hoc-version-year-#{n}"}
@@ -1088,14 +1260,14 @@ FactoryBot.define do
         course_offering.update!(marketing_initiative: 'HOC')
       end
     end
-
+    # TODO: TEACH-1678 Delete this factory
     factory :standalone_unit do
       after(:create) do |standalone_unit|
         standalone_unit.is_course = true
         standalone_unit.save!
       end
     end
-
+    # TODO: TEACH-1678 Delete this factory
     factory :pl_unit do
       participant_audience {"teacher"}
       instructor_audience {"facilitator"}
@@ -1213,6 +1385,13 @@ FactoryBot.define do
       after(:create) do |csf_script_level|
         csf_script_level.script.curriculum_umbrella = 'CSF'
         csf_script_level.save
+      end
+    end
+
+    factory :csp_script_level do
+      after(:create) do |csp_script_level|
+        csp_script_level.script.curriculum_umbrella = 'CSP'
+        csp_script_level.save
       end
     end
 
@@ -2072,6 +2251,32 @@ FactoryBot.define do
     other_content {'other'}
   end
 
+  factory :student_work_evaluation_summary do
+    student_work_evaluation_id {1}
+    student_work_evaluation_summary_id {1}
+  end
+
+  factory :user_level_skill_evaluation do
+    association :student, factory: :student
+    association :level
+    association :unit
+    evaluator {"AI"}
+    evaluation {"Great"}
+    evaluation_criteria {"Does the student's work on this level demonstrate the skill?"}
+    reasoning {"The student's work demonstrated the skill."}
+  end
+
+  factory :user_level_evaluation do
+    association :student, factory: :student
+    association :level
+    association :unit
+    code_version {"4s&7ya"}
+    evaluator {"AI"}
+    evaluation {"Ok"}
+    evaluation_criteria {"Does the student's work on this level meet the requirements?"}
+    reasoning {"The student's did some of what they were supposed to."}
+  end
+
   factory :potential_teacher do
     association :script
     name {"foosbars"}
@@ -2099,11 +2304,25 @@ FactoryBot.define do
     project_id {1}
   end
 
-  factory :aichat_thread do
+  factory :aidiff_thread do
     association :user
     external_id {"1234"}
     llm_version {"dummy_llm"}
     unit_id {1}
     level_id {1}
+  end
+
+  factory :aidiff_message do
+    association :aidiff_thread, factory: :aidiff_thread
+    external_id {"1234"}
+    role {:assistant}
+    content {"Lorem ipsum"}
+    is_preset {false}
+  end
+
+  factory :sign_in do
+    association :user
+    sign_in_at {Time.now.utc}
+    sign_in_count {1}
   end
 end

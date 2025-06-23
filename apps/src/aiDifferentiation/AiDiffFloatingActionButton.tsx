@@ -1,15 +1,21 @@
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
-import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
+import {
+  tryGetSessionStorage,
+  trySetSessionStorage,
+  tryGetLocalStorage,
+  trySetLocalStorage,
+} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
-import taIcon from '@cdo/static/ai-bot-tag-TA.png';
-import aiFabIcon from '@cdo/static/ai-fab-background.png';
+import aiFabWithIcon from '@cdo/static/ai-bot-ta.png';
 
 import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
 import analyticsReporter from '../metrics/AnalyticsReporter';
+import HttpClient from '../util/HttpClient';
 
 import AiDiffContainer from './AiDiffContainer';
+import {Context} from './types';
 
 import style from './ai-differentiation.module.scss';
 
@@ -19,43 +25,86 @@ import style from './ai-differentiation.module.scss';
  */
 
 interface AiDiffFloatingActionButtonProps {
-  lessonId: number;
-  lessonName: string;
-  unitDisplayName: string;
+  context: Context;
+  scriptName?: string;
+  unitDisplayName?: string;
 }
 
 const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
-  lessonId,
-  lessonName,
+  context,
+  scriptName,
   unitDisplayName,
 }) => {
   const sessionStorageKey = 'AiDiffFabOpenStateKey';
-  // Show the pulse if this is the first time the user has seen the FAB in this
-  // session. Depends on other logic which sets the open state in session storage.
-  const [isFirstSession] = useState(
-    JSON.parse(tryGetSessionStorage(sessionStorageKey, null)) === null
-  );
-  const [isOpen, setIsOpen] = useState(
-    JSON.parse(tryGetSessionStorage(sessionStorageKey, false)) || false
-  );
-  const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
-  const [isTaImageLoaded, setIsTaImageLoaded] = useState(false);
+  const localStorageOpenedKey = 'AiDiffHasOpenedKey';
+  const localStorageClosedKey = 'AiDiffHasClosedKey';
 
-  const showPulse = isFirstSession && isFabImageLoaded && isTaImageLoaded;
+  // Show the pulse until the user clicks the FAB to open the chat window
+  const hasOpened =
+    JSON.parse(tryGetLocalStorage(localStorageOpenedKey, false.toString())) ||
+    false;
+
+  const hasClosed =
+    JSON.parse(tryGetLocalStorage(localStorageClosedKey, false.toString())) ||
+    false;
+
+  // Open the chat window if this is the first time the user has seen the FAB in this
+  // session and they haven't interacted with the FAB yet.
+  // Depends on other logic which sets the open state in session storage.
+  const isFirstSession =
+    JSON.parse(tryGetSessionStorage(sessionStorageKey, null)) === null &&
+    !hasOpened &&
+    !hasClosed;
+
+  // Keeps FAB open/closed on new pages in the same tab or window
+  // New tab or window is default closed if they have previously opened/closed the FAB
+  // Default open if they have never opened/closed the fab before (i.e. first time on the site)
+  const [isOpen, setIsOpen] = useState(
+    JSON.parse(tryGetSessionStorage(sessionStorageKey, isFirstSession)) ||
+      isFirstSession
+  );
+
+  const [curriculumCourses, setCurriculumCourses] = useState<string[]>();
+
+  useEffect(() => {
+    const body = JSON.stringify({
+      context: context,
+    });
+    HttpClient.post(`/ai_diff/curriculum_courses`, body, true, {
+      'Content-Type': 'application/json',
+    })
+      .then(response => response.json())
+      .then(json => {
+        setCurriculumCourses(json.courses);
+      })
+      .catch(error => {
+        console.log(error);
+        setCurriculumCourses([]);
+      });
+  }, [context]);
+
+  const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
+
+  const showPulse = !hasOpened && isFabImageLoaded;
   const classes = showPulse
     ? classNames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
     : style.floatingActionButton;
 
   const handleClick = () => {
     const eventData = {
-      lessonId: lessonId,
-      lessonName: lessonName,
+      aiDiffChatContext: context,
+      scriptName,
       unitName: unitDisplayName,
     };
     const eventName = isOpen
-      ? EVENTS.TA_RUBRIC_CLOSED_FROM_FAB_EVENT
-      : EVENTS.TA_RUBRIC_OPENED_FROM_FAB_EVENT;
+      ? EVENTS.AI_DIFF_CHAT_CLOSED
+      : EVENTS.AI_DIFF_CHAT_OPENED;
     analyticsReporter.sendEvent(eventName, eventData, PLATFORMS.STATSIG);
+    if (eventName === EVENTS.AI_DIFF_CHAT_OPENED) {
+      trySetLocalStorage(localStorageOpenedKey, true.toString());
+    } else {
+      trySetLocalStorage(localStorageClosedKey, true.toString());
+    }
     setIsOpen(!isOpen);
   };
 
@@ -74,26 +123,17 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       >
         <img
           alt="AI bot"
-          src={aiFabIcon}
+          src={aiFabWithIcon}
           onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
         />
       </button>
-      <div
-        className={style.taOverlay}
-        style={{backgroundImage: `url(${taIcon})`}}
-      >
-        <img
-          src={taIcon}
-          alt="TA overlay"
-          onLoad={() => !isTaImageLoaded && setIsTaImageLoaded(true)}
-        />
-      </div>
       <AiDiffContainer
-        open={isOpen}
+        open={isOpen || isFirstSession}
+        context={context}
         closeTutor={handleClick}
-        lessonId={lessonId}
-        lessonName={lessonName}
+        scriptName={scriptName}
         unitDisplayName={unitDisplayName}
+        curriculumCourses={curriculumCourses}
       />
     </div>
   );

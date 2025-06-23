@@ -26,6 +26,7 @@ import {connect} from 'react-redux';
 import Select from 'react-select';
 
 import 'react-select/dist/react-select.css';
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 import {
   Courses,
   Subjects,
@@ -73,9 +74,7 @@ export class WorkshopFilter extends React.Component {
     showRegionalPartnerDropdown: PropTypes.bool,
   };
 
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
-  };
+  static contextType = RouterContext;
 
   state = {
     facilitatorsLoading: true,
@@ -279,7 +278,7 @@ export class WorkshopFilter extends React.Component {
       organizer_id: urlParams.organizer_id,
       teacher_email: urlParams.teacher_email,
       only_attended: urlParams.only_attended,
-      regional_partner_id: this.props.regionalPartnerFilter.value,
+      regional_partner_id: this.props.regionalPartnerFilter?.value,
     });
   }
 

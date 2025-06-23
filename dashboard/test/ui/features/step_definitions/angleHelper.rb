@@ -1,25 +1,3 @@
-When(/^I show the editor of field "([^"]*)" of block "([^"]*)"$/) do |field, block|
-  block_id = get_block_id(block)
-  script = <<-JS
-    var workspace = Blockly.getMainWorkspace();
-    workspace.hideChaff();
-    var selectedBlock = workspace.getBlockById('#{block_id}');
-    Blockly.common.setSelected(selectedBlock);
-    selectedBlock.getField('#{field}').showEditor();
-  JS
-  @browser.execute_script(script)
-end
-
-When(/^I change the field "([^"]*)" editor value to "(\d*)"$/) do |field, val|
-  @browser.execute_script("Blockly.selected.getField('#{field}').setEditorValue_(#{val})")
-end
-
-When(/^I change the field "([^"]*)" dropdown to "(\d*)"$/) do |field, val|
-  @browser.execute_script("Blockly.selected.getField('#{field}').setValue('#{val}')")
-  # Refresh the dropdown
-  @browser.execute_script("Blockly.selected.getField('#{field}').showEditor()")
-end
-
 When(/^I drag the Angle Helper circle to coordinates \((\d*),(\d*)\)$/) do |x, y|
   script = <<-JS
       const element = document.querySelector('.blocklyAngleHelperContainer svg');

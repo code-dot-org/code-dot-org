@@ -15,12 +15,12 @@
       "show_calendar": true,
       "student_detail_progress_view": true,
       "tts": true,
-      "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-12-19 16:02:21 UTC",
+    "serialized_at": "2025-06-05 14:24:31 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -231,7 +231,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students practice the basics of loops including using while loops, for loops, and updating multiple screen elements with a for loop. Along the way students develop debugging practices with loops.",
-        "preparation": "* Review the programming progression to understand what students will be asked to do\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-loops-lessons-5-8/36480) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1zHvcREojOLrrbDUeq1YV5k68Y2HptzBUT35zUrE1DzA/edit?usp=sharing)",
+        "preparation": "* Review the programming progression to understand what students will be asked to do\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-loops-lessons-5-8/36480) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
         "student_overview": "Practice programming with loops through a set of programming puzzles."
       },
       "seeding_key": {
@@ -3683,7 +3683,8 @@
         "level_keys": [
           "csp-20-21-u5-assess-lists2022_2024"
         ],
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "show_ai_analysis": true
       },
       "bonus": false,
       "seeding_key": {
@@ -3858,7 +3859,8 @@
         "level_keys": [
           "CSP Lists Predict_2024"
         ],
-        "progression": "Check for Understanding"
+        "progression": "Check for Understanding",
+        "show_ai_analysis": true
       },
       "bonus": false,
       "seeding_key": {
@@ -4633,7 +4635,8 @@
         "level_keys": [
           "U5 L09 Traversals Exit Ticket_2024"
         ],
-        "progression": "Assessment: Check For Understanding\r"
+        "progression": "Assessment: Check For Understanding\r",
+        "show_ai_analysis": true
       },
       "bonus": false,
       "seeding_key": {
@@ -4758,7 +4761,8 @@
         "level_keys": [
           "CSP U5L10 CFU Traversals_2024"
         ],
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "show_ai_analysis": true
       },
       "bonus": false,
       "seeding_key": {

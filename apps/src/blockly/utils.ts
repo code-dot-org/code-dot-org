@@ -2,6 +2,7 @@ import * as GoogleBlockly from 'blockly/core';
 import _ from 'lodash';
 
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
+import DCDO from '@cdo/apps/dcdo';
 import {MetricEvent} from '@cdo/apps/metrics/events';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getStore} from '@cdo/apps/redux';
@@ -155,6 +156,18 @@ export function handleCodeGenerationFailure(
     });
   }
 }
+/**
+ * Report usage of CDO Blockly, once all Blockly labs are purported to
+ * on mainline Google Blockly.
+ * @param {MetricEvent} eventName Event name to log
+ */
+export function reportCdoBlocklyUsage(eventName: MetricEvent) {
+  if (DCDO.get('cdo-blockly-usage', false)) {
+    MetricsReporter.logInfo({
+      event: eventName,
+    });
+  }
+}
 
 // Returns the current theme name without the 'dark' suffix, if present.
 export function getBaseName(themeName: Themes) {
@@ -162,6 +175,11 @@ export function getBaseName(themeName: Themes) {
     return themeName.replace(DARK_THEME_SUFFIX, '');
   }
 }
+
+export function isDarkTheme(theme: GoogleBlockly.Theme | undefined) {
+  return theme?.name.includes(DARK_THEME_SUFFIX);
+}
+
 export const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
@@ -318,7 +336,7 @@ export function disableOrphanBlocks(eventWorkspace: GoogleBlockly.Workspace) {
   // its call blocks.
   eventWorkspace.getTopBlocks().forEach(block => {
     if (block.type === BLOCK_TYPES.procedureCall) {
-      block.setEnabled(false);
+      block.setDisabledReason(true, 'ORPHANED');
     }
     updateBlockEnabled(block);
   });
@@ -333,12 +351,12 @@ export function updateBlockEnabled(block: GoogleBlockly.Block) {
     if (parent && parent.isEnabled()) {
       const children = block.getDescendants(false);
       for (let i = 0, child; (child = children[i]); i++) {
-        child.setEnabled(true);
+        child.setDisabledReason(false, 'ORPHANED');
       }
     } else if (block.outputConnection || block.previousConnection) {
       let currentBlock: GoogleBlockly.Block | null = block;
       do {
-        currentBlock.setEnabled(false);
+        currentBlock.setDisabledReason(true, 'ORPHANED');
         currentBlock = currentBlock.getNextBlock();
       } while (currentBlock);
     }

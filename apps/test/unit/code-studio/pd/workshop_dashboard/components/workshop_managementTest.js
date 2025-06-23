@@ -1,5 +1,6 @@
 import {expect} from 'chai'; // eslint-disable-line no-restricted-imports
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import PropTypes from 'prop-types';
 import React from 'react';
 import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
@@ -19,6 +20,10 @@ const defaultProps = {
   workshopId: 123,
   viewUrl: 'viewUrl',
   date: '2017-07-01',
+};
+
+WorkshopManagement.contextTypes = {
+  router: PropTypes.object.isRequired,
 };
 
 describe('WorkshopManagement', () => {

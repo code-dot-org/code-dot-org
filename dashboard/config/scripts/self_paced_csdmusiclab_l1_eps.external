@@ -1,0 +1,67 @@
+name 'self-paced-CSDMusicLab-L1-EPS'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Explore-Practice-Synthesize-Project
+
+#### Let’s take a look at each of the lesson types for Programming with Music Lab in-depth. We’ll focus just on the <b>sequencing</b> chunk of the curriculum to start.</p>
+
+#### Knowing how each lesson scaffolds instruction will help you, as the educator, support student learning. Notice how the objectives below build on each other and increase in complexity.
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 18px; font-weight: bold;">🔍 Explore Lesson</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; line-height: 150%;">
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2;">
+Briefly scan over the  <a href='https://studio.code.org/s/csd-programming-with-music-lab-2025-pilot/lessons/2' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 2: Sequencing - Explore lesson plan</a>. How are students prompted to explore new concepts?
+</p>
+
+<p style="font-size: 18px;"><strong>Lesson Overview</strong><br>
+Students are introduced to sequencing by following step-by-step instructions to build a song. They learn how to layer tracks and use blocks like <strong>play together</strong> to combine sounds. Teachers guide discussions, highlight patterns, and encourage students to make predictions before running code.
+</p>
+</div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 18px; font-weight: bold;">🛠️ Practice Lesson</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; line-height: 150%;">
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2;">
+Briefly scan over the <a href='https://studio.code.org/s/csd-programming-with-music-lab-2025-pilot/lessons/3' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 3: Sequencing - Practice lesson plan</a>. What new blocks are introduced to students to extend their exploration?
+</p>
+
+<p style="font-size: 18px;"><strong>Lesson Overview</strong><br>
+Students practice sequencing by combining tracks of different lengths and adding rests to create offsets. Working in pairs, they apply concepts from the Explore lesson and build fluency through guided challenges. Teachers circulate to support and adjust instruction as needed.
+</p>
+</div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 18px; font-weight: bold;">🧠 Synthesize Lesson</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; line-height: 150%;">
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2;">
+Briefly scan over the <a href='https://studio.code.org/s/csd-programming-with-music-lab-2025-pilot/lessons/4' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 4: Sequencing - Synthesize lesson plan</a>. How does the lesson allow students to flex their creativity?
+</p>
+
+<p style="font-size: 18px;"><strong>Lesson Overview</strong><br>
+Students review and apply sequencing skills in a more open-ended context, using new <strong>Effect</strong> blocks to enhance their songs. Inspired by a real-world producer, they explore how to layer tracks creatively—bridging structured learning with creative expression.
+</p>
+</div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 18px; font-weight: bold;">🎼 Project Lesson</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; line-height: 150%;">
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2;">
+Briefly scan over the <a href='https://studio.code.org/s/csd-programming-with-music-lab-2025-pilot/lessons/5' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 5: Mini Project: Walk-Up Songs lesson plan</a>. How does the project allow students to apply their learning about sequencing?
+</p>
+
+<p style="font-size: 18px;"><strong>Lesson Overview</strong><br>
+Students create personalized walk-up songs for characters using everything they’ve learned about sequencing. They explore a new feature, <strong>triggers</strong>, to add flair and timing to their music. This creative project gives students space to express themselves while demonstrating mastery of key concepts.
+</p>
+</div>
+</details>
+MARKDOWN

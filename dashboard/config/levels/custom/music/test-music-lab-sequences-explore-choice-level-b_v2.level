@@ -1,0 +1,133 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:56:29.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Dylan's Song\r\n\r\nAn **algorithm** is a series of steps to accomplish a task. For example, your friend Dylan has been working on this great intro riff for a new song:\r\n\r\n1) First we used the **Arena** beat with the **Fuzz Drop** bass and the **Ghost Choir** lead\r\n2) Then we kicked it up a notch by repeating those three and adding a **Crash** effect\r\n3) Then we changed the lead to the **Buzz Riff** guitar instead\r\n\r\nFollow Dylan's **algorithm** to recreate this song. You can listen to the song below. Your song should match his exactly!\r\n\r\n![](https://images.code.org/b91fe6d80fa5bd8bdbea7603d1c0a803-image-1742935354574.png)",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+        "rock": [
+          "arena_beat",
+          "ghost_choir",
+          "guitar_buzz_riff",
+          "crash",
+          "bass_fuzz_drop"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together"
+          ]
+        },
+        "type": "flyout"
+      },
+      "packId": "default",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundsPanelInSoundsMode": true,
+      "showSoundFilters": true,
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "rock/arena_beat"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "rock/bass_fuzz_drop"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "rock/ghost_choir"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      }
+    },
+    "display_name": "Dylan's Song",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/rock/rock.png",
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-explore-choice-level-b_2e55a93b-b8df-407d-a1ad-0d57bfbcc041",
+        "message": "auto-pass for exemplar validation",
+        "next": true,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
+      "playerTitle": "Dylan's Song"
+    },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHorpleEeoerSvfZ2JHZpm1GhsSDwCOxBL+fVO3bL+jSF8lL\nW/SyrxeYBOE22MW62zzXxl7ZWtb3HROyH4RPTHsAcBBPo4PK1usYOsBDZKBO\nSB45w5QfTSl1PV+PTL2tu7L/zOMVsZ+3oATtBDd7H5bIlKixaN0iRSXfBQfO\nUP3iAZsT8Eyuhbmx+/+7bQ0+D5ozC1BLzE/l6Sxl0cp7JVy55SPCJdw6h7Bg\nd/njIZRIfi0Hfd0LgeBlY+FXFjmymE9DlvTMyePgxoF3AZOqstijiVVWBc4I\n47L3KqsFIAMIdnd+D8+wY1UHCJLB3++QJ+1FPXMZfGoLYy1RSqV/YdMI7UBb\nw3f3HLauUvc6wPH//uViI6ro5LoM1CPtv0EqzC/awfBJtAS+w14czo77tJJz\n/gqqICapmJuyHt9CZNuRo4cHDt20e2ayQrESf0OzxxqBPVDzbq1fpRU9LX2/\nCHqk8u/QsT0JPbsp9dQWw6+gCkB7URxUIRMr5Z5Vje+HSVCtE8JOUyl/d4jW\nnyUfOGot0z6H8Y+ZRzjH2Y2JsqKlEm4ZdI/hnUpkqIkjvkbBt2AfKvj2W8q3\n4eVv5qqqz0gi/Pg+qw6Q3rrQSXoqgRpsHlQ8Jiq/6I1dZdSqyqkVdrcYUWSg\n5/I18OKuyKBFZ+GNQp6qqC+j0fGp//SAnXl5QfOaNY6AlWXXxpK7kZZ5SGdH\nxRjJghetLVDj/HwWELcMdvk5RU1xOODceoRn0fZG2ILM59i40itqnMhTWlpy\nUOOuE+rRxXnL3hIfTE4nhuWS0da3Joyx5UtYkdXyYWWOH8QtmEyUCm8RdS/J\nCMXj1bwyRQb4lbArekFMdSQ1RyfFCf2L6zjisuAuJfljVqVcLqnEKCtW0N7y\ns4jN9YWSVTrj85fcdQIapSTR60M5OLVxxexZw/dgCgX8sNDE09lAoaZqAeRD\nDtmmhHgZExgKXu0Wd4/OiaDuLRRjLxgeUXbMgrxJqbA4Xj6zzXqaAq/jZszx\n57AR/TB16x0/0jdHztdVQnHyBmcioIIG66f8wZV/1lFpasKHjjy2LGUhOhEX\nYxdJoPcAmil7TgOu8K72TYT2Kl801DFSowGBlqWb27gkw1HC/CMxN/NkQ8ac\nMe7WnlJxrtpuTOwfhuC4Td5thsucayofuaU76Vx2CQRhOmQEc1WvJeerp5Z9\n4y9eV9cRH7SGrQTNkd0iyTs6d14HB8zsmYwSMhFUyPoOW7fMhuWKjsjeK9eQ\noRW0+rtFScaPEK3gAqZDM1NhmVZ5a+cTpd93ZZiooV+VMfn/Ec6BX7aNJbdi\nEWmDhuUA9O9mfl4mnFhVhnEwM+TuIxBHVNqlGfY2Q9Bk5UaBjhvQ86ySolh8\nAi3iKYd4OEx2MCHO8ob6UkChtdHK/UYVO64fMYgLldL5Xlc8sf7Xm658+WUY\nq4MwWBDBto8Jm+IwoCeWpGutA6+WKcvPQ9wwNipkXPFHAU+1a2x+4nQ6JMFl\nXIrEmOoVPv25CIqySkDnQrNsVpEvv81jT16JuDa85gJ7jPgFM359H1a6IdT8\nwnPgqwTs6q+D5/HCJ+13ZtUaGUllinjHhJ6wqp1XWbrKkE0RjaidAOTGSjW7\nss0xLrWoWaaPpEo0Mf9uY//Wl7WKael7ZEMscid0Cswaqp2eYi59nJXZd1yk\nNhSm9Elp3uwiZeLVd2pOTMwBjAosjWKmXiUxYw7XAmWiztrTaz9TK3FUnPqZ\nb8UCaDKL1sWp40VCtMfrFuwI80AftAxGJ4zdPu7m6GgR5JYJ0ALH0V+Xf47q\nZ9IOoBYQfOEzax4qCmJWJbzVRSjgl613pV4R4xGGvecnOIWK635Nq1hqDMn8\neeV9WXV0f/T74r3lC382ilXozw+SocQ6qQNsLYUPZ06vJISTqnPBVHNXYPwC\n5E6svfSEDSN7DD/xJLvzeou9swc6eyU0GpLqQep6WfjEbgWVY5SR5z3j2IcY\ntWmzrbESs/zDl7rrsebRjp2+525lvEJDjYXm73YyL4c7s52Pa0hc1T1cXy7z\nBc1eSee39Zmm6iH/5uT4BdbD\n",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "bubble_choice_description": "Help Dylan's rock band recreate a guitar riff for a new song!",
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:29.699+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-choice-level-b\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-choice-level-b\"},{\"changed_at\":\"2025-06-12 15:08:31 +0000\",\"changed\":[\"thumbnail_url\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

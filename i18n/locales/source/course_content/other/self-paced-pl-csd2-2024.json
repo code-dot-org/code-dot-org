@@ -1,0 +1,234 @@
+{
+  "https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/1/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Navigating Code.org \n\n<img src=\"https://images.code.org/d83020a28b0525fa84d3fc765673085d-image-1713985590249.06.25 PM.png\" alt=\"Two students sitting at individual laptops smile at the camera\" style=\"border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 0;\">\n\n#### Welcome! This lesson is designed to orient you to the Code.org website and teaching tools. \n\n### **You will learn how to:**\n\n* #### Navigate the Code.org website and teacher tools.\n* #### Set up a class section.\n<br>\n\n#### **Suggested time:** 35 minutes\n\n<br><br><br><br>\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/1/levels/2": {
+    "long_instructions": "## Consider the following when watching this video:\n\n#### What features are available on the Code.org learning platform to support me in teaching CS Discoveries?\n\n#### **Additional Resource:**\n\n-   #### <a href=\"https://support.code.org/hc/en-us/articles/228116468-I-d-like-to-start-using-Code-org-in-my-classroom-How-should-I-start-\" target=\"blank\" rel=\"noopener noreferrer\" >Getting Started on Code.org</a>"
+  },
+  "https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/1/levels/3": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Task: Become a Verified Teacher\n\n#### Code.org's curricula offers additional materials for **verified teachers.** \n\n#### These materials include:\n\n* #### Student assessments and surveys.\n* #### Example solutions and answer keys.\n* #### The ability to leave feedback for students on levels.\n* #### Teaching tips and more!\n\n#### If you are not already a verified teacher, <a href=\"https://form.jotform.com/240863841362155\" target=\"blank\" rel=\"noopener noreferrer\" >click here</a> to complete the form to become a verified teacher. \n\n___\n\n#### **Note:** We try to process requests for teacher verification as fast as we can but because it is a manual process, it can take up to 7 business days to complete. <a href=\"https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher\" target=\"blank\" rel=\"noopener noreferrer\" >Click here</a> for more information, including a list of frequently asked questions.\n\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/1/levels/4": {
+    "long_instructions": "## Consider the following when watching this video:\n\n### Which login type will work best for my students?\n\n### **Additional Resources:**\n\n-   #### <a href=\"https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section\" target=\"blank\" rel=\"noopener noreferrer\" >Creating a Classroom Section</a>\n-   #### <a href=\"https://support.code.org/hc/en-us/articles/202114633-Creating-accounts-for-students-and-adding-them-to-your-section\" target=\"blank\" rel=\"noopener noreferrer\" >Creating Accounts for Students and Adding Them to Your Section</a>"
+  },
+  "https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/1/levels/5": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Learning Management System (LMS) Integrations\n\n#### Code.org has partnered with several **learning management systems** (LMS) to integrate your class rosters with Code.org sections. Each LMS requires a different setup, detailed below.\n\n## Which LMS integrate with Code.org?\n\n<img src=\"https://images.code.org/0fcb66fa9198d4fb5eee8c620ecb18ae-image-1719962626183.23.40 PM.png\" alt=\"Google Classroom, Canvas, Schoology, and Clever logos\">\n\n#### Currently, Code.org has integrations with **Google Classroom**, **Clever**, **Schoology**, and **Canvas**.\n\n## How can I sync my LMS with Code.org?\n\n#### Our Help Center provides robust resources for LMS syncing. Check out the pages below:\n\n### **Google Classroom**\n\n* #### <a href=\"https://support.code.org/hc/en-us/articles/115001319312-Setting-Up-Sections-with-Google-Classroom-Sync\" target=\"blank\" rel=\"noopener referrer\">Setting Up Sections with Google Classroom Sync</a>\n* #### <a href=\"https://support.code.org/hc/en-us/articles/360049865752-How-do-I-assign-work-to-my-students-via-Google-Classroom\" target=\"blank\" rel=\"noopener referrer\">Assigning Work to Students via Google Classroom</a>\n* #### <a href=\"https://support.code.org/hc/en-us/articles/6496495212557-Troubleshooting-common-issues-with-Google-Classroom-Clever-sections\" target=\"blank\" rel=\"noopener referrer\">Troubleshooting common issues with Google Classroom / Clever sections</a>\n\n### **Clever**\n\n* #### <a href=\"https://support.code.org/hc/en-us/articles/115002716111-Setting-Up-Sections-with-Clever-Sync\" target=\"blank\" rel=\"noopener referrer\">Setting Up Sections with Clever Sync</a>\n* #### <a href=\"https://support.code.org/hc/en-us/articles/6496495212557-Troubleshooting-common-issues-with-Google-Classroom-Clever-sections\" target=\"blank\" rel=\"noopener referrer\">Troubleshooting common issues with Google Classroom / Clever sections</a>\n\n### **Canvas**\n\n* #### <a href=\"https://support.code.org/hc/en-us/articles/23621973451405-Create-and-sync-rosters-with-Canvas\" target=\"blank\" rel=\"noopener referrer\">Create and sync rosters with Canvas</a>\n\n### **Schoology**\n\n* #### <a href=\"https://support.code.org/hc/en-us/articles/23622036958093-Create-and-sync-rosters-with-Schoology\" target=\"blank\" rel=\"noopener referrer\">Create and sync rosters with Schoology</a>\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/1/levels/6": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Task: Create a Classroom Section\n\n### Steps for creating a classroom section:\n\n#### **Step 1:** Open a new tab and log into your teacher account on Code.org.\n#### **Step 2:** Click on the \"Create a section\" button in the classroom sections area of your \"My Dashboard\" page. \n#### **Step 3:** Follow the prompts to create a classroom section. \n<br>\n\n<img src=\"https://images.code.org/8124e35038e13a7764d1abac6dc1579f-image-1713991634348.47.09 PM.png\" alt=\"Screenshot showing the Add a new classroom section portion of the Teacher Dashboard. The descriptive text reads, Create a new classroom section to start assigning courses and seeing your student progress.\">\n<br>\n\n#### <a href=\"https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section\" target=\"blank\" rel=\"noopener noreferrer\" >Click here</a> for more detailed instructions.\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/1/levels/7": {
+    "dsls": {
+      "content1": "Thinking through how you want your students to access the course is an important part of planning for your first class. ",
+      "markdown": "#### Make a plan for how you will have students log into your Code.org course. **Consider the following when making your plan:**\n\n* #### Do my students already have Code.org accounts? \n* #### What type of log in will my students use? \n* #### How will students join my class? \n* #### Will I have printed instructions? Will the instructions be posted somewhere? \n\n___\n##### **Note:** Click and drag the bottom-right corner of the text box below to resize it.\n\n",
+      "title": "Make a Plan: Student Logins"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/1/levels/8": {
+    "long_instructions": "## Consider the following when watching this video:\n\n#### What will students see when they log into their Code.org account?\n\n#### **Additional Resource:**\n\n-   #### <a href=\"https://support.code.org/hc/en-us/articles/115001347791-The-student-experience-on-Code-org\" target=\"blank\" rel=\"noopener noreferrer\">The Student Experience on Code.org</a>"
+  },
+  "https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/1/levels/9": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Task: Explore the Student View\n\n<img src=\"https://images.code.org/bc0123ce94917e3e6547a0dded925912-image-1713993560196.18.52 PM.png\" alt=\"The Teacher Panel, demonstrating how to access student view.\" style=\"float: right; height: 275px; padding-left: 50px; clear: both; margin: 0 20px 20px 0;\">\n\n#### **Step 1:** Open a new tab and log into your teacher account on Code.org.\n#### **Step 2:** Click on the name of the course you would like to view in the course column of the classroom sections table. \n* #### If you have not yet created a class section, scroll down to the \"My Courses\" section and find a select to explore.\n\n#### **Step 3:** Select a unit and click the \"Go to Unit\" button.\n#### **Step 4:** When you reach the Unit Overview page, click on the blue arrow on the right hand side of your screen  to expand the teacher panel. \n#### **Step 5:** Toggle to the student view. \n#### **Step 6:** Click on the \"Lesson Resources\" button to view the student resources for a level of your choosing. \n___\n\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">Show Me How</summary>\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n<img src=\"https://images.code.org/c931daa06ba3100867789c5175cc336a-image-1713995054271.gif\" alt=\"A gif showing how to complete the above steps\" width=\"800px\">\n\n</div>\n</details>\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/1/levels/10": {
+    "long_instructions": "## Consider the following as you watch this video:\n\n#### What features are available within the Code.org learning platform to support me in ongoing assessment of student learning?\n\n#### **Additional resources:**\n\n-   #### <a href=\"https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress\" target=\"blank\" rel=\"noopener noreferrer\" >Viewing Student Progress</a>\n\n-   #### <a href=\"https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-CS-Discoveries-and-CS-Principles-only-\" target=\"blank\" rel=\"noopener noreferrer\" >Leaving Feedback for Students</a>\n\n-   #### <a href=\"https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys\" target=\"blank\" rel=\"noopener noreferrer\" >Using Lock Settings for Assessments and Surveys</a>"
+  },
+  "https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/1/levels/11": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "Level 3",
+          "correct": false
+        },
+        {
+          "text": "Level 4",
+          "correct": false
+        },
+        {
+          "text": "Level 8",
+          "correct": true
+        },
+        {
+          "text": "Level 9",
+          "correct": false
+        }
+      ],
+      "markdown": "![Image showing a student progress. The student has completed Levels 1 through 8.](https://images.code.org/97dd2d9b0ef8bd8b9f41701447aae815-image-1713995939189.58.29 PM.png)\n\n",
+      "questions": [
+        {
+          "text": "Which level is best used to assess student understanding of the lesson objectives?"
+        }
+      ],
+      "teacher_markdown": "#### **Explanation:** Levels with stars next to them denote an assessment level. Level 8 is an assessment level, and the empty purple triangle shows that feedback can be left to the student. Further, the solid green circle means that the student has submitted an answer.\n\n#### Visit the <a href=\"https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress\" target=\"blank\" > *viewing student progress*</a> support article to learn more about tracking student progress. \n",
+      "title": "Check for Understanding"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/1/levels/12": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "Click to evaluate a single key concept"
+        },
+        {
+          "text": "Provide a student with text feedback"
+        },
+        {
+          "text": "Toggle between teacher and student views"
+        },
+        {
+          "text": "Move to view the work of the next student on the class list"
+        },
+        {
+          "text": "View a worked example"
+        },
+        {
+          "text": "Move to a new class section"
+        },
+        {
+          "text": "Click to move to view the work of a specific student"
+        }
+      ],
+      "content1": "Match the letter to the correct description.",
+      "markdown": "#### <a href=\"https://studio.code.org/s/csd3-2024/lessons/3/levels/8\" target=\"blank\" >Click here</a> if you would like to view a sample assessment. Some features will only appear when enrolled students have made progress on the level.\n\n<img src=\"https://images.code.org/d7fc700c8a44e44c6f2160a2fbfe6645-image-1713996906891.14.49 PM.png\" alt=\"A screenshot of a level in CS Discoveries with several features annotated.\">\n",
+      "questions": [
+        {
+          "text": "A"
+        },
+        {
+          "text": "B"
+        },
+        {
+          "text": "C"
+        },
+        {
+          "text": "D"
+        },
+        {
+          "text": "E"
+        },
+        {
+          "text": "F"
+        },
+        {
+          "text": "G"
+        }
+      ],
+      "title": "Check for Understanding"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/2/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Navigating Lesson Plans and Resources  \n\n<img src=\"https://images.code.org/f871aed8987a4e53d2c34a0f7dc6f2d7-image-1713997323056.21.59 PM.png\" alt=\"Two students sitting at individual laptops smile at their screens\" style=\"border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 0;\">\n\n#### Now that you know how to navigate the Code.org learning platform, we are going to dig deeper into the resources available to support you in teaching Code.org curricula. \n\n### **You will learn how to:**\n\n* #### Locate and use course lesson plans and teacher resources \n<br>\n\n#### **Suggested time:** 20 minutes\n<br><br><br>\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/2/levels/2": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Task: Navigate to Lesson Plans\n\n#### Steps to access lesson plans:\n\n#### **Step 1:** Open a new tab and log into your teacher account on Code.org. \n\n#### **Step 2:** Click on the course of your choice in the \"Courses\" column of the \"Class Sections\" table on the \"My Dashboard\" page. \n\n* #### If you have not added a course to your class sections, navigate to <a href=\"https://studio.code.org/catalog\" target=\"blank\" rel=\"noopener noreferrer\">the Curriculum Catalog</a> and explore our offerings.\n\n#### **Step 3:** Navigate to the Lesson you would like to view and click on the \"View Lesson Plan\" button.\n\n\n<hr style=\"clear:both\">\n\n<img src=\"https://images.code.org/94710f4ee02e5c4febcced0a21fa939a-image-1714072096360.07.45 PM.png\"  alt=\"Screenshot showing the Unit 1 overview page with an orange arrow pointing to the 'View Lesson Plan' button for Lesson 1\" style=\"float: left; width: 500px; clear: both; margin: 0 20px 20px 0;\">\n\n\n## Unit Overview Page\n\n#### The unit overview page contains a short description of each lesson within the unit along with unit level teacher resources. From this page, you can also access management features such as hiding and showing lessons for students. Each lesson has a blue \"View Lesson Plan\" button to see the lesson plan for the unit.\n\n<hr style=\"clear:both\">\n\n<img src=\"https://images.code.org/8353ca916da3be80bd588c4bd604b743-image-1714072098678.07.55 PM.png\"  alt=\"Screenshot showing the Unit 1, Lesson 1 plan with an orange arrow demonstrating how to find other lessons in the unit.\" style=\"float: left; width: 500px; clear: both; margin: 0 20px 20px 0;\">\n\n## Lesson Plans\n\n#### Within the lesson plan, you will find a teaching guide, lesson objectives, links to student and teacher lesson resources, standards alignment, and all other content necessary for teaching the lesson. You can also preview student facing levels from within the lesson plan. To navigate between lessons, you can click the purple \"Other Lessons in this Unit\" button and choose a different lesson plan to view.\n\n<div style=\"clear:both\"/>\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/2/levels/3": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Task: Explore a Lesson Plan\n\n#### **Step 1:** Navigate to a lesson plan of your choice.\n#### **Step 2:** Explore the lesson plan content. \n#### **Step 3:** Navigate to a new lesson plan. Look for similarities and differences between the two lesson plans. \n#### **Step 4:** Before moving on, make sure you are able to locate all of the items on the list below. \n\n<hr style=\"clear:both\"/>\n\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">🧭 Unit Navigation and Printing</summary>\n <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom: 300px;\">\n    <p><img src=\"https://images.code.org/72a7076246f89f19dc0a9685cbbd1e69-image-1714073074125.23.33 PM.png\" style=\"float: left; width: 400px; clear: both; margin: 0px 20px 0px 0px;\" alt=\"A lesson plan with the Unit Navigation and Printing options highlighted with an orange rectangle\"> \n\n#### In these sections at the top of the page, you can **navigate** back to the unit overview or to other lessons in the unit. You can also **print** the lesson plan or resources from the unit in this menu.\n</p></div>\n</details>\n\n<div style=\"clear:both\"/>\n\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">🎯 Overview</summary>\n <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom: 175px;\">\n    <p><img src=\"https://images.code.org/b185b9532d61295ad79bd09db003cbc5-image-1714073105761.23.38 PM.png\" style=\"float: left; width: 400px; clear: both; margin: 0px 20px 0px 0px;\" alt=\"A lesson plan with the Overview highlighted with an orange rectangle\"> \n\n#### This section gives a high-level description of the lesson. The **Overview** describes the activities and tasks students will do in the lesson, as well as the desired learning outcomes. Each lesson has a \"Question of the Day\" that helps frame what students will learn by the end of the lesson. \n    \n</p></div>\n</details>\n\n<div style=\"clear:both\"/>\n\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">📋 Standards and Objectives</summary>\n <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom: 175px;\">\n    <p><img src=\"https://images.code.org/707c2e4857b76afc21b2e4819d5927ff-image-1714073170562.23.45 PM.png\" style=\"float: left; width: 400px; clear: both; margin: 0px 20px 0px 0px;\" alt=\"A lesson plan with the lesson standards and objectives highlighted with an orange rectangle\"> \n\n#### These sections help identify the specific skills and knowledge students will learn in the unit.\n\n#### Each lesson is aligned to the **CSTA Standards**. Clicking on a standard will expand the text to show the specific standard being addressed in a lesson. \n\n#### Based on the standards, individual **objectives** are written for each lesson.\n</p></div>\n</details>\n\n<div style=\"clear:both\"/>\n\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">✔️ Preparation, Links, and Vocabulary</summary>\n <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom: 75px;\">\n    <p><img src=\"https://images.code.org/5ebb52e4764eeb11bd6348e4b037fa3a-image-1714073197687.23.51 PM.png\" style=\"float: left; width: 400px; clear: both; margin: 0px 20px 0px 0px;\" alt=\"A lesson plan with the preparation, links, and vocabulary sections highlighted with an orange rectangle\"> \n\n#### These sections provide important information when preparing to teach the lesson.\n\n#### The **Preparation** section lists any important steps to take before the lesson, such as gathering supplies or working through certain levels in Code Studio.\n\n#### The **Links** section provides resources for teachers and students. Some resources (like answer keys) can only be viewed by verified teachers. Student resources are usually used throughout the lesson, and will need to be printed or distributed digitally.\n\n#### The **Vocabulary** section provides definitions for any new academic vocabulary introduced in the lesson. This section only appears if a new vocabulary term is introduced in the lesson. Similarly, if new coding commands are introduced in a lesson, an \"Introduced Code\" section will appear that includes any new coding commands.\n</p></div>\n</details>\n\n<div style=\"clear:both\"/>\n\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">📑 Agenda and Teaching Guide</summary>\n <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:170px;\">\n    <p>\n<img src=\"https://images.code.org/216e133aaf878bf0edbaaf4348c9c8b7-image-1714073241970.23.56 PM.png\" style=\"float: left; width: 400px; clear: both; margin: 0px 20px 0px 0px;\" alt=\"A lesson plan with the agenda highlighted with an orange rectangle and the Teaching Guide shown at the bottom\"> \n\n#### The remainder of the lesson plan includes the specific steps for teaching the lesson.\n\n#### The **Agenda** shows a high-level overview of the activities of the lesson. Timing estimates are also provided for certain activities.\n\n#### The **Teaching Guide** is the remainder of the lesson plan. It includes specific steps to take in the lesson, as well as colored callouts providing additional teaching tips or discussion goals at specific points in the lesson.\n</p></div>\n</details>\n\n<div style=\"clear:both\"/>\n\n<div style=\"clear:both\"/>\n\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">✅ Assessment Opportunities</summary>\n <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom: 175px;\">\n    <p><img src=\"https://images.code.org/9d0d53c8beedfc523243625f2cc3b259-image-1714073255487.21.51 PM.png\" style=\"float: left; width: 400px; clear: both; margin: 0px 20px 0px 0px;\" alt=\"An assessment opportunity call out from a CSD lesson plan\"> \n\n#### The **Assessment Opportunities** section provides suggestions for how students can be formatively assessed on each objective throughout the lesson. They are found in the body of the Teaching Guide, or lesson plan.\n</p></div>\n</details>\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/2/levels/4": {
+    "dsls": {
+      "markdown": "#### Although lesson plans are provided, you, as the teacher, still have an active role to play in customizing the learning experience for your students.\n\n#### Make a list of the things you will need to do to prepare to teach a Code.org lesson. Consider the following when making your list:\n\n* #### What do I need to prepare ahead of time? \n* #### When a lesson has resources to share with students, will I print these resources or post them to my school's learning management system?\n* #### Do I need to modify the lesson timing to fit into my scheduled class time? \n* #### Are there other things I might need to consider while planning for a lesson? \n\n___ \n\n##### **Note:** Click and drag the bottom-right corner of the text box below to resize it.\n\n",
+      "title": "Make a Plan: Lesson Planning"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/2/levels/5": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Task: Navigate to Additional Teacher Resources\n\n<img src=\"https://images.code.org/0d502b90a9f9fba7ccba145ad22b645a-image-1714073818864.36.46 PM.png\" alt=\"Screenshot of the Unit 2 Overview page with an orange arrow pointing to the 'Teacher Resources' drop down menu.\" style=\"float: left; height: 395px; clear: both; margin: 0 20px 20px 0;\">\n\n## Steps to Access Unit-Level Resources\n\n#### **Step 1:** From the Unit Overview page, navigate to your unit of choice. \n\n#### **Step 2:** Click on the \"Go to Unit\" button of the Unit you would like to view. \n\n#### **Step 3:** When you reach the Unit Overview page, click on the blue \"Teacher Resources\" button. \n\n#### **Step 4:** Select the resource that you would like to view from the dropdown menu. \n<br><Br><br><br>\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/2/levels/6": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Task: Modify the Unit Calendar\n\n#### The unit calendar is a tool you can use to help plan your unit pacing. The calendar can be adjusted based on instructional minutes per week. \n\n### **Steps to modify the unit calendar**\n\n#### **Step 1:** Once on the Unit Overview page, click on the blue \"View calendar\" button. \n\n#### **Step 2:** Use the dropdown menu to adjust the number of instructional minutes per week.  \n<br>\n\n<img src=\"https://images.code.org/74ea330322bdff161c2feb35372ae01a-image-1714074033148.40.26 PM.png\" alt=\"Screenshot of the Unit 2 Overview page demonstrating how to modify the unit calendar.\" style=\"float: left; clear: both; margin: 0 20px 20px 0;\">\n\n<div style=\"clear:both\"/>\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/3/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Navigating Support \n\n<img src=\"https://images.code.org/316c85b04466f48a603e3b902212c14c-image-1714074264271.44.21 PM.png\" alt=\"Two students look on to a laptop.\" style=\"border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 0;\">\n\n#### Welcome! In addition to the lesson plans and teacher resources, there are also other options to access support while teaching Code.org curricula. In this lesson, we will explore these additional support options. \n\n### **You will:**\n\n* #### Learn how to access support while teaching the course.\n<br>\n\n#### **Suggested time:** 15 minutes\n\n<br><br><br><br>\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/3/levels/2": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Navigating to Support\n\n<img src=\"https://images.code.org/954e5e88b86eb2d01a60bd643db22b75-image-1714074458856.47.24 PM.png\" alt=\"Screenshot of the Code.org homepage with an orange arrow pointing to the '?' button at the top right.\" style=\"float: right; height: 200px; clear: both; margin: 0 20px 20px 0;\">\n\n## Steps to access teacher support:\n\n#### **Step 1:** Click on the \"?\" to access the support dropdown menu.\n#### **Step 2:** Select the type of support you would like to access.\n\n<br><br><br><br>\n\n<div style= \"clear:both\"/>\n\n## Types of Teacher Support\n\n<img src=\"https://images.code.org/dd52d495bfb1fa9a2dfce96f30a5c4fa-image-1714074491246.46.49 PM.png\" alt=\"Screenshot of the Code.org help and support page.\" style=\"float: left; width: 400px; clear: both; margin: 0 20px 20px 0;\">\n\n### **Help and Support**\n\n#### The help and support page will bring you to a library of support articles that contain written instructions for common tasks along with answers to frequently asked questions. This is also where you will go to read about new feature updates.  \n\n<hr style=\"clear:both\">\n\n<img src=\"https://images.code.org/8cae4f863bce90d84996ca3aef456b2a-image-1714074493887.46.57 PM.png\" alt=\"Screenshot of the Code.org 'Contact Us' page.\" style=\"float: left; width: 400px; clear: both; margin: 0 20px 20px 0;\">\n\n\n### **Report a Problem**\n\n#### If you need to contact the Code.org team directly, select the report a problem option. Select this option to report problems with the curriculum or website or to ask a question specific to you, your students, or your account. After submitting your message, someone from the Code.org team will follow up with you via email. \n\n<hr style=\"clear:both\">\n\n<img src=\"https://images.code.org/b104506d7faea4c934c79e0650e0212f-image-1714074495989.47.09 PM.png\" alt=\"Screenshot of the Code.org Teacher Forum\" style=\"float: left; width: 400px; clear: both; margin: 0 20px 20px 0;\">\n\n### **Teacher Forum**\n\n#### The teacher forum is a place where you can connect with other Code.org teachers to share ideas and get support from your peers. \n\n<div style=\"clear:both\"/>\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/3/levels/3": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Task: Practice Finding a Support Article \n\n<img src=\"https://images.code.org/5e8b54f924347a88b0f022f4411ec399-image-1714074689677.46.49 PM.png\" alt=\"Screenshot of the Code.org Help and support page.\" style=\"border:1px solid black; float: left; height: 250px; clear: both; margin: 0 20px 20px 0;\">\n\n## Steps to Access Support Articles:\n\n#### **Step 1:** Click on the \"?\" in the upper right hand corner of your screen.\n#### **Step 2:** Select \"Help and support\" from the dropdown menu.\n#### **Step 3:** Select and read a support article that interests you.\n<br><br><br><br><br>\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/3/levels/4": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Report a Problem\n\n\n\n<img src=\"https://images.code.org/a858e7fc8aa0e391359c7059bbcad2f1-image-1714074767673.46.57 PM.png\" alt=\"The Code.org 'Contact Us' submission form.\" style=\"float: right; width: 400px; clear: both; margin: 0 20px 20px 20px;\">\n\n## Steps for Reporting a Problem:\n\n#### **Step 1:** While logged into your Code.org teacher account, click on the \"?\" in the upper right hand corner of the screen. \n#### **Step 2:** Select \"Report a problem\".\n#### **Step 3:** Send a detailed description of the problem you are experiencing including screenshots and links when possible.\n\n### **What Happens Next?**\n\n#### After you submit your message, a member of our team will follow up with you via email. \n\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/3/levels/5": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Task: Post an Introduction on the Teacher Forum\n\n<img src=\"https://images.code.org/41a18fb531ea5efa1cdecbf501a6e6d5-image-1695929431113.30.26 PM.png\" alt=\"Screenshot of a thread in the teacher forum titled 'Welcome to CS Discoveries: Introduce Yourself.\" style=\"float: right; height: 200px; clear: both; margin: 0 20px 20px 0;\">\n\n#### **Step 1:** Click on the \"?\" in the upper right hand corner of your screen.\n#### **Step 2:** Select \"Teacher forum\" from the dropdown menu. \n#### **Step 3:** Click the magnifying glass at the top-right corner.\n#### **Step 4:** Search for the thread, \"Welcome to CS Discoveries: Introduce yourself\" and click on it.\n#### **Step 5:** Click \"Reply\" and introduce yourself to the CS Discoveries teacher community!\n\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/3/levels/6": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "Help and Support"
+        },
+        {
+          "text": "Teacher Forum"
+        },
+        {
+          "text": "Report a problem"
+        }
+      ],
+      "content1": "Match the question with the best place to go for additional support.",
+      "questions": [
+        {
+          "text": "I need to create a classroom section. Where can I go to find step-by-step instruction?"
+        },
+        {
+          "text": "I am looking for ideas for assessing student learning. Where can I go to connect with other CS Discoveries teachers?"
+        },
+        {
+          "text": "I wish there was a way to see how long students are spending on each level in Code Studio. Where can I go to request a new feature?"
+        }
+      ],
+      "title": "Check for Understanding"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/3/levels/7": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Congratulations, You Are Finished With Module 2!\n\n## Help us make this module better\n\n#### Code.org values and is responsive to feedback. Please fill out this short survey to provide your feedback on this module.\n\n<a class=\"btn btn-large btn-primary\" href=\"https://studio.code.org/form/csd_selfpaced_pl_module2\" target=\"blank\" rel=\"noopener noreferrer\">Take the Survey</a>\n\n## Choose Your Path\n\n### **Option A:** <a href= \"https://studio.code.org/courses/self-paced-pl-csd-2024 \" >Click here</a> to return to the Course Overview page to select your next module. \n\n### **Option B:** Use the table below to navigate directly to the content of your choice.\n\n<table style=\"width:100%; border-style:none;\">\n  <tr>\n  <th style=\"background-color:#00adbc; text-align:center; border-style:none; font-weight:bold;\"\"\">\n      <a href=\"https://studio.code.org/s/self-paced-pl-csd2-2024/\"  rel=\"noopener noreferrer\" style=\"color: white\">Module 1</a><br/>\n      <i>Welcome</i>\n    </th>\n    <th style=\"background-color:#7665a0; text-align:center; border-style:none; font-weight:bold;\"\"\">\n      <a href=\"https://studio.code.org/s/self-paced-pl-csd2-2024/\"  rel=\"noopener noreferrer\" style=\"color: white\">Module 2</a><br/>\n      <i>Navigating Code.org</i>\n    </th>\n    <th style=\"background-color:#0094ca; text-align:center; border-style:none; font-weight:bold;\"\"\">\n        <a href=\"https://studio.code.org/s/self-paced-pl-csd3-2024/\"  rel=\"noopener noreferrer\" style=\"color: white\">Module 3</a><br/>\n        <i>Overview of CS Discoveries</i>\n    </th>\n    <th style=\"background-color:#ffa400; text-align:center; border-style:none; font-weight:bold;\"\"\">\n        <a href=\"https://studio.code.org/s/self-paced-pl-csd4-2024/\"  rel=\"noopener noreferrer\" style=\"color: white\">Module 4</a><br/>\n        <i>Teaching and Learning CS Discoveries</i>\n    </th>\n\n  <tr>\n    <td colspan=\"5\" style=\"text-align:center;width:96%;background-color:#d9d9d9;color:black; border-style:none;\"> </td>\n  </tr>\n  <tr>\n  <td style=\"background-color:#a6e3e8; color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n        <li><a href=\"https://studio.code.org/s/self-paced-pl-csd1-2024/lessons/1/levels/1\" > Welcome to Code.org </a></li>\n        <li><a href=\"https://studio.code.org/s/self-paced-pl-csd1-2024/lessons/2/levels/1\" >Welcome to \"Teaching CS Discoveries\"</a></li>\n      </ul>\n    </td>\n    <td style=\"background-color:#cfc9de; color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n        <li> <a href=\"https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/1/levels/1\" > Navigating the Code.org Learning Platform </a> </li>\n        <li><a href=\"https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/2/levels/1\" >Navigating Lesson Plans and Resources </a></li>\n        <li><a href=\"https://studio.code.org/s/self-paced-pl-csd2-2024/lessons/3/levels/1\" >Navigating Support </a></li>\n      </ul>\n    </td>\n    <td style=\"background-color:#a6daed; color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n        <li><a href=\"https://studio.code.org/s/self-paced-pl-csd3-2024/lessons/1/levels/1\" > Overview of Course Content </a></li>\n        <li><a href=\"https://studio.code.org/s/self-paced-pl-csd3-2024/lessons/2/levels/1\" > Overview of Learning Tools </a></li>\n        <li><a href=\"https://studio.code.org/s/self-paced-pl-csd3-2024/lessons/3/levels/1\" > Overview of Implementation </a></li>\n      </ul>\n    </td>\n    <td style=\"background-color:#ffe0a6; color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n        <li><a href=\"https://studio.code.org/s/self-paced-pl-csd4-2024/lessons/1/levels/1\" > Role of the Teacher </a></li>\n        <li><a href=\"https://studio.code.org/s/self-paced-pl-csd4-2024/lessons/2/levels/1\" >Learning CS Discoveries </a></li>\n        <li><a href=\"https://studio.code.org/s/self-paced-pl-csd4-2024/lessons/3/levels/1\" >Teaching CS Discoveries </a></li>\n      </ul>\n    </td>\n\n</table>\n<br/>\n\n### **Option C:** Click the \"Continue\" button below to move to the next module in this course.\n"
+    }
+  }
+}

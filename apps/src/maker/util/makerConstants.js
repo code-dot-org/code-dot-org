@@ -1,5 +1,5 @@
-export const MAKER_DEPRECATION_SUPPORT_URL =
-  'https://support.code.org/hc/en-us/articles/11304760762125';
+export const MAKER_SUPPORT_CHROME_VERSION_URL =
+  'https://support.code.org/hc/en-us/articles/9953258694669#h_01HMW6PPGWZB9C3P8K5SBAPPHS';
 
 export const MAKER_TOOLKIT = 'maker-toolkit';
 

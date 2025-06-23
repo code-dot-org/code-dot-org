@@ -14,3 +14,4 @@ class NeighborhoodSignalKey(Enum):
   IS_ON_BUCKET = "IS_ON_BUCKET"
   IS_ON_PAINT = "IS_ON_PAINT"
   CAN_MOVE = "CAN_MOVE"
+  HAS_PAINT = "HAS_PAINT"

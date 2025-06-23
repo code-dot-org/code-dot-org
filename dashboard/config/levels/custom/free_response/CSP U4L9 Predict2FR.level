@@ -1,9 +1,14 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2022-11-01T18:18:56.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
   "properties": {
     "encrypted": "false",
     "title": "Calling Functions",
-    "long_instructions": "On what lines is the `updateScreen` function called?",
+    "long_instructions": "On what lines is the `updateScreen` function **called**?",
     "teacher_markdown": "The function is called on lines 6, 12, and 19.",
     "allow_user_uploads": "false",
     "submittable": "false",
@@ -13,12 +18,7 @@
     "skip_sound": true,
     "allow_multiple_attempts": "false"
   },
-  "level_num": "custom",
-  "game_id": 52,
-  "created_at": "2022-11-01T18:18:56.000Z",
-  "user_id": 1574,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-11-01 18:19:13 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-11-01 18:19:13 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-01-11 18:50:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

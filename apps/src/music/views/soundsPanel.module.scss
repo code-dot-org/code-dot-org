@@ -1,4 +1,4 @@
-@import "color.scss";
+@import 'color.scss';
 
 .soundsPanel {
   user-select: none;
@@ -31,12 +31,14 @@
       background-color: $neutral_dark;
       flex: 1;
       overflow-y: scroll;
+      scroll-padding: 1px 0;
     }
 
     .rightColumn {
       background-color: $neutral_dark;
       flex: 1;
       overflow-y: scroll;
+      scroll-padding: 1px 0;
     }
   }
 
@@ -102,6 +104,10 @@
 
     &:hover {
       background-color: $neutral_dark90;
+
+      .lengthNoMarginRight {
+        color: $neutral_dark30;
+      }
     }
 
     &:focus-visible {
@@ -162,6 +168,10 @@
 
     &NoMarginRight {
       margin-right: 0;
+
+      &Selected {
+        color: $neutral_dark20;
+      }
     }
   }
 

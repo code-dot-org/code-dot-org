@@ -1,9 +1,9 @@
+import {Heading1, Heading6} from '@code-dot-org/component-library/typography';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import {useParams} from 'react-router-dom';
 
-import {Heading1, Heading6} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
@@ -14,9 +14,9 @@ import {
   getCurrentUnitData,
   loadExpandedLessonsFromLocalStorage,
 } from '../sectionProgress/sectionProgressRedux';
-import {showV2TeacherDashboard} from '../teacherNavigation/TeacherNavFlagUtils';
 import UnitSelectorV2 from '../UnitSelectorV2';
 
+import DownloadProgressCsv from './DownloadProgressCsv';
 import IconKey from './IconKey';
 import MoreOptionsDropdown from './MoreOptionsDropdown';
 import ProgressTableV2 from './ProgressTableV2';
@@ -94,9 +94,8 @@ function SectionProgressV2({
   }, [expandedLessonIds, unitData]);
 
   const isLoading = React.useMemo(() => {
-    if (showV2TeacherDashboard() && parseInt(params.sectionId) !== sectionId) {
-      // If we're in the V2 teacher dashboard, we want to show a loading state if the
-      // redux section does not yet match the URL section.
+    if (parseInt(params.sectionId) !== sectionId) {
+      // Show a loading state if the redux section does not yet match the URL section.
       return true;
     }
     return (
@@ -129,6 +128,7 @@ function SectionProgressV2({
           {i18n.lessonsIn()}
 
           <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
+          <DownloadProgressCsv isLoading={isLoading} />
           <MoreOptionsDropdown />
         </Heading6>
       </div>

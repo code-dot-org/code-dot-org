@@ -1,0 +1,8 @@
+:ruby
+    ai_iteration_tools_data = {}
+    ai_iteration_tools_data[:aiTutorAccess] = current_user.can_use_ai_iteration_tools?
+    ai_iteration_tools_data[:studentWorkAccess] = current_user.can_access_student_work?
+
+%script{src: webpack_asset_path('js/ai_iteration/tools.js'), data: {aiIterationToolsData: ai_iteration_tools_data.to_json}}
+
+#ai-iteration-tools

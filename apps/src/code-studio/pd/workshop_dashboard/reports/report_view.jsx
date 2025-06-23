@@ -18,6 +18,8 @@ import {
 } from 'react-bootstrap';
 /* eslint-enable no-restricted-imports */
 
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
+
 import DatePicker from '../components/date_picker';
 
 import {
@@ -33,9 +35,7 @@ const REPORT_VALUES = ['Teacher Attendance', 'Workshop Summary'];
 const API_DATE_FORMAT = 'YYYY-MM-DD';
 
 export default class ReportView extends React.Component {
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
-  };
+  static contextType = RouterContext;
 
   static propTypes = {
     location: PropTypes.object,

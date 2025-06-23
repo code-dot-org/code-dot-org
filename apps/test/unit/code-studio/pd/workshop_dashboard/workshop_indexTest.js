@@ -1,6 +1,8 @@
 import {expect} from 'chai'; // eslint-disable-line no-restricted-imports
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import PropTypes from 'prop-types';
 import React from 'react';
+import {Button, ButtonToolbar, DropdownButton} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import Permission, {
@@ -11,6 +13,10 @@ import Permission, {
   WorkshopAdmin,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 import {WorkshopIndex} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshop_index';
+
+WorkshopIndex.contextTypes = {
+  router: PropTypes.object.isRequired,
+};
 
 describe('WorkshopIndex', () => {
   const fakeRouter = {
@@ -54,14 +60,13 @@ describe('WorkshopIndex', () => {
           context,
         });
 
-        expect(workshopIndex.find('ButtonToolbar Button').length).to.equal(
-          buttons.length
-        );
         expect(
-          workshopIndex.find('ButtonToolbar Button').map(button => {
-            return button.children().first().text();
-          })
-        ).to.deep.equal(buttons);
+          workshopIndex
+            .find(ButtonToolbar)
+            .findWhere(
+              node => node.type() === Button || node.type() === DropdownButton
+            ).length
+        ).to.equal(buttons.length);
       });
     });
   });

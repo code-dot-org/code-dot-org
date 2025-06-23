@@ -14,7 +14,6 @@
     "predict_settings": {
       "isPredictLevel": false
     },
-    "start_direction": "1",
     "serialized_maze": [
       [
         {

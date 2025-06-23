@@ -1,0 +1,47 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-03-25T13:19:22.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Upload an Image\r\n\r\nUse AI Chat to help plan ideas for improving the playground.\r\n\r\n### Do This:\r\n2. **Copy and paste** the following prompt: \r\n\r\n>I’m a Parks and Rec working looking for a project to improve a playground with swings, slides, and benches. What are some ideas?\r\n3. Press **Send**.\r\n4. Attach the image of the playground to your prompt.\r\n5. **Copy and paste** the following prompt: \r\n\r\n>I’m a Parks and Rec working looking to improve this playground. What are some ideas? \r\n5. Then read and compare **AI Chat's responses**.\r\n\r\n**Try it out!**\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "\n\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-25T13:19:22.380+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level3\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level3\"},{\"changed_at\":\"2025-03-25 13:29:34 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Aichat>

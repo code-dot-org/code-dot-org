@@ -8,7 +8,7 @@ export const enum analyticsEvents {
   UPLOAD_UNACCEPTED_FILE = 'UPLOAD_UNACCEPTED_FILE',
 }
 
-type FileUploaderProps = {
+export type FileUploaderProps = {
   children?: React.ReactNode;
   callback: (
     filename: string,
@@ -16,6 +16,7 @@ type FileUploaderProps = {
     callbackArgs?: unknown
   ) => void;
   errorCallback: (error: string, callbackArgs?: unknown) => void;
+  validateFileName?: (fileName: string) => string | undefined;
   multiple?: boolean;
   validMimeTypes?: string[];
   sendAnalyticsEvent?: (
@@ -85,6 +86,7 @@ export const useFileUploader = ({
   callback,
   errorCallback,
   validMimeTypes,
+  validateFileName = () => undefined,
   sendAnalyticsEvent = () => {},
   multiple = true,
 }: FileUploaderProps) => {
@@ -93,17 +95,25 @@ export const useFileUploader = ({
 
   const changeHandler = useCallback(() => {
     Array.from(inputRef.current?.files || []).forEach(file => {
+      const fileNameErrorMessage = validateFileName(file.name);
+      if (fileNameErrorMessage) {
+        errorCallback(fileNameErrorMessage, callbackArgs.current);
+        return;
+      }
+
       if (!isValidMimeType(file.type, validMimeTypes)) {
         sendAnalyticsEvent(analyticsEvents.UPLOAD_UNACCEPTED_FILE, {
           name: file.name,
           type: file.type,
         });
+        const [, fileType] = file.name.split('.');
         errorCallback(
-          codebridgeI18n.invalidFileUpload({fileType: file.type}),
+          codebridgeI18n.invalidFileType({fileType: file.type || fileType}),
           callbackArgs.current
         );
         return;
       }
+
       const reader = new FileReader();
       if (file.type.match(/^text/)) {
         reader.readAsText(file);
@@ -135,7 +145,13 @@ export const useFileUploader = ({
         }
       };
     });
-  }, [callback, errorCallback, validMimeTypes, sendAnalyticsEvent]);
+  }, [
+    validMimeTypes,
+    validateFileName,
+    sendAnalyticsEvent,
+    errorCallback,
+    callback,
+  ]);
 
   return useMemo(
     () => ({

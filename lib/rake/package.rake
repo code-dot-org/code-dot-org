@@ -10,7 +10,7 @@ namespace :package do
 
   namespace :apps do
     def apps_packager
-      S3Packaging.new('apps', apps_dir, dashboard_dir('public/apps-package'))
+      S3Packaging.new('apps', apps_dir, [apps_dir, frontend_dir], dashboard_dir('public/apps-package'))
     end
 
     desc 'Update apps static asset package.'

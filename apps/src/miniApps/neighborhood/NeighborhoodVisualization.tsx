@@ -1,60 +1,64 @@
+import Slider from '@code-dot-org/component-library/slider';
 import React from 'react';
 
 import MazeVisualization from '@cdo/apps/maze/Visualization';
+import commonI18n from '@cdo/locale';
+
+import NeighborhoodSpeedTracker from './NeighborhoodSpeedTracker';
 
 import moduleStyles from './neighborhood.module.scss';
 
 interface NeighborhoodVisualizationProps {
   className?: string;
-  fullIconPath: string;
+  isDarkMode?: boolean;
+  useProtectedDiv?: boolean;
 }
 
 const NeighborhoodVisualization: React.FunctionComponent<
   NeighborhoodVisualizationProps
-> = ({className, fullIconPath}) => {
+> = ({className, isDarkMode, useProtectedDiv = true}) => {
+  const [sliderValue, setSliderValue] = React.useState(
+    NeighborhoodSpeedTracker.getInstance().getSpeed()
+  );
+  const handleSpeedChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newSpeed = parseInt(e.target.value);
+    setSliderValue(newSpeed);
+    NeighborhoodSpeedTracker.getInstance().setSpeed(newSpeed);
+  };
+
   return (
     <div className={className}>
-      <div
-        className={moduleStyles.neighborhoodPreviewBackground}
-        style={styles.neighborhoodBackground}
-      >
-        <MazeVisualization />
+      <div className={moduleStyles.neighborhoodPreviewBackground}>
+        <MazeVisualization useProtectedDiv={useProtectedDiv} />
       </div>
-      <svg id="slider" version="1.1" width="150" height="50">
-        {/* Slow icon. */}
-        <clipPath id="slowClipPath">
-          <rect width="26" height="12" x="5" y="14" />
-        </clipPath>
-        <image
-          xlinkHref={fullIconPath}
-          height="42"
-          width="84"
-          x="-21"
-          y="-10"
-          clipPath="url(#slowClipPath)"
+      <div className={moduleStyles.sliderContainer}>
+        <Slider
+          name="neighborhood-speed"
+          value={sliderValue}
+          onChange={handleSpeedChange}
+          color={isDarkMode ? 'white' : 'black'}
+          isPercentMode={true}
+          hideValue={true}
+          leftButtonProps={{
+            'aria-label': commonI18n.decreaseSpeed(),
+            icon: {
+              iconName: 'turtle',
+              title: commonI18n.decreaseSpeed(),
+            },
+            size: 's',
+          }}
+          rightButtonProps={{
+            'aria-label': commonI18n.increaseSpeed(),
+            icon: {
+              iconName: 'rabbit',
+              title: commonI18n.increaseSpeed(),
+            },
+            size: 's',
+          }}
+          className={moduleStyles.slider}
         />
-        {/* Fast icon. */}
-        <clipPath id="fastClipPath">
-          <rect width="26" height="16" x="120" y="10" />
-        </clipPath>
-        <image
-          xlinkHref={fullIconPath}
-          height="42"
-          width="84"
-          x="120"
-          y="-11"
-          clipPath="url(#fastClipPath)"
-        />
-      </svg>
+      </div>
     </div>
   );
 };
-
-const styles = {
-  neighborhoodBackground: {
-    // CSS Modules don't support loading webpack assets, so we have to use inline styles.
-    backgroundImage: 'url("/blockly/media/javalab/Neighborhood.png")',
-  },
-};
-
 export default NeighborhoodVisualization;

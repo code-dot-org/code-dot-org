@@ -3,11 +3,7 @@ require 'cdo/i18n'
 module LocaleHelper
   # Symbol of best valid locale code to be used for I18n.locale.
   def locale
-    current = request.env['cdo.locale']
-    # if(current_user && current_user.locale != current)
-    #   TODO: Set language cookie and reload the page.
-    # end
-    current.to_sym
+    request.locale.to_sym
   end
 
   def locale_dir
@@ -50,7 +46,7 @@ module LocaleHelper
   end
 
   # Looks up a localized string driven by a database value.
-  # See config/locales/data.en.yml for details.
+  # See config/locales/data/en.yml for details.
   def data_t(dotted_path, key, default = nil)
     # Escape separator in provided key to support keys containing dot characters.
     try_t(
@@ -62,7 +58,7 @@ module LocaleHelper
   end
 
   # Looks up a localized string driven by a database value.
-  # See config/locales/data.en.yml for details.
+  # See config/locales/data/en.yml for details.
   def data_t_suffix(dotted_path, key, suffix, options = {})
     I18n.t("data.#{dotted_path}.#{key}.#{suffix}", **options)
   end

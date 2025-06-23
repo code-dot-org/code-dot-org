@@ -4,6 +4,10 @@
     "intro-to-data-science-2024",
     "data-science-with-python-2024"
   ],
+  "original_script_names": [
+    "intro-to-data-science-2024",
+    "data-science-with-python-2024"
+  ],
   "published_state": "pilot",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

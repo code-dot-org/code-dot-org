@@ -26,7 +26,8 @@ module AWS
         preferences: {
           min_healthy_percentage: 100,
           max_healthy_percentage: 200,
-          instance_warmup: 0
+          instance_warmup: 0,
+          skip_matching: false # replace instances even if there are no launch template changes
         }
       )
 

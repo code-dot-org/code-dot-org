@@ -31,4 +31,18 @@ export default class CdoFieldLabel extends GoogleBlockly.FieldLabel {
       this.size_ = new GoogleBlockly.utils.Size(width, height);
     }
   }
+
+  applyColour(): void {
+    // Darken the white block text for shadow blocks in dark themes.
+    if (Blockly.isDarkTheme && this.textElement_) {
+      if (this.getSourceBlock()?.isShadow()) {
+        Blockly.utils.dom.addClass(this.textElement_, 'blocklyShadowFieldText');
+      } else {
+        Blockly.utils.dom.removeClass(
+          this.textElement_,
+          'blocklyShadowFieldText'
+        );
+      }
+    }
+  }
 }

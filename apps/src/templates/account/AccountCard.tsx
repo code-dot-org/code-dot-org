@@ -1,13 +1,13 @@
-import classNames from 'classnames';
-import React from 'react';
-
 import {
   ButtonType,
   Button,
   LinkButton,
   buttonColors,
-} from '@cdo/apps/componentLibrary/button';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import classNames from 'classnames';
+import React from 'react';
+
 import {
   Card,
   CardActions,
@@ -47,6 +47,7 @@ const AccountCard: React.FunctionComponent<{
           <FontAwesomeV6Icon
             className={classNames(styles.cardIcon, 'fa-2x')}
             iconName={icon}
+            aria-hidden
           />
         }
       />
@@ -59,6 +60,7 @@ const AccountCard: React.FunctionComponent<{
                 <FontAwesomeV6Icon
                   className={styles.icon}
                   iconName="check-circle"
+                  aria-hidden
                 />
                 {item}
               </li>

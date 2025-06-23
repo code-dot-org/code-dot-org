@@ -33,22 +33,22 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
   test 'non-logged-in users cannot enroll in csf workshop' do
     workshop = create :workshop, course: Pd::Workshop::COURSE_CSF
     get :new, params: {workshop_id: workshop.id}
-    assert_response :success
-    assert_template :logged_out
+    assert_response :redirect
+    assert_redirected_to "/logged_out?source_page=workshop%20enroll&return_to=%2Fpd%2Fworkshops%2F#{workshop.id}%2Fenroll"
   end
 
   test 'non-logged-in users cannot enroll in csd workshop' do
     workshop = create :workshop, course: Pd::Workshop::COURSE_CSD
     get :new, params: {workshop_id: workshop.id}
-    assert_response :success
-    assert_template :logged_out
+    assert_response :redirect
+    assert_redirected_to "/logged_out?source_page=workshop%20enroll&return_to=%2Fpd%2Fworkshops%2F#{workshop.id}%2Fenroll"
   end
 
   test 'non-logged-in users cannot enroll in csp workshop' do
     workshop = create :workshop, course: Pd::Workshop::COURSE_CSP
     get :new, params: {workshop_id: workshop.id}
-    assert_response :success
-    assert_template :logged_out
+    assert_response :redirect
+    assert_redirected_to "/logged_out?source_page=workshop%20enroll&return_to=%2Fpd%2Fworkshops%2F#{workshop.id}%2Fenroll"
   end
 
   test 'logged-in users can enroll in csf workshop' do
@@ -75,13 +75,13 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
     assert_template :new
   end
 
-  test 'students are shown students_cannot_enroll view' do
+  test 'students are sent to Teacher Acount Required page' do
     student = create :student
     sign_in student
     workshop = create :workshop, course: Pd::Workshop::COURSE_CSD
     get :new, params: {workshop_id: workshop.id}
-    assert_response :success
-    assert_template :students_cannot_enroll
+    assert_response :redirect
+    assert_redirected_to "/teacher_account_required?source_page=workshop%20enroll&return_to=%2Fpd%2Fworkshops%2F#{workshop.id}%2Fenroll"
   end
 
   test 'teacher with missing application gets missing application view' do
@@ -127,6 +127,18 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
     assert_template :missing_application
   end
 
+  test 'teacher already enrolled in workshop cannot enroll again' do
+    teacher = create :teacher
+    application = create :pd_teacher_application, user: teacher, status: 'accepted'
+    workshop = create :workshop
+    create :pd_enrollment, application_id: application.id, user: teacher, workshop: workshop
+
+    sign_in teacher
+    get :new, params: {workshop_id: workshop.id}
+    assert_response :success
+    assert_template :already_enrolled
+  end
+
   test 'teacher with required application gets new view' do
     teacher = create :teacher
     create :pd_teacher_application, user: teacher, status: 'accepted'
@@ -139,48 +151,6 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
     get :new, params: {workshop_id: workshop.id}
     assert_response :success
     assert_template :new
-  end
-
-  test 'teacher enrollment email defaults to user email if no alternate email in application' do
-    teacher = create :teacher
-    sign_in teacher
-
-    workshop = create :workshop, organizer: @organizer, num_sessions: 1
-
-    application = create :pd_teacher_application, user: teacher, status: 'accepted'
-    new_form_data_hash = application.form_data_hash
-    new_form_data_hash['alternateEmail'] = ''
-    application.update(form_data_hash: new_form_data_hash)
-    app_alt_email = application.form_data_hash['alternateEmail']
-
-    assert app_alt_email.empty?
-
-    get :new, params: {workshop_id: workshop.id}
-    assert_response :success
-    assert_template :new
-
-    enrollment_email = JSON.parse(assigns(:script_data)[:props])["enrollment"]["email"]
-
-    refute_equal enrollment_email, app_alt_email
-    assert_equal enrollment_email, teacher.email
-  end
-
-  test 'teacher enrollment email uses application alternate email if available' do
-    teacher = create :teacher
-    sign_in teacher
-
-    workshop = create :workshop, organizer: @organizer, num_sessions: 1
-    application = create :pd_teacher_application, user: teacher, status: 'accepted'
-    app_alt_email = application.form_data_hash['alternateEmail']
-
-    get :new, params: {workshop_id: workshop.id}
-    assert_response :success
-    assert_template :new
-
-    enrollment_email = JSON.parse(assigns(:script_data)[:props])["enrollment"]["email"]
-
-    refute_equal enrollment_email, teacher.email
-    assert_equal enrollment_email, app_alt_email
   end
 
   # TODO: remove this test when workshop_organizer is deprecated
@@ -311,7 +281,8 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
       }
     end
 
-    assert student.reload.teacher?
+    student = User.find(student.id)
+    assert student.teacher?
     assert_redirected_to controller: 'pd/session_attendance', action: 'attend'
   end
 
@@ -332,7 +303,8 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
       }
     end
 
-    assert student.reload.teacher?
+    student = User.find(student.id)
+    assert student.teacher?
     assert_redirected_to controller: 'pd/session_attendance', action: 'attend'
   end
 

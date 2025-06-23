@@ -1,8 +1,8 @@
+import {Button, buttonColors} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {useContext, useState} from 'react';
 
-import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
@@ -20,7 +20,7 @@ import {LtiProviderContext} from '../../context';
 import styles from '../../../../../link-account.module.scss';
 
 const LtiContinueAccountCard = () => {
-  const {ltiProviderName, continueAccountUrl, userType} =
+  const {ltiProviderName, continueAccountUrl, userType, newAccountUrl} =
     useContext(LtiProviderContext)!;
   const [isSaving, setIsSaving] = useState(false);
 
@@ -40,7 +40,7 @@ const LtiContinueAccountCard = () => {
   const handleSubmit = async () => {
     setIsSaving(true);
 
-    fetch('/lti/v1/account_linking/new_account', {
+    fetch(newAccountUrl.href, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

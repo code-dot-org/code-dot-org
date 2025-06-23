@@ -17,7 +17,7 @@ theme: responsive
 
 ## Minimalnie obsługiwane przeglądarki i platformy
 
-Od lipca 2024 roku będziemy aktualizować minimalne wersje wymagane dla przeglądarek i systemów operacyjnych. Chociaż stare wersje mogą nadal działać, nie będziemy w stanie obsługiwać żądań poprawek błędów w starszych wersjach.
+Każdego roku będziemy aktualizować minimalne wersje wymagane dla przeglądarek i systemów operacyjnych. Chociaż stare wersje mogą nadal działać, nie będziemy w stanie obsługiwać żądań poprawek błędów w starszych wersjach.
 
 <table>
   <tr>
@@ -25,28 +25,6 @@ Od lipca 2024 roku będziemy aktualizować minimalne wersje wymagane dla przegl�
       <table>
         <th>
           Przeglądarka
-        </th>
-        <tr>
-          <td>Chrome 96.x</td>
-        </tr>
-        <tr>
-          <td>Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Mobilne Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Edge 94.x</td>
-        </tr>
-        <tr>
-          <td>Firefox 91.x</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
-      <table>
-        <th>
-          Przeglądarka lipiec '24
         </th>
         <tr>
           <td>Chrome 103.x</td>
@@ -71,28 +49,6 @@ Od lipca 2024 roku będziemy aktualizować minimalne wersje wymagane dla przegl�
           Platforma
         </th>
         <tr>
-          <td>macOS 10.13</td>
-        </tr>
-        <tr>
-          <td>iOS 11.x</td>
-        </tr>
-        <tr>
-          <td>Windows 7</td>
-        </tr>
-        <tr>
-          <td>Android 6</td>
-        </tr>
-        <tr>
-          <td>ChromeOS (Chromebooks)</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
-      <table>
-        <th>
-          Platforma lipiec '24
-        </th>
-        <tr>
           <td>macOS 10.15</td>
         </tr>
         <tr>
@@ -103,6 +59,51 @@ Od lipca 2024 roku będziemy aktualizować minimalne wersje wymagane dla przegl�
         </tr>
         <tr>
           <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+    <!-- "coming soon" system requirements, to be updated and made live from March through July. -->
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Przeglądarka lipiec '25
+        </th>
+        <tr>
+          <td>Chrom 109</td>
+        </tr>
+        <tr>
+          <td>Safari 16.6</td>
+        </tr>
+        <tr>
+          <td>Mobilne Safari 16</td>
+        </tr>
+        <tr>
+          <td>Krawędź 128</td>
+        </tr>
+        <tr>
+          <td>Firefoksa 115</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platforma lipiec '25
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 16.x</td>
+        </tr>
+        <tr>
+          <td>Windows 10</td>
+        </tr>
+        <tr>
+          <td>Android 8</td>
         </tr>
         <tr>
           <td>ChromeOS (Chromebooks)</td>
@@ -147,7 +148,6 @@ Korzystamy z [YouTube](https://www.youtube.com), aby umieszczać filmy w Code.or
 ### Czy możesz odtworzyć ten film?
 
 Zanim rozpoczniesz kursy online Code.org, przetestuj odtwarzanie poniższego filmu, aby upewnić się, że jesteś gotowy do pracy.
-
 
 <!--
 The following HTML is a copy of video_with_fallback.haml. once this file can be converted to

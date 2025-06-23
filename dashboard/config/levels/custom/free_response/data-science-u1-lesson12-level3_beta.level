@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-01-24T21:48:40.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Writing Your Data Story",
+    "long_instructions": "## Do This:\r\n1. Record your final response below.\r\n   - Make sure you describe your data using the sentence starters from Day 4 of your project guide.\r\n   - Make sure you answer your data question and add evidence.\r\n2. Upload images of your visualizations that support your answer to your data question. \r\n   - Note: You may have to go back to level 4 to download images if you have not already done so.",
+    "allow_user_uploads": "true",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_beta"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-24T21:48:40.331+00:00\",\"changed\":[\"cloned from \\\"data-science-u1-lesson12-level3\\\"\"],\"cloned_from\":\"data-science-u1-lesson12-level3\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

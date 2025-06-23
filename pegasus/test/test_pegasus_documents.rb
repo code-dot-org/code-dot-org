@@ -15,6 +15,10 @@ class PegasusTest < Minitest::Test
   include Rack::Test::Methods
   include CaptureQueries
 
+  def setup
+    skip unless CDO.has_pegasus_content
+  end
+
   def app
     @app ||= Documents.new
   end
@@ -49,6 +53,7 @@ class PegasusTest < Minitest::Test
     'text/plain' => %w[
       code.org/health_check
       code.org/robots.txt
+      hourofcode.com/us/robots.txt
       hourofcode.com/us/health_check
     ]
   }

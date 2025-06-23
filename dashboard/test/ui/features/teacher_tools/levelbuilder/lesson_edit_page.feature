@@ -99,9 +99,9 @@ Feature: Using the Lesson Edit Page
     And element ".uitest-level-token-name" is visible
     And I press ".uitest-level-token-name" using jQuery
     And I wait until element ".level-token-checkboxes" is visible
-    And element ".level-token-checkboxes input[type=checkbox]:nth(1)" is not checked
-    And I press ".level-token-checkboxes input[type=checkbox]:nth(1)" using jQuery
-    And element ".level-token-checkboxes input[type=checkbox]:nth(1)" is checked
+    And element ".level-token-checkboxes input[type=checkbox]:eq(1)" is not checked
+    And I press ".level-token-checkboxes input[type=checkbox]:eq(1)" using jQuery
+    And element ".level-token-checkboxes input[type=checkbox]:eq(1)" is checked
 
     When I click "button[type='submit']" to load a new page
     And I wait until element "#show-container" is visible
@@ -111,6 +111,6 @@ Feature: Using the Lesson Edit Page
     And I wait until element ".uitest-activity-card" is visible
     And I press ".uitest-level-token-name" using jQuery
     And I wait until element ".level-token-checkboxes" is visible
-    Then element ".level-token-checkboxes input[type=checkbox]:nth(1)" is checked
+    Then element ".level-token-checkboxes input[type=checkbox]:eq(1)" is checked
 
     And I delete the temp unit with lessons

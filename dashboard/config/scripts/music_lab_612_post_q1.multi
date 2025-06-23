@@ -1,0 +1,30 @@
+name 'music-lab-612-post-q1'
+
+question 'Looking at her code, what is the issue that you suggest she fix so both sounds start at the same time?'
+
+wrong 'use more play sound blocks'
+wrong 'use different sound blocks'
+wrong 'use more than one play sequential block'
+right 'use play together instead of play sequential'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Sequencing
+
+Standard: Use the play together and play sequential blocks together to create layered tracks with different measure counts
+
+Lesson Type: Sequencing - Practice
+
+Skill Progression: Play 2+ sounds with different measure lengths together with at least 1 offset
+
+Pretest Modality: Given code, match to timeline
+
+Posttest Modality: Given algorithm / intent / incorrect code, match with code
+MARKDOWN
+
+markdown <<MARKDOWN
+Jessie wanted these two sounds to play at the same time, but the timeline isn't what she expected. The bass plays first, then the guitar.
+
+<img src="https://images.code.org/8e15c100cbc234b2d2fa449cd3c31083-image-1750445362329.png" width="200">
+MARKDOWN

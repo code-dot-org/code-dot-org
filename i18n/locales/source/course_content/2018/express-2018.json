@@ -1710,7 +1710,7 @@
     }
   },
   "https://studio.code.org/s/express-2018/lessons/19/levels/1": {
-    "title": "translation missing: en-US.data.unplugged.SongwritingParameters_2018.title"
+    "title": "translation missing: en.data.unplugged.SongwritingParameters_2018.title"
   },
   "https://studio.code.org/s/express-2018/lessons/20/levels/1": {
     "display_name": "Homestead",
@@ -2635,10 +2635,10 @@
     "long_instructions": "Create your own Flappy game! \n\nYou can change the visuals and the rules...even the gravity! \nWhen you're done, click \"Finish\" to share with friends on their phones."
   },
   "https://studio.code.org/s/express-2018/lessons/27/levels/1": {
-    "title": "translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title"
+    "title": "translation missing: en.data.unplugged.courseF_unplugged_powerOfWords_2018.title"
   },
   "https://studio.code.org/s/express-2018/lessons/28/levels/1": {
-    "title": "translation missing: en-US.data.unplugged.EnvelopeVariables_2018.title"
+    "title": "translation missing: en.data.unplugged.EnvelopeVariables_2018.title"
   },
   "https://studio.code.org/s/express-2018/lessons/29/levels/1": {
     "long_instructions": "Let's draw an equilateral triangle. \n\nIt has to be exactly 50 pixels long on each side.",
@@ -2935,7 +2935,7 @@
     }
   },
   "https://studio.code.org/s/express-2018/lessons/32/levels/1": {
-    "title": "translation missing: en-US.data.unplugged.ForLoopFun_2018.title"
+    "title": "translation missing: en.data.unplugged.ForLoopFun_2018.title"
   },
   "https://studio.code.org/s/express-2018/lessons/33/levels/1": {
     "short_instructions": "Collect the nectar from each flower using the fewest blocks possible.",
@@ -3851,9 +3851,9 @@
     }
   },
   "https://studio.code.org/s/express-2018/lessons/46/levels/1": {
-    "title": "translation missing: en-US.data.unplugged.Internet_2018.title"
+    "title": "translation missing: en.data.unplugged.Internet_2018.title"
   },
   "https://studio.code.org/s/express-2018/lessons/47/levels/1": {
-    "title": "translation missing: en-US.data.unplugged.Crowdsourcing_2018.title"
+    "title": "translation missing: en.data.unplugged.Crowdsourcing_2018.title"
   }
 }

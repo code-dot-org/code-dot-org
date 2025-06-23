@@ -1,6 +1,6 @@
+import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import React from 'react';
 
-import {ActionDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
@@ -8,10 +8,11 @@ import i18n from '@cdo/locale';
 import {RESOURCE_ICONS} from './ResourceIconType';
 
 type UnitResourcesDropdownProps = {
-  unitNumber?: number;
+  unitNumber?: number | null;
   hasNumberedUnits?: boolean;
   scriptOverviewPdfUrl: string;
   scriptResourcesPdfUrl: string;
+  disabled?: boolean;
 };
 
 const UnitResourcesDropdown: React.FC<UnitResourcesDropdownProps> = ({
@@ -19,6 +20,7 @@ const UnitResourcesDropdown: React.FC<UnitResourcesDropdownProps> = ({
   hasNumberedUnits,
   scriptOverviewPdfUrl,
   scriptResourcesPdfUrl,
+  disabled = false,
 }) => {
   const downloadLessonPlansLabel =
     hasNumberedUnits && unitNumber
@@ -63,6 +65,7 @@ const UnitResourcesDropdown: React.FC<UnitResourcesDropdownProps> = ({
         labelText="View unit options dropdown"
         options={dropdownOptions}
         size="s"
+        disabled={disabled}
         menuPlacement="right"
         triggerButtonProps={{
           color: 'gray',

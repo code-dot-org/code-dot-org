@@ -1,13 +1,19 @@
 import ConsoleManager from '@codebridge/Console/ConsoleManager';
 
+import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
+
 // Registry for Codebridge singletons that need to be accessed by
 // multiple components/helper classes.
 export default class CodebridgeRegistry {
   private consoleManager: ConsoleManager | null;
+  private neighborhood: Neighborhood | null;
+  private neighborhoodThumbnailScale: number | undefined;
 
   private static _instance: CodebridgeRegistry;
   constructor() {
     this.consoleManager = null;
+    this.neighborhood = null;
+    this.neighborhoodThumbnailScale = undefined;
   }
 
   public static getInstance(): CodebridgeRegistry {
@@ -27,5 +33,21 @@ export default class CodebridgeRegistry {
 
   public getConsoleManager() {
     return this.consoleManager;
+  }
+
+  public setNeighborhood(neighborhood: Neighborhood | null) {
+    this.neighborhood = neighborhood;
+  }
+
+  public getNeighborhood() {
+    return this.neighborhood;
+  }
+
+  public setNeighborhoodThumbnailScale(scale: number | undefined) {
+    this.neighborhoodThumbnailScale = scale;
+  }
+
+  public getNeighborhoodThumbnailScale() {
+    return this.neighborhoodThumbnailScale;
   }
 }

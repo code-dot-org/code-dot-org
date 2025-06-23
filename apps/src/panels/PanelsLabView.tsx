@@ -19,6 +19,7 @@ import {sendSuccessReport} from '../code-studio/progressRedux';
 import {getCurrentLevel} from '../code-studio/progressReduxSelectors';
 import {queryParams} from '../code-studio/utils';
 import useLifecycleNotifier from '../lab2/hooks/useLifecycleNotifier';
+import {LabProps} from '../lab2/types';
 import {LifecycleEvent} from '../lab2/utils';
 import MusicAnalyticsReporter from '../music/analytics/AnalyticsReporter';
 import useWindowSize from '../util/hooks/useWindowSize';
@@ -26,21 +27,25 @@ import useWindowSize from '../util/hooks/useWindowSize';
 import PanelsView from './PanelsView';
 import {PanelsLevelProperties} from './types';
 
-const appName = 'panels';
-
 // Temporary solution for sending analytics for Hour of Code 2024.
-// TODO: Remove/consolidate reporters after HOC 2024.
-const HOC_2024_SCRIPT_NAME = 'music-jam-2024';
+// We are also temporarily sending panel analytics for the Elementary Music Lab Pilot
+// TODO: Remove/consolidate reporters
+const VALID_SCRIPT_NAMES = ['music-jam-2024', 'pilot-elem-music-lab'];
+function isValidScriptName() {
+  return VALID_SCRIPT_NAMES.some(name =>
+    window.location.pathname.includes(name)
+  );
+}
 const resetAnalyticsSession = () => {
-  if (!window.location.pathname.includes(HOC_2024_SCRIPT_NAME)) {
+  if (!isValidScriptName()) {
     return;
   }
 
   setSessionId(Date.now());
 };
 const sendAnalyticsEvent = async (event: string, data?: object) => {
-  // Checking the script name to keep this scoped to HOC 2024 only.
-  if (!window.location.pathname.includes(HOC_2024_SCRIPT_NAME)) {
+  // Checking the script name to keep this scoped to included scripts only.
+  if (!isValidScriptName()) {
     return;
   }
 
@@ -56,7 +61,7 @@ const sendAnalyticsEvent = async (event: string, data?: object) => {
   }
 };
 const updateAnalyticsProperty = (key: string, value: string) => {
-  if (!window.location.pathname.includes(HOC_2024_SCRIPT_NAME)) {
+  if (!isValidScriptName()) {
     return;
   }
 
@@ -65,20 +70,12 @@ const updateAnalyticsProperty = (key: string, value: string) => {
   identify(identifyEvent);
 };
 
-const PanelsLabView: React.FunctionComponent = () => {
+const PanelsLabView: React.FunctionComponent<
+  LabProps<PanelsLevelProperties>
+> = ({levelProperties}) => {
   const dispatch = useAppDispatch();
 
-  const panels = useAppSelector(
-    state =>
-      (state.lab.levelProperties as PanelsLevelProperties | undefined)?.panels
-  );
-  const currentAppName = useAppSelector(
-    state => state.lab.levelProperties?.appName
-  );
-  const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
-  const offerBrowserTts =
-    useAppSelector(state => state.lab.levelProperties?.offerBrowserTts) ||
-    queryParams('show-tts') === 'true';
+  const {panels, appName, skipUrl, offerBrowserTts} = levelProperties;
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
 
   const dialogControl = useDialogControl();
@@ -94,7 +91,7 @@ const PanelsLabView: React.FunctionComponent = () => {
         dispatch(continueOrFinishLesson());
       }
     },
-    [dispatch]
+    [dispatch, appName]
   );
 
   const onSkip = useCallback(() => {
@@ -161,7 +158,7 @@ const PanelsLabView: React.FunctionComponent = () => {
 
   const [windowWidth, windowHeight] = useWindowSize();
 
-  if (!panels || currentAppName !== appName) {
+  if (!panels) {
     return <div />;
   }
 
@@ -172,7 +169,7 @@ const PanelsLabView: React.FunctionComponent = () => {
       onSkip={skipUrl ? onSkip : undefined}
       targetWidth={windowWidth}
       targetHeight={windowHeight}
-      offerBrowserTts={offerBrowserTts}
+      offerBrowserTts={offerBrowserTts || queryParams('show-tts') === 'true'}
       levelId={currentLevelId}
       onChangePanel={onChangePanel}
       onClickContinue={onClickContinue}

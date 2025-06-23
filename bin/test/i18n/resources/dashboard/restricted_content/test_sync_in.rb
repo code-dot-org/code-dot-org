@@ -5,7 +5,7 @@ describe I18n::Resources::Dashboard::RestrictedContent::SyncIn do
   let(:described_class) {I18n::Resources::Dashboard::RestrictedContent::SyncIn}
   let(:described_instance) {described_class.new}
 
-  let(:origin_i18n_file_path) {CDO.dir('dashboard/config/locales/restricted.en.yml')}
+  let(:origin_i18n_file_path) {CDO.dir('dashboard/config/locales/restricted/en.yml')}
   let(:i18n_source_file_path) {CDO.dir('i18n/locales/source/dashboard/restricted.yml')}
 
   around do |test|

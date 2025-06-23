@@ -3,21 +3,12 @@ title: Hour of Code
 theme: responsive_full_width
 ---
 
-:ruby
-
-  hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
-
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/hour-of-code-styles.css", rel: "stylesheet", type: "text/css"}
 
 %section.hero-banner-basic.overlay
   .wrapper.grid-container.justify-space-between.align-items-center.gap-2
     .text-wrapper
-      %p.body-one.white.has-icon
-        - if hoc_mode == "soon-hoc"
-          =hoc_s(:social_hoc_is_coming)
-        - elsif hoc_mode == "actual-hoc"
-          =hoc_s(:social_hoc2018_hoc_here)
       %h1.white
         =hoc_s("music_lab.jam_session.name")
       %p.body-one.white
@@ -59,12 +50,8 @@ theme: responsive_full_width
       .text-wrapper.col-50
         %p.body-three.has-external-link
           =hoc_s("hoc_page.what_is_hoc.desc_01", markdown: :inline, locals:{hoc_url: CDO.hourofcode_url()})
-        - if hoc_mode == "soon-hoc"
-          %p.body-three
-            =hoc_s("hoc_page.what_is_hoc.desc_02", markdown: :inline)
-        - else
-          %p.body-three
-            =hoc_s(:hoc_page_desc_2023)
+        %p.body-three
+          =hoc_s("hoc_page.what_is_hoc.desc_02", markdown: :inline)
       %figure.col-45
         %img{src: "/images/hoc-page-kids-computer.png", alt: "", style: "width: 100%"}
 

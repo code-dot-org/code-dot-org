@@ -4,25 +4,14 @@ import PythonValidator from '@cdo/apps/pythonlab/progress/PythonValidator';
 
 describe('PythonValidator', () => {
   const PASSED_TESTS = [
-    new Map<string, string>([
-      ['name', 'test1'],
-      ['result', 'PASS'],
-    ]),
-    new Map<string, string>([
-      ['name', 'test2'],
-      ['result', 'PASS'],
-    ]),
+    {name: 'test1', result: 'PASS'},
+    {name: 'test2', result: 'PASS'},
+    {name: 'test3', result: 'EXPECTED_FAILURE'},
   ];
 
   const SOME_FAILED_TESTS = [
-    new Map<string, string>([
-      ['name', 'test1'],
-      ['result', 'PASS'],
-    ]),
-    new Map<string, string>([
-      ['name', 'test2'],
-      ['result', 'FAIL'],
-    ]),
+    {name: 'test1', result: 'PASS'},
+    {name: 'test2', result: 'FAIL'},
   ];
 
   const PASSED_TESTS_CONDITION: Condition[] = [

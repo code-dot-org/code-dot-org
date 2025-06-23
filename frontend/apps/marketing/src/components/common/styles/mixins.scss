@@ -1,0 +1,19 @@
+@mixin common-margin-bottom-none {
+  margin-bottom: 0;
+}
+
+@mixin common-margin-bottom-xs {
+  margin-bottom: 0.5rem;
+}
+
+@mixin common-margin-bottom-s {
+  margin-bottom: 1rem;
+}
+
+@mixin common-margin-bottom-m {
+  margin-bottom: 1.5rem;
+}
+
+@mixin common-margin-bottom-l {
+  margin-bottom: 2.5rem;
+}

@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-02-25T02:13:29.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "title": "Exploring IoT Devices",
+    "long_instructions": "What are some security, privacy, and data ownership concerns that might exist with IoT devices?",
+    "height": "150",
+    "placeholder": "Enter your response here...",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2025-02-25T02:13:29.368+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson10-level1-frq\\\"\"],\"cloned_from\":\"computer-systems-lesson10-level1-frq\"},{\"changed_at\":\"2025-02-25 02:13:31 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

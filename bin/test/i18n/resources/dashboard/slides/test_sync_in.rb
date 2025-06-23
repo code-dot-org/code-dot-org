@@ -5,7 +5,7 @@ describe I18n::Resources::Dashboard::Slides::SyncIn do
   let(:described_class) {I18n::Resources::Dashboard::Slides::SyncIn}
   let(:described_instance) {described_class.new}
 
-  let(:origin_i18n_file_path) {CDO.dir('dashboard/config/locales/slides.en.yml')}
+  let(:origin_i18n_file_path) {CDO.dir('dashboard/config/locales/slides/en.yml')}
   let(:i18n_source_file_path) {CDO.dir('i18n/locales/source/dashboard/slides.yml')}
 
   around do |test|

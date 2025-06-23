@@ -23,6 +23,7 @@
 #  published_date                   :datetime
 #  self_paced_pl_course_offering_id :integer
 #  ai_teaching_assistant_available  :boolean          default(FALSE), not null
+#  facilitator_course_permissions   :json
 #
 # Indexes
 #
@@ -43,9 +44,9 @@ class CourseOffering < ApplicationRecord
 
   KEY_CHAR_RE = /[a-z0-9\-]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
-  validates_format_of :key,
-    with: KEY_RE,
-    message: "must contain only lowercase alphabetic characters, numbers, and dashes; got \"%{value}\"."
+  validates :key,
+    format: {with: KEY_RE,
+    message: "must contain only lowercase alphabetic characters, numbers, and dashes; got \"%{value}\"."}
 
   ELEMENTARY_SCHOOL_GRADES = %w[K 1 2 3 4 5].freeze
   MIDDLE_SCHOOL_GRADES = %w[6 7 8].freeze
@@ -210,7 +211,11 @@ class CourseOffering < ApplicationRecord
   end
 
   def self.professional_learning_and_self_paced_course_offerings
-    all_course_offerings.select {|co| co.get_participant_audience == 'teacher' && co.instruction_type == 'self_paced'}.map do |co|
+    all_course_offerings.select {|co| co.get_participant_audience == 'teacher' && co.instruction_type == 'self_paced'}
+  end
+
+  def self.professional_learning_and_self_paced_course_offerings_basic_info
+    professional_learning_and_self_paced_course_offerings.map do |co|
       {
         id: co.id,
         key: co.key,
@@ -219,8 +224,10 @@ class CourseOffering < ApplicationRecord
     end
   end
 
-  def self.single_unit_course_offerings_containing_units_info(unit_ids)
-    single_unit_course_offerings_containing_units(unit_ids).map {|co| co.summarize_for_unit_selector(unit_ids)}
+  def self.self_paced_course_offerings_for_catalog
+    professional_learning_and_self_paced_course_offerings.
+      map(&:summarize_for_catalog).
+      filter {|co| co[:self_paced_pl_course_offering_path].present?}
   end
 
   def summarize_for_unit_selector(unit_ids)
@@ -325,6 +332,7 @@ class CourseOffering < ApplicationRecord
       published_date: published_date,
       self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
       ai_teaching_assistant_available: ai_teaching_assistant_available,
+      facilitator_course_permissions: facilitator_course_permissions || [],
     }
   end
 
@@ -376,6 +384,7 @@ class CourseOffering < ApplicationRecord
       published_date: published_date,
       self_paced_pl_course_offering_key: self_paced_pl_course_offering&.key,
       ai_teaching_assistant_available: ai_teaching_assistant_available,
+      facilitator_course_permissions: facilitator_course_permissions
     }
   end
 
@@ -423,10 +432,6 @@ class CourseOffering < ApplicationRecord
 
   def any_version_is_unit?
     course_versions.any? {|cv| cv.content_root_type == 'Unit'}
-  end
-
-  def self.single_unit_course_offerings_containing_units(unit_ids)
-    CourseOffering.all.select {|co| co.units_included_in_any_version?(unit_ids) && co.any_version_is_unit?}
   end
 
   def csd?
@@ -480,8 +485,9 @@ class CourseOffering < ApplicationRecord
 
   def get_available_resources(locale_code = 'en-us')
     latest_version = latest_published_version(locale_code)
-    units = latest_version&.units
-    lessons = units&.first&.lessons
+    unit = latest_version&.units&.first
+    unit_group_unit = unit&.unit_group_units&.first
+    lessons = unit&.lessons
 
     return nil unless lessons
     expanded_card_resources = {}
@@ -489,7 +495,7 @@ class CourseOffering < ApplicationRecord
     lessons.each do |lesson|
       break if expanded_card_resources.size >= 5
       if lesson.has_lesson_plan
-        expanded_card_resources["Lesson Plan"] ||= lesson.lesson_plan_html_url
+        expanded_card_resources["Lesson Plan"] ||= lesson.lesson_plan_html_url(unit_group_unit: unit_group_unit)
       end
       lesson.resources&.each do |resource|
         properties = resource.properties

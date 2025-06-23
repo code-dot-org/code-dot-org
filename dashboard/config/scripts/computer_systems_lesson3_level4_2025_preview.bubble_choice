@@ -1,0 +1,9 @@
+name 'computer-systems-lesson3-level4_2025-preview'
+display_name 'Hardware Troubleshoot Chat'
+description 'You are an IT Help Desk agent helping customers troubleshoot a hardware issue.'
+
+sublevels
+level 'computer-systems-troubleshoot-choiceB_2025-preview'
+level 'computer-systems-troubleshoot-choiceC_2025-preview'
+level 'computer-systems-troubleshoot-choiceD_2025-preview'
+level 'computer-systems-troubleshoot-choiceE_2025-preview'

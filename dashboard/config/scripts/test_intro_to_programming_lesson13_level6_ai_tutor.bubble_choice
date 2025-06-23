@@ -1,0 +1,16 @@
+name 'test-intro-to-programming-lesson13-level6-ai-tutor'
+display_name 'Conditionals Choice Level'
+description 'Pick one of the levels below. Use conditionals to control the painter.'
+
+sublevels
+level 'test-intro-to-programming-lesson13-level6a-ai-tutor'
+level 'test-intro-to-programming-lesson13-level6b-ai-tutor'
+level 'test-intro-to-programming-lesson13-level6c-ai-tutor'
+level 'test-intro-to-programming-lesson13-level6d-ai-tutor'
+
+
+
+
+
+
+

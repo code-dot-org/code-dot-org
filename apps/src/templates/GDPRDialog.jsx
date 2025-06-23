@@ -1,8 +1,9 @@
+import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import BaseDialog from './BaseDialog';
@@ -85,6 +86,7 @@ const styles = {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20,
+    color: color.default_text,
   },
   instructions: {
     marginTop: 20,

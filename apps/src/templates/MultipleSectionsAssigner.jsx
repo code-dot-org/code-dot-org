@@ -1,14 +1,14 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import {
+  Heading3,
+  Heading5,
+  BodyTwoText,
+} from '@code-dot-org/component-library/typography';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox';
-import {
-  Heading3,
-  Heading5,
-  BodyTwoText,
-} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
@@ -29,8 +29,8 @@ const MultipleSectionsAssigner = ({
   courseVersionId,
   scriptId,
   reassignConfirm = () => {},
-  isAssigningCourse,
-  isStandAloneUnit,
+  isAssigningCourseOnly,
+  isAssigningUnitOnly,
   participantAudience,
   onAssignSuccess,
   sectionDirections = i18n.chooseSectionsDirections(),
@@ -46,8 +46,8 @@ const MultipleSectionsAssigner = ({
   const initialSectionsAssigned = React.useMemo(() => {
     let initialSectionsAssigned = [];
     // check to see if this is coming from the UNIT landing page - if so add courses featuring this unit
-    if (!isAssigningCourse) {
-      if (isStandAloneUnit) {
+    if (!isAssigningCourseOnly) {
+      if (isAssigningUnitOnly) {
         for (let i = 0; i < sections.length; i++) {
           if (courseVersionId === sections[i].courseVersionId) {
             initialSectionsAssigned.push(sections[i]);
@@ -60,7 +60,7 @@ const MultipleSectionsAssigner = ({
           }
         }
       }
-    } else if (isAssigningCourse) {
+    } else if (isAssigningCourseOnly) {
       // checks to see if this is coming from the COURSE landing page
       for (let i = 0; i < sections.length; i++) {
         if (courseId === sections[i].courseId) {
@@ -71,8 +71,8 @@ const MultipleSectionsAssigner = ({
     setCurrentSectionsAssigned(initialSectionsAssigned);
     return initialSectionsAssigned;
   }, [
-    isAssigningCourse,
-    isStandAloneUnit,
+    isAssigningCourseOnly,
+    isAssigningUnitOnly,
     sections,
     courseId,
     scriptId,
@@ -102,7 +102,7 @@ const MultipleSectionsAssigner = ({
         s => s.code === currentSectionsAssigned[i].code
       );
       if (needsToBeAssigned) {
-        if (isAssigningCourse) {
+        if (isAssigningCourseOnly) {
           const sectionId = currentSectionsAssigned[i].id;
           assignToSectionWithConfirmation(
             sectionId,
@@ -126,7 +126,7 @@ const MultipleSectionsAssigner = ({
 
       if (isSectionToBeRemoved) {
         // if on COURSE landing page or a STANDALONE UNIT, unassign entirely
-        isAssigningCourse || isStandAloneUnit
+        isAssigningCourseOnly || isAssigningUnitOnly
           ? unassignSection(initialSectionsAssigned[i].id, '')
           : assignCourseWithoutUnit(initialSectionsAssigned[i]);
       }
@@ -270,8 +270,8 @@ MultipleSectionsAssigner.propTypes = {
   courseVersionId: PropTypes.number,
   scriptId: PropTypes.number,
   reassignConfirm: PropTypes.func,
-  isAssigningCourse: PropTypes.bool.isRequired,
-  isStandAloneUnit: PropTypes.bool,
+  isAssigningCourseOnly: PropTypes.bool.isRequired,
+  isAssigningUnitOnly: PropTypes.bool,
   participantAudience: PropTypes.string,
   onAssignSuccess: PropTypes.func,
   sectionDirections: PropTypes.string,

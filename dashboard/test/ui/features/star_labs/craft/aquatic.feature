@@ -4,7 +4,7 @@
 Feature: Minecraft aquatic
 
   Background:
-    Given I am on "http://studio.code.org/s/allthethings/lessons/25/levels/3"
+    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/25/levels/3"
     And I wait for the lab page to fully load
     And I wait until the Minecraft game is loaded
     Then element "#runButton" is visible

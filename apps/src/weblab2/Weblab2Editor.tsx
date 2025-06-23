@@ -21,6 +21,7 @@ const Weblab2Editor: React.FunctionComponent = () => {
         onCodeChange={onCodeChange}
         startCode={'<!DOCTYPE HTML>\n<h1>Hello, world!</h1>'}
         editorConfigExtensions={editorExtensions}
+        appName="weblab2"
       />
     </div>
   );

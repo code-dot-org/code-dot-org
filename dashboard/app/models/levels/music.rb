@@ -39,8 +39,14 @@ class Music < Blockly
     submittable
     background
     level_data
+    predict_settings
     validations
+    encrypted_exemplar_sources
+    exemplar_settings
   )
+
+  validate :has_correct_multiple_choice_answer?
+  before_save :clean_up_predict_settings
 
   def self.create_from_level_builder(params, level_params)
     create!(
@@ -51,10 +57,6 @@ class Music < Blockly
         properties: {}
       )
     )
-  end
-
-  def uses_google_blockly?
-    true
   end
 
   def uses_lab2?

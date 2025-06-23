@@ -10,7 +10,7 @@ describe I18n::Resources::Dashboard::BaseContent::SyncOut do
 
   let(:crowdin_file_path) {CDO.dir('i18n/crowdin', i18n_locale, "dashboard/base.yml")}
   let(:i18n_file_path) {CDO.dir('i18n/locales', i18n_locale, "dashboard/base.yml")}
-  let(:target_i18n_file_path) {CDO.dir('dashboard/config/locales', "#{i18n_locale}.yml")}
+  let(:target_i18n_file_path) {CDO.dir('dashboard/config/locales/base', "#{i18n_locale}.yml")}
 
   around do |test|
     FakeFS.with_fresh {test.call}

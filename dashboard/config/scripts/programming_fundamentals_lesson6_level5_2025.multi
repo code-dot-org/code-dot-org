@@ -1,0 +1,20 @@
+name 'programming-fundamentals-lesson6-level5_2025'
+title 'Check for Understanding'
+
+wrong '`paint_square`'
+right '`color`'
+wrong '"red"'
+wrong '`painter.paint`'
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What is the parameter in this function definition?
+
+```
+def paint_square(color):
+   painter.paint(color)
+   painter.move()
+
+paint_square("red")
+```
+MARKDOWN

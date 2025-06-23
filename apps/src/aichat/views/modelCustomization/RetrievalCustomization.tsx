@@ -1,11 +1,11 @@
 import React, {useCallback} from 'react';
 import {useSelector} from 'react-redux';
 
-import {setAiCustomizationProperty} from '@cdo/apps/aichat/redux/aichatRedux';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import aichatI18n from '../../locale';
+import {setAiCustomizationProperty} from '../../redux';
 
 import MultiInputCustomization from './MultiInputCustomization';
 import SaveChangesAlerts from './SaveChangesAlerts';

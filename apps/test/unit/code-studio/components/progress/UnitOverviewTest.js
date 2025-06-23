@@ -57,6 +57,11 @@ describe('UnitOverview', () => {
     expect(wrapper.find('.unit-breadcrumb').length).toEqual(0);
   });
 
+  it('does not display a course link if the unit is part of a single-unit course', () => {
+    const wrapper = setUp({isSingleUnitCourse: true, courseLink: '/some/link'});
+    expect(wrapper.find('.unit-breadcrumb').length).toEqual(0);
+  });
+
   it('renders a RedirectDialog if redirectScriptUrl is present', () => {
     const wrapper = setUp({redirectScriptUrl: '/some/link'});
     expect(wrapper.find('RedirectDialog').length).toEqual(1);

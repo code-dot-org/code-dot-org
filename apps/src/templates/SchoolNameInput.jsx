@@ -1,7 +1,7 @@
+import TextField from '@code-dot-org/component-library/textField';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import i18n from '@cdo/locale';
 
 export default function SchoolNameInput({
@@ -15,6 +15,7 @@ export default function SchoolNameInput({
 
   return (
     <TextField
+      id="uitest-school-name"
       name={fieldNames.schoolName}
       label={i18n.schoolOrganizationQuestion()}
       onChange={e => handleSchoolNameChange(e.target.value)}

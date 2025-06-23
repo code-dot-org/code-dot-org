@@ -1,17 +1,5 @@
-# NOTE: This serializer is used in two places.
-#
-#   1. Workshop dashboard CSV downloads (workshops_controller#filter)
-#   2. Automated workshop tracker export (summer_workshops_to_gdrive)
-#
-# The workshop tracker includes a bunch of formulas that are dependent on the layout of
-# the export, so please check that the programs team is okay making updates there
-# before adding a column to the middle of this list.  If they are not, consider
-# breaking this into two serializers.
 class Api::V1::Pd::WorkshopDownloadSerializer < ActiveModel::Serializer
-  attributes :id, :status, :created_date, :start_date, :sessions, :organizer_name, :organizer_email, :regional_partner_name,
-    :location_address, :location_name, :on_map, :funded, :course, :subject, :enrollment_url,
-    :enrolled_teacher_count, :capacity, :facilitators, :virtual, :third_party_provider, :notes
-
+  attributes :id,  :name, :status, :created_date, :start_date, :session_dates, :session_locations, :organizer_name, :organizer_email, :regional_partner_name, :course, :subject, :enrollment_url, :enrolled_teacher_count, :capacity, :facilitators, :cohort_type, :virtual, :fee, :prereq, :grades, :description, :registration_link, :hidden_from_catalog,
   def status
     object.state
   end
@@ -24,8 +12,12 @@ class Api::V1::Pd::WorkshopDownloadSerializer < ActiveModel::Serializer
     object.workshop_starting_date.try(&:to_date).try(&:iso8601)
   end
 
-  def sessions
+  def session_dates
     object.sessions.map(&:formatted_date_with_start_and_end_times).join("\n")
+  end
+
+  def session_locations
+    object.sessions.map(&:formatted_location_details).join("\n")
   end
 
   def organizer_name
@@ -50,5 +42,17 @@ class Api::V1::Pd::WorkshopDownloadSerializer < ActiveModel::Serializer
 
   def facilitators
     object.facilitators.map {|f| "#{f.name} <#{f.email}>"}.join("\n")
+  end
+
+  def virtual
+    object.virtual?
+  end
+
+  def cohort_type
+    object.participant_group_type
+  end
+
+  def hidden_from_catalog
+    object.hidden
   end
 end

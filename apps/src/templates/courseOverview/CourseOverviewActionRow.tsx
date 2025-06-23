@@ -1,7 +1,6 @@
 import React from 'react';
 
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
-import {queryParams} from '@cdo/apps/code-studio/utils';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import i18n from '@cdo/locale';
 
@@ -51,9 +50,7 @@ const CourseOverviewActionRow: React.FC<CourseOverviewActionRowProps> = ({
     (versionId: number) => {
       const version = versions[versionId];
       if (versionId !== courseVersionId && version) {
-        const sectionId = queryParams('section_id');
-        const queryString = sectionId ? `?section_id=${sectionId}` : '';
-        utils.navigateToHref(`${version.path}${queryString}`);
+        utils.navigateToHref(version.path);
       }
     },
     [courseVersionId, versions]
@@ -97,8 +94,8 @@ const CourseOverviewActionRow: React.FC<CourseOverviewActionRowProps> = ({
             scriptId={null}
             assignmentName={title}
             reassignConfirm={() => setConfirmationMessageOpen(true)}
-            isAssigningCourse={true}
-            isStandAloneUnit={false}
+            isAssigningCourseOnly={true}
+            isAssigningUnitOnly={false}
             participantAudience={participantAudience}
           />
         </div>

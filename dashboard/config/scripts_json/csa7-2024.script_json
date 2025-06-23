@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-11-19 01:15:23 UTC",
+    "serialized_at": "2025-03-11 21:46:51 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6525,6 +6525,18 @@
       }
     },
     {
+      "name": "U7L9 Extra Practice",
+      "url": "https://docs.google.com/document/d/1EiUk4UYn8_HGGaD6rjt5naV7beOl17jDDUxlOhSn_yE/edit?usp=sharing",
+      "key": "u7l9_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u7l9_extra_practice"
+      }
+    },
+    {
       "name": "U7L9 Guided Notes",
       "url": "https://docs.google.com/document/d/1sCSDNKDrA_BElrgA66d0PK_2b6dwKHHNSbHBoo27qUE/edit?usp=sharing",
       "key": "u7l9_guided_notes",
@@ -7055,6 +7067,12 @@
       "seeding_key": {
         "lesson.key": "System Reliability",
         "resource.key": "the_rise_of_open_source_software"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "System Reliability",
+        "resource.key": "u7l9_extra_practice"
       }
     },
     {

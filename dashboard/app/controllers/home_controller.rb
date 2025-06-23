@@ -17,7 +17,7 @@ class HomeController < ApplicationController
   # The terms_and_privacy page gets loaded in an iframe on the signup page, so skip
   # clearing the sign up tracking variables
   skip_before_action :clear_sign_up_session_vars, only: [:terms_and_privacy]
-  skip_before_action :initialize_statsig_stable_id, only: [:health_check]
+  skip_before_action :statsig_stable_id, only: [:health_check]
 
   def set_locale
     redirect_path = if params[:i18npath]
@@ -64,7 +64,13 @@ class HomeController < ApplicationController
   def index
     if current_user
       if should_redirect_to_script_overview?
-        redirect_to script_path(current_user.most_recently_assigned_script)
+        unit_group_unit = current_user.most_recently_assigned_unit_group_unit
+        if Policies::Courses.modularity_enabled? && unit_group_unit
+          unit_group = unit_group_unit.cached_unit_group
+          redirect_to course_unit_path(unit_group, unit_group_unit.position)
+        else
+          redirect_to script_path(current_user.most_recently_assigned_script)
+        end
       else
         redirect_to home_path
       end
@@ -77,6 +83,12 @@ class HomeController < ApplicationController
   # Signed out: redirect to sign in
   def home
     authenticate_user!
+
+    if current_user.teacher? && (Experiment.enabled?(user: current_user, experiment_name: 'teacher-homepage-v2') || DCDO.get('teacher-homepage-v2', false))
+      redirect_to '/teacher_dashboard/home'
+      return
+    end
+
     init_homepage
     render 'home/index'
   end
@@ -142,14 +154,22 @@ class HomeController < ApplicationController
     script = Queries::ScriptActivity.primary_student_unit(current_user)
     if script
       script_level = current_user.next_unpassed_progression_level(script)
+      unit_group = script.unit_group
+      unit_group_unit = script.unit_group_units.find {|ugu| ugu.unit_group == unit_group} if unit_group
     end
     @homepage_data[:topCourse] = nil
     if script && script_level
+      link_to_overview = script_path(script)
+      link_to_lesson = script_next_path(script)
+      if Policies::Courses.modularity_enabled? && unit_group_unit
+        link_to_overview = course_unit_path(unit_group_unit.unit_group, unit_group_unit.position)
+        link_to_lesson = course_unit_next_path(unit_group_unit.unit_group, unit_group_unit.position)
+      end
       @homepage_data[:topCourse] = {
         assignableName: data_t_suffix('script.name', script[:name], 'title'),
         lessonName: script_level.lesson.localized_title,
-        linkToOverview: script_path(script),
-        linkToLesson: script_next_path(script, 'next')
+        linkToOverview: link_to_overview,
+        linkToLesson: link_to_lesson,
       }
     end
 
@@ -163,14 +183,22 @@ class HomeController < ApplicationController
       pl_unit = Queries::ScriptActivity.primary_pl_unit(current_user)
       if pl_unit
         pl_script_level = current_user.next_unpassed_progression_level(pl_unit)
+        pl_unit_group = pl_unit.unit_group
+        pl_unit_group_unit = pl_unit.unit_group_units.find {|ugu| ugu.unit_group == pl_unit_group} if pl_unit_group
       end
       @homepage_data[:topPlCourse] = nil
       if pl_unit && pl_script_level
+        link_to_overview = script_path(pl_unit)
+        link_to_lesson = script_next_path(pl_unit)
+        if Policies::Courses.modularity_enabled? && pl_unit_group_unit
+          link_to_overview = course_unit_path(pl_unit_group_unit.unit_group, pl_unit_group_unit.position)
+          link_to_lesson = course_unit_next_path(pl_unit_group_unit.unit_group, pl_unit_group_unit.position)
+        end
         @homepage_data[:topPlCourse] = {
           assignableName: data_t_suffix('script.name', pl_unit[:name], 'title'),
           lessonName: pl_script_level.lesson.localized_title,
-          linkToOverview: script_path(pl_unit),
-          linkToLesson: script_next_path(pl_unit, 'next')
+          linkToOverview: link_to_overview,
+          linkToLesson: link_to_lesson,
         }
       end
 
@@ -188,7 +216,6 @@ class HomeController < ApplicationController
       end
 
       @homepage_data[:isTeacher] = true
-      @homepage_data[:hocLaunch] = DCDO.get('hoc_launch', CDO.default_hoc_launch)
       @homepage_data[:joined_student_sections] = current_user&.sections_as_student_participant&.map(&:summarize_without_students)
       @homepage_data[:joined_pl_sections] = current_user&.sections_as_pl_participant&.map(&:summarize_without_students)
       @homepage_data[:announcement] = DCDO.get('announcement_override', nil)

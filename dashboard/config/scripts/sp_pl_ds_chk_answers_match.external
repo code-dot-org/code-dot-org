@@ -20,6 +20,24 @@ markdown <<MARKDOWN
 
 <div style="clear:both;"></div> <br>
 
-> #### 🎉 **Congratulations!** You have made it halfway through this lesson. This is a great time to stretch your legs and take a break! 
+<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+    
+<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
+<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
+
+<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
+You've finished the second lesson in this professional learning module! <br><br><b>Data Visualizations</b> is up next! 
+    </p>
+</div>
+
+
+
+<table width="100%" cellspacing="0" cellpadding="15">
+    <tr>
+        <td style="background-color: #b2dee3; text-align: center;"><b>Lesson One</b><br>Teaching Insights <br>from Data and AI</td>
+        <td style="background-color: #b2dee3; text-align: center;"><b>Lesson Two</b><br>Introduction to<br> Data Science</td>
+        <td style="background-color: #f7f8fa; text-align: center;"><b>Lesson Three</b><br>Data <br> Visualizations</td>
+          
+</table>
 
 MARKDOWN

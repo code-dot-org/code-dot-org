@@ -8,12 +8,14 @@ import SchoolInfoInterstitial from '@cdo/apps/schoolInfo/SchoolInfoInterstitial'
 
 import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
+jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({
+  getAuthenticityToken: jest.fn().mockResolvedValue('authToken'),
+}));
+
 describe('SchoolInfoConfirmationDialog', () => {
   const MINIMUM_PROPS = {
     scriptData: {
-      formUrl: '',
-      authTokenName: 'auth_token',
-      authTokenValue: 'fake_auth_token',
+      usIp: true,
       existingSchoolInfo: {},
     },
     onClose: function () {},
@@ -89,9 +91,8 @@ describe('SchoolInfoConfirmationDialog', () => {
       const onClose = sinon.spy();
       const wrapper = mount(
         <SchoolInfoConfirmationDialog
-          {...MINIMUM_PROPS}
           scriptData={{
-            ...MINIMUM_PROPS.scriptData,
+            usIp: true,
             existingSchoolInfo: {
               country: 'US',
             },
@@ -121,7 +122,7 @@ describe('SchoolInfoConfirmationDialog', () => {
 
         expect(wrapperInstance.handleClickYes).to.have.been.called;
         await setTimeout(() => {}, 50);
-        expect(onClose).to.have.been.called;
+        expect(await onClose).to.have.been.called;
         await setTimeout(() => {}, 50);
         expect(wrapper.state('showSchoolInterstitial')).to.be.false;
         handleClickYesSpy.restore();

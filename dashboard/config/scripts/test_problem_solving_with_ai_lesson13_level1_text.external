@@ -1,0 +1,27 @@
+name 'test-problem-solving-with-ai-lesson13-level1-text'
+title 'Initial Predictions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Initial Predictions
+
+## Step 1: Choose a Focus Area
+
+#### Choose one of the following areas to make a prediction about:
+
+- Technology
+- Media
+- Environment
+- Healthcare
+- Ethics
+- Entertainment
+- Sports
+- Fashion
+- Other: ____________
+
+## Step 2: Gather Data
+####Search the internet and _**quickly**_ collect artifacts, both text documents and images, that are relevant to your focus area. Try to find at least 3 different artifacts that can provide context for AI Chat.
+
+####Download any artifacts you find and save them to your device.
+
+MARKDOWN

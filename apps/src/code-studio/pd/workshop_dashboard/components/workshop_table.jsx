@@ -8,15 +8,17 @@ import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imp
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import color from '@cdo/apps/util/color';
 
 import {workshopShape} from '../types.js';
 import {shouldShowSurveyResults} from '../workshop_summary_utils';
+import {COURSE_BUILD_YOUR_OWN} from '../workshopConstants';
 
-import FacilitatorsList from './facilitators_list';
 import SessionTimesList from './session_times_list';
 import WorkshopManagement from './workshop_management';
+import WorkshopTableCellList from './workshop_table_cell_list.jsx';
 
 export default class WorkshopTable extends React.Component {
   static propTypes = {
@@ -37,9 +39,7 @@ export default class WorkshopTable extends React.Component {
     onSort: PropTypes.func,
   };
 
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
-  };
+  static contextType = RouterContext;
 
   static defaultProps = {
     workshops: undefined,
@@ -114,58 +114,42 @@ export default class WorkshopTable extends React.Component {
           transforms: [sortable],
         },
         cell: {
-          formatters: [this.formatSessions],
-        },
-      },
-      {
-        property: 'location_name',
-        header: {
-          label: 'Location',
-          transforms: [sortable],
-        },
-      },
-      {
-        property: 'on_map',
-        header: {
-          label: 'On Map',
-          transforms: [sortable],
-        },
-        cell: {
-          formatters: [this.formatBoolean],
-        },
-      },
-      {
-        property: 'funded',
-        header: {
-          label: 'Funded',
-          transforms: [sortable],
-        },
-        cell: {
-          formatters: [this.formatBoolean],
+          formatters: [this.formatSessionTimes],
         },
       },
       {
         property: 'course',
         header: {
-          label: 'Course',
+          label: 'Type',
           transforms: [sortable],
         },
       },
       {
         property: 'subject',
         header: {
-          label: 'Subject',
+          label: 'Subjects/Topics',
           transforms: [sortable],
+        },
+        cell: {
+          formatters: [this.formatSubjectOrTopics],
         },
       },
       {
         property: 'virtual',
         header: {
-          label: 'Virtual',
+          label: 'Format',
           transforms: [sortable],
         },
         cell: {
-          formatters: [this.formatBoolean],
+          formatters: [this.formatVirtualFormat],
+        },
+      },
+      {
+        header: {
+          label: 'Location',
+        },
+        cell: {
+          formatters: [this.formatSessionLocations],
         },
       },
       {
@@ -173,6 +157,22 @@ export default class WorkshopTable extends React.Component {
         header: {
           label: 'Signups',
           transforms: [sortable],
+        },
+      },
+      {
+        property: 'regional_partner_name',
+        header: {
+          label: 'Regional Partner',
+          transforms: [sortable],
+        },
+      },
+      {
+        property: 'facilitators',
+        header: {
+          label: 'Facilitators',
+        },
+        cell: {
+          formatters: [this.formatFacilitators],
         },
       }
     );
@@ -188,25 +188,6 @@ export default class WorkshopTable extends React.Component {
         },
       });
     }
-
-    columns.push(
-      {
-        property: 'facilitators',
-        header: {
-          label: 'Facilitators',
-        },
-        cell: {
-          formatters: [this.formatFacilitators],
-        },
-      },
-      {
-        property: 'regional_partner_name',
-        header: {
-          label: 'Regional Partner',
-          transforms: [sortable],
-        },
-      }
-    );
 
     columns.push();
 
@@ -262,21 +243,49 @@ export default class WorkshopTable extends React.Component {
     this.setState({sortingColumns});
   };
 
-  formatSessions = (_ignored, {rowData}) => {
+  formatSessionTimes = (_ignored, {rowData}) => {
     return <SessionTimesList sessions={rowData.sessions} />;
   };
 
-  formatBoolean = bool => {
-    return bool ? 'Yes' : 'No';
+  // Because we want Subjects and Topics to show in the same column (since they are
+  // mutually exclusive for a workshop), we want to format subjects as plain text
+  // and topics as an unordered list.
+  formatSubjectOrTopics = (subjectsOrTopics, {rowData}) => {
+    if (rowData.course === COURSE_BUILD_YOUR_OWN) {
+      const topics = subjectsOrTopics.split(',');
+      return (
+        <ul>
+          {topics.map(topic => {
+            return <li key={`topic-${topic}`}>{topic}</li>;
+          })}
+        </ul>
+      );
+    } else {
+      return subjectsOrTopics;
+    }
+  };
+
+  formatVirtualFormat = isVirtual => {
+    return isVirtual ? 'Virtual' : 'In-Person';
   };
 
   formatOrganizer = organizer => {
     return `${organizer.name} (${organizer.email})`;
   };
 
-  formatFacilitators = facilitators => {
-    return <FacilitatorsList facilitators={facilitators} />;
-  };
+  formatFacilitators = facilitators => (
+    <WorkshopTableCellList
+      items={facilitators.map(({name, email}) => `${name} ${email}`)}
+    />
+  );
+
+  formatSessionLocations = (_ignored, {rowData: {sessions}}) => (
+    <WorkshopTableCellList
+      items={sessions.map(({location_name, session_format}) =>
+        session_format === 'virtual' ? 'Virtual' : location_name ?? 'N/A'
+      )}
+    />
+  );
 
   formatSignupUrl = workshopId => {
     const signupUrl = `${location.origin}/pd/workshops/${workshopId}/enroll`;
@@ -319,16 +328,17 @@ export default class WorkshopTable extends React.Component {
     const rows = _.map(this.props.workshops.workshops, row =>
       _.merge(row, {
         enrollments: `${row.enrolled_teacher_count} / ${row.capacity}`,
-        date: row.sessions[0].start,
+        date: row.sessions[0]?.start,
         manage: {
           id: row.id,
           course: row.course,
           subject: row.subject,
           state: row.state,
-          date: row.sessions[0].start,
+          date: row.sessions[0]?.start,
           canDelete: row.can_delete,
-          endDate: row.sessions[row.sessions.length - 1].end,
+          endDate: row.sessions[row.sessions.length - 1]?.end,
         },
+        sessions: row.sessions,
       })
     );
 

@@ -1,0 +1,33 @@
+name 'music-lab-612-post-q9'
+
+question 'Which computational thinking skill is Ash using to group important details into one reusable block?'
+
+wrong 'Decomposition'
+wrong 'Pattern Recognition'
+right 'Abstraction'
+wrong 'Algorithm Design'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Computational Thinking
+
+Standard: Abstraction
+
+Lesson: Functions - Practice
+
+Skill Progression: All
+
+Pretest Modality: Given a snippet of how someone approached a problem, identify the CT skill it is (similar to PL question)
+
+Posttest Modality: Given a snippet of how someone approached a problem, identify the CT skill it is (similar to PL question)
+
+MARKDOWN
+
+markdown <<MARKDOWN
+Ash created a function called effects that includes 3 blocks: a crash effect, a clap effect, and a rain stick sound. Ash uses this one function several times to add excitement in the remix to save time and keep the code clean.
+
+---
+
+![](https://images.code.org/e7ebea15053a3bb2bfbf123bb3ee7ceb-image-1750438510455.png)
+MARKDOWN

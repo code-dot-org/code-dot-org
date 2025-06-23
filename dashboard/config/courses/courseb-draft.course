@@ -1,0 +1,23 @@
+{
+  "name": "courseb-draft",
+  "script_names": [
+    "courseb-draft"
+  ],
+  "original_script_names": [
+    "courseb-draft"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "courseb-draft",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

@@ -52,7 +52,7 @@ class SectionLoginInfo extends React.Component {
       : this.props.students;
 
     return (
-      <div>
+      <div id="ui-test-section-login-info">
         {[SectionLoginType.word, SectionLoginType.picture].includes(
           section.loginType
         ) && (
@@ -182,7 +182,7 @@ class EmailLogins extends React.Component {
         <ol>
           <li>
             {i18n.loginInfo_joinStep1({
-              url: `${studioUrlPrefix}/users/sign_up`,
+              url: `${studioUrlPrefix}/users/sign_up/account_type`,
             })}
             <br />
             <img

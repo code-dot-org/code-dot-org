@@ -171,13 +171,7 @@ class Services::PartialRegistration::UserBuilderTest < ActiveSupport::TestCase
     fake_school_info = create :school_info, school_id: fake_school.id
     setup_partial_user({user_type: 'teacher', school_info_attributes:
       {
-        schoolId: fake_school.id,
-        schoolName: fake_school.name,
-        schoolType: fake_school.school_type,
-        schoolZip: fake_school.zip,
-        schoolState: fake_school.state,
-        country: fake_school_info.country,
-        fullAddress: fake_school_info.full_address
+        school_id: fake_school.id,
       }}
     )
 
@@ -195,9 +189,8 @@ class Services::PartialRegistration::UserBuilderTest < ActiveSupport::TestCase
     school_country = 'US'
     setup_partial_user({user_type: 'teacher', school_info_attributes:
       {
-        schoolId: SharedConstants::NON_SCHOOL_OPTIONS.CLICK_TO_ADD,
-        schoolName: school_name,
-        schoolZip: school_zip,
+        school_name: school_name,
+        zip: school_zip,
         country: school_country,
       }}
     )
@@ -219,7 +212,7 @@ class Services::PartialRegistration::UserBuilderTest < ActiveSupport::TestCase
     school_country = 'MX'
     setup_partial_user({user_type: 'teacher', school_info_attributes:
       {
-        schoolName: school_name,
+        school_name: school_name,
         country: school_country,
       }}
     )
@@ -237,10 +230,12 @@ class Services::PartialRegistration::UserBuilderTest < ActiveSupport::TestCase
 
   test 'builds teacher that does not teach in a school setting' do
     school_country = 'US'
+    school_zip = '11111'
     setup_partial_user({user_type: 'teacher', school_info_attributes:
       {
-        schoolType: SharedConstants::NON_SCHOOL_OPTIONS.NO_SCHOOL_SETTING,
+        school_type: SharedConstants::NON_SCHOOL_OPTIONS.NO_SCHOOL_SETTING,
         country: school_country,
+        zip: school_zip
       }}
     )
 

@@ -39,6 +39,8 @@ module Cdo
           http_read_timeout: 5,
           http_idle_timeout: 2
         )
+        # CloudWatch requires event batches to be sorted by timestamp
+        events.sort_by! {|event| event[:timestamp]}
         resp = client.put_log_events(
           log_group_name: @log_group_name,
           log_stream_name: @log_stream_name,

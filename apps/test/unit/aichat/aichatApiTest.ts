@@ -6,7 +6,8 @@ import {
   AichatContext,
   AichatModelCustomizations,
   AiCustomizations,
-  ChatMessage,
+  CompletedChatMessage,
+  PendingChatMessage,
 } from '@cdo/apps/aichat/types';
 import {EMPTY_MODEL_CARD_INFO} from '@cdo/apps/aichat/views/modelCustomization/constants';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
@@ -22,8 +23,8 @@ import {
 } from '@cdo/generated-scripts/sharedConstants';
 
 describe('aichatApi', () => {
-  let chatMessage: ChatMessage,
-    storedMessages: ChatMessage[],
+  let chatMessage: PendingChatMessage,
+    storedMessages: CompletedChatMessage[],
     aiCustomizations: AiCustomizations,
     aichatModelCustomizations: AichatModelCustomizations,
     aichatContext: AichatContext,
@@ -34,7 +35,7 @@ describe('aichatApi', () => {
     chatMessage = {
       chatMessageText: 'hello',
       role: Role.USER,
-      status: AiInteractionStatus.OK,
+      status: AiInteractionStatus.UNKNOWN,
       timestamp: Date.now(),
     };
     storedMessages = [
@@ -43,12 +44,14 @@ describe('aichatApi', () => {
         role: Role.USER,
         status: AiInteractionStatus.OK,
         timestamp: Date.now(),
+        requestId: 1,
       },
       {
         chatMessageText: 'great thank you',
         role: Role.ASSISTANT,
         status: AiInteractionStatus.OK,
         timestamp: Date.now(),
+        requestId: 1,
       },
     ];
     aiCustomizations = {
@@ -114,15 +117,13 @@ describe('aichatApi', () => {
     });
 
     async function callApiGetMessages(maxPollingTime?: number) {
-      return (
-        await postAichatCompletionMessage(
-          chatMessage,
-          storedMessages,
-          aiCustomizations,
-          aichatContext,
-          maxPollingTime
-        )
-      ).messages;
+      return await postAichatCompletionMessage(
+        chatMessage,
+        storedMessages,
+        aiCustomizations,
+        aichatContext,
+        maxPollingTime
+      );
     }
 
     function createResponse(
@@ -162,6 +163,9 @@ describe('aichatApi', () => {
       expect(messages[0].status).toBe(AiInteractionStatus.OK);
       expect(messages[1].status).toBe(AiInteractionStatus.OK);
       expect(messages[1].chatMessageText).toBe(botResponse);
+      for (const message of messages) {
+        expect(message.requestId).toBe(requestId);
+      }
     });
 
     it('waits until the chat request finishes processing before returning messages', async () => {

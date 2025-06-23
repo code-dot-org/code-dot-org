@@ -32,6 +32,7 @@ const blockFeatureList = [
   'functions',
   BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
   BlockTypes.PLAY_PATTERN_AI_AT_CURRENT_LOCATION_SIMPLE2,
+  BlockTypes.PLAY_TUNE_AT_CURRENT_LOCATION_SIMPLE2,
 ];
 
 const triggerBlocks: string[] = [
@@ -107,8 +108,14 @@ export default class AnalyticsReporter {
   }
 
   private session: Session | undefined;
+  private startInProgress: boolean = false;
 
   async startSession() {
+    // If a session is already in the process of starting, do not start another.
+    if (this.startInProgress) {
+      return;
+    }
+    this.startInProgress = true;
     // Capture start time before making init call
     const startTime = Date.now();
 
@@ -143,6 +150,7 @@ export default class AnalyticsReporter {
     }
 
     trackEvent('music', 'music_session_start');
+    this.startInProgress = false;
   }
 
   isSessionInProgress() {

@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-05-23T14:35:10.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "# Revising Prompts\r\n\r\n## Reflection\r\n#### Think back to your exploration with the AI chatbot in the previous level, in the reflection box below answer the following question. *How did your AI-generated output change as you made updates to your prompt?*\r\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19619,
+    "name_suffix": "_2025",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-05-23T14:35:10.900+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_ai_01_09\\\"\"],\"cloned_from\":\"csaif_pl_ai_01_09\"},{\"changed_at\":\"2025-05-23 17:22:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

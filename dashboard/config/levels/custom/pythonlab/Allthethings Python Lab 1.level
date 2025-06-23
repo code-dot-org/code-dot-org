@@ -39,10 +39,6 @@
     },
     "long_instructions": "## Welcome to Python Lab\r\n\r\nPress the Run button and see what happens.",
     "hide_share_and_remix": "true",
-    "reference_links": [
-      "/courses/csa-2023/guides/instantiating-objects"
-    ],
-    "map_reference": "/docs/concepts/html/",
     "teacher_markdown": "Teachers should see this extra info.",
     "ai_tutor_available": "true",
     "submittable": "false",

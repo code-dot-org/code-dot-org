@@ -1,0 +1,23 @@
+// Spacer common styles
+.spacer {
+  width: 100%;
+}
+
+// Spacer sizes
+.spacer-size {
+  &-xs {
+    height: 0.5rem;
+  }
+
+  &-s {
+    height: 1rem;
+  }
+
+  &-m {
+    height: 2rem;
+  }
+
+  &-l {
+    height: 4rem;
+  }
+}

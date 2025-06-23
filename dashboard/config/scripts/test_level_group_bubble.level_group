@@ -1,0 +1,10 @@
+name 'test-level-group-bubble'
+title 'Testing levelgroup bubbles'
+submittable 'false'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+level 'music-lab-functions-explore-formative-multi'
+level 'test-music-lab-loops-explore-multi'
+level 'test-music-lab-loops-practice-nested-loops-multi'

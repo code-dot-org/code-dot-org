@@ -1,9 +1,9 @@
-import React from 'react';
-
 import {
   SimpleDropdown,
   SimpleDropdownProps,
-} from '@cdo/apps/componentLibrary/dropdown';
+} from '@code-dot-org/component-library/dropdown';
+import React from 'react';
+
 import currentLocale from '@cdo/apps/util/currentLocale';
 
 import './style.scss';
@@ -29,6 +29,7 @@ const I18nDropdown: React.FC<I18nDropdownProps> = ({
       method="post"
       id="localeForm"
       style={{marginBottom: '0px'}}
+      data-notranslate=""
     >
       <input type="hidden" name="user_return_to" value={window.location.href} />
       <SimpleDropdown

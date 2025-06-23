@@ -1,14 +1,16 @@
+import Alert from '@code-dot-org/component-library/alert';
+import {Button, LinkButton} from '@code-dot-org/component-library/button';
+import Dialog from '@code-dot-org/component-library/dialog';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Typography from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import QRCode from 'qrcode.react';
 import React, {useCallback, useState} from 'react';
 import FocusLock from 'react-focus-lock';
 
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
-import Alert from '@cdo/apps/componentLibrary/alert/Alert';
-import {Button, LinkButton} from '@cdo/apps/componentLibrary/button';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import Typography from '@cdo/apps/componentLibrary/typography';
 import DCDO from '@cdo/apps/dcdo';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectType} from '@cdo/apps/lab2/types';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -57,7 +59,7 @@ const CopyToClipboardButton: React.FunctionComponent<{
       ariaLabel={i18n.copyLinkToProject()}
       text={i18n.copyLinkToProject()}
       type="secondary"
-      color="white"
+      color="black"
       size="m"
       onClick={handleCopyToClipboard}
       className={moduleStyles.shareDialogButton}
@@ -85,7 +87,6 @@ const AfeCareerTourBlock: React.FunctionComponent = () => {
         href={careersUrl}
         text={i18n.careerTourAction()}
         type="primary"
-        color="white"
         size="m"
         target="_blank"
         iconRight={{
@@ -116,7 +117,7 @@ const SubmitButtonInfo: React.FunctionComponent<{
         iconLeft={{iconName: 'award'}}
         text={i18n.submitProjectGallery_header()}
         type="secondary"
-        color="white"
+        color="black"
         size="m"
         onClick={onSubmitClick}
         className={moduleStyles.shareDialogButton}
@@ -148,6 +149,7 @@ const ShareDialog: React.FunctionComponent<{
   onSubmitClick: () => void;
   submissionStatus: SubmissionStatusType | undefined;
   channelId: string;
+  userSharingDisabled: boolean | undefined;
 }> = ({
   dialogId,
   shareUrl,
@@ -156,8 +158,11 @@ const ShareDialog: React.FunctionComponent<{
   onSubmitClick,
   submissionStatus,
   channelId,
+  userSharingDisabled,
 }) => {
   const dispatch = useAppDispatch();
+  const sharingDisabled = () =>
+    userSharingDisabled && ['pythonlab', 'weblab2'].includes(projectType);
 
   const handleClose = useCallback(() => {
     dispatch(hideShareDialog());
@@ -179,9 +184,24 @@ const ShareDialog: React.FunctionComponent<{
       : STUDENT_FEEDBACK_LINK;
   });
 
-  return (
+  // We pull the theme from Lab2Registry because the ShareDialog is not wrapped by the lab's
+  // ThemeProvider (the header is in its own tree). We copy the lab theme to the registry
+  // in Lab2Wrapper.
+  const theme = Lab2Registry.getInstance().getTheme();
+
+  return sharingDisabled() ? (
+    <Dialog
+      title={i18n.sharingDisabledTitle()}
+      description={i18n.sharingBlockedByTeacherOpenEndedProjects()}
+      mode={theme === 'Light' ? 'light' : 'dark'}
+      primaryButtonProps={{
+        onClick: () => dispatch(hideShareDialog()),
+        text: i18n.ok(),
+      }}
+    />
+  ) : (
     <FocusLock>
-      <div className={moduleStyles.dialogContainer}>
+      <div className={moduleStyles.dialogContainer} data-theme={theme}>
         <div id="share-dialog" className={moduleStyles.shareDialog}>
           <Typography
             semanticTag="h1"
@@ -249,7 +269,7 @@ const ShareDialog: React.FunctionComponent<{
                     ariaLabel={i18n.keepPlaying()}
                     text={i18n.keepPlaying()}
                     type="secondary"
-                    color="white"
+                    color="black"
                     size="m"
                     onClick={handleClose}
                     className={moduleStyles.keepPlayingButton}
@@ -259,7 +279,6 @@ const ShareDialog: React.FunctionComponent<{
                     href={finishUrl}
                     text={i18n.finish()}
                     type="primary"
-                    color="white"
                     size="m"
                   />
                 </div>
@@ -268,7 +287,6 @@ const ShareDialog: React.FunctionComponent<{
                   ariaLabel={i18n.done()}
                   text={i18n.done()}
                   type="primary"
-                  color="white"
                   size="m"
                   onClick={handleClose}
                 />

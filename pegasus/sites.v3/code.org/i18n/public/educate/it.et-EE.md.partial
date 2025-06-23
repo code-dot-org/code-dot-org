@@ -17,7 +17,7 @@ theme: responsive
 
 ## Minimum Supported Browsers and Platforms
 
-Alates juulist 2024 värskendame brauserite ja opsüsteemide jaoks vajalikke minimaalseid versioone. Kuigi vanad versioonid võivad endiselt töötada, me ei saa vanemate versioonide veaparanduse taotlusi toetada.
+Igal aastal värskendame brauserite ja opsüsteemide jaoks vajalikke minimaalseid versioone. Kuigi vanad versioonid võivad endiselt töötada, me ei saa vanemate versioonide veaparanduse taotlusi toetada.
 
 <table>
   <tr>
@@ -25,28 +25,6 @@ Alates juulist 2024 värskendame brauserite ja opsüsteemide jaoks vajalikke min
       <table>
         <th>
           Browser
-        </th>
-        <tr>
-          <td>Chrome 96.x</td>
-        </tr>
-        <tr>
-          <td>Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Mobile Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Edge 94.x</td>
-        </tr>
-        <tr>
-          <td>Firefox 91.x</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
-      <table>
-        <th>
-          Brauser juuli '24
         </th>
         <tr>
           <td>Kroom 103.x</td>
@@ -71,28 +49,6 @@ Alates juulist 2024 värskendame brauserite ja opsüsteemide jaoks vajalikke min
           Platvorm
         </th>
         <tr>
-          <td>macOS 10.13</td>
-        </tr>
-        <tr>
-          <td>iOS 11.x</td>
-        </tr>
-        <tr>
-          <td>Windows 7</td>
-        </tr>
-        <tr>
-          <td>Android 6</td>
-        </tr>
-        <tr>
-          <td>ChromeOS (Chromebooks)</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
-      <table>
-        <th>
-          Platvorm juuli '24
-        </th>
-        <tr>
           <td>macOS 10.15</td>
         </tr>
         <tr>
@@ -103,6 +59,51 @@ Alates juulist 2024 värskendame brauserite ja opsüsteemide jaoks vajalikke min
         </tr>
         <tr>
           <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+    <!-- "coming soon" system requirements, to be updated and made live from March through July. -->
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Brauser Juuli '25
+        </th>
+        <tr>
+          <td>Kroom 109</td>
+        </tr>
+        <tr>
+          <td>Safari 16.6</td>
+        </tr>
+        <tr>
+          <td>Mobiilne Safari 16</td>
+        </tr>
+        <tr>
+          <td>Serv 128</td>
+        </tr>
+        <tr>
+          <td>Firefox 115</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platvorm 25. juuli
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 16.x</td>
+        </tr>
+        <tr>
+          <td>Windows 10</td>
+        </tr>
+        <tr>
+          <td>Android 8</td>
         </tr>
         <tr>
           <td>ChromeOS (Chromebooks)</td>
@@ -147,7 +148,6 @@ Kasutame [YouTube](https://www.youtube.com) videote manustamiseks Code.org ja me
 ### Can you play this video?
 
 Enne Code.org veebikursuste alustamist testige alloleva video taasesitust, et veenduda, et olete valmis minema.
-
 
 <!--
 The following HTML is a copy of video_with_fallback.haml. once this file can be converted to

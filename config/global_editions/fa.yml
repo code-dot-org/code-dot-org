@@ -11,6 +11,13 @@ locales: [fa-IR, en-US]
 locale_lock: true
 countries: [IR]
 
+# The list of available project types
+project_types: &project_types
+  - spritelab
+  - artist
+  - applab
+  - gamelab
+
 # The top bar on the site consisting of dropdown menus and navigation links
 header:
   # The topbar (which is collapsed into the hamburger in certain contexts)
@@ -43,7 +50,7 @@ header:
         domain: studio.code.org
         id: header-student-home
       - title: course_catalog
-        url: /global/fa/students
+        url: /global/fa/catalog
         domain: studio.code.org
         id: header-student-courses
 
@@ -65,41 +72,35 @@ header:
   hamburger:
     student:
       - title: learn
-        domain: code.org
-        url: /global/fa/students
+        domain: studio.code.org
+        url: /global/fa/catalog
         id: learn
       - title: legal
         type: expander
         id: legal_entries
         subentries:
           - title: legal_privacy
-            domain: code.org
-            url: /privacy
+            url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
           - title: legal_cookie_notice
-            domain: code.org
-            url: /cookies
+            url: https://code-org.translate.goog/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
           - title: legal_tos
-            domain: code.org
-            url: /tos
+            url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
 
     teacher:
       - title: learn
-        domain: code.org
-        url: /global/fa/students
+        domain: studio.code.org
+        url: /global/fa/catalog
         id: learn
       - title: legal
         type: expander
         id: legal_entries
         subentries:
           - title: legal_privacy
-            domain: code.org
-            url: /privacy
+            url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
           - title: legal_cookie_notice
-            domain: code.org
-            url: /cookies
+            url: https://code-org.translate.goog/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
           - title: legal_tos
-            domain: code.org
-            url: /tos
+            url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
 
   # Help button (?)
   help:
@@ -113,33 +114,26 @@ footer:
   links:
     studio:
       - title: privacy
-        url: /privacy
-        domain: code.org
+        url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
         style: 'color: #ffa400;'
       - title: cookie_notice
-        url: /cookies
-        domain: code.org
+        url: https://code-org.translate.goog/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
       - title: tos_short
-        url: /tos
-        domain: code.org
+        url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
     code_org:
       - title: privacy_policy
         url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
-        domain: code.org
       - title: terms
         url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
-        domain: code.org
     hour_of_code:
       - title: terms
-        url: /tos
-        domain: code.org
+        url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
         target: _blank
       - title: privacy
-        url: /privacy
-        domain: code.org
+        url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
         target: _blank
       - title: cookie
-        url: /cookies
+        url: https://code-org.translate.goog/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
         target: _blank
 
 # Route matching to influence properties of components
@@ -152,8 +146,8 @@ pages:
         # Do not allow switching away from showing ONLY translated courses
         forceTranslated: true
       StartNewProject:
-        # Do not show all project options, just the basic ones
-        canViewFullList: false
+        # Show only available project options
+        availableProjectTypes: *project_types
       CurriculumQuickAssign:
         # For section setup, truncate the 'quick access' course listing to
         # only items that are translated to Farsi
@@ -180,3 +174,30 @@ pages:
       MarketingAnnouncementBanner: false
       TeacherResources: false
       IncubatorBanner: false
+  # Account Settings
+  - path: /users/edit
+    components:
+      # Do not allow LTI use
+      LtiRosterSyncSettings: false
+      # Do not provide parental links to information about how to create accounts when deleting sections / accounts
+      PersonalLoginDialog:
+        hideInstructions: true
+      TeacherWarning:
+        hideInstructions: true
+  # Professional Learning
+  - path: /my-professional-learning
+    components:
+      LandingPage:
+        hideMyFacilitatorCenterTab: true
+        hideInstructorCenterTab: false
+        hideRPCenterTab: true
+        hideWorkshopOrganizerCenterTab: true
+        hideMyPLWorkshopEnrollmentCelebrationDialog: true
+        hideMyPLBanner: true
+        hideMyPLSelfPacedPL: false
+        hideMyPLJoinSectionArea: true
+        hideMyPLLandingPageWorkshopsTable: true
+        hideMyPLStaticRecommendedPL: false
+        hideMyPLStaticRecommendedPLMidHighBlock: true
+        hideMyPLStaticRecommendedPLSelfPacedBlock: false
+        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /global/fa/teacher

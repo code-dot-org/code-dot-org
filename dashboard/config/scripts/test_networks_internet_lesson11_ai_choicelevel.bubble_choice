@@ -1,0 +1,9 @@
+name 'test-networks-internet-lesson11-AI-choiceLevel'
+display_name 'AI Expert Chatbots'
+description 'Pick from these AI Expert chatbots to learn about four possible AI-driven solutions to network vulnerabilities.'
+
+sublevels
+level 'test-networks-internet-lesson11-level2a'
+level 'test-networks-internet-lesson11-level2b'
+level 'test-networks-internet-lesson11-level2c'
+level 'test-networks-internet-lesson11-level2d'

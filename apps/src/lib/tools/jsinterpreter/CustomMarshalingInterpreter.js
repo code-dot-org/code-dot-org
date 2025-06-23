@@ -603,12 +603,13 @@ export default class CustomMarshalingInterpreter extends Interpreter {
    * @param code {string} - the code to evaluation
    * @param scope {Object} - An object of globals to be added to the scope of code being executed
    * @param {Object} opts - Additional options to control behavior
-   * @param {Array} opts.asyncFunctionList - list of functions to treat asynchronously
-   * @param {boolean} opts.legacy - If true, code will be run natively via an eval-like method,
+   * @param {Array} [opts.asyncFunctionList] - list of functions to treat asynchronously
+   * @param {boolean} [opts.legacy] - If true, code will be run natively via an eval-like method,
    *     otherwise it will use the js interpreter.
+   * @param {number} [opts.runMaxSteps] - Run up to this many steps.
    * @returns the interpreter instance unless legacy=true, in which case, it returns whatever the given code returns.
    */
-  static evalWith(code, scope, {asyncFunctionList, legacy} = {}) {
+  static evalWith(code, scope, {asyncFunctionList, legacy, runMaxSteps} = {}) {
     const globals = {
       executionInfo: DEFAULT_EXECUTION_INFO,
       ...scope,
@@ -637,7 +638,15 @@ export default class CustomMarshalingInterpreter extends Interpreter {
           interpreter.marshalNativeToInterpreterObject(globals, 5, scope);
         }
       );
-      interpreter.run();
+      if (runMaxSteps) {
+        let stepCount = 0;
+        while (interpreter.step() && stepCount++ < runMaxSteps);
+        if (stepCount >= runMaxSteps) {
+          console.log('evalWith: exceeded step count.');
+        }
+      } else {
+        interpreter.run();
+      }
       return interpreter;
     }
   }

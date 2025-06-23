@@ -15,7 +15,7 @@ Scenario: Fallback player
 @eyes
 Scenario: Fallback player for unplugged
   When I open my eyes to test "fallback player for unplugged"
-  Given I am on "http://studio.code.org/s/course1/lessons/1/levels/1?force_youtube_fallback"
+  Given I am on "http://studio.code.org/courses/course1/units/1/lessons/1/levels/1?force_youtube_fallback"
   When I wait to see ".vjs-big-play-button"
   And I see no difference for "fallback video player for unplugged"
   And I close my eyes
@@ -23,7 +23,7 @@ Scenario: Fallback player for unplugged
 @eyes
 Scenario: Fallback player for embedded
   When I open my eyes to test "fallback player for embedded"
-  Given I am on "http://studio.code.org/s/allthethings/lessons/34/levels/1?force_youtube_fallback=1"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/34/levels/1?force_youtube_fallback=1"
   When I wait to see ".vjs-big-play-button"
   And I see no difference for "fallback video player for embedded"
   And I close my eyes

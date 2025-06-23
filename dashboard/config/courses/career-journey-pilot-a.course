@@ -1,0 +1,25 @@
+{
+  "name": "career-journey-pilot-a",
+  "script_names": [
+    "career-journey-pilot-a"
+  ],
+  "original_script_names": [
+    "career-journey-pilot-a"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "career-journey-pilot-a",
+    "has_numbered_units": true,
+    "pilot_experiment": "career-journeys-elem-a",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

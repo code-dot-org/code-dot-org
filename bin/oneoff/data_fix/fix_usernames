@@ -1,0 +1,87 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# This script searches for users with invalid usernames and generates a new one.
+# Work was already done to confirm that none of the users with invalid usernames
+# are using username+password to login.
+
+require 'honeybadger/ruby'
+require 'optparse'
+require 'ruby-progressbar'
+
+options = {skip_update: false}
+OptionParser.new do |opts|
+  opts.banner = "Usage: #{File.basename(__FILE__)} [options]"
+  opts.on('-s', '--skip-update', 'Skip performing the update.') do
+    options[:skip_update] = true
+  end
+  opts.on('-h', '--help', 'Add -s to skip the actual update.') do
+    puts opts
+    exit
+  end
+end.parse!
+
+# Disable Honeybadger breadcrumbs to avoid memory leaks.
+Honeybadger.config.set(:'breadcrumbs.enabled', false)
+
+require_relative '../../../dashboard/config/environment'
+
+# Query for all Users with a username which don't match our validation check.
+users = User.where('username NOT REGEXP ?', User::USERNAME_REGEX.source)
+
+total_successes = 0
+total_failures = 0
+
+success_status = options[:skip_update] ? 'skipped' : 'updated'
+update_progress_title = proc {"Processed[%c/%C]: |%W| #{success_status.capitalize}: #{total_successes}; Failed: #{total_failures}; %a"}
+progress_bar = ProgressBar.create(total: users.count, format: update_progress_title.call)
+
+log_path = CDO.dir('log', 'oneoff', "#{File.basename(__FILE__)}_#{Time.now.utc.strftime('%Y%m%dT%H%M%S')}.csv")
+FileUtils.mkdir_p File.dirname(log_path)
+log_csv = CSV.open(log_path, 'w', col_sep: ';', write_headers: true, headers: %w[status user_id message])
+
+log_operation = proc do |status, user_id, message|
+  case status
+  when 'updated'
+    total_successes += 1
+    progress_bar.log "[#{Time.now.utc.iso8601}] Successfully updated User[#{user_id}]: #{message}"
+  when 'skipped'
+    total_successes += 1
+    progress_bar.log "[#{Time.now.utc.iso8601}] Skipped updating User[#{user_id}]: #{message}"
+  when 'failed'
+    total_failures += 1
+    progress_bar.log "[#{Time.now.utc.iso8601}] Failed to update User[#{user_id}]: #{message}".red
+  end
+
+  log_csv.add_row [status, user_id, message]
+  log_csv.flush
+
+  progress_bar.format update_progress_title.call
+end
+
+batch_size = 10_000
+users.in_batches(of: batch_size) do |users_batch|
+  users_batch.pluck(
+    :id,
+    :name,
+    :username,
+  ).each do |user_id, name, original_username|
+    new_username = UserHelpers.generate_username(User.with_deleted, name)
+    unless options[:skip_update]
+      # `User.where.update_all` allows updating a record without the need to init the model instance,
+      # preventing memory leaks caused by the serialization of the `properties` column.
+      User.where(id: user_id).update_all(username: new_username)
+    end
+
+    log_operation.call(success_status, user_id, {original_username: original_username, new_username: new_username}.to_json)
+  rescue StandardError => exception
+    log_operation.call('failed', user_id, exception.inspect)
+  end
+
+  progress_bar.progress += batch_size
+rescue ProgressBar::InvalidProgressError
+  progress_bar.finish
+end
+
+progress_bar.log "Log file: #{log_path}"
+progress_bar.log "Finished at: #{Time.now.utc.iso8601}"

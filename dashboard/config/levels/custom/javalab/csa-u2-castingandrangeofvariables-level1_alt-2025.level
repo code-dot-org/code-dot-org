@@ -1,0 +1,33 @@
+<Javalab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2025-03-19T20:52:59.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "contained_level_names": [
+      "CSA U2_Casting-and-range-of-variables-L1_Contained"
+    ],
+    "display_name": "Predict and Run: Overflow",
+    "long_instructions": "Here's some instructions",
+    "mini_rubric": "false",
+    "ai_tutor_available": "true",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyClass.java": {
+        "text": "public class MyClass {\n    public static void main(String args[]) {\n        int bigNumber = 2147483647;\n        System.out.println(\"bigNumber: \" + bigNumber);\n        System.out.println(bigNumber + \" plus 1: \" + (bigNumber + 1));\n        System.out.println(\"Integer.MAX_VALUE: \" + Integer.MAX_VALUE);\n\n        System.out.println(\"--------------------------------\");\n\n        int smallNumber = -2147483648;\n        System.out.println(\"smallNumber: \" + smallNumber);\n        System.out.println(smallNumber + \" minus 1: \" + (smallNumber - 1));\n        System.out.println(\"Integer.MIN_VALUE: \" + Integer.MIN_VALUE);    \n        \n    }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "encrypted_examples": [
+
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-19T20:52:59.075+00:00\",\"changed\":[\"cloned from \\\"csa-u2-castingandrangeofvariables-level1\\\"\"],\"cloned_from\":\"csa-u2-castingandrangeofvariables-level1\"},{\"changed_at\":\"2025-03-19 20:53:01 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

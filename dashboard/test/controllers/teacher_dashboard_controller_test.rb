@@ -77,41 +77,28 @@ class TeacherDashboardControllerTest < ActionController::TestCase
     assert_redirected_to "/teacher_dashboard/sections/#{section.id}/progress?view=v2"
   end
 
-  test 'enable_experiments: redirects to home if no sections' do
-    other_teacher = create(:teacher)
-    sign_in other_teacher
+  test 'redirect_to_newest_section: redirects to newest section courses page if sections instructed' do
+    sign_in @section_owner
+    section = create :section, user: @section_owner, created_at: 2.days.from_now
+    get :redirect_to_newest_section, params: {location: "courses"}
 
-    get :enable_experiments
-
-    assert_redirected_to '/home'
+    assert_redirected_to "/teacher_dashboard/sections/#{section.id}/courses"
   end
 
-  test 'enable_experiments: redirects to newest section with flags' do
+  test 'redirect_to_newest_section: redirects to newest section calendar page if sections instructed' do
     sign_in @section_owner
-
     section = create :section, user: @section_owner, created_at: 2.days.from_now
 
-    get :enable_experiments
+    get :redirect_to_newest_section, params: {location: "calendar"}
 
-    assert_redirected_to "/teacher_dashboard/sections/#{section.id}/progress?enableExperiments=teacher-local-nav-v2"
+    assert_redirected_to "/teacher_dashboard/sections/#{section.id}/calendar"
   end
 
-  test 'disable_experiments: redirects to home if no sections' do
-    other_teacher = create(:teacher)
-    sign_in other_teacher
-
-    get :disable_experiments
-
-    assert_redirected_to '/home'
-  end
-
-  test 'disable_experiments: redirects to newest section with flags' do
+  test 'redirect_to_newest_section: redirects to newest section lesson materials page if sections instructed' do
     sign_in @section_owner
-
     section = create :section, user: @section_owner, created_at: 2.days.from_now
+    get :redirect_to_newest_section, params: {location: "materials"}
 
-    get :disable_experiments
-
-    assert_redirected_to "/teacher_dashboard/sections/#{section.id}/progress?disableExperiments=teacher-local-nav-v2"
+    assert_redirected_to "/teacher_dashboard/sections/#{section.id}/materials"
   end
 end

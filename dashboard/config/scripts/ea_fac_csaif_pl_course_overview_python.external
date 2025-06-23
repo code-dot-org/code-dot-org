@@ -1,0 +1,52 @@
+name 'ea-fac-csaif_pl_course_overview_python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Programming Fundamentals Curriculum Overview
+ 
+#### The **Programming Fundamentals** curriculum unit introduces students to programming, algorithms, and ethical computing.
+
+#### They learn how algorithms solve problems, how to design and debug Python programs with AI tools, and will consider the societal impact of computing. 
+
+
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
+
+  <div>
+    <h4 style="margin-top: 0; font-weight: bold;">Students will:</h4>
+    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
+      <li> Define, analyze, and improve algorithms using sequence, selection, and iteration.</li>&#8201;
+    <li> Use variables, conditionals, loops, and functions to create, test, and refine modular programs.</li>&#8201;
+    <li> Assess AI technologies for biases and privacy concerns, proposing strategies to mitigate risks.</li>&#8201;
+    <li> Connect programming skills to real-world opportunities in computing and related industries.</li><br>
+    <li> Use abstraction, decomposition, and pattern recognition to design and troubleshoot programs effectively.</li>
+    </ul>
+  </div>
+  <div>
+    <img src="https://images.code.org/db73fbca8ae8ad9c2f2b36aba4b6f423-image-1740587515537.png" 
+         alt="Icon with computer and Python logo" 
+         style="border-radius: 10px; width: 300px; height: auto;">
+  </div>
+</div>
+
+---
+
+<div style="clear:both;"></div>
+
+## Unit Calendar 
+
+#### Take a quick look at the lessons included in this unit using the calendar tool.
+
+#### This version of the calendar shows the pacing for 45 minute class periods and can be customized using the drop-down menu to accommodate your schedule. 
+
+#### Check out the <a href="https://studio.code.org/s/pf-aitutor-pilot-content-2024" target="blank" rel="noopener noreferrer">calendar feature</a> on top of the unit preview. 
+
+<p align="center">
+
+<img src="https://images.code.org/075430f6f244afc930aa6f0398f07659-image-1741375452584.png" alt="calendar of lesson overview" width="700px" style="border-radius:10px; ">
+</p>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Explore the full unit curriculum  <a href='https://studio.code.org/courses/programming-fundamentals-aitutor-2024' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>here</a>.
+</p>
+MARKDOWN

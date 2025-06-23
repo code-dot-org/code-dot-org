@@ -30,7 +30,7 @@ class LessonGroup < ApplicationRecord
 
   validates :position, numericality: {greater_than: 0}
 
-  validates_uniqueness_of :key, scope: :script_id, case_sensitive: true
+  validates :key, uniqueness: {scope: :script_id, case_sensitive: true}
 
   validates :key,
     presence: {
@@ -156,12 +156,12 @@ class LessonGroup < ApplicationRecord
     summary
   end
 
-  def summarize_for_lesson_dropdown(is_student = false)
+  def summarize_for_lesson_dropdown(is_student = false, unit_group_unit: nil)
     {
       key: key,
       displayName: localized_display_name,
       userFacing: user_facing,
-      lessons: lessons.select(&:has_lesson_plan).map {|lesson| lesson.summarize_for_lesson_dropdown(is_student)}
+      lessons: lessons.select(&:has_lesson_plan).map {|lesson| lesson.summarize_for_lesson_dropdown(is_student, unit_group_unit: unit_group_unit)}
     }
   end
 

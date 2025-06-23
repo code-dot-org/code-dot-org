@@ -1,0 +1,65 @@
+name 'ea-fac-csaif_pl_module_overview_l3-cs-devices'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Module Overview
+
+#### This professional learning module is made up of **four lessons:**
+
+
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: auto;">
+
+  
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/d7a2764589820d4023ca876e49c892c1-image-1740592077414.png" alt="Lesson 1 Icon" style="width: 20%; max-width: 120px; height: auto;">
+        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+            <h3><b>Lesson 1 - Introduction to Teaching Computer Systems and Devices</b></h3>
+            <p style = "font-size: 14pt";><strong>⭐️ You are here!⭐️</strong> </p><p style = "font-size: 14pt";>            
+           This lesson provides an introduction to the Computer Systems and Devices unit and professional learning module. It offers a brief overview of course resources and features.<br><br> <em>10 minutes</em></p>
+        </div>
+    </div>
+
+   
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/df2e7acfa0455af64459b2eaa3ba4e89-image-1741879516634.png" alt="Lesson 2 Icon" style="width: 20%; max-width: 120px; height: auto;">
+        <div style="flex: 1; background: #B7E0E5; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); ">
+            <h3> <b>Lesson 2 - Hardware and Software</b></h3>
+            <p style = "font-size: 14pt";>This lesson will build your foundational knowledge of hardware and software to understand a complete computer system while getting you ready to teach the unit. <br><br> <em>30 minutes</em></p>
+        </div>
+    </div>
+
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/525ac4397b9f0b3d7aabb513b9f3437f-image-1741879575537.png" alt="Lesson 3 Icon" style="width: 20%; max-width: 120px; height: auto;">
+        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <h3><b>Lesson 3 - Data in Computer Systems</b></h3>
+            <p style = "font-size: 14pt";>This lesson introduces various types of data, explores methods for collecting different kinds of data, and helps learners determine the appropriate data needed to solve a problem.<br><br> <em>30 minutes</em></p>
+        </div>
+    </div>
+
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/b39dda06cfbafec7aef8b85d0c3caed1-image-1740592349350.png" alt="Lesson 5 Icon" style="width: 20%; max-width: 120px; height: auto;">
+        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <h3><b>Lesson 4 - Preparing for the Final Project</b></h3>
+            <p style = "font-size: 14pt";>In this lesson, you will focus on key instructional strategies for guiding students through their final project. You will explore effective collaboration methods, structured feedback approaches, and planning techniques to help students manage their time and workflow. <br><br> <em>20 minutes</em></p>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+---
+
+## Engaging with This Module
+
+#### Feel free to complete as much or as little of this module as is useful for you and your students! 
+
+#### Stop, start, and revisit content as you see fit. We hope you'll find these activities useful to start teaching this unit. 
+
+#### You'll be able to give Code.org your feedback on the last level of this module.
+
+![]()
+MARKDOWN

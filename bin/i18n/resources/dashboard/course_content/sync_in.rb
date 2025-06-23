@@ -180,6 +180,21 @@ module I18n
                 end
               end
 
+              # Lab2 Exemplar Settings
+              if level.uses_lab2? && level.try(:exemplar_settings)
+                exemplar = level.exemplar_settings
+                i18n_strings['exemplar'] = {} unless exemplar.empty?
+                if exemplar['validationSuccessMessage']
+                  i18n_strings['exemplar']['validationSuccessMessage'] = exemplar['validationSuccessMessage']
+                end
+                if exemplar['validationFailureMessage']
+                  i18n_strings['exemplar']['validationFailureMessage'] = exemplar['validationFailureMessage']
+                end
+                if exemplar['playerTitle']
+                  i18n_strings['exemplar']['playerTitle'] = exemplar['playerTitle']
+                end
+              end
+
               # Panels
               if level.is_a? Panels
                 panels = level.panels

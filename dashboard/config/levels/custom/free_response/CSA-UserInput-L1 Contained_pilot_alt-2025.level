@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-03-19T18:16:02.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "What do you think this program does?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "allow_multiple_attempts": "false",
+    "ai_tutor_available": true,
+    "name_suffix": "_alt-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-19T18:16:02.703+00:00\",\"changed\":[\"cloned from \\\"CSA-UserInput-L1 Contained_pilot-2025\\\"\"],\"cloned_from\":\"CSA-UserInput-L1 Contained_pilot-2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

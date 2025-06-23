@@ -9,7 +9,6 @@ Feature: Lesson materials page - Eyes
 
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
-    Given I use a cookie to mock the DCDO key "teacher-local-nav-v2" as "true"
     Given I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
 
     When I click selector "a:contains(New Section)" once I see it to load a new page
@@ -30,6 +29,6 @@ Feature: Lesson materials page - Eyes
 
     And I click selector "a:contains('Lesson Plan: AI Rubrics')" to load a new tab
     And I wait until element "h1:contains('Lesson 48: AI Rubrics')" is visible
-    And I am on "http://studio.code.org/s/allthethings/lessons/48"
+    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48"
 
     And I close my eyes

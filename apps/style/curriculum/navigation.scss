@@ -1,16 +1,15 @@
-@import "color.scss";
-@import "font";
+@import 'color.scss';
+@import '@code-dot-org/component-library-styles/font';
 
 .nav-bar {
   @include main-font-bold;
 
   margin-right: 5px;
-  min-width: 200px;
   font-size: 14px;
 
   .category {
     padding-left: 10px;
-    width: 200px;
+    min-width: 200px;
     height: auto;
     display: flex;
     flex-direction: column;

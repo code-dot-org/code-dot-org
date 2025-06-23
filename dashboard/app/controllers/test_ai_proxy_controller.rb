@@ -19,6 +19,7 @@ class TestAiProxyController < ApplicationController
         'Key Concept' => key_concept,
         'Label' => 'Convincing Evidence',
         'Observations' => 'This is a fake assessment for testing purposes 👍',
+        'Evidence' => 'Fake evidence for testing purposes 👍',
       }
     end
     render json: {data: response_data}

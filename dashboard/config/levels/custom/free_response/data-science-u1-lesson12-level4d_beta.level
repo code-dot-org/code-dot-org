@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-01-24T21:48:41.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Step 4: Trend, Pattern, or Outlier Analysis",
+    "long_instructions": "####What trends, patterns, or outliers did you identify in your data? What insights did they provide for your data question?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_beta"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-24T21:48:41.301+00:00\",\"changed\":[\"cloned from \\\"data-science-u1-lesson12-level4d\\\"\"],\"cloned_from\":\"data-science-u1-lesson12-level4d\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

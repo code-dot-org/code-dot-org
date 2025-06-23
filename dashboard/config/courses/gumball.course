@@ -1,0 +1,23 @@
+{
+  "name": "gumball",
+  "script_names": [
+    "gumball"
+  ],
+  "original_script_names": [
+    "gumball"
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "gumball",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

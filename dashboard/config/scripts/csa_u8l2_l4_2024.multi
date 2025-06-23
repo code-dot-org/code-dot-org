@@ -39,3 +39,13 @@ II. `{86, 25, 11, 5, 28}`
 III. `{11, 25, 5, 99, 28}`
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The `getLocation` method exits immediately once the target element (`findMe`) is found. A worst-case scenario occurs when the target is either not in the array at all (causing the loop to check every element before returning `-1`) or is in the last position (checked only after all previous elements).
+
+`Array I` has `86` as the last element, so the method checks every index before finding `86`.
+`Array II` has `86` as the first element, so the loop stops right away—not a worst case.
+`Array III` does not contain `86` at all, so the entire array is checked before returning `-1`.
+
+Hence, the worst-case occurs for `I` and `III` only, making the correct answer `E`
+MARKDOWN

@@ -67,7 +67,9 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed],
         tts_autoplay_enabled: params[:tts_autoplay_enabled].nil? ? false : params[:tts_autoplay_enabled],
         ai_tutor_enabled: params[:ai_tutor_enabled].nil? ? false : params[:ai_tutor_enabled],
-        restrict_section: params[:restrict_section].nil? ? false : params[:restrict_section]
+        restrict_section: params[:restrict_section].nil? ? false : params[:restrict_section],
+        avatar_color: params[:avatar_color].nil? ? 0 : params[:avatar_color],
+        avatar_emoji: params[:avatar_emoji].nil? ? 0 : params[:avatar_emoji],
       }
     )
     return head :bad_request unless section.persisted?
@@ -118,6 +120,8 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     fields[:hidden] = params[:hidden] unless params[:hidden].nil?
     fields[:restrict_section] = params[:restrict_section] unless params[:restrict_section].nil?
     fields[:ai_tutor_enabled] = params[:ai_tutor_enabled] unless params[:ai_tutor_enabled].nil?
+    fields[:avatar_color] = params[:avatar_color].nil? ? 0 : params[:avatar_color]
+    fields[:avatar_emoji] = params[:avatar_emoji].nil? ? 0 : params[:avatar_emoji]
 
     section.update!(fields)
     if @unit
@@ -316,8 +320,12 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         @course = UnitGroup.get_from_cache(course_id)
         return head :bad_request unless @course
         return head :forbidden unless @course.course_assignable?(current_user)
-        @unit = params[:unit_id] ? Unit.get_from_cache(params[:unit_id]) : nil
-        return head :bad_request if @unit && @course.id != @unit.unit_group.try(:id)
+        @unit = if @course.single_unit_course?
+                  @course.units_for_user(current_user).first
+                else
+                  params[:unit_id] ? Unit.get_from_cache(params[:unit_id]) : nil
+                end
+        return head :bad_request if @unit && @course && @unit.unit_groups.exclude?(@course)
       when 'Unit'
         unit_id = course_version.content_root_id
         @unit = Unit.get_from_cache(unit_id)

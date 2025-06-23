@@ -6,17 +6,15 @@
     "properties": {
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "9-12 Special topics",
-      "is_course": true,
-      "is_migrated": true,
-      "version_year": "unversioned"
+      "is_migrated": true
     },
     "new_name": null,
-    "family_name": "computer-systems-playground",
-    "serialized_at": "2025-01-08 00:29:57 UTC",
-    "published_state": "in_development",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-03-28 09:29:29 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "computer-systems-playground"
     }
@@ -361,19 +359,8 @@
       }
     },
     {
-      "key": "d059ac72-161c-4daf-a38e-9c9f87b33161",
-      "position": 2,
-      "properties": {
-        "progression_name": "Build a Computer "
-      },
-      "seeding_key": {
-        "activity_section.key": "d059ac72-161c-4daf-a38e-9c9f87b33161",
-        "lesson_activity.key": "ef722405-7737-4e42-9409-8e6c851495f2"
-      }
-    },
-    {
       "key": "d447fbee-3bd0-40f1-8b56-b11d61005054",
-      "position": 3,
+      "position": 2,
       "properties": {
       },
       "seeding_key": {
@@ -774,6 +761,17 @@
         "activity_section.key": "0a38fa6d-7597-4e1f-8628-92597af9bf9d",
         "lesson_activity.key": "054fa114-88b1-48d6-8285-07f50de969f1"
       }
+    },
+    {
+      "key": "3144bb1e-02d5-4083-983e-9e994ae28061",
+      "position": 5,
+      "properties": {
+        "name": "Python"
+      },
+      "seeding_key": {
+        "activity_section.key": "3144bb1e-02d5-4083-983e-9e994ae28061",
+        "lesson_activity.key": "054fa114-88b1-48d6-8285-07f50de969f1"
+      }
     }
   ],
   "script_levels": [
@@ -783,6 +781,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-computer-systems-lesson3-level1"
+        ],
         "progression": "Hardware Components Flashcards"
       },
       "bonus": false,
@@ -805,28 +806,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Build a Computer "
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "test-computer-systems-lesson3-level2"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "computer-systems-playground",
-        "activity_section.key": "d059ac72-161c-4daf-a38e-9c9f87b33161"
-      },
-      "level_keys": [
-        "test-computer-systems-lesson3-level2"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
+        "level_keys": [
+          "test-computer-systems-lesson3-level3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -843,7 +825,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -868,7 +850,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 4,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -893,7 +875,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 5,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -918,7 +900,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 6,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -943,7 +925,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 7,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -968,7 +950,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 8,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -993,7 +975,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1018,7 +1000,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 10,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1043,7 +1025,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 11,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1068,7 +1050,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 12,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1093,7 +1075,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 13,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -1118,7 +1100,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1143,7 +1125,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1168,7 +1150,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1193,7 +1175,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 17,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1218,7 +1200,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 18,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -1243,7 +1225,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 19,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -1268,7 +1250,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 20,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -1293,7 +1275,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 21,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -1318,7 +1300,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1343,7 +1325,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1368,7 +1350,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1393,7 +1375,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -1418,7 +1400,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -1443,7 +1425,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -1468,7 +1450,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -1493,7 +1475,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1518,7 +1500,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1543,7 +1525,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1568,7 +1550,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1593,7 +1575,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -1618,7 +1600,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -1643,7 +1625,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1668,7 +1650,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1693,7 +1675,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1718,7 +1700,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1743,7 +1725,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -1768,7 +1750,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -1793,7 +1775,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1818,7 +1800,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1843,7 +1825,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 43,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1866,6 +1848,54 @@
       "level_keys": [
         "Ken's First AI Chat Level"
       ]
+    },
+    {
+      "chapter": 44,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "emma-test-ai-chatbot-python-1"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emma-test-ai-chatbot-python-1"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "3144bb1e-02d5-4083-983e-9e994ae28061"
+      },
+      "level_keys": [
+        "emma-test-ai-chatbot-python-1"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "emma-test-ai-chatbot-python-2"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emma-test-ai-chatbot-python-2"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "3144bb1e-02d5-4083-983e-9e994ae28061"
+      },
+      "level_keys": [
+        "emma-test-ai-chatbot-python-2"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1879,18 +1909,6 @@
         "lesson_group.key": "",
         "script.name": "computer-systems-playground",
         "activity_section.key": "bc632295-1bb1-4dfa-b9e5-450f95784b5b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "test-computer-systems-lesson3-level2",
-        "script_level.level_keys": [
-          "test-computer-systems-lesson3-level2"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "computer-systems-playground",
-        "activity_section.key": "d059ac72-161c-4daf-a38e-9c9f87b33161"
       }
     },
     {
@@ -2395,6 +2413,30 @@
         "lesson_group.key": "",
         "script.name": "computer-systems-playground",
         "activity_section.key": "0a38fa6d-7597-4e1f-8628-92597af9bf9d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emma-test-ai-chatbot-python-1",
+        "script_level.level_keys": [
+          "emma-test-ai-chatbot-python-1"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "3144bb1e-02d5-4083-983e-9e994ae28061"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emma-test-ai-chatbot-python-2",
+        "script_level.level_keys": [
+          "emma-test-ai-chatbot-python-2"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "3144bb1e-02d5-4083-983e-9e994ae28061"
       }
     }
   ],

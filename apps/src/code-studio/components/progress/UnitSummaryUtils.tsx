@@ -172,6 +172,7 @@ interface UnitData {
   wrapupVideo: string | null;
   calendarLessons: CalendarLesson[];
   redirect_unit_url: string | null;
+  unit_position: string | null;
 }
 
 export const setUnitSummaryReduxData = (
@@ -230,7 +231,7 @@ export const setUnitSummaryReduxData = (
   dispatch(initializeHiddenScripts(unitData.section_hidden_unit_info));
   dispatch(setPageType(pageTypes.scriptOverview));
 
-  progress.initCourseProgress(unitData, false);
+  progress.initCourseProgress(unitData);
 
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);

@@ -1,7 +1,7 @@
+import {LinkButton} from '@code-dot-org/component-library/button';
 import React from 'react';
 import {NavLink, generatePath} from 'react-router-dom';
 
-import {LinkButton} from '@cdo/apps/componentLibrary/button';
 import emptyDesk from '@cdo/apps/templates/teacherDashboard/images/empty_desk.svg';
 import blankScreen from '@cdo/apps/templates/teacherDashboard/images/no_curriculum_assigned.svg';
 import NoUnitAssigned from '@cdo/apps/templates/teacherNavigation/images/NoUnitAssigned.svg';

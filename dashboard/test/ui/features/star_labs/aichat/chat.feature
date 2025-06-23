@@ -1,24 +1,29 @@
 @no_mobile
-@no_ci
-
-Feature: AI Chat
+Feature: Model customizations and interactions in AI Chat Lab
 
   "AI Chat" is our lab that introduces students to generative AI
   by allowing them to customize, then interact with large language models.
 
   Background:
     Given I create a levelbuilder named "Simone"
-    And I am on "http://studio.code.org/s/allthethings/lessons/47/levels/2"
+    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/47/levels/2"
     And I click selector "#ui-close-dialog" once I see it
     And I wait until element "#ui-close-dialog" is not visible
     And I dismiss the teacher panel
 
-  Scenario: Making chat request gets response
+  Scenario: Making chat request gets appropriate response
     When I press keys "Hello" for element "#uitest-chat-textarea"
     And I wait until element "#uitest-chat-submit" is enabled
     And I click selector "#uitest-chat-submit"
     And I wait until element "[aria-label='AI bot chat message']" is visible
     Then element "[aria-label='AI bot chat message']" has css property "background-color" equal to "rgb(224, 248, 249)"
+
+    # Note that it's important that we use the word "Damn" here, as our stubbed version of our content moderation service
+    # used in Drone is configured to flag this word.
+    When I press keys "Damn" for element "#uitest-chat-textarea"
+    And I wait until element "#uitest-chat-submit" is enabled
+    And I click selector "#uitest-chat-submit"
+    Then I wait until element ".uitest-chat-message" contains text "This message has been flagged by our content moderation policy."
 
   Scenario: Editing system prompt produces success notification and saves
     When I press keys "You are a safe chatbot" for element "#system-prompt"
@@ -27,9 +32,8 @@ Feature: AI Chat
     Then I wait until element ".uitest-aichat-chat-alert" contains text "System prompt has been updated"
 
     Given I reload the page
-    And I click selector "#ui-close-dialog" once I see it
-    And I wait until element "#ui-close-dialog" is not visible
     And I dismiss the teacher panel
+    And I wait until element "#system-prompt" is visible
     Then element "#system-prompt" has text "You are a safe chatbot"
 
   Scenario: Publishing model enables published view and saves
@@ -55,8 +59,6 @@ Feature: AI Chat
     And I wait until element "#uitest-presentation-view-header" contains text "Jeeves"
 
     Given I reload the page
-    And I click selector "#ui-close-dialog" once I see it
-    And I wait until element "#ui-close-dialog" is not visible
     And I dismiss the teacher panel
     When I click selector "#uitest-user-view-button" once I see it
     Then I wait until element "#uitest-presentation-view-header" contains text "Jeeves"

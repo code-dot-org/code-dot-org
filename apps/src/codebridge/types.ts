@@ -2,10 +2,13 @@ import {LanguageSupport} from '@codemirror/language';
 import {AnyAction, Dispatch} from 'redux';
 
 import {
+  LevelProperties,
   MultiFileSource,
   ProjectFile,
   ProjectSources,
 } from '@cdo/apps/lab2/types';
+
+import {LayoutKey} from './constants';
 
 export type {
   FileId,
@@ -29,35 +32,23 @@ export type SideBarItem = {
 };
 
 export type ConfigType = {
-  activeLeftNav: string;
-  sideBar: SideBarItem[];
-  instructions?: string;
-  Instructions?: () => JSX.Element;
   defaultTheme?: EditorTheme;
-  leftNav: LeftNavElement[];
-  gridLayout?: string;
-  gridLayoutRows?: string;
-  gridLayoutColumns?: string;
   editableFileTypes: string[];
   previewFileTypes?: string[];
   PreviewComponents?: {[key: string]: PreviewComponent};
   languageMapping: {[key: string]: LanguageSupport};
-  labeledGridLayouts?: {
-    [key: string]: {
-      gridLayout: string;
-      gridLayoutRows: string;
-      gridLayoutColumns: string;
-    };
-  };
-  activeGridLayout?: string;
+  activeLayout?: LayoutKey;
   showFileBrowser: boolean;
   validMimeTypes?: string[];
+  layoutComponents: {
+    horizontal: React.FunctionComponent<LayoutProps>;
+    vertical: React.FunctionComponent<LayoutProps>;
+    share?: React.FunctionComponent<LayoutProps>;
+    widget?: React.FunctionComponent<LayoutProps>;
+  };
 };
 
-export type ProjectType = MultiFileSource;
-export type SourceType = ProjectSources;
-
-export type SetProjectFunction = (project: ProjectType) => void;
+export type SetProjectFunction = (project: ProjectSources) => void;
 export type SetConfigFunction = (project: ConfigType) => void;
 export type ResetProjectFunction = () => void;
 export type OnRunFunction = (
@@ -66,6 +57,7 @@ export type OnRunFunction = (
   source: MultiFileSource | undefined
 ) => Promise<void>;
 export type OnStopFunction = () => void;
+export type SendConsoleInputFunction = (input: string) => void;
 
 export type ReducerAction = {
   type: string;
@@ -73,3 +65,36 @@ export type ReducerAction = {
 };
 
 export type EditorTheme = 'light' | 'dark';
+
+export interface CodebridgeLevelProperties extends LevelProperties {
+  validationFile?: ProjectFile;
+  enableMicroBit?: boolean;
+  miniApp?: string;
+  serializedMaze?: MazeCell[][];
+  startDirection?: number;
+  widgetView?: boolean;
+  widgetViewAllowShowCode?: boolean;
+}
+
+// Python Lab specific property
+export interface MazeCell {
+  tileType: number;
+  value: number;
+  assetId: number;
+}
+
+export interface LayoutProps {
+  isProjectLevel?: boolean;
+  isWidgetView?: boolean;
+}
+
+export interface ProjectPickerSettings {
+  currentType: string;
+  showProjectTypePicker: () => void;
+}
+
+export enum RunType {
+  RUN,
+  TEST, // User-written tests
+  VALIDATION, // Levelbuilder-written tests
+}

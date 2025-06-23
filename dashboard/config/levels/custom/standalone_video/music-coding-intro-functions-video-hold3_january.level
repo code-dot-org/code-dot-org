@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2025-01-23T23:12:23.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "uses_lab2": true,
+    "background": "music-black",
+    "encrypted": "false",
+    "video_key": "music_lab_promo_long",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "video_full_width": true,
+    "name_suffix": "_january"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-23T23:12:23.262+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-video-hold3\\\"\"],\"cloned_from\":\"music-coding-intro-functions-video-hold3\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

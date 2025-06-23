@@ -32,10 +32,6 @@ class Maze < Grid
     shape_shift
   )
 
-  def uses_google_blockly?
-    true
-  end
-
   # List of possible skins, the first is used as a default.
   def self.skins
     %w(birds pvz scrat)
@@ -51,7 +47,7 @@ class Maze < Grid
     [['Run Button Only', 0], ['Run and Step', 1], ['Step Button Only', 2]]
   end
 
-  def summarize_as_bonus
+  def summarize_as_bonus(unit_group_unit: nil)
     summary = super
     summary[:start_direction] = start_direction.to_i
     summary

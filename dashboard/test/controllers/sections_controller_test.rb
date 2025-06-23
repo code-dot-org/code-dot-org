@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class SectionsControllerTest < ActionController::TestCase
+  include Minitest::RSpecMocks
+
   self.use_transactional_test_case = true
 
   setup_all do
@@ -58,7 +60,7 @@ class SectionsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "valid log_in wih picture" do
+  test "valid log_in with picture" do
     assert_difference '@picture_user_1.reload.sign_in_count' do # devise Trackable fields are updated
       post :log_in, params: {
         id: @picture_section.code,
@@ -70,7 +72,7 @@ class SectionsControllerTest < ActionController::TestCase
     assert_redirected_to '/'
   end
 
-  test "invalid log_in wih picture" do
+  test "invalid log_in with picture" do
     assert_no_difference '@picture_user_1.reload.sign_in_count' do # devise Trackable fields are not updated
       post :log_in, params: {
         id: @picture_section.code,
@@ -98,7 +100,7 @@ class SectionsControllerTest < ActionController::TestCase
     assert_redirected_to section_path(id: @picture_section.code)
   end
 
-  test "valid log_in wih word" do
+  test "valid log_in with word" do
     assert_difference '@word_user_1.reload.sign_in_count' do # devise Trackable fields are updated
       post :log_in, params: {
         id: @word_section.code,
@@ -110,7 +112,19 @@ class SectionsControllerTest < ActionController::TestCase
     assert_redirected_to '/'
   end
 
-  test "invalid log_in wih word" do
+  test "valid log_in with word without spaces" do
+    assert_difference '@word_user_1.reload.sign_in_count' do # devise Trackable fields are updated
+      post :log_in, params: {
+        id: @word_section.code,
+        user_id: @word_user_1.id,
+        secret_words: @word_user_1.secret_words.delete(' ')
+      }
+    end
+
+    assert_redirected_to '/'
+  end
+
+  test "invalid log_in with word" do
     assert_no_difference '@word_user_1.reload.sign_in_count' do # devise Trackable fields are not updated
       post :log_in, params: {
         id: @word_section.code,
@@ -217,21 +231,11 @@ class SectionsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test 'edit has successful response' do
+  test 'redirect to teacher_dashboard from edit ' do
     sign_in @teacher
-
-    get :edit, params: {id: @word_section.id}
-    assert_response :success
-  end
-
-  test 'redirect to teacher_dashboard from edit if DCDO enabled' do
-    sign_in @teacher
-    DCDO.set('teacher-local-nav-v2', true)
 
     get :edit, params: {id: @word_section.id}
     assert_redirected_to "/teacher_dashboard/sections/#{@word_section.id}/settings"
-
-    DCDO.set('teacher-local-nav-v2', nil)
   end
 
   test 'returns forbidden if requested edit section does not belong to teacher' do
@@ -239,5 +243,90 @@ class SectionsControllerTest < ActionController::TestCase
     other_teacher_section = create :section
     get :edit, params: {id: other_teacher_section.id}
     assert_response :forbidden
+  end
+
+  test 'archive_all archives sections' do
+    sign_in @teacher
+
+    post :archive_all
+
+    assert_response :success
+    response_json = JSON.parse(@response.body)
+    assert_equal 5, response_json['num_hidden']
+    @teacher.sections_owned.each do |section|
+      assert_equal true, section.hidden
+    end
+  end
+
+  test 'archive_all does archive cotaught section' do
+    sign_in @teacher
+    section_owner = create(:teacher)
+
+    coteacher_section = create(:section, user: section_owner, login_type: 'picture')
+    create :section_instructor, section: coteacher_section, instructor: @teacher, status: :active
+
+    post :archive_all
+
+    assert_response :success
+
+    coteacher_section.reload
+    assert_equal true, coteacher_section.hidden
+
+    response_json = JSON.parse(@response.body)
+    assert_equal 6, response_json['num_hidden']
+    @teacher.sections_owned.each do |section|
+      assert_equal true, section.hidden
+    end
+  end
+
+  test 'retrieve_lessons_for_dropdown returns lessons links for a unit' do
+    sign_in @teacher
+    get :retrieve_lessons_for_dropdown, params: {id: @flappy_section.id}
+    assert_response :success
+    response_json = JSON.parse(@response.body)
+    assert_equal response_json, [{"text"=>"Flappy Code", "value"=>"/s/flappy"}, {"text"=>"Lesson 1: Flappy Code", "value"=>"/s/flappy/lessons/1/levels/1"}]
+  end
+
+  describe '#retrieve_lessons_for_dropdown' do
+    let(:teacher) {create :teacher}
+    let(:unit_group) {create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+    let(:unit) {create :unit, :with_levels, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+    let(:unit_position) {1}
+    let!(:unit_group_unit) {create :unit_group_unit, unit_group: unit_group, script: unit, position: unit_position}
+    let(:lesson) {unit.lessons.first}
+    let(:section) {create :section, user: teacher, script: unit, unit_group: unit_group, login_type: 'email'}
+    let(:response) {JSON.parse(@response.body, symbolize_names: true)}
+    let(:response_unit) {response.first}
+    let(:response_lesson) {response.second}
+
+    before do
+      sign_in teacher
+      lesson.update!(has_lesson_plan: true)
+      get :retrieve_lessons_for_dropdown, params: {id: section.id}
+    end
+
+    it 'returns success' do
+      assert_response :success
+    end
+
+    it 'returns Array' do
+      _(response).must_be_instance_of Array
+    end
+
+    it 'returns unit name' do
+      _(response_unit[:text]).must_equal unit.title_for_display(unit_group_unit: unit_group_unit)
+    end
+
+    it 'returns unit path' do
+      _(response_unit[:value]).must_equal "/courses/#{unit_group.name}/units/#{unit_position}"
+    end
+
+    it 'returns lesson name' do
+      _(response_lesson[:text]).must_equal "Lesson #{lesson.relative_position}: #{lesson.localized_name}"
+    end
+
+    it 'returns lesson path' do
+      _(response_lesson[:value]).must_equal "/courses/#{unit_group.name}/units/#{unit_position}/lessons/1/levels/1"
+    end
   end
 end

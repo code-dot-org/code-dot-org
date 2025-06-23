@@ -1,0 +1,8 @@
+.containerWithFooter {
+  display: grid;
+  grid-template-rows: 1fr 64px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "content"
+                       "footer";
+  height: 100%;
+}

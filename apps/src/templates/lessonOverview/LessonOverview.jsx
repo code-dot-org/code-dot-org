@@ -220,12 +220,7 @@ class LessonOverview extends Component {
             inLesson={true}
           />
         )}
-        <h1>
-          {i18n.lessonNumbered({
-            lessonNumber: lesson.position,
-            lessonName: lesson.displayName,
-          })}
-        </h1>
+        <h1 className="uitest-lesson-title">{lesson.title}</h1>
         <h2>{i18n.minutesLabel({number: lesson.duration})}</h2>
         <div style={styles.frontPage}>
           <div style={styles.left}>

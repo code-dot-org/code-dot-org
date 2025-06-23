@@ -47,6 +47,31 @@ class SessionsController < Devise::SessionsController
     end
   end
 
+  # DELETE /resource/expire_other
+  # Expire all existing sessions for the current user, then create a new
+  # authenticated session. The ultimate resulting experience will be that the
+  # user gets signed out of their account on all browsers other than the one
+  # they initiated the request with; on that one, they will still be signed in.
+  def expire_other
+    # Identify current user and preserve any non-user-identifying data in the
+    # current session (ie, assumed_identity, callouts_seen, etc).
+    user = current_user
+    existing_session_data = session.to_hash.except("warden.user.user.key", "_csrf_token")
+
+    # Expire all existing sessions and sign user out.
+    user.expire_all_sessions!
+    sign_out
+
+    # Create a new session for the user and restore data from previous session.
+    sign_in(:user, user)
+    session.merge!(existing_session_data) if existing_session_data
+
+    # Success! Display a notice and redirect to the account settings page, from
+    # which we expect this request to have been initiated.
+    flash[:notice] = I18n.t('devise.sessions.expired_other')
+    redirect_back(fallback_location: users_edit_path)
+  end
+
   # GET /reset_session
   def reset
     client_state.reset

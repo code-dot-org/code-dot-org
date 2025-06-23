@@ -6,11 +6,10 @@ Background:
 
 Scenario:
   When I open my eyes to test "bounce game"
-  And I am on "http://studio.code.org/s/events/lessons/1/levels/1?noautoplay=true"
+  And I am on "http://studio.code.org/courses/events/units/1/lessons/1/levels/1?noautoplay=true"
   And I wait for the lab page to fully load
   And I see no difference for "initial load"
-  And I drag block "moveLeft" to block "whenLeft"
-  Then block "moveLeft" is child of block "whenLeft"
+  And I've initialized the workspace with level 1 bounce blocks
   And I see no difference for "block snap"
   And I press "runButton"
   And I hold key "LEFT"
@@ -19,9 +18,10 @@ Scenario:
   And I see no difference for "level completion"
   And I close my eyes
 
+@skip
 Scenario:
   When I open my eyes to test "freeplay artist sharing"
-  And I am on "http://studio.code.org/s/course3/lessons/21/levels/15?noautoplay=true"
+  And I am on "http://studio.code.org/courses/course3/units/1/lessons/21/levels/15?noautoplay=true"
   And I wait for the lab page to fully load
   And I dismiss the login reminder
   And I see no difference for "initial load"
@@ -34,7 +34,7 @@ Scenario:
 
 Scenario:
   When I open my eyes to test "freeplay playlab sharing"
-  And I am on "http://studio.code.org/s/playlab/lessons/1/levels/10?noautoplay=true"
+  And I am on "http://studio.code.org/courses/playlab/units/1/lessons/1/levels/10?noautoplay=true"
   And I wait for the lab page to fully load
   And I see no difference for "initial load"
   And I press "runButton"

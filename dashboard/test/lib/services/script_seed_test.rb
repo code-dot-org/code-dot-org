@@ -122,6 +122,7 @@ module Services
       script = create_script_tree(with_unit_group: true)
       refute script.course_version
       assert script.unit_group.course_version
+      assert script.unit_group.id, script.original_unit_group_id
       script.freeze
       json = ScriptSeed.serialize_seeding_json(script)
       counts_before = get_counts
@@ -139,6 +140,7 @@ module Services
       assert_equal counts_before, get_counts
       script_after_seed = Unit.with_seed_models.find_by!(name: script.name)
       assert_script_trees_equal(script, script_after_seed)
+      assert_equal script_after_seed.original_unit_group, script.original_unit_group
     end
 
     # This tests the scenario where a script is in a unit group, but we don't
@@ -158,20 +160,24 @@ module Services
       script.resources.destroy_all
       script.student_resources.destroy_all
       script.freeze
+      script.unit_group.course_version.resources.destroy_all
+      script.unit_group.course_version.vocabularies.destroy_all
       expected_counts = get_counts
 
       # destroy the script and its unit group, so that no course version will
       # be available during seed.
       script_to_destroy = Unit.find(script.id)
+      unit_group_to_destroy = script_to_destroy.unit_group
       script_to_destroy.unit_group.course_version.destroy!
-      script_to_destroy.unit_group.destroy!
       script_to_destroy.destroy!
+      unit_group_to_destroy.destroy!
 
       ScriptSeed.seed_from_json(json)
 
       assert_equal expected_counts, get_counts
       script_after_seed = Unit.with_seed_models.find_by!(name: script.name)
-      assert_script_trees_equal(script, script_after_seed)
+      # original_unit_group_id is set when the unit_group is seeded, unless a script already exists with an original_unit_group_id
+      assert_script_trees_equal(script, script_after_seed, ['original_unit_group_id'])
     end
 
     test 'seed with no changes is no-op' do
@@ -1268,11 +1274,11 @@ module Services
       ].map {|c| [c.name, c.count]}.to_h
     end
 
-    def assert_script_trees_equal(s1, s2)
+    def assert_script_trees_equal(s1, s2, script_excludes = [])
       # Make sure the scripts and their associations are already in memory,
       # because fetching data from the DB could lead to false positive matches.
       assert_queries(0) do
-        assert_scripts_equal s1, s2
+        assert_scripts_equal s1, s2, script_excludes
         assert_lesson_groups_equal s1.lesson_groups, s2.lesson_groups
         assert_lessons_equal s1.lessons, s2.lessons
         assert_lesson_activities_equal(
@@ -1327,8 +1333,8 @@ module Services
       end
     end
 
-    def assert_scripts_equal(script1, script2)
-      assert_attributes_equal(script1, script2, ['properties'])
+    def assert_scripts_equal(script1, script2, additional_excludes = [])
+      assert_attributes_equal(script1, script2, additional_excludes + ['properties'])
       assert_equal script1.properties.except('seeded_from'),
         script2.properties.except('seeded_from')
     end
@@ -1457,6 +1463,7 @@ module Services
         unit_group = create :unit_group, family_name: family_name, version_year: version_year
         create :unit_group_unit, unit_group: unit_group, script: script, position: 1
         CourseOffering.add_course_offering(unit_group)
+        script.update!(original_unit_group_id: unit_group.id)
       else
         script.update!(
           is_course: true,

@@ -1,6 +1,6 @@
 @use "sass:math";
 @import "color.scss";
-@import "font";
+@import '@code-dot-org/component-library-styles/font';
 @import "curriculum/markdown";
 @import "responsive-visualization";
 @import "style-constants";
@@ -1590,7 +1590,7 @@ $tooltip-border-radius: 14px;
 $tooltip-shadow-color: $shadow;
 $see-examples-font-weight: bold;
 $tooltip-font: $main-font;
-$function-name-font: $code-font;
+$function-name-font: 'Source Code Pro', Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', Terminal, monospace;
 $see-examples-thick-underline-color: $yellow;
 
 .tooltip-example-link,

@@ -1,16 +1,18 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import DCDO from '@cdo/apps/dcdo';
 import {useBrowserTextToSpeech} from '@cdo/apps/sharedComponents/BrowserTextToSpeechWrapper';
 import currentLocale from '@cdo/apps/util/currentLocale';
+import i18n from '@cdo/locale';
 
 import moduleStyles from './TextToSpeech.module.scss';
 
 interface TextToSpeechProps {
   text: string;
+  higherPosition?: boolean;
 }
 
 const usePause = queryParams('tts-play-pause') === 'true';
@@ -27,7 +29,10 @@ const ttsButtonEnabled =
 /**
  * TextToSpeech play button.
  */
-const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({text}) => {
+const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({
+  text,
+  higherPosition,
+}) => {
   const {isTtsAvailable, speak, cancel, pause, resume} =
     useBrowserTextToSpeech();
   const [isPlaying, setIsPlaying] = useState(false);
@@ -69,6 +74,14 @@ const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({text}) => {
     }
   };
 
+  const handleKeyDown = (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter') {
+      event.preventDefault(); // Prevent onClick from firing twice
+      event.stopPropagation();
+      playText();
+    }
+  };
+
   if (!ttsButtonEnabled || !isTtsAvailable) {
     return null;
   }
@@ -77,9 +90,12 @@ const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({text}) => {
     <button
       className={classNames(
         moduleStyles.playButton,
-        isPlaying && moduleStyles.playButtonPlaying
+        isPlaying && moduleStyles.playButtonPlaying,
+        higherPosition && moduleStyles.playButtonHigherPosition
       )}
       onClick={playText}
+      onKeyDown={handleKeyDown}
+      aria-label={i18n.playTextToSpeech()}
       type="button"
     >
       <FontAwesomeV6Icon

@@ -1,0 +1,47 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-03-25T13:11:17.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Finish the Sentence\r\n\r\nUse AI Chat to finish the sentence.\r\n\r\n### Do This:\r\n1. Think about how you would complete the following sentence with a single word: *\"The dog barked at the...\"*\r\n2. **Copy and paste** the following prompt: \r\n\r\n>Complete this sentence with a single word: The dog barked at the...\r\n3. Press **Send**.\r\n4. Then read **AI Chat's response** and compare it to your own.\r\n\r\n**Try it out!**\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Do not answer any questions that are not related to the sentence stem \"The dog barked at the ....\".\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-25T13:11:17.464+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level1\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level1\"},{\"changed_at\":\"2025-03-25 13:14:16 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Aichat>

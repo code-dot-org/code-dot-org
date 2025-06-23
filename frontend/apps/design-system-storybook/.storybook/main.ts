@@ -1,5 +1,6 @@
-import {join, dirname, resolve} from 'node:path';
 import {StorybookConfig} from '@storybook/react-webpack5';
+import {join, dirname, resolve} from 'node:path';
+import {IgnorePlugin} from 'webpack';
 
 /**
  * This function is used to resolve the absolute path of a package.
@@ -10,7 +11,9 @@ function getAbsolutePath(value: string) {
 }
 
 const config: StorybookConfig = {
-  stories: ['../../../packages/dsco/src/**/stories/*.story.@(ts|tsx)'],
+  stories: [
+    '../../../packages/component-library/src/**/stories/*.story.@(ts|tsx)',
+  ],
   addons: [
     getAbsolutePath('@storybook/addon-webpack5-compiler-swc'),
     getAbsolutePath('@storybook/addon-essentials'),
@@ -47,6 +50,21 @@ const config: StorybookConfig = {
               },
             ],
           },
+          {
+            test: /\.css$/,
+            use: [
+              'style-loader',
+              {
+                loader: 'css-loader',
+                options: {
+                  modules: {
+                    auto: true,
+                    localIdentName: '[name]__[local]--[hash:base64:5]',
+                  },
+                },
+              },
+            ],
+          },
         ],
       },
     },
@@ -55,6 +73,7 @@ const config: StorybookConfig = {
     name: getAbsolutePath('@storybook/react-webpack5'),
     options: {},
   },
+  staticDirs: ['../public'],
   swc: () => ({
     // Removes the need to import React by specifying we are targeting React 17+ using the React jsx transform
     // See: https://storybook.js.org/docs/8.5/configure/integration/compilers#the-swc-compiler-doesnt-work-with-react
@@ -70,8 +89,20 @@ const config: StorybookConfig = {
     if (config.resolve) {
       config.resolve.alias = {
         ...config.resolve.alias,
-        '@': resolve(__dirname, '../../../packages/dsco/src'),
+        '@': resolve(__dirname, '../../../packages/component-library/src'),
+        '@public': resolve(__dirname, '../public'),
       };
+    }
+
+    if (config.plugins) {
+      // Ignore the auto generated index.css which is bundled by tsup
+      // webpack generates its own css in the styling plugin above
+      config.plugins.push(
+        new IgnorePlugin({
+          resourceRegExp: /^\.\/index.css$/,
+          contextRegExp: /component-library\/src/,
+        }),
+      );
     }
 
     return config;

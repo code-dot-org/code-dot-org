@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-03-25T13:19:13.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Upload an Image\r\n\r\nUse AI Chat to describe an image.\r\n\r\n### Do This:\r\n1. Click the **Upload** button, located on the bottom-left of the chat, followed by **From Library**. Select the image by clicking the checkbox, followed by the **Open** button.\r\n2. **Copy and paste** the following prompt: \r\n\r\n>Describe this image. List as many things as you can notice in the image.\r\n\r\n3. Press **Send**.\r\n4. Then read **AI Chat's response** and compare it to your own.\r\n5. Complete the **\"What's in an image?\"** and **\"Privacy and Ethical Concerns\"** sections in your Unit Guide.\r\n\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "\n\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "starter_assets": {
+      "test_image.png": "15086c57-1957-4600-a335-33aad65a8851.png"
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-25T13:19:13.184+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level2\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level2\"},{\"changed_at\":\"2025-03-25 13:29:37 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-28 16:50:18 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-28 16:50:33 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-28 16:56:57 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-28 16:58:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-28 16:59:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

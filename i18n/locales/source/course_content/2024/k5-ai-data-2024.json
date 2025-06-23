@@ -1,0 +1,502 @@
+{
+  "https://studio.code.org/s/k5-ai-data-2024/lessons/1/levels/1": {
+    "long_instructions": "**Click <code style=\"color:black; background-color:#FFBD46\">Run</code>. Then click and drag each item into the \"wings\" or \"no wings\" box.**\n\n<img src=\"https://images.code.org/fe9b5522d05c3708d585104658a6709c-image-1720553593394.gif\" width=30%>\n\n<br>",
+    "callouts": {
+      "ai_data_run_button": "Click here!"
+    }
+  },
+  "https://studio.code.org/s/k5-ai-data-2024/lessons/1/levels/2": {
+    "long_instructions": "**Click <code style=\"color:black; background-color:#FFBD46\">Run</code>. Then click and drag each item into a box.**\n\n<img src=\"\" width=30% style=\"padding-left: 100px\" >",
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "By shape",
+              "correct": false,
+              "feedback": "Incorrect. These items are sorted by color."
+            },
+            {
+              "text": "By size",
+              "correct": false,
+              "feedback": "Incorrect. These items are sorted by color."
+            },
+            {
+              "text": "By color",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "We need more training data to know.",
+              "correct": false,
+              "feedback": "Incorrect. These items are sorted by color."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the items on the left. How are they sorted?"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/k5-ai-data-2024/lessons/1/levels/3": {
+    "short_instructions": "New items ",
+    "long_instructions": "**Click Run. Then click and drag each item into a box.**\n\n<img src=\"\" width=30% style=\"padding-left: 100px\" >",
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "**Box One** sorted by shape",
+              "correct": false,
+              "feedback": "Not quite! This item could be sorted by shape or inside color. We need more data to know."
+            },
+            {
+              "text": "**Box Two** sorted by inside color",
+              "correct": false,
+              "feedback": "Not quite! These items could be sorted by shape or inside color. We need more data to know."
+            },
+            {
+              "text": "**Box Three** sorted by border color",
+              "correct": false,
+              "feedback": "Not quite! These items could be sorted by shape or inside color. We need more data to know."
+            },
+            {
+              "text": "It could go in **Box One** or **Box Two**. We need more training data to know.",
+              "correct": true,
+              "feedback": "Correct! These items could be sorted by shape or inside color. We need more data to know."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look at the items on the left. Predict where the circle with the black border and pink color will go."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/k5-ai-data-2024/lessons/1/levels/4": {
+    "short_instructions": "Click Run. Then click and drag each item into a box.",
+    "long_instructions": "**Can you figure out the pattern from the previous question?**\n\nClick <code style=\"color:black; background-color:#FFBD46\">Run</code>. Then click and drag each item into a box.",
+    "callouts": {
+      "ai_data_run_button": "Click here!"
+    }
+  },
+  "https://studio.code.org/s/k5-ai-data-2024/lessons/1/levels/5": {
+    "short_instructions": "Click Run and drag each item into a box.",
+    "long_instructions": "**Now these items are sorted in a new way! Can you figure it out?**\n\nClick <code style=\"color:black; background-color:#FFBD46\">Run</code>. Then click and drag each item into a box.",
+    "callouts": {
+      "ai_data_run_button": "Click here!"
+    }
+  },
+  "https://studio.code.org/s/k5-ai-data-2024/lessons/1/levels/6": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "Sorted by **shape** ![](https://images.code.org/4ec47d0a14f40ec83db40e275379f496-image-1715960317983.jpg)"
+        },
+        {
+          "text": " Sorted by **inside color** ![](https://images.code.org/6e66d506320375530957215f3356919e-image-1715960321702.jpg)"
+        },
+        {
+          "text": "Sorted by **border color** ![](https://images.code.org/94f03f85356b4fc25d89001c2ed5c629-image-1715960324432.jpg)"
+        }
+      ],
+      "markdown": "###These items can be sorted in different ways. Match each way of sorting to the correct label.\n\n\n",
+      "questions": [
+        {
+          "text": "![](https://images.code.org/4e35f670bc113a6a647a8575d7887dbd-image-1715898341945.png)"
+        },
+        {
+          "text": "![](https://images.code.org/034ca31e19d9e0aa72f6b5355c6a7168-image-1715898395425.png)"
+        },
+        {
+          "text": "![](https://images.code.org/8d4b0514fee6879b9e7a2fa2b0d7248f-image-1715898407377.png)"
+        }
+      ],
+      "title": "How are these items sorted?"
+    }
+  },
+  "https://studio.code.org/s/k5-ai-data-2024/lessons/1/levels/7": {
+    "dsls": {
+      "description": "####Pick a level and sort the items on screen. Then, find a partner who will act as the computer. Your partner will have to guess how you sorted your items.",
+      "display_name": "Pick a level to sort!"
+    },
+    "sublevels": {
+      "sorting_items_free_play": {
+        "display_name": "Level One",
+        "bubble_choice_description": "You choose how to sort these items!",
+        "long_instructions": "**Click <code style=\"color:black; background-color:#FFBD46\">Run</code>. Then click and drag each item into a box.**\r\n\r\n\r\n",
+        "authored_hints": {
+          "ai_data_sorting_hint": "Try sorting by shape or color."
+        }
+      },
+      "sorting_items_free_play_2": {
+        "display_name": "Level Two",
+        "bubble_choice_description": "You choose how to sort these items!",
+        "long_instructions": "**Click <code style=\"color:black; background-color:#FFBD46\">Run</code>. Then click and drag each item into a box.**\r\n\r\n\r\n",
+        "authored_hints": {
+          "ai_data_sorting_hint": "Try sorting by shape or color."
+        }
+      },
+      "sorting_items_free_play_3": {
+        "display_name": "Level Three",
+        "bubble_choice_description": "You choose how to sort these items!",
+        "long_instructions": "**Click <code style=\"color:black; background-color:#FFBD46\">Run</code>. Then click and drag each item into a box.**\r\n\r\n\r\n",
+        "authored_hints": {
+          "ai_data_sorting_hint_2": "Try sorting by number of wheels or where you might find each vehicle."
+        }
+      },
+      "sorting_items_free_play_4": {
+        "display_name": "Level Four",
+        "bubble_choice_description": "You choose how to sort these items!",
+        "long_instructions": "**Click <code style=\"color:black; background-color:#FFBD46\">Run</code>. Then click and drag each item into a box.**\r\n\r\n\r\n",
+        "authored_hints": {
+          "ai_data_sorting_hint": "Try sorting by color or where you might see each item."
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/k5-ai-data-2024/lessons/2/levels/1": {
+    "display_name": "Video: Machine Learning"
+  },
+  "https://studio.code.org/s/k5-ai-data-2024/lessons/3/levels/1": {
+    "short_instructions": "It's time to build a feature vector!",
+    "long_instructions": "**Let's build a feature vector!  Click <code style=\"color:black; background-color:#FFBD46\">Run</code>. Then click and drag the items on screen.**\n\n<img src=\"https://images.code.org/c45a44e0bc00a6af6f69fe768ddbf245-image-1717109520797.gif\" width=20% style=\"float:right\" >\n\n<br>\n\n<div style=\"margin-right: 200px\">\n\n1.  Start by choosing a spot on the horizontal axis from **Not Sweet** to **Really Sweet**.\n2.  Then,  the vertical axis based on how much you like it from **Not for me!** to **Love it**.",
+    "callouts": {
+      "visualization_resize": "Click and drag the 3 dots to expand the screen."
+    }
+  },
+  "https://studio.code.org/s/k5-ai-data-2024/lessons/3/levels/2": {
+    "short_instructions": "It's time to build a feature vector!",
+    "long_instructions": "**Let's build a feature vector! Click Run. Then click and drag the items on screen.**\n\n<img src=\"https://images.code.org/7abed13991c8b278d33a9b1b1a777b2e-image-1716243582346.gif\" width=30% style=\"float:right\" >\n\n<br>\n\n<div style=\"margin-right: 200px\">\n\n1.  Start by choosing a spot on the horizontal axis from **Not Sweet** to **Really Sweet**. \n2.  Then, move the food up the vertical axis based on how much you like it from **Not for me!** to **Love it!**",
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Hamburger",
+              "correct": false,
+              "feedback": "Incorrect. The snack picker is likely to choose strawberries."
+            },
+            {
+              "text": "Broccoli",
+              "correct": false,
+              "feedback": "Incorrect. The snack picker is likely to choose strawberries."
+            },
+            {
+              "text": "Strawberries",
+              "correct": true,
+              "feedback": "Correct! The snack picker is likely to choose strawberries."
+            },
+            {
+              "text": "Cake",
+              "correct": false,
+              "feedback": "Incorrect. The snack picker is likely to choose strawberries."
+            }
+          ],
+          "questions": [
+            {
+              "text": "AI Snack Picker was given training data from all the students in the class. The class wants a snack that is **sweet** and that students **like to eat**. AI Snack Picker chose **apples**. What is another snack that AI is likely to choose?"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/k5-ai-data-2024/lessons/3/levels/3": {
+    "short_instructions": "It's time to build a feature vector!",
+    "long_instructions": "**Click Run. Then click and drag the items on screen.**\n\n1.  Start by choosing a spot on the horizontal axis from **Not happy** to **Very happy**. \n2.  Then, move the emoji up the vertical axis based on how colorful you think it is from **Not colorful** to **Very colorful**",
+    "callouts": {
+      "visualization_resize": "Click and drag the 3 dots to expand the screen."
+    }
+  },
+  "https://studio.code.org/s/k5-ai-data-2024/lessons/3/levels/4": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "![](https://images.code.org/d6f30a1117a19366dbec9720572aa5e5-image-1716564634252.png)"
+        },
+        {
+          "text": " ![](https://images.code.org/b9f170de01a2947d4e192f9be9b3eeb3-image-1716564662966.png)"
+        },
+        {
+          "text": " ![](https://images.code.org/bec0c48dce24fc447e7133e62d6de7de-image-1716564742728.jpg)"
+        }
+      ],
+      "markdown": "###Based on this training data, match the backgrounds with the emojis.\n<img src=\"https://images.code.org/53c9fb0a0a2da359cbf79891a86f8817-image-1716936583924.png\" style=\"margin-left: 200px; width: 35%; float: center;\">\n\n\n",
+      "questions": [
+        {
+          "text": "Not colorful and not happy effects: ![](https://images.code.org/dc3f45485921e1a83735d44ca656c02b-image-1716564593233.jpg)"
+        },
+        {
+          "text": "A little color and very happy effects:![](https://images.code.org/998a2f603ecb1c65677b2b8fc3345e4d-image-1716504922992.jpg)"
+        },
+        {
+          "text": "Very colorful and happy effects:![](https://images.code.org/c8187188cd1bd2c180bcf98433dc6012-image-1716564684133.jpg)"
+        }
+      ],
+      "title": "Using the training data"
+    }
+  },
+  "https://studio.code.org/s/k5-ai-data-2024/lessons/3/levels/5": {
+    "long_instructions": "Now you can upload your own sprites and backgrounds. Watch this video to learn how!"
+  },
+  "https://studio.code.org/s/k5-ai-data-2024/lessons/3/levels/6": {
+    "short_instructions": "**You can customize the effect A.I. creates!**\nClick the emojis on the block. Then either `Regenerate`, `Use code`, or `Start over`.",
+    "long_instructions": "**A.I. gets you started. You can customize the effect it creates!**\n\n-   Click the <code style=\"color:white; background-color:#566064\">A.I. generate effect</code> block to get started.\n\n-   Remember you can customize your effects:\n\n    -   <img src=\"https://images.code.org/101001680b5a4de2d752a6b3b59a116f-image-1699478528416.jpg\" style=\" margin-right: 5px;  height: 20px;\">`Regenerate`  A.I. will recommend a different effect based on the same emojis.\n\n    -   `Use code`  Use the code A.I. writes and customize it! \n\n    -   <img src=\"https://images.code.org/3e2c74fbae82198ebc3264ecaf3a823e-image-1699478492041.jpg\" style=\" margin-right: 5px;  height: 15px;\">`Start over`  Choose three new emojis to generate a new effect. ",
+    "authored_hints": {
+      "Hint1": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> Customize the effect by clicking emojis on the [blockly block][0] block in the workspace. ",
+      "HintEdit": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> If you would like to use the code A.I. writes, toggle to show the code and then click `Use code`. The blocks will replace the  [blockly block][0] block in your workspace. ",
+      "Hint2": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> **Still stuck?** Watch the video to see how you can customize the effect. "
+    },
+    "callouts": {
+      "ai_dance_callout_draft_level_6": "Click here!"
+    }
+  },
+  "https://studio.code.org/s/k5-ai-data-2024/lessons/4/levels/1": {
+    "dsls": {
+      "title": "Let's collect some data!"
+    },
+    "sublevels": {
+      "k5_ai_data_survey_level_q1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Chocolate",
+              "correct": true
+            },
+            {
+              "text": "Vanilla",
+              "correct": true
+            },
+            {
+              "text": "Cookies and Cream",
+              "correct": true
+            },
+            {
+              "text": "Mint Chocolate Chip",
+              "correct": true
+            },
+            {
+              "text": "Something else",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "My favorite flavor of ice cream is..."
+            }
+          ]
+        }
+      },
+      "k5_ai_data_survey_level_q2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Cheese",
+              "correct": true
+            },
+            {
+              "text": "Pepperoni",
+              "correct": true
+            },
+            {
+              "text": "Sausage",
+              "correct": true
+            },
+            {
+              "text": "Veggies",
+              "correct": true
+            },
+            {
+              "text": "Something else",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "My favorite pizza topping is..."
+            }
+          ]
+        }
+      },
+      "k5_ai_data_survey_level_q3": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Card games",
+              "correct": true
+            },
+            {
+              "text": "Board games",
+              "correct": true
+            },
+            {
+              "text": "Playground games",
+              "correct": true
+            },
+            {
+              "text": "Sports",
+              "correct": true
+            },
+            {
+              "text": "Something else",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "My favorite type of game is..."
+            }
+          ]
+        }
+      },
+      "k5_ai_data_survey_level_q4": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Purple",
+              "correct": true
+            },
+            {
+              "text": "Blue",
+              "correct": true
+            },
+            {
+              "text": "Pink",
+              "correct": true
+            },
+            {
+              "text": "Orange",
+              "correct": true
+            },
+            {
+              "text": "Something else",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "My favorite color is..."
+            }
+          ]
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/k5-ai-data-2024/lessons/4/levels/2": {
+    "dsls": {
+      "title": "Let's Explore the Data!"
+    },
+    "sublevels": {
+      "k5_ai_student_data_overview": {
+        "dsls": {
+          "content1": "description here",
+          "markdown": "<h3><strong>Your school is considering using an A.I. tool for the following scenarios. Choose one:<strong></h3>\n\n> <div>\n> <img style=\"float:left; width:20%; padding-right:20px; padding-below:20px\" src=\"https://images.code.org/dfa6afa75c3ed875d9f83a42e6452bbc-image-1709763830890.png\" />\n> <h5>→  In the cafeteria, students are seated alphabetically by last name. <strong> <br> The Lunch Aide wants to use AI to seat students based on their interests.</strong> \n><h5> → Every month, there is a new Student of the Month.  <br> <strong>The 3rd grade teacher wants to use AI to help him choose this month's student.</strong> </h5>\n><h5>→ The gym teacher usually chooses teams randomly.  <br> <strong>Now she wants to use AI to help her form teams.</strong> </h5>\n<br>\n<br>\n></div>\n\n\n\n<h3><strong>Then look at the <a href=\"https://docs.google.com/spreadsheets/d/1t44C0ScGvgajfOEE6VE8sl7OQEJbgT1kvGDCnDgOPys/preview\n\" target=\"_blank\"> Student Dataset</a> and answer the questions below:</strong></h3>\n\n<img style=\"width:50%; float:left\" src=\"https://images.code.org/afdb1152306d71a7d1a1541f55266fb5-image-1717087213400.39.29 AM.png\" />\n<br>\n<br>\n<br> \n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n"
+        }
+      },
+      "k5_ai_student_data_scenarios": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Choosing seats in the cafeteria",
+              "correct": true
+            },
+            {
+              "text": "Choosing teams for gym class",
+              "correct": true
+            },
+            {
+              "text": "Picking the Student of the Month",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Which scenario did you choose?"
+            }
+          ]
+        }
+      },
+      "k5_ai_data_student_data_q1": {
+        "long_instructions": "**Which columns in the dataset should you give to AI as your training data? Explain why.**"
+      },
+      "k5_ai_data_student_data_q2": {
+        "long_instructions": "**Which columns in the dataset would you want to take out of the training data? Explain why.**"
+      },
+      "k5_ai_data_student_data_q3": {
+        "long_instructions": "**What other data would you want to train the AI tool on? How would you collect that data?**"
+      }
+    }
+  },
+  "https://studio.code.org/s/k5-ai-data-2024/lessons/5/levels/1": {
+    "dsls": {
+      "description": "You have reached the end of the AI course. Choose a project to work on. The projects are ranked from Easy (🌶️) to Difficult (🌶️🌶️🌶️).",
+      "display_name": "End of Module Project"
+    },
+    "sublevels": {
+      "k5_ai_final_choice_level_letter_to_principal": {
+        "display_name": "Letter to Your Principal",
+        "bubble_choice_description": "🌶️ Share your thoughts on AI by writing a letter to your principal.",
+        "long_instructions": "####Turn your ideas into a persuasive letter.\r\n\r\n> **Do you think AI tools should be used to make decisions in school? Why or why not.** \r\n> **Write a letter to your school principal explaining your answer.**\r\n\r\n#####If you're not sure where to start, try one of these sentence starters:\r\n- I learned that AI...\r\n- I think that AI should/should not be used...\r\n- Did you know that AI...",
+        "title": "Letter to Your Principal"
+      },
+      "k5_ai_final_choice_level_make_a_poster": {
+        "dsls": {
+          "markdown": "#Make a Poster\n\n<div>\n<img style=\" float: left; width:25%; padding-top:10px\" src=\"https://images.code.org/1bec43fd061f8f84db40b53e1899f0e7-image-1715118441772.jpg\" />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>It's time to plan your poster!</strong>\n</h4>\n\n>You should include:\n> - Pros and cons of using AI tools in school\n> - A one-two sentence description of how AI works\n> - Your opinion on AI \n\n**Here is a planning template you can copy to use yourself:**  <a href=\"https://docs.google.com/document/d/14WO5ZNTMFANYcDCcYtXzoH7b8V5tbKIt5oMHj5iaTFg/preview\" target=\"_blank\">Share Your Voice - AI Poster</a>.\n\n</div>\n"
+        }
+      },
+      "k5_ai_final_choice_level_share_your_voice": {
+        "display_name": "Share Your Voice",
+        "bubble_choice_description": "🌶️🌶️ Share your thoughts on AI by making a speech, writing a rap, or making up a song.",
+        "long_instructions": "Teach people about AI by creating a speech, writing a rap, or making up a song. \r\n\r\n>Make sure to include:\r\n> - A short description of how AI works\r\n> - Your opinion on AI \r\n> - The pros and cons of using AI tools in school",
+        "title": "Share Your Voice"
+      },
+      "k5_ai_final_choice_level_sprite_lab": {
+        "display_name": "Create a Sprite Lab project",
+        "bubble_choice_description": "🌶️🌶️ Share your thoughts on AI by coding a Sprite Lab project.\r\n",
+        "long_instructions": "##Create a Sprite Lab Project\r\n\r\nShow what you know about AI by coding a project in Sprite Lab! ",
+        "behavior_names": {
+          "wandering": "wandering",
+          "moving east": "moving east",
+          "spinning left": "spinning left",
+          "spinning right": "spinning right",
+          "shrinking": "shrinking",
+          "growing": "growing",
+          "moving south": "moving south",
+          "swimming left and right": "swimming left and right",
+          "moving north": "moving north",
+          "jittering": "jittering",
+          "moving west": "moving west",
+          "patrolling": "patrolling"
+        },
+        "behavior_descriptions": {
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges"
+        }
+      },
+      "k5_ai_final_choice_level_poetry_lab": {
+        "display_name": "Code a Poem",
+        "bubble_choice_description": "🌶️🌶️🌶️ Share your thoughts on AI by coding a poem.\r\n\r\n",
+        "long_instructions": "**The freedom of a blank page!**\r\n\r\n1. Choose \"Enter my own\" from the Select Poem dropdown\r\n2. Write your AI poem \r\n3. Add event blocks to your code and bring your poem to life\r\n",
+        "callouts": {
+          "poetry_new_block": "New block!",
+          "poetry_selector": "Select any poem, or enter your own!"
+        }
+      }
+    }
+  }
+}

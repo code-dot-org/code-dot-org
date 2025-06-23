@@ -669,12 +669,13 @@ GoogleBlockly.Extensions.register('procedure_vars', procedureVars);
 function argumentReporterValidator(newValue) {
   const sourceArgBlock = this.getSourceBlock();
   const rootBlock = sourceArgBlock.getRootBlock();
+  const {x, y} = sourceArgBlock.getRelativeToSurfaceXY();
 
   // Prevent fields from being edited if the block is not within a function definiton.
   if (
-    // Ignore unrendered blocks, ie. blocks that are newly created.
-    sourceArgBlock.rendered &&
-    !Blockly.cdoUtils.isFunctionBlock(sourceArgBlock.getRootBlock())
+    !Blockly.cdoUtils.isFunctionBlock(sourceArgBlock.getRootBlock()) &&
+    // Ignore new blocks, ie. those that do not yet have a position.
+    (x || y)
   ) {
     return null;
   }
@@ -709,9 +710,15 @@ GoogleBlockly.Extensions.register('argument_reporter_validator', function () {
   this.onchange = event => {
     const workspace = GoogleBlockly.Workspace.getById(event.workspaceId);
     const eventBlock = workspace.getBlockById(event.blockId);
-    if (eventBlock?.type === BLOCK_TYPES.argumentReporter) {
+    const eventBlockIsArgumentReporter =
+      eventBlock?.type === BLOCK_TYPES.argumentReporter;
+    const eventBlockIsFunctionCall = [
+      BLOCK_TYPES.procedureCall,
+      BLOCK_TYPES.procedureCallReturn,
+    ].includes(eventBlock?.type);
+    if (eventBlockIsArgumentReporter) {
       if (event.type === GoogleBlockly.Events.BLOCK_CHANGE) {
-        // For a field value change events, we update other matching blocks within
+        // For field value change events, we update other matching blocks within
         // the same stack.
         const otherArgBlocksInStack = workspace
           .getAllBlocks()
@@ -747,7 +754,9 @@ GoogleBlockly.Extensions.register('argument_reporter_validator', function () {
         GoogleBlockly.Events.FINISHED_LOADING,
         GoogleBlockly.Events.BLOCK_CHANGE,
         GoogleBlockly.Events.BLOCK_MOVE,
-      ].includes(event.type)
+      ].includes(event.type) &&
+      // Avoid showing a warning when a call block's inputs are mutated.
+      (!eventBlock || !eventBlockIsFunctionCall)
     ) {
       const argReporterBlocks = GoogleBlockly.getMainWorkspace()
         .getAllBlocks()

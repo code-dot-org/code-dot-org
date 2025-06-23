@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2024-05-29T18:18:44.000Z",
   "level_num": "custom",
@@ -7,30 +8,16 @@
   "properties": {
     "encrypted": "false",
     "background": "music-black",
-    "level_data": {
-      "panels": [
-        {
-          "imageUrl": "https://images.code.org/294f99cfd6e1d55a2738e91a71b53570-musiclab_intro_end_2.png",
-          "text": "#### 🎶Ready to jam?🎶\n\nYou've learned the basics, and now you're ready to make your own song! Don't forget to explore the sound library - there are plenty of cool sounds in there."
-        },
-        {
-          "imageUrl": "https://images.code.org/aa31c5258bbb31a623d50ba9482e6a00-musiclab_intro_end_1.png",
-          "text": "There will be new blocks in your toolbox, including:\n\n- A beat-making block\n\n- A synthesizer block\n\n- Sound effects like reverb\n\n- A *random* block\n\n- ...and more!\n\n🎸Rock out!",
-          "nextUrl": "/projectbeats"
-        }
-      ]
-    },
     "name_suffix": "_course-d",
     "panels": [
       {
         "imageUrl": "https://images.code.org/846388521fe0f07f2577b346a7ba51d9-musiclab-big-banner-image.png",
         "text": "#### 🎶 Ready to jam? 🎶\n\nYou've learned the basics, and now you're ready to make your own song! \n\nCheck out all the new sounds and customizations in the toolbox. \n\nClick Continue to get started. ",
-        "key": "musiclab_intro_panels_end_pdx-88ca8817-6cb7-4c5b-a08a-69fc2267eb0b",
-        "nextUrl": "https://studio.code.org/projects/music/new"
+        "key": "musiclab_intro_panels_end_pdx-88ca8817-6cb7-4c5b-a08a-69fc2267eb0b"
       }
-    ]
+    ],
+    "offer_browser_tts": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-05-29T18:18:44.840+00:00\",\"changed\":[\"cloned from \\\"usiclab_tutorial_panels_end_express\\\"\"],\"cloned_from\":\"usiclab_tutorial_panels_end_express\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-29T18:18:44.840+00:00\",\"changed\":[\"cloned from \\\"usiclab_tutorial_panels_end_express\\\"\"],\"cloned_from\":\"usiclab_tutorial_panels_end_express\"},{\"changed_at\":\"2025-03-21 15:18:36 +0000\",\"changed\":[\"level_data\",\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

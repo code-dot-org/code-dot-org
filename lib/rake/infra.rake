@@ -11,10 +11,11 @@ namespace :infra do
   # Synchronize the Chef cookbooks to the Chef repo for this environment using Berkshelf.
   timed_task_with_logging :chef_update do
     # Ensure Chef Client is using an up to date TLS/SSL root certificate store from a trusted source (Mozilla via curl.se)
-    Dir.chdir(cookbooks_dir) do
-      ROOT_CERTIFICATE_URL = "https://raw.githubusercontent.com/code-dot-org/code-dot-org/#{GitUtils.current_branch}/cookbooks/cacert.pem"
-      RakeUtils.sudo "curl -o /opt/chef/embedded/ssl/certs/cacert.pem #{ROOT_CERTIFICATE_URL}"
-    end
+    # TODO: change this to not pull from GitHub. Commenting out for now. Expected to become outdated in the near future.
+    # Dir.chdir(cookbooks_dir) do
+    #   ROOT_CERTIFICATE_URL = "https://raw.githubusercontent.com/code-dot-org/code-dot-org/#{GitUtils.current_branch}/cookbooks/cacert.pem"
+    #   RakeUtils.sudo "curl -o /opt/chef/embedded/ssl/certs/cacert.pem #{ROOT_CERTIFICATE_URL}"
+    # end
     if CDO.chef_local_mode
       # Update local cookbooks from repository in local mode.
       ChatClient.log 'Updating local <b>chef</b> cookbooks...'
@@ -100,25 +101,31 @@ namespace :infra do
     :all,
     'test:ci'
   ]
+
+  desc 'Update the server as part of continuous integration.'
+  timed_task_with_logging :ci do
+    # In the test environment, we want to build everything with tests. In most
+    # other environments, we want to do a full build including server
+    # redeployment, but in some environments (like the i18n server) we just
+    # want to run the build with no other actions.
+    desired_task =
+      if ENV['CI_ONLY_BUILD']
+        'infra:build'
+      elsif rack_env?(:test)
+        'infra:test'
+      else
+        'infra:all'
+      end
+
+    ChatClient.wrap('CI build', backtrace: true) {Rake::Task[desired_task].invoke}
+  end
 end
 
-desc 'Update the server as part of continuous integration.'
-timed_task_with_logging :ci do
-  # In the test environment, we want to build everything with tests. In most
-  # other environments, we want to do a full build including server
-  # redeployment, but in some environments (like the i18n server) we just want
-  # to run the build with no other actions.
-  desired_task =
-    if ENV['CI_ONLY_BUILD']
-      'infra:build'
-    elsif rack_env?(:test)
-      'infra:test'
-    else
-      'infra:all'
-    end
-
-  ChatClient.wrap('CI build', backtrace: true) {Rake::Task[desired_task].invoke}
-end
+# Temporarily support invoking this task with either `rake ci` or `rake
+# infra:ci` until the latter method has been deployed everywhere, so our
+# persistent managed servers don't break during the transition.
+# TODO infra: remove this once the `infra:ci` implementation has been deployed
+timed_task_with_logging ci: ['infra:ci']
 
 # Returns true if upgrade succeeded, false if failed.
 def upgrade_frontend(name, hostname)

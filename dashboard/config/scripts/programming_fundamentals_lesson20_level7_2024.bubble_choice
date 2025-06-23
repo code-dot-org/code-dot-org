@@ -1,0 +1,11 @@
+name 'programming-fundamentals-lesson20-level7-2024'
+display_name 'Debugging Conditionals Practice'
+description 'Pick one of the levels below to keep practicing conditionals.'
+
+sublevels
+level 'programming-fundamentals-lesson20-level7a-2024'
+level 'programming-fundamentals-lesson20-level7b-2024'
+level 'programming-fundamentals-lesson20-level7c-2024'
+
+
+

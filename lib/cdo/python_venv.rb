@@ -2,21 +2,17 @@ require 'pty'
 
 module PythonVenv
   def self.install(*args)
-    # --dev: install dev deps
-    # --prod: don't install dev deps
-    # --frozen-lockfile: don't update the lockfile
-    # --check: fail if lockfile is not up-to-date
     flags = if ENV['CI']
-              '--dev --frozen-lockfile --check'
+              '--dev --frozen'
             elsif rack_env? :production
-              '--prod --frozen-lockfile'
+              '--no-dev --frozen'
             elsif rack_env? :test
-              '--dev --frozen-lockfile --check'
+              '--dev --frozen'
             else # staging, adhocs, local environments
               '--dev'
             end
 
-    pdm 'install', flags, *args
+    uv 'sync', flags, *args
   end
 
   def self.lint(*args)
@@ -24,27 +20,31 @@ module PythonVenv
   end
 
   def self.lint_command
-    'pdm run ruff check'
+    'uv run ruff check'
   end
 
   def self.python_bin_path
-    `pdm run which python`.strip
+    `uv run which python`.strip
   end
 
   def self.site_packages_path
-    `pdm run python -c 'import site; print(site.getsitepackages()[0])'`.strip
+    `uv run python -c 'import site; print(site.getsitepackages()[0])'`.strip
   end
 
   def self.run(*args)
-    pdm 'run', *args
+    uv 'run', *args
   end
 
-  def self.pdm(*args)
-    if `which pdm` == ''
-      raise 'Tried `which pdm`: pdm not found. Please install pdm and try again, see SETUP.md.'
+  def self.pytest(*args)
+    run 'pytest', *args
+  end
+
+  def self.uv(*args)
+    if `which uv` == ''
+      raise 'Tried `which uv`: uv not found. Please install uv and try again, see SETUP.md.'
     end
 
-    _run_command('pdm', *args)
+    _run_command('uv', *args)
   end
 
   def self._run_command(*args)

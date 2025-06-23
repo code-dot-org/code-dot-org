@@ -17,30 +17,14 @@ class SessionsControllerTest < ActionController::TestCase
 
   test "teachers go to homepage after signing in" do
     teacher = create(:teacher)
-
-    post :create, params: {
-      user: {
-        login: '',
-        hashed_email: teacher.hashed_email,
-        password: teacher.password
-      }
-    }
-
+    create_session_for_user(teacher)
     assert_signed_in_as teacher
     assert_redirected_to '/home'
   end
 
   test "students go to learn homepage after signing in" do
     student = create(:student)
-
-    post :create, params: {
-      user: {
-        login: '',
-        hashed_email: student.hashed_email,
-        password: student.password
-      }
-    }
-
+    create_session_for_user(student)
     assert_signed_in_as student
     assert_redirected_to '/'
   end
@@ -69,17 +53,8 @@ class SessionsControllerTest < ActionController::TestCase
 
   test "teachers go to specified return to url after signing in" do
     teacher = create(:teacher)
-
     session[:user_return_to] = user_return_to = '//test.code.org/the-return-to-url'
-
-    post :create, params: {
-      user: {
-        login: '',
-        hashed_email: teacher.hashed_email,
-        password: teacher.password
-      }
-    }
-
+    create_session_for_user(teacher)
     assert_signed_in_as teacher
     assert_redirected_to user_return_to
   end
@@ -97,32 +72,15 @@ class SessionsControllerTest < ActionController::TestCase
 
   test 'signing in as student via hashed_email' do
     student = create(:student, birthday: Date.new(2010, 1, 3), email: 'my@email.xx')
-
-    post :create, params: {
-      user: {
-        login: '',
-        hashed_email: student.hashed_email,
-        password: student.password
-      }
-    }
-
+    create_session_for_user(student)
     assert_signed_in_as student
     assert_redirected_to '/'
   end
 
   test 'signing in new user creates blank UserGeo' do
     user = create(:user)
-
     assert UserGeo.find_by_user_id(user.id).nil?
-
-    post :create, params: {
-      user: {
-        login: '',
-        hashed_email: user.hashed_email,
-        password: user.password
-      }
-    }
-
+    create_session_for_user(user)
     assert UserGeo.find_by_user_id(user.id)
   end
 
@@ -131,13 +89,7 @@ class SessionsControllerTest < ActionController::TestCase
     UserGeo.create(user_id: user.id, ip_address: '127.0.0.1')
 
     assert_no_change('UserGeo.find_by_user_id(user.id)') do
-      post :create, params: {
-        user: {
-          login: '',
-          hashed_email: user.hashed_email,
-          password: user.password
-        }
-      }
+      create_session_for_user(user)
     end
 
     assert_equal 1, UserGeo.count
@@ -162,13 +114,7 @@ class SessionsControllerTest < ActionController::TestCase
     DateTime.stubs(:now).returns(frozen_time)
     user = create :user, sign_in_count: 2
     assert_creates(SignIn) do
-      post :create, params: {
-        user: {
-          login: '',
-          hashed_email: user.hashed_email,
-          password: user.password
-        }
-      }
+      create_session_for_user(user)
     end
     sign_in = SignIn.find_by_user_id(user.id)
     assert sign_in
@@ -236,29 +182,13 @@ class SessionsControllerTest < ActionController::TestCase
 
   test "deleted user cannot sign in" do
     teacher = create(:teacher, :deleted)
-
-    post :create, params: {
-      user: {
-        login: '',
-        hashed_email: teacher.hashed_email,
-        password: teacher.password
-      }
-    }
-
+    create_session_for_user(teacher)
     assert_signed_in_as nil
   end
 
   test "session cookie set if remember me not checked" do
     teacher = create(:teacher)
-
-    post :create, params: {
-      user: {
-        login: '',
-        hashed_email: teacher.hashed_email,
-        password: teacher.password
-      }
-    }
-
+    create_session_for_user(teacher)
     assert_nil @response.cookies["remember_user_token"]
   end
 
@@ -275,6 +205,27 @@ class SessionsControllerTest < ActionController::TestCase
     }
 
     assert @response.cookies["remember_user_token"]
+  end
+
+  test "session can be expired" do
+    teacher = create(:teacher)
+    create_session_for_user(teacher)
+    original_id = session.id.dup
+
+    post :expire_other
+    refute_equal session.id, original_id
+  end
+
+  test "misc session data will be preserved through expiration" do
+    teacher = create(:teacher)
+    create_session_for_user(teacher)
+    # User-identifying data will NOT be preserved.
+    session[:_csrf_token] = "baz"
+    session[:foo] = "bar"
+
+    post :expire_other
+    refute_equal session[:_csrf_token], "baz"
+    assert_equal session[:foo], "bar"
   end
 
   class LtiAccountLinkingSignInPageTest < ActionDispatch::IntegrationTest
@@ -380,5 +331,16 @@ class SessionsControllerTest < ActionController::TestCase
         _(assigns[:disallowed_email]).must_equal User.hash_email(user_email)
       end
     end
+  end
+
+  # Simple helper method to sign the specified user in using email plus password
+  private def create_session_for_user(user)
+    post :create, params: {
+      user: {
+        login: '',
+        hashed_email: user.hashed_email,
+        password: user.password
+      }
+    }
   end
 end

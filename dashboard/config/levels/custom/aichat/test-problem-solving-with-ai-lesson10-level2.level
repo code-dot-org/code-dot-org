@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-03-21T16:57:14.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## You as Creator. AI as Collaborator.\r\n\r\nIn this exercise, AI will act as a collaborator, giving you **suggestions** to improve your creative content.\r\n\r\n### Do This:\r\n\r\n1. Input the **creative content piece** you recorded in your activity guide into AI Chat.\r\n2. **Have AI evaluate** your content based on one of the following:\r\n    - **Clarity** (*Ask AI if it is easy to understand*)\r\n    - **Engagement** (*Ask AI if it captures interest*)\r\n    - **Originality** (*Ask AI if it feels unique*)\r\n3. **Prompt the AI** to provide a few suggestions for the **style, format or tone**\r\n    - _Note: **DO NOT ask AI to revise** the content for you—only ask for **ideas and suggestions**._\r\n4. **Revise your original piece** based on the feedback and any suggestions you want to implement from the AI and **record it in your Activity Guide**.\r\n    - *Note: it is fine if you don’t want to implement any of AI’s suggestions. Just make sure to note this in your activity guide and reasons why.*\r\n\r\n**Try it out!**\r\n\r\n---\r\n\r\n::: details [**Struggling with creating your creative content?**]\r\nTry copy and pasting the following revised prompt into AI Chat: \r\nHere are some examples of what your creative content might look like:\r\n- **Write a futuristic advertisement for a self-driving bicycle.**\r\n    - _Example: The world’s first fully autonomous e-bicycle that takes you wherever you need to go! Built-in smart navigation, voice control, and auto-balance technology make every ride effortless._\r\n- **Write a short poem about a city in the year 2100.**\r\n    - _Example: Neon cities, skies so bright, Hover cars zoom through the night._\r\n- **1-2 sentence description for new video game concept that involves time travel.**\r\n    - _Example: In Time Slip, players control a scientist trapped in a glitching time loop, jumping between prehistoric jungles, futuristic cities, and medieval castles. Repair history before reality collapses!_\r\n- **Create a tagline for a movie about AI detectives.**\r\n    - _Example: They don’t just solve crimes… they predict them before they happen._\r\n- **Write a 2-3 sentence introduction to a science fiction novel.**\r\n    - _Example: The year is 2543*, and Earth is no longer home—humanity has fled to the plant Arid**-9**. But when an unknown signal emerges from Earth, whispering in a forgotten language, scientist Mira Voss must decide: Is it a warning… or an invitation?_\r\n\r\n:::",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a chatbot facilitating a Creative Iteration Activity. Your role is to guide students in refining their own content by asking them questions, providing feedback, and offering suggestions without directly revising the student’s work. Students will be sharing creative pieces on topics such as:\n\nA futuristic advertisement for a self-driving bicycle\nA short poem about a city in the year 2100\nA 1–2 sentence description for a new time-travel video game concept\nA tagline for a movie about AI detectives\nA 2–3 sentence introduction to a science fiction novel\n\nPlease follow these guidelines:\n1. Evaluation of Student Work:\nWhen a student shares their original piece, ask them which of the following would they like help with evaluating:\n* Clarity – Is it easy to understand?\n* Engagement – Does it capture interest?\n* Originality – Does it feel unique?\n\n2. Only provide ideas and suggestions for style, format, or tone.\n* Do not directly revise the student’s writing or provide a rewritten version.\n* If the student requests feedback, you may offer options or angles they could consider.\n\n3. Encourage Student Creativity:\n* The student should remain the creator and driver of their work.\n* Remind them they can choose which suggestions (if any) to implement.\n\n4. Respect the Student’s Process:\n* It’s perfectly acceptable for the student to not use any AI suggestions. They should simply note if and why they chose not to incorporate the feedback.\n\nIn all your responses:\n* Keep the focus on constructive feedback and possible improvements.\n* Encourage the student to refine their piece in their own words, incorporating their unique perspective.\n\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "bubble_choice_description": "Use AI Chat to help you decide which two patients to assist first.",
+    "display_name": "Hospital Triage Nurse",
+    "thumbnail_url": "https://images.code.org/249b43f221aed22f6ebc602a3084c4bf-medical-clipboard.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-21T16:57:14.007+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson8-level3\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson8-level3\"},{\"changed_at\":\"2025-03-21 16:57:16 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-21 19:46:23 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-21 19:54:38 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-21 19:57:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-21 20:03:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-21 20:08:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-21 20:15:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-22 20:19:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

@@ -66,7 +66,7 @@ const availableCallouts: AvailableCallouts = {
     selector: `.blocklyWorkspace g[data-id="${BlockTypes.TRIGGERED_AT_SIMPLE2}"]`,
   },
   'repeat-block-field-workspace': {
-    selector: `.blocklyWorkspace g[data-id="${BlockTypes.REPEAT_SIMPLE2}"] > .blocklyEditableText`,
+    selector: `.blocklyWorkspace g[data-id="${BlockTypes.REPEAT_SIMPLE2}"] > .blocklyEditableField`,
   },
   'when-run-block': {
     selector: `g[data-id="${BlockTypes.WHEN_RUN_SIMPLE2}"] > path`,
@@ -76,6 +76,8 @@ const availableCallouts: AvailableCallouts = {
   'trigger-button-2': {selector: `#${Triggers[1].id}`},
   'trigger-button-3': {selector: `#${Triggers[2].id}`},
   'trigger-button-4': {selector: `#${Triggers[3].id}`},
+  'start-over-button': {selector: '#start-over-button'},
+  'documentation-button': {selector: '#documentation-button'},
   'toolbox-first-row': {selector: '.blocklyTreeRow'},
   'flyout-first-block': {
     selector: '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable',
@@ -125,17 +127,24 @@ const Callouts: React.FunctionComponent = () => {
     const splitId = calloutId.split(':');
     if (splitId.length === 2) {
       const dataId = splitId[1];
-      validCallouts.push({
-        selector: `.blocklyWorkspace g[data-id="${dataId}"] path`,
-        direction:
-          splitId[0] === 'id-left'
-            ? 'left'
-            : splitId[0] === 'id-up-inside'
-            ? 'up-inside'
-            : splitId[0] === 'id-up-left'
-            ? 'up-left'
-            : 'up',
-      });
+      if (splitId[0] === 'flyout-id') {
+        validCallouts.push({
+          selector: `.blocklyFlyout g[data-id="${dataId}"] path`,
+          direction: 'left',
+        });
+      } else {
+        validCallouts.push({
+          selector: `.blocklyWorkspace g[data-id="${dataId}"] path`,
+          direction:
+            splitId[0] === 'id-left'
+              ? 'left'
+              : splitId[0] === 'id-up-inside'
+              ? 'up-inside'
+              : splitId[0] === 'id-up-left'
+              ? 'up-left'
+              : 'up',
+        });
+      }
     } else if (availableCallouts[calloutId]) {
       validCallouts.push({
         selector: availableCallouts[calloutId].selector,

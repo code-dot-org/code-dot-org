@@ -1,0 +1,14 @@
+=inline_css "/generated/ai-foundations-hero-banner.css"
+
+%section.ai-foundations-hero-banner.hero-banner-basic
+  .wrapper
+    .text-wrapper
+      %h1.white
+        =hoc_s("aif_hero_banner.heading")
+      %p.body-two.white
+        =hoc_s("aif_hero_banner.desc")
+      %a.link-button.white{href: "/curriculum/artificial-intelligence-foundations", aria: {label: hoc_s("aif_hero_banner.button_aria_label")}}
+        =hoc_s(:call_to_action_explore_curriculum)
+    %figure
+      %img{src: "/images/banners/aif-hero.png", alt: ""}
+.clear

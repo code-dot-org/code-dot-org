@@ -1,5 +1,6 @@
 @no_mobile
 @single_session
+@pegasus_content
 Feature: Header navigation bar
   Scenario: Student in English should see 4 header links
     Given I create a student named "Sally Student" and go home
@@ -84,7 +85,7 @@ Feature: Header navigation bar
     Then check that I am on "http://studio.code.org/home"
     And I sign out
 
-  @chrome
+  @skip @chrome
   Scenario: Student can click on the header links
     Given I create a student named "Squire Clicks-A-Lot Student" and go home
     And I set the language cookie

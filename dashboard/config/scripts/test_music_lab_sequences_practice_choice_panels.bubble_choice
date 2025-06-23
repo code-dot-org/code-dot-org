@@ -1,0 +1,9 @@
+name 'test-music-lab-sequences-practice-choice-panels'
+display_name 'Review Concepts about Sequencing'
+description 'This lesson covers loops and how to use them in your code. Before starting, review any of the concepts below to refresh your understanding of code sequencing, which is important for mastering loops.'
+
+sublevels
+level 'test-music-lab-sequences-explore-song-choice-level-a'
+level 'test-music-lab-sequences-explore-song-choice-level-b'
+level 'test-music-lab-sequences-explore-song-choice-level-c'
+

@@ -1,0 +1,10 @@
+name 'problem-solving-with-ai-lesson12-level1_2024'
+display_name 'AI In The Community'
+description 'These levels link to a folder that contains articles about AI use in different community contexts'
+
+sublevels
+level 'problem-solving-with-ai-lesson12-level1a_2024'
+level 'problem-solving-with-ai-lesson12-level1b_2024'
+level 'problem-solving-with-ai-lesson12-level1c_2024'
+level 'problem-solving-with-ai-lesson12-level1d_2024'
+

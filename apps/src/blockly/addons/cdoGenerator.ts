@@ -5,6 +5,7 @@ import {
   ExtendedBlock,
   ExtendedCodeGenerator,
   ExtendedJavascriptGenerator,
+  ExtendedWorkspaceSvg,
 } from '@cdo/apps/blockly/types';
 
 export default function initializeGenerator(
@@ -42,6 +43,13 @@ export default function initializeGenerator(
     let blocksToGenerate = blocklyWrapper.mainBlockSpace.getTopBlocks(
       true /* ordered */
     );
+    if (blocklyWrapper.getHiddenDefinitionWorkspace()) {
+      blocksToGenerate.push(
+        ...(
+          blocklyWrapper.getHiddenDefinitionWorkspace() as ExtendedWorkspaceSvg
+        ).getTopBlocks(true)
+      );
+    }
     if (opt_typeFilter) {
       if (typeof opt_typeFilter === 'string') {
         opt_typeFilter = [opt_typeFilter];

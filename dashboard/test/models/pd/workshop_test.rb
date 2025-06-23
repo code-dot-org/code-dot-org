@@ -57,7 +57,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'query by enrolled teacher' do
     # Teachers enroll in a workshop as a whole
     teacher = create :teacher
-    create :pd_enrollment, workshop: @workshop, full_name: teacher.name, email: teacher.email_for_enrollments
+    create :pd_enrollment, workshop: @workshop, full_name: teacher.name, email: teacher.email
 
     # create a workshop with a different teacher enrollment, which should not be returned below
     other_workshop = create(:workshop)
@@ -74,7 +74,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_empty Pd::Workshop.enrolled_in_by(teacher)
 
     # Email match only
-    enrollment.update!(email: teacher.email_for_enrollments)
+    enrollment.update!(email: teacher.email)
     assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
 
     # UserId only
@@ -82,13 +82,20 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
 
     # Both email and user id. Should still find workshop exactly once
-    enrollment.update!(email: teacher.email_for_enrollments, user: teacher)
+    enrollment.update!(email: teacher.email, user: teacher)
+    assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
+
+    # Alternate email match only
+    create :pd_teacher_application, user: teacher, status: 'accepted'
+    enrollment.update!(email: teacher.alternate_email, user: nil)
     assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
   end
 
   test 'exclude_summer scope' do
     summer_workshop = create :summer_workshop
-    teachercon = create :workshop, :teachercon
+    teachercon = build :workshop, :teachercon
+    # workshop subject is deprecated so validation must be skipped
+    teachercon.save(validate: false)
 
     assert Pd::Workshop.exclude_summer.exclude? summer_workshop
     assert Pd::Workshop.exclude_summer.exclude? teachercon
@@ -215,7 +222,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     refute workshop.valid?
     assert_equal 1, workshop.errors.count
-    assert_equal 'Sessions must start on separate days.', workshop.errors.full_messages.first
+    assert_equal 'Sessions must start on separate days', workshop.errors.full_messages.first
   end
 
   test 'sessions must start and end on the same day' do
@@ -225,7 +232,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     refute workshop.valid?
     assert_equal 1, workshop.errors.count
-    assert_equal 'Sessions end must occur on the same day as the start.', workshop.errors.full_messages.first
+    assert_equal 'Sessions end must occur on the same day as the start', workshop.errors.full_messages.first
   end
 
   test 'sessions must start before they end' do
@@ -235,7 +242,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     refute workshop.valid?
     assert_equal 1, workshop.errors.count
-    assert_equal 'Sessions end must occur after the start.', workshop.errors.full_messages.first
+    assert_equal 'Sessions end must occur after the start', workshop.errors.full_messages.first
   end
 
   # Email queries
@@ -310,12 +317,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'end workshop sends exit surveys to facilitators for Build Your Own workshops' do
-    byo_workshop = create :pd_workshop,
+    byo_workshop = create :byo_workshop,
       :ended,
-      funded: false,
-      course: Pd::Workshop::COURSE_BUILD_YOUR_OWN,
-      subject: nil,
-      course_offerings: [] << (create :course_offering),
       num_facilitators: 1
     byo_workshop.start!
 
@@ -348,10 +351,14 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::Workshop.process_ends
   end
 
-  test 'account_required_for_attendance?' do
+  # counselor_workshop and admin_workshop have been archived so it no longer passes validation
+  # create a regular workshop and update_columns without validating to test function
+  test 'account_required_for_attendance' do
     normal_workshop = create :workshop, :ended
-    counselor_workshop = create :counselor_workshop, :ended
-    admin_workshop = create :admin_workshop, :ended
+    counselor_workshop = create :workshop, :ended
+    counselor_workshop.update_columns(course: Pd::Workshop::COURSE_COUNSELOR, subject: nil)
+    admin_workshop = create :workshop, :ended
+    admin_workshop.update_columns(course: Pd::Workshop::COURSE_ADMIN, subject: nil)
     admin_counselor_workshop = create :admin_counselor_workshop, :ended
 
     assert normal_workshop.account_required_for_attendance?
@@ -370,7 +377,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_exit_surveys with attendance but no account gets email for counselor or admin' do
-    workshop = create :counselor_workshop, :ended
+    workshop = create :workshop, :ended
+    workshop.update_columns(course: Pd::Workshop::COURSE_COUNSELOR, subject: nil)
 
     enrollment = create :pd_enrollment, workshop: workshop
     create :pd_attendance_no_account, session: workshop.sessions.first, enrollment: enrollment
@@ -405,7 +413,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'send_exit_surveys sends no surveys for FiT workshops' do
     # Make a FiT workshop that's ended and has attendance;
     # these are the conditions under which we'd normally send a survey.
-    workshop = create :fit_workshop, :ended
+    workshop = build :fit_workshop, :ended
+    # workshop subject is deprecated so validation must be skipped
+    workshop.save(validate: false)
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
 
     # Ensure no exit surveys are sent
@@ -514,20 +524,28 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'friendly name' do
-    Geocoder.expects(:search).returns([])
-    workshop = create :admin_workshop,
-      location_name: 'Code.org',
-      location_address: 'Seattle, WA',
-      sessions: [create(:pd_session, start: Date.new(2016, 9, 1))]
+    workshop = create :byo_workshop,
+      name: "Test Workshop",
+      num_facilitators: 1,
+      sessions: [create(:pd_session, start: Date.new(2016, 9, 1), location_name: 'Code.org', location_address: 'Seattle, WA', session_format: 'in_person')]
 
-    # no subject
+    # with name ending in 'Workshop'
+    assert_equal 'Test Workshop on 09/01/16 at Code.org in Seattle, WA', workshop.friendly_name
+
+    # with name not ending in 'Workshop' (appends ' workshop' to the name)
+    workshop.update!(name: 'New Name')
+    assert_equal 'New Name workshop on 09/01/16 at Code.org in Seattle, WA', workshop.friendly_name
+
+    # with course that doesn't require a name, and no subject
+    workshop.update_columns(course: Pd::Workshop::COURSE_ADMIN, name: '')
     assert_equal 'Admin workshop on 09/01/16 at Code.org in Seattle, WA', workshop.friendly_name
 
     # with subject
-    workshop.update!(course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_5)
+    workshop.update_columns(course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_5)
     assert_equal 'Exploring Computer Science Unit 5 - Data workshop on 09/01/16 at Code.org in Seattle, WA', workshop.friendly_name
+
     # truncated at 255 chars
-    workshop.update!(location_name: "blah" * 60)
+    workshop.sessions.first.update!(location_name: "blah" * 60)
     assert workshop.friendly_name.start_with? 'Exploring Computer Science Unit 5 - Data workshop on 09/01/16 at blahblahblah'
     assert workshop.friendly_name.length == 255
   end
@@ -739,17 +757,21 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'teacherCon workshops are capped at 33.5 hours' do
-    workshop_csd_teachercon = create :workshop,
+    workshop_csd_teachercon = build :workshop,
       course: Pd::Workshop::COURSE_CSD,
       subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON,
       num_sessions: 5,
       each_session_hours: 8
+    # workshop subject is deprecated so validation must be skipped
+    workshop_csd_teachercon.save(validate: false)
 
-    workshop_csp_teachercon = create :workshop,
+    workshop_csp_teachercon = build :workshop,
       course: Pd::Workshop::COURSE_CSD,
       subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON,
       num_sessions: 5,
       each_session_hours: 8
+    # workshop subject is deprecated so validation must be skipped
+    workshop_csp_teachercon.save(validate: false)
 
     assert_equal 33.5, workshop_csd_teachercon.effective_num_hours
     assert_equal 33.5, workshop_csp_teachercon.effective_num_hours
@@ -787,6 +809,22 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_includes(e.message, 'Failed to send 1 day workshop reminders:')
     assert_includes(e.message, 'teacher enrollment')
     assert_includes(e.message, 'bad email')
+  end
+
+  test 'sends teacher_enrollment_reminder email to both the users email and alternate email if available and for a summer workshop' do
+    mock_mail = stub
+    mock_mail.stubs(:deliver_now)
+
+    teacher = create :teacher
+    workshop = create :summer_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD
+    application = create :pd_teacher_application, course: 'csd', application_year: workshop.school_year, user: teacher, status: 'accepted'
+    enrollment = create :pd_enrollment, application_id: application.id, user: teacher, workshop: workshop
+
+    Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
+    Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).with(enrollment, options: {:days_before => 1}).returns(mock_mail)
+    Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).with(enrollment, options: {:days_before => 1}, to_email: teacher.alternate_email).returns(mock_mail)
+
+    Pd::Workshop.send_reminder_for_upcoming_in_days(1)
   end
 
   test 'errors in organizer reminders in send_reminder_for_upcoming_in_days do not stop batch' do
@@ -905,6 +943,21 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::Workshop.send_teacher_pre_work_csa
   end
 
+  test 'CSA teacher pre-work email sends to both the users email and alternate summer email if available' do
+    mock_mail = stub
+    mock_mail.stubs(:deliver_now).returns(nil)
+
+    teacher = create :teacher
+    workshop = create :csa_academic_year_workshop, num_facilitators: 2, subject: Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP
+    application = create :pd_teacher_application, course: 'csa', application_year: workshop.school_year, user: teacher, status: 'accepted'
+    enrollment = create :pd_enrollment, application_id: application.id, user: teacher, workshop: workshop
+
+    Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
+    Pd::WorkshopMailer.expects(:teacher_pre_workshop_csa).with(enrollment).returns(mock_mail)
+    Pd::WorkshopMailer.expects(:teacher_pre_workshop_csa).with(enrollment, to_email: teacher.alternate_email).returns(mock_mail)
+    Pd::Workshop.send_teacher_pre_work_csa
+  end
+
   test 'workshop starting date picks the day of the first session' do
     workshop = create :workshop, sessions: [
       session1 = create(:pd_session, start: Time.zone.today + 15.days),
@@ -1018,73 +1071,18 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     refute @workshop.organizer_or_facilitator?(another_facilitator)
   end
 
-  test 'process_location is called when location_address changes' do
-    @workshop.expects(:process_location).once
-    @workshop.update!(location_address: '1501 4th Ave, Seattle WA')
-
-    # Changing another field does not process location
-    @workshop.expects(:process_location).never
-    @workshop.update!(location_name: 'Code.org')
-
-    # Setting location_address to the same value does not process location
-    @workshop.expects(:process_location).never
-    @workshop.update!(location_address: '1501 4th Ave, Seattle WA')
-  end
-
-  test 'process_location' do
-    mock_geocoder_result = [
-      OpenStruct.new(
-        latitude: 47.610183,
-        longitude: -122.337401,
-        city: 'Seattle',
-        state: 'WA',
-        formatted_address: '1501 4th Ave, Seattle, WA 98101, USA'
-      )
-    ]
-    expected_processed_location = '{"latitude":47.610183,"longitude":-122.337401,"city":"Seattle","state":"WA","formatted_address":"1501 4th Ave, Seattle, WA 98101, USA"}'
-    Honeybadger.expects(:notify).never
-
-    # Normal lookup
-    Geocoder.expects(:search).with('1501 4th Ave, Seattle WA').returns(mock_geocoder_result)
-    @workshop.location_address = '1501 4th Ave, Seattle WA'
-    @workshop.process_location
-    assert_equal expected_processed_location, @workshop.processed_location
-
-    # Nonexistent location clears processed_location
-    Geocoder.expects(:search).with('nonexistent location').returns([])
-    @workshop.location_address = 'nonexistent location'
-    @workshop.process_location
-    assert_nil @workshop.processed_location
-
-    # Don't bother looking up blank addresses, TBA/TBDs, or virtual locations
-    ['', 'tba', 'TBA', 'tbd', 'N/A', 'virtual', 'Virtual workshop'].each do |address|
-      Geocoder.expects(:search).never
-      @workshop.location_address = address
-      @workshop.process_location
-      assert_nil @workshop.processed_location
-    end
-
-    # Retry on errors
-    Geocoder.expects(:search).with('1501 4th Ave, Seattle WA').raises(SocketError).then.returns(mock_geocoder_result).twice
-    @workshop.location_address = '1501 4th Ave, Seattle WA'
-    @workshop.process_location
-    assert_equal expected_processed_location, @workshop.processed_location
-
-    # Repeated errors are logged to honeybadger
-    Honeybadger.expects(:notify).once
-    Geocoder.expects(:search).with('1501 4th Ave, Seattle WA').raises(SocketError).twice
-    @workshop.location_address = '1501 4th Ave, Seattle WA'
-    @workshop.process_location
-    assert_nil @workshop.processed_location
-  end
-
   test 'suppress_reminders? is true for certain subjects by default' do
     suppressed = [
-      create(:fit_workshop, course: Pd::Workshop::COURSE_CSF),
-      create(:workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON),
-      create(:fit_workshop, course: Pd::Workshop::COURSE_CSD),
-      create(:workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON),
-      create(:fit_workshop, course: Pd::Workshop::COURSE_CSP),
+      # workshop subject is deprecated so validation must be skipped
+      build(:fit_workshop, course: Pd::Workshop::COURSE_CSF).tap {|w| w.save(validate: false)},
+      # workshop subject is deprecated so validation must be skipped
+      build(:workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON).tap {|w| w.save(validate: false)},
+      # workshop subject is deprecated so validation must be skipped
+      build(:fit_workshop, course: Pd::Workshop::COURSE_CSD).tap {|w| w.save(validate: false)},
+      # workshop subject is deprecated so validation must be skipped
+      build(:workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON).tap {|w| w.save(validate: false)},
+      # workshop subject is deprecated so validation must be skipped
+      build(:fit_workshop, course: Pd::Workshop::COURSE_CSP).tap {|w| w.save(validate: false)},
       create(:admin_counselor_workshop, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_WELCOME),
       create(:admin_counselor_workshop, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_INTRO),
       create(:admin_counselor_workshop, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL1),
@@ -1102,7 +1100,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'workshops not suppressing reminders by default will suppress_reminders once suppress_email is set' do
     workshop = build :workshop
 
-    workshop.virtual = false
     refute workshop.suppress_reminders?
 
     workshop.suppress_email = true
@@ -1198,80 +1195,37 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal 'March 30 - April 3, 2017', workshop.friendly_date_range
   end
 
-  test 'date_and_location_name with processed location and sessions' do
-    workshop = build :workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 30),
-      processed_location: {city: 'Seattle', state: 'WA'}.to_json
-
-    assert_equal 'March 30 - April 3, 2017, Seattle WA', workshop.date_and_location_name
-  end
-
-  test 'date_and_location_name with processed location but no sessions' do
-    workshop = build :workshop,
-      processed_location: {city: 'Seattle', state: 'WA'}.to_json,
-      num_sessions: 0
-
-    assert_equal 'Dates TBA, Seattle WA', workshop.date_and_location_name
-  end
-
   test 'date_and_location_name with no location but with sessions' do
-    workshop = build :workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 30),
-      processed_location: nil
+    workshop = build :workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 30)
 
     assert_equal 'March 30 - April 3, 2017, Location TBA', workshop.date_and_location_name
   end
 
   test 'date_and_location_name with no location nor sessions' do
-    workshop = create :workshop, processed_location: nil, num_sessions: 0
+    workshop = create :workshop, num_sessions: 0
 
     assert_equal 'Dates TBA, Location TBA', workshop.date_and_location_name
   end
 
   test 'date_and_location_name for teachercon' do
-    workshop = build :workshop, :teachercon, num_sessions: 5, sessions_from: Date.new(2017, 3, 30),
-      processed_location: {city: 'Seattle', state: 'WA'}.to_json
+    workshop = build :workshop, :teachercon, num_sessions: 5, sessions_from: Date.new(2017, 3, 30), session_location_address: 'Seattle WA'
 
     assert_equal 'March 30 - April 3, 2017, Seattle WA TeacherCon', workshop.date_and_location_name
   end
 
   test 'date_and_location_name with virtual location and sessions' do
-    workshop = build :workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 30),
-      location_address: 'virtual'
-    workshop.process_location
+    workshop = build :workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 30), virtual: true
 
     assert_equal 'March 30 - April 3, 2017, Virtual Workshop', workshop.date_and_location_name
   end
 
-  test 'date_and_location_name with virtual location but no sessions' do
-    workshop = build :workshop, num_sessions: 0, sessions_from: Date.new(2017, 3, 30),
-      location_address: 'virtual'
-    workshop.process_location
-
-    assert_equal 'Dates TBA, Virtual Workshop', workshop.date_and_location_name
-  end
-
-  test 'friendly_location TBA' do
-    workshop = build :workshop, location_address: 'tba'
-    assert_equal 'Location TBA', workshop.friendly_location
-  end
-
-  test 'friendly_location with a city and state' do
-    workshop = build :workshop, location_address: 'Seattle, WA',
-      processed_location: {city: 'Seattle', state: 'WA'}.to_json
-    assert_equal 'Seattle WA', workshop.friendly_location
-  end
-
-  test 'friendly_location with an unprocessable location address returns the address as entered' do
-    workshop = build :workshop, location_address: 'my custom unprocessable location', processed_location: nil
-    assert_equal 'my custom unprocessable location', workshop.friendly_location
-  end
-
   test 'friendly_location with no location returns tba' do
-    workshop = build :workshop, location_address: '', processed_location: nil
+    workshop = build :workshop
     assert_equal 'Location TBA', workshop.friendly_location
   end
 
   test 'friendly_location with virtual location' do
-    workshop = build :workshop, location_address: 'virtual', processed_location: nil
+    workshop = build :workshop, virtual: true
     assert_equal 'Virtual Workshop', workshop.friendly_location
   end
 
@@ -1286,68 +1240,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop = create :workshop, organizer: program_manager
 
     assert_equal regional_partner, workshop.regional_partner
-  end
-
-  test 'csf funded workshops require a funding type' do
-    workshop = build :workshop, course: Pd::Workshop::COURSE_CSF,
-      funded: true, funding_type: nil
-    refute workshop.valid?
-
-    workshop.funding_type = Pd::Workshop::FUNDING_TYPE_FACILITATOR
-    assert workshop.valid?
-  end
-
-  test 'csf unfunded workshops do not accept a funding type' do
-    workshop = build :workshop, course: Pd::Workshop::COURSE_CSF,
-      funded: false, funding_type: Pd::Workshop::FUNDING_TYPE_FACILITATOR
-    refute workshop.valid?
-
-    workshop.funding_type = nil
-    assert workshop.valid?
-  end
-
-  test 'non-csf workshops do not accept a funding type' do
-    [
-      [{funded: true, funding_type: Pd::Workshop::FUNDING_TYPE_FACILITATOR}, false],
-      [{funded: false, funding_type: Pd::Workshop::FUNDING_TYPE_FACILITATOR}, false],
-      [{funded: true, funding_type: nil}, true],
-      [{funded: false, funding_type: nil}, true]
-    ].each do |params, expected_validity|
-      workshop = build :workshop, course: Pd::Workshop::COURSE_CSP, **params
-      assert_equal(
-        expected_validity,
-        workshop.valid?,
-        "Expected #{params} to be #{expected_validity ? 'valid' : 'invalid'}"
-      )
-    end
-  end
-
-  test 'funded_friendly_name' do
-    [
-      [
-        {funded: false},
-        'No'
-      ],
-      [
-        {course: Pd::Workshop::COURSE_CSP, funded: true},
-        'Yes'
-      ],
-      [
-        {course: Pd::Workshop::COURSE_CSF, funded: true, funding_type: Pd::Workshop::FUNDING_TYPE_PARTNER},
-        'Yes: partner'
-      ],
-      [
-        {course: Pd::Workshop::COURSE_CSF, funded: true, funding_type: Pd::Workshop::FUNDING_TYPE_FACILITATOR},
-        'Yes: facilitator'
-      ]
-    ].each do |params, expected|
-      workshop = build :workshop, **params
-      assert_equal(
-        expected,
-        workshop.funding_summary,
-        "Expected #{params} funded_friendly_name to be #{expected}"
-      )
-    end
   end
 
   test 'nearest' do
@@ -1389,7 +1281,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     create :pd_enrollment, :from_user, user: user, workshop: same_subject_farther
 
     different_subject_closer = create :workshop, sessions_from: Time.zone.today,
-      course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_TEACHER_CON
+      course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
     create :pd_enrollment, :from_user, user: user, workshop: different_subject_closer
 
     # closer, not enrolled
@@ -1485,7 +1377,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop = build :workshop
 
     # Non-virtual workshops may suppress email or not
-    workshop.virtual = false
     workshop.suppress_email = false
     assert workshop.valid?
 
@@ -1493,55 +1384,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert workshop.valid?
 
     # Virtual workshops may suppress email or not (change from previous behavior)
-    workshop.virtual = true
+    workshop.sessions.first.session_format = 'virtual'
     workshop.suppress_email = false
     assert workshop.valid?
 
     workshop.suppress_email = true
-    assert workshop.valid?
-  end
-
-  test 'EIR:Admin/Counselor Welcome workshop must not be funded' do
-    workshop = build :admin_counselor_workshop, course: COURSE_ADMIN_COUNSELOR
-
-    workshop.subject = SUBJECT_ADMIN_COUNSELOR_WELCOME
-    workshop.funded = true
-    refute workshop.valid?
-
-    workshop.funded = false
-    assert workshop.valid?
-  end
-
-  test 'virtual specific subjects must be virtual' do
-    workshop = build :pd_workshop,
-      course: COURSE_CSP,
-      subject: SUBJECT_CSP_WORKSHOP_1,
-      virtual: false,
-      suppress_email: true
-
-    assert workshop.valid?
-
-    workshop.subject = VIRTUAL_ONLY_SUBJECTS.first
-    refute workshop.valid?
-
-    workshop.virtual = true
-    assert workshop.valid?
-  end
-
-  test 'friday_institute workshops must be virtual' do
-    workshop = build :workshop, third_party_provider: 'friday_institute', virtual: false
-    refute workshop.valid?
-
-    workshop.virtual = true
-    workshop.suppress_email = true
-    assert workshop.valid?
-  end
-
-  test 'workshops third_party_provider must be nil or from specified list' do
-    workshop = build :workshop, third_party_provider: 'unknown_pd_provider'
-    refute workshop.valid?
-
-    workshop.third_party_provider = nil
     assert workshop.valid?
   end
 
@@ -1562,11 +1409,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'CSF workshop must not require teacher application' do
     workshop = create :csf_workshop, regional_partner: @regional_partner
-    refute workshop.require_application?
-  end
-
-  test 'virtual CSD workshop must not require teacher application' do
-    workshop = create :csd_virtual_workshop, regional_partner: @regional_partner
     refute workshop.require_application?
   end
 
@@ -1610,6 +1452,45 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'workshop date range string is NA when no sessions' do
     workshop = create :workshop, num_sessions: 0
     assert_equal 'N/A', workshop.workshop_date_range_string
+  end
+
+  test 'bad time_zone value results in nil' do
+    workshop = create :workshop, time_zone: 'Bad/Zone'
+    assert_equal nil, workshop.time_zone
+  end
+
+  test 'workshop config_validation' do
+    workshop = build :pd_workshop, grades: nil, name: nil, description: nil
+
+    refute workshop.valid?
+    assert_includes workshop.errors.full_messages, 'Please select at least one grade level'
+    assert_includes workshop.errors.full_messages, 'Name is required'
+    assert_includes workshop.errors.full_messages, 'Description is required'
+  end
+
+  test 'registration_link defaults to teacher app link if applications are required' do
+    workshop = create :workshop, course: Pd::Workshop::COURSE_CSD, subject: SUBJECT_SUMMER_WORKSHOP
+
+    assert_equal "/pd/application/teacher", workshop.registration_link
+  end
+
+  test 'registration_link does not default to anything if applications are not required' do
+    workshop = create :byo_workshop
+
+    assert_nil workshop.registration_link
+  end
+
+  test 'valid_grades rejects invalid grades' do
+    workshop = build :pd_workshop, grades: ['Other', 'CS 100']
+
+    refute workshop.valid?
+    assert_includes workshop.errors.full_messages, 'Grade levels contains invalid grades: Other, CS 100'
+  end
+
+  test 'valid_grades allows valid grades' do
+    workshop = build :pd_workshop, grades: ['K', '1']
+
+    assert workshop.valid?
   end
 
   private def session_on_day(day_offset)

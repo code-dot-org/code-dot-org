@@ -1,0 +1,10 @@
+name 'test-intro-to-programming-lesson8-level6choice'
+display_name 'Practice with Debugging'
+description 'Choose one of the options below!'
+
+sublevels
+level 'test-intro-to-programming-lesson8-level6'
+level 'test-intro-to-programming-lesson8-level6b'
+level 'test-intro-to-programming-lesson8-level6c'
+level 'test-intro-to-programming-lesson8-level6d'
+

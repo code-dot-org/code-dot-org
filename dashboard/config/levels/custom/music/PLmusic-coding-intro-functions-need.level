@@ -1,0 +1,254 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-02-06T22:48:09.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "validationTimeout": 2,
+      "library": "launch2024",
+      "toolbox": {
+        "blocks": {
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "play_sound_at_current_location_simple2",
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "sabrina_carpenter_espresso/drums_main_beat"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "9kTSW_VXaBT/A[T+vzw$",
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "sabrina_carpenter_espresso/bass_main"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "WKFEdaq)zzApgs9,+17C",
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "sabrina_carpenter_espresso/vocals_chorus_1"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sound_at_current_location_simple2",
+                      "id": "@tf5unHUq]=oHQJ7fNW;",
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "fields": {
+                        "sound": "sabrina_carpenter_espresso/drums_fill"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": "sXVk^hx@R-Xt?LmL3Ey[",
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "U0k%~xxIxb8ck?R7Sh{k",
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "sabrina_carpenter_espresso/drums_main_beat"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "%9J;,qJ;Z~F5?G$gH,UP",
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "sabrina_carpenter_espresso/bass_main"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "_SU2ZGOf5/N-k)QvrTC+",
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "sabrina_carpenter_espresso/vocals_chorus_1"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "j~?aOr_ttL-[iBXsGQ/M",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "sabrina_carpenter_espresso/crash"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sounds_together",
+                                  "id": "@,9(VL$LHCDW9B$?*~,a",
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "#JG1P/CIwLIlY=mDFayN",
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "sabrina_carpenter_espresso/drums_main_beat"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "p@(]/umL:cu-^gDyJG2{",
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "sabrina_carpenter_espresso/bass_main"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "Y)RU4YX0RY.#JAiZ9Q5{",
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "sound": "sabrina_carpenter_espresso/vocals_chorus_1"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "packId": "sabrina_carpenter_espresso",
+      "sounds": {
+        "sabrina_carpenter_espresso": [
+          "drums_main_beat",
+          "drums_fill",
+          "bass_main",
+          "vocals_chorus_1",
+          "crash"
+        ]
+      }
+    },
+    "long_instructions": "#### <i class=\"fa-solid fa-person-chalkboard\"></i> **Teacher Tip:** \r\n##### In this level, students complete the Use step. Promote classroom discussions using <a href=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/edit#slide=id.g317fe39f44b_0_382\" target=\"_blank\">lesson slide deck.</a>\r\n___\r\n\r\n###<i class=\"fa-regular fa-face-thinking\"></i> What do you notice? \r\n\r\n1. Look for patterns in the code.\r\n2. Press [Run](#clickable=run-button) to listen to the song.",
+    "validations": [
+      {
+        "key": "music-coding-intro-functions-need_0494dc13-1782-465b-91a8-0ed486477a1b",
+        "message": "**We can make this code more efficient!**\n\nPress Continue to learn how. ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 8
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-functions-need_4e41262d-17d3-46b7-9d4d-2404f9fc902e",
+        "message": "These sounds are playing together again!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 5
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-functions-need_fe21bd7b-5297-4459-bdba-2db666f824b8",
+        "message": "Watch for patterns in the code.",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 3
+          }
+        ]
+      }
+    ],
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-02-06T22:48:09.292+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-need\\\"\"],\"cloned_from\":\"music-coding-intro-functions-need\"},{\"changed_at\":\"2025-02-07 20:07:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

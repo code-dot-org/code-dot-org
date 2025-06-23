@@ -1,10 +1,11 @@
+import Alert from '@code-dot-org/component-library/alert';
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import {BodyFourText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
-import Alert from '@cdo/apps/componentLibrary/alert/Alert';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
 import {installFunctionBlocks} from '@cdo/apps/music/blockly/blockUtils';
 import {setUpBlocklyForMusicLab} from '@cdo/apps/music/blockly/setup';
 import {
@@ -12,6 +13,7 @@ import {
   DEFAULT_BPM,
   DEFAULT_LIBRARY,
   DEFAULT_PACK,
+  DEFAULT_VALIDATION_TIMEOUT,
 } from '@cdo/apps/music/constants';
 import MusicRegistry from '@cdo/apps/music/MusicRegistry';
 import MusicLibrary, {Sounds} from '@cdo/apps/music/player/MusicLibrary';
@@ -25,7 +27,12 @@ import RawJsonEditor from './RawJsonEditor';
 
 import moduleStyles from './edit-music-level-data.module.scss';
 
-const VALID_LIBRARIES = [DEFAULT_LIBRARY, 'launch2024', 'curriculum2024'];
+const VALID_LIBRARIES = [
+  DEFAULT_LIBRARY,
+  'launch2024',
+  'launch2024-preview',
+  'curriculum2024',
+];
 const RECOMMENDED_LIBRARY = 'launch2024';
 
 const JSON_FIELDS = [['startSources', 'Start Sources']] as const;
@@ -103,7 +110,7 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
   const restrictedPackKeys =
     (restrictedPackOptions || []).map(pack => pack.value) || [];
   return (
-    <div>
+    <ThemeProvider>
       <input
         type="hidden"
         id="level_level_data"
@@ -112,10 +119,21 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
       />
       <CollapsibleSection headerContent="Library & Sounds">
         <div className={moduleStyles.section}>
-          <i>
-            Note that currently, all levels within a lesson must use the same
-            library.
-          </i>
+          <i>Tips for levelbuilders:</i>
+          <ul>
+            <li>Currently, only the launch2024 library supports Share/Remix</li>
+            <li>
+              The intro2024 library is no longer maintained but is still used in
+              early music lab progressions - consider picking a newer library
+              instead!
+            </li>
+            <li>
+              The launch2024-preview and curriculum2024 libraries are just
+              staging grounds for sounds that we want to test out in scripts not
+              intended for full launch. Once those sounds are finalized, they
+              will be put into the launch2024 library in the appropriate form.
+            </li>
+          </ul>
           <div>
             <SimpleDropdown
               labelText="Selected Library"
@@ -214,9 +232,48 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
             name="showSoundFilters"
             label="Show Sound Filters in Sound Picker"
             onChange={event => {
+              const showSoundFilters = event.target.checked;
               setLevelData({
                 ...levelData,
-                showSoundFilters: event.target.checked,
+                showSoundFilters,
+                ...(showSoundFilters
+                  ? {}
+                  : {
+                      showSoundsPanelInSoundsMode: false,
+                      sortUnrestrictedPacksByType: false,
+                    }),
+              });
+            }}
+            size="s"
+          />
+          <Checkbox
+            checked={!!levelData.showSoundsPanelInSoundsMode}
+            name="showSoundsPanelInSoundsMode"
+            label="Default to 'Sounds' mode in Sound Picker"
+            onChange={event => {
+              const showSoundsPanelInSoundsMode = event.target.checked;
+              setLevelData({
+                ...levelData,
+                showSoundsPanelInSoundsMode,
+                ...(showSoundsPanelInSoundsMode
+                  ? {showSoundFilters: true}
+                  : {}),
+              });
+            }}
+            size="s"
+          />
+          <Checkbox
+            checked={!!levelData.sortUnrestrictedPacksByType}
+            name="sortUnrestrictedPacksByType"
+            label="Sort unrestricted (Code.org) packs by type in Sound Picker"
+            onChange={event => {
+              const sortUnrestrictedPacksByType = event.target.checked;
+              setLevelData({
+                ...levelData,
+                sortUnrestrictedPacksByType,
+                ...(sortUnrestrictedPacksByType
+                  ? {showSoundFilters: true}
+                  : {}),
               });
             }}
             size="s"
@@ -233,16 +290,51 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
             }}
             size="s"
           />
+          <div className={moduleStyles.inputRow}>
+            <label htmlFor="validationTimeout" className={moduleStyles.label}>
+              Validation Timeout:
+            </label>
+            <BodyFourText className={moduleStyles.helperText}>
+              This value determines when (in measures) non-success validation
+              messages should start appearing. If the timeout is reached or the
+              last measure has completed, messages will be shown.
+            </BodyFourText>
+
+            <input
+              type="number"
+              id="validationTimeout"
+              name="validationTimeout"
+              value={levelData.validationTimeout}
+              placeholder={DEFAULT_VALIDATION_TIMEOUT.toString()}
+              min={1}
+              onChange={event => {
+                const parsedValue = parseInt(event.target.value);
+                setLevelData({
+                  ...levelData,
+                  validationTimeout: !isNaN(parsedValue)
+                    ? parsedValue
+                    : undefined,
+                });
+              }}
+              className={moduleStyles.input}
+            />
+          </div>
         </div>
       </CollapsibleSection>
       <hr />
+      <div>
+        {'You can also edit toolbox blocks using Blockly using Extra Links.'}
+      </div>
       <CollapsibleSection headerContent="Toolbox">
         <EditMusicToolbox
           toolbox={levelData.toolbox}
           blockMode={levelData.blockMode || BlockMode.SIMPLE2}
           addFunctionDefinition={levelData.toolbox?.addFunctionDefinition}
           addFunctionCalls={levelData.toolbox?.addFunctionCalls}
-          onChange={toolbox => setLevelData({...levelData, toolbox})}
+          onChange={toolbox =>
+            // Reset toolbox mode configuration when changing toolbox settings
+            setLevelData({...levelData, toolbox, toolboxDefinition: undefined})
+          }
           onBlockModeChange={blockMode => {
             const startSourcesFilename = `startSources${blockMode}`;
             const startSources = require(`@cdo/static/music/${startSourcesFilename}.json`);
@@ -258,6 +350,7 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
                 addFunctionDefinition: undefined,
                 addFunctionCalls: undefined,
               },
+              toolboxDefinition: undefined,
             });
           }}
           onAddFunctionDefinitionChange={(addFunctionDefinition: boolean) => {
@@ -329,7 +422,7 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
           />
         </div>
       </CollapsibleSection>
-    </div>
+    </ThemeProvider>
   );
 };
 

@@ -17,7 +17,8 @@ type CallbackArgs = {
     channel: Channel | undefined,
     initialSources: ProjectSources | undefined,
     abuseScore: number | undefined,
-    isReadOnly: boolean | undefined
+    isReadOnly: boolean | undefined,
+    projectSharingDisabled: boolean | undefined
   ];
 };
 
@@ -50,6 +51,7 @@ class LifecycleNotifier {
         this.listeners[event].splice(index, 1);
       }
     }
+    return this;
   }
 
   notify<T extends LifecycleEvent>(event: T, ...args: CallbackArgs[T]) {

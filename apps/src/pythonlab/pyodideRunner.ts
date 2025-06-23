@@ -1,13 +1,23 @@
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
-import {appendSystemMessage} from '@codebridge/redux/consoleRedux';
+import ConsoleManager from '@codebridge/Console/ConsoleManager';
+import {
+  getSystemMessage,
+  getTimestampMessage,
+} from '@codebridge/Console/MessageHelpers';
+import {MiniApps} from '@codebridge/constants';
 import {AnyAction, Dispatch} from 'redux';
 
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProgressManager from '@cdo/apps/lab2/progress/ProgressManager';
 import {getFileByName} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+import {SVG_ID} from '@cdo/apps/maze/constants';
+import pythonlabI18n from '@cdo/apps/pythonlab/locale';
+import {getStore} from '@cdo/apps/redux';
+import {captureThumbnailFromSvgPythonlabNeighborhood} from '@cdo/apps/util/thumbnail';
 
-import {getValidationFromSource} from '../codebridge';
+import {getValidationFromSource, RunType} from '../codebridge';
 
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import {
@@ -27,26 +37,35 @@ export async function handleRunClick(
 ) {
   const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
   if (!source) {
-    consoleManager?.writeSystemMessage('You have no code to run.', appName);
-    dispatch(appendSystemMessage('You have no code to run.'));
+    const runType = runTests
+      ? validationFile
+        ? RunType.VALIDATION
+        : RunType.TEST
+      : RunType.RUN;
+
+    consoleManager?.writeConsoleMessage(getTimestampMessage(runType));
+    handleRunEndedUnexpectedly(consoleManager, pythonlabI18n.noCode());
     return;
   }
   if (runTests) {
     await runAllTests(source, dispatch, progressManager, validationFile);
   } else {
     // Run main.py
+    consoleManager?.writeConsoleMessage(getTimestampMessage(RunType.RUN));
     const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;
-    if (!code) {
-      consoleManager?.writeSystemMessage(
-        `You have no ${MAIN_PYTHON_FILE} to run.`,
-        appName
+    if (code === undefined) {
+      handleRunEndedUnexpectedly(
+        consoleManager,
+        pythonlabI18n.noFileToRun({
+          fileName: MAIN_PYTHON_FILE,
+        })
       );
-      dispatch(appendSystemMessage(`You have no ${MAIN_PYTHON_FILE} to run.`));
       return;
     }
-    consoleManager?.writeSystemMessage('Running program...', appName);
-    dispatch(appendSystemMessage('Running program...'));
     await runPythonCode(code, source);
+    if (isNeighborhoodLevel()) {
+      setProjectThumbnail();
+    }
   }
 }
 
@@ -56,7 +75,20 @@ export async function runPythonCode(
   validationFile?: ProjectFile
 ) {
   try {
-    return await asyncRun(mainFile, source, validationFile);
+    const isNeighborhoodRun = isNeighborhoodLevel();
+    if (isNeighborhoodRun) {
+      CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
+      CodebridgeRegistry.getInstance().getNeighborhood()?.onRun();
+    }
+    // We only send all output to the neighborhood if this is a neighborhood level and
+    // we are not running validation, as validation does not render to the neighborhood.
+    const outputToNeighborhood = isNeighborhoodRun && !validationFile;
+    return await asyncRun(
+      mainFile,
+      source,
+      validationFile,
+      outputToNeighborhood
+    );
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (e: any) {
     console.log(
@@ -66,6 +98,9 @@ export async function runPythonCode(
 }
 
 export function stopPythonCode() {
+  if (isNeighborhoodLevel()) {
+    CodebridgeRegistry.getInstance().getNeighborhood()?.onStop();
+  }
   // This will terminate the worker and create a new one if there is a running program.
   restartPyodideIfProgramIsRunning();
 }
@@ -81,8 +116,9 @@ export async function runAllTests(
   const validationToRun = validationFile || getValidationFromSource(source);
   const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
   if (validationToRun) {
-    consoleManager?.writeSystemMessage(`Running level tests...`, appName);
-    dispatch(appendSystemMessage(`Running level tests...`));
+    consoleManager?.writeConsoleMessage(
+      getTimestampMessage(RunType.VALIDATION)
+    );
     progressManager?.resetValidation();
     // We only send the separate validation file, because otherwise the
     // source already has the validation file.
@@ -93,23 +129,60 @@ export async function runAllTests(
     );
     if (result?.message) {
       // Get validation test results
-      // Message is an array of Maps with the keys "name" and "result",
+      // After parsing, message is an array of objects {name: string, result: string}
       // where "name" is the name of the test and "result" is one of
       // "PASS/FAIL/ERROR/SKIP/EXPECTED_FAILURE/UNEXPECTED_SUCCESS"
       // See this PR for details: https://github.com/code-dot-org/pythonlab-packages/pull/5
-      const testResults = result.message as Map<string, string>[];
+      const testResults = JSON.parse(result.message);
       if (progressManager) {
         PythonValidationTracker.getInstance().setValidationResults(testResults);
         progressManager.updateProgress();
       }
     }
   } else {
-    consoleManager?.writeSystemMessage(
-      `Running your project's tests...`,
-      appName
+    consoleManager?.writeConsoleMessage(
+      getSystemMessage(getTimestampMessage(RunType.TEST))
     );
-    dispatch(appendSystemMessage(`Running your project's tests...`));
     // Otherwise, we look for files that follow the regex 'test*.py' and run those.
     await runPythonCode(runStudentTests(), source);
+  }
+}
+
+function isNeighborhoodLevel() {
+  return (
+    getStore().getState().lab2Project.projectSources?.labConfig?.miniApp
+      ?.name === MiniApps.Neighborhood
+  );
+}
+
+function handleRunEndedUnexpectedly(
+  consoleManager: ConsoleManager | null,
+  message: string
+) {
+  consoleManager?.writeConsoleMessage(getSystemMessage(message, appName));
+  if (isNeighborhoodLevel()) {
+    // We reset, run, and close the neighborhood to ensure that the neighborhood
+    // properly resets the run button back to run (from stop), and to reset the
+    // neighborhood to its original state.
+    CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
+    CodebridgeRegistry.getInstance().getNeighborhood()?.onRun();
+    CodebridgeRegistry.getInstance().getNeighborhood()?.onClose();
+  } else {
+    consoleManager?.writeConsoleMessage('');
+  }
+}
+
+async function setProjectThumbnail() {
+  const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
+  neighborhood?.onClose();
+  const projectManager = Lab2Registry.getInstance().getProjectManager();
+  const shouldCapture = projectManager?.getShouldCaptureThumbnail();
+  if (!shouldCapture) return;
+  await neighborhood?.waitUntilDone(); // Wait for neighborhood signal processing to be completed.
+  const svg = document.getElementById(SVG_ID);
+  const svgArg = svg instanceof SVGSVGElement ? svg : null;
+  if (svgArg) {
+    const pngBlob = await captureThumbnailFromSvgPythonlabNeighborhood(svgArg);
+    projectManager?.setThumbnail(pngBlob);
   }
 }

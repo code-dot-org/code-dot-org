@@ -4,17 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_course": true,
-      "is_migrated": true,
-      "version_year": "unversioned"
+      "is_migrated": true
     },
     "new_name": null,
-    "family_name": "dan-test",
-    "serialized_at": "2024-12-09 22:24:33 UTC",
-    "published_state": "in_development",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-03-28 09:29:31 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "dan-test"
     }
@@ -261,6 +259,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-jam-video-intro"
+        ],
         "progression": "Intro"
       },
       "bonus": false,
@@ -283,6 +284,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-jam-sound"
+        ],
         "progression": "Play Sound"
       },
       "bonus": false,
@@ -305,6 +309,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-jam-sequence"
+        ],
         "progression": "Play Sound"
       },
       "bonus": false,
@@ -327,6 +334,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-jam-panels-playtogether"
+        ],
         "progression": "Play Together"
       },
       "bonus": false,
@@ -349,6 +359,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-jam-playtogether-preview"
+        ],
         "progression": "Play Together"
       },
       "bonus": false,
@@ -371,6 +384,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-jam-playtogether"
+        ],
         "progression": "Play Together"
       },
       "bonus": false,
@@ -393,6 +409,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-jam-playtogether-sequence"
+        ],
         "progression": "Play Together"
       },
       "bonus": false,
@@ -415,6 +434,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - SB3_2024"
+        ],
         "progression": "RANDOM APP LAB LEVEL"
       },
       "bonus": false,
@@ -437,6 +459,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-jam-panels-ai"
+        ],
         "progression": "Play AI Drums"
       },
       "bonus": false,
@@ -459,6 +484,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-jam-ai"
+        ],
         "progression": "Play AI Drums"
       },
       "bonus": false,
@@ -481,6 +509,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-jam-panels-ai-temperature"
+        ],
         "progression": "Play AI Drums"
       },
       "bonus": false,
@@ -503,6 +534,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-jam-ai-temperature"
+        ],
         "progression": "Play AI Drums"
       },
       "bonus": false,
@@ -525,6 +559,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-jam-panels-functions"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -547,6 +584,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-jam-functions-intro"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -569,6 +609,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-jam-functions-chorus"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -591,6 +634,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-jam-functions-verse"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -613,6 +659,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-jam-panels-outro"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -635,6 +684,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-jam-jam"
+        ],
         "progression": "Jam Session"
       },
       "bonus": false,

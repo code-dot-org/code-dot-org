@@ -1,6 +1,6 @@
+import Typography from '@code-dot-org/component-library/typography';
 import React, {useState} from 'react';
 
-import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import {MusicConditions} from '@cdo/apps/music/progress/MusicConditions';
 import {convertOptionalStringToBoolean} from '@cdo/apps/types/utils';
 import {createUuid} from '@cdo/apps/utils';
@@ -93,14 +93,33 @@ const EditValidations: React.FunctionComponent<EditValidationsProps> = ({
     setValidations(newValidations);
   };
 
-  const addValidation = () => {
-    const newValidation: Validation = {
+  const createNewValidation = (): Validation => ({
+    key: levelName + '_' + createUuid(),
+    message: '',
+    next: false,
+    conditions: [],
+  });
+
+  const prependValidation = () => {
+    setValidations([createNewValidation(), ...validations]);
+  };
+
+  const appendValidation = () => {
+    setValidations([...validations, createNewValidation()]);
+  };
+
+  const duplicateValidation = (validationToDuplicate: Validation) => {
+    const index = validations.indexOf(validationToDuplicate);
+    const newValidation = {
+      ...validationToDuplicate,
+      conditions: validationToDuplicate.conditions.map(c => ({...c})),
       key: levelName + '_' + createUuid(),
-      message: '',
-      next: false,
-      conditions: [],
     };
-    setValidations([...validations, newValidation]);
+    setValidations([
+      ...validations.slice(0, index),
+      newValidation,
+      ...validations.slice(index),
+    ]);
   };
 
   return (
@@ -118,6 +137,15 @@ const EditValidations: React.FunctionComponent<EditValidationsProps> = ({
         validation set that passes is the one that is displayed, so be sure to
         order your validation sets from most stringent to least.
       </Typography>
+      {validations.length > 0 && (
+        <button
+          type="button"
+          className={moduleStyles.addValidationButton}
+          onClick={prependValidation}
+        >
+          + Add New Validation
+        </button>
+      )}
       {validations.map((validation, index) => {
         return (
           <EditValidation
@@ -128,13 +156,14 @@ const EditValidations: React.FunctionComponent<EditValidationsProps> = ({
             deleteValidation={deleteValidation}
             conditionTypes={conditionTypes}
             moveValidation={moveValidation}
+            duplicateValidation={duplicateValidation}
           />
         );
       })}
       <button
         type="button"
         className={moduleStyles.addValidationButton}
-        onClick={addValidation}
+        onClick={appendValidation}
       >
         + Add New Validation
       </button>

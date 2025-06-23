@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import {setShowSuggestedPrompts} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
@@ -10,9 +11,12 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
+import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 import javalabMsg from '@cdo/javalab/locale';
 
-import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
@@ -20,13 +24,7 @@ import {
 } from '../containedLevels';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
 
-import {BackpackAPIContext} from './BackpackAPIContext';
-import {
-  CsaViewMode,
-  ExecutionType,
-  InputMessageType,
-  STATUS_MESSAGE_PREFIX,
-} from './constants';
+import {CsaViewMode, ExecutionType, InputMessageType} from './constants';
 import {getDisplayThemeFromString} from './DisplayTheme';
 import JavabuilderConnection from './JavabuilderConnection';
 import JavalabView from './JavalabView';
@@ -102,6 +100,7 @@ Javalab.prototype.init = function (config) {
   this.skin = config.skin;
   this.level = config.level;
   this.levelIdForAnalytics = config.serverLevelId;
+  this.scriptIdForAnalytics = config.serverScriptId;
   // Sets display theme based on displayTheme user preference
   this.displayTheme = getDisplayThemeFromString(config.displayTheme);
   this.isStartMode = !!config.level.editBlocks;
@@ -141,7 +140,10 @@ Javalab.prototype.init = function (config) {
         this.onOutputMessage,
         this.onNewlineMessage,
         this.setIsRunning,
-        STATUS_MESSAGE_PREFIX
+        // In Java Lab we don't distinguish between partial lines and full lines,
+        // the provided message should have a newline at the end to be treated as
+        // a full line.
+        this.onOutputMessage
       );
       config.afterInject = () =>
         this.miniApp.afterInject(
@@ -310,7 +312,7 @@ Javalab.prototype.init = function (config) {
 
   let backpackApi = null;
   if (backpackEnabled) {
-    backpackApi = new BackpackClientApi(config.backpackChannel);
+    backpackApi = new BackpackClientApi('javalab', config.backpackChannel);
   }
 
   // Used for some post requests made in Javalab, namely
@@ -367,20 +369,32 @@ Javalab.prototype.onRun = function () {
   }
 
   this.miniApp?.reset?.();
+  logUserLevelInteraction({
+    levelId: this.levelIdForAnalytics,
+    scriptId: this.scriptIdForAnalytics,
+    interaction: UserLevelInteractions.click_run,
+  });
   analyticsReporter.sendEvent(EVENTS.JAVALAB_RUN_BUTTON_CLICK, {
     levelId: this.levelIdForAnalytics,
   });
   this.executeJavabuilder(ExecutionType.RUN);
+  getStore().dispatch(setShowSuggestedPrompts(true));
 };
 
 Javalab.prototype.onTest = function () {
   const validation = this.level.validation;
   const validated = !!validation && Object.keys(validation).length !== 0;
+  logUserLevelInteraction({
+    levelId: this.levelIdForAnalytics,
+    scriptId: this.scriptIdForAnalytics,
+    interaction: UserLevelInteractions.click_validate,
+  });
   analyticsReporter.sendEvent(EVENTS.JAVALAB_TEST_BUTTON_CLICK, {
     levelId: this.levelIdForAnalytics,
     validated: validated,
   });
   this.executeJavabuilder(ExecutionType.TEST);
+  getStore().dispatch(setShowSuggestedPrompts(true));
 };
 
 Javalab.prototype.executeJavabuilder = function (executionType) {

@@ -11,6 +11,17 @@
     "csa8-pilot-2025",
     "csa9-pilot-2025"
   ],
+  "original_script_names": [
+    "csa1-pilot-2025",
+    "csa2-pilot-2025",
+    "csa3-pilot-2025",
+    "csa4-pilot-2025",
+    "csa5-pilot-2025",
+    "csa6-pilot-2025",
+    "csa7-pilot-2025",
+    "csa8-pilot-2025",
+    "csa9-pilot-2025"
+  ],
   "published_state": "pilot",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
@@ -34,7 +45,7 @@
       }
     },
     {
-      "name": "Culturally Responsive Pedagogy and Equity",
+      "name": "Student-Centered Pedagogy and Equity",
       "url": "https://docs.google.com/document/d/1n2bPN--Cd9dz8P0yOZBUJ3DGY_BQHEMALFXUITJZWN0/edit?usp=sharing",
       "key": "culturally_responsive_pedagogy_and_equity",
       "properties": {

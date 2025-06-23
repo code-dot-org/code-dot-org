@@ -6,12 +6,11 @@
     "properties": {
       "content_area": "other",
       "curriculum_umbrella": "Pedagogy special topics selfpaced pl",
-      "is_migrated": true,
-      "version_year": "2025"
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-12-13 18:34:34 UTC",
+    "serialized_at": "2025-01-22 19:00:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -514,6 +513,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "1SP-VPL-24-mod1-Certificate_1"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -561,6 +563,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "1OPD-K5 Begin_2023_K5CSConcepts_TextPage"
+        ],
         "progression": "Welcome to Code.org"
       },
       "bonus": false,
@@ -833,6 +838,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "1SP-VPL-21-mod2-Task-StudentView_physical-computing_1"
+        ],
         "progression": "Student View vs Teacher View"
       },
       "bonus": false,
@@ -955,6 +963,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "1SP-VPL-21-mod2-NavigatingLessonPlans_physical-computing_1"
+        ],
         "progression": "Explore Course Lesson Plans"
       },
       "bonus": false,
@@ -1052,6 +1063,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "1PL_getting_started_assessmentsandgrading"
+        ],
         "progression": "Assessments and Grading"
       },
       "bonus": false,
@@ -1124,6 +1138,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Getting-Started_PL-Resources"
+        ],
         "progression": "Explore Additional Teacher Resources"
       },
       "bonus": false,

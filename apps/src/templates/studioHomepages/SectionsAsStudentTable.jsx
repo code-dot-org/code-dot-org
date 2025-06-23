@@ -136,14 +136,15 @@ class SectionsAsStudentTable extends React.Component {
                 <a href={section.linkToAssigned} style={styles.link}>
                   {section.assignedTitle}
                 </a>
-                {section.currentUnitTitle && (
-                  <div style={styles.currentUnit}>
-                    <div>{i18n.currentUnit()}</div>
-                    <a href={section.linkToCurrentUnit} style={styles.link}>
-                      {section.currentUnitTitle}
-                    </a>
-                  </div>
-                )}
+                {!section.is_assigned_single_unit_course &&
+                  section.currentUnitTitle && (
+                    <div style={styles.currentUnit}>
+                      <div>{i18n.currentUnit()}</div>
+                      <a href={section.linkToCurrentUnit} style={styles.link}>
+                        {section.currentUnitTitle}
+                      </a>
+                    </div>
+                  )}
               </td>
               <td style={{...styles.col, ...styles.col3Student}}>
                 {section.teacherName}

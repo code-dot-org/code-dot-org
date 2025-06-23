@@ -1,0 +1,33 @@
+name 'self-paced-CSDMusicLab-L2-lesson1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson 1: Introduction to Music Lab
+
+#### As we noted earlier, Programming with Music Lab begins with a single lesson that is unattached from the Sequencing, Loops, and Functions chunks of the curriculum. This lesson primes students to engage with the Problem-Solving Process and Music Lab.
+
+## **🎶 Lesson 1 Overview**
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block; width: 100%">
+<a href="https://studio.code.org/s/csd-programming-with-music-lab-2025-pilot/lessons/1" target="blank" rel="noopener noreferrer">Access Lesson 1: Introduction to Music Lab</a></p>
+
+<img src="https://images.code.org/061813546d7208e471d1fd9e2336fdf1-image-1650060582414.09.21 PM.png" alt="Diagram of the four steps of the problem-solving process, including Define, Prepare, Try, Reflect" style="border-radius:40px; float: right; padding-right: 30px; height: 275px; clear: both; margin: 0px 20px 20px 0;">
+
+#### In this kickoff lesson, students take on the role of music experience designers, exploring how music can serve different users' goals. Through a client-matching activity, they listen to example songs, analyze user needs, and begin thinking like creative problem-solvers. 
+
+#### Students also get their first taste of the Problem Solving Process, which they’ll continue to use throughout the unit.
+
+### **🧾 What to Prepare:**
+
+* #### Print copies of the <a href="https://docs.google.com/document/d/1YDGmbxZSHZhvMWVPzoawNm0ceKRoPffgt1kc0HQDWhk/view" target="blank" rel="noopener noreferrer">Client Stories Activity Guide</a> for each student.
+* #### Preview the <a href="https://studio.code.org/s/csd-programming-with-music-lab-2025-pilot/lessons/1/levels/1" target="blank" rel="noopener noreferrer">song prototypes</a> in Code Studio so you're familiar with what students will hear.
+* #### Make a copy of the <a href="https://docs.google.com/presentation/d/14X814gR4KUxcZKEkbqhOSR03pg-8XKWZZMhIn7AJo4w/template/preview" target="blank" rel="noopener noreferrer">lesson plan slides</a> and adjust for your teaching context as necessary. 
+* #### Have a plan for how you’ll group students in pairs - this activity is most effective with discussion.
+
+### **💡 Tips for Teaching:**
+* #### Focus on student reasoning, not just answers. There may be multiple "right" matches between clients and songs. Encourage students to explain their thinking and listen to others' perspectives.
+* #### Model how to explore the Example Player. This is the first time students will interact with Music Lab’s embedded players, so take a moment to show how it works and where to listen for differences.
+* #### Encourage creative exploration. Especially during the sound library portion, let students experiment and have fun. 
+* #### Use the reflection to reinforce empathy. Ask students how their song design choices might change if they had to create music for a different client. This builds empathy and expands their creative lens.
+MARKDOWN

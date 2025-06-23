@@ -16,6 +16,7 @@ const WorkshopPropType = PropTypes.shape({
     email: PropTypes.string,
   }),
   virtual: PropTypes.bool,
+  format: PropTypes.string,
   module: PropTypes.string,
   course_offerings: PropTypes.array,
 });

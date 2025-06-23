@@ -1,0 +1,33 @@
+name 'music-lab-612-post-q8'
+
+question 'Which computational thinking skill is Avery using?'
+
+right 'Decomposition'
+wrong 'Pattern Recognition'
+wrong 'Abstraction'
+wrong 'Algorithm Design'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Computational Thinking
+
+Standard: Decomposition
+
+Lesson: Loops - Practice, Functions - Practice
+
+Skill Progression: All
+
+Pretest Modality: Given a snippet of how someone approached a problem, identify the CT skill it is (similar to PL question)
+
+Posttest Modality: Given a snippet of how someone approached a problem, identify the CT skill it is (similar to PL question)
+
+MARKDOWN
+
+markdown <<MARKDOWN
+Avery is building a remix of Espresso that includes a rock and roll section and a techno section. To stay organized, Avery writes a each part of the song and codes each section separately before putting them together.
+
+---
+
+![](https://images.code.org/e7ebea15053a3bb2bfbf123bb3ee7ceb-image-1750438510455.png)
+MARKDOWN

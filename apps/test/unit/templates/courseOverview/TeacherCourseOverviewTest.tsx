@@ -74,6 +74,7 @@ const COURSE_SUMMARY = {
       title: 'CSP Unit 1',
       name: 'csp1',
       description: 'desc',
+      scriptPath: '/s/csp1',
     },
     {
       course_id: 30,
@@ -81,6 +82,7 @@ const COURSE_SUMMARY = {
       title: 'CSP Unit 2',
       name: 'csp2',
       description: 'desc',
+      scriptPath: '/s/csp2',
     },
   ],
   show_assign_button: true,
@@ -114,6 +116,19 @@ const sections = [
     unitName: null,
     courseVersionName: 'csd-2024',
     scriptId: null,
+  },
+  {
+    id: 14,
+    name: 'Period 4',
+    course_id: 155,
+    unitName: 'ui-test-single-unit-2025',
+    courseVersionName: 'ui-test-single-unit-course-2025',
+    scriptId: null,
+    is_assigned_single_unit_course: true,
+    script: {
+      name: 'ui-test-single-unit-2025',
+      id: 1,
+    },
   },
 ];
 
@@ -208,6 +223,17 @@ describe('TeacherCourseOverview', () => {
     renderDefault('/sections/11/courses/csd-2024');
 
     expect(navigate).toHaveBeenCalledWith('../unit/coursea-2024', {
+      replace: true,
+    });
+    expect(fetchSpy).not.toHaveBeenCalled();
+  });
+
+  it('redirects to unit if single-unit course', async () => {
+    getStore().dispatch(selectSection(14));
+
+    renderDefault('/sections/14/courses/csd-2024');
+
+    expect(navigate).toHaveBeenCalledWith('../unit/ui-test-single-unit-2025', {
       replace: true,
     });
     expect(fetchSpy).not.toHaveBeenCalled();

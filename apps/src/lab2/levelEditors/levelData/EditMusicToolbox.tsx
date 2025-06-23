@@ -1,11 +1,11 @@
+import Alert from '@code-dot-org/component-library/alert';
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
+import {BodyTwoText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import {isEqual} from 'lodash';
 import React, {useCallback} from 'react';
 
-import Alert from '@cdo/apps/componentLibrary/alert/Alert';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
-import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
-import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {defaultMaps} from '@cdo/apps/music/blockly/toolbox/definitions';
 import {
   CategoryBlocksMap,

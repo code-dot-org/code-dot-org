@@ -22,6 +22,34 @@ module Policies::ChildAccount::StatePolicies
         lockout_date: DateTime.parse('2025-01-06T00:00:00-05:00'),
         start_date: DateTime.parse('2025-01-06T00:00:00-05:00'),
       },
+      'NY' => {
+        name: 'NYCDPA',
+        max_age: 12,
+        grace_period_duration: 14.days.seconds,
+        lockout_date: DateTime.parse('2025-06-20T00:00:00-04:00'),
+        start_date: DateTime.parse('2025-06-20T00:00:00-04:00'),
+      },
+      'OR' => {
+        name: 'OCPA',
+        max_age: 12,
+        grace_period_duration: 14.days.seconds,
+        lockout_date: DateTime.parse('2025-07-01T00:00:00-07:00'),
+        start_date: DateTime.parse('2025-07-01T00:00:00-07:00'),
+      },
+      'MN' => {
+        name: 'MCDPA',
+        max_age: 12,
+        grace_period_duration: 14.days.seconds,
+        lockout_date: DateTime.parse('2025-07-31T00:00:00-05:00'),
+        start_date: DateTime.parse('2025-07-31T00:00:00-05:00'),
+      },
+      'MD' => {
+        name: 'MODPA',
+        max_age: 12,
+        grace_period_duration: 14.days.seconds,
+        lockout_date: DateTime.parse('2025-10-01T00:00:00-04:00'),
+        start_date: DateTime.parse('2025-10-01T00:00:00-04:00'),
+      },
     }
 
     # Override the configured dates for testing purposes

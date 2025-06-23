@@ -1,0 +1,330 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:56:29.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Debugging with Eva\r\n\r\nEva is trying to get all of her sounds to play together and match the timeline below. Can you help her **debug** her code to it matches the example? **Debugging** is the process of finding bugs and fixing them so everything works like you'd expect!\r\n\r\nYou only need to rearrange Eva's blocks to complete this level! You don't need to add anything new!\r\n\r\n![](https://images.code.org/9516279ddc87971f6ea1c022e2cbfa9c-image-1742937610853.png)",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+        "denzel_kennedy_karma": [
+          "guitar",
+          "sub_bass",
+          "snare"
+        ],
+        "hiphop": [
+          "drum_beat_808",
+          "drum_beat_bounce",
+          "relaxed_alternate_beat",
+          "drum_beat_cuts",
+          "hats_beat",
+          "drum_beat_knock",
+          "drum_beat_lofi",
+          "relaxed_beat",
+          "drum_beat_slow",
+          "sub_beat",
+          "drum_beat_trap",
+          "vinyl_beat",
+          "bass_flow",
+          "bass_fly",
+          "bass_stress",
+          "bass_sub_bathrobe",
+          "bass_sub_bracelet",
+          "bass_sub_button_down",
+          "bass_sub_hoodie",
+          "bass_sub_jacket",
+          "bass_sub_jogger",
+          "bass_sub_jumpsuit",
+          "bass_sub_tank",
+          "bass_trip",
+          "guitar_fit",
+          "guitar_pocket",
+          "horns",
+          "piano_chords",
+          "piano_clout",
+          "piano_fresh",
+          "piano_round",
+          "piano_slice",
+          "piano_warble",
+          "string_burst",
+          "synth_brass",
+          "synth_whistle",
+          "brass",
+          "brass_short",
+          "dark_sweep_crash",
+          "dive",
+          "kick_impact",
+          "bubble",
+          "vibraslap"
+        ],
+        "acoustic_arcade": [
+          "drum_beat_cabana",
+          "drum_beat_conga",
+          "drum_beat_hands",
+          "drum_beat_sweep",
+          "drum_beat_trees",
+          "drum_beat_wobble",
+          "bass_elevator",
+          "bass_float",
+          "bass_giant",
+          "bass_seesaw",
+          "bass_bounce",
+          "bass_stamp",
+          "synth_castle",
+          "synth_cloud",
+          "synth_cosmic",
+          "synth_round",
+          "synth_rubber",
+          "synth_tines",
+          "ukulele_knot",
+          "ukulele_shine",
+          "ukulele_slide",
+          "ukulele_knock",
+          "guitar_handle",
+          "guitar_path",
+          "guitar_window",
+          "guitar_flower",
+          "lead_zaps",
+          "lead_swoop",
+          "lead_violins",
+          "waterfall",
+          "bongo_roll",
+          "chimes",
+          "vibra_verb",
+          "sleigh_bells",
+          "wheel_spoke"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+        },
+        "type": "flyout"
+      },
+      "packId": "denzel_kennedy_karma",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": ";NoN@F?F9{ySsGA$FTpv",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "CV{r`(x+vMQ!CPSV%S=K",
+                        "deletable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "denzel_kennedy_karma/sub_bass"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "$|%-Z3pF=]8ROB$3*!p:",
+                            "deletable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "hiphop/vinyl_beat"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "@{b,WES]UR0AJlp8(YeX",
+                                "deletable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "acoustic_arcade/ukulele_slide"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "bC0WTssYY/b_#1m]~8iM",
+                      "deletable": false,
+                      "movable": false,
+                      "editable": false,
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "*4/V|`{g_YVWAxsXLsvh",
+                            "deletable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "acoustic_arcade/drum_beat_conga"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "Xrm~rKk!QKYhK,*tl~~n",
+                                "deletable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "denzel_kennedy_karma/guitar"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "Q-NMrH:?,GXM/s:H;qRS",
+                                    "deletable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "acoustic_arcade/bass_bounce"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": "l/h~F%=/|}7:[!_[4C;M",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "v=a3|1U`LpxqQTREO7-=",
+                                "deletable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "denzel_kennedy_karma/snare"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": ";Ri)R}NodQ#GU+O%TYuu",
+                                    "deletable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "hiphop/bass_fly"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "1;XB:{l@.??]Y,om3];K",
+                                        "deletable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "hiphop/piano_chords"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundsPanelInSoundsMode": true,
+      "showSoundFilters": true
+    },
+    "display_name": "Debugging with Eva",
+    "encrypted_exemplar_sources": "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\nDL79Lto=\n",
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
+      "playerTitle": "Eva's Song"
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-explore-choice-level-a_7a31a667-f05d-4fc4-b952-06d8ff8fbdaf",
+        "message": "auto-pass for exemplar validation",
+        "next": true,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "bubble_choice_description": "Help fix Eva's code so her song sounds like it's supposed to!",
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/denzel_kennedy_karma/denzel_kennedy_karma.jpg",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:29.931+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-choice-level-d\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-choice-level-d\"},{\"changed_at\":\"2025-06-06 21:29:29 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-12 15:09:14 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

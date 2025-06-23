@@ -66,7 +66,7 @@ class CertificatesController < ApplicationController
 
     course_title = course_name == 'hourofcode' ? I18n.t('certificate_hour_of_code') : course_version.localized_title
 
-    student_names = request.method == 'POST' ? params[:names] : []
+    student_names = params[:names]&.present? || request.method == 'POST' ? params[:names] : []
 
     @certificate_data = {
       courseName: course_name,

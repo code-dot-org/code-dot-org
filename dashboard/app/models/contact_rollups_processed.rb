@@ -248,6 +248,7 @@ class ContactRollupsProcessed < ApplicationRecord
     roles.add 'CSD Teacher' if roles.exclude?('CSD Teacher') && curricula.any?('CSD')
     roles.add 'CSP Teacher' if roles.exclude?('CSP Teacher') && curricula.any?('CSP')
     roles.add 'CSA Teacher' if roles.exclude?('CSA Teacher') && curricula.any?('CSA')
+    roles.add 'AIF Teacher' if roles.exclude?('AIF Teacher') && curricula.any?('AIF')
 
     roles.add 'Form Submitter' if
       contact_data.key?('pegasus.forms') ||

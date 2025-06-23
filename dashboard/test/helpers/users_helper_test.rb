@@ -436,9 +436,13 @@ class UsersHelperTest < ActionView::TestCase
       }
     ]
 
-    assert_equal expected_progress, script_progress_for_users(
-      [user_1, user_2, user_3], script
-    )
+    progress, last_progress_times = script_progress_for_users([user_1, user_2, user_3], script)
+
+    assert_equal expected_progress[0][user_1.id], progress[user_1.id]
+    assert_equal expected_progress[0][user_2.id], progress[user_2.id]
+    assert_equal expected_progress[0][user_3.id], progress[user_3.id]
+
+    assert_equal expected_progress[1], last_progress_times
   end
 
   def test_level_with_best_progress_one_level

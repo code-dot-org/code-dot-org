@@ -46,6 +46,7 @@ $text-horizontal-padding: 2.6cqw;
   top: 0;
   left: 0;
   flex-direction: column;
+  background-color: var(--background-neutral-lab);
 
   .panel {
     margin: 0 auto;
@@ -94,9 +95,12 @@ $text-horizontal-padding: 2.6cqw;
 
       h1, h2, h3, h4 {
         margin: 0 0 1cqw 0;
-        font-family: $barlowSemiCondensed-semibold;
         font-size: 3cqw;
         line-height: 1.2em;
+
+        &, em, strong {
+          font-family: $barlowSemiCondensed-semibold;
+        }
       }
 
       p {
@@ -195,11 +199,11 @@ $text-horizontal-padding: 2.6cqw;
       margin: 0 7px;
 
       &Current {
-        color: $neutral_light;
+        color: var(--text-neutral-primary);
       }
 
       &NotCurrent {
-        color: $neutral_dark70;
+        color: var(--text-neutral-placeholder);
         cursor: pointer;
       }
     }

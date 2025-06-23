@@ -1,0 +1,43 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-01-14T18:52:45.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Jordan\n**Age:** 17\n\n**Hobbies:** Building gadgets, coding\n\n**Favorite Subject:** STEM\n\n**Favorite Movie:** Iron Man (admires Tony Stark's ingenuity).",
+        "imageUrl": "https://images.code.org/f5f591ba1d50614e4edc8dd24a5aaf03-Screenshot 2025-01-14 105358.png",
+        "key": "undefined-1d5d3a7f-7f89-4eb3-853c-7aa5a400395f",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "**Precision is the name of the game 🛠️✨ When every detail matters, the right tools make all the difference.** #PrecisionTools #AttentionToDetail",
+        "imageUrl": "https://images.code.org/fee27871b2942221068a3de3f0f86b42-Screenshot 2025-01-14 105521.png",
+        "key": "undefined-ccb0bb2c-6711-4a94-9328-d9d683897239",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "**Finding bugs is like solving a mystery—one detail at a time.** #Debugging #Clues",
+        "imageUrl": "https://images.code.org/7020a028e1e360e304d75cd1969722d3-1_AvTKrai2EGkiXqv4F4G_6w.png",
+        "key": "undefined-a682ce3e-40a5-47ab-95f0-10b7b145ee49",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "**Nothing beats a quiet space to focus and get things done.** #Focus #Shhhh",
+        "imageUrl": "https://images.code.org/aca95eb7817bfa8261437fa22e5b6505-Screenshot 2025-01-14 110217.png",
+        "key": "undefined-1737e582-c669-4266-b428-837a44bdade4",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "thumbnail_url": "https://images.code.org/f5f591ba1d50614e4edc8dd24a5aaf03-Screenshot 2025-01-14 105358.png",
+    "display_name": "Jordan",
+    "bubble_choice_description": "**Age:** 17\n\n**Hobbies:** Building gadgets, coding\n\n**Favorite Subject:** STEM\n\n**Favorite Movie:** Iron Man (admires Tony Stark's ingenuity)."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-14T18:52:45.615+00:00\",\"changed\":[\"cloned from \\\"IPP-careerPersonas\\\"\"],\"cloned_from\":\"IPP-careerPersonas\"},{\"changed_at\":\"2025-01-14 19:02:36 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 19:19:38 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:15:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:16:16 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:16:20 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:17:24 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 16:39:22 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 18:49:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 21:07:37 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 22:38:17 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 22:39:53 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 22:40:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

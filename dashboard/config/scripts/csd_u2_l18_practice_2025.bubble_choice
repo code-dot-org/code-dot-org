@@ -1,0 +1,9 @@
+name 'CSD U2 L18 practice_2025'
+display_name 'Practice Using Pseudo-classes'
+description 'Practice your new skills!'
+
+sublevels
+level 'CSD U2L18 prac_1_2025'
+level 'CSD U2L18 prac_2_2025'
+level 'CSD U2L18 prac_3_2025'
+level 'CSD U2L18 prac_4_2025'

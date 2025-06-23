@@ -10,8 +10,6 @@ import PreviewPaneHeader from '../PreviewPaneHeader';
 
 import moduleStyles from './neighborhood-visualization-column.module.scss';
 
-const ICON_PATH = '/blockly/media/turtle/';
-
 class NeighborhoodVisualizationColumn extends React.Component {
   static propTypes = {
     // populated by redux
@@ -29,11 +27,6 @@ class NeighborhoodVisualizationColumn extends React.Component {
       this.props;
     const {isFullscreen} = this.state;
 
-    const fullIconPath =
-      displayTheme === DisplayTheme.DARK
-        ? ICON_PATH + 'icons_white.png'
-        : ICON_PATH + 'icons.png';
-
     const visualizationClassName = isCollapsed
       ? moduleStyles.collapsed
       : moduleStyles.expanded;
@@ -49,7 +42,7 @@ class NeighborhoodVisualizationColumn extends React.Component {
           toggleVisualizationCollapsed={toggleVisualizationCollapsed}
         />
         <NeighborhoodVisualization
-          fullIconPath={fullIconPath}
+          isDarkMode={displayTheme === DisplayTheme.DARK}
           className={visualizationClassName}
         />
       </div>

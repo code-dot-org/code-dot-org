@@ -1,4 +1,4 @@
-import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import {useEffect, useMemo, useRef, useState} from 'react';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -15,9 +15,13 @@ import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 
 import {SchoolDropdownOption, SchoolInfoInitialState} from '../types';
 import {constructSchoolOption} from '../utils/constructSchoolOption';
-import {fetchSchools as fetchSchoolsAPI} from '../utils/fetchSchools';
+import {fetchSchools} from '../utils/fetchSchools';
 
-export function useSchoolInfo(initialState: SchoolInfoInitialState) {
+export function useSchoolInfo(
+  initialState: SchoolInfoInitialState,
+  // TODO: ACQ-3300 remove when school info has been updated for affected users
+  affectedByMissingSchoolData?: boolean
+) {
   const mounted = useRef(false);
 
   // Memoized initial values
@@ -30,6 +34,9 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
   );
 
   const detectedSchoolId = useMemo(() => {
+    if (affectedByMissingSchoolData) {
+      return NonSchoolOptions.SELECT_A_SCHOOL;
+    }
     if (initialState.schoolType === NonSchoolOptions.NO_SCHOOL_SETTING) {
       return NonSchoolOptions.NO_SCHOOL_SETTING;
     }
@@ -50,6 +57,7 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     initialState.schoolType,
     initialState.schoolName,
     initialState.schoolZip,
+    affectedByMissingSchoolData,
   ]);
 
   const detectedZip = useMemo(
@@ -62,12 +70,16 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
 
   const detectedSchoolName = useMemo(
     () =>
-      initialState.schoolId
+      initialState.schoolId || affectedByMissingSchoolData
         ? ''
         : initialState.schoolName ||
           sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY) ||
           '',
-    [initialState.schoolName, initialState.schoolId]
+    [
+      initialState.schoolName,
+      initialState.schoolId,
+      affectedByMissingSchoolData,
+    ]
   );
 
   const [state, setState] = useState<{
@@ -81,6 +93,7 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     schoolZip: detectedZip,
     schoolName: detectedSchoolName,
   });
+  const [schoolsLoading, setSchoolsLoading] = useState(false);
   const [schoolsList, setSchoolsList] = useState<SchoolDropdownOption[]>([]);
 
   // State hooks
@@ -156,17 +169,6 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     });
   };
 
-  // Memoized fetchSchools function using useCallback
-  const fetchSchools = useCallback(
-    (
-      zip: string,
-      callback: (data: {nces_id: number; name: string}[]) => void
-    ) => {
-      fetchSchoolsAPI(zip, callback);
-    },
-    []
-  );
-
   const handleSessionStorage = (key: string, value: string) => {
     if (sessionStorage.getItem(key) !== value) {
       sessionStorage.setItem(key, value);
@@ -189,17 +191,26 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     }
 
     handleSessionStorage(SCHOOL_ZIP_SESSION_KEY, schoolZip);
+    setSchoolsLoading(true);
 
-    fetchSchools(schoolZip, data => {
-      if (!mounted.current) return;
+    fetchSchools(schoolZip)
+      .then(data => {
+        if (!mounted.current) return;
 
-      const schools = data
-        .map(constructSchoolOption)
-        .sort((a, b) => a.text.localeCompare(b.text));
+        const schools = data
+          .map(constructSchoolOption)
+          .sort((a: SchoolDropdownOption, b: SchoolDropdownOption) =>
+            a.text.localeCompare(b.text)
+          );
 
-      setSchoolsList(schools);
-    });
-  }, [schoolZip, fetchSchools]);
+        setSchoolsLoading(false);
+        setSchoolsList(schools);
+      })
+      .catch(error => {
+        setSchoolsLoading(false);
+        console.error(error);
+      });
+  }, [schoolZip]);
 
   // Handle schoolId changes
   useEffect(() => {
@@ -225,6 +236,7 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     schoolName,
     schoolZip,
     schoolsList,
+    schoolsLoading,
     usIp: initialState.usIp,
     setSchoolId,
     setCountry,

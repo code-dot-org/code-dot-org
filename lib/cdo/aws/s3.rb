@@ -47,7 +47,17 @@ module AWS
     # the credentials specified in the CDO config.
     # @return [Aws::S3::Client]
     def self.connect_v2!
-      self.s3 ||= Aws::S3::Client.new
+      self.s3 ||= if CDO.aws_s3_emulated
+                    Aws::S3::Client.new(
+                      endpoint: CDO.aws_s3_endpoint,
+                      access_key_id: CDO.aws_s3_access_key_id,
+                      secret_access_key: CDO.aws_s3_secret_access_key,
+                      region: CDO.aws_region,
+                      force_path_style: true,
+                    )
+                  else
+                    Aws::S3::Client.new
+                  end
 
       # Adjust s3_timeout using a dynamic variable,
       # updating the S3 client if the variable changes.
@@ -74,6 +84,10 @@ module AWS
     # @param [String] key
     # @return [String]
     def self.download_from_bucket(bucket, key, options = {})
+      # If we are emulating S3 (usually for local development environments), we
+      # first attempt to lazily populate the emulated bucket.
+      Cdo::LocalDevelopment.populate_local_s3_bucket(bucket, key) if CDO.aws_s3_emulated
+
       create_client.get_object(bucket: bucket, key: key).body.read.force_encoding(Encoding::BINARY)
     rescue Aws::S3::Errors::NoSuchKey
       raise NoSuchKey.new("No such key `#{key}'")

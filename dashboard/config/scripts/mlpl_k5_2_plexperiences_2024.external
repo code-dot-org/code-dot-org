@@ -1,0 +1,107 @@
+name 'MLpl-k5-2_PLexperiences_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+
+# Next Steps
+
+#### Thank you for completing **Music Lab** Now that you've learned some basic computer science skills, check out some of our curriculum and professional learning offerings to continue your journey!
+
+## Teach CS in your class
+
+#### Explore some of these curriculum options to get started teaching CS in your class right away.
+
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 0 auto; max-width: 1200px;">
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 20px; width: 100%;">
+    <!-- Top Row -->
+    <div style="text-align: center; background-color: #F7F8FA; border-radius: 10px; padding: 20px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1);">
+      <a href = "https://code.org/educate/csc" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/c757107e59b12cdd59ca0c5c0a3e4345-image-1739218419032.24.14 AM.png" alt="thumbnail for the CS Connections curriculum " style="width: 150px; height: 150px; margin-bottom: 10px; border-radius: 10px;">
+      </a>
+      <p style="font-size: 16pt; font-weight: bold;"><a href="https://code.org/educate/csc" target="_blank">Computer Science Connections</a>
+      <ul style="text-align: left; font-size: 14pt;"> 
+       Make connections between CS and other subjects like math, language arts, science, and social studies. 
+       
+ 
+    </div>
+    <div style="text-align: center; background-color: #F7F8FA; border-radius: 10px; padding: 20px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1);">
+      <img src="https://images.code.org/daf3e86ac354a50461ac80727eeada1a-image-1739218585084.24.20 AM.png" alt="thumbnail for the CS Fundamentals curriculum " width="240px" style="width: 150px; height: 150px; margin-bottom: 10px; border-radius: 10px;">
+      <p style="font-size: 16pt; font-weight: bold;"> <a href = "https://code.org/educate/csf" target="_blank">Computer Science Fundamentals</a>
+   
+      <ul style="text-align: left; font-size: 14pt;">
+   Free, and fun, elementary courses for each grade to introduce your students to CS. 
+      </ul>
+    </div>
+    
+    
+    <div style="text-align: center; background-color: #F7F8FA; border-radius: 10px; padding: 20px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1);">
+      <img src="https://images.code.org/2693b34cb023a483fbe3cd484155a71b-image-1739218636352.24.25 AM.png" alt="thumbnail for the CS Connections self-paced professional learniing module " style="width: 150px; height: 150px; margin-bottom: 10px; border-radius: 10px;">
+      <p style="font-size: 16pt; font-weight: bold;"><a href = "https://studio.code.org/s/oceans" target="_blank">AI for Oceans</a>
+      <ul style="text-align: left; font-size: 14pt;">
+ In this fun introduction to artificial intelligence, you train a real machine learning model to identify sea creatures and trash in the ocean. 
+      </ul>
+    </div>
+  </div>
+</div>
+<br> 
+
+## Continue learning 
+#### Learn more about teaching CS with these self-paced professional learning modules. 
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 0 auto; max-width: 1200px;">
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 20px; width: 100%;">
+    <!-- Top Row -->
+    <div style="text-align: center; background-color: #F7F8FA; border-radius: 10px; padding: 20px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1);">
+     <img src="https://images.code.org/e8301a302ae70bd183b768394bab2b60-image-1739218699282.24.56 AM.png" alt="thumbnail for the CS Connections self-paced professional learniing module " style="width: 150px; height: 100px; margin-bottom: 10px; border-radius: 10px;">
+      <p style="font-size: 16pt; font-weight: bold;"> <a href = "https://studio.code.org/s/self-paced-pl-csc-2023" target="blank" >Teaching Computer Science Connections</a>
+      <ul style="text-align: left; font-size: 14pt;">
+        This course prepares you to teach the CS Connections Modules to learn creative ways to implement CS into core content areas. 
+       
+      </ul>
+    </div>
+    <div style="text-align: center; background-color: #F7F8FA; border-radius: 10px; padding: 20px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1);">
+     <img src="https://images.code.org/e9ad803b6c30599a545869bc2a38efe8-image-1739218971069.24.49 AM.png" alt="thumbnail for the CS Fundamentals self-paced professional learniing module " style="width: 150px; height: 100px; margin-bottom: 10px; border-radius: 10px;">
+      <p style="font-size: 16pt; font-weight: bold;"> <a href = "https://studio.code.org/s/k5-onlinepd-2023"target="blank" >Teaching Computer Science Fundamentals</a> </p>
+      <ul style="text-align: left; font-size: 14pt;">
+     This course prepares you to teach the CS Fundamentals courses and learn effective ways to teach CS to grades K-5. 
+      </ul>
+    </div>
+    
+    
+    <div style="text-align: center; background-color: #F7F8FA; border-radius: 10px; padding: 20px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1);">
+      <img src="https://images.code.org/d29a62cb389de6dc363f6fda28057df1-image-1739219020041.24.45 AM.png" alt="thumbnail for the CS Basicss self-paced professional learniing module "  style="width: 150px; height: 100px; margin-bottom: 10px; border-radius: 10px;">
+      <p style="font-size: 16pt; font-weight: bold;"><a href = "https://studio.code.org/s/self-paced-pl-k5-2024-2"target="blank" >Computer Science Basics for K-5 Teachers</a>  </p>
+      <ul style="text-align: left; font-size: 14pt;">
+The interactive module teaches basic vocabulary and concepts to help you get started bringing out student creativity in CS with Sprite Lab. 
+      </ul>
+    </div>
+  </div>
+</div>
+  
+
+
+<br>
+
+<p>
+
+## Help us make this module better!
+
+#### Code.org values and is responsive to feedback. Please fill out this <a href="https://studio.code.org/form/csb_selfpaced_pl_postsurvey?survey_data[survey_variable]=unit2" target="blank" rel="noopener noreferrer">short survey</a> to provide your feedback on this module.
+
+<a class="btn btn-large btn-primary" href="https://studio.code.org/form/csb_selfpaced_pl_postsurvey?survey_data[survey_variable]=unit2" target="blank" rel="noopener noreferrer">Take the survey</a>
+
+
+## Stay connected 
+
+* #### Continue participating in the <a href="https://forum.code.org/" target="blank" rel="noopener noreferrer">Code.org teacher forum</a>. 
+
+* #### Connect with <a href="http://twitter.com/teachcode" target="blank" rel="noopener noreferrer">@teachcode</a> on Twitter.
+
+* #### Join the <a href="https://www.csteachers.org/" target="blank" rel="noopener noreferrer">Computer Science Teachers Association (CSTA)</a>. 
+
+<br>
+</p>
+
+
+MARKDOWN

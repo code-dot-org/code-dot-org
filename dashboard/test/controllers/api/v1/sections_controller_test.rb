@@ -45,12 +45,19 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     CourseOffering.add_course_offering(@csp_unit_group)
     @csp_unit_group.reload
     @csp_script = create(:script, name: 'csp1', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    @csp_script2 = create(:script, name: 'csp2', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     create(:unit_group_unit, unit_group: @csp_unit_group, script: @csp_script, position: 1)
+    create(:unit_group_unit, unit_group: @csp_unit_group, script: @csp_script2, position: 2)
     @csp_script.reload
+    @csp_script2.reload
 
     @csp_unit_group_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
     CourseOffering.add_course_offering(@csp_unit_group_soft_launched)
     @csp_unit_group.reload
+
+    @single_unit_course = create :single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(@single_unit_course)
+    @single_unit_course.reload
 
     Unit.clear_cache
   end
@@ -807,6 +814,21 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal 0, @teacher.scripts.size
   end
 
+  test 'creating a section with a single-unit course also assigns the single-unit' do
+    sign_in @teacher
+    assert_equal 0, @teacher.scripts.size
+
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      course_version_id: @single_unit_course.course_version.id,
+    }
+    assert_response :success
+    @teacher.reload
+    assert_equal 1, @teacher.scripts.size
+    assert_equal @single_unit_course.first_unit, returned_section.script
+  end
+
   test 'creating a section with a coteacher adds both teachers' do
     sign_in @teacher
 
@@ -1023,6 +1045,31 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil section.script_id
   end
 
+  test "update: assigned unit must be part of assigned course" do
+    sign_in @teacher
+    section = create(:section, user: @teacher, script_id: nil)
+
+    post :update, params: {
+      id: section.id,
+      course_version_id: @csp_unit_group.course_version.id,
+      unit_id: @single_unit_course.default_units.first.id,
+    }
+    section.reload
+    assert_response :bad_request
+    assert_nil section.script_id
+    assert_nil section.course_id
+
+    post :update, params: {
+      id: section.id,
+      course_version_id: @csp_unit_group.course_version.id,
+      unit_id: @csp_script.id,
+    }
+    section.reload
+    assert_response :success
+    assert_equal @csp_script.id, section.script_id
+    assert_equal @csp_unit_group.id, section.course_id
+  end
+
   test "update: hidden script is unhidden when assigned" do
     sign_in @teacher
     @section.toggle_hidden_script @csp_script, true
@@ -1065,6 +1112,20 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     section.reload
     assert_equal(@csp_unit_group.id, section.course_id)
     assert_equal(@csp_script.id, section.script_id)
+  end
+
+  test "update: assigning a single-unit course also assigns the single-unit" do
+    sign_in @teacher
+    section = create(:section, user: @teacher, course_id: @csp_unit_group.id)
+
+    post :update, as: :json, params: {
+      id: section.id,
+      course_version_id: @single_unit_course.course_version.id
+    }
+    assert_response :success
+    section.reload
+    assert_equal(@single_unit_course.id, section.course_id)
+    assert_equal(@single_unit_course.first_unit.id, section.script_id)
   end
 
   test "update: non-matching course_version and script rejected" do
@@ -1420,6 +1481,43 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :set_ai_tutor_enabled, params: {id: -1, ai_tutor_enabled: true}
     assert_response :forbidden
+  end
+
+  test 'valid_course_offerings includes only published courses' do
+    sign_in @teacher
+    get :valid_course_offerings, params: {login_type: Section::LOGIN_TYPE_EMAIL}
+    assert_response :success
+
+    course_offering_ids = JSON.parse(@response.body).keys
+    assert course_offering_ids.include?(@csp_unit_group.course_version.course_offering.id.to_s)
+    assert course_offering_ids.include?(@single_unit_course.course_version.course_offering.id.to_s)
+    refute course_offering_ids.include?(@beta_unit_group.course_version.course_offering.id.to_s)
+  end
+
+  test 'valid_course_offerings includes units of published courses' do
+    @beta_unit_1 = create :unit, original_unit_group: @beta_unit_group
+    create :unit_group_unit, unit_group: @beta_unit_group, script: @beta_unit_1, position: 1
+    @beta_unit_2 = create :unit, original_unit_group: @beta_unit_group
+    create :unit_group_unit, unit_group: @beta_unit_group, script: @beta_unit_2, position: 2
+
+    modular_course = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    create :unit_group_unit, unit_group: modular_course, script: @beta_unit_1, position: 1
+    create :unit_group_unit, unit_group: modular_course, script: @beta_unit_2, position: 2
+    CourseOffering.add_course_offering(modular_course)
+
+    sign_in @teacher
+    get :valid_course_offerings, params: {login_type: Section::LOGIN_TYPE_EMAIL}
+    assert_response :success
+
+    course_offerings = JSON.parse(@response.body)
+
+    co_summary = course_offerings[@csp_unit_group.course_version.course_offering.id.to_s]
+    cv_summary = co_summary['course_versions'][@csp_unit_group.course_version.id.to_s]
+    assert_equal [@csp_script.id.to_s, @csp_script2.id.to_s], cv_summary['units'].keys
+
+    co_summary = course_offerings[modular_course.course_version.course_offering.id.to_s]
+    cv_summary = co_summary['course_versions'][modular_course.course_version.id.to_s]
+    assert_equal [@beta_unit_1.id.to_s, @beta_unit_2.id.to_s], cv_summary['units'].keys
   end
 
   private def set_up_code_review_groups

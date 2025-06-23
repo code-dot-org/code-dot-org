@@ -1,0 +1,9 @@
+name 'computer-systems-lesson1-industry-interview'
+display_name 'Industry Professional for Solix Ag Robotics'
+description '#### <br /> Learn how Solix Ag Robotics is transforming agriculture through automation and precision farming. Select a role and conduct an interview to understand how AI-powered robots help professionals increase efficiency and sustainability.'
+
+sublevels
+level 'computer-systems-farmer-brazil-aichat'
+level 'computer-systems-advisor-brazil-aichat'
+level 'computer-systems-analyst-brazil-aichat'
+level 'computer-systems-dealer-brazil-aichat'

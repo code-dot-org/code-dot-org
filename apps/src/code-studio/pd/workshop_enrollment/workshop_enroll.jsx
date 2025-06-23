@@ -4,19 +4,33 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {navigateToHref} from '@cdo/apps/utils';
 
 import {SUBMISSION_STATUSES} from './constants';
 import EnrollForm from './enroll_form';
 import {WorkshopPropType, FacilitatorPropType} from './enrollmentConstants';
-import FacilitatorBio from './facilitator_bio';
 import WorkshopDetails from './workshop_details';
+
+export const sessionCalendarShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  start: PropTypes.string.isRequired,
+  end: PropTypes.string.isRequired,
+  is_local: PropTypes.bool.isRequired,
+  session_format: PropTypes.string.isRequired,
+  location_address: PropTypes.string,
+  meeting_link: PropTypes.string,
+  description: PropTypes.string,
+  notes: PropTypes.string,
+});
 
 export default class WorkshopEnroll extends React.Component {
   static propTypes = {
     user_id: PropTypes.number.isRequired,
     workshop: WorkshopPropType,
     session_dates: PropTypes.arrayOf(PropTypes.string),
+    session_info_for_calendar: PropTypes.arrayOf(sessionCalendarShape),
     enrollment: PropTypes.shape({
       email: PropTypes.string,
       first_name: PropTypes.string,
@@ -38,11 +52,26 @@ export default class WorkshopEnroll extends React.Component {
   constructor(props) {
     super(props);
 
+    const workshopTitle = props.workshop.name
+      ? props.workshop.name
+      : `a ${props.workshop.course}`;
+    let workshopEnrollTitle = `Register for ${workshopTitle}`;
+    if (!workshopTitle.toLowerCase().endsWith('workshop')) {
+      workshopEnrollTitle += ' workshop';
+    }
+
     this.state = {
+      workshopEnrollTitle: workshopEnrollTitle,
       workshopEnrollmentStatus:
         this.props.workshop_enrollment_status ||
         SUBMISSION_STATUSES.UNSUBMITTED,
     };
+
+    analyticsReporter.sendEvent(
+      EVENTS.WORKSHOP_ENROLLMENT_PAGE_VISITED_EVENT,
+      {source: 'workshop enroll'},
+      PLATFORMS.BOTH
+    );
   }
 
   onSubmissionComplete = result => {
@@ -131,12 +160,18 @@ export default class WorkshopEnroll extends React.Component {
       'rpName',
       this.props.workshop.regional_partner?.name || ''
     );
+    sessionStorage.setItem('workshopId', this.props.workshop.id);
     sessionStorage.setItem('workshopCourse', this.props.workshop.course);
     sessionStorage.setItem(
       'workshopSubject',
       this.props.workshop.subject || ''
     );
     sessionStorage.setItem('workshopName', this.props.workshop.name || '');
+    sessionStorage.setItem('workshopFormat', this.props.workshop.format);
+    sessionStorage.setItem(
+      'sessionTimeInfo',
+      JSON.stringify(this.props.session_info_for_calendar)
+    );
 
     navigateToHref('/my-professional-learning');
   }
@@ -158,7 +193,7 @@ export default class WorkshopEnroll extends React.Component {
       default:
         return (
           <div>
-            <h1>{`Register for a ${this.props.workshop.course} workshop`}</h1>
+            <h1>{this.state.workshopEnrollTitle}</h1>
             <p>
               Taught by Code.org facilitators who are experienced computer
               science educators, our workshops will prepare you to teach the
@@ -172,13 +207,6 @@ export default class WorkshopEnroll extends React.Component {
                     workshop={this.props.workshop}
                     session_dates={this.props.session_dates}
                   />
-                  <h2>Facilitators</h2>
-                  {this.props.facilitators.map(facilitator => (
-                    <FacilitatorBio
-                      key={facilitator.email}
-                      facilitator={facilitator}
-                    />
-                  ))}
                 </div>
                 {/* Right Column */}
                 <div className="span6">
@@ -190,6 +218,7 @@ export default class WorkshopEnroll extends React.Component {
                         workshop_id={this.props.workshop.id}
                         workshop_course={this.props.workshop.course}
                         first_name={this.props.enrollment.first_name}
+                        last_name={this.props.enrollment.last_name}
                         email={this.props.enrollment.email}
                         onSubmissionComplete={this.onSubmissionComplete}
                         workshop_subject={this.props.workshop.subject}

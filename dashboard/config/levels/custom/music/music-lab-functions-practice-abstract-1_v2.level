@@ -1,0 +1,112 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T03:00:54.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+        },
+        "addFunctionDefinition": true,
+        "addFunctionCalls": true
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "packId": "denzel_kennedy_sing_for_me",
+      "sounds": {
+        "denzel_kennedy_sing_for_me": [
+          "ad_lib_vox",
+          "uh",
+          "intro_keys",
+          "horns_1",
+          "horns_2",
+          "bass_loop_1",
+          "bass_loop_2",
+          "bass_slide",
+          "intro_rhythm",
+          "intro_rhythm_2",
+          "intro_rhythm_with_fill",
+          "main_beat",
+          "swoosh"
+        ]
+      },
+      "validationTimeout": 1
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "playerTitle": "Example",
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!"
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "project_template_level_name": "music-lab-functions-practice-abstract-template_v2",
+    "long_instructions": "### Abstraction\r\n\r\nJared started making this song so it \"builds up\" its layers over time. Now that he knows about functions, he thinks he can make the code easier to understand by turning certain parts into functions.\r\n\r\n> I have my \"first layer\", which is just the beats. Then the \"second layer\", which are beats and keys. Then the \"third layer\" are beats, keys, and the horns.\r\n\r\nCan you help Jared create 3 functions for his song so far? The song should sound the same, but use 3 functions instead of one long chunk of code.\r\n\r\n![](https://images.code.org/4c0d08a943604591bbf01e754aa34b80-image-1745874456281.png)",
+    "validations": [
+      {
+        "key": "music-lab-functions-practice-abstract-1_6cab1957-274c-46d2-916e-e1d6c3ad83bd",
+        "message": "exemplar",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds_in_different_functions",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-practice-abstract-1_233739e4-5d43-4d74-8d4a-ea3dcfd92208",
+        "message": "DJ Robot is listening to your song to make sure the right sounds play in each function",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "procedures_callnoreturn:3"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-practice-abstract-1_84ba61c5-7113-4f6e-9103-35e3c2c64474",
+        "message": "Start by defining your functions, then calling them!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:54.490+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-abstract-1\\\"\"],\"cloned_from\":\"music-lab-functions-practice-abstract-1\"}]"
+}]]></config>
+  <blocks/>
+</Music>

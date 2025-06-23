@@ -120,7 +120,7 @@ module Pd::Application
     end
 
     def formatted_applicant_email
-      applicant_email = user.email.presence || sanitized_form_data_hash[:alternate_email]
+      applicant_email = user.email
       if applicant_email.blank?
         raise "invalid email address for application #{id}"
       end
@@ -288,7 +288,7 @@ module Pd::Application
     end
 
     def email
-      user.try(:email) || sanitized_form_data_hash[:alternate_email]
+      user.try(:email)
     end
 
     def regional_partner_name

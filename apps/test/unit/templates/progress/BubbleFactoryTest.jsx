@@ -238,6 +238,17 @@ describe('BubbleFactory', () => {
       expect(bubbleUrl).to.equal('a-url?section_id=2&user_id=1');
     });
 
+    it('if input url has levelname as a query parameter', () => {
+      const bubbleUrl = getBubbleUrl(
+        '//localhost-studio.code.org:3000/s/coursec-2024/lessons/3/extras?level_name=courseC_maze_programming_challenge2_2024',
+        1,
+        2
+      );
+      expect(bubbleUrl).to.equal(
+        '//localhost-studio.code.org:3000/s/coursec-2024/lessons/3/extras?level_name=courseC_maze_programming_challenge2_2024&section_id=2&user_id=1'
+      );
+    });
+
     it('removes version param if it exists even if other params are preserved', () => {
       const levelUrl = 'http://a-level-url.com';
       updateQueryParam('version', '456lmnop');
