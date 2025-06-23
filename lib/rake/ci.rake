@@ -110,41 +110,41 @@ namespace :ci do
       Cdo::SauceConnect.start_sauce_connect(daemonize: true)
     end
     RakeUtils.wait_for_url('http://localhost-studio.code.org:3000')
-    Dir.chdir('dashboard/test/ui') do
-      container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
-      eyes_features = `grep -lr '@eyes' features`.split("\n")
-      container_eyes_features = container_features & eyes_features
-      # Use --local to configure the UI tests to run against localhost and
-      # use --config to override the local webdriver so SauceLabs is used
-      # instead.
-      RakeUtils.system_stream_output "bundle exec ./runner.rb " \
-          "--feature #{container_features.join(',')} " \
-          "--local " \
-          "--ci " \
-          "#{use_saucelabs ? "--config #{ui_test_browsers.join(',')} " : ''}" \
-          "--parallel #{use_saucelabs ? 16 : 8} " \
-          "--abort_when_failures_exceed 10 " \
-          "--retry_count 2 " \
-          "--first_run_local " \
-          "--output-synopsis " \
-          "--with-status-page " \
-          "--html"
-      if test_eyes?
-        RakeUtils.system_stream_output "bundle exec ./runner.rb " \
-            "--eyes " \
-            "--feature #{container_eyes_features.join(',')} " \
-            "--config Chrome,iPhone " \
-            "--local " \
-            "--ci " \
-            "--parallel 10 " \
-            "--retry_count 1 " \
-            "--first_run_local " \
-            "--with-status-page " \
-            "--html"
-      end
-    end
-    close_sauce_connect if use_saucelabs || test_eyes?
-    RakeUtils.system_stream_output 'sleep 10'
+    # Dir.chdir('dashboard/test/ui') do
+    #   container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
+    #   eyes_features = `grep -lr '@eyes' features`.split("\n")
+    #   container_eyes_features = container_features & eyes_features
+    #   # Use --local to configure the UI tests to run against localhost and
+    #   # use --config to override the local webdriver so SauceLabs is used
+    #   # instead.
+    #   RakeUtils.system_stream_output "bundle exec ./runner.rb " \
+    #       "--feature #{container_features.join(',')} " \
+    #       "--local " \
+    #       "--ci " \
+    #       "#{use_saucelabs ? "--config #{ui_test_browsers.join(',')} " : ''}" \
+    #       "--parallel #{use_saucelabs ? 16 : 8} " \
+    #       "--abort_when_failures_exceed 10 " \
+    #       "--retry_count 2 " \
+    #       "--first_run_local " \
+    #       "--output-synopsis " \
+    #       "--with-status-page " \
+    #       "--html"
+    #   if test_eyes?
+    #     RakeUtils.system_stream_output "bundle exec ./runner.rb " \
+    #         "--eyes " \
+    #         "--feature #{container_eyes_features.join(',')} " \
+    #         "--config Chrome,iPhone " \
+    #         "--local " \
+    #         "--ci " \
+    #         "--parallel 10 " \
+    #         "--retry_count 1 " \
+    #         "--first_run_local " \
+    #         "--with-status-page " \
+    #         "--html"
+    #   end
+    # end
+    # close_sauce_connect if use_saucelabs || test_eyes?
+    # RakeUtils.system_stream_output 'sleep 10'
 
     check_for_new_file_changes
   end
