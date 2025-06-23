@@ -330,6 +330,9 @@ Resources:
               Value: "true"
             - Name: REDIS_URL
               Value: !Sub rediss://${RedisCluster.PrimaryEndPoint.Address}:6379
+            # Do not verify that keyspace is available, as it is created by the RedisParameterGroup
+            - Name: SKIP_KEYSPACE_CONFIG_CHECK
+              Value: "true"
             - Name: OTEL_SERVICE_NAME
               Value: marketing-sites
             - Name: OTEL_ATTRIBUTE_VALUE_LENGTH_LIMIT
