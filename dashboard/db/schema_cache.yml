@@ -1982,27 +1982,6 @@ columns:
     comment: 
   - *14
   - *15
-  data_retention_statuses:
-  - *9
-  - *11
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: pii_scrubbed_at
-    sql_type_metadata: *4
-    'null': true
-    default: 
-    default_function: 
-    collation: 
-    comment: 
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: anonymized_at
-    sql_type_metadata: *4
-    'null': true
-    default: 
-    default_function: 
-    collation: 
-    comment: 
-  - *14
-  - *15
   datablock_storage_kvps:
   - *38
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -7146,6 +7125,27 @@ columns:
   - *9
   - *143
   - *129
+  user_data_retention_statuses:
+  - *9
+  - *11
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: pii_scrubbed_at
+    sql_type_metadata: *4
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: anonymized_at
+    sql_type_metadata: *4
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - *14
+  - *15
   user_geos:
   - *5
   - *11
@@ -8265,7 +8265,6 @@ primary_keys:
   course_versions: id
   courses: id
   data_docs: id
-  data_retention_statuses: id
   datablock_storage_kvps:
   - project_id
   - key
@@ -8426,6 +8425,7 @@ primary_keys:
   unit_groups: id
   unit_groups_resources: 
   unit_groups_student_resources: id
+  user_data_retention_statuses: id
   user_geos: id
   user_level_interactions: id
   user_levels: id
@@ -8485,7 +8485,6 @@ data_sources:
   course_versions: true
   courses: true
   data_docs: true
-  data_retention_statuses: true
   datablock_storage_kvps: true
   datablock_storage_library_manifest: true
   datablock_storage_records: true
@@ -8637,6 +8636,7 @@ data_sources:
   unit_groups: true
   unit_groups_resources: true
   unit_groups_student_resources: true
+  user_data_retention_statuses: true
   user_geos: true
   user_level_interactions: true
   user_levels: true
@@ -9684,46 +9684,6 @@ indexes:
     unique: false
     columns:
     - name
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where: 
-    type: 
-    using: :btree
-    comment: 
-  data_retention_statuses:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: data_retention_statuses
-    name: index_data_retention_statuses_on_user_id
-    unique: false
-    columns:
-    - user_id
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where: 
-    type: 
-    using: :btree
-    comment: 
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: data_retention_statuses
-    name: index_data_retention_statuses_on_pii_scrubbed_at
-    unique: false
-    columns:
-    - pii_scrubbed_at
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where: 
-    type: 
-    using: :btree
-    comment: 
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: data_retention_statuses
-    name: index_data_retention_statuses_on_anonymized_at
-    unique: false
-    columns:
-    - anonymized_at
     lengths: {}
     orders: {}
     opclasses: {}
@@ -14009,6 +13969,46 @@ indexes:
     type: 
     using: :btree
     comment: 
+  user_data_retention_statuses:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: user_data_retention_statuses
+    name: index_user_data_retention_statuses_on_user_id
+    unique: false
+    columns:
+    - user_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: user_data_retention_statuses
+    name: index_user_data_retention_statuses_on_pii_scrubbed_at
+    unique: false
+    columns:
+    - pii_scrubbed_at
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: user_data_retention_statuses
+    name: index_user_data_retention_statuses_on_anonymized_at
+    unique: false
+    columns:
+    - anonymized_at
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
   user_geos:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_geos
@@ -14520,7 +14520,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20250617212412
+version: 20250618223554
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
