@@ -207,6 +207,30 @@ Resources:
                   - !GetAtt AiDiffCollection.Arn
                   - "arn:aws:bedrock:us-east-1::foundation-model/amazon.titan-embed-text-v2:0"
 
+  # Role for Bedrock Agent to access the knowledge base and OpenSearch collection
+  # TODO This is too permissive, should be scoped down to only the actions needed
+  # for the AI Differentiation chat feature
+  AiDiffBedrockAgentRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub "AiDiffBedrockAgentRole_${Environment}"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: "bedrock.amazonaws.com"
+            Action: "sts:AssumeRole"
+      Policies:
+        - PolicyName: "AiDiffBedrockAgentPolicy"
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - "bedrock:*"
+                Resource: "*"
+
   # -----------
   # Custom Resource to create the vector index in the OpenSearch collection
   # Work In Progress :(
