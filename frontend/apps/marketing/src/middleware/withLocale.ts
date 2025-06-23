@@ -1,5 +1,5 @@
 import Negotiator from 'negotiator';
-import {NextFetchEvent, NextRequest, NextResponse} from 'next/server';
+import {NextFetchEvent, NextRequest} from 'next/server';
 
 import {
   getLocalizeJsLocale,
@@ -8,7 +8,9 @@ import {
   SUPPORTED_LOCALES_SET,
 } from '@/config/locale';
 import {getStage} from '@/config/stage';
+import {getStudioBaseUrl} from '@/config/studio';
 import {getContentfulSlug} from '@/contentful/slug/getContentfulSlug';
+import {getCachedRedirectResponse} from '@/middleware/utils/getCachedRedirectResponse';
 
 import {MiddlewareFactory} from './types';
 
@@ -60,8 +62,21 @@ export const withLocale: MiddlewareFactory = next => {
       return response;
     }
 
-    // If pathParts is empty, then it is a request to / which should resolve to the /home slug
-    const slug = pathParts.length === 0 ? 'home' : getContentfulSlug(pathParts);
+    // If pathParts is empty, then it is a request to / which should resolve to the / slug
+    // It is an empty string here because when a call is made to Contentful, `/` is automatically prepended
+    const isRootRoute = pathParts.length === 0;
+
+    if (isRootRoute) {
+      // If the _short_name cookie is set, then Dashboard successfully logged in the user which is an early indicator
+      // that the user is logged in right now. Therefore, send the user to Code Studio
+      const userTypeCookie = request.cookies.get('_user_type');
+
+      if (userTypeCookie?.value) {
+        return getCachedRedirectResponse(getStudioBaseUrl());
+      }
+    }
+
+    const slug = isRootRoute ? '' : getContentfulSlug(pathParts);
 
     const cookieLocale = getLanguageFromCookie(request);
     const browserPreferredLocale = getLanguageFromAcceptLanguageHeader(request);
@@ -74,8 +89,9 @@ export const withLocale: MiddlewareFactory = next => {
      */
     const locale = cookieLocale || browserPreferredLocale || 'en-US';
 
-    const redirectUrl = new URL(`/${locale}/${slug}`, request.url);
-    const response = NextResponse.redirect(redirectUrl);
+    const localizedPath = isRootRoute ? `/${locale}` : `/${locale}/${slug}`;
+    const redirectUrl = new URL(localizedPath, request.url);
+    const response = getCachedRedirectResponse(redirectUrl);
 
     // Set the language cookie if discovered via Accept-Language header
     response.cookies.set('language_', getPegasusLocale(locale), {
