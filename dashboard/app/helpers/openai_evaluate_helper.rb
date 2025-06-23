@@ -51,7 +51,7 @@ module OpenaiEvaluateHelper
     elsif ShareFiltering.find_pii_failure(student_work)
       json_response = {"content" => PII_DETECTED_RESPONSE.to_json}
       return {status: :ok, json: json_response}
-    elsif Rails.env.test? # || Rails.env.development? # TODO remove before merging. just dont want to wait for requests.
+    elsif Rails.env.test?
       # Return dummy data in the test environment
       json_response = {"content" => DUMMY_RESPONSE.to_json}
       return {status: :ok, json: json_response}
@@ -101,7 +101,6 @@ module OpenaiEvaluateHelper
   end
 
   def self.evaluate_code_level(user_level, unit)
-    # Why isn't this retrieving the student code?
     helper = ApplicationController.helpers
     student_code = helper.get_student_code(user_level.user.id, user_level.level, unit.id)
 
@@ -130,7 +129,7 @@ module OpenaiEvaluateHelper
       ai_model_version: SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
     }
 
-    work_evaluation = StudentWorkEvaluation.create!(student_work_evaluation_params) # TODO change from new to create when ready
+    work_evaluation = StudentWorkEvaluation.create!(student_work_evaluation_params)
 
     skill_evaluations = parsed_evaluation['skillEvaluations']
     skill_evaluations&.each do |skill_evaluation|

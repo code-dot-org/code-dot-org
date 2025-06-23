@@ -35,7 +35,7 @@ class OpenaiEvaluateController < ApplicationController
   # POST /openai/evaluate_section
   def evaluate_section
     section = Section.find(evaluate_section_params[:section_id])
-    # authorize! :manage, section
+    authorize! :manage, section
 
     begin
       unit = Unit.find(evaluate_section_params[:unit_id])
