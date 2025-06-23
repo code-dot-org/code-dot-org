@@ -1,4 +1,5 @@
 import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import {EntryFields} from 'contentful';
 import {useMemo} from 'react';
@@ -80,32 +81,26 @@ const LogoCollection: React.FC<LogoCollectionProps> = ({logos}) => {
   );
 
   return (
-    <Box
-      display="grid"
-      gridTemplateColumns={{
-        xs: '1fr',
-        sm: 'repeat(3, 1fr)',
-        md: 'repeat(4, 1fr)',
-      }}
-      gap={7.5}
-    >
+    <Grid container spacing={7.5}>
       {logosData.map(logo => (
-        <Box key={logo.id} component="figure" sx={logoStyles.container}>
-          {logo.url ? (
-            <Link
-              href={logo.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={logoStyles.link}
-            >
-              {logo.item}
-            </Link>
-          ) : (
-            logo.item
-          )}
-        </Box>
+        <Grid key={logo.id} size={{xs: 12, sm: 4, md: 3}}>
+          <Box key={logo.id} component="figure" sx={logoStyles.container}>
+            {logo.url ? (
+              <Link
+                href={logo.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={logoStyles.link}
+              >
+                {logo.item}
+              </Link>
+            ) : (
+              logo.item
+            )}
+          </Box>
+        </Grid>
       ))}
-    </Box>
+    </Grid>
   );
 };
 
