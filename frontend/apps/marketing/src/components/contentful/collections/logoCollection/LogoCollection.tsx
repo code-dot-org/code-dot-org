@@ -21,6 +21,32 @@ export type LogoCollectionProps = {
   logos: ItemEntry[];
 };
 
+const logoStyles = {
+  container: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    m: 0,
+    height: '40px',
+    '& img': {
+      maxWidth: '100%',
+      maxHeight: '100%',
+      objectFit: 'contain',
+    },
+  },
+  link: {
+    display: 'flex',
+    justifyContent: 'center',
+    width: 'fit-content',
+    height: '100%',
+    textDecoration: 'none',
+    transition: 'opacity 0.3s ease-in-out',
+    '&:hover': {
+      opacity: 0.8,
+    },
+  },
+};
+
 const LogoCollection: React.FC<LogoCollectionProps> = ({logos}) => {
   if (!logos) {
     return (
@@ -55,50 +81,22 @@ const LogoCollection: React.FC<LogoCollectionProps> = ({logos}) => {
 
   return (
     <Box
-      sx={{
-        display: 'grid',
-        gridTemplateColumns: {
-          xs: 'repeat(1, 1fr)',
-          sm: 'repeat(3, 1fr)',
-          md: 'repeat(4, 1fr)',
-        },
-        gap: '60px',
+      display="grid"
+      gridTemplateColumns={{
+        xs: '1fr',
+        sm: 'repeat(3, 1fr)',
+        md: 'repeat(4, 1fr)',
       }}
+      gap={7.5}
     >
       {logosData.map(logo => (
-        <Box
-          key={logo.id}
-          component="figure"
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            margin: '0',
-            height: '100%',
-            maxHeight: '40px',
-            '& img': {
-              maxWidth: '100%',
-              maxHeight: '100%',
-              objectFit: 'contain',
-            },
-          }}
-        >
+        <Box key={logo.id} component="figure" sx={logoStyles.container}>
           {logo.url ? (
             <Link
               href={logo.url}
               target="_blank"
               rel="noopener noreferrer"
-              sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                width: 'fit-content',
-                height: '100%',
-                textDecoration: 'none',
-                '&:hover': {
-                  opacity: 0.8,
-                  transition: 'opacity 0.3s ease',
-                },
-              }}
+              sx={logoStyles.link}
             >
               {logo.item}
             </Link>
