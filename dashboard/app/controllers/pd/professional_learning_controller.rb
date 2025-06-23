@@ -50,8 +50,7 @@ class Pd::ProfessionalLearningController < ApplicationController
   def workshop_marketing_page
     view_options(full_width: true, responsive_content: true, no_padding_container: true)
     @workshop_info = Pd::Workshop.find(params[:workshop_id])&.summarize_for_marketing_page
-    @is_signed_out = current_user.nil?
-    @is_student = current_user&.student? || false
+    @user_info = current_user ? User.find(current_user&.id)&.summarize_for_workshop : nil
     render 'pd/professional_learning/workshops/index'
   end
 

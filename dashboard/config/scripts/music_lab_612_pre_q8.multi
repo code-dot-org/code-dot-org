@@ -1,11 +1,11 @@
 name 'music-lab-612-pre-q8'
 
-question 'put actual question here'
+question 'Which computational thinking skill is Kai using?'
 
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
-right 'correct'
+right 'Decomposition'
+wrong 'Pattern Recognition'
+wrong 'Abstraction'
+wrong 'Algorithm Design'
 
 allow_multiple_attempts true
 
@@ -25,5 +25,9 @@ Posttest Modality: Given a snippet of how someone approached a problem, identify
 MARKDOWN
 
 markdown <<MARKDOWN
-Put the images / context markdown here
+Kai wanted to remix a track with beats, vocals, and sound effects, but it felt like too much to do at once. So Kai focused on one part at a time. First Kai layered the beats, then synced the vocals, and added effects last.
+
+---
+
+![](https://images.code.org/e7ebea15053a3bb2bfbf123bb3ee7ceb-image-1750438510455.png)
 MARKDOWN
