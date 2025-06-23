@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_06_18_223554) do
+ActiveRecord::Schema.define(version: 2025_06_23_200652) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -2264,6 +2264,12 @@ ActiveRecord::Schema.define(version: 2025_06_18_223554) do
     t.datetime "updated_at", null: false
     t.index ["kind"], name: "index_survey_results_on_kind"
     t.index ["user_id"], name: "index_survey_results_on_user_id"
+  end
+
+  create_table "table_foo_bars", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.boolean "flag"
   end
 
   create_table "teacher_feedbacks", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
