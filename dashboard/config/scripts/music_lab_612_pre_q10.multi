@@ -1,0 +1,34 @@
+name 'music-lab-612-pre-q10'
+
+question 'Which computational thinking skill is Maya using?'
+
+
+wrong 'Decomposition'
+right 'Pattern Recognition'
+wrong 'Abstraction'
+wrong 'Algorithm Design'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Computational Thinking
+
+Standard: Pattern Matching
+
+Lesson: Sequencing - Practice, Loops - Practice
+
+Skill Progression: All
+
+Pretest Modality: Given a snippet of how someone approached a problem, identify the CT skill it is (similar to PL question)
+
+Posttest Modality: Given a snippet of how someone approached a problem, identify the CT skill it is (similar to PL question)
+
+MARKDOWN
+
+markdown <<MARKDOWN
+Maya noticed that the drum and bass pattern in the verse repeats every 4 beats. So, instead of copying the same blocks over and over, Maya used a loop to repeat the pattern.
+
+---
+
+![](https://images.code.org/e7ebea15053a3bb2bfbf123bb3ee7ceb-image-1750438510455.png)
+MARKDOWN

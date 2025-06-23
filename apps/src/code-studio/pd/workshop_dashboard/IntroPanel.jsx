@@ -162,7 +162,7 @@ export default class IntroPanel extends React.Component {
 
     switch (workshopState) {
       case 'Not Started': {
-        const firstSessionStart = sessions[0].start;
+        const firstSessionStart = sessions[0]?.start;
         let buttonClass = null;
         if (
           moment().isSame(moment.tz(firstSessionStart, workshopTimezone), 'day')

@@ -64,10 +64,9 @@ $box-shadow:
 
     a {
       @include typography.body-three;
-      line-height: 1;
       color: var(--text-neutral-white-fixed);
       text-decoration: none;
-      padding: 1rem;
+      padding: 1rem 1rem 1.01rem;
       border-inline: 2px solid transparent;
 
       @include mixins.transition-all;
@@ -92,6 +91,15 @@ header .buttonLinks {
   align-items: center;
   gap: 0.5rem;
 
+  .loading.mainMenu {
+    color: var(--text-brand-teal-primary-fixed) !important;
+    background-color: var(--background-neutral-white-fixed) !important;
+    border-color: var(--background-neutral-white-fixed) !important;
+    // Set the width to match sign in buttons to prevent layout shift
+    width: 13.713rem;
+    opacity: 0.8;
+  }
+
   .signIn.mainMenu,
   .newProject {
     background: transparent;
@@ -99,6 +107,10 @@ header .buttonLinks {
     &:hover {
       background: var(--background-brand-teal-strong);
     }
+  }
+
+  .newProject i {
+    margin-inline-end: -3px;
   }
 
   .createAccount.mainMenu,
@@ -142,7 +154,7 @@ header .buttonLinks .iconButton {
   }
 
   &.helpButton {
-    margin-inline: 0.25rem -0.5rem;
+    margin-inline: 0 -0.75rem;
 
     [dir='rtl'] & {
       transform: scaleX(-1);

@@ -456,6 +456,14 @@ class ProjectsController < ApplicationController
 
     @body_classes = @level.properties['background']
 
+    if @level.is_a?(Pythonlab)
+      user_theme = current_user ? UserPreference.find_by(user_id: current_user.id)&.theme : nil
+      theme_preference = user_theme['global'] if user_theme
+      if theme_preference
+        @body_classes = "background-#{theme_preference&.downcase}"
+      end
+    end
+
     if [Game::ARTIST, Game::SPRITELAB, Game::POETRY].include? @game.app
       @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/.metadata/thumbnail.png", 'https:'
     end
@@ -558,16 +566,7 @@ class ProjectsController < ApplicationController
     begin
       storage_id, _ = storage_decrypt_channel_id(channel_id)
       Projects.new(storage_id).publish(channel_id, project_type, current_user)
-    rescue Projects::PublishError => exception
-      Honeybadger.notify(
-        exception.message,
-        context: {
-          message: "Project publish failed - user unexpectedly bypassed submission_status restriction in the share dialog and project submit authorization restrictions and attempted to publish project."
-        }
-      )
-      return render(status: :forbidden, json: {error: exception.message})
     end
-    # TODO: Store submission_description in our database.
     # Send ZenDesk ticket with user/project info and submission description.
     send_project_submission(current_user.name || '', current_user.username || '', project_type, channel_id, submission_description)
   end

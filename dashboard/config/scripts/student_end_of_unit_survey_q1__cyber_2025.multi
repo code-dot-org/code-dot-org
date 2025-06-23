@@ -1,13 +1,13 @@
 name 'student-end-of-unit-survey-q1_-cyber_2025'
 
-question 'I feel confident that if I had exam to test what I have learned in this unit, I would do well.'
+question 'I can really be myself at school.'
 
-right 'Strongly agree'
-right 'Agree'
-right 'Slightly agree'
-right 'Neither'
-right 'Slightly disagree'
-right 'Disagree'
 right 'Strongly disagree'
+right 'Disagree'
+right 'Slightly disagree'
+right 'Neither'
+right 'Slightly agree'
+right 'Agree'
+right 'Strongly agree'
 
 allow_multiple_attempts true

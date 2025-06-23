@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_04_24_231217) do
+ActiveRecord::Schema.define(version: 2025_06_18_223554) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -501,6 +501,7 @@ ActiveRecord::Schema.define(version: 2025_04_24_231217) do
     t.datetime "published_date"
     t.integer "self_paced_pl_course_offering_id"
     t.boolean "ai_teaching_assistant_available", default: false, null: false
+    t.json "facilitator_course_permissions"
     t.index ["key"], name: "index_course_offerings_on_key", unique: true
   end
 
@@ -2025,6 +2026,7 @@ ActiveRecord::Schema.define(version: 2025_04_24_231217) do
     t.string "instructor_audience"
     t.string "participant_audience"
     t.integer "original_unit_group_id"
+    t.boolean "hide_within_course", default: false
     t.index ["family_name"], name: "index_scripts_on_family_name"
     t.index ["instruction_type"], name: "index_scripts_on_instruction_type"
     t.index ["instructor_audience"], name: "index_scripts_on_instructor_audience"
@@ -2166,6 +2168,8 @@ ActiveRecord::Schema.define(version: 2025_04_24_231217) do
     t.string "concept"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "key", null: false
+    t.index ["key"], name: "index_skills_on_key", unique: true
   end
 
   create_table "stages", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2335,6 +2339,17 @@ ActiveRecord::Schema.define(version: 2025_04_24_231217) do
     t.index ["unit_group_id", "resource_id"], name: "index_ug_student_resources_on_unit_group_id_and_resource_id", unique: true
   end
 
+  create_table "user_data_retention_statuses", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.datetime "pii_scrubbed_at"
+    t.datetime "anonymized_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["anonymized_at"], name: "index_user_data_retention_statuses_on_anonymized_at"
+    t.index ["pii_scrubbed_at"], name: "index_user_data_retention_statuses_on_pii_scrubbed_at"
+    t.index ["user_id"], name: "index_user_data_retention_statuses_on_user_id"
+  end
+
   create_table "user_geos", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
@@ -2420,6 +2435,7 @@ ActiveRecord::Schema.define(version: 2025_04_24_231217) do
     t.datetime "updated_at", precision: 6, null: false
     t.json "editor_font_size"
     t.json "console_font_size"
+    t.json "theme"
     t.index ["user_id"], name: "index_user_preferences_on_user_id"
   end
 
@@ -2658,6 +2674,7 @@ ActiveRecord::Schema.define(version: 2025_04_24_231217) do
   add_foreign_key "student_work_evaluation_summaries", "student_work_evaluations"
   add_foreign_key "student_work_evaluation_summaries", "student_work_evaluations", column: "student_work_evaluation_summary_id"
   add_foreign_key "survey_results", "users"
+  add_foreign_key "user_data_retention_statuses", "users"
   add_foreign_key "user_geos", "users"
   add_foreign_key "user_proficiencies", "users"
 end

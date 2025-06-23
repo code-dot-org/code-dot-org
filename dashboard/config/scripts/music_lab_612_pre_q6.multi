@@ -1,0 +1,31 @@
+name 'music-lab-612-pre-q6'
+
+question '**In Rosa Linn\'s code shown here, how many times will the Chorus Bass sound play?**'
+
+wrong '0 times'
+wrong '1 time'
+wrong '4 times'
+right '5 times'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Functions
+
+Standard: Create an algorithm for a song that includes functions with parameters
+
+Lesson: Functions - Synthesis
+
+Skill Progression: Create a function with at least 1 parameter and call it at least twice with different arguments
+
+Pretest Modality: Given algorithm / intent / incorrect code, match with code
+
+Posttest Modality: Given algorithm / intent / incorrect code, match with code
+
+MARKDOWN
+
+markdown <<MARKDOWN
+Rosa Linn put the drum and bass sounds into a function so she could easily experiment with different beats with her verse vocals. Her code and timeline are below. 
+
+![](https://images.code.org/89865a83431e69231d6f78844c3ea179-image-1750285705011.png)
+MARKDOWN

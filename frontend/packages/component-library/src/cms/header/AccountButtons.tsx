@@ -1,7 +1,9 @@
 import classNames from 'classnames';
-import {HTMLAttributes} from 'react';
+import {HTMLAttributes, useContext} from 'react';
 
 import {LinkButton, LinkButtonProps} from '@/button';
+
+import SignInContext from './context/signInContext';
 
 import moduleStyles from './header.module.scss';
 
@@ -27,8 +29,6 @@ export interface AccountButtonsProps extends HTMLAttributes<HTMLElement> {
     /** Go to Dashboard button href */
     href: string;
   };
-  /** Is user logged in */
-  isLoggedIn: boolean;
   /** Is button in Hamburger Menu */
   isInHamburger: boolean;
 }
@@ -37,9 +37,38 @@ const AccountButtons: React.FC<AccountButtonsProps> = ({
   signIn,
   createAccount,
   goToDashboard,
-  isLoggedIn = false,
   isInHamburger,
 }) => {
+  const signInState = useContext(SignInContext);
+
+  const renderAccountButtons = () => {
+    switch (signInState) {
+      case 'loading':
+        return renderPlaceholderButton();
+      case 'signedIn':
+        return renderDashboardButton();
+      case 'signedOut':
+      case 'error':
+        return renderSignInButtons();
+    }
+  };
+
+  const renderPlaceholderButton = () => (
+    <LinkButton
+      text="Loading"
+      className={classNames(
+        isInHamburger ? moduleStyles.hamburger : moduleStyles.mainMenu,
+        moduleStyles.loading,
+      )}
+      type="primary"
+      href="#"
+      size="s"
+      color={isInHamburger ? 'purple' : 'white'}
+      isPending={signInState === 'loading'}
+      disabled
+    />
+  );
+
   const renderDashboardButton = () => (
     <LinkButton
       text={goToDashboard.label || 'Go to Dashboard'}
@@ -102,9 +131,7 @@ const AccountButtons: React.FC<AccountButtonsProps> = ({
   };
 
   return (
-    <div className={moduleStyles.accountLinks}>
-      {isLoggedIn ? renderDashboardButton() : renderSignInButtons()}
-    </div>
+    <div className={moduleStyles.accountLinks}>{renderAccountButtons()}</div>
   );
 };
 

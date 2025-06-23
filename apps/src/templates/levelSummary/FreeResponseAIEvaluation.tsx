@@ -5,6 +5,8 @@ import {
   StudentWorkEvaluation,
   evaluateStudentWork,
 } from '@cdo/apps/aiEvaluation/aiEvaluationApi';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 
 import FreeResponseAiStudentResponseHeader from './FreeResponseAiStudentResponseHeader';
 import FreeResponseAiSummaryBox from './FreeResponseAiSummaryBox';
@@ -35,6 +37,14 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
     evaluationCount > 0 && responses.length === evaluationCount;
 
   const getAIEvaluations = async () => {
+    analyticsReporter.sendEvent(
+      EVENTS.CFU_AI_ANALYSIS_BUTTON_CLICKED,
+      {
+        levelId: levelData.levelId,
+        unitId: levelData.unitId,
+      },
+      PLATFORMS.BOTH
+    );
     setEvaluationsPending(true);
     const responsePromises = responses.map(async studentResponse => {
       return evaluateStudentResponse(studentResponse);
@@ -62,6 +72,18 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
     setEvaluationCount(prevCount => prevCount + 1);
   };
 
+  const openDetailedAnalysisHandler = () => {
+    analyticsReporter.sendEvent(
+      EVENTS.CFU_AI_ANALYSIS_VIEW_DETAILS,
+      {
+        levelId: levelData.levelId,
+        unitId: levelData.unitId,
+      },
+      PLATFORMS.BOTH
+    );
+    setShowDetailedAnalysis(true);
+  };
+
   useEffect(() => {
     if (evaluationComplete) {
       setEvaluationsPending(false);
@@ -77,7 +99,7 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
         studentWorkEvaluations={evaluations}
         evaluationComplete={evaluationComplete}
         totalNumberOfStudents={totalNumberOfStudents}
-        openDetailedAnalysis={() => setShowDetailedAnalysis(true)}
+        openDetailedAnalysis={openDetailedAnalysisHandler}
       />
       {evaluationComplete && showDetailedAnalysis && (
         <div className={styles.detailedAnalysisContainer}>

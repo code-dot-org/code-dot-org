@@ -195,37 +195,6 @@ header.buildUserMenu = function () {
   });
 };
 
-function setupReduxSubscribers(store) {
-  let state = {};
-  store.subscribe(() => {
-    let lastState = state;
-    state = store.getState();
-
-    // Update the project state when a PublishDialog state transition indicates
-    // that a project has just been published.
-    if (
-      lastState.publishDialog &&
-      lastState.publishDialog.lastPublishedAt !==
-        state.publishDialog.lastPublishedAt
-    ) {
-      window.dashboard.project.setPublishedAt(
-        state.publishDialog.lastPublishedAt
-      );
-    }
-
-    // Update the project state when a ShareDialog state transition indicates
-    // that a project has just been unpublished.
-    if (
-      lastState.shareDialog &&
-      !lastState.shareDialog.didUnpublish &&
-      state.shareDialog.didUnpublish
-    ) {
-      window.dashboard.project.setPublishedAt(null);
-    }
-  });
-}
-setupReduxSubscribers(getStore());
-
 function setUpGlobalData(store) {
   fetch('/api/v1/users/current', {
     credentials: 'same-origin',

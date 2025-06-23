@@ -1,6 +1,5 @@
-@import 'color.scss';
 .previewContainer {
-  background-color: $light_black;
+  background-color: var(--background-neutral-primary);
 }
 
 .previewHeader {

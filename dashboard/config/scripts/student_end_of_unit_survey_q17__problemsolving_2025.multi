@@ -1,14 +1,14 @@
 name 'student-end-of-unit-survey-q17_-problemsolving_2025'
 
-question 'When there were choices available in assignments and projects, I was able to find one that was interesting to me.'
+question 'It was interesting to learn about the topics covered in this unit.'
 
-right 'Strongly agree'
-right 'Agree'
-right 'Slightly agree'
-right 'Neither'
-right 'Slightly disagree'
-right 'Disagree'
 right 'Strongly disagree'
+right 'Disagree'
+right 'Slightly disagree'
+right 'Neither'
+right 'Slightly agree'
+right 'Agree'
+right 'Strongly agree'
 
 allow_multiple_attempts true
 

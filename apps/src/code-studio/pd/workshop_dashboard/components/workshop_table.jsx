@@ -16,9 +16,9 @@ import {workshopShape} from '../types.js';
 import {shouldShowSurveyResults} from '../workshop_summary_utils';
 import {COURSE_BUILD_YOUR_OWN} from '../workshopConstants';
 
-import FacilitatorsList from './facilitators_list';
 import SessionTimesList from './session_times_list';
 import WorkshopManagement from './workshop_management';
+import WorkshopTableCellList from './workshop_table_cell_list.jsx';
 
 export default class WorkshopTable extends React.Component {
   static propTypes = {
@@ -114,7 +114,7 @@ export default class WorkshopTable extends React.Component {
           transforms: [sortable],
         },
         cell: {
-          formatters: [this.formatSessions],
+          formatters: [this.formatSessionTimes],
         },
       },
       {
@@ -145,10 +145,11 @@ export default class WorkshopTable extends React.Component {
         },
       },
       {
-        property: 'location_name',
         header: {
           label: 'Location',
-          transforms: [sortable],
+        },
+        cell: {
+          formatters: [this.formatSessionLocations],
         },
       },
       {
@@ -242,7 +243,7 @@ export default class WorkshopTable extends React.Component {
     this.setState({sortingColumns});
   };
 
-  formatSessions = (_ignored, {rowData}) => {
+  formatSessionTimes = (_ignored, {rowData}) => {
     return <SessionTimesList sessions={rowData.sessions} />;
   };
 
@@ -272,9 +273,19 @@ export default class WorkshopTable extends React.Component {
     return `${organizer.name} (${organizer.email})`;
   };
 
-  formatFacilitators = facilitators => {
-    return <FacilitatorsList facilitators={facilitators} />;
-  };
+  formatFacilitators = facilitators => (
+    <WorkshopTableCellList
+      items={facilitators.map(({name, email}) => `${name} ${email}`)}
+    />
+  );
+
+  formatSessionLocations = (_ignored, {rowData: {sessions}}) => (
+    <WorkshopTableCellList
+      items={sessions.map(({location_name, session_format}) =>
+        session_format === 'virtual' ? 'Virtual' : location_name ?? 'N/A'
+      )}
+    />
+  );
 
   formatSignupUrl = workshopId => {
     const signupUrl = `${location.origin}/pd/workshops/${workshopId}/enroll`;
@@ -317,17 +328,17 @@ export default class WorkshopTable extends React.Component {
     const rows = _.map(this.props.workshops.workshops, row =>
       _.merge(row, {
         enrollments: `${row.enrolled_teacher_count} / ${row.capacity}`,
-        date: row.sessions[0].start,
+        date: row.sessions[0]?.start,
         manage: {
           id: row.id,
           course: row.course,
           subject: row.subject,
           state: row.state,
-          date: row.sessions[0].start,
+          date: row.sessions[0]?.start,
           canDelete: row.can_delete,
-          endDate: row.sessions[row.sessions.length - 1].end,
+          endDate: row.sessions[row.sessions.length - 1]?.end,
         },
-        sessions: row.sessions.map(s => ({...s, is_local: !row.time_zone})),
+        sessions: row.sessions,
       })
     );
 

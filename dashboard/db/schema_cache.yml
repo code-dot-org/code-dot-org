@@ -1884,6 +1884,14 @@ columns:
     default_function: 
     collation: 
     comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: facilitator_course_permissions
+    sql_type_metadata: *20
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
   course_offerings_pd_workshops:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: pd_workshop_id
@@ -6332,6 +6340,14 @@ columns:
     default_function: 
     collation: 
     comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: hide_within_course
+    sql_type_metadata: *13
+    'null': true
+    default: '0'
+    default_function: 
+    collation: 
+    comment: 
   scripts_resources:
   - *17
   - &129 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -6671,6 +6687,7 @@ columns:
     comment: 
   - *14
   - *15
+  - *23
   stages:
   - *5
   - *54
@@ -7108,6 +7125,27 @@ columns:
   - *9
   - *143
   - *129
+  user_data_retention_statuses:
+  - *9
+  - *11
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: pii_scrubbed_at
+    sql_type_metadata: *4
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: anonymized_at
+    sql_type_metadata: *4
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - *14
+  - *15
   user_geos:
   - *5
   - *11
@@ -7319,6 +7357,14 @@ columns:
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: console_font_size
+    sql_type_metadata: *20
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: theme
     sql_type_metadata: *20
     'null': true
     default: 
@@ -8379,6 +8425,7 @@ primary_keys:
   unit_groups: id
   unit_groups_resources: 
   unit_groups_student_resources: id
+  user_data_retention_statuses: id
   user_geos: id
   user_level_interactions: id
   user_levels: id
@@ -8589,6 +8636,7 @@ data_sources:
   unit_groups: true
   unit_groups_resources: true
   unit_groups_student_resources: true
+  user_data_retention_statuses: true
   user_geos: true
   user_level_interactions: true
   user_levels: true
@@ -13506,7 +13554,20 @@ indexes:
     type: 
     using: :btree
     comment: 
-  skills: []
+  skills:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: skills
+    name: index_skills_on_key
+    unique: true
+    columns:
+    - key
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
   stages:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: stages
@@ -13901,6 +13962,46 @@ indexes:
     columns:
     - resource_id
     - unit_group_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  user_data_retention_statuses:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: user_data_retention_statuses
+    name: index_user_data_retention_statuses_on_user_id
+    unique: false
+    columns:
+    - user_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: user_data_retention_statuses
+    name: index_user_data_retention_statuses_on_pii_scrubbed_at
+    unique: false
+    columns:
+    - pii_scrubbed_at
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: user_data_retention_statuses
+    name: index_user_data_retention_statuses_on_anonymized_at
+    unique: false
+    columns:
+    - anonymized_at
     lengths: {}
     orders: {}
     opclasses: {}
@@ -14419,7 +14520,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20250424231217
+version: 20250618223554
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

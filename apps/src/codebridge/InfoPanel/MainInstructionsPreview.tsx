@@ -16,6 +16,7 @@ interface MainInstructionsPreviewProps {
 
 /**
  * Component for levelbuilder to preview the main instructions bubble (without predict answers or validation).
+ * This is rendered outside of the usual lab2 container, hence why we need to provide a data-theme.
  */
 const MainInstructionsPreview: React.FunctionComponent<
   MainInstructionsPreviewProps
@@ -24,10 +25,8 @@ const MainInstructionsPreview: React.FunctionComponent<
     <div
       key={instructionsText}
       id="instructions-text"
-      className={classNames(
-        moduleStyles['bubble-' + theme],
-        moduleStyles.bubbleNoSlide
-      )}
+      className={classNames(moduleStyles.bubble, moduleStyles.bubbleNoSlide)}
+      data-theme={theme}
     >
       <MainInstructionsContent
         instructionsText={instructionsText}

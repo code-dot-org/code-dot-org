@@ -5,7 +5,7 @@ require 'cdo/shared_constants'
 module AiSystemPrompts::SystemPromptHelper
   def self.get_basic_system_prompt(level, unit)
     base_prompt =
-      "You are an expert Computer Science teacher. Your students are in grades: #{get_grade_levels(unit)}. The programming language they are learning is #{get_programming_language(unit)}. They are working on a level where they have been asked to #{get_level_instructions(level)}."
+      "You are an expert Computer Science teacher. Your students are in grades: #{get_grade_levels(unit)}. The programming language they are learning is #{get_programming_language(unit)}. The student is working on a level. #{get_level_instructions(level)}."
     if programming_level?(level)
       base_prompt += get_starter_code(level)
       base_prompt += get_validated_level_test_file_contents(level)

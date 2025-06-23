@@ -1,7 +1,10 @@
 import {useDraggable} from '@dnd-kit/core';
+import classNames from 'classnames';
 import React from 'react';
 
 import {DragDataType} from './types';
+
+import moduleStyles from './styles/filebrowser.module.scss';
 
 /*
   This component adds draggable functionality to files/folders in the file browser. The intent is that the user can drag a file into a new folder as well
@@ -16,6 +19,7 @@ type DraggableProps = {
   data: DragDataType;
   Component?: keyof JSX.IntrinsicElements;
   className?: string;
+  onKeyDown?: (event: React.KeyboardEvent) => void;
 };
 
 /**
@@ -34,9 +38,11 @@ export const Draggable: React.FunctionComponent<DraggableProps> = ({
   data,
   Component = 'div',
   className,
+  onKeyDown,
 }: DraggableProps) => {
+  const draggableId = `${data.type}-${data.id}-draggable`;
   const {attributes, listeners, setNodeRef, transform} = useDraggable({
-    id: `${data.type}-${data.id}`,
+    id: draggableId,
     data,
   });
   const style = transform
@@ -45,19 +51,56 @@ export const Draggable: React.FunctionComponent<DraggableProps> = ({
       }
     : undefined;
 
+  // Call the provided onKeyDown function if it exists,
+  // then call the listeners.onKeyDown function if it exists.
+  // This allows for custom keyboard handling while still
+  // allowing the default keyboard handling provided by dnd-kit.
+  const handleKeyDown = (event: React.KeyboardEvent) => {
+    if (onKeyDown) {
+      onKeyDown(event);
+    }
+    if (listeners?.onKeyDown) {
+      listeners?.onKeyDown(event);
+    }
+  };
+
   return React.createElement(
     Component,
     {
       ref: setNodeRef,
       style: style,
-      className,
+      className: classNames(moduleStyles.draggable, className),
       ...listeners,
       ...attributes,
+      onKeyDown: handleKeyDown,
     },
     children
   );
 };
 
-export const NotDraggable: React.FunctionComponent<DraggableProps> = ({
+type NotDraggableProps = {
+  children: React.ReactNode;
+  onKeyDown?: (event: React.KeyboardEvent) => void;
+};
+
+export const NotDraggable: React.FunctionComponent<NotDraggableProps> = ({
   children,
-}) => <>{children}</>;
+  onKeyDown,
+}: NotDraggableProps) => {
+  const handleKeyDown = (event: React.KeyboardEvent) => {
+    if (onKeyDown) {
+      onKeyDown(event);
+    }
+  };
+
+  return React.createElement(
+    'div',
+    {
+      onKeyDown: handleKeyDown,
+      className: moduleStyles.notDraggable,
+      tabIndex: 0,
+      role: 'button',
+    },
+    children
+  );
+};

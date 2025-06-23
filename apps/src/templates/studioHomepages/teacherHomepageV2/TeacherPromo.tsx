@@ -26,6 +26,7 @@ export interface TeacherPromoInfo {
   image: string | null;
   isClosable: boolean;
   partnerLogo: string | null;
+  isExternal: boolean;
 }
 
 interface TeacherPromoAdditionalProps {
@@ -59,6 +60,7 @@ const TeacherPromo: React.FC<TeacherPromoProps> = ({
   image,
   isClosable,
   partnerLogo,
+  isExternal,
   onClose,
 }) => {
   return (
@@ -99,7 +101,7 @@ const TeacherPromo: React.FC<TeacherPromoProps> = ({
         href={buttonTarget}
         color="black"
         text={buttonLabel}
-        iconRight={{iconName: 'up-right-from-square'}}
+        iconRight={isExternal ? {iconName: 'up-right-from-square'} : undefined}
         type="secondary"
         size="s"
         className={styles.promotionButton}

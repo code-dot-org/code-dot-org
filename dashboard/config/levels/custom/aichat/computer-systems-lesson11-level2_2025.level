@@ -7,7 +7,7 @@
   "user_id": 1574,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Analyzing User Testing Results Using AI\r\n\r\n1. In the bottom-left side of the chat window, click **Upload** > **From Library**. Select the product that you examined in the previous level.\r\n\r\n2. Use AI Chat to help identify patterns in user data, like recurring complaints or common praise, to help summarize findings faster and more clearly\r\n",
+    "long_instructions": "## Analyzing User Testing Results Using AI\r\n\r\n1. In the bottom-left side of the chat window, click **Upload** > **From Library**. Select the product that you examined in the previous level.\r\n2. Use AI Chat to help identify patterns in user data, like recurring complaints or common praise, to help summarize findings faster and more clearly",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -50,6 +50,6 @@
       "Wearable Stress-Monitoring Device.pdf": "873a3d90-37cb-479b-afc3-b63522e1bd69.pdf"
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-22T01:25:06.597+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson11-level2-2024\\\"\"],\"cloned_from\":\"computer-systems-lesson11-level2-2024\"},{\"changed_at\":\"2025-04-03 21:39:04 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-03 21:57:20 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-03 22:07:19 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-22T01:25:06.597+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson11-level2-2024\\\"\"],\"cloned_from\":\"computer-systems-lesson11-level2-2024\"},{\"changed_at\":\"2025-04-03 21:39:04 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-03 21:57:20 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-03 22:07:19 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-02 16:27:26 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-05-02 17:43:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Aichat>

@@ -1,6 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
 import CloseButton from '@code-dot-org/component-library/closeButton';
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {RadioButton} from '@code-dot-org/component-library/radioButton';
 import Tags from '@code-dot-org/component-library/tags';
@@ -78,6 +79,10 @@ const VersionHistoryDropdown: React.FunctionComponent<
     () => versionList?.find(v => v.isLatest)?.versionId || INITIAL_VERSION_ID,
     [versionList]
   );
+
+  // We need to set the theme here becausse the dropdown is rendered in a portal, outside of the
+  // main lab container.
+  const {theme} = useTheme();
 
   const viewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
@@ -315,7 +320,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
         style={dropdownStyles}
         aria-modal="true"
         aria-label={lab2I18n.versionHistoryList()}
-        data-theme="Dark"
+        data-theme={theme}
       >
         <div className={moduleStyles.header}>
           <Heading6 className={moduleStyles.heading}>

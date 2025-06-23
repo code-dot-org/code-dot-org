@@ -6,14 +6,16 @@
     "properties": {
       "content_area": "pl_workshop_activities",
       "curriculum_umbrella": "PD Workshop Activity CSD",
+      "has_unnumbered_lessons": true,
       "hideable_lessons": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2025"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-25 13:44:57 UTC",
+    "serialized_at": "2025-05-05 21:46:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

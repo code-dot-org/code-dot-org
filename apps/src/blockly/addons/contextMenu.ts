@@ -7,7 +7,6 @@ import * as GoogleBlockly from 'blockly/core';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {commonI18n} from '@cdo/apps/types/locale';
-import experiments from '@cdo/apps/util/experiments';
 
 import LegacyDialog from '../../code-studio/LegacyDialog';
 import {
@@ -489,8 +488,7 @@ function registerHelp(weight: number) {
     },
     preconditionFn(scope: GoogleBlockly.ContextMenuRegistry.Scope) {
       const block = scope.block;
-      // This option is limited to an experiment until SL documentation is updated.
-      if (!experiments.isEnabled(experiments.SPRITE_LAB_DOCS) || !block) {
+      if (!Blockly.showBlockHelp || !block) {
         return 'hidden';
       }
       const url =
@@ -614,8 +612,6 @@ function unregisterDefaultOptions() {
     GoogleBlockly.ContextMenuRegistry.registry.unregister('blockHelp');
     // Option to use inline inputs .
     GoogleBlockly.ContextMenuRegistry.registry.unregister('blockInline');
-    // Option to clean up blocks. cleanUp() doesn't currently account for immovable blocks.
-    GoogleBlockly.ContextMenuRegistry.registry.unregister('cleanWorkspace');
     // Option to collapse all blocks on a workspace.
     GoogleBlockly.ContextMenuRegistry.registry.unregister('collapseWorkspace');
     // Option to expand all blocks on a workspace.
@@ -659,6 +655,7 @@ function registerCustomWorkspaceOptions() {
   // 0: blockPasteFromStorage
   // 1: undoWorkspace
   // 2: redoWorkspace
+  // 3: cleanWorkspace
 
   // Our custom options should show below the registered default options.
   let nextWeight = 3;

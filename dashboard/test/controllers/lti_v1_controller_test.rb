@@ -946,7 +946,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     post '/lti/v1/upgrade_account', params: {email: 'test-teacher@code.org'}
 
     assert_response :ok
-    user.reload
+    user = User.find(user.id)
     assert_equal User::TYPE_TEACHER, user.user_type
     assert_equal true, user.lti_roster_sync_enabled
   end

@@ -1,14 +1,12 @@
 name 'student-end-of-unit-survey-q27_-networks_2025'
 
-question 'This unit  has helped me learn or confirm that failure is a natural and expected part of the problem solving process.'
+question 'I planned my work, wrote down my thoughts, or took notes to support my learning.'
 
-right 'Strongly agree'
-right 'Agree'
-right 'Slightly agree'
-right 'Neither'
-right 'Slightly disagree'
-right 'Disagree'
-right 'Strongly disagree'
+right 'Never'
+right 'Occasionally'
+right 'About half of the lessons'
+right 'Most of the lessons'
+right 'Almost every lesson'
 
 allow_multiple_attempts true
 

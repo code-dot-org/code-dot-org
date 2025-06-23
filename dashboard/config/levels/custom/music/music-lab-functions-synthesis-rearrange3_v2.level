@@ -1,0 +1,484 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T03:01:16.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ]
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "|I*7wRXlw[y1HbwTV+]T",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "procedures_callnoreturn",
+                        "id": "dhQrY8Xk%O4Js6r6284a",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "name": "backing"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "repeat_simple2",
+                            "id": "!WMuI5U,L|Jstk3pbX2b",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": true
+                            },
+                            "fields": {
+                              "times": 2
+                            },
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "procedures_callnoreturn",
+                                  "id": "3Pw?]y2hNct.D!RD,o$|",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "name": "remix",
+                                    "disableNextConnection": true
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "GkG3e[fF#^czYG!LLL/c",
+              "x": 430,
+              "y": 30,
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "EF7BHSAnmP,hQJqty0={",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "remix"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "$O8KgejT!2Y2}/Ion!C}",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": true
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sounds_sequential",
+                          "id": "play_sequential_workspace",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sounds_sequential",
+                              "id": "+bViBo/cZgIF1,r_L}%2",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "inputs": {
+                                "code": {
+                                  "block": {
+                                    "type": "play_rest_at_current_location_simple2",
+                                    "id": "!lxU=R|=#b#-(-zJA.TE",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "rest_duration": "<field name=\"rest_duration\">0.25</field>"
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sounds_sequential",
+                                  "id": "pls+A,B;-Sy;ATru|pUJ",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "play_rest_at_current_location_simple2",
+                                        "id": "GI]?coCd,)w8{6){7GUW",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "rest_duration": "<field name=\"rest_duration\">0.5</field>"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sounds_sequential",
+                                      "id": "8_W;UZ;;qg/@YH$4RV9p",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": true
+                                      },
+                                      "inputs": {
+                                        "code": {
+                                          "block": {
+                                            "type": "play_rest_at_current_location_simple2",
+                                            "id": ".c4v=Mm*U}zb)A;8O]C.",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "rest_duration": "<field name=\"rest_duration\">0.25</field>"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_rest_at_current_location_simple2",
+                                                "id": "+7UPFtkYM9,#I6Q$[O]=",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "rest_duration": "<field name=\"rest_duration\">0.5</field>"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "UrZH_z(A`38^2/ezys{G",
+              "x": 710,
+              "y": 30,
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "qsXyR#tdp*?7s=doIjPh",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "backing"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "repeat_simple2",
+                    "id": "repeat_simple2",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": true
+                    },
+                    "fields": {
+                      "times": 3
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": "play_sounds_together",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": true
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "x%r4B@Pm!fOnO*wT`t}y",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "i_need_a_dollar_aloe_blacc/drums_1"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "QcGb6LBk,{8H:e,z`}Qz",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": true
+                                    },
+                                    "fields": {
+                                      "sound": "i_need_a_dollar_aloe_blacc/bass_1"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "procedures": [
+          {
+            "id": "EF7BHSAnmP,hQJqty0={",
+            "name": "remix",
+            "returnTypes": null
+          },
+          {
+            "id": "qsXyR#tdp*?7s=doIjPh",
+            "name": "backing",
+            "returnTypes": null
+          }
+        ]
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "packId": "i_need_a_dollar_aloe_blacc",
+      "sounds": {
+        "i_need_a_dollar_aloe_blacc": [
+          "i_need_a_dollar_1",
+          "i_need_a_dollar_2",
+          "i_need_a_dollar_3",
+          "share_with_you",
+          "share_your_dollar",
+          "help_me",
+          "drums_1",
+          "bass_1",
+          "piano_1",
+          "horns_1",
+          "horns_2",
+          "organ_2",
+          "piano_2",
+          "hey_hey",
+          "horns_hit",
+          "horns_3"
+        ]
+      },
+      "validationTimeout": 1,
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "id": "play_toolbox",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "i_need_a_dollar_aloe_blacc/i_need_a_dollar_1"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "id": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "set_effect_at_current_location_simple2",
+            "id": "set_effect_at_current_location_simple2",
+            "fields": {
+              "effects_name": "<field name=\"effects_name\">volume</field>",
+              "effects_value": "<field name=\"effects_value\">normal</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "set_effect_at_current_location_simple2",
+            "id": "H5iDVWoMU^AEPD]rkW0z",
+            "fields": {
+              "effects_name": "<field name=\"effects_name\">filter</field>",
+              "effects_value": "<field name=\"effects_value\">normal</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "set_effect_at_current_location_simple2",
+            "id": "U=S7ynjXFl1$aSLo#g7C",
+            "fields": {
+              "effects_name": "<field name=\"effects_name\">delay</field>",
+              "effects_value": "<field name=\"effects_value\">normal</field>"
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      }
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "playerTitle": "Example"
+    },
+    "encrypted_exemplar_sources": "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\nK1GS5YjJtHou0cXwOTAXOTjvtwTKdiIKHdU=\n",
+    "long_instructions": "### Remix\r\n\r\nOne final way to explore remixes is to play with timing. Most of the time, tracks start-and-end on predictable measures. You can used rests strategically to create new patterns, where some tracks start on top of each other and create entirely new sounds. Let's try that with this remix of I Need a Dollar by Aloe Blacc\r\n\r\n**Do This:**\r\n- Experiment with adding new tracks to the `remix` function. You can add `play together` blocks and `play` tracks inside the `play sequential` blocks. - [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_toolbox---id-up-inside:play_sequential_workspace)\r\n- Try using the same track in multiple places so it overlaps and see how it sounds\r\n\r\nYou can pass this level when you've played at least 3 new tracks to your song and one of them plays at least 2 times (so it overlaps). Here's an example of how your timeline might look:\r\n\r\n![](https://images.code.org/17a87996e6d9d1c09391e685e8991da4-image-1745963165545.png)",
+    "validations": [
+      {
+        "key": "music-lab-functions-synthesis-rearrange3_12c5a219-7f07-4426-93cd-04b1c549a818",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says \"you did it!\"",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:6"
+          },
+          {
+            "name": "played_different_sounds",
+            "value": 5
+          },
+          {
+            "name": "played_sounds",
+            "value": 6
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-synthesis-rearrange3_62df66d6-7de2-4669-8db5-ff609cb89f50",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to your song to make sure it has at least **3 new tracks**...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:6"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-synthesis-rearrange3_afa6974e-ab91-4e79-88ca-074650bf8f9a",
+        "message": "Make sure to add at least 3 new tracks (and one repeats) [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_toolbox---id-up-inside:play_sequential_workspace)",
+        "next": false,
+        "conditions": [
+
+        ],
+        "callout": "flyout-id:play_toolbox---id-up-inside:play_sequential_workspace"
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:01:16.481+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-synthesis-rearrange3\\\"\"],\"cloned_from\":\"music-lab-functions-synthesis-rearrange3\"}]"
+}]]></config>
+  <blocks/>
+</Music>

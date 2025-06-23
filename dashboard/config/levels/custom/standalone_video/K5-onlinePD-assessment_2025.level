@@ -1,22 +1,22 @@
 <StandaloneVideo>
   <config><![CDATA[{
+  "published": true,
   "game_id": 54,
   "created_at": "2025-04-06T19:51:33.000Z",
   "level_num": "custom",
   "user_id": 63,
   "properties": {
-    "video_key": "Gettting_Started_Progress",
+    "video_key": "PL_ProgressFeedbackAssessment2024",
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 28814,
     "name_suffix": "_2025",
     "encrypted": "false",
-    "long_instructions": "## Viewing student progress\r\n\r\n\r\n##### What features are available within the Code.org learning platform to support me in monitoring student learning?\r\n\r\n##### **Note about K-5 courses:**\r\n* There are no multi-question assessments or surveys in K-5 courses. Instead, you can measure the students’ progress using the 'Progress' tab.\r\n\r\n##### **Additional resources:**\r\n\r\n* <a href=\"https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress\" target=\"blank\" rel=\"noopener noreferrer\" >Viewing student progress</a> \r\n"
+    "long_instructions": "## Viewing student progress\r\n\r\n\r\n#### What features are available within the Code.org learning platform to support me in monitoring student learning?\r\n\r\n#### **Note about K-5 courses:**\r\n* #### There are no multi-question assessments or surveys in K-5 courses. Instead, you can measure the students’ progress using the 'Progress' tab.\r\n\r\n#### **Additional resources:**\r\n\r\n* <a href=\"https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress\" target=\"blank\" rel=\"noopener noreferrer\" >Viewing student progress</a> \r\n"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-04-06T19:51:33.341+00:00\",\"changed\":[\"cloned from \\\"K5-onlinePD-assessment_2024\\\"\"],\"cloned_from\":\"K5-onlinePD-assessment_2024\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-04-06T19:51:33.341+00:00\",\"changed\":[\"cloned from \\\"K5-onlinePD-assessment_2024\\\"\"],\"cloned_from\":\"K5-onlinePD-assessment_2024\"},{\"changed_at\":\"2025-05-07 16:22:29 +0000\",\"changed\":[\"video_key\",\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -309,7 +309,7 @@ svg text[fill] {
 }
 
 .aiAnalysisTagColumn {
-  width: 145px;
+  min-width: 155px;
   flex: 0 0 145px;
   margin-bottom: 0 !important;
 }

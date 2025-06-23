@@ -65,52 +65,51 @@ Hvert år opdaterer vi de minimumsversioner, der kræves til browsere og operati
         </tr>
       </table>
     </td>
-    <!-- "coming soon" system requirements, to be updated and made live from March through July.
+    <!-- "coming soon" system requirements, to be updated and made live from March through July. -->
     <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          Browser July '25
+          Browser juli '25
         </th>
         <tr>
-          <td>Chrome 103.x</td>
+          <td>Krom 109</td>
         </tr>
         <tr>
-          <td>Safari 14.x</td>
+          <td>Safari 16.6</td>
         </tr>
         <tr>
-          <td>Mobile Safari 14.x</td>
+          <td>Mobil Safari 16</td>
         </tr>
         <tr>
-          <td>Edge 119.x</td>
+          <td>Kant 128</td>
         </tr>
         <tr>
-          <td>Firefox 98.x</td>
+          <td>Firefox 115</td>
         </tr>
       </table>
     </td>
     <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
       <table>
         <th>
-          Platform July '25
+          Platform juli '25
         </th>
         <tr>
-          <td>macOS 10.15</td>
+          <td>MacOS 10.15</td>
         </tr>
         <tr>
-          <td>iOS 15.x</td>
+          <td>iOS 16.x</td>
         </tr>
         <tr>
-          <td>Windows 8</td>
+          <td>Vinduer 10</td>
         </tr>
         <tr>
-          <td>Android 8.x</td>
+          <td>Android 8</td>
         </tr>
         <tr>
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
     </td>
-    -->
   </tr>
 </table>
 
@@ -149,7 +148,6 @@ Vi bruger [YouTube](https://www.youtube.com) til at integrere videoer i Code.org
 ### Can you play this video?
 
 Før du starter Code.org's onlinekurser, skal du teste afspilningen af videoen nedenfor for at sikre dig, at du er klar til at gå.
-
 
 <!--
 The following HTML is a copy of video_with_fallback.haml. once this file can be converted to

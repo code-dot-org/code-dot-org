@@ -125,48 +125,6 @@ export const DefaultLoggedOut: Story = {
   },
 };
 
-export const LoggedIn: Story = {
-  args: {
-    ...defaultArgs,
-    isLoggedIn: true,
-  },
-  parameters: {
-    layout: 'fullscreen',
-    viewport: {
-      viewports: MINIMAL_VIEWPORTS,
-      defaultViewport: 'desktop',
-    },
-    eyes: {
-      browser: {width: 1268, height: 720, name: 'chrome'},
-    },
-    docs: {
-      description: {
-        story:
-          'The large desktop view of the header when the user is logged in. The header contains the logo, main navigation links, New Project button/menu, Go to Dashboard button, and a Help icon button/menu.',
-      },
-    },
-  },
-  play: async ({canvasElement}) => {
-    const canvas = within(canvasElement);
-
-    // check that the Go to Dashboard button is visible
-    const goToDashboardButton = await canvas.findByRole('link', {
-      name: 'Go to Dashboard',
-    });
-    await expect(goToDashboardButton).toBeVisible();
-
-    // check that the Sign In button is not visible
-    const signInButton = canvas.queryByRole('link', {name: 'Sign In'});
-    expect(signInButton).toBeNull();
-
-    // check that the Create Account button is not visible
-    const createAccountButton = canvas.queryByRole('link', {
-      name: 'Create Account',
-    });
-    expect(createAccountButton).toBeNull();
-  },
-};
-
 export const NewProjectMenu: Story = {
   args: {
     ...defaultArgs,

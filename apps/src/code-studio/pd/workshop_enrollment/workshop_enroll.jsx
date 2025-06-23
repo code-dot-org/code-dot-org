@@ -4,27 +4,33 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {navigateToHref} from '@cdo/apps/utils';
 
 import {SUBMISSION_STATUSES} from './constants';
 import EnrollForm from './enroll_form';
 import {WorkshopPropType, FacilitatorPropType} from './enrollmentConstants';
-import FacilitatorBio from './facilitator_bio';
 import WorkshopDetails from './workshop_details';
+
+export const sessionCalendarShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  start: PropTypes.string.isRequired,
+  end: PropTypes.string.isRequired,
+  is_local: PropTypes.bool.isRequired,
+  session_format: PropTypes.string.isRequired,
+  location_address: PropTypes.string,
+  meeting_link: PropTypes.string,
+  description: PropTypes.string,
+  notes: PropTypes.string,
+});
 
 export default class WorkshopEnroll extends React.Component {
   static propTypes = {
     user_id: PropTypes.number.isRequired,
     workshop: WorkshopPropType,
-    workshop_location_for_calendar: PropTypes.string,
     session_dates: PropTypes.arrayOf(PropTypes.string),
-    session_info_for_calendar: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        start: PropTypes.string.isRequired,
-        end: PropTypes.string.isRequired,
-      })
-    ),
+    session_info_for_calendar: PropTypes.arrayOf(sessionCalendarShape),
     enrollment: PropTypes.shape({
       email: PropTypes.string,
       first_name: PropTypes.string,
@@ -60,6 +66,12 @@ export default class WorkshopEnroll extends React.Component {
         this.props.workshop_enrollment_status ||
         SUBMISSION_STATUSES.UNSUBMITTED,
     };
+
+    analyticsReporter.sendEvent(
+      EVENTS.WORKSHOP_ENROLLMENT_PAGE_VISITED_EVENT,
+      {source: 'workshop enroll'},
+      PLATFORMS.BOTH
+    );
   }
 
   onSubmissionComplete = result => {
@@ -148,16 +160,14 @@ export default class WorkshopEnroll extends React.Component {
       'rpName',
       this.props.workshop.regional_partner?.name || ''
     );
+    sessionStorage.setItem('workshopId', this.props.workshop.id);
     sessionStorage.setItem('workshopCourse', this.props.workshop.course);
     sessionStorage.setItem(
       'workshopSubject',
       this.props.workshop.subject || ''
     );
     sessionStorage.setItem('workshopName', this.props.workshop.name || '');
-    sessionStorage.setItem(
-      'workshopLocation',
-      this.props.workshop_location_for_calendar || ''
-    );
+    sessionStorage.setItem('workshopFormat', this.props.workshop.format);
     sessionStorage.setItem(
       'sessionTimeInfo',
       JSON.stringify(this.props.session_info_for_calendar)
@@ -197,13 +207,6 @@ export default class WorkshopEnroll extends React.Component {
                     workshop={this.props.workshop}
                     session_dates={this.props.session_dates}
                   />
-                  <h2>Facilitators</h2>
-                  {this.props.facilitators.map(facilitator => (
-                    <FacilitatorBio
-                      key={facilitator.email}
-                      facilitator={facilitator}
-                    />
-                  ))}
                 </div>
                 {/* Right Column */}
                 <div className="span6">

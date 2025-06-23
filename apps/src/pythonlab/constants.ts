@@ -70,3 +70,5 @@ export const STANDALONE_NEIGHBORHOOD_PROJECT: ProjectSources = {
     standaloneSettings: {projectType: 'neighborhood'},
   },
 };
+
+export const PYTHONLAB_VALID_FILE_TYPES = ['py', 'csv', 'txt'];

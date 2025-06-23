@@ -1,11 +1,11 @@
 Feature: Dance Party
 
   Scenario: Dance AI Modal
-    Given I am on "http://studio.code.org/s/allthethings/lessons/37/levels/3"
+    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/37/levels/3"
     And I wait for the lab page to fully load
     And I select age 10 in the age dialog
     And I drag block "dance_ai" to block "setup"
-    And I click block field "[data-id='setup'] > [data-id='dance_ai'] > .blocklyEditableText"
+    And I click block field "[data-id='setup'] > [data-id='dance_ai'] > .blocklyEditableField"
 
     # First time choosing emojis.
     And I wait for 0.5 seconds
@@ -55,7 +55,7 @@ Feature: Dance Party
     And I press "resetButton"
 
     # Reopen modal.
-    And I click block field "[data-id='setup'] > [data-id='dance_ai'] > .blocklyEditableText"
+    And I click block field "[data-id='setup'] > [data-id='dance_ai'] > .blocklyEditableField"
 
     # Toggle to code and use it.
     And I press "toggle-code-button"

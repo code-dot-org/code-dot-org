@@ -1,11 +1,12 @@
 <StandaloneVideo>
   <config><![CDATA[{
+  "published": true,
   "game_id": 54,
   "created_at": "2025-04-06T19:51:33.000Z",
   "level_num": "custom",
   "user_id": 63,
   "properties": {
-    "video_key": "Gettting_Started_StudentExperience",
+    "video_key": "PL_StudentExperience_2024",
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,
@@ -14,9 +15,8 @@
     "encrypted": "false",
     "long_instructions": "## Consider the following when watching this video:\r\n##### What will students see when they log into their Code.org account?\r\n\r\n##### **Additional resource:**\r\n\r\n* <a href=\"https://support.code.org/hc/en-us/articles/115001347791-The-student-experience-on-Code-org\" target=\"blank\" rel=\"noopener noreferrer\">The student experience on Code.org</a> "
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-04-06T19:51:33.172+00:00\",\"changed\":[\"cloned from \\\"K5-onlinePD-STexperience_2024\\\"\"],\"cloned_from\":\"K5-onlinePD-STexperience_2024\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-04-06T19:51:33.172+00:00\",\"changed\":[\"cloned from \\\"K5-onlinePD-STexperience_2024\\\"\"],\"cloned_from\":\"K5-onlinePD-STexperience_2024\"},{\"changed_at\":\"2025-05-07 16:24:53 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

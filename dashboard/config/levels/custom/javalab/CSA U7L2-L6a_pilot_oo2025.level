@@ -1,12 +1,13 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2025-03-13T01:00:56.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ClubSponsor</code> class represents a sponsor of a school club and has instance variables for the name of the sponsor and the list of club members.\r\n\r\nThe <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ClubMember</code> class represents a member of a school club and has instance variables for the name of the club member and the number of community service hours the club member has.\r\n\r\nA club sponsor needs to add service hours to the members of the school club.\r\n\r\n✅ **TO DO #1:** Write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">addServiceHours()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ClubSponsor</code> class to add a specified number of hours to a club member. The method should:\r\n\r\n* Have parameters for a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ClubMember</code> object and the number of hours to add\r\n\r\n* Add the specified number of hours to the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ClubMember</code> object's current service hours\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ClubRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">addServiceHours()</code> method to add hours to one or more of the club members and print the updated <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ClubSponsor</code> object.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with using object references as parameters.\r\n</div>",
+    "long_instructions": "The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ClubSponsor</code> class represents a sponsor of a school club and has instance variables for the name of the sponsor and the list of club members.\r\n\r\nThe <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ClubMember</code> class represents a member of a school club and has instance variables for the name of the club member and the number of community service hours the club member has.\r\n\r\nA club sponsor needs to add service hours to the members of the school club.\r\n\r\n✅ **TO DO #1:** Write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">addServiceHours()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ClubSponsor</code> class to add a specified number of hours to a club member. The method should:\r\n\r\n* Have parameters for a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ClubMember</code> object and the number of hours to add. Make sure they appear in this order in your method header.\r\n\r\n* Add the specified number of hours to the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ClubMember</code> object's current service hours\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ClubRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">addServiceHours()</code> method to add hours to one or more of the club members and print the updated <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ClubSponsor</code> object.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with using object references as parameters.\r\n</div>",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -37,9 +38,11 @@
       }
     },
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "true",
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-13T01:00:56.843+00:00\",\"changed\":[\"cloned from \\\"CSA U7L2-L6a_pilot-2025\\\"\"],\"cloned_from\":\"CSA U7L2-L6a_pilot-2025\"},{\"changed_at\":\"2025-04-23 09:01:05 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-13T01:00:56.843+00:00\",\"changed\":[\"cloned from \\\"CSA U7L2-L6a_pilot-2025\\\"\"],\"cloned_from\":\"CSA U7L2-L6a_pilot-2025\"},{\"changed_at\":\"2025-04-23 09:01:05 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-05-23 16:03:25 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

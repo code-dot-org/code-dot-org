@@ -1,8 +1,10 @@
 import Modal from '@code-dot-org/component-library/modal';
 import React, {useState} from 'react';
 
+import lab2I18n from '@cdo/apps/lab2/locale';
+
 import FileIcon from './FileIcon';
-import {ErrorAlert, Loading} from './shared';
+import {DialogAlert, Loading} from './shared';
 import {AssetData, CommonProps, DialogProps} from './types';
 
 import styles from './starter-assets-dialog.module.scss';
@@ -20,7 +22,7 @@ const SelectAssetsDialog: React.FC<DialogProps & SelectProps> = ({
   levelName,
   onSelect,
   limit,
-  showError,
+  alert,
 }) => {
   const [selectedFiles, setSelectedFiles] = useState<AssetData[]>([]);
 
@@ -32,21 +34,6 @@ const SelectAssetsDialog: React.FC<DialogProps & SelectProps> = ({
     }
   };
 
-  const ModalBody = () => (
-    <div className={styles.modalBody} id="dsco-dialog-description">
-      {assets.map(asset => (
-        <FileIcon
-          key={asset.filename}
-          asset={asset}
-          levelName={levelName}
-          selected={selectedFiles.includes(asset)}
-          onSelect={selected => onSelectAsset(selected, asset)}
-          canSelect={!limit || selectedFiles.length < limit}
-        />
-      ))}
-    </div>
-  );
-
   const primaryOnClick = () => {
     onSelect(selectedFiles);
     onClose();
@@ -56,15 +43,32 @@ const SelectAssetsDialog: React.FC<DialogProps & SelectProps> = ({
     <Modal
       id="starter-assets-dialog"
       onClose={onClose}
-      title={'Library'}
+      title={lab2I18n.library()}
       primaryButtonProps={{
-        text: 'Open',
+        text: lab2I18n.attach(),
         onClick: primaryOnClick,
         disabled: selectedFiles.length === 0,
       }}
-      secondaryButtonProps={{text: 'Cancel', onClick: onClose}}
-      customContent={loading ? <Loading /> : <ModalBody />}
-      customBottomContent={showError && <ErrorAlert />}
+      secondaryButtonProps={{text: lab2I18n.cancel(), onClick: onClose}}
+      customContent={
+        loading ? (
+          <Loading />
+        ) : (
+          <div className={styles.modalBody} id="dsco-dialog-description">
+            {assets.map(asset => (
+              <FileIcon
+                {...asset}
+                key={asset.filename}
+                levelName={levelName}
+                selected={selectedFiles.includes(asset)}
+                onSelect={selected => onSelectAsset(selected, asset)}
+                canSelect={!limit || selectedFiles.length < limit}
+              />
+            ))}
+          </div>
+        )
+      }
+      customBottomContent={alert && <DialogAlert {...alert} />}
     />
   );
 };

@@ -1,5 +1,6 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2025-04-23T16:31:43.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Understanding Data",
-    "long_instructions": "\r\n#### Data is all around us, shaping the world we live in. Whether it's the number of steps we take, the likes on a social media post, or the weather forecast. \r\n\r\n#### Everything can be quantified and analyzed to reveal patterns and insights that drive our decisions and innovations.\r\n\r\n<img src=\"https://images.code.org/41e0217e538fdf1f5f0e8ea33a42d240-image-1742484446527.png\" alt=\"design process graph of the cycle\" width=\"350px\" style=\"display: block; margin-left: auto; margin-right: auto;\">\r\n\r\n\r\n<div style=\"clear:both;\"></div>\r\n\r\n---\r\n\r\n## Everyday Life Applications\r\n\r\n\r\n> #### **Reflect:** Look at the picture of the street scene above: Can you identify where data might be hiding? What types of data can be collected? How do these everyday details turn into data that tells a story?\r\n\r\n<br>\r\n\r\n<details style=\"background-color: #ebe8f2; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">📝 Share in the forum!\r\n</summary>\r\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;\">\r\n    <p>\r\n\r\n####Participating in the <a href=\"https://forum.code.org/t/about-the-cs-ai-foundations-category/40251?u=plteam\" target=\"_blank\">Computer Science and AI Foundations Community</a> is optional and not necessary to earn a certificate for this module. However, we encourage you to engage with the broader Computer Science learner community. Please share your response to this reflection in the forum and take the time to read and respond to other educators' posts.\r\n\r\n### <a href=\"https://forum.code.org/t/data-science-pl/40253?u=plteam\" target=\"_blank\">Direct Link to this Forum Topic</a>\r\n\r\n</p></div>\r\n</details>\r\n\r\n<br>\r\n\r\n",
+    "long_instructions": "\r\n#### Data is all around us, shaping the world we live in. Whether it's the number of steps we take, the likes on a social media post, or the weather forecast. \r\n\r\n#### Everything can be quantified and analyzed to reveal patterns and insights that drive our decisions and innovations.\r\n\r\n<img src=\"https://images.code.org/41e0217e538fdf1f5f0e8ea33a42d240-image-1742484446527.png\" alt=\"design process graph of the cycle\" width=\"350px\" style=\"display: block; margin-left: auto; margin-right: auto;\">\r\n\r\n\r\n<div style=\"clear:both;\"></div>\r\n\r\n---\r\n\r\n## Everyday Life Applications\r\n\r\n\r\n> #### **Reflect:** Look at the picture of the street scene above: Can you identify where data might be hiding? What types of data can be collected? How do these everyday details turn into data that tells a story?\r\n\r\n<br>\r\n\r\n<div style=\"display: flex; align-items: left; margin:20px 0px 30px 0px\">\r\n\r\n<a href=\"https://forum.code.org/t/teaching-ai-and-the-systems-that-power-it-pl-reflection-teaching-data-ethics/40999?u=amanda.dennard1\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n<img src=\"https://images.code.org/7dbe63a051fbad4ef262d6ab710e2966-image-1731959037460.png\" style=\"width: auto; height: 100px;\"  alt=\"A browser with two text boxes, both including an avatar and lines of text.\"></a>\r\n\r\n<div style=\"background-color: #007786; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;\">\r\n\r\n<p style=\"color: white; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px\"><b>Post to the Code.org Forum</b></p>\r\n\r\n<p style=\"color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px\">Share your response and read other educators' ideas on the forum! Click on the icon to the left to direct to our forum post.\r\n</p>\r\n\r\n\r\n</div>\r\n\r\n<br>\r\n\r\n",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -18,8 +19,7 @@
     "stay_on_level_after_submit": "false",
     "name_suffix": "_2025"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-23T16:31:43.041+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-_datareflect_L3_CSandDev\\\"\"],\"cloned_from\":\"csaif-pl-_datareflect_L3_CSandDev\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-04-23T16:31:43.041+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-_datareflect_L3_CSandDev\\\"\"],\"cloned_from\":\"csaif-pl-_datareflect_L3_CSandDev\"},{\"changed_at\":\"2025-05-29 21:17:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

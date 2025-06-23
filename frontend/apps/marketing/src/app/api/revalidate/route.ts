@@ -16,7 +16,7 @@ export async function POST(request: Request) {
   try {
     const pathsToRevalidate = Object.entries(pagePaths).reduce(
       (accumulator, [locale, slug]) => {
-        accumulator.push(`/${locale}/${slug}`);
+        accumulator.push(`/${locale}${slug}`);
 
         return accumulator;
       },

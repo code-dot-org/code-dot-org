@@ -9,6 +9,7 @@
 #  updated_at        :datetime         not null
 #  editor_font_size  :json
 #  console_font_size :json
+#  theme             :json
 #
 # Indexes
 #

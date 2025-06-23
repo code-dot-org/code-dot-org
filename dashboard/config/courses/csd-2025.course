@@ -8,8 +8,7 @@
     "csd5-2025",
     "csd6a-2025",
     "csd6b-2025",
-    "csd7-2025",
-    "csd-post-survey-2025"
+    "csd7-2025"
   ],
   "original_script_names": [
     "csd1-2025",
@@ -19,10 +18,9 @@
     "csd5-2025",
     "csd6a-2025",
     "csd6b-2025",
-    "csd7-2025",
-    "csd-post-survey-2025"
+    "csd7-2025"
   ],
-  "published_state": "beta",
+  "published_state": "preview",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",

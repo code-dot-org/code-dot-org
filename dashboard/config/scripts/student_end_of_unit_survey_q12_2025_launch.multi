@@ -1,14 +1,14 @@
 name 'student-end-of-unit-survey-q12_2025-launch'
 
-question 'I am confident I have the ability to learn computer science.'
+question 'Sometimes I feel unsure whether I belong in this class.'
 
-right 'Strongly agree'
-right 'Agree'
-right 'Slightly agree'
-right 'Neither'
-right 'Slightly disagree'
-right 'Disagree'
 right 'Strongly disagree'
+right 'Disagree'
+right 'Slightly disagree'
+right 'Neither'
+right 'Slightly agree'
+right 'Agree'
+right 'Strongly agree'
 
 allow_multiple_attempts true
 

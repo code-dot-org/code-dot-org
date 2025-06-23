@@ -16,9 +16,9 @@ level 'student-end-of-unit-survey-q7'
 level 'student-end-of-unit-survey-q8'
 level 'student-end-of-unit-survey-q9'
 level 'student-end-of-unit-survey-q10'
+level 'student-end-of-unit-survey-q11'
 
 page
-level 'student-end-of-unit-survey-q11'
 level 'student-end-of-unit-survey-q12'
 level 'student-end-of-unit-survey-q13'
 level 'student-end-of-unit-survey-q14'
@@ -28,10 +28,10 @@ level 'student-end-of-unit-survey-q17'
 level 'student-end-of-unit-survey-q18'
 level 'student-end-of-unit-survey-q19'
 level 'student-end-of-unit-survey-q20'
-
-page
 level 'student-end-of-unit-survey-q21'
 level 'student-end-of-unit-survey-q22'
+
+page
 level 'student-end-of-unit-survey-q23'
 level 'student-end-of-unit-survey-q24'
 level 'student-end-of-unit-survey-q25'
@@ -40,13 +40,5 @@ level 'student-end-of-unit-survey-q27'
 level 'student-end-of-unit-survey-q28'
 level 'student-end-of-unit-survey-q29'
 level 'student-end-of-unit-survey-q30'
-
-page
 level 'student-end-of-unit-survey-q31'
-level 'student-end-of-unit-survey-q32'
 level 'student-end-of-unit-survey-q33'
-level 'student-end-of-unit-survey-q34'
-level 'student-end-of-unit-survey-q35'
-level 'student-end-of-unit-survey-q36'
-level 'student-end-of-unit-survey-q37'
-level 'student-end-of-unit-survey-q38'

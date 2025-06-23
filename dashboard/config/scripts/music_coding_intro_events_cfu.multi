@@ -1,7 +1,7 @@
 name 'music-coding-intro-events-cfu'
 title 'Use event triggers!'
 question '*Who should use event triggers? Tyler, Sammy, Pedro or Lizzy?*'
-right 'Tyler wants to **control when the drum sounds play** like a DJ.'
+right 'Tyler wants to **control when the drum sounds play,** like a DJ.'
 wrong 'Sammy wants to **play Twinkle, Twinkle in order** when she presses Run.'
 wrong 'Pedro is trying to **make his code more efficient**.'
 wrong 'Lizzy wants to **loop the bass sound**.'

@@ -1,0 +1,34 @@
+name 'music-lab-612-pre-q9'
+
+question 'Which computational thinking skill is Leo using to simplify and reuse this idea?'
+
+wrong 'Decomposition'
+wrong 'Pattern Recognition'
+right 'Abstraction'
+wrong 'Algorithm Design'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Computational Thinking
+
+Standard: Abstraction
+
+Lesson: Functions - Practice
+
+Skill Progression: All
+
+Pretest Modality: Given a snippet of how someone approached a problem, identify the CT skill it is (similar to PL question)
+
+Posttest Modality: Given a snippet of how someone approached a problem, identify the CT skill it is (similar to PL question)
+
+MARKDOWN
+
+markdown <<MARKDOWN
+Leo made a function he named build up that includes a rising volume effect, a crash cymbal, and an energetic drum beat. Now, Leo can just use that one function block wherever the song needs more energy.
+
+
+---
+
+![](https://images.code.org/e7ebea15053a3bb2bfbf123bb3ee7ceb-image-1750438510455.png)
+MARKDOWN

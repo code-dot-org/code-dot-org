@@ -1,0 +1,23 @@
+{
+  "name": "design-process-2025",
+  "script_names": [
+    "csd4-2025"
+  ],
+  "original_script_names": [
+
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "design-process",
+    "version_year": "2025"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

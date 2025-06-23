@@ -26,6 +26,7 @@ interface ServerPromotion {
   image?: string;
   is_closable: boolean;
   partner_logo?: string;
+  is_external?: boolean;
 }
 
 const serverPromotionConverter = (serverPromotion: ServerPromotion) => ({
@@ -39,6 +40,7 @@ const serverPromotionConverter = (serverPromotion: ServerPromotion) => ({
   image: serverPromotion.image || null,
   isClosable: serverPromotion.is_closable,
   partnerLogo: serverPromotion.partner_logo || null,
+  isExternal: serverPromotion.is_external || false,
 });
 
 const TEACHER_PROMOTION_LOCAL_STORAGE_KEY = 'teacherPromotionClosed';

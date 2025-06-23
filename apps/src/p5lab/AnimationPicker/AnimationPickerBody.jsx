@@ -200,16 +200,20 @@ export default class AnimationPickerBody extends React.Component {
   }
 
   render() {
+    let appType;
     let assetType;
     switch (this.props.pickerType) {
       case PICKER_TYPE.spritelab:
         assetType = msg.costumeMode();
+        appType = 'spritelab';
         break;
       case PICKER_TYPE.gamelab:
         assetType = msg.animationMode();
+        appType = 'gamelab';
         break;
       case PICKER_TYPE.backgrounds:
         assetType = msg.backgroundMode();
+        appType = 'spritelab';
         break;
     }
     if (!this.props.libraryManifest) {
@@ -301,6 +305,7 @@ export default class AnimationPickerBody extends React.Component {
                   onUploadClick={onUploadClick}
                   shouldWarnOnAnimationUpload={shouldWarnOnAnimationUpload}
                   isBackgroundsTab={isBackgroundsTab}
+                  appType={appType}
                 />
               </div>
             )}

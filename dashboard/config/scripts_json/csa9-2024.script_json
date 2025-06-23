@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-24 01:14:04 UTC",
+    "serialized_at": "2025-04-28 20:21:42 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3540,7 +3540,7 @@
     },
     {
       "name": "Mock MCQ Exam - Day 3",
-      "url": "https://docs.google.com/presentation/d/1CFMTfgR5Xm3Pbg3Jm7a615zQcHKnpnERKXMzWxZCtCk/template/preview",
+      "url": "https://docs.google.com/presentation/d/1afqDmTEp6CBZbY4Y9qJqlfjFH1DnjGVNa4KNFfCsBho/view",
       "key": "mock_mcq_exam_-_day_3",
       "properties": {
         "audience": "Verified Teacher",

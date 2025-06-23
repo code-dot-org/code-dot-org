@@ -1,0 +1,45 @@
+name 'gen-ai-student-level-L14'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# ✅ Lesson Recap: Embeddings: How They're Created
+
+#### After this lesson, you can 
+
+* #### Explain how different passages can create different embeddings
+* #### Construct an embedding for a text passage
+
+## Resources
+
+### **Activity Guides**
+
+<!-- Unified container for the grid of cards -->
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 90%; margin: 20px auto;">
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1XNK_WlSXUPocJYTUYwg7IjqiZ3JlXDzkVRR_2TTuyRw" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <p style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/1XNK_WlSXUPocJYTUYwg7IjqiZ3JlXDzkVRR_2TTuyRw/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">How Embeddings are Made (Version A)</a><br>
+  </p>
+</div>
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1bFsdsJdjLfqjPIyVS6g2pSF0lz_TOyIjPGvu9Le_zh0" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <p style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/1bFsdsJdjLfqjPIyVS6g2pSF0lz_TOyIjPGvu9Le_zh0/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">How Embeddings are Made (Version B)</a><br>
+  </p>
+</div>
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=11ef6pISlj5ov3ZmKO7Pbqd1wiRcK7FHzk7A3zetqBMw" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <p style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/11ef6pISlj5ov3ZmKO7Pbqd1wiRcK7FHzk7A3zetqBMw/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Warm Up Cutouts</a><br>
+  </p>
+</div>
+
+</div>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

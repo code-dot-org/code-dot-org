@@ -199,7 +199,6 @@ class SyncOmniAuthSectionControl extends React.Component {
           </div>
           <div style={styles.closeButton}>
             <Button
-              __useDeprecatedTag
               text={i18n.closeDialog()}
               onClick={this.closeDialog}
               color={Button.ButtonColor.gray}
@@ -236,14 +235,13 @@ export function SyncOmniAuthSectionButton({
 }) {
   return (
     <Button
-      __useDeprecatedTag
       text={buttonText(buttonState, provider, providerName)}
       color={Button.ButtonColor.gray}
       size={Button.ButtonSize.default}
       disabled={[IN_PROGRESS, DISABLED].includes(buttonState)}
       onClick={onClick}
       {...iconProps(buttonState)}
-      style={{float: 'left'}}
+      style={{float: 'left', margin: '0'}}
       title={
         buttonState === DISABLED
           ? i18n.ltiSectionSyncButtonDisabledAltText()

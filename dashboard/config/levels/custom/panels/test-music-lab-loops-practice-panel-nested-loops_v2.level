@@ -1,0 +1,63 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-05-31T02:59:45.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "### Nested Loops\n\nSome songs have unique patterns that you want to repeat throughout the song, like these 3 beats and an effect.\n",
+        "imageUrl": "https://images.code.org/72b0396662e7c1b0052c3c0c443b56c4-Slide30.PNG",
+        "key": "test-music-lab-loops-practice-panel-nested-loops-6424dfa1-c1a5-4db6-838f-446192842793",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Nested Loops\n\nYou can place this entire pattern in its own loop to keep repeating it\n\nThis is called **nesting loops** because one loop is inside the other.\n",
+        "imageUrl": "https://images.code.org/3c91189d132236f4ec0054366aed06f4-Slide31.PNG",
+        "key": "test-music-lab-loops-practice-panel-nested-loops-6e88ac7b-d408-4cbd-b77a-b771be32870b",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Nested Loops\n\nThe original pattern is still in the timeline\n",
+        "imageUrl": "https://images.code.org/9c97a93cbb390163ab6bfca5cca574bb-Slide32.PNG",
+        "key": "test-music-lab-loops-practice-panel-nested-loops-48c38a70-183f-4953-8179-f0ed30f937d2",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Nested Loops\n\nAnd is repeated 2 times\n",
+        "imageUrl": "https://images.code.org/012562f7be005144204df4b7f51da8b6-Slide33.PNG",
+        "key": "test-music-lab-loops-practice-panel-nested-loops-1eb8f911-42b9-4e31-866b-f1265a080959",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Nested Loops\n\nThis can be useful when you've made a pattern you like with different lengths\n",
+        "imageUrl": "https://images.code.org/294e951648702c56e16f74823eef11de-Slide34.PNG",
+        "key": "test-music-lab-loops-practice-panel-nested-loops-d85ee4e8-acdc-48b0-86cf-a9c19081f7c7",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Nested Loops\n\nAnd you want to repeat it throughout the song\n",
+        "imageUrl": "https://images.code.org/d9177b8ad7ba27da9e004e439b94dfc0-Slide35.PNG",
+        "key": "test-music-lab-loops-practice-panel-nested-loops-bdda94a3-26ee-4978-8040-de86fb1258c9",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "Key Takeaway: You can make patterns with loops. You can repeat those patterns by nesting loops, which means putting your loops inside other loops.",
+        "imageUrl": "https://images.code.org/78a1bdd2358a7815c0156f1da59cb045-Slide36.PNG",
+        "key": "test-music-lab-loops-practice-panel-nested-loops-d31c1347-04e3-43f7-8131-078004cc7b98",
+        "typing": true,
+        "fadeInOverPrevious": true
+      }
+    ],
+    "bubble_choice_description": "Review how to use nested loops when making songs",
+    "display_name": "Nested Loops",
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://images.code.org/5eae9fd9cc2c8f31d93c1504b0b333be-Screenshot 2025-04-02 at 7.43.31 AM.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:45.716+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-panel-nested-loops\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-panel-nested-loops\"},{\"changed_at\":\"2025-06-21 23:43:09 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

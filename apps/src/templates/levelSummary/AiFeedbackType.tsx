@@ -8,6 +8,7 @@ const makeObjectType = (title: string, icon: string) => ({
 export const FEEDBACK_TYPE = Object.freeze({
   PROFICIENT: makeObjectType(i18n.proficient(), 'circle-check'),
   NEEDS_REVIEW: makeObjectType(i18n.needsReview(), 'circle-exclamation'),
+  NOT_PROFICIENT: makeObjectType(i18n.notProficient(), 'circle-exclamation'),
   NO_ATTEMPT: makeObjectType(i18n.noAttempt(), 'circle-minus'),
   FLAGGED: makeObjectType(i18n.flagged(), 'flag-pennant'),
 });

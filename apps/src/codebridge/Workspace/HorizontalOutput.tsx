@@ -110,7 +110,8 @@ const HorizontalOutput: React.FunctionComponent<HorizontalOutputProps> = ({
         const newHeight = desiredHeight || DEFAULT_MINI_APP_SIZE;
         const newWidth = newMiniAppWidth;
 
-        scaleMiniApp(newHeight, newWidth);
+        const scale = scaleMiniApp(newHeight, newWidth);
+        CodebridgeRegistry.getInstance().setNeighborhoodThumbnailScale(scale);
 
         setWaitingForResize(false);
       }

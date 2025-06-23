@@ -21,12 +21,16 @@ import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.m
 
 const SECTION_PROGRESS_V2 = 'SectionProgressV2';
 
-const skeletonCell = key => (
-  <div className={classNames(styles.gridBox, styles.gridBoxStudent)} key={key}>
+const skeletonCell = index => (
+  <div
+    className={classNames(styles.gridBox, styles.gridBoxStudent)}
+    key={index}
+  >
     <span
       className={classNames(
         skeletonizeContent.skeletonizeContent,
-        styles.gridBoxSkeleton
+        styles.gridBoxSkeleton,
+        index % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
       )}
       style={{width: _.random(30, 90) + '%'}}
       // eslint-disable-next-line react/forbid-dom-props
@@ -60,7 +64,10 @@ function StudentColumn({
 
   const getUnexpandedRow = (student, ind) => (
     <button
-      className={styles.studentColumnName}
+      className={classNames(
+        styles.studentColumnName,
+        ind % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
+      )}
       key={ind}
       onClick={() => expandRow(student.id)}
       type="button"
@@ -79,7 +86,10 @@ function StudentColumn({
   const getExpandedRow = (student, ind) => (
     <div className={styles.studentColumnExpandedHeader} key={ind}>
       <button
-        className={styles.studentColumnName}
+        className={classNames(
+          styles.studentColumnName,
+          ind % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
+        )}
         onClick={() => collapseRow(student.id)}
         type="button"
         aria-expanded={true}
@@ -94,7 +104,8 @@ function StudentColumn({
       <div
         className={classNames(
           styles.gridBox,
-          styles.studentColumnExpandedHeaderText
+          styles.studentColumnExpandedHeaderText,
+          ind % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
         )}
       >
         {i18n.timeSpentMins()}
@@ -102,7 +113,8 @@ function StudentColumn({
       <div
         className={classNames(
           styles.gridBox,
-          styles.studentColumnExpandedHeaderText
+          styles.studentColumnExpandedHeaderText,
+          ind % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
         )}
       >
         {i18n.lastUpdatedTitle()}

@@ -7,8 +7,8 @@
   "user_id": 21093,
   "properties": {
     "encrypted": "false",
-    "title": "Step 3: Data Filtering",
-    "long_instructions": "Describe how you applied filters to your data. What specific subsets of data did you focus on and why? How did filtering the data help you focus your analysis?",
+    "title": "Step 3: Trend, Pattern, or Outlier Analysis",
+    "long_instructions": "What trends, patterns, or outliers did you identify in your data? What insights did they provide for your data question?",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -19,7 +19,7 @@
     "name_suffix": "_2025",
     "stay_on_level_after_submit": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-21T21:34:57.847+00:00\",\"changed\":[\"cloned from \\\"data-science-u1-lesson12-level4c\\\"\"],\"cloned_from\":\"data-science-u1-lesson12-level4c\"},{\"changed_at\":\"2025-04-18 18:59:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-03-21T21:34:57.847+00:00\",\"changed\":[\"cloned from \\\"data-science-u1-lesson12-level4c\\\"\"],\"cloned_from\":\"data-science-u1-lesson12-level4c\"},{\"changed_at\":\"2025-04-18 18:59:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-06 17:25:13 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

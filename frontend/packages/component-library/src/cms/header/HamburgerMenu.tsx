@@ -30,8 +30,6 @@ export interface HamburgerMenuProps extends HTMLAttributes<HTMLElement> {
     /** Go to Dashboard button */
     goToDashboard: AccountButtonsProps['goToDashboard'];
   };
-  /** Is user logged in */
-  isLoggedIn: AccountButtonsProps['isLoggedIn'];
   /** Project custom class name */
   className?: string;
 }
@@ -40,7 +38,6 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
   hamburgerButtonLabel,
   hamburgerLinks,
   accountLinks,
-  isLoggedIn = false,
   className,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -85,7 +82,6 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
               signIn={accountLinks.signIn}
               createAccount={accountLinks.createAccount}
               goToDashboard={accountLinks.goToDashboard}
-              isLoggedIn={isLoggedIn}
               isInHamburger={true}
             />
           </div>

@@ -107,9 +107,9 @@
 
     puzzle_page = params[:puzzle_page] ? params[:puzzle_page] : ApplicationHelper::PUZZLE_PAGE_NONE
 
-    script_data = script.summarize_header
+    script_data = script.summarize_header(unit_group_unit: @unit_group_unit)
     lesson_group_data = script.lesson_groups.map(&:summarize)
-    lesson_data = (@lesson || script_level.lesson).summarize(include_bonus_levels = true)
+    lesson_data = (@lesson || script_level.lesson).summarize(include_bonus_levels = true, unit_group_unit: @unit_group_unit)
     # If caching, we don't know the sign in state, and should be nil
     signed_in = @public_caching ? 'null' : !brakeman_no_warn(current_user).nil?
 
@@ -129,9 +129,13 @@
 
     small_text = false
 
+    script_name_data_href = script_path(@script, section_id: section_id, user_id: user_id)
+    if Policies::Courses.modularity_enabled? && @unit_group_unit
+      script_name_data_href = course_unit_path(@unit_group_unit.unit_group, @unit_group_unit.position, section_id: section_id, user_id: user_id)
+    end
     script_name_data = {
       name: text,
-      href: script_path(@script, section_id: section_id, user_id: user_id),
+      href: script_name_data_href,
       smallText: small_text
     }
   elsif @is_code_reviewing

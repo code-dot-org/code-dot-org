@@ -6,15 +6,17 @@
     "properties": {
       "content_area": "pl_workshop_activities",
       "curriculum_umbrella": "PD Workshop Activity CSD",
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2025"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-23 15:13:29 UTC",
+    "serialized_at": "2025-05-05 21:27:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -117,7 +119,7 @@
       "relative_position": 3,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n\n**Essential Practice:** Students have strategies for debugging\n\n**Potential Teaching Group Decisions:**\n  * The teacher directs participants to the student version of the “Guide to Debugging” (page 24 of the Resource Packet) and prompts them to use the debugging process when they encounter bugs.\n  * Teacher instructs participants to complete at least one debugging level in the practice choice level (Level 6b)\n  * Teacher has participants document bugs in their journals\n  * In the wrap up, after students have written about things that might like to be random in their programs, teachers lead a discussion on potential bugs that might arise.\n\n\n**Objectives:**\n* Participants have brainstormed ways to support students in the process of debugging\n* Participants can generate and use random numbers in a program and update a value stored in a variable\n\n**Suggested Time:** 50 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2024/lessons/6\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n",
+        "overview": "**Purpose:**\n\n**Essential Practice:** Students have strategies for debugging\n\n**Potential Teaching Group Decisions:**\n  * The teacher directs participants to the student version of the “Guide to Debugging” (page 24 of the Resource Packet) and prompts them to use the debugging process when they encounter bugs.\n  * Teacher instructs participants to complete at least one debugging level in the practice choice level (Level 6b)\n  * Teacher has participants document bugs in their journals\n  * In the wrap up, after students have written about things that might like to be random in their programs, teachers lead a discussion on potential bugs that might arise.\n\n\n**Objectives:**\n* Participants have brainstormed ways to support students in the process of debugging\n* Participants can generate and use random numbers in a program and update a value stored in a variable\n\n**Suggested Time:** 50 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2025/lessons/6\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n",
         "preparation": "- Review the level progression in Code Studio\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
         "student_overview": "**Question of the Day:** How can we make our programs behave differently each time they are run?\n\nIn this lesson, you will learn how to use the randomNumber() block to create new behaviors in your programs!\n\n<a href=\"https://studio.code.org/s/csd3-2024/lessons/6\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a> "
       },
@@ -136,7 +138,7 @@
       "relative_position": 4,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n\n**Essential Practice:** The teacher uses journaling for individual reflection and sensemaking along with discussion for group reflection and sensemaking.\n\n\n**Potential Teaching Group Decisions:**\n  * Have participants respond to prompts using a journal\n  * Have participants add key vocabulary to their journal\n  * Facilitate discussion providing time for individual reflection before group sharing - the Think-Pair-Share strategy does not always need to include all three steps, but at a minimum it should include some individual think time\n\n\n**Objectives:**\n* Participants have reflected on the role of journaling and discussion as a metacognitive opportunity for students to make connections between the activities they are doing and the new knowledge and skills they are gaining\n* Participants can create and use a sprite.\n\n**Suggested Time:** 50 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2024/lessons/8\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a>",
+        "overview": "**Purpose:**\n\n**Essential Practice:** The teacher uses journaling for individual reflection and sensemaking along with discussion for group reflection and sensemaking.\n\n\n**Potential Teaching Group Decisions:**\n  * Have participants respond to prompts using a journal\n  * Have participants add key vocabulary to their journal\n  * Facilitate discussion providing time for individual reflection before group sharing - the Think-Pair-Share strategy does not always need to include all three steps, but at a minimum it should include some individual think time\n\n\n**Objectives:**\n* Participants have reflected on the role of journaling and discussion as a metacognitive opportunity for students to make connections between the activities they are doing and the new knowledge and skills they are gaining\n* Participants can create and use a sprite.\n\n**Suggested Time:** 50 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2025/lessons/8\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a>",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
         "student_overview": "**Question of the Day:**  How can we use sprites to help us keep track of lots of information in our programs?\n\nToday you will learn about sprites, which will not only give you a way to keep track of various pieces of information in your programs but will also allow you to create more interesting and fun images!\n\n<a href=\"https://studio.code.org/s/csd3-2024/lessons/8\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a>"
       },
@@ -240,7 +242,7 @@
       "relative_position": 10,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n\n**Essential Practice:** Teachers incorporate opportunities for student collaboration into the lesson.\n\n\n**Potential Teaching Group Decisions:* \n  * Group students and allow them to work together while circulating around the entire class.\n  * Encourage students to discuss questions with a partner before asking for help from the teacher\n  * When students have to come to a decision about the user they’ve chosen and how they will design their smart clothing, allow them to come to an answer together and facilitate letting all students have a say.\n\n\n**Objectives:**\n* Participants engage in Unit 4 Lesson 3 while playing the role of the student\n* Participants reflect on their experience as a student engaging in the lesson\n* Participants discuss the role of teamwork and collaboration in the CS Discoveries curriculum\n\n**Suggested Time:** 50 minutes\n\n<a href=\"https://studio.code.org/s/csd4-2024/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a>  ",
+        "overview": "**Purpose:**\n\n**Essential Practice:** Teachers incorporate opportunities for student collaboration into the lesson.\n\n\n**Potential Teaching Group Decisions:* \n  * Group students and allow them to work together while circulating around the entire class.\n  * Encourage students to discuss questions with a partner before asking for help from the teacher\n  * When students have to come to a decision about the user they’ve chosen and how they will design their smart clothing, allow them to come to an answer together and facilitate letting all students have a say.\n\n\n**Objectives:**\n* Participants engage in Unit 4 Lesson 3 while playing the role of the student\n* Participants reflect on their experience as a student engaging in the lesson\n* Participants discuss the role of teamwork and collaboration in the CS Discoveries curriculum\n\n**Suggested Time:** 50 minutes\n\n<a href=\"https://studio.code.org/s/csd4-2025/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a>  ",
         "preparation": "* Ensure you have plenty of sticky notes, pens and large poster paper for students to work on\n* Set up groups with preferably 3 students each\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
         "student_overview": "**Question of the Day:** How can we design for people other than ourselves?\n\nIn this lesson, you will use the design process to come up with ideas for smart clothing. \n\n<a href=\"https://studio.code.org/s/csd4-2024/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a>  "
       },
@@ -2828,23 +2830,23 @@
       }
     },
     {
-      "name": "CSD Virtual Summer Workshop Day 3 Agenda",
+      "name": "Day 3 Workshop Agenda",
       "url": "https://docs.google.com/document/d/1RrAE-wLyzfFsN8kvuZulxtQYa6h-IC-V4an8cwmmbxk/edit?usp=drive_link",
-      "key": "csd_virtual_summer_workshop_day_3_agenda",
+      "key": "csd_virtual_summer_workshop_day_3_agenda_1",
       "properties": {
       },
       "seeding_key": {
-        "resource.key": "csd_virtual_summer_workshop_day_3_agenda"
+        "resource.key": "csd_virtual_summer_workshop_day_3_agenda_1"
       }
     },
     {
-      "name": "CSD Virtual Summer Workshop Day 3 Slides",
+      "name": "Day 3 Workshop Slides",
       "url": "https://docs.google.com/presentation/d/1mAVTzmJGL6bxHVh42u63Euy14O0hR5tlidSzkQSrkKY/edit?usp=drive_link",
-      "key": "csd_virtual_summer_workshop_day_3_slides",
+      "key": "csd_virtual_summer_workshop_day_3_slides_1",
       "properties": {
       },
       "seeding_key": {
-        "resource.key": "csd_virtual_summer_workshop_day_3_slides"
+        "resource.key": "csd_virtual_summer_workshop_day_3_slides_1"
       }
     },
     {
@@ -3042,13 +3044,13 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "csd_virtual_summer_workshop_day_3_agenda",
+        "resource.key": "csd_virtual_summer_workshop_day_3_agenda_1",
         "script.name": "virtual-pl-csd-summer-2025-day3"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "csd_virtual_summer_workshop_day_3_slides",
+        "resource.key": "csd_virtual_summer_workshop_day_3_slides_1",
         "script.name": "virtual-pl-csd-summer-2025-day3"
       }
     }

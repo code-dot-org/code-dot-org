@@ -26,6 +26,7 @@ export function getDefaultHeaderProps({
   studioUrl,
 }: DefaultProps): HeaderProps {
   return {
+    studioBaseUrl: studioUrl,
     homeLink: {
       href: '/',
       ariaLabel: 'Go to homepage',
@@ -95,13 +96,6 @@ export function getDefaultHeaderProps({
         description: 'Build simple animations',
       },
       {
-        key: 'artist',
-        label: 'Artist',
-        href: `${studioUrl}/projects/artist/new`,
-        image: artistImage,
-        description: 'Create art with code',
-      },
-      {
         key: 'appLab',
         label: 'App Lab',
         href: `${studioUrl}/projects/applab/new`,
@@ -123,18 +117,25 @@ export function getDefaultHeaderProps({
         description: 'Create music with code',
       },
       {
-        key: 'danceParty',
-        label: 'Dance Party',
-        href: `${studioUrl}/projects/dance/new`,
-        image: dancePartyImage,
-        description: 'Make a dance party with AI',
-      },
-      {
         key: 'pythonLab',
         label: 'Python Lab',
         href: `${studioUrl}/projects/pythonlab/new`,
         image: pythonLabImage,
         description: 'Code using Python',
+      },
+      {
+        key: 'artist',
+        label: 'Artist',
+        href: `${studioUrl}/projects/artist/new`,
+        image: artistImage,
+        description: 'Create art with code',
+      },
+      {
+        key: 'danceParty',
+        label: 'Dance Party',
+        href: `${studioUrl}/projects/dance/new`,
+        image: dancePartyImage,
+        description: 'Make a dance party with AI',
       },
       {
         key: 'viewAllProjects',
@@ -157,7 +158,6 @@ export function getDefaultHeaderProps({
         href: `${studioUrl}/home`,
       },
     },
-    isLoggedIn: false,
     helpButtonLabel: {
       open: 'Open Help menu',
       close: 'Close Help menu',

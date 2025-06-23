@@ -102,7 +102,7 @@ describe('getSeoMetadata', () => {
     const result = getSeoMetadata(mockExperience, Brand.CODE_DOT_ORG, locale);
 
     expect(result?.openGraph?.images).toBe(
-      'https://images.ctfassets.net/90t6bu6vlf76/6QAykNTAjFdgHya4lBchyF/539e119f045b74395ec9aca97bacf6ed/opengraph-default.png',
+      'https://contentful-images.code.org/90t6bu6vlf76/6QAykNTAjFdgHya4lBchyF/539e119f045b74395ec9aca97bacf6ed/opengraph-default.png',
     );
   });
 

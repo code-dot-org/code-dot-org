@@ -50,6 +50,7 @@ const STATUS_LABELS: StatusLabels = {
   ok: 'Successful',
   unknown: 'Unknown Status',
   user_input_too_large: 'User Input Too Large',
+  model_timeout: 'Model Timeout', // Not actually handled in AI Tutor at the moment, added for TypeScript safety
 };
 
 enum TimeFilter {

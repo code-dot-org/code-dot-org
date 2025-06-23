@@ -2,7 +2,7 @@
   "key": "self-paced-pl-ai-foundations",
   "display_name": "self-paced-pl-ai-foundations",
   "is_featured": false,
-  "assignable": true,
+  "assignable": false,
   "curriculum_type": null,
   "marketing_initiative": null,
   "grade_levels": null,
@@ -16,5 +16,8 @@
   "video": null,
   "published_date": null,
   "self_paced_pl_course_offering_key": null,
-  "ai_teaching_assistant_available": false
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": [
+
+  ]
 }

@@ -40,4 +40,8 @@ class UnitGroupUnit < ApplicationRecord
       ugu.position == unit_position
     end
   end
+
+  def cached_unit_group
+    UnitGroup.get_from_cache(course_id)
+  end
 end

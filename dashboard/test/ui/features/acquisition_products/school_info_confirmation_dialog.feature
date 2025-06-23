@@ -32,8 +32,6 @@ Scenario: School Info Confirmation Dialog
   And I press keys "31513" for element "#uitest-school-zip"
   Then I wait until element "#uitest-school-dropdown" contains text "Appling County High School"
   And I select the "Appling County High School" option in dropdown "uitest-school-dropdown"
-  And I open my eyes to test "School Association"
-  And I see no difference for "School Association: all fields"
   Then I press "#save-button" using jQuery
   And I wait until element ".modal" is gone
 

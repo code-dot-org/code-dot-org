@@ -1,0 +1,34 @@
+name 'music-lab-612-post-q7'
+
+question 'Which computational thinking skill did Dev use to plan the order of steps?'
+
+wrong 'Decomposition'
+wrong 'Pattern Recognition'
+wrong 'Abstraction'
+right 'Algorithm Design'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Computational Thinking
+
+Standard: Algorithmic Thinking
+
+Lesson: Sequencing - Practice
+
+Skill Progression: All
+
+Pretest Modality: Given a snippet of how someone approached a problem, identify the CT skill it is (similar to PL question)
+
+Posttest Modality: Given a snippet of how someone approached a problem, identify the CT skill it is (similar to PL question)
+
+MARKDOWN
+
+markdown <<MARKDOWN
+Dev made a remix that starts with a quick intro, adds 3 layers of beats one at a time, and ends with a fade-out. To keep everything in the right order, Dev wrote down each step before coding.
+
+
+---
+
+![](https://images.code.org/e7ebea15053a3bb2bfbf123bb3ee7ceb-image-1750438510455.png)
+MARKDOWN
