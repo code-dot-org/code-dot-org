@@ -42,9 +42,10 @@
     ],
     "bubble_choice_description": "Review how to use loops with rests when constructing songs",
     "display_name": "Loops and Rests",
-    "name_suffix": "_v2"
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://images.code.org/7975b1e1de3da79ad7e81057a4556b01-Screenshot 2025-04-02 at 7.43.04 AM.png"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:46.715+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-panel-offbeat\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-panel-offbeat\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:46.715+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-panel-offbeat\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-panel-offbeat\"},{\"changed_at\":\"2025-06-21 23:43:22 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

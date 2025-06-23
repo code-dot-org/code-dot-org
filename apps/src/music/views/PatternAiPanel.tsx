@@ -550,6 +550,11 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
   };
 
   const aiBotImage = getAiBotImage();
+  const showBotArea = [
+    'drawnDrums',
+    'changedTemperature',
+    'generated',
+  ].includes(userCompletedTask);
 
   return (
     <FocusLock>
@@ -655,9 +660,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
               className={classNames(
                 styles.botArea,
                 MusicRegistry.hideAiTemperature && styles.botAreaGap,
-                ['drawnDrums', 'changedTemperature', 'generated'].includes(
-                  userCompletedTask
-                ) && styles.botAreaVisible
+                showBotArea && styles.botAreaVisible
               )}
             >
               <img
@@ -685,13 +688,16 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
                       leftButtonProps={{
                         icon: {iconName: 'minus', title: 'Decrease'},
                         ['aria-label']: 'Decrease',
+                        tabIndex: showBotArea ? 0 : -1,
                       }}
                       rightButtonProps={{
                         icon: {iconName: 'plus', title: 'Increase'},
                         ['aria-label']: 'Increase',
+                        tabIndex: showBotArea ? 0 : -1,
                       }}
                       hideValue={true}
                       color="aqua"
+                      tabIndex={showBotArea ? 0 : -1} // Only allow tabbing to the slider when the bot area is visible
                     />
                   </div>
                 </div>
@@ -705,6 +711,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
                 color="white"
                 size="s"
                 className={styles.button}
+                tabIndex={showBotArea ? 0 : -1} // Only allow tabbing to the button when the bot area is visible
               />
             </div>
           </div>

@@ -1,11 +1,11 @@
 name 'music-lab-612-post-q10'
 
-question 'put actual question here'
+question 'Which computational thinking skill helped Jordan recognize what was repeating?'
 
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
-right 'correct'
+wrong 'Decomposition'
+right 'Pattern Recognition'
+wrong 'Abstraction'
+wrong 'Algorithm Design'
 
 allow_multiple_attempts true
 
@@ -25,5 +25,9 @@ Posttest Modality: Given a snippet of how someone approached a problem, identify
 MARKDOWN
 
 markdown <<MARKDOWN
-Put the images / context markdown here
+Each time the melody changes in Jordan’s remix, the same background sound plays behind it. Jordan realized this and reused a loop to repeat the background sound every 8 beats.
+
+---
+
+![](https://images.code.org/e7ebea15053a3bb2bfbf123bb3ee7ceb-image-1750438510455.png)
 MARKDOWN
