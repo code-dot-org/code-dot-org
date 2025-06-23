@@ -2,7 +2,6 @@
 @single_session
 Feature: Signing in and signing out
 
-@skip
 @pegasus_content
 Scenario: Student sign in from code.org
   Given I create a student named "Bob"
@@ -50,7 +49,7 @@ Scenario: Teacher sign in from studio.code.org
   Given I am on "http://studio.code.org/users/sign_in"
   And I wait to see "#signin"
   And I fill in username and password for "Casey"
-  And I click "#signin-button" to load a new page
+  And I click the sign-in button to load a new page
   Then I wait until I am on "http://studio.code.org/home"
   Then I wait to see "#header_user_menu"
   And I wait until element ".display_name" is visible

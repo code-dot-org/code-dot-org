@@ -574,6 +574,26 @@ When /^I click "([^"]*)"( once it exists)?(?: to load a new (page|tab))?$/ do |s
   page_load(load) {element.click}
 end
 
+When "I click the sign-in button to load a new page" do
+  selector = "#signin-button"
+  max_retries = 3
+
+  (1..max_retries).each do |attempt|
+    element = @browser.find_element(:css, selector)
+    page_load("page") {element.click}
+    break # Success
+  rescue JSON.ParserError => exception
+    if attempt < max_retries
+      puts "JSON parser error on sign-in click (attempt #{attempt}): #{exception.message}"
+      sleep 2
+      next
+    else
+      puts "Sign in failed after retries: #{exception.message}"
+      raise
+    end
+  end
+end
+
 When /^I click "([^"]*)" if it is visible$/ do |selector|
   if @browser.execute_script(jquery_is_element_visible(selector))
     find = -> {@browser.find_element(:css, selector)}
