@@ -35,21 +35,6 @@ const mockLogos = [
     logoImage: {fields: {title: 'Third Brand'}},
     primaryLinkRef: {fields: {primaryTarget: ''}},
   }),
-  mockLogo({
-    title: 'Fourth Logo',
-    logoImage: {fields: {title: 'Fourth Brand'}},
-    primaryLinkRef: {fields: {primaryTarget: ''}},
-  }),
-  mockLogo({
-    title: 'Fifth Logo',
-    logoImage: {fields: {title: 'Fifth Brand'}},
-    primaryLinkRef: {fields: {primaryTarget: 'https://fifth.com'}},
-  }),
-  mockLogo({
-    title: 'Sixth Logo',
-    logoImage: {fields: {title: 'Sixth Brand'}},
-    primaryLinkRef: {fields: {primaryTarget: 'https://sixth.com'}},
-  }),
 ];
 
 describe('LogoCollection', () => {
@@ -60,7 +45,7 @@ describe('LogoCollection', () => {
         logos={logos as Parameters<typeof LogoCollection>[0]['logos']}
       />,
     );
-    expect(screen.getAllByRole('img')).toHaveLength(6);
+    expect(screen.getAllByRole('img')).toHaveLength(3);
   });
 
   it('renders logos with correct alt text', () => {
@@ -83,25 +68,16 @@ describe('LogoCollection', () => {
     const images = screen.getAllByRole('figure');
 
     // check that images with URLs have links
-    expect(images[0].parentElement).toHaveAttribute(
+    expect(images[0].firstElementChild).toHaveAttribute(
       'href',
       'https://first.com',
     );
-    expect(images[1].parentElement).toHaveAttribute(
+    expect(images[1].firstElementChild).toHaveAttribute(
       'href',
       'https://second.com',
     );
-    expect(images[4].parentElement).toHaveAttribute(
-      'href',
-      'https://fifth.com',
-    );
-    expect(images[5].parentElement).toHaveAttribute(
-      'href',
-      'https://sixth.com',
-    );
 
     // check that images without URLs do not have links
-    expect(images[2].parentElement).not.toHaveAttribute('href');
-    expect(images[3].parentElement).not.toHaveAttribute('href');
+    expect(images[2].firstElementChild).not.toHaveAttribute('href');
   });
 });

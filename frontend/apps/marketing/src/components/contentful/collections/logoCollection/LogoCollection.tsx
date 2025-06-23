@@ -22,7 +22,6 @@ export type LogoCollectionProps = {
 };
 
 const LogoCollection: React.FC<LogoCollectionProps> = ({logos}) => {
-  console.log('LogoCollection', logos);
   if (!logos) {
     return (
       <div style={{color: 'var(--text-neutral-primary)'}}>
@@ -42,15 +41,13 @@ const LogoCollection: React.FC<LogoCollectionProps> = ({logos}) => {
         return {
           id: title,
           item: (
-            <figure>
-              <img
-                src={getAbsoluteImageUrl(logoImage)}
-                alt={logoImage?.fields?.title || title}
-                loading="lazy"
-              />
-            </figure>
+            <img
+              src={getAbsoluteImageUrl(logoImage)}
+              alt={logoImage?.fields?.title || title || 'Logo'}
+              loading="lazy"
+            />
           ),
-          url: primaryLinkRef?.fields?.primaryTarget,
+          url: primaryLinkRef?.fields?.primaryTarget || '',
         };
       }),
     [logos],
@@ -61,9 +58,9 @@ const LogoCollection: React.FC<LogoCollectionProps> = ({logos}) => {
       sx={{
         display: 'grid',
         gridTemplateColumns: {
-          xs: 'repeat(1, 1fr)', // 1 column on mobile
-          sm: 'repeat(3, 1fr)', // 3 columns on tablet
-          md: 'repeat(4, 1fr)', // 4 columns on desktop
+          xs: 'repeat(1, 1fr)',
+          sm: 'repeat(3, 1fr)',
+          md: 'repeat(4, 1fr)',
         },
         gap: '60px',
       }}
@@ -71,21 +68,17 @@ const LogoCollection: React.FC<LogoCollectionProps> = ({logos}) => {
       {logosData.map(logo => (
         <Box
           key={logo.id}
+          component="figure"
           sx={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            '& figure': {
-              display: 'flex',
-              margin: '0',
-              height: '100%',
-              maxHeight: '40px',
-            },
+            margin: '0',
+            height: '100%',
+            maxHeight: '40px',
             '& img': {
               maxWidth: '100%',
               maxHeight: '100%',
-              width: 'auto',
-              height: 'auto',
               objectFit: 'contain',
             },
           }}
@@ -98,7 +91,7 @@ const LogoCollection: React.FC<LogoCollectionProps> = ({logos}) => {
               sx={{
                 display: 'flex',
                 justifyContent: 'center',
-                width: '100%',
+                width: 'fit-content',
                 height: '100%',
                 textDecoration: 'none',
                 '&:hover': {
