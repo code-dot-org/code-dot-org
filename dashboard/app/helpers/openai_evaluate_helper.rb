@@ -67,7 +67,7 @@ module OpenaiEvaluateHelper
     end
   end
 
-  def self.evaluate_section(unit, section, options)
+  def self.evaluate_section(unit, section)
     students = section.students
 
     levels = unit.levels
