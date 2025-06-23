@@ -9,9 +9,9 @@ module User::Purgeable
   included do
     SYSTEM_DELETED_USERNAME = 'sys_deleted'
 
-    has_one :data_retention_status, class_name: 'DataRetention::Status'
-    delegate :pii_scrubbed_at, to: :data_retention_status, allow_nil: true
-    delegate :anonymized_at, to: :data_retention_status, allow_nil: true
+    has_one :user_data_retention_status, class_name: 'User::DataRetentionStatus'
+    delegate :pii_scrubbed_at, to: :user_data_retention_status, allow_nil: true
+    delegate :anonymized_at, to: :user_data_retention_status, allow_nil: true
   end
 
   # Removes PII and other information from the user and marks the user as having been purged.
