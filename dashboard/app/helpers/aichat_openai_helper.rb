@@ -1,13 +1,18 @@
 require 'cdo/aws/metrics'
 
+# Note for PR (TODO - discuss and remove this note before PR merged):
+# -------------------------------------------------------------------
+# This file has multiple classes that would obviously be broken out into different
+# files.  I just wanted to discuss where these might go as I'm not sure they belong
+# in the 'helper' directory
+# -------------------------------------------------------------------
+
 # TODO - check naming convention for classes
 class GenericAIClient
   # TODO - Rename me to match actual functionality
   def post_request(aichat_model_customizations, stored_messages, new_message, level_id, encrypted_channel_id, user_id, project_id)
     # start_time = Time.now
 
-    # TODO? - pass these to post_request directly, not as part of model customizations?
-    # model_id = aichat_model_customizations["selectedModelId"]
     temperature = aichat_model_customizations['temperature'].to_f
 
     level = Level.find_by(id: level_id)
@@ -56,8 +61,8 @@ class GenericAIClient
 
     raise_possible_response_errors(response_body)
 
-    # TODO - the fact we called this generate_text_response shows we need to adapt this class for multimodal
-    # responses even if we have a way to disable them in level builder
+    # TODO - the fact we called this generate_text_response suggests we need to adapt this class for multimodal
+    # *responses* even if we have a way to disable them in level builder
     response_text = generate_text_response(response_body)
 
     # TODO - add back report_usage_and_throttling_metrics
@@ -257,12 +262,19 @@ class OpenaiCompletionsClient < GenericAIClient
   private def format_message(message, encrypted_channel_id, level_name)
     formatted = {role: message['role'], content: [{type: "text", text: message['chatMessageText']}]}
     message['assets']&.each do |asset|
-      data = AichatAssetHelper.get_asset_data_uri(asset, encrypted_channel_id, level_name)
-      is_pdf = File.extname(asset["filename"]) == '.pdf'
+      filename = asset["filename"]
+      source = asset["source"]
+      is_pdf = File.extname(filename) == '.pdf'
+
+      # TODO - discuss how we want to handle any errors encountered when accessing underlying storage
+      # Currently there are multiple code paths that can raise (and multiple exceptions that can be raised
+      # through them)
+      data_uri = AichatAssetHelper.get_asset_data_uri(filename, source, encrypted_channel_id, level_name)
+
       formatted[:content] << if is_pdf
-                               {type: 'file', file: {filename: asset["filename"], file_data: data}}
+                               {type: 'file', file: {filename: asset["filename"], file_data: data_uri}}
                              else
-                               {type: "image_url", image_url: {url: data}}
+                               {type: "image_url", image_url: {url: data_uri}}
                              end
     end
     formatted
@@ -322,22 +334,17 @@ class GeminiClient < GenericAIClient
     # possible natively in gemini but can be handled with additional
     # message snippet. Filename is accessible with: asset["filename"]
 
-    # TODO - add image - not possible with url so need to upload directly as base64
-
-    # TODO don't pass data with `data:application/pdf;base64,` so we have to remove
-    # but rather add for openai
-
-    #HACK - FIXME - why are there bad characters after == ?
-
     message['assets']&.each do |asset|
-      data = AichatAssetHelper.get_asset_data_uri(asset, encrypted_channel_id, level_name)
-      is_pdf = File.extname(asset["filename"]) == '.pdf'
-      content_item[:parts] << if is_pdf
-                                {inline_data: {mime_type: "application/pdf", data: data.delete_prefix('data:application/pdf;base64,').delete("\n")}}
-                                #else
-                                #  {type: "image_url", image_url: {url: data}}
-                              end
+      filename = asset["filename"]
+      source = asset["source"]
+
+      # TODO - discuss how we want to handle any errors encountered when accessing underlying storage
+      base64_string = AichatAssetHelper.get_asset_base64_string(filename, source, encrypted_channel_id, level_name)
+
+      mime_type = Rack::Mime.mime_type(File.extname(filename))
+      content_item[:parts] << {inline_data: {mime_type: mime_type, data: base64_string}}
     end
+
     content_item
   end
 
@@ -393,6 +400,13 @@ module AichatOpenaiHelper
 
     client = get_client(model_id)
 
+    # Note for PR (TODO - discuss and remove this note before PR merged):
+    # --------------------------------------------------------------------
+    # There are various errors that can occur but are not rescued. Specifically there are
+    # various errors raised or propagated through `AichatAssetHelper` when messages contain assets
+    # (i.e. multimodal) and should be dealt with somehow.  Also note, these errors don't seem to be
+    # dealt with in the caller (AichatRequestChatCompletionJob)
+    # --------------------------------------------------------------------
     begin
       response = client.post_request(
         aichat_model_customizations,
