@@ -4,6 +4,7 @@
   # use default credentials and hostname.
   MYSQL_DAEMON_DEFAULT_CREDENTIALS = '{"username":"root", "password":""}'.freeze
   MYSQL_DAEMON_HOSTNAME = 'localhost'.freeze
+  MYSQL_DAEMON_PORT = '3306'.freeze
   DATABASE_CONFIGURATION = {
     db_cluster_id: '!Ref AuroraCluster',
     db_endpoint_writer: '!GetAtt AuroraCluster.Endpoint.Address',
@@ -28,6 +29,7 @@
     if !database
       hash[:db_cluster_id] = MYSQL_DAEMON_HOSTNAME
       hash[:db_endpoint_writer] = MYSQL_DAEMON_HOSTNAME
+      hash[:db_endpoint_writer_port] = MYSQL_DAEMON_PORT
       hash[:db_endpoint_proxy_writer] = MYSQL_DAEMON_HOSTNAME
       hash[:db_endpoint_proxy_reader] = MYSQL_DAEMON_HOSTNAME
       hash[:db_endpoint_proxy_reporting] = MYSQL_DAEMON_HOSTNAME

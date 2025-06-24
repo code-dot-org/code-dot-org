@@ -11,7 +11,6 @@ import {navigateToHref} from '@cdo/apps/utils';
 import {SUBMISSION_STATUSES} from './constants';
 import EnrollForm from './enroll_form';
 import {WorkshopPropType, FacilitatorPropType} from './enrollmentConstants';
-import FacilitatorBio from './facilitator_bio';
 import WorkshopDetails from './workshop_details';
 
 export const sessionCalendarShape = PropTypes.shape({
@@ -208,13 +207,6 @@ export default class WorkshopEnroll extends React.Component {
                     workshop={this.props.workshop}
                     session_dates={this.props.session_dates}
                   />
-                  <h2>Facilitators</h2>
-                  {this.props.facilitators.map(facilitator => (
-                    <FacilitatorBio
-                      key={facilitator.email}
-                      facilitator={facilitator}
-                    />
-                  ))}
                 </div>
                 {/* Right Column */}
                 <div className="span6">

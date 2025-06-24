@@ -154,6 +154,7 @@ const INTERNAL_ENTRIES = {
   'levels/editors/fields/_poetry_fields': './src/sites/studio/pages/levels/editors/fields/_poetry_fields.js',
   'levels/editors/fields/_predict_settings': './src/sites/studio/pages/levels/editors/fields/_predict_settings.js',
   'levels/editors/fields/_preload_assets': './src/sites/studio/pages/levels/editors/fields/_preload_assets.js',
+  'levels/editors/fields/_skill_evaluations': './src/sites/studio/pages/levels/editors/fields/_skill_evaluations.js',
   'levels/editors/fields/_special_level_types': './src/sites/studio/pages/levels/editors/fields/_special_level_types.js',
   'levels/editors/fields/_starter_assets': './src/sites/studio/pages/levels/editors/fields/_starter_assets.js',
   'levels/editors/fields/_validation_code': './src/sites/studio/pages/levels/editors/fields/_validation_code.js',
@@ -253,6 +254,7 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
   'pd/session_attendance/attendance_recorded': './src/sites/studio/pages/pd/session_attendance/attendance_recorded.js',
 
   'pd/professional_learning/index': './src/sites/studio/pages/pd/professional_learning/index.js',
+  'pd/professional_learning/self_paced_pl_catalog': './src/sites/studio/pages/pd/professional_learning/self_paced_pl_catalog.js',
   'pd/professional_learning/regional_workshop_catalog': './src/sites/studio/pages/pd/professional_learning/regional_workshop_catalog.js',
   'pd/professional_learning/workshops/index': './src/sites/studio/pages/pd/professional_learning/workshops/index.js',
   'pd/regional_partner_mini_contact/new': './src/sites/studio/pages/pd/regional_partner_mini_contact/new.js',

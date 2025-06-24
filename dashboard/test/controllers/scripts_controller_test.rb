@@ -1523,14 +1523,16 @@ class ScriptsControllerTest < ActionController::TestCase
     setup do
       @pilot_section_owner = create :teacher, pilot_experiment: 'my-experiment'
       @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-      @pilot_unit = create :script, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
+      @pilot_unit = create :script, pilot_experiment: 'my-experiment'
+      @pilot_course = create :single_unit_course, unit: @pilot_unit, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
       @pilot_section = create :section, user: @pilot_section_owner, script: @pilot_unit
       create :section_instructor, instructor: @pilot_teacher, section: @pilot_section, status: :active
       @pilot_student = create(:follower, section: @pilot_section).student_user
 
       @pilot_pl_section_owner = create :teacher, pilot_experiment: 'my-pl-experiment'
       @pilot_instructor = create :facilitator, pilot_experiment: 'my-pl-experiment'
-      @pilot_pl_unit = create :script, pilot_experiment: 'my-pl-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      @pilot_pl_unit = create :script, pilot_experiment: 'my-pl-experiment'
+      @pilot_pl_course = create :single_unit_course, :pl_course, unit: @pilot_pl_unit, pilot_experiment: 'my-pl-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
       @pilot_pl_section = create :section, user: @pilot_pl_section_owner, script: @pilot_pl_unit
       create :section_instructor, instructor: @pilot_instructor, section: @pilot_pl_section, status: :active
       @pilot_pl_participant = create :facilitator
@@ -1540,67 +1542,67 @@ class ScriptsControllerTest < ActionController::TestCase
     no_access_msg = "You don&#39;t have access to this unit."
 
     test_user_gets_response_for :show, response: :redirect, user: nil,
-      params: -> {{id: @pilot_unit.name}},
+      params: -> {{course_course_name: @pilot_course.name, position: 1}},
       name: 'signed out user cannot view pilot unit'
 
     test_user_gets_response_for :show, response: :redirect, user: nil,
-                                params: -> {{id: @pilot_pl_unit.name}},
+                                params: -> {{course_course_name: @pilot_pl_course.name, position: 1}},
                                 name: 'signed out user cannot view pilot pl unit'
 
     test_user_gets_response_for(:show, response: :success, user: :student,
-      params: -> {{id: @pilot_unit.name}}, name: 'student cannot view pilot unit'
+      params: -> {{course_course_name: @pilot_course.name, position: 1}}, name: 'student cannot view pilot unit'
     ) do
       assert_includes(response.body, no_access_msg)
     end
 
     test_user_gets_response_for(:show, response: :success, user: :teacher,
-                                params: -> {{id: @pilot_pl_unit.name}}, name: 'participant user not in pilot section cannot view pilot unit'
+                                params: -> {{course_course_name: @pilot_pl_course.name, position: 1}}, name: 'participant user not in pilot section cannot view pilot unit'
     ) do
       assert_includes(response.body, no_access_msg)
     end
 
     test_user_gets_response_for(:show, response: :success, user: :teacher,
-      params: -> {{id: @pilot_unit.name}},
+      params: -> {{course_course_name: @pilot_course.name, position: 1}},
       name: 'teacher without pilot access cannot view pilot unit'
     ) do
       assert_includes(response.body, no_access_msg)
     end
 
     test_user_gets_response_for(:show, response: :success, user: :facilitator,
-                                params: -> {{id: @pilot_pl_unit.name}},
+                                params: -> {{course_course_name: @pilot_pl_course.name, position: 1}},
                                 name: 'instructor without pilot access cannot view pilot unit'
     ) do
       assert_includes(response.body, no_access_msg)
     end
 
     test_user_gets_response_for(:show, response: :redirect, user: -> {@pilot_teacher},
-      params: -> {{id: @pilot_unit.name, section_id: @pilot_section.id}},
+      params: -> {{course_course_name: @pilot_course.name, position: 1, section_id: @pilot_section.id}},
       name: 'pilot teacher can view pilot unit'
     ) do
-      assert_redirected_to "http://test.host/teacher_dashboard/sections/#{@pilot_section.id}/unit/#{@pilot_unit.name}"
+      assert_redirected_to "http://test.host/teacher_dashboard/sections/#{@pilot_section.id}/courses/#{@pilot_course.name}/units/1"
     end
 
     test_user_gets_response_for(:show, response: :redirect, user: -> {@pilot_instructor},
-                                params: -> {{id: @pilot_pl_unit.name, section_id: @pilot_pl_section.id}},
+                                params: -> {{course_course_name: @pilot_pl_course.name, position: 1, section_id: @pilot_pl_section.id}},
                                 name: 'pilot instructor can view pilot unit'
     ) do
-      assert_redirected_to "http://test.host/teacher_dashboard/sections/#{@pilot_pl_section.id}/unit/#{@pilot_pl_unit.name}"
+      assert_redirected_to "http://test.host/teacher_dashboard/sections/#{@pilot_pl_section.id}/courses/#{@pilot_pl_course.name}/units/1"
     end
 
     test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},
-      params: -> {{id: @pilot_unit.name}}, name: 'pilot student can view pilot unit'
+      params: -> {{course_course_name: @pilot_course.name, position: 1}}, name: 'pilot student can view pilot unit'
     ) do
       refute_includes(response.body, no_access_msg)
     end
 
     test_user_gets_response_for(:show, response: :success, user: -> {@pilot_pl_participant},
-                                params: -> {{id: @pilot_pl_unit.name}}, name: 'pilot participant can view pilot unit'
+                                params: -> {{course_course_name: @pilot_pl_course.name, position: 1}}, name: 'pilot participant can view pilot unit'
     ) do
       refute_includes(response.body, no_access_msg)
     end
 
     test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
-      params: -> {{id: @pilot_unit.name}}, name: 'levelbuilder can view pilot unit'
+      params: -> {{course_course_name: @pilot_course.name, position: 1}}, name: 'levelbuilder can view pilot unit'
     ) do
       refute_includes(response.body, no_access_msg)
     end
@@ -1608,30 +1610,31 @@ class ScriptsControllerTest < ActionController::TestCase
 
   class CourseInDevelopmentTests < ActionController::TestCase
     setup do
-      @in_development_unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
+      @in_development_course = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
+      @in_development_unit = @in_development_course.first_unit
     end
 
     no_access_msg = "You don&#39;t have access to this unit."
 
     test_user_gets_response_for :show, response: :redirect, user: nil,
-      params: -> {{id: @in_development_unit.name}},
+      params: -> {{course_course_name: @in_development_course.name, position: 1}},
       name: 'signed out user cannot view in-development unit'
 
     test_user_gets_response_for(:show, response: :success, user: :student,
-      params: -> {{id: @in_development_unit.name}}, name: 'student cannot view in-development unit'
+      params: -> {{course_course_name: @in_development_course.name, position: 1}}, name: 'student cannot view in-development unit'
     ) do
       assert_includes(response.body, no_access_msg)
     end
 
     test_user_gets_response_for(:show, response: :success, user: :teacher,
-      params: -> {{id: @in_development_unit.name}},
+      params: -> {{course_course_name: @in_development_course.name, position: 1}},
       name: 'teacher cannot view in-development unit'
     ) do
       assert_includes(response.body, no_access_msg)
     end
 
     test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
-      params: -> {{id: @in_development_unit.name}}, name: 'levelbuilder can view in-development unit'
+      params: -> {{course_course_name: @in_development_course.name, position: 1}}, name: 'levelbuilder can view in-development unit'
     ) do
       refute_includes(response.body, no_access_msg)
     end
@@ -1876,6 +1879,85 @@ class ScriptsControllerTest < ActionController::TestCase
         get :show, params: {id: unit.name, foo: 'bar'}
         assert_redirected_to "/courses/#{course.name}/units/#{unit_position}?foo=bar"
       end
+    end
+  end
+
+  describe 'authorizing modular courses' do
+    let(:original_course) {create :unit_group, :with_units, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development}
+    let(:unit) {original_course.first_unit}
+    let(:unit_position) {1}
+    let(:modular_course) {create :single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development}
+    let(:pilot_teacher) {create :teacher, pilot_experiment: 'my-experiment'}
+
+    let(:original_course_params) {{course_course_name: original_course.name, position: unit_position}}
+    let(:modular_course_params)  {{course_course_name: modular_course.name, position: unit_position}}
+
+    context 'when the modular course is stable' do
+      before do
+        modular_course.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+      end
+      test_user_gets_response_for :show, response: :redirect, user: nil,
+                                  params: -> {original_course_params},
+                                  name: 'signed out user cannot view in-development original course'
+      test_user_gets_response_for :show, response: :success, user: nil,
+                                  params: -> {modular_course_params},
+                                  name: 'signed out user can view stable modular course'
+    end
+
+    context 'when the original course is stable' do
+      before do
+        original_course.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+      end
+      test_user_gets_response_for :show, response: :success, user: nil,
+                                  params: -> {original_course_params},
+                                  name: 'signed out user can view stable original course'
+      test_user_gets_response_for :show, response: :redirect, user: nil,
+                                  params: -> {modular_course_params},
+                                  name: 'signed out user cannot view in-development modular course'
+    end
+
+    context 'when the original course is a pilot' do
+      before do
+        original_course.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, pilot_experiment: 'test-pilot')
+      end
+      test_user_gets_response_for :show, response: :redirect, user: nil,
+                                  params: -> {original_course_params},
+                                  name: 'signed out user cannot view pilot original course'
+      test_user_gets_response_for :show, response: :redirect, user: nil,
+                                  params: -> {modular_course_params},
+                                  name: 'signed out user cannot view in-development modular course'
+
+      test_user_gets_response_for :show, response: :success, user: -> {pilot_teacher},
+                                  params: -> {original_course_params},
+                                  name: 'pilot teacher can view pilot original_course'
+      test_user_gets_response_for(:show, response: :success, user: -> {pilot_teacher},
+                                  params: -> {modular_course_params},
+                                  name: 'pilot teacher cannot view in-development modular course'
+      ) do
+        assert_includes(response.body, no_access_msg)
+      end
+    end
+
+    context 'when the modular course is a pilot' do
+      before do
+        modular_course.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, pilot_experiment: 'test-pilot')
+      end
+      test_user_gets_response_for :show, response: :redirect, user: nil,
+                                  params: -> {original_course_params},
+                                  name: 'signed out user cannot view in-development original course'
+      test_user_gets_response_for :show, response: :redirect, user: nil,
+                                  params: -> {modular_course_params},
+                                  name: 'signed out user cannot view pilot modular course'
+
+      test_user_gets_response_for(:show, response: :success, user: -> {pilot_teacher},
+                                  params: -> {original_course_params},
+                                  name: 'pilot teacher cannot view in-development original course'
+      ) do
+        assert_includes(response.body, no_access_msg)
+      end
+      test_user_gets_response_for :show, response: :success, user: -> {pilot_teacher},
+                                  params: -> {modular_course_params},
+                                  name: 'pilot teacher can view pilot modular course'
     end
   end
 end

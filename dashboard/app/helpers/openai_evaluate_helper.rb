@@ -1,4 +1,6 @@
 module OpenaiEvaluateHelper
+  include LevelsHelper
+
   API_KEY = CDO.openai_measures_of_learning_api_key
   MODEL = SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
 
@@ -65,6 +67,94 @@ module OpenaiEvaluateHelper
     end
   end
 
+  def self.evaluate_section(unit, section)
+    students = section.students
+
+    levels = unit.levels
+
+    user_levels = UserLevel.joins(:user, :level).
+                          where(user: students, level: levels, script: unit).
+                          includes(:user, :level, :level_source)
+
+    user_levels.each do |user_level|
+      if user_level.level_source && user_level.level_source.data.present?
+        evaluate_free_response(user_level, unit)
+      elsif user_level.level.name == 'U4 L03 Variables operator practice 5_2024' || user_level.level.name == 'U4 L03 Variables numbers practice 4_2024'
+        evaluate_code_level(user_level, unit)
+      end
+    end
+
+    nil
+  end
+
+  def self.evaluate_free_response(user_level, unit)
+    student_work = user_level.level_source.data
+
+    response = evaluate(
+      user_level.level,
+      unit,
+      student_work: student_work,
+      evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]
+    )
+
+    create_ai_evaluations_from_ai_response(user_level.user, user_level, unit, response, {})
+  end
+
+  def self.evaluate_code_level(user_level, unit)
+    helper = ApplicationController.helpers
+    student_code = helper.get_student_code(user_level.user.id, user_level.level, unit.id)
+
+    unless student_code.nil? || student_code[:student_code].nil?
+      response = evaluate(user_level.level, unit, student_work: student_code[:student_code], evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT])
+
+      create_ai_evaluations_from_ai_response(user_level.user, user_level, unit, response, code_version: student_code[:code_version])
+    end
+  end
+
+  def self.create_ai_evaluations_from_ai_response(student, user_level, unit, ai_response, options)
+    parsed_evaluation = JSON.parse(ai_response[:json]['content'])
+
+    student_work_evaluation_params = {
+      type: 'UserLevelEvaluation',
+      student_id: user_level.user.id,
+      code_version: options[:code_version] || nil,
+      level_id: user_level.level.id,
+      unit_id: unit.id,
+      evaluator: 'AI',
+      evaluation_criteria: parsed_evaluation['evaluationCriteria'],
+      evaluation: parsed_evaluation['aiEvaluation'],
+      reasoning: parsed_evaluation['aiReasoning'],
+      requester_id: current_user&.id || nil,
+      school_year: '2024-25',
+      ai_model_version: SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
+    }
+
+    work_evaluation = StudentWorkEvaluation.create!(student_work_evaluation_params)
+
+    skill_evaluations = parsed_evaluation['skillEvaluations']
+    skill_evaluations&.each do |skill_evaluation|
+      skill_evaluation_params = {
+        type: 'UserLevelSkillEvaluation',
+        student_id: user_level.user.id,
+        code_version: options[:code_version] || nil,
+        level_id: user_level.level.id,
+        unit_id: unit.id,
+        evaluator: 'AI',
+        evaluation_criteria: skill_evaluation['evaluationCriteria'],
+        evaluation: skill_evaluation['aiEvaluation'],
+        reasoning: skill_evaluation['aiReasoning'],
+        skill_id: skill_evaluation['skillId'],
+      }
+
+      created_skill_evaluation = StudentWorkEvaluation.create!(skill_evaluation_params)
+
+      summary_params = {student_work_evaluation_id: created_skill_evaluation.id,
+        student_work_evaluation_summary_id: work_evaluation.id}
+
+      StudentWorkEvaluationSummary.create!(summary_params)
+    end
+  end
+
   def self.client
     AiEvaluationOpenaiHelper::Client.new(API_KEY, MODEL)
   end
@@ -79,5 +169,5 @@ module OpenaiEvaluateHelper
     messages
   end
 
-  private_class_method :client, :prepend_system_prompt
+  private_class_method :client, :prepend_system_prompt, :evaluate_free_response
 end

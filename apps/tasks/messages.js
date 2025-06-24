@@ -139,7 +139,7 @@ module.exports = function (grunt) {
         return new Intl.NumberFormat(lang, {
           useGrouping: false, // Prevents grouping (e.g., 1,000).
           minimumFractionDigits: number.includes('.') ? number.split('.')[1].length : 0,
-          maximumFractionDigits: 100, // Prevents rounding (100 is max allowed by ECMA-402).
+          maximumFractionDigits: 20, // Prevents rounding (20 is max allowed by ECMA-402).
         }).format(number);
       });
     } catch (e) {

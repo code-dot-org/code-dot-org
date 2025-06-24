@@ -68,7 +68,6 @@ Dashboard::Application.routes.draw do
     resources :user_level_interactions, only: [:create]
 
     resources :skills, only: [:create, :index]
-    resources :levels_skills, only: [:create]
 
     patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
 
@@ -393,6 +392,8 @@ Dashboard::Application.routes.draw do
         get 'level_properties'
         get 'extra_links'
         patch 'update_bubble_choice_settings'
+        post 'add_skill'
+        post 'remove_skill'
       end
     end
 
@@ -883,6 +884,7 @@ Dashboard::Application.routes.draw do
     post '/dashboardapi/v1/foorm/simple_survey_submission', action: :create, controller: 'api/v1/foorm_simple_survey_submissions'
 
     get 'my-professional-learning', to: 'pd/professional_learning#index', as: 'professional_learning'
+    get 'professional-learning/courses', to: 'pd/professional_learning#courses'
     get 'professional-learning/workshops', to: 'pd/professional_learning#workshops'
     get 'professional-learning/workshops/:workshop_id', to: 'pd/professional_learning#workshop_marketing_page'
     get 'professional-learning/contact-regional-partner', to: 'pd/professional_learning#contact_regional_partner'
@@ -1283,6 +1285,7 @@ Dashboard::Application.routes.draw do
 
     post '/openai/chat_completion', to: 'openai_chat#chat_completion'
     post '/openai/evaluate', to: 'openai_evaluate#evaluate'
+    post '/openai/evaluate_section', to: 'openai_evaluate#evaluate_section'
 
     post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
     get '/aichat_request/chat_request/:id', to: 'aichat_requests#chat_request'

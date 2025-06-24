@@ -1127,6 +1127,7 @@ DEPENDENCIES
   rubocop-rails-accessibility
   ruby-prof (>= 1.7.0)
   ruby-progressbar
+  rubyzip
   sass-rails (~> 6.0.0)
   sassc-rails!
   scenic

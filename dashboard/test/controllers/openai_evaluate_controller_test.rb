@@ -9,7 +9,7 @@ class OpenaiEvaluateControllerTest < ActionController::TestCase
   test 'evaluate returns not found for bogus level",' do
     student = create(:student)
     sign_in(student)
-    unit = create(:script)
+    unit = create(:unit, :in_single_unit_course)
     get :evaluate, params: {level_id: 18976, unit_id: unit.id, student_work: "This is a good answer.", evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]}
     assert_response :not_found
   end
@@ -41,8 +41,8 @@ class OpenaiEvaluateControllerTest < ActionController::TestCase
     ProfanityFilter.stubs(:find_potential_profanity).returns 'shit'
     student = create(:student)
     sign_in(student)
-    csp_course_offering = create(:csp_course_offering, :with_units)
-    unit = csp_course_offering.course_versions.first.content_root
+    csp_course_offering = create(:csp_course_offering, :with_unit_group)
+    unit = csp_course_offering.course_versions.first.content_root.first_unit
     level = create(:free_response)
     create(:script_level, script: unit, levels: [level])
     get :evaluate, params: {level_id: level.id, unit_id: unit.id, student_work: "This is shit.", evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]}

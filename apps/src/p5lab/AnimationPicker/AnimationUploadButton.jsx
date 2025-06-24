@@ -7,6 +7,8 @@ import {
   refreshInRestrictedShareMode,
   refreshTeacherHasConfirmedUploadWarning,
 } from '@cdo/apps/code-studio/projectRedux';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import ImageUploadModal from '@cdo/apps/templates/imageUploadWarning/ImageUploadModal';
 import msg from '@cdo/locale';
 
@@ -27,6 +29,7 @@ export function UnconnectedAnimationUploadButton({
   onUploadClick,
   shouldWarnOnAnimationUpload,
   isBackgroundsTab,
+  appType,
   teacherHasConfirmedUploadWarning,
   inRestrictedShareMode,
   refreshInRestrictedShareMode,
@@ -63,12 +66,27 @@ export function UnconnectedAnimationUploadButton({
   const showRestrictedUploadWarning =
     shouldWarnOnAnimationUpload && !hasConfirmedWarning;
 
+  const onAnimationUploadClick = () => {
+    if (showRestrictedUploadWarning) {
+      showUploadModal();
+    } else {
+      onUploadClick();
+      if (appType) {
+        analyticsReporter.sendEvent(
+          EVENTS.UPLOAD_CUSTOM_IMAGE,
+          {LabType: appType},
+          PLATFORMS.STATSIG
+        );
+      }
+    }
+  };
+
   function renderUploadButton() {
     return (
       <AnimationPickerListItem
         label={msg.animationPicker_uploadImage()}
         icon="upload"
-        onClick={showRestrictedUploadWarning ? showUploadModal : onUploadClick}
+        onClick={onAnimationUploadClick}
         isBackgroundsTab={isBackgroundsTab}
       />
     );
@@ -108,6 +126,7 @@ UnconnectedAnimationUploadButton.propTypes = {
   onUploadClick: PropTypes.func.isRequired,
   shouldWarnOnAnimationUpload: PropTypes.bool.isRequired,
   isBackgroundsTab: PropTypes.bool.isRequired,
+  appType: PropTypes.string,
   // populated from redux
   inRestrictedShareMode: PropTypes.bool.isRequired,
   teacherHasConfirmedUploadWarning: PropTypes.bool.isRequired,
