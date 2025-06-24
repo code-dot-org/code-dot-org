@@ -226,9 +226,17 @@ class SoundBoard {
    * Registers the given sound defined by the given configuration.
    *
    * You can then refer to the sound via the `id` given by that configuration.
+   *
+   * If there is already a sound registered with the given id, the existing one
+   * will be returned. One must `unload` the sound first to reinitialize it.
+   *
    * @param config - The description of the sound.
    */
   register(config: SoundConfig): Sound {
+    if (config.id in this.soundsById) {
+      return this.soundsById[config.id];
+    }
+
     const sound = new Sound(config, this.audioContext);
     this.soundsById[config.id] = sound;
     sound.preloadFile();
@@ -243,7 +251,6 @@ class SoundBoard {
    * @param id - ID for sound
    */
   registerByFilenamesAndId(soundPaths: string[], id: string): Sound {
-    console.log('PLAY AUDIO', soundPaths, id);
     const soundRegistrationConfig: SoundConfig = {id};
     for (const soundFilePath of soundPaths) {
       const groups = soundFilePath.match(/\.(\w+)(\?.*)?$/);

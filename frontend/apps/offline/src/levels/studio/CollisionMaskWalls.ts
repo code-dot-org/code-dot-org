@@ -1,17 +1,80 @@
 import type {Skin} from './skin';
 import type {StudioData} from './Studio';
-import Walls from './Walls';
+import Walls, {DrawDebugRectFunction} from './Walls';
 
 const BYTES_PER_PIXEL = 4;
 const BITS_PER_BYTE = 8;
 const WALL_COLOR = '#7F7F7F';
+
+export type ImageURI = string;
+
+export type DrawDebugOverlayFunction = (srcUrl: string) => void;
+
+/**
+ * Given an input of a supported type, converts it to an HTMLImageElement.
+ */
+export async function toImage(
+  input: Blob | HTMLImageElement | ImageURI,
+): Promise<HTMLImageElement> {
+  if (input instanceof HTMLImageElement) {
+    return input;
+  }
+
+  let src: string = '';
+  let cleanup = () => {};
+
+  if (input instanceof Blob) {
+    src = URL.createObjectURL(input);
+    cleanup = () => URL.revokeObjectURL(src);
+  } else if (typeof input === 'string') {
+    src = input;
+  } else {
+    throw new Error('Unable to convert input to image');
+  }
+
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.onload = function () {
+      cleanup();
+      resolve(image);
+    };
+    image.onerror = function (err) {
+      cleanup();
+      reject(err);
+    };
+    image.src = src;
+  });
+}
+
+/**
+ * Given an input of a supported type, converts it to an HTMLCanvasElement.
+ */
+export async function toCanvas(
+  input: Blob | HTMLCanvasElement | HTMLImageElement | ImageURI,
+): Promise<HTMLCanvasElement> {
+  if (input instanceof HTMLCanvasElement) {
+    return input;
+  }
+
+  try {
+    const image = await toImage(input);
+    const canvas = document.createElement('canvas');
+    canvas.width = image.width;
+    canvas.height = image.height;
+    const context = canvas.getContext('2d');
+    context?.drawImage(image, 0, 0);
+    return canvas;
+  } catch (err) {
+    throw new Error('Unable to convert input to canvas: ' + err);
+  }
+}
 
 /**
  * Given an input of a supported type, converts it to an ImageData object.
  */
 export async function toImageData(
   input: Blob | HTMLCanvasElement | HTMLImageElement | ImageData | ImageURI,
-): Promise<ImageData> {
+): Promise<ImageData | undefined> {
   if (input instanceof ImageData) {
     return input;
   }
@@ -20,7 +83,7 @@ export async function toImageData(
     const canvas = await toCanvas(input);
     return canvas
       .getContext('2d')
-      .getImageData(0, 0, canvas.width, canvas.height);
+      ?.getImageData(0, 0, canvas.width, canvas.height);
   } catch (err) {
     throw new Error('Unable to convert input to ImageData: ' + err);
   }
@@ -31,13 +94,13 @@ export function URIFromImageData(imageData: ImageData): string {
   canvas.width = imageData.width;
   canvas.height = imageData.height;
   const context = canvas.getContext('2d');
-  context.putImageData(imageData, 0, 0);
+  context?.putImageData(imageData, 0, 0);
   return canvas.toDataURL();
 }
 
 export interface WallMap {
   overlayURI: string;
-  srcData: string;
+  srcData: ImageData;
   srcUrl: string;
   wallColor: string;
   wallMap: Uint8Array;
@@ -50,15 +113,15 @@ export interface WallMaps {
 class CollisionMaskWalls extends Walls {
   readonly width: number;
   readonly height: number;
-  readonly drawDebugOverlay: boolean;
+  readonly drawDebugOverlay: DrawDebugOverlayFunction;
   readonly bytesPerRow: number;
   readonly wallMaps: WallMaps;
 
   constructor(
     level: StudioData,
     skin: Skin,
-    drawDebugRect: boolean,
-    drawDebugOverlay: boolean,
+    drawDebugRect: DrawDebugRectFunction,
+    drawDebugOverlay: DrawDebugOverlayFunction,
     width: number,
     height: number,
     onload?: () => void,
@@ -72,18 +135,20 @@ class CollisionMaskWalls extends Walls {
     this.wallMaps = {};
 
     Promise.all(
-      Object.keys(skin.wallMaps).map(mapName => {
-        return toImageData(skin.wallMaps[mapName].srcUrl).then(imageData => {
-          const wallMap = this.wallMapFromImageData(imageData.data);
-          this.wallMaps[mapName] = {
-            overlayURI: this.wallOverlayURI(imageData, wallMap),
-            srcData: imageData,
-            srcUrl: skin.wallMaps[mapName].srcUrl,
-            wallColor: WALL_COLOR,
-            wallMap: wallMap,
-          };
-        });
-      }),
+      Object.entries(skin.wallMaps || {}).map(([mapName, wallMap]) =>
+        toImageData(wallMap.srcUrl).then(imageData => {
+          if (imageData) {
+            const wallMapData = this.wallMapFromImageData(imageData);
+            this.wallMaps[mapName] = {
+              overlayURI: this.wallOverlayURI(imageData, wallMapData),
+              srcData: imageData,
+              srcUrl: wallMap.srcUrl,
+              wallColor: WALL_COLOR,
+              wallMap: wallMapData,
+            };
+          }
+        }),
+      ),
     )
       .then(() => {
         if (onload) {
@@ -102,7 +167,7 @@ class CollisionMaskWalls extends Walls {
     collidableWidth: number,
     collidableHeight: number,
   ): boolean {
-    if (this.wallMaps[this.wallMapRequested]) {
+    if (this.wallMapRequested && this.wallMaps[this.wallMapRequested]) {
       const wallMap = this.wallMaps[this.wallMapRequested].wallMap;
       this.drawDebugOverlay(this.wallMaps[this.wallMapRequested].srcUrl);
 
@@ -142,6 +207,7 @@ class CollisionMaskWalls extends Walls {
         }
       }
     }
+
     return false;
   }
 
@@ -152,7 +218,8 @@ class CollisionMaskWalls extends Walls {
    * each row starts on a new byte. The least significant bit corresponds to the
    * leftmost of the 8 pixels stored in a byte.
    */
-  wallMapFromImageData(data: ImageData): Uint8Array {
+  wallMapFromImageData(imageData: ImageData): Uint8Array {
+    const data = imageData.data;
     const arr = new Uint8Array(this.height * this.bytesPerRow);
     for (let y = 0; y < this.height; y++) {
       for (let x = 0; x < this.width; x += BITS_PER_BYTE) {
@@ -207,6 +274,10 @@ class CollisionMaskWalls extends Walls {
   }
 
   getWallOverlayURI(): string | undefined {
+    if (this.wallMapRequested === undefined) {
+      return;
+    }
+
     const wallData = this.wallMaps[this.wallMapRequested];
     return wallData ? wallData.overlayURI : undefined;
   }

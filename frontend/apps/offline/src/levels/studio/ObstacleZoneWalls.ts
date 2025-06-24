@@ -1,11 +1,15 @@
-import type {ObstacleZones, Skin} from './skin';
+import type {ObstacleZones, Skin, CollisionRect} from './skin';
 import type {StudioData} from './Studio';
-import Walls from './Walls';
+import Walls, {DrawDebugRectFunction} from './Walls';
 
 class ObstacleZoneWalls extends Walls {
   readonly obstacleZones: ObstacleZones;
 
-  constructor(level: StudioData, skin: Skin, drawDebugRect: boolean) {
+  constructor(
+    level: StudioData,
+    skin: Skin,
+    drawDebugRect: DrawDebugRectFunction,
+  ) {
     super(level, skin, drawDebugRect);
 
     this.obstacleZones = skin.customObstacleZones || {};
@@ -18,11 +22,13 @@ class ObstacleZoneWalls extends Walls {
     collidableWidth: number,
     collidableHeight: number,
   ) {
-    const collisionRects =
-      this.obstacleZones[this.background]?.[this.wallMapRequested] || [];
+    const collisionRects: CollisionRect[] =
+      this.background && this.wallMapRequested
+        ? this.obstacleZones[this.background]?.[this.wallMapRequested] || []
+        : [];
 
     // Compare against a set of specific rectangles.
-    for (const rect in collisionRects) {
+    for (const rect of collisionRects) {
       const rectWidth = rect.maxX - rect.minX + 1;
       const rectHeight = rect.maxY - rect.minY + 1;
       const rectCenterX = rect.minX + rectWidth / 2;

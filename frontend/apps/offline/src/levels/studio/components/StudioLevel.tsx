@@ -20,9 +20,8 @@ import BlocklyLevel, {
 } from '@/levels/blockly/components/BlocklyLevel';
 
 import blocks from '../blocks';
+import {Skin} from '../skin';
 import Studio from '../Studio';
-import type {SkinsData, API} from '../types';
-//import Validator from '../Validator';
 
 import Visualization from './Visualization';
 
@@ -39,8 +38,10 @@ const DefaultStartBlocks: BlocklySerialization = {
 
 export interface StudioLevelProps extends BlocklyLevelProps {
   level: LevelData;
-  skins?: SkinsData;
-  api?: API;
+  skins?: {
+    [key: string]: Skin;
+  };
+  api?: object;
   customBlocks?: BlockDefinition[];
   visualization?: ReactNode;
   visualizationClassName?: string;
@@ -55,7 +56,6 @@ const StudioLevel: React.FunctionComponent<StudioLevelProps> = ({
   avatar,
   visualization,
   visualizationClassName,
-  api,
   options,
   ...rest
 }) => {
@@ -100,7 +100,7 @@ const StudioLevel: React.FunctionComponent<StudioLevelProps> = ({
   useEffect(() => {
     if (svg.current && environment.current.mainWorkspace) {
       // Update the avatar image
-      setCurrentAvatar(skin.smallStaticAvatar);
+      setCurrentAvatar(skin.smallStaticAvatar || '');
 
       // Create our Studio driver
       studio.current = new Studio(
@@ -110,9 +110,6 @@ const StudioLevel: React.FunctionComponent<StudioLevelProps> = ({
         },
         skin,
         environment.current,
-        {
-          ...(api || {}),
-        },
         svg.current,
       );
 

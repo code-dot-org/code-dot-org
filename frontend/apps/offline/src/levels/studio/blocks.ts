@@ -1,7 +1,8 @@
+import type {BlockDefinition} from '@/blockly/types';
+
 /**
  * Blocks common to 'Studio' levels.
  */
-
 const blocks: BlockDefinition[] = [
   {
     type: 'when_run',
@@ -31,6 +32,7 @@ const blocks: BlockDefinition[] = [
         ],
       },
     ],
+    generator: () => '\n',
   },
   {
     // Block for turning left or right.
@@ -51,6 +53,7 @@ const blocks: BlockDefinition[] = [
         ],
       },
     ],
+    generator: () => '\n',
   },
 ];
 

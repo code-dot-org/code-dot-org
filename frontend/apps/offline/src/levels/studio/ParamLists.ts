@@ -1,5 +1,8 @@
 import type {SoundBoard, PlaybackOptions} from '@/audio';
 
+import type {Skin} from './skin';
+import type {StudioData} from './Studio';
+
 class ParamLists {
   private level: StudioData;
   private skin: Skin;
@@ -19,19 +22,23 @@ class ParamLists {
 
       if (withRandom) {
         // Insert a random value for each sound group before the first sound in the group:
-        for (const group in skin.soundGroups) {
+        for (const group in this.skin.soundGroups) {
           const insertIndex = names.indexOf(
-            group + skin.soundGroups[group].minSuffix,
+            group + this.skin.soundGroups[group].minSuffix,
           );
           if (insertIndex !== -1) {
-            names.splice(insertIndex, 0, skin.soundGroups[group].randomValue);
+            names.splice(
+              insertIndex,
+              0,
+              this.skin.soundGroups[group].randomValue,
+            );
           }
         }
       }
     }
 
     if (this.level.paramRestrictions?.playSound) {
-      const restrictions = level.paramRestrictions.playSound;
+      const restrictions = this.level.paramRestrictions.playSound;
       names = names.filter(name => !!restrictions[name]);
     }
 
@@ -58,7 +65,7 @@ class ParamLists {
           ) || {}) as PlaybackOptions),
         };
 
-        soundBoard.playAudio(lowercaseSound, playbackOptions);
+        this.soundBoard.play(lowercaseSound, playbackOptions);
         callback(`"${sound}"`);
       };
 

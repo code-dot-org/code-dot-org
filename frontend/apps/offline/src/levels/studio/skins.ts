@@ -8,14 +8,14 @@ export const buildSkinUrl: (id: string, path: string) => string = (id, path) =>
   `/skins/${id}/${path}`;
 
 // Just iterate through a string array and build the skin data or do it via skinFor
-export const baseFor: (id: string) => Skin = (id: string) => {
+export function baseFor(id: string): Skin {
   const skinUrl = buildSkinUrl.bind(null, id);
   return {
     id,
     assetUrl: skinUrl,
     avatar: skinUrl('avatar.png'),
     avatar_2x: skinUrl('avatar_2x.png'),
-    goal: skinUrl('goal.png'),
+    avatarList: [],
     obstacle: skinUrl('obstacle.png'),
     smallStaticAvatar: skinUrl('small_static_avatar.png'),
     staticAvatar: skinUrl('static_avatar.png'),
@@ -112,49 +112,53 @@ export const baseFor: (id: string) => Skin = (id: string) => {
       'item_red_hearts',
       'item_yellow_hearts',
     ],
+
     // Images
-    airplane: assetUrl('projectile_airplane.png'),
-    basketball: assetUrl('projectile_basketball.png'),
-    disc: assetUrl('projectile_disc.png'),
-    pie: assetUrl('projectile_pie.png'),
-    pumpkin: assetUrl('projectile_pumpkin.png'),
-    star: assetUrl('projectile_star.png'),
-    sandwich: assetUrl('projectile_sandwich.png'),
-    snowball: assetUrl('projectile_snowball.png'),
-    yellow_hearts: assetUrl('yellow_hearts.gif'),
-    purple_hearts: assetUrl('purple_hearts.gif'),
-    red_hearts: assetUrl('red_hearts.gif'),
-    blue_fireball: assetUrl('blue_fireball.png'),
-    purple_fireball: assetUrl('purple_fireball.png'),
-    red_fireball: assetUrl('red_fireball.png'),
+    items: {
+      airplane: skinUrl('projectile_airplane.png'),
+      basketball: skinUrl('projectile_basketball.png'),
+      disc: skinUrl('projectile_disc.png'),
+      pie: skinUrl('projectile_pie.png'),
+      pumpkin: skinUrl('projectile_pumpkin.png'),
+      star: skinUrl('projectile_star.png'),
+      sandwich: skinUrl('projectile_sandwich.png'),
+      snowball: skinUrl('projectile_snowball.png'),
+      yellow_hearts: skinUrl('yellow_hearts.gif'),
+      purple_hearts: skinUrl('purple_hearts.gif'),
+      red_hearts: skinUrl('red_hearts.gif'),
+      blue_fireball: skinUrl('blue_fireball.png'),
+      purple_fireball: skinUrl('purple_fireball.png'),
+      red_fireball: skinUrl('red_fireball.png'),
 
-    item_airplane: assetUrl('projectile_airplane.png'),
-    item_basketball: assetUrl('projectile_basketball.png'),
-    item_disc: assetUrl('projectile_disc.png'),
-    item_pie: assetUrl('projectile_pie.png'),
-    item_pumpkin: assetUrl('projectile_pumpkin.png'),
-    item_star: assetUrl('projectile_star.png'),
-    item_sandwich: assetUrl('projectile_sandwich.png'),
-    item_snowball: assetUrl('projectile_snowball.png'),
-    item_yellow_hearts: assetUrl('yellow_hearts.gif'),
-    item_purple_hearts: assetUrl('purple_hearts.gif'),
-    item_red_hearts: assetUrl('red_hearts.gif'),
-    item_blue_fireball: assetUrl('blue_fireball.png'),
-    item_purple_fireball: assetUrl('purple_fireball.png'),
-    item_red_fireball: assetUrl('red_fireball.png'),
+      item_airplane: skinUrl('projectile_airplane.png'),
+      item_basketball: skinUrl('projectile_basketball.png'),
+      item_disc: skinUrl('projectile_disc.png'),
+      item_pie: skinUrl('projectile_pie.png'),
+      item_pumpkin: skinUrl('projectile_pumpkin.png'),
+      item_star: skinUrl('projectile_star.png'),
+      item_sandwich: skinUrl('projectile_sandwich.png'),
+      item_snowball: skinUrl('projectile_snowball.png'),
+      item_yellow_hearts: skinUrl('yellow_hearts.gif'),
+      item_purple_hearts: skinUrl('purple_hearts.gif'),
+      item_red_hearts: skinUrl('red_hearts.gif'),
+      item_blue_fireball: skinUrl('blue_fireball.png'),
+      item_purple_fireball: skinUrl('purple_fireball.png'),
+      item_red_fireball: skinUrl('red_fireball.png'),
 
-    whenUp: assetUrl('when-up.png'),
-    whenDown: assetUrl('when-down.png'),
-    whenLeft: assetUrl('when-left.png'),
-    whenRight: assetUrl('when-right.png'),
-    collide: assetUrl('when-sprite-collide.png'),
-    emotionAngry: assetUrl('emotion-angry.png'),
-    emotionNormal: assetUrl('emotion-nothing.png'),
-    emotionSad: assetUrl('emotion-sad.png'),
-    emotionHappy: assetUrl('emotion-happy.png'),
-    speechBubble: assetUrl('say-sprite.png'),
-    goal: assetUrl('goal.png'),
-    goalSuccess: assetUrl('goal_success.png'),
+      whenUp: skinUrl('when-up.png'),
+      whenDown: skinUrl('when-down.png'),
+      whenLeft: skinUrl('when-left.png'),
+      whenRight: skinUrl('when-right.png'),
+      collide: skinUrl('when-sprite-collide.png'),
+      emotionAngry: skinUrl('emotion-angry.png'),
+      emotionNormal: skinUrl('emotion-nothing.png'),
+      emotionSad: skinUrl('emotion-sad.png'),
+      emotionHappy: skinUrl('emotion-happy.png'),
+      speechBubble: skinUrl('say-sprite.png'),
+    },
+
+    goal: skinUrl('goal.png'),
+    goalSuccess: skinUrl('goal_success.png'),
 
     // Sounds
     builtinSounds: ['start', 'win', 'failure', 'flag'],
@@ -207,11 +211,15 @@ export const baseFor: (id: string) => Skin = (id: string) => {
 
     // Settings
     background: assetUrl('background.png'),
+    defaultBackground: 'cave',
     spriteHeight: 100,
     spriteWidth: 100,
     dropdownThumbnailWidth: 50,
     dropdownThumbnailHeight: 50,
     preloadAssets: true,
+    projectileFrames: 8,
+    itemFrames: 8,
+    explosion: skinUrl('explosion.png'),
 
     // Offset for the rectangle in collidable in which wall collisions occur.
     // Default to no offset here and allow other skins to override.
@@ -227,5 +235,50 @@ export const baseFor: (id: string) => Skin = (id: string) => {
       ['set activity to flee for', '"flee"'],
       ['set activity to none for', '"none"'],
     ],
+
+    backgrounds: {
+      ...Object.fromEntries(
+        [
+          'characters',
+          'checkers',
+          'clouds',
+          'cornered',
+          'dots',
+          'graffiti',
+          'space',
+          'squares',
+          'stripes',
+          'wood',
+        ].map(name => [
+          name,
+          {
+            background: skinUrl(`background_${name}.png`),
+            tiles: '',
+          },
+        ]),
+      ),
+    },
   };
-};
+}
+
+export function skinFor(
+  id: string,
+  builder: (skinUrl: (path: string) => string) => Partial<Skin>,
+): Skin {
+  const base = baseFor(id);
+  const skinUrl = buildSkinUrl.bind(null, id);
+  const options = builder(skinUrl);
+
+  return {
+    ...base,
+    ...options,
+    items: {
+      ...(base.items || {}),
+      ...(options.items || {}),
+    },
+    backgrounds: {
+      ...(base.backgrounds || {}),
+      ...(options.backgrounds || {}),
+    },
+  };
+}

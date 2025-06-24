@@ -1,4 +1,4 @@
-import HarvesterCell from '../HarvesterCell';
+import HarvesterCell, {FeatureType} from '../HarvesterCell';
 import {SquareType} from '../tiles';
 
 describe('HarvesterCell', () => {
@@ -8,18 +8,15 @@ describe('HarvesterCell', () => {
     expect(cell.startsHidden()).toEqual(false);
     expect(cell.isVariable()).toEqual(false);
     expect(cell.featureName()).toEqual('none');
-    expect(cell.featureType()).toEqual(HarvesterCell.FeatureType.NONE);
-    expect(cell.possibleFeatures_).toEqual([HarvesterCell.FeatureType.NONE]);
+    expect(cell.featureType()).toEqual(FeatureType.NONE);
+    expect(cell.possibleFeatures_).toEqual([FeatureType.NONE]);
   });
 
   it('can vary on type', () => {
     const variableFeatureCell = HarvesterCell.deserialize({
       tileType: SquareType.OPEN,
       value: 1,
-      possibleFeatures: [
-        HarvesterCell.FeatureType.CORN,
-        HarvesterCell.FeatureType.PUMPKIN,
-      ],
+      possibleFeatures: [FeatureType.CORN, FeatureType.PUMPKIN],
     });
 
     const variableFeatures = variableFeatureCell.getPossibleGridAssets();
@@ -29,14 +26,14 @@ describe('HarvesterCell', () => {
       tileType: SquareType.OPEN,
       value: 1,
       range: 1,
-      possibleFeatures: [HarvesterCell.FeatureType.CORN],
+      possibleFeatures: [FeatureType.CORN],
       startsHidden: true,
     });
     expect(variableFeatures[1].serialize()).toEqual({
       tileType: SquareType.OPEN,
       value: 1,
       range: 1,
-      possibleFeatures: [HarvesterCell.FeatureType.PUMPKIN],
+      possibleFeatures: [FeatureType.PUMPKIN],
       startsHidden: true,
     });
   });
@@ -46,7 +43,7 @@ describe('HarvesterCell', () => {
       tileType: SquareType.OPEN,
       value: 1,
       range: 2,
-      possibleFeatures: [HarvesterCell.FeatureType.CORN],
+      possibleFeatures: [FeatureType.CORN],
     });
 
     const variableRanges = variableRangeCell.getPossibleGridAssets();
@@ -56,14 +53,14 @@ describe('HarvesterCell', () => {
       tileType: SquareType.OPEN,
       value: 1,
       range: 1,
-      possibleFeatures: [HarvesterCell.FeatureType.CORN],
+      possibleFeatures: [FeatureType.CORN],
       startsHidden: false,
     });
     expect(variableRanges[1].serialize()).toEqual({
       tileType: SquareType.OPEN,
       value: 2,
       range: 2,
-      possibleFeatures: [HarvesterCell.FeatureType.CORN],
+      possibleFeatures: [FeatureType.CORN],
       startsHidden: false,
     });
   });

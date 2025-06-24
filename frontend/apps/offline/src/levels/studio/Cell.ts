@@ -82,6 +82,10 @@ class Cell {
       serialization.sprite,
     );
   }
+
+  getTileType(): number {
+    return this.tileType;
+  }
 }
 
 export default Cell;

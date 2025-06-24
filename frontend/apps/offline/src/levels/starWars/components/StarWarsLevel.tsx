@@ -1,9 +1,9 @@
-import StudioLevel from '@/levels/studio';
+import StudioLevel, {StudioLevelProps} from '@/levels/studio';
 
 import blocks from '../blocks';
 import skins from '../skins';
 
-const StarWarsLevel: React.FunctionComponent<MazeLevelProps> = ({
+const StarWarsLevel: React.FunctionComponent<StudioLevelProps> = ({
   level,
   customBlocks,
 }) => {

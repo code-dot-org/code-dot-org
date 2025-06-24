@@ -1,11 +1,11 @@
-import type Sound from './Sound';
+import Sound, {SoundConfig} from './Sound';
 import type SoundBoard from './SoundBoard';
 
 export interface MusicTrackDefinition {
   /** Corresponds to music filenames */
   name: string;
   /** The 'group' for this music */
-  group: string;
+  group?: string;
   /** On a 0.0 to 1.0 scale. */
   volume: number;
   /**
@@ -19,10 +19,7 @@ export interface MusicTrackDefinition {
  * Internal track representation. Includes track metadata and references to
  * loaded sound objects.
  */
-export interface MusicTrack {
-  name: string;
-  assetUrls: string[];
-  volume: number;
+export interface MusicTrack extends MusicTrackDefinition {
   sound: Sound;
   isLoaded: boolean;
 }
@@ -38,25 +35,65 @@ class MusicController {
   private muteMusic: boolean = false;
   private currentGroup?: string;
   private trackList: MusicTrack[] = [];
+  private playOnLoad?: string;
+  private loopRandomWithDelay: number = 0;
+  private betweenTrackTimeout?: ReturnType<typeof setTimeout>;
 
-  constructor(soundBoard: SoundBoard) {
+  /**
+   * Constructs the music controller to play with the provided audio mixer.
+   *
+   * If provided, a list of tracks can be preloaded all at once.
+   *
+   * @param soundBoard - The audio device to use.
+   * @param preloadTrackList - The optional list of tracks to preload.
+   * @param loopRandomWithDelay - If specified, after a song is completed, will
+   *        play a random track from the list after the given duration (in ms).
+   */
+  constructor(
+    soundBoard: SoundBoard,
+    preloadTrackList?: MusicTrackDefinition[],
+    loopRandomWithDelay?: number,
+  ) {
     this.soundBoard = soundBoard;
+    this.loopRandomWithDelay = loopRandomWithDelay || 0;
+
+    // Preload this provided track list
+    (preloadTrackList || []).forEach(track => this.register(track));
   }
 
-  preload() {
-    for (const track in this.trackList) {
-      track.sound = this.soundBoard.registerByFilenamesAndId(
-        track.assetUrls,
-        track.name,
-      );
+  /**
+   * Registers the sound information as a music track with the given unique id.
+   *
+   * If no `id` is given, the `id` is the `track.name` provided.
+   *
+   * IDs need to be unique across all sounds in the provided SoundBoard given
+   * when constructing this MusicController. If a provided `id` is already
+   * registered in the SoundBoard, that sound will be used for this music track.
+   */
+  register(track: MusicTrackDefinition, id?: string): MusicTrack {
+    const parts = track.name.split('/');
+    id ||= parts[parts.length - 1];
+    const soundConfig: SoundConfig = {
+      id: id,
+      mp3: track.name + '.mp3',
+      ogg: track.hasOgg ? track.name + '.ogg' : undefined,
+    };
+    const sound = this.soundBoard.register(soundConfig);
+    const realized: MusicTrack = {
+      ...track,
+      sound,
+      isLoaded: false,
+    };
 
-      track.sound.onLoadCallback = () => {
-        track.isLoaded = true;
-        if (this.playOnLoad === track.name) {
-          this.play(track.name);
-        }
-      };
-    }
+    realized.sound.onLoad = () => {
+      realized.isLoaded = true;
+      if (this.playOnLoad === realized.name) {
+        this.play(realized.name);
+      }
+    };
+
+    this.trackList.push(realized);
+    return realized;
   }
 
   setMuteMusic(isBackgroundMusicMuted: boolean, trackName: string) {
@@ -81,7 +118,7 @@ class MusicController {
       ? this.getTrackByName(trackName)
       : this.getRandomTrack();
 
-    if (track.sound && track.isLoaded) {
+    if (track?.sound && track?.isLoaded) {
       track.sound.play({
         volume: track.volume,
         onEnded: () => {
@@ -120,7 +157,7 @@ class MusicController {
 
     // Stop the audio after the fade.
     // Add a small margin due to poor fade granularity on fallback player.
-    window.setTimeout(
+    setTimeout(
       () => {
         this.stop();
       },
@@ -130,33 +167,27 @@ class MusicController {
 
   /**
    * Callback for when music stops, to update internal state.
-   * @param trackName - Name of track that was playing.  Should be bound when music is started.
+   * @param trackName - Name of track that was playing. Should be bound when music is started.
    */
   private whenMusicStopped(trackName: string) {
     if (this.nowPlaying === trackName) {
       this.nowPlaying = undefined;
     }
 
-    if (this.loopRandomWithDelay && this.wasPlayingWhenVideoShown) {
-      this.betweenTrackTimeout = window.setTimeout(() => {
-        this.betweenTrackTimeout_ = null;
-        if (!this.nowPlaying && !this.wasPlayingWhenVideoShown) {
+    if (this.loopRandomWithDelay > 0) {
+      this.betweenTrackTimeout = setTimeout(() => {
+        this.betweenTrackTimeout = undefined;
+        if (!this.nowPlaying) {
           this.play();
         }
       }, this.loopRandomWithDelay);
     }
   }
 
-  /**
-   * @param {string} name
-   * @private
-   */
   private getTrackByName(name: string): MusicTrack | undefined {
     return this.trackList.find(track => track.name === name);
   }
 
-  /**
-   */
   private getRandomTrack(): MusicTrack {
     const groupTracks = this.trackList.filter(t => {
       return !this.currentGroup || t.group === this.currentGroup;

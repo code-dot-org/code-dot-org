@@ -1,4 +1,4 @@
-import BeeCell from '../BeeCell';
+import BeeCell, {FeatureType, FlowerColor, CloudType} from '../BeeCell';
 
 describe('BeeCell', () => {
   const cellEquals = (left: BeeCell, right: BeeCell) => {
@@ -23,40 +23,20 @@ describe('BeeCell', () => {
     validate(0, 0, new BeeCell(0));
     validate(1, 0, new BeeCell(1));
     validate(2, 0, new BeeCell(2));
-    validate(1, 1, new BeeCell(1, BeeCell.FeatureType.FLOWER, 1));
+    validate(1, 1, new BeeCell(1, FeatureType.FLOWER, 1));
     validate(
       'P',
       1,
-      new BeeCell(
-        1,
-        BeeCell.FeatureType.FLOWER,
-        1,
-        undefined,
-        BeeCell.FlowerColor.PURPLE,
-      ),
+      new BeeCell(1, FeatureType.FLOWER, 1, undefined, FlowerColor.PURPLE),
     );
     validate(
       'R',
       1,
-      new BeeCell(
-        1,
-        BeeCell.FeatureType.FLOWER,
-        1,
-        undefined,
-        BeeCell.FlowerColor.RED,
-      ),
+      new BeeCell(1, FeatureType.FLOWER, 1, undefined, FlowerColor.RED),
     );
-    validate(1, -1, new BeeCell(1, BeeCell.FeatureType.HIVE, 1));
-    validate(
-      'FC',
-      1,
-      new BeeCell(1, BeeCell.FeatureType.FLOWER, 1, BeeCell.CloudType.STATIC),
-    );
-    validate(
-      'FC',
-      -1,
-      new BeeCell(1, BeeCell.FeatureType.HIVE, 1, BeeCell.CloudType.STATIC),
-    );
+    validate(1, -1, new BeeCell(1, FeatureType.HIVE, 1));
+    validate('FC', 1, new BeeCell(1, FeatureType.FLOWER, 1, CloudType.STATIC));
+    validate('FC', -1, new BeeCell(1, FeatureType.HIVE, 1, CloudType.STATIC));
   });
 
   it('generates all possible grid assets', function () {

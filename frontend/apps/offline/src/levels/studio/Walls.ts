@@ -1,37 +1,46 @@
+import type Collidable from './Collidable';
+import type {Skin} from './skin';
 import type {StudioData} from './Studio';
 
-export interface Rect {
-  width: number;
-  height: number;
-}
+export type DrawDebugRectFunction = (
+  name: string,
+  xCenter: number,
+  yCenter: number,
+  width: number,
+  height: number,
+) => void;
 
 /**
  * Represents logic related to walls and collisions within Studio maps.
  */
 class Walls {
   readonly gridAlignedMovement: boolean;
-  readonly drawDebugRect: boolean;
+  readonly drawDebugRect: DrawDebugRectFunction;
   readonly wallCollisionRectOffsetX: number;
   readonly wallCollisionRectOffsetY: number;
   readonly wallCollisionRectWidth: number;
   readonly wallCollisionRectHeight: number;
-  readonly background?: string;
-  readonly wallMapRequested?: string;
+  protected background?: string;
+  protected wallMapRequested?: string;
 
-  constructor(level: StudioData, skin: Skin, drawDebugRect: boolean) {
-    this.gridAlignedMovement = skin.gridAlignedMovement;
-    this.wallCollisionRectOffsetX = skin.wallCollisionRectOffsetX;
-    this.wallCollisionRectOffsetY = skin.wallCollisionRectOffsetY;
-    this.wallCollisionRectWidth = skin.wallCollisionRectWidth;
-    this.wallCollisionRectHeight = skin.wallCollisionRectHeight;
+  constructor(
+    level: StudioData,
+    skin: Skin,
+    drawDebugRect: DrawDebugRectFunction,
+  ) {
+    this.gridAlignedMovement = !!skin.gridAlignedMovement;
+    this.wallCollisionRectOffsetX = skin.wallCollisionRectOffsetX || 0;
+    this.wallCollisionRectOffsetY = skin.wallCollisionRectOffsetY || 0;
+    this.wallCollisionRectWidth = skin.wallCollisionRectWidth || 0;
+    this.wallCollisionRectHeight = skin.wallCollisionRectHeight || 0;
     this.drawDebugRect = drawDebugRect;
   }
 
-  setBackground(background: string) {
+  setBackground(background?: string) {
     this.background = background;
   }
 
-  setWallMapRequested(wallMapRequested: string) {
+  setWallMapRequested(wallMapRequested?: string) {
     this.wallMapRequested = wallMapRequested;
   }
 
@@ -40,7 +49,7 @@ class Walls {
    * position coordinates (center)
    */
   willCollidableTouchWall(
-    collidable: Rect,
+    collidable: Collidable,
     xCenter: number,
     yCenter: number,
   ): boolean {

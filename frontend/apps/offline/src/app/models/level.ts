@@ -12,6 +12,7 @@ import URL from 'url';
 import type {BlocklySerialization} from '@/blockly/types';
 import {convertBlocklyXmlToJson} from '@/blockly/xml';
 import type {MazeData} from '@/levels/maze/MazeController';
+import type {StudioData} from '@/levels/studio/Studio';
 
 /** Describes a single level hint. */
 export interface HintData {
@@ -134,6 +135,8 @@ export interface LevelData {
   containedLevelNames?: string[];
   /** Maze level data. */
   mazeData?: MazeData;
+  /** Studio level data. */
+  studioData?: StudioData;
   /** Artist level data. */
   artistData?: ArtistData;
   /** SpriteLab level data. */
@@ -487,11 +490,7 @@ export const parseLevelData: (
 
   // Parse maze data for such levels
   let isBlockly = false;
-  if (
-    ret.type === 'Maze' ||
-    ret.type === 'Karel' ||
-    ret.type === 'StarWarsGrid'
-  ) {
+  if (ret.type === 'Maze' || ret.type === 'Karel') {
     isBlockly = true;
     ret.mazeData = {
       skinId: config.properties?.skin || 'birds',
@@ -504,6 +503,18 @@ export const parseLevelData: (
       startDirection: config.properties?.start_direction
         ? parseInt(config.properties?.start_direction)
         : undefined,
+    };
+  }
+
+  if (ret.type === 'StarWarsGrid') {
+    isBlockly = true;
+    ret.studioData = {
+      skinId: config.properties?.skin || 'birds',
+      map: config.properties?.maze
+        ? JSON.parse(sanitizeJSON(config.properties?.maze))
+        : config.properties?.serialized_maze
+          ? JSON.parse(sanitizeJSON(config.properties?.serialized_maze))
+          : undefined,
     };
   }
 

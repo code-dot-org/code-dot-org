@@ -1,4 +1,6 @@
-import Walls from './Walls';
+import type {Skin} from './skin';
+import type {StudioData} from './Studio';
+import Walls, {DrawDebugRectFunction} from './Walls';
 
 class TileWalls extends Walls {
   readonly squareSize: number;
@@ -7,9 +9,9 @@ class TileWalls extends Walls {
   readonly getWallValue: (row: number, col: number) => number;
 
   constructor(
-    level: BlocklyData,
+    level: StudioData,
     skin: Skin,
-    drawDebugRect: boolean,
+    drawDebugRect: DrawDebugRectFunction,
     squareSize: number,
     rows: number,
     columns: number,
