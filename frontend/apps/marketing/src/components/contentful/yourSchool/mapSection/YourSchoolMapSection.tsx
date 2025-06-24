@@ -48,7 +48,7 @@ const YourSchoolMapSection: React.FC<YourSchoolMapSectionProps> = ({
         Find your school on the interactive map below to see if computer science
         was offered during the 2023-2024 school year. Then{' '}
         <Link href="#form">take the survey</Link> to make sure your school is
-        accurately represented for 2024-
+        accurately represented for {new Date().getFullYear() - 1}-
         {new Date().getFullYear()}.
       </BodyTwoText>
 
