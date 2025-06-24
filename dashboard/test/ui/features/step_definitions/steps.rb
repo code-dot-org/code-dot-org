@@ -584,6 +584,7 @@ When "I click the sign-in button to load a new page" do
     break # Success
   rescue JSON.ParserError => exception
     if attempt < max_retries
+      puts "Session Id: #{@browser.session_id}"
       puts "JSON parser error on sign-in click (attempt #{attempt}): #{exception.message}"
       sleep 2
       next
