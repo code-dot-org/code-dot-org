@@ -104,6 +104,8 @@ const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
                     href: firstAnnouncementBannerLink.fields.primaryTarget,
                     external:
                       firstAnnouncementBannerLink.fields.isThisAnExternalLink,
+                    openInNewTab:
+                      firstAnnouncementBannerLink.fields.isThisAnExternalLink,
                   }
                 : undefined,
             }
@@ -129,6 +131,9 @@ const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
               ariaLabel: firstButtonLink.fields.ariaLabel,
               iconRight: firstButtonLink.fields.isThisAnExternalLink
                 ? externalLinkIconProps
+                : undefined,
+              target: firstButtonLink.fields.isThisAnExternalLink
+                ? '_blank'
                 : undefined,
             }
           : undefined
