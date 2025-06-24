@@ -31,7 +31,7 @@ class AichatGeminiClient < AichatAiClient
     {
       'prompt_tokens' =>  prompt_tokens || 0,
 
-      # note - total tokens - primpt tokens seems to be what the OpenAI compat API returns,
+      # NOTE: (total tokens - prompt tokens) seems to be what the OpenAI compat API returns,
       # but again we should revisit
       'completion_tokens' => total_tokens &&  prompt_tokens ? total_tokens -  prompt_tokens : 0,
 
