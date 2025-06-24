@@ -6,6 +6,7 @@ import {
   FeedbackData,
   logAiInteractionFeedback,
 } from '@cdo/apps/aiEvaluation/aiInteractionFeedbackApi';
+import {ValueOf} from '@cdo/apps/types/utils';
 import {
   AiChatModelIds,
   AiInteractionStatus as Status,
@@ -18,19 +19,28 @@ const systemPrompts = {
 
 export type AiTutor2MessageType = 'hint' | 'user';
 
+// This type is the union of all the valid AI Model IDs
+// Note: this type seems out of place, based on name `AiChat` but we will eventually
+//  need to  come up with a name for the shared plumbing (for AI Chat and AI Tutor)
+//  and then this will take on that name and can be move accordingly
+export type AiChatModelIdType = ValueOf<typeof AiChatModelIds>;
+
 export default class AiTutor2Manager {
   private currentLevelId: string | null;
   private scriptId: number | undefined;
   private channelId: string | undefined;
+  private modelId: AiChatModelIdType;
 
   constructor(
     currentLevelId: string | null,
     scriptId: number | undefined,
-    channelId: string | undefined
+    channelId: string | undefined,
+    modelId: AiChatModelIdType = AiChatModelIds.GEMINI
   ) {
     this.currentLevelId = currentLevelId;
     this.scriptId = scriptId;
     this.channelId = channelId;
+    this.modelId = modelId;
   }
 
   async askAiTutor2(message: string, type: AiTutor2MessageType) {
@@ -52,7 +62,7 @@ export default class AiTutor2Manager {
 
     const aiCustomizations = {
       ...EMPTY_AI_CUSTOMIZATIONS,
-      selectedModelId: AiChatModelIds.CHATGPT,
+      selectedModelId: this.modelId,
       systemPrompt: systemPrompts[type],
     };
 
@@ -71,7 +81,7 @@ export default class AiTutor2Manager {
       scriptId: this.scriptId,
       metadata: {
         channelId: this.channelId || '',
-        modelId: AiChatModelIds.CHATGPT,
+        modelId: this.modelId,
         systemPrompt: systemPrompts[type],
         type,
         userMessage: message,
