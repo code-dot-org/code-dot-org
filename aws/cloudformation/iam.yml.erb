@@ -1258,19 +1258,25 @@ roles.each do |name, config| %>
                   StringEquals:
                     'aws:ResourceTag/environment-type': <%=environment_type%>
 
-              # CloudFront DELETE actions - restricted to tagged resources
+              # CloudFront DELETE actions for taggable resources - restricted to tagged resources
               - Sid: AllowCloudFrontDeleteActionsOnTaggedResources
                 Effect: Allow
                 Action:
                   - cloudfront:DeleteDistribution
-                  - cloudfront:DeleteOriginAccessControl
-                  - cloudfront:DeleteCachePolicy
                   - cloudfront:DeleteFunction
                   - cloudfront:DeleteResponseHeadersPolicy
                 Resource: '*'
                 Condition:
                   StringEquals:
                     'aws:ResourceTag/environment-type': <%=environment_type%>
+
+              # CloudFront DELETE actions for non-taggable resources - no tag restriction
+              - Sid: AllowCloudFrontDeleteActionsForNonTaggableResources
+                Effect: Allow
+                Action:
+                  - cloudfront:DeleteOriginAccessControl
+                  - cloudfront:DeleteCachePolicy
+                Resource: '*'
 
               # CloudFront DESCRIBE/GET actions - allowed on any resource
               - Sid: AllowCloudFrontDescribeActions
