@@ -57,12 +57,15 @@ module AichatOpenaiHelper
   end
 
   def self.format_message(message, encrypted_channel_id, level_name)
+    text = message['chatMessageText']
+    text = text + "\n" + message['chatMessageTextExtra'] if message['chatMessageTextExtra']
+
     formatted = {
       role: message['role'],
       content: [
         {
           type: "text",
-          text: [message['chatMessageText'], (message['chatMessageTextExtra'] || '')].join("\n")
+          text: text
         }
       ]
     }
