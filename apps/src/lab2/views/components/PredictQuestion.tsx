@@ -30,17 +30,29 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
     return null;
   }
 
-  const handleMultiSelectChanged = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSelectionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
     if (predictSettings.isMultiSelect) {
-      const newResponse = predictResponse ? predictResponse.split(',') : [];
+      // multi-select behavior
+      const selections = predictResponse ? predictResponse.split(',') : [];
       if (e.target.checked) {
-        newResponse.push(e.target.value);
-      } else if (newResponse.includes(e.target.value)) {
-        newResponse.splice(newResponse.indexOf(e.target.value), 1);
+        selections.push(value);
+      } else {
+        const index = selections.indexOf(value);
+        if (index > -1) {
+          selections.splice(index, 1);
+        }
+        setPredictResponse(selections.join(','));
       }
-      setPredictResponse(newResponse.join(','));
     } else {
-      setPredictResponse(e.target.value);
+      // single-select via checkbox
+      if (e.target.checked) {
+        // Clear any previous option checked and set this one.
+        setPredictResponse(value);
+      } else {
+        // Unchecked: clear response.
+        setPredictResponse('');
+      }
     }
   };
 
@@ -70,14 +82,12 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
                 className={moduleStyles.multipleChoiceContainer}
               >
                 <input
-                  type={predictSettings.isMultiSelect ? 'checkbox' : 'radio'}
+                  type="checkbox"
                   value={index.toString()}
-                  checked={
-                    (predictResponse &&
-                      predictResponse.split(',').includes(index.toString())) ||
-                    false
-                  }
-                  onChange={handleMultiSelectChanged}
+                  checked={Boolean(
+                    predictResponse?.split(',').includes(index.toString())
+                  )}
+                  onChange={handleSelectionChange}
                   name={option}
                   key={index}
                   disabled={predictAnswerLocked}
