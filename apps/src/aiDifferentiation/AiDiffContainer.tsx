@@ -92,14 +92,14 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       position={{x: positionX, y: positionY}}
       onStop={onStopHandler}
     >
-      <FocusLock>
-        <div
-          // eslint-disable-next-line react/forbid-dom-props
-          data-testid="draggable-test-id"
-          id="draggable-id"
-          className={style.aiDiffContainer}
-          style={open ? undefined : {display: 'none'}}
-        >
+      <div
+        // eslint-disable-next-line react/forbid-dom-props
+        data-testid="draggable-test-id"
+        id="draggable-id"
+        className={style.aiDiffContainer}
+        style={open ? undefined : {display: 'none'}}
+      >
+        <FocusLock>
           <div className={classNames(style.aiDiffHeader, 'ai_diff_handle')}>
             <div className={style.aiDiffHeaderLeftSide}>
               <div className={style.aiBotHeader}>
@@ -155,8 +155,8 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
                   />
                 )}
           </div>
-        </div>
-      </FocusLock>
+        </FocusLock>
+      </div>
     </Draggable>
   );
 };
