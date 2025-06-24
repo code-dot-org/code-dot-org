@@ -6,12 +6,12 @@ class AiSystemPrompts::AitutorSystemPromptHelperTest < ActionView::TestCase
   STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
 
   setup do
-    @unit = create(:script, :with_levels)
+    @unit = create(:script, :with_levels, :in_single_unit_course)
     @level = @unit.levels.first
 
     # Sample Javalab level
     @level_instructions = "Write a loop."
-    @csa_unit = create(:csa_script)
+    @csa_unit = create(:csa_script, :in_single_unit_course)
     @javalab_level = create(:javalab, :with_instructions)
     create(:csa_script_level, levels: [@javalab_level])
 
