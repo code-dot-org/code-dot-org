@@ -100,14 +100,6 @@ FactoryBot.define do
         teacher = create :teacher
         workshop.enrollments << build(:pd_enrollment, workshop: workshop, user: teacher)
       end
-      if workshop.course == Pd::Workshop::COURSE_BUILD_YOUR_OWN
-        if workshop.course_offerings.blank?
-          co = CourseOffering.first || build(:course_offering)
-          workshop.course_offerings = [co]
-        end
-        workshop.participant_group_type = 'Regional' unless workshop.participant_group_type
-        workshop.subject = nil
-      end
     end
 
     after(:create) do |workshop, evaluator|

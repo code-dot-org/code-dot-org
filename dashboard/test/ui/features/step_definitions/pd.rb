@@ -589,7 +589,9 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
       session_location_name: 'Buffalo',
       num_sessions: 1,
       sessions_from: Date.new(2018, 4, 1),
-      enrolled_and_attending_users: number_type == 'people' ? number.to_i : 0
+      enrolled_and_attending_users: number_type == 'people' ? number.to_i : 0,
+      participant_group_type: course == Pd::Workshop::COURSE_BUILD_YOUR_OWN ? 'Regional' : nil,
+      course_offerings: course == Pd::Workshop::COURSE_BUILD_YOUR_OWN ? [CourseOffering.first || FactoryBot.create(:course_offering)] : nil,
     )
   end
 
