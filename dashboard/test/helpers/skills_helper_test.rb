@@ -57,18 +57,12 @@ class SkillsHelperTest < ActiveSupport::TestCase
     assert_equal 3, student1_data.keys.length
 
     skill1_data = student1_data[@skill1.id]
-    assert_equal 'survival', skill1_data[:skill_key]
-    assert_equal 'Survive the apocalypse', skill1_data[:skill_description]
     assert_equal 'Mastered', skill1_data[:mastery_level]
 
     skill2_data = student1_data[@skill2.id]
-    assert_equal 'cuddle_cats', skill2_data[:skill_key]
-    assert_equal 'Cuddle cats effectively for maximum cat comfort', skill2_data[:skill_description]
     assert_equal 'Shown', skill2_data[:mastery_level]
 
     skill3_data = student1_data[@skill3.id]
-    assert_equal 'play_accordion', skill3_data[:skill_key]
-    assert_equal 'Play the accordion with skill and virtuosity', skill3_data[:skill_description]
     assert_equal 'Not seen', skill3_data[:mastery_level]
 
     student2_data = result[@student2.id]
