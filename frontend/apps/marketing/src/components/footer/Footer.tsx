@@ -1,6 +1,5 @@
 'use client';
 import {usePathname, useRouter} from 'next/navigation';
-import {useEffect} from 'react';
 
 import DSCOFooter, {
   FooterProps,
@@ -115,13 +114,6 @@ const Footer = ({locale}: GlobalFooterProps) => {
     router.push(newPathName);
     Localize.setLanguage(localeCode);
   };
-
-  useEffect(() => {
-    // Displays the cookie dialog if not already confirmed
-    if (window?.OneTrust && !window.OneTrust.IsAlertBoxClosedAndValid()) {
-      window.OneTrust.ToggleInfoDisplay();
-    }
-  }, []);
 
   return (
     <DSCOFooter
