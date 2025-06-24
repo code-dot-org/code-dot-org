@@ -127,7 +127,6 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
             >
               <div className={moduleStyles.inside}>
                 <AiTutor2Chat
-                  type="user"
                   getAdditionalPrompt={getAiTutor2AdditionalPrompt}
                 />
               </div>

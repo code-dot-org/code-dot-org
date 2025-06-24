@@ -6,20 +6,17 @@ import {
   setChatButtons,
 } from '@cdo/apps/aichat/redux';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
-import {AiTutor2MessageType} from '@cdo/apps/lab2/ai/AiTutor2Manager';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 import moduleStyles from './AiTutor2Chat.module.scss';
 
 interface AiTutor2ChatProps {
-  type: AiTutor2MessageType;
   getAdditionalPrompt: () => string;
 }
 
 // A free chat with lab-supplied context appended to each question.
 const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
-  type,
   getAdditionalPrompt,
 }) => {
   const dispatch = useAppDispatch();
