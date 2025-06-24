@@ -79,7 +79,7 @@ Feature: Header navigation bar
     And I press "header-teacher-professional-learning" to load a new page
     Then check that I am on "http://studio.code.org/my-professional-learning"
     And I press "header-teacher-incubator" to load a new page
-    Then check that I am on "http://studio.code.org/incubator"
+    Then check that I am on "http://code.org/incubator"
     # The logo itself
     And I press "logo_home_link" to load a new page
     Then check that I am on "http://studio.code.org/home"
@@ -100,7 +100,7 @@ Feature: Header navigation bar
     And I press "header-student-projects" to load a new page
     Then check that I am on "http://studio.code.org/projects"
     And I press "header-incubator" to load a new page
-    Then check that I am on "http://studio.code.org/incubator"
+    Then check that I am on "http://code.org/incubator"
     # The logo itself
     And I press "logo_home_link" to load a new page
     Then check that I am on "http://studio.code.org/home"
