@@ -39,7 +39,7 @@ As of 2024, all new labs should be based on Lab2. To create a new lab, you need 
       - DO: use `view:` with a dynamic import() call with a webpack chunk name defined
       - DO NOT: use `hardcodedView:` with a static import of your react view, even if you see examples doing this (why: this results in all lab2 code being loaded in a huge mega-bundle)
     - Create an index.js file for your lab, see [apps/pythonlab/index.js](https://github.com/code-dot-org/code-dot-org/blob/b81b6b98f1ecc01972bf2ae43589b06c40e6183c/apps/src/pythonlab/index.js), this is required to make our typescript config work with dynamic imports.
-    - Add the new lab type to [apps/lab2EntryPoints.ts](https://github.com/code-dot-org/code-dot-org/blob/b81b6b98f1ecc01972bf2ae43589b06c40e6183c/apps/lab2EntryPoints.ts#L21)
+    - Add the new lab type to [apps/lab2EntryPoints.ts](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/lab2EntryPoints.ts)
 
 That’s it!
 
@@ -47,11 +47,11 @@ That’s it!
 
 Currently, the following level apps are built for **Lab2**:
 
+- [AI Chat](../aichat/)
+- [BubbleChoice](../bubbleChoice)
 - [Music](../music/)
 - [Panels](../panels/)
+- [Python Lab](../pythonlab)
 - [StandaloneVideo](../standaloneVideo)
-- [BubbleChoice](../bubbleChoice)
-
-The full list of supported level apps, along with their associated properties, is declared in `LabViewsRenderer` [here](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/lab2/views/LabViewsRenderer.tsx#L47).
 
 **Music** drove the initial implementation of **Lab2**.
