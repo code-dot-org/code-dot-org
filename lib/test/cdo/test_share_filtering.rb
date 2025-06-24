@@ -13,6 +13,53 @@ class ShareFilteringTest < Minitest::Test
       '</block></next></block></xml>'
   end
 
+  # @return [String] A sample JSON program.
+  def generate_json_program
+    {
+      "variables" => [
+        {"name" => "myVar"},
+        {"name" => ""},
+        {"name" => nil}
+      ],
+      "blocks" => {
+        "languageVersion" => 0,
+        "blocks" => [
+          {
+            "type" => "when_run",
+            "id"   => "abc123",
+            "fields" => {
+              "TEXT" => '"some text"'
+            },
+            "inputs" => {},
+            "next" => {
+              "block" => {
+                "type" => "gamelab_comment",
+                "id"   => "cmt001",
+                "fields" => {
+                  "COMMENT" => '<field name="C">nice comment</field>'
+                },
+                "inputs" => {
+                  "INPUT1" => {
+                    "block" => {
+                      "type" => "some_block",
+                      "id"   => "blk002",
+                      "fields" => {
+                        "TEXT" => '"inner text"'
+                      },
+                      "next" => {"block" => nil}
+                    },
+                    "shadow" => nil
+                  }
+                },
+                "next" => {"block" => nil}
+              }
+            }
+          }
+        ]
+      }
+    }.to_json
+  end
+
   def test_find_share_failure_with_email_address
     program = generate_xml_program('My Email', 'test@example.com')
     assert_equal(
@@ -218,54 +265,7 @@ class ShareFilteringTest < Minitest::Test
     assert_nil ShareFiltering.clean_text_value(123)
   end
 
-  # Helper function for testing
-  def generate_json_program
-    {
-      "variables" => [
-        {"name" => "myVar"},
-        {"name" => ""},
-        {"name" => nil}
-      ],
-      "blocks" => {
-        "languageVersion" => 0,
-        "blocks" => [
-          {
-            "type" => "when_run",
-            "id"   => "abc123",
-            "fields" => {
-              "TEXT" => '"some text"'
-            },
-            "inputs" => {},
-            "next" => {
-              "block" => {
-                "type" => "gamelab_comment",
-                "id"   => "cmt001",
-                "fields" => {
-                  "COMMENT" => '<field name="C">nice comment</field>'
-                },
-                "inputs" => {
-                  "INPUT1" => {
-                    "block" => {
-                      "type" => "some_block",
-                      "id"   => "blk002",
-                      "fields" => {
-                        "TEXT" => '"inner text"'
-                      },
-                      "next" => {"block" => nil}
-                    },
-                    "shadow" => nil
-                  }
-                },
-                "next" => {"block" => nil}
-              }
-            }
-          }
-        ]
-      }
-    }.to_json
-  end
-
-  def test_extract_user_text_blockly_helper_function
+  def test_extract_text_blockly_helper_function
     json = generate_json_program
     texts = ShareFiltering.extract_text_blockly(json)
 
