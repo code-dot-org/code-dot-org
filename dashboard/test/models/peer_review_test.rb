@@ -52,7 +52,7 @@ class PeerReviewTest < ActiveSupport::TestCase
       submittable: true,
       peer_reviewable: 'true'
     )
-    script_only_instructor_review = create :script, only_instructor_review_required: true
+    script_only_instructor_review = create :script, :in_single_unit_course, only_instructor_review_required: true
     script_level_only_instructor_review = create :script_level, levels: [level], script: script_only_instructor_review
     level_source = create :level_source, level: level
 

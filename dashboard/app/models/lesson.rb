@@ -376,6 +376,7 @@ class Lesson < ApplicationRecord
       edit_lesson_path(id: id)
   end
 
+  # TODO: TEACH-2049 Should this path use the unit group? Unsure where this is used.
   def get_uncached_show_path
     # use a custom path for viewing hoc lesson plans on levelbuilder, so that
     # levelbuilders can see the gray "extra links" box with a link to edit
