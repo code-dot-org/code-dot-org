@@ -1,5 +1,6 @@
 class AiDiffController < ApplicationController
   include AiDiffBedrockHelper
+  include AiDiffBedrockAgentHelper
   include LevelsHelper
   authorize_resource class: false
 
@@ -22,6 +23,14 @@ class AiDiffController < ApplicationController
 
     session_id = params[:sessionId].presence
 
+    begin
+      AiDiffBedrockAgentHelper.request_agent_chat
+    rescue => exception
+      puts 'Exception calling agent'
+      puts 'details:'
+      puts exception.inspect
+    end
+
     response_body = get_response_body(session_id)
     # get or create thread obj
     begin
@@ -29,6 +38,73 @@ class AiDiffController < ApplicationController
         user_id: current_user.id,
         external_id: response_body[:session_id],
         llm_version: AiDiffBedrockHelper::MODEL_ID,
+        unit_id: @unit&.id,
+        level_id: @lesson&.id,
+      )
+    rescue StandardError => exception
+      return render status: :bad_request, json: {error: exception.message}
+    end
+
+    # Log messages if the response was successful and not flagged for PII.
+    if response_body[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK]
+      # Add user message to thread
+      begin
+        AidiffMessage.create!(
+          aidiff_thread_id: @thread.id,
+          external_id: @thread.external_id,
+          role: :user,
+          content: params[:inputText],
+          is_preset: params[:isPreset],
+        )
+      rescue StandardError => exception
+        return render status: :bad_request, json: {error: exception.message}
+      end
+
+      # Add response message to thread
+      begin
+        assistant_message = AidiffMessage.create!(
+          aidiff_thread_id: @thread.id,
+          external_id: @thread.external_id,
+          role: :assistant,
+          content: response_body[:chat_message_text],
+          is_preset: params[:isPreset],
+        )
+        response_body[:messageId] = assistant_message.id
+        response_body[:threadId] = @thread.id
+      rescue StandardError => exception
+        return render status: :bad_request, json: {error: exception.message}
+      end
+    end
+
+    render(status: :ok, json: response_body)
+  end
+
+  # params are
+  # context:
+  # => type:
+  # => levelId:
+  # => lessonId:
+  # => unitId:
+  # => courseId:
+  # inputText:
+  # unitDisplayName:
+  # sessionId:
+  # isPreset:
+  # POST /ai_diff/agent_chat_completion
+  def agent_chat_completion
+    unless has_required_params?
+      return render status: :bad_request, json: {}
+    end
+
+    session_id = params[:sessionId].presence
+
+    response_body = get_response_body_agent(session_id)
+    # get or create thread obj
+    begin
+      @thread = AidiffThread.find_or_create_by!(
+        user_id: current_user.id,
+        external_id: response_body[:session_id],
+        llm_version: AiDiffBedrockAgentHelper::MODEL_ID,
         unit_id: @unit&.id,
         level_id: @lesson&.id,
       )
@@ -225,6 +301,79 @@ class AiDiffController < ApplicationController
     )
 
     bedrock_rag_response = AiDiffBedrockHelper.request_bedrock_rag_chat(params[:inputText], prompt, lesson_num, unit_num, course_names, session_id, @section_contexts)
+    #TODO: check for profanity/PII in model response
+
+    {
+      role: "assistant",
+      status: SharedConstants::AI_INTERACTION_STATUS[:OK],
+      chat_message_text: bedrock_rag_response.output.text,
+      session_id: bedrock_rag_response.session_id
+    }
+  end
+
+  private def get_response_body_agent(session_id)
+    if contains_pii?
+      return {
+        role: "assistant",
+        status: SharedConstants::AI_INTERACTION_STATUS[:PII_VIOLATION],
+        chat_message_text: 'Sorry, I cannot accept messages that contain personal information.',
+        session_id: session_id
+      }
+    end
+
+    # get lesson info for prompt generation
+    context = params[:context]
+
+    if context[:levelId]
+      @level = Level.find(context[:levelId])
+    end
+
+    if context[:lessonId]
+      @lesson = Lesson.find(context[:lessonId])
+    elsif @level
+      script_level = @level.script_levels&.first
+      @lesson = script_level&.lesson
+    end
+
+    if context[:unitId]
+      @unit = Unit.find(context[:unitId])
+    elsif @lesson
+      @unit = Unit.find(@lesson.script_id)
+    end
+
+    if context[:courseId]
+      @unit_group = UnitGroup.find(context[:courseId])
+    elsif @unit
+      @unit_group = @unit&.unit_groups&.first
+    end
+
+    if context[:type] == SharedConstants::AI_DIFF_CONTEXT[:GENERAL]
+      @section_contexts = get_active_sections
+    end
+
+    lesson_name = @lesson&.name
+    lesson_num = @lesson&.relative_position
+
+    unit_num = @unit&.unit_group_units&.first&.position
+
+    course_names = @unit_group.present? ? [@unit_group.name, @unit_group.family_name] : ([@unit&.name] if @unit.present?)
+
+    course_display_name = CourseOffering.find_by(id: @unit_group&.course_version&.course_offering_id)&.display_name
+
+    student_code = get_student_code(context[:viewAsUserId] || current_user.id, @level, @unit.id) if context[:type] == SharedConstants::AI_DIFF_CONTEXT[:LEVEL]
+
+    prompt = AiDiffBedrockAgentHelper.get_prompt_for_context(
+      context[:type],
+      course_display_name,
+      params[:unitDisplayName],
+      lesson_name,
+      params[:isPreset],
+      @section_contexts,
+      @level&.long_instructions,
+      student_code
+    )
+
+    bedrock_rag_response = AiDiffBedrockAgentHelper.request_bedrock_rag_chat(params[:inputText], prompt, lesson_num, unit_num, course_names, session_id, @section_contexts)
     #TODO: check for profanity/PII in model response
 
     {
