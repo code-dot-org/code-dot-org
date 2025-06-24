@@ -1,6 +1,6 @@
 {
-  "key": "ui-test-course",
-  "display_name": "ui-test-course",
+  "key": "ui-test-original-course",
+  "display_name": "ui-test-original-course",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": null,
