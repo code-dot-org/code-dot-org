@@ -4,6 +4,7 @@ import {
   setGetUserMessageExtra,
   setSavedAiCustomizationProperty,
   setChatButtons,
+  clearChatMessages,
 } from '@cdo/apps/aichat/redux';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -62,7 +63,11 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
 
   return (
     <div className={moduleStyles.container}>
-      <ChatWorkspace onClear={() => {}} />
+      <ChatWorkspace
+        onClear={() => {
+          dispatch(clearChatMessages());
+        }}
+      />
     </div>
   );
 };
