@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_06_24_183835) do
+ActiveRecord::Schema.define(version: 2025_06_24_202632) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -2597,6 +2597,12 @@ ActiveRecord::Schema.define(version: 2025_06_24_183835) do
     t.index ["studio_person_id"], name: "index_users_on_studio_person_id"
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
     t.index ["username", "deleted_at"], name: "index_users_on_username_and_deleted_at", unique: true
+  end
+
+  create_table "validate_charsets", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.boolean "flag"
   end
 
   create_table "videos", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
