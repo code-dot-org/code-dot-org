@@ -16,7 +16,7 @@ interface AiTutor2ChatProps {
   getAdditionalPrompt: () => string;
 }
 
-// A free chat with lab-supplied context appended to each question.
+// A free chat with lab-supplied context added to each question.
 const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   getAdditionalPrompt,
 }) => {

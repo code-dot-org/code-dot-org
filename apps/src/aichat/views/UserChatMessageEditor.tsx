@@ -72,7 +72,7 @@ const UserChatMessageEditor: React.FunctionComponent<{
 
   return (
     <>
-      {chatButtons && (
+      {chatButtons.length > 0 && (
         <div className={moduleStyles.chatButtonsContainer}>
           {chatButtons.map(button => (
             <Button

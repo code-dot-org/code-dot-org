@@ -12,9 +12,6 @@ import {
 } from '../types';
 
 export interface AichatState {
-  chatButtons: ChatButton[];
-  // An optional function set by a lab which can be called to get extra content that is appended to the user message.
-  getUserMessageExtra?: () => string;
   // Content from previous chat sessions that we track purely for visibility to the user
   // and do not send to the model as history.
   chatEventsPast: ChatEvent[];
@@ -48,4 +45,8 @@ export interface AichatState {
     | 'fileLimitExceeded'
     | 'sizeLimitExceeded'
     | undefined;
+  // An optional function set by a lab which can be called to get extra content that is appended to the user message.
+  getUserMessageExtra?: () => string;
+  // Optional information about buttons containing pre-canned questions.
+  chatButtons: ChatButton[];
 }
