@@ -8,7 +8,10 @@ import DSCOFooter, {
 import {SUPPORTED_LOCALES} from '@/config/locale';
 import awsLogo from '@public/images/powered-by-aws.png';
 
+import './onetrust.scss';
+
 const copyrightYear = new Date().getFullYear();
+const MANAGE_COOKIES_LINK_KEY = 'manageCookies';
 
 export const defaultProps: Omit<FooterProps, 'languages' | 'onLanguageChange'> =
   {
@@ -20,7 +23,7 @@ export const defaultProps: Omit<FooterProps, 'languages' | 'onLanguageChange'> =
         href: '/privacy',
       },
       {
-        key: 'manageCookies',
+        key: MANAGE_COOKIES_LINK_KEY,
         label: 'Manage Cookies',
         href: '/cookies',
       },
@@ -113,6 +116,17 @@ const Footer = ({locale}: GlobalFooterProps) => {
 
     router.push(newPathName);
     Localize.setLanguage(localeCode);
+  };
+
+  // Defines the callback for the "Manage Cookies" link click
+  defaultProps.siteLinks.find(
+    ({key}) => key === MANAGE_COOKIES_LINK_KEY,
+  )!.onClick = e => {
+    if (window?.OneTrust) {
+      e.preventDefault();
+      // Displays the OneTrust cookie dialog
+      window.OneTrust.ToggleInfoDisplay();
+    }
   };
 
   return (
