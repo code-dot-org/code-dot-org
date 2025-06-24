@@ -2,8 +2,8 @@ import {Button} from '@code-dot-org/component-library/button';
 import Papa from 'papaparse';
 import React, {useState} from 'react';
 
-import {createLevelsSkill} from './SkillsApi';
-import {LevelsSkill} from './types';
+import {addSkillToLevel} from './SkillsApi';
+import {LevelSkill} from './types';
 
 const LevelsSkillsCreator: React.FC = () => {
   const [csvFile, setCsvFile] = useState<File | null>(null);
@@ -18,21 +18,21 @@ const LevelsSkillsCreator: React.FC = () => {
 
   const importCSV = () => {
     if (csvFile) {
-      Papa.parse<LevelsSkill>(csvFile, {
+      Papa.parse<LevelSkill>(csvFile, {
         complete: updateData,
         header: true,
       });
     }
   };
 
-  const updateData = (result: {data: LevelsSkill[]}) => {
+  const updateData = (result: {data: LevelSkill[]}) => {
     if (result.data.length === 0) {
       alert('No data found in the CSV file.');
       return;
     }
     const validationErrors: string[] = [];
-    result.data.forEach((levelsSkill, index) => {
-      if (!levelsSkill.skillId || !levelsSkill.levelId) {
+    result.data.forEach((levelSkill, index) => {
+      if (!levelSkill.skillId || !levelSkill.levelId) {
         validationErrors.push(
           `Row ${index + 1} is missing skillId and/or levelId.`
         );
@@ -50,7 +50,7 @@ const LevelsSkillsCreator: React.FC = () => {
     }
   };
 
-  const createLevelsSkills = async (levelsSkillsData: LevelsSkill[]) => {
+  const createLevelsSkills = async (levelsSkillsData: LevelSkill[]) => {
     if (levelsSkillsData.length === 0) {
       alert('No LevelsSkills to create. Please upload a CSV first.');
       return;
@@ -58,10 +58,10 @@ const LevelsSkillsCreator: React.FC = () => {
 
     for (const levelsSkill of levelsSkillsData) {
       try {
-        await createLevelsSkill(levelsSkill);
+        await addSkillToLevel(levelsSkill);
       } catch (error) {
         alert(
-          `Failed to create LevelsSkill: check skillId: ${
+          `Failed to add skill to level: check skillId: ${
             levelsSkill.skillId
           } for level ${levelsSkill.levelId}. Error: ${
             (error as Error).message
@@ -69,7 +69,6 @@ const LevelsSkillsCreator: React.FC = () => {
         );
       }
     }
-    alert('LevelsSkills created successfully!');
   };
 
   return (

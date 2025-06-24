@@ -2,29 +2,13 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import React from 'react';
 import * as Table from 'reactabular-table';
 
-import styleConstants from '@cdo/apps/styleConstants';
-import {tableLayoutStyles as style} from '@cdo/apps/templates/tables/tableConstants';
-import color from '@cdo/apps/util/color';
+import './skills.css';
 
+import SkillKeyRow from './SkillKeyRow';
 import {Levels} from './types';
-
 interface LevelsSkillsTableProps {
   levels: Levels[];
 }
-
-export const styleOverrides = {
-  table: {
-    borderWidth: '1px',
-    borderStyle: 'solid',
-    borderColor: color.border_gray,
-    width: `${styleConstants['content-width']}`,
-    backgroundColor: color.table_light_row,
-  },
-  headerCell: {
-    paddingLeft: '10px',
-    paddingRight: '10px',
-  },
-};
 
 const LevelsSkillsTable: React.FC<LevelsSkillsTableProps> = ({levels}) => {
   const [selectedUnit, setSelectedUnit] = React.useState('');
@@ -44,51 +28,47 @@ const LevelsSkillsTable: React.FC<LevelsSkillsTableProps> = ({levels}) => {
       property: 'levelId',
       header: {
         label: 'Level Id',
-        props: {style: {...style.headerCell, ...styleOverrides.headerCell}},
+        props: {className: 'levels-skills-table-header-cell'},
       },
       cell: {
         formatters: [(levelId: string) => <span>{levelId}</span>],
-        props: {style: style.cell},
+        props: {},
       },
     },
     {
       property: 'levelName',
       header: {
         label: 'Level Name',
-        props: {style: {...style.headerCell, ...styleOverrides.headerCell}},
+        props: {className: 'levels-skills-table-header-cell'},
       },
       cell: {
         formatters: [(levelName: string) => <span>{levelName}</span>],
-        props: {style: style.cell},
+        props: {},
       },
     },
     {
       property: 'unitNames',
       header: {
         label: 'Units',
-        props: {style: {...style.headerCell, ...styleOverrides.headerCell}},
+        props: {className: 'levels-skills-table-header-cell'},
       },
       cell: {
         formatters: [(unitNames: string[]) => <span>{unitNames}</span>],
-        props: {style: style.cell},
+        props: {},
       },
     },
     {
       property: 'skills',
       header: {
         label: 'Skills',
-        // Override the default max-width style to allow for longer content
         props: {
-          style: {
-            ...style.headerCell,
-            ...styleOverrides.headerCell,
-            maxWidth: 'unset',
-          },
+          className:
+            'levels-skills-table-header-cell levels-skills-table-header-cell-unset-maxwidth',
         },
       },
       cell: {
         formatters: [(skills: string) => <span>{skills}</span>],
-        props: {style: {...style.cell, maxWidth: 'unset'}},
+        props: {className: 'levels-skills-table-cell-unset-maxwidth'},
       },
     },
   ];
@@ -113,17 +93,20 @@ const LevelsSkillsTable: React.FC<LevelsSkillsTableProps> = ({levels}) => {
           There are no skills associated with levels in the selected unit.
         </h3>
       )}
-      <Table.Provider
-        columns={columns}
-        style={{...style.table, ...styleOverrides.table}}
-      >
+      <Table.Provider columns={columns} className="levels-skills-table">
         <Table.Header />
         <Table.Body
           rows={levelsToShow.map(level => ({
             levelId: level.levelId,
             levelName: level.levelName,
             unitNames: level.unitNames.join(', '),
-            skills: level.skills.map(skill => skill.key).join(', '),
+            skills: level.skills.map(skill => (
+              <SkillKeyRow
+                key={`${level.levelId}-${skill.key}`}
+                levelSkill={{skillId: skill.id, levelId: level.levelId}}
+                skillKey={skill.key}
+              />
+            )),
           }))}
           rowKey="levelId"
         />
