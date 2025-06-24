@@ -3,8 +3,19 @@
 .multipleChoiceContainer {
   display: flex;
   align-items: start;
+
   input {
-    margin: 4px 4px 0 0;
+    margin: 2px 4px 0 0;
+  }
+
+
+  /* dim both letter + label when the checkbox is disabled and not checked */
+  input[type="checkbox"]:disabled:not(:checked)
+    + .multipleChoiceLetter,
+  input[type="checkbox"]:disabled:not(:checked)
+    + .multipleChoiceLetter
+    + .multipleChoiceLabel {
+    color: $light_gray_700;  // or whatever your dim color is
   }
 }
 
