@@ -2,7 +2,6 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {
   AiInteractionStatus,
   AiRequestExecutionStatus,
-  AiChatModelIds,
 } from '@cdo/generated-scripts/sharedConstants';
 
 import {Role} from '../aiComponentLibrary/chatMessage/types';
@@ -58,7 +57,7 @@ export async function postAichatCompletionMessage(
   maxPollingTimeMs = MAX_POLLING_TIME_MS
 ): Promise<CompletedChatMessage[]> {
   const aichatModelCustomizations: AichatModelCustomizations = {
-    selectedModelId: AiChatModelIds.CHATGPT, // aiCustomizations.selectedModelId,
+    selectedModelId: aiCustomizations.selectedModelId,
     temperature: aiCustomizations.temperature,
     retrievalContexts: aiCustomizations.retrievalContexts,
     systemPrompt: aiCustomizations.systemPrompt,

@@ -6,8 +6,7 @@ import PythonValidationTracker from './progress/PythonValidationTracker';
 
 // Given a question for the AITutor2, return the full question to ask, which means
 // appending all the relevant context.
-const getAiTutor2FullPromptFromData = (
-  question: string,
+const getAiTutor2AdditionalPromptData = (
   source: MultiFileSource,
   validationFile: ProjectFile | undefined,
   longInstructions: string | undefined
@@ -31,8 +30,7 @@ const getAiTutor2FullPromptFromData = (
     PythonValidationTracker.getInstance().getValidationResults()
   );
 
-  const fullQuestion = [
-    //question,
+  const additionalPromptData = [
     'Here is my code:',
     sourceCode,
     ...(validationContents
@@ -48,7 +46,7 @@ const getAiTutor2FullPromptFromData = (
     longInstructions,
   ].join('\n\n');
 
-  return fullQuestion;
+  return additionalPromptData;
 };
 
-export default getAiTutor2FullPromptFromData;
+export default getAiTutor2AdditionalPromptData;

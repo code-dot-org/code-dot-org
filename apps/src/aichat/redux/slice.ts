@@ -48,7 +48,7 @@ const initialState: AichatState = {
   userHasAichatAccess: false,
   stagedFiles: [],
   stagedFilesAlert: undefined,
-  userMessageExtra: undefined,
+  getUserMessageExtra: undefined,
   chatButtons: [],
 };
 
@@ -59,20 +59,11 @@ const aichatSlice = createSlice({
     addEventToChatEventsCurrent: (state, action: PayloadAction<ChatEvent>) => {
       state.chatEventsCurrent.push(action.payload);
     },
-    setUserMessageExtra: (
-      state,
-      action: PayloadAction<(text: string) => void>
-    ) => {
-      state.userMessageExtra = action.payload;
-    },
     setStudentChatHistory: (
       state,
       action: PayloadAction<ServerChatEvent[]>
     ) => {
       state.studentChatHistory = action.payload;
-    },
-    setChatButtons: (state, action: PayloadAction<ChatButton[]>) => {
-      state.chatButtons = action.payload;
     },
     setOwnChatHistory: (state, action: PayloadAction<ServerChatEvent[]>) => {
       // It's confusing / not helpful for users to see their own history of when they loaded the level.
@@ -323,6 +314,12 @@ const aichatSlice = createSlice({
       state.stagedFiles = [];
       state.stagedFilesAlert = undefined;
     },
+    setGetUserMessageExtra: (state, action: PayloadAction<() => string>) => {
+      state.getUserMessageExtra = action.payload;
+    },
+    setChatButtons: (state, action: PayloadAction<ChatButton[]>) => {
+      state.chatButtons = action.payload;
+    },
   },
 });
 
@@ -364,6 +361,7 @@ export const {
   removeUpdateMessage,
   resetToDefaultAiCustomizations,
   setAiCustomizationProperty,
+  setSavedAiCustomizationProperty,
   setModelCardProperty,
   setNewChatSession,
   setShowModalType,
@@ -378,7 +376,6 @@ export const {
   clearStagedFiles,
   stagedFilesLimitExceeded,
   clearStagedFilesAlert,
-  setUserMessageExtra,
+  setGetUserMessageExtra,
   setChatButtons,
-  setSavedAiCustomizationProperty,
 } = aichatSlice.actions;

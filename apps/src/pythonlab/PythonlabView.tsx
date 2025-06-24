@@ -5,7 +5,13 @@ import {setWidgetViewShowCode} from '@codebridge/redux/workspaceRedux';
 import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {python} from '@codemirror/lang-python';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useContext, useEffect, useMemo, useState} from 'react';
+import React, {
+  useContext,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
@@ -35,7 +41,7 @@ import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import CodebridgeRegistry from '../codebridge/CodebridgeRegistry';
 import {useAiTutor2} from '../lab2/views/components/aiTutor2/useAiTutor2';
 
-import getAiTutor2FullPromptFromData from './aiTutorHelper';
+import getAiTutor2AdditionalPromptData from './aiTutorHelper';
 import ProjectTypePicker from './components/ProjectTypePicker';
 import {
   DEFAULT_PROJECT,
@@ -181,18 +187,17 @@ const PythonlabView: React.FunctionComponent<
     dispatch(setWidgetViewShowCode(false));
   });
 
-  const getAiTutor2FullPrompt = (question: string) => {
-    return getAiTutor2FullPromptFromData(
-      question,
+  const getAiTutor2AdditionalPrompt = useCallback(() => {
+    return getAiTutor2AdditionalPromptData(
       source,
       validationFile,
       levelProperties.longInstructions
     );
-  };
+  }, [levelProperties.longInstructions, source, validationFile]);
 
   const [askAiTutor2, AiTutor2Response] = useAiTutor2(
     isAiTutor2HintEnabled,
-    getAiTutor2FullPrompt,
+    getAiTutor2AdditionalPrompt,
     'hint'
   );
 
@@ -252,7 +257,7 @@ const PythonlabView: React.FunctionComponent<
           sendConsoleInput={sendInput}
           levelProperties={levelProperties}
           projectPickerSettings={projectPickerSettings}
-          getAiTutor2FullPrompt={getAiTutor2FullPrompt}
+          getAiTutor2AdditionalPrompt={getAiTutor2AdditionalPrompt}
           AiTutor2ResponseView={AiTutor2Response}
         />
       )}

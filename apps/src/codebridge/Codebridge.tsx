@@ -45,7 +45,7 @@ type CodebridgeProps = {
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
   AiTutor2ResponseView?: React.ReactNode;
-  getAiTutor2FullPrompt?: (question: string) => string;
+  getAiTutor2AdditionalPrompt?: () => string;
 };
 
 export const Codebridge = React.memo(
@@ -63,7 +63,7 @@ export const Codebridge = React.memo(
     levelProperties,
     projectPickerSettings,
     AiTutor2ResponseView,
-    getAiTutor2FullPrompt,
+    getAiTutor2AdditionalPrompt,
   }: CodebridgeProps) => {
     const reducerWithCallback = useReducerWithCallback(
       sourceReducer,
@@ -184,7 +184,7 @@ export const Codebridge = React.memo(
           levelProperties,
           projectPickerSettings,
           AiTutor2ResponseView,
-          getAiTutor2FullPrompt,
+          getAiTutor2AdditionalPrompt,
         }}
       >
         <BackpackAPIContext.Provider value={backpackApi}>

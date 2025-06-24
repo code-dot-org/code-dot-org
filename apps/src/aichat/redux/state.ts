@@ -13,8 +13,8 @@ import {
 
 export interface AichatState {
   chatButtons: ChatButton[];
-  // Extra content to be added to each user message.
-  userMessageExtra?: (text: string) => void;
+  // An optional function set by a lab which can be called to get extra content that is appended to the user message.
+  getUserMessageExtra?: () => string;
   // Content from previous chat sessions that we track purely for visibility to the user
   // and do not send to the model as history.
   chatEventsPast: ChatEvent[];

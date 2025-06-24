@@ -6,6 +6,8 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {selectMultimodalEnabled, submitChatContents} from '../redux';
 
+import moduleStyles from './UserChatMessageEditor.module.scss';
+
 /**
  * Renders the AI Chat Lab user chat message editor component.
  */
@@ -29,21 +31,18 @@ const UserChatMessageEditor: React.FunctionComponent<{
 
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
-  const userMessageExtra = useAppSelector(
-    state => state.aichat.userMessageExtra
+  const getUserMessageExtra = useAppSelector(
+    state => state.aichat.getUserMessageExtra
   );
 
   const handleSubmit = useCallback(
     (userMessage: string) => {
       if (!isWaitingForChatResponse) {
-        /*const fullText = userMessageExtra
-          ? userMessageExtra(userMessage)
-          : userMessage;*/
-        const textHidden = userMessageExtra ? userMessageExtra('') : '';
+        const userMessageExtra = getUserMessageExtra && getUserMessageExtra();
         dispatch(
           submitChatContents({
             text: userMessage,
-            textHidden: textHidden || '',
+            textExtra: userMessageExtra,
             assets:
               multimodalEnabled && chatAssets.length > 0
                 ? chatAssets
@@ -54,7 +53,7 @@ const UserChatMessageEditor: React.FunctionComponent<{
     },
     [
       isWaitingForChatResponse,
-      userMessageExtra,
+      getUserMessageExtra,
       dispatch,
       multimodalEnabled,
       chatAssets,
@@ -74,7 +73,7 @@ const UserChatMessageEditor: React.FunctionComponent<{
   return (
     <>
       {chatButtons && (
-        <div>
+        <div className={moduleStyles.chatButtonsContainer}>
           {chatButtons.map(button => (
             <Button
               key={button.label}
@@ -83,7 +82,8 @@ const UserChatMessageEditor: React.FunctionComponent<{
               onClick={() => handleSubmit(button.value)}
               text={button.label}
               size="s"
-              color="white"
+              type="secondary"
+              color="gray"
             />
           ))}
         </div>
