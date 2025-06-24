@@ -1312,6 +1312,27 @@ class LevelsControllerTest < ActionController::TestCase
     params: -> {{id: @partner_level.id, level: {name: 'new partner name'}}}
   )
 
+  test "add_skill adds a skill" do
+    level = create :level
+    assert level.skills.empty?
+    skill = create :skill
+    post :add_skill, params: {id: level.id, levelId: level.id, skillId: skill.id}
+    assert_response :success
+    level.reload
+    assert_equal [skill], level.skills
+  end
+
+  test "remove_skill removes a skill" do
+    level = create :level
+    skill = create :skill
+    create :levels_skill, level: level, skill: skill
+    assert_equal [skill], level.skills
+    post :remove_skill, params: {id: level.id, levelId: level.id, skillId: skill.id}
+    assert_response :success
+    level.reload
+    assert level.skills.empty?
+  end
+
   # Assert that the url is a real S3 url, and not a placeholder.
   private def assert_s3_image_url(url)
     assert(

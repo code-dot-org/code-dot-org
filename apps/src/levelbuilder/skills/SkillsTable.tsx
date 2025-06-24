@@ -2,29 +2,13 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import React from 'react';
 import * as Table from 'reactabular-table';
 
-import styleConstants from '@cdo/apps/styleConstants';
-import {tableLayoutStyles as style} from '@cdo/apps/templates/tables/tableConstants';
-import color from '@cdo/apps/util/color';
+import './skills.css';
 
 import {SkillsByConcept} from './types';
 
 interface SkillsTableProps {
   skills: SkillsByConcept;
 }
-
-export const styleOverrides = {
-  table: {
-    borderWidth: '1px',
-    borderStyle: 'solid',
-    borderColor: color.border_gray,
-    width: `${styleConstants['content-width']}`,
-    backgroundColor: color.table_light_row,
-  },
-  headerCell: {
-    paddingLeft: '10px',
-    paddingRight: '10px',
-  },
-};
 
 const SkillsTable: React.FC<SkillsTableProps> = ({skills}) => {
   const [selectedConcept, setSelectedConcept] = React.useState('');
@@ -42,53 +26,49 @@ const SkillsTable: React.FC<SkillsTableProps> = ({skills}) => {
       property: 'id',
       header: {
         label: 'Id',
-        props: {style: {...style.headerCell, ...styleOverrides.headerCell}},
+        props: {className: 'skills-table-header-cell'},
       },
       cell: {
         formatters: [(id: string) => <span>{id}</span>],
-        props: {style: style.cell},
+        props: {},
       },
     },
     {
       property: 'key',
       header: {
         label: 'Key',
-        props: {style: {...style.headerCell, ...styleOverrides.headerCell}},
+        props: {className: 'skills-table-header-cell'},
       },
       cell: {
         formatters: [(key: string) => <span>{key}</span>],
-        props: {style: style.cell},
+        props: {},
       },
     },
     {
       property: 'description',
       header: {
         label: 'description',
-        props: {style: {...style.headerCell, ...styleOverrides.headerCell}},
+        props: {className: 'skills-table-header-cell'},
       },
       cell: {
         formatters: [(description: string) => <span>{description}</span>],
-        props: {style: style.cell},
+        props: {},
       },
     },
     {
       property: 'evaluationCriteria',
       header: {
         label: 'evaluation criteria',
-        // Override the default max-width style to allow for longer content
         props: {
-          style: {
-            ...style.headerCell,
-            ...styleOverrides.headerCell,
-            maxWidth: 'unset',
-          },
+          className:
+            'skills-table-header-cell skills-table-header-cell-unset-maxwidth',
         },
       },
       cell: {
         formatters: [
           (evaluationCriteria: string) => <span>{evaluationCriteria}</span>,
         ],
-        props: {style: {...style.cell, maxWidth: 'unset'}},
+        props: {className: 'skills-table-cell-unset-maxwidth'},
       },
     },
   ];
@@ -111,10 +91,7 @@ const SkillsTable: React.FC<SkillsTableProps> = ({skills}) => {
       {skillsToShow.length === 0 && (
         <h3>There are no skills for the selected concept.</h3>
       )}
-      <Table.Provider
-        columns={columns}
-        style={{...style.table, ...styleOverrides.table}}
-      >
+      <Table.Provider columns={columns} className="skills-table">
         <Table.Header />
         <Table.Body
           rows={skillsToShow.map(skill => ({
