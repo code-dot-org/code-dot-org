@@ -11,7 +11,7 @@ class AichatEventsControllerTest < ActionController::TestCase
     @authorized_student1 = create(:follower, section: @section).student_user
 
     @level = create(:level)
-    @script = create(:script)
+    @script = create(:script, :in_single_unit_course)
 
     @valid_student1_chat_message1 = {role: 'user', chatMessageText: 'hello from authorized student 1 - message 1', status: 'ok', timestamp: Time.now.to_i}
     valid_student1_chat_message2 = {role: 'user', chatMessageText: 'hello from authorized student 1 - message 2', status: 'ok', timestamp: Time.now.to_i}

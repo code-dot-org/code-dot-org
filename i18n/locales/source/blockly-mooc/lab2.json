@@ -1,6 +1,11 @@
 {
+  "attach": "Attach",
+  "cancel": "Cancel",
   "closeVersionHistory": "Close version history",
   "initialVersion": "Initial version",
+  "library": "Library",
+  "page": "Page",
+  "pages": "Pages",
   "versionHistoryList": "Version History List",
   "versionHistoryLoadFailure": "Sorry, we couldn't load your version history. Please try again.",
   "versionHistoryLoading": "Loading version history...",

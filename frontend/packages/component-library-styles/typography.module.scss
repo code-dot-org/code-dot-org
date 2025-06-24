@@ -297,3 +297,8 @@ figcaption,
 .figcaption {
   @include figcaption;
 }
+
+// Use with typography elements to remove margins
+.no-margin {
+  margin: 0;
+}
