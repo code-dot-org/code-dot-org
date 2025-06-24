@@ -552,7 +552,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
   const aiBotImage = getAiBotImage();
 
   return (
-    <FocusLock>
+    <FocusLock className={styles.focusContainer}>
       <div className={styles.patternPanel} dir="ltr">
         <LoadingOverlay show={isLoading} />
 
