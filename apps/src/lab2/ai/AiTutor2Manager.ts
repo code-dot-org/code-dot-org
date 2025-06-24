@@ -33,11 +33,16 @@ export default class AiTutor2Manager {
     this.channelId = channelId;
   }
 
-  async askAiTutor2(message: string, type: AiTutor2MessageType) {
+  async askAiTutor2(
+    message: string,
+    messageExtra: string,
+    type: AiTutor2MessageType
+  ) {
     const newUserMessage: PendingChatMessage = {
       role: Role.USER,
       status: Status.UNKNOWN,
       chatMessageText: message,
+      chatMessageTextExtra: messageExtra,
       assets: undefined,
       timestamp: Date.now(),
     };

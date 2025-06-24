@@ -197,7 +197,6 @@ const PythonlabView: React.FunctionComponent<
 
   const [askAiTutor2, AiTutor2Response] = useAiTutor2(
     isAiTutor2HintEnabled,
-    getAiTutor2AdditionalPrompt,
     'hint'
   );
 
@@ -237,7 +236,10 @@ const PythonlabView: React.FunctionComponent<
 
     if (isAiTutor2Enabled) {
       // Ask a question to AITutor2.
-      askAiTutor2("What's wrong with my code, if anything?");
+      askAiTutor2(
+        "What's wrong with my code, if anything?",
+        getAiTutor2AdditionalPrompt()
+      );
     }
   };
 
