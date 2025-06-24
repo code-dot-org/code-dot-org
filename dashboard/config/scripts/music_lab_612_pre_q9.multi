@@ -1,11 +1,11 @@
 name 'music-lab-612-pre-q9'
 
-question 'put actual question here'
+question 'Which computational thinking skill is Leo using to simplify and reuse this idea?'
 
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
-right 'correct'
+wrong 'Decomposition'
+wrong 'Pattern Recognition'
+right 'Abstraction'
+wrong 'Algorithm Design'
 
 allow_multiple_attempts true
 
@@ -25,5 +25,10 @@ Posttest Modality: Given a snippet of how someone approached a problem, identify
 MARKDOWN
 
 markdown <<MARKDOWN
-Put the images / context markdown here
+Leo made a function he named build up that includes a rising volume effect, a crash cymbal, and an energetic drum beat. Now, Leo can just use that one function block wherever the song needs more energy.
+
+
+---
+
+![](https://images.code.org/e7ebea15053a3bb2bfbf123bb3ee7ceb-image-1750438510455.png)
 MARKDOWN

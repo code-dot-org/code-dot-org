@@ -205,3 +205,19 @@ export const RichTextExamples: Story = {
     </>
   ),
 };
+
+export const ElementsWithNoMargin: Story = {
+  render: () => (
+    <>
+      <hr />
+      <Heading6 noMargin>Heading without margins</Heading6>
+      <hr />
+      <BodyTwoText noMargin>Paragraph without margins</BodyTwoText>
+      <hr />
+      <StrongText noMargin>Strong text without margins</StrongText>
+      <hr />
+      <EmText noMargin>Italic text without margins</EmText>
+      <hr />
+    </>
+  ),
+};

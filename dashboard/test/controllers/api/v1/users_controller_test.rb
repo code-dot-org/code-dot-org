@@ -354,7 +354,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_nil teacher.seen_ta_scores_map
     sign_in(teacher)
 
-    unit = create :unit, :with_lessons
+    unit = create :unit, :with_lessons, :in_single_unit_course
     lesson = unit.lessons.first
     params = {lesson_id: lesson.id}
 
