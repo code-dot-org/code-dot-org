@@ -1,12 +1,16 @@
 # Helps retrieve and encode assets for AI Chat uploads
 module AichatAssetHelper
+  class AichatAssetFetchError < StandardError; end
+  class AichatLevelAssetFetchError < AichatAssetFetchError; end
+  class AichatProjectAssetFetchError < AichatAssetFetchError; end
+
   ASSET_BUCKET = AssetBucket.new
 
   # Note for PR (TODO - discuss and remove this note before PR merged):
   # -------------------------------------------------------------------
   # This function was added since gemini doesn't accept newlines
-  # and takes the mime-type as a separate parameter rather (not
-  # as a prefix in the data uri).  This is now a helper for
+  # and takes the mime-type as a separate parameter  (not as a
+  # data uri with a mime-type prefix).  This is now a helper for
   # `get_asset_data_uri`
   # -------------------------------------------------------------------
 
@@ -31,22 +35,15 @@ module AichatAssetHelper
   # equal to 'FOUND' the caller threw an error stating "Error fetching asset..."
 
   # We previously threw an error in the caller based on the AssetBucket.get-like object
-  # status which required mimicking and returning AssetBucket.get's response object here
-  # (which didn't actually allow us to describe the various error cases we were catching).
-
-  # IMHO it is cleaner to throw that error here as the error  relates to the error
-  # fetching itself.  We can thus avoid passing an AssetBucket.get-like object when simply
+  # but I think it is cleaner to throw that error here as the error relates to the fetching
+  # itself.  We can thus avoid passing an AssetBucket.get-like object when simply
   # passing the already 'read' asset body is sufficient.
 
   # Open Questions:
   # ---------------
-  # I used `StandardError` because that was what was initially thrown. But see note in
-  # `AichatOpenaiHelper` where we were not sufficiently dealing with errors related to
-  # a failure to fetch a resource (from this module or in e.g. `Aws::S3`. Perhaps we
-  # should create a new error class and ensure that all errors related to such a failure
-  # are raised through it. Also see note in `aichat_asset_helper_test.rb` as to how
-  # custom errors could improve test maintainability.
-  # --------------------------------------------------------------------
+  # I created a new error class and I think we should raise this consitently for all errors in
+  # this file to indicate that the asset has failed to be fetched and to provide a message to the
+  # user. See notes below for errors we would need to rescue from elsewhere  (e.g. `Aws::S3`
 
   def self.fetch_asset(filename, source, channel_id, level_name)
     #call details to use when raising errors
@@ -60,7 +57,7 @@ module AichatAssetHelper
       if bucket_status == 'FOUND'
         asset_body = bucket_result[:body]
       else
-        raise StandardError.new(
+        raise AichatProjectAssetFetchError.new(
           "Failed to fetch asset from project bucket with status = '#{bucket_status}' - #{call_details}"
         )
 
@@ -74,32 +71,34 @@ module AichatAssetHelper
       if uuid_name
         s3_object = LevelStarterAssetsHelper.get_object(uuid_name)
         if s3_object
-          # note: this can raise its own errors for various reasons (e.g. from Aws::S3::Errors or Aws::Errors)
+          # NOTE: this can raise its own errors for various reasons (e.g. from Aws::S3::Errors or Aws::Errors), perhaps
+          # TODO - we should probbaly catch them and throw a unified error so that we can get a response back to the user
           asset_body = s3_object.get.body
         else
-          raise StandardError.new(
+          raise AichatLevelAssetFetchError.new(
             "Failed to fetch asset for level due to LevelStarterAssetsHelper.get_object('#{uuid_name}' not returning a bucket object. - #{call_details}"
           )
         end
       else
-        raise StandardError.new(
+        raise AichatLevelAssetFetchError.new(
           "Failed to fetch asset for level due to failure to retrieve 'uuid_name' - #{call_details}"
         )
       end
 
     else
-      raise StandardError.new(
+      raise AichatAssetFetchError.new(
         "Failed to fetch asset due to unsupported source - #{call_details}"
       )
     end
 
     unless asset_body
-      raise StandardError.new(
+      raise AichatAssetFetchError.new(
         "Failed to fetch asset for unknown reason. The variable 'asset_body' was not set - #{call_details}"
    )
     end
 
-    #note: this can also result in other various errors
+    # NOTE: this can also result in other various errors,
+    # TODO - we should probbaly catch them and throw a unified error so that we can get a response back to the user
     asset_body.read
   end
 end

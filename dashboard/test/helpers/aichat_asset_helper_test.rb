@@ -98,17 +98,8 @@ class AichatAssetHelperTest < ActionView::TestCase
         )
       end
 
-      # Note for PR (TODO - discuss and remove this note before PR merged):
-      # -------------------------------------------------------------------
-      # See note about custom errors in `aichat_asset_helper.rb`.  We could also create a specific error
-      # class for each error case in `aichat_asset_helper.rb` to eliminate the first string `must_include`
-      # check which could help create more clarity and help maintainability (test won't be tied to the
-      # error message)
-      # -------------------------------------------------------------------
-
-      it 'raises a StandardError' do
-        err = -> {subject}.must_raise(StandardError)
-        err.message.must_include "Failed to fetch asset for level due to failure to retrieve 'uuid_name'"
+      it 'raises an AichatLevelAssetFetchError' do
+        err = -> {subject}.must_raise(AichatAssetHelper::AichatLevelAssetFetchError)
         err.message.must_include "missing.png"
         err.message.must_include channel_id
         err.message.must_include level_name
@@ -128,17 +119,8 @@ class AichatAssetHelperTest < ActionView::TestCase
       let(:filename) {'nonexistent.png'}
       let(:source)   {'project'}
 
-      # Note for PR (TODO - discuss and remove this note before PR merged):
-      # -------------------------------------------------------------------
-      # See note about custom errors in `aichat_asset_helper.rb`.  We could also create a specific error
-      # class for each error case in `aichat_asset_helper.rb` to eliminate the first string `must_include`
-      # check which could help create more clarity and help maintainability (test won't be tied to the
-      # error message)
-      # -------------------------------------------------------------------
-
-      it 'raises a StandardError' do
-        err = -> {subject}.must_raise(StandardError)
-        err.message.must_include "Failed to fetch asset from project bucket with status = 'NOT_FOUND'"
+      it 'raises an AichatProjectAssetFetchError' do
+        err = -> {subject}.must_raise(AichatAssetHelper::AichatProjectAssetFetchError)
         err.message.must_include "nonexistent.png"
         err.message.must_include channel_id
         err.message.must_include level_name
@@ -169,7 +151,7 @@ class AichatAssetHelperTest < ActionView::TestCase
       end
     end
 
-    context 'with a missing file' do
+    context 'with a missing level file' do
       let(:filename) {missing_asset["filename"]}
       let(:source) {missing_asset["source"]}
 
@@ -179,8 +161,8 @@ class AichatAssetHelperTest < ActionView::TestCase
         )
       end
 
-      it 'raises a StandardError' do
-        -> {subject}.must_raise(StandardError)
+      it 'raises an AichatLevelAssetFetchError' do
+        -> {subject}.must_raise(AichatAssetHelper::AichatLevelAssetFetchError)
       end
     end
   end
