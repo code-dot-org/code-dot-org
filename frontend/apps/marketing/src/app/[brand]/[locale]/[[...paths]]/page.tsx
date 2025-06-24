@@ -43,7 +43,7 @@ export async function generateStaticParams() {
 }
 
 async function getPageProps({params, searchParams}: ExperiencePageProps) {
-  const {locale = 'en-US', paths = ['home']} = (await params) || {};
+  const {locale = 'en-US', paths = ['']} = (await params) || {};
   const isDraftModeEnabled = (await draftMode()).isEnabled;
 
   const slug = getContentfulSlug(paths);

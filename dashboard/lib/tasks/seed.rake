@@ -38,7 +38,7 @@ namespace :seed do
   CURRICULUM_CONTENT_PATHNAME = Pathname(CURRICULUM_CONTENT_DIR)
 
   timed_task_with_logging skills: :environment do
-    Skill.setup
+    Skill.seed_all(root_dir: CURRICULUM_CONTENT_PATHNAME)
   end
 
   timed_task_with_logging videos: :environment do
@@ -91,7 +91,7 @@ namespace :seed do
     20-hour
     algebra
     allthehiddenthings
-    allthemigratedthings
+    allthelessonplans
     alltheplcthings
     alltheselfpacedplthings
     allthethings
@@ -204,7 +204,7 @@ namespace :seed do
   ADHOC_SCRIPTS = MOST_RECENT_ADHOC_SCRIPTS + %w(
     algebra
     allthehiddenthings
-    allthemigratedthings
+    allthelessonplans
     alltheplcthings
     alltheselfpacedplthings
     allthethings
@@ -325,7 +325,7 @@ namespace :seed do
        csp-2019
        20-hour
        algebra
-       allthemigratedthings
+       allthelessonplans
        alltheselfpacedplthings
        allthettsthings
        artist
@@ -358,6 +358,8 @@ namespace :seed do
        infinity
        mc
        minecraft
+       original-allthelessonplans-course
+       original-alltheselfpacedplthings-course
        playlab
        starwars
        starwarsblocks

@@ -14,6 +14,8 @@ export RACK_ENV=test
 export DISABLE_SPRING=1
 export LD_LIBRARY_PATH=/usr/local/lib
 
+bundle install --quiet
+
 # Disable Pegasus content based on the exit code of the rake task.
 if bundle exec rake ci:sparse_checkout; then
   echo "Full checkout – HAS_PEGASUS_CONTENT not set"

@@ -26,6 +26,9 @@ import ImageCarousel, {
 import VideoCarousel, {
   VideoCarouselContentfulComponentDefinition,
 } from '@/components/contentful/carousels/videoCarousel';
+import LogoCollection, {
+  LogoCollectionContentfulComponentDefinition,
+} from '@/components/contentful/collections/logoCollection';
 import Divider, {
   DividerContentfulComponentDefinition,
 } from '@/components/contentful/divider';
@@ -178,6 +181,10 @@ defineComponents(
     {
       component: Link,
       definition: LinkContentfulComponentDefinition,
+    },
+    {
+      component: LogoCollection,
+      definition: LogoCollectionContentfulComponentDefinition,
     },
     {component: Overline, definition: OverlineContentfulComponentDefinition},
     {
