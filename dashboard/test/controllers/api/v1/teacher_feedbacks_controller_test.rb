@@ -23,6 +23,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     @level = create :level
     @script_level = create :script_level
     @script = @script_level.script
+    create(:single_unit_course, unit: @script)
   end
 
   test 'can be created' do

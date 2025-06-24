@@ -62,7 +62,7 @@ Feature: Lab share page logo
     And I sign out
     And I navigate to the last shared URL
     And element "div:contains('STUDIO')" does not exist
-    And I click "#logo-img" to load a new page
+    And I click "#logo-img img" once it exists to load a new page
     And check that the URL contains "http://code.org"
 
   @no_mobile
@@ -77,7 +77,7 @@ Feature: Lab share page logo
     And I sign out
     And I navigate to the last shared URL
     And element "div:contains('STUDIO')" does not exist
-    And I click "#logo-img" to load a new page
+    And I click "#logo-img img" once it exists to load a new page
     And check that the URL contains "http://code.org"
 
   @only_mobile

@@ -211,7 +211,7 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
     prepare_scenario
 
     # User has completed all of this unit
-    pl_unit1 = create :pl_unit, :with_lessons
+    pl_unit1 = create(:single_unit_course, :pl_course, unit: create(:script, :with_lessons)).first_unit
     create :user_script, user: @teacher, script: pl_unit1
     unit1_level1 = create :level
     create :script_level, script: pl_unit1, levels: [unit1_level1], lesson: pl_unit1.lessons.first
@@ -222,7 +222,7 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
     pl_unit1.reload
 
     # User has completed some of this unit
-    pl_unit2 = create :pl_unit, :with_lessons
+    pl_unit2 = create(:single_unit_course, :pl_course, unit: create(:script, :with_lessons)).first_unit
     create :user_script, user: @teacher, script: pl_unit2
     unit2_level1 = create :level
     create :script_level, script: pl_unit2, levels: [unit2_level1], lesson: pl_unit2.lessons.first

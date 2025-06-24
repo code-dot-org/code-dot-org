@@ -6,11 +6,65 @@ import './skills.css';
 
 import {SkillsByConcept} from './types';
 
-interface SkillsTableProps {
+interface SkillsByConceptTableProps {
   skills: SkillsByConcept;
 }
 
-const SkillsTable: React.FC<SkillsTableProps> = ({skills}) => {
+export const columns = [
+  {
+    property: 'id',
+    header: {
+      label: 'Id',
+      props: {className: 'skills-table-header-cell'},
+    },
+    cell: {
+      formatters: [(id: string) => <span>{id}</span>],
+      props: {},
+    },
+  },
+  {
+    property: 'key',
+    header: {
+      label: 'Key',
+      props: {className: 'skills-table-header-cell'},
+    },
+    cell: {
+      formatters: [(key: string) => <span>{key}</span>],
+      props: {},
+    },
+  },
+  {
+    property: 'description',
+    header: {
+      label: 'Description',
+      props: {className: 'skills-table-header-cell'},
+    },
+    cell: {
+      formatters: [(description: string) => <span>{description}</span>],
+      props: {},
+    },
+  },
+  {
+    property: 'evaluationCriteria',
+    header: {
+      label: 'Evaluation Criteria',
+      props: {
+        className:
+          'skills-table-header-cell skills-table-header-cell-unset-maxwidth',
+      },
+    },
+    cell: {
+      formatters: [
+        (evaluationCriteria: string) => <span>{evaluationCriteria}</span>,
+      ],
+      props: {className: 'skills-table-cell-unset-maxwidth'},
+    },
+  },
+];
+
+const SkillsByConceptTable: React.FC<SkillsByConceptTableProps> = ({
+  skills,
+}) => {
   const [selectedConcept, setSelectedConcept] = React.useState('');
   const concepts = Object.keys(skills)
     .sort((a, b) => a.localeCompare(b))
@@ -21,57 +75,6 @@ const SkillsTable: React.FC<SkillsTableProps> = ({skills}) => {
   concepts.push({value: '', text: ''});
   const skillsToShow = skills[selectedConcept] || [];
 
-  const columns = [
-    {
-      property: 'id',
-      header: {
-        label: 'Id',
-        props: {className: 'skills-table-header-cell'},
-      },
-      cell: {
-        formatters: [(id: string) => <span>{id}</span>],
-        props: {},
-      },
-    },
-    {
-      property: 'key',
-      header: {
-        label: 'Key',
-        props: {className: 'skills-table-header-cell'},
-      },
-      cell: {
-        formatters: [(key: string) => <span>{key}</span>],
-        props: {},
-      },
-    },
-    {
-      property: 'description',
-      header: {
-        label: 'description',
-        props: {className: 'skills-table-header-cell'},
-      },
-      cell: {
-        formatters: [(description: string) => <span>{description}</span>],
-        props: {},
-      },
-    },
-    {
-      property: 'evaluationCriteria',
-      header: {
-        label: 'evaluation criteria',
-        props: {
-          className:
-            'skills-table-header-cell skills-table-header-cell-unset-maxwidth',
-        },
-      },
-      cell: {
-        formatters: [
-          (evaluationCriteria: string) => <span>{evaluationCriteria}</span>,
-        ],
-        props: {className: 'skills-table-cell-unset-maxwidth'},
-      },
-    },
-  ];
   return (
     <div>
       <h2>View Available Skills</h2>
@@ -107,4 +110,4 @@ const SkillsTable: React.FC<SkillsTableProps> = ({skills}) => {
   );
 };
 
-export default SkillsTable;
+export default SkillsByConceptTable;
