@@ -1,13 +1,43 @@
 @import 'color.scss';
+@import '@code-dot-org/component-library-styles/colors';
+@import '@code-dot-org/component-library-styles/primitiveColors';
+@import '@code-dot-org/component-library-styles/variables.scss';
 
 .multipleChoiceContainer {
   display: flex;
   align-items: start;
 
   input {
-    margin: 2px 4px 0 0;
+    margin: 0 4px 0 0;
   }
 
+  input[type="checkbox"] {
+    /* remove native style so we can custom style the checkbox */
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 1.25em;
+    height: 1.25em;
+    border: 2px solid var(--neutral-base-white);
+    border-radius: 0.25em;
+    background-color: var(--neutral-base-black);
+    cursor: pointer;
+    flex-shrink: 0;
+
+    /* normal checked */
+    &:checked {
+      background-color: var(--brand-teal-50);
+      border: 0
+    }
+
+    /* disabled and unchecked → dimmer box + outline */
+    &:disabled:not(:checked) {
+      background-color: var(neutral-gray-99);           // darker fill
+      border-color: var(--neutral-gray-80);               // dim outline
+      box-shadow: none;
+      cursor: default;
+    }
+  }
 
   /* dim both letter + label when the checkbox is disabled and not checked */
   input[type="checkbox"]:disabled:not(:checked)
