@@ -21,8 +21,6 @@ class StudentWorkEvaluationsController < ApplicationController
     level_id = params[:level_id]
     unit_id = params[:unit_id]
 
-    # It is possible that there might be more than on evaluation for a student on a level/unit,
-    # so we will return the most recent one
     evaluations = StudentWorkEvaluation.where(
       student_id: user_id,
       level_id: level_id,
@@ -31,6 +29,8 @@ class StudentWorkEvaluationsController < ApplicationController
 
     return head :ok if evaluations.empty?
 
+    # It is possible that there might be more than one evaluation for a student on a level/unit,
+    # so we will return the most recent one
     last_evaluation = evaluations.order(created_at: :desc).first
     transformed_evaluation = last_evaluation.to_json.camelize
     return head :not_found unless last_evaluation

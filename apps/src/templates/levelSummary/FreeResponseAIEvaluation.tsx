@@ -31,18 +31,12 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
 > = ({responses, levelData, totalNumberOfStudents}) => {
   const [evaluationsPending, setEvaluationsPending] = useState<boolean>(false);
   const [evaluations, setEvaluations] = useState<StudentWorkEvaluation[]>([]);
-  // const [evaluationCount, setEvaluationCount] = useState<number>(0);
   const [showDetailedAnalysis, setShowDetailedAnalysis] =
     useState<boolean>(false);
   const [evaluationComplete, setEvaluationComplete] = useState<boolean>(false);
-  // const evaluationComplete =
-  //   evaluationCount > 0 && responses.length === evaluationCount;
   const [loadingExistingEvaluations, setLoadingExistingEvaluations] =
     useState<boolean>(true);
 
-  // if there are responses
-  // load existing evaluations for those responses
-  // for responses that have blank answers, remove them from the exising evaluations
   useEffect(() => {
     if (responses.length > 0) {
       const addStudentNameAndResponseToEvaluations = (
@@ -61,8 +55,6 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
         }));
       };
       const loadExistingEvaluations = async () => {
-        console.log('Loading existing evaluations...');
-
         const promises = responses.map(response =>
           fetchStudentWorkEvaluations(
             response.studentId,
@@ -88,8 +80,6 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
             aiReasoning: reasoning,
           }));
 
-        // console.log('All existing evaluations:', allExistingEvaluations);
-        // setEvaluationCount(allExistingEvaluations.length);
         return allExistingEvaluations;
       };
 
@@ -134,11 +124,6 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
       return false;
     });
 
-    console.log(
-      'Responses without updated AI evaluation:',
-      responsesWithoutUpdatedAiEvaluation
-    );
-
     const responsePromises = responsesWithoutUpdatedAiEvaluation.map(
       async studentResponse => {
         return evaluateStudentResponse(studentResponse);
@@ -148,7 +133,7 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
     await Promise.allSettled(responsePromises);
 
     setEvaluationComplete(true);
-    setEvaluationsPending(false); // <-- move here, after all evaluations are done
+    setEvaluationsPending(false);
   };
 
   const evaluateStudentResponse = async (studentAnswer: StudentAnswer) => {
@@ -177,7 +162,6 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
         return updatedEvaluations;
       });
     } else {
-      // Update the evaluations state with the new evaluation
       setEvaluations(prevEvaluations => [...prevEvaluations, evaluation]);
     }
   };
