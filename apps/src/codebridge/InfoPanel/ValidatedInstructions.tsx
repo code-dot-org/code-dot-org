@@ -28,6 +28,7 @@ import {
 } from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import PredictQuestion from '@cdo/apps/lab2/views/components/PredictQuestion';
+import PredictQuestionRunPrompt from '@cdo/apps/lab2/views/components/PredictQuestionRunPrompt';
 import PredictSummary from '@cdo/apps/lab2/views/components/PredictSummary';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -384,11 +385,14 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
 
           {showAiTutor2 && AiTutor2ResponseView}
           {predictSettings?.isPredictLevel && (
-            <InstructorsOnly>
-              <div className={moduleStyles.bubble}>
-                <PredictSummary />
-              </div>
-            </InstructorsOnly>
+            <>
+              <InstructorsOnly>
+                <div className={moduleStyles.bubble}>
+                  <PredictSummary />
+                </div>
+              </InstructorsOnly>
+              {predictResponse && <PredictQuestionRunPrompt />}
+            </>
           )}
         </div>
         {showNavigation && (
