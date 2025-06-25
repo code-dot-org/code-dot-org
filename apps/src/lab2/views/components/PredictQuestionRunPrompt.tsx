@@ -1,3 +1,4 @@
+import Alert from '@code-dot-org/component-library/alert';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -32,7 +33,7 @@ const PredictQuestionRunPrompt: React.FunctionComponent<
       </div>
     );
   } else if (hasSubmitted) {
-    return <div>Submitted</div>;
+    return <Alert text="Submitted" type="success" size="s" />;
   } else {
     return null;
   }
