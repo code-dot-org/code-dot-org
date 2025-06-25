@@ -97,7 +97,6 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   );
   const predictResponse = useAppSelector(state => state.predictLevel.response);
   const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
-  console.log('predictAnswerLocked', predictAnswerLocked);
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
   const hasSubmitted = useAppSelector(
     state => getCurrentLevel(state)?.status === LevelStatus.submitted
