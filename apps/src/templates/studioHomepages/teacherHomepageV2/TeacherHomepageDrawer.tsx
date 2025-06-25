@@ -42,8 +42,6 @@ export const TeacherHomepageDrawer: React.FC = () => {
   const [existingSchoolInfo, setExistingSchoolInfo] = React.useState<
     SchoolInfo | undefined
   >(undefined);
-  const schoolName =
-    existingSchoolInfo?.school_name || i18n.schoolInfoDialogDescriptionNoName();
 
   // Load school data and set the drawer state based on the response.
   React.useEffect(() => {
@@ -78,6 +76,8 @@ export const TeacherHomepageDrawer: React.FC = () => {
     schoolZip: existingSchoolInfo?.school_zip,
     schoolType: existingSchoolInfo?.school_type,
   });
+  const schoolName =
+    schoolInfo.schoolName || i18n.schoolInfoDialogDescriptionNoName();
 
   const tryUpdateSchoolInfo = async () => {
     const hasNcesId =
