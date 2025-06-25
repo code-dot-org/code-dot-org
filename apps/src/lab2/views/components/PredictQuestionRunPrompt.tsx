@@ -5,16 +5,10 @@ import {commonI18n} from '@cdo/apps/types/locale';
 
 import moduleStyles from './predict.module.scss';
 
-interface PredictQuestionRunPromptProps {
-  className?: string;
-}
-
 /**
  * A simple prompt reminding users to click the Run button
  */
-const PredictQuestionRunPrompt: React.FC<
-  PredictQuestionRunPromptProps
-> = () => {
+const PredictQuestionRunPrompt: React.FunctionComponent = () => {
   return (
     <div className={moduleStyles.predictQuestionContainer}>
       <div className={moduleStyles.runPrompt}>
