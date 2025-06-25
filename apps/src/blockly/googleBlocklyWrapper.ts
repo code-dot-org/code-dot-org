@@ -370,13 +370,19 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
   registerAllContextMenuItems();
 
-  // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
+  // This is wrapping a settable property, but we can't use wrapSettableProperty
   // because the alias name is not the same as the underlying property name.
   Object.defineProperty(blocklyWrapper, 'mainBlockSpace', {
     get: function () {
       return this.mainWorkspace || this.blockly_.getMainWorkspace();
     },
+    // Setter is only used in tests.
+    set: function (workspace) {
+      this.mainWorkspace = workspace;
+    },
   });
+  // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
+  // because the alias name is not the same as the underlying property name.
   Object.defineProperty(blocklyWrapper, 'mainBlockSpaceEditor', {
     get: function () {
       return this.mainWorkspace || this.blockly_.getMainWorkspace();

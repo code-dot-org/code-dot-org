@@ -225,10 +225,6 @@ describe('CdoUtils', () => {
       const workspaceStub = {};
       const serializationStub = {blocks: {blocks: []}, procedures: []};
 
-      Blockly.serialization = {
-        workspaces: {save: () => {}},
-      };
-
       const getProjectSerializationStub = sandbox
         .stub(cdoSerializationHelpers, 'getProjectSerialization')
         .returns(serializationStub);

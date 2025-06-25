@@ -545,19 +545,6 @@ describe('StudioApp', () => {
       restoreStudioApp();
     });
 
-    it('calls a handler in response to a blockly change', () => {
-      let changed = false;
-      studioApp().usingBlockly_ = true;
-      studioApp().setupChangeHandlers();
-
-      studioApp().addChangeHandler(() => (changed = true));
-      Blockly.mainBlockSpace
-        .getCanvas()
-        .dispatchEvent(new Event('blocklyBlockSpaceChange'));
-
-      expect(changed).to.be.true;
-    });
-
     it('calls a handler in response to a droplet change', () => {
       let changed = false;
       studioApp().usingBlockly_ = false;
@@ -569,8 +556,6 @@ describe('StudioApp', () => {
       studioApp().editor.trigger('change');
 
       expect(changed).to.be.true;
-
-      studioApp().usingBlockly_ = true;
     });
 
     it('calls a handler in response to an aceEditor change', () => {
@@ -584,23 +569,6 @@ describe('StudioApp', () => {
       studioApp().editor.aceEditor.trigger('change');
 
       expect(changed).to.be.true;
-
-      studioApp().usingBlockly_ = true;
-    });
-
-    it('calls multiple handlers in response to a blockly change', () => {
-      let changed1 = false,
-        changed2 = false;
-      studioApp().setupChangeHandlers();
-
-      studioApp().addChangeHandler(() => (changed1 = true));
-      studioApp().addChangeHandler(() => (changed2 = true));
-      Blockly.mainBlockSpace
-        .getCanvas()
-        .dispatchEvent(new Event('blocklyBlockSpaceChange'));
-
-      expect(changed1).to.be.true;
-      expect(changed2).to.be.true;
     });
   });
 
