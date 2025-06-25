@@ -321,8 +321,9 @@ class Artist {
       return;
     }
 
-    for (const {filename, position, scale} of this.options.level.images) {
-      this.placeImage(filename, position, scale);
+    for (const {filename, local, position, scale} of this.options.level
+      .images) {
+      this.placeImage(local || filename, position, scale);
     }
 
     if (this.driver.ctxImages && this.driver.ctxScratch) {
@@ -372,9 +373,11 @@ class Artist {
       // request the image with ACAO headers so that canvas will not flag
       // it as tainted
       img.crossOrigin = 'anonymous';
-      img.src = filename.startsWith('http')
-        ? filename
-        : this.skin.assetUrl('media/turtle/' + filename);
+      img.src = filename.startsWith('artist/')
+        ? `/${filename}`
+        : filename.startsWith('http')
+          ? filename
+          : this.skin.assetUrl('media/turtle/' + filename);
     }
   }
 

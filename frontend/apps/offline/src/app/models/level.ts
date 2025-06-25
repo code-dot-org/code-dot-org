@@ -76,6 +76,8 @@ export interface ArtistData {
   predrawBlocks?: BlocklySerialization;
   images: {
     filename: string;
+    /** Internal reference to the locally stored version of the image */
+    local?: string;
     position: [number, number];
     scale?: number;
   }[];
@@ -559,8 +561,41 @@ export const parseLevelData: (
             | undefined,
         ),
       ),
-      images: JSON.parse(sanitizeJSON(config.properties?.images || '[]')),
+      images: JSON.parse(sanitizeJSON(config.properties?.images || '[]')).map(
+        info => ({
+          ...info,
+          local: info.filename.startsWith('http')
+            ? path.join('artist', urlToKey(info.filename))
+            : undefined,
+        }),
+      ),
     };
+
+    // Fetch all referenced images to local disk
+    for (const info of ret.artistData.images) {
+      if (!info.local) {
+        continue;
+      }
+
+      const localPath = path.join(process.cwd(), 'public', info.local);
+      await fs.mkdir(path.dirname(localPath), {recursive: true});
+
+      try {
+        await fs.access(localPath, fs.constants.R_OK | fs.constants.W_OK);
+      } catch (_) {
+        // Could not find the file in the public path
+        // Download it
+        const res = await fetch(info.filename);
+        if (res.body) {
+          const fileStream = createWriteStream(localPath, {flags: 'wx'});
+          await finished(
+            Readable.fromWeb(
+              res.body as unknown as ReadableStream<Uint8Array>,
+            ).pipe(fileStream),
+          );
+        }
+      }
+    }
   }
 
   // SpriteLab levels
