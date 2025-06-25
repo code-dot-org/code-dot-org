@@ -1352,7 +1352,6 @@ roles.each do |name, config| %>
                 Action:
                   - s3:DeleteBucket
                   - s3:DeleteObject
-                  - s3:DeleteBucketPolicy
                 Resource: '*'
                 Condition:
                   StringEquals:
@@ -1375,6 +1374,13 @@ roles.each do |name, config| %>
                   - "arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets"
                   - "arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets/*"
                   - "arn:aws:s3:::cdo-logs"
+
+              # S3 DELETE actions for non-taggable resources - no tag restriction
+              - Sid: AllowCloudFrontDeleteActionsForNonTaggableResources
+                Effect: Allow
+                Action:
+                  - s3:DeleteBucketPolicy
+                Resource: '*'
 
               # Secrets Manager CREATE actions - allowed on any resource
               - Sid: AllowSecretsManagerCreateActions
