@@ -5,6 +5,7 @@ import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/Us
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {selectMultimodalEnabled, submitChatContents} from '../redux';
+import {ChatButton} from '../types';
 
 import moduleStyles from './UserChatMessageEditor.module.scss';
 
@@ -13,7 +14,9 @@ import moduleStyles from './UserChatMessageEditor.module.scss';
  */
 const UserChatMessageEditor: React.FunctionComponent<{
   editorContainerClassName?: string;
-}> = ({editorContainerClassName}) => {
+  chatButtons?: ChatButton[];
+  hiddenContext?: string;
+}> = ({editorContainerClassName, chatButtons, hiddenContext}) => {
   const isWaitingForChatResponse = useAppSelector(
     state => !!state.aichat.chatMessagePending
   );
@@ -26,12 +29,9 @@ const UserChatMessageEditor: React.FunctionComponent<{
   const uploadsPending = useAppSelector(state =>
     state.aichat.stagedFiles.some(file => file.status === 'uploading')
   );
-  const chatButtons = useAppSelector(state => state.aichat.chatButtons);
   const dispatch = useAppDispatch();
 
   const inputRef = useRef<HTMLTextAreaElement>(null);
-
-  const hiddenContext = useAppSelector(state => state.aichat.hiddenContext);
 
   const handleSubmit = useCallback(
     (userMessage: string) => {
@@ -69,7 +69,7 @@ const UserChatMessageEditor: React.FunctionComponent<{
 
   return (
     <>
-      {chatButtons.length > 0 && (
+      {chatButtons && (
         <div className={moduleStyles.chatButtonsContainer}>
           {chatButtons.map(button => (
             <Button

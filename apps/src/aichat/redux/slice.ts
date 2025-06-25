@@ -22,7 +22,6 @@ import {
   isCompletedChatMessage,
   PendingChatMessage,
   ChatAsset,
-  ChatButton,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -48,8 +47,6 @@ const initialState: AichatState = {
   userHasAichatAccess: false,
   stagedFiles: [],
   stagedFilesAlert: undefined,
-  hiddenContext: undefined,
-  chatButtons: [],
 };
 
 const aichatSlice = createSlice({
@@ -314,12 +311,6 @@ const aichatSlice = createSlice({
       state.stagedFiles = [];
       state.stagedFilesAlert = undefined;
     },
-    setHiddenContext: (state, action: PayloadAction<string>) => {
-      state.hiddenContext = action.payload;
-    },
-    setChatButtons: (state, action: PayloadAction<ChatButton[]>) => {
-      state.chatButtons = action.payload;
-    },
   },
 });
 
@@ -376,6 +367,4 @@ export const {
   clearStagedFiles,
   stagedFilesLimitExceeded,
   clearStagedFilesAlert,
-  setHiddenContext,
-  setChatButtons,
 } = aichatSlice.actions;

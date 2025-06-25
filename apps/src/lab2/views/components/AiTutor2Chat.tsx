@@ -1,9 +1,7 @@
 import React, {useEffect} from 'react';
 
 import {
-  setHiddenContext,
   setSavedAiCustomizationProperty,
-  setChatButtons,
   clearChatMessages,
 } from '@cdo/apps/aichat/redux';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
@@ -39,33 +37,29 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
         value: AiChatModelIds.CHATGPT,
       })
     );
-
-    // Give aichat some buttons to generate chat questions.
-    const buttons = [
-      {
-        label: 'example',
-        value: 'Can you give me an example?',
-      },
-      {
-        label: 'hint',
-        value: 'Can you give me a hint?',
-      },
-      {
-        label: 'doc',
-        value: 'Can you give me some documentation?',
-      },
-    ];
-    dispatch(setChatButtons(buttons));
   }, [dispatch]);
 
-  useEffect(() => {
-    // Give aichat additional prompt data.
-    dispatch(setHiddenContext(hiddenContext));
-  }, [dispatch, hiddenContext]);
+  // Some pre-canned chat buttons.
+  const chatButtons = [
+    {
+      label: 'example',
+      value: 'Can you give me an example?',
+    },
+    {
+      label: 'hint',
+      value: 'Can you give me a hint?',
+    },
+    {
+      label: 'doc',
+      value: 'Can you give me some documentation?',
+    },
+  ];
 
   return (
     <div className={moduleStyles.container}>
       <ChatWorkspace
+        chatButtons={chatButtons}
+        hiddenContext={hiddenContext}
         onClear={() => {
           dispatch(clearChatMessages());
         }}

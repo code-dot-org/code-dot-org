@@ -22,6 +22,4 @@ export {
   clearStagedFilesAlert,
   clearStagedFiles,
   setSavedAiCustomizationProperty,
-  setHiddenContext,
-  setChatButtons,
 } from './slice';

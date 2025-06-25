@@ -8,7 +8,6 @@ import {
   SaveType,
   ServerChatEvent,
   ViewMode,
-  ChatButton,
 } from '../types';
 
 export interface AichatState {
@@ -45,8 +44,4 @@ export interface AichatState {
     | 'fileLimitExceeded'
     | 'sizeLimitExceeded'
     | undefined;
-  // Additional context provided by the lab that is appended to the user message.
-  hiddenContext?: string;
-  // Optional information about buttons containing pre-canned questions.
-  chatButtons: ChatButton[];
 }
