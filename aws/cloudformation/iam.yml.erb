@@ -1427,41 +1427,16 @@ roles.each do |name, config| %>
                   - elasticfilesystem:ListTagsForResource
                 Resource: '*'
 
-              # Application Autoscaling CREATE actions - allowed on any resource
-              - Sid: AllowApplicationAutoScalingCreateActions
+              # Application Autoscaling actions for non-taggable resources and general operations
+              - Sid: AllowApplicationAutoScalingActionsForNonTaggableResources
                 Effect: Allow
                 Action:
                   - application-autoscaling:PutScalingPolicy
                   - application-autoscaling:RegisterScalableTarget
-                Resource: '*'
-              # TODO: Re-enable if we can get this to work for scalable target resources as well.
-              #                Condition:
-              #                  StringLike:
-              #                    application-autoscaling:ResourceId: "service/*/*-<%#=environment_type%>-*"
-
-              # Application Autoscaling UPDATE/DELETE actions - restricted to tagged resources
-              - Sid: AllowApplicationAutoScalingUpdateDeleteActionsOnTaggedResources
-                Effect: Allow
-                Action:
-                  - application-autoscaling:DeregisterScalableTarget
-                Resource: '*'
-                Condition:
-                  StringEquals:
-                    'aws:ResourceTag/environment-type': <%=environment_type%>
-
-              # Application AutoScaling DELETE actions for non-taggable resources - no tag restriction
-              - Sid: AllowApplicationAutoSCalingDeleteActionsForNonTaggableResources
-                Effect: Allow
-                Action:
                   - application-autoscaling:DeleteScalingPolicy
-                Resource: '*'
-
-              # Application Autoscaling DESCRIBE actions - allowed on any resource
-              - Sid: AllowApplicationAutoScalingDescribeActions
-                Effect: Allow
-                Action:
                   - application-autoscaling:DescribeScalingPolicies
                   - application-autoscaling:DescribeScalableTargets
+                  - application-autoscaling:DeregisterScalableTarget
                 Resource: '*'
 <% end %>
 
