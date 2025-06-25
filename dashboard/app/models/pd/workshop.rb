@@ -439,6 +439,10 @@ class Pd::Workshop < ApplicationRecord
       "#{sessions.first.start.strftime('%B %-d')} - #{sessions.last.start.strftime('%B %-d, %Y')}"
   end
 
+  # Friendly location string is determined by:
+  # 1. Any session has a session_format of 'virtual': 'Virtual Workshop'
+  # 2. No location info on the first session: 'Location TBA'
+  # 3. The first session's location_address
   def friendly_location
     return 'Virtual Workshop' if virtual?
     first_session = sessions.first
