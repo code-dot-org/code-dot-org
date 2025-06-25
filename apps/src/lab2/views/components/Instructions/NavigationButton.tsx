@@ -50,7 +50,6 @@ const NavigationButton: React.FC<NavigationButtonProps> = ({
 
   return (
     <ContinueButton
-      hasRun={hasRun}
       className={className}
       size={size}
       isPredictLevel={levelProperties.predictSettings?.isPredictLevel}
@@ -59,7 +58,6 @@ const NavigationButton: React.FC<NavigationButtonProps> = ({
 };
 
 interface ContinueButtonProps {
-  hasRun: boolean;
   className?: string;
   size?: ComponentSizeXSToL;
   isPredictLevel?: boolean;
@@ -69,7 +67,6 @@ interface ContinueButtonProps {
  * Displays the "Continue" or "Finish" button that advances to the next level or finishes the progression.
  */
 const ContinueButton: React.FC<ContinueButtonProps> = ({
-  hasRun,
   className,
   size,
   isPredictLevel,
@@ -91,8 +88,7 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
 
   const canShow =
     (!isPredictLevel || hasSubmittedPredictResponse) &&
-    (!hasConditions || satisfied) &&
-    hasRun;
+    (!hasConditions || satisfied);
 
   const text = hasNextLevel ? commonI18n.continue() : commonI18n.finish();
 
@@ -175,10 +171,6 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({
       message: dialogMessage,
     });
   };
-
-  // if (!enabled) {
-  //   return null;
-  // }
 
   return (
     <Button
