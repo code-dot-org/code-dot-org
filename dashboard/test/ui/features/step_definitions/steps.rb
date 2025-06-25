@@ -1652,3 +1652,10 @@ end
 And(/^I clean up my records$/) do
   clean_up_records
 end
+
+And(/^I debug milestone callback$/) do
+  mode = @browser.execute_script("return appOptions.postMilestoneMode;")
+  puts "postMilestoneMode: #{mode.inspect}"
+  callback = @browser.execute_script("return appOptions.dialog.callback;")
+  puts "callback: #{callback.inspect}"
+end
