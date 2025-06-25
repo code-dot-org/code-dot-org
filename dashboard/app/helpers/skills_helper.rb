@@ -1,10 +1,9 @@
 module SkillsHelper
   def self.get_section_skills_data(section, unit)
     student_ids = section.students.pluck(:id)
-    skills_data = unit.levels.joins(:skills).
+    skill_ids = unit.levels.joins(:skills).
                        pluck('skills.id').
                        uniq
-    skill_ids = skills_data.map(&:first)
 
     evaluations_data = UserLevelSkillEvaluation.where(
       student_id: student_ids,
@@ -27,7 +26,7 @@ module SkillsHelper
     student_ids.each do |student_id|
       result[student_id] = {}
 
-      skills_data.each do |skill_id|
+      skill_ids.each do |skill_id|
         student_skill_evaluations = evaluations_by_student_skill[[student_id, skill_id]] || []
         evaluation_values = student_skill_evaluations.pluck(:evaluation)
         mastery_level = determine_mastery_level_for_student(evaluation_values)
