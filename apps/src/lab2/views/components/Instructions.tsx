@@ -65,6 +65,8 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       state => state.lab.levelProperties?.useSecondaryFinishButton
     ) || queryParams('use-secondary-finish-button') === 'true';
 
+  const isRunning = useAppSelector(state => state.lab2System.isRunning);
+
   const dispatch = useAppDispatch();
 
   const {theme} = useTheme();
@@ -98,6 +100,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       useSecondaryFinishButton={useSecondaryFinishButton}
       onContinueOrFinish={() => dispatch(continueOrFinishLesson())}
       bottomComponent={bottomComponent}
+      isRunning={isRunning}
     />
   );
 };
