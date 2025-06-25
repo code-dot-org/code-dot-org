@@ -6,7 +6,7 @@ class ShareFilteringTest < Minitest::Test
   # @param title_text [String] The text of the title of the program.
   # @return [String] A sample XML program.
   def generate_xml_program(title_name, title_text)
-    '<xml><block type="when_run" deletable="false">' \
+    '<xml><block type="when_run" deletable="false" id="whenRun">' \
       '<next><block type="studio_showTitleScreen">' \
       "<title name=\"TITLE\">#{title_name}</title>" \
       "<title name=\"TEXT\">#{title_text}</title>" \
@@ -19,7 +19,6 @@ class ShareFilteringTest < Minitest::Test
       "variables" => [
         {"name" => "myVar"},
         {"name" => ""},
-        {"name" => nil}
       ],
       "blocks" => {
         "languageVersion" => 0,
@@ -46,12 +45,9 @@ class ShareFilteringTest < Minitest::Test
                       "fields" => {
                         "TEXT" => '"inner text"'
                       },
-                      "next" => {"block" => nil}
                     },
-                    "shadow" => nil
                   }
                 },
-                "next" => {"block" => nil}
               }
             }
           }
