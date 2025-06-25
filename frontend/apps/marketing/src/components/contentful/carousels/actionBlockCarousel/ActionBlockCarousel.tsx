@@ -15,6 +15,11 @@ import {LinkEntry} from '@/types/contentful/entries/Link';
 import {Entry} from '@/types/contentful/Entry';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
+// This is a workaround to prevent carousel slidesPerView from flashing on page load
+// See: https://github.com/nolimits4web/swiper/discussions/6785#discussioncomment-9145384
+// eslint-disable-next-line
+localStorage?.getItem?.('theme') || 'light';
+
 type ActionBlockCarouselFields = {
   actionBlockOverline: EntryFields.Text;
   title: EntryFields.Text;
