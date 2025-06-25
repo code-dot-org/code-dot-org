@@ -8,6 +8,7 @@ class Pd::CourseFacilitatorTest < ActiveSupport::TestCase
     @facilitator1 = create :facilitator, name: 'Facilitator 1'
     @facilitator2 = create :facilitator, name: 'Facilitator 2'
     @facilitator3 = create :facilitator, name: 'Facilitator 3'
+    @all_facilitators = [@facilitator1, @facilitator2, @facilitator3]
   end
 
   def create_course_facilitator(facilitator, course)
@@ -53,8 +54,7 @@ class Pd::CourseFacilitatorTest < ActiveSupport::TestCase
     offering1 = create_offering(nil)
     offering2 = create_offering([@csf])
     facilitators = Pd::CourseFacilitator.facilitators_for_course_offerings([offering1.id, offering2.id])
-    all_facilitators = Pd::CourseFacilitator.all.map(&:facilitator)
-    assert_equal all_facilitators.sort_by(&:id), facilitators.sort_by(&:id)
+    assert_empty @all_facilitators - facilitators
   end
 
   test 'facilitators_for_course_offerings and all empty permissions returns all' do
@@ -62,8 +62,7 @@ class Pd::CourseFacilitatorTest < ActiveSupport::TestCase
     create_course_facilitator(@facilitator2, @csd)
     offering1 = create_offering([])
     facilitators = Pd::CourseFacilitator.facilitators_for_course_offerings([offering1.id])
-    all_facilitators = Pd::CourseFacilitator.all.map(&:facilitator)
-    assert_equal all_facilitators.sort_by(&:id), facilitators.sort_by(&:id)
+    assert_empty @all_facilitators - facilitators
   end
 
   test 'facilitators_for_course_offerings with bad course_offering id' do

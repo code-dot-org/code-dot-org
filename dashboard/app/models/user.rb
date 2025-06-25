@@ -102,7 +102,9 @@ class User < ApplicationRecord
   include ProviderFlags
   include Verifiable
   include Age
+  include SectionParticipation
   include PartialRegistration
+  include Purgeable
   include Rails.application.routes.url_helpers
 
   self.inheritance_column = :user_type
@@ -156,8 +158,6 @@ class User < ApplicationRecord
   # constants for resetting user secret words/picture
   MAX_SECRET_RESET_ATTEMPTS = 5
   RESET_SECRETS = 'reset_secrets'.freeze
-
-  SYSTEM_DELETED_USERNAME = 'sys_deleted'
 
   # When adding a new version, append to the end of the array
   # using the next increasing natural number.
@@ -397,7 +397,7 @@ class User < ApplicationRecord
 
   before_validation :normalize_parent_email
 
-  before_validation :update_share_setting, unless: :under_13?
+  before_validation :update_share_setting
 
   # NOTE: Order is important here.
   before_save :make_teachers_21,
@@ -432,10 +432,11 @@ class User < ApplicationRecord
   devise :invitable, :database_authenticatable, :registerable, :omniauthable,
     :recoverable, :rememberable, :trackable, :lockable
 
-  # Make sure to include this Concern after we include the default Devise
+  # Make sure to include these Concerns after we include the default Devise
   # modules, since it's trying to extend some methods added by those modules
   # that would be overridden by them if we included it before.
   include Devise::Models::ManualSessionExpiration
+  include Devise::DatabaseAuthenticationOverrides
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
 
@@ -658,23 +659,6 @@ class User < ApplicationRecord
       authentication_options.all?(&:oauth?) && encrypted_password.blank?
     else
       AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include?(provider) && encrypted_password.blank?
-    end
-  end
-
-  def update_without_password(params, *options)
-    if params[:races]
-      self.races = params[:races].join ','
-    end
-    params.delete(:races)
-    super
-  end
-
-  def update_with_password(params, *options)
-    if encrypted_password.blank?
-      params.delete(:current_password) # user does not have password so current password is irrelevant
-      update(params, *options)
-    else
-      super
     end
   end
 
@@ -1277,28 +1261,6 @@ class User < ApplicationRecord
     user_course_data + user_script_data
   end
 
-  def sections_as_student_participant
-    sections_as_student.select {|s| !s.pl_section?}
-  end
-
-  def sections_as_pl_participant
-    sections_as_student.select(&:pl_section?)
-  end
-
-  def all_sections
-    sections_as_teacher = student? ? [] : sections_instructed.to_a
-    sections_as_teacher.concat(sections_as_student).uniq
-  end
-
-  # Figures out the unique set of courses assigned to sections that this user
-  # is a part of.
-  # @return [Array<Course>]
-  def section_courses
-    # In the future we may want to make it so that if assigned a script, but that
-    # script has a default course, it shows up as a course here
-    all_sections.filter_map(&:unit_group).uniq
-  end
-
   def visible_scripts
     scripts.map(&:cached).select {|s| [Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview].include?(s.get_published_state)}
   end
@@ -1317,17 +1279,6 @@ class User < ApplicationRecord
     end
 
     all_scripts
-  end
-
-  # return the id of the most-recently-created section the user instructs.
-  def last_section_id
-    teacher? ? sections_instructed.where(hidden: false).last&.id : nil
-  end
-
-  # The section which the user most recently joined as a student, or nil if none exists.
-  # @return [Section|nil]
-  def last_joined_section
-    Follower.where(student_user: self).order(created_at: :desc).first.try(:section)
   end
 
   # Returns integer days since account creation, rounded down
@@ -1394,6 +1345,16 @@ class User < ApplicationRecord
       child_account_compliance_state: cap_status,
       latest_permission_request_sent_at: latest_parental_permission_request&.updated_at,
       us_state: us_state,
+    }
+  end
+
+  def summarize_for_workshop
+    {
+      id: id,
+      email: email,
+      is_student: user_type == TYPE_STUDENT,
+      first_name: name&.split&.first,
+      last_name: name&.split&.last,
     }
   end
 
@@ -1586,42 +1547,6 @@ class User < ApplicationRecord
     teacher? && users_school && (next_census_display.nil? || Time.zone.today >= next_census_display.to_date)
   end
 
-  # Removes PII and other information from the user and marks the user as having been purged.
-  # WARNING: This (permanently) destroys data and cannot be undone.
-  # WARNING: This does not purge the user, only marks them as such.
-  def clear_user_and_mark_purged
-    random_suffix = (('0'..'9').to_a + ('a'..'z').to_a).sample(8).join
-
-    authentication_options.with_deleted.each(&:really_destroy!)
-    self.primary_contact_info = nil
-
-    self.studio_person_id = nil
-    self.name = nil
-    self.username = "#{SYSTEM_DELETED_USERNAME}_#{random_suffix}"
-    self.current_sign_in_ip = nil
-    self.last_sign_in_ip = nil
-    self.email = ''
-    self.hashed_email = ''
-    self.parent_email = nil
-    self.encrypted_password = nil
-    self.uid = nil
-    self.reset_password_token = nil
-    self.full_address = nil
-    self.secret_picture_id = nil
-    self.secret_words = nil
-    self.school = nil
-    self.school_info_id = nil
-    self.properties = {}
-    unless within_united_states?
-      self.urm = nil
-      self.races = nil
-    end
-
-    self.purged_at = Time.zone.now
-
-    save!
-  end
-
   def within_united_states?
     user_geos.first&.country == 'United States'
   end
@@ -1646,11 +1571,12 @@ class User < ApplicationRecord
     self.sharing_disabled = true if under_13?
   end
 
-  # If a user is now over age 13, we should update
-  # their share setting to enabled, if they are in no sections.
+  # If the user is not in any sections, set sharing based on age (disabled if under 13).
   def update_share_setting
-    self.sharing_disabled = false if sections_as_student.empty?
-    return true
+    if sections_as_student.empty?
+      self.sharing_disabled = under_13?
+    end
+    true
   end
 
   # When creating an account, we want to look for any channels that got created

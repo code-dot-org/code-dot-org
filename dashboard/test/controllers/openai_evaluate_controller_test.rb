@@ -9,7 +9,7 @@ class OpenaiEvaluateControllerTest < ActionController::TestCase
   test 'evaluate returns not found for bogus level",' do
     student = create(:student)
     sign_in(student)
-    unit = create(:script)
+    unit = create(:unit, :in_single_unit_course)
     get :evaluate, params: {level_id: 18976, unit_id: unit.id, student_work: "This is a good answer.", evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]}
     assert_response :not_found
   end
@@ -32,7 +32,7 @@ class OpenaiEvaluateControllerTest < ActionController::TestCase
     get :evaluate, params: {level_id: level.id, unit_id: unit.id, student_work: " ", evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]}
     assert_response :ok
     custom_response = JSON.parse(json_response["content"])
-    assert_equal custom_response["aiEvaluation"], "No attempt"
+    assert_equal custom_response["aiEvaluation"], SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:NO_ATTEMPT]
     assert_equal custom_response["aiReasoning"], "The student response was blank."
   end
 
@@ -41,14 +41,14 @@ class OpenaiEvaluateControllerTest < ActionController::TestCase
     ProfanityFilter.stubs(:find_potential_profanity).returns 'shit'
     student = create(:student)
     sign_in(student)
-    csp_course_offering = create(:csp_course_offering, :with_units)
-    unit = csp_course_offering.course_versions.first.content_root
+    csp_course_offering = create(:csp_course_offering, :with_unit_group)
+    unit = csp_course_offering.course_versions.first.content_root.first_unit
     level = create(:free_response)
     create(:script_level, script: unit, levels: [level])
     get :evaluate, params: {level_id: level.id, unit_id: unit.id, student_work: "This is shit.", evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]}
     assert_response :ok
     custom_response = JSON.parse(json_response["content"])
-    assert_equal custom_response["aiEvaluation"], "Profanity detected"
+    assert_equal custom_response["aiEvaluation"], SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:STUDENT_PROFANITY]
     assert_equal custom_response["aiReasoning"], "The response contains profanity and could not be evaluated."
   end
 
@@ -64,8 +64,8 @@ class OpenaiEvaluateControllerTest < ActionController::TestCase
     get :evaluate, params: {level_id: level.id, unit_id: unit.id, student_work: "My email is harry@hogwarts.edu", evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]}
     assert_response :ok
     custom_response = JSON.parse(json_response["content"])
-    assert_equal custom_response["aiEvaluation"], "PII detected"
-    assert_equal custom_response["aiReasoning"], "The response contains PII and could not be evaluated."
+    assert_equal custom_response["aiEvaluation"], SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:STUDENT_PII]
+    assert_equal custom_response["aiReasoning"], "The response could not be evaluated because it contains personal information that is not safe for your student to share."
   end
 
   # student did not change starter code on programming level
@@ -77,7 +77,7 @@ class OpenaiEvaluateControllerTest < ActionController::TestCase
     get :evaluate, params: {level_id: level.id, unit_id: unit.id, student_work: level.get_starter_code, evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]}
     assert_response :ok
     custom_response = JSON.parse(json_response["content"])
-    assert_equal custom_response["aiEvaluation"], "No attempt"
+    assert_equal custom_response["aiEvaluation"], SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:NO_ATTEMPT]
     assert_equal custom_response["aiReasoning"], "The student did not change the starter code."
   end
 end

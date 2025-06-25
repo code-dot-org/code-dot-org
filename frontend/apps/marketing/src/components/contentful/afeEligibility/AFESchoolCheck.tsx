@@ -24,6 +24,13 @@ const NO_SCHOOL_ID = '-1';
 const SUPPORT_EMAIL = 'support@code.org';
 const REQUIREMENTS_ID = 'afe-requirements';
 
+const defaultFormData: AFESchoolCheckFormData = {
+  email: '',
+  zipCode: '',
+  schoolId: '',
+  schoolName: '',
+};
+
 const AFESchoolCheck: React.FC<AFESchoolCheckProps> = ({
   email = '',
   onComplete,
@@ -31,12 +38,8 @@ const AFESchoolCheck: React.FC<AFESchoolCheckProps> = ({
   const {logEvent} = useStatsigClient();
   const [showIneligibleNotice, setShowIneligibleNotice] = useState(false);
   const [isFormSubmitted, setFormSubmission] = useState(false);
-  const [formData, setFormData] = useState<AFESchoolCheckFormData>({
-    email,
-    zipCode: '',
-    schoolId: '',
-    schoolName: '',
-  });
+  const [formData, setFormData] =
+    useState<AFESchoolCheckFormData>(defaultFormData);
   const [formError, setFormError] = useState('');
 
   const updateFormData = (newFormData: Partial<AFESchoolCheckFormData>) => {
@@ -82,9 +85,9 @@ const AFESchoolCheck: React.FC<AFESchoolCheckProps> = ({
 
     logEvent('AFE Submit School Info');
 
-    if (formData.schoolId === NO_SCHOOL_ID) {
+    if (!formData.schoolId) {
       handleEligibility(false);
-    } else if (formData.schoolId) {
+    } else {
       setFormSubmission(true);
 
       fetch(
@@ -148,8 +151,12 @@ const AFESchoolCheck: React.FC<AFESchoolCheckProps> = ({
           required
           noSchoolId={NO_SCHOOL_ID}
           className={styles.afeEligibilityFormField}
-          onSelect={(schoolId, schoolName) =>
-            updateFormData({schoolId, schoolName})
+          onSelect={school =>
+            updateFormData({
+              zipCode: school?.zip || defaultFormData.zipCode,
+              schoolId: school?.nces_id || defaultFormData.schoolId,
+              schoolName: school?.name || defaultFormData.schoolName,
+            })
           }
         />
 

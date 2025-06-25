@@ -53,6 +53,7 @@ export interface ProjectAndSources {
   sources?: ProjectSources;
   channel: Channel;
   abuseScore?: number;
+  sharingDisabled?: boolean;
 }
 
 /// ------ SOURCES ------ ///
@@ -356,11 +357,6 @@ export interface Validation {
 }
 
 /// ------ MISC ------ ///
-
-export enum ProjectManagerStorageType {
-  LOCAL = 'LOCAL',
-  REMOTE = 'REMOTE',
-}
 
 export interface ExtraLinksLevelData {
   links: {[key: string]: {text: string; url: string; access_key?: string}[]};

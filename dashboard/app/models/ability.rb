@@ -290,8 +290,8 @@ class Ability
       unit_group.default_units[0].is_migrated && !unit_group.plc_course && can?(:read, unit_group)
     end
 
-    can [:vocab, :resources, :code, :standards, :get_rollup_resources], Unit do |script|
-      script.is_migrated && can?(:read, script)
+    can [:vocab, :resources, :code, :standards, :get_rollup_resources], Unit do |script, context_unit_group|
+      script.is_migrated && can?(:read, script, context_unit_group)
     end
 
     can :read, UnitGroup do |unit_group|
@@ -308,23 +308,29 @@ class Ability
       end
     end
 
-    can :read, Unit do |script|
-      if script.can_be_participant?(user) || script.can_be_instructor?(user)
-        if script.in_development?
-          user.levelbuilder?
-        elsif script.pilot?
-          script.has_pilot_access?(user)
-        else
-          true
-        end
+    can :read, Unit do |script, context_unit_group|
+      unit_group = context_unit_group || script.original_unit_group
+      if unit_group
+        can?(:read, unit_group)
       else
-        false
+        if script.can_be_participant?(user) || script.can_be_instructor?(user)
+          if script.in_development?
+            user.levelbuilder?
+          elsif script.pilot?
+            script.has_pilot_access?(user)
+          else
+            true
+          end
+        else
+          false
+        end
       end
     end
 
     can :read, ScriptLevel do |script_level, params|
       script = script_level.script
-      if can?(:read, script)
+      unit_group = params&.[](:context_unit_group) || script.original_unit_group
+      if can?(:read, script, unit_group)
         # login is required if this script always requires it or if request
         # params were passed to authorize! and includes login_required=true
         login_required = script.login_required? || (!params.nil? && params[:login_required] == "true")
@@ -334,9 +340,10 @@ class Ability
       end
     end
 
-    can [:read, :show_by_id, :student_lesson_plan], Lesson do |lesson|
+    can [:read, :show_by_id, :student_lesson_plan], Lesson do |lesson, context_unit_group|
       script = lesson.script
-      can?(:read, script)
+      unit_group = context_unit_group || script.original_unit_group
+      can?(:read, script, unit_group)
     end
 
     can :read, ReferenceGuide do |guide|

@@ -141,7 +141,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test "blockly_options 'level.isLastLevelInScript' is false if script level is not the last level in the script" do
-    @script = create :script
+    @script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: @script
     @lesson = create :lesson, lesson_group: lesson_group, relative_position: 1
     lesson_2 = create :lesson, lesson_group: lesson_group, relative_position: 2
@@ -155,7 +155,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test "blockly_options 'level.isLastLevelInScript' is true if script level is the last level in the script" do
-    @script = create :script
+    @script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: @script
     create :lesson, lesson_group: lesson_group, relative_position: 1
     @lesson = create :lesson, lesson_group: lesson_group, relative_position: 2
@@ -169,7 +169,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   test "blockly_options 'level.showEndOfLessonMsgs' is true if script.show_unit_overview_between_lessons? is true" do
     Unit.any_instance.stubs(:show_unit_overview_between_lessons?).returns true
-    @script = create :script
+    @script = create :script, :in_single_unit_course
     @lesson = create :lesson
     @level = create :applab
     @script_level = create :script_level, lesson: @lesson, levels: [@level]
@@ -181,7 +181,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   test "blockly_options 'level.showEndOfLessonMsgs' is false if script.show_unit_overview_between_lessons? is false" do
     Unit.any_instance.stubs(:show_unit_overview_between_lessons?).returns false
-    @script = create :script
+    @script = create :script, :in_single_unit_course
     @lesson = create :lesson
     @level = create :applab
     @script_level = create :script_level, lesson: @lesson, levels: [@level]
@@ -224,7 +224,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test "should select only callouts for current script level" do
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     @level = create(:deprecated_blockly_level)
     lesson = create(:lesson, script: script)
     @script_level = create(:script_level, script: script, levels: [@level], lesson: lesson)
@@ -241,7 +241,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test "should localize callouts" do
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     @level = create(:deprecated_blockly_level)
     lesson = create(:lesson, script: script)
     @script_level = create(:script_level, script: script, levels: [@level], lesson: lesson)
@@ -281,7 +281,7 @@ class LevelsHelperTest < ActionView::TestCase
   test 'app_options sets a channel if the level is not cached for a channel-backed level' do
     @public_caching = false
 
-    @script = create(:script)
+    @script = create(:script, :in_single_unit_course)
     @level = create :applab
     create(:script_level, script: @script, levels: [@level])
 
@@ -291,7 +291,7 @@ class LevelsHelperTest < ActionView::TestCase
   test 'app_options does not set a channel if the level is cached' do
     @public_caching = true
 
-    @script = create(:script)
+    @script = create(:script, :in_single_unit_course)
     @level = create :applab
     create(:script_level, script: @script, levels: [@level])
 
@@ -339,7 +339,7 @@ class LevelsHelperTest < ActionView::TestCase
     user = create :user
     sign_in user
 
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     level = create(:level, :blockly)
     create(:script_level, script: script, levels: [@level, level])
 
@@ -383,7 +383,7 @@ class LevelsHelperTest < ActionView::TestCase
     @user = create :user
     sign_in create(:user)
 
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     @level = create :applab
     create(:script_level, script: script, levels: [@level])
 
@@ -397,7 +397,7 @@ class LevelsHelperTest < ActionView::TestCase
     sign_in create(:user)
     stub_storage_id_for_user_id(@user.id)
 
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     @level = create :applab
     create(:script_level, script: script, levels: [@level])
 
@@ -416,7 +416,7 @@ class LevelsHelperTest < ActionView::TestCase
     sign_in @user
     stub_storage_id_for_user_id(@user.id)
 
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     @level = create :javalab
     create(:script_level, script: script, levels: [@level])
 
@@ -437,7 +437,7 @@ class LevelsHelperTest < ActionView::TestCase
     stub_storage_id_for_user_id(user.id)
 
     applab_level = create :applab # is channel backed
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     create(:script_level, levels: [applab_level], script: script)
 
     create :channel_token, level: applab_level, storage_id: fake_storage_id_for_user_id(user.id)
@@ -448,7 +448,7 @@ class LevelsHelperTest < ActionView::TestCase
   test 'level_started? should return false if a channel does not exist for a channel backed level' do
     user = create :user
     applab_level = create :applab # is channel backed
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     create(:script_level, levels: [applab_level], script: script)
 
     assert_equal false, level_started?(applab_level, script, user)
@@ -457,7 +457,7 @@ class LevelsHelperTest < ActionView::TestCase
   test 'level_started? should return true if progress exists for a level that is not channel backed' do
     user = create :user
     maze_level = create :maze
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     create(:script_level, levels: [maze_level], script: script)
     create :user_level, level: maze_level, user: user, script: script
 
@@ -467,7 +467,7 @@ class LevelsHelperTest < ActionView::TestCase
   test 'level_started? should return false if progress does not exist for a level that is not channel backed' do
     user = create :user
     maze_level = create :maze
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     create(:script_level, levels: [maze_level], script: script)
 
     assert_equal false, level_started?(maze_level, script, user)
@@ -476,7 +476,7 @@ class LevelsHelperTest < ActionView::TestCase
   test 'a teacher viewing student work should see isStarted value for student' do
     @user = create :user
     @level = create :applab
-    @script = script = create(:script)
+    @script = script = create(:script, :in_single_unit_course)
     create(:script_level, levels: [@level], script: script)
 
     stub_storage_id_for_user_id(@user.id)
@@ -651,7 +651,7 @@ class LevelsHelperTest < ActionView::TestCase
     sign_in user
 
     @level = create(:level, :blockly, :with_ideal_level_source)
-    @script = create(:script)
+    @script = create(:script, :in_single_unit_course)
     @script.update(professional_learning_course: 'Professional Learning Course')
     @script_level = create(:script_level, levels: [@level], script: @script)
     refute can_view_solution?
@@ -675,7 +675,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   test 'show solution link shows link for appropriate users' do
     @level = create(:level, :blockly, :with_ideal_level_source)
-    @script = create(:script)
+    @script = create(:script, :in_single_unit_course)
     @script_level = create(:script_level, levels: [@level], script: @script)
 
     user = create :levelbuilder
@@ -711,7 +711,8 @@ class LevelsHelperTest < ActionView::TestCase
     lockable4 = create :level, name: 'LockableAssessment4'
     level2 = create :level, name: 'NonLockableAssessment2'
 
-    unit = create :script, name: 'test-script'
+    unit = create :script, :in_single_unit_course, name: 'test-script'
+    unit_group_unit = unit.original_unit_group_unit
     lesson_group = create :lesson_group, script: unit
 
     lesson = create :lesson, :with_activity_section, lesson_group: lesson_group, relative_position: 1, lockable: true
@@ -735,70 +736,70 @@ class LevelsHelperTest < ActionView::TestCase
     lesson = unit.lessons[0]
     assert_equal 1, lesson.absolute_position
     assert_equal 1, lesson.relative_position
-    assert_equal '/s/test-script/lockable/1/levels/1', build_script_level_path(lesson.script_levels[0])
-    assert_equal '/s/test-script/lockable/1/levels/1/page/1', build_script_level_path(lesson.script_levels[0], puzzle_page: '1')
+    assert_equal "/courses/#{unit.original_unit_group.name}/units/1/lockable/1/levels/1", build_script_level_path(lesson.script_levels[0], unit_group_unit: unit_group_unit)
+    assert_equal "/courses/#{unit.original_unit_group.name}/units/1/lockable/1/levels/1/page/1", build_script_level_path(lesson.script_levels[0], unit_group_unit: unit_group_unit, puzzle_page: '1')
 
     lesson = unit.lessons[1]
     assert_equal 2, lesson.absolute_position
     assert_equal 1, lesson.relative_position
-    assert_equal '/s/test-script/lessons/1/levels/1', build_script_level_path(lesson.script_levels[0])
-    assert_equal '/s/test-script/lessons/1/levels/1/page/1', build_script_level_path(lesson.script_levels[0], puzzle_page: '1')
+    assert_equal "/courses/#{unit.original_unit_group.name}/units/1/lessons/1/levels/1", build_script_level_path(lesson.script_levels[0], unit_group_unit: unit_group_unit)
+    assert_equal "/courses/#{unit.original_unit_group.name}/units/1/lessons/1/levels/1/page/1", build_script_level_path(lesson.script_levels[0], unit_group_unit: unit_group_unit, puzzle_page: '1')
 
     lesson = unit.lessons[2]
     assert_equal 3, lesson.absolute_position
     assert_equal 2, lesson.relative_position
-    assert_equal '/s/test-script/lockable/2/levels/1', build_script_level_path(lesson.script_levels[0])
-    assert_equal '/s/test-script/lockable/2/levels/1/page/1', build_script_level_path(lesson.script_levels[0], puzzle_page: '1')
+    assert_equal "/courses/#{unit.original_unit_group.name}/units/1/lockable/2/levels/1", build_script_level_path(lesson.script_levels[0], unit_group_unit: unit_group_unit)
+    assert_equal "/courses/#{unit.original_unit_group.name}/units/1/lockable/2/levels/1/page/1", build_script_level_path(lesson.script_levels[0], unit_group_unit: unit_group_unit, puzzle_page: '1')
 
     lesson = unit.lessons[3]
     assert_equal 4, lesson.absolute_position
     assert_equal 3, lesson.relative_position
-    assert_equal '/s/test-script/lockable/3/levels/1', build_script_level_path(lesson.script_levels[0])
-    assert_equal '/s/test-script/lockable/3/levels/1/page/1', build_script_level_path(lesson.script_levels[0], puzzle_page: '1')
+    assert_equal "/courses/#{unit.original_unit_group.name}/units/1/lockable/3/levels/1", build_script_level_path(lesson.script_levels[0], unit_group_unit: unit_group_unit)
+    assert_equal "/courses/#{unit.original_unit_group.name}/units/1/lockable/3/levels/1/page/1", build_script_level_path(lesson.script_levels[0], unit_group_unit: unit_group_unit, puzzle_page: '1')
 
     lesson = unit.lessons[4]
     assert_equal 5, lesson.absolute_position
     assert_equal 2, lesson.relative_position
-    assert_equal '/s/test-script/lessons/2/levels/1', build_script_level_path(lesson.script_levels[0])
-    assert_equal '/s/test-script/lessons/2/levels/1/page/1', build_script_level_path(lesson.script_levels[0], puzzle_page: '1')
+    assert_equal "/courses/#{unit.original_unit_group.name}/units/1/lessons/2/levels/1", build_script_level_path(lesson.script_levels[0], unit_group_unit: unit_group_unit)
+    assert_equal "/courses/#{unit.original_unit_group.name}/units/1/lessons/2/levels/1/page/1", build_script_level_path(lesson.script_levels[0], unit_group_unit: unit_group_unit, puzzle_page: '1')
 
     lesson = unit.lessons[5]
     assert_equal 6, lesson.absolute_position
     assert_equal 3, lesson.relative_position
-    assert_equal '/s/test-script/lessons/3/levels/1', build_script_level_path(lesson.script_levels[0])
-    assert_equal '/s/test-script/lessons/3/levels/1/page/1', build_script_level_path(lesson.script_levels[0], puzzle_page: '1')
+    assert_equal "/courses/#{unit.original_unit_group.name}/units/1/lessons/3/levels/1", build_script_level_path(lesson.script_levels[0], unit_group_unit: unit_group_unit)
+    assert_equal "/courses/#{unit.original_unit_group.name}/units/1/lessons/3/levels/1/page/1", build_script_level_path(lesson.script_levels[0], unit_group_unit: unit_group_unit, puzzle_page: '1')
   end
 
   test 'build_script_level_path uses names for bonus levels to support cross-environment links' do
-    unit = create :script, :with_levels, name: 'test-bonus-level-links'
+    unit = create :script, :in_single_unit_course, :with_levels, name: 'test-bonus-level-links'
     unit.script_levels.last.update(bonus: true)
     unit.reload
 
     bonus_script_level = unit.lessons.first.script_levels[1]
-    uri = URI(build_script_level_path(bonus_script_level))
-    assert_equal '/s/test-bonus-level-links/lessons/1/extras', uri.path
+    uri = URI(build_script_level_path(bonus_script_level, unit_group_unit: unit.original_unit_group_unit))
+    assert_equal "/courses/#{unit.original_unit_group.name}/units/1/lessons/1/extras", uri.path
 
     query_params = CGI.parse(uri.query)
     assert_equal bonus_script_level.level.name, query_params['level_name'].first
   end
 
   test 'build_script_level_path handles bonus levels with or without solutions' do
-    unit = create :script, :with_levels, levels_count: 4, name: 'my-cool-script'
+    unit = create :script, :in_single_unit_course, :with_levels, levels_count: 4, name: 'my-cool-script'
     unit.script_levels[2].update!(bonus: true)
     unit.script_levels[3].update!(bonus: true)
     unit.reload
 
     sl = unit.script_levels[2]
-    uri = URI(build_script_level_path(sl))
+    uri = URI(build_script_level_path(sl, unit_group_unit: unit.original_unit_group_unit))
     query_params = CGI.parse(uri.query)
-    assert_equal '/s/my-cool-script/lessons/1/extras', uri.path
+    assert_equal "/courses/#{unit.original_unit_group.name}/units/1/lessons/1/extras", uri.path
     assert_equal sl.level.name, query_params['level_name'].first
     assert_nil query_params['solution'].first
 
     sl = unit.script_levels[3]
-    uri = URI(build_script_level_path(sl, solution: true))
+    uri = URI(build_script_level_path(sl, unit_group_unit: unit.original_unit_group_unit, solution: true))
     query_params = CGI.parse(uri.query)
-    assert_equal '/s/my-cool-script/lessons/1/extras', uri.path
+    assert_equal "/courses/#{unit.original_unit_group.name}/units/1/lessons/1/extras", uri.path
     assert_equal sl.level.name, query_params['level_name'].first
     assert_equal 'true', query_params['solution'].first
   end
@@ -806,7 +807,7 @@ class LevelsHelperTest < ActionView::TestCase
   test 'standalone multi should include answers for student' do
     sign_in create(:student)
 
-    @script = create(:script)
+    @script = create(:script, :in_single_unit_course)
     @level = create :multi
     @lesson = create :lesson
     @script_level = create :script_level, levels: [@level], lesson: @lesson
@@ -820,7 +821,7 @@ class LevelsHelperTest < ActionView::TestCase
   test 'non-standalone multi should not include answers for student' do
     sign_in create(:student)
 
-    @script = create(:script)
+    @script = create(:script, :in_single_unit_course)
     @level = create :multi
     @lesson = create :lesson
     @script_level = create :script_level, levels: [@level], lesson: @lesson
@@ -834,7 +835,7 @@ class LevelsHelperTest < ActionView::TestCase
   test 'section first_activity_at should not be nil when finding experiments' do
     Experiment.stubs(:should_cache?).returns true
     teacher = create(:teacher)
-    @script = create :script
+    @script = create :script, :in_single_unit_course
     experiment = create(
       :teacher_based_experiment,
       earliest_section_at: DateTime.now - 1.day,
@@ -1055,10 +1056,10 @@ class LevelsHelperTest < ActionView::TestCase
       name: "embedded blockly test",
       start_blocks: "<xml><block type='embedded_block' /></xml>"
 
-    #request.env['cdo-locale'] is used to generate the js_locale, but isn't
-    #correctly set up in this test context, so we have to mock it.
+    # `request.locale` is used to generate the js_locale, but isn't
+    # correctly set up in this test context, so we have to mock it.
     mock_request = mock
-    mock_request.stubs(:env).returns({"cdo.locale" => I18n.default_locale})
+    mock_request.stubs(:locale).returns(I18n.default_locale)
     stubs(:request).returns(mock_request)
 
     assert_equal render_multi_or_match_content("embedded blockly test.start_blocks"),
@@ -1085,7 +1086,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'sets hint prompt attempts threshold in options for level in csf script' do
-    @script = create :csf_script
+    @script = create :csf_script, :in_single_unit_course
     @level = create :level
     @lesson = create :lesson
     @script_level = create :script_level, levels: [@level], lesson: @lesson
@@ -1096,7 +1097,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'sets hint prompt attempts threshold in options to default if not already set' do
-    @script = create :csf_script
+    @script = create :csf_script, :in_single_unit_course
     @level = create :level
     @lesson = create :lesson
     @script_level = create :script_level, levels: [@level], lesson: @lesson
@@ -1106,7 +1107,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'does not set hint prompt attempts threshold in options for level in csp script' do
-    @script = create :csp_script
+    @script = create :csp_script, :in_single_unit_course
     @level = create :level
     @lesson = create :lesson
     @script_level = create :script_level, levels: [@level], lesson: @lesson

@@ -6,23 +6,25 @@ import {MultiSelectInput} from '@cdo/apps/code-studio/pd/workshop_dashboard/Work
 
 const mockOptions = [
   {
-    id: '1',
+    id: 1,
     searchText: ['Option 1', 'First option'],
     label: 'Option 1',
     secondaryLabel: 'First option description',
   },
   {
-    id: '2',
+    id: 2,
     searchText: ['Option 2', 'Second option'],
     label: 'Option 2',
   },
   {
-    id: '3',
+    id: 3,
     searchText: ['Option 3', 'Third option'],
     label: 'Option 3',
     secondaryLabel: 'Third option description',
   },
 ];
+
+const [mockOption1, mockOption2, mockOption3] = mockOptions;
 
 describe('MultiSelectInput', () => {
   const defaultProps = {
@@ -62,7 +64,10 @@ describe('MultiSelectInput', () => {
 
     it('renders selected options as tags', () => {
       render(
-        <MultiSelectInput {...defaultProps} selectedOptions={['1', '3']} />
+        <MultiSelectInput
+          {...defaultProps}
+          selectedOptions={[mockOption1, mockOption3]}
+        />
       );
 
       // Check if tags are rendered
@@ -146,7 +151,7 @@ describe('MultiSelectInput', () => {
       await user.click(option1);
 
       // Check if setSelectedOptions was called with correct argument
-      expect(mockSetSelectedOptions).toHaveBeenCalledWith(['1']);
+      expect(mockSetSelectedOptions).toHaveBeenCalledWith([mockOption1]);
     });
 
     it('toggles option selection when already selected', async () => {
@@ -156,7 +161,7 @@ describe('MultiSelectInput', () => {
       render(
         <MultiSelectInput
           {...defaultProps}
-          selectedOptions={['1', '2']}
+          selectedOptions={[mockOption1, mockOption2]}
           setSelectedOptions={mockSetSelectedOptions}
         />
       );
@@ -169,7 +174,7 @@ describe('MultiSelectInput', () => {
       await user.click(option1);
 
       // Check if setSelectedOptions was called to remove the option
-      expect(mockSetSelectedOptions).toHaveBeenCalledWith(['2']);
+      expect(mockSetSelectedOptions).toHaveBeenCalledWith([mockOption2]);
     });
 
     it('removes option when tag close button is clicked', async () => {
@@ -179,7 +184,7 @@ describe('MultiSelectInput', () => {
       render(
         <MultiSelectInput
           {...defaultProps}
-          selectedOptions={['1', '3']}
+          selectedOptions={[mockOption1, mockOption3]}
           setSelectedOptions={mockSetSelectedOptions}
         />
       );
@@ -191,7 +196,7 @@ describe('MultiSelectInput', () => {
       await user.click(closeButton);
 
       // Check if setSelectedOptions was called with correct argument
-      expect(mockSetSelectedOptions).toHaveBeenCalledWith(['3']);
+      expect(mockSetSelectedOptions).toHaveBeenCalledWith([mockOption3]);
     });
 
     it('clears all selected options when clear all button is clicked', async () => {
@@ -201,7 +206,7 @@ describe('MultiSelectInput', () => {
       render(
         <MultiSelectInput
           {...defaultProps}
-          selectedOptions={['1', '3']}
+          selectedOptions={[mockOption1, mockOption3]}
           setSelectedOptions={mockSetSelectedOptions}
         />
       );
@@ -313,7 +318,7 @@ describe('MultiSelectInput', () => {
 
       expect(mockSetSelectedOptions).toHaveBeenCalledTimes(1);
 
-      expect(mockSetSelectedOptions).toHaveBeenCalledWith(['1']);
+      expect(mockSetSelectedOptions).toHaveBeenCalledWith([mockOption1]);
 
       // focus on second menu option
       await user.keyboard('{ArrowDown}');
@@ -322,7 +327,7 @@ describe('MultiSelectInput', () => {
       // press Space
       await user.keyboard(' ');
 
-      expect(mockSetSelectedOptions).toHaveBeenCalledWith(['2']);
+      expect(mockSetSelectedOptions).toHaveBeenCalledWith([mockOption2]);
     });
 
     it('selects first option on Enter key when filtering', async () => {
@@ -342,7 +347,7 @@ describe('MultiSelectInput', () => {
       await user.keyboard('{Enter}');
 
       // Check if setSelectedOptions was called with correct argument
-      expect(mockSetSelectedOptions).toHaveBeenCalledWith(['1']);
+      expect(mockSetSelectedOptions).toHaveBeenCalledWith([mockOption1]);
     });
 
     it('closes dropdown on Escape key', async () => {
@@ -384,7 +389,7 @@ describe('MultiSelectInput', () => {
       render(
         <MultiSelectInput
           {...defaultProps}
-          selectedOptions={['1', '3']}
+          selectedOptions={[mockOption1, mockOption3]}
           setSelectedOptions={mockSetSelectedOptions}
         />
       );
@@ -394,7 +399,7 @@ describe('MultiSelectInput', () => {
       await user.keyboard('{Backspace}');
 
       // Check if setSelectedOptions was called to remove the last option
-      expect(mockSetSelectedOptions).toHaveBeenCalledWith(['1']);
+      expect(mockSetSelectedOptions).toHaveBeenCalledWith([mockOption1]);
     });
 
     it('does not remove last selected option on Backspace when input is not empty', async () => {
@@ -404,7 +409,7 @@ describe('MultiSelectInput', () => {
       render(
         <MultiSelectInput
           {...defaultProps}
-          selectedOptions={['1', '3']}
+          selectedOptions={[mockOption1, mockOption3]}
           setSelectedOptions={mockSetSelectedOptions}
         />
       );

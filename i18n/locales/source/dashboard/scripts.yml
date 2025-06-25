@@ -9447,6 +9447,8 @@ en:
               name: Python Lab
             lesson-12:
               name: Lesson 10 - Data Visualization
+            lesson-13:
+              name: EscA.I.pe Room
           lesson_groups: {}
           name: emmas-playground
           title: ''
@@ -9802,6 +9804,8 @@ en:
               name: Intro to Programming
             lesson-9:
               name: Validation practice
+            lesson-10:
+              name: Widget Playground
           lesson_groups:
             lessonGroup-2:
               display_name: Cyber
@@ -19396,12 +19400,20 @@ en:
               name: Introduction to Music Lab
             lesson-15:
               name: 'Project: Genre Mash-Up'
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Templates
+            lessonGroup-2:
+              display_name: Revisions
+            lessonGroup-4:
+              display_name: Pre-Assessment
+            lessonGroup-5:
+              display_name: End of Unit Assessment and Survey
           name: musiclab-6-12-playground
           title: 6-12 Music Lab Playground
           description_audience: ''
           description_short: ''
-          description: "## Out of date script\n\nFor current pilot with lesson plan updates, visit <https://levelbuilder-studio.code.org/s/csd-programming-with-music-lab-2025-pilot>\n\nUse this script to stage bigger updates before launch while the pilot is still happening"
+          description: ''
           student_description: ''
         pilot-pl-teaching-k5-music-lab:
           lessons: {}
@@ -20674,8 +20686,8 @@ en:
           title: Getting Started with Code.org
           description_audience: ''
           description_short: ''
-          description: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to use the Code.org platform** with your students.\n\nFind the learning that works for you:\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n-   **Pick your content**: The Getting Started Content is organized into five lessons. You may choose to engage with them in any combination or order that you would like.\n    -   Lesson 1: Welcome to Code.org\n    -   Lesson 2: Navigating the Code.org Learning Platform\n    -   Lesson 3: The Student Experience\n    -   Lesson 4: Navigating Lesson Plans, Assessments, and Resources\n    -   Lesson 5: Navigating Support"
-          student_description: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to use the Code.org platform** with your students.\n\nFind the learning that works for you:\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n-   **Pick your content**: The Getting Started Content is organized into five lessons. You may choose to engage with them in any combination or order that you would like.\n    -   Lesson 1: Welcome to Code.org\n    -   Lesson 2: Navigating the Code.org Learning Platform\n    -   Lesson 3: The Student Experience\n    -   Lesson 4: Navigating Lesson Plans, Assessments, and Resources\n    -   Lesson 5: Navigating Support"
+          description: "## Welcome\n\n##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to use the Code.org platform** with your students.\n\n##### Find the learning that works for you:\n\n-   ##### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n-   ##### **Pick your content**: The Getting Started Content is organized into five lessons. You may choose to engage with them in any combination or order that you would like.\n    -   ##### **Lesson 1**: Welcome to Code.org\n    -   ##### **Lesson 2**: Navigating the Code.org Learning Platform\n    -   ##### **Lesson 3**: The Student Experience\n    -   ##### **Lesson 4**: Navigating Lesson Plans, Assessments, and Resources\n    -   ##### **Lesson 5**: Navigating Support"
+          student_description: "## Welcome\n\n##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to use the Code.org platform** with your students.\n\n##### Find the learning that works for you:\n\n-   ##### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n-   ##### **Pick your content**: The Getting Started Content is organized into five lessons. You may choose to engage with them in any combination or order that you would like.\n    -   ##### **Lesson 1**: Welcome to Code.org\n    -   ##### **Lesson 2**: Navigating the Code.org Learning Platform\n    -   ##### **Lesson 3**: The Student Experience\n    -   ##### **Lesson 4**: Navigating Lesson Plans, Assessments, and Resources\n    -   ##### **Lesson 5**: Navigating Support"
         facilitator-access-csaif:
           lessons: {}
           lesson_groups: {}
@@ -22324,13 +22336,13 @@ en:
           title: Teaching Problem Solving with AI
           description_audience: ''
           description_short: ''
-          description: "#### Self-Paced PL Coming Soon!"
+          description: "#### This unit and the other updated self-paced PL units can be found at <https://studio.code.org/courses/teaching-ai-foundations-2025/>."
           student_description: ''
         self-paced-pl-aif2-2025:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-aif2-2025
-          title: Teaching Programming Fundamentals
+          title: Teaching Foundations of AI Programming
           description_audience: ''
           description_short: ''
           description: "#### This professional learning module is designed to help you prepare to teach Code.org’s Foundations of AI Programming unit.\n\n#### The Foundations of AI Programming unit is part of the **_AI Foundations_** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.\n\n#### **Find the learning that works for you**\n\n#### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n#### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Foundations of AI Programming unit. However, you can engage with the content in the order that best meets your needs."
@@ -23135,3 +23147,40 @@ en:
           description_short: ''
           description: Teacher Overview
           student_description: Student Overview
+        pl-gamified-python-sandbox:
+          lessons:
+            lesson-1:
+              name: Hit the Road in The Neighborhood
+            lesson-2:
+              name: 'Fueling up at the Coffee Shop: Kickstart your Python Journey'
+          lesson_groups: {}
+          name: pl-gamified-python-sandbox
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        programming-with-music-lab-2025:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Programming with Music Lab
+            lessonGroup-4:
+              display_name: End of Unit Assessment and Survey
+          name: programming-with-music-lab-2025
+          title: Programming with Music Lab (2025)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        6-12-ai-powered-threats-and-defenses:
+          lessons: {}
+          lesson_groups: {}
+          name: 6-12-ai-powered-threats-and-defenses
+          title: "[DEV] AIF AI-Powered Threats and Defenses"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

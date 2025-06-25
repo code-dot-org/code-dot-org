@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:59:47.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "### Backing Tracks\r\n\r\nA record producer has sent you the vocals for Something Just Like This and wants you to create a  backing track using beats, bass, and leads. The vocals are already supplied - you need to add the backing tracks and use loops to make them line-up with the existing song.\r\n\r\nListen to the example below for what this could sound like! When you are finished, your code needs:\r\n\r\n- At least one beat, bass, and lead\r\n- Enough loops so the code repeats for as long as the vocals",
+    "long_instructions": "### Backing Tracks\r\n\r\n**Define:** A record producer has sent you the vocals for *Something Just Like This* and hired you to create a full backing track. Your job is to add beats, bass, and leads that match the energy and timing of the vocals. The vocals are already included, you just need to build the rest of the song around them!\r\n\r\n**Prepare:** Listen to the vocal track and think about the mood and rhythm. What kind of beat fits? Should the bass be smooth or punchy? Listen to the example below for what this could sound like!\r\n\r\n**Try:** Build your backing track using beat, bass, and lead blocks. Use loops to make sure your code plays long enough to support the entire vocal track. Adjust the timing so everything lines up!\r\n\r\n**Reflect:** Listen to your song and iterate until it sounds the way you want it to. In order to complete this level, your remix must include:\r\n\r\n- At least one beat, bass, and lead\r\n- Enough loops so the code repeats for as long as the vocals",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -489,12 +490,12 @@
         ]
       }
     ],
-    "bubble_choice_description": "A record producer has sent you the vocals for Something Just Like This and wants you to add the backing tracks",
+    "bubble_choice_description": "A record producer has sent you the vocals for \"Something Just Like This\" and wants you to add the backing tracks",
     "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/chainsmokers_riptide/chainsmokers_riptide.jpg",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:47.740+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-choice-a\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:47.740+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-choice-a\"},{\"changed_at\":\"2025-06-12 16:08:29 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-12 16:10:14 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-24 21:15:40 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

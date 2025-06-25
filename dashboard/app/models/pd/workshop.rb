@@ -86,6 +86,7 @@ class Pd::Workshop < ApplicationRecord
   validate :subject_must_be_valid_for_course
   validate :valid_registration_link_format, if: :registration_link
   validate :valid_grades
+  validate :valid_facilitators_for_course_offerings, if: -> {course == COURSE_BUILD_YOUR_OWN}
   validate :config_validation
 
   before_create :set_registration_link
@@ -137,6 +138,20 @@ class Pd::Workshop < ApplicationRecord
         else
           errors.add(field_name, "is required")
         end
+      end
+    end
+  end
+
+  def valid_facilitators_for_course_offerings
+    permissions_arrays = course_offerings.map(&:facilitator_course_permissions)
+    # If any permissions array is nil or empty, any facilitator is allowed to facilitate
+    return if permissions_arrays.any?(&:blank?)
+
+    permitted_courses = permissions_arrays.compact.flatten.uniq
+    facilitators.each do |facilitator|
+      facilitator_courses = facilitator.courses_as_facilitator.pluck(:course)
+      if (facilitator_courses & permitted_courses).empty?
+        errors.add(:base, "Facilitator #{facilitator.name} does not have permission to facilitate the selected workshop topics.")
       end
     end
   end
@@ -973,11 +988,16 @@ class Pd::Workshop < ApplicationRecord
 
   def summarize_for_marketing_page
     facilitators_info = facilitators.map do |facilitator|
+      # TODO [CMS-65]: Come up with more permanent solution that doesn't require cross-project file dependency.
+
       bio_file = pegasus_dir("sites.v3/code.org/views/workshop_affiliates/#{facilitator.id}_bio.md")
+      image_file = pegasus_dir("sites.v3/code.org/public/images/affiliate-images/#{facilitator.id}.jpg")
+
       {
         name: facilitator.name,
         email: facilitator.email,
-        bio: File.exist?(bio_file) ? File.read(bio_file) : nil
+        bio: File.exist?(bio_file) ? File.read(bio_file) : nil,
+        image_path: File.exist?(image_file) ? CDO.code_org_url("/images/affiliate-images/fit-150/#{facilitator.id}.jpg") : nil
       }
     end
 

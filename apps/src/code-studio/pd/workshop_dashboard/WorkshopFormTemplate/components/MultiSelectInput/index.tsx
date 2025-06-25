@@ -21,12 +21,18 @@ export interface Option {
   secondaryLabel?: string;
 }
 
+export const isOption = (value: unknown): value is Option =>
+  value !== null &&
+  typeof value === 'object' &&
+  'label' in value &&
+  'id' in value;
+
 export const MultiSelectInput: React.FC<{
   name: string;
   label: string;
   options: Option[];
-  selectedOptions: OptionId[];
-  setSelectedOptions: (selectedOptions: OptionId[]) => void;
+  selectedOptions: Option[];
+  setSelectedOptions: (selectedOptions: Option[]) => void;
   id?: string;
   size?: FormFieldWrapperProps['size'];
   className?: string;
@@ -109,21 +115,26 @@ export const MultiSelectInput: React.FC<{
     }
   };
 
-  const handleToggleOption = (optionId: OptionId) => {
+  const handleToggleOption = (option: Option) => {
     setSearchText('');
     setActiveIndex(-1);
     setSelectedOptions(
-      selectedOptions.includes(optionId)
-        ? selectedOptions.filter(id => id !== optionId)
-        : [...selectedOptions, optionId]
+      selectedOptions.some(opt => opt.id === option.id)
+        ? selectedOptions.filter(opt => opt.id !== option.id)
+        : [...selectedOptions, option]
     );
   };
 
-  const handleRemoveOption = (optionId: OptionId) => {
-    setSelectedOptions(selectedOptions.filter(id => id !== optionId));
+  const handleRemoveOption = (option: Option) => {
+    setSelectedOptions(selectedOptions.filter(opt => opt.id !== option.id));
   };
 
-  const handleClearAll = () => {
+  const handleClearAll = (
+    e?:
+      | React.MouseEvent<HTMLButtonElement, MouseEvent>
+      | React.KeyboardEvent<HTMLButtonElement>
+  ) => {
+    e?.stopPropagation();
     setSelectedOptions([]);
     reset();
   };
@@ -161,14 +172,14 @@ export const MultiSelectInput: React.FC<{
         case 'Enter':
           // when filtering results in a single option, Enter selects it
           if (activeIndex < 0 && searchText && filteredOptions.length === 1) {
-            handleToggleOption(filteredOptions[0].id);
+            handleToggleOption(filteredOptions[0]);
           }
         // fallthrough is intentional
         // Space and Enter act the same when an option is active
         // eslint-disable-next-line no-fallthrough
         case ' ':
           if (activeIndex >= 0 && filteredOptions[activeIndex]) {
-            handleToggleOption(filteredOptions[activeIndex].id);
+            handleToggleOption(filteredOptions[activeIndex]);
           }
           break;
         case 'Escape':
@@ -191,7 +202,7 @@ export const MultiSelectInput: React.FC<{
   };
 
   const isOptionSelected = useCallback(
-    (id: OptionId) => selectedOptions.includes(id),
+    (id: OptionId) => selectedOptions.some(opt => opt.id === id),
     [selectedOptions]
   );
 
@@ -205,6 +216,11 @@ export const MultiSelectInput: React.FC<{
     [selectedOptions]
   );
 
+  const anyOptionInvalid = useMemo(
+    () => selectedOptions.some(opt => !optionsMap.has(opt.id)),
+    [selectedOptions, optionsMap]
+  );
+
   return (
     <div ref={wrapperRef}>
       <FormFieldWrapper
@@ -212,7 +228,7 @@ export const MultiSelectInput: React.FC<{
         className={classNames(styles.label, className)}
         id={`${id}-label`}
         size={size}
-        errorMessage={errorMessage}
+        errorMessage={anyOptionInvalid ? 'Invalid option' : errorMessage}
         onClick={e => {
           e.preventDefault();
           e.stopPropagation();
@@ -223,30 +239,33 @@ export const MultiSelectInput: React.FC<{
         <div
           className={classNames(styles.container, {
             [styles.focused]: isFocused,
+            [styles.invalid]: anyOptionInvalid,
           })}
           aria-haspopup="listbox"
         >
           <div className={styles.tagsAndSearchContainer}>
-            {selectedOptions.map(id => {
-              const option = optionsMap.get(id);
-              if (!option) {
-                return null;
-              }
+            {selectedOptions.map(option => {
+              const {id, label} = option;
+              const invalid = !optionsMap.has(id);
 
               return (
                 <Tags
                   key={id}
-                  className={styles.tag}
+                  className={classNames(styles.tag, {
+                    [styles.invalid]: invalid,
+                  })}
                   size="s"
                   tagsList={[
                     {
-                      label: option.label,
+                      label,
                       type: 'closable',
-                      onClose: () => {
-                        handleRemoveOption(option.id);
+                      onClose: e => {
+                        e?.stopPropagation();
+                        e?.preventDefault();
+                        handleRemoveOption(option);
                       },
-                      key: option.id,
-                      ariaLabel: `Remove ${option.label}`,
+                      key: id,
+                      ariaLabel: `Remove ${label}`,
                     },
                   ]}
                 />
@@ -307,7 +326,7 @@ export const MultiSelectInput: React.FC<{
                       })}
                       onMouseDown={e => {
                         e.preventDefault();
-                        handleToggleOption(option.id);
+                        handleToggleOption(option);
                         inputRef.current?.focus();
                       }}
                       onMouseEnter={() => setHoveredOptionId(option.id)}

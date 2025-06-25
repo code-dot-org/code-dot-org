@@ -504,7 +504,7 @@
     "predict_settings": {
       "isPredictLevel": false
     },
-    "bubble_choice_description": "Create a song with a single loop using tracks from I Need a Dollar",
+    "bubble_choice_description": "Create a song with a single loop using tracks from \"I Need a Dollar\"",
     "validations": [
       {
         "key": "music-lab-loops-practice-challenge-b_7ee381eb-7548-46c0-9a29-a96a3941fbd9",
@@ -572,10 +572,11 @@
       }
     ],
     "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/i_need_a_dollar_aloe_blacc/i_need_a_dollar_aloe_blacc.jpg",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:49.842+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-practice-challenge-b\\\"\"],\"cloned_from\":\"music-lab-loops-practice-challenge-b\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:49.842+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-practice-challenge-b\\\"\"],\"cloned_from\":\"music-lab-loops-practice-challenge-b\"},{\"changed_at\":\"2025-06-12 20:33:40 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

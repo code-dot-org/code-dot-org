@@ -1,0 +1,10 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#skills-evaluations-settings-container"}}
+  AI Evaluation of Skills
+
+#skills-evaluations-settings-container.in.collapse
+  #skill-evaluation-settings-editor
+
+- content_for :body_scripts do
+  %script{src: webpack_asset_path('js/levels/editors/fields/_skill_evaluations.js'),
+        data: {skillevaluationdata: @skills.to_json}}
+

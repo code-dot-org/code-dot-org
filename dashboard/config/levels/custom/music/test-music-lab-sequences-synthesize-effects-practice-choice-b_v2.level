@@ -363,10 +363,11 @@
       "validationEnabled": false
     },
     "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/denzel_kennedy_sing_for_me/denzel_kennedy_sing_for_me.jpg",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:07.334+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-effects-practice-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-effects-practice-choice-b\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:07.334+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-effects-practice-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-effects-practice-choice-b\"},{\"changed_at\":\"2025-06-12 16:01:19 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

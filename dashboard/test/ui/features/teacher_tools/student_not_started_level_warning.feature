@@ -17,6 +17,7 @@ Scenario: Game lab level where student has not started
   And I click selector "#teacher-panel-container tr:eq(1)" to load a new page
   And I wait for the lab page to fully load
 
+  And I wait until element "#ui-test-feedback-input" contains placeholder text "Please enter feedback for your student here."
   And I wait until element ".editor-column" contains text "This student has not started the level."
   Then I see no difference for "student not started warning"
   And I close my eyes

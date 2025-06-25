@@ -31,13 +31,6 @@ import {getStore} from './redux';
 import ChallengeDialog from './templates/ChallengeDialog';
 import CodeWritten from './templates/feedback/CodeWritten';
 import GeneratedCode from './templates/feedback/GeneratedCode';
-import PublishDialog from './templates/projects/publishDialog/PublishDialog';
-import {
-  showPublishDialog,
-  PUBLISH_REQUEST,
-  PUBLISH_SUCCESS,
-  PUBLISH_FAILURE,
-} from './templates/projects/publishDialog/publishDialogRedux';
 import {createHiddenPrintWindow} from './utils';
 
 // Types of blocks that do not count toward displayed block count. Used
@@ -426,11 +419,6 @@ FeedbackUtils.prototype.displayFeedback = function (
     });
   }
 
-  // Remember the project between when we save and when we publish
-  // while the dialog is open, but not between dialog openings.
-  let projectId = null;
-  let projectType = null;
-
   const saveButtonSelector = '#save-to-project-gallery-button';
   const saveButton = feedback.querySelector(saveButtonSelector);
   if (saveButton) {
@@ -440,70 +428,11 @@ FeedbackUtils.prototype.displayFeedback = function (
         .copy(project.getNewProjectName())
         .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
         .then(() => {
-          projectId = project.getCurrentId();
-          projectType = project.getStandaloneApp();
           $(saveButtonSelector)
             .prop('disabled', true)
             .text(msg.addedToProjects());
         })
         .catch(err => console.log(err));
-    });
-  }
-
-  const publishButtonSelector = '#publish-to-project-gallery-button';
-  const publishButton = feedback.querySelector(publishButtonSelector);
-  if (publishButton) {
-    dom.addClickTouchEvent(publishButton, () => {
-      // Hide the current dialog since we're about to show the publish dialog
-      recordFinishShare('FINISH_SHARING_PUBLISH', project.getStandaloneApp());
-      feedbackDialog.hide();
-
-      const store = getStore();
-
-      if (projectId && projectType) {
-        // The user previously saved and is now publishing. Publish the project
-        // which we just saved, rather than creating a new one and publishing it.
-        store.dispatch(showPublishDialog(projectId, projectType));
-        let publishDialog = FeedbackUtils.getPublishDialogElement();
-        ReactDOM.render(
-          <Provider store={store}>
-            <PublishDialog afterPublish={() => showFeedbackDialog(true)} />
-          </Provider>,
-          publishDialog
-        );
-        return;
-      }
-
-      // project.copy relies on state not in redux, and we want to keep this
-      // badness out of our redux code. Therefore, define what happens when
-      // publish dialog publish button is clicked here, outside of the publish
-      // dialog redux.
-      //
-      // Once project.js is moved onto redux, the remix-and-publish operation
-      // should be moved inside the publish dialog redux.
-
-      FeedbackUtils.showConfirmPublishDialog(() => {
-        store.dispatch({type: PUBLISH_REQUEST});
-        let didPublish = false;
-        project
-          .copy(project.getNewProjectName(), {shouldPublish: true})
-          .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
-          .then(() => {
-            store.dispatch({type: PUBLISH_SUCCESS});
-            didPublish = true;
-          })
-          .catch(err => {
-            console.log(err);
-            store.dispatch({type: PUBLISH_FAILURE});
-          })
-          .then(() => {
-            if (didPublish) {
-              // Only show feedback dialog again if publishing succeeded,
-              // because we keep the publish dialog open if it failed.
-              showFeedbackDialog(true);
-            }
-          });
-      });
     });
   }
 
@@ -514,18 +443,13 @@ FeedbackUtils.prototype.displayFeedback = function (
     });
   }
 
-  function showFeedbackDialog(isPublished) {
+  function showFeedbackDialog() {
     feedbackDialog.show({
       backdrop:
         getStore().getState().pageConstants.appType === 'flappy'
           ? 'static'
           : true,
     });
-
-    if (isPublished) {
-      $(publishButtonSelector).prop('disabled', true).text(msg.published());
-      $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery());
-    }
   }
 
   showFeedbackDialog();
@@ -542,28 +466,6 @@ function recordFinishShare(type, appType) {
     });
   }
 }
-
-FeedbackUtils.showConfirmPublishDialog = onConfirmPublish => {
-  const store = getStore();
-  store.dispatch(showPublishDialog());
-  let publishDialog = FeedbackUtils.getPublishDialogElement();
-  ReactDOM.render(
-    <Provider store={store}>
-      <PublishDialog onConfirmPublishOverride={onConfirmPublish} />
-    </Provider>,
-    publishDialog
-  );
-};
-
-FeedbackUtils.getPublishDialogElement = function () {
-  let publishDialog = document.getElementById('legacy-share-publish-dialog');
-  if (!publishDialog) {
-    publishDialog = document.createElement('div');
-    publishDialog.id = 'legacy-share-publish-dialog';
-    document.body.appendChild(publishDialog);
-  }
-  return publishDialog;
-};
 
 /**
  * Converts the image data uri to a blob, then saves it to the server as the

@@ -86,10 +86,11 @@
     "display_name": "Focus on Reusability",
     "bubble_choice_description": "Choose a song to create a remix of. Design your code so it emphasizes **reusing functions** - taking smaller chunks of code and re-using and building-up to larger parts of a song.",
     "name_suffix": "_v2",
+    "thumbnail_url": "https://images.code.org/2b39f1852e02b5d7edc42b7a2096bc18-yelloworange.png",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T03:01:00.195+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-challengeB2\\\"\"],\"cloned_from\":\"music-lab-functions-practice-challengeB2\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:01:00.195+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-challengeB2\\\"\"],\"cloned_from\":\"music-lab-functions-practice-challengeB2\"},{\"changed_at\":\"2025-06-12 21:13:15 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-12 21:57:41 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

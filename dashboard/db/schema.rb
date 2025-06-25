@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_05_30_162508) do
+ActiveRecord::Schema.define(version: 2025_06_18_223554) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -2339,6 +2339,17 @@ ActiveRecord::Schema.define(version: 2025_05_30_162508) do
     t.index ["unit_group_id", "resource_id"], name: "index_ug_student_resources_on_unit_group_id_and_resource_id", unique: true
   end
 
+  create_table "user_data_retention_statuses", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.datetime "pii_scrubbed_at"
+    t.datetime "anonymized_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["anonymized_at"], name: "index_user_data_retention_statuses_on_anonymized_at"
+    t.index ["pii_scrubbed_at"], name: "index_user_data_retention_statuses_on_pii_scrubbed_at"
+    t.index ["user_id"], name: "index_user_data_retention_statuses_on_user_id"
+  end
+
   create_table "user_geos", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
@@ -2663,6 +2674,7 @@ ActiveRecord::Schema.define(version: 2025_05_30_162508) do
   add_foreign_key "student_work_evaluation_summaries", "student_work_evaluations"
   add_foreign_key "student_work_evaluation_summaries", "student_work_evaluations", column: "student_work_evaluation_summary_id"
   add_foreign_key "survey_results", "users"
+  add_foreign_key "user_data_retention_statuses", "users"
   add_foreign_key "user_geos", "users"
   add_foreign_key "user_proficiencies", "users"
 end

@@ -211,7 +211,7 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
     prepare_scenario
 
     # User has completed all of this unit
-    pl_unit1 = create :pl_unit, :with_lessons
+    pl_unit1 = create(:single_unit_course, :pl_course, unit: create(:script, :with_lessons)).first_unit
     create :user_script, user: @teacher, script: pl_unit1
     unit1_level1 = create :level
     create :script_level, script: pl_unit1, levels: [unit1_level1], lesson: pl_unit1.lessons.first
@@ -222,7 +222,7 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
     pl_unit1.reload
 
     # User has completed some of this unit
-    pl_unit2 = create :pl_unit, :with_lessons
+    pl_unit2 = create(:single_unit_course, :pl_course, unit: create(:script, :with_lessons)).first_unit
     create :user_script, user: @teacher, script: pl_unit2
     unit2_level1 = create :level
     create :script_level, script: pl_unit2, levels: [unit2_level1], lesson: pl_unit2.lessons.first
@@ -517,7 +517,7 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
     assert_equal [], response_workshops
   end
 
-  test 'regional_workshop_data only returns regional workshops under their regional partner' do
+  test 'regional_workshop_data only returns workshops under their regional partner' do
     nearby_rp = create :regional_partner, name: "RP_in_users_region"
     nearby_rp.mappings.find_or_create_by!(zip_code: "11111")
     distant_rp = create :regional_partner, name: "RP_outside_of_users_region"
@@ -528,7 +528,7 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
 
     nearby_regional_ws_1 = create :byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'Regional', organizer: nearby_rp_pm_1
     nearby_regional_ws_2 = create :byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'Regional', organizer: nearby_rp_pm_2
-    create :byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'National', organizer: nearby_rp_pm_2
+    nearby_national_ws = create :byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'National', organizer: nearby_rp_pm_2
     create :byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'Regional', organizer: distant_rp_pm
 
     reg_ws_data_response = get :regional_workshop_data, params: {zip_code: "11111"}
@@ -538,7 +538,7 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
     response_workshop_ids = response_data['available_regional_workshops'].map {|ws| ws['id']}
 
     assert_equal nearby_rp.name, response_rp['name']
-    assert_equal [nearby_regional_ws_1.id, nearby_regional_ws_2.id], response_workshop_ids
+    assert_equal [nearby_regional_ws_1.id, nearby_regional_ws_2.id, nearby_national_ws.id], response_workshop_ids
   end
 
   test 'regional_workshop_data only returns workshops that have not been started' do
@@ -719,6 +719,34 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
     create :byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'National', hidden: true
 
     assert_equal [non_hidden_workshop.id], Pd::ProfessionalLearningController.national_workshop_data.pluck(:id)
+  end
+
+  test 'logged-out users can view workshop marketing page' do
+    workshop = create :workshop
+    get :workshop_marketing_page, params: {workshop_id: workshop.id}
+
+    assert_response :success
+    assert_template :index
+  end
+
+  test 'students can view workshop marketing page' do
+    workshop = create :workshop
+    student = create :student
+    sign_in student
+    get :workshop_marketing_page, params: {workshop_id: workshop.id}
+
+    assert_response :success
+    assert_template :index
+  end
+
+  test 'teachers can view workshop marketing page' do
+    workshop = create :workshop
+    teacher = create :teacher
+    sign_in teacher
+    get :workshop_marketing_page, params: {workshop_id: workshop.id}
+
+    assert_response :success
+    assert_template :index
   end
 
   private def go_to_workshop(workshop, teacher)

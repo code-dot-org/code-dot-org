@@ -85,11 +85,9 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     predictSettings,
     submittable: isSubmittable,
     appName: appType,
-    aiTutor2Available,
   } = levelProperties;
 
-  const showAiTutor2 =
-    aiTutor2Available || queryParams('show-ai-tutor2') === 'true';
+  const showAiTutor2 = queryParams('show-ai-tutor2-hint') === 'true';
 
   const scriptId = useAppSelector(state => state.lab.scriptId);
   const hasNextLevel = useSelector(state => nextLevelId(state) !== undefined);

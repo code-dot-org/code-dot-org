@@ -115,13 +115,6 @@ describe('CourseOverview', () => {
     );
   });
 
-  it('renders a top row for instructors', () => {
-    const wrapper = shallow(
-      <CourseOverview {...defaultProps} isInstructor={true} />
-    );
-    expect(wrapper.find('CourseOverviewTopRow').length).toEqual(1);
-  });
-
   it('renders a CourseScript for each script', () => {
     const wrapper = shallow(<CourseOverview {...defaultProps} />);
     expect(wrapper.find('Connect(CourseScript)').length).toEqual(2);

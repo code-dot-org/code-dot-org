@@ -1,6 +1,6 @@
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
-import {WaitingAnimation} from '@cdo/apps/aichat/views/ChatEventsList';
+import {WaitingAnimation} from '@cdo/apps/aichat/views/WaitingAnimation';
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import AiTutor2Manager, {

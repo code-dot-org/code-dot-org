@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:56:48.000Z",
   "level_num": "custom",
@@ -7,54 +8,12 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Layering Beats \r\n\r\nYour friend Caroline really likes the beats in Chantaje by Shakira, but she wants to add little sound effects to the ends of the tracks to create small moments at the end of the beat. She's already picked out her Beat and Effect samples and now she just needs to arrange them:\r\n\r\n![](https://images.code.org/006d907c692bb18b5e6e9be299b14b10-image-1744151092143.png)\r\n\r\nYou can choose which beats and effects to use, but the effect should come in at the last moment before the beat ends.\r\n\r\nTo pass this level, your timeline must look similar to the image where the effect track happens just as the beat is about to end, and then a new beat starts. Your code should have 3 different beats and effects!\r\n\r\n",
+    "long_instructions": "#### Layering Beats \r\n\r\n**Define:** Choose a song with a strong, repeating beat. Your challenge is to surprise your listeners by placing a short sound effect just before each beat ends. These effects can be dramatic, subtle, or even funny - it's up to you!\r\n\r\n![](https://images.code.org/006d907c692bb18b5e6e9be299b14b10-image-1744151092143.png)\r\n\r\n**Prepare:** Pick a song with a clear beat. Plan at least 3 different beat + effect combinations. Think carefully about when each effect should play so it lands just before the end of the beat.\r\n\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\n**Musical Suggestions:**\r\n- *\"Chantaje\" - Shakira ft. Maluma* (great Latin rhythms and strong endings)\r\n- *\"I Like to Move It\" - will.i.am* (clear beats, fun to interrupt)\r\n- *\"Wake Me Up\" - Aloe Blacc* (mixes acoustic and percussive beats)\r\n\r\n</div>\r\n\r\n**Try:** Create 3 unique beat + effect combinations. Use sequencing to place the effect just before the beat ends, adding a rhythmic twist that feels intentional.\r\n\r\n**Reflect:** Do your effects create surprise while still feeling musical? How did the timing affect the groove? In order to complete this level, your remix must include:\r\n\r\n- 3 unique beat tracks\r\n- 3 unique effect tracks\r\n- Each effect played just before a beat ends\r\n",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
     "level_data": {
       "library": "launch2024",
-      "sounds": {
-        "shakira_maluma_chantaje": [
-          "drums_intro",
-          "drums_verse_small",
-          "drums_verse_big",
-          "drums_chorus",
-          "kick_verse_1",
-          "kick_verse_2",
-          "kick_build_1",
-          "kick_build_2",
-          "snap_sample",
-          "snap_sample_full",
-          "percussion",
-          "shaker"
-        ],
-        "electro": [
-          "whua_short"
-        ],
-        "groove": [
-          "strings_short"
-        ],
-        "indie": [
-          "hey_short",
-          "swipe_short"
-        ],
-        "pop": [
-          "clap_short",
-          "blip"
-        ],
-        "hiphop": [
-          "brass_short"
-        ],
-        "rock": [
-          "stomp_short"
-        ],
-        "acoustic_arcade": [
-          "wheel_spoke",
-          "sleigh_bells",
-          "vibra_verb",
-          "chimes"
-        ]
-      },
       "toolbox": {
         "blocks": {
           "Play": [
@@ -68,7 +27,6 @@
         },
         "type": "flyout"
       },
-      "packId": "shakira_maluma_chantaje",
       "startSources": {
         "blocks": {
           "languageVersion": 0,
@@ -87,13 +45,14 @@
       "showSoundFilters": true,
       "allowChangeStartingPlayheadPosition": true,
       "showSoundsPanelInSoundsMode": true,
-      "sortUnrestrictedPacksByType": true
+      "sortUnrestrictedPacksByType": true,
+      "validationTimeout": 1
     },
     "display_name": "Layering Beats",
-    "thumbnail_url": "https://images.code.org/03c8a014a6af831580dee6a50c017cf7-Screenshot 2025-03-14 at 12.03.13 PM.png",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/groove/groove.png",
     "exemplar_settings": {
-      "playerEnabled": true,
-      "validationEnabled": true,
+      "playerEnabled": false,
+      "validationEnabled": false,
       "validationSuccessMessage": "That was tricky! Good work using the rests with `play sequential` to get the timing just right. ",
       "validationFailureMessage": "Something's not quite right! Try reading the requirements again!",
       "validationMode": "type",
@@ -102,13 +61,65 @@
     "predict_settings": {
       "isPredictLevel": false
     },
-    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHorpleEeoerSvfZ2JHZpm1GhsSDwCOxBL+fVO3bL+jSF8km\nL4XxYVd5eVPYcMjF1ldRCnpS+WroBrVKFLbOP6nnfqdt35gmboMSCAQxmBn3\n+uhq+uoSG0lbolkHC/cQN68v1B4v7RwQHzPSnXkOE+53flPLC4tcNL1jPmJr\n6ZUBvgMOIcQ5eE3ayGXonAB6ql4hA7hY9iOdWm6QOsYk7JeLYcTAOtRKzWCF\n00U79E0uZjHLYp5Z0Nuu74Y86Esx/IrT4iyDOm3Fx8F97uFlJJnN+5Ll13po\n6yzqrM/X14orPhtALfAsIFd0ex0KVmd3wrdcFBMte6YXIKhJFrkIU+/bCCIJ\nbewKoPDHENidn/KUHg0fr6a3k35XOWkpTKNat9nvphEJXrxQ04vLbdfL7WNI\nu4HVU+su8uWYveSE2Cgm2Tpa5WfuCmVfb4Veh3Y+Q8TWwoPRS2DVXtMmrJLN\ntafAi4ObCOhg0IC6WfWoRh0WwgdfGDVw1xqCok2R/hlTLELoAj5OahIHQz9l\nSG4BwAdcYEmfAFT5zsNv8LfYCbQqRIHI1J0+/j0nWlYxunmIdd6Wq/rnuFpo\nau5YCP/5tQwwHs3pS61XnCFwNL5P28VWID15CA74GhJ8qmZRGXuAFBSrQCga\nfZ+ZYR+v5LhuKjnE0l/SeOyXBnyGeRsy/rAQYbt8tKm0oqzFR+O1uABS3wJt\nLHsYDNFJhuivQOtsrnenVWR1cvgGRW6jvsA2tgHvD2u6gpB7xFNHTHM4P4jx\nfhbtTBxBTTe55m26VN3Na33x7All0YefQ5mS2nK9lRUUMmuUC5z/vr60JX3l\njuLE2r/r45tlgv9SZJwsNBMlQaBOxTxbXkELFsL0YQWN0d5CyOET0SfbDw/p\n3Zm2n/FKppLpudpYcM+PHctUhwYKaOZfL8pXTCSfUNSHsaxNukwbWdU5tTI3\n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\nXxnRphK1xvupnt+aS608Ejb+qZtpz1q1r8rQ+w==\n",
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHorpleEeoerSvfZ2JHZpm1GhsSDwCOxBL+fVO3bL+jSF8km\nL4XxYVd5eVPYcMjF1ldRCnpS+WroBrVKFLbOP6nnfqdt35gmboMSCAQxmBn3\n+uhq+uoSG0lbolkHC/cQN68v1B4v7RwQHzPSnXkOE+53flPLC4tcNL1jPmJr\n6ZUBvgMOIcQ5eE3ayGXonAB6ql4hA7hY9iOdWm6QOsYk7JeLYcTAOtRKzWCF\n00U79E0uZjHLYp5Z0Nuu74Y86Esx/IrT4iyDOm3Fx8F97uFlJJnN+5Ll13po\n6yzqrM/X14orPhtALfAsIFd0ex0KVmd3wrdcFBMte6YXIKhJFrkIU+/bCCIJ\nbewKoPDHENidn/KUHg0fr6a3k35XOWkpTKNat9nvphEJXrxQ04vLbdfL7WNI\nu4HVU+su8uWYveSE2Cgm2Tpa5WfuCmVfb4Veh3Y+Q8TWf5M6O55S0irhViyD\nfoQV4SwBN6H0g1iMQdzuKs/Hx9V8ssY9/PPO1SrDb1T6NP1AwGN+h5dSpm5w\nE0kUSmuRIyZxO0Ww091rH1T+aZzcgi2WYZUD6HmQiEnp2zkda1XI5itYVpMm\n1N6lA2kj5hqgjg//3M9U1bge/Pt/39/0UXhRPrS/JeFwaK/riF2jJOGV0dIO\nmWNW2SwxADgiontEPj9syKdrEabQlkC5Y838O6QYMgB7ZjlOyem7XXBBSb5j\nuO0AW64kvP6CtZydiCAniMxpJjyocCFpD+7X7p8sT1Ju5/udW6JZZpf4BIBs\nNJ3gl9V45gX1VrBbTy9cygMK54cTzDbp878Xx+szev91KgSHdIN6lNQBaGmg\nfLj2BapUWpTkl5D/gVJKtIn5I+Xs6RvTCDRXcZfhFucgr3HC8AFsCQ2Fq+TX\n/3A+GyLtMqCH4GoG51UYu8R/h0gxE/7dFZj3hiKyr28t4AyRzBGXiqo15EkS\n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\n",
     "bubble_choice_description": "Help Carolina add effects to her beats to create accent moments in songs",
     "validations": [
       {
-        "key": "test-music-lab-sequences-practice-choice-a_3375f513-24a8-4be8-8046-149f614b34d5",
-        "message": "exemplar validation",
+        "key": "test-music-lab-sequences-practice-choice-a_v2_012d6f90-650c-49c5-85e3-b87cc99876ad",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says \"You Did It!\"",
         "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:6"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_rest_at_current_location_simple2:3"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:3"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "fx:3"
+          }
+        ],
+        "comment": "This isn't actually great validation, but is the best I can do in this moment. Should try to revisit later"
+      },
+      {
+        "key": "test-music-lab-sequences-practice-choice-a_v2_f3b44462-3a73-4bcb-ac3d-effa00a4d0b8",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for 3 different beats and 3 different effects...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:6"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_rest_at_current_location_simple2:3"
+          }
+        ],
+        "comment": ""
+      },
+      {
+        "key": "test-music-lab-sequences-practice-choice-a_v2_e4f27998-ee5d-48e9-a425-d2d9d0911f72",
+        "message": "Make sure you have rest blocks to offset your effects!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:6"
+          }
+        ],
+        "comment": ""
+      },
+      {
+        "key": "test-music-lab-sequences-practice-choice-a_v2_c7ed2ff8-85b8-4108-8da1-05aabae2775b",
+        "message": "Make sure you have 3 beat tracks and 3 effect tracks!",
+        "next": false,
         "conditions": [
 
         ]
@@ -117,8 +128,7 @@
     "name_suffix": "_v2",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:48.964+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-choice-a\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:48.964+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-choice-a\"},{\"changed_at\":\"2025-06-12 15:32:51 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-24 21:47:42 +0000\",\"changed\":[\"long_instructions\",\"level_data\",\"thumbnail_url\",\"exemplar_settings\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-24 21:51:56 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-24 21:57:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-24 22:00:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-24 22:01:01 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-24 22:02:22 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-24 22:10:45 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-24 22:12:00 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
