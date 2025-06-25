@@ -1249,10 +1249,6 @@ roles.each do |name, config| %>
                 Effect: Allow
                 Action:
                   - cloudfront:UpdateDistribution
-                  - cloudfront:UpdateOriginAccessControl
-                  - cloudfront:UpdateFunction
-                  - cloudfront:UpdateCachePolicy
-                  - cloudfront:UpdateResponseHeadersPolicy
                 Resource: '*'
                 Condition:
                   StringEquals:
@@ -1263,19 +1259,24 @@ roles.each do |name, config| %>
                 Effect: Allow
                 Action:
                   - cloudfront:DeleteDistribution
-                  - cloudfront:DeleteFunction
                   - cloudfront:DeleteResponseHeadersPolicy
                 Resource: '*'
                 Condition:
                   StringEquals:
                     'aws:ResourceTag/environment-type': <%=environment_type%>
 
-              # CloudFront DELETE actions for non-taggable resources - no tag restriction
+              # CloudFront UPDATE/DELETE actions for non-taggable resources - no tag restriction
               - Sid: AllowCloudFrontDeleteActionsForNonTaggableResources
                 Effect: Allow
                 Action:
+                  - cloudfront:DeleteFunction
+                  - cloudfront:UpdateFunction
+                  - cloudfront:UpdateCachePolicy
+                  - cloudfront:UpdateOriginAccessControl
+                  - cloudfront:UpdateResponseHeadersPolicy
                   - cloudfront:DeleteOriginAccessControl
                   - cloudfront:DeleteCachePolicy
+                  - cloudfront:DeleteResponseHeadersPolicy
                 Resource: '*'
 
               # CloudFront DESCRIBE/GET actions - allowed on any resource
@@ -1325,8 +1326,8 @@ roles.each do |name, config| %>
               #                      - "*.<%#=configuration[:base_domain_name]%>"
               #                      - "<%#=configuration[:base_domain_name]%>"
 
-              # S3 CREATE actions - allowed on bucket resources matching domain pattern
-              - Sid: AllowS3CreateActions
+              # S3 CREATE/DELETE actions - allowed on static assets bucket resources matching domain pattern
+              - Sid: AllowS3CreateDeleteActionsOnStaticAssets
                 Effect: Allow
                 Action:
                   - s3:CreateBucket
@@ -1339,23 +1340,21 @@ roles.each do |name, config| %>
                   - s3:PutBucketLifecycleConfiguration
                   - s3:PutObject
                   - s3:PutBucketTagging
-                  - s3:PutBucketAcl
+                  - s3:DeleteBucket
+                  - s3:DeleteObject
+                  - s3:DeleteBucketPolicy
                 Resource:
                   - "arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets"
                   - "arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets/*"
-                  - "arn:aws:s3:::cdo-logs"
-                  - !Sub "arn:aws:s3:::cdo-logs/AWSLogs/${AWS::AccountId}/CloudFront/*"
 
-              # S3 UPDATE/DELETE actions - restricted to tagged resources
-              - Sid: AllowS3UpdateDeleteActionsOnTaggedResources
+              # S3 actions for CloudFront logging - restricted to ACL management only
+              - Sid: AllowS3LoggingBucketACLManagement
                 Effect: Allow
                 Action:
-                  - s3:DeleteBucket
-                  - s3:DeleteObject
-                Resource: '*'
-                Condition:
-                  StringEquals:
-                    'aws:ResourceTag/environment-type': <%=environment_type%>
+                  - s3:GetBucketAcl
+                  - s3:PutBucketAcl
+                Resource:
+                  - "arn:aws:s3:::cdo-logs"
 
               # S3 DESCRIBE/GET actions - allowed on bucket resources matching domain pattern
               - Sid: AllowS3DescribeActions
@@ -1374,13 +1373,6 @@ roles.each do |name, config| %>
                   - "arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets"
                   - "arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets/*"
                   - "arn:aws:s3:::cdo-logs"
-
-              # S3 DELETE actions for non-taggable resources - no tag restriction
-              - Sid: AllowS3DeleteActionsForNonTaggableResources
-                Effect: Allow
-                Action:
-                  - s3:DeleteBucketPolicy
-                Resource: '*'
 
               # Secrets Manager CREATE actions - allowed on any resource
               - Sid: AllowSecretsManagerCreateActions
