@@ -29,6 +29,30 @@ class SkillsController < ApplicationController
     end
   end
 
+  def section_skills
+    section = Section.find_by(id: section_skills_params[:section_id])
+    unit = Unit.find_by(name: section_skills_params[:unit_name])
+
+    if section.nil?
+      render json: {status: 'error', message: 'Section not found'}, status: :not_found
+      return
+    end
+
+    if unit.nil?
+      render json: {status: 'error', message: 'Unit not found'}, status: :not_found
+      return
+    end
+
+    authorize! :manage, section
+
+    skills_data = SkillsHelper.get_section_skills_data(section, unit)
+
+    render json: {
+      status: 'success',
+      skills_data: skills_data
+    }
+  end
+
   private def skill_params
     params.permit(
       :key,
@@ -36,5 +60,9 @@ class SkillsController < ApplicationController
       :evaluationCriteria,
       :concept,
     ).transform_keys {|key| key.to_s.underscore.to_sym}
+  end
+
+  private def section_skills_params
+    params.permit(:section_id, :unit_name)
   end
 end
