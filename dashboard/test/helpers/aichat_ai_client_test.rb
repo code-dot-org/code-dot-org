@@ -1,8 +1,4 @@
-require 'test_helper'
-
-
 class AichatAiClientTest < ActionView::TestCase
-
   setup do
     @stored_messages = [
       {
@@ -22,18 +18,14 @@ class AichatAiClientTest < ActionView::TestCase
     @encrypted_channel_id = 12345
     @user_id = 'test-user'
     @project_id = 'Aichat project'
+    @response_text = "some response text"
 
-    #TODO - these were in original test not sure what we're doing with them
-    @level_without_level_system_prompt_id = 'Aichat level without level system prompt'
     @level = Level.create({name: @level_id, properties: {aichat_settings: {levelSystemPrompt: "Be safe."}}})
-    @level_without_level_system_prompt = Level.create({name: @level_without_level_system_prompt_id, properties: {aichat_settings: {}}})
-   
   end
 
-
-  private def call_get_response_test(model_id)
+  private def call_get_response_text(model_id)
     AichatAiClient.create_instance(model_id).get_response_text(
-         @stored_messages,
+      @stored_messages,
          @new_message,
          @temperature,
          @system_prompt,
@@ -44,5 +36,15 @@ class AichatAiClientTest < ActionView::TestCase
          @user_id,
          @project_id
       )
+  end
+  private def stub_request_and_get_response_test(url_to_post, expected_request_body, expected_headers, stubbed_response_body, model_id)
+    stub_request(:post, url_to_post).
+          with(
+            body: expected_request_body,
+            headers: expected_headers
+        ).
+        to_return(status: 200, body: stubbed_response_body.to_json, headers: {})
+
+    call_get_response_text(model_id)
   end
 end
