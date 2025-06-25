@@ -4,9 +4,15 @@ import {RedisStringsHandler} from '@trieb.work/nextjs-turbo-redis-cache';
  * @typedef {import('@trieb.work/nextjs-turbo-redis-cache').RedisStringsHandler} RedisStringsHandler
  */
 class RedisCacheHandler {
+  static #instance = null;
   cachedHandler;
 
   constructor() {
+    if (RedisCacheHandler.#instance) {
+      return RedisCacheHandler.#instance;
+    }
+    RedisCacheHandler.#instance = this;
+
     const isRedisCacheEnabled =
       process.env.REDIS_URL && process.env.NODE_ENV === 'production';
 
