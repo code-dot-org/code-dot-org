@@ -16,7 +16,7 @@ class AichatOpenaiHelperTest < ActionView::TestCase
       }.stringify_keys
     ]
     @new_message = {role: 'user', chatMessageText: 'new message from user'}.stringify_keys
-    @new_message_extra = {role: 'user', chatMessageText: 'new message from user', chatMessageTextExtra: 'extra text'}.stringify_keys
+    @new_message_extra = {role: 'user', chatMessageText: 'new message from user', hiddenContext: 'extra text'}.stringify_keys
     @level = Level.create({name: 'Aichat level', properties: {aichat_settings: {levelSystemPrompt: "Be safe."}}})
     @level_without_level_system_prompt = Level.create({name: 'Aichat level without level system prompt', properties: {aichat_settings: {}}})
     @encrypted_channel_id = 12345

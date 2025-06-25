@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 
 import {
-  setUserMessageExtra,
+  setHiddenContext,
   setSavedAiCustomizationProperty,
   setChatButtons,
   clearChatMessages,
@@ -13,12 +13,12 @@ import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 import moduleStyles from './AiTutor2Chat.module.scss';
 
 interface AiTutor2ChatProps {
-  additionalPrompt: string;
+  hiddenContext: string;
 }
 
 // A free chat with lab-supplied context added to each question.
 const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
-  additionalPrompt,
+  hiddenContext,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -60,8 +60,8 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
 
   useEffect(() => {
     // Give aichat additional prompt data.
-    dispatch(setUserMessageExtra(additionalPrompt));
-  }, [dispatch, additionalPrompt]);
+    dispatch(setHiddenContext(hiddenContext));
+  }, [dispatch, hiddenContext]);
 
   return (
     <div className={moduleStyles.container}>

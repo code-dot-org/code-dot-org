@@ -31,9 +31,7 @@ const UserChatMessageEditor: React.FunctionComponent<{
 
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
-  const userMessageExtra = useAppSelector(
-    state => state.aichat.userMessageExtra
-  );
+  const hiddenContext = useAppSelector(state => state.aichat.hiddenContext);
 
   const handleSubmit = useCallback(
     (userMessage: string) => {
@@ -41,7 +39,7 @@ const UserChatMessageEditor: React.FunctionComponent<{
         dispatch(
           submitChatContents({
             text: userMessage,
-            textExtra: userMessageExtra,
+            hiddenContext: hiddenContext,
             assets:
               multimodalEnabled && chatAssets.length > 0
                 ? chatAssets
@@ -53,7 +51,7 @@ const UserChatMessageEditor: React.FunctionComponent<{
     [
       isWaitingForChatResponse,
       dispatch,
-      userMessageExtra,
+      hiddenContext,
       multimodalEnabled,
       chatAssets,
     ]

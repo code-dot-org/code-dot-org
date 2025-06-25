@@ -35,7 +35,7 @@ import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import CodebridgeRegistry from '../codebridge/CodebridgeRegistry';
 import {useAiTutor2} from '../lab2/views/components/aiTutor2/useAiTutor2';
 
-import getAiTutor2AdditionalPromptData from './aiTutorHelper';
+import getAiTutor2Context from './aiTutorHelper';
 import ProjectTypePicker from './components/ProjectTypePicker';
 import {
   DEFAULT_PROJECT,
@@ -102,9 +102,9 @@ const PythonlabView: React.FunctionComponent<
 
   const isAiTutor2HintEnabled = queryParams('show-ai-tutor2-hint') === 'true';
 
-  const [aiTutor2AdditionalPrompt, setAiTutor2AdditionalPrompt] = useState<
-    string | undefined
-  >(undefined);
+  const [aiTutor2Context, setAiTutor2Context] = useState<string | undefined>(
+    undefined
+  );
 
   const dispatch = useAppDispatch();
 
@@ -186,24 +186,14 @@ const PythonlabView: React.FunctionComponent<
   });
 
   useEffect(() => {
-    setAiTutor2AdditionalPrompt(
-      getAiTutor2AdditionalPromptData(
+    setAiTutor2Context(
+      getAiTutor2Context(
         source,
         validationFile,
         levelProperties.longInstructions
       )
     );
   }, [levelProperties.longInstructions, source, validationFile]);
-
-  /*
-  const getAiTutor2AdditionalPrompt = useCallback(() => {
-    return getAiTutor2AdditionalPromptData(
-      source,
-      validationFile,
-      levelProperties.longInstructions
-    );
-  }, [levelProperties.longInstructions, source, validationFile]);
-  */
 
   const [askAiTutor2, AiTutor2Response] = useAiTutor2(
     isAiTutor2HintEnabled,
@@ -248,7 +238,7 @@ const PythonlabView: React.FunctionComponent<
       // Ask a question to AITutor2.
       askAiTutor2(
         "What's wrong with my code, if anything?",
-        aiTutor2AdditionalPrompt || ''
+        aiTutor2Context || ''
       );
     }
   };
@@ -269,7 +259,7 @@ const PythonlabView: React.FunctionComponent<
           sendConsoleInput={sendInput}
           levelProperties={levelProperties}
           projectPickerSettings={projectPickerSettings}
-          aiTutor2AdditionalPrompt={aiTutor2AdditionalPrompt}
+          aiTutor2Context={aiTutor2Context}
           AiTutor2ResponseView={AiTutor2Response}
         />
       )}

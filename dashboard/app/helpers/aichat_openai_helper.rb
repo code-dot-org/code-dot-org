@@ -58,7 +58,7 @@ module AichatOpenaiHelper
 
   def self.format_message(message, encrypted_channel_id, level_name)
     text = message['chatMessageText']
-    text = text + "\n" + message['chatMessageTextExtra'] if message['chatMessageTextExtra']
+    text = text + "\n" + message['hiddenContext'] if message['hiddenContext']
 
     formatted = {
       role: message['role'],

@@ -45,8 +45,8 @@ export interface AichatState {
     | 'fileLimitExceeded'
     | 'sizeLimitExceeded'
     | undefined;
-  // Additional text provided by the lab that is appended to the user message.
-  userMessageExtra?: string;
+  // Additional context provided by the lab that is appended to the user message.
+  hiddenContext?: string;
   // Optional information about buttons containing pre-canned questions.
   chatButtons: ChatButton[];
 }

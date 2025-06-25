@@ -38,7 +38,7 @@ export const submitChatContents = createAsyncThunk(
   async (
     newUserMessageInput: {
       text: string;
-      textExtra?: string;
+      hiddenContext?: string;
       assets?: ChatAsset[];
     },
     thunkAPI
@@ -61,7 +61,7 @@ export const submitChatContents = createAsyncThunk(
       role: Role.USER,
       status: Status.UNKNOWN,
       chatMessageText: newUserMessageInput.text,
-      chatMessageTextExtra: newUserMessageInput.textExtra,
+      hiddenContext: newUserMessageInput.hiddenContext,
       assets: newUserMessageInput.assets,
       timestamp: Date.now(),
     };

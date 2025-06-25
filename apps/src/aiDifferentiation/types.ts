@@ -4,7 +4,7 @@ import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 export type ChatTextMessage = {
   role: Role;
   chatMessageText: string;
-  chatMessageTextExtra?: string;
+  hiddenContext?: string;
   status: string;
   id?: number;
 };

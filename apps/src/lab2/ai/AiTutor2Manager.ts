@@ -34,14 +34,14 @@ export default class AiTutor2Manager {
 
   async askAiTutor2(
     message: string,
-    messageExtra: string,
+    hiddenContext: string,
     type: AiTutor2MessageType
   ) {
     const newUserMessage: PendingChatMessage = {
       role: Role.USER,
       status: Status.UNKNOWN,
       chatMessageText: message,
-      chatMessageTextExtra: messageExtra,
+      hiddenContext,
       assets: undefined,
       timestamp: Date.now(),
     };
