@@ -98,11 +98,7 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
         const evaluations = await loadExistingEvaluations();
         const completeEvaluations =
           addStudentNameAndResponseToEvaluations(evaluations);
-        setEvaluations(prevEvaluations => [
-          ...prevEvaluations,
-          ...completeEvaluations,
-        ]);
-        // setEvaluationCount(evaluations.length + completeEvaluations.length);
+        setEvaluations(completeEvaluations);
         setLoadingExistingEvaluations(false);
       };
 
