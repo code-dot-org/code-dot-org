@@ -15,7 +15,9 @@
     /* remove native style so we can custom style the checkbox */
     appearance: none;
     -webkit-appearance: none;
-
+    
+    box-sizing: border-box;
+    position: relative;
     width: 1.25em;
     height: 1.25em;
     border: 2px solid var(--neutral-base-white);
@@ -24,32 +26,56 @@
     cursor: pointer;
     flex-shrink: 0;
 
-    /* normal checked */
-    &:checked {
-      background-color: var(--brand-teal-50);
-      border: 0
+    /* Define the custom checkmark shape (hidden by default) */
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0.15em;
+      left: 0.45em;
+      width: 0.25em;
+      height: 0.6em;
+      border: solid var(--neutral-base-white);
+      border-width: 0 0.15em 0.15em 0;
+      transform: rotate(45deg);
+      opacity: 0;
     }
 
-    /* disabled and unchecked → dimmer box + outline */
+    &:hover:not(:checked) {
+      background-color: var(--background-neutral-quaternary);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--borders-brand-teal-primary);
+      outline-offset: 2px;
+      border-radius: 0.25rem;
+    }
+
+    /* when checked, show the checkmark */
+    &:checked {
+      background-color: var(--brand-teal-50);
+      border: 0;
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    /* disabled and unchecked -> dimmer checkbox and outline */
     &:disabled:not(:checked) {
-      background-color: var(neutral-gray-99);
+      background-color: var(--neutral-gray-99);
       border-color: var(--neutral-gray-80);
       cursor: default;
     }
 
-    &:focus-visible {
-      outline: 1px solid var(--sentiment-warning-30);
-      outline-offset: 1px;
+    /* also dim letter and label when disabled & unchecked */
+    &:disabled:not(:checked) + .multipleChoiceLetter,
+    &:disabled:not(:checked) + .multipleChoiceLetter + .multipleChoiceLabel {
+      color: $light_gray_700;
     }
-  }
-
-  /* dim both letter + label when the checkbox is disabled and not checked */
-  input[type="checkbox"]:disabled:not(:checked)
-    + .multipleChoiceLetter,
-  input[type="checkbox"]:disabled:not(:checked)
-    + .multipleChoiceLetter
-    + .multipleChoiceLabel {
-    color: $light_gray_700;
   }
 }
 
@@ -74,7 +100,7 @@
 .predictSolutionContainer {
   margin: 10px;
   padding: 5px;
-  background-color: $light_white;
+  background-color: var(--neutral-base-white);
   border-radius: 5px;
 }
 
