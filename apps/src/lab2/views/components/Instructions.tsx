@@ -1,4 +1,3 @@
-import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import classNames from 'classnames';
 import React, {useEffect, useRef} from 'react';
@@ -11,12 +10,16 @@ import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {
   isPredictAnswerLocked,
+  isPredictResponseSubmitted,
   setPredictResponse,
 } from '@cdo/apps/lab2/redux/predictLevelRedux';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {LevelProperties} from '../../types';
+
+import NavigationButton from './Instructions/NavigationButton';
 import PredictQuestion from './PredictQuestion';
 import PredictSummary from './PredictSummary';
 import TextToSpeech from './TextToSpeech';
@@ -24,6 +27,8 @@ import TextToSpeech from './TextToSpeech';
 import moduleStyles from './instructions.module.scss';
 
 interface InstructionsProps {
+  hasRun: boolean;
+  hasEdited: boolean;
   /** If the instructions panel should be rendered vertically or horizontally. Defaults to vertical. */
   layout?: 'vertical' | 'horizontal';
   /**
@@ -47,15 +52,15 @@ interface InstructionsProps {
  * For Teachers Only, etc.
  */
 const Instructions: React.FunctionComponent<InstructionsProps> = ({
+  hasRun,
+  hasEdited,
   layout,
   handleInstructionsTextClick,
   className,
   manageNavigation = true,
   bottomComponent,
 }) => {
-  const instructionsText = useAppSelector(
-    state => state.lab.levelProperties?.longInstructions
-  );
+  const levelProperties = useAppSelector(state => state.lab.levelProperties);
   const hasNextLevel = useSelector(state => nextLevelId(state) !== undefined);
   const {hasConditions, message, satisfied, index} = useAppSelector(
     state => state.lab.validationState
@@ -64,6 +69,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     state => state.lab.levelProperties?.predictSettings
   );
   const predictResponse = useAppSelector(state => state.predictLevel.response);
+  const predictResponseSubmitted = useAppSelector(isPredictResponseSubmitted);
   const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
 
   const offerBrowserTts =
@@ -80,18 +86,21 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   const {theme} = useTheme();
 
   // Don't render anything if we don't have any instructions.
-  if (instructionsText === undefined) {
+  if (
+    levelProperties === undefined ||
+    levelProperties.longInstructions === undefined
+  ) {
     return null;
   }
 
   const canShowNextButton =
     manageNavigation &&
     (!hasConditions || satisfied) &&
-    (!predictSettings?.isPredictLevel || predictAnswerLocked);
+    (!predictSettings?.isPredictLevel || predictResponseSubmitted);
 
   return (
     <InstructionsPanel
-      text={instructionsText}
+      text={levelProperties.longInstructions}
       message={message || undefined}
       messageIndex={index}
       theme={theme}
@@ -108,6 +117,9 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       useSecondaryFinishButton={useSecondaryFinishButton}
       onContinueOrFinish={() => dispatch(continueOrFinishLesson())}
       bottomComponent={bottomComponent}
+      levelProperties={levelProperties}
+      hasRun={hasRun}
+      hasEdited={hasEdited}
     />
   );
 };
@@ -139,6 +151,9 @@ interface InstructionsPanelProps {
   useSecondaryFinishButton: boolean;
   onContinueOrFinish: () => void;
   bottomComponent?: React.ReactNode;
+  levelProperties: LevelProperties;
+  hasRun: boolean;
+  hasEdited: boolean;
 }
 
 /**
@@ -166,8 +181,10 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   canShowNextButton,
   hasNextLevel,
   useSecondaryFinishButton,
-  onContinueOrFinish,
   bottomComponent,
+  levelProperties,
+  hasRun,
+  hasEdited,
 }) => {
   const vertical = layout === 'vertical';
 
@@ -308,18 +325,12 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   />
                 </div>
               )}
-              {canShowNextButton && (
-                <Button
-                  id="instructions-continue-button"
-                  text={
-                    hasNextLevel ? commonI18n.continue() : commonI18n.finish()
-                  }
-                  onClick={onContinueOrFinish}
-                  className={moduleStyles.buttonInstruction}
-                  type={showSecondaryFinishButton ? 'secondary' : 'primary'}
-                  color={showSecondaryFinishButton ? 'black' : 'purple'}
-                />
-              )}
+              <NavigationButton
+                levelProperties={levelProperties}
+                hasRun={hasRun}
+                hasEdited={hasEdited}
+                className={moduleStyles.buttonInstruction}
+              />
             </div>
           </div>
         )}
