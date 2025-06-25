@@ -44,6 +44,8 @@ import ValidationResults from './ValidationResults';
 
 import moduleStyles from '@codebridge/InfoPanel/styles/validated-instructions.module.scss';
 
+const MINIMUM_VALIDATION_TIME = 1500; // 1.5 seconds
+
 interface InstructionsProps {
   /** Additional callback to fire before navigating to the next level. */
   beforeNextLevel?: () => void;
@@ -171,9 +173,10 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
         scriptId: scriptId,
         interaction: UserLevelInteractions.click_validate,
       });
-      onRun(true, dispatch, source).finally(() =>
-        dispatch(setIsValidating(false))
-      );
+      Promise.allSettled([
+        onRun(true, dispatch, source),
+        new Promise(resolve => setTimeout(resolve, MINIMUM_VALIDATION_TIME)),
+      ]).then(() => dispatch(setIsValidating(false)));
       dispatch(setHasValidated(true));
       dispatch(setShowSuggestedPrompts(true));
     } else {
