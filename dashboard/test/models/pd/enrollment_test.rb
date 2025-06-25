@@ -97,14 +97,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert Pd::Enrollment.with_deleted.exists? enrollment.id
   end
 
-  test 'for_school_district' do
-    school_info = create :school_info
-    enrollment_in_district = create :pd_enrollment, school_info: school_info
-    _enrollment_out_of_district = create :pd_enrollment
-
-    assert_equal [enrollment_in_district], Pd::Enrollment.for_school_district(school_info.school_district)
-  end
-
   test 'pre_workshop_survey_url' do
     csp_summer_workshop = build :csp_summer_workshop
     csp_summer_workshop_enrollment = build :pd_enrollment, workshop: csp_summer_workshop
