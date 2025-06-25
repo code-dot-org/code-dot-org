@@ -1658,4 +1658,9 @@ And(/^I debug milestone callback$/) do
   puts "postMilestoneMode: #{mode.inspect}"
   callback = @browser.execute_script("return appOptions.dialog.callback;")
   puts "callback: #{callback.inspect}"
+  fallback = @browser.execute_script("return appOptions.dialog.fallbackResponse;")
+  success = JSON.parse(fallback || '{}')['success']
+  return unless success
+  puts "fallback success level_path: #{success['level_path'].inspect}"
+  puts "fallback success redirect: #{success['redirect'].inspect}"
 end
