@@ -468,7 +468,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     assert_equal 6, PeerReview.count
   end
 
-  # TODO: TEACH-1863 Pass the course to build_script_level_path. the url will need to be updated
+  # TODO: TEACH-1863 Use unit group in peer review. the url will need to be updated
   test 'submission_path' do
     script_level = create :script_level, script: create(:script, :in_single_unit_course)
     peer_review_with_script_level = create :peer_review, script: script_level.script, level: script_level.level
