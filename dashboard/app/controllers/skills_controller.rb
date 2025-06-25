@@ -1,6 +1,6 @@
 class SkillsController < ApplicationController
   before_action :authenticate_user!
-  load_and_authorize_resource
+  load_and_authorize_resource only: [:index, :create]
 
   def index
     skills = Skill.all
