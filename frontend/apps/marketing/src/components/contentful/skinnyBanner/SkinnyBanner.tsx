@@ -73,6 +73,9 @@ const SkinnyBanner: React.FunctionComponent<SkinnyBannerProps> = ({
               iconRight: firstButtonLink.fields.isThisAnExternalLink
                 ? externalLinkIconProps
                 : undefined,
+              target: firstButtonLink.fields.isThisAnExternalLink
+                ? '_blank'
+                : undefined,
             }
           : undefined
       }
