@@ -1376,7 +1376,7 @@ roles.each do |name, config| %>
                   - "arn:aws:s3:::cdo-logs"
 
               # S3 DELETE actions for non-taggable resources - no tag restriction
-              - Sid: AllowCloudFrontDeleteActionsForNonTaggableResources
+              - Sid: AllowS3DeleteActionsForNonTaggableResources
                 Effect: Allow
                 Action:
                   - s3:DeleteBucketPolicy
