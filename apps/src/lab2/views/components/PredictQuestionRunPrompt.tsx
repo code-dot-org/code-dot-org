@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React from 'react';
 
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -10,10 +11,16 @@ import moduleStyles from './predict.module.scss';
  */
 const PredictQuestionRunPrompt: React.FunctionComponent = () => {
   return (
-    <div className={moduleStyles.predictQuestionContainer}>
-      <div className={moduleStyles.runPrompt}>
-        <SafeMarkdown markdown={commonI18n.predictQuestionRunPrompt()} />
-      </div>
+    <div
+      className={classNames(
+        moduleStyles.predictQuestionContainer,
+        moduleStyles.runPromptContainer
+      )}
+    >
+      <SafeMarkdown
+        markdown={commonI18n.predictQuestionRunPrompt()}
+        className={moduleStyles.runPrompt}
+      />
     </div>
   );
 };

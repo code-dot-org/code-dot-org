@@ -64,8 +64,12 @@
   justify-content: right;
 }
 
-.runPrompt {
+.runPromptContainer {
   color: var(--neutral-base-white);
   background-color: var(--background-neutral-secondary);
-  padding: 6px 12px 1px 12px;
+  border-radius: .25em;
+}
+
+.runPrompt {
+  padding: 9px 12px 1px 12px;
 }
