@@ -1,11 +1,12 @@
 name 'music-lab-612-post-q5'
 
 question 'put actual question here'
-
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
-right 'correct'
+width '300'
+height '300'
+wrong '![](https://images.code.org/6f714dacf8a7529b66be15e173226c92-image-1750778730325.png)'
+wrong '![](https://images.code.org/0d7efe581dd32a11c9b9e5cea82f9b65-image-1750778733777.png)'
+wrong '![](https://images.code.org/16b2b2099ad5285ec4a73036e764fec8-image-1750778736681.png)'
+right '![](https://images.code.org/e7f37ff254aa478be2cb6608f4ef22e4-image-1750778743244.png)'
 
 allow_multiple_attempts true
 
@@ -26,4 +27,6 @@ MARKDOWN
 
 markdown <<MARKDOWN
 Put the images / context markdown here
+
+![](https://images.code.org/91091f305393f57e3753aed4b636e3f9-image-1750778745794.png)
 MARKDOWN

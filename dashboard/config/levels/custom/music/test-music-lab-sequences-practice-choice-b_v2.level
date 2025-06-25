@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:56:49.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Layering Lyrics\r\n\r\nExperiment with creating new sounds with just vocals. Use rests strategically to offset when tracks start to layer the vocals together and create something new and experimental. Listen to the example song to hear what this could sound like!\r\n\r\nTo pass this level, your song should have at least 10 `play` blocks and at least 5 `rest` blocks. Use those blocks creatively to experiment with new sounds!",
+    "long_instructions": "#### Layering Lyrics\r\n\r\n**Define:** Explore how vocal sounds can be layered in unexpected and creative ways. Your goal is to build a song by staggering vocal clips and using rests to create something new and experimental\r\n\r\n**Prepare:** Choose vocal samples that sound interesting when layered or offset from each other. Plan where to place rests so that the vocals don't all start at once, and think about how to make your remix feel experimental or surprising. Listen to the example song to hear what this could sound like!\r\n\r\n**Try:** Use at least 10 play blocks to stack and arrange your vocal samples. Use at least 5 rest blocks to shift the timing and create space among tracks. Focus on creating something unique, not just a typical pop remix.\r\n\r\n**Reflect:** Do your vocals interact in interesting or unexpected ways? Listen to your song and iterate until it sounds the way you want it to. In order to complete this level, your remix must include:\r\n\r\n- At least 10 play blocks\r\n- At least 5 rest blocks",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -79,7 +80,7 @@
       {
         "key": "test-music-lab-sequences-practice-choice-b_069553a4-264a-46fd-bf27-715ce7ec6044",
         "message": "It looks like your song is on the right track!",
-        "next": false,
+        "next": true,
         "conditions": [
           {
             "name": "block_count_by_type",
@@ -106,8 +107,7 @@
     "name_suffix": "_v2",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:49.199+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-choice-b\"},{\"changed_at\":\"2025-06-12 15:32:57 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:49.199+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-choice-b\"},{\"changed_at\":\"2025-06-12 15:32:57 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-24 22:15:41 +0000\",\"changed\":[\"long_instructions\",\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

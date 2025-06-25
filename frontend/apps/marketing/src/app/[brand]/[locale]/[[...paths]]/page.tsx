@@ -1,6 +1,3 @@
-// Register custom components server-side
-import '@/contentful/register-custom-components';
-
 import {detachExperienceStyles} from '@contentful/experiences-sdk-react';
 import {Metadata} from 'next';
 import {draftMode} from 'next/headers';
@@ -9,8 +6,10 @@ import {notFound} from 'next/navigation';
 import Bootstrap from '@/bootstrap';
 import ContentEditorHelper from '@/components/contentEditorHelper';
 import {Brand} from '@/config/brand';
+import {getIcons} from '@/config/metadata/icons';
 import ExperiencePageLoader from '@/contentful/components/ExperiencePageLoader';
 import {getExperience} from '@/contentful/get-experience';
+import {registerContentfulComponents} from '@/contentful/registration';
 import {getContentfulSlug} from '@/contentful/slug/getContentfulSlug';
 import {getSeoMetadata} from '@/metadata/seo';
 import {getPageHeading} from '@/selectors/contentful/getExperienceEntryFields';
@@ -43,7 +42,11 @@ export async function generateStaticParams() {
 }
 
 async function getPageProps({params, searchParams}: ExperiencePageProps) {
-  const {locale = 'en-US', paths = ['']} = (await params) || {};
+  const {
+    locale = 'en-US',
+    brand = Brand.CODE_DOT_ORG,
+    paths = [''],
+  } = (await params) || {};
   const isDraftModeEnabled = (await draftMode()).isEnabled;
 
   const slug = getContentfulSlug(paths);
@@ -59,6 +62,7 @@ async function getPageProps({params, searchParams}: ExperiencePageProps) {
     ),
     locale,
     slug,
+    brand,
   };
 }
 
@@ -66,7 +70,6 @@ export async function generateMetadata({
   params,
   searchParams,
 }: ExperiencePageProps): Promise<Metadata> {
-  const {brand} = (await params) || {};
   const pageProps = await getPageProps({
     params,
     searchParams,
@@ -76,16 +79,8 @@ export async function generateMetadata({
 
   return {
     title: getPageHeading(experience),
-    // Temporary favicon location for Pegasus compatability.
-    // Remove when Pegasus is deprecated.
-    // TODO: https://codedotorg.atlassian.net/browse/CMS-731
-    icons: [
-      {
-        url: '/images/favicon.ico',
-        href: '/images/favicon.ico',
-      },
-    ],
-    ...getSeoMetadata(experience, brand, pageProps.locale),
+    icons: getIcons(pageProps.brand),
+    ...getSeoMetadata(experience, pageProps.brand, pageProps.locale),
   };
 }
 export default async function ExperiencePage({
@@ -99,6 +94,8 @@ export default async function ExperiencePage({
   });
 
   const {experience, error} = pageProps.experienceResult;
+
+  registerContentfulComponents(pageProps.brand);
 
   if (error) {
     if (error.message.startsWith('No experience entry with slug')) {
@@ -121,6 +118,7 @@ export default async function ExperiencePage({
       <ExperiencePageLoader
         experienceJSON={experienceJSON}
         locale={pageProps.locale}
+        brand={pageProps.brand}
       />
     </main>
   );
