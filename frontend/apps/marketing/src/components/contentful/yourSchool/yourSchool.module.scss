@@ -15,6 +15,16 @@
       }
     }
 
+    &:has(input[type='checkbox']) {
+      align-items: flex-start;
+
+      input,
+      i {
+        flex-shrink: 0;
+        margin-top: 0.15rem;
+      }
+    }
+
     input:not([type='checkbox']),
     select,
     div:has(> select) {
