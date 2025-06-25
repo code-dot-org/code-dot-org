@@ -32,10 +32,14 @@
 
     /* disabled and unchecked → dimmer box + outline */
     &:disabled:not(:checked) {
-      background-color: var(neutral-gray-99);           // darker fill
-      border-color: var(--neutral-gray-80);               // dim outline
-      box-shadow: none;
+      background-color: var(neutral-gray-99);
+      border-color: var(--neutral-gray-80);
       cursor: default;
+    }
+
+    &:focus-visible {
+      outline: 1px solid var(--sentiment-warning-30);
+      outline-offset: 1px;
     }
   }
 
@@ -45,7 +49,7 @@
   input[type="checkbox"]:disabled:not(:checked)
     + .multipleChoiceLetter
     + .multipleChoiceLabel {
-    color: $light_gray_700;  // or whatever your dim color is
+    color: $light_gray_700;
   }
 }
 
