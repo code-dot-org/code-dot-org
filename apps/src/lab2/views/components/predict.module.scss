@@ -6,6 +6,17 @@
 
   input {
     margin: 4px 4px 0 0;
+
+    // When the radio/checkbox is disabled and not checked, dim option.
+    &:disabled:not(:checked) {
+      opacity: 0.5;
+      cursor: not-allowed;
+
+      + .multipleChoiceLetter,
+      + .multipleChoiceLetter + .multipleChoiceLabel {
+        color: $light_gray_500;
+      }
+    }
   }
 }
 

@@ -41,8 +41,8 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
         if (index > -1) {
           selections.splice(index, 1);
         }
-        setPredictResponse(selections.join(','));
       }
+      setPredictResponse(selections.join(','));
     } else {
       setPredictResponse(value);
     }
