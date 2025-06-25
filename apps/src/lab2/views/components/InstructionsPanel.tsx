@@ -87,8 +87,10 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   const feedbackRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Focus on the feedback message when it is present and the program is not running.
+    // Focus on the feedback message when it first becomes present and the program is not running.
     // This ensures it will be read by screen readers.
+    // It's ok to focus after each run switch, as the message will also reappear when the user re-runs
+    // the program.
     if (message && !isRunning) {
       feedbackRef.current?.focus();
     }
