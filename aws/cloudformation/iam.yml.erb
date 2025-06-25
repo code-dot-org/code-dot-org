@@ -1451,12 +1451,18 @@ roles.each do |name, config| %>
               - Sid: AllowApplicationAutoScalingUpdateDeleteActionsOnTaggedResources
                 Effect: Allow
                 Action:
-                  - application-autoscaling:DeleteScalingPolicy
                   - application-autoscaling:DeregisterScalableTarget
                 Resource: '*'
                 Condition:
                   StringEquals:
                     'aws:ResourceTag/environment-type': <%=environment_type%>
+
+              # Application AutoScaling DELETE actions for non-taggable resources - no tag restriction
+              - Sid: AllowApplicationAutoSCalingDeleteActionsForNonTaggableResources
+                Effect: Allow
+                Action:
+                  - application-autoscaling:DeleteScalingPolicy
+                Resource: '*'
 
               # Application Autoscaling DESCRIBE actions - allowed on any resource
               - Sid: AllowApplicationAutoScalingDescribeActions
