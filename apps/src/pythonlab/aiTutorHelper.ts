@@ -4,8 +4,7 @@ import {ProjectFile} from '../codebridge/types';
 
 import PythonValidationTracker from './progress/PythonValidationTracker';
 
-// Given a question for the AITutor2, return the full question to ask, which means
-// appending all the relevant context.
+// Return additional context for AiTutor2.
 const getAiTutor2Context = (
   source: MultiFileSource,
   validationFile: ProjectFile | undefined,
