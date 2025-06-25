@@ -373,6 +373,7 @@ namespace :seed do
       ui-test-course-2017
       ui-test-course-2019
       ui-test-original-course-2017
+      ui-test-original-course-2019
       ui-test-single-unit-course-2025
       ui-test-single-unit-course-2026
       ui-test-csa-family-script

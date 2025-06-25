@@ -8,11 +8,12 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-06 22:53:56 UTC",
-    "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "serialized_at": "2025-06-25 21:19:32 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "ui-test-script-in-course-2019"
     }
@@ -82,6 +83,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L1 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -140,6 +144,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }
