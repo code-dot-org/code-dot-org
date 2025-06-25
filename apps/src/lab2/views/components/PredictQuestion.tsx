@@ -33,7 +33,6 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
   const handleSelectionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     if (predictSettings.isMultiSelect) {
-      // multi-select behavior
       const selections = predictResponse ? predictResponse.split(',') : [];
       if (e.target.checked) {
         selections.push(value);
@@ -45,14 +44,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
         setPredictResponse(selections.join(','));
       }
     } else {
-      // single-select via checkbox
-      if (e.target.checked) {
-        // Clear any previous option checked and set this one.
-        setPredictResponse(value);
-      } else {
-        // Unchecked: clear response.
-        setPredictResponse('');
-      }
+      setPredictResponse(value);
     }
   };
 
@@ -82,7 +74,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
                 className={moduleStyles.multipleChoiceContainer}
               >
                 <input
-                  type="checkbox"
+                  type={predictSettings.isMultiSelect ? 'checkbox' : 'radio'}
                   value={index.toString()}
                   checked={Boolean(
                     predictResponse?.split(',').includes(index.toString())
