@@ -5,13 +5,7 @@ import {setWidgetViewShowCode} from '@codebridge/redux/workspaceRedux';
 import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {python} from '@codemirror/lang-python';
 import {LanguageSupport} from '@codemirror/language';
-import React, {
-  useContext,
-  useCallback,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react';
+import React, {useContext, useEffect, useMemo, useState} from 'react';
 
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
@@ -108,6 +102,10 @@ const PythonlabView: React.FunctionComponent<
 
   const isAiTutor2HintEnabled = queryParams('show-ai-tutor2-hint') === 'true';
 
+  const [aiTutor2AdditionalPrompt, setAiTutor2AdditionalPrompt] = useState<
+    string | undefined
+  >(undefined);
+
   const dispatch = useAppDispatch();
 
   const currentProjectType = useMemo(() => {
@@ -187,6 +185,17 @@ const PythonlabView: React.FunctionComponent<
     dispatch(setWidgetViewShowCode(false));
   });
 
+  useEffect(() => {
+    setAiTutor2AdditionalPrompt(
+      getAiTutor2AdditionalPromptData(
+        source,
+        validationFile,
+        levelProperties.longInstructions
+      )
+    );
+  }, [levelProperties.longInstructions, source, validationFile]);
+
+  /*
   const getAiTutor2AdditionalPrompt = useCallback(() => {
     return getAiTutor2AdditionalPromptData(
       source,
@@ -194,6 +203,7 @@ const PythonlabView: React.FunctionComponent<
       levelProperties.longInstructions
     );
   }, [levelProperties.longInstructions, source, validationFile]);
+  */
 
   const [askAiTutor2, AiTutor2Response] = useAiTutor2(
     isAiTutor2HintEnabled,
@@ -238,7 +248,7 @@ const PythonlabView: React.FunctionComponent<
       // Ask a question to AITutor2.
       askAiTutor2(
         "What's wrong with my code, if anything?",
-        getAiTutor2AdditionalPrompt()
+        aiTutor2AdditionalPrompt || ''
       );
     }
   };
@@ -259,7 +269,7 @@ const PythonlabView: React.FunctionComponent<
           sendConsoleInput={sendInput}
           levelProperties={levelProperties}
           projectPickerSettings={projectPickerSettings}
-          getAiTutor2AdditionalPrompt={getAiTutor2AdditionalPrompt}
+          aiTutor2AdditionalPrompt={aiTutor2AdditionalPrompt}
           AiTutor2ResponseView={AiTutor2Response}
         />
       )}

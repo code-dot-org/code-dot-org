@@ -45,8 +45,8 @@ export interface AichatState {
     | 'fileLimitExceeded'
     | 'sizeLimitExceeded'
     | undefined;
-  // An optional function set by a lab which can be called to get extra content that is appended to the user message.
-  getUserMessageExtra?: () => string;
+  // Additional text provided by the lab that is appended to the user message.
+  userMessageExtra?: string;
   // Optional information about buttons containing pre-canned questions.
   chatButtons: ChatButton[];
 }

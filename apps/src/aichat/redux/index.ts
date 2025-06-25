@@ -22,6 +22,6 @@ export {
   clearStagedFilesAlert,
   clearStagedFiles,
   setSavedAiCustomizationProperty,
-  setGetUserMessageExtra,
+  setUserMessageExtra,
   setChatButtons,
 } from './slice';

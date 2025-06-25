@@ -48,7 +48,7 @@ const initialState: AichatState = {
   userHasAichatAccess: false,
   stagedFiles: [],
   stagedFilesAlert: undefined,
-  getUserMessageExtra: undefined,
+  userMessageExtra: undefined,
   chatButtons: [],
 };
 
@@ -314,8 +314,8 @@ const aichatSlice = createSlice({
       state.stagedFiles = [];
       state.stagedFilesAlert = undefined;
     },
-    setGetUserMessageExtra: (state, action: PayloadAction<() => string>) => {
-      state.getUserMessageExtra = action.payload;
+    setUserMessageExtra: (state, action: PayloadAction<string>) => {
+      state.userMessageExtra = action.payload;
     },
     setChatButtons: (state, action: PayloadAction<ChatButton[]>) => {
       state.chatButtons = action.payload;
@@ -376,6 +376,6 @@ export const {
   clearStagedFiles,
   stagedFilesLimitExceeded,
   clearStagedFilesAlert,
-  setGetUserMessageExtra,
+  setUserMessageExtra,
   setChatButtons,
 } = aichatSlice.actions;

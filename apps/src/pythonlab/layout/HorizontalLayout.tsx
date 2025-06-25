@@ -31,7 +31,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
     state => state.codebridgeWorkspace.widgetViewShowCode
   );
   const {
-    getAiTutor2AdditionalPrompt,
+    aiTutor2AdditionalPrompt,
     levelProperties: {aiTutor2Available},
   } = useCodebridgeContext();
 
@@ -118,7 +118,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
             setOutputHeight={setRightBottomPanelSize}
           />
         </div>
-        {showAiTutor2 && getAiTutor2AdditionalPrompt && (
+        {showAiTutor2 && aiTutor2AdditionalPrompt && (
           <div style={{width: rightmostPanelWidth}}>
             <PanelContainer
               id="aitutor2"
@@ -126,9 +126,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
               className={moduleStyles.rightmostColumn}
             >
               <div className={moduleStyles.inside}>
-                <AiTutor2Chat
-                  getAdditionalPrompt={getAiTutor2AdditionalPrompt}
-                />
+                <AiTutor2Chat additionalPrompt={aiTutor2AdditionalPrompt} />
               </div>
             </PanelContainer>
           </div>

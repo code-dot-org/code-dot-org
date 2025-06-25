@@ -58,7 +58,7 @@ export type CodebridgeContextType = {
   sendConsoleInput?: SendConsoleInputFunction;
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
-  getAiTutor2AdditionalPrompt?: () => string;
+  aiTutor2AdditionalPrompt?: string;
   AiTutor2ResponseView?: React.ReactNode;
 };
 
