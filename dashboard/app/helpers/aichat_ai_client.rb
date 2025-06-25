@@ -3,7 +3,7 @@
 # methods. Currently the two implemented APIs (OpenAI and Gemini) are POST based REST APIs
 class AichatAiClient
   # get an instance of the appropriate derived class based on model id
-  def self.get_instance(model_id)
+  def self.create_instance(model_id)
     # TODO - we should create a map/hash from model_id to model/key (not sure why model id isn't just model but whatever)
     # but for now we just assume it's one of the gemini models if not 'gpt-4o-mini'
     if model_id == "gpt-4o-mini"
@@ -78,7 +78,7 @@ class AichatAiClient
   ONE_DAY_S = 60 * 60 * 24
   DEFAULT_TEMPERATURE = 0
 
-  # private initializer - all instances should be created with `get_instance` factory
+  # private initializer - all instances should be created with `create_instance` factory
   private def initialize(api_key, model)
     @api_key = api_key
     @model = model

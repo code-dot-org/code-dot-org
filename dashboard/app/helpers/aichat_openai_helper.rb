@@ -21,7 +21,7 @@ module AichatOpenaiHelper
     # system prompt - array of strings or nil
     retrieval_contexts = aichat_model_customizations['retrievalContexts']
 
-    client = AichatAiClient.get_instance(model_id)
+    client = AichatAiClient.create_instance(model_id)
 
     # Note for PR (TODO - discuss and remove this note before PR merged):
     # --------------------------------------------------------------------
