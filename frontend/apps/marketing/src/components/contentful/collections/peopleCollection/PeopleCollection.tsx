@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import {EntryFields} from 'contentful';
-import {useMemo} from 'react';
+import {useMemo, useId} from 'react';
 
 import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
@@ -13,8 +13,8 @@ import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
 type ItemFields = {
   name: EntryFields.Text;
-  image?: ExperienceAsset;
-  title?: EntryFields.Text;
+  image: ExperienceAsset;
+  title: EntryFields.Text;
   bio?: EntryFields.Text;
   personalLink?: LinkEntry;
 };
@@ -85,7 +85,7 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({people}) => {
           return {
             id: name,
             item: (
-              <>
+              <Box sx={styles.gridItem}>
                 {image && (
                   <Box component="figure" sx={styles.image}>
                     <img
@@ -93,14 +93,16 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({people}) => {
                         image,
                         'fit=fill&w=128&h=128&r=max',
                       )}
-                      alt={image?.fields?.title || name || 'Person'}
+                      alt=""
                       loading="lazy"
                     />
                   </Box>
                 )}
-                <Typography variant="h6" component="h3">
-                  {name}
-                </Typography>
+                {name && (
+                  <Typography variant="h6" component="h3">
+                    {name}
+                  </Typography>
+                )}
                 {title && (
                   <Typography
                     variant="overline"
@@ -127,7 +129,7 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({people}) => {
                     <OpenInNew fontSize="small" color="primary" />
                   </Link>
                 )}
-              </>
+              </Box>
             ),
           };
         })
@@ -138,8 +140,11 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({people}) => {
   return (
     <Grid container spacing={7.5} sx={styles.container}>
       {peopleData.map(person => (
-        <Grid key={person.id} size={{xs: 12, sm: 4, md: 4}}>
-          <Box sx={styles.gridItem}>{person.item}</Box>
+        <Grid
+          key={`id-${useId().replaceAll(':', '')}`}
+          size={{xs: 12, sm: 4, md: 4}}
+        >
+          {person.item}
         </Grid>
       ))}
     </Grid>
