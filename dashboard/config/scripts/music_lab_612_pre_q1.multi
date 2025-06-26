@@ -1,11 +1,12 @@
 name 'music-lab-612-pre-q1'
 
-question '**Which timeline matches Alina\'s code?**'
-height '100'
-wrong 'https://images.code.org/14888b6ddf46c78a5d9ab858de7aa90a-image-1750180290651.png'
-wrong 'https://images.code.org/810ebcea6cd9b0936c654f4f2033c89c-image-1750180294589.png'
-wrong 'https://images.code.org/c4a7e8ae7030c2631033af3a9a710b74-image-1750180298380.png'
-right 'https://images.code.org/35f5af4a2baf04c7a07cc3c2997c7cc8-image-1750180209486.png'
+question '**Which code should Alina use so that the drums match the length of the rest of the song?**'
+height '250'
+wrong '![](https://images.code.org/f46babb7d3a4434446621c16db637c4f-image-1750874299884.png)'
+wrong '![](https://images.code.org/b74a51658f04fedc5927cd81f4953950-image-1750874297649.png)'
+right '![](https://images.code.org/46d858269b2f5c26e7905b089b6dc22c-image-1750874291996.png)'
+wrong '![](https://images.code.org/54f72d31b68bda785919b649890b617b-image-1750874294920.png)'
+
 
 allow_multiple_attempts true
 
@@ -25,7 +26,11 @@ Posttest Modality: Given algorithm / intent / incorrect code, match with code
 MARKDOWN
 
 markdown <<MARKDOWN
-Alina is exploring drum and bass sounds that play together following the guitar intro. This is the code she has so far.
+Alina is exploring drum and bass sounds that play together with the Prechorus vocals.
+The vocals and the bass are each 4 measures long, but the drum sounds are only 2 measures.
+This is the code she has so far:
 
-![](https://images.code.org/e3f1025b55996bbc8e0520b97d52ccce-image-1750180334262.png)
+Alina wants to make the drum part last 4 measures by playing Kick Snare Loop (small) first and then Kick Snare Loop (big) right after.
+
+![](https://images.code.org/8575dad2945aa69c9dd78ae650ad6fa8-image-1750874142081.png)
 MARKDOWN

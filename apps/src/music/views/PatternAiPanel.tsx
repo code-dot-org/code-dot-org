@@ -557,7 +557,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
   ].includes(userCompletedTask);
 
   return (
-    <FocusLock>
+    <FocusLock className={styles.focusContainer}>
       <div className={styles.patternPanel} dir="ltr">
         <LoadingOverlay show={isLoading} />
 

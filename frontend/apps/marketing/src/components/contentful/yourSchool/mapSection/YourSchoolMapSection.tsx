@@ -15,15 +15,16 @@ import Section from '@/components/contentful/section';
 import Spacer from '@/components/contentful/spacer';
 import cstaLogo from '@public/images/csta-logo.avif';
 
-import type {School} from '../types';
+import {YOUR_SCHOOL_FORM_ID} from '../constants';
+import type {YourSchoolProps, School} from '../types';
 
 import YourSchoolMap from './YourSchoolMap';
 
 import styles from '../yourSchool.module.scss';
 
-interface YourSchoolMapSectionProps {
+interface YourSchoolMapSectionProps
+  extends Pick<YourSchoolProps, 'dataSourceURL'> {
   school?: School | null;
-  dataSourceURL: string;
   onTakeSurveyClick: (school: School) => void;
 }
 
@@ -48,9 +49,9 @@ const YourSchoolMapSection: React.FC<YourSchoolMapSectionProps> = ({
         Find your school on the interactive map below to see if computer science
         was offered during the {new Date().getFullYear() - 2}-
         {new Date().getFullYear() - 1} school year. Then{' '}
-        <Link href="#form">take the survey</Link> to make sure your school is
-        accurately represented for {new Date().getFullYear() - 1}-
-        {new Date().getFullYear()}.
+        <Link href={`#${YOUR_SCHOOL_FORM_ID}`}>take the survey</Link> to make
+        sure your school is accurately represented for{' '}
+        {new Date().getFullYear() - 1}-{new Date().getFullYear()}.
       </BodyTwoText>
 
       <Spacer size="m" />
