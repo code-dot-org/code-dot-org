@@ -19,7 +19,7 @@ const systemPrompts = {
 
 export type AiTutor2MessageType = 'hint' | 'user';
 
-// This type is the union of all the valid AI Model IDs
+// This type is the union of all the valid AI Model IDs.
 export type AiChatModelIdType = ValueOf<typeof AiChatModelIds>;
 
 export default class AiTutor2Manager {

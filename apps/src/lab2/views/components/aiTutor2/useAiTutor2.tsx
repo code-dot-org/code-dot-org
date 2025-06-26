@@ -28,7 +28,7 @@ export function useAiTutor2(
   const modelQueryParam = queryParams('aitutor2-model');
 
   // Only use modelQueryParam as modelId if it is a valid id, otherwise set to undefined
-  //  which lets AiTutor2Manager use its default
+  // which lets AiTutor2Manager use its default.
   const modelId = Object.values(AiChatModelIds).includes(
     modelQueryParam as AiChatModelIdType
   )
