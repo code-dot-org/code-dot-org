@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-25 09:53:48 UTC",
+    "serialized_at": "2025-06-11 18:59:13 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -395,9 +395,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L2 Using Simple Commands"
-        ],
         "progression": "Levels are Cool"
       },
       "bonus": false,
@@ -420,9 +417,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ui_lesson_bubble_choice"
-        ],
         "progression": "Bubble Choice"
       },
       "bonus": false,
@@ -445,9 +439,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ui_lesson_standalone_video"
-        ],
         "progression": "Standalone Video"
       },
       "bonus": false,
@@ -470,9 +461,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "uitest_lesson_applab"
-        ],
         "progression": "Level with Instructions"
       },
       "bonus": false,
@@ -541,10 +529,46 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Student Resource",
+      "url": "fake/url/",
+      "key": "student_resource",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "student_resource"
+      }
+    },
+    {
+      "name": "Teacher Resource",
+      "url": "fake/url/",
+      "key": "teacher_resource",
+      "properties": {
+        "assessment": true,
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_resource"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "First Lesson",
+        "resource.key": "student_resource"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "First Lesson",
+        "resource.key": "teacher_resource"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -553,10 +577,24 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "word",
+      "word": "Word",
+      "definition": "This is a definition of the word word",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "word"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "First Lesson",
+        "vocabulary.key": "word"
+      }
+    }
   ],
   "lessons_programming_expressions": [
     {
