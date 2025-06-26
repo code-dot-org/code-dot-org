@@ -9,11 +9,12 @@
       "topic_tags": [
         "music_lab"
       ],
+      "tts": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-23 22:56:10 UTC",
+    "serialized_at": "2025-06-25 16:49:02 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,

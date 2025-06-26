@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T03:00:05.000Z",
   "level_num": "custom",
@@ -54,7 +55,7 @@
       "showSoundFilters": true,
       "packId": "default"
     },
-    "long_instructions": "### Call & Response\r\n\r\nIn live music, performers often respond to each other in the moment - just like a jazz musician improvising a solo or a DJ remixing a track on the fly. In this challenge, you'll practice improvisation and timing by interacting with your music in real-time.\r\n\r\n**Do This**:\r\n- Create a backtrack with a beat and bass track\r\n- Create a trigger that contains a loop that plays between 2-5 times\r\n- Perform live! Play your trigger, then when it ends, modify the loop - change the sounds, adjust the loop, or add effects!\r\n\r\n(Optional) Have a partner add their own trigger to this level. While your trigger plays, they need to adjust their code to \"react\" to what your loop does. Then when they play, you need to change your code to \"react\" to what they've created.",
+    "long_instructions": "### Call & Response\r\n\r\n**Define:** Live performers often react to each other in real time, like jazz musicians improvising or DJs remixing on the spot. In this challenge, you'll practice improvisation by performing live and responding to the music as it plays.\r\n\r\n**Prepare:** Plan your backtrack with a beat and bass track. You'll also need a trigger with a loop that plays between 2-5 times. After you press the trigger, you'll need to change the music in the trigger so that it sounds different everytime you play it!\r\n\r\n![](https://images.code.org/9f3397b903800c84dd9f9b88c4ad5a0d-image-1750876022983.png)\r\n\r\n**Try:** Play your song, then press your trigger. After the loop ends, modify it! This could include swapping sounds, adjusting the loop length, or adding effects. Modify your code in real-time as the backtrack plays!\r\n\r\n**Reflect:** Think about your performance. Did the loop change each time? Were the changes interesting and unexpected? In order to complete this level, your remix must include:\r\n\r\n- A backtrack with a beat and bass track\r\n- A trigger that contains a loop that plays between 2–5 times\r\n- A live performance that includes changes to the code after the trigger plays\r\n\r\n(Optional): Have a partner add their own trigger to the code! React to each other's music by modifying your code in response.",
     "exemplar_settings": {
       "playerEnabled": false,
       "validationEnabled": false
@@ -219,8 +220,7 @@
     "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/electro/electro.png",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:05.594+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-synthesis-challenge-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-loops-synthesis-challenge-choice-a\"},{\"changed_at\":\"2025-06-12 20:41:15 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:05.594+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-synthesis-challenge-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-loops-synthesis-challenge-choice-a\"},{\"changed_at\":\"2025-06-12 20:41:15 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-25 18:20:17 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-25 18:27:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
