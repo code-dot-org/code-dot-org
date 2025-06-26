@@ -1,6 +1,6 @@
 name 'music-lab-612-post-q5'
 
-question 'put actual question here'
+question 'Which code matches the Juan\'s final code with functions?'
 width '300'
 height '300'
 wrong '![](https://images.code.org/6f714dacf8a7529b66be15e173226c92-image-1750778730325.png)'
@@ -26,7 +26,7 @@ Posttest Modality: Given starting code / shadow blocks, refactor
 MARKDOWN
 
 markdown <<MARKDOWN
-Put the images / context markdown here
+This is the code Juan submitted with functions. 
 
 ![](https://images.code.org/91091f305393f57e3753aed4b636e3f9-image-1750778745794.png)
 MARKDOWN

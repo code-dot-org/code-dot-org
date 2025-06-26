@@ -562,7 +562,7 @@ class Pd::Workshop < ApplicationRecord
       end
 
       # send pre-workshop email for CSA, CSD, CSP facilitators 10 days before the workshop only
-      next unless days == 10 && (workshop.course == COURSE_CSD || workshop.course == COURSE_CSP || workshop.course == COURSE_CSA)
+      next unless days == 10 && (workshop.course == COURSE_CSD || workshop.course == COURSE_CSP || workshop.course == COURSE_CSA || workshop.course == COURSE_CSF)
       workshop.facilitators.each do |facilitator|
         next unless facilitator.email
         begin
@@ -585,6 +585,32 @@ class Pd::Workshop < ApplicationRecord
       errors << "organizer should close workshop #{workshop.id} - #{exception.message}"
     end
     raise "Failed to send reminders: #{errors.join(', ')}" unless errors.empty?
+  end
+
+  # Send follow up email to teachers that attended CSF Intro workshops which ended exactly X days ago
+  def self.send_follow_up_after_days(days)
+    # Collect errors, but do not stop batch. Rethrow all errors below.
+    errors = []
+
+    scheduled_end_in_days(-days).each do |workshop|
+      next unless workshop.course == COURSE_CSF && workshop.subject == SUBJECT_CSF_101
+      attended_teachers = workshop.attending_teachers
+
+      workshop.enrollments.each do |enrollment|
+        next unless attended_teachers.include?(enrollment.user)
+
+        email = Pd::WorkshopMailer.teacher_follow_up(enrollment)
+        email.deliver_now
+      rescue => exception
+        errors << "teacher enrollment #{enrollment.id} - #{exception.message}"
+        Honeybadger.notify(exception,
+          error_message: 'Failed to send follow up email to teacher',
+          context: {pd_enrollment_id: enrollment.id}
+        )
+      end
+    end
+
+    raise "Failed to send follow up: #{errors.join(', ')}" unless errors.empty?
   end
 
   def self.send_teacher_pre_work_csa
@@ -612,6 +638,7 @@ class Pd::Workshop < ApplicationRecord
     send_reminder_for_upcoming_in_days(3)
     send_reminder_for_upcoming_in_days(10)
     send_reminder_to_close
+    send_follow_up_after_days(30)
     send_teacher_pre_work_csa
   end
 
@@ -763,10 +790,6 @@ class Pd::Workshop < ApplicationRecord
 
   def csf?
     course == COURSE_CSF
-  end
-
-  def byo?
-    course == COURSE_BUILD_YOUR_OWN
   end
 
   def csf_intro?
