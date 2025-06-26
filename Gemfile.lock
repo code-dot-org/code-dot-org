@@ -197,10 +197,10 @@ GEM
     auto_strip_attributes (2.1.0)
       activerecord (>= 3.0)
     aws-eventstream (1.3.0)
-    aws-google (0.2.3)
-      aws-sdk-core (~> 3.211.0)
-      google-apis-core (~> 0.11.3)
-      launchy (~> 3.0.1)
+    aws-google (0.2.0)
+      aws-sdk-core (~> 3.130)
+      google-apis-core
+      launchy (~> 2)
     aws-partitions (1.1021.0)
     aws-sdk-acm (1.81.0)
       aws-sdk-core (~> 3, >= 3.210.0)
@@ -214,8 +214,8 @@ GEM
     aws-sdk-bedrockagentruntime (1.10.0)
       aws-sdk-core (~> 3, >= 3.193.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-bedrockruntime (1.34.0)
-      aws-sdk-core (~> 3, >= 3.210.0)
+    aws-sdk-bedrockruntime (1.49.0)
+      aws-sdk-core (~> 3, >= 3.225.0)
       aws-sigv4 (~> 1.5)
     aws-sdk-cloudformation (1.124.0)
       aws-sdk-core (~> 3, >= 3.210.0)
@@ -232,11 +232,13 @@ GEM
     aws-sdk-comprehend (1.87.0)
       aws-sdk-core (~> 3, >= 3.201.0)
       aws-sigv4 (~> 1.5)
-    aws-sdk-core (3.211.0)
+    aws-sdk-core (3.226.1)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.992.0)
       aws-sigv4 (~> 1.9)
+      base64
       jmespath (~> 1, >= 1.6.1)
+      logger
     aws-sdk-databasemigrationservice (1.56.0)
       aws-sdk-core (~> 3, >= 3.119.0)
       aws-sigv4 (~> 1.1)
@@ -295,8 +297,6 @@ GEM
     case_transform (0.2)
       activesupport
     cgi (0.3.6)
-    childprocess (5.1.0)
-      logger (~> 1.5)
     chronic (0.10.2)
     cld (0.13.0)
       ffi
@@ -541,9 +541,8 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     language_server-protocol (3.17.0.3)
-    launchy (3.0.1)
+    launchy (2.5.2)
       addressable (~> 2.8)
-      childprocess (~> 5.0)
     libv8-node (18.16.0.0)
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -981,12 +980,12 @@ DEPENDENCIES
   annotate (~> 3.1.1)
   async (~> 1.32)
   auto_strip_attributes (~> 2.1)
-  aws-google (~> 0.2.3)
+  aws-google
   aws-sdk-acm
   aws-sdk-applicationautoscaling
   aws-sdk-autoscaling
   aws-sdk-bedrockagentruntime (~> 1.10.0)
-  aws-sdk-bedrockruntime
+  aws-sdk-bedrockruntime (~> 1.49.0)
   aws-sdk-cloudformation
   aws-sdk-cloudfront
   aws-sdk-cloudwatch

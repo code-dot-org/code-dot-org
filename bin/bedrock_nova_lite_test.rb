@@ -45,9 +45,29 @@ def main
     },
   ]
 
+  pdf_messages_s3 = [
+    {
+      "role": "user",
+      "content": [
+        {"text": "What's in this PDF?"},
+        {
+          "document": {
+            "format": "pdf",
+            "name": "test",
+            "source": {
+              s3_location: {
+                uri: [put your s3://... here]
+              }
+            }
+          }
+        }
+      ]
+    },
+  ]
+
   response = client.converse(
     {
-      messages: pdf_messages,
+      messages: pdf_messages_s3,
       model_id: 'amazon.nova-lite-v1:0'
     }
   )

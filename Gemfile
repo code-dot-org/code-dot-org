@@ -72,7 +72,7 @@ gem 'rack-mini-profiler'
 
 group :development do
   gem 'annotate', '~> 3.1.1'
-  gem 'aws-google', '~> 0.2.3'
+  gem 'aws-google'
   gem 'web-console', '~> 4.2.0'
   # Bootsnap pre-caches Ruby require paths + bytecode and speeds up boot time significantly.
   # We only use it in development atm to get a feel for it, and the benefit is greatest here.
@@ -258,7 +258,7 @@ gem 'aws-sdk-route53'
 gem 'aws-sdk-s3'
 gem 'aws-sdk-sagemakerruntime'
 gem 'aws-sdk-secretsmanager'
-gem 'aws-sdk-bedrockruntime'
+gem 'aws-sdk-bedrockruntime', '~> 1.49.0'
 
 # Lint tools
 group :development, :staging, :levelbuilder, :test do
