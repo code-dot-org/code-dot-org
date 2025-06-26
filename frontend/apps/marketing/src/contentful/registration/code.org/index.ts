@@ -22,6 +22,9 @@ import VideoCarousel, {
 import LogoCollection, {
   LogoCollectionContentfulComponentDefinition,
 } from '@/components/contentful/collections/logoCollection';
+import PeopleCollection, {
+  PeopleCollectionContentfulComponentDefinition,
+} from '@/components/contentful/collections/peopleCollection';
 import Divider, {
   DividerContentfulComponentDefinition,
 } from '@/components/contentful/divider';
@@ -177,6 +180,10 @@ const contentfulRegistration = {
     {
       component: LogoCollection,
       definition: LogoCollectionContentfulComponentDefinition,
+    },
+    {
+      component: PeopleCollection,
+      definition: PeopleCollectionContentfulComponentDefinition,
     },
     {component: Overline, definition: OverlineContentfulComponentDefinition},
     {

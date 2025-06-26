@@ -1,0 +1,149 @@
+import OpenInNew from '@mui/icons-material/OpenInNew';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Link from '@mui/material/Link';
+import Typography from '@mui/material/Typography';
+import {EntryFields} from 'contentful';
+import {useMemo} from 'react';
+
+import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
+import {LinkEntry} from '@/types/contentful/entries/Link';
+import {Entry} from '@/types/contentful/Entry';
+import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
+
+type ItemFields = {
+  name: EntryFields.Text;
+  image?: ExperienceAsset;
+  title?: EntryFields.Text;
+  bio?: EntryFields.Text;
+  personalLink?: LinkEntry;
+};
+
+type ItemEntry = Entry<ItemFields>;
+
+export type PeopleCollectionProps = {
+  /** Collection content w/ fields from Contentful */
+  people: ItemEntry[];
+};
+
+const styles = {
+  container: {
+    alignItems: 'flex-start',
+  },
+  gridItem: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    textAlign: 'center',
+  },
+  image: {
+    marginBlock: 0,
+    marginBottom: 2,
+    width: 128,
+    height: 128,
+    backgroundColor: 'var(--background-neutral-secondary)',
+    borderRadius: '50%',
+  },
+  overline: {
+    color: '#4C5661',
+    marginTop: 1,
+    marginBottom: 1.5,
+  },
+  bio: {
+    textAlign: 'center',
+  },
+  personalLink: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: 0.5,
+    marginTop: 1,
+    'html[dir="rtl"] & svg': {
+      transform: 'scaleX(-1)',
+    },
+  },
+};
+
+const PeopleCollection: React.FC<PeopleCollectionProps> = ({people}) => {
+  if (!people) {
+    return (
+      <Typography variant="body2" sx={{color: 'var(--text-neutral-primary)'}}>
+        <em>
+          <strong>📋 People Collection placeholder.</strong> Please add a "List"
+          content type entry in the Content sidebar.
+        </em>
+      </Typography>
+    );
+  }
+
+  const peopleData = useMemo(
+    () =>
+      people
+        .filter(Boolean)
+        .map(({fields}) => {
+          const {name, image, title, bio, personalLink} = fields;
+
+          return {
+            id: name,
+            item: (
+              <>
+                {image && (
+                  <Box component="figure" sx={styles.image}>
+                    <img
+                      src={getAbsoluteImageUrl(
+                        image,
+                        'fit=fill&w=128&h=128&r=max',
+                      )}
+                      alt={image?.fields?.title || name || 'Person'}
+                      loading="lazy"
+                    />
+                  </Box>
+                )}
+                <Typography variant="h6" component="h3">
+                  {name}
+                </Typography>
+                {title && (
+                  <Typography
+                    variant="overline"
+                    component="h4"
+                    sx={styles.overline}
+                  >
+                    {title}
+                  </Typography>
+                )}
+                {bio && (
+                  <Typography variant="body2" component="p" sx={styles.bio}>
+                    {bio}
+                  </Typography>
+                )}
+                {personalLink && (
+                  <Link
+                    variant="body2"
+                    href={personalLink?.fields?.primaryTarget}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={styles.personalLink}
+                  >
+                    Visit personal page
+                    <OpenInNew fontSize="small" color="primary" />
+                  </Link>
+                )}
+              </>
+            ),
+          };
+        })
+        .sort((a, b) => a.id.localeCompare(b.id)), // Sort alphabetically
+    [people],
+  );
+
+  return (
+    <Grid container spacing={7.5} sx={styles.container}>
+      {peopleData.map(person => (
+        <Grid key={person.id} size={{xs: 12, sm: 4, md: 4}}>
+          <Box sx={styles.gridItem}>{person.item}</Box>
+        </Grid>
+      ))}
+    </Grid>
+  );
+};
+
+export default PeopleCollection;
