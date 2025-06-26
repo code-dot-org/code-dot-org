@@ -15,14 +15,13 @@ import {
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
+import * as useSchoolInfoModule from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
 import * as schoolInfoFunc from '@cdo/apps/schoolInfo/utils/updateSchoolInfo';
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
 import {SchoolInfo} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepageConstants';
-import TeacherHomepageDrawer, {
-  DrawerData,
-} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepageDrawer';
+import TeacherHomepageDrawer from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepageDrawer';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
@@ -33,6 +32,21 @@ describe('TeacherHomepageDrawer', () => {
     school_zip: '12345',
     school_id: '67890',
     school_type: 'public',
+  };
+
+  const mockSchoolInfo = {
+    schoolId: '67890',
+    country: 'US',
+    schoolName: 'Test School',
+    schoolZip: '12345',
+    schoolsList: [],
+    schoolsLoading: false,
+    usIp: true,
+    setSchoolId: jest.fn(),
+    setCountry: jest.fn(),
+    setSchoolName: jest.fn(),
+    setSchoolZip: jest.fn(),
+    reset: jest.fn(),
   };
 
   const schoolName = schoolInfo.school_name;
@@ -48,6 +62,9 @@ describe('TeacherHomepageDrawer', () => {
       .spyOn(schoolInfoFunc, 'updateSchoolInfo')
       .mockImplementation(jest.fn());
     fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
+    jest
+      .spyOn(useSchoolInfoModule, 'useSchoolInfo')
+      .mockReturnValue(mockSchoolInfo);
   });
 
   afterEach(() => {
@@ -58,7 +75,7 @@ describe('TeacherHomepageDrawer', () => {
   function renderComponent() {
     const store = getStore();
     registerReducers({currentUser});
-    store.dispatch(setInitialData({id: 1, inUSA: true}));
+    store.dispatch(setInitialData({id: 1, country_code: 'US'}));
     return render(
       <Provider store={store}>
         <TeacherHomepageDrawer />
@@ -67,13 +84,13 @@ describe('TeacherHomepageDrawer', () => {
   }
 
   function fetchSpySetup(showInterstitial: boolean, showConfirmation: boolean) {
-    fetchSpy.mockImplementation(() => {
+    fetchSpy.mockImplementation((url: string) => {
       return Promise.resolve({
         value: {
           showSchoolInfoInterstitial: showInterstitial,
           showSchoolInfoConfirmation: showConfirmation,
           existingSchoolInfo: schoolInfo,
-        } as DrawerData,
+        },
         response: new Response(),
       });
     });

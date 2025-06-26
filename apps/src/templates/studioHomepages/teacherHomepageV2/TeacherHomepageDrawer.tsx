@@ -25,7 +25,7 @@ import styles from './teacherHomepage.module.scss';
 
 const NON_SCHOOL_OPTIONS = ['selectASchool', 'clickToAdd', 'noSchoolSetting'];
 
-export interface DrawerData {
+interface DrawerData {
   showSchoolInfoInterstitial: boolean;
   showSchoolInfoConfirmation: boolean;
   existingSchoolInfo: SchoolInfo;
@@ -39,9 +39,14 @@ export const TeacherHomepageDrawer: React.FC = () => {
   const [success, setSuccess] = React.useState(false);
   const [showSchoolInfoUnknownError, setShowSchoolInfoUnknownError] =
     React.useState(false);
-  const [existingSchoolInfo, setExistingSchoolInfo] = React.useState<
-    SchoolInfo | undefined
-  >(undefined);
+  const [existingSchoolInfo, setExistingSchoolInfo] =
+    React.useState<SchoolInfo>({
+      country: '',
+      school_name: '',
+      school_zip: '',
+      school_id: '',
+      school_type: '',
+    });
 
   // Load school data and set the drawer state based on the response.
   React.useEffect(() => {
@@ -73,15 +78,15 @@ export const TeacherHomepageDrawer: React.FC = () => {
   const inUSA = useAppSelector(state => state.currentUser.inUSA);
   const schoolInfo = useSchoolInfo({
     usIp: inUSA,
-    country: existingSchoolInfo?.country,
-    schoolName: existingSchoolInfo?.school_name,
-    schoolId: existingSchoolInfo?.school_id,
-    schoolZip: existingSchoolInfo?.school_zip,
-    schoolType: existingSchoolInfo?.school_type,
+    country: existingSchoolInfo.country,
+    schoolName: existingSchoolInfo.school_name,
+    schoolId: existingSchoolInfo.school_id,
+    schoolZip: existingSchoolInfo.school_zip,
+    schoolType: existingSchoolInfo.school_type,
   });
   const schoolName =
     schoolInfo.schoolName || i18n.schoolInfoDialogDescriptionNoName();
-  console.log(schoolName);
+  console.log(schoolInfo);
   const tryUpdateSchoolInfo = async () => {
     const hasNcesId =
       schoolInfo.schoolId && !NON_SCHOOL_OPTIONS.includes(schoolInfo.schoolId);
