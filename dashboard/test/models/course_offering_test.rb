@@ -523,6 +523,37 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert_includes(filtered_course_offerings, all_co)
   end
 
+  test 'self_paced_course_offerings_for_catalog filters only for assignable published self-paced teacher course offerings' do
+    # Course offering that doesn't satisfy any of the conditions
+    none_unit = create(:script, name: 'unit1', family_name: 'none', version_year: '1991', is_course: true, published_state: 'in_development', instructor_audience: 'universal_instructor', participant_audience: 'student')
+    none_co = CourseOffering.add_course_offering(none_unit)
+    none_co.update!(assignable: false)
+
+    # Course offering that only satisfies the 'assignable' condition
+    assignable_unit = create(:script, name: 'unit2', family_name: 'assignable', version_year: '1992', is_course: true, published_state: 'in_development', instructor_audience: 'universal_instructor', participant_audience: 'student')
+    CourseOffering.add_course_offering(assignable_unit)
+
+    # Course offering that only satisfies the 'published' condition
+    published_unit = create(:script, name: 'unit3', family_name: 'published', version_year: '1993', is_course: true, published_state: 'stable', instructor_audience: 'universal_instructor', participant_audience: 'student')
+    published_co = CourseOffering.add_course_offering(published_unit)
+    published_co.update!(assignable: false)
+
+    # Course offering that only satisfies the 'for teacher' condition
+    for_teacher_unit = create(:script, name: 'unit4', family_name: 'for-teacher', version_year: '1994', is_course: true, published_state: 'in_development', instructor_audience: 'universal_instructor', participant_audience: 'teacher')
+    for_teacher_co = CourseOffering.add_course_offering(for_teacher_unit)
+    for_teacher_co.update!(assignable: false)
+
+    # Course offering that is a NON-self-paced assignable published teacher course offerings
+    non_self_paced_unit = create(:script, name: 'unit5', family_name: 'non-self-paced', version_year: '1998', is_course: true, published_state: 'stable', instructor_audience: 'universal_instructor', participant_audience: 'teacher')
+    CourseOffering.add_course_offering(non_self_paced_unit)
+
+    # Course offering that satisfies all conditions
+    self_paced_unit = create(:script, name: 'unit6', family_name: 'all', version_year: '1998', is_course: true, published_state: 'stable', instructor_audience: 'universal_instructor', instruction_type: 'self_paced', participant_audience: 'teacher')
+    self_paced_co = CourseOffering.add_course_offering(self_paced_unit)
+
+    assert_equal [self_paced_co.key], CourseOffering.self_paced_course_offerings_for_catalog.pluck(:key)
+  end
+
   test 'can_be_assigned? is false if its an unassignable course' do
     unassignable_course_offering = create :course_offering
     refute unassignable_course_offering.can_be_assigned?(@student)
