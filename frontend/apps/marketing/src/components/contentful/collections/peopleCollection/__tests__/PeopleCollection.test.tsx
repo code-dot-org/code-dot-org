@@ -17,7 +17,6 @@ const mockPeople: PeopleCollectionProps['people'] = [
       image: {
         fields: {
           file: {url: '/alex.jpg'},
-          title: 'Alex Image',
         },
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } as any,
@@ -48,7 +47,7 @@ describe('PeopleCollection', () => {
     expect(screen.getByText('Alex')).toBeInTheDocument();
     expect(screen.getByText('Engineer')).toBeInTheDocument();
     expect(screen.getByText('Alex is an engineer.')).toBeInTheDocument();
-    expect(screen.getByRole('img', {name: /Alex Image/i})).toBeInTheDocument();
+    expect(screen.getByAltText('')).toHaveAttribute('src', '/alex.jpg');
     expect(
       screen.getByRole('link', {name: /Visit personal page/i}),
     ).toHaveAttribute('href', 'https://alex.com');
@@ -61,8 +60,7 @@ describe('PeopleCollection', () => {
     expect(screen.getByText('Bob is a designer.')).toBeInTheDocument();
     // Bob has no image or personal link
     expect(screen.queryByRole('img', {name: /Bob/i})).not.toBeInTheDocument();
-    // Only Alex's link
-    // Only Alex should have a personal link with the correct URL
+    // Only Alex should have a personal link
     const links = screen.getAllByRole('link', {name: /Visit personal page/i});
     expect(links).toHaveLength(1);
     expect(links[0]).toHaveAttribute('href', 'https://alex.com');
