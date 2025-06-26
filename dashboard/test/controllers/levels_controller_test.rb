@@ -130,7 +130,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should get filtered levels with script_id" do
-    script = create(:script, :with_levels, levels_count: 7)
+    script = create(:script, :in_single_unit_course, :with_levels, levels_count: 7)
     get :get_filtered_levels, params: {page: 1, script_id: script.id}
     assert_equal 7, JSON.parse(@response.body)['levels'].length
     assert_equal 1, JSON.parse(@response.body)['numPages']
@@ -1311,6 +1311,27 @@ class LevelsControllerTest < ActionController::TestCase
     user: :platformization_partner,
     params: -> {{id: @partner_level.id, level: {name: 'new partner name'}}}
   )
+
+  test "add_skill adds a skill" do
+    level = create :level
+    assert level.skills.empty?
+    skill = create :skill
+    post :add_skill, params: {id: level.id, levelId: level.id, skillId: skill.id}
+    assert_response :success
+    level.reload
+    assert_equal [skill], level.skills
+  end
+
+  test "remove_skill removes a skill" do
+    level = create :level
+    skill = create :skill
+    create :levels_skill, level: level, skill: skill
+    assert_equal [skill], level.skills
+    post :remove_skill, params: {id: level.id, levelId: level.id, skillId: skill.id}
+    assert_response :success
+    level.reload
+    assert level.skills.empty?
+  end
 
   # Assert that the url is a real S3 url, and not a placeholder.
   private def assert_s3_image_url(url)

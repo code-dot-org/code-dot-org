@@ -211,13 +211,26 @@ class CourseOffering < ApplicationRecord
   end
 
   def self.professional_learning_and_self_paced_course_offerings
-    all_course_offerings.select {|co| co.get_participant_audience == 'teacher' && co.instruction_type == 'self_paced'}.map do |co|
+    all_course_offerings.select {|co| co.get_participant_audience == 'teacher' && co.instruction_type == 'self_paced'}
+  end
+
+  def self.professional_learning_and_self_paced_course_offerings_basic_info
+    professional_learning_and_self_paced_course_offerings.map do |co|
       {
         id: co.id,
         key: co.key,
         display_name: co.display_name,
       }
     end
+  end
+
+  def self.self_paced_course_offerings_for_catalog
+    all_course_offerings.select do |co|
+      co.get_participant_audience == 'teacher' &&
+        co.instruction_type == 'self_paced' &&
+        co.assignable? &&
+        co.any_version_is_in_published_state?
+    end.map(&:summarize_for_catalog)
   end
 
   def summarize_for_unit_selector(unit_ids)

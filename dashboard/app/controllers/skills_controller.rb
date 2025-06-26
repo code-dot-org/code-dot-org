@@ -14,12 +14,15 @@ class SkillsController < ApplicationController
       end
     end
     @skills_by_concept = skills_by_concept
+    levels = LevelsSkill.all.map(&:level).uniq
+    @levels_skills = levels.map(&:summarize_for_levels_skills)
   end
 
   def create
     @skill = Skill.new(skill_params)
 
     if @skill.save
+      @skill.write_serialization
       render json: {status: 'success', message: 'Skill saved successfully'}, status: :created
     else
       render json: {status: 'error', message: @skill.errors.full_messages.to_sentence}, status: :bad_request

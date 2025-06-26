@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useCallback, useMemo} from 'react';
+import FocusLock from 'react-focus-lock';
 
 import musicI18n from '../locale';
 import MusicRegistry from '../MusicRegistry';
@@ -126,56 +127,58 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
   const onClear = useCallback(() => setSelectedNotes([]), [setSelectedNotes]);
 
   return (
-    <div className={moduleStyles.chordPanelContainer}>
-      <div className={moduleStyles.optionsRow}>
-        <select
-          value={instrument}
-          onChange={event => setInstrument(event.target.value)}
-          className={moduleStyles.dropdown}
-          disabled={isLoading}
-        >
-          {instruments.map(([name, value]) => (
-            <option key={value} value={value}>
-              {name}
-            </option>
-          ))}
-        </select>
-        <select
-          value={playStyle}
-          onChange={event => setPlayStyle(event.target.value as PlayStyle)}
-          className={moduleStyles.dropdown}
-        >
-          {styleDropdownOptions.map(([playStyle, label]) => (
-            <option key={playStyle} value={playStyle}>
-              {label}
-            </option>
-          ))}
-        </select>
+    <FocusLock>
+      <div className={moduleStyles.chordPanelContainer}>
+        <div className={moduleStyles.optionsRow}>
+          <select
+            value={instrument}
+            onChange={event => setInstrument(event.target.value)}
+            className={moduleStyles.dropdown}
+            disabled={isLoading}
+          >
+            {instruments.map(([name, value]) => (
+              <option key={value} value={value}>
+                {name}
+              </option>
+            ))}
+          </select>
+          <select
+            value={playStyle}
+            onChange={event => setPlayStyle(event.target.value as PlayStyle)}
+            className={moduleStyles.dropdown}
+          >
+            {styleDropdownOptions.map(([playStyle, label]) => (
+              <option key={playStyle} value={playStyle}>
+                {label}
+              </option>
+            ))}
+          </select>
+        </div>
+        <Keybed
+          numOctaves={NUM_OCTAVES}
+          startOctave={START_OCTAVE}
+          selectedNotes={selectedNotes}
+          onPressKey={onPressKey}
+          isDisabled={isDisabled || isLoading}
+          isVertical={false}
+        />
+        <NoteGrid
+          numOctaves={NUM_OCTAVES}
+          startOctave={START_OCTAVE}
+          selectedNotes={selectedNotes}
+          playStyle={playStyle}
+          instrument={instrument}
+        />
+        <LoadingOverlay show={isLoading} />
+        <PreviewControls
+          enabled={selectedNotes.length > 0 && !isLoading}
+          playPreview={playPreview}
+          onClickClear={onClear}
+          cancelPreviews={stopPreview}
+          isPlayingPreview={isPlayingPreview}
+        />
       </div>
-      <Keybed
-        numOctaves={NUM_OCTAVES}
-        startOctave={START_OCTAVE}
-        selectedNotes={selectedNotes}
-        onPressKey={onPressKey}
-        isDisabled={isDisabled || isLoading}
-        isVertical={false}
-      />
-      <NoteGrid
-        numOctaves={NUM_OCTAVES}
-        startOctave={START_OCTAVE}
-        selectedNotes={selectedNotes}
-        playStyle={playStyle}
-        instrument={instrument}
-      />
-      <LoadingOverlay show={isLoading} />
-      <PreviewControls
-        enabled={selectedNotes.length > 0 && !isLoading}
-        playPreview={playPreview}
-        onClickClear={onClear}
-        cancelPreviews={stopPreview}
-        isPlayingPreview={isPlayingPreview}
-      />
-    </div>
+    </FocusLock>
   );
 };
 

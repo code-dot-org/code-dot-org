@@ -32,7 +32,30 @@ class OpenaiEvaluateController < ApplicationController
     return render(status: response[:status], json: response[:json])
   end
 
+  # POST /openai/evaluate_section
+  def evaluate_section
+    section = Section.find(evaluate_section_params[:section_id])
+    authorize! :manage, section
+
+    begin
+      unit = Unit.find(evaluate_section_params[:unit_id])
+    rescue ActiveRecord::RecordNotFound
+      return render status: :not_found, json: "Unit with id #{evaluate_section_params[:unit_id]}"
+    end
+
+    OpenaiEvaluateHelper.evaluate_section(
+      unit,
+      section,
+    )
+
+    head :no_content
+  end
+
   private def evaluate_params
     params.transform_keys(&:underscore).permit(:level_id, :unit_id, :student_work, :evaluation_type)
+  end
+
+  private def evaluate_section_params
+    params.transform_keys(&:underscore).permit(:unit_id, :section_id)
   end
 end

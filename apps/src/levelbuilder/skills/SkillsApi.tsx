@@ -2,12 +2,7 @@ import {MetricEvent} from '@cdo/apps/metrics/events';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-interface Skill {
-  key: string;
-  description: string;
-  evaluationCriteria: string;
-  concept: string;
-}
+import {LevelSkill, Skill} from './types';
 
 export async function createSkill(skill: Skill) {
   const response = await HttpClient.post(
@@ -35,15 +30,10 @@ export async function createSkill(skill: Skill) {
   return response;
 }
 
-interface LevelsSkill {
-  skillId: number;
-  levelId: number;
-}
-
-export async function createLevelsSkill(levelsSkill: LevelsSkill) {
+export async function addSkillToLevel(levelSkill: LevelSkill) {
   const response = await HttpClient.post(
-    '/levels_skills',
-    JSON.stringify(levelsSkill),
+    `/levels/${levelSkill.levelId}/add_skill`,
+    JSON.stringify(levelSkill),
     true,
     {
       'Content-Type': 'application/json; charset=UTF-8',
@@ -51,7 +41,7 @@ export async function createLevelsSkill(levelsSkill: LevelsSkill) {
   )
     .then(response => response.json())
     .then(json => {
-      if (json.success) {
+      if (json.status === 'success') {
         return json;
       } else {
         throw new Error(`Failed to create LevelsSkill: ${json.error}`);
@@ -65,4 +55,31 @@ export async function createLevelsSkill(levelsSkill: LevelsSkill) {
     });
 
   return response;
+}
+
+export async function removeSkillFromLevel(levelSkill: LevelSkill) {
+  try {
+    const response = await HttpClient.post(
+      `/levels/${levelSkill.levelId}/remove_skill`,
+      JSON.stringify(levelSkill),
+      true,
+      {
+        'Content-Type': 'application/json; charset=UTF-8',
+      }
+    );
+    const json = await response.json();
+    if (json.status === 'success') {
+      return json;
+    } else {
+      throw new Error(`Failed to remove skill from level: ${json.error}`);
+    }
+  } catch (error) {
+    MetricsReporter.logError({
+      event: MetricEvent.LEVELS_SKILL_DELETE_FAIL,
+      errorMessage:
+        (error as Error).message ||
+        `Failed to remove Skill ${levelSkill.skillId} from Level ${levelSkill.levelId}`,
+    });
+    throw error;
+  }
 }

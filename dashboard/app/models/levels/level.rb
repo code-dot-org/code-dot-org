@@ -996,6 +996,23 @@ class Level < ApplicationRecord
     end
   end
 
+  def summarize_for_levels_skills
+    {
+      level_id: id,
+      level_name: name,
+      unit_names: script_levels.map {|sl| sl.script.name}.uniq.sort,
+      skills: skill_identifiers,
+    }.deep_transform_keys {|key| key.to_s.camelize(:lower)}
+  end
+
+  def skill_identifiers
+    skills.map {|skill| {id: skill.id, key: skill.key}}
+  end
+
+  def skill_keys
+    skills.pluck(:key)
+  end
+
   # Returns the level name, removing the name_suffix first (if present), and
   # also removing any additional suffixes of the format "_NNNN" which might
   # represent a version year.

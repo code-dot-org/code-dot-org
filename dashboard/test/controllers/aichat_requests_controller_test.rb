@@ -12,7 +12,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
     @unauthorized_teacher = create(:teacher)
 
     @level = create(:level)
-    @script = create(:script)
+    @script = create(:script, :in_single_unit_course)
 
     @default_model_customizations = {temperature: 0.5, retrievalContexts: ['test'], systemPrompt: 'test', selectedModelId: 'gpt-4o-mini'}.stringify_keys
     @default_aichat_context = {

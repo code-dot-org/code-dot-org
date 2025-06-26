@@ -74,13 +74,14 @@ class VocabulariesControllerTest < ActionController::TestCase
     assert_equal assigns(:vocabularies), [vocabulary.summarize_for_edit]
   end
 
-  test "can load vocab edit page of standalone script course version" do
+  test "can load vocab edit page of single unit course course version" do
     sign_in @levelbuilder
-    script = create :script, name: 'fake-standalone-script-2021', is_course: true
-    course_version = create :course_version, content_root: script
+    script = create :script, name: 'fake-single-unit-2021'
+    single_unit_course = create :single_unit_course, unit: script
+    course_version = create :course_version, content_root: single_unit_course
     vocabulary = create :vocabulary, key: 'variable', word: 'variable', definition: 'definition', course_version: course_version
 
-    get :edit, params: {course_name: script.name}
+    get :edit, params: {course_name: single_unit_course.name}
     assert_response :success
     assert_equal assigns(:course_version), course_version
     assert_equal assigns(:vocabularies), [vocabulary.summarize_for_edit]

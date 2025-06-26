@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
       regional_partner_name={workshopInfo.regional_partner_name}
       organizer={workshopInfo.organizer}
       facilitators={workshopInfo.facilitators}
+      userInfo={getScriptData('userInfo')}
     />,
     document.getElementById('workshop-container')
   );

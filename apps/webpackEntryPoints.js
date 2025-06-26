@@ -37,7 +37,6 @@ const CODE_STUDIO_ENTRIES = {
   'curriculum_catalog/index': './src/sites/studio/pages/curriculum_catalog/index.js',
   'data_docs/index': './src/sites/studio/pages/data_docs/index.js',
   'data_docs/show': './src/sites/studio/pages/data_docs/show.js',
-  'incubator/index': './src/sites/studio/pages/incubator/index.js',
   'lessons/show': './src/sites/studio/pages/lessons/show.js',
   'lessons/student_lesson_plan': './src/sites/studio/pages/lessons/student_lesson_plan.js',
   'musiclab/menu': './src/sites/studio/pages/musiclab/menu.js',
@@ -154,6 +153,7 @@ const INTERNAL_ENTRIES = {
   'levels/editors/fields/_poetry_fields': './src/sites/studio/pages/levels/editors/fields/_poetry_fields.js',
   'levels/editors/fields/_predict_settings': './src/sites/studio/pages/levels/editors/fields/_predict_settings.js',
   'levels/editors/fields/_preload_assets': './src/sites/studio/pages/levels/editors/fields/_preload_assets.js',
+  'levels/editors/fields/_skill_evaluations': './src/sites/studio/pages/levels/editors/fields/_skill_evaluations.js',
   'levels/editors/fields/_special_level_types': './src/sites/studio/pages/levels/editors/fields/_special_level_types.js',
   'levels/editors/fields/_starter_assets': './src/sites/studio/pages/levels/editors/fields/_starter_assets.js',
   'levels/editors/fields/_validation_code': './src/sites/studio/pages/levels/editors/fields/_validation_code.js',
@@ -253,6 +253,7 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
   'pd/session_attendance/attendance_recorded': './src/sites/studio/pages/pd/session_attendance/attendance_recorded.js',
 
   'pd/professional_learning/index': './src/sites/studio/pages/pd/professional_learning/index.js',
+  'pd/professional_learning/self_paced_pl_catalog': './src/sites/studio/pages/pd/professional_learning/self_paced_pl_catalog.js',
   'pd/professional_learning/regional_workshop_catalog': './src/sites/studio/pages/pd/professional_learning/regional_workshop_catalog.js',
   'pd/professional_learning/workshops/index': './src/sites/studio/pages/pd/professional_learning/workshops/index.js',
   'pd/regional_partner_mini_contact/new': './src/sites/studio/pages/pd/regional_partner_mini_contact/new.js',

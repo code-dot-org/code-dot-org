@@ -34,7 +34,7 @@ class CertificateImageTest < ActiveSupport::TestCase
   end
 
   def test_pl_course_template
-    course_version = create :course_version, :with_unit
+    course_version = create :course_version, :with_single_unit_course
     course_version.content_root.update!(instructor_audience: 'facilitator', participant_audience: 'teacher')
     assert_equal 'self_paced_pl_certificate.png', CertificateImage.certificate_template_for(course_version.name)
   end
@@ -93,7 +93,7 @@ class CertificateImageTest < ActiveSupport::TestCase
   end
 
   def test_pl_certificate_image_generation
-    course_version = create :course_version, :with_unit
+    course_version = create :course_version, :with_single_unit_course
     course_version.content_root.update!(instructor_audience: 'facilitator', participant_audience: 'teacher')
     pl_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', course_version.name)
     assert_image pl_certificate_image, 2526, 1786, 'PNG'
@@ -117,18 +117,21 @@ class CertificateImageTest < ActiveSupport::TestCase
   end
 
   def test_hoc_course
-    coursea = create :script, name: "coursea-2021", is_course: true
-    create :course_version, content_root: coursea
+    coursea = create :script, name: "coursea-2021"
+    coursea_course = create :single_unit_course, unit: coursea, name: "coursea-2021", family_name: 'coursea', version_year: '2021'
+    create :course_version, content_root: coursea_course
 
     csp = create :unit_group, name: 'csp-2021'
     create :course_version, content_root: csp
 
-    hello = create :script, name: 'hello', is_course: true
-    cv = create :course_version, content_root: hello
+    hello = create :script, name: 'hello'
+    hello_course = create :single_unit_course, unit: hello
+    cv = create :course_version, content_root: hello_course
     create :course_offering, course_versions: [cv], key: 'hello', marketing_initiative: 'HOC'
 
-    other = create :script, name: 'other', is_course: true
-    cv = create :course_version, content_root: other
+    other = create :script, name: 'other'
+    other_course = create :single_unit_course, unit: other
+    cv = create :course_version, content_root: other_course
     create :course_offering, course_versions: [cv], key: 'other', marketing_initiative: 'CSF'
 
     assert CertificateImage.hoc_course?('flappy')
