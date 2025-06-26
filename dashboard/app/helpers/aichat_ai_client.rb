@@ -53,9 +53,6 @@ class AichatAiClient
 
     response_text = extract_text_response_from_body(response_body)
 
-    # TODO - add back report_usage_and_throttling_metrics
-    # This requires some thought around how to make it implementation agnostics re: 'messages' and 'usage'
-
     usage = get_usage_from_body(response_body)
     messages_with_assets_count = get_messages_with_assets_count(stored_messages, new_message)
 
