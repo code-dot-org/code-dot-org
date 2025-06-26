@@ -5,7 +5,7 @@ class OpenaiUserInputResponseTimeout < StandardError; end
 # Prepares the input (user/level system prompt, context, existing chat history)
 # from AI Chat lab to be sent to the AI API, and then sends the request to the API.
 
-module AichatOpenaiHelper
+module AichatAiHelper
   TOKEN_THROTTLING_PREFIX = "aichat/tokens/".freeze
 
   def self.get_openai_assistant_response(aichat_model_customizations, stored_messages, new_message, level_id, project_id, user_id)

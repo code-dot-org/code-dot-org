@@ -97,7 +97,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
   end
 
   private def make_openai_request(request)
-    AichatOpenaiHelper.get_openai_assistant_response(
+    AichatAiHelper.get_openai_assistant_response(
       request.model_customizations,
       request.stored_messages,
       request.new_message,

@@ -193,7 +193,7 @@ class AichatAiClient
     # Prompt tokens are by far and away our largest cost driver (and the piece that users actually control),
     # so we throttle on that.
     limit = DCDO.get('aichat_token_limit_per_day', DEFAULT_TOKEN_LIMIT_PER_DAY)
-    Cdo::Throttle.throttle(AichatOpenaiHelper.token_throttling_key(model_id, user_id),
+    Cdo::Throttle.throttle(AichatAiHelper.token_throttling_key(model_id, user_id),
       limit,
       ONE_DAY_S,
       throttle_for: ONE_DAY_S,
