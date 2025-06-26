@@ -71,13 +71,18 @@ class TestController < ApplicationController
     )
   end
 
-  def create_student_section_assigned_to_script
+  def create_student_section_assigned_to_course_and_unit
     return unless (user = current_user)
-    script = Unit.find_by_name(params.require(:script_name))
+    unit_group = UnitGroup.find_by_name!(params.require(:course_name))
+    unit_position = params.require(:unit_position).to_i
+    unit_group_unit = unit_group.default_unit_group_units.where(position: unit_position).first
+    raise "Unit not found for course #{unit_group.name} at position #{unit_position}" unless unit_group_unit
+    unit = unit_group_unit.script
 
-    section = script.unit_group&.single_unit_course? ?
-                Section.create!(name: "New Section", user: user, script: script, course_id: script.unit_group.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student) :
-                Section.create!(name: "New Section", user: user, script: script, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    section =
+      unit_group.single_unit_course? ?
+        Section.create!(name: "New Section", user: user, script: unit, course_id: unit_group.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student) :
+        Section.create!(name: "New Section", user: user, script: unit, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
 
     render json: {section_code: section.code}
   end

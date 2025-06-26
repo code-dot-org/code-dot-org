@@ -22,7 +22,7 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
 
-    And I create a new student section assigned to "interactive-games-animations-2024" and save the section
+    And I create a new student section assigned to course "interactive-games-animations-2024" unit 1 and save the section
     Given I create a student named "Talia"
     And I join the section
 
