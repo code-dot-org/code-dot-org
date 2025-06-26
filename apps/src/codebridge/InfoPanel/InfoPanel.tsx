@@ -105,7 +105,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
           }}
           isIconOnly
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-          ariaLabel={'Information panel dropdown'}
+          ariaLabel={lab2I18n.informationPanelDropdown()}
           aria-expanded={isDropdownOpen}
           size={'xs'}
           type={'tertiary'}
