@@ -21,7 +21,6 @@ import {
   getAppOptionsEditingExemplar,
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
-import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {setExtraCopyrightContent} from '@cdo/apps/sharedComponents/footer/CopyrightDialog/index';
@@ -954,11 +953,7 @@ const MusicView = connect(
   }),
   dispatch => ({
     setPackId: packId => dispatch(setPackId(packId)),
-    setIsPlaying: isPlaying => {
-      dispatch(setIsPlaying(isPlaying));
-      // isRunning is the generic lab2 run state, used by Instructions.
-      dispatch(setIsRunning(isPlaying));
-    },
+    setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),
     setCurrentPlayheadPosition: currentPlayheadPosition =>
       dispatch(setCurrentPlayheadPosition(currentPlayheadPosition)),
     setStartingPlayheadPosition: startingPlayheadPosition =>

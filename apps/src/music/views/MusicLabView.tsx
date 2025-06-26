@@ -316,6 +316,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
             hideHeaders={hideHeaders}
           >
             <Instructions
+              isRunning={isPlaying}
               layout={
                 position !== InstructionsPosition.TOP
                   ? 'vertical'
@@ -339,6 +340,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       onInstructionsTextClick,
       exemplarPlaybackEvents,
       player,
+      isPlaying,
     ]
   );
 

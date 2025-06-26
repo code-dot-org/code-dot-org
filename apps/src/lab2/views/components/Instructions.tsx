@@ -14,6 +14,8 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import InstructionsPanel from './InstructionsPanel';
 
 interface InstructionsProps {
+  /** Whether the lab is currently running (different labs may define this differently). */
+  isRunning: boolean;
   /** If the instructions panel should be rendered vertically or horizontally. Defaults to vertical. */
   layout?: 'vertical' | 'horizontal';
   /**
@@ -37,6 +39,7 @@ interface InstructionsProps {
  * For Teachers Only, etc.
  */
 const Instructions: React.FunctionComponent<InstructionsProps> = ({
+  isRunning,
   layout,
   handleInstructionsTextClick,
   className,
@@ -64,8 +67,6 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     useAppSelector(
       state => state.lab.levelProperties?.useSecondaryFinishButton
     ) || queryParams('use-secondary-finish-button') === 'true';
-
-  const isRunning = useAppSelector(state => state.lab2System.isRunning);
 
   const dispatch = useAppDispatch();
 
