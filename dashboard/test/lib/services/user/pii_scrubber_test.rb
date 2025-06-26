@@ -34,11 +34,12 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
 
     context 'when migrated' do
       before do
-        expect(described_instance.delete_accounts_helper).to receive(:remove_census_submissions).with(email)
-        expect(described_instance.delete_accounts_helper).to receive(:clean_pegasus_forms_for_user).with(user)
-        expect(described_instance.delete_accounts_helper).to receive(:remove_poste_data).with(email)
-        expect(described_instance.delete_accounts_helper).to receive(:clean_and_destroy_pd_content).with(user.id, email)
-        expect(described_instance.delete_accounts_helper).to receive(:purge_contact_rollups).with(email)
+        delete_accounts_helper = described_instance.send(:delete_accounts_helper)
+        expect(delete_accounts_helper).to receive(:remove_census_submissions).with(email)
+        expect(delete_accounts_helper).to receive(:clean_pegasus_forms_for_user).with(user)
+        expect(delete_accounts_helper).to receive(:remove_poste_data).with(email)
+        expect(delete_accounts_helper).to receive(:clean_and_destroy_pd_content).with(user.id, email)
+        expect(delete_accounts_helper).to receive(:purge_contact_rollups).with(email)
       end
 
       it 'removes user email and authentication data' do
@@ -78,11 +79,12 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
 
     context 'when not migrated' do
       before do
-        expect(described_instance.delete_accounts_helper).to receive(:remove_census_submissions).with(email)
-        expect(described_instance.delete_accounts_helper).to receive(:clean_pegasus_forms_for_user).with(user)
-        expect(described_instance.delete_accounts_helper).to receive(:remove_poste_data).with(email)
-        expect(described_instance.delete_accounts_helper).to receive(:clean_and_destroy_pd_content).with(user.id, email)
-        expect(described_instance.delete_accounts_helper).to receive(:purge_contact_rollups).with(email)
+        delete_accounts_helper = described_instance.send(:delete_accounts_helper)
+        expect(delete_accounts_helper).to receive(:remove_census_submissions).with(email)
+        expect(delete_accounts_helper).to receive(:clean_pegasus_forms_for_user).with(user)
+        expect(delete_accounts_helper).to receive(:remove_poste_data).with(email)
+        expect(delete_accounts_helper).to receive(:clean_and_destroy_pd_content).with(user.id, email)
+        expect(delete_accounts_helper).to receive(:purge_contact_rollups).with(email)
       end
 
       let(:user) do

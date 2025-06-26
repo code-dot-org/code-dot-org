@@ -14,16 +14,12 @@ module Services
     # Intended to be run on soft-deleted users after a 28-day grace period. Not for use on live users as it
     # renders the account unusuable.
     class PiiScrubber < Services::Base
-      attr_reader :user, :email, :delete_accounts_helper
+      attr_reader :user, :email
 
       def initialize(user:)
         raise ArgumentError, 'user must be a soft-deleted User' unless user.is_a?(::User) && user.deleted_at.present?
         @user = user
         @email = user.email.presence || user.read_attribute(:email)
-
-        # Legacy delete acccounts helper client for purging data from deprecated tables
-        # and Pegasus DB. After Pegasus DB is fully deprecated, we should remove this dependency.
-        @delete_accounts_helper = DeleteAccountsHelper.new(bypass_safety_constraints: true)
       end
 
       def call
@@ -80,6 +76,12 @@ module Services
         @user.last_sign_in_ip = nil
         @user.data_transfer_agreement_request_ip = nil
         @user.user_geos.each(&:clear_user_geo)
+      end
+
+      # Legacy delete acccounts helper client for purging data from deprecated tables
+      # and Pegasus DB. After Pegasus DB is fully deprecated, we should remove this dependency.
+      private def delete_accounts_helper
+        @delete_accounts_helper ||= DeleteAccountsHelper.new(bypass_safety_constraints: true)
       end
 
       # Deletes PII from deprecated tables that no longer have a corresponding ActiveRecord model.
