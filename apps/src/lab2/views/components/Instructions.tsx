@@ -17,7 +17,9 @@ import InstructionsPanel from './InstructionsPanel';
 interface InstructionsProps {
   /** Whether the lab is currently running (different labs may define this differently). */
   isRunning: boolean;
+  /** Whether the lab's code has been executed/run on this level. */
   hasRun: boolean;
+  /** Whether the lab's code has been edited on this level. */
   hasEdited: boolean;
   /** If the instructions panel should be rendered vertically or horizontally. Defaults to vertical. */
   layout?: 'vertical' | 'horizontal';

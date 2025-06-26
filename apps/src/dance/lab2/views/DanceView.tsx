@@ -110,6 +110,7 @@ const DanceView: React.FunctionComponent<
           <Instructions
             layout="horizontal"
             isRunning={isRunning}
+            // Always passing true for now; update when resuming work on Lab2 Dance.
             hasRun={true}
             hasEdited={true}
           />
