@@ -167,10 +167,6 @@ class AichatAiClient
   end
 
   # Note - this is temporarily disabled for gemini by overriding this method there with a "no-op"
-  # TODO - provide mechanism for metric name to be based on provider.  This will require updating
-  #  queries and dashboards as explained here:
-  #  https://github.com/code-dot-org/code-dot-org/pull/66675#discussion_r2164695066
-
   # Reports and logs usage metrics to Cloudwatch and our throttling system.
   private def report_usage_and_throttling_metrics(usage, message_and_file_counts, level_id, project_id, user_id, model_id, response_time)
     unless usage
