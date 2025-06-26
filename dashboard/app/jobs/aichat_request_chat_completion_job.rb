@@ -51,9 +51,11 @@ class AichatRequestChatCompletionJob < ApplicationJob
 
   #TODO - this is temporary - only until sagemaker not integrated in this path
   private def openai_or_gemini?(model_id)
-    return [SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT],
-            SharedConstants::AI_CHAT_MODEL_IDS[:LEARNLM],
-            SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI]].include? model_id
+    [SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT],
+     SharedConstants::AI_CHAT_MODEL_IDS[:LEARNLM],
+     SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_0_FLASH],
+     SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH],
+     SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_PRO]].include? model_id
   end
 
   private def get_execution_status_and_response(request, locale)

@@ -35,7 +35,7 @@ export default class AiTutor2Manager {
     currentLevelId: string | null,
     scriptId: number | undefined,
     channelId: string | undefined,
-    modelId: AiChatModelIdType = AiChatModelIds.GEMINI
+    modelId: AiChatModelIdType = AiChatModelIds.GEMINI_2_0_FLASH
   ) {
     this.currentLevelId = currentLevelId;
     this.scriptId = scriptId;

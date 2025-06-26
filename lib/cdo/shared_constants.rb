@@ -821,7 +821,9 @@ module SharedConstants
     PIRATE: "gen-ai-mistral-pirate-7b",
     CHATGPT: "gpt-4o-mini",
     LEARNLM: "learnlm-2.0-flash-experimental",
-    GEMINI: "gemini-2.0-flash",
+    GEMINI_2_0_FLASH: "gemini-2.0-flash",
+    GEMINI_2_5_FLASH: "gemini-2.5-flash",
+    GEMINI_2_5_PRO: "gemini-2.5-pro",
   }
 
   AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze

@@ -37,8 +37,16 @@ const genAIEndpoints = [
     name: 'ChatGPT + Webpurify',
   },
   {
-    id: AiChatModelIds.GEMINI,
-    name: 'Google Gemini + Webpurify',
+    id: AiChatModelIds.GEMINI_2_0_FLASH,
+    name: 'Google Gemini 2.0 Flash + Webpurify',
+  },
+  {
+    id: AiChatModelIds.GEMINI_2_5_FLASH,
+    name: 'Google Gemini 2.5 Flash + Webpurify',
+  },
+  {
+    id: AiChatModelIds.GEMINI_2_5_PRO,
+    name: 'Google Gemini 2.0 Pro + Webpurify',
   },
   {
     id: AiChatModelIds.LEARNLM,
