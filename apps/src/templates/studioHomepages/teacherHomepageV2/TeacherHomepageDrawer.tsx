@@ -39,14 +39,9 @@ export const TeacherHomepageDrawer: React.FC = () => {
   const [success, setSuccess] = React.useState(false);
   const [showSchoolInfoUnknownError, setShowSchoolInfoUnknownError] =
     React.useState(false);
-  const [existingSchoolInfo, setExistingSchoolInfo] =
-    React.useState<SchoolInfo>({
-      country: '',
-      school_name: '',
-      school_zip: '',
-      school_id: '',
-      school_type: '',
-    });
+  const [existingSchoolInfo, setExistingSchoolInfo] = React.useState<
+    SchoolInfo | undefined
+  >(undefined);
 
   // Load school data and set the drawer state based on the response.
   React.useEffect(() => {
@@ -78,11 +73,11 @@ export const TeacherHomepageDrawer: React.FC = () => {
   const inUSA = useAppSelector(state => state.currentUser.inUSA);
   const schoolInfo = useSchoolInfo({
     usIp: inUSA,
-    country: existingSchoolInfo.country,
-    schoolName: existingSchoolInfo.school_name,
-    schoolId: existingSchoolInfo.school_id,
-    schoolZip: existingSchoolInfo.school_zip,
-    schoolType: existingSchoolInfo.school_type,
+    country: existingSchoolInfo?.country,
+    schoolName: existingSchoolInfo?.school_name,
+    schoolId: existingSchoolInfo?.school_id,
+    schoolZip: existingSchoolInfo?.school_zip,
+    schoolType: existingSchoolInfo?.school_type,
   });
   const schoolName =
     schoolInfo.schoolName || i18n.schoolInfoDialogDescriptionNoName();
