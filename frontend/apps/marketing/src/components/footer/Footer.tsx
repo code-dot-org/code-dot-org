@@ -8,6 +8,8 @@ import DSCOFooter, {
 import {SUPPORTED_LOCALES} from '@/config/locale';
 import awsLogo from '@public/images/powered-by-aws.png';
 
+import './onetrust.scss';
+
 const copyrightYear = new Date().getFullYear();
 
 export const defaultProps: Omit<FooterProps, 'languages' | 'onLanguageChange'> =
@@ -23,6 +25,13 @@ export const defaultProps: Omit<FooterProps, 'languages' | 'onLanguageChange'> =
         key: 'manageCookies',
         label: 'Manage Cookies',
         href: '/cookies',
+        onClick: e => {
+          if (window?.OneTrust) {
+            e.preventDefault();
+            // Displays the OneTrust cookie dialog
+            window.OneTrust.ToggleInfoDisplay();
+          }
+        },
       },
       {
         key: 'about',

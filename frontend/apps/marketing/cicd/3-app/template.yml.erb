@@ -692,12 +692,13 @@ Resources:
               - next-url
               - Accept
               - x-prerender-revalidate
-              - Host
+              - Host # Used in the withBrand middleware to determine tenant in multi-tenant setup
+              - Accept-Language # Used in the withLocale middleware to determine the user's locale
           CookiesConfig:
             CookieBehavior: whitelist
             Cookies:
               - __prerender_bypass # Next.js Draft mode
-              - location_ # Code.org user locale
+              - language_ # Used in the withLocale middleware to determine the user's locale and shared with studio.code.org
           QueryStringsConfig:
             QueryStringBehavior: none
         Comment: Cache policy for the marketing app

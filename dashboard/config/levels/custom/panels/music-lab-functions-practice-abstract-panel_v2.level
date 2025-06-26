@@ -50,9 +50,10 @@
       }
     ],
     "display_name": "Abstraction",
-    "name_suffix": "_v2"
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://images.code.org/5719963da0231456884c38b4a004790e-Screenshot 2025-04-02 at 7.42.24 AM.png"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:54.037+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-abstract-panel\\\"\"],\"cloned_from\":\"music-lab-functions-practice-abstract-panel\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:54.037+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-abstract-panel\\\"\"],\"cloned_from\":\"music-lab-functions-practice-abstract-panel\"},{\"changed_at\":\"2025-06-21 23:44:18 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>
