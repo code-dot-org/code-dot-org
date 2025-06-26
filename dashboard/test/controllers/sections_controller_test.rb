@@ -27,9 +27,8 @@ class SectionsControllerTest < ActionController::TestCase
 
     # place in setup instead of setup_all otherwise course ends up being serialized
     # to a file if levelbuilder_mode is true
-    @unit_group = create(:unit_group)
-    @script_in_course = create(:script)
-    create(:unit_group_unit, script: @script_in_course, unit_group: @unit_group, position: 1)
+    @unit_group = create(:single_unit_course)
+    @script_in_course = @unit_group.first_unit
     @section_with_course = create(:section, user: @teacher, login_type: 'word', course_id: @unit_group.id)
     @section_with_course_user_1 = create(:follower, section: @section_with_course).student_user
 
@@ -290,7 +289,7 @@ class SectionsControllerTest < ActionController::TestCase
   describe '#retrieve_lessons_for_dropdown' do
     let(:teacher) {create :teacher}
     let(:unit_group) {create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
-    let(:unit) {create :unit, :with_levels, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+    let(:unit) {create :unit, :with_levels}
     let(:unit_position) {1}
     let!(:unit_group_unit) {create :unit_group_unit, unit_group: unit_group, script: unit, position: unit_position}
     let(:lesson) {unit.lessons.first}

@@ -71,8 +71,7 @@ Dashboard::Application.routes.draw do
 
     resources :user_level_interactions, only: [:create]
 
-    resources :skills, only: [:create]
-    resources :levels_skills, only: [:create]
+    resources :skills, only: [:create, :index]
 
     patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
 
@@ -85,7 +84,7 @@ Dashboard::Application.routes.draw do
 
     get "/congrats", to: "congrats#index"
 
-    get "/incubator", to: "incubator#index"
+    get "/incubator", to: redirect(CDO.code_org_url("/incubator"))
     get "/musiclab", to: redirect(CDO.code_org_url("/music"))
     get "/projectbeats", to: redirect(CDO.code_org_url("/music"))
     get "/musiclab/menu", to: "musiclab#menu"
@@ -397,6 +396,8 @@ Dashboard::Application.routes.draw do
         get 'level_properties'
         get 'extra_links'
         patch 'update_bubble_choice_settings'
+        post 'add_skill'
+        post 'remove_skill'
       end
     end
 
@@ -612,6 +613,9 @@ Dashboard::Application.routes.draw do
 
     get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
     post '/join(/:section_code)', to: 'followers#student_register', as: 'student_register'
+
+    get '/logged_out', to: 'gates#logged_out'
+    get '/teacher_account_required', to: 'gates#teacher_account_required'
 
     post '/milestone/:user_id/level/:level_id', to: 'activities#milestone', as: 'milestone_level'
     post '/milestone/:user_id/:script_level_id', to: 'activities#milestone', as: 'milestone'
@@ -884,7 +888,9 @@ Dashboard::Application.routes.draw do
     post '/dashboardapi/v1/foorm/simple_survey_submission', action: :create, controller: 'api/v1/foorm_simple_survey_submissions'
 
     get 'my-professional-learning', to: 'pd/professional_learning#index', as: 'professional_learning'
+    get 'professional-learning/courses', to: 'pd/professional_learning#courses'
     get 'professional-learning/workshops', to: 'pd/professional_learning#workshops'
+    get 'professional-learning/workshops/:workshop_id', to: 'pd/professional_learning#workshop_marketing_page'
     get 'professional-learning/contact-regional-partner', to: 'pd/professional_learning#contact_regional_partner'
     get 'professional-learning/facilitator/computer-science-a', to: 'pd/professional_learning#csa'
     get 'professional-learning/facilitator/computer-science-discoveries', to: 'pd/professional_learning#csd'
@@ -902,8 +908,6 @@ Dashboard::Application.routes.draw do
       # React-router will handle sub-routes on the client.
       get 'workshop_dashboard/*path', to: 'workshop_dashboard#index'
       get 'workshop_dashboard', to: 'workshop_dashboard#index'
-
-      get 'workshops/:workshop_id', to: 'workshops#index'
 
       get 'misc_survey/thanks', to: 'misc_survey#thanks'
       get 'misc_survey/:form_tag', to: 'misc_survey#new'
@@ -1285,6 +1289,7 @@ Dashboard::Application.routes.draw do
 
     post '/openai/chat_completion', to: 'openai_chat#chat_completion'
     post '/openai/evaluate', to: 'openai_evaluate#evaluate'
+    post '/openai/evaluate_section', to: 'openai_evaluate#evaluate_section'
 
     post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
     get '/aichat_request/chat_request/:id', to: 'aichat_requests#chat_request'

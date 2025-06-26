@@ -31,15 +31,15 @@ class Pd::WorkshopEnrollmentController < ApplicationController
         }.to_json
       }
     elsif !current_user
-      @script_data = {
-        props: {
-          new_account_url: "/users/sign_up/login_type?user_type=teacher&user_return_to=/pd/workshops/#{@workshop.id}/enroll",
-          existing_account_url: "/users/sign_in?user_return_to=/pd/workshops/#{@workshop.id}/enroll"
-        }.to_json
-      }
-      render :logged_out
+      source_page = ERB::Util.url_encode('workshop enroll')
+      return_to = ERB::Util.url_encode("/pd/workshops/#{@workshop.id}/enroll")
+
+      redirect_to "/logged_out?source_page=#{source_page}&return_to=#{return_to}"
     elsif current_user.user_type == 'student'
-      render :students_cannot_enroll
+      source_page = ERB::Util.url_encode('workshop enroll')
+      return_to = ERB::Util.url_encode("/pd/workshops/#{@workshop.id}/enroll")
+
+      redirect_to "/teacher_account_required?source_page=#{source_page}&return_to=#{return_to}"
     elsif missing_application?
       render :missing_application
     elsif current_user.teacher? && current_user.email.blank?
@@ -56,7 +56,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       session_info_for_calendar = @workshop.sessions.map(&:session_info_for_calendar)
 
       facilitators = @workshop.facilitators.map do |facilitator|
-        # TODO: Come up with more permanent solution that doesn't require cross-project file dependency.
+        # TODO [CMS-65]: Come up with more permanent solution that doesn't require cross-project file dependency.
         bio_file = pegasus_dir("sites.v3/code.org/views/workshop_affiliates/#{facilitator.id}_bio.md")
         image_file = pegasus_dir("sites.v3/code.org/public/images/affiliate-images/#{facilitator.id}.jpg")
 

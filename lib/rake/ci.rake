@@ -53,6 +53,12 @@ TEST_ALL_BROWSERS_TAG = 'test all browsers'.freeze
 TEST_EYES = 'test eyes'.freeze
 SKIP_EYES = 'skip eyes'.freeze
 
+# Runs without pegasus content:
+# 1. omits most pegasus content from the git client via git sparse-checkout
+# 2. skips any tests tagged with @pegasus_content or CDO.has_pegasus_content
+# For more information, see: https://github.com/code-dot-org/code-dot-org/pull/65825
+SKIP_PEGASUS_CONTENT = 'skip pegasus content'.freeze
+
 namespace :ci do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
   timed_task_with_logging :run_tests do
@@ -174,6 +180,43 @@ namespace :ci do
 
     Dir.chdir('dashboard') do
       RakeUtils.rake_stream_output 'seed:ui_test'
+    end
+  end
+
+  timed_task_with_logging :sparse_checkout do
+    if CI::Utils.tagged?(SKIP_PEGASUS_CONTENT)
+      cmd = 'bin/sparse-checkout no-pegasus-content'
+      ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{SKIP_PEGASUS_CONTENT}], running `#{cmd}`."
+      RakeUtils.system_stream_output "git status --porcelain"
+      RakeUtils.system_stream_output cmd
+
+      # As of May 2025, a full checkout leaves 10,000+ files in pegasus/sites.v3
+      # while a sparse checkout leaves only 32.
+      max_files = 32
+      num_files = `find pegasus/sites.v3 -type f | wc -l`.strip.to_i
+      if num_files > max_files
+        raise "Sparse checkout failed. Expected at most #{max_files} files in pegasus/sites.v3, but found #{num_files} files."
+      end
+
+      # Ensure there are no files in pegasus/sites
+      if Dir.exist?('pegasus/sites')
+        num_sites_files = `find pegasus/sites -type f | wc -l`.strip.to_i
+        if num_sites_files > 0
+          raise "Sparse checkout failed. Expected 0 files in pegasus/sites, but found #{num_sites_files}."
+        end
+      end
+
+      # Ensure there are no missing directories
+      raise "Sparse checkout failed. apps directory missing" unless Dir.exist?('apps')
+      raise "Sparse checkout failed. dashboard directory missing" unless Dir.exist?('dashboard')
+
+      ChatClient.log "Sparse checkout complete. #{num_files} files remaining in pegasus/sites.v3."
+
+      # let the caller know that we did a sparse checkout
+      exit 11
+    else
+      # let the caller know that we did a full checkout
+      exit 0
     end
   end
 end

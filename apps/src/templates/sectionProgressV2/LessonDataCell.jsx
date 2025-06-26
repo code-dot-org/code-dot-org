@@ -24,6 +24,7 @@ function LessonDataCell({
   addExpandedLesson,
   studentId,
   metadataExpanded,
+  index,
 }) {
   const noLevels = !lessonHasLevels(lesson);
   const finished = studentLessonProgress?.completedPercent === 100;
@@ -38,7 +39,8 @@ function LessonDataCell({
           className={classNames(
             styles.gridBox,
             styles.gridBoxLesson,
-            locked && styles.littleLock
+            locked && styles.littleLock,
+            index % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
           )}
           href={teacherDashboardUrl(sectionId, '/assessments')}
           openInNewTab
@@ -57,7 +59,8 @@ function LessonDataCell({
           styles.gridBox,
           styles.gridBoxLesson,
           locked && styles.littleLock,
-          interactive && styles.lessonInteractive
+          interactive && styles.lessonInteractive,
+          index % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
         )}
         onClick={expandLesson}
         // eslint-disable-next-line react/forbid-dom-props
@@ -85,15 +88,26 @@ function LessonDataCell({
       <div className={styles.lessonDataCellExpanded}>
         {lessonCellUnexpanded}
         <div
-          className={classNames(styles.gridBox, styles.gridBoxMetadata, {
-            [`ui-test-time-spent-${lesson.relative_position}`]: true,
-          })}
+          className={classNames(
+            styles.gridBox,
+            styles.gridBoxMetadata,
+            index % 2 === 0
+              ? styles.lighterBackground
+              : styles.darkerBackground,
+            {
+              [`ui-test-time-spent-${lesson.relative_position}`]: true,
+            }
+          )}
         >
           {formatTimeSpent(studentLessonProgress)}
         </div>
         <div
           id={'ui-test-last-updated-' + lesson.relative_position}
-          className={classNames(styles.gridBox, styles.gridBoxMetadata)}
+          className={classNames(
+            styles.gridBox,
+            styles.gridBoxMetadata,
+            index % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
+          )}
         >
           {formatLastUpdated(studentLessonProgress)}
         </div>
@@ -127,4 +141,5 @@ LessonDataCell.propTypes = {
   addExpandedLesson: PropTypes.func.isRequired,
   studentId: PropTypes.number.isRequired,
   metadataExpanded: PropTypes.bool,
+  index: PropTypes.number,
 };

@@ -2436,4 +2436,83 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       end
     end
   end
+  describe 'authorizing modular courses' do
+    let(:unit) {create :unit, :with_levels}
+    let(:original_course) {create :single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development}
+    let(:modular_course) {create :single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development}
+    let(:unit_position) {1}
+    let(:lesson) {unit.lessons.first}
+    let(:lesson_position) {lesson.relative_position}
+    let(:level) {unit.lessons.first.script_levels.first}
+
+    let(:pilot_teacher) {create :teacher, pilot_experiment: "test-pilot"}
+
+    context 'when the modular course is stable' do
+      before do
+        modular_course.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+      end
+      test_user_gets_response_for :show, response: :redirect, user: nil,
+                                  params: -> {{course_course_name: original_course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}},
+                                  name: 'signed out user cannot view in-development original course'
+      test_user_gets_response_for :show, response: :success, user: nil,
+                                  params: -> {{course_course_name: modular_course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}},
+                                  name: 'signed out user can view stable modular course'
+    end
+
+    context 'when the original course is stable' do
+      before do
+        original_course.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+      end
+      test_user_gets_response_for :show, response: :success, user: nil,
+                                  params: -> {{course_course_name: original_course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}},
+                                  name: 'signed out user can view stable original course'
+      test_user_gets_response_for :show, response: :redirect, user: nil,
+                                  params: -> {{course_course_name: modular_course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}},
+                                  name: 'signed out user cannot view in-development modular course'
+    end
+
+    context 'when the original course is a pilot' do
+      before do
+        original_course.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, pilot_experiment: 'test-pilot')
+      end
+      test_user_gets_response_for :show, response: :redirect, user: nil,
+                                  params: -> {{course_course_name: original_course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}},
+                                  name: 'signed out user cannot view pilot original course'
+      test_user_gets_response_for :show, response: :redirect, user: nil,
+                                  params: -> {{course_course_name: modular_course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}},
+                                  name: 'signed out user cannot view in-development modular course'
+
+      test_user_gets_response_for :show, response: :success, user: -> {pilot_teacher},
+                                  params: -> {{course_course_name: original_course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}},
+                                  name: 'pilot teacher can view pilot original_course'
+      test_user_gets_response_for(:show, response: :success, user: -> {pilot_teacher},
+                                  params: -> {{course_course_name: modular_course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}},
+                                  name: 'pilot teacher cannot view in-development modular course'
+      ) do
+        assert_includes(response.body, no_access_msg)
+      end
+    end
+
+    context 'when the modular course is a pilot' do
+      before do
+        modular_course.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, pilot_experiment: 'test-pilot')
+      end
+      test_user_gets_response_for :show, response: :redirect, user: nil,
+                                  params: -> {{course_course_name: original_course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}},
+                                  name: 'signed out user cannot view in-development original course'
+      test_user_gets_response_for :show, response: :redirect, user: nil,
+                                  params: -> {{course_course_name: modular_course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}},
+                                  name: 'signed out user cannot view pilot modular course'
+
+      test_user_gets_response_for(:show, response: :success, user: -> {pilot_teacher},
+                                  params: -> {{course_course_name: original_course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}},
+                                  name: 'pilot teacher cannot view in-development original course'
+      ) do
+        assert_includes(response.body, no_access_msg)
+      end
+      test_user_gets_response_for :show, response: :success, user: -> {pilot_teacher},
+                                  params: -> {{course_course_name: modular_course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}},
+                                  name: 'pilot teacher can view pilot modular course'
+    end
+  end
 end

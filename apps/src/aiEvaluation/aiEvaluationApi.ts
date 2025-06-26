@@ -24,6 +24,7 @@ export interface AIResponse {
 
 export interface SkillBasedAIResponse extends AIResponse {
   skillId: number;
+  skillKey: string;
 }
 
 export interface StudentWorkEvaluation extends StudentAnswer, AIResponse {

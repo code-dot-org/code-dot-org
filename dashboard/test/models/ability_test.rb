@@ -8,11 +8,13 @@ class AbilityTest < ActiveSupport::TestCase
       @reference_guide_student_unit_group = create(:reference_guide, course_version: unit_group.course_version)
     end
 
-    @public_teacher_to_student_unit = create(:script, name: 'teacher-to-student', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student).tap do |script|
+    @public_teacher_to_student_unit = create(:script, name: 'teacher-to-student').tap do |script|
+      create(:single_unit_course, unit: script)
       @public_teacher_to_student_script_level = create(:script_level, script: script)
     end
 
-    @public_facilitator_to_teacher_unit = create(:script, name: 'facilitator-to-teacher', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher).tap do |script|
+    @public_facilitator_to_teacher_unit = create(:script, name: 'facilitator-to-teacher').tap do |script|
+      create(:single_unit_course, :pl_course, unit: script)
       @public_facilitator_to_teacher_script_level = create(:script_level, script: script)
     end
 
@@ -21,25 +23,30 @@ class AbilityTest < ActiveSupport::TestCase
       @reference_guide_teacher_unit_group = create(:reference_guide, course_version: unit_group.course_version)
     end
 
-    @public_plc_reviewer_to_facilitator_unit = create(:script, name: 'reviewer-to-facilitator', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator).tap do |script|
+    @public_plc_reviewer_to_facilitator_unit = create(:script, name: 'reviewer-to-facilitator').tap do |script|
+      create(:single_unit_course, unit: script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
       @public_plc_reviewer_to_facilitator_script_level = create(:script_level, script: script)
     end
 
-    @public_universal_instructor_to_teacher_unit = create(:script, name: 'universal-to-teacher', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher).tap do |script|
+    @public_universal_instructor_to_teacher_unit = create(:script, name: 'universal-to-teacher').tap do |script|
+      create(:single_unit_course, unit: script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
       @public_universal_instructor_to_teacher_script_level = create(:script_level, script: script)
     end
 
-    @login_required_migrated_script = create(:script, login_required: true, is_migrated: true, name: 'migrated-login-required', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student).tap do |script|
+    @login_required_migrated_script = create(:script, login_required: true, is_migrated: true, name: 'migrated-login-required').tap do |script|
+      create(:single_unit_course, unit: script)
       @login_required_migrated_lesson = create(:lesson, script: script, has_lesson_plan: true).tap do |lesson|
         @login_required_script_level = create(:script_level, script: script, lesson: lesson)
       end
     end
 
-    @pilot_course = create(:unit, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot).tap do |script|
+    @pilot_course = create(:unit, pilot_experiment: 'my-experiment').tap do |script|
+      create(:single_unit_course, unit: script, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot)
       @pilot_course_script_level = create(:script_level, script: script)
     end
 
-    @pl_pilot_course = create(:unit, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer).tap do |script|
+    @pl_pilot_course = create(:unit, pilot_experiment: 'my-experiment').tap do |script|
+      create(:single_unit_course, unit: script, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer)
       @pl_pilot_course_script_level = create(:script_level, script: script)
     end
 

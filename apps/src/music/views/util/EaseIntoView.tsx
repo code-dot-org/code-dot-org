@@ -1,5 +1,9 @@
 import React, {useEffect, useRef} from 'react';
 
+const clamp = (number: number, min: number, max: number) => {
+  return Math.min(Math.max(number, min), max);
+};
+
 const animationFramesPerSecond = 60;
 
 // EaseIntoView: This component does an eased scroll of the container's content,
@@ -72,12 +76,28 @@ const EaseIntoView: React.FunctionComponent<EaseIntoViewProps> = ({
             0,
             (scrollStep.current - delayFrames) / frames
           );
-          const scrollPosition =
+          const desiredScrollPosition =
             scrollStart - (scrollStart - scrollEnd) * easeOutSine(progress);
 
-          containerRef.current?.scroll(0, scrollPosition);
+          const maxScrollPosition =
+            containerRef.current?.scrollHeight -
+            containerRef.current?.clientHeight;
 
-          lastScrollPosition.current = scrollPosition;
+          // Avoid attempting to over-scroll, which will be misinterpeted as the user scrolling
+          // manually by a check above.
+          const clampedScrollPosition = clamp(
+            desiredScrollPosition,
+            -maxScrollPosition,
+            maxScrollPosition
+          );
+
+          containerRef.current?.scroll({
+            top: clampedScrollPosition,
+            left: 0,
+            behavior: 'instant',
+          });
+
+          lastScrollPosition.current = clampedScrollPosition;
 
           scrollStep.current++;
 

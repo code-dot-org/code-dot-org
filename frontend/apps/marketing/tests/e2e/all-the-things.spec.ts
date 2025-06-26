@@ -10,7 +10,7 @@ import {MarketingPage} from './pom/marketing';
 test.describe('All the things UI e2e test', () => {
   test.describe('a11y', () => {
     test('should have no accessibility violations', async ({page}) => {
-      const allTheThingsPage = new AllTheThingsPage(page, 'en-US');
+      const allTheThingsPage = new AllTheThingsPage(page, {locale: 'en-US'});
       await allTheThingsPage.goto();
 
       const accessibilityScanResults = await new AxeBuilder({page}).analyze();
@@ -33,15 +33,24 @@ test.describe('All the things UI e2e test', () => {
   test.describe('locale-less redirect', () => {
     test('should redirect from localeless paths to english localized paths when no language cookie is set', async ({
       page,
+      context,
     }) => {
       const allTheThingsPage = new MarketingPage(page);
       await allTheThingsPage.goto('/engineering/all-the-things');
 
       await page.waitForURL('**/en-US/engineering/all-the-things');
+
+      // Should set the language cookie to en-US
+      expect(await context.cookies()).toContainEqual(
+        expect.objectContaining({
+          name: 'language_',
+          value: 'en-US',
+        }),
+      );
     });
 
     // Re-enable when locales other than English are supported
-    test.skip('should redirect from localeless paths to localized paths using the language cookie', async ({
+    test('should redirect from localeless paths to localized paths using the language cookie', async ({
       page,
       context,
       browserName,
@@ -57,16 +66,20 @@ test.describe('All the things UI e2e test', () => {
           name: 'language_',
           path: '/',
           domain: `.${allTheThingsPage.getCookieDomain()}`,
-          value: 'zh-CN',
+          value: 'zh-TW',
         },
       ]);
 
       await allTheThingsPage.goto('/engineering/all-the-things');
 
-      await page.waitForURL('**/zh-CN/engineering/all-the-things');
+      await page.waitForURL('**/zh-TW/engineering/all-the-things');
     });
 
-    test('should redirect from localeless paths to localized english when language cookie is invalid', async ({
+    test.use({
+      locale: 'completely-invalid',
+    });
+
+    test('should redirect from localeless paths to localized english when language cookie is invalid and no accept-header', async ({
       page,
       browserName,
       context,
@@ -90,10 +103,47 @@ test.describe('All the things UI e2e test', () => {
 
       await page.waitForURL('**/en-US/engineering/all-the-things');
     });
+
+    test('should stay on the same locale if starting from a localized page', async ({
+      page,
+      browserName,
+    }) => {
+      test.skip(
+        browserName !== 'chromium',
+        'This test only needs to run once on Chromium',
+      );
+      const allTheThingsPage = new MarketingPage(page);
+
+      await allTheThingsPage.goto('/zh-TW/engineering/all-the-things');
+
+      // The middleware should send us back to /zh-TW with the language_ cookie set via the previous visit
+      await allTheThingsPage.goto('/engineering/all-the-things');
+      await page.waitForURL('**/zh-TW/engineering/all-the-things');
+    });
+
+    test.describe('accept-language header', () => {
+      test.use({
+        locale: 'zh-TW',
+      });
+
+      test('redirects to localized page via accept-language', async ({
+        page,
+        browserName,
+      }) => {
+        test.skip(
+          browserName !== 'chromium',
+          'This test only needs to run once on Chromium',
+        );
+        const allTheThingsPage = new MarketingPage(page);
+        await allTheThingsPage.goto('/engineering/all-the-things');
+
+        await page.waitForURL('**/zh-TW/engineering/all-the-things');
+      });
+    });
   });
 
   test('should have the correct top level SEO metadata', async ({page}) => {
-    const allTheThingsPage = new AllTheThingsPage(page, 'en-US');
+    const allTheThingsPage = new AllTheThingsPage(page, {locale: 'en-US'});
     await allTheThingsPage.goto();
 
     expect(await allTheThingsPage.pageTitle).toBe(
@@ -120,10 +170,12 @@ test.describe('All the things UI e2e test', () => {
       let component: Locator;
 
       test.beforeEach(async ({page}) => {
-        const allTheThingsPage = new AllTheThingsPage(page, locale);
+        const allTheThingsPage = new AllTheThingsPage(page, {locale});
         await allTheThingsPage.goto();
 
-        component = allTheThingsPage.getSectionLocator('Localization');
+        component = allTheThingsPage.getSectionLocator(
+          entry.heading as Section,
+        );
         await component.scrollIntoViewIfNeeded();
       });
 
@@ -151,7 +203,7 @@ test.describe('All the things UI e2e test', () => {
     let allTheThingsPage: AllTheThingsPage;
 
     test.beforeEach(async ({page}) => {
-      allTheThingsPage = new AllTheThingsPage(page, 'en-US');
+      allTheThingsPage = new AllTheThingsPage(page, {locale: 'en-US'});
       await allTheThingsPage.goto();
     });
 
@@ -183,6 +235,36 @@ test.describe('All the things UI e2e test', () => {
         expect(await primaryButton.count()).toBeGreaterThan(0);
         expect(await secondaryButton.count()).toBeGreaterThan(0);
         expect(await externalLinkButton.count()).toBeGreaterThan(0);
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('action block pattern default', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator(
+          'Action Block Pattern Default',
+        );
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('action block pattern hidden elements', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator(
+          'Action Block Pattern Hidden Elements',
+        );
+        await component.scrollIntoViewIfNeeded();
       });
 
       test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {

@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T03:00:39.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "### Karma Beats\r\n\r\nDrew made a remix of Karma using a custom backing track with the Clap effect and some rests. Now that he knows about functions, he wants to turn that beat into a function he can reuse:\r\n\r\n> I keep using this same code over and over, and it's so long. I want to make a function so it's easier to know what the code is doing everywhere I use it!\r\n\r\nHelp Drew use functions to simplify his code. \r\n\r\n1) **Define** a new function in your workspace. [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:procedures_defnoreturn)\r\n2) Drag Drew's clap beat into the new function. [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id-up-inside:repeat_workspace) \r\n3) **Call** the function in Drew's original code. You'll need to call it more than once! [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id:play_workspace)\r\n\r\nAll of the blocks you need are already in the workspace. Some of the blocks are locked, but you can replace parts of his old code with new functions you create by dragging-and-dropping on top of it!",
+    "long_instructions": "### Karma Beats\r\n\r\nDrew made a remix of Karma using a custom backing track with the Clap effect and some rests. Now that he knows about functions, he wants to turn that beat into a function he can reuse:\r\n\r\n> I keep using this same code over and over, and it's so long. I want to make a function so it's easier to know what the code is doing everywhere I use it!\r\n\r\nDrew is using **abstraction** to hide the details of his repeating beat behind a simple function name, so his code is easier to read and reuse.\r\n\r\n**Your task:** Use abstraction to define a function that captures Drew's Clap beat, then replace repeated code in the remix by calling the function instead:\r\n\r\n1) **Define** a new function in your workspace. [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:procedures_defnoreturn)\r\n2) Drag Drew's clap beat into the new function. [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id-up-inside:repeat_workspace) \r\n3) **Call** the function in Drew's original code. You'll need to call it more than once! [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id:play_workspace)\r\n\r\nAll of the blocks you need are already in the workspace. Some of the blocks are locked, but you can replace parts of his old code with new functions you create by dragging-and-dropping on top of it!",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -941,10 +942,10 @@
     "bubble_choice_description": "Help Drew simplify his code for a remix of Karma that he made",
     "display_name": "Karma Remix",
     "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/denzel_kennedy_karma/denzel_kennedy_karma.jpg",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:39.540+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-explore-practice-y\\\"\"],\"cloned_from\":\"music-lab-functions-explore-practice-y\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:39.540+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-explore-practice-y\\\"\"],\"cloned_from\":\"music-lab-functions-explore-practice-y\"},{\"changed_at\":\"2025-06-12 21:05:07 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-24 21:06:16 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

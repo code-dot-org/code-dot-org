@@ -2,7 +2,7 @@
 @single_session
 Feature: Signing in and signing out
 
-@skip
+@pegasus_content
 Scenario: Student sign in from code.org
   Given I create a student named "Bob"
   And I set the cookie named "_loc_notice" to "1"
@@ -12,7 +12,7 @@ Scenario: Student sign in from code.org
   Then I click "#header_user_signin"
   And I wait to see "#signin"
   And I fill in username and password for "Bob"
-  And I click "#signin-button" to load a new page
+  And I press the first "#signin-button" element to load a new page
   Then I wait until I am on "http://studio.code.org/home"
   Then I wait to see "#header_user_menu"
   And I wait until element ".display_name" is visible

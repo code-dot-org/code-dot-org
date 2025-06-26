@@ -27,9 +27,14 @@ Parameters:
     Type: String
     Default: <%=rack_env?(:production) ? '\'\'' : stack_name %>
     Description: Subdomain name for corporate web site ("Pegasus").
+  # This domain name needs to be referenced both in Cloudformation and in the code for MarketingRouterLambda.
+  # As a result, it is declared here in Ruby so that it can be passed to the Lambda function.
+  # WARNING: Changing this value is NOT sufficient to change the value in the stack. It ONLY changes the default value.
+  # The value must be changed manually in the AWS Console or CLI, followed by an update to the stack. 
+  <% INTERNAL_MARKETING_DOMAIN_NAME = "code.marketing-sites.#{rack_env?(:production) ? 'code.org' : 'test-code.org'}" %>
   InternalMarketingDomainName:
     Type: String
-    Default: <%="code.marketing-sites.#{rack_env?(:production) ? 'code.org' : 'dev-code.org'}"%>
+    Default: <%=INTERNAL_MARKETING_DOMAIN_NAME %>
     Description: Interim domain name of the Contentful CMS-based marketing site. The DNS record for code.org still points to Pegasus, which dynamically routes some requests to the new Contentful site. This parameter is intended for internal routing and should not be used outside that context.
   HourOfCodeBaseDomainName:
     Type: String
@@ -410,9 +415,7 @@ Resources:
     Properties:
       Description: 'Lambda for dynamically routing marketing traffic to different origins based on the URL path'
       FunctionName: !Sub "${AWS::StackName}-marketing-router"
-      # The JS file for this function depends on the Sub function to inject the value of MarketingDomainName
-      Code: 
-        ZipFile: !Sub <%=inline_js('lambdas/marketing-router/index.js', uglify: false) %>
+      Code: <%=zip_directory('marketing-router', environment_variables: {marketingDomain: INTERNAL_MARKETING_DOMAIN_NAME}) %>
       Handler: index.handler
       Runtime: nodejs22.x
       Role: !GetAtt MarketingRouterLambdaRole.Arn

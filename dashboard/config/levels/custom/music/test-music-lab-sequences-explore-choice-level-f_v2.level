@@ -510,9 +510,10 @@
     },
     "bubble_choice_description": "Help Annie simplify her code so her song sounds good and not so chaotic!",
     "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/pop/pop.png",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:30.448+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-choice-level-f\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-choice-level-f\"},{\"changed_at\":\"2025-06-06 21:40:59 +0000\",\"changed\":[\"long_instructions\",\"exemplar_settings\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-06 21:42:21 +0000\",\"changed\":[\"exemplar_settings\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-06 21:42:56 +0000\",\"changed\":[\"exemplar_settings\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:30.448+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-choice-level-f\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-choice-level-f\"},{\"changed_at\":\"2025-06-06 21:40:59 +0000\",\"changed\":[\"long_instructions\",\"exemplar_settings\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-06 21:42:21 +0000\",\"changed\":[\"exemplar_settings\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-06 21:42:56 +0000\",\"changed\":[\"exemplar_settings\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-12 15:11:13 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
