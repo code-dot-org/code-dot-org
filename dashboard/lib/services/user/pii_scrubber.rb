@@ -28,6 +28,7 @@ module Services
           scrub_legacy_data
           mark_scrubbed
           @user.save!
+          scrub_external_data
         end
       end
 
@@ -55,7 +56,6 @@ module Services
         # Users might have multiple accounts with the same email address.
         # If there is a live user with the same email, these data points will not be scrubbed.
         if email.present? && ::User.find_by_email(email).blank?
-          MailJet.delete_contact(email) if email.present? # Removes the contact from MailJet
           EmailPreference.where(email: email).destroy_all
           census_submissions = Census::CensusSubmission.where(submitter_email_address: email)
           csfms = Census::CensusSubmissionFormMap.where(census_submission_id: census_submissions.pluck(:id))
@@ -100,6 +100,12 @@ module Services
           delete_accounts_helper.purge_contact_rollups(email)
         end
         delete_accounts_helper.clean_pegasus_forms_for_user(user)
+      end
+
+      # Removes any third-party data that requires an API call. Called after
+      # other methods since it is not reversible.
+      private def scrub_external_data
+        MailJet.delete_contact(email) if email.present? && ::User.find_by_email(email).blank?
       end
 
       private def mark_scrubbed
