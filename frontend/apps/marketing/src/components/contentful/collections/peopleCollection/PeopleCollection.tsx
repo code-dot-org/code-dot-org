@@ -103,9 +103,8 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({
                           'fit=fill&w=128&h=128&r=max',
                         ) || PLACEHOLDER_IMAGE_URL
                       }
-                      alt={name || ''}
+                      alt=""
                       loading="lazy"
-                      role="presentation"
                     />
                   </Box>
                 )}
