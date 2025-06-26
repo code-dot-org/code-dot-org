@@ -1,6 +1,9 @@
 import $ from 'jquery';
 
-import {OPEN_ENDED_LEGACY_PROJECT_TYPES} from '@cdo/apps/constants';
+import {
+  OPEN_ENDED_LEGACY_PROJECT_TYPES,
+  OPEN_ENDED_PROJECTS_YOUNG_AGE,
+} from '@cdo/apps/constants';
 import firehoseClient from '@cdo/apps/metrics/firehose';
 import {getGlobalEditionRegion} from '@cdo/apps/util/globalEdition';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -1965,6 +1968,20 @@ function fetchShareFailure(resolve) {
   });
 }
 
+function fetchPrivacyProfanityViolations(resolve) {
+  channels.fetch(current.id + '/privacy-profanity', (err, data) => {
+    // data.has_violation is 0 or true, coerce to a boolean.
+    currentHasPrivacyProfanityViolation =
+      (data && !!data.has_violation) || currentHasPrivacyProfanityViolation;
+    resolve();
+    if (err) {
+      // Throw an error so that things like New Relic see this. This shouldn't
+      // affect anything else.
+      throw err;
+    }
+  });
+}
+
 /**
  * @param project
  * @returns {Promise} A Promise which resolves when all network calls complete.
@@ -1974,6 +1991,10 @@ function fetchAbuseScoreAndPrivacyViolations(project) {
     new Promise(fetchAbuseScore),
     new Promise(fetchShareFailure),
   ];
+
+  if (OPEN_ENDED_PROJECTS_YOUNG_AGE.includes(project.getStandaloneApp())) {
+    promises.push(new Promise(fetchPrivacyProfanityViolations));
+  }
 
   // If open-ended project type, check if project owner's sharing is disabled.
   if (OPEN_ENDED_LEGACY_PROJECT_TYPES.includes(project.getStandaloneApp())) {

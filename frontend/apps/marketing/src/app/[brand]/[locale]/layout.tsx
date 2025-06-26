@@ -1,3 +1,5 @@
+import {ThemeProvider} from '@mui/material';
+import {AppRouterCacheProvider} from '@mui/material-nextjs/v15-appRouter';
 import {GoogleAnalytics} from '@next/third-parties/google';
 
 import Footer from '@/components/footer';
@@ -14,6 +16,7 @@ import OneTrustLoader from '@/providers/onetrust/OneTrustLoader';
 import OneTrustProvider from '@/providers/onetrust/OneTrustProvider';
 import {generateBootstrapValues} from '@/providers/statsig/statsig-backend';
 import StatsigProvider from '@/providers/statsig/StatsigProvider';
+import {getMuiTheme} from '@/themes';
 
 export default async function Layout({
   children,
@@ -29,32 +32,37 @@ export default async function Layout({
   const statsigBootstrapValues = await generateBootstrapValues();
   const statsigClientKey = process.env.STATSIG_CLIENT_KEY;
   const localeConfig = SUPPORTED_LOCALES_MAP.get(locale);
+  const theme = getMuiTheme(brand);
 
   return (
     <html lang={locale} dir={localeConfig?.isRTL ? 'rtl' : 'ltr'}>
       <body>
-        <EnvironmentLoader />
-        <NewRelicLoader />
-        <OneTrustLoader brand={brand} />
-        <LocalizeLoader brand={brand} locale={locale} />
+        <AppRouterCacheProvider>
+          <ThemeProvider theme={theme}>
+            <EnvironmentLoader />
+            <NewRelicLoader />
+            <OneTrustLoader brand={brand} />
+            <LocalizeLoader brand={brand} locale={locale} />
 
-        <OneTrustProvider>
-          {googleAnalyticsMeasurementId && (
-            <GoogleAnalytics gaId={googleAnalyticsMeasurementId} />
-          )}
-          <StatsigProvider
-            stage={getStage()}
-            clientKey={statsigClientKey}
-            values={statsigBootstrapValues}
-          >
-            <Header />
-            {children}
+            <OneTrustProvider>
+              {googleAnalyticsMeasurementId && (
+                <GoogleAnalytics gaId={googleAnalyticsMeasurementId} />
+              )}
+              <StatsigProvider
+                stage={getStage()}
+                clientKey={statsigClientKey}
+                values={statsigBootstrapValues}
+              >
+                <Header />
+                {children}
 
-            <Footer locale={locale} />
-          </StatsigProvider>
-        </OneTrustProvider>
+                <Footer locale={locale} />
+              </StatsigProvider>
+            </OneTrustProvider>
 
-        <OrganizationJsonLd brand={brand} />
+            <OrganizationJsonLd brand={brand} />
+          </ThemeProvider>
+        </AppRouterCacheProvider>
       </body>
     </html>
   );
