@@ -621,10 +621,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     );
   };
 
-  extendedWorkspaceSvg.isReadOnly = function () {
-    return blocklyWrapper.readOnly || this.options.readOnly;
-  };
-
   // Used in levels when starting over or resetting Version History
   const googleBlocklyBlocklyClear = blocklyWrapper.WorkspaceSvg.prototype.clear;
   extendedWorkspaceSvg.clear = function () {

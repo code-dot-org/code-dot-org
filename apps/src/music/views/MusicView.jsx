@@ -322,18 +322,33 @@ class UnconnectedMusicView extends React.Component {
     this.setExemplarPlaybackEvents();
 
     if (AppConfig.getValue('js-editor') !== 'true') {
+      const isSubmittable = this.props.levelProperties.submittable;
       this.props.isPlayView
         ? this.musicBlocklyWorkspace.initHeadless()
         : this.musicBlocklyWorkspace.init(
             document.getElementById(BLOCKLY_DIV_ID),
             this.onBlockSpaceChange,
-            this.props.isReadOnlyWorkspace,
+            // Initializing the workspace in a read-only state means the toolbox will not be created.
+            // On submittable levels, we have the ability to toggle the read-only state mid-level,
+            // so we need to initialize the workspace with the toolbox available, and toggle the read-only state
+            // afterwards.
+            !isSubmittable && this.props.isReadOnlyWorkspace,
             toolboxAllowList,
             this.props.isRtl,
             this.props.blockMode,
             localizedToolboxDefinition,
             this.props.levelProperties?.enableBlocklyKeyboardNavigation
           );
+
+      if (
+        !this.props.isPlayView &&
+        isSubmittable &&
+        this.props.isReadOnlyWorkspace
+      ) {
+        // If this is a submittable level and the workspace is read-only (i.e. the user has submitted),
+        // set the read-only state to true.
+        this.musicBlocklyWorkspace.setIsReadOnly(true);
+      }
     }
 
     this.props.setShowInstructions(
