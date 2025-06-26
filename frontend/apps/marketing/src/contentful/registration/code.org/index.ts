@@ -4,6 +4,9 @@ import ActionBlock, {
 import FullWidthActionBlock, {
   FullWidthActionBlockContentfulComponentDefinition,
 } from '@/components/contentful/actionBlocks/fullWidthActionBlock';
+import AdoptionMap, {
+  AdoptionMapContentfulComponentDefinition,
+} from '@/components/contentful/adoptionMap';
 import AFEEligibility, {
   AFEEligibilityContentfulComponentDefinition,
 } from '@/components/contentful/afeEligibility';
@@ -103,6 +106,13 @@ const contentfulRegistration = {
     {
       component: ActionBlockCarousel,
       definition: ActionBlockCarouselContentfulComponentDefinition,
+    },
+    {
+      component: AdoptionMap,
+      definition: AdoptionMapContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
     },
     {
       component: AFEEligibility,

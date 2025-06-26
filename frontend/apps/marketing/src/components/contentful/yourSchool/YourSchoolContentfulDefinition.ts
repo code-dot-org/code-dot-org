@@ -2,13 +2,13 @@ import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 
 export const YourSchoolContentfulComponentDefinition: ComponentDefinition = {
   id: 'yourSchool',
-  name: 'Your School Section',
+  name: 'Census Survey + Map',
   category: '08: Advanced',
   thumbnailUrl:
     'https://contentful-images.code.org/90t6bu6vlf76/7AQEnvhSJQ8soeLBW59OPt/039542002c637180f656f56b3ab2598c/component_your_school_thumbnail.png',
   tooltip: {
     description:
-      'This component embeds the interactive “Your School” map and survey page sections is intended for use on a specific page.',
+      'This component embeds the interactive adoption map and census survey sections (intended for the “Your School” page).',
     imageUrl:
       'https://contentful-images.code.org/90t6bu6vlf76/4z6O754KxXEBMWCpnYJJ9f/e6009ab7a2326507075431ccfc8e82b3/component_your_school_tooltip.png',
   },
