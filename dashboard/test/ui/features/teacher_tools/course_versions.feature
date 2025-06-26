@@ -68,7 +68,7 @@ Scenario: Versions warning announcement on script overview page
   And element "#uitest-version-selector" is not visible
   Then element ".announcement-notification:contains(newer version)" does not exist
 
-  Given I am assigned to unit "ui-test-versioned-script-2017"
+  Given I am assigned to course "ui-test-versioned-script-2017" and unit "ui-test-versioned-script-2017"
   When I am on "http://studio.code.org/courses/ui-test-versioned-script-2017/units/1/next"
   And I wait until current URL contains "/courses/ui-test-versioned-script-2017/units/1/lessons/1/levels/1"
 
@@ -107,7 +107,7 @@ Scenario: Switch versions using dropdown on script overview page
   And I wait until element "#script-title" is visible
   And element "#uitest-version-selector" is not visible
 
-  Given I am assigned to unit "ui-test-versioned-script-2017"
+  Given I am assigned to course "ui-test-versioned-script-2017" and unit "ui-test-versioned-script-2017"
   When I am on "http://studio.code.org/courses/ui-test-versioned-script-2017/units/1"
   And I wait until element "#script-title" is visible
   And element "#uitest-version-selector" is visible

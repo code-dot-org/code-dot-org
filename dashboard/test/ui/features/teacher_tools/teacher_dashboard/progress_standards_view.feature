@@ -5,8 +5,8 @@ Feature: Viewing and Printing Standards Progress
   @properties_encryption_key
   Scenario: Viewing standards progress in Progress Tab of Teacher Dashboard
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to unit "coursea-2019"
-    Given I am assigned to unit "allthethings"
+    Given I am assigned to course "coursea-2019" and unit "coursea-2019"
+    Given I am assigned to course "allthethingscourse" and unit "allthethings"
 
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
