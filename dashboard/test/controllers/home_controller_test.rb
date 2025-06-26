@@ -25,7 +25,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test "teacher with assigned course/script redirected to index" do
     teacher = create :teacher
-    script = create :script
+    script = create(:script, :in_single_unit_course)
     sign_in teacher
     teacher.assign_script(script)
     assert_equal script, teacher.most_recently_assigned_script
@@ -46,7 +46,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test "student with progress but not an assigned script will go to index" do
     student = create :student
-    script = create :script
+    script = create(:script, :in_single_unit_course)
     sign_in student
     User.any_instance.stubs(:script_with_most_recent_progress).returns(script)
     assert_equal script, student.script_with_most_recent_progress
@@ -137,7 +137,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student with most recent assigned script only associated with archived sections they are enrolled in will go to index" do
-    script = create :script
+    script = create(:script, :in_single_unit_course)
     section = create :section, script: script
     student = create(:follower, section: section).student_user
     section.hidden = 1
@@ -152,7 +152,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student with most recent assigned script only associated with archived sections they are enrolled in then recent progress in that script will go to index" do
-    script = create :script
+    script = create(:script, :in_single_unit_course)
     section = create :section, script: script
     student = create(:follower, section: section).student_user
     section.hidden = 1
@@ -170,6 +170,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test "student without pilot access will go to index" do
     pilot_script = create :script, pilot_experiment: 'pilot-experiment'
+    create :single_unit_course, unit: pilot_script, pilot_experiment: 'pilot-experiment'
     section = create :section, script: pilot_script
     student = create(:follower, section: section).student_user
     sign_in student

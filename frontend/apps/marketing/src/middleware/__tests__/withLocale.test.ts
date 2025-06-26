@@ -14,6 +14,10 @@ jest.mock('@/config/stage', () => ({
   getStage: jest.fn(),
 }));
 
+jest.mock('next/headers', () => ({
+  cookies: jest.fn().mockReturnValue({get: jest.fn()}),
+}));
+
 describe('withLocale middleware', () => {
   const cookieMock = {
     set: jest.fn(),
@@ -83,6 +87,9 @@ describe('withLocale middleware', () => {
     expect(response?.headers.get('location')).toBe(
       'https://test.code.org/zh-TW/home',
     );
+    expect(response?.headers.get('Cache-Control')).toEqual(
+      's-maxage=3600, stale-while-revalidate=31535100',
+    );
   });
 
   it('should redirect to the locale path if no locale is present in the path but has accept-language haeder', async () => {
@@ -103,6 +110,9 @@ describe('withLocale middleware', () => {
     expect(response).toBeInstanceOf(NextResponse);
     expect(response?.headers.get('location')).toBe(
       'https://test.code.org/zh-TW/home',
+    );
+    expect(response?.headers.get('Cache-Control')).toEqual(
+      's-maxage=3600, stale-while-revalidate=31535100',
     );
   });
 
@@ -141,7 +151,26 @@ describe('withLocale middleware', () => {
 
     expect(response).toBeInstanceOf(NextResponse);
     expect(response?.headers.get('location')).toBe(
-      'https://code.marketing-sites.local/zh-TW/home',
+      'https://code.marketing-sites.local/zh-TW',
+    );
+  });
+
+  it('should redirect to dashboard if _user_type is set', async () => {
+    const request = {
+      nextUrl: {pathname: ''},
+      cookies: {get: jest.fn().mockReturnValue({value: '_user_type=student'})},
+      headers: {
+        get: jest.fn(),
+      },
+      url: 'https://code.marketing-sites.local',
+    } as unknown as NextRequest;
+
+    const response = await withLocale(next)(request, mockEvent);
+
+    expect(response).toBeInstanceOf(NextResponse);
+    expect(response?.headers.get('location')).toContain('studio.code.org');
+    expect(response?.headers.get('Cache-Control')).toEqual(
+      's-maxage=3600, stale-while-revalidate=31535100',
     );
   });
 

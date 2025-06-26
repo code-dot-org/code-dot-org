@@ -7,22 +7,23 @@ const mockSchoolId = '1234';
 const mockSchoolName = 'Test School';
 jest.mock(
   '@/components/contentful/schoolSearchFieldset',
-  () => (props: {onSelect: (id: string, name: string) => void}) => (
-    <label>
-      Select School
-      <select
-        onChange={e =>
-          props.onSelect(
-            e.target.value,
-            e.target.options[e.target.selectedIndex].text,
-          )
-        }
-      >
-        <option value="">Select</option>
-        <option value={mockSchoolId}>{mockSchoolName}</option>
-      </select>
-    </label>
-  ),
+  () =>
+    (props: {onSelect: (school: {name: string; nces_id: string}) => void}) => (
+      <label>
+        Select School
+        <select
+          onChange={e =>
+            props.onSelect({
+              name: e.target.options[e.target.selectedIndex].text,
+              nces_id: e.target.value,
+            })
+          }
+        >
+          <option value="">Select</option>
+          <option value={mockSchoolId}>{mockSchoolName}</option>
+        </select>
+      </label>
+    ),
 );
 
 jest.mock('@statsig/react-bindings', () => ({

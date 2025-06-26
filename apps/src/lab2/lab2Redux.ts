@@ -51,7 +51,6 @@ import {LevelPropertiesValidator} from './responseValidators';
 import {
   Channel,
   LevelProperties,
-  ProjectManagerStorageType,
   ProjectSources,
   PartialUserAppOptions,
   Validation,
@@ -235,12 +234,10 @@ export const setUpWithLevel = createAsyncThunk<
     const projectManager =
       payload.channelId && isProjectLevel
         ? ProjectManagerFactory.getProjectManager(
-            ProjectManagerStorageType.REMOTE,
             payload.channelId,
             thunkAPI.getState().lab.isShareView
           )
         : await ProjectManagerFactory.getProjectManagerForLevel(
-            ProjectManagerStorageType.REMOTE,
             payload.levelId,
             payload.userId,
             payload.scriptId,

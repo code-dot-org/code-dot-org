@@ -22,6 +22,7 @@ class SkillsController < ApplicationController
     @skill = Skill.new(skill_params)
 
     if @skill.save
+      @skill.write_serialization
       render json: {status: 'success', message: 'Skill saved successfully'}, status: :created
     else
       render json: {status: 'error', message: @skill.errors.full_messages.to_sentence}, status: :bad_request

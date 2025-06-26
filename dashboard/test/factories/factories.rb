@@ -1189,6 +1189,16 @@ FactoryBot.define do
       is_course {true}
     end
 
+    trait :in_single_unit_course do
+      published_state {nil}
+      instruction_type {nil}
+      participant_audience {nil}
+      instructor_audience {nil}
+      after(:create) do |unit|
+        create(:single_unit_course, unit: unit)
+      end
+    end
+
     trait :with_lessons do
       transient do
         lessons_count {2}
@@ -1580,7 +1590,7 @@ FactoryBot.define do
 
   factory :user_script do
     user {create :student}
-    script {create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+    script {create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable).first_unit}
   end
 
   factory :user_school_info do
@@ -2324,5 +2334,9 @@ FactoryBot.define do
     association :user
     sign_in_at {Time.now.utc}
     sign_in_count {1}
+  end
+
+  factory :user_data_retention_status, class: 'User::DataRetentionStatus' do
+    association :user
   end
 end

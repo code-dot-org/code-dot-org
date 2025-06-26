@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T03:00:58.000Z",
   "level_num": "custom",
@@ -190,7 +191,7 @@
       "isPredictLevel": false
     },
     "display_name": "Layering with Functions",
-    "long_instructions": "### Layering with Functions\r\n\r\nCreate a song that \"builds\" by adding new tracks to your song with each layer. You must use functions to create this effect by calling functions inside each other so each layer is built by adding one new thing to the previous layer:\r\n\r\n1) The `firstLayer` function plays a beat and a bass track together\r\n2) The `secondLayer` function calls the `firstLayer` function and adds a lead\r\n3) The `thirdLayer` function calls the `secondLayer` function and adds a different lead\r\n4) The `fourthLayer` function calls the `thirdLayer` function and adds an effect\r\n\r\nWhen you're finished, your code should be a series of function calls and your timeline should look like this:\r\n\r\n![](https://images.code.org/79caadc704861380cac4cfe38459889d-image-1744950487285.png)",
+    "long_instructions": "### Layering with Functions\r\n\r\n**Define:** You've been asked to create a song that builds over time,adding a new layer with each section. You'll use functions to structure your music so that each part builds on the one before it.\r\n\r\n**Prepare:** Plan out which beat, bass, leads, and effect you want to use. Think about how each new layer will change the sound of your song and what order they should come in. Listen to the example below for what this could sound like!\r\n\r\n![](https://images.code.org/79caadc704861380cac4cfe38459889d-image-1744950487285.png)\r\n\r\n**Try:** Create your functions in this order:\r\n\r\n1. `firstLayer`: plays a beat and bass together\r\n2. `secondLayer`: calls `firstLayer` and adds a lead\r\n3. `thirdLayer`: calls `secondLayer` and adds a different lead\r\n4. `fourthLayer`: calls `thirdLayer` and adds an effect\r\n\r\nOnce you have all your functions, call them in order in your code:\r\n\r\n![](https://images.code.org/7dca0992b1859ec9330a8ad7e0a5c29a-image-1750879316803.png)\r\n\r\n**Reflect:** Listen to your song. Do the layers build smoothly? Does each new sound add something interesting? In order to complete this level, your remix must include:\r\n\r\n- Four functions, one for each layer\r\n- Functions that call each other in the correct order to build the song layer by layer",
     "bubble_choice_description": "Create a song that \"builds\" by adding new tracks to your song with each layer.",
     "validations": [
       {
@@ -227,8 +228,7 @@
     "name_suffix": "_v2",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:58.125+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-practiceB\\\"\"],\"cloned_from\":\"music-lab-functions-practice-practiceB\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:58.125+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-practiceB\\\"\"],\"cloned_from\":\"music-lab-functions-practice-practiceB\"},{\"changed_at\":\"2025-06-25 19:18:34 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-25 19:19:38 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-25 19:22:04 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

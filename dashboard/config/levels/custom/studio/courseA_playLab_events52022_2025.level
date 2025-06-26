@@ -68,7 +68,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-04-14T15:28:09.839+00:00\",\"changed\":[\"cloned from \\\"courseA_playLab_events52022_2024\\\"\"],\"cloned_from\":\"courseA_playLab_events52022_2024\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-04-14T15:28:09.839+00:00\",\"changed\":[\"cloned from \\\"courseA_playLab_events52022_2024\\\"\"],\"cloned_from\":\"courseA_playLab_events52022_2024\"},{\"changed_at\":\"2025-06-25 14:11:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 4,
     "events": 3
@@ -77,43 +77,42 @@
   <blocks>
     <toolbox_blocks>
       <xml>
-        <block type="when_run"/>
-        <block type="studio_whenArrow" id="callMeUp">
-          <title name="VALUE">up</title>
+        <block type="studio_whenArrow" id="callMeUp" x="0" y="81">
+          <field name="VALUE">up</field>
         </block>
-        <block type="studio_whenSpriteClicked">
-          <title name="SPRITE">1</title>
+        <block type="studio_whenSpriteClicked" id="5.A-m{E,QF3JYJ0j2kBm" x="0" y="176">
+          <field name="SPRITE">1</field>
         </block>
-        <block type="studio_move">
-          <title name="SPRITE">1</title>
-          <title name="DIR">1</title>
+        <block type="studio_move" id="rxge:uxjO9JNtJYnpf68" x="0" y="274">
+          <field name="SPRITE">1</field>
+          <field name="DIR">1</field>
         </block>
-        <block type="studio_setSpriteEmotion">
-          <title name="SPRITE">1</title>
-          <title name="VALUE">2</title>
+        <block type="studio_setSpriteEmotion" id="a^nE9P%9qaAMX}!gGqtv" x="0" y="372">
+          <field name="SPRITE">1</field>
+          <field name="VALUE">2</field>
         </block>
-        <block type="studio_wait">
-          <title name="VALUE">1000</title>
+        <block type="studio_wait" id="|(Dm3qYKog{Ctrpy23!+" x="0" y="470">
+          <field name="VALUE">1000</field>
         </block>
-        <block type="studio_saySpriteChoices">
-          <title name="SPRITE">1</title>
-          <title name="VALUE">Hi there.</title>
+        <block type="studio_saySpriteChoices" id="+/bA!Ar]W1/pe$v-R8Pi" x="0" y="549">
+          <field name="SPRITE">1</field>
+          <field name="VALUE">Hi there.</field>
         </block>
-        <block type="studio_changeScore"/>
-        <block type="studio_playSound" id="callMe">
-          <title name="SOUND">random</title>
+        <block type="studio_changeScore" id="kd.?g?2}R]`HH;,pcq6w" x="0" y="647"/>
+        <block type="studio_playSound" id="callMe" x="0" y="726">
+          <field name="SOUND">random</field>
         </block>
-        <block type="studio_vanish">
-          <title name="SPRITE">1</title>
+        <block type="studio_vanish" id="4hXYzHPIS)70^KqQVW+R" x="0" y="805">
+          <field name="SPRITE">1</field>
         </block>
-        <block type="studio_setBackground">
-          <title name="VALUE">random</title>
+        <block type="studio_setBackground" id="=6.r7Lw71y9VeUm[7!jH" x="0" y="903">
+          <field name="VALUE">random</field>
         </block>
-        <block type="studio_setSprite">
-          <title name="VALUE">"visible"</title>
-          <title name="SPRITE">0</title>
+        <block type="studio_setSprite" id="]SC]Y=FgBRFUar4]EP3]" x="0" y="1001">
+          <field name="VALUE">"visible"</field>
+          <field name="SPRITE">0</field>
         </block>
-        <block type="studio_repeatForever"/>
+        <block type="studio_repeatForever" id="6@~8;|a?%rNFHZr{$w8P" x="0" y="1099"/>
       </xml>
     </toolbox_blocks>
     <solution_blocks>
