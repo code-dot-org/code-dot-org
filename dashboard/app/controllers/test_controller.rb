@@ -79,10 +79,7 @@ class TestController < ApplicationController
     raise "Unit not found for course #{unit_group.name} at position #{unit_position}" unless unit_group_unit
     unit = unit_group_unit.script
 
-    section =
-      unit_group.single_unit_course? ?
-        Section.create!(name: "New Section", user: user, script: unit, course_id: unit_group.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student) :
-        Section.create!(name: "New Section", user: user, script: unit, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    section = Section.create!(name: "New Section", user: user, script: unit, unit_group: unit_group, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
 
     render json: {section_code: section.code}
   end
