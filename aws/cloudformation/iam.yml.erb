@@ -1439,6 +1439,44 @@ roles.each do |name, config| %>
                   - application-autoscaling:DescribeScalableTargets
                   - application-autoscaling:DeregisterScalableTarget
                 Resource: '*'
+
+              # ElastiCache CREATE actions - allowed on any resource
+              - Sid: AllowElastiCacheCreateActions
+                Effect: Allow
+                Action:
+                  - elasticache:CreateReplicationGroup
+                  - elasticache:CreateCacheSubnetGroup
+                  - elasticache:CreateCacheParameterGroup
+                  - elasticache:AddTagsToResource
+                  - elasticache:ModifyReplicationGroup
+                  - elasticache:ModifyCacheSubnetGroup
+                  - elasticache:ModifyCacheParameterGroup
+                Resource: '*'
+
+              # ElastiCache UPDATE/DELETE actions - restricted to tagged resources
+              - Sid: AllowElastiCacheUpdateDeleteActionsOnTaggedResources
+                Effect: Allow
+                Action:
+                  - elasticache:DeleteReplicationGroup
+                  - elasticache:DeleteCacheSubnetGroup
+                  - elasticache:DeleteCacheParameterGroup
+                  - elasticache:RemoveTagsFromResource
+                Resource: '*'
+                Condition:
+                  StringEquals:
+                    'aws:ResourceTag/environment-type': <%=environment_type%>
+
+              # ElastiCache DESCRIBE actions - allowed on any resource
+              - Sid: AllowElastiCacheDescribeActions
+                Effect: Allow
+                Action:
+                  - elasticache:DescribeReplicationGroups
+                  - elasticache:DescribeCacheClusters
+                  - elasticache:DescribeCacheSubnetGroups
+                  - elasticache:DescribeCacheParameterGroups
+                  - elasticache:DescribeCacheParameters
+                  - elasticache:ListTagsForResource
+                Resource: '*'
 <% end %>
 
 Outputs:
