@@ -26,18 +26,18 @@
   scrollbar-color: var(--neutral-gray-30) var(--neutral-base-white);
 
   // webkit-scrollbar is used by Chrome, Safari, and Edge.
-  ::-webkit-scrollbar {
+  &::-webkit-scrollbar {
     background: var(--neutral-base-white);
     width: 10px;
     height: 10px;
   }
 
-  ::-webkit-scrollbar-thumb {
+  &::-webkit-scrollbar-thumb {
     background: var(--neutral-gray-30);
     border-radius: 10px;
   }
 
-  ::-webkit-scrollbar-corner {
+  &::-webkit-scrollbar-corner {
     background: var(--neutral-base-white);
   }
 }
