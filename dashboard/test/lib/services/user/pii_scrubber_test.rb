@@ -108,7 +108,7 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
         scrub_pii
         user.reload
         _(user.email).must_equal ''
-        _(user.hashed_email).must_equal ''
+        _(user.hashed_email).must_be_nil
       end
     end
   end
