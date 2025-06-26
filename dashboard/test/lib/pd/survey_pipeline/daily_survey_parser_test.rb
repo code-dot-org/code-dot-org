@@ -11,9 +11,9 @@ module Pd::SurveyPipeline
     setup_all do
       @ws_form_id = "11000000000000".to_i
 
-      ws = create :workshop, subject: Pd::SharedWorkshopConstants::SUBJECT_CSP_WORKSHOP_1_2
+      ws = create :csf_deep_dive_workshop
       teacher = create :teacher
-      day = 1
+      day = 0
 
       @ws_survey_questions = create :pd_survey_question, form_id: @ws_form_id,
         questions: '[' \

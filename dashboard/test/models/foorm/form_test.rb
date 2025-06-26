@@ -60,10 +60,8 @@ class Foorm::FormTest < ActiveSupport::TestCase
   end
 
   test 'submissions_to_csv formats single general submission' do
-    workshop = build(:csf_101_workshop)
-    workshop.save(validate: false)
     form = create :foorm_form_csf_intro_post_survey
-    submission_workshop_metadata = create :csf_intro_post_workshop_submission, :answers_low, pd_workshop: workshop
+    submission_workshop_metadata = create :csf_intro_post_workshop_submission, :answers_low
     submission = submission_workshop_metadata.foorm_submission
 
     other_headers = {
@@ -121,8 +119,7 @@ class Foorm::FormTest < ActiveSupport::TestCase
 
   test 'submissions_to_csv formats submission of general and facilitator specific questions' do
     form = create :foorm_form_csf_intro_post_survey
-    workshop = build(:csf_101_workshop)
-    workshop.save(validate: false)
+    workshop = create(:csf_101_workshop)
     user = create(:teacher)
     facilitator_submission_workshop_metadata = create(:csf_intro_post_facilitator_workshop_submission, :answers_low, user: user, pd_workshop: workshop)
     general_submission_workshop_metadata = create(:csf_intro_post_workshop_submission, :answers_low, user: user, pd_workshop: workshop)
@@ -156,14 +153,11 @@ class Foorm::FormTest < ActiveSupport::TestCase
 
   test 'submissions_to_csv formats multiple submissions where one did not answer facilitator-specific questions' do
     form = create :foorm_form_csf_intro_post_survey
-    workshop_1 = build(:csf_101_workshop)
-    workshop_1.save(validate: false)
-    workshop_2 = build(:csf_101_workshop)
-    workshop_2.save(validate: false)
+    workshop = create(:csf_101_workshop)
     user = create(:teacher)
-    facilitator_submission_workshop_metadata_1 = create(:csf_intro_post_facilitator_workshop_submission, :answers_low, user: user, pd_workshop: workshop_1)
-    general_submission_workshop_metadata_1 = create(:csf_intro_post_workshop_submission, :answers_low, user: user, pd_workshop: workshop_1)
-    general_submission_workshop_metadata_2 = create(:csf_intro_post_workshop_submission, :answers_low, pd_workshop: workshop_2)
+    facilitator_submission_workshop_metadata_1 = create(:csf_intro_post_facilitator_workshop_submission, :answers_low, user: user, pd_workshop: workshop)
+    general_submission_workshop_metadata_1 = create(:csf_intro_post_workshop_submission, :answers_low, user: user, pd_workshop: workshop)
+    general_submission_workshop_metadata_2 = create(:csf_intro_post_workshop_submission, :answers_low)
 
     general_submission_1 = general_submission_workshop_metadata_1.foorm_submission
     facilitator_submission_1 = facilitator_submission_workshop_metadata_1.foorm_submission
@@ -203,13 +197,12 @@ class Foorm::FormTest < ActiveSupport::TestCase
 
   test 'submissions_to_csv can be filtered with an array of submissions' do
     form = create :foorm_form_csf_intro_post_survey
-    workshop = build(:csf_101_workshop)
-    workshop.save(validate: false)
+    workshop = create(:csf_101_workshop)
     user = create(:teacher)
     # create multiple submissions
     facilitator_submission_workshop_metadata_1 = create(:csf_intro_post_facilitator_workshop_submission, :answers_low, user: user, pd_workshop: workshop)
     general_submission_workshop_metadata_1 = create(:csf_intro_post_workshop_submission, :answers_low, user: user, pd_workshop: workshop)
-    create(:csf_intro_post_workshop_submission, :answers_low, pd_workshop: workshop)
+    create(:csf_intro_post_workshop_submission, :answers_low)
 
     general_submission_1 = general_submission_workshop_metadata_1.foorm_submission
     facilitator_submission_1 = facilitator_submission_workshop_metadata_1.foorm_submission
@@ -246,8 +239,7 @@ class Foorm::FormTest < ActiveSupport::TestCase
 
   test 'submissions_to_csv filter will throw out invalid submissions' do
     form = create :foorm_form_csf_intro_post_survey
-    workshop = build(:csf_101_workshop)
-    workshop.save(validate: false)
+    workshop = create(:csf_101_workshop)
     user = create(:teacher)
     facilitator_submission_workshop_metadata_1 = create(:csf_intro_post_facilitator_workshop_submission, :answers_low, user: user, pd_workshop: workshop)
     general_submission_workshop_metadata_1 = create(:csf_intro_post_workshop_submission, :answers_low, user: user, pd_workshop: workshop)

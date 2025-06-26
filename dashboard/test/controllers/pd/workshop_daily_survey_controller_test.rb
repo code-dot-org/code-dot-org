@@ -509,36 +509,32 @@ module Pd
 
     private def setup_csf201_not_started_workshop
       @regional_partner = create :regional_partner
-      @csf201_not_started_workshop = build :csf_deep_dive_workshop,
+      @csf201_not_started_workshop = create :csf_deep_dive_workshop,
         regional_partner: @regional_partner,
         num_facilitators: 2
-      @csf201_not_started_workshop.save(validate: false)
     end
 
     private def setup_csf201_in_progress_workshop
       @regional_partner = create :regional_partner
-      @csf201_in_progress_workshop = build :csf_deep_dive_workshop,
+      @csf201_in_progress_workshop = create :csf_deep_dive_workshop,
         :in_progress,
         regional_partner: @regional_partner,
         num_facilitators: 2
-      @csf201_in_progress_workshop.save(validate: false)
     end
 
     private def setup_csf201_ended_workshop
       @regional_partner = create :regional_partner
-      @csf201_ended_workshop = build :csf_deep_dive_workshop,
+      @csf201_ended_workshop = create :csf_deep_dive_workshop,
         :ended,
         regional_partner: @regional_partner,
         num_facilitators: 2
-      @csf201_ended_workshop.save(validate: false)
     end
 
     private def setup_csf101_workshop
       @regional_partner = create :regional_partner
-      @csf101_workshop = build :csf_intro_workshop,
+      @csf101_workshop = create :csf_intro_workshop,
         regional_partner: @regional_partner,
         num_facilitators: 2
-      @csf101_workshop.save(validate: false)
 
       @csf101_enrollment = create :pd_enrollment, :from_user, workshop: @csf101_workshop
       @enrolled_csf101_teacher = @csf101_enrollment.user
