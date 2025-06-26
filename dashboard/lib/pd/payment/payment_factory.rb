@@ -7,8 +7,6 @@ module Pd::Payment
 
     def self.get_calculator_class(workshop)
       if workshop.funded
-        return PaymentCalculatorCSF if workshop.course == Pd::Workshop::COURSE_CSF
-
         return PaymentCalculatorStandard if [
           Pd::Workshop::COURSE_ECS,
           Pd::Workshop::COURSE_CSP,
