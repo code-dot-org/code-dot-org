@@ -36,11 +36,8 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
       const selections = predictResponse ? predictResponse.split(',') : [];
       if (e.target.checked) {
         selections.push(value);
-      } else {
-        const index = selections.indexOf(value);
-        if (index > -1) {
-          selections.splice(index, 1);
-        }
+      } else if (selections.includes(value)) {
+        selections.splice(selections.indexOf(value), 1);
       }
       setPredictResponse(selections.join(','));
     } else {
