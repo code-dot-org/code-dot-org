@@ -17,6 +17,7 @@ import {
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import lab2I18n from '@cdo/apps/lab2/locale';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {
   isPredictAnswerLocked,
@@ -282,7 +283,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     }
     return isValidating ? (
       <Button
-        text={codebridgeI18n.stopValidation()}
+        text={lab2I18n.stopValidation()}
         onClick={handleStop}
         color={'destructive'}
         iconLeft={{iconStyle: 'solid', iconName: 'square'}}
@@ -294,7 +295,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
       />
     ) : (
       <Button
-        text={codebridgeI18n.validate()}
+        text={lab2I18n.validate()}
         onClick={() => handleValidate()}
         type={'secondary'}
         disabled={shouldValidateBeDisabled}
