@@ -4,7 +4,7 @@ class Pd::WorkshopCertificateControllerTest < ActionController::TestCase
   setup do
     @user = create :teacher
     sign_in(@user)
-    @workshop = create :workshop, num_sessions: 1, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP
+    @workshop = create :workshop, num_sessions: 1, course: Pd::Workshop::COURSE_CSD
     @workshop.update_columns(name: nil)
     @enrollment = create :pd_enrollment, :with_attendance, workshop: @workshop
 
@@ -42,8 +42,7 @@ class Pd::WorkshopCertificateControllerTest < ActionController::TestCase
   # rubocop:disable Lint/UnderscorePrefixedVariableName
 
   test 'Generates certificate for CSF 101 workshop' do
-    workshop = build :csf_intro_workshop
-    workshop.save(validate: false)
+    workshop = create :csf_intro_workshop
     workshop.update_columns(name: nil)
     enrollment = create :pd_enrollment, :with_attendance, workshop: workshop
 
