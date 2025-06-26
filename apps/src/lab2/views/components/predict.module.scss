@@ -22,10 +22,10 @@
   box-sizing: border-box;
 
   // We use static colors for the scrollbar because textarea's background is always white.
-  // Firefox
+  // Chrome(>=v121), Edge and Firefox use scrollbar-color.
   scrollbar-color: var(--neutral-gray-30) var(--neutral-base-white);
 
-  // webkit-scrollbar is used by Chrome, Safari, and Edge.
+  // webkit-scrollbar is used by Safari.
   &::-webkit-scrollbar {
     background: var(--neutral-base-white);
     width: 10px;
