@@ -44,6 +44,7 @@ interface InstructionsPanelProps {
   onContinueOrFinish: () => void;
   bottomComponent?: React.ReactNode;
   noTextAnimation?: boolean;
+  isRunning?: boolean;
   levelProperties: LevelProperties;
   hasRun: boolean;
   hasEdited: boolean;
@@ -72,6 +73,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   useSecondaryFinishButton,
   bottomComponent,
   noTextAnimation,
+  isRunning,
   levelProperties,
   hasRun,
   hasEdited,
@@ -91,34 +93,16 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   const useMessageIndex = useSecondaryFinishButton ? undefined : messageIndex;
 
   const feedbackRef = useRef<HTMLDivElement>(null);
-  const runButton = document.querySelector('#run-button');
 
   useEffect(() => {
-    const checkRunButton = () => {
-      if (feedbackRef.current && runButton?.textContent === 'Run') {
-        feedbackRef.current.focus();
-        return true;
-      }
-      return false;
-    };
-
-    const observer = new MutationObserver(mutations => {
-      if (checkRunButton()) {
-        // Stop observing once the run button is found and has the text 'Run'
-        observer.disconnect();
-      }
-    });
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true,
-    });
-
-    // Cleanup observer on component unmount
-    return () => {
-      observer.disconnect();
-    };
-  }, [useMessage, canShowNextButton, runButton?.textContent]);
+    // Focus on the feedback message when it first becomes present and the program is not running.
+    // This ensures it will be read by screen readers.
+    // It's ok to focus after each run switch, as the message will also reappear when the user re-runs
+    // the program.
+    if (message && !isRunning) {
+      feedbackRef.current?.focus();
+    }
+  }, [message, isRunning]);
 
   return (
     <div

@@ -252,6 +252,8 @@ const AichatView: React.FunctionComponent<LabProps> = () => {
               >
                 <Instructions
                   className={moduleStyles.instructions}
+                  /** AI Chat doesn't have a traditional "run" state, so this is always false. */
+                  isRunning={false}
                   hasRun={hasSentMessage}
                   hasEdited={hasUpdatedCustomizations}
                 />

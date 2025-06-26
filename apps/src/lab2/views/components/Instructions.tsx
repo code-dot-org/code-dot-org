@@ -15,6 +15,8 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import InstructionsPanel from './InstructionsPanel';
 
 interface InstructionsProps {
+  /** Whether the lab is currently running (different labs may define this differently). */
+  isRunning: boolean;
   hasRun: boolean;
   hasEdited: boolean;
   /** If the instructions panel should be rendered vertically or horizontally. Defaults to vertical. */
@@ -40,6 +42,7 @@ interface InstructionsProps {
  * For Teachers Only, etc.
  */
 const Instructions: React.FunctionComponent<InstructionsProps> = ({
+  isRunning,
   hasRun,
   hasEdited,
   layout,
@@ -105,6 +108,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       useSecondaryFinishButton={useSecondaryFinishButton}
       onContinueOrFinish={() => dispatch(continueOrFinishLesson())}
       bottomComponent={bottomComponent}
+      isRunning={isRunning}
       levelProperties={levelProperties}
       hasRun={hasRun}
       hasEdited={hasEdited}
