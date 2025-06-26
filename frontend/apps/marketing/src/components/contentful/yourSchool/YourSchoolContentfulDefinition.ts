@@ -24,5 +24,27 @@ export const YourSchoolContentfulComponentDefinition: ComponentDefinition = {
         bindingSourceType: ['manual', 'entry'],
       },
     },
+    regionalPartnerURL: {
+      displayName: 'Regional Partner URL',
+      type: 'Text',
+      group: 'content',
+      description: 'The URL of the regional partner page.',
+      defaultValue: 'https://code.org/educate/regional-partner',
+      validations: {
+        required: true,
+        bindingSourceType: ['manual', 'entry'],
+      },
+    },
+    privacyPolicyURL: {
+      displayName: 'Privacy Policy URL',
+      type: 'Text',
+      group: 'content',
+      description: 'The URL of the privacy policy page.',
+      defaultValue: 'https://code.org/privacy',
+      validations: {
+        required: true,
+        bindingSourceType: ['manual', 'entry'],
+      },
+    },
   },
 };
