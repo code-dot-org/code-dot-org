@@ -1,83 +1,82 @@
 import {render, screen} from '@testing-library/react';
 
-import LogoCollection from '../PeopleCollection';
+import PeopleCollection, {PeopleCollectionProps} from '../PeopleCollection';
 
-jest.mock('@/selectors/contentful/getImage', () => ({
-  getAbsoluteImageUrl: jest.fn(() => 'https://example.com/logo.png'),
-}));
-
-const mockLogo = (overrides = {}) => ({
-  fields: {
-    title: 'First Logo',
-    logoImage: {
-      fields: {
-        title: 'First Brand',
-      },
+const mockPeople: PeopleCollectionProps['people'] = [
+  {
+    fields: {
+      name: 'Clarissa',
+      title: 'CEO',
+      bio: 'Clarissa is the CEO.',
     },
-    primaryLinkRef: {
-      fields: {
-        primaryTarget: 'https://first.com',
-      },
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } as any,
+  {
+    fields: {
+      name: 'Alex',
+      image: {
+        fields: {
+          file: {url: '/alex.jpg'},
+          title: 'Alex Image',
+        },
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      } as any,
+      title: 'Engineer',
+      bio: 'Alex is an engineer.',
+      personalLink: {
+        fields: {
+          primaryTarget: 'https://alex.com',
+        },
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      } as any,
     },
-    ...overrides,
-  },
-});
-
-const mockLogos = [
-  mockLogo(),
-  mockLogo({
-    title: 'Second Logo',
-    logoImage: {fields: {title: 'Second Brand'}},
-    primaryLinkRef: {fields: {primaryTarget: 'https://second.com'}},
-  }),
-  mockLogo({
-    title: 'Third Logo',
-    logoImage: {fields: {title: 'Third Brand'}},
-    primaryLinkRef: {fields: {primaryTarget: ''}},
-  }),
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } as any,
+  {
+    fields: {
+      name: 'Bob',
+      title: 'Designer',
+      bio: 'Bob is a designer.',
+    },
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } as any,
 ];
 
-describe('LogoCollection', () => {
-  it('renders logos', () => {
-    const logos = mockLogos;
-    render(
-      <LogoCollection
-        logos={logos as Parameters<typeof LogoCollection>[0]['logos']}
-      />,
-    );
-    expect(screen.getAllByRole('img')).toHaveLength(3);
+describe('PeopleCollection', () => {
+  it('renders people with all fields', () => {
+    render(<PeopleCollection people={mockPeople} />);
+    expect(screen.getByText('Alex')).toBeInTheDocument();
+    expect(screen.getByText('Engineer')).toBeInTheDocument();
+    expect(screen.getByText('Alex is an engineer.')).toBeInTheDocument();
+    expect(screen.getByRole('img', {name: /Alex Image/i})).toBeInTheDocument();
+    expect(
+      screen.getByRole('link', {name: /Visit personal page/i}),
+    ).toHaveAttribute('href', 'https://alex.com');
   });
 
-  it('renders logos with correct alt text', () => {
-    const logos = mockLogos;
-    render(
-      <LogoCollection
-        logos={logos as Parameters<typeof LogoCollection>[0]['logos']}
-      />,
-    );
-    expect(screen.getAllByAltText('First Brand')[0]).toBeInTheDocument();
+  it('renders people without image and personalLink', () => {
+    render(<PeopleCollection people={mockPeople} />);
+    expect(screen.getByText('Bob')).toBeInTheDocument();
+    expect(screen.getByText('Designer')).toBeInTheDocument();
+    expect(screen.getByText('Bob is a designer.')).toBeInTheDocument();
+    // Bob has no image or personal link
+    expect(screen.queryByRole('img', {name: /Bob/i})).not.toBeInTheDocument();
+    // Only Alex's link
+    // Only Alex should have a personal link with the correct URL
+    const links = screen.getAllByRole('link', {name: /Visit personal page/i});
+    expect(links).toHaveLength(1);
+    expect(links[0]).toHaveAttribute('href', 'https://alex.com');
   });
 
-  it('renders links for logos with URLs', () => {
-    const logos = mockLogos;
+  it('sorts people alphabetically by name', () => {
     render(
-      <LogoCollection
-        logos={logos as Parameters<typeof LogoCollection>[0]['logos']}
+      <PeopleCollection
+        people={[mockPeople[2], mockPeople[1], mockPeople[0]]}
       />,
     );
-    const images = screen.getAllByRole('figure');
-
-    // check that images with URLs have links
-    expect(images[0].firstElementChild).toHaveAttribute(
-      'href',
-      'https://first.com',
-    );
-    expect(images[1].firstElementChild).toHaveAttribute(
-      'href',
-      'https://second.com',
-    );
-
-    // check that images without URLs do not have links
-    expect(images[2].firstElementChild).not.toHaveAttribute('href');
+    const headings = screen.getAllByRole('heading', {level: 3});
+    expect(headings[0]).toHaveTextContent('Alex');
+    expect(headings[1]).toHaveTextContent('Bob');
+    expect(headings[2]).toHaveTextContent('Clarissa');
   });
 });

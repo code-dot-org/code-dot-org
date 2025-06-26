@@ -1,4 +1,4 @@
-// Creates a definition for the LogoCollection component to be used in Contentful Studio
+// Creates a definition for the PeopleCollection component to be used in Contentful Studio
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 
 export const PeopleCollectionContentfulComponentDefinition: ComponentDefinition =
