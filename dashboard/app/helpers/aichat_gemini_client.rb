@@ -1,5 +1,10 @@
 # This class implements a gemini backend for the generic AichatAiClient
 class AichatGeminiClient < AichatAiClient
+  # Metrics are temporarily disbaled for gemini as explained here:
+  # https://github.com/code-dot-org/code-dot-org/pull/66675#discussion_r2164695066
+  private def report_usage_and_throttling_metrics(usage, message_and_file_counts, level_id, project_id, user_id, model_id, response_time)
+  end
+
   # The url to send with the post request
   private def url
     # TODO secret will be per product (ai chat vs tutor) - currently we have just one for both
