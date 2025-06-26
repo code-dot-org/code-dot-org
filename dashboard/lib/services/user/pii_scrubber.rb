@@ -27,10 +27,12 @@ module Services
       end
 
       def call
-        scrub_user
-        scrub_legacy_data
-        mark_scrubbed
-        @user.save!
+        ActiveRecord::Base.transaction do
+          scrub_user
+          scrub_legacy_data
+          mark_scrubbed
+          @user.save!
+        end
       end
 
       private def scrub_user
