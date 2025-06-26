@@ -13,8 +13,8 @@ import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
 type ItemFields = {
   name: EntryFields.Text;
-  image: ExperienceAsset;
   title: EntryFields.Text;
+  image?: ExperienceAsset;
   bio?: EntryFields.Text;
   personalLink?: LinkEntry;
 };
@@ -24,6 +24,8 @@ type ItemEntry = Entry<ItemFields>;
 export type PeopleCollectionProps = {
   /** Collection content w/ fields from Contentful */
   people: ItemEntry[];
+  /** Show or hide images */
+  imageVisibility?: 'show' | 'hide';
 };
 
 const styles = {
@@ -37,11 +39,9 @@ const styles = {
     textAlign: 'center',
   },
   image: {
-    marginBlock: 0,
-    marginBottom: 2,
+    marginBottom: '1.25rem',
     width: 128,
     height: 128,
-    backgroundColor: 'var(--background-neutral-secondary)',
     borderRadius: '50%',
   },
   overline: {
@@ -63,7 +63,15 @@ const styles = {
   },
 };
 
-const PeopleCollection: React.FC<PeopleCollectionProps> = ({people}) => {
+// This is coming directly from Contentful so we can use the Images API to
+// format this similarly to the other images which is better for performance.
+const PLACEHOLDER_IMAGE_URL =
+  'https://contentful-images.code.org/90t6bu6vlf76/12hYaT6lKHqt7yO3knvqHF/8cc3dc67771cd6baaecdff1b155b7d31/person-placeholder.png?fm=avif&fit=fill&w=128&h=128&r=max';
+
+const PeopleCollection: React.FC<PeopleCollectionProps> = ({
+  people,
+  imageVisibility = 'show',
+}) => {
   if (!people) {
     return (
       <Typography variant="body2" sx={{color: 'var(--text-neutral-primary)'}}>
@@ -86,15 +94,18 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({people}) => {
             id: name,
             item: (
               <Box sx={styles.gridItem}>
-                {image && (
+                {imageVisibility === 'show' && (
                   <Box component="figure" sx={styles.image}>
                     <img
-                      src={getAbsoluteImageUrl(
-                        image,
-                        'fit=fill&w=128&h=128&r=max',
-                      )}
-                      alt=""
+                      src={
+                        getAbsoluteImageUrl(
+                          image,
+                          'fit=fill&w=128&h=128&r=max',
+                        ) || PLACEHOLDER_IMAGE_URL
+                      }
+                      alt={name || ''}
                       loading="lazy"
+                      role="presentation"
                     />
                   </Box>
                 )}
@@ -134,7 +145,7 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({people}) => {
           };
         })
         .sort((a, b) => a.id.localeCompare(b.id)), // Sort alphabetically
-    [people],
+    [people, imageVisibility],
   );
 
   return (

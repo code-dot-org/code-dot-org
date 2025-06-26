@@ -26,5 +26,17 @@ export const PeopleCollectionContentfulComponentDefinition: ComponentDefinition 
           bindingSourceType: ['entry'],
         },
       },
+      imageVisibility: {
+        displayName: 'Image Visibility',
+        type: 'Text',
+        defaultValue: 'show',
+        group: 'style',
+        validations: {
+          in: [
+            {value: 'show', displayName: 'Show'},
+            {value: 'hide', displayName: 'Hide'},
+          ],
+        },
+      },
     },
   };
