@@ -130,7 +130,20 @@ const Header: React.FC<HeaderProps> = ({
       try {
         const data = await fetchUserSignedInStatus(studioBaseUrl);
         if (data) {
-          const renderState = data.is_signed_in ? 'signedIn' : 'signedOut';
+          const isSignedIn = data.is_signed_in;
+
+          if (isSignedIn) {
+            const paths = window.location.pathname?.split('/').filter(Boolean);
+
+            if (paths.length === 0 || paths.length === 1) {
+              // If the user is signed in and on the home page, redirect to dashboard
+              // If parts.length === 0, then they are on code.org
+              // If parts.length === 1, then they are on a localized home page path like code.org/en-US
+              window.location.href = `${studioBaseUrl}`;
+            }
+          }
+
+          const renderState = isSignedIn ? 'signedIn' : 'signedOut';
           setRenderState(renderState);
         } else {
           setRenderState('error');

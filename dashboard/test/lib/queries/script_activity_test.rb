@@ -40,9 +40,9 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
 
   test 'user is working on pl scripts' do
     teacher = create :teacher
-    script1 = create :script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    script2 = create :script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    script3 = create :script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    script1 = create(:single_unit_course, :pl_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable).first_unit
+    script2 = create(:single_unit_course, :pl_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable).first_unit
+    script3 = create(:single_unit_course, :pl_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable).first_unit
     s1 = create :user_script, user: teacher, script: script1, started_at: (Time.now - 10.days), last_progress_at: (Time.now - 4.days)
     s2 = create :user_script, user: teacher, script: script2, started_at: (Time.now - 50.days), last_progress_at: (Time.now - 3.days)
     c = create :user_script, user: teacher, script: script3, started_at: (Time.now - 10.days), completed_at: (Time.now - 8.days)
@@ -57,7 +57,7 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
     assert_equal s2.script, Queries::ScriptActivity.primary_pl_unit(teacher)
 
     # add an assigned script that's more recent
-    script4 = create :script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    script4 = create(:single_unit_course, :pl_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable).first_unit
     a = create :user_script, user: teacher, script: script4, started_at: (Time.now - 1.day)
     assert_equal [a.script, s2.script, s1.script], Queries::ScriptActivity.working_on_pl_units(teacher)
     assert_equal a.script, Queries::ScriptActivity.primary_pl_unit(teacher)

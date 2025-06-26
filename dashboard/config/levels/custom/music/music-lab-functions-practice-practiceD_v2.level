@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T03:00:58.000Z",
   "level_num": "custom",
@@ -1034,7 +1035,7 @@
       "isPredictLevel": false
     },
     "display_name": "Amarillo",
-    "long_instructions": "### Amarillo\r\n\r\nA record producer has sent you the raw tracks for Amarillo by Shakira. They've asked you to organize it into functions to make the song easier to remix in the future.\r\n\r\nThe functions are already in the workspace - your task is to decide which code to move into each function and then replace the original code with the function. Not all of the original code will go into functions!\r\n\r\nWhen you're finished, the song should sound the same but be easier to read thanks to the functions.",
+    "long_instructions": "### Amarillo\r\n\r\n**Define:** A record producer has sent you the raw tracks for *Amarillo* by Shakira. Your job is to organize the code using functions so it's easier to remix and update in the future.\r\n\r\n**Prepare:** Look at the original code and identify which parts should be grouped into functions. Think about repeated patterns or sections that make sense to organize together. Here is one possible way to organize the song:\r\n\r\n![](https://images.code.org/3a0b9af0999a1f13a3f6875de4162704-image-1750880745657.png)\r\n\r\n**Try:** Use the provided functions in the workspace. Move the correct code into each function, then replace the original code with a call to the function. Not all of the original code will go into functions!\r\n\r\n**Reflect:** Play your remix. Does it sound the same as the original? Are the functions clearly named and organized? In order to complete this level, your remix must include:\r\n\r\n- Function calls that replace original code\r\n- Code organized into the correct functions\r\n- A final song that sounds the same as before",
     "bubble_choice_description": "A record producer has sent you the raw tracks for Amarillo by Shakira. They've asked you to organize it into functions to make the song easier to remix in the future.",
     "validations": [
       {
@@ -1071,8 +1072,7 @@
     "name_suffix": "_v2",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:58.662+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-practiceD\\\"\"],\"cloned_from\":\"music-lab-functions-practice-practiceD\"},{\"changed_at\":\"2025-06-10 23:42:48 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-10 23:43:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-10 23:48:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:58.662+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-practiceD\\\"\"],\"cloned_from\":\"music-lab-functions-practice-practiceD\"},{\"changed_at\":\"2025-06-10 23:42:48 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-10 23:43:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-10 23:48:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-25 19:46:43 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -2,6 +2,7 @@ class Api::V1::Census::CensusController < ApplicationController
   include SchoolInfoDeduplicator
   require 'census_helper'
   skip_before_action :verify_authenticity_token
+  before_action :allow_cdo_cors, only: %i[create]
 
   CENSUS_FIELDS = [
     :submitter_email_address,

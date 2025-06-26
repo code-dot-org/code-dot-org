@@ -11,10 +11,10 @@ module Pd::SurveyPipeline
       @workshop_form_ids = [11_000_000_000_000, 11_000_000_000_001]
       @facilitator_form_ids = [22_000_000_000_000, 22_000_000_000_001]
 
-      @workshops = create_list :csf_deep_dive_workshop, 2, num_sessions: 2
+      @workshops = create_list :workshop, 2, subject: Pd::SharedWorkshopConstants::SUBJECT_CSP_WORKSHOP_1_2, num_sessions: 3
       @facilitators = create_list :facilitator, 2
       teachers = create_list :teacher, 2
-      days = [0, 1]
+      days = [1, 2]
 
       # Create workshop daily survey submissions
       # 2 workshops * 2 teachers * 2 days * 2 forms = 16 submissions

@@ -26,7 +26,7 @@ class Policies::AiTest < ActiveSupport::TestCase
   class AiRubricsEnabledForScriptLevelTest < ActiveSupport::TestCase
     setup do
       # Create a script_level
-      script = create :script
+      script = create :script, :in_single_unit_course
 
       # Create a student/teacher/section
       @teacher = create :authorized_teacher
@@ -106,7 +106,7 @@ class Policies::AiTest < ActiveSupport::TestCase
 
       # Create a section for a different Unit with a different teacher that does not opt out
       alt_teacher = create :teacher
-      alt_script = create :script
+      alt_script = create :script, :in_single_unit_course
       alt_section = create :section, user: alt_teacher, script: alt_script
       create(:follower, student_user: @user, section: alt_section)
 
