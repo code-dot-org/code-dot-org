@@ -123,9 +123,9 @@ export async function logStudentWorkEvaluationSummary(summaryData: SummaryIds) {
  * @param userId - The ID of the user/student.
  * @param levelId - The ID of the level.
  * @param unitId - The ID of the unit.
- * @returns A promise resolving to an array of StudentWorkEvaluations.
+ * @returns A promise resolving to the most recent UserLevelEvaluation.
  */
-export async function fetchStudentWorkEvaluations(
+export async function fetchMostRecentUserLevelEvaluation(
   userId: number,
   levelId: number,
   unitId: number

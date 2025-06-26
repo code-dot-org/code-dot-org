@@ -5,7 +5,7 @@ import {
   StudentWorkEvaluation,
   evaluateStudentWork,
 } from '@cdo/apps/aiEvaluation/aiEvaluationApi';
-import {fetchStudentWorkEvaluations} from '@cdo/apps/aiEvaluation/studentWorkEvaluationsApi';
+import {fetchMostRecentUserLevelEvaluation} from '@cdo/apps/aiEvaluation/studentWorkEvaluationsApi';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 
@@ -56,7 +56,7 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
       };
       const loadExistingEvaluations = async () => {
         const promises = responses.map(response =>
-          fetchStudentWorkEvaluations(
+          fetchMostRecentUserLevelEvaluation(
             response.studentId,
             levelData.levelId,
             levelData.unitId

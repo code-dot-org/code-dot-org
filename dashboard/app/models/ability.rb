@@ -96,7 +96,6 @@ class Ability
       can :create, UserLevel, user_id: user.id
       can :update, UserLevel, user_id: user.id
       can :create, StudentWorkEvaluation, user_id: user.id
-      can :get_student_work_evaluations, StudentWorkEvaluation, user_id: user.id
       can :create, StudentWorkEvaluationSummary
       can :create, UserLevelInteraction, user_id: user.id
       can :create, Follower, student_user_id: user.id
@@ -206,6 +205,10 @@ class Ability
         can [:score_lessons_for_section, :get_teacher_scores_for_script], TeacherScore, user_id: user.id
         can :manage, LearningGoalTeacherEvaluation, teacher_id: user.id
         can :manage, LearningGoalAiEvaluationFeedback, teacher_id: user.id
+        can :get_most_recent_user_level_evaluation, StudentWorkEvaluation do |evaluation|
+          user.students.exists?(id: evaluation.student_id)
+        end
+
       end
 
       if user.facilitator?

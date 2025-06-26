@@ -16,12 +16,12 @@ class StudentWorkEvaluationsController < ApplicationController
   end
 
   # GET /student_work_evaluations/:userId/:levelId/:unitId
-  def get_student_work_evaluations
+  def get_most_recent_user_level_evaluation
     user_id = params[:user_id]
     level_id = params[:level_id]
     unit_id = params[:unit_id]
 
-    evaluations = StudentWorkEvaluation.where(
+    evaluations = UserLevelEvaluation.where(
       student_id: user_id,
       level_id: level_id,
       unit_id: unit_id

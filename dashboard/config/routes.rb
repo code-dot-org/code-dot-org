@@ -63,7 +63,7 @@ Dashboard::Application.routes.draw do
 
     resources :student_work_evaluations, only: [:create] do
       collection do
-        get ':user_id/:level_id/:unit_id', to: 'student_work_evaluations#get_student_work_evaluations'
+        get ':user_id/:level_id/:unit_id', to: 'student_work_evaluations#get_most_recent_user_level_evaluation'
       end
     end
 
