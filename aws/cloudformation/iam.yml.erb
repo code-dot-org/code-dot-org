@@ -1179,6 +1179,16 @@ roles.each do |name, config| %>
                   StringEquals:
                     'aws:ResourceTag/environment-type': <%=environment_type%>
 
+              - Sid: AllowCloudFrontCachePolicyActions
+                Effect: Allow
+                Action:
+                  - cloudfront:CreateCachePolicy
+                  - cloudfront:UpdateCachePolicy
+                  - cloudfront:DeleteCachePolicy
+                  - cloudfront:GetCachePolicy
+                  - cloudfront:ListCachePolicies
+                Resource: '*'
+
               - Sid: AllowCloudFrontDescribeActions
                 Effect: Allow
                 Action:
