@@ -3,6 +3,7 @@ import Tags from '@code-dot-org/component-library/tags';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 import Draggable, {DraggableEventHandler} from 'react-draggable';
+import FocusLock from 'react-focus-lock';
 
 import i18n from '@cdo/locale';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
@@ -98,61 +99,63 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
         className={style.aiDiffContainer}
         style={open ? undefined : {display: 'none'}}
       >
-        <div className={classNames(style.aiDiffHeader, 'ai_diff_handle')}>
-          <div className={style.aiDiffHeaderLeftSide}>
-            <div className={style.aiBotHeader}>
-              <img
-                src={aiBotOutlineIcon}
-                className={style.aiBotOutlineIcon}
-                alt={AI_DIFF_HEADER_TEXT}
-              />
-              <div className={style.taOverlayHeader}>
-                <span>{'TA'}</span>
+        <FocusLock>
+          <div className={classNames(style.aiDiffHeader, 'ai_diff_handle')}>
+            <div className={style.aiDiffHeaderLeftSide}>
+              <div className={style.aiBotHeader}>
+                <img
+                  src={aiBotOutlineIcon}
+                  className={style.aiBotOutlineIcon}
+                  alt={AI_DIFF_HEADER_TEXT}
+                />
+                <div className={style.taOverlayHeader}>
+                  <span>{'TA'}</span>
+                </div>
               </div>
+              <span className={style.aiDiffHeaderText}>
+                {AI_DIFF_HEADER_TEXT}
+              </span>
+              <span>
+                <Tags
+                  tagsList={[{label: i18n.experiment()}]}
+                  size="s"
+                  className={style.headerTag}
+                />
+              </span>
             </div>
-            <span className={style.aiDiffHeaderText}>
-              {AI_DIFF_HEADER_TEXT}
-            </span>
-            <span>
-              <Tags
-                tagsList={[{label: i18n.experiment()}]}
+            <div className={style.aiDiffHeaderRightSide}>
+              <Button
+                color="white"
+                icon={{iconName: 'times', iconStyle: 'solid'}}
+                type="tertiary"
+                isIconOnly={true}
+                onClick={closeTutor}
                 size="s"
-                className={style.headerTag}
               />
-            </span>
+            </div>
           </div>
-          <div className={style.aiDiffHeaderRightSide}>
-            <Button
-              color="white"
-              icon={{iconName: 'times', iconStyle: 'solid'}}
-              type="tertiary"
-              isIconOnly={true}
-              onClick={closeTutor}
-              size="s"
-            />
-          </div>
-        </div>
 
-        <div className={style.fabBackground}>
-          {!hasCompletedAiDifferentiationWelcome && showWelcomeExperience
-            ? curriculumCourses && (
-                <AiDiffWelcome
-                  setShowWelcomeExperience={setShowWelcomeExperience}
-                  context={context}
-                  scriptName={scriptName}
-                  unitDisplayName={unitDisplayName}
-                  curriculumCourses={curriculumCourses}
-                />
-              )
-            : curriculumCourses && (
-                <AiDiffChat
-                  context={context}
-                  scriptName={scriptName}
-                  unitDisplayName={unitDisplayName}
-                  curriculumCourses={curriculumCourses}
-                />
-              )}
-        </div>
+          <div className={style.fabBackground}>
+            {!hasCompletedAiDifferentiationWelcome && showWelcomeExperience
+              ? curriculumCourses && (
+                  <AiDiffWelcome
+                    setShowWelcomeExperience={setShowWelcomeExperience}
+                    context={context}
+                    scriptName={scriptName}
+                    unitDisplayName={unitDisplayName}
+                    curriculumCourses={curriculumCourses}
+                  />
+                )
+              : curriculumCourses && (
+                  <AiDiffChat
+                    context={context}
+                    scriptName={scriptName}
+                    unitDisplayName={unitDisplayName}
+                    curriculumCourses={curriculumCourses}
+                  />
+                )}
+          </div>
+        </FocusLock>
       </div>
     </Draggable>
   );

@@ -20,6 +20,7 @@ const assertions = {
   'legacy-javascript-insight': 'off',
   'modern-http-insight': 'off',
   'network-dependency-tree-insight': 'off',
+  'crawlable-anchors': ['error', {minScore: 0}], // Localizejs has invalid anchor tags
 };
 
 if (process.env.STAGE !== 'production') {

@@ -19,31 +19,39 @@ class Skill < ApplicationRecord
 
   has_and_belongs_to_many :levels, join_table: 'levels_skills'
 
-  def self.setup
-    update_columns = [:description, :evaluation_criteria, :concept]
-    # TODO: Remove this method when the skills are created by levelbuilders
-    starter_skills = [
-      {
-        key: "variables_declare",
-        description: "Declare variables correctly",
-        evaluation_criteria: "Did the students declare all of the variables in their code correctly?",
-        concept: "Variables"
-      },
-      {
-        key: "variables_name",
-        description: "Name variables according to conventions",
-        evaluation_criteria: "Are there any spaces in variable names? Are there any misspelled variable names? Do variable names follow casing conventions?",
-        concept: "Variables"
-      },
-      {
-        key: "variables_increment",
-        description: "Increment values stored in variables",
-        evaluation_criteria: "Does the student's added code increment the values stored in the variables correctly?",
-        concept: "Variables"
-      },
-    ]
-    transaction do
-      Skill.import! starter_skills, on_duplicate_key_update: update_columns
+  def serialize
+    {
+      key: key,
+      concept: concept,
+      description: description,
+      evaluation_criteria: evaluation_criteria
+    }
+  end
+
+  def write_serialization
+    return unless Rails.application.config.levelbuilder_mode
+    file_path = Rails.root.join("config/skills/#{key}.json")
+    dir_path = File.dirname(file_path)
+    FileUtils.mkdir_p(dir_path)
+    object_to_serialize = serialize
+    File.write(file_path, JSON.pretty_generate(object_to_serialize) + "\n")
+  end
+
+  def self.seed_all(root_dir: Rails.root, glob: "config/skills/*.json")
+    Dir.glob(root_dir.join(glob)).each do |path|
+      Skill.seed_record(path)
     end
+  end
+
+  def self.properties_from_file(content)
+    config = JSON.parse(content)
+    config.symbolize_keys
+  end
+
+  def self.seed_record(file_path)
+    properties = properties_from_file(File.read(file_path))
+    skill = Skill.find_or_initialize_by(key: properties[:key])
+    skill.update! properties
+    skill.key
   end
 end

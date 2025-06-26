@@ -20,7 +20,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     @teacher_other = create(:teacher)
     @teacher_other.permission = UserPermission::AUTHORIZED_TEACHER
 
-    @unit = create :script
+    @unit = create(:unit, :in_single_unit_course)
   end
 
   # index tests - gets assessment questions and answers
@@ -55,7 +55,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
   test "verified teacher should get assessments structure" do
     # Sign in and create a new script.
     sign_in @teacher
-    script = create :script
+    script = create(:unit, :in_single_unit_course)
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
 
@@ -151,7 +151,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
   end
 
   test "don't show assessment responses to teacher who doesn't own that section" do
-    script = create :script
+    script = create(:unit, :in_single_unit_course)
     sign_in @teacher_other
 
     get :section_responses, params: {
@@ -177,7 +177,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
   test "verified teacher should get assessments responses" do
     # Sign in and create a new script.
     sign_in @teacher
-    script = create :script
+    script = create(:unit, :in_single_unit_course)
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
 
@@ -287,7 +287,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
   test "multi choose 2 questions are only correct if both answers are correct" do
     # Sign in and create a new script.
     sign_in @teacher
-    script = create :script
+    script = create(:unit, :in_single_unit_course)
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
 
@@ -367,7 +367,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
   test "gets no anonymous survey data via assessment responses call" do
     # Sign in as teacher and create a new script.
     sign_in @teacher
-    script = create :script
+    script = create(:unit, :in_single_unit_course)
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
 
@@ -442,7 +442,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
   end
 
   test "don't show survey responses to teacher who doesn't own that section" do
-    script = create :script
+    script = create(:unit, :in_single_unit_course)
     sign_in @teacher_other
 
     get :section_surveys, params: {
@@ -471,7 +471,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     srand 1
 
     # Create a script with an anonymous assessment.
-    script = create :script
+    script = create(:unit, :in_single_unit_course)
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
     sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
@@ -630,7 +630,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
   test "no anonymous survey data when less than five students" do
     sign_in @teacher
-    script = create :script
+    script = create(:unit, :in_single_unit_course)
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
 
@@ -703,7 +703,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
   test "section_feedback assert query count" do
     sign_in @teacher
-    script = create :script
+    script = create(:unit, :in_single_unit_course)
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
     weblab_level = create :weblab
@@ -713,7 +713,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
       create :teacher_feedback, script: script, level: weblab_level, student: student, teacher: @teacher
     end
 
-    assert_queries 12 do
+    assert_queries 13 do
       get :section_feedback, params: {section_id: @section.id, script_id: script.id}
     end
 

@@ -263,6 +263,16 @@
   }
 }
 
+.courseContentDropdown {
+  width: 100%;
+  button {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+  }
+}
+
 // Empty state button
 .emptyStateButton {
   display: flex;
