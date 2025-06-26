@@ -560,7 +560,7 @@
       "isPredictLevel": false
     },
     "display_name": "Scars to your Beautiful",
-    "long_instructions": "### No Better Life\r\n\r\nA remix artist has asked you to create your own backing beats to go with the vocals for Scars to your Beautiful. The requirements are:\r\n\r\n- The vocals must come in every 4 measures\r\n- The backing track must be the same for each vocal track\r\n\r\nUse **one function** to create the backing tracks, then call that function **3 different times** in your code.\r\n\r\nHere's an example of how your timeline could look. The important thing is that the same backing track is repeated 3 times in the song using functions.\r\n\r\n![](https://images.code.org/b924c130b701a7694b6f0c9ece0c95b3-image-1744949088288.png)",
+    "long_instructions": "### No Better Life\r\n\r\n**Define:** A remix artist has asked you to create backing beats for the vocals in *Scars to Your Beautiful*. The vocals come in every 4 measures, and the backing track should sound the same each time. Your job is to write reusable code using a function to keep everything organized.\r\n\r\n**Prepare:** Think about how to build a short backing track that fits within 4 measures with the vocals coming in at the end. Listen to the example below for what this could sound like! You'll write this once, then reuse it throughout the song using a function.\r\n\r\n![](https://images.code.org/b924c130b701a7694b6f0c9ece0c95b3-image-1744949088288.png)\r\n\r\n**Try:** Write a function that includes your 4-measure backing track. Then, call your function 3 different times so that the backing plays each time a new vocal section begins.\r\n\r\n**Reflect:** Did each vocal track line up with the same backing track? How did using a function make your code easier to manage? In order to complete this level, your remix must include:\r\n\r\n- One function that defines the backing track\r\n- The function called 3 different times in your code\r\n- Vocals that come in every 4 measures",
     "bubble_choice_description": "A remix artist has asked you to create your own backing beats to go with the vocals for Scars to your Beautiful.",
     "validations": [
       {
@@ -624,7 +624,7 @@
     "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/alessia_cara_scars_to_your_beautiful/alessia_cara_scars_to_your_beautiful.jpg",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:57.837+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-practiceA\\\"\"],\"cloned_from\":\"music-lab-functions-practice-practiceA\"},{\"changed_at\":\"2025-06-12 21:10:02 +0000\",\"changed\":[\"predict_settings\",\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:57.837+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-practiceA\\\"\"],\"cloned_from\":\"music-lab-functions-practice-practiceA\"},{\"changed_at\":\"2025-06-12 21:10:02 +0000\",\"changed\":[\"predict_settings\",\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-25 18:53:25 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

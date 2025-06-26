@@ -312,7 +312,7 @@
     },
     "./formFieldWrapper": {
       "types": {
-        "import": "./dist/esm/formFieldWrapper/index.d.mts",
+        "import": "./dist/esm/formFieldWrapper/index.d.ts",
         "require": "./dist/cjs/formFieldWrapper/index.d.ts"
       },
       "import": "./dist/esm/formFieldWrapper/index.mjs",
