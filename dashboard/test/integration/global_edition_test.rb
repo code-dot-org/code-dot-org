@@ -18,7 +18,7 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
   end
 
   describe 'routing' do
-    let(:international_page_path) {'/incubator'}
+    let(:international_page_path) {'/users/sign_in'}
     let(:ge_region_locale) {'fa-IR'}
     let(:regional_page_path) {File.join('/global', ge_region, international_page_path)}
     let(:ge_region_script_data) {document.at('script[data-ge-region]').try(:[], 'data-ge-region')}
@@ -171,7 +171,9 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
       end
 
       it 'routing helpers generates region version of urls' do
-        _ {get_regional_page}.must_change -> {incubator_path}, from: international_page_path, to: regional_page_path
+        _ {get_regional_page}.must_change -> {new_user_session_path},
+                                          from: international_page_path,
+                                          to: regional_page_path
       end
 
       context 'on locale change via params' do
