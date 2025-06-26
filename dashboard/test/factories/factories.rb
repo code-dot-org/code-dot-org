@@ -2308,8 +2308,7 @@ FactoryBot.define do
     association :user
     external_id {"1234"}
     llm_version {"dummy_llm"}
-    unit_id {1}
-    level_id {1}
+    context_type {"general"}
   end
 
   factory :aidiff_message do
