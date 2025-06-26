@@ -1190,9 +1190,11 @@ __metadata:
     "@contentful/experiences-sdk-react": "npm:^1.40.2"
     "@contentful/rich-text-html-renderer": "npm:^17.0.0"
     "@contentful/rich-text-plain-text-renderer": "npm:^17.0.0"
+    "@emotion/cache": "npm:^11.14.0"
     "@emotion/react": "npm:^11.14.0"
     "@emotion/styled": "npm:^11.14.0"
     "@mui/material": "npm:^7.1.2"
+    "@mui/material-nextjs": "npm:^7.1.1"
     "@newrelic/browser-agent": "npm:^1.290.0"
     "@next/eslint-plugin-next": "npm:^15.0.3"
     "@next/third-parties": "npm:^15.2.1"
@@ -3773,6 +3775,29 @@ __metadata:
   version: 7.1.2
   resolution: "@mui/core-downloads-tracker@npm:7.1.2"
   checksum: 10c0/cd5b0b2c41be1d86a164c1591880c3ce8df7a4281399ad4ba260013657fc2f91e923cf4b7685882cf0c2cc334b19a438d8c3974f7e84605a3fb9b7f3de26b5ae
+  languageName: node
+  linkType: hard
+
+"@mui/material-nextjs@npm:^7.1.1":
+  version: 7.1.1
+  resolution: "@mui/material-nextjs@npm:7.1.1"
+  dependencies:
+    "@babel/runtime": "npm:^7.27.1"
+  peerDependencies:
+    "@emotion/cache": ^11.11.0
+    "@emotion/react": ^11.11.4
+    "@emotion/server": ^11.11.0
+    "@types/react": ^17.0.0 || ^18.0.0 || ^19.0.0
+    next: ^13.0.0 || ^14.0.0 || ^15.0.0
+    react: ^17.0.0 || ^18.0.0 || ^19.0.0
+  peerDependenciesMeta:
+    "@emotion/cache":
+      optional: true
+    "@emotion/server":
+      optional: true
+    "@types/react":
+      optional: true
+  checksum: 10c0/79f502f5325083b1834e6f97b1f7a9d092da91f91081d4a8ca754e33f97777ac697a0f94d975b36983cd37e118446641181e1950e60d6475d5d0f5939b7d8764
   languageName: node
   linkType: hard
 
