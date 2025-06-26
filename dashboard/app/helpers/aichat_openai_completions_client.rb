@@ -17,12 +17,6 @@ class AichatOpenaiCompletionsClient < AichatAiClient
 
   # take response_body and extract usage data for reporting
   private def get_usage_from_body(response_body)
-    # Note for PR (TODO - discuss and remove this note before PR merged):
-    # --------------------------------------------------------------------
-    # We should probbaly expand the usage metrics to include thinking metrics
-    # but will need to deal with cases where given backend do not support them
-    # --------------------------------------------------------------------
-
     {
       'prompt_tokens' => response_body.dig('usage', 'prompt_tokens') || 0,
       'completion_tokens' => response_body.dig('usage', 'completion_tokens') || 0,
@@ -73,13 +67,6 @@ class AichatOpenaiCompletionsClient < AichatAiClient
       filename = asset["filename"]
       source = asset["source"]
 
-      # Note for PR (TODO - discuss and remove this note before PR merged):
-      # --------------------------------------------------------------------
-      # We should discuss how we want to handle any errors encountered when accessing underlying storage
-      # Currently there are multiple code paths that can raise (and multiple exceptions that can be raised
-      # through them).  Ideally we should just raise one type of exception from AichatAssetHelper
-      # and get a descriptive message back to the user.
-      # --------------------------------------------------------------------
       data_uri = AichatAssetHelper.get_asset_data_uri(filename, source, encrypted_channel_id, level_name)
 
       formatted[:content] << if file_is_pdf?(filename)

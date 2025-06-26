@@ -107,8 +107,6 @@ class AichatOpenaiCompletionsClientTest < AichatAiClientTest
   describe '#def get_response_text (unit)' do
     let(:internal_model_id) {gpt_4o_mini_model_id}
 
-    #TODO - use hash to go from internal_model_id to model_id (since these aren't same for openai)
-    # and switch based on different models
     let(:model_id) {internal_model_id}
 
     let(:url_to_post) {"https://api.openai.com/v1/chat/completions"}

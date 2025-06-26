@@ -2,10 +2,9 @@
 # that is never instantiated directly. The derived classes hold implementation details in required overridden
 # methods. Currently the two implemented APIs (OpenAI and Gemini) are POST based REST APIs
 class AichatAiClient
-  # get an instance of the appropriate derived class based on model id
+  # create an instance of the appropriate derived class based on model id
   def self.create_instance(model_id)
-    # TODO - we should create a map/hash from model_id to model/key (not sure why model id isn't just model but whatever)
-    # but for now we just assume it's one of the gemini models if not 'gpt-4o-mini'
+    # for now we just assume it's one of the gemini models if not 'gpt-4o-mini'
     if model_id == "gpt-4o-mini"
       return AichatOpenaiCompletionsClient.new(CDO.openai_student_learning_api_key, SharedConstants::AICHAT_MODEL_VERSION)
     else
@@ -20,7 +19,6 @@ class AichatAiClient
     level = Level.find_by(id: level_id)
 
     # level system prompt - string or nil
-    # TODO - determine if we're still using level system prompts
     level_system_prompt = level&.properties&.dig('aichat_settings', 'levelSystemPrompt')
 
     # level name - string
@@ -53,8 +51,6 @@ class AichatAiClient
 
     raise_possible_response_errors_from_body(response_body)
 
-    # TODO - the fact we called this extract_text_response_from_body suggests we need to adapt this class for multimodal
-    # *responses* even if we have a way to disable them in level builder
     response_text = extract_text_response_from_body(response_body)
 
     # TODO - add back report_usage_and_throttling_metrics
@@ -136,12 +132,8 @@ class AichatAiClient
 
   # Helper to determine if a filename is an image (by extension)
   private def file_is_image?(filename)
-    # Note for PR (TODO - discuss and remove this note before PR merged):
-    # -------------------------------------------------------------------
-    # currently we only accept images and pdfs so the previous logic was
-    # if not a pdf it's an image. Perhaps we want to use the same whitelist
-    # we use on the frontend
-    # -------------------------------------------------------------------
+    # assumes if not PDF than is an image but this could be improved
+    #  with a list of supported extensions shared w/ frontend
     !file_is_pdf?(filename)
   end
 
@@ -168,12 +160,6 @@ class AichatAiClient
         end
       end
     end
-
-    # Note for PR (TODO - discuss and remove this note before PR merged):
-    # --------------------------------------------------------------------
-    # As this is for logging, I stuck with the camelCase that previously was used.
-    # Not sure if we should change to snake_case per the ruby convention for symbols
-    # --------------------------------------------------------------------
 
     {
       total: messages.count,
@@ -228,14 +214,6 @@ class AichatAiClient
     log_payload = {
       event: 'aichat_openai_usage',
       multimodal: is_multimodal,
-
-      # Note for PR (TODO - discuss and remove this note before PR merged):
-      # --------------------------------------------------------------------
-      # `usage` is now a more AI API agnostic hash,  comprising `prompt_tokens`, `completion_tokens`
-      # and `cached_prompt_tokens` which were all we were using directly in this method (was a function).
-      # If there is anything else we want to pull out to add to the log payload, we need to add it to
-      # the `get_usage_from_body` method.  Another option is we can just return the raw usage or whole response body.
-      # --------------------------------------------------------------------
       usage: usage,
       messages: message_and_file_counts,
       cost: {

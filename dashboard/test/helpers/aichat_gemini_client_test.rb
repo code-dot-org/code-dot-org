@@ -1,6 +1,4 @@
 class AichatGeminiClientTest < AichatAiClientTest
-  #TODO - modularize to test other models like LearnLM
-  # once we have hash of model_id => model/key/provider
   let(:gemini_model_id) {'gemini-2.0-flash'}
   let(:expected_request_body) do
     {
@@ -98,12 +96,9 @@ class AichatGeminiClientTest < AichatAiClientTest
     }
   end
 
-  #TODO - test that key is passed as query param
   describe '#def get_response_text (unit)' do
     let(:internal_model_id) {gemini_model_id}
 
-    #TODO - use hash to go from internal_model_id to model_id (since these aren't same for openai)
-    # and switch based on different models
     let(:model_id) {internal_model_id}
 
     let(:url_to_post) {"https://generativelanguage.googleapis.com/v1beta/models/#{model_id}:generateContent?key="}
