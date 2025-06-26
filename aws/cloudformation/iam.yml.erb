@@ -1179,7 +1179,7 @@ roles.each do |name, config| %>
                   StringEquals:
                     'aws:ResourceTag/environment-type': <%=environment_type%>
 
-              - Sid: AllowCloudFrontCachePolicyActions
+              - Sid: AllowCloudFrontActionsNonTaggableResources
                 Effect: Allow
                 Action:
                   - cloudfront:CreateCachePolicy
@@ -1187,6 +1187,24 @@ roles.each do |name, config| %>
                   - cloudfront:DeleteCachePolicy
                   - cloudfront:GetCachePolicy
                   - cloudfront:ListCachePolicies
+                  - cloudfront:CreateOriginAccessControl
+                  - cloudfront:UpdateOriginAccessControl
+                  - cloudfront:DeleteOriginAccessControl
+                  - cloudfront:GetOriginAccessControl
+                  - cloudfront:ListOriginAccessControls
+                  - cloudfront:CreateResponseHeadersPolicy
+                  - cloudfront:UpdateResponseHeadersPolicy
+                  - cloudfront:DeleteResponseHeadersPolicy
+                  - cloudfront:GetResponseHeadersPolicy
+                  - cloudfront:ListResponseHeadersPolicies
+                  - cloudfront:CreateFunction
+                  - cloudfront:UpdateFunction
+                  - cloudfront:DeleteFunction
+                  - cloudfront:DescribeFunction
+                  - cloudfront:GetFunction
+                  - cloudfront:ListFunctions
+                  - cloudfront:PublishFunction
+                  - cloudfront:TestFunction
                 Resource: '*'
 
               - Sid: AllowCloudFrontDescribeActions
