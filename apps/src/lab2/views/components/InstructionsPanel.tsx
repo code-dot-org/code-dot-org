@@ -41,7 +41,6 @@ interface InstructionsPanelProps {
   canShowNextButton: boolean;
   hasNextLevel: boolean;
   useSecondaryFinishButton: boolean;
-  onContinueOrFinish: () => void;
   bottomComponent?: React.ReactNode;
   noTextAnimation?: boolean;
   isRunning?: boolean;
