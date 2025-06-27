@@ -75,15 +75,6 @@
       border: 1px solid var(--borders-neutral-primary);
       border-radius: 0.25rem;
 
-      .yourSchoolMapPoint {
-        display: inline-block;
-        border-style: solid;
-        border-radius: 50%;
-        height: 0.625rem;
-        width: 0.625rem;
-        flex-shrink: 0;
-      }
-
       .yourSchoolMapSearchFieldset {
         display: flex;
         border: none;
@@ -91,91 +82,6 @@
         padding: 1rem 1.25rem;
         gap: 1rem;
         width: 100%;
-      }
-
-      .yourSchoolMap {
-        position: relative;
-
-        .yourSchoolMapCard {
-          .yourSchoolMapCardHeading {
-            margin: 0 0 0.25rem;
-          }
-
-          .yourSchoolMapCardLocation,
-          .yourSchoolMapCardLegend {
-            display: flex;
-            gap: 0.25rem;
-            align-items: flex-start;
-
-            &,
-            :first-child {
-              font-size: 0.75rem;
-              line-height: 1.64;
-            }
-
-            :first-child {
-              flex-shrink: 0;
-            }
-          }
-
-          .yourSchoolMapCardLocation {
-            margin: 0 0 0.75rem;
-
-            i {
-              color: var(--text-neutral-placeholder);
-            }
-
-            .yourSchoolMapCardLocationText {
-              font-weight: font.$semi-bold-font-weight;
-              margin: 0;
-            }
-          }
-
-          .yourSchoolMapCardLegend {
-            color: var(--text-neutral-tertiary);
-            margin: 0 0 1rem;
-
-            :first-child {
-              margin-top: 0.3rem;
-            }
-          }
-
-          .yourSchoolMapCardButton {
-            width: 100%;
-          }
-        }
-
-        .yourSchoolMapLegend {
-          width: 15.625rem;
-          background-color: var(--background-neutral-primary);
-          border: 1px solid var(--borders-neutral-primary);
-          box-shadow: 0 4px 4px 0 rgb(0 0 0 / 0.07);
-          padding: 0.5rem 0.75rem;
-          border-radius: 6px;
-          position: absolute;
-          bottom: 2.25rem;
-          left: 0.5rem;
-          z-index: 1;
-
-          ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-
-            li {
-              display: flex;
-              align-items: center;
-              gap: 0.625rem;
-
-              small {
-                @include font.main-font-regular;
-                color: var(--text-neutral-tertiary);
-                font-size: 0.75rem;
-                line-height: 1.64;
-              }
-            }
-          }
-        }
       }
 
       .yourSchoolMapSources {
@@ -382,18 +288,6 @@
 
     .yourSchoolMapSection {
       .yourSchoolMapContainer {
-        .yourSchoolMap {
-          .yourSchoolMapLegend {
-            position: static;
-            box-shadow: none;
-            border: none;
-            border-radius: 0;
-            bottom: auto;
-            left: auto;
-            width: 100%;
-          }
-        }
-
         .yourSchoolMapSources {
           border-top: 1px solid var(--borders-neutral-primary);
 

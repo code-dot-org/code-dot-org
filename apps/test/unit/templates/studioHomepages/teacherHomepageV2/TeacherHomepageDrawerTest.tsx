@@ -15,6 +15,7 @@ import {
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
+import * as useSchoolInfoModule from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
 import * as schoolInfoFunc from '@cdo/apps/schoolInfo/utils/updateSchoolInfo';
 import currentUser, {
   setInitialData,
@@ -33,6 +34,21 @@ describe('TeacherHomepageDrawer', () => {
     school_type: 'public',
   };
 
+  const mockSchoolInfo = {
+    schoolId: '67890',
+    country: 'US',
+    schoolName: 'Test School',
+    schoolZip: '12345',
+    schoolsList: [],
+    schoolsLoading: false,
+    usIp: true,
+    setSchoolId: jest.fn(),
+    setCountry: jest.fn(),
+    setSchoolName: jest.fn(),
+    setSchoolZip: jest.fn(),
+    reset: jest.fn(),
+  };
+
   const schoolName = schoolInfo.school_name;
 
   let sendEventSpy: jest.SpyInstance;
@@ -46,6 +62,9 @@ describe('TeacherHomepageDrawer', () => {
       .spyOn(schoolInfoFunc, 'updateSchoolInfo')
       .mockImplementation(jest.fn());
     fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
+    jest
+      .spyOn(useSchoolInfoModule, 'useSchoolInfo')
+      .mockReturnValue(mockSchoolInfo);
   });
 
   afterEach(() => {
@@ -56,7 +75,7 @@ describe('TeacherHomepageDrawer', () => {
   function renderComponent() {
     const store = getStore();
     registerReducers({currentUser});
-    store.dispatch(setInitialData({id: 1, inUSA: true}));
+    store.dispatch(setInitialData({id: 1, country_code: 'US'}));
     return render(
       <Provider store={store}>
         <TeacherHomepageDrawer />
@@ -64,17 +83,21 @@ describe('TeacherHomepageDrawer', () => {
     );
   }
 
-  it('renders the correct title, subtitle, and school data inputs when showSchoolInfoInterstitial is true', async () => {
-    fetchSpy.mockImplementation(() => {
+  function fetchSpySetup(showInterstitial: boolean, showConfirmation: boolean) {
+    fetchSpy.mockImplementation((url: string) => {
       return Promise.resolve({
         value: {
-          showSchoolInfoInterstitial: true,
-          showSchoolInfoConfirmation: false,
+          showSchoolInfoInterstitial: showInterstitial,
+          showSchoolInfoConfirmation: showConfirmation,
           existingSchoolInfo: schoolInfo,
         },
         response: new Response(),
       });
     });
+  }
+
+  it('renders the correct title, subtitle, and school data inputs when showSchoolInfoInterstitial is true', async () => {
+    fetchSpySetup(true, false);
     renderComponent();
     await act(async () => await new Promise(process.nextTick));
     screen.getByText(i18n.censusHeading());
@@ -83,16 +106,7 @@ describe('TeacherHomepageDrawer', () => {
   });
 
   it('sends analytics event when the secondary button is clicked', async () => {
-    fetchSpy.mockImplementation(() => {
-      return Promise.resolve({
-        value: {
-          showSchoolInfoInterstitial: true,
-          showSchoolInfoConfirmation: false,
-          existingSchoolInfo: schoolInfo,
-        },
-        response: new Response(),
-      });
-    });
+    fetchSpySetup(true, false);
     renderComponent();
     await act(async () => await new Promise(process.nextTick));
     const secondaryButton = screen.getByText(i18n.dismiss());
@@ -101,16 +115,7 @@ describe('TeacherHomepageDrawer', () => {
   });
 
   it('sends analytics event and calls updateSchoolInfo when the school data entry submit button is clicked', async () => {
-    fetchSpy.mockImplementation(() => {
-      return Promise.resolve({
-        value: {
-          showSchoolInfoInterstitial: true,
-          showSchoolInfoConfirmation: false,
-          existingSchoolInfo: schoolInfo,
-        },
-        response: new Response(),
-      });
-    });
+    fetchSpySetup(true, false);
     renderComponent();
     await act(async () => await new Promise(process.nextTick));
     const primaryButton = screen.getByText(i18n.save());
@@ -120,16 +125,7 @@ describe('TeacherHomepageDrawer', () => {
   });
 
   it('displays success message after school data entry submit button is clicked', async () => {
-    fetchSpy.mockImplementation(() => {
-      return Promise.resolve({
-        value: {
-          showSchoolInfoInterstitial: true,
-          showSchoolInfoConfirmation: false,
-          existingSchoolInfo: schoolInfo,
-        },
-        response: new Response(),
-      });
-    });
+    fetchSpySetup(true, false);
     renderComponent();
     await act(async () => await new Promise(process.nextTick));
     const primaryButton = screen.getByText(i18n.save());
@@ -139,16 +135,7 @@ describe('TeacherHomepageDrawer', () => {
   });
 
   it('renders the correct title and subtitle when showSchoolInfoConfirmation is true', async () => {
-    fetchSpy.mockImplementation(() => {
-      return Promise.resolve({
-        value: {
-          showSchoolInfoInterstitial: false,
-          showSchoolInfoConfirmation: true,
-          existingSchoolInfo: schoolInfo,
-        },
-        response: new Response(),
-      });
-    });
+    fetchSpySetup(false, true);
     renderComponent();
     await act(async () => await new Promise(process.nextTick));
     screen.getByText(i18n.reviewSchoolInfo());
@@ -164,16 +151,7 @@ describe('TeacherHomepageDrawer', () => {
   });
 
   it('sends analytics event and displays the school data inputs after clicking the primary button when showSchoolInfoConfirmation is true', async () => {
-    fetchSpy.mockImplementation(() => {
-      return Promise.resolve({
-        value: {
-          showSchoolInfoInterstitial: false,
-          showSchoolInfoConfirmation: true,
-          existingSchoolInfo: schoolInfo,
-        },
-        response: new Response(),
-      });
-    });
+    fetchSpySetup(false, true);
     renderComponent();
     await act(async () => await new Promise(process.nextTick));
     const primaryButton = screen.getByText(i18n.imAtaNewSchool());

@@ -1,3 +1,5 @@
+'use client';
+
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import Map, {
   FullscreenControl,
@@ -13,20 +15,19 @@ import {Heading3} from '@code-dot-org/component-library/typography';
 
 import {getMapboxAccessToken} from '@/config/mapbox';
 
-import type {School} from '../types';
-
-import YourSchoolInfo from './YourSchoolInfo';
-import YourSchoolMapPoint, {
+import AdoptionMapInfo from './AdoptionMapInfo';
+import AdoptionMapPoint, {
   MAP_POINT_NO_DATA_COLOR,
   MAP_POINT_HAS_CS_COLOR,
   MAP_POINT_NO_CS_COLOR,
   MAP_POINT_STROKE_COLOR,
   MAP_POINT_STROKE_WIDTH,
   MAP_POINT_TYPES,
-} from './YourSchoolMapPoint';
-import './yourSchoolMap.scss';
+} from './AdoptionMapPoint';
+import type {School} from './types';
+import './adoptionMap.scss';
 
-import styles from '../yourSchool.module.scss';
+import styles from './adoptionMap.module.scss';
 
 const MAP_TILESET_ID = 'censustiles';
 const MAP_POINT_LAYER_ID = 'census';
@@ -39,12 +40,12 @@ const DEFAULT_LAT = 39;
 const DEFAULT_ZOOM = 3;
 const MAP_POINT_ZOOM = 14;
 
-interface YourSchoolMapProps {
+interface AdoptionMapMapProps {
   school?: School | null;
-  onTakeSurveyClick: (school: School) => void;
+  onTakeSurveyClick?: (school: School) => void;
 }
 
-const YourSchoolMap: React.FC<YourSchoolMapProps> = ({
+const AdoptionMap: React.FC<AdoptionMapMapProps> = ({
   school,
   onTakeSurveyClick,
 }) => {
@@ -186,9 +187,9 @@ const YourSchoolMap: React.FC<YourSchoolMapProps> = ({
   }, [mapInstance, showSchoolPopup, school]);
 
   return (
-    <div className={styles.yourSchoolMap}>
+    <section aria-label="Adoption Map" className={styles.adoptionMap}>
       <Map
-        id="map"
+        id="adoption-map"
         ref={mapRef}
         mapboxAccessToken={getMapboxAccessToken()}
         mapStyle={MAPBOX_STYLE_URL}
@@ -281,7 +282,7 @@ const YourSchoolMap: React.FC<YourSchoolMapProps> = ({
             closeOnClick={false}
             anchor="bottom"
           >
-            <YourSchoolInfo
+            <AdoptionMapInfo
               school={popupData.school}
               onTakeSurveyClick={onTakeSurveyClick}
             />
@@ -289,26 +290,29 @@ const YourSchoolMap: React.FC<YourSchoolMapProps> = ({
         )}
       </Map>
 
-      <aside className={styles.yourSchoolMapLegend} aria-label="Map legend">
+      <aside
+        aria-label="Adoption Map Legend"
+        className={styles.adoptionMapLegend}
+      >
         <Heading3 visualAppearance="heading-xs">Legend</Heading3>
 
         <ul>
           <li>
-            <YourSchoolMapPoint type={MAP_POINT_TYPES.HAS_CS} />
+            <AdoptionMapPoint type={MAP_POINT_TYPES.HAS_CS} />
             <small>Offers computer science</small>
           </li>
           <li>
-            <YourSchoolMapPoint type={MAP_POINT_TYPES.NO_CS} />
+            <AdoptionMapPoint type={MAP_POINT_TYPES.NO_CS} />
             <small>No CS opportunities</small>
           </li>
           <li>
-            <YourSchoolMapPoint type={MAP_POINT_TYPES.NO_DATA} />
+            <AdoptionMapPoint type={MAP_POINT_TYPES.NO_DATA} />
             <small>No Data</small>
           </li>
         </ul>
       </aside>
-    </div>
+    </section>
   );
 };
 
-export default YourSchoolMap;
+export default AdoptionMap;
