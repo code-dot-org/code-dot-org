@@ -23,7 +23,7 @@ module Services
       end
 
       def call
-        ActiveRecord::Base.transaction do
+        user.transaction do
           scrub_user
           scrub_legacy_data
           mark_scrubbed
@@ -105,7 +105,7 @@ module Services
       # Removes any third-party data that requires an API call. Called after
       # other methods since it is not reversible.
       private def scrub_external_data
-        MailJet.delete_contact(email) if email.present? && ::User.find_by_email(email).blank?
+        MailJet.delete_contact(email) if email.present? && !::User.exists?(email: email)
       end
 
       private def mark_scrubbed
