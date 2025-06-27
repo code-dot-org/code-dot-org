@@ -73,6 +73,17 @@ export const columns = [
       props: {},
     },
   },
+  {
+    property: 'delete',
+    header: {
+      label: 'Delete',
+      props: {className: 'skills-table-header-cell'},
+    },
+    cell: {
+      formatters: [(del: string) => <span>{del}</span>],
+      props: {},
+    },
+  },
 ];
 
 const SkillsByConceptTable: React.FC<SkillsByConceptTableProps> = ({
@@ -93,6 +104,32 @@ const SkillsByConceptTable: React.FC<SkillsByConceptTableProps> = ({
   const handleEditClick = (skill: Skill) => {
     setIsModalOpen(true);
     setSkillToEdit(skill);
+  };
+
+  const handleDelete = async (skillId: number) => {
+    if (!window.confirm('Are you sure you want to delete this skill?')) return;
+    try {
+      const response = await fetch(`/skills/${skillId}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token':
+            (
+              document.querySelector(
+                'meta[name="csrf-token"]'
+              ) as HTMLMetaElement
+            )?.content || '',
+        },
+      });
+      if (response.ok) {
+        window.location.reload();
+      } else {
+        const data = await response.json();
+        alert(data.message || 'Failed to delete skill.');
+      }
+    } catch (err) {
+      alert('Failed to delete skill.');
+    }
   };
 
   return (
@@ -128,6 +165,15 @@ const SkillsByConceptTable: React.FC<SkillsByConceptTableProps> = ({
                 onClick={() => handleEditClick(skill)}
               >
                 <FontAwesomeV6Icon iconName="pencil-alt" />
+              </span>
+            ),
+            delete: (
+              <span
+                style={{cursor: 'pointer', color: 'red'}}
+                onClick={() => handleDelete(skill.id)}
+                title="Delete Skill"
+              >
+                <FontAwesomeV6Icon iconName="times" />
               </span>
             ),
           }))}
