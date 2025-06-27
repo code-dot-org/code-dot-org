@@ -7,7 +7,7 @@ import {
 import classNames from 'classnames';
 import React from 'react';
 
-import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import lab2I18n from '@cdo/apps/lab2/locale';
 import {ValidationResult} from '@cdo/apps/lab2/progress/ProgressManager';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -37,17 +37,17 @@ function getStatusForResult(result: ValidationResult) {
 function getTranslatedResult(result: ValidationResult) {
   switch (result.result) {
     case 'PASS':
-      return codebridgeI18n.pass();
+      return lab2I18n.pass();
     case 'FAIL':
-      return codebridgeI18n.fail();
+      return lab2I18n.fail();
     case 'SKIP':
-      return codebridgeI18n.skip();
+      return lab2I18n.skip();
     case 'EXPECTED_FAILURE':
-      return codebridgeI18n.expectedFailure();
+      return lab2I18n.expectedFailure();
     case 'UNEXPECTED_SUCCESS':
-      return codebridgeI18n.unexpectedSuccess();
+      return lab2I18n.unexpectedSuccess();
     case 'ERROR':
-      return codebridgeI18n.error();
+      return lab2I18n.error();
   }
 }
 
@@ -65,7 +65,7 @@ const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
 
   return (
     <div className={classNames(className, moduleStyles.validationResults)}>
-      <Heading4>{codebridgeI18n.validationResults()}</Heading4>
+      <Heading4>{lab2I18n.validationResults()}</Heading4>
       {isValidating && <i className="fa fa-spinner fa-spin" />}
       {!isValidating && (
         <div>
@@ -73,10 +73,10 @@ const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
             <thead>
               <tr>
                 <td>
-                  <Heading6>{codebridgeI18n.testName()}</Heading6>
+                  <Heading6>{lab2I18n.testName()}</Heading6>
                 </td>
                 <td>
-                  <Heading6>{codebridgeI18n.result()}</Heading6>
+                  <Heading6>{lab2I18n.result()}</Heading6>
                 </td>
               </tr>
             </thead>

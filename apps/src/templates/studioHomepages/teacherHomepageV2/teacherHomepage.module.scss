@@ -177,20 +177,12 @@
   }
 }
 
-.sectionCardBodyLeft {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  flex-basis: 0;
-}
-
 .sectionCardBodyRight {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 16px;
-  flex-grow: 1;
-  flex-basis: 0;
+  flex: 1 1 0;
 }
 
 .studentsAddedAlert {
@@ -250,17 +242,21 @@
 .courseContentDropdownContainer {
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
+  flex: 1 1 0;
+  min-width: 0;
   background-color: var(--neutral-base-white);
   border: 1px solid var(--neutral-gray-20);
   border-radius: 4px;
   padding: 12px;
   gap: 8px;
   height: 100%;
+}
 
-  p {
-    margin: 0;
-  }
+.courseTitleText {
+  margin: 0 !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .courseContentDropdown {

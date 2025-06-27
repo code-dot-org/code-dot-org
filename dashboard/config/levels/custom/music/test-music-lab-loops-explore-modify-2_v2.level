@@ -49,6 +49,7 @@
                         "id": "play_sound_at_current_location_simple2",
                         "deletable": false,
                         "movable": false,
+                        "editable": false,
                         "extraState": {
                           "disableNextConnection": false
                         },
@@ -61,6 +62,7 @@
                             "id": "(^!!Vy~n^S1Kco1Js?|=",
                             "deletable": false,
                             "movable": false,
+                            "editable": false,
                             "extraState": {
                               "disableNextConnection": false
                             },
@@ -73,6 +75,7 @@
                                 "id": "[c2$3_u]0L~~`Ny!:nf~",
                                 "deletable": false,
                                 "movable": false,
+                                "editable": false,
                                 "extraState": {
                                   "disableNextConnection": false
                                 },
@@ -102,6 +105,7 @@
                             "id": "iiDLsNdhw=DZ3,3[(SpC",
                             "deletable": false,
                             "movable": false,
+                            "editable": false,
                             "extraState": {
                               "disableNextConnection": false
                             },
@@ -114,6 +118,7 @@
                                 "id": "y7u`fp%PjJ3M+oD^$8o[",
                                 "deletable": false,
                                 "movable": false,
+                                "editable": false,
                                 "extraState": {
                                   "disableNextConnection": false
                                 },
@@ -126,6 +131,7 @@
                                     "id": "{}L~14VUKR.?$?fOWe45",
                                     "deletable": false,
                                     "movable": false,
+                                    "editable": false,
                                     "extraState": {
                                       "disableNextConnection": false
                                     },
@@ -155,6 +161,7 @@
                                 "id": "*I;,,qjh}C8N?JFckW8H",
                                 "deletable": false,
                                 "movable": false,
+                                "editable": false,
                                 "extraState": {
                                   "disableNextConnection": false
                                 },
@@ -167,6 +174,7 @@
                                     "id": "ZLH{P*+r1pCtb1~Visu|",
                                     "deletable": false,
                                     "movable": false,
+                                    "editable": false,
                                     "extraState": {
                                       "disableNextConnection": false
                                     },
@@ -179,6 +187,7 @@
                                         "id": "X[5xy{+YL6({$c7SlwPa",
                                         "deletable": false,
                                         "movable": false,
+                                        "editable": false,
                                         "extraState": {
                                           "disableNextConnection": false
                                         },
@@ -261,6 +270,7 @@
                                         "id": ",rI|2BRd0Z5k/UE,v@/1",
                                         "deletable": false,
                                         "movable": false,
+                                        "editable": false,
                                         "extraState": {
                                           "disableNextConnection": false
                                         },
@@ -273,6 +283,7 @@
                                             "id": "WOGg`pP!gCws6k?0P$91",
                                             "deletable": false,
                                             "movable": false,
+                                            "editable": false,
                                             "extraState": {
                                               "disableNextConnection": false
                                             },
@@ -285,6 +296,7 @@
                                                 "id": "e^*a_Nu=a9jk$IN8wmI7",
                                                 "deletable": false,
                                                 "movable": false,
+                                                "editable": false,
                                                 "extraState": {
                                                   "disableNextConnection": false
                                                 },
@@ -314,6 +326,7 @@
                                             "id": ".F)fVvnix^pE})G3Z*5p",
                                             "deletable": false,
                                             "movable": false,
+                                            "editable": false,
                                             "extraState": {
                                               "disableNextConnection": false
                                             },
@@ -326,6 +339,7 @@
                                                 "id": ";Sfnz(PN.h(HL`~^+gLK",
                                                 "deletable": false,
                                                 "movable": false,
+                                                "editable": false,
                                                 "extraState": {
                                                   "disableNextConnection": false
                                                 },
@@ -338,6 +352,7 @@
                                                     "id": "uO1(/zG?nZ:A#Z,:_gt1",
                                                     "deletable": false,
                                                     "movable": false,
+                                                    "editable": false,
                                                     "extraState": {
                                                       "disableNextConnection": false
                                                     },
@@ -367,6 +382,7 @@
                                                 "id": "24b%J^ZUV.f[c;gU;NH}",
                                                 "deletable": false,
                                                 "movable": false,
+                                                "editable": false,
                                                 "extraState": {
                                                   "disableNextConnection": false
                                                 },
@@ -379,6 +395,7 @@
                                                     "id": "5j@tc_.r1EX-=qh:zPhk",
                                                     "deletable": false,
                                                     "movable": false,
+                                                    "editable": false,
                                                     "extraState": {
                                                       "disableNextConnection": false
                                                     },
@@ -391,6 +408,7 @@
                                                         "id": "35+5SDg,ks=N3!m%H7~p",
                                                         "deletable": false,
                                                         "movable": false,
+                                                        "editable": false,
                                                         "extraState": {
                                                           "disableNextConnection": false
                                                         },
@@ -473,6 +491,7 @@
                                                         "id": "aKDTnh+5hA7%|gpqw4?(",
                                                         "deletable": false,
                                                         "movable": false,
+                                                        "editable": false,
                                                         "extraState": {
                                                           "disableNextConnection": false
                                                         },
@@ -485,6 +504,7 @@
                                                             "id": "ME7(nsH;njjobD/[#@ha",
                                                             "deletable": false,
                                                             "movable": false,
+                                                            "editable": false,
                                                             "extraState": {
                                                               "disableNextConnection": false
                                                             },
@@ -497,6 +517,7 @@
                                                                 "id": "8YdqE!$d5@}]a`,K*V.y",
                                                                 "deletable": false,
                                                                 "movable": false,
+                                                                "editable": false,
                                                                 "extraState": {
                                                                   "disableNextConnection": false
                                                                 },
@@ -535,7 +556,8 @@
               "x": 310,
               "y": 70,
               "disabledReasons": [
-                "MANUALLY_DISABLED"
+                "MANUALLY_DISABLED",
+                "ORPHANED"
               ],
               "deletable": false,
               "extraState": {
@@ -548,7 +570,8 @@
               "x": 310,
               "y": 190,
               "disabledReasons": [
-                "MANUALLY_DISABLED"
+                "MANUALLY_DISABLED",
+                "ORPHANED"
               ],
               "deletable": false,
               "extraState": {
@@ -564,7 +587,8 @@
               "x": 490,
               "y": 190,
               "disabledReasons": [
-                "MANUALLY_DISABLED"
+                "MANUALLY_DISABLED",
+                "ORPHANED"
               ],
               "deletable": false,
               "extraState": {
@@ -580,7 +604,8 @@
               "x": 670,
               "y": 190,
               "disabledReasons": [
-                "MANUALLY_DISABLED"
+                "MANUALLY_DISABLED",
+                "ORPHANED"
               ],
               "deletable": false,
               "extraState": {
@@ -596,7 +621,8 @@
               "x": 490,
               "y": 70,
               "disabledReasons": [
-                "MANUALLY_DISABLED"
+                "MANUALLY_DISABLED",
+                "ORPHANED"
               ],
               "deletable": false,
               "extraState": {
@@ -609,7 +635,8 @@
               "x": 670,
               "y": 70,
               "disabledReasons": [
-                "MANUALLY_DISABLED"
+                "MANUALLY_DISABLED",
+                "ORPHANED"
               ],
               "deletable": false,
               "extraState": {
@@ -676,7 +703,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:37.210+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-modify-2\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-modify-2\"},{\"changed_at\":\"2025-06-12 15:58:57 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:37.210+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-modify-2\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-modify-2\"},{\"changed_at\":\"2025-06-12 15:58:57 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-26 21:49:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-26 21:49:10 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

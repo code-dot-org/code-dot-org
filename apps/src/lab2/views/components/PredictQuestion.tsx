@@ -30,17 +30,18 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
     return null;
   }
 
-  const handleMultiSelectChanged = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSelectionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
     if (predictSettings.isMultiSelect) {
-      const newResponse = predictResponse ? predictResponse.split(',') : [];
+      const selections = predictResponse ? predictResponse.split(',') : [];
       if (e.target.checked) {
-        newResponse.push(e.target.value);
-      } else if (newResponse.includes(e.target.value)) {
-        newResponse.splice(newResponse.indexOf(e.target.value), 1);
+        selections.push(value);
+      } else if (selections.includes(value)) {
+        selections.splice(selections.indexOf(value), 1);
       }
-      setPredictResponse(newResponse.join(','));
+      setPredictResponse(selections.join(','));
     } else {
-      setPredictResponse(e.target.value);
+      setPredictResponse(value);
     }
   };
 
@@ -72,12 +73,10 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
                 <input
                   type={predictSettings.isMultiSelect ? 'checkbox' : 'radio'}
                   value={index.toString()}
-                  checked={
-                    (predictResponse &&
-                      predictResponse.split(',').includes(index.toString())) ||
-                    false
-                  }
-                  onChange={handleMultiSelectChanged}
+                  checked={Boolean(
+                    predictResponse?.split(',').includes(index.toString())
+                  )}
+                  onChange={handleSelectionChange}
                   name={option}
                   key={index}
                   disabled={predictAnswerLocked}
