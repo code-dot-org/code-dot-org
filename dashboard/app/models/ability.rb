@@ -206,6 +206,10 @@ class Ability
         can :manage, LearningGoalTeacherEvaluation, teacher_id: user.id
         can :manage, LearningGoalAiEvaluationFeedback, teacher_id: user.id
         can :evaluate_section, :openai_evaluate
+        can :get_most_recent_user_level_evaluation, StudentWorkEvaluation do |evaluation|
+          user.students.exists?(id: evaluation.student_id)
+        end
+
       end
 
       if user.facilitator?

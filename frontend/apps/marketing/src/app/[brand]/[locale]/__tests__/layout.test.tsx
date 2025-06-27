@@ -63,6 +63,7 @@ jest.mock('next/navigation', () => ({
     push: jest.fn(),
   })),
   usePathname: jest.fn(() => '/example-path'),
+  useServerInsertedHTML: jest.fn(),
 }));
 
 describe('Layout', () => {

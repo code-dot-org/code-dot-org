@@ -26,13 +26,13 @@ class CourseTypesTests < ActiveSupport::TestCase
     @course_universal_instructor_to_teacher = create(:unit_group, name: 'course-universal-instructor-to-teacher', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
     @course_plc_reviewer_to_facilitator = create(:unit_group, name: 'course-plc-reviewer-to-facilitator', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
 
-    # Units not in UnitGroup
-    @unit_teacher_to_students = create(:script, name: 'unit-teacher-to-student', family_name: 'teacher-units')
-    @unit_facilitator_to_teacher = create(:script, name: 'unit-facilitator-to-teacher', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
-    @unit_universal_instructor_to_teacher = create(:script, name: 'universal-instructor-to-teacher', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
-    @unit_plc_reviewer_to_facilitator = create(:script, name: 'plc-reviewer-to-facilitator', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
+    # Single-Unit Courses
+    @unit_teacher_to_students = create(:single_unit_course, unit: create(:script, name: 'unit-teacher-to-student'), family_name: 'teacher-units').first_unit
+    @unit_facilitator_to_teacher = create(:single_unit_course, :pl_course, unit: create(:script, name: 'unit-facilitator-to-teacher')).first_unit
+    @unit_universal_instructor_to_teacher = create(:single_unit_course, unit: create(:script, name: 'universal-instructor-to-teacher'), instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher).first_unit
+    @unit_plc_reviewer_to_facilitator = create(:single_unit_course, unit: create(:script, name: 'plc-reviewer-to-facilitator'), instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator).first_unit
 
-    @unit_teacher_to_students_2 = create(:script, name: 'unit-teacher-to-student-2', family_name: 'teacher-units')
+    @unit_teacher_to_students_2 = create(:single_unit_course, unit: create(:script, name: 'unit-teacher-to-student-2'), family_name: 'teacher-units').first_unit
   end
 
   test 'create unit_group with same audiences raises error' do
@@ -43,7 +43,7 @@ class CourseTypesTests < ActiveSupport::TestCase
   end
   test 'create script with same audiences raises error' do
     e = assert_raises do
-      create(:script, name: 'same-audiences', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+      create(:script, :in_single_unit_course, name: 'same-audiences', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
     end
     assert_equal "Validation failed: Instructor audience should be different from participant audiences.", e.message
   end
@@ -230,12 +230,8 @@ class CourseTypesTests < ActiveSupport::TestCase
     assert_equal @unit_group_2.get_family_courses.map(&:name).sort!, ['course-instructed-by-teacher', 'course-instructed-by-teacher-2', 'course-teacher-to-student']
   end
 
-  test 'get_family_courses should get all Unit with the same family name if called for Unit not in UnitGroup' do
-    assert_equal @unit_teacher_to_students_2.get_family_courses.map(&:name).sort!, ['unit-teacher-to-student', 'unit-teacher-to-student-2']
-  end
-
   test 'get_family_courses should return nil if there is no family name' do
-    unit_without_family_name = create :script, name: 'no-family-name'
+    unit_without_family_name = create :script, :in_single_unit_course, name: 'no-family-name'
     assert_nil unit_without_family_name.get_family_courses
   end
 
@@ -268,7 +264,7 @@ class CourseTypesTests < ActiveSupport::TestCase
   # end
 
   test 'should not raise error when changing course type values for a course that is the only one in its family' do
-    solo_unit_in_family_name = create :script, name: 'solo-family-name', family_name: 'solo-family-name'
+    solo_unit_in_family_name = create :script, :in_single_unit_course, name: 'solo-family-name', family_name: 'solo-family-name'
     assert_nothing_raised do
       solo_unit_in_family_name.participant_audience = Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
       solo_unit_in_family_name.save!
@@ -276,7 +272,7 @@ class CourseTypesTests < ActiveSupport::TestCase
   end
 
   # A unit without a family is in a unit group
-  test 'should not raise error when changing unit wihtout family' do
+  test 'should not raise error when changing unit without family' do
     unit_without_family_name = create :script, name: 'solo-family-name', family_name: nil
     assert_nothing_raised do
       unit_without_family_name.participant_audience = Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator

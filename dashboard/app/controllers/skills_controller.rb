@@ -29,6 +29,25 @@ class SkillsController < ApplicationController
     end
   end
 
+  def update
+    @skill = Skill.find(params[:id])
+    if @skill.update(skill_params)
+      @skill.write_serialization
+      render json: {status: 'success', message: 'Skill updated successfully'}, status: :ok
+    else
+      render json: {status: 'error', message: @skill.errors.full_messages.to_sentence}, status: :bad_request
+    end
+  end
+
+  def destroy
+    @skill = Skill.find(params[:id])
+    if @skill.destroy
+      render json: {status: 'success', message: 'Skill deleted successfully'}, status: :ok
+    else
+      render json: {status: 'error', message: @skill.errors.full_messages.to_sentence}, status: :bad_request
+    end
+  end
+
   def section_skills
     section = Section.find_by(id: section_skills_params[:section_id])
     unit = Unit.find_by(name: section_skills_params[:unit_name])

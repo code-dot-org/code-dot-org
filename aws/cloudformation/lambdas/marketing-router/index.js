@@ -311,7 +311,24 @@ const marketingPaths = {
   "/engineering/all-the-things": true,
   "/hourofcode": true,
   "/hour-of-code": true,
-  "/csjourneys": true
+  "/csjourneys": true,
+  "/dance": true,
+  "/hour-of-code/dance": true,
+  // Post Launch 2
+  "/donate": true,
+  "/poetry": true,
+  "/transformersone": true,
+  "/hour-of-code/poetry": true,
+  "/hour-of-code/transformersone": true,
+  "/districts/program/coaches-network": true,
+  // Home Page
+  "/": true,
+  // Post Launch 3
+  "/api/health_check": true,
+  "/about/partners": true,
+  "/privacy/cookies": true,
+  "/about/team": true,
+  "/about/leadership": true,
 }
 
 const nextJsAssetsPath = '/_next/static/';
