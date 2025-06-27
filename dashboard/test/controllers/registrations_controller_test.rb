@@ -617,7 +617,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   describe "#finish_student_account" do
-    it "assigns redirect_url from session to preserve the target_link_uri if set" do
+    it "assigns redirect_url from session if set to preserve the target_link_uri" do
       get :finish_student_account, session: {user_return_to: "/sync_course"}
 
       assert_equal "/sync_course", assigns(:redirect_url)
