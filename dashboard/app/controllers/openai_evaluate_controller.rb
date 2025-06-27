@@ -43,7 +43,6 @@ class OpenaiEvaluateController < ApplicationController
       return render status: :not_found, json: "Unit with name #{evaluate_section_params[:unit_name]}"
     end
 
-    pp 'lfm evaluating section', {section_id: evaluate_section_params[:section_id], unit_name: evaluate_section_params[:unit_name]}
     OpenaiEvaluateHelper.evaluate_section(
       unit,
       section,

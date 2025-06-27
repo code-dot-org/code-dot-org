@@ -45,10 +45,22 @@ class SkillsController < ApplicationController
 
     authorize! :manage, section
 
-    skills_data = SkillsHelper.get_section_skills_data(section, unit)
+    evaluation_data = SkillsHelper.get_section_skills_data(section, unit)
+
+    skills_list = evaluation_data.values.flat_map(&:keys).uniq
+
+    skills_data = skills_list.map do |skill_id|
+      skill = Skill.find(skill_id)
+      {
+        id: skill.id,
+        key: skill.key,
+        description: skill.description,
+      }
+    end
 
     render json: {
       status: 'success',
+      evaluation_data: evaluation_data,
       skills_data: skills_data
     }.deep_transform_keys {|key| key.to_s.camelize(:lower)}
   end
