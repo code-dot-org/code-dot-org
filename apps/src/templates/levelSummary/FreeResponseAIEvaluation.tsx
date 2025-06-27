@@ -8,6 +8,7 @@ import {
 import {fetchMostRecentUserLevelEvaluation} from '@cdo/apps/aiEvaluation/studentWorkEvaluationsApi';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {StudentWorkEvaluationStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import FreeResponseAiStudentResponseHeader from './FreeResponseAiStudentResponseHeader';
 import FreeResponseAiSummaryBox from './FreeResponseAiSummaryBox';
@@ -72,7 +73,7 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
             data =>
               data !== null &&
               !Array.isArray(data) &&
-              data.evaluation !== 'No attempt'
+              data.evaluation !== StudentWorkEvaluationStatus.NO_ATTEMPT
           )
           .map(({evaluation, reasoning, ...rest}) => ({
             ...rest,
