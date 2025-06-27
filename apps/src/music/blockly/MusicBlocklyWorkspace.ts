@@ -682,6 +682,7 @@ export default class MusicBlocklyWorkspace {
       );
       return;
     }
+    this.workspace.clear();
     this.workspace.clearUndo();
 
     // Clear the record of the last executed code so that if the new code

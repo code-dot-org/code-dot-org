@@ -13,7 +13,6 @@ import moduleStylesShrink from '../AiTutor2ResponseShrink.module.scss';
 
 export function useAiTutor2(
   isEnabled: boolean,
-  getFullPrompt: (question: string) => string,
   type: AiTutor2MessageType,
   shrink = false
 ) {
@@ -50,7 +49,7 @@ export function useAiTutor2(
   const [response, setResponse] = useState<string>();
 
   const askAiTutor2 = useCallback(
-    async (question: string) => {
+    async (question: string, questionExtra: string) => {
       if (!isEnabled) {
         return;
       }
@@ -59,7 +58,8 @@ export function useAiTutor2(
 
       setLoading(true);
       const response = await managerRef.current?.askAiTutor2(
-        getFullPrompt(question),
+        question,
+        questionExtra,
         type
       );
       if (response) {
@@ -67,7 +67,7 @@ export function useAiTutor2(
       }
       setLoading(false);
     },
-    [isEnabled, getFullPrompt, type]
+    [isEnabled, type]
   );
 
   const AiTutor2Response = loading ? (
