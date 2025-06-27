@@ -1,10 +1,12 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
-import React from 'react';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import React, {useState} from 'react';
 import * as Table from 'reactabular-table';
 
 import './skills.css';
 
-import {SkillsByConcept} from './types';
+import SkillsEditDialog from './SkillsEditDialog';
+import {Skill, SkillsByConcept} from './types';
 
 interface SkillsByConceptTableProps {
   skills: SkillsByConcept;
@@ -60,6 +62,17 @@ export const columns = [
       props: {className: 'skills-table-cell-unset-maxwidth'},
     },
   },
+  {
+    property: 'edit',
+    header: {
+      label: 'Edit',
+      props: {className: 'skills-table-header-cell'},
+    },
+    cell: {
+      formatters: [(edit: string) => <span>{edit}</span>],
+      props: {},
+    },
+  },
 ];
 
 const SkillsByConceptTable: React.FC<SkillsByConceptTableProps> = ({
@@ -74,6 +87,13 @@ const SkillsByConceptTable: React.FC<SkillsByConceptTableProps> = ({
     }));
   concepts.push({value: '', text: ''});
   const skillsToShow = skills[selectedConcept] || [];
+  const [skillToEdit, setSkillToEdit] = useState<Skill | undefined>(undefined);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleEditClick = (skill: Skill) => {
+    setIsModalOpen(true);
+    setSkillToEdit(skill);
+  };
 
   return (
     <div>
@@ -102,10 +122,25 @@ const SkillsByConceptTable: React.FC<SkillsByConceptTableProps> = ({
             key: skill.key,
             description: skill.description,
             evaluationCriteria: skill.evaluationCriteria,
+            edit: (
+              <span
+                style={{cursor: 'pointer'}}
+                onClick={() => handleEditClick(skill)}
+              >
+                <FontAwesomeV6Icon iconName="pencil-alt" />
+              </span>
+            ),
           }))}
           rowKey="key"
         />
       </Table.Provider>
+      {isModalOpen && skillToEdit && (
+        <SkillsEditDialog
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          skill={skillToEdit}
+        />
+      )}
     </div>
   );
 };

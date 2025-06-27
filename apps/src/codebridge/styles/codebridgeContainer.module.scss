@@ -2,8 +2,10 @@
   height: 100%;
   width: 100%;
 
+  // Chrome(>=v121), Edge and Firefox use scrollbar-color.
   scrollbar-color: var(--background-neutral-quinary) var(--background-neutral-primary);
-  // webkit-scrollbar is only used by Safari. Chrome and Firefox use scrollbar-color.
+
+  // webkit-scrollbar is used by Safari. 
   ::-webkit-scrollbar {
     background: var(--background-neutral-primary);
     width: 10px;

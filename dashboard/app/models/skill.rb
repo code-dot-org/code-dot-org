@@ -31,8 +31,6 @@ class Skill < ApplicationRecord
   def write_serialization
     return unless Rails.application.config.levelbuilder_mode
     file_path = Rails.root.join("config/skills/#{key}.json")
-    dir_path = File.dirname(file_path)
-    FileUtils.mkdir_p(dir_path)
     object_to_serialize = serialize
     File.write(file_path, JSON.pretty_generate(object_to_serialize) + "\n")
   end

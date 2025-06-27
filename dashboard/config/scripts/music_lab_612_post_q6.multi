@@ -12,13 +12,13 @@ allow_multiple_attempts true
 teacher_markdown <<MARKDOWN
 Topic: Functions
 
-Standard: Create an algorithm for a song that includes functions with parameters
+Standard: Identify portions of a song that could be abstracted as a function and write an algorithm representing the song and its functions.
 
-Lesson: Functions - Synthesis
+Lesson: Functions - Practice
 
-Skill Progression: Create a function with at least 1 parameter and call it at least twice with different arguments
+Skill Progression: Decompose a song into functions
 
-Pretest Modality: Given algorithm / intent / incorrect code, match with code
+Pretest Modality: Given starting code / shadow blocks, refactor
 
 Posttest Modality: Given algorithm / intent / incorrect code, match with code
 

@@ -11,7 +11,6 @@ interface MainInstructionsPreviewProps {
   instructionsText: string;
   handleInstructionsTextClick?: (id: string) => void;
   theme: Theme;
-  hasPassed: boolean;
 }
 
 /**
@@ -20,7 +19,7 @@ interface MainInstructionsPreviewProps {
  */
 const MainInstructionsPreview: React.FunctionComponent<
   MainInstructionsPreviewProps
-> = ({instructionsText, handleInstructionsTextClick, theme, hasPassed}) => {
+> = ({instructionsText, handleInstructionsTextClick, theme}) => {
   return (
     <div
       key={instructionsText}
@@ -31,7 +30,6 @@ const MainInstructionsPreview: React.FunctionComponent<
       <MainInstructionsContent
         instructionsText={instructionsText}
         handleInstructionsTextClick={handleInstructionsTextClick}
-        hasPassed={hasPassed}
       />
     </div>
   );

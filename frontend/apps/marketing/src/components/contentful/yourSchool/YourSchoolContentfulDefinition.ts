@@ -29,7 +29,8 @@ export const YourSchoolContentfulComponentDefinition: ComponentDefinition = {
       type: 'Text',
       group: 'content',
       description: 'The URL of the regional partner page.',
-      defaultValue: 'https://code.org/educate/regional-partner',
+      defaultValue:
+        'https://code.org/professional-learning/regional-partner-program',
       validations: {
         required: true,
         bindingSourceType: ['manual', 'entry'],
@@ -41,6 +42,32 @@ export const YourSchoolContentfulComponentDefinition: ComponentDefinition = {
       group: 'content',
       description: 'The URL of the privacy policy page.',
       defaultValue: 'https://code.org/privacy',
+      validations: {
+        required: true,
+        bindingSourceType: ['manual', 'entry'],
+      },
+    },
+    shareOnTwitterURL: {
+      displayName: 'Share on Twitter URL',
+      type: 'Text',
+      group: 'content',
+      description:
+        'The URL is for composing a tweet on Twitter with pre-filled text and a share link.',
+      defaultValue:
+        'https://twitter.com/intent/tweet?related=codeorg&text=Does+your+school+teach+computer+science%3F+Expand+computer+science+at+your+school+or+district.+%40codeorg&url=https%3A%2F%2Fcode.org%2Fyour-school',
+      validations: {
+        required: true,
+        bindingSourceType: ['manual', 'entry'],
+      },
+    },
+    shareOnFacebookURL: {
+      displayName: 'Share on Facebook URL',
+      type: 'Text',
+      group: 'content',
+      description:
+        'The URL opens Facebook’s share dialog to share the specified link',
+      defaultValue:
+        'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcode.org%2Fyour-school',
       validations: {
         required: true,
         bindingSourceType: ['manual', 'entry'],
