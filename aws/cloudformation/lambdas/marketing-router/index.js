@@ -8,7 +8,6 @@ const marketingDomain = env.marketingDomain
 const marketingPaths = {
   // Add key-value pairs for each path that should be served by the CMS
   // e.g. '/videos': true,
-  '/test/lambda/version/remove/me',
   '/en-US/engineering/all-the-things': true,
   // P-0-1
   "/about/supporters/amazon": true,
