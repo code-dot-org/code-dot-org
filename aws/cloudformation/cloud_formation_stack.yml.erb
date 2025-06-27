@@ -433,6 +433,13 @@ Resources:
     Properties:
       FunctionName: !Ref MarketingRouterLambda
       Description: "Code hash: <%= marketing_router_package[:content_hash] %>"
+  # Create an Alias to make it easier to monitor Metrics in CloudWatch.
+  MarketingRouterAlias:
+    Type: AWS::Lambda::Alias
+    Properties:
+      FunctionName: !Ref MarketingRouterLambda
+      FunctionVersion: !GetAtt MarketingRouterVersion.Version
+      Name: LIVE
   MarketingRouterLambdaRole:
     Type: AWS::IAM::Role
     Properties:
