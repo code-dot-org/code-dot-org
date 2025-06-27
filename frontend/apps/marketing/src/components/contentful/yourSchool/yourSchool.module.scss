@@ -193,6 +193,12 @@
           .yourSchoolMapPartnerText {
             display: inline-block;
             margin: 0;
+
+            &::after {
+              content: '';
+              display: inline-block;
+              width: 0.75rem;
+            }
           }
 
           .yourSchoolMapPartnerImg {
