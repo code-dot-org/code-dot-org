@@ -188,16 +188,17 @@
         }
 
         .yourSchoolMapPartner {
-          display: flex;
-          gap: 0.75rem;
           margin-inline-start: auto;
 
           .yourSchoolMapPartnerText {
+            display: inline-block;
             margin: 0;
           }
 
           .yourSchoolMapPartnerImg {
-            width: auto;
+            display: inline-block;
+            vertical-align: top;
+            width: fit-content;
             height: 1.25rem;
           }
         }

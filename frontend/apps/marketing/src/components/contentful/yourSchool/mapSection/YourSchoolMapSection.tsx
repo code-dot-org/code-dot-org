@@ -80,7 +80,7 @@ const YourSchoolMapSection: React.FC<YourSchoolMapSectionProps> = ({
             <BodyThreeText className={styles.yourSchoolMapPartnerText}>
               In partnership with
             </BodyThreeText>
-
+            &nbsp;&nbsp;
             <Image
               src={cstaLogo.src}
               altText="CSTA"
