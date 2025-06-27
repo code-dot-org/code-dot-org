@@ -1032,19 +1032,9 @@ roles.each do |name, config| %>
           PolicyDocument:
             Version: 2012-10-17
             Statement:
-              - Effect: Allow
-                Action:
-                  - cloudformation:CreateStack
-                  - cloudformation:DescribeStacks
-                  - cloudformation:CreateChangeSet
-                  - cloudformation:DescribeChangeSet
-                  - cloudformation:DeleteChangeSet
-                  - cloudformation:ExecuteChangeSet
-                  - cloudformation:ListStackResources
-                  - cloudformation:TagResource
-                  - cloudformation:DeleteStack
-                  - cloudformation:UpdateStack
-                  - cloudformation:GetTemplateSummary
+              - Sid: CloudFormation
+                Effect: Allow
+                Action: cloudformation:*
                 # The Stack Name must match this naming prefix convention. Examples:
                 # marketing-sites-production-code-org
                 # marketing-sites-production-hourofcode-com
@@ -1053,7 +1043,7 @@ roles.each do |name, config| %>
                 # marketing-sites-development-code-org-my-feature-branch
                 # marketing-sites-development-code-org-my-other-branch
                 Resource: !Sub "arn:aws:cloudformation:*:${AWS::AccountId}:stack/*<%=hyphenated_base_domain%>*"
-              # CREATE new roles & ATTACH/DETACH policies from those roles — but only if they use our permissions boundary policy.
+
               - Sid: AllowCreateRoleWithBoundary
                 Effect: Allow
                 Action:
@@ -1067,377 +1057,270 @@ roles.each do |name, config| %>
                   StringEquals:
                     iam:PermissionsBoundary: !Ref MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>Policy
 
-              # CREATE/READ/DELETE on your roles and policies (but only operate on existing roles in our namespace)
-              #   these can't use PermissionsBoundary condition
-              - Sid: AllowReadRole
+              - Sid: AllowIAMRoleManagement
                 Effect: Allow
                 Action:
                   - iam:CreatePolicy
                   - iam:DeleteRole
                   - iam:DeletePolicy
-                  - iam:GetRole
+                  - iam:GetRole*
                   - iam:ListAttachedRolePolicies
-                  - iam:GetRolePolicy
                   - iam:TagRole
                 Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/marketing-sites-<%=environment_type%>-*"
 
-              # PASS roles into ECS / Application AutoScaling — only our roles/ECS-tasks, and only to ECS
               - Sid: AllowPassRoleToService
                 Effect: Allow
                 Action: iam:PassRole
-                # which role we allow to be passed
                 Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/marketing-sites-<%=environment_type%>-*"
                 Condition:
                   StringEquals:
                     iam:PassedToService:
                       - ecs-tasks.amazonaws.com
                       - application-autoscaling.amazonaws.com
-              #                  TODO: Get this extra restriction working.
-              #                  ArnLike:
-              #                    iam:AssociatedResourceARN:
-              #                      - !Sub "arn:aws:ecs:*:${AWS::AccountId}:task-definition/*-<%#=environment_type%>-*:*"
-              #                      - !Sub "arn:aws:ecs:*:${AWS::AccountId}:service/*-<%#=environment_type%>-*/*"
 
-              # EC2 CREATE actions - allowed on any resource
               - Sid: AllowEC2CreateActions
                 Effect: Allow
                 Action:
-                  - ec2:CreateVpc
-                  - ec2:CreateSubnet
-                  - ec2:CreateRouteTable
-                  - ec2:CreateRoute
-                  - ec2:CreateInternetGateway
-                  - ec2:CreateNatGateway
-                  - ec2:CreateSecurityGroup
-                  - ec2:CreateTags
-                  - ec2:AllocateAddress
-                  - ec2:AssociateRouteTable
-                  - ec2:AttachInternetGateway
-                  - ec2:AuthorizeSecurityGroupEgress
-                  - ec2:AuthorizeSecurityGroupIngress
-                  - ec2:ModifyVpcAttribute
-                  - ec2:ModifySubnetAttribute
-                  - ec2:CreateNetworkInterface
-                  - ec2:AttachNetworkInterface
-                  - ec2:ModifyNetworkInterfaceAttribute
+                  - ec2:Create*
+                  - ec2:Allocate*
+                  - ec2:Associate*
+                  - ec2:Attach*
+                  - ec2:Authorize*
+                  - ec2:Modify*
                 Resource: '*'
 
-              # EC2 UPDATE/DELETE/MODIFY actions - restricted to tagged resources
               - Sid: AllowEC2UpdateDeleteActionsOnTaggedResources
                 Effect: Allow
                 Action:
-                  - ec2:DeleteVpc
-                  - ec2:DeleteSubnet
-                  - ec2:DeleteRouteTable
-                  - ec2:DeleteRoute
-                  - ec2:DeleteInternetGateway
-                  - ec2:DeleteNatGateway
-                  - ec2:DeleteSecurityGroup
-                  - ec2:ReleaseAddress
-                  - ec2:DisassociateRouteTable
-                  - ec2:DetachInternetGateway
-                  - ec2:RevokeSecurityGroupEgress
-                  - ec2:RevokeSecurityGroupIngress
-                  - ec2:DeleteNetworkInterface
-                  - ec2:DetachNetworkInterface
+                  - ec2:Delete*
+                  - ec2:Release*
+                  - ec2:Disassociate*
+                  - ec2:Detach*
+                  - ec2:Revoke*
                 Resource: '*'
                 Condition:
                   StringEquals:
                     'aws:ResourceTag/environment-type': <%=environment_type%>
 
-              # Allow open describe access in EC2 (not limitable by a condition like tag)
               - Sid: AllowEC2DescribeActions
                 Effect: Allow
-                Action:
-                  - ec2:DescribeAddresses
-                  - ec2:DescribeInternetGateways
-                  - ec2:DescribeNatGateways
-                  - ec2:DescribeNetworkInterfaces
-                  - ec2:DescribeRouteTables
-                  - ec2:DescribeSecurityGroups
-                  - ec2:DescribeSubnets
-                  - ec2:DescribeVpcs
+                Action: ec2:Describe*
                 Resource: '*'
 
-              # ECS CREATE actions - allowed on any resource
               - Sid: AllowECSCreateActions
                 Effect: Allow
                 Action:
-                  - ecs:CreateCluster
-                  - ecs:RegisterTaskDefinition
-                  - ecs:CreateService
-                  - ecs:TagResource
+                  - ecs:Create*
+                  - ecs:Register*
+                  - ecs:Tag*
                 Resource:
                   - !Sub "arn:aws:ecs:*:${AWS::AccountId}:cluster/*"
                   - !Sub "arn:aws:ecs:*:${AWS::AccountId}:task-definition/*<%=hyphenated_base_domain%>*:*"
                   - !Sub "arn:aws:ecs:*:${AWS::AccountId}:service/*/*-<%=hyphenated_base_domain%>-*"
 
-              # ECS UPDATE/DELETE actions - restricted to tagged resources
               - Sid: AllowECSUpdateDeleteActionsOnTaggedResources
                 Effect: Allow
                 Action:
-                  - ecs:UpdateService
-                  - ecs:DeleteCluster
-                  - ecs:DeleteService
+                  - ecs:Update*
+                  - ecs:Delete*
                 Resource: '*'
                 Condition:
                   StringEquals:
                     'aws:ResourceTag/environment-type': <%=environment_type%>
 
-              # ECS DESCRIBE actions - allowed on any resource
               - Sid: AllowECSDescribeActions
                 Effect: Allow
                 Action:
-                  - ecs:DescribeTaskDefinition
-                  - ecs:DescribeServices
-                  - ecs:DescribeClusters
-                  - ecs:DeregisterTaskDefinition
+                  - ecs:Describe*
+                  - ecs:Deregister*
                 Resource: '*'
 
-              # ELB CREATE actions - allowed on any resource
               - Sid: AllowELBCreateActions
                 Effect: Allow
                 Action:
-                  - elasticloadbalancing:CreateLoadBalancer
-                  - elasticloadbalancing:CreateListener
-                  - elasticloadbalancing:CreateTargetGroup
-                  - elasticloadbalancing:RegisterTargets
-                  - elasticloadbalancing:AddTags
-                  - elasticloadbalancing:ModifyTargetGroupAttributes
-                  - elasticloadbalancing:ModifyLoadBalancerAttributes
-                  - elasticloadbalancing:ModifyTargetGroup
+                  - elasticloadbalancing:Create*
+                  - elasticloadbalancing:Register*
+                  - elasticloadbalancing:Add*
+                  - elasticloadbalancing:Modify*
                 Resource: '*'
 
-              # ELB UPDATE/DELETE actions - restricted to tagged resources
               - Sid: AllowELBUpdateDeleteActionsOnTaggedResources
                 Effect: Allow
                 Action:
-                  - elasticloadbalancing:DeleteLoadBalancer
-                  - elasticloadbalancing:DeleteTargetGroup
-                  - elasticloadbalancing:DeregisterTargets
+                  - elasticloadbalancing:Delete*
+                  - elasticloadbalancing:Deregister*
                 Resource: '*'
                 Condition:
                   StringEquals:
                     'aws:ResourceTag/environment-type': <%=environment_type%>
 
-              # ELB DESCRIBE actions - allowed on any resource
-              # ELB DELETE actions - on non-taggable resources
-              - Sid: AllowELBDescribeActionsAndDeleteActionsForNonTaggableResources
+              - Sid: AllowELBDescribeAndDeleteNonTaggable
                 Effect: Allow
                 Action:
-                  - elasticloadbalancing:DescribeLoadBalancers
-                  - elasticloadbalancing:DescribeTargetGroups
-                  - elasticloadbalancing:DescribeListeners
+                  - elasticloadbalancing:Describe*
                   - elasticloadbalancing:DeleteListener
                 Resource: '*'
 
-              # CloudFront CREATE actions - allowed on any resource
               - Sid: AllowCloudFrontCreateActions
                 Effect: Allow
                 Action:
-                  - cloudfront:CreateDistribution
-                  - cloudfront:CreateOriginAccessControl
+                  - cloudfront:Create*
+                  - cloudfront:Publish*
+                  - cloudfront:Tag*
+                Resource: '*'
+
+              - Sid: AllowCloudFrontUpdateDeleteActionsOnTaggedResources
+                Effect: Allow
+                Action:
+                  - cloudfront:Update*
+                  - cloudfront:Delete*
+                Resource: '*'
+                Condition:
+                  StringEquals:
+                    'aws:ResourceTag/environment-type': <%=environment_type%>
+
+              - Sid: AllowCloudFrontActionsNonTaggableResources
+                Effect: Allow
+                Action:
                   - cloudfront:CreateCachePolicy
-                  - cloudfront:CreateFunction
-                  - cloudfront:PublishFunction
-                  - cloudfront:CreateResponseHeadersPolicy
-                  - cloudfront:TagResource
-                  - cloudfront:CreateInvalidation
-                Resource: '*'
-
-              # CloudFront UPDATE actions - restricted to tagged resources
-              - Sid: AllowCloudFrontUpdateActionsOnTaggedResources
-                Effect: Allow
-                Action:
-                  - cloudfront:UpdateDistribution
-                Resource: '*'
-                Condition:
-                  StringEquals:
-                    'aws:ResourceTag/environment-type': <%=environment_type%>
-
-              # CloudFront DELETE actions for taggable resources - restricted to tagged resources
-              - Sid: AllowCloudFrontDeleteActionsOnTaggedResources
-                Effect: Allow
-                Action:
-                  - cloudfront:DeleteDistribution
-                  - cloudfront:DeleteResponseHeadersPolicy
-                Resource: '*'
-                Condition:
-                  StringEquals:
-                    'aws:ResourceTag/environment-type': <%=environment_type%>
-
-              # CloudFront UPDATE/DELETE actions for non-taggable resources - no tag restriction
-              - Sid: AllowCloudFrontDeleteActionsForNonTaggableResources
-                Effect: Allow
-                Action:
-                  - cloudfront:DeleteFunction
-                  - cloudfront:UpdateFunction
                   - cloudfront:UpdateCachePolicy
-                  - cloudfront:UpdateOriginAccessControl
-                  - cloudfront:UpdateResponseHeadersPolicy
-                  - cloudfront:DeleteOriginAccessControl
                   - cloudfront:DeleteCachePolicy
+                  - cloudfront:GetCachePolicy
+                  - cloudfront:ListCachePolicies
+                  - cloudfront:CreateOriginAccessControl
+                  - cloudfront:UpdateOriginAccessControl
+                  - cloudfront:DeleteOriginAccessControl
+                  - cloudfront:GetOriginAccessControl
+                  - cloudfront:ListOriginAccessControls
+                  - cloudfront:CreateResponseHeadersPolicy
+                  - cloudfront:UpdateResponseHeadersPolicy
                   - cloudfront:DeleteResponseHeadersPolicy
+                  - cloudfront:GetResponseHeadersPolicy
+                  - cloudfront:ListResponseHeadersPolicies
+                  - cloudfront:CreateFunction
+                  - cloudfront:UpdateFunction
+                  - cloudfront:DeleteFunction
+                  - cloudfront:DescribeFunction
+                  - cloudfront:GetFunction
+                  - cloudfront:ListFunctions
+                  - cloudfront:PublishFunction
+                  - cloudfront:TestFunction
                 Resource: '*'
 
-              # CloudFront DESCRIBE/GET actions - allowed on any resource
               - Sid: AllowCloudFrontDescribeActions
                 Effect: Allow
                 Action:
-                  - cloudfront:GetDistribution
-                  - cloudfront:GetOriginAccessControl
-                  - cloudfront:GetCachePolicy
-                  - cloudfront:DescribeFunction
-                  - cloudfront:GetFunction
-                  - cloudfront:GetResponseHeadersPolicy
+                  - cloudfront:Get*
+                  - cloudfront:Describe*
                 Resource: '*'
 
-              # Route53 and ACM resources - CREATE actions allowed on any resource
-              - Sid: AllowRoute53ACMCreateActions
+              - Sid: AllowRoute53ACMActions
                 Effect: Allow
                 Action:
-                  - route53:ChangeResourceRecordSets
-                  - acm:RequestCertificate
-                  - acm:AddTagsToCertificate
+                  - route53:Change*
+                  - route53:Get*
+                  - route53:List*
+                  - acm:Request*
+                  - acm:Add*
+                  - acm:Describe*
                 Resource: '*'
 
-              # Route53 and ACM resources - DELETE actions restricted to tagged resources
               - Sid: AllowACMDeleteActionsOnTaggedResources
                 Effect: Allow
-                Action:
-                  - acm:DeleteCertificate
+                Action: acm:Delete*
                 Resource: '*'
                 Condition:
                   StringEquals:
                     'aws:ResourceTag/environment-type': <%=environment_type%>
 
-              # Route53 and ACM resources - DESCRIBE actions allowed on any resource
-              - Sid: AllowRoute53ACMDescribeActions
+              - Sid: AllowS3ActionsOnStaticAssets
                 Effect: Allow
                 Action:
-                  - route53:GetHostedZone
-                  - route53:ListResourceRecordSets
-                  - route53:GetChange
-                  - acm:DescribeCertificate
-                Resource: '*'
-              # TODO: Constrain Request/Delete Certificate to a narrow range of domain names.
-              #                Condition:
-              #                  StringLike:
-              #                    'acm:DomainName':
-              #                      - "*.<%#=configuration[:base_domain_name]%>"
-              #                      - "<%#=configuration[:base_domain_name]%>"
-
-              # S3 CREATE/DELETE actions - allowed on static assets bucket resources matching domain pattern
-              - Sid: AllowS3CreateDeleteActionsOnStaticAssets
-                Effect: Allow
-                Action:
-                  - s3:CreateBucket
-                  - s3:PutBucketPolicy
-                  - s3:PutBucketEncryption
-                  - s3:PutEncryptionConfiguration
-                  - s3:PutBucketVersioning
-                  - s3:PutBucketPublicAccessBlock
-                  - s3:PutLifecycleConfiguration
-                  - s3:PutBucketLifecycleConfiguration
-                  - s3:PutObject
-                  - s3:PutBucketTagging
-                  - s3:DeleteBucket
-                  - s3:DeleteObject
-                  - s3:DeleteBucketPolicy
+                  - s3:Create*
+                  - s3:Put*
+                  - s3:Delete*
+                  - s3:Get*
+                  - s3:List*
                 Resource:
                   - "arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets"
                   - "arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets/*"
 
-              # S3 actions for CloudFront logging - restricted to ACL management only
               - Sid: AllowS3LoggingBucketACLManagement
                 Effect: Allow
                 Action:
-                  - s3:GetBucketAcl
-                  - s3:PutBucketAcl
-                Resource:
-                  - "arn:aws:s3:::cdo-logs"
+                  - s3:Get*
+                  - s3:Put*
+                Resource: "arn:aws:s3:::cdo-logs"
 
-              # S3 DESCRIBE/GET actions - allowed on bucket resources matching domain pattern
-              - Sid: AllowS3DescribeActions
+              - Sid: AllowSecretsManagerActions
                 Effect: Allow
                 Action:
-                  - s3:GetBucketPolicy
-                  - s3:GetBucketLocation
-                  - s3:GetObject
-                  - s3:ListBucket
-                  - s3:GetEncryptionConfiguration
-                  - s3:GetBucketVersioning
-                  - s3:GetBucketPublicAccessBlock
-                  - s3:GetLifecycleConfiguration
-                  - s3:GetBucketAcl
-                Resource:
-                  - "arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets"
-                  - "arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets/*"
-                  - "arn:aws:s3:::cdo-logs"
-
-              # Secrets Manager CREATE actions - allowed on any resource
-              - Sid: AllowSecretsManagerCreateActions
-                Effect: Allow
-                Action:
-                  - secretsmanager:GetSecretValue
-                  - secretsmanager:DescribeSecret
+                  - secretsmanager:Get*
+                  - secretsmanager:Describe*
                 Resource: "arn:aws:secretsmanager:*:*:secret:marketing-sites/<%=environment_type%>/*"
 
-              # Secrets Manager DELETE actions - restricted to tagged resources
               - Sid: AllowSecretsManagerDeleteActionsOnTaggedResources
                 Effect: Allow
-                Action:
-                  - secretsmanager:DeleteSecret
+                Action: secretsmanager:Delete*
                 Resource: '*'
                 Condition:
                   StringEquals:
                     'aws:ResourceTag/environment-type': <%=environment_type%>
 
-              # EFS CREATE actions - allowed on any resource
               - Sid: AllowEFSCreateActions
                 Effect: Allow
                 Action:
-                  - elasticfilesystem:CreateFileSystem
-                  - elasticfilesystem:CreateMountTarget
-                  - elasticfilesystem:CreateAccessPoint
-                  - elasticfilesystem:TagResource
-                  - elasticfilesystem:PutLifecycleConfiguration
-                  - elasticfilesystem:ModifyMountTargetSecurityGroups
+                  - elasticfilesystem:Create*
+                  - elasticfilesystem:Tag*
+                  - elasticfilesystem:Put*
+                  - elasticfilesystem:Modify*
                 Resource: '*'
 
-              # EFS UPDATE/DELETE actions - restricted to tagged resources
               - Sid: AllowEFSUpdateDeleteActionsOnTaggedResources
                 Effect: Allow
                 Action:
-                  - elasticfilesystem:DeleteFileSystem
-                  - elasticfilesystem:DeleteMountTarget
-                  - elasticfilesystem:DeleteAccessPoint
-                  - elasticfilesystem:UntagResource
+                  - elasticfilesystem:Delete*
+                  - elasticfilesystem:Untag*
                 Resource: '*'
                 Condition:
                   StringEquals:
                     'aws:ResourceTag/environment-type': <%=environment_type%>
 
-              # EFS DESCRIBE actions - allowed on any resource
               - Sid: AllowEFSDescribeActions
                 Effect: Allow
                 Action:
-                  - elasticfilesystem:DescribeFileSystems
-                  - elasticfilesystem:DescribeMountTargets
-                  - elasticfilesystem:DescribeAccessPoints
-                  - elasticfilesystem:ListTagsForResource
+                  - elasticfilesystem:Describe*
+                  - elasticfilesystem:List*
                 Resource: '*'
 
-              # Application Autoscaling actions for non-taggable resources and general operations
-              - Sid: AllowApplicationAutoScalingActionsForNonTaggableResources
+              - Sid: AllowApplicationAutoScalingActions
+                Effect: Allow
+                Action: application-autoscaling:*
+                Resource: '*'
+
+              - Sid: AllowElastiCacheCreateActions
                 Effect: Allow
                 Action:
-                  - application-autoscaling:PutScalingPolicy
-                  - application-autoscaling:RegisterScalableTarget
-                  - application-autoscaling:DeleteScalingPolicy
-                  - application-autoscaling:DescribeScalingPolicies
-                  - application-autoscaling:DescribeScalableTargets
-                  - application-autoscaling:DeregisterScalableTarget
+                  - elasticache:Create*
+                  - elasticache:Add*
+                  - elasticache:Modify*
+                Resource: '*'
+
+              - Sid: AllowElastiCacheUpdateDeleteActionsOnTaggedResources
+                Effect: Allow
+                Action:
+                  - elasticache:Delete*
+                  - elasticache:Remove*
+                Resource: '*'
+                Condition:
+                  StringEquals:
+                    'aws:ResourceTag/environment-type': <%=environment_type%>
+
+              - Sid: AllowElastiCacheDescribeActions
+                Effect: Allow
+                Action:
+                  - elasticache:Describe*
+                  - elasticache:List*
                 Resource: '*'
 <% end %>
 

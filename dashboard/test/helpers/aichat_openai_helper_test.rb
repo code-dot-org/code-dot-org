@@ -16,6 +16,7 @@ class AichatOpenaiHelperTest < ActionView::TestCase
       }.stringify_keys
     ]
     @new_message = {role: 'user', chatMessageText: 'new message from user'}.stringify_keys
+    @new_message_extra = {role: 'user', chatMessageText: 'new message from user', hiddenContext: 'extra text'}.stringify_keys
     @level = Level.create({name: 'Aichat level', properties: {aichat_settings: {levelSystemPrompt: "Be safe."}}})
     @level_without_level_system_prompt = Level.create({name: 'Aichat level without level system prompt', properties: {aichat_settings: {}}})
     @encrypted_channel_id = 12345
@@ -88,6 +89,25 @@ class AichatOpenaiHelperTest < ActionView::TestCase
       @stored_messages,
       message_with_assets,
       @level_without_level_system_prompt.id,
+      @encrypted_channel_id
+    )
+
+    assert_equal expected_messages, messages
+  end
+
+  test 'formats messages with extra text and level system prompt' do
+    expected_messages = [
+      {role: 'system', content: [{type: 'text', text: "Be safe. test prompt test retrieval"}]},
+      {role: 'user', content: [{type: 'text', text: 'hello from user'}]},
+      {role: 'assistant', content: [{type: 'text', text: 'assistant response'}]},
+      {role: 'user', content: [{type: 'text', text: "new message from user\nextra text"}]}
+    ]
+
+    messages = AichatOpenaiHelper.format_messages(
+      @common_model_customizations,
+      @stored_messages,
+      @new_message_extra,
+      @level.id,
       @encrypted_channel_id
     )
 

@@ -132,7 +132,7 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     teacher = create :teacher
     student = create :student
     level = create :level
-    script = create :script
+    script = create :script, :in_single_unit_course
     create :script_level, script: script, levels: [level]
 
     feedback = create :teacher_feedback, teacher: teacher, student: student, level: level, script: script
@@ -143,7 +143,7 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     teacher = create :teacher
     student = create :student
     level = create :level
-    script = create :script
+    script = create :script, :in_single_unit_course
     create :script_level, script: script, levels: [level]
 
     feedback = create :teacher_feedback, teacher: teacher, student: student, level: level, script: script
@@ -156,7 +156,7 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     teacher = create :teacher
     student = create :student
     level = create :level
-    script = create :script
+    script = create :script, :in_single_unit_course
     create :script_level, script: script, levels: [level]
 
     feedback = create :teacher_feedback, teacher: teacher, student: student, level: level, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
@@ -168,7 +168,7 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     teacher = create :teacher
     student = create :student
     level = create :level
-    script = create :script
+    script = create :script, :in_single_unit_course
     create :script_level, script: script, levels: [level]
 
     feedback = create :teacher_feedback, teacher: teacher, student: student, level: level, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
@@ -180,7 +180,7 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     teacher = create :teacher
     student = create :student
     level = create :level
-    script = create :script
+    script = create :script, :in_single_unit_course
     create :script_level, script: script, levels: [level]
 
     create :user_level, user: student, level: level, script: script, updated_at: 1.week.ago
@@ -193,7 +193,7 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     teacher = create :teacher
     student = create :student
     level = create :level
-    script = create :script
+    script = create :script, :in_single_unit_course
     create :script_level, script: script, levels: [level]
 
     feedback = create :teacher_feedback, teacher: teacher, student: student, level: level, script: script, review_state: TeacherFeedback::REVIEW_STATES.completed
@@ -206,7 +206,7 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     teacher = create :teacher
     student = create :student
     level = create :level
-    script = create :script
+    script = create :script, :in_single_unit_course
     create :script_level, script: script, levels: [level]
 
     feedback = create :teacher_feedback, teacher: teacher, student: student, level: level, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
@@ -295,7 +295,7 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
 
     # Create these intermediate rungs of the hierarchy, so that script_level
     # will show up in script.script_levels.
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script
 
