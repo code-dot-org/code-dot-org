@@ -32,9 +32,9 @@ class StudentWorkEvaluationsController < ApplicationController
     # It is possible that there might be more than one evaluation for a student on a level/unit,
     # so we will return the most recent one
     last_evaluation = evaluations.order(created_at: :desc).first
-    transformed_evaluation = last_evaluation.to_json.camelize
     return head :not_found unless last_evaluation
 
+    transformed_evaluation = last_evaluation.as_json.deep_transform_keys {|k| k.camelize(:lower)}
     render json: transformed_evaluation, status: :ok
   end
 
