@@ -17,6 +17,7 @@ import {
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import lab2I18n from '@cdo/apps/lab2/locale';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {
   isPredictAnswerLocked,
@@ -28,6 +29,7 @@ import {
 } from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import PredictQuestion from '@cdo/apps/lab2/views/components/PredictQuestion';
+import PredictQuestionRunPrompt from '@cdo/apps/lab2/views/components/PredictQuestionRunPrompt';
 import PredictSummary from '@cdo/apps/lab2/views/components/PredictSummary';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -282,7 +284,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     }
     return isValidating ? (
       <Button
-        text={codebridgeI18n.stopValidation()}
+        text={lab2I18n.stopValidation()}
         onClick={handleStop}
         color={'destructive'}
         iconLeft={{iconStyle: 'solid', iconName: 'square'}}
@@ -294,7 +296,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
       />
     ) : (
       <Button
-        text={codebridgeI18n.validate()}
+        text={lab2I18n.validate()}
         onClick={() => handleValidate()}
         type={'secondary'}
         disabled={shouldValidateBeDisabled}
@@ -358,7 +360,6 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
               <MainInstructionsContent
                 instructionsText={instructionsText}
                 handleInstructionsTextClick={handleInstructionsTextClick}
-                hasPassed={hasPassed}
               />
               <PredictQuestion
                 predictSettings={predictSettings}
@@ -384,11 +385,17 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
 
           {showAiTutor2 && AiTutor2ResponseView}
           {predictSettings?.isPredictLevel && (
-            <InstructorsOnly>
-              <div className={moduleStyles.bubble}>
-                <PredictSummary />
-              </div>
-            </InstructorsOnly>
+            <>
+              <InstructorsOnly>
+                <div className={moduleStyles.bubble}>
+                  <PredictSummary />
+                </div>
+              </InstructorsOnly>
+              <PredictQuestionRunPrompt
+                hasSelected={!!predictResponse}
+                hasSubmitted={predictAnswerLocked}
+              />
+            </>
           )}
         </div>
         {showNavigation && (

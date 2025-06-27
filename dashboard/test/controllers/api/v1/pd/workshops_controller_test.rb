@@ -1106,11 +1106,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     test_user_gets_response_for :show, response: :forbidden, user: user_type, params: -> {{id: @organizer_workshop.id}}
   end
 
-  test 'anyone can see the K5 public map index' do
-    get :k5_public_map_index
-    assert_response :success
-  end
-
   test_user_gets_response_for(
     :summary,
     name: 'facilitators can get summary for their workshops',

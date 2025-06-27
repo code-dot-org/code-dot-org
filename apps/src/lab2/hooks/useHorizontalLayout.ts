@@ -51,7 +51,7 @@ export const useHorizontalLayout = ({
   const [rightBottomPanelHeight, setrightBottomPanelHeight] = useState<
     number | undefined
   >(rightBottomPanel.initialHeight);
-  const rightmostPanelWidth = 280;
+  const rightmostPanelWidth = 300;
 
   const {
     position: rawLeftPanelWidth,

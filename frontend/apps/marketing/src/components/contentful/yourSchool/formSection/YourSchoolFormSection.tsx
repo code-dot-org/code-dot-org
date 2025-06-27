@@ -14,13 +14,21 @@ import YourSchoolForm from './YourSchoolForm';
 import styles from '../yourSchool.module.scss';
 
 interface YourSchoolFormSectionProps
-  extends Pick<YourSchoolProps, 'regionalPartnerURL' | 'privacyPolicyURL'> {
+  extends Pick<
+    YourSchoolProps,
+    | 'regionalPartnerURL'
+    | 'privacyPolicyURL'
+    | 'shareOnTwitterURL'
+    | 'shareOnFacebookURL'
+  > {
   school?: School | null;
 }
 
 const YourSchoolFormSection: React.FC<YourSchoolFormSectionProps> = ({
   regionalPartnerURL,
   privacyPolicyURL,
+  shareOnTwitterURL,
+  shareOnFacebookURL,
   school = null,
 }) => (
   <Section
@@ -43,6 +51,8 @@ const YourSchoolFormSection: React.FC<YourSchoolFormSectionProps> = ({
       <YourSchoolForm
         regionalPartnerURL={regionalPartnerURL}
         privacyPolicyURL={privacyPolicyURL}
+        shareOnTwitterURL={shareOnTwitterURL}
+        shareOnFacebookURL={shareOnFacebookURL}
         school={school}
       />
     </div>

@@ -1,4 +1,4 @@
-import styles from '../yourSchool.module.scss';
+import styles from './adoptionMap.module.scss';
 
 export const MAP_POINT_NO_DATA_COLOR = '#FFFFFF';
 export const MAP_POINT_HAS_CS_COLOR = '#0093A4';
@@ -18,16 +18,16 @@ const MAP_POINT_TYPE_TO_COLOR_MAP = {
   [MAP_POINT_TYPES.NO_DATA]: MAP_POINT_NO_DATA_COLOR,
 };
 
-export interface YourSchoolMapPointProps {
+export interface AdoptionMapPointProps {
   type: MAP_POINT_TYPES;
 }
 
-const YourSchoolMapPoint: React.FC<YourSchoolMapPointProps> = ({
+const AdoptionMapPoint: React.FC<AdoptionMapPointProps> = ({
   type = MAP_POINT_TYPES.NO_DATA,
 }) => (
   <span
     role="presentation"
-    className={styles.yourSchoolMapPoint}
+    className={styles.adoptionMapPoint}
     style={{
       backgroundColor: MAP_POINT_TYPE_TO_COLOR_MAP[type],
       borderWidth: MAP_POINT_STROKE_WIDTH,
@@ -36,4 +36,4 @@ const YourSchoolMapPoint: React.FC<YourSchoolMapPointProps> = ({
   />
 );
 
-export default YourSchoolMapPoint;
+export default AdoptionMapPoint;
