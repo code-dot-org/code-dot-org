@@ -41,6 +41,7 @@ module ShareFiltering
 
   USER_ENTERED_TEXT_INDICATORS = ['TITLE', 'TEXT', 'title name\=\"VAL\"'].freeze
   FILTERED_PROJECT_TYPES = ['spritelab', 'playlab', 'poetry'].freeze
+  JSON_MAX_DEPTH = 999
 
   # Searches for a sharing failure given a program and locale.
   # Returns both the error type and the offending text snippet.
@@ -76,7 +77,7 @@ module ShareFiltering
     end
 
     # Texts will include field values, text values in block inputs, comments, and variable names.
-    json = JSON.parse(stripped)
+    json = JSON.parse(stripped, max_nesting: DCDO.get('share_filtering_blockly_json_max_depth', JSON_MAX_DEPTH))
     texts = []
 
     # Extract variable names.
