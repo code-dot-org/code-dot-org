@@ -1,5 +1,6 @@
 class AiDiffController < ApplicationController
   include AiDiffBedrockHelper
+  include AiDiffBedrockAgentHelper
   include LevelsHelper
   authorize_resource class: false
 
@@ -19,6 +20,12 @@ class AiDiffController < ApplicationController
     unless has_required_params?
       return render status: :bad_request, json: {}
     end
+
+    start_time = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+    agent_text = AiDiffBedrockAgentHelper.request_agent_chat(params[:inputText])
+    end_time = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+    agent_time = end_time - start_time
+    agent_text = "Agent call (#{agent_time} seconds)\n\n#{agent_text}\n\n"
 
     session_id = params[:sessionId].presence
 
@@ -66,6 +73,8 @@ class AiDiffController < ApplicationController
         return render status: :bad_request, json: {error: exception.message}
       end
     end
+
+    response_body[:chat_message_text] = "#{agent_text}\n***\n#{response_body[:chat_message_text]}"
 
     render(status: :ok, json: response_body)
   end
@@ -224,13 +233,17 @@ class AiDiffController < ApplicationController
       student_code
     )
 
+    start_time = Process.clock_gettime(Process::CLOCK_MONOTONIC)
     bedrock_rag_response = AiDiffBedrockHelper.request_bedrock_rag_chat(params[:inputText], prompt, lesson_num, unit_num, course_names, session_id, @section_contexts)
     #TODO: check for profanity/PII in model response
+
+    end_time = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+    rag_time = end_time - start_time
 
     {
       role: "assistant",
       status: SharedConstants::AI_INTERACTION_STATUS[:OK],
-      chat_message_text: bedrock_rag_response.output.text,
+      chat_message_text: "RAG call (#{rag_time} seconds)\n\n#{bedrock_rag_response.output.text}",
       session_id: bedrock_rag_response.session_id
     }
   end
