@@ -231,6 +231,20 @@ const aichatSlice = createSlice({
       };
       state.currentAiCustomizations = updatedAiCustomizations;
     },
+    setSavedAiCustomizationProperty: <T extends keyof AiCustomizations>(
+      state: AichatState,
+      action: PayloadAction<{
+        property: T;
+        value: AiCustomizations[T];
+      }>
+    ) => {
+      const {property, value} = action.payload;
+      const updatedAiCustomizations = {
+        ...state.savedAiCustomizations,
+        [property]: value,
+      };
+      state.savedAiCustomizations = updatedAiCustomizations;
+    },
     setModelCardProperty: <T extends keyof ModelCardInfo>(
       state: AichatState,
       action: PayloadAction<{
@@ -338,6 +352,7 @@ export const {
   removeUpdateMessage,
   resetToDefaultAiCustomizations,
   setAiCustomizationProperty,
+  setSavedAiCustomizationProperty,
   setModelCardProperty,
   setNewChatSession,
   setShowModalType,

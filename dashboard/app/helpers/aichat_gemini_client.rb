@@ -87,7 +87,7 @@ class AichatGeminiClient < AichatAiClient
 
       parts: [
         {
-          text: message['chatMessageText']
+          text: get_message_text(message)
         }
       ]
     }

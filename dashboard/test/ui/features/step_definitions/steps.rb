@@ -124,14 +124,11 @@ end
 
 Given /^I am on "([^"]*)"$/ do |url|
   check_window_for_js_errors('before navigation')
-  updated_url = replace_hostname(url)
   begin
-    navigate_to updated_url
+    navigate_to replace_hostname(url)
   rescue Selenium::WebDriver::Error::TimeoutError => exception
-    if updated_url != @browser.current_url
-      puts "Timeout: I am not on #{updated_url} like I want."
-      puts "         I am on #{@browser.current_url} instead."
-    end
+    puts "Timeout: I am not on #{url} like I want."
+    puts "         I am on #{@browser.current_url} instead."
     raise exception
   end
 end

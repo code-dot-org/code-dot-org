@@ -139,6 +139,13 @@ class AichatAiClient
     File.extname(filename) == '.pdf'
   end
 
+  # Get message text, including any hidden context
+  private def get_message_text(message)
+    text = message['chatMessageText']
+    text = text + "\n" + message['hiddenContext'] if message['hiddenContext']
+    text
+  end
+
   # Helper to get message and asset counts used for logging.
   private def get_messages_with_assets_count(stored_messages, new_message)
     messages = stored_messages + [new_message]

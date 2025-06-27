@@ -62,7 +62,15 @@ class AichatOpenaiCompletionsClient < AichatAiClient
 
   # Helper to format openid "message" object for body.
   private def format_message(message, encrypted_channel_id, level_name)
-    formatted = {role: message['role'], content: [{type: "text", text: message['chatMessageText']}]}
+    formatted = {
+      role: message['role'],
+      content: [
+        {
+          type: "text",
+          text: get_message_text(message)
+        }
+      ]
+    }
     message['assets']&.each do |asset|
       filename = asset["filename"]
       source = asset["source"]

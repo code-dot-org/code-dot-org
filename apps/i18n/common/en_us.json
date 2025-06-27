@@ -2254,6 +2254,7 @@
   "pre2017MinecraftTitle": "Minecraft Education",
   "preparation": "Preparation",
   "predictionInstructions": "Make a prediction before you run the program.",
+  "predictQuestionRunPrompt": "Click the <strong>Run</strong> button to submit your answer and continue.",
   "preview": "Preview",
   "print": "Print",
   "printBatchCertificates": "Print a batch of certificates",
