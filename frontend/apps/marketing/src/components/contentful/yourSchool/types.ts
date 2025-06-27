@@ -9,10 +9,18 @@ export interface YourSchoolProps {
   dataSourceURL: string;
   regionalPartnerURL: string;
   privacyPolicyURL: string;
+  shareOnTwitterURL: string;
+  shareOnFacebookURL: string;
 }
 
 export interface YourSchoolFormProps
-  extends Pick<YourSchoolProps, 'regionalPartnerURL' | 'privacyPolicyURL'> {
+  extends Pick<
+    YourSchoolProps,
+    | 'regionalPartnerURL'
+    | 'privacyPolicyURL'
+    | 'shareOnTwitterURL'
+    | 'shareOnFacebookURL'
+  > {
   school?: School | null;
 }
 
