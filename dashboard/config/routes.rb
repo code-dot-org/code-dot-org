@@ -69,7 +69,7 @@ Dashboard::Application.routes.draw do
 
     resources :skills, only: [:create, :index] do
       collection do
-        get 'section/:section_id/unit/:unit_name', to: 'skills#section_skills', as: 'section'
+        get 'section/:section_id/unit/:unit_name', to: 'skills#section_skills'
       end
     end
 

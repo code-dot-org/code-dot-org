@@ -205,6 +205,7 @@ class Ability
         can [:score_lessons_for_section, :get_teacher_scores_for_script], TeacherScore, user_id: user.id
         can :manage, LearningGoalTeacherEvaluation, teacher_id: user.id
         can :manage, LearningGoalAiEvaluationFeedback, teacher_id: user.id
+        can :evaluate_section, :openai_evaluate
       end
 
       if user.facilitator?

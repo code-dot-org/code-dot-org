@@ -1,5 +1,6 @@
 module SkillsHelper
   def self.get_section_skills_data(section, unit)
+    pp "Fetching skills data for section: #{section.id}, unit: #{unit.name}"
     student_ids = section.students.pluck(:id)
     skill_ids = unit.levels.joins(:skills).
                        pluck('skills.id').

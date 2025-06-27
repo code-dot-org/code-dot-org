@@ -50,7 +50,7 @@ class SkillsController < ApplicationController
     render json: {
       status: 'success',
       skills_data: skills_data
-    }
+    }.deep_transform_keys {|key| key.to_s.camelize(:lower)}
   end
 
   private def skill_params
