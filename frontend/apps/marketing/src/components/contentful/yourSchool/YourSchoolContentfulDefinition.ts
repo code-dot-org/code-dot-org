@@ -29,7 +29,8 @@ export const YourSchoolContentfulComponentDefinition: ComponentDefinition = {
       type: 'Text',
       group: 'content',
       description: 'The URL of the regional partner page.',
-      defaultValue: 'https://code.org/educate/regional-partner',
+      defaultValue:
+        'https://code.org/professional-learning/regional-partner-program',
       validations: {
         required: true,
         bindingSourceType: ['manual', 'entry'],
