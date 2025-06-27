@@ -3,8 +3,20 @@
 .multipleChoiceContainer {
   display: flex;
   align-items: start;
+
   input {
     margin: 4px 4px 0 0;
+
+    // When the radio/checkbox is disabled and not checked, dim option.
+    &:disabled:not(:checked) {
+      opacity: 0.5;
+      cursor: not-allowed;
+
+      + .multipleChoiceLetter,
+      + .multipleChoiceLetter + .multipleChoiceLabel {
+        color: var(--text-neutral-placeholder);
+      }
+    }
   }
 }
 
@@ -61,4 +73,14 @@
   display: flex;
   align-items: center;
   justify-content: right;
+}
+
+.runPromptContainer {
+  color: var(--text-neutral-primary);
+  background-color: var(--background-neutral-secondary);
+  border-radius: .25em;
+}
+
+.runPrompt {
+  padding: 9px 12px 1px 12px;
 }

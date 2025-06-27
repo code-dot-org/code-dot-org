@@ -12,7 +12,6 @@
     "hide_share_and_remix": "true",
     "level_data": {
       "library": "launch2024",
-      "packId": "lady_gaga_born_this_way",
       "startSources": {
         "blocks": {
           "languageVersion": 0,
@@ -48,51 +47,6 @@
         "type": "flyout"
       },
       "sounds": {
-        "lady_gaga_born_this_way": [
-          "vocals_spoken_intro_1",
-          "vocals_spoken_intro_2",
-          "vocals_verse_1",
-          "vocals_verse_2",
-          "vocals_verse_3",
-          "vocals_verse_4",
-          "vocals_chorus_1",
-          "vocals_chorus_2",
-          "vocals_chorus_tag",
-          "vocals_postchorus_1",
-          "vocals_postchorus_2",
-          "drums_chorus",
-          "drums_clap_beat",
-          "drums_clap_breakdown",
-          "drums_intro",
-          "drums_prechorus",
-          "drums_small",
-          "drums_glitch_fill",
-          "drums_triplet_fill",
-          "drums_long_fill",
-          "bass_sub",
-          "bass_trashed",
-          "synth_distorted",
-          "synth_main_chorus",
-          "synth_main_intro",
-          "synth_main_small",
-          "synth_saw",
-          "synth_big_chorus",
-          "synth_blocks",
-          "synth_choir",
-          "synth_delay",
-          "synth_plink",
-          "synth_bounce",
-          "organ",
-          "piano",
-          "strings",
-          "strings_low",
-          "strings_end",
-          "crash",
-          "bell",
-          "riser",
-          "sweep",
-          "digital_toms"
-        ],
         "electro": [
           "drum_beat_cowbell",
           "drum_beat_club",
@@ -361,7 +315,7 @@
       "allowChangeStartingPlayheadPosition": true,
       "showSoundFilters": true
     },
-    "long_instructions": "### Loud & Quiet\r\n\r\n🎧 **The Scenario:**\r\nImagine an artist wants a song that plays with extreme quiet and loud contrasts to build tension and excitement.\r\n\r\n🎼 **Your challenge:**\r\n- Control the Volume: Make some sections whisper quiet and others bold and loud for contrast.\r\n- Sequence the Shifts: Time your volume changes so they follow a pattern (e.g., after a certain number of measures).\r\n- Layer & Offset: Use rests and layering to emphasize the difference between soft and loud moments.\r\n- Use Effects: Try filters, delays, or fades to make the transitions smoother or more intense.",
+    "long_instructions": "### Loud & Quiet\r\n\r\n**The Scenario:**\r\n\r\nImagine an artist wants a song that plays with extreme quiet and loud contrasts to build tension and excitement. Your job is to create a remix that highlights that dynamic range — not just with volume, but with timing and layers too.\r\n\r\n**Do This:**\r\n\r\n- Use volume settings to make some parts of your song whisper quiet and others bold and loud.\r\n- Sequence those shifts so they happen in a pattern — for example, a quiet part after every 8 beats.\r\n- Layer sounds with **rests** to emphasize when something cuts out or surges in.\r\n- Try using effects like filters or fades to make the volume transitions feel smoother or more dramatic.\r\n\r\n**Musical Suggestions:**\r\n\r\n- “Something Just Like This” – The Chainsmokers & Coldplay *(builds into explosive choruses from calm openings)*\r\n- “Tightrope” – Tinashe *(delicate moments mixed with big dynamic peaks)*\r\n- “Angel” – Halle *(soft vocals that can contrast beautifully with louder beats)*\r\n\r\n**To pass this level, your song must include at least 2 quiet sections and 2 loud sections, clearly sequenced and layered to show contrast using volume changes, rests, or effects.**",
     "display_name": "Loud & Quiet",
     "bubble_choice_description": "Help an artist create a song that plays with extreme quiet and loud contrasts to build tension and excitement.",
     "predict_settings": {
@@ -393,11 +347,11 @@
       }
     ],
     "name_suffix": "_v2",
-    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/lady_gaga_born_this_way/lady_gaga_born_this_way.jpg",
+    "thumbnail_url": "https://images.code.org/9ba4f79572fcec4fb4176114a2b51f7b-volume.png",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:07.092+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-effects-practice-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-effects-practice-choice-a\"},{\"changed_at\":\"2025-06-12 16:00:54 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:07.092+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-effects-practice-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-effects-practice-choice-a\"},{\"changed_at\":\"2025-06-12 16:00:54 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-26 20:07:12 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-26 20:08:49 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-26 20:17:26 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -13,13 +13,13 @@ allow_multiple_attempts true
 teacher_markdown <<MARKDOWN
 Topic: Functions
 
-Standard: Decompose a song by creating functions for repeated sections
+Standard: Use a function multiple times in a song, such as repeating a chorus
 
-Lesson: Functions - Practice
+Lesson: Functions - Explore
 
-Skill Progression: Create a function with at least 2 sounds and call it at least twice
+Skill Progression: Define & Call a function by refactoring existing code (ie: code exists; drag out function and update it, then call the function)
 
-Pretest Modality: Given starting code / shadow blocks, refactor
+Pretest Modality: Given algorithm / intent / incorrect code, match with code
 
 Posttest Modality: Given starting code / shadow blocks, refactor
 
