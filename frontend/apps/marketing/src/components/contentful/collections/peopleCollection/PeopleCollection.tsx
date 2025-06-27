@@ -10,6 +10,7 @@ import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {Entry} from '@/types/contentful/Entry';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
+import placeholderImage from '@public/images/person-placeholder.avif';
 
 type ItemFields = {
   name: EntryFields.Text;
@@ -45,7 +46,7 @@ const styles = {
     borderRadius: '50%',
   },
   overline: {
-    color: '#4C5661',
+    color: 'var(---neutral-gray-90)',
     marginTop: 1,
     marginBottom: 1.5,
   },
@@ -62,11 +63,6 @@ const styles = {
     },
   },
 };
-
-// This is coming directly from Contentful so we can use the Images API to
-// format this similarly to the other images which is better for performance.
-const PLACEHOLDER_IMAGE_URL =
-  'https://contentful-images.code.org/90t6bu6vlf76/12hYaT6lKHqt7yO3knvqHF/8cc3dc67771cd6baaecdff1b155b7d31/person-placeholder.png?fm=avif&fit=fill&w=128&h=128&r=max';
 
 const PeopleCollection: React.FC<PeopleCollectionProps> = ({
   people,
@@ -101,7 +97,10 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({
                         getAbsoluteImageUrl(
                           image,
                           'fit=fill&w=128&h=128&r=max',
-                        ) || PLACEHOLDER_IMAGE_URL
+                        ) ||
+                        (typeof placeholderImage === 'string'
+                          ? placeholderImage
+                          : placeholderImage.src)
                       }
                       alt=""
                       loading="lazy"
