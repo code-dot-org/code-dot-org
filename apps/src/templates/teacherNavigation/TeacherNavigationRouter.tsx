@@ -118,8 +118,6 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
     sectionProviderName(state, state.teacherSections.selectedSectionId)
   );
 
-  console.log('lfm', {dcdo: DCDO.get('skills_dashboard', false)});
-
   const routes = React.useMemo(
     () => (
       <Route path="/">
