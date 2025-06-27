@@ -40,6 +40,7 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
         expect(delete_accounts_helper).to receive(:remove_poste_data).with(email)
         expect(delete_accounts_helper).to receive(:clean_and_destroy_pd_content).with(user.id, email)
         expect(delete_accounts_helper).to receive(:purge_contact_rollups).with(email)
+        expect(described_instance).to receive(:scrub_external_data)
       end
 
       it 'removes user email and authentication data' do
@@ -85,6 +86,7 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
         expect(delete_accounts_helper).to receive(:remove_poste_data).with(email)
         expect(delete_accounts_helper).to receive(:clean_and_destroy_pd_content).with(user.id, email)
         expect(delete_accounts_helper).to receive(:purge_contact_rollups).with(email)
+        expect(described_instance).to receive(:scrub_external_data)
       end
 
       let(:user) do
