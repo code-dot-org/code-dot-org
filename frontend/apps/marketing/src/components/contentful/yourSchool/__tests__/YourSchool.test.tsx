@@ -23,6 +23,8 @@ describe('YourSchool', () => {
     dataSourceURL: 'https://example.com/data.json',
     regionalPartnerURL: 'https://example.com/regional-partner',
     privacyPolicyURL: 'https://example.com/privacy-policy',
+    shareOnTwitterURL: 'https://example.com/share-twitter',
+    shareOnFacebookURL: 'https://example.com/share-facebook',
   };
 
   const renderComponent = (props = {}) =>

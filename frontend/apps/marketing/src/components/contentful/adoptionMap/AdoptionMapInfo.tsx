@@ -7,18 +7,17 @@ import {
   BodyFourText,
 } from '@code-dot-org/component-library/typography';
 
-import type {School} from '../types';
+import AdoptionMapPoint, {MAP_POINT_TYPES} from './AdoptionMapPoint';
+import type {School} from './types';
 
-import YourSchoolMapPoint, {MAP_POINT_TYPES} from './YourSchoolMapPoint';
+import styles from './adoptionMap.module.scss';
 
-import styles from '@/components/contentful/yourSchool/yourSchool.module.scss';
-
-interface YourSchoolInfoProps {
+interface AdoptionMapInfoProps {
   school: School;
-  onTakeSurveyClick: (school: School) => void;
+  onTakeSurveyClick?: (school: School) => void;
 }
 
-const YourSchoolInfo: React.FC<YourSchoolInfoProps> = ({
+const AdoptionMapInfo: React.FC<AdoptionMapInfoProps> = ({
   school,
   onTakeSurveyClick,
 }) => {
@@ -27,7 +26,7 @@ const YourSchoolInfo: React.FC<YourSchoolInfoProps> = ({
       case 'YES':
       case 'Y':
         return [
-          <YourSchoolMapPoint
+          <AdoptionMapPoint
             key={MAP_POINT_TYPES.HAS_CS}
             type={MAP_POINT_TYPES.HAS_CS}
           />,
@@ -36,7 +35,7 @@ const YourSchoolInfo: React.FC<YourSchoolInfoProps> = ({
       case 'NO':
       case 'N':
         return [
-          <YourSchoolMapPoint
+          <AdoptionMapPoint
             key={MAP_POINT_TYPES.NO_CS}
             type={MAP_POINT_TYPES.NO_CS}
           />,
@@ -45,7 +44,7 @@ const YourSchoolInfo: React.FC<YourSchoolInfoProps> = ({
       case 'HISTORICAL_YES':
       case 'HY':
         return [
-          <YourSchoolMapPoint
+          <AdoptionMapPoint
             key={MAP_POINT_TYPES.HAS_CS}
             type={MAP_POINT_TYPES.HAS_CS}
           />,
@@ -54,7 +53,7 @@ const YourSchoolInfo: React.FC<YourSchoolInfoProps> = ({
       case 'HISTORICAL_NO':
       case 'HN':
         return [
-          <YourSchoolMapPoint
+          <AdoptionMapPoint
             key={MAP_POINT_TYPES.NO_CS}
             type={MAP_POINT_TYPES.NO_CS}
           />,
@@ -62,7 +61,7 @@ const YourSchoolInfo: React.FC<YourSchoolInfoProps> = ({
         ];
       default:
         return [
-          <YourSchoolMapPoint
+          <AdoptionMapPoint
             key={MAP_POINT_TYPES.NO_DATA}
             type={MAP_POINT_TYPES.NO_DATA}
           />,
@@ -72,35 +71,37 @@ const YourSchoolInfo: React.FC<YourSchoolInfoProps> = ({
   }, [school.teachesCs]);
 
   return (
-    <div className={styles.yourSchoolMapCard}>
+    <div className={styles.adoptionMapSchool}>
       <Heading4
         visualAppearance="heading-xs"
-        className={styles.yourSchoolMapCardHeading}
+        className={styles.adoptionMapSchoolHeading}
       >
         {school.name}
       </Heading4>
 
       {(school.city || school.state) && (
-        <div className={styles.yourSchoolMapCardLocation}>
+        <div className={styles.adoptionMapSchoolLocation}>
           <FontAwesomeV6Icon iconName="location-dot" />
-          <BodyFourText className={styles.yourSchoolMapCardLocationText}>
+          <BodyFourText className={styles.adoptionMapSchoolLocationText}>
             {[school.city, school.state].filter(Boolean).join(', ')}
           </BodyFourText>
         </div>
       )}
 
-      <BodyFourText className={styles.yourSchoolMapCardLegend}>
+      <BodyFourText className={styles.adoptionMapSchoolLegend}>
         {legend}
       </BodyFourText>
 
-      <Button
-        size="s"
-        text="Take the survey"
-        className={styles.yourSchoolMapCardButton}
-        onClick={() => onTakeSurveyClick(school)}
-      />
+      {onTakeSurveyClick && (
+        <Button
+          size="s"
+          text="Take the survey"
+          className={styles.adoptionMapSchoolButton}
+          onClick={() => onTakeSurveyClick(school)}
+        />
+      )}
     </div>
   );
 };
 
-export default YourSchoolInfo;
+export default AdoptionMapInfo;

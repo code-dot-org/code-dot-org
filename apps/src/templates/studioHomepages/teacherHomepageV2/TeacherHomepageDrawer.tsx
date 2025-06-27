@@ -42,33 +42,34 @@ export const TeacherHomepageDrawer: React.FC = () => {
   const [existingSchoolInfo, setExistingSchoolInfo] = React.useState<
     SchoolInfo | undefined
   >(undefined);
-  const schoolName =
-    existingSchoolInfo?.school_name || i18n.schoolInfoDialogDescriptionNoName();
 
   // Load school data and set the drawer state based on the response.
   React.useEffect(() => {
     HttpClient.fetchJson<DrawerData>(
       '/teacher_dashboard/get_school_info_interstitial_data'
-    ).then(data => {
-      setExistingSchoolInfo(data.value.existingSchoolInfo);
-      setSchoolInfoInterstitialOpen(data.value.showSchoolInfoInterstitial);
-      setSchoolInfoConfirmationOpen(data.value.showSchoolInfoConfirmation);
+    )
+      .then(data => {
+        setExistingSchoolInfo(data.value.existingSchoolInfo);
+        setSchoolInfoInterstitialOpen(data.value.showSchoolInfoInterstitial);
+        setSchoolInfoConfirmationOpen(data.value.showSchoolInfoConfirmation);
 
-      // If the URL has a query param to show the interstitial or confirmation,
-      // we want to set that state to true to open the drawer.
-      const searchParams = new URLSearchParams(window.location.search);
-      if (searchParams.get('showSchoolInfoInterstitial') === 'true') {
-        setSchoolInfoInterstitialOpen(true);
-        // We don't want to set both to true at the same time
-      } else if (searchParams.get('showSchoolInfoConfirmation') === 'true') {
-        setSchoolInfoConfirmationOpen(true);
-      }
-    });
+        // If the URL has a query param to show the interstitial or confirmation,
+        // we want to set that state to true to open the drawer.
+        const searchParams = new URLSearchParams(window.location.search);
+        if (searchParams.get('showSchoolInfoInterstitial') === 'true') {
+          setSchoolInfoInterstitialOpen(true);
+          // We don't want to set both to true at the same time
+        } else if (searchParams.get('showSchoolInfoConfirmation') === 'true') {
+          setSchoolInfoConfirmationOpen(true);
+        }
+      })
+      .catch(error => console.log(error));
   }, [
     setExistingSchoolInfo,
     setSchoolInfoInterstitialOpen,
     setSchoolInfoConfirmationOpen,
   ]);
+
   const inUSA = useAppSelector(state => state.currentUser.inUSA);
   const schoolInfo = useSchoolInfo({
     usIp: inUSA,
@@ -78,7 +79,8 @@ export const TeacherHomepageDrawer: React.FC = () => {
     schoolZip: existingSchoolInfo?.school_zip,
     schoolType: existingSchoolInfo?.school_type,
   });
-
+  const schoolName =
+    schoolInfo.schoolName || i18n.schoolInfoDialogDescriptionNoName();
   const tryUpdateSchoolInfo = async () => {
     const hasNcesId =
       schoolInfo.schoolId && !NON_SCHOOL_OPTIONS.includes(schoolInfo.schoolId);

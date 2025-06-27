@@ -9,18 +9,18 @@ import {
   LayerSpecification,
 } from 'react-map-gl/mapbox';
 
-import type {School} from '../../types';
-import {default as mockSchoolInfo} from '../YourSchoolInfo';
-import YourSchoolMap from '../YourSchoolMap';
-import {MAP_POINT_TYPES} from '../YourSchoolMapPoint';
+import AdoptionMap from '../AdoptionMap';
+import {default as mockSchoolInfo} from '../AdoptionMapInfo';
+import {MAP_POINT_TYPES} from '../AdoptionMapPoint';
+import type {School} from '../types';
 
-jest.mock('../YourSchoolInfo', () => ({
+jest.mock('../AdoptionMapInfo', () => ({
   __esModule: true,
   default: jest.fn(() => <div data-testid="school-info">School Info Mock</div>),
 }));
 
-jest.mock('../YourSchoolMapPoint', () => {
-  const actual = jest.requireActual('../YourSchoolMapPoint');
+jest.mock('../AdoptionMapPoint', () => {
+  const actual = jest.requireActual('../AdoptionMapPoint');
   return {
     __esModule: true,
     ...actual,
@@ -109,7 +109,7 @@ const triggerMapClick = (event: MapMouseEvent): void => {
   if (storedClickHandler) storedClickHandler(event);
 };
 
-describe('YourSchoolMap', () => {
+describe('AdoptionMap', () => {
   const onTakeSurveyClick = jest.fn();
   const testSchool: School = {
     nces_id: '123456789',
@@ -122,7 +122,7 @@ describe('YourSchoolMap', () => {
   };
 
   const renderComponent = (props = {}) =>
-    render(<YourSchoolMap onTakeSurveyClick={onTakeSurveyClick} {...props} />);
+    render(<AdoptionMap onTakeSurveyClick={onTakeSurveyClick} {...props} />);
 
   beforeEach(() => {
     jest.clearAllMocks();
@@ -384,7 +384,7 @@ describe('YourSchoolMap', () => {
     expect(setPopupDataMock).toHaveBeenCalledWith(null);
   });
 
-  it('renders popup with YourSchoolInfo and passes correct props', () => {
+  it('renders popup with AdoptionMapSchool and passes correct props', () => {
     jest
       .spyOn(React, 'useState')
       .mockImplementationOnce(() => [true, jest.fn()])

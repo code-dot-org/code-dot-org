@@ -36,6 +36,11 @@
 #  index_pd_workshops_on_regional_partner_id  (regional_partner_id)
 #
 
+# Deprecated
+#
+#  processed_location
+#
+
 class Pd::Workshop < ApplicationRecord
   include Pd::WorkshopConstants
   include SerializedProperties
@@ -435,10 +440,9 @@ class Pd::Workshop < ApplicationRecord
   end
 
   # Friendly location string is determined by:
-  # 1. Known variant of virtual or workshop is marked as virtual: 'Virtual Workshop'
-  # 2. has processed_location: use city, state
-  # 3. known variant of TBA or no location address at all: 'Location TBA'
-  # 4. unprocessable location that is not TBA: use user-entered string
+  # 1. Any session has a session_format of 'virtual': 'Virtual Workshop'
+  # 2. No location info on the first session: 'Location TBA'
+  # 3. The first session's location_address
   def friendly_location
     return 'Virtual Workshop' if virtual?
     first_session = sessions.first
