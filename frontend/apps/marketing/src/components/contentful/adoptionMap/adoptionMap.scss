@@ -1,7 +1,7 @@
 @use '@code-dot-org/component-library-styles/cms/variables.scss' as cmsVars;
 @import 'mapbox-gl/dist/mapbox-gl.css';
 
-#map {
+#adoption-map {
   height: 540px !important;
 
   .mapboxgl-popup {
@@ -37,7 +37,7 @@
 }
 
 @media screen and (max-width: cmsVars.$mobile-breakpoint) {
-  #map {
+  #adoption-map {
     height: 340px !important;
   }
 }

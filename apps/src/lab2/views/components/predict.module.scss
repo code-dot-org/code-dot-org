@@ -29,9 +29,29 @@
   margin-left: 6px;
 }
 
-.freeResponse {
+.freeResponseTextArea {
   width: 100%;
   box-sizing: border-box;
+
+  // We use static colors for the scrollbar because textarea's background is always white.
+  // Chrome(>=v121), Edge and Firefox use scrollbar-color.
+  scrollbar-color: var(--neutral-gray-30) var(--neutral-base-white);
+
+  // webkit-scrollbar is used by Safari.
+  &::-webkit-scrollbar {
+    background: var(--neutral-base-white);
+    width: 10px;
+    height: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--neutral-gray-30);
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background: var(--neutral-base-white);
+  }
 }
 
 .predictQuestionContainer {
