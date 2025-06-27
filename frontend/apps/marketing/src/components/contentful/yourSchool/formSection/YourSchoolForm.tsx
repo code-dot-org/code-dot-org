@@ -1,6 +1,7 @@
 'use client';
 
 import {useCallback, useEffect, useState, useMemo} from 'react';
+import {createPortal} from 'react-dom';
 
 import Button, {LinkButton} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -196,6 +197,13 @@ const YourSchoolForm: React.FC<YourSchoolFormProps> = ({
   }, [formData, formErrors]);
 
   if (isFormSubmitted) {
+    // Because the modal's z-index is scoped to its parent's stacking context,
+    // it cannot visually overlap sibling containers that have a higher stacking context.
+    // Therefore, moving the modal to a top-level container (e.g., directly under <body>)
+    // ensures it can render above all other page content.
+    const successNoticeContainer = document.createElement('div');
+    document.body.appendChild(successNoticeContainer);
+
     return (
       <>
         <Heading3
@@ -210,54 +218,56 @@ const YourSchoolForm: React.FC<YourSchoolFormProps> = ({
           We've received your submission!
         </Heading3>
 
-        {showSuccessNotice && (
-          <Modal
-            title="Thank you for telling us about your school!"
-            imageUrl={yourSchoolImg.src}
-            imagePlacement="inline"
-            className={styles.yourSchoolNotice}
-            onClose={handleSuccessNoticeClose}
-            primaryButtonProps={{
-              text: 'Return to page',
-              type: 'secondary',
-              color: 'black',
-              onClick: handleSuccessNoticeClose,
-            }}
-            customContent={
-              <div className={styles.yourSchoolNoticeContent}>
-                <BodyTwoText
-                  id="dsco-dialog-description"
-                  className={styles.yourSchoolNoticeDesc}
-                >
-                  The information you shared helps us track our progress as we
-                  work to bring CS to every school! Share this survey with
-                  friends and coworkers and encourage them to join too!
-                </BodyTwoText>
+        {showSuccessNotice &&
+          createPortal(
+            <Modal
+              title="Thank you for telling us about your school!"
+              imageUrl={yourSchoolImg.src}
+              imagePlacement="inline"
+              className={styles.yourSchoolNotice}
+              onClose={handleSuccessNoticeClose}
+              primaryButtonProps={{
+                text: 'Return to page',
+                type: 'secondary',
+                color: 'black',
+                onClick: handleSuccessNoticeClose,
+              }}
+              customContent={
+                <div className={styles.yourSchoolNoticeContent}>
+                  <BodyTwoText
+                    id="dsco-dialog-description"
+                    className={styles.yourSchoolNoticeDesc}
+                  >
+                    The information you shared helps us track our progress as we
+                    work to bring CS to every school! Share this survey with
+                    friends and coworkers and encourage them to join too!
+                  </BodyTwoText>
 
-                <div className={styles.yourSchoolNoticeButtons}>
-                  <LinkButton
-                    text="Share on Twitter"
-                    href={shareOnTwitterURL}
-                    size="s"
-                    iconLeft={{
-                      iconFamily: 'brands',
-                      iconName: 'x-twitter',
-                    }}
-                  />
-                  <LinkButton
-                    text="Share on Facebook"
-                    href={shareOnFacebookURL}
-                    size="s"
-                    iconLeft={{
-                      iconFamily: 'brands',
-                      iconName: 'facebook',
-                    }}
-                  />
+                  <div className={styles.yourSchoolNoticeButtons}>
+                    <LinkButton
+                      text="Share on Twitter"
+                      href={shareOnTwitterURL}
+                      size="s"
+                      iconLeft={{
+                        iconFamily: 'brands',
+                        iconName: 'x-twitter',
+                      }}
+                    />
+                    <LinkButton
+                      text="Share on Facebook"
+                      href={shareOnFacebookURL}
+                      size="s"
+                      iconLeft={{
+                        iconFamily: 'brands',
+                        iconName: 'facebook',
+                      }}
+                    />
+                  </div>
                 </div>
-              </div>
-            }
-          />
-        )}
+              }
+            />,
+            successNoticeContainer,
+          )}
       </>
     );
   }

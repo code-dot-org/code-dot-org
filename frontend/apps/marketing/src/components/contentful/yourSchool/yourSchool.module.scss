@@ -37,33 +37,6 @@
     text-align: center;
   }
 
-  .yourSchoolNotice {
-    max-width: 43rem;
-    padding: 1.5rem 2rem;
-
-    img {
-      background: none;
-      height: auto;
-    }
-
-    .yourSchoolNoticeContent {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-
-      .yourSchoolNoticeDesc {
-        color: var(--text-neutral-tertiary);
-      }
-
-      .yourSchoolNoticeButtons {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        gap: 0.75rem;
-      }
-    }
-  }
-
   .yourSchoolMapSection {
     .yourSchoolMapHeading,
     .yourSchoolMapParagraph {
@@ -253,6 +226,33 @@
       .yourSchoolFormBottomText {
         margin: 0;
       }
+    }
+  }
+}
+
+.yourSchoolNotice {
+  max-width: 43rem;
+  padding: 1.5rem 2rem;
+
+  img {
+    background: none;
+    height: auto;
+  }
+
+  .yourSchoolNoticeContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .yourSchoolNoticeDesc {
+      color: var(--text-neutral-tertiary);
+    }
+
+    .yourSchoolNoticeButtons {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      gap: 0.75rem;
     }
   }
 }
