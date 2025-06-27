@@ -17,6 +17,7 @@ interface BaseChatEvent {
 /** Base type for all chat messages */
 interface BaseChatMessage extends BaseChatEvent {
   chatMessageText: string;
+  hiddenContext?: string;
   /** Asset file names to optionally send with text content */
   assets?: ChatAsset[];
   role: Role;

@@ -26,7 +26,6 @@ test.describe('Home Page', () => {
 
     // Capture all requests to track redirects
     page.on('request', request => {
-      console.log('push request url', request.url());
       redirects.push(request.url());
     });
 

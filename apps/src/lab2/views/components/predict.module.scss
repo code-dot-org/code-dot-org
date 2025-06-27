@@ -3,8 +3,20 @@
 .multipleChoiceContainer {
   display: flex;
   align-items: start;
+
   input {
     margin: 4px 4px 0 0;
+
+    // When the radio/checkbox is disabled and not checked, dim option.
+    &:disabled:not(:checked) {
+      opacity: 0.5;
+      cursor: not-allowed;
+
+      + .multipleChoiceLetter,
+      + .multipleChoiceLetter + .multipleChoiceLabel {
+        color: var(--text-neutral-placeholder);
+      }
+    }
   }
 }
 
@@ -17,9 +29,29 @@
   margin-left: 6px;
 }
 
-.freeResponse {
+.freeResponseTextArea {
   width: 100%;
   box-sizing: border-box;
+
+  // We use static colors for the scrollbar because textarea's background is always white.
+  // Chrome(>=v121), Edge and Firefox use scrollbar-color.
+  scrollbar-color: var(--neutral-gray-30) var(--neutral-base-white);
+
+  // webkit-scrollbar is used by Safari.
+  &::-webkit-scrollbar {
+    background: var(--neutral-base-white);
+    width: 10px;
+    height: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--neutral-gray-30);
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background: var(--neutral-base-white);
+  }
 }
 
 .predictQuestionContainer {
@@ -61,4 +93,14 @@
   display: flex;
   align-items: center;
   justify-content: right;
+}
+
+.runPromptContainer {
+  color: var(--text-neutral-primary);
+  background-color: var(--background-neutral-secondary);
+  border-radius: .25em;
+}
+
+.runPrompt {
+  padding: 9px 12px 1px 12px;
 }

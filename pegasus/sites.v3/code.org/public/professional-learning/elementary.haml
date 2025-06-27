@@ -3,9 +3,6 @@ title: K-5 Professional Learning Workshops
 theme: responsive_full_width
 ---
 
-- button_url = "#workshops-map"
-- button_string = hoc_s("pl_page_k5.button")
-
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 
 %section
@@ -21,8 +18,7 @@ theme: responsive_full_width
           %li=hoc_s("pl_page_k5.top_list_02")
           %li=hoc_s("pl_page_k5.top_list_03")
           %li=hoc_s("pl_page_k5.top_list_04")
-        %a.link-button{href: button_url}
-          =button_string
+
       %figure
         %img.rounded-corners{src: "/images/self-paced-pl-tile-csf.png", alt: "", style: "width: 100%; margin-block: 0.5rem 0"}
 
@@ -34,8 +30,6 @@ theme: responsive_full_width
     %p.wrap-pretty
       =hoc_s("pl_page_k5.workshops.desc")
     = view :"professional_learning/k_5_workshop_blocks"
-    %a.link-button.add-margin-top{href: button_url}
-      =button_string
 
 %section.quote.bg-neutral-dark
   .wrapper
@@ -46,12 +40,6 @@ theme: responsive_full_width
         Daphne Wright
         %span •
         =hoc_s("pl_page_k5.quote.byline")
-
-%section#workshops-map
-  .wrapper
-    %h2=hoc_s("pl_page_k5.workshops_map.heading")
-    %p=hoc_s("pl_page_k5.workshops_map.desc")
-    = view :workshop_search
 
 %section.bg-neutral-light
   .wrapper.centered
