@@ -321,6 +321,8 @@ const marketingPaths = {
   "/hour-of-code/poetry": true,
   "/hour-of-code/transformersone": true,
   "/districts/program/coaches-network": true,
+  // Home Page
+  "/": true,
 }
 
 const nextJsAssetsPath = '/_next/static/';
