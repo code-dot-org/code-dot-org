@@ -37,11 +37,13 @@ module ShareFiltering
     ADDRESS = 'address'.freeze
     PHONE = 'phone'.freeze
     PROFANITY = 'profanity'.freeze
+    PROGRAM_TOO_LARGE = 'program_too_large'.freeze
   end
 
   USER_ENTERED_TEXT_INDICATORS = ['TITLE', 'TEXT', 'title name\=\"VAL\"'].freeze
   FILTERED_PROJECT_TYPES = ['spritelab', 'playlab', 'poetry'].freeze
   JSON_MAX_DEPTH = 999
+  TextExtractionResult = Struct.new(:texts, :too_large)
 
   # Searches for a sharing failure given a program and locale.
   # Returns both the error type and the offending text snippet.
@@ -56,15 +58,18 @@ module ShareFiltering
     # Filter projects geared for young students that accept user-generated text.
     return nil unless should_filter_program(program, project_type)
 
-    texts = extract_text_blockly(program)
-    program_text = texts.join(" ")
-
-    find_failure(program_text, locale, exceptions: exceptions)
+    result = extract_text_blockly(program)
+    if result.too_large
+      return ShareFailure.new(FailureType::PROGRAM_TOO_LARGE, '')
+    else
+      program_text = result.texts.join(" ")
+      find_failure(program_text, locale, exceptions: exceptions)
+    end
   end
 
   # Parses a Blockly program (XML or JSON) and returns an array of text entries.
   # @param program [String] Blockly program (XML or JSON).
-  # @return [Array<String>] Non-empty, cleaned text values found in the program.
+  # @return [TextExtractionResult] .texts is an array of text values, .too_large a Boolean
   def self.extract_text_blockly(program)
     stripped = program.lstrip # Removes all leading whitespace.
     unless stripped.start_with?("{", "[")
@@ -73,12 +78,18 @@ module ShareFiltering
       # convert to array of lines split at newline,
       # strip leading/trailing whitespace from each line,
       # drop any blank lines.
-      return stripped.gsub(/<[^>]*>/, "\n").split("\n").map(&:strip).reject(&:empty?)
+      xml_texts = stripped.gsub(/<[^>]*>/, "\n").split("\n").map(&:strip).reject(&:empty?)
+      return TextExtractionResult.new(xml_texts, false)
     end
 
-    # Texts will include field values, text values in block inputs, comments, and variable names.
-    json = JSON.parse(stripped, max_nesting: DCDO.get('share_filtering_blockly_json_max_depth', JSON_MAX_DEPTH))
     texts = []
+    # Texts will include field values, text values in block inputs, comments, and variable names.
+    begin
+      json = JSON.parse(stripped, max_nesting: DCDO.get('share_filtering_blockly_json_max_depth', JSON_MAX_DEPTH))
+    rescue JSON::NestingError
+      CDO.log.warn "ShareFiltering.extract_text_blockly: JSON too deep after #{JSON_MAX_DEPTH} levels"
+      return TextExtractionResult.new([], true)
+    end
 
     # Extract variable names.
     if json["variables"].is_a?(Array)
@@ -94,7 +105,7 @@ module ShareFiltering
     end
 
     # Return a list of all extracted text (no duplicates).
-    texts.compact.uniq
+    TextExtractionResult.new(texts.compact.uniq, false)
   end
 
   # Clean string values from XML-wrapped field values.
