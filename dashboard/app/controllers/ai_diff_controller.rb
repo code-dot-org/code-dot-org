@@ -21,15 +21,13 @@ class AiDiffController < ApplicationController
       return render status: :bad_request, json: {}
     end
 
-    session_id = params[:sessionId].presence
+    start_time = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+    agent_text = AiDiffBedrockAgentHelper.request_agent_chat(params[:inputText])
+    end_time = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+    agent_time = end_time - start_time
+    agent_text = "Agent call (#{agent_time} seconds)\n\n#{agent_text}\n\n"
 
-    begin
-      AiDiffBedrockAgentHelper.request_agent_chat
-    rescue => exception
-      puts 'Exception calling agent'
-      puts 'details:'
-      puts exception.inspect
-    end
+    session_id = params[:sessionId].presence
 
     response_body = get_response_body(session_id)
     # get or create thread obj
@@ -75,6 +73,8 @@ class AiDiffController < ApplicationController
         return render status: :bad_request, json: {error: exception.message}
       end
     end
+
+    response_body[:chat_message_text] = "#{agent_text}\n***\n#{response_body[:chat_message_text]}"
 
     render(status: :ok, json: response_body)
   end
@@ -300,13 +300,17 @@ class AiDiffController < ApplicationController
       student_code
     )
 
+    start_time = Process.clock_gettime(Process::CLOCK_MONOTONIC)
     bedrock_rag_response = AiDiffBedrockHelper.request_bedrock_rag_chat(params[:inputText], prompt, lesson_num, unit_num, course_names, session_id, @section_contexts)
     #TODO: check for profanity/PII in model response
+
+    end_time = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+    rag_time = end_time - start_time
 
     {
       role: "assistant",
       status: SharedConstants::AI_INTERACTION_STATUS[:OK],
-      chat_message_text: bedrock_rag_response.output.text,
+      chat_message_text: "RAG call (#{rag_time} seconds)\n\n#{bedrock_rag_response.output.text}",
       session_id: bedrock_rag_response.session_id
     }
   end
