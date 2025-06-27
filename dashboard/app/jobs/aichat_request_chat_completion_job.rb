@@ -22,7 +22,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
     report_job_finish(request)
   end
 
-  # Catch any exceptions that occur during the job and update the request status accordingly
+  # Catch any exceptions that occur during the job and update the request status accordingly.
   rescue_from StandardError do |exception|
     if rack_env?(:development)
       puts "AichatRequestChatCompletionJob Error: #{exception.full_message}"
@@ -37,7 +37,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
       }
     )
 
-    # Report metrics for the failed job (after_perform doesn't run on failure)
+    # Report metrics for the failed job (after_perform doesn't run on failure).
     report_job_finish(request)
 
     # Re-raise error to notify our system of the failed job.
@@ -49,7 +49,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
     request.update!(response: response, execution_status: status)
   end
 
-  #TODO - this is temporary - only until sagemaker not integrated in this path
+  # Determine if one of the models handled by  `aichat_ai_client.rb`.
   private def openai_or_gemini?(model_id)
     [SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT],
      SharedConstants::AI_CHAT_MODEL_IDS[:LEARNLM],

@@ -15,21 +15,14 @@ module AichatAiHelper
 
     temperature = aichat_model_customizations['temperature'].to_f
 
-    # system prompt - string or nil
+    # System prompt - string or nil.
     system_prompt = aichat_model_customizations['systemPrompt']
 
-    # system prompt - array of strings or nil
+    # System prompt - array of strings or nil.
     retrieval_contexts = aichat_model_customizations['retrievalContexts']
 
     client = AichatAiClient.create_instance(model_id)
 
-    # Note for PR (TODO - discuss and remove this note before PR merged):
-    # --------------------------------------------------------------------
-    # There are various errors that can occur but are not rescued except in
-    # aichagt_request_chat_comlpetion_job.rb. Specifically there are  various errors raised or
-    # propagated through `AichatAssetHelper` when messages contain assets (i.e. multimodal)
-    #  and should probably be dealt with somehow (with a response to the user).
-    # --------------------------------------------------------------------
     begin
       response = client.get_response_text(
         stored_messages,

@@ -42,7 +42,7 @@ export function useAiTutor2(
   );
 
   // This could also be lifecycle hook? or get passed as function arguments?
-  // Or return initialize(levelId, scriptId, channelId) and clearResponse() functions to the caller
+  // Or return initialize(levelId, scriptId, channelId) and clearResponse() functions to the caller.
   useEffect(() => {
     if (!isEnabled) {
       return;

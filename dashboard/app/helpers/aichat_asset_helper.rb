@@ -1,18 +1,10 @@
-# Helps retrieve and encode assets for AI Chat uploads
+# Helps retrieve and encode assets for AI Chat uploads.
 module AichatAssetHelper
   class AichatAssetFetchError < StandardError; end
   class AichatLevelAssetFetchError < AichatAssetFetchError; end
   class AichatProjectAssetFetchError < AichatAssetFetchError; end
 
   ASSET_BUCKET = AssetBucket.new
-
-  # Note for PR (TODO - discuss and remove this note before PR merged):
-  # -------------------------------------------------------------------
-  # This function was added since gemini doesn't accept newlines
-  # and takes the mime-type as a separate parameter  (not as a
-  # data uri with a mime-type prefix).  This is now a helper for
-  # `get_asset_data_uri`
-  # -------------------------------------------------------------------
 
   # Returns a base64 string for the given asset.
   def self.get_asset_base64_string(filename, source, channel_id, level_name)
@@ -28,25 +20,8 @@ module AichatAssetHelper
     "data:#{mime_type};base64,#{base64_data}"
   end
 
-  # Note for PR (TODO - discuss and remove this note before PR merged):
-  # -------------------------------------------------------------------
-  # This function is only used in this file (and its test). Previously it returned
-  # a hash with a status and body to match AssetBucket.get. If the status was not
-  # equal to 'FOUND' the caller threw an error stating "Error fetching asset..."
-
-  # We previously threw an error in the caller based on the AssetBucket.get-like object
-  # but I think it is cleaner to throw that error here as the error relates to the fetching
-  # itself.  We can thus avoid passing an AssetBucket.get-like object when simply
-  # passing the already 'read' asset body is sufficient.
-
-  # Open Questions:
-  # ---------------
-  # I created a new error class and I think we should raise this consitently for all errors in
-  # this file to indicate that the asset has failed to be fetched and to provide a message to the
-  # user. See notes below for errors we would need to rescue from elsewhere  (e.g. `Aws::S3`
-
   def self.fetch_asset(filename, source, channel_id, level_name)
-    #call details to use when raising errors
+    # Call details to use when raising errors.
     call_details = ({filename: filename,  source: source, channel_id: channel_id, level_name: level_name}).to_s
 
     if source == 'project'
@@ -71,8 +46,9 @@ module AichatAssetHelper
       if uuid_name
         s3_object = LevelStarterAssetsHelper.get_object(uuid_name)
         if s3_object
-          # NOTE: this can raise its own errors for various reasons (e.g. from Aws::S3::Errors or Aws::Errors), perhaps
-          # TODO - we should probbaly catch them and throw a unified error so that we can get a response back to the user
+
+          # The following call can result in various errors that currently are not derived
+          # from AichatAssetFetchError (e.g. from Aws::S3::Errors or Aws::Errors).
           asset_body = s3_object.get.body
         else
           raise AichatLevelAssetFetchError.new(
@@ -97,8 +73,8 @@ module AichatAssetHelper
    )
     end
 
-    # NOTE: this can also result in other various errors,
-    # TODO - we should probbaly catch them and throw a unified error so that we can get a response back to the user
+    # Read the body.  This can result in various errors that
+    # currently are not derived from AichatAssetFetchError.
     asset_body.read
   end
 end

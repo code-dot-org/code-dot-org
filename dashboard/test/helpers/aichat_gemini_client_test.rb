@@ -107,14 +107,14 @@ class AichatGeminiClientTest < AichatAiClientTest
     context 'when body is well formed and request succeeds' do
       let(:stubbed_response_body) {stubbed_success_response_body}
       it 'successfully makes a round trip and is returned the correct response' do
-        #check that we're returned the correct response
+        # Check that we're returned the correct response.
         assert_equal subject, @response_text
       end
     end
     context 'when body is well formed and request fails with error JSON' do
       let(:stubbed_response_body) {stubbed_fail_response_body}
       it 'raises StandardError' do
-        #check that we raise
+        # Check that we raise.
         -> {subject}.must_raise(StandardError)
       end
     end

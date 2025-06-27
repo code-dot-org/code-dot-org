@@ -1,21 +1,21 @@
-# This class implements an openai backend for the generic AichatAiClient
+# This class implements an openai backend for the generic AichatAiClient.
 class AichatOpenaiCompletionsClient < AichatAiClient
   # The url to send with the post request
   private def url
     "https://api.openai.com/v1/chat/completions"
   end
 
-  # take response_body and raise any errors if appropriate
+  # Take response_body and raise any errors if appropriate.
   private def raise_possible_response_errors_from_body(response_body)
     raise StandardError.new(response_body['error']) if response_body['error']
   end
 
-  # take response_body and extract the text response
+  # Take response_body and extract the text response.
   private def extract_text_response_from_body(response_body)
     response_body&.dig("choices")&.first&.dig('message', 'content')
   end
 
-  # take response_body and extract usage data for reporting
+  # Take response_body and extract usage data for reporting.
   private def get_usage_from_body(response_body)
     {
       'prompt_tokens' => response_body.dig('usage', 'prompt_tokens') || 0,
@@ -24,7 +24,7 @@ class AichatOpenaiCompletionsClient < AichatAiClient
     }
   end
 
-  # create request body
+  # Create request body.
   private def create_body(
     stored_messages,
     new_message,
@@ -52,7 +52,7 @@ class AichatOpenaiCompletionsClient < AichatAiClient
     body
   end
 
-  # override base headers and merge in Bearer token
+  # Override base headers and merge in Bearer token.
   private def headers
     super.merge({
                   "Authorization" => "Bearer #{api_key}"
@@ -60,7 +60,7 @@ class AichatOpenaiCompletionsClient < AichatAiClient
 )
   end
 
-  # helper to format openid "message" object for body
+  # Helper to format openid "message" object for body.
   private def format_message(message, encrypted_channel_id, level_name)
     formatted = {role: message['role'], content: [{type: "text", text: message['chatMessageText']}]}
     message['assets']&.each do |asset|

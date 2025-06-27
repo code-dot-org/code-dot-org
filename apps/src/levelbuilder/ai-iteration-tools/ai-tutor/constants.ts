@@ -1,6 +1,6 @@
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
-// Non-Gen AI endpoint constants
+// Non-Gen AI endpoint constants.
 export const AI_TUTOR_ENDPOINT = 'ai-tutor';
 export const LLM_GUARD_ENDPOINT = 'llm-guard';
 
