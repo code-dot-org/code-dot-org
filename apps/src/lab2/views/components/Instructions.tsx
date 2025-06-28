@@ -4,7 +4,6 @@ import {useSelector} from 'react-redux';
 
 import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {
   isPredictAnswerLocked,
   isPredictResponseSubmitted,
@@ -108,7 +107,6 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       canShowNextButton={canShowNextButton}
       hasNextLevel={hasNextLevel}
       useSecondaryFinishButton={useSecondaryFinishButton}
-      onContinueOrFinish={() => dispatch(continueOrFinishLesson())}
       bottomComponent={bottomComponent}
       isRunning={isRunning}
       levelProperties={levelProperties}

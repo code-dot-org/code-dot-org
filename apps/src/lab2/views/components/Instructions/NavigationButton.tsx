@@ -11,6 +11,7 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LevelProperties} from '@cdo/apps/lab2/types';
+import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -18,8 +19,6 @@ import {
   LevelStatus,
   UserLevelInteractions,
 } from '@cdo/generated-scripts/sharedConstants';
-
-import {DialogType, useDialogControl} from '../../dialogs';
 
 interface NavigationButtonProps {
   levelProperties: LevelProperties;
