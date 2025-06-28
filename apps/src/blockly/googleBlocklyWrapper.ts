@@ -880,7 +880,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       !!options.grayOutUndeletableBlocks;
     blocklyWrapper.topLevelProcedureAutopopulate =
       !!options.topLevelProcedureAutopopulate;
-    blocklyWrapper.readOnly = !!opt_options.readOnly;
     blocklyWrapper.showBlockHelp = !!optOptionsExtended.showBlockHelp;
 
     if (options.noFunctionBlockFrame) {

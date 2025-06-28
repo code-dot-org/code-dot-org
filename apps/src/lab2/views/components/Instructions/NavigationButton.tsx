@@ -103,6 +103,7 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
 
   return (
     <Button
+      id="instructions-continue-button"
       {...{className, size, text, type, color}}
       onClick={() => dispatch(continueOrFinishLesson())}
     />
@@ -174,6 +175,7 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({
 
   return (
     <Button
+      id="instructions-submit-button"
       text={buttonText}
       onClick={onSubmit}
       className={className}
