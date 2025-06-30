@@ -90,10 +90,8 @@ class TestController < ApplicationController
 
   def assign_course_and_unit_as_student
     return unless (user = current_user)
+    script = Unit.find_by_name(params.require(:script_name))
     course = UnitGroup.find_by_name(params.require(:course_name))
-    unit_group_unit = course.default_unit_group_units.find_by!(position: params.require(:unit_position))
-    raise "Unit #{params[:unit_position].inspect} not found in course #{params[:course_name].inspect}" unless unit_group_unit
-    unit = unit_group_unit.script
 
     teacher_email = params[:teacher_email]
     if teacher_email
@@ -112,7 +110,7 @@ class TestController < ApplicationController
       teacher_user = User.create!(attributes)
     end
 
-    section = Section.create(name: "New Section", user: teacher_user, script_id: unit.id, course_id: course.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    section = Section.create(name: "New Section", user: teacher_user, script_id: script.id, course_id: course.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     section.students << user
     section.save!
     head :ok

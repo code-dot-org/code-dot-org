@@ -49,7 +49,7 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
   Scenario: Local navigation on Unit and Course overview pages
     When I open my eyes to test "teacher local nav v2 - unit/course overview"
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to course "allthethingscourse" unit 1 with teacher "Teacher_Sally"
+    Given I am assigned to course "allthethingscourse" and unit "allthethings" with teacher "Teacher_Sally"
 
     Given I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
