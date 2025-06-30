@@ -3,8 +3,8 @@ class Api::V1::Pd::TeacherAttendanceReportController < Api::V1::Pd::ReportContro
 
   authorize_resource class: :pd_teacher_attendance_report
 
-  # GET /api/v1/pd/teacher_progress_report
-  # GET /api/v1/pd/teacher_progress_report.csv
+  # GET /api/v1/pd/teacher_attendance_report
+  # GET /api/v1/pd/teacher_attendance.csv
   def index
     @workshops = load_filtered_ended_workshops
 
@@ -23,7 +23,7 @@ class Api::V1::Pd::TeacherAttendanceReportController < Api::V1::Pd::ReportContro
         render json: report
       end
       format.csv do
-        send_as_csv_attachment report, 'teacher_progress_report.csv'
+        send_as_csv_attachment report, 'teacher_attendance_report.csv'
       end
     end
   end
