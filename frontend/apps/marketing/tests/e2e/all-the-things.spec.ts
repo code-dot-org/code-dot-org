@@ -34,7 +34,13 @@ test.describe('All the things UI e2e test', () => {
     test('should redirect from localeless paths to english localized paths when no language cookie is set', async ({
       page,
       context,
+      browserName,
     }) => {
+      test.skip(
+        browserName !== 'chromium',
+        'This test only needs to run once on Chromium',
+      );
+
       const allTheThingsPage = new MarketingPage(page);
       await allTheThingsPage.goto('/engineering/all-the-things');
 

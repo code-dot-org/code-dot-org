@@ -8,7 +8,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
 
     context 'when none of the lessons are hidden' do
       let(:user) {create(:user)}
-      let(:script) {create(:script, :with_levels, levels_count: 5)}
+      let(:script) {create(:script, :in_single_unit_course, :with_levels, levels_count: 5)}
 
       context 'when the user has no progress' do
         it 'returns the first visible level' do
@@ -133,7 +133,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
     context 'when a lesson is hidden' do
       let(:student) {create :student}
       let(:teacher) {create :teacher}
-      let(:script) {create(:script, :with_levels, lessons_count: 3, levels_count: 1)}
+      let(:script) {create(:script, :in_single_unit_course, :with_levels, lessons_count: 3, levels_count: 1)}
       let(:section) {create(:section, user_id: teacher.id, script_id: script.try(:id), participant_type: 'student', grades: ['9'])}
 
       context 'when a student has completed the first lesson' do
@@ -194,7 +194,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
 
     context 'when the user has made no progress' do
       let(:user) {create :user}
-      let(:script)  {create :script}
+      let(:script)  {create :script, :in_single_unit_course}
       let(:lesson_group)  {create :lesson_group, script: script}
       let(:lesson)  {create :lesson, script: script, lesson_group: lesson_group}
 
@@ -210,7 +210,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
 
     context 'when user has not completed any unplugged level' do
       let(:user) {create(:user)}
-      let(:script) {create(:script)}
+      let(:script) {create(:script, :in_single_unit_course)}
 
       before do
         [:unplugged, :level, :unplugged, :level, :unplugged].each do |type|
@@ -240,7 +240,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
     context 'when other user has made progress' do
       let(:user) {create :user}
       let(:other_user) {create :user}
-      let(:script) {create(:script, :with_levels, levels_count: 5)}
+      let(:script) {create(:script, :in_single_unit_course, :with_levels, levels_count: 5)}
 
       before do
         script.script_levels.each do |script_level|
@@ -261,7 +261,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
 
     context 'when most recent level is not passed' do
       let(:user) {create :user}
-      let(:script) {create(:script, :with_levels, levels_count: 5)}
+      let(:script) {create(:script, :in_single_unit_course, :with_levels, levels_count: 5)}
       before do
         script.script_levels.each do |script_level|
           next if script_level.chapter != 3
@@ -284,7 +284,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
 
     context 'when most recent level is the last level' do
       let(:user) {create :user}
-      let(:script) {create(:script, :with_levels, levels_count: 5)}
+      let(:script) {create(:script, :in_single_unit_course, :with_levels, levels_count: 5)}
       let(:script_level) {script.script_levels.last}
 
       before do
@@ -306,7 +306,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
 
     context 'when most recent level not a progression level' do
       let(:user) {create :user}
-      let(:script) {create :script}
+      let(:script) {create :script, :in_single_unit_course}
       let(:lesson_group) {create :lesson_group, script: script}
       let(:lesson) {create :lesson, script: script, lesson_group: lesson_group}
       let!(:script_levels) do
@@ -338,7 +338,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
 
     context 'when last updated user_level is inside a level group' do
       let(:user) {create :user}
-      let(:script) {create :script}
+      let(:script) {create :script, :in_single_unit_course}
       let(:sub_level_name) {'sublevel1'}
       let(:lesson_group) {create :lesson_group, script: script}
       let(:lesson) {create :lesson, script: script, lesson_group: lesson_group}
@@ -379,7 +379,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
     subject(:completed_progression_levels?) {user.completed_progression_levels?(script)}
 
     let(:user) {create :user}
-    let(:script) {create(:script, :with_levels, levels_count: 3)}
+    let(:script) {create(:script, :in_single_unit_course, :with_levels, levels_count: 3)}
 
     context 'when not all progression levels have a passing result' do
       before do
@@ -451,7 +451,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
     subject(:num_unpassed_progression_levels) {user.num_unpassed_progression_levels(script)}
 
     let(:user) {create :user}
-    let(:script) {create(:script, :with_levels, levels_count: 3)}
+    let(:script) {create(:script, :in_single_unit_course, :with_levels, levels_count: 3)}
 
     let(:level1) {script.script_levels.first.level}
     let(:level2) {script.script_levels.second.level}
@@ -514,7 +514,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
     subject(:unpassed_progression_level?) {user.unpassed_progression_level?(script_level, user_levels)}
 
     let(:user) {create :user}
-    let(:script) {create(:script, :with_levels, levels_count: 3)}
+    let(:script) {create(:script, :in_single_unit_course, :with_levels, levels_count: 3)}
     let(:script_level) {script.script_levels.first}
 
     let(:level) {script_level.level}
@@ -549,7 +549,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
 
     let(:user) {create :user}
     let(:teacher) {create :teacher}
-    let(:script) {create :script}
+    let(:script) {create :script, :in_single_unit_course}
     let(:lesson_group) {create :lesson_group, script: script}
     let(:lesson) {create :lesson, script: script, lesson_group: lesson_group}
     let(:script_level) {create :script_level, script: script, lesson: lesson, levels: [create(:level)]}
@@ -638,7 +638,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
     subject(:visible_script_levels) {user.visible_script_levels(script)}
 
     let(:user) {create :user}
-    let(:script) {create(:script)}
+    let(:script) {create(:script, :in_single_unit_course)}
     let(:lesson_group) {create :lesson_group, script: script}
     let(:lesson) {create :lesson, script: script, lesson_group: lesson_group}
     let!(:script_levels) do

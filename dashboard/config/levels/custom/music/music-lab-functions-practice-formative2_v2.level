@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T03:00:56.000Z",
   "level_num": "custom",
@@ -180,7 +181,7 @@
       "playerEnabled": true,
       "validationEnabled": true,
       "validationMode": "default",
-      "playerTitle": "Example",
+      "playerTitle": "Born This Way",
       "validationSuccessMessage": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: \"You Did It!\"",
       "validationFailureMessage": "Something's not quite right! Try listening to the example again!"
     },
@@ -226,8 +227,7 @@
     "name_suffix": "_v2",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:56.745+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-formative2\\\"\"],\"cloned_from\":\"music-lab-functions-practice-formative2\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:56.745+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-formative2\\\"\"],\"cloned_from\":\"music-lab-functions-practice-formative2\"},{\"changed_at\":\"2025-06-26 19:37:02 +0000\",\"changed\":[\"exemplar_settings\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

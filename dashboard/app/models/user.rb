@@ -102,6 +102,7 @@ class User < ApplicationRecord
   include ProviderFlags
   include Verifiable
   include Age
+  include AiAccessible
   include SectionParticipation
   include PartialRegistration
   include Purgeable
@@ -147,7 +148,6 @@ class User < ApplicationRecord
   #     is a school-managed account.
   #   educator_role: Indicates the role of the educator, e.g. 'teacher', 'school_admin', 'district_admin', etc.
 
-  AI_TUTOR_EXPERIMENT_NAME = 'ai-tutor'
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
 
   DATA_TRANSFER_AGREEMENT_SOURCE_TYPES = [
@@ -200,11 +200,14 @@ class User < ApplicationRecord
     family_name
     ai_rubrics_disabled
     ai_rubrics_tour_seen
+    ai_tutor_access_denied
+    ai_differentiation_toggled_off
+    has_seen_ai_assessments_announcement
+    has_completed_ai_differentiation_welcome
     sort_by_family_name
     show_progress_table_v2
     progress_table_v2_closed_beta
     lti_roster_sync_enabled
-    ai_tutor_access_denied
     progress_table_v2_timestamp
     progress_table_v1_timestamp
     has_seen_progress_table_v2_invitation
@@ -213,12 +216,9 @@ class User < ApplicationRecord
     lms_landing_opted_out
     failed_attempts
     locked_at
-    has_seen_ai_assessments_announcement
     seen_ta_scores_map
     roster_synced
     educator_role
-    ai_differentiation_toggled_off
-    has_completed_ai_differentiation_welcome
   )
 
   attr_accessor(
@@ -917,43 +917,6 @@ class User < ApplicationRecord
       permission?(UserPermission::WORKSHOP_ADMIN)
   end
 
-  def ai_tutor_permission?
-    permission?(UserPermission::AI_TUTOR_ACCESS)
-  end
-
-  def can_use_ai_iteration_tools?
-    ai_tutor_permission? && levelbuilder?
-  end
-
-  def can_enable_ai_tutor?
-    !DCDO.get('ai-tutor-disabled', false) && (ai_tutor_permission? ||
-      SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME))
-  end
-
-  def has_ai_tutor_access?
-    return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?
-    permission_for_ai_tutor? || in_ai_tutor_experiment_with_enabled_section?
-  end
-
-  def can_view_student_ai_chat_messages?
-    ai_tutor_courses = ['programming-fundamentals-aitutor-2024']
-    (sections.any?(&:assigned_csa?) || sections.any? {|s| ai_tutor_courses.include?(s.unit_group&.name)}) &&
-      SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
-  end
-
-  def teacher_can_access_ai_chat?
-    teacher? && (verified_instructor? || oauth? || Policies::Lti.lti?(self))
-  end
-
-  def student_can_access_ai_chat?
-    teachers.any?(&:teacher_can_access_ai_chat?) &&
-      sections_as_student.any?(&:assigned_ai_chat?)
-  end
-
-  def has_aichat_access?
-    teacher_can_access_ai_chat? || student_can_access_ai_chat?
-  end
-
   def student_of_verified_instructor?
     teachers.any?(&:verified_instructor?)
   end
@@ -1029,20 +992,6 @@ class User < ApplicationRecord
       self.secret_words = new_secret_words
       break
     end
-  end
-
-  # Returns an array of experiment name strings
-  def get_active_experiment_names
-    Experiment.get_all_enabled(user: self).pluck(:name)
-  end
-
-  # Returns an array of experiment name strings that a student's teachers are enrolled in
-  def get_active_experiment_names_by_teachers
-    experiments = []
-    teachers.each do |teacher|
-      experiments.concat(Experiment.get_all_enabled(user: teacher).pluck(:name))
-    end
-    experiments.uniq
   end
 
   # Returns an array of hashes storing data for each unique course assigned to # sections that this user is a part of.
@@ -1228,6 +1177,8 @@ class User < ApplicationRecord
   # Example: true when the primary_script is being used for a TopCourse on /home
   # @return [Array{CourseData, ScriptData}] an array of hashes of script and
   # course data
+  # TODO: TEACH-1528 Update this to use a new UserCourses table. For now, this returns a /s/ url for each unit, displayed
+  # on the student home page course tiles
   def recent_student_courses_and_units(exclude_primary_script)
     primary_script_id = Queries::ScriptActivity.primary_student_unit(self).try(:id)
 
@@ -2313,19 +2264,6 @@ class User < ApplicationRecord
     unless teacher?
       errors.add(:educator_role, "can only be assigned to teachers")
     end
-  end
-
-  private def ai_tutor_feature_globally_disabled?
-    DCDO.get('ai-tutor-disabled', false)
-  end
-
-  private def permission_for_ai_tutor?
-    permission?(UserPermission::AI_TUTOR_ACCESS)
-  end
-
-  private def in_ai_tutor_experiment_with_enabled_section?
-    get_active_experiment_names_by_teachers.include?(AI_TUTOR_EXPERIMENT_NAME) &&
-      sections_as_student.any?(&:ai_tutor_enabled)
   end
 
   # Called before_destroy.

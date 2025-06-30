@@ -41,6 +41,7 @@ runs:
       shell: bash
       env:
         STAGE: ${{ inputs.ENVIRONMENT_TYPE }}
+        NEXT_PUBLIC_STAGE: ${{ inputs.ENVIRONMENT_TYPE }}
         APPLICATION_BASE_ADDRESS: ${{ inputs.APPLICATION_BASE_ADDRESS }}
       run: yarn workspace @code-dot-org/marketing test:ui:ci
       working-directory: ./frontend

@@ -1,16 +1,16 @@
 import {render, screen, fireEvent} from '@testing-library/react';
 
-import {School} from '../../types';
-import YourSchoolInfo from '../YourSchoolInfo';
-import YourSchoolMapPoint, {MAP_POINT_TYPES} from '../YourSchoolMapPoint';
+import AdoptionMapInfo from '../AdoptionMapInfo';
+import AdoptionMapPoint, {MAP_POINT_TYPES} from '../AdoptionMapPoint';
+import {School} from '../types';
 
-jest.mock('../YourSchoolMapPoint', () => ({
+jest.mock('../AdoptionMapPoint', () => ({
   __esModule: true,
-  ...jest.requireActual('../YourSchoolMapPoint'),
+  ...jest.requireActual('../AdoptionMapPoint'),
   default: jest.fn(props => <span data-testid={`map-point-${props.type}`} />),
 }));
 
-describe('YourSchoolInfo', () => {
+describe('AdoptionMapSchool', () => {
   const defaultSchool: School = {
     nces_id: '123',
     name: 'Test School',
@@ -22,7 +22,7 @@ describe('YourSchoolInfo', () => {
 
   const renderComponent = (props = {}) =>
     render(
-      <YourSchoolInfo
+      <AdoptionMapInfo
         school={defaultSchool}
         onTakeSurveyClick={onTakeSurveyClick}
         {...props}
@@ -130,7 +130,7 @@ describe('YourSchoolInfo', () => {
       const school = {...defaultSchool, teachesCs: value};
       renderComponent({school});
 
-      expect(YourSchoolMapPoint).toHaveBeenCalledWith(
+      expect(AdoptionMapPoint).toHaveBeenCalledWith(
         expect.objectContaining({type}),
         expect.anything(),
       );

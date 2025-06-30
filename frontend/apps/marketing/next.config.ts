@@ -7,7 +7,10 @@ const nextConfig: NextConfig = {
     '@opentelemetry/auto-instrumentations-node',
     'pino',
   ],
-  cacheMaxMemorySize: 0, // disable default in-memory caching
+  cacheHandler:
+    process.env.NODE_ENV === 'production'
+      ? require.resolve('./cache-handler.mjs')
+      : undefined,
   redirects: async function () {
     return [
       {

@@ -30,6 +30,8 @@ import styles from '../yourSchool.module.scss';
 const YourSchoolForm: React.FC<YourSchoolFormProps> = ({
   regionalPartnerURL,
   privacyPolicyURL,
+  shareOnTwitterURL,
+  shareOnFacebookURL,
   school = null,
 }) => {
   const [formData, setFormData] = useState<YourSchoolFormData>(
@@ -235,7 +237,7 @@ const YourSchoolForm: React.FC<YourSchoolFormProps> = ({
                 <div className={styles.yourSchoolNoticeButtons}>
                   <LinkButton
                     text="Share on Twitter"
-                    href="https://twitter.com/intent/tweet?related=codeorg&text=Does+your+school+teach+computer+science%3F+Expand+computer+science+at+your+school+or+district.+%40codeorg&url=https%3A%2F%2Fcode.org%2Fyourschool"
+                    href={shareOnTwitterURL}
                     size="s"
                     iconLeft={{
                       iconFamily: 'brands',
@@ -244,7 +246,7 @@ const YourSchoolForm: React.FC<YourSchoolFormProps> = ({
                   />
                   <LinkButton
                     text="Share on Facebook"
-                    href="https://code.org/yourschool/thankyou#:~:text=to%20join%20too!-,Share%20on%20Facebook,-Share%20on%20Twitter"
+                    href={shareOnFacebookURL}
                     size="s"
                     iconLeft={{
                       iconFamily: 'brands',

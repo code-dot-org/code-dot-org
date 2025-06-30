@@ -13,6 +13,8 @@ const YourSchool: React.FC<YourSchoolProps> = ({
   dataSourceURL,
   regionalPartnerURL,
   privacyPolicyURL,
+  shareOnTwitterURL,
+  shareOnFacebookURL,
 }) => {
   const [school, setSchool] = useState<School | null>(null);
 
@@ -33,6 +35,8 @@ const YourSchool: React.FC<YourSchoolProps> = ({
       <YourSchoolFormSection
         regionalPartnerURL={regionalPartnerURL}
         privacyPolicyURL={privacyPolicyURL}
+        shareOnTwitterURL={shareOnTwitterURL}
+        shareOnFacebookURL={shareOnFacebookURL}
         school={school}
       />
     </div>
