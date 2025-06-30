@@ -1,3 +1,4 @@
+import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
 import classNames from 'classnames';
 import React, {useEffect, useRef} from 'react';
 import {useSelector} from 'react-redux';
@@ -48,7 +49,9 @@ interface InstructionsProps {
   validationSettings?: ValidationSettings;
   /** If the instructions panel should always have a dark background, regardless of theme */
   fixedDarkBackground?: boolean;
+  /** Component to use for AI Tutor responses, if any. */
   AiTutor2ResponseView?: React.ReactNode;
+  overrideTheme?: Theme;
 }
 
 interface ValidationSettings {
@@ -78,6 +81,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   validationSettings,
   fixedDarkBackground,
   AiTutor2ResponseView,
+  overrideTheme,
 }) => {
   const levelProperties = useAppSelector(state => state.lab.levelProperties);
   const hasNextLevel = useSelector(state => nextLevelId(state) !== undefined);
@@ -99,6 +103,8 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     ) || queryParams('use-secondary-finish-button') === 'true';
 
   const dispatch = useAppDispatch();
+  const defaultTheme = useTheme();
+  const theme = overrideTheme || defaultTheme;
 
   const feedbackRef = useRef<HTMLDivElement>(null);
 
@@ -115,6 +121,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   const validationScrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Scroll to the validation results when they are updated.
     if (validationState?.validationResults) {
       // We must at least set a timeout with a wait of 0 to ensure the scroll happens at all,
       // because the DOM needs to update before we can scroll to the new element.
@@ -139,7 +146,6 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     (!predictSettings?.isPredictLevel || predictResponseSubmitted);
 
   const vertical = layout === 'vertical';
-
   const showSecondaryFinishButton = useSecondaryFinishButton && !hasNextLevel;
 
   const useMessage =
@@ -166,6 +172,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
         'instructions',
         className
       )}
+      data-theme={theme}
     >
       <div
         id="instructions-panel"

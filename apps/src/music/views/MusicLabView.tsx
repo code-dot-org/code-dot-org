@@ -321,26 +321,22 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
             headerContent={musicI18n.panelHeaderInstructions()}
             hideHeaders={hideHeaders}
           >
-            <div
-              data-theme="Light"
-              className={moduleStyles.instructionsContainer}
-            >
-              <Instructions
-                isRunning={isPlaying}
-                layout={
-                  position !== InstructionsPosition.TOP
-                    ? 'vertical'
-                    : 'horizontal'
-                }
-                handleInstructionsTextClick={onInstructionsTextClick}
-                bottomComponent={
-                  exemplarPlayerInsideInstructions && exemplarPlayer
-                }
-                hasRun={hasRun}
-                hasEdited={hasEdited}
-                fixedDarkBackground={true}
-              />
-            </div>
+            <Instructions
+              isRunning={isPlaying}
+              layout={
+                position !== InstructionsPosition.TOP
+                  ? 'vertical'
+                  : 'horizontal'
+              }
+              handleInstructionsTextClick={onInstructionsTextClick}
+              bottomComponent={
+                exemplarPlayerInsideInstructions && exemplarPlayer
+              }
+              hasRun={hasRun}
+              hasEdited={hasEdited}
+              fixedDarkBackground={true}
+              overrideTheme={'Light'}
+            />
             {!exemplarPlayerInsideInstructions && exemplarPlayer}
           </PanelContainer>
         </div>
