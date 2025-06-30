@@ -41,8 +41,8 @@ import {
 } from '@cdo/generated-scripts/sharedConstants';
 import commonI18n from '@cdo/locale';
 
-import MainInstructionsContent from './MainInstructionsContent';
-import ValidationResults from './ValidationResults';
+import MainInstructionsContent from '../../lab2/views/components/Instructions/MainInstructionsContent';
+import ValidationResults from '../../lab2/views/components/Instructions/ValidationResults';
 
 import moduleStyles from '@codebridge/InfoPanel/styles/validated-instructions.module.scss';
 

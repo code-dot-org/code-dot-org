@@ -1,4 +1,3 @@
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import classNames from 'classnames';
 import React, {useEffect, useRef} from 'react';
 import {useSelector} from 'react-redux';
@@ -6,20 +5,21 @@ import {useSelector} from 'react-redux';
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import MainInstructionsContent from '@cdo/apps/codebridge/InfoPanel/MainInstructionsContent';
-import ValidationResults from '@cdo/apps/codebridge/InfoPanel/ValidationResults';
 import {
   isPredictAnswerLocked,
   isPredictResponseSubmitted,
   setPredictResponse,
 } from '@cdo/apps/lab2/redux/predictLevelRedux';
+import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
+import ValidationResults from '@cdo/apps/lab2/views/components/Instructions/ValidationResults';
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import PredictQuestion from './PredictQuestion';
 import PredictSummary from './PredictSummary';
+import ValidationButton from './ValidationButton';
 
 import moduleStyles from './instructions.module.scss';
 
@@ -43,11 +43,17 @@ interface InstructionsProps {
   /** Optional component to render at the bottom of the main instructions. */
   bottomComponent?: React.ReactNode;
   /** Props for in-panel validation button and results table. */
-  includeValidation?: boolean;
-  onValidate?: () => void;
-  onStopValidation?: () => void;
+  validationSettings?: ValidationSettings;
   /** If the instructions panel should always have a dark background, regardless of theme */
   fixedDarkBackground?: boolean;
+  AiTutor2ResponseView?: React.ReactNode;
+}
+
+interface ValidationSettings {
+  onValidate: () => void;
+  onStopValidation: () => void;
+  isValidating: boolean;
+  isValidateDisabled: boolean;
 }
 
 /**
@@ -67,10 +73,9 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   className,
   manageNavigation = true,
   bottomComponent,
-  includeValidation,
-  onValidate,
-  onStopValidation,
+  validationSettings,
   fixedDarkBackground,
+  AiTutor2ResponseView,
 }) => {
   const levelProperties = useAppSelector(state => state.lab.levelProperties);
   const hasNextLevel = useSelector(state => nextLevelId(state) !== undefined);
@@ -91,7 +96,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       state => state.lab.levelProperties?.useSecondaryFinishButton
     ) || queryParams('use-secondary-finish-button') === 'true';
 
-  const dispatch = useAppDispatch();
+  //const dispatch = useAppDispatch();
 
   const feedbackRef = useRef<HTMLDivElement>(null);
 
@@ -104,6 +109,19 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       feedbackRef.current?.focus();
     }
   }, [validationState?.message, isRunning]);
+
+  const validationScrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (validationState?.validationResults) {
+      // We must at least set a timeout with a wait of 0 to ensure the scroll happens at all,
+      // because the DOM needs to update before we can scroll to the new element.
+      setTimeout(
+        () => validationScrollRef.current?.scrollIntoView({behavior: 'smooth'}),
+        0
+      );
+    }
+  }, [validationState?.validationResults]);
 
   // Don't render anything if we don't have any instructions.
   if (
@@ -161,7 +179,10 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
             className={classNames(moduleStyles.bubble)}
           >
             {offerBrowserTts && (
-              <TextToSpeech text={text} higherPosition={!!bottomComponent} />
+              <TextToSpeech
+                text={levelProperties.longInstructions}
+                higherPosition={!!bottomComponent}
+              />
             )}
             <div
               className={
@@ -173,7 +194,6 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
               <MainInstructionsContent
                 instructionsText={levelProperties.longInstructions}
                 handleInstructionsTextClick={handleInstructionsTextClick}
-                hasPassed={false} // todo: remove this once we have the update merged
               />
               <PredictQuestion
                 predictSettings={predictSettings}
@@ -182,11 +202,13 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
                 predictAnswerLocked={predictAnswerLocked}
                 className={moduleStyles.predictQuestion}
               />
-              {includeValidation && onValidate && onStopValidation && (
+              {validationSettings && (
                 <ValidationButton
-                  onValidate={onValidate}
-                  onStopValidation={onStopValidation}
+                  onValidate={validationSettings.onValidate}
+                  onStopValidation={validationSettings.onStopValidation}
                   hasConditions={validationState?.hasConditions}
+                  isValidating={validationSettings.isValidating}
+                  isValidateDisabled={validationSettings.isValidateDisabled}
                 />
               )}
             </div>

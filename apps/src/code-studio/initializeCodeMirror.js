@@ -20,7 +20,7 @@ import {JSHINT} from 'jshint';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import MainInstructionsPreview from '../codebridge/InfoPanel/MainInstructionsPreview';
+import MainInstructionsPreview from '../lab2/views/components/Instructions/MainInstructionsPreview';
 import InstructionsPanel from '../lab2/views/components/InstructionsPanel';
 import SafeMarkdown from '../templates/SafeMarkdown';
 
