@@ -29,10 +29,11 @@ module Services
               email_preference[:email] = email
             end
             user.update!(email_preference)
+
             user
           end
         rescue
-          false
+          false # Relevant errors are set on the user model, so we rescue and return false here.
         end
       end
     end

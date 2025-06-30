@@ -6,10 +6,17 @@ class Services::User::UserType::UpgradeToTeacherTest < ActiveSupport::TestCase
   let(:user) {create(:user)}
   let(:email) {'test@example.com'}
   let(:hashed_email) {::User.hash_email(email)}
-  let(:email_preference) {{receive_emails: true}}
+  let(:email_preference_params) do
+    {
+      email_preference_opt_in: 'no',
+      email_preference_request_ip: '127.0.0.1',
+      email_preference_source: EmailPreference::ACCOUNT_TYPE_CHANGE,
+      email_preference_form_kind: '0',
+    }
+  end
 
   subject(:upgrade_to_teacher_call) do
-    Services::User::UserType::UpgradeToTeacher.call(user: user, email: email, email_preference: email_preference)
+    Services::User::UserType::UpgradeToTeacher.call(user: user, email: email, email_preference: email_preference_params)
   end
 
   describe '#call' do
@@ -31,13 +38,11 @@ class Services::User::UserType::UpgradeToTeacherTest < ActiveSupport::TestCase
 
     context 'when user is migrated' do
       it 'updates user with contact info and email preferences' do
-        allow(::Policies::Lti).to receive(:lti?).with(user).and_return(false)
-
         expect(user).to receive(:family_name=).with(nil)
         expect(user).to receive(:user_type=).with(::User::TYPE_TEACHER)
         expect(user).to receive(:parent_email=).with(nil)
         expect(user).to receive(:update_primary_contact_info!).with(new_email: email, new_hashed_email: hashed_email)
-        expect(user).to receive(:update!).with(email_preference)
+        expect(user).to receive(:update!).with(email_preference_params)
         expect(user).to receive(:transaction).and_yield
 
         _upgrade_to_teacher_call.must_equal user
@@ -45,15 +50,15 @@ class Services::User::UserType::UpgradeToTeacherTest < ActiveSupport::TestCase
     end
 
     context 'when user is not migrated' do
+      before {user.update!(provider: nil)}
       it 'sets email in email_preference and updates' do
-        user.update!(provider: nil)
         allow(::Policies::Lti).to receive(:lti?).with(user).and_return(true)
 
         expect(user).to receive(:family_name=).with(nil)
         expect(user).to receive(:user_type=).with(::User::TYPE_TEACHER)
         expect(user).to receive(:parent_email=).with(nil)
         expect(user).to receive(:lti_roster_sync_enabled=).with(true)
-        expect(user).to receive(:update!).with({email: email, receive_emails: true})
+        expect(user).to receive(:update!).with({email: email}.merge(email_preference_params))
         expect(user).to receive(:transaction).and_yield
 
         _upgrade_to_teacher_call.must_equal user
