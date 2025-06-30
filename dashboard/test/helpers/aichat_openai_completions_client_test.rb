@@ -11,7 +11,7 @@ class AichatOpenaiCompletionsClientTest < AichatAiClientTest
     }
   end
 
-  let(:expected_headers) do
+  let(:request_headers) do
     {
       'Accept'=>'*/*',
             'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
@@ -63,12 +63,14 @@ class AichatOpenaiCompletionsClientTest < AichatAiClientTest
   let(:stubbed_fail_response_body) do
     {
       error: {
-        message: 'some error message'
+        message: @specific_error_message
       }
     }
   end
 
   describe '#def get_response_text (unit)' do
+    subject {stub_request_and_get_response_test(new_message, endpoint_url, request_body, request_headers, stubbed_response_body, internal_model_id, level)}
+
     let(:messages_with_level_system_prompt) do
       [
         {role: "system", content: [{type: "text", text: "Be safe. test prompt test retrieval"}]},
@@ -108,88 +110,95 @@ class AichatOpenaiCompletionsClientTest < AichatAiClientTest
         {role: 'user', content: [{type: 'text', text: "new message from user\nextra text"}]}
       ]
     end
-    context 'when body is well formed and request fails with error JSON' do
-      subject {stub_request_and_get_response_test(@new_message, endpoint_url, request_body, expected_headers, stubbed_response_body, internal_model_id, @level_with_level_system_prompt)}
 
-      # Don't expect any particular fields in body, we're just testing that we
-      let(:request_body) {{}}
+    context 'with level system prompt' do
+      let(:level) {@level_with_level_system_prompt}
 
-      let(:stubbed_response_body) {stubbed_fail_response_body}
-      it 'raises StandardError' do
-        # Check that we raise.
-        -> {subject}.must_raise(StandardError)
+      context 'when body is well formed and request fails with error JSON' do
+        let(:new_message) {@new_message}
+        # Don't expect any particular fields in body, we're just testing that we
+        let(:request_body) {{}}
+
+        let(:stubbed_response_body) {stubbed_fail_response_body}
+        it 'raises StandardError' do
+          # Check that we raise and that the error contains our error message.
+          err = -> {subject}.must_raise(StandardError)
+          err.message.must_include @specific_error_message
+        end
+      end
+
+      context 'when body is well formed and request succeeds' do
+        let(:new_message) {@new_message}
+        let(:request_body) do
+          request_body_without_messages.merge(
+            {
+              messages: messages_with_level_system_prompt
+            }
+          )
+        end
+
+        let(:stubbed_response_body) {stubbed_success_response_body}
+        it 'successfully makes request and is returned the correct response' do
+          # Check that we're returned the correct response.
+          assert_equal subject, @response_text
+        end
+      end
+
+      context 'when body is well formed with hidden context and request succeeds' do
+        let(:new_message) {@new_message_with_hidden_context}
+        let(:level) {@level_with_level_system_prompt}
+
+        let(:request_body) do
+          request_body_without_messages.merge(
+            {
+              messages: messages_with_hidden_context_and_level_system_prompt
+            }.deep_stringify_keys
+          )
+        end
+
+        let(:stubbed_response_body) {stubbed_success_response_body}
+        it 'successfully makes request and is returned the correct response' do
+          # Check that we're returned the correct response.
+          assert_equal subject, @response_text
+        end
       end
     end
 
-    context 'when body is well formed and request succeeds' do
-      subject {stub_request_and_get_response_test(@new_message, endpoint_url, request_body, expected_headers, stubbed_response_body, internal_model_id, @level_with_level_system_prompt)}
+    context 'without level system prompt' do
+      let(:level) {@level_without_level_system_prompt}
 
-      let(:request_body) do
-        request_body_without_messages.merge(
-          {
-            messages: messages_with_level_system_prompt
-          }
-        )
+      context 'when body is well formed and request succeeds' do
+        let(:new_message) {@new_message}
+        let(:request_body) do
+          request_body_without_messages.merge(
+            {
+              messages: messages_without_level_system_prompt
+            }
+          )
+        end
+
+        let(:stubbed_response_body) {stubbed_success_response_body}
+        it 'successfully makes request and is returned the correct response' do
+          # Check that we're returned the correct response.
+          assert_equal subject, @response_text
+        end
       end
 
-      let(:stubbed_response_body) {stubbed_success_response_body}
-      it 'successfully makes a round trip and is returned the correct response' do
-        # Check that we're returned the correct response.
-        assert_equal subject, @response_text
-      end
-    end
+      context 'when body is well formed and with assets and request succeeds' do
+        let(:new_message) {@new_message_with_assets}
+        let(:request_body) do
+          request_body_without_messages.merge(
+            {
+              messages: messages_with_assets_and_without_level_system_prompt
+            }.deep_stringify_keys
+          )
+        end
 
-    context 'when body is well formed without level system prompt and request succeeds' do
-      subject {stub_request_and_get_response_test(@new_message, endpoint_url, request_body, expected_headers, stubbed_response_body, internal_model_id, @level_without_level_system_prompt)}
-
-      let(:request_body) do
-        request_body_without_messages.merge(
-          {
-            messages: messages_without_level_system_prompt
-          }
-        )
-      end
-
-      let(:stubbed_response_body) {stubbed_success_response_body}
-      it 'successfully makes a round trip and is returned the correct response' do
-        # Check that we're returned the correct response.
-        assert_equal subject, @response_text
-      end
-    end
-
-    context 'when body is well formed without level system prompt and with assets and request succeeds' do
-      subject {stub_request_and_get_response_test(@new_message_with_assets, endpoint_url, request_body, expected_headers, stubbed_response_body, internal_model_id, @level_without_level_system_prompt)}
-
-      let(:request_body) do
-        request_body_without_messages.merge(
-          {
-            messages: messages_with_assets_and_without_level_system_prompt
-          }.deep_stringify_keys
-        )
-      end
-
-      let(:stubbed_response_body) {stubbed_success_response_body}
-      it 'successfully makes a round trip and is returned the correct response' do
-        # Check that we're returned the correct response.
-        assert_equal subject, @response_text
-      end
-    end
-
-    context 'when body is well formed with hidden context and level system prompt and request succeeds' do
-      subject {stub_request_and_get_response_test(@new_message_hidden_context, endpoint_url, request_body, expected_headers, stubbed_response_body, internal_model_id, @level_with_level_system_prompt)}
-
-      let(:request_body) do
-        request_body_without_messages.merge(
-          {
-            messages: messages_with_hidden_context_and_level_system_prompt
-          }.deep_stringify_keys
-        )
-      end
-
-      let(:stubbed_response_body) {stubbed_success_response_body}
-      it 'successfully makes a round trip and is returned the correct response' do
-        # Check that we're returned the correct response.
-        assert_equal subject, @response_text
+        let(:stubbed_response_body) {stubbed_success_response_body}
+        it 'successfully makes request and is returned the correct response' do
+          # Check that we're returned the correct response.
+          assert_equal subject, @response_text
+        end
       end
     end
   end

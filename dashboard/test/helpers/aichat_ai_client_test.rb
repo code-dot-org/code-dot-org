@@ -11,7 +11,7 @@ class AichatAiClientTest < ActionView::TestCase
       }.stringify_keys
     ]
     @new_message = {role: 'user', chatMessageText: 'new message from user'}.stringify_keys
-    @new_message_hidden_context = {role: 'user', chatMessageText: 'new message from user', hiddenContext: 'extra text'}.stringify_keys
+    @new_message_with_hidden_context = {role: 'user', chatMessageText: 'new message from user', hiddenContext: 'extra text'}.stringify_keys
     @new_message_with_assets = {role: 'user',
        chatMessageText: 'message with assets',
        assets: [
@@ -26,6 +26,7 @@ class AichatAiClientTest < ActionView::TestCase
     @user_id = 'test-user'
     @project_id = 'Aichat project'
     @response_text = "some response text"
+    @specific_error_message = 'some specific error message'
 
     @level_with_level_system_prompt = Level.create({name: 'Aichat level', properties: {aichat_settings: {levelSystemPrompt: "Be safe."}}})
     @level_without_level_system_prompt = Level.create({name: 'Aichat level without level system prompt', properties: {aichat_settings: {}}})

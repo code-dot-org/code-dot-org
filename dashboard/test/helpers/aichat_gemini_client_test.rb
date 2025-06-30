@@ -19,7 +19,7 @@ class AichatGeminiClientTest < AichatAiClientTest
     }
   end
 
-  let(:expected_headers) do
+  let(:request_headers) do
     {
       'Accept'=>'*/*',
           'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
@@ -69,63 +69,58 @@ class AichatGeminiClientTest < AichatAiClientTest
   let(:stubbed_fail_response_body) do
     {
       error: {
-        code: 400
+        message: @specific_error_message
       }
     }
   end
 
   describe '#def get_response_text (unit)' do
-    let(:contents) do
+    subject {stub_request_and_get_response_test(new_message, endpoint_url, request_body, request_headers, stubbed_response_body, internal_model_id, level)}
+
+    let(:contents_with_level_system_prompt) do
       [
-        {
-          role: "user",
-          parts: [
-            {
-              text: "hello from user"
-            }
-          ]
-        },
-        {
-          role: "model",
-          parts: [
-            {
-              text: "assistant response"
-            }
-          ]
-        },
-        {
-          role: "user",
-          parts: [
-            {
-              text: "new message from user"
-            }
-          ]
-        }
+        {role: "user", parts: [{text: "hello from user"}]},
+        {role: "model", parts: [{text: "assistant response"}]},
+        {role: "user", parts: [{text: "new message from user"}]}
       ]
     end
 
-    let(:request_body) do
-      request_body_without_contents.merge(
-        {
-          contents: contents
-        }
-      )
+    context 'with level system prompt' do
+      let(:level) {@level_with_level_system_prompt}
+
+      context 'when body is well formed and request fails with error JSON' do
+        let(:new_message) {@new_message}
+        # Don't expect any particular fields in body, we're just testing that we
+        let(:request_body) {{}}
+
+        let(:stubbed_response_body) {stubbed_fail_response_body}
+        it 'raises StandardError' do
+          # Check that we raise and that the error contains our error message.
+          err = -> {subject}.must_raise(StandardError)
+          err.message.must_include @specific_error_message
+        end
+      end
+
+      context 'when body is well formed and request succeeds' do
+        let(:new_message) {@new_message}
+        let(:request_body) do
+          request_body_without_contents.merge(
+            {
+              contents: contents_with_level_system_prompt
+            }
+          )
+        end
+
+        let(:stubbed_response_body) {stubbed_success_response_body}
+        it 'successfully makes request and is returned the correct response' do
+          # Check that we're returned the correct response.
+          assert_equal subject, @response_text
+        end
+      end
     end
 
-    subject {stub_request_and_get_response_test(@new_message, endpoint_url, request_body, expected_headers, stubbed_response_body, internal_model_id, @level_with_level_system_prompt)}
-    context 'when body is well formed and request succeeds' do
-      let(:stubbed_response_body) {stubbed_success_response_body}
-      it 'successfully makes a round trip and is returned the correct response' do
-        # Check that we're returned the correct response.
-        assert_equal subject, @response_text
-      end
-    end
-    context 'when body is well formed and request fails with error JSON' do
-      let(:stubbed_response_body) {stubbed_fail_response_body}
-      it 'raises StandardError' do
-        # Check that we raise.
-        -> {subject}.must_raise(StandardError)
-      end
+    context 'without level system prompt' do
+      let(:level) {@level_without_level_system_prompt}
     end
   end
 end
