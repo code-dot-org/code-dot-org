@@ -65,7 +65,9 @@ describe('LogoCollection', () => {
 
   it('renders logos with correct alt text', () => {
     render(<LogoCollection logos={mockLogos} />);
-    expect(screen.getAllByAltText('Microsoft Logo')[0]).toBeInTheDocument();
+    expect(screen.getByAltText('Microsoft Logo')).toBeInTheDocument();
+    expect(screen.getByAltText('Amazon Logo')).toBeInTheDocument();
+    expect(screen.getByAltText('Google Logo')).toBeInTheDocument();
   });
 
   it('renders links for logos with URLs', () => {
