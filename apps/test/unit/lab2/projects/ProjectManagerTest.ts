@@ -1,9 +1,9 @@
 import {expect, assert} from 'chai'; // eslint-disable-line no-restricted-imports
 import sinon, {stubObject, StubbedInstance} from 'ts-sinon';
 
-import {RemoteChannelsStore} from '@cdo/apps/lab2/projects/ChannelsStore';
+import {ChannelsStore} from '@cdo/apps/lab2/projects/ChannelsStore';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
-import {RemoteSourcesStore} from '@cdo/apps/lab2/projects/SourcesStore';
+import {SourcesStore} from '@cdo/apps/lab2/projects/SourcesStore';
 import {ValidationError} from '@cdo/apps/lab2/responseValidators';
 import {ProjectSources, Channel} from '@cdo/apps/lab2/types';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
@@ -36,16 +36,16 @@ const UPDATED_SOURCE_2 = {
 };
 
 describe('ProjectManager', () => {
-  let sourcesStore: StubbedInstance<RemoteSourcesStore>;
-  let channelsStore: StubbedInstance<RemoteChannelsStore>;
+  let sourcesStore: StubbedInstance<SourcesStore>;
+  let channelsStore: StubbedInstance<ChannelsStore>;
 
   beforeEach(() => {
-    sourcesStore = stubObject<RemoteSourcesStore>(new RemoteSourcesStore());
+    sourcesStore = stubObject<SourcesStore>(new SourcesStore());
     // We need to create separate promises for each call so they can each
     // be read from.
     sourcesStore.save.onCall(0).returns(Promise.resolve(new Response('')));
     sourcesStore.save.onCall(1).returns(Promise.resolve(new Response('')));
-    channelsStore = stubObject<RemoteChannelsStore>(new RemoteChannelsStore());
+    channelsStore = stubObject<ChannelsStore>(new ChannelsStore());
     channelsStore.load.returns(Promise.resolve(FAKE_CHANNEL));
     channelsStore.save
       .onCall(0)
@@ -363,8 +363,6 @@ describe('ProjectManager', () => {
 });
 
 // Helper functions
-function stubSuccessfulSourceLoad(
-  sourcesStore: StubbedInstance<RemoteSourcesStore>
-) {
+function stubSuccessfulSourceLoad(sourcesStore: StubbedInstance<SourcesStore>) {
   sourcesStore.load.returns(Promise.resolve(FAKE_SOURCE));
 }

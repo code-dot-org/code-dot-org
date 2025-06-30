@@ -30,6 +30,31 @@ export async function createSkill(skill: Skill) {
   return response;
 }
 
+export async function updateSkill(skillId: number, skill: Partial<Skill>) {
+  try {
+    const response = await HttpClient.put(
+      `/skills/${skillId}`,
+      JSON.stringify(skill),
+      true,
+      {
+        'Content-Type': 'application/json; charset=UTF-8',
+      }
+    );
+    const json = await response.json();
+    if (json.status === 'success') {
+      return json;
+    } else {
+      throw new Error(`Failed to update skill: ${json.error}`);
+    }
+  } catch (error) {
+    MetricsReporter.logError({
+      event: MetricEvent.SKILL_UPDATE_FAIL,
+      errorMessage:
+        (error as Error).message || `Failed to update Skill ${skillId}`,
+    });
+  }
+}
+
 export async function addSkillToLevel(levelSkill: LevelSkill) {
   const response = await HttpClient.post(
     `/levels/${levelSkill.levelId}/add_skill`,

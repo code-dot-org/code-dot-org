@@ -2335,4 +2335,8 @@ FactoryBot.define do
     sign_in_at {Time.now.utc}
     sign_in_count {1}
   end
+
+  factory :user_data_retention_status, class: 'User::DataRetentionStatus' do
+    association :user
+  end
 end

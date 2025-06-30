@@ -4,13 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_k_5",
+      "curriculum_umbrella": "K-5 Special topics",
       "is_migrated": true,
       "pilot_experiment": "career-journeys-elem-a",
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-11 22:38:48 UTC",
+    "serialized_at": "2025-06-27 02:06:09 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -329,6 +332,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-elem-career-journeys-video-journey"
+        ],
         "progression": "Career Exploration"
       },
       "bonus": false,

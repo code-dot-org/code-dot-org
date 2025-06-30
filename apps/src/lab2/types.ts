@@ -358,11 +358,6 @@ export interface Validation {
 
 /// ------ MISC ------ ///
 
-export enum ProjectManagerStorageType {
-  LOCAL = 'LOCAL',
-  REMOTE = 'REMOTE',
-}
-
 export interface ExtraLinksLevelData {
   links: {[key: string]: {text: string; url: string; access_key?: string}[]};
   can_clone: boolean;

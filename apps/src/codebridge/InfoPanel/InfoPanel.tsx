@@ -2,7 +2,7 @@ import Button from '@code-dot-org/component-library/button';
 import ValidatedInstructionsView from '@codebridge/InfoPanel/ValidatedInstructions';
 import React, {useEffect, useState} from 'react';
 
-import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import lab2I18n from '@cdo/apps/lab2/locale';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -34,9 +34,9 @@ const panelEventNames = {
   [Panels.ForTeachersOnly]: EVENTS.CODEBRIDGE_FOR_TEACHERS_ONLY_TOGGLE,
 };
 
-const panelHeaderNames = {
-  [Panels.Instructions]: codebridgeI18n.instructionsHeader(),
-  [Panels.ForTeachersOnly]: codebridgeI18n.forTeachersOnlyHeader(),
+const panelNames = {
+  [Panels.Instructions]: lab2I18n.instructions(),
+  [Panels.ForTeachersOnly]: lab2I18n.forTeachersOnly(),
 };
 
 interface InfoPanelProps {
@@ -58,8 +58,8 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
   } = levelProperties;
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const [currentPanel, setCurrentPanel] = useState(Panels.Instructions);
-  const [currentPanelHeader, setCurrentPanelHeader] = useState(
-    codebridgeI18n.instructionsHeader()
+  const [currentPanelName, setCurrentPanelName] = useState(
+    panelNames[Panels.Instructions]
   );
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [panelOptions, setPanelOptions] = useState<Panels[]>([
@@ -91,7 +91,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     if (!panelOptions.includes(currentPanel)) {
       const newPanel = panelOptions[0];
       setCurrentPanel(newPanel);
-      setCurrentPanelHeader(panelHeaderNames[newPanel]);
+      setCurrentPanelName(panelNames[newPanel]);
     }
   }, [currentPanel, panelOptions]);
 
@@ -105,7 +105,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
           }}
           isIconOnly
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-          ariaLabel={'Information panel dropdown'}
+          ariaLabel={lab2I18n.informationPanelDropdown()}
           aria-expanded={isDropdownOpen}
           size={'xs'}
           type={'tertiary'}
@@ -118,7 +118,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
   const changePanel = (panel: Panels) => {
     if (panel !== currentPanel) {
       setCurrentPanel(panel);
-      setCurrentPanelHeader(panelHeaderNames[panel]);
+      setCurrentPanelName(panelNames[panel]);
       sendCodebridgeAnalyticsEvent(panelEventNames[panel], appName);
     }
     setIsDropdownOpen(false);
@@ -129,7 +129,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     <div style={style} className={className}>
       <PanelContainer
         id="codebridge-info-panel"
-        headerContent={currentPanelHeader}
+        headerContent={currentPanelName}
         rightHeaderContent={renderHeaderButton()}
         className={moduleStyles.infoPanel}
         headerClassName={moduleStyles.infoPanelHeader}
@@ -142,9 +142,9 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
                   <Button
                     color={'white'}
                     onClick={() => changePanel(panel)}
-                    ariaLabel={panel}
+                    ariaLabel={panelNames[panel]}
                     size={'xs'}
-                    text={panel}
+                    text={panelNames[panel]}
                     className={moduleStyles.dropdownItem}
                   />
                 </li>

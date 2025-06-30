@@ -18,12 +18,17 @@ module Cdo
       # Contentful localhost
       'http://localhost:3001',
       'http://localhost.code.org:3001',
+      'http://code.marketing-sites.localhost:3001',
+      'http://preview-code.marketing-sites.localhost:3001',
       # Contentful development
       'https://code.marketing-sites.dev-code.org',
+      'https://preview-code.marketing-sites.dev-code.org',
       # Contentful test
       'https://code.marketing-sites.test-code.org',
+      'https://preview-code.marketing-sites.test-code.org',
       # Contentful production
       'https://code.marketing-sites.code.org',
+      'https://preview-code.marketing-sites.code.org',
     ].freeze
 
     def initialize
