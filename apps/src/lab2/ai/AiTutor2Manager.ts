@@ -12,7 +12,7 @@ import {
 } from '@cdo/generated-scripts/sharedConstants';
 
 const systemPrompts = {
-  hint: "You are responding to a query about programming.  Target the reading age of an American 7th grader.  Use the Socratic method to guide the student to the answer, but do not give them the answer directly.  Just focus on the biggest single issue you find.  Use plain English in the answer.  I don't want multiple steps, points, or questions.  Just one statement (not expressed as a question) that helps the student to make progress.",
+  hint: "Just answer the questions. Don't provide any additional information.",
 };
 
 export type AiTutor2MessageType = 'hint';
@@ -74,7 +74,7 @@ export default class AiTutor2Manager {
       levelId: this.currentLevelId ? parseInt(this.currentLevelId) : undefined,
       scriptId: this.scriptId,
       metadata: {
-        channelId: this.channelId || '',
+        channelId: 'LogPsKDhP-L4RzVuqY8S6Q',
         modelId: AiChatModelIds.CHATGPT,
         systemPrompt: systemPrompts[type],
         type,

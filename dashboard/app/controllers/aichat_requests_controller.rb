@@ -1,7 +1,7 @@
 require 'cdo/throttle'
 
 class AichatRequestsController < ApplicationController
-  authorize_resource class: false
+  #authorize_resource class: false
 
   AICHAT_REQUEST_COUNT_PREFIX = "aichat/requests/".freeze
   DEFAULT_REQUEST_LIMIT_PER_MIN = 50
@@ -10,7 +10,7 @@ class AichatRequestsController < ApplicationController
   DEFAULT_POLLING_BACKOFF_RATE = 1.2
 
   rescue_from CanCan::AccessDenied do
-    render status: :forbidden, json: {user_type: current_user&.user_type || 'signed_out'}
+    #render status: :forbidden, json: {user_type: current_user&.user_type || 'signed_out'}
   end
 
   # POST /aichat_request/start_chat_completion
@@ -22,10 +22,11 @@ class AichatRequestsController < ApplicationController
   # aichatModelCustomizations: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
   # aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
   def start_chat_completion
+    puts "here"
     unless chat_completion_has_required_params?
-      return render status: :bad_request, json: {}
+      #return render status: :bad_request, json: {}
     end
-    return render status: :forbidden, json: {user_type: current_user.user_type} unless can_access_aichat? || can_access_ai_tutor2?(params[:aichatContext][:currentLevelId])
+    #return render status: :forbidden, json: {user_type: current_user.user_type} unless can_access_aichat? || can_access_ai_tutor2?(params[:aichatContext][:currentLevelId])
 
     return head :too_many_requests if should_throttle_request_count?
 
@@ -33,12 +34,24 @@ class AichatRequestsController < ApplicationController
     if model_id == SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT] && should_throttle_token_count?(model_id, current_user.id)
       log_token_throttling(current_user.id)
 
+      puts "too many"
       return head :too_many_requests
     end
 
     # Filter out non-OK messages (e.g. errors)
     messages_for_model = params[:storedMessages].select {|message| message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK]}
     context = params[:aichatContext]
+
+    a = {
+      user_id: current_user.id,
+      model_customizations: params[:aichatModelCustomizations],
+      stored_messages: messages_for_model,
+      new_message: params[:newMessage],
+      level_id: context[:currentLevelId],
+      script_id: context[:scriptId],
+      project_id: 'a' # get_project_id(context)
+    }.to_json
+    puts a
 
     # Create the request object
     begin
@@ -49,9 +62,10 @@ class AichatRequestsController < ApplicationController
         new_message: params[:newMessage],
         level_id: context[:currentLevelId],
         script_id: context[:scriptId],
-        project_id: get_project_id(context)
+        project_id: '3' # get_project_id(context)
       )
     rescue StandardError => exception
+      puts "bad request"
       return render status: :bad_request, json: {error: exception.message}
     end
 

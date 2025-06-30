@@ -84,6 +84,8 @@ Dashboard::Application.routes.draw do
 
     get "/congrats", to: "congrats#index"
 
+    get "/graphlab", to: "graphlab#index"
+
     get "/incubator", to: redirect(CDO.code_org_url("/incubator"))
     get "/musiclab", to: redirect(CDO.code_org_url("/music"))
     get "/projectbeats", to: redirect(CDO.code_org_url("/music"))
