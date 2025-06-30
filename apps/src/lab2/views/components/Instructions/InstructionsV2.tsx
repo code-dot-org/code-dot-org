@@ -15,7 +15,7 @@ import ValidationResults from '@cdo/apps/lab2/views/components/Instructions/Vali
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import NavigationButton from './NavigationButton';
 import PredictQuestion from './PredictQuestion';
@@ -70,7 +70,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   isRunning,
   hasRun,
   hasEdited,
-  layout,
+  layout = 'vertical',
   handleInstructionsTextClick,
   className,
   manageNavigation = true,
@@ -98,7 +98,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       state => state.lab.levelProperties?.useSecondaryFinishButton
     ) || queryParams('use-secondary-finish-button') === 'true';
 
-  //const dispatch = useAppDispatch();
+  const dispatch = useAppDispatch();
 
   const feedbackRef = useRef<HTMLDivElement>(null);
 
@@ -200,7 +200,9 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
               <PredictQuestion
                 predictSettings={predictSettings}
                 predictResponse={predictResponse}
-                setPredictResponse={setPredictResponse}
+                setPredictResponse={response =>
+                  dispatch(setPredictResponse(response))
+                }
                 predictAnswerLocked={predictAnswerLocked}
                 className={moduleStyles.predictQuestion}
               />

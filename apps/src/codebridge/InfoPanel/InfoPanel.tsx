@@ -217,6 +217,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
               isValidateDisabled: !hasLoadedEnvironment || isRunning,
             }}
             AiTutor2ResponseView={AiTutor2ResponseView}
+            className={moduleStyles.instructionsContainer}
           />
         ) : (
           <ForTeachersOnly />
