@@ -46,7 +46,8 @@ const styles = {
     borderRadius: '50%',
   },
   overline: {
-    color: 'var(---neutral-gray-90)',
+    // TODO: replace this w/ theme palette value
+    color: '#4C5661',
     marginTop: 1,
     marginBottom: 1.5,
   },
@@ -142,7 +143,7 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({
             ),
           };
         })
-        .sort((a, b) => a.id.localeCompare(b.id)), // Sort alphabetically
+        .sort((a, b) => a?.id?.localeCompare(b?.id)), // Sort alphabetically
     [people, imageVisibility],
   );
 

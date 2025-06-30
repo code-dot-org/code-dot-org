@@ -1177,6 +1177,8 @@ class User < ApplicationRecord
   # Example: true when the primary_script is being used for a TopCourse on /home
   # @return [Array{CourseData, ScriptData}] an array of hashes of script and
   # course data
+  # TODO: TEACH-1528 Update this to use a new UserCourses table. For now, this returns a /s/ url for each unit, displayed
+  # on the student home page course tiles
   def recent_student_courses_and_units(exclude_primary_script)
     primary_script_id = Queries::ScriptActivity.primary_student_unit(self).try(:id)
 
