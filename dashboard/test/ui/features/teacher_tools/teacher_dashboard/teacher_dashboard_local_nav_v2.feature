@@ -42,7 +42,7 @@ Feature: Using the V2 teacher dashboard local navigation
 
   Scenario: Single-unit course overview
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to course "ui-test-single-unit-course-2025" and unit "ui-test-single-unit-2025" with teacher "Teacher_Sally"
+    Given I am assigned to course "ui-test-single-unit-course-2025" unit 1 with teacher "Teacher_Sally"
 
     Given I sign in as "Teacher_Sally" and go home
 

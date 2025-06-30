@@ -3,7 +3,7 @@ Feature: BubbleChoice
   @properties_encryption_key
   Scenario: Viewing BubbleChoice progress
     Given I create a teacher-associated student named "Alice"
-    Given I am assigned to course "allthethingscourse" and unit "allthethings" with teacher "Teacher_Alice"
+    Given I am assigned to course "allthethingscourse" unit 1 with teacher "Teacher_Alice"
 
     # Go to BubbleChoice sublevel
     Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/40/levels/1/sublevel/1"
@@ -52,7 +52,7 @@ Feature: BubbleChoice
   @properties_encryption_key
   Scenario: Lab2 BubbleChoice progress
     Given I create a teacher-associated student named "Alice"
-    Given I am assigned to course "allthethingscourse" and unit "allthethings" with teacher "Teacher_Alice"
+    Given I am assigned to course "allthethingscourse" unit 1 with teacher "Teacher_Alice"
 
     # Go to Lab2 BubbleChoice sublevel
     Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/52/levels/8/sublevel/1"
