@@ -1,0 +1,130 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-06-27T21:56:07.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Twinkle Twinkle Little Star\r\n\r\nRecreate this portion of the song using what you know about sequencing sounds and playing them together.\r\n\r\n**Prepare:**\r\n1) Listen to the song in the music player. \r\n2) Use the timeline image below as reference. \r\n\r\n**Try:**\r\n3) Build the song with your own code. \r\n\r\n![](https://images.code.org/0fe00b6099b0da91017d69117e6c42c0-image-1751062095298.png)",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+        "twinkle_twinkle": [
+          "vocals_verse_2",
+          "vocals_verse_1",
+          "vocals_chorus_2",
+          "vocals_chorus_1",
+          "ukulele_verse_1",
+          "ukulele_verse_2",
+          "ukulele_chorus_1",
+          "ukulele_chorus_2",
+          "glockenspiel_verse_1",
+          "glockenspiel_verse_2",
+          "glockenspiel_chorus_2",
+          "glockenspiel_chorus_1"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential"
+          ]
+        },
+        "type": "flyout"
+      },
+      "packId": "twinkle_twinkle",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "shakira_amarillo/vocals_chorus_1"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_sequential",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      }
+    },
+    "display_name": "Twinkle Twinkle",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/twinkle_twinkle/twinkle_twinkle.png",
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHor/cwejr3U15rWOIkH8dDTLeaAYtCh7rvJ4qD5+CIxST+6\nDf9Lqrv4TUqNadS7bR2Q2bscHWN2BRHgTSm0GK9wwaWBaVHF9T87d0eXuUsA\n5ogIo+wjWtY18C1Ci+vdr9wKP09fF4OJTf6vpys5vjDSx0BAjHMKBztj5ogq\n3eooq3EOjYXNmC4q2UouGP/DxKOc+otvcdgV5D2mXn25+m77u7glCuHd3XBA\nombXB8Us8sOkZRHpHdrewct30SmQ6pxebm9Rdodoy6HBRrll+AvO4HNyBV2m\n64em+0JUjpjlITwIzuAetAUPd0O/4GQLvrhdrWW2Cc/vWKvFTAVe1ZkC1Xuh\npyu6RgSwWbr7O8a5HU4zdplAqv/vvLJPlGhyr9PC5qFu8GsysUoG63zXkIkb\nsfzNtsHfWnMGoygRHLLI6wJfhCSZJs+od3nkYmYEBYtFlb3rvIo3pCPSPZDT\nkttge6YfFP46m6WjXJBIUhZQpFlQqR6ytDoqN4HP6jX3uUzAA7vpMgu+vb+c\nCjbslxpUxXZvweiqv2BUZ6uTeMFTt3YcWNT8aKXuBSF+0yJoJU4RWXyjasJ+\ndwsuwD5xjxeIwo+QQ4JnXyds9fJZQJiFpSFl3lz/bpSZFEJN9clgjQi2mqde\naTSHk+FALwzq5L2Vqrj8YOneVCgXiFFLZoGC2TXYHWXx08cJGeewdc0b4lLL\ncMRTsApm7+QNZaXDlORZ6rAo8ACyssvVs0avkVqbUVaLFwV3rvDrBrF9nslA\n+am9PTjvQTE23QSDGW0XQ5kGatP+FmD9ekz6qfOo/lB4oZL+9Iy7wMBM7QzD\nvRiBAIAkaIQag3UlAlKsdSQNRdUaZmEk4c2HG48YPYAl5NXzbkQAHqfGUWPo\nwcOEKSHQfLkF7f/sWW1cYXjv7i8dSfGl2nT0l8lQc8FbSLLz21AEmXsdrYDB\n2J8V0EaduWB6gaut80nwFok6PYGTa7I/cwuHkg158QjlSLmePAG8grqMjfvg\nglYFPqh+bdNOmy8pJNG0clWW/hGpZExlwi7DFJWWquXMEP6RPj6gQRNWrqe8\nylIutsFW3xRCRGGzhneZeHevXVmDYqwonUcMpTEG8EC1++GdiWxDxNn0GVfv\nS/U7cg6Uwfiw4C40oz0OKS1iESN58zqKdajEGpfYRf7/6MDCGNqfjIT1CUEH\nm1RAjO8vcDOwLJHFsEvbhREF1/uz9Fwlwc+yaWgS+IK9ykKMjA5q0RnXN5XN\nEaBqyoghI0iUjlE+ozIQh5Z3CYEXTHv55vZm5Pmb3H+8xzNTm3GzCdnNRWxm\nVJBnPwcTSu86/csqHs9Kb7AzK7oXyFVAkuEJozHegiEuGk5oSHIc9w8+JFV0\n7C4bujK6ozOYGf0oklu9OZfO3ouo7bbbjn8MaQwzYD7WtniHSjy9Kfe0JvLB\nPtvaaCOv/wwflyAwnp+tmrvsX+M2gUOi0Dlvn2PvTRbZG3CL2hJAuJtmoDBK\nOEwnkBgtC8KWZG9REtzOWtGQ+KC5NwOt4eRrhLkvMmfPnLf6La93jFRQmy2d\n90DG91G7yabcyKF2J+zOH0YIf+o/RN6zqvUnW6uMT22PJrrZANaXMR4tZ/Tq\nA+Z5PtL+Gq3nOet60SWTV1s3a+C7IhytrArryhBsAmWz0kiHqFbThr7l7RLA\nKt3MTUY/XskytUKooVy9/L8taaOw1YXJDaTUrsIi+H3WhwhKYqYWu462dPZE\nxWDi9gy1OVShG4qpPHHDrjofCVzj9AUD6+hoitD6qpkrOzQzHFAZUVcWuOV0\nrR2mb28y2Rasyr8gXRixrZQ43KgLvGtXdVYSSKDRQ09yt+sO0BRTIqaHX4vP\nimAoKxeZxc6F\n",
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-practice-artist-choice-c_ee2214c2-b209-4132-99c6-ad07c1c7c2ed",
+        "message": "",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 4
+          }
+        ]
+      }
+    ],
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "Great work ordering those sounds. That was a tricky one! ",
+      "validationFailureMessage": "Remember, you can use `play together` inside a `play sequential` block. ",
+      "playerTitle": "Twinkle Twinkle Little Star",
+      "validationMode": "default"
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2",
+    "bubble_choice_description": "Use what you know about sequencing to create this portion of Twinkle Twinkle Little Star ",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-06-27T21:56:07.218+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-artist-choice-c_v2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-artist-choice-c_v2\"},{\"changed_at\":\"2025-06-27 22:05:59 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-27 22:08:06 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-27 22:09:12 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"thumbnail_url\",\"predict_settings\",\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-27 22:10:16 +0000\",\"changed\":[\"exemplar_settings\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

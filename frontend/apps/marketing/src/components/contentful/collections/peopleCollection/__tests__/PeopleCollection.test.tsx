@@ -88,4 +88,38 @@ describe('PeopleCollection', () => {
     expect(headings[1]).toHaveTextContent('Bob');
     expect(headings[2]).toHaveTextContent('Clarissa');
   });
+
+  it('handles people with missing or undefined name fields when sorting', () => {
+    const peopleWithMissingFields: PeopleCollectionProps['people'] = [
+      {
+        fields: {
+          name: null,
+          title: null,
+          bio: null,
+        },
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      } as any,
+      {
+        fields: {
+          name: undefined,
+          title: undefined,
+          bio: undefined,
+        },
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      } as any,
+    ];
+
+    render(
+      <PeopleCollection people={[...mockPeople, ...peopleWithMissingFields]} />,
+    );
+    const headings = screen.getAllByRole('heading', {level: 3});
+    expect(headings[0]).toHaveTextContent('Alex');
+    expect(headings[1]).toHaveTextContent('Bob');
+    expect(headings[2]).toHaveTextContent('Clarissa');
+  });
+
+  it('does not render images when imageVisibility is "hide"', () => {
+    render(<PeopleCollection people={mockPeople} imageVisibility="hide" />);
+    expect(document.querySelector('img')).not.toBeInTheDocument();
+  });
 });
