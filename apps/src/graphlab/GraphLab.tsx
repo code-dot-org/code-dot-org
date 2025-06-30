@@ -41,7 +41,7 @@ const initNodes: MyNode[] = [
     id: '1',
     type: 'text',
     data: {
-      text: 'can you make a web page with one input field and one button that says "click me" and when the button is pressed, call `window.parent.postMessage(message, "*");` where message is the content of the input field?  give the web page a nice light blue background.  No prefix and no backticks, please.',
+      text: 'can you make a web page with one input field and one button that says "click me" and when the button is pressed, call `window.parent.postMessage(message, "*");` where message is the content of the input field?  give the web page a nice light blue background.  No prefix and no backticks, please. Also, include the folowing text on the page: ',
     },
     position: {x: -100, y: -50},
   },

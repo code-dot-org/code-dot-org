@@ -17,8 +17,17 @@ function AskChat({id}: NodeProps) {
   const connections = useNodeConnections({
     handleType: 'target',
   });
-  const nodesData = useNodesData<MyNode>(connections[0]?.source);
-  const textNode = isTextNode(nodesData) ? nodesData : null;
+  const nodesData = useNodesData<MyNode>(
+    connections.map(connection => connection.source)
+  );
+  const textNodes = nodesData.filter(isTextNode);
+
+  const text: string =
+    textNodes.length > 0
+      ? textNodes
+          .map(({data}) => (data && 'text' in data ? data.text : ''))
+          .join('')
+      : 'none';
 
   const managerRef = useRef<AiTutor2Manager | null>(
     new AiTutor2Manager('', 0, '')
@@ -26,12 +35,7 @@ function AskChat({id}: NodeProps) {
 
   useEffect(() => {
     const askChat = async () => {
-      if (
-        !textNode ||
-        !textNode.data ||
-        !textNode.data.text ||
-        typeof textNode.data.text !== 'string'
-      ) {
+      if (text === '') {
         console.warn('No text data available to ask chat');
         updateNodeData(id, {
           text: '',
@@ -39,13 +43,9 @@ function AskChat({id}: NodeProps) {
         return;
       }
 
-      console.log('Ask chat:', textNode?.data.text);
+      console.log('Ask chat:', text);
 
-      const response = await managerRef.current?.askAiTutor2(
-        textNode?.data.text || '',
-        '',
-        'hint'
-      );
+      const response = await managerRef.current?.askAiTutor2(text, '', 'hint');
       const responseText =
         response && response.length >= 1 ? response[1].chatMessageText : '';
       console.log('Chat responded: ', responseText);
@@ -55,14 +55,14 @@ function AskChat({id}: NodeProps) {
     };
 
     askChat();
-  }, [id, textNode, updateNodeData]);
+  }, [id, text, updateNodeData]);
 
   return (
     <div>
       <Handle
         type="target"
         position={Position.Left}
-        isConnectable={connections.length === 0}
+        /*isConnectable={connections.length === 0}*/
       />
       <div>ask chat</div>
       <Handle type="source" position={Position.Right} />
