@@ -1,7 +1,7 @@
 @eyes
 Feature: Music Lab workspaces load between levels
 
-Scenario Outline: Load a level and load the next
+Scenario: Load a level and load the next
   When I open my eyes to test "levelLoading"
 
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/46/levels/4"
