@@ -6,9 +6,23 @@ describe('Brand Unit Tests', () => {
       expect(getBrandFromHostname('localhost.hourofcode.com:3001')).toBe(
         Brand.HOUR_OF_CODE,
       );
-      expect(getBrandFromHostname('hourofcode.com:3001')).toBe(
-        Brand.HOUR_OF_CODE,
-      );
+      expect(getBrandFromHostname('hourofcode.com')).toBe(Brand.HOUR_OF_CODE);
+      expect(
+        getBrandFromHostname('preview-hourofcode.marketing-sites.dev-code.org'),
+      ).toBe(Brand.HOUR_OF_CODE);
+      expect(
+        getBrandFromHostname('hourofcode.marketing-sites.dev-code.org'),
+      ).toBe(Brand.HOUR_OF_CODE);
+    });
+
+    it('should return CS For All', () => {
+      expect(getBrandFromHostname('csforall.org')).toBe(Brand.CS_FOR_ALL);
+      expect(
+        getBrandFromHostname('preview-csforall.marketing-sites.dev-code.org'),
+      ).toBe(Brand.CS_FOR_ALL);
+      expect(
+        getBrandFromHostname('csforall.marketing-sites.dev-code.org'),
+      ).toBe(Brand.CS_FOR_ALL);
     });
 
     it('should return Code.org', () => {

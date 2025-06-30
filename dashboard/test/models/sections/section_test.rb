@@ -423,8 +423,8 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'default_script: script assigned, no course assigned' do
-    script = create :script
-    section = create :section, script: script, unit_group: nil
+    script = create :script, :in_single_unit_course
+    section = create :section, script: script
     assert_equal script, section.default_script
   end
 
@@ -717,7 +717,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'concise_summarize: section with sharing disabled and script with project sharing' do
-    script = create :script, project_sharing: true
+    script = create :script, :in_single_unit_course, project_sharing: true
     section = create :section, sharing_disabled: true, script: script, unit_group: nil
     summarized_section = section.concise_summarize
 
@@ -832,7 +832,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'selected_section_summarize: section with sharing disabled and script with project sharing' do
-    script = create :script, project_sharing: true
+    script = create :script, :in_single_unit_course, project_sharing: true
     section = create :section, sharing_disabled: true, script: script, unit_group: nil
     summarized_section = section.selected_section_summarize
 
@@ -901,6 +901,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'summarize: section with a script assigned' do
     # Use an existing script so that it has a translation
+    # TODO: TEACH-1788 This test will need to be updated when we update fixtures
     script = Unit.find_by_name('jigsaw')
     CourseOffering.add_course_offering(script)
 
@@ -1027,6 +1028,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'summarize: section with both a course and a script' do
+    # TODO: TEACH-1788 This test will probably need to be updated when we update fixtures
     # Use an existing script so that it has a translation
     script = Unit.find_by_name('jigsaw')
     unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
@@ -1174,7 +1176,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'summarize: section with sharing disabled and script with project sharing' do
-    script = create :script, project_sharing: true
+    script = create :script, :in_single_unit_course, project_sharing: true
     section = create :section, sharing_disabled: true, script: script, unit_group: nil
     summarized_section = section.summarize
 

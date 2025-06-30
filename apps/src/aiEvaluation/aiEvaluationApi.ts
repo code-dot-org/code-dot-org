@@ -11,6 +11,7 @@ export interface StudentAnswer {
   studentWork: string;
   codeVersion?: string;
   projectId?: string;
+  updatedAt?: string;
 }
 
 export interface AIResponse {
@@ -23,6 +24,7 @@ export interface AIResponse {
 
 export interface SkillBasedAIResponse extends AIResponse {
   skillId: number;
+  skillKey: string;
 }
 
 export interface StudentWorkEvaluation extends StudentAnswer, AIResponse {

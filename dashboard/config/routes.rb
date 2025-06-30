@@ -61,13 +61,17 @@ Dashboard::Application.routes.draw do
     get '/user_levels/level_source/:script_id/:level_id', to: 'user_levels#get_level_source'
     get '/user_levels/section_summary/:section_id/:level_id', to: 'user_levels#get_section_response_summary'
 
-    resources :student_work_evaluations, only: [:create]
+    resources :student_work_evaluations, only: [:create] do
+      collection do
+        get ':user_id/:level_id/:unit_id', to: 'student_work_evaluations#get_most_recent_user_level_evaluation'
+      end
+    end
 
     resources :student_work_evaluation_summaries, only: [:create]
 
     resources :user_level_interactions, only: [:create]
 
-    resources :skills, only: [:create, :index]
+    resources :skills, only: [:create, :index, :update, :destroy]
 
     patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
 
@@ -80,7 +84,7 @@ Dashboard::Application.routes.draw do
 
     get "/congrats", to: "congrats#index"
 
-    get "/incubator", to: "incubator#index"
+    get "/incubator", to: redirect(CDO.code_org_url("/incubator"))
     get "/musiclab", to: redirect(CDO.code_org_url("/music"))
     get "/projectbeats", to: redirect(CDO.code_org_url("/music"))
     get "/musiclab/menu", to: "musiclab#menu"
@@ -1006,7 +1010,6 @@ Dashboard::Application.routes.draw do
         get action, action: action
       end
     end
-    get '/dashboardapi/v1/pd/k5workshops', to: 'api/v1/pd/workshops#k5_public_map_index'
     get '/api/v1/pd/workshops_user_enrolled_in', to: 'api/v1/pd/workshops#workshops_user_enrolled_in'
 
     post '/api/lock_status', to: 'api#update_lockable_state'
@@ -1285,6 +1288,7 @@ Dashboard::Application.routes.draw do
 
     post '/openai/chat_completion', to: 'openai_chat#chat_completion'
     post '/openai/evaluate', to: 'openai_evaluate#evaluate'
+    post '/openai/evaluate_section', to: 'openai_evaluate#evaluate_section'
 
     post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
     get '/aichat_request/chat_request/:id', to: 'aichat_requests#chat_request'

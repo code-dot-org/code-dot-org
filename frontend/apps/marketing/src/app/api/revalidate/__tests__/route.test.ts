@@ -2,15 +2,17 @@
  * @jest-environment node
  */
 
-import {revalidatePath} from 'next/cache';
+import {revalidatePath, revalidateTag} from 'next/cache';
 
 import {POST} from '../route';
 
 jest.mock('next/cache', () => ({
   revalidatePath: jest.fn(),
+  revalidateTag: jest.fn(),
 }));
 
 const mockRevalidatePath = revalidatePath as jest.Mock;
+const mockRevalidateTag = revalidateTag as jest.Mock;
 
 describe('POST /api/revalidate', () => {
   const mockRequest = (body: object) => {
@@ -82,5 +84,43 @@ describe('POST /api/revalidate', () => {
     expect(json).toEqual({
       revalidated: true,
     });
+  });
+
+  it('should call revalidateTag if entryId is provided', async () => {
+    mockEnv('valid-secret');
+    const request = mockRequest({
+      entryId: 'entry-123',
+      secret: 'valid-secret',
+    });
+    mockRevalidateTag.mockImplementation(() => true);
+    const response = await POST(request);
+    expect(response.status).toBe(200);
+    expect(mockRevalidateTag).toHaveBeenCalledWith('entry-123');
+  });
+
+  it('should not throw if both pagePaths and entryId are missing', async () => {
+    mockEnv('valid-secret');
+    const request = mockRequest({
+      secret: 'valid-secret',
+    });
+    const response = await POST(request);
+    expect(response.status).toBe(200);
+    const json = await response.json();
+    expect(json).toEqual({revalidated: true});
+    expect(mockRevalidatePath).not.toHaveBeenCalled();
+    expect(mockRevalidateTag).not.toHaveBeenCalled();
+  });
+
+  it('should only call revalidateTag if only entryId is provided', async () => {
+    mockEnv('valid-secret');
+    const request = mockRequest({
+      entryId: 'entry-456',
+      secret: 'valid-secret',
+    });
+    mockRevalidateTag.mockImplementation(() => true);
+    const response = await POST(request);
+    expect(response.status).toBe(200);
+    expect(mockRevalidateTag).toHaveBeenCalledWith('entry-456');
+    expect(mockRevalidatePath).not.toHaveBeenCalled();
   });
 });

@@ -89,7 +89,7 @@ class ApplicationHelperTest < ActionView::TestCase
   end
 
   test 'client state level progress' do
-    script = create :script, name: 'zzz'
+    script = create :script, :in_single_unit_course, name: 'zzz'
     sl1 = create :script_level, script: script
     sl2 = create :script_level, script: script
 
@@ -106,7 +106,7 @@ class ApplicationHelperTest < ActionView::TestCase
   # versions of the client state, as would happen if we roll back from a future
   # version.
   test 'client state migration' do
-    script = create :script, name: 'progress-test'
+    script = create :script, :in_single_unit_course, name: 'progress-test'
     sl = create(:script_level, script: script)
     data = {'progress-test' => {sl.level_id => 100}}
     session[:progress] = data

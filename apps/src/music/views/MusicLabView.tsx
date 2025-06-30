@@ -73,6 +73,8 @@ interface MusicLabViewProps {
   blocklyWorkspace: MusicBlocklyWorkspace;
   exemplarPlaybackEvents: PlaybackEvent[];
   executeCode: (code: string) => void;
+  hasRun: boolean;
+  hasEdited: boolean;
 }
 
 const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
@@ -92,6 +94,8 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   blocklyWorkspace,
   exemplarPlaybackEvents,
   executeCode,
+  hasRun,
+  hasEdited,
 }) => {
   const dialogControl = useDialogControl();
   useUpdatePlayer(player);
@@ -284,6 +288,8 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     [blocklyWorkspace]
   );
 
+  // TODO: Rendering instructions with a function causes frequent re-renders.
+  // Pull this out into a component and/or drop support for "top" position
   const renderInstructions = useCallback(
     (position: InstructionsPosition) => {
       const exemplarPlayerInsideInstructions =
@@ -316,6 +322,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
             hideHeaders={hideHeaders}
           >
             <Instructions
+              isRunning={isPlaying}
               layout={
                 position !== InstructionsPosition.TOP
                   ? 'vertical'
@@ -325,6 +332,8 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               bottomComponent={
                 exemplarPlayerInsideInstructions && exemplarPlayer
               }
+              hasRun={hasRun}
+              hasEdited={hasEdited}
             />
             {!exemplarPlayerInsideInstructions && exemplarPlayer}
           </PanelContainer>
@@ -332,6 +341,8 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       );
     },
     [
+      hasRun,
+      hasEdited,
       hideHeaders,
       exemplarSettings,
       exemplarSources,
@@ -339,6 +350,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       onInstructionsTextClick,
       exemplarPlaybackEvents,
       player,
+      isPlaying,
     ]
   );
 

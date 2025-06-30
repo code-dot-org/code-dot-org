@@ -158,6 +158,7 @@ class LevelsController < ApplicationController
     any_parent_in_script = bubble_choice_parents.any? {|pl| pl.script_levels.any?}
     @in_script = @level.script_levels.any? || any_parent_in_script
     @standalone = ProjectsController::STANDALONE_PROJECTS.values.pluck(:name).include?(@level.name)
+    @skills = @level.skills.map {|skill| skill.attributes.deep_transform_keys {|key| key.to_s.camelize(:lower)}}
     if @level.is_a? Applab
       @dataset_library_manifest = DatablockStorageLibraryManifest.instance.library_manifest
     end

@@ -30,15 +30,15 @@
                 },
                 {
                   "value": "unit_2",
-                  "text": "Unit 2: Programming Fundamentals"
+                  "text": "Unit 2: Foundations of AI Programming"
                 },
                 {
                   "value": "unit_3",
-                  "text": "Unit 3: Computer Systems and Devices"
+                  "text": "Unit 3: AI and the Systems that Power It"
                 },
                 {
                   "value": "unit_4",
-                  "text": "Unit 4: Networks and the Internet"
+                  "text": "Unit 4: The Fabric of the Internet and AI"
                 },
                 {
                   "value": "unit_5",
@@ -46,7 +46,7 @@
                 },
                 {
                   "value": "unit_6",
-                  "text": "Unit 6: Introduction to Data Science"
+                  "text": "Unit 6: Insights from Data and AI"
                 }
               ]
             },
@@ -71,7 +71,7 @@
         {
           "type": "html",
           "name": "curriculum_perceptions",
-          "html": "<h2>Your Perceptions About Code.org's AIF, {unit_name}</h1>\n<p><span style='font-size: 12pt;'>Please share with us your thoughts about the design and content of the Exploring Generative AI curriculum.</span></p>"
+          "html": "<h2>Your Perceptions About Code.org's AIF, {unit_name}</h1>\n<p><span style='font-size: 12pt;'>Please share with us your thoughts about the design and content of {unit_name} of the AI Foundations curriculum.</span></p>"
         },
         {
           "type": "rating",
@@ -79,8 +79,8 @@
           "title": "Were most students engaged and interested in the topics covered in {unit_name}?",
           "rateCount": 7,
           "rateMax": 7,
-          "minRateDescription": "Not Engaged At all",
-          "maxRateDescription": "Very Engaged"
+          "minRateDescription": "Most Students Were Not Engaged",
+          "maxRateDescription": "Most Students Were Very Engaged"
         },
         {
           "type": "rating",

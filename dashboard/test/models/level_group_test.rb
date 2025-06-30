@@ -197,7 +197,7 @@ MARKDOWN
   end
 
   test "get_sublevel_last_attempt" do
-    script = create :script
+    script = create :script, :in_single_unit_course
     level1 = create :multi
     level2 = create :multi
     level_group_dsl = <<~DSL
@@ -225,7 +225,7 @@ MARKDOWN
     # loads user's attempt if user provided
     assert_equal '2', LevelGroup.get_sublevel_last_attempt(teacher, nil, level1, script)
     # does not load attempt for a different script
-    assert_nil LevelGroup.get_sublevel_last_attempt(teacher, nil, level1, create(:script))
+    assert_nil LevelGroup.get_sublevel_last_attempt(teacher, nil, level1, create(:script, :in_single_unit_course))
     # returns undefined when signed out
     assert_nil LevelGroup.get_sublevel_last_attempt(nil, nil, level1, script)
   end
@@ -455,7 +455,7 @@ level 'level1_copy2'"
     srand 1
 
     # Create script with an anonymous assessment.
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
     sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
@@ -570,7 +570,7 @@ level 'level1_copy2'"
 
   test 'get_summarized_survey_results returns no results when less than 5 responses' do
     # Create script with an anonymous assessment.
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
     create :text_match, name: 'level_free_response', type: 'TextMatch'

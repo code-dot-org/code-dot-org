@@ -170,6 +170,8 @@ class UnconnectedMusicView extends React.Component {
 
     this.state = {
       hasLoadedInitialSounds: false,
+      hasRun: false,
+      hasEdited: false,
     };
 
     this.isLevelLoadInProgress = false;
@@ -223,6 +225,8 @@ class UnconnectedMusicView extends React.Component {
       this.stopSong();
       this.setState({
         hasLoadedInitialSounds: false,
+        hasRun: false,
+        hasEdited: false,
       });
       this.props.clearCallout();
       this.musicBlocklyWorkspace.dispose();
@@ -257,6 +261,10 @@ class UnconnectedMusicView extends React.Component {
 
     if (prevProps.updateLoadProgress !== this.props.updateLoadProgress) {
       this.player.setUpdateLoadProgress(this.props.updateLoadProgress);
+    }
+
+    if (prevProps.isReadOnlyWorkspace !== this.props.isReadOnlyWorkspace) {
+      this.musicBlocklyWorkspace.setIsReadOnly(this.props.isReadOnlyWorkspace);
     }
   }
 
@@ -314,18 +322,33 @@ class UnconnectedMusicView extends React.Component {
     this.setExemplarPlaybackEvents();
 
     if (AppConfig.getValue('js-editor') !== 'true') {
+      const isSubmittable = this.props.levelProperties.submittable;
       this.props.isPlayView
         ? this.musicBlocklyWorkspace.initHeadless()
         : this.musicBlocklyWorkspace.init(
             document.getElementById(BLOCKLY_DIV_ID),
             this.onBlockSpaceChange,
-            this.props.isReadOnlyWorkspace,
+            // Initializing the workspace in a read-only state means the toolbox will not be created.
+            // On submittable levels, we have the ability to toggle the read-only state mid-level,
+            // so we need to initialize the workspace with the toolbox available, and toggle the read-only state
+            // afterwards.
+            !isSubmittable && this.props.isReadOnlyWorkspace,
             toolboxAllowList,
             this.props.isRtl,
             this.props.blockMode,
             localizedToolboxDefinition,
             this.props.levelProperties?.enableBlocklyKeyboardNavigation
           );
+
+      if (
+        !this.props.isPlayView &&
+        isSubmittable &&
+        this.props.isReadOnlyWorkspace
+      ) {
+        // If this is a submittable level and the workspace is read-only (i.e. the user has submitted),
+        // set the read-only state to true.
+        this.musicBlocklyWorkspace.setIsReadOnly(true);
+      }
     }
 
     this.props.setShowInstructions(
@@ -654,6 +677,9 @@ class UnconnectedMusicView extends React.Component {
 
     const codeChanged = this.compileSong();
     if (codeChanged) {
+      this.setState({
+        hasEdited: true,
+      });
       this.executeCompiledSong().then(playbackEvents => {
         // If code has changed mid-playback, clear and re-queue all events in the player
         if (this.props.isPlaying) {
@@ -826,6 +852,9 @@ class UnconnectedMusicView extends React.Component {
   };
 
   playSong = async () => {
+    this.setState({
+      hasRun: true,
+    });
     this.player.stopSong();
     this.playingTriggers = [];
 
@@ -917,6 +946,8 @@ class UnconnectedMusicView extends React.Component {
               this.executeSongCode(code);
             })
           }
+          hasRun={this.state.hasRun}
+          hasEdited={this.state.hasEdited}
         />
         <Callouts />
       </AnalyticsContext.Provider>

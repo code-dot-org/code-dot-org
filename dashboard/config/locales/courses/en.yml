@@ -6179,3 +6179,15 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: "'25-'26"
+        allthelessonplans:
+          title: All The Lesson Plans
+          description_short: ''
+          description_student: Student overview of the course.
+          description_teacher: Teacher overview of the course.
+          version_title: '2020'
+        original-allthettsthings-course:
+          title: original-allthettsthings-course
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''

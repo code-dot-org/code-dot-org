@@ -48,3 +48,36 @@
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
+/* Styles for the modal container and dismiss button for SkillsEditDialog */
+.skills-modal {
+  min-width: 400px;
+  max-width: 90vw;
+  padding: 24px;
+  position: relative;
+}
+
+.skills-modal-dismiss {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.skills-modal-label {
+  margin-right: 8px;
+  font-weight: 500;
+}
+
+.skills-modal-input {
+  width: 600px;
+  height: 30px;
+  margin-bottom: 16px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

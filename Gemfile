@@ -338,7 +338,8 @@ require_pg = lambda do
 end
 
 install_if require_pg do
-  gem 'pg', require: false
+  # v1.3.0 required to support Postgres 14
+  gem 'pg', '~> 1.3.0', require: false
 end
 
 gem 'activerecord-import', '~> 1.0.3'

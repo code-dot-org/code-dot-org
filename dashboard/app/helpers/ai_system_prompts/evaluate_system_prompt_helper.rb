@@ -3,7 +3,6 @@ module AiSystemPrompts::EvaluateSystemPromptHelper
     evaluation_criteria = get_evaluation_criteria(level)
     evaluation_summary = get_evaluation_criteria_summary(level)
     skill_evaluations = get_skill_evaluations(level)
-    # TODO figure out how to handle skills id
     skills = level.skills
     structure_with_skills = <<~TEXT
       Review the student's work. Respond in correctly formatted JSON.
@@ -30,7 +29,7 @@ module AiSystemPrompts::EvaluateSystemPromptHelper
     if skills.empty? && level.upper_grades_programming_level?
       summary << "/n Evaluated for general code quality."
     elsif skills.any?
-      summary << "/n Evaluated for #{skills.length} programming concept skills."
+      summary << "/n Evaluated for #{skills.length} skills."
     end
     summary
   end
@@ -41,7 +40,7 @@ module AiSystemPrompts::EvaluateSystemPromptHelper
     if skills.any?
       skills.each do |skill|
         skill_evaluations << {
-          skillId: skill.id,
+          skillKey: skill.key,
           evaluationCriteria: skill.evaluation_criteria
         }
       end
