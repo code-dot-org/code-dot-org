@@ -23,7 +23,6 @@ class AiSystemPrompts::AitutorSystemPromptHelperTest < ActionView::TestCase
     base_system_prompt_snippet = "You are responding to a student's query about programming."
     system_prompt = AiSystemPrompts::AitutorSystemPromptHelper.get_system_prompt(@javalab_level.id, @csa_unit.id)
     assert_includes system_prompt, base_system_prompt_snippet
-    assert_includes system_prompt, 'Java'
     assert_includes system_prompt, 'Write a loop.'
     assert_includes system_prompt, 'no tests'
   end
@@ -32,7 +31,6 @@ class AiSystemPrompts::AitutorSystemPromptHelperTest < ActionView::TestCase
     base_system_prompt_snippet = "You are responding to a student's query about programming."
     system_prompt = AiSystemPrompts::AitutorSystemPromptHelper.get_system_prompt(nil, nil)
     assert_includes system_prompt, base_system_prompt_snippet
-    refute_includes system_prompt, 'Python'
     refute_includes system_prompt, 'Write a loop.'
     refute_includes system_prompt, 'no tests'
   end

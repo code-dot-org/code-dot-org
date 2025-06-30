@@ -6,7 +6,7 @@ class AiSystemPrompts::EvaluateSystemPromptHelperTest < ActionView::TestCase
   setup do
     csp_course_offering = create(:csp_course_offering, :with_unit_group)
     @level_instructions = "Write a loop."
-    @base_system_prompt_snippet = "Review the student's work."
+    @base_system_prompt_snippet = "review the student's work."
     @applab_level = create(:applab, :with_instructions)
     @csp_unit = csp_course_offering.course_versions.first.content_root.first_unit
     create(:csp_script_level, levels: [@applab_level])
@@ -14,10 +14,9 @@ class AiSystemPrompts::EvaluateSystemPromptHelperTest < ActionView::TestCase
 
   test "get_system_prompt for AppLab level" do
     system_prompt = AiSystemPrompts::EvaluateSystemPromptHelper.get_system_prompt(
-      @applab_level, @csp_unit, SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]
+      @applab_level, SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]
     )
     assert_includes system_prompt, @base_system_prompt_snippet
-    assert_includes system_prompt, 'JavaScript'
     assert_includes system_prompt, 'no tests'
     assert_includes system_prompt, @level_instructions
     refute_includes system_prompt, 'skillEvaluations'
@@ -27,10 +26,9 @@ class AiSystemPrompts::EvaluateSystemPromptHelperTest < ActionView::TestCase
     skill = create(:skill)
     create(:levels_skill, level: @applab_level, skill: skill)
     system_prompt = AiSystemPrompts::EvaluateSystemPromptHelper.get_system_prompt(
-      @applab_level, @csp_unit, SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]
+      @applab_level, SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]
     )
     assert_includes system_prompt, @base_system_prompt_snippet
-    assert_includes system_prompt, 'JavaScript'
     assert_includes system_prompt, 'no tests'
     assert_includes system_prompt, @level_instructions
     assert_includes system_prompt, 'skillEvaluations'
@@ -41,7 +39,7 @@ class AiSystemPrompts::EvaluateSystemPromptHelperTest < ActionView::TestCase
     free_response_level = create(:free_response, :with_instructions)
     create(:csp_script_level, levels: [free_response_level])
     system_prompt = AiSystemPrompts::EvaluateSystemPromptHelper.get_system_prompt(
-      free_response_level, @csp_unit, SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]
+      free_response_level, SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]
     )
     assert_includes system_prompt, @base_system_prompt_snippet
     assert_includes system_prompt, @level_instructions

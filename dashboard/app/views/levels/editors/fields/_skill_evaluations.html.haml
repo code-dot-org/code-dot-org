@@ -6,5 +6,7 @@
 
 - content_for :body_scripts do
   %script{src: webpack_asset_path('js/levels/editors/fields/_skill_evaluations.js'),
-        data: {skillevaluationdata: @skills.to_json}}
+        data: {skillevaluationdata: {skills: @skills, levelId: @level.id, systemPrompt: AiSystemPrompts::EvaluateSystemPromptHelper.get_system_prompt(
+      @level, SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]
+    )}.to_json}}
 
