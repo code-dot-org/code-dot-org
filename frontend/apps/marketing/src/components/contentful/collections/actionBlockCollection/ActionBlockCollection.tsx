@@ -31,7 +31,7 @@ export type ActionBlockCollectionProps = {
   /** Collection content w/ fields from Contentful */
   blocks: ItemEntry[];
   /** Sort order */
-  sortOrder: 'manual' | 'alphabetical';
+  sortOrder: 'alphabetical' | 'manual';
   /** Background color of the Action Blocks */
   background: Extract<ActionBlockProps['background'], string>;
   /** Hide images */

@@ -89,12 +89,12 @@ export const collectionsSortOrderDefinition: Record<
   sortOrder: {
     displayName: 'Sort Order',
     type: 'Text',
-    defaultValue: 'manual',
+    defaultValue: 'alphabetical',
     group: 'style',
     validations: {
       in: [
-        {value: 'manual', displayName: 'Manual'},
         {value: 'alphabetical', displayName: 'Alphabetical'},
+        {value: 'manual', displayName: 'Manual'},
       ],
     },
   },
