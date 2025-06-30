@@ -68,14 +68,12 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test "add_course_offering updates existing CourseOffering and CourseVersion for UnitGroup" do
-    offering = course_offering_with_versions(1, :with_unit_group)
+    offering = course_offering_with_versions(1)
     content_root = offering.course_versions.first.content_root
     old_offering_key = offering.key
     old_version_year = offering.course_versions.first.key
 
-    content_root.family_name = 'csz'
-    content_root.version_year = '2050'
-    content_root.save
+    content_root.update!(family_name: 'csz', version_year: '2050')
     CourseOffering.add_course_offering(content_root)
     content_root.reload
 
@@ -86,14 +84,12 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test "add_course_offering updates existing CourseOffering with multiple CourseVersion for UnitGroup" do
-    offering = course_offering_with_versions(2, :with_unit_group)
+    offering = course_offering_with_versions(2)
     content_root = offering.course_versions.first.content_root
     old_offering_key = offering.key
     old_version_year = offering.course_versions.first.key
 
-    content_root.family_name = 'csz'
-    content_root.version_year = '2050'
-    content_root.save
+    content_root.update!(family_name: 'csz', version_year: '2050')
     CourseOffering.add_course_offering(content_root)
     content_root.reload
 
@@ -320,7 +316,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
     refute partner_unit_co.any_version_is_assignable_editor_experiment?(@pilot_teacher)
     refute partner_unit_co.any_version_is_assignable_editor_experiment?(@pilot_instructor)
     refute partner_unit_co.any_version_is_assignable_editor_experiment?(@levelbuilder)
-    refute partner_unit_co.any_version_is_assignable_editor_experiment?(@partner) # No more units as content roots
+    refute partner_unit_co.any_version_is_assignable_editor_experiment?(@partner)
   end
 
   test 'can_be_instructor? is true if user can be instructor of any course version' do
