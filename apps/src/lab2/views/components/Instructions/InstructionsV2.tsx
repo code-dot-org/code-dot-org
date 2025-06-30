@@ -17,7 +17,9 @@ import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import NavigationButton from './NavigationButton';
 import PredictQuestion from './PredictQuestion';
+import PredictQuestionRunPrompt from './PredictQuestionRunPrompt';
 import PredictSummary from './PredictSummary';
 import ValidationButton from './ValidationButton';
 
@@ -229,13 +231,20 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
         )}
         {AiTutor2ResponseView && AiTutor2ResponseView}
         {predictSettings?.isPredictLevel && (
-          <InstructorsOnly>
-            <div className={moduleStyles.bubble}>
-              <PredictSummary />
-            </div>
-          </InstructorsOnly>
+          <>
+            <InstructorsOnly>
+              <div className={moduleStyles.bubble}>
+                <PredictSummary />
+              </div>
+            </InstructorsOnly>
+
+            <PredictQuestionRunPrompt
+              hasSelected={!!predictResponse}
+              hasSubmitted={predictAnswerLocked}
+            />
+          </>
         )}
-        {useMessage && (
+        {(useMessage || canShowNextButton) && (
           <div
             key={useMessageIndex + ' - ' + useMessage}
             id="instructions-feedback"
@@ -251,17 +260,24 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
               {offerBrowserTts && useMessage && !canShowNextButton && (
                 <TextToSpeech text={useMessage} />
               )}
-              <div ref={feedbackRef} tabIndex={-1}>
-                <EnhancedSafeMarkdown
-                  markdown={useMessage}
-                  className={moduleStyles.markdownText}
-                  handleInstructionsTextClick={handleInstructionsTextClick}
-                />
-              </div>
+              {useMessage && (
+                <div ref={feedbackRef} tabIndex={-1}>
+                  <EnhancedSafeMarkdown
+                    markdown={useMessage}
+                    className={moduleStyles.markdownText}
+                    handleInstructionsTextClick={handleInstructionsTextClick}
+                  />
+                </div>
+              )}
+              <NavigationButton
+                levelProperties={levelProperties}
+                hasRun={hasRun}
+                hasEdited={hasEdited}
+                className={moduleStyles.buttonInstruction}
+              />
             </div>
           </div>
         )}
-        {/* <NavigationButton /> */}
       </div>
     </div>
   );

@@ -29,8 +29,8 @@ import {
 } from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import PredictQuestion from '@cdo/apps/lab2/views/components/Instructions/PredictQuestion';
+import PredictQuestionRunPrompt from '@cdo/apps/lab2/views/components/Instructions/PredictQuestionRunPrompt';
 import PredictSummary from '@cdo/apps/lab2/views/components/Instructions/PredictSummary';
-import PredictQuestionRunPrompt from '@cdo/apps/lab2/views/components/PredictQuestionRunPrompt';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
