@@ -3,11 +3,13 @@ import React from 'react';
 
 import project from '@cdo/apps/code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/metrics/firehose';
+import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 import i18n from '@cdo/locale';
 
 import {sources as sourcesApi, files as filesApi} from '../clientApi';
 import * as utils from '../utils';
 
+import VersionHistoryDetails from './VersionHistoryDetails';
 import VersionRow from './VersionRow';
 
 /**
@@ -226,6 +228,9 @@ export default class VersionHistory extends React.Component {
               </tbody>
             </table>
           </div>
+          <CollapsibleSection headerContent="Details">
+            <VersionHistoryDetails versions={this.state.versions} />
+          </CollapsibleSection>
         </div>
       );
     }
