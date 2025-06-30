@@ -186,13 +186,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
                 higherPosition={!!bottomComponent}
               />
             )}
-            <div
-              className={
-                offerBrowserTts
-                  ? moduleStyles.scrollingContentWithTTS
-                  : moduleStyles.scrollingContentWithoutTTS
-              }
-            >
+            <div className={moduleStyles.scrollingContent}>
               <MainInstructionsContent
                 instructionsText={levelProperties.longInstructions}
                 handleInstructionsTextClick={handleInstructionsTextClick}

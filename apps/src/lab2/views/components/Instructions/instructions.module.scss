@@ -220,22 +220,8 @@ button.validationButton {
 //   margin-bottom: 10px;
 // }
 
-%scrolling-content {
+.scrollingContent {
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  // flex: 1;
-  // overflow-y: auto;
-  // min-height: 70px;
-  // padding: 0 10px;
-}
-
-.scrollingContentWithTTS {
-  @extend %scrolling-content;
-  margin-bottom: 25px;
-}
-
-.scrollingContentWithoutTTS {
-  @extend %scrolling-content;
-  margin-bottom: 10px;
 }
