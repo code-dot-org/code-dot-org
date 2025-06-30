@@ -107,7 +107,7 @@ const DanceView: React.FunctionComponent<
           headerContent={commonI18n.instructions()}
           className={moduleStyles.instructionsArea}
         >
-          <Instructions layout="horizontal" />
+          <Instructions layout="horizontal" isRunning={isRunning} />
         </PanelContainer>
         <PanelContainer
           id="dance-workspace-panel"

@@ -19,6 +19,7 @@ import {
   selectMultimodalEnabled,
   setShowModalType,
 } from '../redux';
+import {ChatButton} from '../types';
 import {getShortName} from '../utils';
 
 import StagedFilesPreview from './assets/StagedFilesPreview';
@@ -30,6 +31,8 @@ import UserChatMessageEditor from './UserChatMessageEditor';
 import moduleStyles from './chatWorkspace.module.scss';
 
 interface ChatWorkspaceProps {
+  chatButtons?: ChatButton[];
+  hiddenContext?: string;
   onClear: () => void;
 }
 
@@ -46,6 +49,8 @@ const eraserIcon: FontAwesomeV6IconProps = {
  * Renders the AI Chat Lab main chat workspace component.
  */
 const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
+  chatButtons,
+  hiddenContext,
   onClear,
 }) => {
   const [selectedTab, setSelectedTab] =
@@ -212,6 +217,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         {canChatWithModel && (
           <UserChatMessageEditor
             editorContainerClassName={moduleStyles.messageEditorContainer}
+            chatButtons={chatButtons}
+            hiddenContext={hiddenContext}
           />
         )}
         <div className={moduleStyles.buttonRow}>

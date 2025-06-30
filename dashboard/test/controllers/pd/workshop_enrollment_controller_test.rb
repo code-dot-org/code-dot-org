@@ -14,7 +14,7 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
   end
 
   setup do
-    @workshop = create :workshop, organizer: @organizer, num_sessions: 1
+    @workshop = create :byo_workshop, organizer: @organizer, num_sessions: 1
     @workshop.facilitators << @facilitator
     @existing_enrollment = create :pd_enrollment, workshop: @workshop
 
@@ -30,13 +30,6 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
     )
   end
 
-  test 'non-logged-in users cannot enroll in csf workshop' do
-    workshop = create :workshop, course: Pd::Workshop::COURSE_CSF
-    get :new, params: {workshop_id: workshop.id}
-    assert_response :redirect
-    assert_redirected_to "/logged_out?source_page=workshop%20enroll&return_to=%2Fpd%2Fworkshops%2F#{workshop.id}%2Fenroll"
-  end
-
   test 'non-logged-in users cannot enroll in csd workshop' do
     workshop = create :workshop, course: Pd::Workshop::COURSE_CSD
     get :new, params: {workshop_id: workshop.id}
@@ -49,14 +42,6 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
     get :new, params: {workshop_id: workshop.id}
     assert_response :redirect
     assert_redirected_to "/logged_out?source_page=workshop%20enroll&return_to=%2Fpd%2Fworkshops%2F#{workshop.id}%2Fenroll"
-  end
-
-  test 'logged-in users can enroll in csf workshop' do
-    sign_in @teacher
-    workshop = create :workshop, course: Pd::Workshop::COURSE_CSF
-    get :new, params: {workshop_id: workshop.id}
-    assert_response :success
-    assert_template :new
   end
 
   test 'logged-in users can enroll in csd workshop' do

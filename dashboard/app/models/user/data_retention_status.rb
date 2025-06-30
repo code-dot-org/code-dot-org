@@ -16,5 +16,5 @@
 #  index_user_data_retention_statuses_on_user_id          (user_id)
 #
 class User::DataRetentionStatus < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, -> {with_deleted}
 end

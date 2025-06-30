@@ -1,18 +1,18 @@
 import {render, screen} from '@testing-library/react';
 
-import YourSchoolMapPoint, {
-  YourSchoolMapPointProps,
+import AdoptionMapPoint, {
+  AdoptionMapPointProps,
   MAP_POINT_TYPES,
   MAP_POINT_HAS_CS_COLOR,
   MAP_POINT_NO_CS_COLOR,
   MAP_POINT_NO_DATA_COLOR,
   MAP_POINT_STROKE_COLOR,
   MAP_POINT_STROKE_WIDTH,
-} from '../YourSchoolMapPoint';
+} from '../AdoptionMapPoint';
 
-describe('YourSchoolMapPoint', () => {
-  const renderComponent = (props: YourSchoolMapPointProps) =>
-    render(<YourSchoolMapPoint {...props} />);
+describe('AdoptionMapPoint', () => {
+  const renderComponent = (props: AdoptionMapPointProps) =>
+    render(<AdoptionMapPoint {...props} />);
 
   [
     {type: MAP_POINT_TYPES.HAS_CS, expectedColor: MAP_POINT_HAS_CS_COLOR},

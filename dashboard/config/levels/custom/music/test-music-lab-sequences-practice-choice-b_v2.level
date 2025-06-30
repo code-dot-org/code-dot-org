@@ -15,23 +15,6 @@
     "level_data": {
       "library": "launch2024",
       "sounds": {
-        "shakira_maluma_chantaje": [
-          "vocals_maluma_chorus_1",
-          "vocals_maluma_chorus_2",
-          "vocals_shakira_chorus_1",
-          "vocals_shakira_chorus_2",
-          "vocals_sample_1",
-          "vocals_sample_2",
-          "vocals_chop",
-          "vocals_maluma_1",
-          "vocals_maluma_2",
-          "vocals_maluma_3",
-          "vocals_maluma_4",
-          "vocals_shakira_1",
-          "vocals_shakira_2",
-          "vocals_shakira_3",
-          "vocals_shakira_maluma_4"
-        ]
       },
       "toolbox": {
         "blocks": {
@@ -46,7 +29,7 @@
         },
         "type": "flyout"
       },
-      "packId": "shakira_maluma_chantaje",
+      "packId": "aloe_blacc_wake_me_up",
       "startSources": {
         "blocks": {
           "languageVersion": 0,
@@ -65,7 +48,7 @@
       "allowChangeStartingPlayheadPosition": true
     },
     "display_name": "Layering Lyrics",
-    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/shakira_whenever_wherever/shakira_whenever_wherever.jpg",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/i_need_a_dollar_aloe_blacc/i_need_a_dollar_aloe_blacc.jpg",
     "exemplar_settings": {
       "playerEnabled": true,
       "validationEnabled": false,
@@ -107,7 +90,7 @@
     "name_suffix": "_v2",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:49.199+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-choice-b\"},{\"changed_at\":\"2025-06-12 15:32:57 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-24 22:15:41 +0000\",\"changed\":[\"long_instructions\",\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-25 21:24:29 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-25 21:28:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:49.199+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-choice-b\"},{\"changed_at\":\"2025-06-12 15:32:57 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-24 22:15:41 +0000\",\"changed\":[\"long_instructions\",\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-25 21:24:29 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-25 21:28:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-26 20:43:45 +0000\",\"changed\":[\"level_data\",\"thumbnail_url\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
