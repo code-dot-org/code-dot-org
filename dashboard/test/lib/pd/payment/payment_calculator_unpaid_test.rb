@@ -8,7 +8,6 @@ module Pd::Payment
         funded: true,
         on_map: true,
         course: Pd::Workshop::COURSE_CSD,
-        subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP,
         num_sessions: 2,
         num_facilitators: 2
 

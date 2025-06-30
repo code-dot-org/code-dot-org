@@ -4,8 +4,7 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ActionController::Te
   freeze_time
 
   setup do
-    @workshop = build :workshop, num_sessions: 2, course: Pd::SharedWorkshopConstants::COURSE_CSF
-    @workshop.save(validate: false)
+    @workshop = create :workshop, num_sessions: 2
     @workshop.start!
   end
 
@@ -126,8 +125,7 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ActionController::Te
   end
 
   test 'cdo scholarship column' do
-    workshop = build :workshop, num_sessions: 1, sessions_from: Time.zone.today + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
-    workshop.save(validate: false)
+    workshop = create :workshop, num_sessions: 1, sessions_from: Time.zone.today + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
     enrollment.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_CDO)
     assert_equal Pd::ScholarshipInfoConstants::YES_CDO, enrollment.scholarship_status
@@ -147,8 +145,7 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ActionController::Te
   end
 
   test 'other scholarship column' do
-    workshop = build :workshop, num_sessions: 1, sessions_from: Time.zone.today + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
-    workshop.save(validate: false)
+    workshop = create :workshop, num_sessions: 1, sessions_from: Time.zone.today + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
     enrollment.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_OTHER)
     assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, enrollment.scholarship_status

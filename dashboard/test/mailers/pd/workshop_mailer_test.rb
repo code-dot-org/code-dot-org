@@ -95,8 +95,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
     ]
 
     courses.each do |course|
-      workshop = build :workshop, course: course
-      workshop.save(validate: false)
+      workshop = create :workshop, course: course
       enrollment = create :pd_enrollment, workshop: workshop
       mail = Pd::WorkshopMailer.detail_change_notification(enrollment)
 
@@ -146,9 +145,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
   end
 
   test 'facilitator and organizer email links are complete urls' do
-    csf_workshop = build :csf_intro_workshop
-    csf_workshop.facilitators << create(:facilitator)
-    csf_workshop.save(validate: false)
+    csf_workshop = create :csf_intro_workshop
     csf_enrollment = create :pd_enrollment, workshop: csf_workshop
     mails = []
 
@@ -162,7 +159,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
 
   test 'teacher cancel receipt links are complete urls' do
     test_cases = [
-      {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_WORKSHOP_1},
+      {course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_101},
     ]
 
     test_cases.each do |test_case|
@@ -181,6 +178,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
       {course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP},
       {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_WORKSHOP_1},
       {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP},
+      {course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_101},
       {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1},
       {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP},
     ]
@@ -210,6 +208,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
       {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP, days_before: 10},
       {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_WORKSHOP_1, days_before: 3},
       {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_WORKSHOP_1, days_before: 10},
+      {course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_101},
       {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, days_before: 3},
       {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, days_before: 10},
       {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP, days_before: 3},
