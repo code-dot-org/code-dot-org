@@ -41,7 +41,7 @@ const initNodes: MyNode[] = [
     id: '1',
     type: 'text',
     data: {
-      text: 'can you make a web page with one input field and one button that says "click me" and when the button is pressed, call `window.parent.postMessage(message, "*");` where message is the content of the input field?  give the web page a nice light blue background.  No prefix and no backticks, please. Also, include the folowing text on the page: ',
+      text: 'can you make a web page with one input field and one button that says "click me" and when the button is pressed, call `window.parent.postMessage(message, "*");` where message is the content of the input field?  give the web page a nice light blue background.  No prefix and no backticks, please. Also, include the folowing text on the page, in small print below everything else: ',
     },
     position: {x: -100, y: -50},
   },
@@ -106,6 +106,12 @@ const initNodes: MyNode[] = [
     data: {},
     position: {x: 950, y: 0},
   },
+  {
+    id: '9',
+    type: 'result',
+    data: {},
+    position: {x: 850, y: 100},
+  },
 ];
 
 const initEdges: Edge[] = [
@@ -143,6 +149,11 @@ const initEdges: Edge[] = [
     id: 'e4-4',
     source: '7',
     target: '8',
+  },
+  {
+    id: 'e4-5',
+    source: '5',
+    target: '9',
   },
 ];
 
