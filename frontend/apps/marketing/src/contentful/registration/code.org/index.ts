@@ -4,6 +4,9 @@ import ActionBlock, {
 import FullWidthActionBlock, {
   FullWidthActionBlockContentfulComponentDefinition,
 } from '@/components/contentful/actionBlocks/fullWidthActionBlock';
+import AdoptionMap, {
+  AdoptionMapContentfulComponentDefinition,
+} from '@/components/contentful/adoptionMap';
 import AFEEligibility, {
   AFEEligibilityContentfulComponentDefinition,
 } from '@/components/contentful/afeEligibility';
@@ -22,6 +25,9 @@ import VideoCarousel, {
 import LogoCollection, {
   LogoCollectionContentfulComponentDefinition,
 } from '@/components/contentful/collections/logoCollection';
+import PeopleCollection, {
+  PeopleCollectionContentfulComponentDefinition,
+} from '@/components/contentful/collections/peopleCollection';
 import Divider, {
   DividerContentfulComponentDefinition,
 } from '@/components/contentful/divider';
@@ -105,6 +111,13 @@ const contentfulRegistration = {
       definition: ActionBlockCarouselContentfulComponentDefinition,
     },
     {
+      component: AdoptionMap,
+      definition: AdoptionMapContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
+    },
+    {
       component: AFEEligibility,
       definition: AFEEligibilityContentfulComponentDefinition,
     },
@@ -177,6 +190,10 @@ const contentfulRegistration = {
     {
       component: LogoCollection,
       definition: LogoCollectionContentfulComponentDefinition,
+    },
+    {
+      component: PeopleCollection,
+      definition: PeopleCollectionContentfulComponentDefinition,
     },
     {component: Overline, definition: OverlineContentfulComponentDefinition},
     {

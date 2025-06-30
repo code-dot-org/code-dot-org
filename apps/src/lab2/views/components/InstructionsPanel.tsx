@@ -1,4 +1,3 @@
-import Button from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React, {useEffect, useRef} from 'react';
 
@@ -10,6 +9,10 @@ import PredictSummary from '@cdo/apps/lab2/views/components/PredictSummary';
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
+
+import {LevelProperties} from '../../types';
+
+import NavigationButton from './Instructions/NavigationButton';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/instructions.module.scss';
 
@@ -38,10 +41,12 @@ interface InstructionsPanelProps {
   canShowNextButton: boolean;
   hasNextLevel: boolean;
   useSecondaryFinishButton: boolean;
-  onContinueOrFinish: () => void;
   bottomComponent?: React.ReactNode;
   noTextAnimation?: boolean;
   isRunning?: boolean;
+  levelProperties: LevelProperties;
+  hasRun: boolean;
+  hasEdited: boolean;
 }
 
 /**
@@ -65,10 +70,12 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   canShowNextButton,
   hasNextLevel,
   useSecondaryFinishButton,
-  onContinueOrFinish,
   bottomComponent,
   noTextAnimation,
   isRunning,
+  levelProperties,
+  hasRun,
+  hasEdited,
 }) => {
   const vertical = layout === 'vertical';
 
@@ -194,18 +201,12 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   />
                 </div>
               )}
-              {canShowNextButton && (
-                <Button
-                  id="instructions-continue-button"
-                  text={
-                    hasNextLevel ? commonI18n.continue() : commonI18n.finish()
-                  }
-                  onClick={onContinueOrFinish}
-                  className={moduleStyles.buttonInstruction}
-                  type={showSecondaryFinishButton ? 'secondary' : 'primary'}
-                  color={showSecondaryFinishButton ? 'black' : 'purple'}
-                />
-              )}
+              <NavigationButton
+                levelProperties={levelProperties}
+                hasRun={hasRun}
+                hasEdited={hasEdited}
+                className={moduleStyles.buttonInstruction}
+              />
             </div>
           </div>
         )}

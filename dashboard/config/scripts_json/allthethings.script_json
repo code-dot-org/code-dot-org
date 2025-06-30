@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-05 14:26:26 UTC",
+    "serialized_at": "2025-06-26 22:16:46 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6390,6 +6390,27 @@
     },
     {
       "chapter": 174,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Submittable Music Level 1"
+        ],
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "f9c9c7a9-9f2c-48e1-867b-94d010f2795a"
+      },
+      "level_keys": [
+        "Submittable Music Level 1"
+      ]
+    },
+    {
+      "chapter": 175,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6413,7 +6434,7 @@
       ]
     },
     {
-      "chapter": 175,
+      "chapter": 176,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6437,7 +6458,7 @@
       ]
     },
     {
-      "chapter": 176,
+      "chapter": 177,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6461,7 +6482,7 @@
       ]
     },
     {
-      "chapter": 177,
+      "chapter": 178,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6485,7 +6506,7 @@
       ]
     },
     {
-      "chapter": 178,
+      "chapter": 179,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -6509,11 +6530,14 @@
       ]
     },
     {
-      "chapter": 179,
+      "chapter": 180,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AI Chat Test Level - gpt-4o-mini multimodal"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6530,7 +6554,28 @@
       ]
     },
     {
-      "chapter": 180,
+      "chapter": 181,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AI Chat Submittable Level"
+        ],
+        "lesson.key": "lesson-50",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "84daf7f5-b7c6-4c69-9aa8-ca2417519231"
+      },
+      "level_keys": [
+        "AI Chat Submittable Level"
+      ]
+    },
+    {
+      "chapter": 182,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6554,7 +6599,7 @@
       ]
     },
     {
-      "chapter": 181,
+      "chapter": 183,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -6578,7 +6623,7 @@
       ]
     },
     {
-      "chapter": 182,
+      "chapter": 184,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6602,7 +6647,7 @@
       ]
     },
     {
-      "chapter": 183,
+      "chapter": 185,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6626,7 +6671,7 @@
       ]
     },
     {
-      "chapter": 184,
+      "chapter": 186,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6650,7 +6695,7 @@
       ]
     },
     {
-      "chapter": 185,
+      "chapter": 187,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6674,7 +6719,7 @@
       ]
     },
     {
-      "chapter": 186,
+      "chapter": 188,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6698,7 +6743,7 @@
       ]
     },
     {
-      "chapter": 187,
+      "chapter": 189,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6722,7 +6767,7 @@
       ]
     },
     {
-      "chapter": 188,
+      "chapter": 190,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -6746,7 +6791,7 @@
       ]
     },
     {
-      "chapter": 189,
+      "chapter": 191,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -6770,7 +6815,7 @@
       ]
     },
     {
-      "chapter": 190,
+      "chapter": 192,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -6794,7 +6839,7 @@
       ]
     },
     {
-      "chapter": 191,
+      "chapter": 193,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -6818,7 +6863,7 @@
       ]
     },
     {
-      "chapter": 192,
+      "chapter": 194,
       "position": 9,
       "activity_section_position": 9,
       "assessment": false,
@@ -6842,7 +6887,7 @@
       ]
     },
     {
-      "chapter": 193,
+      "chapter": 195,
       "position": 10,
       "activity_section_position": 10,
       "assessment": false,
@@ -6866,7 +6911,7 @@
       ]
     },
     {
-      "chapter": 194,
+      "chapter": 196,
       "position": 11,
       "activity_section_position": 11,
       "assessment": false,
@@ -6890,7 +6935,7 @@
       ]
     },
     {
-      "chapter": 195,
+      "chapter": 197,
       "position": 12,
       "activity_section_position": 12,
       "assessment": false,
@@ -6914,7 +6959,7 @@
       ]
     },
     {
-      "chapter": 196,
+      "chapter": 198,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6938,7 +6983,7 @@
       ]
     },
     {
-      "chapter": 197,
+      "chapter": 199,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6962,7 +7007,7 @@
       ]
     },
     {
-      "chapter": 198,
+      "chapter": 200,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6986,7 +7031,7 @@
       ]
     },
     {
-      "chapter": 199,
+      "chapter": 201,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7010,7 +7055,7 @@
       ]
     },
     {
-      "chapter": 200,
+      "chapter": 202,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7034,7 +7079,7 @@
       ]
     },
     {
-      "chapter": 201,
+      "chapter": 203,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -7058,7 +7103,7 @@
       ]
     },
     {
-      "chapter": 202,
+      "chapter": 204,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -7082,7 +7127,7 @@
       ]
     },
     {
-      "chapter": 203,
+      "chapter": 205,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -7106,7 +7151,7 @@
       ]
     },
     {
-      "chapter": 204,
+      "chapter": 206,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -7130,7 +7175,7 @@
       ]
     },
     {
-      "chapter": 205,
+      "chapter": 207,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -7154,7 +7199,7 @@
       ]
     },
     {
-      "chapter": 206,
+      "chapter": 208,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7178,7 +7223,7 @@
       ]
     },
     {
-      "chapter": 207,
+      "chapter": 209,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -9407,6 +9452,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "Submittable Music Level 1",
+        "script_level.level_keys": [
+          "Submittable Music Level 1"
+        ],
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "f9c9c7a9-9f2c-48e1-867b-94d010f2795a"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "AI Chat Test Level",
         "script_level.level_keys": [
           "AI Chat Test Level"
@@ -9470,6 +9527,18 @@
         "level.key": "AI Chat Test Level - gpt-4o-mini multimodal",
         "script_level.level_keys": [
           "AI Chat Test Level - gpt-4o-mini multimodal"
+        ],
+        "lesson.key": "lesson-50",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "84daf7f5-b7c6-4c69-9aa8-ca2417519231"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AI Chat Submittable Level",
+        "script_level.level_keys": [
+          "AI Chat Submittable Level"
         ],
         "lesson.key": "lesson-50",
         "lesson_group.key": "",

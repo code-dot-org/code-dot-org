@@ -84,6 +84,11 @@ const AichatView: React.FunctionComponent<LabProps> = () => {
 
   const allFieldsHidden = useAppSelector(selectAllFieldsHidden);
 
+  const hasSentMessage = useAppSelector(state => state.aichat.hasSentMessage);
+  const hasUpdatedCustomizations = useAppSelector(
+    state => state.aichat.hasUpdatedCustomizations
+  );
+
   const projectManager = Lab2Registry.getInstance().getProjectManager();
   // Attach save listeners whenever the project manager updates
   useEffect(() => {
@@ -249,6 +254,8 @@ const AichatView: React.FunctionComponent<LabProps> = () => {
                   className={moduleStyles.instructions}
                   /** AI Chat doesn't have a traditional "run" state, so this is always false. */
                   isRunning={false}
+                  hasRun={hasSentMessage}
+                  hasEdited={hasUpdatedCustomizations}
                 />
               </PanelContainer>
             </div>

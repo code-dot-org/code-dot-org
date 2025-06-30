@@ -4,9 +4,9 @@ import {useSelector} from 'react-redux';
 
 import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {
   isPredictAnswerLocked,
+  isPredictResponseSubmitted,
   setPredictResponse,
 } from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -16,6 +16,10 @@ import InstructionsPanel from './InstructionsPanel';
 interface InstructionsProps {
   /** Whether the lab is currently running (different labs may define this differently). */
   isRunning: boolean;
+  /** Whether the lab's code has been executed/run on this level. */
+  hasRun: boolean;
+  /** Whether the lab's code has been edited on this level. */
+  hasEdited: boolean;
   /** If the instructions panel should be rendered vertically or horizontally. Defaults to vertical. */
   layout?: 'vertical' | 'horizontal';
   /**
@@ -40,15 +44,15 @@ interface InstructionsProps {
  */
 const Instructions: React.FunctionComponent<InstructionsProps> = ({
   isRunning,
+  hasRun,
+  hasEdited,
   layout,
   handleInstructionsTextClick,
   className,
   manageNavigation = true,
   bottomComponent,
 }) => {
-  const instructionsText = useAppSelector(
-    state => state.lab.levelProperties?.longInstructions
-  );
+  const levelProperties = useAppSelector(state => state.lab.levelProperties);
   const hasNextLevel = useSelector(state => nextLevelId(state) !== undefined);
   const {hasConditions, message, satisfied, index} = useAppSelector(
     state => state.lab.validationState
@@ -57,6 +61,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     state => state.lab.levelProperties?.predictSettings
   );
   const predictResponse = useAppSelector(state => state.predictLevel.response);
+  const predictResponseSubmitted = useAppSelector(isPredictResponseSubmitted);
   const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
 
   const offerBrowserTts =
@@ -73,18 +78,21 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   const {theme} = useTheme();
 
   // Don't render anything if we don't have any instructions.
-  if (instructionsText === undefined) {
+  if (
+    levelProperties === undefined ||
+    levelProperties.longInstructions === undefined
+  ) {
     return null;
   }
 
   const canShowNextButton =
     manageNavigation &&
     (!hasConditions || satisfied) &&
-    (!predictSettings?.isPredictLevel || predictAnswerLocked);
+    (!predictSettings?.isPredictLevel || predictResponseSubmitted);
 
   return (
     <InstructionsPanel
-      text={instructionsText}
+      text={levelProperties.longInstructions}
       message={message || undefined}
       messageIndex={index}
       theme={theme}
@@ -99,9 +107,11 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       canShowNextButton={canShowNextButton}
       hasNextLevel={hasNextLevel}
       useSecondaryFinishButton={useSecondaryFinishButton}
-      onContinueOrFinish={() => dispatch(continueOrFinishLesson())}
       bottomComponent={bottomComponent}
       isRunning={isRunning}
+      levelProperties={levelProperties}
+      hasRun={hasRun}
+      hasEdited={hasEdited}
     />
   );
 };

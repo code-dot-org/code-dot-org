@@ -17,7 +17,9 @@
 class Skill < ApplicationRecord
   validates :description, presence: true
 
-  has_and_belongs_to_many :levels, join_table: 'levels_skills'
+  has_and_belongs_to_many :levels, join_table: 'levels_skills', dependent: :delete_all
+
+  after_destroy :delete_serialized_file
 
   def serialize
     {
@@ -51,5 +53,11 @@ class Skill < ApplicationRecord
     skill = Skill.find_or_initialize_by(key: properties[:key])
     skill.update! properties
     skill.key
+  end
+
+  def delete_serialized_file
+    return unless Rails.application.config.levelbuilder_mode
+    file_path = Rails.root.join("config/skills/#{key}.json")
+    FileUtils.rm_f(file_path)
   end
 end

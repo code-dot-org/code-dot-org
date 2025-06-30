@@ -1,9 +1,9 @@
 import {render, screen, fireEvent, waitFor} from '@testing-library/react';
 
+import AdoptionMap from '@/components/contentful/adoptionMap';
 import SchoolSearchFieldset from '@/components/contentful/schoolSearchFieldset';
 
 import {School} from '../../types';
-import YourSchoolMap from '../YourSchoolMap';
 import YourSchoolMapSection from '../YourSchoolMapSection';
 
 const selectedSchool: School = {
@@ -23,7 +23,7 @@ jest.mock('@/components/contentful/schoolSearchFieldset', () => ({
   )),
 }));
 
-jest.mock('../YourSchoolMap', () => ({
+jest.mock('@/components/contentful/adoptionMap', () => ({
   __esModule: true,
   default: jest.fn(props => (
     <div data-testid="your-school-map">
@@ -38,7 +38,7 @@ jest.mock('../YourSchoolMap', () => ({
   )),
 }));
 
-describe('YourSchoolMapSection', () => {
+describe('AdoptionMapSection', () => {
   const dataSourceURL = 'https://example.com/data-sources';
   const onTakeSurveyClick = jest.fn();
 
@@ -87,10 +87,10 @@ describe('YourSchoolMapSection', () => {
     );
   });
 
-  it('renders YourSchoolMap with correct props', () => {
+  it('renders AdoptionMap with correct props', () => {
     renderComponent({school: testSchool});
     expect(screen.getByTestId('your-school-map')).toBeInTheDocument();
-    expect(YourSchoolMap).toHaveBeenCalledWith(
+    expect(AdoptionMap).toHaveBeenCalledWith(
       expect.objectContaining({
         school: testSchool,
         onTakeSurveyClick,
@@ -114,7 +114,7 @@ describe('YourSchoolMapSection', () => {
 
   it('initializes selectedSchool state with provided school prop', () => {
     renderComponent({school: testSchool});
-    expect(YourSchoolMap).toHaveBeenCalledWith(
+    expect(AdoptionMap).toHaveBeenCalledWith(
       expect.objectContaining({
         school: testSchool,
       }),
@@ -128,7 +128,7 @@ describe('YourSchoolMapSection', () => {
     fireEvent.click(screen.getByTestId('school-search-fieldset'));
 
     await waitFor(() => {
-      expect(YourSchoolMap).toHaveBeenCalledWith(
+      expect(AdoptionMap).toHaveBeenCalledWith(
         expect.objectContaining({
           school: expect.objectContaining(selectedSchool),
         }),
@@ -137,7 +137,7 @@ describe('YourSchoolMapSection', () => {
     });
   });
 
-  it('forwards onTakeSurveyClick callback to YourSchoolMap', () => {
+  it('forwards onTakeSurveyClick callback to AdoptionMap', () => {
     renderComponent({school: testSchool});
     fireEvent.click(screen.getByTestId('mock-survey-button'));
     expect(onTakeSurveyClick).toHaveBeenCalledWith(testSchool);

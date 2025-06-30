@@ -897,9 +897,9 @@ Resources:
   RedisCluster:
     Type: AWS::ElastiCache::ReplicationGroup
     Properties:
-      ReplicationGroupDescription: Marketing Sites Redis Cache Replication Group
+      ReplicationGroupDescription: Marketing Sites redis full router page and internal data cache replication group
       Engine: redis
-      ReplicationGroupId: !Sub "marketing-sites-page-cache-${SubdomainName}-${EnvironmentType}"
+      ReplicationGroupId: !Sub "marketing-sites-${SubdomainName}-${EnvironmentType}"
       CacheParameterGroupName: !Ref RedisParameterGroup
       EngineVersion: 7.1
       CacheNodeType:

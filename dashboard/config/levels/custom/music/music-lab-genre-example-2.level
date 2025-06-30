@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2025-06-03T22:55:32.000Z",
   "level_num": "custom",
@@ -469,66 +468,90 @@
                     },
                     "next": {
                       "block": {
-                        "type": "play_rest_at_current_location_simple2",
-                        "id": "stKKHY0_:#mduMpxbF_`",
+                        "type": "play_sounds_together",
+                        "id": "[R%XmXRLT:DEWJ*1)Emh",
                         "extraState": {
                           "disableNextConnection": false
                         },
-                        "fields": {
-                          "rest_duration": "<field name=\"rest_duration\">0.125</field>"
-                        },
-                        "next": {
-                          "block": {
-                            "type": "play_sounds_together",
-                            "id": "[R%XmXRLT:DEWJ*1)Emh",
-                            "extraState": {
-                              "disableNextConnection": false
-                            },
-                            "inputs": {
-                              "code": {
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "G)VjAnXqARUCng=c]=^f",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "sabrina_carpenter_espresso/vocals_chorus_2"
+                              },
+                              "next": {
                                 "block": {
                                   "type": "play_sound_at_current_location_simple2",
-                                  "id": "G)VjAnXqARUCng=c]=^f",
+                                  "id": "_#Adr*%K{=4Z.+iWPhZK",
                                   "extraState": {
                                     "disableNextConnection": false
                                   },
                                   "fields": {
-                                    "sound": "sabrina_carpenter_espresso/vocals_chorus_2"
+                                    "sound": "sabrina_carpenter_espresso/drums_main_beat"
                                   },
                                   "next": {
                                     "block": {
                                       "type": "play_sound_at_current_location_simple2",
-                                      "id": "_#Adr*%K{=4Z.+iWPhZK",
+                                      "id": "z=[,vL3%??Y*A(l]dRQ]",
                                       "extraState": {
                                         "disableNextConnection": false
                                       },
                                       "fields": {
-                                        "sound": "sabrina_carpenter_espresso/drums_main_beat"
+                                        "sound": "sabrina_carpenter_espresso/bass_main"
                                       },
                                       "next": {
                                         "block": {
                                           "type": "play_sound_at_current_location_simple2",
-                                          "id": "z=[,vL3%??Y*A(l]dRQ]",
+                                          "id": "a3-1{GI3znmH.IzB?J@R",
                                           "extraState": {
                                             "disableNextConnection": false
                                           },
                                           "fields": {
-                                            "sound": "sabrina_carpenter_espresso/bass_main"
+                                            "sound": "sabrina_carpenter_espresso/keys_chorus_2"
                                           },
                                           "next": {
                                             "block": {
-                                              "type": "play_sound_at_current_location_simple2",
-                                              "id": "a3-1{GI3znmH.IzB?J@R",
+                                              "type": "repeat_simple2",
+                                              "id": "Vg6|7UW/FKa4#qXi=gmu",
                                               "extraState": {
                                                 "disableNextConnection": false
                                               },
                                               "fields": {
-                                                "sound": "sabrina_carpenter_espresso/keys_chorus_2"
+                                                "times": 2
+                                              },
+                                              "inputs": {
+                                                "code": {
+                                                  "block": {
+                                                    "type": "set_effect_at_current_location_simple2",
+                                                    "id": "1UNM+p`@K-WCg79@%qS1",
+                                                    "fields": {
+                                                      "effects_name": "<field name=\"effects_name\">filter</field>",
+                                                      "effects_value": "<field name=\"effects_value\">low</field>"
+                                                    },
+                                                    "next": {
+                                                      "block": {
+                                                        "type": "play_sound_at_current_location_simple2",
+                                                        "id": "Vub7;c6j8]:Ml`R193iX",
+                                                        "extraState": {
+                                                          "disableNextConnection": false
+                                                        },
+                                                        "fields": {
+                                                          "sound": "rock/organ_grind"
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
                                               },
                                               "next": {
                                                 "block": {
                                                   "type": "repeat_simple2",
-                                                  "id": "Vg6|7UW/FKa4#qXi=gmu",
+                                                  "id": "}WgVc+$1|YX6Aja@},^x",
                                                   "extraState": {
                                                     "disableNextConnection": false
                                                   },
@@ -539,7 +562,7 @@
                                                     "code": {
                                                       "block": {
                                                         "type": "set_effect_at_current_location_simple2",
-                                                        "id": "1UNM+p`@K-WCg79@%qS1",
+                                                        "id": "M|:.|u8:6pQr?a[ZEEzy",
                                                         "fields": {
                                                           "effects_name": "<field name=\"effects_name\">filter</field>",
                                                           "effects_value": "<field name=\"effects_value\">low</field>"
@@ -547,48 +570,12 @@
                                                         "next": {
                                                           "block": {
                                                             "type": "play_sound_at_current_location_simple2",
-                                                            "id": "Vub7;c6j8]:Ml`R193iX",
+                                                            "id": "6{9V/./I]UaZ(Q[qj*R@",
                                                             "extraState": {
                                                               "disableNextConnection": false
                                                             },
                                                             "fields": {
-                                                              "sound": "rock/organ_grind"
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  },
-                                                  "next": {
-                                                    "block": {
-                                                      "type": "repeat_simple2",
-                                                      "id": "}WgVc+$1|YX6Aja@},^x",
-                                                      "extraState": {
-                                                        "disableNextConnection": false
-                                                      },
-                                                      "fields": {
-                                                        "times": 2
-                                                      },
-                                                      "inputs": {
-                                                        "code": {
-                                                          "block": {
-                                                            "type": "set_effect_at_current_location_simple2",
-                                                            "id": "M|:.|u8:6pQr?a[ZEEzy",
-                                                            "fields": {
-                                                              "effects_name": "<field name=\"effects_name\">filter</field>",
-                                                              "effects_value": "<field name=\"effects_value\">low</field>"
-                                                            },
-                                                            "next": {
-                                                              "block": {
-                                                                "type": "play_sound_at_current_location_simple2",
-                                                                "id": "6{9V/./I]UaZ(Q[qj*R@",
-                                                                "extraState": {
-                                                                  "disableNextConnection": false
-                                                                },
-                                                                "fields": {
-                                                                  "sound": "rock/riff_guitar"
-                                                                }
-                                                              }
+                                                              "sound": "rock/riff_guitar"
                                                             }
                                                           }
                                                         }
@@ -1760,7 +1747,8 @@
     "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/sabrina_carpenter_espresso/sabrina_carpenter_espresso.jpg",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-06-03T22:55:32.452+00:00\",\"changed\":[\"cloned from \\\"music-lab-genre-example-1\\\"\"],\"cloned_from\":\"music-lab-genre-example-1\"},{\"changed_at\":\"2025-06-03 22:55:46 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-03 22:57:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 19:16:42 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 19:20:27 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-06-03T22:55:32.452+00:00\",\"changed\":[\"cloned from \\\"music-lab-genre-example-1\\\"\"],\"cloned_from\":\"music-lab-genre-example-1\"},{\"changed_at\":\"2025-06-03 22:55:46 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-03 22:57:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 19:16:42 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 19:20:27 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-27 23:50:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
