@@ -1165,11 +1165,11 @@ Given(/^I am assigned to unit "([^"]*)"(?: with teacher "([^"]*)")?$/) do |scrip
   )
 end
 
-Given(/^I am assigned to course "([^"]*)" and unit "([^"]*)"(?: with teacher "([^"]*)")?$/) do |course_name, script_name, teacher_name|
+Given(/^I am assigned to course "([^"]*)" unit (\d+)(?: with teacher "([^"]*)")?$/) do |course_name, unit_position, teacher_name|
   browser_request(
     url: '/api/test/assign_course_and_unit_as_student',
     method: 'POST',
-    body: {script_name: script_name, course_name: course_name, teacher_email: teacher_name ? (@users[teacher_name][:email]).to_s : nil}
+    body: {course_name: course_name, unit_position: unit_position, teacher_email: teacher_name ? (@users[teacher_name][:email]).to_s : nil}
   )
 end
 
