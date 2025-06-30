@@ -259,21 +259,21 @@
   height: 100%;
 }
 
-.courseTitleText {
-  min-width: 0;
-  margin: 0 !important;
+.courseContentDropdownContainer .courseTitleText {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  min-width: 0;
+  margin-bottom: 0;
 }
 
-.courseContentDropdown {
+.courseContentDropdownContainer .courseContentDropdown {
   width: 100%;
   button {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    width: 100% !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
   }
 }
 
