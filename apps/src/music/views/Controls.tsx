@@ -105,6 +105,7 @@ interface ControlsProps {
   setPlaying: (value: boolean) => void;
   playTrigger: (id: string) => void;
   hasTrigger: (id: string) => boolean;
+  isPredictLevel?: boolean;
   enableSkipControls?: boolean;
 }
 
@@ -116,12 +117,12 @@ const Controls: React.FunctionComponent<ControlsProps> = ({
   setPlaying,
   playTrigger,
   hasTrigger,
+  isPredictLevel,
   enableSkipControls = false,
 }) => {
   const dispatch = useAppDispatch();
   const isPlaying = useMusicSelector(state => state.music.isPlaying);
-  const disableRun = useAppSelector(({lab, predictLevel, music}) => {
-    const isPredictLevel = lab.levelProperties?.predictSettings?.isPredictLevel;
+  const disableRun = useAppSelector(({predictLevel, music}) => {
     const hasPredictResponse = !!predictLevel.response;
     const isLoading = music.soundLoadingProgress < 1;
     return isLoading || (isPredictLevel && !hasPredictResponse);
