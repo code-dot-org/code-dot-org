@@ -174,19 +174,19 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
           vertical && moduleStyles.itemVertical
         )}
       >
-        {levelProperties.longInstructions && (
-          <div
-            key={levelProperties.longInstructions}
-            id="instructions-text"
-            className={classNames(moduleStyles.bubble)}
-          >
-            {offerBrowserTts && (
-              <TextToSpeech
-                text={levelProperties.longInstructions}
-                higherPosition={!!bottomComponent}
-              />
-            )}
-            <div className={moduleStyles.scrollingContent}>
+        <div className={moduleStyles.scrollingContent}>
+          {levelProperties.longInstructions && (
+            <div
+              key={levelProperties.longInstructions}
+              id="instructions-text"
+              className={classNames(moduleStyles.bubble)}
+            >
+              {offerBrowserTts && (
+                <TextToSpeech
+                  text={levelProperties.longInstructions}
+                  higherPosition={!!bottomComponent}
+                />
+              )}
               <MainInstructionsContent
                 instructionsText={levelProperties.longInstructions}
                 handleInstructionsTextClick={handleInstructionsTextClick}
@@ -209,37 +209,37 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
                   isValidateDisabled={validationSettings.isValidateDisabled}
                 />
               )}
+              {bottomComponent && (
+                <div className={moduleStyles.bottomComponent}>
+                  {bottomComponent}
+                </div>
+              )}
             </div>
-            {bottomComponent && (
-              <div className={moduleStyles.bottomComponent}>
-                {bottomComponent}
-              </div>
-            )}
-          </div>
-        )}
-        {validationState?.validationResults && (
-          <>
-            <div ref={validationScrollRef} />
-            <div className={moduleStyles.bubble}>
-              <ValidationResults />
-            </div>
-          </>
-        )}
-        {AiTutor2ResponseView && AiTutor2ResponseView}
-        {predictSettings?.isPredictLevel && (
-          <>
-            <InstructorsOnly>
+          )}
+          {validationState?.validationResults && (
+            <>
+              <div ref={validationScrollRef} />
               <div className={moduleStyles.bubble}>
-                <PredictSummary />
+                <ValidationResults />
               </div>
-            </InstructorsOnly>
+            </>
+          )}
+          {AiTutor2ResponseView && AiTutor2ResponseView}
+          {predictSettings?.isPredictLevel && (
+            <>
+              <InstructorsOnly>
+                <div className={moduleStyles.bubble}>
+                  <PredictSummary />
+                </div>
+              </InstructorsOnly>
 
-            <PredictQuestionRunPrompt
-              hasSelected={!!predictResponse}
-              hasSubmitted={predictAnswerLocked}
-            />
-          </>
-        )}
+              <PredictQuestionRunPrompt
+                hasSelected={!!predictResponse}
+                hasSubmitted={predictAnswerLocked}
+              />
+            </>
+          )}
+        </div>
         {(useMessage || canShowNextButton) && (
           <div
             key={useMessageIndex + ' - ' + useMessage}

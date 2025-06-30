@@ -87,12 +87,6 @@
   height: 32px;
 }
 
-// Using button to increase specificity of this class
-// (this allows it to take precedence over the component library button styles)
-button.validationButton {
-  margin-top: 8px;
-}
-
 .markdownText {
   line-height: 0;
   user-select: text;
