@@ -28,15 +28,15 @@ export default class AiTutor2Manager {
   private modelId: AiChatModelIdType;
 
   constructor(
+    modelId: AiChatModelIdType = AiChatModelIds.GEMINI_2_0_FLASH,
     currentLevelId: string | null,
     scriptId: number | undefined,
-    channelId: string | undefined,
-    modelId: AiChatModelIdType = AiChatModelIds.GEMINI_2_0_FLASH
+    channelId: string | undefined
   ) {
+    this.modelId = modelId;
     this.currentLevelId = currentLevelId;
     this.scriptId = scriptId;
     this.channelId = channelId;
-    this.modelId = modelId;
   }
 
   async askAiTutor2(

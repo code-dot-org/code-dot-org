@@ -3,13 +3,11 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {WaitingAnimation} from '@cdo/apps/aichat/views/WaitingAnimation';
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {queryParams} from '@cdo/apps/code-studio/utils';
 import AiTutor2Manager, {
   AiTutor2MessageType,
-  AiChatModelIdType,
 } from '@cdo/apps/lab2/ai/AiTutor2Manager';
+import {aiTutorModelId} from '@cdo/apps/lab2/ai/AiTutorModelId';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 import moduleStylesFixed from '../AiTutor2ResponseFixed.module.scss';
 import moduleStylesShrink from '../AiTutor2ResponseShrink.module.scss';
@@ -24,19 +22,9 @@ export function useAiTutor2(
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const [loading, setLoading] = useState<boolean>();
 
-  const modelQueryParam = queryParams('aitutor2-model');
-
-  // Only use modelQueryParam as modelId if it is a valid id, otherwise set to undefined
-  // which lets AiTutor2Manager use its default.
-  const modelId = Object.values(AiChatModelIds).includes(
-    modelQueryParam as AiChatModelIdType
-  )
-    ? (modelQueryParam as AiChatModelIdType)
-    : undefined;
-
   const managerRef = useRef<AiTutor2Manager | null>(
     isEnabled
-      ? new AiTutor2Manager(currentLevelId, scriptId, channelId, modelId)
+      ? new AiTutor2Manager(aiTutorModelId, currentLevelId, scriptId, channelId)
       : null
   );
 
@@ -52,16 +40,16 @@ export function useAiTutor2(
       currentLevelId,
       scriptId,
       channelId,
-      modelId
+      aiTutorModelId
     );
     managerRef.current = new AiTutor2Manager(
+      aiTutorModelId,
       currentLevelId,
       scriptId,
-      channelId,
-      modelId
+      channelId
     );
     setResponse(undefined);
-  }, [isEnabled, currentLevelId, scriptId, channelId, modelId]);
+  }, [isEnabled, currentLevelId, scriptId, channelId]);
 
   const [response, setResponse] = useState<string>();
 
