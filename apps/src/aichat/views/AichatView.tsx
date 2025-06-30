@@ -10,7 +10,7 @@ import React, {useCallback, useEffect} from 'react';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {LabProps} from '@cdo/apps/lab2/types';
-import Instructions from '@cdo/apps/lab2/views/components/Instructions';
+import Instructions from '@cdo/apps/lab2/views/components/Instructions/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';

@@ -3,7 +3,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 import SongSelector from '@cdo/apps/dance/SongSelector';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {LabProps} from '@cdo/apps/lab2/types';
-import Instructions from '@cdo/apps/lab2/views/components/Instructions';
+import Instructions from '@cdo/apps/lab2/views/components/Instructions/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {registerReducers} from '@cdo/apps/redux';
 import AgeDialog from '@cdo/apps/templates/AgeDialog';
