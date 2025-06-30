@@ -22,6 +22,9 @@ import ImageCarousel, {
 import VideoCarousel, {
   VideoCarouselContentfulComponentDefinition,
 } from '@/components/contentful/carousels/videoCarousel';
+import ActionBlockCollection, {
+  ActionBlockCollectionContentfulComponentDefinition,
+} from '@/components/contentful/collections/actionBlockCollection';
 import LogoCollection, {
   LogoCollectionContentfulComponentDefinition,
 } from '@/components/contentful/collections/logoCollection';
@@ -186,6 +189,10 @@ const contentfulRegistration = {
     {
       component: Link,
       definition: LinkContentfulComponentDefinition,
+    },
+    {
+      component: ActionBlockCollection,
+      definition: ActionBlockCollectionContentfulComponentDefinition,
     },
     {
       component: LogoCollection,
