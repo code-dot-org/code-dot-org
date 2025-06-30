@@ -80,3 +80,34 @@ export const videoRelatedDefinitions: Record<
       'Check this to show a caption (video title) under the video player.',
   },
 };
+
+// Used in the Action Block, Logo, and People Collections components.
+export const collectionsSortOrderDefinition: Record<
+  string,
+  ComponentDefinitionVariable
+> = {
+  sortOrder: {
+    displayName: 'Sort Order',
+    type: 'Text',
+    defaultValue: 'manual',
+    group: 'style',
+    validations: {
+      in: [
+        {value: 'manual', displayName: 'Manual'},
+        {value: 'alphabetical', displayName: 'Alphabetical'},
+      ],
+    },
+  },
+};
+
+// Used in the Action Block, Logo, and People Collections components,
+// but could be used in other components.
+export const hideImagesDefinition: Record<string, ComponentDefinitionVariable> =
+  {
+    hideImages: {
+      displayName: 'Hide images',
+      type: 'Boolean',
+      defaultValue: true,
+      group: 'style',
+    },
+  };
