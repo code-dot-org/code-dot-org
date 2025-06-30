@@ -87,7 +87,7 @@ class AichatOpenaiCompletionsClientTest < AichatAiClientTest
       ]
     end
 
-    let(:messages_with_assets_without_level_system_prompt) do
+    let(:messages_with_assets_and_without_level_system_prompt) do
       [
         {role: 'system', content: [{type: 'text', text: "test prompt test retrieval"}]},
         {role: 'user', content: [{type: 'text', text: 'hello from user'}]},
@@ -100,7 +100,7 @@ class AichatOpenaiCompletionsClientTest < AichatAiClientTest
       ]
     end
 
-    let(:messages_with_hidden_context_with_level_system_prompt) do
+    let(:messages_with_hidden_context_and_level_system_prompt) do
       [
         {role: 'system', content: [{type: 'text', text: "Be safe. test prompt test retrieval"}]},
         {role: 'user', content: [{type: 'text', text: 'hello from user'}]},
@@ -163,7 +163,7 @@ class AichatOpenaiCompletionsClientTest < AichatAiClientTest
       let(:request_body) do
         request_body_without_messages.merge(
           {
-            messages: messages_with_assets_without_level_system_prompt
+            messages: messages_with_assets_and_without_level_system_prompt
           }.deep_stringify_keys
         )
       end
@@ -181,7 +181,7 @@ class AichatOpenaiCompletionsClientTest < AichatAiClientTest
       let(:request_body) do
         request_body_without_messages.merge(
           {
-            messages: messages_with_hidden_context_with_level_system_prompt
+            messages: messages_with_hidden_context_and_level_system_prompt
           }.deep_stringify_keys
         )
       end
