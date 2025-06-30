@@ -1,6 +1,10 @@
 class AichatGeminiClientTest < AichatAiClientTest
-  let(:gemini_model_id) {'gemini-2.0-flash'}
-  let(:expected_request_body) do
+  let(:internal_model_id) {'gemini-2.0-flash'}
+  let(:endpoint_model_id) {internal_model_id}
+
+  let(:endpoint_url) {"https://generativelanguage.googleapis.com/v1beta/models/#{endpoint_model_id}:generateContent?key="}
+
+  let(:request_body_without_contents) do
     {
       generationConfig: {
         temperature: 1.0
@@ -11,33 +15,7 @@ class AichatGeminiClientTest < AichatAiClientTest
             text: "Be safe. test prompt test retrieval"
           }
         ]
-      },
-      contents: [
-        {
-          role: "user",
-          parts: [
-            {
-              text: "hello from user"
-            }
-          ]
-        },
-        {
-          role: "model",
-          parts: [
-            {
-              text: "assistant response"
-            }
-          ]
-        },
-        {
-          role: "user",
-          parts: [
-            {
-              text: "new message from user"
-            }
-          ]
-        }
-      ]
+      }
     }
   end
 
@@ -83,7 +61,7 @@ class AichatGeminiClientTest < AichatAiClientTest
         ],
         thoughtsTokenCount: 905
       },
-      modelVersion: "gemini-2.0-flash",
+      modelVersion: endpoint_model_id,
       responseId: 'fkADaGzEE-12213GoO_3iAM'
     }
   end
@@ -97,13 +75,44 @@ class AichatGeminiClientTest < AichatAiClientTest
   end
 
   describe '#def get_response_text (unit)' do
-    let(:internal_model_id) {gemini_model_id}
+    let(:contents) do
+      [
+        {
+          role: "user",
+          parts: [
+            {
+              text: "hello from user"
+            }
+          ]
+        },
+        {
+          role: "model",
+          parts: [
+            {
+              text: "assistant response"
+            }
+          ]
+        },
+        {
+          role: "user",
+          parts: [
+            {
+              text: "new message from user"
+            }
+          ]
+        }
+      ]
+    end
 
-    let(:model_id) {internal_model_id}
+    let(:request_body) do
+      request_body_without_contents.merge(
+        {
+          contents: contents
+        }
+      )
+    end
 
-    let(:url_to_post) {"https://generativelanguage.googleapis.com/v1beta/models/#{model_id}:generateContent?key="}
-
-    subject {stub_request_and_get_response_test(url_to_post, expected_request_body, expected_headers, stubbed_response_body, model_id)}
+    subject {stub_request_and_get_response_test(@new_message, endpoint_url, request_body, expected_headers, stubbed_response_body, internal_model_id, @level_with_level_system_prompt)}
     context 'when body is well formed and request succeeds' do
       let(:stubbed_response_body) {stubbed_success_response_body}
       it 'successfully makes a round trip and is returned the correct response' do

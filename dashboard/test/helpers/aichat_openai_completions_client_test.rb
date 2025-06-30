@@ -1,47 +1,13 @@
 class AichatOpenaiCompletionsClientTest < AichatAiClientTest
-  let(:gpt_4o_mini_model_id) {'gpt-4o-mini'}
-  let(:expected_request_body) do
+  let(:internal_model_id) {'gpt-4o-mini'}
+  let(:endpoint_model_id) {'gpt-4o-mini-2024-07-18'}
+
+  let(:endpoint_url) {"https://api.openai.com/v1/chat/completions"}
+
+  let(:request_body_without_messages) do
     {
-      model: "gpt-4o-mini-2024-07-18",
-      temperature: 1.0,
-      messages: [
-        {
-          role: "system",
-          content: [
-            {
-              type: "text",
-          text: "Be safe. test prompt test retrieval"
-            }
-          ]
-        },
-        {
-          role: "user",
-          content: [
-            {
-              type: "text",
-              text: "hello from user"
-            }
-          ]
-        },
-        {
-          role: "assistant",
-          content: [
-            {
-              type: "text",
-              text: "assistant response"
-            }
-          ]
-        },
-        {
-          role: "user",
-          content: [
-            {
-              type: "text",
-              text: "new message from user"
-            }
-          ]
-        }
-      ]
+      model: endpoint_model_id,
+      temperature: 1.0
     }
   end
 
@@ -60,7 +26,7 @@ class AichatOpenaiCompletionsClientTest < AichatAiClientTest
       id: "chatcmpl-12345678901234567891234567890",
       object: "chat.completion",
       created: 1_750_694_792,
-      model: "gpt-4o-mini-2024-07-18",
+      model: endpoint_model_id,
       choices: [
         {
           index: 0,
@@ -103,25 +69,127 @@ class AichatOpenaiCompletionsClientTest < AichatAiClientTest
   end
 
   describe '#def get_response_text (unit)' do
-    let(:internal_model_id) {gpt_4o_mini_model_id}
+    let(:messages_with_level_system_prompt) do
+      [
+        {role: "system", content: [{type: "text", text: "Be safe. test prompt test retrieval"}]},
+        {role: "user", content: [{type: "text", text: "hello from user"}]},
+        {role: "assistant", content: [{type: "text", text: "assistant response"}]},
+        {role: "user", content: [{type: "text", text: "new message from user"}]}
+      ]
+    end
 
-    let(:model_id) {internal_model_id}
+    let(:messages_without_level_system_prompt) do
+      [
+        {role: 'system', content: [{type: 'text', text: "test prompt test retrieval"}]},
+        {role: 'user', content: [{type: 'text', text: 'hello from user'}]},
+        {role: 'assistant', content: [{type: 'text', text: 'assistant response'}]},
+        {role: 'user', content: [{type: 'text', text: 'new message from user'}]}
+      ]
+    end
 
-    let(:url_to_post) {"https://api.openai.com/v1/chat/completions"}
+    let(:messages_with_assets_without_level_system_prompt) do
+      [
+        {role: 'system', content: [{type: 'text', text: "test prompt test retrieval"}]},
+        {role: 'user', content: [{type: 'text', text: 'hello from user'}]},
+        {role: 'assistant', content: [{type: 'text', text: 'assistant response'}]},
+        {role: 'user', content: [
+          {type: 'text', text: 'message with assets'},
+          {type: 'image_url', image_url: {url: @image_uri}},
+          {type: 'file', file: {filename: 'file.pdf', file_data: @pdf_uri}}
+        ]}
+      ]
+    end
 
-    subject {stub_request_and_get_response_test(url_to_post, expected_request_body, expected_headers, stubbed_response_body, model_id)}
+    let(:messages_with_hidden_context_with_level_system_prompt) do
+      [
+        {role: 'system', content: [{type: 'text', text: "Be safe. test prompt test retrieval"}]},
+        {role: 'user', content: [{type: 'text', text: 'hello from user'}]},
+        {role: 'assistant', content: [{type: 'text', text: 'assistant response'}]},
+        {role: 'user', content: [{type: 'text', text: "new message from user\nextra text"}]}
+      ]
+    end
+    context 'when body is well formed and request fails with error JSON' do
+      subject {stub_request_and_get_response_test(@new_message, endpoint_url, request_body, expected_headers, stubbed_response_body, internal_model_id, @level_with_level_system_prompt)}
+
+      # Don't expect any particular fields in body, we're just testing that we
+      let(:request_body) {{}}
+
+      let(:stubbed_response_body) {stubbed_fail_response_body}
+      it 'raises StandardError' do
+        # Check that we raise.
+        -> {subject}.must_raise(StandardError)
+      end
+    end
+
     context 'when body is well formed and request succeeds' do
+      subject {stub_request_and_get_response_test(@new_message, endpoint_url, request_body, expected_headers, stubbed_response_body, internal_model_id, @level_with_level_system_prompt)}
+
+      let(:request_body) do
+        request_body_without_messages.merge(
+          {
+            messages: messages_with_level_system_prompt
+          }
+        )
+      end
+
       let(:stubbed_response_body) {stubbed_success_response_body}
       it 'successfully makes a round trip and is returned the correct response' do
         # Check that we're returned the correct response.
         assert_equal subject, @response_text
       end
     end
-    context 'when body is well formed and request fails with error JSON' do
-      let(:stubbed_response_body) {stubbed_fail_response_body}
-      it 'raises StandardError' do
-        # Check that we raise.
-        -> {subject}.must_raise(StandardError)
+
+    context 'when body is well formed without level system prompt and request succeeds' do
+      subject {stub_request_and_get_response_test(@new_message, endpoint_url, request_body, expected_headers, stubbed_response_body, internal_model_id, @level_without_level_system_prompt)}
+
+      let(:request_body) do
+        request_body_without_messages.merge(
+          {
+            messages: messages_without_level_system_prompt
+          }
+        )
+      end
+
+      let(:stubbed_response_body) {stubbed_success_response_body}
+      it 'successfully makes a round trip and is returned the correct response' do
+        # Check that we're returned the correct response.
+        assert_equal subject, @response_text
+      end
+    end
+
+    context 'when body is well formed without level system prompt and with assets and request succeeds' do
+      subject {stub_request_and_get_response_test(@new_message_with_assets, endpoint_url, request_body, expected_headers, stubbed_response_body, internal_model_id, @level_without_level_system_prompt)}
+
+      let(:request_body) do
+        request_body_without_messages.merge(
+          {
+            messages: messages_with_assets_without_level_system_prompt
+          }.deep_stringify_keys
+        )
+      end
+
+      let(:stubbed_response_body) {stubbed_success_response_body}
+      it 'successfully makes a round trip and is returned the correct response' do
+        # Check that we're returned the correct response.
+        assert_equal subject, @response_text
+      end
+    end
+
+    context 'when body is well formed with hidden context and level system prompt and request succeeds' do
+      subject {stub_request_and_get_response_test(@new_message_hidden_context, endpoint_url, request_body, expected_headers, stubbed_response_body, internal_model_id, @level_with_level_system_prompt)}
+
+      let(:request_body) do
+        request_body_without_messages.merge(
+          {
+            messages: messages_with_hidden_context_with_level_system_prompt
+          }.deep_stringify_keys
+        )
+      end
+
+      let(:stubbed_response_body) {stubbed_success_response_body}
+      it 'successfully makes a round trip and is returned the correct response' do
+        # Check that we're returned the correct response.
+        assert_equal subject, @response_text
       end
     end
   end
